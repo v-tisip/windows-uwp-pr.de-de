@@ -1,7 +1,7 @@
 ---
 author: PatrickFarley
-title: "Begrüßungsbildschirme"
-description: "In diesem Abschnitt werden Einrichten und Konfigurieren des Begrüßungsbildschirms einer App beschrieben."
+title: Begrüßungsbildschirme
+description: In diesem Abschnitt werden Einrichten und Konfigurieren des Begrüßungsbildschirms einer App beschrieben.
 ms.assetid: 6b954bb3-e5b0-46d1-8afc-fb805536cf6d
 ms.author: pafarley
 ms.date: 02/08/2017
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.openlocfilehash: 51add4631b807940e051a8f4cbaca92063e41d4a
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "234256"
 ---
 # <a name="splash-screens"></a><span data-ttu-id="428a7-104">Begrüßungsbildschirme</span><span class="sxs-lookup"><span data-stu-id="428a7-104">Splash screens</span></span>
 

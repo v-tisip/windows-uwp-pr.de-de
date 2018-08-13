@@ -1,19 +1,20 @@
 ---
 author: mcleanbyron
 ms.assetid: 14C23FE6-3EAF-445E-85C1-DF188A7822CA
-description: "Verwenden Sie die Codebeispiele in diesem Abschnitt, um mehr über die Verwendung der Windows Store-Übermittlungs-API zu erfahren."
-title: "Codebeispiele für die Übermittlungs-API"
+description: Verwenden Sie die Codebeispiele in diesem Abschnitt, um mehr über die Verwendung der Windows Store-Übermittlungs-API zu erfahren.
+title: Codebeispiele für die Übermittlungs-API
 ms.author: mcleans
 ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Codebeispiele für Windows10, UWP, Windows Store-Übermittlungs-API"
+keywords: Codebeispiele für Windows10, UWP, Windows Store-Übermittlungs-API
 ms.openlocfilehash: c5344667922a7445ad7694f36a542b3ff35c4bdb
 ms.sourcegitcommit: a7a1b41c7dce6d56250ce3113137391d65d9e401
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/11/2017
+ms.locfileid: "772309"
 ---
 # <a name="code-examples-for-the-submission-api"></a><span data-ttu-id="f1b8f-104">Codebeispiele für die Übermittlungs-API</span><span class="sxs-lookup"><span data-stu-id="f1b8f-104">Code examples for the submission API</span></span>
 

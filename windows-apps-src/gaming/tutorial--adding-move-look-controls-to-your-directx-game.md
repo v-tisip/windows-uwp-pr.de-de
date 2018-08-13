@@ -1,55 +1,54 @@
 ---
 author: mtoepke
-title: "Bewegungs-/Blicksteuerungen für Spiele"
-description: "Hier erfahren Sie, wie Sie Ihrem DirectX-Spiel herkömmliche Bewegungs-/Blicksteuerungen für Maus und Tastatur (auch als Maussteuerungen bezeichnet) hinzufügen."
+title: Bewegungs-/Blicksteuerungen für Spiele
+description: Hier erfahren Sie, wie Sie Ihrem DirectX-Spiel herkömmliche Bewegungs-/Blicksteuerungen für Maus und Tastatur (auch als Maussteuerungen bezeichnet) hinzufügen.
 ms.assetid: 4b4d967c-3de9-8a97-ae68-0327f00cc933
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Spiele, Bewegungs-/Blicksteuerungen, Steuerelemente"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+keywords: Windows10, UWP, Spiele, Bewegungs-/Blicksteuerungen, Steuerelemente
 ms.openlocfilehash: 40af05538aa6a6fff6e159fe8aa8812090e8b44b
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.locfileid: "235309"
 ---
-
-# <a name="span-iddevgamingtutorialaddingmove-lookcontrolstoyourdirectxgamespanmove-look-controls-for-games"></a><span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>Bewegungs-/Blicksteuerungen für Spiele
-
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
-
-Hier erfahren Sie, wie Sie Ihrem DirectX-Spiel herkömmliche Bewegungs-/Blicksteuerungen für Maus und Tastatur (auch als Maussteuerungen bezeichnet) hinzufügen.
-
-Außerdem erörtern wir die Bewegungs-/Blicksteuerungsunterstützung für Toucheingabegräte mit dem als linker unterer Bildschirmabschnitt definierten Bewegungscontroller, der als Richtungseingabe fungiert, und dem für den restlichen Bildschirm definierten Blickcontroller, dessen Kamera mittig auf die letzte Stelle ausgerichtet wird, die der Spieler in diesem Bereich berührt hat.
-
-Falls Ihnen dieses Steuerungskonzept nicht vertraut ist, können Sie sich das wie folgt vorstellen: Die Tastatur (oder das auf Toucheingabe basierende Richtungseingabefeld) steuert Ihre Beine im 3D-Raum und verhält sich so als könnten sich Ihre Beine nur vorwärts oder rückwärts bzw. nur nach links und rechts bewegen. Die Maus (oder der Fingereingabezeiger) steuert Ihren Kopf. Mit dem Kopf schauen Sie in eine Richtung – nach links oder rechts, nach oben oder unten oder zu einer Stelle in dieser Ebene. Befindet sich ein Ziel in Ihrer Sicht, richten Sie die Kameraansicht mit der Maus mittig auf dieses Ziel aus und drücken die Vorwärts-Taste, um sich zum Ziel hin zu bewegen, oder die Rückwärts-Taste, um sich vom Ziel weg zu bewegen. Um das Ziel einzukreisen, halten Sie die Kameraansicht auf das Ziel ausgerichtet und bewegen sich gleichzeitig nach links oder rechts. Wie Sie sehen, ist dies eine sehr effektive Steuerungsmethode für die Navigation in 3D-Umgebungen.
-
-Diese Steuerungen werden bei Spielen im Allgemeinen als WASD-Steuerungen bezeichnet: Die Tasten W, A, S und D werden für die feste Kamerabewegung in der Z-Ebene verwendet, und die Maus wird zum Steuern der Kameradrehung um die X- und Y-Achsen verwendet.
-
-## <a name="objectives"></a>Ziele
+# <a name="span-iddevgamingtutorialaddingmove-lookcontrolstoyourdirectxgamespanmove-look-controls-for-games"></a><span data-ttu-id="c7ba0-104"><span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>Bewegungs-/Blicksteuerungen für Spiele</span><span class="sxs-lookup"><span data-stu-id="c7ba0-104"><span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>Move-look controls for games</span></span>
 
 
--   Hinzufügen einfacher Bewegungs-/Blicksteuerungen zum DirectX-Spiel für Maus und Tastatur sowie Touchscreens
--   Implementieren einer First-Person-Kamera zum Navigieren in einer 3D-Umgebung
+<span data-ttu-id="c7ba0-105">\[ Aktualisiert für UWP-Apps unter Windows10.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-105">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="c7ba0-106">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]</span><span class="sxs-lookup"><span data-stu-id="c7ba0-106">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
-## <a name="a-note-on-touch-control-implementations"></a>Hinweis zur Implementierung der Fingereingabesteuerung
+<span data-ttu-id="c7ba0-107">Hier erfahren Sie, wie Sie Ihrem DirectX-Spiel herkömmliche Bewegungs-/Blicksteuerungen für Maus und Tastatur (auch als Maussteuerungen bezeichnet) hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-107">Learn how to add traditional mouse and keyboard move-look controls (also known as mouselook controls) to your DirectX game.</span></span>
+
+<span data-ttu-id="c7ba0-108">Außerdem erörtern wir die Bewegungs-/Blicksteuerungsunterstützung für Toucheingabegräte mit dem als linker unterer Bildschirmabschnitt definierten Bewegungscontroller, der als Richtungseingabe fungiert, und dem für den restlichen Bildschirm definierten Blickcontroller, dessen Kamera mittig auf die letzte Stelle ausgerichtet wird, die der Spieler in diesem Bereich berührt hat.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-108">We also discuss move-look support for touch devices, with the move controller defined as the lower-left section of the screen that behaves like a directional input, and the look controller defined for the remainder of the screen, with the camera centering on the last place the player touched in that area.</span></span>
+
+<span data-ttu-id="c7ba0-109">Falls Ihnen dieses Steuerungskonzept nicht vertraut ist, können Sie sich das wie folgt vorstellen: Die Tastatur (oder das auf Toucheingabe basierende Richtungseingabefeld) steuert Ihre Beine im 3D-Raum und verhält sich so als könnten sich Ihre Beine nur vorwärts oder rückwärts bzw. nur nach links und rechts bewegen.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-109">If this is an unfamiliar control concept to you, think of it this way: the keyboard (or the touch-based directional input box) controls your legs in this 3D space, and behaves as if your legs were only capable of moving forward or backward, or strafing left and right.</span></span> <span data-ttu-id="c7ba0-110">Die Maus (oder der Fingereingabezeiger) steuert Ihren Kopf.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-110">The mouse (or touch pointer) controls your head.</span></span> <span data-ttu-id="c7ba0-111">Mit dem Kopf schauen Sie in eine Richtung – nach links oder rechts, nach oben oder unten oder zu einer Stelle in dieser Ebene.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-111">You use your head to look in a direction -- left or right, up or down, or somewhere in that plane.</span></span> <span data-ttu-id="c7ba0-112">Befindet sich ein Ziel in Ihrer Sicht, richten Sie die Kameraansicht mit der Maus mittig auf dieses Ziel aus und drücken die Vorwärts-Taste, um sich zum Ziel hin zu bewegen, oder die Rückwärts-Taste, um sich vom Ziel weg zu bewegen.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-112">If there is a target in your view, you would use the mouse to center your camera view on that target, and then press the forward key to move towards it, or back to move away from it.</span></span> <span data-ttu-id="c7ba0-113">Um das Ziel einzukreisen, halten Sie die Kameraansicht auf das Ziel ausgerichtet und bewegen sich gleichzeitig nach links oder rechts.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-113">To circle the target, you would keep the camera view centered on the target, and move left or right at the same time.</span></span> <span data-ttu-id="c7ba0-114">Wie Sie sehen, ist dies eine sehr effektive Steuerungsmethode für die Navigation in 3D-Umgebungen.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-114">You can see how this is a very effective control method for navigating 3D environments!</span></span>
+
+<span data-ttu-id="c7ba0-115">Diese Steuerungen werden bei Spielen im Allgemeinen als WASD-Steuerungen bezeichnet: Die Tasten W, A, S und D werden für die feste Kamerabewegung in der Z-Ebene verwendet, und die Maus wird zum Steuern der Kameradrehung um die X- und Y-Achsen verwendet.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-115">These controls are commonly known as WASD controls in gaming, where the W, A, S, and D keys are used for x-z plane fixed camera movement, and the mouse is used to control camera rotation around the x and y axes.</span></span>
+
+## <a name="objectives"></a><span data-ttu-id="c7ba0-116">Ziele</span><span class="sxs-lookup"><span data-stu-id="c7ba0-116">Objectives</span></span>
 
 
-Für die Toucheingabesteuerungen werden zwei Controller implementiert: der Bewegungscontroller, der die Bewegung in der Z-Ebene relativ zum Blickpunkt der Kamera behandelt, und der Blickcontroller, der den Blickpunkt der Kamera ausrichtet. Der Bewegungscontroller ist den WASD-Tasten auf der Tastatur zugeordnet und der Blickcontroller der Maus. Für die Fingereingabesteuerungen müssen wir aber einen Bereich des Bildschirms festlegen, der als Richtungseingabe bzw. als virtuelle WASD-Tasten dient, während der restliche Bildschirm den Eingabebereich für die Blicksteuerungen darstellt.
+-   <span data-ttu-id="c7ba0-117">Hinzufügen einfacher Bewegungs-/Blicksteuerungen zum DirectX-Spiel für Maus und Tastatur sowie Touchscreens</span><span class="sxs-lookup"><span data-stu-id="c7ba0-117">Add basic move-look controls to your DirectX game for both mouse and keyboard, and touch screens.</span></span>
+-   <span data-ttu-id="c7ba0-118">Implementieren einer First-Person-Kamera zum Navigieren in einer 3D-Umgebung</span><span class="sxs-lookup"><span data-stu-id="c7ba0-118">Implement a first-person camera used to navigate a 3D environment.</span></span>
 
-Der Bildschirm sieht wie folgt aus:
+## <a name="a-note-on-touch-control-implementations"></a><span data-ttu-id="c7ba0-119">Hinweis zur Implementierung der Fingereingabesteuerung</span><span class="sxs-lookup"><span data-stu-id="c7ba0-119">A note on touch control implementations</span></span>
+
+
+<span data-ttu-id="c7ba0-120">Für die Toucheingabesteuerungen werden zwei Controller implementiert: der Bewegungscontroller, der die Bewegung in der Z-Ebene relativ zum Blickpunkt der Kamera behandelt, und der Blickcontroller, der den Blickpunkt der Kamera ausrichtet.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-120">For touch controls, we implement two controllers: the move controller, which handles movement in the x-z plane relative to the camera's look point; and the look controller, which aims the camera's look point.</span></span> <span data-ttu-id="c7ba0-121">Der Bewegungscontroller ist den WASD-Tasten auf der Tastatur zugeordnet und der Blickcontroller der Maus.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-121">Our move controller maps to the keyboard WASD buttons, and the look controller maps to the mouse.</span></span> <span data-ttu-id="c7ba0-122">Für die Fingereingabesteuerungen müssen wir aber einen Bereich des Bildschirms festlegen, der als Richtungseingabe bzw. als virtuelle WASD-Tasten dient, während der restliche Bildschirm den Eingabebereich für die Blicksteuerungen darstellt.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-122">But for touch controls, we need to define a region of the screen that serves as the directional inputs, or the virtual WASD buttons, with the remainder of the screen serving as the input space for the look controls.</span></span>
+
+<span data-ttu-id="c7ba0-123">Der Bildschirm sieht wie folgt aus:</span><span class="sxs-lookup"><span data-stu-id="c7ba0-123">Our screen looks like this.</span></span>
 
 ![Layout des Bewegungs-/Blickrichtungscontrollers](images/movelook-touch.png)
 
-Wenn Sie in der linken unteren Bildschirmecke den Toucheingabezeiger (nicht die Maus!) nach oben bewegen, bewegt sich die Kamera vorwärts. Bei allen Abwärtsbewegungen bewegt sich die Kamera rückwärts. Das Gleiche gilt für Bewegungen nach links und rechts im Zeigerbereich des Bewegungscontrollers. Außerhalb dieses Bereichs wird der Zeiger zum Blickcontroller – Sie ziehen die Kamera einfach durch Berühren des Bildschirms in die gewünschte Blickrichtung.
+<span data-ttu-id="c7ba0-125">Wenn Sie in der linken unteren Bildschirmecke den Toucheingabezeiger (nicht die Maus!) nach oben bewegen, bewegt sich die Kamera vorwärts.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-125">When you move the touch pointer (not the mouse!) in the lower left of the screen, any movement upwards will make the camera move forward.</span></span> <span data-ttu-id="c7ba0-126">Bei allen Abwärtsbewegungen bewegt sich die Kamera rückwärts.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-126">Any movement downwards will make the camera move backwards.</span></span> <span data-ttu-id="c7ba0-127">Das Gleiche gilt für Bewegungen nach links und rechts im Zeigerbereich des Bewegungscontrollers.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-127">The same holds for left and right movement inside the move controller's pointer space.</span></span> <span data-ttu-id="c7ba0-128">Außerhalb dieses Bereichs wird der Zeiger zum Blickcontroller – Sie ziehen die Kamera einfach durch Berühren des Bildschirms in die gewünschte Blickrichtung.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-128">Outside of that space, and it becomes a look controller -- you just touch or drag the camera to where you'd like it to face.</span></span>
 
-## <a name="set-up-the-basic-input-event-infrastructure"></a>Einrichten der grundlegenden Eingabeereignisinfrastruktur
+## <a name="set-up-the-basic-input-event-infrastructure"></a><span data-ttu-id="c7ba0-129">Einrichten der grundlegenden Eingabeereignisinfrastruktur</span><span class="sxs-lookup"><span data-stu-id="c7ba0-129">Set up the basic input event infrastructure</span></span>
 
 
-Zunächst müssen wir die Steuerungsklasse erstellen, mit der wir Eingabeereignisse von Maus und Tastatur behandeln, und die Kameraperspektive auf der Grundlage dieser Eingabe aktualisieren. Da wir Bewegungs-/Blicksteuerungen implementieren, nennen wir diese Klasse **MoveLookController**.
+<span data-ttu-id="c7ba0-130">Zunächst müssen wir die Steuerungsklasse erstellen, mit der wir Eingabeereignisse von Maus und Tastatur behandeln, und die Kameraperspektive auf der Grundlage dieser Eingabe aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-130">First, we must create our control class that we use to handle input events from the mouse and keyboard, and update the camera perspective based on that input.</span></span> <span data-ttu-id="c7ba0-131">Da wir Bewegungs-/Blicksteuerungen implementieren, nennen wir diese Klasse **MoveLookController**.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-131">Because we're implementing move-look controls, we call it **MoveLookController**.</span></span>
 
 ```cpp
 using namespace Windows::UI::Core;
@@ -64,7 +63,7 @@ ref class MoveLookController
 };  // class MoveLookController
 ```
 
-Jetzt erstellen wir einen Header, der den Zustand des Bewegungs-/Blickcontrollers und der First-Person-Kamera definiert, sowie die grundlegenden Methoden und Ereignishandler, die die Steuerungen implementieren und den Zustand der Kamera aktualisieren.
+<span data-ttu-id="c7ba0-132">Jetzt erstellen wir einen Header, der den Zustand des Bewegungs-/Blickcontrollers und der First-Person-Kamera definiert, sowie die grundlegenden Methoden und Ereignishandler, die die Steuerungen implementieren und den Zustand der Kamera aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-132">Now, let's create a header that defines the state of the move-look controller and its first-person camera, plus the basic methods and event handlers that implement the controls and that update the state of the camera.</span></span>
 
 ```cpp
 #define ROTATION_GAIN 0.004f    // Sensitivity adjustment for the look controller
@@ -145,70 +144,70 @@ internal:
 };  // class MoveLookController
 ```
 
-Unser Code enthält vier Gruppen privater Felder. Im Folgenden klären wir, wofür die einzelnen Felder dienen.
+<span data-ttu-id="c7ba0-133">Unser Code enthält vier Gruppen privater Felder.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-133">Our code contains 4 groups of private fields.</span></span> <span data-ttu-id="c7ba0-134">Im Folgenden klären wir, wofür die einzelnen Felder dienen.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-134">Let's review the purpose of each one.</span></span>
 
-Als Erstes definieren wir einige nützliche Felder, die die aktualisierten Informationen zur Kameraansicht enthalten.
+<span data-ttu-id="c7ba0-135">Als Erstes definieren wir einige nützliche Felder, die die aktualisierten Informationen zur Kameraansicht enthalten.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-135">First, we define some useful fields that hold our updated info about our camera view.</span></span>
 
--   **m\_position** ist die Position der Kamera (und daher die Bildebene) in der 3D-Szene (in Szenenkoordinaten).
--   **m\_pitch** ist der Nickwinkel der Kamera bzw. ihre Drehung nach oben oder unten um die X-Achse der Bildebene (in Radianten).
--   **m\_yaw** ist der Gierwinkel der Kamera bzw. ihre Drehung nach links oder rechts um die Y-Achse der Bildebene (in Radianten).
+-   <span data-ttu-id="c7ba0-136">**m\_position** ist die Position der Kamera (und daher die Bildebene) in der 3D-Szene (in Szenenkoordinaten).</span><span class="sxs-lookup"><span data-stu-id="c7ba0-136">**m\_position** is the position of the camera (and therefore the viewplane) in the 3D scene, using scene coordinates.</span></span>
+-   <span data-ttu-id="c7ba0-137">**m\_pitch** ist der Nickwinkel der Kamera bzw. ihre Drehung nach oben oder unten um die X-Achse der Bildebene (in Radianten).</span><span class="sxs-lookup"><span data-stu-id="c7ba0-137">**m\_pitch** is the pitch of the camera, or its up-down rotation around the viewplane's x-axis, in radians.</span></span>
+-   <span data-ttu-id="c7ba0-138">**m\_yaw** ist der Gierwinkel der Kamera bzw. ihre Drehung nach links oder rechts um die Y-Achse der Bildebene (in Radianten).</span><span class="sxs-lookup"><span data-stu-id="c7ba0-138">**m\_yaw** is the yaw of the camera, or its left-right rotation around the viewplane's y-axis, in radians.</span></span>
 
-Als Nächstes definieren wir die Felder, in denen Informationen zum Status und zur Position der Controller gespeichert werden. Die Felder, die wir für den fingereingabebasierten Bewegungscontroller benötigen, definieren wir zuerst. (Für die Tastaturimplementierung des Bewegungscontrollers sind keine speziellen Felder erforderlich. Es werden nur Tastaturereignisse mit bestimmten Handlern gelesen.)
+<span data-ttu-id="c7ba0-139">Als Nächstes definieren wir die Felder, in denen Informationen zum Status und zur Position der Controller gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-139">Now, let's define the fields that we use to store info about the status and position of our controllers.</span></span> <span data-ttu-id="c7ba0-140">Die Felder, die wir für den fingereingabebasierten Bewegungscontroller benötigen, definieren wir zuerst.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-140">First, we'll define the fields we need for our touch-based move controller.</span></span> <span data-ttu-id="c7ba0-141">(Für die Tastaturimplementierung des Bewegungscontrollers sind keine speziellen Felder erforderlich.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-141">(There's nothing special needed for the keyboard implementation of the move controller.</span></span> <span data-ttu-id="c7ba0-142">Es werden nur Tastaturereignisse mit bestimmten Handlern gelesen.)</span><span class="sxs-lookup"><span data-stu-id="c7ba0-142">We just read keyboard events with specific handlers.)</span></span>
 
--   **m\_moveInUse** gibt an, ob der Bewegungscontroller verwendet wird.
--   **m\_movePointerID** ist die eindeutige ID für den aktuellen Bewegungszeiger. Damit wird beim Überprüfen der Zeiger-ID zwischen dem Blickzeiger und dem Bewegungszeiger unterschieden.
--   **m\_moveFirstDown** ist der Punkt auf dem Bildschirm, an dem der Spieler den Zeigerbereich des Bewegungscontrollers zuerst berührt hat. Dieser Wert wird später verwendet, um einen inaktiven Bereich festzulegen, damit die Ansicht bei geringfügigen Bewegungen nicht zittert.
--   **m\_movePointerPosition** ist der Punkt auf dem Bildschirm, an den der Spieler den Zeiger gerade bewegt hat. Dieser Wert wird mit **m\_moveFirstDown** verglichen, um die beabsichtigte Bewegungsrichtung des Spielers zu bestimmen.
--   **m\_moveCommand** ist der berechnete endgültige Befehl für den Bewegungscontroller: nach oben (vorwärts), nach unten (rückwärts), nach links oder nach rechts.
+-   <span data-ttu-id="c7ba0-143">**m\_moveInUse** gibt an, ob der Bewegungscontroller verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-143">**m\_moveInUse** indicates whether the move controller is in use.</span></span>
+-   <span data-ttu-id="c7ba0-144">**m\_movePointerID** ist die eindeutige ID für den aktuellen Bewegungszeiger.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-144">**m\_movePointerID** is the unique ID for the current move pointer.</span></span> <span data-ttu-id="c7ba0-145">Damit wird beim Überprüfen der Zeiger-ID zwischen dem Blickzeiger und dem Bewegungszeiger unterschieden.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-145">We use it to differentiate between the look pointer and the move pointer when we check the pointer ID value.</span></span>
+-   <span data-ttu-id="c7ba0-146">**m\_moveFirstDown** ist der Punkt auf dem Bildschirm, an dem der Spieler den Zeigerbereich des Bewegungscontrollers zuerst berührt hat.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-146">**m\_moveFirstDown** is the point on the screen where the player first touched the move controller pointer area.</span></span> <span data-ttu-id="c7ba0-147">Dieser Wert wird später verwendet, um einen inaktiven Bereich festzulegen, damit die Ansicht bei geringfügigen Bewegungen nicht zittert.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-147">We use this value later to set a dead zone to keep tiny movements from jittering the view.</span></span>
+-   <span data-ttu-id="c7ba0-148">**m\_movePointerPosition** ist der Punkt auf dem Bildschirm, an den der Spieler den Zeiger gerade bewegt hat.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-148">**m\_movePointerPosition** is the point on the screen the player has currently moved the pointer to.</span></span> <span data-ttu-id="c7ba0-149">Dieser Wert wird mit **m\_moveFirstDown** verglichen, um die beabsichtigte Bewegungsrichtung des Spielers zu bestimmen.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-149">We use it to determine what direction the player wanted to move by examining it relative to **m\_moveFirstDown**.</span></span>
+-   <span data-ttu-id="c7ba0-150">**m\_moveCommand** ist der berechnete endgültige Befehl für den Bewegungscontroller: nach oben (vorwärts), nach unten (rückwärts), nach links oder nach rechts.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-150">**m\_moveCommand** is the final computed command for the move controller: up (forward), down (back), left, or right.</span></span>
 
-Jetzt definieren wir die Felder für den Blickcontroller (für Maus- und Toucheingabeimplementierungen).
+<span data-ttu-id="c7ba0-151">Jetzt definieren wir die Felder für den Blickcontroller (für Maus- und Toucheingabeimplementierungen).</span><span class="sxs-lookup"><span data-stu-id="c7ba0-151">Now, we define the fields we use for our look controller, both the mouse and touch implementations.</span></span>
 
--   **m\_lookInUse** gibt an, ob die Blicksteuerung verwendet wird.
--   **m\_lookPointerID** ist die eindeutige ID für den aktuellen Blickzeiger. Damit wird beim Überprüfen der Zeiger-ID zwischen dem Blickzeiger und dem Bewegungszeiger unterschieden.
--   **m\_lookLastPoint** ist der letzte Punkt, der im vorherigen Frame erfasst wurde (in Szenenkoordinaten).
--   **m\_lookLastDelta** ist die berechnete Differenz zwischen der aktuellen **m\_position** und **m\_lookLastPoint**.
+-   <span data-ttu-id="c7ba0-152">**m\_lookInUse** gibt an, ob die Blicksteuerung verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-152">**m\_lookInUse** indicates whether the look control is in use.</span></span>
+-   <span data-ttu-id="c7ba0-153">**m\_lookPointerID** ist die eindeutige ID für den aktuellen Blickzeiger.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-153">**m\_lookPointerID** is the unique ID for the current look pointer.</span></span> <span data-ttu-id="c7ba0-154">Damit wird beim Überprüfen der Zeiger-ID zwischen dem Blickzeiger und dem Bewegungszeiger unterschieden.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-154">We use it to differentiate between the look pointer and the move pointer when we check the pointer ID value.</span></span>
+-   <span data-ttu-id="c7ba0-155">**m\_lookLastPoint** ist der letzte Punkt, der im vorherigen Frame erfasst wurde (in Szenenkoordinaten).</span><span class="sxs-lookup"><span data-stu-id="c7ba0-155">**m\_lookLastPoint** is the last point, in scene coordinates, that was captured in the previous frame.</span></span>
+-   <span data-ttu-id="c7ba0-156">**m\_lookLastDelta** ist die berechnete Differenz zwischen der aktuellen **m\_position** und **m\_lookLastPoint**.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-156">**m\_lookLastDelta** is the computed difference between the current **m\_position** and **m\_lookLastPoint**.</span></span>
 
-Zum Schluss definieren wir sechs boolesche Werte für die sechs Bewegungsgrade, mit denen der aktuelle Zustand der einzelnen Bewegungsaktionen angegeben wird (Ein oder Aus):
+<span data-ttu-id="c7ba0-157">Zum Schluss definieren wir sechs boolesche Werte für die sechs Bewegungsgrade, mit denen der aktuelle Zustand der einzelnen Bewegungsaktionen angegeben wird (Ein oder Aus):</span><span class="sxs-lookup"><span data-stu-id="c7ba0-157">Finally, we define 6 Boolean values for the 6 degrees of movement, which we use to indicate the current state of each directional move action (on or off):</span></span>
 
--   **m\_forward**, **m\_back**, **m\_left**, **m\_right**, **m\_up** und **m\_down**.
+-   <span data-ttu-id="c7ba0-158">**m\_forward**, **m\_back**, **m\_left**, **m\_right**, **m\_up** und **m\_down**.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-158">**m\_forward**, **m\_back**, **m\_left**, **m\_right**, **m\_up** and **m\_down**.</span></span>
 
-Die Eingabedaten zum Aktualisieren des Zustands der Controller werden mit sechs Ereignishandlern erfasst:
+<span data-ttu-id="c7ba0-159">Die Eingabedaten zum Aktualisieren des Zustands der Controller werden mit sechs Ereignishandlern erfasst:</span><span class="sxs-lookup"><span data-stu-id="c7ba0-159">We use the 6 event handlers to capture the input data we use to update the state of our controllers:</span></span>
 
--   **OnPointerPressed**. Der Spieler hat die linke Maustaste gedrückt oder den Bildschirm berührt, während sich der Zeiger im Spielbildschirm befand.
--   **OnPointerMoved**. Der Spieler hat die Maus oder den Toucheingabezeiger auf dem Bildschirm bewegt, während sich der Zeiger im Spielbildschirm befand.
--   **OnPointerReleased**. Der Spieler hat die linke Maustaste losgelassen oder aufgehört, den Bildschirm zu berühren, während sich der Zeiger im Spielbildschirm befand.
--   **OnKeyDown**. Der Spieler hat eine Taste gedrückt.
--   **OnKeyUp**. Der Spieler hat eine Taste losgelassen.
+-   <span data-ttu-id="c7ba0-160">**OnPointerPressed**.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-160">**OnPointerPressed**.</span></span> <span data-ttu-id="c7ba0-161">Der Spieler hat die linke Maustaste gedrückt oder den Bildschirm berührt, während sich der Zeiger im Spielbildschirm befand.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-161">The player pressed the left mouse button with the pointer in our game screen, or touched the screen.</span></span>
+-   <span data-ttu-id="c7ba0-162">**OnPointerMoved**.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-162">**OnPointerMoved**.</span></span> <span data-ttu-id="c7ba0-163">Der Spieler hat die Maus oder den Toucheingabezeiger auf dem Bildschirm bewegt, während sich der Zeiger im Spielbildschirm befand.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-163">The player moved the mouse with the pointer in our game screen, or dragged the touch pointer on the screen.</span></span>
+-   <span data-ttu-id="c7ba0-164">**OnPointerReleased**.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-164">**OnPointerReleased**.</span></span> <span data-ttu-id="c7ba0-165">Der Spieler hat die linke Maustaste losgelassen oder aufgehört, den Bildschirm zu berühren, während sich der Zeiger im Spielbildschirm befand.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-165">The player released the left mouse button with the pointer in our game screen, or stopped touching the screen.</span></span>
+-   <span data-ttu-id="c7ba0-166">**OnKeyDown**.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-166">**OnKeyDown**.</span></span> <span data-ttu-id="c7ba0-167">Der Spieler hat eine Taste gedrückt.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-167">The player pressed a key.</span></span>
+-   <span data-ttu-id="c7ba0-168">**OnKeyUp**.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-168">**OnKeyUp**.</span></span> <span data-ttu-id="c7ba0-169">Der Spieler hat eine Taste losgelassen.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-169">The player released a key.</span></span>
 
-Die folgenden Methoden und Eigenschaften verwenden wir, um die Zustandsinformationen der Controller zu initialisieren, auf sie zuzugreifen und sie zu aktualisieren.
+<span data-ttu-id="c7ba0-170">Die folgenden Methoden und Eigenschaften verwenden wir, um die Zustandsinformationen der Controller zu initialisieren, auf sie zuzugreifen und sie zu aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-170">And finally, we use these methods and properties to initialize, access, and update the controllers' state info.</span></span>
 
--   **Initialize**. Die App ruft diesen Ereignishandler auf, um die Steuerungen zu initialisieren und an das [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Objekt anzufügen, das das Anzeigefenster beschreibt.
--   **SetPosition**. Die App ruft diese Methode auf, um die Koordinaten (X, Y und Z) der Steuerungen im Szenenbereich festzulegen.
--   **SetOrientation**. Die App ruft diese Methode auf, um den Nick- und Gierwinkel der Kamera festzulegen.
--   **get\_Position**. Die App greift auf diese Eigenschaft zu, um die aktuelle Position der Kamera im Szenenbereich abzurufen. Diese Eigenschaft wird verwendet, um der App die aktuelle Kameraposition mitzuteilen.
--   **get\_LookPoint**. Die App greift auf diese Eigenschaft zu, um den aktuellen Punkt abzurufen, auf den die Kamera gerichtet ist.
--   **Update**. Diese Methode liest den Zustand der Bewegungs- und Blickcontroller und aktualisiert die Kameraposition. Diese Methode wird in der Hauptschleife der App kontinuierlich aufgerufen, um die Kameracontrollerdaten und die Kameraposition im Szenenbereich zu aktualisieren.
+-   <span data-ttu-id="c7ba0-171">**Initialize**.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-171">**Initialize**.</span></span> <span data-ttu-id="c7ba0-172">Die App ruft diesen Ereignishandler auf, um die Steuerungen zu initialisieren und an das [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Objekt anzufügen, das das Anzeigefenster beschreibt.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-172">Our app calls this event handler to initialize the controls and attach them to the [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) object that describes our display window.</span></span>
+-   <span data-ttu-id="c7ba0-173">**SetPosition**.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-173">**SetPosition**.</span></span> <span data-ttu-id="c7ba0-174">Die App ruft diese Methode auf, um die Koordinaten (X, Y und Z) der Steuerungen im Szenenbereich festzulegen.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-174">Our app calls this method to set the (x, y, and z) coordinates of our controls in the scene space.</span></span>
+-   <span data-ttu-id="c7ba0-175">**SetOrientation**.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-175">**SetOrientation**.</span></span> <span data-ttu-id="c7ba0-176">Die App ruft diese Methode auf, um den Nick- und Gierwinkel der Kamera festzulegen.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-176">Our app calls this method to set the pitch and yaw of the camera.</span></span>
+-   <span data-ttu-id="c7ba0-177">**get\_Position**.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-177">**get\_Position**.</span></span> <span data-ttu-id="c7ba0-178">Die App greift auf diese Eigenschaft zu, um die aktuelle Position der Kamera im Szenenbereich abzurufen.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-178">Our app accesses this property to get the current position of the camera in the scene space.</span></span> <span data-ttu-id="c7ba0-179">Diese Eigenschaft wird verwendet, um der App die aktuelle Kameraposition mitzuteilen.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-179">You use this property as the method of communicating the current camera position to the app.</span></span>
+-   <span data-ttu-id="c7ba0-180">**get\_LookPoint**.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-180">**get\_LookPoint**.</span></span> <span data-ttu-id="c7ba0-181">Die App greift auf diese Eigenschaft zu, um den aktuellen Punkt abzurufen, auf den die Kamera gerichtet ist.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-181">Our app accesses this property to get the current point toward which the controller camera is facing.</span></span>
+-   <span data-ttu-id="c7ba0-182">**Update**.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-182">**Update**.</span></span> <span data-ttu-id="c7ba0-183">Diese Methode liest den Zustand der Bewegungs- und Blickcontroller und aktualisiert die Kameraposition.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-183">Reads the state of the move and look controllers and updates the camera position.</span></span> <span data-ttu-id="c7ba0-184">Diese Methode wird in der Hauptschleife der App kontinuierlich aufgerufen, um die Kameracontrollerdaten und die Kameraposition im Szenenbereich zu aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-184">You continually call this method from the app's main loop to refresh the camera controller data and the camera position in the scene space.</span></span>
 
-Jetzt haben Sie alle Komponenten, die Sie zum Implementieren der Bewegungs-/Blicksteuerungen benötigen. Als Nächstes setzen wir diese Teile zusammen.
+<span data-ttu-id="c7ba0-185">Jetzt haben Sie alle Komponenten, die Sie zum Implementieren der Bewegungs-/Blicksteuerungen benötigen.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-185">Now, you have here all the components you need to implement your move-look controls.</span></span> <span data-ttu-id="c7ba0-186">Als Nächstes setzen wir diese Teile zusammen.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-186">So, let's connect these pieces together.</span></span>
 
-## <a name="create-the-basic-input-events"></a>Erstellen der grundlegenden Eingabeereignisse
+## <a name="create-the-basic-input-events"></a><span data-ttu-id="c7ba0-187">Erstellen der grundlegenden Eingabeereignisse</span><span class="sxs-lookup"><span data-stu-id="c7ba0-187">Create the basic input events</span></span>
 
 
-Der Ereignisverteiler der Windows-Runtime stellt fünf Ereignisse bereit, die von Instanzen der **MoveLookController**-Klasse behandelt werden sollen:
+<span data-ttu-id="c7ba0-188">Der Ereignisverteiler der Windows-Runtime stellt fünfEreignisse bereit, die von Instanzen der **MoveLookController**-Klasse behandelt werden sollen:</span><span class="sxs-lookup"><span data-stu-id="c7ba0-188">The Windows Runtime event dispatcher provides 5 events we want instances of the **MoveLookController** class to handle:</span></span>
 
--   [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208278)
--   [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276)
--   [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279)
--   [**KeyUp**](https://msdn.microsoft.com/library/windows/apps/br208271)
--   [**KeyDown**](https://msdn.microsoft.com/library/windows/apps/br208270)
+-   [**<span data-ttu-id="c7ba0-189">PointerPressed</span><span class="sxs-lookup"><span data-stu-id="c7ba0-189">PointerPressed</span></span>**](https://msdn.microsoft.com/library/windows/apps/br208278)
+-   [**<span data-ttu-id="c7ba0-190">PointerMoved</span><span class="sxs-lookup"><span data-stu-id="c7ba0-190">PointerMoved</span></span>**](https://msdn.microsoft.com/library/windows/apps/br208276)
+-   [**<span data-ttu-id="c7ba0-191">PointerReleased</span><span class="sxs-lookup"><span data-stu-id="c7ba0-191">PointerReleased</span></span>**](https://msdn.microsoft.com/library/windows/apps/br208279)
+-   [**<span data-ttu-id="c7ba0-192">KeyUp</span><span class="sxs-lookup"><span data-stu-id="c7ba0-192">KeyUp</span></span>**](https://msdn.microsoft.com/library/windows/apps/br208271)
+-   [**<span data-ttu-id="c7ba0-193">KeyDown</span><span class="sxs-lookup"><span data-stu-id="c7ba0-193">KeyDown</span></span>**](https://msdn.microsoft.com/library/windows/apps/br208270)
 
-Diese Ereignisse sind im [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Typ implementiert. Es wird davon ausgegangen, dass Sie über ein **CoreWindow**-Objekt verfügen, mit dem Sie arbeiten können. Informationen dazu, wie Sie ein solches Objekt erhalten, finden Sie bei Bedarf unter [Einrichten der UWP-C++-App (Universals Windows Plattform) zum Anzeigen einer DirectX-Ansicht](https://msdn.microsoft.com/library/windows/apps/hh465077).
+<span data-ttu-id="c7ba0-194">Diese Ereignisse sind im [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Typ implementiert.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-194">These events are implemented on the [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) type.</span></span> <span data-ttu-id="c7ba0-195">Es wird davon ausgegangen, dass Sie über ein **CoreWindow**-Objekt verfügen, mit dem Sie arbeiten können.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-195">We assume that you have a **CoreWindow** object to work with.</span></span> <span data-ttu-id="c7ba0-196">Informationen dazu, wie Sie ein solches Objekt erhalten, finden Sie bei Bedarf unter [Einrichten der UWP-C++-App (Universals Windows Plattform) zum Anzeigen einer DirectX-Ansicht](https://msdn.microsoft.com/library/windows/apps/hh465077).</span><span class="sxs-lookup"><span data-stu-id="c7ba0-196">If you don't know how to obtain one, see [How to set up your Universal Windows Platform (UWP) C++ app to display a DirectX view](https://msdn.microsoft.com/library/windows/apps/hh465077).</span></span>
 
-Wenn diese Ereignisse während der Ausführung der App ausgelöst werden, aktualisieren die Handler die in den privaten Feldern definierten Zustandsinformationen der Controller.
+<span data-ttu-id="c7ba0-197">Wenn diese Ereignisse während der Ausführung der App ausgelöst werden, aktualisieren die Handler die in den privaten Feldern definierten Zustandsinformationen der Controller.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-197">As these events fire while our app is running, the handlers update the controllers' state info defined in our private fields.</span></span>
 
-Als Erstes füllen wir die Ereignishandler für die Maus und den Toucheingabezeiger auf. Im ersten Ereignishandler (**OnPointerPressed()**), rufen wir die X- und Y-Koordinaten des Zeigers vom [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Objekt ab, das die Anzeige verwaltet, wenn der Benutzer im Bereich des Blickcontrollers mit der Maus klickt oder den Bildschirm berührt.
+<span data-ttu-id="c7ba0-198">Als Erstes füllen wir die Ereignishandler für die Maus und den Toucheingabezeiger auf.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-198">First, let's populate the mouse and touch pointer event handlers.</span></span> <span data-ttu-id="c7ba0-199">Im ersten Ereignishandler (**OnPointerPressed()**), rufen wir die X- und Y-Koordinaten des Zeigers vom [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Objekt ab, das die Anzeige verwaltet, wenn der Benutzer im Bereich des Blickcontrollers mit der Maus klickt oder den Bildschirm berührt.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-199">In the first event handler, **OnPointerPressed()**, we get the x-y coordinates of the pointer from the [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) that manages our display when the user clicks the mouse or touches the screen in the look controller region.</span></span>
 
-**OnPointerPressed**
+**<span data-ttu-id="c7ba0-200">OnPointerPressed</span><span class="sxs-lookup"><span data-stu-id="c7ba0-200">OnPointerPressed</span></span>**
 
 ```cpp
 void MoveLookController::OnPointerPressed(
@@ -255,11 +254,11 @@ _In_ PointerEventArgs^ args)
 }
 ```
 
-Dieser Ereignishandler überprüft, ob es sich beim Zeiger um die Maus handelt (da in diesem Beispiel sowohl Maus als auch Toucheingabe unterstützt werden) und ob sich der Zeiger im Bereich des Bewegungscontrollers befindet. Treffen beide Kriterien zu, überprüft er, ob der Zeiger gerade erst gedrückt wurde (d. h. ob dieses Click-Ereignis nicht mit einer vorherigen Bewegungs- oder Blickeingabe zusammenhängt), indem er testet, ob **m\_moveInUse** auf „false“ festgelegt ist. Ist dies der Fall, erfasst der Handler den entsprechenden Punkt im Bereich des Bewegungscontrollers und legt **m\_moveInUse** auf „true“ fest, damit er die Startposition der Eingabeinteraktion für den Bewegungscontroller bei einem erneuten Aufruf nicht überschreibt. Außerdem aktualisiert er die Zeiger-ID des Bewegungscontrollers mit der ID des aktuellen Zeigers.
+<span data-ttu-id="c7ba0-201">Dieser Ereignishandler überprüft, ob es sich beim Zeiger um die Maus handelt (da in diesem Beispiel sowohl Maus als auch Toucheingabe unterstützt werden) und ob sich der Zeiger im Bereich des Bewegungscontrollers befindet.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-201">This event handler checks whether the pointer is not the mouse (for the purposes of this sample, which supports both mouse and touch) and if it is in the move controller area.</span></span> <span data-ttu-id="c7ba0-202">Treffen beide Kriterien zu, überprüft er, ob der Zeiger gerade erst gedrückt wurde (d.h. ob dieses Click-Ereignis nicht mit einer vorherigen Bewegungs- oder Blickeingabe zusammenhängt), indem er testet, ob **m\_moveInUse** auf „false“ festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-202">If both criteria are true, it checks whether the pointer was just pressed, specifically, whether this click is unrelated to a previous move or look input, by testing if **m\_moveInUse** is false.</span></span> <span data-ttu-id="c7ba0-203">Ist dies der Fall, erfasst der Handler den entsprechenden Punkt im Bereich des Bewegungscontrollers und legt **m\_moveInUse** auf „true“ fest, damit er die Startposition der Eingabeinteraktion für den Bewegungscontroller bei einem erneuten Aufruf nicht überschreibt.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-203">If so, the handler captures the point in the move controller area where the press happened and sets **m\_moveInUse** to true, so that when this handler is called again, it won't overwrite the start position of the move controller input interaction.</span></span> <span data-ttu-id="c7ba0-204">Außerdem aktualisiert er die Zeiger-ID des Bewegungscontrollers mit der ID des aktuellen Zeigers.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-204">It also updates the move controller pointer ID to the current pointer's ID.</span></span>
 
-Wenn es sich beim Zeiger um die Maus handelt oder der Toucheingabezeiger sich nicht im Bereich des Bewegungscontrollers befindet, muss er sich im Bereich des Blickcontrollers befinden. Der Handler legt **m\_lookLastPoint** auf die aktuelle Position fest, an der der Benutzer die Maustaste gedrückt oder den Bildschirm berührt und gedrückt hat, setzt die Differenz (Delta) zurück und aktualisiert die Zeiger-ID des Blickcontrollers mit der aktuellen Zeiger-ID. Außerdem legt er den Zustand des Blickcontrollers auf „Aktiv“ fest.
+<span data-ttu-id="c7ba0-205">Wenn es sich beim Zeiger um die Maus handelt oder der Toucheingabezeiger sich nicht im Bereich des Bewegungscontrollers befindet, muss er sich im Bereich des Blickcontrollers befinden.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-205">If the pointer is the mouse or if the touch pointer isn't in the move controller area, it must be in the look controller area.</span></span> <span data-ttu-id="c7ba0-206">Der Handler legt **m\_lookLastPoint** auf die aktuelle Position fest, an der der Benutzer die Maustaste gedrückt oder den Bildschirm berührt und gedrückt hat, setzt die Differenz (Delta) zurück und aktualisiert die Zeiger-ID des Blickcontrollers mit der aktuellen Zeiger-ID.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-206">It sets **m\_lookLastPoint** to the current position where the user pressed the mouse button or touched and pressed, resets the delta, and updates the look controller's pointer ID to the current pointer ID.</span></span> <span data-ttu-id="c7ba0-207">Außerdem legt er den Zustand des Blickcontrollers auf „Aktiv“ fest.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-207">It also sets the state of the look controller to active.</span></span>
 
-**OnPointerMoved**
+**<span data-ttu-id="c7ba0-208">OnPointerMoved</span><span class="sxs-lookup"><span data-stu-id="c7ba0-208">OnPointerMoved</span></span>**
 
 ```cpp
 void MoveLookController::OnPointerMoved(
@@ -301,15 +300,15 @@ void MoveLookController::OnPointerMoved(
 }
 ```
 
-Der **OnPointerMoved**-Ereignishandler wird bei jeder Bewegung des Zeigers ausgelöst (in diesem Fall, wenn ein Toucheingabezeiger bewegt oder der Mauszeiger mit gedrückter linker Maustaste bewegt wird). Ist die Zeiger-ID mit der Zeiger-ID des Bewegungscontrollers identisch, ist es der Bewegungszeiger. Andernfalls wird überprüft, ob es sich beim aktiven Zeiger um den Zeiger des Blickcontrollers handelt.
+<span data-ttu-id="c7ba0-209">Der **OnPointerMoved**-Ereignishandler wird bei jeder Bewegung des Zeigers ausgelöst (in diesem Fall, wenn ein Toucheingabezeiger bewegt oder der Mauszeiger mit gedrückter linker Maustaste bewegt wird).</span><span class="sxs-lookup"><span data-stu-id="c7ba0-209">The **OnPointerMoved** event handler fires whenever the pointer moves (in this case, if a touch screen pointer is being dragged, or if the mouse pointer is being moved while the left button is pressed).</span></span> <span data-ttu-id="c7ba0-210">Ist die Zeiger-ID mit der Zeiger-ID des Bewegungscontrollers identisch, ist es der Bewegungszeiger. Andernfalls wird überprüft, ob es sich beim aktiven Zeiger um den Zeiger des Blickcontrollers handelt.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-210">If the pointer ID is the same as the move controller pointer's ID, then it's the move pointer; otherwise, we check if it's the look controller that's the active pointer.</span></span>
 
-Wenn es sich um den Zeiger des Bewegungscontrollers handelt, wird nur die Zeigerposition aktualisiert. Die Position wird weiter aktualisiert, solange das [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276)-Ereignis ausgelöst wird, da die endgültige Position mit der ersten Position verglichen werden soll, die mit dem **OnPointerPressed**-Ereignishandler erfasst wurde.
+<span data-ttu-id="c7ba0-211">Wenn es sich um den Zeiger des Bewegungscontrollers handelt, wird nur die Zeigerposition aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-211">If it's the move controller, we just update the pointer position.</span></span> <span data-ttu-id="c7ba0-212">Die Position wird weiter aktualisiert, solange das [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276)-Ereignis ausgelöst wird, da die endgültige Position mit der ersten Position verglichen werden soll, die mit dem **OnPointerPressed**-Ereignishandler erfasst wurde.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-212">We keep updating it as long the [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276) event keeps firing, because we want to compare the final position with the first one we captured with the **OnPointerPressed** event handler.</span></span>
 
-Wenn es sich um den Zeiger des Blickcontrollers handelt, wird es etwas komplizierter. Wir müssen einen neuen Blickpunkt berechnen und die Kamera auf diesen Punkt ausrichten. Dazu berechnen wir die Differenz zwischen dem letzten Blickpunkt und der aktuellen Bildschirmposition und multiplizieren sie mit dem Skalierungsfaktor, den wir einstellen können, um die Blickbewegungen in Bezug zur Distanz der Bildschirmbewegung zu verkleinern oder zu vergrößern. Anhand dieses Werts berechnen wir den Neigungswinkel und den Schwenkwinkel.
+<span data-ttu-id="c7ba0-213">Wenn es sich um den Zeiger des Blickcontrollers handelt, wird es etwas komplizierter.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-213">If it's the look controller, things are a little more complicated.</span></span> <span data-ttu-id="c7ba0-214">Wir müssen einen neuen Blickpunkt berechnen und die Kamera auf diesen Punkt ausrichten. Dazu berechnen wir die Differenz zwischen dem letzten Blickpunkt und der aktuellen Bildschirmposition und multiplizieren sie mit dem Skalierungsfaktor, den wir einstellen können, um die Blickbewegungen in Bezug zur Distanz der Bildschirmbewegung zu verkleinern oder zu vergrößern.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-214">We need to calculate a new look point and center the camera on it, so we calculate the delta between the last look point and the current screen position, and then we multiply versus our scale factor, which we can tweak to make the look movements smaller or larger relative to the distance of the screen movement.</span></span> <span data-ttu-id="c7ba0-215">Anhand dieses Werts berechnen wir den Neigungswinkel und den Schwenkwinkel.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-215">Using that value, we calculate the pitch and the yaw.</span></span>
 
-Abschließend müssen wir die Bewegungs- oder Blickcontrollerverhalten deaktivieren, wenn der Spieler aufhört, die Maus zu bewegen oder den Bildschirm zu berühren. Dazu wird der **OnPointerReleased**-Ereignishandler verwendet. Diesen Handler rufen wir auf, wenn [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) ausgelöst wird, um **m\_moveInUse** oder **m\_lookInUse** auf „false“ festzulegen, die Schwenkbewegung der Kamera zu deaktivieren und die Zeiger-ID auf Null festzulegen.
+<span data-ttu-id="c7ba0-216">Abschließend müssen wir die Bewegungs- oder Blickcontrollerverhalten deaktivieren, wenn der Spieler aufhört, die Maus zu bewegen oder den Bildschirm zu berühren.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-216">Finally, we need to deactivate the move or look controller behaviors when the player stops moving the mouse or touching the screen.</span></span> <span data-ttu-id="c7ba0-217">Dazu wird der **OnPointerReleased**-Ereignishandler verwendet. Diesen Handler rufen wir auf, wenn [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) ausgelöst wird, um **m\_moveInUse** oder **m\_lookInUse** auf „false“ festzulegen, die Schwenkbewegung der Kamera zu deaktivieren und die Zeiger-ID auf Null festzulegen.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-217">We use **OnPointerReleased**, which we call when [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208279) is fired, to set **m\_moveInUse** or **m\_lookInUse** to FALSE and turn off the camera pan movement, and to zero out the pointer ID.</span></span>
 
-**OnPointerReleased**
+**<span data-ttu-id="c7ba0-218">OnPointerReleased</span><span class="sxs-lookup"><span data-stu-id="c7ba0-218">OnPointerReleased</span></span>**
 
 ```cpp
 void MoveLookController::OnPointerReleased(
@@ -333,9 +332,9 @@ _In_ PointerEventArgs ^args)
 }
 ```
 
-Damit haben wir alle Touchscreenereignisse behandelt. Als Nächstes behandeln wir die Tasteneingabeereignisse für einen tastaturbasierten Bewegungscontroller.
+<span data-ttu-id="c7ba0-219">Damit haben wir alle Touchscreenereignisse behandelt.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-219">So far, we handled all the touch screen events.</span></span> <span data-ttu-id="c7ba0-220">Als Nächstes behandeln wir die Tasteneingabeereignisse für einen tastaturbasierten Bewegungscontroller.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-220">Now, let's handle the key input events for a keyboard-based move controller.</span></span>
 
-**OnKeyDown**
+**<span data-ttu-id="c7ba0-221">OnKeyDown</span><span class="sxs-lookup"><span data-stu-id="c7ba0-221">OnKeyDown</span></span>**
 
 ```cpp
 void MoveLookController::OnKeyDown(
@@ -357,9 +356,9 @@ void MoveLookController::OnKeyDown(
 }
 ```
 
-Solange eine dieser Tasten gedrückt wird, legt der Ereignishandler den entsprechenden Bewegungszustand auf „true“ fest.
+<span data-ttu-id="c7ba0-222">Solange eine dieser Tasten gedrückt wird, legt der Ereignishandler den entsprechenden Bewegungszustand auf „true“ fest.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-222">As long as one of these keys is pressed, this event handler sets the corresponding directional move state to true.</span></span>
 
-**OnKeyUp**
+**<span data-ttu-id="c7ba0-223">OnKeyUp</span><span class="sxs-lookup"><span data-stu-id="c7ba0-223">OnKeyUp</span></span>**
 
 ```cpp
 void MoveLookController::OnKeyUp(
@@ -381,14 +380,14 @@ void MoveLookController::OnKeyUp(
 }
 ```
 
-Wenn die Taste losgelassen wird, legt der Ereignishandler den Zustand wieder auf „false“ fest. Wenn **Update** aufgerufen wird, überprüft der Ereignishandler diese Bewegungszustände und bewegt die Kamera entsprechend. Dies ist etwas einfacher als die Implementierung für Fingereingabe.
+<span data-ttu-id="c7ba0-224">Wenn die Taste losgelassen wird, legt der Ereignishandler den Zustand wieder auf „false“ fest.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-224">And when the key is released, this event handler sets it back to false.</span></span> <span data-ttu-id="c7ba0-225">Wenn **Update** aufgerufen wird, überprüft der Ereignishandler diese Bewegungszustände und bewegt die Kamera entsprechend.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-225">When we call **Update**, it checks these directional move states, and move the camera accordingly.</span></span> <span data-ttu-id="c7ba0-226">Dies ist etwas einfacher als die Implementierung für Fingereingabe.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-226">This is a bit simpler than the touch implementation!</span></span>
 
-## <a name="initialize-the-touch-controls-and-the-controller-state"></a>Initialisieren der Fingereingabesteuerungen und des Controllerzustands
+## <a name="initialize-the-touch-controls-and-the-controller-state"></a><span data-ttu-id="c7ba0-227">Initialisieren der Fingereingabesteuerungen und des Controllerzustands</span><span class="sxs-lookup"><span data-stu-id="c7ba0-227">Initialize the touch controls and the controller state</span></span>
 
 
-Jetzt verbinden wir die Ereignisse und initialisieren alle Controllerzustandsfelder.
+<span data-ttu-id="c7ba0-228">Jetzt verbinden wir die Ereignisse und initialisieren alle Controllerzustandsfelder.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-228">Let's hook up the events now, and initialize all the controller state fields.</span></span>
 
-**Initialize**
+**<span data-ttu-id="c7ba0-229">Initialize</span><span class="sxs-lookup"><span data-stu-id="c7ba0-229">Initialize</span></span>**
 
 ```cpp
 void MoveLookController::Initialize( _In_ CoreWindow^ window )
@@ -428,12 +427,12 @@ void MoveLookController::Initialize( _In_ CoreWindow^ window )
 }
 ```
 
-Die **Initialize**-Methode akzeptiert als Parameter einen Verweis auf die [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Instanz der App und registriert die von uns entwickelten Ereignishandler für die entsprechenden Ereignisse in dieser **CoreWindow**-Instanz. Sie initialisiert die Bewegungs- und Blickzeiger-IDs, legt den Befehlsvektor für die Touchscreen-Bewegungscontrollerimplementierung auf Null fest und richtet die Kameraansicht gerade nach vorn aus, wenn die App gestartet wird.
+<span data-ttu-id="c7ba0-230">Die **Initialize**-Methode akzeptiert als Parameter einen Verweis auf die [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Instanz der App und registriert die von uns entwickelten Ereignishandler für die entsprechenden Ereignisse in dieser **CoreWindow**-Instanz.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-230">**Initialize** takes a reference to the app's [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) instance as a parameter and registers the event handlers we developed to the appropriate events on that **CoreWindow**.</span></span> <span data-ttu-id="c7ba0-231">Sie initialisiert die Bewegungs- und Blickzeiger-IDs, legt den Befehlsvektor für die Touchscreen-Bewegungscontrollerimplementierung auf Null fest und richtet die Kameraansicht gerade nach vorn aus, wenn die App gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-231">It initializes the move and look pointer's IDs, sets the command vector for our touch screen move controller implementation to zero, and sets the camera looking straight ahead when the app starts.</span></span>
 
-## <a name="getting-and-setting-the-position-and-orientation-of-the-camera"></a>Abrufen und Festlegen der Position und Ausrichtung der Kamera
+## <a name="getting-and-setting-the-position-and-orientation-of-the-camera"></a><span data-ttu-id="c7ba0-232">Abrufen und Festlegen der Position und Ausrichtung der Kamera</span><span class="sxs-lookup"><span data-stu-id="c7ba0-232">Getting and setting the position and orientation of the camera</span></span>
 
 
-Als Nächstes definieren wir einige Methoden zum Abrufen und Festlegen der Kameraposition in Bezug zum Viewport.
+<span data-ttu-id="c7ba0-233">Als Nächstes definieren wir einige Methoden zum Abrufen und Festlegen der Kameraposition in Bezug zum Viewport.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-233">Let's define some methods to get and set the position of the camera with respect to the viewport.</span></span>
 
 ```cpp
 void MoveLookController::SetPosition( _In_ DirectX::XMFLOAT3 pos )
@@ -471,10 +470,10 @@ DirectX::XMFLOAT3 MoveLookController::get_LookPoint()
 }
 ```
 
-## <a name="updating-the-controller-state-info"></a>Aktualisieren der Zustandsinformationen der Controller
+## <a name="updating-the-controller-state-info"></a><span data-ttu-id="c7ba0-234">Aktualisieren der Zustandsinformationen der Controller</span><span class="sxs-lookup"><span data-stu-id="c7ba0-234">Updating the controller state info</span></span>
 
 
-Jetzt führen wir die Berechnungen aus, mit denen die in **m\_movePointerPosition** erfassten Zeigerkoordinaten in neue Koordinaten für das Spielwelt-Koordinatensystem konvertiert werden. Die App ruft diese Methode bei jeder Aktualisierung der Hauptschleife auf. Daher berechnen wir an dieser Stelle die neuen Informationen zur Blickpunktposition, die an die App übergeben werden sollen, um die Ansichtsmatrix vor der Projektion in den Viewport zu aktualisieren.
+<span data-ttu-id="c7ba0-235">Jetzt führen wir die Berechnungen aus, mit denen die in **m\_movePointerPosition** erfassten Zeigerkoordinaten in neue Koordinaten für das Spielwelt-Koordinatensystem konvertiert werden.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-235">Now, we perform our calculations that convert the pointer coordinate info tracked in **m\_movePointerPosition** into new coordinate information respective of our world coordinate system.</span></span> <span data-ttu-id="c7ba0-236">Die App ruft diese Methode bei jeder Aktualisierung der Hauptschleife auf.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-236">Our app calls this method every time we refresh the main app loop.</span></span> <span data-ttu-id="c7ba0-237">Daher berechnen wir an dieser Stelle die neuen Informationen zur Blickpunktposition, die an die App übergeben werden sollen, um die Ansichtsmatrix vor der Projektion in den Viewport zu aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-237">So, it is here that we compute the new look point position info we want to pass to the app for updating the view matrix before projection into the viewport.</span></span>
 
 ```cpp
 void MoveLookController::Update(CoreWindow ^window)
@@ -557,16 +556,16 @@ void MoveLookController::Update(CoreWindow ^window)
 }
 ```
 
-Damit die Bewegung nicht "zittert", wenn der Spieler den fingereingabebasierten Bewegungscontroller verwendet, legen wir einen virtuellen inaktiven Bereich mit einem Durchmesser von 32 Pixel um den Zeiger fest. Außerdem fügen wir die Geschwindigkeit hinzu, die sich aus dem Befehlswert plus einer Bewegungsrate berechnet. (Sie können dieses Verhalten wie gewünscht anpassen, um die Bewegungsrate basierend auf der Distanz, um die der Zeiger im Bereich des Bewegungscontrollers bewegt wird, zu erhöhen oder zu verringern.)
+<span data-ttu-id="c7ba0-238">Damit die Bewegung nicht "zittert", wenn der Spieler den fingereingabebasierten Bewegungscontroller verwendet, legen wir einen virtuellen inaktiven Bereich mit einem Durchmesser von 32Pixel um den Zeiger fest.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-238">Because we don't want jittery movement when the player uses our touch-based move controller, we set a virtual dead zone around the pointer with a diameter of 32 pixels.</span></span> <span data-ttu-id="c7ba0-239">Außerdem fügen wir die Geschwindigkeit hinzu, die sich aus dem Befehlswert plus einer Bewegungsrate berechnet.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-239">We also add velocity, which is the command value plus a movement gain rate.</span></span> <span data-ttu-id="c7ba0-240">(Sie können dieses Verhalten wie gewünscht anpassen, um die Bewegungsrate basierend auf der Distanz, um die der Zeiger im Bereich des Bewegungscontrollers bewegt wird, zu erhöhen oder zu verringern.)</span><span class="sxs-lookup"><span data-stu-id="c7ba0-240">(You can adjust this behavior to your liking, to slow down or speed up the rate of movement based on the distance the pointer moves in the move controller area.)</span></span>
 
-Beim Berechnen der Geschwindigkeit setzen wir außerdem die von den Bewegungs- und Blickcontrollern empfangenen Koordinaten in die Bewegung des tatsächlichen Blickpunkts um, die wir an die Methode zum Berechnen der Ansichtsmatrix für die Szene senden. Als Erstes invertieren wir die X-Koordinate, da sich der Blickpunkt in der Szene in entgegengesetzter Richtung dreht (was die Drehung einer Kamera um ihre Mittelachse simuliert), wenn wir den Blickcontroller per Mausklick oder Toucheingabe nach links oder rechts bewegen. Anschließend vertauschen wir die Y- und Z-Achse, da eine Aufwärts-/Abwärtsbewegung mittels Taste oder Toucheingabe (interpretiert als Y-Achsenverhalten) mit dem Bewegungscontroller in eine Kameraaktion umgesetzt werden soll, durch die der Blickpunkt in den oder aus dem Bildschirm (Z-Achse) bewegt wird.
+<span data-ttu-id="c7ba0-241">Beim Berechnen der Geschwindigkeit setzen wir außerdem die von den Bewegungs- und Blickcontrollern empfangenen Koordinaten in die Bewegung des tatsächlichen Blickpunkts um, die wir an die Methode zum Berechnen der Ansichtsmatrix für die Szene senden.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-241">When we compute the velocity, we also translate the coordinates received from the move and look controllers into the movement of the actual look point we send to the method that computes our view matrix for the scene.</span></span> <span data-ttu-id="c7ba0-242">Als Erstes invertieren wir die X-Koordinate, da sich der Blickpunkt in der Szene in entgegengesetzter Richtung dreht (was die Drehung einer Kamera um ihre Mittelachse simuliert), wenn wir den Blickcontroller per Mausklick oder Toucheingabe nach links oder rechts bewegen.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-242">First, we invert the x coordinate, because if we click-move or drag left or right with the look controller, the look point rotates in the opposite direction in the scene, as a camera might swing about its central axis.</span></span> <span data-ttu-id="c7ba0-243">Anschließend vertauschen wir die Y- und Z-Achse, da eine Aufwärts-/Abwärtsbewegung mittels Taste oder Toucheingabe (interpretiert als Y-Achsenverhalten) mit dem Bewegungscontroller in eine Kameraaktion umgesetzt werden soll, durch die der Blickpunkt in den oder aus dem Bildschirm (Z-Achse) bewegt wird.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-243">Then, we swap the y and z axes, because an up/down key press or touch drag motion (read as a y-axis behavior) on the move controller should translate into a camera action that moves the look point into or out of the screen (the z-axis).</span></span>
 
-Die endgültige Position des Blickpunkts für den Spieler ist die letzte Position plus die berechnete Geschwindigkeit. Dies ist die Position, die der Renderer liest, wenn er die **get\_Position**-Methode aufruft (wahrscheinlich während der Einrichtung für die einzelnen Frames). Danach setzen wir den Bewegungsbefehl auf Null zurück.
+<span data-ttu-id="c7ba0-244">Die endgültige Position des Blickpunkts für den Spieler ist die letzte Position plus die berechnete Geschwindigkeit. Dies ist die Position, die der Renderer liest, wenn er die **get\_Position**-Methode aufruft (wahrscheinlich während der Einrichtung für die einzelnen Frames).</span><span class="sxs-lookup"><span data-stu-id="c7ba0-244">The final position of the look point for the player is the last position plus the calculated velocity, and this is what is read by the renderer when it calls the **get\_Position** method (most likely during the setup for each frame).</span></span> <span data-ttu-id="c7ba0-245">Danach setzen wir den Bewegungsbefehl auf Null zurück.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-245">After that, we reset the move command to zero.</span></span>
 
-## <a name="updating-the-view-matrix-with-the-new-camera-position"></a>Aktualisieren der Ansichtsmatrix mit der neuen Kameraposition
+## <a name="updating-the-view-matrix-with-the-new-camera-position"></a><span data-ttu-id="c7ba0-246">Aktualisieren der Ansichtsmatrix mit der neuen Kameraposition</span><span class="sxs-lookup"><span data-stu-id="c7ba0-246">Updating the view matrix with the new camera position</span></span>
 
 
-Wir können eine Koordinate des Szenenbereichs abrufen, auf die die Kamera ausgerichtet ist und die jedes Mal aktualisiert wird, wenn die App dazu angewiesen wird (z. B. alle 60 Sekunden in der Hauptschleife der App). Dieser Pseudocode zeigt das Aufrufverhalten, das Sie implementieren können:
+<span data-ttu-id="c7ba0-247">Wir können eine Koordinate des Szenenbereichs abrufen, auf die die Kamera ausgerichtet ist und die jedes Mal aktualisiert wird, wenn die App dazu angewiesen wird (z.B. alle 60Sekunden in der Hauptschleife der App).</span><span class="sxs-lookup"><span data-stu-id="c7ba0-247">We can obtain a scene space coordinate that our camera is focused on, and which is updated whenever you tell your app to do so (every 60 seconds in the main app loop, for example).</span></span> <span data-ttu-id="c7ba0-248">Dieser Pseudocode zeigt das Aufrufverhalten, das Sie implementieren können:</span><span class="sxs-lookup"><span data-stu-id="c7ba0-248">This pseudocode suggests the calling behavior you can implement:</span></span>
 
 ```cpp
 myMoveLookController->Update( m_window );   
@@ -579,17 +578,16 @@ myFirstPersonCamera->SetViewParameters(
                  ); 
 ```
 
-Herzlichen Glückwunsch! Sie haben einfache Bewegungs-/Blicksteuerungen für Touchscreens und Tastatur-/Mauseingabe in Ihrem Spiel implementiert.
+<span data-ttu-id="c7ba0-249">Herzlichen Glückwunsch!</span><span class="sxs-lookup"><span data-stu-id="c7ba0-249">Congratulations!</span></span> <span data-ttu-id="c7ba0-250">Sie haben einfache Bewegungs-/Blicksteuerungen für Touchscreens und Tastatur-/Mauseingabe in Ihrem Spiel implementiert.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-250">You've implemented basic move-look controls for both touch screens and keyboard/mouse input touch controls in your game!</span></span>
 
-> **Hinweis**  
-Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
- 
+> **<span data-ttu-id="c7ba0-251">Hinweis</span><span class="sxs-lookup"><span data-stu-id="c7ba0-251">Note</span></span>**  
+<span data-ttu-id="c7ba0-252">Dieser Artikel ist für Windows10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben.</span><span class="sxs-lookup"><span data-stu-id="c7ba0-252">This article is for Windows 10 developers writing Universal Windows Platform (UWP) apps.</span></span> <span data-ttu-id="c7ba0-253">Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).</span><span class="sxs-lookup"><span data-stu-id="c7ba0-253">If you’re developing for Windows 8.x or Windows Phone 8.x, see the [archived documentation](http://go.microsoft.com/fwlink/p/?linkid=619132).</span></span>
 
  
 
  
 
+ 
 
 
 

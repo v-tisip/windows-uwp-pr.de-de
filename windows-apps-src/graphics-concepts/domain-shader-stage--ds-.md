@@ -2,7 +2,8 @@
 title: Domainshaderphase (DS)
 description: Die Domainshaderphase (DS) berechnet die Vertexposition eines unterteilten Punkts im Ausgabefeld. Sie Berechnet die Vertexposition, die dem jeweiligen Domainsample entspricht.
 ms.assetid: 673CC04A-A74F-495F-AFB7-49157538749C
-keywords: Domainshaderphase (DS)
+keywords:
+- Domainshaderphase (DS)
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
@@ -11,40 +12,41 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a1d229f38511196e96c2282a1665071e8e74af72
-ms.sourcegitcommit: c80b9e6589a1ee29c5032a0b942e6a024c224ea7
-ms.translationtype: HT
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1044029"
 ---
-# <a name="domain-shader-ds-stage"></a><span data-ttu-id="b335b-104">Domainshaderphase (DS)</span><span class="sxs-lookup"><span data-stu-id="b335b-104">Domain Shader (DS) stage</span></span>
+# <a name="domain-shader-ds-stage"></a><span data-ttu-id="e0bfc-104">Domainshaderphase (DS)</span><span class="sxs-lookup"><span data-stu-id="e0bfc-104">Domain Shader (DS) stage</span></span>
 
 
-<span data-ttu-id="b335b-105">Die Domainshaderphase (DS) berechnet die Vertexposition eines unterteilten Punkts im Ausgabe-Patch. Sie berechnet die Vertexposition, die dem jeweiligen Domainsample entspricht.</span><span class="sxs-lookup"><span data-stu-id="b335b-105">The Domain Shader (DS) stage calculates the vertex position of a subdivided point in the output patch; it calculates the vertex position that corresponds to each domain sample.</span></span> <span data-ttu-id="b335b-106">Ein Domainshader wird einmal pro Tessellator-Phase-Ausgabepunkt ausgeführt und verfügt über schreibgeschützten Zugriff auf den Hull-Shader-Patch und die Ausgabe-Patch-Konstanten sowie die Tessellator-Phase-Ausgabe-UV-Koordinaten.</span><span class="sxs-lookup"><span data-stu-id="b335b-106">A domain shader is run once per tessellator stage output point and has read-only access to the hull shader output patch and output patch constants, and the tessellator stage output UV coordinates.</span></span>
+<span data-ttu-id="e0bfc-105">Die Domainshaderphase (DS) berechnet die Vertexposition eines unterteilten Punkts im Ausgabe-Patch. Sie berechnet die Vertexposition, die dem jeweiligen Domainsample entspricht.</span><span class="sxs-lookup"><span data-stu-id="e0bfc-105">The Domain Shader (DS) stage calculates the vertex position of a subdivided point in the output patch; it calculates the vertex position that corresponds to each domain sample.</span></span> <span data-ttu-id="e0bfc-106">Ein Domainshader wird einmal pro Tessellator-Phase-Ausgabepunkt ausgeführt und verfügt über schreibgeschützten Zugriff auf den Hull-Shader-Patch und die Ausgabe-Patch-Konstanten sowie die Tessellator-Phase-Ausgabe-UV-Koordinaten.</span><span class="sxs-lookup"><span data-stu-id="e0bfc-106">A domain shader is run once per tessellator stage output point and has read-only access to the hull shader output patch and output patch constants, and the tessellator stage output UV coordinates.</span></span>
 
-## <a name="span-idpurposeandusesspanspan-idpurposeandusesspanspan-idpurposeandusesspanpurpose-and-uses"></a><span data-ttu-id="b335b-107"><span id="Purpose_and_uses"></span><span id="purpose_and_uses"></span><span id="PURPOSE_AND_USES"></span>Zweck und Verwendung</span><span class="sxs-lookup"><span data-stu-id="b335b-107"><span id="Purpose_and_uses"></span><span id="purpose_and_uses"></span><span id="PURPOSE_AND_USES"></span>Purpose and uses</span></span>
+## <a name="span-idpurposeandusesspanspan-idpurposeandusesspanspan-idpurposeandusesspanpurpose-and-uses"></a><span data-ttu-id="e0bfc-107"><span id="Purpose_and_uses"></span><span id="purpose_and_uses"></span><span id="PURPOSE_AND_USES"></span>Zweck und Verwendung</span><span class="sxs-lookup"><span data-stu-id="e0bfc-107"><span id="Purpose_and_uses"></span><span id="purpose_and_uses"></span><span id="PURPOSE_AND_USES"></span>Purpose and uses</span></span>
 
 
-<span data-ttu-id="b335b-108">Die Domainshaderphase (DS) gibt die Vertex-Position eines unterteilen Punkts im Ausgabe Patch aus (basierend auf der Eingabe der [Hull-Shader-Phase (HS)](hull-shader-stage--hs-.md) und der [Tessellator-Phase (TS)](tessellator-stage--ts-.md)).</span><span class="sxs-lookup"><span data-stu-id="b335b-108">The Domain Shader (DS) stage outputs the vertex position of a subdivided point in the output patch, based on input from the [Hull Shader (HS) stage](hull-shader-stage--hs-.md) and the [Tessellator (TS) stage](tessellator-stage--ts-.md).</span></span>
+<span data-ttu-id="e0bfc-108">Die Domainshaderphase (DS) gibt die Vertex-Position eines unterteilen Punkts im Ausgabe Patch aus (basierend auf der Eingabe der [Hull-Shader-Phase (HS)](hull-shader-stage--hs-.md) und der [Tessellator-Phase (TS)](tessellator-stage--ts-.md)).</span><span class="sxs-lookup"><span data-stu-id="e0bfc-108">The Domain Shader (DS) stage outputs the vertex position of a subdivided point in the output patch, based on input from the [Hull Shader (HS) stage](hull-shader-stage--hs-.md) and the [Tessellator (TS) stage](tessellator-stage--ts-.md).</span></span>
 
 ![Diagramm der Domainshaderphase](images/d3d11-domain-shader.png)
 
-## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span data-ttu-id="b335b-110"><span id="Input"></span><span id="input"></span><span id="INPUT"></span>Eingabe</span><span class="sxs-lookup"><span data-stu-id="b335b-110"><span id="Input"></span><span id="input"></span><span id="INPUT"></span>Input</span></span>
+## <a name="span-idinputspanspan-idinputspanspan-idinputspaninput"></a><span data-ttu-id="e0bfc-110"><span id="Input"></span><span id="input"></span><span id="INPUT"></span>Eingabe</span><span class="sxs-lookup"><span data-stu-id="e0bfc-110"><span id="Input"></span><span id="input"></span><span id="INPUT"></span>Input</span></span>
 
 
--   <span data-ttu-id="b335b-111">Ein Domainshader nimmt die Ausgabe-Kontrollpunkte aus der [Hull-Shader-Phase (HS)](hull-shader-stage--hs-.md) entgegen.</span><span class="sxs-lookup"><span data-stu-id="b335b-111">A domain shader consumes output control points from the [Hull Shader (HS) stage](hull-shader-stage--hs-.md).</span></span> <span data-ttu-id="b335b-112">Die Hull-Shader-Ausgaben umfassen:</span><span class="sxs-lookup"><span data-stu-id="b335b-112">The hull shader outputs include:</span></span>
-    -   <span data-ttu-id="b335b-113">Kontrollpunkte.</span><span class="sxs-lookup"><span data-stu-id="b335b-113">Control points.</span></span>
-    -   <span data-ttu-id="b335b-114">Patch-Konstantendaten.</span><span class="sxs-lookup"><span data-stu-id="b335b-114">Patch constant data.</span></span>
-    -   <span data-ttu-id="b335b-115">Tessellation-Faktoren.</span><span class="sxs-lookup"><span data-stu-id="b335b-115">Tessellation factors.</span></span> <span data-ttu-id="b335b-116">Die Tesselation-Faktoren können die vom Fixed-Function-Tessellator verwendeten Werte und die Rohwerte (z. B. vor der Rundung durch die Integer-Tesselation) umfassen. Diese werden beispielsweise für das Geomorphing verwendet.</span><span class="sxs-lookup"><span data-stu-id="b335b-116">The tessellation factors can include the values used by the fixed-function tessellator as well as the raw values (before rounding by integer tessellation, for example), which facilitates geomorphing, for example.</span></span>
--   <span data-ttu-id="b335b-117">Ein Domainshader wird einmal pro Ausgabekoordinate über die [Tessellator-Phase (TS)](tessellator-stage--ts-.md) aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="b335b-117">A domain shader is invoked once per output coordinate from the [Tessellator (TS) stage](tessellator-stage--ts-.md).</span></span>
+-   <span data-ttu-id="e0bfc-111">Ein Domainshader nimmt die Ausgabe-Kontrollpunkte aus der [Hull-Shader-Phase (HS)](hull-shader-stage--hs-.md) entgegen.</span><span class="sxs-lookup"><span data-stu-id="e0bfc-111">A domain shader consumes output control points from the [Hull Shader (HS) stage](hull-shader-stage--hs-.md).</span></span> <span data-ttu-id="e0bfc-112">Die Hull-Shader-Ausgaben umfassen:</span><span class="sxs-lookup"><span data-stu-id="e0bfc-112">The hull shader outputs include:</span></span>
+    -   <span data-ttu-id="e0bfc-113">Kontrollpunkte.</span><span class="sxs-lookup"><span data-stu-id="e0bfc-113">Control points.</span></span>
+    -   <span data-ttu-id="e0bfc-114">Patch-Konstantendaten.</span><span class="sxs-lookup"><span data-stu-id="e0bfc-114">Patch constant data.</span></span>
+    -   <span data-ttu-id="e0bfc-115">Tessellation-Faktoren.</span><span class="sxs-lookup"><span data-stu-id="e0bfc-115">Tessellation factors.</span></span> <span data-ttu-id="e0bfc-116">Die Tesselation-Faktoren können die vom Fixed-Function-Tessellator verwendeten Werte und die Rohwerte (z. B. vor der Rundung durch die Integer-Tesselation) umfassen. Diese werden beispielsweise für das Geomorphing verwendet.</span><span class="sxs-lookup"><span data-stu-id="e0bfc-116">The tessellation factors can include the values used by the fixed-function tessellator as well as the raw values (before rounding by integer tessellation, for example), which facilitates geomorphing, for example.</span></span>
+-   <span data-ttu-id="e0bfc-117">Ein Domainshader wird einmal pro Ausgabekoordinate über die [Tessellator-Phase (TS)](tessellator-stage--ts-.md) aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="e0bfc-117">A domain shader is invoked once per output coordinate from the [Tessellator (TS) stage](tessellator-stage--ts-.md).</span></span>
 
-## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span data-ttu-id="b335b-118"><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Ausgabe</span><span class="sxs-lookup"><span data-stu-id="b335b-118"><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Output</span></span>
+## <a name="span-idoutputspanspan-idoutputspanspan-idoutputspanoutput"></a><span data-ttu-id="e0bfc-118"><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Ausgabe</span><span class="sxs-lookup"><span data-stu-id="e0bfc-118"><span id="Output"></span><span id="output"></span><span id="OUTPUT"></span>Output</span></span>
 
 
--   <span data-ttu-id="b335b-119">Die Domainshaderphase (DS) gibt die Vertex-Position eines unterteilten Punkts im Ausgabe-Patch zurück.</span><span class="sxs-lookup"><span data-stu-id="b335b-119">The Domain Shader (DS) stage outputs the vertex position of a subdivided point in the output patch.</span></span>
+-   <span data-ttu-id="e0bfc-119">Die Domainshaderphase (DS) gibt die Vertex-Position eines unterteilten Punkts im Ausgabe-Patch zurück.</span><span class="sxs-lookup"><span data-stu-id="e0bfc-119">The Domain Shader (DS) stage outputs the vertex position of a subdivided point in the output patch.</span></span>
 
-<span data-ttu-id="b335b-120">Nachdem der Domainshader abgeschlossen ist, wird die Tesselation abgeschlossen und die Pipelinedaten werden an die nächste Pipelinephase weitergeleitet (z. B. die [Geometry-Shader-Phase (GS)](geometry-shader-stage--gs-.md) und die [Pixel-Shader-Phase (PS)](pixel-shader-stage--ps-.md)).</span><span class="sxs-lookup"><span data-stu-id="b335b-120">After the domain shader completes, tessellation is finished and pipeline data continues to the next pipeline stage, such as the [Geometry Shader (GS) stage](geometry-shader-stage--gs-.md) and the [Pixel Shader (PS) stage](pixel-shader-stage--ps-.md).</span></span> <span data-ttu-id="b335b-121">Ein Geometrieshader erwartet Primitiven mit strukturierten Daten (z. B. 6 Vertizes pro Dreieck). Er ist bei aktiver Tesselation nicht gültig (dies führt zu einem unerwartetem Verhalten, das einen Fehler der Debugschicht auslöst).</span><span class="sxs-lookup"><span data-stu-id="b335b-121">A geometry shader that expects primitives with adjacency (for example, 6 vertices per triangle) is not valid when tessellation is active (this results in undefined behavior, which the debug layer will complain about).</span></span>
+<span data-ttu-id="e0bfc-120">Nachdem der Domainshader abgeschlossen ist, wird die Tesselation abgeschlossen und die Pipelinedaten werden an die nächste Pipelinephase weitergeleitet (z. B. die [Geometry-Shader-Phase (GS)](geometry-shader-stage--gs-.md) und die [Pixel-Shader-Phase (PS)](pixel-shader-stage--ps-.md)).</span><span class="sxs-lookup"><span data-stu-id="e0bfc-120">After the domain shader completes, tessellation is finished and pipeline data continues to the next pipeline stage, such as the [Geometry Shader (GS) stage](geometry-shader-stage--gs-.md) and the [Pixel Shader (PS) stage](pixel-shader-stage--ps-.md).</span></span> <span data-ttu-id="e0bfc-121">Ein Geometrieshader erwartet Primitiven mit strukturierten Daten (z. B. 6 Vertizes pro Dreieck). Er ist bei aktiver Tesselation nicht gültig (dies führt zu einem unerwartetem Verhalten, das einen Fehler der Debugschicht auslöst).</span><span class="sxs-lookup"><span data-stu-id="e0bfc-121">A geometry shader that expects primitives with adjacency (for example, 6 vertices per triangle) is not valid when tessellation is active (this results in undefined behavior, which the debug layer will complain about).</span></span>
 
-## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span data-ttu-id="b335b-122"><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Beispiel</span><span class="sxs-lookup"><span data-stu-id="b335b-122"><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Example</span></span>
+## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span data-ttu-id="e0bfc-122"><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Beispiel</span><span class="sxs-lookup"><span data-stu-id="e0bfc-122"><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Example</span></span>
 
 
 ```
@@ -60,10 +62,10 @@ void main( out    MyDSOutput result,
 }
 ```
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="b335b-123"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="b335b-123"><span id="related-topics"></span>Related topics</span></span>
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="e0bfc-123"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="e0bfc-123"><span id="related-topics"></span>Related topics</span></span>
 
 
-[<span data-ttu-id="b335b-124">Grafikpipeline</span><span class="sxs-lookup"><span data-stu-id="b335b-124">Graphics pipeline</span></span>](graphics-pipeline.md)
+[<span data-ttu-id="e0bfc-124">Grafikpipeline</span><span class="sxs-lookup"><span data-stu-id="e0bfc-124">Graphics pipeline</span></span>](graphics-pipeline.md)
 
  
 

@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: "Stellt einen Wert für ein beliebiges XAML-Attribut bereit, indem ein Verweis auf eine Ressource aus einer benutzerdefinierten Ressourcennachschlage-Implementierung untersucht wird. Das Nachschlagen der Ressource erfolgt mithilfe einer Implementierung der CustomXamlResourceLoader-Klasse."
+description: Stellt einen Wert für ein beliebiges XAML-Attribut bereit, indem ein Verweis auf eine Ressource aus einer benutzerdefinierten Ressourcennachschlage-Implementierung untersucht wird. Das Nachschlagen der Ressource erfolgt mithilfe einer Implementierung der CustomXamlResourceLoader-Klasse.
 title: CustomResource-Markuperweiterung
 ms.assetid: 3A59A8DE-E805-4F04-B9D9-A91E053F3642
 ms.author: jimwalk
@@ -8,52 +8,50 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 1203987a3003c9f78bbed52b00a81cc3832a1abe
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: a14ae2e327805c5d123cc3b6232bfa18863f9da9
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.locfileid: "235053"
 ---
+# <a name="customresource-markup-extension"></a><span data-ttu-id="98f93-105">{CustomResource}-Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="98f93-105">{CustomResource} markup extension</span></span>
 
-# <a name="customresource-markup-extension"></a>{CustomResource}-Markuperweiterung
+<span data-ttu-id="98f93-106">\[ Aktualisiert für UWP-Apps unter Windows10.</span><span class="sxs-lookup"><span data-stu-id="98f93-106">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="98f93-107">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="98f93-107">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+<span data-ttu-id="98f93-108">Stellt einen Wert für ein beliebiges XAML-Attribut bereit, indem ein Verweis auf eine Ressource aus einer benutzerdefinierten Ressourcennachschlage-Implementierung untersucht wird.</span><span class="sxs-lookup"><span data-stu-id="98f93-108">Provides a value for any XAML attribute by evaluating a reference to a resource that comes from a custom resource-lookup implementation.</span></span> <span data-ttu-id="98f93-109">Das Nachschlagen der Ressource erfolgt mithilfe einer Implementierung der [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327)-Klasse.</span><span class="sxs-lookup"><span data-stu-id="98f93-109">Resource lookup is performed by a [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327) class implementation.</span></span>
 
-Stellt einen Wert für ein beliebiges XAML-Attribut bereit, indem ein Verweis auf eine Ressource aus einer benutzerdefinierten Ressourcennachschlage-Implementierung untersucht wird. Das Nachschlagen der Ressource erfolgt mithilfe einer Implementierung der [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327)-Klasse.
-
-## <a name="xaml-attribute-usage"></a>XAML-Attributverwendung
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="98f93-110">XAML-Attributverwendung</span><span class="sxs-lookup"><span data-stu-id="98f93-110">XAML attribute usage</span></span>
 
 ``` syntax
 <object property="{CustomResource key}" .../>
 ```
 
-## <a name="xaml-values"></a>XAML-Werte
+## <a name="xaml-values"></a><span data-ttu-id="98f93-111">XAML-Werte</span><span class="sxs-lookup"><span data-stu-id="98f93-111">XAML values</span></span>
 
-| Begriff | Beschreibung |
+| <span data-ttu-id="98f93-112">Benennung</span><span class="sxs-lookup"><span data-stu-id="98f93-112">Term</span></span> | <span data-ttu-id="98f93-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="98f93-113">Description</span></span> |
 |------|-------------|
-| key | Der Schlüssel für die angeforderte Ressource. Die ursprüngliche Zuweisung des Schlüssels ist abhängig von der Implementierung der [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327)-Klasse, die aktuell zur Verwendung registriert wurde. |
+| <span data-ttu-id="98f93-114">Schlüssel</span><span class="sxs-lookup"><span data-stu-id="98f93-114">key</span></span> | <span data-ttu-id="98f93-115">Der Schlüssel für die angeforderte Ressource.</span><span class="sxs-lookup"><span data-stu-id="98f93-115">The key for the requested resource.</span></span> <span data-ttu-id="98f93-116">Die ursprüngliche Zuweisung des Schlüssels ist abhängig von der Implementierung der [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327)-Klasse, die aktuell zur Verwendung registriert wurde.</span><span class="sxs-lookup"><span data-stu-id="98f93-116">How the key is initially assigned is specific to the implementation of the [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327) class that is currently registered for use.</span></span> |
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a><span data-ttu-id="98f93-117">Hinweise</span><span class="sxs-lookup"><span data-stu-id="98f93-117">Remarks</span></span>
 
-**CustomResource** ist eine Methode zum Abrufen von Werten, die an anderer Stelle in einem benutzerdefinierten Ressourcenrepository definiert sind. Diese Technik ist relativ komplex und wird in den meisten Szenarien für Windows-Runtime-App-Szenarien nicht verwendet.
+<span data-ttu-id="98f93-118">**CustomResource** ist eine Methode zum Abrufen von Werten, die an anderer Stelle in einem benutzerdefinierten Ressourcenrepository definiert sind.</span><span class="sxs-lookup"><span data-stu-id="98f93-118">**CustomResource** is a technique for obtaining values that are defined elsewhere in a custom resource repository.</span></span> <span data-ttu-id="98f93-119">Diese Technik ist relativ komplex und wird in den meisten Szenarien für Windows-Runtime-App-Szenarien nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="98f93-119">This technique is relatively advanced and isn't used by most Windows Runtime app scenarios.</span></span>
 
-Die Auflösung einer **CustomResource** in ein Ressourcenwörterbuch wird in diesem Thema nicht beschrieben, da diese sehr unterschiedlich sein kann, abhängig von der Implementierung von [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327).
+<span data-ttu-id="98f93-120">Die Auflösung einer **CustomResource** in ein Ressourcenwörterbuch wird in diesem Thema nicht beschrieben, da diese sehr unterschiedlich sein kann, abhängig von der Implementierung von [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327).</span><span class="sxs-lookup"><span data-stu-id="98f93-120">How a **CustomResource** resolves to a resource dictionary is not described in this topic, because that can vary widely depending on how [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327) is implemented.</span></span>
 
-Die [**GetResource**](https://msdn.microsoft.com/library/windows/apps/br243340)-Methode der Implementierung von [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327) wird vom XAML-Parser der Windows-Runtime aufgerufen, wenn eine `{CustomResource}` im Markup gefunden wird. Die *resourceId*, die an **GetResource** übergeben wird, stammt aus dem *key*-Argument. Die anderen Eingabeparameter sind kontextabhängig und richten sich beispielsweise nach der Eigenschaft, auf die sich die Verwendung bezieht.
+<span data-ttu-id="98f93-121">Die [**GetResource**](https://msdn.microsoft.com/library/windows/apps/br243340)-Methode der Implementierung von [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327) wird vom XAML-Parser der Windows-Runtime aufgerufen, wenn eine `{CustomResource}` im Markup gefunden wird.</span><span class="sxs-lookup"><span data-stu-id="98f93-121">The [**GetResource**](https://msdn.microsoft.com/library/windows/apps/br243340) method of the [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327) implementation is called by the Windows Runtime XAML parser whenever it encounters a `{CustomResource}` usage in markup.</span></span> <span data-ttu-id="98f93-122">Die *resourceId*, die an **GetResource** übergeben wird, stammt aus dem *key*-Argument. Die anderen Eingabeparameter sind kontextabhängig und richten sich beispielsweise nach der Eigenschaft, auf die sich die Verwendung bezieht.</span><span class="sxs-lookup"><span data-stu-id="98f93-122">The *resourceId* that is passed to **GetResource** comes from the *key* argument, and the other input parameters come from context, such as which property the usage is applied to.</span></span>
 
-Eine `{CustomResource}`-Syntax funktioniert standardmäßig nicht (die Basisimplementierung von [**GetResource**](https://msdn.microsoft.com/library/windows/apps/br243340) ist unvollständig). Für einen gültigen `{CustomResource}`-Verweis müssen Sie die folgenden Schritte ausführen:
+<span data-ttu-id="98f93-123">Eine `{CustomResource}`-Syntax funktioniert standardmäßig nicht (die Basisimplementierung von [**GetResource**](https://msdn.microsoft.com/library/windows/apps/br243340) ist unvollständig).</span><span class="sxs-lookup"><span data-stu-id="98f93-123">A `{CustomResource}` usage doesn't work by default (the base implementation of [**GetResource**](https://msdn.microsoft.com/library/windows/apps/br243340) is incomplete).</span></span> <span data-ttu-id="98f93-124">Für einen gültigen `{CustomResource}`-Verweis müssen Sie die folgenden Schritte ausführen:</span><span class="sxs-lookup"><span data-stu-id="98f93-124">To make a valid `{CustomResource}` reference, you must perform each of these steps:</span></span>
 
-1.  Leiten Sie eine benutzerdefinierte Klasse von [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327) ab, und überschreiben Sie die [**GetResource**](https://msdn.microsoft.com/library/windows/apps/br243340)-Methode. Rufen Sie in der Implementierung nicht die Methode der Basisklasse auf.
-2.  Legen Sie [**CustomXamlResourceLoader.Current**](https://msdn.microsoft.com/library/windows/apps/br243328) fest, um auf Ihre Klasse in der Initialisierungslogik zu verweisen. Dies muss erfolgen, bevor XAML-Code auf Seitenebene geladen wird, der die `{CustomResource}`-Erweiterungssyntax enthält. Eine Stelle, an der **CustomXamlResourceLoader.Current** festgelegt werden kann, ist im [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324)-Unterklassenkonstruktor, der in den App.xaml-CodeBehind-Vorlagen für Sie generiert wird.
-3.  Jetzt können Sie `{CustomResource}`-Erweiterungen in dem XAML-Code, den Ihre App als Seiten lädt, oder in XAML-Ressourcenverzeichnissen verwenden.
+1.  <span data-ttu-id="98f93-125">Leiten Sie eine benutzerdefinierte Klasse von [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327) ab, und überschreiben Sie die [**GetResource**](https://msdn.microsoft.com/library/windows/apps/br243340)-Methode.</span><span class="sxs-lookup"><span data-stu-id="98f93-125">Derive a custom class from [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327) and override [**GetResource**](https://msdn.microsoft.com/library/windows/apps/br243340) method.</span></span> <span data-ttu-id="98f93-126">Rufen Sie in der Implementierung nicht die Methode der Basisklasse auf.</span><span class="sxs-lookup"><span data-stu-id="98f93-126">Do not call base in the implementation.</span></span>
+2.  <span data-ttu-id="98f93-127">Legen Sie [**CustomXamlResourceLoader.Current**](https://msdn.microsoft.com/library/windows/apps/br243328) fest, um auf Ihre Klasse in der Initialisierungslogik zu verweisen.</span><span class="sxs-lookup"><span data-stu-id="98f93-127">Set [**CustomXamlResourceLoader.Current**](https://msdn.microsoft.com/library/windows/apps/br243328) to reference your class in initialization logic.</span></span> <span data-ttu-id="98f93-128">Dies muss erfolgen, bevor XAML-Code auf Seitenebene geladen wird, der die `{CustomResource}`-Erweiterungssyntax enthält.</span><span class="sxs-lookup"><span data-stu-id="98f93-128">This must happen before any page-level XAML that includes the `{CustomResource}` extension usage is loaded.</span></span> <span data-ttu-id="98f93-129">Eine Stelle, an der **CustomXamlResourceLoader.Current** festgelegt werden kann, ist im [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324)-Unterklassenkonstruktor, der in den App.xaml-CodeBehind-Vorlagen für Sie generiert wird.</span><span class="sxs-lookup"><span data-stu-id="98f93-129">One place to set **CustomXamlResourceLoader.Current** is in the [**Application**](https://msdn.microsoft.com/library/windows/apps/br242324) subclass constructor that's generated for you in the App.xaml code-behind templates.</span></span>
+3.  <span data-ttu-id="98f93-130">Jetzt können Sie `{CustomResource}`-Erweiterungen in dem XAML-Code, den Ihre App als Seiten lädt, oder in XAML-Ressourcenverzeichnissen verwenden.</span><span class="sxs-lookup"><span data-stu-id="98f93-130">Now you can use `{CustomResource}` extensions in the XAML that your app loads as pages, or from within XAML resource dictionaries.</span></span>
 
-**CustomResource** ist eine Markuperweiterung. Markuperweiterungen werden in der Regel implementiert, wenn für Attributwerte Escapezeichen verwendet werden müssen, damit sie keine Literalwerte oder Handlernamen darstellen, und es nicht ausreicht, Typkonverter für bestimmte Typen oder Eigenschaften zu verwenden. Alle Markuperweiterungen in XAML verwenden die Zeichen „\{” und „\}” in ihrer Attributsyntax. Anhand dieser Konvention erkennt ein XAML-Prozessor, dass eine Markuperweiterung das Attribut verarbeiten muss.
+<span data-ttu-id="98f93-131">**CustomResource** ist eine Markuperweiterung.</span><span class="sxs-lookup"><span data-stu-id="98f93-131">**CustomResource** is a markup extension.</span></span> <span data-ttu-id="98f93-132">Markuperweiterungen werden in der Regel implementiert, wenn für Attributwerte Escapezeichen verwendet werden müssen, damit sie keine Literalwerte oder Handlernamen darstellen, und es nicht ausreicht, Typkonverter für bestimmte Typen oder Eigenschaften zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="98f93-132">Markup extensions are typically implemented when there is a requirement to escape attribute values to be other than literal values or handler names, and the requirement is more global than just putting type converters on certain types or properties.</span></span> <span data-ttu-id="98f93-133">Alle Markuperweiterungen in XAML verwenden die Zeichen „\{” und „\}” in ihrer Attributsyntax. Anhand dieser Konvention erkennt ein XAML-Prozessor, dass eine Markuperweiterung das Attribut verarbeiten muss.</span><span class="sxs-lookup"><span data-stu-id="98f93-133">All markup extensions in XAML use the "\{" and "\}" characters in their attribute syntax, which is the convention by which a XAML processor recognizes that a markup extension must process the attribute.</span></span>
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a><span data-ttu-id="98f93-134">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="98f93-134">Related topics</span></span>
 
-* [ResourceDictionary- und XAML-Ressourcenreferenzen](https://msdn.microsoft.com/library/windows/apps/mt187273)
-* [**CustomXamlResourceLoader**](https://msdn.microsoft.com/library/windows/apps/br243327)
-* [**GetResource**](https://msdn.microsoft.com/library/windows/apps/br243340)
-
+* [<span data-ttu-id="98f93-135">ResourceDictionary- und XAML-Ressourcenreferenzen</span><span class="sxs-lookup"><span data-stu-id="98f93-135">ResourceDictionary and XAML resource references</span></span>](https://msdn.microsoft.com/library/windows/apps/mt187273)
+* [**<span data-ttu-id="98f93-136">CustomXamlResourceLoader</span><span class="sxs-lookup"><span data-stu-id="98f93-136">CustomXamlResourceLoader</span></span>**](https://msdn.microsoft.com/library/windows/apps/br243327)
+* [**<span data-ttu-id="98f93-137">GetResource</span><span class="sxs-lookup"><span data-stu-id="98f93-137">GetResource</span></span>**](https://msdn.microsoft.com/library/windows/apps/br243340)
 

@@ -1,38 +1,37 @@
 ---
 author: mtoepke
 title: Portieren der Vertexpuffer und -daten
-description: "In diesem Schritt definieren Sie die Vertexpuffer für die Gitter und die Indexpuffer, mit deren Hilfe die Shader die Scheitelpunkte in einer angegebenen Reihenfolge durchlaufen können."
+description: In diesem Schritt definieren Sie die Vertexpuffer für die Gitter und die Indexpuffer, mit deren Hilfe die Shader die Scheitelpunkte (Vertices) in einer angegebenen Reihenfolge durchlaufen können.
 ms.assetid: 9a8138a5-0797-8532-6c00-58b907197a25
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Spiele, Portieren, Vertexpuffer, Daten, Direct3D"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
+keywords: Windows10, UWP, Spiele, Portieren, Vertexpuffer, Daten, Direct3D
 ms.openlocfilehash: 85e8a47da525c0f5de7e957a0048e245e374dedc
-ms.lasthandoff: 02/07/2017
-
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.locfileid: "233802"
 ---
-
-# <a name="port-the-vertex-buffers-and-data"></a>Portieren der Vertexpuffer und -Daten
-
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+# <a name="port-the-vertex-buffers-and-data"></a><span data-ttu-id="7867d-104">Portieren der Vertexpuffer und -Daten</span><span class="sxs-lookup"><span data-stu-id="7867d-104">Port the vertex buffers and data</span></span>
 
 
-**Wichtige APIs**
+<span data-ttu-id="7867d-105">\[ Aktualisiert für UWP-Apps unter Windows 10.</span><span class="sxs-lookup"><span data-stu-id="7867d-105">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="7867d-106">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="7867d-106">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
--   [**ID3DDevice::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501)
--   [**ID3DDeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456)
--   [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/bb173588)
 
-In diesem Schritt definieren Sie die Vertexpuffer für die Gitter und die Indexpuffer, mit deren Hilfe die Shader die Scheitelpunkte (Vertices) in einer angegebenen Reihenfolge durchlaufen können.
+**<span data-ttu-id="7867d-107">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="7867d-107">Important APIs</span></span>**
 
-Zuerst untersuchen wir das hartcodierte Modell für das Würfelgitter, das verwendet werden soll. Für beide Darstellungen wurden die Scheitelpunkte in Form einer Dreiecksliste organisiert (im Gegensatz zu einer Kette oder einem anderen effizienteren Dreieckslayout). Alle Scheitelpunkte in beiden Darstellungen verfügen außerdem über zugeordnete Indizes und Farbwerte. Ein Großteil des Direct3D-Codes in diesem Thema bezieht sich auf Variablen und Objekte, die im Direct3D-Projekt definiert wurden.
+-   [**<span data-ttu-id="7867d-108">ID3DDevice::CreateBuffer</span><span class="sxs-lookup"><span data-stu-id="7867d-108">ID3DDevice::CreateBuffer</span></span>**](https://msdn.microsoft.com/library/windows/desktop/ff476501)
+-   [**<span data-ttu-id="7867d-109">ID3DDeviceContext::IASetVertexBuffers</span><span class="sxs-lookup"><span data-stu-id="7867d-109">ID3DDeviceContext::IASetVertexBuffers</span></span>**](https://msdn.microsoft.com/library/windows/desktop/ff476456)
+-   [**<span data-ttu-id="7867d-110">ID3D11DeviceContext::IASetIndexBuffer</span><span class="sxs-lookup"><span data-stu-id="7867d-110">ID3D11DeviceContext::IASetIndexBuffer</span></span>**](https://msdn.microsoft.com/library/windows/desktop/bb173588)
 
-Dies ist der Würfel für die Verarbeitung mit OpenGL ES 2.0. In der Beispielimplementierung besteht jeder Scheitelpunkt (Vertex) aus sieben Gleitkommawerten: drei Positionskoordinaten gefolgt von vier RGBA-Farbwerten.
+<span data-ttu-id="7867d-111">In diesem Schritt definieren Sie die Vertexpuffer für die Gitter und die Indexpuffer, mit deren Hilfe die Shader die Scheitelpunkte (Vertices) in einer angegebenen Reihenfolge durchlaufen können.</span><span class="sxs-lookup"><span data-stu-id="7867d-111">In this step, you'll define the vertex buffers that will contain your meshes and the index buffers that allow the shaders to traverse the vertices in a specified order.</span></span>
+
+<span data-ttu-id="7867d-112">Zuerst untersuchen wir das hartcodierte Modell für das Würfelgitter, das verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="7867d-112">At this point, let's examine the hardcoded model for the cube mesh we are using.</span></span> <span data-ttu-id="7867d-113">Für beide Darstellungen wurden die Scheitelpunkte in Form einer Dreiecksliste organisiert (im Gegensatz zu einer Kette oder einem anderen effizienteren Dreieckslayout).</span><span class="sxs-lookup"><span data-stu-id="7867d-113">Both representations have the vertices organized as a triangle list (as opposed to a strip or other more efficient triangle layout).</span></span> <span data-ttu-id="7867d-114">Alle Scheitelpunkte in beiden Darstellungen verfügen außerdem über zugeordnete Indizes und Farbwerte.</span><span class="sxs-lookup"><span data-stu-id="7867d-114">All vertices in both representations also have associated indices and color values.</span></span> <span data-ttu-id="7867d-115">Ein Großteil des Direct3D-Codes in diesem Thema bezieht sich auf Variablen und Objekte, die im Direct3D-Projekt definiert wurden.</span><span class="sxs-lookup"><span data-stu-id="7867d-115">Much of the Direct3D code in this topic refers to variables and objects defined in the Direct3D project.</span></span>
+
+<span data-ttu-id="7867d-116">Dies ist der Würfel für die Verarbeitung mit OpenGLES2.0.</span><span class="sxs-lookup"><span data-stu-id="7867d-116">Here's the cube for processing by OpenGL ES 2.0.</span></span> <span data-ttu-id="7867d-117">In der Beispielimplementierung besteht jeder Scheitelpunkt (Vertex) aus sieben Gleitkommawerten: drei Positionskoordinaten gefolgt von vier RGBA-Farbwerten.</span><span class="sxs-lookup"><span data-stu-id="7867d-117">In the sample implementation, each vertex is 7 float values: 3 position coordinates followed by 4 RGBA color values.</span></span>
 
 ```cpp
 #define CUBE_INDICES 36
@@ -72,7 +71,7 @@ GLuint cubeIndices[] =
 };
 ```
 
-Dies ist der gleiche Würfel für die Verarbeitung mit Direct3D 11.
+<span data-ttu-id="7867d-118">Dies ist der gleiche Würfel für die Verarbeitung mit Direct3D11.</span><span class="sxs-lookup"><span data-stu-id="7867d-118">And here's the same cube for processing by Direct3D 11.</span></span>
 
 ```cpp
 VertexPositionColor cubeVerticesAndColors[] = 
@@ -110,17 +109,17 @@ unsigned short cubeIndices[] =
 };
 ```
 
-Es ist erkennbar, dass der Würfel im OpenGL ES 2.0-Code in einem "rechtshändigen" Koordinatensystem dargestellt wird, während der Würfel im Direct3D-spezifischen Code in einem "linkshändigen" Koordinatensystem dargestellt wird. Beim Importieren Ihrer eigenen Gitterdaten müssen Sie die Koordinaten der z-Achse für Ihr Modell umkehren und die Indizes für die einzelnen Gitter entsprechend ändern, um die Dreiecke gemäß der Änderung im Koordinatensystem zu durchlaufen.
+<span data-ttu-id="7867d-119">Es ist erkennbar, dass der Würfel im OpenGLES2.0-Code in einem "rechtshändigen" Koordinatensystem dargestellt wird, während der Würfel im Direct3D-spezifischen Code in einem "linkshändigen" Koordinatensystem dargestellt wird.</span><span class="sxs-lookup"><span data-stu-id="7867d-119">Reviewing this code, you notice that the cube in the OpenGL ES 2.0 code is represented in a right-hand coordinate system, whereas the cube in the Direct3D-specific code is represented in a left-hand coordinate system.</span></span> <span data-ttu-id="7867d-120">Beim Importieren Ihrer eigenen Gitterdaten müssen Sie die Koordinaten der z-Achse für Ihr Modell umkehren und die Indizes für die einzelnen Gitter entsprechend ändern, um die Dreiecke gemäß der Änderung im Koordinatensystem zu durchlaufen.</span><span class="sxs-lookup"><span data-stu-id="7867d-120">When importing your own mesh data, you must reverse the z-axis coordinates for your model and change the indices for each mesh accordingly to traverse the triangles according to the change in the coordinate system.</span></span>
 
-Wir setzen voraus, dass das Verschieben des Würfelgitters aus dem rechtshändigen OpenGL ES 2.0-Koordinatensystem in das linkshändige Direct3D-Koordinatensystem erfolgreich war. Als Nächstes sehen wir uns an, wie die Würfeldaten für die Verarbeitung in beiden Modellen geladen werden.
+<span data-ttu-id="7867d-121">Wir setzen voraus, dass das Verschieben des Würfelgitters aus dem rechtshändigen OpenGL ES 2.0-Koordinatensystem in das linkshändige Direct3D-Koordinatensystem erfolgreich war. Als Nächstes sehen wir uns an, wie die Würfeldaten für die Verarbeitung in beiden Modellen geladen werden.</span><span class="sxs-lookup"><span data-stu-id="7867d-121">Assuming that we have successfully moved the cube mesh from the right-handed OpenGL ES 2.0 coordinate system to the left-handed Direct3D one, let's see how to load the cube data for processing in both models.</span></span>
 
-## <a name="instructions"></a>Anweisungen
+## <a name="instructions"></a><span data-ttu-id="7867d-122">Anweisungen</span><span class="sxs-lookup"><span data-stu-id="7867d-122">Instructions</span></span>
 
-### <a name="step-1-create-an-input-layout"></a>Schritt 1: Erstellen eines Eingabelayouts
+### <a name="step-1-create-an-input-layout"></a><span data-ttu-id="7867d-123">Schritt 1: Erstellen eines Eingabelayouts</span><span class="sxs-lookup"><span data-stu-id="7867d-123">Step 1: Create an input layout</span></span>
 
-In OpenGL ES 2.0 werden die Vertexdaten als Attribute angegeben, die für die Shaderobjekte bereitgestellt und von diesen gelesen werden. Normalerweise geben Sie eine Zeichenfolge, die den im GLSL-Code des Shaders verwendeten Attributnamen enthält, für das Shaderprogrammobjekt an und erhalten einen Speicherbereich zurück, den Sie für den Shader bereitstellen können. In diesem Beispiel enthält ein Vertexpufferobjekt eine Liste mit benutzerdefinierten Vertexstrukturen, die wie folgt definiert und formatiert sind:
+<span data-ttu-id="7867d-124">In OpenGL ES 2.0 werden die Vertexdaten als Attribute angegeben, die für die Shaderobjekte bereitgestellt und von diesen gelesen werden.</span><span class="sxs-lookup"><span data-stu-id="7867d-124">In OpenGL ES 2.0, your vertex data is supplied as attributes that will be supplied to and read by the shader objects.</span></span> <span data-ttu-id="7867d-125">Normalerweise geben Sie eine Zeichenfolge, die den im GLSL-Code des Shaders verwendeten Attributnamen enthält, für das Shaderprogrammobjekt an und erhalten einen Speicherbereich zurück, den Sie für den Shader bereitstellen können.</span><span class="sxs-lookup"><span data-stu-id="7867d-125">You typically provide a string that contains the attribute name used in the shader's GLSL to the shader program object, and get a memory location back that you can supply to the shader.</span></span> <span data-ttu-id="7867d-126">In diesem Beispiel enthält ein Vertexpufferobjekt eine Liste mit benutzerdefinierten Vertexstrukturen, die wie folgt definiert und formatiert sind:</span><span class="sxs-lookup"><span data-stu-id="7867d-126">In this example, a vertex buffer object contains a list of custom Vertex structures, defined and formatted as follows:</span></span>
 
-OpenGL ES 2.0: Konfigurieren der Attribute, in denen die Informationen pro Vertex enthalten sind
+<span data-ttu-id="7867d-127">OpenGLES2.0: Konfigurieren der Attribute, in denen die Informationen pro Vertex enthalten sind</span><span class="sxs-lookup"><span data-stu-id="7867d-127">OpenGL ES 2.0: Configure the attributes that contain the per-vertex information.</span></span>
 
 ``` syntax
 typedef struct 
@@ -130,13 +129,13 @@ typedef struct
 } Vertex;
 ```
 
-In OpenGL ES 2.0 gelten Eingabelayouts implizit. Sie verwenden eine normale GL\_ELEMENT\_ARRAY\_BUFFER-Struktur und geben die Breite und den Versatz an, damit der Vertex-Shader die Daten nach dem Hochladen interpretieren kann. Sie informieren den Shader mithilfe von **glVertexAttribPointer**, bevor gerendert wird, welche Attribute welchen Teilen der einzelnen Vertexdatenblöcke zugeordnet werden.
+<span data-ttu-id="7867d-128">In OpenGL ES 2.0 gelten Eingabelayouts implizit. Sie verwenden eine normale GL\_ELEMENT\_ARRAY\_BUFFER-Struktur und geben die Breite und den Versatz an, damit der Vertex-Shader die Daten nach dem Hochladen interpretieren kann.</span><span class="sxs-lookup"><span data-stu-id="7867d-128">In OpenGL ES 2.0, input layouts are implicit; you take a general purpose GL\_ELEMENT\_ARRAY\_BUFFER and supply the stride and offset such that the vertex shader can interpret the data after uploading it.</span></span> <span data-ttu-id="7867d-129">Sie informieren den Shader mithilfe von **glVertexAttribPointer**, bevor gerendert wird, welche Attribute welchen Teilen der einzelnen Vertexdatenblöcke zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="7867d-129">You inform the shader before rendering which attributes map to which portions of each block of vertex data with **glVertexAttribPointer**.</span></span>
 
-In Direct3D müssen Sie beim Erstellen des Puffers ein Eingabelayout angeben, um die Struktur der Vertexdaten im Vertexpuffer zu beschreiben, und nicht vor dem Zeichnen der Geometrie. Dazu verwenden Sie ein Eingabelayout, das dem Layout der Daten für die einzelnen Scheitelpunkte im Speicher entspricht. Es ist sehr wichtig, dies genau anzugeben!
+<span data-ttu-id="7867d-130">In Direct3D müssen Sie beim Erstellen des Puffers ein Eingabelayout angeben, um die Struktur der Vertexdaten im Vertexpuffer zu beschreiben, und nicht vor dem Zeichnen der Geometrie.</span><span class="sxs-lookup"><span data-stu-id="7867d-130">In Direct3D, you must provide an input layout to describe the structure of the vertex data in the vertex buffer when you create the buffer, instead of before you draw the geometry.</span></span> <span data-ttu-id="7867d-131">Dazu verwenden Sie ein Eingabelayout, das dem Layout der Daten für die einzelnen Scheitelpunkte im Speicher entspricht.</span><span class="sxs-lookup"><span data-stu-id="7867d-131">To do this, you use an input layout which corresponds to layout of the data for our individual vertices in memory.</span></span> <span data-ttu-id="7867d-132">Es ist sehr wichtig, dies genau anzugeben!</span><span class="sxs-lookup"><span data-stu-id="7867d-132">It is very important to specify this accurately!</span></span>
 
-Hier erstellen Sie eine Eingabebeschreibung als Array mit [**D3D11\_INPUT\_ELEMENT\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180)-Strukturen.
+<span data-ttu-id="7867d-133">Hier erstellen Sie eine Eingabebeschreibung als Array mit [**D3D11\_INPUT\_ELEMENT\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180)-Strukturen.</span><span class="sxs-lookup"><span data-stu-id="7867d-133">Here, you create an input description as an array of [**D3D11\_INPUT\_ELEMENT\_DESC**](https://msdn.microsoft.com/library/windows/desktop/ff476180) structures.</span></span>
 
-Direct3D: Definieren der Beschreibung eines Eingabelayouts
+<span data-ttu-id="7867d-134">Direct3D: Definieren der Beschreibung eines Eingabelayouts</span><span class="sxs-lookup"><span data-stu-id="7867d-134">Direct3D: Define an input layout description.</span></span>
 
 ``` syntax
 struct VertexPositionColor
@@ -155,13 +154,13 @@ const D3D11_INPUT_ELEMENT_DESC vertexDesc[] =
 
 ```
 
-Mit dieser Eingabebeschreibung wird ein Vertex als ein Vektorpaar mit jeweils drei Koordinaten definiert: ein 3D-Vektor zum Speichern der Vertexposition in den Modellkoordinaten und ein anderer 3D-Vektor zum Speichern des RGB-Farbwerts, der dem Vertex zugeordnet ist. In diesem Fall verwenden Sie das 3x32-Bit-Gleitkommaformat. Elemente dieses Typs sind im Code als `XMFLOAT3(X.Xf, X.Xf, X.Xf)` dargestellt. Sie sollten Typen aus der [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/ee415574)-Bibliothek immer bei der Behandlung von Daten verwenden, die von einem Shader genutzt werden. So wird die richtige Verpackung und Ausrichtung der Daten sichergestellt. (Verwenden Sie beispielsweise [**XMFLOAT3**](https://msdn.microsoft.com/library/windows/desktop/ee419475) oder [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608) für Vektordaten und [**XMFLOAT4X4**](https://msdn.microsoft.com/library/windows/desktop/ee419621) für Matrizen.)
+<span data-ttu-id="7867d-135">Mit dieser Eingabebeschreibung wird ein Vertex als ein Vektorpaar mit jeweils dreiKoordinaten definiert: ein 3D-Vektor zum Speichern der Vertexposition in den Modellkoordinaten und ein anderer 3D-Vektor zum Speichern des RGB-Farbwerts, der dem Vertex zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="7867d-135">This input description defines a vertex as a pair of 2 3-coordinate vectors: one 3D vector to store the position of the vertex in model coordinates, and another 3D vector to store the RGB color value associated with the vertex.</span></span> <span data-ttu-id="7867d-136">In diesem Fall verwenden Sie das 3x32-Bit-Gleitkommaformat. Elemente dieses Typs sind im Code als `XMFLOAT3(X.Xf, X.Xf, X.Xf)` dargestellt.</span><span class="sxs-lookup"><span data-stu-id="7867d-136">In this case, you use 3x32 bit floating point format, elements of which we represent in code as `XMFLOAT3(X.Xf, X.Xf, X.Xf)`.</span></span> <span data-ttu-id="7867d-137">Sie sollten Typen aus der [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/ee415574)-Bibliothek immer bei der Behandlung von Daten verwenden, die von einem Shader genutzt werden. So wird die richtige Verpackung und Ausrichtung der Daten sichergestellt.</span><span class="sxs-lookup"><span data-stu-id="7867d-137">You should use types from the [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/ee415574) library whenever you are handling data that will be used by a shader, as it ensure the proper packing and alignment of that data.</span></span> <span data-ttu-id="7867d-138">(Verwenden Sie beispielsweise [**XMFLOAT3**](https://msdn.microsoft.com/library/windows/desktop/ee419475) oder [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608) für Vektordaten und [**XMFLOAT4X4**](https://msdn.microsoft.com/library/windows/desktop/ee419621) für Matrizen.)</span><span class="sxs-lookup"><span data-stu-id="7867d-138">(For example, use [**XMFLOAT3**](https://msdn.microsoft.com/library/windows/desktop/ee419475) or [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608) for vector data, and [**XMFLOAT4X4**](https://msdn.microsoft.com/library/windows/desktop/ee419621) for matrices.)</span></span>
 
-Eine Liste aller möglichen Formattypen finden Sie unter [**DXGI\_FORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb173059).
+<span data-ttu-id="7867d-139">Eine Liste aller möglichen Formattypen finden Sie unter [**DXGI\_FORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb173059).</span><span class="sxs-lookup"><span data-stu-id="7867d-139">For a list of all the possible format types, refer to [**DXGI\_FORMAT**](https://msdn.microsoft.com/library/windows/desktop/bb173059).</span></span>
 
-Nachdem das Layout für die Eingabe pro Vertex definiert wurde, erstellen Sie das Layoutobjekt. Im folgenden Code schreiben Sie es in **m\_inputLayout**, eine Variable vom Typ **ComPtr** (die auf ein Objekt vom Typ [**ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575) verweist). **fileData** enthält das kompilierte Vertexshaderobjekt aus dem vorherigen Schritt [Portieren der Shader](port-the-shader-config.md).
+<span data-ttu-id="7867d-140">Nachdem das Layout für die Eingabe pro Vertex definiert wurde, erstellen Sie das Layoutobjekt.</span><span class="sxs-lookup"><span data-stu-id="7867d-140">With the per-vertex input layout defined, you create the layout object.</span></span> <span data-ttu-id="7867d-141">Im folgenden Code schreiben Sie es in **m\_inputLayout**, eine Variable vom Typ **ComPtr** (die auf ein Objekt vom Typ [**ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575) verweist).</span><span class="sxs-lookup"><span data-stu-id="7867d-141">In the following code, you write it to **m\_inputLayout**, a variable of type **ComPtr** (which points to an object of type [**ID3D11InputLayout**](https://msdn.microsoft.com/library/windows/desktop/ff476575)).</span></span> <span data-ttu-id="7867d-142">**fileData** enthält das kompilierte Vertexshaderobjekt aus dem vorherigen Schritt [Portieren der Shader](port-the-shader-config.md).</span><span class="sxs-lookup"><span data-stu-id="7867d-142">**fileData** contains the compiled vertex shader object from the previous step, [Port the shaders](port-the-shader-config.md).</span></span>
 
-Direct3D: Erstellen des vom Vertexpuffer verwendeten Eingabelayouts
+<span data-ttu-id="7867d-143">Direct3D: Erstellen des vom Vertexpuffer verwendeten Eingabelayouts</span><span class="sxs-lookup"><span data-stu-id="7867d-143">Direct3D: Create the input layout used by the vertex buffer.</span></span>
 
 ``` syntax
 Microsoft::WRL::ComPtr<ID3D11InputLayout>      m_inputLayout;
@@ -177,13 +176,13 @@ m_d3dDevice->CreateInputLayout(
 );
 ```
 
-Wir haben das Eingabelayout definiert. Als Nächstes erstellen wir einen Puffer, der dieses Layout nutzt, und laden die Daten des Würfelgitters in den Puffer.
+<span data-ttu-id="7867d-144">Wir haben das Eingabelayout definiert.</span><span class="sxs-lookup"><span data-stu-id="7867d-144">We've defined the input layout.</span></span> <span data-ttu-id="7867d-145">Als Nächstes erstellen wir einen Puffer, der dieses Layout nutzt, und laden die Daten des Würfelgitters in den Puffer.</span><span class="sxs-lookup"><span data-stu-id="7867d-145">Now, let's create a buffer that uses this layout and load it with the cube mesh data.</span></span>
 
-### <a name="step-2-create-and-load-the-vertex-buffers"></a>Schritt 2: Erstellen und Laden der Vertexpuffer
+### <a name="step-2-create-and-load-the-vertex-buffers"></a><span data-ttu-id="7867d-146">Schritt 2: Erstellen und Laden der Vertexpuffer</span><span class="sxs-lookup"><span data-stu-id="7867d-146">Step 2: Create and load the vertex buffer(s)</span></span>
 
-Erstellen Sie in OpenGL ES 2.0 ein Pufferpaar: einen für die Positionsdaten und einen für die Farbdaten. (Sie können auch eine Struktur erstellen, die beide zusammen mit einem einzelnen Puffer enthält.) Binden Sie jeden der Puffer sowie die Schreibposition und die Farbdaten darin ein. Später während der Renderfunktion binden Sie die Puffer erneut und stellen das Format der Daten im Puffer für den Shader bereit, damit diese richtig interpretiert werden können.
+<span data-ttu-id="7867d-147">Erstellen Sie in OpenGL ES 2.0 ein Pufferpaar: einen für die Positionsdaten und einen für die Farbdaten.</span><span class="sxs-lookup"><span data-stu-id="7867d-147">In OpenGL ES 2.0, you create a pair of buffers, one for the position data and one for the color data.</span></span> <span data-ttu-id="7867d-148">(Sie können auch eine Struktur erstellen, die beide zusammen mit einem einzelnen Puffer enthält.) Binden Sie jeden der Puffer sowie die Schreibposition und die Farbdaten darin ein.</span><span class="sxs-lookup"><span data-stu-id="7867d-148">(You could also create a struct that contains both and a single buffer.) You bind each buffer and write position and color data into them.</span></span> <span data-ttu-id="7867d-149">Später während der Renderfunktion binden Sie die Puffer erneut und stellen das Format der Daten im Puffer für den Shader bereit, damit diese richtig interpretiert werden können.</span><span class="sxs-lookup"><span data-stu-id="7867d-149">Later, during your render function, bind the buffers again and provide the shader with the format of the data in the buffer so it can correctly interpret it.</span></span>
 
-OpenGL ES 2.0: Binden der Vertexpuffer
+<span data-ttu-id="7867d-150">OpenGLES2.0: Binden der Vertexpuffer</span><span class="sxs-lookup"><span data-stu-id="7867d-150">OpenGL ES 2.0: Bind the vertex buffers</span></span>
 
 ``` syntax
 // upload the data for the vertex position buffer
@@ -192,13 +191,13 @@ glBindBuffer(GL_ARRAY_BUFFER, renderer->vertexBuffer);
 glBufferData(GL_ARRAY_BUFFER, sizeof(VERTEX) * CUBE_VERTICES, renderer->vertices, GL_STATIC_DRAW);   
 ```
 
-In Direct3D werden von Shadern aufrufbare Puffer als [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220)-Strukturen dargestellt. Zum Binden dieses Puffers an ein Shaderobjekt erstellen Sie mit [**ID3DDevice::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) eine CD3D11\_BUFFER\_DESC-Struktur für jeden Puffer. Legen Sie anschließend den Puffer des Direct3D-Gerätekontexts fest, indem Sie eine für den Puffertyp spezifische set-Methode wie [**ID3DDeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456) aufrufen.
+<span data-ttu-id="7867d-151">In Direct3D werden von Shadern aufrufbare Puffer als [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220)-Strukturen dargestellt.</span><span class="sxs-lookup"><span data-stu-id="7867d-151">In Direct3D, shader-accessible buffers are represented as [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) structures.</span></span> <span data-ttu-id="7867d-152">Zum Binden dieses Puffers an ein Shaderobjekt erstellen Sie mit [**ID3DDevice::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501) eine CD3D11\_BUFFER\_DESC-Struktur für jeden Puffer. Legen Sie anschließend den Puffer des Direct3D-Gerätekontexts fest, indem Sie eine für den Puffertyp spezifische set-Methode wie [**ID3DDeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456) aufrufen.</span><span class="sxs-lookup"><span data-stu-id="7867d-152">To bind the location of this buffer to shader object, you need to create a CD3D11\_BUFFER\_DESC structure for each buffer with [**ID3DDevice::CreateBuffer**](https://msdn.microsoft.com/library/windows/desktop/ff476501), and then set the buffer of the Direct3D device context by calling a set method specific to the buffer type, such as [**ID3DDeviceContext::IASetVertexBuffers**](https://msdn.microsoft.com/library/windows/desktop/ff476456).</span></span>
 
-Geben Sie beim Festlegen des Puffers die Breite (die Größe des Datenelements für einen einzelnen Vertex) sowie den Versatz (wo die eigentlichen Vertexdaten beginnen) zum Anfang des Puffers an.
+<span data-ttu-id="7867d-153">Geben Sie beim Festlegen des Puffers die Breite (die Größe des Datenelements für einen einzelnen Vertex) sowie den Versatz (wo die eigentlichen Vertexdaten beginnen) zum Anfang des Puffers an.</span><span class="sxs-lookup"><span data-stu-id="7867d-153">When you set the buffer, you must set the stride (the size of the data element for an individual vertex) as well the offset (where the vertex data array actually starts) from the beginning of the buffer.</span></span>
 
-Beachten Sie, dass der Zeiger auf das **vertexIndices**-Array dem **pSysMem**-Feld der [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220)-Struktur zugewiesen wird. Wenn dies nicht korrekt angegeben wird, ist das Gitter beschädigt oder leer!
+<span data-ttu-id="7867d-154">Beachten Sie, dass der Zeiger auf das **vertexIndices**-Array dem **pSysMem**-Feld der [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220)-Struktur zugewiesen wird.</span><span class="sxs-lookup"><span data-stu-id="7867d-154">Notice that we assign the pointer to the **vertexIndices** array to the **pSysMem** field of the [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) structure.</span></span> <span data-ttu-id="7867d-155">Wenn dies nicht korrekt angegeben wird, ist das Gitter beschädigt oder leer!</span><span class="sxs-lookup"><span data-stu-id="7867d-155">If this isn't correct, your mesh will be corrupt or empty!</span></span>
 
-Direct3D: Erstellen und Festlegen des Vertexpuffers
+<span data-ttu-id="7867d-156">Direct3D: Erstellen und Festlegen des Vertexpuffers</span><span class="sxs-lookup"><span data-stu-id="7867d-156">Direct3D: Create and set the vertex buffer</span></span>
 
 ``` syntax
 D3D11_SUBRESOURCE_DATA vertexBufferData = {0};
@@ -224,13 +223,13 @@ m_d3dContext->IASetVertexBuffers(
   &offset);
 ```
 
-### <a name="step-3-create-and-load-the-index-buffer"></a>Schritt 3: Erstellen und Laden des Indexpuffers
+### <a name="step-3-create-and-load-the-index-buffer"></a><span data-ttu-id="7867d-157">Schritt 3: Erstellen und Laden des Indexpuffers</span><span class="sxs-lookup"><span data-stu-id="7867d-157">Step 3: Create and load the index buffer</span></span>
 
-Indexpuffer stellen eine effiziente Möglichkeit dar, für den Vertex-Shader das Suchen nach einzelnen Scheitelpunkten (Vertices) zuzulassen. Obwohl sie nicht zwingend erforderlich sind, werden sie in diesem Beispielrenderer verwendet. Wie bei Vertexpuffern in OpenGL ES 2.0 auch, wird ein Indexpuffer erstellt und als allgemeiner Puffer gebunden. Anschließend werden die bereits erstellten Indizes in den Puffer kopiert.
+<span data-ttu-id="7867d-158">Indexpuffer stellen eine effiziente Möglichkeit dar, für den Vertex-Shader das Suchen nach einzelnen Scheitelpunkten (Vertices) zuzulassen.</span><span class="sxs-lookup"><span data-stu-id="7867d-158">Index buffers are an efficient way to allow the vertex shader to look up individual vertices.</span></span> <span data-ttu-id="7867d-159">Obwohl sie nicht zwingend erforderlich sind, werden sie in diesem Beispielrenderer verwendet.</span><span class="sxs-lookup"><span data-stu-id="7867d-159">Although they are not required, we use them in this sample renderer.</span></span> <span data-ttu-id="7867d-160">Wie bei Vertexpuffern in OpenGLES2.0 auch, wird ein Indexpuffer erstellt und als allgemeiner Puffer gebunden. Anschließend werden die bereits erstellten Indizes in den Puffer kopiert.</span><span class="sxs-lookup"><span data-stu-id="7867d-160">As with vertex buffers in OpenGL ES 2.0, an index buffer is created and bound as a general purpose buffer and the vertex indices you created earlier are copied into it.</span></span>
 
-Wenn Sie bereit zum Zeichnen sind, binden Sie sowohl den Vertexpuffer als auch den Indexpuffer erneut und rufen **glDrawElements** auf.
+<span data-ttu-id="7867d-161">Wenn Sie bereit zum Zeichnen sind, binden Sie sowohl den Vertexpuffer als auch den Indexpuffer erneut und rufen **glDrawElements** auf.</span><span class="sxs-lookup"><span data-stu-id="7867d-161">When you're ready to draw, you bind both the vertex and the index buffer again, and call **glDrawElements**.</span></span>
 
-OpenGL ES 2.0: Senden der Indexreihenfolge an den Draw-Aufruf
+<span data-ttu-id="7867d-162">OpenGL ES 2.0: Senden der Indexreihenfolge an den Draw-Aufruf</span><span class="sxs-lookup"><span data-stu-id="7867d-162">OpenGL ES 2.0: Send the index order to the draw call.</span></span>
 
 ``` syntax
 GLuint indexBuffer;
@@ -252,9 +251,9 @@ glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, renderer->indexBuffer);
 glDrawElements (GL_TRIANGLES, renderer->numIndices, GL_UNSIGNED_INT, 0);
 ```
 
-Für Direct3D ist der Prozess sehr ähnlich, jedoch etwas didaktischer gestaltet. Stellen Sie den Indexpuffer als Direct3D-Unterressource für die [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)-Schnittstelle bereit, die Sie beim Konfigurieren von Direct3D erstellt haben. Rufen Sie zu diesem Zweck [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/bb173588) mit der konfigurierten Unterressource wie folgt für das Indexarray auf. (Beachten Sie auch hier, dass der Zeiger auf das **cubeIndices**-Array dem **pSysMem**-Feld der [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220)-Struktur zugewiesen wird.)
+<span data-ttu-id="7867d-163">Für Direct3D ist der Prozess sehr ähnlich, jedoch etwas didaktischer gestaltet.</span><span class="sxs-lookup"><span data-stu-id="7867d-163">With Direct3D, it's a bit very similar process, albeit a bit more didactic.</span></span> <span data-ttu-id="7867d-164">Stellen Sie den Indexpuffer als Direct3D-Unterressource für die [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)-Schnittstelle bereit, die Sie beim Konfigurieren von Direct3D erstellt haben.</span><span class="sxs-lookup"><span data-stu-id="7867d-164">Supply the index buffer as a Direct3D subresource to the [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385) you created when you configured Direct3D.</span></span> <span data-ttu-id="7867d-165">Rufen Sie zu diesem Zweck [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/bb173588) mit der konfigurierten Unterressource wie folgt für das Indexarray auf.</span><span class="sxs-lookup"><span data-stu-id="7867d-165">You do this by calling [**ID3D11DeviceContext::IASetIndexBuffer**](https://msdn.microsoft.com/library/windows/desktop/bb173588) with the configured subresource for the index array, as follows.</span></span> <span data-ttu-id="7867d-166">(Beachten Sie auch hier, dass der Zeiger auf das **cubeIndices**-Array dem **pSysMem**-Feld der [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220)-Struktur zugewiesen wird.)</span><span class="sxs-lookup"><span data-stu-id="7867d-166">(Again, notice that you assign the pointer to the **cubeIndices** array to the **pSysMem** field of the [**D3D11\_SUBRESOURCE\_DATA**](https://msdn.microsoft.com/library/windows/desktop/ff476220) structure.)</span></span>
 
-Direct3D: Erstellen des Indexpuffers
+<span data-ttu-id="7867d-167">Direct3D: Erstellen des Indexpuffers</span><span class="sxs-lookup"><span data-stu-id="7867d-167">Direct3D: Create the index buffer.</span></span>
 
 ``` syntax
 m_indexCount = ARRAYSIZE(cubeIndices);
@@ -278,9 +277,9 @@ m_d3dContext->IASetIndexBuffer(
   0);
 ```
 
-Später werden Sie die Dreiecke wie folgt mit einem Aufruf von [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409) (bzw. [**ID3D11DeviceContext::Draw**](https://msdn.microsoft.com/library/windows/desktop/ff476407) für nicht indizierte Scheitelpunkte) zeichnen. (Ausführlichere Informationen erhalten Sie bereits jetzt unter [Zeichnen auf den Bildschirm](draw-to-the-screen.md).)
+<span data-ttu-id="7867d-168">Später werden Sie die Dreiecke wie folgt mit einem Aufruf von [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409) (bzw. [**ID3D11DeviceContext::Draw**](https://msdn.microsoft.com/library/windows/desktop/ff476407) für nicht indizierte Scheitelpunkte) zeichnen.</span><span class="sxs-lookup"><span data-stu-id="7867d-168">Later, you will draw the triangles with a call to [**ID3D11DeviceContext::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409) (or [**ID3D11DeviceContext::Draw**](https://msdn.microsoft.com/library/windows/desktop/ff476407) for unindexed vertices), as follows.</span></span> <span data-ttu-id="7867d-169">(Ausführlichere Informationen erhalten Sie bereits jetzt unter [Zeichnen auf den Bildschirm](draw-to-the-screen.md).)</span><span class="sxs-lookup"><span data-stu-id="7867d-169">(For more details, jump ahead to [Draw to the screen](draw-to-the-screen.md).)</span></span>
 
-Direct3D: Zeichnen der indizierten Scheitelpunkte
+<span data-ttu-id="7867d-170">Direct3D: Zeichnen der indizierten Scheitelpunkte</span><span class="sxs-lookup"><span data-stu-id="7867d-170">Direct3D: Draw the indexed vertices.</span></span>
 
 ``` syntax
 m_d3dContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
@@ -294,31 +293,30 @@ m_d3dContext->DrawIndexed(
   0);
 ```
 
-## <a name="previous-step"></a>Vorheriger Schritt
+## <a name="previous-step"></a><span data-ttu-id="7867d-171">Vorheriger Schritt</span><span class="sxs-lookup"><span data-stu-id="7867d-171">Previous step</span></span>
 
 
-[Portieren der Shaderobjekte](port-the-shader-config.md)
+[<span data-ttu-id="7867d-172">Portieren der Shaderobjekte</span><span class="sxs-lookup"><span data-stu-id="7867d-172">Port the shader objects</span></span>](port-the-shader-config.md)
 
-## <a name="next-step"></a>Nächster Schritt
+## <a name="next-step"></a><span data-ttu-id="7867d-173">Nächster Schritt</span><span class="sxs-lookup"><span data-stu-id="7867d-173">Next step</span></span>
 
-[Portieren des GLSL-Codes](port-the-glsl.md)
+[<span data-ttu-id="7867d-174">Portieren des GLSL-Codes</span><span class="sxs-lookup"><span data-stu-id="7867d-174">Port the GLSL</span></span>](port-the-glsl.md)
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a><span data-ttu-id="7867d-175">Anmerkungen</span><span class="sxs-lookup"><span data-stu-id="7867d-175">Remarks</span></span>
 
-Fügen Sie den Code, mit dem unter [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379) Methoden aufgerufen werden, beim Strukturieren von Direct3D jeweils in eine Methode ein, die aufgerufen wird, wenn die Geräteressourcen neu erstellt werden müssen. (In der Direct3D-Projektvorlage befindet sich dieser Code in den **CreateDeviceResource**-Methoden des Rendererobjekts. Der Code zum Aktualisieren des Gerätekontexts ([**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)) wird jedoch in der **Render**-Methode platziert, da dort die Shaderphasen tatsächlich erstellt und die Daten gebunden werden.
+<span data-ttu-id="7867d-176">Fügen Sie den Code, mit dem unter [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379) Methoden aufgerufen werden, beim Strukturieren von Direct3D jeweils in eine Methode ein, die aufgerufen wird, wenn die Geräteressourcen neu erstellt werden müssen.</span><span class="sxs-lookup"><span data-stu-id="7867d-176">When structuring your Direct3D, separate the code that calls methods on [**ID3D11Device**](https://msdn.microsoft.com/library/windows/desktop/ff476379) into a method that is called whenever the device resources need to be recreated.</span></span> <span data-ttu-id="7867d-177">(In der Direct3D-Projektvorlage befindet sich dieser Code in den **CreateDeviceResource**-Methoden des Rendererobjekts.</span><span class="sxs-lookup"><span data-stu-id="7867d-177">(In the Direct3D project template, this code is in the renderer object's **CreateDeviceResource** methods.</span></span> <span data-ttu-id="7867d-178">Der Code zum Aktualisieren des Gerätekontexts ([**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)) wird jedoch in der **Render**-Methode platziert, da dort die Shaderphasen tatsächlich erstellt und die Daten gebunden werden.</span><span class="sxs-lookup"><span data-stu-id="7867d-178">The code that updates the device context ([**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385)), on the other hand, is placed in the **Render** method, since this is where you actually construct the shader stages and bind the data.</span></span>
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a><span data-ttu-id="7867d-179">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="7867d-179">Related topics</span></span>
 
 
-* [Portieren eines einfachen OpenGL ES 2.0-Renderers zu Direct3D 11](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
-* [Portieren der Shaderobjekte](port-the-shader-config.md)
-* [Portieren der Vertexpuffer und -daten](port-the-vertex-buffers-and-data-config.md)
-* [Portieren des GLSL-Codes](port-the-glsl.md)
-
- 
+* [<span data-ttu-id="7867d-180">Portieren eines einfachen OpenGL ES 2.0-Renderers zu Direct3D 11</span><span class="sxs-lookup"><span data-stu-id="7867d-180">How to: port a simple OpenGL ES 2.0 renderer to Direct3D 11</span></span>](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
+* [<span data-ttu-id="7867d-181">Portieren der Shaderobjekte</span><span class="sxs-lookup"><span data-stu-id="7867d-181">Port the shader objects</span></span>](port-the-shader-config.md)
+* [<span data-ttu-id="7867d-182">Portieren der Vertexpuffer und -daten</span><span class="sxs-lookup"><span data-stu-id="7867d-182">Port the vertex buffers and data</span></span>](port-the-vertex-buffers-and-data-config.md)
+* [<span data-ttu-id="7867d-183">Portieren des GLSL-Codes</span><span class="sxs-lookup"><span data-stu-id="7867d-183">Port the GLSL</span></span>](port-the-glsl.md)
 
  
 
+ 
 
 
 

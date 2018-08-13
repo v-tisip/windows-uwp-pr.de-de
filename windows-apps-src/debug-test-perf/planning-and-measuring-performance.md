@@ -2,7 +2,7 @@
 author: jwmsft
 ms.assetid: A37ADD4A-2187-4767-9C7D-EDE8A90AA215
 title: Planen der Leistung
-description: "Benutzer erwarten, dass ihre Apps zuverlässig und reibungslos funktionieren und den Akku nicht übermäßig beanspruchen."
+description: Benutzer erwarten, dass ihre Apps zuverlässig und reibungslos funktionieren und den Akku nicht übermäßig beanspruchen.
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.openlocfilehash: d25620c0fc86f76b8c0d4de6e606250186b9ce37
 ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/14/2017
+ms.locfileid: "894790"
 ---
 # <a name="planning-for-performance"></a><span data-ttu-id="74d4b-104">Planen der Leistung</span><span class="sxs-lookup"><span data-stu-id="74d4b-104">Planning for performance</span></span>
 

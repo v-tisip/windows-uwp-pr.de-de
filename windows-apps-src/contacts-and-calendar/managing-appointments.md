@@ -1,6 +1,6 @@
 ---
 author: normesta
-description: "Mit dem Windows.ApplicationModel.Appointments-Namespace können Sie in der Kalender-App eines Benutzers Termine erstellen und verwalten."
+description: Mit dem Windows.ApplicationModel.Appointments-Namespace können Sie in der Kalender-App eines Benutzers Termine erstellen und verwalten.
 title: Verwalten von Terminen
 ms.assetid: 292E9249-07C3-4791-B32C-6EC153C2B538
 ms.author: normesta
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: Windows10, UWP, Termine, Kalender
 ms.openlocfilehash: d4bc4832dd489508eabbddd486f782ac8b0191a3
 ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/08/2017
+ms.locfileid: "665700"
 ---
 # <a name="manage-appointments"></a><span data-ttu-id="26b83-104">Verwalten von Terminen</span><span class="sxs-lookup"><span data-stu-id="26b83-104">Manage appointments</span></span>
 

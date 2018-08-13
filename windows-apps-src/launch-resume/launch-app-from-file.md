@@ -1,7 +1,7 @@
 ---
 author: PatrickFarley
-title: "Starten einer App über Dateiaktivierung"
-description: "In diesem Abschnitt wird gezeigt, wie Sie Ihre App so einrichten, dass sie beim Öffnen einer Datei eines bestimmten Typs gestartet wird."
+title: Starten einer App über Dateiaktivierung
+description: In diesem Abschnitt wird gezeigt, wie Sie Ihre App so einrichten, dass sie beim Öffnen einer Datei eines bestimmten Typs gestartet wird.
 ms.assetid: 62e9b125-f899-4df6-ad96-570fdbcb8bc5
 ms.author: pafarley
 ms.date: 02/08/2017
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.openlocfilehash: c0426320e978c88bc2db67398e626c0ed3794edc
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "234515"
 ---
 # <a name="launch-an-app-through-file-activation"></a><span data-ttu-id="f13e7-104">Starten einer App über Dateiaktivierung</span><span class="sxs-lookup"><span data-stu-id="f13e7-104">Launch an app through file activation</span></span>
 

@@ -1,7 +1,7 @@
 ---
 author: TylerMSFT
 title: Konvertieren einer Out-of-Process-Hintergrundaufgabe in eine In-Process-Hintergrundaufgabe
-description: "Konvertieren Sie eine Out-of-Process-Hintergrundaufgabe in eine In-Process-Hintergrundaufgabe, die innerhalb Ihres Vordergrund-App-Prozesses ausgeführt wird."
+description: Konvertieren Sie eine Out-of-Process-Hintergrundaufgabe in eine In-Process-Hintergrundaufgabe, die innerhalb Ihres Vordergrund-App-Prozesses ausgeführt wird.
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,8 +11,9 @@ keywords: Windows10, UWP
 ms.assetid: 5327e966-b78d-4859-9b97-5a61c362573e
 ms.openlocfilehash: 390e7255e381bdbb004bfe5e0e95f3ccbcbeb490
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "234192"
 ---
 # <a name="convert-an-out-of-process-background-task-to-an-in-process-background-task"></a><span data-ttu-id="cb7c2-104">Konvertieren einer Out-of-Process-Hintergrundaufgabe in eine In-Process-Hintergrundaufgabe</span><span class="sxs-lookup"><span data-stu-id="cb7c2-104">Convert an out-of-process background task to an in-process background task</span></span>
 

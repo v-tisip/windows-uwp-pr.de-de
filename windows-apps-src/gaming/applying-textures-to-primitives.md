@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: Anwenden von Texturen auf Grundtypen
-description: "Wir laden an dieser Stelle unformatierte Texturdaten und wenden diese auf einen 3D-Grundtyp an. Dazu verwenden wir den Würfel, den wir in „Verwenden von Tiefe und Effekten für Grundtypen“ erstellt haben."
+description: Wir laden an dieser Stelle unformatierte Texturdaten und wenden diese auf einen 3D-Grundtyp an. Dazu verwenden wir den Würfel, den wir in „Verwenden von Tiefe und Effekten für Grundtypen“ erstellt haben.
 ms.assetid: aeed09e3-c47a-4dd9-d0e8-d1b8bdd7e9b4
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Texturen, DirectX
 ms.openlocfilehash: cc25d7bcc5809dd10b43418ccd42f78c10d1336e
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "233837"
 ---
 # <a name="apply-textures-to-primitives"></a><span data-ttu-id="eae34-104">Anwenden von Texturen auf Grundtypen</span><span class="sxs-lookup"><span data-stu-id="eae34-104">Apply textures to primitives</span></span>
 

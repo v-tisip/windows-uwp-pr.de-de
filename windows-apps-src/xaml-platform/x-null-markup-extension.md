@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: "Gibt im XAML-Markup einen NULL-Wert für eine Eigenschaft an."
+description: Gibt im XAML-Markup einen NULL-Wert für eine Eigenschaft an.
 title: xNull-Markuperweiterung
 ms.assetid: E6A4038E-4ADA-4E82-9824-582FC16AB037
 ms.author: jimwalk
@@ -8,38 +8,36 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 7be1caeca3427f75263019dbdba92c8695b6dde3
-ms.lasthandoff: 02/07/2017
-
+keywords: windows10, UWP
+ms.openlocfilehash: a367594cab5e1f29ce6c5f45ee869b025c4bf47e
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.locfileid: "235078"
 ---
+# <a name="xnull-markup-extension"></a><span data-ttu-id="2e377-104">{x:Null}-Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="2e377-104">{x:Null} markup extension</span></span>
 
-# <a name="xnull-markup-extension"></a>{x:Null}-Markuperweiterung
+<span data-ttu-id="2e377-105">\[ Aktualisiert für UWP-Apps unter Windows10.</span><span class="sxs-lookup"><span data-stu-id="2e377-105">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="2e377-106">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="2e377-106">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+<span data-ttu-id="2e377-107">Gibt im XAML-Markup einen **NULL**-Wert für eine Eigenschaft an.</span><span class="sxs-lookup"><span data-stu-id="2e377-107">In XAML markup, specifies a **null** value for a property.</span></span>
 
-Gibt im XAML-Markup einen **NULL**-Wert für eine Eigenschaft an.
-
-## <a name="xaml-attribute-usage"></a>XAML-Attributsyntax
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="2e377-108">XAML-Attributsyntax</span><span class="sxs-lookup"><span data-stu-id="2e377-108">XAML attribute usage</span></span>
 
 ``` syntax
 <object property="{x:Null}" .../>
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a><span data-ttu-id="2e377-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="2e377-109">Remarks</span></span>
 
-**null** ist das Nullverweis-Schlüsselwort für C# und C++. Das Microsoft Visual Basic-Schlüsselwort für einen Nullverweis lautet **Nothing**.
+<span data-ttu-id="2e377-110">**null** ist das Nullverweis-Schlüsselwort für C# und C++.</span><span class="sxs-lookup"><span data-stu-id="2e377-110">**null** is the null reference keyword for C# and C++.</span></span> <span data-ttu-id="2e377-111">Das Microsoft Visual Basic-Schlüsselwort für einen Nullverweis lautet **Nothing**.</span><span class="sxs-lookup"><span data-stu-id="2e377-111">The Microsoft Visual Basic keyword for a null reference is **Nothing**.</span></span>
 
-Der anfängliche Standardwert kann zwischen Abhängigkeitseigenschaften variieren und ist nicht unbedingt **null**. Viele Abhängigkeitseigenschaften akzeptieren **null** außerdem aufgrund ihrer internen Implementierung nicht als Wert (weder per Markup noch per Code). In einem solchen Fall tritt unter Umständen eine Analyseausnahme auf, wenn ein XAML-Attributwert mit **{x:Null}** festgelegt wird.
+<span data-ttu-id="2e377-112">Der anfängliche Standardwert kann zwischen Abhängigkeitseigenschaften variieren und ist nicht unbedingt **null**.</span><span class="sxs-lookup"><span data-stu-id="2e377-112">The initial default value can vary between dependency properties, and it is not necessarily **null**.</span></span> <span data-ttu-id="2e377-113">Viele Abhängigkeitseigenschaften akzeptieren **null** außerdem aufgrund ihrer internen Implementierung nicht als Wert (weder per Markup noch per Code).</span><span class="sxs-lookup"><span data-stu-id="2e377-113">Further, many dependency properties will not accept **null** as a value (whether through markup or code) due to their internal implementation.</span></span> <span data-ttu-id="2e377-114">In einem solchen Fall tritt unter Umständen eine Analyseausnahme auf, wenn ein XAML-Attributwert mit **{x:Null}** festgelegt wird.</span><span class="sxs-lookup"><span data-stu-id="2e377-114">In such cases, setting a XAML attribute value with **{x:Null}** can result in a parser exception.</span></span>
 
-Einige Windows-Runtime-Typen akzeptieren NULL-Werte. Sollte bei einem Typ, der NULL-Werte akzeptiert, **null** nicht bereits als Standardwert festgelegt sein, können Sie **{x:Null}** in XAML verwenden, um den **NULL**-Wert festzulegen. Bei Verwendung von Visual C++-Komponentenerweiterungen (C++/CX) werden Typen, die NULL-Werte akzeptieren, als [**Platform::IBox<T>**](https://msdn.microsoft.com/library/windows/apps/xaml/jj606120.aspx) dargestellt. In Microsoft .NET-Sprachen werden Typen, die NULL-Werte akzeptieren, mit [**Nullable<T>**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx) angegeben.
+<span data-ttu-id="2e377-115">Einige Windows-Runtime-Typen akzeptieren NULL-Werte.</span><span class="sxs-lookup"><span data-stu-id="2e377-115">Some Windows Runtime types are nullable.</span></span> <span data-ttu-id="2e377-116">Sollte bei einem Typ, der NULL-Werte akzeptiert, **null** nicht bereits als Standardwert festgelegt sein, können Sie **{x:Null}** in XAML verwenden, um den **NULL**-Wert festzulegen.</span><span class="sxs-lookup"><span data-stu-id="2e377-116">In cases where a nullable type does not already have **null** as the default, you could use **{x:Null}** in XAML to set to the **null** value.</span></span> <span data-ttu-id="2e377-117">Bei Verwendung von VisualC++-Komponentenerweiterungen (C++/CX) werden Typen, die NULL-Werte akzeptieren, als [**Platform::IBox<T>**](https://msdn.microsoft.com/library/windows/apps/xaml/jj606120.aspx) dargestellt.</span><span class="sxs-lookup"><span data-stu-id="2e377-117">If using Visual C++ component extensions (C++/CX), nullable types are represented as [**Platform::IBox<T>**](https://msdn.microsoft.com/library/windows/apps/xaml/jj606120.aspx).</span></span> <span data-ttu-id="2e377-118">In Microsoft .NET-Sprachen werden Typen, die NULL-Werte akzeptieren, mit [**Nullable<T>**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx) angegeben.</span><span class="sxs-lookup"><span data-stu-id="2e377-118">If using Microsoft .NET languages, nullable types are represented as [**Nullable<T>**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx).</span></span>
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a><span data-ttu-id="2e377-119">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="2e377-119">Related topics</span></span>
 
-* [**Null-Wert<T>**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx)
-* [**IReference<T>**](https://msdn.microsoft.com/library/windows/apps/br225864)
+* [**<span data-ttu-id="2e377-120">Null-Wert</span><span class="sxs-lookup"><span data-stu-id="2e377-120">Nullable</span></span><T>**](https://msdn.microsoft.com/library/windows/apps/xaml/b3h38hb0.aspx)
+* [**<span data-ttu-id="2e377-121">IReference</span><span class="sxs-lookup"><span data-stu-id="2e377-121">IReference</span></span><T>**](https://msdn.microsoft.com/library/windows/apps/br225864)
  
-
 

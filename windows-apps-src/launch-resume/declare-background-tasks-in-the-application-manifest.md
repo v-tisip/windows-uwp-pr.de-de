@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.openlocfilehash: 65ee6cd32e1fdb6900c859725b8deb6b5031d297
 ms.sourcegitcommit: ba0d20f6fad75ce98c25ceead78aab6661250571
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/24/2017
+ms.locfileid: "848431"
 ---
 # <a name="declare-background-tasks-in-the-application-manifest"></a><span data-ttu-id="2317b-104">Deklarieren von Hintergrundaufgaben im Anwendungsmanifest</span><span class="sxs-lookup"><span data-stu-id="2317b-104">Declare background tasks in the application manifest</span></span>
 

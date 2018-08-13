@@ -1,7 +1,7 @@
 ---
 author: joannaleecy
-title: "Monetarisierung für Spiele"
-description: "Implementieren Sie Banneranzeigen, Videointerstitialanzeigen und In-App-Käufe für Universal Spiele für die Universelle Windows-Plattform (UWP) unter Windows10."
+title: Monetarisierung für Spiele
+description: Implementieren Sie Banneranzeigen, Videointerstitialanzeigen und In-App-Käufe für Universal Spiele für die Universelle Windows-Plattform (UWP) unter Windows10.
 ms.assetid: 79f4e177-d8e7-45d3-8a78-31d4c2fe298a
 ms.author: joanlee
 ms.date: 02/08/2017
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Monetisierung
 ms.openlocfilehash: c2dde3a4f9796b02c969017533b0092b0deaa860
 ms.sourcegitcommit: 0ebc8dca2fd9149ea163b7db9daa14520fc41db4
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/08/2017
+ms.locfileid: "877740"
 ---
 #  <a name="monetization-for-games"></a><span data-ttu-id="cfe4a-104">Monetisierung für Spiele</span><span class="sxs-lookup"><span data-stu-id="cfe4a-104">Monetization for games</span></span>
 

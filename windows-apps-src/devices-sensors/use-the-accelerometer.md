@@ -1,54 +1,55 @@
 ---
-author: mukin
+author: muhsinking
 ms.assetid: F90686F5-641A-42D9-BC44-EC6CA11B8A42
 title: Verwenden des Beschleunigungsmessers
-description: "Hier erfahren Sie, wie Sie mithilfe des Beschleunigungsmessers auf Benutzerbewegungen reagieren können."
+description: Hier erfahren Sie, wie Sie mithilfe des Beschleunigungsmessers auf Benutzerbewegungen reagieren können.
 ms.author: mukin
 ms.date: 06/06/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: f0a09faebf554fd0d669ecb4fc3c37dd61a742e4
-ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 30de119b7c3a00730b698eb9d4938280669219a7
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "958705"
 ---
-# <a name="use-the-accelerometer"></a><span data-ttu-id="82ec4-104">Verwenden des Beschleunigungsmessers</span><span class="sxs-lookup"><span data-stu-id="82ec4-104">Use the accelerometer</span></span>
+# <a name="use-the-accelerometer"></a><span data-ttu-id="e948a-104">Verwenden des Beschleunigungsmessers</span><span class="sxs-lookup"><span data-stu-id="e948a-104">Use the accelerometer</span></span>
 
-<span data-ttu-id="82ec4-105">\[ Aktualisiert für UWP-Apps unter Windows10.</span><span class="sxs-lookup"><span data-stu-id="82ec4-105">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="82ec4-106">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="82ec4-106">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
-**<span data-ttu-id="82ec4-107">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="82ec4-107">Important APIs</span></span>**
+**<span data-ttu-id="e948a-105">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="e948a-105">Important APIs</span></span>**
 
--   [**<span data-ttu-id="82ec4-108">Windows.Devices.Sensors</span><span class="sxs-lookup"><span data-stu-id="82ec4-108">Windows.Devices.Sensors</span></span>**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**<span data-ttu-id="82ec4-109">Beschleunigungsmesser</span><span class="sxs-lookup"><span data-stu-id="82ec4-109">Accelerometer</span></span>**](https://msdn.microsoft.com/library/windows/apps/BR225687)
+-   [**<span data-ttu-id="e948a-106">Windows.Devices.Sensors</span><span class="sxs-lookup"><span data-stu-id="e948a-106">Windows.Devices.Sensors</span></span>**](https://msdn.microsoft.com/library/windows/apps/BR206408)
+-   [**<span data-ttu-id="e948a-107">Beschleunigungsmesser</span><span class="sxs-lookup"><span data-stu-id="e948a-107">Accelerometer</span></span>**](https://msdn.microsoft.com/library/windows/apps/BR225687)
 
-**<span data-ttu-id="82ec4-110">Beispiel</span><span class="sxs-lookup"><span data-stu-id="82ec4-110">Sample</span></span>**
+**<span data-ttu-id="e948a-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="e948a-108">Sample</span></span>**
 
--   <span data-ttu-id="82ec4-111">Eine umfassendere Implementierung finden Sie unter [Beispiel für einen Beschleunigungsmesser](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Accelerometer).</span><span class="sxs-lookup"><span data-stu-id="82ec4-111">For a more complete implementation, see the [accelerometer sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Accelerometer).</span></span>
+-   <span data-ttu-id="e948a-109">Eine umfassendere Implementierung finden Sie unter [Beispiel für einen Beschleunigungsmesser](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Accelerometer).</span><span class="sxs-lookup"><span data-stu-id="e948a-109">For a more complete implementation, see the [accelerometer sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Accelerometer).</span></span>
 
-<span data-ttu-id="82ec4-112">\[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt.</span><span class="sxs-lookup"><span data-stu-id="82ec4-112">\[Some information relates to pre-released product which may be substantially modified before it's commercially released.</span></span> <span data-ttu-id="82ec4-113">Microsoft übernimmt keine Garantie, weder ausdrücklicher noch impliziter Art, für die hier bereitgestellten Informationen.\]</span><span class="sxs-lookup"><span data-stu-id="82ec4-113">Microsoft makes no warranties, express or implied, with respect to the information provided here.\]</span></span>
+<span data-ttu-id="e948a-110">\[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt.</span><span class="sxs-lookup"><span data-stu-id="e948a-110">\[Some information relates to pre-released product which may be substantially modified before it's commercially released.</span></span> <span data-ttu-id="e948a-111">Microsoft übernimmt keine Garantie, weder ausdrücklicher noch impliziter Art, für die hier bereitgestellten Informationen.\]</span><span class="sxs-lookup"><span data-stu-id="e948a-111">Microsoft makes no warranties, express or implied, with respect to the information provided here.\]</span></span>
 
-<span data-ttu-id="82ec4-114">Hier erfahren Sie, wie Sie mithilfe des Beschleunigungsmessers auf Benutzerbewegungen reagieren können.</span><span class="sxs-lookup"><span data-stu-id="82ec4-114">Learn how to use the accelerometer to respond to user movement.</span></span>
+<span data-ttu-id="e948a-112">Hier erfahren Sie, wie Sie mithilfe des Beschleunigungsmessers auf Benutzerbewegungen reagieren können.</span><span class="sxs-lookup"><span data-stu-id="e948a-112">Learn how to use the accelerometer to respond to user movement.</span></span>
 
-<span data-ttu-id="82ec4-115">Eine einfache Spiele-App verwendet als Eingabegerät einen einzigen Sensor: den Beschleunigungsmesser.</span><span class="sxs-lookup"><span data-stu-id="82ec4-115">A simple game app relies on a single sensor, the accelerometer, as an input device.</span></span> <span data-ttu-id="82ec4-116">Diese Apps verwenden für die Eingabe in der Regel nur eine oder zwei Achsen. Als weitere Eingabequelle kann aber auch das Schüttelereignis verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="82ec4-116">These apps typically use only one or two axes for input; but they may also use the shake event as another input source.</span></span>
+<span data-ttu-id="e948a-113">Eine einfache Spiele-App verwendet als Eingabegerät einen einzigen Sensor: den Beschleunigungsmesser.</span><span class="sxs-lookup"><span data-stu-id="e948a-113">A simple game app relies on a single sensor, the accelerometer, as an input device.</span></span> <span data-ttu-id="e948a-114">Diese Apps verwenden für die Eingabe in der Regel nur eine oder zwei Achsen. Als weitere Eingabequelle kann aber auch das Schüttelereignis verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="e948a-114">These apps typically use only one or two axes for input; but they may also use the shake event as another input source.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="82ec4-117">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="82ec4-117">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="e948a-115">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="e948a-115">Prerequisites</span></span>
 
-<span data-ttu-id="82ec4-118">Sie sollten mit XAML (Extensible Application Markup Language), Microsoft VisualC# und Ereignissen vertraut sein.</span><span class="sxs-lookup"><span data-stu-id="82ec4-118">You should be familiar with Extensible Application Markup Language (XAML), Microsoft Visual C#, and events.</span></span>
+<span data-ttu-id="e948a-116">Sie sollten mit XAML (Extensible Application Markup Language), Microsoft VisualC# und Ereignissen vertraut sein.</span><span class="sxs-lookup"><span data-stu-id="e948a-116">You should be familiar with Extensible Application Markup Language (XAML), Microsoft Visual C#, and events.</span></span>
 
-<span data-ttu-id="82ec4-119">Das verwendete Gerät oder der Emulator muss einen Beschleunigungsmesser unterstützen.</span><span class="sxs-lookup"><span data-stu-id="82ec4-119">The device or emulator that you're using must support an accelerometer.</span></span>
+<span data-ttu-id="e948a-117">Das verwendete Gerät oder der Emulator muss einen Beschleunigungsmesser unterstützen.</span><span class="sxs-lookup"><span data-stu-id="e948a-117">The device or emulator that you're using must support an accelerometer.</span></span>
 
-## <a name="create-a-simple-accelerometer-app"></a><span data-ttu-id="82ec4-120">Erstellen einer einfachen Beschleunigungsmesser-App</span><span class="sxs-lookup"><span data-stu-id="82ec4-120">Create a simple accelerometer app</span></span>
+## <a name="create-a-simple-accelerometer-app"></a><span data-ttu-id="e948a-118">Erstellen einer einfachen Beschleunigungsmesser-App</span><span class="sxs-lookup"><span data-stu-id="e948a-118">Create a simple accelerometer app</span></span>
 
-<span data-ttu-id="82ec4-121">Dieser Abschnitt ist in zwei Unterabschnitte unterteilt:</span><span class="sxs-lookup"><span data-stu-id="82ec4-121">This section is divided into two subsections.</span></span> <span data-ttu-id="82ec4-122">Der erste Unterabschnitt enthält die Schritte zum Erstellen einer einfachen Beschleunigungsmesseranwendung.</span><span class="sxs-lookup"><span data-stu-id="82ec4-122">The first subsection will take you through the steps necessary to create a simple accelerometer application from scratch.</span></span> <span data-ttu-id="82ec4-123">Im zweiten Unterabschnitt wird die erstellte App dann näher erläutert.</span><span class="sxs-lookup"><span data-stu-id="82ec4-123">The following subsection explains the app you have just created.</span></span>
+<span data-ttu-id="e948a-119">Dieser Abschnitt ist in zwei Unterabschnitte unterteilt:</span><span class="sxs-lookup"><span data-stu-id="e948a-119">This section is divided into two subsections.</span></span> <span data-ttu-id="e948a-120">Der erste Unterabschnitt enthält die Schritte zum Erstellen einer einfachen Beschleunigungsmesseranwendung.</span><span class="sxs-lookup"><span data-stu-id="e948a-120">The first subsection will take you through the steps necessary to create a simple accelerometer application from scratch.</span></span> <span data-ttu-id="e948a-121">Im zweiten Unterabschnitt wird die erstellte App dann näher erläutert.</span><span class="sxs-lookup"><span data-stu-id="e948a-121">The following subsection explains the app you have just created.</span></span>
 
-### <a name="instructions"></a><span data-ttu-id="82ec4-124">Anweisungen</span><span class="sxs-lookup"><span data-stu-id="82ec4-124">Instructions</span></span>
+### <a name="instructions"></a><span data-ttu-id="e948a-122">Anweisungen</span><span class="sxs-lookup"><span data-stu-id="e948a-122">Instructions</span></span>
 
--   <span data-ttu-id="82ec4-125">Erstellen Sie ein neues Projekt. Wählen Sie dabei unter den Projektvorlagen für **VisualC#** die Option **Leere App (Universelle Windows-App)** aus.</span><span class="sxs-lookup"><span data-stu-id="82ec4-125">Create a new project, choosing a **Blank App (Universal Windows)** from the **Visual C#** project templates.</span></span>
+-   <span data-ttu-id="e948a-123">Erstellen Sie ein neues Projekt. Wählen Sie dabei unter den Projektvorlagen für **VisualC#** die Option **Leere App (Universelle Windows-App)** aus.</span><span class="sxs-lookup"><span data-stu-id="e948a-123">Create a new project, choosing a **Blank App (Universal Windows)** from the **Visual C#** project templates.</span></span>
 
--   <span data-ttu-id="82ec4-126">Öffnen Sie die Projektdatei „MainPage.xaml.cs“, und ersetzen Sie den vorhandenen Code durch den folgenden Code.</span><span class="sxs-lookup"><span data-stu-id="82ec4-126">Open your project's MainPage.xaml.cs file and replace the existing code with the following.</span></span>
+-   <span data-ttu-id="e948a-124">Öffnen Sie die Projektdatei „MainPage.xaml.cs“, und ersetzen Sie den vorhandenen Code durch den folgenden Code.</span><span class="sxs-lookup"><span data-stu-id="e948a-124">Open your project's MainPage.xaml.cs file and replace the existing code with the following.</span></span>
 
 ```csharp
     using System;
@@ -113,9 +114,9 @@ ms.lasthandoff: 07/03/2017
     }
 ```
 
-<span data-ttu-id="82ec4-127">Sie müssen den Namespace im vorhergehenden Codeausschnitt durch den Namen ersetzen, den Sie für Ihr Projekt angegeben haben.</span><span class="sxs-lookup"><span data-stu-id="82ec4-127">You'll need to rename the namespace in the previous snippet with the name you gave your project.</span></span> <span data-ttu-id="82ec4-128">Wenn Sie z.B. ein Projekt mit dem Namen **AccelerometerCS** erstellt haben, ersetzen Sie `namespace App1` durch `namespace AccelerometerCS`.</span><span class="sxs-lookup"><span data-stu-id="82ec4-128">For example, if you created a project named **AccelerometerCS**, you'd replace `namespace App1` with `namespace AccelerometerCS`.</span></span>
+<span data-ttu-id="e948a-125">Sie müssen den Namespace im vorhergehenden Codeausschnitt durch den Namen ersetzen, den Sie für Ihr Projekt angegeben haben.</span><span class="sxs-lookup"><span data-stu-id="e948a-125">You'll need to rename the namespace in the previous snippet with the name you gave your project.</span></span> <span data-ttu-id="e948a-126">Wenn Sie z.B. ein Projekt mit dem Namen **AccelerometerCS** erstellt haben, ersetzen Sie `namespace App1` durch `namespace AccelerometerCS`.</span><span class="sxs-lookup"><span data-stu-id="e948a-126">For example, if you created a project named **AccelerometerCS**, you'd replace `namespace App1` with `namespace AccelerometerCS`.</span></span>
 
--   <span data-ttu-id="82ec4-129">Öffnen Sie die Datei „MainPage.xaml“, und ersetzen Sie den ursprünglichen Inhalt durch den folgenden XML-Code.</span><span class="sxs-lookup"><span data-stu-id="82ec4-129">Open the file MainPage.xaml and replace the original contents with the following XML.</span></span>
+-   <span data-ttu-id="e948a-127">Öffnen Sie die Datei „MainPage.xaml“, und ersetzen Sie den ursprünglichen Inhalt durch den folgenden XML-Code.</span><span class="sxs-lookup"><span data-stu-id="e948a-127">Open the file MainPage.xaml and replace the original contents with the following XML.</span></span>
 
 ```xml
         <Page
@@ -139,25 +140,25 @@ ms.lasthandoff: 07/03/2017
     </Page>
 ```
 
-<span data-ttu-id="82ec4-130">Sie müssen den ersten Teil des Klassennamens im vorhergehenden Codeausschnitt durch den Namespace Ihrer App ersetzen.</span><span class="sxs-lookup"><span data-stu-id="82ec4-130">You'll need to replace the first part of the class name in the previous snippet with the namespace of your app.</span></span> <span data-ttu-id="82ec4-131">Wenn Sie etwa ein Projekt mit dem Namen **AccelerometerCS**erstellt haben, ersetzen Sie `x:Class="App1.MainPage"` durch `x:Class="AccelerometerCS.MainPage"`.</span><span class="sxs-lookup"><span data-stu-id="82ec4-131">For example, if you created a project named **AccelerometerCS**, you'd replace `x:Class="App1.MainPage"` with `x:Class="AccelerometerCS.MainPage"`.</span></span> <span data-ttu-id="82ec4-132">Ersetzen Sie außerdem `xmlns:local="using:App1"` durch `xmlns:local="using:AccelerometerCS"`.</span><span class="sxs-lookup"><span data-stu-id="82ec4-132">You should also replace `xmlns:local="using:App1"` with `xmlns:local="using:AccelerometerCS"`.</span></span>
+<span data-ttu-id="e948a-128">Sie müssen den ersten Teil des Klassennamens im vorhergehenden Codeausschnitt durch den Namespace Ihrer App ersetzen.</span><span class="sxs-lookup"><span data-stu-id="e948a-128">You'll need to replace the first part of the class name in the previous snippet with the namespace of your app.</span></span> <span data-ttu-id="e948a-129">Wenn Sie etwa ein Projekt mit dem Namen **AccelerometerCS**erstellt haben, ersetzen Sie `x:Class="App1.MainPage"` durch `x:Class="AccelerometerCS.MainPage"`.</span><span class="sxs-lookup"><span data-stu-id="e948a-129">For example, if you created a project named **AccelerometerCS**, you'd replace `x:Class="App1.MainPage"` with `x:Class="AccelerometerCS.MainPage"`.</span></span> <span data-ttu-id="e948a-130">Ersetzen Sie außerdem `xmlns:local="using:App1"` durch `xmlns:local="using:AccelerometerCS"`.</span><span class="sxs-lookup"><span data-stu-id="e948a-130">You should also replace `xmlns:local="using:App1"` with `xmlns:local="using:AccelerometerCS"`.</span></span>
 
--   <span data-ttu-id="82ec4-133">Drücken Sie F5, oder wählen Sie **Debuggen** &gt; **Debugging starten** aus, um die App zu erstellen, bereitzustellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="82ec4-133">Press F5 or select **Debug** &gt; **Start Debugging** to build, deploy, and run the app.</span></span>
+-   <span data-ttu-id="e948a-131">Drücken Sie F5, oder wählen Sie **Debuggen** &gt; **Debugging starten** aus, um die App zu erstellen, bereitzustellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="e948a-131">Press F5 or select **Debug** &gt; **Start Debugging** to build, deploy, and run the app.</span></span>
 
-<span data-ttu-id="82ec4-134">Wenn die App ausgeführt wird, können Sie die Beschleunigungsmesserwerte ändern, indem Sie das Gerät bewegen oder die Emulatortools verwenden.</span><span class="sxs-lookup"><span data-stu-id="82ec4-134">Once the app is running, you can change the accelerometer values by moving the device or using the emulator tools.</span></span>
+<span data-ttu-id="e948a-132">Wenn die App ausgeführt wird, können Sie die Beschleunigungsmesserwerte ändern, indem Sie das Gerät bewegen oder die Emulatortools verwenden.</span><span class="sxs-lookup"><span data-stu-id="e948a-132">Once the app is running, you can change the accelerometer values by moving the device or using the emulator tools.</span></span>
 
--   <span data-ttu-id="82ec4-135">Beenden Sie die App, indem Sie zu Visual Studio zurückkehren und UMSCHALT+F5 drücken oder **Debuggen** &gt; **Debugging beenden** auswählen.</span><span class="sxs-lookup"><span data-stu-id="82ec4-135">Stop the app by returning to Visual Studio and pressing Shift+F5 or select **Debug** &gt; **Stop Debugging** to stop the app.</span></span>
+-   <span data-ttu-id="e948a-133">Beenden Sie die App, indem Sie zu Visual Studio zurückkehren und UMSCHALT+F5 drücken oder **Debuggen** &gt; **Debugging beenden** auswählen.</span><span class="sxs-lookup"><span data-stu-id="e948a-133">Stop the app by returning to Visual Studio and pressing Shift+F5 or select **Debug** &gt; **Stop Debugging** to stop the app.</span></span>
 
-### <a name="explanation"></a><span data-ttu-id="82ec4-136">Erläuterung</span><span class="sxs-lookup"><span data-stu-id="82ec4-136">Explanation</span></span>
+### <a name="explanation"></a><span data-ttu-id="e948a-134">Erläuterung</span><span class="sxs-lookup"><span data-stu-id="e948a-134">Explanation</span></span>
 
-<span data-ttu-id="82ec4-137">Das vorherige Beispiel zeigt, wie wenig Code Sie schreiben müssen, um Beschleunigungsmesserwerte in Ihre App zu integrieren.</span><span class="sxs-lookup"><span data-stu-id="82ec4-137">The previous example demonstrates how little code you'll need to write in order to integrate accelerometer input in your app.</span></span>
+<span data-ttu-id="e948a-135">Das vorherige Beispiel zeigt, wie wenig Code Sie schreiben müssen, um Beschleunigungsmesserwerte in Ihre App zu integrieren.</span><span class="sxs-lookup"><span data-stu-id="e948a-135">The previous example demonstrates how little code you'll need to write in order to integrate accelerometer input in your app.</span></span>
 
-<span data-ttu-id="82ec4-138">Die App stellt eine Verbindung mit dem Standardbeschleunigungsmesser in der **MainPage**-Methode her.</span><span class="sxs-lookup"><span data-stu-id="82ec4-138">The app establishes a connection with the default accelerometer in the **MainPage** method.</span></span>
+<span data-ttu-id="e948a-136">Die App stellt eine Verbindung mit dem Standardbeschleunigungsmesser in der **MainPage**-Methode her.</span><span class="sxs-lookup"><span data-stu-id="e948a-136">The app establishes a connection with the default accelerometer in the **MainPage** method.</span></span>
 
 ```csharp
 _accelerometer = Accelerometer.GetDefault();
 ```
 
-<span data-ttu-id="82ec4-139">Die App legt das Berichtsintervall in der **MainPage**-Methode fest.</span><span class="sxs-lookup"><span data-stu-id="82ec4-139">The app establishes the report interval within the **MainPage** method.</span></span> <span data-ttu-id="82ec4-140">Mit diesem Code wird das vom Gerät unterstützte Mindestintervall abgerufen und mit einem angeforderten Intervall von 16 Millisekunden verglichen (entspricht etwa einer Aktualisierungsrate von 60Hz).</span><span class="sxs-lookup"><span data-stu-id="82ec4-140">This code retrieves the minimum interval supported by the device and compares it to a requested interval of 16 milliseconds (which approximates a 60-Hz refresh rate).</span></span> <span data-ttu-id="82ec4-141">Wenn das unterstützte Mindestintervall größer als das angeforderte Intervall ist, legt der Code den Wert auf das Minimum fest.</span><span class="sxs-lookup"><span data-stu-id="82ec4-141">If the minimum supported interval is greater than the requested interval, the code sets the value to the minimum.</span></span> <span data-ttu-id="82ec4-142">Andernfalls wird der Wert auf das angeforderte Intervall festgelegt.</span><span class="sxs-lookup"><span data-stu-id="82ec4-142">Otherwise, it sets the value to the requested interval.</span></span>
+<span data-ttu-id="e948a-137">Die App legt das Berichtsintervall in der **MainPage**-Methode fest.</span><span class="sxs-lookup"><span data-stu-id="e948a-137">The app establishes the report interval within the **MainPage** method.</span></span> <span data-ttu-id="e948a-138">Mit diesem Code wird das vom Gerät unterstützte Mindestintervall abgerufen und mit einem angeforderten Intervall von 16 Millisekunden verglichen (entspricht etwa einer Aktualisierungsrate von 60Hz).</span><span class="sxs-lookup"><span data-stu-id="e948a-138">This code retrieves the minimum interval supported by the device and compares it to a requested interval of 16 milliseconds (which approximates a 60-Hz refresh rate).</span></span> <span data-ttu-id="e948a-139">Wenn das unterstützte Mindestintervall größer als das angeforderte Intervall ist, legt der Code den Wert auf das Minimum fest.</span><span class="sxs-lookup"><span data-stu-id="e948a-139">If the minimum supported interval is greater than the requested interval, the code sets the value to the minimum.</span></span> <span data-ttu-id="e948a-140">Andernfalls wird der Wert auf das angeforderte Intervall festgelegt.</span><span class="sxs-lookup"><span data-stu-id="e948a-140">Otherwise, it sets the value to the requested interval.</span></span>
 
 ```csharp
 uint minReportInterval = _accelerometer.MinimumReportInterval;
@@ -165,14 +166,14 @@ uint reportInterval = minReportInterval > 16 ? minReportInterval : 16;
 _accelerometer.ReportInterval = reportInterval;
 ```
 
-<span data-ttu-id="82ec4-143">Die neuen Beschleunigungsmesserdaten werden in der **ReadingChanged**-Methode erfasst.</span><span class="sxs-lookup"><span data-stu-id="82ec4-143">The new accelerometer data is captured in the **ReadingChanged** method.</span></span> <span data-ttu-id="82ec4-144">Wenn der Sensortreiber neue Daten vom Sensor empfängt, übergibt er die Werte mithilfe dieses Ereignishandlers an Ihre App.</span><span class="sxs-lookup"><span data-stu-id="82ec4-144">Each time the sensor driver receives new data from the sensor, it passes the values to your app using this event handler.</span></span> <span data-ttu-id="82ec4-145">Die App registriert diesen Ereignishandler in der folgenden Zeile.</span><span class="sxs-lookup"><span data-stu-id="82ec4-145">The app registers this event handler on the following line.</span></span>
+<span data-ttu-id="e948a-141">Die neuen Beschleunigungsmesserdaten werden in der **ReadingChanged**-Methode erfasst.</span><span class="sxs-lookup"><span data-stu-id="e948a-141">The new accelerometer data is captured in the **ReadingChanged** method.</span></span> <span data-ttu-id="e948a-142">Wenn der Sensortreiber neue Daten vom Sensor empfängt, übergibt er die Werte mithilfe dieses Ereignishandlers an Ihre App.</span><span class="sxs-lookup"><span data-stu-id="e948a-142">Each time the sensor driver receives new data from the sensor, it passes the values to your app using this event handler.</span></span> <span data-ttu-id="e948a-143">Die App registriert diesen Ereignishandler in der folgenden Zeile.</span><span class="sxs-lookup"><span data-stu-id="e948a-143">The app registers this event handler on the following line.</span></span>
 
 ```csharp
 _accelerometer.ReadingChanged += new TypedEventHandler<Accelerometer,
 AccelerometerReadingChangedEventArgs>(ReadingChanged);
 ```
 
-<span data-ttu-id="82ec4-146">Die neuen Werte werden in die TextBlock-Elemente des XAML-Projektcodes geschrieben.</span><span class="sxs-lookup"><span data-stu-id="82ec4-146">These new values are written to the TextBlocks found in the project's XAML.</span></span>
+<span data-ttu-id="e948a-144">Die neuen Werte werden in die TextBlock-Elemente des XAML-Projektcodes geschrieben.</span><span class="sxs-lookup"><span data-stu-id="e948a-144">These new values are written to the TextBlocks found in the project's XAML.</span></span>
 
 ```xml
 <TextBlock x:Name="txtXAxis" HorizontalAlignment="Left" Height="15" Margin="70,16,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="61" Foreground="#FFF2F2F2"/>

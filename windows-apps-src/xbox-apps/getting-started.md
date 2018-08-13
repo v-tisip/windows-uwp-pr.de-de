@@ -1,7 +1,7 @@
 ---
 author: Mtoepke
 title: Erste Schritte bei der Entwicklung von UWP-Apps auf Xbox One
-description: "Einrichten des Computers und der Xbox One für die UWP-Entwicklung"
+description: Einrichten des Computers und der Xbox One für die UWP-Entwicklung
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
@@ -10,9 +10,10 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.openlocfilehash: ea8262f0aad4112ce2ce6d661156f5692541a4ce
 ms.sourcegitcommit: de6bc8acec2cd5ebc36bb21b2ce1a9980c3e78b2
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/17/2017
+ms.locfileid: "901000"
 ---
 #<a name="getting-started-with-uwp-app-development-on-xbox-one"></a><span data-ttu-id="f7210-104">Erste Schritte bei der Entwicklung von UWP-Apps auf Xbox One</span><span class="sxs-lookup"><span data-stu-id="f7210-104">Getting started with UWP app development on Xbox One</span></span>
 

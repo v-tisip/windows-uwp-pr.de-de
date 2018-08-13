@@ -11,8 +11,9 @@ keywords: Windows 10, UWP
 ms.assetid: e1a2c7f0-0040-4ce7-94de-17224736e20b
 ms.openlocfilehash: d071a0ff6d228608d7f6c7acdcfd88df38f2c390
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "235084"
 ---
 # <a name="upload-a-folder-to-the-development-directory"></a><span data-ttu-id="a661b-104">Hochladen eines Ordners in das Entwicklungsverzeichnis</span><span class="sxs-lookup"><span data-stu-id="a661b-104">Upload a folder to the development directory</span></span>
 

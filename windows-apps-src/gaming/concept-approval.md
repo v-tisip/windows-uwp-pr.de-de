@@ -1,7 +1,7 @@
 ---
 author: eliotcowley
 title: Konzeptgenehmigung
-description: "Hier erfahren Sie, wie Sie Ihr Produkt zur Konzeptgenehmigung übermitteln, die Sie benötigen, wenn das Produkt auf der Xbox ausgeführt wird oder Xbox Live verwendet."
+description: Hier erfahren Sie, wie Sie Ihr Produkt zur Konzeptgenehmigung übermitteln, die Sie benötigen, wenn das Produkt auf der Xbox ausgeführt wird oder Xbox Live verwendet.
 ms.assetid: 850ec988-761b-49d8-9508-da8a83108de3
 ms.author: elcowle
 ms.date: 06/23/2017
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: Windows10, UWP, Konzeptgenehmigung
 ms.openlocfilehash: f49e27ad5753a8f4074ca3b55bd7cde47a7e6600
 ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/26/2017
+ms.locfileid: "693032"
 ---
 # <a name="concept-approval"></a><span data-ttu-id="5818c-104">Konzeptgenehmigung</span><span class="sxs-lookup"><span data-stu-id="5818c-104">Concept approval</span></span>
 

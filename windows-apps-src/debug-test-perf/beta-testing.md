@@ -2,7 +2,7 @@
 author: PatrickFarley
 ms.assetid: 1C77C50C-5DA4-4414-9316-6EEDD78629E2
 title: Betatests
-description: "Betatests bieten Ihnen die Möglichkeit zum Verbessern Ihrer App anhand des Feedbacks von Personen außerhalb Ihres App-Entwicklungsteams, die die noch nicht freigegebene App auf ihren eigenen Geräten testen."
+description: Betatests bieten Ihnen die Möglichkeit zum Verbessern Ihrer App anhand des Feedbacks von Personen außerhalb Ihres App-Entwicklungsteams, die die noch nicht freigegebene App auf ihren eigenen Geräten testen.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.openlocfilehash: 6f5a4e7f2961143f44acb533f045783fb4e4b7c1
 ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/26/2017
+ms.locfileid: "692912"
 ---
 # <a name="beta-testing"></a><span data-ttu-id="3575f-104">Betatests</span><span class="sxs-lookup"><span data-stu-id="3575f-104">Beta testing</span></span>
 

@@ -1,19 +1,20 @@
 ---
 author: normesta
 ms.assetid: 1B077801-0A58-4A34-887C-F1E85E9A37B0
-title: "Erstellen einer regelmäßigen Arbeitsaufgabe"
-description: "Hier erfahren Sie, wie Sie eine Arbeitsaufgabe erstellen, die regelmäßig wiederholt wird."
+title: Erstellen einer regelmäßigen Arbeitsaufgabe
+description: Hier erfahren Sie, wie Sie eine Arbeitsaufgabe erstellen, die regelmäßig wiederholt wird.
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows10, UWP, regelmäßige Arbeitsaufgabe, Threading, Timer"
+keywords: Windows10, UWP, regelmäßige Arbeitsaufgabe, Threading, Timer
 ms.openlocfilehash: 59dd19692143b155c33f8fdd7f3197f724ebb0ac
 ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/08/2017
+ms.locfileid: "665280"
 ---
 # <a name="create-a-periodic-work-item"></a><span data-ttu-id="4b82a-104">Erstellen einer regelmäßigen Arbeitsaufgabe</span><span class="sxs-lookup"><span data-stu-id="4b82a-104">Create a periodic work item</span></span>
 

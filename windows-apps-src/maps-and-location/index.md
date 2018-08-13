@@ -1,7 +1,7 @@
 ---
 author: normesta
-title: "Übersicht über Karten und Position"
-description: "In diesem Abschnitt wird erläutert, wie Sie in Ihrer App Karten anzeigen, Kartendienste verwenden, die Position suchen und einen Geofence einrichten. Außerdem erfahren Sie in diesem Abschnitt, wie die Windows-Karten-App mit einer bestimmten Karte, Route oder detaillierten Wegbeschreibung gestartet wird."
+title: Übersicht über Karten und Position
+description: In diesem Abschnitt wird erläutert, wie Sie in Ihrer App Karten anzeigen, Kartendienste verwenden, die Position suchen und einen Geofence einrichten. Außerdem erfahren Sie in diesem Abschnitt, wie die Windows-Karten-App mit einer bestimmten Karte, Route oder detaillierten Wegbeschreibung gestartet wird.
 ms.assetid: F4C1F094-CF46-4B15-9D80-C1A26A314521
 ms.author: normesta
 ms.date: 02/08/2017
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Karte, Position, Kartendienste
 ms.openlocfilehash: 9f2c15c8d4bab5a764b8973c4eecb220ed6d8f38
 ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/08/2017
+ms.locfileid: "665340"
 ---
 # <a name="maps-and-location-overview"></a><span data-ttu-id="1759e-105">Übersicht über Karten und Position</span><span class="sxs-lookup"><span data-stu-id="1759e-105">Maps and location overview</span></span>
 

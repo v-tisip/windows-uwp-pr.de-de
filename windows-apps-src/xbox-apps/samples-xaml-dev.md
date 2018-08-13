@@ -2,8 +2,9 @@
 author: Mtoepke
 ms.openlocfilehash: aa98a820c22a0a31568aa68358f51c414516e83d
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "234871"
 ---
 #<a name="xaml-samples-for-developers"></a><span data-ttu-id="fc18a-101">XAML-Beispiele für Entwickler</span><span class="sxs-lookup"><span data-stu-id="fc18a-101">XAML samples for developers</span></span>
 

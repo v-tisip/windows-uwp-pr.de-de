@@ -10,9 +10,10 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.openlocfilehash: bedd4ce683622935488f9cc210d71f568a167f51
 ms.sourcegitcommit: 63c815f8c6665872987b5410cabf324f2b7e3c7c
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/10/2017
+ms.locfileid: "887956"
 ---
 # <a name="app-analysis-overview"></a><span data-ttu-id="2cb69-104">App-Analyse – Übersicht</span><span class="sxs-lookup"><span data-stu-id="2cb69-104">App Analysis overview</span></span>
 

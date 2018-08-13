@@ -1,7 +1,7 @@
 ---
 author: PatrickFarley
 title: Starten einer App mit einem URI
-description: "In diesem Abschnitt wird beschrieben, wie Sie einen Uniform Resource Identifier (URI) verwenden, um eine App über eine andere App zu starten."
+description: In diesem Abschnitt wird beschrieben, wie Sie einen Uniform Resource Identifier (URI) verwenden, um eine App über eine andere App zu starten.
 ms.assetid: a40c4ce2-4f41-4a55-aeb3-1beb3e84e839
 ms.author: pafarley
 ms.date: 02/08/2017
@@ -9,28 +9,29 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 6dceda60b60b29f772ec4fab8b142b45cc387e75
-ms.lasthandoff: 02/07/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: 7ba630de58e544a9bb84640ab743d1cf67b2fe74
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "299960"
 ---
+# <a name="launch-an-app-with-a-uri"></a><span data-ttu-id="726ce-104">Starten einer App mit einem URI</span><span class="sxs-lookup"><span data-stu-id="726ce-104">Launch an app with a URI</span></span>
 
-# <a name="launch-an-app-with-a-uri"></a>Starten einer App mit einem URI
+<span data-ttu-id="726ce-105">In diesem Abschnitt wird beschrieben, wie Sie einen Uniform Resource Identifier (URI) verwenden, um eine App über eine andere App zu starten und auf diese Weise nützliche App-zu-App-Szenarien unterstützen.</span><span class="sxs-lookup"><span data-stu-id="726ce-105">This section describes how to use a Uniform Resource Identifier (URI) to launch one app from another app, enabling helpful app-to-app scenarios.</span></span>
 
-In diesem Abschnitt wird beschrieben, wie Sie einen Uniform Resource Identifier (URI) verwenden, um eine App über eine andere App zu starten und auf diese Weise nützliche App-zu-App-Szenarien unterstützen.
-
-| Thema | Beschreibung |
+| <span data-ttu-id="726ce-106">Thema</span><span class="sxs-lookup"><span data-stu-id="726ce-106">Topic</span></span> | <span data-ttu-id="726ce-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="726ce-107">Description</span></span> |
 |-------|-------------|
-| [Starten der Standard-App für einen URI](launch-default-app.md) | Erfahren Sie, wie Sie die Standard-App für einen Uniform Resource Identifier (URI) starten. URIs ermöglichen den Start einer anderen App zum Ausführen einer bestimmten Aufgabe. Dieses Thema enthält auch eine Übersicht über die zahlreichen in Windows integrierten URI-Schemas. |
-| [Behandeln der URI-Aktivierung](handle-uri-activation.md) | Erfahren Sie, wie Sie eine App registrieren, damit sie der Standardhandler eines Uniform Resource Identifier (URI)-Schemanamens wird. |
-| [Starten einer App für Ergebnisse](how-to-launch-an-app-for-results.md) | Erfahren Sie, wie Sie eine App über eine andere App starten und Daten zwischen den beiden Apps austauschen. Dieser Vorgang wird als Starten einer App für Ergebnisse bezeichnet. |
-| [Wählen und Speichern von Tönen mithilfe des URI-Schemas „ms-tonepicker“](launch-ringtone-picker.md) | In diesem Thema wird das URI-Schema „ms-tonepicker“ beschrieben und wie Sie dieses verwenden können, um eine Tonauswahl anzuzeigen, Töne auszuwählen und zu speichern sowie den Anzeigenamen für Töne abzurufen. |
-| [Starten der Windows-Einstellungs-App](launch-settings-app.md) | Erfahren Sie, wie Sie die Windows-Einstellungs-App aus Ihrer App starten können. In diesem Thema wird das ms-settings-URI-Schema beschrieben. Verwenden Sie dieses URI-Schema, um die Windows-Einstellungs-App mit bestimmten Einstellungsseiten zu starten. |
-| [Starten der Windows Store-App](launch-store-app.md) | In diesem Thema wird das URI-Schema „ms-windows-store“ beschrieben. Ihre App kann mit diesem URI-Schema die Windows Store-App mit bestimmten Seiten des Store starten. |
-| [Starten der Windows-Karten-App](launch-maps-app.md) | Erfahren Sie, wie Sie die Windows-Karten-App aus Ihrer App starten können. |
-| [Starten der Kontakte-App](launch-people-apps.md) | In diesem Thema wird das URI-Schema „ms-people“ beschrieben. Ihre App kann dieses URI-Schema verwenden, um die Kontakte-App für bestimmte Aktionen zu starten. |
-| [Unterstützung der Verknüpfung zwischen Web und App mit App-URI-Handlern](web-to-app-linking.md) | Fördern Sie die Bindung der Nutzer an Ihrer App mithilfe von App-URI-Handlern. |
+| [<span data-ttu-id="726ce-108">Starten der Standard-App für einen URI</span><span class="sxs-lookup"><span data-stu-id="726ce-108">Launch the default app for a URI</span></span>](launch-default-app.md) | <span data-ttu-id="726ce-109">Erfahren Sie, wie Sie die Standard-App für einen Uniform Resource Identifier (URI) starten.</span><span class="sxs-lookup"><span data-stu-id="726ce-109">Learn how to launch the default app for a Uniform Resource Identifier (URI).</span></span> <span data-ttu-id="726ce-110">URIs ermöglichen den Start einer anderen App zum Ausführen einer bestimmten Aufgabe.</span><span class="sxs-lookup"><span data-stu-id="726ce-110">URIs allow you to launch another app to perform a specific task.</span></span> <span data-ttu-id="726ce-111">Dieses Thema enthält auch eine Übersicht über die zahlreichen in Windows integrierten URI-Schemas.</span><span class="sxs-lookup"><span data-stu-id="726ce-111">This topic also provides an overview of the many URI schemes built into Windows.</span></span> |
+| [<span data-ttu-id="726ce-112">Behandeln der URI-Aktivierung</span><span class="sxs-lookup"><span data-stu-id="726ce-112">Handle URI activation</span></span>](handle-uri-activation.md) | <span data-ttu-id="726ce-113">Erfahren Sie, wie Sie eine App registrieren, damit sie der Standardhandler eines Uniform Resource Identifier (URI)-Schemanamens wird.</span><span class="sxs-lookup"><span data-stu-id="726ce-113">Learn how to register an app to become the default handler for a Uniform Resource Identifier (URI) scheme name.</span></span> |
+| [<span data-ttu-id="726ce-114">Starten einer App für Ergebnisse</span><span class="sxs-lookup"><span data-stu-id="726ce-114">Launch an app for results</span></span>](how-to-launch-an-app-for-results.md) | <span data-ttu-id="726ce-115">Erfahren Sie, wie Sie eine App über eine andere App starten und Daten zwischen den beiden Apps austauschen.</span><span class="sxs-lookup"><span data-stu-id="726ce-115">Learn how to launch an app from another app and exchange data between the two.</span></span> <span data-ttu-id="726ce-116">Dieser Vorgang wird als Starten einer App für Ergebnisse bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="726ce-116">This is called launching an app for results.</span></span> |
+| [<span data-ttu-id="726ce-117">Wählen und Speichern von Tönen mithilfe des URI-Schemas „ms-tonepicker“</span><span class="sxs-lookup"><span data-stu-id="726ce-117">Choose and save tones using the ms-tonepicker URI scheme</span></span>](launch-ringtone-picker.md) | <span data-ttu-id="726ce-118">In diesem Thema wird das URI-Schema „ms-tonepicker“ beschrieben und wie Sie dieses verwenden können, um eine Tonauswahl anzuzeigen, Töne auszuwählen und zu speichern sowie den Anzeigenamen für Töne abzurufen.</span><span class="sxs-lookup"><span data-stu-id="726ce-118">This topic describes the ms-tonepicker URI scheme and how to use it to display a tone picker to select a tone, save a tone, and get the friendly name for a tone.</span></span> |
+| [<span data-ttu-id="726ce-119">Starten der Windows-Einstellungs-App</span><span class="sxs-lookup"><span data-stu-id="726ce-119">Launch the Windows Settings app</span></span>](launch-settings-app.md) | <span data-ttu-id="726ce-120">Erfahren Sie, wie Sie die Windows-Einstellungs-App aus Ihrer App starten können.</span><span class="sxs-lookup"><span data-stu-id="726ce-120">Learn how to launch the Windows Settings app from your app.</span></span> <span data-ttu-id="726ce-121">In diesem Thema wird das ms-settings-URI-Schema beschrieben.</span><span class="sxs-lookup"><span data-stu-id="726ce-121">This topic describes the ms-settings URI scheme.</span></span> <span data-ttu-id="726ce-122">Verwenden Sie dieses URI-Schema, um die Windows-Einstellungs-App mit bestimmten Einstellungsseiten zu starten.</span><span class="sxs-lookup"><span data-stu-id="726ce-122">Use this URI scheme to launch the Windows Settings app to specific settings pages.</span></span> |
+| [<span data-ttu-id="726ce-123">Starten Sie die Anwendung UWP</span><span class="sxs-lookup"><span data-stu-id="726ce-123">Launch the UWP app</span></span>](launch-store-app.md) | <span data-ttu-id="726ce-124">In diesem Thema wird das URI-Schema „ms-windows-store“ beschrieben.</span><span class="sxs-lookup"><span data-stu-id="726ce-124">This topic describes the ms-windows-store URI scheme.</span></span> <span data-ttu-id="726ce-125">Ihre App kann mit diesem URI-Schema die UWP-App mit bestimmten Seiten des Store starten.</span><span class="sxs-lookup"><span data-stu-id="726ce-125">Your app can use this URI scheme to launch the UWP app to specific pages in the Store.</span></span> |
+| [<span data-ttu-id="726ce-126">Starten der Windows-Karten-App</span><span class="sxs-lookup"><span data-stu-id="726ce-126">Launch the Windows Maps app</span></span>](launch-maps-app.md) | <span data-ttu-id="726ce-127">Erfahren Sie, wie Sie die Windows-Karten-App aus Ihrer App starten können.</span><span class="sxs-lookup"><span data-stu-id="726ce-127">Learn how to launch the Windows Maps app from your app.</span></span> |
+| [<span data-ttu-id="726ce-128">Starten der Kontakte-App</span><span class="sxs-lookup"><span data-stu-id="726ce-128">Launch the People app</span></span>](launch-people-apps.md) | <span data-ttu-id="726ce-129">In diesem Thema wird das URI-Schema „ms-people“ beschrieben.</span><span class="sxs-lookup"><span data-stu-id="726ce-129">This topic describes the ms-people URI scheme.</span></span> <span data-ttu-id="726ce-130">Ihre App kann dieses URI-Schema verwenden, um die Kontakte-App für bestimmte Aktionen zu starten.</span><span class="sxs-lookup"><span data-stu-id="726ce-130">Your app can use this URI scheme to launch the People app for specific actions.</span></span> |
+| [<span data-ttu-id="726ce-131">Aktivieren von apps für Websites mit app-URI-Handler</span><span class="sxs-lookup"><span data-stu-id="726ce-131">Enable apps for websites using app URI handlers</span></span>](web-to-app-linking.md) | <span data-ttu-id="726ce-132">Laufwerk Benutzer Engagements mit Ihrer app durch die Unterstützung von Apps für Websites-Feature.</span><span class="sxs-lookup"><span data-stu-id="726ce-132">Drive user engagement with your app by supporting the Apps for Websites feature.</span></span> |
 
-## <a name="related-topics"></a>Verwandte Themen
-* [Starten einer App auf einem Remotegerät](launch-a-remote-app.md)
+## <a name="related-topics"></a><span data-ttu-id="726ce-133">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="726ce-133">Related Topics</span></span>
+* [<span data-ttu-id="726ce-134">Starten einer App auf einem Remotegerät</span><span class="sxs-lookup"><span data-stu-id="726ce-134">Launch an app on a remote device</span></span>](launch-a-remote-app.md)

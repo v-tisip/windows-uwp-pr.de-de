@@ -1,6 +1,6 @@
 ---
 author: normesta
-description: "Hier erfahren Sie, wie Sie das Dialogfeld zum Verfassen einer E-Mail starten, damit Benutzer eine E-Mail senden können. Sie können die Felder der E-Mail vor dem Anzeigen des Dialogfelds mit Daten füllen. Die Nachricht wird erst gesendet, wenn Benutzer auf die Schaltfläche „Senden“ tippen."
+description: Hier erfahren Sie, wie Sie das Dialogfeld zum Verfassen einer E-Mail starten, damit Benutzer eine E-Mail senden können. Sie können die Felder der E-Mail vor dem Anzeigen des Dialogfelds mit Daten füllen. Die Nachricht wird erst gesendet, wenn Benutzer auf die Schaltfläche „Senden“ tippen.
 title: E-Mail senden
 ms.assetid: 74511E90-9438-430E-B2DE-24E196A111E5
 keywords: Kontakte, E-Mail, Senden
@@ -11,9 +11,10 @@ ms.prod: windows
 ms.technology: uwp
 ms.openlocfilehash: bfeec341b0b4e63b4fe37118c1f7daac67929018
 ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/08/2017
+ms.locfileid: "665390"
 ---
 # <a name="send-email"></a><span data-ttu-id="589ab-106">E-Mail senden</span><span class="sxs-lookup"><span data-stu-id="589ab-106">Send email</span></span>
 

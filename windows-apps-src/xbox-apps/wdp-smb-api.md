@@ -11,8 +11,9 @@ keywords: Windows 10, UWP
 ms.assetid: 1f0eb76e-fe3e-4674-a27e-229beec7e63d
 ms.openlocfilehash: 1bc02780808d5b9fca09576165f428eca1cce715
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "234988"
 ---
 # <a name="developer-folder-api-reference"></a><span data-ttu-id="eadf3-104">Referenz zur API für den Entwicklerordner</span><span class="sxs-lookup"><span data-stu-id="eadf3-104">Developer folder API reference</span></span>   
 <span data-ttu-id="eadf3-105">Für den Zugriff auf Dateien auf Ihrer Xbox One, die sich auf die Entwicklung beziehen, können Sie einen standardmäßigen Datei-Explorer verwenden.</span><span class="sxs-lookup"><span data-stu-id="eadf3-105">You can access development-related files on your Xbox One using a standard file explorer.</span></span> <span data-ttu-id="eadf3-106">Dadurch können Sie problemlos Dateien von Ihrem PC anzeigen und auf der Konsole ersetzen.</span><span class="sxs-lookup"><span data-stu-id="eadf3-106">This allows you to easily view and replace files from your PC to the console.</span></span>

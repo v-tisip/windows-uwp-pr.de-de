@@ -1,7 +1,7 @@
 ---
 author: msatranjr
-title: "Übergeben von Arrays an eine Komponente für Windows-Runtime"
-description: "Parameter in der UWP (Universal Windows-Plattform) sind entweder für die Eingabe oder für die Ausgabe, nie für beide, vorgesehen. Das bedeutet, dass der Inhalt eines Arrays, der an eine Methode übergeben wird, wie auch das Array selbst, für die Eingabe oder für die Ausgabe vorgesehen sind."
+title: Übergeben von Arrays an eine Komponente für Windows-Runtime
+description: Parameter in der UWP (Universal Windows-Plattform) sind entweder für die Eingabe oder für die Ausgabe, nie für beide, vorgesehen. Das bedeutet, dass der Inhalt eines Arrays, der an eine Methode übergeben wird, wie auch das Array selbst, für die Eingabe oder für die Ausgabe vorgesehen sind.
 ms.assetid: 8DE695AC-CEF2-438C-8F94-FB783EE18EB9
 ms.author: misatran
 ms.date: 02/08/2017
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.openlocfilehash: e9f0a148238b8f91c4643954c7f575e742f69d5e
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "234990"
 ---
 # <a name="passing-arrays-to-a-windows-runtime-component"></a><span data-ttu-id="c22ed-105">Übergeben von Arrays an eine Komponente für Windows-Runtime</span><span class="sxs-lookup"><span data-stu-id="c22ed-105">Passing arrays to a Windows Runtime Component</span></span>
 

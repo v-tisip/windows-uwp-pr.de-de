@@ -1,6 +1,6 @@
 ---
 author: m-stahl
-title: "Device Portal - Referenz zur API für Xbox-Entwicklereinstellungen"
+title: Device Portal - Referenz zur API für Xbox-Entwicklereinstellungen
 description: Erfahren Sie, wie Sie auf Xbox-Entwicklereinstellungen zugreifen.
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
@@ -11,9 +11,10 @@ keywords: Windows 10, UWP
 ms.assetid: 6ab12b99-2944-49c9-92d9-f995efc4f6ce
 ms.openlocfilehash: dfde4c45a4aa5a520e0aa98cd7f31f7d84854e08
 ms.sourcegitcommit: 0e44f197e7e649d542ec3f67cd790a61dbe1226f
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/07/2017
+ms.locfileid: "662506"
 ---
 # <a name="developer-settings-api-reference"></a><span data-ttu-id="aeab6-104">Referenz zur API für Entwicklereinstellungen</span><span class="sxs-lookup"><span data-stu-id="aeab6-104">Developer settings API reference</span></span>   
 <span data-ttu-id="aeab6-105">Mit dieser API können Sie auf Xbox One-Einstellungen zugreifen, die für die Entwicklung nützlich sind.</span><span class="sxs-lookup"><span data-stu-id="aeab6-105">You can access Xbox One settings that are useful for development using this API.</span></span>

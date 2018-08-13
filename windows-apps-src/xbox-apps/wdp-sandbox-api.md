@@ -1,6 +1,6 @@
 ---
 author: payzer
-title: "Device Portal - Referenz zur API für den Xbox Live-Sandkasten"
+title: Device Portal - Referenz zur API für den Xbox Live-Sandkasten
 description: Erfahren Sie, wie Sie programmgesteuert auf den Xbox Live-Sandkasten zugreifen.
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
@@ -11,8 +11,9 @@ keywords: Windows 10, UWP
 ms.assetid: 72c7459c-420a-4da9-8afa-191a846185a5
 ms.openlocfilehash: d31c943336b36c325218b0b2a8830daf54ed25ca
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "234837"
 ---
 # <a name="xbox-live-sandbox-api-reference"></a><span data-ttu-id="4fb7f-104">Referenz zur API für den Xbox Live-Sandkasten</span><span class="sxs-lookup"><span data-stu-id="4fb7f-104">Xbox Live Sandbox API reference</span></span>   
 <span data-ttu-id="4fb7f-105">Mit dieser REST-API können Sie den Xbox Live-Sandkasten abrufen und festlegen.</span><span class="sxs-lookup"><span data-stu-id="4fb7f-105">You can get and set your Xbox Live sandbox using this REST API.</span></span>

@@ -1,106 +1,110 @@
 ---
 author: TylerMSFT
-title: "Unterstützung der Verknüpfung zwischen Web und App mit App-URI-Handlern"
-description: "Fördern Sie die Bindung der Nutzer an Ihrer App mithilfe von App-URI-Handlern."
+title: Aktivieren von apps für Websites mit app-URI-Handler
+description: Laufwerk Benutzer Engagements mit Ihrer app durch die Unterstützung von Apps für Websites-Feature.
 keywords: Deep-Links in Windows
 ms.author: twhitney
-ms.date: 02/08/2017
+ms.date: 08/25/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 225f0d2bd5d8a2434c3e548064960f44f1df530e
-ms.lasthandoff: 02/08/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: 8482c3b14a6845dc3bfd5912c8260b5cd3214249
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "958313"
 ---
+# <a name="enable-apps-for-websites-using-app-uri-handlers"></a><span data-ttu-id="a6e9a-104">Aktivieren von apps für Websites mit app-URI-Handler</span><span class="sxs-lookup"><span data-stu-id="a6e9a-104">Enable apps for websites using app URI handlers</span></span>
 
-# <a name="support-web-to-app-linking-with-app-uri-handlers"></a>Unterstützung der Verknüpfung zwischen Web und App mit App-URI-Handlern
+<span data-ttu-id="a6e9a-105">Apps für Websites ordnet Ihre app mit einer Website, sodass Ihre app Wenn jemand einen Link zu Ihrer Website geöffnet wird, anstatt den Browser öffnen gestartet werden ist.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-105">Apps for Websites associates your app with a website so that when someone opens a link to your website, your app is launched instead of opening the browser.</span></span> <span data-ttu-id="a6e9a-106">Wenn Ihre app nicht installiert ist, wird Ihre Website im Browser die wie gewohnt geöffnet.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-106">If your app is not installed, your website opens in the browser as usual.</span></span> <span data-ttu-id="a6e9a-107">Benutzer können dieser Erfahrung vertrauen, da nur Urheber verifizierten Contents registrieren können.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-107">Users can trust this experience because only verified content owners can register for a link.</span></span> <span data-ttu-id="a6e9a-108">Benutzer können alle ihre registrierten Web-app-Hyperlinks prüfen, indem Sie auf Einstellungen > Apps > Apps für Websites.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-108">Users will be able to check all of their registered web-to-app links by going to Settings > Apps > Apps for websites.</span></span>
 
-Lernen Sie, wie sie die Bindung zwischen den Benutzern und Ihrer App durch die Unterstützung von Web-zu-App-Verlinkungen fördern. Web-zu-App-Verlinkungen erlauben es Ihnen, eine App mit einer Website zu verbinden Statt des Browsers wird Ihre app wird gestartet, wenn Benutzer einen HTTP- oder Https-Link zu Ihrer Website öffnen. Wenn Ihre App nicht installiert ist, wird ein Link zum Öffnen Ihrer Website bereitgestellt. Benutzer können dieser Erfahrung vertrauen, da nur Urheber verifizierten Contents registrieren können.
+<span data-ttu-id="a6e9a-109">Zum Aktivieren der Web-an-app-verknüpfen Sie müssen:</span><span class="sxs-lookup"><span data-stu-id="a6e9a-109">To enable web-to-app linking you will need to:</span></span>
+- <span data-ttu-id="a6e9a-110">Identifizieren Sie die URIs, die Ihrer App in der Manifestdatei behandeln wird.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-110">Identify the URIs your app will handle in the manifest file</span></span>
+- <span data-ttu-id="a6e9a-111">Ein JSON-Datei, die die Zuordnung zwischen Ihrer app und Ihrer Website definiert.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-111">A JSON file that defines the association between your app and your website.</span></span> <span data-ttu-id="a6e9a-112">mit der app-Familie Paketname am gleichen Host Stamm als die app-Manifestdatei Methodendeklaration hinzu.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-112">with the app Package Family Name at the same host root as the app manifest declaration.</span></span>
+- <span data-ttu-id="a6e9a-113">Behandeln Sie die Aktivierung in der App</span><span class="sxs-lookup"><span data-stu-id="a6e9a-113">Handle the activation in the app.</span></span>
 
-Um die Web-to-App Verlinkung zu aktivieren, benötigen Sie folgendes.
-- Identifizieren Sie die URIs, die Ihrer App in der Manifestdatei behandeln wird.
-- Eine JSON-Datei mit dem Paketfamiliennamen der App im selben Stammverzeichnis wie die App-Manifest Deklaration.
-- Behandeln Sie die Aktivierung in der App
+> [!Note]
+> <span data-ttu-id="a6e9a-114">Beginnend mit dem 10 Ersteller von Windows Update, wird unterstützte Links in Microsoft Edge geklickt die entsprechende app gestartet.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-114">Starting with the Windows 10 Creators update, supported links clicked in Microsoft Edge will launch the corresponding app.</span></span> <span data-ttu-id="a6e9a-115">Unterstützte Links geklickt in anderen Browsern (z. B. Internet Explorer, usw.), wird Sie in das Browsen beibehalten.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-115">Supported links clicked in other browsers (e.g. Internet Explorer, etc.), will keep you in the browsing experience.</span></span>
 
-## <a name="register-to-handle-http-and-https-links-in-the-app-manifest"></a>Registrieren Sie sich, um HTTP- und Https-Links im App-Manifest zu behandeln.
+## <a name="register-to-handle-http-and-https-links-in-the-app-manifest"></a><span data-ttu-id="a6e9a-116">Registrieren Sie sich, um HTTP- und Https-Links im App-Manifest zu behandeln.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-116">Register to handle http and https links in the app manifest</span></span>
 
-Ihre App muss die URIs für die Websites zu identifizieren, die sie behandeln soll. Fügen Sie hierzu die **Windows.appUriHandler** Erweiterung Registrierung zu Ihrer app-Manifestdatei hinzu **Package.appxmanifest**.
+<span data-ttu-id="a6e9a-117">Ihre App muss die URIs für die Websites zu identifizieren, die sie behandeln soll.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-117">Your app needs to identify the URIs for the websites it will handle.</span></span> <span data-ttu-id="a6e9a-118">Fügen Sie hierzu die **Windows.appUriHandler** Erweiterung Registrierung zu Ihrer app-Manifestdatei hinzu **Package.appxmanifest**.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-118">To do so, add the **Windows.appUriHandler** extension registration to your app’s manifest file **Package.appxmanifest**.</span></span>
 
-Wenn beispielsweise die Adresse Ihrer Website "msn.com" lautet, würden Sie den folgenden Eintrag in Ihrem App-Manifest machen:
+<span data-ttu-id="a6e9a-119">Wenn beispielsweise die Adresse Ihrer Website "msn.com" lautet, würden Sie den folgenden Eintrag in Ihrem App-Manifest machen:</span><span class="sxs-lookup"><span data-stu-id="a6e9a-119">For example, if your website’s address is “msn.com” you would make the following entry in your app’s manifest:</span></span>
 
 ```xml
 <Applications>
-    ...
-  <Extensions>
-     <uap3:Extension Category="windows.appUriHandler">
-      <uap3:AppUriHandler>
-        <uap3:Host Name="msn.com" />
-      </uap3:AppUriHandler>
-    </uap3:Extension>
-  </Extensions>
-    ...
+  <Application ... >
+      ...
+      <Extensions>
+         <uap3:Extension Category="windows.appUriHandler">
+          <uap3:AppUriHandler>
+            <uap3:Host Name="msn.com" />
+          </uap3:AppUriHandler>
+        </uap3:Extension>
+      </Extensions>
+  </Application>
 </Applications>
 ```
 
-Die obige Deklaration registriert Ihre App zur Behandlung von Links vom angegebenen Host. Wenn Ihre Website mehrere Adressen hat (z. B.: m.example.com, www.example.com und example.com), fügen Sie einen separaten `<uap3:Host Name=... />` Eintrag innerhalb des `<uap3:AppUriHandler>` für die einzelnen Adressen hinzu.
+<span data-ttu-id="a6e9a-120">Die obige Deklaration registriert Ihre App zur Behandlung von Links vom angegebenen Host.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-120">The declaration above registers your app to handle links from the specified host.</span></span> <span data-ttu-id="a6e9a-121">Wenn Ihre Website mehrere Adressen hat (z. B.: m.example.com, www.example.com und example.com), fügen Sie einen separaten `<uap3:Host Name=... />` Eintrag innerhalb des `<uap3:AppUriHandler>` für die einzelnen Adressen hinzu.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-121">If your website has multiple addresses (for example: m.example.com, www.example.com, and example.com) then add a separate `<uap3:Host Name=... />` entry inside of the `<uap3:AppUriHandler>` for each address.</span></span>
 
-## <a name="associate-your-app-and-website-with-a-json-file"></a>Verknüpfen Sie Ihre App und die Website mit einer JSON-Datei
+## <a name="associate-your-app-and-website-with-a-json-file"></a><span data-ttu-id="a6e9a-122">Verknüpfen Sie Ihre App und die Website mit einer JSON-Datei</span><span class="sxs-lookup"><span data-stu-id="a6e9a-122">Associate your app and website with a JSON file</span></span>
 
-Um sicherzustellen, dass nur Ihre App die Inhalte auf Ihrer Website öffnen kann, sollten Sie den Paketfamiliennamen Ihrer App in eine JSON-Datei einbinden, die auf dem Webserver-Stammverzeichnis oder in einem bekannten Verzeichnis der Domäne liegt. Dies bedeutet, dass Ihre Website die Zustimmung gibt, dass die aufgeführten Apps Inhalte auf Ihrer Website öffnen können. Sie können den Paketfamiliennamen im Packages-Abschnitt Pakete des App-Manifest-Designers finden.
+<span data-ttu-id="a6e9a-123">Um sicherzustellen, dass nur Ihre App die Inhalte auf Ihrer Website öffnen kann, sollten Sie den Paketfamiliennamen Ihrer App in eine JSON-Datei einbinden, die auf dem Webserver-Stammverzeichnis oder in einem bekannten Verzeichnis der Domäne liegt.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-123">To ensure that only your app can open content on your website, include your app's package family name in a JSON file located in the web server root, or at the well-known directory on the domain.</span></span> <span data-ttu-id="a6e9a-124">Dies bedeutet, dass Ihre Website die Zustimmung gibt, dass die aufgeführten Apps Inhalte auf Ihrer Website öffnen können.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-124">This signifies that your website gives consent for the listed apps to open content on your site.</span></span> <span data-ttu-id="a6e9a-125">Sie können den Paketfamiliennamen im Packages-Abschnitt Pakete des App-Manifest-Designers finden.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-125">You can find the package family name in the Packages section in the app manifest designer.</span></span>
 
 >[!Important]
-> Die JSON-Datei sollte kein .json Dateisuffix aufweisen.
+> <span data-ttu-id="a6e9a-126">Die JSON-Datei sollte kein .json Dateisuffix aufweisen.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-126">The JSON file should not have a .json file suffix.</span></span>
 
-Erstellen Sie eine JSON-Datei (ohne die Erweiterung .json) mit dem Namen **Windows-App-Web-Link** und stellen Sie den Paketfamiliennamen Ihrer App bereit. Beispiel:
+<span data-ttu-id="a6e9a-127">Erstellen Sie eine JSON-Datei (ohne die Erweiterung .json) mit dem Namen **Windows-App-Web-Link** und stellen Sie den Paketfamiliennamen Ihrer App bereit.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-127">Create a JSON file (without the .json file extension) named **windows-app-web-link** and provide your app’s package family name.</span></span> <span data-ttu-id="a6e9a-128">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="a6e9a-128">For example:</span></span>
 
 ``` JSON
 [{
-  "packageFamilyName": "YourAppsPFN",
+  "packageFamilyName": "Your app's package family name, e.g MyApp_9jmtgj1pbbz6e",
   "paths": [ "*" ],
   "excludePaths" : [ "/news/*", "/blog/*" ]
  }]
 ```
 
-Windows wird eine Https-Verbindung mit Ihrer Website herstellen und nach der entsprechenden JSON Datei auf dem Webserver suchen.
+<span data-ttu-id="a6e9a-129">Windows wird eine Https-Verbindung mit Ihrer Website herstellen und nach der entsprechenden JSON Datei auf dem Webserver suchen.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-129">Windows will make an https connection to your website and will look for the corresponding JSON file on your web server.</span></span>
 
-### <a name="wildcards"></a>Platzhalter
+### <a name="wildcards"></a><span data-ttu-id="a6e9a-130">Platzhalter</span><span class="sxs-lookup"><span data-stu-id="a6e9a-130">Wildcards</span></span>
 
-Das obige für eine JSON-Datei veranschaulicht die Verwendung von Platzhaltern. Platzhalter erlauben es Ihnen eine Vielzahl von Links mit weniger Codezeilen zu unterstützen. Die Web-zu-App-Verknüpfung unterstützt zwei Arten von Platzhaltern in der JSON-Datei:
+<span data-ttu-id="a6e9a-131">Das obige für eine JSON-Datei veranschaulicht die Verwendung von Platzhaltern.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-131">The JSON file example above demonstrates the use of wildcards.</span></span> <span data-ttu-id="a6e9a-132">Platzhalter erlauben es Ihnen eine Vielzahl von Links mit weniger Codezeilen zu unterstützen.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-132">Wildcards allow you to support a wide variety of links with fewer lines of code.</span></span> <span data-ttu-id="a6e9a-133">Die Web-zu-App-Verknüpfung unterstützt zwei Arten von Platzhaltern in der JSON-Datei:</span><span class="sxs-lookup"><span data-stu-id="a6e9a-133">Web-to-app linking supports two types of wildcards in the JSON file:</span></span>
 
-| **Platzhalter** | **Beschreibung**               |
+| **<span data-ttu-id="a6e9a-134">Platzhalter</span><span class="sxs-lookup"><span data-stu-id="a6e9a-134">Wildcard</span></span>** | **<span data-ttu-id="a6e9a-135">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a6e9a-135">Description</span></span>**               |
 |--------------|-------------------------------|
-| **\***       | Repräsentiert eine beliebige Teilzeichenfolge      |
-| **?**        | Steht für ein einzelnes Zeichen |
+| **\***       | <span data-ttu-id="a6e9a-136">Repräsentiert eine beliebige Teilzeichenfolge</span><span class="sxs-lookup"><span data-stu-id="a6e9a-136">Represents any substring</span></span>      |
+| **<span data-ttu-id="a6e9a-137">?</span><span class="sxs-lookup"><span data-stu-id="a6e9a-137">?</span></span>**        | <span data-ttu-id="a6e9a-138">Steht für ein einzelnes Zeichen</span><span class="sxs-lookup"><span data-stu-id="a6e9a-138">Represents a single character</span></span> |
 
-Zum Beispiel, wenn `"excludePaths" : [ "/news/*", "/blog/*" ]` in dem obigen Beispiel gegeben ist, wird Ihre App alle Pfade unterstützen, die mit Ihrer Website-Adresse (z. B. msn.com) beginnen, **mit Ausnahme** der Pfade unter `/news/` und `/blog/`. **msn.com/weather.html** wird unterstützt, aber nicht ****msn.com/news/topnews.html****.
+<span data-ttu-id="a6e9a-139">Angenommen, `"excludePaths" : [ "/news/*", "/blog/*" ]` im obigen Beispiel Ihre app unterstützt alle Pfade, die mit Ihrer Website-Adressen (z. B. MSN-), **außer** denen unter beginnen `/news/` und `/blog/`.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-139">For example, given `"excludePaths" : [ "/news/*", "/blog/*" ]` in the example above, your app will support all paths that start with your website’s address (e.g. msn.com), **except** those under `/news/` and `/blog/`.</span></span> <span data-ttu-id="a6e9a-140">**msn.com/weather.html** wird unterstützt, aber nicht ****msn.com/news/topnews.html****.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-140">**msn.com/weather.html** will be supported, but not ****msn.com/news/topnews.html****.</span></span>
 
+### <a name="multiple-apps"></a><span data-ttu-id="a6e9a-141">Mehrere Apps</span><span class="sxs-lookup"><span data-stu-id="a6e9a-141">Multiple apps</span></span>
 
-### <a name="multiple-apps"></a>Mehrere Apps
-
-Wenn Sie zwei Apps haben, die Sie mit Ihrer Website verknüpfen möchten, listen Sie beide Paketfamiliennamen der Apps in der **Windows-App-Web-Link** JSON-Datei auf. Beide Apps können unterstützt werden. Dem Benutzer wird eine Auswahl für den Standardlink angezeigt, wenn beide Apps installiert sind. Falls sie den Standardlink später ändern möchten, können ändern sie ihn unter **Einstellungen > Apps für Websites** ändern. Entwickler können auch die JSON-Datei jederzeit ändern und die Änderung noch am selben Tag, aber bis spätestens acht Tage nach dem Update einsehen.
+<span data-ttu-id="a6e9a-142">Wenn Sie zwei Apps haben, die Sie mit Ihrer Website verknüpfen möchten, listen Sie beide Paketfamiliennamen der Apps in der **Windows-App-Web-Link** JSON-Datei auf.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-142">If you have two apps that you would like to link to your website, list both of the application package family names in your **windows-app-web-link** JSON file.</span></span> <span data-ttu-id="a6e9a-143">Beide Apps können unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-143">Both apps can be supported.</span></span> <span data-ttu-id="a6e9a-144">Dem Benutzer wird eine Auswahl für den Standardlink angezeigt, wenn beide Apps installiert sind.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-144">The user will be presented with a choice of which is the default link if both are installed.</span></span> <span data-ttu-id="a6e9a-145">Falls sie den Standardlink später ändern möchten, können ändern sie ihn unter **Einstellungen > Apps für Websites** ändern.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-145">If they want to change the default link later, they can change it in **Settings > Apps for Websites**.</span></span> <span data-ttu-id="a6e9a-146">Entwickler können auch die JSON-Datei jederzeit ändern und die Änderung noch am selben Tag, aber bis spätestens acht Tage nach dem Update einsehen.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-146">Developers can also change the JSON file at any time and see the change as early as the same day but no later than eight days after the update.</span></span>
 
 ``` JSON
 [{
-  "packageFamilyName": "YourAppsPFN",
+  "packageFamilyName": "Your apps's package family name, e.g MyApp_9jmtgj1pbbz6e",
   "paths": [ "*" ],
   "excludePaths" : [ "/news/*", "/blog/*" ]
  },
  {
-  "packageFamilyName": "Your2ndAppsPFN",
+  "packageFamilyName": "Your second app's package family name, e.g. MyApp2_8jmtgj2pbbz6e",
   "paths": [ "/example/*", "/links/*" ]
  }]
 ```
 
-Um Ihren Benutzern die bestmögliche Erfahrung zu bieten, verwenden Sie Ausschlusspfade, um sicherzustellen, dass der nur online verfügbare Inhalt von den unterstützten Pfaden in der JSON-Datei ausgenommen ist.
+<span data-ttu-id="a6e9a-147">Um Ihren Benutzern die bestmögliche Erfahrung zu bieten, verwenden Sie Ausschlusspfade, um sicherzustellen, dass der nur online verfügbare Inhalt von den unterstützten Pfaden in der JSON-Datei ausgenommen ist.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-147">To provide the best experience for your users, use exclude paths to make sure that online-only content is excluded from the supported paths in your JSON file.</span></span>
 
-Ausschlusspfade werden zuerst überprüft, und wenn eine Übereinstimmung vorliegt wird die entsprechende Seite mit dem Browser anstelle der angegebenen App geöffnet. Im obigen Beispiel enthält "/ News / \ *" alle Seiten unter diesem Pfad, während "/ News\ *" (keine vorwärts-Slash "news") Pfade unter "News\ *" wie "Newslocal /", "Newsinternational /" usw.. enthält.
+<span data-ttu-id="a6e9a-148">Ausschlusspfade werden zuerst überprüft, und wenn eine Übereinstimmung vorliegt wird die entsprechende Seite mit dem Browser anstelle der angegebenen App geöffnet.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-148">Exclude paths are checked first and if there is a match the corresponding page will be opened with the browser instead of the designated app.</span></span> <span data-ttu-id="a6e9a-149">Im obigen Beispiel enthält "/ News / \ \*" alle Seiten unter diesem Pfad, während "/ News\ \*" (keine vorwärts-Slash "news") Pfade unter "News\ \*" wie "Newslocal /", "Newsinternational /" usw.. enthält.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-149">In the example above, ‘/news/\*’ includes any pages under that path while ‘/news\*’ (no forward slash trails 'news') includes any paths under ‘news\*’ such as ‘newslocal/’, ‘newsinternational/’, and so on.</span></span>
 
-## <a name="handle-links-on-activation-to-link-to-content"></a>Behandeln Sie Links auf Aktivierung, um Links mit Inhalt zu verbinden.
+## <a name="handle-links-on-activation-to-link-to-content"></a><span data-ttu-id="a6e9a-150">Behandeln Sie Links auf Aktivierung, um Links mit Inhalt zu verbinden.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-150">Handle links on Activation to link to content</span></span>
 
-Navigieren Sie zu **App.xaml.cs** in der Visual Studio Lösung für Ihrer App und fügen Sie in **OnActivated()** die Behandlung für verknüpfte Inhalte hinzu. Im folgenden Beispiel hängt die Seite, die in der App geöffnet wird, vom URI-Pfad ab:
+<span data-ttu-id="a6e9a-151">Navigieren Sie zu **App.xaml.cs** in der Visual Studio Lösung für Ihrer App und fügen Sie in **OnActivated()** die Behandlung für verknüpfte Inhalte hinzu.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-151">Navigate to **App.xaml.cs** in your app’s Visual Studio solution and in **OnActivated()** add handling for linked content.</span></span> <span data-ttu-id="a6e9a-152">Im folgenden Beispiel hängt die Seite, die in der App geöffnet wird, vom URI-Pfad ab:</span><span class="sxs-lookup"><span data-stu-id="a6e9a-152">In the following example, the page that is opened in the app depends on the URI path:</span></span>
 
 ``` CS
 protected override void OnActivated(IActivatedEventArgs e)
@@ -148,55 +152,57 @@ protected override void OnActivated(IActivatedEventArgs e)
 }
 ```
 
-**Wichtig** Stellen Sie sicher, dass das finale `if (rootFrame.Content == null)` logic durch `rootFrame.Navigate(deepLinkPageType, e);` ersetzt wird, wie im obigen Beispiel gezeigt wird.
+<span data-ttu-id="a6e9a-153">**Wichtig** Stellen Sie sicher, dass das finale `if (rootFrame.Content == null)` logic durch `rootFrame.Navigate(deepLinkPageType, e);` ersetzt wird, wie im obigen Beispiel gezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-153">**Important** Make sure to replace the final `if (rootFrame.Content == null)` logic with `rootFrame.Navigate(deepLinkPageType, e);` as shown in the example above.</span></span>
 
-## <a name="test-it-out-local-validation-tool"></a>Testen Sie: Lokales Überprüfungswerkzeug
+## <a name="test-it-out-local-validation-tool"></a><span data-ttu-id="a6e9a-154">Testen Sie: Lokales Überprüfungswerkzeug</span><span class="sxs-lookup"><span data-stu-id="a6e9a-154">Test it out: Local validation tool</span></span>
 
-Sie können die Konfiguration Ihrer App und Website durch Ausführen des App-Host Registration Verifier Werkzeugs prüfen, der hier verfügbar ist:
+<span data-ttu-id="a6e9a-155">Sie können die Konfiguration Ihrer App und Website durch Ausführen des App-Host Registration Verifier Werkzeugs prüfen, der hier verfügbar ist:</span><span class="sxs-lookup"><span data-stu-id="a6e9a-155">You can test the configuration of your app and website by running the App host registration verifier tool which is available in:</span></span>
 
-%windir%\\system32\\**AppHostRegistrationVerifier.exe**
+<span data-ttu-id="a6e9a-156">%windir%\\system32\\**AppHostRegistrationVerifier.exe**</span><span class="sxs-lookup"><span data-stu-id="a6e9a-156">%windir%\\system32\\**AppHostRegistrationVerifier.exe**</span></span>
 
-Testen Sie die Konfiguration Ihrer App und, indem Sie dieses Werkzeug mit folgenden Parametern ausführen.
+<span data-ttu-id="a6e9a-157">Testen Sie die Konfiguration Ihrer App und, indem Sie dieses Werkzeug mit folgenden Parametern ausführen.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-157">Test the configuration of your app and website by running this tool with the following parameters:</span></span>
 
-**AppHostRegistrationVerifier.exe** *hostname packagefamilyname filepath*
+<span data-ttu-id="a6e9a-158">**AppHostRegistrationVerifier.exe** *hostname packagefamilyname filepath*</span><span class="sxs-lookup"><span data-stu-id="a6e9a-158">**AppHostRegistrationVerifier.exe** *hostname packagefamilyname filepath*</span></span>
 
--   Hostname: Ihre Website (z. B. microsoft.com)
--   Paketfamiliennamen (PFN): Ihre App-PFN
--   Dateipfad: die JSON-Datei für die lokale Überprüfung (z. B. C:\\SomeFolder\\windows-App-Web-link)
+-   <span data-ttu-id="a6e9a-159">Hostname: Ihre Website (z. B. microsoft.com)</span><span class="sxs-lookup"><span data-stu-id="a6e9a-159">Hostname: Your website (e.g. microsoft.com)</span></span>
+-   <span data-ttu-id="a6e9a-160">Paketfamiliennamen (PFN): Ihre App-PFN</span><span class="sxs-lookup"><span data-stu-id="a6e9a-160">Package Family Name (PFN): Your app’s PFN</span></span>
+-   <span data-ttu-id="a6e9a-161">Dateipfad: die JSON-Datei für die lokale Überprüfung (z. B. C:\\SomeFolder\\windows-App-Web-link)</span><span class="sxs-lookup"><span data-stu-id="a6e9a-161">File path: The JSON file for local validation (e.g. C:\\SomeFolder\\windows-app-web-link)</span></span>
 
-## <a name="test-it-web-validation"></a>Testen Sie es: Web-Überprüfung
+<span data-ttu-id="a6e9a-162">Wenn das Tool nicht nichts zurück, funktioniert die Überprüfung für diese Datei beim Hochladen.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-162">If the tool does not return anything, validation will work on that file when uploaded.</span></span> <span data-ttu-id="a6e9a-163">Wenn ein Fehlercode vorhanden ist, ist dieser nicht funktionsfähig.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-163">If there is an error code, it will not work.</span></span>
 
-Schließen Sie die Anwendung, um sicherzustellen, dass die App aktiviert wird, wenn Sie auf einen Link klicken. Kopieren Sie dann die Adresse eines unterstützten Pfades in Ihrer Website. Wenn Ihre Websiteadresse beispielsweise "msn.com" lautet, und einer der unterstützen Pfade "path1" ist, verwenden Sie `http://msn.com/path1`
+<span data-ttu-id="a6e9a-164">Sie können den folgenden Registrierungsschlüssel so erzwingen Sie Pfad Abgleich für apps Seite geladen als Teil des lokalen Validierung aktivieren:</span><span class="sxs-lookup"><span data-stu-id="a6e9a-164">You can enable the following registry key to force path matching for side-loaded apps as part of local validation:</span></span>
 
-Stellen Sie sicher, dass Ihre app geschlossen ist. Drücken Sie die **Windows-Taste + R** zum Öffnen des **ausführen**-Dialogfelds fügen Sie den Link im Fenster ein. Ihre app sollte anstelle des Webbrowsers gestartet werden.
+`HKCU\Software\Classes\LocalSettings\Software\Microsoft\Windows\CurrentVersion\
+AppModel\SystemAppData\YourApp\AppUriHandlers`
 
-Darüber hinaus können Sie Ihre App testen, indem Sie sie über eine andere app mithilfe der [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx) API starten. Diese API können auch Sie nutzen, um dies auf Telefonen zu testen.
+<span data-ttu-id="a6e9a-165">Schlüsselname: `ForceValidation` Wert:</span><span class="sxs-lookup"><span data-stu-id="a6e9a-165">Keyname: `ForceValidation` Value:</span></span> `1`
 
-Wenn Sie der protocol activation logic zu folgen möchten, legen Sie einen Haltepunkt im **OnActivated** -Ereignishandler fest.
+## <a name="test-it-web-validation"></a><span data-ttu-id="a6e9a-166">Testen Sie es: Web-Überprüfung</span><span class="sxs-lookup"><span data-stu-id="a6e9a-166">Test it: Web validation</span></span>
 
-**Hinweis:** Wenn Sie auf einen Link im Microsoft Edge Browser klicken, wird das nicht Ihre App starten, sondern Sie zu Ihrer Website führen.
+<span data-ttu-id="a6e9a-167">Schließen Sie die Anwendung, um sicherzustellen, dass die App aktiviert wird, wenn Sie auf einen Link klicken.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-167">Close your application to verify that the app is activated when you click a link.</span></span> <span data-ttu-id="a6e9a-168">Kopieren Sie dann die Adresse eines unterstützten Pfades in Ihrer Website.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-168">Then, copy the address of one of the supported paths in your website.</span></span> <span data-ttu-id="a6e9a-169">Wenn Ihre Websiteadresse beispielsweise "msn.com" lautet, und einer der unterstützen Pfade "path1" ist, verwenden Sie</span><span class="sxs-lookup"><span data-stu-id="a6e9a-169">For example, if your website’s address is “msn.com”, and one of the support paths is “path1”, you would use</span></span> `http://msn.com/path1`
 
-## <a name="appurihandlers-tips"></a>AppUriHandlers Tipps:
+<span data-ttu-id="a6e9a-170">Stellen Sie sicher, dass Ihre app geschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-170">Verify that your app is closed.</span></span> <span data-ttu-id="a6e9a-171">Drücken Sie die **Windows-Taste + R** zum Öffnen des **ausführen**-Dialogfelds fügen Sie den Link im Fenster ein.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-171">Press **Windows Key + R** to open the **Run** dialog box and paste the link in the window.</span></span> <span data-ttu-id="a6e9a-172">Ihre app sollte anstelle des Webbrowsers gestartet werden.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-172">Your app should launch instead of the web browser.</span></span>
 
-- Stellen Sie sicher, dass Sie nur Links angeben, die mit Ihrer App kompatibel sind.
+<span data-ttu-id="a6e9a-173">Darüber hinaus können Sie Ihre App testen, indem Sie sie über eine andere app mithilfe der [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx) API starten.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-173">Additionally, you can test your app by launching it from another app using the [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx) API.</span></span> <span data-ttu-id="a6e9a-174">Diese API können auch Sie nutzen, um dies auf Telefonen zu testen.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-174">You can use this API to test on phones as well.</span></span>
 
-- Listen Sie alle Hosts auf, die Sie unterstützen werden.  Beachten Sie, dass www.example.com und example.com verschiedene Hosts sind.
+<span data-ttu-id="a6e9a-175">Wenn Sie der protocol activation logic zu folgen möchten, legen Sie einen Haltepunkt im **OnActivated** -Ereignishandler fest.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-175">If you would like to follow the protocol activation logic, set a breakpoint in the **OnActivated** event handler.</span></span>
 
-- Benutzer können in den Einstellungen auswählen, welche App sie zum Öffnen von Websites bevorzugen.
+## <a name="appurihandlers-tips"></a><span data-ttu-id="a6e9a-176">AppUriHandlers Tipps:</span><span class="sxs-lookup"><span data-stu-id="a6e9a-176">AppUriHandlers tips:</span></span>
 
-- Ihre JSON-Datei muss auf einen Https-Server hochgeladen werden.
+- <span data-ttu-id="a6e9a-177">Stellen Sie sicher, dass Sie nur Links angeben, die mit Ihrer App kompatibel sind.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-177">Make sure to only specify links that your app can handle.</span></span>
+- <span data-ttu-id="a6e9a-178">Listen Sie alle Hosts auf, die Sie unterstützen werden.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-178">List all of the hosts that you will support.</span></span>  <span data-ttu-id="a6e9a-179">Beachten Sie, dass www.example.com und example.com verschiedene Hosts sind.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-179">Note that www.example.com and example.com are different hosts.</span></span>
+- <span data-ttu-id="a6e9a-180">Benutzer können in den Einstellungen auswählen, welche App sie zum Öffnen von Websites bevorzugen.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-180">Users can choose which app they prefer to handle websites in Settings.</span></span>
+- <span data-ttu-id="a6e9a-181">Ihre JSON-Datei muss auf einen Https-Server hochgeladen werden.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-181">Your JSON file must be uploaded to an https server.</span></span>
+- <span data-ttu-id="a6e9a-182">Wenn Sie die Pfade, die Sie unterstützen möchten, ändern müssen, können Sie JSON-Datei erneut hochladen, ohne Ihre App erneut veröffentlichen zu müssen.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-182">If you need to change the paths that you wish to support, you can republish your JSON file without republishing your app.</span></span> <span data-ttu-id="a6e9a-183">Benutzern wird die Änderungen in 1 bis 8 Tagen angezeigt.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-183">Users will see the changes in 1-8 days.</span></span>
+- <span data-ttu-id="a6e9a-184">Alle quergeladenen Apps mit AppUriHandlern werden validierte Links für den Host on Install haben</span><span class="sxs-lookup"><span data-stu-id="a6e9a-184">All sideloaded apps with AppUriHandlers will have validated links for the host on install.</span></span> <span data-ttu-id="a6e9a-185">Sie müssen kein JSON-Datei hochgeladen haben, um das Feature zu testen.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-185">You do not need to have a JSON file uploaded to test the feature.</span></span>
+- <span data-ttu-id="a6e9a-186">Dieses Feature funktioniert, wann immer Ihre App eine UWP-App ist, die mit  [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx) gestartet ist, oder eine Windows-Desktop-App, gestartet mit  [ShellExecuteEx](https://msdn.microsoft.com/library/windows/desktop/bb762154(v=vs.85).aspx).</span><span class="sxs-lookup"><span data-stu-id="a6e9a-186">This feature works whenever your app is a UWP app launched with  [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx) or a Windows desktop app launched with  [ShellExecuteEx](https://msdn.microsoft.com/library/windows/desktop/bb762154(v=vs.85).aspx).</span></span> <span data-ttu-id="a6e9a-187">Wenn die URL einen registrierten URI App Handler entspricht, wird die App anstelle des Browsers gestartet werden.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-187">If the URL corresponds to a registered App URI handler, the app will be launched instead of the browser.</span></span>
 
-- Wenn Sie die Pfade, die Sie unterstützen möchten, ändern müssen, können Sie JSON-Datei erneut hochladen, ohne Ihre App erneut veröffentlichen zu müssen. Benutzern wird die Änderungen in 1 bis 8 Tagen angezeigt.
+## <a name="see-also"></a><span data-ttu-id="a6e9a-188">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a6e9a-188">See also</span></span>
 
-- Alle quergeladenen Apps mit AppUriHandlern werden validierte Links für den Host on Install haben Sie müssen kein JSON-Datei hochgeladen haben, um das Feature zu testen.
-
-- Dieses Feature funktioniert, wann immer Ihre App eine UWP-App ist, die mit  [LaunchUriAsync](https://msdn.microsoft.com/library/windows/apps/hh701480.aspx) gestartet ist, oder eine Windows-Desktop-App, gestartet mit  [ShellExecuteEx](https://msdn.microsoft.com/library/windows/desktop/bb762154(v=vs.85).aspx). Wenn die URL einen registrierten URI App Handler entspricht, wird die App anstelle des Browsers gestartet werden.
-
-## <a name="see-also"></a>Siehe auch
-
-[Windows.Protocol-Registrierung](https://msdn.microsoft.com/library/windows/apps/br211458.aspx)
-
-[Behandeln der URI-Aktivierung](https://msdn.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
-
-[Das Association Launching Sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) veranschaulicht die Verwendung des LaunchUriAsync() API.
-
+<span data-ttu-id="a6e9a-189">[Web-App-Beispielprojekt](https://github.com/project-rome/AppUriHandlers/tree/master/NarwhalFacts)
+[windows.protocol Registrierung](https://msdn.microsoft.com/library/windows/apps/br211458.aspx)
+[Behandeln URI Aktivierung](https://msdn.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
+[Zuordnung starten Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) veranschaulicht, wie die LaunchUriAsync()-API verwenden.</span><span class="sxs-lookup"><span data-stu-id="a6e9a-189">[Web-to-App example project](https://github.com/project-rome/AppUriHandlers/tree/master/NarwhalFacts)
+[windows.protocol registration](https://msdn.microsoft.com/library/windows/apps/br211458.aspx)
+[Handle URI Activation](https://msdn.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
+[Association Launching sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) illustrates how to use the LaunchUriAsync() API.</span></span>

@@ -1,10 +1,11 @@
 ---
-title: "Ausführung der Profile Guided Optimization (PGO) auf Universal Windows Platform- (UWP) Apps"
+title: Ausführung der Profile Guided Optimization (PGO) auf Universal Windows Platform- (UWP) Apps
 author: erwals-msft
 ms.openlocfilehash: 60182879f9cf3d364974d6ec4d3c26ec76e0e105
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "233812"
 ---
 # <a name="running-profile-guided-optimization-on-universal-windows-platform-apps"></a><span data-ttu-id="9db36-102">Ausführung der Profile Guided Optimization auf Universal Windows Platform-Apps</span><span class="sxs-lookup"><span data-stu-id="9db36-102">Running Profile Guided Optimization on Universal Windows Platform apps</span></span> 
  

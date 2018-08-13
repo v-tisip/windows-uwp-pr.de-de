@@ -1,85 +1,106 @@
 ---
 author: TylerMSFT
-title: "Umwandeln eines App-Diensts für die Ausführung im gleichen Prozess wie die Host-App"
-description: "Konvertieren Sie App-Dienstcode, der in einem separaten Hintergrundvorgang auf Code gestoßen ist, der im selben Prozess wie Ihr App-Dienstanbieter ausgeführt wird."
+title: Umwandeln eines App-Diensts für die Ausführung im gleichen Prozess wie die Host-App
+description: Konvertieren Sie App-Dienstcode, der in einem separaten Hintergrundvorgang auf Code gestoßen ist, der im selben Prozess wie Ihr App-Dienstanbieter ausgeführt wird.
 ms.author: twhitney
-ms.date: 02/08/2017
+ms.date: 11/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
+keywords: Windows10, UWP
 ms.assetid: 30aef94b-1b83-4897-a2f1-afbb4349696a
-translationtype: Human Translation
-ms.sourcegitcommit: 5645eee3dc2ef67b5263b08800b0f96eb8a0a7da
-ms.openlocfilehash: 1fea72237a9ac7d18fb415d5957f959542a833e8
-ms.lasthandoff: 02/08/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: 5c0414b7b7e37cf6316504979a70983134f0b18a
+ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "1015422"
 ---
+# <a name="convert-an-app-service-to-run-in-the-same-process-as-its-host-app"></a><span data-ttu-id="7d4c0-104">Umwandeln eines App-Diensts für die Ausführung im gleichen Prozess wie die Host-App</span><span class="sxs-lookup"><span data-stu-id="7d4c0-104">Convert an app service to run in the same process as its host app</span></span>
 
-# <a name="convert-an-app-service-to-run-in-the-same-process-as-its-host-app"></a>Umwandeln eines App-Diensts für die Ausführung im gleichen Prozess wie die Host-App
+<span data-ttu-id="7d4c0-105">Eine [AppServiceConnection](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appservice.appserviceconnection.aspx) ermöglicht einer anderen Anwendung, Ihre App im Hintergrund zu aktivieren und einen direkten Kommunikationsweg mit ihr zu starten.</span><span class="sxs-lookup"><span data-stu-id="7d4c0-105">An [AppServiceConnection](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appservice.appserviceconnection.aspx) enables another application to wake up your app in the background and start a direct line of communication with it.</span></span>
 
-Eine [AppServiceConnection](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appservice.appserviceconnection.aspx) ermöglicht einer anderen Anwendung, Ihre App im Hintergrund zu aktivieren und einen direkten Kommunikationsweg mit ihr zu starten.
+<span data-ttu-id="7d4c0-106">Mit der Einführung von In-Process-App-Diensten können zwei ausgeführte Vordergrundanwendungen einen direkten Kommunikationsweg über eine App-Dienst-Verbindung aufweisen.</span><span class="sxs-lookup"><span data-stu-id="7d4c0-106">With the introduction of in-process App Services, two running foreground applications can have a direct line of communication via an app service connection.</span></span> <span data-ttu-id="7d4c0-107">App-Dienste können jetzt im gleichen Prozess wie die Vordergrundanwendung ausgeführt werden. Die Kommunikation zwischen Apps wird dadurch sehr viel einfacher, während gleichzeitig die Notwendigkeit entfällt, den Dienstcode in ein separates Projekt zu trennen.</span><span class="sxs-lookup"><span data-stu-id="7d4c0-107">App Services can now run in the same process as the foreground application which makes communication between apps much easier and removes the need to separate the service code into a separate project.</span></span>
 
-Mit der Einführung von In-Process-App-Diensten können zwei ausgeführte Vordergrundanwendungen einen direkten Kommunikationsweg über eine App-Dienst-Verbindung aufweisen. App-Dienste können jetzt im gleichen Prozess wie die Vordergrundanwendung ausgeführt werden. Die Kommunikation zwischen Apps wird dadurch sehr viel einfacher, während gleichzeitig die Notwendigkeit entfällt, den Dienstcode in ein separates Projekt zu trennen.
-
-Um einen Out-of-Process-App-Dienst in ein In-Process-Modell zu konvertieren, sind zwei Änderungen erforderlich. Die erste ist eine Manifest-Änderung.
+<span data-ttu-id="7d4c0-108">Um einen Out-of-Process-App-Dienst in ein In-Process-Modell zu konvertieren, sind zwei Änderungen erforderlich.</span><span class="sxs-lookup"><span data-stu-id="7d4c0-108">Turning an out-of-process model App Service into an in-process model requires two changes.</span></span> <span data-ttu-id="7d4c0-109">Die erste ist eine Manifest-Änderung.</span><span class="sxs-lookup"><span data-stu-id="7d4c0-109">The first is a manifest change.</span></span>
 
 > ```xml
->  <uap:Extension Category="windows.appService">
->          <uap:AppService Name="InProcessAppService" />
->  </uap:Extension>
+> <Package
+>    ...
+>   <Applications>
+>       <Application Id=...
+>           ...
+>           EntryPoint="...">
+>           <Extensions>
+>               <uap:Extension Category="windows.appService">
+>                   <uap:AppService Name="InProcessAppService" />
+>               </uap:Extension>
+>           </Extensions>
+>           ...
+>       </Application>
+>   </Applications>
 > ```
 
-Entfernen Sie das `EntryPoint`-Attribut. Jetzt wird beim Aufrufen des App-Dienstes der  [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx)-Rückruf als Rückrufmethode verwendet.
+<span data-ttu-id="7d4c0-110">Entfernen der `EntryPoint` Attribut aus der `<Application>` Element, da nun [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) der Einstiegspunkt ist, die beim Aufrufen des app-Diensts verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="7d4c0-110">Remove the `EntryPoint` attribute from the `<Application>` element because now [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) is the entry point that will be used when the app service is invoked.</span></span>
 
-Die zweite Änderung besteht darin, die Dienstlogik aus ihrem eigenen Hintergrundaufgabenprojekt in Methoden zu verschieben, die über **OnBackgroundActivated()** aufgerufen werden können.
+<span data-ttu-id="7d4c0-111">Die zweite Änderung besteht darin, die Dienstlogik aus ihrem eigenen Hintergrundaufgabenprojekt in Methoden zu verschieben, die über **OnBackgroundActivated()** aufgerufen werden können.</span><span class="sxs-lookup"><span data-stu-id="7d4c0-111">The second change is to move the service logic from its separate background task project into methods that can be called from **OnBackgroundActivated()**.</span></span>
 
-Jetzt kann Ihre Anwendung den App-Dienst direkt ausführen.  Beispiel:
+<span data-ttu-id="7d4c0-112">Jetzt kann Ihre Anwendung den App-Dienst direkt ausführen.</span><span class="sxs-lookup"><span data-stu-id="7d4c0-112">Now your application can directly run your App Service.</span></span> <span data-ttu-id="7d4c0-113">Beispielsweise in App.xaml.cs:</span><span class="sxs-lookup"><span data-stu-id="7d4c0-113">For example, in App.xaml.cs:</span></span>
 
-> ``` cs
-> private AppServiceConnection appServiceconnection;
-> private BackgroundTaskDeferral appServiceDeferral;
-> protected override async void OnBackgroundActivated(BackgroundActivatedEventArgs args)
-> {
->     base.OnBackgroundActivated(args);
->     IBackgroundTaskInstance taskInstance = args.TaskInstance;
->     AppServiceTriggerDetails appService = taskInstance.TriggerDetails as AppServiceTriggerDetails;
->     appServiceDeferral = taskInstance.GetDeferral();
->     taskInstance.Canceled += OnAppServicesCanceled;
->     appServiceConnection = appService.AppServiceConnection;
->     appServiceConnection.RequestReceived += OnAppServiceRequestReceived;
->     appServiceConnection.ServiceClosed += AppServiceConnection_ServiceClosed;
-> }
->
-> private async void OnAppServiceRequestReceived(AppServiceConnection sender, AppServiceRequestReceivedEventArgs args)
-> {
->     AppServiceDeferral messageDeferral = args.GetDeferral();
->     ValueSet message = args.Request.Message;
->     string text = message["Request"] as string;
->              
->     if ("Value" == text)
->     {
->         ValueSet returnMessage = new ValueSet();
->         returnMessage.Add("Response", "True");
->         await args.Request.SendResponseAsync(returnMessage);
->     }
->     messageDeferral.Complete();
-> }
->
-> private void OnAppServicesCanceled(IBackgroundTaskInstance sender, BackgroundTaskCancellationReason reason)
-> {
->     appServiceDeferral.Complete();
-> }
->
-> private void AppServiceConnection_ServiceClosed(AppServiceConnection sender, AppServiceClosedEventArgs args)
-> {
->     appServiceDeferral.Complete();
-> }
-> ```
+``` cs
+using Windows.ApplicationModel.AppService;
+using Windows.ApplicationModel.Background;
+...
 
-Im obigen Code steuert die `OnBackgroundActivated`-Methode die App-Dienst-Aktivierung. Alle Ereignisse, die für die Kommunikation über eine [AppServiceConnection](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appservice.appserviceconnection.aspx) erforderlich sind, werden registriert, und das Aufgaben-Verzögerungsobjekt wird gespeichert, damit es nach Abschluss der Kommunikation zwischen den Anwendungen als abgeschlossen gekennzeichnet werden kann.
+sealed partial class App : Application
+{
+  private AppServiceConnection _appServiceConnection;
+  private BackgroundTaskDeferral _appServiceDeferral;
 
-Wenn die App eine Anforderung empfängt, liest sie das zur Verfügung gestellte [ValueSet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset.aspx), um festzustellen, ob die Zeichenfolgen `Key` und `Value` vorhanden sind. Wenn sie vorhanden sind, gibt der App-Dienst ein Wertepaar von Zeichenfolgen `Response` und `True` an die App auf der anderen Seite der **AppServiceConnection** zurück.
+  ...
 
-Weitere Informationen zum Herstellen einer Verbindung und Kommunizieren mit anderen Apps finden Sie unter [Erstellen und Verwenden eines App-Diensts](https://msdn.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service?f=255&MSPPError=-2147217396).
+  protected override void OnBackgroundActivated(BackgroundActivatedEventArgs args)
+  {
+      base.OnBackgroundActivated(args);
+      IBackgroundTaskInstance taskInstance = args.TaskInstance;
+      AppServiceTriggerDetails appService = taskInstance.TriggerDetails as AppServiceTriggerDetails;
+      _appServiceDeferral = taskInstance.GetDeferral();
+      taskInstance.Canceled += OnAppServicesCanceled;
+      _appServiceConnection = appService.AppServiceConnection;
+      _appServiceConnection.RequestReceived += OnAppServiceRequestReceived;
+      _appServiceConnection.ServiceClosed += AppServiceConnection_ServiceClosed;
+  }
 
+  private async void OnAppServiceRequestReceived(AppServiceConnection sender, AppServiceRequestReceivedEventArgs args)
+  {
+      AppServiceDeferral messageDeferral = args.GetDeferral();
+      ValueSet message = args.Request.Message;
+      string text = message["Request"] as string;
+
+      if ("Value" == text)
+      {
+          ValueSet returnMessage = new ValueSet();
+          returnMessage.Add("Response", "True");
+          await args.Request.SendResponseAsync(returnMessage);
+      }
+      messageDeferral.Complete();
+  }
+
+  private void OnAppServicesCanceled(IBackgroundTaskInstance sender, BackgroundTaskCancellationReason reason)
+  {
+      _appServiceDeferral.Complete();
+  }
+
+  private void AppServiceConnection_ServiceClosed(AppServiceConnection sender, AppServiceClosedEventArgs args)
+  {
+      _appServiceDeferral.Complete();
+  }
+}
+```
+
+<span data-ttu-id="7d4c0-114">Im obigen Code steuert die `OnBackgroundActivated`-Methode die App-Dienst-Aktivierung.</span><span class="sxs-lookup"><span data-stu-id="7d4c0-114">In the code above the `OnBackgroundActivated` method handles the app service activation.</span></span> <span data-ttu-id="7d4c0-115">Alle Ereignisse, die für die Kommunikation über eine [AppServiceConnection](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appservice.appserviceconnection.aspx) erforderlich sind, werden registriert, und das Aufgaben-Verzögerungsobjekt wird gespeichert, damit es nach Abschluss der Kommunikation zwischen den Anwendungen als abgeschlossen gekennzeichnet werden kann.</span><span class="sxs-lookup"><span data-stu-id="7d4c0-115">All of the events required for communication through an [AppServiceConnection](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appservice.appserviceconnection.aspx) are registered, and the task deferral object is stored so that it can be marked as complete when the communication between the applications is done.</span></span>
+
+<span data-ttu-id="7d4c0-116">Wenn die App eine Anforderung empfängt, liest sie das zur Verfügung gestellte [ValueSet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset.aspx), um festzustellen, ob die Zeichenfolgen `Key` und `Value` vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="7d4c0-116">When the app receives a request and reads the [ValueSet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.valueset.aspx) provided to see if the `Key` and `Value` strings are present.</span></span> <span data-ttu-id="7d4c0-117">Wenn sie vorhanden sind, gibt der App-Dienst ein Wertepaar von Zeichenfolgen `Response` und `True` an die App auf der anderen Seite der **AppServiceConnection** zurück.</span><span class="sxs-lookup"><span data-stu-id="7d4c0-117">If they are present then the app service returns a pair of `Response` and `True` string values back to the app on the other side of the **AppServiceConnection**.</span></span>
+
+<span data-ttu-id="7d4c0-118">Weitere Informationen zum Herstellen einer Verbindung und Kommunizieren mit anderen Apps finden Sie unter [Erstellen und Verwenden eines App-Diensts](https://msdn.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service?f=255&MSPPError=-2147217396).</span><span class="sxs-lookup"><span data-stu-id="7d4c0-118">Learn more about connecting and communicating with other apps at [Create and Consume an App Service](https://msdn.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service?f=255&MSPPError=-2147217396).</span></span>

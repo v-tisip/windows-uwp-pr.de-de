@@ -1,7 +1,7 @@
 ---
 author: PatrickFarley
 title: Abrufen der Position eines Benutzers
-description: "Ermitteln Sie den Standort des Benutzers, und reagieren Sie auf Änderungen des Standorts. Der Zugriff auf die Position eines Benutzers wird über die Datenschutzeinstellungen in der Einstellungs-App verwaltet. In diesem Thema wird auch gezeigt, wie Sie überprüfen, ob Ihre App über die Berechtigung zum Zugriff auf den Benutzerstandort verfügt."
+description: Ermitteln Sie den Standort des Benutzers, und reagieren Sie auf Änderungen des Standorts. Der Zugriff auf die Position eines Benutzers wird über die Datenschutzeinstellungen in der Einstellungs-App verwaltet. In diesem Thema wird auch gezeigt, wie Sie überprüfen, ob Ihre App über die Berechtigung zum Zugriff auf den Benutzerstandort verfügt.
 ms.assetid: 24DC9A41-8CC1-48B0-BC6D-24BF571AFCC8
 ms.author: pafarley
 ms.date: 02/08/2017
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: Windows10, UWP, Karte, Standort, Positionsfunktion
 ms.openlocfilehash: f5af2815783568cb234f1196e065f18b145c7e68
 ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/27/2017
+ms.locfileid: "695748"
 ---
 # <a name="get-the-users-location"></a><span data-ttu-id="f822c-106">Abrufen der Position eines Benutzers</span><span class="sxs-lookup"><span data-stu-id="f822c-106">Get the user's location</span></span>
 

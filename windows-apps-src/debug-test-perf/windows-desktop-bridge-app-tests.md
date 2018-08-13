@@ -1,7 +1,7 @@
 ---
 author: PatrickFarley
 ms.assetid: 2f76c520-84a3-4066-8eb3-ecc0ecd198a7
-title: "Tests für Windows Desktop-Brücke-Apps"
+title: Tests für Windows Desktop-Brücke-Apps
 description: TBD
 ms.author: pafarley
 ms.date: 06/30/2017
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.openlocfilehash: f97b406d534315fcc1128d23059a2a10e6bdb9d2
 ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/03/2017
+ms.locfileid: "700235"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a><span data-ttu-id="9aa90-104">Tests für Windows Desktop-Brücke-Apps</span><span class="sxs-lookup"><span data-stu-id="9aa90-104">Windows Desktop Bridge app tests</span></span>
 

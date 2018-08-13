@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.openlocfilehash: eab90ebf2bcb1912292af6503f833e3bfa334d8b
 ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/14/2017
+ms.locfileid: "894710"
 ---
 # <a name="listview-and-gridview-data-virtualization"></a><span data-ttu-id="017b0-104">ListView- und GridView-Datenvirtualisierung</span><span class="sxs-lookup"><span data-stu-id="017b0-104">ListView and GridView data virtualization</span></span>
 

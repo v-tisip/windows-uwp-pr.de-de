@@ -2,7 +2,7 @@
 author: PatrickFarley
 ms.assetid: 16976d00-1564-49fe-81ad-2568e25e9e41
 title: Debugging, Tests und Leistung
-description: "Debuggen und testen Sie Ihre App mit Microsoft VisualStudio. Bereiten Sie Ihre App mithilfe des Zertifizierungskits für Windows-Apps auf den Windows Store-Zertifizierungsprozess vor."
+description: Debuggen und testen Sie Ihre App mit Microsoft VisualStudio. Bereiten Sie Ihre App mithilfe des Zertifizierungskits für Windows-Apps auf den Windows Store-Zertifizierungsprozess vor.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.openlocfilehash: 2d358d96a59128e3d272456a0fcf9f8535407d4f
 ms.sourcegitcommit: 73ea31d42a9b352af38b5eb5d3c06504b50f6754
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/27/2017
+ms.locfileid: "852799"
 ---
 # <a name="debugging-testing-and-performance"></a><span data-ttu-id="f484b-105">Debuggen, Testen und Leistung</span><span class="sxs-lookup"><span data-stu-id="f484b-105">Debugging, testing, and performance</span></span>
 

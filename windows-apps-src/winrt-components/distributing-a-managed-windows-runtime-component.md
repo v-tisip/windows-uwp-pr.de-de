@@ -1,7 +1,7 @@
 ---
 author: msatranjr
-title: "Verteilen einer verwalteten Komponente für Windows-Runtime"
-description: "Sie können Ihre Komponente für Windows-Runtime durch Kopieren der Dateien verteilen."
+title: Verteilen einer verwalteten Komponente für Windows-Runtime
+description: Sie können Ihre Komponente für Windows-Runtime durch Kopieren der Dateien verteilen.
 ms.assetid: 80262992-89FC-42FC-8298-5AABF58F8212
 ms.author: misatran
 ms.date: 02/08/2017
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.openlocfilehash: 70ef1ab7bc31fde2f0d4744394c1ae69c8caf7fd
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "234924"
 ---
 # <a name="distributing-a-managed-windows-runtime-component"></a><span data-ttu-id="fe2ed-104">Verteilen einer verwalteten Komponente für Windows-Runtime</span><span class="sxs-lookup"><span data-stu-id="fe2ed-104">Distributing a managed Windows Runtime Component</span></span>
 

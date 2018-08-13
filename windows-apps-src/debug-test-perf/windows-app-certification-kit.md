@@ -1,8 +1,8 @@
 ---
 author: PatrickFarley
 ms.assetid: 78D833B9-E528-4BCA-9C48-A757F17E6C22
-title: "Zertifizierungskit für Windows-Apps"
-description: "Damit Ihre App möglichst gute Chancen auf eine Veröffentlichung im Windows Store oder Windows-Zertifizierung hat, sollten Sie sie auf Ihrem Computer überprüfen und testen, bevor Sie sie zur Zertifizierung übermitteln. In diesem Thema wird erläutert, wie Sie das Zertifizierungskit für Windows-Apps installieren und ausführen."
+title: Zertifizierungskit für Windows-Apps
+description: Damit Ihre App möglichst gute Chancen auf eine Veröffentlichung im Windows Store oder Windows-Zertifizierung hat, sollten Sie sie auf Ihrem Computer überprüfen und testen, bevor Sie sie zur Zertifizierung übermitteln. In diesem Thema wird erläutert, wie Sie das Zertifizierungskit für Windows-Apps installieren und ausführen.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.openlocfilehash: fb5303898bfb0d7021ba4c0aa48afd5038bcad4d
 ms.sourcegitcommit: 8c4d50ef819ed1a2f8cac4eebefb5ccdaf3fa898
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/27/2017
+ms.locfileid: "695468"
 ---
 # <a name="windows-app-certification-kit"></a><span data-ttu-id="e7449-105">Zertifizierungskit für Windows-Apps</span><span class="sxs-lookup"><span data-stu-id="e7449-105">Windows App Certification Kit</span></span>
 

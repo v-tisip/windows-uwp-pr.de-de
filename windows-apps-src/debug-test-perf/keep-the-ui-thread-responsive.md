@@ -1,8 +1,8 @@
 ---
 author: jwmsft
 ms.assetid: FA25562A-FE62-4DFC-9084-6BD6EAD73636
-title: "Aufrechterhalten der Reaktionsfähigkeit des UI-Threads"
-description: "Benutzer erwarten, dass eine App beim Durchführen einer Berechnung reaktionsfähig bleibt, unabhängig vom jeweiligen Computertyp."
+title: Aufrechterhalten der Reaktionsfähigkeit des UI-Threads
+description: Benutzer erwarten, dass eine App beim Durchführen einer Berechnung reaktionsfähig bleibt, unabhängig vom jeweiligen Computertyp.
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.openlocfilehash: d5be2a8ea14f35d048b4402f2cfb1018d5998c3d
 ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/14/2017
+ms.locfileid: "894640"
 ---
 # <a name="keep-the-ui-thread-responsive"></a><span data-ttu-id="7c9a0-104">Aufrechterhalten der Reaktionsfähigkeit des UI-Threads</span><span class="sxs-lookup"><span data-stu-id="7c9a0-104">Keep the UI thread responsive</span></span>
 

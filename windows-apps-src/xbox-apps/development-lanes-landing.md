@@ -11,8 +11,9 @@ keywords: windows 10, uwp
 ms.assetid: 9ac96766-df89-4403-89f2-200549436921
 ms.openlocfilehash: 1f2306469468bf1990534d27ca633bba3a582a33
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "235089"
 ---
 # <a name="bringing-existing-games-to-xbox"></a><span data-ttu-id="88931-104">Portieren vorhandener Spiele zu Xbox</span><span class="sxs-lookup"><span data-stu-id="88931-104">Bringing existing games to Xbox</span></span>
 

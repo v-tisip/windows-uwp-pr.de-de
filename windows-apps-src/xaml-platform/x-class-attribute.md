@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: "Konfiguriert die XAML-Kompilierung, um partielle Klassen zwischen Markup und CodeBehind zu verknüpfen. Die partielle Codeklasse wird in einer separaten Codedatei definiert, die partielle Markupklasse wird von der Codegenerierung während der XAML-Kompilierung erstellt."
+description: Konfiguriert die XAML-Kompilierung, um partielle Klassen zwischen Markup und CodeBehind zu verknüpfen. Die partielle Codeklasse wird in einer separaten Codedatei definiert, die partielle Markupklasse wird von der Codegenerierung während der XAML-Kompilierung erstellt.
 title: xClass-Attribut
 ms.assetid: 40A7C036-133A-44DF-9D11-0D39232C948F
 ms.author: jimwalk
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.openlocfilehash: d3105e8ac345e1eb6f0d974f8ea29e741dae9f58
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "235000"
 ---
 # <a name="xclass-attribute"></a><span data-ttu-id="1dcb9-105">x:Class-Attribut</span><span class="sxs-lookup"><span data-stu-id="1dcb9-105">x:Class attribute</span></span>
 

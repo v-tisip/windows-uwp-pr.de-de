@@ -1,6 +1,6 @@
 ---
 author: mcleblanc
-description: "Entwickler, die über eine Windows Phone Silverlight-App verfügen, können beim Wechsel zu Windows 10 auf Ihre Kenntnisse und Fähigkeiten zurückgreifen und Ihren vorhandenen Quellcode umfassend nutzen."
+description: Entwickler, die über eine Windows Phone Silverlight-App verfügen, können beim Wechsel zu Windows 10 auf Ihre Kenntnisse und Fähigkeiten zurückgreifen und Ihren vorhandenen Quellcode umfassend nutzen.
 title: Wechsel von Windows Phone Silverlight zur UWP
 ms.assetid: 9E0C0315-6097-488B-A3AF-7120CCED651A
 ms.author: markl
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.openlocfilehash: d055f576cfa56502da845e849c100f66dd0c7ccf
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "235148"
 ---
 #  <a name="move-from-windows-phone-silverlight-to-uwp"></a><span data-ttu-id="dba36-104">Wechsel von Windows Phone Silverlight zur UWP</span><span class="sxs-lookup"><span data-stu-id="dba36-104">Move from Windows Phone Silverlight to UWP</span></span>
 

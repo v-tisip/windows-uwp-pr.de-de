@@ -1,8 +1,8 @@
 ---
 author: jwmsft
 ms.assetid: 9899F6A0-7EDD-4988-A76E-79D7C0C58126
-title: "Universelle Windows-Plattform-Komponenten und Optimierung der Interoperabilität"
-description: "Erstellen Sie UWP (Universelle Windows-Plattform)-Apps, die UWP-Komponenten verwenden und mit systemeigenen und verwalteten Typen zusammenarbeiten, und vermeiden Sie gleichzeitig Probleme mit der Interoperabilitätsleistung."
+title: Universelle Windows-Plattform-Komponenten und Optimierung der Interoperabilität
+description: Erstellen Sie UWP (Universelle Windows-Plattform)-Apps, die UWP-Komponenten verwenden und mit systemeigenen und verwalteten Typen zusammenarbeiten, und vermeiden Sie gleichzeitig Probleme mit der Interoperabilitätsleistung.
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.openlocfilehash: 8562454b976362ebc65884203775b3891216d8b7
 ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/14/2017
+ms.locfileid: "894550"
 ---
 # <a name="uwp-components-and-optimizing-interop"></a><span data-ttu-id="85b8b-104">UWP-Komponenten und Optimieren der Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="85b8b-104">UWP Components and optimizing interop</span></span>
 

@@ -2,7 +2,7 @@
 author: PatrickFarley
 ms.assetid: 70667353-152B-4B18-92C1-0178298052D4
 title: Epson ESC/POS mit Formatierung
-description: "Erfahren Sie, wie Sie die ESC/POS-Befehlssprache zum Formatieren von Text, z. B. in Fett und mit doppelter Größe, für Ihren Point of Service-Drucker verwenden."
+description: Erfahren Sie, wie Sie die ESC/POS-Befehlssprache zum Formatieren von Text, z. B. in Fett und mit doppelter Größe, für Ihren Point of Service-Drucker verwenden.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.openlocfilehash: f482f9f44a5f4acb9c5213745da3b8edd3613b62
 ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/28/2017
+ms.locfileid: "696101"
 ---
 # <a name="epson-escpos-with-formatting"></a><span data-ttu-id="bc62d-104">Epson ESC/POS mit Formatierung</span><span class="sxs-lookup"><span data-stu-id="bc62d-104">Epson ESC/POS with formatting</span></span>
 

@@ -1,50 +1,49 @@
 ---
 author: TylerMSFT
-title: "Starten einer App für Ergebnisse"
-description: "Erfahren Sie, wie Sie eine App in einer anderen App starten und Daten zwischen den beiden Apps austauschen. Dieser Vorgang wird als Starten einer App für Ergebnisse bezeichnet."
+title: Starten einer App für Ergebnisse
+description: Erfahren Sie, wie Sie eine App über eine andere App starten und Daten zwischen den beiden Apps austauschen. Dieser Vorgang wird als Starten einer App für Ergebnisse bezeichnet.
 ms.assetid: AFC53D75-B3DD-4FF6-9FC0-9335242EE327
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: ec46f3287deefca67dab96fe12b3380c7dbd6ed9
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.openlocfilehash: 8aa2070606f7ef077dfa4392d576f212b2f8ea84
+ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.locfileid: "235284"
 ---
-
-# <a name="launch-an-app-for-results"></a>Starten einer App für Ergebnisse
-
-
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
+# <a name="launch-an-app-for-results"></a><span data-ttu-id="e13d3-105">Starten einer App für Ergebnisse</span><span class="sxs-lookup"><span data-stu-id="e13d3-105">Launch an app for results</span></span>
 
 
-**Wichtige APIs**
-
--   [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686)
--   [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)
-
-Hier erfahren Sie, wie Sie eine App aus einer anderen App heraus starten und Daten zwischen den beiden Apps austauschen. Dieser Vorgang wird als *Starten einer App für Ergebnisse* bezeichnet. Dieses Beispiel veranschaulicht die Verwendung von [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686) zum Starten einer App für Ergebnisse.
-
-Mit den neuen APIs für die App-zu-App-Kommunikation in Windows 10 können Windows-Apps (und Windows-Web-Apps) Apps starten und Daten und Dateien austauschen. Dies ermöglicht Ihnen das Erstellen kombinierter Lösungen aus mehreren Apps. Dank dieser neuen APIs können komplexe Aufgaben, für die Benutzer bisher mehrere Apps nutzen mussten, jetzt nahtlos durchgeführt werden. Ihrer App kann z. B. eine App für ein soziales Netzwerk starten, um einen Kontakt auszuwählen, oder eine Kassen-App, um einen Bezahlvorgang durchzuführen.
-
-Die App, die für Ergebnisse geöffnet wird, wird als gestartete App bezeichnet. Die App, die die App startet, wird als aufrufende App bezeichnet. In diesem Beispiel schreiben Sie die aufrufende App und die gestartete App.
-
-## <a name="step-1-register-the-protocol-to-be-handled-in-the-app-that-youll-launch-for-results"></a>Schritt 1: Registrieren des Protokolls, das in der App verarbeitet wird, die Sie für Ergebnisse starten
+<span data-ttu-id="e13d3-106">\[ Aktualisiert für UWP-Apps unter Windows10.</span><span class="sxs-lookup"><span data-stu-id="e13d3-106">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="e13d3-107">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="e13d3-107">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
 
-Fügen Sie in der Datei „Package.appxmanifest“ der gestarteten App dem Abschnitt **&lt;Application&gt;** eine Protokollerweiterung hinzu. Im folgenden Beispiel wird ein fiktives Protokoll mit dem Namen **test-app2app** verwendet.
+**<span data-ttu-id="e13d3-108">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="e13d3-108">Important APIs</span></span>**
 
-Das **ReturnResults**-Attribut in der Protokollerweiterung akzeptiert einen der folgenden Werte:
+-   [**<span data-ttu-id="e13d3-109">LaunchUriForResultsAsync</span><span class="sxs-lookup"><span data-stu-id="e13d3-109">LaunchUriForResultsAsync</span></span>**](https://msdn.microsoft.com/library/windows/apps/dn956686)
+-   [**<span data-ttu-id="e13d3-110">ValueSet</span><span class="sxs-lookup"><span data-stu-id="e13d3-110">ValueSet</span></span>**](https://msdn.microsoft.com/library/windows/apps/dn636131)
 
--   **optional**: Die App kann mit der [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686)-Methode für Ergebnisse oder mit der [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476)-Methode nicht für Ergebnisse gestartet werden. Bei der Verwendung von **optional** muss die gestartete App ermitteln, ob sie für Ergebnisse gestartet wurde. Sie überprüft dazu das [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)-Ereignisargument. Wenn die [**IActivatedEventArgs.Kind**](https://msdn.microsoft.com/library/windows/apps/br224728)-Eigenschaft des Arguments[**ActivationKind.ProtocolForResults**](https://msdn.microsoft.com/library/windows/apps/br224693) zurückgibt oder der Typ des Ereignisarguments [**ProtocolActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224742) ist, wurde die App über **LaunchUriForResultsAsync** gestartet.
--   **always**: Die App kann nur für Ergebnisse gestartet werden, d. h. sie kann nur auf [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686) reagieren.
--   **none**: Die App kann nicht für Ergebnisse gestartet werden, d. h. sie kann nur auf [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) reagieren.
+<span data-ttu-id="e13d3-111">Hier erfahren Sie, wie Sie eine App aus einer anderen App heraus starten und Daten zwischen den beiden Apps austauschen.</span><span class="sxs-lookup"><span data-stu-id="e13d3-111">Learn how to launch an app from another app and exchange data between the two.</span></span> <span data-ttu-id="e13d3-112">Dieser Vorgang wird als *Starten einer App für Ergebnisse* bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="e13d3-112">This is called *launching an app for results*.</span></span> <span data-ttu-id="e13d3-113">Dieses Beispiel veranschaulicht die Verwendung von [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686) zum Starten einer App für Ergebnisse.</span><span class="sxs-lookup"><span data-stu-id="e13d3-113">The example here shows you how to use [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686) to launch an app for results.</span></span>
 
-Im folgenden Beispiel für eine Protokollerweiterung kann die App nur für Ergebnisse gestartet werden. Dadurch wird die im Folgenden erläuterte Logik innerhalb der **OnActivated**-Methode vereinfacht, da wir nur das „Starten für Ergebnisse“ behandeln müssen und nicht die anderen Möglichkeiten zum Aktivieren der App.
+<span data-ttu-id="e13d3-114">Mit den neuen APIs für die App-zu-App-Kommunikation in Windows10 können Windows-Apps (und Windows-Web-Apps) Apps starten und Daten und Dateien austauschen.</span><span class="sxs-lookup"><span data-stu-id="e13d3-114">New app-to-app communication APIs in Windows 10 make it possible for Windows apps (and Windows Web apps) to launch an app and exchange data and files.</span></span> <span data-ttu-id="e13d3-115">Dies ermöglicht Ihnen das Erstellen kombinierter Lösungen aus mehreren Apps.</span><span class="sxs-lookup"><span data-stu-id="e13d3-115">This enables you to build mash-up solutions from multiple apps.</span></span> <span data-ttu-id="e13d3-116">Dank dieser neuen APIs können komplexe Aufgaben, für die Benutzer bisher mehrere Apps nutzen mussten, jetzt nahtlos durchgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="e13d3-116">Using these new APIs, complex tasks that would have required the user to use multiple apps can now be handled seamlessly.</span></span> <span data-ttu-id="e13d3-117">Ihrer App kann z.B. eine App für ein soziales Netzwerk starten, um einen Kontakt auszuwählen, oder eine Kassen-App, um einen Bezahlvorgang durchzuführen.</span><span class="sxs-lookup"><span data-stu-id="e13d3-117">For example, your app could launch a social networking app to choose a contact, or launch a checkout app to complete a payment process.</span></span>
+
+<span data-ttu-id="e13d3-118">Die App, die für Ergebnisse geöffnet wird, wird als gestartete App bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="e13d3-118">The app that you'll launch for results will be referred to as the launched app.</span></span> <span data-ttu-id="e13d3-119">Die App, die die App startet, wird als aufrufende App bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="e13d3-119">The app that launches the app will be referred to as the calling app.</span></span> <span data-ttu-id="e13d3-120">In diesem Beispiel schreiben Sie die aufrufende App und die gestartete App.</span><span class="sxs-lookup"><span data-stu-id="e13d3-120">For this example you will write both the calling app and the launched app.</span></span>
+
+## <a name="step-1-register-the-protocol-to-be-handled-in-the-app-that-youll-launch-for-results"></a><span data-ttu-id="e13d3-121">Schritt 1: Registrieren des Protokolls, das in der App verarbeitet wird, die Sie für Ergebnisse starten</span><span class="sxs-lookup"><span data-stu-id="e13d3-121">Step 1: Register the protocol to be handled in the app that you'll launch for results</span></span>
+
+
+<span data-ttu-id="e13d3-122">Fügen Sie in der Datei „Package.appxmanifest“ der gestarteten App dem Abschnitt **&lt;Application&gt;** eine Protokollerweiterung hinzu.</span><span class="sxs-lookup"><span data-stu-id="e13d3-122">In the Package.appxmanifest file of the launched app, add a protocol extension to the **&lt;Application&gt;** section.</span></span> <span data-ttu-id="e13d3-123">Im folgenden Beispiel wird ein fiktives Protokoll mit dem Namen **test-app2app** verwendet.</span><span class="sxs-lookup"><span data-stu-id="e13d3-123">The example here uses a fictional protocol named **test-app2app**.</span></span>
+
+<span data-ttu-id="e13d3-124">Das **ReturnResults**-Attribut in der Protokollerweiterung akzeptiert einen der folgenden Werte:</span><span class="sxs-lookup"><span data-stu-id="e13d3-124">The **ReturnResults** attribute in the protocol extension accepts one of these values:</span></span>
+
+-   <span data-ttu-id="e13d3-125">**optional**: Die App kann mit der [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686)-Methode für Ergebnisse oder mit der [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476)-Methode nicht für Ergebnisse gestartet werden.</span><span class="sxs-lookup"><span data-stu-id="e13d3-125">**optional**—The app can be launched for results by using the [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686) method, or not for results by using [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476).</span></span> <span data-ttu-id="e13d3-126">Bei der Verwendung von **optional** muss die gestartete App ermitteln, ob sie für Ergebnisse gestartet wurde.</span><span class="sxs-lookup"><span data-stu-id="e13d3-126">When you use **optional**, the launched app must determine whether it was launched for results.</span></span> <span data-ttu-id="e13d3-127">Sie überprüft dazu das [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)-Ereignisargument.</span><span class="sxs-lookup"><span data-stu-id="e13d3-127">It can do that by checking the [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) event argument.</span></span> <span data-ttu-id="e13d3-128">Wenn die [**IActivatedEventArgs.Kind**](https://msdn.microsoft.com/library/windows/apps/br224728)-Eigenschaft des Arguments[**ActivationKind.ProtocolForResults**](https://msdn.microsoft.com/library/windows/apps/br224693) zurückgibt oder der Typ des Ereignisarguments [**ProtocolActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224742) ist, wurde die App über **LaunchUriForResultsAsync** gestartet.</span><span class="sxs-lookup"><span data-stu-id="e13d3-128">If the argument's [**IActivatedEventArgs.Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) property returns [**ActivationKind.ProtocolForResults**](https://msdn.microsoft.com/library/windows/apps/br224693), or if the type of the event argument is [**ProtocolActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224742), the app was launched via **LaunchUriForResultsAsync**.</span></span>
+-   <span data-ttu-id="e13d3-129">**always**: Die App kann nur für Ergebnisse gestartet werden, d.h. sie kann nur auf [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686) reagieren.</span><span class="sxs-lookup"><span data-stu-id="e13d3-129">**always**—The app can be launched only for results; that is, it can respond only to [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686).</span></span>
+-   <span data-ttu-id="e13d3-130">**none**: Die App kann nicht für Ergebnisse gestartet werden, d.h. sie kann nur auf [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) reagieren.</span><span class="sxs-lookup"><span data-stu-id="e13d3-130">**none**—The app cannot be launched for results; it can respond only to [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476).</span></span>
+
+<span data-ttu-id="e13d3-131">Im folgenden Beispiel für eine Protokollerweiterung kann die App nur für Ergebnisse gestartet werden.</span><span class="sxs-lookup"><span data-stu-id="e13d3-131">In this protocol-extension example, the app can be launched only for results.</span></span> <span data-ttu-id="e13d3-132">Dadurch wird die im Folgenden erläuterte Logik innerhalb der **OnActivated**-Methode vereinfacht, da wir nur das „Starten für Ergebnisse“ behandeln müssen und nicht die anderen Möglichkeiten zum Aktivieren der App.</span><span class="sxs-lookup"><span data-stu-id="e13d3-132">This simplifies the logic inside the **OnActivated** method, discussed below, because we have to handle only the "launched for results" case and not the other ways that the app could be activated.</span></span>
 
 ```xml
 <Applications>
@@ -62,12 +61,12 @@ Im folgenden Beispiel für eine Protokollerweiterung kann die App nur für Ergeb
 </Applications>
 ```
 
-## <a name="step-2-override-applicationonactivated-in-the-app-that-youll-launch-for-results"></a>Schritt 2: Außerkraftsetzen von „Application.OnActivated“ in der App, die Sie für Ergebnisse starten
+## <a name="step-2-override-applicationonactivated-in-the-app-that-youll-launch-for-results"></a><span data-ttu-id="e13d3-133">Schritt 2: Außerkraftsetzen von „Application.OnActivated“ in der App, die Sie für Ergebnisse starten</span><span class="sxs-lookup"><span data-stu-id="e13d3-133">Step 2: Override Application.OnActivated in the app that you'll launch for results</span></span>
 
 
-Wenn diese Methode in der gestarteten App noch nicht vorhanden ist, erstellen Sie sie innerhalb der in „App.xaml.cs“ definierten `App`-Klasse.
+<span data-ttu-id="e13d3-134">Wenn diese Methode in der gestarteten App noch nicht vorhanden ist, erstellen Sie sie innerhalb der in „App.xaml.cs“ definierten `App`-Klasse.</span><span class="sxs-lookup"><span data-stu-id="e13d3-134">If this method does not already exist in the launched app, create it within the `App` class defined in App.xaml.cs.</span></span>
 
-In einer App, in der Sie Freunde in einem sozialen Netzwerk auswählen können, wird mit dieser Funktion beispielsweise die Seite für die Kontaktauswahl geöffnet. Im folgenden Beispiel wird eine Seite mit dem Namen **LaunchedForResultsPage** angezeigt, wenn die App für Ergebnisse aktiviert wird. Stellen Sie sicher, dass die folgende **using**-Anweisung oben in der Datei vorhanden ist:
+<span data-ttu-id="e13d3-135">In einer App, in der Sie Freunde in einem sozialen Netzwerk auswählen können, wird mit dieser Funktion beispielsweise die Seite für die Kontaktauswahl geöffnet.</span><span class="sxs-lookup"><span data-stu-id="e13d3-135">In an app that lets you pick your friends in a social network, this function could be where you open the people-picker page.</span></span> <span data-ttu-id="e13d3-136">Im folgenden Beispiel wird eine Seite mit dem Namen **LaunchedForResultsPage** angezeigt, wenn die App für Ergebnisse aktiviert wird.</span><span class="sxs-lookup"><span data-stu-id="e13d3-136">In this next example, a page named **LaunchedForResultsPage** is displayed when the app is activated for results.</span></span> <span data-ttu-id="e13d3-137">Stellen Sie sicher, dass die folgende **using**-Anweisung oben in der Datei vorhanden ist:</span><span class="sxs-lookup"><span data-stu-id="e13d3-137">Ensure that the **using** statement is included at the top of the file.</span></span>
 
 ```cs
 using Windows.ApplicationModel.Activation;
@@ -92,29 +91,29 @@ protected override void OnActivated(IActivatedEventArgs args)
 }
 ```
 
-Da die Protokollerweiterung in der Datei „Package.appxmanifest“ **ReturnResults** als **always** angibt, kann der eben gezeigte Code `args` direkt in [**ProtocolForResultsActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn906905) umwandeln. Dabei wird sichergestellt, dass für diese App nur **ProtocolForResultsActivatedEventArgs** an **OnActivated** gesendet wird. Wenn für Ihre App andere Aktivierungsoptionen als „Starten für Ergebnisse“ verfügbar sind, können Sie überprüfen, ob die [**IActivatedEventArgs.Kind**](https://msdn.microsoft.com/library/windows/apps/br224728)-Eigenschaft [**ActivationKind.ProtocolForResults**](https://msdn.microsoft.com/library/windows/apps/br224693) zurückgibt, um festzustellen, ob die App für Ergebnisse gestartet wurde.
+<span data-ttu-id="e13d3-138">Da die Protokollerweiterung in der Datei „Package.appxmanifest“ **ReturnResults** als **always** angibt, kann der eben gezeigte Code `args` direkt in [**ProtocolForResultsActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn906905) umwandeln. Dabei wird sichergestellt, dass für diese App nur **ProtocolForResultsActivatedEventArgs** an **OnActivated** gesendet wird.</span><span class="sxs-lookup"><span data-stu-id="e13d3-138">Because the protocol extension in the Package.appxmanifest file specifies **ReturnResults** as **always**, the code just shown can cast `args` directly to [**ProtocolForResultsActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/dn906905) with confidence that only **ProtocolForResultsActivatedEventArgs** will be sent to **OnActivated** for this app.</span></span> <span data-ttu-id="e13d3-139">Wenn für Ihre App andere Aktivierungsoptionen als „Starten für Ergebnisse“ verfügbar sind, können Sie überprüfen, ob die [**IActivatedEventArgs.Kind**](https://msdn.microsoft.com/library/windows/apps/br224728)-Eigenschaft [**ActivationKind.ProtocolForResults**](https://msdn.microsoft.com/library/windows/apps/br224693) zurückgibt, um festzustellen, ob die App für Ergebnisse gestartet wurde.</span><span class="sxs-lookup"><span data-stu-id="e13d3-139">If your app can be activated in ways other than launching for results, you can check whether [**IActivatedEventArgs.Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) property returns [**ActivationKind.ProtocolForResults**](https://msdn.microsoft.com/library/windows/apps/br224693) to tell whether the app was launched for results.</span></span>
 
-## <a name="step-3-add-a-protocolforresultsoperation-field-to-the-app-you-launch-for-results"></a>Schritt 3: Hinzufügen eines ProtocolForResultsOperation-Felds zur App, die Sie für Ergebnisse starten
+## <a name="step-3-add-a-protocolforresultsoperation-field-to-the-app-you-launch-for-results"></a><span data-ttu-id="e13d3-140">Schritt 3: Hinzufügen eines ProtocolForResultsOperation-Felds zur App, die Sie für Ergebnisse starten</span><span class="sxs-lookup"><span data-stu-id="e13d3-140">Step 3: Add a ProtocolForResultsOperation field to the app you launch for results</span></span>
 
 
 ```cs
 private Windows.System.ProtocolForResultsOperation _operation = null;
 ```
 
-Sie verwenden das [**ProtocolForResultsOperation**](https://msdn.microsoft.com/library/windows/apps/dn906913)-Feld, um zu signalisieren, wenn die gestartete App zur Zurückgabe des Ergebnisses an die aufrufende App bereit ist. In diesem Beispiel wird das Feld der **LaunchedForResultsPage**-Klasse hinzugefügt, da wir den Vorgang zum Starten für Ergebnisse auf dieser Seite durchführen und Zugriff darauf benötigen.
+<span data-ttu-id="e13d3-141">Sie verwenden das [**ProtocolForResultsOperation**](https://msdn.microsoft.com/library/windows/apps/dn906913)-Feld, um zu signalisieren, wenn die gestartete App zur Zurückgabe des Ergebnisses an die aufrufende App bereit ist.</span><span class="sxs-lookup"><span data-stu-id="e13d3-141">You'll use the [**ProtocolForResultsOperation**](https://msdn.microsoft.com/library/windows/apps/dn906913) field to signal when the launched app is ready to return the result to the calling app.</span></span> <span data-ttu-id="e13d3-142">In diesem Beispiel wird das Feld der **LaunchedForResultsPage**-Klasse hinzugefügt, da wir den Vorgang zum Starten für Ergebnisse auf dieser Seite durchführen und Zugriff darauf benötigen.</span><span class="sxs-lookup"><span data-stu-id="e13d3-142">In this example, the field is added to the **LaunchedForResultsPage** class because you'll complete the launch-for-results operation from that page and will need access to it.</span></span>
 
-## <a name="step-4-override-onnavigatedto-in-the-app-you-launch-for-results"></a>Schritt 4: Außerkraftsetzen von „Override OnNavigatedTo()“ in der App, die Sie für Ergebnisse starten
+## <a name="step-4-override-onnavigatedto-in-the-app-you-launch-for-results"></a><span data-ttu-id="e13d3-143">Schritt 4: Außerkraftsetzen von „Override OnNavigatedTo()“ in der App, die Sie für Ergebnisse starten</span><span class="sxs-lookup"><span data-stu-id="e13d3-143">Step 4: Override OnNavigatedTo() in the app you launch for results</span></span>
 
 
-Überschreiben Sie die [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508)-Methode auf der Seite, die Sie anzeigen, wenn die App für Ergebnisse gestartet wird. Wenn diese Methode in der App noch nicht vorhanden ist, erstellen Sie sie innerhalb der in &lt;Seitenname&gt;.xaml.cs“ definierten Klasse. Stellen Sie sicher, dass die folgende **using**-Anweisung oben in der Datei vorhanden ist:
+<span data-ttu-id="e13d3-144">Überschreiben Sie die [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508)-Methode auf der Seite, die Sie anzeigen, wenn die App für Ergebnisse gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="e13d3-144">Override the [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508) method on the page that you'll display when your app is launched for results.</span></span> <span data-ttu-id="e13d3-145">Wenn diese Methode in der App noch nicht vorhanden ist, erstellen Sie sie innerhalb der in &lt;Seitenname&gt;.xaml.cs“ definierten Klasse.</span><span class="sxs-lookup"><span data-stu-id="e13d3-145">If this method does not already exist, create it within the class for the page defined in &lt;pagename&gt;.xaml.cs.</span></span> <span data-ttu-id="e13d3-146">Stellen Sie sicher, dass die folgende **using**-Anweisung oben in der Datei vorhanden ist:</span><span class="sxs-lookup"><span data-stu-id="e13d3-146">Ensure that the following **using** statement is included at the top of the file:</span></span>
 
 ```cs
 using Windows.ApplicationModel.Activation
 ```
 
-Das [**NavigationEventArgs**](https://msdn.microsoft.com/library/windows/apps/br243285)-Objekt in der [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508)-Methode enthält die von der aufrufenden Anwendung übergebenen Daten. Die Daten sind auf 100 KB begrenzt und werden in einem [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)-Objekt gespeichert.
+<span data-ttu-id="e13d3-147">Das [**NavigationEventArgs**](https://msdn.microsoft.com/library/windows/apps/br243285)-Objekt in der [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508)-Methode enthält die von der aufrufenden Anwendung übergebenen Daten.</span><span class="sxs-lookup"><span data-stu-id="e13d3-147">The [**NavigationEventArgs**](https://msdn.microsoft.com/library/windows/apps/br243285) object in the [**OnNavigatedTo**](https://msdn.microsoft.com/library/windows/apps/br227508) method contains the data passed from the calling app.</span></span> <span data-ttu-id="e13d3-148">Die Daten sind auf 100KB begrenzt und werden in einem [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)-Objekt gespeichert.</span><span class="sxs-lookup"><span data-stu-id="e13d3-148">The data may not exceed 100KB and is stored in a [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) object.</span></span>
 
-Im folgenden Beispielcode erwartet die gestartete App, dass sich die von der aufrufenden Anwendung gesendeten Daten in einem [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) unter einem Schlüssel mit dem Namen **TestData** befinden, da das Startprogramm der Beispiel-App entsprechend codiert ist.
+<span data-ttu-id="e13d3-149">Im folgenden Beispielcode erwartet die gestartete App, dass sich die von der aufrufenden Anwendung gesendeten Daten in einem [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) unter einem Schlüssel mit dem Namen **TestData** befinden, da das Startprogramm der Beispiel-App entsprechend codiert ist.</span><span class="sxs-lookup"><span data-stu-id="e13d3-149">In this example code, the launched app expects the data sent from the calling app to be in a [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) under a key named **TestData**, because that's what the example's calling app is coded to send.</span></span>
 
 ```cs
 using Windows.ApplicationModel.Activation;
@@ -134,10 +133,10 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 private Windows.System.ProtocolForResultsOperation _operation = null;
 ```
 
-## <a name="step-5-write-code-to-return-data-to-the-calling-app"></a>Schritt 5: Schreiben von Code zum Zurückgeben von Daten an die aufrufende App
+## <a name="step-5-write-code-to-return-data-to-the-calling-app"></a><span data-ttu-id="e13d3-150">Schritt 5: Schreiben von Code zum Zurückgeben von Daten an die aufrufende App</span><span class="sxs-lookup"><span data-stu-id="e13d3-150">Step 5: Write code to return data to the calling app</span></span>
 
 
-In der für Ergebnisse gestarteten App verwenden Sie [**ProtocolForResultsOperation**](https://msdn.microsoft.com/library/windows/apps/dn906913), um Daten an die aufrufende App zurückzugeben. Im folgenden Beispielcode wird ein [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)-Objekt erstellt, das den Wert enthält, der an die aufrufende App zurückgegeben werden soll. Anschließend wird das **ProtocolForResultsOperation**-Feld verwendet, um den Wert an die aufrufende App zu senden.
+<span data-ttu-id="e13d3-151">In der für Ergebnisse gestarteten App verwenden Sie [**ProtocolForResultsOperation**](https://msdn.microsoft.com/library/windows/apps/dn906913), um Daten an die aufrufende App zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="e13d3-151">In the launched app, use [**ProtocolForResultsOperation**](https://msdn.microsoft.com/library/windows/apps/dn906913) to return data to the calling app.</span></span> <span data-ttu-id="e13d3-152">Im folgenden Beispielcode wird ein [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)-Objekt erstellt, das den Wert enthält, der an die aufrufende App zurückgegeben werden soll.</span><span class="sxs-lookup"><span data-stu-id="e13d3-152">In this example code, a [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) object is created that contains the value to return to the calling app.</span></span> <span data-ttu-id="e13d3-153">Anschließend wird das **ProtocolForResultsOperation**-Feld verwendet, um den Wert an die aufrufende App zu senden.</span><span class="sxs-lookup"><span data-stu-id="e13d3-153">The **ProtocolForResultsOperation** field is then used to send the value to the calling app.</span></span>
 
 ```cs
     ValueSet result = new ValueSet();
@@ -145,10 +144,10 @@ In der für Ergebnisse gestarteten App verwenden Sie [**ProtocolForResultsOperat
     _operation.ReportCompleted(result);
 ```
 
-## <a name="step-6-write-code-to-launch-the-app-for-results-and-get-the-returned-data"></a>Schritt 6: Schreiben von Code zum Starten der App für Ergebnisse und zum Abrufen der zurückgegebenen Daten
+## <a name="step-6-write-code-to-launch-the-app-for-results-and-get-the-returned-data"></a><span data-ttu-id="e13d3-154">Schritt 6: Schreiben von Code zum Starten der App für Ergebnisse und zum Abrufen der zurückgegebenen Daten</span><span class="sxs-lookup"><span data-stu-id="e13d3-154">Step 6: Write code to launch the app for results and get the returned data</span></span>
 
 
-Starten Sie die App aus einer asynchronen Methode in der aufrufenden App, wie in diesem Beispielcode dargestellt. Beachten Sie die **using**-Anweisungen, die zum Kompilieren des Codes erforderlich sind:
+<span data-ttu-id="e13d3-155">Starten Sie die App aus einer asynchronen Methode in der aufrufenden App, wie in diesem Beispielcode dargestellt.</span><span class="sxs-lookup"><span data-stu-id="e13d3-155">Launch the app from within an async method in your calling app as shown in this example code.</span></span> <span data-ttu-id="e13d3-156">Beachten Sie die **using**-Anweisungen, die zum Kompilieren des Codes erforderlich sind:</span><span class="sxs-lookup"><span data-stu-id="e13d3-156">Note the **using** statements, which are necessary for the code to compile:</span></span>
 
 ```cs
 using System.Threading.Tasks;
@@ -177,35 +176,34 @@ async Task<string> LaunchAppForResults()
 }
 ```
 
-In diesem Beispiel wird ein [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) mit dem Schlüssel **TestData** an die gestartete App übergeben. Die gestartete App erstellt einen **ValueSet** mit einem Schlüssel mit dem Namen **ReturnedData**, der das Ergebnis enthält, das an den Aufrufer zurückgegeben wird.
+<span data-ttu-id="e13d3-157">In diesem Beispiel wird ein [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) mit dem Schlüssel **TestData** an die gestartete App übergeben.</span><span class="sxs-lookup"><span data-stu-id="e13d3-157">In this example, a [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) containing the key **TestData** is passed to the launched app.</span></span> <span data-ttu-id="e13d3-158">Die gestartete App erstellt einen **ValueSet** mit einem Schlüssel mit dem Namen **ReturnedData**, der das Ergebnis enthält, das an den Aufrufer zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="e13d3-158">The launched app creates a **ValueSet** with a key named **ReturnedData** that contains the result returned to the caller.</span></span>
 
-Sie müssen die App, die Sie für Ergebnisse starten, erstellen und bereitstellen, bevor Sie die aufrufende App ausführen können. Andernfalls wird von [**LaunchUriResult.Status**](https://msdn.microsoft.com/library/windows/apps/dn906892) der Status **LaunchUriStatus.AppUnavailable** gemeldet.
+<span data-ttu-id="e13d3-159">Sie müssen die App, die Sie für Ergebnisse starten, erstellen und bereitstellen, bevor Sie die aufrufende App ausführen können.</span><span class="sxs-lookup"><span data-stu-id="e13d3-159">You must build and deploy the app that you'll launch for results before running your calling app.</span></span> <span data-ttu-id="e13d3-160">Andernfalls wird von [**LaunchUriResult.Status**](https://msdn.microsoft.com/library/windows/apps/dn906892) der Status **LaunchUriStatus.AppUnavailable** gemeldet.</span><span class="sxs-lookup"><span data-stu-id="e13d3-160">Otherwise, [**LaunchUriResult.Status**](https://msdn.microsoft.com/library/windows/apps/dn906892) will report **LaunchUriStatus.AppUnavailable**.</span></span>
 
-Sie benötigen den Familiennamen der gestarteten App beim Festlegen von [**TargetApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/dn893511). Eine Möglichkeit, den Familiennamen abzurufen besteht darin, folgenden Aufruf in der gestarteten App auszuführen:
+<span data-ttu-id="e13d3-161">Sie benötigen den Familiennamen der gestarteten App beim Festlegen von [**TargetApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/dn893511).</span><span class="sxs-lookup"><span data-stu-id="e13d3-161">You'll need the family name of the launched app when you set the [**TargetApplicationPackageFamilyName**](https://msdn.microsoft.com/library/windows/apps/dn893511).</span></span> <span data-ttu-id="e13d3-162">Eine Möglichkeit, den Familiennamen abzurufen besteht darin, folgenden Aufruf in der gestarteten App auszuführen:</span><span class="sxs-lookup"><span data-stu-id="e13d3-162">One way to get the family name is to make the following call from within the launched app:</span></span>
 
 ```cs
 string familyName = Windows.ApplicationModel.Package.Current.Id.FamilyName;
 ```
 
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a><span data-ttu-id="e13d3-163">Anmerkungen</span><span class="sxs-lookup"><span data-stu-id="e13d3-163">Remarks</span></span>
 
 
-Das Beispiel in dieser Anleitung bietet eine Einführung in das Starten einer App für Ergebnisse anhand von „Hello World“. Als wichtigster Punkt ist zu beachten, dass die neue [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686)-API Ihnen das asynchrone Starten einer App und die Kommunikation über die [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)-Klasse ermöglicht. Das Übergeben von Daten über einen **ValueSet** ist auf 100 KB begrenzt. Wenn Sie größere Datenmengen übergeben müssen, können Sie Dateien mithilfe der [**SharedStorageAccessManager**](https://msdn.microsoft.com/library/windows/apps/dn889985)-Klasse freigeben, um Dateitoken zu erstellen, die zwischen Apps ausgetauscht werden können. Wenn Sie beispielsweise über **ValueSet** mit dem Namen `inputData` verfügen, könnten Sie das Token in einer Datei speichern, die Sie für die gestartete App freigeben möchten:
+<span data-ttu-id="e13d3-164">Das Beispiel in dieser Anleitung bietet eine Einführung in das Starten einer App für Ergebnisse anhand von „Hello World“.</span><span class="sxs-lookup"><span data-stu-id="e13d3-164">The example in this how-to provides a "hello world" introduction to launching an app for results.</span></span> <span data-ttu-id="e13d3-165">Als wichtigster Punkt ist zu beachten, dass die neue [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686)-API Ihnen das asynchrone Starten einer App und die Kommunikation über die [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)-Klasse ermöglicht.</span><span class="sxs-lookup"><span data-stu-id="e13d3-165">The key things to note are that the new [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686) API lets you asynchronously launch an app and communicate via the [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131) class.</span></span> <span data-ttu-id="e13d3-166">Das Übergeben von Daten über einen **ValueSet** ist auf 100KB begrenzt.</span><span class="sxs-lookup"><span data-stu-id="e13d3-166">Passing data via a **ValueSet** is limited to 100KB.</span></span> <span data-ttu-id="e13d3-167">Wenn Sie größere Datenmengen übergeben müssen, können Sie Dateien mithilfe der [**SharedStorageAccessManager**](https://msdn.microsoft.com/library/windows/apps/dn889985)-Klasse freigeben, um Dateitoken zu erstellen, die zwischen Apps ausgetauscht werden können.</span><span class="sxs-lookup"><span data-stu-id="e13d3-167">If you need to pass larger amounts of data, you can share files by using the [**SharedStorageAccessManager**](https://msdn.microsoft.com/library/windows/apps/dn889985) class to create file tokens that you can pass between apps.</span></span> <span data-ttu-id="e13d3-168">Wenn Sie beispielsweise über **ValueSet** mit dem Namen `inputData` verfügen, könnten Sie das Token in einer Datei speichern, die Sie für die gestartete App freigeben möchten:</span><span class="sxs-lookup"><span data-stu-id="e13d3-168">For example, given a **ValueSet** named `inputData`, you could store the token to a file that you want to share with the launched app:</span></span>
 
 ```cs
 inputData["ImageFileToken"] = SharedStorageAccessManager.AddFile(myFile);
 ```
 
-Anschließend übergeben Sie sie über **LaunchUriForResultsAsync** an die gestartete App.
+<span data-ttu-id="e13d3-169">Anschließend übergeben Sie sie über **LaunchUriForResultsAsync** an die gestartete App.</span><span class="sxs-lookup"><span data-stu-id="e13d3-169">Then pass it to the launched app via **LaunchUriForResultsAsync**.</span></span>
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a><span data-ttu-id="e13d3-170">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="e13d3-170">Related topics</span></span>
 
 
-* [**LaunchUri**](https://msdn.microsoft.com/library/windows/apps/hh701476)
-* [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686)
-* [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)
-
- 
+* [**<span data-ttu-id="e13d3-171">LaunchUri</span><span class="sxs-lookup"><span data-stu-id="e13d3-171">LaunchUri</span></span>**](https://msdn.microsoft.com/library/windows/apps/hh701476)
+* [**<span data-ttu-id="e13d3-172">LaunchUriForResultsAsync</span><span class="sxs-lookup"><span data-stu-id="e13d3-172">LaunchUriForResultsAsync</span></span>**](https://msdn.microsoft.com/library/windows/apps/dn956686)
+* [**<span data-ttu-id="e13d3-173">ValueSet</span><span class="sxs-lookup"><span data-stu-id="e13d3-173">ValueSet</span></span>**](https://msdn.microsoft.com/library/windows/apps/dn636131)
 
  
 
+ 

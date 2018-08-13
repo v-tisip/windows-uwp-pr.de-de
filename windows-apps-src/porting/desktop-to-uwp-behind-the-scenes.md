@@ -1,7 +1,7 @@
 ---
 author: normesta
-Description: "Dieser Artikel beschäftigt sich eingehender damit, wie die Desktop-Brücke funktioniert."
-title: "Hintergrundinformationen zur Desktop-Brücke"
+Description: Dieser Artikel beschäftigt sich eingehender damit, wie die Desktop-Brücke funktioniert.
+title: Hintergrundinformationen zur Desktop-Brücke
 ms.author: normesta
 ms.date: 05/25/2017
 ms.topic: article
@@ -11,9 +11,10 @@ keywords: windows10, UWP
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
 ms.openlocfilehash: 050499baaf383fc135d833ae1e4733c95f2b5fa1
 ms.sourcegitcommit: 7540962003b38811e6336451bb03d46538b35671
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/26/2017
+ms.locfileid: "617359"
 ---
 # <a name="behind-the-scenes-of-the-desktop-bridge"></a><span data-ttu-id="edc8a-104">Hintergrundinformationen zur Desktop-Brücke</span><span class="sxs-lookup"><span data-stu-id="edc8a-104">Behind the scenes of the Desktop Bridge</span></span>
 

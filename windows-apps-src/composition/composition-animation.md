@@ -2,7 +2,7 @@
 author: jwmsft
 ms.assetid: 386faf59-8f22-2e7c-abc9-d04216e78894
 title: Kompositionsanimationen
-description: "Viele Eigenschaften von Kompositionsobjekten und Effekten können mit Keyframeanimationen und Ausdrucksanimationen animiert werden. Dadurch können sich Eigenschaften eines UI-Elements im Laufe der Zeit oder auf der Grundlage einer Berechnung verändern."
+description: Viele Eigenschaften von Kompositionsobjekten und Effekten können mit Keyframeanimationen und Ausdrucksanimationen animiert werden. Dadurch können sich Eigenschaften eines UI-Elements im Laufe der Zeit oder auf der Grundlage einer Berechnung verändern.
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.openlocfilehash: e7d0f5c3fc0d1414dc1b4f714683494fcffd4f51
 ms.sourcegitcommit: b42d14c775efbf449a544ddb881abd1c65c1ee86
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/20/2017
+ms.locfileid: "839538"
 ---
 # <a name="composition-animations"></a><span data-ttu-id="d10f3-104">Kompositionsanimationen</span><span class="sxs-lookup"><span data-stu-id="d10f3-104">Composition animations</span></span>
 
@@ -68,8 +69,8 @@ ms.lasthandoff: 07/20/2017
 |<span data-ttu-id="d10f3-158">RotationAxis</span><span class="sxs-lookup"><span data-stu-id="d10f3-158">RotationAxis</span></span>|<span data-ttu-id="d10f3-159">Vector3</span><span class="sxs-lookup"><span data-stu-id="d10f3-159">Vector3</span></span>|
 |<span data-ttu-id="d10f3-160">Scale</span><span class="sxs-lookup"><span data-stu-id="d10f3-160">Scale</span></span>|<span data-ttu-id="d10f3-161">Vector3</span><span class="sxs-lookup"><span data-stu-id="d10f3-161">Vector3</span></span>|
 |<span data-ttu-id="d10f3-162">Size</span><span class="sxs-lookup"><span data-stu-id="d10f3-162">Size</span></span>|<span data-ttu-id="d10f3-163">Vector2</span><span class="sxs-lookup"><span data-stu-id="d10f3-163">Vector2</span></span>|
-|<span data-ttu-id="d10f3-164">TransformMatrix*</span><span class="sxs-lookup"><span data-stu-id="d10f3-164">TransformMatrix*</span></span>|<span data-ttu-id="d10f3-165">Matrix4x4</span><span class="sxs-lookup"><span data-stu-id="d10f3-165">Matrix4x4</span></span>|
-<span data-ttu-id="d10f3-166">*Wenn Sie die gesamte TransformMatrix-Eigenschaft als eine Matrix4x4 animieren möchten, müssen Sie dazu eine Ausdrucksanimation verwenden.</span><span class="sxs-lookup"><span data-stu-id="d10f3-166">*If you want to animate the entire TransformMatrix property as a Matrix4x4, you need to use an ExpressionAnimation to do so.</span></span>
+|<span data-ttu-id="d10f3-164">TransformMatrix\*</span><span class="sxs-lookup"><span data-stu-id="d10f3-164">TransformMatrix\*</span></span>|<span data-ttu-id="d10f3-165">Matrix4x4</span><span class="sxs-lookup"><span data-stu-id="d10f3-165">Matrix4x4</span></span>|
+<span data-ttu-id="d10f3-166">\*Wenn Sie die gesamte TransformMatrix-Eigenschaft als eine Matrix4x4 animieren möchten, müssen Sie dazu eine Ausdrucksanimation verwenden.</span><span class="sxs-lookup"><span data-stu-id="d10f3-166">\*If you want to animate the entire TransformMatrix property as a Matrix4x4, you need to use an ExpressionAnimation to do so.</span></span>
 <span data-ttu-id="d10f3-167">Andernfalls können Sie einzelne Zellen der Matrix anvisieren und dort eine Keyframe- oder Ausdrucksanimation verwenden.</span><span class="sxs-lookup"><span data-stu-id="d10f3-167">Otherwise, you can target individual cells of the matrix and can use either a KeyFrame or ExpressionAnimation there.</span></span>
 
 ### <a name="insetclip"></a><span data-ttu-id="d10f3-168">InsetClip</span><span class="sxs-lookup"><span data-stu-id="d10f3-168">InsetClip</span></span>
@@ -107,9 +108,9 @@ ms.lasthandoff: 07/20/2017
 |<span data-ttu-id="d10f3-213">TransformMatrix._11_12 ... TransformMatrix._NN_NN</span><span class="sxs-lookup"><span data-stu-id="d10f3-213">TransformMatrix._11_12 ... TransformMatrix._NN_NN</span></span>|<span data-ttu-id="d10f3-214">Vector2</span><span class="sxs-lookup"><span data-stu-id="d10f3-214">Vector2</span></span>|
 |<span data-ttu-id="d10f3-215">TransformMatrix._11_12_13 ... TransformMatrix._NN_NN_NN</span><span class="sxs-lookup"><span data-stu-id="d10f3-215">TransformMatrix._11_12_13 ... TransformMatrix._NN_NN_NN</span></span>|<span data-ttu-id="d10f3-216">Vector3</span><span class="sxs-lookup"><span data-stu-id="d10f3-216">Vector3</span></span>|
 |<span data-ttu-id="d10f3-217">TransformMatrix._11_12_13_14</span><span class="sxs-lookup"><span data-stu-id="d10f3-217">TransformMatrix._11_12_13_14</span></span>|<span data-ttu-id="d10f3-218">Vector4</span><span class="sxs-lookup"><span data-stu-id="d10f3-218">Vector4</span></span>|
-|<span data-ttu-id="d10f3-219">Color*</span><span class="sxs-lookup"><span data-stu-id="d10f3-219">Color*</span></span>|<span data-ttu-id="d10f3-220">Colors (Windows.UI)</span><span class="sxs-lookup"><span data-stu-id="d10f3-220">Colors (Windows.UI)</span></span>|
+|<span data-ttu-id="d10f3-219">Color\*</span><span class="sxs-lookup"><span data-stu-id="d10f3-219">Color\*</span></span>|<span data-ttu-id="d10f3-220">Colors (Windows.UI)</span><span class="sxs-lookup"><span data-stu-id="d10f3-220">Colors (Windows.UI)</span></span>|
 
-<span data-ttu-id="d10f3-221">*Das Animieren des Subkanals „Color“ der Brush-Eigenschaft geht ein bisschen anders.</span><span class="sxs-lookup"><span data-stu-id="d10f3-221">*Animating the Color subchannel of the Brush property is a bit different.</span></span> <span data-ttu-id="d10f3-222">Sie fügen StartAnimation() an die Visual.Brush an und deklarieren die zu animierende Eigenschaft im Parameter als „Color“.</span><span class="sxs-lookup"><span data-stu-id="d10f3-222">You attach StartAnimation() to the Visual.Brush, and declare the property to animate in the parameter as "Color".</span></span>
+<span data-ttu-id="d10f3-221">\*Das Animieren des Subkanals „Color“ der Brush-Eigenschaft geht ein bisschen anders.</span><span class="sxs-lookup"><span data-stu-id="d10f3-221">\*Animating the Color subchannel of the Brush property is a bit different.</span></span> <span data-ttu-id="d10f3-222">Sie fügen StartAnimation() an die Visual.Brush an und deklarieren die zu animierende Eigenschaft im Parameter als „Color“.</span><span class="sxs-lookup"><span data-stu-id="d10f3-222">You attach StartAnimation() to the Visual.Brush, and declare the property to animate in the parameter as "Color".</span></span>
 <span data-ttu-id="d10f3-223">(Ausführlichere Informationen zum Animieren von Farbe finden Sie weiter unten)</span><span class="sxs-lookup"><span data-stu-id="d10f3-223">(More details about animating color discussed later)</span></span>
 
 ## <a name="property-sets-and-effects"></a><span data-ttu-id="d10f3-224">Eigenschaftensätze und Effekte</span><span class="sxs-lookup"><span data-stu-id="d10f3-224">Property Sets and Effects</span></span>
@@ -427,7 +428,7 @@ targetVisual.StartAnimation("Opacity", expression);
 |<span data-ttu-id="d10f3-379">Kategorie</span><span class="sxs-lookup"><span data-stu-id="d10f3-379">Category</span></span>| <span data-ttu-id="d10f3-380">Operatoren</span><span class="sxs-lookup"><span data-stu-id="d10f3-380">Operators</span></span>|
 |--------|-----------|
 |<span data-ttu-id="d10f3-381">Unär</span><span class="sxs-lookup"><span data-stu-id="d10f3-381">Unary</span></span>| -|
-|<span data-ttu-id="d10f3-382">Multiplikativ</span><span class="sxs-lookup"><span data-stu-id="d10f3-382">Multiplicative</span></span>|<span data-ttu-id="d10f3-383">* /</span><span class="sxs-lookup"><span data-stu-id="d10f3-383">* /</span></span>|
+|<span data-ttu-id="d10f3-382">Multiplikativ</span><span class="sxs-lookup"><span data-stu-id="d10f3-382">Multiplicative</span></span>|<span data-ttu-id="d10f3-383">\* /</span><span class="sxs-lookup"><span data-stu-id="d10f3-383">\* /</span></span>|
 |<span data-ttu-id="d10f3-384">Additiv</span><span class="sxs-lookup"><span data-stu-id="d10f3-384">Additive</span></span>|<span data-ttu-id="d10f3-385">+ -</span><span class="sxs-lookup"><span data-stu-id="d10f3-385">+ -</span></span>|
 |<span data-ttu-id="d10f3-386">Mod</span><span class="sxs-lookup"><span data-stu-id="d10f3-386">Mod</span></span>| %|
 

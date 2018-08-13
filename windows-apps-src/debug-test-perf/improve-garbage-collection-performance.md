@@ -2,7 +2,7 @@
 author: jwmsft
 ms.assetid: F912161D-3767-4F35-88C0-E1ECDED692A2
 title: Verbessern der Leistung bei der Garbage Collection
-description: "In C# und Visual Basic geschriebene UWP-Apps profitieren von der automatischen Arbeitsspeicherverwaltung des .NET Garbage Collectors. Dieser Abschnitt bietet einen Überblick über das Verhalten von .NET Garbage Collector sowie bewährte Methoden für dessen Leistungssteigerung in UWP-Apps."
+description: In C# und Visual Basic geschriebene UWP-Apps profitieren von der automatischen Arbeitsspeicherverwaltung des .NET Garbage Collectors. Dieser Abschnitt bietet einen Überblick über das Verhalten von .NET Garbage Collector sowie bewährte Methoden für dessen Leistungssteigerung in UWP-Apps.
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.openlocfilehash: 3b7dfb274c5a6d55204a467fc894bac5fd044048
 ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/14/2017
+ms.locfileid: "894650"
 ---
 # <a name="improve-garbage-collection-performance"></a><span data-ttu-id="ee6aa-105">Verbessern der Leistung bei der Garbage Collection</span><span class="sxs-lookup"><span data-stu-id="ee6aa-105">Improve garbage collection performance</span></span>
 

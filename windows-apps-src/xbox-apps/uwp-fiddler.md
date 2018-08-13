@@ -1,7 +1,7 @@
 ---
 author: WilliamsJason
-title: "Verwendung von Fiddler mit Xbox One bei der Entwicklung für UWP"
-description: "Beschreibt die Verwendung des Freeware-Tools Fiddler, um den Netzwerkverkehr für ein Xbox One Dev Kit für UWP anzuzeigen."
+title: Verwendung von Fiddler mit Xbox One bei der Entwicklung für UWP
+description: Beschreibt die Verwendung des Freeware-Tools Fiddler, um den Netzwerkverkehr für ein Xbox One Dev Kit für UWP anzuzeigen.
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,8 +11,9 @@ keywords: Windows10, UWP
 ms.assetid: 9c133c77-fe9d-4b81-b4b3-462936333aa3
 ms.openlocfilehash: bbf916145107b465ddd2fe7e4805e6139f4597d3
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "235125"
 ---
 # <a name="how-to-use-fiddler-with-xbox-one-when-developing-for-uwp"></a><span data-ttu-id="5b081-104">Verwenden von Fiddler mit Xbox One bei der Entwicklung für UWP</span><span class="sxs-lookup"><span data-stu-id="5b081-104">How to use Fiddler with Xbox One when developing for UWP</span></span>
 

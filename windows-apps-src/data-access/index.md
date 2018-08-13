@@ -2,7 +2,7 @@
 author: normesta
 ms.assetid: 76776b0f-3163-48c9-835b-3f4213968079
 title: Datenzugriff
-description: "In diesem Abschnitt wird das Speichern von Daten auf dem Gerät in einer privaten Datenbank und die Verwendung der objektrelationalen Zuordnung in UWP-Apps (Universelle Windows-Plattform) erläutert."
+description: In diesem Abschnitt wird das Speichern von Daten auf dem Gerät in einer privaten Datenbank und die Verwendung der objektrelationalen Zuordnung in UWP-Apps (Universelle Windows-Plattform) erläutert.
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Daten, Datenbank, relational, Tabellen, sqlite
 ms.openlocfilehash: 19690b6877fb4304b7740e6098711ca0b097d567
 ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/08/2017
+ms.locfileid: "665320"
 ---
 # <a name="data-access"></a><span data-ttu-id="1439f-104">Datenzugriff</span><span class="sxs-lookup"><span data-stu-id="1439f-104">Data access</span></span>
 

@@ -1,7 +1,7 @@
 ---
 author: Mtoepke
-title: "Einführung in Anwendungen mit mehreren Benutzern"
-description: "Eine einfache allgemeine Einführung in das Xbox-Mehrbenutzermodell."
+title: Einführung in Anwendungen mit mehreren Benutzern
+description: Eine einfache allgemeine Einführung in das Xbox-Mehrbenutzermodell.
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,8 +11,9 @@ keywords: Windows10, UWP
 ms.assetid: 2dde6ed3-7f53-48a6-aebe-2605230decb8
 ms.openlocfilehash: b150b50c1072a96ae0017bae848eeff94bb07ce0
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "234961"
 ---
 # <a name="introduction-to-multi-user-applications"></a><span data-ttu-id="9ab61-104">Einführung in Anwendungen mit mehreren Benutzern</span><span class="sxs-lookup"><span data-stu-id="9ab61-104">Introduction to multi-user applications</span></span>
 

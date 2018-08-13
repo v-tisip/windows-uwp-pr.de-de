@@ -1,8 +1,8 @@
 ---
 author: jwmsft
 ms.assetid: 24351dad-2ee3-462a-ae78-2752bb3374c2
-title: "Hintergrundaktivität optimieren"
-description: "Erstellen Sie UWP-Apps, die mit dem System interagieren, um Hintergrundaufgaben auf eine den Akku effizient nutzende Weise auszuführen."
+title: Hintergrundaktivität optimieren
+description: Erstellen Sie UWP-Apps, die mit dem System interagieren, um Hintergrundaufgaben auf eine den Akku effizient nutzende Weise auszuführen.
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.openlocfilehash: 630f280d54c29aa80bc310bd88ceddd76b07f8bf
 ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/14/2017
+ms.locfileid: "894660"
 ---
 # <a name="optimize-background-activity"></a><span data-ttu-id="ecb72-104">Optimieren von Hintergrundaktivitäten</span><span class="sxs-lookup"><span data-stu-id="ecb72-104">Optimize background activity</span></span>
 

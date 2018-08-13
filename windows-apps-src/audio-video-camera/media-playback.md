@@ -1,7 +1,7 @@
 ---
 author: drewbatgit
 ms.assetid: 25553c4d-fa4f-4130-af9b-97f993fefd43
-description: "Dieser Abschnitt enthält Informationen zum Erstellen von universellen Windows-Apps, mit denen Videos oder Audiodateien wiedergegeben werden können."
+description: Dieser Abschnitt enthält Informationen zum Erstellen von universellen Windows-Apps, mit denen Videos oder Audiodateien wiedergegeben werden können.
 title: Medienwiedergabe
 ms.author: drewbat
 ms.date: 02/08/2017
@@ -11,9 +11,10 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.openlocfilehash: 888131d37a86793d67ce71376b158bd7de734331
 ms.sourcegitcommit: 23cda44f10059bcaef38ae73fd1d7c8b8330c95e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/19/2017
+ms.locfileid: "837027"
 ---
 # <a name="media-playback"></a><span data-ttu-id="27462-104">Medienwiedergabe</span><span class="sxs-lookup"><span data-stu-id="27462-104">Media playback</span></span>
 
