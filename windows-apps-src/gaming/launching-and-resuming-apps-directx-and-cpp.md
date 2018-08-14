@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: Starten und Reaktivieren von Apps (DirectX und C++)
-description: "Hier erfahren Sie, wie Sie Ihre DirectX-App für die universelle Windows-Plattform (UWP) starten, anhalten und reaktivieren."
+description: Hier erfahren Sie, wie Sie Ihre DirectX-App für die universelle Windows-Plattform (UWP) starten, anhalten und reaktivieren.
 ms.assetid: c35025f8-0450-2f61-fe84-070fd7379622
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Spiele, DirectX, Starten, Reaktivieren
 ms.openlocfilehash: c3557a11f8f18262f0b5e0c6ad6cac88d5274f73
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "233523"
 ---
 # <a name="launching-and-resuming-apps-directx-and-c"></a><span data-ttu-id="b36e5-104">Starten und Reaktivieren von Apps (DirectX und C++)</span><span class="sxs-lookup"><span data-stu-id="b36e5-104">Launching and resuming apps (DirectX and C++)</span></span>
 

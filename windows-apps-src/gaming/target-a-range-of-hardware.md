@@ -1,7 +1,7 @@
 ---
 author: mtoepke
-title: "Unterstützen von Schattenmaps für unterschiedliche Hardware"
-description: "Rendern Sie Schatten in noch besserer Qualität auf schnelleren Geräten und schnellere Schatten auf weniger leistungsfähigen Geräten."
+title: Unterstützen von Schattenmaps für unterschiedliche Hardware
+description: Rendern Sie Schatten in noch besserer Qualität auf schnelleren Geräten und schnellere Schatten auf weniger leistungsfähigen Geräten.
 ms.assetid: d97c0544-44f2-4e29-5e02-54c45e0dff4e
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Spiele, Schattenmaps, DirectX
 ms.openlocfilehash: e4cffcf1e9655d5bc5dacbfc17cb64b5671d7551
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "233789"
 ---
 # <a name="support-shadow-maps-on-a-range-of-hardware"></a><span data-ttu-id="c217d-104">Unterstützen von Schattenmaps für unterschiedliche Hardware</span><span class="sxs-lookup"><span data-stu-id="c217d-104">Support shadow maps on a range of hardware</span></span>
 

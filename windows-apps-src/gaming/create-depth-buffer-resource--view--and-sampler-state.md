@@ -1,7 +1,7 @@
 ---
 author: mtoepke
-title: "Erstellen von Tiefenpuffer-Geräteressourcen"
-description: "Hier erfahren Sie, wie Sie die zum Unterstützen von Tiefentests für Schattenvolumen erforderlichen Direct3D-Geräteressourcen erstellen."
+title: Erstellen von Tiefenpuffer-Geräteressourcen
+description: Hier erfahren Sie, wie Sie die zum Unterstützen von Tiefentests für Schattenvolumen erforderlichen Direct3D-Geräteressourcen erstellen.
 ms.assetid: 86d5791b-1faa-17e4-44a8-bbba07062756
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Direct3D, Tiefenpuffer
 ms.openlocfilehash: 87e4248545288f4725e0cf0b104a75f1925ad3a3
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "233687"
 ---
 # <a name="create-depth-buffer-device-resources"></a><span data-ttu-id="8f3f6-104">Erstellen von Tiefenpuffer-Geräteressourcen</span><span class="sxs-lookup"><span data-stu-id="8f3f6-104">Create depth buffer device resources</span></span>
 

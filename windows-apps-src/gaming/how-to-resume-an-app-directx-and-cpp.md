@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: So wird&quot;s gemacht - Reaktivieren einer App (DirectX und C++)
-description: "In diesem Thema erfahren Sie, wie wichtige Anwendungsdaten wiederhergestellt werden, wenn das System Ihre DirectX-App für die Universelle Windows-Plattform (UWP) fortsetzt."
+description: In diesem Thema erfahren Sie, wie wichtige Anwendungsdaten wiederhergestellt werden, wenn das System Ihre DirectX-App für die Universelle Windows-Plattform (UWP) fortsetzt.
 ms.assetid: 5e6bb673-6874-ace5-05eb-f88c045f2178
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: Windows10, UWP, fortsetzen, DirectX
 ms.openlocfilehash: 0ef4617417526cd2e39ce968e4d682b4015e22d3
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "233606"
 ---
 # <a name="how-to-resume-an-app-directx-and-c"></a><span data-ttu-id="82f09-104">So wird's gemacht - Fortsetzen einer App (DirectX und C++)</span><span class="sxs-lookup"><span data-stu-id="82f09-104">How to resume an app (DirectX and C++)</span></span>
 

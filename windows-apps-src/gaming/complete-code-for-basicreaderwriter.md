@@ -1,7 +1,7 @@
 ---
 author: mtoepke
-title: "Vollständiger Code für &quot;BasicReaderWriter&quot;"
-description: "Vollständiger Code für eine Klasse und Methoden zum allgemeinen Lesen und Schreiben von Binärdatendateien."
+title: Vollständiger Code für &quot;BasicReaderWriter&quot;
+description: Vollständiger Code für eine Klasse und Methoden zum allgemeinen Lesen und Schreiben von Binärdatendateien.
 ms.assetid: af968edd-df5c-b8e6-479e-bfa9689380fc
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: Windows10, UWP, Spiele, BasicReaderWriter
 ms.openlocfilehash: 1dc7ba0b25ceeb5b27bc718bed1db0e2db39b6c0
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "233729"
 ---
 # <a name="complete-code-for-basicreaderwriter"></a><span data-ttu-id="6e735-104">Vollständiger Code für "BasicReaderWriter"</span><span class="sxs-lookup"><span data-stu-id="6e735-104">Complete code for BasicReaderWriter</span></span>
 

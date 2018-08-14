@@ -1,7 +1,7 @@
 ---
 author: scottmill
 title: Relative Mausbewegung
-description: "Verwendung relativer Maussteuerungen, die nicht den Systemcursor verwenden und keine absoluten Bildschirmkoordinaten zurückgeben, um das Pixeldelta zwischen Mausebewegungen in Spielen nachzuverfolgen."
+description: Verwendung relativer Maussteuerungen, die nicht den Systemcursor verwenden und keine absoluten Bildschirmkoordinaten zurückgeben, um das Pixeldelta zwischen Mausebewegungen in Spielen nachzuverfolgen.
 ms.author: scotmi
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,8 +11,9 @@ keywords: Windows10, UWP, Spiele, Maus, Eingabe
 ms.assetid: 08c35e05-2822-4a01-85b8-44edb9b6898f
 ms.openlocfilehash: dff08052af7f005366f9cb5154b307c13a316953
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "233567"
 ---
 # <a name="relative-mouse-movement-and-corewindow"></a><span data-ttu-id="7d6e0-104">Relative Mausbewegung und CoreWindow</span><span class="sxs-lookup"><span data-stu-id="7d6e0-104">Relative mouse movement and CoreWindow</span></span>
 

@@ -1,7 +1,7 @@
 ---
 author: msatranjr
 title: NFC
-description: "Dieser Abschnitt enthält Artikel mit Anweisungen zum Integrieren von NFC in UWP-Apps (Universelle Windows-Plattform)."
+description: Dieser Abschnitt enthält Artikel mit Anweisungen zum Integrieren von NFC in UWP-Apps (Universelle Windows-Plattform).
 ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,8 +11,9 @@ keywords: Windows10, UWP
 ms.assetid: 15a113b5-8231-41c9-b724-ce5add813967
 ms.openlocfilehash: 8e2438793ed154e083cca5bdd881012ddd90f42b
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "233538"
 ---
 # <a name="nfc"></a><span data-ttu-id="a7779-104">NFC</span><span class="sxs-lookup"><span data-stu-id="a7779-104">NFC</span></span>
 

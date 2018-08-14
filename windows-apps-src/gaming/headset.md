@@ -8,11 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows10, UWP, Spiele, Kopfhörer"
+keywords: Windows10, UWP, Spiele, Kopfhörer
 ms.openlocfilehash: 04baee2a3011cee63933fe1fdab759d1b6d29c89
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "233603"
 ---
 # <a name="headset"></a><span data-ttu-id="bf418-104">Headset</span><span class="sxs-lookup"><span data-stu-id="bf418-104">Headset</span></span>
 

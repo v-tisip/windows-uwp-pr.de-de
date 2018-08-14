@@ -1,7 +1,7 @@
 ---
 author: mtoepke
 title: Rendern der Szene mit Tiefentest
-description: "Erstellen Sie einen Schatteneffekt, indem Sie Ihrem Vertexshader (bzw. Geometrieshader) und dem Pixelshader einen Tiefentest hinzufügen."
+description: Erstellen Sie einen Schatteneffekt, indem Sie Ihrem Vertexshader (bzw. Geometrieshader) und dem Pixelshader einen Tiefentest hinzufügen.
 ms.assetid: bf496dfb-d7f5-af6b-d588-501164608560
 ms.author: mtoepke
 ms.date: 02/08/2017
@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Rendern, Szene, Tiefentest, Direct3D, Schatten
 ms.openlocfilehash: 538ebe9a604daaa5a444b0f7f1764770eec8ce7c
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "233566"
 ---
 # <a name="render-the-scene-with-depth-testing"></a><span data-ttu-id="512dc-104">Rendern der Szene mit Tiefentest</span><span class="sxs-lookup"><span data-stu-id="512dc-104">Render the scene with depth testing</span></span>
 

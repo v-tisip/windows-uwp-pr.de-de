@@ -11,8 +11,9 @@ ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Shader, Grundtypen, DirectX
 ms.openlocfilehash: 62f4b9b641a3c365659e44893a8a7801f2c1f6c0
 ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
+ms.locfileid: "233756"
 ---
 # <a name="create-shaders-and-drawing-primitives"></a><span data-ttu-id="c376d-104">Erstellen von Shadern und Zeichnen von Grundtypen</span><span class="sxs-lookup"><span data-stu-id="c376d-104">Create shaders and drawing primitives</span></span>
 
