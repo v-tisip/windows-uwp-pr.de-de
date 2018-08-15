@@ -11,7 +11,7 @@ ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Multisampling, Direct3D
 ms.localizationpriority: medium
 ms.openlocfilehash: 72bfa2e1094b87e51de1bbfd3f416a14cf547639
-ms.sourcegitcommit: 81c4c44c42c629a7ad5a82abdc2f4bbd6515f314
+ms.sourcegitcommit: be5b71a8ec7b686d5f93d56d10cb9a50c3c5bb4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 08/14/2018
