@@ -8,34 +8,34 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
-ms.openlocfilehash: 90bb253c46bf7f9f12188e2dbb61c84812f45c0d
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 6ef50675ec7741c067cbe5641321ae5711ff335b
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690486"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2786824"
 ---
-# <a name="data-protection"></a><span data-ttu-id="f01cd-104">Datenschutz</span><span class="sxs-lookup"><span data-stu-id="f01cd-104">Data protection</span></span>
+# <a name="data-protection"></a><span data-ttu-id="ae9ab-104">Datenschutz</span><span class="sxs-lookup"><span data-stu-id="ae9ab-104">Data protection</span></span>
 
 
 
-<span data-ttu-id="f01cd-105">In diesem Artikel wird erläutert, wie Sie mithilfe der [**DataProtectionProvider**](https://msdn.microsoft.com/library/windows/apps/br241559)-Klasse im [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585)-Namespace digitale Daten in einer UWP-App verschlüsseln und entschlüsseln können.</span><span class="sxs-lookup"><span data-stu-id="f01cd-105">This article explains how to use the [**DataProtectionProvider**](https://msdn.microsoft.com/library/windows/apps/br241559) class in the [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585) namespace to encrypt and decrypt digital data in a UWP app.</span></span>
+<span data-ttu-id="ae9ab-105">In diesem Artikel wird erläutert, wie Sie mithilfe der [**DataProtectionProvider**](https://msdn.microsoft.com/library/windows/apps/br241559)-Klasse im [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585)-Namespace digitale Daten in einer UWP-App verschlüsseln und entschlüsseln können.</span><span class="sxs-lookup"><span data-stu-id="ae9ab-105">This article explains how to use the [**DataProtectionProvider**](https://msdn.microsoft.com/library/windows/apps/br241559) class in the [**Windows.Security.Cryptography.DataProtection**](https://msdn.microsoft.com/library/windows/apps/br241585) namespace to encrypt and decrypt digital data in a UWP app.</span></span>
 
-<span data-ttu-id="f01cd-106">Sie können die Datenschutz-APIs auf verschiedene Weise verwenden:</span><span class="sxs-lookup"><span data-stu-id="f01cd-106">You can use the data protection APIs in multiple ways:</span></span>
+<span data-ttu-id="ae9ab-106">Sie können die Datenschutz-APIs auf verschiedene Weise verwenden:</span><span class="sxs-lookup"><span data-stu-id="ae9ab-106">You can use the data protection APIs in multiple ways:</span></span>
 
--   <span data-ttu-id="f01cd-107">Zum Schützen von Daten durch einen Active Directory-Sicherheitsprinzipal (AD), wie z. B. eine AD-Gruppe.</span><span class="sxs-lookup"><span data-stu-id="f01cd-107">To protect data to an Active Directory (AD) security principal like an AD group.</span></span> <span data-ttu-id="f01cd-108">Jedes Mitglied der Gruppe kann die Daten entschlüsseln.</span><span class="sxs-lookup"><span data-stu-id="f01cd-108">Any member of the group can decrypt the data.</span></span>
--   <span data-ttu-id="f01cd-109">Zum Schützen von Daten durch einen öffentlichen Schlüssel, der in einem X.509-Zertifikat enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="f01cd-109">To protect data to the public key contained in an X.509 certificate.</span></span> <span data-ttu-id="f01cd-110">Der Besitzer eines privaten Schlüssels kann die Daten entschlüsseln.</span><span class="sxs-lookup"><span data-stu-id="f01cd-110">The owner of the private key can decrypt the data.</span></span>
--   <span data-ttu-id="f01cd-111">Zum Schützen von Daten mithilfe eines symmetrischen Schlüssels.</span><span class="sxs-lookup"><span data-stu-id="f01cd-111">To protect data by using a symmetric key.</span></span> <span data-ttu-id="f01cd-112">Damit können zum Beispiel die Daten eines Nicht-AD-Prinzipals wie Live ID geschützt werden.</span><span class="sxs-lookup"><span data-stu-id="f01cd-112">This works, for example, to protect data to a non-AD principal such as Live ID.</span></span>
--   <span data-ttu-id="f01cd-113">Zum Schützen von Daten anhand von Anmeldeinformationen (Kennwort), die zum Anmelden bei einer Website erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="f01cd-113">To protect data to the credentials (password) used during logon to a website.</span></span>
+-   <span data-ttu-id="ae9ab-107">Zum Schützen von Daten durch einen Active Directory-Sicherheitsprinzipal (AD), wie z. B. eine AD-Gruppe.</span><span class="sxs-lookup"><span data-stu-id="ae9ab-107">To protect data to an Active Directory (AD) security principal like an AD group.</span></span> <span data-ttu-id="ae9ab-108">Jedes Mitglied der Gruppe kann die Daten entschlüsseln.</span><span class="sxs-lookup"><span data-stu-id="ae9ab-108">Any member of the group can decrypt the data.</span></span>
+-   <span data-ttu-id="ae9ab-109">Zum Schützen von Daten durch einen öffentlichen Schlüssel, der in einem X.509-Zertifikat enthalten ist.</span><span class="sxs-lookup"><span data-stu-id="ae9ab-109">To protect data to the public key contained in an X.509 certificate.</span></span> <span data-ttu-id="ae9ab-110">Der Besitzer eines privaten Schlüssels kann die Daten entschlüsseln.</span><span class="sxs-lookup"><span data-stu-id="ae9ab-110">The owner of the private key can decrypt the data.</span></span>
+-   <span data-ttu-id="ae9ab-111">Zum Schützen von Daten mithilfe eines symmetrischen Schlüssels.</span><span class="sxs-lookup"><span data-stu-id="ae9ab-111">To protect data by using a symmetric key.</span></span> <span data-ttu-id="ae9ab-112">Damit können zum Beispiel die Daten eines Nicht-AD-Prinzipals wie Live ID geschützt werden.</span><span class="sxs-lookup"><span data-stu-id="ae9ab-112">This works, for example, to protect data to a non-AD principal such as Live ID.</span></span>
+-   <span data-ttu-id="ae9ab-113">Zum Schützen von Daten anhand von Anmeldeinformationen (Kennwort), die zum Anmelden bei einer Website erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="ae9ab-113">To protect data to the credentials (password) used during logon to a website.</span></span>
 
-<span data-ttu-id="f01cd-114">Um Daten zu schützen, müssen Sie beim Erstellen eines [**DataProtectionProvider**](https://msdn.microsoft.com/library/windows/apps/br241559)-Objekts einen Schutzdeskriptor angeben, bevor Sie [**ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/br241563) oder [**ProtectStreamAsync**](https://msdn.microsoft.com/library/windows/apps/br241564) aufrufen.</span><span class="sxs-lookup"><span data-stu-id="f01cd-114">To protect data, when you create a [**DataProtectionProvider**](https://msdn.microsoft.com/library/windows/apps/br241559) object you must specify a protection descriptor before calling [**ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/br241563) or [**ProtectStreamAsync**](https://msdn.microsoft.com/library/windows/apps/br241564).</span></span> <span data-ttu-id="f01cd-115">Im Folgenden sehen Sie Beispiele für mögliche Schutzdeskriptoren.</span><span class="sxs-lookup"><span data-stu-id="f01cd-115">The following example shows possible sample protection descriptors.</span></span>
+<span data-ttu-id="ae9ab-114">Um Daten zu schützen, müssen Sie beim Erstellen eines [**DataProtectionProvider**](https://msdn.microsoft.com/library/windows/apps/br241559)-Objekts einen Schutzdeskriptor angeben, bevor Sie [**ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/br241563) oder [**ProtectStreamAsync**](https://msdn.microsoft.com/library/windows/apps/br241564) aufrufen.</span><span class="sxs-lookup"><span data-stu-id="ae9ab-114">To protect data, when you create a [**DataProtectionProvider**](https://msdn.microsoft.com/library/windows/apps/br241559) object you must specify a protection descriptor before calling [**ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/br241563) or [**ProtectStreamAsync**](https://msdn.microsoft.com/library/windows/apps/br241564).</span></span> <span data-ttu-id="ae9ab-115">Im Folgenden sehen Sie Beispiele für mögliche Schutzdeskriptoren.</span><span class="sxs-lookup"><span data-stu-id="ae9ab-115">The following example shows possible sample protection descriptors.</span></span>
 
-## <a name="protecting-static-data"></a><span data-ttu-id="f01cd-116">Schützen statischer Daten</span><span class="sxs-lookup"><span data-stu-id="f01cd-116">Protecting static data</span></span>
+## <a name="protecting-static-data"></a><span data-ttu-id="ae9ab-116">Schützen statischer Daten</span><span class="sxs-lookup"><span data-stu-id="ae9ab-116">Protecting static data</span></span>
 
 
-<span data-ttu-id="f01cd-117">Das folgende Beispiel zeigt, wie Sie mithilfe der Methoden [**ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/br241563) und [**UnprotectAsync**](https://msdn.microsoft.com/library/windows/apps/br241565) statische Daten für die SID des aktuellen Benutzers asynchron schützen können.</span><span class="sxs-lookup"><span data-stu-id="f01cd-117">The following example shows how to use the [**ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/br241563) and [**UnprotectAsync**](https://msdn.microsoft.com/library/windows/apps/br241565) methods to asynchronously protect static data to the current user's SID.</span></span>
+<span data-ttu-id="ae9ab-117">Das folgende Beispiel zeigt, wie Sie mithilfe der Methoden [**ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/br241563) und [**UnprotectAsync**](https://msdn.microsoft.com/library/windows/apps/br241565) statische Daten für die SID des aktuellen Benutzers asynchron schützen können.</span><span class="sxs-lookup"><span data-stu-id="ae9ab-117">The following example shows how to use the [**ProtectAsync**](https://msdn.microsoft.com/library/windows/apps/br241563) and [**UnprotectAsync**](https://msdn.microsoft.com/library/windows/apps/br241565) methods to asynchronously protect static data to the current user's SID.</span></span>
 
 ```cs
 using Windows.Security.Cryptography;
@@ -117,10 +117,10 @@ namespace SampleProtectAsync
 }
 ```
 
-## <a name="protecting-stream-data"></a><span data-ttu-id="f01cd-118">Schützen von Datenstromdaten</span><span class="sxs-lookup"><span data-stu-id="f01cd-118">Protecting stream data</span></span>
+## <a name="protecting-stream-data"></a><span data-ttu-id="ae9ab-118">Schützen von Datenstromdaten</span><span class="sxs-lookup"><span data-stu-id="ae9ab-118">Protecting stream data</span></span>
 
 
-<span data-ttu-id="f01cd-119">Das folgende Beispiel zeigt, wie Sie mithilfe der Methoden [**ProtectStreamAsync**](https://msdn.microsoft.com/library/windows/apps/br241564) und [**UnprotectStreamAsync**](https://msdn.microsoft.com/library/windows/apps/br241566) Datenstromdaten für die SID des aktuellen Benutzers asynchron schützen können.</span><span class="sxs-lookup"><span data-stu-id="f01cd-119">The following example shows how to use the [**ProtectStreamAsync**](https://msdn.microsoft.com/library/windows/apps/br241564) and [**UnprotectStreamAsync**](https://msdn.microsoft.com/library/windows/apps/br241566) methods to asynchronously protect stream data to the current user's SID.</span></span>
+<span data-ttu-id="ae9ab-119">Das folgende Beispiel zeigt, wie Sie mithilfe der Methoden [**ProtectStreamAsync**](https://msdn.microsoft.com/library/windows/apps/br241564) und [**UnprotectStreamAsync**](https://msdn.microsoft.com/library/windows/apps/br241566) Datenstromdaten für die SID des aktuellen Benutzers asynchron schützen können.</span><span class="sxs-lookup"><span data-stu-id="ae9ab-119">The following example shows how to use the [**ProtectStreamAsync**](https://msdn.microsoft.com/library/windows/apps/br241564) and [**UnprotectStreamAsync**](https://msdn.microsoft.com/library/windows/apps/br241566) methods to asynchronously protect stream data to the current user's SID.</span></span>
 
 ```cs
 using Windows.Security.Cryptography;
