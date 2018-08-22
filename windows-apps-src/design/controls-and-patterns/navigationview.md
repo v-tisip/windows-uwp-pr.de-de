@@ -1,200 +1,514 @@
 ---
 author: serenaz
-Description: Control that provides top-level app navigation with an automatically adapting, collapsible left navigation menu
+Description: NavigationView is an adaptive control that implements top-level navigation patterns for your app.
 title: Navigationsansicht
-ms.assetid: ''
-label: Navigation view
 template: detail.hbs
 ms.author: sezhen
-ms.date: 05/19/2017
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
-pm-contact: vasriram
+pm-contact: yulikl
 design-contact: kimsea
-dev-contact: mitra
+dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: c7817bf7ff60a52ea48c988bdebd6d4d2eeacdb7
-ms.sourcegitcommit: 618741673a26bd718962d4b8f859e632879f9d61
-ms.translationtype: HT
+ms.openlocfilehash: 4c0857005d584b1fde0eb52a6ab0ef5ec29eaf44
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "1992149"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2791992"
 ---
-# <a name="navigation-view"></a><span data-ttu-id="11ebe-103">Navigationsansicht</span><span class="sxs-lookup"><span data-stu-id="11ebe-103">Navigation view</span></span>
+# <a name="navigation-view-preview-version"></a><span data-ttu-id="7bc51-103">Navigationsansicht (Vorabversion)</span><span class="sxs-lookup"><span data-stu-id="7bc51-103">Navigation view (Preview version)</span></span>
 
-<span data-ttu-id="11ebe-104">Das Navigationsansicht-Steuerelement bietet über ein reduzierbares Navigationsmenü ein allgemeines vertikales Layout für App-Bereiche auf oberster Ebene.</span><span class="sxs-lookup"><span data-stu-id="11ebe-104">The navigation view control provides a collapsible navigation menu for top-level navigation in your app.</span></span> <span data-ttu-id="11ebe-105">Dieses Steuerelement dient zur Implementierung des Navigationsbereichsmusters oder Hamburger-Menü-Musters, wobei die Anordnung automatisch an verschiedene Fenstergrößen des Bereichs angepasst wird.</span><span class="sxs-lookup"><span data-stu-id="11ebe-105">This control implements the nav pane, or hamburger menu, pattern and automatically adapts the pane's display mode to different window sizes.</span></span>
+> <span data-ttu-id="7bc51-104">**Dies ist eine Vorabversion**: in diesem Artikel wird eine neue Version des NavigationView-Steuerelements, das noch in der Entwicklung ist.</span><span class="sxs-lookup"><span data-stu-id="7bc51-104">**This is a preview version**: This article describes a new version of the NavigationView control that's still in development.</span></span> <span data-ttu-id="7bc51-105">Für dessen Verwendung benötigen nun die [aktuellsten Windows-Insider Build und SDK](https://insider.windows.com/for-developers/) oder der [Bibliothek für Windows-Benutzeroberfläche](https://docs.microsoft.com/uwp/toolkits/winui/).</span><span class="sxs-lookup"><span data-stu-id="7bc51-105">To use it now, you need the [latest Windows Insider build and SDK](https://insider.windows.com/for-developers/) or the [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/).</span></span>
 
-> <span data-ttu-id="11ebe-106">**Wichtige APIs**: [NavigationView-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview), [NavigationViewItem-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitem), [NavigationViewDisplayMode-Enumeration](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewdisplaymode)</span><span class="sxs-lookup"><span data-stu-id="11ebe-106">**Important APIs**: [NavigationView class](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview), [NavigationViewItem class](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitem), [NavigationViewDisplayMode enumeration](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewdisplaymode)</span></span>
+<span data-ttu-id="7bc51-106">Das Steuerelement NavigationView bietet Navigation für Ihre app auf oberster Ebene.</span><span class="sxs-lookup"><span data-stu-id="7bc51-106">The NavigationView control provides top-level navigation for your app.</span></span> <span data-ttu-id="7bc51-107">Es wird an eine Vielzahl von Bildschirm Größen unterstützt mehrere Navigation Formatvorlagen.</span><span class="sxs-lookup"><span data-stu-id="7bc51-107">It adapts to a variety of screen sizes supports multiple navigation styles.</span></span>
 
-![Beispiel für NavigationView](images/navview_wireframe.png)
+> <span data-ttu-id="7bc51-108">**Windows-UI-Bibliothek-APIs**: [Microsoft.UI.Xaml.Controls.NavigationView-Klasse](/uwp/api/microsoft.ui.xaml.controls.navigationview)</span><span class="sxs-lookup"><span data-stu-id="7bc51-108">**Windows UI Library APIs**: [Microsoft.UI.Xaml.Controls.NavigationView class](/uwp/api/microsoft.ui.xaml.controls.navigationview)</span></span>
 
-## <a name="video-summary"></a><span data-ttu-id="11ebe-108">Video-Zusammenfassung</span><span class="sxs-lookup"><span data-stu-id="11ebe-108">Video summary</span></span>
+> <span data-ttu-id="7bc51-109">**Plattform-APIs**: [Windows.UI.Xaml.Controls.NavigationView-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)</span><span class="sxs-lookup"><span data-stu-id="7bc51-109">**Platform APIs**: [Windows.UI.Xaml.Controls.NavigationView class](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)</span></span>
 
-> [!VIDEO https://channel9.msdn.com/Events/Windows/Windows-Developer-Day-Fall-Creators-Update/WinDev010/player]
+## <a name="get-the-windows-ui-library"></a><span data-ttu-id="7bc51-110">Abrufen der Windows-UI-Bibliothek</span><span class="sxs-lookup"><span data-stu-id="7bc51-110">Get the Windows UI Library</span></span>
 
-## <a name="is-this-the-right-control"></a><span data-ttu-id="11ebe-109">Ist dies das richtige Steuerelement?</span><span class="sxs-lookup"><span data-stu-id="11ebe-109">Is this the right control?</span></span>
+<span data-ttu-id="7bc51-111">Dieses Steuerelement ist Bestandteil der Windows-UI-Bibliothek, ein NuGet-Paket, das neue Steuerelemente und Features der Benutzeroberfläche für apps UWP enthält.</span><span class="sxs-lookup"><span data-stu-id="7bc51-111">This control is included as part of the Windows UI Library, a NuGet package that contains new controls and UI features for UWP apps.</span></span> <span data-ttu-id="7bc51-112">Weitere Informationen, einschließlich Installationshinweise finden Sie unter [Übersicht über die Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/).</span><span class="sxs-lookup"><span data-stu-id="7bc51-112">For more info, including installation instructions, see the  [Windows UI Library overview](https://docs.microsoft.com/uwp/toolkits/winui/).</span></span> 
 
-<span data-ttu-id="11ebe-110">NavigationView eignet sich gut für Folgendes:</span><span class="sxs-lookup"><span data-stu-id="11ebe-110">NavigationView works well for:</span></span>
+## <a name="navigation-styles"></a><span data-ttu-id="7bc51-113">Navigation Formatvorlagen</span><span class="sxs-lookup"><span data-stu-id="7bc51-113">Navigation styles</span></span>
 
--  <span data-ttu-id="11ebe-111">Viele Navigationselementen auf oberster Ebene, die einen ähnlichen Typ aufweisen.</span><span class="sxs-lookup"><span data-stu-id="11ebe-111">Many top-level navigation items of a similar type.</span></span> <span data-ttu-id="11ebe-112">(Dies kann beispielsweise eine Sport-App mit Kategorien wie Football, Baseball, Basketball, Fußball usw. sein.)</span><span class="sxs-lookup"><span data-stu-id="11ebe-112">(For example, a sports app with categories like Football, Baseball, Basketball, Soccer, and so on.)</span></span>
--  <span data-ttu-id="11ebe-113">Eine mittlere bis hohe Zahl (5-10) an Navigationskategorien der obersten Ebene.</span><span class="sxs-lookup"><span data-stu-id="11ebe-113">A medium-to-high number (5-10) of top-level navigational categories.</span></span>
--  <span data-ttu-id="11ebe-114">Bereitstellen einer konsistenten Navigationsumgebung.</span><span class="sxs-lookup"><span data-stu-id="11ebe-114">Providing a consistent navigational experience.</span></span> <span data-ttu-id="11ebe-115">Der Bereich sollte nur Navigationselemente, keine Aktionen enthalten.</span><span class="sxs-lookup"><span data-stu-id="11ebe-115">The pane should include only navigational elements, not actions.</span></span>
--  <span data-ttu-id="11ebe-116">Sparen von Platz auf dem Bildschirm von kleineren Fenstern.</span><span class="sxs-lookup"><span data-stu-id="11ebe-116">Preserving screen real estate of smaller windows.</span></span>
+<span data-ttu-id="7bc51-114">NavigationView werden unterstützt:</span><span class="sxs-lookup"><span data-stu-id="7bc51-114">NavigationView supports:</span></span>
 
-<span data-ttu-id="11ebe-117">NavigationView ist nur eine von mehreren Navigationselementen, die Ihnen zur Verfügung stehen.</span><span class="sxs-lookup"><span data-stu-id="11ebe-117">NavigationView is just one of several navigation elements you can use.</span></span> <span data-ttu-id="11ebe-118">Weitere Informationen zu anderen Navigationsmustern und -Elementen finden Sie unter [Navigationsdesigngrundlagen](../basics/navigation-basics.md).</span><span class="sxs-lookup"><span data-stu-id="11ebe-118">To learn more about other navigation patterns and elements, see [Navigation design basics](../basics/navigation-basics.md).</span></span>
+**<span data-ttu-id="7bc51-115">Im linken Navigationsbereich oder im Menü</span><span class="sxs-lookup"><span data-stu-id="7bc51-115">Left navigation pane or menu</span></span>**
 
-<span data-ttu-id="11ebe-119">Das NavigationView-Steuerelement verfügt über viele integrierte Verhaltensweisen, die das einfache Navigationsbereichsmuster implementieren.</span><span class="sxs-lookup"><span data-stu-id="11ebe-119">The NavigationView control has many built-in behaviors that implement the simple nav pane pattern.</span></span> <span data-ttu-id="11ebe-120">Wenn die Navigation komplexeres Verhalten erfordert, das von NavigationView nicht unterstützt wird, können Sie stattdessen das [Master/Details](master-details.md)-Muster verwenden.</span><span class="sxs-lookup"><span data-stu-id="11ebe-120">If your navigation requires more complex behavior that is not supported by NavigationView, then you might want to consider the [Master/details](master-details.md) pattern instead.</span></span>
+![Navigationsbereich erweitert](images/displaymode-left.png)
 
-## <a name="examples"></a><span data-ttu-id="11ebe-121">Beispiele</span><span class="sxs-lookup"><span data-stu-id="11ebe-121">Examples</span></span>
-<table>
-<th align="left"><span data-ttu-id="11ebe-122">XAML-Steuerelementekatalog</span><span class="sxs-lookup"><span data-stu-id="11ebe-122">XAML Controls Gallery</span></span><th>
-<tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
-<td>
-    <p><span data-ttu-id="11ebe-123">Wenn Sie die App <strong style="font-weight: semi-bold">XAML-Steuerelementekatalog</strong> installiert haben, klicken Sie hier, um <a href="xamlcontrolsgallery:/item/NavigationView">die App zu öffnen und NavigationView in Aktion zu sehen</a>.</span><span class="sxs-lookup"><span data-stu-id="11ebe-123">If you have the <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> app installed, click here to <a href="xamlcontrolsgallery:/item/NavigationView">open the app and see the NavigationView in action</a>.</span></span></p>
-    <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT"><span data-ttu-id="11ebe-124">Erwerben Sie die XAML-Steuerelementekatalog-App (Microsoft Store)</span><span class="sxs-lookup"><span data-stu-id="11ebe-124">Get the XAML Controls Gallery app (Microsoft Store)</span></span></a></li>
-    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics"><span data-ttu-id="11ebe-125">Erwerben Sie den Quellcode (GitHub)</span><span class="sxs-lookup"><span data-stu-id="11ebe-125">Get the source code (GitHub)</span></span></a></li>
-    </ul>
-</td>
-</tr>
-</table>
+**<span data-ttu-id="7bc51-117">Im oberen Navigationsbereich oder im Menü</span><span class="sxs-lookup"><span data-stu-id="7bc51-117">Top navigation pane or menu</span></span>**
 
-## <a name="navigationview-sections"></a><span data-ttu-id="11ebe-126">Abschnitte von NavigationView</span><span class="sxs-lookup"><span data-stu-id="11ebe-126">NavigationView sections</span></span>
+![der oberen Navigationsleiste](images/displaymode-top.png)
 
-![Abschnitte von NavigationView](images/navview_sections.png)
+## <a name="is-this-the-right-control"></a><span data-ttu-id="7bc51-119">Ist dies das richtige Steuerelement?</span><span class="sxs-lookup"><span data-stu-id="7bc51-119">Is this the right control?</span></span>
 
-### <a name="pane"></a><span data-ttu-id="11ebe-128">Bereich</span><span class="sxs-lookup"><span data-stu-id="11ebe-128">Pane</span></span>
+<span data-ttu-id="7bc51-120">NavigationView ist eine adaptive Navigationssteuerelement, die für gut funktioniert:</span><span class="sxs-lookup"><span data-stu-id="7bc51-120">NavigationView is an adaptive navigation control that works well for:</span></span>
 
-<span data-ttu-id="11ebe-129">Mit der integrierten Navigationsschaltfläche („Hamburger“-Schaltfläche) können Benutzer den Bereich öffnen und schließen.</span><span class="sxs-lookup"><span data-stu-id="11ebe-129">The built-in navigation ("hamburger") button lets users open and close the pane.</span></span> <span data-ttu-id="11ebe-130">Sie können bei größeren App-Fenstern mit geöffnetem Bereich diese Schaltfläche mit der Eigenschaft [IsPaneToggleButtonVisible](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.IsPaneToggleButtonVisible) ausblenden.</span><span class="sxs-lookup"><span data-stu-id="11ebe-130">On larger app windows when the pane is open, you may choose to hide this button using the [IsPaneToggleButtonVisible](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.IsPaneToggleButtonVisible) property.</span></span> <span data-ttu-id="11ebe-131">Bei der Beschriftung neben der Hamburger-Schaltfläche handelt es sich um die [PaneTitle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.PaneTitle)-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="11ebe-131">The text label adjacent to the hamburger is the [PaneTitle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.PaneTitle) property.</span></span>
+- <span data-ttu-id="7bc51-121">Bereitstellen einer konsistenten Navigationsfunktionen für in der gesamten Ihrer app.</span><span class="sxs-lookup"><span data-stu-id="7bc51-121">Providing a consistent navigational experience throughout your app.</span></span>
+- <span data-ttu-id="7bc51-122">Bildschirm Immobilien kleinere Windows beibehalten.</span><span class="sxs-lookup"><span data-stu-id="7bc51-122">Preserving screen real estate on smaller windows.</span></span>
+- <span data-ttu-id="7bc51-123">Zugriff auf viele Navigationskategorien organisieren.</span><span class="sxs-lookup"><span data-stu-id="7bc51-123">Organizing access to many navigation categories.</span></span>
 
-<span data-ttu-id="11ebe-132">Die integrierte Schaltfläche „Zurück“ wird in der oberen linken Ecke des Bereichs angezeigt.</span><span class="sxs-lookup"><span data-stu-id="11ebe-132">The built-in back button appears in the top left-hand corner in the pane.</span></span> <span data-ttu-id="11ebe-133">Das NavigationView-Steuerelement fügt dem Zurück-Stapel nicht automatisch Inhalte hinzu, weitere Informationen zum Aktivieren der Rückwärtsnavigation finden Sie jedoch im Abschnitt [rückwärts Navigation](#backwards-navigation).</span><span class="sxs-lookup"><span data-stu-id="11ebe-133">The NavigationView control does not automatically add content to the back stack, but to enable backwards navigation, see the [backwards navigation](#backwards-navigation) section.</span></span>
+<span data-ttu-id="7bc51-124">Andere Navigationssteuerelemente finden Sie unter [Grundlagen der Navigation Entwurf](../basics/navigation-basics.md).</span><span class="sxs-lookup"><span data-stu-id="7bc51-124">For other navigation controls, see [Navigation design basics](../basics/navigation-basics.md).</span></span>
 
-<span data-ttu-id="11ebe-134">Der NavigationView-Bereich kann auch Folgendes enthalten:</span><span class="sxs-lookup"><span data-stu-id="11ebe-134">The NavigationView pane also can contain:</span></span>
+<span data-ttu-id="7bc51-125">Wenn die Navigation komplexeres Verhalten erfordert, das von NavigationView nicht unterstützt wird, können Sie stattdessen das [Master/Details](master-details.md)-Muster verwenden.</span><span class="sxs-lookup"><span data-stu-id="7bc51-125">If your navigation requires more complex behavior that is not supported by NavigationView, then you might want to consider the [Master/details](master-details.md) pattern instead.</span></span>
 
-- <span data-ttu-id="11ebe-135">Navigationselemente in Form von [NavigationViewItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitem), um zu bestimmten Seiten zu navigieren</span><span class="sxs-lookup"><span data-stu-id="11ebe-135">Navigation items, in the form of [NavigationViewItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitem), for navigating to specific pages</span></span>
-- <span data-ttu-id="11ebe-136">Trennzeichen in Form von [NavigationViewItemSeparator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator), um Navigationselemente zu gruppieren</span><span class="sxs-lookup"><span data-stu-id="11ebe-136">Separators, in the form of [NavigationViewItemSeparator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator), for grouping navigation items</span></span>
-- <span data-ttu-id="11ebe-137">Header in Form von [NavigationViewItemHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemheader), zum Beschriften von Gruppen von Elementen</span><span class="sxs-lookup"><span data-stu-id="11ebe-137">Headers, in the form of [NavigationViewItemHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemheader), for labeling groups of items</span></span>
-- <span data-ttu-id="11ebe-138">Eine optionale [AutoSuggestBox](auto-suggest-box.md) für die Suche auf App-Ebene</span><span class="sxs-lookup"><span data-stu-id="11ebe-138">An optional [AutoSuggestBox](auto-suggest-box.md) to allow for app-level search</span></span>
-- <span data-ttu-id="11ebe-139">Ein optionaler Einstiegspunkt für [App-Einstellungen](../app-settings/app-settings-and-data.md).</span><span class="sxs-lookup"><span data-stu-id="11ebe-139">An optional entry point for [app settings](../app-settings/app-settings-and-data.md).</span></span> <span data-ttu-id="11ebe-140">Verwenden Sie zum Ausblenden des Einstellungselements die Eigenschaft [IsSettingsVisible](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.IsSettingsVisible)</span><span class="sxs-lookup"><span data-stu-id="11ebe-140">To hide the settings item, use the [IsSettingsVisible](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.IsSettingsVisible) property</span></span>
-- <span data-ttu-id="11ebe-141">Freier Inhalt in der Fußzeile des Bereichs beim Hinzufügen zur [PaneFooter](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.PaneFooter)-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="11ebe-141">Free-form content in the pane’s footer, when added to the [PaneFooter](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.PaneFooter) property</span></span>
+:::row:::
+    :::column:::
+        ![Einige Bild](images/XAML-controls-gallery-app-icon.png)
+    :::column-end:::
+    <span data-ttu-id="7bc51-127">::: Spaltenbreite = "2"::: **XAML-Steuerelemente-Sammlung**</span><span class="sxs-lookup"><span data-stu-id="7bc51-127">:::column span="2"::: **XAML Controls Gallery**</span></span><br>
+        <span data-ttu-id="7bc51-128">Wenn Sie die Verwendung von XAML-Steuerelemente-Sammlung app installiert haben, klicken Sie auf <a href="xamlcontrolsgallery:/item/NavigationView">hier</a> öffnen Sie die app und finden Sie unter NavigationView in Aktion.</span><span class="sxs-lookup"><span data-stu-id="7bc51-128">If you have the XAML Controls Gallery app installed, click <a href="xamlcontrolsgallery:/item/NavigationView">here</a> to open the app and see NavigationView in action.</span></span>
 
-#### <a name="visual-style"></a><span data-ttu-id="11ebe-142">Visueller Stil</span><span class="sxs-lookup"><span data-stu-id="11ebe-142">Visual style</span></span>
+        <a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Get the XAML Controls Gallery app (Microsoft Store)</a><br>
+        <a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Get the source code (GitHub)</a>
+    :::column-end:::
+:::row-end:::
 
-<span data-ttu-id="11ebe-143">NavigationView-Elemente unterstützen die Ansichtszustände „Ausgewählt“, „Deaktiviert“, „Zeiger über“, „Gedrückt“ und „Fokussiert“.</span><span class="sxs-lookup"><span data-stu-id="11ebe-143">NavigationView items have support for selected, disabled, pointer over, pressed, and focused visual states.</span></span>
+## <a name="display-modes"></a><span data-ttu-id="7bc51-129">Anzeigemodi</span><span class="sxs-lookup"><span data-stu-id="7bc51-129">Display modes</span></span>
 
-![Zustände von NavigationView-Elementen: deaktiviert, Zeiger über, gedrückt und fokussiert](images/navview_item-states.png)
+<span data-ttu-id="7bc51-130">NavigationView verschiedenen Anzeigemodi festgelegt werden kann, über die `PaneDisplayMode` Eigenschaft:</span><span class="sxs-lookup"><span data-stu-id="7bc51-130">NavigationView can be set to different display modes, via the `PaneDisplayMode` property:</span></span>
 
-<span data-ttu-id="11ebe-145">Wenn Hardware- und Softwareanforderungen erfüllt sind, verwendet NavigationView in seinem Bereich automatisch das neue [Acryl-Material](../style/acrylic.md) und [Reveal-highlight](../style/reveal.md).</span><span class="sxs-lookup"><span data-stu-id="11ebe-145">When hardware and software requirements are met, NavigationView automatically uses the new [Acrylic material](../style/acrylic.md) and [Reveal highlight](../style/reveal.md) in its pane.</span></span>
+:::row:::
+    :::column:::
+    ### Left
+    Displays an expanded left positioned pane.
+    :::column-end:::
+    :::column span="2":::
+    ![left nav pane expanded](images/displaymode-left.png)
+    :::column-end:::
+:::row-end:::
 
-### <a name="header"></a><span data-ttu-id="11ebe-146">Kopfzeile</span><span class="sxs-lookup"><span data-stu-id="11ebe-146">Header</span></span>
+<span data-ttu-id="7bc51-131">Wir empfehlen linken Navigationsbereich wenn:</span><span class="sxs-lookup"><span data-stu-id="7bc51-131">We recommend left navigation when:</span></span>
 
-<span data-ttu-id="11ebe-147">Der Kopfzeilenbereich ist vertikal an der Navigationsschaltfläche ausgerichtet und hat eine feste Höhe von 52Pixel.</span><span class="sxs-lookup"><span data-stu-id="11ebe-147">The header area is vertically aligned with the navigation button and has a fixed height of 52 px.</span></span> <span data-ttu-id="11ebe-148">Er dient dazu, den Seitentitel der ausgewählten Navigationskategorie aufrechtzuerhalten.</span><span class="sxs-lookup"><span data-stu-id="11ebe-148">Its purpose is to hold the page title of the selected nav category.</span></span> <span data-ttu-id="11ebe-149">Die Kopfzeile ist an den oberen Rand der Seite angedockt und dient als Scroll-Clipping-Punkt für den Inhaltsbereich.</span><span class="sxs-lookup"><span data-stu-id="11ebe-149">The header is docked to the top of the page and acts as a scroll clipping point for the content area.</span></span>
+- <span data-ttu-id="7bc51-132">Sie haben eine mittlere bis hohe Anzahl (5-10) gleichermaßen wichtig Navigation auf oberster Ebene Kategorien.</span><span class="sxs-lookup"><span data-stu-id="7bc51-132">You have a medium-to-high number (5-10) of equally important top-level navigation categories.</span></span>
+- <span data-ttu-id="7bc51-133">Sie wünschen sich sehr wichtigsten Navigationskategorien mit weniger Speicherplatz für andere app-Inhalte.</span><span class="sxs-lookup"><span data-stu-id="7bc51-133">You desire very prominent navigation categories with less space for other app content.</span></span>
 
-<span data-ttu-id="11ebe-150">Die Kopfzeile muss sichtbar sein, wenn sich die Navigationsansicht im minimierten Modus befindet.</span><span class="sxs-lookup"><span data-stu-id="11ebe-150">The header must be visible when NavigationView is in Minimal mode.</span></span> <span data-ttu-id="11ebe-151">Sie können die Kopfzeile in anderen Modi ausblenden, die bei größeren Fensterbreiten verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="11ebe-151">You may choose to hide the header in other modes, which are used on larger window widths.</span></span> <span data-ttu-id="11ebe-152">Legen Sie dazu die Eigenschaft [AlwaysShowHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.AlwaysShowHeader) auf **false** fest.</span><span class="sxs-lookup"><span data-stu-id="11ebe-152">To do so, set the [AlwaysShowHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.AlwaysShowHeader) property to **false**.</span></span>
+:::row:::
+    :::column:::
+    ### Top
+    Displays a top positioned pane.
+    :::column-end:::
+    :::column span="2":::
+    ![top navigation](images/displaymode-top.png)
+    :::column-end:::
+:::row-end:::
 
-### <a name="content"></a><span data-ttu-id="11ebe-153">Inhalt</span><span class="sxs-lookup"><span data-stu-id="11ebe-153">Content</span></span>
+<span data-ttu-id="7bc51-134">Wir empfehlen, dass der oberen Navigationsleiste wenn:</span><span class="sxs-lookup"><span data-stu-id="7bc51-134">We recommend top navigation when:</span></span>
 
-<span data-ttu-id="11ebe-154">Im Inhaltsbereich werden die meisten Informationen für die ausgewählte Navigationskategorie angezeigt.</span><span class="sxs-lookup"><span data-stu-id="11ebe-154">The content area is where most of the information for the selected nav category is displayed.</span></span> 
+- <span data-ttu-id="7bc51-135">Sie haben 5 oder weniger Kategorien gleichermaßen wichtig Navigation auf oberster Ebene, sodass zusätzliche Navigation auf oberster Ebene Kategorien, die in der Dropdownliste landen Überlauf im Menü gelten als weniger wichtig.</span><span class="sxs-lookup"><span data-stu-id="7bc51-135">You have 5 or less equally important top-level navigation categories, such that any additional top-level navigation categories that end up in the dropdown overflow menu are considered less important.</span></span>
+- <span data-ttu-id="7bc51-136">Sie müssen alle Navigationsoptionen auf Bildschirm anzeigen.</span><span class="sxs-lookup"><span data-stu-id="7bc51-136">You need to show all navigation options on screen.</span></span>
+- <span data-ttu-id="7bc51-137">Sie wünschen mehr Platz für Ihre app-Inhalte.</span><span class="sxs-lookup"><span data-stu-id="7bc51-137">You desire more space for your app content.</span></span>
+- <span data-ttu-id="7bc51-138">Symbole können nicht eindeutig Ihrer app Navigationskategorien beschreiben.</span><span class="sxs-lookup"><span data-stu-id="7bc51-138">Icons cannot clearly describe your app's navigation categories.</span></span>
 
-<span data-ttu-id="11ebe-155">Wir empfehlen, Ränder für Ihren Inhaltsbereich auf 12Pixel festzulegen, wenn sich NavigationView im minimierten Modus befindet. Verwenden Sie andernfalls 24Pixel.</span><span class="sxs-lookup"><span data-stu-id="11ebe-155">We recommend 12px margins for your content area when NavigationView is in Minimal mode and 24px margins otherwise.</span></span>
+:::row:::
+    :::column:::
+    ### LeftCompact
+    Displays a thin sliver with icons on the left.
+    :::column-end:::
+    :::column span="2":::
+    ![nav pane compact](images/displaymode-leftcompact.png)
+    :::column-end:::
+:::row-end:::
 
-## <a name="navigationview-display-modes"></a><span data-ttu-id="11ebe-156">Anzeigemodi für NavigationView</span><span class="sxs-lookup"><span data-stu-id="11ebe-156">NavigationView display modes</span></span>
-<span data-ttu-id="11ebe-157">Der Navigationsansichtsbereich kann offen oder geschlossen sein und verfügt über drei Optionen für Anzeigemodi:</span><span class="sxs-lookup"><span data-stu-id="11ebe-157">The NavigationView pane can be open or closed, and has three display mode options:</span></span>
--  <span data-ttu-id="11ebe-158">**Minimiert** Nur die „Hamburger“-Schaltfläche bleibt fest, während der Bereich nach Bedarf ein- und ausgeblendet wird.</span><span class="sxs-lookup"><span data-stu-id="11ebe-158">**Minimal** Only the hamburger button remains fixed while the pane shows and hides as needed.</span></span>
--  <span data-ttu-id="11ebe-159">**Kompakt** Der Bereich wird als schmaler Streifen angezeigt, der zur vollen Breite erweitert werden kann.</span><span class="sxs-lookup"><span data-stu-id="11ebe-159">**Compact** The pane always shows as a narrow sliver which can be opened to full width.</span></span>
--  <span data-ttu-id="11ebe-160">**Erweitert** Der Bereich wird neben dem Inhalt geöffnet.</span><span class="sxs-lookup"><span data-stu-id="11ebe-160">**Expanded** The pane is open alongside the content.</span></span> <span data-ttu-id="11ebe-161">Beim Schließen durch Aktivieren der „Hamburger“-Schaltfläche wird die Breite zu einem schmalen Streifen.</span><span class="sxs-lookup"><span data-stu-id="11ebe-161">When closed by activating the hamburger button, the pane's width becomes a narrow sliver.</span></span>
+:::row:::
+    :::column:::
+    ### LeftMinimal
+    Displays only the menu button.
+    :::column-end:::
+    :::column span="2":::
+    ![nav pane minimal](images/displaymode-leftminimal.png)
+    :::column-end:::
+:::row-end:::
 
-<span data-ttu-id="11ebe-162">In der Standardeinstellung wählt das System je nach Größe des Bildschirmbereichs, der für das Steuerelement verfügbar ist, automatisch den optimalen Anzeigemodus aus.</span><span class="sxs-lookup"><span data-stu-id="11ebe-162">By default, the system automatically selects the optimal display mode based on the amount of screen space available to the control.</span></span> <span data-ttu-id="11ebe-163">(Sie können diese Einstellung [überschreiben](#overriding-the-default-adaptive-behavior).)</span><span class="sxs-lookup"><span data-stu-id="11ebe-163">(You can [override](#overriding-the-default-adaptive-behavior) this setting.)</span></span>
+### <a name="auto"></a><span data-ttu-id="7bc51-139">Auto</span><span class="sxs-lookup"><span data-stu-id="7bc51-139">Auto</span></span>
 
-### <a name="minimal"></a><span data-ttu-id="11ebe-164">Minimiert</span><span class="sxs-lookup"><span data-stu-id="11ebe-164">Minimal</span></span>
+![GIF Leftnav adaptive Standardverhalten](images/displaymode-auto.png)
 
-![NavigationView im minimierten Modus mit geschlossenem und geöffnetem Bereich](images/navview_minimal.png)
+<span data-ttu-id="7bc51-141">Passt zwischen LeftMinimal auf kleinen Bildschirmen, LeftCompact auf mittlere Bildschirmen und Links auf großen Bildschirmen.</span><span class="sxs-lookup"><span data-stu-id="7bc51-141">Adapts between LeftMinimal on small screens, LeftCompact on medium screens, and Left on large screens.</span></span> <span data-ttu-id="7bc51-142">Finden Sie weitere Informationen im Abschnitt [adaptive Verhalten](#adaptive-behavior) .</span><span class="sxs-lookup"><span data-stu-id="7bc51-142">See the [adaptive behavior](#adaptive-behavior) section for more information.</span></span>
 
--  <span data-ttu-id="11ebe-166">Ist der Bereich geschlossen, wird er standardmäßig ausgeblendet, und es wird nur die Navigationsschaltfläche angezeigt.</span><span class="sxs-lookup"><span data-stu-id="11ebe-166">When closed, the pane is hidden by default, with only the nav button visible.</span></span>
--  <span data-ttu-id="11ebe-167">Bietet On-Demand-Navigation, die Platz auf dem Bildschirm spart.</span><span class="sxs-lookup"><span data-stu-id="11ebe-167">Provides on-demand navigation that conserves screen real estate.</span></span> <span data-ttu-id="11ebe-168">Ideal für Apps auf Smartphones und Tablets.</span><span class="sxs-lookup"><span data-stu-id="11ebe-168">Ideal for apps on phones and phablets.</span></span>
--  <span data-ttu-id="11ebe-169">Durch Drücken der Navigationsschaltfläche wird der Bereich geöffnet und geschlossen, der als eine Überlagerung über der Kopfzeile und dem Inhalt angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="11ebe-169">Pressing the nav button opens and closes the pane, which draws as an overlay above the header and content.</span></span> <span data-ttu-id="11ebe-170">Inhalt wird nicht dynamisch umgebrochen.</span><span class="sxs-lookup"><span data-stu-id="11ebe-170">Content does not reflow.</span></span>
--  <span data-ttu-id="11ebe-171">Im geöffneten Zustand stellt er einen vorübergehenden Bereich dar, der durch eine Geste zum einfachen Ausblenden wie Treffen einer Auswahl, Drücken der Zurück-Schaltfläche oder Tippen außerhalb des Bereichs geschlossen werden kann.</span><span class="sxs-lookup"><span data-stu-id="11ebe-171">When open, the pane is transient and can be closed with a light dismiss gesture such as making a selection, pressing the back button, or tapping outside the pane.</span></span>
--  <span data-ttu-id="11ebe-172">Das ausgewählte Element wird angezeigt, wenn die Überlagerung des Bereichs geöffnet wird.</span><span class="sxs-lookup"><span data-stu-id="11ebe-172">The selected item becomes visible when the pane’s overlay opens.</span></span>
--  <span data-ttu-id="11ebe-173">Wenn Anforderungen erfüllt sind, verwendet der Hintergrund des geöffneten Bereichs [In-App-Acryl](../style/acrylic.md#acrylic-blend-types).</span><span class="sxs-lookup"><span data-stu-id="11ebe-173">When requirements are met, the open pane’s background is [in-app acrylic](../style/acrylic.md#acrylic-blend-types).</span></span>
--  <span data-ttu-id="11ebe-174">NavigationView befindet sich standardmäßig im minimierten Modus, wenn die gesamte Breite kleiner oder gleich 640Pixel ist.</span><span class="sxs-lookup"><span data-stu-id="11ebe-174">By default, NavigationView is in Minimal mode when its overall width is less than or equal to 640px.</span></span>
+## <a name="anatomy"></a><span data-ttu-id="7bc51-143">Aufbau</span><span class="sxs-lookup"><span data-stu-id="7bc51-143">Anatomy</span></span>
 
-### <a name="compact"></a><span data-ttu-id="11ebe-175">Kompakt</span><span class="sxs-lookup"><span data-stu-id="11ebe-175">Compact</span></span>
+<b><span data-ttu-id="7bc51-144">Linke Navigationsleiste</span><span class="sxs-lookup"><span data-stu-id="7bc51-144">Left nav</span></span></b><br>
 
-![NavigationView im kompakten Modus mit geschlossenem und geöffnetem Bereich](images/navview_compact.png)
+![linken NavigationView Abschnitte](images/leftnav-anatomy.png)
 
--  <span data-ttu-id="11ebe-177">Ist der Bereich geschlossen, werden ein vertikaler Streifen des Bereichs nur mit Symbolen sowie die Navigationsschaltfläche angezeigt.</span><span class="sxs-lookup"><span data-stu-id="11ebe-177">When closed, a vertical sliver of the pane showing only icons and the nav button is visible.</span></span>
--  <span data-ttu-id="11ebe-178">Zeigen die ausgewählte Position an, während sie nur wenig Platz auf dem Bildschirm belegen.</span><span class="sxs-lookup"><span data-stu-id="11ebe-178">Provides some indication of the selected location while using a small amount of screen real estate.</span></span>
--  <span data-ttu-id="11ebe-179">Dieser Modus ist besser für mittelgroße Bildschirme wie Tablets und [10-Fuß-Umgebungen](../devices/designing-for-tv.md) geeignet.</span><span class="sxs-lookup"><span data-stu-id="11ebe-179">This mode is better suited for medium screens like tablets and [10-foot experiences](../devices/designing-for-tv.md).</span></span>
--  <span data-ttu-id="11ebe-180">Durch Drücken der Navigationsschaltfläche wird der Bereich geöffnet und geschlossen, der als eine Überlagerung über der Kopfzeile und dem Inhalt angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="11ebe-180">Pressing the nav button opens and closes the pane, which draws as an overlay above the header and content.</span></span> <span data-ttu-id="11ebe-181">Inhalt wird nicht umgebrochen.</span><span class="sxs-lookup"><span data-stu-id="11ebe-181">Content does not reflow.</span></span>
--  <span data-ttu-id="11ebe-182">Die Kopfzeile ist nicht erforderlich und kann ausgeblendet werden, um Inhalt mehr vertikale Fläche zu bieten.</span><span class="sxs-lookup"><span data-stu-id="11ebe-182">The Header is not required and can be hidden to give Content more vertical space.</span></span>
--  <span data-ttu-id="11ebe-183">Das ausgewählte Element zeigt einen visuellen Hinweis an, um hervorzuheben, wo sich der Benutzer in der Navigationsstruktur befindet.</span><span class="sxs-lookup"><span data-stu-id="11ebe-183">The selected item shows a visual indicator to highlight where the user is in the navigation tree.</span></span>
--  <span data-ttu-id="11ebe-184">Wenn Anforderungen erfüllt sind, verwendet der Hintergrund des Bereichs [In-App-Acryl](../style/acrylic.md#acrylic-blend-types).</span><span class="sxs-lookup"><span data-stu-id="11ebe-184">When requirements are met, the pane’s background is [in-app acrylic](../style/acrylic.md#acrylic-blend-types).</span></span>
--  <span data-ttu-id="11ebe-185">NavigationView befindet sich standardmäßig im kompakten Modus, wenn die gesamte Breite zwischen 641 und 1007px aufweist.</span><span class="sxs-lookup"><span data-stu-id="11ebe-185">By default, NavigationView is in Compact mode when its overall width is between 641px and 1007px.</span></span>
+<b><span data-ttu-id="7bc51-146">Oben nav</span><span class="sxs-lookup"><span data-stu-id="7bc51-146">Top nav</span></span></b><br>
 
-### <a name="expanded"></a><span data-ttu-id="11ebe-186">Erweitert</span><span class="sxs-lookup"><span data-stu-id="11ebe-186">Expanded</span></span>
+![Top-NavigationView Abschnitte](images/topnav-anatomy.png)
 
-![NavigationView im erweiterten Modus mit geöffnetem Bereich](images/navview_expanded.png)
+## <a name="pane"></a><span data-ttu-id="7bc51-148">Bereich</span><span class="sxs-lookup"><span data-stu-id="7bc51-148">Pane</span></span>
 
--  <span data-ttu-id="11ebe-188">Der Bereich bleibt standardmäßig geöffnet.</span><span class="sxs-lookup"><span data-stu-id="11ebe-188">By default, the pane remains open.</span></span> <span data-ttu-id="11ebe-189">Dieser Modus ist besser für größere Bildschirme geeignet.</span><span class="sxs-lookup"><span data-stu-id="11ebe-189">This mode is better suited for larger screens.</span></span>
--  <span data-ttu-id="11ebe-190">Der Bereich wird neben Kopfzeile und Inhalt angezeigt, der innerhalb des verfügbaren Platzes dynamisch umgebrochen wird.</span><span class="sxs-lookup"><span data-stu-id="11ebe-190">The pane draws side-by-side with the header and content, which reflows within its available space.</span></span>
--  <span data-ttu-id="11ebe-191">Wenn der Bereich mit der Navigationsschaltfläche geschlossen wird, wird der Bereich als ein schmaler Streifen neben dem Header und Inhalt angezeigt.</span><span class="sxs-lookup"><span data-stu-id="11ebe-191">When the pane is closed using the nav button, the pane shows as a narrow sliver side-by-side with the header and content.</span></span>
--  <span data-ttu-id="11ebe-192">Die Kopfzeile ist nicht erforderlich und kann ausgeblendet werden, um Inhalt mehr vertikale Fläche zu bieten.</span><span class="sxs-lookup"><span data-stu-id="11ebe-192">The Header is not required and can be hidden to give Content more vertical space.</span></span>
--  <span data-ttu-id="11ebe-193">Das ausgewählte Element zeigt einen visuellen Hinweis an, um hervorzuheben, wo sich Benutzer in der Navigationsstruktur befindet.</span><span class="sxs-lookup"><span data-stu-id="11ebe-193">The selected item shows a visual indicator to highlight where the user is in the navigation tree.</span></span>
--  <span data-ttu-id="11ebe-194">Wenn Anforderungen erfüllt sind, wird der Hintergrund des Bereichs mit [Hintergrund-Acryl](../style/acrylic.md#acrylic-blend-types) gezeichnet.</span><span class="sxs-lookup"><span data-stu-id="11ebe-194">When requirements are met, the pane’s background is painted using [background acrylic](../style/acrylic.md#acrylic-blend-types).</span></span>
--  <span data-ttu-id="11ebe-195">NavigationView befindet sich standardmäßig im erweiterten Modus, wenn die gesamte Breite mehr als 1007px umfasst.</span><span class="sxs-lookup"><span data-stu-id="11ebe-195">By default, NavigationView is in Expanded mode when its overall width is greater than 1007px.</span></span>
+<span data-ttu-id="7bc51-149">Im Bereich kann positioniert werden im Vordergrund oder auf der linken Seite, über die `PanePosition` Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="7bc51-149">The pane can be positioned either on top or on left, via the `PanePosition` property.</span></span>
 
-### <a name="overriding-the-default-adaptive-behavior"></a><span data-ttu-id="11ebe-196">Überschreiben des standardmäßigen adaptiven Verhaltens</span><span class="sxs-lookup"><span data-stu-id="11ebe-196">Overriding the default adaptive behavior</span></span>
+<span data-ttu-id="7bc51-150">Hier wird die detaillierte Bereich Aufbau für die linken und oberen Bereich Positionen:</span><span class="sxs-lookup"><span data-stu-id="7bc51-150">Here is the detailed pane anatomy for the left and top pane positions:</span></span>
 
-<span data-ttu-id="11ebe-197">NavigationView ändert je nach verfügbarem Platz auf dem Bildschirm automatisch den Anzeigemodus.</span><span class="sxs-lookup"><span data-stu-id="11ebe-197">NavigationView automatically changes its display mode based on the amount of screen space available to it.</span></span>
+<b><span data-ttu-id="7bc51-151">Linke Navigationsleiste</span><span class="sxs-lookup"><span data-stu-id="7bc51-151">Left nav</span></span></b><br>
+
+![NavigationView Aufbau](images/navview-pane-anatomy-vertical.png)
+
+1. <span data-ttu-id="7bc51-153">Menü-Taste</span><span class="sxs-lookup"><span data-stu-id="7bc51-153">Menu button</span></span>
+1. <span data-ttu-id="7bc51-154">Navigationselemente</span><span class="sxs-lookup"><span data-stu-id="7bc51-154">Navigation items</span></span>
+1. <span data-ttu-id="7bc51-155">Trennzeichen</span><span class="sxs-lookup"><span data-stu-id="7bc51-155">Separators</span></span>
+1. <span data-ttu-id="7bc51-156">Header</span><span class="sxs-lookup"><span data-stu-id="7bc51-156">Headers</span></span>
+1. <span data-ttu-id="7bc51-157">AutoSuggestBox (optional)</span><span class="sxs-lookup"><span data-stu-id="7bc51-157">AutoSuggestBox (optional)</span></span>
+1. <span data-ttu-id="7bc51-158">Schaltfläche "Einstellungen" (optional)</span><span class="sxs-lookup"><span data-stu-id="7bc51-158">Settings button (optional)</span></span>
+
+<b><span data-ttu-id="7bc51-159">Oben nav</span><span class="sxs-lookup"><span data-stu-id="7bc51-159">Top nav</span></span></b><br>
+
+![NavigationView Aufbau](images/navview-pane-anatomy-horizontal.png)
+
+1. <span data-ttu-id="7bc51-161">Header</span><span class="sxs-lookup"><span data-stu-id="7bc51-161">Headers</span></span>
+1. <span data-ttu-id="7bc51-162">Navigationselemente</span><span class="sxs-lookup"><span data-stu-id="7bc51-162">Navigation items</span></span>
+1. <span data-ttu-id="7bc51-163">Trennzeichen</span><span class="sxs-lookup"><span data-stu-id="7bc51-163">Separators</span></span>
+1. <span data-ttu-id="7bc51-164">AutoSuggestBox (optional)</span><span class="sxs-lookup"><span data-stu-id="7bc51-164">AutoSuggestBox (optional)</span></span>
+1. <span data-ttu-id="7bc51-165">Schaltfläche "Einstellungen" (optional)</span><span class="sxs-lookup"><span data-stu-id="7bc51-165">Settings button (optional)</span></span>
+
+<span data-ttu-id="7bc51-166">Die zurück-Schaltfläche wird angezeigt, in der oberen linken Ecke des Bereichs, aber NavigationView werden Inhalte nicht automatisch auf den Back-Stapel hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="7bc51-166">The back button appears in the top left-hand corner of the pane, but NavigationView does not automatically add content to the back stack.</span></span> <span data-ttu-id="7bc51-167">Für die Abwärtskompatibilität Navigation, finden Sie unter der [Rückwärts Navigation](#backwards-navigation) Abschnitt.</span><span class="sxs-lookup"><span data-stu-id="7bc51-167">To enable backwards navigation, see the [backwards navigation](#backwards-navigation) section.</span></span>
+
+<span data-ttu-id="7bc51-168">Auch kann im Bereich NavigationView enthalten:</span><span class="sxs-lookup"><span data-stu-id="7bc51-168">The NavigationView pane can also contain:</span></span>
+
+1. <span data-ttu-id="7bc51-169">Navigationselemente in Form von [NavigationViewItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitem), für die Navigation zu bestimmten Seiten.</span><span class="sxs-lookup"><span data-stu-id="7bc51-169">Navigation items, in the form of [NavigationViewItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitem), for navigating to specific pages.</span></span>
+2. <span data-ttu-id="7bc51-170">Trennlinien, in Form von [NavigationViewItemSeparator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator), zum Gruppieren von Navigationselemente.</span><span class="sxs-lookup"><span data-stu-id="7bc51-170">Separators, in the form of [NavigationViewItemSeparator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator), for grouping navigation items.</span></span> <span data-ttu-id="7bc51-171">Legen Sie die [Durchlässigkeit](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator.opacity) -Eigenschaft auf 0, um das Trennzeichen als Speicherplatz zu rendern.</span><span class="sxs-lookup"><span data-stu-id="7bc51-171">Set the [Opacity](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator.opacity) property to 0 to render the separator as space.</span></span>
+3. <span data-ttu-id="7bc51-172">Kopfzeilen in Form von [NavigationViewItemHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemheader), zum Beschriften Gruppen von Elementen.</span><span class="sxs-lookup"><span data-stu-id="7bc51-172">Headers, in the form of [NavigationViewItemHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemheader), for labeling groups of items.</span></span>
+4. <span data-ttu-id="7bc51-173">Eine optionale [AutoSuggestBox](auto-suggest-box.md) app-Level Search zulässt.</span><span class="sxs-lookup"><span data-stu-id="7bc51-173">An optional [AutoSuggestBox](auto-suggest-box.md) to allow for app-level search.</span></span>
+5. <span data-ttu-id="7bc51-174">Ein optionaler Einstiegspunkt für [App-Einstellungen](../app-settings/app-settings-and-data.md).</span><span class="sxs-lookup"><span data-stu-id="7bc51-174">An optional entry point for [app settings](../app-settings/app-settings-and-data.md).</span></span> <span data-ttu-id="7bc51-175">Wenn das Element Settings ausblenden möchten, verwenden Sie die [IsSettingsVisible](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.IsSettingsVisible) -Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="7bc51-175">To hide the settings item, use the [IsSettingsVisible](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.IsSettingsVisible) property.</span></span>
+
+<span data-ttu-id="7bc51-176">Der linke Bereich enthält:</span><span class="sxs-lookup"><span data-stu-id="7bc51-176">The left pane contains:</span></span>
+
+6. <span data-ttu-id="7bc51-177">Menüschaltfläche, um den Bereich öffnen und schließen zu wechseln.</span><span class="sxs-lookup"><span data-stu-id="7bc51-177">Menu button to toggle the pane open and close.</span></span> <span data-ttu-id="7bc51-178">Sie können bei größeren App-Fenstern mit geöffnetem Bereich diese Schaltfläche mit der Eigenschaft [IsPaneToggleButtonVisible](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.IsPaneToggleButtonVisible) ausblenden.</span><span class="sxs-lookup"><span data-stu-id="7bc51-178">On larger app windows when the pane is open, you may choose to hide this button using the [IsPaneToggleButtonVisible](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.IsPaneToggleButtonVisible) property.</span></span>
+
+### <a name="pane-footer"></a><span data-ttu-id="7bc51-179">Bereich-Fußzeile</span><span class="sxs-lookup"><span data-stu-id="7bc51-179">Pane footer</span></span>
+
+<span data-ttu-id="7bc51-180">Freier Inhalt in der Fußzeile des Bereichs beim Hinzufügen zur [PaneFooter](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.PaneFooter)-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="7bc51-180">Free-form content in the pane’s footer, when added to the [PaneFooter](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.PaneFooter) property</span></span>
+
+:::row:::
+    :::column:::
+    <b><span data-ttu-id="7bc51-181">Linke Navigationsleiste</span><span class="sxs-lookup"><span data-stu-id="7bc51-181">Left nav</span></span></b><br>
+    ![Bereich Fußzeile linke Navigationsleiste](images/navview-freeform-footer-left.png)<br>
+    :::column-end:::
+    :::column:::
+     <b><span data-ttu-id="7bc51-183">Oben nav</span><span class="sxs-lookup"><span data-stu-id="7bc51-183">Top nav</span></span></b><br>
+    ![Bereich Kopfzeile oben nav](images/navview-freeform-footer-top.png)<br>
+    :::column-end:::
+:::row-end:::
+
+### <a name="pane-header"></a><span data-ttu-id="7bc51-185">Header des Bereichs</span><span class="sxs-lookup"><span data-stu-id="7bc51-185">Pane header</span></span>
+
+<span data-ttu-id="7bc51-186">Formfreies Inhalte in den Bereich Kopfzeile, wenn die Eigenschaft [PaneHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.PaneHeader) hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="7bc51-186">Free-form content in the pane's header, when added to the [PaneHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.PaneHeader) property</span></span>
+
+:::row:::
+    :::column:::
+    <b><span data-ttu-id="7bc51-187">Linke Navigationsleiste</span><span class="sxs-lookup"><span data-stu-id="7bc51-187">Left nav</span></span></b><br>
+    ![Bereich Kopfzeile linke Navigationsleiste](images/navview-freeform-header-left.png)<br>
+    :::column-end:::
+    :::column:::
+     <b><span data-ttu-id="7bc51-189">Oben nav</span><span class="sxs-lookup"><span data-stu-id="7bc51-189">Top nav</span></span></b><br>
+    ![Bereich Kopfzeile oben nav](images/navview-freeform-header-top.png)<br>
+    :::column-end:::
+:::row-end:::
+
+### <a name="pane-content"></a><span data-ttu-id="7bc51-191">Bereich Inhalt</span><span class="sxs-lookup"><span data-stu-id="7bc51-191">Pane content</span></span>
+
+<span data-ttu-id="7bc51-192">Formfreies Inhalte im Bereich, wenn die Eigenschaft [PaneCustomContent](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.PaneCustomContent) hinzugefügt</span><span class="sxs-lookup"><span data-stu-id="7bc51-192">Free-form content in the pane, when added to the [PaneCustomContent](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.PaneCustomContent) property</span></span>
+
+:::row:::
+    :::column:::
+    <b><span data-ttu-id="7bc51-193">Linke Navigationsleiste</span><span class="sxs-lookup"><span data-stu-id="7bc51-193">Left nav</span></span></b><br>
+    ![Im Bereich benutzerdefinierte Contentleft nav](images/navview-freeform-pane-left.png)<br>
+    :::column-end:::
+    :::column:::
+     <b><span data-ttu-id="7bc51-195">Oben nav</span><span class="sxs-lookup"><span data-stu-id="7bc51-195">Top nav</span></span></b><br>
+    ![Im Bereich benutzerdefinierte Content oben nav](images/navview-freeform-pane-top.png)<br>
+    :::column-end:::
+:::row-end:::
+
+### <a name="visual-style"></a><span data-ttu-id="7bc51-197">Visueller Stil</span><span class="sxs-lookup"><span data-stu-id="7bc51-197">Visual style</span></span>
+
+<span data-ttu-id="7bc51-198">Wenn Hardware-und softwareanforderungen erfüllt sind, verwendet NavigationView automatisch dem [Acryl Material](../style/acrylic.md) in den Bereich und nur in den linken Bereich [Hervorhebung anzuzeigen](../style/reveal.md) .</span><span class="sxs-lookup"><span data-stu-id="7bc51-198">When hardware and software requirements are met, NavigationView automatically uses the [Acrylic material](../style/acrylic.md) in its pane, and [Reveal highlight](../style/reveal.md) only in its left pane.</span></span>
+
+## <a name="header"></a><span data-ttu-id="7bc51-199">Kopfzeile</span><span class="sxs-lookup"><span data-stu-id="7bc51-199">Header</span></span>
+
+![Navview generische Bild des Kopfbereich](images/nav-header.png)
+
+<span data-ttu-id="7bc51-201">Im Kopfbereich die Navigationsschaltfläche an der Position des linken Bereich vertikal ausgerichtet ist, und unterhalb des Bereichs in die Position des oberen Bereich liegt.</span><span class="sxs-lookup"><span data-stu-id="7bc51-201">The header area is vertically aligned with the navigation button in the left pane position, and lies below the pane in the top pane position.</span></span> <span data-ttu-id="7bc51-202">Es wurde eine feste Höhe von 52 px.</span><span class="sxs-lookup"><span data-stu-id="7bc51-202">It has a fixed height of 52 px.</span></span> <span data-ttu-id="7bc51-203">Er dient dazu, den Seitentitel der ausgewählten Navigationskategorie aufrechtzuerhalten.</span><span class="sxs-lookup"><span data-stu-id="7bc51-203">Its purpose is to hold the page title of the selected nav category.</span></span> <span data-ttu-id="7bc51-204">Die Kopfzeile ist an den oberen Rand der Seite angedockt und dient als Scroll-Clipping-Punkt für den Inhaltsbereich.</span><span class="sxs-lookup"><span data-stu-id="7bc51-204">The header is docked to the top of the page and acts as a scroll clipping point for the content area.</span></span>
+
+<span data-ttu-id="7bc51-205">Die Kopfzeile muss sichtbar sein, wenn NavigationView in der minimale Anzeigemodus befindet.</span><span class="sxs-lookup"><span data-stu-id="7bc51-205">The header must be visible when NavigationView is in Minimal display mode.</span></span> <span data-ttu-id="7bc51-206">Sie können die Kopfzeile in anderen Modi ausblenden, die bei größeren Fensterbreiten verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="7bc51-206">You may choose to hide the header in other modes, which are used on larger window widths.</span></span> <span data-ttu-id="7bc51-207">Legen Sie dazu die Eigenschaft [AlwaysShowHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.AlwaysShowHeader) auf **false** fest.</span><span class="sxs-lookup"><span data-stu-id="7bc51-207">To do so, set the [AlwaysShowHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.AlwaysShowHeader) property to **false**.</span></span>
+
+## <a name="content"></a><span data-ttu-id="7bc51-208">Inhalt</span><span class="sxs-lookup"><span data-stu-id="7bc51-208">Content</span></span>
+
+![Navview generische Bild des Inhaltsbereich](images/nav-content.png)
+
+<span data-ttu-id="7bc51-210">Im Inhaltsbereich werden die meisten Informationen für die ausgewählte Navigationskategorie angezeigt.</span><span class="sxs-lookup"><span data-stu-id="7bc51-210">The content area is where most of the information for the selected nav category is displayed.</span></span>
+
+<span data-ttu-id="7bc51-211">Wir empfehlen, Ränder für Ihren Inhaltsbereich auf 12Pixel festzulegen, wenn sich NavigationView im minimierten Modus befindet. Verwenden Sie andernfalls 24Pixel.</span><span class="sxs-lookup"><span data-stu-id="7bc51-211">We recommend 12px margins for your content area when NavigationView is in Minimal mode and 24px margins otherwise.</span></span>
+
+## <a name="adaptive-behavior"></a><span data-ttu-id="7bc51-212">Adaptives Verhalten</span><span class="sxs-lookup"><span data-stu-id="7bc51-212">Adaptive behavior</span></span>
+
+<span data-ttu-id="7bc51-213">NavigationView ändert je nach verfügbarem Platz auf dem Bildschirm automatisch den Anzeigemodus.</span><span class="sxs-lookup"><span data-stu-id="7bc51-213">NavigationView automatically changes its display mode based on the amount of screen space available to it.</span></span> <span data-ttu-id="7bc51-214">Sie möchten jedoch das Verhalten adaptive Modus anpassen.</span><span class="sxs-lookup"><span data-stu-id="7bc51-214">However, you might want to customize the adaptive display mode behavior.</span></span>
+
+### <a name="default"></a><span data-ttu-id="7bc51-215">Standard</span><span class="sxs-lookup"><span data-stu-id="7bc51-215">Default</span></span>
+
+<span data-ttu-id="7bc51-216">Das adaptive Standardverhalten von NavigationView ist eine erweiterte linken Bereich auf große Fenster Breiten, eine linke nur Symbol-Navigationsleiste Bereich auf mittlere Fenster Breiten und eine Menüschaltfläche Hamburger auf kleinen Fenster Breite angezeigt.</span><span class="sxs-lookup"><span data-stu-id="7bc51-216">The default adaptive behavior of NavigationView is to show an expanded left pane on large window widths, a left icon-only nav pane on medium window widths, and a hamburger menu button on small window widths.</span></span> <span data-ttu-id="7bc51-217">Weitere Informationen zu Fenstergrößen für adaptive Verhalten finden Sie unter [Bildschirmgrößen und Haltepunkte](../layout/screen-sizes-and-breakpoints-for-responsive-design.md).</span><span class="sxs-lookup"><span data-stu-id="7bc51-217">For more information about window sizes for adaptive behavior, see [Screen sizes and breakpoints](../layout/screen-sizes-and-breakpoints-for-responsive-design.md).</span></span>
+
+![GIF Leftnav adaptive Standardverhalten](images/displaymode-auto.png)
+
+```xaml
+<NavigationView />
+```
+
+### <a name="minimal"></a><span data-ttu-id="7bc51-219">Minimiert</span><span class="sxs-lookup"><span data-stu-id="7bc51-219">Minimal</span></span>
+
+<span data-ttu-id="7bc51-220">Ein zweites allgemeine adaptives Muster ist die Verwendung einen erweiterten linken Bereich auf große Fenster Breiten und ein Hamburger Menü auf beide Breiten mittleren und kleinen Fenster.</span><span class="sxs-lookup"><span data-stu-id="7bc51-220">A second common adaptive pattern is to use an expanded left pane on large window widths, and a hamburger menu on both medium and small window widths.</span></span>
+
+![GIF Leftnav adaptive Verhalten 2](images/adaptive-behavior-minimal.png)
+
+```xaml
+<NavigationView CompactModeThresholdWidth="1008" ExpandedModeThresholdWidth="1007" />
+```
+
+<span data-ttu-id="7bc51-222">Es wird empfohlen, diese Lösung, wenn:</span><span class="sxs-lookup"><span data-stu-id="7bc51-222">We recommend this when:</span></span>
+
+- <span data-ttu-id="7bc51-223">Sie wünschen sich mehr Platz für app-Inhalten auf kleineren Fenster breiten.</span><span class="sxs-lookup"><span data-stu-id="7bc51-223">You desire more space for app content on smaller window widths.</span></span>
+- <span data-ttu-id="7bc51-224">Ihre Navigationskategorien werden nicht eindeutig mit Symbolen dargestellt.</span><span class="sxs-lookup"><span data-stu-id="7bc51-224">Your navigation categories cannot be clearly represented with icons.</span></span>
+
+### <a name="compact"></a><span data-ttu-id="7bc51-225">Kompakt</span><span class="sxs-lookup"><span data-stu-id="7bc51-225">Compact</span></span>
+
+<span data-ttu-id="7bc51-226">Ein drittes Allgemeines adaptives Muster ist die Verwendung einen erweiterten linken Bereich auf große Fenster Breiten und eine linke nur Symbol-Navigationsleiste Bereich auf beide Breiten mittleren und kleinen Fenster.</span><span class="sxs-lookup"><span data-stu-id="7bc51-226">A third common adaptive pattern is to use an expanded left pane on large window widths, and a left icon-only nav pane on both medium and small window widths.</span></span> <span data-ttu-id="7bc51-227">Gutes Beispiel hierfür ist die Mail-app.</span><span class="sxs-lookup"><span data-stu-id="7bc51-227">A good example of this is the Mail app.</span></span>
+
+![GIF Leftnav adaptive Verhalten 3](images/adaptive-behavior-compact.png)
+
+```xaml
+<NavigationView CompactModeThresholdWidth="0" ExpandedModeThresholdWidth="1007" />
+```
+
+<span data-ttu-id="7bc51-229">Es wird empfohlen, diese Lösung, wenn:</span><span class="sxs-lookup"><span data-stu-id="7bc51-229">We recommend this when:</span></span>
+
+- <span data-ttu-id="7bc51-230">Es ist wichtig, alle Navigationsoptionen auf Bildschirm immer anzeigen.</span><span class="sxs-lookup"><span data-stu-id="7bc51-230">It is important to always show all navigation options on screen.</span></span>
+- <span data-ttu-id="7bc51-231">Ihre Navigationskategorien können deutlich mit Symbolen dargestellt werden.</span><span class="sxs-lookup"><span data-stu-id="7bc51-231">your navigation categories can be clearly represented with icons.</span></span>
+
+### <a name="no-adaptive-behavior"></a><span data-ttu-id="7bc51-232">Kein adaptive Verhalten</span><span class="sxs-lookup"><span data-stu-id="7bc51-232">No adaptive behavior</span></span>
+
+<span data-ttu-id="7bc51-233">Manchmal kann eine beliebige adaptive Verhalten nicht in allen wünschen.</span><span class="sxs-lookup"><span data-stu-id="7bc51-233">Sometimes you may not desire any adaptive behavior at all.</span></span> <span data-ttu-id="7bc51-234">Sie können den Bereich erweitert, immer compact oder immer minimale immer ist festlegen.</span><span class="sxs-lookup"><span data-stu-id="7bc51-234">You can set the pane to be always expanded, always compact, or always minimal.</span></span>
+
+![GIF Leftnav adaptive Verhalten 4](images/adaptive-behavior-none.png)
+
+```xaml
+<NavigationView PaneDisplayMode="LeftMinimal" />
+```
+
+### <a name="top-to-left-navigation"></a><span data-ttu-id="7bc51-236">Oben links</span><span class="sxs-lookup"><span data-stu-id="7bc51-236">Top to left navigation</span></span>
+
+<span data-ttu-id="7bc51-237">Wir empfehlen die Verwendung der oberen Navigationsleiste auf große Fenstergrößen und linken Navigationsbereich auf kleinen Fenster passt, wenn:</span><span class="sxs-lookup"><span data-stu-id="7bc51-237">We recommend using top navigation on large window sizes and left navigation on small window sizes when:</span></span>
+
+- <span data-ttu-id="7bc51-238">Sie haben eine Reihe von gleichermaßen wichtig Navigation auf oberster Ebene Kategorien zusammen angezeigt werden, wenn eine Kategorie in den folgenden Bildschirm passt, zum linken Navigationsbereich gleich Wichtigkeit geben Sie reduzieren.</span><span class="sxs-lookup"><span data-stu-id="7bc51-238">You have a set of equally important top-level navigation categories to be displayed together, such that if one category in this set doesn't fit on screen, you collapse to left navigation to give them equal importance.</span></span>
+- <span data-ttu-id="7bc51-239">Wie viel Inhalt Speicherplatz wie möglich in kleinen Fenstergrößen beibehalten werden soll.</span><span class="sxs-lookup"><span data-stu-id="7bc51-239">You wish to preserve as much content space as possible in small window sizes.</span></span>
+
+<span data-ttu-id="7bc51-240">Hier ist ein Beispiel angegeben:</span><span class="sxs-lookup"><span data-stu-id="7bc51-240">Here is an example:</span></span>
+
+![GIF oberen oder linken Nav adaptive Verhalten 1](images/navigation-top-to-left.png)
+
+```xaml
+<Grid >
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup>
+            <VisualState>
+                <VisualState.StateTriggers>
+                    <AdaptiveTrigger MinWindowWidth="{x:Bind NavigationViewControl.CompactModeThresholdWidth}" />
+                </VisualState.StateTriggers>
+
+                <VisualState.Setters>
+                    <Setter Target="NavigationViewControl.PaneDisplayMode" Value="Top"/>
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+
+    <NavigationView x:Name="NavigationViewControl" >
+        <NavigationView.MenuItems>
+            <NavigationViewItem Content="A" x:Name="A" />
+            <NavigationViewItem Content="B" x:Name="B" />
+            <NavigationViewItem Content="C" x:Name="C" />
+        </NavigationView.MenuItems>
+    </NavigationView>
+</Grid>
+
+```
+
+<span data-ttu-id="7bc51-242">In einigen Fällen müssen apps, andere Daten an den oberen Bereich und den linken Bereich gebunden.</span><span class="sxs-lookup"><span data-stu-id="7bc51-242">Sometimes apps need to bind different data to the top pane and left pane.</span></span> <span data-ttu-id="7bc51-243">Im linke Bereich enthält häufig weitere Elemente für die Navigation.</span><span class="sxs-lookup"><span data-stu-id="7bc51-243">Often the left pane includes more navigation elements.</span></span>
+
+<span data-ttu-id="7bc51-244">Hier ist ein Beispiel angegeben:</span><span class="sxs-lookup"><span data-stu-id="7bc51-244">Here is an example:</span></span>
+
+![GIF oberen oder linken Nav adaptive Verhalten 2](images/navigation-top-to-left2.png)
+
+```xaml
+<Page >
+    <Page.Resources>
+        <DataTemplate x:name="navItem_top_temp" x:DataType="models:Item">
+            <NavigationViewItem Background= Icon={x:Bind TopIcon}, Content={x:Bind TopContent}, Visibility={x:Bind TopVisibility} />
+        </DataTemplate>
+
+        <DataTemplate x:name="navItem_temp" x:DataType="models:Item">
+            <NavigationViewItem Icon={x:Bind Icon}, Content={x:Bind Content}, Visibility={x:Bind Visibility} />
+        </DataTemplate>
+        
+        <services:NavViewDataTemplateSelector x:Key="navview_selector" 
+              NavItemTemplate="{StaticResource navItem_temp}" 
+              NavItemTopTemplate="{StaticResource navItem_top_temp}" 
+              NavPaneDisplayMode="{x:Bind NavigationViewControl.PaneDisplayMode}">
+        </services:NavViewDataTemplateSelector>
+    </Page.Resources>
+
+    <Grid >
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="{x:Bind NavigationViewControl.CompactModeThresholdWidth}" />
+                    </VisualState.StateTriggers>
+
+                    <VisualState.Setters>
+                        <Setter Target="NavigationViewControl.PaneDisplayMode" Value="Top"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <NavView x:Name='NavigationViewControl' MenuItemsSource={x:Bind items}   
+                 PanePosition = "Top" MenuItemTemplateSelector="navview_selector" />
+    </Grid>
+</Page>
+
+```
+
+```csharp
+ObservableCollection<Item> items = new ObservableCollection<Item>();
+items.Add(new Item() {
+    Content = "Aa",
+    TopContent ="A",
+    Icon = new BitmapIcon() { UriSource = new Uri("ms-appx:///testimage.jpg") },
+    TopIcon = new BitmapIcon(),
+    ItemVisibility = Visibility.Visible,
+    TopItemVisiblity = Visibility.Visible 
+});
+items.Add(new Item() {
+    Content = "Bb",
+    TopContent = "B",
+    Icon = new BitmapIcon() { UriSource = new Uri("ms-appx:///testimage.jpg") },
+    TopIcon = new BitmapIcon(),
+    ItemVisibility = Visibility.Visible,
+    TopItemVisiblity = Visibility.Visible 
+});
+items.Add(new Item() {
+    Content = "Cc",
+    TopContent = "C",
+    Icon = new BitmapIcon() { UriSource = new Uri("ms-appx:///testimage.jpg") },
+    TopIcon = new BitmapIcon(),
+    ItemVisibility = Visibility.Visible,
+    TopItemVisiblity = Visibility.Visible 
+});
+
+public class NavViewDataTemplateSelector : DataTemplateSelector
+    {
+        public DataTemplate NavItemTemplate { get; set; }
+
+        public DataTemplate NavItemTopTemplate { get; set; }    
+
+     public NavigationViewPaneDisplayMode NavPaneDisplayMode { get; set; }
+
+        protected override DataTemplate SelectTemplateCore(object item)
+        {
+            Item currItem = item as Item;
+            if (NavPaneDisplayMode == NavigationViewPanePosition.Top)
+                return NavItemTopTemplate;
+            else 
+                return NavItemTemplate;
+        }   
+
+    }
+
+```
+
+## <a name="interaction"></a><span data-ttu-id="7bc51-246">Interaktion</span><span class="sxs-lookup"><span data-stu-id="7bc51-246">Interaction</span></span>
+
+<span data-ttu-id="7bc51-247">Wenn Benutzer in dem Bereich auf ein Navigationselement tippen, zeigt NavigationView dieses Element als ausgewählt an und löst ein [ItemInvoked](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ItemInvoked)-Ereignis aus.</span><span class="sxs-lookup"><span data-stu-id="7bc51-247">When users tap on a navigation item in the Pane, NavigationView will show that item as selected and will raise an [ItemInvoked](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ItemInvoked) event.</span></span> <span data-ttu-id="7bc51-248">Wenn durch das Tippen ein neues Element ausgewählt, löst NavigationView ebenfalls ein [SelectionChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.SelectionChanged)-Ereignis aus.</span><span class="sxs-lookup"><span data-stu-id="7bc51-248">If the tap results in a new item being selected, NavigationView will also raise a [SelectionChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.SelectionChanged) event.</span></span>
+
+<span data-ttu-id="7bc51-249">Es ist Aufgabe Ihrer App, die Kopfzeile und den Inhalt in Reaktion auf diese Benutzerinteraktion mit entsprechenden Informationen zu aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="7bc51-249">Your app is responsible for updating the Header and Content with appropriate information in response to this user interaction.</span></span> <span data-ttu-id="7bc51-250">Darüber hinaus wird empfohlen, den [Fokus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.FocusState) programmgesteuert vom Navigationselement zum Inhalt zu verlagern.</span><span class="sxs-lookup"><span data-stu-id="7bc51-250">In addition, we recommend programmatically moving [focus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.FocusState) from the navigation item to the content.</span></span> <span data-ttu-id="7bc51-251">Wenn Sie den anfänglichen Fokus auf das Laden festlegen, optimieren Sie den Benutzerfluss und verringern die Anzahl der Verschiebungen des Tastaturfokus.</span><span class="sxs-lookup"><span data-stu-id="7bc51-251">By setting initial focus on load, you streamline the user flow and minimize the expected number of keyboard focus moves.</span></span>
+
+### <a name="tabs"></a><span data-ttu-id="7bc51-252">Registerkarten</span><span class="sxs-lookup"><span data-stu-id="7bc51-252">Tabs</span></span>
+
+<span data-ttu-id="7bc51-253">Im Modell Registerkarten sind Auswahl und Fokus gebunden.</span><span class="sxs-lookup"><span data-stu-id="7bc51-253">In the tabs model, selection and focus are tied.</span></span> <span data-ttu-id="7bc51-254">Eine Aktion, die normalerweise Schichten auch Auswahl Fokus würde.</span><span class="sxs-lookup"><span data-stu-id="7bc51-254">An action that normally shifts focus would also shift selection.</span></span> <span data-ttu-id="7bc51-255">In den unter Beispiel rechten Arrowing würde verschieben Sie das Symbol Auswahl aus der Anzeige auf Bildschirmlupe.</span><span class="sxs-lookup"><span data-stu-id="7bc51-255">In the below example, right arrowing would move the selection indicator from Display to Magnifier.</span></span> <span data-ttu-id="7bc51-256">Sie können dies erreichen, indem Sie die [SelectionFollowsFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.selectionfollowsfocus) -Eigenschaft auf aktiviert festlegen.</span><span class="sxs-lookup"><span data-stu-id="7bc51-256">You can achieve this by setting the [SelectionFollowsFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.selectionfollowsfocus) property to Enabled.</span></span>
+
+![Screenshot des nur-Text-Top navview](images/nav-tabs.png)
+
+<span data-ttu-id="7bc51-258">Hier wird die Verwendung von XAML-Beispiel für diese:</span><span class="sxs-lookup"><span data-stu-id="7bc51-258">Here is the example XAML for that:</span></span>
+
+```xaml
+<NavigationView PanePosition="Top" SelectionFollowsFocus="Enabled" >
+   <NavigationView.MenuItems>
+        <NavigationViewItem Content="Display" />
+        <NavigationViewItem Content="Magnifier"  />
+        <NavigationViewItem Content="Keyboard" />
+    </NavigationView.MenuItems>
+</NavigationView>
+
+```
+
+<span data-ttu-id="7bc51-259">So ersetzen Sie Inhalte beim Ändern der Auswahl der Registerkarte kann des Rahmens [NavigateWithOptions](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.NavigateToType) -Methode mit FrameNavigationOptions.IsNavigationStackEnabled auf False festgelegt ist, und NavigateOptions.TransitionInfoOverride auf den entsprechenden zum parallelen festgelegt Folienanimationen.</span><span class="sxs-lookup"><span data-stu-id="7bc51-259">To swap out content when changing tab selection, you can use Frame's [NavigateWithOptions](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.NavigateToType) method with FrameNavigationOptions.IsNavigationStackEnabled set to False, and NavigateOptions.TransitionInfoOverride set to the appropriate side-to-side slide animation.</span></span> <span data-ttu-id="7bc51-260">Ein Beispiel finden Sie unter folgenden [Codebeispiel wird](#code-example) .</span><span class="sxs-lookup"><span data-stu-id="7bc51-260">For an example, see the [code example](#code-example) below.</span></span>
+
+<span data-ttu-id="7bc51-261">Wenn Sie den Standard-Formatvorlage ändern möchten, können Sie NavigationViews [MenuItemContainerStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.menuitemcontainerstyle) -Eigenschaft außer Kraft setzen.</span><span class="sxs-lookup"><span data-stu-id="7bc51-261">If you wish to change the default Style, you can override NavigationView's [MenuItemContainerStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.menuitemcontainerstyle) property.</span></span> <span data-ttu-id="7bc51-262">Sie können auch die [MenuItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.menuitemtemplate) -Eigenschaft an eine andere Vorlage festlegen.</span><span class="sxs-lookup"><span data-stu-id="7bc51-262">You can also set the [MenuItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.menuitemtemplate) property to specify a different data template.</span></span>
+
+## <a name="backwards-navigation"></a><span data-ttu-id="7bc51-263">Rückwärtsnavigation</span><span class="sxs-lookup"><span data-stu-id="7bc51-263">Backwards navigation</span></span>
+
+<span data-ttu-id="7bc51-264">NavigationView verfügt über eine integrierte Schaltfläche „Zurück“, die mit den folgenden Eigenschaften aktiviert werden kann:</span><span class="sxs-lookup"><span data-stu-id="7bc51-264">NavigationView has a built-in back button, which can be enabled with the following properties:</span></span>
+
+- <span data-ttu-id="7bc51-265">[**IsBackButtonVisible**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.IsBackButtonVisible) ist eine NavigationViewBackButtonVisible-Enumeration und standardmäßig auf "Auto" festgelegt.</span><span class="sxs-lookup"><span data-stu-id="7bc51-265">[**IsBackButtonVisible**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.IsBackButtonVisible) is a NavigationViewBackButtonVisible enum and "Auto" by default.</span></span> <span data-ttu-id="7bc51-266">Sie dient zum Einblenden/Ausblenden der Schaltfläche „Zurück“.</span><span class="sxs-lookup"><span data-stu-id="7bc51-266">It is used to show/hide the back button.</span></span> <span data-ttu-id="7bc51-267">Wenn die Schaltfläche nicht angezeigt wird, wird der Platz für die Darstellung der Schaltfläche „Zurück“ reduziert.</span><span class="sxs-lookup"><span data-stu-id="7bc51-267">When the button is not visible, the space for drawing the back button will be collapsed.</span></span>
+- <span data-ttu-id="7bc51-268">[**IsBackEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.IsBackEnabled) lautet standardmäßig „false“ und kann zum Umschalten des Status der Schaltfläche „Zurück“ verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="7bc51-268">[**IsBackEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.IsBackEnabled) is false by default and can be used to toggle the back button states.</span></span>
+- <span data-ttu-id="7bc51-269">[**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.BackRequested) wird ausgelöst, wenn ein Benutzer auf die Schaltfläche „Zurück“ klickt.</span><span class="sxs-lookup"><span data-stu-id="7bc51-269">[**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.BackRequested) is fired when a user clicks on the back button.</span></span>
+    - <span data-ttu-id="7bc51-270">Wenn im minimalen oder kompakten Modus der NavigationView.Pane als Flyout geöffnet ist und auf die Schaltfläche „Zurück“ geklickt wird, wird der Bereich geschlossen und stattdessen das **PaneClosing**-Ereignis ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="7bc51-270">In Minimal/Compact mode, when the NavigationView.Pane is open as a flyout, clicking the back button will close the Pane and fire **PaneClosing** event instead.</span></span>
+    - <span data-ttu-id="7bc51-271">Wenn IsBackEnabled auf „false“ festgelegt ist, wird es nicht ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="7bc51-271">Not fired if IsBackEnabled is false.</span></span>
+
+:::row:::
+    :::column:::
+    <b><span data-ttu-id="7bc51-272">Linke Navigationsleiste</span><span class="sxs-lookup"><span data-stu-id="7bc51-272">Left nav</span></span></b><br>
+    ![NavigationView zurück-Schaltfläche auf linke Navigationsleiste](images/leftnav-back.png)
+    :::column-end:::
+    :::column:::
+     <b><span data-ttu-id="7bc51-274">Oben nav</span><span class="sxs-lookup"><span data-stu-id="7bc51-274">Top nav</span></span></b><br>
+    ![NavigationView zurück-Schaltfläche auf der oberen nav](images/topnav-back.png)
+    :::column-end:::
+:::row-end:::
+
+## <a name="code-example"></a><span data-ttu-id="7bc51-276">Codebeispiel</span><span class="sxs-lookup"><span data-stu-id="7bc51-276">Code example</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="11ebe-198">NavigationView sollte als der Stammcontainer Ihrer App dienen, da dieses Steuerelement darauf ausgelegt ist, die volle Breite und Höhe des App-Fensters einzunehmen.</span><span class="sxs-lookup"><span data-stu-id="11ebe-198">NavigationView should serve as the root container of your app, as this control is designed to span the full width and height of the app window.</span></span>
-<span data-ttu-id="11ebe-199">Sie können die Breite der angezeigten Anzeigemodi in der Navigationsansicht mit den Eigenschaften [CompactModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.CompactModeThresholdWidth) und [ExpandedModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ExpandedModeThresholdWidth) überschreiben.</span><span class="sxs-lookup"><span data-stu-id="11ebe-199">You can override the widths at which the navigation view changes display modes by using the [CompactModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.CompactModeThresholdWidth) and [ExpandedModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ExpandedModeThresholdWidth) properties.</span></span>
+> <span data-ttu-id="7bc51-277">NavigationView sollte als der Stammcontainer Ihrer App dienen, da dieses Steuerelement darauf ausgelegt ist, die volle Breite und Höhe des App-Fensters einzunehmen.</span><span class="sxs-lookup"><span data-stu-id="7bc51-277">NavigationView should serve as the root container of your app, as this control is designed to span the full width and height of the app window.</span></span>
+<span data-ttu-id="7bc51-278">Sie können die Breite der angezeigten Anzeigemodi in der Navigationsansicht mit den Eigenschaften [CompactModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.CompactModeThresholdWidth) und [ExpandedModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ExpandedModeThresholdWidth) überschreiben.</span><span class="sxs-lookup"><span data-stu-id="7bc51-278">You can override the widths at which the navigation view changes display modes by using the [CompactModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.CompactModeThresholdWidth) and [ExpandedModeThresholdWidth](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ExpandedModeThresholdWidth) properties.</span></span>
 
-<span data-ttu-id="11ebe-200">Berücksichtigen Sie die folgenden Szenarien, die veranschaulichen, wann Sie das Anzeigemodusverhalten ggf. anpassen sollten.</span><span class="sxs-lookup"><span data-stu-id="11ebe-200">Consider the following scenarios that illustrate when you might want to customize the display mode behavior.</span></span>
+<span data-ttu-id="7bc51-279">Es folgt ein Beispiel für End-to-End-wie Sie mit einem obersten Navigationsbereich auf große Fenstergrößen und einem linken Navigationsbereich auf kleine Fenstergrößen NavigationView integrieren können.</span><span class="sxs-lookup"><span data-stu-id="7bc51-279">The following is an end-to-end example of how you can incorporate NavigationView with both a top navigation pane on large window sizes and a left navigation pane on small window sizes.</span></span>
 
-- <span data-ttu-id="11ebe-201">**Häufiges Navigieren** Wenn Sie davon ausgehen, dass Benutzer relativ häufig zwischen App-Bereichen navigieren, sollten Sie überlegen, den Bereich bei geringeren Fensterbreiten eingeblendet zu lassen.</span><span class="sxs-lookup"><span data-stu-id="11ebe-201">**Frequent navigation** If you expect users to navigate between app areas somewhat frequently, consider keeping the pane in view at narrower window widths.</span></span> <span data-ttu-id="11ebe-202">Eine Musik-App mit Navigationsbereichen für Songs/Alben/Künstler kann eine Bereichsbreite von 280px verwenden und den erweiterten Modus beibehalten, wenn das App-Fenster breiter als 560px ist.</span><span class="sxs-lookup"><span data-stu-id="11ebe-202">A music app with Songs / Albums / Artists navigation areas may opt for a 280px pane width and remain in Expanded mode while the app window is wider than 560px.</span></span>
-```xaml
-<NavigationView OpenPaneLength="280" CompactModeThresholdWidth="560" ExpandedModeThresholdWidth="560"/>
-```
+<span data-ttu-id="7bc51-280">In diesem Beispiel wir erwarten Endbenutzer häufig neue Navigationskategorien auswählen und daher empfohlen:</span><span class="sxs-lookup"><span data-stu-id="7bc51-280">In this sample, we expect end users to frequently select new navigation categories, and so we:</span></span>
 
-- <span data-ttu-id="11ebe-203">**Seltenes Navigieren** Wenn Sie davon ausgehen, dass Benutzer sehr selten zwischen App-Bereichen navigieren, sollten Sie überlegen, den Bereich bei größeren Fensterbreiten ausgeblendet zu lassen.</span><span class="sxs-lookup"><span data-stu-id="11ebe-203">**Rare navigation** If you expect users to navigate between app areas very infrequently, consider keeping the pane hidden at wider window widths.</span></span> <span data-ttu-id="11ebe-204">Eine Rechner-App mit mehreren Layouts behält möglicherweise auch dann den minimierten Modus bei, wenn die App auf einem 1080p-Display maximiert ist.</span><span class="sxs-lookup"><span data-stu-id="11ebe-204">A calculator app with multiple layouts may opt to remain in Minimal mode even when the app is maximized on a 1080p display.</span></span>
-```xaml
-<NavigationView CompactModeThresholdWidth="1920" ExpandedModeThresholdWidth="1920"/>
-```
+- <span data-ttu-id="7bc51-281">Legen Sie die [SelectionFollowsFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.PanePostion) -Eigenschaft auf aktiviert</span><span class="sxs-lookup"><span data-stu-id="7bc51-281">Set the [SelectionFollowsFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.PanePostion) property to Enabled</span></span>
+- <span data-ttu-id="7bc51-282">Verwenden Sie Frame-Navigation, die nicht dem Navigations-Stack hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="7bc51-282">Use Frame navigations that do not add to the navigation stack.</span></span>
+- <span data-ttu-id="7bc51-283">Behalten Sie den Standardwert auf die [ShoulderNavigationEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.PanePostion) -Eigenschaft, die verwendet wird, um anzugeben, ob links/rechts Rückstoßelementen auf einem Gamepad die Navigation auf oberster Ebene Kategorien Ihrer App navigieren.</span><span class="sxs-lookup"><span data-stu-id="7bc51-283">Keep the default value on the [ShoulderNavigationEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.PanePostion) property, which is used to indicate if left/right bumpers on a gamepad navigate the top-level navigation categories of your app.</span></span> <span data-ttu-id="7bc51-284">Der Standardwert ist "WhenSelectionFollowsFocus".</span><span class="sxs-lookup"><span data-stu-id="7bc51-284">The default is "WhenSelectionFollowsFocus".</span></span> <span data-ttu-id="7bc51-285">Die anderen möglichen Werte sind "Immer" und "Nie".</span><span class="sxs-lookup"><span data-stu-id="7bc51-285">The other possible values are "Always" and "Never".</span></span>
 
-- <span data-ttu-id="11ebe-205">**Mehrdeutigkeit** von Symbolen Wenn sich die Navigationsbereiche Ihrer App nicht für aussagekräftige Symbole eignen, vermeiden Sie die Verwendung des kompakten Modus.</span><span class="sxs-lookup"><span data-stu-id="11ebe-205">**Icon disambiguation** If your app’s navigation areas don’t lend themselves to meaningful icons, avoid using Compact mode.</span></span> <span data-ttu-id="11ebe-206">Eine Bildanzeige-App mit Navigationsbereichen für Sammlungen/Alben/Ordner zeigt NavigationView bei geringen und mittleren Breiten möglicherweise im minimierten Modus und bei großer Breite im erweiterten Modus an.</span><span class="sxs-lookup"><span data-stu-id="11ebe-206">An image viewing app with Collections / Albums / Folders navigation areas may opt for showing NavigationView in Minimal mode at narrow and medium widths, and in Expanded mode at wide width.</span></span>
-```xaml
-<NavigationView CompactModeThresholdWidth="1008"/>
-```
+<span data-ttu-id="7bc51-286">Es wird gezeigt, wie Navigation mit NavigationViews zurück-Schaltfläche rückwärts implementieren wird.</span><span class="sxs-lookup"><span data-stu-id="7bc51-286">We also demonstrate how to implement backwards navigation with NavigationView's back button.</span></span>
 
-## <a name="interaction"></a><span data-ttu-id="11ebe-207">Interaktion</span><span class="sxs-lookup"><span data-stu-id="11ebe-207">Interaction</span></span>
+<span data-ttu-id="7bc51-287">Hier ist eine Aufzeichnung der Zweck des Beispiels aus:</span><span class="sxs-lookup"><span data-stu-id="7bc51-287">Here's a recording of what the sample demonstrates:</span></span>
 
-<span data-ttu-id="11ebe-208">Wenn Benutzer in dem Bereich auf ein Navigationselement tippen, zeigt NavigationView dieses Element als ausgewählt an und löst ein [ItemInvoked](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ItemInvoked)-Ereignis aus.</span><span class="sxs-lookup"><span data-stu-id="11ebe-208">When users tap on a navigation item in the Pane, NavigationView will show that item as selected and will raise an [ItemInvoked](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ItemInvoked) event.</span></span> <span data-ttu-id="11ebe-209">Wenn durch das Tippen ein neues Element ausgewählt, löst NavigationView ebenfalls ein [SelectionChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.SelectionChanged)-Ereignis aus.</span><span class="sxs-lookup"><span data-stu-id="11ebe-209">If the tap results in a new item being selected, NavigationView will also raise a [SelectionChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.SelectionChanged) event.</span></span> 
+![NavigationView End-To-End-Beispiel](images/nav-code-example.gif)
 
-<span data-ttu-id="11ebe-210">Es ist Aufgabe Ihrer App, die Kopfzeile und den Inhalt in Reaktion auf diese Benutzerinteraktion mit entsprechenden Informationen zu aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="11ebe-210">Your app is responsible for updating the Header and Content with appropriate information in response to this user interaction.</span></span> <span data-ttu-id="11ebe-211">Darüber hinaus wird empfohlen, den [Fokus](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.control.FocusState) programmgesteuert vom Navigationselement zum Inhalt zu verlagern.</span><span class="sxs-lookup"><span data-stu-id="11ebe-211">In addition, we recommend programmatically moving [focus](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.control.FocusState) from the navigation item to the content.</span></span> <span data-ttu-id="11ebe-212">Wenn Sie den anfänglichen Fokus auf das Laden festlegen, optimieren Sie den Benutzerfluss und verringern die Anzahl der Verschiebungen des Tastaturfokus.</span><span class="sxs-lookup"><span data-stu-id="11ebe-212">By setting initial focus on load, you streamline the user flow and minimize the expected number of keyboard focus moves.</span></span>
+<span data-ttu-id="7bc51-289">Nachfolgend finden Sie im Beispielcode für:</span><span class="sxs-lookup"><span data-stu-id="7bc51-289">Here's the sample code:</span></span>
 
-## <a name="backwards-navigation"></a><span data-ttu-id="11ebe-213">Rückwärtsnavigation</span><span class="sxs-lookup"><span data-stu-id="11ebe-213">Backwards navigation</span></span>
-<span data-ttu-id="11ebe-214">NavigationView verfügt über eine integrierte Schaltfläche „Zurück“, die mit den folgenden Eigenschaften aktiviert werden kann:</span><span class="sxs-lookup"><span data-stu-id="11ebe-214">NavigationView has a built-in back button, which can be enabled with the following properties:</span></span>
-- <span data-ttu-id="11ebe-215">[**IsBackButtonVisible**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.IsBackButtonVisible) ist eine NavigationViewBackButtonVisible-Enumeration und standardmäßig auf "Auto" festgelegt.</span><span class="sxs-lookup"><span data-stu-id="11ebe-215">[**IsBackButtonVisible**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.IsBackButtonVisible) is a NavigationViewBackButtonVisible enum and "Auto" by default.</span></span> <span data-ttu-id="11ebe-216">Sie dient zum Einblenden/Ausblenden der Schaltfläche „Zurück“.</span><span class="sxs-lookup"><span data-stu-id="11ebe-216">It is used to show/hide the back button.</span></span> <span data-ttu-id="11ebe-217">Wenn die Schaltfläche nicht angezeigt wird, wird der Platz für die Darstellung der Schaltfläche „Zurück“ reduziert.</span><span class="sxs-lookup"><span data-stu-id="11ebe-217">When the button is not visible, the space for drawing the back button will be collapsed.</span></span>
-- <span data-ttu-id="11ebe-218">[**IsBackEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.IsBackEnabled) lautet standardmäßig „false“ und kann zum Umschalten des Status der Schaltfläche „Zurück“ verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="11ebe-218">[**IsBackEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.IsBackEnabled) is false by default and can be used to toggle the back button states.</span></span>
-- <span data-ttu-id="11ebe-219">[**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.BackRequested) wird ausgelöst, wenn ein Benutzer auf die Schaltfläche „Zurück“ klickt.</span><span class="sxs-lookup"><span data-stu-id="11ebe-219">[**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.BackRequested) is fired when a user clicks on the back button.</span></span>
-    - <span data-ttu-id="11ebe-220">Wenn im minimalen oder kompakten Modus der NavigationView.Pane als Flyout geöffnet ist und auf die Schaltfläche „Zurück“ geklickt wird, wird der Bereich geschlossen und stattdessen das **PaneClosing**-Ereignis ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="11ebe-220">In Minimal/Compact mode, when the NavigationView.Pane is open as a flyout, clicking the back button will close the Pane and fire **PaneClosing** event instead.</span></span>
-    - <span data-ttu-id="11ebe-221">Wenn IsBackEnabled auf „false“ festgelegt ist, wird es nicht ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="11ebe-221">Not fired if IsBackEnabled is false.</span></span>
-
-![Schaltfläche „Zurück“ der NavigationView](../basics/images/back-nav/NavView.png)
-
-## <a name="code-example"></a><span data-ttu-id="11ebe-223">Codebeispiel</span><span class="sxs-lookup"><span data-stu-id="11ebe-223">Code example</span></span>
-
-<span data-ttu-id="11ebe-224">Es folgt ein einfaches Beispiel dafür, wie Sie NavigationView in Ihre App integrieren können.</span><span class="sxs-lookup"><span data-stu-id="11ebe-224">The following is a simple example of how you can incorporate NavigationView into your app.</span></span> 
-
-<span data-ttu-id="11ebe-225">Es wird veranschaulicht, wie die Rückwärtsnavigation mit der Schaltfläche „Zurück“ der NavigationView implementiert wird.</span><span class="sxs-lookup"><span data-stu-id="11ebe-225">We demonstrate how to implement backwards navigation with NavigationView's back button.</span></span> <span data-ttu-id="11ebe-226">Beachten Sie, dass Sie für die Verwendung der Eigenschaften für die Rückwärtsnavigation [Windows10 Insider Preview (in v10.0.17110.0 eingeführt)](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewSDK) benötigen.</span><span class="sxs-lookup"><span data-stu-id="11ebe-226">Note that to use NavigationView's back navigation properties, you'll need the [Windows 10 Insider Preview (introduced v10.0.17110.0)](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewSDK).</span></span>
-
-<span data-ttu-id="11ebe-227">Außerdem wird die Lokalisierung von Inhaltszeichenfolgen für Navigationselemente mit `x:Uid` veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="11ebe-227">We also demonstrate localization of nav item content strings with `x:Uid`.</span></span> <span data-ttu-id="11ebe-228">Weitere Informationen zur Lokalisierung finden Sie unter [Lokalisieren von Zeichenfolgen in der Benutzeroberfläche](../../app-resources/localize-strings-ui-manifest.md).</span><span class="sxs-lookup"><span data-stu-id="11ebe-228">For more information on localization, see [Localize strings in your UI](../../app-resources/localize-strings-ui-manifest.md).</span></span>
+> [!NOTE]
+> <span data-ttu-id="7bc51-290">Wenn Sie die [UI-Bibliothek für Windows](https://docs.microsoft.com/uwp/toolkits/winui/)verwenden, müssen Sie einen Verweis auf das Toolkit hinzufügen: `xmlns:controls="using:Microsoft.UI.Xaml.Controls"`.</span><span class="sxs-lookup"><span data-stu-id="7bc51-290">If you're using the [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/), then you'll need to add a reference to the toolkit: `xmlns:controls="using:Microsoft.UI.Xaml.Controls"`.</span></span>
 
 ```xaml
 <Page
@@ -206,142 +520,142 @@ ms.locfileid: "1992149"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <NavigationView x:Name="NavView"
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="{x:Bind NavView.CompactModeThresholdWidth}" />
+                    </VisualState.StateTriggers>
+
+                    <VisualState.Setters>
+                        <Setter Target="NavView.PaneDisplayMode" Value="Top"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <NavigationView x:Name="NavView"
+                    SelectionFollowsFocus="Enabled"
                     ItemInvoked="NavView_ItemInvoked"
+                    IsSettingsVisible="True"
                     Loaded="NavView_Loaded"
-                    BackRequested="NavView_BackRequested">
+                    BackRequested="NavView_BackRequested"
+                    Header="Welcome">
 
-        <NavigationView.MenuItems>
-            <NavigationViewItem x:Uid="HomeNavItem" Content="Home" Tag="home">
-                <NavigationViewItem.Icon>
-                    <FontIcon Glyph="&#xE10F;"/>
-                </NavigationViewItem.Icon>
-            </NavigationViewItem>
-            <NavigationViewItemSeparator/>
-            <NavigationViewItemHeader Content="Main pages"/>
-            <NavigationViewItem x:Uid="AppsNavItem" Icon="AllApps" Content="Apps" Tag="apps"/>
-            <NavigationViewItem x:Uid="GamesNavItem" Icon="Video" Content="Games" Tag="games"/>
-            <NavigationViewItem x:Uid="MusicNavItem" Icon="Audio" Content="Music" Tag="music"/>
-        </NavigationView.MenuItems>
+            <NavigationView.MenuItems>
+                <NavigationViewItem Content="Home" x:Name="home" Tag="home">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE10F;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItemSeparator/>
+                <NavigationViewItemHeader Content="Main pages"/>
+                <NavigationViewItem Icon="AllApps" Content="Apps" x:Name="apps" Tag="apps"/>
+                <NavigationViewItem Icon="Video" Content="Games" x:Name="games" Tag="games"/>
+                <NavigationViewItem Icon="Audio" Content="Music" x:Name="music" Tag="music"/>
+            </NavigationView.MenuItems>
 
-        <NavigationView.AutoSuggestBox>
-            <AutoSuggestBox x:Name="ASB" QueryIcon="Find"/>
-        </NavigationView.AutoSuggestBox>
+            <NavigationView.AutoSuggestBox>
+                <AutoSuggestBox x:Name="ASB" QueryIcon="Find"/>
+            </NavigationView.AutoSuggestBox>
 
-        <NavigationView.HeaderTemplate>
-            <DataTemplate>
-                <Grid Margin="24,10,0,0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Style="{StaticResource TitleTextBlockStyle}"
+            <NavigationView.HeaderTemplate>
+                <DataTemplate>
+                    <Grid Margin="24,10,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Style="{StaticResource TitleTextBlockStyle}"
                            FontSize="28"
                            VerticalAlignment="Center"
                            Text="Welcome"/>
-                    <CommandBar Grid.Column="1"
+                        <CommandBar Grid.Column="1"
                             HorizontalAlignment="Right"
                             VerticalAlignment="Top"
                             DefaultLabelPosition="Right"
                             Background="{ThemeResource SystemControlBackgroundAltHighBrush}">
-                        <AppBarButton Label="Refresh" Icon="Refresh"/>
-                        <AppBarButton Label="Import" Icon="Import"/>
-                    </CommandBar>
-                </Grid>
-            </DataTemplate>
-        </NavigationView.HeaderTemplate>
+                            <AppBarButton Label="Refresh" Icon="Refresh"/>
+                            <AppBarButton Label="Import" Icon="Import"/>
+                        </CommandBar>
+                    </Grid>
+                </DataTemplate>
+            </NavigationView.HeaderTemplate>
 
-        <NavigationView.PaneFooter>
-            <HyperlinkButton x:Name="MoreInfoBtn"
-                             Content="More info"
-                             Click="More_Click"
-                             Margin="12,0"/>
-        </NavigationView.PaneFooter>
+            <Frame x:Name="ContentFrame" Margin="24"/>
 
-        <Frame x:Name="ContentFrame" Margin="24">
-            <Frame.ContentTransitions>
-                <TransitionCollection>
-                    <NavigationThemeTransition/>
-                </TransitionCollection>
-            </Frame.ContentTransitions>
-        </Frame>
-
-    </NavigationView>
+        </NavigationView>
+    </Grid>
 </Page>
 ```
 
+> [!NOTE]
+> <span data-ttu-id="7bc51-291">Wenn Sie die [UI-Bibliothek für Windows](https://docs.microsoft.com/uwp/toolkits/winui/)verwenden, müssen Sie einen Verweis auf das Toolkit hinzufügen: `using MUXC = Microsoft.UI.Xaml.Controls;`.</span><span class="sxs-lookup"><span data-stu-id="7bc51-291">If you're using the [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/), then you'll need to add a reference to the toolkit: `using MUXC = Microsoft.UI.Xaml.Controls;`.</span></span>
+
 ```csharp
+// List of ValueTuple holding the Navigation Tag and the relative Navigation Page 
+private readonly IList<(string Tag, Type Page)> _pages = new List<(string Tag, Type Page)>
+{
+    ("home", typeof(HomePage)),
+    ("apps", typeof(AppsPage)),
+    ("games", typeof(GamesPage)),
+    ("music", typeof(MusicPage)),
+};
+
 private void NavView_Loaded(object sender, RoutedEventArgs e)
 {
-    // you can also add items in code behind
+    // You can also add items in code behind
     NavView.MenuItems.Add(new NavigationViewItemSeparator());
-    NavView.MenuItems.Add(new NavigationViewItem()
-    { Content = "My content", Icon = new SymbolIcon(Symbol.Folder), Tag = "content" });
-
-    // set the initial SelectedItem 
-    foreach (NavigationViewItemBase item in NavView.MenuItems)
+    NavView.MenuItems.Add(new NavigationViewItem
     {
-        if (item is NavigationViewItem && item.Tag.ToString() == "home")
-        {
-            NavView.SelectedItem = item;
-            break;
-        }
-    }
-            
+        Content = "My content",
+        Icon = new SymbolIcon(Symbol.Folder),
+        Tag = "content"
+    });
+    _pages.Add(("content", typeof(MyContentPage)));
+
     ContentFrame.Navigated += On_Navigated;
 
-    // add keyboard accelerators for backwards navigation
-    KeyboardAccelerator GoBack = new KeyboardAccelerator();
-    GoBack.Key = VirtualKey.GoBack;
-    GoBack.Invoked += BackInvoked;
-    KeyboardAccelerator AltLeft = new KeyboardAccelerator();
-    AltLeft.Key = VirtualKey.Left;
-    AltLeft.Invoked += BackInvoked;
-    this.KeyboardAccelerators.Add(GoBack);
-    this.KeyboardAccelerators.Add(AltLeft);
+    // NavView doesn't load any page by default: you need to specify it
+    NavView_Navigate("home");
+
+    // Add keyboard accelerators for backwards navigation
+    var goBack = new KeyboardAccelerator { Key = VirtualKey.GoBack };
+    goBack.Invoked += BackInvoked;
+    this.KeyboardAccelerators.Add(goBack);
+
     // ALT routes here
-    AltLeft.Modifiers = VirtualKeyModifiers.Menu;
-    
+    var altLeft = new KeyboardAccelerator
+    {
+        Key = VirtualKey.Left,
+        Modifiers = VirtualKeyModifiers.Menu
+    };
+    altLeft.Invoked += BackInvoked;
+    this.KeyboardAccelerators.Add(altLeft);
 }
 
 private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
-{  
+{
+
     if (args.IsSettingsInvoked)
-    {
         ContentFrame.Navigate(typeof(SettingsPage));
-    }
     else
     {
-        // find NavigationViewItem with Content that equals InvokedItem
-        var item = sender.MenuItems.OfType<NavigationViewItem>().First(x => (string)x.Content == (string)args.InvokedItem);
-        NavView_Navigate(item as NavigationViewItem);
+        // Getting the Tag from Content (args.InvokedItem is the content of NavigationViewItem)
+        var navItemTag = NavView.MenuItems
+            .OfType<NavigationViewItem>()
+            .First(i => args.InvokedItem.Equals(i.Content))
+            .Tag.ToString();
+
+        NavView_Navigate(navItemTag);
     }
 }
 
-private void NavView_Navigate(NavigationViewItem item)
+private void NavView_Navigate(string navItemTag)
 {
-    switch (item.Tag)
-    {
-        case "home":
-            ContentFrame.Navigate(typeof(HomePage));
-            break;
-
-        case "apps":
-            ContentFrame.Navigate(typeof(AppsPage));
-            break;
-
-        case "games":
-            ContentFrame.Navigate(typeof(GamesPage));
-            break;
-
-        case "music":
-            ContentFrame.Navigate(typeof(MusicPage));
-            break;
-
-        case "content":
-            ContentFrame.Navigate(typeof(MyContentPage));
-            break;
-    }           
+    var item = _pages.First(p => p.Tag.Equals(navItemTag));
+    ContentFrame.Navigate(item.Page);
 }
 
 private void NavView_BackRequested(NavigationView sender, NavigationViewBackRequestedEventArgs args)
@@ -357,22 +671,17 @@ private void BackInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedE
 
 private bool On_BackRequested()
 {
-    bool navigated = false;
-
-    // don't go back if the nav pane is overlayed
-    if (NavView.IsPaneOpen && (NavView.DisplayMode == NavigationViewDisplayMode.Compact || NavView.DisplayMode == NavigationViewDisplayMode.Minimal))
-    {
+    if (!ContentFrame.CanGoBack)
         return false;
-    }
-    else
-    {
-        if (ContentFrame.CanGoBack)
-        {
-            ContentFrame.GoBack();
-            navigated = true;
-        }
-    }
-    return navigated;
+
+    // Don't go back if the nav pane is overlayed
+    if (NavView.IsPaneOpen &&
+        (NavView.DisplayMode == NavigationViewDisplayMode.Compact ||
+        NavView.DisplayMode == NavigationViewDisplayMode.Minimal))
+        return false;
+
+    ContentFrame.GoBack();
+    return true;
 }
 
 private void On_Navigated(object sender, NavigationEventArgs e)
@@ -381,44 +690,32 @@ private void On_Navigated(object sender, NavigationEventArgs e)
 
     if (ContentFrame.SourcePageType == typeof(SettingsPage))
     {
-        NavView.SelectedItem = NavView.SettingsItem as NavigationViewItem;
+        // SettingsItem is not part of NavView.MenuItems, and doesn't have a Tag
+        NavView.SelectedItem = (NavigationViewItem)NavView.SettingsItem;
     }
-    else 
+    else
     {
-        Dictionary<Type, string> lookup = new Dictionary<Type, string>()
-        {
-            {typeof(HomePage), "home"},
-            {typeof(AppsPage), "apps"},
-            {typeof(GamesPage), "games"},
-            {typeof(MusicPage), "music"},
-            {typeof(MyContentPage), "content"}    
-        };
+        var item = _pages.First(p => p.Page == e.SourcePageType);
 
-        String stringTag = lookup[ContentFrame.SourcePageType];
-
-        // set the new SelectedItem  
-        foreach (NavigationViewItemBase item in NavView.MenuItems)
-        {
-            if (item is NavigationViewItem && item.Tag.Equals(stringTag))
-            {
-                item.IsSelected = true;
-                break;
-            }
-        }        
+        NavView.SelectedItem = NavView.MenuItems
+            .OfType<NavigationViewItem>()
+            .First(n => n.Tag.Equals(item.Tag));
     }
 }
 ```
 
-## <a name="customizing-backgrounds"></a><span data-ttu-id="11ebe-229">Anpassen von Hintergründen</span><span class="sxs-lookup"><span data-stu-id="11ebe-229">Customizing backgrounds</span></span>
+## <a name="customizing-backgrounds"></a><span data-ttu-id="7bc51-292">Anpassen von Hintergründen</span><span class="sxs-lookup"><span data-stu-id="7bc51-292">Customizing backgrounds</span></span>
 
-<span data-ttu-id="11ebe-230">Legen Sie zum Ändern des Hintergrunds des Hauptbereichs von NavigationView seine `Background`-Eigenschaft auf Ihren bevorzugten Pinsel.</span><span class="sxs-lookup"><span data-stu-id="11ebe-230">To change the background of NavigationView's main area, set its `Background` property to your preferred brush.</span></span>
+<span data-ttu-id="7bc51-293">Legen Sie zum Ändern des Hintergrunds des Hauptbereichs von NavigationView seine `Background`-Eigenschaft auf Ihren bevorzugten Pinsel.</span><span class="sxs-lookup"><span data-stu-id="7bc51-293">To change the background of NavigationView's main area, set its `Background` property to your preferred brush.</span></span>
 
-<span data-ttu-id="11ebe-231">Der Hintergrundbereich verwendet In-App-Acryl, wenn NavigationView im minimalen oder kompakten Modus und das Hintergrund-Acryl im erweiterten Modus ist.</span><span class="sxs-lookup"><span data-stu-id="11ebe-231">The Pane's background shows in-app acrylic when NavigationView is in Minimal or Compact mode, and background acrylic in Expanded mode.</span></span> <span data-ttu-id="11ebe-232">Um dieses Verhalten zu aktualisieren oder die Darstellung des Acrylbereichs anzupassen, ändern Sie die zwei Designressourcen durch Überschreiben Ihrer App.xaml.</span><span class="sxs-lookup"><span data-stu-id="11ebe-232">To update this behavior or customize the appearance of your Pane's acrylic, modify the two theme resources by overwriting them in your App.xaml.</span></span>
+<span data-ttu-id="7bc51-294">Im Bereich Hintergrund zeigt Acryl in-app, wenn NavigationView im oberen Bereich Minimal, oder Compact Modus befindet.</span><span class="sxs-lookup"><span data-stu-id="7bc51-294">The Pane's background shows in-app acrylic when NavigationView is in Top, Minimal, or Compact mode.</span></span> <span data-ttu-id="7bc51-295">Um dieses Verhalten zu aktualisieren oder die Darstellung des Acrylbereichs anzupassen, ändern Sie die zwei Designressourcen durch Überschreiben Ihrer App.xaml.</span><span class="sxs-lookup"><span data-stu-id="7bc51-295">To update this behavior or customize the appearance of your Pane's acrylic, modify the two theme resources by overwriting them in your App.xaml.</span></span>
 
 ```xaml
 <Application.Resources>
     <ResourceDictionary>
         <AcrylicBrush x:Key="NavigationViewDefaultPaneBackground"
+        BackgroundSource="Backdrop" TintColor="Yellow" TintOpacity=".6"/>
+        <AcrylicBrush x:Key="NavigationViewTopPaneBackground"
         BackgroundSource="Backdrop" TintColor="Yellow" TintOpacity=".6"/>
         <AcrylicBrush x:Key="NavigationViewExpandedPaneBackground"
         BackgroundSource="HostBackdrop" TintColor="Orange" TintOpacity=".8"/>
@@ -426,66 +723,28 @@ private void On_Navigated(object sender, NavigationEventArgs e)
 </Application.Resources>
 ```
 
-## <a name="extending-your-app-into-the-title-bar"></a><span data-ttu-id="11ebe-233">Erweitern Ihrer App auf die Titelleiste</span><span class="sxs-lookup"><span data-stu-id="11ebe-233">Extending your app into the title bar</span></span>
+## <a name="scroll-content-under-top-pane"></a><span data-ttu-id="7bc51-296">Scroll-Inhalte unter oberer Bereich</span><span class="sxs-lookup"><span data-stu-id="7bc51-296">Scroll content under top pane</span></span>
 
-<span data-ttu-id="11ebe-234">Für eine nahtlose, fließende Darstellung im Fenster Ihrer App wird empfohlen, die NavigationView und deren Acrylbereich auf den Bereich der Titelleiste Ihrer App zu erweitern.</span><span class="sxs-lookup"><span data-stu-id="11ebe-234">For a seamless, flowing look within your app's window, we recommend extending NavigationView and its acrylic pane up into your app's title bar area.</span></span> <span data-ttu-id="11ebe-235">Dadurch werden die visuell unattraktive Form, die durch die Titelleiste erzeugt wird, die einfarbigen NavigationView-Inhalte und der Acrylbereich der NavigationView vermieden.</span><span class="sxs-lookup"><span data-stu-id="11ebe-235">This avoids the visually unattractive shape created by the title bar, the solid-colored NavigationView Content, and the acrylic of NavigationView's pane.</span></span>
+<span data-ttu-id="7bc51-297">Für eine nahtlose aussehen + Verhalten empfohlen Wenn Ihre app verfügt, Seiten, die ein ScrollViewer verwenden und im Navigationsbereich oben positioniert wird, mit der Content Bildlaufleiste unterhalb der obersten Navigationsbereich.</span><span class="sxs-lookup"><span data-stu-id="7bc51-297">For a seamless look+feel, if your app has pages that use a ScrollViewer and your navigation pane is top positioned, we recommend having the content scroll underneath the top nav pane.</span></span>
 
-<span data-ttu-id="11ebe-236">Fügen Sie dazu den folgenden Code in der Datei App.xaml.cs hinzu.</span><span class="sxs-lookup"><span data-stu-id="11ebe-236">To do so, add the following code to your App.xaml.cs.</span></span>
+<span data-ttu-id="7bc51-298">Dies kann durch Festlegen der [CanContentRenderOutsideBounds](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.cancontentrenderoutsidebounds) -Eigenschaft auf den entsprechenden ScrollViewer auf "true" erreicht werden.</span><span class="sxs-lookup"><span data-stu-id="7bc51-298">This can be achieved by setting the [CanContentRenderOutsideBounds](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.cancontentrenderoutsidebounds) property on the relevant ScrollViewer to true.</span></span>
 
-```csharp
-//draw into the title bar
-var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
-coreTitleBar.ExtendViewIntoTitleBar = true;
+![Navview Scroll Navigationsbereich](images/nav-scroll-content.png)
 
-//remove the solid-colored backgrounds behind the caption controls and system back button
-var viewTitleBar = ApplicationView.GetForCurrentView().TitleBar;
-viewTitleBar.ButtonBackgroundColor = Colors.Transparent;
-viewTitleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
-viewTitleBar.ButtonForegroundColor = (Color)Resources["SystemBaseHighColor"];
-```
+<span data-ttu-id="7bc51-300">Wenn Ihre app sehr lange Blättern Inhalt verfügt, empfiehlt es sich, das Einbinden Kurznotiz Header, die an der oberen Navigationsbereich anzufügen und zu bilden eine glatte Fläche berücksichtigt werden sollten.</span><span class="sxs-lookup"><span data-stu-id="7bc51-300">If your app has very long scrolling content, you may want to consider incorporating sticky headers that attach to the top nav pane and form a smooth surface.</span></span> 
 
-<span data-ttu-id="11ebe-237">Das Zeichnen in die Titelleiste hat den Nebeneffekt, dass der App-Titel ausgeblendet wird.</span><span class="sxs-lookup"><span data-stu-id="11ebe-237">Drawing into the title bar has the side-effect of hiding your app's title.</span></span> <span data-ttu-id="11ebe-238">Stellen Sie zur Unterstützung der Benutzer den Titel wieder her, indem Sie einen eigenen TextBlock hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="11ebe-238">To help users, restore the title by adding your own TextBlock.</span></span> <span data-ttu-id="11ebe-239">Fügen Sie der Stammseite, die Ihre NavigationView enthält, das folgende Markup hinzu.</span><span class="sxs-lookup"><span data-stu-id="11ebe-239">Add the following markup to the root page containing your NavigationView.</span></span>
+![Kurznotiz Navview Scroll-header](images/nav-scroll-stickyheader.png)
 
-```xaml
-<Grid>
-    <TextBlock x:Name="AppTitle"
-        xmlns:appmodel="using:Windows.ApplicationModel"
-        Text="{x:Bind appmodel:Package.Current.DisplayName}"
-        Style="{StaticResource CaptionTextBlockStyle}"
-        IsHitTestVisible="False"
-        Canvas.ZIndex="1"/>
-    
+<span data-ttu-id="7bc51-302">Sie können dies erreichen, indem Sie die [ContentOverlay](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ContentOverlay) -Eigenschaft auf NavigationView festlegen.</span><span class="sxs-lookup"><span data-stu-id="7bc51-302">You can achieve this by setting the [ContentOverlay](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ContentOverlay) property on NavigationView.</span></span> 
 
-    <NavigationView Canvas.ZIndex="0" ... />
+<span data-ttu-id="7bc51-303">Manchmal, wenn der Benutzer nach unten verschieben des Fensterinhalts ist, können Sie den Navigationsbereich erreicht, indem Sie die [IsPaneVisible](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ContentOverlay) -Eigenschaft auf NavigationView auf "false" ausblenden möchten.</span><span class="sxs-lookup"><span data-stu-id="7bc51-303">Sometimes, if the user is scrolling down, you may want to hide the nav pane, achieved by setting the [IsPaneVisible](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ContentOverlay) property on NavigationView to false.</span></span>
 
-</Grid>
-```
+![Navview Scroll ausblenden nav](images/nav-scroll-hidepane.png)
 
-<span data-ttu-id="11ebe-240">Je nach Sichtbarkeit der Schaltfläche „Zurück“ müssen Sie auch die AppTitle-Ränder anpassen.</span><span class="sxs-lookup"><span data-stu-id="11ebe-240">You'll also need to adjust AppTitle's margins depending on back button's visibility.</span></span> <span data-ttu-id="11ebe-241">Und wenn sich die App im FullScreenMode befindet, müssen Sie den Abstand für die Zurück-Pfeil auch dann entfernen, wenn die TitleBar Platz für sie reserviert.</span><span class="sxs-lookup"><span data-stu-id="11ebe-241">And, when the app is in FullScreenMode, you'll need to remove the spacing for the back arrow, even if the TitleBar reserves space for it.</span></span>
+## <a name="related-topics"></a><span data-ttu-id="7bc51-305">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="7bc51-305">Related topics</span></span>
 
-```csharp
-var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
-Window.Current.SetTitleBar(AppTitle);
-coreTitleBar.ExtendViewIntoTitleBar = true;
-
-void UpdateAppTitle()
-{
-    var full = (ApplicationView.GetForCurrentView().IsFullScreenMode);
-    var left = 12 + (full ? 0 : CoreApplication.GetCurrentView().TitleBar.SystemOverlayLeftInset);
-    AppTitle.Margin = new Thickness(left, 8, 0, 0);
-}
-
-Window.Current.CoreWindow.SizeChanged += (s, e) => UpdateAppTitle();
-coreTitleBar.LayoutMetricsChanged += (s, e) => UpdateAppTitle();
-```
-
-<span data-ttu-id="11ebe-242">Weitere Informationen zum Anpassen von Titelleisten, finden Sie unter [Anpassung der Titelleiste](../shell/title-bar.md).</span><span class="sxs-lookup"><span data-stu-id="11ebe-242">For more information about customizing title bars, see [title bar customization](../shell/title-bar.md).</span></span>
-
-## <a name="related-topics"></a><span data-ttu-id="11ebe-243">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="11ebe-243">Related topics</span></span>
-
-- [<span data-ttu-id="11ebe-244">NavigationView-Klasse</span><span class="sxs-lookup"><span data-stu-id="11ebe-244">NavigationView class</span></span>](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
-- [<span data-ttu-id="11ebe-245">Master/Details</span><span class="sxs-lookup"><span data-stu-id="11ebe-245">Master/details</span></span>](master-details.md)
-- [<span data-ttu-id="11ebe-246">Pivotsteuerelement</span><span class="sxs-lookup"><span data-stu-id="11ebe-246">Pivot control</span></span>](tabs-pivot.md)
-- [<span data-ttu-id="11ebe-247">Navigationsgrundlagen</span><span class="sxs-lookup"><span data-stu-id="11ebe-247">Navigation basics</span></span>](../basics/navigation-basics.md)
-- [<span data-ttu-id="11ebe-248">Übersicht über Fluent Design für UWP</span><span class="sxs-lookup"><span data-stu-id="11ebe-248">Fluent Design for UWP overview</span></span>](../fluent-design-system/index.md)
-
+- [<span data-ttu-id="7bc51-306">NavigationView-Klasse</span><span class="sxs-lookup"><span data-stu-id="7bc51-306">NavigationView class</span></span>](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
+- [<span data-ttu-id="7bc51-307">Master/Details</span><span class="sxs-lookup"><span data-stu-id="7bc51-307">Master/details</span></span>](master-details.md)
+- [<span data-ttu-id="7bc51-308">Pivotsteuerelement</span><span class="sxs-lookup"><span data-stu-id="7bc51-308">Pivot control</span></span>](tabs-pivot.md)
+- [<span data-ttu-id="7bc51-309">Navigationsgrundlagen</span><span class="sxs-lookup"><span data-stu-id="7bc51-309">Navigation basics</span></span>](../basics/navigation-basics.md)
+- [<span data-ttu-id="7bc51-310">Übersicht über Fluent Design für UWP</span><span class="sxs-lookup"><span data-stu-id="7bc51-310">Fluent Design for UWP overview</span></span>](../fluent-design-system/index.md)

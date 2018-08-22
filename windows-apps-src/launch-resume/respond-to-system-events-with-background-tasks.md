@@ -1,102 +1,115 @@
 ---
 author: TylerMSFT
 title: Reagieren auf Systemereignisse mit Hintergrundaufgaben
-description: "Hier erfahren Sie, wie Sie eine Hintergrundaufgabe erstellen können, die auf SystemTrigger-Ereignisse reagiert."
+description: Hier erfahren Sie, wie Sie eine Hintergrundaufgabe erstellen können, die auf SystemTrigger-Ereignisse reagiert.
 ms.assetid: 43C21FEA-28B9-401D-80BE-A61B71F01A89
 ms.author: twhitney
-ms.date: 02/08/2017
+ms.date: 07/06/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: 797ee8930a01f9934692067139a3fd5321ae36df
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows 10, Uwp, Hintergrund Aufgabe
+ms.localizationpriority: medium
+dev_langs:
+- csharp
+- cppwinrt
+- cpp
+ms.openlocfilehash: 45f6e10bc355e3a2dc054d54fef35fbeb1095dc7
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792456"
 ---
+# <a name="respond-to-system-events-with-background-tasks"></a><span data-ttu-id="a041c-104">Reagieren auf Systemereignisse mit Hintergrundaufgaben</span><span class="sxs-lookup"><span data-stu-id="a041c-104">Respond to system events with background tasks</span></span>
 
-# <a name="respond-to-system-events-with-background-tasks"></a>Reagieren auf Systemereignisse mit Hintergrundaufgaben
+**<span data-ttu-id="a041c-105">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="a041c-105">Important APIs</span></span>**
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+- [**<span data-ttu-id="a041c-106">IBackgroundTask</span><span class="sxs-lookup"><span data-stu-id="a041c-106">IBackgroundTask</span></span>**](https://msdn.microsoft.com/library/windows/apps/br224794)
+- [**<span data-ttu-id="a041c-107">BackgroundTaskBuilder</span><span class="sxs-lookup"><span data-stu-id="a041c-107">BackgroundTaskBuilder</span></span>**](https://msdn.microsoft.com/library/windows/apps/br224768)
+- [**<span data-ttu-id="a041c-108">SystemTrigger</span><span class="sxs-lookup"><span data-stu-id="a041c-108">SystemTrigger</span></span>**](https://msdn.microsoft.com/library/windows/apps/br224838)
 
-**Wichtige APIs**
+<span data-ttu-id="a041c-109">Hier erfahren Sie, wie Sie eine Hintergrundaufgabe erstellen können, die auf [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839)-Ereignisse reagiert.</span><span class="sxs-lookup"><span data-stu-id="a041c-109">Learn how to create a background task that responds to [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839) events.</span></span>
 
--   [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)
--   [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)
--   [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838)
+<span data-ttu-id="a041c-110">Dieses Thema setzt voraus, dass Sie für Ihre App eine Hintergrundaufgabenklasse geschrieben haben und dass diese Aufgabe als Reaktion auf ein vom System ausgelöstes Ereignis ausgeführt werden muss, z.B. wenn sich die Internetverfügbarkeit ändert oder sich der Benutzer anmeldet.</span><span class="sxs-lookup"><span data-stu-id="a041c-110">This topic assumes that you have a background task class written for your app, and that this task needs to run in response to an event triggered by the system such as when internet availability changes or the user logging in.</span></span> <span data-ttu-id="a041c-111">Der Schwerpunkt dieses Themas liegt auf der [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839)-Klasse.</span><span class="sxs-lookup"><span data-stu-id="a041c-111">This topic focuses on the [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839) class.</span></span> <span data-ttu-id="a041c-112">Weitere Informationen zum Schreiben einer Hintergrundaufgabenklasse finden Sie unter [Erstellen und Registrieren einer Hintergrundaufgabe innerhalb des Prozesses](create-and-register-an-inproc-background-task.md) oder [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb des Prozesses](create-and-register-a-background-task.md).</span><span class="sxs-lookup"><span data-stu-id="a041c-112">More information on writing a background task class is available in [Create and register an in-process background task](create-and-register-an-inproc-background-task.md) or [Create and register an out-of-process background task](create-and-register-a-background-task.md).</span></span>
 
-Hier erfahren Sie, wie Sie eine Hintergrundaufgabe erstellen können, die auf [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839)-Ereignisse reagiert.
+## <a name="create-a-systemtrigger-object"></a><span data-ttu-id="a041c-113">Erstellen eines SystemTrigger-Objekts</span><span class="sxs-lookup"><span data-stu-id="a041c-113">Create a SystemTrigger object</span></span>
 
-Dieses Thema setzt voraus, dass Sie für Ihre App eine Hintergrundaufgabenklasse geschrieben haben und dass diese Aufgabe als Reaktion auf ein vom System ausgelöstes Ereignis ausgeführt werden muss, z. B. wenn sich die Internetverfügbarkeit ändert oder sich der Benutzer anmeldet. Der Schwerpunkt dieses Themas liegt auf der [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839)-Klasse. Weitere Informationen zum Schreiben einer Hintergrundaufgabenklasse finden Sie unter [Erstellen und Registrieren einer Hintergrundaufgabe innerhalb des Prozesses](create-and-register-an-inproc-background-task.md) oder [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb des Prozesses](create-and-register-a-background-task.md).
+<span data-ttu-id="a041c-114">Erstellen Sie in Ihrem App-Code ein neues [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838)-Objekt.</span><span class="sxs-lookup"><span data-stu-id="a041c-114">In your app code, create a new [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) object.</span></span> <span data-ttu-id="a041c-115">*triggerType* ist der erste Parameter und gibt den Typ des Systemereignis-Triggers zur Aktivierung der Hintergrundaufgabe an.</span><span class="sxs-lookup"><span data-stu-id="a041c-115">The first parameter, *triggerType*, specifies the type of system event trigger that will activate this background task.</span></span> <span data-ttu-id="a041c-116">Eine Liste mit Ereignistypen finden Sie unter [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839).</span><span class="sxs-lookup"><span data-stu-id="a041c-116">For a list of event types, see [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839).</span></span>
 
-## <a name="create-a-systemtrigger-object"></a>Erstellen eines SystemTrigger-Objekts
+<span data-ttu-id="a041c-117">Der zweite Parameter (*OneShot*) gibt an, ob die Hintergrundaufgabe nur einmal ausgeführt wird, wenn das Systemereignis das nächste Mal eintritt, oder ob die Hintergrundaufgabe beim Auslösen des Systemereignisses immer ausgeführt wird, bis die Registrierung der Aufgabe aufgehoben wird.</span><span class="sxs-lookup"><span data-stu-id="a041c-117">The second parameter, *OneShot*, specifies whether the background task will run only once the next time the system event occurs or every time the system event occurs until the task is unregistered.</span></span>
 
--   Erstellen Sie in Ihrem App-Code ein neues [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838)-Objekt. *triggerType* ist der erste Parameter und gibt den Typ des Systemereignis-Triggers zur Aktivierung der Hintergrundaufgabe an. Eine Liste mit Ereignistypen finden Sie unter [**SystemTriggerType**](https://msdn.microsoft.com/library/windows/apps/br224839).
+<span data-ttu-id="a041c-118">Der folgende Code gibt an, dass die Hintergrundaufgabe immer ausgeführt wird, wenn das Internet verfügbar wird:</span><span class="sxs-lookup"><span data-stu-id="a041c-118">The following code specifies that the background task runs whenever the Internet becomes available:</span></span>
 
-    Der zweite Parameter (*OneShot*) gibt an, ob die Hintergrundaufgabe nur einmal ausgeführt wird, wenn das Systemereignis das nächste Mal eintritt, oder ob die Hintergrundaufgabe beim Auslösen des Systemereignisses immer ausgeführt wird, bis die Registrierung der Aufgabe aufgehoben wird.
+```csharp
+SystemTrigger internetTrigger = new SystemTrigger(SystemTriggerType.InternetAvailable, false);
+```
 
-    Der folgende Code gibt an, dass die Hintergrundaufgabe immer ausgeführt wird, wenn das Internet verfügbar wird:
+```cppwinrt
+Windows::ApplicationModel::Background::SystemTrigger internetTrigger{
+    Windows::ApplicationModel::Background::SystemTriggerType::InternetAvailable, false};
+```
 
-    > [!div class="tabbedCodeSnippets"]
-    > ```cs
-    > SystemTrigger internetTrigger = new SystemTrigger(SystemTriggerType.InternetAvailable, false);
-    > ```
-    > ```cpp
-    > SystemTrigger ^ internetTrigger = ref new SystemTrigger(SystemTriggerType::InternetAvailable, false);
-    > ```
+```cpp
+SystemTrigger ^ internetTrigger = ref new SystemTrigger(SystemTriggerType::InternetAvailable, false);
+```
 
-## <a name="register-the-background-task"></a>Registrieren der Hintergrundaufgabe
+## <a name="register-the-background-task"></a><span data-ttu-id="a041c-119">Registrieren der Hintergrundaufgabe</span><span class="sxs-lookup"><span data-stu-id="a041c-119">Register the background task</span></span>
 
--   Registrieren Sie die Hintergrundaufgabe, indem Sie die Funktion zum Registrieren der Hintergrundaufgabe aufrufen. Weitere Informationen zum Registrieren von Hintergrundaufgaben finden Sie unter [Registrieren einer Hintergrundaufgabe](register-a-background-task.md).
+<span data-ttu-id="a041c-120">Registrieren Sie die Hintergrundaufgabe, indem Sie die Funktion zum Registrieren der Hintergrundaufgabe aufrufen.</span><span class="sxs-lookup"><span data-stu-id="a041c-120">Register the background task by calling your background task registration function.</span></span> <span data-ttu-id="a041c-121">Weitere Informationen zum Registrieren von Hintergrundaufgaben finden Sie unter [Registrieren einer Hintergrundaufgabe](register-a-background-task.md).</span><span class="sxs-lookup"><span data-stu-id="a041c-121">For more information on registering background tasks, see [Register a background task](register-a-background-task.md).</span></span>
 
-    Der folgende Code registriert die Hintergrundaufgabe für einen Hintergrundprozess, der außerhalb des Prozesses ausgeführt wird. Wenn Sie eine Hintergrundaufgabe aufrufen, die im gleichen Prozess wie die Host-App ausgeführt wird, legen Sie nicht `entrypoint` fest:
+<span data-ttu-id="a041c-122">Der folgende Code registriert die Hintergrundaufgabe für einen Hintergrundprozess, der außerhalb des Prozesses ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="a041c-122">The following code registers the background task for a background process that runs out-of-process.</span></span> <span data-ttu-id="a041c-123">Wenn Sie eine Hintergrundaufgabe aufrufen, die im gleichen Prozess wie die Host-App ausgeführt wird, legen Sie nicht `entrypoint` fest:</span><span class="sxs-lookup"><span data-stu-id="a041c-123">If you were calling a background task that runs in the same process as the host app, you would not set `entrypoint`:</span></span>
 
-    > [!div class="tabbedCodeSnippets"]
-    > ```cs
-    > string entryPoint = "Tasks.ExampleBackgroundTaskClass"; // Namespace name, '.', and the name of the class containing the background task
-    > string taskName   = "Internet-based background task";
-    >
-    > BackgroundTaskRegistration task = RegisterBackgroundTask(entryPoint, taskName, internetTrigger, exampleCondition);
-    > ```
-    > ```cpp
-    > String ^ entryPoint = "Tasks.ExampleBackgroundTaskClass"; // don't set for in-process background tasks
-    > String ^ taskName   = "Internet-based background task";
-    >
-    > BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, internetTrigger, exampleCondition);
-    > ```
+```csharp
+string entryPoint = "Tasks.ExampleBackgroundTaskClass"; // Namespace name, '.', and the name of the class containing the background task
+string taskName   = "Internet-based background task";
 
-    > **Hinweis:** Universelle Windows-Apps müssen vor der Registrierung von Hintergrundtrigger-Typen [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) aufrufen.
+BackgroundTaskRegistration task = RegisterBackgroundTask(entryPoint, taskName, internetTrigger, exampleCondition);
+```
 
-    Rufen Sie [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) und anschließend [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) auf, wenn die App nach der Aktualisierung gestartet wird, um sicherzustellen, dass Ihre universelle Windows-App nach der Veröffentlichung eines Updates weiterhin ordnungsgemäß ausgeführt wird. Weitere Informationen finden Sie unter [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md).
+```cppwinrt
+std::wstring entryPoint{ L"Tasks.ExampleBackgroundTaskClass" }; // don't set for in-process background tasks.
+std::wstring taskName{ L"Internet-based background task" };
 
-    > **Hinweis**  Parameter für die Registrierung von Hintergrundaufgaben werden zum Zeitpunkt der Registrierung überprüft. Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben. Stellen Sie sicher, dass Ihre App Szenarien, in denen die Registrierung von Hintergrundaufgaben einen Fehler verursacht, problemlos verarbeitet.
+Windows::ApplicationModel::Background::BackgroundTaskRegistration task{
+    RegisterBackgroundTask(entryPoint, taskName, internetTrigger, exampleCondition) };
+```
+
+```cpp
+String ^ entryPoint = "Tasks.ExampleBackgroundTaskClass"; // don't set for in-process background tasks
+String ^ taskName   = "Internet-based background task";
+
+BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName, internetTrigger, exampleCondition);
+```
+
+> [!NOTE]
+> <span data-ttu-id="a041c-124">Universelle Plattform Windows-apps müssen [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) aufrufen, vor dem Hintergrund Trigger Typen registrieren.</span><span class="sxs-lookup"><span data-stu-id="a041c-124">Universal Windows Platform apps must call [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) before registering any of the background trigger types.</span></span>
+
+<span data-ttu-id="a041c-125">Rufen Sie [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) und anschließend [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) auf, wenn die App nach der Aktualisierung gestartet wird, um sicherzustellen, dass Ihre universelle Windows-App nach der Veröffentlichung eines Updates weiterhin ordnungsgemäß ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="a041c-125">To ensure that your Universal Windows app continues to run properly after you release an update, you must call [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh700471) and then call [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) when your app launches after being updated.</span></span> <span data-ttu-id="a041c-126">Weitere Informationen finden Sie unter [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md).</span><span class="sxs-lookup"><span data-stu-id="a041c-126">For more information, see [Guidelines for background tasks](guidelines-for-background-tasks.md).</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="a041c-127">Parameter für die Registrierung von Hintergrundaufgaben werden zum Zeitpunkt der Registrierung überprüft.</span><span class="sxs-lookup"><span data-stu-id="a041c-127">Background task registration parameters are validated at the time of registration.</span></span> <span data-ttu-id="a041c-128">Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="a041c-128">An error is returned if any of the registration parameters are invalid.</span></span> <span data-ttu-id="a041c-129">Stellen Sie sicher, dass Ihre App Szenarien, in denen die Registrierung von Hintergrundaufgaben einen Fehler verursacht, problemlos verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="a041c-129">Ensure that your app gracefully handles scenarios where background task registration fails - if instead your app depends on having a valid registration object after attempting to register a task, it may crash.</span></span>
  
-## <a name="remarks"></a>Anmerkungen
+## <a name="remarks"></a><span data-ttu-id="a041c-130">Anmerkungen</span><span class="sxs-lookup"><span data-stu-id="a041c-130">Remarks</span></span>
 
-Laden Sie das [Beispiel zu Hintergrundaufgaben](http://go.microsoft.com/fwlink/p/?LinkId=618666) herunter, um die Registrierung der Hintergrundaufgabe in Aktion zu sehen.
+<span data-ttu-id="a041c-131">Laden Sie das [Beispiel zu Hintergrundaufgaben](http://go.microsoft.com/fwlink/p/?LinkId=618666) herunter, um die Registrierung der Hintergrundaufgabe in Aktion zu sehen.</span><span class="sxs-lookup"><span data-stu-id="a041c-131">To see background task registration in action, download the [background task sample](http://go.microsoft.com/fwlink/p/?LinkId=618666).</span></span>
 
-Hintergrundaufgaben können als Reaktion auf die Ereignisse [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) und [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) ausgeführt werden. Dennoch ist das [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md) erforderlich. Vor dem Registrieren einer Hintergrundaufgabe müssen Sie außerdem [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) aufrufen.
+<span data-ttu-id="a041c-132">Hintergrundaufgaben können als Reaktion auf die Ereignisse [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) und [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) ausgeführt werden. Dennoch ist das [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md) erforderlich.</span><span class="sxs-lookup"><span data-stu-id="a041c-132">Background tasks can run in response to [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) and [**MaintenanceTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700517) events, but you still need to [Declare background tasks in the application manifest](declare-background-tasks-in-the-application-manifest.md).</span></span> <span data-ttu-id="a041c-133">Vor dem Registrieren einer Hintergrundaufgabe müssen Sie außerdem [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) aufrufen.</span><span class="sxs-lookup"><span data-stu-id="a041c-133">You must also call [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) before registering any background task type.</span></span>
 
-Apps können Hintergrundaufgaben registrieren, die auf die Ereignisse [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843), [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) und [**NetworkOperatorNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/br224831) reagieren. So können die Apps eine Echtzeitkommunikation mit dem Benutzer bereitstellen, auch wenn die App sich nicht im Vordergrund befindet. Weitere Informationen finden Sie unter [Unterstützen der App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md).
+<span data-ttu-id="a041c-134">Apps können Hintergrundaufgaben registrieren, die auf die Ereignisse [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843), [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) und [**NetworkOperatorNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/br224831) reagieren. So können die Apps eine Echtzeitkommunikation mit dem Benutzer bereitstellen, auch wenn die App sich nicht im Vordergrund befindet.</span><span class="sxs-lookup"><span data-stu-id="a041c-134">Apps can register background tasks that respond to [**TimeTrigger**](https://msdn.microsoft.com/library/windows/apps/br224843), [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543), and [**NetworkOperatorNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/br224831) events, enabling them to provide real-time communication with the user even when the app is not in the foreground.</span></span> <span data-ttu-id="a041c-135">Weitere Informationen finden Sie unter [Unterstützen der App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md).</span><span class="sxs-lookup"><span data-stu-id="a041c-135">For more information, see [Support your app with background tasks](support-your-app-with-background-tasks.md).</span></span>
 
-> **Hinweis:** Dieser Artikel ist für Windows 10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Informationen zur Entwicklung unter Windows 8.x oder Windows Phone 8.x finden Sie in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+## <a name="related-topics"></a><span data-ttu-id="a041c-136">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="a041c-136">Related topics</span></span>
 
-## <a name="related-topics"></a>Verwandte Themen
-
-****
-
-* [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb von Prozessen](create-and-register-a-background-task.md)
-* [Erstellen und Registrieren einer Hintergrundaufgabe innerhalb von Prozessen](create-and-register-an-inproc-background-task.md)
-* [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md)
-* [Behandeln einer abgebrochenen Hintergrundaufgabe](handle-a-cancelled-background-task.md)
-* [Überwachen des Status und Abschlusses von Hintergrundaufgaben](monitor-background-task-progress-and-completion.md)
-* [Registrieren einer Hintergrundaufgabe](register-a-background-task.md)
-* [Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe](set-conditions-for-running-a-background-task.md)
-* [Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe](update-a-live-tile-from-a-background-task.md)
-* [Verwenden eines Wartungsauslösers](use-a-maintenance-trigger.md)
-* [Ausführen einer Hintergrundaufgabe für einen Timer](run-a-background-task-on-a-timer-.md)
-* [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md)
-* [Debuggen einer Hintergrundaufgabe](debug-a-background-task.md)
-* [So wird's gemacht: Auslösen von Anhalte-, Fortsetzungs- und Hintergrundereignissen in Windows Store-Apps (beim Debuggen)](http://go.microsoft.com/fwlink/p/?linkid=254345)
-
+* [<span data-ttu-id="a041c-137">Erstellen und Registrieren einer Hintergrundaufgabe außerhalb von Prozessen</span><span class="sxs-lookup"><span data-stu-id="a041c-137">Create and register an out-of-process background task</span></span>](create-and-register-a-background-task.md)
+* [<span data-ttu-id="a041c-138">Erstellen und Registrieren einer Hintergrundaufgabe innerhalb von Prozessen</span><span class="sxs-lookup"><span data-stu-id="a041c-138">Create and register an in-process background task</span></span>](create-and-register-an-inproc-background-task.md)
+* [<span data-ttu-id="a041c-139">Deklarieren von Hintergrundaufgaben im Anwendungsmanifest</span><span class="sxs-lookup"><span data-stu-id="a041c-139">Declare background tasks in the application manifest</span></span>](declare-background-tasks-in-the-application-manifest.md)
+* [<span data-ttu-id="a041c-140">Behandeln einer abgebrochenen Hintergrundaufgabe</span><span class="sxs-lookup"><span data-stu-id="a041c-140">Handle a cancelled background task</span></span>](handle-a-cancelled-background-task.md)
+* [<span data-ttu-id="a041c-141">Überwachen des Status und Abschlusses von Hintergrundaufgaben</span><span class="sxs-lookup"><span data-stu-id="a041c-141">Monitor background task progress and completion</span></span>](monitor-background-task-progress-and-completion.md)
+* [<span data-ttu-id="a041c-142">Registrieren einer Hintergrundaufgabe</span><span class="sxs-lookup"><span data-stu-id="a041c-142">Register a background task</span></span>](register-a-background-task.md)
+* [<span data-ttu-id="a041c-143">Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe</span><span class="sxs-lookup"><span data-stu-id="a041c-143">Set conditions for running a background task</span></span>](set-conditions-for-running-a-background-task.md)
+* [<span data-ttu-id="a041c-144">Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe</span><span class="sxs-lookup"><span data-stu-id="a041c-144">Update a live tile from a background task</span></span>](update-a-live-tile-from-a-background-task.md)
+* [<span data-ttu-id="a041c-145">Verwenden eines Wartungsauslösers</span><span class="sxs-lookup"><span data-stu-id="a041c-145">Use a maintenance trigger</span></span>](use-a-maintenance-trigger.md)
+* [<span data-ttu-id="a041c-146">Ausführen einer Hintergrundaufgabe für einen Timer</span><span class="sxs-lookup"><span data-stu-id="a041c-146">Run a background task on a timer</span></span>](run-a-background-task-on-a-timer-.md)
+* [<span data-ttu-id="a041c-147">Richtlinien für Hintergrundaufgaben</span><span class="sxs-lookup"><span data-stu-id="a041c-147">Guidelines for background tasks</span></span>](guidelines-for-background-tasks.md)
+* [<span data-ttu-id="a041c-148">Debuggen einer Hintergrundaufgabe</span><span class="sxs-lookup"><span data-stu-id="a041c-148">Debug a background task</span></span>](debug-a-background-task.md)
+* [<span data-ttu-id="a041c-149">So wird’s gemacht: Auslösen von Anhalte-, Fortsetzungs- und Hintergrundereignissen in UWP-Apps (beim Debuggen)</span><span class="sxs-lookup"><span data-stu-id="a041c-149">How to trigger suspend, resume, and background events in UWP apps (when debugging)</span></span>](http://go.microsoft.com/fwlink/p/?linkid=254345)

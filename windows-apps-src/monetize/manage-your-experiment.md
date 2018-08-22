@@ -1,68 +1,70 @@
 ---
 author: mcleanbyron
-Description: "Nachdem Sie Ihr Experiment im Dev Center-Dashboard definiert und in Ihrer App programmiert haben, können Sie das Experiment aktivieren und das Dev Center-Dashboard zum Prüfen der Ergebnisse Ihres Experiments verwenden."
-title: Verwalten Ihrer Experimente im Dev Center-Dashboard
+Description: After you define your experiment in the Dev Center dashboard and code your experiment in your app, you are ready to active your experiment and use the Dev Center dashboard to review the results of your experiment.
+title: Verwalten Ihres Experiments im Dashboard
 ms.assetid: D48EE0B4-47F2-455C-8FB9-630769AC5ACE
 ms.author: mcleans
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: "Windows 10, UWP, Microsoft Store Services-SDK, A/B-Tests, Experimente"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: bc73d2b63b94f9700fc5013d3ea51a92cabd7ca3
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP, Microsoft Store Services SDK, A/B-Tests, Experimente
+ms.localizationpriority: medium
+ms.openlocfilehash: 073d5ec67bb012cbfe21c279ee97ec3c50b8458f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2791248"
 ---
+# <a name="manage-your-experiment-in-the-dashboard"></a><span data-ttu-id="e4cb9-103">Verwalten Ihres Experiments im Dashboard</span><span class="sxs-lookup"><span data-stu-id="e4cb9-103">Manage your experiment in the dashboard</span></span>
 
-# <a name="manage-your-experiment-in-the-dev-center-dashboard"></a>Verwalten Ihrer Experimente im Dev Center-Dashboard
+<span data-ttu-id="e4cb9-104">Nachdem Sie [Ihr Experiment im Dev Center-Dashboard definiert](define-your-experiment-in-the-dev-center-dashboard.md) und [in Ihrer App programmiert haben](code-your-experiment-in-your-app.md), können Sie das Experiment aktivieren und das Dev Center-Dashboard zum Prüfen der Ergebnisse Ihres Experiments verwenden.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-104">After you [define your experiment in the Dev Center dashboard](define-your-experiment-in-the-dev-center-dashboard.md) and [code your app for experimentation](code-your-experiment-in-your-app.md), you are ready to activate your experiment and use the Dev Center dashboard to review the results of your experiment.</span></span> <span data-ttu-id="e4cb9-105">Nach Abrufen aller benötigten Daten können Sie das Experiment beenden und festlegen, ob die Variablenwerte in der Steuerungsvariation für alle Apps weiter verwendet werden sollen oder die Variablenwerte einer anderen Variation verwendet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-105">After you have obtained all the data you need, you can end your experiment and choose whether to keep using the variable values in the control variation for all your apps, or switch to using the variable values in one of your other variations.</span></span>
 
-Nachdem Sie [Ihr Experiment im Dev Center-Dashboard definiert](define-your-experiment-in-the-dev-center-dashboard.md) und [in Ihrer App programmiert haben](code-your-experiment-in-your-app.md), können Sie das Experiment aktivieren und das Dev Center-Dashboard zum Prüfen der Ergebnisse Ihres Experiments verwenden. Nach Abrufen aller benötigten Daten können Sie das Experiment beenden und festlegen, ob die Variablenwerte in der Steuerungsvariation für alle Apps weiter verwendet werden sollen oder die Variablenwerte einer anderen Variation verwendet werden sollen.
+> [!NOTE]
+> <span data-ttu-id="e4cb9-106">Wenn Sie ein Experiment aktivieren, beginnt Dev Center umgehend mit der Erfassung von Daten aus allen Apps, die zum Protokollieren von Daten für Ihr Experiment instrumentiert sind.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-106">When you activate an experiment, Dev Center immediately starts collecting data from any apps that are instrumented to log data for your experiment.</span></span> <span data-ttu-id="e4cb9-107">Bis zur Anzeige von Experimentdaten im Dashboard können jedoch mehrere Stunden vergehen.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-107">However, it can take several hours for experiment data to appear in the dashboard.</span></span>
 
-> **Hinweis**&nbsp;&nbsp;Wenn Sie ein Experiment aktivieren, beginnt Dev Center umgehend mit der Erfassung von Daten aus allen Apps, die zum Protokollieren von Daten für Ihr Experiment instrumentiert sind. Bis zur Anzeige von Experimentdaten im Dashboard können jedoch mehrere Stunden vergehen.
+<span data-ttu-id="e4cb9-108">Eine exemplarische Vorgehensweise, die den gesamten Erstellungs- und Ausführungsprozess für ein Experiment veranschaulicht, finden Sie unter [Erstellen und Durchführen eines ersten Experiments mit A/B-Tests](create-and-run-your-first-experiment-with-a-b-testing.md).</span><span class="sxs-lookup"><span data-stu-id="e4cb9-108">For a walkthrough that demonstrates the end-to-end process of creating and running an experiment, see [Create and run your first experiment with A/B testing](create-and-run-your-first-experiment-with-a-b-testing.md).</span></span>
 
-Eine exemplarische Vorgehensweise, die den gesamten Erstellungs- und Ausführungsprozess für ein Experiment veranschaulicht, finden Sie unter [Erstellen und Durchführen eines ersten Experiments mit A/B-Tests](create-and-run-your-first-experiment-with-a-b-testing.md).
+## <a name="activate-your-experiment"></a><span data-ttu-id="e4cb9-109">Aktivieren Ihres Experiments</span><span class="sxs-lookup"><span data-stu-id="e4cb9-109">Activate your experiment</span></span>
 
-## <a name="activate-your-experiment"></a>Aktivieren Ihres Experiments
+<span data-ttu-id="e4cb9-110">Wenn Sie mit den Parametern für Ihr Experiment im Dashboard zufrieden sind und den App-Code aktualisiert haben, können Sie Ihr Experiment aktivieren, damit mit der Erfassung der Experimentdaten aus Ihrer App begonnen wird.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-110">When you are satisfied with the parameters of your experiment on the dashboard and you have updated your app code, you are ready to activate your experiment so you can start collecting experiment data from your app.</span></span> <span data-ttu-id="e4cb9-111">Wenn das Experiment aktiv ist, kann Ihre App Variationswerte abrufen und Anzeige- und Umwandlungsereignisse im Dev Center melden.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-111">When the experiment is active, your app can retrieve variation values and report view and conversion events to Dev Center.</span></span>
 
-Wenn Sie mit den Parametern für Ihr Experiment im Dashboard zufrieden sind und den App-Code aktualisiert haben, können Sie Ihr Experiment aktivieren, damit mit der Erfassung der Experimentdaten aus Ihrer App begonnen wird. Wenn das Experiment aktiv ist, kann Ihre App Variationswerte abrufen und Anzeige- und Umwandlungsereignisse im Dev Center melden.
+1. <span data-ttu-id="e4cb9-112">Melden Sie sich beim [Dev Center-Dashboard](https://dev.windows.com/overview) an.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-112">Sign in to the [Dev Center dashboard](https://dev.windows.com/overview).</span></span>
+2. <span data-ttu-id="e4cb9-113">Wählen Sie unter **Ihre Apps** die App mit dem Experiment, das Sie aktivieren möchten.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-113">Under **Your apps**, select the app with the experiment that you want to activate.</span></span>
+3. <span data-ttu-id="e4cb9-114">Wählen Sie im Navigationsbereich **Dienste** und dann **Experimentation** aus.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-114">In the navigation pane, select **Services** and then select **Experimentation**.</span></span>
+4. <span data-ttu-id="e4cb9-115">Erweitern Sie in der Tabelle der Projekte im Abschnitt **Projekte** das Projekt, das Ihr Experiment enthält, und führen Sie dann eine der folgenden Aufgaben aus:</span><span class="sxs-lookup"><span data-stu-id="e4cb9-115">In the table of projects in the **Projects** section, expand the project that contains your experiment and then do one of the following:</span></span>
+  * <span data-ttu-id="e4cb9-116">Klicken Sie auf den Link **Aktivieren** für Ihr Experiment.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-116">Click the **Activate** link for your experiment.</span></span> <span data-ttu-id="e4cb9-117">Ihr Experiment wird dem Abschnitt **Aktive Experimente** im oberen Bereich der Seite hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-117">Your experiment is added to the **Active experiments** section near the top of the page.</span></span>
+  * <span data-ttu-id="e4cb9-118">Klicken Sie auf den Namen des Experiments, führen Sie auf der Seite für Experimente einen Bildlauf nach unten aus, und klicken Sie auf **Aktivieren**.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-118">Click the experiment name, scroll to the bottom of the experiment page, and click **Activate**.</span></span>
 
-1. Melden Sie sich beim [Dev Center-Dashboard](https://dev.windows.com/overview) an.
-2. Wählen Sie unter **Ihre Apps** die App mit dem Experiment, das Sie aktivieren möchten.
-3. Wählen Sie im Navigationsbereich **Dienste** und dann **Experimentation** aus.
-4. Erweitern Sie in der Tabelle der Projekte im Abschnitt **Projekte** das Projekt, das Ihr Experiment enthält, und führen Sie dann eine der folgenden Aufgaben aus:
-  * Klicken Sie auf den Link **Aktivieren** für Ihr Experiment. Ihr Experiment wird dem Abschnitt **Aktive Experimente** im oberen Bereich der Seite hinzugefügt.
-  * Klicken Sie auf den Namen des Experiments, führen Sie auf der Seite für Experimente einen Bildlauf nach unten aus, und klicken Sie auf **Aktivieren**.
+> [!IMPORTANT]
+> <span data-ttu-id="e4cb9-119">Nach dem Aktivieren eines Experiments können Sie die Experimentparameter nicht mehr ändern, wenn Sie beim Erstellen des Experiments nicht auf das Kontrollkästchen **Editable experiment** geklickt haben.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-119">After you activate an experiment, you can no longer modify the experiment parameters unless you clicked the **Editable experiment** check box when you created the experiment.</span></span> <span data-ttu-id="e4cb9-120">Es wird empfohlen, das Experiment vor der Aktivierung in der App zu codieren.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-120">We recommend that you code the experiment in your app before activating your experiment.</span></span>
 
-> **Wichtig**&nbsp;&nbsp;Nach dem Aktivieren eines Experiments können Sie die Experimentparameter nicht mehr ändern, wenn Sie beim Erstellen des Experiments nicht auf das Kontrollkästchen für **bearbeitbare Experimente** geklickt haben. Es wird empfohlen, das Experiment vor der Aktivierung in der App zu codieren.
+## <a name="review-the-results-of-your-experiment"></a><span data-ttu-id="e4cb9-121">Prüfen der Experimentergebnisse</span><span class="sxs-lookup"><span data-stu-id="e4cb9-121">Review the results of your experiment</span></span>
 
+1. <span data-ttu-id="e4cb9-122">Kehren Sie in Dev Center zur Seite **Experimentation** für Ihre App zurück.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-122">In Dev Center, return to the **Experimentation** page for your app.</span></span>
+2. <span data-ttu-id="e4cb9-123">Klicken Sie im Abschnitt **Aktive Experimente** auf den Namen des aktiven Experiments, um zur Experimentseite zu wechseln.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-123">In the **Active experiments** section, click the name of your active experiment to go to the experiment page.</span></span>
+3. <span data-ttu-id="e4cb9-124">Bei aktiven oder beendeten Experimenten enthalten die ersten zwei Abschnitte auf dieser Seite die Ergebnisse Ihres Experiments:</span><span class="sxs-lookup"><span data-stu-id="e4cb9-124">For an active or completed experiment, the first two sections in this page provide the results of your experiment:</span></span>
+  * <span data-ttu-id="e4cb9-125">Der Abschnitt **Ergebniszusammenfassung** enthält die Experimentziele und die Umwandlungsquote für jede Variation.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-125">The **Results summary** section lists your experiment goals and the conversion rate percentage for each variation.</span></span>
+  * <span data-ttu-id="e4cb9-126">Der Abschnitt **Ergebnisdetails** enthält ausführlichere Informationen zu den einzelnen Varianten all der Ziele im Experiment, einschließlich Ansichten, Konvertierungen, eindeutiger Benutzer, Umwandlungsquote, Delta in %, Konfidenz und Signifikanz.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-126">The **Results details** section provides more details for each variation of all the goals in your experiment, including the views, conversions, unique users, conversion rate, delta %, confidence, and significance.</span></span> <span data-ttu-id="e4cb9-127">Die *Konfidenz* ist ein statistisches Maß zum Angeben der Zuverlässigkeit einer Schätzung, mit dem die Fehlerspanne ermittelt wird.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-127">The *confidence* is a statistical measure of the reliability of an estimate, which calculates the margin of error.</span></span> <span data-ttu-id="e4cb9-128">Die *Signifikanz* ist ein statistisches Maß, mit dem basierend auf einer Stichprobe die Wahrscheinlichkeit dafür bestimmt wird, dass ein Ergebnis nicht zufällig ist, sondern auf eine bestimmte Ursache zurückzuführen ist.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-128">The *significance* is a statistical measure, based on sample size, to determine the likelihood that a result is not due to chance, but is instead attributed to a specific cause.</span></span>
 
-## <a name="review-the-results-of-your-experiment"></a>Prüfen der Experimentergebnisse
-
-1. Kehren Sie in Dev Center zur Seite **Experimentation** für Ihre App zurück.
-2. Klicken Sie im Abschnitt **Aktive Experimente** auf den Namen des aktiven Experiments, um zur Experimentseite zu wechseln.
-3. Bei aktiven oder beendeten Experimenten enthalten die ersten zwei Abschnitte auf dieser Seite die Ergebnisse Ihres Experiments:
-  * Der Abschnitt **Ergebniszusammenfassung** enthält die Experimentziele und die Umwandlungsquote für jede Variation.
-  * Der Abschnitt **Ergebnisdetails** enthält ausführlichere Informationen zu den einzelnen Varianten all der Ziele im Experiment, einschließlich Ansichten, Konvertierungen, eindeutiger Benutzer, Umwandlungsquote, Delta in %, Konfidenz und Signifikanz. Die *Konfidenz* ist ein statistisches Maß zum Angeben der Zuverlässigkeit einer Schätzung, mit dem die Fehlerspanne ermittelt wird. Die *Signifikanz* ist ein statistisches Maß, mit dem basierend auf einer Stichprobe die Wahrscheinlichkeit dafür bestimmt wird, dass ein Ergebnis nicht zufällig ist, sondern auf eine bestimmte Ursache zurückzuführen ist.
-
-  >**Hinweis**&nbsp;&nbsp;Dev Center meldet nur das erste Umwandlungsereignis für jeden Benutzer innerhalb eines Zeitraums von 24 Stunden. Wenn ein Benutzer innerhalb von 24 Stunden mehrere Umwandlungsereignisse in Ihrer App auslöst, wird nur das erste Umwandlungsereignis gemeldet. So soll verhindert werden, dass die Experimentergebnisse für eine Stichprobengruppe von Benutzern durch einen einzelnen Benutzer mit mehreren Umwandlungsereignissen verfälscht wird.
-
-
-## <a name="complete-your-experiment"></a>Beenden Ihres Experiments
-
-1. Kehren Sie Im Dashboard zur Experimentseite zurück. Einzelheiten dazu finden Sie im vorherigen Abschnitt.
-2. Führen Sie im Abschnitt **Ergebniszusammenfassung** eine der folgenden Aktionen durch:
-  * Klicken Sie zum Beenden des Experiments und zum weiteren Verwenden der Variablenwerte der Steuerungsvariation für Ihre App auf **Beibehalten**.
-  * Klicken Sie zum Beenden des Experiments und zum Verwenden der Variablenwerte einer anderen Variation für Ihre App unter der Variation, zu der Sie wechseln möchten, auf **Wechseln**.
-3. Klicken Sie auf **OK**, um zu bestätigen, dass Sie das Experiment beenden möchten.
+> [!NOTE]
+> <span data-ttu-id="e4cb9-129">Dev Center meldet nur das erste Umwandlungsereignis für jeden Benutzer innerhalb eines Zeitraums von 24 Stunden.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-129">Dev Center reports only the first conversion event for each user in a 24-hour time period.</span></span> <span data-ttu-id="e4cb9-130">Wenn ein Benutzer innerhalb von 24 Stunden mehrere Umwandlungsereignisse in Ihrer App auslöst, wird nur das erste Umwandlungsereignis gemeldet.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-130">If a user triggers multiple conversion events in your app within a 24-hour period, only the first conversion event is reported.</span></span> <span data-ttu-id="e4cb9-131">So soll verhindert werden, dass die Experimentergebnisse für eine Stichprobengruppe von Benutzern durch einen einzelnen Benutzer mit mehreren Umwandlungsereignissen verfälscht wird.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-131">This is intended to help prevent a single user with many conversion events from skewing the experiment results for a sample group of users.</span></span>
 
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="complete-your-experiment"></a><span data-ttu-id="e4cb9-132">Beenden Ihres Experiments</span><span class="sxs-lookup"><span data-stu-id="e4cb9-132">Complete your experiment</span></span>
 
-* [Erstellen eines Projekts und Festlegen von Remotevariablen im Dev Center-Dashboard](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
-* [Programmieren Ihrer App für Experimente](code-your-experiment-in-your-app.md)
-* [Definieren Ihres Experiments im Dev Center-Dashboard](define-your-experiment-in-the-dev-center-dashboard.md)
-* [Erstellen und Ausführen Ihres ersten Experiments mit A/B-Tests](create-and-run-your-first-experiment-with-a-b-testing.md)
-* [Ausführen von App-Experimenten mit A/B-Tests](run-app-experiments-with-a-b-testing.md)
+1. <span data-ttu-id="e4cb9-133">Kehren Sie Im Dashboard zur Experimentseite zurück.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-133">In the dashboard, return to your experiment page.</span></span> <span data-ttu-id="e4cb9-134">Einzelheiten dazu finden Sie im vorherigen Abschnitt.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-134">For instructions, see the previous section.</span></span>
+2. <span data-ttu-id="e4cb9-135">Führen Sie im Abschnitt **Ergebniszusammenfassung** eine der folgenden Aktionen durch:</span><span class="sxs-lookup"><span data-stu-id="e4cb9-135">In the **Results summary** section, do one of the following:</span></span>
+  * <span data-ttu-id="e4cb9-136">Klicken Sie zum Beenden des Experiments und zum weiteren Verwenden der Variablenwerte der Steuerungsvariation für Ihre App auf **Beibehalten**.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-136">If you want to end the experiment and continue using the variable values in the control variation in your app, click **Keep**.</span></span>
+  * <span data-ttu-id="e4cb9-137">Klicken Sie zum Beenden des Experiments und zum Verwenden der Variablenwerte einer anderen Variation für Ihre App unter der Variation, zu der Sie wechseln möchten, auf **Wechseln**.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-137">If you want to end the experiment but switch to using the variable values in a different variation in your app, click **Switch** under the variation to which you want to switch.</span></span>
+3. <span data-ttu-id="e4cb9-138">Klicken Sie auf **OK**, um zu bestätigen, dass Sie das Experiment beenden möchten.</span><span class="sxs-lookup"><span data-stu-id="e4cb9-138">Click **OK** to confirm that you want to end the experiment.</span></span>
 
+
+## <a name="related-topics"></a><span data-ttu-id="e4cb9-139">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="e4cb9-139">Related topics</span></span>
+
+* [<span data-ttu-id="e4cb9-140">Erstellen eines Projekts und Festlegen von Remotevariablen im Dev Center-Dashboard</span><span class="sxs-lookup"><span data-stu-id="e4cb9-140">Create a project and define remote variables in the Dev Center dashboard</span></span>](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
+* [<span data-ttu-id="e4cb9-141">Programmieren Ihrer App für Experimente</span><span class="sxs-lookup"><span data-stu-id="e4cb9-141">Code your app for experimentation</span></span>](code-your-experiment-in-your-app.md)
+* [<span data-ttu-id="e4cb9-142">Definieren Ihres Experiments im Dev Center-Dashboard</span><span class="sxs-lookup"><span data-stu-id="e4cb9-142">Define your experiment in the Dev Center dashboard</span></span>](define-your-experiment-in-the-dev-center-dashboard.md)
+* [<span data-ttu-id="e4cb9-143">Erstellen und Ausführen Ihres ersten Experiments mit A/B-Tests</span><span class="sxs-lookup"><span data-stu-id="e4cb9-143">Create and run your first experiment with A/B testing</span></span>](create-and-run-your-first-experiment-with-a-b-testing.md)
+* [<span data-ttu-id="e4cb9-144">Ausführen von App-Experimenten mit A/B-Tests</span><span class="sxs-lookup"><span data-stu-id="e4cb9-144">Run app experiments with A/B testing</span></span>](run-app-experiments-with-a-b-testing.md)

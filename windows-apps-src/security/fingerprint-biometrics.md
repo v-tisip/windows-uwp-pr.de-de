@@ -1,6 +1,6 @@
 ---
 title: Biometrischer Fingerabdruck
-description: In diesem Artikel wird beschrieben, wie Sie Biometrie für Fingerabdrücke in Ihrer UWP-App (Universelle Windows-Plattform) verarbeiten können.
+description: In diesem Artikel wird erläutert, wie Sie die Funktion des biometrischen Fingerabdrucks in Ihrer UWP-App (Universelle Windows-Plattform) hinzufügen.
 ms.assetid: 55483729-5F8A-401A-8072-3CD611DDFED2
 author: PatrickFarley
 ms.author: pafarley
@@ -8,26 +8,26 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows10, UWP
+keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c07d1697fa6179274b4d74c1e64c045d3d5d53c
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 287b2b0fedac112f57f0342420a7830db5aa13be
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1815465"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2790206"
 ---
-# <a name="fingerprint-biometrics"></a><span data-ttu-id="2089d-104">Biometrischer Fingerabdruck</span><span class="sxs-lookup"><span data-stu-id="2089d-104">Fingerprint biometrics</span></span>
+# <a name="fingerprint-biometrics"></a><span data-ttu-id="f276f-104">Biometrischer Fingerabdruck</span><span class="sxs-lookup"><span data-stu-id="f276f-104">Fingerprint biometrics</span></span>
 
 
 
 
-<span data-ttu-id="2089d-105">In diesem Artikel wird erläutert, wie Sie die Funktion des biometrischen Fingerabdrucks in Ihrer UWP-App (Universelle Windows-Plattform) hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="2089d-105">This article explains how to add fingerprint biometrics to your Universal Windows Platform (UWP) app.</span></span> <span data-ttu-id="2089d-106">Sie können die Sicherheit Ihrer App erhöhen, indem Sie die Anforderung einer Authentifizierung per Fingerabdruck integrieren, wenn die Zustimmung des Benutzers für eine bestimmte Aktion erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="2089d-106">Including a request for fingerprint authentication when the user must consent to a particular action increases the security of your app.</span></span> <span data-ttu-id="2089d-107">So können Sie beispielsweise die Authentifizierung per Fingerabdruck vor der Autorisierung eines In-App-Kaufs oder vor dem Zugriff auf eingeschränkte Ressourcen anfordern.</span><span class="sxs-lookup"><span data-stu-id="2089d-107">For example, you could require fingerprint authentication before authorizing an in-app purchase, or access to restricted resources.</span></span> <span data-ttu-id="2089d-108">Die Verwaltung der Authentifizierung per Fingerabdruck erfolgt mithilfe der [**UserConsentVerifier**](https://msdn.microsoft.com/library/windows/apps/dn279134)-Klasse im [**Windows.Security.Credentials.UI**](https://msdn.microsoft.com/library/windows/apps/hh701356)-Namespace.</span><span class="sxs-lookup"><span data-stu-id="2089d-108">Fingerprint authentication is managed using the [**UserConsentVerifier**](https://msdn.microsoft.com/library/windows/apps/dn279134) class in the [**Windows.Security.Credentials.UI**](https://msdn.microsoft.com/library/windows/apps/hh701356) namespace.</span></span>
+<span data-ttu-id="f276f-105">In diesem Artikel wird erläutert, wie Sie die Funktion des biometrischen Fingerabdrucks in Ihrer UWP-App (Universelle Windows-Plattform) hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="f276f-105">This article explains how to add fingerprint biometrics to your Universal Windows Platform (UWP) app.</span></span> <span data-ttu-id="f276f-106">Sie können die Sicherheit Ihrer App erhöhen, indem Sie die Anforderung einer Authentifizierung per Fingerabdruck integrieren, wenn die Zustimmung des Benutzers für eine bestimmte Aktion erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="f276f-106">Including a request for fingerprint authentication when the user must consent to a particular action increases the security of your app.</span></span> <span data-ttu-id="f276f-107">So können Sie beispielsweise die Authentifizierung per Fingerabdruck vor der Autorisierung eines In-App-Kaufs oder vor dem Zugriff auf eingeschränkte Ressourcen anfordern.</span><span class="sxs-lookup"><span data-stu-id="f276f-107">For example, you could require fingerprint authentication before authorizing an in-app purchase, or access to restricted resources.</span></span> <span data-ttu-id="f276f-108">Die Verwaltung der Authentifizierung per Fingerabdruck erfolgt mithilfe der [**UserConsentVerifier**](https://msdn.microsoft.com/library/windows/apps/dn279134)-Klasse im [**Windows.Security.Credentials.UI**](https://msdn.microsoft.com/library/windows/apps/hh701356)-Namespace.</span><span class="sxs-lookup"><span data-stu-id="f276f-108">Fingerprint authentication is managed using the [**UserConsentVerifier**](https://msdn.microsoft.com/library/windows/apps/dn279134) class in the [**Windows.Security.Credentials.UI**](https://msdn.microsoft.com/library/windows/apps/hh701356) namespace.</span></span>
 
-## <a name="check-the-device-for-a-fingerprint-reader"></a><span data-ttu-id="2089d-109">Suchen nach einem Fingerabdruckleser</span><span class="sxs-lookup"><span data-stu-id="2089d-109">Check the device for a fingerprint reader</span></span>
+## <a name="check-the-device-for-a-fingerprint-reader"></a><span data-ttu-id="f276f-109">Suchen nach einem Fingerabdruckleser</span><span class="sxs-lookup"><span data-stu-id="f276f-109">Check the device for a fingerprint reader</span></span>
 
 
-<span data-ttu-id="2089d-110">Durch Aufrufen der [**UserConsentVerifier.CheckAvailabilityAsync**](https://msdn.microsoft.com/library/windows/apps/dn279138)-Methode kann ermittelt werden, ob das Gerät über einen Fingerabdruckleser verfügt.</span><span class="sxs-lookup"><span data-stu-id="2089d-110">To find out whether the device has a fingerprint reader, call [**UserConsentVerifier.CheckAvailabilityAsync**](https://msdn.microsoft.com/library/windows/apps/dn279138).</span></span> <span data-ttu-id="2089d-111">Auch wenn ein Gerät die Authentifizierung per Fingerabdruck unterstützt, sollte die App in den Einstellungen eine Option enthalten, mit der die Authentifizierung per Fingerabdruck aktiviert oder deaktiviert werden kann.</span><span class="sxs-lookup"><span data-stu-id="2089d-111">Even if a device supports fingerprint authentication, your app should still provide users with an option in Settings to enable or disable it.</span></span>
+<span data-ttu-id="f276f-110">Durch Aufrufen der [**UserConsentVerifier.CheckAvailabilityAsync**](https://msdn.microsoft.com/library/windows/apps/dn279138)-Methode kann ermittelt werden, ob das Gerät über einen Fingerabdruckleser verfügt.</span><span class="sxs-lookup"><span data-stu-id="f276f-110">To find out whether the device has a fingerprint reader, call [**UserConsentVerifier.CheckAvailabilityAsync**](https://msdn.microsoft.com/library/windows/apps/dn279138).</span></span> <span data-ttu-id="f276f-111">Auch wenn ein Gerät die Authentifizierung per Fingerabdruck unterstützt, sollte die App in den Einstellungen eine Option enthalten, mit der die Authentifizierung per Fingerabdruck aktiviert oder deaktiviert werden kann.</span><span class="sxs-lookup"><span data-stu-id="f276f-111">Even if a device supports fingerprint authentication, your app should still provide users with an option in Settings to enable or disable it.</span></span>
 
 ```cs
 public async System.Threading.Tasks.Task<string> CheckFingerprintAvailability()
@@ -71,12 +71,12 @@ public async System.Threading.Tasks.Task<string> CheckFingerprintAvailability()
 }
 ```
 
-## <a name="request-consent-and-return-results"></a><span data-ttu-id="2089d-112">Anfordern der Zustimmung und Zurückgeben von Ergebnissen</span><span class="sxs-lookup"><span data-stu-id="2089d-112">Request consent and return results</span></span>
+## <a name="request-consent-and-return-results"></a><span data-ttu-id="f276f-112">Anfordern der Zustimmung und Zurückgeben von Ergebnissen</span><span class="sxs-lookup"><span data-stu-id="f276f-112">Request consent and return results</span></span>
 
 
-<span data-ttu-id="2089d-113">Wenn Sie die Benutzerzustimmung mithilfe eines Fingerabdruckscans anfordern möchten, rufen Sie die [**UserConsentVerifier.RequestVerificationAsync**](https://msdn.microsoft.com/library/windows/apps/dn279139)-Methode auf.</span><span class="sxs-lookup"><span data-stu-id="2089d-113">To request user consent from a fingerprint scan, call the [**UserConsentVerifier.RequestVerificationAsync**](https://msdn.microsoft.com/library/windows/apps/dn279139) method.</span></span> <span data-ttu-id="2089d-114">Damit die Authentifizierung per Fingerabdruck funktioniert, muss der Benutzer vorher einen Fingerabdruck in der Fingerabdruckdatenbank hinterlegt haben.</span><span class="sxs-lookup"><span data-stu-id="2089d-114">For fingerprint authentication to work, the user must have previously added a fingerprint "signature" to the fingerprint database.</span></span>
+<span data-ttu-id="f276f-113">Wenn Sie die Benutzerzustimmung mithilfe eines Fingerabdruckscans anfordern möchten, rufen Sie die [**UserConsentVerifier.RequestVerificationAsync**](https://msdn.microsoft.com/library/windows/apps/dn279139)-Methode auf.</span><span class="sxs-lookup"><span data-stu-id="f276f-113">To request user consent from a fingerprint scan, call the [**UserConsentVerifier.RequestVerificationAsync**](https://msdn.microsoft.com/library/windows/apps/dn279139) method.</span></span> <span data-ttu-id="f276f-114">Damit die Authentifizierung per Fingerabdruck funktioniert, muss der Benutzer vorher einen Fingerabdruck in der Fingerabdruckdatenbank hinterlegt haben.</span><span class="sxs-lookup"><span data-stu-id="f276f-114">For fingerprint authentication to work, the user must have previously added a fingerprint "signature" to the fingerprint database.</span></span>
 
-<span data-ttu-id="2089d-115">Beim Aufrufen von [**UserConsentVerifier.RequestVerificationAsync**](https://msdn.microsoft.com/library/windows/apps/dn279139) wird dem Benutzer ein modales Dialogfeld angezeigt, in dem ein Fingerabdruckscan angefordert wird.</span><span class="sxs-lookup"><span data-stu-id="2089d-115">When you call the [**UserConsentVerifier.RequestVerificationAsync**](https://msdn.microsoft.com/library/windows/apps/dn279139), the user is presented with a modal dialog requesting a fingerprint scan.</span></span> <span data-ttu-id="2089d-116">Sie können in der Methode **UserConsentVerifier.RequestVerificationAsync** eine Meldung bereitstellen, die dem Benutzer im modalen Dialogfeld angezeigt wird (siehe folgende Abbildung).</span><span class="sxs-lookup"><span data-stu-id="2089d-116">You can supply a message to the **UserConsentVerifier.RequestVerificationAsync** method that will be displayed to the user as part of the modal dialog, as shown in the following image.</span></span>
+<span data-ttu-id="f276f-115">Beim Aufrufen von [**UserConsentVerifier.RequestVerificationAsync**](https://msdn.microsoft.com/library/windows/apps/dn279139) wird dem Benutzer ein modales Dialogfeld angezeigt, in dem ein Fingerabdruckscan angefordert wird.</span><span class="sxs-lookup"><span data-stu-id="f276f-115">When you call the [**UserConsentVerifier.RequestVerificationAsync**](https://msdn.microsoft.com/library/windows/apps/dn279139), the user is presented with a modal dialog requesting a fingerprint scan.</span></span> <span data-ttu-id="f276f-116">Sie können in der Methode **UserConsentVerifier.RequestVerificationAsync** eine Meldung bereitstellen, die dem Benutzer im modalen Dialogfeld angezeigt wird (siehe folgende Abbildung).</span><span class="sxs-lookup"><span data-stu-id="f276f-116">You can supply a message to the **UserConsentVerifier.RequestVerificationAsync** method that will be displayed to the user as part of the modal dialog, as shown in the following image.</span></span>
 
 ```cs
 private async System.Threading.Tasks.Task<string> RequestConsent(string userMessage)

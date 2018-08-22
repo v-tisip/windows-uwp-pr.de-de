@@ -1,28 +1,31 @@
 ---
-author: TylerMSFT
-Description: "Problembehandlung bei Ereignissen und Fehlern der Microsoft-Prüfung mithilfe der Ereignisanzeige."
-title: "Problembehandlung bei Microsoft Prüfung mithilfe der Ereignisanzeige."
-translationtype: Human Translation
-ms.sourcegitcommit: f2838d95da66eda32d9cea725a33fc4084d32359
-ms.openlocfilehash: 1b99b959cfdde997f7995c1bdf40d51921b2f1d5
-
+Description: Troubleshoot Microsoft Take a Test events and errors with the event viewer.
+title: Problembehandlung bei Microsoft Prüfung mithilfe der Ereignisanzeige.
+author: PatrickFarley
+ms.author: pafarley
+ms.assetid: 9218e542-f520-4616-98fc-b113d5a08e0f
+ms.date: 10/06/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, Uwp, education
+ms.localizationpriority: medium
+ms.openlocfilehash: 3193525316d085e56244d6f03da99e3e07c6539f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792418"
 ---
+# <a name="troubleshoot-microsoft-take-a-test-with-the-event-viewer"></a><span data-ttu-id="fb6c6-103">Problembehandlung bei Microsoft Prüfung mithilfe der Ereignisanzeige.</span><span class="sxs-lookup"><span data-stu-id="fb6c6-103">Troubleshoot Microsoft Take a Test with the event viewer</span></span>
 
-# Problembehandlung bei Microsoft Prüfung mithilfe der Ereignisanzeige.
+<span data-ttu-id="fb6c6-104">Sie können die Ereignisanzeige nutzen um sich Ereignisse und Fehler der Prüfung anzeigen zu lassen.</span><span class="sxs-lookup"><span data-stu-id="fb6c6-104">You can use the Event Viewer to view Take a Test events and errors.</span></span> <span data-ttu-id="fb6c6-105">Prüfung protokolliert Ereignisse, wenn eine Sperrmodus-Anforderung empfangen wurde, wenn eine Geräteregistrierung erfolgreich war, die Sperrmodusrichtlinien erfolgreich angewendet wurden und vieles mehr.</span><span class="sxs-lookup"><span data-stu-id="fb6c6-105">Take a Test logs events when a lockdown request has been received, device enrollment has succeeded, lockdown policies were successfully applied, and more.</span></span>
 
-Sie können die Ereignisanzeige nutzen um sich Ereignisse und Fehler der Prüfung anzeigen zu lassen. Prüfung protokolliert Ereignisse, wenn eine Sperrmodus-Anforderung empfangen wurde, wenn eine Geräteregistrierung erfolgreich war, die Sperrmodusrichtlinien erfolgreich angewendet wurden und vieles mehr.
+<span data-ttu-id="fb6c6-106">So aktivieren Sie Ereignisse in der Ereignisanzeige</span><span class="sxs-lookup"><span data-stu-id="fb6c6-106">To enable viewing events in the Event Viewer:</span></span>
+1. <span data-ttu-id="fb6c6-107">Öffnen Sie</span><span class="sxs-lookup"><span data-stu-id="fb6c6-107">Open the</span></span> `Event Viewer`
+2. <span data-ttu-id="fb6c6-108">Navigieren Sie zu</span><span class="sxs-lookup"><span data-stu-id="fb6c6-108">Navigate to</span></span> `Applications and Services Logs > Microsoft > Windows > Management-SecureAssessment`
+3. <span data-ttu-id="fb6c6-109">Klicken Sie mit der rechten Maustaste auf `Operational` und wählen Sie</span><span class="sxs-lookup"><span data-stu-id="fb6c6-109">Right-click `Operational` and select</span></span> `Enable Log`
 
-So aktivieren Sie Ereignisse in der Ereignisanzeige
-1. Öffnen Sie `Event Viewer`
-2. Navigieren Sie zu `Applications and Services Logs > Microsoft > Windows > Management-SecureAssessment`
-3. Klicken Sie mit der rechten Maustaste auf `Operational` und wählen Sie `Enable Log`
-
-So speichern Sie die Ereignisprotokolle
-1. Rechtsklick `Operational`
-2. Klick `Save All Events As…`
-
-
-
-<!--HONumber=Aug16_HO3-->
-
-
+<span data-ttu-id="fb6c6-110">So speichern Sie die Ereignisprotokolle</span><span class="sxs-lookup"><span data-stu-id="fb6c6-110">To save the event logs:</span></span>
+1. <span data-ttu-id="fb6c6-111">Rechtsklick</span><span class="sxs-lookup"><span data-stu-id="fb6c6-111">Right-click</span></span> `Operational`
+2. <span data-ttu-id="fb6c6-112">Klick</span><span class="sxs-lookup"><span data-stu-id="fb6c6-112">Click</span></span> `Save All Events As…`
