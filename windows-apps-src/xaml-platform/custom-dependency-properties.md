@@ -4,31 +4,33 @@ description: Hier wird erläutert, wie Sie benutzerdefinierte Abhängigkeitseige
 title: Benutzerdefinierte Abhängigkeitseigenschaften
 ms.assetid: 5ADF7935-F2CF-4BB6-B1A5-F535C2ED8EF8
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 07/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f1b17f4ea61e28b1ba43d886455d8a3373efb79
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+dev_langs:
+- csharp
+- vb
+- cppwinrt
+- cpp
+ms.openlocfilehash: ddeccfe4c5e198afd77eaa4a81fc017543291ba1
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675627"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2801951"
 ---
 # <a name="custom-dependency-properties"></a>Benutzerdefinierte Abhängigkeitseigenschaften
-
 
 Hier wird erläutert, wie Sie eigene Abhängigkeitseigenschaften für eine Windows-Runtime-App mit C++, C# oder Visual Basic verwenden können. Wir zählen mögliche Gründen für die Erstellung benutzerdefinierter Abhängigkeitseigenschaften durch App-Entwickler und Komponentenautoren auf. Des Weiteren beschreiben wir die Implementierungsschritte für eine benutzerdefinierte Abhängigkeitseigenschaft sowie einige bewährte Methoden, die die Leistung, Benutzerfreundlichkeit und Vielseitigkeit der Abhängigkeitseigenschaft verbessern.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-
 Wir gehen davon aus, dass Sie die [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md) bereits gelesen haben und dass Sie Abhängigkeitseigenschaften aus der Perspektive eines Konsumenten von bestehenden Abhängigkeitseigenschaften verstehen. Für ein besseres Verständnis der in diesem Thema aufgeführten Beispiele sollten Sie XAML verstehen und wissen, wie eine einfache Windows-Runtime-App mit C++, C# oder Visual Basic geschrieben wird.
 
 ## <a name="what-is-a-dependency-property"></a>Was ist eine Abhängigkeitseigenschaft?
-
 
 Um Formate, Datenbindung, Animationen und Standardwerte für eine Eigenschaft zu unterstützen, sollte sie als Abhängigkeitseigenschaft implementiert werden. Werte der Abhängigkeitseigenschaft werden nicht als Felder in der Klasse gespeichert, sondern sie werden vom XAML-Framework gespeichert und mit einem Schlüssel verwiesen, der abgerufen wird, wenn die Eigenschaft durch Aufruf der [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)-Methode im Windows-Runtime-Eigenschaftensystem registriert wird.   Abhängigkeitseigenschaften können nur von Typen verwendet werden, die von [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356) abgeleitet sind. Das **DependencyObject** befindet sich jedoch ziemlich weit oben in der Klassenhierarchie, sodass die Mehrzahl der Klassen, die für die UI- und Darstellungsunterstützung bestimmt sind, Abhängigkeitseigenschaften unterstützen können. Weitere Informationen zu Abhängigkeitseigenschaften und für die in dieser Dokumentation verwendeten Begriffe und Konventionen finden Sie unter [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md).
 
@@ -36,7 +38,7 @@ Beispiele für Abhängigkeitseigenschaften in der Windows-Runtime sind: [**Contr
 
 Gemäß der Konvention besitzt jede durch eine Klasse verfügbar gemachte Abhängigkeitseigenschaft eine entsprechende **public static readonly**-Eigenschaft des Typs [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362), die für die gleiche Klasse verfügbar gemacht wird, die den Bezeichner für die Abhängigkeitseigenschaft bereitstellt. Für die Benennung des Bezeichners wird folgende Konvention verwendet: der Name der Abhängigkeitseigenschaft mit der am Namensende angehängten Zeichenfolge „Property“. Beispielsweise ist der **DependencyProperty**-Bezeichner für die Eigenschaft **Control.Background** [**Control.BackgroundProperty**](https://msdn.microsoft.com/library/windows/apps/br209396). Der Bezeichner speichert die Informationen zur Abhängigkeitseigenschaft, die bei der Registrierung gelten, und kann anschließend für andere Vorgänge verwendet werden, welche die Abhängigkeitseigenschaft betreffen, wie z. B. der Aufruf von [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361).
 
-##  <a name="property-wrappers"></a>Eigenschaftenwrapper
+## <a name="property-wrappers"></a>Eigenschaftenwrapper
 
 Abhängigkeitseigenschaften haben für gewöhnlich eine Wrapper-Implementierung. Ohne den Wrapper können die Eigenschaften nur durch die Verwendung der Methoden der Abhängigkeitseigenschafts-Hilfsprogramme [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) und [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) sowie durch die Nutzung des Bezeichners als Parameter abgerufen oder festgelegt werden. Dies handelt es sich um eine ziemlich ungewöhnliche Verwendung für eine offensichtliche Eigenschaft. Mit dem Wrapper können Ihr Code und jegliche anderen Codes, die auf die Abhängigkeitseigenschaft verweisen, eine unkomplizierte, für die von Ihnen verwendete Sprache natürliche Syntax für Objekteigenschaften verwenden.
 
@@ -48,26 +50,27 @@ Wenn Sie eine öffentliche Lese-/Schreibeigenschaft in eine Klasse implementiere
 
 Sie können Ihre Eigenschaft als Abhängigkeitseigenschaft implementieren, wenn diese mindestens eine der folgenden Eigenschaften der Windows-Runtime oder von Windows-Runtime-Apps unterstützen soll:
 
--   Festlegen der Eigenschaft über einen [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849)
--   Funktion als gültige Zieleigenschaft für Datenbindung mit [**{Binding}**](binding-markup-extension.md)
--   Unterstützung animierter Werte durch ein [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490)
--   Melden von Änderungen des Eigenschaftswerts durch:
-    -   Vom Eigenschaftensystem selbst durchgeführte Aktionen
-    -   Die Umgebung
-    -   Benutzeraktionen
-    -   Lese- und Schreibstile
+- Festlegen der Eigenschaft über einen [**Style**](https://msdn.microsoft.com/library/windows/apps/br208849)
+- Funktion als gültige Zieleigenschaft für Datenbindung mit [**{Binding}**](binding-markup-extension.md)
+- Unterstützung animierter Werte durch ein [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490)
+- Melden von Änderungen des Eigenschaftswerts durch:
+  - Vom Eigenschaftensystem selbst durchgeführte Aktionen
+  - Die Umgebung
+  - Benutzeraktionen
+  - Lese- und Schreibstile
 
 ## <a name="checklist-for-defining-a-dependency-property"></a>Prüfliste für die Definition einer Abhängigkeitseigenschaft
 
 Das Definieren einer Abhängigkeitseigenschaft umfasst mehrere Konzepte. Bei diesen Begriffen handelt es sich nicht unbedingt um einzelne Schritte, da einige Schritte bei der Implementierung im Code in einzelnen Codezeilen zusammengefasst werden: Diese Liste verschafft Ihnen einen schnellen Überblick.. Wir werden später noch genauer auf jeden Begriff eingehen und Ihnen Beispielcode in verschiedenen Sprachen zeigen.
 
--   Registrieren Sie den Eigenschaftennamen im Eigenschaftensystem (durch Aufruf von [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)), indem Sie einen Besitzertyp und den Typ des Eigenschaftswerts angeben. 
-    -  Es gibt auch einen erforderlichen Parameter für [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829), der Eigenschaftenmetadaten benötigt. Geben Sie **null** dafür an, oder wenn Sie PropertyChanged-Verhalten oder einen metadatenbasierten Standardwert haben möchten, der durch den Aufruf von [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357) wiederhergestellt werden kann, geben Sie eine Instanz von [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.propertymetadata) an.
--   Definieren Sie einen [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362)-Bezeichner als ein **public static readonly**-Eigenschaftenmember des Besitzertyps.
--   Definieren Sie eine Wrappereigenschaft nach dem Accessor-Modell für Eigenschaften, das in der von Ihnen implementierten Sprache verwendet wird. Der Name der Wrappereigenschaft muss mit der Zeichenfolge *string* übereinstimmen, die Sie in [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) verwendet haben. Implementieren Sie die **get**- und **set**-Accessoren, um den Wrapper durch den Aufruf von [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) und [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) und die Übergabe des Bezeichners Ihrer Eigenschaft als Parameter mit der von diesem umschlossenen Abhängigkeitseigenschaft zu verbinden.
--   (Optional) Platzieren Sie Attribute wie [**ContentPropertyAttribute**](https://msdn.microsoft.com/library/windows/apps/br228011) auf dem Wrapper.
+- Registrieren Sie den Eigenschaftennamen im Eigenschaftensystem (durch Aufruf von [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)), indem Sie einen Besitzertyp und den Typ des Eigenschaftswerts angeben.
+  - Es gibt auch einen erforderlichen Parameter für [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829), der Eigenschaftenmetadaten benötigt. Geben Sie **null** dafür an, oder wenn Sie PropertyChanged-Verhalten oder einen metadatenbasierten Standardwert haben möchten, der durch den Aufruf von [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357) wiederhergestellt werden kann, geben Sie eine Instanz von [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.propertymetadata) an.
+- Definieren Sie einen [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362)-Bezeichner als ein **public static readonly**-Eigenschaftenmember des Besitzertyps.
+- Definieren Sie eine Wrappereigenschaft nach dem Accessor-Modell für Eigenschaften, das in der von Ihnen implementierten Sprache verwendet wird. Der Name der Wrappereigenschaft muss mit der Zeichenfolge *string* übereinstimmen, die Sie in [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) verwendet haben. Implementieren Sie die **get**- und **set**-Accessoren, um den Wrapper durch den Aufruf von [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) und [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) und die Übergabe des Bezeichners Ihrer Eigenschaft als Parameter mit der von diesem umschlossenen Abhängigkeitseigenschaft zu verbinden.
+- (Optional) Platzieren Sie Attribute wie [**ContentPropertyAttribute**](https://msdn.microsoft.com/library/windows/apps/br228011) auf dem Wrapper.
 
-**Hinweis**  Wenn Sie eine benutzerdefinierte angefügte Eigenschaft definieren, wird der Wrapper im Allgemeinen ausgelassen. Stattdessen verwenden Sie einen anderen Accessor-Stil, den ein XAML-Prozessor verwenden kann. Siehe [Benutzerdefinierte angefügte Eigenschaften](custom-attached-properties.md). 
+> [!NOTE]
+> Wenn Sie eine benutzerdefinierte angefügte Eigenschaft definieren, wird der Wrapper für gewöhnlich weggelassen. Stattdessen verwenden Sie einen anderen Accessor-Stil, den ein XAML-Prozessor verwenden kann. Siehe [Benutzerdefinierte angefügte Eigenschaften](custom-attached-properties.md). 
 
 ## <a name="registering-the-property"></a>Registrieren der Eigenschaft
 
@@ -75,7 +78,11 @@ Damit Ihre Eigenschaft zu einer Abhängigkeitseigenschaft wird, müssen Sie die 
 
 Im Fall von Microsoft .NET-Sprachen (C# und Microsoft Visual Basic) rufen Sie [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) im Text Ihrer Klasse auf (innerhalb der Klasse, jedoch außerhalb der Memberdefinitionen). Der Bezeichner wird vom [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)-Methodenaufruf als Rückgabewert bereitgestellt. Der [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)-Aufruf erfolgt in der Regel als statischer Konstruktor oder als Teil der Initialisierung einer **public static readonly**-Eigenschaft des Typs [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) als Teil der Klasse. Diese Eigenschaft macht den Bezeichner für Ihre Abhängigkeitseigenschaft verfügbar. Im Anschluss finden Sie Beispiele für den [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)-Aufruf.
 
-> [!div class="tabbedCodeSnippets"]
+> [!NOTE]
+> Registrieren die Abhängigkeitseigenschaft als Teil des Bezeichners Eigenschaftendefinition normalen Implementierung ist, aber Sie können eine Abhängigkeitseigenschaft auch im statischen Klassenkonstruktor registrieren. Dieser Ansatz eignet sich ggf., wenn Sie mehr als eine Codezeile benötigen, um die Abhängigkeitseigenschaft zu initialisieren.
+
+Für C++ / CX, haben Sie Optionen für, wie Sie die Implementierung der Kopf-und der Codedatei aufgeteilt. In der Regel wird der Bezeichner selbst als **public static**-Eigenschaft in der Kopfzeile mit einer **get**-Implementierung, jedoch ohne **set**-Implementierung deklariert. Die **get**-Implementierung bezieht sich auf ein privates Feld, das eine nicht initialisierte [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362)-Instanz ist. Sie können darüber hinaus die Wrapper und die **get**- und **set**-Implementierungen des Wrappers deklarieren. In diesem Fall enthält der Wrapper eine minimale Implementierung. Wenn der Wrapper eine Zuordnung zur Windows-Runtime benötigt, führen Sie die Zuordnung auch in der Kopfzeile durch. Platzieren Sie den [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)-Aufruf in die Codedatei innerhalb einer Hilfsfunktion, die nur bei der ersten Initialisierung der App ausgeführt wird. Verwenden Sie den Rückgabewert von **Register**, um die statischen, jedoch nicht initialisierten Bezeichner zu füllen, die Sie in der Kopfzeile deklariert haben und zunächst im Stammbereich der Implementierungsdatei auf **nullptr** festgelegt haben.
+
 ```csharp
 public static readonly DependencyProperty LabelProperty = DependencyProperty.Register(
   "Label",
@@ -84,6 +91,7 @@ public static readonly DependencyProperty LabelProperty = DependencyProperty.Reg
   new PropertyMetadata(null)
 );
 ```
+
 ```vb
 Public Shared ReadOnly LabelProperty As DependencyProperty = 
     DependencyProperty.Register("Label", 
@@ -92,9 +100,35 @@ Public Shared ReadOnly LabelProperty As DependencyProperty =
       New PropertyMetadata(Nothing))
 ```
 
-**Hinweis** Das Registrieren der Abhängigkeitseigenschaft als Teil der Bezeichnereigenschaftendefinition ist gängigste Art der Implementierung. Sie können eine Abhängigkeitseigenschaft jedoch auch im statischen Konstruktor der Klasse registrieren. Dieser Ansatz eignet sich ggf., wenn Sie mehr als eine Codezeile benötigen, um die Abhängigkeitseigenschaft zu initialisieren.
+```cppwinrt
+// ImageWithLabelControl.idl
+namespace ImageWithLabelControlApp
+{
+    runtimeclass ImageWithLabelControl : Windows.UI.Xaml.Controls.Control
+    {
+        ImageWithLabelControl();
+        static Windows.UI.Xaml.DependencyProperty LabelProperty{ get; };
+        String Label;
+    }
+}
 
-Im Fall von C++ haben Sie verschiedene Möglichkeiten für die Aufteilung der Implementierung auf die Kopfzeile und die Codedatei. In der Regel wird der Bezeichner selbst als **public static**-Eigenschaft in der Kopfzeile mit einer **get**-Implementierung, jedoch ohne **set**-Implementierung deklariert. Die **get**-Implementierung bezieht sich auf ein privates Feld, das eine nicht initialisierte [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362)-Instanz ist. Sie können darüber hinaus die Wrapper und die **get**- und **set**-Implementierungen des Wrappers deklarieren. In diesem Fall enthält der Wrapper eine minimale Implementierung. Wenn der Wrapper eine Zuordnung zur Windows-Runtime benötigt, führen Sie die Zuordnung auch in der Kopfzeile durch. Platzieren Sie den [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)-Aufruf in die Codedatei innerhalb einer Hilfsfunktion, die nur bei der ersten Initialisierung der App ausgeführt wird. Verwenden Sie den Rückgabewert von **Register**, um die statischen, jedoch nicht initialisierten Bezeichner zu füllen, die Sie in der Kopfzeile deklariert haben und zunächst im Stammbereich der Implementierungsdatei auf **nullptr** festgelegt haben.
+// ImageWithLabelControl.h
+...
+private:
+    static Windows::UI::Xaml::DependencyProperty m_labelProperty;
+...
+
+// ImageWithLabelControl.cpp
+...
+Windows::UI::Xaml::DependencyProperty ImageWithLabelControl::m_labelProperty =
+    Windows::UI::Xaml::DependencyProperty::Register(
+        L"Label",
+        winrt::xaml_typename<winrt::hstring>(),
+        winrt::xaml_typename<ImageWithLabelControlApp::ImageWithLabelControl>(),
+        Windows::UI::Xaml::PropertyMetadata{ nullptr }
+);
+...
+```
 
 ```cpp
 //.h file
@@ -104,46 +138,46 @@ Im Fall von C++ haben Sie verschiedene Möglichkeiten für die Aufteilung der Im
 //using namespace Platform;
 
 public ref class ImageWithLabelControl sealed : public Control
-{  
+{
 private:
     static DependencyProperty^ _LabelProperty;
 ...
 public:
-    static void RegisterDependencyProperties(); 
+    static void RegisterDependencyProperties();
     static property DependencyProperty^ LabelProperty
     {
         DependencyProperty^ get() {return _LabelProperty;}
     }
 ...
 };
-```
 
-```cpp
 //.cpp file
 using namespace Windows::UI::Xaml;
 using namespace Windows::UI::Xaml.Interop;
 
 DependencyProperty^ ImageWithLabelControl::_LabelProperty = nullptr;
 
-// This function is called from the App constructor in App.xaml.cpp 
+// This function is called from the App constructor in App.xaml.cpp
 // to register the properties
-void ImageWithLabelControl::RegisterDependencyProperties() 
+void ImageWithLabelControl::RegisterDependencyProperties()
 { 
-    if (_LabelProperty == nullptr) 
+    if (_LabelProperty == nullptr)
     { 
         _LabelProperty = DependencyProperty::Register(
-          "Label", Platform::String::typeid, ImageWithLabelControl::typeid, nullptr); 
+          "Label", Platform::String::typeid, ImageWithLabelControl::typeid, nullptr);
     } 
 }
 ```
 
-**Hinweis**Im Fall von C++-Code sind ein privates Feld und eine öffentliche schreibgeschützte Eigenschaft vorhanden, die [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) einblendet, sodass andere Aufrufer, die Ihre Abhängigkeitseigenschaft verwenden, auch Eigenschaftensystem-Hilfsprogramm-APIs nutzen können, für die der Bezeichner öffentlich sein muss. Wenn Sie den Bezeichner nicht offenlegen, können Benutzer diese Hilfsprogramm-APIs nicht verwenden. Beispiele für eine API und Szenarien dieser Art sind [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359), [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361), [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358), [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257) und [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836). Ein öffentliches Feld kann dazu nicht verwendet werden, da Windows-Runtime-Metadatenregeln keine öffentlichen Felder zulassen.
+> [!NOTE]
+> Für C++ / CX-Codes, den Grund, warum Sie über ein privates Feld verfügen und eine öffentliche Eigenschaft schreibgeschützt, die [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) dient zum Anzeigen von ist, damit andere Aufrufer, die die Abhängigkeitseigenschaft verwenden auch-Eigenschaft-Systemprogramm APIs verwenden können, die erfordern, die Bezeichner öffentlich sein. Wenn Sie den Bezeichner nicht offenlegen, können Benutzer diese Hilfsprogramm-APIs nicht verwenden. Beispiele für eine API und Szenarien dieser Art sind [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359), [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361), [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358), [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257) und [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836). Ein öffentliches Feld kann dazu nicht verwendet werden, da Windows-Runtime-Metadatenregeln keine öffentlichen Felder zulassen.
 
 ## <a name="dependency-property-name-conventions"></a>Namenskonventionen für Abhängigkeitseigenschaften
 
 Für Abhängigkeitseigenschaften gelten Namenskonventionen, die Sie bis auf bestimmte Ausnahmefälle befolgen müssen. Die Abhängigkeitseigenschaft selbst hat einen Basisnamen („Label“ im vorherigen Beispiel), der als erster Parameter von [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) angegeben wird. Dieser Name muss innerhalb jedes Registrierungstyps eindeutig sein. Diese Eindeutigkeit muss auch von vererbten Membern eingehalten werden. Abhängigkeitseigenschaften, die über Basistypen geerbt werden, werden als Teil des Registrierungstyps betrachtet. Die Namen geerbter Eigenschaften können nicht erneut registriert werden.
 
-**Achtung** Obwohl der von Ihnen angegebene Name jeder Zeichenfolgebezeichner sein kann, der bei der Programmierung in der von Ihnen ausgewählten Sprache gültig ist, sollten Sie in der Regel Ihre Abhängigkeitseigenschaft auch in XAML festlegen können. Für die Verwendung in XAML muss der von Ihnen gewählte Eigenschaftenname ein gültiger XAML-Name sein. Weitere Informationen finden Sie in der [XAML-Übersicht](xaml-overview.md).
+> [!WARNING]
+> Obwohl den Namen, die Sie angeben, dass hier kann eine beliebige Zeichenfolgenbezeichner sein, die in die Programmierung für Ihre Sprache Ihrer Wahl gültig ist, möchten Sie in der Regel die Abhängigkeitseigenschaft zu in XAML nicht festlegen können. Für die Verwendung in XAML muss der von Ihnen gewählte Eigenschaftenname ein gültiger XAML-Name sein. Weitere Informationen finden Sie in der [XAML-Übersicht](xaml-overview.md).
 
 Kombinieren Sie beim Erstellen der Bezeichnereigenschaft den von Ihnen registrierten Eigenschaftennamen mit dem Suffix „Property“ (beispielsweise „LabelProperty“). Diese Eigenschaft ist Ihr Bezeichner für die Abhängigkeitseigenschaft und wird als Eingabe für die [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361)- und [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359)-Aufrufe verwendet, die Sie in Ihren eigenen Eigenschaftenwrappern ausführen. Sie wird auch vom Eigenschaftensystem und anderen XAML-Prozessoren, wie z. B. [**{x:Bind}**](x-bind-markup-extension.md), verwendet.
 
@@ -151,9 +185,9 @@ Kombinieren Sie beim Erstellen der Bezeichnereigenschaft den von Ihnen registrie
 
 Ihr Eigenschaftenwrapper sollte [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) in der **get**-Implementierung und [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) in der **set**-Implementierung aufrufen.
 
-**Achtung** Von Ausnahmefällen abgesehen, sollten Ihre Wrapperimplementierungen nur die Operationen [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) und [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) ausführen. Andernfalls erhalten Sie ein anderes Verhalten, wenn Ihre Eigenschaft über XAML anstelle über Code festgelegt wird. Aus Effizienzgründen umgeht der XAML-Parser Wrapper beim Festlegen von Abhängigkeitseigenschaften und kommuniziert mit dem Sicherungsspeicher über **SetValue**.
+> [!WARNING]
+> Ihre Wrapperimplementierungen sollten von Ausnahmefällen abgesehen nur die [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) und [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) -Vorgänge ausführen. Andernfalls erhalten Sie ein anderes Verhalten, wenn Ihre Eigenschaft über XAML anstelle über Code festgelegt wird. Aus Effizienzgründen umgeht der XAML-Parser Wrapper beim Festlegen von Abhängigkeitseigenschaften und kommuniziert mit dem Sicherungsspeicher über **SetValue**.
 
-> [!div class="tabbedCodeSnippets"]
 ```csharp
 public String Label
 {
@@ -161,16 +195,33 @@ public String Label
     set { SetValue(LabelProperty, value); }
 }
 ```
+
 ```vb
-Public Property Label() As String 
-    Get 
+Public Property Label() As String
+    Get
         Return DirectCast(GetValue(LabelProperty), String) 
     End Get 
-    Set(ByVal value As String) 
-        SetValue(LabelProperty, value) 
-    End Set 
+    Set(ByVal value As String)
+        SetValue(LabelProperty, value)
+    End Set
 End Property
 ```
+
+```cppwinrt
+// ImageWithLabelControl.h
+...
+winrt::hstring Label()
+{
+    return winrt::unbox_value<winrt::hstring>(GetValue(m_labelProperty));
+}
+
+void Label(winrt::hstring const& value)
+{
+    SetValue(m_labelProperty, winrt::box_value(value));
+}
+...
+```
+
 ```cpp
 //using namespace Platform;
 public:
@@ -181,7 +232,7 @@ public:
       return (String^)GetValue(LabelProperty);
     }
     void set(String^ value) {
-      SetValue(LabelProperty, value); 
+      SetValue(LabelProperty, value);
     }
   }
 ```
@@ -190,8 +241,8 @@ public:
 
 Wenn Eigenschaftenmetadaten einer Abhängigkeitseigenschaft zugewiesen werden, gelten die gleichen Metadaten für diese Eigenschaft für jede Instanz des Eigenschaftenbesitzertyps oder dessen Unterklassen. Sie können zwei Verhalten in Eigenschaftenmetadaten festlegen:
 
--   Einen Standardwert, den das Eigenschaftensystem allen Anfragen der Eigenschaft zuweist.
--   Eine statische Rückrufmethode, die automatisch innerhalb des Eigenschaftensystems aufgerufen wird, sobald eine Eigenschaftswertänderung erkannt wird.
+- Einen Standardwert, den das Eigenschaftensystem allen Anfragen der Eigenschaft zuweist.
+- Eine statische Rückrufmethode, die automatisch innerhalb des Eigenschaftensystems aufgerufen wird, sobald eine Eigenschaftswertänderung erkannt wird.
 
 ### <a name="calling-register-with-property-metadata"></a>Aufrufen von Register mit Eigenschaftenmetadaten
 
@@ -199,11 +250,11 @@ In den bisherigen Beispielen für den Aufruf von [**DependencyProperty.Register*
 
 In der Regel geben Sie einen [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) als inline erstellte Instanz innerhalb der Parameter für [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) an.
 
-**Hinweis**  Wenn Sie eine [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812)-Implementierung verwenden, müssen Sie die Hilfsmethode [**PropertyMetadata.Create**](https://msdn.microsoft.com/library/windows/apps/hh702099) aufrufen und nicht einen [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771)-Konstruktor, um die **PropertyMetadata**-Instanz zu definieren.
+> [!NOTE]
+> Wenn Sie eine Implementierung [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812) definieren, müssen Sie so definieren Sie die Instanz **PropertyMetadata** Hilfsmethode [**PropertyMetadata.Create**](https://msdn.microsoft.com/library/windows/apps/hh702099) , anstatt einen [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) Konstruktor aufrufen verwenden.
 
 Im nächsten Beispiel werden die zuvor gezeigten Beispiele für [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) modifiziert, indem auf eine [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771)-Instanz mit einem [**PropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/br208770)-Wert verwiesen wird. Die Implementierung des OnLabelChanged-Rückrufs wird später in diesem Abschnitt gezeigt.
 
-> [!div class="tabbedCodeSnippets"]
 ```csharp
 public static readonly DependencyProperty LabelProperty = DependencyProperty.Register(
   "Label",
@@ -212,19 +263,34 @@ public static readonly DependencyProperty LabelProperty = DependencyProperty.Reg
   new PropertyMetadata(null,new PropertyChangedCallback(OnLabelChanged))
 );
 ```
+
 ```vb
-Public Shared ReadOnly LabelProperty As DependencyProperty = 
-    DependencyProperty.Register("Label", 
-      GetType(String), 
-      GetType(ImageWithLabelControl), 
+Public Shared ReadOnly LabelProperty As DependencyProperty =
+    DependencyProperty.Register("Label",
+      GetType(String),
+      GetType(ImageWithLabelControl),
       New PropertyMetadata(
         Nothing, new PropertyChangedCallback(AddressOf OnLabelChanged)))
 ```
+
+```cppwinrt
+// ImageWithLabelControl.cpp
+...
+Windows::UI::Xaml::DependencyProperty ImageWithLabelControl::m_labelProperty =
+    Windows::UI::Xaml::DependencyProperty::Register(
+        L"Label",
+        winrt::xaml_typename<winrt::hstring>(),
+        winrt::xaml_typename<ImageWithLabelControlApp::ImageWithLabelControl>(),
+        Windows::UI::Xaml::PropertyMetadata{ nullptr, Windows::UI::Xaml::PropertyChangedCallback{ &ImageWithLabelControl::OnLabelChanged } }
+);
+...
+```
+
 ```cpp
-DependencyProperty^ ImageWithLabelControl::_LabelProperty = 
-    DependencyProperty::Register("Label", 
+DependencyProperty^ ImageWithLabelControl::_LabelProperty =
+    DependencyProperty::Register("Label",
     Platform::String::typeid,
-    ImageWithLabelControl::typeid, 
+    ImageWithLabelControl::typeid,
     ref new PropertyMetadata(nullptr,
       ref new PropertyChangedCallback(&ImageWithLabelControl::OnLabelChanged))
     );
@@ -236,7 +302,21 @@ Sie können einen Standardwert für eine Abhängigkeitseigenschaft festlegen, da
 
 Wenn kein Standardwert festgelegt ist, ist der Standardwert einer Abhängigkeitseigenschaft für einen Verweistyp null oder entspricht der Standardeinstellung des Werttyps oder des Sprachengrundtyps (zum Beispiel 0 für einen Integer oder eine leere Zeichenfolge für eine Zeichenfolge). Ein Standardwert wird vor allem erstellt, damit dessen Wert wiederhergestellt wird, wenn [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357) in der Eigenschaft aufgerufen wird. Das Erstellen eines Standardwerts pro Eigenschaft kann vorteilhafter als das Erstellen von Standardwerten in Konstruktoren sein, insbesondere für Werttypen. Achten Sie jedoch bei Verweistypen darauf, dass beim Erstellen eines Standardwerts kein unbeabsichtigtes Singleton-Muster entsteht. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Bewährte Methoden](#best-practices).
 
-**Hinweis**  Führen Sie keine Registrierung mit einem Standardwert von [**UnsetValue**](https://msdn.microsoft.com/library/windows/apps/br242371) durch. Diese Handlung verwirrt Eigenschaftennutzer und führt zu unbeabsichtigten Folgen innerhalb des Eigenschaftensystems.
+```cppwinrt
+// ImageWithLabelControl.cpp
+...
+Windows::UI::Xaml::DependencyProperty ImageWithLabelControl::m_labelProperty =
+    Windows::UI::Xaml::DependencyProperty::Register(
+        L"Label",
+        winrt::xaml_typename<winrt::hstring>(),
+        winrt::xaml_typename<ImageWithLabelControlApp::ImageWithLabelControl>(),
+        Windows::UI::Xaml::PropertyMetadata{ winrt::box_value(L"default label"), Windows::UI::Xaml::PropertyChangedCallback{ &ImageWithLabelControl::OnLabelChanged } }
+);
+...
+```
+
+> [!NOTE]
+> Der Standardwert der [**UnsetValue**](https://msdn.microsoft.com/library/windows/apps/br242371)nicht registriert. Diese Handlung verwirrt Eigenschaftennutzer und führt zu unbeabsichtigten Folgen innerhalb des Eigenschaftensystems.
 
 ### <a name="createdefaultvaluecallback"></a>CreateDefaultValueCallback
 
@@ -252,7 +332,6 @@ Sie können eine PropertyChanged-Rückrufmethode verwenden, um die Interaktionen
 
 Das nächste Beispiel zeigt eine [**PropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/br208770)-Implementierung. Hier wird die Methode implementiert, auf die in den vorigen [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)-Beispielen als Teil des Konstruktionsarguments für die [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) Bezug genommen wurde. In diesem Rückrufszenario besitzt die Klasse auch eine berechnete schreibgeschützte Eigenschaft „HasLabelValue“ (Implementierung nicht gezeigt). Diese Rückrufmethode wird jedes Mal aufgerufen, wenn die Label-Eigenschaft neu ausgewertet wird. Der Rückruf ermöglicht die kontinuierliche Synchronisierung des abhängigen berechneten Werts mit den Änderungen der Abhängigkeitseigenschaft.
 
-> [!div class="tabbedCodeSnippets"]
 ```csharp
 private static void OnLabelChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) {
     ImageWithLabelControl iwlc = d as ImageWithLabelControl; //null checks omitted
@@ -265,6 +344,7 @@ private static void OnLabelChanged(DependencyObject d, DependencyPropertyChanged
     }
 }
 ```
+
 ```vb
     Private Shared Sub OnLabelChanged(d As DependencyObject, e As DependencyPropertyChangedEventArgs)
         Dim iwlc As ImageWithLabelControl = CType(d, ImageWithLabelControl) ' null checks omitted
@@ -276,6 +356,16 @@ private static void OnLabelChanged(DependencyObject d, DependencyPropertyChanged
         End If
     End Sub
 ```
+
+```cppwinrt
+void ImageWithLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject const& d, Windows::UI::Xaml::DependencyPropertyChangedEventArgs const& e)
+{
+    auto iwlc{ d.as<ImageWithLabelControlApp::ImageWithLabelControl>() };
+    auto s{ winrt::unbox_value<winrt::hstring>(e.NewValue()) };
+    iwlc.HasLabelValue(s.size() != 0);
+}
+```
+
 ```cpp
 static void OnLabelChanged(DependencyObject^ d, DependencyPropertyChangedEventArgs^ e)
 {
@@ -291,7 +381,6 @@ static void OnLabelChanged(DependencyObject^ d, DependencyPropertyChangedEventAr
 
 Wenn der Typ einer [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) eine Enumeration oder Struktur ist, kann der Rückruf auch aufgerufen werden, wenn die internen Werte der Struktur oder der Enumerationswert nicht geändert wurden. Dieses Verhalten weicht gegenüber einem Systemgrundtyp wie einer Zeichenfolge ab. Hier erfolgt der Aufruf nur bei einem geänderten Wert. Dies ist der Nebeneffekt eines internen Boxing- und Unboxing-Vorgangs für diese Werte. Wenn Sie über eine [**PropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/br208770)-Methode für eine Eigenschaft verfügen, deren Wert eine Enumeration oder Struktur ist, müssen Sie [**OldValue**](https://msdn.microsoft.com/library/windows/apps/br242365) und [**NewValue**](https://msdn.microsoft.com/library/windows/apps/br242364) vergleichen. Dazu wandeln Sie die Werte selbst um und verwenden die überladenen Vergleichsoperatoren, die für die nun umgewandelten Werte verfügbar sind. Wenn kein entsprechender Operator verfügbar ist (beispielsweise weil es sich um eine benutzerdefinierte Struktur handelt), müssen Sie möglicherweise die einzelnen Werte vergleichen. Wenn Sie zu dem Ergebnis kommen, dass sich die Werte nicht geändert haben, ist normalerweise keine Aktion erforderlich.
 
-> [!div class="tabbedCodeSnippets"]
 ```csharp
 private static void OnVisibilityValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) {
     if ((Visibility)e.NewValue != (Visibility)e.OldValue)
@@ -300,6 +389,7 @@ private static void OnVisibilityValueChanged(DependencyObject d, DependencyPrope
     } // else this was invoked because of boxing, do nothing
 }
 ```
+
 ```vb
 Private Shared Sub OnVisibilityValueChanged(d As DependencyObject, e As DependencyPropertyChangedEventArgs)
     If CType(e.NewValue,Visibility) != CType(e.OldValue,Visibility) Then
@@ -308,6 +398,21 @@ Private Shared Sub OnVisibilityValueChanged(d As DependencyObject, e As Dependen
     '  else this was invoked because of boxing, do nothing
 End Sub
 ```
+
+```cppwinrt
+static void OnVisibilityValueChanged(Windows::UI::Xaml::DependencyObject const& d, Windows::UI::Xaml::DependencyPropertyChangedEventArgs const& e)
+{
+    auto oldVisibility{ winrt::unbox_value<Windows::UI::Xaml::Visibility>(e.OldValue()) };
+    auto newVisibility{ winrt::unbox_value<Windows::UI::Xaml::Visibility>(e.NewValue()) };
+
+    if (newVisibility != oldVisibility)
+    {
+        // The value really changed; invoke your property-changed logic here.
+    }
+    // Otherwise, OnVisibilityValueChanged was invoked because of boxing; do nothing.
+}
+```
+
 ```cpp
 static void OnVisibilityValueChanged(DependencyObject^ d, DependencyPropertyChangedEventArgs^ e)
 {
@@ -342,10 +447,10 @@ Bei Abhängigkeitseigenschaften vom Typ "Sammlung" sind einige zusätzliche Impl
 
 Abhängigkeitseigenschaften des Sammlungstyps sind in der Windows-Runtime-API vergleichsweise selten. In den meisten Fällen können Sie Sammlungen verwenden, deren Elemente eine [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)-Unterklasse sind. Die Sammlungseigenschaft selbst wird jedoch als herkömmliche CLR- oder eine C++-Eigenschaft implementiert. Das ist darauf zurückzuführen, dass sich Sammlungen nicht unbedingt für herkömmliche Szenarien eignen, bei denen Abhängigkeitseigenschaften involviert sind. Beispiel:
 
--   Sie animieren für gewöhnlich keine Sammlung.
--   Sie füllen die Elemente einer Sammlung für gewöhnlich nicht vorher mit Stilen oder einer Vorlage aus.
--   Obwohl das Binden an Sammlungen ein wichtiges Szenario ist, muss die Sammlung keine Abhängigkeitseigenschaft sein, um eine Bindungsquelle darzustellen. Im Fall von Bindungszielen werden in der Regel Unterklassen von [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/br242803) oder [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348) verwendet, um Sammlungselemente zu unterstützen oder Modellanzeigemuster zu verwenden. Weitere Informationen zur Bindung zu und von Sammlungen finden Sie unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
--   Benachrichtigungen zu Sammlungsänderungen sollten besser durch Schnittstellen wie **INotifyPropertyChanged** oder **INotifyCollectionChanged** oder durch Ableiten des Sammlungstyps von [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/ms668604.aspx) behandelt werden.
+- Sie animieren für gewöhnlich keine Sammlung.
+- Sie füllen die Elemente einer Sammlung für gewöhnlich nicht vorher mit Stilen oder einer Vorlage aus.
+- Obwohl das Binden an Sammlungen ein wichtiges Szenario ist, muss die Sammlung keine Abhängigkeitseigenschaft sein, um eine Bindungsquelle darzustellen. Im Fall von Bindungszielen werden in der Regel Unterklassen von [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/br242803) oder [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348) verwendet, um Sammlungselemente zu unterstützen oder Modellanzeigemuster zu verwenden. Weitere Informationen zur Bindung zu und von Sammlungen finden Sie unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
+- Benachrichtigungen zu Sammlungsänderungen sollten besser durch Schnittstellen wie **INotifyPropertyChanged** oder **INotifyCollectionChanged** oder durch Ableiten des Sammlungstyps von [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/ms668604.aspx) behandelt werden.
 
 Dennoch gibt es Szenarien für Abhängigkeitseigenschaften des Sammlungstyps. In den nächsten drei Abschnitten finden Sie Informationen zur Implementierung einer Abhängigkeitseigenschaft vom Typ "Sammlung".
 
@@ -375,9 +480,8 @@ Die Implementierung für das Registrieren einer Eigenschaft in C++/CX ist schwie
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)
-* [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)
-* [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
-* [XAML-Beispiel für Benutzer und benutzerdefinierte Steuerelemente](http://go.microsoft.com/fwlink/p/?linkid=238581)
+- [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)
+- [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)
+- [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
+- [XAML-Beispiel für Benutzer und benutzerdefinierte Steuerelemente](http://go.microsoft.com/fwlink/p/?linkid=238581)
  
-

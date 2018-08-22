@@ -1,6 +1,6 @@
 ---
 title: Freigabe von Zertifikaten zwischen Apps
-description: UWP-Apps (Universelle Windows-Plattform), die über eine Kombination aus Benutzer-ID und Kennwort hinaus eine sichere Authentifizierung benötigen, können Zertifikate für die Authentifizierung verwenden.
+description: UWP-Apps, die über eine Kombination aus Benutzer-ID und Kennwort hinaus eine sichere Authentifizierung benötigen, können Zertifikate für die Authentifizierung verwenden.
 ms.assetid: 159BA284-9FD4-441A-BB45-A00E36A386F9
 author: PatrickFarley
 ms.author: pafarley
@@ -8,14 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
+keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f16dce7c708f096053ac33ff5cdb77983d03f0a
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 863658438ce53f2c74faddb845a7d17c6ec3130c
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817731"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2801262"
 ---
 # <a name="share-certificates-between-apps"></a>Freigabe von Zertifikaten zwischen Apps
 
