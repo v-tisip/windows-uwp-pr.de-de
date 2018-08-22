@@ -8,14 +8,14 @@ ms.date: 02/12/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows 10, uwp
+keywords: Windows 10, Uwp, Gerät portal
 ms.localizationpriority: medium
-ms.openlocfilehash: fd196c76afe8f8cb1841ba7a7869de725177969a
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 404db3963d2f9508d7c81053abf96b0e742103f7
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816925"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788665"
 ---
 # <a name="device-portal-for-xbox"></a>Device Portal für Xbox
 
@@ -196,6 +196,12 @@ Hier können Sie die Xbox Live-Sandbox ändern, in der sich das Gerät befindet.
 Dies ist ein leerer Arbeitsbereich, den Sie nach Belieben anpassen können. Sie können das Menü verwenden (klicken Sie auf die Menü-Schaltfläche oben links), um Tools hinzuzufügen (wählen Sie **Tools zum Arbeitsbereich hinzufügen**, dann die Tools und dann **Hinzufügen** aus). Beachten Sie, dass Sie dieses Menü verwenden können, um Tools zu jedem Arbeitsbereich hinzuzufügen und die Arbeitsbereiche selbst zu verwalten.
 
 ![Tools zum Arbeitsbereich hinzufügen](images/device-portal-xbox-13.png)
+
+### <a name="game-event-data"></a>Spiel Ereignisdaten
+
+Auf der Seite **Spiel Ereignisdaten** können Sie ein Diagramm Echtzeit, Datenströme in die Anzahl der Event Tracing for Windows (ETW) Spiel Ereignisse aufgezeichnet derzeit auf Ihrem Xbox One anzeigen. Wenn Spiel Ereignisse aufgezeichnet, die auf dem System vorhanden sind, können Sie Details (Ereignisname, ereignisvorkommen und den Titel des Spiels) anzeigen, jedes Ereignis in einer Datentabelle unterhalb des Diagramms Daten beschreibt. Die Tabelle ist nur verfügbar, wenn Ereignisse aufgezeichnet vorhanden sind.
+
+![Spiel Ereignisdaten](images/device-portal-xbox-22.PNG)
 
 ## <a name="see-also"></a>Weitere Informationen:
 

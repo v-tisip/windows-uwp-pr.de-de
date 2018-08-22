@@ -4,21 +4,20 @@ description: Das Programmierkonzept von Ereignissen in einer Windows-Runtime-App
 title: Übersicht über Ereignisse und Routingereignisse
 ms.assetid: 34C219E8-3EFB-45BC-8BBD-6FD937698832
 ms.author: jimwalk
-ms.date: 02/08/2017
+ms.date: 07/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 61e55fa85e54970ba48413767ccf5a65b05af471
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 6ca58613a5874cde10d2bb5322c3f930e1fbce44
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691189"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788795"
 ---
 # <a name="events-and-routed-events-overview"></a>Übersicht über Ereignisse und Routingereignisse
-
 
 **Wichtige APIs**
 -   [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)
@@ -40,39 +39,50 @@ Zu den häufigsten Programmieraufgaben für eine Windows-Runtime-App gehört es,
 
 Sie definieren die UI für Ihre Windows-Runtime-App mittels XAML-Generierung. Bei diesem XAML handelt es sich meist um die Ausgabe einer Designoberfläche in Visual Studio. Sie können das XAML auch in einem Nur-Text-Editor oder im XAML-Editor eines Drittanbieters schreiben. Beim Generieren dieses XAML können Sie Ereignishandler für einzelne UI-Elemente verknüpfen, während Sie gleichzeitig alle anderen XAML-Attribute definieren, die Eigenschaftswerte dieses UI-Elements einrichten.
 
-Zur Ereignisverknüpfung in XAML gehört, dass Sie den Namen der Handlermethode, die Sie bereits definiert haben oder später im CodeBehind definieren werden, als Zeichenfolge angeben. Diese XAML definiert beispielsweise ein [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)-Objekt mit anderen Eigenschaften ([x:Name-Attribut](x-name-attribute.md), [**Content**](https://msdn.microsoft.com/library/windows/apps/br209366)), die als Attribute zugewiesen sind, und verknüpft einen Handler für das [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737)-Ereignis der Schaltfläche durch einen Verweis auf eine Methode namens `showUpdatesButton_Click`:
+Zur Ereignisverknüpfung in XAML gehört, dass Sie den Namen der Handlermethode, die Sie bereits definiert haben oder später im CodeBehind definieren werden, als Zeichenfolge angeben. Diese XAML definiert beispielsweise ein [**Button**](https://msdn.microsoft.com/library/windows/apps/br209265)-Objekt mit anderen Eigenschaften ([x:Name-Attribut](x-name-attribute.md), [**Content**](https://msdn.microsoft.com/library/windows/apps/br209366)), die als Attribute zugewiesen sind, und verknüpft einen Handler für das [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737)-Ereignis der Schaltfläche durch einen Verweis auf eine Methode namens `ShowUpdatesButton_Click`:
 
-```XML
+```xaml
 <Button x:Name="showUpdatesButton"
   Content="{Binding ShowUpdatesText}"
-  Click="showUpdatesButton_Click"/>
+  Click="ShowUpdatesButton_Click"/>
 ```
 
 **Tipp**  *Ereignisverknüpfung* ist ein Begriff der Programmiersprache. Er bezieht sich auf den Prozess oder Code, mit dem Sie angeben, dass Vorkommen eines Ereignisses eine benannte Handlermethode aufrufen sollen. In den meisten prozeduralen Codemodellen handelt es sich bei der Ereignisverknüpfung um impliziten oder expliziten „AddHandler“-Code, der sowohl das Ereignis als auch die Methode benennt und in der Regel eine Zielobjektinstanz verwendet. In XAML ist "AddHandler" implizit und die Ereignisverknüpfung umfasst nur das Benennen des Ereignisses als Attributnamen eines Objektelement und das Benennen des Handlers als Wert dieses Attributs.
 
-Sie schreiben den eigentlichen Handler in der Programmiersprache, die Sie für Ihren gesamten App-Code oder CodeBehind verwenden. Mit dem Attribut `Click="showUpdatesButton_Click"` haben Sie einen Vertrag erstellt, mit dem beim Kompilieren des Markups und Analysieren des XAML sowohl der XAML-Markupkompilierschritt in der Erstellungsaktion Ihrer IDE als auch die mögliche XAML-Analyse beim Laden der App eine Methode mit dem Namen `showUpdatesButton_Click` finden können, die Teil des App-Codes ist. `showUpdatesButton_Click` muss eine Methode darstellen, die eine kompatible Methodensignatur (basierend auf einem Delegaten) für jeden Handler des [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737)-Ereignisses implementiert. Dieser Code definiert z.B. den `showUpdatesButton_Click`-Handler.
+Sie schreiben den eigentlichen Handler in der Programmiersprache, die Sie für Ihren gesamten App-Code oder CodeBehind verwenden. Mit dem Attribut `Click="ShowUpdatesButton_Click"` haben Sie einen Vertrag erstellt, mit dem beim Kompilieren des Markups und Analysieren des XAML sowohl der XAML-Markupkompilierschritt in der Erstellungsaktion Ihrer IDE als auch die mögliche XAML-Analyse beim Laden der App eine Methode mit dem Namen `ShowUpdatesButton_Click` finden können, die Teil des App-Codes ist. `ShowUpdatesButton_Click` muss eine Methode darstellen, die eine kompatible Methodensignatur (basierend auf einem Delegaten) für jeden Handler des [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737)-Ereignisses implementiert. Dieser Code definiert z.B. den `ShowUpdatesButton_Click`-Handler.
 
-> [!div class="tabbedCodeSnippets"]
 ```csharp
-private void showUpdatesButton_Click (object sender, RoutedEventArgs e) {
+private void ShowUpdatesButton_Click (object sender, RoutedEventArgs e) 
+{
     Button b = sender as Button;
     //more logic to do here...
 }
 ```
+
 ```vb
-Private Sub showUpdatesButton_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
+Private Sub ShowUpdatesButton_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
     Dim b As Button = CType(sender, Button)
     '  more logic to do here...
 End Sub
 ```
+
+```cppwinrt
+void winrt::MyNamespace::implementation::BlankPage::ShowUpdatesButton_Click(Windows::Foundation::IInspectable const& sender, Windows::UI::Xaml::RoutedEventArgs const& e)
+{
+    auto b{ sender.as<Windows::UI::Xaml::Controls::Button>() };
+    // More logic to do here.
+}
+```
+
 ```cpp
-void MyNamespace::BlankPage::showUpdatesButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e) {
+void MyNamespace::BlankPage::ShowUpdatesButton_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e) 
+{
     Button^ b = (Button^) sender;
     //more logic to do here...
 }
 ```
 
-In diesem Beispiel basiert die `showUpdatesButton_Click`-Methode auf dem [**RoutedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br208812)-Delegaten. Sie wissen, dass dies der zu verwendende Delegat ist, weil er in der Syntax für die [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737)-Methode auf der MSDN-Referenzseite aufgeführt wird.
+In diesem Beispiel basiert die `ShowUpdatesButton_Click`-Methode auf dem [**RoutedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br208812)-Delegaten. Sie wissen, dass dies der zu verwendende Delegat ist, weil er in der Syntax für die [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737)-Methode auf der MSDN-Referenzseite aufgeführt wird.
 
 **Tipp**  Visual Studio bietet eine bequeme Methode zum Benennen des Ereignishandlers und zum Definieren der Handlermethode während der Bearbeitung von XAML. Wenn Sie den Attributnamen des Ereignisses im XAML-Text-Editor bereitstellen, warten Sie einen Moment, bis eine Microsoft IntelliSense-Liste angezeigt wird. Wenn Sie in der Liste auf **&lt;Neuer Ereignishandler&gt;** klicken, schlägt Microsoft Visual Studio einen Methodennamen vor, der auf dem **x:Name** des Elements (oder der Typbezeichnung), dem Ereignisnamen und einem numerischen Suffix basiert. Anschließend können Sie mit der rechten Maustaste auf den ausgewählten Ereignishandler und dann mit der linken Maustaste auf **Zum Ereignishandler navigieren** klicken. Dadurch navigieren Sie direkt zu der neu eingefügten Ereignishandlerdefinition, wie sie in der Code-Editoransicht Ihrer CodeBehind-Datei für die XAML-Seite angezeigt wird. Der Ereignishandler hat bereits die richtige Signatur, einschließlich des *sender*-Parameters und der Ereignisdatenklasse, die von dem Ereignis verwendet wird. Wenn zudem bereits eine Handlermethode mit der richtigen Signatur im CodeBehind vorhanden ist, wird der Name dieser Methode zusammen mit der Option **&lt;Neuer Ereignishandler&gt;** im Auto-Vervollständigen-Dropdown angezeigt. Sie können auch die Tabulatortaste drücken, anstatt auf die IntelliSense-Listenelemente zu klicken.
 
@@ -104,7 +114,7 @@ In C# wird für die Syntax der `+=`-Operator verwendet. Sie registrieren den Han
 
 Wenn Objekten, die in der Laufzeit-UI angezeigt werden, Ereignishandler per Code hinzugefügt werden, ist es üblich, diese Handler als Reaktion auf ein Objektlebensdauer-Ereignis oder einen Rückruf hinzuzufügen, wie z.B. [**Loaded**](https://msdn.microsoft.com/library/windows/apps/br208723) oder [**OnApplyTemplate**](https://msdn.microsoft.com/library/windows/apps/br208737). Die Ereignishandler für das relevante Objekt stehen dann zur Laufzeit für Ereignisse bereit, die von Benutzern eingeleitet werden. Dieses Beispiel zeigt eine XAML-Gliederung der Seitenstruktur und führt anschließend die C#-Sprachsyntax für das Hinzufügen eines Ereignishandlers zu einem Objekt auf.
 
-```xml
+```xaml
 <Grid x:Name="LayoutRoot" Loaded="LayoutRoot_Loaded">
   <StackPanel>
     <TextBlock Name="textBlock1">Put the pointer over this text</TextBlock>
@@ -143,15 +153,19 @@ End Sub
 
 **Hinweis**  Im Allgemeinen werden statt des **Handles**-Schlüsselworts Visual Studio und die zugehörige XAML-Entwurfsoberfläche als Methode zur Instanzbehandlung verwendet. Das Erstellen der Ereignishandlerverknüpfung in XAML ist Teil eines typischen Designer-Entwickler-Workflows, und die **Handles**-Schlüsselworttechnik ist mit dem Verknüpfen der Ereignishandler in XAML nicht kompatibel.
 
-Auch in C++ verwenden Sie die **+=**-Syntax. Es gibt jedoch Unterschiede zum allgemeinen C#-Format:
+In C++ / CX, verwenden Sie auch die **+=** Syntax, es gibt jedoch Unterschiede aus dem grundlegenden C#-Formular:
 
 -   Es gibt keinen Rückschluss auf Delegaten. Sie müssen deshalb **ref new** für die Delegatinstanz verwenden.
 -   Der Delegatkonstruktor besitzt zwei Parameter und benötigt das Zielobjekt als ersten Parameter. Normalerweise geben Sie **this** an.
 -   Der Delegatenkonstruktor erfordert die Methodenadresse als zweiten Parameter, sodass der **&**-Verweisoperator vor dem Methodennamen steht.
 
+```cppwinrt
+textBlock1().PointerEntered({this, &MainPage::TextBlock1_PointerEntered });
+```
+
 ```cpp
 textBlock1->PointerEntered += 
-ref new PointerEventHandler(this,&BlankPage::textBlock1_PointerEntered);
+ref new PointerEventHandler(this, &BlankPage::textBlock1_PointerEntered);
 ```
 
 ### <a name="removing-event-handlers-in-code"></a>Entfernen von Ereignishandlern im Code
@@ -170,10 +184,10 @@ In einigen seltenen Fällen sollten Ereignishandler explizit entfernt werden. Da
 
 Beispielsweise können Sie mit diesem Code einen Ereignishandler mit dem Namen **textBlock1\_PointerEntered** aus dem Zielobjekt **textBlock1** entfernen.
 
-> [!div class="tabbedCodeSnippets"]
 ```csharp
 textBlock1.PointerEntered -= textBlock1_PointerEntered;
 ```
+
 ```vb
 RemoveHandler textBlock1.PointerEntered, AddressOf textBlock1_PointerEntered
 ```
@@ -294,5 +308,3 @@ Das Definieren eines benutzerdefinierten Ereignisses erfolgt in der Regel im Rah
 * [.NET-Ereignisse und -Delegate](http://go.microsoft.com/fwlink/p/?linkid=214364)
 * [Erstellen von Komponenten für die Windows-Runtime](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
 * [**AddHandler**](https://msdn.microsoft.com/library/windows/apps/hh702399)
- 
-

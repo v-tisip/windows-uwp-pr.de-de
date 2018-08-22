@@ -4,18 +4,18 @@ Description: The Microsoft Store offers Mobile Operator Billing as a payment met
 title: Abrechnung über den Mobilfunkanbieter
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
 ms.author: wdg-dev-content
-ms.date: 04/30/2018
+ms.date: 06/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Mobilfunkanbieter, mobile Abrechnung, Abrechnung über den Mobilfunkanbieter
-ms.localizationpriority: high
-ms.openlocfilehash: 8e10f3d1cdee250e2d9ca140759a90cbdf0a8773
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 4bfb2fbbea42aaf1ed3c0ffc42f71dc38b2a1ede
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817511"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788115"
 ---
 # <a name="mobile-operator-billing"></a>Abrechnung über den Mobilfunkanbieter
 
@@ -46,14 +46,13 @@ Die Abrechnung über den Mobilfunkanbieter wird aktuell von den folgenden Mobilf
 | Niederlande     | KPN                              |
 | Norwegen          | Telenor, Telia                   |
 | Polen          | Orange                           |
-| Rumänien         | Orange                           |
-| Russland          | Beeline                          |
-| Singapur       | M1 Limited                       |
+| Singapur       | M1 Limited, StarHub              |
 | Slowakei        | Slovak Telekom                   |
 | Spanien           | Orange                           |
 | Schweden          | Telenor, 3                       |
 | Schweiz     | Swisscom, Sunrise                |
 | Türkei          | Turkcell                         |
+| Vereinigte Arabische Emirate | Etisalat                    |
 | USA   | Sprint, Verizon                  |
 | Vereinigtes Königreich  | O2, 3 UK, EE                     |
 

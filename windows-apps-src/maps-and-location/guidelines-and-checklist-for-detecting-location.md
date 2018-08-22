@@ -1,6 +1,6 @@
 ---
 author: msatranjr
-Description: In diesem Thema werden Leistungsrichtlinien für Apps beschrieben, für die der Zugriff auf den Standort eines Benutzers erforderlich ist.
+Description: This topic describes performance guidelines for apps that require access to a user's location.
 title: Richtlinien für Apps mit Standortbestimmung
 ms.assetid: 16294DD6-5D12-4062-850A-DB5837696B4D
 ms.author: misatran
@@ -9,16 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Standort, Ort, Karte, Geolocation
-ms.openlocfilehash: f2035762fe99e1692d8b8b5eea5260aeb39b8d2a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 903a7b308c78e4ab9826ea4c46c642cb3361b462
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "235450"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2786876"
 ---
 # <a name="guidelines-for-location-aware-apps"></a>Richtlinien für Apps mit Standortbestimmung
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -50,7 +51,7 @@ In diesem Thema werden Leistungsrichtlinien für Apps beschrieben, für die der 
 
     Geben Sie das [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534)-Objekt frei, wenn der Benutzer den Zugriff auf Standortinformationen unter „Einstellungen“ deaktiviert. Die App empfängt **ACCESS\_DENIED**-Ergebnisse für alle standortbezogenen API-Aufrufe. Wenn Ihre App Standortdaten (zwischen)speichert, löschen Sie zwischengespeicherte Daten, wenn der Benutzer den Zugriff auf seinen Standort zurücknimmt. Stellen Sie eine Alternativmöglichkeit zur Angabe des Standorts bereit, wenn keine diesbezüglichen Informationen für Positionsdienste verfügbar sind.
 
--   Stellen Sie eine Benutzeroberfläche für das erneute Aktivieren der Positionsdienste bereit. Möglich wäre z.B. eine Aktualisierungsschaltfläche, die das [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534)-Objekt neu instanziiert und erneut versucht, Standortinformationen abzurufen.
+-   Stellen Sie eine Benutzeroberfläche für das erneute Aktivieren der Positionsdienste bereit. Geben Sie beispielsweise eine Aktualisierungsschaltfläche, die erneut das [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) -Objekt instanziiert und versucht, Speicherort erneut abrufen.
 
     Stellen Sie in Ihrer App eine Benutzeroberfläche zum Aktivieren der Positionsdienste bereit.
 
@@ -90,7 +91,7 @@ In diesem Thema werden Leistungsrichtlinien für Apps beschrieben, für die der 
         Beispiel:
 
         -   Wenn Ihre App den Standort zum Abstimmen von Werbung, für Wettermeldungen, Nachrichten usw. abruft, ist eine Genauigkeit von 5000m in der Regel ausreichend.
-        -   Zeigt Ihre App Angebote aus der näheren Umgebung an, erhalten Sie im Allgemeinen mit einer Genauigkeit von 300m gute Ergebnisse.
+        -   Wenn Ihre app in der Nähe Aufträge in der Umgebung angezeigt wird, ist eine Genauigkeit von 300 Meter im Allgemeinen eine gute Ergebnisse.
         -   Sucht der Besucher nach Restaurantempfehlungen in der Nähe, ist wahrscheinlich eine Position innerhalb eines Straßenblocks gewünscht, sodass eine Genauigkeit von 100m genügt.
         -   Möchte der Benutzer seine Position teilen, sollte die App eine Genauigkeit von ungefähr 10m anfordern.
     -   Verwenden Sie die [**Geocoordinate.accuracy**](https://msdn.microsoft.com/library/windows/apps/br225526)-Eigenschaft, wenn für Ihre App bestimmte Genauigkeitsanforderungen gelten. Navigations-Apps sollten z.B. mit der **Geocoordinate.accuracy**-Eigenschaft ermitteln, ob die verfügbaren Standortdaten die Anforderungen der App erfüllen.

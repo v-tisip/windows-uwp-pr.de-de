@@ -12,22 +12,35 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 21539d625dc70ded7bec77b9916c7ea4bff72536
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 0840bab2e039ec55ea4070f8dad39c0ae4e74bbc
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1396809"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788525"
 ---
 # <a name="controls-by-function"></a>Steuerelemente nach Funktion
 
- 
-
 Das XAML-Benutzeroberflächenframework für Windows bietet eine umfangreiche Bibliothek von Steuerelementen, welche die Entwicklung von Benutzeroberflächen unterstützen. Einige dieser Steuerelemente weisen eine visuelle Darstellung auf. Andere fungieren als Container für andere Steuerelemente oder Inhalte (z.B. Bilder und Medien). 
 
-Laden Sie das [Beispiel für XAML-UI-Grundlagen](http://go.microsoft.com/fwlink/p/?LinkId=619992) herunter, um sich zahlreiche Windows-UI-Steuerelemente in Aktion anzusehen. 
+Laden Sie das [Beispiel für XAML-UI-Grundlagen](http://go.microsoft.com/fwlink/p/?LinkId=619992) herunter, um sich zahlreiche Windows-UI-Steuerelemente in Aktion anzusehen.
 
-Die folgende nach Funktionen geordnete Liste enthält die allgemeinen XAML-Steuerelemente, die Sie in Ihrer App verwenden können. 
+<table>
+<th align="left">XAML-Steuerelementekatalog<th>
+<tr>
+<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td>
+    <p>Wenn Sie die <strong style="font-weight: semi-bold">Verwendung von XAML-Steuerelemente-Sammlung</strong> app installiert haben, klicken Sie hier, <a href="xamlcontrolsgallery:/item/NavigationView">Öffnen Sie die app</a> und finden Sie unter der NavigationView in Aktion </p>
+    <ul>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Erwerben Sie die XAML-Steuerelementekatalog-App (Microsoft Store)</a></li>
+    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Erwerben Sie den Quellcode (GitHub)</a></li>
+    </ul>
+</td>
+</tr>
+</table>
+
+
+Die folgende nach Funktionen geordnete Liste enthält die allgemeinen XAML-Steuerelemente, die Sie in Ihrer App verwenden können.
 
 ## <a name="appbars-and-commands"></a>App-Leisten und -Befehle
 
@@ -257,7 +270,7 @@ Zeigt eine Meldung an, die einen Benutzereingriff erfordert. (Im Gegensatz zu ei
 
 Referenz: [Flyout](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.flyout.aspx) 
 
-Design und Vorgehensweise: [Kontextmenüs und Dialogfelder](dialogs.md) 
+Entwurf und -Vorgehensweisen: [Flyouts](dialogs-and-flyouts/flyouts.md) 
 
 ### <a name="menu-flyout"></a>Menü-Flyout
 Zeigt vorübergehend eine Liste der Befehle oder Optionen im Kontext der Benutzeraktion an.
@@ -277,7 +290,7 @@ Zeigt vorübergehend eine Liste der Befehle oder Optionen im Kontext der Benutze
 
 Referenz: [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyout.aspx), [MenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutitem.aspx), [MenuFlyoutSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutseparator.aspx), [ToggleMenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.togglemenuflyoutitem.aspx) 
 
-Design und Vorgehensweise: [Kontextmenüs und Dialogfelder](dialogs.md) 
+Entwurf und -Vorgehensweisen: [Menüs und Kontextmenüs](menus.md) 
 
 Beispielcode: [Beispiel für XAML-Kontextmenü](http://go.microsoft.com/fwlink/p/?LinkId=620021)
 
@@ -286,7 +299,7 @@ Ein benutzerdefiniertes Menü mit von Ihnen angegebenen Befehlen.
 
 Referenz: [PopupMenu](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.popups.popupmenu.aspx) 
 
-Design und Vorgehensweise: [Kontextmenüs und Dialogfelder](dialogs.md) 
+Entwurf und -Vorgehensweisen: [Dialogs](dialogs-and-flyouts/dialogs.md) 
 
 ### <a name="tooltip"></a>QuickInfo
 Ein Popupfenster, das Informationen zu einem Element anzeigt. 
@@ -540,58 +553,16 @@ Siehe „Medienelement“.
 
 ## <a name="navigation"></a>Navigation
 
-### <a name="hub"></a>Hub
-Ein Containersteuerelement, mit dem der Benutzer verschiedene Abschnitte des Inhalts anzeigen und zu ihnen navigieren kann.
+### <a name="navigationview"></a>NavigationView
 
-```xaml
-<Hub>
-    <HubSection>
-        <!--- hub section content -->
-    </HubSection>
-    <HubSection>
-        <!--- hub section content -->
-    </HubSection>
-</Hub>
-```
+Eine anpassbare Container und flexible Navigationsmodell, der im linken Navigationsbereich, der oberen Navigationsleiste und Registerkarten Muster implementiert.
 
-Referenz: [Hub](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.hub.aspx) 
+Referenz: [NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 
-Design und Vorgehensweise: [Richtlinien für Hub-Steuerelement](hub.md) 
-
-Beispielcode: [Beispiel für das XAML-Hub-Steuerelement](http://go.microsoft.com/fwlink/p/?LinkID=309828)
-
-### <a name="pivot"></a>Pivot
-Ein Vollbild-Container und Navigationsmodell, das auch eine schnelle Methode zum Wechseln zwischen verschiedenen Pivots (Ansichten oder Filtern) bereitstellt, die sich üblicherweise im gleichen Datensatz befinden.
-
-Das „Pivot“-Steuerelement kann mit einem Registerkartenlayout formatiert werden.
-
-Referenz: [Pivot](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.pivot.aspx) 
-
-Design und Vorgehensweise: [Richtlinien für Pivots](tabs-pivot.md) 
-
-Beispielcode: [Pivot-Beispiel](http://go.microsoft.com/fwlink/p/?LinkId=619903&amp;clcid=0x409)
-
-### <a name="semantic-zoom"></a>Semantischer Zoom
-Ein Containersteuerelement, das es dem Benutzer ermöglicht, zwischen zwei Ansichten einer Sammlung zu zoomen.
-
-```xaml
-<SemanticZoom>
-    <ZoomedInView>
-        <GridView></GridView>
-    </ZoomedInView>
-    <ZoomedOutView>
-        <GridView></GridView>
-    </ZoomedOutView>
-</SemanticZoom>
-```
-
-Referenz: [SemanticZoom](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.aspx) 
-
-Design und Vorgehensweise: [Richtlinien für den semantischen Zoom](semantic-zoom.md) 
-
-Beispielcode: [Beispiel für XAML-GridView-Gruppierung und -SemanticZoom](http://go.microsoft.com/fwlink/p/?linkid=226564)
+Entwurf und -Vorgehensweisen: [NavigationView Steuerelement Guide](navigationview.md)
 
 ### <a name="splitview"></a>SplitView
+
 Ein Containersteuerelement mit zwei Ansichten: einer Ansicht für den Hauptinhalt und einer weiteren Ansicht, die in der Regel für ein Navigationsmenü verwendet wird.
 
 ![Steuerelement für geteilte Ansicht](images/controls/split-view.png) 
@@ -612,6 +583,7 @@ Referenz: [SplitView](https://msdn.microsoft.com/library/windows/apps/xaml/windo
 Design und Vorgehensweise: [Richtlinien für das Steuerelement für die geteilte Ansicht](split-view.md)
 
 ### <a name="web-view"></a>Webansicht
+
 Ein Containersteuerelement, das Webinhalt hostet.
 
 ```xaml
@@ -624,6 +596,27 @@ Referenz: [WebView](https://msdn.microsoft.com/library/windows/apps/xaml/windows
 Design und Vorgehensweise: Richtlinien für Webansichten 
 
 Beispielcode: [Beispiel für XAML-WebView-Steuerelement](http://go.microsoft.com/fwlink/p/?linkid=238582)
+
+### <a name="semantic-zoom"></a>Semantischer Zoom
+
+Ein Containersteuerelement, das es dem Benutzer ermöglicht, zwischen zwei Ansichten einer Sammlung zu zoomen.
+
+```xaml
+<SemanticZoom>
+    <ZoomedInView>
+        <GridView></GridView>
+    </ZoomedInView>
+    <ZoomedOutView>
+        <GridView></GridView>
+    </ZoomedOutView>
+</SemanticZoom>
+```
+
+Referenz: [SemanticZoom](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.semanticzoom.aspx) 
+
+Design und Vorgehensweise: [Richtlinien für den semantischen Zoom](semantic-zoom.md)
+
+Beispielcode: [Beispiel für XAML-GridView-Gruppierung und -SemanticZoom](http://go.microsoft.com/fwlink/p/?linkid=226564)
 
 ## <a name="progress-controls"></a>Statussteuerelemente
 

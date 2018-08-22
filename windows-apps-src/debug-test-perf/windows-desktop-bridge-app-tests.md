@@ -2,26 +2,27 @@
 author: PatrickFarley
 ms.assetid: 2f76c520-84a3-4066-8eb3-ecc0ecd198a7
 title: Tests für Windows Desktop-Brücke-Apps
-description: TBD
+description: Verwenden Sie der Desktop-Brücke integrierten Tests, um sicherzustellen, dass auf Ihrem desktop-app für die Konvertierung in einer app UWP optimiert ist.
 ms.author: pafarley
-ms.date: 06/30/2017
+ms.date: 12/18/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows10, UWP
-ms.openlocfilehash: f97b406d534315fcc1128d23059a2a10e6bdb9d2
-ms.sourcegitcommit: ca060f051e696da2c1e26e9dd4d2da3fa030103d
+keywords: Windows 10, Uwp, app-Zertifizierung
+ms.localizationpriority: medium
+ms.openlocfilehash: 96087d2a41eb443374d8cd9bda5608d6156f9173
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2017
-ms.locfileid: "700235"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788495"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Tests für Windows Desktop-Brücke-Apps
 
-[Desktop-Brücke-Apps](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root) sind Windows-Desktopanwendungen, die mit der [Desktop-Brücke](https://developer.microsoft.com/en-us/windows/bridges/desktop) in eine UWP-App konvertiert wurden (Universelle Windows-Plattform). Nach der Konvertierung wird die Windows-Desktopanwendung gepackt, gewartet und als UWP-App-Paket (eine APPX- oder APPXBUNDLE-Datei) für Windows10 Desktop bereitgestellt.
+[Desktop Bridge Apps](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root) sind Windows-desktopanwendungen in universellen Windows-Plattform (UWP) apps mit dem [Desktop Bridge](https://developer.microsoft.com/en-us/windows/bridges/desktop)konvertiert. Nach der Konvertierung wird die Windows-Desktopanwendung gepackt, gewartet und als UWP-App-Paket (eine APPX- oder APPXBUNDLE-Datei) für Windows10 Desktop bereitgestellt.
 
 ## <a name="required-versus-optional-tests"></a>Obligatorische im Vergleich zu optionalen Tests
-Es gibt ein neues Konzept der optionalen Tests für Windows Desktop-Brücke-Apps, die nur zu Informationszwecken dienen und die nicht zur Auswertung Ihrer App während des Aufnahmeverfahrens in den Windows Store verwendet werden. Das Untersuchen dieser Testergebnisse wird empfohlen, um Apps mit höherer Qualität zu erstellen. Die gesamten Kriterien für die Aufnahme in den Windows Store werden von den obligatorischen Tests und nicht von den optionalen Tests bestimmt.
+Optional Tests für Windows-Desktop-Brücke apps dienen nur zu Informationszwecken und werden nicht verwendet werden, für Ihre app bei Microsoft Store Onboarding ausgewertet werden soll. Es wird empfohlen, untersuchen von dieser Testergebnisse, um eine bessere Qualität apps zu erzeugen. Die gesamten Kriterien für die Aufnahme in den Windows Store werden von den obligatorischen Tests und nicht von den optionalen Tests bestimmt.
 
 ## <a name="current-optional-tests"></a>Aktuelle optionale Tests
 
@@ -49,13 +50,13 @@ Sie finden unter [Desktop-zu-UWP-Brücke: App-Erweiterungen](https://docs.micros
 Dieser Test stellt sicher, dass es sich bei der App nicht um einen Debugbuild handelt.
  
 **Hintergrund**  
-Um für den Windows Store zertifiziert zu werden, dürfen Apps nicht zum Debuggen kompiliert werden und nicht auf die Debugversionen einer ausführbaren Datei verweisen. Darüber hinaus müssen Sie den Code für die App optimiert erstellen, damit dieser Test bestanden wird.
+Um eine Zertifizierung für Microsoft Store apps müssen nicht kompiliert werden, für das Debuggen, und diese müssen nicht Debugversionen einer ausführbaren Datei verweisen. Darüber hinaus müssen Sie den Code für die App optimiert erstellen, damit dieser Test bestanden wird.
  
 **Testdetails**  
 Testen Sie die App, um sicherzustellen, dass es sich nicht um einen Debugbuild handelt und dass die App mit keinen Debugframeworks verknüpft ist.
  
 **Maßnahmen**  
-* Erstellen Sie die App als Veröffentlichungsbuild, bevor Sie die App an den Windows Store übermitteln.
+* Erstellen Sie die app als Version Build, bevor Sie sie an den Microsoft-Store übermitteln.
 * Stellen Sie sicher, dass Sie die richtige .NET Framework-Version installiert haben.
 * Stellen Sie sicher, dass die App nicht über Links zu Debugversionen eines Frameworks verfügt und dass die Erstellung mit einer Releaseversion erfolgt. Wenn diese App .NET-Komponenten enthält, sollten Sie sich vergewissern, dass Sie die richtige Version des .NET-Frameworks installiert haben.
 
@@ -63,7 +64,7 @@ Testen Sie die App, um sicherzustellen, dass es sich nicht um einen Debugbuild h
 #### <a name="41-archive-files-usage"></a>4.1 Archivdateiverwendung
 
 **Hintergrund**  
-Dieser Test unterstützt Sie dabei, bessere Desktop-Brücke-Apps zu erstellen, die auf Computern unter [Windows10 S](https://www.microsoft.com/windows/windows-10-s) ausgeführt werden sollen.
+Dieser Test unterstützt Sie dabei, bessere Apps Desktop-Brücke-Apps zu erstellen, die auf Computern unter [Windows10 S](https://www.microsoft.com/windows/windows-10-s) ausgeführt werden sollen.
 
 **Testdetails**  
 Dieser Test überprüft alle ausführbaren Dateien in Archivdateien oder selbstextrahierenden Inhalten. Da ausführbare Dateien innerhalb dieser Art von Inhalten während der Übernahme in den Windows Store nicht signiert werden, wird die App auf Systemen unter Windows10 S möglicherweise nicht wie erwartet ausgeführt.
@@ -124,7 +125,7 @@ Das Bild „BadgeLogo“ enthält einen ABGR-Wert {Wert} an der Position (x, y),
 Für das Bild muss mindestens eine Variante ohne TargetSize-Qualifizierer definiert sein. Sie müssen einen Scale-Qualifizierer definieren oder „Scale” und „TargetSize” nicht angeben. In diesem Fall wird „Scale-100” verwendet.  | Weitere Informationen finden Sie in den Handbüchern unter [Reaktionsfähiges Design](https://msdn.microsoft.com/library/windows/apps/xaml/dn958435.aspx) und [App-Ressourcen](https://docs.microsoft.com/en-us/windows/uwp/app-settings/store-and-retrieve-app-data). 
 Das Paket enthält keine Datei „resources.pri”.  | Wenn das App-Manifest lokalisierbaren Inhalt enthält, müssen Sie sicherstellen, dass das Paket der App eine gültige Datei „resources.pri“ enthält. 
 Die Datei „resources.pri“ muss eine Ressourcenzuordnung enthalten, bei der der Name dem Paketnamen „{vollständiger Paketname}“ entspricht.  | Dieser Fehler wird angezeigt, wenn das Manifest geändert wird und der Name der Ressourcenzuordnung in „resources.pri“ dem Paketnamen im Manifest nicht mehr entspricht. In der tatsächlichen Meldung enthält „{vollständiger Paketname}“ den Paketnamen, den „resources.pri“ enthalten muss. Um diesen Fehler zu beheben, müssen Sie die Datei „resources.pri“ neu erstellen. Am besten erstellen Sie dazu das App-Paket neu. 
-Für die Datei „resources.pri“ darf „Automatisch zusammenführen“ nicht aktiviert sein.  | „MakePRI.exe“ unterstützt eine Option mit dem Namen AutoMerge. Der Standardwert von AutoMerge ist Aus. Bei Aktivierung führt AutoMerge die App-Sprachpaketressourcen in einer einzelnen Datei „resources.pri“ zur Laufzeit zusammen. Für Apps, die Sie über den Windows Store vertreiben möchten, wird dies nicht empfohlen. Die Datei „resources.pri“ einer über den Windows Store vertriebenen Windows Store-App muss sich im Stammverzeichnis des App-Pakets befinden und alle von der App unterstützten Sprachverweise enthalten. 
+Für die Datei „resources.pri“ darf „Automatisch zusammenführen“ nicht aktiviert sein.  | „MakePRI.exe“ unterstützt eine Option mit dem Namen AutoMerge. Der Standardwert von AutoMerge ist Aus. Bei Aktivierung führt AutoMerge die App-Sprachpaketressourcen in einer einzelnen Datei „resources.pri“ zur Laufzeit zusammen. Es wird nicht dadurch für apps, die Sie verteilen, über die Microsoft Store möchten empfohlen. Die resources.pri einer App, die über Microsoft Store verteilt wird muss im Stamm der app-Paket und enthält die Language-Referenzen, die die app unterstützt. 
 Die Zeichenfolge „{string}“ entspricht nicht der Längenbeschränkung von maximal {number} Zeichen.  | Weitere Informationen finden Sie unter [App-Paketanforderungen](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements). In der tatsächlichen Meldung wird „{string}“ durch die Zeichenfolge mit dem Fehler ersetzt, und {number} enthält die maximale Länge. 
 Die Zeichenfolge „{string}“ darf keine führenden/nachgestellten Leerzeichen enthalten.  | Das Schema für die Elemente im App-Manifest lässt führende oder nachgestellte Leerzeichen nicht zu. In der tatsächlichen Meldung wird „{string}“ durch die Zeichenfolge mit dem Fehler ersetzt. Stellen Sie sicher, dass keiner der lokalisierten Werte der Manifestfelder in „resources.pri“ führende oder nachgestellte Leerzeichen enthält. 
 Die Zeichenfolge darf nicht leer sein (Länge größer 0 (null)).  | Weitere Informationen finden Sie unter [App-Paketanforderungen](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements). 
@@ -213,17 +214,17 @@ Desktop-Brücke-Apps können zusammen mit modernen APIs (UWP-Komponenten) einige
  
 **Testdetails**  
 Dieser Test überprüft die UWP-Komponenten in der App:
-* Es wird sichergestellt, dass die im App-Paket enthaltenen verwalteten Binärdateien nicht über Abhängigkeiten von einer Win32-API verfügen, die für die Entwicklung von Windows Store-Apps nicht unterstützt wird. Dazu wird jeweils die Importadressentabelle der Binärdatei überprüft.
+* Überprüft, dass für jede Verwaltete Binärdatei innerhalb der app-Paket eine Abhängigkeit auf eine Win32-API nicht, die Überprüfung der Importtabelle Adresse der Binärdatei nicht für die Entwicklung von UWP Apps unterstützt wird.
 * Stellt sicher, dass eine verwaltete Binärdatei des App-Pakets keine Abhängigkeit von einer Funktion außerhalb des genehmigten Profils aufweist. 
 
 **Maßnahmen**  
 Dies kann korrigiert werden, indem sichergestellt wird, dass die App als Releasebuild und nicht als ein Debugbuild kompiliert wurde. 
 
 > [!NOTE]
-> Der Debugbuild einer App besteht diesen Test nicht, auch wenn die App nur [APIs für Windows Store-Apps](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx) verwendet. Prüfen Sie die Fehlermeldungen, um die vorliegende API zu identifizieren, die keine für Windows Store-Apps zulässige API ist. 
+> Erstellen einer App Debug fehl dieser Test, auch wenn die app nur [APIs für apps UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)verwendet. Überprüfen Sie die Fehlermeldungen zum Identifizieren der API vorhanden, das einer zulässigen API für UWP apps nicht ist. 
 
 > [!NOTE]
-> C++-Apps, die unter einer Debugkonfiguration erstellt wurden, bestehen diesen Test nicht. Dies gilt auch, wenn für die Konfiguration nur APIs aus dem Windows SDK für Windows Store-Apps verwendet werden. Weitere Informationen finden Sie unter [Alternativen zu Windows-APIs in Windows Store-Apps](https://msdn.microsoft.com/library/windows/apps/hh464945.aspx).
+> C++-apps, die in einer Debugkonfiguration integriert sind fehl dieser Test, auch wenn die Konfiguration nur APIs aus dem Windows SDK für UWP apps verwendet wird. Weitere Informationen finden Sie unter [alternativen zu Windows-APIs in UWP apps](https://msdn.microsoft.com/library/windows/apps/hh464945.aspx) .
 
 ### <a name="6-user-account-control-uac-test"></a>6. Benutzerkontensteuerung (User Account Control; UAC).  
 
@@ -231,7 +232,7 @@ Dies kann korrigiert werden, indem sichergestellt wird, dass die App als Release
 Stellen Sie sicher, dass die App nicht die Benutzerkontensteuerung zur Laufzeit anfordert.
 
 **Testdetails**  
-Eine App kann nicht erhöhte Administratorrechte oder UIAccess gemäß Windows Store-Richtlinie anfordern. Erhöhte Sicherheitsberechtigungen werden nicht unterstützt. 
+Eine app kann keinen Admin Elevation oder UIAccess pro Microsoft Store Richtlinie anfordern. Erhöhte Sicherheitsberechtigungen werden nicht unterstützt. 
 
 **Maßnahmen**  
 Apps müssen als interaktiver Benutzer ausgeführt werden. Weitere Details finden Sie unter [Sicherheit bei der Benutzeroberflächenautomatisierung – Übersicht](https://go.microsoft.com/fwlink/?linkid=839440).
@@ -272,7 +273,7 @@ Beim Test auf unzulässige Dateien im Windows-Zertifizierungskit für Apps wird 
 Für diese Überprüfung tritt normalerweise ein Fehler auf, wenn von einer App anstelle der aktuellen offiziellen Version eine Release Preview-Version der Datei verwendet wird. 
 
 **Maßnahmen**  
-Verwenden Sie zum Beheben dieses Fehlers die aktuelle Version des [Bing Maps SDK](http://go.microsoft.com/fwlink/p/?linkid=614880) für Windows Store-Apps.
+Um dies zu korrigieren, verwenden Sie die neueste Version des [Bing Maps-SDK](http://go.microsoft.com/fwlink/p/?linkid=614880) für UWP apps.
 
 #### <a name="82-private-code-signing"></a>8.2 Private Codesignatur
 Überprüft, ob innerhalb des App-Pakets Binärdateien für private Codesignaturen vorhanden sind. 
@@ -289,4 +290,4 @@ Entfernen Sie alle Signaturschlüssel für privaten Code (wie z.B. PFX- und SNK-
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [WindowsStore-Richtlinien](https://msdn.microsoft.com/library/windows/apps/Dn764944)
+* [Microsoft Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/Dn764944)

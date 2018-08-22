@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projektion, häufig, gestellte, fragen, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: 617f9ee49130a55cf0378f2a70b72296224dcefc
-ms.sourcegitcommit: 834992ec14a8a34320c96e2e9b887a2be5477a53
-ms.translationtype: HT
+ms.openlocfilehash: 80c27332c05e285fdad6b8ec8deddd82d24a6e4a
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2018
-ms.locfileid: "1881021"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2788455"
 ---
 # <a name="frequently-asked-questions-about-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Häufig gestellte Fragen zu [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Antworten auf Fragen zur Erstellung und Nutzung von Windows-Runtime-APIs mit C++/WinRT.
@@ -84,6 +84,65 @@ windows.com
 Da C++/WinRT Features vom C++17-Standard verwendet, müssen Sie alle Compiler-Flags verwenden, die erforderlich sind, um diese Unterstützung zu erhalten. Diese Flags sind je nach Compiler unterschiedlich.
 
 Visual Studio ist das Entwicklungstool, das wir unterstützen und für C++/WinRT empfehlen. Weitere Informationen finden Sie unter [Visual Studio-Unterstützung für C++/WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
+
+## <a name="why-doesnt-the-generated-implementation-function-for-a-read-only-property-have-the-const-qualifier"></a>Warum das verfügt nicht über die Funktion generierten Implementierung für eine nur-Lese-Eigenschaft der `const` Qualifizierer?
+
+Wenn Sie eine schreibgeschützte Eigenschaft in [MIDL 3.0](/uwp/midl-3/)deklarieren, erwarten Sie die `cppwinrt.exe` Tool zum Generieren einer Implementierung-Funktion für Sie `const`-qualifizierten (const-Funktion behandelt den *dieser* Zeiger als const).
+
+Natürlich sollten Sie Const verwenden, wann immer möglich, aber die `cppwinrt.exe` Tool selbst nicht versuchen, Grund, über welche Implementierung Funktionen vorstellbar möglicherweise const, und die möglicherweise nicht. Sie können festlegen, dass Ihre Implementierung Funktionen const, wie in diesem Beispiel.
+
+```cppwinrt
+struct MyStringable : winrt::implements<MyStringable, winrt::Windows::Foundation::IStringable>
+{
+    winrt::hstring ToString() const
+    {
+        return L"MyStringable";
+    }
+};
+```
+
+Sie können entfernen, `const` Qualifizierer auf **ToString** sollten Sie entscheiden, einige Zustand des Objekts in seiner Implementierung ändern müssen. Aber stellen jeweils des Members Funktionen const oder nicht-Const, nicht beides. Anders ausgedrückt, nicht überladen eine Implementierung-Funktion auf `const`.
+
+Neben dem Ihrer Implementierung-Funktion, ein anderes andere dort, wo const kommt in das Bild wird in Windows-Runtime-Funktion Projektionen. Betrachten Sie diesen Code.
+
+```cppwinrt
+int main()
+{
+    winrt::Windows::Foundation::IStringable s{ winrt::make<MyStringable>() };
+    auto result{ s.ToString() };
+}
+```
+
+Für den Aufruf von **ToString** oben, der Befehl **Gehe zu Deklaration** in Visual Studio mit zeigt die Projektion der Windows-Runtime **IStringable::ToString** in C + / WinRT sieht folgendermaßen aus.
+
+```
+winrt::hstring ToString() const;
+```
+
+Funktionen in der Projektion sind const, unabhängig davon, wie Sie die Implementierung von ihnen qualifizieren auswählen. Im Hintergrund Ruft die Projektion die binären Anwendungsschnittstelle (ABI), welche Beträge zu einem Anruf über einen Zeiger des COM-Schnittstelle. Der einzige Zustand, dem die voraussichtliche **ToString** interagiert, ist dieser COM-Schnittstellenzeiger; und natürlich hat keine Notwendigkeit, diese Zeiger zu ändern, damit die Funktion Konstante ist. Diese bietet Sie die Sicherheit, dass es nicht alles über die **IStringable** -Referenz, der Sie ändert durch Aufrufen, und es wird sichergestellt, dass Sie auch mit einer Const **ToString** aufrufen können auf eine **IStringable**verweisen.
+
+Zu verstehen, die diese Beispiele für `const` sind Implementierungsdetails des C + / WinRT Projektionen und Implementierungen; Sie bilden Code Hygiene Ihrem nutzen. Es ist keine `const` auf die COM- noch die Windows-Laufzeit ABI (für Member-Funktionen).
+
+## <a name="do-you-have-any-recommendations-for-decreasing-the-code-size-for-cwinrt-binaries"></a>Verfügen Sie über alle Empfehlungen für die Codegröße für C + verringern / WinRT Binärdateien?
+
+Bei der Arbeit mit Windows-Laufzeitobjekte sollten Sie das Codierungsmuster unten angezeigten, da es sich negativ auf die Anwendung besitzen kann, indem verursacht mehr binären Code als erforderlichen generiert werden soll.
+
+```cppwinrt
+anobject.b().c().d();
+anobject.b().c().e();
+anobject.b().c().f();
+```
+
+In der Welt Windows-Runtime kann der Compiler nicht entweder den Wert der cache `c()` oder die Schnittstellen für jede Methode, die durch eine Dereferenzierung aufgerufen wird ("."). Sofern Sie kein anderes, führt zu mehr virtuelle Aufrufe und führt zu mehr Verarbeitungsaufwand zählen Verweis. Das oben genannten Muster konnte doppelt so viel Code wie zwingend erforderlich, auf einfache Weise generiert werden. Stattdessen lieber das Muster unten, wo Sie können. Viel weniger Code generiert wird, und es kann auch deutlich verbessern der Leistung der Laufzeit.
+
+```cppwinrt
+auto a{ anobject.b().c() };
+a.d();
+a.e();
+a.f();
+```
+
+Das empfohlene Muster oben gezeigten gilt nicht nur für C + / WinRT jedoch für alle Windows-Runtime Sprache Projektionen.
 
 > [!NOTE]
 > Wenn Ihre Frage in diesem Thema nicht beantwortet werden konnte, finden Sie ggf. hier Unterstützung: [`c++-winrt`-Tag auf Stack Overflow ](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt).

@@ -4,17 +4,17 @@ title: Was ist neu in Windows-Dokumente im August 2018 – Entwickeln von apps U
 description: Neue Features, Videos, Beispiele und Anleitungen für Entwickler wurden in der Windows-10-Entwicklerdokumentation für August 2018 hinzugefügt.
 keywords: Neues in, Update, Features, Developer Leitfaden für die Windows-10, august
 ms.author: quradic
-ms.date: 8/9/2018
+ms.date: 08/14/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 06eef0c115675ba9673a81459c91e0f08f6fab71
-ms.sourcegitcommit: be5b71a8ec7b686d5f93d56d10cb9a50c3c5bb4a
+ms.openlocfilehash: c294dedc8e19605bc2cee0308022bed8624df57e
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "2748868"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2787785"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>Was ist neu in der Windows-Entwicklerdokumente im August 2018
 
@@ -30,17 +30,17 @@ Die folgenden Features wurden an den Windows Insider Preview Builds, über die [
 
 * Die [UI-Bibliothek für Windows](https://aka.ms/winui-docs) ist eine Reihe von NuGet-Pakete, die Steuerelemente und andere interfact Elemente für apps UWP bereitstellen. Diese Pakete sind auch kompatibel mit früheren Versionen von Windows 10, damit Ihre app funktioniert, auch wenn die Benutzer nicht über die neueste Version des Betriebssystems verfügen.
 
-* [DropDownButton, SplitButton, und ToggleSplitButton](../design/controls-and-patterns/buttons.md) bieten Schaltflächensteuerelemente mit speziellen Features Ihrer app-Benutzeroberfläche optimiert.
-
-* NavigationView unterstützt [der oberen Navigationsleiste](../design/controls-and-patterns/navigationview.md) für Fälle, in denen Ihre app eine kleinere Anzahl von Optionen für die Websitenavigation verfügt, und erfordern mehr Speicherplatz für Ihre app Inhalte.
-
-* "TreeView" wurde verbessert zur Unterstützung der [Datenbindung, Elementvorlagen, und Dragon and -Drop.](../design/controls-and-patterns/tree-view.md)
+* [DropDownButton](../design/controls-and-patterns/buttons.md#create-a-drop-down-button) [SplitButton](../design/controls-and-patterns/buttons.md#create-a-split-button)und [ToggleSplitButton](../design/controls-and-patterns/buttons.md#create-a-toggle-split-button) bieten Schaltflächensteuerelemente mit speziellen Features Ihrer app-Benutzeroberfläche optimiert.
 
 ![Eine Trennschaltfläche für die Auswahl von Vordergrundfarbe](../design/controls-and-patterns/images/split-button-rtb.png)
 
+* NavigationView unterstützt jetzt in der [oberen Navigationsleiste](../design/controls-and-patterns/navigationview.md)für Fälle, in dem Ihre app hat eine geringere Anzahl von Optionen für die Websitenavigation und erfordern mehr Speicherplatz für Ihre app Inhalte.
+
+* "TreeView" wurde verbessert zur Unterstützung der [Daten binden, Vorlagen, Artikel und Drag & drop.](../design/controls-and-patterns/tree-view.md)
+
 ### <a name="package-support-framework"></a>Paket-Support-Framework
 
-Das Paket Support-Framework ist ein open-Source-Kit, die Dank gelten Korrekturen für Ihre Win32-Anwendung, wenn Sie nicht über Zugriff auf den Quellcode verfügen, damit es in einem MSIX-Container ausgeführt werden kann.  
+Das Paket Support-Framework ist ein Open-Source-Kit, die Dank gelten Korrekturen für Ihre Win32-Anwendung, wenn Sie nicht über Zugriff auf den Quellcode verfügen, damit es in einem MSIX-Container ausgeführt werden kann.
 
 Weitere Informationen finden Sie unter [Übernehmen Runtime behebt zu einem Paket MSIX mithilfe des Paket-Support-Frameworks](../porting/package-support-framework.md).
 
@@ -52,7 +52,7 @@ Eine Liste mit [älteren Microsoft-API-Erweiterungen](https://developer.mozilla.
 
 ### <a name="cwinrt-code-examples"></a>C + / WinRT-Codebeispiele
 
-Wir haben 250 hinzugefügt [C + / WinRT](../cpp-and-winrt-apis/index.md) Codeausschnitte zu Themen, die in unserer Dokumente, die begleitenden vorhandenen C + / CX-Codebeispiele.
+Wir haben 250 hinzugefügt [C + / WinRT](../cpp-and-winrt-apis/index.md) code Auflistungen zu Themen, die in unserer Dokumente, die begleitenden vorhandenen C + / CX-Codebeispiele.
 
 ### <a name="project-rome"></a>Projekt Rome
 
