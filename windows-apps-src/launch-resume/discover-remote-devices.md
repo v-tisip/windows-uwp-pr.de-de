@@ -8,14 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows10, UWP
+keywords: Geräte für Windows 10, Uwp, verbunden, remote-Systemen, ROM, Project ROM
 ms.localizationpriority: medium
-ms.openlocfilehash: 724e2ce05dc439ba440f46697b736faabb1e8df0
-ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
-ms.translationtype: HT
+ms.openlocfilehash: 02d04074ece0033da8c3454a95bc35af201903f3
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "2018494"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2794661"
 ---
 # <a name="discover-remote-devices"></a>Ermitteln von Remotegeräten
 Ihre App kann die WLAN-, Bluetooth- und Cloud-Verbindung nutzen, um Windows-Geräte zu ermitteln, die mit demselben Microsoft-Konto wie das ermittelnde Gerät angemeldet sind. Auf den Remotegeräten muss keine spezielle Software installiert sein, damit sie erkennbar sind.
@@ -60,7 +60,7 @@ Ein **RemoteSystem**-Objekt wird abgerufen, wenn ein gültiges **HostName**-Obje
 
 ## <a name="querying-a-capability-on-a-remote-system"></a>Abfragen einer Funktion auf einem Remotesystem
 
-Auch wenn das Abfragen von Gerätefunktionen unabhängig von der Erkennungsfilterung ist, kann es dennoch wichtiger Teil des Erkennungsvorgangs sein. Mit der [**RemoteSystem.GetCapabilitySupportedAsync**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystem#Windows_System_RemoteSystems_RemoteSystem_GetCapabilitySupportedAsync_System_String_)-Methode, können Sie erkannte Remotesysteme abfragen, zur Unterstützung bestimmter Funktionen wie der Konnektivität von Remotesitzungen oder dem Teilen räumlicher Instanzen (holografisch). Eine Liste der abfragbaren Funktionen finden Sie unter der [**KnownRemoteSystemCapabilities**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.knownremotesystemcapabilities)-Klasse.
+Auch wenn das Abfragen von Gerätefunktionen unabhängig von der Erkennungsfilterung ist, kann es dennoch wichtiger Teil des Erkennungsvorgangs sein. Mit der [**RemoteSystem.GetCapabilitySupportedAsync**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystem.GetCapabilitySupportedAsync)-Methode, können Sie erkannte Remotesysteme abfragen, zur Unterstützung bestimmter Funktionen wie der Konnektivität von Remotesitzungen oder dem Teilen räumlicher Instanzen (holografisch). Eine Liste der abfragbaren Funktionen finden Sie unter der [**KnownRemoteSystemCapabilities**](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.knownremotesystemcapabilities)-Klasse.
 
 ```csharp
 // Check to see if the given remote system can accept LaunchUri requests

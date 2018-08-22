@@ -8,17 +8,17 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows10, UWP
-ms.openlocfilehash: 6a4088c24f801db3b25dc1d9740d261e12853d63
-ms.sourcegitcommit: d2ec178103f49b198da2ee486f1681e38dcc8e7b
+keywords: Windows 10, Uwp, Drucken
+ms.localizationpriority: medium
+ms.openlocfilehash: fe4086cc87699083304594eb4ccc8e7bb137b19f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2017
-ms.locfileid: "696111"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2797466"
 ---
 # <a name="customize-the-print-preview-ui"></a>Anpassen der Benutzeroberfläche für die Druckvorschau
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**

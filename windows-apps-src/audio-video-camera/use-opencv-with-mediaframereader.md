@@ -10,16 +10,19 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, openCV
 ms.localizationpriority: medium
-ms.openlocfilehash: d9c2ac6ad4de6dc67cc4c661e055ad43ecb143ec
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.openlocfilehash: 43545f2a8e1965124560479d399df79d247c5f05
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1692801"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2789805"
 ---
 # <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a>Verwenden Sie die Open Source Computer Vision-Bibliothek (OpenCV) mit MediaFrameReader
 
-In diesem Artikel wird erläutert, wie Sie die Open Source Computer Vision-Bibliothek (OpenCV), eine systemeigene Code-Bibliothek, die eine Vielzahl von Algorithmen für die Bildverarbeitung bietet, mit der [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader)-Klasse verwenden, die Medien aus mehreren Quellen gleichzeitig lesen kann. Der Beispielcode in diesem Artikel führt Sie durch die Erstellung einer einfachen App, die Frames von einem Farbsensor erhält, jede Frame mithilfe der OpenCV-Bibliothek verwischt und dann das verarbeitete Bild in einem XAML-**Image** Steuerelement anzeigt.
+In diesem Artikel wird erläutert, wie Sie die Open Source Computer Vision-Bibliothek (OpenCV), eine systemeigene Code-Bibliothek, die eine Vielzahl von Algorithmen für die Bildverarbeitung bietet, mit der [**MediaFrameReader**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameReader)-Klasse verwenden, die Medien aus mehreren Quellen gleichzeitig lesen kann. Der Beispielcode in diesem Artikel führt Sie durch die Erstellung einer einfachen App, die Frames von einem Farbsensor erhält, jede Frame mithilfe der OpenCV-Bibliothek verwischt und dann das verarbeitete Bild in einem XAML-**Image** Steuerelement anzeigt. 
+
+>[!NOTE]
+>OpenCV.Win.Core und OpenCV.Win. ImgProc werden nicht regelmäßig aktualisiert, werden jedoch weiterhin für das Erstellen von OpenCVHelper empfohlen, wie auf dieser Seite beschrieben.
 
 Dieser Artikel baut auf dem Inhalt von zwei anderen Artikeln auf:
 
@@ -29,7 +32,8 @@ Dieser Artikel baut auf dem Inhalt von zwei anderen Artikeln auf:
 
 Wenn Sie zusätzlich zu diesem Artikel ein vollständiges, funtionsfähiges End-to-End-Beispiel des in diesem Artikel beschriebenen Szenarios anzeigen und herunterladen möchten, finden Sie dies unter [Kamera-Frames + OpenCV – Beispiel](https://go.microsoft.com/fwlink/?linkid=854003) im GitHub-Repository für Beispiele für die Universelle Windows-Plattform.
 
-Fügen Sie die OpenCV-Bibliothek einem UWP-App-Projekt über NuGet-Pakete hinzu. Das Beispiel in diesem Artikel verwendet OpenCV.Win.Core und OpenCV.Win. ImgProc NuGet-Pakete. Der Artikel [Verarbeiten von Softwarebitmaps mit OpenCV](process-software-bitmaps-with-opencv.md) enthält Anweisungen, wie Sie diese Pakete der Projektmappe hinzufügen. Informationen zum Entwickeln mit OpenCV finden Sie unter [http://opencv.org](http://opencv.org)
+Um die ersten Schritte beim Entwickeln von schnell, können Sie die Bibliothek OpenCV in einem app-Projekt UWP einschließen, mithilfe von NuGet-Pakete, aber diese Pakete können den app Certficication Prozess nicht übergeben, wenn Sie Ihre app im Store übermitteln, daher wird empfohlen, dass Sie die OpenCV herunterladen Bibliothek Quellcode und die Binärdateien vor dem Einreichen Ihrer app erstellen. Informationen zum Entwickeln mit OpenCV finden Sie unter [http://opencv.org](http://opencv.org)
+
 
 ## <a name="implement-the-opencvhelper-native-windows-runtime-component"></a>Implementieren der systemeigenem OpenCVHelper-Komponente für Windows-Runtime
 Führen Sie die Schritte unter [Verarbeiten von Softwarebitmaps mit OpenCV](process-software-bitmaps-with-opencv.md) durch, um die OpenCV Helferkomponente für Windows-Runtime zu erstellen und der UWP-App-Lösung einen Verweis auf das Komponentenprojekt hinzuzufügen.

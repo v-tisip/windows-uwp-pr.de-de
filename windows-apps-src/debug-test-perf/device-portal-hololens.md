@@ -8,14 +8,14 @@ ms.date: 09/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows10, UWP
+keywords: Windows 10, Uwp, Gerät portal
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e73519f57d9b08e08a7400f322367b6634cf945
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: e70ab7c7fba8b8da9a0115a86a13f08e4ef3ebe2
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817721"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792480"
 ---
 # <a name="device-portal-for-hololens"></a>Geräteportal für HoloLens
 
@@ -23,8 +23,6 @@ ms.locfileid: "1817721"
 ## <a name="set-up-device-portal-on-hololens"></a>Einrichten des Geräteportals für HoloLens
 
 ### <a name="enable-device-portal"></a>Aktivieren des Geräteportals
-
-**So aktivieren Sie das Geräteportal**
 
 1. Schalten Sie die HoloLens ein, und setzen Sie sie auf.
 2. Führen Sie die [Blütengeste](https://dev.windows.com/holographic/Gestures.html#Bloom) aus, um das Hauptmenü zu starten.
@@ -37,7 +35,7 @@ ms.locfileid: "1817721"
 
 ### <a name="pair-your-device"></a>Koppeln des Geräts
 
-### <a name="connect-over-wi-fi"></a>Herstellen einer WLAN-Verbindung 
+#### <a name="connect-over-wi-fi"></a>Herstellen einer WLAN-Verbindung 
 
 1. Verbinden Sie die HoloLens mit dem WLAN.
 2. Suchen Sie die IP-Adresse des Geräts. – Suchen Sie die IP-Adresse auf dem Gerät unter „Einstellungen“ > „Netzwerk und Internet“ > „WLAN“ > „Erweiterte Optionen“.
@@ -46,18 +44,21 @@ ms.locfileid: "1817721"
 3. Rufen Sie in einem Webbrowser auf dem PC „“ auf. `https://<YOUR_HOLOLENS_IP_ADDRESS>`
     - Im Browser wird die folgende Meldung angezeigt: „Es besteht ein Problem mit dem Sicherheitszertifikat der Website.“ Der Grund dafür ist, dass das für das Geräteportal ausgestellte Zertifikat ein Testzertifikat ist. Sie können diesen Zertifikatfehler vorerst ignorieren und fortfahren.
 
-### <a name="connect-over-usb"></a>Herstellen einer Verbindung über USB 
+#### <a name="connect-over-usb"></a>Herstellen einer Verbindung über USB 
 
 1. Installieren Sie die Tools, um sicherzustellen, dass auf dem PC Visual Studio Update 1 mit den Windows 10-Entwicklertools installiert ist. Hierdurch wird USB-Konnektivität aktiviert.
 2. Schließen Sie die HoloLens mit einem Micro-USB-Kabel am PC an.
 3. Rufen Sie in einem Webbrowser auf dem PC „`http://127.0.0.1:10080`“ auf.
 
-### <a name="connect-to-an-emulator"></a>Herstellen einer Verbindung mit einem Emulator 
+> [!IMPORTANT]
+> Wenn auf Ihrem PC das Gerät nicht finden kann, verwenden Sie die tatsächliche Netzwerk-IP-Adresse des Geräts HoloLens statt `http://127.0.0.1:10080`.
+
+#### <a name="connect-to-an-emulator"></a>Herstellen einer Verbindung mit einem Emulator 
 
 Sie können das Geräteportal auch mit dem Emulator verwenden. Verwenden Sie die Symbolleiste, um die Verbindung mit dem Geräteportal herzustellen. Klicken Sie auf dieses Symbol:
 - Öffnen Sie das Geräteportal: Öffnen Sie das Windows Device Portal für das HoloLens-Betriebssystem im Emulator.
 
-### <a name="create-a-username-and-password"></a>Erstellen eines Benutzernamens und Kennworts 
+#### <a name="create-a-username-and-password"></a>Erstellen eines Benutzernamens und Kennworts 
 
 Wenn Sie das erste Mal eine Verbindung der HoloLens mit dem Geräteportal herstellen, müssen Sie einen Benutzernamen und ein Kennwort erstellen.
 1. Geben Sie in einem Webbrowser auf dem PC die IP-Adresse der HoloLens ein. Die Seite „Set up access“ wird geöffnet.
@@ -69,7 +70,7 @@ Wenn Sie das erste Mal eine Verbindung der HoloLens mit dem Geräteportal herste
 
 Wenn Sie den Benutzernamen oder das Kennwort ändern möchten, können Sie diesen Vorgang jederzeit wiederholen, indem Sie die Seite für Gerätesicherheit besuchen. Klicken Sie hierzu oben rechts auf den Link „Sicherheit“, oder navigieren Sie zu „`https://<YOUR_HOLOLENS_IP_ADDRESS>/devicesecurity.htm`“.
 
-### <a name="security-certificate"></a>Sicherheitszertifikat 
+#### <a name="security-certificate"></a>Sicherheitszertifikat 
 
 Wenn im Browser eine Meldung zu einem Zertifikatfehler angezeigt wird, können Sie diesen beheben, indem Sie eine Vertrauensstellung mit dem Gerät erstellen.
 

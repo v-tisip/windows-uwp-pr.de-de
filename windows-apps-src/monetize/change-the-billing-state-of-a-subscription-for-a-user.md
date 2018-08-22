@@ -4,18 +4,18 @@ ms.assetid: F37C2CEC-9ED1-4F9E-883D-9FBB082504D4
 description: Verwenden Sie diese Methode in der Microsoft Store-Einkaufs-API, um den Abrechnungszustand eines Abonnements für einen Benutzer zu ändern.
 title: Ändern des Abrechnungszustands eines Abonnements für Benutzer
 ms.author: mcleans
-ms.date: 03/16/2018
+ms.date: 08/01/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Einkaufs-API, Abonnements
 ms.localizationpriority: medium
-ms.openlocfilehash: 9fb4a3de45d19b1a43af1de06a46f0b440fe53e6
-ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
-ms.translationtype: HT
+ms.openlocfilehash: d8734c1fe25cf6c22d88d2d50b323b7d3ee86710
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
-ms.locfileid: "1664883"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2796321"
 ---
 # <a name="change-the-billing-state-of-a-subscription-for-a-user"></a>Ändern des Abrechnungszustands eines Abonnements für Benutzer
 
@@ -57,7 +57,7 @@ Weitere Informationen finden Sie unter [Verwalten von Produktansprüchen aus ein
 
 | Name         | Typ  | Beschreibung   |  Erforderlich  |
 |----------------|--------|-------------|-----------|
-| recurrenceId | Zeichenfolge | Die ID des Abonnements, das Sie ändern möchten. Rufen Sie zum Anfordern dieser ID die Methode [Abonnements für einen Benutzer abrufen](get-subscriptions-for-a-user.md) auf und identifizieren Sie den Antworttext-Eintrag, der das Abonnement-Add-On darstellt, das Sie ändern möchten. Verwenden Sie für den Eintrag den Wert aus dem Feld **ID**.     | Ja      |
+| recurrenceId | Zeichenfolge | Die ID des Abonnements, das Sie ändern möchten. Wenn dieser ID erhalten möchten, rufen Sie die Methode [get Abonnements für einen Benutzer](get-subscriptions-for-a-user.md) , identifizieren Sie den Antwort Body-Eintrag, der das Abonnement Add-on darstellt, den, das Sie ändern möchten, und verwenden Sie den Wert des **Id** -Felds für den Eintrag.     | Ja      |
 
 
 ### <a name="request-body"></a>Anforderungstext
@@ -74,7 +74,7 @@ Weitere Informationen finden Sie unter [Verwalten von Produktansprüchen aus ein
 Im folgenden Beispiel wird veranschaulicht, wie anhand dieser Methode der Abonnementzeitraum um 5Tage verlängert wird. Ersetzen Sie den Wert *b2bKey* durch den [Microsoft Store-ID-Schlüssel](view-and-grant-products-from-a-service.md#step-4), der die Identität des Benutzers darstellt, dessen Abonnement Sie ändern möchten.
 
 ```json
-POST https://purchase.mp.microsoft.com/v8.0/b2b/recurrences/query HTTP/1.1
+POST https://purchase.mp.microsoft.com/v8.0/b2b/recurrences/mdr:0:bc0cb6960acd4515a0e1d638192d77b7:77d5ebee-0310-4d23-b204-83e8613baaac/change HTTP/1.1
 Authorization: Bearer <your access token>
 Content-Type: application/json
 Host: https://purchase.mp.microsoft.com
@@ -120,6 +120,7 @@ Der Antworttext enthält die folgenden Daten.
 | autoRenew | Boolesch |  Gibt an, ob das Abonnement für die automatische Verlängerung am Ende des aktuellen Abonnementzeitraums konfiguriert ist.   |
 | beneficiary | Zeichenfolge |  Die ID des Begünstigten für die Berechtigung, die diesem Abonnement zugeordnet ist.   |
 | expirationTime | Zeichenfolge | Datum und Uhrzeit, an dem bzw. zu der das Abonnement abläuft, im Format ISO 8601. Dieses Feld ist nur verfügbar, wenn sich das Abonnement in bestimmten Zuständen befindet. Die Ablaufzeit gibt in der Regel an, wann der aktuelle Zustand abläuft. Beispiel: Bei einem aktiven Abonnement gibt das Ablaufdatum an, wann die nächste automatische Verlängerung erfolgt.    |
+| expirationTimeWithGrace | string | Das Datum und die Zeit, die das Abonnement abläuft, einschließlich der Nachfrist im ISO 8601-Format dar. Dieser Wert gibt an, wenn der Benutzer verlieren Zugriff auf das Abonnement nachdem das Abonnement automatisch erneuern fehlgeschlagen ist.    |
 | id | Zeichenfolge |  Die ID des Abonnements. Verwenden Sie diesen Wert, um das Abonnement anzugeben, das Sie durch Aufrufen der Methode zum [Ändern des Abrechnungszustands eines Abonnements für einen Benutzer ](change-the-billing-state-of-a-subscription-for-a-user.md) ändern möchten.    |
 | isTrial | Boolesch |  Gibt an, ob es sich bei dem Abonnement um eine Testversion handelt.     |
 | lastModified | Zeichenfolge |  Datum und Uhrzeit, an dem bzw. zu der das Abonnement zuletzt geändert wurde, im Format ISO 8601.      |

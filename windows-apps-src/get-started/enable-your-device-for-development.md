@@ -9,13 +9,13 @@ ms.date: 05/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-ms.localizationpriority: high
-ms.openlocfilehash: cf8f0e0c7382d52eddb783b7fbbaa6ccc23a2a15
-ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: ad817bbae2fb8b28b95095880aa1a65c391720f3
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "1935778"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800512"
 ---
 # <a name="enable-your-device-for-development"></a>Aktivieren Ihres Geräts für die Entwicklung
 
@@ -56,7 +56,7 @@ Hier sehen Sie die Einstellungsseite auf Mobilgeräten:
 
  Sie können ein Gerät für die Entwicklung oder nur für das Querladen aktivieren.
 
--   Die Standardeinstellung lautet *UWP-Apps*. Wenn Sie keine Apps entwickeln oder spezielle interne Apps verwenden, die von Ihrem Unternehmen ausgestellt sind, sollten Sie diese Einstellung aktiviert lassen.
+-   *Microsoft Store-apps* ist die Standardeinstellung. Wenn Sie keine Apps entwickeln oder spezielle interne Apps verwenden, die von Ihrem Unternehmen ausgestellt sind, sollten Sie diese Einstellung aktiviert lassen.
 -   *Querladen* dient zum Installieren und Ausführen oder Testen einer App, die nicht vom Microsoft Store zertifiziert wurde. Hierzu zählen beispielsweise interne Unternehmens-Apps.
 -   Im *Entwicklermodus* können Sie Apps querladen und Apps aus Visual Studio im Debugmodus ausführen. 
 
@@ -148,6 +148,9 @@ Es gibt verschiedene Tools, mit denen Sie eine App von einem Windows10-PC auf ei
 In manchen Fällen wird der Entwicklermodus aufgrund von Problemen mit dem Netzwerk oder dem Administrator nicht ordnungsgemäß installiert. Das Entwicklermoduspaket ist für die **dezentrale** Bereitstellungen auf diesem PC erforderlich – verwenden Sie Device Portal über einen Browser oder Device Discovery SSH – aber nicht für die lokale Entwicklung.  Selbst wenn diese Probleme auftreten, können Sie Ihre App weiterhin mithilfe von Visual Studio oder von diesem Gerät auf ein anderes Gerät bereitstellen. 
 
 Im Forum zu den [bekannten Problemen](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) finden Sie entsprechende Problemumgehungen und vieles mehr. 
+
+> [!NOTE]
+> Wenn Entwicklermodus nicht ordnungsgemäß installiert werden, empfehlen wir Ihnen an der Datei einer Feedback-Anforderung. Wählen Sie in der app **Feedback Hub** **neue Feedback hinzufügen**aus, und wählen Sie die Kategorie **Plattform für Entwickler** und der Unterkategorie der **Entwicklermodus** . Senden von Feedback hilft Ihnen Microsoft das Problem aufgetreten ist.
 
 ### <a name="failed-to-locate-the-package"></a>Das Paket konnte nicht gefunden werden
 

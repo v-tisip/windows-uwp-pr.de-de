@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
-ms.openlocfilehash: 682d7dfcef1ea8037b113499362f0664c388d987
-ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
-ms.translationtype: HT
+ms.openlocfilehash: fe36fec72645558c539dd8270fd15d35d92b66b5
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "1989624"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792679"
 ---
 # <a name="distribute-a-packaged-desktop-app-desktop-bridge"></a>Verteilen einer verpackten Desktop-App (Desktop-Brücke)
 
@@ -31,7 +31,7 @@ Der [Microsoft Store](https://www.microsoft.com/store/apps) ist eine bequeme Mö
 
 Veröffentlichen Sie Ihre App in diesem Store, um die größtmögliche Zielgruppe zu erreichen. Außerdem können Unternehmenskunden Ihre App erwerben und sie intern in ihren Organisationen über den [Microsoft Store für Unternehmen](https://www.microsoft.com/business-store) verteilen.
 
-Wenn Sie eine Veröffentlichung im Microsoft Store planen, werden Ihnen als Teil des Übermittlungsprozesses einige zusätzliche Fragen gestellt. Der Grund dafür ist, dass Ihr Paketmanifest eine eingeschränkte Funktion mit dem Namen **runFullTrust** deklariert und wir die Verwendung dieser Funktion durch Ihre Anwendung genehmigen müssen. Weitere Informationen zu dieser Anforderung finden Sie hier: [Eingeschränkte Funktionen](https://docs.microsoft.com/en-us/windows/uwp/packaging/app-capability-declarations#restricted-capabilities.html).
+Wenn Sie eine Veröffentlichung im Microsoft Store planen, werden Ihnen als Teil des Übermittlungsprozesses einige zusätzliche Fragen gestellt. Der Grund dafür ist, dass Ihr Paketmanifest eine eingeschränkte Funktion mit dem Namen **runFullTrust** deklariert und wir die Verwendung dieser Funktion durch Ihre Anwendung genehmigen müssen. Weitere Informationen zu dieser Anforderung finden Sie hier: [Eingeschränkte Funktionen](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#restricted-capabilities).
 
 Sie müssen Ihre App nicht signieren, bevor Sie sie an den Store übermitteln.
 

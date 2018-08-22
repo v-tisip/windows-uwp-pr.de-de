@@ -8,14 +8,14 @@ ms.date: 06/28/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows10, UWP
+keywords: Geräte für Windows 10, Uwp, verbunden, remote-Systemen, ROM, Project ROM
 ms.localizationpriority: medium
-ms.openlocfilehash: 0539c9b50196d98809fc01ea3f2a1950cbf27599
-ms.sourcegitcommit: 12cc283e821cbf978debf24914490982f076b4b4
-ms.translationtype: HT
+ms.openlocfilehash: 8e5226b23a454bf48add22d590a3ff247c629e4f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2018
-ms.locfileid: "1658086"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2794883"
 ---
 # <a name="connect-devices-through-remote-sessions"></a>Verbinden von Geräten über Remotesitzungen
 
@@ -124,7 +124,7 @@ RemoteSystemSessionController manager = new RemoteSystemSessionController("Bob's
 //...
 ```
 
-Um eine Einladung zu senden, müssen Sie einen Verweis auf das Empfänger-Remotesystem (durch die normale Remotesystemermittlung) haben. Übergeben Sie einfach diesen Verweis in die **[SendInvitationAsync](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsession#remotesystemsession_sendinvitationasync_1664759118)**-Methode des Sitzungsobjekts. Alle Teilnehmer in einer Sitzung verfügen über einen Verweis auf die Remotesitzung (siehe nächster Abschnitt), damit alle Teilnehmer eine Einladung senden können.
+Um eine Einladung zu senden, müssen Sie einen Verweis auf das Empfänger-Remotesystem (durch die normale Remotesystemermittlung) haben. Übergeben Sie einfach diesen Verweis in die **[SendInvitationAsync](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemsession.sendinvitationasync)**-Methode des Sitzungsobjekts. Alle Teilnehmer in einer Sitzung verfügen über einen Verweis auf die Remotesitzung (siehe nächster Abschnitt), damit alle Teilnehmer eine Einladung senden können.
 
 ```csharp
 // "currentSession" is a reference to a RemoteSystemSession.

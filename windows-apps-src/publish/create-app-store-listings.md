@@ -4,18 +4,18 @@ Description: The Store listings section of the app submission process is where y
 title: Erstellen von Store-Einträgen für Apps
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
 ms.author: wdg-dev-content
-ms.date: 04/30/2018
+ms.date: 06/18/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Eintrag, Beschreibung, Store-Seite, Versionshinweise, Titel
-ms.localizationpriority: high
-ms.openlocfilehash: 871eb3cd8b8bdfd0cf12859dcb401df2158bf5b7
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: bd3585b1a2fee2a00c99990b32902b524f3318da
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816945"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2795810"
 ---
 # <a name="create-app-store-listings"></a>Erstellen von Store-Einträgen für Apps
 
@@ -42,12 +42,22 @@ Im Abschnitt **Additional Store listing languages** können Sie auf **Manage add
 
 Wenn Sie Ihre Auswahl getroffen haben, klicken Sie auf **Speichern**, um zur Übermittlungsübersicht zurückzukehren.
 
-> [!NOTE]
-> Wenn Sie einen Store-Eintrag in einer Sprache erstellen, die von Ihren Paketen nicht unterstützt wird, müssen Sie angeben, welcher Ihrer reservierten App-Namen in diesem Store-Eintrag angezeigt werden soll, da für diese Sprache kein verknüpftes Paket vorliegt, von dem der Name abgerufen werden könnte. Der Name, den Sie hier wählen, gilt nur für den Store-Eintrag für diese Sprache und wirkt sich nicht auf den Namen aus, der angezeigt wird, wenn ein Kunde die App installiert.
+## <a name="add-and-edit-store-listing-info"></a>Hinzufügen und Bearbeiten von Shop-info
 
-Klicken Sie zum Bearbeiten eines Store-Eintrags in der Übermittlungsübersicht auf den Namen der Sprache.
+Um eine Shop zu bearbeiten, wählen Sie den Sprachnamen aus der Übersichtsseite Übermittlung.
 
 Oben auf der Seite **Store-Eintrag** sehen Sie die Felder, die dem standardmäßigen Store-Eintrag für die ausgewählte Sprache zugeordnet sind. Diese Felder sind für alle Kunden sichtbar, sofern keine Pakete für frühere Betriebssystemversionen (Windows8.x oder früher, Windows Phone8.x oder früher) vorhanden sind und Sie keine plattformspezifischen Store-Einträge mit verschiedenen Screenshots oder Informationen erstellt haben, die Kunden unter den angegebenen Betriebssystemversionen angezeigt werden. Weitere Informationen finden Sie unter [Erstellen plattformspezifischer Store-Einträge](create-platform-specific-store-listings.md).
+
+## <a name="product-name"></a>Produktname
+
+In diesem Dropdown-Feld können Sie angeben, welcher Name in der Liste Store verwendet werden soll (Wenn Sie mehr als einen Namen für die app reserviert haben).
+
+Wenn Sie Pakete in derselben Sprache wie die Store-Eintrags, an denen Sie arbeiten heraufgeladen haben, wird der Name verwendet diese Pakete ausgewählt. Wenn Sie zum [Umbenennen der app](manage-app-names.md#rename-an-app-that-has-already-been-published) müssen, nachdem es bereits veröffentlicht wurde, können Sie hier einen anderen reservierten Namen auswählen, beim Erstellen einer neuen Übermittlung mit Pakete, die den neuen Namen zu verwenden.
+
+Wenn Sie noch nicht hochgeladen haben Pakete für die Sprache woran Sie arbeiten, und haben Sie mehrere Namen reserviert, Sie müssen einer Ihrer app reservierten Namen auswählen, da es keinem Paket in dieser Sprache aus dem Ziehen Sie des Namens.
+
+> [!NOTE]
+> Der **Produktname** nur ausgewählte betrifft die Shop in der Sprache Sie arbeiten. Es hat keinen Einfluss auf den Namen angezeigt, wenn ein Kunde die app installiert werden; Dieser Name stammt aus dem Manifest des Pakets, das installiert wird. Um Verwechslungen zu vermeiden, wird empfohlen, dass jede Sprache Pakete und Store-Eintrags den gleichen Namen verwenden.
 
 ## <a name="description"></a>Beschreibung
 
@@ -91,8 +101,9 @@ Sie können zusätzliche Ressourcen für das Produkt übermitteln, einschließli
 
 Weitere Informationen finden Sie unter [Zusätzliche Grafikobjekte](app-screenshots-and-images.md#additional-art-assets).
 
+<a id="supplemental-information" />
 
-## <a name="supplemental-information"></a>Zusätzliche Informationen
+## <a name="supplemental-fields"></a>Zusätzliche Felder
 
 Die Felder in diesem Abschnitt sind alle optional. Überprüfen Sie die Informationen unten, um zu bestimmen, ob die Bereitstellung dieser Informationen für Ihre Übermittlung sinnvoll ist. Insbesondere die **Kurzbeschreibung** wird für die meisten Übermittlungen empfohlen. Die anderen Felder unterstützen eine optimale Erfahrung für Ihr Produkt in den verschiedenen Szenarien.
 
@@ -123,7 +134,7 @@ Eine kürzere, ansprechende Beschreibung, die am oberen Rand des Store-Eintrags 
 
 Bei Spielen erscheint die Kurzbeschreibung auch im Abschnitt „Informationen“ im Spiele-Hub auf Xbox One.
 
-Dieses Feld ist auf 500 Zeichen beschränkt.
+Um optimale Ergebnisse zu behalten Ihre kurze Beschreibung unter 270 Zeichen. Das Feld hat maximal 500 Zeichen, aber in einigen Ansichten werden nur die ersten 270 Zeichen (mit einem Link, der für die restlichen die Kurzbeschreibung anzeigen verfügbar) angezeigt werden.
 
 
 ### <a name="additional-system-requirements"></a>Weitere Systemanforderungen
@@ -155,7 +166,7 @@ Zusätzliche Urheberrecht- und Markeninformationen können Sie bei Bedarf hier e
 
 ### <a name="additional-license-terms"></a>Zusätzliche Lizenzbedingungen
 
-Lassen Sie dieses Feld leer, wenn Sie möchten, dass Ihre App für Kunden gemäß den **Standardbedingungen für anwendungsbezogene Lizenzen** (am Ende der [Vereinbarung für App-Entwickler](https://msdn.microsoft.com/library/windows/apps/hh694058)) lizenziert wird.
+Lassen Sie dieses Feld leer, wenn Sie möchten, dass Ihre App für Kunden gemäß den **Standardbedingungen für anwendungsbezogene Lizenzen** (am Ende der [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)) lizenziert wird.
 
 Wenn sich Ihre Lizenzbedingungen von den **Standardbedingungen für anwendungsbezogene Lizenzen** unterscheiden, geben Sie sie hier ein.
 

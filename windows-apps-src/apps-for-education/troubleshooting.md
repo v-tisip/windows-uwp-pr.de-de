@@ -1,10 +1,21 @@
 ---
-author: TylerMSFT
-Description: "Problembehandlung bei Ereignissen und Fehlern der Microsoft-Prüfung mithilfe der Ereignisanzeige."
-title: "Problembehandlung bei Microsoft Prüfung mithilfe der Ereignisanzeige."
-ms.openlocfilehash: 1b99b959cfdde997f7995c1bdf40d51921b2f1d5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
-translationtype: HT
+Description: Troubleshoot Microsoft Take a Test events and errors with the event viewer.
+title: Problembehandlung bei Microsoft Prüfung mithilfe der Ereignisanzeige.
+author: PatrickFarley
+ms.author: pafarley
+ms.assetid: 9218e542-f520-4616-98fc-b113d5a08e0f
+ms.date: 10/06/2017
+ms.topic: article
+ms.prod: windows
+ms.technology: uwp
+keywords: Windows 10, Uwp, education
+ms.localizationpriority: medium
+ms.openlocfilehash: 3193525316d085e56244d6f03da99e3e07c6539f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792418"
 ---
 # <a name="troubleshoot-microsoft-take-a-test-with-the-event-viewer"></a>Problembehandlung bei Microsoft Prüfung mithilfe der Ereignisanzeige.
 

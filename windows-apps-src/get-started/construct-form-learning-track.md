@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Erste Schritte, UWP, Windows10, Lernpfad, Layout, Formular
 ms.localizationpriority: medium
-ms.openlocfilehash: 20146c8a1bae92a46fc8cf878acd4d2dc5d2fb1e
-ms.sourcegitcommit: 618741673a26bd718962d4b8f859e632879f9d61
-ms.translationtype: HT
+ms.openlocfilehash: c2a851a442cabca4529cd202c90db692c43adcb5
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "1992096"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2795452"
 ---
 # <a name="create-and-customize-a-form"></a>Erstellen und Anpassen eines Formulars
 
@@ -48,9 +48,9 @@ Lesen Sie [diese Dokumentation zu Layoutpanels](../design/layout/layout-panels.m
 
 ## <a name="what-goes-in-a-form"></a>Was gehört in ein Formular?
 
-Sie müssen Ihr Formular mit verschiedenen [XAML-Steuerelementen](../design/controls-and-patterns/controls-and-events-intro.md) füllen. Wahrscheinlich sind Sie mit diesen vertraut, lesen Sie jedoch gerne weiter, wenn Sie eine Auffrischung benötigen. Sie benötigen insbesondere Steuerelemente, mit denen Benutzer Text eingeben oder Optionen aus einer Liste von Werten auswählen können. Hier ist eine grundlegende Liste von Optionen, die Sie hinzufügen können – Sie müssen nicht alles darüber lesen, nur so viel, dass Sie verstehen, wie sie aussehen und funktionieren.
+Sie müssen Ihr Formular mit verschiedenen [XAML-Steuerelementen](../design/controls-and-patterns/controls-and-events-intro.md) füllen. Wahrscheinlich sind Sie mit diesen vertraut, lesen Sie jedoch gerne weiter, wenn Sie eine Auffrischung benötigen. Sie benötigen insbesondere Steuerelemente, mit denen Benutzer Text eingeben oder Optionen aus einer Liste von Werten auswählen können. Dies ist eine grundlegende Übersicht über die Optionen, die Sie hinzufügen können – Sie müssen nicht alles über diese, nur genug, damit Sie verstehen, wie sie Aussehen und deren Funktionsweise zu lesen.
 
-* Mit [TextBox](../design/controls-and-patterns/text-box.md) kann ein Benutzer Text in Ihre App eingeben.
+* [TextBox-Objekt](../design/controls-and-patterns/text-box.md) können einen Benutzer eingegebenen Text in Ihrer app.
 * Mit [ToggleSwitch](../design/controls-and-patterns/toggles.md) kann ein Benutzer zwischen zwei Optionen auswählen.
 * Mit [DatePicker](../design/controls-and-patterns/date-picker.md) kann ein Benutzer einen Datumswert auswählen.
 * Mit [TimePicker](../design/controls-and-patterns/time-picker.md) kann ein Benutzer einen Zeitwert auswählen.
@@ -71,18 +71,18 @@ Mit diesem Ratschlag im Hinterkopf sollten Sie beginnen, Steuerelemente Ihrer Wa
         <TextBox x:Name="Address" Header="Address" PlaceholderText="Address" Margin="0,24,0,0" HorizontalAlignment="Left" />
         <TextBox x:Name="Address2" Margin="0,24,0,0" PlaceholderText="Address 2" HorizontalAlignment="Left" />
             <RelativePanel>
-                <TextBox x:Name="City" PlaceholderText="City" Margin="0,24,0,0"HorizontalAlignment="Left" />
+                <TextBox x:Name="City" PlaceholderText="City" Margin="0,24,0,0" HorizontalAlignment="Left" />
                 <ComboBox x:Name="State" PlaceholderText="State" Margin="24,24,0,0" RelativePanel.RightOf="City">
                     <!--List of valid states-->
                 </ComboBox>
             </RelativePanel>
     </StackPanel>
-    <StackPanel x:Name="Associate" Margin="20" RelativePanel.RightOf="Customer">
+    <StackPanel x:Name="Associate" Margin="20" RelativePanel.Below="Customer">
         <TextBox x:Name="AssociateName" Header= "Associate" Margin="0,24,0,0" HorizontalAlignment="Left" />
         <DatePicker x:Name="TargetInstallDate" Header="Target install Date" HorizontalAlignment="Left" Margin="0,24,0,0"></DatePicker>
         <TimePicker x:Name="InstallTime" Header="Install Time" HorizontalAlignment="Left" Margin="0,24,0,0"></TimePicker>
     </StackPanel>
-    <StackPanel x:Name="Save" Orientation="Horizontal" RelativePanel.Below="Customer">
+    <StackPanel x:Name="Save" Orientation="Horizontal" RelativePanel.Below="Associate">
         <Button Content="Save" Margin="24" />
         <Button Content="Cancel" Margin="24" />
     </StackPanel>
@@ -110,9 +110,9 @@ Wichtiger für dynamische Layouts sind **visuelle Zustände.** Ein visueller Zus
             </VisualState.StateTriggers>
 
             <VisualState.Setters>
-                <Setter Target="Associate.(RelativePanel.RightOf)" Value=""/>
-                <Setter Target="Associate.(RelativePanel.Below)" Value="Customer"/>
-                <Setter Target="Save.(RelativePanel.Below)" Value="Associate"/>
+                <Setter Target="Associate.(RelativePanel.RightOf)" Value="Customer"/>
+                <Setter Target="Associate.(RelativePanel.Below)" Value=""/>
+                <Setter Target="Save.(RelativePanel.Below)" Value="Customer"/>
             </VisualState.Setters>
         </VisualState>
     </VisualStateGroup>
@@ -136,7 +136,7 @@ Wenn Sie komplexere Layouts mit mehr visuellen Elementen erstellen, finden Sie w
 
 ## <a name="going-further"></a>Vertiefung
 
-Auch wenn Sie hier ein Formular erstellt haben, gelten die Konzepte von Layouts und Steuerelementen für alle XAML-Benutzeroberflächen, die Sie möglicherweise erstellen. Sie können jederzeit zu den hier verlinkten Dokumenten zurückkehren und mit dem vorhandenen Formular experimentieren, indem Sie neue Benutzeroberflächenfeatures hinzufügen und die Benutzererfahrung weiter optimieren. Eine schrittweise Anleitung zu detaillierteren Layoutfeatures finden Sie in unserem [Lernprogramm zu adaptiven Layouts](../design/basics/xaml-basics-adaptive-layout.md).
+Auch wenn Sie hier ein Formular erstellt haben, gelten die Konzepte von Layouts und Steuerelementen für alle XAML-Benutzeroberflächen, die Sie möglicherweise erstellen. Über die Dokumente zurückzukehren, wir haben Sie verknüpft und mit dem Formular, den, das Sie Hinzufügen von Features der neuen Benutzeroberfläche und die Benutzeroberfläche eingrenzen haben, das experimentieren, können. Schrittweise Anleitung über ausführlichere Layoutfeatures, finden Sie unter unsere [adaptive Layout-Lernprogramm](../design/basics/xaml-basics-adaptive-layout.md)
 
 Formulare existieren außerdem nicht in einem Vakuum – Sie können einen Schritt weiter gehen und Ihres in ein [Master-/Detailmuster](../design/controls-and-patterns/master-details.md) oder [Pivot-Steuerelement](../design/controls-and-patterns/tabs-pivot.md) einbetten. Oder wenn Sie an dem CodeBehind für Ihr Formular arbeiten möchten, finden Sie die ersten Schritte in unserer [Übersicht über Ereignisse](../xaml-platform/events-and-routed-events-overview.md).
 

@@ -12,29 +12,27 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 2355d9f655e1eb4e38557b11797aff1784eb8ea6
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 6f8f86a6988e68e3ff8d2dfef32512633b3761fd
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1393649"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800374"
 ---
 # <a name="intro-to-controls-and-patterns"></a>Einführung in Steuerelemente und Muster
-
- 
 
 In der UWP-App-Entwicklung ist ein *Steuerelement* ein UI-Element, das Inhalte anzeigt oder Interaktionen ermöglicht. Sie erstellen die Benutzeroberfläche für Ihre App mit Steuerelementen wie Schaltflächen, Textfeldern und Kombinationsfeldern, um Daten anzuzeigen und Benutzereingaben zu erhalten.
 
 > **Wichtige APIs:** [Namespace „Windows.UI.Xaml.Controls“](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
 
-Ein *Muster* ist eine Anleitung zum Ändern eines Steuerelements oder zum Kombinieren verschiedener Steuerelemente, um etwas Neues zu erstellen. Das [Navigationsbereichsmuster](navigationview.md) ist z.B. eine Möglichkeit, mit der Sie ein [SplitView](split-view.md)-Steuerelement zur App-Navigation verwenden können. Ebenso können Sie die Vorlage eines [Pivot](tabs-pivot.md)-Steuerelements zum Implementieren des Registerkartenmusters anpassen.
+Ein *Muster* ist eine Anleitung zum Ändern eines Steuerelements oder zum Kombinieren verschiedener Steuerelemente, um etwas Neues zu erstellen. Beispielsweise ist das [Master/Details](master-details.md) -Muster so, dass Sie ein [SplitView](split-view.md) -Steuerelement für die Navigation der app verwenden können. In ähnlicher Weise können Sie die Vorlage eines Steuerelements [NavigationView](navigationview.md) Implementierung des Musters Registerkarte anpassen.
 
 In vielen Fällen können Sie ein Steuerelement unverändert verwenden. XAML-Steuerelemente trennen jedoch die Funktion von der Struktur und Darstellung, sodass Sie diese über verschiedene Änderungsebenen an Ihre Bedürfnisse anpassen können. Im Abschnitt [Stil](../style/index.md) erfahren Sie, wie Sie mithilfe von [XAML-Formatvorlagen](xaml-styles.md) und [Steuerelementvorlagen](control-templates.md) Steuerelemente ändern.
 
-In diesem Abschnitt erhalten Sie Anleitungen zu jedem XAML-Steuerelement, das Sie zum Erstellen Ihrer App-UI verwenden können. Zu Beginn wird in diesem Artikel beschrieben, wie Sie der App Steuerelemente hinzufügen. Es gibt drei wichtige Schritte zum Hinzufügen von Steuerelementen zur App: 
+In diesem Abschnitt erhalten Sie Anleitungen zu jedem XAML-Steuerelement, das Sie zum Erstellen Ihrer App-UI verwenden können. Zu Beginn wird in diesem Artikel beschrieben, wie Sie der App Steuerelemente hinzufügen. Es gibt drei wichtige Schritte zum Hinzufügen von Steuerelementen zur App:
 
-- Fügen Sie Ihrer App-UI ein Steuerelement hinzu. 
-- Legen Sie Eigenschaften für das Steuerelement fest, z.B. Breite, Höhe und Vordergrundfarbe. 
+- Fügen Sie Ihrer App-UI ein Steuerelement hinzu.
+- Legen Sie Eigenschaften für das Steuerelement fest, z.B. Breite, Höhe und Vordergrundfarbe.
 - Fügen Sie den Ereignishandlern des Steuerelements Code hinzu, damit sie eine Funktion haben. 
 
 ## <a name="add-a-control"></a>Hinzufügen eines Steuerelements
@@ -54,9 +52,9 @@ In der Toolbox von Visual Studio werden viele Steuerelemente angezeigt, die Sie 
 
 Sie können das Steuerelement auch aus der Toolbox in den XAML-Designer ziehen.
 
-## <a name="set-the-name-of-a-control"></a>Festlegen des Namens eines Steuerelements 
+## <a name="set-the-name-of-a-control"></a>Festlegen des Namens eines Steuerelements
 
-Wenn Sie mit einem Steuerelement im Code arbeiten möchten, legen Sie das Attribut [x:Name](../../xaml-platform/x-name-attribute.md) fest und verweisen im Code anhand des Namens darauf. Sie können den Namen im Eigenschaftenfenster von Visual Studio oder in XAML festlegen. Hier wird veranschaulicht, wie Sie den Namen des derzeit ausgewählten Steuerelements über das Textfeld Name am oberen Rand des Eigenschaftenfensters festlegen. 
+Wenn Sie mit einem Steuerelement im Code arbeiten möchten, legen Sie das Attribut [x:Name](../../xaml-platform/x-name-attribute.md) fest und verweisen im Code anhand des Namens darauf. Sie können den Namen im Eigenschaftenfenster von Visual Studio oder in XAML festlegen. Hier wird veranschaulicht, wie Sie den Namen des derzeit ausgewählten Steuerelements über das Textfeld Name am oberen Rand des Eigenschaftenfensters festlegen.
 
 So benennen Sie ein Steuerelement
 1. Wählen Sie das zu benennende Element aus.

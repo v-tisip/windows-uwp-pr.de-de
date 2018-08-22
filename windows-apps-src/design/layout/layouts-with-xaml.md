@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: a175ad48255c0179335ce9204f51a0a62fd2b4f3
-ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
-ms.translationtype: HT
+ms.openlocfilehash: 0b45196a83edf45a69f6b79ab82542cef6817703
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
-ms.locfileid: "1707221"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2795166"
 ---
 # <a name="responsive-layouts-with-xaml"></a>Dynamische Layouts mit XAML
 
@@ -98,7 +98,8 @@ Sie können ein Element ein- oder ausblenden, indem Sie seine [**Visibility**](h
 
 Sie können die Visibility-Eigenschaft eines Elements im Code oder in einem visuellen Zustand ändern. Wenn die Visibility eines Elements geändert wird, werden auch alle untergeordneten Elemente geändert. Sie können Abschnitte der Benutzeroberfläche ersetzen, indem Sie ein Panel einblenden, während Sie ein anderes reduzieren.
 
-> **Tipp**&nbsp;&nbsp;Wenn die Benutzeroberfläche Elemente enthält, die standardmäßig **Collapsed** sind, werden die Objekte beim Start dennoch erstellt, obwohl sie nicht sichtbar sind. Sie können das Laden dieser Elemente bis zu ihrer Anzeige verzögern, indem Sie das **x:DeferLoadStrategy attribute** auf „Lazy“ festlegen. Dies kann die Leistung beim Starten verbessern. Weitere Informationen finden Sie unter [x: DeferLoadStrategy-Attribut](../../xaml-platform/x-deferloadstrategy-attribute.md).
+> [!Tip]
+> Wenn Sie Elemente in Ihrer Benutzeroberfläche, **Collapsed** standardmäßig sind verfügen, werden die Objekte, obwohl sie nicht sichtbar sind weiterhin beim Start erstellt. Sie können das Laden dieser Elemente bis zu ihrer Anzeige verzögern, indem Sie das **x:DeferLoadStrategy attribute** auf „Lazy“ festlegen. Dies kann die Leistung beim Starten verbessern. Weitere Informationen finden Sie unter [x: DeferLoadStrategy-Attribut](../../xaml-platform/x-deferloadstrategy-attribute.md).
 
 ### <a name="style-resources"></a>Stilressourcen
 
@@ -138,7 +139,7 @@ Um einen visuellen Zustand aus Code anzuwenden, rufen Sie die [**VisualStateMana
 Hier enthält eine [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.visualstategroup.aspx) zwei VisualState-Definitionen. Die erste Definition, `DefaultState`, ist leer. Wenn sie angewendet wird, werden die in der XAML-Seite definierten Werte angewendet. Die zweite Definition, `WideState`, ändert die [**DisplayMode**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.displaymode.aspx)-Eigenschaft der [**SplitView**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.splitview.aspx) in **Inline** und öffnet den Bereich. Dieser Zustand wird im SizeChanged-Ereignis-Handler angewendet, wenn die Fensterbreite mehr als 640effektive Pixel beträgt.
 
 > [!NOTE]
-Windows bietet keine Möglichkeit für Ihre App zum Erkennen des Geräts, auf dem sie ausgeführt wird. Sie kann die Gerätefamilie des Geräts (mobil, Desktop usw.), auf dem sie ausgeführt wird, die effektive Auflösung und den für die App verfügbaren Bildschirmbereich (Größe des App-Fensters) erkennen. Wir empfehlen, visuelle Zustände für [Bildschirmgrößen und Breakpoints](screen-sizes-and-breakpoints-for-responsive-design.md) zu definieren.
+> Windows bietet keine Möglichkeit für Ihre App zum Erkennen des Geräts, auf dem sie ausgeführt wird. Sie kann die Gerätefamilie des Geräts (mobil, Desktop usw.), auf dem sie ausgeführt wird, die effektive Auflösung und den für die App verfügbaren Bildschirmbereich (Größe des App-Fensters) erkennen. Wir empfehlen, visuelle Zustände für [Bildschirmgrößen und Breakpoints](screen-sizes-and-breakpoints-for-responsive-design.md) zu definieren.
 
 
 ```xaml
@@ -234,7 +235,8 @@ In diesem Beispiel wird die gleiche Aufgabe wie im vorherigen Beispiel ausgefüh
 </Page>
 ```
 
-> **Wichtig**&nbsp;&nbsp;Im vorherigen Beispiel wird die angefügte „VisualStateManager.VisualStateGroups“-Eigenschaft im **Grid**-Element festgelegt. Bei Verwendung von „StateTrigger“-Elementen müssen Sie immer sicherstellen, dass „VisualStateGroups“ an das erste untergeordnete Element des Stamms angefügt wird, damit die Auslöser automatisch wirksam werden. (Hier ist **Grid** das erste untergeordnete Element des Stammelements **Page**.)
+> [!Important]
+> Im vorherigen Beispiel wird die angefügte VisualStateManager.VisualStateGroups-Eigenschaft des **Grid** -Element festgelegt. Bei Verwendung von „StateTrigger“-Elementen müssen Sie immer sicherstellen, dass „VisualStateGroups“ an das erste untergeordnete Element des Stamms angefügt wird, damit die Auslöser automatisch wirksam werden. (Hier ist **Grid** das erste untergeordnete Element des Stammelements **Page**.)
 
 ### <a name="attached-property-syntax"></a>Syntax von angefügten Eigenschaften
 

@@ -9,13 +9,13 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, universal
-ms.localizationpriority: high
-ms.openlocfilehash: 12d207550066615baa301c26d1bf5f35335db83d
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 7f0168f0a1baef5e68bccdf0a33c3ac7eb7683a7
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832524"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800940"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>Was ist eine Universelle Windows-Plattform (UWP)-App?
 
@@ -151,3 +151,12 @@ Weitere einführende Informationen finden Sie unter [Einführung in das Entwicke
 - Eine Liste der .NET-Typen, die Sie in einer UWP-App verwenden können, finden Sie unter [.NET für UWP-Apps](https://msdn.microsoft.com/library/mt185501.aspx)
 - [.NET Native - Bedeutung für UWP-Entwickler (Universelle Windows-Plattform)](https://blogs.windows.com/buildingapps/2015/08/20/net-native-what-it-means-for-universal-windows-platform-uwp-developers/#TYsD3tJuBJpK3Hc7.97)
 - Erfahren Sie, wie Sie moderne Erfahrungen für Benutzer von Windows 10 für Ihre vorhandene Desktop-App hinzufügen können und diese im Microsoft Store mit [Desktop-Brücke](https://developer.microsoft.com/windows/bridges/desktop) veröffentlichen.
+
+## <a name="how-the-universal-windows-platform-relates-to-windows-runtime-apis"></a>Beziehung zwischen der universellen Windows-Plattform zu Windows-Runtime-APIs
+Wenn Sie eine app universellen Windows-Plattform (UWP) erstellen, können Sie viel Mileage und zu diesem Zweck nicht genügend behandelt die Begriffe "universellen Windows-Plattform (UWP)" und "Windows-Runtime (WinRT)" als mehr oder weniger Synonym abrufen. Aber es *ist* möglich, suchen Sie im Hintergrund der Technologie und nur Was ist der Unterschied zwischen diesen Ideen zu bestimmen. Wenn Sie wissen möchten, sind, wird in diesem letzten Abschnitt für Sie.
+
+Die Windows-Laufzeitkomponente und WinRT-APIs sind eine Weiterentwicklung von Windows-APIs. Windows wurde ursprünglich über flach, C-Format Win32-APIs programmiert. Zu den wurden COM-APIs ([DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) wird ein Beispiel für die wichtigsten) hinzugefügt. Windows Forms, WPF, .NET und verwalteten Sprachen geschaltet eigene Methode zum Erstellen von apps für Windows und einen eigenen Typ des API-Technologie. Windows-Runtime ist im Hintergrund die nächste Phase von COM. Auf der tatsächlichen binary-Schnittstelle (ABI) Anwendungsschicht werden ihren Ursprung in COM sichtbar. Jedoch Windows-Runtime konzipiert wurde aus einem attraktiven Design Bereich verschiedenen Programmiersprachen aufgerufen werden können. Und aufrufbare in eine Möglichkeit, die jeder dieser Sprachen sehr natürlich ist. Zu diesem Zweck Zugriff auf Windows-Runtime zur Verfügung gestellt wird über was als Sprache Projektionen bezeichnet werden. Eine Windows-Runtime Sprache Projektion in c#, klicken Sie in Visual Basic, in standard C++, in JavaScript usw. ist vorhanden. Darüber hinaus einmal entsprechend gepackt (siehe [Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root)), Sie können in einer app in einem attraktiven Design Bereich der Anwendungsmodelle erstellt WinRT-APIs aufrufen: Win32, .NET, WinForms und WPF.
+
+Und natürlich können Sie aus Ihrer app UWP WinRT-APIs aufrufen. UWP ist ein Anwendungsmodell auf der Basis der Windows-Laufzeit. Technisch gesehen, das Anwendungsmodell UWP [CoreApplication](/uwp/api/windows.applicationmodel.core.coreapplication), basiert auf, obwohl diese Details aus, die Sie je nach Ihrer Wahl Programmiersprache verborgen werden kann. Wie in diesem Thema, aus einem Wert teuer Sicht erläutert hat, ist die UWP für Schreiben einer einzelnen Binärdatei, die können Sie auswählen sollen, an den Microsoft-Store veröffentlicht und auf jedem dieser Beispieldokumenten hervorragende Geräteformularfaktoren ausgeführt werden. Die Reichweite Gerät Ihrer App UWP, hängt die Teilmenge der APIs UWP, Ihre app mit einem Aufruf zu begrenzen, oder bedingt aufrufen.
+
+Hoffentlich wurde in diesem Abschnitt beschreiben die Differenz zwischen der Technologie zugrunde liegenden Windows-Runtime-APIs und dem Mechanismus und Geschäftswert von universellen Windows-Plattform erfolgreich hergestellt.

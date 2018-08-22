@@ -15,12 +15,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a336109e9464052a33f5a0d8548e13b260b387a3
-ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
-ms.translationtype: HT
+ms.openlocfilehash: 8e842d6c5b8e62a9c043c97849fdf17f524ccfc7
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "2018514"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800807"
 ---
 # <a name="access-keys"></a>Zugriffstasten
 
@@ -358,3 +358,13 @@ In diesem Beispiel wird veranschaulicht, wie Sie diese Anwendungsressourcen änd
 Das XAML-Framework stellt Automatisierungseigenschaften bereit, mit denen UI-Automatisierungsclients Informationen zu Elementen in der Benutzeroberfläche ermitteln können.
 
 Wenn Sie die AccessKey-Eigenschaft für ein UIElement- oder TextElement-Steuerelement angeben, können Sie mithilfe der [AutomationProperties.AccessKey](https://msdn.microsoft.com/library/windows/apps/hh759763)-Eigenschaft diesen Wert abrufen. Barrierefreiheitclients, z.B. die Sprachausgabe, lesen den Wert dieser Eigenschaft jedes Mal, wenn ein Element den Fokus erhält.
+
+## <a name="related-articles"></a>Verwandte Artikel
+
+* [Tastaturinteraktionen](keyboard-interactions.md)
+* [Zugriffstasten](keyboard-accelerators.md)
+
+**Beispiele**
+* [XAML-Steuerelemente-Sammlung (auch bekannt als XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
+
+

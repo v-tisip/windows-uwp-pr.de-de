@@ -8,14 +8,14 @@ ms.date: 08/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: windows10, UWP
+keywords: Windows 10, Uwp, Drucken
 ms.localizationpriority: medium
-ms.openlocfilehash: 470984ce9f9a3304350a3479a01bc31a403bd8af
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 9e53c15b01a08c8c617529fe074929ce89a68ce9
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674977"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800314"
 ---
 # <a name="customize-the-print-workflow"></a>Anpassen des Druck-Workflows
 
@@ -220,7 +220,7 @@ internal async void OnXpsDataAvailable(PrintWorkflowForegroundSession sessionMan
 }
 ```
 
-Zusätzlich bietet die Instanz **[PrintWorkflowSubmittedOperation](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowsubmittedoperation)**, die durch die Ereignisargumente bereitgestellt wird, die Option, den Druckauftrag abzubrechen oder anzuzeigen, dass der Auftrag erfolgreich ist, aber kein Ausgabedruckauftrag erforderlich ist. Dazu wird die **[Complete](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowsubmittedoperation#Windows_Graphics_Printing_Workflow_PrintWorkflowSubmittedOperation_Complete_Windows_Graphics_Printing_Workflow_PrintWorkflowSubmittedStatus_)**-Methode mit dem Wert **[PrintWorkflowSubmittedStatus](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowsubmittedstatus)** aufgerufen.
+Zusätzlich bietet die Instanz **[PrintWorkflowSubmittedOperation](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowsubmittedoperation)**, die durch die Ereignisargumente bereitgestellt wird, die Option, den Druckauftrag abzubrechen oder anzuzeigen, dass der Auftrag erfolgreich ist, aber kein Ausgabedruckauftrag erforderlich ist. Dazu wird die **[Complete](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowsubmittedoperation.Complete)**-Methode mit dem Wert **[PrintWorkflowSubmittedStatus](https://docs.microsoft.com/uwp/api/windows.graphics.printing.workflow.printworkflowsubmittedstatus)** aufgerufen.
 
 > [!NOTE]
 > Wenn die Workflow-App den Druckauftrag abbricht, empfiehlt es sich dringend, eine Popup-Benachrichtigung zu senden, aus der hervorgeht, warum der Druckauftrag abgebrochen wurde. 
@@ -244,9 +244,9 @@ Der Unterschied besteht darin, dass WSDAs zwar automatisch für den Benutzer akt
 
 ### <a name="set-the-workflow-apps-policy"></a>Festlegen der Richtlinien für die Workflow-App
 Die Workflow-App-Richtlinie wird durch Powershell-Befehle auf dem Gerät festgelegt, das die Workflow-App ausführen soll. Die Befehle Set-Printer, Add-Printer (bestehender Port) und Add-Printer (neuer WSD-Port) werden modifiziert, um das Festen von Workflow-Richtlinien zu ermöglichen. 
-* `Off`: Workflow-Apps werden nicht aktiviert.
-* `Optional`: Workflow-Apps werden aktiviert, wenn der Workflow-DCA auf dem System installiert ist. Wenn die App nicht installiert ist, wird trotzdem gedruckt. 
-* `On`: Workflow-Contract wird aktiviert, wenn der Workflow-DCA auf dem System installiert ist. Wenn die App nicht installiert ist, schlägt das Drucken fehl. 
+* `Disabled`: Workflow-Apps werden nicht aktiviert.
+* `Uninitialized`: Workflow-Apps werden aktiviert, wenn der Workflow-DCA auf dem System installiert ist. Wenn die App nicht installiert ist, wird trotzdem gedruckt. 
+* `Enabled`: Workflow-Contract wird aktiviert, wenn der Workflow-DCA auf dem System installiert ist. Wenn die App nicht installiert ist, schlägt das Drucken fehl. 
 
 Mit dem folgenden Befehl wird die Workflow-App auf dem angegebenen Drucker als erforderlich festgelegt.
 ```Powershell

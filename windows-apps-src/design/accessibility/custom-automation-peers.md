@@ -6,18 +6,18 @@ title: Benutzerdefinierte Automatisierungs-Peers
 label: Custom automation peers
 template: detail.hbs
 ms.author: mhopkins
-ms.date: 09/25/2017
+ms.date: 07/13/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 2bab0ac8b89815a67be2c963979b3712f022248b
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: a2f9caf8519aa76ef9487e5318a238a6e1d53fe2
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1656565"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800536"
 ---
 # <a name="custom-automation-peers"></a>Benutzerdefinierte Automatisierungs-Peers  
 
@@ -122,7 +122,6 @@ Wenn Sie eine benutzerdefinierte Steuerelementklasse schreiben und außerdem ein
 
 Mit dem folgenden Code wird beispielsweise deklariert, dass das benutzerdefinierte `NumericUpDown`-Steuerelement den Peer `NumericUpDownPeer` zur Benutzeroberflächenautomatisierung verwenden soll.
 
-C#
 ```csharp
 using Windows.UI.Xaml.Automation.Peers;
 ...
@@ -138,7 +137,6 @@ public class NumericUpDown : RangeBase {
 }
 ```
 
-Visual Basic
 ```vb
 Public Class NumericUpDown
     Inherits RangeBase
@@ -151,7 +149,29 @@ Public Class NumericUpDown
 End Class
 ```
 
-C++
+```cppwinrt
+// NumericUpDown.idl
+namespace MyNamespace
+{
+    runtimeclass NumericUpDown : Windows.UI.Xaml.Controls.Primitives.RangeBase
+    {
+        NumericUpDown();
+        Int32 MyProperty;
+    }
+}
+
+// NumericUpDown.h
+...
+struct NumericUpDown : NumericUpDownT<NumericUpDown>
+{
+    ...
+    Windows::UI::Xaml::Automation::Peers::AutomationPeer OnCreateAutomationPeer()
+    {
+        return winrt::make<MyNamespace::implementation::NumericUpDownAutomationPeer>(*this);
+    }
+};
+```
+
 ```cpp
 //.h
 public ref class NumericUpDown sealed : Windows::UI::Xaml::Controls::Primitives::RangeBase
@@ -160,7 +180,7 @@ public ref class NumericUpDown sealed : Windows::UI::Xaml::Controls::Primitives:
 protected:
     virtual AutomationPeer^ OnCreateAutomationPeer() override
     {
-         return ref new NumericUpDown(this);
+         return ref new NumericUpDownAutomationPeer(this);
     }
 };
 ```
@@ -193,20 +213,38 @@ Wenn Sie direkt von [**ContentControl**](https://msdn.microsoft.com/library/wind
 ## <a name="initialization-of-a-custom-peer-class"></a>Initialisieren einer benutzerdefinierten Peerklasse  
 Der Automatisierungspeer sollte einen typsicheren Konstruktor definieren, der eine Instanz des Besitzersteuerelements für die Basisinitialisierung verwendet. Im nächsten Beispiel übergibt die Implementierung den *owner*-Wert an die [**RangeBaseAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242506)-Basis (und letztendlich verwendet tatsächlich [**FrameworkElementAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242472) *owner*, um [**FrameworkElementAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.frameworkelementautomationpeer.owner) festzulegen).
 
-C#
 ```csharp
 public NumericUpDownAutomationPeer(NumericUpDown owner): base(owner)
 {}
 ```
 
-Visual Basic
 ```vb
 Public Sub New(owner As NumericUpDown)
     MyBase.New(owner)
 End Sub
 ```
 
-C++
+```cppwinrt
+// NumericUpDownAutomationPeer.idl
+import "NumericUpDown.idl";
+namespace MyNamespace
+{
+    runtimeclass NumericUpDownAutomationPeer : Windows.UI.Xaml.Automation.Peers.AutomationPeer
+    {
+        NumericUpDownAutomationPeer(NumericUpDown owner);
+        Int32 MyProperty;
+    }
+}
+
+// NumericUpDownAutomationPeer.h
+...
+struct NumericUpDownAutomationPeer : NumericUpDownAutomationPeerT<NumericUpDownAutomationPeer>
+{
+    ...
+    NumericUpDownAutomationPeer(MyNamespace::NumericUpDown const& owner);
+};
+```
+
 ```cpp
 //.h
 public ref class NumericUpDownAutomationPeer sealed :  Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer
@@ -225,7 +263,6 @@ Aufgrund der UWP-Infrastruktur sind die überschreibbaren Methoden eines Automat
 
 Zumindest sollten Sie jedes Mal, wenn Sie eine neue Peerklasse definieren, die Methode [**GetClassNameCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getclassnamecore) implementieren, wie im nächsten Beispiel gezeigt.
 
-C#
 ```csharp
 protected override string GetClassNameCore()
 {
@@ -244,7 +281,6 @@ Einige Hilfstechnologien verwenden den Wert [**GetAutomationControlType**](https
 
 Ihre Implementierung von [**GetAutomationControlTypeCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getautomationcontroltypecore) beschreibt Ihr Steuerelement, indem ein [**AutomationControlType**](https://msdn.microsoft.com/library/windows/apps/BR209182)-Wert zurückgegeben wird. Obwohl Sie **AutomationControlType.Custom** zurückgeben können, sollten Sie einen der spezifischeren Steuerelementtypen zurückgeben, wenn dieser die Hauptszenarien Ihres Steuerelements genauer beschreibt. Beispiel:
 
-C#
 ```csharp
 protected override AutomationControlType GetAutomationControlTypeCore()
 {
@@ -268,7 +304,7 @@ Wenn eine Peerklasse von einem anderen Peer erbt und die notwendige Unterstützu
 
 Obwohl dies nicht der tatsächliche Code ist, kommt dieses Beispiel der Implementierung von [**GetPatternCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) sehr nahe, die bereits in [**RangeBaseAutomationPeer**](https://msdn.microsoft.com/library/windows/apps/BR242506) vorhanden ist.
 
-C#
+
 ```csharp
 protected override object GetPatternCore(PatternInterface patternInterface)
 {
@@ -288,7 +324,7 @@ Ein Peer kann melden, dass er mehrere Muster unterstützt. In diesem Fall sollte
 
 Im Folgenden finden Sie ein Beispiel für eine [**GetPatternCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpatterncore)-Überschreibung für einen benutzerdefinierten Peer. Der Peer meldet, dass die beiden Muster [**IRangeValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242590) und [**IToggleProvider**](https://msdn.microsoft.com/library/windows/apps/BR242653) unterstützt werden. Bei dem hier verwendeten Steuerelement handelt es sich um ein Steuerelement zum Anzeigen von Medien, das als Vollbild (Umschaltmodus) dargestellt werden kann und über eine Fortschrittsleiste verfügt, auf der Benutzer eine Position (das Bereichssteuerelement) auswählen können. Dieser Code stammt aus dem [XAML-Beispiel für Barrierefreiheit](http://go.microsoft.com/fwlink/p/?linkid=238570).
 
-C#
+
 ```csharp
 protected override object GetPatternCore(PatternInterface patternInterface)
 {
@@ -311,7 +347,7 @@ protected override object GetPatternCore(PatternInterface patternInterface)
 ### <a name="forwarding-patterns-from-sub-elements"></a>Weiterleiten von Mustern aus Unterelementen  
 Eine [**GetPatternCore**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.getpatterncore)-Methodenimplementierung kann auch ein Unterelement oder einen Teil als Musteranbieter für den Host angeben. Dieses Beispiel zeigt, wie mit [**ItemsControl**](https://msdn.microsoft.com/library/windows/apps/BR242803) die Behandlung des Bildlaufmusters an den Peer des internen [**ScrollViewer**](https://msdn.microsoft.com/library/windows/apps/BR209527)-Steuerelements übergeben wird. Um ein Unterelement für die Musterbehandlung anzugeben, ruft dieser Code das Unterelementobjekt ab, erstellt mit der [**FrameworkElementAutomationPeer.CreatePeerForElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.frameworkelementautomationpeer.createpeerforelement)-Methode einen Peer für das Unterelement und gibt den neuen Peer zurück.
 
-C#
+
 ```csharp
 protected override object GetPatternCore(PatternInterface patternInterface)
 {
@@ -403,7 +439,7 @@ Es ist hilfreich, die Barrierefreiheit im API-Entwurf der Klasse selbst vorauszu
 
 Bei einer typischen Implementierung wird von den Anbieter-APIs zuerst der [**Owner**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.frameworkelementautomationpeer.owner) aufgerufen, um Zugriff zur Laufzeit auf die Steuerelementinstanz zu erhalten. Danach können die erforderlichen Verhaltensmethoden für dieses Objekt aufgerufen werden.
 
-C#
+
 ```csharp
 public class IndexCardAutomationPeer : FrameworkElementAutomationPeer, IExpandCollapseProvider {
     private IndexCard ownerIndexCard;
@@ -445,9 +481,9 @@ Benutzeroberflächenautomatisierungs-Ereignisse werden durch [**AutomationEvents
 ### <a name="raising-events"></a>Auslösen von Ereignissen  
 Benutzeroberflächenautomatisierungs-Clients können Automatisierungsereignisse abonnieren. Im Automatisierungspeermodell müssen Peers für benutzerdefinierte Steuerelemente Änderungen am Zustand des Steuerelements, die für die Barrierefreiheit relevant sind, durch den Aufruf der [**RaiseAutomationEvent**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.raiseautomationevent)-Methode melden. Entsprechend sollten die Peers des benutzerdefinierten Steuerelements die [**RaisePropertyChangedEvent**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.automation.peers.automationpeer.raisepropertychangedevent)-Methode aufrufen, wenn sich der Wert einer wichtigen Benutzeroberflächenautomatisierungs-Eigenschaft ändert.
 
-Das folgende Codebeispiel zeigt, wie das Peerobjekt aus dem Steuerelement-Definitionscode abgerufen und eine Methode aufgerufen wird, um von diesem Peer aus ein Ereignis auszulösen. Zur Optimierung stellt der Code fest, ob es Listener für diesen Ereignistyp gibt. Wenn das Ereignis nur ausgelöst und das Peerobjekt nur erstellt wird, wenn Listener vorhanden sind, entsteht kein unnötiger Aufwand, und das Steuerelement bleibt reaktionsfähig.
+Das folgende Codebeispiel zeigt, wie das Peerobjekt aus dem Steuerelement-Definitionscode abgerufen und eine Methode aufgerufen wird, um von diesem Peer aus ein Ereignis auszulösen. Zur Optimierung stellt der Code fest, ob es Listener für diesen Ereignistyp gibt. Wenn das Ereignis nur ausgelöst und das Peerobjekt nur erstellt wird, sofern Listener vorhanden sind, entsteht kein unnötiger Aufwand, und das Steuerelement bleibt reaktionsfähig.
 
-C#
+
 ```csharp
 if (AutomationPeer.ListenerExists(AutomationEvents.PropertyChanged))
 {

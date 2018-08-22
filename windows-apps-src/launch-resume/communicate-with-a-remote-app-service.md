@@ -8,14 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows10, UWP
+keywords: Windows 10, Uwp, verbunden Geräte, remote-Systemen, ROM, Project ROM, Hintergrund, app-Dienst
 ms.localizationpriority: medium
-ms.openlocfilehash: a40b48df9f9d8fe740795d6af0d71ba70a34c469
-ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
-ms.translationtype: HT
+ms.openlocfilehash: 72a8a02d14a4fa9287c987150a526745b294b65f
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
-ms.locfileid: "1572767"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2799821"
 ---
 # <a name="communicate-with-a-remote-app-service"></a>Kommunikation mit einem App-Remotedienst
 
@@ -24,7 +24,7 @@ Sie können nicht nur eine App auf einem Remotegerät mithilfe eines URI starten
 ## <a name="set-up-the-app-service-on-the-host-device"></a>Einrichten des App-Diensts auf dem Hostgerät
 Um einen App-Dienst auf einem Remotegerät ausführen zu können, muss bereits ein Anbieter dieses App-Diensts auf dem Hostgerät installiert sein. In dieser Anleitung wird die CSharp-Version des [Beispiels für den App-Dienst für die Generierung von Zufallszahlen](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices) verwendet, das im [universellen Windows-Beispielrepository](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices) verfügbar ist. Anleitungen zum Schreiben eines eigenen App-Diensts finden Sie unter [Erstellen und Verwenden eines App-Diensts](how-to-create-and-consume-an-app-service.md).
 
-Gleichgültig, ob Sie einen bereits erstellten App-Dienst verwenden oder einen eigenen schreiben, Sie müssen einige Änderungen vornehmen, um den Dienst mit Remotesystemen kompatibel zu machen. Wechseln Sie in Visual Studio zum Projekt des App-Dienstanbieters (im Beispiel „AppServicesProvider”genannt), und wählen Sie die Datei _Package.appxmanifest_ aus. Klicken Sie mit der rechten Maustaste, und wählen Sie **Code anzeigen** aus, um den gesamten Inhalt der Datei anzuzeigen. Suchen Sie das Element **Erweiterung**, das das Projekt als App-Dienst definiert und das übergeordnete Projekt benennt.
+Gleichgültig, ob Sie einen bereits erstellten App-Dienst verwenden oder einen eigenen schreiben, Sie müssen einige Änderungen vornehmen, um den Dienst mit Remotesystemen kompatibel zu machen. Wechseln Sie in Visual Studio zum Projekt des App-Dienstanbieters (im Beispiel „AppServicesProvider”genannt), und wählen Sie die Datei _Package.appxmanifest_ aus. Klicken Sie mit der rechten Maustaste, und wählen Sie **Code anzeigen** aus, um den gesamten Inhalt der Datei anzuzeigen. Erstellen Sie ein **Extensions** -Element in das Hauptfenster **Anwendung** -Element (oder umfassende Informationen finden sie, wenn sie bereits vorhanden ist). Erstellen Sie dann eine **Erweiterung** , um das Projekt als app-Dienst definieren und übergeordneten Projekt verweisen.
 
 ``` xml
 ...
@@ -36,7 +36,7 @@ Gleichgültig, ob Sie einen bereits erstellten App-Dienst verwenden oder einen e
 ...
 ```
 
-Fügen Sie das Attribut **SupportsRemoteSystems** hinzu, wenn es nicht bereits vorhanden ist:
+Fügen Sie neben dem **AppService** -Element das **SupportsRemoteSystems** -Attribut hinzu:
 
 ``` xml
 ...
@@ -44,7 +44,20 @@ Fügen Sie das Attribut **SupportsRemoteSystems** hinzu, wenn es nicht bereits v
 ...
 ```
 
-Erstellen Sie Ihr App-Dienstanbieterprojekt, und stellen Sie es auf dem Hostgerät/den Hostgeräten bereit.
+Um Elemente in diesem Namespace **uap3** verwenden, müssen Sie die Namespacedefinition am oberen Rand der manifest-Datei hinzufügen, falls er nicht bereits vorhanden ist.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3">
+  ...
+</Package>
+```
+
+Klicken Sie dann erstellen Sie app Service Provider Projekte zu, und stellen Sie es in die Host-Geräte.
 
 ## <a name="target-the-app-service-from-the-client-device"></a>Aufrufen des App-Diensts vom Clientgerät
 Das Gerät, von dem der App-Remotedienst aufgerufen werden soll, muss über eine App mit Remotesystemfunktionen verfügen. Diese können der gleichen App hinzugefügt werden, die den App-Dienst auf dem Hostgerät bereitstellt (in diesem Fall installieren Sie gleiche App auf beiden Geräten), oder in einer völlig anderen App implementiert werden.

@@ -4,26 +4,24 @@ title: JavaScript-API „Prüfung”
 author: PatrickFarley
 ms.author: pafarley
 ms.assetid: 9bff6318-504c-4d0e-ba80-1a5ea45743da
-ms.date: 10/06/2017
+ms.date: 08/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, UWP
+keywords: Windows 10, Uwp, education
 ms.localizationpriority: medium
-ms.openlocfilehash: 43edadfba169ddae85818f8ef1dbd1e7f4adba64
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 38596ad12ac309db5dc60e4a5183eee9bf8c7b7c
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691359"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792584"
 ---
 # <a name="take-a-test-javascript-api"></a>JavaScript-API „Prüfung”
 
-[Prüfung](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) ist eine browserbasierte App, die gesperrte Online-Prüfungen rendert. So können sich Lehrer/Dozenten auf den Prüfungsinhalt konzentrieren, anstatt sich um die Bereitstellung einer sicheren Testumgebung kümmern zu müssen. Um dies zu erreichen, wird eine JavaScript-API verwendet, die von jeder Web-Anwendung genutzt werden kann. Die API „Prüfung“ unterstützt den [Browser-API-Standard SBAC](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) zur Durchführung wichtiger allgemeiner Kernprüfungen.
+[Machen Sie einen Test](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) ist eine browserbasierte UWP-app, die gesperrten online Bewertungen für Testzwecke besonders Einsatz rendert die Lehrer konzentrieren die Bewertung und nicht zum Bereitstellen einer sicheren Umgebung testen Content ermöglicht. Um dies zu erreichen, wird eine JavaScript-API verwendet, die von jeder Web-Anwendung genutzt werden kann. Die API „Prüfung“ unterstützt den [Browser-API-Standard SBAC](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) zur Durchführung wichtiger allgemeiner Kernprüfungen.
 
-Weitere Informationen zur App selbst finden Sie unter [Technische Referenz zur App „Prüfung“](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396).
-
-Hilfe zur Problembehandlung finden Sie unter [Problembehandlung bei Microsoft Prüfung mithilfe der Ereignisanzeige](troubleshooting.md).
+Weitere Informationen zur App selbst finden Sie unter [Technische Referenz zur App „Prüfung“](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). Hilfe zur Problembehandlung finden Sie unter [Problembehandlung bei Microsoft Prüfung mithilfe der Ereignisanzeige](troubleshooting.md).
 
 ## <a name="reference-documentation"></a>Referenzdokumentation
 Die Prüfungs-APIs gibt es in den folgenden Namespaces. Beachten Sie, dass alle APIs von einem globalen `SecureBrowser`-Objekt abhängen.
@@ -32,12 +30,9 @@ Die Prüfungs-APIs gibt es in den folgenden Namespaces. Beachten Sie, dass alle 
 |-----------|-------------|
 |[Sicherheitsnamespace](#security-namespace)|Enthält APIs, mit denen Sie das Gerät zu Testzwecken sperren und eine Testumgebung erzwingen können. |
 
-> [!NOTE]
-> Der Namespace Text-zu-Sprache (TTS) wurde ab Windows10 Version 1709 entfernt. Die [Microsoft Edge Speech Synthesis API](https://blogs.windows.com/msedgedev/2016/06/01/introducing-speech-synthesis-api/), eine Implementierung der [W3C-Sprach-API](https://dvcs.w3.org/hg/speech-api/raw-file/tip/webspeechapi.html), ist nun die empfohlene Lösung für die Text-zu-Sprache-Implementierung.
-
 ### <a name="security-namespace"></a>Sicherheitsnamespace
 
-Der Sicherheitsnamespace ermöglicht das Sperren des Geräts, das Überprüfen der Liste der Benutzer- und Systemprozesse, das Abrufen von MAC- und IP-Adressen und das Löschen von zwischengespeicherten Webressourcen.
+Der Namespace Sicherheit können Sie das Gerät sperren, überprüfen Sie die Liste der Benutzer und das System Prozesse, Mac- und IP-Adressen zu erhalten und zwischengespeicherte Webressourcen deaktivieren.
 
 | Methode | Beschreibung   |
 |--------|---------------|

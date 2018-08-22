@@ -7,15 +7,15 @@ ms.date: 11/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows10, UWP
+keywords: Windows 10, Uwp, app-Dienst
 ms.assetid: 30aef94b-1b83-4897-a2f1-afbb4349696a
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c0414b7b7e37cf6316504979a70983134f0b18a
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: a77ea3cefcc423e710ab0afebb3fa064e61507ec
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1015422"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2800178"
 ---
 # <a name="convert-an-app-service-to-run-in-the-same-process-as-its-host-app"></a>Umwandeln eines App-Diensts für die Ausführung im gleichen Prozess wie die Host-App
 
@@ -42,7 +42,7 @@ Um einen Out-of-Process-App-Dienst in ein In-Process-Modell zu konvertieren, sin
 >   </Applications>
 > ```
 
-Entfernen der `EntryPoint` Attribut aus der `<Application>` Element, da nun [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) der Einstiegspunkt ist, die beim Aufrufen des app-Diensts verwendet werden.
+Entfernen der `EntryPoint` Attribut aus der `<Extension>` Element, da nun [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) der Einstiegspunkt ist, die beim Aufrufen des app-Diensts verwendet werden.
 
 Die zweite Änderung besteht darin, die Dienstlogik aus ihrem eigenen Hintergrundaufgabenprojekt in Methoden zu verschieben, die über **OnBackgroundActivated()** aufgerufen werden können.
 

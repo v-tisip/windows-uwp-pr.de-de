@@ -1,6 +1,6 @@
 ---
 title: Biometrischer Fingerabdruck
-description: In diesem Artikel wird beschrieben, wie Sie Biometrie für Fingerabdrücke in Ihrer UWP-App (Universelle Windows-Plattform) verarbeiten können.
+description: In diesem Artikel wird erläutert, wie Sie die Funktion des biometrischen Fingerabdrucks in Ihrer UWP-App (Universelle Windows-Plattform) hinzufügen.
 ms.assetid: 55483729-5F8A-401A-8072-3CD611DDFED2
 author: PatrickFarley
 ms.author: pafarley
@@ -8,14 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows10, UWP
+keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c07d1697fa6179274b4d74c1e64c045d3d5d53c
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 287b2b0fedac112f57f0342420a7830db5aa13be
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1815465"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2790206"
 ---
 # <a name="fingerprint-biometrics"></a>Biometrischer Fingerabdruck
 

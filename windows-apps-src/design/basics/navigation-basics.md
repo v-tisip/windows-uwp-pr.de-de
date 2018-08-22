@@ -7,18 +7,18 @@ label: Navigation design basics
 template: detail.hbs
 op-migration-status: ready
 ms.author: sezhen
-ms.date: 11/27/2017
+ms.date: 7/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0980f24394a075596b60e4a8005b303857b91304
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 464da3dd3a9a181555f7b4bfd1059e9834fe7338
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843070"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792791"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Navigationsdesigngrundlagen für UWP-Apps
 
@@ -28,7 +28,9 @@ Wenn Sie sich eine App als eine Sammlung von Seiten vorstellen, beschreibt der B
 
 Es gibt eine große Anzahl von Navigationsmöglichkeiten. Wir könnten:
 
-:::row::: :::column::: ![Navigationsbeispiel 1](images/nav/nav-1.svg)
+:::row:::
+    :::column:::
+        ![Navigation in Beispiel 1](images/nav/nav-1.svg)
 
         Require users to go through a series of pages in order.
     :::column-end:::
@@ -56,7 +58,7 @@ Beginnen wir mit den Grundprinzipien eines guten Navigationsdesigns:
 
 ### <a name="consistency"></a>Konsistenz
 
-Die Navigation sollte den Erwartungen der Benutzer entsprechen. Die Verwendung von [Standardsteuerelementen](#use-the-right-controls), mit denen die Benutzer vertraut sind, und der Einhaltung von Standardkonventionen für Symbole, Position und Stil wird die Navigation für die Benutzer vorhersehbar und intuitiv.
+Die Navigation sollte den Erwartungen der Benutzer entsprechen. [Standard-Steuerelemente](#use-the-right-controls) , dass Benutzer mit vertraut sind und in der folgenden standard Konventionen für Symbole sind machen Speicherort und Formatierungen Navigation vorhersehbare und intuitiven für Benutzer.
 
 ![Bild mit Seitenkomponenten](images/nav/page-components.svg)
 
@@ -66,7 +68,9 @@ Die Navigation sollte den Erwartungen der Benutzer entsprechen. Die Verwendung v
 
 Weniger Navigationselemente erleichtern den Anwendern die Entscheidungsfindung. Der einfache Zugriff auf wichtige Ziele und das Ausblenden weniger wichtiger Objekte hilft den Benutzern, schneller dorthin zu gelangen, wohin sie wollen.
 
-:::row::: :::column::: ![Beispiel für „Richtig”](images/nav/do.svg)
+:::row:::
+    :::column:::
+        ![Beispiel für „Richtig”](images/nav/do.svg)
 
         ![navview good](images/nav/navview-good.svg)
 
@@ -77,7 +81,7 @@ Weniger Navigationselemente erleichtern den Anwendern die Entscheidungsfindung. 
 
         ![navview bad](images/nav/navview-bad.svg)
 
-        Constantly provide many navigation options to overwhelm the user.
+        Overwhelm users with many navigation options.
     :::column-end:::
 :::row-end:::
 
@@ -93,9 +97,9 @@ Klare Pfade ermöglichen eine logische Navigation für den Benutzer. Navigations
 
 Nehmen wir nun unsere Gestaltungsprinzipien – Konsistenz, Einfachheit und Klarheit – und verwenden wir sie, um einige allgemeine Empfehlungen zu formulieren.
 
-1. Denken Sie an Ihre Benutzer. Verfolgen Sie typische Pfade, die sie durch Ihre App nehmen könnten, und überlegen Sie für jede Seite, warum der Benutzer dort ist und wohin er gehen möchte. 
+1. Denken Sie an Ihre Benutzer. Verfolgen Sie typische Pfade, die sie durch Ihre App nehmen könnten, und überlegen Sie für jede Seite, warum der Benutzer dort ist und wohin er gehen möchte.
 
-2. Vermeiden Sie tiefe Navigationshierarchien. Wenn Sie über drei Navigationsebenen hinausgehen, riskieren Sie, Ihren Benutzer in einer tiefen Hierarchie zu verlieren, die er nur schwer verlassen kann.
+2. Vermeiden Sie Tiefe Navigationshierarchien. Wenn Sie über drei Navigationsebenen hinausgehen, riskieren Sie, Ihren Benutzer in einer tiefen Hierarchie zu verlieren, die er nur schwer verlassen kann.
 
 3. Vermeiden Sie „Pogo Sticking”. Pogo Sticking tritt auf, wenn der Benutzer für die Navigation zu zugehörigen Inhalten eine Ebene nach oben und erneut eine nach unten navigieren muss.
 
@@ -103,39 +107,50 @@ Nehmen wir nun unsere Gestaltungsprinzipien – Konsistenz, Einfachheit und Klar
 
 Nun, da Sie mit den allgemeinen Navigationsprinzipien vertraut sind, überlegen wir uns die Strukturierung Ihrer App. Es gibt zwei allgemeine Strukturen: Flache und hierarchische.
 
-:::row::: :::column::: ![Seitenanordnung in einer flachen Struktur](images/nav/flat-lateral-structure.svg) :::column-end::: :::column span="2":::
+:::row:::
+    :::column:::
+        ![In einer flachen Struktur angeordnete Seiten](images/nav/flat-lateral-structure.svg)
+    :::column-end:::
+    ::: Spaltenbreite = "2":::
         ### Flat/lateral
 
-        In a flat/lateral structure, pages exist side-by-side. You can go from on page to another in any order. 
+        In a flat/lateral structure, pages exist side-by-side. You can go from one page to another in any order.
 
         We recommend using a flat structure when:
-        <ul>
-        <li>The pages can be viewed in any order.</li>
-        <li>The pages are clearly distinct from each other and don't have an obvious parent/child relationship.</li>
-        <li>There are fewer than 8 pages in the group.<br/>
-        (When there are more pages, it might be difficult for users to understand how the pages are unique or to understand their current location within the group. If you don't think that's an issue for your app, go ahead and make the pages peers. Otherwise, consider using a hierarchical structure to break the pages into two or more smaller groups.)</li>
-        </ul>
+
+        - The pages can be viewed in any order.
+        - The pages are clearly distinct from each other and don't have an obvious parent/child relationship.
+        - There are less than 8 pages in the group. <br>
+        (When there are more pages, it might be difficult for users to understand how the pages are unique or to understand their current location within the group. If you don't think that's an issue for your app, go ahead and make the pages peers. Otherwise, consider using a hierarchical structure to break the pages into two or more smaller groups.)
 
     :::column-end:::
 :::row-end:::
 
-:::row::: :::column::: ![Seitenanordnung in einer Hierarchie](images/nav/hierarchical-structure.svg) :::column-end::: :::column span="2":::
+:::row:::
+    :::column:::
+        ![In einer Hierarchie angeordnete Seiten](images/nav/hierarchical-structure.svg)
+    :::column-end:::
+    ::: Spaltenbreite = "2":::
         ### Hierarchical
 
         In a hierarchical structure, pages are organized into a tree-like structure. Each child page has one parent, but a parent can have one or more child pages. To reach a child page, you travel through the parent.
 
-        Hierarchical structures are good for organizing complex content that spans lots of pages. The downside is some navigation overhead: the deeper the structure, the more clicks it takes to get from page to page. 
+        Hierarchical structures are good for organizing complex content that spans lots of pages. The downside is some navigation overhead: the deeper the structure, the more clicks it takes to get from page to page.
 
-        We recommend a hiearchical structure when:
-        <ul>
-        <li>Pages should be traversed in a specific order.</li>
-        <li>There is a clear parent-child relationship between pages.</li>
-        <li>There are more than 7 pages in the group.</li>
-        </ul>
+        We recommend a hierarchical structure when:
+        
+        - Pages should be traversed in a specific order.
+        - There is a clear parent-child relationship between pages.
+        - There are more than 7 pages in the group.
+        
     :::column-end:::
 :::row-end:::
 
-:::row::: :::column::: ![App mit hybrider Struktur](images/nav/combining-structures.svg) :::column-end::: :::column span="2":::
+:::row:::
+    :::column:::
+        ![App mit einer Hybridstruktur](images/nav/combining-structures.svg)
+    :::column-end:::
+    ::: Spaltenbreite = "2":::
         ### Combining structures
 
         You don't have choose to one structure or the other; many well-design apps use both. An app can use flat structures for top-level pages that can be viewed in any order, and hierarchical structures for pages that have more complex relationships.
@@ -143,56 +158,81 @@ Nun, da Sie mit den allgemeinen Navigationsprinzipien vertraut sind, überlegen 
         If your navigation structure has multiple levels, we recommend that peer-to-peer navigation elements only link to the peers within their current subtree. Consider the adjacent illustration, which shows a navigation structure that has two levels:
 
         - At level 1, the peer-to-peer navigation element should provide access to pages A, B, C, and D.
-        - At level 2, the peer-to-peer navigation elements for the A2 pages should only link to the other A2 pages. They should not link to level 2 pages in the C subtree. 
+        - At level 2, the peer-to-peer navigation elements for the A2 pages should only link to the other A2 pages. They should not link to level 2 pages in the C subtree.
     :::column-end:::
 :::row-end:::
 
 ## <a name="use-the-right-controls"></a>Verwenden der richtigen Steuerelemente
 
-Sobald Sie sich für eine Seitenstruktur entschieden haben, müssen Sie entscheiden, wie der Benutzer durch die Seiten navigieren soll. UWP bietet eine Vielzahl von Navigationssteuerelementen, um ein konsistentes und zuverlässiges Navigationserlebnis in Ihrer App zu gewährleisten. 
+Sobald Sie sich für eine Seitenstruktur entschieden haben, müssen Sie entscheiden, wie der Benutzer durch die Seiten navigieren soll. UWP bietet eine Vielzahl von Navigationssteuerelementen, um ein konsistentes und zuverlässiges Navigationserlebnis in Ihrer App zu gewährleisten.
 
-Wir empfehlen die Auswahl eines Navigationssteuerelements anhand der Anzahl der Navigationselemente in Ihrer App. Wenn Sie fünf oder weniger Navigationselemente haben, dann verwenden Sie die Einstiegsnavigation (z. B. [Registerkarten und Pivot](../controls-and-patterns/tabs-pivot.md)). Wenn Sie sechs oder mehr Navigationsziele haben, dann verwenden Sie die linke Navigation, wie z. B. die [Navigationsansicht](../controls-and-patterns/navigationview.md) oder [Master/Details](../controls-and-patterns/master-details.md).
-
-:::row::: :::column::: ![Frame-Bild](images/nav/thumbnail-frame.svg) :::column-end::: :::column span="2"::: <a href="https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Frame"><b>Frame</b></a>
+:::row:::
+    :::column:::
+        ![Frame-Bild](images/nav/thumbnail-frame.svg)
+    :::column-end:::
+    ::: Spaltenbreite = "2"::: [ **Rahmen**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)
 
         With few exceptions, any app that has multiple pages uses a frame. Typically, an app has a main page that contains the frame and a primary navigation element, such as a navigation view control. When the user selects a page, the frame loads and displays it.
 :::row-end:::
 
-:::row::: :::column::: ![Bild für Registerkarten und Pivot](images/nav/thumbnail-tabs-pivot.svg) :::column-end::: :::column span="2"::: <a href="../controls-and-patterns/tabs-pivot.md"><b>Registerkarten und Pivot</b></a><br>
+:::row:::
+    :::column:::
+        ![Registerkarten und Pivot-Bild](images/nav/thumbnail-tabs-pivot.svg)
+    :::column-end:::
+    ::: Spaltenbreite = "2"::: [ **der oberen Navigationsleiste und Registerkarten**](../controls-and-patterns/navigationview.md)
 
-        Displays a horizontal list of links to pages at the same level. Use when:
-        <ul>
-        <li>There are 2-5 pages. (You can use tabs/pivots when there are more than 5 pages, but it might be difficult to fit all the tabs/pivots on the screen.)</li>
-        <li>You expect users to switch between pages frequently.</li>
-        </ul>
+        Displays a horizontal list of links to pages at the same level. The [NavigationView](../controls-and-patterns/navigationview.md) control implements the top navigation and tabs patterns.
+        
+        Use top navigation when:
+
+        - You want to show all navigation options on the screen.
+        - You desire more space for your app's content.
+        - Icons cannot clearly describe your navigation categories.
+        
+        Use tabs when:
+
+        - You want to preserve navigation history and page state.
+        - You expect users to switch between tabs frequently.
+
 :::row-end:::
 
-:::row::: :::column::: ![Bild für Registerkarten und Pivot](images/nav/thumbnail-navview.svg) :::column-end::: :::column span="2"::: <a href="../controls-and-patterns/navigationview.md"><b>Navigationsansicht</b></a><br>
+:::row:::
+    :::column:::
+        ![Navview-Bild](images/nav/thumbnail-navview.svg)
+    :::column-end:::
+    ::: Spaltenbreite = "2"::: [ **linken Navigationsbereich**](../controls-and-patterns/navigationview.md)
 
         Displays a vertical list of links to top-level pages. Use when:
-        <ul>
-        <li>The pages exist at the top level.</li>
-        <li>There are many navigational items (more than 5).</li>
-        <li>You don't expect users to switch between pages frequently.</li>
-        </ul>
+        
+        - The pages exist at the top level.
+        - There are many navigation items (more than 5)
+        - You don't expect users to switch between pages frequently.
+        
 :::row-end:::
 
-:::row::: :::column::: ![Bild für Master/Details](images/nav/thumbnail-master-detail.svg) :::column-end::: :::column span="2"::: <a href="../controls-and-patterns/master-details.md"><b>Master/Details</b></a><br>
+:::row:::
+    :::column:::
+        ![Master-Details-Bild](images/nav/thumbnail-master-detail.svg)
+    :::column-end:::
+    ::: Spaltenbreite = "2"::: [ **Master/Details**](../controls-and-patterns/master-details.md)
 
         Displays a list (master view) of items. Selecting an item displays its corresponding page in the details section. Use when:
-        <ul>
-        <li>You expect users to switch between child items frequently.</li>
-        <li>You want to enable the user to perform high-level operations, such as deleting or sorting, on individual items or groups of items, and also want to enable the user to view or update the details for each item.</li>
-        </ul>
+        
+        - You expect users to switch between child items frequently.
+        - You want to enable the user to perform high-level operations, such as deleting or sorting, on individual items or groups of items, and also want to enable the user to view or update the details for each item.
 
         Master/details is well suited for email inboxes, contact lists, and data entry.
 :::row-end:::
 
-:::row::: :::column::: ![Bild für Hyperlinks und Schaltflächen](images/nav/thumbnail-hyperlinks-buttons.svg) :::column-end::: :::column span="2"::: <a href="../controls-and-patterns/hyperlinks.md"><b>Hyperlinks</b></a> and <a href="../controls-and-patterns/buttons.md"><b>Schaltflächen</b></a><br>
+:::row:::
+    :::column:::
+        ![Hyperlinks und Schaltflächen Bilds](images/nav/thumbnail-hyperlinks-buttons.svg)
+    :::column-end:::
+    ::: Spaltenbreite = "2"::: [ **Hyperlinks**](../controls-and-patterns/hyperlinks.md)
 
         Embedded navigation elements can appear in a page's content. Unlike other navigation elements, which should be consistent across the pages, content-embedded navigation elements are unique from page to page.
 :::row-end:::
 
 ## <a name="next-add-navigation-code-to-your-app"></a>Nächster Schritt: Hinzufügen von Navigationscode zu Ihrer App
 
-Im nächsten Artikel, [Implementierung grundlegender Navigation,](navigate-between-two-pages.md), lernen Sie den Code kennen, die für die Verwendung von Frame-Steuerelementen zur Bereitstellung einer grundlegenden Navigation zwischen zwei Seiten in Ihrer App erforderlich ist. 
+Im nächsten Artikel, [Implementierung grundlegender Navigation,](navigate-between-two-pages.md), lernen Sie den Code kennen, die für die Verwendung von Frame-Steuerelementen zur Bereitstellung einer grundlegenden Navigation zwischen zwei Seiten in Ihrer App erforderlich ist.

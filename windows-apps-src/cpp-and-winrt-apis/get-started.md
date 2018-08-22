@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, erste schritte
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ed578f40417f72adb080f41703711e47c858c1f
-ms.sourcegitcommit: f9690c33bb85f84466560efac6f23cca2daf5a02
-ms.translationtype: HT
+ms.openlocfilehash: 13aa1e61a2d81cfa7faed0236551dad41bd00057
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "1912948"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2791545"
 ---
 # <a name="get-started-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Erste Schritte mit [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Damit Sie C++/WinRT schneller verwenden können, werden Ihnen in diesem Thema einige einfache Codebeispiele vorgestellt.
@@ -51,7 +51,7 @@ int main()
     SyndicationFeed syndicationFeed = syndicationClient.RetrieveFeedAsync(rssFeedUri).get();
     for (const SyndicationItem syndicationItem : syndicationFeed.Items())
     {
-        hstring titleAsHstring = syndicationItem.Title().Text();
+        winrt::hstring titleAsHstring = syndicationItem.Title().Text();
         std::wcout << titleAsHstring.c_str() << std::endl;
     }
 }
@@ -103,7 +103,7 @@ for (const SyndicationItem syndicationItem : syndicationFeed.Items()) { ... }
 [**SyndicationFeed.Items**](/uwp/api/windows.web.syndication.syndicationfeed.items) ist ein Bereich, der durch die Iteratoren definiert wird, die von den **begin**- und **end**-Funktionen (oder deren constant-, reverse- und constant-reverse-Varianten) zurückgegeben werden. Aus diesem Grund können Sie **Items** entweder mit einer bereichsbasierten `for`-Anweisung oder mit der Template-Funktion **std::for_each** auflisten.
 
 ```cppwinrt
-hstring titleAsHstring = syndicationItem.Title().Text();
+winrt::hstring titleAsHstring = syndicationItem.Title().Text();
 std::wcout << titleAsHstring.c_str() << std::endl;
 ```
 

@@ -4,18 +4,18 @@ ms.assetid: C2415466-EC59-416E-B6AE-7DA5ED82DCE6
 title: Kontotypen, Standorte und Gebühren
 description: Wir bieten individuelle Konten für Entwickler und Unternehmenskonten für Entwickler in vielen Ländern und Regionen.
 ms.author: wdg-dev-content
-ms.date: 05/02/2018
+ms.date: 08/14/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Entwicklerkonto, individuell, Unternehmen, geschäftlich
-ms.localizationpriority: high
-ms.openlocfilehash: e337c5fe18089bfd39981c04647ca1386c3a5b40
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 1e1aecb6ac3d5830659d9aadb7539e8103712fb3
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832411"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2801088"
 ---
 # <a name="account-types-locations-and-fees"></a>Kontotypen, Standorte und Gebühren
 
@@ -37,11 +37,11 @@ Im Folgenden sind die grundlegenden Unterschiede zwischen den beiden Kontotypen 
 |--------------------|-----------------|
 | <ul><li>Kostet ca. 19 US-Dollar (einmalige Registrierungsgebühr; der exakte Betrag variiert je nach Land bzw. Region)</li><li>Kürzerer Kontoüberprüfungsprozess</li></ul> | <ul><li>Kostet ca. 99 US-Dollar (einmalige Registrierungsgebühr; der exakte Betrag variiert je nach Land bzw. Region)</li><li>Erfordert eine bessere Überprüfung des Kontos</li><li>Erfordert, dass Ihr Unternehmen als solches im Land oder in der Region seiner Niederlassung anerkannt ist</li><li>Übermitteln von Apps mit eingeschränkter Funktionalität (wie in den [Microsoft Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type) beschrieben)</li></ul> |
 
-Unternehmenskonten sind etwas teurer. Das liegt hauptsächlich daran, dass wir durch einige zusätzliche Schritte sicherstellen, dass Sie von Ihrem Unternehmen autorisiert wurden und zum Einrichten des Kontos berechtigt sind. Laut [Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type) ist ein Unternehmenskonto erforderlich, um Apps mit bestimmten Funktionen zu veröffentlichen, wie z.B. Apps, die auf Finanzinformationen zugreifen oder eine Authentifizierung für den Zugriff auf primäre Funktionen erfordern (ohne sicheren Zugriff durch einen dedizierten Drittanbieter für die Authentifizierung).
+Unternehmenskonten sind etwas teurer. Das liegt hauptsächlich daran, dass wir durch einige zusätzliche Schritte sicherstellen, dass Sie von Ihrem Unternehmen autorisiert wurden und zum Einrichten des Kontos berechtigt sind. Pro der [Richtlinien für](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type)apps mit bestimmte Funktionen müssen wie die finanziellen Konto Zugriff auf Informationen oder, Authentifizierung den Hauptfunktionen Zugriff (ohne einen sicheren dedizierten Drittanbieter-Authentifizierungsanbieter), kann nur von Firmenkonten veröffentlicht werden.
 
 ## <a name="account-verification"></a>Kontobenachrichtigung
 
-Nach Abschluss der Registrierung durchläuft Ihr Konto den Überprüfungsprozess. Bei individuellen Konten wird sichergestellt, dass der Anzeigename für den Herausgeber nicht bereits von einem anderen Unternehmen verwendet wird. Bei Unternehmenskonten bestätigen unsere Partner Dun & Bradstreet, dass Sie zum Erstellen eines Kontos für Ihr Unternehmen autorisiert sind. Dieser Vorgang kann zwischen wenigen Tagen und mehreren Wochen dauern. Häufig erhält Ihr Unternehmen im Rahmen dieses Prozesses einen Telefonanruf. Stellen Sie daher sicher, dass alle Ihre Kontaktinformationen in den Registrierungsformularen aktuell sind. Sie können über ein Unternehmenskonto erst dann Apps einreichen, wenn das Konto überprüft wurde. In der Zwischenzeit können Sie aber [App-Namen reservieren](create-your-app-by-reserving-a-name.md), auf Ihr Windows Dev Center-Dashboard zugreifen und mit dem Erstellen und Testen Ihrer App fortfahren.
+Nach Abschluss der Registrierung durchläuft Ihr Konto den Überprüfungsprozess. Bei individuellen Konten wird sichergestellt, dass der Anzeigename für den Herausgeber nicht bereits von einem anderen Unternehmen verwendet wird. Bei Unternehmenskonten bestätigen unsere Partner Dun & Bradstreet, dass Sie zum Erstellen eines Kontos für Ihr Unternehmen autorisiert sind. Dieser Vorgang kann zwischen wenigen Tagen und mehreren Wochen dauern. Häufig erhält Ihr Unternehmen im Rahmen dieses Prozesses einen Telefonanruf. Stellen Sie daher sicher, dass alle Ihre Kontaktinformationen in den Registrierungsformularen aktuell sind. Sie können nicht übermitteln von apps aus ein Firmenkonto, bis es überprüft worden ist, aber es während Sie warten, [Reservieren Sie einen app-Namen](create-your-app-by-reserving-a-name.md) erstellen und Testen von apps fortsetzen "und" Vorbereitung Ihrer Übermittlungen arbeiten.
 
 Sie können den Überprüfungsstatus auf der Seite **Kontoeinstellungen** überprüfen. 
 

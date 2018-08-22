@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste Microsoft Store-Analyse-API
 ms.localizationpriority: medium
-ms.openlocfilehash: f7ca3c23179d97816fc54fdbacb951915aecf71f
-ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
-ms.translationtype: HT
+ms.openlocfilehash: f36facd8ba89fbaccb7c61ad937c2ce005922aa8
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "1976395"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2791205"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Zugreifen auf Analysedaten mit Store-Diensten
 
@@ -86,6 +86,7 @@ Die folgenden Analysemethoden sind für UWP-Apps im Dev Center verfügbar.
 |---------------|--------------------|
 | Käufe, Konversionen und Installationen |  <ul><li>[Abrufen von App-Käufen](get-app-acquisitions.md)</li><li>[Abrufen von App-Erwerbstrichterdaten](get-acquisition-funnel-data.md)</li><li>[Abrufen von App-Konvertierungen nach Kanal](get-app-conversions-by-channel.md)</li><li>[Abrufen von Add-On-Käufen](get-in-app-acquisitions.md)</li><li>[Abrufen von Add-On-Käufen für Abonnements](get-subscription-acquisitions.md)</li><li>[Abrufen von Add-On-Konvertierungen nach Kanal](get-add-on-conversions-by-channel.md)</li><li>[Abrufen von App-Installationen](get-app-installs.md)</li></ul> |
 | App-Fehler | <ul><li>[Abrufen von Fehlerberichtsdaten](get-error-reporting-data.md)</li><li>[Abrufen von Details zu einem Fehler in Ihrer App](get-details-for-an-error-in-your-app.md)</li><li>[Abrufen der Stapelüberwachung für einen Fehler in Ihrer App](get-the-stack-trace-for-an-error-in-your-app.md)</li><li>[Herunterladen der CAB-Datei bei einem Fehler in Ihrer App](download-the-cab-file-for-an-error-in-your-app.md)</li></ul> |
+| Einblicke in die | <ul><li>[Abrufen von Daten für Ihre app](get-insights-data-for-your-app.md)</li></ul>  |
 | Bewertungen und Prüfungen | <ul><li>[Abrufen von App-Bewertungen](get-app-ratings.md)</li><li>[Abrufen von App-Rezensionen](get-app-reviews.md)</li></ul> |
 | In-App-Werbung und Anzeigenkampagnen | <ul><li>[Abrufen von Anzeigenleistungsdaten](get-ad-performance-data.md)</li><li>[Abrufen der Leistungsdaten einer Anzeigenkampagne](get-ad-campaign-performance-data.md)</li></ul> |
 
@@ -96,7 +97,9 @@ Die folgenden Analysemethoden stehen für die Verwendung durch Entwicklerkonten 
 | Szenario       | Methoden      |
 |---------------|--------------------|
 | Installiert |  <ul><li>[Abrufen von Desktopanwendungsinstallationen](get-desktop-app-installs.md)</li></ul> |
+| Blöcke |  <ul><li>[Rufen Sie Upgrade Blöcke für desktop-Anwendung](get-desktop-block-data.md)</li><li>[Hier erhalten Sie Upgrade Block für desktop-Anwendung](get-desktop-block-data-details.md)</li></ul> |
 | Anwendungsfehler |  <ul><li>[Abrufen von Fehlerberichtsdaten für Ihre Desktopanwendung](get-desktop-application-error-reporting-data.md)</li><li>[Abrufen von Details zu einem Fehler in Ihrer Desktopanwendung](get-details-for-an-error-in-your-desktop-application.md)</li><li>[Abrufen der Stapelüberwachung für einen Fehler in Ihrer Desktopanwendung](get-the-stack-trace-for-an-error-in-your-desktop-application.md)</li><li>[Herunterladen der CAB-Datei bei einem Fehler in Ihrer Desktopanwendung](download-the-cab-file-for-an-error-in-your-desktop-application.md)</li></ul> |
+| Einblicke in die | <ul><li>[Rufen Sie Einblicke in die Daten für desktop-Anwendung](get-insights-data-for-your-desktop-app.md)</li></ul>  |
 
 ### <a name="methods-for-xbox-live-services"></a>Methoden für Xbox Live-Dienste
 
@@ -106,7 +109,7 @@ Die folgenden zusätzlichen Methoden stehen für Entwicklerkonten mit Spielen zu
 |---------------|--------------------|
 | Allgemeine Analysen |  <ul><li>[Abrufen von Xbox Live-Analysedaten](get-xbox-live-analytics.md)</li><li>[Abrufen von Xbox Live-Erfolgsdaten](get-xbox-live-achievements-data.md)</li><li>[Abrufen von Xbox Live-Daten zur gleichzeitigen Nutzung](get-xbox-live-concurrent-usage-data.md)</li></ul> |
 | Integritätsanalyse |  <ul><li>[Abrufen von Xbox Live-Integritätsdaten](get-xbox-live-health-data.md)</li></ul> |
-| Community-Analyse |  <ul><li>[Abrufen von Xbox Live-Spielehubdaten](get-xbox-live-game-hub-data.md)</li><li>[Abrufen von Xbox Live-Clubdaten](get-xbox-live-club-data.md)</li><li>[Abrufen von Xbox Live Multiplayerdaten](get-xbox-live-multiplayer-data.md)</li></ul>  |
+| Community-Analyse |  <ul><li>[Abrufen von Xbox Live-Spielehubdaten](get-xbox-live-game-hub-data.md)</li><li>[Abrufen von Xbox Live Clubdaten](get-xbox-live-club-data.md)</li><li>[Abrufen von Xbox Live Multiplayerdaten](get-xbox-live-multiplayer-data.md)</li></ul>  |
 
 ### <a name="methods-for-xbox-one-games"></a>Methoden für Xbox One-Spiele
 
@@ -118,13 +121,7 @@ Die folgenden zusätzlichen Methoden stehen für Entwicklerkonten mit Xbox One-S
 
 ### <a name="methods-for-hardware-and-drivers"></a>Methoden für Hardware und Treiber
 
-Die folgenden Analysemethoden stehen für die Verwendung durch Entwicklerkonten zur Verfügung, die zum [Windows Hardware Dev Center-Programm](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) gehören.
-
-| Szenario       | Methoden      |
-|---------------|--------------------|
-| Fehler in Windows10-Treibern (für IHVs) |  <ul><li>[Abrufen von Fehlerberichtsdaten für Windows10-Treiber](get-error-reporting-data-for-windows-10-drivers.md)</li><li>[Abrufen von Informationen zu einem Windows10-Treiberfehler](get-details-for-a-windows-10-driver-error.md)</li><li>[Herunterladen der CAB-Datei für einen Windows10-Treiberfehler](download-the-cab-file-for-a-windows-10-driver-error.md)</li></ul> |
-| Fehler in Windows7-/Windows8.x-Treibern (für IHVs) |  <ul><li>[Abrufen von Fehlerberichtsdaten für Windows7- und Windows8.x-Treiber](get-error-reporting-data-for-windows-7-and-windows-8.x-drivers.md)</li><li>[Abrufen von Informationen zu einem Windows7- oder Windows8.x-Treiberfehler](get-details-for-a-windows-7-or-windows-8.x-driver-error.md)</li><li>[Herunterladen der CAB-Datei für einen Windows7- oder Windows8.x-Treiberfehler](download-the-cab-file-for-a-windows-7-or-windows-8.x-driver-error.md)</li></ul> |
-| Hardwarefehler (für OEMs) |  <ul><li>[Abrufen von Fehlerberichtsdaten für OEM-Hardware](get-oem-hardware-error-reporting-data.md)</li><li>[Abrufen von Informationen zu einem OEM-Hardwarefehler](get-details-for-an-oem-hardware-error.md)</li><li>[Herunterladen der CAB-Datei für einen OEM-Hardwarefehler](download-the-cab-file-for-an-oem-hardware-error.md)</li></ul> |
+Entwickler-Konten, die an das [Windows Hardware Developer Center Programm](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) gehören haben Zugriff auf eine Reihe von Methoden zum Abrufen von Daten für Hardware und Treiber Analytics weiteren. Weitere Informationen finden Sie unter [Hardware Dashboard API](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api).
 
 ## <a name="code-example"></a>Codebeispiel
 

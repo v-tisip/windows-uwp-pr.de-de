@@ -4,18 +4,18 @@ Description: The Pricing and availability page of the app submission process let
 title: Festlegen der Preise und Verfügbarkeit von Apps
 ms.assetid: 37BE7C25-AA74-43CD-8969-CBA3BD481575
 ms.author: wdg-dev-content
-ms.date: 05/02/2018
+ms.date: 05/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Preis, verfügbar, sichtbar, kostenlose Testversion, Testversionen, Testversion, Apps, Veröffentlichungsdatum
-ms.localizationpriority: high
-ms.openlocfilehash: 6c411572bbcf048b82ff27c284dc8f9343ef4fc4
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 20c52687b375f9bf33dd491eeb37d4142acace99
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1831994"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2794809"
 ---
 # <a name="set-app-pricing-and-availability"></a>Festlegen der Preise und Verfügbarkeit von Apps
 
@@ -74,10 +74,7 @@ Standardmäßig wird Ihre Testversion verfügbar, sobald Ihre App veröffentlich
 >[!NOTE]
 > Diese Datumsangabe gilt nur für Kunden mit Windows10 (inklusive Xbox). Wenn Ihre App für Kunden mit früheren Betriebssystemversionen verfügbar ist, wird die Testversion für diese Kunden angeboten, solange Ihr Produkt verfügbar ist. 
 
-Zum Festlegen des Datums für das Anbieten der Testversion für Kunden von Windows 10 ändern Sie die Angabe im Dropdownfeld **Starts on** und/oder **Ends on** in **at** und wählen anschließend Datum und Uhrzeit. In diesem Fall können Sie entweder **UTC** auswählen, sodass die ausgewählte Uhrzeit UTC-Zeit (Universal Coordinated Time, Koordinierte Weltzeit) ist, oder **Lokal** festlegen, damit diese Uhrzeiten in jeder Zeitzone für einen Markt verwendet werden. (Beachten Sie, dass für Märkte, die mehr als eine Zeitzone umfassen, nur eine Zeitzone in diesem Markt verwendet wird. Für die USA wird die Eastern Time verwendet.) 
-
->[!NOTE]
-> Im Gegensatz zum Abschnitt [Zeitplan](configure-precise-release-scheduling.md) kann das Datum, das Sie für **Kostenlose Testversion** auswählen, nicht für bestimmte Märkte angepasst werden. 
+Zum Festlegen des Datums für das Anbieten der Testversion für Kunden von Windows 10 ändern Sie die Angabe im Dropdownfeld **Starts on** und/oder **Ends on** in **at** und wählen anschließend Datum und Uhrzeit. In diesem Fall können Sie entweder **UTC** auswählen, sodass die ausgewählte Uhrzeit UTC-Zeit (Universal Coordinated Time, Koordinierte Weltzeit) ist, oder **Lokal** festlegen, damit diese Uhrzeiten in jeder Zeitzone für einen Markt verwendet werden. (Beachten Sie, dass für Märkte, die mehr als eine Zeitzone umfassen, nur eine Zeitzone in diesem Markt verwendet wird. Für die USA ist die Eastern Time-Zone verwendet.) Sie können **für bestimmte Märkte anpassen** auswählen, wenn Sie ein anderes Datum für alle Märkte festlegen möchten.
 
 
 ## <a name="sale-pricing"></a>Sonderpreise

@@ -9,25 +9,26 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Version, Build, Versionen, Windows, auswählen, aktualisieren, Updates
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
-ms.localizationpriority: high
-ms.openlocfilehash: befbc0b3e7f241b18621aa83028abe7ba04348c4
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 6bb9aad1fa9da79708b3c785da80811006153767
+ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816795"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "2792187"
 ---
 # <a name="choose-a-uwp-version"></a>Auswählen einer UWP-Version
 
 Jede Version von Windows10 hat neue und verbesserte Features für die UWP-Plattform hervorgebracht. Beim Erstellen einer UWP-App in Microsoft Visual Studio können Sie wählen, für welche Version die App bestimmt ist. Projekte mit [Standard .NET 2.0](https://docs.microsoft.com/dotnet/standard/net-standard) müssen eine **mindestens erforderliche Version** von 16299 oder höher verwenden.
 
-Beachten Sie, dass alle UWP-Projekte, die in aktuellen Versionen von Visual Studio2017 erstellt wurden, nicht in Visual Studio2015 geöffnet werden können.
+> [!WARNING]
+> In den aktuellen Versionen von Visual Studio erstellte UWP Projekte können nicht in Visual Studio 2015 geöffnet werden.
 
 In der folgenden Tabelle sind die verfügbaren Versionen von Windows10 beschrieben. Bitte beachten Sie, dass diese Tabelle nur für die Erstellung von UWP-Apps gilt, die nur auf Windows10 unterstützt werden. Sie können keine UWP-Apps für ältere Versionen von Windows entwickeln, und es muss [der entsprechende SDK-Build](http://go.microsoft.com/fwlink/?LinkId=821431) für die jeweilige Version installiert sein. 
 
 | Version | Beschreibung |
 | --- | --- |
-| Build 17134 (Version 1803) | Dies ist die neueste Version von Windows10, die im April2018 veröffentlicht wurde. **Beachten Sie, dass Sie Visual Studio 2017 verwenden _müssen_, um die Ausrichtung auf diese Windows-Version zu ermöglichen.** Einige Highlights dieser Version sind: </br> \* **Windows Machine Learning:** Mit Windows Machine Learning können Sie Apps erstellen, die bereits geschulte Machine Learning-Modelle lokal auf Ihren Windows10-Geräten bewerten. Weitere Informationen zur Plattform finden Sie unter [Windows Machine Learning](../machine-learning/index.md). </br> \* **Fluent Design:** Windows10 wurden neue Features wie Strukturansicht, Aktualisierung durch Ziehen und Navigationsansicht hinzugefügt. Neuigkeiten finden Sie in der [Fluent Design-Übersicht](../design/fluent-design-system/index.md). </br> \* **Konsolen-UWP-Apps:** Sie können jetzt C++/WinRT oder /CX UWP Konsolen-Apps erstellen, die in einem Konsolenfenster wie z.B. einem DOS oder PowerShell-Konsolenfenster ausgeführt werden. </br> Informationen zu diesen und vielen weiteren Funktionen, die in dieser Version von Windows hinzugefügt wurden, finden Sie im [Dev Center](https://developer.microsoft.com/windows/windows-10-for-developers) oder auf der ausführlicheren Seite unter [Neuigkeiten für Entwickler in Windows10](../whats-new/windows-10-build-17134.md).
+| Build 17134 (Version 1803) | Dies ist die neueste Version von Windows10, die im April2018 veröffentlicht wurde. **Beachten Sie, dass Sie Visual Studio 2017 verwenden _müssen_, um die Ausrichtung auf diese Windows-Version zu ermöglichen.** Einige Highlights dieser Version sind: </br> \* **Windows Machine Learning:** Mit Windows Machine Learning können Sie Apps erstellen, die bereits geschulte Machine Learning-Modelle lokal auf Ihren Windows10-Geräten bewerten. Weitere Informationen zur Plattform finden Sie unter [Windows Machine Learning](https://docs.microsoft.com/windows/ai/). </br> \* **Fluent Design:** Windows10 wurden neue Features wie Strukturansicht, Aktualisierung durch Ziehen und Navigationsansicht hinzugefügt. Neuigkeiten finden Sie in der [Fluent Design-Übersicht](../design/fluent-design-system/index.md). </br> \* **Konsolen-UWP-Apps:** Sie können jetzt C++/WinRT oder /CX UWP Konsolen-Apps erstellen, die in einem Konsolenfenster wie z.B. einem DOS oder PowerShell-Konsolenfenster ausgeführt werden. </br> Informationen zu diesen und vielen weiteren Funktionen, die in dieser Version von Windows hinzugefügt wurden, finden Sie im [Dev Center](https://developer.microsoft.com/windows/windows-10-for-developers) oder auf der ausführlicheren Seite unter [Neuigkeiten für Entwickler in Windows10](../whats-new/windows-10-build-17134.md).
 | Build 16299 (Fall Creators Update, Version 1709) | Diese Version von Windows10 wurde im Oktober2017 veröffentlicht. **Beachten Sie, dass Sie Visual Studio 2017 verwenden _müssen_, um die Ausrichtung auf diese Windows-Version zu ermöglichen.** Einige Highlights dieser Version sind: </br> \* **.NET Standard 2.0:** umfasst eine massive Erhöhung der Anzahl der .NET-APIs und Ihre bevorzugten NuGet-Pakete und Bibliotheken von Drittanbietern. Sehen Sie weitere Details und entdecken Sie die Dokumentation [hier](https://docs.microsoft.com/dotnet/standard/net-standard). Beachten Sie, dass Sie Ihre **Mindestversion** auf Build 16299 festlegen müssen, um Zugriff auf diese neuen APIs zu erhalten. </br> \* **Fluent Design:** Nutzen Sie Licht, Tiefe, Perspektive und Bewegung, um Ihre App zu verbessern und Benutzer beim Fokus auf wichtige Elemente der Benutzeroberfläche zu unterstützen. </br> \* **Bedingter XAML:** Sie können damit nur dann Eigenschaften festlegen und Objekte initialisieren, wenn die entsprechende API vorhanden ist, wodurch Ihre App nahtlos Geräte- und Versionsübergreifend funktioniert. </br> Informationen zu diesen und vielen weiteren Funktionen, die in dieser Version von Windows hinzugefügt wurden, finden Sie im [Dev Center](https://developer.microsoft.com/windows/windows-10-for-developers) oder auf der ausführlicheren Seite unter [Neuigkeiten für Entwickler in Windows10](../whats-new/windows-10-build-16299.md).
 | Build 15063 (Creators Update, Version 1703) | Diese Version von Windows10 wurde im März2017 veröffentlicht. **Bitte beachten Sie, dass Sie Visual Studio 2017 verwenden _müssen_, um die Ausrichtung auf diese Windows-Version zu ermöglichen**. Einige Highlights dieser Version sind:  </br> \* **Handschrifterkennung:** Windows Ink kann jetzt Freihandstriche als Schrift oder als Zeichenstriche kategorisieren und Text, Formen und grundlegende Layoutstrukturen erkennen. </br> \* **Windows.Ui.Composition-APIs:** Kombinieren und verwenden Sie Animationen ganz einfach in der gesamten App. </br> \* **Livebearbeitung:** Bearbeiten Sie XAML, während Ihre App ausgeführt wird, und zeigen Sie die Änderungen in Echtzeit an. </br> Informationen zu diesen und vielen weiteren Funktionen, die in dieser Version von Windows hinzugefügt wurden, finden Sie im [Dev Center](https://developer.microsoft.com/windows/windows-10-for-developers) oder auf der ausführlicheren Seite unter [Neuigkeiten für Entwickler in Windows10](../whats-new/windows-10-build-15063.md).  |
 | Build 14393 (Anniversary Update, Version 1607) | Diese Version von Windows10 wurde im Juli2016 veröffentlicht. Einige Highlights dieser Version sind: </br> \* **Windows Ink:** Neue InkCanvas- und InkToolbar-Steuerelemente. </br> \* **Cortana-APIs:** Verwenden Sie neue Cortana-Aktionen, um die Cortana-Unterstützung in bestimmte Funktionen Ihrer App zu integrieren. </br> \* **Windows Hello:** Microsoft Edge unterstützt jetzt Windows Hello, sodass Webentwickler Zugang zur biometrischen Authentifizierung erhalten. </br> Informationen zu diesen und vielen weiteren Funktionen, die in dieser Version von Windows hinzugefügt wurden, finden Sie im [Dev Center](https://developer.microsoft.com/windows/windows-10-for-developers) oder auf der ausführlicheren Seite unter [Neuigkeiten für Entwickler in Windows10](../whats-new/windows-10-build-14393.md).  |
@@ -41,6 +42,14 @@ Es wird dringend empfohlen, dass neue Entwickler und Entwickler, die Code für e
 Neue und geänderte APIs für UWP sind in jeder neuen Version von Windows10 verfügbar. Ausführlichere Informationen dazu, welche Funktionen in welcher Version hinzugefügt wurden, finden Sie unter [Neuigkeiten für Entwickler in Windows10](../whats-new/windows-10-version-latest.md).
 
 Referenzthemen, in denen alle Gerätefamilien mit ihren Versionen und alle API-Verträge mit ihren Versionen aufgeführt sind, finden Sie unter [Gerätefamilien](https://msdn.microsoft.com/library/windows/apps/dn706137.aspx) und [API-Verträge](https://msdn.microsoft.com/library/windows/apps/dn706135.aspx).
+
+## <a name="net-api-availability-in-uwp-versions"></a>.NET API-Verfügbarkeit in UWP Versionen
+
+UWP unterstützt eine eingeschränkte Teilmenge der .NET APIs, die unabhängig von der **Version des Ziels** oder **Mindestens Version** Ihres Projekts verfügbar sind. [Auf dieser Seite finden Sie weitere Informationen zu den verfügbaren Typen](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501(d=robot).aspx).
+
+Wenn Sie wieder verwendbare plattformübergreifende Bibliotheken erstellen möchten, wird auf UWP .NET Standard unterstützt. Der [.NET Standard-Dokumentation](https://docs.microsoft.com/dotnet/standard/net-standard) enthält Informationen, die auf dem .NET Standard in welche UWP-Versionen unterstützt wird.
+
+Wenn Sie eine Desktop-app entwickeln, finden Sie stattdessen [.NET Framework, Version und Abhängigkeiten](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies) ausführliche Informationen zur Verfügbarkeit von .NET Framework.
 
 ## <a name="choose-which-version-to-use-for-your-app"></a>Auswählen der Version für die App
 
