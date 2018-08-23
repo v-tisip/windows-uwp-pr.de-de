@@ -3,18 +3,18 @@ author: stevewhims
 description: Eine Eigenschaft, die effektiv an ein XAML-Steuerelement gebunden werden kann, wird als *Observable*-Eigenschaft bezeichnet. Dieses Thema zeigt, wie man eine Observable-Eigenschaft implementiert und nutzt und wie man ein XAML-Steuerelement daran bindet.
 title: XAML-Steuerelemente; Binden an eine C++/WinRT-Eigenschaft
 ms.author: stwhi
-ms.date: 05/07/2018
+ms.date: 08/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, XAML, steuerelement, binden, eigenschaft
 ms.localizationpriority: medium
-ms.openlocfilehash: 367bf5d5d554bd094ce3d5b726b818c8c388d398
-ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.openlocfilehash: 6343832801926254c64fcefc269ce7fda9ed6dfc
+ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "2787157"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "2817507"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-property"></a>XAML-Steuerelemente; Binden an eine [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)-Eigenschaft
 Eine Eigenschaft, die effektiv an ein XAML-Steuerelement gebunden werden kann, wird als *observable*-Eigenschaft bezeichnet. Dieses Konzept basiert auf dem Software-Design-Muster, das als *Observer-Pattern* bekannt ist. Dieses Thema zeigt, wie man Observable-Eigenschaften in C++/WinRT implementiert und wie man XAML-Steuerelemente an diese bindet.
@@ -41,24 +41,26 @@ Der erste Schritt beim Erstellen einer neuen Laufzeitklasse besteht darin, dem P
 // BookSku.idl
 namespace Bookstore
 {
-    runtimeclass BookSku : Windows.UI.Xaml.DependencyObject, Windows.UI.Xaml.Data.INotifyPropertyChanged
+    runtimeclass BookSku : Windows.UI.Xaml.Data.INotifyPropertyChanged
     {
         String Title;
     }
 }
 ```
 
-> [!IMPORTANT]
-> Für eine Anwendung an das [Windows App Zertifizierungskit](../debug-test-perf/windows-app-certification-kit.md) übergeben Tests, die vom Microsoft Store zum Überprüfen von Übermittlungen verwendet, und daher um erfolgreich in Microsoft Store aufgenommen werden, die oberste Basisklasse für jede Klasse Runtime *in deklariert die Anwendung* muss einen Typ, die in einem Windows.*-Namespace stammen.
-
-Um diese Anforderung zu erfüllen, leiten Sie Ihre Ansichtsmodell-Klassen von [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject) ab. Alternativ können Sie eine von **DependencyObject** abgeleitete bindbare Basisklasse deklarieren und daraus Ihre Ansichtsmodelle ableiten. Sie können Ihre Datenmodelle als C++ Strukturen deklarieren. Sie müssen nicht in MIDL deklariert werden (solange Sie sie nur in Ihren Ansichtsmodellen nutzen und XAML nicht direkt an sie binden – in diesem Fall wären sie allerdings per Definition sowieso Ansichtsmodelle).
+> [!NOTE]
+> Ihre Ansicht Modellklassen&mdash;tatsächlich jede Laufzeitklasse, die Sie in der Anwendung deklarieren&mdash;müssen nicht von einer Klasse abgeleitet. Die oben deklarierte **BookSku** -Klasse ist ein Beispiel dafür. Eine Schnittstelle implementiert, aber sie nicht von einer Basisklasse abgeleitet werden.
+>
+> Jede Laufzeitklasse, die Sie in der Anwendung zu deklarieren, *wird* von abgeleitet, einer Basis Klasse wird als bezeichnet ein *zusammensetzbares* Klasse. Und Einschränkungen um zusammensetzbare Klassen vorhanden sind. Für eine Anwendung, die von Visual Studio und Microsoft Store Übermittlungen überprüfen verwendet [Windows App Zertifizierungskit](../debug-test-perf/windows-app-certification-kit.md) Tests zu übergeben (und somit die Anwendung erfolgreich in Microsoft Store aufgenommen werden), muss eine zusammensetzbare-Klasse letztlich von einer Windows-Basisklasse abgeleitet. Was bedeutet, dass die Klasse sehr Stamm der Vererbungshierarchie einen Typ, der in einem Namespace Windows.* sein muss. Wenn Sie eine Basisklasse Runtime-Klasse abgeleitet benötigen&mdash;beispielsweise implementieren eine **BindableBase** -Klasse für alle Ihre Modelle anzeigen Ableiten von&mdash;dann [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject)abgeleitet werden können.
+>
+> Ein Ansichtsmodell ist eine Abstraktion einer Ansicht, und es ist also direkt auf die Ansicht (XAML-Markup) gebunden. Ein Datenmodell ist eine Abstraktion des Daten, und nur von Ansichtsmodellen verwendet und nicht direkt in XAML gebunden. Daher können Sie Ihre Datenmodelle nicht als Runtime-Klassen, sondern als C++ Strukturen oder Klassen deklarieren. Sie brauchen in MIDL deklariert werden, und Sie können unabhängig Vererbungshierarchie verwenden Sie wie folgt.
 
 Speichern Sie die Datei, und erstellen Sie das Projekt. Während des Buildprozesses wird das `midl.exe`-Tool ausgeführt, um eine Windows-Runtime-Metadaten-Datei (`\Bookstore\Debug\Bookstore\Unmerged\BookSku.winmd`) zu erstellen, die die Laufzeitklasse beschreibt. Dann wird das `cppwinrt.exe`-Tool ausgeführt, um Quellcodedateien zu erzeugen, die Sie bei der Erstellung und Nutzung Ihrer Laufzeitklasse unterstützen. Diese Dateien enthalten Stubs, um mit der Implementierung der **BookSku**-Laufzeitklasse zu beginnen, die Sie in Ihrer IDL deklariert haben. Diese Stubs sind `\Bookstore\Bookstore\Generated Files\sources\BookSku.h` und `BookSku.cpp`.
 
 Kopieren Sie die Stub-Dateien `BookSku.h` und `BookSku.cpp` von `\Bookstore\Bookstore\Generated Files\sources\` in den Projektordner `\Bookstore\Bookstore\`. Stellen Sie im **Projektmappen-Explorer** sicher, dass **Alle Dateien anzeigen** aktiviert ist. Klicken Sie mit der rechten Maustaste auf die kopierten Stub-Dateien und klicken Sie auf **In Projekt aufnehmen**.
 
 ## <a name="implement-booksku"></a>Implementieren von **BookSku**
-Nun öffnen wir `\Bookstore\Bookstore\BookSku.h` und `BookSku.cpp` und implementieren unsere Laufzeitklasse. Fügen Sie in `BookSku.h` einen Konstruktor hinzu, der ein [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)-Argument (ein privates Mitglied zum Speichern des Titels) und eine weiteres für das bei einer Titeländerung ausgelöste Ereignis entgegen nimmt. Nachdem Sie diese hinzugefügt haben, sieht Ihr `BookSku.h` so aus.
+Nun öffnen wir `\Bookstore\Bookstore\BookSku.h` und `BookSku.cpp` und implementieren unsere Laufzeitklasse. Fügen Sie in `BookSku.h` einen Konstruktor hinzu, der ein [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)-Argument (ein privates Mitglied zum Speichern des Titels) und eine weiteres für das bei einer Titeländerung ausgelöste Ereignis entgegen nimmt. Nachdem Sie diese Änderungen vorgenommen haben Ihre `BookSku.h` wird wie folgt aussehen.
 
 ```cppwinrt
 // BookSku.h
@@ -73,14 +75,14 @@ namespace winrt::Bookstore::implementation
         BookSku() = delete;
         BookSku(winrt::hstring const& title);
 
-        hstring Title();
+        winrt::hstring Title();
         void Title(winrt::hstring const& value);
-        event_token PropertyChanged(Windows::UI::Xaml::Data::PropertyChangedEventHandler const& value);
+        winrt::event_token PropertyChanged(Windows::UI::Xaml::Data::PropertyChangedEventHandler const& value);
         void PropertyChanged(winrt::event_token const& token);
     
     private:
-        hstring m_title;
-        event<Windows::UI::Xaml::Data::PropertyChangedEventHandler> m_propertyChanged;
+        winrt::hstring m_title;
+        winrt::event<Windows::UI::Xaml::Data::PropertyChangedEventHandler> m_propertyChanged;
     };
 }
 ```
@@ -94,14 +96,13 @@ Implementieren Sie in `BookSku.cpp` die Funktionen wie folgt.
 
 namespace winrt::Bookstore::implementation
 {
+    BookSku::BookSku(winrt::hstring const& title) : m_title{ title }
+    {
+    }
+
     hstring BookSku::Title()
     {
         return m_title;
-    }
-
-    BookSku::BookSku(winrt::hstring const& title)
-    {
-        Title(title);
     }
 
     void BookSku::Title(winrt::hstring const& value)
@@ -125,7 +126,7 @@ namespace winrt::Bookstore::implementation
 }
 ```
 
-In der **Title**-Zugriffsfunktion prüfen wir, ob ein anderer Wert gesetzt wird, und wenn ja, aktualisieren wir den Titel und lösen außerdem das Ereignis [**INotifyPropertyChanged::PropertyChanged**](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged) mit einem Argument aus, das dem Namen der geänderten Eigenschaft entspricht. Dies dient dazu, dass die Benutzeroberfläche (UI) erkennt, welcher Eigenschaftswert erneut abgefragt werden muss.
+In der **Titel** Mutator-Funktion überprüfen wir, ob ein Wert festgelegt wird, die sich vom aktuellen Wert unterscheidet. Und wenn Ja, wir aktualisieren den Titel und ebenfalls mit einem Argument gleich auf den Namen der Eigenschaft, die geändert wurde das [**INotifyPropertyChanged::PropertyChanged**](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged) -Ereignis auslösen. Dies dient dazu, dass die Benutzeroberfläche (UI) erkennt, welcher Eigenschaftswert erneut abgefragt werden muss.
 
 ## <a name="declare-and-implement-bookstoreviewmodel"></a>**BookstoreViewModel** deklarieren und implementieren
 Unsere XAML-Hauptseite wird sich an ein Hauptansichtsmodell gebunden. Dieses Ansichtsmodell wird mehrere Eigenschaften haben, darunter eine vom Typ **BookSku**. In diesem Schritt deklarieren und implementieren wir unsere Hauptansichtsmodell-Laufzeitklasse.
@@ -138,14 +139,14 @@ import "BookSku.idl";
 
 namespace Bookstore
 {
-    runtimeclass BookstoreViewModel : Windows.UI.Xaml.DependencyObject
+    runtimeclass BookstoreViewModel
     {
         BookSku BookSku{ get; };
     }
 }
 ```
 
-Speichern und erstellen Sie das Projekt. Kopieren Sie `BookstoreViewModel.h` und `BookstoreViewModel.cpp` aus dem `Generated Files`-Ordner in den Projektordner und nehmen Sie sie in das Projekt auf. Öffnen Sie diese Dateien und implementieren Sie die Laufzeitklasse wie folgt.
+Speichern und erstellen Sie das Projekt. Kopieren Sie `BookstoreViewModel.h` und `BookstoreViewModel.cpp` aus dem `Generated Files`-Ordner in den Projektordner und nehmen Sie sie in das Projekt auf. Öffnen Sie die Dateien und implementieren Sie die Common Language Runtime-Klasse, wie unten dargestellt. Hinweis wie in `BookstoreViewModel.h`, wir sind einschließlich `BookSku.h`, die den Implementierungstyp (**Winrt::Bookstore::implementation::BookSku**) deklariert.
 
 ```cppwinrt
 // BookstoreViewModel.h
@@ -156,9 +157,10 @@ Speichern und erstellen Sie das Projekt. Kopieren Sie `BookstoreViewModel.h` und
 
 namespace winrt::Bookstore::implementation
 {
-    struct BookstoreViewModel : BookstoreViewModelT<BookstoreViewModel>
+    struct BookstoreViewModel final : BookstoreViewModelT<BookstoreViewModel>
     {
         BookstoreViewModel();
+
         Bookstore::BookSku BookSku();
 
     private:
@@ -190,7 +192,7 @@ namespace winrt::Bookstore::implementation
 > Der Typ von `m_bookSku` ist der projizierte Typ (**winrt::Bookstore::BookSku**), und der Template-Parameter, den Sie mit **make** verwenden, ist der Implementierungstyp (**winrt::Bookstore::implementation::BookSku**). Dennoch gibt **make** eine Instanz des projizierten Typs zurück.
 
 ## <a name="add-a-property-of-type-bookstoreviewmodel-to-mainpage"></a>Hinzufügen einer Eigenschaft vom Typ **BookstoreViewModel** zu **MainPage**
-Öffnen Sie `MainPage.idl` (unsere Haupt-UI-Seite) mit der Deklaration der Laufzeitklasse. Fügen Sie eine Import-Anweisung zum Import von `BookstoreViewModel.idl` hinzu und fügen Sie eine schreibgeschützte Eigenschaft namens MainViewModel vom Typ **BookstoreViewModel** hinzu. Entfernen Sie auch die **MyProperty** -Eigenschaft. Beachten Sie außerdem die Richtlinie **Importieren** in der Liste unten.
+Öffnen Sie `MainPage.idl` (unsere Haupt-UI-Seite) mit der Deklaration der Laufzeitklasse. Fügen Sie eine Import-Anweisung zum Import von `BookstoreViewModel.idl` hinzu und fügen Sie eine schreibgeschützte Eigenschaft namens MainViewModel vom Typ **BookstoreViewModel** hinzu. Entfernen Sie auch die **MyProperty** -Eigenschaft. Beachten Sie außerdem die `import` Richtlinie in der Liste unten.
 
 ```idl
 // MainPage.idl
@@ -210,12 +212,14 @@ Speichern Sie die Datei. Erstellen Sie das Projekt wird nicht erfolgreich abgesc
 
 Wenn Sie die einschließen von weglassen `BookstoreViewModel.idl` (finden Sie in der Liste der `MainPage.idl` oben), und klicken Sie dann die Fehlermeldung angezeigt wird **erwartet \ < near "MainViewModel"**. Ein weiterer Tipp ist, um sicherzustellen, dass Sie alle Typen im gleichen Namespace lassen: der Namespace, der in der Codebeispiele angezeigt wird.
 
-Zum Beheben des Fehlers, die wir finden Sie unter erwarten Sie jetzt müssen die Accessor Stubs für die **MainViewModel** -Eigenschaft aus dem generierten Dateien und in kopieren `\Bookstore\Bookstore\MainPage.h` und `MainPage.cpp`.
+Zum Beheben des Fehlers, die wir finden Sie unter erwarten Sie jetzt müssen die Accessor Stubs für die **MainViewModel** -Eigenschaft aus der die generierten Dateien kopieren (`\Bookstore\Bookstore\Generated Files\sources\MainPage.h` und `MainPage.cpp`) und in `\Bookstore\Bookstore\MainPage.h` und `MainPage.cpp`.
 
-Fügen Sie zu `\Bookstore\Bookstore\MainPage.h` ein privates Mitglied hinzu, um das Ansichtsmodell zu speichern. Beachten Sie, dass die Zugriffsfunktion für die Eigenschaft (und das Mitglied m_mainViewModel) als **Bookstore::BookstoreViewModel** (dem projizierten Typ) implementiert ist. Der Implementierungstyp befindet sich im selben Projekt (Kompilierungseinheit), so dass wir m_mainViewModel über die Konstruktorüberladung mit `nullptr_t` konstruieren. Entfernen Sie auch die **MyProperty** -Eigenschaft.
+In `\Bookstore\Bookstore\MainPage.h`, umfassen `BookstoreViewModel.h`, die den Implementierungstyp (**Winrt::Bookstore::implementation::BookstoreViewModel**) deklariert. Fügen Sie einen privaten Member, um das Ansichtsmodell zu speichern. Beachten Sie, dass die Zugriffsfunktion für die Eigenschaft (und das Mitglied m_mainViewModel) als **Bookstore::BookstoreViewModel** (dem projizierten Typ) implementiert ist. Der Implementierungstyp in einem Projekt (Kompilierung Unit) wie die Anwendung ist, sodass wir M_mainViewModel über den Konstruktorüberladung erstellen, die akzeptiert `nullptr_t`. Entfernen Sie auch die **MyProperty** -Eigenschaft.
 
 ```cppwinrt
 // MainPage.h
+...
+#include "BookstoreViewModel.h"
 ...
 namespace winrt::Bookstore::implementation
 {
@@ -225,7 +229,7 @@ namespace winrt::Bookstore::implementation
 
         Bookstore::BookstoreViewModel MainViewModel();
 
-        void ClickHandler(Windows::Foundation::IInspectable const& sender, Windows::UI::Xaml::RoutedEventArgs const& args);
+        void ClickHandler(Windows::Foundation::IInspectable const&, Windows::UI::Xaml::RoutedEventArgs const&);
 
     private:
         Bookstore::BookstoreViewModel m_mainViewModel{ nullptr };
@@ -234,13 +238,12 @@ namespace winrt::Bookstore::implementation
 ...
 ```
 
-Nehmen Sie `BookstoreViewModel.h` (Deklaration des Implementierungstyps) in `\Bookstore\Bookstore\MainPage.cpp` auf. Rufen Sie [**winrt::make**](/uwp/cpp-ref-for-winrt/make) auf (mit dem Implementierungstyp), um m_mainViewModel eine neue Instanz des projizierten Typs zuzuweisen. Weisen Sie einen Initialwert für den Titel des Buches zu. Implementieren Sie die Zugriffsfunktion für die MainViewModel-Eigenschaft. Aktualisieren Sie zum Schluss den Titel des Buches im Event-Handler der Schaltfläche. Entfernen Sie auch die **MyProperty** -Eigenschaft.
+In `\Bookstore\Bookstore\MainPage.cpp`, [**winrt::make**](/uwp/cpp-ref-for-winrt/make) (mit der Implementierungstyp) aufrufen, um eine neue Instanz des Typs voraussichtliche M_mainViewModel zuzuweisen. Weisen Sie einen Initialwert für den Titel des Buches zu. Implementieren Sie die Zugriffsfunktion für die MainViewModel-Eigenschaft. Aktualisieren Sie zum Schluss den Titel des Buches im Event-Handler der Schaltfläche. Entfernen Sie auch die **MyProperty** -Eigenschaft.
 
 ```cppwinrt
 // MainPage.cpp
 #include "pch.h"
 #include "MainPage.h"
-#include "BookstoreViewModel.h"
 
 using namespace winrt;
 using namespace Windows::UI::Xaml;
@@ -253,7 +256,7 @@ namespace winrt::Bookstore::implementation
         InitializeComponent();
     }
 
-    void MainPage::ClickHandler(IInspectable const&, RoutedEventArgs const&)
+    void MainPage::ClickHandler(Windows::Foundation::IInspectable const& /* sender */, Windows::UI::Xaml::RoutedEventArgs const& /* args */)
     {
         MainViewModel().BookSku().Title(L"To Kill a Mockingbird");
     }
@@ -266,7 +269,7 @@ namespace winrt::Bookstore::implementation
 ```
 
 ## <a name="bind-the-button-to-the-title-property"></a>Binden Sie die Schaltfläche an die **Title**-Eigenschaft.
-Öffnen Sie `MainPage.xaml` mit dem XAML-Markup für unsere UI-Hauptseite. Entfernen Sie den Namen von der Schaltfläche und ändern Sie den Wert der **Content**-Eigenschaft von einem Literal in einen Bindungsausdruck. Beachten Sie die Eigenschaft `Mode=OneWay` des Bindungsausdrucks (einseitig vom Ansichtsmodell zum UI). Ohne diese Eigenschaft reagiert die Benutzeroberfläche nicht auf Ereignisse zu Eigenschaftsänderungen.
+Öffnen Sie `MainPage.xaml` mit dem XAML-Markup für unsere UI-Hauptseite. Wie in der folgenden Auflistung dargestellt, entfernen Sie den Namen der Schaltfläche aus, und ändern Sie dessen Wert der **Content** -Eigenschaft von Literal in eine Bindungsausdruck. Beachten Sie die Eigenschaft `Mode=OneWay` des Bindungsausdrucks (einseitig vom Ansichtsmodell zum UI). Ohne diese Eigenschaft reagiert die Benutzeroberfläche nicht auf Ereignisse zu Eigenschaftsänderungen.
 
 ```xaml
 <Button Click="ClickHandler" Content="{x:Bind MainViewModel.BookSku.Title, Mode=OneWay}"/>
