@@ -10,14 +10,14 @@ ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, datentypen
 ms.localizationpriority: medium
 ms.openlocfilehash: 729a3c30f84e20a89912b728db1efecc3e54ad9e
-ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "2791575"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "2815192"
 ---
 # <a name="standard-c-data-types-and-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Standard C++ Datentypen und [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
-Mit C++/WinRT können Sie Windows-Runtime-APIs über Standard-C++ Datentypen aufrufen. Sie können standard-Zeichenfolgen an APIs übergeben (finden Sie unter [-Zeichenfolgen in C + / WinRT](strings.md)), und Sie können Initialisierung Listen und Containern, standard übergeben, APIs, die eine Sammlung semantisch erwarten.
+Mit C++/WinRT können Sie Windows-Runtime-APIs über Standard-C++ Datentypen aufrufen. APIs standardmäßige Zeichenfolgen übergeben (siehe [in C++-Zeichenfolgen / WinRT](strings.md)), und Sie können Initialisierung Listen und Standardcontainer APIs, die semantisch Auflistung erwarten.
 
 ## <a name="standard-initializer-lists"></a>Standard-Initialisierungslisten
 Eine Initialisierungsliste (**std::initializer_list**) ist ein Konstrukt aus der C++ Standard Library. Sie können Initialisierungslisten verwenden, wenn Sie bestimmte Windows-Runtime-Konstruktoren und -Methoden aufrufen. Beispielsweise können Sie [**DataWriter::WriteBytes**](/uwp/api/windows.storage.streams.datawriter.writebytes) mit einer Initialisierungsliste aufrufen.
@@ -92,7 +92,7 @@ std::array<byte, 3> theArray{ 99, 98, 97 };
 dataWriter.WriteBytes(theArray); // theArray is converted to an array_view before being passed to WriteBytes.
 ```
 
-C++/WinRT bindet **std::vector** als Windows-Runtime-Collection-Parameter. Sie können also ein **std::vector&lt;winrt::hstring&gt;** übergeben und es wird in die entsprechende Windows-Runtime-Collection **winrt::hstring** konvertiert. Es ist eine zusätzliche Details zu beachten, wenn der aufgerufene asynchron ausgeführt wird. Aufgrund der Implementierungsdetails des diesem Fall müssen Sie ein r-Wert enthalten, daher müssen Sie eine Kopie oder eine Verschiebung der Vektor angeben. Im folgenden Codebeispiel wird wir Besitz der Vektor fortfahren, der den Parametertyp akzeptiert vom angerufenen Async-Objekt (und klicken Sie dann wir Sie darauf achten, nicht für den Zugriff auf `vecH` erneut nach dem Verschieben). Wenn Sie mehr über Rvalues erfahren möchten, finden Sie unter [Wert Kategorien und Verweise auf diese](cpp-value-categories.md).
+C++/WinRT bindet **std::vector** als Windows-Runtime-Collection-Parameter. Sie können also ein **std::vector&lt;winrt::hstring&gt;** übergeben und es wird in die entsprechende Windows-Runtime-Collection **winrt::hstring** konvertiert. Gibt eine zusätzliche Details zu beachten ist der aufgerufene asynchrone. Durch die Implementierungsdetails von diesem Fall müssen Sie einen Rvalue bereitzustellen, müssen Sie eine Kopie oder eine Verschiebung des Vektors angeben. Im Codebeispiel unten verschieben wir an den Vektor Parametertyp akzeptiert vom aufgerufenen Async-Objekt (und Sie nicht Zugriff auf `vecH` wieder verschieben). Weitere Informationen zu Rvalues, finden Sie unter [wertkategorien und Verweise](cpp-value-categories.md).
 
 ```cppwinrt
 IAsyncAction retrieve_properties_async(StorageFile const storageFile, std::vector<winrt::hstring> vecH)
@@ -101,7 +101,7 @@ IAsyncAction retrieve_properties_async(StorageFile const storageFile, std::vecto
 }
 ```
 
-Sie können aber kein **std::vector&lt;std::wstring&gt;** übergeben, da eine Windows-Runtime-Collection erwartet wird. Dies liegt daran, dass die C++ die Typparameter dieser Collection nicht erzwingt, nachdem sie in die entsprechende Windows-Runtime-Collection **std::wstring** konvertiert wurde. Aus diesem Grund nicht im folgenden Codebeispiel wird kompiliert (und die Lösung besteht darin, übergeben Sie eine **std&lt;winrt::hstring&gt; ** stattdessen, wie oben dargestellt).
+Sie können aber kein **std::vector&lt;std::wstring&gt;** übergeben, da eine Windows-Runtime-Collection erwartet wird. Dies liegt daran, dass die C++ die Typparameter dieser Collection nicht erzwingt, nachdem sie in die entsprechende Windows-Runtime-Collection **std::wstring** konvertiert wurde. Daher das folgende Codebeispiel nicht kompiliert (und die Lösung übergeben einer **sind&lt;winrt::hstring&gt; ** stattdessen, wie oben dargestellt).
 
 ```cppwinrt
 IAsyncAction retrieve_properties_async(StorageFile const& storageFile, std::vector<std::wstring> const& vecW)
@@ -113,7 +113,7 @@ IAsyncAction retrieve_properties_async(StorageFile const& storageFile, std::vect
 ## <a name="raw-arrays-and-pointer-ranges"></a>Raw-Arrays und Zeigerbereiche
 In Anbetracht dessen, dass in der C++ Standard Library in Zukunft ein äquivalenter Typ existieren könnte, können Sie auch direkt mit **array_view** arbeiten, wenn Sie dies wünschen oder benötigen.
 
-**Array_view** hat Konvertierung Konstruktoren aus einer unformatierten Arrays und aus einem Textbereich **T&ast; ** (Zeiger auf den Typ des Elements).
+**Array_view** hat konvertierungskonstruktoren aus unformatierten Arrays und verschiedener **T&ast; ** (Zeiger auf den Elementtyp).
 
 ```cppwinrt
 using namespace winrt;
@@ -131,8 +131,8 @@ Eine Vielzahl von Konstruktoren, Operatoren, Funktionen und Iteratoren sind für
 
 Weitere Beispiele und Informationen finden Sie im API-Referenzthema zu [**winrt::array_view**](/uwp/cpp-ref-for-winrt/array-view).
 
-## <a name="ivectorlttgt-and-standard-iteration-constructs"></a>**IVector&lt;T&gt; ** und standard Iteration Konstrukte
-[**SyndicationFeed.Items**](/uwp/api/windows.web.syndication.syndicationfeed.items) ist ein Beispiel für eine Windows-Laufzeit-API, die eine Sammlung von Typ zurückgibt [**IVector&lt;T&gt; **](/uwp/api/windows.foundation.collections.ivector_t_) (in C + projiziert / WinRT als **Winrt::Windows::Foundation::Collections::IVector&lt;T&gt; ** ). Können dieses Typs mit standard Iteration-Konstrukte wie bereichsbasierte `for`.
+## <a name="ivectorlttgt-and-standard-iteration-constructs"></a>**IVector&lt;T&gt; ** und standard Iteration
+[**SyndicationFeed.Items**](/uwp/api/windows.web.syndication.syndicationfeed.items) ist ein Beispiel für eine Windows-Runtime-API, die eine Auflistung vom Typ zurückgibt [**IVector&lt;T&gt; **](/uwp/api/windows.foundation.collections.ivector_t_) (in C# projiziert / WinRT als **Winrt::Windows::Foundation::Collections::IVector&lt;T&gt; ** ). Können Sie dieses Typs mit standard Iteration Konstrukte wie bereichsbasierten `for`.
 
 ```cppwinrt
 // main.cpp
@@ -152,8 +152,8 @@ void PrintFeed(SyndicationFeed const& syndicationFeed)
 }
 ```
 
-## <a name="c-coroutines-with-asynchronous-windows-runtime-apis"></a>C++ Coroutinen mit asynchronen Windows-Runtime-APIs
-Sie können auch weiterhin mithilfe der [Parallel Patterns Library (PPL)](/cpp/parallel/concrt/parallel-patterns-library-ppl) beim asynchronen Windows Runtime-APIs aufrufen. In vielen Fällen bieten C++ Coroutinen Redensart effizient und mehr auf einfache Weise codiert für die Interaktion mit asynchronen Objekte. Weitere Informationen und Codebeispiele finden Sie unter [Parallelität und asynchrone Vorgänge mit C + / WinRT](concurrency.md).
+## <a name="c-coroutines-with-asynchronous-windows-runtime-apis"></a>C++ Coroutinen mit asynchronen APIs der Windows-Runtime
+Sie können weiterhin die [Parallel Patterns Library (PPL)](/cpp/parallel/concrt/parallel-patterns-library-ppl) verwenden, wenn Sie asynchrone Windows-Runtime-APIs aufrufen. In vielen Fällen bieten C++ Coroutinen Redensart effizienter und mehr problemlos codierten für asynchrone Objekte interagieren. Weitere Informationen und Codebeispiele finden Sie unter [Parallelität und asynchroner Vorgänge mit C / WinRT](concurrency.md).
 
 ## <a name="important-apis"></a>Wichtige APIs
 * [IVector&lt;T&gt;](/uwp/api/windows.foundation.collections.ivector_t_)

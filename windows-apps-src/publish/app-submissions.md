@@ -11,23 +11,23 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: cf1e647931b6e7680fb65ddcf200bf2a74be716a
-ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "2795832"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "2815022"
 ---
 # <a name="app-submissions"></a>App-Übermittlungen
 
 
 Nachdem Sie Ihre [App durch die Reservierung eines Namens erstellt haben](create-your-app-by-reserving-a-name.md), können Sie mit der Veröffentlichung beginnen. Der erste Schritt besteht darin, eine ***Übermittlung** zu erstellen.
 
-Sie beginnen mit der Einreichung, sobald Ihre App fertig und bereit für die Veröffentlichung ist. Sie können mit der Eingabe von Infos beginnen, noch bevor Sie eine einzige Codezeile programmiert haben. So können Sie wieder und darauf zu arbeiten, wenn Sie bereit sind werden, Updates, die Sie an Ihre Bereitstellung gespeichert.
+Sie beginnen mit der Einreichung, sobald Ihre App fertig und bereit für die Veröffentlichung ist. Sie können mit der Eingabe von Infos beginnen, noch bevor Sie eine einzige Codezeile programmiert haben. Updates an Ihren Beitrag werden gespeichert, sodass wieder und arbeiten, wenn Sie bereit sind.
 
 > [!NOTE]
-> Benötigen Sie ein [Entwicklerkonto](http://go.microsoft.com/fwlink/p/?LinkId=615100) , um Zugriff auf [Windows-Entwicklungscenter](https://partner.microsoft.com/dashboard) und Übermitteln von apps im Microsoft Store.
+> Sie müssen ein [Entwicklerkonto](http://go.microsoft.com/fwlink/p/?LinkId=615100) um [Windows-Entwicklungscenter](https://partner.microsoft.com/dashboard) und apps im Microsoft Store übermitteln.
 
-Nach der Veröffentlichung Ihrer App können Sie eine aktualisierte Version veröffentlichen, indem Sie eine weitere Einreichung im Dashboard erstellen. Durch die Erstellung einer neuen Einreichung können Sie alle erforderlichen Änderungen vornehmen und veröffentlichen – z. B. neue Pakete hochladen oder Preisdetails oder App-Kategorie ändern. Um eine neue Übermittlung für eine veröffentlichte App zu erstellen, klicken Sie neben der aktuellen Übermittlung, die auf der App-Übersichtsseite angezeigt wird, auf **Aktualisieren**. Sie können auch [eine app aus dem Speicher entfernt](guidance-for-app-package-management.md#removing-an-app-from-the-store) , wenn Sie dazu (und klicken Sie dann zur Verfügung gestellt einem späteren Zeitpunkt erneut, wenn Sie möchten) müssen.
+Nach der Veröffentlichung Ihrer App können Sie eine aktualisierte Version veröffentlichen, indem Sie eine weitere Einreichung im Dashboard erstellen. Durch die Erstellung einer neuen Einreichung können Sie alle erforderlichen Änderungen vornehmen und veröffentlichen – z. B. neue Pakete hochladen oder Preisdetails oder App-Kategorie ändern. Um eine neue Übermittlung für eine veröffentlichte App zu erstellen, klicken Sie neben der aktuellen Übermittlung, die auf der App-Übersichtsseite angezeigt wird, auf **Aktualisieren**. Sie können auch [eine Anwendung aus dem Speicher entfernen](guidance-for-app-package-management.md#removing-an-app-from-the-store) möchten Sie dazu (und anschließend zur Verfügung stellen, wenn Sie möchten).
 
 > [!NOTE]
 > In diesem Abschnitt der Dokumentation wird das Erstellen einer App-Übermittlung über das Dev Center-Dashboard beschrieben. Alternativ dazu können Sie auch die [Microsoft Store-Übermittlungs-API](../monetize/create-and-manage-submissions-using-windows-store-services.md) verwenden, um App-Übermittlungen zu automatisieren.
@@ -36,7 +36,7 @@ Nach der Veröffentlichung Ihrer App können Sie eine aktualisierte Version ver�
 
 Hier finden Sie eine Liste mit den Informationen, die Sie beim Erstellen Ihrer App-Übermittlung angeben können, sowie Links zu weiteren Informationen.
 
-Die erforderlichen Elemente sind im Folgenden aufgeführt. Einige Bereiche sind optional oder verfügen über Standardwerte, die Sie nach Bedarf ändern können. Sie müssen nicht auf diese Abschnitte in dieser Reihenfolge arbeiten.
+Die erforderlichen Elemente sind im Folgenden aufgeführt. Einige Bereiche sind optional oder verfügen über Standardwerte, die Sie nach Bedarf ändern können. Sie müssen diese Abschnitte in der hier aufgeführten Reihenfolge bearbeiten.
 
 ### <a name="pricing-and-availability-page"></a>Seite „Preise und Verfügbarkeit“
 | Feldname                    | Hinweise                                       | Weitere Informationen                                                             |
@@ -113,7 +113,7 @@ Sie benötigen alle erforderlichen Informationen für mindestens eine der von Ih
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **Optionen zum Anhalten der Veröffentlichung**     | Standard: Veröffentlichen Sie diese Übermittlung, sobald die Zertifizierung abgeschlossen ist (oder ab einem im Abschnitt des Zeitplans ausgewählten Datum)      | [Optionen zum Anhalten der Veröffentlichung](manage-submission-options.md#publishing-hold-options)    
 | **Hinweise für Zertifizierung**     | Empfohlen          | [Hinweise für Zertifizierung](notes-for-certification.md)             |
-| **Eingeschränkte Funktionen**     | Erforderlich, wenn Ihr Produkt [eingeschränkten Funktionen zu jedem beliebigen] deklariert (... /Packaging/App-Capability-declarations.MD#Restricted-Capabilities    | [Eingeschränkte Funktionen](manage-submission-options.md#publishing-hold-options)       
+| **Eingeschränkte Funktionen**     | Wenn Ihr Produkt alle [eingeschränkten Funktionen] deklariert (... /Packaging/App-Capability-declarations.MD#Restricted-Capabilities    | [Eingeschränkte Funktionen](manage-submission-options.md#publishing-hold-options)       
 
 <span/>
 

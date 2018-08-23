@@ -4,18 +4,18 @@ Description: The Microsoft Store offers Mobile Operator Billing as a payment met
 title: Abrechnung über den Mobilfunkanbieter
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
 ms.author: wdg-dev-content
-ms.date: 06/08/2018
+ms.date: 08/23/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Mobilfunkanbieter, mobile Abrechnung, Abrechnung über den Mobilfunkanbieter
 ms.localizationpriority: medium
-ms.openlocfilehash: 4bfb2fbbea42aaf1ed3c0ffc42f71dc38b2a1ede
-ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.openlocfilehash: c8d0e3093a6a44f748ca78ff3fad977f2cc94d77
+ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "2788115"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "2810476"
 ---
 # <a name="mobile-operator-billing"></a>Abrechnung über den Mobilfunkanbieter
 
@@ -51,6 +51,7 @@ Die Abrechnung über den Mobilfunkanbieter wird aktuell von den folgenden Mobilf
 | Spanien           | Orange                           |
 | Schweden          | Telenor, 3                       |
 | Schweiz     | Swisscom, Sunrise                |
+| Taiwan          | FarEasTone                       |
 | Türkei          | Turkcell                         |
 | Vereinigte Arabische Emirate | Etisalat                    |
 | USA   | Sprint, Verizon                  |

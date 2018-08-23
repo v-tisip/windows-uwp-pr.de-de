@@ -11,11 +11,11 @@ keywords: Windows10, UWP
 ms.assetid: 7bc2006f-fc5a-4ff6-b573-60933882caf8
 ms.localizationpriority: medium
 ms.openlocfilehash: db2c360a881071db14a1e65ffe2cd9a5bb16f0fe
-ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "2788075"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "2814992"
 ---
 # <a name="create-a-certificate-for-package-signing"></a>Erstellen eines Paketsignaturzertifikats
 
@@ -58,7 +58,7 @@ Basierend auf der „AppxManifest.xml”-Datei aus dem vorherigen Beispiel, soll
 New-SelfSignedCertificate -Type Custom -Subject "CN=Contoso Software, O=Contoso Corporation, C=US" -KeyUsage DigitalSignature -FriendlyName <Your Friendly Name> -CertStoreLocation "Cert:\LocalMachine\My"
 ```
 
-Nach dem Ausführen dieses Befehls wird das Zertifikat dem lokalen Zertifikatspeicher hinzugefügt, wie im Parameter ‑CertStoreLocation angegeben. Das Ergebnis des Befehls wird auch der Fingerabdruck des Zertifikats zur Folge.  
+Nach dem Ausführen dieses Befehls wird das Zertifikat dem lokalen Zertifikatspeicher hinzugefügt, wie im Parameter ‑CertStoreLocation angegeben. Das Ergebnis des Befehls erzeugt auch der Fingerabdruck des Zertifikats.  
 
 **Hinweis:**  
 Sie können das Zertifikat mithilfe der folgenden Befehle in einem PowerShell-Fenster anzeigen:
