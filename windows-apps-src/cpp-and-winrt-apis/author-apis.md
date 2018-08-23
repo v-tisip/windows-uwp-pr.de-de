@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, uwp, Standard, c++, cpp, winrt, projiziert, Projektion, Implementierung, implementieren, Laufzeitklasse, Aktivierung
 ms.localizationpriority: medium
 ms.openlocfilehash: d2f9b336d9a95efe28668991d66ab0a9e48e96e7
-ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "2792022"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "2815872"
 ---
 # <a name="author-apis-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a><span data-ttu-id="5b646-104">Erstellen von APIs mit [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)</span><span class="sxs-lookup"><span data-stu-id="5b646-104">Author APIs with [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)</span></span>
 <span data-ttu-id="5b646-105">Dieses Thema zeigt, wie man C++/WinRT-APIs mit Hilfe der [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements)-Basisstruktur direkt oder indirekt erstellt.</span><span class="sxs-lookup"><span data-stu-id="5b646-105">This topic shows how to author C++/WinRT APIs by using the [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements) base struct, either directly or indirectly.</span></span> <span data-ttu-id="5b646-106">In diesem Zusammenhang werden die Synonyme *Produzieren* oder *Implementieren* für den Begriff *Erstellen* verwendet.</span><span class="sxs-lookup"><span data-stu-id="5b646-106">Synonyms for *author* in this context are *produce*, or *implement*.</span></span> <span data-ttu-id="5b646-107">Dieses Thema behandelt die folgenden Szenarien für die Implementierung von APIs für einen C++/WinRT-Typ in dieser Reihenfolge.</span><span class="sxs-lookup"><span data-stu-id="5b646-107">This topic covers the following scenarios for implementing APIs on a C++/WinRT type, in this order.</span></span>
