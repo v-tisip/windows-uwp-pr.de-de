@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: c9db9f3ce4397bec6fb0b6b339875c206d17c3fd
-ms.sourcegitcommit: f2f4820dd2026f1b47a2b1bf2bc89d7220a79c1a
+ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "2791735"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "2820068"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a><span data-ttu-id="f84c8-103">Lokalisieren von Zeichenfolgen in der Benutzeroberfläche und im App-Paketmanifest</span><span class="sxs-lookup"><span data-stu-id="f84c8-103">Localize strings in your UI and app package manifest</span></span>
 <span data-ttu-id="f84c8-104">Weitere Informationen zu einer Werterhöhung Ihrer App durch Lokalisierung finden Sie unter [Globalisierung und Lokalisierung](../design/globalizing/globalizing-portal.md).</span><span class="sxs-lookup"><span data-stu-id="f84c8-104">For more info about the value proposition of localizing your app, see [Globalization and localization](../design/globalizing/globalizing-portal.md).</span></span>
