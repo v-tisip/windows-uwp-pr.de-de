@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Links, Windows Store-Protokoll, mit einer App verknüpfen, App verknüpfen
 ms.localizationpriority: medium
 ms.openlocfilehash: 0025321aa73a66cc0a976bd347e613de3c3c4765
-ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
+ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "2815630"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "2836504"
 ---
 # <a name="link-to-your-app"></a>Erstellen eines Links zu Ihrer App
 

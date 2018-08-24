@@ -10,15 +10,14 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 98908855acbc341c14464881aeb058a331e7b2a3
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 17e5aa64fff2c42974dbb78ce3cdcff1ca414946
+ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691209"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "2831607"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Tests mit dem Emulator für Microsoft Windows10Mobile
-
 
 Mit den Tools des Emulators für Microsoft Windows10Mobile können Sie die praktische Interaktion mit einem Gerät simulieren und die Features Ihrer App testen. Der Emulator ist eine Desktopanwendung zur Emulierung eines mobilen Geräts unter Windows10. Die Anwendung stellt eine virtualisierte Umgebung bereit, in der Sie Windows-Apps ohne physisches Gerät debuggen und testen können. Außerdem steht Ihnen eine isolierte Umgebung für Ihre Anwendungsprototypen zur Verfügung.
 
@@ -30,9 +29,9 @@ Sie können Ihre universelle App mithilfe eines eindeutigen Windows10Mobile-Emul
 
 Ihr Computer muss folgende Anforderungen erfüllen:
 
-BIOS
+CPU (diese Einstellungen können gegebenenfalls im BIOS aktiviert werden)
 
--   Hardwareunterstützte Virtualisierung
+-   Hardwareunterstützte Virtualisierung ([Kompatibilität](https://www.microsoft.com/download/details.aspx?id=592)).
 -   SLAT (Second Level Address Translation)
 -   Hardwarebasierte Datenausführungsverhinderung (Data Execution Prevention, DEP)
 
@@ -50,23 +49,28 @@ Informationen zum Überprüfen der BIOS-Anforderungen finden Sie unter [So wird'
 
 Wählen Sie zum Überprüfen der RAM- und Betriebssystemanforderungen in der Systemsteuerung **System und Sicherheit** und anschließend **System**.
 
-Für den Emulator für Microsoft Windows 10 Mobile wird Visual Studio2015 benötigt. Er ist nicht mit älteren Versionen von Visual Studio kompatibel.
+Microsoft-Emulator für Windows 10 Mobile erfordert Visual Studio 2015 oder höher. Es ist nicht abwärtskompatibel mit früheren Versionen von Visual Studio.
 
 Der Microsoft-Emulator für Windows10Mobile kann keine Apps laden, die für eine WindowsPhone-Betriebssystemversion vor Windows Phone OS7.1 konzipiert sind.
 
-## <a name="installing-and-uninstalling"></a>Installation und Deinstallation
+## <a name="installing-uninstalling-and-running-the-emulator"></a>Installieren, deinstallieren und Ausführen des Emulators
 
--   **Installation**.
+### <a name="installing"></a>Installation
+Der Microsoft-Emulator für Windows10Mobile ist im Windows10-SDK enthalten. Das Windows10-SDK und der Emulator können zusammen mit Visual Studioinstalliert werden. Weitere Informationen finden Sie auf der [Downloadseite für Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=534785).
 
-    Der Microsoft-Emulator für Windows10Mobile ist im Windows10-SDK enthalten. Das Windows10-SDK und der Emulator können zusammen mit Visual Studioinstalliert werden. Weitere Informationen finden Sie auf der [Downloadseite für Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=534785).
+Der Emulator für Microsoft Windows 10 Mobile kann auch über das [Microsoft-Emulator-Setup](https://go.microsoft.com/fwlink/p/?LinkID=615095) installiert werden.
 
-    Der Emulator für Microsoft Windows 10 Mobile kann auch über das [Microsoft-Emulator-Setup](https://go.microsoft.com/fwlink/p/?LinkID=615095) installiert werden.
+### <a name="uninstalling"></a>Deinstallation
 
--   **Deinstallation**.
+Der Microsoft-Emulator für Windows10Mobile kann über die Setup-/Reparaturfunktion von Visual Studio deinstalliert werden Alternativ können Sie in der Systemsteuerung**** zu **Programme und Features** navigieren und den Emulator dort entfernen.
 
-    Der Microsoft-Emulator für Windows10Mobile kann über die Setup-/Reparaturfunktion von Visual Studio deinstalliert werden Alternativ können Sie in der Systemsteuerung**** zu **Programme und Features** navigieren und den Emulator dort entfernen.
+Wenn Sie den Microsoft-Emulator für Windows10Mobile deinstallieren, wird automatisch auch der virtuelle, für den Emulator erstellte Hyper-V-Ethernetadapter entfernt. Dieser virtuelle Adapter kann in der **Systemsteuerung** unter **Netzwerkverbindungen** manuell entfernt werden.
 
-    Wenn Sie den Microsoft-Emulator für Windows10Mobile deinstallieren, wird automatisch auch der virtuelle, für den Emulator erstellte Hyper-V-Ethernetadapter entfernt. Dieser virtuelle Adapter kann in der **Systemsteuerung** unter **Netzwerkverbindungen** manuell entfernt werden.
+### <a name="running"></a>Running
+
+Um eine app im Emulator ausgeführt werden soll, wählen Sie einfach ein emulierten Gerät aus dem Dropdownmenü **Führen Sie** in Visual Studio.
+
+![Verfügbare Emulatoren mit Auflösung, Größe und Arbeitsspeicher](images/em-list.png)
 
 ## <a name="whats-new-in-microsoft-emulator-for-windows-10-mobile"></a>Neues beim Emulator für Microsoft Windows 10 Mobile
 
@@ -82,7 +86,7 @@ Zusätzlich zu den neuen Features, die im vorherigen Abschnitt erwähnt wurden, 
 
 -   **Bildschirmauflösung, Bildschirmgröße und Arbeitsspeicher**. Stellen Sie Ihre App einem breiten Markt zur Verfügung, indem Sie sie unter verschiedenen Emulatorimages testen, die verschiedene Bildschirmauflösungen, physische Größen und Arbeitsspeicherbeschränkungen simulieren.
 
-    ![Verfügbare Emulatoren mit Auflösung, Größe und Arbeitsspeicher](images/em-list.png)
+![Verfügbare Emulatoren mit Auflösung, Größe und Arbeitsspeicher](images/em-list.png)
 
 -   **Bildschirmkonfiguration**. Ändern Sie den Emulatormodus von Hochformat in Querformat. Ändern Sie die Zoomeinstellung, um den Emulator an Ihren Desktopbildschirm anzupassen.
 

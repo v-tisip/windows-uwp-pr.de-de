@@ -10,12 +10,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cf1e647931b6e7680fb65ddcf200bf2a74be716a
-ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
+ms.openlocfilehash: 9802577f9252b590657406bcb59b0c28adeb4781
+ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "2815022"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "2832026"
 ---
 # <a name="app-submissions"></a>App-Übermittlungen
 
@@ -113,7 +113,7 @@ Sie benötigen alle erforderlichen Informationen für mindestens eine der von Ih
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **Optionen zum Anhalten der Veröffentlichung**     | Standard: Veröffentlichen Sie diese Übermittlung, sobald die Zertifizierung abgeschlossen ist (oder ab einem im Abschnitt des Zeitplans ausgewählten Datum)      | [Optionen zum Anhalten der Veröffentlichung](manage-submission-options.md#publishing-hold-options)    
 | **Hinweise für Zertifizierung**     | Empfohlen          | [Hinweise für Zertifizierung](notes-for-certification.md)             |
-| **Eingeschränkte Funktionen**     | Wenn Ihr Produkt alle [eingeschränkten Funktionen] deklariert (... /Packaging/App-Capability-declarations.MD#Restricted-Capabilities    | [Eingeschränkte Funktionen](manage-submission-options.md#publishing-hold-options)       
+| **Eingeschränkte Funktionen**     | Erforderlich, wenn Ihr Produkt zu jedem beliebigen [eingeschränkte Funktionen](../packaging/app-capability-declarations.md#restricted-capabilities) deklariert    | [Eingeschränkte Funktionen](manage-submission-options.md#publishing-hold-options)       
 
 <span/>
 
