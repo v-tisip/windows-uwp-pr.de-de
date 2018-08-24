@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b45196a83edf45a69f6b79ab82542cef6817703
-ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
+ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "2820091"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "2835686"
 ---
 # <a name="responsive-layouts-with-xaml"></a><span data-ttu-id="647a4-103">Dynamische Layouts mit XAML</span><span class="sxs-lookup"><span data-stu-id="647a4-103">Responsive layouts with XAML</span></span>
 

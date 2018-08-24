@@ -10,11 +10,11 @@ ms.prod: Microsoft Edge, Azure, Visual Studio Code
 ms.technology: web
 ms.localizationpriority: medium
 ms.openlocfilehash: 42f11cbdd749a44c4ba0d8bc1a0397a4f2882257
-ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
+ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "2814562"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "2835217"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a><span data-ttu-id="c7cd9-104">Erstellen einer Web-App mit einer einzelnen Seite mit REST API-Backend</span><span class="sxs-lookup"><span data-stu-id="c7cd9-104">Create a single-page web app with REST API backend</span></span>
 

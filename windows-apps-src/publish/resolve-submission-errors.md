@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d027e35f8fe76a0d4139301f1a7dabc7798348a
-ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
+ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "2820527"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "2835315"
 ---
 # <a name="resolve-submission-errors"></a><span data-ttu-id="28589-103">Beheben von Übermittlungsfehlern</span><span class="sxs-lookup"><span data-stu-id="28589-103">Resolve submission errors</span></span>
 

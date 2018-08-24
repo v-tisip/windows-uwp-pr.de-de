@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, portieren, migrieren, interoperabilität, C++/CX
 ms.localizationpriority: medium
 ms.openlocfilehash: 02aa86231cd611bd20a386d3da2f9d2b6dc5df66
-ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
+ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "2811303"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "2831436"
 ---
 # <a name="interop-between-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-and-ccx"></a><span data-ttu-id="2c50a-104">Interoperabilität zwischen [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) und C++/CX</span><span class="sxs-lookup"><span data-stu-id="2c50a-104">Interop between [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) and C++/CX</span></span>
 <span data-ttu-id="2c50a-105">In diesem Thema werden zwei Hilfsfunktionen gezeigt, die verwendet werden können, um zwischen [C++ / CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live)- und C++ / WinRT-Objekten zu konvertieren.</span><span class="sxs-lookup"><span data-stu-id="2c50a-105">This topic shows two helper functions that can be used to convert between [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) and C++/WinRT objects.</span></span> <span data-ttu-id="2c50a-106">Können sie Sie Interop zwischen Code, die zwei Sprache Projektionen verwendet wird, oder Sie können die Funktionen verwenden, wie Sie den Code schrittweise aus C + verschieben / C + CX / WinRT (finden Sie unter [C + verschieben / WinRT von C + / CX](move-to-winrt-from-cx.md)).</span><span class="sxs-lookup"><span data-stu-id="2c50a-106">You can use them to interop between code that uses the two language projections, or you can use the functions as you gradually move your code from C++/CX to C++/WinRT (see [Move to C++/WinRT from C++/CX](move-to-winrt-from-cx.md)).</span></span>
