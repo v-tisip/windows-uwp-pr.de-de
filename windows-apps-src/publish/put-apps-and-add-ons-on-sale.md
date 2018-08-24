@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a25980c964e399931a088e281e959df3095ffe9a
-ms.sourcegitcommit: 9c79fdab9039ff592edf7984732d300a14e81d92
+ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "2819481"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "2840797"
 ---
 # <a name="put-apps-and-add-ons-on-sale"></a><span data-ttu-id="9585d-103">Anbieten vergünstigter Apps und Add-Ons</span><span class="sxs-lookup"><span data-stu-id="9585d-103">Put apps and add-ons on sale</span></span>
 
