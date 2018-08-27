@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b11151df981a4b5ce233458581d21e405be9844c
-ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "2843756"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "2854983"
 ---
 # <a name="user-activities-best-practices"></a><span data-ttu-id="46dac-104">Bewährte Methoden für Benutzer Aktivitäten</span><span class="sxs-lookup"><span data-stu-id="46dac-104">User Activities best practices</span></span>
 

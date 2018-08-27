@@ -12,11 +12,11 @@ keywords: windows10, UWP
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
 ms.openlocfilehash: fe36fec72645558c539dd8270fd15d35d92b66b5
-ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "2839122"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "2857464"
 ---
 # <a name="distribute-a-packaged-desktop-app-desktop-bridge"></a><span data-ttu-id="e242d-103">Verteilen einer verpackten Desktop-App (Desktop-Brücke)</span><span class="sxs-lookup"><span data-stu-id="e242d-103">Distribute a packaged desktop app (Desktop Bridge)</span></span>
 
