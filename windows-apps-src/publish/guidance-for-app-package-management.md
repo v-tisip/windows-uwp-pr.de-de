@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 9b0b6315b1177138c3ede7834e2dbc792ee106dd
-ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "2834452"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "2856723"
 ---
 # <a name="guidance-for-app-package-management"></a>Leitfaden für die Verwaltung von App-Paketen
 
@@ -32,7 +32,7 @@ Erfahren Sie, wie App-Pakete für Ihre Kunden verfügbar gemacht werden und best
 
 Auf unterschiedlichen Betriebssystemen können unterschiedliche Pakettypen ausgeführt werden. Wenn mindestens zwei Pakete auf dem Gerät eines Kunden ausgeführt werden können, stellt der Microsoft Store die beste verfügbare Übereinstimmung bereit.
 
-Im Allgemeinen können höhere Betriebssystemversionen Pakete ausführen, die auf frühere Betriebssystemversionen für dieselbe Gerätefamilie abzielen. Allerdings erhalten Kunden nur die Pakete, wenn die app ein Paket enthält, die ihre aktuelle Version des Betriebssystems beruht.
+Im Allgemeinen können höhere Betriebssystemversionen Pakete ausführen, die auf frühere Betriebssystemversionen für dieselbe Gerätefamilie abzielen. Jedoch erhalten Kunden nur die Pakete, wenn die Anwendung ein Paket enthält, die die Version des Betriebssystems abzielt.
 
 Beispielsweise können Geräte unter Windows10 alle zuvor unterstützten Betriebssystemversionen (pro Gerätefamilie) ausführen. Auf Desktopgeräten unter Windows10 können Apps ausgeführt werden, die für Windows8.1 oder Windows8 erstellt wurden. Auf Mobilgeräten unter Windows10 können Apps ausgeführt werden, die für Windows Phone8.1, WindowsPhone8 und sogar Windows Phone7.x erstellt wurden. 
 
@@ -77,7 +77,7 @@ Beachten Sie zudem, dass diese Beispiel-App kein Paket enthält, das auf Windows
 |--------------------------------------|----------------------------------------------|
 | Windows10 (universelle Gerätefamilie) | Windows10 (alle Gerätefamilien)             |
 
-In der Beispiel-App4 können Geräte unter Windows10 die App abrufen. Sie steht jedoch nicht für Kunden einer früheren Betriebssystemversion zur Verfügung. Da das Paket UWP-Gerätefamilie der universellen bezieht, auf einem Gerät mit Windows 10 (pro [Gerät Produktfamilie Verfügbarkeit Auswahl](device-family-availability.md)) zur Verfügung.
+In der Beispiel-App4 können Geräte unter Windows10 die App abrufen. Sie steht jedoch nicht für Kunden einer früheren Betriebssystemversion zur Verfügung. Da das Paket UWP universal Gerätefamilie abzielt, werden auf Windows 10 Geräte (pro Ihre [Geräte Familie Verfügbarkeit Auswahl](device-family-availability.md)) verfügbar.
 
 
 ## <a name="removing-an-app-from-the-store"></a>Entfernen einer App aus dem Store
@@ -99,9 +99,9 @@ Nachdem die Bereitstellung der App aufgehoben wurde, wird sie weiterhin in Ihrem
 
 ## <a name="removing-packages-for-a-previously-supported-device-family"></a>Entfernen von Paketen für eine zuvor unterstützte Gerätefamilie
 
-Wenn Sie alle Pakete für eine bestimmte [Produktfamilie Gerät](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) , die Ihre app entfernen um zu bestätigen, dass dies beabsichtigt ist, bevor Sie Ihre Änderungen, auf der Seite **Pakete speichern können** zuvor unterstützt Sie werden aufgefordert.
+Wenn Sie alle Pakete für eine bestimmte [Familie](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) , die Ihrer Anwendung werden Sie aufgefordert entfernen um zu bestätigen, dass dies Ihre Absicht vor dem Speichern der Änderungen auf der Seite **Pakete** zuvor unterstützt,
 
-Beim Veröffentlichen einer Übermittlung, die alle Pakete entfernt, die auf einem Gerät-Produktfamilie ausgeführt werden, die zuvor Ihre app unterstützt, werden neue Kunden nicht um die app auf diesem Gerät-Produktfamilie erwerben können. Sie können jederzeit ein weiteres Update veröffentlichen, um erneut Pakete für diese Gerätefamilie anzubieten.
+Beim Veröffentlichen eines Antrags auf Zulassung, das alle Pakete entfernt, die auf einem Gerät ausgeführt werden, die Ihre Anwendung zuvor unterstützt werden neue Kunden nicht die app auf diesem Gerät erwerben. Sie können jederzeit ein weiteres Update veröffentlichen, um erneut Pakete für diese Gerätefamilie anzubieten.
 
 Hinweis: Auch wenn Sie alle Pakete entfernen, die eine bestimmte Gerätefamilie unterstützen, können vorhandene Kunden, die die App auf diesem Gerätetyp bereits installiert haben, diese weiterhin verwenden und erhalten alle Updates, die Sie später zur Verfügung stellen.
 
@@ -110,7 +110,7 @@ Hinweis: Auch wenn Sie alle Pakete entfernen, die eine bestimmte Gerätefamilie 
 
 ## <a name="adding-packages-for-windows-10-to-a-previously-published-app"></a>Hinzufügen von Paketen für Windows10 zu einer zuvor veröffentlichten App
 
-Wenn Sie über eine App im Store verfügen, die auf Windows 8.x und/oder Windows Phone 8.x ausgerichtet ist, und Sie die App für Windows10 aktualisieren möchten, müssen Sie eine neue Übermittlung erstellen und die UWP-Pakete „.appxupload“ während des Schritts [Pakete](upload-app-packages.md) hochladen. Nachdem Ihre app die Zertifizierung durchläuft, erhalten Kunden, die bereits hatte Ihrer app und befinden sich jetzt auf Windows 10 Ihr Paket UWP als ein Update aus dem Speicher. Das UWP-Paket steht auch für Käufe von Neukunden unter Windows 10 zur Verfügung.
+Wenn Sie über eine App im Store verfügen, die auf Windows 8.x und/oder Windows Phone 8.x ausgerichtet ist, und Sie die App für Windows10 aktualisieren möchten, müssen Sie eine neue Übermittlung erstellen und die UWP-Pakete „.appxupload“ während des Schritts [Pakete](upload-app-packages.md) hochladen. Nach der Zertifizierung Ihrer Anwendung durchläuft erhalten Kunden bereits Ihre app und befinden sich jetzt auf Windows 10 UWP-Paket als Update aus dem Speicher. Das UWP-Paket steht auch für Käufe von Neukunden unter Windows 10 zur Verfügung.
 
 > [!NOTE]
 > Nachdem ein Kunde unter Windows 10 das UWP-Paket erhalten hat, können Sie für diesen Kunden kein Rollback für eine frühere Betriebssystemversion mehr ausführen. 
@@ -122,9 +122,9 @@ Weitere Informationen zum Verpacken von UWP-Apps für den Store finden Sie unter
 > [!IMPORTANT]
 > Beachten Sie beim Bereitstellen von Paketen für die universelle Gerätefamilie, dass jeder Kunde, der Ihre App bereits auf einem früheren Betriebssystem (WindowsPhone8, Windows8.1 usw.) verwendet hat und anschließend ein Upgrade auf Windows10 ausführt, auf Ihr Windows10-Paket aktualisiert wird.
 > 
-> In diesem Fall, auch wenn Sie eine bestimmtes Gerätefamilie im Schritt [Gerät Produktfamilie Verfügbarkeit](device-family-availability.md) Ihrer Bereitstellung gegenüber ausgeschlossen haben, dass im Abschnitt nur für neue Übernahmen gilt. Wenn Sie nicht möchten, dass jeder vorherige Kunden Ihr universelles Windows10-Paket abrufen kann, müssen Sie das [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily)-Element in Ihrem APPX-Manifest so aktualisieren, dass nur die bestimmte Gerätefamilie einbezogen wird, die Sie unterstützen möchten.
+> Dies geschieht auch, wenn eine bestimmte Gerätefamilie Schritt [Gerät Familie Verfügbarkeit](device-family-availability.md) Ihrer Einsendung seit ausgeschlossen haben Abschnitt gilt nur für neue Akquisitionen. Wenn Sie nicht möchten, dass jeder vorherige Kunden Ihr universelles Windows10-Paket abrufen kann, müssen Sie das [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily)-Element in Ihrem APPX-Manifest so aktualisieren, dass nur die bestimmte Gerätefamilie einbezogen wird, die Sie unterstützen möchten.
 > 
-> Angenommen Sie, Sie möchten Ihre Windows 8 und Windows 8.1 Kunden, die auf einem Windows 10 Desktopgerät zu Ihrer neuen UWP app abgerufen werden aktualisiert haben, aber alle Windows Phone-Kunden, die nun auf Windows-10-Mobile-Geräten, die Pakete zu halten, den, die Sie zuvor würde, Availabl vorgenommen werden sollen e (Zielgruppenadressierung Windows Phone 8 oder Windows Phone 8.1). Hierzu müssen Sie zum Aktualisieren der [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) im Manifest Appx zum Einschließen von nur **Windows.Desktop** (für die Desktopgerät-Produktfamilie) statt verlassen, als des Werts **Windows.Universal** (für die universelle Gerät-Produktfamilie) Microsoft Visual Studio im Manifest standardmäßig enthält. Übermitteln Sie keine UWP-Pakete, die entweder auf universelle oder Mobilgerätefamilien (**Windows.Universal** oder **Windows.Universal**) abzielen. Auf diese Weise erhalten die Kunden von Windows10 Mobile überhaupt keine UWP-Pakete.
+> Angenommen Sie Ihre Windows 8 und Windows 8.1 Kunden eine Windows 10-Gerät zu neuen UWP Anwendung aktualisiert haben, möchten jedoch Windows Phone-Kunden, die jetzt für Windows 10 Mobile Geräte zu den Paketen, die Sie zuvor Availabl sind e (für Windows Phone 8 oder Windows Phone 8.1). Hierzu müssen Sie aktualisieren die [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) im Manifest Appx auf nur **Windows.Desktop** (für Family-Gerät), nicht als **Windows.Universal** Wert (für die universelle Gerätefamilie) Microsoft Visual Studio standardmäßig im Manifest enthält. Übermitteln Sie keine UWP-Pakete, die entweder auf universelle oder Mobilgerätefamilien (**Windows.Universal** oder **Windows.Universal**) abzielen. Auf diese Weise erhalten die Kunden von Windows10 Mobile überhaupt keine UWP-Pakete.
 
 
 ## <a name="maintaining-package-compatibility-for-windows-phone-81"></a>Verwalten der Paketkompatibilität für Windows Phone8.1

@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ce26242f1f5093afcbfb652a7d1736897975cb3a
-ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "2830802"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "2857496"
 ---
 # <a name="custom-attached-properties"></a>Benutzerdefinierte angefügte Eigenschaften
 
@@ -43,7 +43,7 @@ Wenn Sie die angefügte Eigenschaft immer für die Verwendung mit anderen Typen 
 
 Sie definieren Ihre angefügte Eigenschaft als Abhängigkeitseigenschaft, indem Sie eine **public** **static** **readonly**-Eigenschaft des Typs [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) deklarieren. Sie definieren diese Eigenschaft mithilfe des Rückgabewerts der [**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833)-Methode. Der Eigenschaftenname muss mit dem Namen der angefügten Eigenschaft übereinstimmen, die Sie als **RegisterAttached** *name*-Parameter angeben. Am Ende muss die Zeichenfolge „Property“ hinzugefügt sein. Dies ist die bestehende Konvention zum Benennen der Bezeichner von Abhängigkeitseigenschaften im Verhältnis mit den Eigenschaften, die sie darstellen.
 
-Der Hauptunterschied beim Definieren einer benutzerdefinierten Eigenschaft und beim Definieren einer benutzerdefinierten Abhängigkeitseigenschaft besteht darin, wie Sie die Accessoren oder Wrapper definieren. Anstelle der mithilfe der Wrapper-Technik in [benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md)beschrieben, müssen Sie auch statische bereitstellen **Abrufen *** PropertyName* und **festlegen *** PropertyName* Methoden als Zugreifende für die angefügte Eigenschaft. Die Accessoren werden hauptsächlich vom XAML-Parser verwendet, obwohl sie auch von anderen aufrufenden Elementen verwendet werden können, um Werte in Nicht-XAML-Szenarien festzulegen.
+Der Hauptunterschied beim Definieren einer benutzerdefinierten Eigenschaft und beim Definieren einer benutzerdefinierten Abhängigkeitseigenschaft besteht darin, wie Sie die Accessoren oder Wrapper definieren. Anstatt die Wrapper Technik in [benutzerdefinierten Abhängigkeitseigenschaften](custom-dependency-properties.md)beschrieben, müssen auch statische bereitstellen **erhalten *** PropertyName* und **festgelegt *** PropertyName* -Methode als Accessoren für die angefügte Eigenschaft. Die Accessoren werden hauptsächlich vom XAML-Parser verwendet, obwohl sie auch von anderen aufrufenden Elementen verwendet werden können, um Werte in Nicht-XAML-Szenarien festzulegen.
 
 > [!IMPORTANT]
 > Wenn Sie die Accessoren nicht ordnungsgemäß definieren, kann der XAML-Prozessor nicht auf Ihre angefügte Eigenschaft zugreifen, und Benutzer, die sie verwenden möchten, erhalten möglicherweise einen XAML-Parserfehler. Außerdem erfordern Entwurfs- und Codiertools häufig die "\*Property"-Konventionen zum Benennen von Bezeichnern, wenn sie eine benutzerdefinierte Abhängigkeitseigenschaft in einer referenzierten Assembly feststellen.
@@ -60,7 +60,7 @@ Bei Microsoft Visual Basic lautet sie folgendermaßen.
 
 Das *target*-Objekt kann in Ihrer Implementierung einen spezielleren Typ aufweisen, muss jedoch von [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356) abgeleitet sein. Der *valueType*-Rückgabewert kann in Ihrer Implementierung auch einen spezielleren Typ aufweisen. Der grundlegende **Object**-Typ wird akzeptiert. Häufig soll jedoch Ihre angefügte Eigenschaft Typsicherheit erzwingen. Die Verwendung der Typisierung in den Getter- und Setter-Signaturen ist eine empfohlene Typsicherheitstechnik.
 
-Die Signatur für die **festlegen *** PropertyName* Accessor muss dies.
+Die Signatur für die **festgelegt *** PropertyName* Accessor sein muss.
 
 `public static void Set`_PropertyName_` (DependencyObject target , `_valueType_` value)`
 
@@ -77,7 +77,7 @@ Das *target*-Objekt kann in Ihrer Implementierung einen spezielleren Typ aufweis
 
 In diesem Beispiel werden die Abhängigkeitseigenschaftsregistrierung (mithilfe der [**RegisterAttached**](https://msdn.microsoft.com/library/windows/apps/hh701833)-Methode) sowie die Accessoren **Get** und **Set** für eine benutzerdefinierte angefügte Eigenschaft dargestellt. Im Beispiel lautet der Name der angefügten Eigenschaft `IsMovable`. Daher müssen die Accessoren die Namen `GetIsMovable` und `SetIsMovable` aufweisen. Der Besitzer der angefügten Eigenschaft ist eine Dienstklasse mit dem Namen `GameService`, die nicht über eine eigene Benutzeroberfläche verfügt. Sie dient lediglich zur Bereitstellung der Dienste der angefügten Eigenschaft, wenn die angefügte Eigenschaft **GameService.IsMovable** verwendet wird.
 
-Definieren die angefügte Eigenschaft in C++ / CX ist etwas komplizierter. Sie müssen entscheiden, wie die Faktorverteilung zwischen der Header- und Codedatei lauten soll. Außerdem sollten Sie den Bezeichner als Eigenschaft mit nur einem **get**-Accessor verfügbar machen. Die Gründe hierfür werden unter [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md) erläutert. In C++ / CX müssen Sie diese Eigenschaft-Feld Beziehung definieren einfacher Eigenschaften explizit anstatt auf .NET **Readonly** Keywording und implizite sichern. Sie müssen auch die Registrierung der angefügten Eigenschaft innerhalb einer Hilfsfunktion durchführen, die nur einmal ausgeführt wird; dies erfolgt beim ersten Start der App, jedoch bevor XAML-Seiten geladen werden, die die angefügte Eigenschaft benötigen. Normalerweise werden Ihre Hilfsfunktionen für die Registrierung von Eigenschaften für alle Abhängigkeits- oder angefügten Eigenschaften innerhalb des Konstruktors **App** / [**Application**](https://msdn.microsoft.com/library/windows/apps/br242325) im Code für Ihre app.xml-Datei aufgerufen.
+Definieren die angefügte Eigenschaft in C++ / CX ist etwas komplexer. Sie müssen entscheiden, wie die Faktorverteilung zwischen der Header- und Codedatei lauten soll. Außerdem sollten Sie den Bezeichner als Eigenschaft mit nur einem **get**-Accessor verfügbar machen. Die Gründe hierfür werden unter [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md) erläutert. In C++ / CX Eigenschaftenfelder Beziehung definieren einfacher Eigenschaften explizit anstatt auf .NET **Readonly** Verschlagwortung und implizite sichern. Sie müssen auch die Registrierung der angefügten Eigenschaft innerhalb einer Hilfsfunktion durchführen, die nur einmal ausgeführt wird; dies erfolgt beim ersten Start der App, jedoch bevor XAML-Seiten geladen werden, die die angefügte Eigenschaft benötigen. Normalerweise werden Ihre Hilfsfunktionen für die Registrierung von Eigenschaften für alle Abhängigkeits- oder angefügten Eigenschaften innerhalb des Konstruktors **App** / [**Application**](https://msdn.microsoft.com/library/windows/apps/br242325) im Code für Ihre app.xml-Datei aufgerufen.
 
 ```csharp
 public class GameService : DependencyObject
@@ -253,7 +253,7 @@ Eine [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) dien
 
 Um als Panel praktikabel zu sein, besitzt [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) Verhaltensweisen, die die Frameworkmethoden [**Measure**](https://msdn.microsoft.com/library/windows/apps/br208952) und [**Arrange**](https://msdn.microsoft.com/library/windows/apps/br208914) überschreiben. Hier wird von **Canvas** nach Werten der angefügten Eigenschaftswerte für ihre untergeordneten Elemente gesucht. Ein Teil der Muster **Measure** und **Arrange** ist eine Schleife, die alle Inhalte durchläuft. Ein Panel besitzt die Eigenschaft [**Children**](https://msdn.microsoft.com/library/windows/apps/br227514), die explizit angibt, was als untergeordnetes Element eines Panels gelten soll. Das **Canvas**-Layoutverhalten durchläuft diese untergeordneten Elemente und führt statische [**Canvas.GetLeft**](https://msdn.microsoft.com/library/windows/apps/br209269)- und [**Canvas.GetTop**](https://msdn.microsoft.com/library/windows/apps/br209270)-Aufrufe für alle untergeordneten Elemente aus, um zu ermitteln, ob diese angefügten Eigenschaften einen nicht standardmäßigen Wert enthalten (der standardmäßige Wert ist 0). Mithilfe dieser Werte werden die untergeordneten Elemente auf der verfügbaren **Canvas**-Layoutfläche gemäß den von den einzelnen untergeordneten Elementen bereitgestellten spezifischen Werten absolut positioniert. Anschließend wird mithilfe von **Arrange** ein Commit für sie ausgeführt.
 
-Der Code sieht etwa wie folgt in Pseudocode.
+Der Code sieht etwas dieser Pseudocode.
 
 ```syntax
 protected override Size ArrangeOverride(Size finalSize)
@@ -270,7 +270,7 @@ protected override Size ArrangeOverride(Size finalSize)
 ```
 
 > [!NOTE]
-> Weitere Informationen zur Funktionsweise von Bereichen finden Sie unter [Übersicht über die Verwendung von XAML-benutzerdefinierte Bereiche](https://msdn.microsoft.com/library/windows/apps/mt228351).
+> Weitere Informationen zur Funktionsweise von Bereichen finden Sie unter [Übersicht über XAML benutzerdefinierte Bereiche](https://msdn.microsoft.com/library/windows/apps/mt228351).
 
 ## <a name="related-topics"></a>Verwandte Themen
 

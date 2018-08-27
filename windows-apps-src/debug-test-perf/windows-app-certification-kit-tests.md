@@ -2,25 +2,25 @@
 author: PatrickFarley
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
 title: Tests im Zertifizierungskit für Windows-Apps
-description: Windows-App-Zertifizierungskit enthält eine Reihe von Tests, die sicherstellen, dass Ihre app im Store Microsoft veröffentlicht werden kann.
+description: Windows-Zertifizierungskit enthält eine Reihe von Tests, die sicherstellen, dass Ihre Anwendung Microsoft Store veröffentlicht werden kann.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, Uwp, app-Zertifizierung
+keywords: Windows 10 Uwp, Zertifizierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 49ecc472c8c1d4adebd8376fce9d2d5e6e2a955e
-ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "2843118"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "2857425"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Tests im Zertifizierungskit für Windows-Apps
 
 
-Das [Windows App Zertifizierungskit](windows-app-certification-kit.md) enthält eine Reihe von Tests, die dazu beitragen, dass Ihre app an den Microsoft-Store veröffentlicht werden kann. Die Tests sind unten aufgeführt, mit deren Kriterien, Details, und empfohlene Maßnahmen bei einem Fehler.
+[Windows Zertifizierungskit](windows-app-certification-kit.md) enthält eine Reihe von Tests, die sicherstellen, dass Ihre Anwendung Microsoft Store veröffentlicht werden kann. Die Tests mit den Kriterien Details unten und empfohlene Maßnahmen bei.
 
 ## <a name="deployment-and-launch-tests"></a>Bereitstellungs- und Starttests
 
@@ -60,7 +60,7 @@ Führen Sie für die Datei mit dem Problem eine Problembehandlung durch, um das 
 
 ### <a name="background"></a>Hintergrund
 
-Betriebssystem Versionsinfo hat die Verwendung für den Microsoft Store beschränkt. Diese wurde von Apps häufig fälschlicherweise zum Überprüfen der Betriebssystemversion verwendet, damit Benutzern spezielle Funktionen für eine bestimmte Betriebssystemversion von der App bereitgestellt werden können.
+Betriebssysteminformationen Version hat Microsoft Store Verwendung eingeschränkt. Diese wurde von Apps häufig fälschlicherweise zum Überprüfen der Betriebssystemversion verwendet, damit Benutzern spezielle Funktionen für eine bestimmte Betriebssystemversion von der App bereitgestellt werden können.
 
 ### <a name="test-details"></a>Testdetails
 
@@ -128,7 +128,7 @@ Apps müssen ein korrekt formatiertes App-Manifest besitzen.
 
 -   **Überprüfung der prozessübergreifenden Kommunikation (Inter-process Communication, IPC)**
 
-    Bei diesem Test erzwingt die Anforderung, die nicht UWP apps außerhalb der app-Containers und Desktop-Komponenten kommunizieren. Die prozessübergreifende Kommunikation ist nur für quergeladene Apps vorgesehen. Apps, die für [**ActivatableClassAttribute**](https://msdn.microsoft.com/library/windows/apps/BR211414) den Namen „DesktopApplicationPath“ angeben, bestehen diesen Test nicht.
+    Dieser Test erzwingt die Anforderung UWP-apps nicht außerhalb der app Container Desktopkomponenten kommunizieren. Die prozessübergreifende Kommunikation ist nur für quergeladene Apps vorgesehen. Apps, die für [**ActivatableClassAttribute**](https://msdn.microsoft.com/library/windows/apps/BR211414) den Namen „DesktopApplicationPath“ angeben, bestehen diesen Test nicht.
 
 ### <a name="corrective-action"></a>Maßnahmen
 
@@ -248,7 +248,7 @@ Der AppContainerCheck-Test prüft, ob das **appcontainer**-Bit im PE-Header eine
 
 Wenn der Test für eine systemeigene ausführbare Datei nicht erfolgreich ist, stellen Sie sicher, dass Sie zum Erstellen der Datei den aktuellen Compiler und Linker und für den Linker das Kennzeichen */appcontainer* verwenden.
 
-Wenn eine verwaltete ausführbare Datei der Test fehlschlägt, stellen Sie sicher, dass Sie neueste Compiler und Linker, wie Microsoft Visual Studio verwendet, um die UWP app erstellen.
+Wenn eine verwaltete ausführbare Datei der Test fehlschlägt, stellen Sie sicher, dass aktuelle Compiler und Linker wie Microsoft Visual Studio verwendet, um UWP-app erstellen.
 
 **Anmerkungen**
 
@@ -308,22 +308,22 @@ Testet die App, um festzustellen, ob nicht kompatible APIs verwendet werden.
 
 ### <a name="background"></a>Hintergrund
 
-Apps müssen die APIs für UWP apps (Windows-Runtime oder unterstützte Win32-APIs) für den Microsoft Store zertifiziert werden verwenden. Dieser Test ermittelt auch Situationen, in denen eine verwaltete Binärdatei eine Abhängigkeit von einer Funktion außerhalb des genehmigten Profils aufweist.
+Apps müssen die APIs für UWP-apps Windows-Runtime oder unterstützten Win32-APIs für Microsoft Store zertifiziert verwenden. Dieser Test ermittelt auch Situationen, in denen eine verwaltete Binärdatei eine Abhängigkeit von einer Funktion außerhalb des genehmigten Profils aufweist.
 
 ### <a name="test-details"></a>Testdetails
 
--   Überprüft, ob jede Binärdatei innerhalb der app-Paket eine Abhängigkeit auf eine Win32-API verfügen nicht, die Überprüfung der Importtabelle Adresse der Binärdatei nicht für die Entwicklung von UWP Apps unterstützt wird.
+-   Überprüft, dass jede Binärdatei in das Anwendungspaket eine Abhängigkeit auf eine Win32-API, die Überprüfung der Importadressentabelle der Binärdatei nicht für UWP app-Entwicklung unterstützt wird.
 -   Stellt sicher, dass eine verwaltete Binärdatei des App-Pakets keine Abhängigkeit von einer Funktion außerhalb des genehmigten Profils aufweist.
 
 ### <a name="corrective-actions"></a>Maßnahmen
 
 Stellen Sie sicher, dass die App als Releasebuild und nicht als Debugbuild kompiliert wurde.
 
-> **Hinweis**  Erstellen einer App Debug fehl dieser Test, auch wenn die app nur [APIs für apps UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)verwendet.
+> **Hinweis**  Debugbuild einer App wird dieser Test fehl, selbst wenn die app nur [APIs für UWP-apps](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)verwendet.
 
-Überprüfen Sie die Fehlermeldungen der API identifiziert die app verwendet, die keiner [-API für apps UWP](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)ist.
+Überprüfen Sie die Fehlermeldungen zu der API der Anwendung verwendet, die keine [API für UWP-apps](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx).
 
-> **Hinweis**  C++-apps, die in einer Debugkonfiguration integriert sind fehl dieser Test, auch wenn die Konfiguration nur APIs aus dem Windows SDK für UWP apps verwendet wird. Finden Sie unter [alternativen zu Windows-APIs in UWP apps](http://go.microsoft.com/fwlink/p/?LinkID=244022) für Weitere Informationen.
+> **Hinweis**  C++-apps, die in einer Debugkonfiguration erstellt werden dieser Test fehl, selbst wenn die Konfiguration nur APIs von Windows SDK für UWP-apps verwendet. [Alternativen zu Windows-APIs in UWP-apps](http://go.microsoft.com/fwlink/p/?LinkID=244022) mehr anzeigen
 
 ## <a name="performance-tests"></a>Leistungstests
 
@@ -433,7 +433,7 @@ Orientieren Sie sich an der folgenden Tabelle.
 <tr><td>
 <p>Für die Datei „resources.pri“ darf „Automatisch zusammenführen“ nicht aktiviert sein.</p>
 </td><td>
-<p>„MakePRI.exe“ unterstützt eine Option mit dem Namen <strong>AutoMerge</strong>. Der Standardwert von <strong>AutoMerge</strong> ist <strong>Aus</strong>. Ist sie aktiviert, führt <strong>AutoMerge</strong> die App-Sprachpaketressourcen in einer einzelnen Datei „resources.pri“ zur Laufzeit zusammen. Es wird nicht dadurch für apps, die Sie verteilen, über die Microsoft Store möchten empfohlen. Die resources.pri einer App, die über Microsoft Store verteilt wird muss im Stamm der app-Paket und enthält die Language-Referenzen, die die app unterstützt.</p>
+<p>„MakePRI.exe“ unterstützt eine Option mit dem Namen <strong>AutoMerge</strong>. Der Standardwert von <strong>AutoMerge</strong> ist <strong>Aus</strong>. Ist sie aktiviert, führt <strong>AutoMerge</strong> die App-Sprachpaketressourcen in einer einzelnen Datei „resources.pri“ zur Laufzeit zusammen. Diese empfiehlt Apps, die Microsoft Store verteilen möchten. Resources.pri einer App Store Microsoft distributed muss im Stammverzeichnis der Anwendung Paket und enthalten alle Sprachreferenzen, die die Anwendung unterstützt.</p>
 </td></tr>
 <tr><td>
 <p>Die Zeichenfolge „{string}“ entspricht nicht der Längenbeschränkung von maximal {number} Zeichen.</p>
@@ -485,7 +485,7 @@ Orientieren Sie sich an der folgenden Tabelle.
 
 ### <a name="branding-validation"></a>Branding-Validierung
 
-UWP apps werden voraussichtlich abgeschlossen und voll funktionsfähig sein. Apps, für die Standardbilder (aus Vorlagen oder SDK-Beispielen) verwendet werden, verfügen über eine schlechte Benutzeroberfläche und können im Store-Katalog nicht leicht identifiziert werden.
+UWP-apps sollen vollständig und funktionsfähig sein. Apps, für die Standardbilder (aus Vorlagen oder SDK-Beispielen) verwendet werden, verfügen über eine schlechte Benutzeroberfläche und können im Store-Katalog nicht leicht identifiziert werden.
 
 ### <a name="test-details"></a>Testdetails
 
@@ -501,7 +501,7 @@ Testet die App, um sicherzustellen, dass es sich nicht um einen Debugbuild hande
 
 ### <a name="background"></a>Hintergrund
 
-Um eine Zertifizierung für Microsoft Store apps müssen nicht kompiliert werden, für das Debuggen, und diese müssen nicht Debugversionen einer ausführbaren Datei verweisen. Darüber hinaus müssen Sie den Code für die App optimiert erstellen, damit dieser Test bestanden wird.
+Um eine Zertifizierung für Microsoft Store apps müssen nicht kompiliert werden, für das Debuggen, und sie müssen nicht Debugversionen einer ausführbaren Datei verweisen. Darüber hinaus müssen Sie den Code für die App optimiert erstellen, damit dieser Test bestanden wird.
 
 ### <a name="test-details"></a>Testdetails
 
@@ -509,7 +509,7 @@ Testen Sie die App, um sicherzustellen, dass es sich nicht um einen Debugbuild h
 
 ### <a name="corrective-actions"></a>Maßnahmen
 
--   Erstellen Sie die app als Version Build, bevor Sie sie an den Microsoft-Store übermitteln.
+-   Erstellen Sie die Anwendung als Releasebuild vor dem übermitteln der Microsoft Store.
 -   Stellen Sie sicher, dass Sie die richtige .NET Framework-Version installiert haben.
 -   Stellen Sie sicher, dass die App nicht über Links zu Debugversionen eines Frameworks verfügt und dass die Erstellung mit einer Releaseversion erfolgt. Wenn diese App .NET-Komponenten enthält, sollten Sie sich vergewissern, dass Sie die richtige Version des .NET-Frameworks installiert haben.
 
@@ -537,7 +537,7 @@ Testet MicrosoftDirect3D-Apps, um sicherzustellen, dass sie auf Geräten mit äl
 
 ### <a name="background"></a>Hintergrund
 
-Microsoft Store erfordert alle Anwendungen mithilfe von Direct3D ordnungsgemäß gerendert wird oder auf Funktion Ebene 9\-1-Grafikkarten ordnungsgemäß fehlschlägt.
+Microsoft Store muss alle Anträge richtig wiedergegeben oder nicht ordnungsgemäß auf Funktion auf 9\ 1-Grafikkarten mit Direct3D.
 
 Da die Benutzer die Grafikhardware ihrer Geräte nach der Installation der App ändern können, muss Ihre App für den Fall, dass Sie eine Featureebene höher als 9\-1 verwenden, beim Start erkennen, ob die aktuelle Hardware die Mindestanforderungen erfüllt. Wenn die Mindestanforderungen nicht erfüllt sind, muss Ihre App dem Benutzer eine Meldung mit den Direct3D-Anforderungen anzeigen. Wird zudem eine App auf ein Gerät heruntergeladen, mit dem sie nicht kompatibel ist, sollte sie dies beim Start erkennen und dem Kunden eine Meldung bezüglich der erforderlichen Voraussetzungen anzeigen.
 
@@ -551,7 +551,7 @@ Stellen Sie sicher, dass die App unter der Direct3D-Featureebene9\-1 richtig ger
 
 ### <a name="direct3d-trim-after-suspend"></a>Direct3D-Kürzung nach dem Anhalten
 
-> **Hinweis**  Bei diesem Test gilt nur für UWP-apps für Windows 8.1 und höher entwickelt.
+> **Hinweis**  Dieser Test gilt nur für UWP-apps für Windows 8.1 und höher entwickelt.
 
 ### <a name="background"></a>Hintergrund
 

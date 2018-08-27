@@ -10,31 +10,31 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e4c1b1df8ad29635f38ae5b373685d3504a4eb60
-ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "2842362"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "2857818"
 ---
 # <a name="create-a-universal-windows-platform-console-app"></a>Erstellen einer universellen Windows-Plattform-Konsolen-App
 
-Beschrieben erstellen eine [C + / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) oder C++ / CX universelle Windows-Plattform (UWP) Konsole app.
+In diesem Thema wird beschrieben, wie zum Erstellen einer [C + / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) oder C + / CX universellen Windows-Plattform (UWP) Konsole app.
 
-Beginnend mit Windows 10 Version 1803 Schreiben C + / WinRT oder C++ / CX UWP Konsole apps, in einem Konsolenfenster wie ein Konsolenfenster DOS oder PowerShell ausgeführt. Konsole apps für Eingabe und Ausgabe im Konsolenfenster verwenden und können [universelle C](/cpp/c-runtime-library/reference/crt-alphabetical-function-reference) -Laufzeitfunktionen **Getchar**wie **Printf** . UWP-Konsolen-Apps können im Microsoft Store veröffentlicht werden. Sie haben einen Eintrag in der App-Liste und eine primäre Kachel, die an das Startmenü angeheftet werden kann. UWP-Konsole apps können aus dem Startmenü gestartet werden, obwohl Sie normalerweise über die Befehlszeile gestartet werden.
+Beginnend mit Windows 10, Version 1803, Sie können Schreiben + C / WinRT oder C + / CX UWP Konsole apps, die in einem Konsolenfenster, wie etwa einem Konsolenfenster DOS oder PowerShell ausgeführt. Konsole apps verwenden Sie das Konsolenfenster für ein- und Ausgabe und [Universelle C Runtime](/cpp/c-runtime-library/reference/crt-alphabetical-function-reference) -Funktionen wie **Printf** und **Getchar**verwenden können. UWP-Konsolen-Apps können im Microsoft Store veröffentlicht werden. Sie haben einen Eintrag in der App-Liste und eine primäre Kachel, die an das Startmenü angeheftet werden kann. UWP Konsole apps können über das Startmenü gestartet werden, obwohl Sie in der Regel über die Befehlszeile gestartet werden.
 
-Eine Aktion ist, hier ein Video zum Erstellen einer Anwendung UWP-Konsole.
+Um eine in der Praxis anzuzeigen, ist hier ein Video über das Erstellen einer UWP Konsole App ein.
 
 > [!VIDEO https://www.youtube.com/embed/bwvfrguY20s]
 
 ## <a name="use-a-uwp-console-app-template"></a>Verwenden einer UWP-Konsolen-App-Vorlage 
 
-Um eine UWP-Konsolen-App zu erstellen, installieren Sie zuerst die **Konsolen-App (Universal)-Projektvorlagen**, die Sie im [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=AndrewWhitechapelMSFT.ConsoleAppUniversal) erhalten. Installierten Vorlagen stehen dann unter **Neues Projekt** > **installierte** > **Andere Sprachen** > **Visual C++** > **Universal Windows** **Konsole App c++ / WinRT (Universal Windows) **und **-Konsole App C + / CX (Universal Windows)**.
+Um eine UWP-Konsolen-App zu erstellen, installieren Sie zuerst die **Konsolen-App (Universal)-Projektvorlagen**, die Sie im [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=AndrewWhitechapelMSFT.ConsoleAppUniversal) erhalten. Die installierten Vorlagen stehen klicken Sie dann unter **Neues Projekt** > **Installed** > **Andere Sprachen** > **Visual C++** > **Universellen Windows** als **Konsole App c++ / WinRT (Universal Windows) **und **Konsole App C + / CX (Universal Windows)**.
 
 ## <a name="add-your-code-to-main"></a>Ihren Code „main()” hinzufügen
 
 Die Vorlagen fügen **Program.cpp** hinzu, die die `main()`-Funktion enthält. Hier beginnt die Ausführung in einer UWP-App-Konsole. Greifen Sie mit den Parametern `__argc` und `__argv` auf die Befehlszeilenargumente zu. Die UWP-Konsolen-App wird beendet, wenn die Steuerung von `main()` zurückgegeben wird.
 
-**Program.cpp** im folgende Beispiel wird durch die **Konsole App c++ / WinRT** Vorlage:
+Im folgenden Beispiel wird der **Program.cpp** wird hinzugefügt, indem die **Konsole App c++ / WinRT** Vorlage:
 
 ```cppwinrt
 #include "pch.h"
@@ -103,9 +103,9 @@ Außerdem fügt die Vorlage der Datei „Package.appxmanifest” die `Subsystem=
 
 ## <a name="additional-considerations-for-uwp-console-apps"></a>Weitere Überlegungen zu UWP-Konsolen-Apps
 
-- Nur C + / WinRT und C++ / CX-UWP-apps möglicherweise Konsole apps.
+- Nur C + / WinRT und C + / CX UWP apps möglicherweise Konsole apps.
 - UWP-Konsolen-Apps müssen auf den Projekttyp Desktop oder IoT ausgerichtet sein.
-- UWP-Konsole apps können ein Fenster nicht erstellen. Sie können MessageBox(), oder Location() oder jeder API, die aus irgendeinem Grund ein Fenster erstellen verwenden, wie Benutzer Zustimmung aufgefordert.
+- UWP Konsole apps können ein Fenster nicht erstellt werden. Sie können nicht MessageBox(), oder Location() oder jeder anderen API, die aus irgendeinem Grund ein Fenster erstellen möglicherweise verwenden, wie Zustimmung des Benutzers aufgefordert wird.
 - UWP-Konsolen-Apps darf nicht Hintergrundaufgaben nutzen oder als Hintergrundaufgabe dienen.
 - Mit Ausnahme der [Befehlszeilenaktivierung](https://blogs.windows.com/buildingapps/2017/07/05/command-line-activation-universal-windows-apps/#5YJUzjBoXCL4MhAe.97) unterstützen UWP-Konsolen-Apps keine Support-Aktivierungsverträge, einschließlich Dateizuordnung, Protokollzuordnung usw.
 - Obwohl UWP-Konsolen-Apps die Multiinstanzerstellung unterstützen, bieten Sie keine Unterstützung für die [Umleitung bei der Multiinstanzerstellung](multi-instance-uwp.md)
