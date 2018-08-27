@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: b9858be036732c2894ff3c009233e021b37da040
-ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "2832227"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "2867579"
 ---
 # <a name="security"></a><span data-ttu-id="abf5e-104">Sicherheit</span><span class="sxs-lookup"><span data-stu-id="abf5e-104">Security</span></span>
 

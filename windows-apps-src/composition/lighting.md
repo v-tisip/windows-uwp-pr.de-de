@@ -16,11 +16,11 @@ dev_langs:
 - cpp
 - cppwinrt
 ms.openlocfilehash: d0da6b02ecfbe8f73cc6526b0850707d03bfc63f
-ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "2831692"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "2864459"
 ---
 # <a name="lighting"></a><span data-ttu-id="3d56a-104">Beleuchtung</span><span class="sxs-lookup"><span data-stu-id="3d56a-104">Lighting</span></span>
 

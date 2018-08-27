@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Integrität, Abstürze, reagiert nicht, App-Integrität, Integritätsdaten, Stapelüberwachung, CAB-Datei, Fehler, Fehler, Pdb, Symbole
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f5bf63eae4b1504642e764265a7936bcd67c645
-ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "2843712"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "2864789"
 ---
 # <a name="health-report"></a><span data-ttu-id="90211-103">Integritätsbericht</span><span class="sxs-lookup"><span data-stu-id="90211-103">Health report</span></span>
 
