@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, XAML, steuerelement, binden, eigenschaft
 ms.localizationpriority: medium
-ms.openlocfilehash: 6343832801926254c64fcefc269ce7fda9ed6dfc
-ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.openlocfilehash: 31913ae162bfe541d04f304db87b4dff962a8af4
+ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "2831452"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "2862867"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-property"></a>XAML-Steuerelemente; Binden an eine [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)-Eigenschaft
 Eine Eigenschaft, die effektiv an ein XAML-Steuerelement gebunden werden kann, wird als *observable*-Eigenschaft bezeichnet. Dieses Konzept basiert auf dem Software-Design-Muster, das als *Observer-Pattern* bekannt ist. Dieses Thema zeigt, wie man Observable-Eigenschaften in C++/WinRT implementiert und wie man XAML-Steuerelemente an diese bindet.
@@ -100,7 +100,7 @@ namespace winrt::Bookstore::implementation
     {
     }
 
-    hstring BookSku::Title()
+    winrt::hstring BookSku::Title()
     {
         return m_title;
     }
@@ -114,7 +114,7 @@ namespace winrt::Bookstore::implementation
         }
     }
 
-    event_token BookSku::PropertyChanged(Windows::UI::Xaml::Data::PropertyChangedEventHandler const& handler)
+    winrt::event_token BookSku::PropertyChanged(Windows::UI::Xaml::Data::PropertyChangedEventHandler const& handler)
     {
         return m_propertyChanged.add(handler);
     }
@@ -146,7 +146,7 @@ namespace Bookstore
 }
 ```
 
-Speichern und erstellen Sie das Projekt. Kopieren Sie `BookstoreViewModel.h` und `BookstoreViewModel.cpp` aus dem `Generated Files`-Ordner in den Projektordner und nehmen Sie sie in das Projekt auf. Öffnen Sie die Dateien und implementieren Sie die Common Language Runtime-Klasse, wie unten dargestellt. Hinweis wie in `BookstoreViewModel.h`, wir sind einschließlich `BookSku.h`, die den Implementierungstyp (**Winrt::Bookstore::implementation::BookSku**) deklariert.
+Speichern und erstellen Sie das Projekt. Kopieren Sie `BookstoreViewModel.h` und `BookstoreViewModel.cpp` aus dem `Generated Files`-Ordner in den Projektordner und nehmen Sie sie in das Projekt auf. Öffnen Sie die Dateien und implementieren Sie die Common Language Runtime-Klasse, wie unten dargestellt. Hinweis wie in `BookstoreViewModel.h`, wir sind einschließlich `BookSku.h`, die den Implementierungstyp (**Winrt::Bookstore::implementation::BookSku**) deklariert. Und wir sind mit dem Standardkonstruktor Wiederherstellen von durch Entfernen von `= delete`.
 
 ```cppwinrt
 // BookstoreViewModel.h

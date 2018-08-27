@@ -8,14 +8,14 @@ ms.date: 07/11/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, Uwp, Gerät portal
+keywords: Windows 10, Uwp, Device-portal
 ms.localizationpriority: medium
 ms.openlocfilehash: 1192c200cd42ab28cc7e763c06fd8a5638aa3400
-ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "2834489"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "2864839"
 ---
 # <a name="provision-device-portal-with-a-custom-ssl-certificate"></a>Bestimmung Gerät Portal mit einem benutzerdefinierten SSL-Zertifikat
 In der Windows-10 Ersteller Update hinzugefügt Windows Gerät Portal eine Möglichkeit für Administratoren zum Installieren eines benutzerdefinierten Zertifikats für die Verwendung in HTTPS-Kommunikation Gerät. 

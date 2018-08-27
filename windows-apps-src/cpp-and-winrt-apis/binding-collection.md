@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, XAML, steuerelement, binden, collection
 ms.localizationpriority: medium
-ms.openlocfilehash: 9337c0625c68970d9e68df74fa13228369e8bf41
-ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.openlocfilehash: 9ba935b1a5316c2d7af9c7681705595efea7ca08
+ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "2834129"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "2865949"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-collection"></a>XAML-Items-Steuerelemente; Binden an eine [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)-Collection
 > [!NOTE]
@@ -28,9 +28,7 @@ Diese exemplarische Vorgehensweise baut auf dem in [XAML-Steuerelemente; Binden 
 > Wichtige Konzepte und Begriffe, die Ihr Verständnis für die Verwendung von Laufzeitklassen mit C++/WinRT unterstützen, finden Sie unter [Verwenden von APIs mit C++/WinRT](consume-apis.md) und [Erstellen von APIs mit C++/WinRT](author-apis.md).
 
 ## <a name="what-does-observable-mean-for-a-collection"></a>Was bedeutet *observable* für eine Collection?
-Wenn eine Laufzeitklasse, die eine Collection repräsentiert, das Ereignis [**IObservableVector&lt;T&gt;::VectorChanged**](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged) auslöst, wenn ein Element hinzugefügt oder entfernt wird, dann ist die Laufzeitklasse eine Observable-Collection.
-
-Ein XAML-Items-Steuerelement kann sich an diese Ereignisse binden und sie verarbeiten, indem es die aktualisierte Collection abruft und sich dann aktualisiert, um die aktuellen Elemente anzuzeigen.
+Wenn eine Laufzeitklasse, die eine Collection repräsentiert, das Ereignis [**IObservableVector&lt;T&gt;::VectorChanged**](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged) auslöst, wenn ein Element hinzugefügt oder entfernt wird, dann ist die Laufzeitklasse eine Observable-Collection. Ein XAML-Items-Steuerelement kann sich an diese Ereignisse binden und sie verarbeiten, indem es die aktualisierte Collection abruft und sich dann aktualisiert, um die aktuellen Elemente anzuzeigen.
 
 > [!NOTE]
 > Informationen zur Installation und Verwendung der C++/WinRT Visual Studio Extension (VSIX) (die Projektvorlagenunterstützung sowie C++/WinRT MSBuild-Eigenschaften und -Ziele bietet) finden Sie unter [Visual Studio-Unterstützung für C++/WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
@@ -39,7 +37,7 @@ Ein XAML-Items-Steuerelement kann sich an diese Ereignisse binden und sie verarb
 Es ist hilfreich, eine Observable-Vektor-Vorlage zu haben, die als nützliche, universell einsetzbare Implementierung von [**IObservableVector&lt;T&gt;**](/uwp/api/windows.foundation.collections.iobservablevector_t_) dient. Hier ist eine Klasse namens **single_threaded_observable_vector\<T\>**.
 
 > [!NOTE]
-> Wenn Sie die [Windows 10 SDK Vorschau erstellen 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)installiert haben oder höher, klicken Sie dann Sie nur direkt können verwenden Sie die **Winrt::single_threaded_observable_vector\ < T\ >** Factory-Funktion anstelle der Code weiter unten. Wenn Sie noch nicht auf diese Version des SDK befinden, klicken Sie dann werden einfach zu die Code Listing Version der **Winrt** -Funktion verwenden, wenn Sie sind zu wechseln. Denken Sie daran, rufen Sie mit den unten aufgeführten Typ [**winrt::make**]() , sondern Sie stattdessen die Funktion **Winrt::single_threaded_observable_vector\ < T\ >** aufrufen.
+> Wenn Sie die [Windows 10 SDK Vorschau erstellen 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)installiert haben, oder höher, dann können Sie nur direkt verwenden die **Winrt::single_threaded_observable_vector\ < T\ >** Factory-Funktion anstelle des Codes weiter unten (zeigen wir den genauen Code später In diesem Thema). Wenn Sie noch nicht auf diese Version des SDK befinden, klicken Sie dann werden einfach zu die Code Listing Version der **Winrt** -Funktion verwenden, wenn Sie sind zu wechseln.
 
 ```cppwinrt
 // single_threaded_observable_vector.h
@@ -298,13 +296,16 @@ Deklarieren Sie eine neue Eigenschaft in `BookstoreViewModel.idl`.
 ```idl
 // BookstoreViewModel.idl
 ...
-    runtimeclass BookstoreViewModel
-    {
-        BookSku BookSku{ get; };
-        Windows.Foundation.Collections.IVector<IInspectable> BookSkus{ get; };
-    }
+runtimeclass BookstoreViewModel
+{
+    BookSku BookSku{ get; };
+    Windows.Foundation.Collections.IVector<IInspectable> BookSkus{ get; };
+}
 ...
 ```
+
+> [!IMPORTANT]
+> Beachten Sie in der oben genannten MIDL 3.0 Liste, dass der Typ der Eigenschaft **BookSkus** [**IVector**](/uwp/api/windows.foundation.collections.ivector_t_) des [**IInspectable**](https://msdn.microsoft.com/library/windows/desktop/br205821)ist. Im nächsten Abschnitt dieses Themas werden wir die Quelle Elemente des [**ListBox-Steuerelement**](/uwp/api/windows.ui.xaml.controls.listbox) zu **BookSkus**binden. Ein Listenfeld ist ein Elementsteuerelement, und um die [**ItemsControl.ItemsSource**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) -Eigenschaft ordnungsgemäß festzulegen, müssen Sie es auf einen Wert vom Typ **IVector** von **IInspectable**oder eines Typs Interoperabilität wie [**IBindableObservableVector**](/uwp/api/windows.ui.xaml.interop.ibindableobservablevector)festlegen.
 
 Speichern und erstellen Sie das Projekt. Kopieren Sie die Zugriffs-Stubs aus `BookstoreViewModel.h` und `BookstoreViewModel.cpp` in den Ordner `Generated Files` und implementieren Sie sie.
 
@@ -313,35 +314,57 @@ Speichern und erstellen Sie das Projekt. Kopieren Sie die Zugriffs-Stubs aus `Bo
 ...
 #include "single_threaded_observable_vector.h"
 ...
-    struct BookstoreViewModel : BookstoreViewModelT<BookstoreViewModel>
-    {
-        BookstoreViewModel();
-        Bookstore::BookSku BookSku();
-        Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> BookSkus();
+struct BookstoreViewModel : BookstoreViewModelT<BookstoreViewModel>
+{
+    BookstoreViewModel();
 
-    private:
-        Bookstore::BookSku m_bookSku{ nullptr };
-        Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> m_bookSkus;
-    };
+    Bookstore::BookSku BookSku();
+
+    Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> BookSkus();
+
+private:
+    Bookstore::BookSku m_bookSku{ nullptr };
+    Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> m_bookSkus;
+};
 ...
 ```
 
 ```cppwinrt
 // BookstoreViewModel.cpp
 ...
-    BookstoreViewModel::BookstoreViewModel()
-    {
-        m_bookSku = make<Bookstore::implementation::BookSku>(L"Atticus");
-        m_bookSkus = winrt::make<single_threaded_observable_vector<Windows::Foundation::IInspectable>>();
-        m_bookSkus.Append(m_bookSku);
-    }
+BookstoreViewModel::BookstoreViewModel()
+{
+    m_bookSku = make<Bookstore::implementation::BookSku>(L"Atticus");
+    m_bookSkus = winrt::make<single_threaded_observable_vector<Windows::Foundation::IInspectable>>();
+    m_bookSkus.Append(m_bookSku);
+}
 
-    Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> BookstoreViewModel::BookSkus()
-    {
-        return m_bookSkus;
-    }
+Bookstore::BookSku BookstoreViewModel::BookSku()
+{
+    return m_bookSku;
+}
+
+Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> BookstoreViewModel::BookSkus()
+{
+    return m_bookSkus;
+}
 ...
 ```
+
+## <a name="if-you-have-a-windows-10-sdk-preview-build"></a>Wenn Sie eine Windows 10 SDK Vorschau erstellen verfügen
+Wenn Sie die [Windows 10 SDK Vorschau erstellen 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)installiert haben oder höher, ersetzen Sie diese Codezeile
+
+```cppwinrt
+m_bookSkus = winrt::make<single_threaded_observable_vector<Windows::Foundation::IInspectable>>();
+```
+
+mit diesem.
+
+```cppwinrt
+m_bookSkus = winrt::single_threaded_observable_vector<Windows::Foundation::IInspectable>();
+```
+
+Rufen Sie [**winrt::make**](https://docs.microsoft.com/en-us/uwp/cpp-ref-for-winrt/make), sondern erstellen Sie das entsprechende Auflistung (Objekt) durch Aufrufen der **Winrt::single_threaded_observable_vector\ < T\ >** Factory-Funktion.
 
 ## <a name="bind-a-listbox-to-the-bookskus-property"></a>Binden einer Listbox an die **BookSkus**-Eigenschaft
 Öffnen Sie `MainPage.xaml` mit dem XAML-Markup für unsere UI-Hauptseite. Fügen Sie den folgende Markup-Code in dem **StackPanel** hinzu, indem sich der **Button** befindet.
@@ -361,11 +384,11 @@ In `MainPage.cpp` fügen Sie dem **Click**-Ereignis-Handler eine Zeile Code hinz
 ```cppwinrt
 // MainPage.cpp
 ...
-    void MainPage::ClickHandler(IInspectable const&, RoutedEventArgs const&)
-    {
-        MainViewModel().BookSku().Title(L"To Kill a Mockingbird");
-        MainViewModel().BookSkus().Append(make<Bookstore::implementation::BookSku>(L"Moby Dick"));
-    }
+void MainPage::ClickHandler(IInspectable const&, RoutedEventArgs const&)
+{
+    MainViewModel().BookSku().Title(L"To Kill a Mockingbird");
+    MainViewModel().BookSkus().Append(make<Bookstore::implementation::BookSku>(L"Moby Dick"));
+}
 ...
 ```
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, verbunden Geräte, remote-Systemen, ROM, Project ROM, Hintergrund, app-Dienst
 ms.localizationpriority: medium
 ms.openlocfilehash: 72a8a02d14a4fa9287c987150a526745b294b65f
-ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "2834797"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "2863122"
 ---
 # <a name="communicate-with-a-remote-app-service"></a>Kommunikation mit einem App-Remotedienst
 
