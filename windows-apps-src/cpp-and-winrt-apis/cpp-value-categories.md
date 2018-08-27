@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Standard, c ++, Cpp, Winrt, Projektion, verschieben, Weiterleitung, Wert Kategorien, Move Semantik, perfekte Weiterleitung, l-Wert, r-Wert, Glvalue, Prvalue, Xvalue
 ms.localizationpriority: medium
 ms.openlocfilehash: cbccaf78b45d85d93619977d149431c4eec9e10a
-ms.sourcegitcommit: c6d6f8b54253e79354f8db14e5cf3b113a3e5014
+ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "2835032"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "2867849"
 ---
 # <a name="value-categories-and-references-to-them"></a><span data-ttu-id="98e5c-105">Wert Kategorien und Verweise auf diese</span><span class="sxs-lookup"><span data-stu-id="98e5c-105">Value categories, and references to them</span></span>
 <span data-ttu-id="98e5c-106">In diesem Thema werden die verschiedenen Kategorien von Werte (und Verweise auf Werte), die in C++ vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="98e5c-106">This topic describes the various categories of values (and references to values) that exist in C++.</span></span> <span data-ttu-id="98e5c-107">Sie werden Ausrichtungsattributs verwendet der *l-Werte* und *Rvalues*gehört haben, aber möglicherweise nicht stellen sie in der Begriffe, die in diesem Thema wird.</span><span class="sxs-lookup"><span data-stu-id="98e5c-107">You will doubtless have heard of *lvalues* and *rvalues*, but you may not think of them in the terms that this topic presents.</span></span> <span data-ttu-id="98e5c-108">Und sind andere Arten der Werte zu.</span><span class="sxs-lookup"><span data-stu-id="98e5c-108">And there are other kinds of values, too.</span></span>
