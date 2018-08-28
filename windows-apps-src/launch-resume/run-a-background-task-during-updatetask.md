@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Update, Hintergrund, Updatetask, Hintergrundaufgabe
 ms.localizationpriority: medium
 ms.openlocfilehash: fcba2cb736f86cebc6d2664e2ec3b557d47c86d7
-ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
+ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "2857658"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "2881163"
 ---
 # <a name="run-a-background-task-when-your-uwp-app-is-updated"></a>Ausführen einer Hintergrundaufgabe, wenn Ihre UWP-App aktualisiert wird
 
@@ -97,6 +97,6 @@ Wenn die Hintergrundaufgabe abgeschlossen ist, können Sie die Vordergrund-app a
 > [!NOTE]
 > Benutzer von Visual Studio 2015: die oben beschriebenen Schritte gelten für Visual Studio 2017. Wenn Sie Visual Studio 2015 verwenden, können Sie dieselben Techniken Trigger und Testen der UpdateTask, mit Ausnahme von Visual Studio nicht darauf angefügt wird. Ein alternatives Verfahren in VS 2015 ist zum Einrichten einer [ApplicationTrigger](https://docs.microsoft.com/windows/uwp/launch-resume/trigger-background-task-from-app) , die die UpdateTask als ihr Einstiegspunkt festlegt, und lösen die Ausführung direkt in den Vordergrund-app.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb des Prozesses](https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task)
