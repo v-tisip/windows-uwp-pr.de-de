@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Standard, c ++, Cpp, Winrt, Projektion, XAML, benutzerdefinierte Vorlagen, Steuerung
 ms.localizationpriority: medium
 ms.openlocfilehash: c108175c66d27b2cdbd910a0f7653ca1befb68e9
-ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
+ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "2856970"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "2885564"
 ---
 # <a name="xaml-custom-templated-controls-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>XAML-benutzerdefinierte (mit Vorlagen) Steuerelemente mit [C + / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 

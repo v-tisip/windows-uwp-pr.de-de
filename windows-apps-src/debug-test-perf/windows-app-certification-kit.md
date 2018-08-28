@@ -2,26 +2,26 @@
 author: PatrickFarley
 ms.assetid: 78D833B9-E528-4BCA-9C48-A757F17E6C22
 title: Zertifizierungskit für Windows-Apps
-description: Ihre Anwendung die beste Chance, veröffentlicht Microsoft Store oder zertifizierten Windows überprüfen und Testen vor Ort vor dem Übermitteln für die Zertifizierung. In diesem Thema wird erläutert, wie Sie das Zertifizierungskit für Windows-Apps installieren und ausführen.
+description: Wenn Ihre app die beste Chance veröffentlicht wird, die auf dem Microsoft Store oder zunehmend zur Windows-Certified übergeben möchten, überprüfen Sie und Testen Sie es lokal, bevor Sie sie für die Zertifizierung übermitteln. In diesem Thema wird erläutert, wie Sie das Zertifizierungskit für Windows-Apps installieren und ausführen.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10 Uwp, Zertifizierung
+keywords: Windows 10, Uwp, app-Zertifizierung
 ms.localizationpriority: medium
 ms.openlocfilehash: b7a72a89704aa3768cc43cdfbb75b620bae303e3
-ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
+ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "2856878"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "2891733"
 ---
 # <a name="windows-app-certification-kit"></a>Zertifizierungskit für Windows-Apps
 
 
 
-Zu Ihre App [Windows zertifiziert](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) für [Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Hh694062)vorbereiten, sollten Sie überprüfen und testen es zuerst lokal. In diesem Thema wird das Installieren und Ausführen von [Windows Zertifizierungskit](http://go.microsoft.com/fwlink/p/?LinkID=309666) um sicherzustellen, dass Ihre Anwendung sicher und effizient veranschaulicht.
+Zum Abrufen Ihrer app [Windows zertifiziert](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) oder [Publikation an den Microsoft-Store](https://msdn.microsoft.com/library/windows/apps/Hh694062)vorzubereiten, sollten Sie überprüfen und testen es zuerst lokal. In diesem Thema wird das Installieren und führen Sie das [Windows App Zertifizierungskit](http://go.microsoft.com/fwlink/p/?LinkID=309666) , um sicherzustellen, dass Ihre app sichere und effiziente ist veranschaulicht.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -46,7 +46,7 @@ Beim Installieren einer neueren Version des [Zertifizierungskits für Windows-Ap
 
 3.  Nachdem Sie die zu testende App eingegeben oder ausgewählt haben, klicken Sie auf **Weiter**.
 
-4.  Auf dem nächsten Bildschirm sehen Sie den Testworkflow für die App, die Sie testen möchten. Wenn ein Test in der Liste deaktiviert ist, kann er nicht für Ihre Umgebung angewendet werden. Wenn Sie eine z.B. einer Windows10-App unter Windows7 testen, werden nur statische Tests für den Workflow angewendet. Beachten Sie, dass Microsoft Store alle Tests aus diesem Workflow gelten. Wählen Sie aus, welche Tests Sie ausführen möchten, und klicken Sie dann auf **Weiter**.
+4.  Auf dem nächsten Bildschirm sehen Sie den Testworkflow für die App, die Sie testen möchten. Wenn ein Test in der Liste deaktiviert ist, kann er nicht für Ihre Umgebung angewendet werden. Wenn Sie eine z.B. einer Windows10-App unter Windows7 testen, werden nur statische Tests für den Workflow angewendet. Beachten Sie, dass Microsoft Store alle Tests aus diesen Workflow anwenden können. Wählen Sie aus, welche Tests Sie ausführen möchten, und klicken Sie dann auf **Weiter**.
 
     Das Zertifizierungskit für Windows-Apps beginnt mit dem Überprüfen der App.
 
@@ -90,9 +90,9 @@ Beim Installieren einer neueren Version des [Zertifizierungskits für Windows-Ap
 
 Die Leistungstestgrenzen des Zertifizierungskits für Windows-Apps basieren auf der Leistung eines Computers mit geringem Energieverbrauch.
 
-Die Eigenschaften des Computers, auf dem der Test ausgeführt wird, können die Testergebnisse beeinflussen. Um festzustellen, ob Ihre Anwendung [Microsoft Richtlinien](https://msdn.microsoft.com/library/windows/apps/Dn764944)entspricht, empfehlen wir, Ihre Anwendung auf einem Computer Energiesparmodus wie ein Intel Atom Prozessor mit einer Auflösung von 1366 x 768 (oder höher) und ein schwer zu testen Laufwerk (im Gegensatz zu einem Solid-State-Festplatte)
+Die Eigenschaften des Computers, auf dem der Test ausgeführt wird, können die Testergebnisse beeinflussen. Um festzustellen, ob die Leistung Ihrer Anwendung die [Richtlinien für Microsoft](https://msdn.microsoft.com/library/windows/apps/Dn764944)erfüllt, wird empfohlen, dass Sie Ihre app auf einem Computer LP-, wie etwa einem Atom-Intel-Prozessor-basierten Computer mit einer Auflösung von 1366 x 768 (oder höher) und einer Rotation schwer testen Laufwerk (im Gegensatz zu einer harte Flashlaufwerk).
 
-Da Computer mit geringem Energieverbrauch weiterentwickelt werden, können sich die Leistungsmerkmale im Laufe der Zeit ändern. Finden Sie aktuelle [Richtlinien für Microsoft](https://msdn.microsoft.com/library/windows/apps/Dn764944) , und Testen Sie Ihre Anwendung mit der aktuellsten Version der Zertifizierung Windows App, um sicherzustellen, dass Ihre Anwendung Leistung Erfordernissen entspricht.
+Da Computer mit geringem Energieverbrauch weiterentwickelt werden, können sich die Leistungsmerkmale im Laufe der Zeit ändern. Verweisen auf die aktuelle [Microsoft Store Richtlinien](https://msdn.microsoft.com/library/windows/apps/Dn764944) und Testen Ihrer app mit der aktuellsten Version des Windows-App-Zertifizierungskit dafür sorgen, dass Ihre app mit den neuesten leistungsanforderungen entspricht.
 
 ## <a name="related-topics"></a>Verwandte Themen
 
