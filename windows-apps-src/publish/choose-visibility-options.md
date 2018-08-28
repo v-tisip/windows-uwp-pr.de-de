@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Sichtbarkeit, private Zielgruppe, verfügbar, sichtbar
 ms.localizationpriority: medium
 ms.openlocfilehash: 07986353be41fcc9ef9dd9406fb0b30c4aa3d7f2
-ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
+ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "2862223"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "2894219"
 ---
 # <a name="choose-visibility-options"></a><span data-ttu-id="f2bee-103">Sichtbarkeitsoptionen auswählen</span><span class="sxs-lookup"><span data-stu-id="f2bee-103">Choose visibility options</span></span>
 

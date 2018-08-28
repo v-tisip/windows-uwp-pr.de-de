@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Geräte für Windows 10, Uwp, verbunden, remote-Systemen, ROM, Project ROM
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e5226b23a454bf48add22d590a3ff247c629e4f
-ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
+ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "2855548"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "2888179"
 ---
 # <a name="connect-devices-through-remote-sessions"></a><span data-ttu-id="e6c94-104">Verbinden von Geräten über Remotesitzungen</span><span class="sxs-lookup"><span data-stu-id="e6c94-104">Connect devices through remote sessions</span></span>
 
