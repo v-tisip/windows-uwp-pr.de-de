@@ -11,11 +11,11 @@ keywords: Windows10, UWP, Kundengruppen, Segment, Flight-Gruppe, bekannte Benutz
 ms.assetid: ad1a5a02-71aa-47d9-8d03-2d85f4941442
 ms.localizationpriority: medium
 ms.openlocfilehash: 88101d9f8cc7ca40d37f88202667f36ecf5d8a3f
-ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
+ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "2866104"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "2880599"
 ---
 # <a name="create-customer-groups"></a><span data-ttu-id="51acb-103">Erstellen von Kundengruppen</span><span class="sxs-lookup"><span data-stu-id="51acb-103">Create customer groups</span></span>
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store Services SDK, A/B-Tests, Experimente
 ms.localizationpriority: medium
 ms.openlocfilehash: 073d5ec67bb012cbfe21c279ee97ec3c50b8458f
-ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
+ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "2866026"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "2881913"
 ---
 # <a name="manage-your-experiment-in-the-dashboard"></a><span data-ttu-id="e4cb9-103">Verwalten Ihres Experiments im Dashboard</span><span class="sxs-lookup"><span data-stu-id="e4cb9-103">Manage your experiment in the dashboard</span></span>
 

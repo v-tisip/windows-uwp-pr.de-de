@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, LOB, Branche, Unternehmens-Apps, Store für Unternehmen, Store für Bildungseinrichtungen, Enterprise
 ms.localizationpriority: medium
 ms.openlocfilehash: 9149533a12263e105356a1683257c4d9172eefb5
-ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
+ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "2855666"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "2882107"
 ---
 # <a name="distribute-lob-apps-to-enterprises"></a><span data-ttu-id="3acc4-103">Verteilen von branchenspezifischen Apps an Unternehmen</span><span class="sxs-lookup"><span data-stu-id="3acc4-103">Distribute LOB apps to enterprises</span></span>
 

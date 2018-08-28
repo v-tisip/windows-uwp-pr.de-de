@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Store-Einträge importieren, Store-Einträge exportieren, Export importieren, Store-Einträge CSV
 ms.localizationpriority: medium
 ms.openlocfilehash: 0e9b23f21f87bf6caeb2cbee97a854bc8202c0b3
-ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
+ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "2857269"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "2896296"
 ---
 # <a name="import-and-export-store-listings"></a><span data-ttu-id="15ceb-103">Importieren und Exportieren von Store-Einträgen</span><span class="sxs-lookup"><span data-stu-id="15ceb-103">Import and export Store listings</span></span>
 
