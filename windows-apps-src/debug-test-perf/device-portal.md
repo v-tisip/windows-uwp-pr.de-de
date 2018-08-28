@@ -8,14 +8,14 @@ ms.date: 12/12/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, Uwp, Device-portal
+keywords: Windows 10, Uwp, Gerät portal
 ms.localizationpriority: medium
 ms.openlocfilehash: 08e7d8fcfbab0d0b22fffa3e3e0aecc38d5b095c
-ms.sourcegitcommit: 753dfcd0f9fdfc963579dd0b217b445c4b110a18
+ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "2867599"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "2889275"
 ---
 # <a name="windows-device-portal-overview"></a>Übersicht über das Windows Device Portal
 
@@ -156,7 +156,7 @@ Die Geräte-Manager-Seite listet alle Peripheriegeräte auf Ihrem Gerät angesch
 
 ![Seite für Gerät Portal Geräte-manager](images/device-portal/mob-device-portal-devices.png)
 
-### <a name="networking"></a>Networking
+### <a name="networking"></a>Netzwerk
 
 Der Netzwerkseite verwaltet Netzwerkverbindungen auf dem Gerät. Es sei denn, Sie Portal über USB-Gerät verbunden sind, werden diese Einstellungen ändern wahrscheinlich Sie Gerät Portal trennen.
 - **Verfügbare Netzwerke**: Zeigt die WLAN-Netzwerke für das Gerät verfügbar. Durch Klicken oder Tippen auf ein Netzwerk können Sie eine Verbindung mit ihm herstellen und ggf. ein Kennwort eingeben. Gerät Portal unterstützt noch keine Enterprise-Authentifizierung. Die Dropdownliste **Profile** aus können auch versuchen, eine der WLAN-Profile bekannt, dass das Gerät eine Verbindung herstellen.
