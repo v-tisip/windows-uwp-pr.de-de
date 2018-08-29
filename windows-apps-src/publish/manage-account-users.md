@@ -8,14 +8,14 @@ ms.date: 07/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Verwalten von Fenstern 10, Uwp, Benutzer von Konten, Benutzern, Azure Ad, Mehrbenutzer, mehrere Benutzer
+keywords: Windows Uwp, 10 Kontobenutzer verwalten Benutzer Azure Ad mehrere Benutzer, mehrere Benutzer
 ms.localizationpriority: medium
 ms.openlocfilehash: bef703958f8f04cd55d887dfa8840d1ed3fbeba5
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888778"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2918951"
 ---
 # <a name="manage-account-users"></a>Verwalten von Kontobenutzern
 

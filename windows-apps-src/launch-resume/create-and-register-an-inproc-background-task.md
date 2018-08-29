@@ -7,15 +7,15 @@ ms.date: 11/03/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, Uwp, Hintergrund Aufgabe
+keywords: Windows 10 Uwp, Hintergrund Aufgabe
 ms.assetid: d99de93b-e33b-45a9-b19f-31417f1e9354
 ms.localizationpriority: medium
 ms.openlocfilehash: 5879977662dc2bd609d09e5fe53fc2a2f0b9180f
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2894802"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2918891"
 ---
 # <a name="create-and-register-an-in-process-background-task"></a>Erstellen und Registrieren einer Hintergrundaufgabe innerhalb von Prozessen
 
@@ -72,7 +72,7 @@ Der folgende Beispielcode weist eine Bedingung zu, die die Anwesenheit des Benut
 
 ## <a name="place-your-background-activity-code-in-onbackgroundactivated"></a>Platzieren des Codes der Hintergrundaktivität in „OnBackgroundActivated()“
 
-Tragen Sie Ihre Aktionscode Hintergrund [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) Ihrer Hintergrund Trigger reagiert werden soll, wenn das Ereignis ausgelöst wird. **OnBackgroundActivated** kann genau wie [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396)behandelt werden. Die Methode hat einen [BackgroundActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.activation.backgroundactivatedeventargs.aspx) -Parameter, der alle Elemente enthält, die die **Run** -Methode bietet. Beispielsweise in App.xaml.cs:
+Versetzen Sie der Aktionscode Hintergrund [OnBackgroundActivated](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) löst auf Hintergrund Auslöser reagieren **OnBackgroundActivated** können wie [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396)behandelt werden. Die Methode hat einen [BackgroundActivatedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.activation.backgroundactivatedeventargs.aspx) -Parameter, der alles enthält, die die **Run** -Methode bietet. In "App.Xaml.cs":
 
 ``` cs
 using Windows.ApplicationModel.Background;
@@ -92,7 +92,7 @@ sealed partial class App : Application
 }
 ```
 
-Eine umfassende **OnBackgroundActivated** Beispiel finden Sie unter [Konvertieren einen app-Dienst in demselben Prozess wie die Host-app ausgeführt](convert-app-service-in-process.md).
+Ein umfangreicheres Beispiel **OnBackgroundActivated** finden Sie unter [Konvertieren ein Anwendungsdiensts in demselben Prozess wie der Host-Anwendung ausgeführt](convert-app-service-in-process.md).
 
 ## <a name="handle-background-task-progress-and-completion"></a>Behandeln des Status und Abschlusses von Hintergrundaufgaben
 

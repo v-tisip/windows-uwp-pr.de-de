@@ -11,22 +11,22 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d322a22898f2f45a89b4cd30051149133bc3e2bf
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2881451"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2918961"
 ---
 # <a name="use-map-services"></a>Verwenden von Kartendiensten
 
-Um Kartendienste in Apps zu verwenden, die auf Windows 10 or Windows 8.x ausgerichtet sind, besuchen Sie das [Bing Karten Dev Center](http://go.microsoft.com/fwlink/p/?LinkId=614880). Informationen zum Anfordern eines Authentifizierung Maps-Schlüssels aus dem Bing Maps Developer Center und Hinzufügen der Kontaktobjekte zu Ihrer app, finden Sie weitere Informationen unter [Anforderung eines Schlüssels Maps Authentication](../maps-and-location/authentication-key.md) . 
+Um Kartendienste in Apps zu verwenden, die auf Windows 10 or Windows 8.x ausgerichtet sind, besuchen Sie das [Bing Karten Dev Center](http://go.microsoft.com/fwlink/p/?LinkId=614880). Informationen dazu, wie Sie die Bing Maps Developer Center Anfordern eines kartenauthentifizierungsschlüssels und Ihrer app hinzufügen finden Sie weitere Informationen [Anfordern eines kartenauthentifizierungsschlüssels](../maps-and-location/authentication-key.md) . 
 
-Um Map-Dienste in apps für Windows Phone 8.1 und früher verwenden, müssen Sie eine Zuordnung Service-Anwendung-ID und ein Token in Ihrer app-Code im Developer Center Dashboard einfügen anfordern.
+Um Kartendienste in apps für Windows Phone 8.1 und früheren Versionen verwenden zu können, müssen Sie eine Kartendienst-Anwendungs-ID und ein Token in dem Code Ihrer app im Dev Center-Dashboard einfügen anfordern.
 
-Jederzeit nach [den Namen Ihrer app reserviert](create-your-app-by-reserving-a-name.md), haben können Sie navigieren auf die Anwendung zugeschnitten im Dashboard, erweitern Sie **im Abschnitt klicken Sie im linken Navigationsbereich** und wählen **Maps**. Wenn Sie **token abrufen**klicken, wir einen Map-Dienst-ID der Anwendung (**ApplicationID**) generieren und Service Authentication Token (**AuthenticationToken**) für Ihre app zuordnen. Diese Werte werden auf dieser Seite gespeichert werden, damit Sie jederzeit anzeigen zurückgeben können.
+Jedes Mal, nachdem Sie [den Namen Ihrer app reserviert](create-your-app-by-reserving-a-name.md), haben können Sie navigieren Sie zu dieser app in Ihrem Dashboard, erweitern **Services** -Abschnitt im linken Navigationsmenü und wählen **Karten**. Beim **Abrufen von token**anklicken, wir einen Map-Dienst Anwendungs-ID (**ApplicationID**) zu generieren und Service Authentifizierungstoken (**AuthenticationToken**) für Ihre app zuordnen. Diese Werte werden auf dieser Seite gespeichert werden, damit Sie jederzeit zur Anzeige zurückkehren können.
 
 > [!IMPORTANT]
-> Achten Sie darauf, zum Hinzufügen der **ApplicationID** und **AuthenticationToken** in Ihrem Code, bevor Sie das Packen und Versenden von Ihrer app. Weitere Informationen finden Sie unter [Hinzufügen eines Kartensteuerelements zu einer Seite (Windows Phone 8.1)](http://go.microsoft.com/fwlink/p/?LinkId=614882).
+> Achten Sie darauf, dass die **ApplicationID** und **AuthenticationToken** an Ihrem Code, bevor Sie Paket hinzufügen und Ihre app übermitteln. Weitere Informationen finden Sie unter [Hinzufügen eines Kartensteuerelements zu einer Seite (Windows Phone 8.1)](http://go.microsoft.com/fwlink/p/?LinkId=614882).
 
  
 

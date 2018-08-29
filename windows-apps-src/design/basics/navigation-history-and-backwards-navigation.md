@@ -15,11 +15,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0400e04a86675adccd1da14d8cb2652028fbfd30
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888099"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2918971"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Navigationsverlauf und Rückwärtsnavigation für UWP-Apps
 
@@ -33,7 +33,7 @@ Der Benutzer erwartet, dass durch Drücken der Zurück-Schaltfläche die vorheri
 
 ## <a name="back-button"></a>Zurück-Schaltfläche
 
-Um eine zurück-Schaltfläche erstellen möchten, verwenden Sie das [Button](../controls-and-patterns/buttons.md) -Steuerelement mit der `NavigationBackButtonNormalStyle` formatieren, und setzen Sie die Schaltfläche an der linken oberen Ecke der Benutzeroberfläche Ihrer app (Weitere Informationen hierzu finden Sie unter den folgenden XAML-Codebeispielen).
+Um eine zurück-Schaltfläche zu erstellen, verwenden Sie die [Schaltflächen](../controls-and-patterns/buttons.md) -Steuerelement mit der `NavigationBackButtonNormalStyle` Stil, und platzieren Sie die Schaltfläche in der oberen linken Ecke der Benutzeroberfläche Ihrer app (Weitere Informationen finden Sie unter den folgenden XAML-Codebeispielen).
 
 ![Zurück-Schaltfläche oben links in der App-Oberfläche](images/back-nav/BackEnabled.png)
 
@@ -174,9 +174,9 @@ namespace winrt::PageNavTest::implementation
 }
 ```
 
-Wir behandeln, rückwärts Navigation für eine einzelne Seite. Sie können die Navigation auf jeder Seite behandeln, wenn Sie bestimmte Seiten aus der Navigation zurück ausschließen möchten, oder Seitenebene Code vor dem Anzeigen der Seite ausgeführt werden soll.
+Wir behandeln, rückwärts Navigation für eine einzelne Seite. Sie können die Navigation auf jeder Seite behandeln, wenn Sie bestimmte Seiten aus der Rückwärtsnavigation ausschließen möchten, oder auf Seitenebene Code vor dem Anzeigen der Seite ausgeführt werden soll.
 
-Abwärtskompatibilität Navigation für eine gesamte app behandeln Sie registrieren Sie einen globalen Listener für das Ereignis [**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested) in der `App.xaml` Code-Behind-Datei.
+Um die Navigation für eine gesamte app Rückwärtsnavigation zu behandeln, registrieren Sie einen globalen Listener für das [**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested) -Ereignis in der `App.xaml` Code-Behind-Datei.
 
 App.xaml Code-Behind:
 
@@ -293,24 +293,24 @@ Bisher nutzten UWP-Apps [AppViewBackButtonVisibility](https://docs.microsoft.com
 
 Wenn Ihre App weiterhin [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility) verwendet, wird die Zurück-Schaltfläche wie gewohnt in der Titelleiste angezeigt.
 
-- Wenn Ihre app **nicht mit Registerkarten**ist, wird die zurück-Schaltfläche in der Titelleiste gerendert. Die visual Erfahrung und Benutzer Aktivitäten für die zurück-Schaltfläche werden aus vorherigen Builds nicht geändert.
+- Wenn Ihre app **nicht mit Registerkarten**ist, wird die zurück-Schaltfläche in der Titelleiste gerendert. Die visuellen Erfahrung und den Benutzerinteraktionen für die zurück-Schaltfläche bleiben unverändert von vorherigen Builds.
 
-    ![Titelleiste zurück-Schaltfläche](images/nav-back-pc.png)
+    ![Schaltfläche "zurück" in der Titelleiste](images/nav-back-pc.png)
 
-- Wenn eine app **mit Registerkarten**ist, und klicken Sie dann die zurück-Schaltfläche wird in eine neue System nach hinten gerendert häufig verwendete Hyperlinks.
+- Wenn eine app **mit Registerkarten**, wird die zurück-Schaltfläche innerhalb einer neuen System nach hinten gerendert wird Leiste.
 
-    ![System gezeichnet zurück-Schaltfläche](images/back-nav/tabs.png)
+    ![System gezeichnet wieder Schaltflächenleiste](images/back-nav/tabs.png)
 
-### <a name="system-back-bar"></a>System nach hinten Balken
+### <a name="system-back-bar"></a>Systemeigene Leiste
 
 > [!NOTE]
-> "System nach hinten Leiste" ist nur eine Beschreibung, nicht offizieller Name.
+> "Systemeigene Leiste" ist nur eine Beschreibung, nicht offizieller Name.
 
-Das System nach hinten Leiste ist ein Band, die zwischen der Registerkarte Band und die app s Inhaltsbereich eingefügt wird. Das Band läuft über die Breite der App und enthält die Zurück-Schaltfläche auf der linken Seite. Das Band hat eine vertikale Höhe von 32 Pixel, um sicherzustellen, dass ausreichend Touch Zielgröße für die zurück-Schaltfläche.
+Die systemeigene rückwärtsnavigationsleiste ist ein Band, die zwischen dem registerkartenband und dem Inhaltsbereich der app s eingefügt wird. Das Band läuft über die Breite der App und enthält die Zurück-Schaltfläche auf der linken Seite. Des Bands ist die vertikale Höhe von 32 Pixel um sicherzustellen, dass ausreichende berührungszielgröße für die zurück-Schaltfläche.
 
-Die systemeigene Rückwärtsnavigationsleiste wird dynamisch angezeigt, abhängig von der Sichtbarkeit der Zurück-Schaltfläche. Wenn die zurück-Schaltfläche sichtbar ist, auf dem System nach hinten Leiste eingefügt, app-Inhalte nach unten und 32 Pixel unterhalb der Registerkarte verschieben. Wenn die zurück-Schaltfläche ausgeblendet ist, auf dem System nach hinten Leiste dynamisch entfernt, Belegschaft im app-Inhalten von und 32 Pixel auf das Registerkarte Band erfüllen. Zum Vermeiden Ihre app-Benutzeroberfläche UMSCHALTTASTE nach oben oder unten, empfehlen wir, zeichnen eine [Zurück-Schaltfläche in der app](#back-button).
+Die systemeigene Rückwärtsnavigationsleiste wird dynamisch angezeigt, abhängig von der Sichtbarkeit der Zurück-Schaltfläche. Wenn die zurück-Schaltfläche angezeigt wird, die systemeigene rückwärtsnavigationsleiste eingefügt, dass app-Inhalt nach unten 32 Pixel unter dem registerkartenband verschoben. Wenn die zurück-Schaltfläche ausgeblendet ist, die systemeigene rückwärtsnavigationsleiste dynamisch entfernt, dass verschoben app-Inhalt von 32 Pixel um dem registerkartenband zu erfüllen. Es wird empfohlen, um zu vermeiden, dass Ihre app Benutzeroberfläche verschoben nach oben oder unten, einen [in-app-zurück-Schaltfläche](#back-button).
 
-[Titel-Leiste Anpassungen](../shell/title-bar.md) auf der Registerkarte app und das System zurück übertragen wird häufig verwendete Hyperlinks. Wenn Ihre app gibt die Hintergrund- und Vordergrundfarben Farbeigenschaften mit [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), und klicken Sie dann in den Hintergrund auf der Registerkarte und das System die Farben ausgeglichen werden häufig verwendete Hyperlinks.
+[Anpassungen der Titelleiste](../shell/title-bar.md) wird dabei auf die app-Registerkarte und die systemeigene rückwärtsnavigationsleiste. Wenn Ihre app Hintergrund und Vordergrund-Farbeigenschaften mit [ApplicationViewTitleBar gibt](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewtitlebar), und klicken Sie dann die Farben für die Registerkarte und System angewendet Leiste.
 
 ## <a name="guidelines-for-custom-back-navigation-behavior"></a>Richtlinien für das benutzerdefinierte Verhalten der Rückwärtsnavigation
 
@@ -335,16 +335,16 @@ Wenn Sie Ihre eigene Zurück-Stapelnavigation bereitstellen möchten, sollte die
 </tr>
 <tr class="even">
 <td style="vertical-align:top;"><strong>Seite zu Seite, gleiche Peer-Gruppe, kein Bildschirmnavigationselement</strong>
-<p>Der Benutzer navigiert von einer Seite zu einer anderen mit derselben Peer-Gruppe. Es ist nicht auf dem Bildschirm Navigationselements (beispielsweise [NavigationView](../controls-and-patterns/navigationview.md)), die direkte Navigation für beide Seiten bereitstellt.</p></td>
+<p>Der Benutzer navigiert von einer Seite zu einer anderen mit derselben Peer-Gruppe. Es ist nicht auf dem Bildschirm Navigationselement (z. B. [NavigationView](../controls-and-patterns/navigationview.md)), die direkte Navigation zu beiden Seiten bereitstellt.</p></td>
 <td style="vertical-align:top;"><strong>Ja</strong>
-<p>In der folgenden Abbildung wird der Benutzer navigiert zwischen zwei Seiten in der gleichen Peer-Gruppe, und die Navigation der Navigationsverlauf hinzugefügt werden sollen.</p>
+<p>In der folgenden Abbildung navigiert zwischen zwei Seiten in derselben Peer-Gruppe und die Navigation dem Navigationsverlauf hinzugefügt werden sollen.</p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-noosnavelement.png" alt="Navigation within a peer group" /></p></td>
 </tr>
 <tr class="odd">
 <td style="vertical-align:top;"><strong>Seite zu Seite, gleiche Peer-Gruppe, mit einem Bildschirmnavigationselement</strong>
-<p>Der Benutzer navigiert von einer Seite zu einer anderen in derselben Peer-Gruppe. Beide Seiten werden im gleichen Navigationselement, wie etwa [NavigationView](../controls-and-patterns/navigationview.md)angezeigt.</p></td>
+<p>Der Benutzer navigiert von einer Seite zu einer anderen in derselben Peer-Gruppe. Beide Seiten werden im gleichen Navigationselement beinhaltet, z. B. [NavigationView](../controls-and-patterns/navigationview.md)angezeigt.</p></td>
 <td style="vertical-align:top;"><strong>Das kommt darauf an.</strong>
-<p>Ja, um den Navigationsverlauf mit zwei Ausnahmen hinzufügen. Fügen Sie Wenn Sie Benutzern Ihrer App Wechsel zwischen Seiten in der Peer-Gruppe häufig erwarten oder der Navigationshierarchie beibehalten werden soll, klicken Sie dann keine zum Navigationsverlauf. Wenn der Benutzer in diesem Fall die Zurück-Schaltfläche drückt, wird wieder die letzte Seite aufgerufen, die geöffnet war, bevor der Benutzer zur aktuellen Peer-Gruppe navigierte. </p>
+<p>Ja, dem Navigationsverlauf mit zwei Ausnahmen hinzufügen. Fügen Sie Wenn Sie davon ausgehen, dass Benutzer Ihrer App zwischen Seiten in der Peer-Gruppe häufig wechseln, oder wenn Sie der Navigationshierarchie beibehalten möchten, dann keine dem Navigationsverlauf. Wenn der Benutzer in diesem Fall die Zurück-Schaltfläche drückt, wird wieder die letzte Seite aufgerufen, die geöffnet war, bevor der Benutzer zur aktuellen Peer-Gruppe navigierte. </p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-yesosnavelement.png" alt="Navigation across peer groups when a navigation element is present" /></p></td>
 </tr>
 <tr class="even">
