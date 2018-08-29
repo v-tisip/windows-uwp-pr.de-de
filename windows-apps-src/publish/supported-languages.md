@@ -11,23 +11,23 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e76f63fa30c3a294e1917bf1bed9ea79897390b2
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2892449"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905123"
 ---
 # <a name="supported-languages"></a>Unterstützte Sprachen
 
 
 Sie können apps an den Microsoft Store in mehr als 100 Sprachen übermitteln.
 
-Weitere Informationen zum Konfigurieren von Sprachen in Ihren apps finden Sie unter [Globalisierung und Lokalisierung](../design/globalizing/globalizing-portal.md) und [machen Sie sich mit benutzerdefinierten Profil Sprachen und app-manifest Sprachen](../design/globalizing/manage-language-and-region.md). Wir bieten auch ein [Multilingual App Toolkit](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat), mit dessen Hilfe Sie Apps programmieren können, die mehrere Sprachen unterstützen.
+Weitere Informationen zum Konfigurieren von Sprachen in Ihren apps, [Globalisierung und Lokalisierung](../design/globalizing/globalizing-portal.md) und [verstehen benutzerprofilsprachen und app-manifest-Sprachen](../design/globalizing/manage-language-and-region.md)angezeigt. Wir bieten auch ein [Multilingual App Toolkit](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat), mit dessen Hilfe Sie Apps programmieren können, die mehrere Sprachen unterstützen.
 
 ## <a name="supported-languages"></a>Unterstützte Sprachen
 
 
-Dies sind die Sprachen, die Microsoft Store unterstützt. Ihre App muss mindestens eine dieser Sprachen unterstützen, und sie darf keine Sprachcodes angeben, die hier nicht aufgeführt sind.
+Hierbei handelt es sich um die Sprachen, die im Microsoft Store unterstützt. Ihre App muss mindestens eine dieser Sprachen unterstützen, und sie darf keine Sprachcodes angeben, die hier nicht aufgeführt sind.
 
 | Name der Sprache         | Unterstützte Sprachcodes                                                                                                                                                                              |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
