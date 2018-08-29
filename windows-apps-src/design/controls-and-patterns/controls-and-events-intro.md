@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f8f86a6988e68e3ff8d2dfef32512633b3761fd
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2882573"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905963"
 ---
 # <a name="intro-to-controls-and-patterns"></a>Einführung in Steuerelemente und Muster
 
@@ -25,7 +25,7 @@ In der UWP-App-Entwicklung ist ein *Steuerelement* ein UI-Element, das Inhalte a
 
 > **Wichtige APIs:** [Namespace „Windows.UI.Xaml.Controls“](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.aspx)
 
-Ein *Muster* ist eine Anleitung zum Ändern eines Steuerelements oder zum Kombinieren verschiedener Steuerelemente, um etwas Neues zu erstellen. Beispielsweise ist das [Master/Details](master-details.md) -Muster so, dass Sie ein [SplitView](split-view.md) -Steuerelement für die Navigation der app verwenden können. In ähnlicher Weise können Sie die Vorlage eines Steuerelements [NavigationView](navigationview.md) Implementierung des Musters Registerkarte anpassen.
+Ein *Muster* ist eine Anleitung zum Ändern eines Steuerelements oder zum Kombinieren verschiedener Steuerelemente, um etwas Neues zu erstellen. Das [Master/Details](master-details.md) -Musters ist z. B. eine Möglichkeit, dass Sie ein [SplitView](split-view.md) -Steuerelement für app-Navigation verwenden können. Auf ähnliche Weise können Sie die Vorlage eines Steuerelements [NavigationView](navigationview.md) zum Implementieren des registerkartenmusters anpassen.
 
 In vielen Fällen können Sie ein Steuerelement unverändert verwenden. XAML-Steuerelemente trennen jedoch die Funktion von der Struktur und Darstellung, sodass Sie diese über verschiedene Änderungsebenen an Ihre Bedürfnisse anpassen können. Im Abschnitt [Stil](../style/index.md) erfahren Sie, wie Sie mithilfe von [XAML-Formatvorlagen](xaml-styles.md) und [Steuerelementvorlagen](control-templates.md) Steuerelemente ändern.
 

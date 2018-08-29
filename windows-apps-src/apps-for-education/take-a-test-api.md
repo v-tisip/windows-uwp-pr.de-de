@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, education
 ms.localizationpriority: medium
 ms.openlocfilehash: 38596ad12ac309db5dc60e4a5183eee9bf8c7b7c
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2894247"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2917616"
 ---
 # <a name="take-a-test-javascript-api"></a>JavaScript-API „Prüfung”
 
-[Machen Sie einen Test](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) ist eine browserbasierte UWP-app, die gesperrten online Bewertungen für Testzwecke besonders Einsatz rendert die Lehrer konzentrieren die Bewertung und nicht zum Bereitstellen einer sicheren Umgebung testen Content ermöglicht. Um dies zu erreichen, wird eine JavaScript-API verwendet, die von jeder Web-Anwendung genutzt werden kann. Die API „Prüfung“ unterstützt den [Browser-API-Standard SBAC](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) zur Durchführung wichtiger allgemeiner Kernprüfungen.
+[Prüfung](https://technet.microsoft.com/edu/windows/take-tests-in-windows-10) ist eine Browser-basierte UWP-app, die gesperrte onlinebewertungen für wichtige Prüfungen rendert, gerendert wird, sodass Dozenten auf den Prüfungsinhalt konzentrieren anstatt sich um eine sichere testumgebung bereitzustellen. Um dies zu erreichen, wird eine JavaScript-API verwendet, die von jeder Web-Anwendung genutzt werden kann. Die API „Prüfung“ unterstützt den [Browser-API-Standard SBAC](http://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) zur Durchführung wichtiger allgemeiner Kernprüfungen.
 
 Weitere Informationen zur App selbst finden Sie unter [Technische Referenz zur App „Prüfung“](https://technet.microsoft.com/edu/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396). Hilfe zur Problembehandlung finden Sie unter [Problembehandlung bei Microsoft Prüfung mithilfe der Ereignisanzeige](troubleshooting.md).
 
@@ -32,7 +32,7 @@ Die Prüfungs-APIs gibt es in den folgenden Namespaces. Beachten Sie, dass alle 
 
 ### <a name="security-namespace"></a>Sicherheitsnamespace
 
-Der Namespace Sicherheit können Sie das Gerät sperren, überprüfen Sie die Liste der Benutzer und das System Prozesse, Mac- und IP-Adressen zu erhalten und zwischengespeicherte Webressourcen deaktivieren.
+Der sicherheitsnamespace können Sie das Gerät sperren, überprüfen Sie die Liste der Benutzer- und Systemprozesse, Abrufen von Mac- und IP-Adressen und Löschen von zwischengespeicherten Webressourcen.
 
 | Methode | Beschreibung   |
 |--------|---------------|

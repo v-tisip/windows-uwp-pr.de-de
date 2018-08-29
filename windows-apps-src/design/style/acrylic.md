@@ -1,6 +1,6 @@
 ---
 author: mijacobs
-description: Ein Typ von Pinsel, mit dem eine durchsichtige Textur erstellt.
+description: Eine Art von Pinsel, der eine durchsichtige Textur erzeugt.
 title: Acryl-Material
 template: detail.hbs
 ms.author: mijacobs
@@ -15,26 +15,26 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 8589a450b53a5ea028f8af2cee2aef7dc0816b52
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2894099"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2907767"
 ---
 # <a name="acrylic-material"></a>Acryl-Material
 
 ![Favoritenbild](images/header-acrylic.svg)
 
-Acryl ist ein [Pinsel](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Media.Brush) , der eine durchsichtige Textur erstellt. Sie können Acryl auf App-Oberflächen anwenden, um Tiefe hinzuzufügen und eine visuelle Hierarchie herzustellen.  <!-- By allowing user-selected wallpaper or colors to shine through, acrylic keeps users in touch with the OS personalization they've chosen. -->
+Acryl ist eine Art von [Pinsel](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Media.Brush) , der eine durchsichtige Textur erzeugt. Sie können Acryl auf App-Oberflächen anwenden, um Tiefe hinzuzufügen und eine visuelle Hierarchie herzustellen.  <!-- By allowing user-selected wallpaper or colors to shine through, acrylic keeps users in touch with the OS personalization they've chosen. -->
 
 > **Wichtige APIs**: [AcrylicBrush-Klasse](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.acrylicbrush), [Background-Eigenschaft](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.control.Background)
 
 :::row:::
     :::column:::
-        Acryl in helles Design ![Acryl in helles Design](images/Acrylic_LightTheme_Base.png)
+        Acryl im hellen Design ![Acryl im hellen Design](images/Acrylic_LightTheme_Base.png)
     :::column-end:::
     :::column:::
-        Acryl in dunkel Design ![Acryl in dunkel Design](images/Acrylic_DarkTheme_Base.png)
+        Acryl im dunklen Design ![Acryl im dunklen Design](images/Acrylic_DarkTheme_Base.png)
     :::column-end:::
 :::row-end:::
 
@@ -49,10 +49,10 @@ Acryl ist ein [Pinsel](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.
 ## <a name="examples"></a>Beispiele
 
 :::row:::
-    ::: Spaltenbreite::: ![einige Bild](images/XAML-controls-gallery-app-icon.png)
+    ::: Column Span::: ![einige Image](images/XAML-controls-gallery-app-icon.png)
     :::column-end:::
-    ::: Spaltenbreite = "2"::: **XAML-Steuerelemente-Sammlung**<br>
-        Wenn Sie die Verwendung von XAML-Steuerelemente-Sammlung app installiert haben, klicken Sie auf <a href="xamlcontrolsgallery:/item/Acrylic">hier</a> öffnen Sie die app und finden Sie unter Acryl in Aktion.
+    ::: Column Span = "2"::: **XAML-Steuerelementekatalog**<br>
+        Wenn Sie die XAML-Steuerelementekatalog-app installiert haben, klicken Sie <a href="xamlcontrolsgallery:/item/Acrylic">hier</a> auf die app zu öffnen und Acryl in Aktion zu sehen.
 
         <a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Get the XAML Controls Gallery app (Microsoft Store)</a><br>
         <a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Get the source code (GitHub)</a>
@@ -77,7 +77,7 @@ Es wird empfohlen, in Apps mit vertikaler Navigation Acryl auf den sekundären B
 
 [NavigationView](../controls-and-patterns/navigationview.md) ist ein neues allgemeines Steuerelement zum Hinzufügen von Navigation zu Ihrer App. Der visuelle Entwurf dieses Elements enthält Acryl. Der Bereich von NavigationView zeigt Hintergrund-Acryl, wenn der Bereich parallel mit dem primären Inhalt geöffnet ist, und dieses wird automatisch in In-App-Acryl umgewandelt, wenn der Bereich als Überlagerung geöffnet ist.
 
-Wenn Ihre app nicht NavigationView nutzen und Planen Sie die Acryl eigenständig hinzufügen, wird empfohlen, 60 % Farbton Durchlässigkeit relativ Durchsichtiges Acryl mit.
+Wenn Ihre app nicht NavigationView nutzen kann, und Sie Acryl selbst hinzufügen möchten, empfehlen wir die Verwendung von relativ durchsichtige Acryl mit 60 % Farbton-Deckkraft.
  - Wenn der Bereich als Überlagerung über anderen Inhalten der App geöffnet wird, sollte dies [60% In-App-Acryl](#acrylic-theme-resources) sein.
  - Wenn der Bereich parallel mit dem Hauptinhalt der App geöffnet wird, sollte dies [60% Hintergrund-Acryl](#acrylic-theme-resources)sein.
 
@@ -106,11 +106,11 @@ Widgets oder einfachen Apps können als Utility-Apps hervorgehoben werden, wenn 
 ![Dienstprogramm-App „Rechner” mit Acryl im gesamten Hintergrund](images/acrylic_app-pattern_full.png)
 
 > [!Note]
-> Rendern von Acryl Flächen ist GPU-Intensive, dem Gerät des Stromverbrauchs erhöhen und verkürzte Akkulaufzeit kann. Acryl Effekte werden automatisch deaktiviert, wenn Geräte Batterie Bildschirmschoner-Modus eingeben, und Benutzer Acryl Effekte für alle apps deaktivieren können, wenn der Benutzer.
+> Das Rendern von acryloberflächen ist GPU-intensiv, das Gerät den Energieverbrauch zu erhöhen und Akkulaufzeit verkürzt werden kann. Acryleffekte werden automatisch deaktiviert, wenn Geräte Stromsparmodus versetzt, und Benutzer können acryleffekte für alle apps, deaktivieren, wenn sie auswählen.
 
 
 ## <a name="acrylic-blend-types"></a>Acrylmischungen
-Die meisten bedeutende Merkmal des Acryl ist die Transparenz. Es gibt zwei Acrylmischungen, die beeinflussen, welche Inhalte durch das Material sichtbar sind:
+Die auffälligste Eigenschaft von Acryl ist seine Transparenz. Es gibt zwei Acrylmischungen, die beeinflussen, welche Inhalte durch das Material sichtbar sind:
  - **Hintergrund-Acryl** zeigt den Desktophintergrund und andere Fenster, die sich hinter der derzeit aktiven App befinden. Dabei wird Tiefe zwischen den Fenstern der Anwendung hinzugefügt, während die Personalisierungseinstellungen des Benutzers angewendet werden.
  - **In-App-Acryl** fügt Tiefenwirkung innerhalb des App-Frames hinzu, wodurch sowohl Fokus als auch Hierarchie erzeugt werden.
 
@@ -124,12 +124,12 @@ Die meisten bedeutende Merkmal des Acryl ist die Transparenz. Es gibt zwei Acryl
 ## <a name="usability-and-adaptability"></a>Benutzerfreundlichkeit und Anpassungsfähigkeit
 Acryl passt seine Darstellung automatisch an eine Vielzahl von Geräten und Kontext an.
 
-Im Modus mit hohem Kontrast wird Benutzern anstelle von Acryl weiterhin die vertraute Hintergrundfarbe ihrer Wahl angezeigt. Darüber hinaus werden Hintergrund Acryl und in-app Acryl als Volltonfarbe angezeigt:
- - Wenn der Benutzer wird deaktiviert Transparenz in den Einstellungen > Personalisierung > Farbe
- - Wenn der Batterie Bildschirmschoner-Modus aktiviert ist
+Im Modus mit hohem Kontrast wird Benutzern anstelle von Acryl weiterhin die vertraute Hintergrundfarbe ihrer Wahl angezeigt. Darüber hinaus werden sowohl Hintergrund-als auch in-app-Acryl als Volltonfarben angezeigt:
+ - Wenn der Benutzer deaktiviert die Transparenz in den Einstellungen > Personalisierung > Farben
+ - Wenn der Stromsparmodus aktiviert ist
  - Bei Ausführen der App auf Low-End-Hardware
 
-Darüber hinaus wird nur Hintergrund Acryl seine Transparenz und die Struktur mit einer Volltonfarbe ersetzen:
+Darüber hinaus wird nur beim Hintergrund-Acryl seine Transparenz und Textur mit einer Volltonfarbe ersetzt:
  - Bei Deaktivierung eines App-Fensters auf dem Desktop
  - Bei Ausführen der UWP-App auf einem Telefon, der Xbox, HoloLens oder einem Tablet
 
@@ -163,7 +163,7 @@ Wir haben eine Sammlung von Pinsel-Designressourcen sowohl für Hintergrund- als
         <td> ChromeMedium <br/><br/> BaseHigh </td>
     </tr>
     <tr>
-        <td> <b>Verwendung empfohlen:</b> Wenn Ihre app mit einer Textgröße 18px oder größeren sekundären Text der AltMedium Farbe verwendet, können Sie diese mehr durchsichtigen 70 % Acryl Ressourcen hinter den Text einfügen. Wir empfehlen die Verwendung dieser Ressourcen in den oberen horizontalen Navigations- und Steuerungsbereichen in Ihrer App.  </td>
+        <td> <b>Empfohlene Verwendung:</b> Wenn Ihre app sekundären Text in der Farbe AltMedium mit einer Textgröße von 18px oder mehr verwendet, können Sie diese mehr durchsichtigen acrylressourcen 70 % hinter dem Text platzieren. Wir empfehlen die Verwendung dieser Ressourcen in den oberen horizontalen Navigations- und Steuerungsbereichen in Ihrer App.  </td>
     </tr>
     <tr>
         <td> SystemControlChromeHighAcrylicWindowMediumBrush, SystemControlChromeHighAcrylicElementMediumBrush <br/> SystemControlChromeMediumAcrylicWindowMediumBrush, SystemControlChromeMediumAcrylicElementMediumBrush <br/> SystemControlChromeMediumLowAcrylicWindowMediumBrush, SystemControlChromeMediumLowAcrylicElementMediumBrush <br/> SystemControlBaseHighAcrylicWindowMediumBrush, SystemControlBaseHighAcrylicElementMediumBrush <br/> SystemControlBaseMediumLowAcrylicWindowMediumBrush, SystemControlBaseMediumLowAcrylicElementMediumBrush <br/> SystemControlAltMediumLowAcrylicWindowMediumBrush, SystemControlAltMediumLowAcrylicElementMediumBrush  </td>
@@ -209,9 +209,9 @@ Um eine bestimmte Oberfläche zu zeichnen, wenden Sie eines der oben genannten D
 ## <a name="custom-acrylic-brush"></a>Benutzerdefinierter Acrylpinsel
 Sie können einen Farbton zum Acryl Ihrer App hinzufügen, um das Branding anzuzeigen oder ein optisches Gleichgewicht mit anderen Elementen auf dieser Seite zu erzeugen. Um Farbe und keine Graustufen anzuzeigen, müssen Sie Ihre eigenen Acrylpinsel mithilfe der folgenden Eigenschaften definieren:
  - **TintColor**: die Überlagerungsschicht der Farbe/des Farbtons. Sie sollten sowohl den RGB-Farbwert als auch die Deckkraft des Alphakanals angeben.
- - **TintOpacity**: die Deckkraft der Farbtonschicht. Wir empfehlen 80 % Durchlässigkeit als Ausgangspunkt, obwohl unterschiedliche Farben überzeugender an andere Translucencies aussehen könnte.
+ - **TintOpacity**: die Deckkraft der Farbtonschicht. Wir empfehlen 80 % Deckkraft als Ausgangspunkt, obwohl verschiedene Farben bei anderen Translucencies möglicherweise aussehen.
  - **BackgroundSource**: die Kennzeichnung zum Festlegen, ob Sie Hintergrund- oder In-App Acryl verwenden möchten.
- - **FallbackColor**: die Volltonfarbe, die in der Batterie Bildschirmschoner Acryl ersetzt. Im Fall von Hintergrund-Acryl ersetzt die Fallbackfarbe das Acryl auch, wenn Ihre App nicht im aktiven Desktopfenster angezeigt wird oder wenn die App auf dem Telefon oder der Xbox ausgeführt wird.
+ - **FallbackColor**: die Volltonfarbe, die Acryl in den Stromsparmodus ersetzt. Im Fall von Hintergrund-Acryl ersetzt die Fallbackfarbe das Acryl auch, wenn Ihre App nicht im aktiven Desktopfenster angezeigt wird oder wenn die App auf dem Telefon oder der Xbox ausgeführt wird.
 
 
 ![Acrylmuster für das helle Design](images/CustomAcrylic_Swatches_LightTheme.png)
@@ -338,7 +338,7 @@ Darüber hinaus müssen Sie den Titel der App, der normalerweise automatisch in 
 
 ## <a name="how-we-designed-acrylic"></a>Unser Acryl-Entwurfsansatz
 
-Wir haben die Hauptkomponenten des Acryls optimiert, um eine individuelle Darstellung und einzigartige Eigenschaften zu erhalten. Wir beginnen mit Transparenz, Blur und Noise so flache Flächen visuelle Tiefe und Dimension hinzu. Dann fügten wir eine Ausschluss-Mischmodus-Ebene hinzu, um den Kontrast und die Lesbarkeit der auf dem Acrylhintergrund platzierten UI sicherzustellen. Zuletzt fügten wir Farbtöne hinzu, um Personalisierungen zu ermöglichen. Zusammen ergeben diese Ebenen ein neues, einsatzbereites Material.
+Wir haben die Hauptkomponenten des Acryls optimiert, um eine individuelle Darstellung und einzigartige Eigenschaften zu erhalten. Wir begannen mit Transparenz, weichzeichnungs- und störungsfiltern visuelle Tiefe und Dimension, flachen Oberflächen hinzufügen. Dann fügten wir eine Ausschluss-Mischmodus-Ebene hinzu, um den Kontrast und die Lesbarkeit der auf dem Acrylhintergrund platzierten UI sicherzustellen. Zuletzt fügten wir Farbtöne hinzu, um Personalisierungen zu ermöglichen. Zusammen ergeben diese Ebenen ein neues, einsatzbereites Material.
 
 ![Acrylzusammensetzung](images/AcrylicRecipe_Diagram.jpg)
 <br/>Das Acryl setzt sich folgendermaßen zusammen: Hintergrund, Weichzeichnungsfilter, Ausschluss-Mischung, Überlagerung der Farbe/des Farbtons, Störungsfilter

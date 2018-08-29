@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 643a5abf22bfbeb9e7ace48bc430ab6e0d446ae1
-ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
-ms.translationtype: HT
+ms.openlocfilehash: d45881ace6be3b0af88f14692837e96ab9b58d18
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "2018576"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2914515"
 ---
 # <a name="using-the-visual-layer-with-xaml"></a>Benutzung des Visual Layer mit XAML
 
@@ -43,7 +43,7 @@ Codebeispiele finden Sie auf der Referenzseite für [**XamlCompositionBrushBase*
 
 **XamlLight** bietet eine Basisklasse für XAML-Beleuchtungseffekte, die dynamisch einen Bereich mit **CompositionLight** beleuchten.
 
-Weitere Informationen zur Verwendung von Licht, einschließlich der Beleuchtung von XAML-UI-Elementen, finden Sie im Abschnitt [**Beleuchtung**](lighting.md).
+Weitere Informationen zur Verwendung von Licht, einschließlich der Beleuchtung von XAML-UI-Elementen, finden Sie im Abschnitt [**Beleuchtung**](xaml-lighting.md).
 
 Codebeispiele finden Sie auf der Referenzseite für [**XamlLight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamllight).
 

@@ -11,11 +11,11 @@ keywords: Windows10, UWP, zielgruppenorientierte Benachrichtigungen, Push-Benach
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d62f46ad1b55fbad3ab7c21a593625a2538b68f
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2884269"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2917559"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>Senden von Benachrichtigungen an die Kunden Ihrer App
 
@@ -53,8 +53,8 @@ Befolgen Sie diese Schritte, um eine Benachrichtigung im Dashboard zu erstellen 
 
 1. Erweitern Sie im [Windows Dev Center-Dashboard](https://partner.microsoft.com/dashboard/) den Abschnitt **Bewerten** und wählen Sie dann **Benachrichtigungen** aus.
 2. Wählen Sie auf der Seite **Benachrichtigungen** die Option **Neue Benachrichtigung** aus.
-3. Wählen Sie im Abschnitt **Wählen Sie eine Vorlage aus** den [Typ der Benachrichtigung](#notification-template-types) zu senden, und klicken Sie dann auf **OK**.
-4. Verwenden Sie auf der nächsten Seite das Dropdownmenü, um entweder **Einzelne App** oder **Mehrere Apps** auszuwählen, für die Sie eine Benachrichtigung generieren möchten. Sie können nur apps auswählen, die [Erhalt von Benachrichtigungen mithilfe des Microsoft Store Services SDK konfiguriert](../monetize/configure-your-app-to-receive-dev-center-notifications.md)wurden.
+3. Wählen Sie im Abschnitt **Wählen Sie eine Vorlage** [Art der Benachrichtigung](#notification-template-types) zu senden, und klicken Sie dann auf **OK**.
+4. Verwenden Sie auf der nächsten Seite das Dropdownmenü, um entweder **Einzelne App** oder **Mehrere Apps** auszuwählen, für die Sie eine Benachrichtigung generieren möchten. Sie können nur apps auswählen, die [den Empfang von Benachrichtigungen mithilfe des Microsoft Store Services SDK konfiguriert](../monetize/configure-your-app-to-receive-dev-center-notifications.md)wurden.
 5. Wählen Sie im Abschnitt **Benachrichtigungseinstellungen** einen **Namen** für die Benachrichtigung aus, und wählen Sie (falls zutreffend) anschließend die **Kundengruppe** aus, an die die Benachrichtigung gesendet werden soll. (Benachrichtigungen, die an mehrere Apps gesendet werden, können nur an alle Kunden dieser Apps gesendet werden.) Wenn Sie ein Segment verwenden möchten, das Sie noch nicht bereits erstellt haben, wählen Sie **Neue Kundengruppe erstellen** aus. Beachten Sie, dass es 24Stunden dauert, bis ein neues Segmentfür Benachrichtigungen verfügbar ist. Weitere Informationen finden Sie unter [Erstellen von Kundensegmenten](create-customer-segments.md).
 6. Wenn Sie das Senden der Benachrichtigung festlegen möchten, löschen Sie das Kontrollkästchen **Benachrichtigung sofort senden** und wählen Sie ein bestimmtes Datum und die Uhrzeit aus (in UTC für alle Kunden, es sei denn, Sie geben die lokale Zeitzone jedes Kunden an).
 7. Wenn die Benachrichtigung zu einem bestimmten Zeitpunkt ablaufen soll, deaktivieren Sie das Kontrollkästchen **Notification never expires**, und wählen Sie ein bestimmtes Ablaufdatum und eine Uhrzeit aus (in UTC).
@@ -120,10 +120,10 @@ Sie können ermitteln, wie gut Sie mit den einzelnen Benachrichtigungen Ihre Kun
 
 Wenn Sie die Benachrichtigung und Ihre App wie oben beschrieben für das Messen der Benachrichtigungsleistung konfiguriert haben, können Sie auf dem Dashboard anzeigen, wie gut Ihre Benachrichtigungen ihren Zweck erfüllen.
 
-Ausführliche Daten für jede Benachrichtigung zu überprüfen:
+Um detaillierte Daten für jede Benachrichtigung zu überprüfen:
 
 1.  Erweitern Sie im Windows Dev Center-Dashboard den Abschnitt **Bewerten** und wählen Sie dann **Benachrichtigungen** aus.
-2.  Wählen Sie in der Tabelle der vorhandenen Benachrichtigungen **In Bearbeitung** oder **abgeschlossen**, und suchen Sie die allgemeine Leistung der einzelnen Benachrichtigung finden in das **Ziel** und die **App starten Rate** -Spalte.
+2.  Wählen Sie in der Tabelle der vorhandenen Benachrichtigungen **In Bearbeitung** oder **abgeschlossen**, und sehen Sie sich in die allgemeine Leistung der einzelnen Benachrichtigungen finden Sie unter der Spalte **Übermittlungsrate** bzw. **App starten Rate** .
 3.  Um detailliertere Leistungsdetails anzuzeigen, wählen Sie einen Benachrichtigungsnamen aus. Im Abschnitt **Lieferstatistik** sehen Sie Daten zu **Anzahl** und **Prozentsatz** für die folgenden **Status**-Typen der Benachrichtigung angezeigt:
     * **Fehlgeschlagen**: Die Benachrichtigung wurde aus einem bestimmten Grund nicht übermittelt. Dies kann z.B. bei einem Problem im Windows-Benachrichtigungsdienst der Fall sein.
     * **Channel expiration failure**: Die Benachrichtigung konnte nicht übermittelt werden, da der Kanal zwischen der App und Dev Center abgelaufen ist. Dies kann beispielsweise vorkommen, wenn der Kunde Ihre App seit längerem nicht mehr geöffnet hat.
@@ -132,13 +132,13 @@ Ausführliche Daten für jede Benachrichtigung zu überprüfen:
     * **Startet**: Die Benachrichtigung wurde gesendet, der Kunde hat darauf geklickt, und Ihre App wurde daher geöffnet. Beachten Sie, dass hiermit nur das Starten der Apps nachverfolgt wird. Benachrichtigungen, die den Kunden zu weiteren Aktionen wie z.B. dem Öffnen des Store zum Hinterlassen einer Bewertung auffordern, sind nicht Teil dieses Status.
     * **Unbekannt**: Wir konnten den Status dieser Benachrichtigung nicht ermitteln.
 
-Aktivität Benutzerdaten für alle Ihre Benachrichtigung zu analysieren:
+Aktivität Benutzerdaten für alle Ihre Benachrichtigungen zu analysieren:
 
 1.  Erweitern Sie im Windows Dev Center-Dashboard den Abschnitt **Bewerten** und wählen Sie dann **Benachrichtigungen** aus.
-2.  Klicken Sie auf der Seite **Benachrichtigungen** auf der Registerkarte **Analyse** . Auf dieser Registerkarte wird angezeigt, die folgenden Daten:
-    * Diagramm Ansichten für die verschiedenen Benutzerstatus-Aktion für die Popups und Aktion Center-Benachrichtigungen.
-    * World Kartenansichten der Click-über-Sätzen für das Popups und die Aktion zentriert Benachrichtigungen.
-3. Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist 30D (30Tage), aber Sie können Daten für 3, 6 oder 12Monate anzeigen, oder für einen benutzerdefinierten Zeitraum, den Sie angeben. Sie können auch **Filter** an, um alle Daten von der app und Land/Ihrer Region Filtern erweitern.
+2.  Klicken Sie auf **der Benachrichtigungsseite** Registerkarte **Analysieren** . Diese Registerkarte zeigt die folgenden Daten:
+    * Diagramm Ansichten für den verschiedenen Benutzerzuständen für die Aktion für Ihre Popups und Info-Center-Benachrichtigungen.
+    * Welt Kartenansichten der Click-über-Sätze für Ihre Popups und Aktion zentrieren Benachrichtigungen.
+3. Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist 30D (30Tage), aber Sie können Daten für 3, 6 oder 12Monate anzeigen, oder für einen benutzerdefinierten Zeitraum, den Sie angeben. Sie können auch **Filter** , um alle Daten von app und Markt zu filtern erweitern.
 
 ## <a name="translate-your-notifications"></a>Übersetzen Ihrer Benachrichtigungen
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, Uwp, Verwendung, benutzerdefiniertes Ereignis, Bericht, Telemetrie, Benutzersitzungen
 ms.localizationpriority: medium
 ms.openlocfilehash: 96d36ebbaa2b7f1a650e2b0f794a1976c1f525a6
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2894109"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910508"
 ---
 # <a name="usage-report"></a>Nutzungsbericht
 
@@ -50,10 +50,10 @@ Dieses Diagramm enthält vier separate Registerkarten, die die Nutzung pro Tag o
 - **Dauer**: Zeigt die Gesamtanzahl der aktiven Stunden an (Stunden, in denen ein Benutzer aktiv Ihrer App verwendet).
 - **Beibehaltung**: Zeigt die Gesamtanzahl der **DAU/MAU** (tägliche aktive Benutzer/monatliche aktive Benutzer) über den ausgewählten Zeitraum an.
 
-Wenn die **30 D** Zeitraum ausgewählt ist, sehen Sie beim Anzeigen von **Benutzern**, **Geräte**oder **Dauer** Registerkarten Kreis Markierungen. Diese eine erhebliche Steigerung darstellen oder niedrigere eines angegebenen Werts, das wir, dass Sie glauben kennen sollten. Das Datum, an dem der Kreis angezeigt wird, stellt am Ende der Woche, in der wir eine wesentliche oder senken im Vergleich zu der Woche vor dem Ausführen der erkannt. Erhalten Sie weitere Informationen zu den geänderten:, bewegen Sie den Mauszeiger über dem Kreis.  
+Wenn der **30d** Zeitraum ausgewählt wird, möglicherweise Kreis Markierungen angezeigt, wenn der **Benutzer**oder **Geräte**, **Dauer** Registerkarten anzeigen. Diese darstellen eine erhebliche Erhöhung oder einen bestimmten Wert, die wir glauben, dass Sie kennen sollten verringern. Das Datum, an dem die Kreis angezeigt wird, stellt das Ende der Woche, in der wir eine erhebliche Erhöhung oder Verringerung, die im Vergleich zu Woche festgestellt. Um mehr Informationen zu Änderungen, zeigen Sie auf den Kreis.  
 
 > [!TIP]
-> Sie können weitere Einblicke in Bezug auf wurden keine bedeutenden Änderungen in den letzten 30 Tagen im [Insights-Bericht](insights-report.md)anzeigen.
+> Sie können weitere Einblicke im Zusammenhang mit erhebliche Änderungen an der letzten 30 Tage im [Bericht](insights-report.md)anzeigen.
 
 
 ## <a name="user-sessions"></a>Benutzersitzungen

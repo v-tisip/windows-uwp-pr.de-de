@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d027e35f8fe76a0d4139301f1a7dabc7798348a
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2895408"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2916412"
 ---
 # <a name="resolve-submission-errors"></a>Beheben von Übermittlungsfehlern
 
@@ -23,13 +23,13 @@ Wenn nach der Übermittlung Ihrer App an den Store Fehler auftreten, müssen Sie
 
 ## <a name="uwp-apps"></a>UWP-Apps
 
-Wenn Sie eine UWP-App einreichen, wird während der Vorverarbeitung möglicherweise ein Fehler angezeigt, wenn die Paketdatei keine von Visual Studio für den Store generierte „.appxupload“-Datei ist. Stellen Sie sicher, dass Sie führen Sie die Schritte in [einer UWP-app mit Visual Studio-Paket](../packaging/packaging-uwp-apps.md) , beim Erstellen Ihrer app-Paket-Datei, und nur der .appxupload-Datei auf der Seite [Pakete](upload-app-packages.md) der Übermittlung, keines Appx oder .appxbundle hochladen.
+Wenn Sie eine UWP-App einreichen, wird während der Vorverarbeitung möglicherweise ein Fehler angezeigt, wenn die Paketdatei keine von Visual Studio für den Store generierte „.appxupload“-Datei ist. Achten Sie darauf, dass Sie die Schritte im [Paket eine UWP-app mit Visual Studio](../packaging/packaging-uwp-apps.md) beim Erstellen der Datei der app-Paket, und nur die appxupload-Datei auf der Seite " [Pakete](upload-app-packages.md) ", der Übermittlung, nicht aus einer Appx oder .appxbundle hochzuladen.
 
 Wenn ein Kompilierungsfehler angezeigt wird, stellen Sie sicher, dass Sie die Anwendung erfolgreich im Releasemodus erstellen können. Weitere Informationen finden Sie unter [Systemeigene .NET-Compilerfehler](http://go.microsoft.com/fwlink/p/?LinkID=613098).
 
 ## <a name="desktop-application"></a>Desktop-Anwendung
 
-Wenn Sie planen, ein Paket zu senden, die Win32 und UWP Binärdateien enthält, stellen Sie sicher, dass Sie das Paket mithilfe der Windows-Packprojekt, die in Visual Studio 2017 Update 4 verfügbar ist, erstellen. Wenn Sie das Paket mit einer UWP-Projektvorlage erstellen, können Sie möglicherweise nicht übermitteln, die die Store oder Sideload es auf anderen PCs packen. Auch wenn das Paket erfolgreich veröffentlicht, möglicherweise die Verhalten in ungewöhnlich auf dem PC des Benutzers. Weitere Informationen finden Sie unter [Paket einer app mithilfe von Visual Studio (Desktop Bridge)]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
+Wenn Sie beabsichtigen, ein Paket zu übermitteln, die Win32- und UWP-Binärdateien enthält, stellen Sie sicher, dass Sie dieses Paket erstellen, mit dem Windows-Verpacken-Projekt, die in Visual Studio 2017 Update 4 verfügbar ist. Wenn Sie das Paket mithilfe einer UWP-Projekt-Vorlage erstellen, können Sie möglicherweise nicht gerätekauf senden, die auf den Store oder querladen es auf anderen PCs verpacken. Auch wenn das Paket erfolgreich veröffentlicht werden, kann es auf dem PC des Benutzers unerwartetem Verhalten. Weitere Informationen finden Sie unter [Package einer app mit Visual Studio (Desktop-Brücke)]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
 ## <a name="windows-phone-apps"></a>Windows Phone-Apps
 
@@ -53,7 +53,7 @@ Möglicherweise wird Ihnen der folgende Fehler angezeigt: **Der Name des Pakets 
 - Wenn Ihre App bereits über eine Identität verfügt, müssen Sie möglicherweise dennoch den Namen reservieren, den Sie in Ihrem Paket verwenden möchten. Klicken Sie unter **App-Verwaltung** auf [App-Namen verwalten](manage-app-names.md). Geben Sie den Namen ein, den Sie reservieren möchten, und klicken Sie auf **App-Namen reservieren**.
 
 > [!IMPORTANT]
->  Wenn der Name, den Sie verwenden möchten, nicht verfügbar ist, eine andere app möglicherweise bereits diesem Namen reserviert. Wenn Ihre app bereits unter diesem Namen veröffentlicht wird, oder wenn Sie meinen, Sie haben das Recht zu [Kontaktieren des Supports](https://go.microsoft.com/fwlink/p/?LinkId=331509)verwenden.  
+>  Wenn der Name, den Sie verwenden möchten, nicht verfügbar ist, eine andere app möglicherweise bereits den Namen reserviert haben. Wenn Ihre app bereits unter diesem Namen veröffentlicht wurde, oder wenn Sie sich vorstellen, Sie sind berechtigt, [kontaktieren Sie den Support](https://go.microsoft.com/fwlink/p/?LinkId=331509)verwenden.  
 
  
 

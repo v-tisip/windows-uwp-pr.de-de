@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 464da3dd3a9a181555f7b4bfd1059e9834fe7338
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888259"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2909888"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Navigationsdesigngrundlagen für UWP-Apps
 
@@ -30,7 +30,7 @@ Es gibt eine große Anzahl von Navigationsmöglichkeiten. Wir könnten:
 
 :::row:::
     :::column:::
-        ![Navigation in Beispiel 1](images/nav/nav-1.svg)
+        ![navigationsbeispiel 1](images/nav/nav-1.svg)
 
         Require users to go through a series of pages in order.
     :::column-end:::
@@ -58,7 +58,7 @@ Beginnen wir mit den Grundprinzipien eines guten Navigationsdesigns:
 
 ### <a name="consistency"></a>Konsistenz
 
-Die Navigation sollte den Erwartungen der Benutzer entsprechen. [Standard-Steuerelemente](#use-the-right-controls) , dass Benutzer mit vertraut sind und in der folgenden standard Konventionen für Symbole sind machen Speicherort und Formatierungen Navigation vorhersehbare und intuitiven für Benutzer.
+Die Navigation sollte den Erwartungen der Benutzer entsprechen. Verwenden [Standardsteuerelemente](#use-the-right-controls) , dass der Benutzer mit vertraut sind und folgende Standardkonventionen für Symbole, nehmen Position und Formatierung Navigation vorhersehbar und intuitiv für Benutzer.
 
 ![Bild mit Seitenkomponenten](images/nav/page-components.svg)
 
@@ -111,7 +111,7 @@ Nun, da Sie mit den allgemeinen Navigationsprinzipien vertraut sind, überlegen 
     :::column:::
         ![In einer flachen Struktur angeordnete Seiten](images/nav/flat-lateral-structure.svg)
     :::column-end:::
-    ::: Spaltenbreite = "2":::
+    ::: Column Span = "2":::
         ### Flat/lateral
 
         In a flat/lateral structure, pages exist side-by-side. You can go from one page to another in any order.
@@ -130,7 +130,7 @@ Nun, da Sie mit den allgemeinen Navigationsprinzipien vertraut sind, überlegen 
     :::column:::
         ![In einer Hierarchie angeordnete Seiten](images/nav/hierarchical-structure.svg)
     :::column-end:::
-    ::: Spaltenbreite = "2":::
+    ::: Column Span = "2":::
         ### Hierarchical
 
         In a hierarchical structure, pages are organized into a tree-like structure. Each child page has one parent, but a parent can have one or more child pages. To reach a child page, you travel through the parent.
@@ -150,7 +150,7 @@ Nun, da Sie mit den allgemeinen Navigationsprinzipien vertraut sind, überlegen 
     :::column:::
         ![App mit einer Hybridstruktur](images/nav/combining-structures.svg)
     :::column-end:::
-    ::: Spaltenbreite = "2":::
+    ::: Column Span = "2":::
         ### Combining structures
 
         You don't have choose to one structure or the other; many well-design apps use both. An app can use flat structures for top-level pages that can be viewed in any order, and hierarchical structures for pages that have more complex relationships.
@@ -170,16 +170,16 @@ Sobald Sie sich für eine Seitenstruktur entschieden haben, müssen Sie entschei
     :::column:::
         ![Frame-Bild](images/nav/thumbnail-frame.svg)
     :::column-end:::
-    ::: Spaltenbreite = "2"::: [ **Rahmen**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)
+    ::: Column Span = "2"::: [ **Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)
 
         With few exceptions, any app that has multiple pages uses a frame. Typically, an app has a main page that contains the frame and a primary navigation element, such as a navigation view control. When the user selects a page, the frame loads and displays it.
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![Registerkarten und Pivot-Bild](images/nav/thumbnail-tabs-pivot.svg)
+        ![Bild für Registerkarten und pivot](images/nav/thumbnail-tabs-pivot.svg)
     :::column-end:::
-    ::: Spaltenbreite = "2"::: [ **der oberen Navigationsleiste und Registerkarten**](../controls-and-patterns/navigationview.md)
+    ::: Column Span = "2"::: [ **oberen Navigationsleiste und Registerkarten**](../controls-and-patterns/navigationview.md)
 
         Displays a horizontal list of links to pages at the same level. The [NavigationView](../controls-and-patterns/navigationview.md) control implements the top navigation and tabs patterns.
         
@@ -198,9 +198,9 @@ Sobald Sie sich für eine Seitenstruktur entschieden haben, müssen Sie entschei
 
 :::row:::
     :::column:::
-        ![Navview-Bild](images/nav/thumbnail-navview.svg)
+        ![Navview Bild](images/nav/thumbnail-navview.svg)
     :::column-end:::
-    ::: Spaltenbreite = "2"::: [ **linken Navigationsbereich**](../controls-and-patterns/navigationview.md)
+    ::: Column Span = "2"::: [ **linken Navigationsbereich**](../controls-and-patterns/navigationview.md)
 
         Displays a vertical list of links to top-level pages. Use when:
         
@@ -212,9 +212,9 @@ Sobald Sie sich für eine Seitenstruktur entschieden haben, müssen Sie entschei
 
 :::row:::
     :::column:::
-        ![Master-Details-Bild](images/nav/thumbnail-master-detail.svg)
+        ![Master / Details-Bild](images/nav/thumbnail-master-detail.svg)
     :::column-end:::
-    ::: Spaltenbreite = "2"::: [ **Master/Details**](../controls-and-patterns/master-details.md)
+    ::: Column Span = "2"::: [ **Master/Details**](../controls-and-patterns/master-details.md)
 
         Displays a list (master view) of items. Selecting an item displays its corresponding page in the details section. Use when:
         
@@ -226,9 +226,9 @@ Sobald Sie sich für eine Seitenstruktur entschieden haben, müssen Sie entschei
 
 :::row:::
     :::column:::
-        ![Hyperlinks und Schaltflächen Bilds](images/nav/thumbnail-hyperlinks-buttons.svg)
+        ![Bild für Hyperlinks und Schaltflächen](images/nav/thumbnail-hyperlinks-buttons.svg)
     :::column-end:::
-    ::: Spaltenbreite = "2"::: [ **Hyperlinks**](../controls-and-patterns/hyperlinks.md)
+    ::: Column Span = "2"::: [ **Hyperlinks**](../controls-and-patterns/hyperlinks.md)
 
         Embedded navigation elements can appear in a page's content. Unlike other navigation elements, which should be consistent across the pages, content-embedded navigation elements are unique from page to page.
 :::row-end:::

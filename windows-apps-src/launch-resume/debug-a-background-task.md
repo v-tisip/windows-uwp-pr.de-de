@@ -8,14 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, Uwp, Hintergrund Aufgabe
+keywords: Windows 10, Uwp, Hintergrundaufgabe, für die
 ms.localizationpriority: medium
 ms.openlocfilehash: f68c20a545e09d81912b8ef9a97a0ab0237ed0e0
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2894089"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2909297"
 ---
 # <a name="debug-a-background-task"></a>Debuggen einer Hintergrundaufgabe
 
@@ -34,7 +34,7 @@ In diesem Thema wird vorausgesetzt, dass Sie bereits über eine App mit einer Hi
 
 -   Stellen Sie für C# und C++ sicher, dass das Hauptprojekt auf das Hintergrundaufgabenprojekt verweist. Ist dieser Verweis nicht vorhanden, wird die Hintergrundaufgabe nicht in das App-Paket eingebunden.
 -   Stellen Sie für C# und C++ sicher, dass der **Ausgabetyp** des Hintergrundaufgabenprojekts „Komponente für Windows-Runtime“ lautet.
--   Die Hintergrund-Klasse muss im Eintrag Point-Attribut in der Paketmanifest-deklariert werden.
+-   Die Hintergrundklasse muss im einstiegspunktattribut im Paketmanifest deklariert werden.
 
 ## <a name="trigger-background-tasks-manually-to-debug-background-task-code"></a>Manuelles Auslösen von Hintergrundaufgaben, um Hintergrundaufgabencode zu debuggen
 
@@ -52,7 +52,7 @@ Hintergrundaufgaben können mit Microsoft Visual Studio manuell ausgelöst werde
 > Hintergrundaufgaben, die folgende Trigger verwenden, können nicht auf diese Weise aktiviert werden: [**Anwendungs-Trigger**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.applicationtrigger.aspx), [**MediaProcessing Trigger**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.mediaprocessingtrigger.aspx), [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032), [**PushNotificationTrigger**](https://msdn.microsoft.com/library/windows/apps/hh700543) und Hintergrundaufgaben, die einen [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224838) mit dem Triggertyp [**SmsReceived**](https://msdn.microsoft.com/library/windows/apps/br224839) verwenden.  
 > **Anwendungs-Trigger** und **MediaProcessingTrigger** können im Code mit `trigger.RequestAsync()` manuell signalisiert werden.
 
-![Debuggingaufgaben Hintergrund](images/debugging-activation.png)
+![Debuggen von Hintergrundaufgaben](images/debugging-activation.png)
 
 3.  Wenn die Hintergrundaufgabe aktiviert wird, wird sie vom Debugger übernommen, der die Debuggerausgabe dann in VS anzeigt.
 
@@ -83,7 +83,7 @@ Die Aktivierung von Hintergrundaufgaben hängt von drei Faktoren ab:
 
     1.  Öffnen Sie die Ereignisanzeige, indem Sie zum Startbildschirm wechseln und nach „eventvwr.exe“ suchen.
     2.  Wechseln Sie zu **Anwendungs- und Dienstprotokolle**  - &gt; **Microsoft**  - &gt; **Windows**  - &gt; **BackgroundTaskInfrastructure** in der Ereignisanzeige.
-    3.  Wählen Sie im Aktionsbereich **Ansicht**  - &gt; **Anzeigen analytische und Debugprotokolle** So aktivieren Sie das Diagnoseprotokoll.
+    3.  Wählen Sie im Aktionsbereich **Ansicht**  - &gt; **analytische und Debugprotokolle** um die diagnoseprotokollierung zu aktivieren.
     4.  Wählen Sie die Option **Diagnoseprotokoll** aus, und klicken Sie auf **Protokoll aktivieren**.
     5.  Versuchen Sie nun, die App zu verwenden, um die Hintergrundaufgabe erneut zu registrieren und zu aktivieren.
     6.  Zeigen Sie detaillierte Fehlerinformationen im Diagnoseprotokoll an. Dies schließt den Einstiegspunkt ein, der für die Hintergrundaufgabe registriert ist.
@@ -105,7 +105,7 @@ Wenn eine App mit Hintergrundaufgaben mit Visual Studio bereitgestellt wird und 
 -   Wenn für die Hintergrundaufgabe der Zugriff auf den Sperrbildschirm erforderlich ist, müssen Sie dafür sorgen, dass die App auf dem Sperrbildschirm platziert wird, bevor Sie versuchen, die Hintergrundaufgabe zu debuggen. Weitere Informationen zum Angeben von Manifestoptionen für sperrbildschirmfähige Apps finden Sie unter [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md).
 -   Parameter für die Registrierung von Hintergrundaufgaben werden zum Zeitpunkt der Registrierung überprüft. Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben. Stellen Sie sicher, dass Ihre App problemlos mit Szenarien ohne erfolgreiche Registrierung von Hintergrundaufgaben zurechtkommt. Andernfalls stürzt die App unter Umständen ab, wenn sie so konzipiert ist, dass nach dem Versuch, eine Aufgabe zu registrieren, ein gültiges Registrierungsobjekt vorhanden sein muss.
 
-Weitere Informationen zur Verwendung von VS Hintergrund Debuggen finden Sie unter ['s gemacht: Auslösen anhalten, fortsetzen und Ereignissen in apps UWP Hintergrund](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx).
+Weitere Informationen zum Debuggen einer Hintergrundaufgabe mit VS finden Sie [Anleitungen zum Auslösen von anhalte-, fortsetzungs- und hintergrundereignissen in UWP-apps](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx).
 
 ## <a name="related-topics"></a>Verwandte Themen
 
@@ -114,8 +114,8 @@ Weitere Informationen zur Verwendung von VS Hintergrund Debuggen finden Sie unte
 * [Registrieren einer Hintergrundaufgabe](register-a-background-task.md)
 * [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md)
 * [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md)
-* ['S gemacht: Auslösen anhalten, fortsetzen und Ereignissen in apps UWP Hintergrund](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx)
-* [Analysieren die Codequalität UWP apps mit Visual Studio-Code-Analyse](https://msdn.microsoft.com/library/windows/apps/xaml/hh441471.aspx)
+* [Anleitungen zum Auslösen von anhalte-, fortsetzungs- und hintergrundereignissen in UWP-apps](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx)
+* [Analysieren der Codequalität von UWP-apps mit der Codeanalyse von Visual Studio](https://msdn.microsoft.com/library/windows/apps/xaml/hh441471.aspx)
 
  
 

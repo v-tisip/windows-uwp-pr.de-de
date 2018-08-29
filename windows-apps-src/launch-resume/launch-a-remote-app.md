@@ -7,15 +7,15 @@ ms.date: 02/12/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Geräte für Windows 10, Uwp, verbunden, remote-Systemen, ROM, Project ROM
+keywords: Windows 10, Uwp, verbundenen Geräten "," Remotesysteme "," Rome "," Projekt "ROME"
 ms.assetid: 54f6a33d-a3b5-4169-8664-653dbab09175
 ms.localizationpriority: medium
 ms.openlocfilehash: 58a420d73ba4a0cd51f909fd5d7d417af1cfb38f
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2889359"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2909497"
 ---
 # <a name="launch-an-app-on-a-remote-device"></a>Starten einer App auf einem Remotegerät
 

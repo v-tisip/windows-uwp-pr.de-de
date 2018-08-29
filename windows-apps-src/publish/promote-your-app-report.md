@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: Windows10, UWP, bewerben, App, Kampagnen, Bericht, Installationen
 ms.localizationpriority: medium
 ms.openlocfilehash: b5f63b53fca8a97c4f6e61aa38f45a749ca0621b
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2890729"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2906437"
 ---
 # <a name="ad-campaign-report"></a>Bericht „Anzeigenkampagne“
 
-Der **Ad-Kampagne** Bericht im Dashboard Windows Developer Center können Sie sehen, wie Ihre app Promotion [Ad-Kampagnen](create-an-ad-campaign-for-your-app.md) durchgeführt werden. Um den Bericht anzuzeigen, erweitern Sie im linken Navigationsbereich Menü **Attract** , und wählen Sie **Ad-Kampagnen**.
+Der Bericht " **Anzeigenkampagne** " im Windows Dev Center-Dashboard gibt Aufschluss über app Promotion Leistung Ihrer [Anzeigenkampagnen](create-an-ad-campaign-for-your-app.md) sind. Um den Bericht anzuzeigen, erweitern Sie im linken Navigationsmenü **bewerben** , und wählen Sie **Anzeigenkampagnen**.
 
 ## <a name="definitions"></a>Definitionen
 

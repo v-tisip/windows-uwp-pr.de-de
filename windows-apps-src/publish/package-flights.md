@@ -11,19 +11,19 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Test-Flighting
 ms.localizationpriority: medium
 ms.openlocfilehash: d5f43173c85bc8a696d7dbc9967e704f79db2b3f
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2885479"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2918711"
 ---
 # <a name="package-flights"></a>Flight-Pakete
 
-Paket Flüge können Sie bestimmte Pakete auf eine bestimmte Benutzergruppe der Tester verteilen. Die Pakete, die Sie bereits im Speicher veröffentlicht haben werden für Ihre Kunden andere verwendet werden, damit ihre Erfahrung wird nicht unterbrochen werden.
+Sie können Flight-Pakete verwenden, um bestimmte Pakete an eine begrenzte Gruppe von Testern verteilen. Die Pakete, die Sie bereits im Store veröffentlicht haben werden für andere Kunden sichtbar, verwendet werden, damit die Erfahrung wird nicht unterbrochen werden.
 
-Mit Paket Flüge unterscheiden nur die Pakete. die Shop-Details wird für alle Ihre Kunden identisch sein. Mitglied der Gruppe Flug erhält die Pakete, die Sie in der Flug Paket einschließen, während Kunden, die nicht in der Gruppe Flug stehen weiterhin die regulären (nicht flighted) Pakete empfangen.  Wenn Sie später entscheiden, dass Sie ein Paket Flug-Pakete für alle Ihre Kunden zur Verfügung stellen möchten, können Sie die gleichen Pakete auf einfache Weise in einer nicht flighted Übermittlung verwenden. Beachten Sie, dass Paket Flüge des [Zertifizierung](the-app-certification-process.md)genauso wie alle Übermittlung übergeben müssen.
+Mit Flight-Pakete unterscheiden nur die Pakete. die Store-Eintrag anzeigen werden für alle Kunden gleich. Alle Personen in Ihrer Flight-Gruppe erhalten die Pakete, die Sie in das Flight-Paket einschließen, während Kunden, die die Flight-Gruppe angehören weiterhin Ihre regulären Pakete (ohne Test-Flight).  Wenn Sie später Pakete aus einem Flight-Paket für alle Kunden zur Verfügung stellen möchten, können Sie einfach diese dieselben Pakete in einer Übermittlung ohne Test-Flight. Beachten Sie, dass Flight-Pakete ebenso wie alle Übermittlung den [Zertifizierungsprozess](the-app-certification-process.md), übergeben müssen.
 
-Wenn Sie Paket Flüge eingerichtet haben, können Sie Personen angeben, die bestimmte Pakete abrufen soll, indem sie eine **Benutzergruppe bezeichnet** (auch als Flug Gruppe bezeichnet) hinzufügen. Benutzer in einer Test-Flight-Gruppe, die ein Gerät mit einer Windows 10-Version verwenden, die Flight-Pakete unterstützt (Windows.Desktop Build 10586 oder höher; Windows.Mobile Build 10586.63 oder höher; oder Xbox One), erhalten die Pakete aus dem für die jeweilige Gruppe festlegten Test-Flight. (Flight-Pakete umfassen ggf. Pakete, die für eine beliebige Betriebssystemversion erstellt wurden, einschließlich Windows 8.1/Windows Phone 8.1 oder früher.) Benutzer, die zu keiner Test-Flight-Gruppe hinzugefügt wurden oder ein Gerät verwenden, das Flight-Pakete nicht unterstützt, erhalten Pakete aus der Übermittlung ohne Test-Flight.
+Beim Einrichten von Flight-Pakete können Sie die Personen angeben, die bestimmte Pakete erhalten sollen, indem sie Sie eine **neue Benutzergruppe** (auch als Flight-Gruppe bezeichnet) hinzufügen. Benutzer in einer Test-Flight-Gruppe, die ein Gerät mit einer Windows 10-Version verwenden, die Flight-Pakete unterstützt (Windows.Desktop Build 10586 oder höher; Windows.Mobile Build 10586.63 oder höher; oder Xbox One), erhalten die Pakete aus dem für die jeweilige Gruppe festlegten Test-Flight. (Flight-Pakete umfassen ggf. Pakete, die für eine beliebige Betriebssystemversion erstellt wurden, einschließlich Windows 8.1/Windows Phone 8.1 oder früher.) Benutzer, die zu keiner Test-Flight-Gruppe hinzugefügt wurden oder ein Gerät verwenden, das Flight-Pakete nicht unterstützt, erhalten Pakete aus der Übermittlung ohne Test-Flight.
 
 > [!IMPORTANT] 
 > Personen in Ihren Test-Flight-Gruppen erhalten auf Desktops und mobilen Geräten die Pakete in Ihrem Test-Flight jedes Mal automatisch, wenn Sie Updates bereitstellen. **Personen in Ihren Test-Flight-Gruppen, die Xbox-Geräte verwenden, müssen jedoch manuell nach Updates suchen**, um die neuesten Pakete zu erhalten. Dabei müssen sie sicherstellen, dass sie mit ihrem Microsoft-Konto am Gerät angemeldet sind (mit der zugeordneten E-Mail-Adresse, die Sie in Ihre bekannte Anwendergruppe eingefügt haben).
@@ -48,18 +48,18 @@ Wenn Sie noch keine bekannten Anwendergruppen eingerichtet haben, werden Sie auf
 Sie müssen auf der Paketseite der Flight-Erstellung einen Namen für den Flight angeben und mindestens eine Test-Flight-Gruppe festlegen. Nachdem Sie dies getan haben, wählen Sie **Flight erstellen** aus. Diese Details lassen sich später nicht mehr ändern (Sie können diese Flight jedoch jederzeit löschen, ein neues Flight-Paket erstellen, wenn Sie nicht mit der Eingabe zufrieden sind).
 
 > [!NOTE]
-> Wenn Sie mehrere Flight-Pakete haben, müssen Sie jedem einen Rang zuweisen. Weitere Informationen finden Sie unter [Hinzufügen und Rank zusätzliche Paket Flüge](#add-and-rank-additional-package-flights) weiter unten.
+> Wenn Sie mehrere Flight-Pakete haben, müssen Sie jedem einen Rang zuweisen. Weitere Informationen finden Sie unter [Hinzufügen und nach Rang sortieren Weitere Flight-Pakete](#add-and-rank-additional-package-flights) unten.
 
 
 ## <a name="specify-packages-to-include-in-your-package-flight"></a>Festlegen von Paketen zum Einfügen in Ihr Flight-Paket
 
 Nachdem Sie die Details des Flight-Pakets gespeichert haben, wird die Übersicht dazu angezeigt. Klicken Sie auf **Pakete**, um festzulegen, welche Pakete das Test-Flight enthalten soll. Sie können Pakete einbeziehen, die für jede Betriebssystemversion (einschließlich Windows10, Windows8.x und Windows Phone 8.x oder früher) erstellt wurden.
 
-Sie haben die Option, Pakete auszuwählen, die einer vorherigen Übermittlung zugeordnet waren (entweder einer Übermittlung ohne Test-Flight oder einem Ihrer anderen Flight-Pakete, falls Sie mehrere haben). Wenn Sie neue Pakete für dieses Paket Flug zu verwendenden hochladen müssen, können Sie diese hier Hochladen (mit [demselben Prozess wie wenn Sie app-Pakete einer regulären nicht flighted Übermittlung hochladen](upload-app-packages.md)). Wenn Sie alle Pakete für dieses Flight-Paket angegeben haben, klicken Sie auf **Speichern**.
+Sie haben die Option, Pakete auszuwählen, die einer vorherigen Übermittlung zugeordnet waren (entweder einer Übermittlung ohne Test-Flight oder einem Ihrer anderen Flight-Pakete, falls Sie mehrere haben). Wenn Sie neue Pakete für dieses Flight-Paket verwenden hochladen müssen, können Sie diese hier Hochladen (mit den [gleichen Prozess wie beim app-Pakete einer regulären Übermittlung ohne Test-Flight](upload-app-packages.md)). Wenn Sie alle Pakete für dieses Flight-Paket angegeben haben, klicken Sie auf **Speichern**.
 
 Wenn Ihre App mehrere Gerätefamilien unterstützt, stellen Sie sicher, dass Sie Pakete einschließen, um den gleichen Satz von Gerätefamilien in Ihrem Test-Flight zu unterstützen. Die Mitglieder Ihrer Test-Flight-Gruppen können **nur** Pakete aus diesem Test-Flight erhalten. Sie können nicht auf Pakete aus anderen Test-Flights oder aus Ihren Übermittlungen ohne Test-Flights zugreifen. 
 
-Beachten Sie auch Ihre Shop-Info und Gerät Produktfamilie Verfügbarkeit wird basierend auf Ihrer Übermittlung nicht flighted. Die Kunden in Ihren Test-Flight-Gruppen können die App nur für Gerätefamilien herunterladen, die von Ihren Übermittlungen ohne Test-Flights unterstützt werden. Weitere Informationen finden Sie unter [Unterstützung für Gerätefamilien](#device-family-support). 
+Beachten Sie außerdem, dass Ihre Store-Eintrag Informationen und Verfügbarkeit von gerätefamilien basiert auf Ihre Übermittlung ohne Test-Flight. Die Kunden in Ihren Test-Flight-Gruppen können die App nur für Gerätefamilien herunterladen, die von Ihren Übermittlungen ohne Test-Flights unterstützt werden. Weitere Informationen finden Sie unter [Unterstützung für Gerätefamilien](#device-family-support). 
 
 
 ## <a name="gradual-package-rollout"></a>Schrittweises Paketrollout
@@ -67,7 +67,7 @@ Beachten Sie auch Ihre Shop-Info und Gerät Produktfamilie Verfügbarkeit wird b
 Standardmäßig werden die Pakete in Ihrer Übermittlung für alle Personen in Ihrer Test-Flight-Gruppe gleichzeitig zur Verfügung gestellt. Um dies zu ändern, können Sie das Kontrollkästchen **Update-Rollout schrittweise nach Veröffentlichung dieser Übermittlung (nur für Windows10-Kunden)** aktivieren. Sie können einen Prozentsatz von Personen in Ihrer Test-Flight-Gruppe wählen, die die Pakete aus der neuen Übermittlung erhalten, sodass Sie das Feedback und die Analysedaten überwachen können, um sicherzustellen, dass Sie das Update zuverlässig veröffentlichen können, bevor Sie es umfassender für den Rest der Test-Flight-Gruppe bereitstellen. Sie können den Prozentsatz jederzeit erhöhen (oder das Update stoppen), ohne eine neue Übermittlung für Ihr Flight-Paket erstellen zu müssen. 
 
 > [!IMPORTANT]
-> Wenn schrittweise out-Pakete in einem Paket Flug parallelen, erhalten die Personen, die in den Prozentsatz enthalten sind, die die neuen Pakete Ruft die Pakete aus der vorherigen Paket Flug Übermittlung, (es sei denn ein höhere-Rank Flug ihnen zur Verfügung).
+> Beim schrittweisen einführen von Paketen in einem Flight-Paket erhalten die Personen, die in dem Prozentsatz enthalten sind, die Ihre neuen Pakete enthält, die Pakete aus der vorherigen Flight-Paketübermittlung, (es sei denn, es ein Flight mit höherem Rang für sie verfügbar ist ist).
 
 Weitere Informationen finden Sie unter [Schrittweises Paketrollout](gradual-package-rollout.md).
 
@@ -79,7 +79,7 @@ Ihr Flight-Paket wird standardmäßig veröffentlicht und Ihrer Test-Flight-Grup
 
 ## <a name="submit-your-package-flight-to-the-store"></a>Übermitteln des Flight-Paket an den Store
 
-Wenn Sie Pakete angegeben und alle erforderlichen Optionen konfiguriert haben, klicken Sie auf **An Store übermitteln**. Ihr Flight-Paket durchläuft anschließend den [App-Zertifizierungsprozess](the-app-certification-process.md). Beachten Sie, dass die [Richtlinien für Microsoft](https://docs.microsoft.com/legal/windows/agreements/store-policies)wie bei allen Übermittlungen Pakete in des Flugs Paket einhalten müssen.
+Wenn Sie Pakete angegeben und alle erforderlichen Optionen konfiguriert haben, klicken Sie auf **An Store übermitteln**. Ihr Flight-Paket durchläuft anschließend den [App-Zertifizierungsprozess](the-app-certification-process.md). Beachten Sie, dass Pakete in Ihrem Flight-Paket mit den [Microsoft Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies)entsprechen müssen, wie bei allen Übermittlungen.
 
 Personen, die in Ihren Test-Flight-Gruppen diesem Flight-Paket zugeordnet sind und Ihre App bereits haben, erhalten jetzt ein Update mit den Paketen, die Sie in Ihrem Flight-Paket bereitgestellt haben. Wenn diese Personen Ihre App noch nicht haben, erhalten sie die Pakete aus Ihrem Flight-Paket, wenn sie es installieren. 
 
@@ -101,20 +101,20 @@ In den meisten Fällen sollten Sie Pakete bereitstellen, die den gleichen Satz v
 
 ## <a name="update-or-modify-your-package-flight"></a>Aktualisieren oder Ändern Ihres Flight-Pakets
 
-Zum Erstellen einer neuen Übermittlung für ein Paket Flug, dass Sie bereits veröffentlicht haben, klicken Sie neben dem Namen des Flugs auf Ihrer App-Übersichtsseite auf **Aktualisieren** . Anschließend können Sie genau wie bei einer Übermittlung ohne Test-Flight neue Pakete hochladen (und nicht benötigte Pakete entfernen). Nehmen Sie alle weiteren erforderlichen Änderungen vor, und klicken Sie dann auf **An Store übermitteln**, um das aktualisierte Flight-Paket an den [App-Zertifizierungsprozess](the-app-certification-process.md) zu senden.
+Zum Erstellen einer neuen Übermittlungs für ein Flight-Paket, dass Sie bereits veröffentlicht haben, klicken Sie neben dem Flight-Namen auf Ihre App-Übersicht auf **Update** . Anschließend können Sie genau wie bei einer Übermittlung ohne Test-Flight neue Pakete hochladen (und nicht benötigte Pakete entfernen). Nehmen Sie alle weiteren erforderlichen Änderungen vor, und klicken Sie dann auf **An Store übermitteln**, um das aktualisierte Flight-Paket an den [App-Zertifizierungsprozess](the-app-certification-process.md) zu senden.
 
-Wenn Sie einen vorhandenen Flight ändern möchten, ohne ein neues Update zu erstellen, klicken Sie neben dem Flight-Namen auf **Modify**. Dadurch können Sie Details wie die Flight-Gruppen, den Name und den Rang ändern, ohne dass das Flight-Paket erneut zertifiziert werden muss. Beachten Sie, dass, wenn Sie ein Update ausgeführt haben, oder wenn des Flugs Paket noch nicht veröffentlicht wurde, werden Sie nicht die Option **Ändern** angezeigt. 
+Wenn Sie einen vorhandenen Flight ändern möchten, ohne ein neues Update zu erstellen, klicken Sie neben dem Flight-Namen auf **Modify**. Dadurch können Sie Details wie die Flight-Gruppen, den Name und den Rang ändern, ohne dass das Flight-Paket erneut zertifiziert werden muss. Beachten Sie, dass, wenn Sie ein Update in Bearbeitung haben, oder wenn Ihr Flight-Paket noch nicht veröffentlicht wurde, werden Sie nicht die Option **Ändern** angezeigt. 
 
 
 ## <a name="add-and-rank-additional-package-flights"></a>Weitere Flight-Pakete hinzufügen und nach Rang sortieren
 
 Sie können mehrere Flight-Pakete für dieselbe App erstellen, um unterschiedliche Pakete an verschiedene Kundengruppen zu verteilen. 
 
-Sobald Sie Ihr erstes Flight-Paket erstellt haben, können Sie mit dem oben beschriebenen Vorgang ein weiteres erstellen. Wenn Sie bereits ein Flight-Paket erstellt haben, besteht der einzige Unterschied darin, dass Sie im Abschnitt **Rang** die Reihenfolge der Priorität aller Flight-Pakete angeben müssen. Auf diese Weise können den Store bestimmen, welches Paket kundenspezifischen einzelne zugewiesen, wenn sie mehr als eine der Gruppen Flug werden. Benutzer in den Flight-Gruppen erhalten immer das Paket mit dem höchsten Rang, das für sie verfügbar ist. Dies gilt selbst dann, wenn ein Flight-Paket mit niedrigerem Rang Pakete mit einer höheren Versionsnummer enthält.
+Sobald Sie Ihr erstes Flight-Paket erstellt haben, können Sie mit dem oben beschriebenen Vorgang ein weiteres erstellen. Wenn Sie bereits ein Flight-Paket erstellt haben, besteht der einzige Unterschied darin, dass Sie im Abschnitt **Rang** die Reihenfolge der Priorität aller Flight-Pakete angeben müssen. Auf diese Weise können den Store zu ermitteln welche Pakete die einzelnen Kunden erhalten, wenn sie mehr als eine Ihrer Flight-Gruppen angehören. Benutzer in den Flight-Gruppen erhalten immer das Paket mit dem höchsten Rang, das für sie verfügbar ist. Dies gilt selbst dann, wenn ein Flight-Paket mit niedrigerem Rang Pakete mit einer höheren Versionsnummer enthält.
 
 Ihr neues Flight-Paket erhält standardmäßig den höchsten Rang. Wenn Sie den Rang ändern möchten, verschieben Sie das Paket nach unten (oder wieder nach oben), um es zwischen Ihren anderen Flight-Paketen richtig zu positionieren.
 
-Beachten Sie, dass Ihre Bereitstellung nicht flighted immer Rangfolge von der niedrigsten (#1). Das heißt, dass Personen, die keiner Ihrer Test-Flight-Gruppen angehören, nur Pakete aus Ihrer Übermittlung ohne Test-Flight aus dem Store abrufen können. Personen in einer Gruppe Flug erhalten immer Pakete aus der höchsten-Rank-Paket Flug verfügbar werden (jedoch nie der nicht flighted Übermittlung, da den niedrigsten Rang vorhanden ist). Dadurch sind Sie flexibel beim Bestimmen, wie Ihre Pakete an Benutzer verteilt werden, die u.U. in mehreren Ihrer Test-Flight-Gruppen Mitglied sind.
+Beachten Sie, dass Ihre Übermittlung ohne Test-Flight immer Rang der niedrigsten (#1). Das heißt, dass Personen, die keiner Ihrer Test-Flight-Gruppen angehören, nur Pakete aus Ihrer Übermittlung ohne Test-Flight aus dem Store abrufen können. Personen in einer Flight-Gruppe erhalten immer Pakete aus höchsten Rang Flight-Pakets zur Verfügung, sie (jedoch nie die ohne Test-Flight-Übermittlung, da er den niedrigsten Rang verfügt). Dadurch sind Sie flexibel beim Bestimmen, wie Ihre Pakete an Benutzer verteilt werden, die u.U. in mehreren Ihrer Test-Flight-Gruppen Mitglied sind.
 
 Nehmen wir beispielsweise an, dass Sie neben Ihrer regulären Übermittlung ohne Test-Flight zwei Flight-Pakete erstellen möchten: eines, das relativ stabil und für den Test mit einer breiten Zielgruppe bereit ist, und eines, bei dem Sie sich nicht so sicher sind und es auf wenige Tester beschränken möchten. Sie erstellen eine Test-Flight-Gruppe mit dem Namen „Tester“ und fügen sie einem Flight-Paket mit dem Namen „Test-Flight für Tester“ hinzu. Anschließend erstellen Sie eine Test-Flight-Gruppe mit dem Namen „Interessierte Benutzer“ und fügen sie einem anderen Flight-Paket mit dem Namen „Test-Flight für Interessierte Benutzer“ hinzu. Wenn Sie „Test-Flight für Tester“ einen höheren Rang als „Test-Flight für Interessierte Benutzer“ zuweisen, können Sie Pakete, bei denen Sie sich relativ sicher sind, in „Test-Flight für Interessierte Benutzer“ verwenden, und Pakete mit höherem Risiko, die nur für Tester vorgesehen sind, in „Test-Flight für Tester“. Mitglieder der Tester-Gruppe erhalten immer die Pakete, die Sie in „Test-Flight für Tester“ bereitstellen, auch wenn sie ebenfalls der Gruppe „Interessierte Benutzer“ angehören. (Wenn sich später dann herausstellt, dass die Pakete in „Test-Flight für Tester“ problemlos ausgeführt werden, können Sie „Test-Flight für Interessierte Benutzer“ so aktualisieren, dass die ursprünglich an „Test-Flight für Tester“ verteilten Pakete verwendet werden. Möglicherweise können Sie diese Pakete irgendwann auch in Ihrer Übermittlung ohne Test-Flight verwenden.
 

@@ -3,7 +3,7 @@ author: TylerMSFT
 title: Unbegrenzte Ausführung im Hintergrund
 description: Verwenden Sie die extendedExecutionUnconstrained-Funktion im Hintergrund, um eine Hintergrundaufgabe oder eine erweiterte Ausführungssitzung ohne zeitliche Begrenzung auszuführen.
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
-keywords: Aufgabe im Hintergrund erweitert, Ausführung, Ressourcen, Grenzwerte, Hintergrundaufgabe
+keywords: Hintergrundaufgabe, erweiterte Ausführung, Ressourcen, Beschränkungen, Hintergrundaufgabe
 ms.author: twhitney
 ms.date: 10/3/2017
 ms.topic: article
@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: af0f7670f2b131671ce82708d2b0a826db0fcfb1
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2891762"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2916666"
 ---
 # <a name="run-in-the-background-indefinitely"></a>Unbegrenzte Ausführung im Hintergrund
 

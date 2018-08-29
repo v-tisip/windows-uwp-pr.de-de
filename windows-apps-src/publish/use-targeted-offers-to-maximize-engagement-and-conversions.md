@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, gezielte Angebote, Angebote, Benachrichtigungen
 ms.localizationpriority: medium
 ms.openlocfilehash: 727c438bacf51fd2ead03df72421363116c4701b
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2880742"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2913147"
 ---
 # <a name="use-targeted-offers-to-maximize-engagement-and-conversions"></a>Verwenden Sie gezielte Angebote, um Interaktionen und Abschlüsse zu maximieren.
 
@@ -28,7 +28,7 @@ Sprechen Sie für bessere Interaktion, Kundenbindung und Monetarisierung bestimm
 Allgemein gesagt müssen Sie drei durchführen, um die zielgerichteten Angebote zu verwenden:
 
 1. **Erstellen Sie das Angebot auf Ihrem Dashboard.** Navigieren Sie zur Seite **Bewerben > zielgerichtete Angebote**, um Angebote zu erstellen. Weitere Informationen zu diesem Prozess sind im Folgenden beschrieben.
-2. **Implementieren Sie das In-App-Angebot.** Verwenden der *Microsoft-Benutzerspeichers zielorientierten API bietet* im Code Ihrer app um die verfügbaren Angeboten für einen bestimmten Benutzer abzurufen. Sie müssen auch die In-App-Umgebung für das gezielte Angebot erstellen. Weitere Informationen finden Sie unter [Verwalten gezielter Angebote mithilfe von Store-Diensten](../monetize/manage-targeted-offers-using-windows-store-services.md).
+2. **Implementieren Sie das In-App-Angebot.** Verwenden Sie die *Microsoft Store für gezielte Angebote API* in Ihrem app Code, um die verfügbaren Angebote für einen bestimmten Benutzer abzurufen. Sie müssen auch die In-App-Umgebung für das gezielte Angebot erstellen. Weitere Informationen finden Sie unter [Verwalten gezielter Angebote mithilfe von Store-Diensten](../monetize/manage-targeted-offers-using-windows-store-services.md).
 3. **Übermitteln Ihrer App an den Store.** Ihre App muss mit dem integrierten In-App-Angebot veröffentlicht werden, damit die Angebote für Kunden verfügbar sind.
 
 Nachdem Sie diese Schritte abgeschlossen haben, werden Kunden, die Ihre App verwenden, die Angebote angezeigt, die zu diesem Zeitpunkt für ihn verfügbar sind, basierend auf seiner Mitgliedschaft in dem diesem Angebot zugeordneten Segment. Beachten Sie, dass wir zwar bemüht sind, alle verfügbaren Angebote für Ihre Kunden anzuzeigen, es jedoch gelegentlich zu Problemen kommen kann, die die Angebotsverfügbarkeit beeinträchtigen.

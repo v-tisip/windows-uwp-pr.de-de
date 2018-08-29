@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: c9db9f3ce4397bec6fb0b6b339875c206d17c3fd
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2886122"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2913584"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Lokalisieren von Zeichenfolgen in der Benutzeroberfläche und im App-Paketmanifest
 Weitere Informationen zu einer Werterhöhung Ihrer App durch Lokalisierung finden Sie unter [Globalisierung und Lokalisierung](../design/globalizing/globalizing-portal.md).
@@ -92,13 +92,13 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("Farewell");
 
 Sie können diesen Code in einer Klassenbibliothek (Universal Windows) oder in einem [Windows Runtime Library (Universal Windows)](../winrt-components/index.md)-Projekt verwenden. Zur Laufzeit werden die Ressourcen der App geladen, die die Bibliothek hostet. Wir empfehlen, dass eine Bibliothek Ressourcen aus der App lädt, die sie hostet, da die App wahrscheinlich einen höheren Lokalisierungsgrad aufweist. Wenn eine Bibliothek Ressourcen bereitstellen muss, sollte sie es der App, die sie hostet, ermöglichen, diese Ressourcen als Eingabe zu ersetzen.
 
-Wenn Sie ein Ressourcennamen segmentierte ist (es enthält "." Zeichen), dann wird mit ersetzen Punkte mit Schrägstrich ("/") für die Zeichen im Namen Ressource. Eigenschaftenbezeichner, enthalten beispielsweise Punkte. So müssen Sie diese Substition ausführen, um eine dieser aus Code zu laden.
+Wenn Sie ein Ressourcennamen Segmentierung vorhanden ist (es enthält "." Zeichen), dann wird mit ersetzen Punkte mit Schrägstrich ("/") für Zeichen im Namen Ressource. Eigenschaften-IDs enthalten z. B. Punkte. Daher müssen Sie diese Substition erforderlich ist, um eine dieser vom Code geladen werden.
 
 ```csharp
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Fare/Well"); // <data name="Fare.Well" ...> ...
 ```
 
-Wenn Sie sich sich nicht sicher sind, können Sie [MakePri.exe](makepri-exe-command-options.md) um Ihre app PRI-Datei zu sichern. Jede Ressource `uri` wird in der Datei gedumpten angezeigt.
+Im Zweifelsfall können Sie [MakePri.exe](makepri-exe-command-options.md) PRI-Datei der app ausgeben. Jede Ressource `uri` wird in der Dump-Datei angezeigt.
 
 ```xml
 <ResourceMapSubtree name="Fare"><NamedResource name="Well" uri="ms-resource://<GUID>/Resources/Fare/Well">...
@@ -175,13 +175,13 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("MismatchedPasswo
 
 Würden Sie die Ressource „AppDisplayName” aus `Resources.resw` in `ManifestResources.resw` verschieben, müssten Sie in Ihrem App-Paketmanifest `ms-resource:AppDisplayName` in `ms-resource:/ManifestResources/AppDisplayName` ändern.
 
-Wenn Sie ein Dateinamen für die Ressource segmentierte ist (es enthält "." Zeichen), lassen Sie die Punkte im Namen, wenn Sie darauf verweisen. Ersetzen Sie Punkte **nicht** durch Schrägstrich ("/") Zeichen, so wie bei einem Ressourcenname.
+Wenn einem Ressourcendateinamen Segmentierung vorhanden ist (es enthält "." Zeichen), lassen Sie die Punkte in den Namen, wenn Sie darauf verweisen. Ersetzen Sie **keine** Punkte mit Schrägstrich ("/") Zeichen, wie Sie für einen Ressourcennamen.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Err.Msgs");
 ```
 
-Wenn Sie sich sich nicht sicher sind, können Sie [MakePri.exe](makepri-exe-command-options.md) um Ihre app PRI-Datei zu sichern. Jede Ressource `uri` wird in der Datei gedumpten angezeigt.
+Im Zweifelsfall können Sie [MakePri.exe](makepri-exe-command-options.md) PRI-Datei der app ausgeben. Jede Ressource `uri` wird in der Dump-Datei angezeigt.
 
 ```xml
 <ResourceMapSubtree name="Err.Msgs"><NamedResource name="MismatchedPasswords" uri="ms-resource://<GUID>/Err.Msgs/MismatchedPasswords">...
@@ -268,20 +268,20 @@ var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCur
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("exampleResourceName");
 ```
 
-Für eine Windows-Laufzeitbibliothek (Universal Windows), wenn Sie der standardmäßigen Namespace segmentierte ist (es enthält "." Zeichen), verwenden Sie Punkte, in den Namen der Ressource zuordnen.
+Für eine Windows-Runtime Library (Universal Windows), wenn der Standardnamespace Segmentierung vorhanden ist (es enthält "." Zeichen), dann Punkte in der Name der Ressourcenzuordnung verwenden.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Contoso.Control/Resources");
 ```
 
-Sie brauchen, die für eine Klassenbibliothek (Universal Windows) tun. Wenn in unsicher, können Sie [MakePri.exe](makepri-exe-command-options.md) verwenden, um die Komponente oder der Bibliothek PRI-Datei zu sichern. Jede Ressource `uri` wird in der Datei gedumpten angezeigt.
+Sie müssen dies für eine Klassenbibliothek (Universal Windows). Im Zweifelsfall können Sie [MakePri.exe](makepri-exe-command-options.md) verwenden, der Komponente oder der Bibliothek PRI-Datei ausgeben. Jede Ressource `uri` wird in der Dump-Datei angezeigt.
 
 ```xml
 <NamedResource name="exampleResourceName" uri="ms-resource://Contoso.Control/Contoso.Control/ReswFileName/exampleResourceName">...
 ```
 
 ## <a name="loading-strings-from-other-packages"></a>Laden von Zeichenfolgen aus anderen Paketen
-Die Ressourcen für ein app-Paket werden verwaltet und auf die Sie über des Pakets besitzen auf oberster Ebene [**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) , die von der aktuellen [**Ressourcen-Manager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)zugegriffen werden kann. In jedem Paket können Komponenten eigene ResourceMap-Unterstrukturen besitzen, auf die Sie über [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live) zugreifen können.
+Die Ressourcen für ein app-Paket werden verwaltet und Zugriff darauf über des Pakets besitzen, der obersten Ebene [**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) , die von der aktuellen [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)zugegriffen werden kann. In jedem Paket können Komponenten eigene ResourceMap-Unterstrukturen besitzen, auf die Sie über [**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live) zugreifen können.
 
 Ein Frameworkpaket kann auf seine eigenen Ressourcen über einen absolute Ressourcenbezeichner-URI zugreifen. Weitere Informationen finden Sie unter [URI-Schemas](uri-schemes.md).
 

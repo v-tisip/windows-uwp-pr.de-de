@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store Services SDK, A/B-Tests, Experimente
 ms.localizationpriority: medium
 ms.openlocfilehash: b0931d712ca99b429e2aaa7dec4b855f41ce55ef
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888349"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905863"
 ---
 # <a name="code-your-app-for-experimentation"></a>Codieren Ihrer App für das Experiment
 
@@ -29,7 +29,7 @@ Um der App dieses Verhalten hinzuzufügen, verwenden Sie die vom Microsoft Store
 In den folgenden Abschnitten erfahren Sie ganz allgemein, wie Sie Abweichungen für Ihr Experiment erhalten und Ereignisse in Dev Center protokollieren. Nachdem Sie die App für Experimente programmiert haben, können Sie [ein Experiment im Dev Center-Dashboard definieren](define-your-experiment-in-the-dev-center-dashboard.md). Eine exemplarische Vorgehensweise, die den gesamten Erstellungs- und Ausführungsprozess für ein Experiment veranschaulicht, finden Sie unter [Erstellen und Durchführen eines ersten Experiments mit A/B-Tests](create-and-run-your-first-experiment-with-a-b-testing.md).
 
 > [!NOTE]
-> Einige der experimentieren-APIs in Microsoft Store Services SDK verwenden Sie das [asynchrone Muster](../threading-async/asynchronous-programming-universal-windows-platform-apps.md) zum Abrufen von Daten aus Developer Center. Dies bedeutet, dass ein Teil der Methodenausführung nach dem Aufrufen der Methoden stattfinden kann. Auf diese Weise bleibt die Benutzeroberfläche Ihrer App weiter reaktionsfähig, während die Vorgänge abgeschlossen werden. Für das asynchrone Muster muss die App beim Aufrufen der APIs das **async**-Schlüsselwort und den **await**-Operator verwenden, wie aus den Codebeispielen in diesem Artikel ersichtlich. Asynchrone Methoden enden üblicherweise mit **Async**.
+> Einige der zum Experimentieren verfügbaren APIs in der Microsoft Store Services SDK verwenden das [asynchrone Muster](../threading-async/asynchronous-programming-universal-windows-platform-apps.md) zum Abrufen von Daten aus dem Dev Center. Dies bedeutet, dass ein Teil der Methodenausführung nach dem Aufrufen der Methoden stattfinden kann. Auf diese Weise bleibt die Benutzeroberfläche Ihrer App weiter reaktionsfähig, während die Vorgänge abgeschlossen werden. Für das asynchrone Muster muss die App beim Aufrufen der APIs das **async**-Schlüsselwort und den **await**-Operator verwenden, wie aus den Codebeispielen in diesem Artikel ersichtlich. Asynchrone Methoden enden üblicherweise mit **Async**.
 
 ## <a name="configure-your-project"></a>Konfigurieren des Projekts
 
@@ -42,7 +42,7 @@ Installieren Sie zunächst das Microsoft Store Services SDK auf dem Entwicklungs
 4. Aktivieren Sie in der Liste mit den SDKs das Kontrollkästchen neben **Microsoft Engagement Framework**, und klicken Sie anschließend auf **OK**.
 
 > [!NOTE]
-> Die Codebeispiele in diesem Artikel wird davon ausgegangen, dass Ihrer Codedatei **using** -Anweisungen für die Namespaces **System.Threading.Tasks** und **Microsoft.Services.Store.Engagement** verfügt.
+> Die Codebeispiele in diesem Artikel wird davon ausgegangen, dass Ihre **mithilfe von** Anweisungen für die Namespaces **System.Threading.Tasks** und **Microsoft.Services.Store.Engagement Codedatei** .
 
 ## <a name="get-variation-data-and-log-the-view-event-for-your-experiment"></a>Abrufen von Abweichungsdaten und protokollieren des Anzeigeereignisses für Ihr Experiment
 
@@ -60,7 +60,7 @@ In den folgenden Schritten werden die wichtigen Schritte dieses Verfahrens ausf�
 
 2. Deklarieren Sie eine Zeichenfolgenvariable, die der [Projekt-ID](run-app-experiments-with-a-b-testing.md#terms) für das Experiment zugewiesen wird, das Sie abrufen möchten.
     > [!NOTE]
-    > Sie erhalten eine Project-ID, wenn Sie [ein Projekt im Developer Center Dashboard zu erstellen](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md). Der hier gezeigte Projekt-ID dient nur als Beispiel.
+    > Sie erhalten eine Projekt ID, wenn Sie [ein Projekt im Dev Center-Dashboard erstellen](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md). Der hier gezeigte Projekt-ID dient nur als Beispiel.
 
     [!code-cs[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet2)]
 

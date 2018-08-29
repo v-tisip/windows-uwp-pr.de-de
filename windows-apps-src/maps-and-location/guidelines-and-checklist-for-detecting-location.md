@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Standort, Ort, Karte, Geolocation
 ms.localizationpriority: medium
 ms.openlocfilehash: 903a7b308c78e4ab9826ea4c46c642cb3361b462
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2881733"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2906517"
 ---
 # <a name="guidelines-for-location-aware-apps"></a>Richtlinien für Apps mit Standortbestimmung
 
@@ -51,7 +51,7 @@ In diesem Thema werden Leistungsrichtlinien für Apps beschrieben, für die der 
 
     Geben Sie das [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534)-Objekt frei, wenn der Benutzer den Zugriff auf Standortinformationen unter „Einstellungen“ deaktiviert. Die App empfängt **ACCESS\_DENIED**-Ergebnisse für alle standortbezogenen API-Aufrufe. Wenn Ihre App Standortdaten (zwischen)speichert, löschen Sie zwischengespeicherte Daten, wenn der Benutzer den Zugriff auf seinen Standort zurücknimmt. Stellen Sie eine Alternativmöglichkeit zur Angabe des Standorts bereit, wenn keine diesbezüglichen Informationen für Positionsdienste verfügbar sind.
 
--   Stellen Sie eine Benutzeroberfläche für das erneute Aktivieren der Positionsdienste bereit. Geben Sie beispielsweise eine Aktualisierungsschaltfläche, die erneut das [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) -Objekt instanziiert und versucht, Speicherort erneut abrufen.
+-   Stellen Sie eine Benutzeroberfläche für das erneute Aktivieren der Positionsdienste bereit. Bieten Sie z. B. eine Aktualisierungsschaltfläche, die das Objekt [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) Aktualisierungsschaltfläche und versucht, Standortinformationen erneut abzurufen.
 
     Stellen Sie in Ihrer App eine Benutzeroberfläche zum Aktivieren der Positionsdienste bereit.
 
@@ -91,7 +91,7 @@ In diesem Thema werden Leistungsrichtlinien für Apps beschrieben, für die der 
         Beispiel:
 
         -   Wenn Ihre App den Standort zum Abstimmen von Werbung, für Wettermeldungen, Nachrichten usw. abruft, ist eine Genauigkeit von 5000m in der Regel ausreichend.
-        -   Wenn Ihre app in der Nähe Aufträge in der Umgebung angezeigt wird, ist eine Genauigkeit von 300 Meter im Allgemeinen eine gute Ergebnisse.
+        -   Wenn Ihre app Angebote aus der näheren Umgebung an anzeigt, ist eine Genauigkeit von 300 m in der Regel gute Ergebnisse.
         -   Sucht der Besucher nach Restaurantempfehlungen in der Nähe, ist wahrscheinlich eine Position innerhalb eines Straßenblocks gewünscht, sodass eine Genauigkeit von 100m genügt.
         -   Möchte der Benutzer seine Position teilen, sollte die App eine Genauigkeit von ungefähr 10m anfordern.
     -   Verwenden Sie die [**Geocoordinate.accuracy**](https://msdn.microsoft.com/library/windows/apps/br225526)-Eigenschaft, wenn für Ihre App bestimmte Genauigkeitsanforderungen gelten. Navigations-Apps sollten z.B. mit der **Geocoordinate.accuracy**-Eigenschaft ermitteln, ob die verfügbaren Standortdaten die Anforderungen der App erfüllen.

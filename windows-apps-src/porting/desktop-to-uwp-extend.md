@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e1d808dd2991aa2ffd1e30967d329b3eced9f99
-ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
-ms.translationtype: HT
+ms.openlocfilehash: f3354dad1702d275fb7b2af53516689d2c5d5014
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "2018566"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2914098"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>Erweitern Sie Ihre Desktopanwendung mit modernen Windows-UWP-Komponenten
 
@@ -140,7 +140,7 @@ Fügen Sie Ihrem UWP-Projekt eine XAML-Benutzeroberfläche hinzu. Hier sehen Sie
 
 ### <a name="add-a-protocol-extension"></a>Hinzufügen einer Protokollerweiterung
 
-Öffnen Sie im **Projektmappen-Explorer** die **package.appxmanifest**-Datei des UWP-Projekts in Ihrer Projektmappe und fügen Sie diese Erweiterung hinzu.
+Klicken Sie im **Projektmappen-Explorer**öffnen Sie die Datei **"Package.appxmanifest"** des Verpackung-Projekts in Ihrer Projektmappe, und fügen Sie diese Erweiterung.
 
 ```xml
 <Extensions>
@@ -311,9 +311,9 @@ public sealed class AppServiceTask : IBackgroundTask
 
 <a id="extension" />
 
-### <a name="add-an-app-service-extension-to-the-uwp-project"></a>Hinzufügen einer App-Diensterweiterung zum UWP-Projekt
+### <a name="add-an-app-service-extension-to-the-packaging-project"></a>Hinzufügen einer app-diensterweiterung zum verpackungsprojekt
 
-Öffnen Sie die **package.appxmanifest**-Datei des UWP-Projekts und fügen Sie dem ``<Application>``-Element eine App-Diensterweiterung hinzu.
+Öffnen Sie die Datei **"Package.appxmanifest"** des Verpackung-Projekts, und fügen Sie eine app-diensterweiterung zu den ``<Application>`` Element.
 
 ```xml
 <Extensions>
@@ -398,7 +398,7 @@ Damit einer Anwendung als Freigabeziel arbeitet, führen Sie folgende Aktionen a
 
 ### <a name="add-a-share-target-extension"></a>Hinzufügen der Freigabezielerweiterung
 
-Öffnen Sie im **Projektmappen-Explorer** die **package.appxmanifest**-Datei des UWP-Projekts in Ihrer Projektmappe und fügen Sie die Erweiterung hinzu.
+Klicken Sie im **Projektmappen-Explorer**öffnen Sie die Datei **"Package.appxmanifest"** des Verpackung-Projekts in Ihrer Projektmappe, und fügen Sie die Erweiterung hinzu.
 
 ```xml
 <Extensions>
@@ -512,7 +512,7 @@ public sealed class SiteVerifier : IBackgroundTask
 
 ### <a name="configure-the-background-task"></a>Konfigurieren der Hintergrundaufgabe
 
-Öffnen Sie im Manifest-Designer die **package.appxmanifest**-Datei des UWP-Projekts in Ihrer Projektmappe.
+Öffnen Sie im manifest-Designer die Datei **"Package.appxmanifest"** des Verpackung-Projekts in Ihrer Lösung.
 
 Fügen Sie auf der Registerkarte **Deklarationen** eine **Hintergrundaufgaben**-Deklaration hinzu.
 

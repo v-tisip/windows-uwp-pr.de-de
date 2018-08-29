@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Azure Ad, Azure-Mandant, AAD-Mandant, Azure AD-Mandant, Mandantenverwaltung, Mandanten
 ms.localizationpriority: medium
 ms.openlocfilehash: dd729d76705849c981516109da39bbd27c140286
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2890684"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910432"
 ---
 # <a name="associate-azure-active-directory-with-your-dev-center-account"></a>Zuordnen Ihres Azure Active Directory zum Dev Center-Konto
 
@@ -35,7 +35,7 @@ Ebenso können mehrere Dev Center-Konten einem Azure AD-Mandant zugeordnet werde
 
 Wenn Ihre Organisation Azure AD bereits verwendet, gehen Sie folgendermaßen vor, um Ihr Dev Center-Konto zu verknüpfen.
 
-1.  Wählen Sie aus dem [Windows-Entwicklungscenter Dashboard](https://partner.microsoft.com/dashboard)das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards) aus, und wählen Sie dann **kontoeinstellungen**. Wählen Sie im Menü **Einstellungen für** **Mandanten**.
+1.  Wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards), und wählen Sie dann **kontoeinstellungen**, auf dem [Windows Dev Center-Dashboard](https://partner.microsoft.com/dashboard). Wählen Sie im Menü " **Einstellungen** " **Mandanten**.
 2.  Wählen Sie **Zuordnen von AzureAD zu Ihrem Dev Center-Konto**.
 3.  Geben Sie Ihre Azure AD-Anmeldeinformationen für den Mandanten ein, den Sie zuordnen möchten.
 4.  Überprüfen Sie den Organisations- und den Domänennamen für den Azure AD-Mandant. Wählen Sie zum Abschließen der Zuordnung **Bestätigen** aus.
@@ -49,7 +49,7 @@ Wenn Ihre Organisation Azure AD bereits verwendet, gehen Sie folgendermaßen vor
 
 Wenn Sie ein neues Azure AD einrichten müssen, um diesem Ihr Dev Center-Konto zuzuordnen, gehen Sie folgendermaßen vor.
 
-1.  Wählen Sie aus dem [Windows-Entwicklungscenter Dashboard](https://partner.microsoft.com/dashboard)das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards) aus, und wählen Sie dann **kontoeinstellungen**. Wählen Sie im Menü **Einstellungen für** **Mandanten**.
+1.  Wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards), und wählen Sie dann **kontoeinstellungen**, auf dem [Windows Dev Center-Dashboard](https://partner.microsoft.com/dashboard). Wählen Sie im Menü " **Einstellungen** " **Mandanten**.
 2.  Wählen Sie **Neues Azure AD erstellen**.
 3.  Geben Sie die Verzeichnisinformationen für das neue Azure AD ein:
     - **Domänenname**: Der eindeutige Name, der für Ihre Azure AD-Domäne verwendet wird, zusammen mit „.onmicrosoft.com“. Wenn Sie beispielsweise „beispiel“ eingegeben haben, wäre Ihre Azure AD-Domäne „beispiel.onmicrosoft.com“.
@@ -78,7 +78,7 @@ Jeder Benutzer mit einer **Manager**-Rolle für das Dev Center-Konto kann Azure 
 > [!IMPORTANT]
 > Beim Entfernen eines Mandanten können sich alle Benutzer, die dem Dev Center-Konto über diesen Mandanten hinzugefügt wurden, nicht mehr auf dem Konto anmelden. 
 
-Um einen Mandanten zu entfernen, suchen Sie nach dem Namen auf der Seite **Mandanten** (in **Konten-Einstellungen**), und wählen Sie dann **Entfernen**. Sie werden aufgefordert, zu bestätigen, dass Sie den Mandanten entfernen möchten. Danach können sich keine Dev Center-Benutzer dieses Mandanten im Dev Center-Konto mehr anmelden, und alle Berechtigungen, die Sie für diesen Benutzer konfiguriert haben, werden entfernt.
+Um einen Mandanten zu entfernen, suchen Sie den Namen auf der Seite " **Mandanten** " (in den **kontoeinstellungen**), und wählen Sie dann **Entfernen**. Sie werden aufgefordert, zu bestätigen, dass Sie den Mandanten entfernen möchten. Danach können sich keine Dev Center-Benutzer dieses Mandanten im Dev Center-Konto mehr anmelden, und alle Berechtigungen, die Sie für diesen Benutzer konfiguriert haben, werden entfernt.
 
 > [!TIP]
 > Sie können keinen Mandanten entfernen, wenn Sie über ein Konto im gleichen Mandanten derzeit in Dev Center angemeldet sind. Um einen Mandanten zu entfernen, müssen Sie sich im Dev Center als **Manager** für einen anderen Mandanten anmelden, der dem Konto zugeordnet ist. Wenn nur ein Mandanten dem Konto zugeordnet ist, kann dieser Mandant nur nach der Anmeldung mithilfe des Microsoft-Kontos entfernt werden, das das Konto eröffnete.

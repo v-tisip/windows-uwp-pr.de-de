@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Einkaufs-API, Abonnements
 ms.localizationpriority: medium
 ms.openlocfilehash: d8734c1fe25cf6c22d88d2d50b323b7d3ee86710
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2882966"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2905873"
 ---
 # <a name="change-the-billing-state-of-a-subscription-for-a-user"></a>Ändern des Abrechnungszustands eines Abonnements für Benutzer
 
@@ -57,7 +57,7 @@ Weitere Informationen finden Sie unter [Verwalten von Produktansprüchen aus ein
 
 | Name         | Typ  | Beschreibung   |  Erforderlich  |
 |----------------|--------|-------------|-----------|
-| recurrenceId | Zeichenfolge | Die ID des Abonnements, das Sie ändern möchten. Wenn dieser ID erhalten möchten, rufen Sie die Methode [get Abonnements für einen Benutzer](get-subscriptions-for-a-user.md) , identifizieren Sie den Antwort Body-Eintrag, der das Abonnement Add-on darstellt, den, das Sie ändern möchten, und verwenden Sie den Wert des **Id** -Felds für den Eintrag.     | Ja      |
+| recurrenceId | Zeichenfolge | Die ID des Abonnements, das Sie ändern möchten. Um diese ID zu erhalten, rufen Sie die Methode [Abonnements für einen Benutzer abrufen](get-subscriptions-for-a-user.md) , identifizieren Sie den Antworttext-Eintrag, der das Abonnement-Add-On darstellt, die, das Sie ändern möchten, und verwenden Sie den Wert des Felds **Id** für den Eintrag.     | Ja      |
 
 
 ### <a name="request-body"></a>Anforderungstext
@@ -120,7 +120,7 @@ Der Antworttext enthält die folgenden Daten.
 | autoRenew | Boolesch |  Gibt an, ob das Abonnement für die automatische Verlängerung am Ende des aktuellen Abonnementzeitraums konfiguriert ist.   |
 | beneficiary | Zeichenfolge |  Die ID des Begünstigten für die Berechtigung, die diesem Abonnement zugeordnet ist.   |
 | expirationTime | Zeichenfolge | Datum und Uhrzeit, an dem bzw. zu der das Abonnement abläuft, im Format ISO 8601. Dieses Feld ist nur verfügbar, wenn sich das Abonnement in bestimmten Zuständen befindet. Die Ablaufzeit gibt in der Regel an, wann der aktuelle Zustand abläuft. Beispiel: Bei einem aktiven Abonnement gibt das Ablaufdatum an, wann die nächste automatische Verlängerung erfolgt.    |
-| expirationTimeWithGrace | string | Das Datum und die Zeit, die das Abonnement abläuft, einschließlich der Nachfrist im ISO 8601-Format dar. Dieser Wert gibt an, wenn der Benutzer verlieren Zugriff auf das Abonnement nachdem das Abonnement automatisch erneuern fehlgeschlagen ist.    |
+| expirationTimeWithGrace | string | Datum und Uhrzeit, die das Abonnement abläuft, einschließlich der Nachfrist im Format ISO 8601. Dieser Wert gibt an, wenn der Benutzer verliert, Zugriff auf das Abonnement nachdem das Abonnement für die automatische Verlängerung fehlgeschlagen ist.    |
 | id | Zeichenfolge |  Die ID des Abonnements. Verwenden Sie diesen Wert, um das Abonnement anzugeben, das Sie durch Aufrufen der Methode zum [Ändern des Abrechnungszustands eines Abonnements für einen Benutzer ](change-the-billing-state-of-a-subscription-for-a-user.md) ändern möchten.    |
 | isTrial | Boolesch |  Gibt an, ob es sich bei dem Abonnement um eine Testversion handelt.     |
 | lastModified | Zeichenfolge |  Datum und Uhrzeit, an dem bzw. zu der das Abonnement zuletzt geändert wurde, im Format ISO 8601.      |

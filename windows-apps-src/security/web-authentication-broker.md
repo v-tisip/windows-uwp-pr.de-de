@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: d354f0babec3ec2346c6e76fcae8666f40f3f6be
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2887919"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910193"
 ---
 # <a name="web-authentication-broker"></a>Webauthentifizierungsbroker
 
@@ -159,11 +159,11 @@ Häufig können Sie anhand der Betriebsprotokolle ermitteln, was nicht funktioni
 
 Der Fiddler-Webdebugger kann Apps verwendet werden.
 
-1.  Da die AuthHost in einem eigenen Container app ausgeführt wird, auf ihm die Möglichkeit privates Netzwerk geben müssen Sie festlegen ein Registrierungsschlüssels: Windows-Registrierungs-Editor, Version 5.00
+1.  Da AuthHost in einem eigenen app-Container ausgeführt wird, um die VPN-Funktion zu ermöglichen Sie müssen einen Registrierungsschlüssel festlegen: Windows Registry Editor Version 5.00
 
     **HKEY\_LOCAL\_MACHINE**\\**SOFTWARE**\\**Microsoft**\\**Windows NT**\\**CurrentVersion**\\**Image File Execution Options**\\**authhost.exe**\\**EnablePrivateNetwork** = 00000001
 
-    Wenn Sie diesen Registrierungsschlüssel nicht vorhanden ist, können Sie es in einem Eingabeaufforderungsfenster mit Administratorrechten erstellen.
+    Wenn Sie diesen Registrierungsschlüssel nicht verfügen, können Sie es in einem Eingabeaufforderungsfenster mit Administratorrechten erstellen.
 
     ```cmd 
     REG ADD "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\authhost.exe" /v EnablePrivateNetwork /t REG_DWORD /d 1 /f

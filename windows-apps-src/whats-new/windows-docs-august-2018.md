@@ -1,8 +1,8 @@
 ---
 author: QuinnRadich
-title: Was ist neu in Windows-Dokumente im August 2018 – Entwickeln von apps UWP
-description: Neue Features, Videos, Beispiele und Anleitungen für Entwickler wurden in der Windows-10-Entwicklerdokumentation für August 2018 hinzugefügt.
-keywords: Neues in, Update, Features, Developer Leitfaden für die Windows-10, august
+title: Neuigkeiten in Windows-Dokumentation im August 2018 – Entwicklung von UWP-apps
+description: Neue Features, Videos, Beispiele und entwicklerleitfäden wurden in der Windows 10-Entwicklerdokumentation für August 2018 hinzugefügt.
+keywords: Neues in, Update, Features, Anleitungen für Entwickler, Windows 10, august
 ms.author: quradic
 ms.date: 08/14/2018
 ms.topic: article
@@ -10,15 +10,15 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c294dedc8e19605bc2cee0308022bed8624df57e
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888109"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2918761"
 ---
-# <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>Was ist neu in der Windows-Entwicklerdokumente im August 2018
+# <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>Neuigkeiten in der Windows-Entwicklerdokumentation im August 2018
 
-Die Entwicklerdokumentation für die Windows-Plattform wird ständig mit Informationen über neue Features für Entwickler aktualisiert. Die folgenden Featureübersichten, Developer Anleitungen und Videos sind in den Monat August verfügbar gemacht wurden.
+Die Entwicklerdokumentation für die Windows-Plattform wird ständig mit Informationen über neue Features für Entwickler aktualisiert. Die folgenden Featureübersichten, entwicklerleitfäden und Videos wurden im Monat des August zur Verfügung gestellt.
 
 Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/create-uwp-apps.md) oder sich mit der Verwendung von [vorhandenem App-Code unter Windows](../porting/index.md) vertraut machen.
 
@@ -26,52 +26,52 @@ Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?L
 
 ### <a name="design"></a>Entwerfen
 
-Die folgenden Features wurden an den Windows Insider Preview Builds, über die [Windows-Insider](https://insider.windows.com/) -Anwendung hinzugefügt.
+Die folgenden Features wurde der Windows Insider Preview-Builds, über das [Windows-Insider-](https://insider.windows.com/) Programm verfügbar hinzugefügt.
 
-* Die [UI-Bibliothek für Windows](https://aka.ms/winui-docs) ist eine Reihe von NuGet-Pakete, die Steuerelemente und andere interfact Elemente für apps UWP bereitstellen. Diese Pakete sind auch kompatibel mit früheren Versionen von Windows 10, damit Ihre app funktioniert, auch wenn die Benutzer nicht über die neueste Version des Betriebssystems verfügen.
+* Die [Windows-UI-Bibliothek](https://aka.ms/winui-docs) ist ein Satz von NuGet-Pakete, die Steuerelemente und andere Elemente einer interfact für UWP-apps bereitstellen. Diese Pakete sind auch kompatibel mit früheren Versionen von Windows 10, damit Ihre app funktioniert, auch wenn Ihre Benutzer die neueste Version des Betriebssystems besitzen.
 
-* [DropDownButton](../design/controls-and-patterns/buttons.md#create-a-drop-down-button) [SplitButton](../design/controls-and-patterns/buttons.md#create-a-split-button)und [ToggleSplitButton](../design/controls-and-patterns/buttons.md#create-a-toggle-split-button) bieten Schaltflächensteuerelemente mit speziellen Features Ihrer app-Benutzeroberfläche optimiert.
+* [DropDownButton](../design/controls-and-patterns/buttons.md#create-a-drop-down-button), [SplitButton](../design/controls-and-patterns/buttons.md#create-a-split-button)und [ToggleSplitButton](../design/controls-and-patterns/buttons.md#create-a-toggle-split-button) bereit, die Steuerelemente mit speziellen Features zur Verbesserung der Benutzeroberfläche Ihrer app.
 
-![Eine Trennschaltfläche für die Auswahl von Vordergrundfarbe](../design/controls-and-patterns/images/split-button-rtb.png)
+![Eine geteilte Schaltfläche zum Auswählen von Vordergrundfarbe](../design/controls-and-patterns/images/split-button-rtb.png)
 
-* NavigationView unterstützt jetzt in der [oberen Navigationsleiste](../design/controls-and-patterns/navigationview.md)für Fälle, in dem Ihre app hat eine geringere Anzahl von Optionen für die Websitenavigation und erfordern mehr Speicherplatz für Ihre app Inhalte.
+* NavigationView unterstützt jetzt in der [oberen Navigationsleiste](../design/controls-and-patterns/navigationview.md)für Fälle, in denen Ihre app verfügt über eine kleinere Anzahl Navigationsoptionen und erfordern mehr Platz für den Inhalt Ihrer app.
 
-* "TreeView" wurde verbessert zur Unterstützung der [Daten binden, Vorlagen, Artikel und Drag & drop.](../design/controls-and-patterns/tree-view.md)
+* Strukturansicht wurde zur Unterstützung von erweitert [die Datenbindung, Elementvorlagen, und Drag & Drop.](../design/controls-and-patterns/tree-view.md)
 
 ### <a name="package-support-framework"></a>Paket-Support-Framework
 
-Das Paket Support-Framework ist ein Open-Source-Kit, die Dank gelten Korrekturen für Ihre Win32-Anwendung, wenn Sie nicht über Zugriff auf den Quellcode verfügen, damit es in einem MSIX-Container ausgeführt werden kann.
+Das Paket Support-Framework ist ein Open-Source-Kit, das hilft Ihnen, Patches auf Ihre Win32-Anwendung anwenden, wenn Sie keinen Zugriff auf den Quellcode, haben, damit sie in einem MSIX-Container ausgeführt werden kann.
 
-Weitere Informationen finden Sie unter [Übernehmen Runtime behebt zu einem Paket MSIX mithilfe des Paket-Support-Frameworks](../porting/package-support-framework.md).
+Um mehr zu erfahren, finden Sie in der [Übernehmen Runtime behebt ein MSIX Paket mit dem Paket Support-Framework](../porting/package-support-framework.md).
 
 ## <a name="developer-guidance"></a>Anleitungen für Entwickler
 
 ### <a name="web-api-extensions"></a>Web-API-Erweiterungen
 
-Eine Liste mit [älteren Microsoft-API-Erweiterungen](https://developer.mozilla.org/docs/Web/API/Microsoft_API_extensions) wurde der Mozilla Developer Network-Dokumentation für browserübergreifende Webentwicklung hinzugefügt. Diese API-Erweiterungen stehen nur in Internet Explorer oder Microsoft Edge, und vorhandene Informationen zur Kompatibilität und Browser-Unterstützung in der Webdokumente MDN ergänzen. Ältere Microsoft [CSS-Erweiterungen](https://developer.mozilla.org/docs/Web/CSS/Microsoft_Extensions) und [JavaScript-Erweiterungen](https://developer.mozilla.org/docs/Web/JavaScript/Microsoft_JavaScript_extensions) stehen ebenfalls zur Verfügung, und finden Sie rich-Web-API-Informationen aus MDN verfügbar gemacht, direkt in [Visual Studio-Code.](https://code.visualstudio.com/updates/v1_25#_new-css-pseudo-selectors-and-pseudo-elements-from-mdn)
+Eine Liste der [veralteten Microsoft-API-Erweiterungen](https://developer.mozilla.org/docs/Web/API/Microsoft_API_extensions) wurde in der Dokumentation Mozilla Developer Network browserübergreifende Webentwicklung hinzugefügt. Diese API-Erweiterungen sind spezifisch für Internet Explorer oder Microsoft Edge, und ergänzen vorhandene Informationen zur Kompatibilität und Browser-Unterstützung in der MDN Web-Dokumentation. Ältere Microsoft [CSS-Erweiterungen](https://developer.mozilla.org/docs/Web/CSS/Microsoft_Extensions) und [JavaScript-Erweiterungen](https://developer.mozilla.org/docs/Web/JavaScript/Microsoft_JavaScript_extensions) sind auch verfügbar, und finden Sie umfassende Web-API-Informationen aus MDN ermittlungsfunktionen direkt in [Visual Studio Code.](https://code.visualstudio.com/updates/v1_25#_new-css-pseudo-selectors-and-pseudo-elements-from-mdn)
 
-### <a name="cwinrt-code-examples"></a>C + / WinRT-Codebeispiele
+### <a name="cwinrt-code-examples"></a>C++ / WinRT-Code-Beispiele
 
-Wir haben 250 hinzugefügt [C + / WinRT](../cpp-and-winrt-apis/index.md) code Auflistungen zu Themen, die in unserer Dokumente, die begleitenden vorhandenen C + / CX-Codebeispiele.
+Wir haben 250 hinzugefügt [C++ / WinRT](../cpp-and-winrt-apis/index.md) code Einträge zu Themen in unserer Dokumentation, begleitende vorhandenen C++ / CX-Codebeispiele.
 
 ### <a name="project-rome"></a>Projekt Rome
 
-Die [Projekt-ROM-Dokumente](https://docs.microsoft.com/windows/project-rome/) Website wurde in einer Feature-First-Ansatz neu organisiert. Dies sollte erleichtern für Entwickler zu finden, wonach sie suchen und Funktionen ihrer Wahl plattformübergreifend implementieren.
+Die Website [Project Rome Dokumente](https://docs.microsoft.com/windows/project-rome/) wurde in einen Ansatz Feature ausgelegt neu organisiert. Dies sollte einfacher für Entwickler zu finden, was sie suchen und Features ihrer Wahl über mehrere Plattformen hinweg zu implementieren.
 
 ## <a name="videos"></a>Videos
 
-### <a name="xbox-live-unity-plugin"></a>Xbox Live-eins-Plug-in
+### <a name="xbox-live-unity-plugin"></a>Xbox Live Unity-Plug-in
 
-Die Xbox Live-Plug-Ins für Einheit enthält Unterstützung für das Hinzufügen von Xbox Live Signieren, Stats, Freunde-Listen, Cloud-Speicher und setzen, Ihren Titel. [Video ansehen](https://youtu.be/fVQZ-YgwNpY) , um mehr zu erfahren, und klicken Sie dann auf die ersten Schritte beim [Herunterladen des Pakets GitHub](https://aka.ms/UnityPlugin) .
+Die Xbox Live-Plug-In für Unity enthält Unterstützung für das Hinzufügen von Xbox Live zu signieren, Statistiken, Freunde-Listen, Cloud-Speicher und Bestenlisten um Ihrem Titel. [Das Video ansehen](https://youtu.be/fVQZ-YgwNpY) , um mehr zu erfahren, und [das GitHub-Paket herunterzuladen](https://aka.ms/UnityPlugin) , für den Einstieg.
 
-### <a name="one-dev-question"></a>Eine Dev Frage
+### <a name="one-dev-question"></a>One Dev Frage
 
-In der eine Dev Frage Videoserie behandelt seit Microsoft Entwickler eine Reihe von Fragen zu Windows-Entwicklung, Teamkultur und Verlauf. Nachfolgend finden Sie die neuesten Fragen, die wir angenommen haben!
+In der eine Dev Frage Videoserie behandelt seit Microsoft-Entwicklern eine Reihe von Fragen zur Windows-Entwicklung, Teamkultur, und zum Verlauf. Hier ist die neueste Fragen, die wir beantwortet haben!
 
 Raymond Chen:
 
-* [Woher weiß Kernel wann einen Grafiktreiber neu starten?](https://youtu.be/3SNAdyO1l5c)
+* [Woher weiß der Kernel wann Videotreibers neu gestartet?](https://youtu.be/3SNAdyO1l5c)
 
 Larry Osterman:
 
-* [Was ist die Geschichte des Burgermaster-Objekts in Windows?](https://youtu.be/0TDSbyAIvX0)
+* [Was ist die Story hinter dem Burgermaster Objekt in Windows?](https://youtu.be/0TDSbyAIvX0)

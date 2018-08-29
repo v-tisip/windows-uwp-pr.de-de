@@ -1,7 +1,7 @@
 ---
 author: cphilippona
-description: Anzuzeigen Sie, dass Fokus einen Beleuchtungseffekt ist, der den Rahmen des Fokus Elemente animiert, wenn der Benutzer auf diese Gamepad noch die Tastatur-Fokus bewegt.
-title: Fokus anzeigen
+description: Reveal-Focus sind Lichteffekte, die den Rahmen des fokussierbaren Elementes animieren, wenn der Benutzer den Fokus des Gamepad oder Tastatur darauf lenken.
+title: Reveal-Focus
 template: detail.hbs
 ms.author: mijacobs
 ms.date: 03/1/2018
@@ -14,29 +14,29 @@ design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b5fa84efbe20368be55a50ce20c8e6e5d1fe439
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2895621"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2909723"
 ---
-# <a name="reveal-focus"></a>Fokus anzeigen
+# <a name="reveal-focus"></a>Reveal-Focus
 
 ![Favoritenbild](images/header-reveal-focus.svg)
 
-Anzuzeigen Sie, dass der Fokus für [10 Fuß auftritt](/windows/uwp/design/devices/designing-for-tv), wie eine Xbox und verbringt Bildschirme einen Beleuchtungseffekt ist. Sie animieren den Rahmen des fokussierbaren Elementes wie beispielsweise Schaltflächen, wenn der Benutzer den Fokus des Gamepad oder der Tastatur darauf lenken. Es ist standardmäßig deaktiviert, lässt sich allerdings ganz einfach aktivieren. 
+Reveal-Focus sind Lichteffekte für [10-Fuß-Erlebnisse](/windows/uwp/design/devices/designing-for-tv), wie z. B. Xbox One-und Fernsehbildschirme. Sie animieren den Rahmen des fokussierbaren Elementes wie beispielsweise Schaltflächen, wenn der Benutzer den Fokus des Gamepad oder der Tastatur darauf lenken. Es ist standardmäßig deaktiviert, lässt sich allerdings ganz einfach aktivieren. 
 
-(Für den Effekt markieren anzuzeigen, eine interaktive Elemente hervorgehoben Wirkung der Beleuchtung finden Sie im [Artikel markieren anzuzeigen](/windows/uwp/design/style/reveal).)
+(Der Effekt "einblenden" markieren, ein Lichteffekt, der interaktive Elemente hervorhebt finden Sie im [Artikel "einblenden" markieren](/windows/uwp/design/style/reveal).)
 
 
 > **Wichtige APIs**: [Application.FocusVisualKind-Eigenschaft](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.FocusVisualKind), [FocusVisualKind Enum](https://docs.microsoft.com/uwp/api/windows.ui.xaml.focusvisualkind), [Control.UseSystemFocusVisuals-Eigenschaft](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals)
 
 ## <a name="how-it-works"></a>Funktionsweise
-Anzeigen Sie Anrufe Aufmerksamkeit auf zielgerichteten Elemente durch eine animierte Leuchteffekt um das Element Umrandung hinzufügen:
+Reveal-Focus lenkt den Fokus auf fokussierte Elemente indem ein animierter Schein um den Rahmens des Elements:
 
 ![Einblendeanzeige](images/traveling-focus-fullscreen-light-rf.gif)
 
-Dies ist insbesondere dann nützlich, in 10 Fuß Szenarien, in dem der Benutzer nicht vollständige Aufmerksamkeit auf den ganzen Bildschirm TV bezahlt werden kann. 
+Dies ist besonders in 10-Fuß-Szenarien, in denen der Benutzer nicht volle Aufmerksamkeit auf den gesamten Fernsehbildschirm lenkt. 
 
 ## <a name="examples"></a>Beispiele
 
@@ -45,7 +45,7 @@ Dies ist insbesondere dann nützlich, in 10 Fuß Szenarien, in dem der Benutzer 
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Wenn Sie die <strong style="font-weight: semi-bold">Verwendung von XAML-Steuerelemente-Sammlung</strong> app installiert haben, klicken Sie hier, <a href="xamlcontrolsgallery:/item/RevealFocus">Öffnen Sie die app</a>und finden Sie unter Fokus in der Praxis anzuzeigen.</p>
+    <p>Wenn Sie die <strong style="font-weight: semi-bold">XAML-Steuerelementekatalog</strong> -app installiert haben, klicken Sie hier, um zu <a href="xamlcontrolsgallery:/item/RevealFocus">der app zu öffnen und Reveal-Focus zu sehen</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Erwerben Sie die XAML-Steuerelementekatalog-App (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Erwerben Sie den Quellcode (GitHub)</a></li>
@@ -56,7 +56,7 @@ Dies ist insbesondere dann nützlich, in 10 Fuß Szenarien, in dem der Benutzer 
 
 ## <a name="how-to-use-it"></a>Verwendung
 
-Anzuzeigen Sie, dass Fokus standardmäßig deaktiviert ist. So aktivieren Sie es:
+Reveal-Focus ist, die sich standardmäßig deaktiviert. So aktivieren Sie es:
 1. Rufen Sie im Konstruktor der App die Eigenschaft [AnalyticsInfo.VersionInfo.DeviceFamily](/uwp/api/windows.system.profile.analyticsversioninfo.DeviceFamily) auf, und überprüfen Sie, ob die aktuellen Gerätefamilie `Windows.Xbox` ist.
 2. Wenn die Gerätefamilie `Windows.Xbox` ist, legen Sie die Eigenschaft [Application.FocusVisualKind](/uwp/api/windows.ui.xaml.application.FocusVisualKind) auf `FocusVisualKind.Reveal` fest. 
 
@@ -67,22 +67,22 @@ Anzuzeigen Sie, dass Fokus standardmäßig deaktiviert ist. So aktivieren Sie es
     }
 ```
 
-Nachdem Sie die **FocusVisualKind** -Eigenschaft festgelegt wird, wendet das System den Fokus anzeigen Effekt automatisch für alle Steuerelemente, deren [UseSystemFocusVisuals](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals) -Eigenschaft auf **True** (Standardwert für die meisten Steuerelemente) festgelegt ist. 
+Nach dem Festlegen der Eigenschaft **FocusVisualKind** wendet des Systems automatisch Reveal-Focus auf alle Steuerelemente, deren [UseSystemFocusVisuals](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals) -Eigenschaft auf **"true"** (der Standardwert für die meisten Steuerelemente) festgelegt ist. 
 
-## <a name="why-isnt-reveal-focus-on-by-default"></a>Warum erfolgt keine anzeigen den Fokus auf standardmäßig ein? 
-Wie Sie sehen können, ist es ganz leicht, die Fokus anzeigen aktivieren, wenn die app erkennt, dass er auf eine Xbox ausgeführt wird. Warum aktiviert das System die Funktion nicht einfach automatisch? Da Fokus anzeigen den Fokus visual vergrößert, möglicherweise die Probleme mit Layout der Benutzeroberfläche. In einigen Fällen sollten Sie zum Anpassen des Effekt Fokus anzuzeigen, um für Ihre app zu optimieren.
+## <a name="why-isnt-reveal-focus-on-by-default"></a>Warum ist Reveal-Focus auf standardmäßig nicht? 
+Wie Sie sehen können, ist es relativ einfach, Reveal-Focus zu aktivieren, wenn die app erkennt, dass sie auf einer Xbox ausgeführt wird. Warum aktiviert das System die Funktion nicht einfach automatisch? Da Reveal-Focus des visuellen Fokus erhöht, wodurch Probleme mit dem UI-Layout entstehen können. In einigen Fällen müssen Sie die Reveal-Focus auf Wunsch für Ihre app zu optimieren anpassen möchten.
 
-## <a name="customizing-reveal-focus"></a>Anpassen der Reveal-Fokus
+## <a name="customizing-reveal-focus"></a>Anpassen von Reveal-Focus
 
-Sie können durch Ändern der Fokus visuellen Eigenschaften für jedes Steuerelement den Fokus anzeigen Effekt anpassen: [FocusVisualPrimaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryThickness), [FocusVisualSecondaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryThickness), [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush)und [ FocusVisualSecondaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush). Dank dieser Eigenschaften können Sie die Farbe und Breite des Fokusrechtecks anpassen. (Dies sind die gleichen Eigenschaften, die Sie zum Erstellen der [Fokuselemente mit hoher Sichtbarkeit](https://docs.microsoft.com/windows/uwp/design/input/guidelines-for-visualfeedback#high-visibility-focus-visuals) verwenden.) 
+Sie können die Reveal-Focus auf Wunsch durch Ändern der Eigenschaften der visuellen Fokuselemente für jedes Steuerelement anpassen: [FocusVisualPrimaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryThickness), [FocusVisualSecondaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryThickness), [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush)und [ FocusVisualSecondaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush). Dank dieser Eigenschaften können Sie die Farbe und Breite des Fokusrechtecks anpassen. (Dies sind die gleichen Eigenschaften, die Sie zum Erstellen der [Fokuselemente mit hoher Sichtbarkeit](https://docs.microsoft.com/windows/uwp/design/input/guidelines-for-visualfeedback#high-visibility-focus-visuals) verwenden.) 
 
-Aber bevor Sie anpassen beginnen, es ist hilfreich, Weitere Informationen zu den Komponenten kennen, die Fokus anzeigen bilden.
+Aber bevor Sie mit dem beginnen, es ist hilfreich, etwas mehr über die Komponenten kennen, die Reveal-Focus bilden.
 
-Es gibt drei Teile auf die Standard-Fokus anzeigen visuelle Objekte: der primäre Rahmen, den sekundären Rahmen und der Reveal leuchten. Der primäre Rahmen ist **2Pixel** breit und verläuft an der *Außenseite* des sekundären Rahmens. Der sekundäre Rahmen ist **1Pixel** breit und verläuft an der *Innenseite* des primären Rahmens. Der Leuchteffekt anzeigen den Fokus hat eine Stärke proportional zum die Stärke des Rahmens primäre und ausgeführt wird, um die *außerhalb* des primären Rahmens.
+Es gibt drei Teile für den standardmäßigen Reveal-fokuselementen: der primäre und der sekundäre Rahmen sowie Reveal-glow. Der primäre Rahmen ist **2Pixel** breit und verläuft an der *Außenseite* des sekundären Rahmens. Der sekundäre Rahmen ist **1Pixel** breit und verläuft an der *Innenseite* des primären Rahmens. Der Reveal-Focus-Glanz hat eine Breite, die proportional zur Stärke des primären Rahmens ist und leuchtet um die *außerhalb* des primären Rahmens.
 
-Zusätzlich zu den statischen Elemente feature Fokus anzeigen visuelle Objekte eine animierte Licht, die zur Fußstützen pulsates und beim Verschieben den Fokus in Richtung der Fokus wechselt.
+Zusätzlich zu den statischen Elementen feature Reveal-Focus-Visuals ein animiertes Licht, das bei Stillstand pulsiert und bewegt sich in Richtung des Fokus bewegt, wenn.
 
-![Fokus Ebenen anzuzeigen](images/reveal-breakdown.svg)
+![Revel-Focus](images/reveal-breakdown.svg)
 
 ## <a name="customize-the-border-thickness"></a>Anpassen der Stärke des Rahmens
 
@@ -112,7 +112,7 @@ Ein negativer Rand verschiebt den Rahmen weiter weg von der Mitte des Steuerelem
 
 ## <a name="customize-the-color"></a>Anpassen der Farbe
 
-Verwenden Sie Farbe für den Fokus anzeigen visual zum Ändern die Eigenschaften [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush) und [FocusVisualSecondaryBrush](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush) .
+Um Farbe von Reveal-Focus zu ändern, verwenden Sie die Eigenschaften [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush) und [FocusVisualSecondaryBrush](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush) .
 
 | Eigenschaft | Standardressource | Standardressourcewert |
 | ---- | ---- | --- | 
@@ -167,16 +167,16 @@ Wenn Sie nur den Schein ohne die primäre oder sekundäre Fokusanzeige verwenden
 
 ## <a name="use-your-own-focus-visuals"></a>Verwenden Sie Ihre eigenen visuellen Fokuselemente
 
-Eine andere Möglichkeit zum Anpassen der Fokus anzuzeigen ist nicht genügend visuelle Struktur der vom System bereitgestellten Fokus durch Ihre eigene visuelle Zustände mit Zeichnen zu abonnieren. Weitere Informationen finden Sie unter [Beispiel für visuelle Fokuselemente](http://go.microsoft.com/fwlink/p/?LinkID=619895).
+Eine weitere Möglichkeit zum Anpassen von Reveal-Focus ist die System-Fokusanzeigen ablehnen, eigene Fokusanzeigen. Weitere Informationen finden Sie unter [Beispiel für visuelle Fokuselemente](http://go.microsoft.com/fwlink/p/?LinkID=619895).
 
 
-## <a name="reveal-focus-and-the-fluent-design-system"></a>Anzeigen der Fokus und die Fluent-Design-System
+## <a name="reveal-focus-and-the-fluent-design-system"></a>Reveal-Focus und das Fluent Design-System
 
-Anzuzeigen Sie, dass Fokus Fluent Design Systemkomponente ist, die Ihre app Light hinzufügt. Weitere Informationen zum Fluent Design-Systems und den zugehörigen Komponenten finden Sie unter [Fluent Design für UWP-Übersicht](../fluent-design-system/index.md).
+Reveal-Focus ist eine Komponente des Fluent Design-Systems, die Lichteffekte in Ihrer app ermöglicht. Weitere Informationen zum Fluent Design-Systems und den zugehörigen Komponenten finden Sie unter [Fluent Design für UWP-Übersicht](../fluent-design-system/index.md).
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
-- [Anzeigen der Hervorhebung](https://docs.microsoft.com/windows/uwp/design/style/reveal)
+- [Reveal-Highlight](https://docs.microsoft.com/windows/uwp/design/style/reveal)
 - [Entwerfen für Xbox und Fernsehgeräte](/windows/uwp/design/devices/designing-for-tv)
 - [Interaktionen von Gamepad und Fernbedienung](https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions)
 - [Beispiel für visuelle Fokuselemente](http://go.microsoft.com/fwlink/p/?LinkID=619895)

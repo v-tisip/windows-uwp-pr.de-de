@@ -17,52 +17,52 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: f0bf7731a8480fb4f6d81368227ad6259780381b
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2891069"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2911214"
 ---
 # <a name="buttons"></a>Schaltflächen
 
 > [!IMPORTANT]
-> In diesem Artikel werden Funktionen beschrieben, die noch nicht veröffentlicht wurden und vor der kommerziellen Freigabe evtl. geändert werden. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen. Preview-Features erfordern die [aktuellsten Windows 10 Insider Preview Build und SDK](https://insider.windows.com/for-developers/) oder der [Bibliothek für Windows-Benutzeroberfläche](https://docs.microsoft.com/uwp/toolkits/winui/).
+> In diesem Artikel werden Funktionen beschrieben, die noch nicht veröffentlicht wurden und vor der kommerziellen Freigabe evtl. geändert werden. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen. Preview-Features erfordern die [neuesten Windows 10 Insider Preview-Build und SDK](https://insider.windows.com/for-developers/) oder der [Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-Eine Schaltfläche ermöglicht dem Benutzer das unmittelbare Auslösen einer Aktion. Einige Schaltflächen sind für bestimmte Aufgaben wie das Navigation, wiederholte Aktionen oder einer Präsentation Menüs spezialisierten.
+Eine Schaltfläche ermöglicht dem Benutzer das unmittelbare Auslösen einer Aktion. Einige Schaltflächen sind für bestimmte Aufgaben, z. B. Navigation, wiederholte Aktionen oder darstellen Menüs spezielle.
 
 ![Beispiel für Schaltflächen](images/controls/button.png)
 
-Das Verwendung von XAML-Framework bietet ein standard Button-Steuerelement als auch mehrere spezielle Button-Steuerelemente.
+Das XAML-Framework bietet ein standard-Schaltflächen-Steuerelement als auch mehrere spezielle Button-Steuerelemente.
 
 Steuerelement | Beschreibung
 ------- | -----------
-[Button](/uwp/api/windows.ui.xaml.controls.button) | Initiiert eine sofortige Aktion an. Kann mit einem Click-Ereignis oder den Befehl Bindung verwendet werden.
-[RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | Eine Schaltfläche, die gedrückte kontinuierlich ein Click-Ereignis auslöst.
-[HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | Eine Schaltfläche, die formatiert wurde, wie ein Hyperlink, für die Navigation. Weitere Informationen finden Sie unter [Hyperlinks](hyperlinks.md).
-[DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | (Vorschau) Eine Schaltfläche mit ein Chevron festgelegt, um eine angefügte flyoutmenü zu öffnen.
-[SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) | (Vorschau) Eine Schaltfläche mit zwei Seiten. Andererseits initiiert eine Aktion, und die anderen Seite wird ein Menü geöffnet.
-[ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | (Vorschau) Eine Umschaltfläche mit zwei Seiten. Andererseits ein-/ausschalten umgeschaltet, und die anderen Seite wird ein Menü geöffnet.
+[Button](/uwp/api/windows.ui.xaml.controls.button) | Beginn eine sofortige Aktion aus. Kann mit einem Click-Ereignis oder einem Befehl Bindung verwendet werden.
+[RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | Eine Schaltfläche, die ein Click-Ereignis kontinuierlich während gedrückt auslöst.
+[HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | Eine Schaltfläche, die formatiert wurde, z. B. ein Hyperlink, für die Navigation verwendet. Weitere Informationen finden Sie unter [Hyperlinks](hyperlinks.md).
+[DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | (Vorschau) Eine Schaltfläche mit einem Chevron um ein angefügtes Flyout zu öffnen.
+[SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) | (Vorschau) Eine Schaltfläche mit zwei Seiten. Eine Seite initiiert eine Aktion und die anderen Seite wird ein Menü geöffnet.
+[ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | (Vorschau) Eine Umschaltfläche mit zwei Seiten. Eine Seite Schaltet ein-/ausschalten, und die anderen Seite wird ein Menü geöffnet.
 
 | **Abrufen der Windows-UI-Bibliothek** |
 | - |
-| DropDownButton, SplitButton und ToggleSplitButton sind Bestandteil der Windows-UI-Bibliothek, ein NuGet-Paket, das neue Steuerelemente und Features der Benutzeroberfläche für apps UWP enthält. Weitere Informationen, einschließlich Installationshinweise finden Sie unter [Übersicht über die Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/). |
+| DropDownButton, SplitButton und ToggleSplitButton sind Bestandteil der Windows-UI-Bibliothek, NuGet-Paket, das neue Steuerelemente und UI-Features für UWP-apps enthält. Weitere Informationen, einschließlich installationsanweisungen finden Sie die [Übersicht über die Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
-| **Plattform-APIs** | **Windows-UI Library-APIs** |
+| **Plattform-APIs** | **Windows UI-Bibliothek APIs** |
 | - | - |
 | Haben [click-Ereignis](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click), [Command-Eigenschaft](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.command) | [DropDownButton-Klasse](/uwp/api/microsoft.ui.xaml.controls.dropdownbutton), [SplitButton-Klasse](/uwp/api/microsoft.ui.xaml.controls.splitbutton), [ToggleSplitButton-Klasse](/uwp/api/microsoft.ui.xaml.controls.togglesplitbutton) |
 
 ## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 
-Verwenden Sie eine **Schaltfläche** ermöglichen den Benutzer eine sofortige Aktion, wie etwa Absenden eines Formulars zu initiieren.
+Verwenden Sie eine **Schaltfläche** , ermöglichen den Benutzer eine Aktion sofort ausführen, z. B. ein Formular zu übermitteln.
 
-Verwenden Sie eine Schaltfläche nicht, wenn die Aktion zum Navigieren zu einer anderen Seite; Verwenden Sie stattdessen eine [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) . Weitere Informationen finden Sie unter [Hyperlinks](hyperlinks.md).
-> Ausnahme: Für die Navigation in einem Assistenten können die Schaltflächen „Zurück“ und „Weiter“ verwendet werden. Für andere Arten von verwenden Abwärtskompatibilität Navigation oder die Navigation zu einer oberen Ebene, Sie eine [Schaltfläche "zurück"](../basics/navigation-history-and-backwards-navigation.md).
+Verwenden Sie keine Schaltfläche, wenn die Aktion zu einer anderen Seite navigieren; Verwenden Sie stattdessen ein [HyperlinkButton-Element](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) . Weitere Informationen finden Sie unter [Hyperlinks](hyperlinks.md).
+> Ausnahme: Für die Navigation in einem Assistenten können die Schaltflächen „Zurück“ und „Weiter“ verwendet werden. Für andere Arten der verwenden Rückwärtsnavigation oder der Navigation zu einer übergeordneten Ebene eine [Zurück-Schaltfläche](../basics/navigation-history-and-backwards-navigation.md).
 
-Verwenden Sie eine **RepeatButton** , wenn der Benutzer eine Aktion wiederholt auslösen möchten. Verwenden Sie beispielsweise eine RepeatButton erhöhen oder verringern eines Wertes in einen Leistungsindikator.
+Verwenden Sie eine **RepeatButton** , wenn der Benutzer eine Aktion wiederholt auslösen möchte. Verwenden Sie z. B. eine RepeatButton zu erhöhen oder verringern eines Wertes in einen Zähler.
 
-Verwenden Sie eine **DropDownButton** , wenn die Schaltfläche ein flyoutmenü verfügt, weitere Optionen enthält. Das standardmäßige Chevron bietet einen visuellen Hinweis, dass die Schaltfläche ein flyoutmenü enthält.
+Verwenden Sie eine **DropDownButton** , wenn die Taste ein Flyout verfügt, weitere Optionen enthält. Das standardmäßige Chevron bietet einen visuellen Hinweis, dass die Schaltfläche ein Flyout enthält.
 
-Verwenden Sie eine **SplitButton** , wenn Sie möchten den Benutzer können sofortige eine Aktion zu initiieren, oder wählen unabhängig voneinander zusätzliche Optionen.
+Verwenden Sie eine **SplitButton** , wenn der Benutzer in der Lage, initiieren eine sofortige Aktion oder unabhängig voneinander in zusätzliche Optionen auswählen soll.
 
 ## <a name="examples"></a>Beispiele
 
@@ -211,22 +211,22 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <a name="create-a-drop-down-button"></a>Erstellen Sie ein Dropdown-Schaltfläche
+## <a name="create-a-drop-down-button"></a>Erstellen Sie eine Dropdown-Schaltfläche
 
-> **Vorschau**: DropDownButton erfordert die [aktuellsten Windows 10 Insider Preview Build und SDK](https://insider.windows.com/for-developers/) oder der [Bibliothek für Windows-Benutzeroberfläche](https://docs.microsoft.com/uwp/toolkits/winui/).
+> **Vorschau**: DropDownButton erfordert, die [neuesten Windows 10 Insider Preview-Build und SDK](https://insider.windows.com/for-developers/) oder der [Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-Eine [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) ist eine Schaltfläche, die einem Chevron festgelegt als ein optischer Indikator zeigt an, dass es eine angefügte flyoutmenü verfügt, weitere Optionen enthält. Es hat die gleiche Wirkung wie einer Standardschaltfläche mit einem Dropdown; nur die Darstellung unterscheidet.
+Eine [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) ist eine Schaltfläche, die ein Chevron als einen visuellen Hinweis anzeigt, dass es ein angefügtes Flyout besitzt, das weitere Optionen enthält. Es weist das gleiche Verhalten als standard Schaltfläche mit einem Flyout; nur die Darstellung unterscheidet.
 
-Die Dropdown-Schaltfläche erbt das Click-Ereignis, aber in der Regel verwenden Sie es. Verwenden Sie die Dropdown-Eigenschaft zum Anfügen einer flyoutmenü und Aufrufen von Aktionen mithilfe von Menüoptionen in der Dropdown. Das Flyout wird beim Klicken auf die Schaltfläche automatisch geöffnet.
+Die Dropdown-Schaltfläche erbt das Click-Ereignis, doch Sie in der Regel verwenden diese nicht. Verwenden Sie die Flyout-Eigenschaft ein Flyout Anfügen und Aktionen, die mit Menüoptionen in das Flyout aufrufen. Das Flyout wird beim Klicken auf die Schaltfläche automatisch geöffnet.
 
 > [!TIP]
-> Weitere Informationen zu Flyouts finden Sie unter [Menüs und Kontextmenüs](menus.md).
+> Weitere Informationen zu Flyouts finden Sie in den [Menüs und Kontextmenüs](menus.md).
 
 ### <a name="example---drop-down-button"></a>Beispiel - Dropdown-Schaltfläche
 
-In diesem Beispiel wird gezeigt, wie eine Dropdown-Schaltfläche mit einer flyoutmenü erstellen, Befehle für die Ausrichtung von Absätzen in einem RichEditBox enthält. (Weitere Informationen und Code finden Sie unter [Rich Eingabefelds](rich-edit-box.md)).
+In diesem Beispiel wird veranschaulicht, wie eine Dropdown-Schaltfläche mit einem Flyout zu erstellen, die Befehle für die Ausrichtung von Absätzen in einem RichEditBox enthält. (Weitere Informationen und Code finden Sie [Rich-edit-Feld](rich-edit-box.md)).
 
-![Ein Dropdown-Schaltfläche mit Befehle für das Ausrichten](images/drop-down-button-align.png)
+![Ein Dropdown-Schaltfläche mit Ausrichtung-Befehle](images/drop-down-button-align.png)
 
 ```xaml
 <DropDownButton ToolTipService.ToolTip="Alignment">
@@ -270,28 +270,28 @@ private void AlignmentMenuFlyoutItem_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <a name="create-a-split-button"></a>Erstellen Sie eine Trennschaltfläche
+## <a name="create-a-split-button"></a>Erstellen Sie eine geteilte Schaltfläche
 
-> **Vorschau**: SplitButton erfordert die [aktuellsten Windows 10 Insider Preview Build und SDK](https://insider.windows.com/for-developers/) oder der [Bibliothek für Windows-Benutzeroberfläche](https://docs.microsoft.com/uwp/toolkits/winui/).
+> **Vorschau**: SplitButton erfordert, die [neuesten Windows 10 Insider Preview-Build und SDK](https://insider.windows.com/for-developers/) oder der [Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-Ein [SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) besteht aus zwei Teilen, die separat aufgerufen werden können. Ein Teil einer Standardschaltfläche Verhalten und sofortige eine Aktion aufruft. Andererseits Ruft ein flyoutmenü, die zusätzliche Optionen, mit denen der Benutzer auswählen können.
+Ein [SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) besteht aus zwei Teilen, die separat aufgerufen werden können. Ein Teil verhält sich wie eine Standardschaltfläche und ruft eine sofortige Aktion. Andererseits Ruft ein Flyout mit zusätzlichen Optionen, denen der Benutzer auswählen kann.
 
 > [!NOTE]
-> Wenn mit Touch aufgerufen, verhält sich wie ein Dropdown-Schaltfläche Trennschaltfläche; Beide Hälften der Schaltfläche Aufrufen der Dropdown. Mit anderen Methoden der Eingabe kann Benutzer entweder Hälfte der Schaltfläche separat aufrufen.
+> Wenn per Toucheingabe aufgerufen, verhält sich wie ein Dropdown-Schaltfläche die Schaltfläche Teilen; beiden Hälften der Schaltfläche Funktion aufrufen, das Flyout wird. Mit anderen Methoden von Eingaben kann ein Benutzer entweder Hälfte der Schaltfläche separat aufrufen.
 
-Das normale Verhalten für eine Trennschaltfläche ist:
+Das normale Verhalten für eine geteilte Schaltfläche ist:
 
-- Wenn der Benutzer auf das Schaltfläche Webpart klickt, behandeln Sie das Click-Ereignis, um die Option aufrufen, die derzeit in der Dropdownliste ausgewählt ist.
-- Die Dropdownliste geöffnet ist, Handle Aufruf der Elemente in der Dropdown-Liste beide ändern die option ausgewählt ist, und rufen Sie sie. Es ist wichtig, die das Dropdown-Element aufgerufen werden, da die Schaltfläche Click-Ereignis tritt nicht auf, wenn die Verwendung von Touch.
+- Klickt der Benutzer die Schaltflächenteil, behandeln Sie das Click-Ereignis, um die Option aufrufen, die derzeit in der Dropdownliste ausgewählt ist.
+- Wenn im Dropdownmenü geöffnet ist, wird Handle-Aufruf der Elemente in der Dropdown-Liste beide ändern die option ausgewählt ist, und rufen Sie sie. Es ist wichtig, das Flyout-Element aufrufen, da die Schaltfläche Click-Ereignis tritt nicht ein, bei der Toucheingabe.
 
 > [!TIP]
-> Es gibt viele Methoden, um Elemente in der Dropdownliste nach unten zu platzieren und deren Aufruf behandeln. Wenn Sie eine ListView oder GridView verwenden, ist eine Möglichkeit, das SelectionChanged-Ereignis behandeln. Wenn Sie dies tun, [SingleSelectionFollowsFocus](/uwp/api/windows.ui.xaml.controls.listviewbase.singleselectionfollowsfocus) auf **false**festgelegt. Auf diese Weise können Benutzer die Optionen über die Tastatur ohne das Element auf jeder Änderung aufrufen zu navigieren.
+> Es gibt viele Möglichkeiten, platzieren Elemente in der Dropdownliste nach unten und deren Aufruf behandeln. Wenn Sie einer ListView oder GridView verwenden, ist eine Möglichkeit, das SelectionChanged-Ereignis behandeln. Wenn Sie dies tun, [SingleSelectionFollowsFocus](/uwp/api/windows.ui.xaml.controls.listviewbase.singleselectionfollowsfocus) auf **"false"** festgelegt. Auf diese Weise können Benutzer die Optionen, die über eine Tastatur, ohne dass das Element bei jeder Änderung aufgerufen zu navigieren.
 
-### <a name="example---split-button"></a>Beispiel - Trennschaltfläche
+### <a name="example---split-button"></a>Beispiel - Schaltfläche Teilen
 
-In diesem Beispiel wird gezeigt, wie eine Trennschaltfläche erstellen, die verwendet wird, um die Vordergrundfarbe des ausgewählten Texts in einem RichEditBox ändern. (Weitere Informationen und Code finden Sie unter [Rich Eingabefelds](rich-edit-box.md)).
+Dieses Beispiel zeigt, wie Sie eine geteilte Schaltfläche zu erstellen, die verwendet wird, um die Vordergrundfarbe des markierten Text in einem RichEditBox zu ändern. (Weitere Informationen und Code finden Sie [Rich-edit-Feld](rich-edit-box.md)).
 
-![Eine Trennschaltfläche für die Auswahl von Vordergrundfarbe](images/split-button-rtb.png)
+![Eine geteilte Schaltfläche zum Auswählen von Vordergrundfarbe](images/split-button-rtb.png)
 
 ```xaml
 <SplitButton ToolTipService.ToolTip="Foreground color"
@@ -379,28 +379,28 @@ public sealed partial class MainPage : Page
 
 ## <a name="create-a-toggle-split-button"></a>Erstellen Sie eine geteilte Umschaltfläche
 
-> **Vorschau**: ToggleSplitButton erfordert die [aktuellsten Windows 10 Insider Preview Build und SDK](https://insider.windows.com/for-developers/) oder der [Bibliothek für Windows-Benutzeroberfläche](https://docs.microsoft.com/uwp/toolkits/winui/).
+> **Vorschau**: ToggleSplitButton erfordert, die [neuesten Windows 10 Insider Preview-Build und SDK](https://insider.windows.com/for-developers/) oder der [Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-Eine [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) besteht aus zwei Teilen, die separat aufgerufen werden können. Einerseits verhält sich wie eine Umschaltfläche, die aktiviert oder deaktiviert werden können. Andererseits Ruft ein flyoutmenü, die zusätzliche Optionen, mit denen der Benutzer auswählen können.
+Eine [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) besteht aus zwei Teilen, die separat aufgerufen werden können. Ein Teil verhält sich wie eine Umschaltfläche, die aktiviert oder deaktiviert werden können. Andererseits Ruft ein Flyout mit zusätzlichen Optionen, denen der Benutzer auswählen kann.
 
-Eine Umschaltfläche Teilen wird in der Regel verwendet, aktivieren oder Deaktivieren eines Features, wenn das Feature für mehrere Optionen wurde, denen der Benutzer auswählen können. Beispielsweise könnte in einem Dokument-Editor Hiermit Listen aktivieren oder deaktivieren, während die Dropdownliste verwendet wird, um den Stil der Liste wählen.
+Eine Umschaltfläche geteilte wird normalerweise verwendet, zum Aktivieren oder deaktivieren ein Feature, wenn das Feature verfügt über mehrere Optionen, denen der Benutzer auswählen kann. Beispielsweise könnte in einem Dokument-Editor Hiermit Listen in aktivieren oder deaktivieren, während das Dropdown-verwendet wird, um den Stil der Liste wählen.
 
 > [!NOTE]
-> Wenn mit Touch aufgerufen, verhält sich wie ein Dropdown-Schaltfläche Trennschaltfläche. Mit anderen Methoden der Eingabe kann Benutzer entweder Hälfte der Schaltfläche separat aufrufen. Touchscreens aufrufen, beide Hälften der Schaltfläche für die flyoutmenü. Daher müssen Sie eine Option in den Inhalt der flyoutmenü in aktiviert oder deaktiviert die Umschaltfläche einbeziehen.
+> Wenn per Toucheingabe aufgerufen, verhält sich wie ein Dropdown-Schaltfläche die Schaltfläche Teilen. Mit anderen Methoden von Eingaben kann ein Benutzer entweder Hälfte der Schaltfläche separat aufrufen. Bei der Fingereingabe aufrufen beiden Hälften der Schaltfläche das Flyout. Aus diesem Grund müssen Sie eine Option im Flyout-Inhalt zu aktivieren oder deaktivieren die Umschaltfläche einfügen.
 
-### <a name="differences-with-togglebutton"></a>Unterschiede mit ToggleButton-Objekt
+### <a name="differences-with-togglebutton"></a>Unterschiede bei ToggleButton
 
-Im Gegensatz zu [ToggleButton](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton)verfügt ToggleSplitButton nicht unbestimmten Zustand befindet. Daher sollten Sie diese Unterschiede bedenken:
+Im Gegensatz zu [ToggleButton](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton)ToggleSplitButton einen unbestimmten Zustand keinen. Daher sollten Sie diese Unterschiede bedenken:
 
-- ToggleSplitButton muss sich nicht auf einem **IsThreeState** -Eigenschaft oder **Indeterminate** -Ereignis aus.
-- Die [ToggleSplitButton.IsChecked](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischecked) -Eigenschaft ist nur ein **Bool**, nicht **NULL-Werte zulässt Bool**.
-- ToggleSplitButton hat nur das [IsCheckedChanged](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischeckedchanged) -Ereignis. Es hat keine separate **aktiviert** und **deaktiviert** Ereignisse.
+- ToggleSplitButton verfügt keine **IsThreeState** -Eigenschaft oder **unbestimmt** -Ereignis.
+- Die [ToggleSplitButton.IsChecked](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischecked) -Eigenschaft ist nur **ein boolescher Wert**, nicht **NULL-Werte akzeptieren Bool**.
+- ToggleSplitButton hat nur die [IsCheckedChanged](/uwp/api/windows.ui.xaml.controls.togglesplitbutton.ischeckedchanged) -Ereignis. Es hat keine separate **Checked** "und" **Unchecked** -Ereignisse.
 
-### <a name="example---toggle-split-button"></a>Beispiel - Umschaltfläche unterteilte Schaltfläche
+### <a name="example---toggle-split-button"></a>Beispiel - aufteilen Umschalter Schaltfläche
 
-Das folgende Beispiel zeigt, wie eine Umschaltfläche Trennschaltfläche listenformatierung ein- oder ausschalten aktivieren verwendet werden, und Ändern des Stils eines der Liste in einem RichEditBox. (Weitere Informationen und Code finden Sie unter [Rich Eingabefelds](rich-edit-box.md)).
+Das folgende Beispiel zeigt, wie ein Umschalter aufteilen Schaltfläche zum Aktivieren der Formatierung aktivieren oder Deaktivieren einer Liste verwendet werden können, und ändern Sie den Stil der Websiteliste für den in einem RichEditBox. (Weitere Informationen und Code finden Sie [Rich-edit-Feld](rich-edit-box.md)).
 
-![Eine Umschaltfläche geteilten für die Auswahl von Listenformaten](images/toggle-split-button-open.png)
+![Eine geteilte Umschaltfläche zum Auswählen von Liste Stile](images/toggle-split-button-open.png)
 
 ```xaml
 <ToggleSplitButton x:Name="ListButton"

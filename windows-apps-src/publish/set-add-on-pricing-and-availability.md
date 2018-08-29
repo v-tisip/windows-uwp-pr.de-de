@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Add-Ons, IAP, Preis
 ms.localizationpriority: medium
 ms.openlocfilehash: b5b7a6424fea3d62849e992f56b0b40ab72a55f5
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888229"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2909520"
 ---
 # <a name="set-add-on-pricing-and-availability"></a>Festlegen der Preise und Verfügbarkeit von Add-Ons
 
@@ -54,12 +54,12 @@ Weitere Informationen finden Sie unter [Konfigurieren des genauen Veröffentlich
 
 ## <a name="pricing"></a>Preise
 
-Sie müssen einen Basiskalender Preis für Ihre Add-on auswählen (es sei denn, Sie die Option **keine Erwerb** im Abschnitt **Sichtbarkeit** ausgewählt haben). Die Standardeinstellung ist **frei**sein, weshalb Wenn Sie Geld für das Add-on berechnen möchten, um eine der verfügbaren Preis Ebenen (beginnend mit.99 USD) auswählen.
+Sie müssen einen Grundpreis für Ihr Add-on auswählen (es sei denn, Sie die **Beenden des Erwerbs** Option im Abschnitt **Sichtbarkeit** ausgewählt haben). Die Standardeinstellung ist **kostenlos**, also wenn Sie Geld für das Add-on erheben möchten, müssen Sie eine der verfügbaren Preisniveaus auswählen (beginnend mit.99 US-Dollar) auswählen.
 
 Sie können auch Preisänderungen planen, um das Datum und die Uhrzeit anzugeben, an dem bzw. zu der sich der Preis Ihrer Add-On ändern soll. Darüber hinaus haben Sie die Möglichkeit, diese Änderungen für bestimmte Märkte anzupassen. 
 
 > [!TIP]
-> Abonnement Add-Ons kann nicht den Preis heraufgestuft werden nach dem Veröffentlichen des Add-Ons entweder, indem einen Basiskalender teurer in einer späteren Übermittlung oder Planen einer Preisänderung, die den Preis erhöht wird. Sie können den Preis mithilfe einer dieser Methoden auswählen, aber nach der Preis gesenkt ist nicht möglich es höher ist als dieser neuen Preis auslösen. Aus diesem Grund ist es besonders wichtig, um sicherzustellen, dass Sie die entsprechenden Preis Ebene für die Abonnement-Add-Ons auswählen. 
+> Für die Abonnement-Add-Ons können nicht Sie den Preis auslösen, nach der Veröffentlichung des Add-Ons, durch einen höheren Grundpreis in einer späteren Übermittlung auswählen oder durch die Planung einer Preisänderung, die den Preis erhöht. Sie können einen geringeren Preis mithilfe der folgenden Methoden auswählen, aber sobald der Preis gesenkt wird nicht mehr um sie über die neuen Preis auszulösen, werden. Aus diesem Grund ist es besonders wichtig, um sicherzustellen, dass Sie die entsprechenden Preisstufe für Abonnement-Add-Ons auswählen. 
 
 Weitere Informationen finden Sie unter [Festlegen und Planen von App-Preisen](set-and-schedule-app-pricing.md).
 

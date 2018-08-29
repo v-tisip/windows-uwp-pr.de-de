@@ -11,22 +11,22 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 83f2ab8a27810635b569d44961ff532ce3240e28
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888169"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2913107"
 ---
 # <a name="create-your-app-by-reserving-a-name"></a>Erstellen einer App durch Reservieren eines Namens
 
-Der erste Schritt beim Erstellen einer neuen app im [Windows-Entwicklungscenter Dashboard](https://partner.microsoft.com/dashboard) ist einen app-Namen reservieren. Jeder reservierte Name (wird auch als App *Titel* bezeichnet) muss im Microsoft Store eindeutig sein.
+Der erste Schritt beim Erstellen einer neuen app im [Windows Dev Center-Dashboard](https://partner.microsoft.com/dashboard) besteht darin, einen app-Namen reservieren. Jeder reservierte Name (wird auch als App *Titel* bezeichnet) muss im Microsoft Store eindeutig sein.
 
 Die Reservierung eines Namens für Ihre App ist möglich, auch wenn Sie noch nicht mit der App-Erstellung begonnen haben. Wir empfehlen, die Reservierung so früh wie möglich vorzunehmen, damit der Name nicht von jemand anderem verwendet wird. Beachten Sie, dass Sie die App innerhalb von drei Monaten übermitteln müssen, damit der Namen für Ihre Verwendung reserviert bleibt.
 
 Wenn Sie Ihre [App-Pakete hochladen](upload-app-packages.md), muss der [**Package/Properties/DisplayName**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-displayname) -Wert dem Namen entsprechen, den Sie für Ihre App reserviert haben. Wenn Sie das App-Paket mit MicrosoftVisual Studio erstellen, wird dieses Attribut für Sie ausgefüllt.
 
 > [!IMPORTANT]
-> Sie können zusätzliche Namen für eine app reservieren, und Sie möchten eine der in die veröffentlichte Version Ihrer App anstelle des Headers verwenden, den Sie reservieren, wenn Sie Ihre app zuerst in das Dashboard erstellen. Beachten Sie jedoch, dass den Vornamen, den Sie hier einige Ihrer app [Details zur Benutzeridentität](view-app-identity-details.md)wie etwa die **Paket-Familienname (PFN)** verwendet wird. Diese Werte möglicherweise für einige Benutzer sichtbar, und kann nicht geändert, um sicherzustellen, dass der Name, Sie reservieren, für diese Verwendung geeignet ist.
+> Sie können zusätzliche Namen für eine app reservieren, und Sie möchten eine dieser in der veröffentlichten Version Ihrer App anstelle der verwenden, den Sie reservieren, wenn Sie zunächst Ihre app im Dashboard erstellen. Beachten Sie jedoch, dass die hier eingegebenen Vorname in einigen der app [Identitätsdetails](view-app-identity-details.md), z. B. den **Paketfamiliennamen (PFN)** verwendet wird. Diese Werte kann für einige Benutzer sichtbar sein, und nicht geändert, um sicherzustellen, dass die Namen reservieren für diese Verwendung geeignet ist.
 
 
 ## <a name="create-your-app-by-reserving-a-new-name"></a>App-Erstellung durch Reservierung eines neuen Namens

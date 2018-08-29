@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Sammlungs-API, Microsoft Store-Einkaufs-API, Produkte anzeigen, Produkte gewähren
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a0766830bc2110dffcf5baf886e8ccb98ac6446
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2885843"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910116"
 ---
 # <a name="manage-product-entitlements-from-a-service"></a>Verwalten von Produktansprüchen aus einem Dienst
 
@@ -33,34 +33,34 @@ Diese APIs bestehen aus REST-Methoden, die für Entwickler mit Add-on-Katalogen 
 
 Die folgenden Schrittebeschreiben den vollständigen Vorgang der Verwendung der Microsoft Store-Sammlungs-API und der Einkaufs-API.:
 
-1.  [Konfigurieren einer Anwendung in Azure Active Directory](#step-1).
-2.  [Ordnen Sie Ihre Anwendung Azure AD-ID, mit Ihrer app im Windows-Entwicklungscenter Dashboard](#step-2).
+1.  [Eine Anwendung in Azure AD konfigurieren](#step-1).
+2.  [Zuordnen Ihrer Azure AD-Anwendung-ID mit der app im Windows Dev Center-Dashboard](#step-2).
 3.  In Ihrem Dienst: [Erstellen Sie Azure AD-Zugriffstokens](#step-3), die Ihre Herausgeberidentität darstellen.
-4.  [Erstellen Sie einen Schlüssel Microsoft Store-ID](#step-4) , die die Identität des aktuellen Benutzers, und übergeben Sie dieser Schlüssel darstellt zurück in Ihrer Client-Windows-app an den Dienst.
+4.  In der Client Windows-app zurück [Erstellen Sie einen Microsoft Store-ID-Schlüssel](#step-4) , der die Identität des aktuellen Benutzers, und übergeben Sie diesem Schlüssel repräsentiert, an Ihren Dienst.
 5.  Sobald Sie über das erforderliche AzureAD-Zugriffstoken und den Microsoft Store-ID-Schlüssel verfügen, [rufen Sie die Microsoft Store-Sammlungs-API oder -Einkaufs-API aus Ihrem Dienst auf](#step-5).
 
 Dieser End-to-End-Prozess umfasst zwei Softwarekomponenten, die verschiedene Aufgaben ausführen:
 
-* **Der Dienst**. Dies ist eine Anwendung, die im Kontext der Business-Umgebung sicher ausgeführt wird, und verwenden eine beliebige gewählte Entwicklungsplattform implementiert werden kann. Ihre ist verantwortlich für Erstellen der Azure AD-Zugriffstokens für das Szenario und zum Aufrufen der REST-URIs für die Microsoft Store-Auflistung API und Einkauf-API erforderlich.
-* **Die Windows-Clientanwendung**. Hierbei handelt es sich um die app für die Zugriff auf und Verwaltung von Kundeninformationen Ansprüche (einschließlich Add-ons für die app) werden soll. Diese app ist verantwortlich für die Microsoft Store-ID-Schlüssel zum Aufrufen der Microsoft Store Auflistung API und zum Kaufen API von Ihrem Dienst benötigten erstellen.
+* **Ihr Dienst**. Dies ist eine Anwendung, die sicher im Kontext Ihrer geschäftlichen Umgebung ausgeführt wird, und mit allen Entwicklungsplattform gewählte implementiert werden kann. Ihr Dienst ist verantwortlich für die Azure AD-Zugriffstoken erstellen für das Szenario und für den Aufruf der REST-URIs für die Microsoft Store-Sammlungs-API und -Einkaufs-API benötigt.
+* **Der Client Windows-app**. Dies ist die app für die Sie zugreifen möchten und Verwalten von Kunden Berechtigungsinformationen (einschließlich Add-ons für die app). Diese app ist verantwortlich für das Erstellen der Microsoft Store-ID-Schlüssel, die Sie zum Aufrufen der Microsoft Store-Sammlungs-API und -Einkaufs-API aus Ihrem Dienst benötigen.
 
 <span id="step-1"/>
 
 ## <a name="step-1-configure-an-application-in-azure-ad"></a>Schritt 1: Konfigurieren einer Anwendung in Azure AD
 
-Bevor Sie API erwerben oder verwenden Sie die Microsoft Store Auflistung API können, müssen Sie erstellen eine Azure AD-Webanwendung, den Mandanten-ID und die ID der Anwendung für die Anwendung abzurufen und Generieren eines Schlüssels. Die Azure AD-Webanwendung stellt den Dienst zum Aufruf der Auflistung Microsoft Store API oder erwerben API werden soll. Benötigen Sie die Mandanten-ID, den Anwendungs-ID und die Taste zum Generieren von Azure AD-Zugriffstoken, die Sie benötigen die API-aufrufen.
+Bevor Sie mit der Microsoft Store-Sammlungs-API oder --API Einkaufs, müssen Sie eine Azure AD-Webanwendung erstellen, die Mandanten-ID und Anwendungs-ID für die Anwendung abrufen und einen Schlüssel generieren. Die Azure AD-Webanwendung stellt es sich um den Dienst, aus dem Sie Aufrufen der Microsoft Store-Sammlungs-API oder -Einkaufs-API möchten. Sie benötigen die Mandanten-ID, den Anwendungs-ID und die Schlüssel zu Azure AD-Zugriffstoken generieren, die Sie benötigen die API aufrufen.
 
 > [!NOTE]
-> Sie müssen die in diesem Abschnitt beschriebenen Vorgänge nur einmal durchführen. Nachdem Sie Ihre Azure AD-Anwendungsmanifest aktualisieren, und Sie Ihre Mandanten-ID, die Anwendung-ID und des geheimen clientschlüssels haben, Sie können wiederverwenden, diese Werte jederzeit Sie zum Erstellen eines neuen müssen Azure AD-Zugriffstoken.
+> Sie müssen die in diesem Abschnitt beschriebenen Vorgänge nur einmal durchführen. Nachdem Sie Ihre Azure AD-Anwendungsmanifest aktualisiert, und Ihre Mandanten-ID, die Anwendung-ID und Client Secret haben, können Sie wiederverwenden diese Werte jederzeit zum Erstellen eines neuen Azure AD-Zugriffstoken.
 
-1.  Wenn Sie dies noch nicht getan haben, befolgen Sie die Anweisungen in das [Integrieren von Clientanwendungen mit Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) zum Registrieren einer **Web app / API** mit Azure AD Anwendung.
+1.  Wenn Sie dies noch nicht geschehen, folgen Sie den Anweisungen in [Integrieren von Anwendungen in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) Registrieren einer **Web-app / API** -Anwendung mit Azure AD.
     > [!NOTE]
-    > Wenn Sie Ihre Anwendung registrieren, müssen Sie wählen **Web app / API** wie den Anwendungstyp, damit Sie einen Schlüssel (auch als einen *geheimen Clientschlüssel*bezeichnet) für Ihre Anwendung abrufen können. Zum Aufrufen der Microsoft Store-Sammlungs-API oder -Einkaufs-API müssen Sie einen geheimen Clientschlüssel angeben, wenn Sie in einem späteren Schritt ein Zugriffstoken von AzureAD anfordern.
+    > Wenn Sie Ihre Anwendung registrieren, müssen Sie auswählen **Web-app / API** wie die Anwendung geben, damit Sie für Ihre Anwendung einen Schlüssel (auch als einen *geheimen Clientschlüssel*bezeichnet) abrufen können. Zum Aufrufen der Microsoft Store-Sammlungs-API oder -Einkaufs-API müssen Sie einen geheimen Clientschlüssel angeben, wenn Sie in einem späteren Schritt ein Zugriffstoken von AzureAD anfordern.
 
-2.  Navigieren Sie in der [Azure-Verwaltungsportal](https://portal.azure.com/)zu **Azure Active Directory**. Wählen Sie Ihr Verzeichnis aus, klicken Sie im linken Navigationsbereich auf **App Registrierungen** und wählen Sie dann die Anwendung aus.
-3.  Hauptfenster Registrierungsseite für die Anwendung wird aufgerufen. Kopieren Sie auf dieser Seite den Wert der **ID der Anwendung** zur späteren Verwendung.
-4.  Erstellen Sie einen Schlüssel, die Sie später benötigen (Dies wird alle bezeichnet einen *geheimen Clientschlüssel*). Klicken Sie im linken Bereich auf **Einstellungen** und dann auf **Schlüssel**. Auf dieser Seite die Schritte zum [Erstellen eines Schlüssels](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications#to-add-application-credentials-or-permissions-to-access-web-apis). Kopieren Sie diesen Schlüssel zur späteren Verwendung.
-5.  Fügen Sie mehrere erforderlichen Benutzergruppe URIs Ihrer [Anwendungsmanifest](https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-manifest)hinzu. Klicken Sie im linken Bereich auf **Manifest**. Klicken Sie auf **Bearbeiten**, ersetzen Sie die `"identifierUris"` Abschnitt mit den folgenden Text ein, und klicken Sie dann auf **Speichern**.
+2.  Navigieren Sie im [Azure-Verwaltungsportal](https://portal.azure.com/)zu **Azure Active Directory**. Wählen Sie Ihr Verzeichnis, klicken Sie im linken Navigationsbereich auf **App-Registrierung** , und wählen Sie Ihre Anwendung.
+3.  Die Anwendung wichtigsten Registrierungsseite wird aufgerufen. Kopieren Sie auf dieser Seite den **Anwendungs-ID** -Wert zur späteren Verwendung.
+4.  Erstellen Sie einen Schlüssel, die Sie später benötigen (Dies wird alle bezeichnet einen *geheimen Clientschlüssel*). Klicken Sie im linken Bereich auf **Einstellungen** und dann **Schlüssel**. Führen Sie die Schritte zum [Erstellen eines Schlüssels](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications#to-add-application-credentials-or-permissions-to-access-web-apis), auf dieser Seite. Kopieren Sie diesen Schlüssel zur späteren Verwendung.
+5.  Fügen Sie Ihr [Anwendungsmanifest](https://docs.microsoft.com/azure/active-directory/develop/active-directory-application-manifest)mehrere erforderlich Zielgruppen-URIs hinzu. Klicken Sie im linken Bereich auf **Manifest**. Klicken Sie auf **Bearbeiten**, ersetzen Sie die `"identifierUris"` Abschnitt mit den folgenden Text, und klicken Sie dann auf **Speichern**.
 
     ```json
     "identifierUris" : [                                
@@ -74,15 +74,15 @@ Bevor Sie API erwerben oder verwenden Sie die Microsoft Store Auflistung API kö
 
 <span id="step-2"/>
 
-## <a name="step-2-associate-your-azure-ad-application-id-with-your-client-app-in-windows-dev-center"></a>Schritt 2: Ordnen Sie Ihre Azure AD-Anwendung-ID Ihrer Client-App im Windows-Entwicklungscenter
+## <a name="step-2-associate-your-azure-ad-application-id-with-your-client-app-in-windows-dev-center"></a>Schritt 2: Ordnen Sie Ihrer Azure AD-Anwendungs-ID mit der Client-app im Windows Dev Center zu
 
-Verwenden Sie die Microsoft Store Auflistung API oder erwerben API, um die Gesamtbetriebskosten und Verkäufe für Ihre app oder Add-on konfigurieren zu können, müssen Sie Ihre Azure AD-ID der Anwendung mit der app (oder die app, die das Add-on enthält) zuordnen, im Dashboard Developer Center.
+Bevor Sie mit der Microsoft Store-Sammlungs-API oder --API Einkaufs, um die Gesamtbetriebskosten und für Ihre app oder Add-on-Käufe konfigurieren, müssen Sie zuordnen Ihrer Azure AD-Anwendungs-ID der app (oder die app, die das Add-on enthält) im Dev Center-Dashboard.
 
 > [!NOTE]
 > Sie müssen diesen Schritt nur einmal ausführen.
 
 1.  Melden Sie sich beim [DevCenter-Dashboard](https://dev.windows.com/overview) an, und wählen Sie Ihre App aus.
-2.  Wechseln Sie zu der **Services** &gt; **Produkt Sammlungen und Käufe** Seite, und geben Sie Ihre Azure AD-ID der Anwendung in eine der verfügbaren **Client-ID** -Felder.
+2.  Wechseln Sie zu der **Dienste** &gt; **produktsammlungen und Einkäufe** Seite, und geben Sie Ihre Azure AD-Anwendungs-ID in eines der verfügbaren **Client-ID** -Felder.
 
 <span id="step-3"/>
 
@@ -126,7 +126,7 @@ grant_type=client_credentials
 
 Geben Sie für jedes Token die folgenden Parameterdaten an:
 
-* Geben Sie für die Parameter *Client\_id* und *Client\_secret* die Anwendungs-ID und der geheime Clientschlüssel für die Anwendung, die Sie aus dem [Azure-Verwaltungsportal](http://manage.windowsazure.com)abgerufen. Beide Parameter sind erforderlich, um ein Zugriffstoken mit der Authentifizierungsebene zu erstellen, die für die Microsoft Store-Sammlungs-API oder -Einkaufs-API benötigt wird.
+* Geben Sie für die *Client\_id* und *Client\_secret* -Parameter die Anwendungs-ID und den geheimen Clientschlüssel Ihrer Anwendung, die Sie aus dem [Azure-Verwaltungsportal](http://manage.windowsazure.com)abgerufen. Beide Parameter sind erforderlich, um ein Zugriffstoken mit der Authentifizierungsebene zu erstellen, die für die Microsoft Store-Sammlungs-API oder -Einkaufs-API benötigt wird.
 
 * Geben Sie für den Parameter *Ressource* einen der Zielgruppen-URIs aus dem [vorherigen Abschnitt](#access-tokens) an, je nach der Art des Zugriffstokens, den Sie erstellen.
 
@@ -157,7 +157,7 @@ Gehen Sie wie folgt vor, um einen Microsoft Store-ID-Schlüssel zu erstellen, de
 
   * Wenn Ihre App die [CurrentApp](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp) -Klasse im [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store) -Namespace zur Verwaltung von In-App-Käufen verwendet, verwenden Sie die Methode [CurrentApp.GetCustomerCollectionsIdAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getcustomercollectionsidasync).
 
-    Übergeben Sie Ihr AzureAD-Zugriffstoken an den *serviceTicket*-Parameter der Methode. Wenn Sie anonymen Benutzer-IDs im Kontext von Dienste, die Sie als den Herausgeber der aktuellen app verwalten verwalten, können Sie auch eine Benutzer-ID an übergeben den *PublisherUserId* -Parameter, um den aktuellen Benutzer mit dem neuen Microsoft Store-ID-Schlüssel zuordnen (die Benutzer-ID dieser Abschnitt ist eingelaufen im Schlüssel). Wenn Sie keine Benutzer-ID mit dem Microsoft Store-ID-Schlüssel zuordnen müssen, können Sie andernfalls einen Zeichenfolgenwert an den *PublisherUserId* -Parameter übergeben.
+    Übergeben Sie Ihr AzureAD-Zugriffstoken an den *serviceTicket*-Parameter der Methode. Wenn Sie anonymen Benutzer-IDs im Kontext der Dienste, die Sie als der Herausgeber der aktuellen app verwalten verwalten, können Sie auch eine Benutzer-ID an übergeben der *PublisherUserId* -Parameter für den aktuellen Benutzer mit dem neuen Microsoft Store-ID-Schlüssel zuordnen (die Benutzer-ID Em sein eingelaufen im Schlüssel). Wenn Sie nicht um eine Benutzer-ID mit dem Microsoft Store-ID-Schlüssel zu verknüpfen müssen, können Sie einen beliebigen Zeichenfolgenwert andernfalls an den *PublisherUserId* -Parameter übergeben.
 
 3.  Übergeben Sie den von Ihrer App erfolgreich erstellten Microsoft Store-ID-Schlüssel zurück an Ihren Dienst.
 
@@ -175,15 +175,15 @@ Befolgen Sie diese Schritte zur Erstellung eines Microsoft Store-ID-Schlüssels,
 
   * Wenn Ihre App die [CurrentApp](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store.CurrentApp) -Klasse im [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store) -Namespace zur Verwaltung von In-App-Käufen verwendet, verwenden Sie die Methode [CurrentApp.GetCustomerPurchaseIdAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getcustomerpurchaseidasync).
 
-    Übergeben Sie Ihr AzureAD-Zugriffstoken an den *serviceTicket*-Parameter der Methode. Wenn Sie anonymen Benutzer-IDs im Kontext von Dienste, die Sie als den Herausgeber der aktuellen app verwalten verwalten, können Sie auch eine Benutzer-ID an übergeben den *PublisherUserId* -Parameter, um den aktuellen Benutzer mit dem neuen Microsoft Store-ID-Schlüssel zuordnen (die Benutzer-ID dieser Abschnitt ist eingelaufen im Schlüssel). Wenn Sie keine Benutzer-ID mit dem Microsoft Store-ID-Schlüssel zuordnen müssen, können Sie andernfalls einen Zeichenfolgenwert an den *PublisherUserId* -Parameter übergeben.
+    Übergeben Sie Ihr AzureAD-Zugriffstoken an den *serviceTicket*-Parameter der Methode. Wenn Sie anonymen Benutzer-IDs im Kontext der Dienste, die Sie als der Herausgeber der aktuellen app verwalten verwalten, können Sie auch eine Benutzer-ID an übergeben der *PublisherUserId* -Parameter für den aktuellen Benutzer mit dem neuen Microsoft Store-ID-Schlüssel zuordnen (die Benutzer-ID Em sein eingelaufen im Schlüssel). Wenn Sie nicht um eine Benutzer-ID mit dem Microsoft Store-ID-Schlüssel zu verknüpfen müssen, können Sie einen beliebigen Zeichenfolgenwert andernfalls an den *PublisherUserId* -Parameter übergeben.
 
 3.  Übergeben Sie den von Ihrer App erfolgreich erstellten Microsoft Store-ID-Schlüssel zurück an Ihren Dienst.
 
 ### <a name="diagram"></a>Diagramm
 
-Das folgende Diagramm veranschaulicht den Prozess beim Erstellen eines Schlüssels Microsoft Store-ID an.
+Das folgende Diagramm zeigt den Prozess zum Erstellen eines Microsoft Store-ID-Schlüssels.
 
-  ![Erstellen von Windows Store-ID-Schlüssel](images/b2b-1.png)
+  ![Windows Store-ID-Schlüssel erstellen](images/b2b-1.png)
 
 <span id="step-5"/>
 
@@ -204,9 +204,9 @@ Wenn Ihr Dienst über einen Microsoft Store-ID-Schlüssel verfügt, der den Zugr
 
 ### <a name="diagram"></a>Diagramm
 
-Das folgende Diagramm beschreibt den Prozess der Aufruf einer Methode in der Auflistung Microsoft Store Einkauf oder API-API von Ihrem Dienst.
+Im folgende Diagramm wird das Aufrufen einer Methode in der Microsoft Store-Sammlungs- oder -Einkaufs-API aus Ihrem Dienst beschrieben.
 
-  ![Rufen Sie Websitesammlungen oder Kauf API](images/b2b-2.png)
+  ![Rufen Sie Sammlungen oder Kauf-API](images/b2b-2.png)
 
 ## <a name="claims-in-a-microsoft-store-id-key"></a>Ansprüche in einem Microsoft Store-ID-Schlüssel
 

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b45196a83edf45a69f6b79ab82542cef6817703
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2881783"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2916867"
 ---
 # <a name="responsive-layouts-with-xaml"></a>Dynamische Layouts mit XAML
 
@@ -99,7 +99,7 @@ Sie können ein Element ein- oder ausblenden, indem Sie seine [**Visibility**](h
 Sie können die Visibility-Eigenschaft eines Elements im Code oder in einem visuellen Zustand ändern. Wenn die Visibility eines Elements geändert wird, werden auch alle untergeordneten Elemente geändert. Sie können Abschnitte der Benutzeroberfläche ersetzen, indem Sie ein Panel einblenden, während Sie ein anderes reduzieren.
 
 > [!Tip]
-> Wenn Sie Elemente in Ihrer Benutzeroberfläche, **Collapsed** standardmäßig sind verfügen, werden die Objekte, obwohl sie nicht sichtbar sind weiterhin beim Start erstellt. Sie können das Laden dieser Elemente bis zu ihrer Anzeige verzögern, indem Sie das **x:DeferLoadStrategy attribute** auf „Lazy“ festlegen. Dies kann die Leistung beim Starten verbessern. Weitere Informationen finden Sie unter [x: DeferLoadStrategy-Attribut](../../xaml-platform/x-deferloadstrategy-attribute.md).
+> Wenn Sie die Benutzeroberfläche Elemente, die **Collapsed** standardmäßig sind haben, sind die Objekte beim Start dennoch erstellt, obwohl sie nicht sichtbar sind. Sie können das Laden dieser Elemente bis zu ihrer Anzeige verzögern, indem Sie das **x:DeferLoadStrategy attribute** auf „Lazy“ festlegen. Dies kann die Leistung beim Starten verbessern. Weitere Informationen finden Sie unter [x: DeferLoadStrategy-Attribut](../../xaml-platform/x-deferloadstrategy-attribute.md).
 
 ### <a name="style-resources"></a>Stilressourcen
 
@@ -236,7 +236,7 @@ In diesem Beispiel wird die gleiche Aufgabe wie im vorherigen Beispiel ausgefüh
 ```
 
 > [!Important]
-> Im vorherigen Beispiel wird die angefügte VisualStateManager.VisualStateGroups-Eigenschaft des **Grid** -Element festgelegt. Bei Verwendung von „StateTrigger“-Elementen müssen Sie immer sicherstellen, dass „VisualStateGroups“ an das erste untergeordnete Element des Stamms angefügt wird, damit die Auslöser automatisch wirksam werden. (Hier ist **Grid** das erste untergeordnete Element des Stammelements **Page**.)
+> Im vorherigen Beispiel wird die angefügte VisualStateManager.VisualStateGroups-Eigenschaft auf das **Grid** -Element festgelegt. Bei Verwendung von „StateTrigger“-Elementen müssen Sie immer sicherstellen, dass „VisualStateGroups“ an das erste untergeordnete Element des Stamms angefügt wird, damit die Auslöser automatisch wirksam werden. (Hier ist **Grid** das erste untergeordnete Element des Stammelements **Page**.)
 
 ### <a name="attached-property-syntax"></a>Syntax von angefügten Eigenschaften
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste Microsoft Store-Analyse-API
 ms.localizationpriority: medium
 ms.openlocfilehash: f36facd8ba89fbaccb7c61ad937c2ce005922aa8
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2886249"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910566"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Zugreifen auf Analysedaten mit Store-Diensten
 
@@ -86,7 +86,7 @@ Die folgenden Analysemethoden sind für UWP-Apps im Dev Center verfügbar.
 |---------------|--------------------|
 | Käufe, Konversionen und Installationen |  <ul><li>[Abrufen von App-Käufen](get-app-acquisitions.md)</li><li>[Abrufen von App-Erwerbstrichterdaten](get-acquisition-funnel-data.md)</li><li>[Abrufen von App-Konvertierungen nach Kanal](get-app-conversions-by-channel.md)</li><li>[Abrufen von Add-On-Käufen](get-in-app-acquisitions.md)</li><li>[Abrufen von Add-On-Käufen für Abonnements](get-subscription-acquisitions.md)</li><li>[Abrufen von Add-On-Konvertierungen nach Kanal](get-add-on-conversions-by-channel.md)</li><li>[Abrufen von App-Installationen](get-app-installs.md)</li></ul> |
 | App-Fehler | <ul><li>[Abrufen von Fehlerberichtsdaten](get-error-reporting-data.md)</li><li>[Abrufen von Details zu einem Fehler in Ihrer App](get-details-for-an-error-in-your-app.md)</li><li>[Abrufen der Stapelüberwachung für einen Fehler in Ihrer App](get-the-stack-trace-for-an-error-in-your-app.md)</li><li>[Herunterladen der CAB-Datei bei einem Fehler in Ihrer App](download-the-cab-file-for-an-error-in-your-app.md)</li></ul> |
-| Einblicke in die | <ul><li>[Abrufen von Daten für Ihre app](get-insights-data-for-your-app.md)</li></ul>  |
+| Einblicke | <ul><li>[Rufen Sie Einblicke Daten für Ihre app](get-insights-data-for-your-app.md)</li></ul>  |
 | Bewertungen und Prüfungen | <ul><li>[Abrufen von App-Bewertungen](get-app-ratings.md)</li><li>[Abrufen von App-Rezensionen](get-app-reviews.md)</li></ul> |
 | In-App-Werbung und Anzeigenkampagnen | <ul><li>[Abrufen von Anzeigenleistungsdaten](get-ad-performance-data.md)</li><li>[Abrufen der Leistungsdaten einer Anzeigenkampagne](get-ad-campaign-performance-data.md)</li></ul> |
 
@@ -97,9 +97,9 @@ Die folgenden Analysemethoden stehen für die Verwendung durch Entwicklerkonten 
 | Szenario       | Methoden      |
 |---------------|--------------------|
 | Installiert |  <ul><li>[Abrufen von Desktopanwendungsinstallationen](get-desktop-app-installs.md)</li></ul> |
-| Blöcke |  <ul><li>[Rufen Sie Upgrade Blöcke für desktop-Anwendung](get-desktop-block-data.md)</li><li>[Hier erhalten Sie Upgrade Block für desktop-Anwendung](get-desktop-block-data-details.md)</li></ul> |
+| Blöcke |  <ul><li>[Upgrade-Blöcke für Ihre Desktopanwendung zu erhalten](get-desktop-block-data.md)</li><li>[Abrufen von Upgrade-Blockierung Informationen zu Ihrer desktop-Anwendung](get-desktop-block-data-details.md)</li></ul> |
 | Anwendungsfehler |  <ul><li>[Abrufen von Fehlerberichtsdaten für Ihre Desktopanwendung](get-desktop-application-error-reporting-data.md)</li><li>[Abrufen von Details zu einem Fehler in Ihrer Desktopanwendung](get-details-for-an-error-in-your-desktop-application.md)</li><li>[Abrufen der Stapelüberwachung für einen Fehler in Ihrer Desktopanwendung](get-the-stack-trace-for-an-error-in-your-desktop-application.md)</li><li>[Herunterladen der CAB-Datei bei einem Fehler in Ihrer Desktopanwendung](download-the-cab-file-for-an-error-in-your-desktop-application.md)</li></ul> |
-| Einblicke in die | <ul><li>[Rufen Sie Einblicke in die Daten für desktop-Anwendung](get-insights-data-for-your-desktop-app.md)</li></ul>  |
+| Einblicke | <ul><li>[Erhalten Sie Einblicke Daten für Ihre desktop-Anwendung](get-insights-data-for-your-desktop-app.md)</li></ul>  |
 
 ### <a name="methods-for-xbox-live-services"></a>Methoden für Xbox Live-Dienste
 
@@ -121,7 +121,7 @@ Die folgenden zusätzlichen Methoden stehen für Entwicklerkonten mit Xbox One-S
 
 ### <a name="methods-for-hardware-and-drivers"></a>Methoden für Hardware und Treiber
 
-Entwickler-Konten, die an das [Windows Hardware Developer Center Programm](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) gehören haben Zugriff auf eine Reihe von Methoden zum Abrufen von Daten für Hardware und Treiber Analytics weiteren. Weitere Informationen finden Sie unter [Hardware Dashboard API](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api).
+Konten für Entwickler, die das [Windows Hardware Dev Center-Programm](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) gehört haben Zugriff auf eine Reihe von Methoden zum Abrufen von Analysedaten für Hardware und Treiber. Weitere Informationen finden Sie in der [Hardware-Dashboard-API](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api).
 
 ## <a name="code-example"></a>Codebeispiel
 

@@ -1,38 +1,38 @@
 ---
 author: jnHs
 Description: The Insights report in the Windows Dev Center dashboard
-title: Insights-Bericht
+title: Geschäftsinformationen-Bericht
 ms.author: wdg-dev-content
 ms.date: 06/01/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, Uwp, Erkenntnisse, Trend, Bildschirmdarstellung auftreten, Anomalie, datenänderungen
+keywords: Windows 10, Uwp, Insight, Trend, Anomalien, Anomalie, Daten Änderungen
 ms.localizationpriority: medium
 ms.openlocfilehash: be70dccbb7a12b65b9e7bbd07f27ae7ea3a578ff
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2887769"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2913845"
 ---
-# <a name="insights-report"></a>Insights-Bericht
+# <a name="insights-report"></a>Geschäftsinformationen-Bericht
 
 
-**Insights** -Bericht im Windows-Entwicklungscenter Dashboard markiert wurden keine bedeutende Änderungen (erhöht oder verringert sich in eine bestimmte Metrik), die wir in den letzten 30 Tagen in Ihrer Übernahmen, Integrität und/oder Verwendungsdaten erkannt. Auf diese Weise können Sie einen schnellen Blick auf potenziell wichtige Änderungen abrufen, ohne dass Sie alle Diagramme in jeder dieser Berichte anzeigen.
+**Der Bericht im Windows Dev Center-Dashboard** zeigt erhebliche Änderungen (Erhöhung oder Verringerung in einer bestimmten Metrik), die wir in den letzten 30 Tagen in Ihrer Käufe, Integrität, und/oder Nutzungsdaten erkannt. Auf diese Weise können Sie einen kurzen Überblick über potenziell wichtige Änderungen zu erhalten, ohne alle Diagramme in jedem dieser Berichte anzeigen.
 
 > [!NOTE]
-> Daten in diesem Bericht werden die letzten 30 Tagen behandelt. Sie können nicht auf einen anderen Zeitraum für diesen Bericht auswählen.
+> Daten in diesem Bericht werden die letzten 30 Tagen behandelt. Sie können keinen anderer Zeitraum für diesen Bericht auswählen.
 
-Der Bericht sortiert Daten in drei Registerkarten: **Übernahmen**, **Integrität**und **Verwendung**. Wählen Sie Einblicke in einem dieser Bereiche finden Sie die Registerkarte aus.
+Der Bericht sortiert Daten in drei Registerkarten: **Käufe**, **Integrität**und **Nutzung**. Um Einblicke für eine dieser Bereiche anzuzeigen, wählen Sie die Registerkarte.
 
-Einblicke in die werden angezeigt, wenn wir eine bedeutende Änderung in Ihrer Daten zu erkennen. Für jede Insight zeigen wir Folgendes:
-- **Insight Typ**: der Bereich, in dem die Einblicke erkannt wurde.
-- **Wert**: der bestimmten Metrik die erheblich geändert (oder **Alle** Wenn die Änderung auf die gesamte **Erkenntnisse Typ**angewendet wird).
-- **Datum**: das Datum, an dem wir die Änderung identifiziert. Dieses Datum stellt das Ende der Woche, in der wir eine wesentliche oder senken im Vergleich zu der Woche vor dem Ausführen der erkannt.
-- **Insgesamt beeinträchtigen**: den Prozentsatz, der der Wert erhöht oder verringert wird über Ihre gesamte Kunden. Dies hilft Ihnen zu verstehen, wie weit verbreitet die Auswirkungen der eine bestimmte Änderung möglicherweise ist insbesondere dann, wenn es Prozentsatz Info in angezeigten verglichen, **Top-Autoren.**
-- **Top-Mitwirkende**: Falls zutreffend, die bestimmte Segment, Paket oder andere identifizierende Faktor, mit deren Hilfe die Kunden nachvollziehen die Änderung bezieht sich auf. Beispielsweise kann eine Änderung in erster Linie mit Kunden aus einer bestimmten Markt oder für einen bestimmten Gerät erkannt werden. Für **Gesundheitsdaten** kann dies bestimmten Fehler Hashes oder Paketversionen umfassen. Gegebenenfalls zeigen wir, dass der Wert erhöht oder verringert wird für diese Faktor auch dem Prozentsatz.
+Einblicke werden angezeigt, wenn wir eine bedeutende Änderung in Ihre Daten zu erkennen. Für jede Insight zeigen wir Folgendes:
+- **Insight-Typ**: der Bereich, in denen die Einblicke erkannt wurde.
+- **Wert**: die bestimmte Metrik die erheblich geändert (oder **Alle** trifft die Änderung in den gesamten **Insight-Typ**).
+- **Datum**: das Datum, an dem wir die Änderung identifiziert. Dieses Datum stellt das Ende der Woche, in der wir eine erhebliche Erhöhung oder Verringerung, die im Vergleich zu Woche festgestellt.
+- **Insgesamt beeinträchtigen**: den Prozentsatz, der der Wert gestiegen oder gesunken sind über Ihres gesamten Kundenstamms. Dies hilft Ihnen zu verstehen, wie weit verbreitet die Auswirkungen von eine bestimmte Änderung möglicherweise ist insbesondere dann, wenn es mit Prozentsatz Informationen im angezeigten verglichen, **Top Mitwirkenden.**
+- **Oberen Mitwirkenden**: gegebenenfalls die bestimmtes Segment, Paket oder andere identifizierende Umstand sollten Sie besser zu verstehen, welche Kunden die Änderung wird im Zusammenhang mit. Beispielsweise kann eine Änderung in erster Linie mit Kunden über einen bestimmten Markt oder auf einen bestimmten Gerätetyp erkannt werden. Für die **integritätsdaten** kann dies bestimmten Fehler Hashes oder eine Paketversionen umfassen. Gegebenenfalls zeigen wir, dass der Wert gestiegen oder gesunken sind für die Faktor auch dem Prozentsatz.
 - **Aktion**:
-   - Wählen Sie **Show-14-Tage-Trend** an einem Diagramm an, wie die Metrik in den gesamten 14 Tagen festgestellt werden, die auf das Datum Erkenntnisse geändert.
-   - Wählen Sie Sie uns Ihr Feedback und uns mitzuteilen, wenn die Insights wir bereitgestellten präzise scheint **uns feststellen, ob dies korrekt ist** . Dieses Feedback wird helfen Sie uns, um den Vorgang fortzusetzen, um die Daten zu verbessern, die wir hier bereitstellen. 
+   - Wählen Sie **Anzeigen 14 Tagen Trend** zum Anzeigen von einem Diagramm an, wie die Metrik befindet sich über die gesamte 14 Tage Versionsgeschichte des Insight Kaufdatum geändert.
+   - Wählen Sie **uns mitteilen, wenn dies korrekt ist** , uns Ihr Feedback und lassen Sie uns wissen, ob die Erkenntnisse, die wir bereitgestellt haben präzise erscheinen. Dieses Feedback hilft uns, um den Vorgang fortzusetzen, um die Daten zu verbessern, die wir hier bereitstellen. 
 

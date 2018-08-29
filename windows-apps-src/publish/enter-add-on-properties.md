@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Add-Ons, Eigenschaften, Abonnementzeitraum, Produktlebensdauer, Inhaltstyp, IAP, In-App-Kauf, In-App-Produkt
 ms.localizationpriority: medium
 ms.openlocfilehash: 73a494ea1899f3a764a668ae61c1235808eff1a7
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2885587"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2917208"
 ---
 # <a name="enter-add-on-properties"></a>Eingeben von Add-On-Eigenschaften
 
@@ -44,7 +44,7 @@ Wenn Sie den Produkttyp **Vom Store verwalteter Verbrauchsartikel** ausgewählt 
 
 ## <a name="subscription-period"></a>Abonnementdauer
 
-Wenn Sie als Produkttyp **Abonnement** ausgewählt haben, wird hier die **Abonnementdauer** angezeigt. Wählen Sie eine Option aus, um anzugeben, wie häufig der Kunde für das Abonnement in Rechnung gestellt wird. Die Standardoption **monatliche**ist, aber Sie können auch auswählen, **3 Monate**, **6 Monate**, **jährlich**oder **24 Monate**.
+Wenn Sie als Produkttyp **Abonnement** ausgewählt haben, wird hier die **Abonnementdauer** angezeigt. Wählen Sie eine Option aus, um anzugeben, wie häufig der Kunde für das Abonnement in Rechnung gestellt wird. Die Standardoption ist **monatlich**, aber Sie können auch auswählen, **3**, **6 Monate**, **jährlich**oder **24 Monate**.
 
 > [!IMPORTANT]
 > Sie können nach der Veröffentlichung Ihres Add-Ons Ihre **Abonnementdauer** auswählen.

@@ -11,19 +11,19 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ada2e0610e81e986deba3ddab5e87547e05fe108
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2883610"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2912997"
 ---
 # <a name="about-community-ads"></a>Informationen zu Community-Anzeigen
 
-Wenn Ihre app [zeigt Banner oder Banner interstitielles Ads](../monetize/display-ads-in-your-app.md)Sie Cross-Ihrer app mit anderen Entwicklern mit apps im Microsoft Store für kostenlose heraufstufen können. Dieses Feature wird *Community-Anzeigen* genannt.  
+Wenn Ihre app [zeigt Banneranzeigen oder Banner-interstitialwerbung](../monetize/display-ads-in-your-app.md)Sie Ihre app mit anderen Entwicklern mit apps im Microsoft Store für kostenlose bewerben können. Dieses Feature wird *Community-Anzeigen* genannt.  
 
 Das funktioniert wie folgt:
 
-* Nachdem Sie Community anzeigen, wie unten beschrieben Teilnahme, können Sie [Erstellen Sie eine kostenlose Community Ad Kampagne](create-an-ad-campaign-for-your-app.md). Ihre app freigeben Werbe Ad Speicherplatz klicken Sie dann mit anderen Entwicklern, die auch für Community anzeigen zu bestätigen. In Ihrer App werden Anzeigen für Apps anderer Entwickler angezeigt, die an Community-Anzeigen teilnehmen. Im Gegenzug werden in deren Apps Anzeigen für Ihre App angezeigt.
+* Nachdem Sie für Community-anzeigen, wie unten beschrieben Teilnahme, können Sie [eine kostenlose Community-Anzeigenkampagne erstellen](create-an-ad-campaign-for-your-app.md). Ihre app wird dann Werbefläche für andere Entwickler freigeben, die ebenfalls Community-anzeigen entschieden haben. In Ihrer App werden Anzeigen für Apps anderer Entwickler angezeigt, die an Community-Anzeigen teilnehmen. Im Gegenzug werden in deren Apps Anzeigen für Ihre App angezeigt.
 * Durch die Anzeige von Community-Anzeigen in Ihrer App erwerben Sie Guthaben für Werbefläche in anderen Apps. Das Guthaben wird wie folgt berechnet:
   * Für jedes Land bzw. jede Region, in dem bzw. in der eine App verfügbar ist, die Community-Anzeigen bereitstellt, wird der jeweils aktuelle eCPM-Wert (effektive Kosten pro tausend Anzeigenaufrufe) für das Land oder die Region mit der Anzahl von Anforderungen für Community-Anzeigen multipliziert, die von Ihrer App im betreffenden Land oder in der betreffenden Region gestellt wurden. Dieser Wert entspricht dem Guthaben, das Sie im betreffenden Land oder in der betreffenden Region für Ihre App erworben haben.
   * Ihr gesamtes erworbenes Guthaben für einen bestimmten Zeitraum entspricht der Summe sämtlicher Guthaben, die mit allen Ihren Apps, die Community-Anzeigen bereitstellen, in allen Ländern oder Regionen erwirtschaftet wurden.
@@ -32,19 +32,19 @@ Das funktioniert wie folgt:
 
 ### <a name="opt-in-to-community-ads"></a>Melden Sie sich für Community-Anzeigen an
 
-Bevor Sie eine Ad-Kampagne Community für einen Ihrer Apps erstellen können, Sie müssen entscheiden Sie sich auf die **Monetize** &gt; **Ads - app-** Seite im Windows-Entwicklungscenter Dashboard.
+Bevor Sie eine Community-Anzeigenkampagne für eine Ihrer apps erstellen können, Sie müssen entscheiden Sie sich auf die **Monetarisierung** &gt; **In-app-Werbung** Seite im Windows Dev Center-Dashboard.
 
-Zum Anzeigen der Community für eine app UWP zu abonnieren:
+Melden Sie sich für Community-anzeigen für eine UWP-app an:
 
-1. Wählen Sie im Abschnitt **Mediation Einstellungen** auf der Seite **innerhalb der app anzeigen** eine Ad-Komponente, die Sie in der app verwenden.
-2. Wenn die Option **Microsoft Let wählen Sie die besten Mediation Einstellungen für Ihre app** ausgewählt ist, werden automatisch die Community Ads für Ihr Gerät Ad aktiviert. Anderenfalls wählen Sie die Basiskonfiguration oder einer Markt-spezifische Konfiguration in der Dropdownliste **Ziel** aus, und klicken Sie dann das Kontrollkästchen Sie **Microsoft-Community anzeigen** in der Liste **andere Ad-Netzwerke** .
+1. Wählen Sie im Abschnitt **vermittlungseinstellungen** auf der Seite **In-app anzeigen** eine anzeigeneinheit, die Sie in der app verwenden.
+2. Wenn die Option **ermöglichen Microsoft Auswählen der besten anzeigenvermittlungseinstellungen für Ihre app** aktiviert ist, werden automatisch die Community-anzeigen für Ihre anzeigeneinheit aktiviert. Anderenfalls wählen Sie die Baseline-Konfiguration oder eine marktspezifische-Konfiguration in der **Ziel** -Dropdown-Liste, und klicken Sie dann das Kontrollkästchen Sie **Microsoft Community-anzeigen** in der Liste **Weitere anzeigennetzwerke** .
 
     > [!NOTE]
-    > Die **Gewichtung** Felder können Sie das Verhältnis der Ads angeben, den Sie aus den kostenpflichtigen Netzen und andere Ad-Netzwerke, einschließlich Community Ads anzeigen möchten.
+    > Die **Gewichtung** Felder können Sie das Verhältnis der anzeigen angeben, die von kostenpflichtigen Netzwerken und anderen Anzeigennetzwerken, einschließlich der Community-anzeigen angezeigt werden sollen.
 
-Zur Community Werbung für eine Windows Anmeldung 8.x oder Windows Phone-app 8.x
+Melden Sie sich für Community-anzeigen für eine Windows an 8.x oder Windows Phone 8.x-app
 
-1. Auf der Seite **innerhalb der app anzeigen** das Kontrollkästchen Sie **Community Werbung in Meine app anzuzeigen** .
+1. Aktivieren Sie das Kontrollkästchen **Community-anzeigen in meiner app** , auf der Seite **In-app anzeigen** .
 
 Sie müssen Ihre App nicht noch einmal veröffentlichen, nachdem Sie Ihre Auswahl getroffen haben. Wenn Sie sich angemeldet haben, werden Sie feststellen, dass Sie **Community-Anzeige (kostenlos)** als Kampagnentyp angeben können, wenn Sie eine [Anzeigenkampagne erstellen](create-an-ad-campaign-for-your-app.md).
 

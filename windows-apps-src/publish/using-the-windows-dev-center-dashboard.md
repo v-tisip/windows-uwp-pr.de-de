@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Dashboard, Devcenter, Entwicklungszentrum
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f5357b038091b72681915e46875f92077bb3c9e
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2885019"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2910094"
 ---
 # <a name="using-the-windows-dev-center-dashboard"></a>Verwenden des Windows Dev Center-Dashboards
 
 
-Das [Windows-Entwicklungscenter Dashboard](https://partner.microsoft.com/dashboard) können Sie verwalten, und alle Ihre apps für Windows-Geräte an einem Ort zu übermitteln.
+Das [Windows Dev Center-Dashboard](https://partner.microsoft.com/dashboard) können Sie all Ihre Apps für Windows-Geräte zentral verwalten und einreichen.
 
 > [!NOTE]
 > Sie müssen über ein [Entwicklerkonto](http://go.microsoft.com/fwlink/p/?LinkId=615100) verfügen, um auf das Windows Dev Center-Dashboard zuzugreifen.
@@ -33,13 +33,13 @@ Hier sind einige Highlights der Dashboard-Funktionen:
 - Eine zentrale Stelle oben rechts für den Zugriff auf für Sie relevante Informationen, einschließlich Profil- und Kontodetails, Auszahlungsaufstellungen, Support und Benachrichtigungen.
 - Direkter Zugriff auf alle Entwicklerprogramme, ohne sich jeweils an- und abmelden zu müssen. Wir schlagen ebenfalls neue Programme vor, die für Sie von Interesse sein könnten, sobald sie verfügbar sind.
 
-Wenn Sie [eine Vorlage für Ihre app erstellen](app-submissions.md) (zum ersten Mal oder als ein Update), können Sie auf [Hochladen der app-Pakete](upload-app-packages.md) für alle Version des Betriebssystems unterstützten und der Informationsspeicher automatisch bietet Benutzern das Paket, das am besten für sie geeignet sind.
+Wenn Sie [eine Übermittlung für Ihre app erstellen](app-submissions.md) (erstmalig oder als Update), können Sie [Hochladen von app-Pakete](upload-app-packages.md) für alle unterstützten Version des Betriebssystems, im Store automatisch während Kunden angeboten wird das Paket, das am besten für sie geeignet ist.
 
-[Add-Ons (innerhalb der app-Produkte)](add-on-submissions.md) werden unabhängig von Ihrer app-Übermittlung verwaltet. Dadurch sind Sie flexibler und können unabhängig Änderungen vornehmen.
+[Add-Ons (in-app-Produkte)](add-on-submissions.md) werden unabhängig von der app Übermittlung verwaltet. Dadurch sind Sie flexibler und können unabhängig Änderungen vornehmen.
 
-Windows-Entwicklungscenter bietet auch Funktionen zum [Hinzufügen von mehreren Benutzern](manage-account-users.md)[app-Verwaltung und Konfigurieren von Diensten](app-management-and-services.md), [analytische Daten überprüfen](analytics.md), [Auszahlung reporting](payout-summary.md), [fördern der Verwendung von Ihrer apps](attract-customers-and-promote-your-apps.md), [Zusammenarbeit mit Ihrer Kunden](engage-with-your-customers.md), [beta-Tests](beta-testing-and-targeted-distribution.md), [Verteilen von LOB-apps in Unternehmen](distribute-lob-apps-to-enterprises.md)und vieles mehr.
+Windows Dev Center bietet auch Funktionen für [mehrere Benutzer hinzufügen](manage-account-users.md),[app-Verwaltung und Konfigurieren von Diensten](app-management-and-services.md), [Überprüfen von Analysedaten](analytics.md), [auszahlungsberichte](payout-summary.md), [Vermarktung von apps](attract-customers-and-promote-your-apps.md), [mit Ihrer Kunden](engage-with-your-customers.md), [Betatests](beta-testing-and-targeted-distribution.md), [Verteilen von BRANCHENSPEZIFISCHEN apps an Unternehmen](distribute-lob-apps-to-enterprises.md)und vieles mehr.
 
-Ihr Feedback hilft uns dabei, die besten Funktionen zu erstellen und anzubieten. Während Sie im Dashboard arbeiten, verwenden Sie die Verknüpfung **Feedback** in der oberen rechten Ecke des Dashboards von Gedanken und Vorschläge freigeben.
+Ihr Feedback hilft uns dabei, die besten Funktionen zu erstellen und anzubieten. Während der Arbeit im Dashboard Verwenden des **Feedback** -Links in der oberen rechten Ecke des Dashboards für Ihre Ideen und Vorschläge.
 
 
  

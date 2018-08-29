@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0840bab2e039ec55ea4070f8dad39c0ae4e74bbc
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2887909"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2908791"
 ---
 # <a name="controls-by-function"></a>Steuerelemente nach Funktion
 
@@ -30,7 +30,7 @@ Laden Sie das [Beispiel für XAML-UI-Grundlagen](http://go.microsoft.com/fwlink/
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Wenn Sie die <strong style="font-weight: semi-bold">Verwendung von XAML-Steuerelemente-Sammlung</strong> app installiert haben, klicken Sie hier, <a href="xamlcontrolsgallery:/item/NavigationView">Öffnen Sie die app</a> und finden Sie unter der NavigationView in Aktion </p>
+    <p>Wenn Sie die <strong style="font-weight: semi-bold">XAML-Steuerelementekatalog</strong> -app installiert haben, klicken Sie hier, um <a href="xamlcontrolsgallery:/item/NavigationView">die app zu öffnen und finden Sie unter der NavigationView in Aktion zu sehen</a> </p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Erwerben Sie die XAML-Steuerelementekatalog-App (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Erwerben Sie den Quellcode (GitHub)</a></li>
@@ -270,7 +270,7 @@ Zeigt eine Meldung an, die einen Benutzereingriff erfordert. (Im Gegensatz zu ei
 
 Referenz: [Flyout](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.flyout.aspx) 
 
-Entwurf und -Vorgehensweisen: [Flyouts](dialogs-and-flyouts/flyouts.md) 
+Design und Vorgehensweise: [Flyouts](dialogs-and-flyouts/flyouts.md) 
 
 ### <a name="menu-flyout"></a>Menü-Flyout
 Zeigt vorübergehend eine Liste der Befehle oder Optionen im Kontext der Benutzeraktion an.
@@ -290,7 +290,7 @@ Zeigt vorübergehend eine Liste der Befehle oder Optionen im Kontext der Benutze
 
 Referenz: [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyout.aspx), [MenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutitem.aspx), [MenuFlyoutSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutseparator.aspx), [ToggleMenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.togglemenuflyoutitem.aspx) 
 
-Entwurf und -Vorgehensweisen: [Menüs und Kontextmenüs](menus.md) 
+Design und Vorgehensweise: [Menüs und Kontextmenüs](menus.md) 
 
 Beispielcode: [Beispiel für XAML-Kontextmenü](http://go.microsoft.com/fwlink/p/?LinkId=620021)
 
@@ -299,7 +299,7 @@ Ein benutzerdefiniertes Menü mit von Ihnen angegebenen Befehlen.
 
 Referenz: [PopupMenu](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.popups.popupmenu.aspx) 
 
-Entwurf und -Vorgehensweisen: [Dialogs](dialogs-and-flyouts/dialogs.md) 
+Design und Vorgehensweise: [Dialogfelder](dialogs-and-flyouts/dialogs.md) 
 
 ### <a name="tooltip"></a>QuickInfo
 Ein Popupfenster, das Informationen zu einem Element anzeigt. 
@@ -555,11 +555,11 @@ Siehe „Medienelement“.
 
 ### <a name="navigationview"></a>NavigationView
 
-Eine anpassbare Container und flexible Navigationsmodell, der im linken Navigationsbereich, der oberen Navigationsleiste und Registerkarten Muster implementiert.
+Eine anpassungsfähige Container und flexible Navigationsmodell, der linken Navigationsbereich angezeigt, oberen Navigationsleiste und registerkartenmuster implementiert.
 
 Referenz: [NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 
-Entwurf und -Vorgehensweisen: [NavigationView Steuerelement Guide](navigationview.md)
+Design und Vorgehensweise: [Handbuch für NavigationView-Steuerelement](navigationview.md)
 
 ### <a name="splitview"></a>SplitView
 

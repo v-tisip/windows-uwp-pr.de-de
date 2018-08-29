@@ -1,7 +1,7 @@
 ---
 author: mijacobs
 description: Einblendungen sind neue Lichteffekte, welche die interaktiven Elemente in Ihrer App mit Tiefe und Fokus versehen kann.
-title: Anzeigen der Hervorhebung
+title: Reveal-Highlight
 template: detail.hbs
 ms.author: mijacobs
 ms.date: 08/9/2017
@@ -15,22 +15,22 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 67bd984f4216be9eded51b6175829828e9c332f1
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2888899"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2915314"
 ---
-# <a name="reveal-highlight"></a>Anzeigen der Hervorhebung
+# <a name="reveal-highlight"></a>Reveal-Highlight
 
 ![Favoritenbild](images/header-reveal-highlight.svg)
 
-Anzuzeigen Sie, dass Hervorhebung einen Beleuchtungseffekt ist, der wichtigsten interaktive Elemente, wie etwa Befehlsleisten, wenn der Benutzer den Zeiger in der Nähe sie bewegt. 
+Reveal-Highlight sind Lichteffekte, die wie z. B. Befehlsleisten, interaktive Elemente hervorhebt, wenn der Benutzer den Zeiger Nähe bewegt. 
 
 > **Wichtige APIs**: [RevealBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [RevealBackgroundBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [RevealBorderBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [RevealBrushHelper-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [VisualState-Klasse](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
 
 ## <a name="how-it-works"></a>Funktionsweise
-Ermitteln Sie Hervorhebung Anrufe Aufmerksamkeit auf interaktive Elemente, indem Sie Container für das Element ausgeblendet, wenn der Mauszeiger in der Nähe, wie in dieser Abbildung dargestellt ist:
+Reveal-Highlight Aufrufe hebt interaktive Elemente hervor, indem das Element Container Wenn der Mauszeiger nähert, wie in der folgenden Abbildung ist:
 
 ![Reveal Visual](images/Nav_Reveal_Animation.gif)
 
@@ -58,7 +58,7 @@ Da durch Einblendungen die ausgeblendeten Rahmen um Objekte herum angezeigt werd
 
 ## <a name="how-to-use-it"></a>Verwendung
 
-„Reveal” funktioniert automatisch bei einigen Steuerelementen. Für andere Steuerelemente können Reveal Sie durch Zuweisen eines speziellen Formats auf das Steuerelement, wie in den Abschnitten [Aktivieren auf andere Steuerelemente anzuzeigen](#enabling-reveal-on-other-controls) und [Zu benutzerdefinierten Steuerelementen anzeigen aktivieren](#enabling-reveal-on-custom-controls) dieses Artikels beschrieben.
+„Reveal” funktioniert automatisch bei einigen Steuerelementen. Für andere Steuerelemente können Sie "Reveal" aktivieren, indem Sie das Steuerelement einen speziellen Stil zuweisen, wie in den Abschnitten [Aktivieren von Einblendungen für andere Steuerelemente](#enabling-reveal-on-other-controls) und [Aktivieren von Einblendungen für benutzerdefinierte Steuerelemente](#enabling-reveal-on-custom-controls) dieses Artikels beschrieben.
 
 ## <a name="controls-that-automatically-use-reveal"></a>Steuerelemente, die „Reveal” automatisch verwenden
 
@@ -69,7 +69,7 @@ Da durch Einblendungen die ausgeblendeten Rahmen um Objekte herum angezeigt werd
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
 - [**CommandBar**](../controls-and-patterns/app-bars.md)
 
-Diese Abbildung zeigt markieren anzuzeigen, auf verschiedene Steuerelemente:
+Diese Abbildung zeigt "einblenden" markieren, auf verschiedenen Steuerelementen:
 
 ![Beispiele für „Reveal”](images/RevealExamples_Collage.png)
 
@@ -134,8 +134,8 @@ Sie können „Reveal” für benutzerdefinierte Steuerelemente hinzufügen. Bev
 
 
 Diese Effekte werden durch zwei Pinselelemente definiert: 
-* Anzeigen der Rahmen wird durch **RevealBorderBrush** definiert.
-* Beim Daraufzeigen Reveal wird durch **RevealBackgroundBrush** definiert.
+* "Rahmen einblenden" wird durch **"revealborderbrush"** definiert.
+* "Reveal Hover" wird durch **RevealBackgroundBrush** definiert.
 
 ```xaml
 <RevealBorderBrush x:Key="MyRevealBorderBrush" TargetTheme="Light" Color="{ThemeResource SystemAccentColor}" FallbackColor="{ThemeResource SystemAccentColor}"/>
@@ -259,14 +259,14 @@ Hier sehen Sie eine gesamte Vorlage und wie eine Schaltfläche zum Einblenden au
 
 ### <a name="fine-tuning-the-reveal-effect-on-a-custom-control"></a>Optimieren des Effekts von „Reveal” für ein benutzerdefiniertes Steuerelement 
 
-Wenn Sie auf ein Steuerelement benutzerdefinierte oder Re-Vorlagen oder eine benutzerdefinierte Befehlsinfrastruktur Fläche Reveal aktivieren, helfen Ihnen die folgenden Tipps Ihnen den Effekt optimieren:
+Wenn Sie "Reveal" für ein benutzerdefiniertes oder neues Steuerelement oder eine benutzerdefinierte Befehlsoberfläche aktivieren, können diese Tipps den Effekt optimieren hilfreich sein:
  
 * Auf benachbarten Elementen mit einer Größe, die nicht in Höhe oder Breite (insbesondere in Listen) ausgerichtet ist: entfernen Sie das Verhalten des Rahmens und aktivieren Sie die Rahmen nur für das Draufzeigen.
 * Für Befehlselemente, die häufig aktiviert oder deaktiviert werden: platzieren Sie den Pinsel für den Rahmen auf die Backplates der Elemente sowie deren Rahmen, um ihren Zustand zu betonen.
 * Für benachbarte Steuerelemente, die sich fast berühren: Fügen Sie einen Rand von einem Pixel zwischen den beiden Elementen hinzu. 
 
 ## <a name="dos-and-donts"></a>Empfohlene und nicht empfohlene Vorgehensweisen
-### <a name="do"></a>Schritte aus:
+### <a name="do"></a>Führen Sie aus:
 - Verwenden Sie „Reveal” für Elemente, in denen der Benutzer viele Aktionen (CommandBars, Navigationsmenüs) ausführt
 - Verwenden Sie „Reveal” bei der Gruppierung von interaktiven Elementen, die nicht standardmäßig visuelle Trennzeichen haben (Listen, Menübänder)
 - Verwenden Sie „Reveal” in Bereichen mit vielen interaktiven Elementen (Befehlszenarios)

@@ -8,20 +8,20 @@ ms.date: 5/10/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, Uwp, Pakete, hochladen, Paket hochladen
+keywords: Windows 10, Uwp, Pakete, hochladen, Paket upload
 ms.localizationpriority: medium
 ms.openlocfilehash: 6013a238cff8db3b85dd98af58cccaf344a72f51
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2887839"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2909910"
 ---
 # <a name="upload-app-packages"></a>Hochladen von App-Paketen
 
 Auf der Seite **Pakete** werden alle Paketdateien (APPX, APPXUPLOAD, APPXBUNDLE und XAP) für die App hochgeladen, die Sie übermitteln. Sie können in diesem Schritt Pakete für jedes Betriebssystem hochladen, auf das die App ausgerichtet ist. Wenn ein Kunde Ihre App herunterlädt, stellt der Store automatisch für jeden Kunden das Paket bereit, das am besten für sein Gerät geeignet ist. Nachdem Sie Ihre Pakete hochgeladen haben, sehen Sie eine Tabelle, in der angegeben wird, [welche Pakete für bestimmte Windows10-Gerätefamilien angeboten werden](#device-family-availability) (und ggf. für frühere Betriebssystemversionen).
 
-Ausführliche Informationen zu Inhalt und Struktur der Pakete finden Sie unter [App-Paketanforderungen](app-package-requirements.md). Sie sollten auch weitere Informationen zu [auswirkt wie Versionsnummern von Paketen an bestimmten Kunden übermittelt werden](package-version-numbering.md) und [wie Pakete auf verschiedenen Betriebssystemen verteilt werden](guidance-for-app-package-management.md).
+Ausführliche Informationen zu Inhalt und Struktur der Pakete finden Sie unter [App-Paketanforderungen](app-package-requirements.md). Sie sollten außerdem erfahren Sie, [wie Versionsnummern von Paketen darauf auswirken, bestimmten Kunden bereitgestellt werden](package-version-numbering.md) und [wie Pakete für verschiedene Betriebssysteme verteilt werden](guidance-for-app-package-management.md).
 
 ## <a name="uploading-packages-to-your-submission"></a>Hochladen von Paketen für Ihre Übermittlung
 
@@ -32,7 +32,7 @@ Um Pakete hochzuladen, ziehen Sie sie in das Uploadfeld oder klicken Sie, um Ihr
 
 Falls Sie [Flight-Pakete](package-flights.md) für Ihre App erstellt haben, wird eine Dropdownliste mit der Option zum Kopieren von Paketen aus einem Ihrer Flight-Pakete angezeigt. Wählen Sie das Flight-Paket mit den Paketen aus, die Sie übertragen möchten. Anschließend können Sie einige oder alle der Pakete auswählen, um sie in diese Übermittlung aufzunehmen.
 
-Wenn wir Fehler mit einem Paket erkennen, während überprüft wird, werden wir zeigt eine Meldung, damit Sie wissen, was falsch ist. Sie müssen das Paket entfernen, beheben Sie das Problem, und versuchen Sie es erneut hochladen. In anderen Fällen werden Warnungen zu Fehlern angezeigt, die Probleme verursachen können, Sie jedoch nicht daran hindern, Ihre Übermittlung fortzusetzen.
+Wenn beim Überprüfen sie Fehler mit einem Paket erkannt, zeigen wir eine Nachricht, damit Sie wissen, was falsch ist. Sie müssen das Paket entfernen, das Problem beheben und versuchen Sie es erneut hochladen. In anderen Fällen werden Warnungen zu Fehlern angezeigt, die Probleme verursachen können, Sie jedoch nicht daran hindern, Ihre Übermittlung fortzusetzen.
 
 
 ## <a name="device-family-availability"></a>Verfügbarkeit von Gerätefamilien
@@ -44,7 +44,7 @@ Weitere Informationen finden Sie unter [Verfügbarkeit von Gerätefamilien](devi
 
 ## <a name="package-details"></a>Paketdetails
 
-Die übertragenen Pakete sind hier aufgeführt, gruppiert nach Ziel-Betriebssystem. Name, Version und Architektur des Pakets werden angezeigt. Klicken Sie auf **Details anzeigen**, um weitere Informationen zu erhalten, z. B. die unterstützten Sprachen, die App-Funktionen oder die Dateigröße der einzelnen Pakete.
+Hochgeladene Pakete werden hier aufgeführt nach Zielbetriebssystem gruppiert. Name, Version und Architektur des Pakets werden angezeigt. Klicken Sie auf **Details anzeigen**, um weitere Informationen zu erhalten, z. B. die unterstützten Sprachen, die App-Funktionen oder die Dateigröße der einzelnen Pakete.
 
 Wenn Sie ein Paket aus der Einsendung entfernen müssen, klicken Sie dazu im Abschnitt **Details** des Pakets unten auf den Link **Entfernen**.
 

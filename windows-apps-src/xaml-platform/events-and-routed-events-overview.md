@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ca58613a5874cde10d2bb5322c3f930e1fbce44
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2881793"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2918301"
 ---
 # <a name="events-and-routed-events-overview"></a>Übersicht über Ereignisse und Routingereignisse
 
@@ -153,7 +153,7 @@ End Sub
 
 **Hinweis**  Im Allgemeinen werden statt des **Handles**-Schlüsselworts Visual Studio und die zugehörige XAML-Entwurfsoberfläche als Methode zur Instanzbehandlung verwendet. Das Erstellen der Ereignishandlerverknüpfung in XAML ist Teil eines typischen Designer-Entwickler-Workflows, und die **Handles**-Schlüsselworttechnik ist mit dem Verknüpfen der Ereignishandler in XAML nicht kompatibel.
 
-In C++ / CX, verwenden Sie auch die **+=** Syntax, es gibt jedoch Unterschiede aus dem grundlegenden C#-Formular:
+In C++ / CX verwenden Sie auch die **+=** Syntax, es gibt jedoch Unterschiede zum Allgemeinen C#-Format:
 
 -   Es gibt keinen Rückschluss auf Delegaten. Sie müssen deshalb **ref new** für die Delegatinstanz verwenden.
 -   Der Delegatkonstruktor besitzt zwei Parameter und benötigt das Zielobjekt als ersten Parameter. Normalerweise geben Sie **this** an.

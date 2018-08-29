@@ -8,14 +8,14 @@ ms.date: 08/21/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, Uwp, Hintergrund Aufgabe
+keywords: Windows 10, Uwp, Hintergrundaufgabe, für die
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e5db1e03ac86768e2b1b1181cd2cc416a151a80
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2885609"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2904638"
 ---
 # <a name="support-your-app-with-background-tasks"></a>Unterstützen Ihrer App mit Hintergrundaufgaben
 
@@ -28,18 +28,18 @@ Ab Windows 10 (Version 1607) ist die Wiedergabe von Audio im Hintergrund sehr vi
 
 ## <a name="in-process-and-out-of-process-background-tasks"></a>Hintergrundaufgaben innerhalb und außerhalb von Prozessen
 
-Es gibt zwei Ansätze zur Implementierung von Hintergrundaufgaben aus:
+Es gibt zwei Ansätze für das Implementieren von Hintergrundaufgaben:
 
-* In-Process: die app und der Hintergrund-Prozess in demselben Prozess ausgeführt
-* Out-of-Process: die app und der Hintergrund-Prozess in separaten Prozessen ausgeführt.
+* In-Process: die app und ihr Hintergrundprozess ausgeführt, im gleichen Prozess
+* Out-of-Process-: die app und der Hintergrundprozess in separaten Prozessen ausgeführt.
 
 Die Unterstützung für Hintergrundaufgaben innerhalb von Prozessen wurde mit Windows 10 (Version 1607) eingeführt, um das Schreiben von Hintergrundaufgaben zu vereinfachen. Es ist jedoch weiterhin möglich, Hintergrundaufgaben außerhalb von Prozessen zu schreiben. Unter [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md) finden Sie Empfehlungen dazu, wann Sie eine Hintergrundaufgabe innerhalb eines Prozesses und wann außerhalb eines Prozesses schreiben sollten.
 
-Out-of-Process Hintergrundaufgaben sind ausfallsicherer, da der Hintergrund-Prozess Ihrer app-Prozess schalten kann, wenn ein Fehler auftritt. Aber die Resiliency zum Preis von komplexeren zum Verwalten der prozessübergreifenden Kommunikation zwischen der app und der Hintergrundaufgabe kommt.
+Out-of-Process-Hintergrundaufgaben sind stabiler, da der Hintergrundprozess Ihren app-Prozess Ausfall bringen kann, wenn ein Fehler auftritt. Höhere Stabilität geht jedoch mit einer höheren Komplexität der zum Verwalten der prozessübergreifenden Kommunikation zwischen der app und die Hintergrundaufgabe.
 
-Out-of-Process Hintergrundaufgaben werden als kompakte Klassen implementiert, die die [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) -Schnittstelle implementieren, die das Betriebssystem in einem gesonderten Prozess (backgroundtaskhost.exe) ausgeführt wird. Registrieren einer Hintergrundaufgabe mithilfe der [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) -Klasse. Der Klassenname wird beim Registrieren der Hintergrundaufgabe zum Angeben des Einstiegspunkts verwendet.
+Out-of-Process-Hintergrundaufgaben werden als einfache Klassen implementiert, die [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) Schnittstelle implementieren, die das Betriebssystem in einem separaten Prozess (backgroundtaskhost.exe) ausführt. Registrieren einer Hintergrundaufgabe mithilfe der [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) -Klasse. Der Klassenname wird beim Registrieren der Hintergrundaufgabe zum Angeben des Einstiegspunkts verwendet.
 
-In Windows 10 (Version 1607) können Sie Hintergrundaktivitäten aktivieren, ohne eine Hintergrundaufgabe zu erstellen. Sie können stattdessen Hintergrund Code direkt in den Vordergrund Anwendung Prozess ausführen.
+In Windows 10 (Version 1607) können Sie Hintergrundaktivitäten aktivieren, ohne eine Hintergrundaufgabe zu erstellen. Sie können stattdessen den hintergrundcode direkt in die Vordergrund-App-Prozess im ausführen.
 
 Erste Schritte für das schnelle Erstellen von Hintergrundaufgaben finden Sie unter [Erstellen und Registrieren einer Hintergrundaufgabe innerhalb von Prozessen](create-and-register-an-inproc-background-task.md).
 
@@ -75,11 +75,11 @@ Weitere Informationen finden Sie unter [Reagieren auf Systemereignisse mit Hinte
 | **UserNotPresent**       | Der Benutzer muss abwesend sein.            |
 | **UserPresent**          | Der Benutzer muss anwesend sein.         |
 
-Fügen Sie die **InternetAvailable**-Bedingung zur Hintergrundaufgabe [BackgroundTaskBuilder.AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) hinzu, um die Hintergrundaufgabe zu verzögern, bis der Netzwerkstapel ausgeführt wird. Diese Bedingung spart Energie, da die Hintergrundaufgabe wird nicht ausgeführt, bis das Netzwerk verfügbar ist. Diese Bedingung stellt keine Aktivierung in Echtzeit bereit.
+Fügen Sie die **InternetAvailable**-Bedingung zur Hintergrundaufgabe [BackgroundTaskBuilder.AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) hinzu, um die Hintergrundaufgabe zu verzögern, bis der Netzwerkstapel ausgeführt wird. Dies spart Energie, da die Hintergrundaufgabe nicht ausgeführt, bis das Netzwerk verfügbar ist. Diese Bedingung stellt keine Aktivierung in Echtzeit bereit.
 
-Wenn Ihre Hintergrundaufgabe Netzwerkkonnektivität erforderlich ist, legen Sie [IsNetworkRequested](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) , um sicherzustellen, dass das Netzwerk von bleibt, während der Hintergrundtask ausgeführt wird. Dies weist die Infrastruktur für Hintergrundaufgaben an, die Netzwerkverbindung für die Ausführung der Aufgabe auch dann beizubehalten, wenn sich das Gerät im verbundenen Standbymodus befindet. Wenn Ihre Hintergrundaufgabe **IsNetworkRequested**nicht festgelegt wird, ist dann Ihre Hintergrundaufgabe nicht möglich, auf das Netzwerk im Standbymodus verbunden (beispielsweise, wenn ein Telefon Bildschirm deaktiviert ist.)
+Wenn Ihre Hintergrundaufgabe Netzwerkkonnektivität erforderlich ist, legen Sie [IsNetworkRequested](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) , um sicherzustellen, dass das Netzwerk während der Ausführung der Hintergrundaufgabe unterbrechungsfreie. Dies weist die Infrastruktur für Hintergrundaufgaben an, die Netzwerkverbindung für die Ausführung der Aufgabe auch dann beizubehalten, wenn sich das Gerät im verbundenen Standbymodus befindet. Wenn die Hintergrundaufgabe nicht **IsNetworkRequested**festlegt, klicken Sie dann kann Ihre Hintergrundaufgabe nicht Zugriff auf das Netzwerk, wenn sich dieses im verbundenen Standbymodus befindet (z. B., wenn der Bildschirm eines Smartphones ausgeschaltet ist).
  
-Weitere Informationen zum Hintergrund Aufgabe Bedingungen finden Sie unter [Festlegen von Bedingungen für die Ausführung einer Hintergrundaufgabe](set-conditions-for-running-a-background-task.md).
+Weitere Informationen zu hintergrundaufgabenbedingungen finden Sie unter [Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe](set-conditions-for-running-a-background-task.md).
 
 ## <a name="application-manifest-requirements"></a>App-Manifestanforderungen
 
@@ -143,7 +143,7 @@ Geräte mit beschränktem Arbeitsspeicher haben ein Limit für die Anzahl von Ap
 
 Solange Sie die App nicht davon befreien, bei aktiviertem Stromsparmodus Hintergrundaufgaben auszuführen und Pushbenachrichtigungen zu empfangen, verhindert der Stromsparmodus (falls aktiviert) die Ausführung von Hintergrundaufgaben, falls das Gerät nicht mit einer externen Stromquelle verbunden ist und der Akku eine angegebene Restmenge unterschreitet. Sie können Hintergrundaufgaben aber weiterhin registrieren.
 
-Finden Sie für Enterprise-apps und apps, die nicht im Microsoft Store veröffentlicht wird jedoch [auf unbestimmte Zeit im Hintergrund ausgeführt](run-in-the-background-indefinetly.md) , um zu erfahren, wie eine Funktionen verwenden, um eine Hintergrundaufgabe oder erweiterte Ausführung Sitzung auf unbestimmte Zeit im Hintergrund ausgeführt.
+Allerdings Unternehmens-apps und apps, die nicht im Microsoft Store veröffentlicht werden, finden Sie [im Hintergrund auf unbestimmte Zeit ausgeführt werden](run-in-the-background-indefinetly.md) , erfahren, wie Sie eine Funktionen verwenden, um eine Hintergrundaufgabe oder eine erweiterte ausführungssitzung ohne zeitliche Begrenzung im Hintergrund auszuführen.
 
 ## <a name="background-task-resource-guarantees-for-real-time-communication"></a>Die Ressourcen für Hintergrundaufgabe erlauben die Kommunikation in Echtzeit.
 
@@ -162,7 +162,7 @@ Ihre App kann über eine Hintergrundaufgabe mit der [**DeviceUseTrigger**](https
 > [!IMPORTANT]
 > **DeviceUseTrigger** und **DeviceServicingTrigger** können nicht für prozessinterne Hintergrundaufgaben verwendet werden.
 
-Einige kritische Gerätevorgänge (wie etwa zeitaufwändige Firmwareupdates) können mithilfe von [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) nicht durchgeführt werden. Diese Vorgänge können nur auf dem PC und nur von einer privilegierten App durchgeführt werden, für die [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315) verwendet wird. Eine *privilegierte App* ist eine App, die vom Gerätehersteller dafür autorisiert wurde, diese Vorgänge auszuführen. Mithilfe von Metadaten wird angegeben, welche App, falls zutreffend, als privilegierte App für ein Gerät festgelegt wurde. Weitere Informationen finden Sie unter [Update für Microsoft Gerät Store- und Gerät synchronisieren](http://go.microsoft.com/fwlink/p/?LinkId=306619)
+Einige kritische Gerätevorgänge (wie etwa zeitaufwändige Firmwareupdates) können mithilfe von [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) nicht durchgeführt werden. Diese Vorgänge können nur auf dem PC und nur von einer privilegierten App durchgeführt werden, für die [**DeviceServicingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297315) verwendet wird. Eine *privilegierte App* ist eine App, die vom Gerätehersteller dafür autorisiert wurde, diese Vorgänge auszuführen. Mithilfe von Metadaten wird angegeben, welche App, falls zutreffend, als privilegierte App für ein Gerät festgelegt wurde. Weitere Informationen finden Sie unter [gerätesynchronisierung und-Update für Microsoft Store-Geräte-apps](http://go.microsoft.com/fwlink/p/?LinkId=306619)
 
 ## <a name="managing-background-tasks"></a>Verwalten von Hintergrundaufgaben
 
@@ -171,7 +171,7 @@ Hintergrundaufgaben können mit Ereignissen und lokalem Speicher Fortschritt, Be
 [Behandeln einer abgebrochenen Hintergrundaufgabe](handle-a-cancelled-background-task.md)  
 [Überwachen des Status und Abschlusses von Hintergrundaufgaben](monitor-background-task-progress-and-completion.md)
 
-Überprüfen Sie Ihre Hintergrund Aufgabe Registrierung beim Starten der app. Stellen Sie sicher, dass Ihre app aufgehoben Hintergrundaufgaben in BackgroundTaskBuilder.AllTasks vorhanden sind. Registrieren Sie diejenigen aus, die nicht vorhanden sind. Aufheben der Registrierung alle Aufgaben, die nicht mehr benötigt werden. Dadurch wird sichergestellt, dass alle Hintergrund Aufgaben Registrierungen auf dem neuesten Stand sind, jedes Mal, wenn die app gestartet wird.
+Überprüfen Sie die Registrierung von Hintergrundaufgaben während des app-Starts. Stellen Sie sicher, dass Ihre app nicht gruppierten Hintergrundaufgaben in BackgroundTaskBuilder.AllTasks vorhanden sind. Registrieren Sie erneut diejenigen, die nicht vorhanden sind. Heben Sie die Registrierung alle Aufgaben, die nicht mehr benötigt werden. Dadurch wird sichergestellt, dass alle Hintergrund Aufgaben-Registrierung auf dem neuesten Stand sind, jedes Mal, wenn die app gestartet wird.
 
 ## <a name="related-topics"></a>Verwandte Themen
 
