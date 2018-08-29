@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Beschreibung, beschreiben, Store-Eintrag, Marketing
 ms.localizationpriority: medium
 ms.openlocfilehash: 54877e43ced6044e0866f951a653f2b32d040d9d
-ms.sourcegitcommit: 9a17266f208ec415fc718e5254d5b4c08835150c
+ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "2886713"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "2918821"
 ---
 # <a name="write-a-great-app-description"></a><span data-ttu-id="15913-103">Erstellen einer interessanten App-Beschreibung</span><span class="sxs-lookup"><span data-stu-id="15913-103">Write a great app description</span></span>
 
