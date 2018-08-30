@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 2c78f5f43d93002b90902a7f9e5a943c7239946c
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2913357"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3126597"
 ---
 # <a name="handle-a-cancelled-background-task"></a>Behandeln einer abgebrochenen Hintergrundaufgabe
 
@@ -89,7 +89,7 @@ private:
 
 Legen Sie in der **OnCanceled** -Methode, die Sie in Schritt 1 erstellt haben das Flag-Variable **\_CancelRequested** auf **"true"** fest.
 
-Im vollständigen [Beispiel für eine Hintergrundaufgabe]( http://go.microsoft.com/fwlink/p/?linkid=227509) **OnCanceled** -Methode **\_CancelRequested** auf **"true"** fest, und gibt eine möglicherweise hilfreiche Debugmeldung aus.
+Das vollständige [Beispiel für eine Hintergrundaufgabe]( http://go.microsoft.com/fwlink/p/?linkid=227509) **OnCanceled** -Methode **\_CancelRequested** auf **"true"** fest, und gibt eine möglicherweise hilfreiche Debugmeldung aus.
 
 ```csharp
 private void OnCanceled(IBackgroundTaskInstance sender, BackgroundTaskCancellationReason reason)
@@ -119,7 +119,7 @@ void ExampleBackgroundTask::OnCanceled(IBackgroundTaskInstance^ taskInstance, Ba
 }
 ```
 
-Registrieren Sie in der Hintergrundaufgabe **Run** -Methode die **OnCanceled** -Ereignishandlermethode, bevor die Arbeit beginnen. Für eine Hintergrundaufgabe innerhalb von Prozessen empfiehlt sich diese Registrierung im Rahmen der Anwendungsinitialisierung. Verwenden Sie z. B. die folgende Codezeile.
+Registrieren Sie in der Hintergrundaufgabe **Run** -Methode die **OnCanceled** -Ereignishandlermethode, bevor Sie Arbeit beginnen. Für eine Hintergrundaufgabe innerhalb von Prozessen empfiehlt sich diese Registrierung im Rahmen der Anwendungsinitialisierung. Beispielsweise verwenden Sie die folgende Codezeile aus.
 
 ```csharp
 taskInstance.Canceled += new BackgroundTaskCanceledEventHandler(OnCanceled);
@@ -135,9 +135,9 @@ taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &Exam
 
 ## <a name="handle-cancellation-by-exiting-your-background-task"></a>Behandeln des Abbruchs durch Beenden der Hintergrundaufgabe
 
-Wenn eine Abbruchanforderung empfangen wird, muss die Methode für die Hintergrundverarbeitung angehalten und beendet werden, indem erkannt wird, dass **\_cancelRequested** auf **true** festgelegt wurde. Für in-Process-Hintergrundaufgaben bedeutet dies ein Zurückwechseln aus der **OnBackgroundActivated** -Methode. Für Out-of-Process-Hintergrundaufgaben bedeutet dies ein Zurückwechseln aus der **Run** -Methode.
+Wenn eine Abbruchanforderung empfangen wird, muss die Methode für die Hintergrundverarbeitung angehalten und beendet werden, indem erkannt wird, dass **\_cancelRequested** auf **true** festgelegt wurde. Für Hintergrundaufgaben innerhalb von Prozessen bedeutet dies ein Zurückwechseln aus der **OnBackgroundActivated** -Methode. Für Out-of-Process-Hintergrundaufgaben bedeutet dies ein Zurückwechseln aus der **Run** -Methode.
 
-Ändern Sie den Code der Hintergrundaufgabenklasse, um die Kennzeichenvariable zu überprüfen, während die Hintergrundaufgabe ausgeführt wird. Wenn **\_cancelRequested** auf "true" ist, Arbeit Geschäftsvorgänge festgelegt wird.
+Ändern Sie den Code der Hintergrundaufgabenklasse, um die Kennzeichenvariable zu überprüfen, während die Hintergrundaufgabe ausgeführt wird. Wenn **\_cancelRequested** auf "true", nicht mehr Arbeit nicht fortgesetzt werden kann festgelegt wird.
 
 Das [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) enthält eine Überprüfung, die den regelmäßigen Zeitgeberrückruf anhält, wenn die Hintergrundaufgabe abgebrochen wird.
 
@@ -181,11 +181,11 @@ else
 ```
 
 > [!NOTE]
-> Das oben gezeigte Codebeispiel verwendet die [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797). [**Status**](https://msdn.microsoft.com/library/windows/apps/br224800) -Eigenschaft verwendet wird, um der Fortschritt der Hintergrundaufgabe zu notieren. Der Fortschritt wird der App mithilfe der [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782)-Klasse gemeldet.
+> Das oben gezeigte Codebeispiel verwendet die [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797). [**Status**](https://msdn.microsoft.com/library/windows/apps/br224800) -Eigenschaft, die zum Aufzeichnen der Fortschritt der Hintergrundaufgabe verwendet wird. Der Fortschritt wird der App mithilfe der [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782)-Klasse gemeldet.
 
 Ändern Sie die **Run** -Methode, damit nach dem Anhalten der Arbeit aufzeichnet, ob die Aufgabe ausgeführt oder abgebrochen wurde. Dieser Schritt gilt für Hintergrundaufgaben außerhalb von Prozessen, da eine Möglichkeit für die Kommunikation zwischen Prozessen haben müssen, wenn die Hintergrundaufgabe abgebrochen wurde. Für Hintergrundaufgaben innerhalb von Prozessen können Sie den Status einfach mit der Anwendung teilen, um anzugeben, dass die Aufgabe abgebrochen wurde.
 
-[Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) zeichnet den Status in "localsettings".
+Im [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) zeichnet den Status in "localsettings".
 
 ```csharp
 if ((_cancelRequested == false) && (_progress < 100))
@@ -261,7 +261,7 @@ else
 
 Sie können das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) herunterladen, um diese Codebeispiele im Kontext von Methoden anzuzeigen.
 
-Zur Veranschaulichung zeigt der Beispielcode nur Teile der **Run** -Methode (und des rückruftimers) aus dem [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666).
+Zur Veranschaulichung zeigt der Beispielcode nur Teile der **Run** -Methode (und des rückruftimers) aus dem [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666)an.
 
 ## <a name="run-method-example"></a>Beispiel der Run-Methode
 

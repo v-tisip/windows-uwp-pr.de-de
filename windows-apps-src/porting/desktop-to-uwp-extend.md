@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f3354dad1702d275fb7b2af53516689d2c5d5014
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2914098"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3127218"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>Erweitern Sie Ihre Desktopanwendung mit modernen Windows-UWP-Komponenten
 
@@ -140,7 +140,7 @@ Fügen Sie Ihrem UWP-Projekt eine XAML-Benutzeroberfläche hinzu. Hier sehen Sie
 
 ### <a name="add-a-protocol-extension"></a>Hinzufügen einer Protokollerweiterung
 
-Klicken Sie im **Projektmappen-Explorer**öffnen Sie die Datei **"Package.appxmanifest"** des Verpackung-Projekts in Ihrer Projektmappe, und fügen Sie diese Erweiterung.
+Öffnen Sie im **Projektmappen-Explorer**die Datei **"Package.appxmanifest"** des Verpackung-Projekts in Ihrer Projektmappe und fügen Sie diese Erweiterung hinzu.
 
 ```xml
 <Extensions>
@@ -398,7 +398,7 @@ Damit einer Anwendung als Freigabeziel arbeitet, führen Sie folgende Aktionen a
 
 ### <a name="add-a-share-target-extension"></a>Hinzufügen der Freigabezielerweiterung
 
-Klicken Sie im **Projektmappen-Explorer**öffnen Sie die Datei **"Package.appxmanifest"** des Verpackung-Projekts in Ihrer Projektmappe, und fügen Sie die Erweiterung hinzu.
+Öffnen Sie im **Projektmappen-Explorer**die Datei **"Package.appxmanifest"** des Verpackung-Projekts in Ihrer Projektmappe und fügen Sie die Erweiterung hinzu.
 
 ```xml
 <Extensions>
@@ -512,7 +512,7 @@ public sealed class SiteVerifier : IBackgroundTask
 
 ### <a name="configure-the-background-task"></a>Konfigurieren der Hintergrundaufgabe
 
-Öffnen Sie im manifest-Designer die Datei **"Package.appxmanifest"** des Verpackung-Projekts in Ihrer Lösung.
+Öffnen Sie im manifest-Designer die Datei **"Package.appxmanifest"** des Verpackung-Projekts in Ihrer Projektmappe ein.
 
 Fügen Sie auf der Registerkarte **Deklarationen** eine **Hintergrundaufgaben**-Deklaration hinzu.
 

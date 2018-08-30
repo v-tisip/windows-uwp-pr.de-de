@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, XAML, steuerelement, binden, collection
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ba935b1a5316c2d7af9c7681705595efea7ca08
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2918350"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3112364"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-collection"></a>XAML-Items-Steuerelemente; Binden an eine [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)-Collection
 > [!NOTE]
@@ -37,7 +37,7 @@ Wenn eine Laufzeitklasse, die eine Collection repräsentiert, das Ereignis [**IO
 Es ist hilfreich, eine Observable-Vektor-Vorlage zu haben, die als nützliche, universell einsetzbare Implementierung von [**IObservableVector&lt;T&gt;**](/uwp/api/windows.foundation.collections.iobservablevector_t_) dient. Hier ist eine Klasse namens **single_threaded_observable_vector\<T\>**.
 
 > [!NOTE]
-> Wenn Sie die [Windows 10 SDK Preview Build 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)installiert haben, oder höher, dann können Sie direkt verwenden die **single_threaded_observable_vector\ < T\ >** Factory-Funktion anstelle der untenstehenden codeauflistung (zeigen wir den genauen Code später In diesem Thema). Wenn Sie noch nicht auf die Version des SDKS befinden, werden es Sie einfach Eintrag Codeversion an die **Winrt** -Funktion verwenden, wenn Sie sind.
+> Wenn Sie die [Windows 10 SDK Preview Build 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)installiert haben, oder höher, dann können Sie direkt verwenden die **single_threaded_observable_vector\ < T\ >** Factory-Funktion anstelle der untenstehenden codeauflistung (zeigen wir den genauen Code später In diesem Thema). Wenn Sie noch nicht auf die Version des SDKS befinden, dann werden einfach über Eintrag Codeversion an die **Winrt** -Funktion verwenden, wenn Sie sind.
 
 ```cppwinrt
 // single_threaded_observable_vector.h
@@ -364,7 +364,7 @@ Dieser.
 m_bookSkus = winrt::single_threaded_observable_vector<Windows::Foundation::IInspectable>();
 ```
 
-Rufen Sie [**WinRT:: Make**](https://docs.microsoft.com/en-us/uwp/cpp-ref-for-winrt/make), sondern erstellen Sie das entsprechende Collection-Objekt durch Aufrufen der **single_threaded_observable_vector\ < T\ >** Factory-Funktion.
+Anstelle von [**WinRT:: Make**](https://docs.microsoft.com/en-us/uwp/cpp-ref-for-winrt/make)aufrufen, erstellen Sie das entsprechende Collection-Objekt durch Aufrufen der **single_threaded_observable_vector\ < T\ >** Factory-Funktion.
 
 ## <a name="bind-a-listbox-to-the-bookskus-property"></a>Binden einer Listbox an die **BookSkus**-Eigenschaft
 Öffnen Sie `MainPage.xaml` mit dem XAML-Markup für unsere UI-Hauptseite. Fügen Sie den folgende Markup-Code in dem **StackPanel** hinzu, indem sich der **Button** befindet.

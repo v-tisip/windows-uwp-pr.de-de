@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Gamepad, Vibration
 ms.localizationpriority: medium
 ms.openlocfilehash: f44d5f4dee8293ed40d22a301f2a3d2a9611e15d
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2909957"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3116166"
 ---
 # <a name="gamepad-and-vibration"></a>Gamepad und Vibration
 
@@ -52,7 +52,7 @@ Weitere Informationen finden Sie in der [Übersicht über Vibration und Impulse 
 
 ### <a name="thumbstick-deadzones"></a>Inaktive Ministick-Bereiche
 
-Ein Ministick, der sich in der Mittelstellung (und damit im Ruhezustand) befindet, liefert im Idealfall immer den gleichen neutralen Wert für die X- und die Y-Achse. Aufgrund von mechanischen Kräften und der Empfindlichkeit des Ministicks handelt es sich bei den tatsächlichen Werten in der Mittelposition jedoch lediglich um (ggf. schwankende) Näherungswerte für den idealen neutralen Wert. Aus diesem Grund müssen Sie immer verwenden eine kleine _inaktiven_&mdash;einen Bereich von Wertebereich nahe der idealen Mittelposition&mdash;um herstellungsbedingte abweichungen, mechanische Abnutzung und andere gamepadeffekte zu kompensieren.
+Ein Ministick, der sich in der Mittelstellung (und damit im Ruhezustand) befindet, liefert im Idealfall immer den gleichen neutralen Wert für die X- und die Y-Achse. Aufgrund von mechanischen Kräften und der Empfindlichkeit des Ministicks handelt es sich bei den tatsächlichen Werten in der Mittelposition jedoch lediglich um (ggf. schwankende) Näherungswerte für den idealen neutralen Wert. Aus diesem Grund müssen Sie immer verwenden eine kleine _inaktiven_&mdash;einen Wertebereich nahe der idealen Mittelposition an, die ignoriert werden&mdash;um herstellungsbedingte abweichungen, mechanische Abnutzung und andere gamepadeffekte zu kompensieren.
 
 Durch größere inaktive Bereiche lassen sich ganz einfach beabsichtigte Eingaben von unbeabsichtigten Eingaben unterscheiden.
 
@@ -62,7 +62,7 @@ Weitere Informationen finden Sie unter [Lesen der Ministicks](#reading-the-thumb
 
 Um den Aufwand für die Unterstützung unterschiedlicher Eingabegeräte für die Benutzeroberflächennavigation zu verringern und die Konsistenz zwischen Spielen und Geräten zu fördern, dienen die meisten _physischen_ Eingabegeräte gleichzeitig als getrennte _logische_ Eingabegeräte, die als [Benutzeroberflächen-Navigationscontroller](ui-navigation-controller.md) bezeichnet werden. Der Benutzeroberflächen-Navigationscontroller stellt ein gemeinsames Vokabular für Benutzeroberflächen-Navigationsbefehle über verschiedene Eingabegeräte hinweg bereit.
 
-Als eine Benutzeroberflächen-navigationscontroller ordnen Gamepads den [erforderlichen Satz](ui-navigation-controller.md#required-set) von Navigationsbefehlen auf der linken Ministick, dem Steuerkreuz, **Ansicht**, **Menü**, **A**und **B** Schaltflächen.
+Als Benutzeroberflächen-navigationscontroller ordnen Gamepads den [Erforderlicher Satz](ui-navigation-controller.md#required-set) von Navigationsbefehlen auf der linken Ministick, dem Steuerkreuz, **Ansicht**, **Menü**, **A**und **B** Schaltflächen.
 
 | Navigationsbefehl | Gamepadeingabe                       |
 | ------------------:| ----------------------------------- |
@@ -98,9 +98,9 @@ Gamepads werden vom System verwaltet. Daher müssen Sie diese nicht erstellen od
 
 ### <a name="the-gamepads-list"></a>Die Gamepadliste
 
-Die [Gamepad][]-Klasse stellt die statische Eigenschaft [Gamepads][] bereit. Hierbei handelt es sich um eine schreibgeschützte Liste mit derzeit verbundenen Gamepads. Da Sie möglicherweise nur an einigen der verbundenen Gamepads interessiert sind, wird empfohlen, dass Sie anstatt auf diese über eine eigene Sammlung Verwalten der `Gamepads` Eigenschaft.
+Die [Gamepad][]-Klasse stellt die statische Eigenschaft [Gamepads][] bereit. Hierbei handelt es sich um eine schreibgeschützte Liste mit derzeit verbundenen Gamepads. Da Sie möglicherweise nur an einigen der verbundenen Gamepads interessiert sind, wird empfohlen, dass Sie anstelle der Zugriff auf diese über eine eigene Sammlung Verwalten der `Gamepads` Eigenschaft.
 
-Im folgenden Beispiel werden alle verbundenen Gamepads in eine neue Sammlung kopiert. Beachten Sie, da andere Threads im Hintergrund diese Sammlung (in den Ereignissen [GamepadAdded][] und [GamepadRemoved][] ) zugreift, müssen Sie eine Sperre sämtlichen Code zu platzieren, das liest oder aktualisiert die Auflistung.
+Im folgenden Beispiel werden alle verbundenen Gamepads in eine neue Sammlung kopiert. Beachten Sie, dass da andere Threads im Hintergrund diese Sammlung (in den Ereignissen [GamepadAdded][] und [GamepadRemoved][] ) zugreifen, müssen Sie eine Sperre sämtlichen Code zu platzieren, die liest oder die Sammlung aktualisiert.
 
 ```cpp
 auto myGamepads = ref new Vector<Gamepad^>();
@@ -142,7 +142,7 @@ Gamepad::GamepadAdded += ref new EventHandler<Gamepad^>(Platform::Object^, Gamep
 }
 ```
 
-Im folgende Beispiel wird die nachverfolgung eines Gamepads, das entfernt wurden beendet. Sie müssen auch behandeln, was mit Gamepads geschieht, die Sie nachverfolgen können, wenn sie entfernt sind; Beispielsweise wird dieser Code nur verfolgt Eingaben von einem Gamepad und legt es einfach auf `nullptr` Wenn es entfernt wird. Sie müssen überprüfen, jede Frame, falls Ihre Gamepad aktiv ist, und Update welche Gamepad Sie Eingaben von sammeln sind Wenn Domänencontroller verbunden und getrennt sind.
+Im folgende Beispiel wird die nachverfolgung eines Gamepads, das entfernt wurden beendet. Sie müssen auch behandeln, was mit Gamepads geschieht, die Sie nachverfolgen können, wenn sie entfernt werden. Angenommen, dieser Code nur verfolgt Eingaben von einem Gamepad und legt es einfach auf `nullptr` Wenn es entfernt wird. Sie müssen überprüfen Sie jedes Frame, falls Ihre Gamepad aktiv ist und Update welche Gamepad Sie Eingaben von sammeln sind Wenn Domänencontroller verbunden und getrennt sind.
 
 ```cpp
 Gamepad::GamepadRemoved += ref new EventHandler<Gamepad^>(Platform::Object^, Gamepad^ args)
@@ -190,7 +190,7 @@ Zusätzlich zum Zustand des Gamepads enthält jeder Wert einen Zeitstempel, der 
 
 ### <a name="reading-the-thumbsticks"></a>Lesen der Ministicks
 
-Jeder Ministick liefert einen analogen Wert zwischen -1,0 und +1,0 auf der X- und der Y-Achse. Auf der X-Achse entspricht der Wert -1,0 der äußerst linken Ministickposition und der Wert +1,0 der äußerst rechten Position. Auf der Y-Achse entspricht der Wert -1,0 der niedrigsten Ministickposition und der Wert +1,0 der höchsten Position. In beiden Achsen ist der Wert ungefähr 0,0, wenn der Stick in die Mittelstellung zurückkehrt, aber normalerwiese weicht der genaue Wert ab, sogar in aufeinanderfolgenden Messwerten; Strategien zur Minimierung dieser Abweichung werden weiter unten in diesem Abschnitt behandelt.
+Jeder Ministick liefert einen analogen Wert zwischen -1,0 und +1,0 auf der X- und der Y-Achse. Auf der X-Achse entspricht der Wert -1,0 der äußerst linken Ministickposition und der Wert +1,0 der äußerst rechten Position. Auf der Y-Achse entspricht der Wert -1,0 der niedrigsten Ministickposition und der Wert +1,0 der höchsten Position. In beiden Achsen ist der Wert ungefähr 0,0, wenn sich der Stick in die Mittelstellung zurückkehrt, aber normalerwiese weicht der genaue Wert ab, sogar in aufeinanderfolgenden Messwerten; Strategien zur Minimierung dieser Abweichung werden weiter unten in diesem Abschnitt behandelt.
 
 Der X-Achsenwert des linken Ministicks wird aus der `LeftThumbstickX`-Eigenschaft der [GamepadReading][]-Struktur gelesen. Der Y-Achsenwert stammt aus der `LeftThumbstickY`-Eigenschaft. Der X-Achsenwert des rechten Ministicks wird aus der `RightThumbstickX`-Eigenschaft gelesen. Der Y-Achsenwert stammt aus der `RightThumbstickY`-Eigenschaft.
 
@@ -201,7 +201,7 @@ float rightStickX = reading.RightThumbstickX; // returns a value between -1.0 an
 float rightStickY = reading.RightThumbstickY; // returns a value between -1.0 and +1.0
 ```
 
-Sie werden feststellen, dass die gelesenen Ministickwerte nicht zuverlässig einen neutralen 0,0-Wert liefern, wenn sich der Ministick in der Mittelstellung (und damit im Ruhezustand) befindet. Stattdessen erhalten Sie verschiedene Näherungswerte für 0,0, wann immer der Ministicks bewegt wurde und wieder in die Mittelstellung zurückkehrt. Zur Kompensierung dieser Abweichungen können Sie einen kleinen _inaktiven Bereich_ implementieren (also einen zu ignorierenden Wertebereich nahe der idealen Mittelposition). Zur Implementierung eines inaktiven Bereichs können Sie beispielsweise ermitteln, wie weit sich der Ministick von der Mittelposition entfernt hat, und dabei die Werte ignorieren, die eine bestimmte, von Ihnen gewählte Entfernung unterschreiten. Sie können grobe Entfernung&mdash;Berechnung ist nicht exakt, da die ministickwerte im Grunde polar und nicht planar sind&mdash;mit dem Satz des Pythagoras. Dadurch entsteht ein radialer inaktiver Bereich.
+Sie werden feststellen, dass die gelesenen Ministickwerte nicht zuverlässig einen neutralen 0,0-Wert liefern, wenn sich der Ministick in der Mittelstellung (und damit im Ruhezustand) befindet. Stattdessen erhalten Sie verschiedene Näherungswerte für 0,0, wann immer der Ministicks bewegt wurde und wieder in die Mittelstellung zurückkehrt. Zur Kompensierung dieser Abweichungen können Sie einen kleinen _inaktiven Bereich_ implementieren (also einen zu ignorierenden Wertebereich nahe der idealen Mittelposition). Zur Implementierung eines inaktiven Bereichs können Sie beispielsweise ermitteln, wie weit sich der Ministick von der Mittelposition entfernt hat, und dabei die Werte ignorieren, die eine bestimmte, von Ihnen gewählte Entfernung unterschreiten. Sie können grobe Entfernung&mdash;es ist nicht exakt, da die ministickwerte im Grunde polar und nicht planar sind&mdash;mit dem Satz des Pythagoras. Dadurch entsteht ein radialer inaktiver Bereich.
 
 Das folgende Beispiel veranschaulicht einen einfachen radialen inaktiven Bereich unter Verwendung des Satzes des Pythagoras.
 
@@ -237,7 +237,7 @@ float rightTrigger = reading.RightTrigger; // returns a value between 0.0 and 1.
 
 ### <a name="reading-the-buttons"></a>Lesen der Tasten
 
-Jede der gamepadtasten&mdash;die vier Richtungen des das Steuerkreuz, linke und Rechte Bumper, linken und rechten Ministick drücken, **A**, **B**, **X**, **Y**, **Ansichts-** und **Menü**&mdash;bietet eine digitale Lesen der Gibt an, ob sie gedrückt (unten) oder freigegeben (oben). Aus Effizienzgründen werden nicht Effizienzgründen als einzelne boolesche Werte dargestellt. Stattdessen sind alle in einem einzelnen Bitfeld Effizienzgründen, die von der [GamepadButtons][] -Enumeration dargestellt wird.
+Jede der gamepadtasten&mdash;die vier Richtungen des Steuerkreuz, linke und Rechte Bumper, linken und rechten Ministick drücken, **A**, **B**, **X**, **Y**, **Ansichts-** und **Menü**&mdash;bietet eine digitale Lesen der Gibt an, ob sie gedrückt (unten) oder freigegeben (oben). Aus Effizienzgründen werden nicht Effizienzgründen als einzelne boolesche Werte dargestellt. Stattdessen sind alle in einem einzelnen Bitfeld Effizienzgründen, die von der [GamepadButtons][] -Enumeration dargestellt wird.
 
 <!-- > [!NOTE]
 > The Xbox Elite Wireless Controller is equipped with four additional **paddle** buttons on its underside. These buttons are also represented in the `GamepadButtons` enumeration and their values are read in the same way as the standard gamepad buttons. -->
@@ -262,7 +262,7 @@ if (GamepadButtons::None == (reading.Buttons & GamepadButtons::A))
 }
 ```
 
-Manchmal empfiehlt um zu bestimmen, wann eine Schaltfläche von übergeht zu freigegebenen gedrückt oder losgelassen zu gedrückt, ob mehrere Tasten gedrückt oder losgelassen werden, oder ob verschiedene Tasten in einer bestimmten Weise angeordnet sind&mdash;einige sind gedrückt, andere nicht. Informationen zum Ermitteln dieser Bedingungen finden Sie unter [Erkennen von Tastenübergängen](input-practices-for-games.md#detecting-button-transitions) sowie unter [Erkennen von komplexen Tastenanordnungen](input-practices-for-games.md#detecting-complex-button-arrangements).
+In einigen Fällen empfiehlt um zu bestimmen, wann eine Schaltfläche von übergeht zu freigegebenen gedrückt oder losgelassen zu gedrückt, ob mehrere Tasten gedrückt oder losgelassen werden, oder wenn eine Reihe von Schaltflächen in einer bestimmten Weise angeordnet sind&mdash;einige sind gedrückt, andere nicht. Informationen zum Ermitteln dieser Bedingungen finden Sie unter [Erkennen von Tastenübergängen](input-practices-for-games.md#detecting-button-transitions) sowie unter [Erkennen von komplexen Tastenanordnungen](input-practices-for-games.md#detecting-complex-button-arrangements).
 
 ## <a name="run-the-gamepad-input-sample"></a>Ausführen des Gamepad-Eingabebeispiels
 
@@ -278,7 +278,7 @@ Xbox One-Gamepads sind mit insgesamt vier unabhängigen Vibrationsmotoren ausges
 
 Gamepadvibrationen werden über die [Vibration][]-Eigenschaft der [Gamepad][]-Klasse gesteuert. `Vibration` ist eine Instanz der [GamepadVibration][]-Struktur, die sich aus vier Gleitkommawerten zusammensetzt, welche jeweils für die Intensität eines der Motoren stehen.
 
-Obwohl die Mitglieder der der `Gamepad.Vibration` Eigenschaft kann direkt geändert werden, es wird empfohlen, dass Sie eine Separate initialisieren `GamepadVibration` -Instanz, die gewünschten Werte ein, und kopieren Sie ihn in, die `Gamepad.Vibration` Eigenschaft motorintensitäten gleichzeitig zu ändern.
+Obwohl die Mitglieder der der `Gamepad.Vibration` Eigenschaft kann direkt geändert werden, es wird empfohlen, dass Sie eine Separate initialisieren `GamepadVibration` -Instanz, die gewünschten Werte ein, und kopieren Sie ihn in, die `Gamepad.Vibration` Eigenschaft, um die motorintensitäten gleichzeitig zu ändern.
 
 Im folgenden Beispiel wird das gleichzeitige Ändern aller Motorintensitäten veranschaulicht.
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f7359b2ae40e9b53d5ab73ee93402b11beab629
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2918721"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3112334"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Einrichten von Auszahlungskonten und Steuerformularen.
 
@@ -27,7 +27,7 @@ Falls Sie ausschließlich kostenlose Apps anbieten möchten (und keine In-App-Ei
 > [!NOTE]
 > In [bestimmten Märkten](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) können Entwickler nur kostenlose Apps übermitteln. Wenn Ihr Konto in einem dieser Märkte registriert ist, steht die Option zum Einrichten eines Auszahlungskontos nicht zur Verfügung.
 
-Nachdem Sie [Ihr Entwicklerkonto eingerichtet](opening-a-developer-account.md)haben, Dinge gibt es zwei, die Sie tun, bevor Sie apps (oder -Add-Ons) verkaufen können im Microsoft Store:
+Nachdem Sie [Ihr Entwicklerkonto eingerichtet](opening-a-developer-account.md)haben, gibt es zwei Dinge, die Sie tun, bevor Sie apps (oder -Add-Ons) verkaufen können im Microsoft Store an:
 
 -   [Einrichten eines Auszahlungskontos](#payout-account)
 -   [Ausfüllen der Steuerformulare](#tax-forms)
@@ -158,7 +158,7 @@ Die von Ihnen in den Steuerformularen übermittelten Informationen sind ausschla
 
 ### <a name="tax-treaty-benefits"></a>Vorteile des Steuerabkommens
 
-Wenn Sie nicht in den USA ansässig sind, können Sie unter Umständen von den Vorteilen des Steuerabkommens profitieren. Diese Vorteile variieren von Land zu Land, und möglicherweise können Sie die, die im Microsoft Store einbehaltenen steuern reduzieren. Sie müssen TeilII des W-8BEN-Formulars ausfüllen, um die Vorteile eines Steuerabkommens in Anspruch nehmen zu können. Wir empfehlen Ihnen, sich bei den zuständigen Stellen in Ihrem Land oder Ihrer Region zu erkundigen, ob diese Vorteile auf Sie zutreffen.
+Wenn Sie nicht in den USA ansässig sind, können Sie unter Umständen von den Vorteilen des Steuerabkommens profitieren. Diese Vorteile variieren von Land zu Land, und können Sie die, die den Microsoft Store einbehaltenen steuern reduzieren. Sie müssen TeilII des W-8BEN-Formulars ausfüllen, um die Vorteile eines Steuerabkommens in Anspruch nehmen zu können. Wir empfehlen Ihnen, sich bei den zuständigen Stellen in Ihrem Land oder Ihrer Region zu erkundigen, ob diese Vorteile auf Sie zutreffen.
 
  
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 3ba33a1e79a2447c5dac546ce0f1caeaf16929a3
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2912197"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3113650"
 ---
 # <a name="capture-photos-and-video-with-windows-built-in-camera-ui"></a>Aufnehmen von Fotos und Videos mit der in Windows integrierten Kamera-UI
 
@@ -26,7 +26,7 @@ Dieser Artikel beschreibt, wie Sie die „CameraCaptureUI“-Klasse zum Aufnehme
 Wenn Sie eine eigene Kamera-UI bereitstellen möchten oder Ihr Szenario eine zuverlässigere Steuerung des Aufnahmevorgangs auf unterster Ebene erfordert, sollten Sie das [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124)-Objekt verwenden und Ihre eigene Aufzeichnungsoberfläche implementieren. Weitere Informationen finden Sie unter [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md).
 
 > [!NOTE]
-> Sie sollten die **Webcam-** oder **Mikrofonfunktion** Funktionen nicht in Ihrer app-Manifestdatei angeben, wenn Ihre app nur "cameracaptureui" verwendet. Andernfalls wird Ihre App in den Datenschutzeinstellungen für die Kamera angezeigt. Aber auch wenn der Benutzer den Kamerazugriff auf Ihre App verweigert, wird dadurch nicht verhindert, dass „CameraCaptureUI“ Medien aufzeichnet. Das liegt daran, dass es sich bei der integrierten Kamera-App von Windows um eine vertrauenswürdige Erstanbieter-App handelt, die erfordert, dass der Benutzer die Foto-, Audio- und Videoaufnahme durch einen Tastendruck initiiert. Ihre app möglicherweise Zertifizierungskit für Windows-Anwendung-Zertifizierung, falls an den Store übermittelt werden, wenn Sie die Funktionen Webcam- oder Mikrofonfunktion angeben, wenn "cameracaptureui" als Ihre nur Foto-Capture-Mechanismus verwenden.
+> Sie sollten die **Webcam-** oder **Mikrofonfunktion** Funktionen nicht in der app-Manifestdatei angeben, wenn Ihre app nur "cameracaptureui" verwendet. Andernfalls wird Ihre App in den Datenschutzeinstellungen für die Kamera angezeigt. Aber auch wenn der Benutzer den Kamerazugriff auf Ihre App verweigert, wird dadurch nicht verhindert, dass „CameraCaptureUI“ Medien aufzeichnet. Das liegt daran, dass es sich bei der integrierten Kamera-App von Windows um eine vertrauenswürdige Erstanbieter-App handelt, die erfordert, dass der Benutzer die Foto-, Audio- und Videoaufnahme durch einen Tastendruck initiiert. Ihre app möglicherweise bei an den Store übermittelt werden, wenn Sie die Funktionen Webcam- oder Mikrofonfunktion angeben, bei Verwendung von "cameracaptureui" als Ihre nur Foto-Capture-Mechanismus Zertifizierungskit für Windows-Anwendung-Zertifizierung.
 > Sie müssen die Webcam- oder Mikrofonfunktion in Ihrem App-Manifest angeben, wenn Sie „MediaCapture“ für die programmgesteuerte Audio-, Foto- oder Videoaufnahme verwenden.
 
 ## <a name="capture-a-photo-with-cameracaptureui"></a>Aufnehmen eines Fotos mit „CameraCaptureUI“

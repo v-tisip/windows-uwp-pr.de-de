@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projiziert, projizierung, varbeiten, ereignis, delegat
 ms.localizationpriority: medium
 ms.openlocfilehash: a29c095e49b49baa63bd547c0bb928ad7f78aa86
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2906006"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3125169"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Verarbeiten von Ereignissen über Delegaten in [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Dieses Thema zeigt, wie man Event-Handling-Delegaten mit C++/WinRT registriert und widerruft. Sie können ein Ereignis mit jedem Objekt verarbeiten, das einer normalen C++ Funktion entspricht.
@@ -122,7 +122,7 @@ private:
 
 Anstatt eines starken Verweises wie im obigen Beispiel können Sie einen schwachen Verweis auf die Schaltfläche speichern (siehe [Schwache Referenzen in C++/WinRT](weak-references.md)).
 
-Wenn Sie einen deleganten registrieren, können Sie auch angeben **WinRT:: auto_revoke** (was ein Wert von Typ [**WinRT:: auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t)ist) um einen Event-Revoker (vom Typ [**event_revoker**](/uwp/cpp-ref-for-winrt/event-revoker)) anzufordern. Der Event-Revoker enthält einen schwachen Verweis auf die Ereignisquelle (das Objekt, das das Ereignis auslöst) für Sie. Sie können manuell widerrufen, indem Sie die Mitgliedsfunktion **event_revoker::revoke** aufrufen; der Event-Revoker ruft diese Funktion aber selbst automatisch auf, wenn sie ihren Gültigkeitsbereich verlässt. Die **revoke**-Funktion überprüft, ob die Ereignisquelle noch vorhanden ist, und widerruft in diesem Fall den Delegaten. In diesem Beispiel gibt es keine Notwendigkeit, die Ereignisquelle zu speichern, und daher auch keinen Bedarf für einen Destruktor.
+Alternativ, wenn Sie einen deleganten registrieren, können Sie angeben **WinRT:: auto_revoke** (also einen Wert von Typ [**WinRT:: auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t)) um einen Event-Revoker (vom Typ [**event_revoker**](/uwp/cpp-ref-for-winrt/event-revoker)) anzufordern. Der Event-Revoker enthält einen schwachen Verweis auf die Ereignisquelle (das Objekt, das das Ereignis auslöst) für Sie. Sie können manuell widerrufen, indem Sie die Mitgliedsfunktion **event_revoker::revoke** aufrufen; der Event-Revoker ruft diese Funktion aber selbst automatisch auf, wenn sie ihren Gültigkeitsbereich verlässt. Die **revoke**-Funktion überprüft, ob die Ereignisquelle noch vorhanden ist, und widerruft in diesem Fall den Delegaten. In diesem Beispiel gibt es keine Notwendigkeit, die Ereignisquelle zu speichern, und daher auch keinen Bedarf für einen Destruktor.
 
 ```cppwinrt
 struct Example : ExampleT<Example>

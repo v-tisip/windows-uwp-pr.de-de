@@ -1,9 +1,9 @@
 ---
-author: serenaz
+author: QuinnRadich
 Description: Learn how to use page transitions in your UWP apps.
 title: Seitenübergänge in UWP-Apps
 template: detail.hbs
-ms.author: sezhen
+ms.author: quradic
 ms.date: 04/08/2018
 ms.topic: article
 ms.prod: windows
@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 pm-contact: stmoy
 ms.localizationpriority: medium
-ms.openlocfilehash: cba05cd9106d64f443e87b1e8373b2501d0ce451
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 0afc2c55ab0d0bdd2bee0206f986b2724d331eaf
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1842237"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3116338"
 ---
 # <a name="page-transitions"></a>Seitenübergänge
 
 Seitenübergänge sind Animationen, die abgespielt werden, wenn Benutzer zwischen Seiten in einer App navigieren und Feedback als Beziehung zwischen Seiten liefern. Seitenübergänge zeigen dem Benutzer, ob er an der Spitze einer Navigationshierarchie steht, zwischen Geschwisterseiten wechselt oder tiefer in die Seitenhierarchie navigiert.
 
-Für die Navigation zwischen Seiten in einer App stehen zwei verschiedene Animationen zur Verfügung: *Seitenaktualisierung* und *Drill*. Sie werden durch Unterklassen von [**NavigationTransitionInfo**](/api/windows.ui.xaml.media.animation.navigationtransitioninfo) dargestellt.
+Für die Navigation zwischen Seiten in einer App stehen zwei verschiedene Animationen zur Verfügung: *Seitenaktualisierung* und *Drill*. Sie werden durch Unterklassen von [**NavigationTransitionInfo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.navigationtransitioninfo) dargestellt.
 
 ## <a name="page-refresh"></a>Seite aktualisieren
 
@@ -32,7 +32,7 @@ Der gewünschte Effekt ist ein Neubeginn für den Benutzer.
 
 ![Seitenaktualisierungsanimation](images/page-refresh.gif)
 
-Die Seitenaktualisierungsanimation wird durch die Klasse [**EntranceNavigationTransitionInfo**](/api/windows.ui.xaml.media.animation.entrancenavigationtransitioninfo) dargestellt.
+Die Seitenaktualisierungsanimation wird durch die Klasse [**EntranceNavigationTransitionInfo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.entrancenavigationtransitioninfo) dargestellt.
 
 ```csharp
 // Explicitly play the page refresh animation
@@ -50,7 +50,7 @@ Der gewünschte Effekt ist, dass der Benutzer tiefer in die App vorgedrungen ist
 
 ![Drill-Animation](images/drill.gif)
 
-Die Drill-Animation wird durch die Klasse [**DrillInNavigationTransitionInfo**](/api/windows.ui.xaml.media.animation.drillinnavigationtransitioninfo) dargestellt.
+Die Drill-Animation wird durch die Klasse [**DrillInNavigationTransitionInfo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.drillinnavigationtransitioninfo) dargestellt.
 
 ```csharp
 // Play the drill in animation
@@ -59,7 +59,7 @@ myFrame.Navigate(typeof(Page2), null, new DrillInNavigationTransitionInfo());
 
 ## <a name="suppress"></a>Unterdrückung
 
-Um die Wiedergabe von Animationen während der Navigation zu vermeiden, verwenden Sie [**SuppressNavigationTransitionInfo**](/api/windows.ui.xaml.media.animation.suppressnavigationtransitioninfo) anstelle anderer **NavigationTransitionInfo**-Subtypen.
+Um die Wiedergabe von Animationen während der Navigation zu vermeiden, verwenden Sie [**SuppressNavigationTransitionInfo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.suppressnavigationtransitioninfo) anstelle anderer **NavigationTransitionInfo**-Subtypen.
 
 ```csharp
 // Suppress the default animation

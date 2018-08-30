@@ -1,8 +1,8 @@
 ---
-author: serenaz
+author: QuinnRadich
 description: Hier erfahren Sie, wie Sie Akzentfarben und Designs in Ihren UWP-Apps verwenden.
 title: Farbe in UWP-Apps
-ms.author: sezhen
+ms.author: quradic
 ms.date: 4/7/2018
 ms.topic: article
 ms.prod: windows
@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: Windows10, UWP
 design-contact: karenmui
 ms.localizationpriority: medium
-ms.openlocfilehash: fc348dc4f4733feae86a94e0ada1693326a201d8
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 19f4d9cde6ee2bc9615f044f18bc5e8828ca1985
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843190"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3123429"
 ---
 # <a name="color"></a>Farben
 
@@ -27,17 +27,27 @@ In UWP-Apps werden die Farben in erster Linie durch Akzentfarbe und Design besti
 
 ## <a name="color-principles"></a>Farbprinzipien
 
-:::row::: :::column::: **Farbe sinnvoll verwenden.**
+:::row:::
+    :::column:::
+        **Verwenden Sie keinen nennenswerten Beitrag Farbe.**
 Wenn Farbe sparsam verwendet wird, um wichtige Elemente zu markieren, können sie eine Benutzeroberfläche erstellen, die flüssig und intuitiv ist.
-:::column-end::: :::column::: **Farbe zur Angabe der Interaktivität verwenden.**
+    :::column-end:::
+    :::column:::
+        **Verwenden Sie Farbe, um Interaktivität.**
 Es ist sinnvoll, eine Farbe auszuwählen, die die interaktiven Elementen Ihrer Anwendung angibt. Beispielsweise verwenden viele Webseiten blauen Text, um einen Link zu kennzeichnen.
-:::column-end::: :::row-end:::
+    :::column-end:::
+:::row-end:::
 
-:::row::: :::column::: **Farbe ist persönlich.**
+:::row:::
+    :::column:::
+        **Farbe ist persönlich.**
 Benutzer können unter Windows eine Akzentfarbe sowie ein helles oder dunkles Design auswählen, die sich auf der gesamten Benutzeroberfläche widerspiegeln. Sie können auswählen, wie Sie die Akzentfarbe des Benutzers und das Design in Ihre Anwendung integrieren, um ihrer Erfahrung zu personalisieren.
-:::column-end::: :::column::: **Farbe ist kulturell.**
+    :::column-end:::
+    :::column:::
+        **Farbe ist kulturell.**
 Achten Sie darauf, wie Farben von Personen aus unterschiedlichen Kulturen interpretiert werden. In einigen Kulturen wird die Farbe Blau z. B. mit Tugend und Schutz assoziiert, während sie in anderen Trauer darstellt.
-:::column-end::: :::row-end:::
+    :::column-end:::
+:::row-end:::
 
 ## <a name="themes"></a>Designs
 
@@ -96,7 +106,9 @@ Die Designpinsel werden für folgende Zwecke verwendet:
 
 ### <a name="using-theme-brushes"></a>Verwenden der Designpinsel
 
-:::row::: :::column::: Beim Erstellen von Vorlagen für benutzerdefinierte Steuerelemente, verwenden Sie Designpinsel anstelle von hartcodierten Farbwerten. Auf diese Weise lässt sich Ihre App problemlos auf alle Designs anpassen.
+:::row:::
+    :::column:::
+        Beim Erstellen von Vorlagen für benutzerdefinierte Steuerelemente, verwenden Sie Designpinsel anstelle von hartcodierten Farbwerten. Auf diese Weise lässt sich Ihre App problemlos auf alle Designs anpassen.
 
         For example, these [item templates for ListView](../controls-and-patterns/item-templates-listview.md) demonstrate how to use theme brushes in a custom template.
     :::column-end:::
@@ -133,7 +145,14 @@ Allgemeine Steuerelemente verwenden eine Akzentfarbe, um die Zustandsinformation
 
 ![Windows-Steuerelemente](images/color/windows-controls.svg)
 
-:::row::: :::column::: ![vom Benutzer ausgewählter Akzent-Header](images/color/user-accent.svg) ![vom Benutzer ausgewählte Akzentfarbe](images/color/user-selected-accent.svg) :::column-end::: :::column::: ![benutzerdefinierte Akzent-Header](images/color/custom-accent.svg) ![benutzerdefinierte Akzentfarbe der Marke](images/color/brand-color.svg) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![vom Benutzer ausgewählte Akzentfarbe Header](images/color/user-accent.svg) ![vom Benutzer ausgewählte Akzentfarbe](images/color/user-selected-accent.svg)
+    :::column-end:::
+    :::column:::
+        ![Benutzerdefinierte Akzentfarbe Header](images/color/custom-accent.svg) ![benutzerdefinierte Marke Akzentfarbe](images/color/brand-color.svg)
+    :::column-end:::
+:::row-end:::
 
 ### <a name="overriding-the-accent-color"></a>Überschreiben der Akzentfarbe
 
@@ -237,7 +256,11 @@ Weitere Informationen über die Verwendung der Pinsel finden Sie unter [XAML-Pin
 
 ## <a name="usability"></a>Benutzerfreundlichkeit
 
-:::row::: :::column::: ![Abbildung Kontrast](images/color/illo-contrast.svg) :::column-end::: :::column span="2"::: **Kontrast**
+:::row:::
+    :::column:::
+        ![Abbildung mit hohem Kontrast](images/color/illo-contrast.svg)
+    :::column-end:::
+    ::: Column Span = "2"::: **Kontrast**
 
         Make sure that elements and images have sufficient contrast to differentiate between them, regardless of the accent color or theme.
 
@@ -245,13 +268,21 @@ Weitere Informationen über die Verwendung der Pinsel finden Sie unter [XAML-Pin
     :::column-end:::
 :::row-end:::
 
-:::row::: :::column::: ![Abbildung Kontrast](images/color/illo-lighting.svg) :::column-end::: :::column span="2"::: **Licht**
+:::row:::
+    :::column:::
+        ![Abbildung mit hohem Kontrast](images/color/illo-lighting.svg)
+    :::column-end:::
+    ::: Column Span = "2"::: **Beleuchtung**
 
         Be aware that variation in ambient lighting can affect the useability of your app. For example, a page with a black background might unreadable outside due to screen glare, while a page with a white background might be painful to look at in a dark room.
     :::column-end:::
 :::row-end:::
 
-:::row::: :::column::: ![Abbildung Kontrast](images/color/illo-colorblindness.svg) :::column-end::: :::column span="2"::: **Farbenblindheit**
+:::row:::
+    :::column:::
+        ![Abbildung mit hohem Kontrast](images/color/illo-colorblindness.svg)
+    :::column-end:::
+    ::: Column Span = "2"::: **Farbenblindheit**
 
         Be aware of how colorblindness could affect the useability of your application. For example, a user with red-green colorblindness will have difficulty distinguishing red and green elements from each other. About **8 percent of men** and **0.5 percent of women** are red-green colorblind, so avoid using these color combinations as the sole differentiator between application elements.
     :::column-end:::

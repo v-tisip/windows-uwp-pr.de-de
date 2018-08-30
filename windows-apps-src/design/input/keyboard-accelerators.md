@@ -15,11 +15,11 @@ design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: ce84debc3422f923c7c88aae1fa216665ef1ef0f
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2913077"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3120887"
 ---
 # <a name="keyboard-accelerators"></a>Zugriffstasten
 
@@ -400,7 +400,7 @@ Für die [Schaltfläche](https://docs.microsoft.com/uwp/api/windows.ui.xaml.cont
 
 ![QuickInfo für Zugriffstasten](images/accelerators/accelerators-button-small.png)
 
-*Der Schaltfläche standardmäßig QuickInfo angefügte Zugriffstastenkombination*
+*Schaltfläche standardmäßig QuickInfo angefügte Zugriffstastenkombination*
 
 ```xaml
 <AppBarButton Icon="Save" Label="Save">

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Eintrag, Beschreibung, Store-Seite, Versionshinweise, Titel
 ms.localizationpriority: medium
 ms.openlocfilehash: bd3585b1a2fee2a00c99990b32902b524f3318da
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2910290"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3114977"
 ---
 # <a name="create-app-store-listings"></a>Erstellen von Store-Einträgen für Apps
 
@@ -44,7 +44,7 @@ Wenn Sie Ihre Auswahl getroffen haben, klicken Sie auf **Speichern**, um zur Üb
 
 ## <a name="add-and-edit-store-listing-info"></a>Hinzufügen und Bearbeiten von Store-Eintrag Informationen
 
-Wählen Sie zum Bearbeiten eines Store-Eintrags den Namen der Sprache in der übermittlungsübersicht.
+Wählen Sie den Namen der Sprache zum Bearbeiten eines Store-Eintrags in der übermittlungsübersicht.
 
 Oben auf der Seite **Store-Eintrag** sehen Sie die Felder, die dem standardmäßigen Store-Eintrag für die ausgewählte Sprache zugeordnet sind. Diese Felder sind für alle Kunden sichtbar, sofern keine Pakete für frühere Betriebssystemversionen (Windows8.x oder früher, Windows Phone8.x oder früher) vorhanden sind und Sie keine plattformspezifischen Store-Einträge mit verschiedenen Screenshots oder Informationen erstellt haben, die Kunden unter den angegebenen Betriebssystemversionen angezeigt werden. Weitere Informationen finden Sie unter [Erstellen plattformspezifischer Store-Einträge](create-platform-specific-store-listings.md).
 
@@ -52,12 +52,12 @@ Oben auf der Seite **Store-Eintrag** sehen Sie die Felder, die dem standardmäß
 
 Diese Dropdown-Feld können Sie angeben, welche Namen im Store-Eintrag verwendet werden soll (Wenn Sie mehr als einen Namen für die app reserviert haben).
 
-Wenn Sie Pakete in der gleichen Sprache als der Store-Eintrag, an denen Sie arbeiten hochgeladen haben, werden die Namen in diese Pakete ausgewählt. Wenn Sie zum [Benennen Sie der app](manage-app-names.md#rename-an-app-that-has-already-been-published) benötigen, nachdem es bereits veröffentlicht wurde, können Sie hier einen anderen reservierten Namen auswählen, wenn Sie eine neue Übermittlung mit Pakete erstellen, die den neuen Namen verwenden.
+Wenn Sie Pakete in der gleichen Sprache als den Store-Eintrag, an denen Sie arbeiten hochgeladen haben, werden die Namen in diese Pakete ausgewählt. Wenn [Benennen Sie die app](manage-app-names.md#rename-an-app-that-has-already-been-published) müssen Sie nach dem sie bereits veröffentlicht wurde, können Sie hier einen anderen reservierten Namen auswählen, wenn Sie eine neue Übermittlung mit Paketen erstellen, die den neuen Namen verwenden.
 
-Wenn Pakete für die Sprache erfolgreich hochgeladen wurden Sie arbeiten an, und Sie mehr als einen Namen reserviert haben, müssen Sie eines Ihrer reservierten app-Namen auswählen, da es keine kein verknüpftes Paket in dieser Sprache aus dem der Name abgerufen werden könnte.
+Wenn Sie Pakete für die Sprache erfolgreich hochgeladen wurden Sie arbeiten, und Sie mehr als einen Namen reserviert haben, müssen Sie eines Ihrer reservierten app-Namen auswählen, da es keine kein verknüpftes Paket in dieser Sprache aus dem der Name abgerufen werden könnte.
 
 > [!NOTE]
-> Der **Produktname** , die Sie nur auswählen gilt für den Store-Eintrag in der Sprache in dem Sie arbeiten. Es hat keinen Einfluss auf den Namen angezeigt, wenn ein Kunde die app installiert werden; Dieser Name stammt aus dem Manifest des Pakets, das installiert wird. Um Missverständnisse zu vermeiden, empfehlen wir, dass jede Sprache Pakete und Store-Eintrag den gleichen Namen verwenden.
+> Der **Produktname** nur gewählte gilt für den Store-Eintrag in der Sprache in dem Sie arbeiten. Es hat keinen Einfluss auf den Namen angezeigt, wenn ein Kunde die app installiert werden; Dieser Name stammt aus dem Manifest des Pakets, das installiert wird. Um Missverständnisse zu vermeiden, empfehlen wir, dass jede Sprache Pakete und Store-Eintrag den gleichen Namen verwenden.
 
 ## <a name="description"></a>Beschreibung
 

@@ -15,11 +15,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 8589a450b53a5ea028f8af2cee2aef7dc0816b52
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2907767"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3123676"
 ---
 # <a name="acrylic-material"></a>Acryl-Material
 
@@ -52,7 +52,7 @@ Acryl ist eine Art von [Pinsel](https://docs.microsoft.com/en-us/uwp/api/Windows
     ::: Column Span::: ![einige Image](images/XAML-controls-gallery-app-icon.png)
     :::column-end:::
     ::: Column Span = "2"::: **XAML-Steuerelementekatalog**<br>
-        Wenn Sie die XAML-Steuerelementekatalog-app installiert haben, klicken Sie <a href="xamlcontrolsgallery:/item/Acrylic">hier</a> auf die app zu öffnen und Acryl in Aktion zu sehen.
+        Wenn Sie die XAML-Steuerelementekatalog-app installiert haben, klicken Sie auf <a href="xamlcontrolsgallery:/item/Acrylic">hier</a> auf die app zu öffnen und Acryl in Aktion zu sehen.
 
         <a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Get the XAML Controls Gallery app (Microsoft Store)</a><br>
         <a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Get the source code (GitHub)</a>
@@ -106,7 +106,7 @@ Widgets oder einfachen Apps können als Utility-Apps hervorgehoben werden, wenn 
 ![Dienstprogramm-App „Rechner” mit Acryl im gesamten Hintergrund](images/acrylic_app-pattern_full.png)
 
 > [!Note]
-> Das Rendern von acryloberflächen ist GPU-intensiv, das Gerät den Energieverbrauch zu erhöhen und Akkulaufzeit verkürzt werden kann. Acryleffekte werden automatisch deaktiviert, wenn Geräte Stromsparmodus versetzt, und Benutzer können acryleffekte für alle apps, deaktivieren, wenn sie auswählen.
+> Das Rendern von acryloberflächen ist GPU-intensiv, das Gerät den Energieverbrauch zu erhöhen und Akkulaufzeit verkürzt werden kann. Acryleffekte werden automatisch deaktiviert, wenn Geräte Stromsparmodus versetzt, und Benutzer können acryleffekte für alle apps, deaktivieren, wenn der Benutzer.
 
 
 ## <a name="acrylic-blend-types"></a>Acrylmischungen

@@ -15,11 +15,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 67bd984f4216be9eded51b6175829828e9c332f1
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2915314"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3117988"
 ---
 # <a name="reveal-highlight"></a>Reveal-Highlight
 
@@ -259,7 +259,7 @@ Hier sehen Sie eine gesamte Vorlage und wie eine Schaltfläche zum Einblenden au
 
 ### <a name="fine-tuning-the-reveal-effect-on-a-custom-control"></a>Optimieren des Effekts von „Reveal” für ein benutzerdefiniertes Steuerelement 
 
-Wenn Sie "Reveal" für ein benutzerdefiniertes oder neues Steuerelement oder eine benutzerdefinierte Befehlsoberfläche aktivieren, können diese Tipps den Effekt optimieren hilfreich sein:
+Wenn Sie "Reveal" für ein benutzerdefiniertes oder neues Steuerelement oder eine benutzerdefinierte Befehlsoberfläche aktivieren, können diese Tipps den Effekt optimieren ermöglicht Folgendes:
  
 * Auf benachbarten Elementen mit einer Größe, die nicht in Höhe oder Breite (insbesondere in Listen) ausgerichtet ist: entfernen Sie das Verhalten des Rahmens und aktivieren Sie die Rahmen nur für das Draufzeigen.
 * Für Befehlselemente, die häufig aktiviert oder deaktiviert werden: platzieren Sie den Pinsel für den Rahmen auf die Backplates der Elemente sowie deren Rahmen, um ihren Zustand zu betonen.

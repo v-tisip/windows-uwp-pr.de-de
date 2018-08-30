@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows10, uwp, karten, standort, kartensteuerelement, kartenansichten
 ms.localizationpriority: medium
-ms.openlocfilehash: a208e106421cb3126fd0c5002ebb271c1a923037
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: ba03d430031ad2bdad6959e2c59500dc6f2d2666
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675157"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3114617"
 ---
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>Anzeigen von Karten mit 2D-, 3D- und Streetside-Ansichten
 
@@ -225,6 +225,8 @@ myMap.StyleSheet = MapStyleSheet.RoadDark();
 ![Karte im dunklen Stil](images/style-dark.png)
 
 Sie können auch JSON verwenden, um benutzerdefinierte Stile zu definieren und dann JSON zum Erstellen eines [**MapStyleSheet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet) Objekt nutzen.
+
+Stylesheet JSON kann interaktiv mithilfe der [Karte Formatvorlagen-Editor](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) -Anwendung erstellt werden.
 
 ```csharp
 myMap.StyleSheet = MapStyleSheet.ParseFromJson(@"

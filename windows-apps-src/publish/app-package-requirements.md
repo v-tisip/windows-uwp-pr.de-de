@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Paketanforderungen, Pakete, Paketformat, unterstützte Version, übermitteln
 ms.localizationpriority: medium
 ms.openlocfilehash: d7d748f36dafd93066928f01f9aa42414f2ffc1f
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2905283"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3122417"
 ---
 # <a name="app-package-requirements"></a>App-Paketanforderungen
 
@@ -41,7 +41,7 @@ App-Pakete müssen nicht mit einem Stammzertifikat einer vertrauenswürdigen Zer
 
 ### <a name="app-bundles"></a>App-Bündel
 
-Für apps, die Windows 10, Windows 8.1 und/oder Windows Phone 8.1 ausgerichtet sind, kann Visual Studio generiert ein app-Bündel (.appxbundle), um die Größe der app zu reduzieren, die Benutzer herunterladen. Dieser Schritt ist in der Regel sinnvoll, wenn Sie sprachspezifische Ressourcen, mehrere Ressourcen für die Bildgröße oder Ressourcen für bestimmte Versionen von Microsoft DirectX definiert haben.
+Für apps, die Windows 10, Windows 8.1 und/oder Windows Phone 8.1 ausgerichtet sind, kann Visual Studio generiert ein app-Bündel (.appxbundle), um die Größe der app reduzieren, die Benutzer herunterladen. Dieser Schritt ist in der Regel sinnvoll, wenn Sie sprachspezifische Ressourcen, mehrere Ressourcen für die Bildgröße oder Ressourcen für bestimmte Versionen von Microsoft DirectX definiert haben.
 
 > [!NOTE]
 > Ein App-Bündel kann Ihre Pakete für alle Architekturen enthalten. Pro Zielbetriebssystem sollte nur ein App-Bündel eingereicht werden.
@@ -61,7 +61,7 @@ Ihr Manifest muss spezifische konto- und App-bezogene Informationen enthalten. S
 > Bei den Werten im Manifest wird die Groß-/Kleinschreibung berücksichtigt. Leerzeichen und Satzzeichen müssen ebenfalls übereinstimmen. Geben Sie die Werte richtig ein, und überprüfen Sie sie anschließend auf ihre Korrektheit.
 
 
-App-Bündel (.appxbundle) verwenden ein anderes Manifest. Ausführliche Informationen und die Anforderungen für App-Bündel finden Sie in der Dokumentation zum [Bündelmanifest](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest). Beachten Sie, dass in appxbundle, die .appxmanifest jedes Paket enthalten muss die gleichen Elemente und Attribute, mit Ausnahme der **ProcessorArchitecture** -Attribut des Elements [Identität](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) verwenden.
+App-Bündel (.appxbundle) verwenden ein anderes Manifest. Ausführliche Informationen und die Anforderungen für App-Bündel finden Sie in der Dokumentation zum [Bündelmanifest](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest). Beachten Sie, dass in appxbundle, die .appxmanifest der einzelnen Pakete enthalten die gleichen Elemente und Attribute, mit Ausnahme der **ProcessorArchitecture** -Attribut des Elements [Identität](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) verwenden müssen.
 
 > [!TIP]
 > Führen Sie vor dem Einreichen Ihrer Pakete unbedingt das [Zertifizierungskit für Windows-Apps](../debug-test-perf/windows-app-certification-kit.md) aus. So können Sie feststellen, ob es mit Ihrem Manifest Probleme gibt, die Zertifizierungs- oder Einreichungsfehler verursachen können.

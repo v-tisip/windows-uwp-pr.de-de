@@ -10,18 +10,18 @@ ms.technology: uwp
 keywords: Windows10, UWP, Preise, App-Preise, App-Preis, Apps verkaufen, Preis ändern, benutzerdefinierter Preis, Preis, Preise, Kosten, Grundpreise überschreiben, formfreier Preis, formfrei
 ms.localizationpriority: medium
 ms.openlocfilehash: ca37d0b360679a878cff3aeabd96f82016c36fde
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2913272"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3120807"
 ---
 # <a name="set-and-schedule-app-pricing"></a>Festlegen und Planen von App-Preisen
 
 Im Abschnitt **Preise** der Seite [Preise und Verfügbarkeit](set-app-pricing-and-availability.md) können Sie den Grundpreis für eine App auswählen. Sie können auch [Preisänderungen planen](#schedule-price-changes), um Datum und Uhrzeit anzugeben, an dem bzw. zu der sich der Preis der App ändern soll. Darüber hinaus haben Sie die Option, den [Grundpreis für den angegebenen Markt zu überschreiben](#override-base-price-for-specific-markets), indem Sie ein neues Preisniveau oder einen formfreien Preis in der lokalen Währung des Markts auswählen.
 
 > [!NOTE]
-> Obwohl dieses Thema auf Apps verweist, verwendet die Preisauswahl für die Add-On-Übermittlungen das gleiche Verfahren. Beachten Sie, dass für [Abonnement-Add-Ons](../monetize/enable-subscription-add-ons-for-your-app.md), der Basispreis, den Sie auswählen jemals (durch Ändern des Basispreis oder durch Planen einer Preisänderung) erhöht werden kann nicht Obwohl es beeinträchtigt werden kann.
+> Obwohl dieses Thema auf Apps verweist, verwendet die Preisauswahl für die Add-On-Übermittlungen das gleiche Verfahren. Beachten Sie, dass für [Abonnement-Add-Ons](../monetize/enable-subscription-add-ons-for-your-app.md), der Basispreis, den Sie auswählen jemals (durch Ändern des Basispreis oder indem Sie eine Preisänderung planen) erhöht werden kann nicht Obwohl es beeinträchtigt werden kann.
 
 ## <a name="base-price"></a>Grundpreis
 

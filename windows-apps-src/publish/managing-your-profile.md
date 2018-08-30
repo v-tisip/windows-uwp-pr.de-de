@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Dev Center, Kontoeinstellungen, Profil, Konto-Profil, Entwicklerkonto, Entwicklerkontoeinstellungen
 ms.localizationpriority: medium
 ms.openlocfilehash: bf464fa5c7b681b3d36ad95cff5ffc874e319f46
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2907418"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3118704"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Verwalten Ihrer Kontoeinstellungen und Profilinformationen
 
@@ -26,7 +26,7 @@ Sie können Ihre Entwicklerkontoeinstellungen und Profilinformationen im Abschni
 
 ## <a name="account-settings"></a>Kontoeinstellungen
 
-Wenn Ihre kontoeinstellungen anzeigen möchten, klicken Sie auf das Zahnradsymbol in der oberen rechten Ecke des Dashboards aus, und wählen Sie dann **entwicklereinstellungen**. Hier finden Sie Informationen zu Ihrem Konto sowie Links zu anderen Seiten, in denen Sie Informationen anzeigen und verschiedene Konto bezogene Aufgaben ausführen können.
+Um Ihre kontoeinstellungen anzuzeigen, klicken Sie auf das Zahnradsymbol in der oberen rechten Ecke des Dashboards aus, und wählen Sie dann **entwicklereinstellungen**. Hier finden Sie Informationen zu Ihrem Konto sowie Links zu anderen Seiten, in denen Sie Informationen anzeigen und verschiedene Konto bezogene Aufgaben ausführen können.
 
 Der Abschnitt **Kontodetails** gibt Aufschluss über Status und Art des Kontos. Sie können auch Ihre Verkäufer-ID und der Informationen für andere Herausgeber-ID hier anzeigen. Diese Werte werden von Microsoft zur eindeutigen Identifizierung Ihres Entwicklerkontos zugewiesen und können nicht bearbeitet werden.
 
@@ -49,7 +49,7 @@ Wenn Sie Ihren Herausgeber-Anzeigenamen ändern, müssen wir Ihr Konto erneut ü
 Hier sind einige andere Elemente, die Sie im Abschnitt **Kontoeinstellungen** finden.
 
 - **Überprüfungsstatus**: Wenn Ihr Konto unterläuft ist die Überprüfung verarbeiten (z. B. beim ersten Anmelden oder nachdem Sie Ihre Kontaktinformationen erheblich aktualisieren), können Sie hier der Überprüfungsstatus überprüfen.
-- **Dev Center-Insider-Programm**: Sie können ablehnen, in die oder aus dem [Dev Center-Insider-Programms](dev-center-insider-program.md) aus der primären **Konto** -Einstellungsseite.
+- **Dev Center-Insider-Programm**: Sie können ablehnen, in die oder aus dem [Dev Center-Insider-Programm](dev-center-insider-program.md) aus der primären **Konto** -Einstellungsseite.
 - **Auszahlungskonto** und **Steuerprofil**: Hier wird das [Einrichten Ihres Auszahlungskontos und Ihrer Steuerformulare](setting-up-your-payout-account-and-tax-forms.md) vorgenommen. Dieser Schritt muss ausgeführt werden, bevor Sie Zahlungen für Apps oder Add-Ons verlangen können.
 - **Enterprise-Zuordnungen**: Nehmen Sie Einladungen von Unternehmen an, die möchten, dass Sie Apps für die exklusive Nutzung veröffentlichen. Weitere Informationen dazu finden Sie unter [Verteilen von branchenspezifischen Apps an Unternehmen](distribute-lob-apps-to-enterprises.md).
 - **Anwender**: Fügen Sie Ihrem Dev Center-Konto Benutzer hinzu, und weisen Sie diesen Rollen mit Berechtigungen zu. Weitere Informationen finden Sie unter [Verwalten von Kontobenutzern](manage-account-users.md).

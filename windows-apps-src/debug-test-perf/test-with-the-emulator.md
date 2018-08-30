@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 17e5aa64fff2c42974dbb78ce3cdcff1ca414946
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2904795"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3116562"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Tests mit dem Emulator für Microsoft Windows10Mobile
 
@@ -29,7 +29,7 @@ Sie können Ihre universelle App mithilfe eines eindeutigen Windows10Mobile-Emul
 
 Ihr Computer muss folgende Anforderungen erfüllen:
 
-CPU (diese Einstellungen können falls verfügbar, im BIOS aktiviert werden)
+CPU (diese Einstellung können ggf. im BIOS aktiviert werden)
 
 -   Hardwareunterstützte Virtualisierung ([Überprüfen der Kompatibilität](https://www.microsoft.com/download/details.aspx?id=592)).
 -   SLAT (Second Level Address Translation)
@@ -53,7 +53,7 @@ Microsoft-Emulator für Windows 10 Mobile erfordert Visual Studio 2015 oder höh
 
 Der Microsoft-Emulator für Windows10Mobile kann keine Apps laden, die für eine WindowsPhone-Betriebssystemversion vor Windows Phone OS7.1 konzipiert sind.
 
-## <a name="installing-uninstalling-and-running-the-emulator"></a>Installation, Deinstallation und Ausführen des Emulators
+## <a name="installing-uninstalling-and-running-the-emulator"></a>Installieren, deinstallieren und Ausführen des Emulators
 
 ### <a name="installing"></a>Installation
 Der Microsoft-Emulator für Windows10Mobile ist im Windows10-SDK enthalten. Das Windows10-SDK und der Emulator können zusammen mit Visual Studioinstalliert werden. Weitere Informationen finden Sie auf der [Downloadseite für Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=534785).

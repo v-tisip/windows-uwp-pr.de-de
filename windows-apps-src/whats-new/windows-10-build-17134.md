@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e2f12190c405ad611cf5b884b82c4a430aa5264f
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2906200"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3118913"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>Neuigkeiten für Entwickler in Windows10, Build 17134
 
@@ -38,7 +38,7 @@ Aktualisierung durch Ziehen | Dank des Steuerelements [Aktualisieren durch Ziehe
 Navigationsansicht | Das [Navigationsansicht](../design/controls-and-patterns/navigationview.md)-Steuerelement bietet über ein reduzierbares Navigationsmenü ein allgemeines vertikales Layout für App-Bereiche auf oberster Ebene. Dieses Steuerelement dient der Implementierung des Navigationsbereichsmusters oder Hamburger-Menü-Musters, wobei die Anordnung automatisch an verschiedene Fenstergrößen des Bereichs angepasst wird.
 Einblendungen mit Fokus | Die neuen [Einblendungen mit Fokus](../design/style/reveal-focus.md)-Effekte bieten Lichtelemente für Erfahrungen wie z.B. Xbox One- und Fernsehbildschirme. Sie animieren den Rahmen des fokussierbaren Elementes wie beispielsweise Schaltflächen, wenn der Benutzer den Fokus des Gamepad oder der Tastatur darauf lenken.
 Sound | XAML unterstützt jetzt 3D Audio mit der Eigenschaft **SpatialAudioMode**. Weitere Informationen zur Konfiguration finden Sie unter [Sound](../design/style/sound.md).
-Kacheln | [Verfolgbare Kachelbenachrichtigungen](../design/shell/tiles-and-notifications/chaseable-tile-notifications.md) werden jetzt in JavaScript-basierten UWP-Apps unterstützt.<br><br>Sekundäre Benachrichtigungen für Kachel- und signalbenachrichtigungen werden [jetzt Desktop-Brücke-Apps unterstützt](../design/shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md#send-tile-notifications).
+Kacheln | [Verfolgbare Kachelbenachrichtigungen](../design/shell/tiles-and-notifications/chaseable-tile-notifications.md) werden jetzt in JavaScript-basierten UWP-Apps unterstützt.<br><br>Sekundäre Benachrichtigungen für Kachel- und signalbenachrichtigungen werden [jetzt von Desktop-Brücke-apps unterstützt](../design/shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md#send-tile-notifications).
 Strukturansicht | Das Steuerelement [Strukturansicht](../design/controls-and-patterns/tree-view.md) ermöglicht eine Hierarchieauflistung mit Knoten, die das Aus- und Einblenden von geschachtelten Elementen erlauben. Es kann verwendet werden, um eine Ordnerstruktur oder geschachtelte Beziehungen zwischen Elementen in der Benutzeroberfläche zu veranschaulichen.
 Schreibstil | Wir haben unseren Artikel über Ausdrucksweise und Tonfall aktualisiert und erweitert und diesen in eine [Schreibstilanleitung](../design/style/writing-style.md) umgewandelt. Diese neue Information enthält Prinzipien zur Erstellung von effektivem Text in Ihrer App sowie bewährte Methoden für das Schreiben von Steuerelementen wie z.B. Fehlermeldungen oder Dialogfelder.
 
@@ -73,7 +73,7 @@ Bildschirmaufnahme | Der [Windows.Graphics.Capture-Namespace](https://docs.micro
 Systemtrigger | Mit dem [CustomSystemEventTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.customsystemeventtrigger) können Sie einen Systemtrigger definieren, wenn das Betriebssystem keinen Systemtrigger zur Verfügung steht, den Sie benötigen. Wenn beispielsweise der Hardwaretreiber und die UWP-App beide von Drittanbietern stammen und der Hardwaretreiber ein benutzerdefiniertes Ereignis auslösen soll, das die App behandeln muss. Zum Beispiel eine Soundkarte, die Benutzer darüber benachrichtigt, wenn eine Audiobuchse angeschlossen wird.
 Benutzeraktivitäten | In der neuen [UserActivity-Dokumentation](../launch-resume/useractivities.md) wird erläutert, wie Benutzer fortsetzen können, was sie in Ihrer App erledigt haben, auch über mehrere Geräte hinweg.</br>Die **UserActivitySessionHistoryItem**-Klasse verfügt über neue Methoden, um Aktivitäten des aktuellen Benutzers abzurufen. Weitere Informationen dazu und über eine Überlastung finden Sie unter [GetRecentUserActivitiesAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitychannel.getrecentuseractivitiesasync).
 Windows Mixed Reality-APIs | Um die wachsende Windows Mixed Reality-Plattform zu unterstützen, wurden neue APIs zu den [Windows.Graphic.Holographic](https://docs.microsoft.com/uwp/api/Windows.Graphics.Holographic) und [Windows.UI.Input.Spatial](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Spatial)-Namespaces hinzugefügt.
-Windows Mixed Reality-Dokumente | Der Windows Mixed Reality-Entwicklerleitfaden ist [jetzt unter docs.microsoft.com gehostet.](https://docs.microsoft.com/windows/mixed-reality/) Genau wie bei UWP-Dokumenten können jetzt Feedback mit GitHub-Problemen oder eigene Beiträge per Pull Request übermitteln.
+Windows Mixed Reality-Dokumente | Der Windows Mixed Reality-Entwicklerleitfaden ist [jetzt unter docs.microsoft.com gehostet.](https://docs.microsoft.com/windows/mixed-reality/) Genau wie in UWP-Dokumenten können jetzt Feedback mit GitHub-Problemen oder eigene Beiträge per Pull Request übermitteln.
 
 ## <a name="publish--monetize-windows-apps"></a>Veröffentlichen und Monetarisieren von Windows-Apps
 

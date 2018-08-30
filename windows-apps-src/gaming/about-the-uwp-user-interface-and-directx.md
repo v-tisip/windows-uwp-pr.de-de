@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, DirectX, App-Objekt
 ms.localizationpriority: medium
 ms.openlocfilehash: fcbe68516e3ad8b2643faf68900e3305f18e8bbf
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2913475"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3123147"
 ---
 # <a name="the-app-object-and-directx"></a>Das App-Objekt und DirectX
 
@@ -23,7 +23,7 @@ ms.locfileid: "2913475"
 
 Für die Universelle Windows-Plattform (UWP) mit DirectX-Spielen werden nur wenige der UI-Elemente und -objekte der Windows-Benutzeroberfläche genutzt. Da sie auf einer niedrigeren Ebene des Windows-Runtime-Stapels ausgeführt werden, müssen sie stattdessen auf eine grundlegendere Weise mit dem Benutzeroberflächenframework interagieren, und zwar indem sie direkt auf das App-Objekt zugreifen und mit diesem interagieren. Im Folgenden erfahren Sie, zu welchem Zeitpunkt und auf welche Weise eine solche Interaktion erfolgt und wie Sie dieses Modell als DirectX-Entwickler beim Entwickeln von UWP-Apps effizient nutzen können.
 
-Finden Sie unter der [Direct3D-Grafiken Glossar](../graphics-concepts/index.md) Informationen über Grafiken unbekannte Begriffe und Konzepte, die beim Lesen auftreten.
+Finden Sie unter der [Direct3D-Grafiken Glossar](../graphics-concepts/index.md) Informationen zu Grafiken unbekannte Begriffe und Konzepte, die Sie beim Lesen auftreten.
 
 ## <a name="the-important-core-user-interface-namespaces"></a>Die wichtigen Benutzeroberflächen-Hauptnamespaces
 

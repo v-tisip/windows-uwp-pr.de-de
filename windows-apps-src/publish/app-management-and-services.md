@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d0e4be450aa972ad8561f27a8d4749050458520a
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2905443"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3118103"
 ---
 # <a name="app-management-and-services"></a>App-Verwaltung und -Dienste
 
@@ -29,9 +29,9 @@ Im Abschnitt **Dienste** können Sie verschiedene Dienste für Ihre Apps verwalt
 
 ## <a name="xbox-live"></a>Xbox Live
 
-Wenn Sie ein Spiel veröffentlichen, können Sie die [Xbox Live Creators-Programm](http://xbox.com/developers/creators-program) auf dieser Seite aktivieren. Dadurch können Sie die Starten konfigurieren und Testen Xbox Live-Features, und schließlich Veröffentlichen von Xbox Live Creators-Programm-spielen.
+Wenn Sie ein Spiel veröffentlichen, können Sie die [Xbox Live Creators-Programm](http://xbox.com/developers/creators-program) auf dieser Seite aktivieren. Auf diese Weise können Sie die Starten konfigurieren und Testen Xbox Live-Features, und schließlich Veröffentlichen Ihres Spiels Xbox Live Creators-Programm.
 
-Weitere Informationen finden Sie unter [Erste Schritte mit Xbox Live Creators-Programm](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) und [erstellen einen neuen Xbox Live Creators-Programm-Titel und in der testumgebung veröffentlichen](../xbox-live/get-started-with-creators/create-and-test-a-new-creators-title.md).
+Weitere Informationen finden Sie unter [Erste Schritte mit Xbox Live Creators-Programm](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) und [Erstellen eines neuen Titels Xbox Live Creators-Programm und der testumgebung veröffentlichen](../xbox-live/get-started-with-creators/create-and-test-a-new-creators-title.md).
 
 ## <a name="experimentation"></a>Experimentation
 
@@ -50,13 +50,13 @@ Weitere Informationen finden Sie unter [Verwenden von Kartendiensten](use-map-se
 
 ## <a name="product-collections-and-purchases"></a>Produktsammlungen und Einkäufe
 
-Um den Zugriff auf Besitzerinformationen für apps und Add-ons im Microsoft Store-Sammlungs-API und der Microsoft Store-Einkaufs-API zu verwenden, müssen Sie das zugeordnete eingeben hier Azure AD-Client-IDs. Beachten Sie, dass es bis zu 16 Stunden dauern kann, bis diese Änderungen wirksam werden.
+Um den Zugriff auf Besitzerinformationen für apps und Add-ons im Microsoft Store-Sammlungs-API und der Microsoft Store-Einkaufs-API zu verwenden, müssen Sie das zugehörige eingeben Azure AD-Client-IDs hier. Beachten Sie, dass es bis zu 16 Stunden dauern kann, bis diese Änderungen wirksam werden.
 
 Weitere Informationen finden Sie unter [Verwalten von Produktansprüchen aus einem Dienst](../monetize/view-and-grant-products-from-a-service.md).
 
 ## <a name="administrator-consent"></a>Administrator-Zustimmung
 
-f Ihr Produkt in Azure AD integriert werden und APIs aufruft, die [Anwendung oder delegierte Berechtigungen verfügen](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) anfordern, die Administrator-Zustimmung erfordern Geben Sie Ihre Azure AD-Client-ID hier. Dadurch können Administratoren, die die app für ihre Organisation gewähren Zustimmung für Ihr Produkt, die für alle Benutzer im Mandanten fungieren erwerben.
+f Ihr Produkt mit Azure AD integriert und APIs aufruft, die [Anwendungsberechtigungen oder delegierte Berechtigungen](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) anfordern, die Administrator-Zustimmung erfordern geben Ihre Azure AD-Client-ID an. Dadurch können Administratoren, die die app für ihre Organisation gewähren Zustimmung für Ihr Produkt, die für alle Benutzer im Mandanten fungieren erwerben.
 
 Weitere Informationen finden Sie unter [für eine gesamte Mandanten Zustimmung anfordern](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant).
 
@@ -92,7 +92,7 @@ Entwickler mit OEM-Berechtigungen können auf der Seite **Aktuelle Pakete** auß
 Der **WNS/MPNS** Abschnitt enthält Optionen zum Erstellen und Senden von Benachrichtigungen an die Kunden Ihrer app. 
 
 > [!TIP]
-> Es wird empfohlen, für UWP-apps mit der Option **Benachrichtigungen** im Dashboard. Dieses Feature können Sie die Benachrichtigungen an alle Kunden Ihrer app zu senden, oder auf eine benutzerorientierte Teilmenge Ihrer Windows 10-Kunden, die die Kriterien erfüllen, die Sie in einem [Kundensegment](create-customer-segments.md)definiert haben. Weitere Informationen finden Sie unter [Senden von Benachrichtigung an die Kunden Ihrer App](send-push-notifications-to-your-apps-customers.md).
+> Es wird empfohlen, für UWP-apps mit der Option **Benachrichtigungen** im Dashboard. Dieses Feature können Sie die Benachrichtigungen an alle Kunden Ihrer app zu senden, oder auf eine benutzerorientierte Teilmenge von Windows 10-Kunden, die die Kriterien erfüllen, die Sie in einem [Kundensegment](create-customer-segments.md)definiert haben. Weitere Informationen finden Sie unter [Senden von Benachrichtigung an die Kunden Ihrer App](send-push-notifications-to-your-apps-customers.md).
 
 Je nach Pakettyp Ihrer app und den jeweiligen Anforderungen können Sie auch eine der folgenden Optionen verwenden: 
 

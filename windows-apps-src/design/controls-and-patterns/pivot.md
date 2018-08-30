@@ -1,9 +1,9 @@
 ---
-author: serenaz
+author: QuinnRadich
 Description: The Pivot control enables touch-swiping between a small set of content sections.
 title: Pivot
 template: detail.hbs
-ms.author: sezhen
+ms.author: quradic
 ms.date: 06/19/2018
 ms.topic: article
 ms.prod: windows
@@ -14,12 +14,12 @@ design-contact: kimsea
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: e8f0fbbfacc3fa4edb602f7505ea1e88f211a81a
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.openlocfilehash: 5bb6ed36c772e5ae80a3cb801b4b6b36bb1ab18c
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2913017"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3116115"
 ---
 # <a name="pivot"></a>Pivot
 
@@ -51,7 +51,7 @@ Das Pivot-Steuerelement, genau wie [NavigationView](navigationview.md), unterstr
 
 Um allgemeine oberen Navigationsleiste und Registerkarten Muster zu erreichen, empfehlen wir die Verwendung von [NavigationView](navigationview.md), die automatisch an verschiedene Bildschirmgrößen anpasst und für eine umfassendere Anpassung ermöglicht.
 
-Jedoch, wenn Ihre Navigation Touch-Wischen erforderlich ist, empfehlen wir die Verwendung Pivot.
+Jedoch, wenn die Navigation Touch Wischen erforderlich ist, empfehlen wir die Verwendung Pivot.
 
 Die wichtigsten Unterschiede zwischen den Steuerelementen NavigationView und Pivot sind das Standardverhalten Überlauf und die Navigation API:
 
@@ -116,7 +116,7 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 }
 ```
 
-Dieser Code wird das Pivot-Steuerelement integrierte Navigationsfunktionalität, abzüglich der Touch-Wischen Erfahrung zwischen Inhaltsabschnitte imitiert. Wie Sie sehen können, könnten Sie mehrere Punkte, einschließlich der animierten Übergang, Navigation Parameter und Stapel Funktionen auch anpassen.
+Dieser Code wird das Pivot-Steuerelement integrierte Navigationsfunktionalität minus die Touch-Wischen Erfahrung zwischen Inhaltsabschnitte imitiert. Wie Sie sehen können, könnten Sie einige Punkte, einschließlich der animierten Übergang Navigation Parameter und Stapel Funktionen auch anpassen.
 
 ## <a name="create-a-pivot-control"></a>Erstellen eines Pivot-Steuerelements
 

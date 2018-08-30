@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ef57c6293b37f91653b5f825881b1446e38a824b
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2907714"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3120777"
 ---
 # <a name="monitor-background-task-progress-and-completion"></a>Überwachen des Status und Abschlusses von Hintergrundaufgaben
 
@@ -38,9 +38,9 @@ Der Status und Abschluss von Hintergrundaufgaben kann durch App-Code überwacht 
 ## <a name="create-an-event-handler-to-handle-completed-background-tasks"></a>Erstellen Sie einen Ereignishandler zum Behandeln abgeschlossener Hintergrundaufgaben.
 
 ### <a name="step-1"></a>Schritt 1
-Erstellen Sie eine Ereignishandlerfunktion zum Behandeln abgeschlossener Hintergrundaufgaben. Dieser Code muss einem bestimmten Profil ein [**IBackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224803) -Objekt und ein [**BackgroundTaskCompletedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224778) -Objekt annimmt.
+Erstellen Sie eine Ereignishandlerfunktion zum Behandeln abgeschlossener Hintergrundaufgaben. Dieser Code muss einem bestimmten Profil nimmt ein Objekt [**IBackgroundTaskRegistration**](https://msdn.microsoft.com/library/windows/apps/br224803) und ein [**BackgroundTaskCompletedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224778) -Objekt.
 
-Verwenden Sie das folgende Profil für die **OnCompleted** Hintergrund Ereignishandlermethode.
+Verwenden Sie das folgende Profil für die **OnCompleted** Hintergrund Ereignishandlermethode ein.
 
 ```csharp
 private void OnCompleted(IBackgroundTaskRegistration task, BackgroundTaskCompletedEventArgs args)

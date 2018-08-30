@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 83c4645a09a38a76dfd230436e858e222d817eab
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2917233"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3122677"
 ---
 # <a name="in-app-ads"></a>In-App-Anzeigen
 
@@ -85,7 +85,7 @@ Wenn Sie [eine neue UWP-anzeigeneinheit erstellen](#create-ad-unit) oder [eine v
 So konfigurieren Sie die Anzeigenvermittlung für eine UWP-Anzeigeneinheit in Ihrer App:
 
 1. [Eine Anzeigeneinheit erstellen](#create-ad-unit) oder [Eine vorhandene Anzeigeneinheit auswählen](#available-ad-units).
-2. Wechseln Sie zu der **Einstellungen für die Anzeigenvermittlung** Abschnitt und die Konfiguration Ihrer Einstellungen, auf der Seite **In-app anzeigen** .
+2. Wechseln Sie zu der **Einstellungen für die Anzeigenvermittlung** Abschnitt und die Konfiguration Ihrer Einstellungen, auf der Seite **In-app-anzeigen** .
 
     * Standardmäßig ist das Kontrollkästchen **Let Microsoft choose the best mediation settings for your app** aktiviert. Es wird empfohlen, diese Option zu verwenden. Diese Option verwendet Machine Learning-Algorithmen, um automatisch die Anzeigenvermittlungseinstellungen für Ihre App auszuwählen, um Ihnen beim Optimieren der Anzeigenumsätze in den verschiedenen Märkten zu helfen, die Ihre App unterstützt. Wenn Sie diese Option verwenden, können Sie auch die anzeigennetzwerke auswählen, die Sie in der Konfiguration verwenden möchten. Deaktivieren Sie die anzeigennetzwerke, die nicht Teil der Konfiguration werden sollen und unser Algorithmus wird sichergestellt, dass Ihre app nur anzeigen aus der ausgewählten Anzeigennetzwerken empfängt.
     * Wenn Sie Ihre eigenen anzeigenvermittlungseinstellungen auswählen möchten, wählen Sie die **Standardeinstellungen ändern**.

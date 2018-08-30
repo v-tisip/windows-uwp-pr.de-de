@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, app-Zertifizierung
 ms.localizationpriority: medium
 ms.openlocfilehash: b7a72a89704aa3768cc43cdfbb75b620bae303e3
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2917026"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3123247"
 ---
 # <a name="windows-app-certification-kit"></a>Zertifizierungskit für Windows-Apps
 
 
 
-Um Ihrer app, die [Windows-Zertifizierung](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) zu erhalten, oder für die [Veröffentlichung im Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Hh694062)vorbereiten, sollten Sie überprüfen und testen es zunächst lokal. In diesem Thema wird das Installieren und führen Sie das [Zertifizierungskit für Windows-Apps](http://go.microsoft.com/fwlink/p/?LinkID=309666) , um sicherzustellen, dass Ihre app sicheren und effizienten veranschaulicht.
+Zum Abrufen von Ihrer app, die [Windows-Zertifizierung](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) , oder für die [Veröffentlichung im Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Hh694062)vorbereiten, sollten Sie überprüfen und testen es zunächst lokal. In diesem Thema wird das Installieren und Ausführen der [Zertifizierungskit für Windows-Apps](http://go.microsoft.com/fwlink/p/?LinkID=309666) , um sicherzustellen, dass Ihre app sicheren und effizienten veranschaulicht.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

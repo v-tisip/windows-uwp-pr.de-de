@@ -1,10 +1,10 @@
 ---
-author: serenaz
+author: QuinnRadich
 Description: NavigationView is an adaptive control that implements top-level navigation patterns for your app.
 title: Navigationsansicht
 template: detail.hbs
-ms.author: sezhen
-ms.date: 08/06/2018
+ms.author: quradic
+ms.date: 06/25/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
@@ -14,12 +14,12 @@ design-contact: kimsea
 dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c0857005d584b1fde0eb52a6ab0ef5ec29eaf44
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.openlocfilehash: 6c75169f118e2c8ef575fa251a7badc8cfe44247
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2906140"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3124575"
 ---
 # <a name="navigation-view-preview-version"></a>Navigationsansicht (Preview-Version)
 
@@ -53,9 +53,9 @@ NavigationView ist eine adaptive Navigationssteuerelement, das funktioniert gut 
 
 - Bereitstellen einer konsistenten navigationsumgebungen in der gesamten app.
 - Sparen von Platz auf dem Bildschirm auf kleineren Fenstern.
-- Organisieren von Zugriff auf viele Navigationskategorien.
+- Organisieren von Zugriff auf viele Navigationskategorien aus.
 
-Andere Navigationssteuerelementen finden Sie unter [navigationsdesigngrundlagen](../basics/navigation-basics.md).
+Für andere Navigationssteuerelemente finden Sie unter [navigationsdesigngrundlagen](../basics/navigation-basics.md).
 
 Wenn die Navigation komplexeres Verhalten erfordert, das von NavigationView nicht unterstützt wird, können Sie stattdessen das [Master/Details](master-details.md)-Muster verwenden.
 
@@ -64,7 +64,7 @@ Wenn die Navigation komplexeres Verhalten erfordert, das von NavigationView nich
         ![Einige image](images/XAML-controls-gallery-app-icon.png)
     :::column-end:::
     ::: Column Span = "2"::: **XAML-Steuerelementekatalog**<br>
-        Wenn Sie die XAML-Steuerelementekatalog-app installiert haben, klicken Sie <a href="xamlcontrolsgallery:/item/NavigationView">hier</a> auf die app zu öffnen und NavigationView in Aktion.
+        Wenn Sie die XAML-Steuerelementekatalog-app installiert haben, klicken Sie <a href="xamlcontrolsgallery:/item/NavigationView">hier</a> die app zu öffnen und finden Sie unter NavigationView in Aktion zu sehen.
 
         <a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Get the XAML Controls Gallery app (Microsoft Store)</a><br>
         <a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Get the source code (GitHub)</a>
@@ -87,8 +87,8 @@ NavigationView kann auf unterschiedliche Anzeigemodi festgelegt werden, über di
 
 Wir empfehlen die linke Navigation bei:
 
-- Sie haben eine mittlere bis hohe Anzahl (5-10) ebenso wichtig Navigation auf oberster Ebene Kategorien.
-- Gewünschten sehr schwerwiegende Navigationskategorien mit weniger Speicherplatz für anderen Inhalten der app.
+- Sie haben eine mittlere bis hohe Anzahl (5-10) wichtiger Navigation auf oberster Ebene Kategorien.
+- Gewünschte sehr schwerwiegende Navigationskategorien mit weniger Speicherplatz für die anderen Inhalten der app.
 
 :::row:::
     :::column:::
@@ -100,11 +100,11 @@ Wir empfehlen die linke Navigation bei:
     :::column-end:::
 :::row-end:::
 
-Wir empfehlen oberen Navigationsleiste bei:
+Wir empfehlen oberen Navigationsleiste wenn:
 
-- Sie 5 oder weniger wichtiger Navigationskategorien der obersten Ebene, dass zusätzliche Navigation auf oberster Ebene Kategorien, die in der Dropdownliste landen overflow Menü gelten als weniger wichtig.
+- Sie haben 5 oder weniger wichtiger Navigationskategorien der obersten Ebene, dass alle zusätzlichen Navigation auf oberster Ebene Kategorien, zu denen in der Dropdownliste landen overflow Menü gelten als weniger wichtig.
 - Sie müssen alle Navigationsoptionen auf dem Bildschirm anzeigen.
-- Gewünschten mehr Platz für Ihre app-Inhalte.
+- Sie möchten mehr Platz für Ihre app-Inhalte.
 - Symbole können nicht klar Navigationskategorien Ihrer app beschreiben.
 
 :::row:::
@@ -131,7 +131,7 @@ Wir empfehlen oberen Navigationsleiste bei:
 
 ![GIF Leftnav standardmäßigen adaptiven Verhaltens](images/displaymode-auto.png)
 
-Anpasst zwischen LeftMinimal auf kleinen Bildschirmen, LeftCompact für mittelgroße Bildschirme, und von links auf großen Bildschirmen. Finden Sie im Abschnitt [adaptives Verhalten](#adaptive-behavior) für Weitere Informationen.
+Passt zwischen LeftMinimal auf kleinen Bildschirmen, LeftCompact für mittelgroße Bildschirme, und von links auf großen Bildschirmen an. Finden Sie im Abschnitt [adaptives Verhalten](#adaptive-behavior) für Weitere Informationen.
 
 ## <a name="anatomy"></a>Aufbau
 
@@ -141,13 +141,13 @@ Anpasst zwischen LeftMinimal auf kleinen Bildschirmen, LeftCompact für mittelgr
 
 <b>Oben nav</b><br>
 
-![Top-Abschnitte von NavigationView](images/topnav-anatomy.png)
+![Top Abschnitte von NavigationView](images/topnav-anatomy.png)
 
 ## <a name="pane"></a>Bereich
 
-Der Bereich kann positioniert werden entweder im Vordergrund oder links auf über die `PanePosition` Eigenschaft.
+Der Bereich kann positioniert werden im Vordergrund oder auf der linken Seite über die `PanePosition` Eigenschaft.
 
-Hier ist die Anatomie detaillierte Bereich für die linken und oberen Bereich Positionen:
+Hier ist der Aufbau detaillierte Bereich für die linken und oberen Bereich Positionen:
 
 <b>Linke Navigationsleiste</b><br>
 
@@ -170,14 +170,14 @@ Hier ist die Anatomie detaillierte Bereich für die linken und oberen Bereich Po
 1. AutoSuggestBox (optional)
 1. Schaltfläche "Einstellungen" (optional)
 
-Die zurück-Schaltfläche angezeigt wird, in der oberen linken Ecke des Bereichs, aber NavigationView nicht automatisch Inhalte auf die zurück-Stapel hinzu. Zum Aktivieren der Rückwärtsnavigation, finden Sie unter der [Rückwärts Navigation](#backwards-navigation) Abschnitt.
+Die zurück-Schaltfläche angezeigt wird, in der oberen linken Ecke des Bereichs, aber NavigationView nicht automatisch Inhalte auf dem zurück-Stapel hinzu. Zum Aktivieren der Rückwärtsnavigation, finden Sie unter der [Rückwärts Navigation](#backwards-navigation) Abschnitt.
 
 Der NavigationView-Bereich kann auch Folgendes enthalten:
 
 1. Navigationselemente in Form von [NavigationViewItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitem), um zu bestimmten Seiten zu navigieren.
-2. Trennzeichen in Form von [NavigationViewItemSeparator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator), um Navigationselemente zu gruppieren. Legen Sie die [Opacity](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator.opacity) -Eigenschaft auf 0 fest, um das Trennzeichen als Speicherplatz zu rendern.
+2. Trennzeichen in Form von [NavigationViewItemSeparator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator), um Navigationselemente zu gruppieren. Legen Sie die [Opacity](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator.opacity) -Eigenschaft auf 0, um das Trennzeichen Platz nötig rendern.
 3. Header in Form von [NavigationViewItemHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationviewitemheader), zum Beschriften von Gruppen von Elementen.
-4. Eine optionale [AutoSuggestBox](auto-suggest-box.md) für die app-Ebene Suche zulassen.
+4. Eine optionale [AutoSuggestBox](auto-suggest-box.md) für die Suche auf app-Ebene zulassen.
 5. Ein optionaler Einstiegspunkt für [App-Einstellungen](../app-settings/app-settings-and-data.md). Um das Einstellungen-Element zu verbergen, verwenden Sie die [IsSettingsVisible](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.IsSettingsVisible) -Eigenschaft.
 
 Im linke Bereich enthält:
@@ -216,7 +216,7 @@ Formfreie Inhalte in den Bereich Header, wenn die Eigenschaft [PaneHeader](https
 
 ### <a name="pane-content"></a>Bereich Inhalt
 
-Freier Inhalt im Bereich, wenn die Eigenschaft [PaneCustomContent](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.PaneCustomContent) hinzugefügt
+Formfreie Inhalte in den Bereich, wenn die Eigenschaft [PaneCustomContent](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.PaneCustomContent) hinzugefügt
 
 :::row:::
     :::column:::
@@ -243,7 +243,7 @@ Die Kopfzeile muss sichtbar sein, wenn sich NavigationView im minimierten Anzeig
 
 ## <a name="content"></a>Inhalt
 
-![Navview allgemeines Bild des Inhaltsbereichs](images/nav-content.png)
+![Allgemeines Bild des Inhaltsbereichs navview](images/nav-content.png)
 
 Im Inhaltsbereich werden die meisten Informationen für die ausgewählte Navigationskategorie angezeigt.
 
@@ -265,7 +265,7 @@ Die standardmäßigen adaptiven Verhaltens von NavigationView ist zum Anzeigen e
 
 ### <a name="minimal"></a>Minimiert
 
-Eine zweite häufiges adaptive Muster ist einen erweiterten linken Bereich auf großen fensterbreiten, und ein Hamburger-Menü auf beide kleinen und mittelgroßen fensterbreiten verwenden.
+Ein zweites Allgemeines adaptives Muster ist einen erweiterten linken Bereich auf große fensterbreiten, und ein Hamburger-Menü auf beide kleinen und mittelgroßen fensterbreiten verwenden.
 
 ![GIF Leftnav adaptives Verhalten 2](images/adaptive-behavior-minimal.png)
 
@@ -276,11 +276,11 @@ Eine zweite häufiges adaptive Muster ist einen erweiterten linken Bereich auf g
 Wir empfehlen diese Lösung, wenn:
 
 - Mehr Platz für app-Inhalte auf kleinere fensterbreiten gewünschten.
-- Ihre Navigationskategorien werden nicht eindeutig mit Symbolen dargestellt.
+- Die Navigationskategorien werden nicht eindeutig mit Symbolen dargestellt.
 
 ### <a name="compact"></a>Kompakt
 
-Eine dritte häufiges adaptive Muster ist einen erweiterten linken Bereich auf großen fensterbreiten und ein Symbol nur Navigationsbereich auf beide kleinen und mittelgroßen fensterbreiten verwenden. Ein gutes Beispiel hierfür ist die Mail-app.
+Ein drittes Allgemeines adaptives Muster ist einen erweiterten linken Bereich auf großen fensterbreiten und ein Symbol nur Navigationsbereich auf beide kleinen und mittelgroßen fensterbreiten verwenden. Ein gutes Beispiel hierfür ist die Mail-app.
 
 ![GIF Leftnav adaptives Verhalten 3](images/adaptive-behavior-compact.png)
 
@@ -291,7 +291,7 @@ Eine dritte häufiges adaptive Muster ist einen erweiterten linken Bereich auf g
 Wir empfehlen diese Lösung, wenn:
 
 - Es ist wichtig, immer alle Navigationsoptionen auf dem Bildschirm anzeigen.
-- Ihre Navigationskategorien können deutlich mit Symbolen dargestellt werden.
+- die Navigationskategorien können deutlich mit Symbolen dargestellt werden.
 
 ### <a name="no-adaptive-behavior"></a>Keine adaptives Verhalten
 
@@ -305,9 +305,9 @@ In einigen Fällen möglicherweise keine adaptives Verhalten überhaupt gewünsc
 
 ### <a name="top-to-left-navigation"></a>Oben linken Navigationsbereich
 
-Wir empfehlen die Verwendung der oberen Navigationsleiste auf großen Fenstergrößen und linken Navigationsbereich auf kleinen Fenster die Größe bei:
+Wir empfehlen die Verwendung der oberen Navigationsleiste auf großen Fenstergrößen und linken Navigationsbereich auf kleinen Fenster Größe wenn:
 
-- Sie haben eine Reihe von gleichmäßig wichtige Navigation auf oberster Ebene Kategorien zusammen angezeigt werden, sodass, wenn eine Kategorie in diesen auf dem Bildschirm passt, die linke Navigation, damit sie genauso wichtig wie erhalten Sie reduzieren.
+- Sie haben eine Reihe von gleichmäßig wichtige Navigation auf oberster Ebene Kategorien zusammen angezeigt werden, wenn eine Kategorie in diesen auf dem Bildschirm passt, Sie auf linke Navigation zu gleich Bedeutung zu reduzieren.
 - Möchten Sie so viel Inhalt Speicherplatz wie möglich in kleinen Fenstergrößen beibehalten.
 
 Hier ist ein Beispiel angegeben:
@@ -443,7 +443,7 @@ Es ist Aufgabe Ihrer App, die Kopfzeile und den Inhalt in Reaktion auf diese Ben
 
 ### <a name="tabs"></a>Registerkarten
 
-In den Registerkarten-Modell sind Auswahl und Fokus gebunden. Eine Aktion, die normalerweise Schichten auch Auswahl Fokus würde. In dem Beispiel unten haben rechten Arrowing verschoben Marke für die Auswahl aus der Anzeige Bildschirmlupe. Sie können dies erreichen, indem Sie die [SelectionFollowsFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.selectionfollowsfocus) -Eigenschaft auf aktiviert.
+Im Modell Registerkarten sind Auswahl und Fokus gebunden. Eine Aktion, die normalerweise Schichten auch Auswahl Fokus würde. In dem Beispiel unten haben rechten Arrowing verschoben Marke für die Auswahl aus der Anzeige Bildschirmlupe. Sie können dies erreichen, indem Sie die Eigenschaft [SelectionFollowsFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.selectionfollowsfocus) auf aktiviert.
 
 ![Screenshot von nur-Text-oberen navview](images/nav-tabs.png)
 
@@ -460,7 +460,7 @@ Nachfolgend finden Sie im XAML-Beispiel für die:
 
 ```
 
-Zum Austauschen, um den Inhalt beim Registerkarte Auswahl zu ändern, verwenden Sie Frames [NavigateWithOptions](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.NavigateToType) Methode FrameNavigationOptions.IsNavigationStackEnabled auf "false" festgelegt und NavigateOptions.TransitionInfoOverride auf die entsprechende um parallele festgelegt Folienanimation. Ein Beispiel finden Sie im folgenden [Codebeispiel wird](#code-example) .
+Um, Inhalte auszutauschen beim Registerkarte Auswahl zu ändern, verwenden Sie Frames [NavigateWithOptions](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.NavigateToType) Methode FrameNavigationOptions.IsNavigationStackEnabled auf "false" festgelegt und NavigateOptions.TransitionInfoOverride festlegen, um die entsprechenden um parallele Folienanimation. Ein Beispiel finden Sie im [Codebeispiel](#code-example) unten.
 
 Wenn Sie den Standardstil ändern möchten, können Sie NavigationView [MenuItemContainerStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.menuitemcontainerstyle) Eigenschaft überschreiben. Sie können auch die [MenuItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.menuitemtemplate) -Eigenschaft an eine andere Datenvorlage festlegen.
 
@@ -496,12 +496,12 @@ Im folgenden ist ein End-to-End-Beispiel dafür, wie Sie NavigationView mit eine
 In diesem Beispiel werden wir davon ausgehen, dass Endbenutzer häufig neue Navigationskategorien auszuwählen, und wir:
 
 - Legen Sie die Eigenschaft [SelectionFollowsFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.PanePostion) auf aktiviert
-- Verwenden Sie Frame Navigationsvorgänge, die nicht Navigationsstapel hinzufügen.
-- Behalten Sie den Standardwert für die [ShoulderNavigationEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.PanePostion) -Eigenschaft, die verwendet wird, um anzugeben, ob linker/rechter Bumper auf einem Gamepad die Navigation auf oberster Ebene Kategorien von Ihrer app navigieren. Der Standardwert ist "WhenSelectionFollowsFocus". Die andere mögliche Werte sind "Immer" und "Never".
+- Verwenden Sie die Frame-Navigation, die nicht Navigationsstapel hinzufügen.
+- Behalten Sie den Standardwert für die [ShoulderNavigationEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.PanePostion) -Eigenschaft, die verwendet wird, um anzugeben, ob linker/rechter Bumper auf einem Gamepad die Navigation auf oberster Ebene Kategorien von Ihrer app navigieren. Der Standardwert ist "WhenSelectionFollowsFocus". Mögliche Werte sind "Immer" und "Never".
 
 Es wird veranschaulicht, wie die Rückwärtsnavigation mit der zurück-Schaltfläche implementiert.
 
-Hier sehen Sie eine Aufzeichnung der Zweck des Beispiels:
+Hier sehen Sie eine Aufzeichnung der Zweck des Beispiels ein:
 
 ![NavigationView-End-To-End-Beispiel](images/nav-code-example.gif)
 
@@ -708,7 +708,7 @@ private void On_Navigated(object sender, NavigationEventArgs e)
 
 Legen Sie zum Ändern des Hintergrunds des Hauptbereichs von NavigationView seine `Background`-Eigenschaft auf Ihren bevorzugten Pinsel.
 
-Der Hintergrund des Bereichs zeigt in-app-Acryl, wenn sich NavigationView im oberen, Minimal, oder kompakten Modus befindet. Um dieses Verhalten zu aktualisieren oder die Darstellung des Acrylbereichs anzupassen, ändern Sie die zwei Designressourcen durch Überschreiben Ihrer App.xaml.
+Der Hintergrund des Bereichs zeigt in-app-Acryl, wenn sich NavigationView im minimalen, oben oder kompakten Modus befindet. Um dieses Verhalten zu aktualisieren oder die Darstellung des Acrylbereichs anzupassen, ändern Sie die zwei Designressourcen durch Überschreiben Ihrer App.xaml.
 
 ```xaml
 <Application.Resources>
@@ -727,17 +727,17 @@ Der Hintergrund des Bereichs zeigt in-app-Acryl, wenn sich NavigationView im obe
 
 Für eine nahtlose Erscheinungsbild + Gefühl empfohlen Wenn Ihre app-Seiten, die einem ScrollViewer und Navigationsbereich oben positioniert wird, müssen den Bildlauf unterhalb der oberen Navigationsbereich.
 
-Dies kann erreicht werden, indem Sie die [CanContentRenderOutsideBounds](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.cancontentrenderoutsidebounds) -Eigenschaft auf die relevanten ScrollViewer auf "true".
+Dies kann erfolgen, indem Sie die [CanContentRenderOutsideBounds](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.cancontentrenderoutsidebounds) -Eigenschaft auf die relevanten ScrollViewer auf "true".
 
 ![Navview Scrollen Navigationsbereich](images/nav-scroll-content.png)
 
-Wenn Ihre app sehr lange Bildlauf in Inhalten, empfiehlt es sich, Einbinden von sticky Header, die an der oberen Navigationsbereich anhängen und bilden eine glatte Oberfläche zu berücksichtigen. 
+Wenn Ihre app sehr lange Bildlauf in Inhalten, empfiehlt es sich, einbinden sticky Header, die an der oberen Navigationsbereich anhängen und bilden eine glatte Oberfläche zu berücksichtigen. 
 
 ![Navview Scrollen sticky-Headers](images/nav-scroll-stickyheader.png)
 
 Sie können dies erreichen, indem Sie die Eigenschaft [ContentOverlay](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ContentOverlay) für NavigationView festlegen. 
 
-In einigen Fällen, wenn der Benutzer nach unten Bildläufe ist, können Sie den Navigationsbereich erreicht, indem Sie die [IsPaneVisible](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ContentOverlay) -Eigenschaft auf NavigationView auf "false" ausblenden möchten.
+In manchen Fällen, wenn der Benutzer nach unten Bildlauf ist, können Sie den Navigationsbereich erreicht, indem Sie die [IsPaneVisible](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview.ContentOverlay) -Eigenschaft auf NavigationView auf "false" ausblenden möchten.
 
 ![Navview Scrollen ausblenden nav](images/nav-scroll-hidepane.png)
 

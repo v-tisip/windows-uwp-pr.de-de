@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 53aac2375d60df3cd9493f315b20431961378fe8
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2905223"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3127292"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>Benutzeraktivitäten geräteübergreifend fortsetzen
 
@@ -171,7 +171,7 @@ Sie können die [UserActivity](https://docs.microsoft.com/uwp/api/windows.applic
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Aktivitäten des Benutzers (Project Rome Dokumente)](https://docs.microsoft.com/windows/project-rome/user-activities/)
+* [Aktivitäten des Benutzers (Projekt "ROME" Dokumente)](https://docs.microsoft.com/windows/project-rome/user-activities/)
 * [Adaptive Karten](https://docs.microsoft.com/adaptive-cards/)
 * [Adaptive Karten, Schnellansicht](http://adaptivecards.io/)
 * [Behandeln der URI-Aktivierung](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)

@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ddeccfe4c5e198afd77eaa4a81fc017543291ba1
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2906547"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3126880"
 ---
 # <a name="custom-dependency-properties"></a>Benutzerdefinierte Abhängigkeitseigenschaften
 
@@ -81,7 +81,7 @@ Im Fall von Microsoft .NET-Sprachen (C# und Microsoft Visual Basic) rufen Sie [*
 > [!NOTE]
 > Registrieren der Abhängigkeitseigenschaft als Teil des Bezeichners Eigenschaft Typdefinition ist die typische Implementierung, aber Sie können eine Abhängigkeitseigenschaft auch im statischen Konstruktor Klasse registrieren. Dieser Ansatz eignet sich ggf., wenn Sie mehr als eine Codezeile benötigen, um die Abhängigkeitseigenschaft zu initialisieren.
 
-Für C++ / CX, verfügen Sie über Optionen für wie Sie die Implementierung zwischen der Header- und Codedatei aufteilen. In der Regel wird der Bezeichner selbst als **public static**-Eigenschaft in der Kopfzeile mit einer **get**-Implementierung, jedoch ohne **set**-Implementierung deklariert. Die **get**-Implementierung bezieht sich auf ein privates Feld, das eine nicht initialisierte [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362)-Instanz ist. Sie können darüber hinaus die Wrapper und die **get**- und **set**-Implementierungen des Wrappers deklarieren. In diesem Fall enthält der Wrapper eine minimale Implementierung. Wenn der Wrapper eine Zuordnung zur Windows-Runtime benötigt, führen Sie die Zuordnung auch in der Kopfzeile durch. Platzieren Sie den [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)-Aufruf in die Codedatei innerhalb einer Hilfsfunktion, die nur bei der ersten Initialisierung der App ausgeführt wird. Verwenden Sie den Rückgabewert von **Register**, um die statischen, jedoch nicht initialisierten Bezeichner zu füllen, die Sie in der Kopfzeile deklariert haben und zunächst im Stammbereich der Implementierungsdatei auf **nullptr** festgelegt haben.
+Für C++ / CX, verfügen Sie über Optionen für wie die Implementierung zwischen der Header- und Codedatei aufgeteilt. In der Regel wird der Bezeichner selbst als **public static**-Eigenschaft in der Kopfzeile mit einer **get**-Implementierung, jedoch ohne **set**-Implementierung deklariert. Die **get**-Implementierung bezieht sich auf ein privates Feld, das eine nicht initialisierte [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362)-Instanz ist. Sie können darüber hinaus die Wrapper und die **get**- und **set**-Implementierungen des Wrappers deklarieren. In diesem Fall enthält der Wrapper eine minimale Implementierung. Wenn der Wrapper eine Zuordnung zur Windows-Runtime benötigt, führen Sie die Zuordnung auch in der Kopfzeile durch. Platzieren Sie den [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)-Aufruf in die Codedatei innerhalb einer Hilfsfunktion, die nur bei der ersten Initialisierung der App ausgeführt wird. Verwenden Sie den Rückgabewert von **Register**, um die statischen, jedoch nicht initialisierten Bezeichner zu füllen, die Sie in der Kopfzeile deklariert haben und zunächst im Stammbereich der Implementierungsdatei auf **nullptr** festgelegt haben.
 
 ```csharp
 public static readonly DependencyProperty LabelProperty = DependencyProperty.Register(
@@ -170,7 +170,7 @@ void ImageWithLabelControl::RegisterDependencyProperties()
 ```
 
 > [!NOTE]
-> Für die C++ / CX-code, den Grund, warum Sie ein privates Feld und eine öffentliche schreibgeschützte-Eigenschaft, die [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) Flächen ist, damit andere Aufrufer an, die Ihre Abhängigkeitseigenschaft auch Eigenschaftensystem Hilfsprogramm-APIs verwenden können, die erfordern, die Bezeichner öffentlich sein. Wenn Sie den Bezeichner nicht offenlegen, können Benutzer diese Hilfsprogramm-APIs nicht verwenden. Beispiele für eine API und Szenarien dieser Art sind [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359), [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361), [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358), [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257) und [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836). Ein öffentliches Feld kann dazu nicht verwendet werden, da Windows-Runtime-Metadatenregeln keine öffentlichen Felder zulassen.
+> Für die C++ / CX-code, den Grund, warum Sie ein privates Feld und eine öffentliche Eigenschaft schreibgeschützt, die [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) Flächen ist, damit andere Aufrufer an, die Ihre Abhängigkeitseigenschaft auch Eigenschaftensystem Hilfsprogramm-APIs verwenden können, die erfordern, die Bezeichner öffentlich sein. Wenn Sie den Bezeichner nicht offenlegen, können Benutzer diese Hilfsprogramm-APIs nicht verwenden. Beispiele für eine API und Szenarien dieser Art sind [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359), [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361), [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358), [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257) und [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836). Ein öffentliches Feld kann dazu nicht verwendet werden, da Windows-Runtime-Metadatenregeln keine öffentlichen Felder zulassen.
 
 ## <a name="dependency-property-name-conventions"></a>Namenskonventionen für Abhängigkeitseigenschaften
 
@@ -186,7 +186,7 @@ Kombinieren Sie beim Erstellen der Bezeichnereigenschaft den von Ihnen registrie
 Ihr Eigenschaftenwrapper sollte [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) in der **get**-Implementierung und [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) in der **set**-Implementierung aufrufen.
 
 > [!WARNING]
-> Von Ausnahmefällen abgesehen sollten Ihre Wrapperimplementierungen nur die [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) und [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) Vorgänge ausführen. Andernfalls erhalten Sie ein anderes Verhalten, wenn Ihre Eigenschaft über XAML anstelle über Code festgelegt wird. Aus Effizienzgründen umgeht der XAML-Parser Wrapper beim Festlegen von Abhängigkeitseigenschaften und kommuniziert mit dem Sicherungsspeicher über **SetValue**.
+> Alle von Ausnahmefällen abgesehen sollten Ihre Wrapperimplementierungen nur die [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) und [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) Vorgänge ausführen. Andernfalls erhalten Sie ein anderes Verhalten, wenn Ihre Eigenschaft über XAML anstelle über Code festgelegt wird. Aus Effizienzgründen umgeht der XAML-Parser Wrapper beim Festlegen von Abhängigkeitseigenschaften und kommuniziert mit dem Sicherungsspeicher über **SetValue**.
 
 ```csharp
 public String Label
@@ -251,7 +251,7 @@ In den bisherigen Beispielen für den Aufruf von [**DependencyProperty.Register*
 In der Regel geben Sie einen [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) als inline erstellte Instanz innerhalb der Parameter für [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) an.
 
 > [!NOTE]
-> Wenn Sie eine [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812) -Implementierung definieren, müssen Sie der Hilfsmethode [**PropertyMetadata.Create**](https://msdn.microsoft.com/library/windows/apps/hh702099) , anstatt Aufruf eines Konstruktors [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) verwenden, um die **PropertyMetadata** -Instanz zu definieren.
+> Wenn Sie eine Implementierung [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812) definieren, müssen Sie die Hilfsmethode [**PropertyMetadata.Create**](https://msdn.microsoft.com/library/windows/apps/hh702099) , anstatt Aufruf eines Konstruktors [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) verwenden, um die **PropertyMetadata** -Instanz definieren.
 
 Im nächsten Beispiel werden die zuvor gezeigten Beispiele für [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) modifiziert, indem auf eine [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771)-Instanz mit einem [**PropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/br208770)-Wert verwiesen wird. Die Implementierung des OnLabelChanged-Rückrufs wird später in diesem Abschnitt gezeigt.
 

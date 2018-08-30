@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Fehler, Desktopanwendung
 ms.localizationpriority: medium
 ms.openlocfilehash: 71c566ff375f36108d724f3c550570b3332f4c6b
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2905783"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3113760"
 ---
 # <a name="get-error-reporting-data-for-your-desktop-application"></a>Abrufen von Fehlerberichtsdaten für Ihre Desktopanwendung
 
-Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um gesammelte Fehlerberichtsdaten für eine Desktopanwendung abzurufen, die Sie dem [Windows-Desktopanwendungsprogramm](https://msdn.microsoft.com/library/windows/desktop/mt826504) hinzugefügt haben. Diese Methode kann nur Fehlern abrufen, die in den letzten 30 Tagen aufgetreten ist. Diese Informationen sind auch im [Integritätsbericht](https://msdn.microsoft.com/library/windows/desktop/mt826504) für Desktopanwendungen im Windows Dev Center-Dashboard verfügbar.
+Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um gesammelte Fehlerberichtsdaten für eine Desktopanwendung abzurufen, die Sie dem [Windows-Desktopanwendungsprogramm](https://msdn.microsoft.com/library/windows/desktop/mt826504) hinzugefügt haben. Diese Methode kann nur Fehlern abrufen, die in den letzten 30 Tagen aufgetreten sind. Diese Informationen sind auch im [Integritätsbericht](https://msdn.microsoft.com/library/windows/desktop/mt826504) für Desktopanwendungen im Windows Dev Center-Dashboard verfügbar.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -49,7 +49,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 | Parameter        | Typ   |  Beschreibung      |  Erforderlich  
 |---------------|--------|---------------|------|
 | applicationId | string | Die Produkt-ID der Desktopanwendung, für die Fehlerberichtsdaten abgerufen werden sollen. Um die Produkt-ID einer Desktopanwendung zu erhalten, öffnen Sie einen [Dev Center-Analysebericht für Ihre Desktopanwendung](https://msdn.microsoft.com/library/windows/desktop/mt826504) (z.B. den **Integritätsbericht**) und rufen Sie die Produkt-ID aus der URL ab. |  Ja  |
-| startDate | date | Das Startdatum im Datumsbereich der Fehlerberichtsdaten, die abgerufen werden sollen, im Format ```mm/dd/yyyy```. Der Standardwert ist das aktuelle Datum.<p/><p/>**Hinweis:**&nbsp;&nbsp;dieser Methode kann nur abgerufen, Fehler, die in den letzten 30 Tagen aufgetreten ist.  |  Nein  |
+| startDate | date | Das Startdatum im Datumsbereich der Fehlerberichtsdaten, die abgerufen werden sollen, im Format ```mm/dd/yyyy```. Der Standardwert ist das aktuelle Datum.<p/><p/>**Hinweis:**&nbsp;&nbsp;diese Methode kann nur abrufen Fehler, die in den letzten 30 Tagen aufgetreten ist.  |  Nein  |
 | endDate | date | Das Enddatum im Datumsbereich der Fehlerberichtsdaten, die abgerufen werden sollen, im Format ```mm/dd/yyyy```. Der Standardwert ist das aktuelle Datum.   |  Nein  |
 | top | int | Die Anzahl der Datenzeilen, die in der Anforderung zurückgegeben werden sollen. Der Maximal- und Standardwert ist 10.000, wenn nicht anders angegeben. Wenn die Abfrage keine weiteren Zeilen enthält, entält der Antworttext den Link „Weiter“, den Sie verwenden können, um die nächste Seite mit Daten anzufordern. |  Nein  |
 | skip | int | Die Anzahl der Zeilen, die in der Abfrage übersprungen werden sollen. Verwenden Sie diesen Parameter, um große Datensätze durchzublättern. Beispielsweise rufen „top=10000“ und „skip=0“ die ersten 10.000Datenzeilen ab, „top=10000“ und „skip=10000“ die nächsten 10.000Datenzeilen usw. |  Nein  |

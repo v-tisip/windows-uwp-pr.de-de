@@ -1,11 +1,11 @@
 ---
-author: serenaz
+author: QuinnRadich
 Description: The toggle switch represents a physical switch that allows users to turn things on or off.
 title: Richtlinien für Umschaltersteuerelemente
 ms.assetid: 753CFEA4-80D3-474C-B4A9-555F872A3DEF
 label: Toggle switches
 template: detail.hbs
-ms.author: sezhen
+ms.author: quradic
 ms.date: 05/19/2017
 ms.topic: article
 ms.prod: windows
@@ -16,20 +16,20 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a62adf816ece7217de6f2f6cb0ccd505f0a5ad56
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: daffbc5ff74adc234ac6c2b414a7e1b85763849d
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816365"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3122582"
 ---
 # <a name="toggle-switches"></a>Umschalter
 
-Der [Umschalter](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx) stellt einen physischen Schalter dar, mit dem Benutzer Dinge ein- oder ausschalten können, wie ein Lichtschalter. Mit Umschalter-Steuerelementen können Sie Benutzern zwei Optionen anbieten, die sich gegenseitig ausschließen (wie Ein/Aus), wobei eine Option mit der Auswahl unmittelbare Ergebnisse liefert.
+Der Umschalter stellt einen physischen Schalter dar, mit dem Benutzer Dinge ein- oder ausschalten können, wie ein Lichtschalter. Mit Umschalter-Steuerelementen können Sie Benutzern zwei Optionen anbieten, die sich gegenseitig ausschließen (wie Ein/Aus), wobei eine Option mit der Auswahl unmittelbare Ergebnisse liefert.
 
-Um ein Umschalter-Steuerelement zu erstellen, verwenden Sie die  [ToggleSwitch-Klasse](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx).
+Um ein Umschalter-Steuerelement zu erstellen, verwenden Sie die  [ToggleSwitch-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch).
 
-> **Wichtige APIs**: [ToggleSwitch-Klasse](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.aspx), [IsOn-Eigenschaft](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx), [Toggled-Ereignis](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx)
+> **Wichtige APIs**: [ToggleSwitch-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch), [IsOn-Eigenschaft](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison), [Toggled-Ereignis](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)
 
 ## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 
@@ -101,7 +101,7 @@ stackPanel1.Children.Add(lightToggle);
 
 ### <a name="ison"></a>IsOn
 
-Der Schalter kann entweder ein- oder ausgeschaltet sein. Verwenden Sie die [IsOn](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.ison.aspx)-Eigenschaft, um den Zustand des Schalters zu ermitteln. Wenn der Schalter zur Steuerung des Zustands einer anderen binären Eigenschaft verwendet wird, können Sie wie hier gezeigt eine Bindung verwenden.
+Der Schalter kann entweder ein- oder ausgeschaltet sein. Verwenden Sie die [IsOn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison)-Eigenschaft, um den Zustand des Schalters zu ermitteln. Wenn der Schalter zur Steuerung des Zustands einer anderen binären Eigenschaft verwendet wird, können Sie wie hier gezeigt eine Bindung verwenden.
 
 ```xaml
 <StackPanel Orientation="Horizontal">
@@ -112,7 +112,7 @@ Der Schalter kann entweder ein- oder ausgeschaltet sein. Verwenden Sie die [IsOn
 
 ### <a name="toggled"></a>Toggled
 
-In anderen Fällen können Sie das [Toggled](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.toggled.aspx)-Ereignis zur Reaktion auf Zustandsänderungen behandeln.
+In anderen Fällen können Sie das [Toggled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)-Ereignis zur Reaktion auf Zustandsänderungen behandeln.
 
 In diesem Beispiel wird veranschaulicht, wie in XAML und im Code ein Toggled-Ereignis hinzugefügt wird. Das Toggled-Ereignis wird behandelt, um einen Statusring ein- oder auszuschalten oder seine Sichtbarkeit zu ändern.
 
@@ -156,7 +156,7 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
 
 ### <a name="onoff-labels"></a>Beschriftungen „Ein”/„Aus”
 
-Standardmäßig beinhaltet der Umschalter literalen Beschriftungen „Ein” und „Aus”, die automatisch lokalisiert werden. Sie können diese Beschriftungen durch Festlegen der Eigenschaften [OnContent](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.oncontent.aspx) und [OffContent](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.offcontent.aspx) ersetzen.
+Standardmäßig beinhaltet der Umschalter literalen Beschriftungen „Ein” und „Aus”, die automatisch lokalisiert werden. Sie können diese Beschriftungen durch Festlegen der Eigenschaften [OnContent](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.oncontent) und [OffContent](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.offcontent) ersetzen.
 
 In diesem Beispiel werden die Beschriftungen „Ein”/„Aus” durch die Beschriftungen „Einblenden”/„Ausblenden” ersetzt.
 
@@ -166,7 +166,7 @@ In diesem Beispiel werden die Beschriftungen „Ein”/„Aus” durch die Besch
               Toggled="ToggleSwitch_Toggled"/>
 ```
 
-Sie können auch komplexeren Inhalt verwenden, indem Sie die Eigenschaften [OnContentTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.oncontenttemplate.aspx) und [OffContentTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.toggleswitch.offcontenttemplate.aspx) verwenden.
+Sie können auch komplexeren Inhalt verwenden, indem Sie die Eigenschaften [OnContentTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.oncontenttemplate) und [OffContentTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.offcontenttemplate) verwenden.
 
 ## <a name="recommendations"></a>Empfehlungen
 
@@ -179,7 +179,7 @@ Sie können auch komplexeren Inhalt verwenden, indem Sie die Eigenschaften [OnCo
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
-- [ToggleSwitch-Klasse](https://msdn.microsoft.com/library/windows/apps/hh701411)
+- [ToggleSwitch-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch)
 - [Optionsfelder](radio-button.md)
 - [Umschalter](toggles.md)
 - [Kontrollkästchen](checkbox.md)

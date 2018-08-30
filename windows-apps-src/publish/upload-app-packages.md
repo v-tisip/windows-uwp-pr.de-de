@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Pakete, hochladen, Paket upload
 ms.localizationpriority: medium
 ms.openlocfilehash: 6013a238cff8db3b85dd98af58cccaf344a72f51
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2909910"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3123117"
 ---
 # <a name="upload-app-packages"></a>Hochladen von App-Paketen
 
@@ -32,7 +32,7 @@ Um Pakete hochzuladen, ziehen Sie sie in das Uploadfeld oder klicken Sie, um Ihr
 
 Falls Sie [Flight-Pakete](package-flights.md) für Ihre App erstellt haben, wird eine Dropdownliste mit der Option zum Kopieren von Paketen aus einem Ihrer Flight-Pakete angezeigt. Wählen Sie das Flight-Paket mit den Paketen aus, die Sie übertragen möchten. Anschließend können Sie einige oder alle der Pakete auswählen, um sie in diese Übermittlung aufzunehmen.
 
-Wenn beim Überprüfen sie Fehler mit einem Paket erkannt, zeigen wir eine Nachricht, damit Sie wissen, was falsch ist. Sie müssen das Paket entfernen, das Problem beheben und versuchen Sie es erneut hochladen. In anderen Fällen werden Warnungen zu Fehlern angezeigt, die Probleme verursachen können, Sie jedoch nicht daran hindern, Ihre Übermittlung fortzusetzen.
+Wenn beim Überprüfen sie Fehler mit einem Paket erkannt, zeigen wir eine Nachricht, damit Sie wissen, was liegt. Sie müssen zu entfernen Sie das Paket, das Problem beheben, versuchen Sie es erneut hochladen. In anderen Fällen werden Warnungen zu Fehlern angezeigt, die Probleme verursachen können, Sie jedoch nicht daran hindern, Ihre Übermittlung fortzusetzen.
 
 
 ## <a name="device-family-availability"></a>Verfügbarkeit von Gerätefamilien
@@ -44,7 +44,7 @@ Weitere Informationen finden Sie unter [Verfügbarkeit von Gerätefamilien](devi
 
 ## <a name="package-details"></a>Paketdetails
 
-Hochgeladene Pakete werden hier aufgeführt nach Zielbetriebssystem gruppiert. Name, Version und Architektur des Pakets werden angezeigt. Klicken Sie auf **Details anzeigen**, um weitere Informationen zu erhalten, z. B. die unterstützten Sprachen, die App-Funktionen oder die Dateigröße der einzelnen Pakete.
+Ihre hochgeladene Pakete werden hier aufgeführt nach Zielbetriebssystem gruppiert. Name, Version und Architektur des Pakets werden angezeigt. Klicken Sie auf **Details anzeigen**, um weitere Informationen zu erhalten, z. B. die unterstützten Sprachen, die App-Funktionen oder die Dateigröße der einzelnen Pakete.
 
 Wenn Sie ein Paket aus der Einsendung entfernen müssen, klicken Sie dazu im Abschnitt **Details** des Pakets unten auf den Link **Entfernen**.
 

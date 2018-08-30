@@ -9,23 +9,23 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, portieren, migrieren, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 4aba8f559b7b6f0518a620d5127692d541953255
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.openlocfilehash: 63f730e5256cb88c04549cc64e36003885e02fb6
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2905943"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3113300"
 ---
 # <a name="move-to-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-from-ccx"></a>Wechsel zu [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) von C++/CX
 In diesem Thema wird gezeigt, wie Sie [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)-Code zum entsprechenden Äquivalent in C++/WinRT portieren.
 
 > [!IMPORTANT]
-> Wenn Sie nach und nach portieren möchten Ihre [C++ / CX](/cpp/cppcx/visual-c-language-reference-c-cx) Code in C++ / WinRT, können Sie. C++ / CX- und C++ / WinRT-Code kann im selben Projekt, mit Ausnahme von XAML-Compiler-Unterstützung und Windows-Runtime-Komponenten vorhanden sein. Für diese Ausnahmen, müssen Sie in der Zielgruppe entweder C++ / CX oder C++ / WinRT im selben Projekt. Aber Sie können einer Komponente für Windows-Runtime-Faktor-Code aus Ihrer XAML-app verwenden, wie Sie es portieren. Entweder bewegen Sie so viel C++ / CX-code können Sie in einer Komponente, und klicken Sie dann das XAML-Projekt in C++ / WinRT. Oder andere lassen Sie das XAML-Projekt als C++ / CX, erstellen Sie eine neue C++ / WinRT-Komponente, und beginnen Portieren von C++ / CX-Code aus dem XAML-Projekt und in der Komponente. Sie haben könnten auch eine C++ / CX-Komponentenprojekt zusammen mit C++ / WinRT-Komponentenprojekt innerhalb der gleichen Projektmappe verweisen auf beide aus Ihrem Anwendungsprojekt und schrittweise aus einer anderen port.
+> Wenn Sie nach und nach portieren möchten Ihre [C++ / CX](/cpp/cppcx/visual-c-language-reference-c-cx) Code in C++ / WinRT, können Sie. C++ / CX- und C++ / WinRT-Code kann im selben Projekt, mit Ausnahme von XAML-Compiler-Unterstützung und Windows-Runtime-Komponenten vorhanden sein. Für diese Ausnahmen, müssen Sie in der Zielgruppe entweder C++ / CX oder C++ / WinRT im selben Projekt. Aber Sie können einer Komponente für Windows-Runtime-Faktor-Code aus Ihrer XAML-app verwenden, wie Sie es portieren. Entweder bewegen Sie so viel C++ / CX-code können Sie in einer Komponente, und klicken Sie dann das XAML-Projekt in C++ / WinRT. Oder andere lassen die XAML-Projekt als C++ / CX, erstellen Sie eine neue C++ / WinRT-Komponente, und beginnen Sie Portieren von C++ / CX-Code aus dem XAML-Projekt und in der Komponente. Sie haben können auch eine C++ / CX-Komponentenprojekt zusammen mit C++ / WinRT-Komponentenprojekt innerhalb der gleichen Projektmappe verweisen auf beide aus Ihrem Anwendungsprojekt und schrittweise aus einer anderen port.
 
 > [!NOTE]
 > Sowohl [C++/CX ](/cpp/cppcx/visual-c-language-reference-c-cx) als auch das Windows SDK deklarieren Typen im Root-Namespace **Windows**. Ein Windows-Typ, der in C++/WinRT projiziert wird, verfügt über den gleichen vollqualifizierten Namen wie der Windows-Typ, befindet sich aber im C++/**winrt**-Namespace. Diese unterschiedlichen Namespaces ermöglichen die Portierung von C++/CX nach C++/WinRT in Ihrem eigenen Tempo.
 
-Angesichts der oben genannten Ausnahmen, die erste Schritt beim Portieren eines Projekts zu C++ / WinRT ist C++ manuell hinzufügen / WinRT-Unterstützung (finden Sie unter [Visual Studio-Unterstützung für C++ / WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)). Bearbeiten Sie dazu Ihre `.vcxproj`-Datei, suchen Sie nach `<PropertyGroup Label="Globals">`, und definieren Sie innerhalb dieser Eigenschaftengruppe die Eigenschaft `<CppWinRTEnabled>true</CppWinRTEnabled>`. Eine Auswirkung dieser Änderung ist, dass die Unterstützung für C++/CX im Projekt deaktiviert wird. Es ist sinnvoll, lassen Sie Unterstützung deaktiviert, so dass Build Nachrichten Sie suchen (und Port) unterstützen alle Ihre Abhängigkeiten von C++ / CX, oder Sie können Unterstützung wieder aktivieren (in den Projekteigenschaften, **C/C++** \> **Allgemeine** \> **verbrauchen Windows-Runtime Erweiterung** \> **Ja (/ Zw)**), und nach und nach portieren.
+Unter Berücksichtigung der oben genannten Ausnahmen, die erste Schritt beim Portieren eines Projekts zu C++ / WinRT ist C++ manuell hinzufügen / WinRT-Unterstützung (finden Sie unter [Visual Studio-Unterstützung für C++ / WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)). Bearbeiten Sie dazu Ihre `.vcxproj`-Datei, suchen Sie nach `<PropertyGroup Label="Globals">`, und definieren Sie innerhalb dieser Eigenschaftengruppe die Eigenschaft `<CppWinRTEnabled>true</CppWinRTEnabled>`. Eine Auswirkung dieser Änderung ist, dass die Unterstützung für C++/CX im Projekt deaktiviert wird. Es ist sinnvoll, lassen Sie Unterstützung deaktiviert, so dass Build Nachrichten Sie suchen (und Port) unterstützen alle Ihre Abhängigkeiten von C++ / CX, oder Sie können Unterstützung wieder aktivieren (in den Projekteigenschaften, **C/C++-** \> **Allgemeine** \> **verbrauchen Windows-Runtime Erweiterung** \> **Ja (/ Zw)**), und nach und nach portieren.
 
 Definieren Sie die Projekteigenschaft **Allgemein** \> **Zielplattformversion** mit 10.0.17134.0 (Windows 10, Version 1803) oder höher.
 
@@ -67,7 +67,7 @@ if (userList != nullptr)
     ...
 ```
 
-Beim Konvertieren in den entsprechenden C++/WinRT-Code werden die Hütchen entfernt und der Pfeiloperator (-&gt;) in den Punktoperator (.) geändert, da C++/WinRT-projizierte Typen Werte und keine Zeiger sind.
+Beim Portieren in den entsprechenden C++ / WinRT-Code Sie die hütchen entfernt und ändern Sie den Pfeiloperator (-&gt;) in den Punktoperator (.), da C++ / WinRT-projizierte Typen Werte und keine Zeiger sind.
 
 ```cppwinrt
 IVectorView<User> userList = User::Users();
@@ -181,6 +181,43 @@ struct Sample
 private:
     Buffer m_gamerPicBuffer{ nullptr };
 };
+```
+
+## <a name="converting-from-a-base-runtime-class-to-a-derived-one"></a>Konvertieren von einer Basisklasse Laufzeitklasse in eine abgeleitete
+Es ist üblich, eine Verweis auf Basis verfügen, die Sie wissen, dass auf ein Objekt eines abgeleiteten Typs verweist. In C++ / CX verwenden Sie `dynamic_cast` auf eine *Umwandlung* der Referenz-Basis in eine Referenz-zu-abgeleitet. Die `dynamic_cast` ist wirklich nur ein ausgeblendet Aufruf von [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521). Hier ist ein typisches Beispiel&mdash;Sie sind ein Abhängigkeitseigenschaften geänderter Eigenschaftenänderungsereignis behandeln, und Sie möchten, das von **DependencyObject** zurück in den tatsächlichen Typ umgewandelt, die die Abhängigkeitseigenschaft besitzt.
+
+```cpp
+void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject^ d, Windows::UI::Xaml::DependencyPropertyChangedEventArgs^ e)
+{
+    BgLabelControl^ theControl{ dynamic_cast<BgLabelControl^>(d) };
+
+    if (theControl != nullptr)
+    {
+        // succeeded ...
+    }
+}
+```
+
+Die entsprechende C++ / WinRT-Code ersetzt die `dynamic_cast` mit einem Aufruf an die [**IUnknown::_try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function) -Funktion, die **QueryInterface**kapselt. Sie haben auch die Möglichkeit, rufen Sie stattdessen [**IUnknown::_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function), die eine Ausnahme auslöst, wenn für die erforderliche Schnittstelle (die Standardschnittstelle des Typs, die Sie anfordern) Abfragen nicht zurückgegeben wird. Hier sehen Sie eine C++ / WinRT-Codebeispiel.
+
+```cppwinrt
+void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject const& d, Windows::UI::Xaml::DependencyPropertyChangedEventArgs const& e)
+{
+    if (BgLabelControlApp::BgLabelControl theControl{ d.try_as<BgLabelControlApp::BgLabelControl>() })
+    {
+        // succeeded ...
+    }
+
+    try
+    {
+        BgLabelControlApp::BgLabelControl theControl{ d.as<BgLabelControlApp::BgLabelControl>() };
+        // succeeded ...
+    }
+    catch (winrt::hresult_no_interface const&)
+    {
+        // failed ...
+    }
+}
 ```
 
 ## <a name="event-handling-with-a-delegate"></a>Ereignisbehandlung mit einem Delegaten

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Anhalten der Veröffentlichung, Veröffentlichungsdatum, Genehmigungsprozess für eingeschränkte Funktionen
 ms.localizationpriority: medium
 ms.openlocfilehash: 147f34c40cc5d2b612dcdd92edc0c76340cf58f7
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2917664"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3112234"
 ---
 # <a name="manage-submission-options"></a>Verwalten der Übermittlungsoptionen
 
@@ -30,7 +30,7 @@ Standardmäßig wird Ihre Übermittlung veröffentlicht, sobald sie die Zertifiz
 
 **Veröffentlichen Sie diese Übermittlung, sobald die Zertifizierung abgeschlossen ist (oder ab einem im Abschnitt des Zeitplans ausgewählten Datum)** ist die Standardeinstellung. Dies bedeutet, dass Ihre Übermittlung veröffentlicht wird, sobald der Zertifizierungsprozess abgeschlossen ist, es sei denn, sie haben das Datum anderweitig im [Zeitplan](configure-precise-release-scheduling.md) auf der Seite **Preise und Verfügbarkeit** festgelegt.   
 
-Für die meisten Übermittlungen empfehlen wir den Abschnitt **Optionen zum Anhalten der Veröffentlichung** auf diese Option festzulegen. Wenn Sie ein spezifisches Datum für die Veröffentlichung der Übermittlung festlegen möchten, verwenden Sie die Option **Veröffentlichen Sie diese Übermittlung, sobald die Zertifizierung abgeschlossen ist (oder ab einem im Abschnitt des Zeitplans ausgewählten Datum)**. Wenn Sie diesen Abschnitt als Standardoption festlegen, wird die Übermittlung nicht vor dem Datum veröffentlicht, das Sie im Abschnitt **Zeitplan** festgelegt haben. Das von Ihnen im Abschnitt **Zeitplans** ausgewählten Datum werden verwendet werden, zu bestimmen, ob Ihr Produkt für Kunden im Store verfügbar gemacht wird.
+Für die meisten Übermittlungen empfehlen wir den Abschnitt **Optionen zum Anhalten der Veröffentlichung** auf diese Option festzulegen. Wenn Sie ein spezifisches Datum für die Veröffentlichung der Übermittlung festlegen möchten, verwenden Sie die Option **Veröffentlichen Sie diese Übermittlung, sobald die Zertifizierung abgeschlossen ist (oder ab einem im Abschnitt des Zeitplans ausgewählten Datum)**. Wenn Sie diesen Abschnitt als Standardoption festlegen, wird die Übermittlung nicht vor dem Datum veröffentlicht, das Sie im Abschnitt **Zeitplan** festgelegt haben. Zu bestimmen, ob Ihr Produkt für Kunden im Store verfügbar gemacht wird, werden das von Ihnen im Abschnitt **Zeitplans** ausgewählten Datum verwendet werden.
 
 
 ### <a name="publish-your-submission-manually"></a>Übermittlung manuell veröffentlichen

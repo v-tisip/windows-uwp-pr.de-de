@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Trailer, Video, Screenshot, Bild, Symbol, Store-Eintrag, Store-Eintragsbilder
 ms.localizationpriority: medium
 ms.openlocfilehash: d787ac620f9d0114d67d85def758416afd9f5f15
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2912384"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3115775"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>App-Screenshots, -Bilder und -Trailer
 
@@ -85,11 +85,11 @@ Dieses Bild kann auf verschiedenen Store-Seiten für Windows10 angezeigt werden 
 
 Dieses Bild ist für die ordnungsgemäße Anzeige auf Windows Phone8.1 und früheren Versionen erforderlich. Wenn Ihre App Windows Phone8.1 und frühere Versionen unterstützt und Sie dieses Bild nicht bereitstellen, sehen Kunden im Eintrag für Ihre App ein leeres Symbol. (Dies gilt auch für Kunden unter Windows10, wenn Ihre App nur Pakete für Windows Phone8.1 oder frühere Versionen enthält.) Wenn Ihre Übermittlung *nur* UWP-Pakete enthält, müssen Sie dieses Bild nicht bereitstellen. (Beachten Sie Folgendes: Wenn Ihre Übermittlung sowohl Windows Phone8.x-Pakete als auch UWP-Pakete enthält und Sie dieses Bild bereitstellen, kann es unter Windows10 in bestimmten Store-Layouts verwendet werden. Wenn Sie dies verhindern möchten, können Sie einen [plattformspezifischen Eintrag](create-platform-specific-store-listings.md) für die Windows Phone-Versionen erstellen, den Ihre App unterstützt, und nur das Symbol für die App-Kachel aufnehmen.
 
-### <a name="display-only-uploaded-logo-images-in-the-store"></a>Anzeige hochgeladen nur logobildern im Store
+### <a name="display-only-uploaded-logo-images-in-the-store"></a>Anzeige nur hochgeladen Logo Bilder im Store.
 
-Sie haben die Möglichkeit zum verhindern, dass des Stores die Logobilder in den Paketen Ihrer app, wenn Ihr Angebot für Kunden unter Windows 10 (einschließlich Xbox) angezeigt, und stattdessen der Store muss nur Bilder verwenden, die Sie hochladen. Dies bietet Ihnen mehr Kontrolle über die Darstellung Ihrer App in verschiedenen Anzeigen im Store für Kunden auf Windows 10 (einschließlich Xbox). (Wenn Ihr Produkt für frühere Betriebssystemversionen unterstützt, möglicherweise diese Kunden weiterhin Bilder aus Ihrer Pakete angezeigt, auch wenn Sie diese Option verwenden.)
+Sie haben die Möglichkeit zum verhindern, dass der Store die Logos in den Paketen Ihrer app zu verwenden, wenn Ihr Angebot für Kunden unter Windows 10 (einschließlich Xbox) angezeigt, und stattdessen der Store muss nur Bilder verwenden, die Sie hochladen. Dies bietet Ihnen mehr Kontrolle über die Darstellung Ihrer App in verschiedenen Anzeigen im Store für Kunden auf Windows 10 (einschließlich Xbox). (Wenn Ihr Produkt für frühere Betriebssystemversionen unterstützt, möglicherweise diese Kunden weiterhin Bilder aus Ihrer Pakete angezeigt, auch wenn Sie diese Option verwenden.)
 
-In den Store nur die Bilder verwenden, die Sie hochladen, (für Kunden unter Windows 10, einschließlich Xbox), und keine Bilder von Ihren Paketen verwenden, aktivieren Sie das Kontrollkästchen mit der Bezeichnung **für Kunden unter Windows 10 und Xbox haben, anzeigen hochgeladen Logo Images INSTEAD das Bild aus der meine Pakete **.
+In den Store nur die Bilder verwenden, die Sie (für Kunden unter Windows 10, einschließlich Xbox) hochladen und keine Bilder von Ihren Paketen verwenden, aktivieren Sie das Kontrollkästchen mit der Bezeichnung **für Kunden unter Windows 10 und Xbox haben, anzeigen hochgeladen Logo Images INSTEAD das Bild aus der meine Pakete **.
 
 Wenn Sie dieses Kontrollkästchen aktivieren, wird ein neuer Abschnitt namens **Store Bilder anzeigen** angezeigt. Hier können Sie 3 Bilder, u. a. die **1:1-app-Kachel Symbol (300 x 300 Pixel)** (Wenn Sie das Kontrollkästchen, das Feld zum Bereitstellen, dass das Bild in diesem Abschnitt verschoben) hochladen. Es wird empfohlen, alle drei Bildgrößen bereitzustellen, wenn Sie diese Option verwenden: 300 x 300, 150 x 150 und 71 x 71 Pixel. Es ist jedoch nur die Größe 300 x 300 erforderlich.
 

@@ -10,11 +10,11 @@ ms.prod: Microsoft Edge, Azure, Visual Studio Code
 ms.technology: web
 ms.localizationpriority: medium
 ms.openlocfilehash: 42f11cbdd749a44c4ba0d8bc1a0397a4f2882257
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2911326"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3115595"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>Erstellen einer Web-App mit einer einzelnen Seite mit REST API-Backend
 
@@ -298,7 +298,7 @@ Hier sind einige nützliche Ressourcen für die weiterfühRendern Schritte:
 
  - [Azure DocumentDB-Dokumente](https://docs.microsoft.com/en-us/azure/documentdb/index)
 
-## <a name="part-ii-build-a-single-page-web-application"></a>Teil II: Erstellen einer Einzelseiten-Web-Anwendung
+## <a name="part-ii-build-a-single-page-web-application"></a>Teil II: Erstellen einer Einzelseiten-Web-Anwendungs
 
 Nun, da Sie mit dem Erstellen (oder [Herunterladen](https://github.com/Microsoft/Windows-tutorials-web/tree/master/Single-Page-App-with-REST-API/backend)) des [REST-API-Back-Ends](#part-i-build-a-rest-api-backend) aus Teil I fertig sind, sind Sie bereit, um das Einzelseiten-Speicherspiel-Front-End mit [Knoten](https://nodejs.org/en/), [Express](http://expressjs.com/), und [Bootstrap](http://getbootstrap.com/) zu erstellen.
 

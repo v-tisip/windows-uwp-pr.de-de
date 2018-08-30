@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, überprüfen, Kommentar, Verfassers
 ms.localizationpriority: medium
 ms.openlocfilehash: 8891aecb904f69e3f77ec5892d9234f79db46ff0
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2912408"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3127548"
 ---
 # <a name="reviews-report"></a>Rezensionsbericht
 
@@ -37,7 +37,7 @@ Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Re
 Sie können **Filter** erweitern, um alle angezeigten Rezensionen auf dieser Seite mit den folgenden Optionen zu filtern. Diese Filter werden nicht auf die Diagramme **Rezensionsübersicht** und **Durchschnittliche Bewertung im Laufe der Zeit** angewandt.
 
 -   **Bewertung**: Standardmäßig ist die Rezension „Alle Sterne“ aktiviert, Sie können jedoch einzelne Bewertungen (von 1 bis 5 Sternen) aktivieren bzw. deaktivieren, wenn Sie nur Rezensionen mit einer bestimmten Sternebewertung anzeigen möchten.
-- **Rezensionsinhalt**: die Standardeinstellung ist **Bewertungen mit rezensionsinhalt**, was bedeutet, dass nur Bewertungen mit Rezension Inhalt angezeigt werden. Sie können auswählen, **Alle** für die Anzeige aller Bewertungen, auch derjenigen, die keinen Text schriftliche Rezension enthalten. Beachten Sie, dass das Diagramm **Rezensionsübersicht** alle Rezensionen, unabhängig von Ihrer Auswahl immer angezeigt wird.
+- **Rezensionsinhalt**: die Standardeinstellung ist **Bewertungen mit rezensionsinhalt**, was bedeutet, dass nur Bewertungen mit Rezension Inhalt angezeigt werden. Sie können auswählen, **Alle** für die Anzeige aller Bewertungen, auch derjenigen, die keine Texte schriftliche Rezension enthalten. Beachten Sie, dass das Diagramm **Rezensionsübersicht** alle Rezensionen, unabhängig von Ihrer Auswahl immer angezeigt wird.
 -   **Betriebssystemversion**: Die Standardeinstellung ist **Alle**. Sie können eine bestimmte Betriebssystemversion auswählen, wenn auf dieser Seite nur Rezensionen von Kunden angezeigt werden sollen, die diese Betriebssystemversion verwenden.
 -   **Paketversion**: Die Standardeinstellung ist **Alle**. Wenn Ihre App mehr als ein Paket enthält, können Sie hier ein spezifisches Paket auswählen, um nur Rezensionen von Kunden anzuzeigen, die für die Rezension der App dieses Paket verwendet haben.
 -   **Antworten**: Die Standardeinstellung ist **Alle**. Sie können die Rezensionen so filtern, dass nur die Kundenrezensionen angezeigt werden, auf die Sie [geantwortet](respond-to-customer-reviews.md) haben, oder nur die, auf die Sie noch nicht geantwortet haben.
@@ -52,7 +52,7 @@ Sie können **Filter** erweitern, um alle angezeigten Rezensionen auf dieser Sei
 
 ## <a name="ratings-breakdown"></a>Rezensionsübersicht
 
-Das Diagramm **Rezensionsübersicht** erscheint am Anfang dieser Bericht, so, dass Sie einen kurzen Überblick über die folgenden können: 
+Das Diagramm **Rezensionsübersicht** erscheint am Anfang dieser Bericht so, dass Sie einen kurzen Überblick über die folgenden können: 
 - Den durchschnittlichen Bewertungsstern der Rezensionsübersicht für die App.
 - Die Gesamtanzahl der Bewertungen Ihrer App in den letzten 12Monaten.
 - Die Gesamtanzahl der Bewertungen für jede Bewertung von Sternen.
@@ -63,9 +63,9 @@ Das Diagramm **Rezensionsübersicht** erscheint am Anfang dieser Bericht, so, da
 > [!TIP]
 > Bei der durchschnittlichen Bewertung, die einem Kunden im Store angezeigt wird, werden der Markt und der Gerätetyp des Kunden berücksichtigt. Daher können die Inhalte in diesem Bericht davon abweichen.
 
-Beachten Sie, dass dieses Diagramm immer alle Rezensionen enthält, auch wenn Sie in den Seitenfilter **Rezensionsinhalt** **Bewertungen mit Inhalt überprüfen** ausgewählt.
+Beachten Sie, dass dieses Diagramm immer alle Rezensionen enthält, auch wenn Sie in den Seitenfilter **Rezensionsinhalt** **Bewertungen mit Inhalt zu überprüfen ausgewählt** .
 
-Dieses Diagramm kann auch im [Bericht "Bewertungen"](ratings-report.md), sowie weitere Informationen zu Ihrer app-Bewertungen angezeigt werden.
+Dieses Diagramm kann auch im [Bericht "Bewertungen"](ratings-report.md)sowie weitere Informationen zu Ihrer app-Bewertungen angezeigt werden.
 
 
 < Span Id = "Rezension--Kategorien der rezensionsstatistik / >
@@ -116,7 +116,7 @@ Wie bereits erwähnt, beim Durchsuchen von Rezensionen wird nur der Originaltext
 
 ## <a name="responding-to-customer-reviews"></a>Reagieren auf Kundenrezensionen
 
-Sie können Microsoft Store Dev Center-Dashboard, die [Microsoft Store-Rezensionen-API](../monetize/submit-responses-to-app-reviews.md)oder das [Dev Center-app](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) verwenden, um Antworten auf zahlreiche kundenrezensionen zu senden. Weitere Informationen finden Sie unter [Reagieren auf Kundenrezensionen](respond-to-customer-reviews.md).
+Sie können Microsoft Store Dev Center-Dashboard, die [Microsoft Store-Rezensionen-API](../monetize/submit-responses-to-app-reviews.md)oder die [Dev Center-app](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) zum Senden von Antworten auf zahlreiche kundenrezensionen verwenden. Weitere Informationen finden Sie unter [Reagieren auf Kundenrezensionen](respond-to-customer-reviews.md).
 
 Im Folgenden finden Sie einige zusätzliche Aktionen, die Sie basierend auf den angezeigten Bewertungen und Rezensionen in Erwägung ziehen sollten.
 

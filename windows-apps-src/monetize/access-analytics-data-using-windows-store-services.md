@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste Microsoft Store-Analyse-API
 ms.localizationpriority: medium
 ms.openlocfilehash: f36facd8ba89fbaccb7c61ad937c2ce005922aa8
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2910566"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3126727"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Zugreifen auf Analysedaten mit Store-Diensten
 
@@ -97,7 +97,7 @@ Die folgenden Analysemethoden stehen für die Verwendung durch Entwicklerkonten 
 | Szenario       | Methoden      |
 |---------------|--------------------|
 | Installiert |  <ul><li>[Abrufen von Desktopanwendungsinstallationen](get-desktop-app-installs.md)</li></ul> |
-| Blöcke |  <ul><li>[Upgrade-Blöcke für Ihre Desktopanwendung zu erhalten](get-desktop-block-data.md)</li><li>[Abrufen von Upgrade-Blockierung Informationen zu Ihrer desktop-Anwendung](get-desktop-block-data-details.md)</li></ul> |
+| Blöcke |  <ul><li>[Abrufen von Upgrade Blöcke für Ihre desktop-Anwendung](get-desktop-block-data.md)</li><li>[Abrufen von Upgrade-Blockierung Informationen zu Ihrer desktop-Anwendung](get-desktop-block-data-details.md)</li></ul> |
 | Anwendungsfehler |  <ul><li>[Abrufen von Fehlerberichtsdaten für Ihre Desktopanwendung](get-desktop-application-error-reporting-data.md)</li><li>[Abrufen von Details zu einem Fehler in Ihrer Desktopanwendung](get-details-for-an-error-in-your-desktop-application.md)</li><li>[Abrufen der Stapelüberwachung für einen Fehler in Ihrer Desktopanwendung](get-the-stack-trace-for-an-error-in-your-desktop-application.md)</li><li>[Herunterladen der CAB-Datei bei einem Fehler in Ihrer Desktopanwendung](download-the-cab-file-for-an-error-in-your-desktop-application.md)</li></ul> |
 | Einblicke | <ul><li>[Erhalten Sie Einblicke Daten für Ihre desktop-Anwendung](get-insights-data-for-your-desktop-app.md)</li></ul>  |
 

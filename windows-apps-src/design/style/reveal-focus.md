@@ -14,11 +14,11 @@ design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b5fa84efbe20368be55a50ce20c8e6e5d1fe439
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2909723"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3115047"
 ---
 # <a name="reveal-focus"></a>Reveal-Focus
 
@@ -36,7 +36,7 @@ Reveal-Focus lenkt den Fokus auf fokussierte Elemente indem ein animierter Schei
 
 ![Einblendeanzeige](images/traveling-focus-fullscreen-light-rf.gif)
 
-Dies ist besonders in 10-Fuß-Szenarien, in denen der Benutzer nicht volle Aufmerksamkeit auf den gesamten Fernsehbildschirm lenkt. 
+Dies ist besonders in 10-Fuß-Szenarien hilfreich, in denen der Benutzer nicht volle Aufmerksamkeit auf den gesamten Fernsehbildschirm lenkt. 
 
 ## <a name="examples"></a>Beispiele
 
@@ -45,7 +45,7 @@ Dies ist besonders in 10-Fuß-Szenarien, in denen der Benutzer nicht volle Aufme
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Wenn Sie die <strong style="font-weight: semi-bold">XAML-Steuerelementekatalog</strong> -app installiert haben, klicken Sie hier, um zu <a href="xamlcontrolsgallery:/item/RevealFocus">der app zu öffnen und Reveal-Focus zu sehen</a>.</p>
+    <p>Wenn Sie die <strong style="font-weight: semi-bold">XAML-Steuerelementekatalog</strong> -app installiert haben, klicken Sie hier, um zu <a href="xamlcontrolsgallery:/item/RevealFocus">der app zu öffnen und Reveal-Focus in Aktion zu sehen</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Erwerben Sie die XAML-Steuerelementekatalog-App (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Erwerben Sie den Quellcode (GitHub)</a></li>
@@ -112,7 +112,7 @@ Ein negativer Rand verschiebt den Rahmen weiter weg von der Mitte des Steuerelem
 
 ## <a name="customize-the-color"></a>Anpassen der Farbe
 
-Um Farbe von Reveal-Focus zu ändern, verwenden Sie die Eigenschaften [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush) und [FocusVisualSecondaryBrush](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush) .
+Um die Farbe von Reveal-Focus zu ändern, verwenden Sie die Eigenschaften [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush) und [FocusVisualSecondaryBrush](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush) .
 
 | Eigenschaft | Standardressource | Standardressourcewert |
 | ---- | ---- | --- | 
@@ -167,7 +167,7 @@ Wenn Sie nur den Schein ohne die primäre oder sekundäre Fokusanzeige verwenden
 
 ## <a name="use-your-own-focus-visuals"></a>Verwenden Sie Ihre eigenen visuellen Fokuselemente
 
-Eine weitere Möglichkeit zum Anpassen von Reveal-Focus ist die System-Fokusanzeigen ablehnen, eigene Fokusanzeigen. Weitere Informationen finden Sie unter [Beispiel für visuelle Fokuselemente](http://go.microsoft.com/fwlink/p/?LinkID=619895).
+Eine weitere Möglichkeit zum Anpassen von Reveal-Focus ist der vom System bereitgestellten visuellen Fokuselemente durch eigene Fokusanzeigen ablehnen. Weitere Informationen finden Sie unter [Beispiel für visuelle Fokuselemente](http://go.microsoft.com/fwlink/p/?LinkID=619895).
 
 
 ## <a name="reveal-focus-and-the-fluent-design-system"></a>Reveal-Focus und das Fluent Design-System

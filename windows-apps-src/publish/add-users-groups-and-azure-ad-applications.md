@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Azure Ad-Anwendung, Aad, Benutzer, Gruppen, mehrere Benutzer, mit mehreren Benutzern
 ms.localizationpriority: medium
 ms.openlocfilehash: 97502a0a2863ed6f7ab2ce5d842fbebc1ae8091c
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2906617"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3122235"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-dev-center-account"></a>Hinzufügen von Benutzern, Gruppen und Azure AD-Anwendungen zu Ihrem Dev Center-Konto
 
@@ -45,7 +45,7 @@ Sie können Benutzer auswählen, die bereits im Mandanten Ihrer Organisation vor
 
 <span id="from-directory" />
 
-1.  Wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards), und wählen Sie dann die **kontoeinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Benutzer**.
+1.  Wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards), und wählen Sie die **kontoeinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Benutzer**aus.
 2.  Wählen Sie auf der Seite **Benutzer** **Benutzer hinzufügen** aus. 
 3.  Wählen Sie in der angezeigten Liste einen oder mehrere Benutzer aus. Im Suchfeld können Sie nach bestimmten Benutzern suchen.
     > [!TIP]
@@ -103,7 +103,7 @@ Um die Einladung erneut zu senden, suchen Sie den Benutzer auf Ihrer **Benutzer*
 
 Wenn ein Benutzer sein Kennwort ändern muss, kann er dies selber tun, wenn Sie ihm beim Erstellen des Benutzerkontos eine **E-Mail-Adresse zur Kennwortwiederherstellung** bereitgestellt haben. Sie können das Kennwort eines Benutzers auch aktualisieren, indem Sie die folgenden Schritte durchführen (wenn Sie sich mit einem globalen Administratorkonto in Ihrem Azure AD-Mandanten angemeldet haben, um das Kennwort des Benutzers zu ändern). Beachten Sie, dass dies das Kennwort des Benutzers in Ihrem Azure AD-Mandanten sowie das Kennwort ändert, das er verwendet, um Zugriff auf Dev Center zu erhalten. 
 
-1.  Wählen Sie aus der Seite " **Benutzer** " (unter **kontoeinstellungen**) den Namen des Benutzerkontos, das Sie bearbeiten möchten.
+1.  Wählen Sie die Seite " **Benutzer** " (unter **kontoeinstellungen**) den Namen des Benutzerkontos, das Sie bearbeiten möchten.
 2.  Wählen Sie die Schaltfläche " **Kennwort zurücksetzen** " am unteren Rand der Seite.
 3.  Auf einer Bestätigungsseite werden die Anmeldeinformationen für den Benutzer angezeigt, einschließlich eines temporären Kennworts.
 
@@ -118,8 +118,8 @@ Sie können eine Gruppe aus dem Verzeichnis Ihrer Organisation dem Dev Center-Ko
 
 ### <a name="add-groups-from-your-organizations-directory"></a>Hinzufügen von Gruppen aus dem Verzeichnis der Organisation
 
-1.  Wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards), und wählen Sie dann die **kontoeinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Benutzer**.
-2. Wählen Sie die Seite " **Benutzer** " **Gruppen hinzufügen**.
+1.  Wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards), und wählen Sie die **kontoeinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Benutzer**aus.
+2. Wählen Sie die Seite " **Benutzer** " **Hinzufügen von Gruppen**aus.
 2.  Wählen Sie in der angezeigten Liste eine oder mehrere Gruppen aus. Im Suchfeld können Sie nach bestimmten Gruppen suchen.
     > [!TIP]
     > Wenn Sie Ihrem Dev Center-Konto mehr als eine Gruppe hinzufügen möchten, müssen Sie diesen die gleiche Rolle oder die gleiche benutzerdefinierte Berechtigung zuweisen. Wiederholen Sie zum Hinzufügen mehrerer Gruppen mit anderen Rollenberechtigungen die unten beschriebenen Schrittefür alle Rollen oder benutzerdefinierte Berechtigungen.
@@ -134,7 +134,7 @@ Sie können eine Gruppe aus dem Verzeichnis Ihrer Organisation dem Dev Center-Ko
 Wenn Sie einer völlig neuen Gruppe den Zugriff auf Dev Center ermöglichen möchten, können Sie im Abschnitt **Benutzer** eine neue Gruppe erstellen. Beachten Sie, dass hierdurch nicht nur in Ihrem Dev Center-Konto, sondern auch im Verzeichnis der Organisation eine neue Gruppe erstellt wird.
 
 1.  Klicken Sie auf der Seite " **Benutzer** " (unter **kontoeinstellungen**) auf **Gruppen hinzufügen**.
-2.  Wählen Sie auf der nächsten Seite die **neue Gruppe**.
+2.  Wählen Sie auf der nächsten Seite **neue Gruppe**ein.
 3.  Geben Sie den Anzeigenamen für die neue Gruppe ein.
 4.  Geben Sie die [Rollen oder angepasste Berechtigungen](set-custom-permissions-for-account-users.md) für die Gruppe an. Alle Mitglieder der Gruppe können auf das Dev Center-Konto mit den Berechtigungen zugreifen, die Sie der Gruppe zugewiesen haben, unabhängig von den Rollen/Berechtigungen, die mit individuellen Konto verknüpft sind.
 5.  Wählen Sie den/die Benutzer, die der neuen Gruppe in der Liste zugewiesen werden sollen, aus der angezeigten Liste aus. Im Suchfeld können Sie nach bestimmten Benutzern suchen.
@@ -151,7 +151,7 @@ Sie können Anwendungen oder Diensten, die Teil der Azure AD-Instanz Ihrer Organ
 
 ### <a name="add-azure-ad-applications-from-your-organizations-directory"></a>Hinzufügen von Azure AD-Anwendungen aus dem Verzeichnis Ihrer Organisation
 
-1.  1.  Wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards), und wählen Sie dann die **kontoeinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Benutzer**.
+1.  1.  Wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards), und wählen Sie die **kontoeinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Benutzer**aus.
 2. Wählen Sie auf der Seite **Benutzer** **Azure AD-Anwendungen hinzufügen** aus.
 3.  Wählen Sie eine oder mehrere Azure AD-Anwendungen aus der angezeigten Liste aus. Mithilfe des Suchfelds können Sie nach bestimmten Azure AD-Anwendungen suchen.
     > [!TIP]
@@ -187,7 +187,7 @@ Nachdem Sie eine Azure AD-Anwendung hinzugefügt oder erstellt haben, können Si
 
 Wenn die Azure AD-App Daten in Microsoft Azure AD liest und schreibt, benötigt sie einen Schlüssel. Sie können Schlüssel für eine Azure AD-App erstellen, indem Sie ihre Informationen in Dev Center bearbeiten. Sie können auch Schlüssel entfernen, die nicht mehr benötigt werden.
 
-1.  Wählen Sie aus der Seite " **Benutzer** " (unter **kontoeinstellungen**) den Namen der Azure AD-Anwendung.
+1.  Wählen Sie aus der Seite " **Benutzer** " (unter **kontoeinstellungen**) den Namen der Azure AD-App ein.
     > [!TIP]
     > Wenn Sie auf den Namen der Azure AD-App klicken, sehen Sie alle aktiven Schlüssel für die Azure AD-App mit dem jeweiligen Erstellungs- und Ablaufdatum des Schlüssels. Klicken Sie auf **Entfernen**, um einen nicht mehr benötigten Schlüssel zu entfernen.
 
@@ -196,7 +196,7 @@ Wenn die Azure AD-App Daten in Microsoft Azure AD liest und schreibt, benötigt 
     > [!IMPORTANT]
     > Drucken oder kopieren Sie diese Informationen, da Sie nach dem Verlassen dieser Seite nicht mehr darauf zugreifen können.
 
-4.  Wenn Sie weitere Schlüssel erstellen möchten, wählen Sie **eine andere Schlüssel hinzufügen**.
+4.  Wenn Sie weitere Schlüssel erstellen möchten, wählen Sie **eine andere Taste hinzufügen**.
 
 <span id="edit" />
 
@@ -207,7 +207,7 @@ Nachdem Sie Ihrem Dev Center-Konto Benutzer, Gruppen oder Azure AD-Anwendungen h
 > [!IMPORTANT]
 > Änderungen an der [Rolle oder Berechtigung](set-custom-permissions-for-account-users.md) wirken sich nur auf den jeweiligen Dev Center-Zugriff aus. Alle anderen Änderungen (wie der Name eines Benutzers oder der Gruppenmitgliedschaft oder der Antwort-URL und App-ID-URI für eine Azure AD-Anwendung) werden sowohl im Azure AD-Mandanten Ihrer Organisation als auch im Dev Center-Konto widergespiegelt. 
 
-1.  Wählen Sie aus der Seite " **Benutzer** " (unter **kontoeinstellungen**) den Namen des Benutzer, Gruppen oder Azure AD-Anwendungskontos, das Sie bearbeiten möchten.
+1.  Wählen Sie die Seite " **Benutzer** " (unter **kontoeinstellungen**) den Namen des Benutzer-, Gruppen oder Azure AD-Anwendungskontos, das Sie bearbeiten möchten.
 2.  Nehmen Sie die gewünschten Änderungen vor. Die Elemente, die Sie bearbeiten können, lauten wie folgt:
     -   Sie können den Vornamen, den Nachnamen oder den Benutzernamen eines **Benutzers** bearbeiten. Sie können ebenfalls Gruppen im Abschnitt **Gruppenmitgliedschaft** auswählen oder deaktivieren, um die Gruppenmitgliedschaft zu aktualisieren.
     -   Für eine **Gruppe** können Sie den Namen der Gruppe bearbeiten. (Um Gruppenmitgliedschaft zu aktualisieren, bearbeiten Sie die Benutzer, die Sie der Gruppe hinzufügen oder daraus entfernen möchten und nehmen Sie im Abschnitt **Gruppenmitgliedschaft** Änderungen vor.)
@@ -227,7 +227,7 @@ Wählen Sie auf der Seite " **Benutzer** " (unter **kontoeinstellungen**) den Li
 
 ## <a name="remove-users-groups-and-azure-ad-applications"></a>Entfernen von Benutzern, Gruppen und Azure AD-Anwendungen
 
-Klicken Sie um einen Benutzer, Gruppen oder Azure AD-Anwendung aus Ihrem Dev Center-Konto zu entfernen, **Entfernen Sie** den Link, der von ihren Namen auf der Seite " **Benutzer** " angezeigt wird. Nachdem Sie das Entfernen bestätigt haben, kann der Benutzer, die Gruppe oder die Azure AD-Anwendung nicht mehr auf Ihr Dev Center-Konto zugreifen (es sei denn, Sie fügen das Element später wieder hinzu).
+Um einen Benutzer, Gruppen oder Azure AD-Anwendung aus Ihrem Dev Center-Konto zu entfernen, wählen Sie die **Entfernen** Link, der über den Namen auf der Seite " **Benutzer** " angezeigt wird. Nachdem Sie das Entfernen bestätigt haben, kann der Benutzer, die Gruppe oder die Azure AD-Anwendung nicht mehr auf Ihr Dev Center-Konto zugreifen (es sei denn, Sie fügen das Element später wieder hinzu).
 
 > [!IMPORTANT]
 > Wenn Sie Benutzer, Gruppen oder eine Azure AD-Anwendungen entfernen, bedeutet dies, das sie nicht mehr auf Ihr Dev Center-Konto zugreifen können. Dadurch werden **nicht** die betreffenden Benutzer, Gruppen oder Azure AD-Anwendungen aus dem Verzeichnis der Organisation gelöscht.

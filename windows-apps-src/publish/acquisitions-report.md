@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: Windows10, UWP, Käufe, App-Verkäufe, App-Downloads, Installationen, Trichter, Käufe, Konvertierungen, Kanal, App-Seitenaufrufe
 ms.localizationpriority: medium
 ms.openlocfilehash: e6b4a3d8a10234e5f95e70f397a4de962a29c929
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2910025"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3113625"
 ---
 # <a name="acquisitions-report"></a>Bericht „Käufe“
 
 
-Der Bericht " **Käufe** " im Windows Dev Center-Dashboard können Sie sehen, wer hat erworben und installiert Ihrer app, und Sie können demografische und plattformspezifische Details einsehen und zeigt Informationen dazu, wie Kunden unter Windows 10 (einschließlich Xbox) zu Ihrer app gelangt sind Eintrag. Sie können auch in der Nähe in Echtzeit Kaufdaten für den letzten oder 70-zwei Stunden-Zeitraum anzeigen. 
+Der Bericht " **Käufe** " im Windows Dev Center-Dashboard können Sie sehen, wer hat erworben und installiert Ihre app, und Sie können demografische und plattformspezifische Details einsehen und zeigt Informationen dazu, wie Kunden unter Windows 10 (einschließlich Xbox) zu Ihrer app gelangt sind Eintrag. Sie können auch in der Nähe in Echtzeit Kaufdaten für den letzten oder 70-zwei Stunden-Zeitraum anzeigen. 
 
 Sie können diese Daten in Ihrem Dashboard anzeigen oder den [Bericht herunterladen](download-analytic-reports.md), um ihn offline anzuzeigen. Sie können diese Daten aber auch programmgesteuert mit unseren [REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
@@ -34,7 +34,7 @@ In diesem Bericht steht **Kauf** für einen neuen Kunden, der eine Lizenz Ihrer 
 
 ## <a name="apply-filters"></a>Anwenden von Filtern
 
-Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist **30D** (30Tage), aber Sie können Daten für 3, 6 oder 12Monate anzeigen, oder für einen benutzerdefinierten Zeitraum, den Sie angeben. In der Nähe Echtzeit die Daten angezeigt werden, für alle Optionen (außer in **App insgesamt** Daten). Die **1 H** und **72 Stunden** Zeit gelten nur Punkte, um die **täglich App** -Registerkarte des Diagramms **Käufe** und der Registerkarte " **Käufe** " des Diagramms **Märkte** . 
+Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist **30D** (30Tage), aber Sie können Daten für 3, 6 oder 12Monate anzeigen, oder für einen benutzerdefinierten Zeitraum, den Sie angeben. In der Nähe Echtzeit werden Daten für alle Optionen angezeigt werden (außer in **App insgesamt** Daten). Die **1 H** und **72 Stunden** Zeit gelten Punkte nur ein, um die **täglich App** -Registerkarte des Diagramms **Käufe** und der Registerkarte " **Käufe** " des Diagramms **Märkte** . 
 
 Sie können ebenfalls **Filter** erweitern, um alle Daten auf dieser Seite nach Markt und/oder Gerätetyp zu filtern.
 
@@ -55,7 +55,7 @@ Sie können optional die Ergebnisse danach filtern, ob die Übernahme vom Client
 > [!NOTE]
 > Sie können diese Daten auch programmgesteuert mit der Methode [Abrufen von App-Käufen](../monetize/get-app-acquisitions.md) unserer [Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
-In der **App täglich** -Ansicht Wenn der **30d** Zeitraum ausgewählt wird, möglicherweise Kreis Markierungen angezeigt. Diese darstellen eine erhebliche Erhöhung oder einen bestimmten Wert, die wir glauben, dass Sie kennen sollten verringern. Das Datum, an dem die Kreis angezeigt wird, stellt das Ende der Woche, in der wir eine erhebliche Erhöhung oder Verringerung, die im Vergleich zu Woche festgestellt. Um mehr Informationen zu Änderungen, zeigen Sie auf den Kreis.  
+In der **App täglich** -Ansicht Wenn die **30d** Zeitraum ausgewählt wird, möglicherweise Kreis Markierungen angezeigt. Diese darstellen eine erhebliche Erhöhung oder einen bestimmten Wert, die wir glauben, dass Sie kennen sollten verringern. Das Datum, an dem die Kreis angezeigt wird, stellt dar, das Ende der Woche, in der wir eine erhebliche Erhöhung oder Verringerung, die im Vergleich zur vorherigen Woche davor erkannt, wird. Um weitere Informationen zu Änderungen anzuzeigen, zeigen Sie auf den Kreis.  
 
 > [!TIP]
 > Sie können weitere Einblicke im Zusammenhang mit erhebliche Änderungen an der letzten 30 Tage im [Bericht](insights-report.md)anzeigen.

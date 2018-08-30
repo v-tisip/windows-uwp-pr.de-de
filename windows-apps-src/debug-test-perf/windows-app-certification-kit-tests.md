@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, app-Zertifizierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 49ecc472c8c1d4adebd8376fce9d2d5e6e2a955e
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2906067"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3121024"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Tests im Zertifizierungskit für Windows-Apps
 
 
-Das [Zertifizierungskit für Windows-Apps](windows-app-certification-kit.md) enthält eine Reihe von Tests, mit deren Hilfe, stellen Sie sicher, dass Ihre app an den Microsoft Store veröffentlicht werden kann. Die Tests mit ihren Suchkriterien, Informationen unten aufgeführt und empfohlene Maßnahmen bei einem Fehler.
+Das [Zertifizierungskit für Windows-Apps](windows-app-certification-kit.md) enthält eine Reihe von Tests, mit deren Hilfe, stellen Sie sicher, dass Ihre app an den Microsoft Store veröffentlicht werden kann. Die Tests mit ihren Suchkriterien, Informationen unten aufgeführt und empfohlene Maßnahmen im Falle Fehler.
 
 ## <a name="deployment-and-launch-tests"></a>Bereitstellungs- und Starttests
 
@@ -312,14 +312,14 @@ Apps müssen die APIs für UWP-apps (Windows-Runtime- oder unterstützte Win32-A
 
 ### <a name="test-details"></a>Testdetails
 
--   Stellt sicher, dass jeder Binärdatei innerhalb des app-Pakets keine Abhängigkeit von einer Win32-API aufweist, die nicht für die Entwicklung von UWP-Apps unterstützt werden, indem Sie die Importadressentabelle der Binärdatei.
+-   Stellt sicher, dass jede Binärdatei innerhalb des app-Pakets keine Abhängigkeit von einer Win32-API aufweist, die die Importadressentabelle der Binärdatei nicht für die Entwicklung von UWP-Apps unterstützt werden.
 -   Stellt sicher, dass eine verwaltete Binärdatei des App-Pakets keine Abhängigkeit von einer Funktion außerhalb des genehmigten Profils aufweist.
 
 ### <a name="corrective-actions"></a>Maßnahmen
 
 Stellen Sie sicher, dass die App als Releasebuild und nicht als Debugbuild kompiliert wurde.
 
-> **Hinweis:**  Das Debugbuild einer App tritt bei diesem Test, auch wenn die app nur [APIs für UWP-apps](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)verwendet.
+> **Hinweis:**  Das Debugbuild einer App tritt bei diesem Test, auch wenn die app nur die [APIs für UWP-apps](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)verwendet.
 
 Überprüfen Sie die Fehlermeldungen, um der API zu identifizieren, die app verwendet, die eine [API für UWP-apps](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)nicht ist.
 
@@ -433,7 +433,7 @@ Orientieren Sie sich an der folgenden Tabelle.
 <tr><td>
 <p>Für die Datei „resources.pri“ darf „Automatisch zusammenführen“ nicht aktiviert sein.</p>
 </td><td>
-<p>„MakePRI.exe“ unterstützt eine Option mit dem Namen <strong>AutoMerge</strong>. Der Standardwert von <strong>AutoMerge</strong> ist <strong>Aus</strong>. Ist sie aktiviert, führt <strong>AutoMerge</strong> die App-Sprachpaketressourcen in einer einzelnen Datei „resources.pri“ zur Laufzeit zusammen. Wir empfohlen dies nicht für apps, die Sie über den Microsoft Store vertreiben möchten. Die Datei "Resources.pri" einer App, die über den Microsoft Store vertriebenen Windows Store müssen im Stammverzeichnis des app Pakets sein und enthalten die Sprachverweise, die die app unterstützt.</p>
+<p>„MakePRI.exe“ unterstützt eine Option mit dem Namen <strong>AutoMerge</strong>. Der Standardwert von <strong>AutoMerge</strong> ist <strong>Aus</strong>. Ist sie aktiviert, führt <strong>AutoMerge</strong> die App-Sprachpaketressourcen in einer einzelnen Datei „resources.pri“ zur Laufzeit zusammen. Wir empfohlen dies nicht für apps, die Sie über den Microsoft Store vertreiben möchten. Die Datei "Resources.pri" einer App, die über den Microsoft Store vertriebenen Windows Store müssen im Stammverzeichnis des app Pakets und enthalten alle Sprachverweise, die die app unterstützt.</p>
 </td></tr>
 <tr><td>
 <p>Die Zeichenfolge „{string}“ entspricht nicht der Längenbeschränkung von maximal {number} Zeichen.</p>
@@ -501,7 +501,7 @@ Testet die App, um sicherzustellen, dass es sich nicht um einen Debugbuild hande
 
 ### <a name="background"></a>Hintergrund
 
-Um für den Microsoft Store zertifiziert zu werden, müssen apps nicht zum Debuggen kompiliert werden, und sie müssen nicht auf die Debugversionen einer ausführbaren Datei verweisen. Darüber hinaus müssen Sie den Code für die App optimiert erstellen, damit dieser Test bestanden wird.
+Um für den Microsoft Store zertifiziert zu werden, müssen apps nicht zum Debuggen kompiliert werden und sie müssen nicht auf die Debugversionen einer ausführbaren Datei verweisen. Darüber hinaus müssen Sie den Code für die App optimiert erstellen, damit dieser Test bestanden wird.
 
 ### <a name="test-details"></a>Testdetails
 

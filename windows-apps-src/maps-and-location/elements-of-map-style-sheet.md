@@ -11,18 +11,20 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Karten, Karten-Stylesheet
 ms.localizationpriority: medium
-ms.openlocfilehash: 984741de5be585f7d6d726ec4c736e6ebce78830
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.openlocfilehash: 11360f9d76fc07d7a6b24bd1e0bfb78df4f1d22d
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2905743"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3118886"
 ---
 # <a name="map-style-sheet-reference"></a>Karten-Stylesheet-Referenz
 
-Microsoft-Zuordnung Technologien verwenden ordnen Sie Stylesheets, um die Darstellung der Karten zu definieren.  Eine Karte dem Stylesheet wird mithilfe von JavaScript Object Notation (JSON) definiert und kann in verschiedenen Möglichkeiten einschließlich in einer Windows Store-Anwendung [MapControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol) über die [MapStyleSheet.ParseFromJson](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet.parsefromjson#Windows_UI_Xaml_Controls_Maps_MapStyleSheet_ParseFromJson_System_String_) -Methode verwendet werden.
+Microsoft-Zuordnung Technologien verwenden _Karten-Stylesheets_ , um die Darstellung von Karten definieren.  Eine Karte dem Stylesheet wird mithilfe von JavaScript Object Notation (JSON) definiert und kann in verschiedenen u. a. in einer Windows Store-Anwendung [MapControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol) über die [MapStyleSheet.ParseFromJson](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet.parsefromjson#Windows_UI_Xaml_Controls_Maps_MapStyleSheet_ParseFromJson_System_String_) -Methode verwendet werden.
 
-Beispielsweise würden Sie den folgende JSON-Code verwenden, damit Wasserflächen in Rot, Wasserbeschriftungen in Grün und Landflächen in Blau dargestellt werden:
+Stylesheets können interaktiv mithilfe der [Karte Formatvorlagen-Editor](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) -Anwendung erstellt werden.
+
+Die folgenden JSON kann verwendet werden, um Wasser wasserflächen in Rot, wasserbeschriftungen in Grün und landflächen in Blau:
 
 ```json
     {"version":"1.*",
@@ -30,7 +32,8 @@ Beispielsweise würden Sie den folgende JSON-Code verwenden, damit Wasserfläche
         "elements":{"water":{"fillColor":"#FF0000","labelColor":"#00FF00"}}
     }
 ```
-Sie können mit JSON auch alle Beschriftungen und Punkte auf einer Karte entfernen.
+
+Diese JSON kann verwendet werden, um alle Beschriftungen und Punkte auf einer Karte entfernen.
 
 ```json
 
@@ -68,7 +71,7 @@ In der folgenden Tabelle wird das Zeichen „>” verwendet, um Ebenen in der Ei
 | >> area                      | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Beschreiben Flächen Bereiche verwenden.  Diese sollten nicht zu verwechseln mit den physischen Gebäuden die unter dem Struktureintrag sind. |
 | >>> airport                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Flächen, die Flughafen. |
 | >>> areaOfInterest           | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | Bereiche, in denen es viele Unternehmen oder Sehenswürdigkeiten gibt |
-| >>> cemetery                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Bereiche, die FRIEDHÖFEN umfasst. |
+| >>> cemetery                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Bereiche, die FRIEDHÖFEN umfassen. |
 | >>> continent                | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Continent Bereich Beschriftungen. |
 | >>> education                | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Bereiche, die Schulen und andere Bildungseinrichtungen Funktionen umfassen. |
 | >>> indigenousPeoplesReserve | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Flächen, die einheimische Personen umfasst Naturschutzgebieten |
@@ -81,15 +84,15 @@ In der folgenden Tabelle wird das Zeichen „>” verwendet, um Ebenen in der Ei
 | >>> runway                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Bereiche, die als eine Landebahn Flugzeug verwendet wird. |
 | >>> sand                     | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Sandige Flächen wie Strände |
 | >>> shoppingCenter           | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Flächen, die Einkaufspassagen oder Einkaufszentren zugeordnet sind |
-| >>> stadium                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Bereiche, die Stadionverbote umfasst. |
+| >>> stadium                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Bereiche, die Stadionverbote umfassen. |
 | >>> underground              | [MapElement](#mapelement) |      |  ✔   |  ✔   |  ✔   | Unterirdische Bereiche (z.B. Fläche einer U-Bahn-Station) |
 | >>> vegetation               | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Wälder, Grünflächen usw. |
 | >>>> forest                  | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Flächen mit Waldbestand |
-| >>>> golfCourse              | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Bereiche, die Golfplätze umfasst. |
-| >>>> park                    | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Bereiche, die Parks umfasst. |
+| >>>> golfCourse              | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Bereiche, die Golfplätze umfassen. |
+| >>>> park                    | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Bereiche, die Parks umfassen. |
 | >>>> playingField            | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Als Spielfelder genutzte Flächen, wie Baseballfelder oder Tennisplätze |
-| >>>> reserve                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Flächen, die Natur umfasst Naturschutzgebieten |
-| >> point                     | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Alle Point-Features, die mit einem Symbol irgendeiner gezeichnet werden. |
+| >>>> reserve                 | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   | Flächen, die Art umfasst Naturschutzgebieten |
+| >> point                     | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Alle Punkt-Features, die mit einem Symbol irgendeiner gezeichnet werden. |
 | >>> address                  | [PointStyle](#pointstyle) |      |      |  ✔   |  ✔   | Beheben Sie Zahlen Beschriftungen. |
 | >>> naturalPoint             | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Symbole, die natürliche Features darstellen. |
 | >>>> peak                    | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Symbole, die Berggipfel darstellen |
@@ -98,13 +101,13 @@ In der folgenden Tabelle wird das Zeichen „>” verwendet, um Ebenen in der Ei
 | >>> pointOfInterest          | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Symbole, die jedem Standort und interessante darstellen. |
 | >>>> business                | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Symbole, die alle Unternehmen Locaiton darstellen. |
 | >>>>> AttractionPoint        | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Symbole, die Touristenattraktionen wie Museen, zoologischen Gärten usw. darstellen. |
-| >>>>> CommunityPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Symbole, die Positionen der allgemeine Verwendung in der Community darstellen. |
-| >>>>> EducationPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Symbole, die Schulen und anderen Education darstellen, im Zusammenhang mit Speicherorten. |
+| >>>>> CommunityPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Symbole, die allgemeine Verwendung Speicherorte in der Community darstellen. |
+| >>>>> EducationPoint         | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Symbole, die Schulen und anderen Education darstellen, im Zusammenhang mit Positionen. |
 | >>>>> EntertainmentPoint     | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Symbole, die Unterhaltung beachten wie Theater, Kinos usw. darstellen. |
-| >>>>> EssentialServicePoint  | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Symbole, die wichtige Dienste wie Parkplätze, Bänke verfügen, Gaspedal usw. darstellen. |
+| >>>>> EssentialServicePoint  | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Symbole, die wichtige Dienste wie Parkplätze, -Bänke verfügen, Gaspedal usw. darstellen. |
 | >>>>> foodPoint              | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Symbole, die Restaurants, Cafés usw. darstellen |
 | >>>>> LodgingPoint           | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Symbole, die Hotels und anderen Unternehmen Stellung darstellen. |
-| >>>>> RealEstatePoint        | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Symbole, die Immobilien Unternehmen darstellen. |
+| >>>>> RealEstatePoint        | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Symbole, die Unternehmen Immobilien darstellen. |
 | >>>>> ShoppingPoint          | [PointStyle](#pointstyle) |      |  ✔   |  ✔   |  ✔   | Symbole, die Hotels und anderen Unternehmen Stellung darstellen. |
 | >>> populatedPlace           | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Symbole, die die Größe eines bewohnten Ortes darstellen (z.B. eine Stadt oder eine Ortschaft) |
 | >>>> capital                 | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   | Symbole, die die Hauptstadt eines bewohnten Gebiets darstellen |
@@ -178,13 +181,13 @@ In diesem Abschnitt werden die Eigenschaften beschrieben, die Sie für die Eintr
 | landColor                    | Farbe   |  ✔   |  ✔   |  ✔   |  ✔   | Der ARGB-Farbwert von Landflächen, bevor etwas darauf gezeichnet wird |
 | logosVisible                 | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Ein Flag, das angibt, ob Elemente mit einer **Organization**-Eigenschaft die entsprechenden Logos zeichnen oder ein allgemeines Symbol verwenden sollen |
 | officialColorVisible         | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Ein Flag, das angibt, ob Elemente, die über eine offizielle Farbeigenschaft verfügen (wie Transitlinien in China), in dieser Farbe gezeichnet werden sollen. Deaktivieren Sie diesen Wert beispielsweise für Schwarz-Weiß-Karten. |
-| rasterRegionsVisible         | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Ein Flag, das angibt, ob rasterregionen gezeichnet, dem sie eine bessere Darstellung als Vektoren (Japan und Korea) verfügen. |
+| rasterRegionsVisible         | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Ein Flag, das gibt an, ob rasterregionen gezeichnet, dem sie eine bessere Darstellung als Vektoren (Japan und Korea) verfügen. |
 | shadedReliefVisible          | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Ein Flag, das angibt, ob Schattierungen für Erhöhungen auf der Karte gezeichnet werden sollen |
-| shadedReliefDarkColor        | Farbe   |  ✔   |  ✔   |  ✔   |  ✔   | Die Farbe der dunklen Seite des schattierten Reliefs.  Der Alphakanal stellt den maximalen Alphawert. |
-| shadedReliefLightColor       | Farbe   |  ✔   |  ✔   |  ✔   |  ✔   | Die Farbe der hellen Seite des schattierten Reliefs.  Der Alphakanal stellt den maximalen Alphawert. |
+| shadedReliefDarkColor        | Farbe   |  ✔   |  ✔   |  ✔   |  ✔   | Die Farbe der dunklen Seite des schattierten Reliefs.  Alpha-Kanal stellt den maximalen alpha-Wert. |
+| shadedReliefLightColor       | Farbe   |  ✔   |  ✔   |  ✔   |  ✔   | Die Farbe der hellen Seite des schattierten Reliefs.  Alpha-Kanal stellt den maximalen alpha-Wert. |
 | shadowColor                  | Farbe   |      |      |      |  ✔️   | Die Farbe des Schattens hinter Symbole, die Schatten verwenden. |
 | spaceColor                   | Farbe   |  ✔   |  ✔   |  ✔   |  ✔   | Der ARGB-Farbwert für den Bereich um die Karte herum |
-| useDefaultImageColors        | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Ein Flag, das angibt, ob die ursprünglichen Farben in SVG verwendet, anstatt sich den Paletteneintrag nach Farben in einem Bild aussehende sein sollten. |
+| useDefaultImageColors        | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Ein Flag, das angibt, ob die ursprünglichen Farben in SVG verwendet, anstatt sich den Paletteneintrag nach Farben in einem Bild aussehende werden soll. |
 
 <a id="mapelement" />
 
@@ -228,7 +231,7 @@ Diese Eigenschaftengruppe erbt von der [MapElement](#mapelement)-Eigenschaftengr
 
 | Eigenschaft                     | Typ    | 1506 | 1629 | 1713 | Nächste | Beschreibung |
 |------------------------------|---------|------|------|------|------|-------------|
-| Shape-Hintergrund             | Gleitkomma   |      |      |      |  ✔️   | Form, der als Hintergrund des Symbols – ersetzt eine beliebige Form, die es vorhanden ist. |
+| Form-Hintergrund             | Gleitkomma   |      |      |      |  ✔️   | Form, der als Hintergrund des Symbols – ersetzt eine beliebige Form, die es vorhanden ist. |
 | stemAnchorRadiusScale        | Gleitkomma   |      |      |  ✔   |  ✔   | Betrag, um den der Ankerpunkt eines Symbolschafts skaliert werden soll.  Verwenden Sie z.B. *1* für die Standardgröße und *2* für die doppelte Größe. |
 | stemColor                    | Farbe   |  ✔   |  ✔   |  ✔   |  ✔   | Die Farbe des Schafts unten an einem Symbol im 3D-Modus |
 | stemHeightScale              | Gleitkomma   |      |      |  ✔   |  ✔   | Betrag, um den die Länge eines Symbolschafts skaliert werden soll.  Verwenden Sie z.B. *1* für die Standardgröße und *2* für die doppelte Länge. |

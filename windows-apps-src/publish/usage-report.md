@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, Uwp, Verwendung, benutzerdefiniertes Ereignis, Bericht, Telemetrie, Benutzersitzungen
 ms.localizationpriority: medium
 ms.openlocfilehash: 96d36ebbaa2b7f1a650e2b0f794a1976c1f525a6
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2910508"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3114727"
 ---
 # <a name="usage-report"></a>Nutzungsbericht
 
@@ -50,7 +50,7 @@ Dieses Diagramm enthält vier separate Registerkarten, die die Nutzung pro Tag o
 - **Dauer**: Zeigt die Gesamtanzahl der aktiven Stunden an (Stunden, in denen ein Benutzer aktiv Ihrer App verwendet).
 - **Beibehaltung**: Zeigt die Gesamtanzahl der **DAU/MAU** (tägliche aktive Benutzer/monatliche aktive Benutzer) über den ausgewählten Zeitraum an.
 
-Wenn der **30d** Zeitraum ausgewählt wird, möglicherweise Kreis Markierungen angezeigt, wenn der **Benutzer**oder **Geräte**, **Dauer** Registerkarten anzeigen. Diese darstellen eine erhebliche Erhöhung oder einen bestimmten Wert, die wir glauben, dass Sie kennen sollten verringern. Das Datum, an dem die Kreis angezeigt wird, stellt das Ende der Woche, in der wir eine erhebliche Erhöhung oder Verringerung, die im Vergleich zu Woche festgestellt. Um mehr Informationen zu Änderungen, zeigen Sie auf den Kreis.  
+Wenn die **30d** Zeitraum aktiviert ist, sehen Sie Kreis Markierungen, wenn der **Benutzer**oder **Geräte**, **Dauer** Registerkarten anzeigen. Diese darstellen eine erhebliche Erhöhung oder einen bestimmten Wert, die wir glauben, dass Sie kennen sollten verringern. Das Datum, an dem die Kreis angezeigt wird, stellt dar, das Ende der Woche, in der wir eine erhebliche Erhöhung oder Verringerung, die im Vergleich zur vorherigen Woche davor erkannt, wird. Um weitere Informationen zu Änderungen anzuzeigen, zeigen Sie auf den Kreis.  
 
 > [!TIP]
 > Sie können weitere Einblicke im Zusammenhang mit erhebliche Änderungen an der letzten 30 Tage im [Bericht](insights-report.md)anzeigen.

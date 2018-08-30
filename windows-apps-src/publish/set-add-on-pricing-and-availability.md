@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Add-Ons, IAP, Preis
 ms.localizationpriority: medium
 ms.openlocfilehash: b5b7a6424fea3d62849e992f56b0b40ab72a55f5
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2909520"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3111991"
 ---
 # <a name="set-add-on-pricing-and-availability"></a>Festlegen der Preise und Verfügbarkeit von Add-Ons
 
@@ -59,7 +59,7 @@ Sie müssen einen Grundpreis für Ihr Add-on auswählen (es sei denn, Sie die **
 Sie können auch Preisänderungen planen, um das Datum und die Uhrzeit anzugeben, an dem bzw. zu der sich der Preis Ihrer Add-On ändern soll. Darüber hinaus haben Sie die Möglichkeit, diese Änderungen für bestimmte Märkte anzupassen. 
 
 > [!TIP]
-> Für die Abonnement-Add-Ons können nicht Sie den Preis auslösen, nach der Veröffentlichung des Add-Ons, durch einen höheren Grundpreis in einer späteren Übermittlung auswählen oder durch die Planung einer Preisänderung, die den Preis erhöht. Sie können einen geringeren Preis mithilfe der folgenden Methoden auswählen, aber sobald der Preis gesenkt wird nicht mehr um sie über die neuen Preis auszulösen, werden. Aus diesem Grund ist es besonders wichtig, um sicherzustellen, dass Sie die entsprechenden Preisstufe für Abonnement-Add-Ons auswählen. 
+> Sie können nicht für Abonnement-Add-Ons den Preis auslösen, nachdem Sie das Add-on veröffentlichen, indem Sie einen höheren Grundpreis in einer späteren Übermittlung auswählen oder durch einen Preis ändern, die den Preis erhöht planen. Sie können einen geringeren Preis mithilfe der folgenden Methoden auswählen, aber sobald der Preis gesenkt ist nicht möglich es höher als die neuen Preis auslösen. Aus diesem Grund ist es besonders wichtig, um sicherzustellen, dass Sie die entsprechenden Preisstufe für Abonnement-Add-Ons auswählen. 
 
 Weitere Informationen finden Sie unter [Festlegen und Planen von App-Preisen](set-and-schedule-app-pricing.md).
 

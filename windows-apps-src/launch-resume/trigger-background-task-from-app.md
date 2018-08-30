@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Trigger Hintergrundaufgabe, Hintergrundaufgabe
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ccd171f53795ef71830ffb022d0468facb3ac4f
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2917079"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3121834"
 ---
 # <a name="trigger-a-background-task-from-within-your-app"></a>Auslösen einer Hintergrundaufgabe in Ihrer App
 
@@ -22,11 +22,11 @@ Hier erfahren Sie, wie Sie den [ApplicationTrigger](https://docs.microsoft.com/u
 
 Ein Beispiel für So erstellen Sie einen Anwendungs-Trigger finden Sie in diesem [Beispiel](https://github.com/Microsoft/Windows-universal-samples/blob/v2.0.0/Samples/BackgroundTask/cs/BackgroundTask/Scenario5_ApplicationTriggerTask.xaml.cs).
 
-In diesem Thema wird davon ausgegangen, dass Sie eine Hintergrundaufgabe verfügen, die Sie von Ihrer Anwendung aktivieren möchten. Wenn Sie bereits über eine Hintergrundaufgabe besitzen, wird eine Beispiel-Hintergrundaufgabe am [BackgroundActivity.cs](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/BackgroundActivation/cs/BackgroundActivity.cs). Oder führen Sie die Schritte in [Erstellen und Registrieren einer Out-of-Process-Hintergrundaufgabe](create-and-register-a-background-task.md) zu erstellen.
+In diesem Thema wird davon ausgegangen, dass Sie eine Hintergrundaufgabe verfügen, die Sie von Ihrer Anwendung aktivieren möchten. Wenn Sie bereits über eine Hintergrundaufgabe besitzen, besteht eine Beispiel-Hintergrundaufgabe am [BackgroundActivity.cs](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/BackgroundActivation/cs/BackgroundActivity.cs). Oder führen Sie die Schritte in [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb von Prozessen](create-and-register-a-background-task.md) , eine zu erstellen.
 
 ## <a name="why-use-an-application-trigger"></a>Gründe für die Verwendung eines Anwendungs-Triggers
 
-Verwenden Sie eine **ApplicationTrigger** , Code in einem separaten Prozess von der Vordergrund-app auszuführen. Ein **ApplicationTrigger** ist geeignet, wenn Ihre app arbeiten, die im Hintergrund – ausgeführt werden soll, auch wenn der Benutzer die Vordergrund-app schließt. Wenn Hintergrundarbeiten anhalten sollten bei die app geschlossen wird oder wenn sollten in den Zustand des Prozesses Vordergrund gebunden werden, und klicken Sie dann [Extended Execution](run-minimized-with-extended-execution.md) soll, stattdessen verwendet werden.
+Verwenden Sie eine **ApplicationTrigger** , Code in einem separaten Prozess von der Vordergrund-app auszuführen. Ein **ApplicationTrigger** ist geeignet, wenn Ihre app arbeiten, die im Hintergrund – ausgeführt werden soll, auch wenn der Benutzer die Vordergrund-app schließt. Wenn Hintergrundarbeiten anhalten sollten wenn die app geschlossen, oder sollte in den Zustand des Prozesses Vordergrund gebunden werden, und klicken Sie dann [Extended Execution](run-minimized-with-extended-execution.md) soll, stattdessen verwendet werden.
 
 ## <a name="create-an-application-trigger"></a>Erstellen Sie einen Anwendungs-trigger
 
@@ -58,9 +58,9 @@ ApplicationTrigger ^ _AppTrigger = ref new ApplicationTrigger();
 
 ## <a name="optional-add-a-condition"></a>(Optional) Hinzufügen einer Bedingung
 
-Sie können eine Bedingung für Hintergrundaufgaben Steuerelement erstellen, wenn die Aufgabe ausgeführt wird. Eine Bedingung wird verhindert, dass die Hintergrundaufgabe ausgeführt wird, bis die Bedingung erfüllt ist. Weitere Informationen finden Sie in der [Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe](set-conditions-for-running-a-background-task.md).
+Sie können eine Bedingung für Hintergrundaufgaben Steuerelement erstellen, wenn die Aufgabe ausgeführt wird. Eine Bedingung wird verhindert, dass die Hintergrundaufgabe ausgeführt wird, bis die Bedingung erfüllt ist. Weitere Informationen finden Sie unter [Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe](set-conditions-for-running-a-background-task.md).
 
-In diesem Beispiel wird die Bedingung auf **InternetAvailable** festgelegt ist, damit die ausgelöste, wird die Aufgabe nur ausgeführt, nachdem Zugriff auf das Internet verfügbar ist. Eine Liste mit möglichen Bedingungen finden Sie in [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835).
+In diesem Beispiel wird die Bedingung auf **InternetAvailable** festgelegt ist, sodass einmal ausgelöst, wird die Aufgabe nur ausgeführt, nachdem Zugriff auf das Internet verfügbar ist. Eine Liste mit möglichen Bedingungen finden Sie in [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835).
 
 ```csharp
 SystemCondition internetCondition = new SystemCondition(SystemConditionType.InternetAvailable);
@@ -75,11 +75,11 @@ Windows::ApplicationModel::Background::SystemCondition internetCondition{
 SystemCondition ^ internetCondition = ref new SystemCondition(SystemConditionType::InternetAvailable)
 ```
 
-Ausführlichere Informationen zu Bedingungen und Hintergrund Triggertypen finden Sie unter [Unterstützung Ihrer app mit Hintergrundaufgaben](support-your-app-with-background-tasks.md).
+Ausführlichere Informationen zu Bedingungen und Typen von Hintergrund-Triggern finden Sie unter [Unterstützung Ihrer app mit Hintergrundaufgaben](support-your-app-with-background-tasks.md).
 
 ##  <a name="call-requestaccessasync"></a>Aufrufen von RequestAccessAsync()
 
-Rufen Sie vor der Registrierung der Hintergrundaufgabe **ApplicationTrigger** [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700494) , um die Ebene der Hintergrundaktivität zu ermitteln, die dem Benutzer ermöglicht, da der Benutzer Hintergrundaktivitäten für Ihre app deaktiviert haben kann. Sehen Sie, dass [Optimieren von Hintergrundaktivitäten](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity) für Weitere Informationen über die Möglichkeiten Benutzer die Einstellungen für Hintergrundaktivitäten steuern können.
+Rufen Sie vor dem Registrieren der Hintergrundaufgabe **ApplicationTrigger** , [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700494) , um die Menge der Hintergrundaktivitäten zu ermitteln, die dem Benutzer ermöglicht, da der Benutzer Hintergrundaktivitäten für Ihre app deaktiviert haben möglicherweise ein. Sehen Sie, dass [Optimieren von Hintergrundaktivitäten](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity) für Weitere Informationen über die Möglichkeiten Benutzer die Einstellungen für Hintergrundaktivitäten steuern können.
 
 ```csharp
 var requestStatus = await Windows.ApplicationModel.Background.BackgroundExecutionManager.RequestAccessAsync();
@@ -92,7 +92,7 @@ if (requestStatus != BackgroundAccessStatus.AlwaysAllowed)
 
 ## <a name="register-the-background-task"></a>Registrieren der Hintergrundaufgabe
 
-Registrieren Sie die Hintergrundaufgabe, indem Sie die Funktion zum Registrieren der Hintergrundaufgabe aufrufen. Weitere Informationen zum Registrieren von Hintergrundaufgaben und die Definition der **RegisterBackgroundTask()** -Methode in der nachfolgende Beispielcode anzuzeigen finden Sie unter [Registrieren einer Hintergrundaufgabe](register-a-background-task.md).
+Registrieren Sie die Hintergrundaufgabe, indem Sie die Funktion zum Registrieren der Hintergrundaufgabe aufrufen. Weitere Informationen zum Registrieren von Hintergrundaufgaben, und die Definition der **RegisterBackgroundTask()** -Methode im folgenden Beispielcode finden Sie unter [Registrieren einer Hintergrundaufgabe](register-a-background-task.md).
 
 Wenn Sie erwägen, verwenden eine Anwendungs-Trigger, um die Lebensdauer der Vordergrund-Prozess zu erweitern, sollten Sie [Extended Execution](run-minimized-with-extended-execution.md) stattdessen. Die Anwendungs-Trigger dient zum Erstellen eines separat gehosteten Prozess Aufgaben in. Der folgende Codeausschnitt wird einen Out-of-Process-Hintergrund-Trigger registriert.
 
@@ -122,13 +122,13 @@ Parameter für die Registrierung von Hintergrundaufgaben werden zum Zeitpunkt de
 
 ## <a name="trigger-the-background-task"></a>Auslösen der Hintergrundaufgabe
 
-Bevor Sie die Hintergrundaufgabe auslösen, verwenden Sie [BackgroundTaskRegistration](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration) , um sicherzustellen, dass die Hintergrundaufgabe registriert wird. Ein guter Zeitpunkt, um sicherzustellen, dass alle Ihre Hintergrundaufgaben registriert sind, ist beim Starten der app.
+Bevor Sie die Hintergrundaufgabe auslösen, verwenden Sie [BackgroundTaskRegistration](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration) , um sicherzustellen, dass die Hintergrundaufgabe registriert ist. Ein guter Zeitpunkt, um sicherzustellen, dass alle Ihre Hintergrundaufgaben registriert sind, ist beim Starten der app.
 
-Lösen Sie die Hintergrundaufgabe durch Aufrufen von [ApplicationTrigger.RequestAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.applicationtrigger). Es werden alle **ApplicationTrigger** -Instanz durchführen.
+Auslösen der Hintergrundaufgabe durch Aufrufen von [ApplicationTrigger.RequestAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.applicationtrigger). Jede Instanz **ApplicationTrigger** werden durchführen.
 
 Beachten Sie, dass **ApplicationTrigger.RequestAsync** aufgerufen werden kann, von der Hintergrundaufgabe selbst, oder wenn die app im Hintergrund Zustand ausgeführt wird (siehe [App-Lebenszyklus](app-lifecycle.md) Weitere Informationen zur Anwendungszustände).
 Es kann [DisabledByPolicy](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.applicationtriggerresult) zurückgeben, wenn der Benutzer Energie oder Datenschutz-Richtlinien festgelegt hat, die verhindern, dass die app Hintergrundaktivitäten durchführen.
-Darüber hinaus kann nur ein AppTrigger zu einem Zeitpunkt ausgeführt werden. Wenn Sie versuchen, eine AppTrigger ausführen, während ein anderes bereits ausgeführt wird, wird die Funktion [CurrentlyRunning](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.applicationtriggerresult)zurückgegeben.
+Darüber hinaus kann nur ein AppTrigger zu einem Zeitpunkt ausgeführt werden. Wenn Sie versuchen, eine AppTrigger auszuführen, während ein anderes bereits ausgeführt wird, wird die Funktion [CurrentlyRunning](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.applicationtriggerresult)zurückgegeben.
 
 ```csharp
 var result = await _AppTrigger.RequestAsync();
@@ -138,8 +138,8 @@ var result = await _AppTrigger.RequestAsync();
 
 Um zu ermitteln, ob der Benutzer die Hintergrundaktivität Ihrer App begrenzt hat, verwenden Sie [BackgroundExecutionManager.RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.backgroundexecutionmanager.aspx). Achten Sie auf die Akkunutzung, und führen Sie Ihre App nur dann im Hintergrund aus, wenn dies zum Ausführen einer vom Benutzer gewünschten Aktion notwendig ist. Sehen Sie, dass [Optimieren von Hintergrundaktivitäten](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity) für Weitere Informationen über die Möglichkeiten Benutzer die Einstellungen für Hintergrundaktivitäten steuern können.  
 
-- Arbeitsspeicher: Optimieren Ihrer app Arbeitsspeicher und Energieverbrauch gedrückt, um sicherzustellen, dass das Betriebssystem zum Ausführen Ihrer Hintergrundaufgabe ist. Verwenden Sie die [Speicherverwaltungs-APIs](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.aspx) zu ermitteln, wie viel Arbeitsspeicher Ihre Hintergrundaufgabe verwendet wird. Mehr Arbeitsspeicher Ihre Hintergrundaufgabe verwendet, desto schwieriger wird für das Betriebssystem, weiter ausgeführt, wenn eine andere app im Vordergrund befindet. Der Benutzer hat letztendlich die Kontrolle über alle Hintergrundaktivitäten, die Ihre App ausführen kann, und kann die Auswirkungen Ihrer App auf den Akkuverbrauch erkennen.  
-- CPU-Zeit: Hintergrundaufgaben sind durch die gesamtbetrachtungszeit-Nutzung Zeit, die sie auf Triggertyp basierend erhalten eingeschränkt. Durch die Anwendungs-Trigger ausgelöste Hintergrundaufgaben sind auf etwa 10 Minuten beschränkt.
+- Arbeitsspeicher: Optimieren Ihrer app Arbeitsspeicher und Energieverbrauch ist Schlüssel, um sicherzustellen, dass das Betriebssystem die Hintergrundaufgabe ausgeführt werden kann. Verwenden Sie die [Speicherverwaltungs-APIs](https://msdn.microsoft.com/library/windows/apps/windows.system.memorymanager.aspx) zu ermitteln, wie viel Arbeitsspeicher Ihre Hintergrundaufgabe verwendet wird. Mehr Arbeitsspeicher Ihre Hintergrundaufgabe verwendet, desto schwieriger wird für das Betriebssystem, weiter ausgeführt, wenn eine andere app im Vordergrund befindet. Der Benutzer hat letztendlich die Kontrolle über alle Hintergrundaktivitäten, die Ihre App ausführen kann, und kann die Auswirkungen Ihrer App auf den Akkuverbrauch erkennen.  
+- CPU-Zeit: Hintergrundaufgaben sind durch die Zeitspanne gesamtbetrachtungszeit-Nutzung erhalten sie Triggertyp Grundlage eingeschränkt. Durch die Anwendungs-Trigger ausgelöste Hintergrundaufgaben sind auf etwa 10 Minuten beschränkt.
 
 Die für Hintergrundaufgaben geltenden Ressourcenbeschränkungen finden Sie unter [Unterstützen der App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md).
 
@@ -147,7 +147,7 @@ Die für Hintergrundaufgaben geltenden Ressourcenbeschränkungen finden Sie unte
 
 Ab Windows 10, ist es nicht mehr erforderlich ist, damit der Benutzer Ihre app zum Sperrbildschirm hinzufügen, um Hintergrundaufgaben zu nutzen.
 
-Eine Hintergrundaufgabe wird nur ausgeführt mit einer **ApplicationTrigger** , wenn Sie vorher [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) aufgerufen haben.
+Eine Hintergrundaufgabe ausgeführt wird nur mit einer **ApplicationTrigger** , wenn Sie vorher [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/hh700485) aufgerufen haben.
 
 ## <a name="related-topics"></a>Verwandte Themen
 

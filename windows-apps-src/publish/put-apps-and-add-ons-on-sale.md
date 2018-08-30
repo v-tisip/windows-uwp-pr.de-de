@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a25980c964e399931a088e281e959df3095ffe9a
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2905513"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3123703"
 ---
 # <a name="put-apps-and-add-ons-on-sale"></a>Anbieten vergünstigter Apps und Add-Ons
 
 Sie können Ihre Apps oder Add-Ons im Microsoft Store auch bewerben, indem Sie sie für einen begrenzten Zeitraum als Sonderangebot bereitstellen. Sie können das Produkt auch auf einer niedrigeren Preisstufe oder mit einem prozentbasierten Rabatt anbieten.
 
 > [!NOTE]
-> Sonderpreise wird für Abonnement-Add-Ons nicht unterstützt.
+> Sonderpreise wird nicht für Abonnement-Add-Ons unterstützt.
 
 Bei der Verwendung des Abschnitts **Sonderpreise** der Seite **Preise und Verfügbarkeit** einer Übermittlung zur vorübergehenden Senkung des Preises Ihrer App oder Ihres Add-Ons sehen Kunden, die sich den Store-Eintrag ansehen, dass der Preis durchgestrichen wurde, d.h. gesenkt wurde (im Gegensatz zu einer [geplanten Preisänderung](set-and-schedule-app-pricing.md#schedule-price-changes), bei der der Preis gesenkt oder angehoben werden kann, ohne dass dies als Änderung im Store angezeigt wird). 
 

@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 89c021bb2c094aafc9b534acef9b009817669461
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2910959"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3117637"
 ---
 # <a name="raising-events-in-windows-runtime-components"></a>Auslösen von Ereignissen in Komponenten für Windows-Runtime
 > [!NOTE]
-> Informationen zum Auslösen von Ereignissen in einer [C++ / WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) Komponente für Windows-Runtime, finden Sie unter [Erstellen von Ereignissen in C++ / WinRT](../cpp-and-winrt-apis/author-events.md).
+> Erfahren, wie zum Auslösen von Ereignissen in einer [C++ / WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) Komponente für Windows-Runtime, finden Sie unter [Erstellen von Ereignissen in C++ / WinRT](../cpp-and-winrt-apis/author-events.md).
 
 Wenn die Komponente für Windows-Runtime ein Ereignis eines benutzerdefinierten Delegattyps in einem Hintergrundthread (Arbeitsthread) auslöst und JavaScript in der Lage sein soll, das Ereignis zu empfangen, können Sie es auf eine der folgenden Weisen implementieren und/oder auslösen:
 
@@ -233,7 +233,7 @@ Wenn Sie das Projekt jetzt erstellen, sollte dies ordnungsgemäß ausgeführt we
 
 ## <a name="to-program-the-javascript-app"></a>So programmieren Sie die JavaScript-App
 
-Jetzt können Sie der JavaScript-App eine Schaltfläche hinzufügen, damit sie die Klasse verwendet, die Sie gerade zum Erstellen des Popups definiert haben. Vorher müssen Sie einen Verweis auf das ToasterComponent-Projekt hinzufügen, das Sie gerade erstellt haben. Öffnen Sie im Projektmappen-Explorer das Kontextmenü für das Projekt "toasterapplication" ein, wählen **Hinzufügen &gt; Verweise**, und wählen Sie dann die Schaltfläche " **Neuen Verweis hinzufügen** ". Wählen Sie im Dialogfeld „Verweis hinzufügen” im linken Bereich unter „Projektmappe” das Komponentenprojekt aus, und wählen Sie dann im mittleren Bereich „ToasterComponent” aus. Klicken Sie auf die Schaltfläche **OK**.
+Jetzt können Sie der JavaScript-App eine Schaltfläche hinzufügen, damit sie die Klasse verwendet, die Sie gerade zum Erstellen des Popups definiert haben. Vorher müssen Sie einen Verweis auf das ToasterComponent-Projekt hinzufügen, das Sie gerade erstellt haben. Öffnen Sie im Projektmappen-Explorer das Kontextmenü für das Projekt "toasterapplication" ein, wählen Sie **Hinzufügen &gt; Verweise**, und wählen Sie dann die Schaltfläche " **Neuen Verweis hinzufügen** ". Wählen Sie im Dialogfeld „Verweis hinzufügen” im linken Bereich unter „Projektmappe” das Komponentenprojekt aus, und wählen Sie dann im mittleren Bereich „ToasterComponent” aus. Klicken Sie auf die Schaltfläche **OK**.
 
 Öffnen Sie im Projektmappen-Explorer das Kontextmenü für das ToasterApplication-Projekt, und wählen Sie **Als Startprojekt festlegen** aus.
 
@@ -330,9 +330,9 @@ winmdidl /outdir:output "$(TargetPath)"
 midl /metadata_dir "%WindowsSdkDir%References\CommonConfiguration\Neutral" /iid "$(ProjectDir)$(TargetName)_i.c" /env win32 /h "$(ProjectDir)$(TargetName).h" /winmd "Output\$(TargetName).winmd" /W1 /char signed /nologo /winrt /dlldata "$(ProjectDir)dlldata.c" /proxy "$(ProjectDir)$(TargetName)_p.c" "Output\$(TargetName).idl"
 ```
 
-**Wichtige**  Für eine ARM oder X64 Projekt-Konfiguration, ändern Sie den MIDL/env Parameter X64 oder arm32.
+**Wichtige**  Für eine ARM oder X64 Projekt Konfiguration, ändern Sie den MIDL/env Parameter X64 oder arm32.
 
-Um sicherzustellen, dass die IDL-Datei ist neu generiert, jedes Mal, wenn die winmd-Datei geändert wird, ändern, **Führen Sie das Postbuildereignis** **bei der Build die Projektausgabe updates.**
+Um sicherzustellen, dass die IDL-Datei ist lediglich neu generiert, jedes Mal, wenn die winmd-Datei geändert wird, ändern, **Führen Sie das Postbuildereignis** **Wenn der Build aktualisiert die Projektausgabe.**
 Die Eigenschaftenseite Buildereignisse sollte wie folgt aussehen: ![Buildereignisse](./images/buildevents.png)
 
 Erstellen Sie die Projektmappe neu, um die IDL zu generieren und zu kompilieren.
@@ -364,7 +364,7 @@ WIN32;_WINDOWS
 ```
 Ändern Sie unter **C/C++ > Vorkompilierte Header** die Option **Vorkompilierter Header** in **Vorkompilierte Header nicht verwenden**, und klicken Sie dann auf die Schaltfläche **Übernehmen**.
 
-Unter **Linker > Allgemein**, ändern Sie **Importbibliothek ignorieren** zu **Ye**s, und wählen Sie dann die Schaltfläche **Übernehmen** .
+Unter **Linker > Allgemein**, ändern Sie **Importbibliothek ignorieren** zu **Ye**s, und wählen Sie dann auf die Schaltfläche **Übernehmen** .
 
 Wählen Sie unter **Linker > Eingabe** die Option **Zusätzliche Abhängigkeiten** aus, klicken Sie auf die Schaltfläche mit dem Pfeil nach unten, und klicken Sie dann auf **Bearbeiten**. Fügen Sie diesen Text in das Feld ein:
 
@@ -417,8 +417,8 @@ Bevor Sie fortfahren, muss Folgendes sichergestellt sein:
 -   ProxyStub ClassId wird auf die erste GUID in der Datei ToasterComponent\_i.c festgelegt. Verwenden Sie die erste GUID, die in dieser Datei für die classId definiert ist. (Diese ist möglicherweise mit der GUID für „ITypedEventHandler2” identisch.)
 -   „Path” ist der relative Pfad des Pakets der Proxybinärdatei. (In dieser exemplarischen Vorgehensweise befindet sich „proxies.dll” im gleichen Ordner wie „ToasterApplication.winmd”.)
 -   Die GUIDs haben das richtige Format. (Hier können leicht Fehler passieren.)
--   Die IDs der Benutzeroberfläche im Manifest Anpassen der IIDs in ToasterComponent\_i.c-Datei.
--   Die Namen der Schnittstellen sind im Manifest eindeutig. Da diese nicht vom System verwendet werden, können Sie die Werte festlegen. Es sollten Schnittstellennamen gewählt werden, die eindeutig mit Schnittstellen übereinstimmen, die Sie definiert haben. Bei generierten Schnittstellen sollten die Namen auf die generierten Schnittstellen schließen lassen. Sie können die ToasterComponent\_i.c-Datei verwenden, mit denen Sie Schnittstellennamen generieren können.
+-   Die Schnittstellen-IDs im Manifest übereinstimmen, die IIDs in ToasterComponent\_i.c-Datei.
+-   Die Namen der Schnittstellen sind im Manifest eindeutig. Da diese nicht vom System verwendet werden, können Sie die Werte festlegen. Es sollten Schnittstellennamen gewählt werden, die eindeutig mit Schnittstellen übereinstimmen, die Sie definiert haben. Bei generierten Schnittstellen sollten die Namen auf die generierten Schnittstellen schließen lassen. Die ToasterComponent\_i.c-Datei können Sie die Schnittstellennamen zu generieren.
 
 Wenn Sie die Projektmappe jetzt auszuführen versuchen, erhalten Sie eine Fehlermeldung, die angibt, dass „proxies.dll” nicht Teil der Nutzlast ist. Öffnen Sie im ToasterApplication-Projekt das Kontextmenü für den Ordner **Verweise**, und wählen Sie **Verweis hinzufügen** aus. Aktivieren Sie das Kontrollkästchen neben dem Proxies-Projekt. Stellen Sie außerdem sicher, dass auch das Kontrollkästchen neben „ToasterComponent” aktiviert ist. Klicken Sie auf die Schaltfläche **OK**.
 

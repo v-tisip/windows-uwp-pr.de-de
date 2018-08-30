@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e634b18fffc4f601f6512d6ceeed51efbe9c1886
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2911744"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3116139"
 ---
 # <a name="using-lights-in-windows-ui"></a>Verwendung von Licht in Windows-Benutzeroberfläche
 
-Die Windows.UI.Composition-APIs können Sie in Echtzeit Animationen und Effekte erzeugen. Kompositionsbeleuchtung ermöglicht 3D Beleuchtung in 2D Anwendungen. In dieser Übersicht wird wir führen Sie über die Funktionen zum setup-Komposition Licht, visuelle Elemente zum Empfangen von einzelnen Lichtquellen identifizieren und verwenden Effekte Materialien für Ihre Inhalte zu definieren.
+Die Windows.UI.Composition-APIs können Sie in Echtzeit Animationen und Effekte zu erstellen. Kompositionsbeleuchtung ermöglicht 3D Beleuchtung in 2D Anwendungen. In dieser Übersicht wird wir führen Sie über die Funktionen zum setup-Komposition Licht, visuelle Elemente zum Empfangen von einzelnen Lichtquellen identifizieren und verwenden Effekte Materialien für Ihre Inhalte zu definieren.
 
 > [!NOTE]
 > Wie [XamlLight](/uwp/api/windows.ui.xaml.media.xamllight) Objekte [CompositionLights](/uwp/api/Windows.UI.Composition.CompositionLight) um XAML-UI-Elemente beleuchtet anwenden, finden Sie unter [XAML-Beleuchtung](xaml-lighting.md).
@@ -27,30 +27,30 @@ Kompositionsbeleuchtung ermöglicht die Erstellung interessante UI ermöglichen:
 
 - Die Transformation von einem hellen unabhängig von anderen Objekte in der Szene immersive Szenarien wie Musik Wiedergabe Szenen ermöglichen.
 - Die Möglichkeit, ein Objekt mit ein Licht zu koppeln, sodass sie zusammen verschoben unabhängig vom Rest der Szene Szenarien wie Fluent- [Reveal-](/design/style/reveal.md) Highlight ermöglichen.
-- Transformation der Licht und ganze Szene als Gruppe Materialien und Tiefe zu erstellen.
+- Transformation und die gesamte Szene als eine Gruppe für Materialien und Tiefe zu erzeugen.
 
 Kompositionsbeleuchtung unterstützt drei wichtige Konzepte: **Light**, **Ziele**und **SceneLightingEffect**.
 
 ## <a name="light"></a>Licht
 
-[CompositionLight](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlight) ermöglicht Ihnen das Erstellen von verschiedenen Lichter und platzieren Sie sie im Koordinatenbereich. Diese Lichtquellen abzielen visuelle Elemente, die Sie zu identifizieren, wenn vom Licht beleuchtet möchten.
+[CompositionLight](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlight) ermöglicht Ihnen das Erstellen von verschiedenen Lichter und platzieren Sie sie im Koordinatenbereich. Diese Lichtquellen als Ziel visuelle Elemente, die Sie zu identifizieren, wenn vom Licht beleuchtet möchten.
 
 ### <a name="light-types"></a>Lichttypen
 
 | Typ | Beschreibung |
 | --- | --- |
 | [AmbientLight](/uwp/api/windows.ui.composition.ambientlight) | Von alles in der Szene reflektiert wird eine Lichtquelle, die nichtdirektionale Licht ausgibt, die angezeigt wird. |
-| [DistantLight](/uwp/api/windows.ui.composition.distantlight) | Ein unendlich Groß Lichtquelle, die Licht in einer einzigen Richtung ausgibt. Wie der Sonne. |
+| [DistantLight](/uwp/api/windows.ui.composition.distantlight) | Ein unendlich Lichtquelle, die Licht in einer einzigen Richtung ausgibt. Wie der Sonne. |
 | [PointLight](/uwp/api/windows.ui.composition.pointlight) | Ein Punkt Quelle des Lichts, die Licht in alle Richtungen ausgibt. Wie eine Glühbirne. |
 | [SpotLight](/uwp/api/windows.ui.composition.spotlight) | Eine Lichtquelle, die inneren und äußeren Kegel des Lichts ausgibt. Wie eine Taschenlampe. |
 
 ## <a name="targets"></a>Ziele
 
-Wenn Licht ein visuelles Ziel (Hinzufügen zur Liste der [Ziele](/uwp/api/windows.ui.composition.compositionlight.targets) ), dem visuellen Element und alle seine untergeordneten Elemente bekannt und reagieren auf diese Lichtquelle. Dies kann so einfache Dinge wie eine Einstellung PointLight Quelle im Stammverzeichnis des eine Struktur und alle visuellen Elemente, die folgenden reagieren auf die Animation der Richtung Licht Punkt sein.
+Wenn Licht ein visuelles Ziel (Hinzufügen zur Liste der [Ziele](/uwp/api/windows.ui.composition.compositionlight.targets) ), die visuelle Bearbeitung und alle seine untergeordneten Elemente bekannt und reagieren auf diese Lichtquelle. Dies kann etwa so einfach wie eine Einstellung PointLight Quelle im Stammverzeichnis des eine Struktur und alle visuellen Elemente, die folgenden reagieren auf die Animation der Richtung Licht Punkt sein.
 
-**ExclusionsFromTargets** bietet Ihnen die Möglichkeit, die Beleuchtung eines visuellen oder einer Teilstruktur von visuellen Elementen auf ähnliche Weise wie das Hinzufügen von Zielen zu entfernen. Untergeordnete Elemente in der Struktur als Stamm gebunden, von der visuellen, der ausgeschlossen ist daher nicht leuchtet.
+**ExclusionsFromTargets** bietet Ihnen die Möglichkeit, die Beleuchtung eines visuellen Elements oder eine Unterstruktur von visuellen Elementen auf ähnliche Weise wie das Hinzufügen von Zielen zu entfernen. Untergeordnete Elemente in der Struktur von der visuellen, der ausgeschlossen ist daher nicht leuchtet.
 
-### <a name="sample-targets"></a>Beispiel für (Ziele)
+### <a name="sample-targets"></a>Beispiel (Ziele)
 
 Im folgenden Beispiel verwenden wir ein CompositionPointLight auf einer XAML-TextBlock.
 
@@ -61,7 +61,7 @@ Im folgenden Beispiel verwenden wir ein CompositionPointLight auf einer XAML-Tex
     _pointLight.Targets.Add(text); //target XAML TextBlock
 ```
 
-Durch Hinzufügen von Animationen auf den Offset der Punktlichter, ist ein schimmernde Effekt ganz einfach.
+Durch Hinzufügen von Animationen auf den Offset des Punktuelles Licht, ist ein schimmernde Effekt ganz einfach.
 
 ```cs
 _pointLight.Offset = new Vector3(-(float)TextBlock.ActualWidth, (float)TextBlock.ActualHeight / 2, (float)TextBlock.FontSize);
@@ -75,11 +75,11 @@ Es gibt mehrere Faktoren zu berücksichtigen, wenn bestimmen, welche Inhalte dur
 
 Konzept | Details
 --- | ---
-**Umgebungslicht** | Hinzufügen einer nicht Ambiente-Beleuchtung der Szene wird deaktiviert, wenn alle vorhandenen Licht.  Elemente nicht durch einen nicht-Umgebungslicht Zielgruppe werden schwarz angezeigt.  Um umgebenden visuelle Elemente, die nicht vom Licht auf natürliche Weise gezielte zu beleuchten, verwenden Sie ein Umgebungslicht in Verbindung mit anderen Lichter.
-**Anzahl von Lichtern** | Sie können alle zwei nicht-ambient Komposition Lichter in beliebiger Kombination verwenden, auf der Benutzeroberfläche. Umgebungslicht Licht sind nicht beschränkt; unterschiedlichsten, sind Punkt und entfernte Licht.
-**Lebensdauer** | CompositionLight auftreten Objektlebensdauer Bedingungen (Beispiel: der Garbage Collector unter Umständen die Lichtobjekt wiederverwenden, bevor sie verwendet wird).  Es wird empfohlen, behalten einen Verweis auf Ihre Licht durch Hinzufügen von Licht als Mitglied die Anwendung Lebensdauer verwalten können.
+**Umgebungslicht** | Hinzufügen einer nicht Ambiente-Beleuchtung der Szene wird deaktiviert, wenn alle vorhandenen Licht.  Elemente nicht durch eine nicht-Umgebungslicht Zielgruppe werden schwarz angezeigt.  Um umgebenden visuelle Elemente, die nicht vom Licht auf natürliche Weise gezielte zu beleuchten, verwenden Sie ein Umgebungslicht in Verbindung mit anderen Lichter.
+**Anzahl von Lichtern** | Sie können alle zwei nicht ambient Komposition Leuchten in beliebiger Kombination verwenden, auf der Benutzeroberfläche. Umgebungslicht Licht sind nicht beschränkt; unterschiedlichsten, sind Punkt und entfernte Licht.
+**Lebensdauer** | CompositionLight auftreten Objektlebensdauer Bedingungen (Beispiel: der Garbage Collector unter Umständen die Lichtobjekt wiederverwenden, bevor sie verwendet wird).  Es wird empfohlen, einen Verweis auf Ihre Licht durch Hinzufügen von Licht als Mitglied der Anwendung Verwalten der Lebensdauer zu behalten.
 **Transformationen** | Licht müssen in einem Knoten oben UI platziert werden, die Effekte wie [perspektivische Transformationen](/design/layout/3-d-perspective-effects.md) in der visuellen Struktur verwendet wird, ordnungsgemäß gezeichnet werden.
-**Ziele und Koordinatenraum** | CoordinateSpace ist den Platz in dem alle die Lichter-Eigenschaften festgelegt werden müssen. CompositionLight.Targets muss innerhalb der CoordinateSpace-Struktur befinden.
+**Ziele und Koordinatenraum** | CoordinateSpace ist den Platz in dem alle die Lichter Eigenschaften festgelegt werden müssen. CompositionLight.Targets muss innerhalb der Struktur CoordinateSpace erfolgen.
 
 ## <a name="lighting-properties"></a>Beleuchtungseigenschaften
 
@@ -94,28 +94,28 @@ Eigenschaft | Beschreibung
 **Offset** | Offset der Lichtquelle relativ zum Koordinatenraums Visual.
 
 > [!NOTE]
-> Wenn mehrere Lichtquellen das gleiche visuelle erreicht oder bei jedem Farbwert eines Lichts groß genug, um 1.0 überschreiten erhält, kann die Farbe des Lichts ändern, aufgrund der Klammerung von einen Farbkanal Licht.
+> Wenn mehrere Lichtquellen das gleiche visuelle erreicht, oder eines Lichts Farbwert groß genug, um 1.0 überschreiten erhält, kann die Farbe des Lichts aufgrund Klammerung von ein Licht Farbkanal ändern.
 
 ### <a name="advanced-lighting-properties"></a>Erweiterte Eigenschaften Beleuchtung
 
 Eigenschaft | Beschreibung
 --- | ---
 **Intensität** | Steuert die Helligkeit des Lichts.
-**Dämpfung** | Die Dämpfung steuert, wie die Intensität eines Lichts gegenüber der maximalen Entfernung, angegeben durch die Eigenschaft „Reichweite“, abnimmt.  Konstante, können Quadradic und linearer Dämpfungseigenschaften verwendet werden.
+**Dämpfung** | Die Dämpfung steuert, wie die Intensität eines Lichts gegenüber der maximalen Entfernung, angegeben durch die Eigenschaft „Reichweite“, abnimmt.  Konstante, können Quadradic und Linear Dämpfungseigenschaften verwendet werden.
 
 ## <a name="getting-started-with-lighting"></a>Erste Schritte mit Beleuchtung
 
 Führen Sie diese allgemeinen Schritte für das Licht hinzufügen:
 
-- Erstellen und platzieren Sie die Lichter: Licht zu erstellen und speichern Sie sie in einem angegebenen Koordinatenraum.
-- Objekte, um Licht zu identifizieren: Lichts an relevante visuelle Elemente ausgerichtet.
+- Erstellen und das Licht zu platzieren: Licht zu erstellen und speichern Sie sie in einem angegebenen Koordinatenraum.
+- Identifizieren Sie Objekte, um Licht: Lichts an relevanten visuelle Elemente ausgerichtet.
 - [Optional] Definieren, wie einzelne Objekte reagieren auf Lichter: Verwendung SceneLightingEffect mit einer EffectBrush lichtreflektion zum Anzeigen der SpriteVisual anpassen. Reflektion Standardwerte unterstützen die Beleuchtung der untergeordneten Elemente von einer Lichtquelle CoordinateSpace.  Ein visuelles Element, das mit einem SceneLightingEffect überschreibt die Standard-Beleuchtung für die Visual.
 
 ## <a name="scenelightingeffect"></a>SceneLightingEffect
 
-[SceneLightingEffect](/uwp/api/Windows.UI.Composition.Effects.SceneLightingEffect) wird verwendet, um die Standard-Beleuchtung angewendet, auf den Inhalt des ein Ziel von einer [CompositionLight](/uwp/api/windows.ui.composition.compositionlight) [SpriteVisual](/uwp/api/Windows.UI.Composition.SpriteVisual) ändern.
+[SceneLightingEffect](/uwp/api/Windows.UI.Composition.Effects.SceneLightingEffect) wird verwendet, um die Standard-Beleuchtung angewendet auf den Inhalt des ein Ziel von einer [CompositionLight](/uwp/api/windows.ui.composition.compositionlight) [SpriteVisual](/uwp/api/Windows.UI.Composition.SpriteVisual) ändern.
 
-[SceneLightingEffect](/uwp/api/Windows.UI.Composition.Effects.SceneLightingEffect) wird häufig für Material Erstellung verwendet. Ein SceneLightingEffect ist ein Effekt verwendet, wenn Sie etwas komplexer sein, z. B. reflektierende Eigenschaften eines Bilds aktivieren bzw. eine Illusion von Tiefe mit einer normalen Karte bereitzustellen erzielen möchten. Eine SceneLightingEffect bietet die Möglichkeit, Ihre Benutzeroberfläche anpassen, indem Sie mithilfe der Beleuchtungseigenschaften wie und diffuse Beträge. Sie können weitere Beleuchtungseffekte mit dem Rest der Effekte Pipeline ermöglicht einzeln mischen und compose unterschiedliche Beleuchtung Reaktionen durch Ihren Inhalt anpassen.
+[SceneLightingEffect](/uwp/api/Windows.UI.Composition.Effects.SceneLightingEffect) wird häufig für Material Erstellung verwendet. Ein SceneLightingEffect ist ein Effekt verwendet, wenn Sie etwas komplexer sein, z. B. reflektierende Eigenschaften eines Bilds aktivieren bzw. eine Illusion von Tiefe mit einer normalen Karte bereitzustellen erzielen möchten. Eine SceneLightingEffect bietet die Möglichkeit, Ihre Benutzeroberfläche anpassen, indem Sie mithilfe der Beleuchtungseigenschaften wie und diffuse Beträge. Sie können weitere Beleuchtungseffekte mit dem Rest der Pipeline Effekte ermöglicht einzeln mischen und compose unterschiedliche Beleuchtung Reaktionen durch Ihren Inhalt anpassen.
 
 > [!NOTE]
 > Beleuchtung der Szene erzeugt keine Schatten; Es ist ein Effekt, 2D Rendering konzentriert.  Es ist nicht berücksichtigt 3D Beleuchtung Szenarien berücksichtigen, die realen Beleuchtung Modelle, einschließlich der Schatten enthalten.
@@ -123,11 +123,11 @@ Führen Sie diese allgemeinen Schritte für das Licht hinzufügen:
 
 Eigenschaft | Beschreibung
 --- | ---
-**Normale Karte** | NormalMaps erstellen Sie einen Effekt einer Textur, in denen ein normaler zeigt in Richtung Licht werden heller und ein normaler zeigt entfernt wird dunkler. Eine NormalMap Ihre benutzerorientierte visual verwenden eine [CompositionSurfaceBrush](/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) mit Loadedimagesource eine NormalMap Ressource laden hinzu.
-**Umgebung** | Ambiente-Eigenschaften werden hauptsächlich verwendet, um die allgemeine Farbe Reflektion zu steuern.
-**Spiegelnde** | Spiegelnden Reflektion erstellt Lichter auf Objekte gestalten glänzende angezeigt. Sie können die Ebene der spiegelnden Reflektion sowie der Ebene der Glanz steuern.  Diese Eigenschaften sind bedient, um Material Effekte wie Shinny Metalle oder glänzende Papier zu erstellen.
+**Normale Karte** | NormalMaps erstellen Sie einen Effekt einer Textur, in denen ein normaler zeigt für das Licht werden heller und ein normaler zeigt entfernt wird dunkler. Eine NormalMap Ihre benutzerorientierte visual verwenden eine [CompositionSurfaceBrush](/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) mit Loadedimagesource eine NormalMap Ressource laden hinzu.
+**Umgebung** | Ambiente-Eigenschaften werden hauptsächlich verwendet, um die allgemeine Farbe Reflektion steuern.
+**Spiegelnde** | Spiegelnden Reflektion erstellt Lichter auf Objekte gestalten glänzende angezeigt. Sie können die Ebene der spiegelnden Reflektion sowie der Ebene der Glanz steuern.  Diese Eigenschaften sind bearbeitet, um Material Effekte wie Shinny Metalle oder glänzende Papier zu erstellen.
 **Diffuse** | Diffuse Reflektion Streut Licht in alle Richtungen.
-**Reflektion-Modell** | [Reflexionsgrad Modell](/uwp/api/windows.ui.composition.effects.scenelightingeffectreflectancemodel) können Sie zwischen [Blinn Phong](https://docs.microsoft.com/visualstudio/designers/how-to-create-a-basic-phong-shader) und physikalisch basierten Blinn Phong wählen.  Sie würden physikalisch basierten Blinn Phong auswählen, wenn Sie Glanzlichter zusammengefasst haben möchten.
+**Reflektion-Modell** | [Reflektion Modell](/uwp/api/windows.ui.composition.effects.scenelightingeffectreflectancemodel) können Sie zwischen [Blinn Phong](https://docs.microsoft.com/visualstudio/designers/how-to-create-a-basic-phong-shader) und physisch basierend Blinn Phong auswählen.  Wenn Sie Glanzlichter zusammengefasst haben möchten, würden Sie physisch basierend Blinn Phong auswählen.
 
 ### <a name="sample-scenelightingeffect"></a>Beispiel (SceneLightingEffect)
 
@@ -166,7 +166,7 @@ CompositionBrush CreateNormalMapBrush(ICompositionSurface normalMapImage)
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
-- [Erstellen von Materialien und Lichter in der visuellen Ebene](https://blogs.windows.com/buildingapps/2017/08/04/creating-materials-lights-visual-layer/)
+- [Erstellen in der visuellen Ebene Material und Licht](https://blogs.windows.com/buildingapps/2017/08/04/creating-materials-lights-visual-layer/)
 - [Übersicht über die Beleuchtung](https://docs.microsoft.com/windows/uwp/graphics-concepts/lighting-overview)
 - [CompositionCapabilities-API](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositioncapabilities)
 - [Beleuchtungsmathematik](https://docs.microsoft.com/windows/uwp/graphics-concepts/mathematics-of-lighting)

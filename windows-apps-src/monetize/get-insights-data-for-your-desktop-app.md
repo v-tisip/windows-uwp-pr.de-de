@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Store-Dienste, Microsoft Store-Analyse-API, Einblicke
 ms.localizationpriority: medium
 ms.openlocfilehash: e7ca6eed40af37276b5b4c98ec7b1b709bdadfb9
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2910798"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3123267"
 ---
 # <a name="get-insights-data-for-your-desktop-application"></a>Erhalten Sie Einblicke Daten für Ihre desktop-Anwendung
 
-Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um Einblicke, zugehörige Daten auf Health Metrik für eine desktop-Anwendung, die für das [Windows-desktopanwendungsprogramm](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)hinzugefügt wurden abzurufen. Diese Daten sind auch im [Bericht "Integrität"](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) für desktopanwendungen im Windows Dev Center-Dashboard verfügbar.
+Verwenden Sie diese Methode in der Microsoft Store-Analyse-API zum Abrufen von Einblicke, zugehörige Daten auf Health Metrik für eine desktop-Anwendung, die Sie für das [Windows-desktopanwendungsprogramm](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)hinzugefügt haben. Diese Daten sind auch im [Bericht "Integrität"](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) für desktopanwendungen im Windows Dev Center-Dashboard verfügbar.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -48,14 +48,14 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 | Parameter        | Typ   |  Beschreibung      |  Erforderlich  
 |---------------|--------|---------------|------|
-| applicationId | string | Die Produkt-ID der Desktopanwendung, für die Sie Einblicke Daten erhalten möchten. Um die Produkt-ID einer Desktopanwendung zu erhalten, öffnen Sie einen [Dev Center-Analysebericht für Ihre Desktopanwendung](https://msdn.microsoft.com/library/windows/desktop/mt826504) (z.B. den **Integritätsbericht**) und rufen Sie die Produkt-ID aus der URL ab. Wenn Sie diesen Parameter nicht angeben, enthält der Antworttext Einblicke Daten für alle apps, die für Ihr Konto registriert wurden.  |  Nein  |
+| applicationId | string | Die Produkt-ID der Desktopanwendung, für die Sie Einblicke Daten abrufen möchten. Um die Produkt-ID einer Desktopanwendung zu erhalten, öffnen Sie einen [Dev Center-Analysebericht für Ihre Desktopanwendung](https://msdn.microsoft.com/library/windows/desktop/mt826504) (z.B. den **Integritätsbericht**) und rufen Sie die Produkt-ID aus der URL ab. Wenn Sie diesen Parameter nicht angeben, enthält der Antworttext Einblicke Daten für alle apps, die für Ihr Konto registriert wurden.  |  Nein  |
 | startDate | date | Das Startdatum im Datumsbereich der Einblicke Daten abgerufen. Der Standardwert ist 30Tage vor dem aktuellen Datum. |  Nein  |
 | endDate | date | Das Enddatum im Datumsbereich der Einblicke Daten abgerufen. Der Standardwert ist das aktuelle Datum. |  Nein  |
-| filter | string  | Mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Jede Anweisung enthält einen Feldnamen aus dem Antworttext und einen Wert, die mit den Operatoren **eq** oder **ne** verknüpft sind. Anweisungen können mit **and** oder **or** kombiniert werden. Zeichenfolgenwerte im Parameter *filter* müssen von einfachen Anführungszeichen eingeschlossen werden. Beispielsweise *Filter = DataType Eq 'Erwerb'*. <p/><p/>Diese Methode unterstützt derzeit nur der Filter- **Integrität**.  | Nein   |
+| filter | string  | Mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Jede Anweisung enthält einen Feldnamen aus dem Antworttext und einen Wert, die mit den Operatoren **eq** oder **ne** verknüpft sind. Anweisungen können mit **and** oder **or** kombiniert werden. Zeichenfolgenwerte im Parameter *filter* müssen von einfachen Anführungszeichen eingeschlossen werden. Beispielsweise *Filter = DataType Eq 'Kauf"*. <p/><p/>Diese Methode unterstützt derzeit nur der Filter- **Integrität**.  | Nein   |
 
 ### <a name="request-example"></a>Anforderungsbeispiel
 
-Das folgende Beispiel zeigt eine Anforderung zum Abrufen von Einblicke Daten. Ersetzen Sie den *ApplicationId* -Wert, mit dem entsprechenden Wert für Ihre desktop-Anwendung.
+Das folgende Beispiel zeigt eine Anforderung zum Abrufen von Daten Einblicke. Ersetzen Sie den Wert *ApplicationId* , mit dem entsprechenden Wert für Ihre desktop-Anwendung.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/desktop/insights?applicationId=10238467886765136388&startDate=6/1/2018&endDate=6/15/2018&filter=dataType eq 'health' HTTP/1.1
@@ -68,11 +68,11 @@ Authorization: Bearer <your access token>
 
 | Wert      | Typ   | Beschreibung                  |
 |------------|--------|-------------------------------------------------------|
-| Wert      | array  | Ein Array von Objekten, die Einblicke Daten für die app enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie weiter unten im Abschnitt [Insight Werte](#insight-values) .                                                                                                                      |
+| Wert      | array  | Ein Array von Objekten, die Einblicke Daten für die app enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unter Abschnitt [Insight Werte](#insight-values) .                                                                                                                      |
 | TotalCount | int    | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.                 |
 
 
-### <a name="insight-values"></a>Insight-Werte
+### <a name="insight-values"></a>Insight Werte
 
 Elemente im Array *Value* enthalten die folgenden Werte.
 
@@ -88,7 +88,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 
 | Wert               | Typ   | Beschreibung                           |
 |---------------------|--------|-------------------------------------------|
-| FactName           | string | Eine Zeichenfolge, die Metrik angibt, die das aktuelle Insight oder die aktuelle Dimension beschreibt. Diese Methode unterstützt derzeit nur den Wert **HitCount**.  |
+| FactName           | string | Eine Zeichenfolge, die die Metrik gibt an, die das aktuelle Insight oder die aktuelle Dimension beschreibt. Diese Methode unterstützt derzeit nur den Wert **HitCount**.  |
 | SubDimensions         | array |  Ein oder mehrere Objekte, die eine einzelne Metrik für die Einblicke zu beschreiben.   |
 | Prozent            | string |  Der Prozentsatz, den die Metrik über Ihres gesamten Kundenstamms geändert.  |
 | DimensionName           | string |  Der Name des die Metrik befindet sich in der aktuellen Dimension beschrieben. Beispiele sind **EventType**, **Markt**, **DeviceType**und **PackageVersion**.   |
