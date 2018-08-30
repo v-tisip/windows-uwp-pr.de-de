@@ -11,45 +11,45 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 598a73b291d5f8b3c004f1e9adeddf0b92b841ab
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2913335"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3118287"
 ---
-# <a name="generate-preinstall-packages-for-oems"></a><span data-ttu-id="04990-103">Generieren von Vorinstallationspaketen für OEMs</span><span class="sxs-lookup"><span data-stu-id="04990-103">Generate preinstall packages for OEMs</span></span>
+# <a name="generate-preinstall-packages-for-oems"></a><span data-ttu-id="cc678-103">Generieren von Vorinstallationspaketen für OEMs</span><span class="sxs-lookup"><span data-stu-id="cc678-103">Generate preinstall packages for OEMs</span></span>
 
-<span data-ttu-id="04990-104">Wenn Ihrem Entwicklerkonto die entsprechenden Berechtigungen gewährt wurden, können Sie Vorinstallationspakete generieren und herunterladen, damit das OEM Ihre App in ein OS-Image einschließen kann.</span><span class="sxs-lookup"><span data-stu-id="04990-104">If your developer account has been granted the appropriate permissions, you can generate and download preinstall packages so that an OEM can include your app in their OS image.</span></span> <span data-ttu-id="04990-105">Vorinstallationsberechtigungen werden nur für Entwicklerkonten aktiviert, die von OEMs unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="04990-105">Preinstall permissions are only enabled on developer accounts that are sponsored by OEMs.</span></span>
-
-
-## <a name="important-preinstall-policy--limitations"></a><span data-ttu-id="04990-106">Wichtige Vorinstallationsrichtlinien und -beschränkungen</span><span class="sxs-lookup"><span data-stu-id="04990-106">Important preinstall policy & limitations</span></span>
-
-<span data-ttu-id="04990-107">Vorinstallations-Apps müssen über das Windows Dev Center zertifiziert sein, um die aktuelle Store-Lizenz zu erhalten. Es ist nicht möglich, eine Verbindung mit dem Store herzustellen und App-Updates herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="04990-107">Preinstall apps must be certified through Windows Dev Center to have the latest Store license so that they are able to connect to the Store and receive app updates.</span></span>
-
-<span data-ttu-id="04990-108">Jede vorinstallierte App muss zum aktuellen Zeitpunkt und in Zukunft auf allen Märkten kostenlos angeboten werden.</span><span class="sxs-lookup"><span data-stu-id="04990-108">Any app that is preinstalled must be and remain free in all markets.</span></span>
+<span data-ttu-id="cc678-104">Wenn Ihrem Entwicklerkonto die entsprechenden Berechtigungen gewährt wurden, können Sie Vorinstallationspakete generieren und herunterladen, damit das OEM Ihre App in ein OS-Image einschließen kann.</span><span class="sxs-lookup"><span data-stu-id="cc678-104">If your developer account has been granted the appropriate permissions, you can generate and download preinstall packages so that an OEM can include your app in their OS image.</span></span> <span data-ttu-id="cc678-105">Vorinstallationsberechtigungen werden nur für Entwicklerkonten aktiviert, die von OEMs unterstützt werden.</span><span class="sxs-lookup"><span data-stu-id="cc678-105">Preinstall permissions are only enabled on developer accounts that are sponsored by OEMs.</span></span>
 
 
-## <a name="generating-preinstall-packages"></a><span data-ttu-id="04990-109">Generieren von Vorinstallationspaketen</span><span class="sxs-lookup"><span data-stu-id="04990-109">Generating preinstall packages</span></span>
+## <a name="important-preinstall-policy--limitations"></a><span data-ttu-id="cc678-106">Wichtige Vorinstallationsrichtlinien und -beschränkungen</span><span class="sxs-lookup"><span data-stu-id="cc678-106">Important preinstall policy & limitations</span></span>
 
-<span data-ttu-id="04990-110">Nachdem ein Konto mit Vorinstallationsberechtigungen aktiviert wurde, führen Sie die folgenden Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="04990-110">Once an account has been enabled with preinstall permissions, complete the following steps:</span></span>
+<span data-ttu-id="cc678-107">Vorinstallations-Apps müssen über das Windows Dev Center zertifiziert sein, um die aktuelle Store-Lizenz zu erhalten. Es ist nicht möglich, eine Verbindung mit dem Store herzustellen und App-Updates herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="cc678-107">Preinstall apps must be certified through Windows Dev Center to have the latest Store license so that they are able to connect to the Store and receive app updates.</span></span>
 
-1.  <span data-ttu-id="04990-111">Navigieren Sie in Ihrem Dashboard zur App, die vorinstalliert werden soll.</span><span class="sxs-lookup"><span data-stu-id="04990-111">In your dashboard, navigate to the app that is to be preinstalled.</span></span>
-2.  <span data-ttu-id="04990-112">Erweitern Sie im linken Navigationsmenü **App-Verwaltung**, und wählen Sie **Aktuelle Pakete** aus.</span><span class="sxs-lookup"><span data-stu-id="04990-112">In the left navigation menu, expand **App management** and select **Current packages**.</span></span>
-3.  <span data-ttu-id="04990-113">Wählen Sie im Abschnitt **Pakete für die Vorinstallation des Betriebssystems anfordern** **Downloadbare Pakete ermöglichen** aus.</span><span class="sxs-lookup"><span data-stu-id="04990-113">In the **Request packages for OS preinstallation** section, select **Enable downloadable packages**.</span></span>
-4.  <span data-ttu-id="04990-114">Wählen Sie im Bestätigungsdialogfeld **Aktivieren** aus.</span><span class="sxs-lookup"><span data-stu-id="04990-114">In the confirmation dialog will, select **Enable**.</span></span>
-5.  <span data-ttu-id="04990-115">Suchen Sie das Paket, das Sie herunterladen möchten, und wählen Sie den entsprechenden Link **Paket generieren**.</span><span class="sxs-lookup"><span data-stu-id="04990-115">Find the package that you want to download and select the appropriate **Generate package** link.</span></span>
+<span data-ttu-id="cc678-108">Jede vorinstallierte App muss zum aktuellen Zeitpunkt und in Zukunft auf allen Märkten kostenlos angeboten werden.</span><span class="sxs-lookup"><span data-stu-id="cc678-108">Any app that is preinstalled must be and remain free in all markets.</span></span>
+
+
+## <a name="generating-preinstall-packages"></a><span data-ttu-id="cc678-109">Generieren von Vorinstallationspaketen</span><span class="sxs-lookup"><span data-stu-id="cc678-109">Generating preinstall packages</span></span>
+
+<span data-ttu-id="cc678-110">Nachdem ein Konto mit Vorinstallationsberechtigungen aktiviert wurde, führen Sie die folgenden Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="cc678-110">Once an account has been enabled with preinstall permissions, complete the following steps:</span></span>
+
+1.  <span data-ttu-id="cc678-111">Navigieren Sie in Ihrem Dashboard zur App, die vorinstalliert werden soll.</span><span class="sxs-lookup"><span data-stu-id="cc678-111">In your dashboard, navigate to the app that is to be preinstalled.</span></span>
+2.  <span data-ttu-id="cc678-112">Erweitern Sie im linken Navigationsmenü **App-Verwaltung**, und wählen Sie **Aktuelle Pakete** aus.</span><span class="sxs-lookup"><span data-stu-id="cc678-112">In the left navigation menu, expand **App management** and select **Current packages**.</span></span>
+3.  <span data-ttu-id="cc678-113">Wählen Sie im Abschnitt **Pakete für die Vorinstallation des Betriebssystems anfordern** **Downloadbare Pakete ermöglichen** aus.</span><span class="sxs-lookup"><span data-stu-id="cc678-113">In the **Request packages for OS preinstallation** section, select **Enable downloadable packages**.</span></span>
+4.  <span data-ttu-id="cc678-114">Wählen Sie im Bestätigungsdialogfeld **Aktivieren** aus.</span><span class="sxs-lookup"><span data-stu-id="cc678-114">In the confirmation dialog will, select **Enable**.</span></span>
+5.  <span data-ttu-id="cc678-115">Suchen Sie das Paket, das Sie herunterladen möchten, und wählen Sie den entsprechenden Link **Paket generieren**.</span><span class="sxs-lookup"><span data-stu-id="cc678-115">Find the package that you want to download and select the appropriate **Generate package** link.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="04990-116">Die Dauer zum Generieren von Vorinstallationspaketen hängt von der Größe des ausgewählten Pakets ab.</span><span class="sxs-lookup"><span data-stu-id="04990-116">Generation time for preinstall packages will vary depending on the size of the package you have selected.</span></span> <span data-ttu-id="04990-117">Sie können diese Seite verlassen und später darauf zurückkehren, oder Sie können die Seite geöffnet lassen, während das Paket generiert wird.</span><span class="sxs-lookup"><span data-stu-id="04990-117">You can leave this page and come back later, or you can leave the page open while your package is being generated.</span></span>
+    > <span data-ttu-id="cc678-116">Die Dauer zum Generieren von Vorinstallationspaketen hängt von der Größe des ausgewählten Pakets ab.</span><span class="sxs-lookup"><span data-stu-id="cc678-116">Generation time for preinstall packages will vary depending on the size of the package you have selected.</span></span> <span data-ttu-id="cc678-117">Sie können diese Seite verlassen und später darauf zurückkehren, oder Sie können die Seite geöffnet lassen, während das Paket generiert wird.</span><span class="sxs-lookup"><span data-stu-id="cc678-117">You can leave this page and come back later, or you can leave the page open while your package is being generated.</span></span>
 
-6.  <span data-ttu-id="04990-118">Nachdem das Paket generiert wurde, wird ein Link zu **Paket herunterladen** angezeigt.</span><span class="sxs-lookup"><span data-stu-id="04990-118">After the package has been generated, a link to **Download package** will appear.</span></span> <span data-ttu-id="04990-119">Wählen Sie das Link aus, um die ZIP-Datei herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="04990-119">Select this link to download the .zip file.</span></span>
+6.  <span data-ttu-id="cc678-118">Nachdem das Paket generiert wurde, wird ein Link zu **Paket herunterladen** angezeigt.</span><span class="sxs-lookup"><span data-stu-id="cc678-118">After the package has been generated, a link to **Download package** will appear.</span></span> <span data-ttu-id="cc678-119">Wählen Sie das Link aus, um die ZIP-Datei herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="cc678-119">Select this link to download the .zip file.</span></span>
 
-<span data-ttu-id="04990-120">Die ZIP-Datei kann dem OEM zur Verfügung gestellt werden, damit er sie in sein Betriebssystemimage einschließt.</span><span class="sxs-lookup"><span data-stu-id="04990-120">You can then provide the .zip file to the OEM for inclusion in their OS image.</span></span>
+<span data-ttu-id="cc678-120">Die ZIP-Datei kann dem OEM zur Verfügung gestellt werden, damit er sie in sein Betriebssystemimage einschließt.</span><span class="sxs-lookup"><span data-stu-id="cc678-120">You can then provide the .zip file to the OEM for inclusion in their OS image.</span></span>
 
 
-## <a name="support"></a><span data-ttu-id="04990-121">Support</span><span class="sxs-lookup"><span data-stu-id="04990-121">Support</span></span>
+## <a name="support"></a><span data-ttu-id="cc678-121">Support</span><span class="sxs-lookup"><span data-stu-id="cc678-121">Support</span></span>
 
-<span data-ttu-id="04990-122">Wenn Sie weitere Fragen zum Generieren von Vorinstallationspaketen haben, senden Sie eine E-Mail an <partnerops@microsoft.com>.</span><span class="sxs-lookup"><span data-stu-id="04990-122">If you have further questions about generating preinstall packages, please email <partnerops@microsoft.com>.</span></span>
+<span data-ttu-id="cc678-122">Wenn Sie weitere Fragen zum Generieren von Vorinstallationspaketen haben, senden Sie eine E-Mail an <partnerops@microsoft.com>.</span><span class="sxs-lookup"><span data-stu-id="cc678-122">If you have further questions about generating preinstall packages, please email <partnerops@microsoft.com>.</span></span>
 
  
 

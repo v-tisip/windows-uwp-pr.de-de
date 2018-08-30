@@ -11,67 +11,67 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 378544282981c62d7a57f9abc3f666e8964b7117
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2908802"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3111919"
 ---
-# <a name="get-set-up"></a><span data-ttu-id="28667-105">Vorbereiten</span><span class="sxs-lookup"><span data-stu-id="28667-105">Get set up</span></span>
+# <a name="get-set-up"></a><span data-ttu-id="16822-105">Vorbereiten</span><span class="sxs-lookup"><span data-stu-id="16822-105">Get set up</span></span>
 
 ![Vorbereitungen für die Verwendung von Visual Studio](images/VisualStudio2017Hero_ImageXL-LG.png)
 
-<span data-ttu-id="28667-107">Die Vorbereitung ist einfacher, als Sie denken.</span><span class="sxs-lookup"><span data-stu-id="28667-107">It's easier than you think to get going.</span></span> <span data-ttu-id="28667-108">Befolgen Sie diese Anweisungen, um mit dem Erstellen von Universellen Windows-Plattform (UWP)-Apps für Windows 10 zu beginnen.</span><span class="sxs-lookup"><span data-stu-id="28667-108">Follow these instructions and start creating Universal Windows Platform (UWP) apps for Windows 10.</span></span>
+<span data-ttu-id="16822-107">Die Vorbereitung ist einfacher, als Sie denken.</span><span class="sxs-lookup"><span data-stu-id="16822-107">It's easier than you think to get going.</span></span> <span data-ttu-id="16822-108">Befolgen Sie diese Anweisungen, um mit dem Erstellen von Universellen Windows-Plattform (UWP)-Apps für Windows 10 zu beginnen.</span><span class="sxs-lookup"><span data-stu-id="16822-108">Follow these instructions and start creating Universal Windows Platform (UWP) apps for Windows 10.</span></span>
 
-## <a name="1-download-or-update-visual-studio"></a><span data-ttu-id="28667-109">1. Laden Sie Visual Studio herunter, oder aktualisieren Sie es.</span><span class="sxs-lookup"><span data-stu-id="28667-109">1. Download or update Visual Studio</span></span>
+## <a name="1-download-or-update-visual-studio"></a><span data-ttu-id="16822-109">1. Laden Sie Visual Studio herunter, oder aktualisieren Sie es.</span><span class="sxs-lookup"><span data-stu-id="16822-109">1. Download or update Visual Studio</span></span>
 
-<span data-ttu-id="28667-110">Microsoft Visual Studio2017 unterstützt Sie bei Entwurf, Codierung, Testen und Debuggen Ihrer Apps.</span><span class="sxs-lookup"><span data-stu-id="28667-110">Microsoft Visual Studio 2017 helps you design, code, test, and debug your apps.</span></span>
+<span data-ttu-id="16822-110">Microsoft Visual Studio2017 unterstützt Sie bei Entwurf, Codierung, Testen und Debuggen Ihrer Apps.</span><span class="sxs-lookup"><span data-stu-id="16822-110">Microsoft Visual Studio 2017 helps you design, code, test, and debug your apps.</span></span>
 
-<span data-ttu-id="28667-111">Wenn Sie Visual Studio2017 noch nicht verwenden, können Sie Microsoft Visual Studio Community2017 kostenlos installieren.</span><span class="sxs-lookup"><span data-stu-id="28667-111">If you don't already have Visual Studio 2017, you can install the free Microsoft Visual Studio Community 2017.</span></span> <span data-ttu-id="28667-112">Dieser Download umfasst auch Geräte-Simulatoren zum Testen Ihrer Apps:</span><span class="sxs-lookup"><span data-stu-id="28667-112">This download includes device simulators for testing your apps:</span></span>
+<span data-ttu-id="16822-111">Wenn Sie Visual Studio2017 noch nicht verwenden, können Sie Microsoft Visual Studio Community2017 kostenlos installieren.</span><span class="sxs-lookup"><span data-stu-id="16822-111">If you don't already have Visual Studio 2017, you can install the free Microsoft Visual Studio Community 2017.</span></span> <span data-ttu-id="16822-112">Dieser Download umfasst auch Geräte-Simulatoren zum Testen Ihrer Apps:</span><span class="sxs-lookup"><span data-stu-id="16822-112">This download includes device simulators for testing your apps:</span></span>
 
--   [<span data-ttu-id="28667-113">Windows10-Entwicklertools herunterladen</span><span class="sxs-lookup"><span data-stu-id="28667-113">Download Windows 10 developer tools</span></span>](https://go.microsoft.com/fwlink/p/?LinkID=534189)
+-   [<span data-ttu-id="16822-113">Windows10-Entwicklertools herunterladen</span><span class="sxs-lookup"><span data-stu-id="16822-113">Download Windows 10 developer tools</span></span>](https://go.microsoft.com/fwlink/p/?LinkID=534189)
 
-<span data-ttu-id="28667-114">Verwenden Sie bei der Installation von Visual Studio die Option „Entwicklungstools für universelle Windows-Apps“, so wie hier gezeigt:</span><span class="sxs-lookup"><span data-stu-id="28667-114">When you install Visual Studio, make sure to select the Universal Windows App Development Tools option, as shown here:</span></span>
+<span data-ttu-id="16822-114">Verwenden Sie bei der Installation von Visual Studio die Option „Entwicklungstools für universelle Windows-Apps“, so wie hier gezeigt:</span><span class="sxs-lookup"><span data-stu-id="16822-114">When you install Visual Studio, make sure to select the Universal Windows App Development Tools option, as shown here:</span></span>
 
 ![Visual Studio-Tools für UWP](images/vs-2017-community-setup.png)
 
-<span data-ttu-id="28667-116">Benötigen Sie Hilfe für Visual Studio?</span><span class="sxs-lookup"><span data-stu-id="28667-116">Need some help with Visual Studio?</span></span> <span data-ttu-id="28667-117">Wechseln Sie zu [Erste Schritte mit Visual Studio](https://www.visualstudio.com/vs/getting-started).</span><span class="sxs-lookup"><span data-stu-id="28667-117">See [Get Started with Visual Studio](https://www.visualstudio.com/vs/getting-started).</span></span>
+<span data-ttu-id="16822-116">Benötigen Sie Hilfe für Visual Studio?</span><span class="sxs-lookup"><span data-stu-id="16822-116">Need some help with Visual Studio?</span></span> <span data-ttu-id="16822-117">Wechseln Sie zu [Erste Schritte mit Visual Studio](https://www.visualstudio.com/vs/getting-started).</span><span class="sxs-lookup"><span data-stu-id="16822-117">See [Get Started with Visual Studio](https://www.visualstudio.com/vs/getting-started).</span></span>
 
-<span data-ttu-id="28667-118">Wenn Sie Visual Studio bereits verwenden, aber entdecken, dass Ihnen einige Komponenten fehlen, können Sie das Installationsprogramm erneut über das Dialogfeld *Neues Projekt* starten:</span><span class="sxs-lookup"><span data-stu-id="28667-118">If you have already started using Visual Studio, but discover you are missing some components, you can launch the installer again from the *New project* dialog:</span></span>
+<span data-ttu-id="16822-118">Wenn Sie Visual Studio bereits verwenden, aber entdecken, dass Ihnen einige Komponenten fehlen, können Sie das Installationsprogramm erneut über das Dialogfeld *Neues Projekt* starten:</span><span class="sxs-lookup"><span data-stu-id="16822-118">If you have already started using Visual Studio, but discover you are missing some components, you can launch the installer again from the *New project* dialog:</span></span>
 
    ![So wiederholen Sie den Installationsvorgang](images/win10-cs-install.png)
 
 
-## <a name="2-enable-your-device-for-development"></a><span data-ttu-id="28667-120">2. Aktivieren Sie Ihr Gerät für die Entwicklung</span><span class="sxs-lookup"><span data-stu-id="28667-120">2. Enable your device for development</span></span>
+## <a name="2-enable-your-device-for-development"></a><span data-ttu-id="16822-120">2. Aktivieren Sie Ihr Gerät für die Entwicklung</span><span class="sxs-lookup"><span data-stu-id="16822-120">2. Enable your device for development</span></span>
 
-<span data-ttu-id="28667-121">UWP-Apps müssen auf echten Computern und Smartphones getestet werden.</span><span class="sxs-lookup"><span data-stu-id="28667-121">It’s important to test your UWP apps on real PCs and phones.</span></span> <span data-ttu-id="28667-122">Bevor Sie Apps für Ihren Computer oder Ihr Windows Phone bereitstellen können, müssen Sie das Gerät für die Entwicklung registrieren.</span><span class="sxs-lookup"><span data-stu-id="28667-122">Before you can deploy apps to your PC or Windows Phone, you have to enable it for development.</span></span>
+<span data-ttu-id="16822-121">UWP-Apps müssen auf echten Computern und Smartphones getestet werden.</span><span class="sxs-lookup"><span data-stu-id="16822-121">It’s important to test your UWP apps on real PCs and phones.</span></span> <span data-ttu-id="16822-122">Bevor Sie Apps für Ihren Computer oder Ihr Windows Phone bereitstellen können, müssen Sie das Gerät für die Entwicklung registrieren.</span><span class="sxs-lookup"><span data-stu-id="16822-122">Before you can deploy apps to your PC or Windows Phone, you have to enable it for development.</span></span>
 
--   <span data-ttu-id="28667-123">Ausführliche Anweisungen finden Sie unter [Aktivieren des Geräts für die Entwicklung](enable-your-device-for-development.md).</span><span class="sxs-lookup"><span data-stu-id="28667-123">For detailed instructions, see [Enable your device for development](enable-your-device-for-development.md).</span></span>
+-   <span data-ttu-id="16822-123">Ausführliche Anweisungen finden Sie unter [Aktivieren des Geräts für die Entwicklung](enable-your-device-for-development.md).</span><span class="sxs-lookup"><span data-stu-id="16822-123">For detailed instructions, see [Enable your device for development](enable-your-device-for-development.md).</span></span>
 
-## <a name="3-register-as-an-app-developer"></a><span data-ttu-id="28667-124">3. Registrieren als App-Entwickler</span><span class="sxs-lookup"><span data-stu-id="28667-124">3. Register as an app developer</span></span>
+## <a name="3-register-as-an-app-developer"></a><span data-ttu-id="16822-124">3. Registrieren als App-Entwickler</span><span class="sxs-lookup"><span data-stu-id="16822-124">3. Register as an app developer</span></span>
 
-<span data-ttu-id="28667-125">Sie können jetzt mit der Entwicklung von Apps beginnen. Zum Übermitteln an den Store benötigen Sie jedoch ein Entwicklerkonto.</span><span class="sxs-lookup"><span data-stu-id="28667-125">You can start developing apps now, but before you can submit them to the store, you need a developer account.</span></span>
+<span data-ttu-id="16822-125">Sie können jetzt mit der Entwicklung von Apps beginnen. Zum Übermitteln an den Store benötigen Sie jedoch ein Entwicklerkonto.</span><span class="sxs-lookup"><span data-stu-id="16822-125">You can start developing apps now, but before you can submit them to the store, you need a developer account.</span></span>
 
--   <span data-ttu-id="28667-126">Um ein Entwicklerkonto zu erhalten, müssen Sie auf die Seite für die [Registrierung](sign-up.md) zugreifen.</span><span class="sxs-lookup"><span data-stu-id="28667-126">To get a developer account, go to the [Sign up](sign-up.md) page.</span></span>
+-   <span data-ttu-id="16822-126">Um ein Entwicklerkonto zu erhalten, müssen Sie auf die Seite für die [Registrierung](sign-up.md) zugreifen.</span><span class="sxs-lookup"><span data-stu-id="16822-126">To get a developer account, go to the [Sign up](sign-up.md) page.</span></span>
 
-## <a name="whats-next"></a><span data-ttu-id="28667-127">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="28667-127">What's next?</span></span>
+## <a name="whats-next"></a><span data-ttu-id="16822-127">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="16822-127">What's next?</span></span>
 
-<span data-ttu-id="28667-128">Nachdem Sie die Tools installiert und Ihr Gerät für die Entwicklung aktiviert haben, schauen Sie sich unsere Anleitungen mit den ersten Schritten zum Erstellen von Windows10-Apps an.</span><span class="sxs-lookup"><span data-stu-id="28667-128">After you've installed the tools and enabled your device for development, check out our guidance on how to start creating Windows 10 apps.</span></span>
+<span data-ttu-id="16822-128">Nachdem Sie die Tools installiert und Ihr Gerät für die Entwicklung aktiviert haben, schauen Sie sich unsere Anleitungen mit den ersten Schritten zum Erstellen von Windows10-Apps an.</span><span class="sxs-lookup"><span data-stu-id="16822-128">After you've installed the tools and enabled your device for development, check out our guidance on how to start creating Windows 10 apps.</span></span>
 
--   [<span data-ttu-id="28667-129">Beginnen Sie mit der Codierung</span><span class="sxs-lookup"><span data-stu-id="28667-129">Start coding</span></span>](create-uwp-apps.md)
+-   [<span data-ttu-id="16822-129">Beginnen Sie mit der Codierung</span><span class="sxs-lookup"><span data-stu-id="16822-129">Start coding</span></span>](create-uwp-apps.md)
 
-## <a name="windows-development-setup-scripts"></a><span data-ttu-id="28667-130">Setupskripts für die Windows-Entwicklung</span><span class="sxs-lookup"><span data-stu-id="28667-130">Windows development setup scripts</span></span>
+## <a name="windows-development-setup-scripts"></a><span data-ttu-id="16822-130">Setupskripts für die Windows-Entwicklung</span><span class="sxs-lookup"><span data-stu-id="16822-130">Windows development setup scripts</span></span>
 
-<span data-ttu-id="28667-131">Wenn Sie Ihr Gerät anpassen und andere Funktionen oder Pakete installieren möchten, schauen Sie sich dieses Projekt für Systemsetupskripts an.</span><span class="sxs-lookup"><span data-stu-id="28667-131">If you want to customize your device and install other features or packages, check out this project for system setup scripts.</span></span>
+<span data-ttu-id="16822-131">Wenn Sie Ihr Gerät anpassen und andere Funktionen oder Pakete installieren möchten, schauen Sie sich dieses Projekt für Systemsetupskripts an.</span><span class="sxs-lookup"><span data-stu-id="16822-131">If you want to customize your device and install other features or packages, check out this project for system setup scripts.</span></span>
 
-- [<span data-ttu-id="28667-132">Setupskripts für Entwickler</span><span class="sxs-lookup"><span data-stu-id="28667-132">Developer setup scripts</span></span>](https://github.com/Microsoft/windows-dev-box-setup-scripts)
+- [<span data-ttu-id="16822-132">Setupskripts für Entwickler</span><span class="sxs-lookup"><span data-stu-id="16822-132">Developer setup scripts</span></span>](https://github.com/Microsoft/windows-dev-box-setup-scripts)
 
-## <a name="want-more-tools-and-downloads"></a><span data-ttu-id="28667-133">Benötigen Sie mehr Tools und Downloads?</span><span class="sxs-lookup"><span data-stu-id="28667-133">Want more tools and downloads?</span></span>
+## <a name="want-more-tools-and-downloads"></a><span data-ttu-id="16822-133">Benötigen Sie mehr Tools und Downloads?</span><span class="sxs-lookup"><span data-stu-id="16822-133">Want more tools and downloads?</span></span>
 
-<span data-ttu-id="28667-134">Die vollständige Liste der Tools und Downloads finden Sie unter [Downloads](http://go.microsoft.com/fwlink/p/?linkid=285935).</span><span class="sxs-lookup"><span data-stu-id="28667-134">For the complete list of tools and downloads, see [Downloads](http://go.microsoft.com/fwlink/p/?linkid=285935).</span></span>
+<span data-ttu-id="16822-134">Die vollständige Liste der Tools und Downloads finden Sie unter [Downloads](http://go.microsoft.com/fwlink/p/?linkid=285935).</span><span class="sxs-lookup"><span data-stu-id="16822-134">For the complete list of tools and downloads, see [Downloads](http://go.microsoft.com/fwlink/p/?linkid=285935).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="28667-135">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="28667-135">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="16822-135">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="16822-135">See Also</span></span>
 
-* [<span data-ttu-id="28667-136">Codebeispiele für UWP-Entwickler</span><span class="sxs-lookup"><span data-stu-id="28667-136">Code Samples for UWP developers</span></span>](https://developer.microsoft.com/windows/samples)
-* [<span data-ttu-id="28667-137">Was ist eine UWP-App?</span><span class="sxs-lookup"><span data-stu-id="28667-137">What's a UWP app?</span></span>](universal-application-platform-guide.md)
-* [<span data-ttu-id="28667-138">Für Windows-Konto anmelden</span><span class="sxs-lookup"><span data-stu-id="28667-138">Sign up for Windows account</span></span>](sign-up.md)
+* [<span data-ttu-id="16822-136">Codebeispiele für UWP-Entwickler</span><span class="sxs-lookup"><span data-stu-id="16822-136">Code Samples for UWP developers</span></span>](https://developer.microsoft.com/windows/samples)
+* [<span data-ttu-id="16822-137">Was ist eine UWP-App?</span><span class="sxs-lookup"><span data-stu-id="16822-137">What's a UWP app?</span></span>](universal-application-platform-guide.md)
+* [<span data-ttu-id="16822-138">Für Windows-Konto anmelden</span><span class="sxs-lookup"><span data-stu-id="16822-138">Sign up for Windows account</span></span>](sign-up.md)

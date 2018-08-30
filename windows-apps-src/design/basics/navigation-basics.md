@@ -1,32 +1,32 @@
 ---
-author: serenaz
+author: QuinnRadich
 Description: Navigation in Universal Windows Platform (UWP) apps is based on a flexible model of navigation structures, navigation elements, and system-level features.
 title: Navigationsgrundlagen für UWP-Apps
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigation design basics
 template: detail.hbs
 op-migration-status: ready
-ms.author: sezhen
+ms.author: quradic
 ms.date: 7/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 464da3dd3a9a181555f7b4bfd1059e9834fe7338
-ms.sourcegitcommit: 3727445c1d6374401b867c78e4ff8b07d92b7adc
+ms.openlocfilehash: b731910f53a6152554b74e946374234b827f4a86
+ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "2909888"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "3117797"
 ---
-# <a name="navigation-design-basics-for-uwp-apps"></a><span data-ttu-id="42c0b-103">Navigationsdesigngrundlagen für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="42c0b-103">Navigation design basics for UWP apps</span></span>
+# <a name="navigation-design-basics-for-uwp-apps"></a><span data-ttu-id="215e9-103">Navigationsdesigngrundlagen für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="215e9-103">Navigation design basics for UWP apps</span></span>
 
 ![Navigationsgrundlagen-Header](images/nav/navigation-basics-header.jpg)
 
-<span data-ttu-id="42c0b-105">Wenn Sie sich eine App als eine Sammlung von Seiten vorstellen, beschreibt der Begriff *Navigation* den Wechselvorgang zwischen Seiten und innerhalb einer Seite.</span><span class="sxs-lookup"><span data-stu-id="42c0b-105">If you think of an app as a collection of pages, *navigation* describes the act of moving between pages and within a page.</span></span> <span data-ttu-id="42c0b-106">Die Navigation ist der Ausgangspunkt für die Benutzererfahrung und definiert die Art und Weise, in der Nutzer die Inhalte und Funktionen finden, an denen sie interessiert sind.</span><span class="sxs-lookup"><span data-stu-id="42c0b-106">It's the starting point of the user experience, and it's how users find the content and features they're interested in.</span></span> <span data-ttu-id="42c0b-107">Sie ist sehr wichtig, und es kann schwierig sein, sie richtig zu implementieren.</span><span class="sxs-lookup"><span data-stu-id="42c0b-107">It's very important, and it can be difficult to get right.</span></span>
+<span data-ttu-id="215e9-105">Wenn Sie sich eine App als eine Sammlung von Seiten vorstellen, beschreibt der Begriff *Navigation* den Wechselvorgang zwischen Seiten und innerhalb einer Seite.</span><span class="sxs-lookup"><span data-stu-id="215e9-105">If you think of an app as a collection of pages, *navigation* describes the act of moving between pages and within a page.</span></span> <span data-ttu-id="215e9-106">Die Navigation ist der Ausgangspunkt für die Benutzererfahrung und definiert die Art und Weise, in der Nutzer die Inhalte und Funktionen finden, an denen sie interessiert sind.</span><span class="sxs-lookup"><span data-stu-id="215e9-106">It's the starting point of the user experience, and it's how users find the content and features they're interested in.</span></span> <span data-ttu-id="215e9-107">Sie ist sehr wichtig, und es kann schwierig sein, sie richtig zu implementieren.</span><span class="sxs-lookup"><span data-stu-id="215e9-107">It's very important, and it can be difficult to get right.</span></span>
 
-<span data-ttu-id="42c0b-108">Es gibt eine große Anzahl von Navigationsmöglichkeiten.</span><span class="sxs-lookup"><span data-stu-id="42c0b-108">We have a huge number of choices to make for navigation.</span></span> <span data-ttu-id="42c0b-109">Wir könnten:</span><span class="sxs-lookup"><span data-stu-id="42c0b-109">We could:</span></span>
+<span data-ttu-id="215e9-108">Es gibt eine große Anzahl von Navigationsmöglichkeiten.</span><span class="sxs-lookup"><span data-stu-id="215e9-108">We have a huge number of choices to make for navigation.</span></span> <span data-ttu-id="215e9-109">Wir könnten:</span><span class="sxs-lookup"><span data-stu-id="215e9-109">We could:</span></span>
 
 :::row:::
     :::column:::
@@ -46,27 +46,27 @@ ms.locfileid: "2909888"
     :::column-end:::
 :::row-end:::
 
-<span data-ttu-id="42c0b-111">Es gibt zwar kein einheitliches Navigationsdesign, das für jede App funktioniert, aber es gibt Prinzipien und Richtlinien, die Ihnen helfen, das richtige Design für Ihre App zu finden.</span><span class="sxs-lookup"><span data-stu-id="42c0b-111">While there's no single navigation design that works for every app, there are principles and guidelines to help you decide the right design for your app.</span></span>
+<span data-ttu-id="215e9-111">Es gibt zwar kein einheitliches Navigationsdesign, das für jede App funktioniert, aber es gibt Prinzipien und Richtlinien, die Ihnen helfen, das richtige Design für Ihre App zu finden.</span><span class="sxs-lookup"><span data-stu-id="215e9-111">While there's no single navigation design that works for every app, there are principles and guidelines to help you decide the right design for your app.</span></span>
 
-## <a name="principles-of-good-navigation"></a><span data-ttu-id="42c0b-112">Grundsätze guter Navigation</span><span class="sxs-lookup"><span data-stu-id="42c0b-112">Principles of good navigation</span></span>
+## <a name="principles-of-good-navigation"></a><span data-ttu-id="215e9-112">Grundsätze guter Navigation</span><span class="sxs-lookup"><span data-stu-id="215e9-112">Principles of good navigation</span></span>
 
-<span data-ttu-id="42c0b-113">Beginnen wir mit den Grundprinzipien eines guten Navigationsdesigns:</span><span class="sxs-lookup"><span data-stu-id="42c0b-113">Let's start with the basic principles of good navigation design:</span></span>
+<span data-ttu-id="215e9-113">Beginnen wir mit den Grundprinzipien eines guten Navigationsdesigns:</span><span class="sxs-lookup"><span data-stu-id="215e9-113">Let's start with the basic principles of good navigation design:</span></span>
 
-- <span data-ttu-id="42c0b-114">**Konsistenz:** Erfüllen Sie die Erwartungen der Anwender.</span><span class="sxs-lookup"><span data-stu-id="42c0b-114">**Consistency:** Meet user expectations.</span></span>
-- <span data-ttu-id="42c0b-115">**Einfachheit:** Nicht mehr als notwendig.</span><span class="sxs-lookup"><span data-stu-id="42c0b-115">**Simplicity:** Don't do more than you need to.</span></span>
-- <span data-ttu-id="42c0b-116">**Klarheit:** Bieten Sie klare Wege und Optionen.</span><span class="sxs-lookup"><span data-stu-id="42c0b-116">**Clarity:** Provide clear paths and options.</span></span>
+- <span data-ttu-id="215e9-114">**Konsistenz:** Erfüllen Sie die Erwartungen der Anwender.</span><span class="sxs-lookup"><span data-stu-id="215e9-114">**Consistency:** Meet user expectations.</span></span>
+- <span data-ttu-id="215e9-115">**Einfachheit:** Nicht mehr als notwendig.</span><span class="sxs-lookup"><span data-stu-id="215e9-115">**Simplicity:** Don't do more than you need to.</span></span>
+- <span data-ttu-id="215e9-116">**Klarheit:** Bieten Sie klare Wege und Optionen.</span><span class="sxs-lookup"><span data-stu-id="215e9-116">**Clarity:** Provide clear paths and options.</span></span>
 
-### <a name="consistency"></a><span data-ttu-id="42c0b-117">Konsistenz</span><span class="sxs-lookup"><span data-stu-id="42c0b-117">Consistency</span></span>
+### <a name="consistency"></a><span data-ttu-id="215e9-117">Konsistenz</span><span class="sxs-lookup"><span data-stu-id="215e9-117">Consistency</span></span>
 
-<span data-ttu-id="42c0b-118">Die Navigation sollte den Erwartungen der Benutzer entsprechen.</span><span class="sxs-lookup"><span data-stu-id="42c0b-118">Navigation should be consistent with user expectations.</span></span> <span data-ttu-id="42c0b-119">Verwenden [Standardsteuerelemente](#use-the-right-controls) , dass der Benutzer mit vertraut sind und folgende Standardkonventionen für Symbole, nehmen Position und Formatierung Navigation vorhersehbar und intuitiv für Benutzer.</span><span class="sxs-lookup"><span data-stu-id="42c0b-119">Using [standard controls](#use-the-right-controls) that users are familiar with and following standard conventions for icons, location, and styling will make navigation predictable and intuitive for users.</span></span>
+<span data-ttu-id="215e9-118">Die Navigation sollte den Erwartungen der Benutzer entsprechen.</span><span class="sxs-lookup"><span data-stu-id="215e9-118">Navigation should be consistent with user expectations.</span></span> <span data-ttu-id="215e9-119">Verwenden [Standardsteuerelemente](#use-the-right-controls) , dass der Benutzer mit vertraut sind und folgenden Standardkonventionen für Symbole, nehmen Position und Formatierung Navigation vorhersehbar und intuitiv für Benutzer.</span><span class="sxs-lookup"><span data-stu-id="215e9-119">Using [standard controls](#use-the-right-controls) that users are familiar with and following standard conventions for icons, location, and styling will make navigation predictable and intuitive for users.</span></span>
 
 ![Bild mit Seitenkomponenten](images/nav/page-components.svg)
 
-> <span data-ttu-id="42c0b-121">Benutzer erwarten einige UI-Elemente an Standardpositionen.</span><span class="sxs-lookup"><span data-stu-id="42c0b-121">Users expect to find certain UI elements in standard locations.</span></span>
+> <span data-ttu-id="215e9-121">Benutzer erwarten einige UI-Elemente an Standardpositionen.</span><span class="sxs-lookup"><span data-stu-id="215e9-121">Users expect to find certain UI elements in standard locations.</span></span>
 
-### <a name="simplicity"></a><span data-ttu-id="42c0b-122">Einfachheit</span><span class="sxs-lookup"><span data-stu-id="42c0b-122">Simplicity</span></span>
+### <a name="simplicity"></a><span data-ttu-id="215e9-122">Einfachheit</span><span class="sxs-lookup"><span data-stu-id="215e9-122">Simplicity</span></span>
 
-<span data-ttu-id="42c0b-123">Weniger Navigationselemente erleichtern den Anwendern die Entscheidungsfindung.</span><span class="sxs-lookup"><span data-stu-id="42c0b-123">Fewer navigation items simplify decision making for users.</span></span> <span data-ttu-id="42c0b-124">Der einfache Zugriff auf wichtige Ziele und das Ausblenden weniger wichtiger Objekte hilft den Benutzern, schneller dorthin zu gelangen, wohin sie wollen.</span><span class="sxs-lookup"><span data-stu-id="42c0b-124">Providing easy access to important destinations and hiding less important items will help users get where they want, faster.</span></span>
+<span data-ttu-id="215e9-123">Weniger Navigationselemente erleichtern den Anwendern die Entscheidungsfindung.</span><span class="sxs-lookup"><span data-stu-id="215e9-123">Fewer navigation items simplify decision making for users.</span></span> <span data-ttu-id="215e9-124">Der einfache Zugriff auf wichtige Ziele und das Ausblenden weniger wichtiger Objekte hilft den Benutzern, schneller dorthin zu gelangen, wohin sie wollen.</span><span class="sxs-lookup"><span data-stu-id="215e9-124">Providing easy access to important destinations and hiding less important items will help users get where they want, faster.</span></span>
 
 :::row:::
     :::column:::
@@ -85,33 +85,33 @@ ms.locfileid: "2909888"
     :::column-end:::
 :::row-end:::
 
-### <a name="clarity"></a><span data-ttu-id="42c0b-126">Klarheit</span><span class="sxs-lookup"><span data-stu-id="42c0b-126">Clarity</span></span>
+### <a name="clarity"></a><span data-ttu-id="215e9-126">Klarheit</span><span class="sxs-lookup"><span data-stu-id="215e9-126">Clarity</span></span>
 
-<span data-ttu-id="42c0b-127">Klare Pfade ermöglichen eine logische Navigation für den Benutzer.</span><span class="sxs-lookup"><span data-stu-id="42c0b-127">Clear paths allow for logical navigation for users.</span></span> <span data-ttu-id="42c0b-128">Navigationsmöglichkeiten sichtbar zu machen und Zusammenhänge zwischen den Seiten zu klären, soll verhindern, dass sich die Benutzer „verirren”.</span><span class="sxs-lookup"><span data-stu-id="42c0b-128">Making navigation options obvious and clarifying relationships between pages should prevent users from getting lost.</span></span>
+<span data-ttu-id="215e9-127">Klare Pfade ermöglichen eine logische Navigation für den Benutzer.</span><span class="sxs-lookup"><span data-stu-id="215e9-127">Clear paths allow for logical navigation for users.</span></span> <span data-ttu-id="215e9-128">Navigationsmöglichkeiten sichtbar zu machen und Zusammenhänge zwischen den Seiten zu klären, soll verhindern, dass sich die Benutzer „verirren”.</span><span class="sxs-lookup"><span data-stu-id="215e9-128">Making navigation options obvious and clarifying relationships between pages should prevent users from getting lost.</span></span>
 
 ![Beispiel für „Richtig”](images/nav/clarity-image.svg)
 
-> <span data-ttu-id="42c0b-130">Die Ziele sind klar gekennzeichnet, so dass die Benutzer wissen, wo sie sich befinden.</span><span class="sxs-lookup"><span data-stu-id="42c0b-130">Destinations are clearly labeled so users know where they are.</span></span>
+> <span data-ttu-id="215e9-130">Die Ziele sind klar gekennzeichnet, so dass die Benutzer wissen, wo sie sich befinden.</span><span class="sxs-lookup"><span data-stu-id="215e9-130">Destinations are clearly labeled so users know where they are.</span></span>
 
-## <a name="general-recommendations"></a><span data-ttu-id="42c0b-131">Allgemeine Empfehlungen</span><span class="sxs-lookup"><span data-stu-id="42c0b-131">General recommendations</span></span>
+## <a name="general-recommendations"></a><span data-ttu-id="215e9-131">Allgemeine Empfehlungen</span><span class="sxs-lookup"><span data-stu-id="215e9-131">General recommendations</span></span>
 
-<span data-ttu-id="42c0b-132">Nehmen wir nun unsere Gestaltungsprinzipien – Konsistenz, Einfachheit und Klarheit – und verwenden wir sie, um einige allgemeine Empfehlungen zu formulieren.</span><span class="sxs-lookup"><span data-stu-id="42c0b-132">Now, let's take our design principles--consistency, simplicity, and clarity--and use them to come up with some general recommendations.</span></span>
+<span data-ttu-id="215e9-132">Nehmen wir nun unsere Gestaltungsprinzipien – Konsistenz, Einfachheit und Klarheit – und verwenden wir sie, um einige allgemeine Empfehlungen zu formulieren.</span><span class="sxs-lookup"><span data-stu-id="215e9-132">Now, let's take our design principles--consistency, simplicity, and clarity--and use them to come up with some general recommendations.</span></span>
 
-1. <span data-ttu-id="42c0b-133">Denken Sie an Ihre Benutzer.</span><span class="sxs-lookup"><span data-stu-id="42c0b-133">Think about your users.</span></span> <span data-ttu-id="42c0b-134">Verfolgen Sie typische Pfade, die sie durch Ihre App nehmen könnten, und überlegen Sie für jede Seite, warum der Benutzer dort ist und wohin er gehen möchte.</span><span class="sxs-lookup"><span data-stu-id="42c0b-134">Trace out typical paths they might take through your app, and for each page, think about why the user is there and where they might want to go.</span></span>
+1. <span data-ttu-id="215e9-133">Denken Sie an Ihre Benutzer.</span><span class="sxs-lookup"><span data-stu-id="215e9-133">Think about your users.</span></span> <span data-ttu-id="215e9-134">Verfolgen Sie typische Pfade, die sie durch Ihre App nehmen könnten, und überlegen Sie für jede Seite, warum der Benutzer dort ist und wohin er gehen möchte.</span><span class="sxs-lookup"><span data-stu-id="215e9-134">Trace out typical paths they might take through your app, and for each page, think about why the user is there and where they might want to go.</span></span>
 
-2. <span data-ttu-id="42c0b-135">Vermeiden Sie Tiefe Navigationshierarchien.</span><span class="sxs-lookup"><span data-stu-id="42c0b-135">Avoid deep navigation hierarchies.</span></span> <span data-ttu-id="42c0b-136">Wenn Sie über drei Navigationsebenen hinausgehen, riskieren Sie, Ihren Benutzer in einer tiefen Hierarchie zu verlieren, die er nur schwer verlassen kann.</span><span class="sxs-lookup"><span data-stu-id="42c0b-136">If you go beyond three levels of navigation, you risk stranding your user in a deep hierarchy that they will have difficulty leaving.</span></span>
+2. <span data-ttu-id="215e9-135">Vermeiden Sie Tiefe Navigationshierarchien.</span><span class="sxs-lookup"><span data-stu-id="215e9-135">Avoid deep navigation hierarchies.</span></span> <span data-ttu-id="215e9-136">Wenn Sie über drei Navigationsebenen hinausgehen, riskieren Sie, Ihren Benutzer in einer tiefen Hierarchie zu verlieren, die er nur schwer verlassen kann.</span><span class="sxs-lookup"><span data-stu-id="215e9-136">If you go beyond three levels of navigation, you risk stranding your user in a deep hierarchy that they will have difficulty leaving.</span></span>
 
-3. <span data-ttu-id="42c0b-137">Vermeiden Sie „Pogo Sticking”.</span><span class="sxs-lookup"><span data-stu-id="42c0b-137">Avoid "pogo-sticking."</span></span> <span data-ttu-id="42c0b-138">Pogo Sticking tritt auf, wenn der Benutzer für die Navigation zu zugehörigen Inhalten eine Ebene nach oben und erneut eine nach unten navigieren muss.</span><span class="sxs-lookup"><span data-stu-id="42c0b-138">Pogo-sticking occurs when there is related content, but navigating to it requires the user to go up a level and then down again.</span></span>
+3. <span data-ttu-id="215e9-137">Vermeiden Sie „Pogo Sticking”.</span><span class="sxs-lookup"><span data-stu-id="215e9-137">Avoid "pogo-sticking."</span></span> <span data-ttu-id="215e9-138">Pogo Sticking tritt auf, wenn der Benutzer für die Navigation zu zugehörigen Inhalten eine Ebene nach oben und erneut eine nach unten navigieren muss.</span><span class="sxs-lookup"><span data-stu-id="215e9-138">Pogo-sticking occurs when there is related content, but navigating to it requires the user to go up a level and then down again.</span></span>
 
-## <a name="use-the-right-structure"></a><span data-ttu-id="42c0b-139">Verwenden Sie die richtige Navigationsstruktur</span><span class="sxs-lookup"><span data-stu-id="42c0b-139">Use the right structure</span></span>
+## <a name="use-the-right-structure"></a><span data-ttu-id="215e9-139">Verwenden Sie die richtige Navigationsstruktur</span><span class="sxs-lookup"><span data-stu-id="215e9-139">Use the right structure</span></span>
 
-<span data-ttu-id="42c0b-140">Nun, da Sie mit den allgemeinen Navigationsprinzipien vertraut sind, überlegen wir uns die Strukturierung Ihrer App.</span><span class="sxs-lookup"><span data-stu-id="42c0b-140">Now that you're familiar with general navigation principles, how should you structure your app?</span></span> <span data-ttu-id="42c0b-141">Es gibt zwei allgemeine Strukturen: Flache und hierarchische.</span><span class="sxs-lookup"><span data-stu-id="42c0b-141">There are two general structures: flat and hierarchal.</span></span>
+<span data-ttu-id="215e9-140">Nun, da Sie mit den allgemeinen Navigationsprinzipien vertraut sind, überlegen wir uns die Strukturierung Ihrer App.</span><span class="sxs-lookup"><span data-stu-id="215e9-140">Now that you're familiar with general navigation principles, how should you structure your app?</span></span> <span data-ttu-id="215e9-141">Es gibt zwei allgemeine Strukturen: Flache und hierarchische.</span><span class="sxs-lookup"><span data-stu-id="215e9-141">There are two general structures: flat and hierarchal.</span></span>
 
 :::row:::
     :::column:::
         ![In einer flachen Struktur angeordnete Seiten](images/nav/flat-lateral-structure.svg)
     :::column-end:::
-    <span data-ttu-id="42c0b-143">::: Column Span = "2":::</span><span class="sxs-lookup"><span data-stu-id="42c0b-143">:::column span="2":::</span></span>
+    <span data-ttu-id="215e9-143">::: Column Span = "2":::</span><span class="sxs-lookup"><span data-stu-id="215e9-143">:::column span="2":::</span></span>
         ### Flat/lateral
 
         In a flat/lateral structure, pages exist side-by-side. You can go from one page to another in any order.
@@ -130,7 +130,7 @@ ms.locfileid: "2909888"
     :::column:::
         ![In einer Hierarchie angeordnete Seiten](images/nav/hierarchical-structure.svg)
     :::column-end:::
-    <span data-ttu-id="42c0b-145">::: Column Span = "2":::</span><span class="sxs-lookup"><span data-stu-id="42c0b-145">:::column span="2":::</span></span>
+    <span data-ttu-id="215e9-145">::: Column Span = "2":::</span><span class="sxs-lookup"><span data-stu-id="215e9-145">:::column span="2":::</span></span>
         ### Hierarchical
 
         In a hierarchical structure, pages are organized into a tree-like structure. Each child page has one parent, but a parent can have one or more child pages. To reach a child page, you travel through the parent.
@@ -150,7 +150,7 @@ ms.locfileid: "2909888"
     :::column:::
         ![App mit einer Hybridstruktur](images/nav/combining-structures.svg)
     :::column-end:::
-    <span data-ttu-id="42c0b-147">::: Column Span = "2":::</span><span class="sxs-lookup"><span data-stu-id="42c0b-147">:::column span="2":::</span></span>
+    <span data-ttu-id="215e9-147">::: Column Span = "2":::</span><span class="sxs-lookup"><span data-stu-id="215e9-147">:::column span="2":::</span></span>
         ### Combining structures
 
         You don't have choose to one structure or the other; many well-design apps use both. An app can use flat structures for top-level pages that can be viewed in any order, and hierarchical structures for pages that have more complex relationships.
@@ -162,15 +162,15 @@ ms.locfileid: "2909888"
     :::column-end:::
 :::row-end:::
 
-## <a name="use-the-right-controls"></a><span data-ttu-id="42c0b-148">Verwenden der richtigen Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="42c0b-148">Use the right controls</span></span>
+## <a name="use-the-right-controls"></a><span data-ttu-id="215e9-148">Verwenden der richtigen Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="215e9-148">Use the right controls</span></span>
 
-<span data-ttu-id="42c0b-149">Sobald Sie sich für eine Seitenstruktur entschieden haben, müssen Sie entscheiden, wie der Benutzer durch die Seiten navigieren soll.</span><span class="sxs-lookup"><span data-stu-id="42c0b-149">Once you've decided on a page structure, you need to decide how users navigate through those pages.</span></span> <span data-ttu-id="42c0b-150">UWP bietet eine Vielzahl von Navigationssteuerelementen, um ein konsistentes und zuverlässiges Navigationserlebnis in Ihrer App zu gewährleisten.</span><span class="sxs-lookup"><span data-stu-id="42c0b-150">UWP provides a variety of navigation controls to help ensure a consistent, reliable navigation experience in your app.</span></span>
+<span data-ttu-id="215e9-149">Sobald Sie sich für eine Seitenstruktur entschieden haben, müssen Sie entscheiden, wie der Benutzer durch die Seiten navigieren soll.</span><span class="sxs-lookup"><span data-stu-id="215e9-149">Once you've decided on a page structure, you need to decide how users navigate through those pages.</span></span> <span data-ttu-id="215e9-150">UWP bietet eine Vielzahl von Navigationssteuerelementen, um ein konsistentes und zuverlässiges Navigationserlebnis in Ihrer App zu gewährleisten.</span><span class="sxs-lookup"><span data-stu-id="215e9-150">UWP provides a variety of navigation controls to help ensure a consistent, reliable navigation experience in your app.</span></span>
 
 :::row:::
     :::column:::
         ![Frame-Bild](images/nav/thumbnail-frame.svg)
     :::column-end:::
-    <span data-ttu-id="42c0b-152">::: Column Span = "2"::: [ **Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)</span><span class="sxs-lookup"><span data-stu-id="42c0b-152">:::column span="2"::: [**Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)</span></span>
+    <span data-ttu-id="215e9-152">::: Column Span = "2"::: [ **Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)</span><span class="sxs-lookup"><span data-stu-id="215e9-152">:::column span="2"::: [**Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)</span></span>
 
         With few exceptions, any app that has multiple pages uses a frame. Typically, an app has a main page that contains the frame and a primary navigation element, such as a navigation view control. When the user selects a page, the frame loads and displays it.
 :::row-end:::
@@ -179,7 +179,7 @@ ms.locfileid: "2909888"
     :::column:::
         ![Bild für Registerkarten und pivot](images/nav/thumbnail-tabs-pivot.svg)
     :::column-end:::
-    <span data-ttu-id="42c0b-154">::: Column Span = "2"::: [ **oberen Navigationsleiste und Registerkarten**](../controls-and-patterns/navigationview.md)</span><span class="sxs-lookup"><span data-stu-id="42c0b-154">:::column span="2"::: [**Top navigation and tabs**](../controls-and-patterns/navigationview.md)</span></span>
+    <span data-ttu-id="215e9-154">::: Column Span = "2"::: [ **oberen Navigationsleiste und Registerkarten**](../controls-and-patterns/navigationview.md)</span><span class="sxs-lookup"><span data-stu-id="215e9-154">:::column span="2"::: [**Top navigation and tabs**](../controls-and-patterns/navigationview.md)</span></span>
 
         Displays a horizontal list of links to pages at the same level. The [NavigationView](../controls-and-patterns/navigationview.md) control implements the top navigation and tabs patterns.
         
@@ -200,7 +200,7 @@ ms.locfileid: "2909888"
     :::column:::
         ![Navview Bild](images/nav/thumbnail-navview.svg)
     :::column-end:::
-    <span data-ttu-id="42c0b-156">::: Column Span = "2"::: [ **linken Navigationsbereich**](../controls-and-patterns/navigationview.md)</span><span class="sxs-lookup"><span data-stu-id="42c0b-156">:::column span="2"::: [**Left navigation**](../controls-and-patterns/navigationview.md)</span></span>
+    <span data-ttu-id="215e9-156">::: Column Span = "2"::: [ **linken Navigationsbereich**](../controls-and-patterns/navigationview.md)</span><span class="sxs-lookup"><span data-stu-id="215e9-156">:::column span="2"::: [**Left navigation**](../controls-and-patterns/navigationview.md)</span></span>
 
         Displays a vertical list of links to top-level pages. Use when:
         
@@ -214,7 +214,7 @@ ms.locfileid: "2909888"
     :::column:::
         ![Master / Details-Bild](images/nav/thumbnail-master-detail.svg)
     :::column-end:::
-    <span data-ttu-id="42c0b-158">::: Column Span = "2"::: [ **Master/Details**](../controls-and-patterns/master-details.md)</span><span class="sxs-lookup"><span data-stu-id="42c0b-158">:::column span="2"::: [**Master/details**](../controls-and-patterns/master-details.md)</span></span>
+    <span data-ttu-id="215e9-158">::: Column Span = "2"::: [ **Master/Details**](../controls-and-patterns/master-details.md)</span><span class="sxs-lookup"><span data-stu-id="215e9-158">:::column span="2"::: [**Master/details**](../controls-and-patterns/master-details.md)</span></span>
 
         Displays a list (master view) of items. Selecting an item displays its corresponding page in the details section. Use when:
         
@@ -228,11 +228,11 @@ ms.locfileid: "2909888"
     :::column:::
         ![Bild für Hyperlinks und Schaltflächen](images/nav/thumbnail-hyperlinks-buttons.svg)
     :::column-end:::
-    <span data-ttu-id="42c0b-160">::: Column Span = "2"::: [ **Hyperlinks**](../controls-and-patterns/hyperlinks.md)</span><span class="sxs-lookup"><span data-stu-id="42c0b-160">:::column span="2"::: [**Hyperlinks**](../controls-and-patterns/hyperlinks.md)</span></span>
+    <span data-ttu-id="215e9-160">::: Column Span = "2"::: [ **Hyperlinks**](../controls-and-patterns/hyperlinks.md)</span><span class="sxs-lookup"><span data-stu-id="215e9-160">:::column span="2"::: [**Hyperlinks**](../controls-and-patterns/hyperlinks.md)</span></span>
 
         Embedded navigation elements can appear in a page's content. Unlike other navigation elements, which should be consistent across the pages, content-embedded navigation elements are unique from page to page.
 :::row-end:::
 
-## <a name="next-add-navigation-code-to-your-app"></a><span data-ttu-id="42c0b-161">Nächster Schritt: Hinzufügen von Navigationscode zu Ihrer App</span><span class="sxs-lookup"><span data-stu-id="42c0b-161">Next: Add navigation code to your app</span></span>
+## <a name="next-add-navigation-code-to-your-app"></a><span data-ttu-id="215e9-161">Nächster Schritt: Hinzufügen von Navigationscode zu Ihrer App</span><span class="sxs-lookup"><span data-stu-id="215e9-161">Next: Add navigation code to your app</span></span>
 
-<span data-ttu-id="42c0b-162">Im nächsten Artikel, [Implementierung grundlegender Navigation,](navigate-between-two-pages.md), lernen Sie den Code kennen, die für die Verwendung von Frame-Steuerelementen zur Bereitstellung einer grundlegenden Navigation zwischen zwei Seiten in Ihrer App erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="42c0b-162">The next article, [Implement basic navigation](navigate-between-two-pages.md), shows the code required to use a Frame control to enable basic navigation between two pages in your app.</span></span>
+<span data-ttu-id="215e9-162">Im nächsten Artikel, [Implementierung grundlegender Navigation,](navigate-between-two-pages.md), lernen Sie den Code kennen, die für die Verwendung von Frame-Steuerelementen zur Bereitstellung einer grundlegenden Navigation zwischen zwei Seiten in Ihrer App erforderlich ist.</span><span class="sxs-lookup"><span data-stu-id="215e9-162">The next article, [Implement basic navigation](navigate-between-two-pages.md), shows the code required to use a Frame control to enable basic navigation between two pages in your app.</span></span>
