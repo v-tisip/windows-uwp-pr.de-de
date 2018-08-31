@@ -11,33 +11,33 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 155b8f67b5cd6080554afb889c7c27c921c998f8
-ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "3128537"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "3228873"
 ---
-# <a name="about-house-ads"></a><span data-ttu-id="c6e4a-103">Über Eigenwerbung</span><span class="sxs-lookup"><span data-stu-id="c6e4a-103">About house ads</span></span>
+# <a name="about-house-ads"></a><span data-ttu-id="3a727-103">Über Eigenwerbung</span><span class="sxs-lookup"><span data-stu-id="3a727-103">About house ads</span></span>
 
 
-<span data-ttu-id="c6e4a-104">Sie haben die Möglichkeit, eine Anzeige zu erstellen, um eine Ihrer Apps in Ihren anderen Apps zu bewerben – und das kostenlos.</span><span class="sxs-lookup"><span data-stu-id="c6e4a-104">You can create an ad to promote one of your apps in your other apps for free.</span></span> <span data-ttu-id="c6e4a-105">Wir bezeichnen dies als *Eigenwerbung*.</span><span class="sxs-lookup"><span data-stu-id="c6e4a-105">We call these *house ads*.</span></span>
+<span data-ttu-id="3a727-104">Sie haben die Möglichkeit, eine Anzeige zu erstellen, um eine Ihrer Apps in Ihren anderen Apps zu bewerben – und das kostenlos.</span><span class="sxs-lookup"><span data-stu-id="3a727-104">You can create an ad to promote one of your apps in your other apps for free.</span></span> <span data-ttu-id="3a727-105">Wir bezeichnen dies als *Eigenwerbung*.</span><span class="sxs-lookup"><span data-stu-id="3a727-105">We call these *house ads*.</span></span>
 
-<span data-ttu-id="c6e4a-106">Eigenwerbung werden nur in Ihren eigenen apps angezeigt, die zum [Anzeigen von Microsoft](../monetize/display-ads-in-your-app.md)konfiguriert sind.</span><span class="sxs-lookup"><span data-stu-id="c6e4a-106">House ads will only appear in your own apps that are configured to [show ads from Microsoft](../monetize/display-ads-in-your-app.md).</span></span>
+<span data-ttu-id="3a727-106">Eigenwerbung werden nur in Ihren eigenen apps angezeigt, die zum [Anzeigen von Microsoft](../monetize/display-ads-in-your-app.md)konfiguriert sind.</span><span class="sxs-lookup"><span data-stu-id="3a727-106">House ads will only appear in your own apps that are configured to [show ads from Microsoft](../monetize/display-ads-in-your-app.md).</span></span>
 
-<span data-ttu-id="c6e4a-107">Zum Einrichten von Eigenwerbung müssen Sie beim [Erstellen einer Anzeigenkampagne](create-an-ad-campaign-for-your-app.md) den Kampagnentyp**** **Eigenwerbung** auswählen.</span><span class="sxs-lookup"><span data-stu-id="c6e4a-107">To set up a house ad, select **House ad (free)** as the **Campaign type** when you [create an ad campaign](create-an-ad-campaign-for-your-app.md).</span></span> <span data-ttu-id="c6e4a-108">Die Anzeige kann daraufhin in jeder Ihrer Apps angezeigt werden, die die folgenden Kriterien erfüllt:</span><span class="sxs-lookup"><span data-stu-id="c6e4a-108">The ad will automatically be eligible to appear in any app of yours that meets the following criteria:</span></span>
+<span data-ttu-id="3a727-107">Zum Einrichten von Eigenwerbung müssen Sie beim [Erstellen einer Anzeigenkampagne](create-an-ad-campaign-for-your-app.md) den Kampagnentyp**** **Eigenwerbung** auswählen.</span><span class="sxs-lookup"><span data-stu-id="3a727-107">To set up a house ad, select **House ad (free)** as the **Campaign type** when you [create an ad campaign](create-an-ad-campaign-for-your-app.md).</span></span> <span data-ttu-id="3a727-108">Die Anzeige kann daraufhin in jeder Ihrer Apps angezeigt werden, die die folgenden Kriterien erfüllt:</span><span class="sxs-lookup"><span data-stu-id="3a727-108">The ad will automatically be eligible to appear in any app of yours that meets the following criteria:</span></span>
 
--   <span data-ttu-id="c6e4a-109">Die App muss für den gleichen Gerätetyp vorgesehen sein wie die beworbene App.</span><span class="sxs-lookup"><span data-stu-id="c6e4a-109">The app must be for the same device type as the advertised app.</span></span>
--   <span data-ttu-id="c6e4a-110">Für die App muss mindestens eine Anzeigeneinheit eingerichtet sein.</span><span class="sxs-lookup"><span data-stu-id="c6e4a-110">The app must have at least one ad unit set up.</span></span>
+-   <span data-ttu-id="3a727-109">Die App muss für den gleichen Gerätetyp vorgesehen sein wie die beworbene App.</span><span class="sxs-lookup"><span data-stu-id="3a727-109">The app must be for the same device type as the advertised app.</span></span>
+-   <span data-ttu-id="3a727-110">Für die App muss mindestens eine Anzeigeneinheit eingerichtet sein.</span><span class="sxs-lookup"><span data-stu-id="3a727-110">The app must have at least one ad unit set up.</span></span>
 
-<span data-ttu-id="c6e4a-111">Wenn Eigenwerbung für App A in App B erscheint, wird der Aufruf weder in Rechnung gestellt, noch erhalten Sie Erlöse für die Darstellung der Anzeige in Ihrer App B-Anzeigeneinheit.</span><span class="sxs-lookup"><span data-stu-id="c6e4a-111">When a house ad for App A appears in App B, you will not be charged for the impression, nor will you receive revenue for displaying the ad in your App B ad unit.</span></span> <span data-ttu-id="c6e4a-112">Kostenpflichtige Anzeigen werden in Ihren Anzeigeneinheiten vorrangig vor Eigenwerbung angezeigt.</span><span class="sxs-lookup"><span data-stu-id="c6e4a-112">Paid ads have priority over house ads to appear in your ad units.</span></span>
+<span data-ttu-id="3a727-111">Wenn Eigenwerbung für App A in App B erscheint, wird der Aufruf weder in Rechnung gestellt, noch erhalten Sie Erlöse für die Darstellung der Anzeige in Ihrer App B-Anzeigeneinheit.</span><span class="sxs-lookup"><span data-stu-id="3a727-111">When a house ad for App A appears in App B, you will not be charged for the impression, nor will you receive revenue for displaying the ad in your App B ad unit.</span></span> <span data-ttu-id="3a727-112">Kostenpflichtige Anzeigen werden in Ihren Anzeigeneinheiten vorrangig vor Eigenwerbung angezeigt.</span><span class="sxs-lookup"><span data-stu-id="3a727-112">Paid ads have priority over house ads to appear in your ad units.</span></span>
 
 >[!NOTE]
-> <span data-ttu-id="c6e4a-113">Ein einzelner Endbenutzer sieht bestimmte Eigenwerbung nur maximal fünfmal am Tag.</span><span class="sxs-lookup"><span data-stu-id="c6e4a-113">An individual end user will not see any given house ad more than five times per day.</span></span>
+> <span data-ttu-id="3a727-113">Ein einzelner Endbenutzer sieht bestimmte Eigenwerbung nur maximal fünfmal am Tag.</span><span class="sxs-lookup"><span data-stu-id="3a727-113">An individual end user will not see any given house ad more than five times per day.</span></span>
 
  
 
-### <a name="related-topics"></a><span data-ttu-id="c6e4a-114">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="c6e4a-114">Related topics</span></span>
+### <a name="related-topics"></a><span data-ttu-id="3a727-114">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="3a727-114">Related topics</span></span>
 
 
-* [<span data-ttu-id="c6e4a-115">Erstellen einer Anzeigenkampagne für Ihre App</span><span class="sxs-lookup"><span data-stu-id="c6e4a-115">Create an ad campaign for your app</span></span>](create-an-ad-campaign-for-your-app.md)
-* [<span data-ttu-id="c6e4a-116">Allgemeine Fragen</span><span class="sxs-lookup"><span data-stu-id="c6e4a-116">Common questions</span></span>](common-questions.md)
+* [<span data-ttu-id="3a727-115">Erstellen einer Anzeigenkampagne für Ihre App</span><span class="sxs-lookup"><span data-stu-id="3a727-115">Create an ad campaign for your app</span></span>](create-an-ad-campaign-for-your-app.md)
+* [<span data-ttu-id="3a727-116">Allgemeine Fragen</span><span class="sxs-lookup"><span data-stu-id="3a727-116">Common questions</span></span>](common-questions.md)
