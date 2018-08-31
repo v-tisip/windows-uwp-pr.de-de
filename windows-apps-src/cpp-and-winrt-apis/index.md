@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 6cded1be4bd7ca5044a2eee8832545a8d83ee3d4
-ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "3115849"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "3235772"
 ---
 # [<a name="cwinrt"></a>C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 C++/WinRT ist eine vollständig standardisierte, moderne C++17 Sprachprojektion für Windows-Runtime-(WinRT)-APIs, die als headerdateibasierte Bibliothek implementiert ist und Ihnen einen erstklassigen Zugriff auf die moderne Windows-API bietet. Mit C++/WinRT können Sie Windows-Runtime-APIs mit jedem standardkonformen C++17-Compiler erstellen und verwenden. Das in Version 10.0.17134.0 (Windows 10, Version 1803) eingeführte Windows SDK enthält C++/WinRT.

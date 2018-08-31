@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Hintergrundaufgabe, für die
 ms.localizationpriority: medium
 ms.openlocfilehash: 3042a6f52453fa4a4c50334b605f637f1dec92aa
-ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "3123207"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "3229609"
 ---
 # <a name="update-a-live-tile-from-a-background-task"></a>Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe
 

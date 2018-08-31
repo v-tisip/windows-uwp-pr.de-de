@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, portieren, migrieren, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 63f730e5256cb88c04549cc64e36003885e02fb6
-ms.sourcegitcommit: 7efffcc715a4be26f0cf7f7e249653d8c356319b
+ms.openlocfilehash: ac7affb044c6b60a249b154cc62379c7517161b0
+ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "3113300"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "3228105"
 ---
 # <a name="move-to-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-from-ccx"></a>Wechsel zu [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) von C++/CX
 In diesem Thema wird gezeigt, wie Sie [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)-Code zum entsprechenden Äquivalent in C++/WinRT portieren.
@@ -198,7 +198,7 @@ void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject^ d, Wind
 }
 ```
 
-Die entsprechende C++ / WinRT-Code ersetzt die `dynamic_cast` mit einem Aufruf an die [**IUnknown::_try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function) -Funktion, die **QueryInterface**kapselt. Sie haben auch die Möglichkeit, rufen Sie stattdessen [**IUnknown::_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function), die eine Ausnahme auslöst, wenn für die erforderliche Schnittstelle (die Standardschnittstelle des Typs, die Sie anfordern) Abfragen nicht zurückgegeben wird. Hier sehen Sie eine C++ / WinRT-Codebeispiel.
+Die entsprechende C++ / WinRT-Code ersetzt die `dynamic_cast` mit einem Aufruf an die [**IUnknown:: Try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function) Funktion, die **QueryInterface**kapselt. Sie haben auch die Möglichkeit, rufen Sie stattdessen [**IUnknown:: As**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function), die eine Ausnahme auslöst, wenn für die erforderliche Schnittstelle (die Standardschnittstelle des Typs, die Sie anfordern) Abfragen nicht zurückgegeben wird. Hier sehen Sie eine C++ / WinRT-Codebeispiel.
 
 ```cppwinrt
 void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject const& d, Windows::UI::Xaml::DependencyPropertyChangedEventArgs const& e)
