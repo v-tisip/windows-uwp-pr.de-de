@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Standard, c++, Cpp, Winrt, COM, Komponente, Klasse, Schnittstelle
 ms.localizationpriority: medium
 ms.openlocfilehash: b87eb90ed5ecf731cc851e81e81ad016956e5fea
-ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
+ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "3227962"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "3369816"
 ---
 # <a name="consume-directx-and-other-com-apis-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Nutzen von DirectX und anderen COM-APIs mit [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 

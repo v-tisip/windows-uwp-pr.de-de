@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Preis, verfügbar, sichtbar, kostenlose Testversion, Testversionen, Testversion, Apps, Veröffentlichungsdatum
 ms.localizationpriority: medium
 ms.openlocfilehash: 20c52687b375f9bf33dd491eeb37d4142acace99
-ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
+ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "3230586"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "3370056"
 ---
 # <a name="set-app-pricing-and-availability"></a>Festlegen der Preise und Verfügbarkeit von Apps
 
