@@ -11,77 +11,77 @@ ms.technology: uwp
 keywords: Windows10, UWP, erste App, C#, c++, JavaScript
 ms.localizationpriority: medium
 ms.openlocfilehash: e8e2272ab761e1fa0bc9514f226a73a66a10662b
-ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "3373796"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3398812"
 ---
-# <a name="create-your-first-app"></a><span data-ttu-id="32a0f-104">Erstellen Ihrer ersten App</span><span class="sxs-lookup"><span data-stu-id="32a0f-104">Create your first app</span></span>
+# <a name="create-your-first-app"></a><span data-ttu-id="e09d2-104">Erstellen Ihrer ersten App</span><span class="sxs-lookup"><span data-stu-id="e09d2-104">Create your first app</span></span>
 
-<span data-ttu-id="32a0f-105">Willkommen bei der [UWP-Plattform](universal-application-platform-guide.md)!</span><span class="sxs-lookup"><span data-stu-id="32a0f-105">Welcome to the [UWP platform](universal-application-platform-guide.md)!</span></span> <span data-ttu-id="32a0f-106">Diese Lernprogramme unterstützen Sie beim Erstellen Ihrer ersten UWP-App in der von Ihnen bevorzugten Programmiersprache.</span><span class="sxs-lookup"><span data-stu-id="32a0f-106">These tutorials will help you create your first UWP app in the language of your choice.</span></span>
+<span data-ttu-id="e09d2-105">Willkommen bei der [UWP-Plattform](universal-application-platform-guide.md)!</span><span class="sxs-lookup"><span data-stu-id="e09d2-105">Welcome to the [UWP platform](universal-application-platform-guide.md)!</span></span> <span data-ttu-id="e09d2-106">Diese Lernprogramme unterstützen Sie beim Erstellen Ihrer ersten UWP-App in der von Ihnen bevorzugten Programmiersprache.</span><span class="sxs-lookup"><span data-stu-id="e09d2-106">These tutorials will help you create your first UWP app in the language of your choice.</span></span>
 
-<span data-ttu-id="32a0f-107">Wählen Sie zunächst Ihre Lieblingssprache aus.</span><span class="sxs-lookup"><span data-stu-id="32a0f-107">To get started, choose your favorite language!</span></span>
+<span data-ttu-id="e09d2-107">Wählen Sie zunächst Ihre Lieblingssprache aus.</span><span class="sxs-lookup"><span data-stu-id="e09d2-107">To get started, choose your favorite language!</span></span>
 
-## <a name="c-and-xaml"></a><span data-ttu-id="32a0f-108">C# und XAML</span><span class="sxs-lookup"><span data-stu-id="32a0f-108">C# and XAML</span></span>
+## <a name="c-and-xaml"></a><span data-ttu-id="e09d2-108">C# und XAML</span><span class="sxs-lookup"><span data-stu-id="e09d2-108">C# and XAML</span></span>
 
-<span data-ttu-id="32a0f-109">Verwenden Sie Ihre .NET-, WPF- oder Silverlight-Kenntnisse, um Apps mit XAML mit C# zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="32a0f-109">Use your .NET, WPF, or Silverlight skills to build apps using XAML with C#.</span></span>
+<span data-ttu-id="e09d2-109">Verwenden Sie Ihre .NET-, WPF- oder Silverlight-Kenntnisse, um Apps mit XAML mit C# zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="e09d2-109">Use your .NET, WPF, or Silverlight skills to build apps using XAML with C#.</span></span>
 
-* [<span data-ttu-id="32a0f-110">Erstellen einer „Hello, world“-App mit XAML mit C#</span><span class="sxs-lookup"><span data-stu-id="32a0f-110">Create a "Hello, world" app using XAML with C#</span></span>](create-a-hello-world-app-xaml-universal.md)
+* [<span data-ttu-id="e09d2-110">Erstellen einer „Hello, world“-App mit XAML mit C#</span><span class="sxs-lookup"><span data-stu-id="e09d2-110">Create a "Hello, world" app using XAML with C#</span></span>](create-a-hello-world-app-xaml-universal.md)
 
-<span data-ttu-id="32a0f-111">Wenn Sie die Grundlagen erlernen oder Ihr Gedächtnis auffrischen möchten, lesen Sie Folgendes:</span><span class="sxs-lookup"><span data-stu-id="32a0f-111">If you want to learn the basics, or just refresh your memory, try reading these:</span></span>
+<span data-ttu-id="e09d2-111">Wenn Sie die Grundlagen erlernen oder Ihr Gedächtnis auffrischen möchten, lesen Sie Folgendes:</span><span class="sxs-lookup"><span data-stu-id="e09d2-111">If you want to learn the basics, or just refresh your memory, try reading these:</span></span>
 
-* [<span data-ttu-id="32a0f-112">C#-Grundlagen für Neueinsteiger</span><span class="sxs-lookup"><span data-stu-id="32a0f-112">C# Fundamentals for Absolute Beginners</span></span>](https://go.microsoft.com/fwlink/?linkid=850801)
-* [<span data-ttu-id="32a0f-113">VB-Grundlagen für Neueinsteiger</span><span class="sxs-lookup"><span data-stu-id="32a0f-113">VB Fundamentals for Absolute Beginners</span></span>](https://go.microsoft.com/fwlink/?linkid=850802)
-* [<span data-ttu-id="32a0f-114">Entwicklerhandbuch für Windows10</span><span class="sxs-lookup"><span data-stu-id="32a0f-114">A Developer's Guide to Windows 10</span></span>](https://go.microsoft.com/fwlink/?linkid=850804)
-* [<span data-ttu-id="32a0f-115">Microsoft Virtual Academy</span><span class="sxs-lookup"><span data-stu-id="32a0f-115">Microsoft Virtual Academy</span></span>](http://www.microsoftvirtualacademy.com/)
+* [<span data-ttu-id="e09d2-112">C#-Grundlagen für Neueinsteiger</span><span class="sxs-lookup"><span data-stu-id="e09d2-112">C# Fundamentals for Absolute Beginners</span></span>](https://go.microsoft.com/fwlink/?linkid=850801)
+* [<span data-ttu-id="e09d2-113">VB-Grundlagen für Neueinsteiger</span><span class="sxs-lookup"><span data-stu-id="e09d2-113">VB Fundamentals for Absolute Beginners</span></span>](https://go.microsoft.com/fwlink/?linkid=850802)
+* [<span data-ttu-id="e09d2-114">Entwicklerhandbuch für Windows10</span><span class="sxs-lookup"><span data-stu-id="e09d2-114">A Developer's Guide to Windows 10</span></span>](https://go.microsoft.com/fwlink/?linkid=850804)
+* [<span data-ttu-id="e09d2-115">Microsoft Virtual Academy</span><span class="sxs-lookup"><span data-stu-id="e09d2-115">Microsoft Virtual Academy</span></span>](http://www.microsoftvirtualacademy.com/)
 
-<span data-ttu-id="32a0f-116">Wenn Sie etwas Komplizierteres als "Hello, World!" ausprobieren möchten, schauen Sie diese Lernprogramme an:</span><span class="sxs-lookup"><span data-stu-id="32a0f-116">If you are ready to attempt something a little more fun than "Hello, World!", try out these tutorials:</span></span>
+<span data-ttu-id="e09d2-116">Wenn Sie etwas Komplizierteres als "Hello, World!" ausprobieren möchten, schauen Sie diese Lernprogramme an:</span><span class="sxs-lookup"><span data-stu-id="e09d2-116">If you are ready to attempt something a little more fun than "Hello, World!", try out these tutorials:</span></span>
 
-* [<span data-ttu-id="32a0f-117">XAML und Datenbindungen in UWP</span><span class="sxs-lookup"><span data-stu-id="32a0f-117">XAML and data binding in UWP</span></span>](xaml-basics-intro.md)
-* [<span data-ttu-id="32a0f-118">Ein einfaches 2D-UWP-Spiel für den Microsoft Store, geschrieben in C# und MonoGame</span><span class="sxs-lookup"><span data-stu-id="32a0f-118">A simple 2D UWP game for the Microsoft Store, written in C# and MonoGame</span></span>](get-started-tutorial-game-mg2d.md)
+* [<span data-ttu-id="e09d2-117">XAML und Datenbindungen in UWP</span><span class="sxs-lookup"><span data-stu-id="e09d2-117">XAML and data binding in UWP</span></span>](xaml-basics-intro.md)
+* [<span data-ttu-id="e09d2-118">Ein einfaches 2D-UWP-Spiel für den Microsoft Store, geschrieben in C# und MonoGame</span><span class="sxs-lookup"><span data-stu-id="e09d2-118">A simple 2D UWP game for the Microsoft Store, written in C# and MonoGame</span></span>](get-started-tutorial-game-mg2d.md)
 
 
-## <a name="visual-c-component-extensions-ccx-and-xaml"></a><span data-ttu-id="32a0f-119">VisualC++-Komponentenerweiterungen (C++/CX) und XAML</span><span class="sxs-lookup"><span data-stu-id="32a0f-119">Visual C++ component extensions (C++/CX) and XAML</span></span>
+## <a name="visual-c-component-extensions-ccx-and-xaml"></a><span data-ttu-id="e09d2-119">VisualC++-Komponentenerweiterungen (C++/CX) und XAML</span><span class="sxs-lookup"><span data-stu-id="e09d2-119">Visual C++ component extensions (C++/CX) and XAML</span></span>
 
-<span data-ttu-id="32a0f-120">Greifen Sie auf Ihre C++-Programmierkenntnisse zurück, um Apps mit Visual C++-Komponentenerweiterungen (C++/CX) mit XAML zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="32a0f-120">Take advantage of your C++ programming expertise to build apps using Visual C++ component extensions (C++/CX) with XAML.</span></span>
+<span data-ttu-id="e09d2-120">Greifen Sie auf Ihre C++-Programmierkenntnisse zurück, um Apps mit Visual C++-Komponentenerweiterungen (C++/CX) mit XAML zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="e09d2-120">Take advantage of your C++ programming expertise to build apps using Visual C++ component extensions (C++/CX) with XAML.</span></span>
 
-* [<span data-ttu-id="32a0f-121">Erstellen einer „Hello, world“-App mit XAML und C++/CX</span><span class="sxs-lookup"><span data-stu-id="32a0f-121">Create a "Hello, world" app using XAML with C++/CX</span></span>](create-a-basic-windows-10-app-in-cpp.md)
+* [<span data-ttu-id="e09d2-121">Erstellen einer „Hello, world“-App mit XAML und C++/CX</span><span class="sxs-lookup"><span data-stu-id="e09d2-121">Create a "Hello, world" app using XAML with C++/CX</span></span>](create-a-basic-windows-10-app-in-cpp.md)
 
-<span data-ttu-id="32a0f-122">Weitere Informationen zu C++:</span><span class="sxs-lookup"><span data-stu-id="32a0f-122">Learn more about C++ here:</span></span>
+<span data-ttu-id="e09d2-122">Weitere Informationen zu C++:</span><span class="sxs-lookup"><span data-stu-id="e09d2-122">Learn more about C++ here:</span></span>
 
-* [<span data-ttu-id="32a0f-123">C++: Schnelleinstieg: eine allgemeine Sprache und Bibliothek</span><span class="sxs-lookup"><span data-stu-id="32a0f-123">C++: A General Purpose Language and Library Jump Start</span></span>](http://www.microsoftvirtualacademy.com/training-courses/c-a-general-purpose-language-and-library-jump-start)
-* [<span data-ttu-id="32a0f-124">Microsoft Virtual Academy</span><span class="sxs-lookup"><span data-stu-id="32a0f-124">Microsoft Virtual Academy</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=389916)
+* [<span data-ttu-id="e09d2-123">C++: Schnelleinstieg: eine allgemeine Sprache und Bibliothek</span><span class="sxs-lookup"><span data-stu-id="e09d2-123">C++: A General Purpose Language and Library Jump Start</span></span>](http://www.microsoftvirtualacademy.com/training-courses/c-a-general-purpose-language-and-library-jump-start)
+* [<span data-ttu-id="e09d2-124">Microsoft Virtual Academy</span><span class="sxs-lookup"><span data-stu-id="e09d2-124">Microsoft Virtual Academy</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=389916)
 
-<span data-ttu-id="32a0f-125">Wenn Sie etwas Komplizierteres als "Hello, World!" ausprobieren möchten, schauen Sie diese Lernprogramme an:</span><span class="sxs-lookup"><span data-stu-id="32a0f-125">If you are ready to attempt something a little more fun than "Hello, World!", try out these tutorials:</span></span>
+<span data-ttu-id="e09d2-125">Wenn Sie etwas Komplizierteres als "Hello, World!" ausprobieren möchten, schauen Sie diese Lernprogramme an:</span><span class="sxs-lookup"><span data-stu-id="e09d2-125">If you are ready to attempt something a little more fun than "Hello, World!", try out these tutorials:</span></span>
 
-* [<span data-ttu-id="32a0f-126">XAML und Datenbindungen in UWP</span><span class="sxs-lookup"><span data-stu-id="32a0f-126">XAML and data binding in UWP</span></span>](xaml-basics-intro.md)
+* [<span data-ttu-id="e09d2-126">XAML und Datenbindungen in UWP</span><span class="sxs-lookup"><span data-stu-id="e09d2-126">XAML and data binding in UWP</span></span>](xaml-basics-intro.md)
 
-## <a name="javascript-and-html"></a><span data-ttu-id="32a0f-127">JavaScript und HTML</span><span class="sxs-lookup"><span data-stu-id="32a0f-127">JavaScript and HTML</span></span>
+## <a name="javascript-and-html"></a><span data-ttu-id="e09d2-127">JavaScript und HTML</span><span class="sxs-lookup"><span data-stu-id="e09d2-127">JavaScript and HTML</span></span>
 
-<span data-ttu-id="32a0f-128">Nutzen Sie Ihre Webkenntnisse, um Store-Apps mit HTML5, CSS3 und JavaScript zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="32a0f-128">Take advantage of your web skills to build apps using HTML5, CSS3, and JavaScript.</span></span>
+<span data-ttu-id="e09d2-128">Nutzen Sie Ihre Webkenntnisse, um Store-Apps mit HTML5, CSS3 und JavaScript zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="e09d2-128">Take advantage of your web skills to build apps using HTML5, CSS3, and JavaScript.</span></span>
 
-* [<span data-ttu-id="32a0f-129">Erstellen einer „Hello, world“-App mit HTML und JavaScript</span><span class="sxs-lookup"><span data-stu-id="32a0f-129">Create a "Hello, world" app using HTML and JavaScript</span></span>](create-a-hello-world-app-js-uwp.md)
+* [<span data-ttu-id="e09d2-129">Erstellen einer „Hello, world“-App mit HTML und JavaScript</span><span class="sxs-lookup"><span data-stu-id="e09d2-129">Create a "Hello, world" app using HTML and JavaScript</span></span>](create-a-hello-world-app-js-uwp.md)
 
-<span data-ttu-id="32a0f-130">Erweitern Sie Ihr JavaScript- und HTML-Kenntnisse über UWP hinaus, um Web-Apps zu erstellen und die erweiterte Realität auf dem Web mit WebVR zu erkunden.</span><span class="sxs-lookup"><span data-stu-id="32a0f-130">Extend your JavaScript and HTML skills beyond UWP to create web apps, or explore Virtual reality on the web with WebVR</span></span>
+<span data-ttu-id="e09d2-130">Erweitern Sie Ihr JavaScript- und HTML-Kenntnisse über UWP hinaus, um Web-Apps zu erstellen und die erweiterte Realität auf dem Web mit WebVR zu erkunden.</span><span class="sxs-lookup"><span data-stu-id="e09d2-130">Extend your JavaScript and HTML skills beyond UWP to create web apps, or explore Virtual reality on the web with WebVR</span></span>
 
-* [<span data-ttu-id="32a0f-131">Dokumentation für Microsoft Edge-Entwickler</span><span class="sxs-lookup"><span data-stu-id="32a0f-131">Microsoft Edge developer documentation</span></span>](https://docs.microsoft.com/microsoft-edge/)
-* [<span data-ttu-id="32a0f-132">Verwenden von WebVR mit Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="32a0f-132">Use WebVR with Microsoft Edge</span></span>](https://docs.microsoft.com/en-us/microsoft-edge/webvr/)
+* [<span data-ttu-id="e09d2-131">Dokumentation für Microsoft Edge-Entwickler</span><span class="sxs-lookup"><span data-stu-id="e09d2-131">Microsoft Edge developer documentation</span></span>](https://docs.microsoft.com/microsoft-edge/)
+* [<span data-ttu-id="e09d2-132">Verwenden von WebVR mit Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="e09d2-132">Use WebVR with Microsoft Edge</span></span>](https://docs.microsoft.com/en-us/microsoft-edge/webvr/)
 
-<span data-ttu-id="32a0f-133">Web-Apps können einfach in das UWP-Framework als gehostete Web-Apps verpackt werden und Werbung im Microsoft Store erhalten.</span><span class="sxs-lookup"><span data-stu-id="32a0f-133">Web apps can be easily packaged into the UWP framework as Hosted Web Apps, and promoted on the Microsoft Store.</span></span>
+<span data-ttu-id="e09d2-133">Web-Apps können einfach in das UWP-Framework als gehostete Web-Apps verpackt werden und Werbung im Microsoft Store erhalten.</span><span class="sxs-lookup"><span data-stu-id="e09d2-133">Web apps can be easily packaged into the UWP framework as Hosted Web Apps, and promoted on the Microsoft Store.</span></span>
 
-* [<span data-ttu-id="32a0f-134">Gehostete Web-Apps</span><span class="sxs-lookup"><span data-stu-id="32a0f-134">Hosted Web Apps</span></span>](https://developer.microsoft.com/windows/bridges/hosted-web-apps)
-* [<span data-ttu-id="32a0f-135">Konvertieren Ihrer Web-App in eine UWP-App</span><span class="sxs-lookup"><span data-stu-id="32a0f-135">Convert your web application to a UWP app</span></span>](../porting/hwa-create-windows.md)
+* [<span data-ttu-id="e09d2-134">Gehostete Web-Apps</span><span class="sxs-lookup"><span data-stu-id="e09d2-134">Hosted Web Apps</span></span>](https://developer.microsoft.com/windows/bridges/hosted-web-apps)
+* [<span data-ttu-id="e09d2-135">Konvertieren Ihrer Web-App in eine UWP-App</span><span class="sxs-lookup"><span data-stu-id="e09d2-135">Convert your web application to a UWP app</span></span>](../porting/hwa-create-windows.md)
 
-<span data-ttu-id="32a0f-136">Müssen Sie Ihre Webkenntnisse auffrischen?</span><span class="sxs-lookup"><span data-stu-id="32a0f-136">Need to brush up on your web skills?</span></span>
+<span data-ttu-id="e09d2-136">Müssen Sie Ihre Webkenntnisse auffrischen?</span><span class="sxs-lookup"><span data-stu-id="e09d2-136">Need to brush up on your web skills?</span></span>
 
-* [<span data-ttu-id="32a0f-137">JavaScript-Grundlagen für Neueinsteiger</span><span class="sxs-lookup"><span data-stu-id="32a0f-137">JavaScript Fundamentals for Absolute Beginners</span></span>](http://www.microsoftvirtualacademy.com/training-courses/javascript-fundamentals-for-absolute-beginners)
-* [<span data-ttu-id="32a0f-138">HTML5- und CSS3-Grundlagen für Neueinsteiger</span><span class="sxs-lookup"><span data-stu-id="32a0f-138">HTML5 & CSS3 Fundamentals for Absolute Beginners</span></span>](http://www.microsoftvirtualacademy.com/training-courses/html5-css3-fundamentals-development-for-absolute-beginners)
-* [<span data-ttu-id="32a0f-139">Microsoft Virtual Academy</span><span class="sxs-lookup"><span data-stu-id="32a0f-139">Microsoft Virtual Academy</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=389916)
+* [<span data-ttu-id="e09d2-137">JavaScript-Grundlagen für Neueinsteiger</span><span class="sxs-lookup"><span data-stu-id="e09d2-137">JavaScript Fundamentals for Absolute Beginners</span></span>](http://www.microsoftvirtualacademy.com/training-courses/javascript-fundamentals-for-absolute-beginners)
+* [<span data-ttu-id="e09d2-138">HTML5- und CSS3-Grundlagen für Neueinsteiger</span><span class="sxs-lookup"><span data-stu-id="e09d2-138">HTML5 & CSS3 Fundamentals for Absolute Beginners</span></span>](http://www.microsoftvirtualacademy.com/training-courses/html5-css3-fundamentals-development-for-absolute-beginners)
+* [<span data-ttu-id="e09d2-139">Microsoft Virtual Academy</span><span class="sxs-lookup"><span data-stu-id="e09d2-139">Microsoft Virtual Academy</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=389916)
 
-## <a name="see-also"></a><span data-ttu-id="32a0f-140">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="32a0f-140">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e09d2-140">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="e09d2-140">See Also</span></span>
 
-* [<span data-ttu-id="32a0f-141">Beginnen Sie mit der Codierung</span><span class="sxs-lookup"><span data-stu-id="32a0f-141">Start coding</span></span>](create-uwp-apps.md)
-* [<span data-ttu-id="32a0f-142">Was ist eine UWP-App?</span><span class="sxs-lookup"><span data-stu-id="32a0f-142">What's a UWP app?</span></span>](universal-application-platform-guide.md)
-* [<span data-ttu-id="32a0f-143">Vorbereiten</span><span class="sxs-lookup"><span data-stu-id="32a0f-143">Get set up</span></span>](get-set-up.md)
-* [<span data-ttu-id="32a0f-144">Für Windows-Konto anmelden</span><span class="sxs-lookup"><span data-stu-id="32a0f-144">Sign up for Windows account</span></span>](sign-up.md)
+* [<span data-ttu-id="e09d2-141">Beginnen Sie mit der Codierung</span><span class="sxs-lookup"><span data-stu-id="e09d2-141">Start coding</span></span>](create-uwp-apps.md)
+* [<span data-ttu-id="e09d2-142">Was ist eine UWP-App?</span><span class="sxs-lookup"><span data-stu-id="e09d2-142">What's a UWP app?</span></span>](universal-application-platform-guide.md)
+* [<span data-ttu-id="e09d2-143">Vorbereiten</span><span class="sxs-lookup"><span data-stu-id="e09d2-143">Get set up</span></span>](get-set-up.md)
+* [<span data-ttu-id="e09d2-144">Für Windows-Konto anmelden</span><span class="sxs-lookup"><span data-stu-id="e09d2-144">Sign up for Windows account</span></span>](sign-up.md)

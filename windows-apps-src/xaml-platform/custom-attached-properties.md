@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ce26242f1f5093afcbfb652a7d1736897975cb3a
-ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
+ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "3404952"
+ms.locfileid: "3411454"
 ---
 # <a name="custom-attached-properties"></a><span data-ttu-id="30a64-104">Benutzerdefinierte angefügte Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="30a64-104">Custom attached properties</span></span>
 
