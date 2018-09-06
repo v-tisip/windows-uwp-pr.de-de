@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 66384c4df3195ae0fff35ae5dd7e1b1983204068
-ms.sourcegitcommit: 1e5590dd10d606a910da6deb67b6a98f33235959
+ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "3227818"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "3379435"
 ---
 # <a name="tailoring-effects--experiences-using-windows-ui"></a>Anpassung Effekte und Funktionen, die über Windows-Benutzeroberfläche
 
