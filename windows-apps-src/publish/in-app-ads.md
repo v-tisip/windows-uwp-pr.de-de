@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 83c4645a09a38a76dfd230436e858e222d817eab
-ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "3383471"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3393628"
 ---
 # <a name="in-app-ads"></a>In-App-Anzeigen
 

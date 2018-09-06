@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 89c021bb2c094aafc9b534acef9b009817669461
-ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "3379076"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3396443"
 ---
 # <a name="raising-events-in-windows-runtime-components"></a>Auslösen von Ereignissen in Komponenten für Windows-Runtime
 > [!NOTE]

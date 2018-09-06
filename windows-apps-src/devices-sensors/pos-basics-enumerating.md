@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Point of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e42ebb2eba7b6465be271e6095100c03798826f
-ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "3369956"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3393436"
 ---
 # <a name="enumerating-point-of-service-devices"></a>Auflisten von Point of Service-Geräten
 In diesem Abschnitt erfahren Sie, wie Sie [eine Geräteauswahl definieren](https://docs.microsoft.com/windows/uwp/devices-sensors/build-a-device-selector), die verwendet wird, um die im System verfügbaren Geräte abzufragen, und verwenden diese Auswahl, um Point of Service-Geräte mithilfe einer der folgenden Methoden aufzulisten:
