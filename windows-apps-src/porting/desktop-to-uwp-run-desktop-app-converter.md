@@ -12,11 +12,11 @@ keywords: windows10, UWP
 ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 ms.localizationpriority: medium
 ms.openlocfilehash: 8748b68bf4efbcc79d0bba475db32f3a2d7cc933
-ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
+ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "3405152"
+ms.locfileid: "3414514"
 ---
 # <a name="package-an-app-using-the-desktop-app-converter-desktop-bridge"></a>Verpacken einer App mit dem Desktop App Converter (Desktop-Brücke)
 

@@ -4,18 +4,18 @@ ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: Mittels dieser Methode in der Microsoft Store-Analyse-API können Sie gesammelte Fehlerberichtsdaten für einen bestimmten Zeitraum und andere optionale Filter abrufen.
 title: Abrufen von Fehlerberichtsdaten für Ihre App
 ms.author: mcleans
-ms.date: 06/05/2018
+ms.date: 09/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienst, Microsoft Store-Analyse-API, Fehler
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c03ea17e111f86ad390dafe5360db9d10864edc
-ms.sourcegitcommit: 7aa1933e6970f878faf50d59e1f799b90afd7cc7
+ms.openlocfilehash: 15dd4d5febe0b57e164f0aadeeb8d7b816dcdd66
+ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "3381846"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "3399248"
 ---
 # <a name="get-error-reporting-data-for-your-app"></a>Abrufen von Fehlerberichtsdaten für Ihre App
 
@@ -106,8 +106,8 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | deviceType      | string  | Eine der folgenden Zeichenfolgen, die den Typ des Geräts anzeigt, auf dem der Fehler aufgetreten ist:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**IoT**</li><li>**Holographic**</li><li>**Unknown**</li></ul>    |
 | packageName     | string  | Der eindeutige Name des App-Pakets, das mit diesem Fehler verknüpft ist.      |
 | packageVersion  | string  | Die Version des App-Pakets, das mit diesem Fehler verknüpft ist.   |
-| deviceCount     | Ganzzahl | Die Anzahl der eindeutigen Geräte, die diesem Fehler für die angegebene Aggregationsebene entsprechen.  |
-| eventCount      | Ganzzahl | Die Anzahl der Ereignisse, die diesem Fehler für die angegebene Aggregationsebene zugeordnet werden.      |
+| deviceCount     | number | Die Anzahl der eindeutigen Geräte, die diesem Fehler für die angegebene Aggregationsebene entsprechen.  |
+| eventCount      | number | Die Anzahl der Ereignisse, die diesem Fehler für die angegebene Aggregationsebene zugeordnet werden.      |
 
 
 ### <a name="response-example"></a>Antwortbeispiel
