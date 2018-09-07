@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 9b0b6315b1177138c3ede7834e2dbc792ee106dd
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3422292"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3662958"
 ---
 # <a name="guidance-for-app-package-management"></a><span data-ttu-id="7a4ca-103">Leitfaden für die Verwaltung von App-Paketen</span><span class="sxs-lookup"><span data-stu-id="7a4ca-103">Guidance for app package management</span></span>
 

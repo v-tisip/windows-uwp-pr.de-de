@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Altersfreigabe, Spielfreigabe, IARC, Bewertung, Fragebogen, Bewertungsgremium, Inhaltsbewertung
 ms.localizationpriority: medium
 ms.openlocfilehash: 2cf7a3c3a57c4d892de2438967d995ee18470cae
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3422208"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3664128"
 ---
 # <a name="age-ratings"></a><span data-ttu-id="fd2b3-103">Altersfreigaben</span><span class="sxs-lookup"><span data-stu-id="fd2b3-103">Age ratings</span></span>
 
