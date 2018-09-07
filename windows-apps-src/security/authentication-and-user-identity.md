@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f446299dcf1a0bcf93d483d13c926c6e4cd230f
-ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
+ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "3401782"
+ms.locfileid: "3421538"
 ---
 # <a name="authentication-and-user-identity"></a><span data-ttu-id="a7c54-104">Authentifizierung und Benutzeridentität</span><span class="sxs-lookup"><span data-stu-id="a7c54-104">Authentication and user identity</span></span>
 

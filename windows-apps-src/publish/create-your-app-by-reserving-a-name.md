@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 83f2ab8a27810635b569d44961ff532ce3240e28
-ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
+ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "3399005"
+ms.locfileid: "3421318"
 ---
 # <a name="create-your-app-by-reserving-a-name"></a><span data-ttu-id="b6829-103">Erstellen einer App durch Reservieren eines Namens</span><span class="sxs-lookup"><span data-stu-id="b6829-103">Create your app by reserving a name</span></span>
 

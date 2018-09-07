@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, geräteportal
 ms.localizationpriority: medium
 ms.openlocfilehash: e70ab7c7fba8b8da9a0115a86a13f08e4ef3ebe2
-ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
+ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "3398842"
+ms.locfileid: "3417008"
 ---
 # <a name="device-portal-for-hololens"></a><span data-ttu-id="6ccce-104">Geräteportal für HoloLens</span><span class="sxs-lookup"><span data-stu-id="6ccce-104">Device Portal for HoloLens</span></span>
 

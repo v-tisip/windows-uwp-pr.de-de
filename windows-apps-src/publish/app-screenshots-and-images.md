@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Trailer, Video, Screenshot, Bild, Symbol, Store-Eintrag, Store-Eintragsbilder
 ms.localizationpriority: medium
 ms.openlocfilehash: d787ac620f9d0114d67d85def758416afd9f5f15
-ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
+ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "3390256"
+ms.locfileid: "3419036"
 ---
 # <a name="app-screenshots-images-and-trailers"></a><span data-ttu-id="240e8-103">App-Screenshots, -Bilder und -Trailer</span><span class="sxs-lookup"><span data-stu-id="240e8-103">App screenshots, images, and trailers</span></span>
 

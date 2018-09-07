@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 378544282981c62d7a57f9abc3f666e8964b7117
-ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
+ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "3398966"
+ms.locfileid: "3409629"
 ---
 # <a name="get-set-up"></a><span data-ttu-id="8b3b7-105">Vorbereiten</span><span class="sxs-lookup"><span data-stu-id="8b3b7-105">Get set up</span></span>
 

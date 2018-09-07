@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Microsoft Store Services SDK, A/B-Tests, Experimente
 ms.localizationpriority: medium
 ms.openlocfilehash: a4d7ef0fe9297f8e3affc908a9ba74de8bb29f3a
-ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
+ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "3398742"
+ms.locfileid: "3416792"
 ---
 # <a name="run-app-experiments-with-ab-testing"></a><span data-ttu-id="fe72e-103">Ausführen von App-Experimenten mit A/B-Tests</span><span class="sxs-lookup"><span data-stu-id="fe72e-103">Run app experiments with A/B testing</span></span>
 

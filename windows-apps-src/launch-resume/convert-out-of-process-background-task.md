@@ -11,11 +11,11 @@ keywords: Windows 10, Uwp, Hintergrundaufgabe, app-Dienst
 ms.assetid: 5327e966-b78d-4859-9b97-5a61c362573e
 ms.localizationpriority: medium
 ms.openlocfilehash: 1144443f943f134991d050dea1457f252eaaf36d
-ms.sourcegitcommit: 914b38559852aaefe7e9468f6f53a7465bf36e30
+ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "3393826"
+ms.locfileid: "3418244"
 ---
 # <a name="convert-an-out-of-process-background-task-to-an-in-process-background-task"></a><span data-ttu-id="85150-104">Konvertieren einer Out-of-Process-Hintergrundaufgabe in eine In-Process-Hintergrundaufgabe</span><span class="sxs-lookup"><span data-stu-id="85150-104">Convert an out-of-process background task to an in-process background task</span></span>
 
