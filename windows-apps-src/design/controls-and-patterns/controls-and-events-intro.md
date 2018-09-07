@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f8f86a6988e68e3ff8d2dfef32512633b3761fd
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3421178"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3659648"
 ---
 # <a name="intro-to-controls-and-patterns"></a>Einführung in Steuerelemente und Muster
 

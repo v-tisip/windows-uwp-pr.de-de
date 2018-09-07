@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, Standard, C++, CPP, WinRT, Projizierung, Einführung
 ms.localizationpriority: medium
-ms.openlocfilehash: 03abe68fd19573d7b2deba9937c515a8641e8fca
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.openlocfilehash: 220c5c7395ed9388b02b74e0cbed5b913971bbba
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3409586"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3660915"
 ---
 # <a name="introduction-to-cwinrt"></a>Einführung in C++/WinRT
 &nbsp;
@@ -54,7 +54,7 @@ Sie werden dann in der Lage zu erstellen und zu erstellen oder zu öffnen, eine 
 
 Sobald Sie diese Eigenschaft hinzugefügt haben, steht Ihnen die C++/WinRT MSBuild-Unterstützung für das Projekt zur Verfügung, einschließlich des Aufrufs des `cppwinrt.exe`-Tools.
 
-Da C++/WinRT Features aus dem C++17-Standard verwendet, benötigt es die Projekteigenschaft **C/C++** > **Language** > **ISO C++17 Standard (/std:c++17)**. Sie können außerdem **Konformitätsmodus: Ja (/permissive-)** festlegen, was Ihren Code für die Standardkonformität weiter einschränkt.
+Da C++ / WinRT Features aus dem C ++ 17-Standard verwendet, benötigt Eigenschaft **C/C++-** Projekt > **Sprache** > **C++ Sprache Standard** > **ISO C ++ 17 Standard (/ Std: c ++ 17)**. Sie können außerdem **Konformitätsmodus: Ja (/permissive-)** festlegen, was Ihren Code für die Standardkonformität weiter einschränkt.
 
 Eine weitere zu beachtende Projekteigenschaft ist **C/C++** > **Allgemein** > **Warnungen als Fehler behandeln**. Legen Sie diese auf **Ja (/WX)** oder **Nein (/WX-)** fest. Manchmal generieren vom `cppwinrt.exe`-Tool erzeugte Quelldateien Warnungen, bis Sie Ihre Implementierung hinzufügen.
 

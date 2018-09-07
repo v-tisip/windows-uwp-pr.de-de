@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 6cded1be4bd7ca5044a2eee8832545a8d83ee3d4
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.openlocfilehash: 7168ee705114523a324194b89f8450e768cfab22
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3409246"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3665886"
 ---
 # [<a name="cwinrt"></a>C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 C++/WinRT ist eine vollständig standardisierte, moderne C++17 Sprachprojektion für Windows-Runtime-(WinRT)-APIs, die als headerdateibasierte Bibliothek implementiert ist und Ihnen einen erstklassigen Zugriff auf die moderne Windows-API bietet. Mit C++/WinRT können Sie Windows-Runtime-APIs mit jedem standardkonformen C++17-Compiler erstellen und verwenden. Das in Version 10.0.17134.0 (Windows 10, Version 1803) eingeführte Windows SDK enthält C++/WinRT.
@@ -57,7 +57,8 @@ C++/WinRT arbeitet besser und erzeugt kleinere Binärdateien als jede andere Spr
 | [XAML-Steuerelemente; Binden an eine C++/WinRT-Eigenschaft](binding-property.md) | Eine Eigenschaft, die effektiv an ein XAML-Steuerelement gebunden werden kann, wird als *Observable*-Eigenschaft bezeichnet. Dieses Thema zeigt, wie man eine Observable-Eigenschaft implementiert und nutzt und wie man ein XAML-Steuerelement daran bindet. |
 | [XAML-Items-Steuerelemente; Binden an eine C++/WinRT-Collection](binding-collection.md) | Eine Collection, die effektiv an ein XAML-Items-Steuerelement gebunden werden kann, wird als *Observable*-Collection bezeichnet. Dieses Thema zeigt, wie man eine Observable-Collection implementiert und nutzt und wie man ein XAML-Items-Steuerelement daran bindet. |
 | [XAML-benutzerdefinierte (vorlagenbasierten)-Steuerelemente mit C++ / WinRT](xaml-cust-ctrl.md) | Dieses Thema führt Sie durch die Schritte zum Erstellen eines einfachen benutzerdefinierten Steuerelements mit C++ / WinRT. Sie können auf den Informationen zum Erstellen Ihrer eigenen funktionsreiche und anpassbare UI-Steuerelemente erstellen. |
-| [Nutzen von DirectX und anderen COM-APIs mit C++ / WinRT](consume-com.md) | In diesem Thema verwendet ein vollständiges Beispiel für die Direct2D-Code um zu veranschaulichen, wie c++ / WinRT COM-Klassen und Schnittstellen aufnehmen. |
+| [Verwenden von COM-Komponenten mit C++ / WinRT](consume-com.md) | In diesem Thema verwendet ein vollständiges Beispiel für die Direct2D-Code um zu veranschaulichen, wie c++ / WinRT COM-Klassen und Schnittstellen aufnehmen. |
+| [Erstellen von COM-Komponenten mit C++ / WinRT](author-coclasses.md) | C++ / WinRT hilft Ihnen beim Erstellen von klassischer COM-Komponenten, genauso, wie Sie Windows-Runtime-Klassen man erleichtert. |
 | [Interoperabilität zwischen C++/WinRT und C++/CX](interop-winrt-cx.md) | In diesem Thema werden zwei Hilfsfunktionen gezeigt, die verwendet werden können, um zwischen [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live)- und C++/WinRT-Objekten zu konvertieren. |
 | [Wechsel zu C++/WinRT von C++/CX](move-to-winrt-from-cx.md) | In diesem Thema wird gezeigt, wie Sie C++/CX-Code zum entsprechenden Äquivalent in C++/WinRT portieren. |
 | [Interoperabilität zwischen C++/WinRT und der ABI](interop-winrt-abi.md) | Dieses Thema zeigt, wie man zwischen Application Binary Interface (ABI) und C++/WinRT-Objekten konvertiert. |

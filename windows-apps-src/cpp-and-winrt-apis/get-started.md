@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, erste schritte
 ms.localizationpriority: medium
-ms.openlocfilehash: 13aa1e61a2d81cfa7faed0236551dad41bd00057
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.openlocfilehash: ebb71b91af7e1490099898084f42ce04e698ef20
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3418819"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3658793"
 ---
 # <a name="get-started-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Erste Schritte mit [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Damit Sie C++/WinRT schneller verwenden können, werden Ihnen in diesem Thema einige einfache Codebeispiele vorgestellt.
@@ -23,7 +23,13 @@ Damit Sie C++/WinRT schneller verwenden können, werden Ihnen in diesem Thema ei
 > [!NOTE]
 > Informationen zur Installation und Verwendung der C++/WinRT Visual Studio Extension (VSIX) (die Projektvorlagenunterstützung sowie C++/WinRT MSBuild-Eigenschaften und -Ziele bietet) finden Sie unter [Visual Studio-Unterstützung für C++/WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
 
-Erstellen Sie ein neues **Windows Console Application (C++/WinRT)**-Projekt. Bearbeiten Sie `pch.h` und `main.cpp` folgendermaßen.
+Erstellen Sie ein neues **Windows Console Application (C++/WinRT)**-Projekt.
+
+> [!IMPORTANT]
+> Wenn Sie Visual Studio 2017 verwenden (Version 15.8.0 oder höher), und für das Windows SDK-Version 10.0.17134.0 (Windows 10, Version 1803), klicken Sie dann eine neu erstellte C++ / WinRT-Projekt kann fehlschlagen, um zu kompilieren, mit dem Fehler "*Fehler C3861: 'From_abi': Bezeichner nicht gefunden*", und andere Fehler mit Ursprung in *base.h*. Die Lösung besteht darin, entweder Ziel höher (größere Übereinstimmung) Version des Windows SDK oder Satz Projekteigenschaft **C/C++-** > **Sprache** > **Konformitätsmodus: Nein** (auch, wenn **/ PERMISSIVE--** erscheint in Projekteigenschaft ** C/C++** > **Sprache** > **Befehlszeile** unter **Zusätzliche Optionen**, löschen Sie ihn).
+
+
+Bearbeiten Sie `pch.h` und `main.cpp` folgendermaßen.
 
 ```cppwinrt
 // pch.h

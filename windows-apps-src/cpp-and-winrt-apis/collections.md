@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, Uwp, standard, c++, Cpp, Winrt, Projektion, Sammlung
 ms.localizationpriority: medium
-ms.openlocfilehash: 5495649a6b7fad633e24e244aa3f6efbcc05e441
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.openlocfilehash: dc52274c80f3689d2cb10b98bda38788e3400b4e
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3421098"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3661575"
 ---
 # <a name="collections-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Sammlungen mit [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -58,7 +58,7 @@ int main()
 }
 ```
 
-Wie im obigen Codebeispiel sehen, nach dem Erstellen der Auflistung können Sie Elemente anfügen, durchlaufen sie und behandeln Sie das Objekt in der Regel, wie Sie alle Windows-Runtime-Collection-Objekt, die Sie von einer API erhalten haben. Wenn Sie eine unveränderliche Ansicht über die Auflistung benötigen, können Sie wie gezeigt [**IVector::GetView**](/uwp/api/windows.foundation.collections.ivector-1.getview), aufrufen. Das oben gezeigte Muster&mdash;der Erstellung und Nutzung von einer Sammlungs&mdash;eignet sich für einfache Fälle, in denen Sie übergeben Sie Daten in oder Abrufen von Daten aus einer API.
+Wie im obigen Codebeispiel sehen, nach dem Erstellen der Auflistung können Sie Elemente anfügen, durchlaufen sie und behandeln Sie das Objekt in der Regel, wie Sie alle Windows-Runtime-Collection-Objekt, die Sie von einer API erhalten haben. Wenn Sie eine unveränderliche Ansicht über die Auflistung benötigen, können Sie wie gezeigt [**IVector::GetView**](/uwp/api/windows.foundation.collections.ivector-1.getview), aufrufen. Das oben gezeigte Muster&mdash;der Erstellung und Nutzung von einer Sammlungs&mdash;eignet sich für einfache Fälle, in denen Sie übergeben Sie Daten in oder Abrufen von Daten aus einer API. Sie können eine **IVector**oder ein **IVectorView**übergeben, an einer beliebigen Stelle einer [**IIterable**](/uwp/api/windows.foundation.collections.iiterable_t_) erwartet wird.
 
 ### <a name="general-purpose-collection-primed-from-data"></a>Allgemeine Sammlung von Daten vorbereitet
 
@@ -85,7 +85,14 @@ auto bookSkus{ winrt::single_threaded_vector<Windows::Foundation::IInspectable>(
 bookSkus.Append(make<Bookstore::implementation::BookSku>(L"Moby Dick"));
 ```
 
-Die Sammlung oben *können* werden an ein XAML-Items-Steuerelement gebunden; aber die Sammlung nicht feststellbar.
+Sie können Erstellen einer Windows-Runtime-Sammlung von Daten und bereiten Sie eine Ansicht für dieses auf, übergeben Sie an eine API, ohne etwas zu kopieren.
+
+```cppwinrt
+std::vector<float> values{ 0.1f, 0.2f, 0.3f };
+IVectorView<float> view{ winrt::single_threaded_vector(std::move(values)).GetView() };
+```
+
+In den obigen Beispielen werden ein XAML-Items-Steuerelement die Sammlung *erstellen wir* gebunden. aber die Sammlung nicht feststellbar.
 
 ### <a name="observable-collection"></a>Observable-collection
 

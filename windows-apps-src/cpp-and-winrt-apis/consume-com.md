@@ -1,7 +1,7 @@
 ---
 author: stevewhims
 description: In diesem Thema verwendet ein vollständiges Beispiel für die Direct2D-Code um zu veranschaulichen, wie c++ / WinRT COM-Klassen und Schnittstellen aufnehmen.
-title: Nutzen von DirectX und anderen COM-APIs mit C++ / WinRT
+title: Verwenden von COM-Komponenten mit C++ / WinRT
 ms.author: stwhi
 ms.date: 07/23/2018
 ms.topic: article
@@ -9,14 +9,14 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, Uwp, Standard, c++, Cpp, Winrt, COM, Komponente, Klasse, Schnittstelle
 ms.localizationpriority: medium
-ms.openlocfilehash: b87eb90ed5ecf731cc851e81e81ad016956e5fea
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.openlocfilehash: eba4922240983f76a1f83770e2797063ba30b8b7
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3422531"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3662306"
 ---
-# <a name="consume-directx-and-other-com-apis-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Nutzen von DirectX und anderen COM-APIs mit [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
+# <a name="consume-com-components-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Verwenden von COM-Komponenten mit [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
 Sie können die Funktionen von C++ / WinRT-Bibliothek COM-Komponenten, z. B. die High-End-2-D- und 3-d-Grafiken, DirectX-APIs nutzen. C++ / WinRT ist die einfachste Möglichkeit zum DirectX verwenden, ohne Leistungseinbußen. In diesem Thema verwendet ein Direct2D-Codebeispiel, wie Sie c++ / WinRT COM-Klassen und Schnittstellen aufnehmen. Sie können natürlich mischen COM- und Windows-Runtime-Programmierung innerhalb der gleichen C++ / WinRT-Projekt.
 
