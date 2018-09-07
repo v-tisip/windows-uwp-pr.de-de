@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, geräteportal
 ms.localizationpriority: medium
 ms.openlocfilehash: 6bf511a910a266877d54a014f087c1748ff25838
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3408940"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3665730"
 ---
 # <a name="write-a-custom-plugin-for-device-portal"></a><span data-ttu-id="329be-104">Schreiben eines benutzerdefinierten Plug-Ins für das Device Portal</span><span class="sxs-lookup"><span data-stu-id="329be-104">Write a custom plugin for Device Portal</span></span>
 

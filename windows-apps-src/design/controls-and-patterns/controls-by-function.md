@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0840bab2e039ec55ea4070f8dad39c0ae4e74bbc
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3407393"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3661156"
 ---
 # <a name="controls-by-function"></a><span data-ttu-id="acc9a-103">Steuerelemente nach Funktion</span><span class="sxs-lookup"><span data-stu-id="acc9a-103">Controls by function</span></span>
 

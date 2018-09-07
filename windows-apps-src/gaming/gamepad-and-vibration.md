@@ -4,18 +4,18 @@ title: Gamepad und Vibration
 description: Verwenden Sie die Windows.Gaming.Input-Gamepad-APIs zum Erkennen, Lesen und Senden von Vibrations- und Impulsbefehlen an Gamepads.
 ms.assetid: BB03BB8E-255F-4AE8-AC43-1E519CA860FE
 ms.author: wdg-dev-content
-ms.date: 8/23/2018
+ms.date: 09/06/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Gamepad, Vibration
 ms.localizationpriority: medium
-ms.openlocfilehash: f44d5f4dee8293ed40d22a301f2a3d2a9611e15d
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.openlocfilehash: 2bf78b43bb09f97c196858d7cc4fcdb1e71462fc
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3421702"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3666021"
 ---
 # <a name="gamepad-and-vibration"></a><span data-ttu-id="c07e2-104">Gamepad und Vibration</span><span class="sxs-lookup"><span data-stu-id="c07e2-104">Gamepad and vibration</span></span>
 
@@ -120,6 +120,30 @@ for (auto gamepad : Gamepad::Gamepads)
 }
 ```
 
+```cs
+private readonly object myLock = new object();
+private List<Gamepad> myGamepads = new List<Gamepad>();
+private Gamepad mainGamepad;
+
+private void GetGamepads()
+{
+    lock (myLock)
+    {
+        foreach (var gamepad in Gamepad.Gamepads)
+        {
+            // Check if the gamepad is already in myGamepads; if it isn't, add it.
+            bool gamepadInList = myGamepads.Contains(gamepad);
+
+            if (!gamepadInList)
+            {
+                // This code assumes that you're interested in all gamepads.
+                myGamepads.Add(gamepad);
+            }
+        }
+    }   
+}
+```
+
 ### <a name="adding-and-removing-gamepads"></a><span data-ttu-id="c07e2-187">Hinzufügen und Entfernen von Gamepads</span><span class="sxs-lookup"><span data-stu-id="c07e2-187">Adding and removing gamepads</span></span>
 
 <span data-ttu-id="c07e2-188">Wenn ein Gamepad hinzugefügt oder entfernt wird, werden die [GamepadAdded][] und [GamepadRemoved][] -Ereignisse ausgelöst.</span><span class="sxs-lookup"><span data-stu-id="c07e2-188">When a gamepad is added or removed, the [GamepadAdded][] and [GamepadRemoved][] events are raised.</span></span> <span data-ttu-id="c07e2-189">Sie können Handler für diese Ereignisse registrieren, um die derzeit verbundenen Gamepads nachzuverfolgen.</span><span class="sxs-lookup"><span data-stu-id="c07e2-189">You can register handlers for these events to keep track of the gamepads that are currently connected.</span></span>
@@ -142,6 +166,23 @@ Gamepad::GamepadAdded += ref new EventHandler<Gamepad^>(Platform::Object^, Gamep
 }
 ```
 
+```cs
+Gamepad.GamepadAdded += (object sender, Gamepad e) =>
+{
+    // Check if the just-added gamepad is already in myGamepads; if it isn't, add
+    // it.
+    lock (myLock)
+    {
+        bool gamepadInList = myGamepads.Contains(e);
+
+        if (!gamepadInList)
+        {
+            myGamepads.Add(e);
+        }
+    }
+};
+```
+
 <span data-ttu-id="c07e2-191">Im folgende Beispiel wird die nachverfolgung eines Gamepads, das entfernt wurden beendet.</span><span class="sxs-lookup"><span data-stu-id="c07e2-191">The following example stops tracking a gamepad that's been removed.</span></span> <span data-ttu-id="c07e2-192">Sie müssen auch behandeln, was mit Gamepads geschieht, die Sie nachverfolgen können, wenn sie entfernt werden. Angenommen, dieser Code nur verfolgt Eingaben von einem Gamepad und legt es einfach auf `nullptr` Wenn es entfernt wird.</span><span class="sxs-lookup"><span data-stu-id="c07e2-192">You'll also need to handle what happens to the gamepads that you're tracking when they're removed; for example, this code only tracks input from one gamepad, and simply sets it to `nullptr` when it's removed.</span></span> <span data-ttu-id="c07e2-193">Sie müssen überprüfen Sie jedes Frame, falls Ihre Gamepad aktiv ist und Update welche Gamepad Sie Eingaben von sammeln sind Wenn Domänencontroller verbunden und getrennt sind.</span><span class="sxs-lookup"><span data-stu-id="c07e2-193">You'll need to check every frame if your gamepad is active, and update which gamepad you're gathering input from when controllers are connected and disconnected.</span></span>
 
 ```cpp
@@ -160,6 +201,26 @@ Gamepad::GamepadRemoved += ref new EventHandler<Gamepad^>(Platform::Object^, Gam
         myGamepads->RemoveAt(indexRemoved);
     }
 }
+```
+
+```cs
+Gamepad.GamepadRemoved += (object sender, Gamepad e) =>
+{
+    lock (myLock)
+    {
+        int indexRemoved = myGamepads.IndexOf(e);
+
+        if (indexRemoved > -1)
+        {
+            if (mainGamepad == myGamepads[indexRemoved])
+            {
+                mainGamepad = null;
+            }
+
+            myGamepads.RemoveAt(indexRemoved);
+        }
+    }
+};
 ```
 
 <span data-ttu-id="c07e2-194">Weitere Informationen finden Sie in der [Eingabe-Methoden für Spiele](input-practices-for-games.md) .</span><span class="sxs-lookup"><span data-stu-id="c07e2-194">See [Input practices for games](input-practices-for-games.md) for more information.</span></span>
@@ -186,6 +247,12 @@ auto gamepad = myGamepads[0];
 GamepadReading reading = gamepad->GetCurrentReading();
 ```
 
+```cs
+Gamepad gamepad = myGamepads[0];
+
+GamepadReading reading = gamepad.GetCurrentReading();
+```
+
 <span data-ttu-id="c07e2-207">Zusätzlich zum Zustand des Gamepads enthält jeder Wert einen Zeitstempel, der den genauen Zeitpunkt angibt, zu dem der Zustand abgerufen wurde.</span><span class="sxs-lookup"><span data-stu-id="c07e2-207">In addition to the gamepad state, each reading includes a timestamp that indicates precisely when the state was retrieved.</span></span> <span data-ttu-id="c07e2-208">Der Zeitstempel ist nützlich, um einen Bezug zu den Zeitpunkten vorheriger Werte oder zum Zeitpunkt der Spielsimulation herzustellen.</span><span class="sxs-lookup"><span data-stu-id="c07e2-208">The timestamp is useful for relating to the timing of previous readings or to the timing of the game simulation.</span></span>
 
 ### <a name="reading-the-thumbsticks"></a><span data-ttu-id="c07e2-209">Lesen der Ministicks</span><span class="sxs-lookup"><span data-stu-id="c07e2-209">Reading the thumbsticks</span></span>
@@ -199,6 +266,13 @@ float leftStickX = reading.LeftThumbstickX;   // returns a value between -1.0 an
 float leftStickY = reading.LeftThumbstickY;   // returns a value between -1.0 and +1.0
 float rightStickX = reading.RightThumbstickX; // returns a value between -1.0 and +1.0
 float rightStickY = reading.RightThumbstickY; // returns a value between -1.0 and +1.0
+```
+
+```cs
+double leftStickX = reading.LeftThumbstickX;   // returns a value between -1.0 and +1.0
+double leftStickY = reading.LeftThumbstickY;   // returns a value between -1.0 and +1.0
+double rightStickX = reading.RightThumbstickX; // returns a value between -1.0 and +1.0
+double rightStickY = reading.RightThumbstickY; // returns a value between -1.0 and +1.0
 ```
 
 <span data-ttu-id="c07e2-216">Sie werden feststellen, dass die gelesenen Ministickwerte nicht zuverlässig einen neutralen 0,0-Wert liefern, wenn sich der Ministick in der Mittelstellung (und damit im Ruhezustand) befindet. Stattdessen erhalten Sie verschiedene Näherungswerte für 0,0, wann immer der Ministicks bewegt wurde und wieder in die Mittelstellung zurückkehrt.</span><span class="sxs-lookup"><span data-stu-id="c07e2-216">When reading the thumbstick values, you'll notice that they don't reliably produce a neutral reading of 0.0 when the thumbstick is at rest in the center position; instead, they'll produce different values near 0.0 each time the thumbstick is moved and returned to the center position.</span></span> <span data-ttu-id="c07e2-217">Zur Kompensierung dieser Abweichungen können Sie einen kleinen _inaktiven Bereich_ implementieren (also einen zu ignorierenden Wertebereich nahe der idealen Mittelposition).</span><span class="sxs-lookup"><span data-stu-id="c07e2-217">To mitigate these variations, you can implement a small _deadzone_, which is a range of values near the ideal center position that are ignored.</span></span> <span data-ttu-id="c07e2-218">Zur Implementierung eines inaktiven Bereichs können Sie beispielsweise ermitteln, wie weit sich der Ministick von der Mittelposition entfernt hat, und dabei die Werte ignorieren, die eine bestimmte, von Ihnen gewählte Entfernung unterschreiten.</span><span class="sxs-lookup"><span data-stu-id="c07e2-218">One way to implement a deadzone is to determine how far from center the thumbstick has moved, and ignoring the readings that are nearer than some distance you choose.</span></span> <span data-ttu-id="c07e2-219">Sie können grobe Entfernung&mdash;es ist nicht exakt, da die ministickwerte im Grunde polar und nicht planar sind&mdash;mit dem Satz des Pythagoras.</span><span class="sxs-lookup"><span data-stu-id="c07e2-219">You can compute the distance roughly&mdash;it's not exact because thumbstick readings are essentially polar, not planar, values&mdash;just by using the Pythagorean theorem.</span></span> <span data-ttu-id="c07e2-220">Dadurch entsteht ein radialer inaktiver Bereich.</span><span class="sxs-lookup"><span data-stu-id="c07e2-220">This produces a radial deadzone.</span></span>
@@ -224,6 +298,25 @@ if ((oppositeSquared + adjacentSquared) > deadzoneSquared)
 }
 ```
 
+```cs
+double leftStickX = reading.LeftThumbstickX;   // returns a value between -1.0 and +1.0
+double leftStickY = reading.LeftThumbstickY;   // returns a value between -1.0 and +1.0
+
+// choose a deadzone -- readings inside this radius are ignored.
+const double deadzoneRadius = 0.1;
+const double deadzoneSquared = deadzoneRadius * deadzoneRadius;
+
+// Pythagorean theorem -- for a right triangle, hypotenuse^2 = (opposite side)^2 + (adjacent side)^2
+double oppositeSquared = leftStickY * leftStickY;
+double adjacentSquared = leftStickX * leftStickX;
+
+// accept and process input if true; otherwise, reject and ignore it.
+if ((oppositeSquared + adjacentSquared) > deadzoneSquared)
+{
+    // input accepted, process it
+}
+```
+
 <span data-ttu-id="c07e2-222">Jeder Ministick kann auch gedrückt werden und somit als Taste fungieren. Weitere Informationen zum Lesen dieser Eingabe finden Sie unter [Lesen der Tasten](#reading-the-buttons).</span><span class="sxs-lookup"><span data-stu-id="c07e2-222">Each thumbstick also acts as a button when pressed inward; for more information on reading this input, see [Reading the buttons](#reading-the-buttons).</span></span>
 
 ### <a name="reading-the-triggers"></a><span data-ttu-id="c07e2-223">Lesen der Trigger</span><span class="sxs-lookup"><span data-stu-id="c07e2-223">Reading the triggers</span></span>
@@ -233,6 +326,11 @@ if ((oppositeSquared + adjacentSquared) > deadzoneSquared)
 ```cpp
 float leftTrigger  = reading.LeftTrigger;  // returns a value between 0.0 and 1.0
 float rightTrigger = reading.RightTrigger; // returns a value between 0.0 and 1.0
+```
+
+```cs
+double leftTrigger = reading.LeftTrigger;  // returns a value between 0.0 and 1.0
+double rightTrigger = reading.RightTrigger; // returns a value between 0.0 and 1.0
 ```
 
 ### <a name="reading-the-buttons"></a><span data-ttu-id="c07e2-226">Lesen der Tasten</span><span class="sxs-lookup"><span data-stu-id="c07e2-226">Reading the buttons</span></span>
@@ -253,12 +351,26 @@ if (GamepadButtons::A == (reading.Buttons & GamepadButtons::A))
 }
 ```
 
+```cs
+if (GamepadButtons.A == (reading.Buttons & GamepadButtons.A))
+{
+    // button A is pressed
+}
+```
+
 <span data-ttu-id="c07e2-233">Im folgenden Beispiel wird ermittelt, ob die A-Taste losgelassen wurde.</span><span class="sxs-lookup"><span data-stu-id="c07e2-233">The following example determines whether the A button is released.</span></span>
 
 ```cpp
 if (GamepadButtons::None == (reading.Buttons & GamepadButtons::A))
 {
-    // button A is pressed
+    // button A is released
+}
+```
+
+```cs
+if (GamepadButtons.None == (reading.Buttons & GamepadButtons.A))
+{
+    // button A is released
 }
 ```
 
@@ -295,6 +407,19 @@ GamepadVibration vibration;
 gamepad.Vibration = vibration;
 ```
 
+```cs
+// get the first gamepad
+Gamepad gamepad = Gamepad.Gamepads[0];
+
+// create an instance of GamepadVibration
+GamepadVibration vibration = new GamepadVibration();
+
+// ... set vibration levels on vibration struct here
+
+// copy the GamepadVibration struct to the gamepad
+gamepad.Vibration = vibration;
+```
+
 ### <a name="using-the-vibration-motors"></a><span data-ttu-id="c07e2-250">Verwenden der Vibrationsmotoren</span><span class="sxs-lookup"><span data-stu-id="c07e2-250">Using the vibration motors</span></span>
 
 <span data-ttu-id="c07e2-251">Der linke und der rechte Vibrationsmotor akzeptieren Gleitkommawerte zwischen 0,0 (keine Vibration) und 1,0 (stärkste Vibration).</span><span class="sxs-lookup"><span data-stu-id="c07e2-251">The left and right vibration motors take floating point values between 0.0 (no vibration) and 1.0 (most intense vibration).</span></span> <span data-ttu-id="c07e2-252">Die Intensität des linken Motors wird durch die `LeftMotor`-Eigenschaft der [GamepadVibration][]-Struktur festgelegt. Die Intensität des rechten Motors wird durch die `RightMotor`-Eigenschaft festgelegt.</span><span class="sxs-lookup"><span data-stu-id="c07e2-252">The intensity of the left motor is set by the `LeftMotor` property of the [GamepadVibration][] structure; the intensity of the right motor is set by the `RightMotor` property.</span></span>
@@ -306,6 +431,13 @@ GamepadVibration vibration;
 vibration.LeftMotor = 0.80;  // sets the intensity of the left motor to 80%
 vibration.RightMotor = 0.25; // sets the intensity of the right motor to 25%
 gamepad.Vibration = vibration;
+```
+
+```cs
+GamepadVibration vibration = new GamepadVibration();
+vibration.LeftMotor = 0.80;  // sets the intensity of the left motor to 80%
+vibration.RightMotor = 0.25; // sets the intensity of the right motor to 25%
+mainGamepad.Vibration = vibration;
 ```
 
 <span data-ttu-id="c07e2-254">Vergessen Sie nicht, dass diese beiden Motoren nicht identisch sind. Wenn Sie die Eigenschaften also auf den gleichen Wert festlegen, werden in den beiden Motoren nicht die gleichen Vibrationen erzeugt.</span><span class="sxs-lookup"><span data-stu-id="c07e2-254">Remember that these two motors are not identical so setting these properties to the same value doesn't produce the same vibration in one motor as in the other.</span></span> <span data-ttu-id="c07e2-255">Für einen beliebigen Wert, der linke Motor erzeugt eine stärkere Vibration mit einer niedrigeren Frequenz als der Rechte motor die&mdash;für den gleichen Wert&mdash;eine sanftere Vibration mit höherer Frequenz erzeugt.</span><span class="sxs-lookup"><span data-stu-id="c07e2-255">For any value, the left motor produces a stronger vibration at a lower frequency than the right motor which&mdash;for the same value&mdash;produces a gentler vibration at a higher frequency.</span></span> <span data-ttu-id="c07e2-256">Selbst bei Verwendung des Maximalwerts erreicht der linke Motor nicht die hohen Frequenzen des rechten Motors, und mit dem rechten Motor lassen sich nicht die gleichen hohen Kräfte erzeugen wie mit dem linken Motor.</span><span class="sxs-lookup"><span data-stu-id="c07e2-256">Even at the maximum value, the left motor can't produce the high frequencies of the right motor, nor can the right motor produce the high forces of the left motor.</span></span> <span data-ttu-id="c07e2-257">Da die Motoren allerdings fest mit dem Gamepadgehäuse verbunden sind, nehmen Spieler die Vibrationen nicht vollständig unabhängig voneinander wahr, obwohl die Motoren unterschiedliche Eigenschaften haben und mit unterschiedlicher Intensität vibrieren können.</span><span class="sxs-lookup"><span data-stu-id="c07e2-257">Still, because the motors are rigidly connected by the gamepad body, players don't experience the vibrations fully independently even though the motors have different characteristics and can vibrate with different intensities.</span></span> <span data-ttu-id="c07e2-258">Dadurch lässt sich eine größere, ausdrucksstärkere Bandbreite von Empfindungen vermitteln als mit zwei identischen Motoren.</span><span class="sxs-lookup"><span data-stu-id="c07e2-258">This arrangement allows for a wider, more expressive range of sensations to be produced than if the motors were identical.</span></span>
@@ -321,6 +453,13 @@ GamepadVibration vibration;
 vibration.LeftTrigger = 0.75;  // sets the intensity of the left trigger to 75%
 vibration.RightTrigger = 0.50; // sets the intensity of the right trigger to 50%
 gamepad.Vibration = vibration;
+```
+
+```cs
+GamepadVibration vibration = new GamepadVibration();
+vibration.LeftTrigger = 0.75;  // sets the intensity of the left trigger to 75%
+vibration.RightTrigger = 0.50; // sets the intensity of the right trigger to 50%
+mainGamepad.Vibration = vibration;
 ```
 
 <span data-ttu-id="c07e2-263">Im Gegensatz zu den anderen Motoren sind die beiden Vibrationsmotoren innerhalb der Trigger identisch und erzeugen bei Verwendung des gleichen Werts jeweils die gleiche Vibration.</span><span class="sxs-lookup"><span data-stu-id="c07e2-263">Unlike the others, the two vibration motors inside the triggers are identical so they produce the same vibration in either motor for the same value.</span></span> <span data-ttu-id="c07e2-264">Da diese Motoren jedoch nicht fest verbunden sind, nehmen die Spieler die Vibrationen unabhängig voneinander wahr.</span><span class="sxs-lookup"><span data-stu-id="c07e2-264">However, because these motors are not rigidly connected in any way, players experience the vibrations independently.</span></span> <span data-ttu-id="c07e2-265">Dank dieses Designs können über beide Trigger gleichzeitig vollständig unabhängige Empfindungen erzeugt werden, um spezifischere Informationen zu vermitteln als mit den Motoren im Gamepadgehäuse möglich wäre.</span><span class="sxs-lookup"><span data-stu-id="c07e2-265">This arrangement allows for fully independent sensations to be directed to both triggers simultaneously, and helps them to convey more specific information than the motors in the gamepad body can.</span></span>

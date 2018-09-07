@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a1a82c91aeafa253427d8e526b38b8ac304591a2
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3413456"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3658766"
 ---
 # <a name="advertising-performance-report"></a><span data-ttu-id="30f03-103">Bericht zur Anzeigenleistung</span><span class="sxs-lookup"><span data-stu-id="30f03-103">Advertising performance report</span></span>
 

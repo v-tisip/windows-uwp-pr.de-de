@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: c0a3892348baff56bbef8d40dd9aade4e612c50d
-ms.sourcegitcommit: 53ba430930ecec8ea10c95b390fe6e654fe363e1
+ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "3412171"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "3659149"
 ---
 # <a name="makepriexe-command-line-options"></a><span data-ttu-id="cb41b-103">Befehlszeilenoptionen für MakePRI.exe</span><span class="sxs-lookup"><span data-stu-id="cb41b-103">MakePri.exe command-line options</span></span>
 
