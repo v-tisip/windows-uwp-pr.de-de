@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, string
 ms.localizationpriority: medium
-ms.openlocfilehash: 6e41abffdfa79847353af4de47bcbfa050c00627
-ms.sourcegitcommit: f9690c33bb85f84466560efac6f23cca2daf5a02
-ms.translationtype: HT
+ms.openlocfilehash: 332edcf17f2b6bbf595def67c9df7043f21828c7
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "1912938"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3821124"
 ---
 # <a name="string-handling-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>String-Verarbeitung in [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Mit C++/WinRT können Sie Windows-Runtime-APIs mit Standard-C++ Wide-String-Typen wie **std::wstring** aufrufen (Hinweis: Nicht mit Narrow-String-Typen wie **std::string**). C++/WinRT hat einen benutzerdefinierten String-Typ namens [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) (definiert in der C++/WinRT-Basisbibliothek `%WindowsSdkDir%Include\<WindowsTargetPlatformVersion>\cppwinrt\winrt\base.h`). Und das ist der String-Typ, den Windows-Runtime-Konstruktoren, -Funktionen und -Eigenschaften tatsächlich entgegennehmen und zurückgeben. Aber in vielen Fällen können Sie dank der Konvertierungskonstruktoren und Konvertierungsoperatoren von **hstring** wählen, ob Sie **hstring** in Ihrem Client-Code nutzen oder nicht. Wenn Sie APIs *erstellen*, ist es wahrscheinlicher, dass Sie **hstring** kennen müssen.
@@ -176,5 +176,5 @@ void OnPointerPressed(IInspectable const&, PointerEventArgs const& args)
 
 ## <a name="important-apis"></a>Wichtige APIs
 * [winrt::hstring-Struktur](/uwp/cpp-ref-for-winrt/hstring)
-* [winrt::to_string](/uwp/cpp-ref-for-winrt/to-string)
-* [winrt::to_hstring](/uwp/cpp-ref-for-winrt/to-hstring)
+* [to_hstring-Funktion](/uwp/cpp-ref-for-winrt/to-hstring)
+* [WinRT:: to_string-Funktion](/uwp/cpp-ref-for-winrt/to-string)

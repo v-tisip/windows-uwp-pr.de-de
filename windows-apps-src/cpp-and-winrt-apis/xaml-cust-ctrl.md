@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, Uwp, Standard, c++, Cpp, Winrt, Projizierung, XAML, benutzerdefinierte Steuerelement der auf Vorlagen basierenden
 ms.localizationpriority: medium
-ms.openlocfilehash: 4354f3371807a7000160976b6f8af5b87e1ad3f8
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.openlocfilehash: fd1843afc58bc758db1c6e575f3733bdc4f47b4e
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3664857"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3821034"
 ---
 # <a name="xaml-custom-templated-controls-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>XAML-benutzerdefinierte (vorlagenbasierten)-Steuerelemente mit [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -192,10 +192,10 @@ struct BgLabelControl : BgLabelControlT<BgLabelControl>
 *Overridable* Funktionen vorhanden selbst unterschiedlich in verschiedenen sprachprojektionen. In c# werden z. B. überschreibbare Funktionen in der Regel als geschützte virtuelle Funktionen. In C++ / WinRT können sie virtuelle weder geschützten, aber Sie können weiterhin außer Kraft setzen, und eine eigene Implementierung bereitstellen, wie oben gezeigt.
 
 ## <a name="important-apis"></a>Wichtige APIs
-* [Steuerelement](/uwp/api/windows.ui.xaml.controls.control)
-* [DependencyProperty](/uwp/api/windows.ui.xaml.dependencyproperty)
-* [FrameworkElement](/uwp/api/windows.ui.xaml.frameworkelement)
-* [UIElement](/uwp/api/windows.ui.xaml.uielement)
+* [Steuerelementklasse](/uwp/api/windows.ui.xaml.controls.control)
+* [DependencyProperty-Klasse](/uwp/api/windows.ui.xaml.dependencyproperty)
+* [FrameworkElement-Klasse](/uwp/api/windows.ui.xaml.frameworkelement)
+* [UIElement-Klasse](/uwp/api/windows.ui.xaml.uielement)
 
 ## <a name="related-topics"></a>Verwandte Themen
 * [Steuerelementvorlagen](/windows/uwp/design/controls-and-patterns/control-templates)

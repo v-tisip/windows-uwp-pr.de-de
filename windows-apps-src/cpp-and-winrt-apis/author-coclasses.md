@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, Uwp, Standard, c++, Cpp, Winrt, Projektion, "author" COM, Komponente
 ms.localizationpriority: medium
-ms.openlocfilehash: 428e1e963c89b7f9061d6b579b3bd5368a3a0ad1
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.openlocfilehash: 729cfae39f302ae6b5bae275d9e28a39f3d9503b
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3659039"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3825227"
 ---
 # <a name="author-com-components-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Erstellen von COM-Komponenten mit [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -22,8 +22,6 @@ C++ / WinRT können Sie klassische Component Object Model (COM)-Komponenten (ode
 
 ```cppwinrt
 // main.cpp : Defines the entry point for the console application.
-//
-
 #include "pch.h"
 
 using namespace winrt;
@@ -47,6 +45,8 @@ int main()
 }
 ```
 
+Weitere Informationen finden Sie [nutzen COM-Komponenten mit C++ / WinRT](consume-com.md).
+
 ## <a name="a-more-realistic-and-interesting-example"></a>Ein Beispiel mehr realistisch und interessante
 
 Im verbleibenden Teil dieses Thema führt Sie über eine minimale Konsole Anwendungsprojekt erstellen, C++ verwendet / WinRT, um eine grundlegende Co-Klasse und der Klassenname-Factory implementieren. Die Anwendung Beispiel zeigt, wie Sie eine Popupbenachrichtigung mit einer Schaltfläche Rückruf darauf zu übermitteln, und die Co-Klasse (die die **INotificationActivationCallback** COM-Schnittstelle implementiert) ermöglicht die Anwendung gestartet und aufgerufen werden zurück, wenn der Benutzer die Schaltfläche im Popup klickt.
@@ -60,8 +60,6 @@ Erstellen Sie zunächst ein neues Projekt in Microsoft Visual Studio. Erstellen 
 Öffnen `main.cpp`, und entfernen Sie die Verwendung von-Direktiven, die die Projektvorlage generiert. Fügen Sie den folgenden Code (wodurch uns sind die Bibliotheken, Header und Typnamen portiert, die wir benötigen), in ihren Platz.
 
 ```cppwinrt
-#pragma comment(lib, "onecore")
-#pragma comment(lib, "propsys")
 #pragma comment(lib, "shell32")
 
 #include <iomanip>
@@ -80,7 +78,7 @@ using namespace Windows::UI::Notifications;
 
 ## <a name="implement-the-coclass-and-class-factory"></a>Implementieren Sie die Factory CO- und -Klasse
 
-In C++ / WinRT implementieren Sie Co-Klassen und Klassenfactorys, indem ableiten direkt von der [**WinRT:: Implements**](/uwp/cpp-ref-for-winrt/implements) Basisstruktur. Unmittelbar nach der drei using--Direktiven oben gezeigten (und vor `main`), fügen Sie diesen Code, um die Popup-COM-Aktivator-Komponente zu implementieren.
+In C++ / WinRT können Sie implementieren Co-Klassen und Klassenfactorys, durch eine Ableitung von der [**WinRT:: Implements**](/uwp/cpp-ref-for-winrt/implements) Basisstruktur. Unmittelbar nach der drei using--Direktiven oben gezeigten (und vor `main`), fügen Sie diesen Code, um Ihre Popupbenachrichtigung Benachrichtigung COM-Aktivator Komponente zu implementieren.
 
 ```cppwinrt
 static constexpr GUID callback_guid // BAF2FA85-E121-4CC9-A942-CE335B6F917F
@@ -93,15 +91,22 @@ std::wstring const this_app_name{ L"ToastAndCallback" };
 struct callback : winrt::implements<callback, INotificationActivationCallback>
 {
     HRESULT __stdcall Activate(
-        [[maybe_unused]] LPCWSTR app,
-        [[maybe_unused]] LPCWSTR args,
+        LPCWSTR app,
+        LPCWSTR args,
         [[maybe_unused]] NOTIFICATION_USER_INPUT_DATA const* data,
         [[maybe_unused]] ULONG count) noexcept final
     {
-        std::wcout << this_app_name << L" has been called back from a notification." << std::endl;
-        std::wcout << L"Value of the 'app' parameter is '" << app << L"'." << std::endl;
-        std::wcout << L"Value of the 'args' parameter is '" << args << L"'." << std::endl;
-        return S_OK;
+        try
+        {
+            std::wcout << this_app_name << L" has been called back from a notification." << std::endl;
+            std::wcout << L"Value of the 'app' parameter is '" << app << L"'." << std::endl;
+            std::wcout << L"Value of the 'args' parameter is '" << args << L"'." << std::endl;
+            return S_OK;
+        }
+        catch (...)
+        {
+            return winrt::to_hresult();
+        }
     }
 };
 
@@ -137,9 +142,9 @@ Die Co-Klasse, die wir gerade implementiert wird als den *COM-Aktivator* für Be
 
 ## <a name="best-practices-for-implementing-com-methods"></a>Bewährte Methoden für die Implementierung von COM-Methoden
 
-Techniken für die Fehlerbehandlung und für das Ressourcenmanagement können Hand in Hand wechseln. Es ist mehr praktische Art und Weise Ausnahmen als Fehlercodes verwendet werden. Und wenn Sie den Kauf Ressource einsetzen Initialisierung (RAII) Ausdrucksweise lautet, dann können Sie vermeiden: explizit Suchen nach Fehlercodes; und dann durch die explizite Freigabe von Ressourcen. Auf diese Weise werden Ihr Codes mehr als notwendig entwickelt und gibt Fehler ausreichend Orten ausblenden. Stattdessen verwenden Sie RAII und Abfangen von Ausnahmen. Auf diese Weise können die Ressource Zuweisungen sind ausnahmesicheren, und Ihr Code ist einfach.
+Techniken für die Fehlerbehandlung und für das Ressourcenmanagement können Hand in Hand wechseln. Es ist mehr praktische Art und Weise Ausnahmen als Fehlercodes verwendet werden. Und wenn Sie die Ressource Erwerb ist Initialisierung (RAII) Ausdrucksweise einsetzen, dann können nicht explizit Suchen nach Fehlercodes und dann durch die explizite Freigabe von Ressourcen. Kontrollen expliziten den Code mehr als notwendig entwickelt, und es bietet Fehler ausreichend Orten zum Ausblenden. Verwenden Sie stattdessen RAII, und Ausnahmen auslösen/Catch. Auf diese Weise können die Ressource Zuweisungen sind ausnahmesicheren, und Ihr Code ist einfach.
 
-Allerdings ermöglicht Ihnen Ausnahmen Ihrer COM-Methode Implementierungen als Escapezeichen für darf nicht an. Können Sie sicherstellen, dass mithilfe der `noexcept` Spezifizierer auf Ihre COM-Methoden. Es ist in Ordnung für Ausnahmen an einer beliebigen Stelle in der Aufruf der Methode ausgelöst werden, solange Sie behandelt werden, bevor die Methode beendet wird.
+Allerdings ermöglicht Ihnen Ausnahmen Ihrer COM-Methode Implementierungen als Escapezeichen für darf nicht an. Können Sie sicherstellen, dass mithilfe der `noexcept` Spezifizierer auf Ihre COM-Methoden. Es ist in Ordnung für Ausnahmen an einer beliebigen Stelle in der Aufruf der Methode ausgelöst werden, solange Sie behandelt werden, bevor die Methode beendet wird. Wenn Sie verwenden `noexcept`, aber Sie können dann eine Ausnahme die Methode als Escapezeichen für, dann ist die Anwendung zu beenden.
 
 ## <a name="add-helper-types-and-functions"></a>Hinzufügen von Hilfstypen und Funktionen
 
@@ -376,3 +381,13 @@ void LaunchedFromNotification(HANDLE consoleHandle, INPUT_RECORD & buffer, DWORD
 ## <a name="how-to-test-the-example-application"></a>Wie Sie die Beispiel-Anwendung zu testen
 
 Erstellen Sie die Anwendung, und klicken Sie dann als Administrator die Registrierung und andere Setup auszuführenden Code dazu führen, dass mindestens einmal ausgeführt. Ob Sie es als Administrator ausführen, und drücken Sie dann ' t "verursachen ein Popup angezeigt werden. Sie können dann die Schaltfläche **Rückruf ToastAndCallback** entweder direkt aus der Popupbenachrichtigung Knacken nach oben oder über das Info-Center und Ihre Anwendung gestartet, instanziiert Co-Klasse und die **INotificationActivationCallback :: Aktivieren von** Methode ausgeführt.
+
+## <a name="important-apis"></a>Wichtige APIs
+* [IInspectable-Schnittstelle](https://msdn.microsoft.com/library/br205821)
+* [IUnknown Schnittstelle](https://msdn.microsoft.com/library/windows/desktop/ms680509)
+* [winrt::implements Strukturvorlage](/uwp/cpp-ref-for-winrt/implements)
+
+## <a name="related-topics"></a>Verwandte Themen
+* [Erstellen von APIs mit C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis)
+* [Verwenden von COM-Komponenten mit C++ / WinRT](consume-com.md)
+* [Senden einer lokalen Popupbenachrichtigung](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast)

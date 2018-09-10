@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, portieren, migrieren, interoperabilität, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 02aa86231cd611bd20a386d3da2f9d2b6dc5df66
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.openlocfilehash: d265189c338d95a8c8f206fd196e99d5b0a1e068
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3666115"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3823644"
 ---
 # <a name="interop-between-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-and-ccx"></a>Interoperabilität zwischen [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) und C++/CX
 In diesem Thema werden zwei Hilfsfunktionen gezeigt, die verwendet werden können, um zwischen [C++ / CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live)- und C++ / WinRT-Objekten zu konvertieren. Sie können diese verwenden, um Interoperabilität zwischen Code, der die beiden sprachprojektionen verwendet, oder Sie können die Funktionen verwenden, wie Sie den Code schrittweise von C++ verschieben / CX nach C++ / WinRT (finden Sie unter [Wechsel zu C++ / WinRT von C++ / CX](move-to-winrt-from-cx.md)).
@@ -111,7 +111,7 @@ MainPage::MainPage()
 
 ## <a name="important-apis"></a>Wichtige APIs
 * [IUnknown Schnittstelle](https://msdn.microsoft.com/library/windows/desktop/ms680509)
-* [QueryInterface](https://msdn.microsoft.com/library/windows/desktop/ms682521)
+* [QueryInterface-Funktion](https://msdn.microsoft.com/library/windows/desktop/ms682521)
 * [winrt::get_abi Funktion](/uwp/cpp-ref-for-winrt/get-abi)
 * [winrt::get_abi Funktion](/uwp/cpp-ref-for-winrt/put-abi)
 
