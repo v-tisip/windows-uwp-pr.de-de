@@ -11,11 +11,11 @@ keywords: Windows 10, Uwp, verbundenen Geräten, remote-Systemen, "ROME" Projekt
 ms.assetid: 7f39d080-1fff-478c-8c51-526472c1326a
 ms.localizationpriority: medium
 ms.openlocfilehash: d3efb7e094ce1464028dadaa14c6f0bfb3f3b214
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3663329"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3821914"
 ---
 # <a name="connected-apps-and-devices-project-rome"></a><span data-ttu-id="ad1f7-104">Verbundene Apps und Geräte (Project Rome)</span><span class="sxs-lookup"><span data-stu-id="ad1f7-104">Connected apps and devices (Project Rome)</span></span>
 

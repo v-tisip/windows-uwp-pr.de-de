@@ -15,11 +15,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 714a1af932dfb8d5b0aab5c84437f92d5c2bd90e
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3665784"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3821694"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a><span data-ttu-id="caf34-103">Navigationsverlauf und Rückwärtsnavigation für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="caf34-103">Navigation history and backwards navigation for UWP apps</span></span>
 

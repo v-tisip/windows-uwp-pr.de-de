@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, erste App, Hallo Welt
 ms.localizationpriority: medium
 ms.openlocfilehash: 950b2f3fac44c8350a51fd5c1b7071f05c92d746
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3659399"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3823564"
 ---
 # <a name="create-a-hello-world-app-xaml"></a><span data-ttu-id="d60b4-104">Erstellen der App „Hello, world“ (XAML)</span><span class="sxs-lookup"><span data-stu-id="d60b4-104">Create a "Hello, world" app (XAML)</span></span>
 

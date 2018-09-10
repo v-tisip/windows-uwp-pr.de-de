@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Threads, Threadpool
 ms.localizationpriority: medium
 ms.openlocfilehash: 29d7fc361e446207c8e14f83ca3f663bd5072e6e
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3663465"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3822224"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a><span data-ttu-id="0ac46-104">Übermitteln einer Arbeitsaufgabe an den Threadpool</span><span class="sxs-lookup"><span data-stu-id="0ac46-104">Submit a work item to the thread pool</span></span>
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, education
 ms.localizationpriority: medium
 ms.openlocfilehash: 3193525316d085e56244d6f03da99e3e07c6539f
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3664375"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3819904"
 ---
 # <a name="troubleshoot-microsoft-take-a-test-with-the-event-viewer"></a><span data-ttu-id="09ec3-103">Problembehandlung bei Microsoft Prüfung mithilfe der Ereignisanzeige.</span><span class="sxs-lookup"><span data-stu-id="09ec3-103">Troubleshoot Microsoft Take a Test with the event viewer</span></span>
 

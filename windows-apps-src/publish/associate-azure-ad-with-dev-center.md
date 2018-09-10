@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Azure Ad, Azure-Mandant, AAD-Mandant, Azure AD-Mandant, Mandantenverwaltung, Mandanten
 ms.localizationpriority: medium
 ms.openlocfilehash: dd729d76705849c981516109da39bbd27c140286
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3662978"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3821964"
 ---
 # <a name="associate-azure-active-directory-with-your-dev-center-account"></a><span data-ttu-id="d7e03-103">Zuordnen Ihres Azure Active Directory zum Dev Center-Konto</span><span class="sxs-lookup"><span data-stu-id="d7e03-103">Associate Azure Active Directory with your Dev Center account</span></span>
 

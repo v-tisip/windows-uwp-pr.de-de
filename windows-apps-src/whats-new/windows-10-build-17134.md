@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e2f12190c405ad611cf5b884b82c4a430aa5264f
-ms.sourcegitcommit: 00d27738325d6db5b5e481911ae7fac0711b05eb
+ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "3664154"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "3822774"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a><span data-ttu-id="d0839-104">Neuigkeiten für Entwickler in Windows10, Build 17134</span><span class="sxs-lookup"><span data-stu-id="d0839-104">What's New in Windows 10 for developers, build 17134</span></span>
 
