@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 84e12d6c3e25a18902aaa55011949dd5b5ff97ca
-ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "3822984"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3849684"
 ---
 # <a name="shadows-in-windows-ui"></a><span data-ttu-id="682e5-104">Schatten in Windows-UI</span><span class="sxs-lookup"><span data-stu-id="682e5-104">Shadows in Windows UI</span></span>
 

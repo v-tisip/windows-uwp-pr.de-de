@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste Microsoft Store-Analyse-API
 ms.localizationpriority: medium
 ms.openlocfilehash: 26bed64053e8de9a42ac01ed3262c7b0f41d1d42
-ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "3825850"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3848414"
 ---
 # <a name="access-analytics-data-using-store-services"></a><span data-ttu-id="b2fdf-104">Zugreifen auf Analysedaten mit Store-Diensten</span><span class="sxs-lookup"><span data-stu-id="b2fdf-104">Access analytics data using Store services</span></span>
 

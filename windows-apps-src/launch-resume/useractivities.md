@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 53aac2375d60df3cd9493f315b20431961378fe8
-ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "3825790"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3850044"
 ---
 # <a name="continue-user-activity-even-across-devices"></a><span data-ttu-id="4b271-104">Benutzeraktivitäten geräteübergreifend fortsetzen</span><span class="sxs-lookup"><span data-stu-id="4b271-104">Continue user activity, even across devices</span></span>
 

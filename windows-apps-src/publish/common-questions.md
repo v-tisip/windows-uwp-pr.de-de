@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 89745d0bb93b76e4497d6cb5c57f4e6c091c8bd7
-ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "3822613"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3849934"
 ---
 # <a name="common-questions-about-ad-campaigns"></a><span data-ttu-id="359f1-103">Häufige Fragen zu Anzeigenkampagnen</span><span class="sxs-lookup"><span data-stu-id="359f1-103">Common questions about ad campaigns</span></span>
 

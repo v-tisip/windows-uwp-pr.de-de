@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Käufe, App-Verkäufe, App-Downloads, Installationen, Trichter, Käufe, Konvertierungen, Kanal, App-Seitenaufrufe
 ms.localizationpriority: medium
 ms.openlocfilehash: e6b4a3d8a10234e5f95e70f397a4de962a29c929
-ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "3825530"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3848724"
 ---
 # <a name="acquisitions-report"></a><span data-ttu-id="abe3c-103">Bericht „Käufe“</span><span class="sxs-lookup"><span data-stu-id="abe3c-103">Acquisitions report</span></span>
 
