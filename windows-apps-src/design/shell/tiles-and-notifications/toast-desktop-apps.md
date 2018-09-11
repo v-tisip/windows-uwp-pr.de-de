@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: Discover the different options desktop Win32 apps have for sending toast notifications
 title: Popupbenachrichtigungen über Desktop-Apps
 label: Toast notifications from desktop apps
@@ -11,12 +11,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Win32, Desktop, Popupbenachrichtigungen, Desktop-Brücke, Optionen zum Senden von Popups, COM-Server, COM-Aktivator, COM, gefälschter COM, kein COM, ohne COM, Senden von Popupbenachrichtigungen
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ffd6cfaeeaa8cc5f2b166a7749c565c252fbd26
-ms.sourcegitcommit: f91aa1e402f1bc093b48a03fbae583318fc7e05d
-ms.translationtype: HT
+ms.openlocfilehash: 9f54519fd0ddc975c1e57c2aebde583ef971850d
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "1917787"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3846764"
 ---
 # <a name="toast-notifications-from-desktop-apps"></a>Popupbenachrichtigungen über Desktop-Apps
 

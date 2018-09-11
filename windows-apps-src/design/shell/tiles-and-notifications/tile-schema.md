@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: The following article describes all of the properties and elements within tile content.
 title: Kachelinhaltsschema
 ms.assetid: 7CBC3BD5-D9C3-4781-8BD0-1F28039E1FA8
@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, Uwp, Kachel, Kachelbenachrichtigung, Kachelinhalt, Schema, Kachelnutzlast
 ms.localizationpriority: medium
-ms.openlocfilehash: 3211871526015c83e18237a561ed846ccbfb494d
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: d2baa2e2d7b8d68505159eb480ea3be78750f507
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1656415"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3845854"
 ---
 # <a name="tile-content-schema"></a>Kachelinhaltsschema
 
@@ -55,8 +55,8 @@ Der Visual-Teil der Kacheln enthält die visuellen Spezifikationen für alle Kac
 | **TileWide** | [TileBinding](#tilebinding) | Falsch | Geben Sie eine optionale Wide-Bindung an, um die Inhalte für die Wide-Kachelgröße anzugeben. |
 | **TileLarge** | [TileBinding](#tilebinding) | Falsch | Geben Sie eine optionale Large-Bindung an, um die Inhalte für die Large-Kachelgröße anzugeben. |
 | **Branding** | [TileBranding](#tilebranding) | Falsch | Die Form, die von der Kachel zum Anzeigen des Brands der App verwendet werden sollte. Erbt standardmäßig das Branding der Standardkachel. |
-| **DisplayName** | Zeichenfolge | Falsch | Eine optionale Zeichenfolge zum Überschreiben des Anzeigenamens der Kachel beim Anzeigen dieser Benachrichtigung. |
-| **Argumente** | Zeichenfolge | Falsch | Neues im Anniversary Update: Von der App definierte Daten, die über die Eigenschaft TileActivatedInfo von LaunchActivatedEventArgs an die App zurückgegeben werden wenn der Benutzer die App über die Live-Kachel startet. Dadurch wissen Sie, welche Kachelbenachrichtigung der Benutzer beim Tippen auf die Live-Kachel gesehen hat. Bei Geräten ohne Anniversary Update wird dies einfach ignoriert. |
+| **DisplayName** | string | Falsch | Eine optionale Zeichenfolge zum Überschreiben des Anzeigenamens der Kachel beim Anzeigen dieser Benachrichtigung. |
+| **Argumente** | Zeichenfolge | Falsch | Neues im Anniversary Update: Von der App definierte Daten, die über die Eigenschaft TileActivatedInfo von LaunchActivatedEventArgs an die App zurückgegeben werden, wenn der Benutzer die App über die Live-Kachel startet. Dadurch wissen Sie, welche Kachelbenachrichtigung der Benutzer beim Tippen auf die Live-Kachel gesehen hat. Bei Geräten ohne Anniversary Update wird dies einfach ignoriert. |
 | **LockDetailedStatus1** | string | Falsch | Wenn Sie dies angeben, müssen Sie auch eine TileWide-Bindung bereitstellen. Dies ist die erste Zeile des Texts, der auf dem Sperrbildschirm angezeigt wird, wenn der Benutzer die Kachel der App als detaillierte Status-App ausgewählt hat. |
 | **LockDetailedStatus2** | string | Falsch | Wenn Sie dies angeben, müssen Sie auch eine TileWide-Bindung bereitstellen. Dies ist die zweite Zeile des Texts, der auf dem Sperrbildschirm angezeigt wird, wenn der Benutzer die Kachel der App als detaillierten Status-App ausgewählt hat. |
 | **LockDetailedStatus3** | string | Falsch | Wenn Sie dies angeben, müssen Sie auch eine TileWide-Bindung bereitstellen. Dies ist die dritte Zeile des Texts, der auf dem Sperrbildschirm angezeigt wird, wenn der Benutzer die Kachel der App als detaillierten Status-App ausgewählt hat. |
@@ -72,7 +72,7 @@ Das Binding-Objekt enthält die visuellen Inhalte für eine bestimmte Kachelgrö
 |---|---|---|---|
 | **Inhalt** | [ITileBindingContent](#itilebindingcontent) | Falsch | Die visuellen Inhalte, die auf der Kachel angezeigt werden. [TileBindingContentAdaptive](#tilebindingcontentadaptive), [TileBindingContentIconic](#TileBindingContentIconic), [TileBindingContentContact](#TileBindingContentContact), [TileBindingContentPeople](#TileBindingContentPeople) oder [TileBindingContentPhotos](#TileBindingContentPhotos). |
 | **Branding** | [TileBranding](#tilebranding) | Falsch | Die Form, die von der Kachel zum Anzeigen des Brands der App verwendet werden sollte. Erbt standardmäßig das Branding der Standardkachel. |
-| **DisplayName** | Zeichenfolge | Falsch | Eine optionale Zeichenfolge zum Überschreiben des Anzeigenamens der Kachel für diese Kachelgröße. |
+| **DisplayName** | string | Falsch | Eine optionale Zeichenfolge zum Überschreiben des Anzeigenamens der Kachel für diese Kachelgröße. |
 | **Argumente** | Zeichenfolge | Falsch | Neues im Anniversary Update: Von der App definierte Daten, die über die Eigenschaft TileActivatedInfo von LaunchActivatedEventArgs an die App zurückgegeben werden, wenn der Benutzer die App über die Live-Kachel startet. Dadurch wissen Sie, welche Kachelbenachrichtigung der Benutzer beim Tippen auf die Live-Kachel gesehen hat. Bei Geräten ohne Anniversary Update wird dies einfach ignoriert. |
 | **BaseUri** | Uri | Falsch | Eine grundlegende Standard-URL, die mit relativen URLs in Bildquellattributen kombiniert wird. |
 | **AddImageQuery** | bool? | Falsch | Legen Sie den Wert auf „Wahr“ fest, um an die in der Popupbenachrichtigung angegebene Bild-URL eine Abfragezeichenfolge anzufügen. Verwenden Sie dieses Attribut, wenn Ihr Server Bilder hostet und Abfragezeichenfolgen verarbeiten kann, indem er entweder basierend auf den Abfragezeichenfolgen eine Bildvariante abruft oder die Abfragezeichenfolge ignoriert und das Bild wie angegeben ohne die Abfragezeichenfolge zurückgibt. Diese Abfragezeichenfolge gibt Skalierung, Kontrasteinstellung und Sprache an. So wird beispielsweise ein in der Benachrichtigung angegebener Wert „www.website.com/images/hello.png“ zu „www.website.com/images/hello.png?ms-scale=100&ms-contrast=standard&ms-lang=en-us“ |

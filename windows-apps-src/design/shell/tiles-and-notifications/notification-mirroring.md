@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: Learn how to use notification mirroring on your toast notifications.
 title: Spiegelung der Benachrichtigung
 label: Notification mirroring
@@ -11,12 +11,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, Popup, Info-Center in der Cloud, Spiegelung der Benachrichtigung, Benachrichtigung, geräteübergreifend
 ms.localizationpriority: medium
-ms.openlocfilehash: 6eda26c37bc95943691063c3d21d39a6c7a1d7b2
-ms.sourcegitcommit: eead3c00b27d9f66f79ec08c81a97e91dc1fdb3c
-ms.translationtype: HT
+ms.openlocfilehash: eb8e2ceb16add551f3c8e3a71a69d36b99f21c62
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2018
-ms.locfileid: "1523268"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3845474"
 ---
 # <a name="notification-mirroring"></a>Spiegelung der Benachrichtigung
 
@@ -29,7 +29,7 @@ Benutzer können mit der Spiegelung Benachrichtigung und Cortana Handy-Benachric
 
 <img alt="Notification mirroring diagram" src="images/toast-mirroring.gif" width="350"/>
 
-Entwickler haben zwei Vorteile bei der Spiegelung von Benachrichtigung: die gespiegelten Benachrichtigungen führen zu weiterem Interesse der Benutzer mit dem Dienst, und darüber hinaus ermöglichen Sie den Benutzern, Ihre Windows Store-Desktop-Apps zu entdecken. Ihre Benutzer wissen möglicherweise nicht einmal, was für eine bemerkenswerte UWP-App für ihren Windows10-Desktop verfügbar ist. Wenn Benutzer die gespiegelte Benachrichtigung auf dem Handy empfangen, können sie auf die Popupbenachrichtigung klicken und werden zum Windows Store weitergeleitet, von dem sie Ihre UWP-Desktop-App installieren können.
+Entwickler haben zwei Vorteile von Spiegelung der Benachrichtigung: die gespiegelten Benachrichtigungen führen zu weiterem für Benutzer mit Ihrem Dienst, und darüber hinaus ermöglichen Sie Benutzern, Ihre Microsoft Store-desktop-app zu entdecken! Ihre Benutzer wissen möglicherweise nicht einmal, was für eine bemerkenswerte UWP-App für ihren Windows10-Desktop verfügbar ist. Wenn Benutzer die gespiegelte Benachrichtigung auf dem Handy empfangen, können Benutzer klicken Sie auf die Popupbenachrichtigung an den Microsoft Store weitergeleitet, in denen sie Ihre UWP-desktop-app installieren können.
 
 Die Spiegelung funktioniert mit den Windows Phone und Android. Benutzer müssen bei Cortana und auf ihrem Handy und dem Desktop angemeldet sein, damit die Spiegelung der Benachrichtigung funktioniert.
 
