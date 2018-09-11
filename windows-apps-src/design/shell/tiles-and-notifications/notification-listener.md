@@ -1,5 +1,5 @@
 ---
-author: anbare
+author: andrewleader
 Description: Learn how to use Notification Listener to access all of the user's notifications.
 title: Notification-Listener
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, Uwp, notification listener, Usernotificationlistener, Dokumentation, Zugriff auf Benachrichtigungen
 ms.localizationpriority: medium
-ms.openlocfilehash: 00774817574c209826050a084bba77084d404ace
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: f4d8cb9ef7589bd8f0c56586ab8fcfec7c1f01e3
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674617"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3850584"
 ---
 # <a name="notification-listener-access-all-notifications"></a>Notification-Listener: Zugriff auf alle Benachrichtigungen
 
@@ -281,19 +281,17 @@ foreach (uint id in toBeRemoved)
 ## <a name="foreground-event-for-notification-addeddismissed"></a>Vordergrundereignis für hinzugefügt/geschlossene Benachrichtigungen
 
 > [!IMPORTANT] 
-> Bekanntes Problem: Das Ereignis im Vordergrund funktioniert nicht (es gibt keine direkt Pläne, dies zu beheben). 
+> Bekanntes Problem: das Ereignis im Vordergrund bewirkt eine Schleife CPU auf die aktuellen Versionen von Windows und zuvor funktioniert nicht davor. Verwenden Sie nicht das Ereignis im Vordergrund. Ein bevorstehenden Windows Update werden wir dieses Problem zu beheben.
 
-Wenn Sie ein Szenario haben, das das Vordergrundereignis erfordert, lassen Sie es uns bitte wissen. Allerdings sollten die meisten (wenn nicht alle) Szenarien ohnehin die Hintergrundaufgabe verwenden, da Ihre Anwendung höchstwahrscheinlich im Hintergrund für Benachrichtigungsereignisse aufgeweckt werden muss. Beispielsweise befindet sich Ihre App für Wearables selten im Vordergrund und muss über neue Benachrichtigungen aus dem Hintergrund informiert werden.
-
-Dank des [gemeinsamen Prozessmodells](../../../launch-resume/create-and-register-an-inproc-background-task.md) ist es zudem mühelos möglich, Hintergrundaufgaben aus der Vordergrund-App zu starten. Wenn Sie Vordergrundereignisse empfangen möchten, verwenden Sie einfach den Hintergrund-Trigger mit dem gemeinsamen Prozessmodell.
+Anstatt das Ereignis im Vordergrund, verwenden Sie für eine Hintergrundaufgabe [einzelprozessmodell](../../../launch-resume/create-and-register-an-inproc-background-task.md) den zuvor aufgeführten Code. Die Hintergrundaufgabe zudem können Sie Ereignis änderungsbenachrichtigungen beide erhalten, während Ihre app geschlossen ist oder ausgeführt wird.
 
 ```csharp
-// Subscribe to foreground event
+// Subscribe to foreground event (DON'T USE THIS)
 listener.NotificationChanged += Listener_NotificationChanged;
  
 private void Listener_NotificationChanged(UserNotificationListener sender, UserNotificationChangedEventArgs args)
 {
-    // NOTE: This event DOES NOT WORK. Use the background task instead.
+    // NOTE: This event WILL CAUSE CPU LOOPS, DO NOT USE. Use the background task instead.
 }
 ```
 

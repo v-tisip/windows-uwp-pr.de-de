@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d6565f56f7105872d14b7b1ce768f4240e0b83b
-ms.sourcegitcommit: f5cf806a595969ecbb018c3f7eea86c7a34940f6
+ms.openlocfilehash: 9ded8fb8a9d391ec48b46b0795b901dc403e1f30
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "3821304"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3848794"
 ---
 # <a name="desktop-bridge"></a>Desktop-Brücke
 
@@ -74,7 +74,7 @@ Der Desktop App Converter übersetzt die Aktionen des Installationsprogramms auf
 
 :heavy_check_mark: Registrieren Ihrer öffentlichen COM-Server.
 
-:heavy_check_mark: Erstellen eines Zertifikats, das Sie verwenden können, um Ihre App auszuführen.
+: Heavy_check_mark: generiert ein Zertifikat, das Sie verwenden können, um Ihre app auszuführen.
 
 :heavy_check_mark: Überprüft Ihre App auf Anforderungen der Desktop-Brücke und des Microsoft Stores.
 

@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: Windows10, UWP, Titelleiste
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 43e727100872421ac519a7c00363e6f6eeaf832c
-ms.sourcegitcommit: 4b6c197e1567d86e19af3ab5da516c022f1b6dfb
-ms.translationtype: HT
+ms.openlocfilehash: 7c3e0e6ec7331e860c9153e2a2e29a51fb5848bd
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "1877132"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3849874"
 ---
 # <a name="designing-for-sets"></a>Entwerfen für Sets
 
@@ -119,7 +119,7 @@ Wenn Sie Inhalte oder Funktionalität in der benutzerdefinierten Titelleisten-UI
 
 Um sicherzustellen, dass Ihr App-Symbol in einem Set optimal aussieht, sollten Sie ein alternatives, nicht belegtes Symbol für Ihre App bereitstellen. (Das auf der Registerkarte Ihrer App verwendete App-Symbol ist das gleiche Symbol, das in der Taskleiste verwendet wird.) Der Zweck des alternativen Symbols ist, vor jeder Hintergrundfarbe gut auszusehen. Das alternative Symbol wird verwendet, falls verfügbar.
 
-Geben Sie in Ihrem App-Manifest zusätzlich zu Ihrem regulären Symbol ein anderes unbelegtes Symbol an. Weitere Informationen dazu finden Sie im Abschnitt [Richtlinien für Kachel- und Symbol-Assets](./tiles-and-notifications/app-assets.md). Das anzugebende Symbol ist im Abschnitt „Target-size list assets without plate” des Artikels [Asset-Typen](./tiles-and-notifications/app-assets.md#asset-types) dokumentiert.
+Geben Sie in Ihrem App-Manifest zusätzlich zu Ihrem regulären Symbol ein anderes unbelegtes Symbol an. Weitere Informationen finden Sie in der [App-Symbole und Logos](/windows/uwp/design/style/app-icons-and-logos). Das anzugebende Symbol wird als "Target-Size List Assets without Plate" im Abschnitt [Weitere Informationen zur app-Symbolressourcen](/windows/uwp/design/style/app-icons-and-logos#more-about-app-icon-assets) des Artikels dokumentiert.
 
 Wenn Sie im App-Manifest kein alternatives Symbol angeben, wird das System das Kachelsymbol wieder mit der Registerkartenfarbe versehen und es so verwenden.
 

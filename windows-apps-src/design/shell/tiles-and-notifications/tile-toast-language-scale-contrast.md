@@ -10,16 +10,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b0992a8d86b17648b748bb792fdf250f29801d0
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 87aafe36d05298a8fa157426e39c530190f98908
+ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1673217"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "3849444"
 ---
 # <a name="tile-and-toast-notification-support-for-language-scale-and-high-contrast"></a>Kachel- und Toast-Mitteilungsunterstützung für Sprache, Skalierung und hohen Kontrast
 
-Ihre Kacheln und Popups können Zeichenfolgen und Bilder laden, die speziell auf die Sprache, den [Skalierungsfaktor für die Anzeige](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md), das Design, den hohen Kontrast und anderen Laufzeitkontexte angepasst wurden. Hintergrundinformationen zur Verwendung von Qualifizierern in den Namen von Bildressourcendateien finden Sie unter [Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung und andere Eigenschaften](../../../app-resources/tailor-resources-lang-scale-contrast.md) und [Größentabellen für Ressourcen](app-assets.md#asset-size-tables).
+Ihre Kacheln und Popups können Zeichenfolgen und Bilder laden, die speziell auf die Sprache, den [Skalierungsfaktor für die Anzeige](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md), das Design, den hohen Kontrast und anderen Laufzeitkontexte angepasst wurden. Hintergrundinformationen zur Verwendung von Qualifizierern in den Namen der Ressourcendateien finden Sie unter [Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung und anderen](../../../app-resources/tailor-resources-lang-scale-contrast.md) und [App-Symbole und Logos](/windows/uwp/design/style/app-icons-and-logos).
 
 Weitere Informationen zu einer Werterhöhung Ihrer App durch Lokalisierung finden Sie unter [Globalisierung und Lokalisierung](../../globalizing/globalizing-portal.md).
 
