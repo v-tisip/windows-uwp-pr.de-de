@@ -8,23 +8,23 @@ ms.date: 08/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, Uwp, überprüfen, Kommentar, Verfassers
+keywords: Windows 10 Uwp Überprüfung, Kommentar, Prüfer
 ms.localizationpriority: medium
 ms.openlocfilehash: 8891aecb904f69e3f77ec5892d9234f79db46ff0
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3849764"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3931585"
 ---
 # <a name="reviews-report"></a>Rezensionsbericht
 
 
-Der Bericht **"Rezensionen"** im Windows Dev Center-Dashboard gibt Aufschluss über die Rezensionen (Kommentare), die Kunden beim Bewerten Ihrer app im Store eingegeben haben.
+Bericht **prüft** im Windows-Entwicklungscenter Dashboard können Sie die Überprüfung (Kommentare), die Kunden bei der Bewertung Ihrer app im Speicher eingegeben.
 
-Sie können diese Daten in Ihrem Dashboard anzeigen oder den [Bericht herunterladen](download-analytic-reports.md), um ihn offline anzuzeigen. Alternativ können Sie diese Daten mithilfe der [app-Rezensionen get](../monetize/get-app-reviews.md) -Methode in der [Microsoft Store-Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md)programmgesteuert abrufen.
+Sie können diese Daten in Ihrem Dashboard anzeigen oder den [Bericht herunterladen](download-analytic-reports.md), um ihn offline anzuzeigen. Alternativ können Sie diese Daten mithilfe der [app Bewertungen](../monetize/get-app-reviews.md) -Methode in [Microsoft Store Analytics REST API](../monetize/access-analytics-data-using-windows-store-services.md)programmgesteuert abrufen.
 
-Sie können auch auf Kunden Rezensionen [direkt von dieser Seite](respond-to-customer-reviews.md), programmgesteuert [über die Microsoft Store-Rezensionen-API](../monetize/submit-responses-to-app-reviews.md), oder mithilfe der [Dev Center-app](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws)reagieren.
+Sie können auch für Kunden Bewertungen [direkt von dieser Seite](respond-to-customer-reviews.md)programmgesteuert [API Bewertungen Microsoft Store](../monetize/submit-responses-to-app-reviews.md)oder mit [Developer Center app](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws)reagieren.
 
 > [!TIP]
 > Um Rezensionen, Bewertungen und Benutzerfeedback für alle Ihre Apps in den letzten 30Tagen anzusehen, erweitern Sie **Einbeziehen** im linken Navigationsmenü und wählen Sie **Kritiken und Feedback** aus. 
@@ -37,14 +37,14 @@ Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Re
 Sie können **Filter** erweitern, um alle angezeigten Rezensionen auf dieser Seite mit den folgenden Optionen zu filtern. Diese Filter werden nicht auf die Diagramme **Rezensionsübersicht** und **Durchschnittliche Bewertung im Laufe der Zeit** angewandt.
 
 -   **Bewertung**: Standardmäßig ist die Rezension „Alle Sterne“ aktiviert, Sie können jedoch einzelne Bewertungen (von 1 bis 5 Sternen) aktivieren bzw. deaktivieren, wenn Sie nur Rezensionen mit einer bestimmten Sternebewertung anzeigen möchten.
-- **Rezensionsinhalt**: die Standardeinstellung ist **Bewertungen mit rezensionsinhalt**, was bedeutet, dass nur Bewertungen mit Rezension Inhalt angezeigt werden. Sie können auswählen, **Alle** für die Anzeige aller Bewertungen, auch derjenigen, die keine Texte schriftliche Rezension enthalten. Beachten Sie, dass das Diagramm **Rezensionsübersicht** alle Rezensionen, unabhängig von Ihrer Auswahl immer angezeigt wird.
+- **Inhalt**: die Standardeinstellung ist **mit Informationen**, sodass nur Bewertungen überprüfen Inhalte angezeigt werden. Sie wählen **Alle** Anzeigen aller Bewertungen, auch diejenigen, die keine schriftliche Prüfung Text enthalten. Beachten Sie, dass **Ratings Projektstrukturplan** Diagramm immer unabhängig von Ihrer Wahl alle Testberichte anzeigen.
 -   **Betriebssystemversion**: Die Standardeinstellung ist **Alle**. Sie können eine bestimmte Betriebssystemversion auswählen, wenn auf dieser Seite nur Rezensionen von Kunden angezeigt werden sollen, die diese Betriebssystemversion verwenden.
 -   **Paketversion**: Die Standardeinstellung ist **Alle**. Wenn Ihre App mehr als ein Paket enthält, können Sie hier ein spezifisches Paket auswählen, um nur Rezensionen von Kunden anzuzeigen, die für die Rezension der App dieses Paket verwendet haben.
 -   **Antworten**: Die Standardeinstellung ist **Alle**. Sie können die Rezensionen so filtern, dass nur die Kundenrezensionen angezeigt werden, auf die Sie [geantwortet](respond-to-customer-reviews.md) haben, oder nur die, auf die Sie noch nicht geantwortet haben.
 -   **Updates**: Die Standardeinstellung ist **Alle**. Sie können die Rezensionen so filtern, dass nur diejenigen angezeigt werden, die vom Kunden aktualisiert wurden, nachdem Sie auf eine [Rezension geantwortet haben](respond-to-customer-reviews.md), oder nur die, die noch nicht vom Kunden aktualisiert wurden.
 -   **Markt**: Die Standardeinstellung ist **Alle Märkte**. Sie können einen bestimmten Markt auswählen, wenn auf dieser Seite nur Rezensionen der in diesem Markt ansässigen Kunden angezeigt werden sollen.
 -   **Gerätetyp**: Der Standardfilter ist **Alle Geräte**. Sie können einen bestimmten Gerätetyp auswählen, wenn auf dieser Seite nur Rezensionen von Kunden angezeigt werden sollen, die ein Gerät dieses Typs verwenden.
--   **Kategoriename**: Der Standardfilter ist **Immer**. Sie können eine bestimmte [Insight Kategorie](#review-insight-categories) auswählen, um nur Rezensionen anzuzeigen, die wir dieser Kategorie zugeordnet haben. 
+-   **Kategoriename**: Der Standardfilter ist **Immer**. Eine bestimmte [Kategorie Insight überprüfen](#review-insight-categories) können Sie nur Berichte anzeigen, die wir mit dieser Kategorie zugeordnet haben. 
 
 > [!TIP]
 > Wenn auf der Seite keine Rezensionen zu sehen sind, stellen Sie sicher, dass Sie mit Ihrer Filterauswahl nicht alle Rezensionen ausgeschlossen haben. Wenn Sie z.B. nach einem Zielbetriebssystem filtern, das von Ihrer App nicht unterstützt wird, werden keine Rezensionen angezeigt.
@@ -52,7 +52,7 @@ Sie können **Filter** erweitern, um alle angezeigten Rezensionen auf dieser Sei
 
 ## <a name="ratings-breakdown"></a>Rezensionsübersicht
 
-Das Diagramm **Rezensionsübersicht** erscheint am Anfang dieser Bericht so, dass Sie einen kurzen Überblick über die folgenden können: 
+Die **Bewertung Aufschlüsselung** Diagramm am Anfang des Berichts, dass man einen Blick auf die folgenden: 
 - Den durchschnittlichen Bewertungsstern der Rezensionsübersicht für die App.
 - Die Gesamtanzahl der Bewertungen Ihrer App in den letzten 12Monaten.
 - Die Gesamtanzahl der Bewertungen für jede Bewertung von Sternen.
@@ -63,16 +63,16 @@ Das Diagramm **Rezensionsübersicht** erscheint am Anfang dieser Bericht so, das
 > [!TIP]
 > Bei der durchschnittlichen Bewertung, die einem Kunden im Store angezeigt wird, werden der Markt und der Gerätetyp des Kunden berücksichtigt. Daher können die Inhalte in diesem Bericht davon abweichen.
 
-Beachten Sie, dass dieses Diagramm immer alle Rezensionen enthält, auch wenn Sie in den Seitenfilter **Rezensionsinhalt** **Bewertungen mit Inhalt zu überprüfen ausgewählt** .
+Beachten Sie, dass das Diagramm immer alle Ihre Beiträge auch wenn **mit Inhalt überprüfen** in den Seitenfilter **Inhalt** ausgewählt.
 
-Dieses Diagramm kann auch im [Bericht "Bewertungen"](ratings-report.md)sowie weitere Informationen zu Ihrer app-Bewertungen angezeigt werden.
+Dieses Diagramm wird auch in der [Bewertung Bericht](ratings-report.md)Details über Ihre app Bewertung angezeigt.
 
 
-< Span Id = "Rezension--Kategorien der rezensionsstatistik / >
+< Span Id = "Überprüfung Insight Kategorien / >
 
-## <a name="insight-categories"></a>Kategorien der rezensionsstatistik
+## <a name="insight-categories"></a>Insight-Kategorien
 
-Die **Kategorien der Rezensionsstatistik** Diagrammgruppen möglicherweise Ihre Rezensionen nach Kategorien zu gruppieren, die wir ermittelt haben den Rezension zugeordnet.
+Diagramm **Insight** Kategorien können Ihre Beiträge nach Kategorien, die wir festgestellt haben die Überprüfung zugeordnet.
 
 > [!NOTE]
 > Rezensionen, die weniger als 24 Stunden alt sind bzw. in einer anderen Sprache als Englisch angegeben wurden, sind nicht darin enthalten, wenn Berichte nach Kategorien anzeigt werden.
@@ -88,7 +88,7 @@ Jede Kundenrezension enthält Folgendes:
 
 -   Den vom Kunden eingegebenen Titel und Rezensionstext. (Von Kunden unter Windows Phone 8.1 und früher verfasste Rezensionen haben keinen Titel.)
 -   Das Datum der Rezension.
--   Der Name des Verfassers, wie im Microsoft Store angezeigt wird.
+-   Der Name des Bearbeiters wie wird im Microsoft Store.
 -   Das Land/die Region des Verfassers.
 -   Die Paketversion der App, die auf dem Kundengerät installiert war, als die Rezension geschrieben wurde. (Für Rezensionen, die online abgegebenen oder von Kunden mit Windows 8.1 oder einem früheren Betriebssystem geschrieben wurden, ist diese Information nicht verfügbar.)
 -   Die Betriebssystemversion des Geräts, das der Kunde beim Hinterlassen der Rezension verwendet hat.
@@ -97,9 +97,9 @@ Jede Kundenrezension enthält Folgendes:
 
 Beachten Sie, dass Kunden eine Bewertung für Ihre App abgeben können, ohne einen Kommentar zu schreiben. Daher sehen Sie normalerweise weniger Rezensionen als Bewertungen.
 
-Sie können die Rezensionen auf der Seite nach Datum und/oder Bewertung in aufsteigender oder absteigender Reihenfolge sortieren. Klicken Sie auf den Link **Sortieren nach** , um Optionen zum Sortieren nach **Datum** und/oder **Bewertung**anzuzeigen.
+Sie können die Rezensionen auf der Seite nach Datum und/oder Bewertung in aufsteigender oder absteigender Reihenfolge sortieren. Klicken Sie auf **Sortieren nach** , um Optionen zum Sortieren nach **Datum** oder **Bewertung**anzuzeigen.
 
-Sie können auch das Suchfeld verwenden, bestimmte Wörter oder Wortgruppen Rezensionen zu Ihrer app suchen. Beachten Sie, dass nur der ursprüngliche Rezension Text geschrieben vom Kunden durchsucht wird, auch wenn die Rezension in einer anderen Sprache geschrieben wurde. Übersetzte Rezension Text wird nicht durchsucht.
+Das Suchfeld können Sie nach bestimmten Wörtern oder Wortgruppen in Ihre app Bewertungen suchen. Beachten Sie, dass die ursprüngliche vom Kunden geschriebene Text überprüfen durchsucht, auch wenn die Überprüfung in einer anderen Sprache geschrieben wurde. Überprüfung übersetzter Text nicht durchsucht.
 
 > [!NOTE]
 > Es kann vorkommen, dass Rezensionen in diesem Bericht nicht mehr angezeigt werden. Dies kann passieren, da Microsoft Rezensionen aus dem Store entfernt, die von Kunden mit bestimmten Vorabversionen und Insider-Builds von Windows10 geschrieben werden. Wir tun dies, um die Möglichkeit einer negativen Rezension zu verringern, die durch ein Problem in einer Vorabversion des Windows-Builds verursacht wird. Unter Umständen entfernen wir auch Rezensionen aus dem Store, die als Spam erkannt wurden, unangemessene oder anstößige Inhalte enthalten oder anderweitig gegen die Richtlinien verstoßen. Diese Verfahrensweise soll die Benutzerfreundlichkeit für unsere Kunden erhöhen.
@@ -111,12 +111,12 @@ Rezensionen, die nicht in Ihrer bevorzugten Sprache verfasst wurden, werden stan
 
 Da die Rezensionen durch ein automatisches Übersetzungssystem übersetzt werden, sind die resultierenden Übersetzungen u.U. nicht immer exakt. Für den Fall, dass sie ihn mit der Übersetzung vergleichen oder auf andere Weise übersetzen lassen möchten, steht der Originaltext zur Verfügung.
 
-Wie bereits erwähnt, beim Durchsuchen von Rezensionen wird nur der Originaltext links vom Kunden durchsucht (und keine übersetzten Text), auch wenn **Rezensionen übersetzen** das überprüft haben.
+Wie bereits erwähnt, wenn die Bewerter suchen, wird nur der ursprüngliche Text links vom Kunden gesucht und nicht übersetzten Text selbst wenn **Übersetzen überprüft** das aktiviert haben.
 
 
 ## <a name="responding-to-customer-reviews"></a>Reagieren auf Kundenrezensionen
 
-Sie können Microsoft Store Dev Center-Dashboard, die [Microsoft Store-Rezensionen-API](../monetize/submit-responses-to-app-reviews.md)oder die [Dev Center-app](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) zum Senden von Antworten auf zahlreiche kundenrezensionen verwenden. Weitere Informationen finden Sie unter [Reagieren auf Kundenrezensionen](respond-to-customer-reviews.md).
+Microsoft Store Developer Center Dashboard, [überprüft Microsoft Store API](../monetize/submit-responses-to-app-reviews.md)oder [Developer Center app](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) können Sie Antworten auf viele Ihrer Kunden Berichte senden. Weitere Informationen finden Sie unter [Reagieren auf Kundenrezensionen](respond-to-customer-reviews.md).
 
 Im Folgenden finden Sie einige zusätzliche Aktionen, die Sie basierend auf den angezeigten Bewertungen und Rezensionen in Erwägung ziehen sollten.
 

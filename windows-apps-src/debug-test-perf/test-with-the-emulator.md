@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 17e5aa64fff2c42974dbb78ce3cdcff1ca414946
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3847624"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3931220"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Tests mit dem Emulator für Microsoft Windows10Mobile
 
@@ -29,9 +29,9 @@ Sie können Ihre universelle App mithilfe eines eindeutigen Windows10Mobile-Emul
 
 Ihr Computer muss folgende Anforderungen erfüllen:
 
-CPU (diese Einstellung können ggf. im BIOS aktiviert werden)
+CPU (diese Einstellung können gegebenenfalls im BIOS aktiviert werden)
 
--   Hardwareunterstützte Virtualisierung ([Überprüfen der Kompatibilität](https://www.microsoft.com/download/details.aspx?id=592)).
+-   Hardwareunterstützte Virtualisierung ([Kompatibilität überprüfen](https://www.microsoft.com/download/details.aspx?id=592)).
 -   SLAT (Second Level Address Translation)
 -   Hardwarebasierte Datenausführungsverhinderung (Data Execution Prevention, DEP)
 
@@ -49,11 +49,11 @@ Informationen zum Überprüfen der BIOS-Anforderungen finden Sie unter [So wird'
 
 Wählen Sie zum Überprüfen der RAM- und Betriebssystemanforderungen in der Systemsteuerung **System und Sicherheit** und anschließend **System**.
 
-Microsoft-Emulator für Windows 10 Mobile erfordert Visual Studio 2015 oder höher; Es ist nicht kompatibel mit früheren Versionen von Visual Studio.
+Microsoft-Emulator für Windows 10 Mobile erfordert Visual Studio 2015 oder höher. Es ist nicht abwärtskompatibel mit früheren Versionen von Visual Studio.
 
 Der Microsoft-Emulator für Windows10Mobile kann keine Apps laden, die für eine WindowsPhone-Betriebssystemversion vor Windows Phone OS7.1 konzipiert sind.
 
-## <a name="installing-uninstalling-and-running-the-emulator"></a>Installieren, deinstallieren und Ausführen des Emulators
+## <a name="installing-uninstalling-and-running-the-emulator"></a>Installieren, deinstallieren und den Emulator ausführen
 
 ### <a name="installing"></a>Installation
 Der Microsoft-Emulator für Windows10Mobile ist im Windows10-SDK enthalten. Das Windows10-SDK und der Emulator können zusammen mit Visual Studioinstalliert werden. Weitere Informationen finden Sie auf der [Downloadseite für Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=534785).
@@ -68,7 +68,7 @@ Wenn Sie den Microsoft-Emulator für Windows10Mobile deinstallieren, wird automa
 
 ### <a name="running"></a>Running
 
-Wählen Sie zum Ausführen einer app im Emulator **Ausführen** Dropdown-Menü in Visual Studio einfach einen emulierten Gerät.
+Führen Sie eine Anwendung im Emulator wählen Sie emulierten Gerät **ausgeführt** Dropdown-Menü in Visual Studio.
 
 ![Verfügbare Emulatoren mit Auflösung, Größe und Arbeitsspeicher](images/em-list.png)
 

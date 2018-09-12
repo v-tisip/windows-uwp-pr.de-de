@@ -11,18 +11,18 @@ keywords: Windows10, UWP, Version, Build, Versionen, Windows, auswählen, aktual
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
 ms.localizationpriority: medium
 ms.openlocfilehash: c7951098e576047b5c82da72b7c4e9118ffb7569
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3848704"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3934003"
 ---
 # <a name="choose-a-uwp-version"></a>Auswählen einer UWP-Version
 
 Jede Version von Windows10 hat neue und verbesserte Features für die UWP-Plattform hervorgebracht. Beim Erstellen einer UWP-App in Microsoft Visual Studio können Sie wählen, für welche Version die App bestimmt ist. Projekte mit [Standard .NET 2.0](https://docs.microsoft.com/dotnet/standard/net-standard) müssen eine **mindestens erforderliche Version** von 16299 oder höher verwenden.
 
 > [!WARNING]
-> UWP-Projekte, die in aktuellen Versionen von Visual Studio erstellt haben, können nicht in Visual Studio 2015 geöffnet werden.
+> UWP-Projekte, die in aktuellen Versionen von Visual Studio erstellt haben, können in Visual Studio 2015 geöffnet werden.
 
 In der folgenden Tabelle sind die verfügbaren Versionen von Windows10 beschrieben. Bitte beachten Sie, dass diese Tabelle nur für die Erstellung von UWP-Apps gilt, die nur auf Windows10 unterstützt werden. Sie können keine UWP-Apps für ältere Versionen von Windows entwickeln, und es muss [der entsprechende SDK-Build](http://go.microsoft.com/fwlink/?LinkId=821431) für die jeweilige Version installiert sein. 
 
@@ -35,7 +35,7 @@ In der folgenden Tabelle sind die verfügbaren Versionen von Windows10 beschrieb
 | Build 10586 (November Update, Version 1511) | Diese Version von Windows10 wurde im November2015 veröffentlicht. Zu den besonderen Funktionen gehören die Einführung von ORTC-APIs (Object Real-Time Communications) für die Videokommunikation in Microsoft Edge und Anbieter-APIs, damit Apps die Windows Hello-Gesichtsauthentifizierung nutzen können. [Weitere Informationen zu neuen Features in diesem Build](../whats-new/windows-10-build-10586.md) |
 | Build 10240 (Windows 10, Version 1507) | Dies ist die erste veröffentlichte Version von Windows10 (Juli2015). [Weitere Informationen zu neuen Features in diesem Build](../whats-new/windows-10-build-10240.md) |
 
-Es wird dringend empfohlen, dass neue Entwickler und Entwickler, die Code für eine allgemeine Zielgruppe schreiben immer den aktuellen Build von Windows (17134) verwenden. Für Entwickler, die Enterprise-Apps schreiben, ist es ratsam, die Unterstützung einer früheren **Mindestversion** in Erwägung zu ziehen.
+Es wird dringend empfohlen, dass neue Entwickler und Entwickler, die für das Schreiben von Code für eine allgemeine Zielgruppe ist es immer den aktuellen Build von Windows (17134) verwenden. Für Entwickler, die Enterprise-Apps schreiben, ist es ratsam, die Unterstützung einer früheren **Mindestversion** in Erwägung zu ziehen.
 
 ## <a name="whats-different-in-each-uwp-version"></a>Wodurch unterscheiden sich die einzelnen UWP-Versionen?
 
@@ -47,9 +47,9 @@ Referenzthemen, in denen alle Gerätefamilien mit ihren Versionen und alle API-V
 
 UWP unterstützt eine eingeschränkte Teilmenge von .NET-APIs, die unabhängig vom **Zielversion** oder die **Mindestversion** Ihres Projekts verfügbar sind. [Diese Seite enthält weitere Informationen zu verfügbaren Typen](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501(d=robot).aspx).
 
-Wenn Sie wiederverwendbare plattformübergreifende Bibliotheken erstellen möchten, wird auf UWP .NET Standard unterstützt. [.NET Standard Dokumentation](https://docs.microsoft.com/dotnet/standard/net-standard) enthält Informationen, die auf dem .NET Standard in die UWP-Versionen unterstützt wird.
+Wenn Sie wiederverwendbare plattformübergreifenden Bibliotheken erstellen möchten, wird auf UWP .NET Standard unterstützt. Der [.NET Standard-Dokumentation](https://docs.microsoft.com/dotnet/standard/net-standard) enthält Informationen, die auf dem .NET Standard in der UWP-Versionen unterstützt wird.
 
-Wenn Sie eine Desktop-app entwickeln, finden Sie stattdessen [.NET Framework-Versionen und Abhängigkeiten](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies) für ausführliche Informationen zur Verfügbarkeit von .NET Framework.
+Wenn Sie eine Desktop-app entwickeln, finden Sie stattdessen [.NET Framework-Versionen und Abhängigkeiten](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies) ausführliche Informationen zur Verfügbarkeit von .NET Framework.
 
 ## <a name="choose-which-version-to-use-for-your-app"></a>Auswählen der Version für die App
 

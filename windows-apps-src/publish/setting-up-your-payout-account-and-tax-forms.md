@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f7359b2ae40e9b53d5ab73ee93402b11beab629
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3849294"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3932477"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Einrichten von Auszahlungskonten und Steuerformularen.
 
 
 Damit Sie Geld aus app-Verkäufen im Microsoft Store zu erhalten, müssen Sie Ihr auszahlungskonto einrichten und die erforderlichen Steuerformulare ausfüllen.
 
-Falls Sie ausschließlich kostenlose Apps anbieten möchten (und keine In-App-Einkäufe bereitstellen oder Microsoft Advertising verwenden möchten), brauchen Sie kein Auszahlungskonto einzurichten oder Steuerformulare auszufüllen. Wenn Sie Ihre Meinung später ändern und entscheiden Sie, dass Sie apps (oder -Add-Ons) verkaufen möchten, können Sie Ihr auszahlungskonto einrichten und Ausfüllen der Steuerformulare zu diesem Zeitpunkt. Kostenpflichtige Apps und Add-Ons können erst übermittelt werden, wenn Sie Ihr Auszahlungskonto eingerichtet und Ihr Steuerprofil ausgefüllt haben.
+Falls Sie ausschließlich kostenlose Apps anbieten möchten (und keine In-App-Einkäufe bereitstellen oder Microsoft Advertising verwenden möchten), brauchen Sie kein Auszahlungskonto einzurichten oder Steuerformulare auszufüllen. Wenn Sie einem späteren und feststellen, dass Sie apps (oder -Add-Ons) verkaufen möchten, können Sie Ihr auszahlungskonto einrichten und Ausfüllen der Steuerformulare zu diesem Zeitpunkt. Kostenpflichtige Apps und Add-Ons können erst übermittelt werden, wenn Sie Ihr Auszahlungskonto eingerichtet und Ihr Steuerprofil ausgefüllt haben.
 
 > [!NOTE]
 > In [bestimmten Märkten](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) können Entwickler nur kostenlose Apps übermitteln. Wenn Ihr Konto in einem dieser Märkte registriert ist, steht die Option zum Einrichten eines Auszahlungskontos nicht zur Verfügung.
@@ -125,7 +125,7 @@ Berücksichtigen Sie auch folgende Punkte, um sicherzustellen, dass Ihre Auszahl
 
 ## <a name="tax-forms"></a>Steuerformulare
 
-Nachdem Sie [für ein Entwicklerkonto registriert](opening-a-developer-account.md) haben, und Sie Ihr [auszahlungskonto richten](#payout-account), können Sie Ihr *Steuerprofil* für den Microsoft Store erstellen, indem Sie die folgenden Schritte durchführen:
+Nachdem Sie [für ein Entwicklerkonto registriert](opening-a-developer-account.md) haben, und Sie Ihr [auszahlungskonto richten](#payout-account), können Sie Ihr *Steuerprofil* für den Microsoft Store erstellen, indem Sie die folgenden Schritte:
 
 -   Angeben des Wohnsitzlandes und der Staatsangehörigkeit
 -   Ausfüllen der entsprechenden Steuerformulare
@@ -158,7 +158,7 @@ Die von Ihnen in den Steuerformularen übermittelten Informationen sind ausschla
 
 ### <a name="tax-treaty-benefits"></a>Vorteile des Steuerabkommens
 
-Wenn Sie nicht in den USA ansässig sind, können Sie unter Umständen von den Vorteilen des Steuerabkommens profitieren. Diese Vorteile variieren von Land zu Land, und können Sie die, die den Microsoft Store einbehaltenen steuern reduzieren. Sie müssen TeilII des W-8BEN-Formulars ausfüllen, um die Vorteile eines Steuerabkommens in Anspruch nehmen zu können. Wir empfehlen Ihnen, sich bei den zuständigen Stellen in Ihrem Land oder Ihrer Region zu erkundigen, ob diese Vorteile auf Sie zutreffen.
+Wenn Sie nicht in den USA ansässig sind, können Sie unter Umständen von den Vorteilen des Steuerabkommens profitieren. Diese Vorteile variieren von Land zu Land, und können Sie die, die im Microsoft Store einbehaltenen steuern reduzieren. Sie müssen TeilII des W-8BEN-Formulars ausfüllen, um die Vorteile eines Steuerabkommens in Anspruch nehmen zu können. Wir empfehlen Ihnen, sich bei den zuständigen Stellen in Ihrem Land oder Ihrer Region zu erkundigen, ob diese Vorteile auf Sie zutreffen.
 
  
 

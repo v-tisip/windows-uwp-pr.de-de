@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, Uwp, Verwendung, benutzerdefiniertes Ereignis, Bericht, Telemetrie, Benutzersitzungen
 ms.localizationpriority: medium
 ms.openlocfilehash: 96d36ebbaa2b7f1a650e2b0f794a1976c1f525a6
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3847654"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3930730"
 ---
 # <a name="usage-report"></a>Nutzungsbericht
 
@@ -50,10 +50,10 @@ Dieses Diagramm enthält vier separate Registerkarten, die die Nutzung pro Tag o
 - **Dauer**: Zeigt die Gesamtanzahl der aktiven Stunden an (Stunden, in denen ein Benutzer aktiv Ihrer App verwendet).
 - **Beibehaltung**: Zeigt die Gesamtanzahl der **DAU/MAU** (tägliche aktive Benutzer/monatliche aktive Benutzer) über den ausgewählten Zeitraum an.
 
-Wenn die **30d** Zeitraum aktiviert ist, sehen Sie Kreis Markierungen, wenn der **Benutzer**oder **Geräte**, **Dauer** Registerkarten anzeigen. Diese darstellen eine erhebliche Erhöhung oder einen bestimmten Wert, die wir glauben, dass Sie kennen sollten verringern. Das Datum, an dem die Kreis angezeigt wird, stellt dar, das Ende der Woche, in der wir eine erhebliche Erhöhung oder Verringerung, die im Vergleich zur vorherigen Woche davor erkannt, wird. Um weitere Informationen zu Änderungen anzuzeigen, zeigen Sie auf den Kreis.  
+Wenn **30 D** Zeitraum aktiviert ist, sehen Sie Kreis, bei die **Benutzern**, **Geräten**oder **Dauer** Registerkarten anzeigen. Diese stellen eine beachtliche oder einen bestimmten Wert, die wir glauben, dass Sie wissen wollen verringern. Das Datum, auf dem der Kreis angezeigt wird, stellt Ende der Woche in der wir eine bedeutende Zunahme oder Abnahme Woche zuvor erkannt. Um mehr Informationen zu Änderungen, zeigen Sie auf den Kreis.  
 
 > [!TIP]
-> Sie können weitere Einblicke im Zusammenhang mit erhebliche Änderungen an der letzten 30 Tage im [Bericht](insights-report.md)anzeigen.
+> Sie können weitere Informationen im Zusammenhang mit Änderungen in den letzten 30 Tagen im [Bericht](insights-report.md)anzeigen.
 
 
 ## <a name="user-sessions"></a>Benutzersitzungen

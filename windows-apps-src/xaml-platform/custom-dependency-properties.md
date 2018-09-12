@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ddeccfe4c5e198afd77eaa4a81fc017543291ba1
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3847684"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3934251"
 ---
 # <a name="custom-dependency-properties"></a>Benutzerdefinierte Abhängigkeitseigenschaften
 
@@ -79,7 +79,7 @@ Damit Ihre Eigenschaft zu einer Abhängigkeitseigenschaft wird, müssen Sie die 
 Im Fall von Microsoft .NET-Sprachen (C# und Microsoft Visual Basic) rufen Sie [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) im Text Ihrer Klasse auf (innerhalb der Klasse, jedoch außerhalb der Memberdefinitionen). Der Bezeichner wird vom [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)-Methodenaufruf als Rückgabewert bereitgestellt. Der [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)-Aufruf erfolgt in der Regel als statischer Konstruktor oder als Teil der Initialisierung einer **public static readonly**-Eigenschaft des Typs [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) als Teil der Klasse. Diese Eigenschaft macht den Bezeichner für Ihre Abhängigkeitseigenschaft verfügbar. Im Anschluss finden Sie Beispiele für den [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)-Aufruf.
 
 > [!NOTE]
-> Registrieren der Abhängigkeitseigenschaft als Teil des Bezeichners Eigenschaft Typdefinition ist die typische Implementierung, aber Sie können eine Abhängigkeitseigenschaft auch im statischen Konstruktor Klasse registrieren. Dieser Ansatz eignet sich ggf., wenn Sie mehr als eine Codezeile benötigen, um die Abhängigkeitseigenschaft zu initialisieren.
+> Registrieren der Abhängigkeitseigenschaft als Teil des Bezeichners Eigenschaftsdefinition normalen Implementierung ist, aber Sie können eine Abhängigkeitseigenschaft auch im statischen Konstruktor Klasse registrieren. Dieser Ansatz eignet sich ggf., wenn Sie mehr als eine Codezeile benötigen, um die Abhängigkeitseigenschaft zu initialisieren.
 
 Für C++ / CX, verfügen Sie über Optionen für wie die Implementierung zwischen der Header- und Codedatei aufgeteilt. In der Regel wird der Bezeichner selbst als **public static**-Eigenschaft in der Kopfzeile mit einer **get**-Implementierung, jedoch ohne **set**-Implementierung deklariert. Die **get**-Implementierung bezieht sich auf ein privates Feld, das eine nicht initialisierte [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362)-Instanz ist. Sie können darüber hinaus die Wrapper und die **get**- und **set**-Implementierungen des Wrappers deklarieren. In diesem Fall enthält der Wrapper eine minimale Implementierung. Wenn der Wrapper eine Zuordnung zur Windows-Runtime benötigt, führen Sie die Zuordnung auch in der Kopfzeile durch. Platzieren Sie den [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)-Aufruf in die Codedatei innerhalb einer Hilfsfunktion, die nur bei der ersten Initialisierung der App ausgeführt wird. Verwenden Sie den Rückgabewert von **Register**, um die statischen, jedoch nicht initialisierten Bezeichner zu füllen, die Sie in der Kopfzeile deklariert haben und zunächst im Stammbereich der Implementierungsdatei auf **nullptr** festgelegt haben.
 
@@ -186,7 +186,7 @@ Kombinieren Sie beim Erstellen der Bezeichnereigenschaft den von Ihnen registrie
 Ihr Eigenschaftenwrapper sollte [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) in der **get**-Implementierung und [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) in der **set**-Implementierung aufrufen.
 
 > [!WARNING]
-> Alle von Ausnahmefällen abgesehen sollten Ihre Wrapperimplementierungen nur die [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) und [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) Vorgänge ausführen. Andernfalls erhalten Sie ein anderes Verhalten, wenn Ihre Eigenschaft über XAML anstelle über Code festgelegt wird. Aus Effizienzgründen umgeht der XAML-Parser Wrapper beim Festlegen von Abhängigkeitseigenschaften und kommuniziert mit dem Sicherungsspeicher über **SetValue**.
+> Von Ausnahmefällen abgesehen sollten Ihre Wrapperimplementierungen nur die [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) und [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) Vorgänge ausführen. Andernfalls erhalten Sie ein anderes Verhalten, wenn Ihre Eigenschaft über XAML anstelle über Code festgelegt wird. Aus Effizienzgründen umgeht der XAML-Parser Wrapper beim Festlegen von Abhängigkeitseigenschaften und kommuniziert mit dem Sicherungsspeicher über **SetValue**.
 
 ```csharp
 public String Label
@@ -251,7 +251,7 @@ In den bisherigen Beispielen für den Aufruf von [**DependencyProperty.Register*
 In der Regel geben Sie einen [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) als inline erstellte Instanz innerhalb der Parameter für [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) an.
 
 > [!NOTE]
-> Wenn Sie eine Implementierung [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812) definieren, müssen Sie die Hilfsmethode [**PropertyMetadata.Create**](https://msdn.microsoft.com/library/windows/apps/hh702099) , anstatt Aufruf eines Konstruktors [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) verwenden, um die **PropertyMetadata** -Instanz definieren.
+> Wenn Sie eine Implementierung [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812) definieren, müssen Sie Aufruf eines Konstruktors [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) , anstatt die Hilfsmethode [**PropertyMetadata.Create**](https://msdn.microsoft.com/library/windows/apps/hh702099) verwenden, um die **PropertyMetadata** -Instanz zu definieren.
 
 Im nächsten Beispiel werden die zuvor gezeigten Beispiele für [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) modifiziert, indem auf eine [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771)-Instanz mit einem [**PropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/br208770)-Wert verwiesen wird. Die Implementierung des OnLabelChanged-Rückrufs wird später in diesem Abschnitt gezeigt.
 
@@ -316,7 +316,7 @@ Windows::UI::Xaml::DependencyProperty ImageWithLabelControl::m_labelProperty =
 ```
 
 > [!NOTE]
-> Registrieren Sie nicht mit einem Standardwert von [**UnsetValue**](https://msdn.microsoft.com/library/windows/apps/br242371). Diese Handlung verwirrt Eigenschaftennutzer und führt zu unbeabsichtigten Folgen innerhalb des Eigenschaftensystems.
+> Führen Sie keine Registrierung mit einem Standardwert von [**UnsetValue**](https://msdn.microsoft.com/library/windows/apps/br242371). Diese Handlung verwirrt Eigenschaftennutzer und führt zu unbeabsichtigten Folgen innerhalb des Eigenschaftensystems.
 
 ### <a name="createdefaultvaluecallback"></a>CreateDefaultValueCallback
 

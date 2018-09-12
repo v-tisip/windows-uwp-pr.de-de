@@ -16,11 +16,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e842d6c5b8e62a9c043c97849fdf17f524ccfc7
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3845604"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3931509"
 ---
 # <a name="access-keys"></a>Zugriffstasten
 
@@ -365,6 +365,6 @@ Wenn Sie die AccessKey-Eigenschaft für ein UIElement- oder TextElement-Steuerel
 * [Zugriffstasten](keyboard-accelerators.md)
 
 **Beispiele**
-* [XAML-Steuerelementekatalog (auch bekannt als XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
+* [XAML-Steuerelementsammlungen (auch bekannt als XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
 
 

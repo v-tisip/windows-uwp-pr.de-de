@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Einkaufs-API, Abonnements
 ms.localizationpriority: medium
 ms.openlocfilehash: d8734c1fe25cf6c22d88d2d50b323b7d3ee86710
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3848514"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3933865"
 ---
 # <a name="change-the-billing-state-of-a-subscription-for-a-user"></a>Ändern des Abrechnungszustands eines Abonnements für Benutzer
 
@@ -120,7 +120,7 @@ Der Antworttext enthält die folgenden Daten.
 | autoRenew | Boolesch |  Gibt an, ob das Abonnement für die automatische Verlängerung am Ende des aktuellen Abonnementzeitraums konfiguriert ist.   |
 | beneficiary | Zeichenfolge |  Die ID des Begünstigten für die Berechtigung, die diesem Abonnement zugeordnet ist.   |
 | expirationTime | Zeichenfolge | Datum und Uhrzeit, an dem bzw. zu der das Abonnement abläuft, im Format ISO 8601. Dieses Feld ist nur verfügbar, wenn sich das Abonnement in bestimmten Zuständen befindet. Die Ablaufzeit gibt in der Regel an, wann der aktuelle Zustand abläuft. Beispiel: Bei einem aktiven Abonnement gibt das Ablaufdatum an, wann die nächste automatische Verlängerung erfolgt.    |
-| expirationTimeWithGrace | string | Datum und Uhrzeit, die das Abonnement abläuft, einschließlich der Nachfrist im Format ISO 8601. Dieser Wert gibt an, wenn der Benutzer verliert, Zugriff auf das Abonnement nachdem das Abonnement für die automatische Verlängerung fehlgeschlagen ist.    |
+| expirationTimeWithGrace | string | Datum und Uhrzeit, die das Abonnement abläuft, einschließlich der Nachfrist im Format ISO 8601. Dieser Wert gibt an, wenn der Benutzer verliert, den Zugriff auf das Abonnement nachdem das Abonnement für die automatische Verlängerung fehlgeschlagen ist.    |
 | id | Zeichenfolge |  Die ID des Abonnements. Verwenden Sie diesen Wert, um das Abonnement anzugeben, das Sie durch Aufrufen der Methode zum [Ändern des Abrechnungszustands eines Abonnements für einen Benutzer ](change-the-billing-state-of-a-subscription-for-a-user.md) ändern möchten.    |
 | isTrial | Boolesch |  Gibt an, ob es sich bei dem Abonnement um eine Testversion handelt.     |
 | lastModified | Zeichenfolge |  Datum und Uhrzeit, an dem bzw. zu der das Abonnement zuletzt geändert wurde, im Format ISO 8601.      |

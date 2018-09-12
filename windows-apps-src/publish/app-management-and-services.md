@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d0e4be450aa972ad8561f27a8d4749050458520a
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3849854"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3931304"
 ---
 # <a name="app-management-and-services"></a>App-Verwaltung und -Dienste
 
@@ -29,9 +29,9 @@ Im Abschnitt **Dienste** können Sie verschiedene Dienste für Ihre Apps verwalt
 
 ## <a name="xbox-live"></a>Xbox Live
 
-Wenn Sie ein Spiel veröffentlichen, können Sie die [Xbox Live Creators-Programm](http://xbox.com/developers/creators-program) auf dieser Seite aktivieren. Auf diese Weise können Sie die Starten konfigurieren und Testen Xbox Live-Features, und schließlich Veröffentlichen Ihres Spiels Xbox Live Creators-Programm.
+Wenn Sie eine Spiel veröffentlichen, können Sie die [Xbox Live Ersteller Programm](http://xbox.com/developers/creators-program) auf dieser Seite. Dadurch starten konfigurieren und Testen Xbox Live-Funktionen und schließlich das Spiel Xbox Live Ersteller Programm veröffentlichen.
 
-Weitere Informationen finden Sie unter [Erste Schritte mit Xbox Live Creators-Programm](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) und [Erstellen eines neuen Titels Xbox Live Creators-Programm und der testumgebung veröffentlichen](../xbox-live/get-started-with-creators/create-and-test-a-new-creators-title.md).
+Weitere Informationen finden Sie unter [mit Xbox Live Ersteller-Anwendung](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) und [Erstellen eines neuen Titels für Xbox Live Ersteller-Anwendung und der Umgebung veröffentlichen](../xbox-live/get-started-with-creators/create-and-test-a-new-creators-title.md).
 
 ## <a name="experimentation"></a>Experimentation
 
@@ -50,13 +50,13 @@ Weitere Informationen finden Sie unter [Verwenden von Kartendiensten](use-map-se
 
 ## <a name="product-collections-and-purchases"></a>Produktsammlungen und Einkäufe
 
-Um den Zugriff auf Besitzerinformationen für apps und Add-ons im Microsoft Store-Sammlungs-API und der Microsoft Store-Einkaufs-API zu verwenden, müssen Sie das zugehörige eingeben Azure AD-Client-IDs hier. Beachten Sie, dass es bis zu 16 Stunden dauern kann, bis diese Änderungen wirksam werden.
+Microsoft Store Auflistung API und Microsoft Store Einkauf API verwenden Besitzinformationen für apps und Add-ons, müssen Sie die zugeordnete eingeben hier Azure AD Client-IDs. Beachten Sie, dass es bis zu 16 Stunden dauern kann, bis diese Änderungen wirksam werden.
 
 Weitere Informationen finden Sie unter [Verwalten von Produktansprüchen aus einem Dienst](../monetize/view-and-grant-products-from-a-service.md).
 
 ## <a name="administrator-consent"></a>Administrator-Zustimmung
 
-f Ihr Produkt mit Azure AD integriert und APIs aufruft, die [Anwendungsberechtigungen oder delegierte Berechtigungen](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) anfordern, die Administrator-Zustimmung erfordern geben Ihre Azure AD-Client-ID an. Dadurch können Administratoren, die die app für ihre Organisation gewähren Zustimmung für Ihr Produkt, die für alle Benutzer im Mandanten fungieren erwerben.
+f Produkts Azure AD integriert und APIs, die [Berechtigungen oder delegierte Berechtigungen](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) anfordern, Administrator Genehmigung erfordern, ruft Ihre Azure AD Client-ID hier eingeben Administratoren, die die Anwendung für ihre Organisation gewähren Zustimmung für das Produkt, für alle Benutzer in der Mieter handeln erwerben können.
 
 Weitere Informationen finden Sie unter [für eine gesamte Mandanten Zustimmung anfordern](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant).
 
@@ -87,20 +87,20 @@ Der Name, die Version und die Architektur der einzelnen Pakete werden angezeigt.
 
 Entwickler mit OEM-Berechtigungen können auf der Seite **Aktuelle Pakete** außerdem [Vorinstallationspakete generieren](generate-preinstall-packages-for-oems.md).
 
-## <a name="wnsmpns"></a>WNS/MPNS
+## <a name="wnsmpns"></a>WNS-MPNS
 
-Der **WNS/MPNS** Abschnitt enthält Optionen zum Erstellen und Senden von Benachrichtigungen an die Kunden Ihrer app. 
+**WNS-MPNS** Abschnitt enthält Optionen zum Erstellen und Senden von Benachrichtigungen an Ihre app Kunden. 
 
 > [!TIP]
-> Es wird empfohlen, für UWP-apps mit der Option **Benachrichtigungen** im Dashboard. Dieses Feature können Sie die Benachrichtigungen an alle Kunden Ihrer app zu senden, oder auf eine benutzerorientierte Teilmenge von Windows 10-Kunden, die die Kriterien erfüllen, die Sie in einem [Kundensegment](create-customer-segments.md)definiert haben. Weitere Informationen finden Sie unter [Senden von Benachrichtigung an die Kunden Ihrer App](send-push-notifications-to-your-apps-customers.md).
+> Für UWP-apps empfehlen wir die Option **Benachrichtigung** im Dashboard. Diese Funktion kann Kunden Ihre app Benachrichtigungen oder gezielte Teilmenge Ihrer Windows 10-Kunden, die die Kriterien erfüllen, die Sie in ein [Kundensegment](create-customer-segments.md)definiert haben. Weitere Informationen finden Sie unter [Senden von Benachrichtigung an die Kunden Ihrer App](send-push-notifications-to-your-apps-customers.md).
 
-Je nach Pakettyp Ihrer app und den jeweiligen Anforderungen können Sie auch eine der folgenden Optionen verwenden: 
+Ihre app Pakettyp und Vorgaben können Sie auch eine der folgenden Optionen: 
 
 -   **Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS)** ermöglichen es, Popup-, Kachel- und Badgeupdates sowie unformatierte Updates von Ihren eigenen Clouddiensten aus zu senden. Weitere Informationen finden Sie unter [Übersicht über den Windows-Pushbenachrichtigungsdienst (Windows Push Notification Service, WNS)](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md).
 
 -   **Microsoft Azure Mobile Apps** ermöglichen das Senden von Pushbenachrichtigungen, die Authentifizierung und Verwaltung von App-Benutzern und das Speichern von App-Daten in der Cloud. Weitere Informationen finden Sie in der [MobileApps-Dokumentation](http://go.microsoft.com/fwlink/p/?LinkId=221116).
 
--   Der **Microsoft-Pushbenachrichtigungsdienst (Microsoft Push Notification Service, MPNS)** kann mit Ihren XAP-Paketen für Windows Phone verwendet werden. Sie können eine begrenzte Anzahl nicht authentifizierter Benachrichtigungen senden, ohne hier eine Konfiguration vorzunehmen. Zur Vermeidung von Drosselungslimits wird jedoch empfohlen, authentifizierte Benachrichtigungen zu verwenden. Wenn Sie MPNS verwenden, müssen Sie ein Zertifikat in das auf der Seite " **WNS/MPNS** " bereitgestellte Feld hochladen. Weitere Informationen finden Sie unter [Einrichten eines authentifizierten Webdiensts zum Senden von Pushbenachrichtigungen für Windows Phone 8](http://go.microsoft.com/fwlink/p/?LinkId=528736).
+-   Der **Microsoft-Pushbenachrichtigungsdienst (Microsoft Push Notification Service, MPNS)** kann mit Ihren XAP-Paketen für Windows Phone verwendet werden. Sie können eine begrenzte Anzahl nicht authentifizierter Benachrichtigungen senden, ohne hier eine Konfiguration vorzunehmen. Zur Vermeidung von Drosselungslimits wird jedoch empfohlen, authentifizierte Benachrichtigungen zu verwenden. Wenn Sie MPNS verwenden, müssen Sie das Feld auf der Seite **WNS-MPNS** ein Zertifikat hinzufügen. Weitere Informationen finden Sie unter [Einrichten eines authentifizierten Webdiensts zum Senden von Pushbenachrichtigungen für Windows Phone 8](http://go.microsoft.com/fwlink/p/?LinkId=528736).
  
 
  
