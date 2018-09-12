@@ -3,7 +3,7 @@ author: TylerMSFT
 title: Erstellen und Verwenden eines App-Diensts
 description: Hier erfahren Sie, wie Sie eine App für die Universelle Windows-Plattform (UWP) erstellen, die Dienste für andere UWP-Apps bereitstellen kann, und wie Sie diese Dienste nutzen.
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
-keywords: App-zu-app-Kommunikation, prozessübergreifende Kommunikation, IPC-Nachrichten, Hintergrund Kommunikation, app zu app-app-Dienst
+keywords: App-zu-app-Kommunikation, prozessübergreifende Kommunikation, IPC, Hintergrund Kommunikation, app zu app-app-Dienst
 ms.author: twhitney
 ms.date: 09/18/2017
 ms.topic: article
@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7475ae8db964b23de89488d883c135158ea20e74
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3850664"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3934261"
 ---
 # <a name="create-and-consume-an-app-service"></a>Erstellen und Verwenden eines App-Diensts
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Eintrag, Beschreibung, Store-Seite, Versionshinweise, Titel
 ms.localizationpriority: medium
 ms.openlocfilehash: bd3585b1a2fee2a00c99990b32902b524f3318da
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3849194"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3932107"
 ---
 # <a name="create-app-store-listings"></a>Erstellen von Store-Einträgen für Apps
 
@@ -42,7 +42,7 @@ Im Abschnitt **Additional Store listing languages** können Sie auf **Manage add
 
 Wenn Sie Ihre Auswahl getroffen haben, klicken Sie auf **Speichern**, um zur Übermittlungsübersicht zurückzukehren.
 
-## <a name="add-and-edit-store-listing-info"></a>Hinzufügen und Bearbeiten von Store-Eintrag Informationen
+## <a name="add-and-edit-store-listing-info"></a>Hinzufügen und Bearbeiten von Informationen Store-Einträgen
 
 Wählen Sie den Namen der Sprache zum Bearbeiten eines Store-Eintrags in der übermittlungsübersicht.
 
@@ -52,12 +52,12 @@ Oben auf der Seite **Store-Eintrag** sehen Sie die Felder, die dem standardmäß
 
 Diese Dropdown-Feld können Sie angeben, welche Namen im Store-Eintrag verwendet werden soll (Wenn Sie mehr als einen Namen für die app reserviert haben).
 
-Wenn Sie Pakete in der gleichen Sprache als den Store-Eintrag, an denen Sie arbeiten hochgeladen haben, werden die Namen in diese Pakete ausgewählt. Wenn [Benennen Sie die app](manage-app-names.md#rename-an-app-that-has-already-been-published) müssen Sie nach dem sie bereits veröffentlicht wurde, können Sie hier einen anderen reservierten Namen auswählen, wenn Sie eine neue Übermittlung mit Paketen erstellen, die den neuen Namen verwenden.
+Wenn Sie Pakete in der gleichen Sprache wie die Store-Eintrag hochgeladen haben, auf dem Sie arbeiten, werden der Namen in diese Pakete ausgewählt. Wenn Sie zum [Benennen Sie der app](manage-app-names.md#rename-an-app-that-has-already-been-published) benötigen, nachdem es bereits veröffentlicht wurde, können Sie hier einen anderen reservierten Namen auswählen, wenn Sie eine neue Übermittlung mit Pakete erstellen, die den neuen Namen verwenden.
 
-Wenn Sie Pakete für die Sprache erfolgreich hochgeladen wurden Sie arbeiten, und Sie mehr als einen Namen reserviert haben, müssen Sie eines Ihrer reservierten app-Namen auswählen, da es keine kein verknüpftes Paket in dieser Sprache aus dem der Name abgerufen werden könnte.
+Für die Sprache Pakete erfolgreich hochgeladen wurden Sie arbeiten an, und Sie mehr als einem Namen reserviert haben, müssen Sie eines Ihrer reservierten app-Namen auswählen, da es keine kein verknüpftes Paket in dieser Sprache aus dem der Name abgerufen werden könnte.
 
 > [!NOTE]
-> Der **Produktname** nur gewählte gilt für den Store-Eintrag in der Sprache in dem Sie arbeiten. Es hat keinen Einfluss auf den Namen angezeigt, wenn ein Kunde die app installiert werden; Dieser Name stammt aus dem Manifest des Pakets, das installiert wird. Um Missverständnisse zu vermeiden, empfehlen wir, dass jede Sprache Pakete und Store-Eintrag den gleichen Namen verwenden.
+> Der **Produktname** , den Sie nur auswählen bezieht sich auf die Store-Eintrag in der Sprache in dem Sie arbeiten. Es hat keinen Einfluss auf den Namen angezeigt, wenn ein Kunde die app installiert werden; Dieser Name stammt aus dem Manifest des Pakets, das installiert wird. Um Missverständnisse zu vermeiden, empfehlen wir, dass jede Sprache Pakete und Store-Eintrag den gleichen Namen verwenden.
 
 ## <a name="description"></a>Beschreibung
 

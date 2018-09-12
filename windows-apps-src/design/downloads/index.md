@@ -11,11 +11,11 @@ ms.technology: uwp
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.openlocfilehash: 259b171ea490272241fcef1170e2413cb40d7330
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3845324"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3935465"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Design-Toolkits und Beispiele für UWP-Apps
  
@@ -66,12 +66,12 @@ Diese Toolkits bieten Steuerelemente und Layout-Vorlagen für das Design von UWP
     :::column:::
         ![WinUI Bibliothek Miniaturansicht](images/WinUI-library.png) <b>Windows-UI-Bibliothek</b><br>
         Steuerelemente und anderen UI-Elemente für UWP-apps.<br/>
-        <a href="/uwp/toolkits/winui/getting-started">Installationsanweisungen</a><br/>
+        <a href="/uwp/toolkits/winui/getting-started">Informationen zur Installation</a><br/>
     :::column-end:::
     :::column:::
         ![Windows-Community-Miniaturansicht](images/Windows-community-toolkit.png) <b>Windows Community Toolkit</b><br>
         Hilfsfunktionen, benutzerdefinierte Steuerelemente und app-Dienste.<br />
-        <a href="/windows/uwpcommunitytoolkit/getting-started">Installationsanweisungen</a>
+        <a href="/windows/uwpcommunitytoolkit/getting-started">Informationen zur Installation</a>
     :::column-end:::
     :::column:::
     :::column-end:::
@@ -88,7 +88,7 @@ Diese Toolkits bieten Steuerelemente und Layout-Vorlagen für das Design von UWP
     :::column:::
         <a href="http://go.microsoft.com/fwlink/p/?LinkId=760394"><img src="images/tile-icon-generator.png" alt="Download the tile and icon generator"/></a>
     :::column-end:::
-    ::: Column Span = "2"::: **Kachel- und Symbolgenerator für Adobe Photoshop** dieser Satz von Aktionen für Adobe Photoshop werden die 68 empfohlenen Kacheln und Symbole aus nur 7-Dateien. <br/><a href="http://go.microsoft.com/fwlink/p/?LinkId=760394">Kachel- und Symbolgenerator herunterladen</a></p>
+    ::: Column Span = "2"::: **Kachel- und Symbolgenerator für Adobe Photoshop** dieser Satz von Aktionen für Adobe Photoshop werden die 68 empfohlenen Kacheln und Symbole aus nur 7 Dateien. <br/><a href="http://go.microsoft.com/fwlink/p/?LinkId=760394">Kachel- und Symbolgenerator herunterladen</a></p>
     :::column-end:::
 :::row-end:::
 

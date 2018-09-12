@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Dev Center, Kontoeinstellungen, Profil, Konto-Profil, Entwicklerkonto, Entwicklerkontoeinstellungen
 ms.localizationpriority: medium
 ms.openlocfilehash: bf464fa5c7b681b3d36ad95cff5ffc874e319f46
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3850324"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3935245"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Verwalten Ihrer Kontoeinstellungen und Profilinformationen
 
@@ -48,12 +48,12 @@ Wenn Sie Ihren Herausgeber-Anzeigenamen ändern, müssen wir Ihr Konto erneut ü
 
 Hier sind einige andere Elemente, die Sie im Abschnitt **Kontoeinstellungen** finden.
 
-- **Überprüfungsstatus**: Wenn Ihr Konto unterläuft ist die Überprüfung verarbeiten (z. B. beim ersten Anmelden oder nachdem Sie Ihre Kontaktinformationen erheblich aktualisieren), können Sie hier der Überprüfungsstatus überprüfen.
-- **Dev Center-Insider-Programm**: Sie können ablehnen, in die oder aus dem [Dev Center-Insider-Programm](dev-center-insider-program.md) aus der primären **Konto** -Einstellungsseite.
+- **Überprüfungsstatus**: Wenn Ihr Konto durchgeführt wird die Überprüfung verarbeiten (z. B. beim ersten Anmelden oder nachdem Sie Ihre Kontaktinformationen erheblich aktualisieren), können Sie hier der Überprüfungsstatus überprüfen.
+- **Dev Center-Insider-Programm**: Sie können auswählen, in die oder aus dem [Dev Center-Insider-Programm](dev-center-insider-program.md) aus der primären **Konto** -Einstellungsseite.
 - **Auszahlungskonto** und **Steuerprofil**: Hier wird das [Einrichten Ihres Auszahlungskontos und Ihrer Steuerformulare](setting-up-your-payout-account-and-tax-forms.md) vorgenommen. Dieser Schritt muss ausgeführt werden, bevor Sie Zahlungen für Apps oder Add-Ons verlangen können.
 - **Enterprise-Zuordnungen**: Nehmen Sie Einladungen von Unternehmen an, die möchten, dass Sie Apps für die exklusive Nutzung veröffentlichen. Weitere Informationen dazu finden Sie unter [Verteilen von branchenspezifischen Apps an Unternehmen](distribute-lob-apps-to-enterprises.md).
 - **Anwender**: Fügen Sie Ihrem Dev Center-Konto Benutzer hinzu, und weisen Sie diesen Rollen mit Berechtigungen zu. Weitere Informationen finden Sie unter [Verwalten von Kontobenutzern](manage-account-users.md).
-- **Mandanten**: Verwalten Sie Ihre Azure AD-mandantenzuordnungen. Weitere Informationen finden Sie in [Zuordnen von Azure AD mit Ihrem Dev Center-Konto](associate-azure-ad-with-dev-center.md).
+- **Mandanten**: Verwalten Sie Ihre Azure AD-mandantenzuordnungen. Weitere Informationen finden Sie unter [Zuordnen von Azure AD mit Ihrem Dev Center-Konto](associate-azure-ad-with-dev-center.md).
 - **Programme**: Zeigen Sie Detail zu den Programmen an, an denen Sie teilnehmen und erfahren Sie mehr über andere Programme, die von Interesse sein könnten.
 - **Verträge**: Zeigen Sie die Verträge an, die Ihr Konto angenommen hat.
 - **Dev-Geräte**: anzeigen und Verwalten von [Windows Phone 8.x-Geräte, die Sie zu Testzwecken entsperrt haben](http://go.microsoft.com/fwlink/p/?LinkId=533897) und [für die Entwicklung aktivierten Xbox One-Konsolen](../xbox-apps/devkit-activation.md). 
