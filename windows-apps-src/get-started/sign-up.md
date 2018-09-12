@@ -11,23 +11,23 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Anmelden, Entwicklerkonto
 ms.localizationpriority: medium
 ms.openlocfilehash: 2ed54f1df2ace18d06f9273fb9e26459907f8542
-ms.sourcegitcommit: 72710baeee8c898b5ab77ceb66d884eaa9db4cb8
+ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "3849004"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "3931573"
 ---
-# <a name="create-a-developer-account"></a><span data-ttu-id="77931-104">Erstellen eines Entwicklerkontos</span><span class="sxs-lookup"><span data-stu-id="77931-104">Create a developer account</span></span>
+# <a name="create-a-developer-account"></a><span data-ttu-id="68389-104">Erstellen eines Entwicklerkontos</span><span class="sxs-lookup"><span data-stu-id="68389-104">Create a developer account</span></span>
 
-<span data-ttu-id="77931-105">Registrieren Sie sich jetzt für ein Entwicklerkonto, um Ihre Apps im Microsoft Store veröffentlichen und an anderen Microsoft-Programmen teilnehmen zu können.</span><span class="sxs-lookup"><span data-stu-id="77931-105">Register now for a developer account so you can get your apps into the Microsoft Store and participate in other Microsoft programs.</span></span>
+<span data-ttu-id="68389-105">Registrieren Sie sich jetzt für ein Entwicklerkonto, um Ihre Apps im Microsoft Store veröffentlichen und an anderen Microsoft-Programmen teilnehmen zu können.</span><span class="sxs-lookup"><span data-stu-id="68389-105">Register now for a developer account so you can get your apps into the Microsoft Store and participate in other Microsoft programs.</span></span>
 
-[<span data-ttu-id="77931-106">Jetzt registrieren!</span><span class="sxs-lookup"><span data-stu-id="77931-106">Sign up now!</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=615100)
+[<span data-ttu-id="68389-106">Jetzt registrieren!</span><span class="sxs-lookup"><span data-stu-id="68389-106">Sign up now!</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=615100)
 
-## <a name="opening-your-developer-account"></a><span data-ttu-id="77931-107">Eröffnen eines Entwicklerkontos</span><span class="sxs-lookup"><span data-stu-id="77931-107">Opening your developer account</span></span>
+## <a name="opening-your-developer-account"></a><span data-ttu-id="68389-107">Eröffnen eines Entwicklerkontos</span><span class="sxs-lookup"><span data-stu-id="68389-107">Opening your developer account</span></span>
 
-<span data-ttu-id="77931-108">Zur Verfügung stehen sowohl [Einzel- als auch Unternehmenskonten auf der ganzen Welt](../publish/account-types-locations-and-fees.md).</span><span class="sxs-lookup"><span data-stu-id="77931-108">We offer [individual and company accounts in locations around the world](../publish/account-types-locations-and-fees.md).</span></span> <span data-ttu-id="77931-109">Informationen zur Vorgehensweise finden Sie unter [Überblick über den Einrichtungsprozess](../publish/opening-a-developer-account.md) .</span><span class="sxs-lookup"><span data-stu-id="77931-109">Check out our [overview of the sign-up process](../publish/opening-a-developer-account.md) to see how it works.</span></span>
+<span data-ttu-id="68389-108">Zur Verfügung stehen sowohl [Einzel- als auch Unternehmenskonten auf der ganzen Welt](../publish/account-types-locations-and-fees.md).</span><span class="sxs-lookup"><span data-stu-id="68389-108">We offer [individual and company accounts in locations around the world](../publish/account-types-locations-and-fees.md).</span></span> <span data-ttu-id="68389-109">Informationen zur Vorgehensweise finden Sie unter [Überblick über den Einrichtungsprozess](../publish/opening-a-developer-account.md) .</span><span class="sxs-lookup"><span data-stu-id="68389-109">Check out our [overview of the sign-up process](../publish/opening-a-developer-account.md) to see how it works.</span></span>
 
-## <a name="have-a-name-for-your-app"></a><span data-ttu-id="77931-110">Haben Sie einen Namen für Ihre App?</span><span class="sxs-lookup"><span data-stu-id="77931-110">Have a name for your app?</span></span>
+## <a name="have-a-name-for-your-app"></a><span data-ttu-id="68389-110">Haben Sie einen Namen für Ihre App?</span><span class="sxs-lookup"><span data-stu-id="68389-110">Have a name for your app?</span></span>
 
-<span data-ttu-id="77931-111">Sobald Sie Ihr Entwicklerkonto eröffnet haben, können Sie [Ihre App erstellen, indem Sie einen Namen reservieren](https://msdn.microsoft.com/library/windows/apps/JJ657967).</span><span class="sxs-lookup"><span data-stu-id="77931-111">As soon as you open your developer account, you can [create your app by reserving a name](https://msdn.microsoft.com/library/windows/apps/JJ657967).</span></span>
+<span data-ttu-id="68389-111">Sobald Sie Ihr Entwicklerkonto eröffnet haben, können Sie [Ihre App erstellen, indem Sie einen Namen reservieren](https://msdn.microsoft.com/library/windows/apps/JJ657967).</span><span class="sxs-lookup"><span data-stu-id="68389-111">As soon as you open your developer account, you can [create your app by reserving a name](https://msdn.microsoft.com/library/windows/apps/JJ657967).</span></span>
 
