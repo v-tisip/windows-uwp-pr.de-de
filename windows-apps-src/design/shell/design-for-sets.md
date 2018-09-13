@@ -12,11 +12,11 @@ keywords: Windows10, UWP, Titelleiste
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 7c3e0e6ec7331e860c9153e2a2e29a51fb5848bd
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3930242"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3964582"
 ---
 # <a name="designing-for-sets"></a>Entwerfen für Sets
 
@@ -119,7 +119,7 @@ Wenn Sie Inhalte oder Funktionalität in der benutzerdefinierten Titelleisten-UI
 
 Um sicherzustellen, dass Ihr App-Symbol in einem Set optimal aussieht, sollten Sie ein alternatives, nicht belegtes Symbol für Ihre App bereitstellen. (Das auf der Registerkarte Ihrer App verwendete App-Symbol ist das gleiche Symbol, das in der Taskleiste verwendet wird.) Der Zweck des alternativen Symbols ist, vor jeder Hintergrundfarbe gut auszusehen. Das alternative Symbol wird verwendet, falls verfügbar.
 
-Geben Sie in Ihrem App-Manifest zusätzlich zu Ihrem regulären Symbol ein anderes unbelegtes Symbol an. Weitere Informationen finden Sie in der [App-Symbole und Logos](/windows/uwp/design/style/app-icons-and-logos). Das anzugebende Symbol wird als "Target-Size List Assets without Plate" im Abschnitt [Weitere Informationen zur app-Symbolressourcen](/windows/uwp/design/style/app-icons-and-logos#more-about-app-icon-assets) des Artikels dokumentiert.
+Geben Sie in Ihrem App-Manifest zusätzlich zu Ihrem regulären Symbol ein anderes unbelegtes Symbol an. Weitere Informationen finden Sie in der [App-Symbole und Logos](/windows/uwp/design/style/app-icons-and-logos). Das anzugebende Symbol wird als "Target-Size List Assets without Plate" im Abschnitt [Weitere Informationen zur app-Symbolressourcen](/windows/uwp/design/style/app-icons-and-logos#more-about-app-icon-assets) Artikel dokumentiert.
 
 Wenn Sie im App-Manifest kein alternatives Symbol angeben, wird das System das Kachelsymbol wieder mit der Registerkartenfarbe versehen und es so verwenden.
 

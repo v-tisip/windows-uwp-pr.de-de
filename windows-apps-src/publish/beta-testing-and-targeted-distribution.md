@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Betatests, eingeschränkter Vertrieb, Beta, Betas, testen, Tester
 ms.localizationpriority: medium
 ms.openlocfilehash: e453be22d752ed78263cb34011cdf9a333057e03
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3931597"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3960982"
 ---
 # <a name="beta-testing-and-targeted-distribution"></a>Betatests und zielgerichtete Verteilung
 
@@ -35,7 +35,7 @@ Unabhängig von der gewählten Methode, müssen Sie einige Dinge in puncto Betat
 
 Wenn Tester Ihre App verwenden sollen, bevor diese für andere Benutzer verfügbar ist, und sicher stellen wollen, dass niemand sie sehen kann, verwenden Sie die Option **private Zielgruppe** unter der Option [Sichtbarkeit](choose-visibility-options.md) (auf der Seite **Preise und Verfügbarkeit** der Übermittlung). Dies ist die einzige Methode, mit der Sie Ihre App an Tester verteilen können und verhindert wird, dass andere Personen den App Store-Eintrag sehen können, auch wenn sie den direkten Link eingeben. 
 
-Die Option **Private Publikum** können nur dienen, wenn Sie nicht bereits Ihre app Publikum veröffentlicht haben. Verwenden Sie diese Option für jede Betriebssystemversion Apps, aber die Tester Windows 10 1607 oder höher (einschließlich Xbox One) ausgeführt werden und müssen das Microsoft-Konto die e-Mail-Adresse, die Sie bereitstellen angemeldet.
+Der **privaten** zielgruppenoptionen kann nur verwendet werden können, das, wenn Sie nicht bereits Ihre app für eine öffentliche Zielgruppe veröffentlicht haben ist. Sie können diese Option verwenden, mit apps für jede Betriebssystemversion, aber Ihre Tester müssen Windows 10, Version 1607 oder höher (einschließlich Xbox One), ausgeführt werden und müssen mit dem Microsoft-Konto zugeordnete e-Mail-Adresse, die Sie bereitstellen angemeldet sein.
 
 Weitere Informationen finden Sie unter [Private Zielgruppe](choose-visibility-options.md#audience).
 
@@ -53,7 +53,7 @@ Weitere Informationen finden Sie unter [Flight-Pakete](package-flights.md).
 
 ## <a name="hiding-the-app-in-the-store-and-using-promotional-codes"></a>Ausblenden der App im Store und Verwenden von Werbecodes
 
-Diese Option bietet können Verteilung einer Anwendung an eine bestimmte Gruppe von Testern und verhindern, dass jemand Ihre app im Speicher erkennen beschränken (oder ohne einen Angebotscode abrufen). Allerdings kann im Gegensatz zu den privaten Zielgruppenoptionen möglicherweise jeder Benutzer den App-Eintrag sehen, wenn er über den direkten Link verfügt. Wenn die Vertraulichkeit für Ihre Übermittlung entscheidend ist, empfehlen wir stattdessen, diese nur an eine private Zielgruppe zu veröffentlichen.
+Diese Option bietet eine weitere Möglichkeit, um die Verteilung einer App eine bestimmte Gruppe von Testern verteilen möchten, während Sie nicht ermitteln kann Ihre app im Store, dass andere Personen beschränken (oder ohne einen werbecode Erwerb). Allerdings kann im Gegensatz zu den privaten Zielgruppenoptionen möglicherweise jeder Benutzer den App-Eintrag sehen, wenn er über den direkten Link verfügt. Wenn die Vertraulichkeit für Ihre Übermittlung entscheidend ist, empfehlen wir stattdessen, diese nur an eine private Zielgruppe zu veröffentlichen.
 
 Das Ausblenden der App und das Verwenden von Werbecodes kann für Apps für jede Betriebssystemversion verwendet werden, Ihre Tester können die App allerdings nur dann abrufen, wenn sie Windows10 ausführen.
 

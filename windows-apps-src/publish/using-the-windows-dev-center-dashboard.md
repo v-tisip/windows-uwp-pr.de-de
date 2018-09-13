@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Dashboard, Devcenter, Entwicklungszentrum
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f5357b038091b72681915e46875f92077bb3c9e
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3936327"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3961680"
 ---
 # <a name="using-the-windows-dev-center-dashboard"></a>Verwenden des Windows Dev Center-Dashboards
 
 
-Das [Windows Dev Center-Dashboard](https://partner.microsoft.com/dashboard) können Sie all Ihre Apps für Windows-Geräte zentral verwalten und einreichen.
+Im [Windows Dev Center-Dashboard](https://partner.microsoft.com/dashboard) können Sie all Ihre Apps für Windows-Geräte an einem zentralen Ort verwalten und einreichen.
 
 > [!NOTE]
 > Sie müssen über ein [Entwicklerkonto](http://go.microsoft.com/fwlink/p/?LinkId=615100) verfügen, um auf das Windows Dev Center-Dashboard zuzugreifen.
@@ -35,11 +35,11 @@ Hier sind einige Highlights der Dashboard-Funktionen:
 
 Wenn Sie [eine Übermittlung für Ihre app erstellen](app-submissions.md) (erstmalig oder als Update), können Sie [Hochladen von app-Pakete](upload-app-packages.md) für alle unterstützten Version des Betriebssystems, im Store automatisch während Kunden angeboten wird das Paket, das am besten für sie geeignet ist.
 
-[Add-Ons (in-app-Produkte)](add-on-submissions.md) werden unabhängig von Ihrer app-Übermittlung verwaltet. Dadurch sind Sie flexibler und können unabhängig Änderungen vornehmen.
+[Add-Ons (in-app-Produkte)](add-on-submissions.md) werden unabhängig von der app Übermittlung verwaltet. Dadurch sind Sie flexibler und können unabhängig Änderungen vornehmen.
 
-Windows Dev Center bietet auch Funktionen für [mehrere Benutzer hinzufügen](manage-account-users.md),[app-Verwaltung und Konfigurieren von Diensten](app-management-and-services.md), [Überprüfen von Analysedaten](analytics.md), [auszahlungsberichte](payout-summary.md), [Vermarktung von apps](attract-customers-and-promote-your-apps.md), [mit Ihrer Kunden](engage-with-your-customers.md), [Betatests](beta-testing-and-targeted-distribution.md), [Verteilen von BRANCHENSPEZIFISCHEN apps an Unternehmen](distribute-lob-apps-to-enterprises.md)und vieles mehr.
+Windows Dev Center bietet auch Funktionen für [mehrere Benutzer hinzufügen](manage-account-users.md),[app-Verwaltung und Konfigurieren von Diensten](app-management-and-services.md), [Überprüfen von Analysedaten](analytics.md), [auszahlungsberichte](payout-summary.md), [Vermarktung von apps](attract-customers-and-promote-your-apps.md), [, die mit Ihrer Kunden](engage-with-your-customers.md), [Betatests](beta-testing-and-targeted-distribution.md), [Verteilen von BRANCHENSPEZIFISCHEN apps an Unternehmen](distribute-lob-apps-to-enterprises.md)und vieles mehr.
 
-Ihr Feedback hilft uns dabei, die besten Funktionen zu erstellen und anzubieten. Während der Arbeit im Dashboard verwenden Sie den **Feedback** -Links in der oberen rechten Ecke des Dashboards für Ihre Ideen und Vorschläge.
+Ihr Feedback hilft uns dabei, die besten Funktionen zu erstellen und anzubieten. Während der Arbeit im Dashboard verwenden Sie die **Feedback** -Links in der oberen rechten Ecke des Dashboards für Ihre Ideen und Vorschläge.
 
 
  

@@ -8,18 +8,18 @@ ms.date: 07/06/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, Uwp, Hintergrundaufgabe, für die
+keywords: Windows 10 Uwp, Hintergrund Aufgabe
 ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
 - cpp
 ms.openlocfilehash: 556a787eb1e92e4c8adb7457235afb45c02df2dc
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3936537"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3957328"
 ---
 # <a name="set-conditions-for-running-a-background-task"></a>Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe
 
@@ -31,11 +31,11 @@ ms.locfileid: "3936537"
 
 Erfahren Sie, wie Bedingungen festgelegt werden, die steuern, wann die Hintergrundaufgabe ausgeführt wird.
 
-In manchen Fällen erfordern Hintergrundaufgaben bestimmte Bedingungen erfüllt sein, für die Hintergrundaufgabe erfolgreich ausgeführt werden kann. Wenn Sie Ihre Hintergrundaufgabe registrieren, können Sie mit [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) eine oder mehrere Bedingungen angeben. Die Bedingung wird geprüft werden, nachdem der Trigger ausgelöst wurde. Die Hintergrundaufgabe wird dann in die Warteschlange, aber es wird nicht ausgeführt, bis alle erforderlichen Bedingungen erfüllt sind.
+Hintergrundaufgaben müssen in manchen Fällen bestimmte Bedingungen erfüllt sein, für die Hintergrundaufgabe erfolgreich ausgeführt werden kann. Wenn Sie Ihre Hintergrundaufgabe registrieren, können Sie mit [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) eine oder mehrere Bedingungen angeben. Die Bedingung wird geprüft, nachdem der Auslöser. Die Hintergrundaufgabe wird dann in die Warteschlange, aber es wird nicht ausgeführt, bis alle erforderlichen Bedingungen erfüllt sind.
 
 Wenn Sie Bedingungen für Hintergrundaufgaben speichert schonen Sie Akku und CPU von Aufgaben verhindert unnötigen ausgeführt. Wenn Ihre Hintergrundaufgabe z. B. nach einem Timer ausgeführt wird und eine Internetverbindung benötigt, fügen Sie die **InternetAvailable**-Bedingung zum [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) hinzu, bevor Sie die Aufgabe registrieren. So wird verhindert, dass die Aufgabe unnötig Systemressourcen nutzt und Akkulaufzeit beansprucht, da nur die Hintergrundaufgabe ausgeführt wird, wenn der Timer abgelaufen *und* das Internet verfügbar ist.
 
-Es ist auch möglich, mehrere Bedingungen kombinieren, indem Sie **AddCondition** mehrmals für das gleiche [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)aufrufen. Achten Sie darauf, keine in Konflikt stehenden Bedingungen wie **UserPresent** und **UserNotPresent** hinzuzufügen.
+Es ist auch möglich, mehrere Bedingungen kombinieren, indem Sie **AddCondition** mehrmals für denselben [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)aufrufen. Achten Sie darauf, keine in Konflikt stehenden Bedingungen wie **UserPresent** und **UserNotPresent** hinzuzufügen.
 
 ## <a name="create-a-systemcondition-object"></a>Erstellen eines SystemCondition-Objekts
 
@@ -45,7 +45,7 @@ Dieses Thema gilt für Hintergrundaufgaben, die in einem Prozess außerhalb von 
 
 Erstellen Sie vor dem Hinzufügen der Bedingung eines [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) -Objekts, um die Bedingung darstellen, die in einer Hintergrundaufgabe ausgeführt werden muss. Legen Sie im Konstruktor die Bedingung, die mit einem Enumerationswert [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) erfüllt werden müssen.
 
-Der folgende Code erstellt ein [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) -Objekt, die **InternetAvailable** -Bedingung angibt:
+Der folgende Code erstellt ein [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) -Objekt, das die **InternetAvailable** -Bedingung angibt:
 
 ```csharp
 SystemCondition internetCondition = new SystemCondition(SystemConditionType.InternetAvailable);
@@ -111,7 +111,7 @@ Zum Hinzufügen mehrerer Bedingungen ruft Ihre App die [**AddCondition**](https:
 > [!NOTE]
 > Achten Sie darauf, einer Hintergrundaufgabe keine in Konflikt stehenden Bedingungen hinzuzufügen.
 
-Der folgende Ausschnitt zeigt mehrere Bedingungen im Kontext erstellen und Registrieren einer Hintergrundaufgabe.
+Der folgende Ausschnitt zeigt mehrere Bedingungen im Kontext der Erstellung und Registrierung einer Hintergrundaufgabe.
 
 ```csharp
 // Set up the background task.

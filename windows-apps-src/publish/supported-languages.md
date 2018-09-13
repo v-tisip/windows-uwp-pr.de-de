@@ -11,23 +11,23 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e76f63fa30c3a294e1917bf1bed9ea79897390b2
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3936207"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3961542"
 ---
 # <a name="supported-languages"></a>Unterstützte Sprachen
 
 
 Sie können apps an den Microsoft Store in mehr als 100 Sprachen übermitteln.
 
-Weitere Informationen zum Konfigurieren von Sprachen in Ihren apps, [Globalisierung und Lokalisierung](../design/globalizing/globalizing-portal.md) und [verstehen benutzerprofilsprachen und app-manifest-Sprachen](../design/globalizing/manage-language-and-region.md)angezeigt. Wir bieten auch ein [Multilingual App Toolkit](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat), mit dessen Hilfe Sie Apps programmieren können, die mehrere Sprachen unterstützen.
+Weitere Informationen zum Konfigurieren von Sprachen in Ihren apps finden Sie unter [Globalisierung und Lokalisierung](../design/globalizing/globalizing-portal.md) und [verstehen benutzerprofilsprachen und app-manifest-Sprachen](../design/globalizing/manage-language-and-region.md). Wir bieten auch ein [Multilingual App Toolkit](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat), mit dessen Hilfe Sie Apps programmieren können, die mehrere Sprachen unterstützen.
 
 ## <a name="supported-languages"></a>Unterstützte Sprachen
 
 
-Hierbei handelt es sich um die Sprachen, die den Microsoft Store unterstützt. Ihre App muss mindestens eine dieser Sprachen unterstützen, und sie darf keine Sprachcodes angeben, die hier nicht aufgeführt sind.
+Hierbei handelt es sich um die Sprachen, die im Microsoft Store unterstützt. Ihre App muss mindestens eine dieser Sprachen unterstützen, und sie darf keine Sprachcodes angeben, die hier nicht aufgeführt sind.
 
 | Name der Sprache         | Unterstützte Sprachcodes                                                                                                                                                                              |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

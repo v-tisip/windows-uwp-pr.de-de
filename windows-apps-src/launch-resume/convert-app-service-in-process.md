@@ -11,11 +11,11 @@ keywords: Windows 10, Uwp, app-Dienst
 ms.assetid: 30aef94b-1b83-4897-a2f1-afbb4349696a
 ms.localizationpriority: medium
 ms.openlocfilehash: a77ea3cefcc423e710ab0afebb3fa064e61507ec
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3929890"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3957270"
 ---
 # <a name="convert-an-app-service-to-run-in-the-same-process-as-its-host-app"></a>Umwandeln eines App-Diensts für die Ausführung im gleichen Prozess wie die Host-App
 
@@ -42,7 +42,7 @@ Um einen Out-of-Process-App-Dienst in ein In-Process-Modell zu konvertieren, sin
 >   </Applications>
 > ```
 
-Entfernen Sie die `EntryPoint` -Attribut aus der `<Extension>` Element ist nun [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) der Einstiegspunkt, das verwendet wird, wenn die app-Dienst aufgerufen wird.
+Entfernen Sie die `EntryPoint` -Attribut aus der `<Extension>` Element da nun [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx) den Einstiegspunkt ist, das verwendet wird, wenn der app-Dienst aufgerufen wird.
 
 Die zweite Änderung besteht darin, die Dienstlogik aus ihrem eigenen Hintergrundaufgabenprojekt in Methoden zu verschieben, die über **OnBackgroundActivated()** aufgerufen werden können.
 

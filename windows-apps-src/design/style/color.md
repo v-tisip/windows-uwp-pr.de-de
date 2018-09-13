@@ -11,11 +11,11 @@ keywords: Windows10, UWP
 design-contact: karenmui
 ms.localizationpriority: medium
 ms.openlocfilehash: 19f4d9cde6ee2bc9615f044f18bc5e8828ca1985
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3929792"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3959898"
 ---
 # <a name="color"></a>Farben
 
@@ -29,7 +29,7 @@ In UWP-Apps werden die Farben in erster Linie durch Akzentfarbe und Design besti
 
 :::row:::
     :::column:::
-        **Verwenden Sie keinen nennenswerten Beitrag Farbe.**
+        **Verwenden Sie Farbe sinnvoll.**
 Wenn Farbe sparsam verwendet wird, um wichtige Elemente zu markieren, können sie eine Benutzeroberfläche erstellen, die flüssig und intuitiv ist.
     :::column-end:::
     :::column:::
@@ -147,7 +147,7 @@ Allgemeine Steuerelemente verwenden eine Akzentfarbe, um die Zustandsinformation
 
 :::row:::
     :::column:::
-        ![vom Benutzer ausgewählte Akzentfarbe Header](images/color/user-accent.svg) ![vom Benutzer ausgewählte Akzentfarbe](images/color/user-selected-accent.svg)
+        ![vom Benutzer ausgewählte Akzent-Header](images/color/user-accent.svg) ![vom Benutzer ausgewählte Akzentfarbe](images/color/user-selected-accent.svg)
     :::column-end:::
     :::column:::
         ![Benutzerdefinierte Akzentfarbe Header](images/color/custom-accent.svg) ![benutzerdefinierte Marke Akzentfarbe](images/color/brand-color.svg)
