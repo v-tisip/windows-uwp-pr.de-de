@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: b3c3a3f6f831186302fc32b1f510919da40c57cc
-ms.sourcegitcommit: 2a63ee6770413bc35ace09b14f56b60007be7433
+ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "3933661"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "3958738"
 ---
-# <a name="convert-between-strings-and-binary-data"></a><span data-ttu-id="8ecc8-104">Umwandlung zwischen Zeichenfolgen und binären Daten</span><span class="sxs-lookup"><span data-stu-id="8ecc8-104">Convert between strings and binary data</span></span>
+# <a name="convert-between-strings-and-binary-data"></a><span data-ttu-id="92a46-104">Umwandlung zwischen Zeichenfolgen und binären Daten</span><span class="sxs-lookup"><span data-stu-id="92a46-104">Convert between strings and binary data</span></span>
 
 
 
-<span data-ttu-id="8ecc8-105">Dieser Beispielcode zeigt, wie Sie zwischen Zeichenfolgen und binären Daten in einer UWP-App (Universelle Windows-Plattform) konvertieren können.</span><span class="sxs-lookup"><span data-stu-id="8ecc8-105">This example code shows how to convert between strings and binary data in an Universal Windows Platform (UWP) app.</span></span>
+<span data-ttu-id="92a46-105">Dieser Beispielcode zeigt, wie Sie zwischen Zeichenfolgen und binären Daten in einer UWP-App (Universelle Windows-Plattform) konvertieren können.</span><span class="sxs-lookup"><span data-stu-id="92a46-105">This example code shows how to convert between strings and binary data in an Universal Windows Platform (UWP) app.</span></span>
 
 ```cs
 public void ConvertData()
