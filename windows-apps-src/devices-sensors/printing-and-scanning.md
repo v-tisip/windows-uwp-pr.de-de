@@ -11,28 +11,28 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, gedruckt wird, 3dprinting, 3D-Druck
 ms.localizationpriority: medium
 ms.openlocfilehash: 6c4ada5d58743bf19ed27dfbdd2676f2a267129f
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3956682"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3985855"
 ---
-# <a name="printing-and-scanning"></a><span data-ttu-id="4075a-104">Drucken und Scannen</span><span class="sxs-lookup"><span data-stu-id="4075a-104">Printing and scanning</span></span>
+# <a name="printing-and-scanning"></a><span data-ttu-id="82c37-104">Drucken und Scannen</span><span class="sxs-lookup"><span data-stu-id="82c37-104">Printing and scanning</span></span>
 
 
-<span data-ttu-id="4075a-105">In diesem Abschnitt wird das Drucken und Scannen aus Ihrer Universellen Windows-App beschrieben.</span><span class="sxs-lookup"><span data-stu-id="4075a-105">This section describes how to print and scan from your Universal Windows app.</span></span>
+<span data-ttu-id="82c37-105">In diesem Abschnitt wird das Drucken und Scannen aus Ihrer Universellen Windows-App beschrieben.</span><span class="sxs-lookup"><span data-stu-id="82c37-105">This section describes how to print and scan from your Universal Windows app.</span></span>
 
-| <span data-ttu-id="4075a-106">Thema</span><span class="sxs-lookup"><span data-stu-id="4075a-106">Topic</span></span> | <span data-ttu-id="4075a-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4075a-107">Description</span></span> | 
+| <span data-ttu-id="82c37-106">Thema</span><span class="sxs-lookup"><span data-stu-id="82c37-106">Topic</span></span> | <span data-ttu-id="82c37-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="82c37-107">Description</span></span> | 
 |-------|-------------|
-| [<span data-ttu-id="4075a-108">Drucken in Apps</span><span class="sxs-lookup"><span data-stu-id="4075a-108">Print from your app</span></span>](print-from-your-app.md) | <span data-ttu-id="4075a-109">Hier erfahren Sie, wie Sie Dokumente in einer Universellen Windows-App drucken.</span><span class="sxs-lookup"><span data-stu-id="4075a-109">Learn how to print documents from a Universal Windows app.</span></span> <span data-ttu-id="4075a-110">In diesem Thema wird zudem gezeigt, wie bestimmte Seiten gedruckt werden.</span><span class="sxs-lookup"><span data-stu-id="4075a-110">This topic also shows how to print specific pages.</span></span> |
-| [<span data-ttu-id="4075a-111">Anpassen der Benutzeroberfläche für die Druckvorschau</span><span class="sxs-lookup"><span data-stu-id="4075a-111">Customize the print preview UI</span></span>](customize-the-print-preview-ui.md) | <span data-ttu-id="4075a-112">In diesem Abschnitt wird beschrieben, wie die Druckoptionen und -einstellungen in der Benutzeroberfläche für die Druckvorschau angepasst werden.</span><span class="sxs-lookup"><span data-stu-id="4075a-112">This section describes how to customize the print options and settings in the print preview UI.</span></span> |
-| [<span data-ttu-id="4075a-113">Anpassen des Druck-Workflows</span><span class="sxs-lookup"><span data-stu-id="4075a-113">Customize the print workflow</span></span>](print-workflow-customize.md) | <span data-ttu-id="4075a-114">Dieser Abschnitt beschreibt, wie Sie angepasste Druck-Workflows entsprechend den Anforderungen Ihrer Organisation erstellen.</span><span class="sxs-lookup"><span data-stu-id="4075a-114">This section describes how to create custom print workflow experiences to meet the needs of your organization.</span></span>  |
-| [<span data-ttu-id="4075a-115">Scannen aus Ihrer App</span><span class="sxs-lookup"><span data-stu-id="4075a-115">Scan from your app</span></span>](scan-from-your-app.md) | <span data-ttu-id="4075a-116">Erfahren Sie, wie Sie Inhalte über Ihre App mithilfe eines Flachbett-, Einzugs- oder automatisch konfigurierten Scanners scannen können.</span><span class="sxs-lookup"><span data-stu-id="4075a-116">Learn here how to scan content from your app by using a flatbed, feeder, or auto-configured scan source.</span></span>|
+| [<span data-ttu-id="82c37-108">Drucken in Apps</span><span class="sxs-lookup"><span data-stu-id="82c37-108">Print from your app</span></span>](print-from-your-app.md) | <span data-ttu-id="82c37-109">Hier erfahren Sie, wie Sie Dokumente in einer Universellen Windows-App drucken.</span><span class="sxs-lookup"><span data-stu-id="82c37-109">Learn how to print documents from a Universal Windows app.</span></span> <span data-ttu-id="82c37-110">In diesem Thema wird zudem gezeigt, wie bestimmte Seiten gedruckt werden.</span><span class="sxs-lookup"><span data-stu-id="82c37-110">This topic also shows how to print specific pages.</span></span> |
+| [<span data-ttu-id="82c37-111">Anpassen der Benutzeroberfläche für die Druckvorschau</span><span class="sxs-lookup"><span data-stu-id="82c37-111">Customize the print preview UI</span></span>](customize-the-print-preview-ui.md) | <span data-ttu-id="82c37-112">In diesem Abschnitt wird beschrieben, wie die Druckoptionen und -einstellungen in der Benutzeroberfläche für die Druckvorschau angepasst werden.</span><span class="sxs-lookup"><span data-stu-id="82c37-112">This section describes how to customize the print options and settings in the print preview UI.</span></span> |
+| [<span data-ttu-id="82c37-113">Anpassen des Druck-Workflows</span><span class="sxs-lookup"><span data-stu-id="82c37-113">Customize the print workflow</span></span>](print-workflow-customize.md) | <span data-ttu-id="82c37-114">Dieser Abschnitt beschreibt, wie Sie angepasste Druck-Workflows entsprechend den Anforderungen Ihrer Organisation erstellen.</span><span class="sxs-lookup"><span data-stu-id="82c37-114">This section describes how to create custom print workflow experiences to meet the needs of your organization.</span></span>  |
+| [<span data-ttu-id="82c37-115">Scannen aus Ihrer App</span><span class="sxs-lookup"><span data-stu-id="82c37-115">Scan from your app</span></span>](scan-from-your-app.md) | <span data-ttu-id="82c37-116">Erfahren Sie, wie Sie Inhalte über Ihre App mithilfe eines Flachbett-, Einzugs- oder automatisch konfigurierten Scanners scannen können.</span><span class="sxs-lookup"><span data-stu-id="82c37-116">Learn here how to scan content from your app by using a flatbed, feeder, or auto-configured scan source.</span></span>|
 
-## <a name="related-topics"></a><span data-ttu-id="4075a-117">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="4075a-117">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="82c37-117">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="82c37-117">Related topics</span></span>
 
-* [<span data-ttu-id="4075a-118">Gestaltungsrichtlinien für Druckvorgänge</span><span class="sxs-lookup"><span data-stu-id="4075a-118">Design guidelines for printing</span></span>](https://msdn.microsoft.com/library/windows/apps/Hh868178)
-* [<span data-ttu-id="4075a-119">//Build 2015-Video: Entwickeln von druckfähigen Apps in Windows 10</span><span class="sxs-lookup"><span data-stu-id="4075a-119">//Build 2015 video: Developing apps that print in Windows 10</span></span>](https://channel9.msdn.com/Events/Build/2015/2-94)
-* [<span data-ttu-id="4075a-120">UWP-Druckbeispiel</span><span class="sxs-lookup"><span data-stu-id="4075a-120">UWP print sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=619984)
+* [<span data-ttu-id="82c37-118">Gestaltungsrichtlinien für Druckvorgänge</span><span class="sxs-lookup"><span data-stu-id="82c37-118">Design guidelines for printing</span></span>](https://msdn.microsoft.com/library/windows/apps/Hh868178)
+* [<span data-ttu-id="82c37-119">//Build 2015-Video: Entwickeln von druckfähigen Apps in Windows 10</span><span class="sxs-lookup"><span data-stu-id="82c37-119">//Build 2015 video: Developing apps that print in Windows 10</span></span>](https://channel9.msdn.com/Events/Build/2015/2-94)
+* [<span data-ttu-id="82c37-120">UWP-Druckbeispiel</span><span class="sxs-lookup"><span data-stu-id="82c37-120">UWP print sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=619984)
  
 
