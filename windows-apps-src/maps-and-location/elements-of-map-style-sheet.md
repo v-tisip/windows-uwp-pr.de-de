@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Karten, Karten-Stylesheet
 ms.localizationpriority: medium
 ms.openlocfilehash: 11360f9d76fc07d7a6b24bd1e0bfb78df4f1d22d
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3957958"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3981679"
 ---
 # <a name="map-style-sheet-reference"></a>Karten-Stylesheet-Referenz
 
@@ -185,7 +185,7 @@ In diesem Abschnitt werden die Eigenschaften beschrieben, die Sie für die Eintr
 | shadedReliefVisible          | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Ein Flag, das angibt, ob Schattierungen für Erhöhungen auf der Karte gezeichnet werden sollen |
 | shadedReliefDarkColor        | Farbe   |  ✔   |  ✔   |  ✔   |  ✔   | Die Farbe der dunklen Seite des schattierten Reliefs.  Der Alphakanal stellt den maximalen Alphawert. |
 | shadedReliefLightColor       | Farbe   |  ✔   |  ✔   |  ✔   |  ✔   | Die Farbe der hellen Seite des schattierten Reliefs.  Der Alphakanal stellt den maximalen Alphawert. |
-| shadowColor                  | Farbe   |      |      |      |  ✔️   | Die Farbe des Schattens hinter Symbole, die Schatten zu verwenden. |
+| shadowColor                  | Farben   |      |      |      |  ✔️   | Die Farbe des Schattens hinter Symbole, die Schatten zu verwenden. |
 | spaceColor                   | Farbe   |  ✔   |  ✔   |  ✔   |  ✔   | Der ARGB-Farbwert für den Bereich um die Karte herum |
 | useDefaultImageColors        | Bool    |  ✔   |  ✔   |  ✔   |  ✔   | Ein Flag, das angibt, ob die ursprünglichen Farben in SVG suchen Sie den Paletteneintrag nach Farben in einem Bild, anstatt verwendet werden soll. |
 

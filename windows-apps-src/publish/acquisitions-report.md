@@ -4,18 +4,18 @@ Description: The Acquisitions report in the Windows Dev Center dashboard lets yo
 title: Bericht „Käufe“
 ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
 ms.author: wdg-dev-content
-ms.date: 08/15/2018
+ms.date: 09/14/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Käufe, App-Verkäufe, App-Downloads, Installationen, Trichter, Käufe, Konvertierungen, Kanal, App-Seitenaufrufe
 ms.localizationpriority: medium
-ms.openlocfilehash: e6b4a3d8a10234e5f95e70f397a4de962a29c929
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.openlocfilehash: 75a3ce152257d10fe392b3f64381b3e82bc79961
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3961348"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3987927"
 ---
 # <a name="acquisitions-report"></a>Bericht „Käufe“
 
@@ -49,6 +49,8 @@ Die Informationen in allen unten angezeigten Diagrammen beziehen sich auf den au
 Das Diagramm **Käufe** zeigt, wie oft Ihre Käufe (ein neuer Kunde, der eine Lizenz für Ihre App ausgewählt hat) im ausgewählten Zeitraum pro Tag oder Woche gekauft wurde. (Wenn Sie **Filter anwenden** zum Anzeigen von Daten für eine längere Dauer verwenden, werden die Kaufdaten nach Woche gruppiert.) Nur Käufe von Kunden, die auf einem gültigen Microsoft-Konto angemeldet sind, sind in diesem Diagramm enthalten. 
 
 Standardmäßig zeigen wir die **täglich App** -Ansicht, die in der Nähe Echtzeit-Daten enthält. Sie können auch anzeigen, wie oft die App während ihrer gesamten Lebensdauer gekauft wurde, indem Sie **App Insgesamt** auswählen. Zeigt den kumulierten Gesamtwert aller Käufe an (ab der ersten Veröffentlichung Ihrer App).
+
+**Bruttoumsätze** für Ihre app (von Oktober 2016 - vorhanden) sind auch verfügbar in diesem Diagramm zeigt die Gesamtmenge aus app-Verkäufen (in US-Dollar) erzielt. Beachten Sie, dass dieser Betrag für alle Erstattungen, Rückbuchungen, Ausgleich usw. nicht berücksichtigt.
 
 Sie können optional die Ergebnisse danach filtern, ob die Übernahme vom Client oder einem webbasierten Store und/oder Betriebssystemversion stammt.
 

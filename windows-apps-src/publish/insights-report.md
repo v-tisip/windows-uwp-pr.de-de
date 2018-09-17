@@ -1,7 +1,7 @@
 ---
 author: jnHs
 Description: The Insights report in the Windows Dev Center dashboard
-title: Geschäftsinformationen-Bericht
+title: Bericht über Geschäftsverlauf
 ms.author: wdg-dev-content
 ms.date: 06/01/2018
 ms.topic: article
@@ -10,13 +10,13 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Insight, Trend, Anomalien, Anomalie, Daten Änderungen
 ms.localizationpriority: medium
 ms.openlocfilehash: be70dccbb7a12b65b9e7bbd07f27ae7ea3a578ff
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3964724"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3986595"
 ---
-# <a name="insights-report"></a>Geschäftsinformationen-Bericht
+# <a name="insights-report"></a>Bericht über Geschäftsverlauf
 
 
 **Der Bericht im Windows Dev Center-Dashboard** zeigt erhebliche Änderungen (Erhöhung oder Verringerung des eine bestimmte Metrik), die wir aus den letzten 30 Tagen in Ihrer Käufe, Integrität, und/oder Nutzungsdaten erkannt. So können Sie einen kurzen Überblick über potenziell wichtige Änderungen bei der abrufen, ohne dass alle Diagramme in jedem dieser Berichte anzeigen.

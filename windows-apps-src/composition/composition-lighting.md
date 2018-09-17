@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e634b18fffc4f601f6512d6ceeed51efbe9c1886
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3960766"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3981737"
 ---
 # <a name="using-lights-in-windows-ui"></a>Verwendung von Licht in Windows-Benutzeroberfläche
 
@@ -87,7 +87,7 @@ Je nach Art des Lichts verwendet kann ein Licht über Eigenschaften für Dämpfu
 
 Eigenschaft | Beschreibung
 --- | ---
-**Farbe** | Die [Farbe](/uwp/api/windows.ui.color) des Lichts. Beleuchtung Farbe, die Werte von [D3D](https://docs.microsoft.com/windows/uwp/graphics-concepts/light-properties) "Diffus", Umgebung und Glanzlicht, die die abgestrahlte Farbe definiert definiert sind. Beleuchtung verwendet RGBA-Werte für Licht. die alpha-Farbkomponente wird nicht verwendet.
+**Farben** | Die [Farbe](/uwp/api/windows.ui.color) des Lichts. Beleuchtung Farbe, die Werte von [D3D](https://docs.microsoft.com/windows/uwp/graphics-concepts/light-properties) "Diffus", Umgebung und Glanzlicht, die die abgestrahlte Farbe definiert definiert sind. Beleuchtung verwendet RGBA-Werte für Licht. die alpha-Farbkomponente wird nicht verwendet.
 **Richtung** | Die Richtung des Lichts. Die Richtung, in der das Licht strahlt, ist relativ zu seiner [CoordinateSpace](/uwp/api/windows.ui.composition.distantlight.coordinatespace) Visual angegeben.
 **Koordinatenbereich** | Jede Visual verfügt über eine implizite 3D-Koordinatensystem. X-Richtung ist von links nach rechts. Y-Richtung wird von oben nach unten. Z-Richtung ist ein Punkt außerhalb der Ebene. Die ursprüngliche diese Koordinate ist der oberen linken Ecke des visuellen Elements aus, und die Einheit ist Device Independent Pixel (DIP). Ein Licht Offset in diese Koordinate definiert.
 **Inneren und äußeren Kegel** | Spotlights strahlen einen zweitteiligen Lichtkegel ab: einen hellen inneren Kegel und einen äußeren Kegel. Komposition können Sie die Kontrolle über inneren und äußeren Kegelwinkel und Farbe.

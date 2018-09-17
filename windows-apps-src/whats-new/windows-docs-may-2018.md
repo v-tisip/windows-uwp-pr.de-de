@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 322bc056411095019dfc027078cbfef7de0883fb
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3963898"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3985549"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>Neuigkeiten in der Windows-Entwicklerdokumentation im Mai 2018
 
@@ -40,7 +40,7 @@ Der Benutzer der Bewegung in der Fluent Design-Systems wird weiterentwickelt, di
 Visual Updates und geringfügigen Änderungen wurden die folgenden Fluent Design-Seiten vorgenommen:
 
 * [Ausrichtung, Abstände, Ränder](../design/layout/alignment-margin-padding.md)
-* [Farbe](../design/style/color.md)
+* [Farben](../design/style/color.md)
 * [Befehlsgrundlagen](../design/basics/commanding-basics.md)
 * [Fluent Design für Windows-apps](../design/fluent-design-system/index.md)
 * [Einführung in das app-design](../design/basics/design-and-ui-intro.md)

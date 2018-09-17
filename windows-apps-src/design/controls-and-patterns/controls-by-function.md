@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0840bab2e039ec55ea4070f8dad39c0ae4e74bbc
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3958212"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3986239"
 ---
 # <a name="controls-by-function"></a>Steuerelemente nach Funktion
 
@@ -30,7 +30,7 @@ Laden Sie das [Beispiel für XAML-UI-Grundlagen](http://go.microsoft.com/fwlink/
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Wenn Sie die <strong style="font-weight: semi-bold">XAML-Steuerelementekatalog</strong> -app installiert haben, klicken Sie hier, um <a href="xamlcontrolsgallery:/item/NavigationView">die app zu öffnen und finden Sie unter der NavigationView in Aktion zu sehen</a> </p>
+    <p>Wenn Sie <strong style="font-weight: semi-bold">XAML-Steuerelementsammlungen</strong> app installiert haben, klicken Sie hier, zum <a href="xamlcontrolsgallery:/item/NavigationView">Öffnen der Anwendung und die NavigationView in Aktion</a> </p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Erwerben Sie die XAML-Steuerelementekatalog-App (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Erwerben Sie den Quellcode (GitHub)</a></li>
@@ -270,7 +270,7 @@ Zeigt eine Meldung an, die einen Benutzereingriff erfordert. (Im Gegensatz zu ei
 
 Referenz: [Flyout](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.flyout.aspx) 
 
-Design und Vorgehensweise: [Flyouts](dialogs-and-flyouts/flyouts.md) 
+Design und Vorgehensweisen: [Flyout](dialogs-and-flyouts/flyouts.md) 
 
 ### <a name="menu-flyout"></a>Menü-Flyout
 Zeigt vorübergehend eine Liste der Befehle oder Optionen im Kontext der Benutzeraktion an.
@@ -290,7 +290,7 @@ Zeigt vorübergehend eine Liste der Befehle oder Optionen im Kontext der Benutze
 
 Referenz: [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyout.aspx), [MenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutitem.aspx), [MenuFlyoutSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutseparator.aspx), [ToggleMenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.togglemenuflyoutitem.aspx) 
 
-Design und Vorgehensweise: [Menüs und Kontextmenüs](menus.md) 
+Design und Vorgehensweisen: [Menüs und Kontextmenüs](menus.md) 
 
 Beispielcode: [Beispiel für XAML-Kontextmenü](http://go.microsoft.com/fwlink/p/?LinkId=620021)
 
@@ -299,7 +299,7 @@ Ein benutzerdefiniertes Menü mit von Ihnen angegebenen Befehlen.
 
 Referenz: [PopupMenu](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.popups.popupmenu.aspx) 
 
-Design und Vorgehensweise: [Dialogfelder](dialogs-and-flyouts/dialogs.md) 
+Design und Vorgehensweisen: [Dialogfelder](dialogs-and-flyouts/dialogs.md) 
 
 ### <a name="tooltip"></a>QuickInfo
 Ein Popupfenster, das Informationen zu einem Element anzeigt. 
@@ -555,11 +555,11 @@ Siehe „Medienelement“.
 
 ### <a name="navigationview"></a>NavigationView
 
-Eine anpassungsfähige Container und flexible Navigationsmodell, der linken Navigationsbereich angezeigt, oberen Navigationsleiste und registerkartenmuster implementiert.
+Eine anpassungsfähige Container und flexible Navigationsmodell, der im Navigationsbereich links, oben und Registerkarten Muster implementiert.
 
 Referenz: [NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 
-Design und Vorgehensweise: [Handbuch für NavigationView-Steuerelement](navigationview.md)
+Design und Vorgehensweisen: [NavigationView Steuerelement Guide](navigationview.md)
 
 ### <a name="splitview"></a>SplitView
 

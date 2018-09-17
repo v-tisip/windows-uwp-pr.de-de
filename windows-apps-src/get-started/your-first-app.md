@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, erste App, C#, c++, JavaScript
 ms.localizationpriority: medium
 ms.openlocfilehash: e8e2272ab761e1fa0bc9514f226a73a66a10662b
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3961190"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3981967"
 ---
 # <a name="create-your-first-app"></a>Erstellen Ihrer ersten App
 
@@ -81,7 +81,7 @@ Müssen Sie Ihre Webkenntnisse auffrischen?
 
 ## <a name="see-also"></a>Weitere Informationen
 
-* [Beginnen Sie mit der Codierung](create-uwp-apps.md)
+* [Beginnen mit der Codierung](create-uwp-apps.md)
 * [Was ist eine UWP-App?](universal-application-platform-guide.md)
 * [Vorbereiten](get-set-up.md)
 * [Für Windows-Konto anmelden](sign-up.md)
