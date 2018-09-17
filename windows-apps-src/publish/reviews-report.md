@@ -1,7 +1,7 @@
 ---
 author: jnHs
 Description: The Reviews report in the Windows Dev Center dashboard lets you see the reviews (comments) that customers entered when rating your app in the Store.
-title: Rezensionsbericht
+title: Bericht „Rezensionen“
 ms.assetid: E50C3A4D-1D8A-4E5B-8182-3FAD049F2A2D
 ms.author: wdg-dev-content
 ms.date: 08/16/2018
@@ -10,14 +10,14 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, Uwp, Überprüfung, Kommentar, Prüfer
 ms.localizationpriority: medium
-ms.openlocfilehash: 8891aecb904f69e3f77ec5892d9234f79db46ff0
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.openlocfilehash: 4500ebe7406db45a089f3ceba10c1d1e781ea679
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3958688"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3989539"
 ---
-# <a name="reviews-report"></a>Rezensionsbericht
+# <a name="reviews-report"></a>Bericht „Rezensionen“
 
 
 Der Bericht **"Rezensionen"** im Windows Dev Center-Dashboard gibt Aufschluss über die Rezensionen (Kommentare), die Kunden beim Bewerten eingegeben haben Ihre app im Store.
@@ -68,7 +68,7 @@ Beachten Sie, dass dieses Diagramm immer alle Rezensionen enthält, auch wenn Si
 In diesem Diagramm kann auch im [Bericht "Bewertungen"](ratings-report.md)sowie weitere Informationen zu app Bewertungen angezeigt werden.
 
 
-< Span Id = "Rezension--Kategorien der rezensionsstatistik / >
+<span id = "review-insight-categories" />
 
 ## <a name="insight-categories"></a>Kategorien der rezensionsstatistik
 
