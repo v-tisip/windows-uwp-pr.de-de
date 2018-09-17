@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: 139514166d623dc9a621b533cd3ce4bb7fdea0c5
-ms.sourcegitcommit: c8f6866100a4b38fdda8394ea185b02d7af66411
+ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "3961796"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "3988219"
 ---
-# <a name="compare-buffers"></a><span data-ttu-id="aa412-104">Vergleichen von Puffern</span><span class="sxs-lookup"><span data-stu-id="aa412-104">Compare buffers</span></span>
+# <a name="compare-buffers"></a><span data-ttu-id="18601-104">Vergleichen von Puffern</span><span class="sxs-lookup"><span data-stu-id="18601-104">Compare buffers</span></span>
 
 
 
-<span data-ttu-id="aa412-105">Dieser Beispielcode zeigt, wie Sie Puffer in einer UWP (Universelle Windows-Plattform)-App vergleichen können.</span><span class="sxs-lookup"><span data-stu-id="aa412-105">This example code shows how to compare buffers in an Universal Windows Platform (UWP) app.</span></span>
+<span data-ttu-id="18601-105">Dieser Beispielcode zeigt, wie Sie Puffer in einer UWP (Universelle Windows-Plattform)-App vergleichen können.</span><span class="sxs-lookup"><span data-stu-id="18601-105">This example code shows how to compare buffers in an Universal Windows Platform (UWP) app.</span></span>
 
 ```cs
 public void CompareBuffers()
