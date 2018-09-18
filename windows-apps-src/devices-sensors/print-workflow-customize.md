@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, das Drucken
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e53c15b01a08c8c617529fe074929ce89a68ce9
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3987241"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4017036"
 ---
 # <a name="customize-the-print-workflow"></a><span data-ttu-id="79b01-104">Anpassen des Druck-Workflows</span><span class="sxs-lookup"><span data-stu-id="79b01-104">Customize the print workflow</span></span>
 

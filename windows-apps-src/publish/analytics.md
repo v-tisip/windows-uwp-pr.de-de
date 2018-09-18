@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Analysen, Berichte, Dashboard, apps, Daten, Metriken
 ms.localizationpriority: medium
 ms.openlocfilehash: 090ddfdfbed1ae49e87f4dc419765e006913764f
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3981249"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4023400"
 ---
 # <a name="analyze-app-performance"></a><span data-ttu-id="403c1-103">Analysieren der App-Leistung</span><span class="sxs-lookup"><span data-stu-id="403c1-103">Analyze app performance</span></span>
 
