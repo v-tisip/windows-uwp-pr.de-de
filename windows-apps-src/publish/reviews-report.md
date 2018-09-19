@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Überprüfung, Kommentar, Prüfer
 ms.localizationpriority: medium
 ms.openlocfilehash: 4500ebe7406db45a089f3ceba10c1d1e781ea679
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4022368"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4052472"
 ---
 # <a name="reviews-report"></a><span data-ttu-id="0a7fe-103">Bericht „Rezensionen“</span><span class="sxs-lookup"><span data-stu-id="0a7fe-103">Reviews report</span></span>
 

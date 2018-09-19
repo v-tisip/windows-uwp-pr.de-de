@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, sekundäre Kacheln, Richtlinien, Richtlinien, bewährte Methoden
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e3d31376b9ac155dab6bffa7739cb880af1cff9
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4021950"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4052586"
 ---
 # <a name="secondary-tile-guidance"></a><span data-ttu-id="107d5-103">Anleitung für sekundäre Kacheln</span><span class="sxs-lookup"><span data-stu-id="107d5-103">Secondary tile guidance</span></span>
 
