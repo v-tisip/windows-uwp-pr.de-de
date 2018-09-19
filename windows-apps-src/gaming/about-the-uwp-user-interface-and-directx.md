@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, DirectX, App-Objekt
 ms.localizationpriority: medium
 ms.openlocfilehash: fcbe68516e3ad8b2643faf68900e3305f18e8bbf
-ms.sourcegitcommit: 9e2c34a5ed3134aeca7eb9490f05b20eb9a3e5df
+ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "3987017"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "4024042"
 ---
 # <a name="the-app-object-and-directx"></a><span data-ttu-id="2e92a-104">Das App-Objekt und DirectX</span><span class="sxs-lookup"><span data-stu-id="2e92a-104">The app object and DirectX</span></span>
 
