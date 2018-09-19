@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Add-Ons, Eigenschaften, Abonnementzeitraum, Produktlebensdauer, Inhaltstyp, IAP, In-App-Kauf, In-App-Produkt
 ms.localizationpriority: medium
 ms.openlocfilehash: 73a494ea1899f3a764a668ae61c1235808eff1a7
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4024236"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4054156"
 ---
 # <a name="enter-add-on-properties"></a><span data-ttu-id="9edce-103">Eingeben von Add-On-Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="9edce-103">Enter add-on properties</span></span>
 
