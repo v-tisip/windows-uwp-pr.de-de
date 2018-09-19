@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: 595b4ab47e3c6c833a4b8f2e692a0cc0c8ffcaa4
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4023040"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4056952"
 ---
-# <a name="create-random-numbers"></a><span data-ttu-id="8b009-104">Erstellen zufälliger Zahlen</span><span class="sxs-lookup"><span data-stu-id="8b009-104">Create random numbers</span></span>
+# <a name="create-random-numbers"></a><span data-ttu-id="bbb23-104">Erstellen zufälliger Zahlen</span><span class="sxs-lookup"><span data-stu-id="bbb23-104">Create random numbers</span></span>
 
 
 
-<span data-ttu-id="8b009-105">Dieser Beispielcode zeigt, wie Sie zufällige Zahlen oder Puffer für die Verwendung bei der Kryptografie in einer UWP (Universelle Windows-Plattform)-App erstellen.</span><span class="sxs-lookup"><span data-stu-id="8b009-105">This example code shows how to create a random number or buffer for use in cryptography in an Universal Windows Platform (UWP) app.</span></span>
+<span data-ttu-id="bbb23-105">Dieser Beispielcode zeigt, wie Sie zufällige Zahlen oder Puffer für die Verwendung bei der Kryptografie in einer UWP (Universelle Windows-Plattform)-App erstellen.</span><span class="sxs-lookup"><span data-stu-id="bbb23-105">This example code shows how to create a random number or buffer for use in cryptography in an Universal Windows Platform (UWP) app.</span></span>
 
 ```cs
 public string GenerateRandomData()

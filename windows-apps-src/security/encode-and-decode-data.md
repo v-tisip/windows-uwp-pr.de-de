@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: a9177061f70419e2a3b0e3b47f933af75a11ad68
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4023912"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4060622"
 ---
-# <a name="encode-and-decode-data"></a><span data-ttu-id="f5c0d-104">Codieren und Decodieren von Daten</span><span class="sxs-lookup"><span data-stu-id="f5c0d-104">Encode and decode data</span></span>
+# <a name="encode-and-decode-data"></a><span data-ttu-id="e0be6-104">Codieren und Decodieren von Daten</span><span class="sxs-lookup"><span data-stu-id="e0be6-104">Encode and decode data</span></span>
 
 
 
-<span data-ttu-id="f5c0d-105">Dieser Beispielcode zeigt, wie Sie base64- und Hexadezimaldaten in einer App für die universelle Windows-Plattform (UWP) codieren und decodieren.</span><span class="sxs-lookup"><span data-stu-id="f5c0d-105">This example code shows how to encode and decode base64 and hexadecimal data in an Universal Windows Platform (UWP) app.</span></span>
+<span data-ttu-id="e0be6-105">Dieser Beispielcode zeigt, wie Sie base64- und Hexadezimaldaten in einer App für die universelle Windows-Plattform (UWP) codieren und decodieren.</span><span class="sxs-lookup"><span data-stu-id="e0be6-105">This example code shows how to encode and decode base64 and hexadecimal data in an Universal Windows Platform (UWP) app.</span></span>
 
 ```cs
 public void EncodeDecodeBase64()

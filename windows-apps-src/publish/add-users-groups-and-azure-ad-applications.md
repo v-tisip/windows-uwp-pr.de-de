@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Azure Ad-Anwendung, Aad, Benutzer, Gruppen, mehrere Benutzer, mit mehreren Benutzern
 ms.localizationpriority: medium
 ms.openlocfilehash: 97502a0a2863ed6f7ab2ce5d842fbebc1ae8091c
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4016308"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4054206"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-dev-center-account"></a><span data-ttu-id="ee4e2-103">Hinzufügen von Benutzern, Gruppen und Azure AD-Anwendungen zu Ihrem Dev Center-Konto</span><span class="sxs-lookup"><span data-stu-id="ee4e2-103">Add users, groups, and Azure AD applications to your Dev Center account</span></span>
 
