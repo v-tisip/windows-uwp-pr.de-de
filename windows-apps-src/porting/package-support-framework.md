@@ -10,34 +10,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 46d5705233af9e8254b9ac89a2d6e9891e90701f
-ms.sourcegitcommit: f5321b525034e2b3af202709e9b942ad5557e193
+ms.openlocfilehash: 7e5119696498156d36ec63b16b1d76c00b03f4df
+ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "4021520"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "4060962"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a>Wenden Sie-Runtime-Updates zu einem MSIX-Paket mit dem Paket-Support-Framework
 
 Das Paket-Support-Framework ist ein open-Source-Kit, mit dem Sie die Updates auf Anwenden der vorhandenen win32-Anwendung, wenn Sie keinen Zugriff auf den Quellcode, haben, damit sie in einem MSIX-Container ausgeführt werden kann. Das Paket Support-Framework können Ihre Anwendung, führen Sie die bewährten Methoden der modernen-Runtime-Umgebung.
 
-Um das Paket Support-Framework zu erstellen, nutzten wir die [abweichen müssen](https://www.microsoft.com/en-us/research/project/detours) -Technologie ist ein open-Source-Framework von Microsoft Research (MSR) entwickelt und hilft bei der API-Umleitung und verknüpfen.
-
-Dieses Framework ist open-Source, leichter zu, und können Sie sie zur Behandlung von Anwendung schnell. Es gibt Ihnen außerdem die Möglichkeit, mit der Community auf der ganzen Welt finden Sie in, und auf die Investitionen von anderen aufzubauen.
-
-## <a name="a-quick-look-inside-of-the-package-support-framework"></a>Einen kurzen innerhalb der Paket-Support-Framework
-
-Das Paket Support-Framework enthält eine ausführbare Datei, ein Laufzeit-Manager DLL-Datei und eine Reihe von Runtime-Updates.
-
-![Paket-Support-Framework](images/desktop-to-uwp/package-support-framework.png)
-
-So funktioniert’s. Erstellen Sie eine Konfigurationsdatei, die die Fix(s) angibt, die Sie für Ihre Anwendung anwenden möchten. Anschließend können Sie das Paket auf die Shim Startprogramm ausführbare Datei verweisen ändern.
-
-Wenn Benutzer Ihre Anwendung starten, wird das Shim Startprogramm für die erste ausführbare Datei, die ausgeführt wird. Ihrer Konfigurationsdatei liest, und fügen der Runtime Fix(s) und den Laufzeit-Manager DLL in den Anwendungsprozess.
-
-![Paket-Unterstützung Framework DLL-Injection](images/desktop-to-uwp/package-support-framework-2.png)
-
-Der Laufzeit-Manager gilt das Update, wenn sie von der Anwendung auf einem MSIX-Container Ausführen benötigt wird.
+Weitere Informationen hierzu finden Sie unter [Package Support-Framework](https://docs.microsoft.com/windows/msix/package-support-framework-overview).
 
 Dieses Handbuch hilft Ihnen, Probleme mit der Anwendungskompatibilität zu identifizieren und um suchen, anwenden und erweitern die Runtime behebt, die sie beheben.
 
