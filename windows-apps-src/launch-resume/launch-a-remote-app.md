@@ -11,11 +11,11 @@ keywords: Windows 10, Uwp, verbundenen Geräten "," remote-Systeme "," Rome "," 
 ms.assetid: 54f6a33d-a3b5-4169-8664-653dbab09175
 ms.localizationpriority: medium
 ms.openlocfilehash: 58a420d73ba4a0cd51f909fd5d7d417af1cfb38f
-ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
+ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "4056736"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "4086829"
 ---
 # <a name="launch-an-app-on-a-remote-device"></a><span data-ttu-id="a9e94-104">Starten einer App auf einem Remotegerät</span><span class="sxs-lookup"><span data-stu-id="a9e94-104">Launch an app on a remote device</span></span>
 

@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e4c1b1df8ad29635f38ae5b373685d3504a4eb60
-ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
+ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "4058324"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "4087513"
 ---
 # <a name="create-a-universal-windows-platform-console-app"></a><span data-ttu-id="32a59-104">Erstellen einer universellen Windows-Plattform-Konsolen-App</span><span class="sxs-lookup"><span data-stu-id="32a59-104">Create a Universal Windows Platform console app</span></span>
 
