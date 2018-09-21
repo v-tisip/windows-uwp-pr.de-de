@@ -11,21 +11,21 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 959e056d5edf5e1fe7a1c51a2f855c9e11512cb0
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4110718"
+ms.locfileid: "4121955"
 ---
 # <a name="product-declarations"></a>Produktdeklarationen
 
-Im Abschnitt **produktdeklarationen** der [Eigenschaftenseite des [Übermittlungsprozesses](app-submissions.md) ](enter-app-properties.md) hilft, stellen Sie sicher, dass Ihre app entsprechend angezeigt und die richtigen Kunden und hilft ihnen verstehen, wie Ihre app verwendet werden kann angeboten wird.
+Die **produktdeklarationen** Abschnitt der Seite " [Eigenschaften](enter-app-properties.md) " des [Übermittlungsprozesses](app-submissions.md) hilft dabei, stellen Sie sicher, dass Ihre app entsprechend angezeigt und die richtigen Kunden und hilft ihnen verstehen, wie Ihre app verwendet werden kann angeboten wird.
 
-Den folgenden Abschnitten werden einige der Deklarationen und was Sie bei der Entscheidung, ob sich eine Deklaration für Ihre app gilt berücksichtigen müssen. Beachten Sie, dass zwei dieser Deklarationen standardmäßig aktiviert sind (wie unten beschrieben). Je nach Kategorie des Produkts möglicherweise auch zusätzliche Deklarationen angezeigt werden. Achten Sie darauf, überprüfen Sie alle Deklarationen und sicherstellen, dass sie Ihre Übermittlung genau widerspiegeln.
+Den folgenden Abschnitten werden einige der Deklarationen und was Sie bei der Entscheidung, ob sich eine Deklaration für Ihre app gilt berücksichtigen müssen. Beachten Sie, dass zwei dieser Deklarationen standardmäßig aktiviert sind (wie unten beschrieben). Je nach Kategorie des Produkts können Sie auch zusätzliche Deklarationen angezeigt. Achten Sie darauf, dass alle Deklarationen überprüfen und sicherzustellen, dass sie Ihre Übermittlung genau widerspiegeln.
 
-## <a name="this-app-allows-users-to-make-purchases-but-does-not-use-the-microsoft-store-commerce-system"></a>Diese app ermöglicht es Benutzern, Einkäufe zu tätigen, verwendet jedoch nicht das Microsoft Store-e-Commerce-System.
+## <a name="this-app-allows-users-to-make-purchases-but-does-not-use-the-microsoft-store-commerce-system"></a>Diese app ermöglicht es Benutzern, Einkäufe zu tätigen, verwendet jedoch nicht der Microsoft Store-e-Commerce-Systems.
 
-Nahezu jede Übermittlung sollten Sie diese Option deaktiviert lassen, seit apps, die Möglichkeiten zum Kauf anbieten müssen Elementen, die sind oder können verbraucht oder in Ihrer app verwendet die Microsoft Store in-app-Einkaufs-API erstellen und Übermitteln von Add-ons verwenden. Gemäß der [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)weiterhin apps, die erstellt und vor 29 Juni 2015 eingereicht wurden in-app-einkauffunktionalität anbieten, ohne Verwendung des Microsoft-e-Commerce-Engine, die einkaufsfunktionalität die [aber Microsoft Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies#108-financial-transactions). Wenn dies auf Ihre App zutrifft, müssen Sie dieses Kontrollkästchen aktivieren. Lassen Sie das Kontrollkästchen andernfalls deaktiviert.
+Nahezu jede Übermittlung sollten Sie diese Option deaktiviert lassen, seit apps, die Möglichkeiten zum Kauf anbieten müssen Elemente, die sind oder verbraucht oder verwendet werden können in Ihrer app der Microsoft Store in-app-Einkaufs-API zum Erstellen und Übermitteln von Add-ons verwenden. Gemäß der [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)könnte apps, die erstellt und vor 29 Juni 2015 eingereicht wurden, weiterhin in-app-einkauffunktionalität anbieten, ohne Verwendung von Microsoft e-Commerce-Engine, solange die einkaufsfunktionalität die [aber Microsoft Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies#108-financial-transactions). Wenn dies auf Ihre App zutrifft, müssen Sie dieses Kontrollkästchen aktivieren. Lassen Sie das Kontrollkästchen andernfalls deaktiviert.
 
 ## <a name="this-app-has-been-tested-to-meet-accessibility-guidelines"></a>Diese App wurde auf Einhaltung der Richtlinien zur Barrierefreiheit getestet.
 
@@ -48,7 +48,7 @@ Weitere Informationen finden Sie unter [Eingabehilfen](../design/accessibility/a
 
 ## <a name="customers-can-install-this-app-to-alternate-drives-or-removable-storage"></a>Kunden können diese App auf alternativen Laufwerken oder Wechselmedien installieren.
 
-Dieses Kontrollkästchen ist standardmäßig aktiviert, damit Kunden Ihre app auf externen oder auf Wechseldatenträgern installieren können z. B. eine SD-Karte oder auf einem systemfremden Volumelaufwerk wie einem externen Laufwerk. (Für Windows Phone 8.1 wurde dies zuvor über "storemanifest.xml" angegeben.)
+Dieses Kontrollkästchen ist standardmäßig aktiviert, damit Kunden Ihre app für externe oder auf Wechseldatenträgern zu installieren, wie etwa einer SD-Karte oder auf einem systemfremden Volumelaufwerk wie einem externen Laufwerk zu steuern. (Für Windows Phone 8.1 wurde dies zuvor über "storemanifest.xml" angegeben.)
 
 Wenn Sie verhindern, dass Ihre app auf alternativen Laufwerken oder Wechselmedien installiert wird, und nur die Installation auf die interne Festplatte auf dem Gerät zulassen möchten, deaktivieren Sie dieses Kontrollkästchen.
 

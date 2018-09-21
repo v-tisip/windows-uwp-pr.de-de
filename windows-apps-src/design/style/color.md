@@ -11,11 +11,11 @@ keywords: Windows10, UWP
 design-contact: karenmui
 ms.localizationpriority: medium
 ms.openlocfilehash: 19f4d9cde6ee2bc9615f044f18bc5e8828ca1985
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4089219"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4119784"
 ---
 # <a name="color"></a>Farben
 
@@ -33,7 +33,7 @@ In UWP-Apps werden die Farben in erster Linie durch Akzentfarbe und Design besti
 Wenn Farbe sparsam verwendet wird, um wichtige Elemente zu markieren, können sie eine Benutzeroberfläche erstellen, die flüssig und intuitiv ist.
     :::column-end:::
     :::column:::
-        **Verwenden Sie Farbe, um Interaktivität.**
+        **Verwenden Sie Farbe zur Angabe Interaktivität.**
 Es ist sinnvoll, eine Farbe auszuwählen, die die interaktiven Elementen Ihrer Anwendung angibt. Beispielsweise verwenden viele Webseiten blauen Text, um einen Link zu kennzeichnen.
     :::column-end:::
 :::row-end:::
@@ -147,7 +147,7 @@ Allgemeine Steuerelemente verwenden eine Akzentfarbe, um die Zustandsinformation
 
 :::row:::
     :::column:::
-        ![vom Benutzer ausgewählte Akzent-Header](images/color/user-accent.svg) ![vom Benutzer ausgewählte Akzentfarbe](images/color/user-selected-accent.svg)
+        ![vom Benutzer ausgewählte Akzentfarbe Header](images/color/user-accent.svg) ![vom Benutzer ausgewählte Akzentfarbe](images/color/user-selected-accent.svg)
     :::column-end:::
     :::column:::
         ![Benutzerdefinierte Akzentfarbe Header](images/color/custom-accent.svg) ![benutzerdefinierte Marke Akzentfarbe](images/color/brand-color.svg)
@@ -258,7 +258,7 @@ Weitere Informationen über die Verwendung der Pinsel finden Sie unter [XAML-Pin
 
 :::row:::
     :::column:::
-        ![Abbildung mit hohem Kontrast](images/color/illo-contrast.svg)
+        ![Abbildung Kontrast](images/color/illo-contrast.svg)
     :::column-end:::
     ::: Column Span = "2"::: **Kontrast**
 
@@ -270,7 +270,7 @@ Weitere Informationen über die Verwendung der Pinsel finden Sie unter [XAML-Pin
 
 :::row:::
     :::column:::
-        ![Abbildung mit hohem Kontrast](images/color/illo-lighting.svg)
+        ![Abbildung Kontrast](images/color/illo-lighting.svg)
     :::column-end:::
     ::: Column Span = "2"::: **Beleuchtung**
 
@@ -280,7 +280,7 @@ Weitere Informationen über die Verwendung der Pinsel finden Sie unter [XAML-Pin
 
 :::row:::
     :::column:::
-        ![Abbildung mit hohem Kontrast](images/color/illo-colorblindness.svg)
+        ![Abbildung Kontrast](images/color/illo-colorblindness.svg)
     :::column-end:::
     ::: Column Span = "2"::: **Farbenblindheit**
 

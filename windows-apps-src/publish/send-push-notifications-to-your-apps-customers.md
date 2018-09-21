@@ -11,11 +11,11 @@ keywords: Windows10, UWP, zielgruppenorientierte Benachrichtigungen, Push-Benach
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d62f46ad1b55fbad3ab7c21a593625a2538b68f
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4087185"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4116886"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>Senden von Benachrichtigungen an die Kunden Ihrer App
 
@@ -123,7 +123,7 @@ Wenn Sie die Benachrichtigung und Ihre App wie oben beschrieben für das Messen 
 Um detaillierte Daten für jede Benachrichtigung zu überprüfen:
 
 1.  Erweitern Sie im Windows Dev Center-Dashboard den Abschnitt **Bewerten** und wählen Sie dann **Benachrichtigungen** aus.
-2.  Wählen Sie in der Tabelle der vorhandenen Benachrichtigungen **In Bearbeitung** oder **abgeschlossen**, und überprüfen Sie die in die allgemeine Leistung der einzelnen Benachrichtigungen finden Sie unter der Spalte **Übermittlungsrate** bzw. **App starten Rate** .
+2.  In der Tabelle der vorhandenen Benachrichtigungen wählen **In Bearbeitung** oder **abgeschlossen**, und klicken Sie dann in die allgemeine Leistung der einzelnen Benachrichtigungen finden Sie unter der Spalte **Übermittlungsrate** bzw. **App starten Rate** betrachten.
 3.  Um detailliertere Leistungsdetails anzuzeigen, wählen Sie einen Benachrichtigungsnamen aus. Im Abschnitt **Lieferstatistik** sehen Sie Daten zu **Anzahl** und **Prozentsatz** für die folgenden **Status**-Typen der Benachrichtigung angezeigt:
     * **Fehlgeschlagen**: Die Benachrichtigung wurde aus einem bestimmten Grund nicht übermittelt. Dies kann z.B. bei einem Problem im Windows-Benachrichtigungsdienst der Fall sein.
     * **Channel expiration failure**: Die Benachrichtigung konnte nicht übermittelt werden, da der Kanal zwischen der App und Dev Center abgelaufen ist. Dies kann beispielsweise vorkommen, wenn der Kunde Ihre App seit längerem nicht mehr geöffnet hat.
@@ -132,13 +132,13 @@ Um detaillierte Daten für jede Benachrichtigung zu überprüfen:
     * **Startet**: Die Benachrichtigung wurde gesendet, der Kunde hat darauf geklickt, und Ihre App wurde daher geöffnet. Beachten Sie, dass hiermit nur das Starten der Apps nachverfolgt wird. Benachrichtigungen, die den Kunden zu weiteren Aktionen wie z.B. dem Öffnen des Store zum Hinterlassen einer Bewertung auffordern, sind nicht Teil dieses Status.
     * **Unbekannt**: Wir konnten den Status dieser Benachrichtigung nicht ermitteln.
 
-So analysieren Sie die Aktivität Benutzerdaten für alle Ihre Benachrichtigungen:
+Aktivität Benutzerdaten für alle Ihre Benachrichtigungen zu analysieren:
 
 1.  Erweitern Sie im Windows Dev Center-Dashboard den Abschnitt **Bewerten** und wählen Sie dann **Benachrichtigungen** aus.
-2.  Klicken Sie auf der Seite " **Notifications** " auf Registerkarte **Analysieren** . Diese Registerkarte zeigt die folgenden Daten:
+2.  Klicken Sie auf der Seite " **Notifications** " auf der Registerkarte " **Analyse** ". Diese Registerkarte zeigt die folgenden Daten:
     * Graph-Ansichten von den verschiedenen Benutzerzuständen Aktion für Ihre Popups und Info-Center-Benachrichtigungen.
-    * Welt Kartenansichten der Click-über-Sätze für Ihre Popups und Aktion zentrieren Benachrichtigungen.
-3. Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist 30D (30Tage), aber Sie können Daten für 3, 6 oder 12Monate anzeigen, oder für einen benutzerdefinierten Zeitraum, den Sie angeben. Sie können auch **Filter** , um alle Daten von app und Markt zu filtern erweitern.
+    * Welt Kartenansichten der Click-über-Sätze für Ihre Popups und Aktion center Benachrichtigungen.
+3. Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist 30D (30Tage), aber Sie können Daten für 3, 6 oder 12Monate anzeigen, oder für einen benutzerdefinierten Zeitraum, den Sie angeben. Sie können auch **Filter** , um alle Daten von der app und der Markt zu filtern erweitern.
 
 ## <a name="translate-your-notifications"></a>Übersetzen Ihrer Benachrichtigungen
 

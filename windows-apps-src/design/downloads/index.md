@@ -11,11 +11,11 @@ ms.technology: uwp
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.openlocfilehash: 259b171ea490272241fcef1170e2413cb40d7330
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4089925"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4119682"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Design-Toolkits und Beispiele für UWP-Apps
  
@@ -64,12 +64,12 @@ Diese Toolkits bieten Steuerelemente und Layout-Vorlagen für das Design von UWP
 
 :::row:::
     :::column:::
-        ![WinUI Bibliothek Miniaturansicht](images/WinUI-library.png) <b>Windows-UI-Bibliothek</b><br>
+        ![WinUI Bibliothek Miniaturansicht](images/WinUI-library.png) <b>UI-Bibliothek für Windows</b><br>
         Steuerelemente und anderen UI-Elemente für UWP-apps.<br/>
         <a href="/uwp/toolkits/winui/getting-started">Informationen zur Installation</a><br/>
     :::column-end:::
     :::column:::
-        ![Windows-Community-Miniaturansicht](images/Windows-community-toolkit.png) <b>Windows Community Toolkit</b><br>
+        ![Windows-Community Miniaturansicht](images/Windows-community-toolkit.png) <b>Windows Community Toolkit</b><br>
         Hilfsfunktionen, benutzerdefinierte Steuerelemente und app-Dienste.<br />
         <a href="/windows/uwpcommunitytoolkit/getting-started">Informationen zur Installation</a>
     :::column-end:::

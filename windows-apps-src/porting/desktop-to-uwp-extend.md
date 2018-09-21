@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f3354dad1702d275fb7b2af53516689d2c5d5014
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4110642"
+ms.locfileid: "4125551"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>Erweitern Sie Ihre Desktopanwendung mit modernen Windows-UWP-Komponenten
 
@@ -140,7 +140,7 @@ Fügen Sie Ihrem UWP-Projekt eine XAML-Benutzeroberfläche hinzu. Hier sehen Sie
 
 ### <a name="add-a-protocol-extension"></a>Hinzufügen einer Protokollerweiterung
 
-Klicken Sie im **Projektmappen-Explorer**öffnen Sie die Datei **"Package.appxmanifest"** des Verpackung-Projekts in Ihrer Projektmappe, und fügen Sie diese Erweiterung.
+Öffnen Sie im **Projektmappen-Explorer**die Datei **"Package.appxmanifest"** des Verpackung-Projekts in Ihrer Projektmappe und fügen Sie diese Erweiterung hinzu.
 
 ```xml
 <Extensions>
@@ -313,7 +313,7 @@ public sealed class AppServiceTask : IBackgroundTask
 
 ### <a name="add-an-app-service-extension-to-the-packaging-project"></a>Hinzufügen einer app-diensterweiterung zum verpackungsprojekt
 
-Öffnen Sie die Datei **"Package.appxmanifest"** des Verpackung-Projekts, und fügen Sie eine app-diensterweiterung zu den ``<Application>`` Element.
+Öffnen Sie die Datei **"Package.appxmanifest"** des Verpackung-Projekts und Hinzufügen einer app-diensterweiterung zu den ``<Application>`` Element.
 
 ```xml
 <Extensions>

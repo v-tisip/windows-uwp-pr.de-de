@@ -15,11 +15,11 @@ design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: ce84debc3422f923c7c88aae1fa216665ef1ef0f
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4090630"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4118832"
 ---
 # <a name="keyboard-accelerators"></a>Zugriffstasten
 
@@ -366,7 +366,7 @@ Standardmäßig wenn Zugriffstasten deklariert sind, stellen Sie alle Steuerelem
 
 *Zugriffstastenkombination in QuickInfo*
 
-Für die [Schaltfläche](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)und [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) -Objekte die Zugriffstaste des Steuerelements Standard-Tooltip angefügt. Für [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) und [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) Objekte, die Zugriffstaste wird mit den Flyout-Text angezeigt.
+Für die [Schaltfläche](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button) [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)und [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) Objekte wird die Zugriffstaste des Steuerelements Standard-Tooltip angefügt. Für [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) und [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem))-Objekten, die Zugriffstaste wird mit den Flyout-Text angezeigt.
 
 > [!NOTE]
 > Die Angabe einer QuickInfos setzt (Siehe Button1 im folgenden Beispiel) dieses Verhalten.
@@ -400,7 +400,7 @@ Für die [Schaltfläche](https://docs.microsoft.com/uwp/api/windows.ui.xaml.cont
 
 ![QuickInfo für Zugriffstasten](images/accelerators/accelerators-button-small.png)
 
-*Auf der Schaltfläche Standard-Tooltip angefügte Zugriffstastenkombination*
+*Schaltfläche standardmäßig QuickInfo angefügte Zugriffstastenkombination*
 
 ```xaml
 <AppBarButton Icon="Save" Label="Save">

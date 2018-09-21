@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Sichtbarkeit, private Zielgruppe, verfügbar, sichtbar
 ms.localizationpriority: medium
 ms.openlocfilehash: 07986353be41fcc9ef9dd9406fb0b30c4aa3d7f2
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4110786"
+ms.locfileid: "4125727"
 ---
 # <a name="choose-visibility-options"></a>Sichtbarkeitsoptionen auswählen
 
@@ -75,7 +75,7 @@ Die Auswahl im Abschnitt **Auffindbarkeit** gibt an, wie Kunden Ihre App finden 
 
 ### <a name="make-this-product-available-and-discoverable-in-the-store"></a>Dieses Produkt im Store verfügbar und sichtbar machen
 
-Dies ist die Standardoption. Lassen Sie diese Option aktiviert, wenn Ihre app im Store für Kunden, die über die app direkten Link und/oder mit anderen Methoden, z. B. suchen, Browsen oder Einträgen in zusammengestellten Listen gefunden aufgelistet werden soll. 
+Dies ist die Standardoption. Lassen Sie diese Option aktiviert, wenn Ihre app im Store für Kunden über den den direkten Link app und/oder mit anderen Methoden, z. B. suchen, Browsen oder Einträgen in zusammengestellten Listen gefunden aufgelistet werden soll. 
 
 ### <a name="make-this-product-available-but-not-discoverable-in-the-store"></a>Dieses Produkt im Store verfügbar aber nicht sichtbar machen
 

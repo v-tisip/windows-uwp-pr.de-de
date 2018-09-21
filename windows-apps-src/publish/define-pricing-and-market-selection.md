@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Märkte, Länder, Regionen
 ms.localizationpriority: medium
 ms.openlocfilehash: dd8cdb1f69a9a8a73700483f04d17f64de337347
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4083491"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4119220"
 ---
 # <a name="define-market-selection"></a>Festlegen der Marktauswahl
 
@@ -50,7 +50,7 @@ Außerdem sehen Sie ein Kontrollkästchen, mit dem Sie angeben können, ob Ihre 
 
 ## <a name="microsoft-store-consumer-markets"></a>Microsoft Store-verbrauchermärkte
 
-Sie können Ihre App (oder Ihr Add-On) für mindestens einen der folgenden Märkte eintragen. Die Märkte mit einem Sternchen unterstützen den Microsoft Store auf Xbox One. **Xbox** wird neben den Namen im **marktauswahl** Popup-Fenster angezeigt werden.
+Sie können Ihre App (oder Ihr Add-On) für mindestens einen der folgenden Märkte eintragen. Die Märkte mit einem Sternchen unterstützen den Microsoft Store auf Xbox One. Sie sehen **Xbox** neben den Namen im **marktauswahl** Popup-Fenster.
 
 
 <table>
@@ -480,7 +480,7 @@ Die Regulierung zur Markterweiterung wird ab dem Datum des Inkrafttretens auf al
 
 ## <a name="rest-of-world-markets-for-windows-8x"></a>Märkte "Restliche Welt" für Windows 8.x
 
-Enthält die app-Pakete für Windows 8.x, es ist wichtig zu beachten, dass eine Reihe von Märkten behandelt werden, als eine einzelne "restliche Welt" Märkte für Kunden im Store unter Windows 8.x, obwohl diese im Windows Dev Center als einzelne Märkte angezeigt werden Dashboard (im Gegensatz zum früheren Store-Dashboard, bei denen eine "Restliche Welt" Markt Option alle dieser Märkte gruppieren).
+Enthält die app-Pakete für Windows 8.x, es ist wichtig zu beachten, dass eine Reihe von Märkten behandelt werden, als eine einzelne "restliche Welt" Märkte für Kunden im Store unter Windows 8.x, obwohl diese im Windows Dev Center als einzelne Märkte angezeigt werden Dashboard (im Gegensatz zum früheren Store-Dashboard, bei denen eine "Restliche Welt" Markt Option alle für diese Märkte gruppieren).
 
 Wenn Sie die Standardeinstellung beim Übermitteln der App beibehalten, brauchen Sie sich darüber keine Gedanken zu machen, und Ihre App wird für alle möglichen Märkte verfügbar sein. Wenn Sie jedoch bestimmte Märkte ausschließen möchten, müssen Sie bedenken, dass bei Ausschluss eines einzigen dieser Märkte der „Restlichen Welt“ Ihre App in keinem der Märkte der „Restlichen Welt“ für Kunden mit Windows8 oder Windows8.1 mehr zur Verfügung steht.
 

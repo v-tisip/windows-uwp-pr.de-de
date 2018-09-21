@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Threads, Threadpool
 ms.localizationpriority: medium
 ms.openlocfilehash: 29d7fc361e446207c8e14f83ca3f663bd5072e6e
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4092316"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4117608"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Übermitteln einer Arbeitsaufgabe an den Threadpool
 
@@ -35,7 +35,7 @@ Erstellen Sie eine Arbeitsaufgabe, indem Sie [**RunAsync**](https://msdn.microso
 Drei Versionen von [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) sind verfügbar. Damit können Sie optional die Priorität der Arbeitsaufgabe angeben und steuern, ob sie gleichzeitig mit anderen Arbeitsaufgaben ausgeführt wird.
 
 >[!NOTE]
->Verwenden Sie [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) , um den Benutzeroberflächenthread zuzugreifen und den Status der Arbeitsaufgabe anzuzeigen.
+>Verwenden Sie [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) , um Zugriff auf den UI-Thread und den Fortschritt der Arbeitsaufgabe anzuzeigen.
 
 Im folgenden Beispiel werden eine Arbeitsaufgabe erstellt und ein Lambda für die Verarbeitung angegeben:
 

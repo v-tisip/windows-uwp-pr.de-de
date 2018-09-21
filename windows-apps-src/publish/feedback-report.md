@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: bceb1d2cc6682698d0ad06ed4b1865f3d6510442
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4089379"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4119984"
 ---
 # <a name="feedback-report"></a>Feedbackbericht
 
@@ -58,14 +58,14 @@ Im Bericht finden Sie das jeweilige Feedback von Ihren Kunden. Links neben dem F
 - **Populär**: Zeigt Feedback, das von anderen Kunden in den letzten sieben Tagen bewertet wurde, beginnend mit dem Feedback, das die letzte Aktivität aufweist.
 - **Aktuellste**: Zeigt sämtliches Feedback, beginnend mit dem zuletzt abgegebenen Feedback an.
 
-Neben jedem Kommentar werden der Typ des Feedbacks sowie das Datum angezeigt, an dem das Feedback abgegeben wurde. Sie werden auch den Markt des Kunden, das spezifische Paket angezeigt werden, die auf dem Gerät installiert wurde, die sie verwendet haben, als er das Feedback, den Typ dieses Gerät, und **Windows-Insider-** links, wenn der Kunde das Feedback übermittelt hat ein Mitglied der Windows-Insider-ist Programm.
+Neben jedem Kommentar werden der Typ des Feedbacks sowie das Datum angezeigt, an dem das Feedback abgegeben wurde. Sie auch sehen den Markt des Kunden, das spezifische Paket, die auf dem Gerät installiert wurde, die sie verwendet haben, als er das Feedback, den Typ dieses Gerät, und **Windows-Insider-** verlassen, wenn der Kunde das Feedback übermittelt hat ein Mitglied der Windows-Insider-ist Programm.
 
 Hier sehen Sie auch eine Option, um auf das [Feedback zu antworten](respond-to-customer-feedback.md).
 
 
 ## <a name="translating-feedback"></a>Übersetzen von Feedback
 
-Standardmäßig wird Feedback, die nicht in Ihrer bevorzugten Sprache verfasst wurde für Sie übersetzt. Falls gewünscht, können Sie die Übersetzung von Feedback deaktivieren, indem Sie das Kontrollkästchen **Feedback übersetzen** neben der Seitenfilter deaktivieren.
+Standardmäßig ist Feedback, die nicht in Ihrer bevorzugten Sprache verfasst wurde für Sie übersetzt. Falls gewünscht, können Sie die Übersetzung von Feedback deaktivieren, indem Sie das Kontrollkästchen **Feedback übersetzen** neben der Seitenfilter deaktivieren.
 
 Da das Feedback durch ein automatisches Übersetzungssystem übersetzt wird, sind die resultierenden Übersetzungen u. U. nicht immer exakt. Für den Fall, dass sie ihn mit der Übersetzung vergleichen oder auf andere Weise übersetzen lassen möchten, steht der Originaltext zur Verfügung.
 

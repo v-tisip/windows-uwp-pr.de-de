@@ -15,11 +15,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 8589a450b53a5ea028f8af2cee2aef7dc0816b52
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4114012"
+ms.locfileid: "4122115"
 ---
 # <a name="acrylic-material"></a>Acryl-Material
 
@@ -77,7 +77,7 @@ Es wird empfohlen, in Apps mit vertikaler Navigation Acryl auf den sekundären B
 
 [NavigationView](../controls-and-patterns/navigationview.md) ist ein neues allgemeines Steuerelement zum Hinzufügen von Navigation zu Ihrer App. Der visuelle Entwurf dieses Elements enthält Acryl. Der Bereich von NavigationView zeigt Hintergrund-Acryl, wenn der Bereich parallel mit dem primären Inhalt geöffnet ist, und dieses wird automatisch in In-App-Acryl umgewandelt, wenn der Bereich als Überlagerung geöffnet ist.
 
-Wenn Ihre app nicht sich navigationview und Sie Acryl selbst hinzufügen möchten, empfehlen wir die Verwendung von relativ durchsichtige Acryl mit 60 % Farbton-Deckkraft.
+Wenn Ihre app nicht NavigationView nutzen kann, und Sie Acryl selbst hinzufügen möchten, empfehlen wir die Verwendung von relativ durchsichtige Acryl mit 60 % Farbton-Deckkraft.
  - Wenn der Bereich als Überlagerung über anderen Inhalten der App geöffnet wird, sollte dies [60% In-App-Acryl](#acrylic-theme-resources) sein.
  - Wenn der Bereich parallel mit dem Hauptinhalt der App geöffnet wird, sollte dies [60% Hintergrund-Acryl](#acrylic-theme-resources)sein.
 
@@ -106,7 +106,7 @@ Widgets oder einfachen Apps können als Utility-Apps hervorgehoben werden, wenn 
 ![Dienstprogramm-App „Rechner” mit Acryl im gesamten Hintergrund](images/acrylic_app-pattern_full.png)
 
 > [!Note]
-> Das Rendern von acryloberflächen ist GPU-intensiv, das Gerät den Energieverbrauch zu erhöhen und Akkulaufzeit verkürzt werden kann. Acryleffekte werden automatisch deaktiviert, wenn Geräte den Stromsparmodus versetzt, und Benutzer können acryleffekte für alle apps, deaktivieren, wenn der Benutzer.
+> Das Rendern von acryloberflächen ist GPU-intensiv, das Gerät den Energieverbrauch zu erhöhen und Akkulaufzeit verkürzt werden kann. Acryleffekte werden automatisch deaktiviert, wenn Geräte Stromsparmodus versetzt, und Benutzer können acryleffekte für alle apps, deaktivieren, wenn der Benutzer.
 
 
 ## <a name="acrylic-blend-types"></a>Acrylmischungen
@@ -209,9 +209,9 @@ Um eine bestimmte Oberfläche zu zeichnen, wenden Sie eines der oben genannten D
 ## <a name="custom-acrylic-brush"></a>Benutzerdefinierter Acrylpinsel
 Sie können einen Farbton zum Acryl Ihrer App hinzufügen, um das Branding anzuzeigen oder ein optisches Gleichgewicht mit anderen Elementen auf dieser Seite zu erzeugen. Um Farbe und keine Graustufen anzuzeigen, müssen Sie Ihre eigenen Acrylpinsel mithilfe der folgenden Eigenschaften definieren:
  - **TintColor**: die Überlagerungsschicht der Farbe/des Farbtons. Sie sollten sowohl den RGB-Farbwert als auch die Deckkraft des Alphakanals angeben.
- - **TintOpacity**: die Deckkraft der Farbtonschicht. Wir empfehlen 80 % Deckkraft als Ausgangspunkt, obwohl verschiedene Farben bei anderen Translucencies aussehen können.
+ - **TintOpacity**: die Deckkraft der Farbtonschicht. Wir empfehlen 80 % Deckkraft als Ausgangspunkt, obwohl verschiedene Farben bei anderer Translucencies aussehen können.
  - **BackgroundSource**: die Kennzeichnung zum Festlegen, ob Sie Hintergrund- oder In-App Acryl verwenden möchten.
- - **FallbackColor**: die Volltonfarbe, die Acryl bei der Stromsparmodus ersetzt. Im Fall von Hintergrund-Acryl ersetzt die Fallbackfarbe das Acryl auch, wenn Ihre App nicht im aktiven Desktopfenster angezeigt wird oder wenn die App auf dem Telefon oder der Xbox ausgeführt wird.
+ - **FallbackColor**: die Volltonfarbe, die Acryl in den Stromsparmodus ersetzt. Im Fall von Hintergrund-Acryl ersetzt die Fallbackfarbe das Acryl auch, wenn Ihre App nicht im aktiven Desktopfenster angezeigt wird oder wenn die App auf dem Telefon oder der Xbox ausgeführt wird.
 
 
 ![Acrylmuster für das helle Design](images/CustomAcrylic_Swatches_LightTheme.png)
@@ -338,7 +338,7 @@ Darüber hinaus müssen Sie den Titel der App, der normalerweise automatisch in 
 
 ## <a name="how-we-designed-acrylic"></a>Unser Acryl-Entwurfsansatz
 
-Wir haben die Hauptkomponenten des Acryls optimiert, um eine individuelle Darstellung und einzigartige Eigenschaften zu erhalten. Wir begannen mit Transparenz, weichzeichnungs- und Geräusch, flachen Oberflächen visuelle Tiefe und Dimension hinzuzufügen. Dann fügten wir eine Ausschluss-Mischmodus-Ebene hinzu, um den Kontrast und die Lesbarkeit der auf dem Acrylhintergrund platzierten UI sicherzustellen. Zuletzt fügten wir Farbtöne hinzu, um Personalisierungen zu ermöglichen. Zusammen ergeben diese Ebenen ein neues, einsatzbereites Material.
+Wir haben die Hauptkomponenten des Acryls optimiert, um eine individuelle Darstellung und einzigartige Eigenschaften zu erhalten. Wir begannen mit Transparenz, weichzeichnungs- und störungsfiltern visuelle Tiefe und Dimension, flachen Oberflächen hinzufügen. Dann fügten wir eine Ausschluss-Mischmodus-Ebene hinzu, um den Kontrast und die Lesbarkeit der auf dem Acrylhintergrund platzierten UI sicherzustellen. Zuletzt fügten wir Farbtöne hinzu, um Personalisierungen zu ermöglichen. Zusammen ergeben diese Ebenen ein neues, einsatzbereites Material.
 
 ![Acrylzusammensetzung](images/AcrylicRecipe_Diagram.jpg)
 <br/>Das Acryl setzt sich folgendermaßen zusammen: Hintergrund, Weichzeichnungsfilter, Ausschluss-Mischung, Überlagerung der Farbe/des Farbtons, Störungsfilter

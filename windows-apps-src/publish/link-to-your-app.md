@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Links, Windows Store-Protokoll, mit einer App verknüpfen, App verknüpfen
 ms.localizationpriority: medium
 ms.openlocfilehash: 0025321aa73a66cc0a976bd347e613de3c3c4765
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4110946"
+ms.locfileid: "4123719"
 ---
 # <a name="link-to-your-app"></a>Erstellen eines Links zu Ihrer App
 
@@ -36,20 +36,20 @@ Sie können direkt mit dem Eintrag Ihrer app mit einem benutzerdefinierten Badge
 Zum Erstellen Ihres Badges finden Sie auf der Seite " [Microsoft Store-Badges](http://go.microsoft.com/fwlink/p/?LinkID=534236) ". Sie benötigen die zwölfstellige **Store-ID** Ihrer App, um dieses Formular zum Generieren von Badge und Link verwenden zu können. Die **Store ID** Ihrer App finden Sie auf der Seite [App-Identität](view-app-identity-details.md) unter **App-Verwaltung**.
 
 > [!NOTE]
-> Weitere Informationen und Anforderungen in Bezug auf Ihre Verwendung der Microsoft Store-Signals [App-Marketingrichtlinien](app-marketing-guidelines.md) zu.
+> Informationen und Anforderungen in Bezug auf Ihre Verwendung der Microsoft Store-Signals finden Sie unter [marketing Richtlinien für die App](app-marketing-guidelines.md) .
 
 
 ## <a name="linking-directly-to-your-app-in-the-microsoft-store"></a>Direkt an Ihre app im Microsoft Store verknüpfen
 
-Sie können einen Link, der im Microsoft Store und öffnen einen Browser mit direkt zur Eintragsseite Ihrer app wechselt Erstellen der **ms-Windows-Store:** URI-Schema.
+Sie können einen Link, der im Microsoft Store und wechselt direkt zur Eintragsseite Ihrer app mit keinen broswer Öffnen Erstellen der **ms-Windows-Store:** URI-Schema.
 
 Diese Links sind hilfreich, wenn Sie wissen, dass Benutzer Windows-Geräte verwenden, und möchten, dass sie direkt zur Eintragsseite im Store gelangen. Sie sollten z.B. diesen Link verwenden, nachdem Sie die Zeichenfolge des Benutzer-Agent in einem Browser bestätigt haben, um zu überprüfen, dass das Betriebssystem des Benutzers den Store unterstützt, oder wenn Sie bereits über eine UWP-App kommunizieren.
 
-Um dieses URI-Schema verwenden, um direkt mit Store-Eintrag Ihrer app zu verknüpfen, fügen Sie Ihrer app Store-ID an diesen Link:
+Um dieses URI-Schema verwenden, um direkt mit Store-Eintrag Ihrer app zu verknüpfen, fügen Sie Ihrer app Store-ID für diesen Link:
 
 `ms-windows-store://pdp/?ProductId=`
 
-Weitere Informationen zur Verwendung der Microsoft Store-Protokolls finden Sie in der [Starten der Microsoft-app](../launch-resume/launch-store-app.md).
+Weitere Informationen zur Verwendung des Microsoft Store-Protokolls finden Sie unter [der Microsoft-app zu starten](../launch-resume/launch-store-app.md).
 
  
 

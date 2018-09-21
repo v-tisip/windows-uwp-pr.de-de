@@ -11,21 +11,21 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 44ffafab761741b8d7bc05f13ea2d8ae50ff048b
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4113020"
+ms.locfileid: "4125715"
 ---
 # <a name="microsoft-store-marketing-guidelines-for-apps"></a>Microsoft Store marketing-Richtlinien für apps
 
-Hier erfahren Sie, wie Sie Ihre apps und Inhalte im Microsoft Store zu bewerben. In diesen Richtlinien wird erläutert, wie Sie die verfügbaren Ressourcen in Kombination mit Empfehlungen für die Vermarktung von Apps in gedruckter und digitaler Werbung, in TV-Werbung und Werbung auf sozialen Plattformen verwenden.
+Erfahren Sie, wie Sie Ihre apps und Inhalten im Microsoft Store bewerben. In diesen Richtlinien wird erläutert, wie Sie die verfügbaren Ressourcen in Kombination mit Empfehlungen für die Vermarktung von Apps in gedruckter und digitaler Werbung, in TV-Werbung und Werbung auf sozialen Plattformen verwenden.
 
 ## <a name="store-badges"></a>Store-Badges
 
-Wir haben spezielle Werbe-Badges Sie mehr Kunden zum Eintrag Ihrer app im Microsoft Store lenken können erstellt werden. Diese Badges sind in 44Sprachen verfügbar. Bedenken Sie, dass es bestimmte Anforderungen gibt, die Sie bei Verwendung dieser Bilder beachten müssen. Diese Vorgaben sowie Verwendungsbeispiele und Richtlinien sind in einer PDF-Datei verfügbar.
+Wir haben spezielle Werbe-Badges Sie mehr Kunden zum Eintrag Ihrer app im Microsoft Store lenken können erstellt. Diese Badges sind in 44Sprachen verfügbar. Bedenken Sie, dass es bestimmte Anforderungen gibt, die Sie bei Verwendung dieser Bilder beachten müssen. Diese Vorgaben sowie Verwendungsbeispiele und Richtlinien sind in einer PDF-Datei verfügbar.
 
-[ ![Schaltfläche "herunterladen"](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529769) **Microsoft Store-Badge-Richtlinien (PDF, Englisch)**
+[ ![Schaltfläche "herunterladen"](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529769) **Microsoft Store-Badge Richtlinien (PDF, Englisch)**
 
 
 ## <a name="badge-generator-and-images"></a>Badge-Generator und Bilder
@@ -39,7 +39,7 @@ Von folgendem Link können Sie auch den vollständigen Satz von Badge-Bildern (i
 
 ## <a name="device-images"></a>Gerätebilder
 
-Zur Vermarktung Ihrer App möchten Sie vielleicht zeigen, wie sie aussieht, wenn sie auf einem Windows-Gerät ausgeführt wird. Ihnen steht eine Vielzahl von Gerätechassisbildern zur Auswahl, darunter Telefone, Tablets, Laptops und PCs. Bewährte Methoden und technische Spezifikationen für die Verwendung dieser Bilder finden Sie in der [Microsoft Store-Marketingrichtlinien](http://go.microsoft.com/fwlink/p/?LinkId=529769).
+Zur Vermarktung Ihrer App möchten Sie vielleicht zeigen, wie sie aussieht, wenn sie auf einem Windows-Gerät ausgeführt wird. Ihnen steht eine Vielzahl von Gerätechassisbildern zur Auswahl, darunter Telefone, Tablets, Laptops und PCs. Bewährte Methoden und technische Spezifikationen für die Verwendung dieser Bilder können in den [Microsoft Store-Marketingrichtlinien](http://go.microsoft.com/fwlink/p/?LinkId=529769)gefunden werden.
 
 [![Schaltfläche „Herunterladen“](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=533057) **Grafiken für Windows-Geräte**
 
@@ -53,7 +53,7 @@ Zur Vermarktung Ihrer App möchten Sie vielleicht zeigen, wie sie aussieht, wenn
 
 -   Wenn Sie nicht mit dem Windows Dev Center registriert sind, gewährt Microsoft Ihnen eine weltweite nicht exklusive, nicht übertragbare, gebührenfreie Lizenz zur Verwendung der Badges ausschließlich gemäß den Microsoft Store-Badge-Richtlinien. Diese Richtlinien können von Microsoft geändert werden. In diesem Fall unternimmt Microsoft jedoch angemessene Schritte, um Sie zu neuen URLs weiterzuleiten, unter denen die Spezifikationen bereitgestellt werden. Microsoft behält sich alle hierin nicht ausdrücklich eingeräumten Rechte vor.
 
--   Führen Sie die logonutzungsbedingungen, die in den [Microsoft Store-Badge-Richtlinien](http://go.microsoft.com/fwlink/p/?LinkId=529769)beschrieben.
+-   Beachten Sie die logonutzungsbedingungen, die in den [Microsoft Store-Badge-Richtlinien](http://go.microsoft.com/fwlink/p/?LinkId=529769)beschrieben.
 
 Microsoft ist der alleinige Eigentümer der Microsoft Marks und des damit verbundenen Firmenwerts sowie der alleinige Begünstigte des Firmenwerts, der sich aus Ihrer Nutzung der Microsoft Marks ergibt. Microsoft kann diese Lizenz jederzeit und nach eigenem Ermessen widerrufen.
 

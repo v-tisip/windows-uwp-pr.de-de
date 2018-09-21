@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows10, Uwp, notification listener, Usernotificationlistener, Dokumentation, Zugriff auf Benachrichtigungen
 ms.localizationpriority: medium
 ms.openlocfilehash: f4d8cb9ef7589bd8f0c56586ab8fcfec7c1f01e3
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4092246"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4117452"
 ---
 # <a name="notification-listener-access-all-notifications"></a>Notification-Listener: Zugriff auf alle Benachrichtigungen
 
@@ -281,9 +281,9 @@ foreach (uint id in toBeRemoved)
 ## <a name="foreground-event-for-notification-addeddismissed"></a>Vordergrundereignis für hinzugefügt/geschlossene Benachrichtigungen
 
 > [!IMPORTANT] 
-> Bekanntes Problem: das Ereignis im Vordergrund wird eine Schleife CPU auf die aktuellen Versionen von Windows, und zuvor vor, die nicht funktioniert. Verwenden Sie nicht das Ereignis im Vordergrund. Ein bevorstehenden Windows Update werden wir dieses Problem zu beheben.
+> Bekanntes Problem: das Ereignis im Vordergrund wird eine Schleife CPU in neueren Versionen von Windows, und zuvor vor, die nicht funktioniert. Verwenden Sie nicht das Ereignis im Vordergrund. Ein bevorstehenden Windows Update werden wir dieses Problem zu beheben.
 
-Verwenden Sie anstelle des vordergrundereignis für eine Hintergrundaufgabe [einzelprozessmodell](../../../launch-resume/create-and-register-an-inproc-background-task.md) den zuvor aufgeführten Code. Die Hintergrundaufgabe auch können Sie ereignisbenachrichtigungen beide zu erhalten, während Ihre app geschlossen ist oder ausgeführt wird.
+Anstelle von das Ereignis im Vordergrund, verwenden Sie den Code für eine Hintergrundaufgabe [einzelprozessmodell](../../../launch-resume/create-and-register-an-inproc-background-task.md) weiter oben angezeigt. Die Hintergrundaufgabe zudem können Sie Ereignis änderungsbenachrichtigungen beide erhalten, während Ihre app geschlossen ist oder ausgeführt wird.
 
 ```csharp
 // Subscribe to foreground event (DON'T USE THIS)

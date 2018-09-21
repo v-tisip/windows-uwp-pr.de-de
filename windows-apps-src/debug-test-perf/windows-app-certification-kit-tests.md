@@ -2,7 +2,7 @@
 author: PatrickFarley
 ms.assetid: 1526FF4B-9E68-458A-B002-0A5F3A9A81FD
 title: Tests im Zertifizierungskit für Windows-Apps
-description: Das Zertifizierungskit für Windows-Apps enthält eine Reihe von Tests, die sicherstellen, dass die app im Microsoft Store veröffentlicht werden kann.
+description: Das Zertifizierungskit für Windows-Apps enthält eine Reihe von Tests, die sicherstellen, dass Ihre app im Microsoft Store veröffentlicht werden kann.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, app-Zertifizierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 49ecc472c8c1d4adebd8376fce9d2d5e6e2a955e
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4110730"
+ms.locfileid: "4123879"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Tests im Zertifizierungskit für Windows-Apps
 
 
-Das [Zertifizierungskit für Windows-Apps](windows-app-certification-kit.md) enthält eine Reihe von Tests, mit denen sicherstellen, dass Ihre app an den Microsoft Store veröffentlicht werden kann. Die Tests sind unten aufgeführt, mit ihren Suchkriterien, Informationen und empfohlene Maßnahmen bei einem Fehler.
+Das [Zertifizierungskit für Windows-Apps](windows-app-certification-kit.md) enthält eine Reihe von Tests, mit deren Hilfe, stellen Sie sicher, dass Ihre app an den Microsoft Store veröffentlicht werden kann. Die Tests sind unten aufgeführt, mit ihren Suchkriterien, Details, und empfohlene Maßnahmen bei einem Fehler.
 
 ## <a name="deployment-and-launch-tests"></a>Bereitstellungs- und Starttests
 
@@ -312,18 +312,18 @@ Apps müssen die APIs für UWP-apps (Windows-Runtime- oder unterstützte Win32-A
 
 ### <a name="test-details"></a>Testdetails
 
--   Stellt sicher, dass jede Binärdatei des app-Pakets keine Abhängigkeit von einer Win32-API aufweist, die nicht für die Entwicklung von UWP-Apps unterstützt werden, indem Sie die Importadressentabelle der Binärdatei.
+-   Stellt sicher, dass jede Binärdatei innerhalb des app-Pakets keine Abhängigkeit von einer Win32-API aufweist, die nicht für die Entwicklung von UWP-Apps unterstützt wird, indem Sie die Importadressentabelle der Binärdatei.
 -   Stellt sicher, dass eine verwaltete Binärdatei des App-Pakets keine Abhängigkeit von einer Funktion außerhalb des genehmigten Profils aufweist.
 
 ### <a name="corrective-actions"></a>Maßnahmen
 
 Stellen Sie sicher, dass die App als Releasebuild und nicht als Debugbuild kompiliert wurde.
 
-> **Hinweis:**  Das Debugbuild einer App tritt bei diesem Test, auch wenn die app nur die [APIs für UWP-apps](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)verwendet.
+> **Hinweis:**  Das Debugbuild einer App werden bei diesem Test fehl, selbst wenn die app nur [APIs für UWP-apps](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)verwendet.
 
 Überprüfen Sie die Fehlermeldungen, um der API zu identifizieren, die app verwendet, die eine [API für UWP-apps](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)nicht ist.
 
-> **Hinweis:**  C++-apps, die unter einer Debugkonfiguration erstellt wurden tritt bei diesem Test, auch wenn die Konfiguration nur APIs aus dem Windows SDK für UWP-apps verwendet. Siehe [alternativen zu Windows-APIs in UWP-apps](http://go.microsoft.com/fwlink/p/?LinkID=244022) für Weitere Informationen.
+> **Hinweis:**  C++-apps, die unter einer Debugkonfiguration erstellt wurden werden bei diesem Test fehl, selbst wenn die Konfiguration nur APIs aus dem Windows SDK für UWP-apps verwendet. Finden Sie unter, [alternativen zu Windows-APIs in UWP-apps](http://go.microsoft.com/fwlink/p/?LinkID=244022) für Weitere Informationen.
 
 ## <a name="performance-tests"></a>Leistungstests
 
@@ -433,7 +433,7 @@ Orientieren Sie sich an der folgenden Tabelle.
 <tr><td>
 <p>Für die Datei „resources.pri“ darf „Automatisch zusammenführen“ nicht aktiviert sein.</p>
 </td><td>
-<p>„MakePRI.exe“ unterstützt eine Option mit dem Namen <strong>AutoMerge</strong>. Der Standardwert von <strong>AutoMerge</strong> ist <strong>Aus</strong>. Ist sie aktiviert, führt <strong>AutoMerge</strong> die App-Sprachpaketressourcen in einer einzelnen Datei „resources.pri“ zur Laufzeit zusammen. Wird dies nicht für apps empfohlen, die Sie über den Microsoft Store vertreiben möchten. Die Datei "Resources.pri" einer App, die über den Microsoft Store vertriebenen Windows Store müssen im Stammverzeichnis des app Pakets werden und alle Sprachverweise, die von der app unterstützten enthalten.</p>
+<p>„MakePRI.exe“ unterstützt eine Option mit dem Namen <strong>AutoMerge</strong>. Der Standardwert von <strong>AutoMerge</strong> ist <strong>Aus</strong>. Ist sie aktiviert, führt <strong>AutoMerge</strong> die App-Sprachpaketressourcen in einer einzelnen Datei „resources.pri“ zur Laufzeit zusammen. Wir empfohlen dies nicht für apps, die Sie über den Microsoft Store vertreiben möchten. Die Datei "Resources.pri" einer App, die über den Microsoft Store vertriebenen Windows Store müssen im Stammverzeichnis des app Pakets und enthalten alle Sprachverweise, die die app unterstützt.</p>
 </td></tr>
 <tr><td>
 <p>Die Zeichenfolge „{string}“ entspricht nicht der Längenbeschränkung von maximal {number} Zeichen.</p>
@@ -537,7 +537,7 @@ Testet MicrosoftDirect3D-Apps, um sicherzustellen, dass sie auf Geräten mit äl
 
 ### <a name="background"></a>Hintergrund
 
-Microsoft Store müssen alle Anwendungen mit Direct3D richtig gerendert bzw. ordnungsgemäß Grafikkarten der Featureebene 9\-1 werden.
+Microsoft Store müssen alle Anwendungen mit Direct3D richtig gerendert bzw. ordnungsgemäß auf Feature Grafikkarten der Featureebene 9\-1-Karten.
 
 Da die Benutzer die Grafikhardware ihrer Geräte nach der Installation der App ändern können, muss Ihre App für den Fall, dass Sie eine Featureebene höher als 9\-1 verwenden, beim Start erkennen, ob die aktuelle Hardware die Mindestanforderungen erfüllt. Wenn die Mindestanforderungen nicht erfüllt sind, muss Ihre App dem Benutzer eine Meldung mit den Direct3D-Anforderungen anzeigen. Wird zudem eine App auf ein Gerät heruntergeladen, mit dem sie nicht kompatibel ist, sollte sie dies beim Start erkennen und dem Kunden eine Meldung bezüglich der erforderlichen Voraussetzungen anzeigen.
 

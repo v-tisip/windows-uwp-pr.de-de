@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0840bab2e039ec55ea4070f8dad39c0ae4e74bbc
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4091288"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4118302"
 ---
 # <a name="controls-by-function"></a>Steuerelemente nach Funktion
 
@@ -555,11 +555,11 @@ Siehe „Medienelement“.
 
 ### <a name="navigationview"></a>NavigationView
 
-Eine anpassungsfähige Container und flexible Navigationsmodell, der linken Navigationsbereich angezeigt, oberen Navigationsleiste und registerkartenmuster implementiert.
+Eine anpassungsfähige Container und flexible Navigationsmodell, der im linken Navigationsbereich, oberen Navigationsleiste und registerkartenmuster implementiert.
 
 Referenz: [NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 
-Design und Vorgehensweise: [Handbuch für NavigationView-Steuerelement](navigationview.md)
+Design und Vorgehensweise: [Feldsteuerelement NavigationView](navigationview.md)
 
 ### <a name="splitview"></a>SplitView
 

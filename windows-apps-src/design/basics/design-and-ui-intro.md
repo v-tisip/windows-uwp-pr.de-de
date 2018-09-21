@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 952db87d0dabdb927a472de17f0c0d7b345bde4e
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4110574"
+ms.locfileid: "4122837"
 ---
 # <a name="introduction-to-uwp-app-design"></a>Einführung in das UWP-App-Design
 
@@ -66,7 +66,7 @@ Da UWP-Apps automatisch für alle Geräte skaliert werden, folgt das Entwerfen e
 
 :::row:::
     :::column:::
-        Wenn eine UWP-app auf jedem Windows 10-Gerät gestartet wird, wird in einem [Fenster](/uwp/api/Windows.UI.Xaml.Controls.Window) mit einem [Frame](/uwp/api/Windows.UI.Xaml.Controls.Frame)zwischen Instanzen [Seite](/uwp/api/Windows.UI.Xaml.Controls.Page) navigieren kann gestartet.
+        Wenn eine UWP-app auf jedem Windows 10-Gerät gestartet wird, startet sie in einem [Fenster](/uwp/api/Windows.UI.Xaml.Controls.Window) mit einer [Frame](/uwp/api/Windows.UI.Xaml.Controls.Frame)zwischen [Seite](/uwp/api/Windows.UI.Xaml.Controls.Page) Instanzen navigieren kann.
     :::column-end:::
     :::column:::
         ![Frame](images/frame.svg)

@@ -11,23 +11,23 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9802577f9252b590657406bcb59b0c28adeb4781
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4089733"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4119838"
 ---
 # <a name="app-submissions"></a>App-Übermittlungen
 
 
 Nachdem Sie Ihre [App durch die Reservierung eines Namens erstellt haben](create-your-app-by-reserving-a-name.md), können Sie mit der Veröffentlichung beginnen. Der erste Schritt besteht darin, eine ***Übermittlung** zu erstellen.
 
-Sie beginnen mit der Einreichung, sobald Ihre App fertig und bereit für die Veröffentlichung ist. Sie können mit der Eingabe von Infos beginnen, noch bevor Sie eine einzige Codezeile programmiert haben. Updates, die Sie für Ihre Übermittlung vornehmen werden gespeichert, darauf zu arbeiten, wenn Sie bereit sind und dann wieder aufrufen können.
+Sie beginnen mit der Einreichung, sobald Ihre App fertig und bereit für die Veröffentlichung ist. Sie können mit der Eingabe von Infos beginnen, noch bevor Sie eine einzige Codezeile programmiert haben. Updates, die Sie an Ihre Übermittlung werden gespeichert, sodass Sie können zurückkehren darauf und darauf zu arbeiten, wenn Sie bereit sind.
 
 > [!NOTE]
-> Benötigen Sie ein [Entwicklerkonto](http://go.microsoft.com/fwlink/p/?LinkId=615100) , um [Windows Dev Center](https://partner.microsoft.com/dashboard) zugreifen und apps im Microsoft Store übermitteln.
+> Benötigen Sie ein [Entwicklerkonto](http://go.microsoft.com/fwlink/p/?LinkId=615100) , um [Windows Dev Center](https://partner.microsoft.com/dashboard) zugreifen und apps an den Microsoft Store übermitteln.
 
-Nach der Veröffentlichung Ihrer App können Sie eine aktualisierte Version veröffentlichen, indem Sie eine weitere Einreichung im Dashboard erstellen. Durch die Erstellung einer neuen Einreichung können Sie alle erforderlichen Änderungen vornehmen und veröffentlichen – z. B. neue Pakete hochladen oder Preisdetails oder App-Kategorie ändern. Um eine neue Übermittlung für eine veröffentlichte App zu erstellen, klicken Sie neben der aktuellen Übermittlung, die auf der App-Übersichtsseite angezeigt wird, auf **Aktualisieren**. Sie können auch [eine app aus dem Speicher zu entfernen](guidance-for-app-package-management.md#removing-an-app-from-the-store) , wenn Sie müssen dazu (und dann zur Verfügung stellen später erneut, wenn Sie möchten).
+Nach der Veröffentlichung Ihrer App können Sie eine aktualisierte Version veröffentlichen, indem Sie eine weitere Einreichung im Dashboard erstellen. Durch die Erstellung einer neuen Einreichung können Sie alle erforderlichen Änderungen vornehmen und veröffentlichen – z. B. neue Pakete hochladen oder Preisdetails oder App-Kategorie ändern. Um eine neue Übermittlung für eine veröffentlichte App zu erstellen, klicken Sie neben der aktuellen Übermittlung, die auf der App-Übersichtsseite angezeigt wird, auf **Aktualisieren**. Sie können auch [eine app aus dem Store entfernen](guidance-for-app-package-management.md#removing-an-app-from-the-store) Sie ggf. (und dann zur Verfügung stellen später erneut, wenn Sie möchten).
 
 > [!NOTE]
 > In diesem Abschnitt der Dokumentation wird das Erstellen einer App-Übermittlung über das Dev Center-Dashboard beschrieben. Alternativ dazu können Sie auch die [Microsoft Store-Übermittlungs-API](../monetize/create-and-manage-submissions-using-windows-store-services.md) verwenden, um App-Übermittlungen zu automatisieren.

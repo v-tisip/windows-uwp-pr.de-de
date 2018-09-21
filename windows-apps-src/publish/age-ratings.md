@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Altersfreigabe, Spielfreigabe, IARC, Bewertung, Fragebogen, Bewertungsgremium, Inhaltsbewertung
 ms.localizationpriority: medium
 ms.openlocfilehash: 2cf7a3c3a57c4d892de2438967d995ee18470cae
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4110852"
+ms.locfileid: "4122009"
 ---
 # <a name="age-ratings"></a>Altersfreigaben
 
@@ -30,7 +30,7 @@ Bei der ersten Übermittlung einer App (oder bei der ersten Aktualisierung einer
 
 Hierbei ist es unbedingt erforderlich, dass Sie die Fragen wahrheitsgetreu beantworten. Klicken Sie für weitere Informationen und Fragen auf das Symbol "Info", das angezeigt wird. Im Rahmen dieses Prozesses geben wir Ihren Herausgeber-Anzeigenamen und Ihre E-Mail-Adresse an die IARC weiter. Nach dem Ausfüllen des Fragebogens werden vom IARC-Bewertungssystem basierend auf Ihren Antworten Informationen zur Altersfreigabe und Inhaltsbewertung bereitgestellt. Wir verwenden diese Bewertungsinformationen, wenn Ihre App Kunden in unterschiedlichen Märkten angezeigt wird. Außerdem erhalten Sie von der IARC eine E-Mail mit einer Bestätigung der App-Bewertung, nachdem die App veröffentlicht wurde.
 
-Bei der ersten Frage wird nach der Kategorie gefragt, die Ihre App (und die dazugehörigen Metadaten) am besten beschreibt. Nachdem Sie eine Auswahl getroffen haben, werden weitere Fragen angezeigt. Die Fragen richten sich jeweils nach den vorherigen Antworten. Klicken Sie auf das Symbol "Info" neben dieser Frage, um weitere Informationen zu erhalten, die Sie wissen, wie Sie eine Frage helfen können. Falls Sie einen Fehler machen, können Sie zurückgehen oder den Fragebogen neu starten, um die richtigen Antworten anzugeben.
+Bei der ersten Frage wird nach der Kategorie gefragt, die Ihre App (und die dazugehörigen Metadaten) am besten beschreibt. Nachdem Sie eine Auswahl getroffen haben, werden weitere Fragen angezeigt. Die Fragen richten sich jeweils nach den vorherigen Antworten. Um weitere Informationen zu erhalten, mit denen Sie wissen, wie Sie eine Frage, klicken Sie auf das Symbol "Info" neben dieser Frage. Falls Sie einen Fehler machen, können Sie zurückgehen oder den Fragebogen neu starten, um die richtigen Antworten anzugeben.
 
 Klicken Sie nach dem Beantworten aller Fragen auf **Save and generate**. Alle zugewiesenen Freigaben der App werden angezeigt, und Sie können den Übermittlungsvorgang fortsetzen. Sie können auch auf **Bearbeiten** klicken, um Antworten im Fragebogen zu korrigieren.
 

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Anhalten der Veröffentlichung, Veröffentlichungsdatum, Genehmigungsprozess für eingeschränkte Funktionen
 ms.localizationpriority: medium
 ms.openlocfilehash: 147f34c40cc5d2b612dcdd92edc0c76340cf58f7
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4084659"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4118042"
 ---
 # <a name="manage-submission-options"></a>Verwalten der Übermittlungsoptionen
 
@@ -35,14 +35,14 @@ Für die meisten Übermittlungen empfehlen wir den Abschnitt **Optionen zum Anha
 
 ### <a name="publish-your-submission-manually"></a>Übermittlung manuell veröffentlichen
 
-Wenn Sie noch kein Veröffentlichungsdatum festlegen möchten und Ihre Übermittlung unveröffentlicht bleiben soll, bis Sie manuell mit dem Veröffentlichungsprozess beginnen möchten, können Sie **Don't publish this submission until I select Publish now** auswählen. Die Auswahl dieser Option bedeutet, dass Ihre Übermittlung erst veröffentlicht wird, wenn Sie es angeben. Nachdem Ihre Übermittlung übergibt Zertifizierung können Sie es durch die Auswahl **Veröffentlichen jetzt** auf der Seite oder auf die gleiche Weise wie nachfolgend beschrieben ein bestimmtes Datum auswählen veröffentlichen.
+Wenn Sie noch kein Veröffentlichungsdatum festlegen möchten und Ihre Übermittlung unveröffentlicht bleiben soll, bis Sie manuell mit dem Veröffentlichungsprozess beginnen möchten, können Sie **Don't publish this submission until I select Publish now** auswählen. Die Auswahl dieser Option bedeutet, dass Ihre Übermittlung erst veröffentlicht wird, wenn Sie es angeben. Nachdem Ihre Übermittlung übergibt Zertifizierung können Sie es durch die Auswahl **Veröffentlichen jetzt** auf der Seite mit dem Zertifizierungsstatus oder auf die gleiche Weise wie nachfolgend beschrieben ein bestimmtes Datum auswählen veröffentlichen.
 
 
 ### <a name="start-publishing-your-submission-on-a-certain-date"></a>Starten Sie die Veröffentlichung der Übermittlung an einem bestimmten Datum
 
 Wählen Sie **Start publishing this submission on**, um sicherzustellen, dass die Übermittlung nicht vor einem bestimmten Datum veröffentlicht wird. Mit dieser Option wird Ihre Übermittlung möglichst zum oder nach dem angegebenen Datum veröffentlicht. Das Datum muss mindestens 24Stunden in der Zukunft liegen. Zusammen mit dem Datum können Sie auch die Uhrzeit angeben, zu der die Veröffentlichung der Übermittlung beginnen soll. 
 
-Sie können das Veröffentlichungsdatum nach dem Einreichen Ihr Produkts ändern, solange sie die veröffentlichen noch in eingetreten ist. 
+Sie können das Veröffentlichungsdatum nach dem Einreichen Ihres Produkts ändern, solange sie die veröffentlichen noch in eingetreten ist. 
  
 Wenn Sie bestimmte Daten für die Veröffentlichung der Übermittlung festlegen möchten, verwenden Sie ** Veröffentlichen Sie diese Übermittlung, sobald die Zertifizierung abgeschlossen ist (oder ab einem im Abschnitt des Zeitplans ausgewählten Datum)** und lassen Sie die **Optionen zum Anhalten der Veröffentlichung** auf der Standardeinstellung. Die Option **Start publishing this submission on** bedeutet, dass Ihre Übermittlung den Veröffentlichungsprozess nicht vor diesem Datum beginnt, wobei Verzögerungen bei der Zertifizierung oder der Veröffentlichung dazu führen können, dass das gewünschte Veröffentlichungsdatum nach dem ausgewählten Datum beginnt. 
 

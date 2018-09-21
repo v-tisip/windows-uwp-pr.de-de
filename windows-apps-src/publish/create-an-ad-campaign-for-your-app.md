@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Anzeige, Kampagne, bewerben
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c7e7c1e2cd9a2ca083cef5fed27a9067cf1e7e7
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4086797"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4117104"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Erstellen einer Anzeigenkampagne für Ihre App
 
@@ -71,7 +71,7 @@ So erstellen Sie eine Anzeigenkampagne zum Bewerben einer App.
 
     In diesem Abschnitt wird auch das Diagramm **Geschätzte Reichweite** angezeigt. Das Diagramm zeigt die Zielgruppe, die Sie mit Ihrer aktuellen Auswahl für die Adressierung erreichen, als Prozentsatz aller Benutzer von Windows-Apps mit Anzeigenunterstützung in den ausgewählten Märkten an.
 
-10.  Wenn Sie **Mehr Interaktion in Ihrer App** als Ziel Ihrer Kampagne ausgewählt haben, können Sie eines Ihrer Kundensegmente als Zielgruppe auswählen. Mit dieser Kampagne erstellte Anzeigen werden nur den Kunden angezeigt, die zum jeweiligen Segment gehören. Pro Anzeigenkampagne kann nur ein Segment ausgewählt werden. Informationen zu Kundensegmenten finden Sie unter [Erstellen von Kundensegmenten](create-customer-segments.md). Klicken Sie anschließend auf **Speichern und Weiter**, um zum Schritt **Anzeigenentwurf** zu gelangen. Dieser Schritt ist nicht für eigenwerbungskampagnen, verfügbar, da sie nur in Ihren eigenen apps ausgeführt werden.
+10.  Wenn Sie **Mehr Interaktion in Ihrer App** als Ziel Ihrer Kampagne ausgewählt haben, können Sie eines Ihrer Kundensegmente als Zielgruppe auswählen. Mit dieser Kampagne erstellte Anzeigen werden nur den Kunden angezeigt, die zum jeweiligen Segment gehören. Pro Anzeigenkampagne kann nur ein Segment ausgewählt werden. Informationen zu Kundensegmenten finden Sie unter [Erstellen von Kundensegmenten](create-customer-segments.md). Klicken Sie anschließend auf **Speichern und Weiter**, um zum Schritt **Anzeigenentwurf** zu gelangen. Dieser Schritt ist nicht für eigenwerbungskampagnen, verfügbar, da diese nur in Ihren eigenen apps ausgeführt werden.
 
 11.  Wählen Sie auf der Seite **Anzeigenentwurf** eine der folgenden Optionen aus:
     * **Automatisch generiert**. Dies ist die Standardoption, und es können Sie eine Anzeige mit unseren Standardvorlagen erstellen. Sie können die Inhalte Ihrer Anzeigen durch Auswahlen anpassen. Wir sehen uns eine Vorschau Ihrer Anzeige basierend auf den Auswahlmöglichkeiten an (dies wird automatisch aktualisiert, wenn Sie eine Auswahl treffen).

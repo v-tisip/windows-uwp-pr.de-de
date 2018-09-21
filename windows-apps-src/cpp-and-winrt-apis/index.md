@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 7168ee705114523a324194b89f8450e768cfab22
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4089899"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4117536"
 ---
 # [<a name="cwinrt"></a>C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 C++/WinRT ist eine vollständig standardisierte, moderne C++17 Sprachprojektion für Windows-Runtime-(WinRT)-APIs, die als headerdateibasierte Bibliothek implementiert ist und Ihnen einen erstklassigen Zugriff auf die moderne Windows-API bietet. Mit C++/WinRT können Sie Windows-Runtime-APIs mit jedem standardkonformen C++17-Compiler erstellen und verwenden. Das in Version 10.0.17134.0 (Windows 10, Version 1803) eingeführte Windows SDK enthält C++/WinRT.
@@ -29,13 +29,13 @@ Die Programmiersprache C++ wird sowohl im Enterprise- als *auch* im Independent 
 
 Aus Sicht der Sprache ging es in C++ immer darum, Abstraktionen zu erstellen und zu nutzen, die sowohl typenreich als auch leichtgewichtig sind. Aber die Sprache hat sich seit den grundlegenden Zeigern und Schleifen und der mühsamen Speicherzuweisung und -freigabe von C++ aus dem Jahr 1998 radikal verändert. Modernes C++ (ab C++11) ist ideenreicher, einfacher, lesbarer und viel weniger fehleranfällig.
 
-Für die Erstellung und Nutzung von Windows-Runtime-APIs mit C++ gibt es C++/WinRT. Hierbei handelt es sich um Microsoft empfohlene Ersatz für die [C++ / CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) sprachprojektion und [C++ für Windows-Runtime-Bibliothek (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl?branch=live).
+Für die Erstellung und Nutzung von Windows-Runtime-APIs mit C++ gibt es C++/WinRT. Hierbei handelt es sich um Microsoft empfohlene Ersatz für die [C++ / CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) sprachprojektion und die [Windows-Runtime C++ Template Library (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl?branch=live).
 
 Mit C++/WinRT verwenden Sie Standard-C++ Datentypen, -Algorithmen und -Schlüsselwörter. Die Projektion hat ihre eigenen benutzerdefinierten Datentypen, aber in den meisten Fällen müssen Sie sie nicht kennen, da es entsprechende Konvertierungen zu und von Standardtypen gibt. Auf diese Weise können Sie weiterhin die gewohnten Standardfunktionen von C++ und den bereits vorhandenen Quellcode verwenden. C++/WinRT macht es extrem einfach, Windows-Runtime-APIs in jeder C++ Anwendung, von Win32 bis UWP, aufzurufen.
 
 C++/WinRT arbeitet besser und erzeugt kleinere Binärdateien als jede andere Sprachoption für die Windows-Runtime. Es übertrifft sogar handgeschriebenen Code, der die ABI-Schnittstellen direkt nutzt. Das liegt daran, dass die Abstraktionen moderne C++ Idiome verwenden, die der Visual C++ Compiler optimiert. Dazu gehören magische Statics, leere Basisklassen, **strlen**-Elision, sowie viele neuere Optimierungen in der neuesten Version von Visual C++, die speziell auf die Verbesserung der Performance von C++/WinRT abzielen.
 
-### <a name="topics-about-cwinrt"></a>Themen zu C++ / WinRT
+### <a name="topics-about-cwinrt"></a>Themen für C++ / WinRT
 
 | Thema | Beschreibung |
 | - | - |
@@ -52,13 +52,13 @@ C++/WinRT arbeitet besser und erzeugt kleinere Binärdateien als jede andere Spr
 | [Fehlerbehandlung bei C++/WinRT](error-handling.md) | In diesem Thema werden Strategien zur Behandlung von Fehlern bei der Programmierung mit C++/WinRT erörtert. |
 | [Verarbeiten von Ereignissen über Delegaten](handle-events.md) | Dieses Thema zeigt, wie man Event-Handling-Delegaten mit C++/WinRT registriert und widerruft. |
 | [Erstellen von Ereignissen](author-events.md) | Dieses Thema zeigt, wie man eine Komponente für Windows-Runtime erstellt, die eine Laufzeitklasse enthält, die Ereignisse auslöst. Es zeigt außerdem eine App, die die Komponente nutzt und die Ereignisse verarbeitet. |
-| [Sammlungen mit C++ / WinRT](collections.md) | C++ / WinRT stellt Funktionen und Basisklassen, die Sie viel Zeit und Mühe speichern, wenn Sie implementieren und/oder Sammlungen übergeben möchten. |
+| [Sammlungen mit C++ / WinRT](collections.md) | C++ / WinRT stellt Funktionen und Basisklassen, die Sie speichern und viel Zeit und Mühe beim Implementieren und/oder Sammlungen übergeben werden soll. |
 | [Parallelität und asynchrone Vorgänge](concurrency.md) | Dieses Thema zeigt, wie Sie asynchrone Windows-Runtime-Objekte mit C++/WinRT erstellen und nutzen können. |
 | [XAML-Steuerelemente; Binden an eine C++/WinRT-Eigenschaft](binding-property.md) | Eine Eigenschaft, die effektiv an ein XAML-Steuerelement gebunden werden kann, wird als *Observable*-Eigenschaft bezeichnet. Dieses Thema zeigt, wie man eine Observable-Eigenschaft implementiert und nutzt und wie man ein XAML-Steuerelement daran bindet. |
 | [XAML-Items-Steuerelemente; Binden an eine C++/WinRT-Collection](binding-collection.md) | Eine Collection, die effektiv an ein XAML-Items-Steuerelement gebunden werden kann, wird als *Observable*-Collection bezeichnet. Dieses Thema zeigt, wie man eine Observable-Collection implementiert und nutzt und wie man ein XAML-Items-Steuerelement daran bindet. |
-| [XAML-benutzerdefinierte (auf Vorlagen basierende)-Steuerelemente mit C++ / WinRT](xaml-cust-ctrl.md) | Dieses Thema führt Sie durch die Schritte zum Erstellen eines einfachen benutzerdefinierten Steuerelements mit C++ / WinRT. Sie können auf den Informationen zum Erstellen Ihrer eigenen funktionsreiche und anpassbare UI-Steuerelemente erstellen. |
-| [Verwenden von COM-Komponenten mit C++ / WinRT](consume-com.md) | In diesem Thema verwendet ein vollständiges Beispiel für die Direct2D-Code um zu veranschaulichen, wie c++ / WinRT-COM-Klassen und Schnittstellen aufnehmen. |
-| [Erstellen von COM-Komponenten mit C++ / WinRT](author-coclasses.md) | C++ / WinRT hilft Ihnen beim Erstellen von klassischer COM-Komponenten, genauso, wie Sie Windows-Runtime-Klassen man erleichtert. |
+| [XAML-benutzerdefinierte (vorlagenbasierten)-Steuerelemente mit C++ / WinRT](xaml-cust-ctrl.md) | Dieses Thema führt Sie durch die Schritte zum Erstellen eines einfachen benutzerdefinierten Steuerelements mit C++ / WinRT. Sie können auf den Informationen zum Erstellen Ihrer eigenen funktionsreiche und anpassbare UI-Steuerelemente erstellen. |
+| [Verwenden von COM-Komponenten mit C++ / WinRT](consume-com.md) | In diesem Thema verwendet ein vollständiges Beispiel für die Direct2D-Code, wie Sie c++ / WinRT-COM-Klassen und Schnittstellen aufnehmen. |
+| [Erstellen von COM-Komponenten mit C++ / WinRT](author-coclasses.md) | C++ / WinRT helfen Ihnen zum Erstellen von klassischer COM-Komponenten, wie Sie Windows-Runtime-Klassen man erleichtert. |
 | [Interoperabilität zwischen C++/WinRT und C++/CX](interop-winrt-cx.md) | In diesem Thema werden zwei Hilfsfunktionen gezeigt, die verwendet werden können, um zwischen [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live)- und C++/WinRT-Objekten zu konvertieren. |
 | [Wechsel zu C++/WinRT von C++/CX](move-to-winrt-from-cx.md) | In diesem Thema wird gezeigt, wie Sie C++/CX-Code zum entsprechenden Äquivalent in C++/WinRT portieren. |
 | [Interoperabilität zwischen C++/WinRT und der ABI](interop-winrt-abi.md) | Dieses Thema zeigt, wie man zwischen Application Binary Interface (ABI) und C++/WinRT-Objekten konvertiert. |
@@ -70,7 +70,7 @@ C++/WinRT arbeitet besser und erzeugt kleinere Binärdateien als jede andere Spr
 
 | Thema | Beschreibung |
 | - | - |
-| [Wert Kategorien und Verweise auf diese](cpp-value-categories.md) | Dieses Thema beschreibt die verschiedenen Kategorien von Werten, die in C++ vorhanden sind. Sie werden Ausrichtungsattributs verwendet l-Werte und Rvalues gehört haben, jedoch sind andere Arten zu. |
+| [Wert Kategorien und Verweise auf diese](cpp-value-categories.md) | Dieses Thema beschreibt die verschiedenen Kategorien von Werten, die in C++ vorhanden sind. Sie werden Ausrichtungsattributs verwendet kenne l-Werte und Rvalues, aber es gibt auch andere Arten. |
 
 ## <a name="important-apis"></a>Wichtige APIs
 * [winrt Namespace](/uwp/cpp-ref-for-winrt/winrt)

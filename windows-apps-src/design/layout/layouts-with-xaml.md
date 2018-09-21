@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b45196a83edf45a69f6b79ab82542cef6817703
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4090051"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4119060"
 ---
 # <a name="responsive-layouts-with-xaml"></a>Dynamische Layouts mit XAML
 
@@ -236,7 +236,7 @@ In diesem Beispiel wird die gleiche Aufgabe wie im vorherigen Beispiel ausgefüh
 ```
 
 > [!Important]
-> Im vorherigen Beispiel wird die angefügte VisualStateManager.VisualStateGroups-Eigenschaft für das **Grid** -Element festgelegt. Bei Verwendung von „StateTrigger“-Elementen müssen Sie immer sicherstellen, dass „VisualStateGroups“ an das erste untergeordnete Element des Stamms angefügt wird, damit die Auslöser automatisch wirksam werden. (Hier ist **Grid** das erste untergeordnete Element des Stammelements **Page**.)
+> Im vorherigen Beispiel wird die angefügte VisualStateManager.VisualStateGroups-Eigenschaft auf das **Grid** -Element festgelegt. Bei Verwendung von „StateTrigger“-Elementen müssen Sie immer sicherstellen, dass „VisualStateGroups“ an das erste untergeordnete Element des Stamms angefügt wird, damit die Auslöser automatisch wirksam werden. (Hier ist **Grid** das erste untergeordnete Element des Stammelements **Page**.)
 
 ### <a name="attached-property-syntax"></a>Syntax von angefügten Eigenschaften
 

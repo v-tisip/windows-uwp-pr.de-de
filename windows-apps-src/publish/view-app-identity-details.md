@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: cf2c10fd8fa581e29fe20c5bdcb2683c5246af1d
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4110932"
+ms.locfileid: "4124677"
 ---
 # <a name="view-app-identity-details"></a>Anzeigen von Details zur App-Identität
 
 
-Bei der Arbeit mit einer app im Windows Dev Center-Dashboard können Sie Details zur eindeutigen Identität zugewiesen wurde, im Microsoft Store anzeigen. Rufen Sie einen Link zum Eintrag Ihrer App im Store ab.
+Bei der Arbeit mit einer app im Windows Dev Center-Dashboard sehen Sie Details zur eindeutigen Identität vom Microsoft Store zugewiesen. Rufen Sie einen Link zum Eintrag Ihrer App im Store ab.
 
 Um diese Informationen zu suchen, navigieren Sie zu einer Ihrer Apps und erweitern im linken Navigationsmenü **App-Verwaltung**. Wählen Sie **App-Identität** aus, um diese Details anzuzeigen.
 

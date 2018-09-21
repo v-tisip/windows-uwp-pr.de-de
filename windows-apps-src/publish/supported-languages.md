@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e76f63fa30c3a294e1917bf1bed9ea79897390b2
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4091160"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4120004"
 ---
 # <a name="supported-languages"></a>Unterstützte Sprachen
 
 
 Sie können apps an den Microsoft Store in mehr als 100 Sprachen übermitteln.
 
-Weitere Informationen zum Konfigurieren von Sprachen in Ihren apps finden Sie unter [Globalisierung und Lokalisierung](../design/globalizing/globalizing-portal.md) und [verstehen benutzerprofilsprachen und app-manifest-Sprachen](../design/globalizing/manage-language-and-region.md). Wir bieten auch ein [Multilingual App Toolkit](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat), mit dessen Hilfe Sie Apps programmieren können, die mehrere Sprachen unterstützen.
+Weitere Informationen zum Konfigurieren von Sprachen in Ihren apps, [Globalisierung und Lokalisierung](../design/globalizing/globalizing-portal.md) und [verstehen benutzerprofilsprachen und app-manifest-Sprachen](../design/globalizing/manage-language-and-region.md)angezeigt. Wir bieten auch ein [Multilingual App Toolkit](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat), mit dessen Hilfe Sie Apps programmieren können, die mehrere Sprachen unterstützen.
 
 ## <a name="supported-languages"></a>Unterstützte Sprachen
 

@@ -11,23 +11,23 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f7359b2ae40e9b53d5ab73ee93402b11beab629
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4089747"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4117980"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Einrichten von Auszahlungskonten und Steuerformularen.
 
 
-Damit Sie Geld aus app-Verkäufen im Microsoft Store zu erhalten, müssen Sie Ihr auszahlungskonto einrichten und die erforderlichen Steuerformulare ausfüllen.
+Damit Sie Geld aus app-Verkäufen im Microsoft Store erhalten, müssen Sie Ihr auszahlungskonto einrichten und die erforderlichen Steuerformulare ausfüllen.
 
-Falls Sie ausschließlich kostenlose Apps anbieten möchten (und keine In-App-Einkäufe bereitstellen oder Microsoft Advertising verwenden möchten), brauchen Sie kein Auszahlungskonto einzurichten oder Steuerformulare auszufüllen. Wenn Sie einem späteren und feststellen, dass Sie apps (oder -Add-Ons) verkaufen möchten, können Sie Ihr auszahlungskonto einrichten und Ausfüllen der Steuerformulare zu diesem Zeitpunkt. Kostenpflichtige Apps und Add-Ons können erst übermittelt werden, wenn Sie Ihr Auszahlungskonto eingerichtet und Ihr Steuerprofil ausgefüllt haben.
+Falls Sie ausschließlich kostenlose Apps anbieten möchten (und keine In-App-Einkäufe bereitstellen oder Microsoft Advertising verwenden möchten), brauchen Sie kein Auszahlungskonto einzurichten oder Steuerformulare auszufüllen. Wenn Sie Ihre Meinung später ändern und entscheiden Sie, dass Sie apps (oder -Add-Ons) verkaufen möchten, können Sie Ihr auszahlungskonto einrichten und Ausfüllen der Steuerformulare zu diesem Zeitpunkt. Kostenpflichtige Apps und Add-Ons können erst übermittelt werden, wenn Sie Ihr Auszahlungskonto eingerichtet und Ihr Steuerprofil ausgefüllt haben.
 
 > [!NOTE]
 > In [bestimmten Märkten](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) können Entwickler nur kostenlose Apps übermitteln. Wenn Ihr Konto in einem dieser Märkte registriert ist, steht die Option zum Einrichten eines Auszahlungskontos nicht zur Verfügung.
 
-Nachdem Sie [Ihr Entwicklerkonto eingerichtet](opening-a-developer-account.md)haben, gibt es zwei Dinge, die Sie tun, bevor Sie apps (oder -Add-Ons) verkaufen können im Microsoft Store an:
+Nachdem Sie [Ihr Entwicklerkonto eingerichtet](opening-a-developer-account.md)haben, Dinge gibt es zwei, die Sie ausführen müssen, bevor Sie apps (oder -Add-Ons) verkaufen können im Microsoft Store:
 
 -   [Einrichten eines Auszahlungskontos](#payout-account)
 -   [Ausfüllen der Steuerformulare](#tax-forms)
@@ -148,7 +148,7 @@ Sie können die Steuerformulare im Dashboard elektronisch ausfüllen und übermi
 4.  Beantworten Sie die Frage bezüglich der amerikanischen Staatsbürgerschaft und des Wohnsitzes in den USA, und klicken Sie dann auf **Weiter**.
 5.  Bestätigen Sie Ihren Namen und Ihre Adressinformationen zu Steuerzwecken, wenn diese angezeigt werden.
 
-Daraufhin werden elektronische Versionen der Steuerformulare angezeigt, die Sie ausfüllen müssen. – Unabhängig von Ihrem Wohnsitzland oder ihrer Staatsangehörigkeit – müssen Sie die Steuerformulare für apps oder Add-ons über den Microsoft Store verkaufen USA ausfüllen. Entwickler, die bestimmte Kriterien für den Wohnsitz USA erfüllen, müssen ein IRS W-9-Formular ausfüllen. Entwickler außerhalb der USA müssen ein IRS W-8-Formular ausfüllen. Sie können diese Formulare online ausfüllen, wenn Sie Ihr Steuerprofil angeben.
+Daraufhin werden elektronische Versionen der Steuerformulare angezeigt, die Sie ausfüllen müssen. – Unabhängig von Ihrem Wohnsitzland oder ihrer Staatsangehörigkeit – müssen Sie Steuerformulare für apps oder Add-ons über den Microsoft Store verkaufen USA ausfüllen. Entwickler, die bestimmte Kriterien für den Wohnsitz USA erfüllen, müssen ein IRS W-9-Formular ausfüllen. Entwickler außerhalb der USA müssen ein IRS W-8-Formular ausfüllen. Sie können diese Formulare online ausfüllen, wenn Sie Ihr Steuerprofil angeben.
 
 Eine US-amerikanische Steueridentifikationsnummer (Individual Taxpayer Identification Number, ITIN) ist nicht erforderlich, um Zahlungen von Microsoft zu erhalten oder die Vorteile eines Steuerabkommens in Anspruch zu nehmen.
 
