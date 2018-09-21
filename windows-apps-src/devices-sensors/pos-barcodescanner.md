@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 1cd6f8391de9375ddd1c20471dd10c37e99f782f
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4089285"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4115450"
 ---
 # <a name="barcode-scanner"></a>Strichcodescanner
 
@@ -24,10 +24,10 @@ Dieser Abschnitt enthält Anleitungen zur Erstellung von Apps für die Universel
 
 |Thema |Beschreibung |
 |------|------------|
-| [Konfigurieren Sie einen Strichcodescanner](../devices-sensors/pos-barcodescanner-configure.md)  | Hier erfahren Sie, wie Sie einen Strichcodescanner für die Anwendung zu konfigurieren. |
+| [Konfigurieren Sie einen Strichcodescanner](../devices-sensors/pos-barcodescanner-configure.md)  | Erfahren Sie, wie Sie einen Strichcodescanner für die Anwendung zu konfigurieren. |
 | [Verwenden Sie einen Software-trigger](../devices-sensors/pos-barcodescanner-software-trigger.md) | Hier erfahren Sie, wie Sie den Vorgang der Überprüfung von Software zu steuern. |
 | [Arbeiten mit Symbologien](pos-barcodescanner-symbologies.md) | Erfahren Sie, wie Sie die Strichcodetypen ermitteln können, die ein Strichcodescanner unterstützt, und steuern Sie, welche Strichcodetypen vom Strichcodescanner Ihrer Anwendung erkannt werden. |
-| [Abrufen und für das Verständnis der Barcode-Daten](pos-barcodescanner-scan-data.md) | Erfahren Sie, wie Sie erhalten und Interpretation der Barcodedaten, die Sie scannen. |
+| [Abzurufen Sie und zu verstehen Sie Barcode-Daten](pos-barcodescanner-scan-data.md) | Erfahren Sie, wie zum Erhalt und der Interpretation der Barcodedaten, die Sie scannen. |
 | [Kamera-Strichcodescanner](pos-camerabarcode.md) | Lesen Sie Strichcodes mit der Standardkamera einer Anwendung für die Universelle Windows-Plattform. Erfordert Windows 10-Update April 2018 (Build 17134 oder höher). |
 |
  

@@ -4,18 +4,18 @@ ms.assetid: 25B18BA5-E584-4537-9F19-BB2C8C52DFE1
 title: Deklarationen der App-Funktionen
 description: Funktionen müssen für den Zugriff auf bestimmte APIs oder Ressourcen (etwa Bilder, Musik oder Geräte wie die Kamera oder das Mikrofon) im Paketmanifest der UWP-App deklariert werden.
 ms.author: misatran
-ms.date: 7/17/2018
+ms.date: 09/20/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 30e4bb7b493e6fb839f300f4c446b7510f28fabb
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.openlocfilehash: 17f40055f22d8d065ac85d207f3ea17a58a14519
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4089169"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4110862"
 ---
 # <a name="app-capability-declarations"></a>Deklarationen von App-Funktionen
 
@@ -25,13 +25,12 @@ Zum Anfordern des Zugriffs auf bestimmte Ressourcen oder APIs werden Funktionen 
 
 Einige Funktionen bieten Apps Zugriff auf eine *sensible Ressource*. Diese Ressourcen gelten als sensibel, da sie auf persönliche Daten des Benutzers zugreifen oder für diesen Kosten verursachen. Mit Datenschutzeinstellungen, die von der Einstellungs-App verwaltet werden, können Benutzer den Zugriff auf sensible Ressourcen dynamisch steuern. Daher ist es wichtig, dass Ihre App nicht davon ausgeht, dass eine sensible Ressource immer verfügbar ist. Weitere Informationen zum Zugriff auf sensible Ressourcen finden Sie unter [Richtlinien für Apps mit Berücksichtigung von Datenschutz](https://msdn.microsoft.com/library/windows/apps/Hh768223). Funktionen, die Apps den Zugriff auf eine *sensible Ressource* ermöglichen, sind durch ein Sternchen (\*) neben dem Funktionsszenario gekennzeichnet.
 
-Es gibt drei Arten von Funktionen, die im Folgenden beschrieben werden:
+Es gibt verschiedene Arten von Funktionen.
 
--   Funktionen zur allgemeinen Verwendung: gelten für die meisten allgemeinen App-Szenarien.
-
--   Gerätefunktionen: ermöglichen Ihrer App den Zugriff auf Peripheriegeräte und interne Geräte.
-
--   Eingeschränkte Funktionen, die eine Genehmigung für die Übermittlung an den Store erfordern und/oder in der Regel nur für Microsoft und bestimmte Partner verfügbar sind.
+- [Funktionen zur allgemeinen Verwendung](#general-use-capabilities), die für die meisten allgemeinen app-Szenarien gelten.
+- [Gerätefunktionen](#device-capabilities), die Ihre app den Zugriff auf Peripheriegeräte und interne Geräte ermöglichen.
+- [Eingeschränkte Funktionen](#restricted-capabilities), die eine Genehmigung für Microsoft Store-Übermittlungs erfordern und/oder in der Regel nur für Microsoft und bestimmte Partner verfügbar.
+- [Benutzerdefinierte Funktionen](#custom-capabilities).
 
 ## <a name="general-use-capabilities"></a>Funktionen zur allgemeinen Verwendung
 
@@ -96,23 +95,19 @@ Wenn Ihre app alle eingeschränkten Funktionen deklariert, müssen Sie Informati
 
 Achten Sie darauf, nicht zu deklarieren, dass diese Funktionen beschränkt, es sei denn, die app wirklich benötigt. Es gibt Fälle, in denen solche Funktionen notwendig und angemessen sind. Dazu gehört beispielsweise das Banking mit zweistufiger Authentifizierung, bei der Benutzer eine Smartcard mit einem digitalen Zertifikat bereitstellen, das ihre Identität bestätigt. Andere Apps werden unter Umständen in erster Linie für Unternehmenskunden entworfen und erfordern ggf. Zugriff auf Unternehmensressourcen, auf die nur mit den Domänenanmeldeinformationen des Benutzers zugegriffen werden kann.
 
-Alle eingeschränkten Funktionen müssen den **rescap**-Namespace enthalten, wenn sie im App-Paketmanifest deklariert werden. Hier sehen Sie z.B., wie die **appCaptureSettings**-Funktion deklariert wird.
+Um eine eingeschränkte Funktion deklarieren, ändern die Quelldatei des [app-Paket-manifest](https://msdn.microsoft.com/library/windows/apps/BR211474) (`Package.appxmanifest`). Fügen Sie die **xmlns: rescap** XML-Namespace-Deklaration hinzu und verwenden Sie das Präfix **Rescap** , wenn Sie die eingeschränkte Funktion deklarieren. Hier sehen Sie z.B., wie die **appCaptureSettings**-Funktion deklariert wird.
 
 ```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+    ...
+    xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+    IgnorableNamespaces="... rescap">
+...
 <Capabilities>
     <rescap:Capability Name="appCaptureSettings"/>
 </Capabilities>
-```
-
-Sie müssen auch die **xmlns:rescap**-Namespacedeklaration oben in der Datei „Package.appxmanifest“ hinzufügen, wie unten dargestellt.
-
-```xml
-<Package
-    xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-    xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-    xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-    xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
-    IgnorableNamespaces="uap mp wincap rescap">
+</Package>
 ```
 
 ### <a name="restricted-capability-approval-process"></a>Genehmigungsprozess für eingeschränkte Funktionen
@@ -219,8 +214,25 @@ Die folgende Tabelle enthält die eingeschränkten Funktionen. Sie können eine 
 | **Windows-Team-Gerät-Anmeldeinformationen** | Die **TeamEditionDeviceCredentials** eingeschränkte Funktion ermöglicht apps den Zugriff auf APIs, die die Gerätekonto-Anmeldeinformationen auf einem Surface Hub-Gerät mit Windows 10, Version 1703 oder höher anfordern.<br/><br/>Es wird nicht empfohlen, diese Funktion in Apps zu deklarieren, die an den Store übermittelt werden. Für die meisten Entwickler wird die Verwendung dieser Funktion nicht genehmigt. |
 | **Windows-Team Anwendung anzeigen** | Die **TeamEditionView** eingeschränkte Funktion ermöglicht apps den Zugriff auf APIs für das Hosten von einer Anwendung Ansicht auf einem Surface Hub-Gerät mit Windows 10, Version 1703 oder höher.<br/><br/>Es wird nicht empfohlen, diese Funktion in Apps zu deklarieren, die an den Store übermittelt werden. Für die meisten Entwickler wird die Verwendung dieser Funktion nicht genehmigt. |
 
+## <a name="custom-capabilities"></a>Benutzerdefinierte Funktionen
 
+[Eingeschränkte Funktionen](#restricted-capabilities) vorherigen Abschnitt beschreibt den gleichen Genehmigungsprozess, den Sie verwenden können, um die Genehmigung zur Verwendung einer benutzerdefinierten Funktion anzufordern. Der [eingebettete SIM](/uwp/api/windows.networking.networkoperators.esim) APIs sind Beispiele für APIs, die eine benutzerdefinierte Funktion erfordern. Wenn Sie nur die Anwendung lokal im Entwicklermodus ausführen möchten, klicken Sie die benutzerdefinierte Funktion benötigt nicht. Aber Sie benötigen sie Ihre app an den Microsoft Store veröffentlichen möchten oder für die Ausführung außerhalb des Entwicklermodus.
 
+Wenn Sie eine Windows Technical Account Manager (TAM) verfügen, können Sie mit Ihren TAM, um den Zugriff anzufordern arbeiten. Weitere Informationen finden Sie unter [Kontakt Ihr Microsoft-TAM](/windows-hardware/drivers/mobilebroadband/testing-your-desktop-cosa-apn-database-submission#contact-your-microsoft-tam).
+
+Um eine benutzerdefinierte Funktion deklarieren, ändern die Quelldatei des [app-Paket-manifest](https://msdn.microsoft.com/library/windows/apps/BR211474) (`Package.appxmanifest`). Fügen Sie die **Xmlns:uap4** XML-Namespace-Deklaration hinzu und verwenden Sie das Präfix **uap4** , wenn Sie Ihre benutzerdefinierte Funktion deklarieren. Beispiel:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+    ...
+    xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4">
+...
+<Capabilities>
+    <uap4:CustomCapability Name="CompanyName.customCapabilityName_PublisherID"/>
+</Capabilities>
+</Package>
+```
 
 ## <a name="related-topics"></a>Verwandte Themen
 
