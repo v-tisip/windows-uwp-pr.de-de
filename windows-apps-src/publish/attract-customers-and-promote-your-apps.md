@@ -10,23 +10,23 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ca47bfb26649f2e8a9fc1344c3264d90548eb836
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4083819"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4116738"
 ---
-# <a name="attract-customers-and-promote-your-apps"></a><span data-ttu-id="f0895-103">Kunden gewinnen und Bewerben von Apps</span><span class="sxs-lookup"><span data-stu-id="f0895-103">Attract customers and promote your apps</span></span>
+# <a name="attract-customers-and-promote-your-apps"></a><span data-ttu-id="b8d0e-103">Kunden gewinnen und Bewerben von Apps</span><span class="sxs-lookup"><span data-stu-id="b8d0e-103">Attract customers and promote your apps</span></span>
 
-<span data-ttu-id="f0895-104">Sobald Ihre app im Microsoft Store ist, ist es Zeit, um es so vielen Kunden wie möglich präsentieren.</span><span class="sxs-lookup"><span data-stu-id="f0895-104">Once your app is in the Microsoft Store, it's time to get it in front of as many customers as possible.</span></span> <span data-ttu-id="f0895-105">Wir bieten viele Features, mit denen Sie Ihre Produkte bewerben und Ihre Kundenbasis vergrößern können, einschließlich Anzeigenkampagnen, Angebotscodes, Sonderpreise und vielem mehr.</span><span class="sxs-lookup"><span data-stu-id="f0895-105">We offer many features that help you promote your products and grow your customer base, including ad campaigns, promo codes, sale pricing, and more.</span></span>
+<span data-ttu-id="b8d0e-104">Nachdem Ihre app im Microsoft Store ist, ist es Zeit für die es so vielen Kunden wie möglich präsentieren.</span><span class="sxs-lookup"><span data-stu-id="b8d0e-104">Once your app is in the Microsoft Store, it's time to get it in front of as many customers as possible.</span></span> <span data-ttu-id="b8d0e-105">Wir bieten viele Features, mit denen Sie Ihre Produkte bewerben und Ihre Kundenbasis vergrößern können, einschließlich Anzeigenkampagnen, Angebotscodes, Sonderpreise und vielem mehr.</span><span class="sxs-lookup"><span data-stu-id="b8d0e-105">We offer many features that help you promote your products and grow your customer base, including ad campaigns, promo codes, sale pricing, and more.</span></span>
 
--   [<span data-ttu-id="f0895-106">Generieren von Werbecodes</span><span class="sxs-lookup"><span data-stu-id="f0895-106">Generate promotional codes</span></span>](generate-promotional-codes.md)
--   [<span data-ttu-id="f0895-107">Erstellen einer Anzeigenkampagne für Ihre App</span><span class="sxs-lookup"><span data-stu-id="f0895-107">Create an ad campaign for your app</span></span>](create-an-ad-campaign-for-your-app.md)
--   [<span data-ttu-id="f0895-108">Erstellen einer Werbekampagne für benutzerdefinierte Apps</span><span class="sxs-lookup"><span data-stu-id="f0895-108">Create a custom app promotion campaign</span></span>](create-a-custom-app-promotion-campaign.md)
--   [<span data-ttu-id="f0895-109">Anbieten vergünstigter Apps und Add-Ons</span><span class="sxs-lookup"><span data-stu-id="f0895-109">Put apps and add-ons on sale</span></span>](put-apps-and-add-ons-on-sale.md)
--   [<span data-ttu-id="f0895-110">Microsoft Store marketing-Richtlinien für apps</span><span class="sxs-lookup"><span data-stu-id="f0895-110">Microsoft Store marketing guidelines for apps</span></span>](app-marketing-guidelines.md)
--   [<span data-ttu-id="f0895-111">Erstellen eines Links zu Ihrer App</span><span class="sxs-lookup"><span data-stu-id="f0895-111">Link to your app</span></span>](link-to-your-app.md)
--   [<span data-ttu-id="f0895-112">Einfacheres Bewerben Ihrer App</span><span class="sxs-lookup"><span data-stu-id="f0895-112">Make your app easier to promote</span></span>](make-your-app-easier-to-promote.md)
+-   [<span data-ttu-id="b8d0e-106">Generieren von Werbecodes</span><span class="sxs-lookup"><span data-stu-id="b8d0e-106">Generate promotional codes</span></span>](generate-promotional-codes.md)
+-   [<span data-ttu-id="b8d0e-107">Erstellen einer Anzeigenkampagne für Ihre App</span><span class="sxs-lookup"><span data-stu-id="b8d0e-107">Create an ad campaign for your app</span></span>](create-an-ad-campaign-for-your-app.md)
+-   [<span data-ttu-id="b8d0e-108">Erstellen einer Werbekampagne für benutzerdefinierte Apps</span><span class="sxs-lookup"><span data-stu-id="b8d0e-108">Create a custom app promotion campaign</span></span>](create-a-custom-app-promotion-campaign.md)
+-   [<span data-ttu-id="b8d0e-109">Anbieten vergünstigter Apps und Add-Ons</span><span class="sxs-lookup"><span data-stu-id="b8d0e-109">Put apps and add-ons on sale</span></span>](put-apps-and-add-ons-on-sale.md)
+-   [<span data-ttu-id="b8d0e-110">Microsoft Store marketing-Richtlinien für apps</span><span class="sxs-lookup"><span data-stu-id="b8d0e-110">Microsoft Store marketing guidelines for apps</span></span>](app-marketing-guidelines.md)
+-   [<span data-ttu-id="b8d0e-111">Erstellen eines Links zu Ihrer App</span><span class="sxs-lookup"><span data-stu-id="b8d0e-111">Link to your app</span></span>](link-to-your-app.md)
+-   [<span data-ttu-id="b8d0e-112">Einfacheres Bewerben Ihrer App</span><span class="sxs-lookup"><span data-stu-id="b8d0e-112">Make your app easier to promote</span></span>](make-your-app-easier-to-promote.md)
 
  
 

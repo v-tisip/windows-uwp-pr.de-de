@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Popup, ausstehende Updates, ausstehendes Update, Interaktivität aus mehreren Schritten, Interaktivitäten aus mehreren Schritten
 ms.localizationpriority: medium
 ms.openlocfilehash: f5efccbb73758d0e6541e59812801c22a22c87b5
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4090542"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4120064"
 ---
 # <a name="toast-with-pending-update-activation"></a><span data-ttu-id="96c04-103">Popups mit ausstehenden Updates in Aktion</span><span class="sxs-lookup"><span data-stu-id="96c04-103">Toast with pending update activation</span></span>
 

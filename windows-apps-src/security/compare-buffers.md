@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: 139514166d623dc9a621b533cd3ce4bb7fdea0c5
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4084235"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4116574"
 ---
 # <a name="compare-buffers"></a><span data-ttu-id="6ce83-104">Vergleichen von Puffern</span><span class="sxs-lookup"><span data-stu-id="6ce83-104">Compare buffers</span></span>
 
