@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 8bd1dffe4da7b3725ef7716fe9cf28bdf8eaf34f
-ms.sourcegitcommit: 68fcac3288d5698a13dbcbd57f51b30592f24860
+ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "4056092"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "4092162"
 ---
 # <a name="working-with-symbologies"></a><span data-ttu-id="a4af1-104">Arbeiten mit Symbologien</span><span class="sxs-lookup"><span data-stu-id="a4af1-104">Working with symbologies</span></span>
 <span data-ttu-id="a4af1-105">Eine [Strichcodesymbologie](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies) ist eine Zuordnung von Daten zu einem bestimmten Strichcodeformat.</span><span class="sxs-lookup"><span data-stu-id="a4af1-105">A [barcode symbology](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies) is the mapping of data to a specific barcode format.</span></span> <span data-ttu-id="a4af1-106">Einige allgemeinen Symbologien enthalten UPC, Code 128, QR-Code und So weiter.</span><span class="sxs-lookup"><span data-stu-id="a4af1-106">Some common symbologies include UPC, Code 128, QR Code, and so on.</span></span>  <span data-ttu-id="a4af1-107">Der universelle Windows-Plattform-Strichcodescanner-APIs ermöglichen einer Anwendung zu steuern, wie der Scanner die Symbologien verarbeitet, ohne manuell den Scanner konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="a4af1-107">The Universal Windows Platform barcode scanner APIs allow an application to control how the scanner processes these symbologies without manually configuring the scanner.</span></span> 
