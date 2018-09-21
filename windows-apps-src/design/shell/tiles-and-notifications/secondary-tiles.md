@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, sekundäre Kacheln
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f11ca4d29f22daf953ce03436c3b786c70a9e04
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4085433"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4113460"
 ---
 # <a name="secondary-tiles"></a><span data-ttu-id="2f4b8-103">Sekundäre Kacheln</span><span class="sxs-lookup"><span data-stu-id="2f4b8-103">Secondary tiles</span></span>
 

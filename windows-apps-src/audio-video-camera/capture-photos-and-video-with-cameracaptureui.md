@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 3ba33a1e79a2447c5dac546ce0f1caeaf16929a3
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4090508"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4111860"
 ---
 # <a name="capture-photos-and-video-with-windows-built-in-camera-ui"></a><span data-ttu-id="c6041-104">Aufnehmen von Fotos und Videos mit der in Windows integrierten Kamera-UI</span><span class="sxs-lookup"><span data-stu-id="c6041-104">Capture photos and video with Windows built-in camera UI</span></span>
 

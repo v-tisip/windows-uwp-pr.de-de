@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, portieren, migrieren, interoperabilität, C++/CX
 ms.localizationpriority: medium
 ms.openlocfilehash: d265189c338d95a8c8f206fd196e99d5b0a1e068
-ms.sourcegitcommit: 4f6dc806229a8226894c55ceb6d6eab391ec8ab6
+ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4085929"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "4112396"
 ---
 # <a name="interop-between-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-and-ccx"></a><span data-ttu-id="60949-104">Interoperabilität zwischen [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) und C++/CX</span><span class="sxs-lookup"><span data-stu-id="60949-104">Interop between [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) and C++/CX</span></span>
 <span data-ttu-id="60949-105">In diesem Thema werden zwei Hilfsfunktionen gezeigt, die verwendet werden können, um zwischen [C++ / CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live)- und C++ / WinRT-Objekten zu konvertieren.</span><span class="sxs-lookup"><span data-stu-id="60949-105">This topic shows two helper functions that can be used to convert between [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) and C++/WinRT objects.</span></span> <span data-ttu-id="60949-106">Sie können diese verwenden, um zwischen Code, der die beiden sprachprojektionen verwendet, zu interagieren, oder Sie können die Funktionen verwenden, wie Sie den Code schrittweise von C++ verschieben / CX nach C++ / WinRT (siehe [Wechsel zu C++ / WinRT von C++ / CX](move-to-winrt-from-cx.md)).</span><span class="sxs-lookup"><span data-stu-id="60949-106">You can use them to interop between code that uses the two language projections, or you can use the functions as you gradually move your code from C++/CX to C++/WinRT (see [Move to C++/WinRT from C++/CX](move-to-winrt-from-cx.md)).</span></span>
