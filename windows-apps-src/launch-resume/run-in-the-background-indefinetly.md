@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: af0f7670f2b131671ce82708d2b0a826db0fcfb1
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4119426"
+ms.locfileid: "4124631"
 ---
 # <a name="run-in-the-background-indefinitely"></a><span data-ttu-id="6a82e-104">Unbegrenzte Ausführung im Hintergrund</span><span class="sxs-lookup"><span data-stu-id="6a82e-104">Run in the background indefinitely</span></span>
 

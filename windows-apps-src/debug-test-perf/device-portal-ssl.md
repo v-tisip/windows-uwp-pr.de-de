@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, geräteportal
 ms.localizationpriority: medium
 ms.openlocfilehash: 1192c200cd42ab28cc7e763c06fd8a5638aa3400
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4118466"
+ms.locfileid: "4128707"
 ---
 # <a name="provision-device-portal-with-a-custom-ssl-certificate"></a><span data-ttu-id="47e58-104">Bereitstellen eines Geräteportals mit einem benutzerdefinierten SSL-Zertifikat</span><span class="sxs-lookup"><span data-stu-id="47e58-104">Provision Device Portal with a custom SSL certificate</span></span>
 <span data-ttu-id="47e58-105">In Windows 10 Creators Update hinzugefügt Windows Device Portal eine Möglichkeit für Gerät Administratoren, eine benutzerdefinierte Zertifikat für die Verwendung in HTTPS-Kommunikation zu installieren.</span><span class="sxs-lookup"><span data-stu-id="47e58-105">In the Windows 10 Creators Update, Windows Device Portal added a way for device administrators to install a custom certificate for use in HTTPS communication.</span></span> 
