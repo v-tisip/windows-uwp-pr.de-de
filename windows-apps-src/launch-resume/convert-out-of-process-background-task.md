@@ -1,25 +1,25 @@
 ---
 author: TylerMSFT
-title: Eine Out-of-Process Hintergrundaufgabe eine prozessinterne Hintergrundtask Port
-description: Anschluss einer Out-of-Process Hintergrundaufgabe eine prozessinterne Hintergrundtasks, die innerhalb der app Vordergrundprozess ausgeführt wird.
+title: Portieren einer Out-of-Process-Hintergrundaufgabe in eine in-Process-Hintergrundaufgabe
+description: Portieren einer Out-of-Process-Hintergrundaufgabe in eine in-Process-Hintergrundaufgabe, die innerhalb Ihres Vordergrund-app-Prozesses ausgeführt wird.
 ms.author: twhitney
 ms.date: 09/19/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10 Uwp Hintergrund, app service
+keywords: Windows 10, Uwp, Hintergrundaufgabe, app-Dienst
 ms.assetid: 5327e966-b78d-4859-9b97-5a61c362573e
 ms.localizationpriority: medium
 ms.openlocfilehash: b9010f82b0460bd46757bc1e0d58c01dec459104
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4114416"
+ms.locfileid: "4126769"
 ---
-# <a name="port-an-out-of-process-background-task-to-an-in-process-background-task"></a>Eine Out-of-Process Hintergrundaufgabe eine prozessinterne Hintergrundtask Port
+# <a name="port-an-out-of-process-background-task-to-an-in-process-background-task"></a>Portieren einer Out-of-Process-Hintergrundaufgabe in eine in-Process-Hintergrundaufgabe
 
-Die einfachste Möglichkeit, Ihre Out-of-Process (OOP) Hintergrundaktivität um prozessinterne Aktivität port ist zu Ihrem [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396) Code in Ihrer Anwendung, ausgehend von der [OnBackgroundActivated](/uwp/api/windows.ui.xaml.application.onbackgroundactivated). Das hier beschriebene Verfahren ist nicht über einen Shim aus einer Hintergrundaufgabe OOP ein Vorgang in Bearbeitung Hintergrund erstellen. die zum Umschreiben (oder Portieren) einer OOP Version einer in Bearbeitung.
+Die einfachste Möglichkeit, Ihre Out-of-Process (OOP) von Hintergrundaktivitäten für in-Aktivität Process Portieren ist das Portieren Ihres Codes [IBackgroundTask.Run](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.background.ibackgroundtask.run.aspx?f=255&MSPPError=-2147217396) Methode in Ihrer Anwendung, und von [OnBackgroundActivated](/uwp/api/windows.ui.xaml.application.onbackgroundactivated)initiieren. Das wird hier beschriebene Verfahren ist nicht zum Erstellen eines Shims aus einer OOP-Hintergrundaufgabe in eine in-Process-Hintergrundaufgabe. die Informationen zum Umschreiben (oder Portieren) eine OOP-Version auf eine in-Process-Version.
 
 Wenn Ihre App mehrere Hintergrundaufgaben aufweist, wird in [Hintergrundaktivierungsbeispiel](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/BackgroundActivation) beschrieben, wie Sie mithilfe von `BackgroundActivatedEventArgs.TaskInstance.Task.Name` ermitteln können, welche Aufgabe initiiert wird.
 

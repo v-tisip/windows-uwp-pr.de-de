@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Add-On-Verkäufe, Add-On-Käufe, IAP-Verkauf, In-App-Produkte, IAPS, Add-Ons
 ms.localizationpriority: medium
 ms.openlocfilehash: 019bb410e6ac65f9951f06052c78f40e9a5f32e2
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4119448"
+ms.locfileid: "4122291"
 ---
 # <a name="add-on-acquisitions-report"></a>Bericht zu Add-On-Käufen
 

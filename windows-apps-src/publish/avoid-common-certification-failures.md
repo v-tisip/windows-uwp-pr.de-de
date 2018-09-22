@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 283856ad163d2e67078c61559f6f8ec667e92b87
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4112916"
+ms.locfileid: "4128781"
 ---
 # <a name="avoid-common-certification-failures"></a>Vermeiden allgemeiner Zertifizierungsfehler
 
@@ -23,7 +23,7 @@ ms.locfileid: "4112916"
 Lesen Sie diese Liste, und vermeiden Sie dadurch Probleme, die häufig die Zertifizierung von Apps verhindern oder nach der Veröffentlichung der App bei einer Stichprobenkontrolle auftreten können.
 
 > [!NOTE]
-> Achten Sie darauf, überprüfen Sie die [Microsoft Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies) , um sicherzustellen, dass Ihre app alle darin aufgeführten Anforderungen erfüllt.
+> Werden Sie überprüfen Sie die [Microsoft Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies) , um sicherzustellen, dass Ihre app alle darin aufgeführten Anforderungen erfüllt.
 
 -   Reichen Sie die App erst ein, wenn sie fertig ist. Sie können die Beschreibung Ihrer App gern nutzen, um auf geplante Features hinzuweisen. Achten Sie jedoch darauf, dass Ihre App keine unvollständigen Abschnitte, Links zu unfertigen Webseiten oder andere Elemente enthält, die Kunden darauf schließen lassen, dass sich die App in einem unvollständigen Zustand befindet.
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Add-Ons, IAP, Preis
 ms.localizationpriority: medium
 ms.openlocfilehash: b5b7a6424fea3d62849e992f56b0b40ab72a55f5
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4113568"
+ms.locfileid: "4129671"
 ---
 # <a name="set-add-on-pricing-and-availability"></a>Festlegen der Preise und Verfügbarkeit von Add-Ons
 
@@ -54,7 +54,7 @@ Weitere Informationen finden Sie unter [Konfigurieren des genauen Veröffentlich
 
 ## <a name="pricing"></a>Preise
 
-Sie müssen einen Grundpreis für Ihr Add-on auswählen (es sei denn, Sie die Option zum **Beenden des Erwerbs** im Abschnitts " **Sichtbarkeit** " ausgewählt haben). Die Standardeinstellung ist **frei**, wenn Sie Geld für das Add-on erheben möchten, werden Sie eine der verfügbaren Preisniveaus auswählen (beginnend mit.99 USD) auswählen.
+Sie müssen einen Grundpreis für Ihr Add-on auswählen (es sei denn, Sie die Option zum **Beenden des Erwerbs** im Abschnitts " **Sichtbarkeit** " ausgewählt haben). Die Standardeinstellung ist **kostenlos**, also wenn Sie Geld für das Add-on erheben möchten, müssen Sie eine der verfügbaren Preisniveaus auswählen (beginnend mit.99 US-Dollar) auswählen.
 
 Sie können auch Preisänderungen planen, um das Datum und die Uhrzeit anzugeben, an dem bzw. zu der sich der Preis Ihrer Add-On ändern soll. Darüber hinaus haben Sie die Möglichkeit, diese Änderungen für bestimmte Märkte anzupassen. 
 

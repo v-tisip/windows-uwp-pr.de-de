@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, anpassen, Eintrag, Beschreibung, früher
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f30a825cc7aec1b6f7dbf5cff0ea1c17c43ffd7
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4117268"
+ms.locfileid: "4125573"
 ---
 # <a name="create-platform-specific-store-listings"></a>Erstellen plattformspezifischer Store-Einträge
 

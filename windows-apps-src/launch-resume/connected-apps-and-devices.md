@@ -7,15 +7,15 @@ ms.date: 06/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, Uwp, verbundenen Geräten "," remote-Systeme "," Rome "," Projekt "ROME"
+keywords: Windows 10, Uwp, verbundenen Geräten, remote-Systemen, "ROME" Projekt "ROME"
 ms.assetid: 7f39d080-1fff-478c-8c51-526472c1326a
 ms.localizationpriority: medium
 ms.openlocfilehash: d3efb7e094ce1464028dadaa14c6f0bfb3f3b214
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4110160"
+ms.locfileid: "4126693"
 ---
 # <a name="connected-apps-and-devices-project-rome"></a>Verbundene Apps und Geräte (Project Rome)
 
@@ -39,5 +39,5 @@ Weitere Informationen zu Project Rome im Allgemeinen, einschließlich Ressourcen
 | [Erkennen von Remotegeräten](discover-remote-devices.md)  | Erfahren Sie, wie Sie Geräte erkennen, zu denen Sie eine Verbindung herstellen können. |
 | [Kommunizieren mit einem App-Remotedienst](communicate-with-a-remote-app-service.md) | Erfahren Sie, wie Sie mit einer App auf einem Remotegerät interagieren. |
 | [Verbinden von Geräten über Remotesitzungen](remote-sessions.md) | Ermöglichen Sie die gemeinsame Nutzung auf verbundenen Geräten, indem Sie diese in einer Remotesitzung vereinen. |
-| [Benutzeraktivitäten geräteübergreifend fortsetzen](useractivities.md)| Hilfe Benutzer fortsetzen können, was sie auch über mehrere Geräte in Ihrer app erledigt haben.|
+| [Benutzeraktivitäten geräteübergreifend fortsetzen](useractivities.md)| Hilfe Benutzer fortsetzen können, was sie sogar auf mehreren Geräten in Ihrer app erledigt haben.|
 | [Benutzer Aktivitäten bewährte Methoden](useractivities-best-practices.md)| Hier erfahren Sie die empfohlenen Methoden zum Erstellen und Aktualisieren von Aktivitäten des Benutzers.|

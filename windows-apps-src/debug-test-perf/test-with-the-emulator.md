@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 17e5aa64fff2c42974dbb78ce3cdcff1ca414946
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4110764"
+ms.locfileid: "4128431"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Tests mit dem Emulator für Microsoft Windows10Mobile
 
@@ -29,7 +29,7 @@ Sie können Ihre universelle App mithilfe eines eindeutigen Windows10Mobile-Emul
 
 Ihr Computer muss folgende Anforderungen erfüllen:
 
-CPU (diese Einstellungen können ggf. im BIOS aktiviert werden)
+CPU (diese Einstellung können ggf. im BIOS aktiviert werden)
 
 -   Hardwareunterstützte Virtualisierung ([Überprüfen der Kompatibilität](https://www.microsoft.com/download/details.aspx?id=592)).
 -   SLAT (Second Level Address Translation)

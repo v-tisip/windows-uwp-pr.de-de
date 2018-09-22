@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Dashboard, Devcenter, Entwicklungszentrum
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f5357b038091b72681915e46875f92077bb3c9e
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4111016"
+ms.locfileid: "4129975"
 ---
 # <a name="using-the-windows-dev-center-dashboard"></a>Verwenden des Windows Dev Center-Dashboards
 
 
-Im [Windows Dev Center-Dashboard](https://partner.microsoft.com/dashboard) können Sie all Ihre Apps für Windows-Geräte an einem zentralen Ort verwalten und einreichen.
+Im [Windows Dev Center-Dashboard](https://partner.microsoft.com/dashboard) können Sie all Ihre Apps für Windows-Geräte zentral verwalten und einreichen.
 
 > [!NOTE]
 > Sie müssen über ein [Entwicklerkonto](http://go.microsoft.com/fwlink/p/?LinkId=615100) verfügen, um auf das Windows Dev Center-Dashboard zuzugreifen.
@@ -37,9 +37,9 @@ Wenn Sie [eine Übermittlung für Ihre app erstellen](app-submissions.md) (erstm
 
 [Add-Ons (in-app-Produkte)](add-on-submissions.md) werden unabhängig von der app Übermittlung verwaltet. Dadurch sind Sie flexibler und können unabhängig Änderungen vornehmen.
 
-Windows Dev Center bietet auch Funktionen für [mehrere Benutzer hinzufügen](manage-account-users.md),[app-Verwaltung und Konfigurieren von Diensten](app-management-and-services.md), [Überprüfen von Analysedaten](analytics.md), [auszahlungsberichte](payout-summary.md), [Vermarktung von apps](attract-customers-and-promote-your-apps.md), [, die mit Ihrer Kunden](engage-with-your-customers.md), [Betatests](beta-testing-and-targeted-distribution.md), [Verteilen von BRANCHENSPEZIFISCHEN apps an Unternehmen](distribute-lob-apps-to-enterprises.md)und vieles mehr.
+Windows Dev Center bietet auch Funktionen für [mehrere Benutzer hinzufügen](manage-account-users.md),[app-Verwaltung und Konfigurieren von Diensten](app-management-and-services.md), [Überprüfen von Analysedaten](analytics.md), [auszahlungsberichte](payout-summary.md), [Vermarktung von apps](attract-customers-and-promote-your-apps.md), [mit Ihrer Kunden](engage-with-your-customers.md), [Betatests](beta-testing-and-targeted-distribution.md), [Verteilen von BRANCHENSPEZIFISCHEN apps an Unternehmen](distribute-lob-apps-to-enterprises.md)und vieles mehr.
 
-Ihr Feedback hilft uns dabei, die besten Funktionen zu erstellen und anzubieten. Während der Arbeit im Dashboard verwenden Sie die **Feedback** -Links in der oberen rechten Ecke des Dashboards für Ihre Ideen und Vorschläge.
+Ihr Feedback hilft uns dabei, die besten Funktionen zu erstellen und anzubieten. Während der Arbeit im Dashboard verwenden Sie den **Feedback** -Links in der oberen rechten Ecke des Dashboards für Ihre Ideen und Vorschläge.
 
 
  

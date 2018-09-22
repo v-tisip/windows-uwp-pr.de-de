@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d322a22898f2f45a89b4cd30051149133bc3e2bf
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4114070"
+ms.locfileid: "4126679"
 ---
 # <a name="use-map-services"></a>Verwenden von Kartendiensten
 
@@ -23,7 +23,7 @@ Um Kartendienste in Apps zu verwenden, die auf Windows 10 or Windows 8.x ausgeri
 
 Um Kartendienste in apps für Windows Phone 8.1 und früheren Versionen verwenden, müssen Sie eine Kartendienst-Anwendung-ID und ein Token in dem Code Ihrer app im Dev Center-Dashboard einfügen anfordern.
 
-Jedes Mal, nachdem Sie [den Namen Ihrer app reserviert](create-your-app-by-reserving-a-name.md), haben können Sie navigieren Sie zu dieser app in Ihrem Dashboard, erweitern **Services** -Abschnitt im linken Navigationsmenü und wählen **Karten**. Wenn Sie **erhalten token**klicken, wir einen Map-Dienst Anwendungs-ID (**ApplicationID**) zu generieren und Service Authentifizierungstoken (**AuthenticationToken**) für Ihre app zuordnen. Diese Werte werden auf dieser Seite gespeichert werden, kann zu einem beliebigen Zeitpunkt zur Anzeige zurückgegeben werden.
+Jedes Mal, nachdem Sie [den Namen Ihrer app reserviert](create-your-app-by-reserving-a-name.md), haben können Sie navigieren Sie zu dieser app in Ihrem Dashboard, erweitern **Services** -Abschnitt im linken Navigationsmenü und wählen **Karten**. Beim **Abrufen von token**anklicken, wir eine Karte Service Anwendungs-ID (**ApplicationID**) zu generieren und Service Authentifizierungstoken (**AuthenticationToken**) für Ihre app zuordnen. Diese Werte werden auf dieser Seite gespeichert werden, damit Sie jederzeit zur Anzeige zurückkehren können.
 
 > [!IMPORTANT]
 > Achten Sie darauf, dass die **ApplicationID** und **AuthenticationToken** an Ihrem Code, bevor Sie Paket hinzufügen und Ihre app übermitteln. Weitere Informationen finden Sie unter [Hinzufügen eines Kartensteuerelements zu einer Seite (Windows Phone 8.1)](http://go.microsoft.com/fwlink/p/?LinkId=614882).

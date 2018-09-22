@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 155b8f67b5cd6080554afb889c7c27c921c998f8
-ms.sourcegitcommit: 5dda01da4702cbc49c799c750efe0e430b699502
+ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/21/2018
-ms.locfileid: "4114144"
+ms.locfileid: "4128479"
 ---
 # <a name="about-house-ads"></a>Über Eigenwerbung
 
 
 Sie haben die Möglichkeit, eine Anzeige zu erstellen, um eine Ihrer Apps in Ihren anderen Apps zu bewerben – und das kostenlos. Wir bezeichnen dies als *Eigenwerbung*.
 
-Eigenwerbung erscheint nur in eigene apps, die zum [Anzeigen von Microsoft](../monetize/display-ads-in-your-app.md)konfiguriert wurden.
+Eigenwerbung werden nur in Ihren eigenen apps angezeigt, die zum [Anzeigen von Microsoft](../monetize/display-ads-in-your-app.md)konfiguriert sind.
 
 Zum Einrichten von Eigenwerbung müssen Sie beim [Erstellen einer Anzeigenkampagne](create-an-ad-campaign-for-your-app.md) den Kampagnentyp**** **Eigenwerbung** auswählen. Die Anzeige kann daraufhin in jeder Ihrer Apps angezeigt werden, die die folgenden Kriterien erfüllt:
 
