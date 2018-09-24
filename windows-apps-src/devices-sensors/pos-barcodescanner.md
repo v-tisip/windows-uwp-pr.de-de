@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 1cd6f8391de9375ddd1c20471dd10c37e99f782f
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4128577"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4152145"
 ---
 # <a name="barcode-scanner"></a>Strichcodescanner
 
@@ -27,7 +27,7 @@ Dieser Abschnitt enthält Anleitungen zur Erstellung von Apps für die Universel
 | [Konfigurieren Sie einen Strichcodescanner](../devices-sensors/pos-barcodescanner-configure.md)  | Erfahren Sie, wie Sie einen Strichcodescanner für die Anwendung zu konfigurieren. |
 | [Verwenden Sie einen Software-trigger](../devices-sensors/pos-barcodescanner-software-trigger.md) | Hier erfahren Sie, wie Sie den Vorgang der Überprüfung von Software zu steuern. |
 | [Arbeiten mit Symbologien](pos-barcodescanner-symbologies.md) | Erfahren Sie, wie Sie die Strichcodetypen ermitteln können, die ein Strichcodescanner unterstützt, und steuern Sie, welche Strichcodetypen vom Strichcodescanner Ihrer Anwendung erkannt werden. |
-| [Beziehen und Barcodedaten verstehen](pos-barcodescanner-scan-data.md) | Informationen Sie zum Sammeln und Interpretieren von Barcode-Daten, die Sie scannen. |
+| [Abzurufen Sie und zu verstehen Sie Barcode-Daten](pos-barcodescanner-scan-data.md) | Erfahren Sie, wie zum Erhalt und der Interpretation der Barcodedaten, die Sie scannen. |
 | [Kamera-Strichcodescanner](pos-camerabarcode.md) | Lesen Sie Strichcodes mit der Standardkamera einer Anwendung für die Universelle Windows-Plattform. Erfordert Windows 10-Update April 2018 (Build 17134 oder höher). |
 |
  
