@@ -3,18 +3,18 @@ author: stevewhims
 description: C++ / WinRT stellt Funktionen und Basisklassen, die Sie speichern und viel Zeit und Mühe beim Implementieren und/oder Sammlungen übergeben werden soll.
 title: Sammlungen mit C++ / WinRT
 ms.author: stwhi
-ms.date: 08/24/2018
+ms.date: 09/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, Uwp, standard, c++, Cpp, Winrt, Projektion, Sammlung
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ef6fbfab45197c868296186363c168a6c443247
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.openlocfilehash: c7ac3635a96b8dd3d757f25da1b826ea318c1ad4
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4126345"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4155393"
 ---
 # <a name="collections-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Sammlungen mit [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 
@@ -32,6 +32,8 @@ Intern verfügt über eine Windows-Runtime-Sammlung ein Großteil komplizierte b
 
 ### <a name="general-purpose-collection-empty"></a>Allgemeine Auflistung, leer
 
+In diesem Abschnitt behandelt das Szenario, in denen Sie eine Sammlung erstellen, die anfänglich leer ist möchten. und fügen sie dann *nach* dem erstellen.
+
 Um ein neues Objekt eines Typs abzurufen, die eine allgemeine Auflistung implementiert, können Sie die Funktionsvorlage [**winrt::single_threaded_vector**](/uwp/cpp-ref-for-winrt/single-threaded-vector) aufrufen. Das Objekt wird als ein [**IVector**](/uwp/api/windows.foundation.collections.ivector_t_)zurückgegeben, und ist die Schnittstelle, die über die Funktionen und Eigenschaften des zurückgegebenen Objekts aufrufen.
 
 ```cppwinrt
@@ -42,7 +44,7 @@ using namespace winrt;
 ...
 int main()
 {
-    init_apartment();
+    winrt::init_apartment();
 
     Windows::Foundation::Collections::IVector<int> coll{ winrt::single_threaded_vector<int>() };
     coll.Append(1);
@@ -60,9 +62,13 @@ int main()
 
 Wie im obigen Codebeispiel sehen, nach dem Erstellen der Auflistung können Sie Elemente anfügen, durchlaufen sie und in der Regel behandeln Sie das Objekt wie alle Windows-Runtime-Collection-Objekt, das Sie von einer API erhalten haben. Wenn Sie eine unveränderliche Ansicht über die Auflistung benötigen, können Sie wie gezeigt [**IVector::GetView**](/uwp/api/windows.foundation.collections.ivector-1.getview), aufrufen. Das oben gezeigte Muster&mdash;der Erstellung und Nutzung von einer Sammlungs&mdash;eignet sich für einfache Fälle, in denen Sie Daten in übergeben oder Abrufen von Daten aus einer API. Sie können eine **IVector**oder ein **IVectorView**übergeben, an einer beliebigen Stelle einer [**IIterable**](/uwp/api/windows.foundation.collections.iiterable_t_) erwartet wird.
 
+Im obigen Codebeispiel initialisiert der Aufruf von **WinRT:: init_apartment** COM; Standardmäßig werden in einem Multithread-Apartment.
+
 ### <a name="general-purpose-collection-primed-from-data"></a>Allgemeine Sammlung von Daten vorbereitet
 
-Sie können auch den Aufwand für die Aufrufe von **Append** vermeiden, die Sie in der obigen Codebeispiel sehen können. Möglicherweise haben Sie bereits die Quelldaten, oder Sie möchten es vor dem Erstellen des Windows-Runtime-Collection-Objekts zu füllen. Gehen Sie dazu wie folgt vor:
+Dieser Abschnitt beschreibt das Szenario, in denen Sie eine Sammlung erstellen und füllen diese zur gleichen Zeit möchten.
+
+Sie können den Aufwand für die Aufrufe von **Append** im vorherigen Codebeispiel vermeiden. Möglicherweise haben Sie bereits die Quelldaten, oder Sie können aber auch die Quelldaten vor dem Erstellen des Windows-Runtime-Collection-Objekts zu füllen. Gehen Sie dazu wie folgt vor:
 
 ```cppwinrt
 auto coll1{ winrt::single_threaded_vector<int>({ 1,2,3 }) };

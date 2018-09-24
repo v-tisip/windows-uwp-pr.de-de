@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e5119696498156d36ec63b16b1d76c00b03f4df
-ms.sourcegitcommit: a160b91a554f8352de963d9fa37f7df89f8a0e23
+ms.openlocfilehash: d4b4cae2e135f7a66cd68192faabeffdb309a909
+ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "4128385"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "4155935"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a>Wenden Sie-Runtime-Updates zu einem MSIX-Paket mit dem Paket Support-Framework
 
@@ -57,19 +57,19 @@ Das zweite Problem wird in der folgenden Abbildung angezeigt.
 
 ![ProcMon Protokolldatei](images/desktop-to-uwp/procmon_logfile.png)
 
-In diesem Problem ist die Anwendung keine log-Datei in der Paketpfad zu schreiben. Dies würde wird empfohlen, ein Datei Umleitung Shim hilfreich ist.
+In diesem Problem ist die Anwendung keine log-Datei in der Paketpfad zu schreiben. Dies würde wird empfohlen, eine Datei Umleitung Korrektur hilfreich ist.
 
 <a id="find" />
 
 ## <a name="find-a-runtime-fix"></a>Suchen nach einer Runtime-Lösung
 
-Die PSF enthält-Runtime-Updates, die Sie jetzt, wie z. B. die Datei Umleitung Shim verwenden können.
+Die PSF enthält-Runtime-Updates, die Sie jetzt, wie z. B. die Datei Umleitung Korrektur verwenden können.
 
-### <a name="file-redirection-shim"></a>Datei Umleitung Shim
+### <a name="file-redirection-fixup"></a>Datei Umleitung Korrektur
 
-Die [Datei Umleitung Shim](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/develop/FileRedirectionShim) können umleiten initiierten schreiben oder Lesen von Daten in einem Verzeichnis, das von einer Anwendung zugänglich ist, die in einem MSIX-Container ausgeführt wird.
+Die [Datei Umleitung Korrektur](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/develop/FileRedirectionShim) können umleiten initiierten schreiben oder Lesen von Daten in einem Verzeichnis, das von einer Anwendung zugänglich ist, die in einem MSIX-Container ausgeführt wird.
 
-Z. B. wenn die Anwendung in eine Protokolldatei, der in demselben Verzeichnis wie die ausführbaren Anwendungen ist schreibt, können klicken Sie dann die [Datei Umleitung Shim](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/develop/FileRedirectionShim) Sie um die Protokolldatei in einen anderen Speicherort, z. B. den lokalen app-Datenspeicher zu erstellen.
+Z. B. wenn die Anwendung in eine Protokolldatei, der in demselben Verzeichnis wie die ausführbaren Anwendungen ist schreibt, können klicken Sie dann die [Datei Umleitung Korrektur](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/develop/FileRedirectionShim) Sie um die Protokolldatei in einen anderen Speicherort, z. B. den lokalen app-Datenspeicher zu erstellen.
 
 ### <a name="runtime-fixes-from-the-community"></a>Runtime-Updates aus der community
 
@@ -90,10 +90,10 @@ Lassen Sie uns über jede Aufgabe geleitet werden.
 
 ### <a name="create-the-package-layout-folder"></a>Erstellen Sie den Layout Paketordner
 
-Wenn Sie bereits über eine AppX-Datei verfügen, können Sie den Inhalt in einem Layoutordner entpacken, die als die Staging-Bereich für Ihr Paket dient.  Sie erreichen dies über eine **X64 systemeigenen Tools Eingabeaufforderung für VS 2017**, oder manuell mit dem SDK Bin Pfad in der ausführbaren Pfad.
+Wenn Sie bereits über eine Datei .msix (oder AppX) verfügen, können Sie den Inhalt in einem Layoutordner entpacken, die als die Staging-Bereich für Ihr Paket dient.  Sie erreichen dies über eine **X64 systemeigenen Tools Eingabeaufforderung für VS 2017**, oder manuell mit dem SDK Bin Pfad in der ausführbaren Pfad.
 
 ```
-makeappx unpack /p PSFSamplePackage_1.0.60.0_AnyCPU_Debug.appx /d PackageContents
+makemsix unpack /p PSFSamplePackage_1.0.60.0_AnyCPU_Debug.msix /d PackageContents
 
 ```
 
@@ -101,7 +101,7 @@ Dadurch erhalten etwas Sie, die wie folgt aussieht.
 
 ![Paketlayout](images/desktop-to-uwp/package_contents.png)
 
-Wenn Sie eine AppX-Datei zu besitzen, können Sie die Paketordner und Dateien von Grund auf neu erstellen.
+Wenn Sie eine Datei .msix (oder AppX) zu besitzen, können Sie die Paketordner und Dateien von Grund auf neu erstellen.
 
 ### <a name="get-the-package-support-framework-files"></a>Die Paket-Unterstützung Framework-Dateien zu erhalten
 
@@ -125,9 +125,9 @@ Erforderliche 32-Bit und 64-Bit-PSF DLL-Dateien und ausführbaren Dateien in das
 
 | Die ausführbare Datei Anwendung ist x64 | Die ausführbare Datei Anwendung ist x86 |
 |-------------------------------|-----------|
-| [ShimLauncher64.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimLauncher/readme.md) |  [ShimLauncher32.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimLauncher/readme.md) |
-| [ShimRuntime64.dll](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRuntime/readme.md) | [ShimRuntime32.dll](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRuntime/readme.md) |
-| [ShimRunDll64.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRunDll/readme.md) | [ShimRunDll32.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRunDll/readme.md) |
+| [PSFLauncher64.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimLauncher/readme.md) |  [PSFLauncher32.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimLauncher/readme.md) |
+| [PSFRuntime64.dll](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRuntime/readme.md) | [PSFRuntime32.dll](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRuntime/readme.md) |
+| [PSFRunDll64.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRunDll/readme.md) | [PSFRunDll32.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRunDll/readme.md) |
 
 Der Inhalt sollte jetzt wie folgt aussehen.
 
@@ -135,14 +135,14 @@ Der Inhalt sollte jetzt wie folgt aussehen.
 
 ### <a name="modify-the-package-manifest"></a>Bearbeiten des Paketmanifests
 
-Ihr Paketmanifest in einem Text-Editor öffnen, und legen Sie die `Executable` -Attribut der `Application` Element auf den Namen der ausführbaren Datei Shim Startprogramm.  Wenn Sie die Architektur der Zielanwendung kennen, wählen Sie die korrekte Version, ShimLauncher32.exe oder ShimLauncher64.exe.  Wenn dies nicht der Fall ist, ShimLauncher32.exe in allen Fällen funktioniert.  Beispiel:
+Ihr Paketmanifest in einem Text-Editor öffnen, und legen Sie die `Executable` -Attribut der `Application` Element auf den Namen der ausführbaren Datei PSF Startprogramm.  Wenn Sie die Architektur der Zielanwendung kennen, wählen Sie die korrekte Version, PSFLauncher32.exe oder PSFLauncher64.exe.  Wenn dies nicht der Fall ist, PSFLauncher32.exe in allen Fällen funktioniert.  Beispiel:
 
 ```xml
 <Package ...>
   ...
   <Applications>
     <Application Id="PSFSample"
-                 Executable="ShimLauncher32.exe"
+                 Executable="PSFLauncher32.exe"
                  EntryPoint="Windows.FullTrustApplication">
       ...
     </Application>
@@ -152,7 +152,7 @@ Ihr Paketmanifest in einem Text-Editor öffnen, und legen Sie die `Executable` -
 
 ### <a name="create-a-configuration-file"></a>Erstellen einer Konfigurationsdatei
 
-Erstellen Sie einen Dateinamen ``config.json``, und speichern Sie diese Datei in den Stammordner des Pakets. Ändern Sie die deklarierten app-ID der Datei config.json auf die ausführbare Datei verweisen, den Sie gerade ersetzt. Verwenden das wissen, das vom Process Monitor mit resultieren, können Sie auch das Arbeitsverzeichnis als auch mithilfe das Datei Umleitung Shim Lese-und Schreibvorgänge zu log-Dateien im Verzeichnis "PSFSampleApp" relativen umleiten.
+Erstellen Sie einen Dateinamen ``config.json``, und speichern Sie diese Datei in den Stammordner des Pakets. Ändern Sie die deklarierten app-ID der Datei config.json auf die ausführbare Datei verweisen, den Sie gerade ersetzt. Verwenden das wissen, das vom Process Monitor mit resultieren, können Sie auch das Arbeitsverzeichnis sowie verwenden Sie die Datei Umleitung Korrektur Lese-und Schreibvorgänge an log-Dateien im Verzeichnis "PSFSampleApp" relativen umgeleitet.
 
 ```json
 {
@@ -166,9 +166,9 @@ Erstellen Sie einen Dateinamen ``config.json``, und speichern Sie diese Datei in
     "processes": [
         {
             "executable": "PSFSample",
-            "shims": [
+            "fixups": [
                 {
-                    "dll": "FileRedirectionShim.dll",
+                    "dll": "FileRedirectionFixup.dll",
                     "config": {
                         "redirectedPaths": {
                             "packageRelative": [
@@ -195,10 +195,10 @@ Im folgenden finden eine Anleitung für das Schema config.json:
 | applications | ausführbare | Der relativen Pfad der ausführbaren Datei, die Sie starten möchten. In den meisten Fällen können Sie diesen Wert aus der Paketmanifestdatei abrufen, bevor Sie sie ändern. Es ist der Wert von der `Executable` -Attribut der `Application` Element. |
 | applications | workingDirectory | (Optional) Einen relativen Pfad, als das Arbeitsverzeichnis der Anwendung, die gestartet wird. Wenn Sie diesen Wert nicht festlegen, der vom Betriebssystem verwendet die `System32` Verzeichnis als Arbeitsverzeichnis der Anwendung. |
 | Prozesse | ausführbare | In den meisten Fällen, dies ist der Name des, die `executable` konfigurierten oben mit der Pfad und Dateiname Erweiterung entfernt. |
-| Shims | DLL-Datei | Relativen Pfad zu der Shim AppX geladen. |
-| Shims | config | (Optional) Steuert, wie die Shim Verteilerliste verhält. Das genaue Format dieses Werts ist auf Basis Shim durch Shim wie jedes Shim dieses "Blob" interpretiert werden kann, wie möglich. |
+| Korrekturen | DLL-Datei | Relativen Pfad zu der Korrektur.msix/.appx geladen. |
+| Korrekturen | config | (Optional) Steuert, wie die Korrektur Verteilerliste verhält. Das genaue Format dieses Werts ist jeweils Korrektur von Korrektur wie jeder Korrektur dieses "Blob" interpretiert werden kann, wie möglich. |
 
-Die `applications`, `processes`, und `shims` Schlüssel sind Arrays. Das bedeutet, dass Sie die Datei config.json verwenden können, mehr als eine Anwendung, Prozessen und Shim-DLL angeben.
+Die `applications`, `processes`, und `fixups` Schlüssel sind Arrays. Das bedeutet, dass Sie die Datei config.json verwenden können, um mehr als eine Anwendung, Prozessen und Korrektur DLL anzugeben.
 
 
 ### <a name="package-and-test-the-app"></a>Paket und Testen der App
@@ -206,13 +206,13 @@ Die `applications`, `processes`, und `shims` Schlüssel sind Arrays. Das bedeute
 Als Nächstes erstellen Sie ein Paket.
 
 ```
-makeappx pack /d PackageContents /p PSFSamplePackageFixup.appx
+makeappx pack /d PackageContents /p PSFSamplePackageFixup.msix
 ```
 
 Signieren Sie es dann.
 
 ```
-signtool sign /a /v /fd sha256 /f ExportedSigningCertificate.pfx PSFSamplePackageFixup.appx
+signtool sign /a /v /fd sha256 /f ExportedSigningCertificate.pfx PSFSamplePackageFixup.msix
 ```
 
 Weitere Informationen finden Sie [Informationen zum Erstellen eines Signaturzertifikats Pakets](https://docs.microsoft.com/en-us/windows/desktop/appxpkg/how-to-create-a-package-signing-certificate) und [wie Sie ein Pakets mit signtool](https://docs.microsoft.com/en-us/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
@@ -223,18 +223,18 @@ Mithilfe von PowerShell, installieren Sie das Paket.
 > Denken Sie daran, das Paket zuerst deinstallieren.
 
 ```
-powershell Add-AppxPackage .\PSFSamplePackageFixup.appx
+powershell Add-MSIXPackage .\PSFSamplePackageFixup.msix
 ```
 
 Führen Sie die Anwendung, und beobachten Sie das Verhalten Runtime Update angewendet.  Wiederholen Sie die Diagnose- und Verpacken Schritte nach Bedarf.
 
-### <a name="use-the-trace-shim"></a>Verwenden Sie das Trace Shim
+### <a name="use-the-trace-fixup"></a>Verwenden Sie die Korrektur Trace
 
-Ein alternatives Verfahren zu diagnostizieren verpackte Probleme mit der Anwendungskompatibilität ist die Verwendung der Trace Shim. Diese DLL ist in der PSF enthalten und bietet eine detaillierte Ansicht der app Verhalten, ähnlich wie Process Monitor diagnostische.  Es ist speziell auf Probleme mit der Anwendungskompatibilität "einblenden".  Verwenden Sie die Trace Shim, die DLL für das Paket hinzufügen Ihrer config.json die folgende Fragment-Komponente hinzufügen und dann Verpacken und Installieren Ihrer Anwendung.
+Ein alternatives Verfahren zu diagnostizieren verpackte Probleme mit der Anwendungskompatibilität ist die Korrektur Trace verwenden. Diese DLL ist in der PSF enthalten und bietet eine detaillierte Ansicht der app Verhalten, ähnlich wie Process Monitor diagnostische.  Es ist speziell auf Probleme mit der Anwendungskompatibilität "einblenden".  Verwenden Sie die Korrektur Trace, die DLL für das Paket hinzufügen Ihrer config.json die folgende Fragment-Komponente hinzufügen und dann Verpacken und installieren Sie die Anwendung.
 
 ```json
 {
-    "dll": "TraceShim.dll",
+    "dll": "TraceFixup.dll",
     "config": {
         "traceLevels": {
             "filesystem": "allFailures"
@@ -243,9 +243,9 @@ Ein alternatives Verfahren zu diagnostizieren verpackte Probleme mit der Anwendu
 }
 ```
 
-Standardmäßig filtert die Trace Shim Fehler, die berücksichtigt werden möglicherweise "erwartet".  Beispielsweise Versuch Anwendungen bedingungslos Löschen einer Datei ohne Überprüfung, um festzustellen, ob sie vorhanden ist, wird das Ergebnis ignoriert. Dies hat die leider folgen, die einige unerwartete Fehler, gefiltert erhalten möglicherweise so melden Sie sich im obigen Beispiel wir an, um alle Fehler von Dateisystem-Funktionen zu empfangen. Wir tun, da wir von vor, die das Lesen aus der Datei Config.txt fehlschlägt wissen mit "die Nachricht Datei nicht gefunden". Dies ist ein Fehler, der häufig beobachtet und nicht in der Regel davon ausgegangen, dass unerwartet ist. In der Praxis ist es wahrscheinlich am besten, beginnen Sie mit dem Filterung nur für unerwartete Fehler, und klicken Sie dann zurückgreifen auf alle Fehler liegt ein Problem, das noch nicht zu erkennen sind.
+Standardmäßig filtert die Korrektur Trace Fehler, die berücksichtigt werden möglicherweise "erwartet".  Beispielsweise Versuch Anwendungen bedingungslos Löschen einer Datei ohne Überprüfung, um festzustellen, ob sie vorhanden ist, wird das Ergebnis ignoriert. Dies hat die leider folgen, die einige unerwartete Fehler, gefiltert erhalten möglicherweise so melden Sie sich im obigen Beispiel wir an, um alle Fehler von Dateisystem-Funktionen zu empfangen. Wir tun, da wir von vor, die das Lesen aus der Datei Config.txt fehlschlägt wissen mit "die Nachricht Datei nicht gefunden". Dies ist ein Fehler, der häufig beobachtet und nicht in der Regel davon ausgegangen, dass unerwartet ist. In der Praxis ist es wahrscheinlich am besten, beginnen Sie mit dem Filterung nur für unerwartete Fehler, und klicken Sie dann zurückgreifen auf alle Fehler liegt ein Problem, das noch nicht zu erkennen sind.
 
-Standardmäßig wird die Ausgabe der Trace Shim an den Debugger angefügte gesendet. In diesem Beispiel stellen wir sind nicht zu debuggen, und wird stattdessen mit dem [DebugView](https://docs.microsoft.com/en-us/sysinternals/downloads/debugview) von SysInternals können Sie die Ausgabe anzuzeigen. Nach dem Ausführen der app, sehen der gleiche Fehler wie zuvor, Sie die würden uns für die gleichen Runtime Updates angeben.
+Standardmäßig wird die Ausgabe die Korrektur Trace an den Debugger angefügte gesendet. In diesem Beispiel stellen wir sind nicht zu debuggen, und wird stattdessen mit dem [DebugView](https://docs.microsoft.com/en-us/sysinternals/downloads/debugview) von SysInternals können Sie die Ausgabe anzuzeigen. Nach dem Ausführen der app, sehen der gleiche Fehler wie zuvor, Sie die würden uns für die gleichen Runtime Updates angeben.
 
 ![TraceShim Datei nicht gefunden.](images/desktop-to-uwp/traceshim_filenotfound.png)
 
@@ -258,7 +258,7 @@ Sie können Visual Studio Debuggen ein Laufzeit-Update, erweitern ein Laufzeit-U
 > [!div class="checklist"]
 > * Hinzufügen eines verpackungsprojekts
 > * Fügen Sie Projekt für die Common Language Runtime-Problembehandlung
-> * Fügen Sie ein Projekt, das die-Startprogramms Shim startet
+> * Fügen Sie ein Projekt, das die-Startprogramms PSF startet
 > * Konfigurieren Sie das verpackungsprojekt
 
 Wenn Sie fertig sind, wird die Projektmappe wie folgt aussehen.
@@ -271,7 +271,7 @@ Sehen wir uns auf jedes Projekt in diesem Beispiel.
 |-------|-----------|
 | DesktopApplicationPackage | Dieses Projekt basiert auf dem [Windows Application Packaging Project](desktop-to-uwp-packaging-dot-net.md) und es gibt die das Paket MSIX. |
 | Runtimefix | Dies ist ein C++ Dynamic-Linked Klassenbibliotheksprojekt hinzu, die eine oder mehrere Ersatzfunktionen enthält, die als die Common Language Runtime-Problembehandlung dienen. |
-| ShimLauncher | Dies ist leeres C++-Projekt. Dieses Projekt ist ein Ort zum Sammeln von der Runtime verteilbaren Dateien des Pakets Support-Frameworks. Es gibt eine ausführbare Datei. Die ausführbare Datei ist der erste Schritt, der ausgeführt wird, wenn Sie die Projektmappe zu starten. |
+| PSFLauncher | Dies ist leeres C++-Projekt. Dieses Projekt ist ein Ort zum Sammeln von der Runtime verteilbaren Dateien des Pakets Support-Frameworks. Es gibt eine ausführbare Datei. Die ausführbare Datei ist der erste Schritt, der ausgeführt wird, wenn Sie die Projektmappe zu starten. |
 | WinFormsDesktopApplication | Dieses Projekt enthält den Quellcode für eine desktop-Anwendung. |
 
 Um ein vollständiges Beispiel betrachten, die alle diese Arten von Projekten enthält, finden Sie unter [PSFSample](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/samples/PSFSample/).
@@ -333,7 +333,7 @@ Wenn Sie Debuggen oder einen vorhandenen Runtime Fix erweitern möchten, fügen 
 
 Wenn Sie beabsichtigen, ein völlig neues Update zu erstellen, fügen Sie nicht nichts dieses Projekt noch. Wir helfen Ihnen, die richtigen Dateien in dieses Projekt weiter unten in diesem Handbuch hinzufügen. Für den Moment fahren wir Einrichten Ihrer Projektmappe fort.
 
-### <a name="add-a-project-that-starts-the-shim-launcher-executable"></a>Fügen Sie ein Projekt, das die-Startprogramms Shim startet
+### <a name="add-a-project-that-starts-the-psf-launcher-executable"></a>Fügen Sie ein Projekt, das die-Startprogramms PSF startet
 
 Fügen Sie der Projektmappe ein **Leeres Projekt** für C++-Projekt hinzu.
 
@@ -341,9 +341,9 @@ Fügen Sie der Projektmappe ein **Leeres Projekt** für C++-Projekt hinzu.
 
 Hinzufügen des **PSF** Nuget-Pakets dieses Projekt mit der gleichen Anleitung im vorherigen Abschnitt beschrieben.
 
-Öffnen die Eigenschaftenseiten für das Projekt, und in die **Allgemeine** Seite "Einstellungen", setzen Sie die **Zielnamen** -Eigenschaft auf ``ShimLauncher32`` oder ``ShimLauncher64`` abhängig von der Architektur der Anwendung.
+Öffnen die Eigenschaftenseiten für das Projekt, und in die **Allgemeine** Seite "Einstellungen", setzen Sie die **Zielnamen** -Eigenschaft auf ``PSFLauncher32`` oder ``PSFLauncher64`` abhängig von der Architektur der Anwendung.
 
-![Shim Startprogramm Referenz](images/desktop-to-uwp/shim-exe-reference.png)
+![PSF Startprogramm Referenz](images/desktop-to-uwp/shim-exe-reference.png)
 
 Fügen Sie einen Projektverweis auf die Runtime Update-Projekt in Ihrer Projektmappe hinzu.
 
@@ -352,7 +352,7 @@ Fügen Sie einen Projektverweis auf die Runtime Update-Projekt in Ihrer Projektm
 Mit der rechten Maustaste in der Referenz, und klicken Sie dann im **Eigenschaftenfenster,** gelten diese Werte.
 
 | Eigenschaft | Wert |
-|-------|-----------|-------|
+|-------|-----------|
 | Kopieren Sie lokale | Wahr |
 | Lokale Satellitenassemblys kopieren | Wahr |
 | Referenz-Assembly-Ausgabe | Wahr |
@@ -365,14 +365,14 @@ Klicken sie im Paketprojekt mit der rechten Maustaste auf den Ordner **Anwendung
 
 ![Hinzufügen des Projektverweises](images/desktop-to-uwp/add-reference-packaging-project.png)
 
-Wählen Sie das Projekt Shim Launcher und Ihrem desktopanwendungsprojekt, und wählen Sie dann auf die Schaltfläche " **OK** ".
+Wählen Sie das Projekt PSF Launcher und Ihrem desktopanwendungsprojekt, und wählen Sie dann auf die Schaltfläche " **OK** ".
 
 ![Desktopprojekt](images/desktop-to-uwp/package-project-references.png)
 
 >[!NOTE]
-> Wenn Sie den Quellcode für Ihre Anwendung besitzen, wählen Sie einfach das Shim Startprogramm Projekt. Wir zeigen Ihnen wie die ausführbare Datei verweisen, wenn Sie eine Konfigurationsdatei erstellen.
+> Wenn Sie den Quellcode für Ihre Anwendung besitzen, wählen Sie einfach das PSF Startprogramm Projekt. Wir zeigen Ihnen wie die ausführbare Datei verweisen, wenn Sie eine Konfigurationsdatei erstellen.
 
-Klicken Sie im Knoten " **Anwendungen** " mit der rechten Maustaste in der startanwendung Shim, und wählen Sie dann **als Einstiegspunkt festlegen**.
+Klicken Sie im Knoten " **Anwendungen** " mit der rechten Maustaste die PSF startanwendung, und wählen Sie dann **als Einstiegspunkt festlegen**.
 
 ![Als Einstiegspunkt festlegen](images/desktop-to-uwp/set-startup-project.png)
 
@@ -390,7 +390,7 @@ Fügen Sie eine Datei mit dem Namen ``config.json`` verpackungs-Projekts, klicke
     "processes": [
         {
             "executable": "",
-            "shims": [
+            "fixups": [
                 {
                     "dll": "",
                     "config": {
@@ -409,8 +409,8 @@ Geben Sie einen Wert für jeden Schlüssel. Orientieren Sie in der folgenden Tab
 | applications | ausführbare | Der relativen Pfad der ausführbaren Datei, die Sie starten möchten. In den meisten Fällen können Sie diesen Wert aus der Paketmanifestdatei abrufen, bevor Sie sie ändern. Es ist der Wert von der `Executable` -Attribut der `Application` Element. |
 | applications | workingDirectory | (Optional) Einen relativen Pfad, als das Arbeitsverzeichnis der Anwendung, die gestartet wird. Wenn Sie diesen Wert nicht festlegen, der vom Betriebssystem verwendet die `System32` Verzeichnis als Arbeitsverzeichnis der Anwendung. |
 | Prozesse | ausführbare | In den meisten Fällen, dies ist der Name des, die `executable` konfigurierten oben mit der Pfad und Dateiname Erweiterung entfernt. |
-| Shims | DLL-Datei | Relativen Pfad zu der Shim-DLL zu laden. |
-| Shims | config | (Optional) Steuert, wie die Shim Verteilerliste verhält. Das genaue Format dieses Werts ist auf Basis Shim durch Shim wie jedes Shim dieses "Blob" interpretiert werden kann, wie möglich. |
+| Korrekturen | DLL-Datei | Relativen Pfad die Korrektur DLL zu laden. |
+| Korrekturen | config | (Optional) Steuert, wie die Korrektur DLL verhält. Das genaue Format dieses Werts ist jeweils Korrektur von Korrektur wie jeder Korrektur dieses "Blob" interpretiert werden kann, wie möglich. |
 
 Wenn Sie fertig sind, Ihre ``config.json`` Datei sieht etwa wie folgt aus.
 
@@ -426,7 +426,7 @@ Wenn Sie fertig sind, Ihre ``config.json`` Datei sieht etwa wie folgt aus.
   "processes": [
     {
       "executable": ".*App.*",
-      "shims": [ { "dll": "RuntimeFix.dll" } ]
+      "fixups": [ { "dll": "RuntimeFix.dll" } ]
     }
   ]
 }
@@ -434,11 +434,11 @@ Wenn Sie fertig sind, Ihre ``config.json`` Datei sieht etwa wie folgt aus.
 ```
 
 >[!NOTE]
-> Die `applications`, `processes`, und `shims` Schlüssel sind Arrays. Das bedeutet, dass Sie die Datei config.json verwenden können, mehr als eine Anwendung, Prozessen und Shim-DLL angeben.
+> Die `applications`, `processes`, und `fixups` Schlüssel sind Arrays. Das bedeutet, dass Sie die Datei config.json verwenden können, um mehr als eine Anwendung, Prozessen und Korrektur DLL anzugeben.
 
 ### <a name="debug-a-runtime-fix"></a>Debuggen Sie ein Laufzeit-Update
 
-Drücken Sie in Visual Studio F5, um den Debugger zu starten.  Der erste Schritt, der beginnt ist der startanwendung Shim, die wiederum die Ziel-desktop-Anwendung gestartet wird.  Um die Ziel-desktop-Anwendung zu debuggen, müssen Sie manuell für den desktop-Anwendungsprozess anhängen, indem Sie **Debuggen**auswählen->**an den Prozess anhängen**, auswählen und dann den bewerbungsprozess. Um das Debuggen einer .NET-Anwendung mit einer systemeigenen Runtime Update DLL zu ermöglichen, wählen Sie verwalteten und systemeigenen Code (im gemischten Modus Debuggen).  
+Drücken Sie in Visual Studio F5, um den Debugger zu starten.  Der erste Schritt, der beginnt ist der startanwendung PSF, die wiederum die Ziel-desktop-Anwendung gestartet wird.  Um die Ziel-desktop-Anwendung zu debuggen, müssen Sie manuell für den desktop-Anwendungsprozess anhängen, indem Sie **Debuggen**auswählen->**an den Prozess anhängen**, auswählen und dann den bewerbungsprozess. Um das Debuggen einer .NET-Anwendung mit einer systemeigenen Runtime Update DLL zu ermöglichen, wählen Sie verwalteten und systemeigenen Code (im gemischten Modus Debuggen).  
 
 Nachdem Sie dies eingerichtet haben, können Sie Haltepunkte neben Codezeilen in der desktop-Anwendungscode und die Runtime Update Projekt festlegen. Wenn Sie den Quellcode für Ihre Anwendung besitzen, müssen Sie legen Sie Haltepunkte nur neben Codezeilen in Ihrem Projekt der Runtime beheben können.
 
@@ -455,20 +455,20 @@ Zunächst ermitteln Sie welche Funktion ruft fehl, wenn die Anwendung in einem M
 
 Öffnen Sie das Runtime beheben Sie weiter oben in diesem Handbuch erstellte Projekt in Visual Studio.
 
-Deklarieren Sie die ``SHIM_DEFINE_EXPORTS`` Makro und fügen dann eine Include-Anweisung für die `shim_framework.h` am Anfang jedes. CPP-Datei für die Funktionen der Common Language Runtime-Updates hinzufügen möchten.
+Deklarieren Sie die ``FIXUP_DEFINE_EXPORTS`` Makro und fügen dann eine Include-Anweisung für die `fixup_framework.h` am Anfang jedes. CPP-Datei für die Funktionen der Common Language Runtime-Updates hinzufügen möchten.
 
 ```c++
-#define SHIM_DEFINE_EXPORTS
-#include <shim_framework.h>
+#define FIXUP_DEFINE_EXPORTS
+#include <fixup_framework.h>
 ```
 >[!IMPORTANT]
->Stellen Sie sicher, dass die `SHIM_DEFINE_EXPORTS` Makro wird vor der Include-Anweisung angezeigt.
+>Stellen Sie sicher, dass die `FIXUP_DEFINE_EXPORTS` Makro wird vor der Include-Anweisung angezeigt.
 
 Erstellen Sie eine Funktion, die dieselbe Signatur der Funktion hat, hat Verhalten, die Sie ändern möchten. Hier ist eine Beispielfunktion, die ersetzt die `MessageBoxW` Funktion.
 
 ```c++
 auto MessageBoxWImpl = &::MessageBoxW;
-int WINAPI MessageBoxWShim(
+int WINAPI MessageBoxWFixup(
     _In_opt_ HWND hwnd,
     _In_opt_ LPCWSTR,
     _In_opt_ LPCWSTR caption,
@@ -477,10 +477,10 @@ int WINAPI MessageBoxWShim(
     return MessageBoxWImpl(hwnd, L"SUCCESS: This worked", caption, type);
 }
 
-DECLARE_SHIM(MessageBoxWImpl, MessageBoxWShim);
+DECLARE_FIXUP(MessageBoxWImpl, MessageBoxWFixup);
 ```
 
-Der Aufruf von `DECLARE_SHIM` ordnet die `MessageBoxW` in Ihrer neuen-Funktion als Ersatz. Wenn Ihre Anwendung versucht, rufen Sie die `MessageBoxW` Funktion es Ruft die Ersatz-Funktion stattdessen.
+Der Aufruf von `DECLARE_FIXUP` ordnet die `MessageBoxW` in Ihrer neuen-Funktion als Ersatz. Wenn Ihre Anwendung versucht, rufen Sie die `MessageBoxW` Funktion es Ruft die Ersatz-Funktion stattdessen.
 
 #### <a name="protect-against-recursive-calls-to-functions-in-runtime-fixes"></a>Schutz vor rekursiven Aufrufe von Funktionen in-Runtime-Updates
 
@@ -492,10 +492,10 @@ Weitere Informationen zu `reentrancy_guard` finden Sie unter [authoring.md](http
 
 ### <a name="configuration-data"></a>Konfigurationsdaten
 
-Wenn Sie Ihre Update-Runtime-Konfigurationsdaten hinzufügen möchten, in Betracht ziehen, um die ``config.json``. Auf diese Weise können Sie die `ShimQueryCurrentDllConfig` einfach diese Daten analysiert. In diesem Beispiel wird einen booleschen Wert und Zeichenfolge Wert aus der Konfigurationsdatei analysiert.
+Wenn Sie Ihre Update-Runtime-Konfigurationsdaten hinzufügen möchten, in Betracht ziehen, um die ``config.json``. Auf diese Weise können Sie die `FixupQueryCurrentDllConfig` einfach diese Daten analysiert. In diesem Beispiel wird einen booleschen Wert und Zeichenfolge Wert aus der Konfigurationsdatei analysiert.
 
 ```c++
-if (auto configRoot = ::ShimQueryCurrentDllConfig())
+if (auto configRoot = ::FixupQueryCurrentDllConfig())
 {
     auto& config = configRoot->as_object();
 
@@ -515,13 +515,13 @@ if (auto configRoot = ::ShimQueryCurrentDllConfig())
 
 Während Visual Studio die einfachste Entwicklung und das debugging Erfahrung Ihnen bietet, gibt es einige Einschränkungen.
 
-Zuerst wird ein Debuggens mit F5 die Anwendung durch die Bereitstellung von losen Dateien aus dem Paket Layout Ordnerpfad, statt aus einem AppX-Paket installiert.  Die Layoutordner verfügt in der Regel nicht dieselben sicherheitseinschränkungen, die als eine installierte Paketordner. Folglich kann es nicht Paket Pfad Denial Zugriffsfehler vor der Anwendung ein Laufzeit-Updates reproduziert werden.
+Erstens Debuggens mit F5 führt die Anwendung durch die Bereitstellung von losen Dateien aus dem Paket Layout Ordnerpfad, installieren, sondern von einer .msix / AppX-Pakets.  Die Layoutordner verfügt in der Regel nicht dieselben sicherheitseinschränkungen, die als eine installierte Paketordner. Folglich kann es nicht Paket Pfad Denial Zugriffsfehler vor der Anwendung ein Laufzeit-Updates reproduziert werden.
 
-Um dieses Problem zu beheben, verwenden Sie Bereitstellung des AppX-Pakets Bereitstellung von losen Dateien F5.  Um eine AppX-Paketdatei zu erstellen, verwenden Sie das [MakeAppx](https://docs.microsoft.com/en-us/windows/desktop/appxpkg/make-appx-package--makeappx-exe-) -Dienstprogramm aus dem Windows SDK, wie oben beschrieben. Oder in Visual Studio Maustaste auf den Projektknoten Anwendung und wählen **Store**->**App-Pakete erstellen**.
+Um dieses Problem zu beheben, verwenden Sie .msix / Bereitstellung des AppX-Pakets statt F5 lose Bereitstellung.  Erstellen Sie eine .msix / AppX-Paket-Datei, das Dienstprogramm [MakeMSIX](https://docs.microsoft.com/en-us/windows/desktop/appxpkg/make-appx-package--makeappx-exe-) aus dem Windows SDK verwenden, wie oben beschrieben. Oder in Visual Studio Maustaste auf den Projektknoten Anwendung und wählen **Store**->**App-Pakete erstellen**.
 
 Ein weiteres Problem mit Visual Studio ist, dass es keine integrierten Unterstützung für die Verbindung vom Debugger gestartet untergeordnete Prozesse enthält.   Dies erschwert es zum Debuggen Logik im Startpfad der Zielanwendung, die nach dem Start von Visual Studio manuell angefügt werden muss.
 
-Um dieses Problem zu beheben, verwenden Sie einen Debugger, untergeordneter Prozess anhängen, unterstützt.  Beachten Sie, dass es in der Regel nicht möglich, Just-in-Time (JIT) der Zielanwendung Debuggen.  Grund dafür ist die meisten JIT-Techniken des Debuggers anstelle der Ziel-app, über den Registrierungsschlüssel ImageFileExecutionOptions.  Dies "vereitelt" wird den detouring Mechanismus zur Bestimmung von ShimLauncher.exe ShimRuntime.dll in die Ziel-app einzufügen.  WinDbg, in der [Debugtools für Windows](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/index)und aus dem [Windows SDK](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk)abgerufenen, unterstützt untergeordneter Prozess anfügen.  Unterstützt jetzt auch direkt [Starten und Debuggen einer UWP-Apps](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugging-a-uwp-app-using-windbg#span-idlaunchinganddebuggingauwpappspanspan-idlaunchinganddebuggingauwpappspanspan-idlaunchinganddebuggingauwpappspanlaunching-and-debugging-a-uwp-app).
+Um dieses Problem zu beheben, verwenden Sie einen Debugger, untergeordneter Prozess anhängen, unterstützt.  Beachten Sie, dass es in der Regel nicht möglich, Just-in-Time (JIT) der Zielanwendung Debuggen.  Grund dafür ist die meisten JIT-Techniken des Debuggers anstelle der Ziel-app, über den Registrierungsschlüssel ImageFileExecutionOptions.  Dies "vereitelt" wird den detouring Mechanismus zur Bestimmung von PSFLauncher.exe FixupRuntime.dll in die Ziel-app einzufügen.  WinDbg, in der [Debugtools für Windows](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/index)und aus dem [Windows SDK](https://developer.microsoft.com/en-US/windows/downloads/windows-10-sdk)abgerufenen, unterstützt untergeordneter Prozess anfügen.  Unterstützt jetzt auch direkt [Starten und Debuggen einer UWP-Apps](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugging-a-uwp-app-using-windbg#span-idlaunchinganddebuggingauwpappspanspan-idlaunchinganddebuggingauwpappspanspan-idlaunchinganddebuggingauwpappspanlaunching-and-debugging-a-uwp-app).
 
 Informationen zum Debuggen Ziel Anwendungsstart als untergeordneter Prozess starten ``WinDbg``.
 
@@ -555,3 +555,4 @@ bp ...
 **Finden Sie Antworten auf Ihre Fragen**
 
 Haben Sie Fragen? Fragen Sie uns auf Stack Overflow. Unser Team überwacht diese [Tags](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge). Fragen Sie uns [hier](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).
+
