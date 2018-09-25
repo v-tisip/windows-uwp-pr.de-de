@@ -9,19 +9,19 @@ ms.prod: windows
 ms.technology: uwp, windows forms, wpf
 keywords: Windows 10, Uwp, Windows Forms, Wpf, win32
 ms.localizationpriority: medium
-ms.openlocfilehash: 536d2aa3eca88fb10561e1589ec6f5b5c556aa29
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.openlocfilehash: 860e515d013046ef77d0aee38eb5d42c9c3e2dc9
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4153473"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4178119"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>Unter Verwendung des UWP-XAML hosting-API in einer desktop-Anwendung
 
 > [!NOTE]
 > Die UWP-XAML hosting-API ist zurzeit als Entwicklervorschau verfügbar. Obwohl wir Sie diese API in Ihrem eigenen Code Prototyp jetzt testen dazu ermutigen, empfehlen wir nicht, mit denen Sie in Produktionscode zu diesem Zeitpunkt. Diese API weiterhin breiter und Stabilisierung in zukünftigen Windows-Versionen. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.
 
-Windows 10 Insider Preview SDK ab build 17709, nicht-UWP-desktopanwendungen (einschließlich WPF, Windows Forms und C/C++ Win32-Anwendungen) können Sie das *UWP-XAML hosting-API* zum Hosten von UWP-Steuerelementen in jedes UI-Element, das Fenster-Handle zugeordnet ist (HWND). Mit dieser API können nicht-UWP-desktopanwendungen mit den neuesten Windows 10-UI-Features, die nur über UWP-Steuerelemente verfügbar sind. Beispielsweise können nicht-UWP-desktopanwendungen diese API zum Hosten von UWP-Steuerelementen, die das [Fluent Design-Systems](../design/fluent-design-system/index.md) und [Windows Ink](../design/input/pen-and-stylus-interactions.md)unterstützen.
+Windows 10 Insider Preview SDK ab build 17709, nicht-UWP-desktopanwendungen (einschließlich WPF, Windows Forms und C++ Win32-Anwendungen) können Sie das *UWP-XAML hosting-API* zum Hosten von UWP-Steuerelementen in jedes UI-Element, das ein Fenster-Handle (zugeordnet ist HWND). Mit dieser API können nicht-UWP-desktopanwendungen mit den neuesten Windows 10-UI-Features, die nur über UWP-Steuerelemente verfügbar sind. Beispielsweise können nicht-UWP-desktopanwendungen diese API zum Hosten von UWP-Steuerelementen, die das [Fluent Design-Systems](../design/fluent-design-system/index.md) und [Windows Ink](../design/input/pen-and-stylus-interactions.md)unterstützen.
 
 Die UWP-XAML hosting-API bildet die Grundlage für eine breitere Gruppe von Steuerelementen, die wir zum Aktivieren der Entwickler Fluent-Benutzeroberfläche für nicht-UWP-desktopanwendungen Portieren bereit sind. In diesem Szenario wird *XAML-Inseln*bezeichnet. Weitere Informationen zu diesem Szenario Entwickler finden Sie unter [UWP-Steuerelemente in desktop-Apps](xaml-host-controls.md).
 
@@ -29,7 +29,7 @@ Die UWP-XAML hosting-API bildet die Grundlage für eine breitere Gruppe von Steu
 
 Die UWP-XAML hosting-API bietet die Low-Level-Infrastruktur für das Hosten von UWP-Steuerelemente in desktop-Apps. Einige Arten von desktop-Apps haben die Möglichkeit der Verwendung von alternativen und einfacher APIs um dies zu erreichen.  
 
-* Wenn Sie eine C/C++-Win32-desktop-Anwendung und Host-UWP-Steuerelemente in Ihrer Anwendung möchten, müssen Sie die UWP-XAML hosting-API verwenden. Es gibt keine alternativen für diese Arten von Anwendungen.
+* Wenn Sie eine C++ Win32-desktop-Anwendung und Host-UWP-Steuerelemente in Ihrer Anwendung möchten, müssen Sie die UWP-XAML hosting-API verwenden. Es gibt keine alternativen für diese Arten von Anwendungen.
 
 * Für WPF und Windows Forms-Anwendungen wird empfohlen, dass Sie im Windows Community Toolkit anstelle der UWP-XAML [umschlossenen Steuerelemente](xaml-host-controls.md#wrapped-controls) und der [Host-Steuerelemente](xaml-host-controls.md#host-controls) verwenden, hosting-API. Diese Steuerelemente verwenden, die UWP-XAML intern hosting-API und ein einfacher Entwicklung Erlebnis zu bieten. Sie können jedoch die UWP-XAML-API direkt in diese Arten von Anwendungen hosten, wenn Sie auswählen.
 
@@ -37,11 +37,19 @@ Die UWP-XAML hosting-API bietet die Low-Level-Infrastruktur für das Hosten von 
 
 Wie Sie die UWP-XAML hosting-API in Ihrem Code verwenden, hängt von Ihrem Anwendungstyp, das Design der Anwendung und anderen Faktoren ab. Zum verdeutlichen, wie Sie diese API im Kontext einer vollständigen Anwendung verwenden, bezieht sich in diesem Artikel auf Code aus den folgenden Beispielen.
 
-  * **C/C++ Win32:** Das [XamlIslands32](https://github.com/clarkezone/cppwinrt/tree/master/Desktop/XamlIslandsWin32) -Beispiel auf GitHub. In diesem Beispiel wird veranschaulicht, wie die UWP-XAML hosting-API in einer einfachen Win32-Anwendung und Behandeln von Änderungen von DPI-Wert.
+### <a name="c-win32"></a>C++ Win32
 
-  * **WPF:** Die WPF-Version des Steuerelements [**WindowsXamlHost**](https://github.com/Microsoft/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Win32/Microsoft.Toolkit.Wpf.UI.XamlHost) im Windows Community Toolkit. Dieses Steuerelement abgeleitet von [**System.Windows.Interop.HwndHost**](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost.aspx) und die UWP-XAML intern hosting-API verwendet. Hintergrundinformationen zur Verwendung von **System.Windows.Interop.HwndHost** in einer WPF-Anwendung finden Sie unter [Win32-Inhalte in WPF](https://docs.microsoft.com/dotnet/framework/wpf/advanced/hosting-win32-content-in-wpf).
+Es gibt mehrere Beispiele auf GitHub zur Verwendung der UWP-XAML hosting-API in einer C++ Win32-Anwendung:
 
-  * **Windows Forms:** Die Windows Forms-Version des Steuerelements [**WindowsXamlHost**](https://github.com/Microsoft/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Win32/Microsoft.Toolkit.Forms.UI.XamlHost) im Windows Community Toolkit. Dieses Steuerelement von [**System.Windows.Forms.Control**](https://docs.microsoft.com/dotnet/api/system.windows.forms.control) abgeleitet ist und die UWP-XAML intern hosting-API verwendet.
+  * [XamlHostingSample](https://github.com/Microsoft/Windows-appsample-Xaml-Hosting). In diesem Beispiel wird veranschaulicht, wie die UWP [InkCanvas](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas), [InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar)und [MediaPlayerElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement) -Steuerelemente an eine C++ Win32-Anwendung hinzufügen.
+  * [XamlIslands32](https://github.com/clarkezone/cppwinrt/tree/master/Desktop/XamlIslandsWin32). In diesem Beispiel wird veranschaulicht, wie eine C++ Win32-Anwendung mehrere grundlegende UWP-Steuerelemente hinzu und DPI-Änderungen zu behandeln.
+
+### <a name="wpf-and-windows-forms"></a>WPF und Windows Forms
+
+Das Steuerelement [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) im Windows Community Toolkit fungiert als eine referenzbeispiel für die Verwendung der UWP hosting-API in WPF- oder Windows Forms-Anwendung. Der Quellcode ist an folgenden Orten verfügbar:
+
+  * Für die WPF-Version des Steuerelements, [Wechseln Sie hier](https://github.com/Microsoft/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Win32/Microsoft.Toolkit.Wpf.UI.XamlHost). Die WPF-Version wird von [**System.Windows.Interop.HwndHost**](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost)abgeleitet.
+  * Für die Windows Forms-Version des Steuerelements, [Wechseln Sie hier](https://github.com/Microsoft/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Win32/Microsoft.Toolkit.Forms.UI.XamlHost). Windows Forms-Version von [**System.Windows.Forms.Control**](https://docs.microsoft.com/dotnet/api/system.windows.forms.control)abgeleitet ist.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -51,7 +59,7 @@ Die UWP-XAML hosting-API hat diese erforderlichen Komponenten.
 
 * Um die UWP-XAML hosting-API in Ihrer Desktopanwendung zu verwenden, müssen Sie Ihr Projekt konfigurieren, sodass Sie UWP-APIs aufrufen können:
 
-    * **C/C++ Win32:** Es wird empfohlen, dass Sie das Projekt zur Verwendung konfigurieren [C++ / WinRT](../cpp-and-winrt-apis/index.md). Herunterladen und Installieren der [C++ / WinRT Visual Studio Extension (VSIX)](https://aka.ms/cppwinrt/vsix) aus dem Visual Studio Marketplace und fügen Sie dann die ```<CppWinRTEnabled>true</CppWinRTEnabled>``` Eigenschaft, um Ihre VCXPROJ-Datei als beschrieben [hier](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
+    * **C++ Win32:** Es wird empfohlen, dass Sie das Projekt zur Verwendung konfigurieren [C++ / WinRT](../cpp-and-winrt-apis/index.md). Herunterladen und Installieren der [C++ / WinRT Visual Studio Extension (VSIX)](https://aka.ms/cppwinrt/vsix) aus dem Visual Studio Marketplace und fügen Sie dann die ```<CppWinRTEnabled>true</CppWinRTEnabled>``` Eigenschaft, um Ihre VCXPROJ-Datei als beschrieben [hier](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
 
     * **Windows Forms und WPF:** [Gehen Sie wie folgt vor.](../porting/desktop-to-uwp-enhance.md#modify-a-net-project-to-use-uwp-apis)
 
@@ -61,7 +69,7 @@ Die UWP-XAML hosting-API umfasst [**DesktopWindowXamlSource**](https://docs.micr
 
 Wenn Sie eine XAML-Insel unter Verwendung des XAML hosting-API in einer desktop-Anwendung erstellen, müssen Sie die folgende Hierarchie der Objekte:
 
-* Auf der Basisebene ist das UI-Element in der Anwendung, in denen Sie die XAML-Insel hosten möchten. Dieses UI-Element muss einen Fensterhandle (HWND) verfügen. Beispiele für UI-Elemente in denen Sie eine XAML-Insel hosten können sind [**System.Windows.Interop.HwndHost**](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost) für WPF-Anwendung [**System.Windows.Forms.Control**](https://docs.microsoft.com/dotnet/api/system.windows.forms.control) für Windows Forms-Anwendung und ein [Fenster](https://docs.microsoft.com/windows/desktop/winmsg/about-windows) für C/C++-Win32-Anwendungen.
+* Auf der Basisebene ist das UI-Element in der Anwendung, in denen Sie die XAML-Insel hosten möchten. Dieses UI-Element muss einen Fensterhandle (HWND) verfügen. Beispiele für UI-Elemente in denen Sie eine XAML-Insel hosten können sind [**System.Windows.Interop.HwndHost**](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost) für WPF-Anwendung [**System.Windows.Forms.Control**](https://docs.microsoft.com/dotnet/api/system.windows.forms.control) für Windows Forms-Anwendung und ein [Fenster](https://docs.microsoft.com/windows/desktop/winmsg/about-windows) für C++ Win32-Anwendungen.
 
 * Auf der nächsten ist Ebene ein **DesktopWindowXamlSource** -Objekt. Dieses Objekt stellt die Infrastruktur für die XAML-Insel hosten. Der Code ist verantwortlich für das Erstellen dieses Objekts und diese an das übergeordnete UI-Element.
 
@@ -100,7 +108,7 @@ Hier sind die wichtigsten Schritte für die Verwendung der UWP-XAML hosting-API 
 
     Zu diesem Zweck müssen Sie die folgenden Schritte:
 
-    1. Erstellen Sie ein **DesktopWindowXamlSource** -Objekt, und wandeln sie in der **IDesktopWindowXamlSourceNative** COM-Schnittstelle. Diese Schnittstelle wird deklariert, der ```windows.ui.xaml.hosting.desktopwindowxamlsource.h``` Header-Datei im Windows SDK. In einem Win32-C/C++-Projekt können Sie diese Headerdatei direkt verweisen. In einem WPF- oder Windows Forms-Projekt müssen Sie diese Schnittstelle im Code Ihrer Anwendung mithilfe des Attributs [**ComImport**](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.comimportattribute) deklarieren. Stellen Sie sicher, Ihre Schnittstellendeklaration entspricht genau die Schnittstellendeklaration im ```windows.ui.xaml.hosting.desktopwindowxamlsource.h```.
+    1. Erstellen Sie ein **DesktopWindowXamlSource** -Objekt, und wandeln sie in der **IDesktopWindowXamlSourceNative** COM-Schnittstelle. Diese Schnittstelle wird deklariert, der ```windows.ui.xaml.hosting.desktopwindowxamlsource.h``` Header-Datei im Windows SDK. In C++ Win32-Projekt können Sie diese Headerdatei direkt verweisen. In einem WPF- oder Windows Forms-Projekt müssen Sie diese Schnittstelle im Code Ihrer Anwendung mithilfe des Attributs [**ComImport**](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.comimportattribute) deklarieren. Stellen Sie sicher, Ihre Schnittstellendeklaration entspricht genau die Schnittstellendeklaration im ```windows.ui.xaml.hosting.desktopwindowxamlsource.h```.
 
     2. Rufen Sie die Methode **AttachToWindow** der **IDesktopWindowXamlSourceNative** -Schnittstelle, und übergeben Sie das Fenster-Handle für das übergeordnete UI-Element in der Anwendung.
 
@@ -154,8 +162,8 @@ Hier sind die wichtigsten Schritte für die Verwendung der UWP-XAML hosting-API 
 
 Vollständige Beispiele, in denen diese Aufgaben im Kontext einer Anwendung arbeiten Beispiel veranschaulicht, finden Sie unter den folgenden Codedateien:
 
-  * **C/C++ Win32:** Finden Sie in der Datei [Desktop.cpp](https://github.com/clarkezone/cppwinrt/blob/master/Desktop/XamlIslandsWin32/Desktop.cpp) im [XamlIslands32](https://github.com/clarkezone/cppwinrt/tree/master/Desktop/XamlIslandsWin32) Beispiel auf GitHub.
-  * **WPF:** Finden Sie unter der [WindowsXamlHostBase.cs](https://github.com/Microsoft/WindowsCommunityToolkit/blob/master/Microsoft.Toolkit.Win32/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.cs) und [WindowsXamlHost.cs](https://github.com/Microsoft/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Win32/Microsoft.Windows.Interop.WindowsXamlHost.WPF/WindowsXamlHost.cs) Dateien im Windows Community Toolkit.  
+  * **C++ Win32:** Finden Sie in der Datei ["Main.cpp"](https://github.com/Microsoft/Windows-appsample-Xaml-Hosting/blob/master/XamlHostingSample/Main.cpp) im Beispiel [XamlHostingSample](https://github.com/Microsoft/Windows-appsample-Xaml-Hosting) oder [Desktop.cpp](https://github.com/clarkezone/cppwinrt/blob/master/Desktop/XamlIslandsWin32/Desktop.cpp) -Datei im Beispiel [XamlIslands32](https://github.com/clarkezone/cppwinrt/tree/master/Desktop/XamlIslandsWin32) .
+  * **WPF:** Finden Sie unter der [WindowsXamlHostBase.cs](https://github.com/Microsoft/WindowsCommunityToolkit/blob/master/Microsoft.Toolkit.Win32/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.cs) und [WindowsXamlHost.cs](https://github.com/Microsoft/WindowsCommunityToolkit/blob/master/Microsoft.Toolkit.Win32/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHost.cs) Dateien im Windows Community Toolkit.  
   * **Windows Forms:** Finden Sie unter der [WindowsXamlHostBase.cs](https://github.com/Microsoft/WindowsCommunityToolkit/blob/master/Microsoft.Toolkit.Win32/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHostBase.cs) und [WindowsXamlHost.cs](https://github.com/Microsoft/WindowsCommunityToolkit/blob/master/Microsoft.Toolkit.Win32/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHost.cs) Dateien im Windows Community Toolkit.
 
 
@@ -174,7 +182,7 @@ Wenn Sie ein benutzerdefiniertes UWP-XAML-Steuerelement (entweder ein Steuerelem
 
     Ein Beispiel, das veranschaulicht, wie Sie hierzu finden in der Codedatei [UWPTypeFactory.cs](https://github.com/Microsoft/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Win32/Microsoft.Windows.Interop.WindowsXamlHost.Shared/UWPTypeFactory.cs) im Windows Community Toolkit. Diese Datei ist Teil der gemeinsam genutzte Implementierung der **WindowsXamlHost** Klassen für WPF und Windows Forms.
 
-3. Integrieren Sie den Quellcode für das benutzerdefinierte UWP-XAML-Steuerelement in der Host-Anwendungslösung, erstellen Sie das benutzerdefinierte Steuerelement, und verwenden Sie es in Ihrer Anwendung, indem Sie folgenden [diese Anweisungen](https://github.com/Microsoft/WindowsCommunityToolkit/blob/master/docs/controls/WindowsXAMLHost.md#add-a-custom-uwp-control).
+3. Integrieren Sie den Quellcode für das benutzerdefinierte UWP-XAML-Steuerelement in der Host-Anwendungslösung, erstellen Sie das benutzerdefinierte Steuerelement, und verwenden Sie es in Ihrer Anwendung, indem Sie folgenden [diese Anweisungen](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost#add-a-custom-uwp-control).
 
 ## <a name="how-to-handle-keyboard-focus-navigation"></a>Zum Behandeln von den Tastaturfokus
 
@@ -184,7 +192,7 @@ Die UWP-XAML hosting-API bietet verschiedene Typen und Member damit Sie diese Au
 
 1. Wenn die Tastaturnavigation Ihre **DesktopWindowXamlSource**eingibt, wird das [**GotFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource.gotfocus) -Ereignis ausgelöst. Behandeln Sie dieses Ereignis und programmgesteuert verlagern Sie des Fokus auf das erste gehosteten **Windows.UI.Xaml.UIElement** mithilfe der [**NavigateFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource.navigatefocus) -Methode.
 
-2. Wenn der Benutzer auf das letzte fokussierbare Element in der **DesktopWindowXamlSource** ist und die **Tab** -Taste oder eine Pfeiltaste drückt, wird das [**TakeFocusRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource.takefocusrequested) -Ereignis ausgelöst. Behandeln Sie dieses Ereignis und verlagern Sie des Fokus programmgesteuert auf das nächste fokussierbare Element in der Host-Anwendung. Z. B. in einer WPF-Anwendung, die **DesktopWindowXamlSource** in einem [**System.Windows.Interop.HwndHost**](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost.aspx)gehostet wird, können die [**MoveFocus**](https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.movefocus) -Methode Sie um den Fokus auf das nächste fokussierbare Element in der Host-Anwendung zu übertragen.
+2. Wenn der Benutzer auf das letzte fokussierbare Element in der **DesktopWindowXamlSource** ist und die **Tab** -Taste oder eine Pfeiltaste drückt, wird das [**TakeFocusRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource.takefocusrequested) -Ereignis ausgelöst. Behandeln Sie dieses Ereignis und verlagern Sie des Fokus programmgesteuert auf das nächste fokussierbare Element in der Host-Anwendung. Z. B. in einer WPF-Anwendung, die **DesktopWindowXamlSource** in einem [**System.Windows.Interop.HwndHost**](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost)gehostet wird, können die [**MoveFocus**](https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.movefocus) -Methode Sie um den Fokus auf das nächste fokussierbare Element in der Host-Anwendung zu übertragen.
 
 Beispiele für die Verwendung im Kontext einer Anwendung arbeiten Beispiel dazu, finden Sie unter den folgenden Codedateien:
   * **WPF:** Finden Sie im Windows Community Toolkit [WindowsXamlHostBase.Focus.cs](https://github.com/Microsoft/WindowsCommunityToolkit/blob/master/Microsoft.Toolkit.Win32/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.Focus.cs) .  
@@ -195,11 +203,11 @@ Beispiele für die Verwendung im Kontext einer Anwendung arbeiten Beispiel dazu,
 Wenn der Benutzer die Größe des übergeordneten UI-Elements ändert, müssen Sie behandeln alle erforderlichen layoutänderungen um sicherzustellen, Ihre UWP-Steuerelemente wie gewünscht angezeigt. Hier sind einige wichtigen Szenarien zu berücksichtigen.
 
 1. Wenn das übergeordnete Element der Benutzeroberfläche muss die Größe der rechteckigen Bereich benötigt, um die **Windows.UI.Xaml.UIElement** passen, die Sie auf die **DesktopWindowXamlSource**hosten, rufen Sie die [**Measure**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) -Methode für die **Windows.UI.Xaml.UIElement **. Beispiel:
-    * In einer WPF-Anwendung können Sie die [**MeasureOverride**](https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.measureoverride) -Methode des der [**HwndHost**](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost.aspx) dazu, die die **DesktopWindowXamlSource**hostet.
+    * In einer WPF-Anwendung können Sie die [**MeasureOverride**](https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.measureoverride) -Methode des der [**HwndHost**](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost) dazu, die die **DesktopWindowXamlSource**hostet.
     * In eine Windows Forms-Anwendung können Sie die [**GetPreferredSize**](https://docs.microsoft.com/dotnet/api/system.windows.forms.control.getpreferredsize) -Methode des [**Steuerelements**](https://docs.microsoft.com/dotnet/api/system.windows.forms.control) dazu, die die **DesktopWindowXamlSource**hostet.
 
 2. Wenn die Größe des übergeordneten UI-Element wird, rufen Sie die Methode [**Anordnen**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange) der Stamm- **Windows.UI.Xaml.UIElement** , die hosten Sie auf die **DesktopWindowXamlSource**. Beispiel:
-    * In einer WPF-Anwendung können Sie die [**ArrangeOverride**](https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.arrangeoverride) -Methode des Objekts [**HwndHost**](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost.aspx) dazu, die die **DesktopWindowXamlSource**hostet.
+    * In einer WPF-Anwendung können Sie die [**ArrangeOverride**](https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.arrangeoverride) -Methode des Objekts [**HwndHost**](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost) dazu, die die **DesktopWindowXamlSource**hostet.
     * In einer Windows Forms-Anwendung können Sie die Handler für das [**SizeChanged**](https://docs.microsoft.com/dotnet/api/system.windows.forms.control.sizechanged) -Ereignis des [**Steuerelements**](https://docs.microsoft.com/dotnet/api/system.windows.forms.control) , hostet die **DesktopWindowXamlSource**dazu.
 
 Beispiele für die Verwendung im Kontext einer Anwendung arbeiten Beispiel dazu, finden Sie unter den folgenden Codedateien:
@@ -210,9 +218,9 @@ Beispiele für die Verwendung im Kontext einer Anwendung arbeiten Beispiel dazu,
 
 Wenn Sie DPI-Änderungen im Fenster behandeln, hostet, Ihre UWP (z. B., wenn der Benutzer das Fenster zwischen Bildschirmen mit unterschiedlichen Energiezustände DPI-Wert zieht) steuern, möchten, müssen Sie zum Konfigurieren von des UWP-Steuerelements mit einem Rendertransformation, Lauschen DPI-Änderungen in Ihrer app , und aktualisieren Sie die Position des Fensters und Transformation des UWP-Steuerelements in Reaktion auf die DPI-Änderungen zu rendern.
 
-Die folgenden Schritte veranschaulichen eine Möglichkeit zur Behandlung von dieser Vorgang im Kontext einer C/C++ Win32-Anwendung. Ein vollständiges Beispiel finden Sie unter [Desktop.cpp](https://github.com/clarkezone/cppwinrt/blob/master/Desktop/XamlIslandsWin32/Desktop.cpp) und [Desktop.h](https://github.com/clarkezone/cppwinrt/blob/master/Desktop/XamlIslandsWin32/Desktop.h) Codedateien in die [XamlIslands32](https://github.com/clarkezone/cppwinrt/tree/master/Desktop/XamlIslandsWin32) -Beispiel auf GitHub.
+Die folgenden Schritte veranschaulichen eine Möglichkeit zur Behandlung von dieser Vorgang im Kontext des eine C++ Win32-Anwendung. Ein vollständiges Beispiel finden Sie unter [Desktop.cpp](https://github.com/clarkezone/cppwinrt/blob/master/Desktop/XamlIslandsWin32/Desktop.cpp) und [Desktop.h](https://github.com/clarkezone/cppwinrt/blob/master/Desktop/XamlIslandsWin32/Desktop.h) Codedateien in die [XamlIslands32](https://github.com/clarkezone/cppwinrt/tree/master/Desktop/XamlIslandsWin32) -Beispiel auf GitHub.
 
-1. Verwalten Sie ein Objekt [**ScaleTransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.scaletransform) in Ihrer app, und weisen Sie sie an die Methode [**RenderTransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform) von Ihrer UWP-Steuerelement. Im folgende Beispiel wird für ein Steuerelement [**Windows.UI.Xaml.Controls.Grid**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid) in einer C/C++-Win32-Anwendung.
+1. Verwalten Sie ein Objekt [**ScaleTransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.scaletransform) in Ihrer app, und weisen Sie sie an die Methode [**RenderTransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform) von Ihrer UWP-Steuerelement. Im folgende Beispiel wird für ein Steuerelement [**Windows.UI.Xaml.Controls.Grid**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid) in eine C++ Win32-Anwendung.
 
     ```cppwinrt
     // Private fields maintained by your app, such as in a window class you have defined.
@@ -224,7 +232,7 @@ Die folgenden Schritte veranschaulichen eine Möglichkeit zur Behandlung von die
     ```
 
 2. Hören Sie in Ihrer [**WindowProc**](https://msdn.microsoft.com/library/windows/desktop/ms633573.aspx) -Funktion für die [**WM_DPICHANGED**](https://docs.microsoft.com/windows/desktop/hidpi/wm-dpichanged) Nachricht. In Reaktion auf diese Meldung:
-    * Verwenden Sie die Funktion [**SetWindowPos**](https://msdn.microsoft.com/library/windows/desktop/ms633545) , Größe des Fensters, das das UWP-Steuerelement an das Rechteck an Sie übergebenen enthält.
+    * Verwenden Sie die Funktion [**SetWindowPos**](https://docs.microsoft.com/windows/desktop/api/winuser/nf-winuser-setwindowpos) , Größe des Fensters, das das UWP-Steuerelement an das Rechteck an Sie übergebenen enthält.
     * Aktualisieren Sie die Skalierungsfaktoren x- und y-Achse des Objekts **ScaleTransform** gemäß der neue DPI-Wert.
     * Nehmen Sie alle erforderlichen Anpassungen vor, um die Darstellung und das Layout von Ihrer UWP-Steuerelement. Im folgenden Codebeispiel wird passt [**Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid.padding) des gehosteten **Windows.UI.Xaml.Controls.Grid** Steuerelements in Reaktion auf Änderungen der DPI-Wert.
 
@@ -293,7 +301,7 @@ Der XAML-Code hosting-API teilt dieselben Einschränkungen wie alle anderen Type
 
 | Problem | Auflösung |
 |-------|------------|
-| Ihre app erhält eine **COMException** mit folgender Meldung: "DesktopWindowXamlSource kann nicht aktiviert werden. Dieser Typ kann in einer UWP-app verwendet werden." oder "WindowsXamlManager kann nicht aktiviert werden. Dieser Typ kann in einer UWP-app verwendet werden." | Dieser Fehler weist darauf hin, Sie versuchen, die UWP-XAML hosting-API verwenden (genauer gesagt: Sie möchten die Typen [**DesktopWindowXamlSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) oder [**WindowsXamlManager**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager) instanziieren) in einer UWP-app. Die UWP-XAML hosting-API ist nur in nicht-UWP-desktop-apps, z. B. WPF, Windows Forms und C/C++ Win32-Anwendungen verwendet werden soll. |
+| Ihre app erhält eine **COMException** mit folgender Meldung: "DesktopWindowXamlSource kann nicht aktiviert werden. Dieser Typ kann in einer UWP-app verwendet werden." oder "WindowsXamlManager kann nicht aktiviert werden. Dieser Typ kann in einer UWP-app verwendet werden." | Dieser Fehler weist darauf hin, Sie versuchen, die UWP-XAML hosting-API verwenden (genauer gesagt: Sie möchten die Typen [**DesktopWindowXamlSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) oder [**WindowsXamlManager**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager) instanziieren) in einer UWP-app. Die UWP-XAML hosting-API ist nur in nicht-UWP-desktop-apps, z. B. WPF, Windows Forms und C++ Win32-Anwendungen verwendet werden soll. |
 
 ### <a name="error-attaching-to-a-window-on-a-different-thread"></a>Fehler beim Anhängen an ein Fenster in einem anderen thread
 
