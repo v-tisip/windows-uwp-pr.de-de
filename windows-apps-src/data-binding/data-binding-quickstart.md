@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ff104bfb5114cd51eb04d75af3c096f47a7d286d
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4153623"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4180723"
 ---
 # <a name="data-binding-overview"></a><span data-ttu-id="edebd-104">Übersicht über Datenbindung</span><span class="sxs-lookup"><span data-stu-id="edebd-104">Data binding overview</span></span>
 

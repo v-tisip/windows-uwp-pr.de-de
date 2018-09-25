@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: cc7119ba2d97bfc6e1fb3f1a519b6d650027b1a3
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4150463"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4181701"
 ---
 # <a name="copy-to-and-from-byte-arrays"></a><span data-ttu-id="a0e5a-104">Kopieren in und aus Bytearrays</span><span class="sxs-lookup"><span data-stu-id="a0e5a-104">Copy to and from byte arrays</span></span>
 

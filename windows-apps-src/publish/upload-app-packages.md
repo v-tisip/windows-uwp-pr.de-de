@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Pakete, hochladen, Package upload
 ms.localizationpriority: medium
 ms.openlocfilehash: 6013a238cff8db3b85dd98af58cccaf344a72f51
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4148601"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4176051"
 ---
 # <a name="upload-app-packages"></a><span data-ttu-id="cf7df-103">Hochladen von App-Paketen</span><span class="sxs-lookup"><span data-stu-id="cf7df-103">Upload app packages</span></span>
 

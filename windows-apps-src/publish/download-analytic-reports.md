@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b32ebcff59e89046c45d1a0f23d3bca1c268a6b9
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4149465"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4177985"
 ---
 # <a name="download-analytics-reports"></a><span data-ttu-id="ed676-103">Herunterladen von Analyseberichten</span><span class="sxs-lookup"><span data-stu-id="ed676-103">Download analytics reports</span></span>
 
