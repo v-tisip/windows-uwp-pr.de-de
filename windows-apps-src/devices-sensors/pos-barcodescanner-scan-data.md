@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Point of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 0992ea54092063ba53f23871599905e58f1b456e
-ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
+ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "4173683"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "4211004"
 ---
 # <a name="obtain-and-understand-barcode-data"></a>Abzurufen Sie und zu verstehen Sie Barcode-Daten
 

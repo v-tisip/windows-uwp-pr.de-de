@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projiziert, projizierung, varbeiten, ereignis, delegat
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b8749b53e28047842343bd2a1e0c005f588d79d
-ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
+ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "4181491"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "4209886"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Verarbeiten von Ereignissen über Delegaten in [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
 Dieses Thema zeigt, wie man Event-Handling-Delegaten mit C++/WinRT registriert und widerruft. Sie können ein Ereignis mit jedem Objekt verarbeiten, das einer normalen C++ Funktion entspricht.

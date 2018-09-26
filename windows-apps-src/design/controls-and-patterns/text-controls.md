@@ -15,24 +15,21 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d68d0a5e6f2a22bc0012b3245ba050df271f7f92
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: fc18db25e6404e5236038badd8169ef7bcfc4817
+ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817408"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "4210992"
 ---
 # <a name="text-controls"></a>Textsteuerelemente
-
- 
 
 Textsteuerelemente bestehen aus Texteingabefeldern, Kennwortfeldern, Feldern mit automatischen Vorschlägen und Textblöcken. Das XAML-Framework stellt mehrere Steuerelemente für die Darstellung, Eingabe und Bearbeitung von Text sowie eine Reihe von Eigenschaften für die Formatierung von Text bereit.
 
 - Für die Anzeige von schreibgeschütztem Text stehen die Steuerelemente [TextBlock](text-block.md) und [RichTextBlock](rich-text-block.md) zur Verfügung.
-- Die Steuerelemente für Texteingabe und Textbearbeitung sind: [TextBox](text-box.md), [AutoSuggestBox](auto-suggest-box.md), [PasswordBox](password-box.md) und [RichEditBox](rich-edit-box.md).
+- Die Steuerelemente für Texteingabe und Textbearbeitung sind: [TextBox](text-box.md), [RichEditBox](rich-edit-box.md), [AutoSuggestBox](auto-suggest-box.md)und [PasswordBox](password-box.md).
 
-> **Wichtige APIs**: [AutoSuggestBox-Klasse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx), [PasswordBox-Klasse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx), [RichEditBox-Klasse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx), [RichTextBlock-Klasse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), [TextBlock-Klasse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [TextBox-Klasse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx)
-
+> **Wichtige APIs**: [TextBlock-Klasse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textblock.aspx), [RichTextBlock-Klasse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richtextblock.aspx), [TextBox-Klasse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.textbox.aspx), [RichEditBox-Klasse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.richeditbox.aspx), [AutoSuggestBox-Klasse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.autosuggestbox.aspx), [PasswordBox-Klasse](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.passwordbox.aspx)
 
 ## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 
@@ -124,30 +121,15 @@ Richtlinien für Schriftarten finden Sie in den folgenden Artikeln:
 
 ## <a name="pen-input"></a>Stifteingabe
 
-> Die Stifteingabefunktion ist derzeit nur in der Windows Insider Preview verfügbar. Featurenamen, Terminologie und Funktionen sind nicht endgültig.
-
 **Gilt für:** TextBox, RichEditBox, AutoSuggestBox
 
 Ab Windows10, Version 1803, verfügen XAML-Texteingabefelder über eine integrierte Unterstützung für Stifteingaben mit [Windows Ink](../input/pen-and-stylus-interactions.md). Wenn ein Benutzer einen Windows-Stift für Eingaben in ein Textfeld verwendet, wird das Textfeld transformiert, sodass der Benutzer mit einem Stift direkt in das Feld schreiben kann, anstatt einen separaten Eingabebereich öffnen zu müssen.
 
 ![Textfeld wird erweitert, wenn mit einem Stift darauf getippt wird](images/pen-input-expand.gif)
 
-Text wird erkannt, während der Benutzer an einer beliebigen Stelle in das Textfeld schreibt, und ein Kandidatenfenster zeigt die Erkennungsergebnisse an. Der Benutzer kann auf ein Ergebnis tippen, um es auszuwählen, oder er kann den Schreibvorgang fortsetzen, um das vorgeschlagene Wort zu akzeptieren. Die literalen Erkennungsergebnisse (buchstabenweise) sind im Kandidatenfenster enthalten, somit ist die Erkennung nicht auf Wörter in einem Wörterbuch beschränkt. Während der Benutzer schreibt, wird die akzeptierte Texteingabe in ein Schriftzeichen konvertiert, das das Verhalten der natürlichen Schreibweise beibehält.
+Weitere Informationen finden Sie unter [Texteingabe mit der Handschrift Ansicht](text-handwriting-view.md).
 
-![Textfeld mit Stifteingabe](images/pen-input-1.png)
-
-Ein Benutzer kann seinen Text mithilfe der folgenden Standardgesten und -aktionen bearbeiten:
-
-- _Durchstreichen_ oder _Ausstreichen_ – Ermöglicht das Durchziehen eines Strichs, um ein Wort oder einen Teil eines Wortes zu löschen.
-- _Verknüpfen_ – Zeichnet einen Bogen zwischen Wörtern, um den Abstand zwischen ihnen zu löschen.
-- _Einfügen_ – Ermöglicht das Zeichnen eines Caret-Symbols, um ein Leerzeichen einzufügen.
-- _Überschreiben_ – Überschreibt vorhandenen Text, um ihn zu ersetzen.
-
-![Überschreiben von Stifteingaben](images/pen-input-2.png)
-
-Eingebettete Texteingabe ist standardmäßig aktiviert, wenn Ihre App für Windows10, Version 1803, bestimmt ist und darunter ausgeführt wird. Sie können auf einer pro-Textfeld-Basis auswählen, ob die Funktion deaktiviert werden soll, und zu einem Texteingabebereich zurückkehren. Um die eingebettete Texteingabe zu deaktivieren, legen Sie die Eigenschaft **IsHandwritingViewEnabled** des Textsteuerelements auf **false** fest.
-
-## <a name="choose-the-right-keyboard-for-your-text-control"></a>Auswählen der richtigen Tastatur für das Textsteuerelement
+## <a name="choose-the-right-keyboard-for-your-text-control"></a>Auswählen der richtigen Tastatur für Ihr Textsteuerelement
 
 **Gilt für:** TextBox, PasswordBox, RichEditBox
 
