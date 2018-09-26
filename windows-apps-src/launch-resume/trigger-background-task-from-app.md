@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Trigger Hintergrundaufgabe, Hintergrundaufgabe
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ccd171f53795ef71830ffb022d0468facb3ac4f
-ms.sourcegitcommit: 194ab5aa395226580753869c6b66fce88be83522
+ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "4149673"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "4179963"
 ---
 # <a name="trigger-a-background-task-from-within-your-app"></a><span data-ttu-id="b80fa-104">Auslösen einer Hintergrundaufgabe in Ihrer App</span><span class="sxs-lookup"><span data-stu-id="b80fa-104">Trigger a background task from within your app</span></span>
 
