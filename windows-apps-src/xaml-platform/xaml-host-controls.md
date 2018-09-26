@@ -9,40 +9,37 @@ ms.prod: windows
 ms.technology: uwp, windows forms, wpf
 keywords: Windows 10, UWP, Windows Forms, WPF
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b8c263b030cbb8f945ffb13a24b6dff3af28fcc
-ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
+ms.openlocfilehash: 67669dd30f376df823f2f9ad08ad69c193cdb602
+ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "4173633"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "4204672"
 ---
 # <a name="uwp-controls-in-desktop-applications"></a>UWP-Steuerelemente in desktop-Apps
 
 > [!NOTE]
 > Die APIs und in diesem Artikel beschriebenen Steuerelemente sind als Entwicklervorschau derzeit verfügbar ist. Obwohl wir Sie Sie sie in Ihrem eigenen Code Prototyp jetzt testen empfiehlt, empfohlen nicht, dass Sie sie zu diesem Zeitpunkt in Produktionscode verwenden. Diese APIs und Steuerelemente werden weiterhin breiter und Stabilisierung in zukünftigen Windows-Versionen. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.
 
-Windows 10 können jetzt Sie UWP-Steuerelemente in nicht-UWP-desktopanwendungen verwenden, sodass Sie das Erscheinungsbild, und Funktionalität Ihrer vorhandenen desktop-Anwendungen mit den neuesten Windows 10-UI-Funktionen, die nur über UWP-Steuerelemente sind verbessern können. Dies bedeutet, dass Sie UWP-Features wie z. B. [Fluent Design-Systems](../design/fluent-design-system/index.md) und [Windows Ink](../design/input/pen-and-stylus-interactions.md) in Ihrer vorhandenen WPF-, Windows Forms und C++ Win32-Anwendungen verwenden können. In diesem Szenario Entwickler wird *XAML-Inseln*bezeichnet.
+Windows 10 können jetzt Sie UWP-Steuerelemente in nicht-UWP-desktopanwendungen verwenden, sodass Sie das Erscheinungsbild, und Funktionalität Ihrer vorhandenen desktop-Anwendungen mit den neuesten Windows 10-UI-Funktionen, die nur über UWP-Steuerelemente sind verbessern können. Dies bedeutet, dass Sie verwenden können UWP-Features wie [Windows Ink](../design/input/pen-and-stylus-interactions.md) und Steuerelemente, die das [Fluent Design-Systems](../design/fluent-design-system/index.md) in Ihrer vorhandenen WPF-, Windows Forms und C++ Win32-Anwendungen zu unterstützen. In diesem Szenario Entwickler wird *XAML-Inseln*bezeichnet.
 
-Wir bieten verschiedene Möglichkeiten, verwenden Sie XAML-Inseln in Ihrer desktop-Apps, je nach Technologie oder Framework, die Sie verwenden werden.
+Wir bieten verschiedene Möglichkeiten, verwenden Sie XAML-Inseln in Ihren WPF, Windows Forms und C++ Win32-Anwendungen, je nach Technologie oder Framework, die Sie verwenden werden.
 
 ## <a name="wrapped-controls"></a>Mit dem Steuerelemente
 
-WPF- oder Windows Forms-Anwendung können eine Auswahl mit dem UWP-Steuerelemente in der [Windows-Community Toolkit](https://docs.microsoft.com/windows/uwpcommunitytoolkit/)verwenden. Sie können diese Steuerelemente direkt auf der Entwurfsoberfläche Ihres WPF- oder Windows Forms-Projekts hinzufügen und dann wie jedes andere WPF- oder Windows Forms-Steuerelement im Designer verwenden. Wir bezeichnen diese Steuerelemente als *umschlossen Steuerelemente* , da sie die Schnittstelle und Funktionen für ein bestimmtes UWP-Steuerelement umschließen.
-
-Die folgenden umschlossenen Steuerelemente unterstützen Windows 10, Version 1803, und höher.
-
-* [WebView](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/webview). Dieses Steuerelement verwendet die Microsoft Edge-Rendering-Engine zur Anzeige von Webinhalten in einer WPF- oder Windows Forms-Anwendung.
-* [WebViewCompatible](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/webviewcompatible). Dieses Steuerelement ist eine Version von **WebView** , die mit Windows 10 kompatibel ist und früheren Versionen von Windows. Dieses Steuerelement verwendet, die Microsoft Edge-Rendering-Engine zur Anzeige von Webinhalten auf Windows 10 (Version 1803 und höher) und die Internet Explorer-Rendering-Engine zur Anzeige von Webinhalten auf Windows 7 und Windows 8.x.
-
-Die folgenden umschlossenen Steuerelemente unterstützen Windows 10 Insider Preview SDK-Build 17709 und spätere Versionen.
-
-* [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) und [inktoolbar-Steuerelement](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inktoolbar). Diese Steuerelemente bieten eine Symbolleisten Surface und die zugehörigen Windows Ink-basierte Benutzerinteraktionen in Ihre Windows Forms- oder WPF-Desktopanwendung.
-* [MediaPlayerElement](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/mediaplayerelement). Dieses Steuerelement bettet eine Ansicht, die streamt und rendert Medieninhalte wie z. B. Videowiedergabe in Ihrer Windows Forms- oder WPF-Desktopanwendung.
-
-Weitere UWP eingebunden Steuerelemente für WPF und Windows Forms-Anwendung für zukünftige Versionen von Windows Community Toolkit geplant werden.
+WPF- oder Windows Forms-Anwendung können eine Auswahl mit dem UWP-Steuerelemente in der [Windows-Community Toolkit](https://docs.microsoft.com/windows/uwpcommunitytoolkit/)verwenden. Wir bezeichnen diese Steuerelemente als *umschlossen Steuerelemente* , da sie die Schnittstelle und Funktionen für ein bestimmtes UWP-Steuerelement umschließen. Sie können diese Steuerelemente direkt auf der Entwurfsoberfläche Ihres WPF- oder Windows Forms-Projekts hinzufügen und verwenden Sie diese dann wie jedes andere WPF- oder Windows Forms-Steuerelement im Designer.
 
 > [!NOTE]
 > Mit dem Steuerelemente sind nicht für C++ Win32-desktop-Anwendungen verfügbar. Diese Arten von Anwendungen müssen die [UWP-XAML hosting-API](#uwp-xaml-hosting-api)verwenden.
+
+Die folgenden mit dem UWP-Steuerelemente sind derzeit für WPF und Windows Forms-Anwendungen verfügbar. Weitere umschlossen UWP-Steuerelemente sind für zukünftige Versionen von Windows Community Toolkit geplant.
+
+| Steuerelement | Unterstützte Mindestversion OS | Beschreibung |
+|-----------------|-------------------------------|-------------|
+| [WebView](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/webview) | Windows10, Version1803 | Mithilfe das Microsoft Edge-Renderingmodul Webinhalt angezeigt. |
+| [WebViewCompatible](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/webviewcompatible) | Windows 7 | Bietet eine Version des **WebView** , die mit Weitere Betriebssystemversionen kompatibel ist. Dieses Steuerelement verwendet, die Microsoft Edge-Rendering-Engine zur Anzeige von Webinhalten auf Windows 10, Version 1803 oder höher und die Internet Explorer-Rendering-Engine zur Anzeige von Webinhalten auf früheren Versionen von Windows 10, Windows 8.x und Windows 7. |
+| [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas)<br>[InkToolbar](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inktoolbar) | Windows 10 Insider Preview SDK Build 17709 | Stellen Sie ein Surface und die zugehörigen Symbolleisten für Windows Ink-basierte Benutzerinteraktion in Ihre Windows Forms- oder WPF-Desktopanwendung. |
+| [MediaPlayerElement](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/mediaplayerelement) | Windows 10 Insider Preview SDK Build 17709 | Eine Ansicht, die streamt und rendert Medieninhalte wie z. B. Videowiedergabe in Ihrer Windows Forms- oder WPF-Desktopanwendung, eingebettet. |
 
 ## <a name="host-controls"></a>Host-Steuerelemente
 

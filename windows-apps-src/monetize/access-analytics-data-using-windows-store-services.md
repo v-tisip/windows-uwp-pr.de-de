@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste Microsoft Store-Analyse-API
 ms.localizationpriority: medium
 ms.openlocfilehash: 26bed64053e8de9a42ac01ed3262c7b0f41d1d42
-ms.sourcegitcommit: 232543fba1fb30bb1489b053310ed6bd4b8f15d5
+ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "4177943"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "4205046"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Zugreifen auf Analysedaten mit Store-Diensten
 
@@ -86,7 +86,7 @@ Die folgenden Analysemethoden sind für UWP-Apps im Dev Center verfügbar.
 |---------------|--------------------|
 | Käufe, Konvertierungen, Installationen und Nutzung |  <ul><li>[Abrufen von App-Käufen](get-app-acquisitions.md)</li><li>[Abrufen von App-Erwerbstrichterdaten](get-acquisition-funnel-data.md)</li><li>[Abrufen von App-Konvertierungen nach Kanal](get-app-conversions-by-channel.md)</li><li>[Abrufen von Add-On-Käufen](get-in-app-acquisitions.md)</li><li>[Abrufen von Add-On-Käufen für Abonnements](get-subscription-acquisitions.md)</li><li>[Abrufen von Add-On-Konvertierungen nach Kanal](get-add-on-conversions-by-channel.md)</li><li>[Abrufen von App-Installationen](get-app-installs.md)</li><li>[Abrufen von täglichen app-Nutzung](get-app-usage-daily.md)</li><li>[Abrufen von monatlichen app-Nutzung](get-app-usage-monthly.md)</li></ul> |
 | App-Fehler | <ul><li>[Abrufen von Fehlerberichtsdaten](get-error-reporting-data.md)</li><li>[Abrufen von Details zu einem Fehler in Ihrer App](get-details-for-an-error-in-your-app.md)</li><li>[Abrufen der Stapelüberwachung für einen Fehler in Ihrer App](get-the-stack-trace-for-an-error-in-your-app.md)</li><li>[Herunterladen der CAB-Datei bei einem Fehler in Ihrer App](download-the-cab-file-for-an-error-in-your-app.md)</li></ul> |
-| Einblicke | <ul><li>[Rufen Sie Einblicke Daten für Ihre app](get-insights-data-for-your-app.md)</li></ul>  |
+| Insights | <ul><li>[Rufen Sie Einblicke Daten für Ihre app](get-insights-data-for-your-app.md)</li></ul>  |
 | Bewertungen und Prüfungen | <ul><li>[Abrufen von App-Bewertungen](get-app-ratings.md)</li><li>[Abrufen von App-Rezensionen](get-app-reviews.md)</li></ul> |
 | In-App-Werbung und Anzeigenkampagnen | <ul><li>[Abrufen von Anzeigenleistungsdaten](get-ad-performance-data.md)</li><li>[Abrufen der Leistungsdaten einer Anzeigenkampagne](get-ad-campaign-performance-data.md)</li></ul> |
 
@@ -99,7 +99,7 @@ Die folgenden Analysemethoden stehen für die Verwendung durch Entwicklerkonten 
 | Installiert |  <ul><li>[Abrufen von Desktopanwendungsinstallationen](get-desktop-app-installs.md)</li></ul> |
 | Blöcke |  <ul><li>[Abrufen von Upgrade Blöcke für Ihre desktop-Anwendung](get-desktop-block-data.md)</li><li>[Abrufen von Upgrade-Blockierung Informationen zu Ihrer desktop-Anwendung](get-desktop-block-data-details.md)</li></ul> |
 | Anwendungsfehler |  <ul><li>[Abrufen von Fehlerberichtsdaten für Ihre Desktopanwendung](get-desktop-application-error-reporting-data.md)</li><li>[Abrufen von Details zu einem Fehler in Ihrer Desktopanwendung](get-details-for-an-error-in-your-desktop-application.md)</li><li>[Abrufen der Stapelüberwachung für einen Fehler in Ihrer Desktopanwendung](get-the-stack-trace-for-an-error-in-your-desktop-application.md)</li><li>[Herunterladen der CAB-Datei bei einem Fehler in Ihrer Desktopanwendung](download-the-cab-file-for-an-error-in-your-desktop-application.md)</li></ul> |
-| Einblicke | <ul><li>[Erhalten Sie Einblicke Daten für Ihre desktop-Anwendung](get-insights-data-for-your-desktop-app.md)</li></ul>  |
+| Insights | <ul><li>[Erhalten Sie Einblicke Daten für Ihre desktop-Anwendung](get-insights-data-for-your-desktop-app.md)</li></ul>  |
 
 ### <a name="methods-for-xbox-live-services"></a>Methoden für Xbox Live-Dienste
 
