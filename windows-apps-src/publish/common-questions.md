@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 89745d0bb93b76e4497d6cb5c57f4e6c091c8bd7
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4206262"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267643"
 ---
 # <a name="common-questions-about-ad-campaigns"></a>Häufige Fragen zu Anzeigenkampagnen
 
@@ -63,7 +63,7 @@ Wenn Sie nicht warten möchten, bis die Abrechnung erstellt wird, können Sie Ih
 
 ### <a name="how-do-i-delete-a-credit-card-or-edit-the-details-of-a-credit-card"></a>Wie kann ich eine Kreditkarte löschen oder die Details einer Kreditkarte bearbeiten?
 
-Wechseln Sie zu <http://commerce.microsoft.com>, melden Sie sich mit den Anmeldeinformationen Ihres Microsoft-Konto an, und nehmen Sie die erforderlichen Änderungen vor.
+Wechseln Sie zu <http://commerce.microsoft.com>, melden Sie sich mit den Anmeldeinformationen Ihres Microsoft-Konto an, und stellen Sie die erforderlichen Änderungen vor.
 
 ### <a name="related-topics"></a>Verwandte Themen
 

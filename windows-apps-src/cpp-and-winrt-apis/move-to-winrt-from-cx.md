@@ -10,22 +10,22 @@ ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, portieren, migrieren, C++/CX
 ms.localizationpriority: medium
 ms.openlocfilehash: ac7affb044c6b60a249b154cc62379c7517161b0
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4213370"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267115"
 ---
 # <a name="move-to-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-from-ccx"></a>Wechsel zu [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) von C++/CX
 In diesem Thema wird gezeigt, wie Sie [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)-Code zum entsprechenden Äquivalent in C++/WinRT portieren.
 
 > [!IMPORTANT]
-> Wenn Sie nach und nach portieren möchten Ihre [C++ / CX](/cpp/cppcx/visual-c-language-reference-c-cx) Code in C++ / WinRT, können Sie. C++ / CX- und C++ / WinRT-Code kann gleichzeitig im selben Projekt, mit Ausnahme von XAML-Compiler-Unterstützung und Komponenten für Windows-Runtime verwendet werden. Für diese Ausnahmen, müssen Sie in der Zielgruppe entweder C++ / CX oder C++ / WinRT im selben Projekt. Aber Sie können einer Komponente für Windows-Runtime-Faktor-Code aus Ihrer XAML-app verwenden, wie Sie es portieren. Entweder bewegen Sie so viel C++ / CX-code können Sie in einer Komponente, und klicken Sie dann das XAML-Projekt in C++ / WinRT. Oder lassen Sie andernfalls das XAML-Projekt als C++ / CX, erstellen Sie eine neue C++ / WinRT-Komponente, und beginnen Portieren von C++ / CX-Code aus dem XAML-Projekt und in der Komponente. Sie haben konnte auch eine C++ / CX-Komponentenprojekt zusammen mit C++ / WinRT-Komponentenprojekt innerhalb der gleichen Projektmappe verweisen auf beide aus Ihrem Anwendungsprojekt und schrittweise aus einem anderen port.
+> Wenn Sie nach und nach portieren möchten Ihre [C++ / CX](/cpp/cppcx/visual-c-language-reference-c-cx) Code in C++ / WinRT, können Sie. C++ / CX- und C++ / WinRT-Code kann gleichzeitig im selben Projekt, mit Ausnahme von XAML-Compiler-Unterstützung und Komponenten für Windows-Runtime verwendet werden. Für diese Ausnahmen, müssen Sie in der Zielgruppe entweder C++ / CX oder C++ / WinRT im selben Projekt. Aber Sie können einer Komponente für Windows-Runtime-Faktor-Code aus Ihrer XAML-app verwenden, wie Sie es portieren. Entweder bewegen Sie so viel C++ / CX-code können Sie in einer Komponente, und klicken Sie dann das XAML-Projekt in C++ / WinRT. Oder lassen Sie andernfalls das XAML-Projekt als C++ / CX, erstellen Sie eine neue C++ / WinRT-Komponente, und beginnen Portieren von C++ / CX-Code aus dem XAML-Projekt und in der Komponente. Sie haben können auch eine C++ / CX-Komponentenprojekt zusammen mit C++ / WinRT-Komponentenprojekt in der gleichen Projektmappe verweisen auf beide aus Ihrem Anwendungsprojekt und schrittweise aus einem anderen port.
 
 > [!NOTE]
 > Sowohl [C++/CX ](/cpp/cppcx/visual-c-language-reference-c-cx) als auch das Windows SDK deklarieren Typen im Root-Namespace **Windows**. Ein Windows-Typ, der in C++/WinRT projiziert wird, verfügt über den gleichen vollqualifizierten Namen wie der Windows-Typ, befindet sich aber im C++/**winrt**-Namespace. Diese unterschiedlichen Namespaces ermöglichen die Portierung von C++/CX nach C++/WinRT in Ihrem eigenen Tempo.
 
-Angesichts der oben genannten Ausnahmen, die erste Schritt beim Portieren eines Projekts zu C++ / WinRT ist C++ manuell hinzufügen / WinRT-Unterstützung (finden Sie unter [Visual Studio-Unterstützung für C++ / WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)). Bearbeiten Sie dazu Ihre `.vcxproj`-Datei, suchen Sie nach `<PropertyGroup Label="Globals">`, und definieren Sie innerhalb dieser Eigenschaftengruppe die Eigenschaft `<CppWinRTEnabled>true</CppWinRTEnabled>`. Eine Auswirkung dieser Änderung ist, dass die Unterstützung für C++/CX im Projekt deaktiviert wird. Es ist sinnvoll, lassen Sie Unterstützung deaktiviert, so dass Build Nachrichten Sie suchen (und Port) unterstützen alle Ihre Abhängigkeiten von C++ / CX, oder Sie können Unterstützung wieder aktivieren (in den Projekteigenschaften, **C/C++** \> **Allgemeine** \> **verbrauchen Windows-Runtime Erweiterung** \> **Ja (/ Zw)**), und nach und nach portieren.
+Unter Berücksichtigung der oben genannten Ausnahmen, das erste Schritt beim Portieren eines Projekts zu C++ / WinRT ist C++ manuell hinzufügen / WinRT-Unterstützung (finden Sie unter [Visual Studio-Unterstützung für C++ / WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)). Bearbeiten Sie dazu Ihre `.vcxproj`-Datei, suchen Sie nach `<PropertyGroup Label="Globals">`, und definieren Sie innerhalb dieser Eigenschaftengruppe die Eigenschaft `<CppWinRTEnabled>true</CppWinRTEnabled>`. Eine Auswirkung dieser Änderung ist, dass die Unterstützung für C++/CX im Projekt deaktiviert wird. Es ist sinnvoll, lassen Sie Unterstützung deaktiviert, so dass Build Nachrichten Sie suchen (und Port) unterstützen alle Ihre Abhängigkeiten auf C++ / CX, oder Sie können Unterstützung wieder aktivieren (in den Projekteigenschaften, **C/C++-** \> **Allgemeine** \> **verbrauchen Windows-Runtime Erweiterung** \> **Ja (/ Zw)**), und nach und nach portieren.
 
 Definieren Sie die Projekteigenschaft **Allgemein** \> **Zielplattformversion** mit 10.0.17134.0 (Windows 10, Version 1803) oder höher.
 
@@ -184,7 +184,7 @@ private:
 ```
 
 ## <a name="converting-from-a-base-runtime-class-to-a-derived-one"></a>Konvertieren von einer Basisklasse Laufzeitklasse in eine abgeleitete
-Es ist üblich, eine Verweis auf Basis verfügen, die Sie wissen, dass auf ein Objekt eines abgeleiteten Typs verweist. In C++ / CX verwenden Sie `dynamic_cast` auf eine *Umwandlung* der Referenz-Basis in eine Referenz-zu-abgeleitet. Die `dynamic_cast` ist wirklich nur ein ausgeblendeter Aufruf von [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521). Hier ist ein typisches Beispiel&mdash;können Sie eine Abhängigkeit geänderter Eigenschaft-Ereignis behandeln und **DependencyObject** zurück in den tatsächlichen Typ umgewandelt werden, das die Abhängigkeitseigenschaft besitzt werden soll.
+Es ist üblich, eine Verweis auf Basis verfügen, die Sie wissen, dass auf ein Objekt eines abgeleiteten Typs verweist. In C++ / CX verwenden Sie `dynamic_cast` auf eine *Umwandlung* der Referenz-Basis in eine Referenz--abgeleitet. Die `dynamic_cast` ist wirklich nur ein ausgeblendeter Aufruf von [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521). Hier ist ein typisches Beispiel&mdash;Sie ein Abhängigkeit geänderter Eigenschaft-Ereignis behandelt, und Sie möchten, das von **DependencyObject** zurück in den tatsächlichen Typ umgewandelt, die die Abhängigkeitseigenschaft besitzt.
 
 ```cpp
 void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject^ d, Windows::UI::Xaml::DependencyPropertyChangedEventArgs^ e)
@@ -241,7 +241,7 @@ auto token = myButton().Click([&](IInspectable const& sender, RoutedEventArgs co
 
 Anstelle einer Lambda-Funktion können Sie den Delegaten als eine freie Funktion oder als Pointer-to-Member-Funktion implementieren. Weitere Informationen finden Sie unter [Verarbeiten von Ereignissen über Delegaten in C++/WinRT](handle-events.md).
 
-Wenn Sie von einer C++/CX-Codebasis portieren, wo Ereignisse und Delegate intern verwendet werden (nicht über Binärdateien), hilft Ihnen [**winrt::delegate**](/uwp/cpp-ref-for-winrt/delegate) beim Replizieren dieses Musters in C++/WinRT. Siehe auch [parametrisiert Delegaten, einfache Signale und Rückrufe innerhalb eines Projekts](author-events.md#parameterized-delegates-simple-signals-and-callbacks-within-a-project).
+Wenn Sie von einer C++/CX-Codebasis portieren, wo Ereignisse und Delegate intern verwendet werden (nicht über Binärdateien), hilft Ihnen [**winrt::delegate**](/uwp/cpp-ref-for-winrt/delegate) beim Replizieren dieses Musters in C++/WinRT. Siehe auch [parametrisiert Delegaten, einfachen Signale und Rückrufe innerhalb eines Projekts](author-events.md#parameterized-delegates-simple-signals-and-callbacks-within-a-project).
 
 ## <a name="revoking-a-delegate"></a>Widerrufen eines Delegaten
 In C++/CX verwenden Sie den `-=`-Operator, um eine frühere Ereignisregistrierung zu widerrufen.

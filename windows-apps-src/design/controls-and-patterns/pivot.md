@@ -15,11 +15,11 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 5bb6ed36c772e5ae80a3cb801b4b6b36bb1ab18c
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211482"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267751"
 ---
 # <a name="pivot"></a>Pivot
 
@@ -49,11 +49,11 @@ Das Pivot-Steuerelement, genau wie [NavigationView](navigationview.md), unterstr
 
 ## <a name="is-this-the-right-control"></a>Ist dies das richtige Steuerelement?
 
-Um allgemeine oberen Navigationsleiste und Registerkarten Muster zu erreichen, empfehlen wir die Verwendung von [NavigationView](navigationview.md), die automatisch an verschiedene Bildschirmgrößen anpasst und für eine umfassendere Anpassung ermöglicht.
+Um allgemeine oberen Navigationsleiste und Registerkarten Muster zu erreichen, empfehlen wir die Verwendung von [NavigationView](navigationview.md), die automatisch an verschiedene Bildschirmgrößen anpasst und für eine bessere Anpassung ermöglicht.
 
 Jedoch, wenn die Navigation Touch-Wischen erforderlich ist, empfehlen wir die Verwendung Pivot.
 
-Die wichtigsten Unterschiede zwischen den Steuerelementen NavigationView und Pivot gibt das Standardverhalten Überlauf und die Navigation API:
+Die wichtigsten Unterschiede zwischen den Steuerelementen NavigationView und Pivot sind das Standardverhalten Überlauf und die Navigation API:
 
 - Pivot-Karussells Überlauf, die Elemente, während NavigationView eine Dropdown-Menü Liste verwendet overflow, damit Benutzer alle Elemente sehen können.
 - Pivot steuert die Navigation zwischen Inhaltsabschnitte, während NavigationView mehr Kontrolle über Navigationsverhalten ermöglicht.
@@ -87,7 +87,7 @@ Dieser XAML-Code erstellt ein NavigationView mit 3 Inhaltsbereichen, wie im Beis
 </Page>
 ```
 
-NavigationView bietet mehr Kontrolle über die Navigation zum Anpassen und entsprechende Code-Behind erfordert. Um den oben genannten XAML-Code hinzugefügt werden, verwenden Sie das folgende Code-Behind:
+NavigationView bietet mehr Kontrolle über die Navigation zum Anpassen und entsprechende Code-Behind erfordert. Um den oben genannten XAML-Code hinzugefügt werden, verwenden Sie die folgende Code-Behind-Datei:
 
 ```csharp
 private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
@@ -116,7 +116,7 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 }
 ```
 
-Dieser Code wird das Pivot-Steuerelement integrierte Navigationsfunktionalität, abzüglich der Touch-Wischen Erfahrung zwischen Inhaltsabschnitte imitiert. Wie Sie sehen können, könnten Sie einige Punkte, einschließlich der animierten Übergang Navigation Parameter und Stapel Funktionen auch anpassen.
+Dieser Code wird das Pivot-Steuerelement integrierte Navigationsfunktionalität, abzüglich der Touch-Wischen Erfahrung zwischen Inhaltsabschnitte imitiert. Wie Sie sehen können, könnten Sie einige Punkte, einschließlich der animierten Übergang, Navigation Parameter und Stapel Funktionen auch anpassen.
 
 ## <a name="create-a-pivot-control"></a>Erstellen eines Pivot-Steuerelements
 

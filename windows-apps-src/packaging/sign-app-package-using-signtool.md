@@ -3,19 +3,19 @@ author: laurenhughes
 title: Signieren eines App-Pakets mit SignTool
 description: Verwenden Sie SignTool, um ein App-Paket manuell mit einem Zertifikat zu signieren.
 ms.author: lahugh
-ms.date: 02/08/2017
+ms.date: 09/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
 ms.localizationpriority: medium
-ms.openlocfilehash: b0aab34b187e06ba2b87a1537d6e30df09b35d7e
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: c238855f4f018e8e3142509842221c6b9d97fae3
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663010"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267851"
 ---
 # <a name="sign-an-app-package-using-signtool"></a>Signieren eines App-Pakets mit SignTool
 
@@ -79,16 +79,25 @@ Um Ihr App-Paket mit einem Zertifikat aus einer PFX-Datei zu signieren, verwende
 ```
 SignTool sign /fd <Hash Algorithm> /a /f <Path to Certificate>.pfx /p <Your Password> <File path>.appx
 ```
+```
+SignTool sign /fd <Hash Algorithm> /a /f <Path to Certificate>.pfx /p <Your Password> <File path>.msix
+```
 Beachten Sie, dass **SignTool** mit der Option `/a` automatisch das beste Zertifikat auswählt.
 
 Wenn das Zertifikat keine PFX-Datei ist, verwenden Sie die folgende Syntax:
 ```
 SignTool sign /fd <Hash Algorithm> /n <Name of Certificate> <File Path>.appx
 ```
+```
+SignTool sign /fd <Hash Algorithm> /n <Name of Certificate> <File Path>.msix
+```
 
 Alternativ können Sie den SHA1-Hash des gewünschten Zertifikats anstelle von &lt;Name of Certificate&gt; mit der folgenden Syntax angeben:
 ```
 SignTool sign /fd <Hash Algorithm> /sha1 <SHA1 hash> <File Path>.appx
+```
+```
+SignTool sign /fd <Hash Algorithm> /sha1 <SHA1 hash> <File Path>.msix
 ```
 
 Beachten Sie, dass einige Zertifikate kein Kennwort verwenden. Wenn Ihr Zertifikat über kein Kennwort verfügt, geben Sie „/p &lt;Your Password&gt;” in der Beispielbefehle nicht an.
@@ -122,5 +131,5 @@ Der interne Fehler 0x8007000B entspricht in der Regel einem der folgenden Werte:
 | **Ereignis-ID** | **Beispiel der Ereigniszeichenfolge** | **Vorschlag** |
 |--------------|--------------------------|----------------|
 | 150          | Fehler 0x8007000B: Der Name des Herausgebers des App-Manifests (CN=Contoso) muss mit dem Namen des Antragstellers des Signaturzertifikats (CN=Contoso, C=US) übereinstimmen. | Der Name des Herausgebers des App-Manifests muss exakt mit dem Namen des Antragstellers der Signatur übereinstimmen.               |
-| 151          | Fehler 0x8007000B: Die angegebene Hashmethode der Signatur (SHA512) muss mit der Hashmethode, die in der App-Paketblockzuordnung (SHA256) verwendet wurde, übereinstimmen.     | Der im Parameter /fd angegebene Hashalgorithmus ist falsch. Führen Sie **SignTool** erneut mit dem Hashalgorithmus aus, der mit der App-Paketblockzuordnung übereinstimmt (mit dem das App-Paket erstellt wurde).  |
+| 151.          | Fehler 0x8007000B: Die angegebene Hashmethode der Signatur (SHA512) muss mit der Hashmethode, die in der App-Paketblockzuordnung (SHA256) verwendet wurde, übereinstimmen.     | Der im Parameter /fd angegebene Hashalgorithmus ist falsch. Führen Sie **SignTool** erneut mit dem Hashalgorithmus aus, der mit der App-Paketblockzuordnung übereinstimmt (mit dem das App-Paket erstellt wurde).  |
 | 152          | Fehler 0x8007000B: Der Inhalt des App-Pakets muss für die Blockzuordnung gültig sein.                                                           | Das App-Paket ist beschädigt und muss neu erstellt werden, um eine neue Blockzuordnung zu generieren. Weitere Informationen zum Erstellen eines App-Pakets finden Sie unter [Erstellen eines App-Pakets mit dem Tool „MakeAppx.exe“](https://msdn.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool). |

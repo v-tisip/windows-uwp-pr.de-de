@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Store-Dienste, Microsoft Store-Analyse-API, Einblicke
 ms.localizationpriority: medium
 ms.openlocfilehash: e7ca6eed40af37276b5b4c98ec7b1b709bdadfb9
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4208114"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267485"
 ---
 # <a name="get-insights-data-for-your-desktop-application"></a>Erhalten Sie Einblicke Daten für Ihre desktop-Anwendung
 
-Verwenden Sie diese Methode in der Microsoft Store-Analyse-API zum Abrufen von Einblicke zugehörige Daten auf Integrität Metrik für eine desktop-Anwendung, die Sie in der [Windows-desktopanwendungsprogramm](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)hinzugefügt haben. Diese Daten sind auch im [Bericht "Integrität"](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) für desktopanwendungen im Windows Dev Center-Dashboard verfügbar.
+Verwenden Sie diese Methode in der Microsoft Store-Analyse-API zum Abrufen von Einblicken, die zugehörige Daten auf Integrität Metrik für eine desktop-Anwendung, die Sie für das [Windows-desktopanwendungsprogramm](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)hinzugefügt haben. Diese Daten sind auch im [Bericht "Integrität"](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) für desktopanwendungen im Windows Dev Center-Dashboard verfügbar.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -51,11 +51,11 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 | applicationId | string | Die Produkt-ID der Desktopanwendung, für die Sie Einblicke Daten abrufen möchten. Um die Produkt-ID einer Desktopanwendung zu erhalten, öffnen Sie einen [Dev Center-Analysebericht für Ihre Desktopanwendung](https://msdn.microsoft.com/library/windows/desktop/mt826504) (z.B. den **Integritätsbericht**) und rufen Sie die Produkt-ID aus der URL ab. Wenn Sie diesen Parameter nicht angeben, enthält der Antworttext Einblicke Daten für alle apps, die für Ihr Konto registriert wurden.  |  Nein  |
 | startDate | date | Das Startdatum im Datumsbereich der Einblicke Daten abgerufen. Der Standardwert ist 30Tage vor dem aktuellen Datum. |  Nein  |
 | endDate | date | Das Enddatum im Datumsbereich der Einblicke Daten abgerufen. Der Standardwert ist das aktuelle Datum. |  Nein  |
-| filter | string  | Mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Jede Anweisung enthält einen Feldnamen aus dem Antworttext und einen Wert, die mit den Operatoren **eq** oder **ne** verknüpft sind. Anweisungen können mit **and** oder **or** kombiniert werden. Zeichenfolgenwerte im Parameter *filter* müssen von einfachen Anführungszeichen eingeschlossen werden. Beispielsweise *Filter = DataType Eq 'Kauf"*. <p/><p/>Diese Methode unterstützt derzeit nur der Filter **Health**.  | Nein   |
+| filter | string  | Mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Jede Anweisung enthält einen Feldnamen aus dem Antworttext und einen Wert, die mit den Operatoren **eq** oder **ne** verknüpft sind. Anweisungen können mit **and** oder **or** kombiniert werden. Zeichenfolgenwerte im Parameter *filter* müssen von einfachen Anführungszeichen eingeschlossen werden. Beispielsweise *Filter = DataType Eq 'Kauf"*. <p/><p/>Diese Methode unterstützt derzeit nur der Filter- **Integrität**.  | Nein   |
 
 ### <a name="request-example"></a>Anforderungsbeispiel
 
-Das folgende Beispiel zeigt eine Anforderung zum Abrufen von Daten Einblicke. Ersetzen Sie den Wert von *ApplicationId* mit den entsprechenden Wert für Ihre desktop-Anwendung.
+Das folgende Beispiel zeigt eine Anforderung zum Abrufen von Daten Einblicke. Ersetzen Sie den *ApplicationId* -Wert, mit dem entsprechenden Wert für Ihre desktop-Anwendung.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/desktop/insights?applicationId=10238467886765136388&startDate=6/1/2018&endDate=6/15/2018&filter=dataType eq 'health' HTTP/1.1
@@ -72,14 +72,14 @@ Authorization: Bearer <your access token>
 | TotalCount | int    | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.                 |
 
 
-### <a name="insight-values"></a>Insight Werte
+### <a name="insight-values"></a>Insight-Werte
 
 Elemente im Array *Value* enthalten die folgenden Werte.
 
 | Wert               | Typ   | Beschreibung                           |
 |---------------------|--------|-------------------------------------------|
 | applicationId       | string | Die Produkt-ID der Desktopanwendung, für die Sie Einblicke Daten abgerufen wurden.     |
-| insightDate                | string | Das Datum, an dem wir die Änderung in einer bestimmten Metrik identifiziert. Dieses Datum steht das Ende der Woche, in dem wir eine erhebliche Erhöhung erkannt, oder in einer Metrik im Vergleich zur vorherigen Woche, verringern. |
+| insightDate                | string | Das Datum, an dem wir die Änderung in einer bestimmten Metrik identifiziert. Dieses Datum stellt das Ende der Woche, in dem wir eine erhebliche Erhöhung erkannt, oder in einer Metrik im Vergleich zur vorherigen Woche, verringern. |
 | Datentyp     | string | Eine Zeichenfolge, die den allgemeine Analysen Bereich angibt, den diese Insight informiert. Diese Methode unterstützt derzeit nur **Integrität**.    |
 | insightDetail          | array | Eine oder mehrere [InsightDetail Werte](#insightdetail-values) , die Details für aktuelle Insight darstellen.    |
 
@@ -92,10 +92,10 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | SubDimensions         | array |  Ein oder mehrere Objekte, die eine einzelne Metrik für die Einblicke zu beschreiben.   |
 | Prozent            | string |  Der Prozentsatz, den die Metrik über Ihres gesamten Kundenstamms geändert.  |
 | DimensionName           | string |  Der Name des die Metrik befindet sich in der aktuellen Dimension beschrieben. Beispiele sind **EventType**, **Markt**, **Gerätetyp**und **PackageVersion**.   |
-| DimensionValue              | string | Der Wert der Metrik, die in der aktuellen Dimension beschrieben wird. Kann z. B., wenn **DimensionName** **EventType**ist, **DimensionValue** **Absturz** oder **Blockade**.   |
+| DimensionValue              | string | Der Wert der Metrik, die in der aktuellen Dimension beschrieben wird. Beispielsweise ist **DimensionName** **EventType**, **DimensionValue** **Absturz** oder **Blockade**möglicherweise.   |
 | FactValue     | string | Der absoluten Wert der Metrik auf das Datum, an das die Einblicke erkannt wurde.  |
 | Richtung | string |  Die Richtung der Änderung (**positiv** oder **negativ**).   |
-| Date              | String |  Das Datum, an dem wir die Änderung im Zusammenhang mit den aktuellen Einblick oder die aktuelle Dimension identifiziert.   |
+| Date              | String |  Das Datum, an dem wir die Änderung im Zusammenhang mit der aktuellen Insight oder die aktuelle Dimension identifiziert.   |
 
 ### <a name="response-example"></a>Antwortbeispiel
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 602a0af685e812f5c65f94d07297cac9fc411923
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4206942"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267999"
 ---
 # <a name="introduction-to-uwp-app-design"></a>Einführung in das UWP-App-Design
 
@@ -29,11 +29,11 @@ Diese Einführung bietet einen Überblick über die universellen Designfunktione
 
 ## <a name="effective-pixels-and-scaling"></a>Effektive Pixel und Skalierung
 
-UWP-apps, die von Ihrem Fernsehgerät, Tablets oder PCs auf allen [Windows 10-Geräten](../devices/index.md)ausgeführt werden. Wie also entwerfen Sie eine Benutzeroberfläche, die auf einer Vielzahl von Geräten und Bildschirmgrößen gut aussieht?
+UWP-apps, die auf allen [Windows 10-Geräte](../devices/index.md), seien es TV Tablets oder PCs ausgeführt werden. Wie also entwerfen Sie eine Benutzeroberfläche, die auf einer Vielzahl von Geräten und Bildschirmgrößen gut aussieht?
 
 ![Dieselbe App auf verschiedenen Geräten](images/universal-image-1.jpg)
 
-UWP unterstützt, indem Sie UI-Elemente automatisch anpassen, sodass sie lesbar und leicht zu interagieren auf allen Geräten und Bildschirmgrößen sind.
+UWP unterstützt, indem die UI-Elemente automatisch angepasst, sodass sie lesbar und leicht zu interagieren auf allen Geräten und Bildschirmgrößen sind.
 
 Wenn Ihre App auf einem Gerät ausgeführt wird, verwendet das System einen Algorithmus, um die Art der Anzeige der UI-Elemente auf dem Bildschirm zu normalisieren. Dieser Skalierungsalgorithmus berücksichtigt den Abstand zum Bildschirm und die Bildschirmdichte (Pixel pro Zoll), um die wahrgenommene Größe (anstelle der physischen Größe) zu optimieren. Mit dem Skalierungsalgorithmus wird sichergestellt, dass der Schriftgrad 24 Pixel auf einem 3 Meter entfernten Surface Hub genauso für den Benutzer lesbar ist wie der Schriftgrad 24 Pixel auf einem 5-Zoll-Smartphone, das nur einige Zentimeter entfernt ist.
 
@@ -49,7 +49,8 @@ Sie können die Pixeldichte und die tatsächliche Bildschirmauflösung beim Entw
 ### <a name="multiples-of-four"></a>Vielfache von vier
 
 :::row:::
-    ::: Column Span::: die Größen, Ränder und Positionen von UI-Elementen sollte immer **ein Vielfaches von 4 Epx** in Ihren UWP-apps sein.
+    :::column span:::
+        The sizes, margins, and positions of UI elements should always be in **multiples of 4 epx** in your UWP apps.
 
         UWP scales across a range of devices with scaling plateaus of 100%, 125%, 150%, 175%, 200%, 225%, 250%, 300%, 350%, and 400%. The base unit is 4 because it's the only integer that can be scaled by non-whole numbers (e.g. 4*1.5 = 6). Using multiples of four aligns all UI elements with whole pixels and ensures UI elements have crisp, sharp edges. (Note that text doesn't have this requirement; text can have any size and position.)
     :::column-end:::
@@ -66,7 +67,7 @@ Da UWP-Apps automatisch für alle Geräte skaliert werden, folgt das Entwerfen e
 
 :::row:::
     :::column:::
-        Wenn eine UWP-app auf jedem Windows 10-Gerät gestartet wird, startet sie in einem [Fenster](/uwp/api/Windows.UI.Xaml.Controls.Window) mit einer [Frame](/uwp/api/Windows.UI.Xaml.Controls.Frame)zwischen [Seite](/uwp/api/Windows.UI.Xaml.Controls.Page) Instanzen navigieren kann.
+        When a UWP app is launched on any Windows 10 device, it launches in a [Window](/uwp/api/Windows.UI.Xaml.Controls.Window) with a [Frame](/uwp/api/Windows.UI.Xaml.Controls.Frame), which can navigate between [Page](/uwp/api/Windows.UI.Xaml.Controls.Page) instances.
     :::column-end:::
     :::column:::
         ![Frame](images/frame.svg)
@@ -75,7 +76,7 @@ Da UWP-Apps automatisch für alle Geräte skaliert werden, folgt das Entwerfen e
 
 :::row:::
     :::column:::
-        Sie können Benutzeroberfläches Ihrer app als eine Sammlung von Seiten vorstellen. Es liegt an Ihnen, was auf jeder Seite angezeigt wird und welche Beziehungen zwischen den Seiten bestehen sollen.
+        You can think of your app's UI as a collection of pages. It's up to you to decide what should go on each page, and the relationships between pages.
 
         To learn how you can organize your pages, see [Navigation basics](navigation-basics.md).
     :::column-end:::
@@ -118,7 +119,7 @@ Allgemeine Steuerelemente sind zudem sehr anpassbar. Sie können die Vordergrund
 
 :::row:::
     :::column:::
-        Ihre UWP-app interagiert mit der allgemeinen Windows-Umgebung mit Kacheln und Benachrichtigungen in der Windows- [Shell](../shell/tiles-and-notifications/creating-tiles.md).
+        Your UWP app will interact with the broader Windows experience with tiles and notifications in the Windows [Shell](../shell/tiles-and-notifications/creating-tiles.md).
 
         Tiles are displayed in the Start menu and when your app launches, and they provide a glimpse of what's going on in your app. Their power comes from the content behind them, and the intelligence and craft with which they're offered up.
 
@@ -133,10 +134,10 @@ Allgemeine Steuerelemente sind zudem sehr anpassbar. Sie können die Vordergrund
 
 :::row:::
     :::column:::
-        UWP-Apps basieren auf intelligenten Interaktionen. Sie können um eine Klick-Interaktion herum entwerfen, ohne zu wissen oder zu definieren, ob der Klick von einer Maus, einem Stift oder einem Fingertipp stammt. Sie können Ihre Apps aber auch für bestimmte [Eingabemodi](../input/input-primer.md) gestalten.
+        UWP apps rely on smart interactions. You can design around a click interaction without having to know or define whether the click comes from a mouse, a stylus, or a tap of a finger. However, you can also design your apps for [specific input modes](../input/input-primer.md).
     :::column-end:::
     :::column:::
-        ![Eingabe](images/inputs.svg)
+        ![inputs](images/inputs.svg)
     :::column-end:::
 :::row-end:::
 

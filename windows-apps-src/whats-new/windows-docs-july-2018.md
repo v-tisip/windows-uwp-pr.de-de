@@ -1,6 +1,6 @@
 ---
 author: QuinnRadich
-title: Neuigkeiten in Windows-Dokumentation im Juli 2018 – Entwicklung von UWP-apps
+title: Was ist neu in Windows-Dokumentation im Juli 2018 – Entwicklung von UWP-apps
 description: Neue Features, Videos, Beispiele und entwicklerleitfäden wurden in der Windows 10-Entwicklerdokumentation für Juli 2018 hinzugefügt.
 keywords: Neues in, Update, Features, Anleitungen für Entwickler, Windows 10, Juli
 ms.author: quradic
@@ -10,15 +10,15 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f41d25fd6757e5d3f80d00de341168de4f34e946
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4206250"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4266701"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>Neuigkeiten in der Windows-Entwicklerdokumentation im Juli 2018
 
-Die Entwicklerdokumentation für die Windows-Plattform wird ständig mit Informationen über neue Features für Entwickler aktualisiert. Die folgenden Featureübersichten, entwicklerleitfäden, Videos und Beispiele wurden in den Monat Juli zur Verfügung gestellt wurden.
+Die Entwicklerdokumentation für die Windows-Plattform wird ständig mit Informationen über neue Features für Entwickler aktualisiert. Die folgenden Featureübersichten, entwicklerleitfäden, Videos und Beispiele wurden im Juli zur Verfügung gestellt wurden.
 
 Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/create-uwp-apps.md) oder sich mit der Verwendung von [vorhandenem App-Code unter Windows](../porting/index.md) vertraut machen.
 
@@ -26,7 +26,7 @@ Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?L
 
 ### <a name="progressive-web-apps-on-windows"></a>Progressive Web-Apps unter Windows
 
-[Progressive Web-Apps (PWAs)](https://developer.microsoft.com/windows/pwa) sind einfach Web-apps, die durch systemeigene app-ähnliche Features zur Unterstützung von Plattformen und Browser-Engines, z. B. Starten von Startseite Installation, offline-Supports und Push [schrittweise erweiterte](https://wikipedia.org/wiki/Progressive_enhancement) sind Benachrichtigungen. Genießen Sie den zusätzlichen Vorteil der Ausführung unter Windows 10 mit der Microsoft Edge (EdgeHTML)-Engine, PWAs [unabhängig vom Browserfenster als UWP-apps.](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)
+[Progressive Web-Apps (PWAs)](https://developer.microsoft.com/windows/pwa) sind einfach Web-apps, die durch systemeigene app-ähnliche Features zur Unterstützung von Plattformen und Browser-Engines, z. B. Starten von Startseite Installation, offline-Supports und Push [schrittweise erweiterte](https://wikipedia.org/wiki/Progressive_enhancement) sind Benachrichtigungen. Genießen Sie den zusätzlichen Vorteil Ausführung unter Windows 10 mit der Microsoft Edge (EdgeHTML)-Engine, PWAs [unabhängig vom Browserfenster als UWP-apps.](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)
 
 ![Ein Image des PWAs in Aktion zu sehen](images/progressive-web-apps.jpg)
 
@@ -38,7 +38,7 @@ Sehen Sie sich unsere PWA Handbüchern aus, um:
 
 ### <a name="notepad"></a>Windows-Editor
 
-In Windows 10 Insider Preview Build 17713, [Editor wurde aktualisiert und bietet zahlreiche neue Features](http://aka.ms/ant-man)verfügbar. Zoomen, direktionales suchen und ersetzen und Unterstützung für Unix/Linux-BF und Mac (CR) Zeilenenden sind jetzt für [Windows-Insider](https://insider.windows.com/)verfügbar. 
+In Windows 10 Insider Preview Build 17713, [Editor wurde aktualisiert und bietet zahlreiche neue Features](http://aka.ms/ant-man)verfügbar. Zoomen, direktionales suchen und ersetzen und Unterstützung für Unix/Linux (BF) und Mac (CR) Zeilenenden sind jetzt für [Windows-Insider](https://insider.windows.com/)verfügbar. 
 
 ## <a name="developer-guidance"></a>Anleitungen für Entwickler
 
@@ -76,11 +76,11 @@ Darüber hinaus haben wir einige Updates zu bestehenden Seiten vorgenommen:
 
 ### <a name="get-started-for-devs-create-and-customize-a-form-on-windows-10"></a>Erste Schritte für Entwickler: Erstellen und Anpassen eines Formulars unter Windows 10
 
-Unsere [Erste Schritte-Dokumentation](../get-started/index.md) für Windows-Entwickler bieten jetzt praktische Erfahrung mit grundlegenden app-Entwicklungsaufgabe. In diesem Video führt Sie durch eine diese Themen und werden die Grundlagen der beim Erstellen einer Benutzeroberfläche in Ihrer app. [Das Video ansehen](https://www.youtube.com/watch?v=AgngKzq4hKI&feature=youtu.be) , um den Code in Aktion zu sehen, klicken Sie dann anzuzeigen [finden Sie im Thema selbst.](http://aka.ms/CreateForms)
+Unsere [Erste Schritte-Dokumentation](../get-started/index.md) für Windows-Entwickler jetzt bereitstellen praktische Erfahrung mit grundlegenden app-Entwicklungsaufgabe. In diesem Video führt Sie durch eine diese Themen, und es werden die Grundlagen der Erstellung eines Formulars Benutzeroberfläche in Ihrer app. [Das Video ansehen](https://www.youtube.com/watch?v=AgngKzq4hKI&feature=youtu.be) , um den Code in Aktion zu sehen, klicken Sie dann anzuzeigen [finden Sie im Thema selbst.](http://aka.ms/CreateForms)
 
 ### <a name="enhance-your-bot-with-project-personality-chat"></a>Verbessern Sie Ihre Bot mit Projekt Persönlichkeit chat
 
-Project Persönlichkeit Chat können Sie Ihre Chat-Bots eine anpassbare Rolle hinzufügen. Durch die Integration mit Microsoft Bot Framework SDK, können Sie kleine sprechen Funktionen für eine mehr gesprochener Möglichkeit zur Interaktion mit den Kunden hinzufügen. Erfahren Sie, wie Sie es, und dann [die interaktive Demo ausprobieren](http://aka.ms/PersonalityChat) für eine praktische Erfahrung implementieren [das Video ansehen](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) .
+Projekt Persönlichkeit Chat können Sie Ihre Chat-Bots eine anpassbare Rolle hinzufügen. Durch die Integration mit Microsoft Bot Framework SDK, können Sie kleine sprechen Funktionen für eine mehr gesprochener Möglichkeit zur Interaktion mit den Kunden hinzufügen. [Das Video ansehen](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) , erfahren Sie, wie Sie es, und dann [die interaktive Demo testen](http://aka.ms/PersonalityChat) für eine praktische Erfahrung zu implementieren.
 
 ### <a name="one-dev-question"></a>One Dev Frage
 

@@ -1,6 +1,6 @@
 ---
 author: normesta
-Description: Enhance your desktop app for Windows 10 users by using Universal Windows Platform (UWP) APIs.
+Description: Enhance your desktop application for Windows 10 users by using Universal Windows Platform (UWP) APIs.
 Search.Product: eADQiWindows 10XVcnh
 title: Verbessern Ihrer Desktopanwendung für Windows10
 ms.author: normesta
@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: aafe2d09fc27a2693ccf2c4c9d8f189aa0164a3c
-ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
-ms.translationtype: HT
+ms.openlocfilehash: 392f8166e16c028a57bc9e27039a9884f1d9714a
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "1976508"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267765"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Verbessern Sie Ihre Desktopanwendung für Windows10
 
@@ -78,11 +78,11 @@ Jetzt können Sie moderner Funktionen für Benutzer der Anwendung unter Windows1
 
 :white_check_mark: **Entscheiden Sie zunächst, welche Funktionen Sie hinzufügen möchten**
 
-Es gibt viele zur Auswahl. Beispielsweise können Sie mithilfe von Monetisierungs-APIs den Kaufablauf vereinfachen oder mehr Aufmerksamkeit für Ihre App generieren.
+Es gibt viele zur Auswahl. Beispielsweise können Sie Ihre Bestellung Reihenfolge Fluss mithilfe von monetisierungs-APIs oder mehr Aufmerksamkeit für Ihre Anwendung bei interessante, z. B. ein neues Bild freizugeben, der kaufablauf vereinfachen.
 
 ![Popup](images/desktop-to-uwp/toast.png)
 
-Auch dann, wenn Benutzer Ihre Nachricht ignorieren oder schließen, können sie diese im Info-Center anzeigen und dann auf die Nachricht klicken, um Ihre App zu öffnen. Dies erhöht die Interaktion mit Ihrer App und hat den zusätzlichen Vorteil, das Sie die App tief in das Betriebssystem integrieren. Wir zeigen Ihnen den Code für diese Funktion weiter unten.
+Auch dann, wenn Benutzer Ihre Nachricht ignorieren oder schließen, können sie diese im Info-Center anzeigen und dann auf die Nachricht klicken, um Ihre App zu öffnen. Dies erhöht die Interaktion mit Ihrer Anwendung und hat den zusätzlichen Vorteil, Ihre Anwendung tief in das Betriebssystem integrieren. Wir zeigen Ihnen den Code für diese Funktion weiter unten.
 
 Besuchen Sie unsere [Developer Center](https://developer.microsoft.com/windows) mit weiteren Ideen.
 
@@ -173,7 +173,7 @@ Weitere Informationen zu Benachrichtigungen finden Sie unter [Adaptive und inter
 
 ## <a name="support-windows-xp-windows-vista-and-windows-78-install-bases"></a>Unterstützung der Windows XP-, Windows Vista- und Windows7/8-Installationsbasis
 
-Sie können Ihre App für Windows10 modernisieren, ohne eine neue Verzweigung zu erstellen und eine separate Codebasis verwalten zu müssen.
+Sie können Ihre Anwendung für Windows 10 modernisieren, ohne dass eine neue Verzweigung zu erstellen und eine separate Codebasis verwalten zu müssen.
 
 Wenn Sie separate Binärdateien für Windows10-Benutzer erstellen möchten, verwenden Sie die bedingten Kompilierung. Wenn Sie einen Satz von Binärdateien für alle Windows-Benutzer erstellen möchten, verwenden Sie Laufzeitprüfungen.
 
@@ -224,7 +224,7 @@ Der Compiler erstellt den Code nur dann, wenn die Konstante in der aktiven Build
 
 ### <a name="runtime-checks"></a>Laufzeitprüfungen
 
-Sie können einen Satz von Binärdateien für alle Windows-Benutzer kompilieren, unabhängig davon, welche Version von Windows sie ausführen. Ihre App ruft UWP-APIs nur dann auf, wenn der Benutzer Ihre App als verpackte App für Windows10 ausgeführt.
+Sie können einen Satz von Binärdateien für alle Windows-Benutzer kompilieren, unabhängig davon, welche Version von Windows sie ausführen. Einem Aufruf von UWP-APIs nur dann, wenn der Benutzer, die Ihre Anwendung als eine Anwendung für Windows 10 ausgeführt wird.
 
 Die einfachste Methode zum Hinzufügen von Laufzeitprüfungen zum Code ist die Installation des Nuget-Pakets [Desktop Bridge Helpers](https://www.nuget.org/packages/DesktopBridge.Helpers/) und die Verwendung der ``IsRunningAsUWP()``-Methode, um den ganzen UWP-Code abzugrenzen. Weitere Detail finden Sie in diesem Blogbeitrag: [Desktop-Brücke - Identifizieren des Anwendungskontexts](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
 
@@ -237,7 +237,7 @@ Die einfachste Methode zum Hinzufügen von Laufzeitprüfungen zum Code ist die I
 * [„Hello world“-Beispiel](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/HelloWorldSample)
 * [Sekundäre Kachel](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/SecondaryTileSample)
 * [Store-API-Beispiel](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/StoreSample)
-* [WinForms-App, die einen UWP-UpdateTask implementiert.](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/WinFormsUpdateTaskSample)
+* [WinForms-Anwendung, die einen UWP-UpdateTask implementiert.](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/WinFormsUpdateTaskSample)
 * [Beispiele für Desktop-App-Brücke zu UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
 
 

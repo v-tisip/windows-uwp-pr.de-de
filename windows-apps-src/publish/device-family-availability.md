@@ -3,18 +3,18 @@ author: jnHs
 Description: After your packages have been successfully uploaded, you'll see a table that indicates which packages will be offered to specific Windows 10 device families (and earlier OS versions, if applicable), in ranked order.
 title: Verfügbarkeit von Gerätefamilien
 ms.author: wdg-dev-content
-ms.date: 08/07/2018
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Pakete, hochladen, Verfügbarkeit von Gerätefamilien
 ms.localizationpriority: medium
-ms.openlocfilehash: 0485ef2f884d8957f6d3d1d7544415dd676bf95b
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: e86b56c09f907e45655a0ef9b94fad30a4959b59
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4209746"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4266799"
 ---
 # <a name="device-family-availability"></a>Verfügbarkeit von Gerätefamilien
 
@@ -55,11 +55,9 @@ Wenn Sie eine UWP-App für Windows10 IoT Core übermitteln, sollten Sie nach dem
 Wenn Ihre Übermittlung Pakete enthält, die auf **Windows8/8.1** und **Windows Phone8.x oder früher**ausgeführt werden können, werden diese Pakete Kunden zur Verfügung gestellt, wie in der Tabelle dargestellt. Es gibt keine Kontrollkästchen für diese Betriebssystemversionen. Wenn Sie das Angebot der App für diese Kunden beenden möchten, entfernen Sie die entsprechenden Pakete aus Ihrer Übermittlung.
 
 > [!IMPORTANT]
-> Um zu verhindern, dass eine bestimmte Windows 10-Gerätefamilie Ihre Übermittlung herunterladen kann, müssen Sie das [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily)-Element im Appx-Manifest so aktualisieren, dass die App nur auf die Gerätefamilie abzielt, die Sie unterstützen möchten (d. h. Windows.Mobile oder Windows.Desktop), statt den Windows.Universal-Wert zu übernehmen (für die universelle Gerätefamilie), den Microsoft Visual Studio standardmäßig im Appx-Manifest einschließt.
+> Um vollständig eine bestimmte Windows 10-Gerätefamilie verhindern können, dass Ihre Übermittlung, aktualisieren Sie das [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) -Element in Ihrem Manifest nur die Gerätefamilie ausgerichtet, die Sie unterstützen möchten (d. h. Windows.Mobile oder Windows.Desktop), anstatt als verlassen es als den Windows.Universal-Wert (für die universelle Gerätefamilie), die Microsoft Visual Studio im Manifest ist standardmäßig enthalten.
 
-Beachten Sie außerdem, dass die unter **Verfügbarkeit von Gerätefamilien** getroffene Auswahl nur für neue Verkäufe gilt. Kunden, die Ihre App bereits verwenden, können dies weiterhin tun und erhalten alle zur Verfügung gestellten Updates, selbst wenn Sie diese Gerätefamilie an dieser Stelle entfernen. Dies gilt auch für Kunden, die Ihre App vor dem Upgrade auf Windows 10 erworben haben.
-
-Beispiel: Wenn Sie eine App mit Windows Phone 8.1-Paketen veröffentlicht haben und später ein Windows 10 (UWP)-Paket für die gleiche App hinzufügen, das auf die universelle Gerätefamilie abzielt, wird Kunden mit Mobilgeräten unter Windows 10, die bereits über das Windows Phone 8.1-Paket verfügen, ein Update auf dieses Windows 10 (UWP)-Paket angeboten, selbst wenn Sie das Kontrollkästchen für **Windows 10 Mobile** deaktiviert haben (da dies kein neuer Verkauf ist, sondern ein Update). Wenn Sie kein Windows 10 (UWP)-Paket bereitstellen, das auf die universelle oder Mobilgerätefamilie abzielt, bleibt Kunden mit Mobilgeräten mit Windows 10 weiterhin das Windows Phone 8.1-Paket zur Verfügung.
+Beachten Sie außerdem, dass die unter **Verfügbarkeit von Gerätefamilien** getroffene Auswahl nur für neue Verkäufe gilt. Kunden, die Ihre App bereits verwenden, können dies weiterhin tun und erhalten alle zur Verfügung gestellten Updates, selbst wenn Sie diese Gerätefamilie an dieser Stelle entfernen. Dies gilt auch für Kunden, die Ihre App vor dem Upgrade auf Windows 10 erworben haben. Beispiel: Wenn Sie eine App mit Windows Phone 8.1-Paketen veröffentlicht haben und später ein Windows 10 (UWP)-Paket für die gleiche App hinzufügen, das auf die universelle Gerätefamilie abzielt, wird Kunden mit Mobilgeräten unter Windows 10, die bereits über das Windows Phone 8.1-Paket verfügen, ein Update auf dieses Windows 10 (UWP)-Paket angeboten, selbst wenn Sie das Kontrollkästchen für **Windows 10 Mobile** deaktiviert haben (da dies kein neuer Verkauf ist, sondern ein Update). Wenn Sie kein Windows 10 (UWP)-Paket bereitstellen, das auf die universelle oder Mobilgerätefamilie abzielt, bleibt Kunden mit Mobilgeräten mit Windows 10 weiterhin das Windows Phone 8.1-Paket zur Verfügung.
 
 Weitere Informationen über die Gerätefamilien finden Sie unter [**Übersicht über die Gerätefamilien**](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview).
 

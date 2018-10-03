@@ -1,7 +1,7 @@
 ---
 author: cphilippona
 description: Reveal-Focus sind Lichteffekte, die den Rahmen des fokussierbaren Elementes animieren, wenn der Benutzer den Fokus des Gamepad oder Tastatur darauf lenken.
-title: Reveal-Focus
+title: Reveal-Fokus
 template: detail.hbs
 ms.author: mijacobs
 ms.date: 03/1/2018
@@ -14,17 +14,17 @@ design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b5fa84efbe20368be55a50ce20c8e6e5d1fe439
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4206238"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4268155"
 ---
-# <a name="reveal-focus"></a>Reveal-Focus
+# <a name="reveal-focus"></a>Reveal-Fokus
 
 ![Favoritenbild](images/header-reveal-focus.svg)
 
-Reveal-Focus sind Lichteffekte für [10-Fuß-Erlebnisse](/windows/uwp/design/devices/designing-for-tv), wie z. B. Xbox One-und Fernsehbildschirme. Sie animieren den Rahmen des fokussierbaren Elementes wie beispielsweise Schaltflächen, wenn der Benutzer den Fokus des Gamepad oder der Tastatur darauf lenken. Es ist standardmäßig deaktiviert, lässt sich allerdings ganz einfach aktivieren. 
+Reveal-Focus sind Lichteffekte für [10-Fuß-Funktionen](/windows/uwp/design/devices/designing-for-tv), wie z. B. Xbox One-und Fernsehbildschirme. Sie animieren den Rahmen des fokussierbaren Elementes wie beispielsweise Schaltflächen, wenn der Benutzer den Fokus des Gamepad oder der Tastatur darauf lenken. Es ist standardmäßig deaktiviert, lässt sich allerdings ganz einfach aktivieren. 
 
 (Der Effekt "einblenden" markieren, ein Lichteffekt, der interaktive Elemente hervorhebt finden Sie im [Artikel "einblenden" markieren](/windows/uwp/design/style/reveal).)
 
@@ -45,7 +45,7 @@ Dies ist besonders in 10-Fuß-Szenarien, in denen der Benutzer nicht volle Aufme
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Wenn Sie die <strong style="font-weight: semi-bold">XAML-Steuerelementekatalog</strong> -app installiert haben, klicken Sie hier, um zu <a href="xamlcontrolsgallery:/item/RevealFocus">die app zu öffnen und Reveal-Focus in Aktion zu sehen</a>.</p>
+    <p>Wenn Sie die <strong style="font-weight: semi-bold">XAML-Steuerelementekatalog</strong> -app installiert haben, klicken Sie hier, um zu <a href="xamlcontrolsgallery:/item/RevealFocus">die app zu öffnen und Reveal-Focus zu sehen</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Erwerben Sie die XAML-Steuerelementekatalog-App (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Erwerben Sie den Quellcode (GitHub)</a></li>
@@ -56,7 +56,7 @@ Dies ist besonders in 10-Fuß-Szenarien, in denen der Benutzer nicht volle Aufme
 
 ## <a name="how-to-use-it"></a>Verwendung
 
-Reveal-Focus standardmäßig deaktiviert ist. So aktivieren Sie es:
+Reveal-Focus ist, die sich standardmäßig deaktiviert. So aktivieren Sie es:
 1. Rufen Sie im Konstruktor der App die Eigenschaft [AnalyticsInfo.VersionInfo.DeviceFamily](/uwp/api/windows.system.profile.analyticsversioninfo.DeviceFamily) auf, und überprüfen Sie, ob die aktuellen Gerätefamilie `Windows.Xbox` ist.
 2. Wenn die Gerätefamilie `Windows.Xbox` ist, legen Sie die Eigenschaft [Application.FocusVisualKind](/uwp/api/windows.ui.xaml.application.FocusVisualKind) auf `FocusVisualKind.Reveal` fest. 
 
@@ -67,10 +67,10 @@ Reveal-Focus standardmäßig deaktiviert ist. So aktivieren Sie es:
     }
 ```
 
-Nachdem Sie die **FocusVisualKind** -Eigenschaft festlegen, wendet das System die Reveal-Focus auf Wunsch automatisch auf alle Steuerelemente, deren [UseSystemFocusVisuals](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals) -Eigenschaft auf **"true"** (der Standardwert für die meisten Steuerelemente) festgelegt ist. 
+Nach dem Festlegen der Eigenschaft **FocusVisualKind** wendet des Systems automatisch Reveal-Focus auf alle Steuerelemente, deren [UseSystemFocusVisuals](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals) -Eigenschaft auf **"true"** (der Standardwert für die meisten Steuerelemente) festgelegt ist. 
 
 ## <a name="why-isnt-reveal-focus-on-by-default"></a>Warum ist Reveal-Focus auf standardmäßig nicht? 
-Wie Sie sehen können, ist es relativ einfach, Reveal-Focus zu aktivieren, wenn die app erkennt, dass sie auf einer Xbox ausgeführt wird. Warum aktiviert das System die Funktion nicht einfach automatisch? Da Reveal-Focus visuellen Fokus vergrößert, wodurch Probleme mit dem UI-Layout entstehen können. In einigen Fällen müssen Sie die Reveal-Focus auf Wunsch für Ihre app zu optimieren anpassen möchten.
+Wie Sie sehen können, ist es relativ einfach, Reveal-Focus zu aktivieren, wenn die app erkennt, dass sie auf einer Xbox ausgeführt wird. Warum aktiviert das System die Funktion nicht einfach automatisch? Da Reveal-Focus des visuellen Fokus erhöht, wodurch Probleme mit dem UI-Layout entstehen können. In einigen Fällen müssen Sie die Reveal-Focus auf Wunsch für Ihre app zu optimieren anpassen möchten.
 
 ## <a name="customizing-reveal-focus"></a>Anpassen von Reveal-Focus
 
@@ -167,7 +167,7 @@ Wenn Sie nur den Schein ohne die primäre oder sekundäre Fokusanzeige verwenden
 
 ## <a name="use-your-own-focus-visuals"></a>Verwenden Sie Ihre eigenen visuellen Fokuselemente
 
-Eine weitere Möglichkeit zum Anpassen von Reveal-Focus ist können die System-Fokusanzeigen deaktivieren, indem Sie eigene visuelle Zustände verwenden. Weitere Informationen finden Sie unter [Beispiel für visuelle Fokuselemente](http://go.microsoft.com/fwlink/p/?LinkID=619895).
+Eine weitere Möglichkeit zum Anpassen von Reveal-Focus ist können die System-Fokusanzeigen deaktivieren, indem Sie eigene Fokusanzeigen zeichnen. Weitere Informationen finden Sie unter [Beispiel für visuelle Fokuselemente](http://go.microsoft.com/fwlink/p/?LinkID=619895).
 
 
 ## <a name="reveal-focus-and-the-fluent-design-system"></a>Reveal-Focus und das Fluent Design-System

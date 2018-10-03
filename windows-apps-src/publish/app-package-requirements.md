@@ -4,18 +4,18 @@ Description: Follow these guidelines to prepare your app's packages for submissi
 title: App-Paketanforderungen
 ms.assetid: 651B82BA-9D0C-45AC-8997-88CD93DC903C
 ms.author: wdg-dev-content
-ms.date: 05/16/2018
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Paketanforderungen, Pakete, Paketformat, unterstützte Version, übermitteln
 ms.localizationpriority: medium
-ms.openlocfilehash: d7d748f36dafd93066928f01f9aa42414f2ffc1f
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: f3e294fdf5a9b2d98f09d839fa62499b556de3a5
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4213180"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4268051"
 ---
 # <a name="app-package-requirements"></a>App-Paketanforderungen
 
@@ -34,17 +34,17 @@ Wenn Sie Microsoft Visual Studio als Entwicklungsumgebung verwenden, verfügen S
 
 Um Ihr Paket in Visual Studio zu erstellen, müssen Sie sich mit demselben Konto anmelden, das Ihrem Entwicklerkonto zugeordnet ist. Einige Teile des Paketmanifests enthalten spezifische kontobezogene Details. Diese Informationen werden erkannt und automatisch hinzugefügt. Ohne die zusätzlichen Informationen, die dem Manifest hinzugefügt wurden, können beim Hochladen von Paketen Fehler auftreten. 
 
-Beim Erstellen der App-Pakete kann Visual Studio eine APPX-Datei oder eine APPXUPLOAD-Datei erstellen (bzw. eine XAP-Datei für Windows Phone 8.1 und frühere Versionen). Bei Apps für Windows 10 laden Sie immer die APPXUPLOAD-Datei auf die Seite [Pakete](upload-app-packages.md) hoch. Weitere Informationen zum Verpacken von UWP-Apps für den Store finden Sie unter [Verpacken einer UWP-App mit Visual Studio](../packaging/packaging-uwp-apps.md).
+Wenn Sie Ihre app UWP-Pakete erstellen, kann Visual Studio ein .msix oder Appx-Datei oder eine .msixupload oder appxupload-Datei erstellen. Für UWP-apps wird empfohlen, dass Sie immer die .msixupload oder appxupload-Datei in die Seite " [Pakete](upload-app-packages.md) " hochladen. Weitere Informationen zum Verpacken von UWP-Apps für den Store finden Sie unter [Verpacken einer UWP-App mit Visual Studio](../packaging/packaging-uwp-apps.md).
 
 App-Pakete müssen nicht mit einem Stammzertifikat einer vertrauenswürdigen Zertifizierungsstelle signiert werden.
 
 
 ### <a name="app-bundles"></a>App-Bündel
 
-Für apps, die Windows 10, Windows 8.1 und/oder Windows Phone 8.1 ausgerichtet sind, kann Visual Studio generiert ein app-Bündel (.appxbundle), um die Größe der app reduzieren, die Benutzer herunterladen. Dieser Schritt ist in der Regel sinnvoll, wenn Sie sprachspezifische Ressourcen, mehrere Ressourcen für die Bildgröße oder Ressourcen für bestimmte Versionen von Microsoft DirectX definiert haben.
+Für UWP-apps können Visual Studio generiert ein app-Bündel (.msixbundle oder .appxbundle), um die Größe der app zu reduzieren, die Benutzer herunterladen. Dieser Schritt ist in der Regel sinnvoll, wenn Sie sprachspezifische Ressourcen, mehrere Ressourcen für die Bildgröße oder Ressourcen für bestimmte Versionen von Microsoft DirectX definiert haben.
 
 > [!NOTE]
-> Ein App-Bündel kann Ihre Pakete für alle Architekturen enthalten. Pro Zielbetriebssystem sollte nur ein App-Bündel eingereicht werden.
+> Ein App-Bündel kann Ihre Pakete für alle Architekturen enthalten.
 
 Bei einem App-Bündel lädt der Benutzer nicht alle vorhandenen Ressourcen, sondern nur relevante Dateien herunter. Weitere Informationen zu App-Bündeln finden Sie unter [Verpacken von Apps](../packaging/index.md) und [Verpacken von UWP-App mit Visual Studio](../packaging/packaging-uwp-apps.md).
 
@@ -61,7 +61,7 @@ Ihr Manifest muss spezifische konto- und App-bezogene Informationen enthalten. S
 > Bei den Werten im Manifest wird die Groß-/Kleinschreibung berücksichtigt. Leerzeichen und Satzzeichen müssen ebenfalls übereinstimmen. Geben Sie die Werte richtig ein, und überprüfen Sie sie anschließend auf ihre Korrektheit.
 
 
-App-Bündel (.appxbundle) verwenden Sie ein anderes Manifest. Ausführliche Informationen und die Anforderungen für App-Bündel finden Sie in der Dokumentation zum [Bündelmanifest](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest). Beachten Sie, dass in appxbundle, die .appxmanifest jedes Paket enthalten muss die gleichen Elemente und Attribute, mit Ausnahme der **ProcessorArchitecture** -Attribut des Elements [Identität](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) verwenden.
+App-Bündel (.msixbundle oder .appxbundle) verwenden Sie ein anderes Manifest. Ausführliche Informationen und die Anforderungen für App-Bündel finden Sie in der Dokumentation zum [Bündelmanifest](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest). Beachten Sie, dass in einem .msixbundle oder die appxbundle-Format, das Manifest jedes Paket enthalten muss die gleichen Elemente und Attribute, mit Ausnahme der **ProcessorArchitecture** -Attribut des Elements [Identität](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) verwenden.
 
 > [!TIP]
 > Führen Sie vor dem Einreichen Ihrer Pakete unbedingt das [Zertifizierungskit für Windows-Apps](../debug-test-perf/windows-app-certification-kit.md) aus. So können Sie feststellen, ob es mit Ihrem Manifest Probleme gibt, die Zertifizierungs- oder Einreichungsfehler verursachen können.
@@ -73,7 +73,7 @@ Ihre App-Pakete müssen die folgenden Anforderungen erfüllen:
 
 | App-Paketeigenschaft | Anforderung                                                          |
 |----------------------|----------------------------------------------------------------------|
-| Paketgröße         | APPX-Bündel: maximal 25GB pro Bündel <br>APPX-Pakete für Windows 10: maximal 25 GB pro Paket<br>APPX-Pakete für Windows 8.1: maximal 8 GB pro Paket <br> APPX-Pakete für Windows 8: maximal 2 GB pro Paket <br> APPX-Pakete für WindowsPhone 8.1: maximal 4GB pro Paket <br> XAP-Pakete: maximal 1 GB pro Paket                                                                           |
+| Paketgröße         | .msixbundle oder .appxbundle: maximal 25 GB pro Bündel <br>.msix oder AppX-Pakete, die für Windows 10:25 maximal GB pro Paket<br>APPX-Pakete für Windows 8.1: maximal 8 GB pro Paket <br> APPX-Pakete für Windows 8: maximal 2 GB pro Paket <br> APPX-Pakete für WindowsPhone 8.1: maximal 4GB pro Paket <br> XAP-Pakete: maximal 1 GB pro Paket                                                                           |
 | Hashes für Blockzuordnung     | SHA2-256-Algorithmus                                                   |
 
 
@@ -83,7 +83,7 @@ Für UWP-Apps müssen alle Pakete auf eine Version von Windows10 ausgerichtet se
 
 Derzeit wird der folgende Versionsbereich unterstützt: 
 - Minimum: 10.0.10240.0
-- Maximum: 10.0.17134.0
+- Maximale: 10.0.17763.1
 
 
 ## <a name="storemanifest-xml-file"></a>Datei „StoreManifest.xml“

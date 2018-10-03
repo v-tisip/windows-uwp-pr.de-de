@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, XAML, steuerelement, binden, collection
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ba935b1a5316c2d7af9c7681705595efea7ca08
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4210392"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4266519"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-collection"></a>XAML-Items-Steuerelemente; Binden an eine [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)-Collection
 > [!NOTE]
@@ -305,7 +305,7 @@ runtimeclass BookstoreViewModel
 ```
 
 > [!IMPORTANT]
-> Beachten Sie in den oben genannten MIDL 3.0-Eintrag, dass der Typ der Eigenschaft **BookSkus** [**IVector**](/uwp/api/windows.foundation.collections.ivector_t_) des [**IInspectable**](https://msdn.microsoft.com/library/windows/desktop/br205821). Im nächsten Abschnitt dieses Themas verwenden wir die Quelle von Elementen von einer [**ListBox**](/uwp/api/windows.ui.xaml.controls.listbox) **BookSkus**binden werden. Ein Listenfeld ist ein Elementsteuerelement, und um die Eigenschaft [**ItemsControl.ItemsSource**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) richtig festzulegen, müssen Sie festlegen, dass ein Wert vom Typ **IVector** **IInspectable**, oder eine Interoperabilität Typ wie z. B. [**IBindableObservableVector**](/uwp/api/windows.ui.xaml.interop.ibindableobservablevector).
+> Beachten Sie in den oben genannten MIDL 3.0-Eintrag, dass der Typ der Eigenschaft **BookSkus** [**IVector**](/uwp/api/windows.foundation.collections.ivector_t_) des [**IInspectable**](https://msdn.microsoft.com/library/windows/desktop/br205821). Im nächsten Abschnitt dieses Themas verwenden wir die Quelle von Elementen von einer [**ListBox**](/uwp/api/windows.ui.xaml.controls.listbox) **BookSkus**binden werden. Ein Listenfeld ist ein Elementsteuerelement, und um die Eigenschaft [**ItemsControl.ItemsSource**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) richtig festzulegen, müssen Sie festlegen, dass ein Wert vom Typ **IVector** **IInspectable**oder eines Typs Interoperabilität, z. B. [**IBindableObservableVector**](/uwp/api/windows.ui.xaml.interop.ibindableobservablevector).
 
 Speichern und erstellen Sie das Projekt. Kopieren Sie die Zugriffs-Stubs aus `BookstoreViewModel.h` und `BookstoreViewModel.cpp` in den Ordner `Generated Files` und implementieren Sie sie.
 
@@ -364,7 +364,7 @@ mit diesem.
 m_bookSkus = winrt::single_threaded_observable_vector<Windows::Foundation::IInspectable>();
 ```
 
-Anstelle von [**WinRT:: Make**](https://docs.microsoft.com/en-us/uwp/cpp-ref-for-winrt/make)aufrufen, erstellen Sie das entsprechende Collection-Objekt durch Aufrufen der **single_threaded_observable_vector\ < T\ >** Factory-Funktion.
+Rufen Sie [**WinRT:: Make**](https://docs.microsoft.com/en-us/uwp/cpp-ref-for-winrt/make), sondern erstellen Sie das entsprechende Collection-Objekt durch Aufrufen der **single_threaded_observable_vector\ < T\ >** Factory-Funktion.
 
 ## <a name="bind-a-listbox-to-the-bookskus-property"></a>Binden einer Listbox an die **BookSkus**-Eigenschaft
 Öffnen Sie `MainPage.xaml` mit dem XAML-Markup für unsere UI-Hauptseite. Fügen Sie den folgende Markup-Code in dem **StackPanel** hinzu, indem sich der **Button** befindet.

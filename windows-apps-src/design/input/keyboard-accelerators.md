@@ -14,12 +14,12 @@ pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: ce84debc3422f923c7c88aae1fa216665ef1ef0f
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: 8b4693c4ed6c02db9e4fe3f5f7fee6fe569c0e79
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4208660"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4267135"
 ---
 # <a name="keyboard-accelerators"></a>Zugriffstasten
 
@@ -250,6 +250,10 @@ void RefreshInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventA
 }
 ```
 
+## <a name="override-default-keyboard-behavior"></a>Standardverhalten überschreiben
+
+In einigen Fällen müssen Sie möglicherweise das Standardverhalten von bestimmten Tasten wie beispielsweise die RÜCKTASTE oder die EINGABETASTE überschreiben. Beispiel: 
+
 ## <a name="disable-a-keyboard-accelerator"></a>Deaktivieren einer Zugriffstaste 
 
 Wenn ein Steuerelement deaktiviert ist, wird die zugehörige Zugriffstaste ebenfalls deaktiviert. Im folgenden Beispiel ist die IsEnabled-Eigenschaft von ListView auf "false" festgelegt. Daher kann die zugehörige STRG+A-Zugriffstaste nicht aufgerufen werden.
@@ -360,13 +364,13 @@ Da Zugriffstasten in der Regel nicht direkt in der Benutzeroberfläche Ihrer UWP
 Standardmäßig wenn Zugriffstasten deklariert sind, stellen Sie alle Steuerelemente (außer [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem) und [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) die entsprechenden Tastenkombination in einer QuickInfo.
 
 > [!NOTE] 
-> Wenn ein Steuerelement mehrere Zugriffstasten definiert sind, wird nur die erste angezeigt.
+> Wenn ein Steuerelement mehrere Zugriffstasten definiert ist, wird nur das erste angezeigt.
 
 ![QuickInfo für Zugriffstasten](images/accelerators/accelerators_tooltip_savebutton_small.png)
 
 *Zugriffstastenkombination in QuickInfo*
 
-Für die [Schaltfläche](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button) [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)und [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) Objekte wird die Zugriffstaste des Steuerelements Standard-Tooltip angefügt. Für [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) und [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem))-Objekten, die Zugriffstaste wird mit den Flyout-Text angezeigt.
+Für die [Schaltfläche](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)und [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) -Objekte wird die Zugriffstaste des Steuerelements Standard-Tooltip angefügt. Für [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) und [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) Objekte, die Zugriffstaste wird mit den Flyout-Text angezeigt.
 
 > [!NOTE]
 > Die Angabe einer QuickInfos setzt (Siehe Button1 im folgenden Beispiel) dieses Verhalten.
