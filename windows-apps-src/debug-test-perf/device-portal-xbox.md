@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, geräteportal
 ms.localizationpriority: medium
 ms.openlocfilehash: 404db3963d2f9508d7c81053abf96b0e742103f7
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4260181"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4320950"
 ---
 # <a name="device-portal-for-xbox"></a><span data-ttu-id="a6c49-104">Device Portal für Xbox</span><span class="sxs-lookup"><span data-stu-id="a6c49-104">Device Portal for Xbox</span></span>
 
