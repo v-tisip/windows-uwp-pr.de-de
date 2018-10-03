@@ -5,7 +5,7 @@ title: Direktionalität und Schwerkraft – Animation in UWP-Apps
 label: Directionality and gravity
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 05/19/2017
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
@@ -14,17 +14,14 @@ pm-contact: stmoy
 design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: a5216e81bc556a2e761e88b071e988bf6e4f457e
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: b61abf00d5ab8820457742f16feb9b496b7d7d1c
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843814"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4265809"
 ---
 # <a name="directionality-and-gravity"></a>Direktionalität und Schwerkraft
-
-> [!IMPORTANT]
-> In diesem Artikel werden Funktionen beschrieben, die noch nicht veröffentlicht wurden und vor der kommerziellen Freigabe möglicherweise wesentlich geändert werden. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.
 
 Gerichtete Bewegungen festigen das mentale Modell der Reise, die ein Benutzer auf einer Oberfläche macht. Es ist wichtig, dass jede Bewegungsrichtung sowohl die Kontinuität des Raumes als auch die Integrität der Objekte im Raum unterstützt.
 
@@ -32,7 +29,9 @@ Eine gerichtete Bewegung unterliegt Kräften wie beispielsweise der Schwerkraft.
 
 ## <a name="direction-of-movement"></a>Bewegungsrichtung
 
-:::row::: :::column::: Die Bewegungsrichtung entspricht der einer physikalischen Bewegung. Wie in der Natur können sich Objekte entlang jeder Weltachse (X, Y, Z) bewegen. Entsprechend stellen wir uns die Bewegung von Objekten auf dem Bildschirm vor.
+:::row:::
+    :::column:::
+        Direction of movement corresponds to physical motion. Just like in nature, objects can move in any world axis - X,Y,Z. This is how we think of the movement of objects on the screen.
 
         When you move objects, avoid unnatural collisions. Keep in mind where objects come from and go to, and alway support higher level constructs that may be used in the scene, such as scroll direction or layout hierarchy.
     :::column-end:::
@@ -63,28 +62,39 @@ Dies hat mehrere Vorteile:
 
 Es sind 4 diskrete Navigationsrichtungen zu berücksichtigen.
 
-:::row::: :::column::: **Vorwärts hinein**
+:::row:::
+    :::column:::
+        **Forward-In**
 
         Celebrate content entering the scene in a manner that does not collide with outgoing content. Content decelerates into the scene.
     :::column-end:::
     :::column:::
         ![direction forward in](images/forwardIN.gif)
     :::column-end:::
-:::row-end::: :::row::: :::column::: **Vorwärts hinaus**
+:::row-end:::
+:::row:::
+    :::column:::
+        **Forward-Out**
 
         Content exits quickly. Objects accelerate off screen.
     :::column-end:::
     :::column:::
         ![direction forward out](images/forwardOUT.gif)
     :::column-end:::
-:::row-end::: :::row::: :::column::: **Rückwärts hinein**
+:::row-end:::
+:::row:::
+    :::column:::
+        **Backward-In**
 
         Same as Forward-In, but reversed.
     :::column-end:::
     :::column:::
         ![direction backward in](images/backwardIN.gif)
     :::column-end:::
-:::row-end::: :::row::: :::column::: **Rückwärts hinaus**
+:::row-end:::
+:::row:::
+    :::column:::
+        **Backward-Out**
 
         Same as Forward-Out, but reversed.
     :::column-end:::

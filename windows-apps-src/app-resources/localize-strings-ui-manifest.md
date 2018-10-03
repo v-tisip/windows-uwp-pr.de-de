@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: c9db9f3ce4397bec6fb0b6b339875c206d17c3fd
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4210910"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258503"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Lokalisieren von Zeichenfolgen in der Benutzeroberfläche und im App-Paketmanifest
 Weitere Informationen zu einer Werterhöhung Ihrer App durch Lokalisierung finden Sie unter [Globalisierung und Lokalisierung](../design/globalizing/globalizing-portal.md).
@@ -92,13 +92,13 @@ this->myXAMLTextBlockElement->Text = resourceLoader->GetString("Farewell");
 
 Sie können diesen Code in einer Klassenbibliothek (Universal Windows) oder in einem [Windows Runtime Library (Universal Windows)](../winrt-components/index.md)-Projekt verwenden. Zur Laufzeit werden die Ressourcen der App geladen, die die Bibliothek hostet. Wir empfehlen, dass eine Bibliothek Ressourcen aus der App lädt, die sie hostet, da die App wahrscheinlich einen höheren Lokalisierungsgrad aufweist. Wenn eine Bibliothek Ressourcen bereitstellen muss, sollte sie es der App, die sie hostet, ermöglichen, diese Ressourcen als Eingabe zu ersetzen.
 
-Wenn Sie ein Ressourcennamen Segmentierung vorhanden ist (es enthält "." Zeichen), dann wird mit ersetzen Punkte mit Schrägstrich ("/") für Zeichen im Namen Ressource. Eigenschaftsbezeichner, enthalten z. B. Punkte. Daher müssen Sie diese Substition erforderlich ist, um diese vom Code geladen werden.
+Wenn Sie ein Ressourcennamen Segmentierung vorhanden ist (es enthält "." Zeichen), dann wird mit ersetzen Punkte mit Schrägstrich ("/") für Zeichen im Namen Ressource. Eigenschaften-IDs enthalten z. B. Punkte. Daher müssen Sie diese Substition erforderlich ist, um diese vom Code geladen werden.
 
 ```csharp
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Fare/Well"); // <data name="Fare.Well" ...> ...
 ```
 
-Im Zweifelsfall können Sie [MakePri.exe](makepri-exe-command-options.md) PRI-Datei der app ausgeben. Jede Ressource `uri` wird in der Dump Datei angezeigt.
+Im Zweifelsfall können Sie [MakePri.exe](makepri-exe-command-options.md) verwenden, um Ihrer app PRI-Datei zu speichern. Jede Ressource `uri` wird in der Dump-Datei angezeigt.
 
 ```xml
 <ResourceMapSubtree name="Fare"><NamedResource name="Well" uri="ms-resource://<GUID>/Resources/Fare/Well">...
@@ -181,7 +181,7 @@ Wenn einem Ressourcendateinamen Segmentierung vorhanden ist (es enthält "." Zei
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Err.Msgs");
 ```
 
-Im Zweifelsfall können Sie [MakePri.exe](makepri-exe-command-options.md) PRI-Datei der app ausgeben. Jede Ressource `uri` wird in der Dump Datei angezeigt.
+Im Zweifelsfall können Sie [MakePri.exe](makepri-exe-command-options.md) verwenden, um Ihrer app PRI-Datei zu speichern. Jede Ressource `uri` wird in der Dump-Datei angezeigt.
 
 ```xml
 <ResourceMapSubtree name="Err.Msgs"><NamedResource name="MismatchedPasswords" uri="ms-resource://<GUID>/Err.Msgs/MismatchedPasswords">...
@@ -268,13 +268,13 @@ var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCur
 this.myXAMLTextBlockElement.Text = resourceLoader.GetString("exampleResourceName");
 ```
 
-Für eine Windows-Runtime Library (Universal Windows), wenn der Standardnamespace Segmentierung vorhanden ist (es enthält "." Zeichen), verwenden Sie dann in der Name der Ressourcenzuordnung Punkte.
+Für eine Windows-Runtime Library (Universal Windows), wenn der Standardnamespace Segmentierung vorhanden ist (es enthält "." Zeichen), dann Punkte in der Name der Ressourcenzuordnung verwenden.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("Contoso.Control/Resources");
 ```
 
-Sie müssen dies für eine Klassenbibliothek (Universal Windows). Im Zweifelsfall können Sie [MakePri.exe](makepri-exe-command-options.md) verwenden, um Ihre Komponente oder der Bibliothek PRI-Datei speichern. Jede Ressource `uri` wird in der Dump Datei angezeigt.
+Sie müssen dies für eine Klassenbibliothek (Universal Windows). Im Zweifelsfall können Sie [MakePri.exe](makepri-exe-command-options.md) verwenden, um Ihre Komponente oder der Bibliothek PRI-Datei zu sichern. Jede Ressource `uri` wird in der Dump-Datei angezeigt.
 
 ```xml
 <NamedResource name="exampleResourceName" uri="ms-resource://Contoso.Control/Contoso.Control/ReswFileName/exampleResourceName">...

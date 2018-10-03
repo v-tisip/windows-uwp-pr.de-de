@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows10, verpackung, paketlayout, bestandspaket
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ed24cb1ed0c4b4c15e6c96cf029c8f3841d8aac
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 3f8cbb3989b58b726336b4bd757902bd9ea3f8c0
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1818377"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4262457"
 ---
 # <a name="package-creation-with-the-packaging-layout"></a>Paketerstellung mit dem Verpackungslayout  
 
@@ -55,7 +55,7 @@ Hier sehen Sie ein Beispiel für ein einfaches Verpackungslayout:
 Analysieren wir dieses Beispiel, um zu verstehen, wie es funktioniert.
 
 ### <a name="packagefamily"></a>PackageFamily
-Dieses Verpackungslayout erstellt eine einzelne flache .appxbundle-Datei mit einem x64-Architekturpaket und einem Bestandspaket namens „Medien”. 
+Dieses verpackungslayout erstellt eine einzelne flache app-Bundle-Datei mit einer X64 architekturpaket und einem Bestandspaket namens "Medien". 
 
 Das **PackageFamily**-Element wird verwendet, um ein App-Bündel zu definieren. Sie müssen das **ManifestPath**-Attribut verwenden, um für das Bündel eine **AppxManifest**-Datei bereitzustellen, wobei diese **AppxManifest**-Datei der **AppxManifest**-Datei für das Architekturpaket des Bündels entsprechen sollte. Das **ID**-Attribut muss ebenfalls angegeben werden. Dies wird während der Erstellung des Pakets zusammen mit MakeAppx.exe verwendet, damit Sie nur dieses Paket erstellen können, wenn Sie möchten, und das ist der Dateiname des resultierenden Pakets. Das **FlatBundle**-Attribut wird verwendet, um zu beschreiben, welche Art von Bündel Sie erstellen möchten, wobei **true** für ein flaches Bündel (über das Sie hier mehr lesen können), und **false** für ein klassisches Bündel steht. Das **ResourceManager**-Attribut wird verwendet, um anzugeben, ob die Ressourcenpakete innerhalb dieses Bündels MRT verwenden, um auf die Dateien zuzugreifen. Dies ist standardmäßig **true**, ab Windows10, Version 1803, ist es jedoch noch nicht fertig, daher muss dieses Attribut auf **false** gesetzt werden.
 
@@ -147,7 +147,7 @@ Ressourcenpakete können mit dem **ResourcePackage**-Element angegeben werden. I
 
 Optionale Pakete besitzen jeweils ihre eigenen, eindeutigen Paketfamiliennamen und müssen mit **PackageFamily**-Elementen definiert werden, wenn das **Optional**-Attribut als **true** angegeben wird. Das **RelatedSet**-Attribut wird verwendet, um anzugeben, ob sich das optionale Paket innerhalb des zugehörigen Sets befindet (standardmäßig ist dieser Wert „true”), und ob das optionale Paket mit dem primären Paket aktualisiert werden soll.
 
-Das **PrebuiltPackage**-Element wird verwendet, um Pakete hinzufügen, die nicht im Verpackungslayout definiert sind, um in der/den zu erstellenden .appxbundle-Datei(en) enthalten oder referenziert zu sein. In diesem Fall wird ein anderes optionales DLC-Paket enthalten sein, damit die primäre .appxbundle-Datei darauf verweisen und es Teil des zugehörigen Sets werden kann.
+Das Element **PrebuiltPackage** wird verwendet, um Pakete hinzufügen, die nicht im verpackungslayout enthalten oder in den app-Bündel-Dateien zu erstellenden verwiesen werden definiert sind. In diesem Fall wird ein anderes optionales DLC-Paket hier enthalten sein, damit die primäre app-Bundle-Datei kann darauf verweisen und es Teil des zugehörigen Sets werden kann.
 
 
 ## <a name="build-app-packages-with-a-packaging-layout-and-makeappxexe"></a>Erstellen von App-Paketen mit einem Verpackungslayout und MakeAppx.exe
@@ -163,7 +163,7 @@ Wenn Sie jedoch Ihre App aktualisieren, und einige Pakete keine geänderten Date
 MakeAppx.exe build /f PackagingLayout.xml /id "x64" /ip PreviousVersion\ /op OutputPackages\ /iv
 ```
 
-Mit dem `/id`-Kennzeichen können die zu erstellenden Pakete aus dem Verpackungslayout entsprechend dem **ID**-Attribut im Layout ausgewählt werden. `/ip` wird verwendet, um anzugeben, wo sich in diesem Fall die früheren Versionen der Pakete befinden. Die frühere Version muss bereitgestellt werden, da die .appxbundle-Datei immer noch auf die frühere Version des **Medien**-Pakets verweisen muss. Mit dem `/iv`-Kennzeichen wird die Version der zu erstellenden Pakete automatisch erhöht (anstatt die Version in der **AppxManifest**-Datei zu ändern). Sie können auch die Switches `/pv` und `/bv` verwenden, um eine Paketversion (für alle zu erstellenden Pakete) bzw. eine Bündelversion (für alle zu erstellenden Bündel), direkt bereitzustellen.
+Mit dem `/id`-Kennzeichen können die zu erstellenden Pakete aus dem Verpackungslayout entsprechend dem **ID**-Attribut im Layout ausgewählt werden. `/ip` wird verwendet, um anzugeben, wo sich in diesem Fall die früheren Versionen der Pakete befinden. Die frühere Version muss bereitgestellt werden, da die app-Bundle-Datei weiterhin auf die vorherige Version des **Media** -Pakets verweisen muss. Mit dem `/iv`-Kennzeichen wird die Version der zu erstellenden Pakete automatisch erhöht (anstatt die Version in der **AppxManifest**-Datei zu ändern). Sie können auch die Switches `/pv` und `/bv` verwenden, um eine Paketversion (für alle zu erstellenden Pakete) bzw. eine Bündelversion (für alle zu erstellenden Bündel), direkt bereitzustellen.
 Verwenden Sie diesen Befehl, wenn Sie mithilfe des erweiterten Verpackungslayoutbeispiels auf dieser Seite nur das optionale Bündel **Designs** und das App-Paket **Themes.main**, auf das es verweist, erstellen möchten:
 
 ``` example 

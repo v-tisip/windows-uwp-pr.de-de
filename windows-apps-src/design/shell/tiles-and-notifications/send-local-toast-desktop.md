@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, win32, Desktop, Popupbenachrichtigungen, Popup senden, lokale Popupbenachrichtigungen senden, Desktop Bridge, C#, C-Sharp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3bda3e85fd89ef7a8b819fcd809acea4fd9a276b
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4206500"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4264125"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>Senden von Popupbenachrichtigungen über C#-Apps
 
@@ -70,7 +70,7 @@ Kopieren Sie [DesktopNotificationManagerCompat.cs-Datei von GitHub](https://raw.
 
 ## <a name="step-4-implement-the-activator"></a>Schritt 4: Implementieren des Aktivators
 
-Sie müssen einen Handler für die Popup-Aktivierung implementieren, damit, wenn der Benutzer auf das Popup klickt, Ihre app eine Aktion ausführen kann. Dies ist erforderlich für das Popup, damit es im Info-Center beibehalten wird (da auf das Popup Tage später geklickt werden kann, wenn die App geschlossen ist). Diese Klasse kann an eine beliebige Stelle in Ihrem Projekt platziert werden.
+Sie müssen einen Handler für Popup-Aktivierung implementieren, damit, wenn der Benutzer auf das Popup klickt, Ihre app eine Aktion ausführen kann. Dies ist erforderlich für das Popup, damit es im Info-Center beibehalten wird (da auf das Popup Tage später geklickt werden kann, wenn die App geschlossen ist). Diese Klasse kann an eine beliebige Stelle in Ihrem Projekt platziert werden.
 
 Erweitern Sie die **NotificationActivator**-Klasse, und fügen Sie die drei Attribute hinzu, die unten aufgeführt sind. Erstellen Sie dann eine eindeutige GUID CLSID für Ihre App mithilfe einer der vielen online GUID-Generatoren. Durch diese CLSID (Klassen-ID) weiß das Info-Center, welche Klasse für COM aktiviert werden soll.
 

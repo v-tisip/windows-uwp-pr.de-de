@@ -11,11 +11,11 @@ keywords: Windows10, UWP
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
 ms.openlocfilehash: d38465ce02e0aedf854094ede75fc33701b226a6
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211528"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4265969"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>Erstellen eines UWP-Spiels in MonoGame-2D
 
@@ -30,7 +30,7 @@ MonoGame ist ein einfaches Framework für die Spieleentwicklung. In diesem Lernp
 
 ## <a name="prerequisites"></a>Voraussetzungen
 +   Windows10 und Microsoft Visual Studio2017  [Klicken Sie hier, um zu erfahren, wie Sie Visual Studio einrichten](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
-+ Das .NET Framework-desktop-Entwicklung. Wenn Sie dies installiert bereits besitzen, können Sie es abrufen erneut ausführen des Visual Studio-Installationsprogramms und ändern die Installation von Visual Studio 2017.
++ Das .NET Framework-desktop-Entwicklung. Wenn Sie bereits mit Dies installiert haben, können Sie es abrufen erneut ausführen des Visual Studio-Installationsprogramms und ändern die Installation von Visual Studio 2017.
 +   Sie sollten über Grundkenntnisse in C# oder einer ähnlichen objektorientierten Programmiersprache verfügen. [Klicken Sie hier, um Informationen zum Einstieg in C# zu erhalten](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 +   Kenntnisse über die grundlegenden Konzepte der Informatik, wie Klassen, Methoden und Variablen, sind ebenfalls von Vorteil.
 

@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Popup, Info-Center in der Cloud, Spiegelung der Benachrichtigung, Benachrichtigung, geräteübergreifend
 ms.localizationpriority: medium
 ms.openlocfilehash: eb8e2ceb16add551f3c8e3a71a69d36b99f21c62
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4209920"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4259507"
 ---
 # <a name="notification-mirroring"></a>Spiegelung der Benachrichtigung
 
@@ -29,7 +29,7 @@ Benutzer können mit der Spiegelung Benachrichtigung und Cortana Handy-Benachric
 
 <img alt="Notification mirroring diagram" src="images/toast-mirroring.gif" width="350"/>
 
-Entwickler haben zwei Vorteile von Spiegelung der Benachrichtigung: die gespiegelten Benachrichtigungen führen weitere Nutzer an Ihren Dienst, und darüber hinaus ermöglichen Sie Benutzern, Ihre Microsoft Store-desktop-app zu entdecken! Ihre Benutzer wissen möglicherweise nicht einmal, was für eine bemerkenswerte UWP-App für ihren Windows10-Desktop verfügbar ist. Wenn Benutzer die gespiegelte Benachrichtigung auf dem Handy empfangen, können Benutzer klicken Sie auf die Popupbenachrichtigung an den Microsoft Store weitergeleitet, in denen sie Ihre UWP-desktop-app installieren können.
+Entwickler haben zwei Vorteile von Spiegelung der Benachrichtigung: die gespiegelten Benachrichtigungen führen zu weiterem für Benutzer mit Ihrem Dienst, und darüber hinaus ermöglichen Sie Benutzern, Ihre Microsoft Store-desktop-app zu entdecken! Ihre Benutzer wissen möglicherweise nicht einmal, was für eine bemerkenswerte UWP-App für ihren Windows10-Desktop verfügbar ist. Wenn Benutzer die gespiegelte Benachrichtigung auf dem Handy empfangen, können Benutzer klicken Sie auf die Popupbenachrichtigung an den Microsoft Store weitergeleitet, in denen sie Ihre UWP-desktop-app installieren können.
 
 Die Spiegelung funktioniert mit den Windows Phone und Android. Benutzer müssen bei Cortana und auf ihrem Handy und dem Desktop angemeldet sein, damit die Spiegelung der Benachrichtigung funktioniert.
 

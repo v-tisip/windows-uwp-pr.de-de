@@ -4,17 +4,18 @@ ms.assetid: ff2523cb-8109-42be-9dfc-cb5d09002574
 title: Erstellen und konvertieren Sie eine Quellinhalt-Gruppenzuordnung.
 description: Um Ihre Universelle Windows-Plattform (UWP)-App für die UWP-App-Streaming-Installation vorzubereiten, müssen Sie eine Inhalts-Gruppenzuordnung erstellen. Dieser Artikel hilft Ihnen mit den Einzelheiten für das Erstellen und Konvertieren einer Inhalts-Gruppenzuordnung und bietet gleichzeitig einige Tipps und Tricks.
 ms.author: lahugh
-ms.date: 4/05/2017
+ms.date: 9/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, Uwp, Inhalt-Gruppenzuordnung, Streaming-Installation, Uwp-App-Streaming-Installation, Quellinhalt-Gruppenzuordnung
-ms.openlocfilehash: d27869f349d7ee813c1418cd0d02f82ada05e155
-ms.sourcegitcommit: 7540962003b38811e6336451bb03d46538b35671
+ms.localizationpriority: medium
+ms.openlocfilehash: 4ce32958d5a99dc9f3f772d6272450a4f2b0f81b
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/26/2017
-ms.locfileid: "617269"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258699"
 ---
 # <a name="create-and-convert-a-source-content-group-map"></a>Erstellen und konvertieren Sie eine Quellinhalt-Gruppenzuordnung.
 
@@ -26,7 +27,7 @@ Sie müssen eine `SourceAppxContentGroupMap.xml`-Datei erstellen, und entweder V
 
 Betrachten wir ein einfaches Szenario, in dem eine UWP-App-Streaming-Installation von Vorteil ist. 
 
-Angenommen Sie haben ein UWP-Spiel erstellt, aber die Größe der endgültigen App ist mehr als 100GB. Es wird einige Zeit in Anspruch nehmen, die App aus dem Windows Store herunterzuladen, was sehr umständlich sein kann. Wenn Sie sich für die UWP-App-Streaming-Installation entscheiden, können Sie die Reihenfolge angeben, in der die Dateien der App heruntergeladen werden. Indem der Benutzer dem Store anordnet, dass zunächst essenzielle Dateien heruntergeladen werden sollen, wird er Ihre App schneller ausprobieren können, während andere nicht unbedingt erforderlichen Dateien im Hintergrund heruntergeladen werden.
+Angenommen Sie haben ein UWP-Spiel erstellt, aber die Größe der endgültigen App ist mehr als 100GB. Die soll eine lange dauern aus dem Microsoft Store herunterzuladen, was sehr umständlich sein kann. Wenn Sie sich für die UWP-App-Streaming-Installation entscheiden, können Sie die Reihenfolge angeben, in der die Dateien der App heruntergeladen werden. Indem der Benutzer dem Store anordnet, dass zunächst essenzielle Dateien heruntergeladen werden sollen, wird er Ihre App schneller ausprobieren können, während andere nicht unbedingt erforderlichen Dateien im Hintergrund heruntergeladen werden.
 
 > [!NOTE]
 > Die Verwendung der UWP-App-Streaming-Installation hängt stark von der Dateiorganisation Ihrer App ab. Es wird empfohlen, dass Sie sich so früh wie möglich Gedanken zum Layout des Inhalts in Bezug auf die UWP-App-Streaming-Installation machen, um das Segmentieren Ihrer App-Dateien zu vereinfachen.
@@ -169,4 +170,4 @@ Für weitere Informationen zu den Optionen, die Sie mit **MakeAppx.exe** verwend
 MakeAppx convertCGM /?
 ```
 
-Das ist alles, was Sie brauchen, um Ihre endgültige `AppxContentGroupMap.xml` für Ihre App vorzubereiten! Es gibt noch viel zu tun, bevor Ihre App bereit für den Windows Store ist. Weitere Informationen zum gesamten Prozess für das Hinzufügen der UWP-App-Streaming-Installationsfunktion für Ihre App finden Sie in [diesem Blogbeitrag](https://blogs.msdn.microsoft.com/appinstaller/2017/03/15/uwp-streaming-app-installation/).
+Das ist alles, was Sie brauchen, um Ihre endgültige `AppxContentGroupMap.xml` für Ihre App vorzubereiten! Es gibt noch viel zu tun, bevor Ihre app für den Microsoft Store bereit ist. Weitere Informationen zum gesamten Prozess für das Hinzufügen der UWP-App-Streaming-Installationsfunktion für Ihre App finden Sie in [diesem Blogbeitrag](https://blogs.msdn.microsoft.com/appinstaller/2017/03/15/uwp-streaming-app-installation/).

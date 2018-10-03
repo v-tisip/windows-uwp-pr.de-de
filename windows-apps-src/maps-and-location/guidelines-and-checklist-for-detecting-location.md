@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Standort, Ort, Karte, Geolocation
 ms.localizationpriority: medium
 ms.openlocfilehash: 903a7b308c78e4ab9826ea4c46c642cb3361b462
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211276"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4264365"
 ---
 # <a name="guidelines-for-location-aware-apps"></a>Richtlinien für Apps mit Standortbestimmung
 
@@ -51,7 +51,7 @@ In diesem Thema werden Leistungsrichtlinien für Apps beschrieben, für die der 
 
     Geben Sie das [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534)-Objekt frei, wenn der Benutzer den Zugriff auf Standortinformationen unter „Einstellungen“ deaktiviert. Die App empfängt **ACCESS\_DENIED**-Ergebnisse für alle standortbezogenen API-Aufrufe. Wenn Ihre App Standortdaten (zwischen)speichert, löschen Sie zwischengespeicherte Daten, wenn der Benutzer den Zugriff auf seinen Standort zurücknimmt. Stellen Sie eine Alternativmöglichkeit zur Angabe des Standorts bereit, wenn keine diesbezüglichen Informationen für Positionsdienste verfügbar sind.
 
--   Stellen Sie eine Benutzeroberfläche für das erneute Aktivieren der Positionsdienste bereit. Bieten Sie z. B. eine Aktualisierungsschaltfläche, die das Objekt [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) Aktualisierungsschaltfläche und versucht, Standortinformationen erneut abzurufen.
+-   Stellen Sie eine Benutzeroberfläche für das erneute Aktivieren der Positionsdienste bereit. Geben Sie z. B. eine Aktualisierungsschaltfläche, die das Objekt [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/br225534) Aktualisierungsschaltfläche und versucht, Standortinformationen erneut abzurufen.
 
     Stellen Sie in Ihrer App eine Benutzeroberfläche zum Aktivieren der Positionsdienste bereit.
 

@@ -7,18 +7,18 @@ label: Command design basics
 template: detail.hbs
 op-migration-status: ready
 ms.author: mijacobs
-ms.date: 05/04/2018
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 09f775ad0ba596379b6d3ddf158285849520111f
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 104788b98377b55564fcc204ecc161521d071c6b
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1842567"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4262651"
 ---
 #  <a name="command-design-basics-for-uwp-apps"></a>Befehlsdesigngrundlagen für UWP-Apps
 
@@ -40,53 +40,98 @@ Einige Interaktionen für Ihre App sind:
 
 Die Verwendung der richtigen Elemente zur Befehlsinteraktionen kann den Unterschied zwischen einer intuitiven, benutzerfreundlichen App und einer schwierigen, verwirrenden App ausmachen. Die Universelle Windows-Plattform (UWP) bietet eine große Anzahl von Befehlselementen, die Sie in Ihrer App verwenden können. Die folgende Liste enthält einige der gängigsten Steuerelemente sowie eine Zusammenfassung der jeweils möglichen Interaktionen:
 
-:::row::: :::column::: ![Bild mit Schaltfläche](images/commanding/thumbnail-button.svg) :::column-end::: :::column span="2"::: <b>Schaltflächen</b>
+:::row:::
+    :::column:::
+        ![button image](images/commanding/thumbnail-button.svg)
+    :::column-end:::
+    :::column span="2":::
+        <b>Buttons</b>
 
         <a href="../controls-and-patterns/buttons.md" style="text-decoration:none">Buttons</a> trigger an immediate action. Examples include sending an email, submitting form data, or confirming an action in a dialog.
 :::row-end:::
 
-:::row::: :::column::: ![Bild mit Liste](images/commanding/thumbnail-list.svg) :::column-end::: :::column span="2"::: <b>Listen</b>
+:::row:::
+    :::column:::
+        ![list image](images/commanding/thumbnail-list.svg)
+    :::column-end:::
+    :::column span="2":::
+        <b>Lists</b>
 
         <a href="../controls-and-patterns/lists.md" style="text-decoration:none">Lists</a> present items in a interactive list or a grid. Usually used for many options or display items. Examples include drop-down list, list box, list view and grid view.
 :::row-end:::
 
-:::row::: :::column::: ![Bild mit Auswahlsteuerelement](images/commanding/thumbnail-selection.svg) :::column-end::: :::column span="2"::: <b>Auswahlsteuerelemente</b>
+:::row:::
+    :::column:::
+        ![selection control image](images/commanding/thumbnail-selection.svg)
+    :::column-end:::
+    :::column span="2":::
+        <b>Selection controls</b>
 
         Lets users choose from a few options, such as when completing a survey or configuring app settings. Examples include <a href="../controls-and-patterns/checkbox.md">check box</a>, <a href="../controls-and-patterns/radio-button.md">radio button</a>, and <a href="../controls-and-patterns/toggles.md">toggle switch</a>.
 :::row-end:::
 
-:::row::: :::column::: ![Bild mit Kalender](images/commanding/thumbnail-calendar.svg) :::column-end::: :::column span="2"::: <b>Kalender-, Datums- und Uhrzeitsteuerelemente</b>
+:::row:::
+    :::column:::
+        ![Calendar  image](images/commanding/thumbnail-calendar.svg)
+    :::column-end:::
+    :::column span="2":::
+        <b>Calendar, date and time pickers</b>
 
         <a href="../controls-and-patterns/date-and-time.md">Calendar, date and time pickers</a> enable users to view and modify date and time info, such as when creating an event or setting an alarm. Examples include calendar date picker, calendar view, date picker, time picker.
 :::row-end:::
 
-:::row::: :::column::: ![Bild mit Feld mit automatischen Vorschläge](images/commanding/thumbnail-autosuggest.svg) :::column-end::: :::column span="2"::: <b>Eingabefeld mit automatischen Vorschlägen</b>
+:::row:::
+    :::column:::
+        ![Predictive text entry image](images/commanding/thumbnail-autosuggest.svg)
+    :::column-end:::
+    :::column span="2":::
+        <b>Predictive text entry</b>
 
         Provides suggestions as users type, such as when entering data or performing queries. Examples include <a href="../controls-and-patterns/auto-suggest-box.md">auto-suggest box</a>.<br>
 :::row-end:::
 
 Eine vollständige Liste finden Sie unter [Steuerelemente und UI-Elemente](../controls-and-patterns/index.md).
 
-##  <a name="place-commands-on-the-right-surface"></a>Platzieren von Befehlen auf der passenden Oberfläche
-Sie können Befehlselemente auf einer Reihe von Oberflächen in Ihrer App platzieren, einschließlich der App-Canvas oder spezieller Befehlscontainer, wie Befehlsleisten, Menüs, Dialoge und Flyouts.
+## <a name="place-commands-on-the-right-surface"></a>Platzieren von Befehlen auf der passenden Oberfläche
 
-Beachten Sie, dass Sie den Benutzern möglichst erlauben sollten, Inhalte direkt zu manipulieren, anstatt Befehle zu verwenden, die auf den Inhalt wirken. Beispielsweise können Benutzer Listen durch Ziehen und Ablegen von Listenelementen neu anordnen, anstatt die Befehlsschaltflächen nach oben und unten zu verwenden.
+Sie können Befehlselemente auf einer Reihe von Oberflächen in Ihrer app, einschließlich der app-Canvas oder spezieller befehlscontainer, z. B. eine Befehlsleiste, Befehlsleiste Flyout, Menüleiste und Dialogfeld platzieren.
+
+Beachten Sie, dass, wenn möglich, Sie sollten Benutzer mit den Befehlen, die auf den Inhalt zugreifen, anstatt Inhalte direkt zu bearbeiten. Beispielsweise können Benutzer Listen durch Ziehen und Ablegen von Listenelementen neu anordnen, anstatt die Befehlsschaltflächen nach oben und unten zu verwenden.
 
 Wenn Benutzer Inhalte aber nicht direkt manipulieren können, platzieren Sie Befehlselemente auf einer Befehlsoberfläche in Ihrer App: Hier eine Liste mit einigen der gängigsten Befehlsoberflächen.
 
-:::row::: :::column::: ![Bild mit App-Inhaltsbereich](images/commanding/thumbnail-canvas.svg) :::column-end::: :::column span="2"::: <b>App-Inhaltsbereich</b>
+:::row:::
+    :::column:::
+        ![app canvas image](images/commanding/thumbnail-canvas.svg)
+    :::column-end:::
+    :::column span="2":::
+        <b>App canvas (content area)</b>
 
         If a command is constantly needed for users to complete core scenarios, put it on the canvas. Because you can put commands near (or on) the objects they affect, putting commands on the canvas makes them easy and obvious to use. However, choose the commands you put on the canvas carefully. Too many commands on the app canvas take up valuable screen space and can overwhelm the user. If the command won't be frequently used, consider putting it in another command surface.
 :::row-end:::
 
-:::row::: :::column::: ![Bild mit Befehlsleiste](images/commanding/thumbnail-commandbar.svg) :::column-end::: :::column span="2"::: <b>Befehlsleisten</b>
+:::row:::
+    :::column:::
+        ![commandbar image](images/commanding/thumbnail-commandbar.svg)
+    :::column-end:::
+    :::column span="2":::
+        <b>Command bars and menu bars</b>
 
-        <a href="../controls-and-patterns/app-bars.md">Command bars</a> help organize commands and make them easy to access. Command bars can be placed at the top of the screen, at the bottom of the screen, or at both the top and bottom of the screen.
+        <a href="../controls-and-patterns/app-bars.md">Command bars</a> help organize commands and make them easy to access. Command bars can be placed at the top of the screen, at the bottom of the screen, or at both the top and bottom of the screen (a <a href="../controls-and-patterns/menus.md#create-a-menu-bar">MenuBar</a> can also be used when the functionality in your app is too complex for a command bar).
 :::row-end:::
 
-:::row::: :::column::: ![Bild mit Kontextmenü](images/commanding/thumbnail-contextmenu.svg) :::column-end::: :::column span="2"::: <b>Menüs und Kontextmenüs</b>
+:::row:::
+    :::column:::
+        ![context menu image](images/commanding/thumbnail-contextmenu.svg)
+    :::column-end:::
+    :::column span="2":::
+        <b>Menus and context menus</b>
 
-        Sometimes it is more efficient to group multiple commands into a command menu to save space. <a href="../controls-and-patterns/menus.md">Menus and context menus</a> display a list of commands or options when the user requests them. Context menus can provide shortcuts to commonly-used actions and provide access to secondary commands that are only relevant in certain contexts, such as clipboard or custom commands. Context menus are usually prompted by a user right-clicking.
+        <p>Menus and context menus save space by organizing commands and hiding them until the user needs them. Users typically access a menu or context menu by clicking a button or right-clicking a control.</p> 
+
+        <p>The <a href="../controls-and-patterns/command-bar-flyout.md">command bar flyout </a> is a type of contextual menu that combines the benefits of a command bar and a context menu into a single control. It can provide shortcuts to commonly-used actions and provide access to secondary commands that are only relevant in certain contexts, such as clipboard or custom commands.</p>
+
+        <p>UWP also provides a set of traditional menus and context menus; for more info, see the <a href="../controls-and-patterns/menus.md">menus and context menus overview</a>.</p>
 :::row-end:::
 
 ## <a name="provide-feedback-for-interactions"></a>Reagieren auf Interaktionen durch Feedback
@@ -95,19 +140,34 @@ Feedback kommuniziert die Ergebnisse von Befehlen und ermöglicht dem Benutzer z
 
 Hier sind einige Möglichkeiten, um Feedback in Ihrer App bereitzustellen.
 
-:::row::: :::column::: ![Bild mit Befehlsleisten-Inhaltsbereich](images/commanding/thumbnail-commandbar2.svg) :::column-end::: :::column span="2"::: <b>Befehlsleiste</b>
+:::row:::
+    :::column:::
+        ![commandbar content area image](images/commanding/thumbnail-commandbar2.svg)
+    :::column-end:::
+    :::column span="2":::
+        <b>Command bar</b>
 
         The content area of the <a href="../controls-and-patterns/app-bars.md">command bar</a> is an intuitive place to communicate status to users if they'd like to see feedback.
 :::row-end:::
 
-:::row::: :::column::: ![Bild mit Flyout](images/commanding/thumbnail-flyout.svg) :::column-end::: :::column span="2"::: <b>Flyouts</b>
+:::row:::
+    :::column:::
+        ![Flyout image](images/commanding/thumbnail-flyout.svg)
+    :::column-end:::
+    :::column span="2":::
+        <b>Flyouts</b>
 
-       <a href="../controls-and-patterns/dialogs.md">Flyouts</a> are lightweight contextual popups that can be dismissed by tapping or clicking somewhere outside the flyout.
+       <a href="../controls-and-patterns/dialogs-and-flyouts/index.md">Flyouts</a> sind einfache kontextbezogene Popups, die durch Antippen oder klicken außerhalb des Flyouts verworfen werden können.
 :::row-end:::
 
-:::row::: :::column::: ![Bild mit Dialogfeld](images/commanding/thumbnail-dialog.svg) :::column-end::: :::column span="2"::: <b>Dialogfelder</b>
+:::row:::
+    :::column:::
+        ![Dialog image](images/commanding/thumbnail-dialog.svg)
+    :::column-end:::
+    :::column span="2":::
+        <b>Dialog controls</b>
 
-        <a href="../controls-and-patterns/dialogs.md">Dialog controls</a> are modal UI overlays that provide contextual app information. In most cases, dialogs block interactions with the app window until being explicitly dismissed, and often request some kind of action from the user. Dialogs can be disruptive and should only be used in certain situations. For more info, see the [When to confirm or undo actions](#when-to-confirm-or-undo-actions) section.
+        <a href="../controls-and-patterns/dialogs-and-flyouts/index.md">Dialog controls</a> are modal UI overlays that provide contextual app information. In most cases, dialogs block interactions with the app window until being explicitly dismissed, and often request some kind of action from the user. Dialogs can be disruptive and should only be used in certain situations. For more info, see the [When to confirm or undo actions](#when-to-confirm-or-undo-actions) section.
     :::column-end:::
 :::row-end:::
 
@@ -118,7 +178,9 @@ Hier sind einige Möglichkeiten, um Feedback in Ihrer App bereitzustellen.
 
 Ganz gleich, wie gut die Benutzeroberfläche gestaltet ist und wie vorsichtig der Benutzer vorgeht: Irgendwann wird jeder Benutzer eine Aktion ausführen, die er lieber nicht ausgeführt hätte. In einer solchen Situation kann Ihre App dem Benutzer helfen, indem sie eine Aktionsbestätigung anfordert oder eine Möglichkeit zum Rückgängigmachen der kürzlich durchgeführten Aktionen anbietet.
 
-:::row::: :::column::: ![Beispiel für „Richtig”](images/do.svg)
+:::row:::
+    :::column:::
+        ![do image](images/do.svg)
 
         For actions that can't be undone and have major consequences, we recommend using a confirmation dialog. Examples of such actions include:
         -   Overwriting a file

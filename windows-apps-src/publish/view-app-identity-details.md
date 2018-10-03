@@ -4,30 +4,30 @@ Description: View details related to the unique identity assigned to your app by
 title: Anzeigen von Details zur App-Identität
 ms.assetid: 86F05A79-EFBC-4705-9A71-3A056323AC65
 ms.author: wdg-dev-content
-ms.date: 12/21/2017
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: cf2c10fd8fa581e29fe20c5bdcb2683c5246af1d
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: 4b04033fb53a90015427feb820c91d0f4a1de7d5
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211114"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4259829"
 ---
 # <a name="view-app-identity-details"></a>Anzeigen von Details zur App-Identität
 
 
-Bei der Arbeit mit einer app im Windows Dev Center-Dashboard sehen Sie Details zur eindeutigen Identität vom Microsoft Store zugewiesen. Rufen Sie einen Link zum Eintrag Ihrer App im Store ab.
+Sie können Details zur eindeutigen Identität zugewiesen für Ihre app vom Microsoft Store auf **App-Identität** Seiten anzeigen. Eintrag auf dieser Seite können Sie auch einen Link zu Ihrer app Store abrufen.
 
 Um diese Informationen zu suchen, navigieren Sie zu einer Ihrer Apps und erweitern im linken Navigationsmenü **App-Verwaltung**. Wählen Sie **App-Identität** aus, um diese Details anzuzeigen.
 
 
 ## <a name="values-to-include-in-your-app-package-manifest"></a>In das App-Paketmanifest einzuschließende Werte
 
-Die folgenden Werte müssen im appx-Paketmanifest enthalten sein. Wenn Sie Ihre [Pakete mit Microsoft Visual Studio erstellen](../packaging/packaging-uwp-apps.md) und mit demselben Microsoft-Konto angemeldet sind, das Sie mit Ihrem Entwicklerkonto verknüpft haben, werden diese Details automatisch eingefügt. Wenn Sie Ihr Paket manuell erstellen, müssen Sie folgende Details selbst hinzufügen:
+Die folgenden Werte müssen im Paketmanifest enthalten sein. Wenn Sie Ihre [Pakete mit Microsoft Visual Studio erstellen](../packaging/packaging-uwp-apps.md) und mit demselben Microsoft-Konto angemeldet sind, das Sie mit Ihrem Entwicklerkonto verknüpft haben, werden diese Details automatisch eingefügt. Wenn Sie Ihr Paket manuell erstellen, müssen Sie folgende Details selbst hinzufügen:
 
 -   **Paket/Identität/Name**
 -   **Paket/Identität/Herausgeber**

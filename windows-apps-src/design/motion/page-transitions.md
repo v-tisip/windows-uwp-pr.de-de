@@ -11,12 +11,12 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 pm-contact: stmoy
 ms.localizationpriority: medium
-ms.openlocfilehash: 0afc2c55ab0d0bdd2bee0206f986b2724d331eaf
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: a2923834fd968114a4ed607de214763fb2575697
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211412"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261903"
 ---
 # <a name="page-transitions"></a>Seitenübergänge
 
@@ -55,6 +55,20 @@ Die Drill-Animation wird durch die Klasse [**DrillInNavigationTransitionInfo**](
 ```csharp
 // Play the drill in animation
 myFrame.Navigate(typeof(Page2), null, new DrillInNavigationTransitionInfo());
+```
+
+## <a name="horizontal-slide"></a>Horizontale Folie
+
+Verwenden Sie horizontale ziehen, um anzuzeigen, dass geschwisterseiten nebeneinander angezeigt werden. Das [NavigationView](../controls-and-patterns/navigationview.md) -Steuerelement verwendet diese Animation automatisch für die oben Nav, aber wenn Sie Ihre eigenen horizontale Navigationsfunktionalität erstellen, Sie können implementieren horizontale Folie mit SlideNavigationTransitionInfo.
+
+Der gewünschte Effekt ist, dass die Benutzer zwischen Seiten navigieren, die nebeneinander befinden. 
+
+```csharp
+// Navigate to the right, ie. from LeftPage to RightPage
+myFrame.Navigate(typeof(RightPage), null, new SlideNavigationTransitionInfo() { SlideNavigationTransitionEffect.FromRight } );
+
+// Navigate to the left, ie. from RightPage to LeftPage
+myFrame.Navigate(typeof(LeftPage), null, new SlideNavigationTransitionInfo() { SlideNavigationTransitionEffect.FromLeft } );
 ```
 
 ## <a name="suppress"></a>Unterdrückung

@@ -3,19 +3,19 @@ author: laurenhughes
 title: Erstellen eines App-Pakets mit dem Tool „MakeAppx.exe“
 description: MakeAppx.exe erstellt, verschlüsselt, entschlüsselt und extrahiert Dateien aus App-Paketen und -Bündeln.
 ms.author: lahugh
-ms.date: 03/07/2017
+ms.date: 06/21/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows10, uwp, verpackung
 ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
 ms.localizationpriority: medium
-ms.openlocfilehash: 94972915e5fc80a477d8d647212ab3b91e0aa384
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: dbde8f2f11276ded6ad0994a1cd52f7f12de229e
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817791"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4264325"
 ---
 # <a name="create-an-app-package-with-the-makeappxexe-tool"></a>Erstellen eines App-Pakets mit dem Tool „MakeAppx.exe“
 
@@ -25,10 +25,12 @@ ms.locfileid: "1817791"
 > [!IMPORTANT] 
 > Wenn Sie Visual Studio zum Entwickeln der App verwendet haben, wird empfohlen, dass Sie den Visual Studio-Assistenten zum Erstellen des App-Pakets verwenden. Weitere Informationen finden Sie unter [Verpacken einer UWP-App mit Visual Studio](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
 
-Beachten Sie, dass **MakeAppx.exe** keine APPXUPLOAD-Datei erstellt. Die APPXUPLOAD-Datei wird als Teil des Visual Studio-Verpackungsvorgangs erstellt und enthält zwei weitere Dateien: .appX- und .appxsym. Die APPXSYM-Datei ist eine komprimierte PDB-Datei und enthält öffentliche Symbole Ihrer App, die für [Absturzanalysen](https://blogs.windows.com/buildingapps/2015/07/13/crash-analysis-in-the-unified-dev-center/) im Windows Dev Center verwendet wird. Eine reguläre APPX-Datei kann ebenfalls übermittelt werden. In diesem Fall sind jedoch keine Absturzanalysen oder Informationen zum Debuggen verfügbar. Weitere Informationen zum Übermitteln von Paketen an den Store finden Sie unter [Hochladen von App-Paketen](https://msdn.microsoft.com/windows/uwp/publish/upload-app-packages). 
+Beachten Sie, dass **MakeAppx.exe** keine APPXUPLOAD-Datei erstellt. Die appxupload-Datei wird als Teil des Visual Studio-verpackungsvorgangs erstellt und enthält zwei weitere Dateien: .msix oder AppX- und appxsym. Die APPXSYM-Datei ist eine komprimierte PDB-Datei und enthält öffentliche Symbole Ihrer App, die für [Absturzanalysen](https://blogs.windows.com/buildingapps/2015/07/13/crash-analysis-in-the-unified-dev-center/) im Windows Dev Center verwendet wird. Eine reguläre APPX-Datei kann ebenfalls übermittelt werden. In diesem Fall sind jedoch keine Absturzanalysen oder Informationen zum Debuggen verfügbar. Weitere Informationen zum Übermitteln von Paketen an den Store finden Sie unter [Hochladen von App-Paketen](https://msdn.microsoft.com/windows/uwp/publish/upload-app-packages). 
+
+ Updates für das Tool in der neuesten Version von Windows 10 haben keinen Einfluss auf die Nutzung der AppX-Paket. Sie können weiterhin mit diesem Tool mit AppX-Paketen oder verwenden Sie das Tool mit Unterstützung für .msix Pakete wie unten beschrieben.
 
 So erstellen Sie manuell eine APPXUPLOAD-Datei:
-- Speichern Sie die APPX- und die APPXSYM-Datei in einem Ordner.
+- Platzieren Sie die .msix und die appxsym-Datei in einem Ordner
 - Zippen Sie den Ordner.
 - Ändern Sie den Namen der Erweiterung des komprimierten Ordners von ZIP in APPXUPLOAD.
 
@@ -58,7 +60,6 @@ Die folgende Tabelle enthält die Befehle für **MakeAppx.exe**.
 | unbundle      | Entpacken alle Pakete in ein Unterverzeichnis am angegebenen Ausgabepfad, der nach dem vollständigen Namen des Bündels benannt ist. |
 | encrypt       | Erstellt ein verschlüsseltes App-Paket oder -Bündel aus dem Eingabepaket/-bündel am angegebenen Ausgabepaket/-bündel. |
 | decrypt       | Erstellt ein entschlüsseltes App-Paket oder -Bündel aus dem Eingabe-App-Paket/-Bündel am angegebenen Ausgabepaket/-bündel. |
-| build         |  |
 
 
 Die folgende Liste von Optionen gilt für alle Befehle:
@@ -81,14 +82,14 @@ Die folgende Liste enthält mögliche Argumente:
 
 | **Argument**                          | **Beschreibung**                       |
 |---------------------------------------|---------------------------------------|
-| &lt;output package name&gt;           | Der Name des erstellten Pakets. Dies ist der Dateiname mit der angehängten Erweiterung .appx. |
-| &lt;encrypted output package name&gt; | Der Name des erstellten verschlüsselten Pakets. Dies ist der Dateiname mit der angehängten Erweiterung .eappx. |
-| &lt;input package name&gt;            | Der Name des Pakets. Dies ist der Dateiname mit der angehängten Erweiterung .appx. |
-| &lt;encrypted input package name&gt;  | Der Name des verschlüsselten Pakets. Dies ist der Dateiname mit der angehängten Erweiterung .eappx. |
-| &lt;output bundle name&gt;            | Der Name des erstellten Bündels. Dies ist der Dateiname mit der angehängten Erweiterung .appxbundle. |
-| &lt;encrypted output bundle name&gt;  | Der Name des erstellten verschlüsselten Bündels. Dies ist der Dateiname mit der angehängten Erweiterung .eappxbundle. |
-| &lt;input bundle name&gt;             | Der Name des Bündels. Dies ist der Dateiname mit der angehängten Erweiterung .appxbundle. |
-| &lt;encrypted input bundle name&gt;   | Der Name des verschlüsselten Bündels. Dies ist der Dateiname mit der angehängten Erweiterung .eappxbundle. |
+| &lt;output package name&gt;           | Der Name des erstellten Pakets. Dies ist der Dateiname mit .msix oder AppX angefügt. |
+| &lt;encrypted output package name&gt; | Der Name des erstellten verschlüsselten Pakets. Dies ist der Dateiname mit .emsix oder eappx angefügt. |
+| &lt;input package name&gt;            | Der Name des Pakets. Dies ist der Dateiname mit .msix oder AppX angefügt. |
+| &lt;encrypted input package name&gt;  | Der Name des verschlüsselten Pakets. Dies ist der Dateiname mit .emsix oder eappx angefügt. |
+| &lt;output bundle name&gt;            | Der Name des erstellten Bündels. Dies ist der Dateiname mit .msixbundle oder .appxbundle angefügt. |
+| &lt;encrypted output bundle name&gt;  | Der Name des erstellten verschlüsselten Bündels. Dies ist der Dateiname mit .emsixbundle oder eappxbundle angefügt. |
+| &lt;input bundle name&gt;             | Der Name des Bündels. Dies ist der Dateiname mit .msixbundle oder .appxbundle angefügt. |
+| &lt;encrypted input bundle name&gt;   | Der Name des verschlüsselten Bündels. Dies ist der Dateiname mit .emsixbundle oder eappxbundle angefügt. |
 | &lt;content directory&gt;             | Der Pfad für den Inhalt des App-Pakets oder -Bündels. |
 | &lt;mapping file&gt;                  | Der Name der Datei, der Paketquelle und -ziel angibt. |
 | &lt;output directory&gt;              | Der Pfad zum Verzeichnis für Ausgabepakete und -bündel. |
@@ -98,7 +99,7 @@ Die folgende Liste enthält mögliche Argumente:
 
 ### <a name="create-an-app-package"></a>Erstellen eines App-Pakets
 
-Ein App-Paket ist ein vollständiger Satz der App-Dateien, verpackt in einer APPX-Paketdatei. Um ein App-Paket mit dem Befehl **pack** zu erstellen, müssen Sie entweder ein Inhaltsverzeichnis oder eine Zuordnungsdati für den Speicherort des Pakets angeben. Sie können ein Paket auch während des Erstellens verschlüsseln. Wenn Sie das Paket verschlüsseln möchten, müssen Sie /ep verwenden und angeben, ob Sie eine Schlüsseldatei (/kf) oder den globalen Testschlüssel (/kt) verwenden. Weitere Informationen zum Erstellen eines verschlüsselten Pakets finden Sie unter [Verschlüsseln oder Entschlüsseln von Paketen oder Bündeln](#encrypt-or-decrypt-a-package-or-bundle).
+Ein app-Paket ist ein vollständiger Satz von app Dateien, verpackt in einer .msix oder AppX-Paketdatei. Um ein App-Paket mit dem Befehl **pack** zu erstellen, müssen Sie entweder ein Inhaltsverzeichnis oder eine Zuordnungsdati für den Speicherort des Pakets angeben. Sie können ein Paket auch während des Erstellens verschlüsseln. Wenn Sie das Paket verschlüsseln möchten, müssen Sie /ep verwenden und angeben, ob Sie eine Schlüsseldatei (/kf) oder den globalen Testschlüssel (/kt) verwenden. Weitere Informationen zum Erstellen eines verschlüsselten Pakets finden Sie unter [Verschlüsseln oder Entschlüsseln von Paketen oder Bündeln](#encrypt-or-decrypt-a-package-or-bundle).
 
 Optionen, die für den Befehl **pack** spezifisch sind:
 
@@ -125,12 +126,12 @@ MakeAppx pack [options] /d <content directory> /ep <encrypted output package nam
 Im Folgenden finden Sie Befehlszeilenbeispiele für den **pack**-Befehl:
 
 ``` examples
-MakeAppx pack /v /h SHA256 /d "C:\My Files" /p MyPackage.appx
-MakeAppx pack /v /o /f MyMapping.txt /p MyPackage.appx
-MakeAppx pack /m "MyApp\AppxManifest.xml" /f MyMapping.txt /p AppPackage.appx
-MakeAppx pack /r /m "MyApp\AppxManifest.xml" /f MyMapping.txt /p ResourcePackage.appx
-MakeAppx pack /v /h SHA256 /d "C:\My Files" /ep MyPackage.eappx /kf MyKeyFile.txt
-MakeAppx pack /v /h SHA256 /d "C:\My Files" /ep MyPackage.eappx /kt
+MakeAppx pack /v /h SHA256 /d "C:\My Files" /p MyPackage.msix
+MakeAppx pack /v /o /f MyMapping.txt /p MyPackage.msix
+MakeAppx pack /m "MyApp\AppxManifest.xml" /f MyMapping.txt /p AppPackage.msix
+MakeAppx pack /r /m "MyApp\AppxManifest.xml" /f MyMapping.txt /p ResourcePackage.msix
+MakeAppx pack /v /h SHA256 /d "C:\My Files" /ep MyPackage.emsix /kf MyKeyFile.txt
+MakeAppx pack /v /h SHA256 /d "C:\My Files" /ep MyPackage.emsix /kt
 ```
 
 ### <a name="create-an-app-bundle"></a>Erstellen eines App-Bündels
@@ -157,10 +158,10 @@ MakeAppx bundle [options] /f <mapping file> /ep <encrypted output bundle name> /
 Der folgende Block enthält Beispiele für den **bundle** Befehl:
 
 ``` examples
-MakeAppx bundle /v /d "C:\My Files" /p MyBundle.appxbundle
-MakeAppx bundle /v /o /bv 1.0.1.2096 /f MyMapping.txt /p MyBundle.appxbundle
-MakeAppx bundle /v /o /bv 1.0.1.2096 /f MyMapping.txt /ep MyBundle.eappxbundle /kf MyKeyFile.txt
-MakeAppx bundle /v /o /bv 1.0.1.2096 /f MyMapping.txt /ep MyBundle.eappxbundle /kt
+MakeAppx bundle /v /d "C:\My Files" /p MyBundle.msixbundle
+MakeAppx bundle /v /o /bv 1.0.1.2096 /f MyMapping.txt /p MyBundle.msixbundle
+MakeAppx bundle /v /o /bv 1.0.1.2096 /f MyMapping.txt /ep MyBundle.emsixbundle /kf MyKeyFile.txt
+MakeAppx bundle /v /o /bv 1.0.1.2096 /f MyMapping.txt /ep MyBundle.emsixbundle /kt
 ```
 
 ### <a name="extract-files-from-a-package-or-bundle"></a>Extrahieren von Dateien aus einem Paket oder Bündel
@@ -189,13 +190,13 @@ MakeAppx unbundle [options] /ep <encrypted input bundle name> /d <output directo
 Der folgende Block enthält Beispiele für die Verwendung der Befehle **unpack** und **unbundle**:
 
 ``` examples
-MakeAppx unpack /v /p MyPackage.appx /d "C:\My Files"
-MakeAppx unpack /v /ep MyPackage.eappx /d "C:\My Files" /kf MyKeyFile.txt
-MakeAppx unpack /v /ep MyPackage.eappx /d "C:\My Files" /kt
+MakeAppx unpack /v /p MyPackage.msix /d "C:\My Files"
+MakeAppx unpack /v /ep MyPackage.emsix /d "C:\My Files" /kf MyKeyFile.txt
+MakeAppx unpack /v /ep MyPackage.emsix /d "C:\My Files" /kt
 
-MakeAppx unbundle /v /p MyBundle.appxbundle /d "C:\My Files"
-MakeAppx unbundle /v /ep MyBundle.eappxbundle /d "C:\My Files" /kf MyKeyFile.txt
-MakeAppx unbundle /v /ep MyBundle.eappxbundle /d "C:\My Files" /kt
+MakeAppx unbundle /v /p MyBundle.msixbundle /d "C:\My Files"
+MakeAppx unbundle /v /ep MyBundle.emsixbundle /d "C:\My Files" /kf MyKeyFile.txt
+MakeAppx unbundle /v /ep MyBundle.emsixbundle /d "C:\My Files" /kt
 ```
 
 ### <a name="encrypt-or-decrypt-a-package-or-bundle"></a>Verschlüsseln oder Entschlüsseln eines Pakets oder Bündels
@@ -223,28 +224,12 @@ MakeAppx decrypt [options] /ep <package name> /p <output package name> /kt
 Der folgende Block enthält Beispiele für die Verwendung der Befehle **encrypt** und **decrypt**:
 
 ``` examples
-MakeAppx.exe encrypt /p MyPackage.appx /ep MyEncryptedPackage.eappx /kt
-MakeAppx.exe encrypt /p MyPackage.appx /ep MyEncryptedPackage.eappx /kf MyKeyFile.txt
+MakeAppx.exe encrypt /p MyPackage.msix /ep MyEncryptedPackage.emsix /kt
+MakeAppx.exe encrypt /p MyPackage.msix /ep MyEncryptedPackage.emsix /kf MyKeyFile.txt
 
-MakeAppx.exe decrypt /p MyPackage.appx /ep MyEncryptedPackage.eappx /kt
-MakeAppx.exe decrypt p MyPackage.appx /ep MyEncryptedPackage.eappx /kf MyKeyFile.txt
+MakeAppx.exe decrypt /p MyPackage.msix /ep MyEncryptedPackage.emsix /kt
+MakeAppx.exe decrypt p MyPackage.msix /ep MyEncryptedPackage.emsix /kf MyKeyFile.txt
 ```
-
-### <a name="build-an-app-package"></a>Erstellen eines App-Pakets 
-
-**MakeAppx.exe** kann eine App basierend auf der Paketlayoutdatei der App erstellen. Weitere Informationen zum Erstellen einer Paketlayoutdatei und zum Verwenden von **MakeAppx.exe** zum Erstellen finden Sie unter [Erstellen eines Pakets mit dem Verpackungslayout](packaging-layout.md).  
-
-Optionen, die für den **build**-Befehl spezifisch sind:
-
-| **Option**    | **Beschreibung**                       |
-|---------------|---------------------------------------|
-| /bc           | Gibt die untergeordneten Pakete in einer zu erstellenden Paketfamilie an.  |
-| /id           | Wird verwendet, um die auf Grundlage des **ID**-Attributs zu erstellenden Pakete auszuwählen. |
-| /ip           | Gibt den Speicherort von früheren Versionen eines App-Pakets an. |
-| /iv           | Erhöht automatisch die Version der zu erstellenden Pakete. |
-| /f            | Gibt die Verpackungslayoutdatei an. |
-| /nbp          | Gibt an, dass ein App-Paket nicht erstellt werden soll. |
-| /op           | Das Ziel des Ausgabepakets. |
 
 ## <a name="key-files"></a>Schlüsseldateien
 

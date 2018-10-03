@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 556a787eb1e92e4c8adb7457235afb45c02df2dc
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4206828"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258111"
 ---
 # <a name="set-conditions-for-running-a-background-task"></a>Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe
 
@@ -31,7 +31,7 @@ ms.locfileid: "4206828"
 
 Erfahren Sie, wie Bedingungen festgelegt werden, die steuern, wann die Hintergrundaufgabe ausgeführt wird.
 
-In manchen Fällen müssen Hintergrundaufgaben bestimmte Bedingungen erfüllt sein, für die Hintergrundaufgabe erfolgreich ausgeführt werden kann. Wenn Sie Ihre Hintergrundaufgabe registrieren, können Sie mit [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) eine oder mehrere Bedingungen angeben. Die Bedingung wird geprüft werden, nachdem der Trigger ausgelöst wurde. Die Hintergrundaufgabe wird dann in die Warteschlange, aber es wird nicht ausgeführt, bis alle erforderlichen Bedingungen erfüllt sind.
+Hintergrundaufgaben müssen in manchen Fällen bestimmte Bedingungen erfüllt sein, für die Hintergrundaufgabe erfolgreich ausgeführt werden kann. Wenn Sie Ihre Hintergrundaufgabe registrieren, können Sie mit [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) eine oder mehrere Bedingungen angeben. Die Bedingung wird geprüft werden, nachdem der Trigger ausgelöst wurde. Die Hintergrundaufgabe wird dann in die Warteschlange, aber es wird nicht ausgeführt, bis alle erforderlichen Bedingungen erfüllt sind.
 
 Wenn Sie Bedingungen für Hintergrundaufgaben speichert schonen Sie Akku und CPU-von Aufgaben verhindert unnötigen ausgeführt. Wenn Ihre Hintergrundaufgabe z. B. nach einem Timer ausgeführt wird und eine Internetverbindung benötigt, fügen Sie die **InternetAvailable**-Bedingung zum [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) hinzu, bevor Sie die Aufgabe registrieren. So wird verhindert, dass die Aufgabe unnötig Systemressourcen nutzt und Akkulaufzeit beansprucht, da nur die Hintergrundaufgabe ausgeführt wird, wenn der Timer abgelaufen *und* das Internet verfügbar ist.
 
@@ -43,7 +43,7 @@ Dieses Thema setzt voraus, dass Sie Ihrer App bereits eine Hintergrundaufgabe zu
 
 Dieses Thema gilt für Hintergrundaufgaben, die in einem Prozess außerhalb von Prozessen ausgeführt werden, sowie für solche, die im gleichen Prozess wie die Vordergrund-App ausgeführt werden.
 
-Erstellen Sie vor dem Hinzufügen der Bedingung eines [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) -Objekts, um die Bedingung darstellen, die in einer Hintergrundaufgabe ausgeführt werden muss. Geben Sie im Konstruktor die Bedingung, die mit einem Enumerationswert [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) erfüllt werden müssen.
+Erstellen Sie vor dem Hinzufügen der Bedingung eines [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) -Objekts, um die Bedingung darstellen, die in einer Hintergrundaufgabe ausgeführt werden muss. Legen Sie im Konstruktor die Bedingung, die mit einem Enumerationswert [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) erfüllt werden müssen.
 
 Der folgende Code erstellt ein [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834) -Objekt, das die **InternetAvailable** -Bedingung angibt:
 
@@ -64,7 +64,7 @@ SystemCondition ^ internetCondition = ref new SystemCondition(SystemConditionTyp
 
 Um die Bedingung hinzuzufügen, rufen Sie die [**AddCondition**](https://msdn.microsoft.com/library/windows/apps/br224769)-Methode für das [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)-Objekt auf, und übergeben Sie das [**SystemCondition**](https://msdn.microsoft.com/library/windows/apps/br224834)-Objekt an die Methode.
 
-Der folgende Code verwendet **TaskBuilder** die **InternetAvailable** -Bedingung hinzufügen.
+Der folgende Code verwendet **TaskBuilder** , um die **InternetAvailable** -Bedingung hinzuzufügen.
 
 ```csharp
 taskBuilder.AddCondition(internetCondition);
@@ -80,7 +80,7 @@ taskBuilder->AddCondition(internetCondition);
 
 ## <a name="register-your-background-task"></a>Registrieren Sie die Hintergrundaufgabe.
 
-Sie können jetzt Ihre Hintergrundaufgabe registrieren, mit der Methode [**Registrieren**](https://msdn.microsoft.com/library/windows/apps/br224772) und die Hintergrundaufgabe startet erst, wenn die angegebene Bedingung erfüllt ist.
+Sie können jetzt Ihre Hintergrundaufgabe registrieren, mit der Methode [**Registrieren**](https://msdn.microsoft.com/library/windows/apps/br224772) und die Hintergrundaufgabe wird nicht gestartet, bis die angegebene Bedingung erfüllt ist.
 
 Der folgende Code registriert die Aufgabe und speichert das resultierende BackgroundTaskRegistration-Objekt:
 

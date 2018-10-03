@@ -4,7 +4,7 @@ ms.assetid: 96361CAF-C347-4671-9721-8208CE118CA4
 title: Verpacken von UWP-Apps
 description: Um Ihre UWP-App (Universelle Windows-Plattform) zu vertreiben und zu verkaufen, müssen Sie ein App-Paket erstellen.
 ms.author: lahugh
-ms.date: 06/10/2018
+ms.date: 09/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
@@ -13,25 +13,25 @@ f1_keywords:
 - vs.packagewizard
 - vs.storeassociationwizard
 ms.localizationpriority: medium
-ms.openlocfilehash: eb930c5e6b2c1c1f864f2e63fbce97c89bb89e1f
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: 1ce80206823694f06e4aa5c3480b4dcb30c4f95c
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211582"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258461"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Verpacken einer UWP-App mit Visual Studio
 
 Um Ihre Universelle Windows Plattform (UWP)-App zu verkaufen oder an andere Benutzer zu verteilen, müssen Sie es verpacken. Wenn Sie Ihre App nicht über den Microsoft Store verteilen möchten, können Sie das App-Paket direkt auf einem Gerät querladen oder über [Web Install](installing-UWP-apps-web.md) verteilen. In diesem Artikel wird das Konfigurieren, Erstellen und Testen von UWP-App-Paketen mit Visual Studio beschrieben. Weitere Informationen zum Verwalten und Bereitstellen von branchenspezifischen Apps (Line-of-Business, LOB) finden Sie unter [Enterprise-App-Verwaltung](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management).
 
-In Windows 10 können Sie ein App-Paket (.appx), ein App-Bündel (.appxbundle) oder eine vollständige App-Paketuploaddatei (.appxupload) an das Windows Dev Center übermitteln. Unter diesen Optionen werden mit der Übermittlung einer Paketuploaddatei optimale Ergebnisse erzielt. 
+In Windows 10 können Sie ein app-Paket oder app-Bündel, eine vollständige app-paketuploaddatei an das Windows Dev Center übermitteln. Unter diesen Optionen werden mit der Übermittlung einer Paketuploaddatei optimale Ergebnisse erzielt. 
 
 ## <a name="types-of-app-packages"></a>App-Pakettypen
 
-- **App-Paket (.appx)**  
-    Eine Datei, die Ihre App in einem Format enthält, das auf einem Gerät quergeladen werden kann. Einzelne, von Visual Studio erstellte .appx-Paketdateien sollten **nicht** an Dev Center übermittelt werden und sind nur für das Querladen und zu Testzwecken zu verwenden. Wenn Sie Ihre App an Dev Center übermitteln möchten, verwenden Sie die App-Paketuploaddatei.  
+- **App-Paket (.appx oder .msix)**  
+    Eine Datei, die Ihre App in einem Format enthält, das auf einem Gerät quergeladen werden kann. Alle einzelnen app-Paketdatei von Visual Studio erstellte ist **nicht** an Dev Center übermittelt werden soll und für das querladen und nur zu Testzwecken verwendet werden soll. Wenn Sie Ihre App an Dev Center übermitteln möchten, verwenden Sie die App-Paketuploaddatei.  
 
-- **App Bundle (.appxbundle)**  
+- **App-Bündel (.appxbundle oder .msixbundle)**  
     Ein App-Bündel ist ein Pakettyp, der mehrere App-Pakete enthalten kann, von denen jedes so erstellt wurde, dass es eine bestimmte Gerätearchitektur unterstützt. Beispielsweise kann ein App-Bündel drei separate App-Pakete für die Konfigurationen x86, x64 und ARM enthalten. App-Bündel sollten nach Möglichkeit generiert werden, da sie ermöglichen, dass Ihre App auf den verschiedensten Geräten verfügbar ist.  
 
 - **App-Paketuploaddatei (.appxupload)**  
@@ -80,7 +80,7 @@ Wenn Sie Ihre App über den Microsoft Store verteilen, kann Visual Studio Ihr Pa
 
 ## <a name="create-an-app-package-upload-file"></a>Erstellen einer App-Paketuploaddatei
 
-Um eine App über den Microsoft Store zu verteilen, müssen Sie ein App-Paket (.appx), ein App-Bündel (.appxbundle) oder ein Upload-Paket (.appxupload) erstellen und [die verpackte App an Dev Center übermitteln](https://docs.microsoft.com/windows/uwp/publish/app-submissions). Es ist zwar möglich, nur ein App-Paket oder App-Bündel an Dev Center zu übermitteln, es wird jedoch empfohlen, ein Uploadpaket zu übermitteln.
+Um eine app über den Microsoft Store verteilen zu können, müssen Sie ein app-Paket (.appx oder .msix), app-Bündel (.appxbundle oder .msixbundle), oder ein Upload-Paket (.appxupload) und [die verpackte app an Dev Center übermitteln](https://docs.microsoft.com/windows/uwp/publish/app-submissions)erstellen. Es ist zwar möglich, nur ein App-Paket oder App-Bündel an Dev Center zu übermitteln, es wird jedoch empfohlen, ein Uploadpaket zu übermitteln.
 
 >[!NOTE]
 > Die App-Paketuploaddatei (.appxupload) ist der **einzig** gültige App-Pakettyp für Dev Center, der mithilfe von Visual Studio erstellt werden kann. Weitere gültige [App-Pakete können manuell](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool), ohne Visual Studio erstellt werden. 
@@ -102,7 +102,7 @@ Verwenden Sie dazu den Assistenten **App-Pakete erstellen**. Führen Sie die fol
 4.  Melden Sie sich mit Ihrem Entwicklerkonto beim Windows Dev Center an. Wenn Sie noch kein Entwicklerkonto besitzen, hilft Ihnen der Assistent bei der Erstellung.
 5.  Wählen Sie den App-Namen für das Paket aus, oder reservieren Sie einen neuen Namen, wenn Sie noch kein Paket im Windows Dev Center-Portal reserviert haben.  
     ![Dialogfeld „App-Pakete erstellen“ mit Auswahl des App-Namens](images/packaging-screen4.jpg)
-6.  Stellen Sie sicher, dass Sie im Dialogfeld **Auswählen und Konfigurieren von Paketen** alle drei Architekturkonfigurationen (x86, x64 und ARM) auswählen, um zu gewährleisten, dass Ihre App auf einer breiten Palette von Geräten bereitgestellt werden kann. Wählen Sie im Listenfeld **App-Bündel erstellen** die Option **Immer**. Ein App-Bündel (.appxbundle) wird gegenüber einem einzelnen App-Paket (.appx) bevorzugt, da es eine Sammlung von App-Paketen enthält, die für jeden Prozessor-Architekturtyp konfiguriert sind. Wenn Sie das App-Bündel generieren, wird es zusammen mit Informationen für das Debugging und die Absturzanalyse in die endgültige App-Paketuploaddatei (.appxupload) mit aufgenommen. Wenn Sie nicht sicher sind, welche Architektur(en) Sie auswählen sollen, oder wenn Sie mehr darüber erfahren möchten, welche Architekturen von verschiedenen Geräten verwendet werden, finden Sie weitere Informationen unter [App-Paketarchitekturen](https://docs.microsoft.com/windows/uwp/packaging/device-architecture).  
+6.  Stellen Sie sicher, dass Sie im Dialogfeld **Auswählen und Konfigurieren von Paketen** alle drei Architekturkonfigurationen (x86, x64 und ARM) auswählen, um zu gewährleisten, dass Ihre App auf einer breiten Palette von Geräten bereitgestellt werden kann. Wählen Sie im Listenfeld **App-Bündel erstellen** die Option **Immer**. Ein app-Bündel (.appxbundle) wird über eine einzelne app-Paketdatei bevorzugt, da es enthält eine Sammlung von app-Pakete, die für jeden Prozessor-Architekturtyp konfiguriert sind. Wenn Sie das App-Bündel generieren, wird es zusammen mit Informationen für das Debugging und die Absturzanalyse in die endgültige App-Paketuploaddatei (.appxupload) mit aufgenommen. Wenn Sie nicht sicher sind, welche Architektur(en) Sie auswählen sollen, oder wenn Sie mehr darüber erfahren möchten, welche Architekturen von verschiedenen Geräten verwendet werden, finden Sie weitere Informationen unter [App-Paketarchitekturen](https://docs.microsoft.com/windows/uwp/packaging/device-architecture).  
     ![Dialogfeld „App-Pakete erstellen“ mit Paketkonfiguration](images/packaging-screen5.jpg)
 
 
@@ -137,7 +137,7 @@ Weitere Informationen zum Übermitteln Ihrer App an Dev Center finden Sie unter 
 
 ## <a name="sideload-your-app-package"></a>Querladen des App-Pakets
 
-In Windows10 Anniversary Update wurden App-Pakete eingeführt, die einfach durch Doppelklicken auf die App-Paketdatei installiert werden. Um dies zu verwenden, navigieren Sie einfach zu Ihrer App-Paket- (.appx) oder App-Bündel (.appxbundle)-Datei, und doppelklicken Sie darauf. Die App-Installer startet und bietet einfache App-Informationen sowie auch eine Installieren-Schaltfläche, Installationsstatusanzeige und alle relevanten Meldungen. 
+In Windows10 Anniversary Update wurden App-Pakete eingeführt, die einfach durch Doppelklicken auf die App-Paketdatei installiert werden. Um dies zu verwenden, navigieren Sie zu Ihrer app-Paket oder app-Bündel-Datei, und doppelklicken darauf klicken. Die App-Installer startet und bietet einfache App-Informationen sowie auch eine Installieren-Schaltfläche, Installationsstatusanzeige und alle relevanten Meldungen. 
 
 ![App-Installer zeigt eine Beispiel-App namens Contoso für die Installation an](images/appinstaller-screen.png)
 
@@ -145,7 +145,7 @@ In Windows10 Anniversary Update wurden App-Pakete eingeführt, die einfach durch
 > Die App-Installer geht davon aus, dass die App vom Gerät als vertrauenswürdig eingestuft wird. Wenn Sie eine Entwickler- oder Unternehmens-App querladen, müssen Sie das Signaturzertifikat im Speicher für vertrauenswürdige Personen oder vertrauenswürdige Herausgeber auf dem Gerät installieren. Wenn Sie nicht sicher sind, wie Sie hierzu vorgehen, finden Sie unter [Testzertifikate installieren](https://docs.microsoft.com/windows-hardware/drivers/install/installing-test-certificates) weitere Infos.
 
 ### <a name="sideload-your-app-on-previous-versions-of-windows"></a>Querladen Ihrer App auf früheren Versionen von Windows
-Apps werden nicht mit UWP-App-Paketen auf einem Gerät installiert, mit Desktop-Apps werden. In der Regel laden Sie UWP-Apps aus dem Microsoft Store herunter, wodurch die App auch auf Ihrem Gerät installiert wird. Apps können installiert werden, ohne im Store veröffentlicht zu werden (Querladen). Bei dieser Vorgehensweise können Sie die App mit dem App-Paket (.appx), das Sie erstellt haben, installieren und testen. Wenn Sie über eine App verfügen, die Sie nicht im Store anbieten möchten (z. B. eine branchenspezifische App), können Sie diese App querladen, um sie für Kollegen im Unternehmen bereitzustellen.
+Apps werden nicht mit UWP-App-Paketen auf einem Gerät installiert, mit Desktop-Apps werden. In der Regel laden Sie UWP-Apps aus dem Microsoft Store herunter, wodurch die App auch auf Ihrem Gerät installiert wird. Apps können installiert werden, ohne im Store veröffentlicht zu werden (Querladen). Auf diese Weise können Sie bei der Installation und Test mit dem app-Paket-Datei, die Sie erstellt haben. Wenn Sie über eine App verfügen, die Sie nicht im Store anbieten möchten (z. B. eine branchenspezifische App), können Sie diese App querladen, um sie für Kollegen im Unternehmen bereitzustellen.
 
 Die folgende Liste enthält die Anforderungen für das Querladen von Apps.
 

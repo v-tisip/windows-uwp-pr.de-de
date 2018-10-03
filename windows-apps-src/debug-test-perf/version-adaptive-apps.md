@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f2485eab4b192fe4a65c68d957de1ec9192f8c20
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4210100"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261363"
 ---
 # <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>Versionsadaptive Apps: Verwendung neuer APIs bei gleichzeitiger Gewährleistung der Kompatibilität mit früheren Versionen
 
@@ -64,7 +64,7 @@ Im Anschluss finden Sie die Buildnummern für die einzelnen SDKs.
 
 Sie können jede beliebige veröffentlichte Version des SDKs aus dem [WindowsSDK- und Emulator-Archiv](https://developer.microsoft.com/downloads/sdk-archive) herunterladen. Das neueste Windows Insider Preview SDK können Sie im Entwicklerabschnitt der [Windows-Insider-Website](https://insider.windows.com/Home/BuildWithWindows) herunterladen.
 
- Weitere Informationen zu Windows 10-Updates finden Sie unter [Windows 10 Informationen freigeben](https://technet.microsoft.com/windows/release-info). Unterstützen Sie für wichtige Informationen über das Windows 10-Lebenszyklus, finden Sie im [Windows-Lebenszyklus Datenblatt](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
+ Weitere Informationen zu Windows 10-Updates finden Sie unter [Windows 10 Informationen freigeben](https://technet.microsoft.com/windows/release-info). Unterstützen Sie wichtige Informationen über das Windows 10-Lebenszyklus, finden Sie im [Windows-Lebenszyklus Datenblatt](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
 ## <a name="perform-api-checks"></a>API-Überprüfung
 

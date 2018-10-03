@@ -1,7 +1,7 @@
 ---
 author: Xansky
 ms.assetid: 99DB5622-3700-4FB2-803B-DA447A1FD7B7
-description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um die täglichen app-Nutzungsdaten für eines bestimmten Zeitraums und andere optionale Filter abzurufen.
+description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um täglichen app-Nutzungsdaten für einen bestimmten Zeitraum und andere optionale Filter abzurufen.
 title: Abrufen von täglichen app-Nutzung
 ms.author: mhopkins
 ms.date: 08/15/2018
@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Store-Dienste, Microsoft Store-Analyse-API, Nutzung
 ms.localizationpriority: medium
 ms.openlocfilehash: 5060c24df7242d62e2895231d7441e904987d522
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4209234"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4263347"
 ---
 # <a name="get-daily-app-usage"></a>Abrufen von täglichen app-Nutzung
 
-Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um aggregierte Nutzungsdaten (mit Ausnahme von Xbox Multiplayer-) im JSON-Format für eine Anwendung während eines bestimmten Zeitraums (letzten 90 Tage nur) und andere optionale Filter abzurufen. Diese Informationen sind auch im [Bericht "Nutzung"](../publish/usage-report.md) im Windows Dev Center-Dashboard verfügbar.
+Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um aggregierte Nutzungsdaten (nicht einschließlich Xbox Multiplayer-) im JSON-Format für eine Anwendung während eines bestimmten Zeitraums (letzten 90 Tage nur) und andere optionale Filter abzurufen. Diese Informationen sind auch im [Bericht "Nutzung"](../publish/usage-report.md) im Windows Dev Center-Dashboard verfügbar.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -80,7 +80,7 @@ Authorization: Bearer <your access token>
 | TotalCount | int    | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.                                                                          |
 
  
-### <a name="usage-values"></a>Nutzung Werte
+### <a name="usage-values"></a>Werte
 
 Elemente im Array *Value* enthalten die folgenden Werte.
 
@@ -89,18 +89,18 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | date                      | string  | Das erste Datum im Datumsbereich für die Nutzungsdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist dieser Wert das erste Datum in diesem Datumsbereich.        |
 | applicationId             | string  | Die Store-ID der app, für die Sie Nutzungsdaten abrufen.          |
 | applicationName           | string  | Der Anzeigename der App.                                              |
-| deviceType                | string  | Eine der folgenden Zeichenfolgen gibt an, dass der Typ des Geräts, in denen Nutzung aufgetreten ist:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**Tablet**</li><li>**IoT**</li><li>**Server**</li><li>**Holographic**</li><li>**Unbekannt**</li></ul>                                                                                                         |
+| deviceType                | string  | Eine der folgenden Zeichenfolgen, die den Typ des Geräts angibt, in dem Nutzung erfolgte:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**Tablet**</li><li>**IoT**</li><li>**Server**</li><li>**Holographic**</li><li>**Unbekannt**</li></ul>                                                                                                         |
 | packageVersion            | string  | Die Version des Pakets, in dem Nutzung erfolgte.                          |
-| market                    | string  | Der ISO 3166-Ländercode des Markts, in denen Ihre app an der Kunden verwendet. |
+| market                    | string  | Der ISO 3166-Ländercode des Markts, in dem der Kunde Ihre app verwendet, werden soll. |
 | subscriptionName          | String  | Gibt an, ob die Verwendung über Xbox Game Pass befand.                            |
 | dailySessionCount         | long    | Die Anzahl der benutzersitzungen an diesem Tag.                                  |
-| engagementDurationMinutes | doppelt  | Der Minuten, in denen Benutzer aktiv Ihrer App gemessen durch einen bestimmten Zeitraum, wenn die app gestartet wird (Prozessbeginn) und endet, wenn er beendet wird (Prozess End) oder nach einer Zeit der Inaktivität.             |
+| engagementDurationMinutes | doppelt  | Die Minuten, in denen Benutzer aktiv Ihrer App gemessen durch einen bestimmten Zeitraum, wenn die app gestartet wird (Prozessbeginn) und endet, wenn er beendet wird (Prozess End) oder nach einer Zeit der Inaktivität.             |
 | dailyActiveUsers          | long    | Die Anzahl der Kunden, die die app an diesem Tag.                           |
-| dailyActiveDevices        | long    | Die Anzahl der täglichen Geräte von allen Benutzern zur Interaktion mit Ihrer app verwendet.  |
+| dailyActiveDevices        | long    | Die Anzahl der täglichen Geräte, die von allen Benutzern zur Interaktion mit Ihrer app verwendet.  |
 | dailyNewUsers             | long    | Die Anzahl der Kunden, die Ihre app zum ersten Mal an diesem Tag verwendet.    |
-| monthlyActiveUsers        | long    | Die Anzahl der Kunden, die die app dieses Monats.                         |
+| monthlyActiveUsers        | long    | Die Anzahl der Kunden, die mit der app dieses Monats.                         |
 | monthlyActiveDevices      | long    | Die Anzahl der Geräte, die app für einen bestimmten Zeitraum, wenn die app gestartet wird (Prozessbeginn) ausführen und endet, wenn er beendet wird (Prozess End) oder nach einer Zeit der Inaktivität.                                      |
-| monthlyNewUsers           | long    | Die Anzahl der Kunden, mit denen Sie Ihre app zum ersten Mal dieses Monats.  |
+| monthlyNewUsers           | long    | Die Anzahl der Kunden, die Ihre app zum ersten Mal dieses Monats verwendet.  |
 
 
 ### <a name="response-example"></a>Antwortbeispiel

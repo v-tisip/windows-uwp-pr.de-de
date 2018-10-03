@@ -14,12 +14,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8589a450b53a5ea028f8af2cee2aef7dc0816b52
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: 3bf91725a62c8d03c37448ddf69b072461288f11
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4205716"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258483"
 ---
 # <a name="acrylic-material"></a>Acryl-Material
 
@@ -31,10 +31,12 @@ Acryl ist eine Art von [Pinsel](https://docs.microsoft.com/en-us/uwp/api/Windows
 
 :::row:::
     :::column:::
-        Acryl im hellen Design ![Acryl im hellen Design](images/Acrylic_LightTheme_Base.png)
+        Acrylic in light theme
+        ![Acrylic in light theme](images/Acrylic_LightTheme_Base.png)
     :::column-end:::
     :::column:::
-        Acryl im dunklen Design ![Acryl im dunklen Design](images/Acrylic_DarkTheme_Base.png)
+        Acrylic in dark theme
+        ![Acrylic in dark theme](images/Acrylic_DarkTheme_Base.png)
     :::column-end:::
 :::row-end:::
 
@@ -49,65 +51,17 @@ Acryl ist eine Art von [Pinsel](https://docs.microsoft.com/en-us/uwp/api/Windows
 ## <a name="examples"></a>Beispiele
 
 :::row:::
-    ::: Column Span::: ![einige Image](images/XAML-controls-gallery-app-icon.png)
+    :::column span:::
+        ![Some image](images/XAML-controls-gallery-app-icon.png)
     :::column-end:::
-    ::: Column Span = "2"::: **XAML-Steuerelementekatalog**<br>
-        Wenn Sie die XAML-Steuerelementekatalog-app installiert haben, klicken Sie <a href="xamlcontrolsgallery:/item/Acrylic">hier</a> auf die app zu öffnen und Acryl in Aktion zu sehen.
+    :::column span="2":::
+        **XAML Controls Gallery**<br>
+        If you have the XAML Controls Gallery app installed, click <a href="xamlcontrolsgallery:/item/Acrylic">here</a> to open the app and see acrylic in action.
 
         <a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Get the XAML Controls Gallery app (Microsoft Store)</a><br>
         <a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Get the source code (GitHub)</a>
     :::column-end:::
 :::row-end:::
-
-## <a name="when-to-use-acrylic"></a>Wann sollte Acryl verwendet werden?
-
-Wir empfehlen, unterstützende UI-Komponenten, beispielsweise In-App-Navigation oder Steuerelemente, auf einer Acryloberfläche zu platzieren. Dieses Material ist auch hilfreich für vorübergehende UI-Elemente, wie beispielsweise Dialogfelder und Flyouts, da dadurch eine sichtbare Beziehung mit dem Inhalt beibehalten werden kann, der die vorübergehende UI ausgelöst hat. Acryl wurde zur Verwendung als Hintergrundmaterial und in optisch unauffälligen Bereichen entwickelt. Sie sollten Acryl daher nicht in detaillierten Vordergrundelementen anwenden.
-
-Für Oberflächen hinter dem primären App-Inhalt sollten einheitliche, undurchsichtige Hintergründe verwendet werden.
-
-Ziehen Sie es in Erwägung, Acryl auf einen oder mehrere Ränder Ihrer App, einschließlich der Titelleiste des Fensters, zu erweitern, um die visuelle Darstellung zu verbessern. Vermeiden Sie Streifeneffekte durch das Stapeln von Acrylfarben verschiedener Mischungen nebeneinander. Acryl ist ein Tool zum Erzeugen von visueller Harmonie in Ihren Designs, bei inkorrekter Verwendung können sich jedoch visuelle Störungen ergeben.
-
-Berücksichtigen Sie die folgenden Verwendungsmuster, um zu entscheiden, wie sich Acryl am besten in Ihre App integrieren lässt.
-
-### <a name="vertical-acrylic-pane"></a>Vertikaler Acrylbereich
-
-Es wird empfohlen, in Apps mit vertikaler Navigation Acryl auf den sekundären Bereich anzuwenden, der die Navigationselemente enthält.
-
-![App-Muster mit einem einzigen vertikalen Acrylbereich](images/acrylic_app-pattern_vertical.png)
-
-[NavigationView](../controls-and-patterns/navigationview.md) ist ein neues allgemeines Steuerelement zum Hinzufügen von Navigation zu Ihrer App. Der visuelle Entwurf dieses Elements enthält Acryl. Der Bereich von NavigationView zeigt Hintergrund-Acryl, wenn der Bereich parallel mit dem primären Inhalt geöffnet ist, und dieses wird automatisch in In-App-Acryl umgewandelt, wenn der Bereich als Überlagerung geöffnet ist.
-
-Wenn Ihre app nicht NavigationView nutzen kann, und Sie Acryl selbst hinzufügen möchten, empfehlen wir die Verwendung von relativ durchsichtige Acryl mit 60 % Farbton-Deckkraft.
- - Wenn der Bereich als Überlagerung über anderen Inhalten der App geöffnet wird, sollte dies [60% In-App-Acryl](#acrylic-theme-resources) sein.
- - Wenn der Bereich parallel mit dem Hauptinhalt der App geöffnet wird, sollte dies [60% Hintergrund-Acryl](#acrylic-theme-resources)sein.
-
-### <a name="multiple-acrylic-panes"></a>Mehrere Acrylbereiche
-
-Es wird empfohlen, in Apps mit drei verschiedenen vertikalen Bereichen Acryl zum nicht primären Inhalt hinzufügen.
- - Verwenden Sie für den sekundären Bereich, der sich am nächsten am primären Inhalt befindet, [80% Hintergrund-Acryl](#acrylic-theme-resources).
- - Verwenden Sie für den tertiären Bereich, der vom primären Inhalt weiter entfernt ist, [60% Hintergrund-Acryl](#acrylic-theme-resources).
-
-![App-Muster mit zwei vertikalen Acrylbereichen](images/acrylic_app-pattern_double-vertical.png)
-
-### <a name="horizontal-acrylic-pane"></a>Horizontaler Acrylbereich
-
-Wir empfehlen, für Apps mit horizontaler Navigation, Steuerung oder sonstigen starken horizontalen Elementen am oberen Rand der App [70% Acryl](#acrylic-theme-resources) auf dieses visuelle Element anzuwenden.
-
-![App-Muster mit einem horizontalen Acrylbereich](images/acrylic_app-pattern_horizontal.png)
-
-In Canvas-Apps, bei denen kontinuierlicher, zoomfähiger Inhalt im Mittelpunkt steht, sollte In-App-Acryl in der oberen Leiste verwendet werden, damit Benutzer eine Verbindung mit diesem Inhalt herstellen können. Beispiele für Canvas-Apps sind Karten, Malen und Zeichnen.
-
-Für Apps ohne einen einzigen kontinuierlichen Zeichenbereich empfehlen wir die Verwendung von Hintergrund-Acryl, um Benutzer mit Ihrer gesamten Desktopumgebung zu verbinden.
-
-### <a name="acrylic-in-utility-apps"></a>Acryl in Hilfsprogramm-Apps
-
-Widgets oder einfachen Apps können als Utility-Apps hervorgehoben werden, wenn im App-Fenster durchgehend Acryl verwendet wird. Apps dieser Kategorie werden in der Regel nur kurz vom Benutzer verwendet und nehmen nicht den gesamte PC-Bildschirm ein. Beispiele für solche Apps sind der Rechner und das Info-Center.
-
-![Dienstprogramm-App „Rechner” mit Acryl im gesamten Hintergrund](images/acrylic_app-pattern_full.png)
-
-> [!Note]
-> Das Rendern von acryloberflächen ist GPU-intensiv, das Gerät den Energieverbrauch zu erhöhen und Akkulaufzeit verkürzt werden kann. Acryleffekte werden automatisch deaktiviert, wenn Geräte Stromsparmodus versetzt, und Benutzer können acryleffekte für alle apps, deaktivieren, wenn der Benutzer.
-
 
 ## <a name="acrylic-blend-types"></a>Acrylmischungen
 Die auffälligste Eigenschaft von Acryl ist seine Transparenz. Es gibt zwei Acrylmischungen, die beeinflussen, welche Inhalte durch das Material sichtbar sind:
@@ -118,8 +72,41 @@ Die auffälligste Eigenschaft von Acryl ist seine Transparenz. Es gibt zwei Acry
 
  ![In-App-Acryl](images/AppAcrylic_DarkTheme.png)
 
- Schichten Sie mehrere Acryloberflächen vorsichtig übereinander. Hintergrund-Acryl sollte sich, wie der Name schon sagt, in der Z-Reihenfolge nicht am nächsten am Benutzer befinden. Mehrere Schichten von Hintergrund-Acryl führen tendenziell zu unerwarteten optischen Täuschungen und sollten vermieden werden. Wenn Sie Acryl übereinanderschichten möchten, verwenden Sie dafür In-App-Acryl, und ziehen Sie es in Erwägung, den Farbtonwert des Acryls zu reduzieren, damit die Schichten für den Betrachter optisch besser dargestellt werden.
+ Schichten Sie mehrere acryloberflächen vorsichtig: mehrere Schichten von Hintergrund-Acryl ablenkende optischen täuschungen erstellen können.
 
+## <a name="when-to-use-acrylic"></a>Wann sollte Acryl verwendet werden?
+
+* Verwenden Sie in-app-Acryl, für die Unterstützung von UI, z. B. NavigationView oder Inline-Steuerelemente. 
+* Verwenden Sie Hintergrund-Acryl, vorübergehende UI-Elemente, z. B. Kontextmenüs, Flyouts und Licht-Dimsissable Benutzeroberfläche.<br />Verwenden Acryl in vorübergehende Szenarien hilft eine visuelle Beziehung mit dem Inhalt verwalten, die die vorübergehende Benutzeroberfläche ausgelöst hat.
+
+Wenn Sie in-app-Acryl auf Navigation Oberflächen verwenden, sollten Sie Inhalt unterhalb der acrylbereich zur Verbesserung des Fluss in Ihrer app erweitern. Mithilfe von NavigationView ist für Sie automatisch der Fall. Vermeiden Sie streifeneffekte, versuchen nicht, platzieren Sie mehrere Acryl Edge-to-Edge - kann dies jedoch eine unerwünschte Naht zwischen den beiden verschwommen Flächen erstellen. Acryl kann ist ein Tool zum Erzeugen von visuellen Harmonie in Ihren Designs, jedoch bei inkorrekter Verwendung visuelle Störungen ergeben.
+
+Berücksichtigen Sie die folgenden Verwendungsmuster zu entscheiden, wie Acryl in Ihrer app zu integrieren:
+
+### <a name="horizontal-navigation-or-commanding"></a>Horizontale Navigation oder Befehle
+
+Wenn Ihre app nicht NavigationView nutzen kann, und Sie Acryl selbst hinzufügen möchten, empfehlen wir die Verwendung von relativ durchsichtige Acryl mit 60 % Farbton-Deckkraft.
+ - Wenn der Bereich als Überlagerung über anderen Inhalten der App geöffnet wird, sollte dies [60% In-App-Acryl](#acrylic-theme-resources) sein.
+ - Wenn der Bereich parallel mit dem Hauptinhalt der App geöffnet wird, sollte dies [60% Hintergrund-Acryl](#acrylic-theme-resources)sein.
+
+![Karten-app mit in-app horizontale Befehle](images/Maps_In_App_Acrylic_1.png)
+
+Darüber hinaus erhalten müssen Ihre Inhalte erweitern oder Bildlauf unter der Acryl am Anfang Ihrer app eine immersive und nahtlose Darstellung.
+
+### <a name="vertical-panes"></a>Vertikalen Bereichen
+
+Für vertikalen Bereichen oder Oberflächen, die Abschnitt Inhalt Ihrer App zu unterstützen, empfehlen wir, dass Sie einen nicht transparenten Hintergrund anstelle von Acryl verwenden. Wenn Ihre vertikalen Bereichen auf Inhalte öffnen, sollten wie in NavigationView **Collapsed** oder **minimale** Modi, dass Sie in-app-Acryl verwenden, um die Seite Kontext zu behalten, wenn der Benutzer in diesem Bereich zu öffnen.
+
+### <a name="transient-surfaces"></a>Vorübergehende Oberflächen
+
+Für apps mit Menü nicht Modal Popups, Flyouts oder Licht-schließen Bereiche, es wird empfohlen, Hintergrund-Acryl zu verwenden.
+
+![Mail-app-Muster mit einem Informationszwecken flyout](images/Mail_TransientContextMenu.png)
+
+Viele der unsere Steuerelemente werden Acryl in der Standardeinstellung verwenden. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus)"," [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box)"," [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) "und" ähnliche Steuerelemente mit Licht-Dimiss Popups werden alle vorübergehende Acryl verwenden, wenn sie aufgerufen werden.
+
+> [!Note]
+> Das Rendern von acryloberflächen ist GPU-intensiv, das Gerät den Energieverbrauch zu erhöhen und Akkulaufzeit verkürzt werden kann. Acryleffekte werden automatisch deaktiviert, wenn Geräte Stromsparmodus versetzt, und Benutzer können acryleffekte für alle apps, deaktivieren, wenn der Benutzer.
 
 ## <a name="usability-and-adaptability"></a>Benutzerfreundlichkeit und Anpassungsfähigkeit
 Acryl passt seine Darstellung automatisch an eine Vielzahl von Geräten und Kontext an.
@@ -209,10 +196,9 @@ Um eine bestimmte Oberfläche zu zeichnen, wenden Sie eines der oben genannten D
 ## <a name="custom-acrylic-brush"></a>Benutzerdefinierter Acrylpinsel
 Sie können einen Farbton zum Acryl Ihrer App hinzufügen, um das Branding anzuzeigen oder ein optisches Gleichgewicht mit anderen Elementen auf dieser Seite zu erzeugen. Um Farbe und keine Graustufen anzuzeigen, müssen Sie Ihre eigenen Acrylpinsel mithilfe der folgenden Eigenschaften definieren:
  - **TintColor**: die Überlagerungsschicht der Farbe/des Farbtons. Sie sollten sowohl den RGB-Farbwert als auch die Deckkraft des Alphakanals angeben.
- - **TintOpacity**: die Deckkraft der Farbtonschicht. Wir empfehlen 80 % Deckkraft als Ausgangspunkt, obwohl verschiedene Farben bei anderer Translucencies aussehen können.
+ - **TintOpacity**: die Deckkraft der Farbtonschicht. Wir empfehlen 80 % Deckkraft als Ausgangspunkt, obwohl verschiedene Farben bei anderen Translucencies aussehen können.
  - **BackgroundSource**: die Kennzeichnung zum Festlegen, ob Sie Hintergrund- oder In-App Acryl verwenden möchten.
  - **FallbackColor**: die Volltonfarbe, die Acryl in den Stromsparmodus ersetzt. Im Fall von Hintergrund-Acryl ersetzt die Fallbackfarbe das Acryl auch, wenn Ihre App nicht im aktiven Desktopfenster angezeigt wird oder wenn die App auf dem Telefon oder der Xbox ausgeführt wird.
-
 
 ![Acrylmuster für das helle Design](images/CustomAcrylic_Swatches_LightTheme.png)
 
@@ -332,6 +318,7 @@ Darüber hinaus müssen Sie den Titel der App, der normalerweise automatisch in 
 ## <a name="dos-and-donts"></a>Empfohlene und nicht empfohlene Vorgehensweisen
 * Verwenden Sie Acryl als Hintergrundmaterial von nicht primären App-Oberflächen wie Navigationsbereichen.
 * Dehnen Sie das Acryl auf mindestens einen Rand der App aus, um durch eine dezente Vermischung mit der Umgebung der App eine nahtlose Oberfläche bereitzustellen.
+* Versehen Sie keine desktop Arylic auf großen Hintergrund Oberflächen Ihrer App – dies bricht das mentale Modell der Acryl in erster Linie für die vorübergehende Flächen verwendet wird.
 * Platzieren Sie In-App- und Hintergrund-Acryl nicht direkt nebeneinander, um visuelle Spannung an den Rändern zu vermeiden.
 * Platzieren Sie nicht mehrere Acrylbereiche mit demselben Farbton und derselben Deckkraft nebeneinander, da dies eine unerwünschte sichtbare Naht erzeugt.
 * Platzieren Sie keinen farbigen Text über Acryloberflächen.

@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, App-Installer, AppInstaller, querladen, verwandte Gruppe, optionale Pakete
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b7ef1d1a9eb3e268e642cf9b0889df71a59fb44
-ms.sourcegitcommit: f91aa1e402f1bc093b48a03fbae583318fc7e05d
-ms.translationtype: HT
+ms.openlocfilehash: 965ef217fa00131504841ef2209dbe6aa54f50af
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "1917615"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4265989"
 ---
 # <a name="install-a-related-set-using-an-app-installer-file"></a>Installieren einer verwandten Gruppe mithilfe einer App-Installer-Datei
 
@@ -91,7 +91,7 @@ Die einfache Vorlage enthält die Informationen der App-Installer-Datei.
 ```
 
 ### <a name="step-3-add-the-main-package-information"></a>Schritt3: Hinzufügen der Hauptpaket-Informationen 
-Wenn das Haupt-App-Paket eine .appxbundle-Datei ist, verwenden Sie das unten angezeigte `<MainBundle>`. Wenn das Haupt-App-Paket eine .appx-Datei ist, verwenden Sie das `<MainPackage>` anstelle des `<MainBundle>` im Codeausschnitt. 
+Wenn das Haupt-app-Paket eine .appxbundle oder .msixbundle-Datei ist, verwenden Sie die `<MainBundle>` unten dargestellt. Wenn das Haupt-app-Paket eine .appx oder .msix-Datei ist, verwenden Sie `<MainPackage>` anstelle von `<MainBundle>` im Codeausschnitt. 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

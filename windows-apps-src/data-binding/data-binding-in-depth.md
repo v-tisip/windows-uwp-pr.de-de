@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c77450c3885f8a9bcd698e25ca721c4c3fe1305
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 72c7037e9e99ad69ff13c65fb2195bc6e3f8110f
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817831"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4259155"
 ---
 # <a name="data-binding-in-depth"></a>Datenbindung im Detail
 
@@ -23,6 +23,7 @@ ms.locfileid: "1817831"
 
 **Wichtige APIs**
 
+-   [**{x:Bind}-Markuperweiterung**](../xaml-platform/x-bind-markup-extension.md)
 -   [**Binding-Klasse**](https://msdn.microsoft.com/library/windows/apps/BR209820)
 -   [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713)
 -   [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899)
@@ -64,7 +65,8 @@ In den folgenden Abschnitten betrachten wird die Bindungsquelle, das Bindungszie
 
 Nachfolgend wird eine sehr einfache Implementierung einer Klasse gezeigt, die wir als Bindungsquelle verwenden könnten.
 
-**Hinweis** Bei Verwendung von [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) mit Komponentenerweiterungen für Visual C++ (C++/CX) müssen Sie das [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872)-Attribut zur Bindungsquellklasse hinzufügen. Bei Verwendung von [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) ist dieses Attribut nicht erforderlich. Unter [Hinzufügen einer Detailansicht](data-binding-quickstart.md#adding-a-details-view) finden Sie einen Codeausschnitt.
+> [!Note]
+> Wenn Sie mit Visual C++-komponentenerweiterungen [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) verwenden (C++ / CX) müssen Sie das Attribut [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) bindungsquellklasse hinzufügen. Bei Verwendung von [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) ist dieses Attribut nicht erforderlich. Unter [Hinzufügen einer Detailansicht](data-binding-quickstart.md#adding-a-details-view) finden Sie einen Codeausschnitt.
 
 ```csharp
 public class HostViewModel
@@ -84,7 +86,8 @@ Eine Möglichkeit für die Umsetzung besteht darin, die Klasse, die die Bindungs
 
 Eine einfachere Möglichkeit, eine Klasse feststellbar zu machen – und eine Notwendigkeit für Klassen, die bereits über eine Basisklasse verfügen – besteht in der Implementierung von [**System.ComponentModel.INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx). Hierzu muss lediglich ein einzelnes Ereignis mit dem Namen **PropertyChanged** implementiert werden. Weiter unten finden Sie ein Beispiel für die Verwendung von **HostViewModel**.
 
-**Hinweis** Im Fall von C++/CX implementieren Sie [**Windows::UI::Xaml::Data::INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899). Die Bindungsquellenklasse muss entweder über das [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) verfügen oder [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878) implementieren.
+> [!Note]
+> Für C++ / CX implementieren [**Windows::UI::Xaml::Data::INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/BR209899), und die bindungsquellenklasse muss entweder die [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) oder [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878)implementieren.
 
 ```csharp
 public class HostViewModel : INotifyPropertyChanged
@@ -158,12 +161,11 @@ Sie können mithilfe von inkrementellem Laden Listensteuerelemente an beliebig g
 
 In den folgenden beiden Beispielen ist die **Button.Content**-Eigenschaft das Bindungsziel. Ihr Wert ist auf eine Markuperweiterung festgelegt, die das Bindungsobjekt deklariert. Es wird zuerst [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) angezeigt, dann [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782). Das Deklarieren von Bindungen im Markup wird häufig verwendet (es ist praktisch, lesbar und toolfreundlich). Sie können Markups jedoch auch vermeiden und eine Instanz der [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820)-Klasse stattdessen auch bei Bedarf imperativ (programmgesteuert) erstellen.
 
-<!-- XAML lang specifier not yet supported in OP. Using XML for now. -->
-```xml
+```xaml
 <Button Content="{x:Bind ...}" ... />
 ```
 
-```xml
+```xaml
 <Button Content="{Binding ...}" ... />
 ```
 
@@ -189,7 +191,7 @@ namespace QuizGame.View
 
 Wenn dies erledigt ist, können wir uns das Markup, das das Bindungsobjekt deklariert, genauer ansehen. Das unten aufgeführte Beispiel verwendet das gleiche **Button.Content**-Bindungsziel, das wir weiter oben im Abschnitt „Bindungsziel“ verwendet haben, und zeigt seine Bindung an die **HostViewModel.NextButtonText**-Eigenschaft.
 
-```xml
+```xaml
 <Page x:Class="QuizGame.View.HostView" ... >
     <Button Content="{x:Bind Path=ViewModel.NextButtonText, Mode=OneWay}" ... />
 </Page>
@@ -199,13 +201,14 @@ Beachten Sie den Wert, den wir für **Path** angeben. Dieser Wert wird im Kontex
 
 Die [**Path**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.path)-Eigenschaft unterstützt eine Vielzahl von Syntaxoptionen zum Binden geschachtelter Eigenschaften, angefügter Eigenschaften sowie von Ganzzahl- und Zeichenfolgenindexern. Weitere Informationen finden Sie unter [Property-path-Syntax](https://msdn.microsoft.com/library/windows/apps/Mt185586). Die Bindung an Zeichenfolgenindexer hat dieselbe Wirkung wie die Bindung an dynamische Eigenschaften, ohne [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878) implementieren zu müssen. Informationen zu weiteren Einstellungen finden Sie unter [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783).
 
-**Hinweis** Änderungen an [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) werden an eine bidirektionale Bindungsquelle gesendet, wenn das [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)-Element den Fokus verliert, und nicht nach jedem Tastaturanschlag des Benutzers.
+> [!Note]
+> Änderungen [**bei "TextBox.Text"**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) sind gesendet, an eine bidirektionale gebundenen Quelle, wenn das [**TextBox-Element**](https://msdn.microsoft.com/library/windows/apps/BR209683) den Fokus verliert und nicht nach jedem Tastaturanschlag des Benutzers.
 
 **DataTemplate und x:DataType**
 
 Innerhalb einer [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348) (ob Elementvorlage, Inhaltsvorlage oder Kopfzeilenvorlage) wird der Wert von **Path** nicht im Kontext der Seite, sondern des Datenobjekts interpretiert, das als Vorlage verwendet werden soll. Um {x:Bind} in einer Datenvorlage so zu verwenden, dass die Bindungen zum Zeitpunkt des Kompilierens überprüft werden können(und effizienter Code für sie generiert wird), muss **DataTemplate** den Typ des Datenobjekts mithilfe von **x:DataType** deklarieren. Das unten aufgeführte Beispiel kann als **ItemTemplate** eines Elementsteuerelements verwendet werden, das an eine Sammlung von **SampleDataGroup**-Objekten gebunden ist.
 
-```xml
+```xaml
 <DataTemplate x:Key="SimpleItemTemplate" x:DataType="data:SampleDataGroup">
     <StackPanel Orientation="Vertical" Height="50">
       <TextBlock Text="{x:Bind Title}"/>
@@ -222,15 +225,14 @@ Angenommen, Sie verfügen über einen Typ mit dem Namen „SampleDataGroup“, d
 
 Code zur Unterstützung von **{X:Bind}** wird während der Kompilierung in den partiellen Klassen für Ihre Seiten generiert. Diese Dateien befinden sich in Ihrem `obj`-Ordner und weisen Namen wie `<view name>.g.cs` auf (für C#). Der generierte Code enthält einen Handler für das [**Loading**](https://msdn.microsoft.com/library/windows/apps/BR208706)-Ereignis der Seite, der die **Initialize**-Methode für eine generierte Klasse aufruft, die die Bindungen Ihrer Seite darstellt. **Initialize** ruft im Gegenzug **Update** auf, um Daten zwischen der Bindungsquelle und dem Ziel zu verschieben. **Loading** wird genau vor dem ersten Messdurchlauf der Seite oder des Benutzersteuerelements ausgelöst. Wenn Ihre Daten asynchron geladen werden, sind sie zum Zeitpunkt des Aufrufs von **Initialize** möglicherweise nicht bereit. Nachdem Sie die Daten geladen haben, können Sie daher durch den Aufruf von `this.Bindings.Update();`einmalige Bindungen erzwingen. Wenn Sie einmalige Bindungen nur für asynchron geladene Daten benötigen, ist es sehr viel kostengünstiger, sie auf diese Weise zu initialisieren, anstatt unidirektionale Bindungen zu verwenden und Änderungen zu überwachen. Wenn Ihre Daten keinen differenzierteren Änderungen unterliegen und wahrscheinlich im Rahmen einer bestimmten Aktion aktualisiert werden, können Sie einmalige Bindungen erstellen und durch Aufrufen von **Update** jederzeit ein manuelles Update erzwingen.
 
-**Einschränkungen**
-
-**{x:Bind}** eignet sich weder für spät gebundene Szenarien, z.B. das Navigieren in der Wörterbuchstruktur eines JSON-Objekts, noch Duck-Typing, was eine schwache Form der Eingabe basierend auf lexikalischen Übereinstimmungen von Eigenschaftennamen ist („Wenn ich einen Vogel sehe, der wie eine Ente läuft, wie eine Ente schwimmt und wie eine Ente schnattert, dann nenne ich diesen Vogel eine Ente.“). Im Fall von Duck-Typing könnte eine Bindung zur Alter-Eigenschaft auch mit einem Objekt vom Typ „Person“ oder „Wein“ erfüllt werden. Verwenden Sie für diese Szenarien **{Binding}**.
+> [!Note]
+> **{x:Bind}** eignet sich weder für spät gebundene Szenarien, z.B. das Navigieren in der Wörterbuchstruktur eines JSON-Objekts, noch Duck-Typing, was eine schwache Form der Eingabe basierend auf lexikalischen Übereinstimmungen von Eigenschaftennamen ist („Wenn ich einen Vogel sehe, der wie eine Ente läuft, wie eine Ente schwimmt und wie eine Ente schnattert, dann nenne ich diesen Vogel eine Ente.“). Im Fall von Duck-Typing könnte eine Bindung zur Alter-Eigenschaft auch mit einem Objekt vom Typ „Person“ oder „Wein“ erfüllt werden. Verwenden Sie für diese Szenarien **{Binding}**.
 
 ### <a name="binding-object-declared-using-binding"></a>Mit {Binding} deklariertes Bindungsobjekt
 
 [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) geht standardmäßig davon aus, dass Sie eine Bindung an den [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) der Markupseite vornehmen. Daher legen wir den **DataContext** der Seite als eine Instanz der Bindungsquellenklasse fest (in diesem Fall des Typs **HostViewModel**). Das folgende Beispiel zeigt das Markup, mit dem das Bindungsobjekt deklariert wird. Wir verwenden das gleiche **Button.Content**-Bindungsziel, das wir bereits weiter oben im Abschnitt „Bindungsziel“ verwendet haben, und führen eine Bindung an die **HostViewModel.NextButtonText**-Eigenschaft vor.
 
-```xml
+```xaml
 <Page xmlns:viewmodel="using:QuizGame.ViewModel" ... >
     <Page.DataContext>
         <viewmodel:HostViewModel/>
@@ -248,7 +250,7 @@ Ein Bindungsobjekt verfügt über eine **Source**-Eigenschaft, für die standard
 
 Innerhalb von [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242348) wird der [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) auf das Datenobjekt festgelegt, das als Vorlage verwendet werden soll. Das unten aufgeführte Beispiel kann als **ItemTemplate** eines Elementsteuerelements verwendet werden, das eine Sammlung eines beliebigen Typs gebunden ist, der über Zeichenfolgeneigenschaften mit dem Namen **Title** und **Description** verfügt.
 
-```xml
+```xaml
 <DataTemplate x:Key="SimpleItemTemplate">
     <StackPanel Orientation="Vertical" Height="50">
       <TextBlock Text="{Binding Title}"/>
@@ -257,7 +259,8 @@ Innerhalb von [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps
   </DataTemplate>
 ```
 
-**Hinweis** Standardmäßig werden Änderungen an [**TextBox.Text**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) an eine bidirektionale Bindungsquelle gesendet, wenn das [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)-Element den Fokus verliert. Damit Änderungen nach jedem Tastaturanschlag des Benutzers gesendet werden, legen Sie **UpdateSourceTrigger** auf **PropertyChanged** für die Bindung im Markup fest. Sie können auch vollständig steuern, wann Änderungen an die Quelle gesendet werden, indem Sie **UpdateSourceTrigger** auf **Explicit** festlegen. Sie behandeln dann Ereignisse für das Textfeld (in der Regel [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/BR209683)), rufen [**GetBindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.getbindingexpression) am Ziel auf, um ein [**BindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.aspx)-Objekt abzurufen, und rufen zum Schluss [**BindingExpression.UpdateSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.updatesource.aspx) auf, um die Datenquelle programmgesteuert zu aktualisieren.
+> [!Note]
+> Standardmäßig werden Änderungen [**bei "TextBox.Text"**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textbox.text) an eine bidirektionale gebundenen Quelle gesendet, wenn das [**TextBox-Element**](https://msdn.microsoft.com/library/windows/apps/BR209683) den Fokus verliert. Damit Änderungen nach jedem Tastaturanschlag des Benutzers gesendet werden, legen Sie **UpdateSourceTrigger** auf **PropertyChanged** für die Bindung im Markup fest. Sie können auch vollständig steuern, wann Änderungen an die Quelle gesendet werden, indem Sie **UpdateSourceTrigger** auf **Explicit** festlegen. Sie behandeln dann Ereignisse für das Textfeld (in der Regel [**TextBox.TextChanged**](https://msdn.microsoft.com/library/windows/apps/BR209683)), rufen [**GetBindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.frameworkelement.getbindingexpression) am Ziel auf, um ein [**BindingExpression**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.aspx)-Objekt abzurufen, und rufen zum Schluss [**BindingExpression.UpdateSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.bindingexpression.updatesource.aspx) auf, um die Datenquelle programmgesteuert zu aktualisieren.
 
 Die [**Path**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.path)-Eigenschaft unterstützt eine Vielzahl von Syntaxoptionen zum Binden geschachtelter Eigenschaften, angefügter Eigenschaften sowie von Ganzzahl- und Zeichenfolgenindexern. Weitere Informationen finden Sie unter [Property-path-Syntax](https://msdn.microsoft.com/library/windows/apps/Mt185586). Die Bindung an Zeichenfolgenindexer hat dieselbe Wirkung wie die Bindung an dynamische Eigenschaften, ohne [**ICustomPropertyProvider**](https://msdn.microsoft.com/library/windows/apps/BR209878) implementieren zu müssen. Die [**ElementName**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.elementname)-Eigenschaft ist hilfreich für eine Element-an-Element-Bindung. Die [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.relativesource)-Eigenschaft hat mehrere Funktionen. Eine davon ist, dass sie eine leistungsfähigere Alternative zur Vorlagenbindung innerhalb von [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209391) ist. Informationen zu anderen Einstellungen finden Sie unter [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782) und der [**Binding**](https://msdn.microsoft.com/library/windows/apps/BR209820)-Klasse.
 
@@ -351,7 +354,7 @@ End Class
 
 Hier sehen Sie, wie Sie diesen Wertkonverter im Bindungsobjektmarkup nutzen.
 
-```xml
+```xaml
 <UserControl.Resources>
   <local:DateToStringConverter x:Key="Converter1"/>
 </UserControl.Resources>
@@ -369,7 +372,8 @@ Das Bindungsmodul ruft die Methoden [**Convert**](https://msdn.microsoft.com/lib
 
 Der Konverter verfügt auch über optionale Parameter: [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.converterlanguage) ermöglicht das Angeben der für die Konvertierung zu verwendenden Sprache und [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.binding.converterparameter) ermöglicht das Übergeben eines Parameters für die Konvertierungslogik. Ein Beispiel, in dem ein Konverterparameter verwendet wird, finden Sie unter [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/BR209903).
 
-**Hinweis** Lösen Sie keine Ausnahme aus, wenn bei der Konvertierung ein Fehler auftritt. Geben Sie stattdessen [**DependencyProperty.UnsetValue**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyproperty.unsetvalue) zurück, wodurch die Datenübertragung beendet wird.
+> [!Note]
+> Wenn bei der Konvertierung ein Fehler auftritt, lösen Sie keine Ausnahme aus. Geben Sie stattdessen [**DependencyProperty.UnsetValue**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.dependencyproperty.unsetvalue) zurück, wodurch die Datenübertragung beendet wird.
 
 Um immer dann einen Standardwert anzuzeigen, wenn die Bindungsquelle nicht aufgelöst werden kann, legen Sie die **FallbackValue** -Eigenschaft für das Bindungsobjekt im Markup fest. Dies ist hilfreich bei der Behandlung von Konvertierungs- und Formatierungsfehlern. Außerdem ist es nützlich zum Binden an Quelleigenschaften, die in einer gebundenen Auflistung von heterogenen Typen ggf. nicht für alle Objekte vorhanden sind.
 
@@ -380,7 +384,7 @@ Wenn Sie ein Textsteuerelement an einen Wert binden, bei dem es sich nicht um ei
 
 ## <a name="function-binding-in-xbind"></a>Funktionsbindung in {x:Bind}
 
-{x:Bind} ermöglicht den letzten Schritt beim Umwandeln eines Bindungspfads in eine Funktion. Hiermit können Konvertierungen und Bindungen durchgeführt werden, die von mehreren Eigenschaften abhängen. Siehe [**{x:Bind}-Markuperweiterung**](https://msdn.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)
+{x:Bind} ermöglicht den letzten Schritt beim Umwandeln eines Bindungspfads in eine Funktion. Hiermit können Konvertierungen und Bindungen durchgeführt werden, die von mehreren Eigenschaften abhängen. Finden Sie unter [ **Funktionen in X: Bind**](function-bindings.md)
 
 <span id="resource-dictionaries-with-x-bind"/>
 
@@ -390,7 +394,7 @@ Die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps
 
 TemplatesResourceDictionary.xaml
 
-```xml
+```xaml
 <ResourceDictionary
     x:Class="ExampleNamespace.TemplatesResourceDictionary"
     .....
@@ -423,7 +427,7 @@ namespace ExampleNamespace
 
 MainPage.xaml
 
-```xml
+```xaml
 <Page x:Class="ExampleNamespace.MainPage"
     ....
     xmlns:examplenamespace="using:ExampleNamespace">
@@ -453,7 +457,7 @@ MainPage.xaml
 
 Anschließend können Sie das **Click**-Ereignis einer Schaltfläche an das **Frame**-Objekt binden, das von der **RootFrame**-Eigenschaft zurückgegeben wird, wie hier gezeigt. Beachten Sie, dass die **IsEnabled**-Eigenschaft der Schaltfläche auch an einen anderen Member des gleichen **Frame** gebunden wird.
 
-```xml
+```xaml
     <AppBarButton Icon="Forward" IsCompact="True"
     IsEnabled="{x:Bind RootFrame.CanGoForward, Mode=OneWay}"
     Click="{x:Bind RootFrame.GoForward}"/>
@@ -518,15 +522,13 @@ Das folgende Beispiel veranschaulicht das Muster „has-a-group“. Die Seitenkl
     ...
 
     <GridView
-    ItemsSource="{Binding Source={StaticResource AuthorHasACollectionOfBookSku}}" ...>
+    ItemsSource="{x:Bind AuthorHasACollectionOfBookSku}" ...>
         <GridView.GroupStyle>
             <GroupStyle
                 HeaderTemplate="{StaticResource AuthorGroupHeaderTemplateWide}" ... />
         </GridView.GroupStyle>
     </GridView>
 ```
-
-Beachten Sie, dass die [**ItemsSource**](https://msdn.microsoft.com/library/windows/apps/BR242828)[{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) verwenden muss (und nicht [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)), da sie die **Source**-Eigenschaft auf eine Ressource festlegen muss. Um das oben aufgeführte Beispiel im Kontext der vollständigen App zu sehen, laden Sie die Beispiel-App [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) herunter. Im Gegensatz zum oben angezeigten Markup verwendet [Bookstore2](http://go.microsoft.com/fwlink/?linkid=532952) nur {Binding} allein.
 
 Sie haben zwei Möglichkeiten zum Implementieren des Musters „is-a-group“. Eine Möglichkeit besteht darin, eine eigene Gruppenklasse zu erstellen. Leiten Sie die Klasse von **List&lt;T&gt;** ab (wobei *T* der Typ der Elemente ist). Beispiel: `public class Author : List<BookSku>`. Die zweite Möglichkeit besteht in der Verwendung eines [LINQ](http://msdn.microsoft.com/library/bb397926.aspx)-Ausdrucks zum dynamischen Erstellen von Gruppenobjekten (und einer Gruppenklasse) aus ähnlichen Eigenschaftswerten der **BookSku**-Elemente. Dieser Ansatz, bei dem nur eine flache Liste von Elementen beibehalten wird, die ad-hoc zusammen gruppiert werden, ist typisch für eine App, die über einen Clouddienst auf Daten zugreift. Sie können Bücher beispielsweise nach Autor oder Genre gruppieren, ohne dafür spezielle Gruppenklassen wie **Author** und **Genre** zu benötigen.
 
@@ -556,13 +558,13 @@ Das folgende Beispiel veranschaulicht das Muster „is-a-group“ unter Verwendu
 
 Vergessen Sie nicht, dass Sie bei der Verwendung von [{x:Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783) mit Datenvorlagen den Typ angeben müssen, an den die Bindung erfolgt, indem Sie einen **x:DataType**-Wert festlegen. Wenn es sich um einen generischen Typ handelt, können wir dies nicht im Markup ausdrücken. Daher müssen wir stattdessen [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) in der Gruppenstil-Kopfzeilenvorlage verwenden.
 
-```xml
+```xaml
     <Grid.Resources>
         <CollectionViewSource x:Name="GenreIsACollectionOfBookSku"
-        Source="{Binding Genres}"
+        Source="{x:Bind Genres}"
         IsSourceGrouped="true"/>
     </Grid.Resources>
-    <GridView ItemsSource="{Binding Source={StaticResource GenreIsACollectionOfBookSku}}">
+    <GridView ItemsSource="{x:Bind GenreIsACollectionOfBookSku}">
         <GridView.ItemTemplate x:DataType="local:BookTemplate">
             <DataTemplate>
                 <TextBlock Text="{x:Bind Title}"/>
@@ -604,7 +606,7 @@ Sie können darüber hinaus Benutzeroberflächenelemente mit Daten verbinden, in
 
 Im folgenden Beispiel wird gezeigt, wie Sie eine Bindung im Code implementieren.
 
-```xml
+```xaml
 <TextBox x:Name="MyTextBox" Text="Text"/>
 ```
 
@@ -655,8 +657,8 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 | FallbackValue | `{x:Bind Name, FallbackValue='empty'}` | `{Binding Name, FallbackValue='empty'}` | Wird verwendet, wenn ein beliebiger Teil des Pfads für die Bindung (mit Ausnahme des Blatts) NULL ist. | 
 | ElementName | `{x:Bind slider1.Value}` | `{Binding Value, ElementName=slider1}` | Mit {x:Bind} nehmen Sie eine Bindung an ein Feld vor; Path standardmäßig an Page als Stamm gebunden, damit auf jedes benannte Element über sein Feld zugegriffen werden kann. | 
 | RelativeSource: Self | `<Rectangle x:Name="rect1" Width="200" Height="{x:Bind rect1.Width}" ... />` | `<Rectangle Width="200" Height="{Binding Width, RelativeSource={RelativeSource Self}}" ... />` | Bei {x:Bind}: Benennen Sie das Element, und verwenden Sie den Namen in Path. | 
-| RelativeSource: TemplatedParent | Nicht unterstützt | `{Binding <path>, RelativeSource={RelativeSource TemplatedParent}}` | In den meisten Fällen kann eine reguläre Vorlagenbindung in Steuerelementvorlagen verwendet werden. Verwenden Sie jedoch „TemplatedParent“, wenn Sie einen Konverter oder bidirektionale Bindungen verwenden müssen. | 
-| Source | Nicht unterstützt | `<ListView ItemsSource="{Binding Orders, Source={StaticResource MyData}}"/>` | Bei {x:Bind}: Verwenden Sie stattdessen eine Eigenschaft oder einen statischen Pfad. | 
+| RelativeSource: TemplatedParent | Nicht erforderlich. | `{Binding <path>, RelativeSource={RelativeSource TemplatedParent}}` | Bei {X: Bind} gibt TargetType auf ControlTemplate Bindung an übergeordnete Vorlage an. Für {Binding} kann reguläre vorlagenbindung in Steuerelementvorlagen in den meisten Fällen verwendet werden. Verwenden Sie jedoch „TemplatedParent“, wenn Sie einen Konverter oder bidirektionale Bindungen verwenden müssen. | 
+| Source | Nicht erforderlich. | `<ListView ItemsSource="{Binding Orders, Source={StaticResource MyData}}"/>` | Für {X: Bind} können Sie direkt verwenden das benannte Element verwenden eine Eigenschaft oder einen statischen Pfad. | 
 | Mode | `{x:Bind Name, Mode=OneWay}` | `{Binding Name, Mode=TwoWay}` | „Mode“ kann „OneTime“, „OneWay“ oder „TwoWay“ sein. Standardwert für {x:Bind} ist „OneTime“; Standardwert für {Binding} ist „OneWay“. | 
 | UpdateSourceTrigger | `{x:Bind Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}` | `{Binding UpdateSourceTrigger=PropertyChanged}` | UpdateSourceTrigger kann Default, LostFocus oder PropertyChanged sein. {X:Bind} unterstützt kein „UpdateSourceTrigger=Explicit”. {x:Bind} verwendet das PropertyChanged-Verhalten in allen Fällen, außer bei „TextBox.Text“, bei dem es das LostFocus-Verhalten nutzt. | 
 

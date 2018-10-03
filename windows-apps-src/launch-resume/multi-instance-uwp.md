@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: dd4e0ced4de2419858424a88f5fa5ce66f5b4286
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4208904"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4262349"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>Erstellen einer universellen Windows-App mit mehreren Instanzen
 
@@ -23,7 +23,7 @@ In diesem Thema wird beschrieben, wie Universelle Windows-Plattform (UWP)-Apps m
 Von Windows 10, Version 1803 (10.0; Build 17134) ideenreicher, Ihre UWP-app kann entscheiden Sie sich für mehrere Instanzen zu unterstützen. Wenn eine Instanz einer UWP-App mit mehreren Instanzen ausgeführt wird und eine nachfolgende Aktivierungsanforderung eingeht, wird die vorhandene Instanz von der Plattform nicht aktiviert. Stattdessen wird eine neue Instanz erstellt, die in einem separaten Prozess ausgeführt wird.
 
 > [!IMPORTANT]
-> Für die multiinstanzerstellung wird für JavaScript-Anwendungen unterstützt, für die multiinstanzerstellung Umleitung ist jedoch nicht. Da für die multiinstanzerstellung Umleitung für JavaScript-Anwendungen nicht unterstützt wird, ist die Klasse [**AppInstance**](/uwp/api/windows.applicationmodel.appinstance) nicht sinnvoll für solche Anwendungen.
+> Für die multiinstanzerstellung wird für JavaScript-Anwendungen unterstützt, für die multiinstanzerstellung Umleitung ist jedoch nicht. Da für die multiinstanzerstellung Umleitung für JavaScript-Anwendungen nicht unterstützt wird, ist die [**AppInstance**](/uwp/api/windows.applicationmodel.appinstance) -Klasse nicht nützlich für solche Anwendungen.
 
 ## <a name="opt-in-to-multi-instance-behavior"></a>Melden Sie sich für Mehrfachinstanz-Verhalten
 
@@ -31,7 +31,7 @@ Wenn Sie eine neue Multiinstanz-Anwendung erstellen, können Sie die **Mehrfachi
 
 Es werden zwei Vorlagen installiert: **UWP-Apps mit mehreren Instanzen**, die die Vorlage für die Erstellung einer Mulitiinstanz-App bereitstellt sowie **Multi-Instance Redirection UWP app** (UWP-App mit Umleitung für mehrere Instanzen), die zusätzlich die Möglichkeit bietet, eine neue Instanz zu starten oder selektiv eine Instanz zu aktivieren, die bereits gestartet wurde. Wenn beispielsweise ein Dokument in nur einer einzelnen Instanz bearbeitet werden soll, verschieben Sie die Instanz, in der die Datei geöffnet ist, in den Vordergrund, statt eine neue Instanz zu erstellen.
 
-Beide Vorlagen fügen `SupportsMultipleInstances` auf die `package.appxmanifest` Datei. Beachten Sie das Namespacepräfix `desktop4` und `iot2`: nur Projekte, die auf den Desktop abzielen oder Internet der Dinge (IoT)-Projekte, bieten Unterstützung für die multiinstanzerstellung.
+Beide Vorlagen fügen `SupportsMultipleInstances` für die `package.appxmanifest` Datei. Beachten Sie das Namespacepräfix `desktop4` und `iot2`: nur Projekte, die auf den Desktop abzielen oder Internet der Dinge (IoT)-Projekte, bieten Unterstützung für die multiinstanzerstellung.
 
 ```xml
 <Package
@@ -60,7 +60,7 @@ Um es in Aktion zu sehen, sehen Sie sich ein Video zum Erstellen von UWP-apps mi
 
 > [!VIDEO https://www.youtube.com/embed/clnnf4cigd0]
 
-Die Vorlage **Multi-Instance Redirection UWP app** (UWP-App mit Umleitung für mehrere Instanzen) fügt der Datei „Package.appxmanifest” nicht nur wie oben beschrieben `SupportsMultipleInstances` hinzu, sondern fügt Ihrem Projekt auch die Funktion **Program.cs** (oder **Program.cpp**, wenn Sie die C++-Version der Vorlage verwenden), die eine `Main()`-Funktion enthält. Die Logik für die Umleitung der Aktivierung wird in die `Main`-Funktion eingefügt. Die Vorlage für **Program.cs** sieht folgendermaßen aus.
+Die Vorlage **Multi-Instance Redirection UWP app** (UWP-App mit Umleitung für mehrere Instanzen) fügt der Datei „Package.appxmanifest” nicht nur wie oben beschrieben `SupportsMultipleInstances` hinzu, sondern fügt Ihrem Projekt auch die Funktion **Program.cs** (oder **Program.cpp**, wenn Sie die C++-Version der Vorlage verwenden), die eine `Main()`-Funktion enthält. Die Logik für die Umleitung der Aktivierung wird in die `Main`-Funktion eingefügt. Nachfolgend finden Sie die Vorlage für **Program.cs** .
 
 Die Eigenschaft [**AppInstance.RecommendedInstance**](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) stellt die Shell bereitgestellten bevorzugte Instanz für diese aktivierungsanforderung dar, sofern vorhanden (oder `null` Wenn nicht vorhanden ist). Wenn die Shell eine Einstellung enthält, dann Sie können können Aktivierung an die Instanz umleiten oder kann ignoriert werden, wenn Sie auswählen.
 
@@ -136,7 +136,7 @@ Wenn eine Instanz gefunden wird, die bereits mit dem Schlüssel registriert ist,
 
 ## <a name="sample"></a>Beispiel
 
-Finden Sie ein Beispiel für die Umleitung der multiinstanz-Aktivierung [mit mehreren Instanzen Beispiel](https://aka.ms/Kcrqst) .
+Finden Sie ein Beispiel für die Umleitung der multiinstanz-Aktivierung- [Beispiel mit mehreren Instanzen](https://aka.ms/Kcrqst) .
 
 ## <a name="see-also"></a>Weitere Informationen:
 

@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Verpacken
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f8a9c7f504584f64bb561a01170c965aa9d3983
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: fcd6d937c7261b5cfa8af954eb5d2ec2869d8afd
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1815825"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4260505"
 ---
 # <a name="manual-app-packaging"></a>Manuelles Verpacken von Apps
 
@@ -46,5 +46,5 @@ Dieser Abschnittenthält fortgeschrittene Themen zum Aufschlüsseln einer große
 |-------|-------------|
 | [Einführung zu Bestandspaketen](asset-packages.md) | Asset-Pakete sind ein Pakettyp, der als zentraler Speicherort für die gemeinsamen Dateien einer Anwendung fungiert. Dadurch wird die Notwendigkeit doppelter Dateien in allen Architekturpaketen effektiv eliminiert. |
 | [Entwickeln mit Bestandspaketen und Paketfaltung](package-folding.md) | Hier erfahren Sie, wie Sie Ihre App mit Bestandspaketen und Paketfaltung effizient organisieren. |
-| [Flat-Bundle App-Pakete](flat-bundles.md) | Beschreibt, wie ein Flat-Bundle erstellt wird, um die .appx-Paketdateien Ihrer App mit Verweisen auf App-Pakete zu bündeln. |
+| [Flat-Bundle App-Pakete](flat-bundles.md) | Beschreibt, wie Sie ein flat Bundle für Ihre app-Paket-Dateien erstellen. |
 | [Paketerstellung mit dem Verpackungslayout](packaging-layout.md) | Das Verpackungslayout ist ein Dokument, das die Verpackungsstruktur der App beschreibt. Es gibt die Bündel einer App („primär” und „optional”), die Pakete in den Bündeln sowie die Dateien in den Paketen an. |

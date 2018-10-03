@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b5515d0ed5dc6e200c7c4fc9a7785c993d4cab59
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4211428"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258563"
 ---
 # <a name="creating-windows-runtime-components-in-ccx"></a>Erstellen von Komponenten für Windows-Runtime in C++/CX
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "4211428"
 
 Dieses Thema zeigt, wie Sie C++ / CX auf eine Windows-Runtime-Komponente erstellen, also eine Komponente, die von einer universellen Windows-app mit c#, Visual Basic, C++ oder Javascript erstellt aufgerufen werden kann.
 
-Es gibt verschiedene Gründe für die Erstellung einer Komponente für Windows-Runtime.
+Es gibt verschiedene Gründe für das Erstellen einer Windows-Runtime-Komponente.
 - Um die Leistungsvorteile von C++ für komplexe oder rechenintensive Vorgänge zu übernehmen.
 - Um Code wiederzuverwenden, der bereits geschrieben und getestet wurde.
 
@@ -131,7 +131,7 @@ namespace CppComponent
 }
 ```
 
-Um benutzerdefinierte wertstrukturen über die ABI zu übergeben, definieren Sie ein JavaScript-Objekt, das die gleichen Member wie die wertstruktur verfügt, die in C++ definiert ist / CX. Sie können anschließend übergeben Sie dieses Objekt als Argument an eine C++ / CX-Methode, damit das Objekt implizit in C++ konvertiert wird / CX-Typ.
+Um benutzerdefinierte wertstrukturen über die ABI zu übergeben, definieren Sie ein JavaScript-Objekt, das die gleichen Member wie die wertstruktur verfügt, die in C++ definiert ist / CX. Sie können dieses Objekt dann als Argument übergeben, an eine C++ / CX-Methode, damit das Objekt implizit in C++ konvertiert wird / CX-Typ.
 
 ```javascript
 // Get and set the value struct
@@ -176,7 +176,7 @@ private void GetAndSetPlayerData()
 ```
 
 ## <a name="overloaded-methods"></a>Überladene Methoden
-C++ / CX-öffentliche Verweisklasse kann überladene Methoden enthalten, aber JavaScript verfügt nur über begrenzte Möglichkeiten zur Unterscheidung überladener Methoden. Beispielsweise kann JavaScript den Unterschied zwischen diesen Signaturen erkennen:
+C++ / CX öffentliche Verweisklasse kann überladene Methoden enthalten, aber JavaScript verfügt nur über begrenzte Möglichkeiten zur Unterscheidung überladener Methoden. Beispielsweise kann JavaScript den Unterschied zwischen diesen Signaturen erkennen:
 
 ```cpp
 public ref class NumberClass sealed
@@ -511,7 +511,7 @@ nativeObject.fireEvent("The answer is ");
 In C# kann eine beliebige Anzahl von Ereignishandlern mit dem Operator += das Ereignis abonnieren, wie im vorherigen Beispiel gezeigt.
 
 ## <a name="enums"></a>Enumerationen
-Eine Windows-Runtime-Enumeration in C++ / CX mit öffentliche Klasse Enum; deklariert wurde Sie ähnelt eine Bereichsbezogene Enumeration in Standard-c++.
+Eine Windows-Runtime-Enumeration in C++ / CX mit öffentliche Klasse Enum; deklariert wurde Es ähnelt eine Bereichsbezogene Enumeration in Standard-c++.
 
 ```cpp
 public enum class Direction {North, South, East, West};
@@ -529,7 +529,7 @@ private:
 };
 ```
 
-Enumerationswerte werden übergeben zwischen C++ / CX und JavaScript als ganze Zahlen. Sie können optional ein JavaScript-Objekt, das dieselben benannten Werte wie C++ enthält, deklarieren / CX-Enumeration und verwenden sie als folgt.
+Enumerationswerte werden übergeben zwischen C++ / CX und JavaScript als ganze Zahlen. Sie können optional ein JavaScript-Objekt, das dieselben benannten Werte wie C++ enthält, deklarieren / CX-Enumeration und verwenden sie wie folgt.
 
 ```javascript
 var Direction = { 0: "North", 1: "South", 2: "East", 3: "West" };
@@ -546,7 +546,7 @@ C# und Visual Basic bieten Sprachunterstützung für Enumerationen. In diesen Sp
 ## <a name="asynchronous-methods"></a>Asynchrone Methoden
 Verwenden Sie die [task-Klasse (Concurrency Runtime)](https://msdn.microsoft.com/library/hh750113.aspx), um asynchrone Methoden zu nutzen, die von anderen Windows-Runtime-Objekten verfügbar gemacht werden. Weitere Informationen finden Sie unter [Aufgabenparallelität (Concurrency Runtime)](https://msdn.microsoft.com/library/dd492427.aspx).
 
-Zum Implementieren von asynchroner Methoden in C++ / CX verwenden Sie die [Create\_async](https://msdn.microsoft.com/library/hh750102.aspx) -Funktion, die in "ppltasks.h" definiert ist. Weitere Informationen finden Sie unter [Erstellen asynchroner Vorgänge in C++ / CX für UWP-apps](https://msdn.microsoft.com/library/vstudio/hh750082.aspx). Ein Beispiel finden Sie [Exemplarische Vorgehensweise: Erstellen einer einfachen Komponente für Windows-Runtime in C++ / CX und Aufrufen der Komponente über JavaScript oder C#-](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md). Die .NET-Sprachen verwenden C++ / CX asynchronen Methoden nur, wie sie eine asynchrone Methode, die in .NET Framework definiert ist.
+Zum Implementieren von asynchroner Methoden in C++ / CX verwenden Sie die [Create\_async](https://msdn.microsoft.com/library/hh750102.aspx) -Funktion, die in "ppltasks.h" definiert ist. Weitere Informationen finden Sie unter [Erstellen asynchroner Vorgänge in C++ / CX für UWP-apps](https://msdn.microsoft.com/library/vstudio/hh750082.aspx). Ein Beispiel finden Sie [Exemplarische Vorgehensweise: Erstellen einer einfachen Komponente für Windows-Runtime in C++ / CX und Aufrufen der Komponente über JavaScript oder C#-](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md). Die .NET-Sprachen verwenden C++ / CX asynchronen Methoden nur, wie eine asynchrone Methode, die in .NET Framework definiert ist.
 
 ## <a name="exceptions"></a>Ausnahmen
 Sie können jeden Ausnahmetyp auslösen, der von der Windows-Runtime definiert ist. Sie können keine benutzerdefinierten Typen von einem Windows-Runtime-Ausnahmetyp ableiten. Allerdings können Sie eine COMException auslösen und ein benutzerdefiniertes HRESULT bereitstellen, auf das der Code, der die Ausnahme abfängt, zugreifen kann. Es gibt keine Möglichkeit, eine benutzerdefinierte Meldung in einer COMException anzugeben.

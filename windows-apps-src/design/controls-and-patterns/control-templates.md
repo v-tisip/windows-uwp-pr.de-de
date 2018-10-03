@@ -15,12 +15,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: c69f516ab3bd412453883d6384237c8ee5446a09
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: ae344e9f10c5d1dbfd530950851e402da4bc2a0d
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674597"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4259749"
 ---
 # <a name="control-templates"></a>Steuerelementvorlagen
 
@@ -60,6 +60,9 @@ Wenn Sie eine [**ControlTemplate**](https://msdn.microsoft.com/library/windows/a
 Dieser XAML-Code erstellt eine [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)-Klasse für ein [**CheckBox**](https://msdn.microsoft.com/library/windows/apps/br209316)-Element, die festlegt, dass sich das Steuerelement unter dem Auswahlfeld befinden soll. Das Stammelement ist eine [**Border**](https://msdn.microsoft.com/library/windows/apps/br209250)-Klasse. Das Beispiel gibt einen [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path)-Wert an, um das **X** zu erstellen, mit darauf hinweist, dass ein Benutzer das **CheckBox**-Element aktiviert hat. Eine [**Ellipse**](/uwp/api/Windows.UI.Xaml.Shapes.Ellipse)-Klasse kennzeichnet einen unbestimmten Zustand. Beachten Sie, dass [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) für **Path** und **Ellipse** auf 0festgelegt ist, sodass beide standardmäßig nicht angezeigt werden.
 
 [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) stellt eine spezielle Bindung dar, die den Wert einer Eigenschaft in einer Steuerelementvorlage mit dem Wert einer anderen Eigenschaft verknüpft, die im Steuerelement mit Vorlagen verfügbar gemacht wird. TemplateBinding kann nur in einer ControlTemplate-Definition in XAML verwendet werden. Weitere Informationen finden Sie unter [TemplateBinding-Markuperweiterung](../../xaml-platform/templatebinding-markup-extension.md).
+
+> [!NOTE]
+> Beginnen mit dem nächsten wichtigen Update für Windows 10, können Sie [**X: Bind**](https://msdn.microsoft.com/library/windows/apps/Mt204783) -Markuperweiterungen an Orten verwenden Sie [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md). Weitere Informationen finden Sie unter [TemplateBinding-Markuperweiterung](../../xaml-platform/templatebinding-markup-extension.md).
 
 ```XAML
 <ControlTemplate x:Key="CheckBoxTemplate1" TargetType="CheckBox">

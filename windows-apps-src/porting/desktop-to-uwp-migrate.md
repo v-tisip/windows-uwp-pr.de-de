@@ -1,8 +1,8 @@
 ---
 author: normesta
-Description: Share code between a desktop app and a UWP app
+Description: Share code between a desktop application and a UWP app
 Search.Product: eADQiWindows 10XVcnh
-title: Teilen von Code zwischen einer Desktop-App und einer UWP-App
+title: Teilen von Code zwischen einer desktop-Anwendung und eine UWP-app
 ms.author: normesta
 ms.date: 10/03/2017
 ms.topic: article
@@ -10,14 +10,14 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: e0931440977c33642a3154cfa1b0adca42032df0
-ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
-ms.translationtype: HT
+ms.openlocfilehash: ca5b722ea97202d57f05613bec88ae6bee1db5f2
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "2018626"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4260109"
 ---
-# <a name="share-code-between-a-desktop-app-and-a-uwp-app"></a>Teilen von Code zwischen einer Desktop-App und einer UWP-App
+# <a name="share-code-between-a-desktop-application-and-a-uwp-app"></a>Teilen von Code zwischen einer desktop-Anwendung und eine UWP-app
 
 Sie können den Code in .NET Standardbibliotheken übertragen und so eine universelle Windows-Plattform (UWP)-App erstellen, um alle Windows10-Geräten zu erreichen. Obwohl kein Tool existiert, das eine Desktopanwendung in eine UWP-App konvertieren kann, können Sie einen Großteil Ihres vorhandenen Codes wiederverwenden und so die Kosten der Programmierung verringern. Die entsprechende Vorgehensweise wird in dieser Anleitung beschrieben.
 
@@ -67,7 +67,7 @@ Ein Teil Ihres Codes ist plattformspezifisch und muss in Ihrem Desktopanwendungs
 
 ### <a name="example-migrating-data-access-code-to-a-net-standard-20-library"></a>Beispiel: Migrieren von Datenzugriffscode auf eine Bibliothek für .NET Standard 2.0
 
-Angenommen, wir haben eine sehr einfache Windows Forms-App, die Kunden aus unserer Datenbank „Northwind” anzeigt.
+Angenommen, haben wir eine sehr einfache Windows Forms-Anwendung, die Kunden aus unserer Northwind-Beispieldatenbank anzeigt.
 
 ![Windows Forms-App](images/desktop-to-uwp/win-forms-app.png)
 

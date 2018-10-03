@@ -4,25 +4,25 @@ ms.assetid: 6AA037C0-35ED-4B9C-80A3-5E144D7EE94B
 title: Installieren von Apps mit dem Tool „WinAppDeployCmd.exe“
 description: Die Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befehlszeilentool, mit dem Sie eine App für die Universelle Windows-Plattform (UWP) App von einem Windows10-Computer auf jedem Windows10-Gerät bereitstellen können.
 ms.author: lahugh
-ms.date: 03/08/2017
+ms.date: 09/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 664b2e92c40fa619150a2c3fd527194e8e983039
-ms.sourcegitcommit: b8c77ac8e40a27cf762328d730c121c28de5fbc4
-ms.translationtype: HT
+ms.openlocfilehash: 229f0e9993abc9c5600c55a1a0eddc2e262f1c4c
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
-ms.locfileid: "1673007"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4260841"
 ---
 # <a name="install-apps-with-the-winappdeploycmdexe-tool"></a>Installieren von Apps mit dem Tool „WinAppDeployCmd.exe“
 
 
-Die Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befehlszeilentool, mit dem Sie eine App für die Universelle Windows-Plattform (UWP) App von einem Windows10-Computer auf jedem Windows10-Gerät bereitstellen können. Dieses Tool ermöglicht Ihnen die Bereitstellung eines APPX-Pakets, wenn das Windows10-Gerät über USB verbunden ist oder im gleichen Subnetz verfügbar ist, ohne dass Microsoft Visual Studio oder die Projektmappe für diese App erforderlich sind. Sie können die App auch bereitstellen, ohne sie zuerst zu einem Remote-PC oder zu Xbox One zu verpacken. Dieser Artikel beschreibt, wie UWP-Apps mit diesem Tool installiert werden.
+Die Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befehlszeilentool, mit dem Sie eine App für die Universelle Windows-Plattform (UWP) App von einem Windows10-Computer auf jedem Windows10-Gerät bereitstellen können. Sie können dieses Tool verwenden, um ein app-Paket bereitzustellen, wenn das Windows 10-Gerät über USB verbunden ist oder sich im gleichen Subnetz verfügbar ist, ohne Microsoft Visual Studio oder die Projektmappe für diese app. Sie können die App auch bereitstellen, ohne sie zuerst zu einem Remote-PC oder zu Xbox One zu verpacken. Dieser Artikel beschreibt, wie UWP-Apps mit diesem Tool installiert werden.
 
-Um das Tool WinAppDeployCmd über eine Eingabeaufforderung oder Skriptdatei auszuführen, muss lediglich das Windows 10 SDK installiert sein. Wenn Sie eine App mit „WinAppDeployCmd.exe“ installieren, werden die APPX-Datei oder AppxManifest (für lose Dateien) verwendet, um Ihre App auf ein Windows10-Gerät querzuladen. Mit diesem Befehl wird nicht das für Ihre App erforderliche Zertifikat installiert. Zum Ausführen der App muss sich das Windows10-Gerät im Entwicklermodus befinden oder bereits über das Zertifikat verfügen.
+Um das Tool WinAppDeployCmd über eine Eingabeaufforderung oder Skriptdatei auszuführen, muss lediglich das Windows 10 SDK installiert sein. Wenn Sie eine app mit WinAppDeployCmd.exe installieren, verwendet diese die.appx/.msix Datei oder AppxManifest (für lose Dateien) zu Ihrer app auf einem Windows 10-Gerät querzuladen. Mit diesem Befehl wird nicht das für Ihre App erforderliche Zertifikat installiert. Zum Ausführen der App muss sich das Windows10-Gerät im Entwicklermodus befinden oder bereits über das Zertifikat verfügen.
 
 Um eine Bereitstellung auf mobilen Geräten auszuführen, müssen Sie zunächst ein Paket erstellen. Weitere Informationen finden Sie [hier](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
 
@@ -136,7 +136,7 @@ Deinstalliert das angegebene Paket (unter Verwendung des vollständigen Namens) 
 WinAppDeployCmd uninstall -package Company.MyApp_1.0.0.1_x64__qwertyuiop -ip 192.168.0.1
 ```
 
-Aktualisiert die bereits auf dem Windows10-Gerät mit der IP-Adresse 192.168.0.1 installierte App unter Verwendung des angegebenen APPX-Pakets.
+Aktualisiert die app, die bereits auf dem Windows 10-Gerät mit der IP-Adresse 192.168.0.1, die mit dem angegebenen app-Paket installiert wird.
 
 ``` syntax
 WinAppDeployCmd update -file "Downloads\MyApp.appx" -ip 192.168.0.1

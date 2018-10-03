@@ -5,6 +5,7 @@ title: Strukturansicht
 label: Tree view
 template: detail.hbs
 ms.author: jimwalk
+ms.date: 10/02/2018
 ms.localizationpriority: medium
 pm-contact: predavid
 design-contact: ksulliv
@@ -13,17 +14,14 @@ doc-status: Published
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 20de58d13c4ace6b71ec952dc88cd59d1ab6114f
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: 36b81cf07b92760235a18f4474a14b7b55e0a7be
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4212644"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4259863"
 ---
 # <a name="treeview"></a>TreeView
-
-> [!IMPORTANT]
-> In diesem Artikel werden Funktionen beschrieben, die noch nicht veröffentlicht wurden und vor der kommerziellen Freigabe evtl. geändert werden. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen. Preview-Features benötigen die [neuesten Windows 10 Insider Preview-Build und SDK](https://insider.windows.com/for-developers/) oder der [Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 Das XAML-Steuerelement TreeView ermöglicht eine Hierarchieauflistung mit Knoten, die das Aus- und Einblenden von geschachtelten Elementen erlauben. Es kann verwendet werden, um eine Ordnerstruktur oder geschachtelte Beziehungen zwischen Elementen in der Benutzeroberfläche zu veranschaulichen.
 
@@ -36,7 +34,7 @@ Die TreeView-APIs unterstützen die folgenden Features:
 - (Vorschau) Beliebige Arten von Inhalten in einem Objekte in der Strukturansicht
 - (Vorschau) Drag & drop zwischen Strukturansichten
 
-| **Windows-UI-Bibliothek herunterladen** |
+| **Abrufen der Windows-UI-Bibliothek** |
 | - |
 | Dieses Steuerelement ist Bestandteil der Windows-UI-Bibliothek, NuGet-Paket, das neue Steuerelemente und UI-Features für UWP-apps enthält. Weitere Informationen, einschließlich installationsanweisungen finden Sie die [Übersicht über die Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
@@ -82,10 +80,10 @@ Sie können eine Strukturansicht erstellen, indem Sie die [ItemsSource](/uwp/api
 
 Um eine Strukturansicht zu erstellen, verwenden Sie ein [Strukturansicht](/uwp/api/windows.ui.xaml.controls.treeview)-Steuerelement und eine Hierarchie von [TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode)-Objekten. Sie erstellen die Kontenhierarchie, indem Sie eine oder mehrere Stammknoten [RootNodes](/uwp/api/windows.ui.xaml.controls.treeview.rootnodes) -Sammlung des Strukturansicht-Steuerelements hinzufügen. Der Sammlung der untergeordneten Elemente der einzelnen TreeViewNodes können dann weitere Knoten hinzugefügt haben. Sie können Knoten der Strukturansicht auf jede beliebigen Tiefe schachteln.
 
-Ab der Windows Insider Preview, können Sie eine hierarchische Datenquelle an die [ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) -Eigenschaft, um den Inhalt der Strukturansicht, bieten binden genauso wie Sie mit ListViews ItemsSource. Verwenden Sie entsprechend [ItemTemplate](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate) (und die optionale ["ItemTemplateSelector"](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate)) ein DataTemplate-Objekt bereitstellen, die das Element gerendert wird.
+Ab der Windows Insider Preview, können Sie eine hierarchische Datenquelle an die [ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) -Eigenschaft, um den Inhalt der Strukturansicht, bereitzustellen binden genauso wie mit ListView ItemsSource aus. Verwenden Sie entsprechend [ItemTemplate](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate) (und die optionale ["ItemTemplateSelector"](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate)), um DataTemplate bereitzustellen, die das Element gerendert wird.
 
 > [!IMPORTANT]
-> ItemsSource ist eine alternative Mechanismus zum TreeView.RootNodes für das Ablegen von Inhalten in das TreeView-Steuerelement. Sie können nicht gleichzeitig ItemsSource und RootNodes festlegen. Bei der Verwendung von ItemsSource Knoten für Sie erstellt, und Sie können diese von TreeView.RootNodes-Eigenschaft zugreifen.
+> ItemsSource ist eine alternative Mechanismus zum TreeView.RootNodes für das Ablegen von Inhalten in das TreeView-Steuerelement. Sie können nicht gleichzeitig ItemsSource und RootNodes festlegen. Bei der Verwendung von ItemsSource Knoten für Sie erstellt, und Sie können diese von TreeView.RootNodes Eigenschaft zugreifen.
 
 Im Folgenden finden Sie ein Beispiel für eine einfache in XAML deklarierte Strukturansicht. Sie fügen die Knoten in der Regel im Code hinzu, aber hier wird die XAML-Hierarchie angezeigt, da sie beim Visualisieren der Erstellung der Knotenhierarchie hilfreich sein kann.
 
@@ -103,11 +101,11 @@ Im Folgenden finden Sie ein Beispiel für eine einfache in XAML deklarierte Stru
 </TreeView>
 ```
 
-In den meisten Fällen zeigt die Strukturansicht Daten aus einer Datenquelle, sodass Sie in der Regel im Stammverzeichnis TreeView-Steuerelement in XAML deklariert, jedoch fügen die treeviewnode-Objekts im Code oder unter Verwendung der Datenbindung.
+In den meisten Fällen zeigt die Strukturansicht Daten aus einer Datenquelle, sodass Sie in der Regel die TreeView-Steuerelement in XAML deklarieren, jedoch fügen die treeviewnode-Objekts im Code oder unter Verwendung der Datenbindung.
 
-### <a name="bind-to-a-hierarchical-data-source"></a>Binden Sie an hierarchische Datenquelle
+### <a name="bind-to-a-hierarchical-data-source"></a>Binden Sie an eine hierarchische Datenquelle
 
-Um eine Strukturansicht Verwendung der Datenbindung erstellen zu können, legen Sie eine hierarchische Auflistung der TreeView.ItemsSource-Eigenschaft. Legen Sie dann im ItemTemplate, das untergeordnete Element Items-Sammlung der TreeViewItem.ItemsSource-Eigenschaft.
+Um eine Strukturansicht, die Verwendung der Datenbindung zu erstellen, legen Sie eine hierarchische Auflistung der TreeView.ItemsSource-Eigenschaft. Legen Sie dann im ItemTemplate, das untergeordnete Element Items-Sammlung der TreeViewItem.ItemsSource-Eigenschaft.
 
 ```xaml
 <TreeView ItemsSource="{x:Bind DataSource}">
@@ -209,13 +207,13 @@ Sie können eine [DataTemplate](/uwp/api/windows.ui.xaml.datatemplate) angeben, 
 
 ### <a name="item-container-style"></a>Elementcontainerstil
 
-An, ob Sie ItemsSource oder RootNodes, die eigentlichen Elemente zur Anzeige von jedem Knoten – verwenden den "Container" bezeichnet – ist ein [Objekte in der Strukturansicht](/uwp/api/windows.ui.xaml.controls.treeviewitem) -Objekt. Sie können den Container mit der Strukturansicht registerkartenähnliches ItemContainerStyle oder ItemContainerStyleSelector Eigenschaften.
+An, ob Sie ItemsSource oder RootNodes, die eigentlichen Elemente zur Anzeige von jedem Knoten – verwenden den "Container" bezeichnet – ist ein [Objekte in der Strukturansicht](/uwp/api/windows.ui.xaml.controls.treeviewitem) -Objekt. Sie können den Container mit der Strukturansicht formatieren ItemContainerStyle oder ItemContainerStyleSelector Eigenschaften.
 
 ### <a name="item-template-selectors"></a>Element Vorlage Selektoren
 
 Sie können auch eine andere Datenvorlage für Ansichtselemente Struktur basierend auf dem Typ des Elements festlegen. In einer Datei-Explorer-app könnten Sie z. B. eine Datenvorlage für Ordner und einen weiteren für Dateien verwenden.
 
-![Ordner und Dateien unter Verwendung unterschiedlicher Datenvorlagen](images/treeview-icons.png)
+![Ordner und Dateien, die mit verschiedenen Datenvorlagen](images/treeview-icons.png)
 
 Hier ist ein Beispiel zum Erstellen und verwenden Sie ein elementvorlagenselektor.
 
@@ -343,7 +341,7 @@ Ein Benutzer kann eine Aktion (behandelt das Element wie eine Schaltfläche) auf
 
 Die ItemInvoked-Ereignisargumente ermöglichen Ihnen den Zugriff auf das aufgerufene Element. Die [InvokedItem](/uwp/api/windows.ui.xaml.controls.treeviewiteminvokedeventargs.invokeditem)-Eigenschaft verfügt über den Knoten, der aufgerufen wurde. Sie können eine Umwandlung in TreeViewNode durchführen, um das Datenelement aus der TreeViewNode.Content-Eigenschaft abzurufen.
 
-Nachfolgend finden Sie ein Beispiel für einen ItemInvoked-Ereignishandler. Das Datenelement ist ein [IStorageItem](/uwp/api/windows.storage.istorageitem), und in diesem Beispiel werden lediglich einige Informationen über die Datei und die Struktur angezeigt. Wenn der Knoten ein Ordnerknoten ist, erweitert oder reduziert er den Knoten gleichzeitig. Andernfalls wird der Knoten nur dann erweitert oder reduziert, wenn auf die Chevron-Schaltfläche geklickt wird.
+Nachfolgend finden Sie ein Beispiel für einen ItemInvoked-Ereignishandler. Das Datenelement ist ein [IStorageItem](/uwp/api/windows.storage.istorageitem), und in diesem Beispiel werden lediglich einige Informationen über die Datei und die Struktur angezeigt. Auch wenn der Knoten ein Ordnerknoten ist, es erweitert oder reduziert den Knoten gleichzeitig. Andernfalls wird der Knoten nur dann erweitert oder reduziert, wenn auf die Chevron-Schaltfläche geklickt wird.
 
 ```csharp
 private void SampleTreeView_ItemInvoked(TreeView sender, TreeViewItemInvokedEventArgs args)
@@ -382,9 +380,15 @@ End Sub
 
 Das TreeView-Steuerelement unterstützt sowohl die Einzelauswahl als auch die Mehrfachauswahl. Die Auswahl von Knoten ist standardmäßig deaktiviert, Sie können die [TreeView.SelectionMode](/uwp/api/windows.ui.xaml.controls.treeview.selectionmode)-Eigenschaft jedoch festlegen, um die Auswahl von Knoten zu ermöglichen. Die [TreeViewSelectionMode](/uwp/api/windows.ui.xaml.controls.treeviewselectionmode)-Werte sind **Keine**, **Einzelne** und **Mehrere**.
 
-Wenn die Auswahl aktiviert ist, wird ein Kontrollkästchen neben jedem Knoten einer Strukturansicht angezeigt und ausgewählte Elemente werden hervorgehoben. Ein Benutzer kann ein Element mithilfe eines Kontrollkästchens aktivieren oder deaktivieren. Das Element kann weiterhin aufgerufen werden, indem darauf geklickt wird.
+#### <a name="multiple-selection"></a>Mehrfachauswahl
 
-Oder Aufhebung der Bereitstellung wählen Sie einen übergeordneten Knoten wird aktivieren oder deaktivieren alle untergeordneten Elemente unter diesem Knoten. Wenn einige, aber nicht alle, die untergeordneten Elemente unter einem übergeordneten Knoten ausgewählt werden, das Kontrollkästchen für den übergeordneten Knoten wird angezeigt wie unbestimmt (mit einer Blackbox gefüllt).
+Wenn mehrere Auswahl aktiviert ist, wird ein Kontrollkästchen neben jedem Strukturknoten angezeigt und ausgewählte Elemente werden hervorgehoben. Ein Benutzer kann ein Element mithilfe eines Kontrollkästchens aktivieren oder deaktivieren. Das Element kann weiterhin aufgerufen werden, indem darauf geklickt wird.
+
+Auswählen oder die Auswahl eines übergeordneter Knotens wird aktivieren oder deaktivieren alle untergeordneten Elemente unter diesem Knoten. Wenn einige, aber nicht alle, die untergeordneten Elemente unter einem übergeordneten Knoten ausgewählt werden, das Kontrollkästchen für den übergeordneten Knoten wird angezeigt wie unbestimmt (ausgefüllt mit schwarzes Rechteck).
+
+![Mehrfachauswahl in einer Strukturansicht](images/treeview-selection.png)
+
+Auswählen oder die Auswahl eines übergeordneter Knotens wird aktivieren oder deaktivieren alle untergeordneten Elemente unter diesem Knoten. Wenn einige, aber nicht alle, die untergeordneten Elemente unter einem übergeordneten Knoten ausgewählt werden, das Kontrollkästchen für den übergeordneten Knoten wird angezeigt wie unbestimmt (ausgefüllt mit schwarzes Rechteck).
 
 ![Mehrfachauswahl in einer Strukturansicht](images/treeview-selection.png)
 

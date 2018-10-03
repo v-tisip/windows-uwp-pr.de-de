@@ -3,18 +3,18 @@ author: laurenhughes
 title: Optionale Pakete mit ausführbarem Code
 description: Erfahren Sie, wie Sie Visual Studio verwenden, um ein optionales Paket mit ausführbarem Code zu erstellen.
 ms.author: lahugh
-ms.date: 5/07/2018
+ms.date: 9/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, App-Installer, AppInstaller, querladen, zugehörige Gruppe, optionale Pakete
 ms.localizationpriority: medium
-ms.openlocfilehash: 9745fa168ba337979a628ca9c4e799b07ad9c7ab
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: f5660649b6f82135cdb45a8678a3f871a0f5e61d
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843819"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4265925"
 ---
 # <a name="optional-packages-with-executable-code"></a>Optionale Pakete mit ausführbarem Code
  

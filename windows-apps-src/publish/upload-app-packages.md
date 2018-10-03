@@ -4,35 +4,35 @@ Description: The Packages page is where you upload all of the package files (.ap
 title: Hochladen von App-Paketen
 ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
 ms.author: wdg-dev-content
-ms.date: 5/10/2018
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, Uwp, Pakete, hochladen, Package upload
+keywords: Windows 10, Uwp, Pakete, hochladen, Paket upload
 ms.localizationpriority: medium
-ms.openlocfilehash: 6013a238cff8db3b85dd98af58cccaf344a72f51
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: d966688110870b669bdd296ec14e145a5d77b74e
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4207736"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4263029"
 ---
 # <a name="upload-app-packages"></a>Hochladen von App-Paketen
 
-Auf der Seite **Pakete** werden alle Paketdateien (APPX, APPXUPLOAD, APPXBUNDLE und XAP) für die App hochgeladen, die Sie übermitteln. Sie können in diesem Schritt Pakete für jedes Betriebssystem hochladen, auf das die App ausgerichtet ist. Wenn ein Kunde Ihre App herunterlädt, stellt der Store automatisch für jeden Kunden das Paket bereit, das am besten für sein Gerät geeignet ist. Nachdem Sie Ihre Pakete hochgeladen haben, sehen Sie eine Tabelle, in der angegeben wird, [welche Pakete für bestimmte Windows10-Gerätefamilien angeboten werden](#device-family-availability) (und ggf. für frühere Betriebssystemversionen).
+Die Seite " **Pakete** " werden alle Paketdateien (.msix, .msixupload, .msixbundle, AppX, appxupload, appxbundle und XAP) für die app hochgeladen, die Sie übermitteln. Sie können in diesem Schritt Pakete für jedes Betriebssystem hochladen, auf das die App ausgerichtet ist. Wenn ein Kunde Ihre App herunterlädt, stellt der Store automatisch für jeden Kunden das Paket bereit, das am besten für sein Gerät geeignet ist. Nachdem Sie Ihre Pakete hochgeladen haben, sehen Sie eine Tabelle, in der angegeben wird, [welche Pakete für bestimmte Windows10-Gerätefamilien angeboten werden](#device-family-availability) (und ggf. für frühere Betriebssystemversionen).
 
 Ausführliche Informationen zu Inhalt und Struktur der Pakete finden Sie unter [App-Paketanforderungen](app-package-requirements.md). Sie sollten außerdem erfahren Sie, [wie Versionsnummern von Paketen darauf auswirken, bestimmten Kunden bereitgestellt werden](package-version-numbering.md) und [wie Pakete für verschiedene Betriebssysteme verteilt werden](guidance-for-app-package-management.md).
 
 ## <a name="uploading-packages-to-your-submission"></a>Hochladen von Paketen für Ihre Übermittlung
 
-Um Pakete hochzuladen, ziehen Sie sie in das Uploadfeld oder klicken Sie, um Ihre Dateien zu durchsuchen. Auf der Seite **Pakete** können Sie die XAP-, APPX-, APPXUPLOAD- und/oder APPXBUNDLE-Dateien hochladen.
+Um Pakete hochzuladen, ziehen Sie sie in das Uploadfeld oder klicken Sie, um Ihre Dateien zu durchsuchen. Die Seite " **Pakete** " können Sie die .msix, .msixupload, .msixbundle, AppX, appxupload, appxbundle und XAP-Dateien hochladen.
 
 > [!IMPORTANT]
-> Es wird empfohlen, für Windows10 die .appxupload-Datei anstelle einer.appx oder .appxbundle hochzuladen.  Weitere Informationen zum Verpacken von UWP-Apps für den Store finden Sie untere [Verpacken von UWP-App mit Visual Studio](../packaging/packaging-uwp-apps.md).
+> Es wird empfohlen, für Windows 10 die .msixupload oder appxupload-Datei anstatt .msix, AppX, .msixbundle oder .appxbundle hochzuladen.  Weitere Informationen zum Verpacken von UWP-Apps für den Store finden Sie untere [Verpacken von UWP-App mit Visual Studio](../packaging/packaging-uwp-apps.md).
 
 Falls Sie [Flight-Pakete](package-flights.md) für Ihre App erstellt haben, wird eine Dropdownliste mit der Option zum Kopieren von Paketen aus einem Ihrer Flight-Pakete angezeigt. Wählen Sie das Flight-Paket mit den Paketen aus, die Sie übertragen möchten. Anschließend können Sie einige oder alle der Pakete auswählen, um sie in diese Übermittlung aufzunehmen.
 
-Wenn beim Überprüfen sie Fehler mit einem Paket erkannt, zeigen wir eine Nachricht, damit Sie wissen, was fehlerhaft ist. Sie müssen zu entfernen Sie das Paket, das Problem beheben, versuchen Sie es erneut hochladen. In anderen Fällen werden Warnungen zu Fehlern angezeigt, die Probleme verursachen können, Sie jedoch nicht daran hindern, Ihre Übermittlung fortzusetzen.
+Wenn beim Überprüfen sie Fehler mit einem Paket erkannt, zeigen wir eine Nachricht, damit Sie wissen, was falsch ist. Sie müssen das Paket entfernen, das Problem beheben und versuchen Sie es erneut hochladen. In anderen Fällen werden Warnungen zu Fehlern angezeigt, die Probleme verursachen können, Sie jedoch nicht daran hindern, Ihre Übermittlung fortzusetzen.
 
 
 ## <a name="device-family-availability"></a>Verfügbarkeit von Gerätefamilien

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Integrität, Abstürze, reagiert nicht, App-Integrität, Integritätsdaten, Stapelüberwachung, CAB-Datei, Fehler, Fehler, Pdb, Symbole
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f5bf63eae4b1504642e764265a7936bcd67c645
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4208828"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4258553"
 ---
 # <a name="health-report"></a>Integritätsbericht
 
@@ -26,7 +26,7 @@ Sie können die Daten in diesem Bericht aber auch programmgesteuert mit der [Mic
 
 ## <a name="apply-filters"></a>Anwenden von Filtern
 
-Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist **72 H** (72 Stunden), Sie können stattdessen aber auch **30D** auswählen, um die Daten der letzten 30Tage anzuzeigen. Beachten Sie, dass Daten in Ihre lokale Zeitzone für die Ansicht **72 Stunden** und in UTC für die **30d** -Ansicht angezeigt werden.
+Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist **72 H** (72 Stunden), Sie können stattdessen aber auch **30D** auswählen, um die Daten der letzten 30Tage anzuzeigen. Beachten Sie, dass Daten in Ihre lokale Zeitzone für die **72 Stunden** -Ansicht und in UTC für die **30d** -Ansicht angezeigt werden.
 
 Sie können ebenfalls **Filter** erweitern, um alle Daten auf dieser Seite nach Paketversion, Markt und/oder Gerätetyp zu filtern.
 
@@ -46,7 +46,7 @@ Die Informationen in allen unten angezeigten Diagrammen beziehen sich auf den au
 
 Das Diagramm **Fehlertreffer** zeigt die Anzahl von täglichen Abstürzen und Ereignissen, die Kunden bei der Nutzung Ihrer App im ausgewählten Zeitraum festgestellt haben. Jeder Ereignistyp, der in der App aufgetreten ist, wird separat überwacht: Abstürze, Blockaden, JavaScript-Ausnahmen und Speicherfehler.
 
-Wenn der **30d** Zeitraum aktiviert ist, sehen Sie Kreis Markierungen. Diese darstellen eine erhebliche Erhöhung oder einen bestimmten Wert, die wir glauben, dass Sie kennen sollten verringern. Das Datum, an dem der Kreis angezeigt wird, steht das Ende der Woche, in der wir eine erhebliche Erhöhung oder Verringerung, die im Vergleich zur vorherigen Woche davor erkannt. Um mehr Informationen zu Änderungen, zeigen Sie auf den Kreis.  
+Wenn der **30d** Zeitraum aktiviert ist, sehen Sie Kreis. Diese stellen eine erhebliche Erhöhung oder einen bestimmten Wert, die wir glauben, dass Sie kennen sollten verringern. Das Datum, an dem der Kreis angezeigt wird, stellt das Ende der Woche, in der wir eine erhebliche Erhöhung oder Verringerung, die im Vergleich zu Woche festgestellt. Um weitere Informationen zu Änderungen anzuzeigen, zeigen Sie auf den Kreis.  
 
 > [!TIP]
 > Sie können weitere Einblicke im Zusammenhang mit erhebliche Änderungen an der letzten 30 Tage im [Bericht](insights-report.md)anzeigen.
@@ -74,18 +74,18 @@ Das Diagramm **Fehler** zeigt die Gesamtanzahl von Abstürzen und Ereignissen im
 Wählen Sie zum Anzeigen der **Fehlerdetails** für einen bestimmten Fehler den Fehlernamen aus. Wenn Sie Symboldateien eingefügt haben, beinhaltet der Bericht **Fehlerdetails** die Anzahl der Fehlertreffer im letzten Monat sowie ein Fehlerprotokoll, in dem die entsprechenden Details (Datum, Paketversion, Gerätetyp, Gerätemodell, Betriebssystembuild) sowie ein Link zu der Ablaufverfolgung und/oder einer CAB-Datei, wenn verfügbar, aufgeführt werden.
 
 > [!TIP]
-> CAB-Dateien sind nur verfügbar, wenn Fehler auf einem Computer mit einer Windows-Insider-Build auftreten, daher haben nicht alle Fehler die Option zum Herunterladen einer CAB-Datei. Um nur Fehler anzuzeigen, die CAB-Dateien verfügen, aktivieren Sie **Fehler mit Downloads** im Abschnitt Filter. Sie können auch klicken Sie auf die **Links** im **Fehlerprotokoll** zum Sortieren der Ergebnisse, sodass Fehler, die CAB-Dateien enthalten am Anfang der Liste angezeigt werden.
+> CAB-Dateien sind nur verfügbar, wenn Fehler auf einem Computer mit einer Windows-Insider-Build auftreten, daher haben nicht alle Fehler die Option zum Herunterladen einer CAB-Datei. Aktivieren Sie **Fehler mit Downloads** im Abschnitt Filter, um nur Fehler anzuzeigen, die CAB-Dateien verfügen. Sie können auch klicken Sie auf die **Links** im **Fehlerprotokoll** zum Sortieren der Ergebnisse, sodass Fehler, die CAB-Dateien enthalten am oberen Rand der Liste angezeigt werden.
 
-Auf der Seite **Fehlerdetails** Sie sehen außerdem das **Stapel Verbreitung** Diagramm, der angezeigt wird, im oberen Bereich dasteht, die auf den Fehler beigetragen hat, sortiert nach dem Prozentsatz, und das Diagramm **Gerätekonfiguration (30 D)** , die Details zu den Konfiguration von Geräten, die den Fehler aufgetreten ist. 
+Auf der Seite **Fehlerdetails** Sie sehen außerdem das **Stapel Verbreitung** -Diagramm, der angezeigt wird, die oben gestapelt, beigetragen hat, auf den Fehler, sortiert nach dem Prozentsatz, und das Diagramm **Gerätekonfiguration (30 D)** , die Details zu den Konfiguration von Geräten, die den Fehler aufgetreten ist. 
 
 
-## <a name="crash-free-sessions-and-devices-30d"></a>Absturz-freie Sitzungen und Geräte (30d)
+## <a name="crash-free-sessions-and-devices-30d"></a>Absturz-freie Sitzungen und Geräte (30D)
 
-Das **Sitzungen frei von Abstürzen und Geräte** Diagramm zeigt den Prozentsatz der Geräte oder benutzersitzungen, die nicht in den letzten 30 Tagen abgestürzt ist. Diese Informationen können Sie die zu verstehen, wie Allgemein Ihrer Abstürze Ihre Benutzer auswirken. Eine app kann z. B. 10.000 Abstürze in einem Tag verfügen. Wenn 90 % der Geräte betroffen sind, dann können Sie wahrscheinlich, die als kritische klassifizieren und sofort Lösung fungieren. Allerdings steht, die nur 5 % von Geräten mit Ihrer app, die Priorität niedrigeren möglicherweise.
+Das **Sitzungen frei von Abstürzen und Geräte** Diagramm zeigt den Prozentsatz der Geräte und benutzersitzungen, die nicht in den letzten 30 Tagen abgestürzt ist. Diese Informationen können Sie die zu verstehen, wie Allgemein Ihrer Abstürze Benutzer auswirken. Beispielsweise kann eine app 10.000 Abstürze in einem Tag verfügen. Wenn 90 % der Geräte betroffen sind, dann können Sie wahrscheinlich, die als wichtige klassifizieren und sofort Lösung fungieren. Wenn, die nur 5 % der Geräte, die Ihre App darstellt, kann die Priorität jedoch niedriger sein.
 
 Dieses Diagramm enthält zwei Registerkarten:
 - **Absturz-freie Geräte**: Zeigt den Prozentsatz der eindeutigen Geräte, die jedoch auf jeden Tag (in den letzten 30 Tagen) tritt kein Fehler auf.
-- **Absturz-freie Sitzungen**: Zeigt den Prozentsatz von benutzersitzungen, die jedoch auf jeden Tag (in den letzten 30 Tagen) tritt kein Fehler auf.
+- **Absturz-freie Sitzungen**: Zeigt den Prozentsatz der benutzersitzungen, die jedoch auf jeden Tag (in den letzten 30 Tagen) tritt kein Fehler auf.
 
 
  

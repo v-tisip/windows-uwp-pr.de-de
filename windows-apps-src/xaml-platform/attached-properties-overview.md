@@ -15,11 +15,11 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 7f92b12ab9c8962fe98d8eed22b21e7d10330c99
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4213062"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4263307"
 ---
 # <a name="attached-properties-overview"></a>Übersicht über angefügte Eigenschaften
 
@@ -40,7 +40,7 @@ In XAML legen Sie angefügte Eigenschaften mithilfe der Syntax _AttachedProperty
 ```
 
 > [!NOTE]
-> Wir verwenden gerade [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) als angefügte Beispieleigenschaft ohne vollständige Erklärung, warum Sie sie verwenden würden. Weitere Informationen darüber, wozu **Canvas.Left** dient und wie [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) untergeordnete Layoutelemente handhabt, finden Sie im Referenzthema zu [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) oder unter [Definieren von Layouts mit XAML](https://msdn.microsoft.com/library/windows/apps/mt228350).
+> Wir verwenden gerade [**Canvas.Left**](https://msdn.microsoft.com/library/windows/apps/hh759771) als, die angefügte Beispieleigenschaft ohne vollständige Erklärung, warum Sie sie verwenden würden. Weitere Informationen darüber, wozu **Canvas.Left** dient und wie [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) untergeordnete Layoutelemente handhabt, finden Sie im Referenzthema zu [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267) oder unter [Definieren von Layouts mit XAML](https://msdn.microsoft.com/library/windows/apps/mt228350).
 
 ## <a name="why-use-attached-properties"></a>Gründe für die Verwendung von angefügten Eigenschaften
 

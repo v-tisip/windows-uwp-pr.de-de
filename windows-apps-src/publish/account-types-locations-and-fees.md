@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Entwicklerkonto, individuell, Unternehmen, geschäftlich
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e1aecb6ac3d5830659d9aadb7539e8103712fb3
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4207234"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4265387"
 ---
 # <a name="account-types-locations-and-fees"></a>Kontotypen, Standorte und Gebühren
 
@@ -41,7 +41,7 @@ Unternehmenskonten sind etwas teurer. Das liegt hauptsächlich daran, dass wir d
 
 ## <a name="account-verification"></a>Kontobenachrichtigung
 
-Nach Abschluss der Registrierung durchläuft Ihr Konto den Überprüfungsprozess. Bei individuellen Konten wird sichergestellt, dass der Anzeigename für den Herausgeber nicht bereits von einem anderen Unternehmen verwendet wird. Bei Unternehmenskonten bestätigen unsere Partner Dun & Bradstreet, dass Sie zum Erstellen eines Kontos für Ihr Unternehmen autorisiert sind. Dieser Vorgang kann zwischen wenigen Tagen und mehreren Wochen dauern. Häufig erhält Ihr Unternehmen im Rahmen dieses Prozesses einen Telefonanruf. Stellen Sie daher sicher, dass alle Ihre Kontaktinformationen in den Registrierungsformularen aktuell sind. Sie können keine apps aus dem ein Unternehmenskonto erst überprüft wurde, während Sie warten, Sie können aber [app-Namen reservieren](create-your-app-by-reserving-a-name.md) übermitteln weiterhin erstellen und Testen von apps und arbeiten Sie zum Abrufen der Übermittlungen bereit.
+Nach Abschluss der Registrierung durchläuft Ihr Konto den Überprüfungsprozess. Bei individuellen Konten wird sichergestellt, dass der Anzeigename für den Herausgeber nicht bereits von einem anderen Unternehmen verwendet wird. Bei Unternehmenskonten bestätigen unsere Partner Dun & Bradstreet, dass Sie zum Erstellen eines Kontos für Ihr Unternehmen autorisiert sind. Dieser Vorgang kann zwischen wenigen Tagen und mehreren Wochen dauern. Häufig erhält Ihr Unternehmen im Rahmen dieses Prozesses einen Telefonanruf. Stellen Sie daher sicher, dass alle Ihre Kontaktinformationen in den Registrierungsformularen aktuell sind. Sie können nicht übermitteln von apps über ein Unternehmenskonto erst überprüft wurde, während Sie warten, können Sie die [app-Namen reservieren](create-your-app-by-reserving-a-name.md) weiterhin erstellen und Testen von apps und mit dem Vorbereiten der Übermittlungen arbeiten.
 
 Sie können den Überprüfungsstatus auf der Seite **Kontoeinstellungen** überprüfen. 
 

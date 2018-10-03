@@ -15,11 +15,11 @@ dev_langs:
 - cpp
 - cppwinrt
 ms.openlocfilehash: b4e3678e17e7545dfe9cb4049ace7ff864198156
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4207598"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4262209"
 ---
 # <a name="xaml-lighting"></a>XAML-Beleuchtung
 
@@ -29,7 +29,7 @@ Sie können Lichter auf [**visuelle Elemente**](https://msdn.microsoft.com/libra
 
 ## <a name="applying-lights-to-xaml-uielements"></a>Anwenden von Lichtern auf XAML-UI-Elemente
 
-[**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight)-Objekte werden auf [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight) angewendet, um XAML-UI-Elemente dynamisch zu beleuchten. XamlLight bietet Methoden für die Auswahl-UI-Elemente oder XAML-Pinsel, Lichter auf UIElements verwaltet werden müssen, und verwenden Sie die Lebensdauer von CompositionLight Ressourcen basierend auf der gibt an, ob er sich gerade befinden.
+[**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight)-Objekte werden auf [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight) angewendet, um XAML-UI-Elemente dynamisch zu beleuchten. XamlLight bietet Methoden für die Auswahl-UI-Elemente oder XAML-Pinsel, Lichter auf UIElements verwaltet werden müssen, und die Lebensdauer von CompositionLight Ressourcen basierend auf der gibt an, ob sie sich gerade befinden verwenden.
 
 - Wenn Sie XamlLight auf einen **Pinsel** anwenden, werden damit alle UI-Elemente beleuchtet, die den Pinsel nutzen.
 - Wenn Sie XamlLight auf ein **UI-Element** anwenden, wird damit das gesamte UI-Element einschließlich seiner Unterelemente beleuchtet.
@@ -495,7 +495,7 @@ Sie können dann diese Licht auf alle XAML-UIElement oder Pinsel, um sie zu bele
 
 Die Ergebnisse dieser XAML-Code wie folgt aussehen.
 
-![Beispiele für Elemente, die durch ein XAML-Licht beleuchtet](images/orange-spot-light.png)
+![Beispiele für Elemente, die durch ein Xaml-Licht beleuchtet](images/orange-spot-light.png)
 
 > [!Important]
 > Die Einstellung UIElement.Lights im Markup des obigen Beispiels wird nur für Apps mit mindestens gleicher oder höherer Version des Windows10 Creators-Updates unterstützt. Für Apps, die ältere Versionen verwenden, müssen die Lichter in CodeBehind erstellt werden.

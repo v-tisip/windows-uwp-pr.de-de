@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Dev Center, Kontoeinstellungen, Profil, Konto-Profil, Entwicklerkonto, Entwicklerkontoeinstellungen
 ms.localizationpriority: medium
 ms.openlocfilehash: bf464fa5c7b681b3d36ad95cff5ffc874e319f46
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4210030"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4263015"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Verwalten Ihrer Kontoeinstellungen und Profilinformationen
 
@@ -28,7 +28,7 @@ Sie können Ihre Entwicklerkontoeinstellungen und Profilinformationen im Abschni
 
 Wenn Ihre kontoeinstellungen anzeigen möchten, klicken Sie auf das Zahnradsymbol in der oberen rechten Ecke des Dashboards aus, und wählen Sie dann **entwicklereinstellungen**. Hier finden Sie Informationen zu Ihrem Konto sowie Links zu anderen Seiten, in denen Sie Informationen anzeigen und verschiedene Konto bezogene Aufgaben ausführen können.
 
-Der Abschnitt **Kontodetails** gibt Aufschluss über Status und Art des Kontos. Sie können auch Ihre Verkäufer-ID und der Informationen für andere Herausgeber-ID hier angezeigt. Diese Werte werden von Microsoft zur eindeutigen Identifizierung Ihres Entwicklerkontos zugewiesen und können nicht bearbeitet werden.
+Der Abschnitt **Kontodetails** gibt Aufschluss über Status und Art des Kontos. Sie können auch Ihre Verkäufer-ID und der Informationen für andere Herausgeber-ID hier anzeigen. Diese Werte werden von Microsoft zur eindeutigen Identifizierung Ihres Entwicklerkontos zugewiesen und können nicht bearbeitet werden.
 
 > [!NOTE]
 > Identitätsdetails für Apps finden Sie auf der [App-Identitätsseite](view-app-identity-details.md) der jeweiligen App.

@@ -5,7 +5,7 @@ title: Bewegung in der Praxis – Animationen in UWP-Apps
 label: Motion in practice
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 05/19/2017
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
@@ -14,23 +14,22 @@ pm-contact: stmoy
 design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 87a17d3f73887c9b1b5029e2096c5b41c9444c4e
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 6001f955b3ab6a60446eb84296dc3bc52ad3a99e
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843813"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4260015"
 ---
 # <a name="bringing-it-together"></a>Alles zusammenführen
-
-> [!IMPORTANT]
-> In diesem Artikel werden Funktionen beschrieben, die noch nicht veröffentlicht wurden und vor der kommerziellen Freigabe möglicherweise geändert werden. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.
 
 Timing, Geschwindigkeitsverlauf, Direktionalität und Schwerkraft bilden zusammen die Grundlage für fließende Bewegungen. Jede Komponente muss im Zusammenhang mit den anderen betrachtet und dem Kontext Ihrer App entsprechend angewendet werden.
 
 Im Folgenden finden Sie 3 Möglichkeiten, die Grundlagen für fließende Bewegung in Ihrer App anzuwenden.
 
-:::row::: :::column::: **Implizite Animation**
+:::row:::
+    :::column:::
+        **Implicit animation**
 
         Automatic tween and timing between values in a parameter change to achieve very simple Fluent motion using the standardized values.
     :::column-end:::
@@ -46,12 +45,14 @@ Im Folgenden finden Sie 3 Möglichkeiten, die Grundlagen für fließende Bewegun
     :::column-end:::
 :::row-end:::
 
-### **<a name="transition-example"></a>Beispielübergang**
+**Beispielübergang**
 
 ![funktionelle Animation](images/pageRefresh.gif)
 
-:::row::: :::column::: <b>Richtung vorwärts hinaus:</b><br>
-        Ausblenden: 150 ms; Geschwindigkeitsverlauf: Standardmäßige Beschleunigung
+:::row:::
+    :::column:::
+        <b>Direction Forward Out:</b><br>
+        Fade out: 150m; Easing: Default Accelerate
 
         <b>Direction Forward In:</b><br>
         Slide up 150px: 300ms; Easing: Default Decelerate
@@ -59,19 +60,74 @@ Im Folgenden finden Sie 3 Möglichkeiten, die Grundlagen für fließende Bewegun
     :::column:::
          <b>Direction Backward Out:</b><br>
         Slide down 150px: 150ms; Easing: Default Accelerate
-      
+
         <b>Direction Backward In:</b><br>
         Fade in: 300ms; Easing: Default Decelerate
     :::column-end:::
 :::row-end:::
 
- ### **<a name="object-example"></a>Objektbeispiel**
+**Objektbeispiel**
 
  ![300 ms Bewegung](images/control.gif)
- 
-:::row::: :::column::: <b>Expansionsrichtung:</b><br>
-        Vergrößern: 300 ms; Geschwindigkeitsverlauf: Standard :::column-end::: :::column::: <b>Kontraktionsrichtung:</b><br>
-        Vergrößern: 150 ms; Geschwindigkeitsverlauf: Standardmäßige Beschleunigung :::column-end::: :::row-end:::
+
+:::row:::
+    :::column:::
+        <b>Direction Expand:</b><br>
+        Grow: 300ms; Easing: Standard
+    :::column-end:::
+    :::column:::
+        <b>Direction Contract:</b><br>
+        Grow: 150ms; Easing: Default Accelerate
+    :::column-end:::
+:::row-end:::
+
+## <a name="implicit-animations"></a>Implizite Animationen
+
+> **Vorschau**: implizite Animation ist der [neuesten Windows 10 Insider Preview-Build und SDK](https://insider.windows.com/for-developers/)erforderlich.
+
+Implizite Animationen sind eine einfache Möglichkeit, Fluent-Bewegungen zu erreichen, indem Sie automatisch zwischen der alte und neue Werte bei einem Parameter interpoliert.
+
+Sie können implizit animieren, Änderungen an die folgenden Eigenschaften:
+
+- [UIElement](/uwp/api/windows.ui.xaml.uielement)
+  - **Opacity**
+  - **Drehung**
+  - **Skalierung**
+  - **Translation**
+
+- [Rahmen](/uwp/api/windows.ui.xaml.controls.border), [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter)oder [Panel](/uwp/api/windows.ui.xaml.controls.panel)
+  - **Hintergrund**
+
+Jede Eigenschaft, die Änderungen, die implizit animiert haben können hat eine entsprechende _Übergang_ -Eigenschaft. Um die Eigenschaft zu animieren, weisen Sie ein anderes Übergang auf die entsprechende _Übergang_ -Eigenschaft. In der folgenden Tabelle zeigt die Eigenschaften der _Übergang_ und Übergang Typs, der für jede Datei verwendet.
+
+| Animierten Eigenschaft | Übergang-Eigenschaft | Implizite Übergangstyp |
+| -- | -- | -- |
+| [UIElement.Opacity](/uwp/api/windows.ui.xaml.uielement.opacity) | [OpacityTransition](/uwp/api/windows.ui.xaml.uielement.opacitytransition) | [ScalarTransition](/uwp/api/windows.ui.xaml.scalartransition) |
+| [UIElement.Rotation](/uwp/api/windows.ui.xaml.uielement.rotation) | [RotationTransition](/uwp/api/windows.ui.xaml.uielement.rotationtransition) | [ScalarTransition](/uwp/api/windows.ui.xaml.scalartransition) |
+| [UIElement.Scale](/uwp/api/windows.ui.xaml.uielement.scale) | [ScaleTransition](/uwp/api/windows.ui.xaml.uielement.scaletransition) | [Vector3Transition](/uwp/api/windows.ui.xaml.uielement.vector3transition) |
+| [UIElement.Translation](/uwp/api/windows.ui.xaml.uielement.scale) | [TranslationTransition](/uwp/api/windows.ui.xaml.uielement.translationtransition) | [Vector3Transition](/uwp/api/windows.ui.xaml.uielement.vector3transition) |
+| [Border.Background](/uwp/api/windows.ui.xaml.controls.border.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.border.backgroundtransition) | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
+| [ContentPresenter.Background](/uwp/api/windows.ui.xaml.controls.contentpresenter.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.contentpresenter.backgroundtransition) | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
+| [Panel.Background](/uwp/api/windows.ui.xaml.controls.panel.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.panel.backgroundtransition)  | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
+
+Dieses Beispiel zeigt, wie Sie die Opacity-Eigenschaft und den Übergang zu einer Schaltfläche eingeblendet, wenn das Steuerelement aktiviert ist und ausblenden, wenn es deaktiviert ist.
+
+```xaml
+<Button x:Name="SubmitButton"
+        Content="Submit"
+        Opacity="{x:Bind OpaqueIfEnabled(SubmitButton.IsEnabled), Mode=OneWay}">
+    <Button.OpacityTransition>
+        <ScalarTransition />
+    </Button.OpacityTransition>
+</Button>
+```
+
+```csharp
+public double OpaqueIfEnabled(bool IsEnabled)
+{
+    return IsEnabled ? 1.0 : 0.2;
+}
+```
 
 ## <a name="related-articles"></a>Verwandte Artikel
 

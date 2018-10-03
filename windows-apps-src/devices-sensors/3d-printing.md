@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, 3dprinting, 3D-Druck
 ms.localizationpriority: medium
 ms.openlocfilehash: acf0c9856328e26f8c39adf3f062a3516e7189e2
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4204814"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4259393"
 ---
 # <a name="3d-printing"></a>3D-Druck
 
 
-Dieser Abschnitt beschreibt, wie Sie den [Windows.Graphics.Printing3D-Namespace](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx) , um Ihre universelle Windows-app 3D-Druckfunktionen hinzufügen.  
+In diesem Abschnitt wird beschrieben, wie Sie den [Windows.Graphics.Printing3D-Namespace](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx) , um Ihre universelle Windows-app 3D-Druckfunktionen hinzufügen zu nutzen.  
 
-Weitere Informationen zum 3D-Druck mit Windows 10, einschließlich Ressourcen für Hardwarepartner, Community-Diskussionsforen und allgemeine Informationen 3D Funktionen für den 3D-Druck finden Sie unter der Website [3D Drucken mit Windows 10](https://developer.microsoft.com/windows/hardware/3d-print-support-windows-10) im Hardware Dev Center.
+Weitere Informationen zum 3D-Druck mit Windows 10, einschließlich Ressourcen für Hardwarepartner, Community-Diskussionsforen und allgemeine Informationen zu 3D Funktionen finden Sie unter der Website [3D Drucken mit Windows 10](https://developer.microsoft.com/windows/hardware/3d-print-support-windows-10) im Hardware Dev Center.
 
 | Thema | Beschreibung |
 |-------|-------------|
@@ -32,7 +32,7 @@ Weitere Informationen zum 3D-Druck mit Windows 10, einschließlich Ressourcen f�
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [3D-Druck mit Windows10 (Hardware Dev Center)](https://developer.microsoft.com/windows/hardware/3d-print-support-windows-10)
-* [Windows.Graphics.Printing3D namespace](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx)
+* [Windows.Graphics.Printing3D-namespace](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx)
 * [3D-Drucker-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)
 * [3D-Drucken in Unity-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrintingFromUnity)
 

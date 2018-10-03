@@ -11,11 +11,11 @@ keywords: Windows 10, Uwp, Sicherheit
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
 ms.openlocfilehash: 2de5c969610aa6b4fa1a3af01af565d35854b5f2
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4212564"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4262323"
 ---
 # <a name="web-account-manager"></a>Web Account Manager
 
@@ -179,7 +179,7 @@ In diesem Beispiel wird die Zeichenfolge „wl.basic“ an den Parameter _scope_
 * Informationen zu OneDrive-Bereichen finden Sie unter [Authentifizierung und Anmeldung bei OneDrive](https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes). 
 
 > [!TIP]
-> Wenn Ihre app Anmeldung Hinweis (für das Benutzerfeld mit einem standardmäßigen e-Mail-Adresse zu füllen) oder andere spezielle Eigenschaft im Zusammenhang mit der Oberfläche-Anmeldung verwendet, führen Sie sie optional in der **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** -Eigenschaft. Dadurch wird das System beim Zwischenspeichern des Web-Kontos, das Konto Unterschiede in der Cache wird verhindert, dass die Eigenschaft zu ignorieren.
+> Wenn Ihre app Anmeldung Hinweis (für das Benutzerfeld mit der Standard-e-Mail-Adresse zu füllen) oder andere spezielle Eigenschaft, die im Zusammenhang mit der Oberfläche-Anmeldung verwendet, führen Sie sie optional in der **[WebTokenRequest.AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** -Eigenschaft. Dadurch wird das System die Eigenschaft zu ignorieren, wenn das Webkonto, das Zwischenspeichern, das Konto-Konflikte im Cache verhindert.
 
 Wenn Sie eine Unternehmens-App entwickeln, möchten Sie wahrscheinlich eine Verbindung mit einer Azure Active Directory (AAD)-Instanz herstellen und die Microsoft Graph-API anstelle regulärer MSA-Dienste verwenden. Verwenden Sie in diesem Szenario stattdessen folgenden Code: 
 

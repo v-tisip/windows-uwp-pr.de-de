@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: Die xBind-Markuperweiterung ist eine Alternative zur Bindung. xBind verfügt über weniger Features als die Bindungsfunktion, wird aber in kürzerer Zeit und mit weniger Arbeitsspeicher als die Bindungsfunktion ausgeführt und unterstützt ein besseres Debuggen.
+description: Die xBind-Markuperweiterung ist eine hohe Leistung Alternative zur Bindung. xBind - führt neue für Windows 10 – in kürzerer Zeit und mit weniger Arbeitsspeicher als Bindung und unterstützt eine bessere Debuggen.
 title: xBind-Markuperweiterung
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
 ms.author: jimwalk
@@ -10,18 +10,18 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 340f8e72c5015fad341810ef335dea73f77fc82f
-ms.sourcegitcommit: b8c77ac8e40a27cf762328d730c121c28de5fbc4
-ms.translationtype: HT
+ms.openlocfilehash: 2e605ab70a3d251e92768fd26fd105ab68644995
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
-ms.locfileid: "1672887"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261487"
 ---
 # <a name="xbind-markup-extension"></a>{x:Bind}-Markuperweiterung
 
 **Hinweis**  Allgemeine Informationen zur Verwendung der Datenbindung in Ihrer App mit **{x:Bind}** (sowie einen Gesamtvergleich von **{x:Bind}** und **{Binding}**) finden Sie unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
-Die **{x:Bind}**-Markuperweiterung – neu in Windows10 – ist eine Alternative zu **{Binding}**. **{x:Bind}** verfügt über weniger Features als **{Binding}**, wird aber in kürzerer Zeit und mit weniger Arbeitsspeicher als **{Binding}** ausgeführt und unterstützt das Debuggen besser.
+Die **{x:Bind}**-Markuperweiterung – neu in Windows10 – ist eine Alternative zu **{Binding}**. **{X: Bind}** führt in kürzerer Zeit und mit weniger Arbeitsspeicher als **{Binding}** und unterstützt ein besseres Debuggen.
 
 Zur XAML-Kompilierungszeit wird **{X: Bind}** in Code konvertiert, der den Wert aus einer Eigenschaft aus einer Datenquelle abruft und diesen in der im Markup angegeben Eigenschaft festlegt. Das Binding-Objekt kann optional konfiguriert werden, um Änderungen am Wert der Datenquelleneigenschaft zu beobachten und sich basierend auf diesen Änderungen (`Mode="OneWay"`) zu aktualisieren. Es kann optional auch konfiguriert werden, um Änderungen am eigenen Wert per Push zurück an die Quelleigenschaft (`Mode="TwoWay"`) zu senden.
 
@@ -46,6 +46,8 @@ Die von **{x:Bind}** und **{Binding}** erstellten Bindungsobjekte sind von der F
 <object property="{x:Bind bindingProperties}" .../>
 -or-
 <object property="{x:Bind propertyPath, bindingProperties}" .../>
+-or-
+<object property="{x:Bind pathToFunction.functionName(functionParameter1, functionParameter2, ...), bindingProperties}" .../>
 ```
 
 | Benennung | Beschreibung |
@@ -55,6 +57,25 @@ Die von **{x:Bind}** und **{Binding}** erstellten Bindungsobjekte sind von der F
 | _propName_=_value_\[, _propName_=_value_\]* | Mindestens eine Bindungseigenschaft, die mithilfe einer Name-Wert-Paarsyntax angegeben wird. |
 | _propName_ | Der Zeichenfolgenname der für das Binding-Objekt festzulegenden Eigenschaft. Beispiel: „Konverter“. |
 | _value_ | Der für die Eigenschaft festzulegende Wert. Die Syntax des Arguments hängt von der festgelegten Eigenschaft ab. Hier ein Beispiel für eine _propName_=_value_-Syntax, bei der der Wert selbst eine Markuperweiterung ist: `Converter={StaticResource myConverterClass}`. Weitere Informationen finden Sie unten im Abschnitt [Mit {x:Bind} festzulegende Eigenschaften](#properties-you-can-set). |
+
+## <a name="examples"></a>Beispiele
+
+```XAML
+<Page x:Class="QuizGame.View.HostView" ... >
+    <Button Content="{x:Bind Path=ViewModel.NextButtonText, Mode=OneWay}" ... />
+</Page>
+```
+
+Dieser beispielhafte XAML-Code verwendet **{x:Bind}** mit einer **ListView.ItemTemplate**-Eigenschaft. Beachten Sie die Deklaration eines **x:DataType**-Werts.
+
+```XAML
+  <DataTemplate x:Key="SimpleItemTemplate" x:DataType="data:SampleDataGroup">
+    <StackPanel Orientation="Vertical" Height="50">
+      <TextBlock Text="{x:Bind Title}"/>
+      <TextBlock Text="{x:Bind Description}"/>
+    </StackPanel>
+  </DataTemplate>
+```
 
 ## <a name="property-path"></a>Eigenschaftspfad
 
@@ -68,7 +89,8 @@ So sucht **Text="{x:Bind Employee.FirstName}"** z. B. auf einer Seite nach einem
 
 Für C++/CX kann **{x:Bind}** keine Bindungen an private Felder und Eigenschaften im Seiten- oder Datenmodell durchführen – Sie benötigen eine öffentliche Eigenschaft, damit die Bindung möglich ist. Der Oberflächenbereich für die Bindung muss als CX-Klassen/-Schnittstellen verfügbar gemacht werden, damit die relevanten Metadaten abgerufen werden können. Das **\[Bindable\]**-Attribut sollte nicht erforderlich sein.
 
-Mit **x:Bind** müssen Sie **ElementName=xxx** nicht als Teil des Bindungsausdrucks verwenden. Mit **x:Bind** können Sie den Namen des Elements als ersten Teil des Pfads für die Bindung verwenden, da benannte Elemente innerhalb der Seite oder des Benutzersteuerelements, die bzw. das die Stammbindungsquelle darstellt, zu Feldern werden
+Mit **x:Bind** müssen Sie **ElementName=xxx** nicht als Teil des Bindungsausdrucks verwenden. Stattdessen können Sie den Namen des Elements als ersten Teil des Pfads für die Bindung verwenden, da benannte Elemente innerhalb der Seite oder des Benutzersteuerelements bzw. Feldern, die die stammbindungsquelle darstellt. 
+
 
 ### <a name="collections"></a>Sammlungen
 
@@ -93,78 +115,7 @@ _Hinweis: Die C#-Umwandlungssyntax ist flexibler als die Syntax der angefügten 
 
 ## <a name="functions-in-binding-paths"></a>Funktionen in Bindungspfaden
 
-Ab Windows10, Version 1607, unterstützt **{x: Bind}** die Verwendung einer Funktion als blattbildenden Schrittdes Bindungspfades. Dadurch wird Folgendes ermöglicht:
-
-- Eine einfachere Möglichkeit der Konvertierung von Werten
-- Eine Möglichkeit, Bindungen von mehr als einem Parameter abhängig zu machen
-
-> [!NOTE]
-> Wenn Sie Funktionen für **{x: Bind}** verwenden möchten, muss die Ziel-SDK-Version 14393 oder höher sein. Sie können keine Funktionen verwenden, wenn Ihre App für frühere Versionen von Windows10 bestimmt ist. Weitere Informationen zu Zielversionen finden Sie unter [Versionsadaptiver Code](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
-
-Im folgenden Beispiel werden Hintergrund und Vordergrund des Elements an Funktionen gebunden, um eine Konvertierung basierend auf dem Farbparameter durchzuführen
-
-```xaml
-<DataTemplate x:DataType="local:ColorEntry">
-    <Grid Background="{x:Bind local:ColorEntry.Brushify(Color)}" Width="240">
-        <TextBlock Text="{x:Bind ColorName}" Foreground="{x:Bind TextColor(Color)}" Margin="10,5" />
-    </Grid>
-</DataTemplate>
-```
-
-```csharp
-class ColorEntry
-{
-    public string ColorName { get; set; }
-    public Color Color { get; set; }
-
-    public static SolidColorBrush Brushify(Color c)
-    {
-        return new SolidColorBrush(c);
-    }
-
-    public SolidColorBrush TextColor(Color c)
-    {
-        return new SolidColorBrush(((c.R * 0.299 + c.G * 0.587 + c.B * 0.114) > 150) ? Colors.Black : Colors.White);
-    }
-}
-
-```
-
-### <a name="function-syntax"></a>Funktionssyntax
-
-``` Syntax
-Text="{x:Bind MyModel.Order.CalculateShipping(MyModel.Order.Weight, MyModel.Order.ShipAddr.Zip, 'Contoso'), Mode=OneTime}"
-             |      Path to function         |    Path argument   |       Path argument       | Const arg |  Bind Props
-```
-
-### <a name="path-to-the-function"></a>Pfad der Funktion
-
-Der Pfad der Funktion wird wie jeder andere Eigenschaftspfad angegeben. Er kann Punkte (.), Indexer oder Umwandlungen für die Suche nach der Funktion enthalten.
-
-Statische Funktionen können mithilfe der XMLNamespace:ClassName.MethodName-Syntax angegeben werden. **&lt;CalendarDatePicker Datum = "\ {X: Bind sys:DateTime.Parse (TextBlock1.Text) \}" /&gt;** wird zB. der DateTime.Parse-Funktion zugeordnet, vorausgesetzt, am Kopf der Seite ist **xmlns:sys="using:System"** angegeben.
-
-Ist der Modus OneWay/TwoWay, wird auf den Pfad der Funktion eine Änderungserkennung angewendet, und die Bindung wird neu ausgewertet, wenn diese Objekte geändert wurden.
-
-Für die zu bindende Funktion müssen folgende Voraussetzungen gelten:
-
-- Code und die Metadaten müssen auf sie zugreifen können, d.h. interne/private Aktionen in C#, aber für C++/CX werden öffentliche WinRT-Methoden benötigt
-- Überladung basiert auf der Anzahl der Argumente, nicht auf ihrem Typ, und es wird die erste Übereinstimmung mit dieser Anzahl von Argumenten gesucht
-- Die Argumenttypen müssen den übergebenen Daten entsprechen. Es werden keine einschränkenden Konvertierungen durchgeführt
-- Der Rückgabetyp der Funktion muss mit dem Typ der Eigenschaft übereinstimmen, für die die Bindung verwendet wird
-
-### <a name="function-arguments"></a>Funktionsargumente
-
-Mehrere Argumente können durch Komma (,) voneinander getrennt angegeben werden
-
-- Bindungspfad – dieselbe Syntax wie bei einer direkten Bindung an das Objekt.
-  - Ist der Modus OneWay/TwoWay, wird eine Änderungserkennung angewendet, und die Bindung wird neu ausgewertet, wenn diese Objekte geändert wurden.
-- Konstante Zeichenfolge in Anführungszeichen – Anführungszeichen müssen gesetzt werden, um Zeichenfolgen kenntlich zu machen Das Caret-Symbol (^) kann als Escapezeichen für Anführungszeichen innerhalb von Zeichenfolgen verwendet werden.
-- Konstante Zahl – z. B. -123.456
-- Boolean – als "x: True" oder "x: False" angeben
-
-### <a name="two-way-function-bindings"></a>Bidirektionale Funktionsbindung
-
-In einem Szenario mit bidirektionaler Bindung muss eine zweite Funktion für die umgekehrte Bindungsrichtung angegeben werden. Dies geschieht mithilfe der **BindBack**-Bindungseigenschaft, z.B. **Text = "\ {Text="\{x:Bind a.MyFunc(b), BindBack=a.MyFunc2\}"**. Die Funktion muss ein Argument übernehmen: den Wert, der vom Modell übernommen werden muss.
+Ab Windows10, Version 1607, unterstützt **{x: Bind}** die Verwendung einer Funktion als blattbildenden Schrittdes Bindungspfades. Dies ist ein leistungsfähiges Feature für Databinding, die verschiedene Szenarien im Markup ermöglicht. Finden Sie unter [Funktion Bindungen](../data-binding/function-bindings.md) für Details.
 
 ## <a name="event-binding"></a>Ereignisbindung
 
@@ -226,21 +177,3 @@ Bei Seiten und Benutzersteuerelementen, die kompilierte Bindungen umfassen, befi
 
 **{x:Bind}** ist nur eine Markuperweiterung ohne Methode zum programmgesteuerten Erstellen oder Ändern dieser Bindungen. Weitere Informationen zu Markuperweiterungen finden Sie in der [XAML-Übersicht](xaml-overview.md).
 
-## <a name="examples"></a>Beispiele
-
-```XML
-<Page x:Class="QuizGame.View.HostView" ... >
-    <Button Content="{x:Bind Path=ViewModel.NextButtonText, Mode=OneWay}" ... />
-</Page>
-```
-
-Dieser beispielhafte XAML-Code verwendet **{x:Bind}** mit einer **ListView.ItemTemplate**-Eigenschaft. Beachten Sie die Deklaration eines **x:DataType**-Werts.
-
-```XML
-  <DataTemplate x:Key="SimpleItemTemplate" x:DataType="data:SampleDataGroup">
-    <StackPanel Orientation="Vertical" Height="50">
-      <TextBlock Text="{x:Bind Title}"/>
-      <TextBlock Text="{x:Bind Description}"/>
-    </StackPanel>
-  </DataTemplate>
-```

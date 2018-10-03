@@ -6,7 +6,7 @@ ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 05/19/2017
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
@@ -15,12 +15,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: fc18db25e6404e5236038badd8169ef7bcfc4817
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.openlocfilehash: ad7326acf728aef66f10c72ee04461fd90e5f775
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4210992"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261969"
 ---
 # <a name="text-controls"></a>Textsteuerelemente
 
@@ -127,7 +127,7 @@ Ab Windows10, Version 1803, verfügen XAML-Texteingabefelder über eine integrie
 
 ![Textfeld wird erweitert, wenn mit einem Stift darauf getippt wird](images/pen-input-expand.gif)
 
-Weitere Informationen finden Sie unter [Texteingabe mit der Handschrift Ansicht](text-handwriting-view.md).
+Weitere Informationen finden Sie unter [Texteingabe mit der Handschrift-Ansicht](text-handwriting-view.md).
 
 ## <a name="choose-the-right-keyboard-for-your-text-control"></a>Auswählen der richtigen Tastatur für Ihr Textsteuerelement
 

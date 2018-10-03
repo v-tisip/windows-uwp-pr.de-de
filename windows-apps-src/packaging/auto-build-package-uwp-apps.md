@@ -3,19 +3,19 @@ author: laurenhughes
 title: Einrichten automatisierter Builds für UWP-Apps
 description: Erfahren Sie, wie Sie automatisierte Builds konfigurieren, um Pakete zum Querladen oder zum Übermitteln an den Store zu erzeugen.
 ms.author: lahugh
-ms.date: 03/30/2018
+ms.date: 09/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 4354254e01333db17f1151c182267c0330a799ba
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: 7492f9d4fc2111880f27dcb6a48eff3ad0ccd315
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832361"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4261683"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Einrichten automatisierter Builds für UWP-Apps
 
@@ -81,7 +81,7 @@ Mit dieser Aufgabe werden die in Ihrem Projekt definierten NuGet-Pakete wiederhe
 
 #### <a name="configure-the-build-solution-build-task"></a>Konfigurieren der Buildaufgabe „Projektmappe erstellen“
 
-Mit dieser Aufgabe wird eine im Arbeitsordner enthaltene Projektmappe in Binärdateien kompiliert, und die AppX-Ausgabedatei wird erstellt. In dieser Aufgabe werden MSBuild-Argumente verwendet.  Sie müssen den Wert dieser Argumente angeben. Orientieren Sie sich an der folgenden Tabelle. 
+Mit dieser Aufgabe wird jede Lösung, die im Arbeitsordner Binärdateien und erzeugt die Ausgabedatei für app-Paket kompiliert. In dieser Aufgabe werden MSBuild-Argumente verwendet.  Sie müssen den Wert dieser Argumente angeben. Orientieren Sie sich an der folgenden Tabelle. 
 
 |**MSBuild-Argument**|**Wert**|**Beschreibung**|
 |--------------------|---------|---------------|
@@ -111,7 +111,7 @@ Mit dieser Aufgabe werden die generierten Artefakte in VSTS gespeichert. Sie wer
 
 ![Artefakte](images/building-screen6.png)
 
-Da wir die `UapAppxPackageBuildMode`-Eigenschaft auf `StoreUpload` festlegen, enthält der Artefaktordner das Paket, das für die Übermittlung an den Store empfohlen ist (.appxupload). Beachten Sie, dass Sie auch ein normales App-Paket (.appx) oder ein App-Bündel (.appxbundle) an den Store übermitteln können. Für die Zwecke dieses Artikels verwenden wir die appxupload-Datei.
+Da wir die `UapAppxPackageBuildMode`-Eigenschaft auf `StoreUpload` festlegen, enthält der Artefaktordner das Paket, das für die Übermittlung an den Store empfohlen ist (.appxupload). Beachten Sie, dass Sie auch ein normales app-Paket (.appx/.msix) oder ein app-Bündel (.appxbundle/.msixbundle) an den Store übermitteln können. Für die Zwecke dieses Artikels verwenden wir die appxupload-Datei.
 
 
 >[!NOTE]
@@ -216,7 +216,7 @@ Dieser Fehler tritt auf, da auf Projektmappenebene nicht eindeutig ist, welche A
 Entfernen Sie dann das MSBuild-Argument `AppxBundle` aus dem Buildschritt.
 
 ## <a name="set-up-a-continuous-deployment-build-for-sideloading"></a>Einrichten eines Continuous Deployment-Builds zum Querladen
-Nach Abschluss dieses Buildtyps können Benutzer die .appxbundle-Datei aus dem Artefaktabschnitt der Seite mit den Buildergebnissen herunterladen. Wenn Sie Betatests für die App durchführen möchten, indem Sie eine komplexere Verteilung erstellen, können Sie den HockeyApp-Dienst verwenden. Dieser Dienst bietet erweiterte Funktionen für Betatests, Benutzeranalysen und Absturzdiagnosen.
+Wenn diese Art von Build abgeschlossen ist, können Benutzer die app-Bundle-Datei aus dem artefaktabschnitt der Seite mit den Buildergebnissen herunterladen. Wenn Sie Betatests für die App durchführen möchten, indem Sie eine komplexere Verteilung erstellen, können Sie den HockeyApp-Dienst verwenden. Dieser Dienst bietet erweiterte Funktionen für Betatests, Benutzeranalysen und Absturzdiagnosen.
 
 ### <a name="applying-version-numbers-to-your-builds"></a>Anwenden von Versionsnummern auf Builds
 
@@ -256,9 +256,9 @@ Installieren Sie zuerst die Visual Studio-Erweiterung [HockeyApp](https://market
 
 Konfigurieren Sie als Nächstes die HockeyApp-Verbindung mithilfe dieser Anleitung: [How to use HockeyApp with Visual Studio Team Services (VSTS) or Team Foundation Server (TFS)](https://support.hockeyapp.net/kb/third-party-bug-trackers-services-and-webhooks/how-to-use-hockeyapp-with-visual-studio-team-services-vsts-or-team-foundation-server-tfs). Sie können Ihr Microsoft-Konto, ein Social Media-Konto oder einfach eine E-Mail-Adresse verwenden, um Ihr HockeyApp-Konto einzurichten. Der kostenlose Plan umfasst zwei Apps, einen Besitzer und keine Dateneinschränkungen.
 
-Anschließend können Sie eine HockeyApp-App manuell erstellen oder eine vorhandene APPX-Paketdatei hochladen. Weitere Informationen finden Sie unter [Erstellen einer neuen App](https://support.hockeyapp.net/kb/app-management-2/how-to-create-a-new-app).  
+Anschließend können Sie eine HockeyApp-app manuell oder indem Sie eine vorhandene app-Paketdatei hochladen erstellen. Weitere Informationen finden Sie unter [Erstellen einer neuen App](https://support.hockeyapp.net/kb/app-management-2/how-to-create-a-new-app).  
 
-Um eine vorhandene APPX-Paketdatei zu verwenden, fügen Sie einen Buildschritt hinzu und legen den Parameter für den binären Dateipfad des Buildschritts fest. 
+Um eine vorhandene app-Paketdatei zu verwenden, fügen Sie einen Buildschritt hinzu, und legen Sie den Parameter binären Dateipfad des Buildschritts fest. 
 
 ![Konfigurieren von HockeyApp](images/building-screen15.png) 
 
@@ -268,7 +268,7 @@ Um diesen Parameter festzulegen, kombinieren Sie den Namen der App, die AppxVers
 $(Build.ArtifactStagingDirectory)\AppxPackages\MyUWPApp_$(AppxVersion)_Test\MyUWPApp_$(AppxVersion)_x86_x64_ARM.appxbundle
 ```
 
-Obwohl die HockeyApp-Aufgabe die Möglichkeit bietet, den Pfad zur Symboldatei anzugeben, empfiehlt es sich, die Symbole (APPXSYM-Dateien) in das Bündel einzuschließen.
+Obwohl die HockeyApp-Aufgabe den Pfad zur Symboldatei angeben kann, ist es eine bewährte Methode, die Symbole in das Bündel einzuschließen.
 
 ## <a name="set-up-a-continuous-deployment-build-that-submits-a-package-to-the-store"></a>Einrichten eines Continuous Deployment-Builds, durch den ein Paket an den Store übermittelt wird 
 
@@ -286,7 +286,7 @@ Anschließend müssen Sie sicherstellen, dass der Buildschritt den folgenden Par
 /p:UapAppxPackageBuildMode=StoreUpload 
 ```
 
-Dadurch wird die APPXUPLOAD-Datei generiert, die an den Store übermittelt werden kann.
+Dadurch wird eine Upload-Datei generiert, die an den Store übermittelt werden kann.
 
 
 #### <a name="configure-automatic-store-submission"></a>Konfigurieren der automatischen Übermittlung an den Store
@@ -295,7 +295,7 @@ Verwenden Sie für die Integration in die Store-API die Visual Studio Team Servi
 
 Sie müssen Ihr Dev Center-Konto mit Azure Active Directory (AD) verbinden und dann eine App in AD erstellen, um die Anforderungen zu authentifizieren. Befolgen Sie dazu die Anweisungen auf der Seite der Erweiterung. 
 
-Nachdem Sie die Erweiterung konfiguriert haben, können Sie die Buildaufgabe hinzufügen und mit der App-ID und dem Speicherort der APPXUPLOAD-Datei konfigurieren.
+Nachdem Sie die Erweiterung konfiguriert haben, können Sie die Buildaufgabe hinzufügen und mit der app-ID und den Speicherort der Uploaddatei konfigurieren.
 
 ![Konfigurieren im Dev Center](images/building-screen17.png) 
 
@@ -316,17 +316,17 @@ Sie müssen diesen Build manuell aktivieren. Sie können ihn zum Aktualisieren v
 
 Wenn Sie Ihre App verteilen möchten, ohne sie im Store zu veröffentlichen, können Sie die App direkt auf Geräte querladen, solange die Geräte das Zertifikat, das zum Signieren des App-Pakets verwendet wurde, als vertrauenswürdig ansehen. 
 
-Verwenden Sie zum Installieren von Apps das PowerShell-Skript `Add-AppDevPackage.ps1`. Das Skript fügt das Zertifikat dem Abschnitt für vertrauenswürdige Stammzertifizierungsstellen des lokalen Computers hinzu und installiert oder aktualisiert dann die APPX-Datei.
+Verwenden Sie zum Installieren von Apps das PowerShell-Skript `Add-AppDevPackage.ps1`. Dieses Skript wird fügt das Zertifikat im Abschnitt vertrauenswürdige Stammzertifizierungsstellen des lokalen Computers hinzu und dann installiert oder aktualisieren die app-Paketdatei.
 
 #### <a name="sideloading-your-app-with-the-windows-10-anniversary-update"></a>Querladen einer App mit dem Windows10 Anniversary Update
-Im Windows10 Anniversary Update können Sie auf die APPXBUNDLE-Datei doppelklicken und die App mithilfe der Schaltfläche „Installieren“ in einem Dialogfeld installieren. 
+In Windows 10 Anniversary Update können Sie auf die app-Paket-Datei doppelklicken und Ihre app durch Auswählen der Schaltfläche "installieren" in einem Dialogfeld installieren. 
 
 ![Querladen in rs1](images/building-screen18.png) 
 
 >[!NOTE]
 > Durch diese Methode werden keine Zertifikate oder zugehörigen Abhängigkeiten installiert.
 
-Wenn Sie Ihre APPX-Pakete von einer Website wie VSTS oder HockeyApp verteilen möchten, müssen Sie diese Website der Liste vertrauenswürdiger Websites in Ihrem Browser hinzufügen. Andernfalls wird die Datei von Windows als gesperrt markiert. 
+Wenn Sie Ihre Windows-app-Pakete von einer Website wie VSTS oder HockeyApp verteilen möchten, müssen Sie diese der Liste vertrauenswürdiger Websites in Ihrem Browser hinzufügen. Andernfalls wird die Datei von Windows als gesperrt markiert. 
 
 <span id="certificates-best-practices"/>
 
