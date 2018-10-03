@@ -11,11 +11,11 @@ keywords: Windows10, UWP, Version, Build, Versionen, Windows, auswählen, aktual
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
 ms.localizationpriority: medium
 ms.openlocfilehash: d2909e6e674d524327b676441f7f08fc51595772
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4266285"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4314372"
 ---
 # <a name="choose-a-uwp-version"></a><span data-ttu-id="246ac-105">Auswählen einer UWP-Version</span><span class="sxs-lookup"><span data-stu-id="246ac-105">Choose a UWP version</span></span>
 

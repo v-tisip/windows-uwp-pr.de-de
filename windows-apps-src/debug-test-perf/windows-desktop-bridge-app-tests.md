@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, app-Zertifizierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 96087d2a41eb443374d8cd9bda5608d6156f9173
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4266319"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4316804"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a><span data-ttu-id="1b0d5-104">Tests für Windows Desktop-Brücke-Apps</span><span class="sxs-lookup"><span data-stu-id="1b0d5-104">Windows Desktop Bridge app tests</span></span>
 

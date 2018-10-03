@@ -12,11 +12,11 @@ keywords: Windows10, UWP
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: medium
 ms.openlocfilehash: e11bae84c7cb88ef89f8b627cc2109fc56e43163
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4266403"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4309400"
 ---
 # <a name="package-desktop-applications-desktop-bridge"></a><span data-ttu-id="1ff69-103">Paket-desktopanwendungen (Desktop-Brücke)</span><span class="sxs-lookup"><span data-stu-id="1ff69-103">Package desktop applications (Desktop Bridge)</span></span>
 

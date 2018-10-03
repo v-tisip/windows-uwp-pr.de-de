@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Popup, Info-Center in der Cloud, Spiegelung der Benachrichtigung, Benachrichtigung, geräteübergreifend
 ms.localizationpriority: medium
 ms.openlocfilehash: eb8e2ceb16add551f3c8e3a71a69d36b99f21c62
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4259507"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4320681"
 ---
 # <a name="notification-mirroring"></a><span data-ttu-id="b7553-103">Spiegelung der Benachrichtigung</span><span class="sxs-lookup"><span data-stu-id="b7553-103">Notification mirroring</span></span>
 

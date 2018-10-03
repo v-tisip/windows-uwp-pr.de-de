@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Dashboard, Devcenter, Entwicklungszentrum
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f5357b038091b72681915e46875f92077bb3c9e
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4265705"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4312384"
 ---
 # <a name="using-the-windows-dev-center-dashboard"></a><span data-ttu-id="01e2c-103">Verwenden des Windows Dev Center-Dashboards</span><span class="sxs-lookup"><span data-stu-id="01e2c-103">Using the Windows Dev Center dashboard</span></span>
 

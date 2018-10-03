@@ -15,11 +15,11 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: b61abf00d5ab8820457742f16feb9b496b7d7d1c
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4265809"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4317434"
 ---
 # <a name="directionality-and-gravity"></a><span data-ttu-id="be322-103">Direktionalität und Schwerkraft</span><span class="sxs-lookup"><span data-stu-id="be322-103">Directionality and gravity</span></span>
 

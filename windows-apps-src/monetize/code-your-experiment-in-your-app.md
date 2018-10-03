@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store Services SDK, A/B-Tests, Experimente
 ms.localizationpriority: medium
 ms.openlocfilehash: b0931d712ca99b429e2aaa7dec4b855f41ce55ef
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4260921"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4319758"
 ---
 # <a name="code-your-app-for-experimentation"></a><span data-ttu-id="e9fca-103">Codieren Ihrer App für das Experiment</span><span class="sxs-lookup"><span data-stu-id="e9fca-103">Code your app for experimentation</span></span>
 
