@@ -11,239 +11,239 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: eaf9ee9bb6d9c949e34d9095edc7054a3a57a4dc
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4212594"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4259403"
 ---
-# <a name="vat-info"></a><span data-ttu-id="015c7-103">Umsatzsteuerinfo</span><span class="sxs-lookup"><span data-stu-id="015c7-103">VAT info</span></span>
+# <a name="vat-info"></a><span data-ttu-id="0c1c5-103">Umsatzsteuerinfo</span><span class="sxs-lookup"><span data-stu-id="0c1c5-103">VAT info</span></span>
 
 
-<span data-ttu-id="015c7-104">Wenn Sie während des Dev Center-Registrierungsprozesses eine Umsatzsteuer-Identifikationsnummer angeben müssen, finden Sie im Folgenden grundlegende Informationen.</span><span class="sxs-lookup"><span data-stu-id="015c7-104">If you’re required to provide a VAT ID number during the Dev Center registration process, here’s some info to get you started.</span></span>
+<span data-ttu-id="0c1c5-104">Wenn Sie während des Dev Center-Registrierungsprozesses eine Umsatzsteuer-Identifikationsnummer angeben müssen, finden Sie im Folgenden grundlegende Informationen.</span><span class="sxs-lookup"><span data-stu-id="0c1c5-104">If you’re required to provide a VAT ID number during the Dev Center registration process, here’s some info to get you started.</span></span>
 
-## <a name="understanding-vat-numbers"></a><span data-ttu-id="015c7-105">Grundlagen der Steuernummern</span><span class="sxs-lookup"><span data-stu-id="015c7-105">Understanding VAT numbers</span></span>
-
-
-<span data-ttu-id="015c7-106">Eine Umsatzsteuernummer ist eine ID, die für Länder oder Regionen in der EU verwendet wird</span><span class="sxs-lookup"><span data-stu-id="015c7-106">A value added tax (VAT) number is an identifier used for countries or regions in the European Union.</span></span> <span data-ttu-id="015c7-107">Weitere Informationen erhalten Sie auf der offiziellen [VIES-Website](http://go.microsoft.com/fwlink/p/?LinkId=258372) der EU.</span><span class="sxs-lookup"><span data-stu-id="015c7-107">For more info, see the European Union’s official [VIES site](http://go.microsoft.com/fwlink/p/?LinkId=258372).</span></span>
-
-## <a name="accepted-formats-for-vat-numbers"></a><span data-ttu-id="015c7-108">Gültige Formate für Umsatzsteuernummern</span><span class="sxs-lookup"><span data-stu-id="015c7-108">Accepted formats for VAT numbers</span></span>
+## <a name="understanding-vat-numbers"></a><span data-ttu-id="0c1c5-105">Grundlagen der Steuernummern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-105">Understanding VAT numbers</span></span>
 
 
-<span data-ttu-id="015c7-109">Beachten Sie, dass Microsoft keine Steuertipps gibt und die folgende Tabelle nur als Leitfaden bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="015c7-109">Note that Microsoft doesn’t provide tax advice, and the following table is provided only as guidance.</span></span> <span data-ttu-id="015c7-110">Informationen zu aktuellen Änderungen erhalten Sie bei Ihrem örtlichen Finanzamt, falls dieser Leitfaden nicht ausreicht, um Microsoft eine Umsatzsteuer-Identifikationsnummer zur Verfügung zu stellen.</span><span class="sxs-lookup"><span data-stu-id="015c7-110">You should check with your local tax authorities for any recent changes if this guidance isn’t sufficient for you to provide Microsoft with a VAT number.</span></span>
+<span data-ttu-id="0c1c5-106">Eine Umsatzsteuernummer ist eine ID, die für Länder oder Regionen in der EU verwendet wird</span><span class="sxs-lookup"><span data-stu-id="0c1c5-106">A value added tax (VAT) number is an identifier used for countries or regions in the European Union.</span></span> <span data-ttu-id="0c1c5-107">Weitere Informationen erhalten Sie auf der offiziellen [VIES-Website](http://go.microsoft.com/fwlink/p/?LinkId=258372) der EU.</span><span class="sxs-lookup"><span data-stu-id="0c1c5-107">For more info, see the European Union’s official [VIES site](http://go.microsoft.com/fwlink/p/?LinkId=258372).</span></span>
+
+## <a name="accepted-formats-for-vat-numbers"></a><span data-ttu-id="0c1c5-108">Gültige Formate für Umsatzsteuernummern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-108">Accepted formats for VAT numbers</span></span>
+
+
+<span data-ttu-id="0c1c5-109">Beachten Sie, dass Microsoft keine Steuertipps gibt und die folgende Tabelle nur als Leitfaden bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="0c1c5-109">Note that Microsoft doesn’t provide tax advice, and the following table is provided only as guidance.</span></span> <span data-ttu-id="0c1c5-110">Informationen zu aktuellen Änderungen erhalten Sie bei Ihrem örtlichen Finanzamt, falls dieser Leitfaden nicht ausreicht, um Microsoft eine Umsatzsteuer-Identifikationsnummer zur Verfügung zu stellen.</span><span class="sxs-lookup"><span data-stu-id="0c1c5-110">You should check with your local tax authorities for any recent changes if this guidance isn’t sufficient for you to provide Microsoft with a VAT number.</span></span>
 
 <table Responsive="true">
-<tr><th><span data-ttu-id="015c7-111">Land/Region</span><span class="sxs-lookup"><span data-stu-id="015c7-111">Country/region</span></span></th><th><span data-ttu-id="015c7-112">Umsatzsteuerinfo</span><span class="sxs-lookup"><span data-stu-id="015c7-112">VAT info</span></span></th></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-113">Österreich</span><span class="sxs-lookup"><span data-stu-id="015c7-113">Austria</span></span>
+<tr><th><span data-ttu-id="0c1c5-111">Land/Region</span><span class="sxs-lookup"><span data-stu-id="0c1c5-111">Country/region</span></span></th><th><span data-ttu-id="0c1c5-112">Umsatzsteuerinfo</span><span class="sxs-lookup"><span data-stu-id="0c1c5-112">VAT info</span></span></th></tr>
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-113">Österreich</span><span class="sxs-lookup"><span data-stu-id="0c1c5-113">Austria</span></span>
 </td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-114">Umsatzsteuernummernformat: 1 Buchstabe und 8 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-114">VAT Number Format: 1 letter and 8 digits</span></span></li>
-<li><span data-ttu-id="015c7-115">Code für Land/Region: AT</span><span class="sxs-lookup"><span data-stu-id="015c7-115">Country/region code: AT</span></span></li>
-<li><span data-ttu-id="015c7-116">Beispiel: U12345678</span><span class="sxs-lookup"><span data-stu-id="015c7-116">Example: U12345678</span></span></li>
-<li><span data-ttu-id="015c7-117">Hinweis: Erstes Zeichen lautet immer „U“.</span><span class="sxs-lookup"><span data-stu-id="015c7-117">Notes: First character will always be 'U'.</span></span>
+<li><span data-ttu-id="0c1c5-114">Umsatzsteuernummernformat: 1 Buchstabe und 8 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-114">VAT Number Format: 1 letter and 8 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-115">Code für Land/Region: AT</span><span class="sxs-lookup"><span data-stu-id="0c1c5-115">Country/region code: AT</span></span></li>
+<li><span data-ttu-id="0c1c5-116">Beispiel: U12345678</span><span class="sxs-lookup"><span data-stu-id="0c1c5-116">Example: U12345678</span></span></li>
+<li><span data-ttu-id="0c1c5-117">Hinweis: Erstes Zeichen lautet immer „U“.</span><span class="sxs-lookup"><span data-stu-id="0c1c5-117">Notes: First character will always be 'U'.</span></span>
 </li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-118">Belgien</span><span class="sxs-lookup"><span data-stu-id="015c7-118">Belgium</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-118">Belgien</span><span class="sxs-lookup"><span data-stu-id="0c1c5-118">Belgium</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-119">Umsatzsteuernummernformat: 10 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-119">VAT Number Format: 10 digits</span></span></li>
-<li><span data-ttu-id="015c7-120">Code für Land/Region: BE</span><span class="sxs-lookup"><span data-stu-id="015c7-120">Country/region code: BE</span></span></li>
-<li><span data-ttu-id="015c7-121">Beispiel: 1234567890</span><span class="sxs-lookup"><span data-stu-id="015c7-121">Example: 1234567890</span></span></li>
-<li><span data-ttu-id="015c7-122">Hinweis: 9 Ziffern vor dem 1. Januar 2007.</span><span class="sxs-lookup"><span data-stu-id="015c7-122">Notes: 9 digits prior to 1 January 2007.</span></span></li>
+<li><span data-ttu-id="0c1c5-119">Umsatzsteuernummernformat: 10 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-119">VAT Number Format: 10 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-120">Code für Land/Region: BE</span><span class="sxs-lookup"><span data-stu-id="0c1c5-120">Country/region code: BE</span></span></li>
+<li><span data-ttu-id="0c1c5-121">Beispiel: 1234567890</span><span class="sxs-lookup"><span data-stu-id="0c1c5-121">Example: 1234567890</span></span></li>
+<li><span data-ttu-id="0c1c5-122">Hinweis: 9 Ziffern vor dem 1. Januar 2007.</span><span class="sxs-lookup"><span data-stu-id="0c1c5-122">Notes: 9 digits prior to 1 January 2007.</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-123">Bulgarien</span><span class="sxs-lookup"><span data-stu-id="015c7-123">Bulgaria</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-123">Bulgarien</span><span class="sxs-lookup"><span data-stu-id="0c1c5-123">Bulgaria</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-124">Umsatzsteuernummernformat: 9 oder 10 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-124">VAT Number Format: 9 or 10 digits</span></span></li>
-<li><span data-ttu-id="015c7-125">Code für Land/Region: BG</span><span class="sxs-lookup"><span data-stu-id="015c7-125">Country/region code: BG</span></span></li>
-<li><span data-ttu-id="015c7-126">Beispiel: 123456789 oder 0123456789</span><span class="sxs-lookup"><span data-stu-id="015c7-126">Example: 123456789 or 0123456789</span></span></li>
+<li><span data-ttu-id="0c1c5-124">Umsatzsteuernummernformat: 9 oder 10 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-124">VAT Number Format: 9 or 10 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-125">Code für Land/Region: BG</span><span class="sxs-lookup"><span data-stu-id="0c1c5-125">Country/region code: BG</span></span></li>
+<li><span data-ttu-id="0c1c5-126">Beispiel: 123456789 oder 0123456789</span><span class="sxs-lookup"><span data-stu-id="0c1c5-126">Example: 123456789 or 0123456789</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-127">Kroatien</span><span class="sxs-lookup"><span data-stu-id="015c7-127">Croatia</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-127">Kroatien</span><span class="sxs-lookup"><span data-stu-id="0c1c5-127">Croatia</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-128">Umsatzsteuernummernformat: 2 Buchstaben und 11 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-128">VAT Number Format: 2 letters and 11 digits</span></span></li>
-<li><span data-ttu-id="015c7-129">Code für Land/Region: HR</span><span class="sxs-lookup"><span data-stu-id="015c7-129">Country/region code: HR</span></span></li>
-<li><span data-ttu-id="015c7-130">Beispiel: HR12345678901</span><span class="sxs-lookup"><span data-stu-id="015c7-130">Example: HR12345678901</span></span></li>
-<li><span data-ttu-id="015c7-131">Hinweis: Die ersten Zeichen lauten immer „HR“.</span><span class="sxs-lookup"><span data-stu-id="015c7-131">Notes: First characters will always be 'HR'.</span></span></li>
+<li><span data-ttu-id="0c1c5-128">Umsatzsteuernummernformat: 2 Buchstaben und 11 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-128">VAT Number Format: 2 letters and 11 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-129">Code für Land/Region: HR</span><span class="sxs-lookup"><span data-stu-id="0c1c5-129">Country/region code: HR</span></span></li>
+<li><span data-ttu-id="0c1c5-130">Beispiel: HR12345678901</span><span class="sxs-lookup"><span data-stu-id="0c1c5-130">Example: HR12345678901</span></span></li>
+<li><span data-ttu-id="0c1c5-131">Hinweis: Die ersten Zeichen lauten immer „HR“.</span><span class="sxs-lookup"><span data-stu-id="0c1c5-131">Notes: First characters will always be 'HR'.</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-132">Zypern</span><span class="sxs-lookup"><span data-stu-id="015c7-132">Cyprus</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-132">Zypern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-132">Cyprus</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-133">Umsatzsteuernummernformat: 2 Buchstaben, 8 Ziffern und 1 Buchstabe</span><span class="sxs-lookup"><span data-stu-id="015c7-133">VAT Number Format: 2 letters and 8 digits and 1 letter</span></span></li>
-<li><span data-ttu-id="015c7-134">Code für Land/Region: CY</span><span class="sxs-lookup"><span data-stu-id="015c7-134">Country/region code: CY</span></span></li>
-<li><span data-ttu-id="015c7-135">Beispiel: 12345678, 123456789 oder 0123456789</span><span class="sxs-lookup"><span data-stu-id="015c7-135">Example: 12345678, 123456789, or 0123456789</span></span></li>
+<li><span data-ttu-id="0c1c5-133">Umsatzsteuernummernformat: 2 Buchstaben, 8 Ziffern und 1 Buchstabe</span><span class="sxs-lookup"><span data-stu-id="0c1c5-133">VAT Number Format: 2 letters and 8 digits and 1 letter</span></span></li>
+<li><span data-ttu-id="0c1c5-134">Code für Land/Region: CY</span><span class="sxs-lookup"><span data-stu-id="0c1c5-134">Country/region code: CY</span></span></li>
+<li><span data-ttu-id="0c1c5-135">Beispiel: 12345678, 123456789 oder 0123456789</span><span class="sxs-lookup"><span data-stu-id="0c1c5-135">Example: 12345678, 123456789, or 0123456789</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-136">Tschechische Republik</span><span class="sxs-lookup"><span data-stu-id="015c7-136">Czech Republic</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-136">Tschechische Republik</span><span class="sxs-lookup"><span data-stu-id="0c1c5-136">Czech Republic</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-137">Umsatzsteuernummernformat: 8, 9 oder 10 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-137">VAT Number Format: 8, 9, or 10 digits</span></span></li>
-<li><span data-ttu-id="015c7-138">Code für Land/Region: CZ</span><span class="sxs-lookup"><span data-stu-id="015c7-138">Country/region code: CZ</span></span></li>
-<li><span data-ttu-id="015c7-139">Beispiel: 12345678, 123456789 oder 0123456789</span><span class="sxs-lookup"><span data-stu-id="015c7-139">Example: 12345678, 123456789, or 0123456789</span></span></li>
+<li><span data-ttu-id="0c1c5-137">Umsatzsteuernummernformat: 8, 9 oder 10 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-137">VAT Number Format: 8, 9, or 10 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-138">Code für Land/Region: CZ</span><span class="sxs-lookup"><span data-stu-id="0c1c5-138">Country/region code: CZ</span></span></li>
+<li><span data-ttu-id="0c1c5-139">Beispiel: 12345678, 123456789 oder 0123456789</span><span class="sxs-lookup"><span data-stu-id="0c1c5-139">Example: 12345678, 123456789, or 0123456789</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-140">Dänemark</span><span class="sxs-lookup"><span data-stu-id="015c7-140">Denmark</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-140">Dänemark</span><span class="sxs-lookup"><span data-stu-id="0c1c5-140">Denmark</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-141">Umsatzsteuernummernformat: 8 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-141">VAT Number Format: 8 digits</span></span></li>
-<li><span data-ttu-id="015c7-142">Code für Land/Region: DK</span><span class="sxs-lookup"><span data-stu-id="015c7-142">Country/region code: DK</span></span></li>
-<li><span data-ttu-id="015c7-143">Beispiel: 12345678</span><span class="sxs-lookup"><span data-stu-id="015c7-143">Example: 12345678</span></span></li>
+<li><span data-ttu-id="0c1c5-141">Umsatzsteuernummernformat: 8 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-141">VAT Number Format: 8 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-142">Code für Land/Region: DK</span><span class="sxs-lookup"><span data-stu-id="0c1c5-142">Country/region code: DK</span></span></li>
+<li><span data-ttu-id="0c1c5-143">Beispiel: 12345678</span><span class="sxs-lookup"><span data-stu-id="0c1c5-143">Example: 12345678</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-144">Estland</span><span class="sxs-lookup"><span data-stu-id="015c7-144">Estonia</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-144">Estland</span><span class="sxs-lookup"><span data-stu-id="0c1c5-144">Estonia</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-145">Umsatzsteuernummernformat: 9 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-145">VAT Number Format: 9 digits</span></span></li>
-<li><span data-ttu-id="015c7-146">Code für Land/Region: EE</span><span class="sxs-lookup"><span data-stu-id="015c7-146">Country/region code: EE</span></span></li>
-<li><span data-ttu-id="015c7-147">Beispiel: 123456789</span><span class="sxs-lookup"><span data-stu-id="015c7-147">Example: 123456789</span></span></li>
+<li><span data-ttu-id="0c1c5-145">Umsatzsteuernummernformat: 9 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-145">VAT Number Format: 9 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-146">Code für Land/Region: EE</span><span class="sxs-lookup"><span data-stu-id="0c1c5-146">Country/region code: EE</span></span></li>
+<li><span data-ttu-id="0c1c5-147">Beispiel: 123456789</span><span class="sxs-lookup"><span data-stu-id="0c1c5-147">Example: 123456789</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-148">Finnland</span><span class="sxs-lookup"><span data-stu-id="015c7-148">Finland</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-148">Finnland</span><span class="sxs-lookup"><span data-stu-id="0c1c5-148">Finland</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-149">Umsatzsteuernummernformat: Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-149">VAT Number Format: digits</span></span></li>
-<li><span data-ttu-id="015c7-150">Code für Land/Region: FI</span><span class="sxs-lookup"><span data-stu-id="015c7-150">Country/region code: FI</span></span></li>
-<li><span data-ttu-id="015c7-151">Beispiel: 12345678</span><span class="sxs-lookup"><span data-stu-id="015c7-151">Example: 12345678</span></span></li>
+<li><span data-ttu-id="0c1c5-149">Umsatzsteuernummernformat: Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-149">VAT Number Format: digits</span></span></li>
+<li><span data-ttu-id="0c1c5-150">Code für Land/Region: FI</span><span class="sxs-lookup"><span data-stu-id="0c1c5-150">Country/region code: FI</span></span></li>
+<li><span data-ttu-id="0c1c5-151">Beispiel: 12345678</span><span class="sxs-lookup"><span data-stu-id="0c1c5-151">Example: 12345678</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-152">Frankreich</span><span class="sxs-lookup"><span data-stu-id="015c7-152">France</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-152">Frankreich</span><span class="sxs-lookup"><span data-stu-id="0c1c5-152">France</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-153">Umsatzsteuernummernformat: 11 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-153">VAT Number Format: 11 digits</span></span></li>
-<li><span data-ttu-id="015c7-154">Code für Land/Region: FR</span><span class="sxs-lookup"><span data-stu-id="015c7-154">Country/region code: FR</span></span></li>
-<li><span data-ttu-id="015c7-155">Beispiel: 12345678901, X1234567890, 1X123456789 oder XX123456789</span><span class="sxs-lookup"><span data-stu-id="015c7-155">Example: 12345678901, X1234567890, 1X123456789, or XX123456789</span></span></li>
-<li><span data-ttu-id="015c7-156">Hinweis: kann beliebige Buchstaben mit Ausnahme von I und Q als erstes oder zweites Zeichen oder als erstes und zweites Zeichen gefolgt von 9 Ziffern enthalten.</span><span class="sxs-lookup"><span data-stu-id="015c7-156">Notes: May include any alphabetical characters except for I or Q as the first or second character, or as the first and second character, followed by 9 digits.</span></span></li>
+<li><span data-ttu-id="0c1c5-153">Umsatzsteuernummernformat: 11 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-153">VAT Number Format: 11 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-154">Code für Land/Region: FR</span><span class="sxs-lookup"><span data-stu-id="0c1c5-154">Country/region code: FR</span></span></li>
+<li><span data-ttu-id="0c1c5-155">Beispiel: 12345678901, X1234567890, 1X123456789 oder XX123456789</span><span class="sxs-lookup"><span data-stu-id="0c1c5-155">Example: 12345678901, X1234567890, 1X123456789, or XX123456789</span></span></li>
+<li><span data-ttu-id="0c1c5-156">Hinweis: kann beliebige Buchstaben mit Ausnahme von I und Q als erstes oder zweites Zeichen oder als erstes und zweites Zeichen gefolgt von 9 Ziffern enthalten.</span><span class="sxs-lookup"><span data-stu-id="0c1c5-156">Notes: May include any alphabetical characters except for I or Q as the first or second character, or as the first and second character, followed by 9 digits.</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-157">Deutschland</span><span class="sxs-lookup"><span data-stu-id="015c7-157">Germany</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-157">Deutschland</span><span class="sxs-lookup"><span data-stu-id="0c1c5-157">Germany</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-158">Umsatzsteuernummernformat: 9 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-158">VAT Number Format: 9 digits</span></span></li>
-<li><span data-ttu-id="015c7-159">Code für Land/Region: DE</span><span class="sxs-lookup"><span data-stu-id="015c7-159">Country/region code: DE</span></span></li>
-<li><span data-ttu-id="015c7-160">Beispiel: 123456789</span><span class="sxs-lookup"><span data-stu-id="015c7-160">Example: 123456789</span></span></li>
-<li><span data-ttu-id="015c7-161">Hinweis: muss die neunstellige „Umsatzsteuer-Identifikationsnummer“ (Ust-ID-Nr.) sein</span><span class="sxs-lookup"><span data-stu-id="015c7-161">Notes: Must be the 9 digit 'Umsatzsteur Identifikationnummer' (Ust ID Nr.)</span></span></li>
+<li><span data-ttu-id="0c1c5-158">Umsatzsteuernummernformat: 9 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-158">VAT Number Format: 9 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-159">Code für Land/Region: DE</span><span class="sxs-lookup"><span data-stu-id="0c1c5-159">Country/region code: DE</span></span></li>
+<li><span data-ttu-id="0c1c5-160">Beispiel: 123456789</span><span class="sxs-lookup"><span data-stu-id="0c1c5-160">Example: 123456789</span></span></li>
+<li><span data-ttu-id="0c1c5-161">Hinweis: muss die neunstellige „Umsatzsteuer-Identifikationsnummer“ (Ust-ID-Nr.) sein</span><span class="sxs-lookup"><span data-stu-id="0c1c5-161">Notes: Must be the 9 digit 'Umsatzsteur Identifikationnummer' (Ust ID Nr.)</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-162">Griechenland</span><span class="sxs-lookup"><span data-stu-id="015c7-162">Greece</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-162">Griechenland</span><span class="sxs-lookup"><span data-stu-id="0c1c5-162">Greece</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-163">Umsatzsteuernummernformat: 9 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-163">VAT Number Format: 9 digits</span></span></li>
-<li><span data-ttu-id="015c7-164">Code für Land/Region: EL, GR</span><span class="sxs-lookup"><span data-stu-id="015c7-164">Country/region code: EL, GR</span></span></li>
-<li><span data-ttu-id="015c7-165">Beispiel: 123456789</span><span class="sxs-lookup"><span data-stu-id="015c7-165">Example: 123456789</span></span></li>
+<li><span data-ttu-id="0c1c5-163">Umsatzsteuernummernformat: 9 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-163">VAT Number Format: 9 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-164">Code für Land/Region: EL, GR</span><span class="sxs-lookup"><span data-stu-id="0c1c5-164">Country/region code: EL, GR</span></span></li>
+<li><span data-ttu-id="0c1c5-165">Beispiel: 123456789</span><span class="sxs-lookup"><span data-stu-id="0c1c5-165">Example: 123456789</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-166">Ungarn</span><span class="sxs-lookup"><span data-stu-id="015c7-166">Hungary</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-166">Ungarn</span><span class="sxs-lookup"><span data-stu-id="0c1c5-166">Hungary</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-167">Umsatzsteuernummernformat: 8 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-167">VAT Number Format: 8 digits</span></span></li>
-<li><span data-ttu-id="015c7-168">Code für Land/Region: HU</span><span class="sxs-lookup"><span data-stu-id="015c7-168">Country/region code: HU</span></span></li>
-<li><span data-ttu-id="015c7-169">Beispiel: 12345678</span><span class="sxs-lookup"><span data-stu-id="015c7-169">Example: 12345678</span></span></li>
+<li><span data-ttu-id="0c1c5-167">Umsatzsteuernummernformat: 8 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-167">VAT Number Format: 8 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-168">Code für Land/Region: HU</span><span class="sxs-lookup"><span data-stu-id="0c1c5-168">Country/region code: HU</span></span></li>
+<li><span data-ttu-id="0c1c5-169">Beispiel: 12345678</span><span class="sxs-lookup"><span data-stu-id="0c1c5-169">Example: 12345678</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-170">Irland</span><span class="sxs-lookup"><span data-stu-id="015c7-170">Ireland</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-170">Irland</span><span class="sxs-lookup"><span data-stu-id="0c1c5-170">Ireland</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-171">Umsatzsteuernummernformat: 8 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-171">VAT Number Format: 8 digits</span></span></li>
-<li><span data-ttu-id="015c7-172">Code für Land/Region: IE</span><span class="sxs-lookup"><span data-stu-id="015c7-172">Country/region code: IE</span></span></li>
-<li><span data-ttu-id="015c7-173">Beispiel: 1234567X oder 1X34567X</span><span class="sxs-lookup"><span data-stu-id="015c7-173">Example: 1234567X or 1X34567X</span></span></li>
-<li><span data-ttu-id="015c7-174">Hinweis: enthält 1 oder 2 Buchstaben: an der letzten Stelle oder an der zweiten und der letzten Stelle.</span><span class="sxs-lookup"><span data-stu-id="015c7-174">Notes: Includes 1 or 2 alphabetical characters: either last, or second and last.</span></span></li>
+<li><span data-ttu-id="0c1c5-171">Umsatzsteuernummernformat: 8 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-171">VAT Number Format: 8 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-172">Code für Land/Region: IE</span><span class="sxs-lookup"><span data-stu-id="0c1c5-172">Country/region code: IE</span></span></li>
+<li><span data-ttu-id="0c1c5-173">Beispiel: 1234567X oder 1X34567X</span><span class="sxs-lookup"><span data-stu-id="0c1c5-173">Example: 1234567X or 1X34567X</span></span></li>
+<li><span data-ttu-id="0c1c5-174">Hinweis: enthält 1 oder 2 Buchstaben: an der letzten Stelle oder an der zweiten und der letzten Stelle.</span><span class="sxs-lookup"><span data-stu-id="0c1c5-174">Notes: Includes 1 or 2 alphabetical characters: either last, or second and last.</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-175">Italien</span><span class="sxs-lookup"><span data-stu-id="015c7-175">Italy</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-175">Italien</span><span class="sxs-lookup"><span data-stu-id="0c1c5-175">Italy</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-176">Umsatzsteuernummernformat: 11 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-176">VAT Number Format: 11 digits</span></span></li>
-<li><span data-ttu-id="015c7-177">Code für Land/Region: IT</span><span class="sxs-lookup"><span data-stu-id="015c7-177">Country/region code: IT</span></span></li>
-<li><span data-ttu-id="015c7-178">Beispiel: 12345678901</span><span class="sxs-lookup"><span data-stu-id="015c7-178">Example: 12345678901</span></span></li>
+<li><span data-ttu-id="0c1c5-176">Umsatzsteuernummernformat: 11 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-176">VAT Number Format: 11 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-177">Code für Land/Region: IT</span><span class="sxs-lookup"><span data-stu-id="0c1c5-177">Country/region code: IT</span></span></li>
+<li><span data-ttu-id="0c1c5-178">Beispiel: 12345678901</span><span class="sxs-lookup"><span data-stu-id="0c1c5-178">Example: 12345678901</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-179">Lettland</span><span class="sxs-lookup"><span data-stu-id="015c7-179">Latvia</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-179">Lettland</span><span class="sxs-lookup"><span data-stu-id="0c1c5-179">Latvia</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-180">Umsatzsteuernummernformat: 11 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-180">VAT Number Format: 11 digits</span></span></li>
-<li><span data-ttu-id="015c7-181">Code für Land/Region: LV</span><span class="sxs-lookup"><span data-stu-id="015c7-181">Country/region code: LV</span></span></li>
-<li><span data-ttu-id="015c7-182">Beispiel: 01234567890</span><span class="sxs-lookup"><span data-stu-id="015c7-182">Example: 01234567890</span></span></li>
+<li><span data-ttu-id="0c1c5-180">Umsatzsteuernummernformat: 11 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-180">VAT Number Format: 11 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-181">Code für Land/Region: LV</span><span class="sxs-lookup"><span data-stu-id="0c1c5-181">Country/region code: LV</span></span></li>
+<li><span data-ttu-id="0c1c5-182">Beispiel: 01234567890</span><span class="sxs-lookup"><span data-stu-id="0c1c5-182">Example: 01234567890</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-183">Litauen</span><span class="sxs-lookup"><span data-stu-id="015c7-183">Lithuania</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-183">Litauen</span><span class="sxs-lookup"><span data-stu-id="0c1c5-183">Lithuania</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-184">Umsatzsteuernummernformat: 9 oder 12 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-184">VAT Number Format: 9 or 12 digits</span></span></li>
-<li><span data-ttu-id="015c7-185">Code für Land/Region: LT</span><span class="sxs-lookup"><span data-stu-id="015c7-185">Country/region code: LT</span></span></li>
-<li><span data-ttu-id="015c7-186">Beispiel: 123456789 oder 012345678901</span><span class="sxs-lookup"><span data-stu-id="015c7-186">Example: 123456789 or 012345678901</span></span></li>
+<li><span data-ttu-id="0c1c5-184">Umsatzsteuernummernformat: 9 oder 12 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-184">VAT Number Format: 9 or 12 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-185">Code für Land/Region: LT</span><span class="sxs-lookup"><span data-stu-id="0c1c5-185">Country/region code: LT</span></span></li>
+<li><span data-ttu-id="0c1c5-186">Beispiel: 123456789 oder 012345678901</span><span class="sxs-lookup"><span data-stu-id="0c1c5-186">Example: 123456789 or 012345678901</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-187">Luxemburg</span><span class="sxs-lookup"><span data-stu-id="015c7-187">Luxembourg</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-187">Luxemburg</span><span class="sxs-lookup"><span data-stu-id="0c1c5-187">Luxembourg</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-188">Umsatzsteuernummernformat: 8 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-188">VAT Number Format: 8 digits</span></span></li>
-<li><span data-ttu-id="015c7-189">Code für Land/Region: LU</span><span class="sxs-lookup"><span data-stu-id="015c7-189">Country/region code: LU</span></span></li>
-<li><span data-ttu-id="015c7-190">Beispiel: 12345678</span><span class="sxs-lookup"><span data-stu-id="015c7-190">Example: 12345678</span></span></li>
+<li><span data-ttu-id="0c1c5-188">Umsatzsteuernummernformat: 8 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-188">VAT Number Format: 8 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-189">Code für Land/Region: LU</span><span class="sxs-lookup"><span data-stu-id="0c1c5-189">Country/region code: LU</span></span></li>
+<li><span data-ttu-id="0c1c5-190">Beispiel: 12345678</span><span class="sxs-lookup"><span data-stu-id="0c1c5-190">Example: 12345678</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-191">Malta</span><span class="sxs-lookup"><span data-stu-id="015c7-191">Malta</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-191">Malta</span><span class="sxs-lookup"><span data-stu-id="0c1c5-191">Malta</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-192">Umsatzsteuernummernformat: 2 Buchstaben und 8 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-192">VAT Number Format: 2 letters and 8 digits</span></span></li>
-<li><span data-ttu-id="015c7-193">Code für Land/Region: MT</span><span class="sxs-lookup"><span data-stu-id="015c7-193">Country/region code: MT</span></span></li>
-<li><span data-ttu-id="015c7-194">Beispiel: MT12345678</span><span class="sxs-lookup"><span data-stu-id="015c7-194">Example: MT12345678</span></span></li>
-<li><span data-ttu-id="015c7-195">Hinweis: Die ersten Zeichen lauten immer „MT“.</span><span class="sxs-lookup"><span data-stu-id="015c7-195">Notes: First characters will always be 'MT'.</span></span></li>
+<li><span data-ttu-id="0c1c5-192">Umsatzsteuernummernformat: 2 Buchstaben und 8 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-192">VAT Number Format: 2 letters and 8 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-193">Code für Land/Region: MT</span><span class="sxs-lookup"><span data-stu-id="0c1c5-193">Country/region code: MT</span></span></li>
+<li><span data-ttu-id="0c1c5-194">Beispiel: MT12345678</span><span class="sxs-lookup"><span data-stu-id="0c1c5-194">Example: MT12345678</span></span></li>
+<li><span data-ttu-id="0c1c5-195">Hinweis: Die ersten Zeichen lauten immer „MT“.</span><span class="sxs-lookup"><span data-stu-id="0c1c5-195">Notes: First characters will always be 'MT'.</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-196">Niederlande</span><span class="sxs-lookup"><span data-stu-id="015c7-196">Netherlands</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-196">Niederlande</span><span class="sxs-lookup"><span data-stu-id="0c1c5-196">Netherlands</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-197">Umsatzsteuernummernformat: 11 Ziffern und 1 Buchstabe</span><span class="sxs-lookup"><span data-stu-id="015c7-197">VAT Number Format: 11 digits and 1 letter</span></span></li>
-<li><span data-ttu-id="015c7-198">Code für Land/Region: NL</span><span class="sxs-lookup"><span data-stu-id="015c7-198">Country/region code: NL</span></span></li>
-<li><span data-ttu-id="015c7-199">Beispiel: 123456789B01</span><span class="sxs-lookup"><span data-stu-id="015c7-199">Example: 123456789B01</span></span></li>
-<li><span data-ttu-id="015c7-200">Hinweis: zehntes Zeichen ist immer „B“.</span><span class="sxs-lookup"><span data-stu-id="015c7-200">Notes: Tenth character is always 'B'.</span></span></li>
+<li><span data-ttu-id="0c1c5-197">Umsatzsteuernummernformat: 11 Ziffern und 1 Buchstabe</span><span class="sxs-lookup"><span data-stu-id="0c1c5-197">VAT Number Format: 11 digits and 1 letter</span></span></li>
+<li><span data-ttu-id="0c1c5-198">Code für Land/Region: NL</span><span class="sxs-lookup"><span data-stu-id="0c1c5-198">Country/region code: NL</span></span></li>
+<li><span data-ttu-id="0c1c5-199">Beispiel: 123456789B01</span><span class="sxs-lookup"><span data-stu-id="0c1c5-199">Example: 123456789B01</span></span></li>
+<li><span data-ttu-id="0c1c5-200">Hinweis: zehntes Zeichen ist immer „B“.</span><span class="sxs-lookup"><span data-stu-id="0c1c5-200">Notes: Tenth character is always 'B'.</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-201">Polen</span><span class="sxs-lookup"><span data-stu-id="015c7-201">Poland</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-201">Polen</span><span class="sxs-lookup"><span data-stu-id="0c1c5-201">Poland</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-202">Umsatzsteuernummernformat: 10 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-202">VAT Number Format: 10 digits</span></span></li>
-<li><span data-ttu-id="015c7-203">Code für Land/Region: PL</span><span class="sxs-lookup"><span data-stu-id="015c7-203">Country/region code: PL</span></span></li>
-<li><span data-ttu-id="015c7-204">Beispiel: 1234567890</span><span class="sxs-lookup"><span data-stu-id="015c7-204">Example: 1234567890</span></span></li>
+<li><span data-ttu-id="0c1c5-202">Umsatzsteuernummernformat: 10 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-202">VAT Number Format: 10 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-203">Code für Land/Region: PL</span><span class="sxs-lookup"><span data-stu-id="0c1c5-203">Country/region code: PL</span></span></li>
+<li><span data-ttu-id="0c1c5-204">Beispiel: 1234567890</span><span class="sxs-lookup"><span data-stu-id="0c1c5-204">Example: 1234567890</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-205">Portugal</span><span class="sxs-lookup"><span data-stu-id="015c7-205">Portugal</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-205">Portugal</span><span class="sxs-lookup"><span data-stu-id="0c1c5-205">Portugal</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-206">Umsatzsteuernummernformat: 9 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-206">VAT Number Format: 9 digits</span></span></li>
-<li><span data-ttu-id="015c7-207">Code für Land/Region: PT</span><span class="sxs-lookup"><span data-stu-id="015c7-207">Country/region code: PT</span></span></li>
-<li><span data-ttu-id="015c7-208">Beispiel: 123456789</span><span class="sxs-lookup"><span data-stu-id="015c7-208">Example: 123456789</span></span></li>
+<li><span data-ttu-id="0c1c5-206">Umsatzsteuernummernformat: 9 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-206">VAT Number Format: 9 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-207">Code für Land/Region: PT</span><span class="sxs-lookup"><span data-stu-id="0c1c5-207">Country/region code: PT</span></span></li>
+<li><span data-ttu-id="0c1c5-208">Beispiel: 123456789</span><span class="sxs-lookup"><span data-stu-id="0c1c5-208">Example: 123456789</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-209">Rumänien</span><span class="sxs-lookup"><span data-stu-id="015c7-209">Romania</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-209">Rumänien</span><span class="sxs-lookup"><span data-stu-id="0c1c5-209">Romania</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-210">Umsatzsteuernummernformat: 2 Buchstaben und 8-10 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-210">VAT Number Format: 2 letters and 8-10 digits</span></span></li>
-<li><span data-ttu-id="015c7-211">Code für Land/Region: RO</span><span class="sxs-lookup"><span data-stu-id="015c7-211">Country/region code: RO</span></span></li>
-<li><span data-ttu-id="015c7-212">Beispiel: RO12345678, RO123456789 oder RO1234567890</span><span class="sxs-lookup"><span data-stu-id="015c7-212">Example: RO12345678, RO123456789, or RO1234567890</span></span></li>
-<li><span data-ttu-id="015c7-213">Hinweis: Die ersten Zeichen lauten immer „RO“.</span><span class="sxs-lookup"><span data-stu-id="015c7-213">Notes: First characters will always be 'RO'.</span></span></li>
+<li><span data-ttu-id="0c1c5-210">Umsatzsteuernummernformat: 2 Buchstaben und 8-10 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-210">VAT Number Format: 2 letters and 8-10 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-211">Code für Land/Region: RO</span><span class="sxs-lookup"><span data-stu-id="0c1c5-211">Country/region code: RO</span></span></li>
+<li><span data-ttu-id="0c1c5-212">Beispiel: RO12345678, RO123456789 oder RO1234567890</span><span class="sxs-lookup"><span data-stu-id="0c1c5-212">Example: RO12345678, RO123456789, or RO1234567890</span></span></li>
+<li><span data-ttu-id="0c1c5-213">Hinweis: Die ersten Zeichen lauten immer „RO“.</span><span class="sxs-lookup"><span data-stu-id="0c1c5-213">Notes: First characters will always be 'RO'.</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-214">Slowakei</span><span class="sxs-lookup"><span data-stu-id="015c7-214">Slovakia</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-214">Slowakei</span><span class="sxs-lookup"><span data-stu-id="0c1c5-214">Slovakia</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-215">Umsatzsteuernummernformat: 10 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-215">VAT Number Format: 10 digits</span></span></li>
-<li><span data-ttu-id="015c7-216">Code für Land/Region: SK</span><span class="sxs-lookup"><span data-stu-id="015c7-216">Country/region code: SK</span></span></li>
-<li><span data-ttu-id="015c7-217">Beispiel: 1234567890</span><span class="sxs-lookup"><span data-stu-id="015c7-217">Example: 1234567890</span></span></li>
-<li><span data-ttu-id="015c7-218">Hinweis: Die ersten Zeichen lauten immer „SI“.</span><span class="sxs-lookup"><span data-stu-id="015c7-218">Notes: First characters will always be 'SI'.</span></span></li>
+<li><span data-ttu-id="0c1c5-215">Umsatzsteuernummernformat: 10 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-215">VAT Number Format: 10 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-216">Code für Land/Region: SK</span><span class="sxs-lookup"><span data-stu-id="0c1c5-216">Country/region code: SK</span></span></li>
+<li><span data-ttu-id="0c1c5-217">Beispiel: 1234567890</span><span class="sxs-lookup"><span data-stu-id="0c1c5-217">Example: 1234567890</span></span></li>
+<li><span data-ttu-id="0c1c5-218">Hinweis: Die ersten Zeichen lauten immer „SI“.</span><span class="sxs-lookup"><span data-stu-id="0c1c5-218">Notes: First characters will always be 'SI'.</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-219">Slowenien</span><span class="sxs-lookup"><span data-stu-id="015c7-219">Slovenia</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-219">Slowenien</span><span class="sxs-lookup"><span data-stu-id="0c1c5-219">Slovenia</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-220">Umsatzsteuernummernformat: 2 Buchstaben und 8 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-220">VAT Number Format: 2 letters and 8 digits</span></span></li>
-<li><span data-ttu-id="015c7-221">Code für Land/Region: SI</span><span class="sxs-lookup"><span data-stu-id="015c7-221">Country/region code: SI</span></span></li>
-<li><span data-ttu-id="015c7-222">Beispiel: SI12345678</span><span class="sxs-lookup"><span data-stu-id="015c7-222">Example: SI12345678</span></span></li>
-<li><span data-ttu-id="015c7-223">Hinweis: Die ersten Zeichen lauten immer „SI“.</span><span class="sxs-lookup"><span data-stu-id="015c7-223">Notes: First characters will always be 'SI'.</span></span></li>
+<li><span data-ttu-id="0c1c5-220">Umsatzsteuernummernformat: 2 Buchstaben und 8 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-220">VAT Number Format: 2 letters and 8 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-221">Code für Land/Region: SI</span><span class="sxs-lookup"><span data-stu-id="0c1c5-221">Country/region code: SI</span></span></li>
+<li><span data-ttu-id="0c1c5-222">Beispiel: SI12345678</span><span class="sxs-lookup"><span data-stu-id="0c1c5-222">Example: SI12345678</span></span></li>
+<li><span data-ttu-id="0c1c5-223">Hinweis: Die ersten Zeichen lauten immer „SI“.</span><span class="sxs-lookup"><span data-stu-id="0c1c5-223">Notes: First characters will always be 'SI'.</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-224">Spanien</span><span class="sxs-lookup"><span data-stu-id="015c7-224">Spain</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-224">Spanien</span><span class="sxs-lookup"><span data-stu-id="0c1c5-224">Spain</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-225">Umsatzsteuernummernformat: 9 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-225">VAT Number Format: 9 digits</span></span></li>
-<li><span data-ttu-id="015c7-226">Code für Land/Region: ES</span><span class="sxs-lookup"><span data-stu-id="015c7-226">Country/region code: ES</span></span></li>
-<li><span data-ttu-id="015c7-227">Beispiel: X12345678, 12345678X oder X1234567X</span><span class="sxs-lookup"><span data-stu-id="015c7-227">Example: X12345678, 12345678X, or X1234567X</span></span></li>
-<li><span data-ttu-id="015c7-228">Hinweis: enthält 1 oder 2 Buchstaben: an der ersten, an der letzten oder an der ersten und der letzten Stelle.</span><span class="sxs-lookup"><span data-stu-id="015c7-228">Notes: Includes 1 or 2 letters: either first, last, or first and last.</span></span></li>
+<li><span data-ttu-id="0c1c5-225">Umsatzsteuernummernformat: 9 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-225">VAT Number Format: 9 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-226">Code für Land/Region: ES</span><span class="sxs-lookup"><span data-stu-id="0c1c5-226">Country/region code: ES</span></span></li>
+<li><span data-ttu-id="0c1c5-227">Beispiel: X12345678, 12345678X oder X1234567X</span><span class="sxs-lookup"><span data-stu-id="0c1c5-227">Example: X12345678, 12345678X, or X1234567X</span></span></li>
+<li><span data-ttu-id="0c1c5-228">Hinweis: enthält 1 oder 2 Buchstaben: an der ersten, an der letzten oder an der ersten und der letzten Stelle.</span><span class="sxs-lookup"><span data-stu-id="0c1c5-228">Notes: Includes 1 or 2 letters: either first, last, or first and last.</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-229">Schweden</span><span class="sxs-lookup"><span data-stu-id="015c7-229">Sweden</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-229">Schweden</span><span class="sxs-lookup"><span data-stu-id="0c1c5-229">Sweden</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-230">Umsatzsteuernummernformat: 12 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-230">VAT Number Format: 12 digits</span></span></li>
-<li><span data-ttu-id="015c7-231">Code für Land/Region: SE</span><span class="sxs-lookup"><span data-stu-id="015c7-231">Country/region code: SE</span></span></li>
-<li><span data-ttu-id="015c7-232">Beispiel: 123456789001</span><span class="sxs-lookup"><span data-stu-id="015c7-232">Example: 123456789001</span></span></li>
-<li><span data-ttu-id="015c7-233">Hinweis: Die letzten beiden Zeichen müssen „01“ sein.</span><span class="sxs-lookup"><span data-stu-id="015c7-233">Notes: The last 2 characters must be '01'.</span></span></li>
+<li><span data-ttu-id="0c1c5-230">Umsatzsteuernummernformat: 12 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-230">VAT Number Format: 12 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-231">Code für Land/Region: SE</span><span class="sxs-lookup"><span data-stu-id="0c1c5-231">Country/region code: SE</span></span></li>
+<li><span data-ttu-id="0c1c5-232">Beispiel: 123456789001</span><span class="sxs-lookup"><span data-stu-id="0c1c5-232">Example: 123456789001</span></span></li>
+<li><span data-ttu-id="0c1c5-233">Hinweis: Die letzten beiden Zeichen müssen „01“ sein.</span><span class="sxs-lookup"><span data-stu-id="0c1c5-233">Notes: The last 2 characters must be '01'.</span></span></li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region"><span data-ttu-id="015c7-234">Vereinigtes Königreich</span><span class="sxs-lookup"><span data-stu-id="015c7-234">United Kingdom</span></span></td><td data-th="VAT info">
+<tr><td data-th="Country/region"><span data-ttu-id="0c1c5-234">Vereinigtes Königreich</span><span class="sxs-lookup"><span data-stu-id="0c1c5-234">United Kingdom</span></span></td><td data-th="VAT info">
 <ul>
-<li><span data-ttu-id="015c7-235">Umsatzsteuernummernformat: 9 oder 12 Ziffern</span><span class="sxs-lookup"><span data-stu-id="015c7-235">VAT Number Format: 9 or 12 digits</span></span></li>
-<li><span data-ttu-id="015c7-236">Code für Land/Region: GB</span><span class="sxs-lookup"><span data-stu-id="015c7-236">Country/region code: GB</span></span></li>
-<li><span data-ttu-id="015c7-237">Beispiel: 123456789 oder 123456789001</span><span class="sxs-lookup"><span data-stu-id="015c7-237">Example: 123456789 or 123456789001</span></span></li>
-<li><span data-ttu-id="015c7-238">Hinweis: normalerweise 9 Ziffern, aber 12 Ziffern, wenn die Nummer ein untergeordnetes Unternehmen innerhalb einer Gruppe darstellt.</span><span class="sxs-lookup"><span data-stu-id="015c7-238">Notes: 9 digits generally, but 12 digits if the number represents a sub-company within a group.</span></span></li>
+<li><span data-ttu-id="0c1c5-235">Umsatzsteuernummernformat: 9 oder 12 Ziffern</span><span class="sxs-lookup"><span data-stu-id="0c1c5-235">VAT Number Format: 9 or 12 digits</span></span></li>
+<li><span data-ttu-id="0c1c5-236">Code für Land/Region: GB</span><span class="sxs-lookup"><span data-stu-id="0c1c5-236">Country/region code: GB</span></span></li>
+<li><span data-ttu-id="0c1c5-237">Beispiel: 123456789 oder 123456789001</span><span class="sxs-lookup"><span data-stu-id="0c1c5-237">Example: 123456789 or 123456789001</span></span></li>
+<li><span data-ttu-id="0c1c5-238">Hinweis: normalerweise 9 Ziffern, aber 12 Ziffern, wenn die Nummer ein untergeordnetes Unternehmen innerhalb einer Gruppe darstellt.</span><span class="sxs-lookup"><span data-stu-id="0c1c5-238">Notes: 9 digits generally, but 12 digits if the number represents a sub-company within a group.</span></span></li>
 </ul>
 </td></tr>
 </table>

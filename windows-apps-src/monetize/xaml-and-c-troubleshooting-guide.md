@@ -11,37 +11,37 @@ ms.technology: uwp
 keywords: Windows10, UWP, Werbung, Advertising, AdControl, Problembehandlung, XAML, c#
 ms.localizationpriority: medium
 ms.openlocfilehash: d20f816bc6e4010daf01ebad87c0138df0f1243d
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4208152"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4263409"
 ---
-# <a name="xaml-and-c-troubleshooting-guide"></a><span data-ttu-id="66b60-104">XAML- und C#-Handbuch zur Problembehandlung</span><span class="sxs-lookup"><span data-stu-id="66b60-104">XAML and C# troubleshooting guide</span></span>
+# <a name="xaml-and-c-troubleshooting-guide"></a><span data-ttu-id="80886-104">XAML- und C#-Handbuch zur Problembehandlung</span><span class="sxs-lookup"><span data-stu-id="80886-104">XAML and C# troubleshooting guide</span></span>
 
-<span data-ttu-id="66b60-105">Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Microsoft Advertising-Bibliotheken in XAML-Apps.</span><span class="sxs-lookup"><span data-stu-id="66b60-105">This topic contains solutions to common development issues with the Microsoft advertising libraries in XAML apps.</span></span>
+<span data-ttu-id="80886-105">Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Microsoft Advertising-Bibliotheken in XAML-Apps.</span><span class="sxs-lookup"><span data-stu-id="80886-105">This topic contains solutions to common development issues with the Microsoft advertising libraries in XAML apps.</span></span>
 
-* [<span data-ttu-id="66b60-106">XAML</span><span class="sxs-lookup"><span data-stu-id="66b60-106">XAML</span></span>](#xaml)
-  * [<span data-ttu-id="66b60-107">AdControl wird nicht angezeigt</span><span class="sxs-lookup"><span data-stu-id="66b60-107">AdControl not appearing</span></span>](#xaml-notappearing)
-  * [<span data-ttu-id="66b60-108">Blackbox blinkt und wird ausgeblendet</span><span class="sxs-lookup"><span data-stu-id="66b60-108">Black box blinks and disappears</span></span>](#xaml-blackboxblinksdisappears)
-  * [<span data-ttu-id="66b60-109">Anzeigen werden nicht aktualisiert</span><span class="sxs-lookup"><span data-stu-id="66b60-109">Ads not refreshing</span></span>](#xaml-adsnotrefreshing)
+* [<span data-ttu-id="80886-106">XAML</span><span class="sxs-lookup"><span data-stu-id="80886-106">XAML</span></span>](#xaml)
+  * [<span data-ttu-id="80886-107">AdControl wird nicht angezeigt</span><span class="sxs-lookup"><span data-stu-id="80886-107">AdControl not appearing</span></span>](#xaml-notappearing)
+  * [<span data-ttu-id="80886-108">Blackbox blinkt und wird ausgeblendet</span><span class="sxs-lookup"><span data-stu-id="80886-108">Black box blinks and disappears</span></span>](#xaml-blackboxblinksdisappears)
+  * [<span data-ttu-id="80886-109">Anzeigen werden nicht aktualisiert</span><span class="sxs-lookup"><span data-stu-id="80886-109">Ads not refreshing</span></span>](#xaml-adsnotrefreshing)
 
-* [<span data-ttu-id="66b60-110">C#</span><span class="sxs-lookup"><span data-stu-id="66b60-110">C#</span></span>](#csharp)
-  * [<span data-ttu-id="66b60-111">AdControl wird nicht angezeigt</span><span class="sxs-lookup"><span data-stu-id="66b60-111">AdControl not appearing</span></span>](#csharp-adcontrolnotappearing)
-  * [<span data-ttu-id="66b60-112">Blackbox blinkt und wird ausgeblendet</span><span class="sxs-lookup"><span data-stu-id="66b60-112">Black box blinks and disappears</span></span>](#csharp-blackboxblinksdisappears)
-  * [<span data-ttu-id="66b60-113">Anzeigen werden nicht aktualisiert</span><span class="sxs-lookup"><span data-stu-id="66b60-113">Ads not refreshing</span></span>](#csharp-adsnotrefreshing)
+* [<span data-ttu-id="80886-110">C#</span><span class="sxs-lookup"><span data-stu-id="80886-110">C#</span></span>](#csharp)
+  * [<span data-ttu-id="80886-111">AdControl wird nicht angezeigt</span><span class="sxs-lookup"><span data-stu-id="80886-111">AdControl not appearing</span></span>](#csharp-adcontrolnotappearing)
+  * [<span data-ttu-id="80886-112">Blackbox blinkt und wird ausgeblendet</span><span class="sxs-lookup"><span data-stu-id="80886-112">Black box blinks and disappears</span></span>](#csharp-blackboxblinksdisappears)
+  * [<span data-ttu-id="80886-113">Anzeigen werden nicht aktualisiert</span><span class="sxs-lookup"><span data-stu-id="80886-113">Ads not refreshing</span></span>](#csharp-adsnotrefreshing)
 
 <span id="xaml"/>
 
-## <a name="xaml"></a><span data-ttu-id="66b60-114">XAML</span><span class="sxs-lookup"><span data-stu-id="66b60-114">XAML</span></span>
+## <a name="xaml"></a><span data-ttu-id="80886-114">XAML</span><span class="sxs-lookup"><span data-stu-id="80886-114">XAML</span></span>
 
 <span id="xaml-notappearing"/>
 
-### <a name="adcontrol-not-appearing"></a><span data-ttu-id="66b60-115">AdControl wird nicht angezeigt</span><span class="sxs-lookup"><span data-stu-id="66b60-115">AdControl not appearing</span></span>
+### <a name="adcontrol-not-appearing"></a><span data-ttu-id="80886-115">AdControl wird nicht angezeigt</span><span class="sxs-lookup"><span data-stu-id="80886-115">AdControl not appearing</span></span>
 
-1.  <span data-ttu-id="66b60-116">Stellen Sie sicher, dass die **Internet (Client)**-Funktion in „Package.appxmanifest“ ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="66b60-116">Ensure that the **Internet (Client)** capability is selected in Package.appxmanifest.</span></span>
+1.  <span data-ttu-id="80886-116">Stellen Sie sicher, dass die **Internet (Client)**-Funktion in „Package.appxmanifest“ ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="80886-116">Ensure that the **Internet (Client)** capability is selected in Package.appxmanifest.</span></span>
 
-2.  <span data-ttu-id="66b60-117">Überprüfen Sie die ID der Anwendung und der Anzeigeneinheit.</span><span class="sxs-lookup"><span data-stu-id="66b60-117">Check the application ID and ad unit ID.</span></span> <span data-ttu-id="66b60-118">Diese IDs müssen mit der Anwendungs-ID und Anzeigeneinheits-ID übereinstimmen, die Sie im Windows Dev Center erhalten haben.</span><span class="sxs-lookup"><span data-stu-id="66b60-118">These IDs must match the application ID and ad unit ID that you obtained in Windows Dev Center.</span></span> <span data-ttu-id="66b60-119">Weitere Informationen finden Sie unter [Einrichten von Anzeigeneinheiten in Ihrer App](set-up-ad-units-in-your-app.md#live-ad-units).</span><span class="sxs-lookup"><span data-stu-id="66b60-119">For more information, see [Set up ad units in your app](set-up-ad-units-in-your-app.md#live-ad-units).</span></span>
+2.  <span data-ttu-id="80886-117">Überprüfen Sie die ID der Anwendung und der Anzeigeneinheit.</span><span class="sxs-lookup"><span data-stu-id="80886-117">Check the application ID and ad unit ID.</span></span> <span data-ttu-id="80886-118">Diese IDs müssen mit der Anwendungs-ID und Anzeigeneinheits-ID übereinstimmen, die Sie im Windows Dev Center erhalten haben.</span><span class="sxs-lookup"><span data-stu-id="80886-118">These IDs must match the application ID and ad unit ID that you obtained in Windows Dev Center.</span></span> <span data-ttu-id="80886-119">Weitere Informationen finden Sie unter [Einrichten von Anzeigeneinheiten in Ihrer App](set-up-ad-units-in-your-app.md#live-ad-units).</span><span class="sxs-lookup"><span data-stu-id="80886-119">For more information, see [Set up ad units in your app](set-up-ad-units-in-your-app.md#live-ad-units).</span></span>
 
     > [!div class="tabbedCodeSnippets"]
     ``` xml
@@ -49,7 +49,7 @@ ms.locfileid: "4208152"
                   Width="728" Height="90" />
     ```
 
-3.  <span data-ttu-id="66b60-120">Überprüfen Sie die **Height**-Eigenschaft und **Width**-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="66b60-120">Check the **Height** and **Width** properties.</span></span> <span data-ttu-id="66b60-121">Diese müssen auf eine der [unterstützten Anzeigengrößen für Werbebanner](supported-ad-sizes-for-banner-ads.md) festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="66b60-121">These must be set to one of the [Supported ad sizes for banner ads](supported-ad-sizes-for-banner-ads.md).</span></span>
+3.  <span data-ttu-id="80886-120">Überprüfen Sie die **Height**-Eigenschaft und **Width**-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="80886-120">Check the **Height** and **Width** properties.</span></span> <span data-ttu-id="80886-121">Diese müssen auf eine der [unterstützten Anzeigengrößen für Werbebanner](supported-ad-sizes-for-banner-ads.md) festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="80886-121">These must be set to one of the [Supported ad sizes for banner ads](supported-ad-sizes-for-banner-ads.md).</span></span>
 
     > [!div class="tabbedCodeSnippets"]
     ``` xml
@@ -58,9 +58,9 @@ ms.locfileid: "4208152"
                   Width="728" Height="90" />
     ```
 
-4.  <span data-ttu-id="66b60-122">Überprüfen Sie die Elementposition.</span><span class="sxs-lookup"><span data-stu-id="66b60-122">Check the element position.</span></span> <span data-ttu-id="66b60-123">[AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) muss sich im sichtbaren Bereich befinden.</span><span class="sxs-lookup"><span data-stu-id="66b60-123">The [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) must be inside the viewable area.</span></span>
+4.  <span data-ttu-id="80886-122">Überprüfen Sie die Elementposition.</span><span class="sxs-lookup"><span data-stu-id="80886-122">Check the element position.</span></span> <span data-ttu-id="80886-123">[AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) muss sich im sichtbaren Bereich befinden.</span><span class="sxs-lookup"><span data-stu-id="80886-123">The [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) must be inside the viewable area.</span></span>
 
-5.  <span data-ttu-id="66b60-124">Überprüfen Sie die **Visibility**-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="66b60-124">Check the **Visibility** property.</span></span> <span data-ttu-id="66b60-125">Die optionale **Visibility**-Eigenschaft darf nicht auf „collapsed“ oder „hidden“ festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="66b60-125">The optional **Visibility** property must not be set to collapsed or hidden.</span></span> <span data-ttu-id="66b60-126">Diese Eigenschaft kann als Inlineeigenschaft (wie unten dargestellt) oder in einem externen Stylesheet festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="66b60-126">This property can be set inline (as shown below) or in an external style sheet.</span></span>
+5.  <span data-ttu-id="80886-124">Überprüfen Sie die **Visibility**-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="80886-124">Check the **Visibility** property.</span></span> <span data-ttu-id="80886-125">Die optionale **Visibility**-Eigenschaft darf nicht auf „collapsed“ oder „hidden“ festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="80886-125">The optional **Visibility** property must not be set to collapsed or hidden.</span></span> <span data-ttu-id="80886-126">Diese Eigenschaft kann als Inlineeigenschaft (wie unten dargestellt) oder in einem externen Stylesheet festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="80886-126">This property can be set inline (as shown below) or in an external style sheet.</span></span>
 
     > [!div class="tabbedCodeSnippets"]
     ``` xml
@@ -70,7 +70,7 @@ ms.locfileid: "4208152"
                   Width="728" Height="90" />
     ```
 
-6.  <span data-ttu-id="66b60-127">Überprüfen Sie das übergeordnete Element von **AdControl**.</span><span class="sxs-lookup"><span data-stu-id="66b60-127">Check the parent of the **AdControl**.</span></span> <span data-ttu-id="66b60-128">Wenn sich das **AdControl**-Element in einem übergeordneten Element befindet, muss das übergeordnete Element aktiv und sichtbar sein.</span><span class="sxs-lookup"><span data-stu-id="66b60-128">If the **AdControl** element resides in a parent element, the parent must be active and visible.</span></span>
+6.  <span data-ttu-id="80886-127">Überprüfen Sie das übergeordnete Element von **AdControl**.</span><span class="sxs-lookup"><span data-stu-id="80886-127">Check the parent of the **AdControl**.</span></span> <span data-ttu-id="80886-128">Wenn sich das **AdControl**-Element in einem übergeordneten Element befindet, muss das übergeordnete Element aktiv und sichtbar sein.</span><span class="sxs-lookup"><span data-stu-id="80886-128">If the **AdControl** element resides in a parent element, the parent must be active and visible.</span></span>
 
     > [!div class="tabbedCodeSnippets"]
     ``` xml
@@ -81,19 +81,19 @@ ms.locfileid: "4208152"
     </StackPanel>
     ```
 
-7.  <span data-ttu-id="66b60-129">Stellen Sie sicher, dass **AdControl** im Viewport nicht ausgeblendet ist.</span><span class="sxs-lookup"><span data-stu-id="66b60-129">Ensure the **AdControl** is not hidden from the viewport.</span></span> <span data-ttu-id="66b60-130">**AdControl** muss sichtbar sein, damit Anzeigen ordnungsgemäß dargestellt werden.</span><span class="sxs-lookup"><span data-stu-id="66b60-130">The **AdControl** must be visible for ads to display properly.</span></span>
+7.  <span data-ttu-id="80886-129">Stellen Sie sicher, dass **AdControl** im Viewport nicht ausgeblendet ist.</span><span class="sxs-lookup"><span data-stu-id="80886-129">Ensure the **AdControl** is not hidden from the viewport.</span></span> <span data-ttu-id="80886-130">**AdControl** muss sichtbar sein, damit Anzeigen ordnungsgemäß dargestellt werden.</span><span class="sxs-lookup"><span data-stu-id="80886-130">The **AdControl** must be visible for ads to display properly.</span></span>
 
-8.  <span data-ttu-id="66b60-131">Echte Werte für **ApplicationId** und **AdUnitId** sollten nicht im Emulator getestet werden.</span><span class="sxs-lookup"><span data-stu-id="66b60-131">Live values for **ApplicationId** and **AdUnitId** should not be tested in the emulator.</span></span> <span data-ttu-id="66b60-132">Um sicherzustellen, dass **AdControl** erwartungsgemäß funktioniert, verwenden Sie [test values](set-up-ad-units-in-your-app.md#test-ad-units) sowohl für **ApplicationId** und **AdUnitId**.</span><span class="sxs-lookup"><span data-stu-id="66b60-132">To ensure the **AdControl** is functioning as expected, use the [test values](set-up-ad-units-in-your-app.md#test-ad-units) for both **ApplicationId** and **AdUnitId**.</span></span>
+8.  <span data-ttu-id="80886-131">Echte Werte für **ApplicationId** und **AdUnitId** sollten nicht im Emulator getestet werden.</span><span class="sxs-lookup"><span data-stu-id="80886-131">Live values for **ApplicationId** and **AdUnitId** should not be tested in the emulator.</span></span> <span data-ttu-id="80886-132">Um sicherzustellen, dass **AdControl** erwartungsgemäß funktioniert, verwenden Sie [test values](set-up-ad-units-in-your-app.md#test-ad-units) sowohl für **ApplicationId** und **AdUnitId**.</span><span class="sxs-lookup"><span data-stu-id="80886-132">To ensure the **AdControl** is functioning as expected, use the [test values](set-up-ad-units-in-your-app.md#test-ad-units) for both **ApplicationId** and **AdUnitId**.</span></span>
 
 <span id="xaml-blackboxblinksdisappears"/>
 
-### <a name="black-box-blinks-and-disappears"></a><span data-ttu-id="66b60-133">Blackbox blinkt und wird ausgeblendet</span><span class="sxs-lookup"><span data-stu-id="66b60-133">Black box blinks and disappears</span></span>
+### <a name="black-box-blinks-and-disappears"></a><span data-ttu-id="80886-133">Blackbox blinkt und wird ausgeblendet</span><span class="sxs-lookup"><span data-stu-id="80886-133">Black box blinks and disappears</span></span>
 
-1.  <span data-ttu-id="66b60-134">Überprüfen Sie noch einmal alle Schritte im vorherigen Abschnitt [AdControl wird nicht angezeigt](#xaml-notappearing).</span><span class="sxs-lookup"><span data-stu-id="66b60-134">Double-check all steps in the previous [AdControl not appearing](#xaml-notappearing) section.</span></span>
+1.  <span data-ttu-id="80886-134">Überprüfen Sie noch einmal alle Schritte im vorherigen Abschnitt [AdControl wird nicht angezeigt](#xaml-notappearing).</span><span class="sxs-lookup"><span data-stu-id="80886-134">Double-check all steps in the previous [AdControl not appearing](#xaml-notappearing) section.</span></span>
 
-2.  <span data-ttu-id="66b60-135">Behandeln Sie das **ErrorOccurred**-Ereignis, und bestimmen Sie anhand der an den Ereignishandler übergebenen Meldung, ob ein Fehler aufgetreten ist und welche Art von Fehler ausgelöst wurde.</span><span class="sxs-lookup"><span data-stu-id="66b60-135">Handle the **ErrorOccurred** event, and use the message that is passed to the event handler to determine whether an error occurred and what type of error was thrown.</span></span> <span data-ttu-id="66b60-136">Weitere Informationen finden Sie unter [Fehlerbehandlung in XAML/Exemplarische Vorgehensweise für C#](error-handling-in-xamlc-walkthrough.md).</span><span class="sxs-lookup"><span data-stu-id="66b60-136">See [Error handling in XAML/C# walkthrough](error-handling-in-xamlc-walkthrough.md) for more information.</span></span>
+2.  <span data-ttu-id="80886-135">Behandeln Sie das **ErrorOccurred**-Ereignis, und bestimmen Sie anhand der an den Ereignishandler übergebenen Meldung, ob ein Fehler aufgetreten ist und welche Art von Fehler ausgelöst wurde.</span><span class="sxs-lookup"><span data-stu-id="80886-135">Handle the **ErrorOccurred** event, and use the message that is passed to the event handler to determine whether an error occurred and what type of error was thrown.</span></span> <span data-ttu-id="80886-136">Weitere Informationen finden Sie unter [Fehlerbehandlung in XAML/Exemplarische Vorgehensweise für C#](error-handling-in-xamlc-walkthrough.md).</span><span class="sxs-lookup"><span data-stu-id="80886-136">See [Error handling in XAML/C# walkthrough](error-handling-in-xamlc-walkthrough.md) for more information.</span></span>
 
-    <span data-ttu-id="66b60-137">Dieses Beispiel veranschaulicht einen **ErrorOccurred**-Ereignishandler.</span><span class="sxs-lookup"><span data-stu-id="66b60-137">This example demonstrates an **ErrorOccurred** event handler.</span></span> <span data-ttu-id="66b60-138">Der erste Ausschnitt ist das XAML-UI-Markup.</span><span class="sxs-lookup"><span data-stu-id="66b60-138">The first snippet is the XAML UI markup.</span></span>
+    <span data-ttu-id="80886-137">Dieses Beispiel veranschaulicht einen **ErrorOccurred**-Ereignishandler.</span><span class="sxs-lookup"><span data-stu-id="80886-137">This example demonstrates an **ErrorOccurred** event handler.</span></span> <span data-ttu-id="80886-138">Der erste Ausschnitt ist das XAML-UI-Markup.</span><span class="sxs-lookup"><span data-stu-id="80886-138">The first snippet is the XAML UI markup.</span></span>
 
     > [!div class="tabbedCodeSnippets"]
     ``` xml
@@ -104,7 +104,7 @@ ms.locfileid: "4208152"
     <TextBlock x:Name="TextBlock1" TextWrapping="Wrap" Width="500" Height="250" />
     ```
 
-    <span data-ttu-id="66b60-139">Dieses Beispiel veranschaulicht den entsprechenden C#-Code.</span><span class="sxs-lookup"><span data-stu-id="66b60-139">This example demonstrates the corresponding C# code.</span></span>
+    <span data-ttu-id="80886-139">Dieses Beispiel veranschaulicht den entsprechenden C#-Code.</span><span class="sxs-lookup"><span data-stu-id="80886-139">This example demonstrates the corresponding C# code.</span></span>
 
     > [!div class="tabbedCodeSnippets"]
     ``` cs
@@ -115,17 +115,17 @@ ms.locfileid: "4208152"
     }
     ```
 
-    <span data-ttu-id="66b60-140">Eine Blackbox wird am häufigsten dadurch verursacht, dass keine Anzeige verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="66b60-140">The most common error that causes a black box is “No ad available.”</span></span> <span data-ttu-id="66b60-141">Dieser Fehler bedeutet, dass durch die Anforderung keine Anzeige zurückgegeben werden kann.</span><span class="sxs-lookup"><span data-stu-id="66b60-141">This error means there is no ad available to return from the request.</span></span>
+    <span data-ttu-id="80886-140">Eine Blackbox wird am häufigsten dadurch verursacht, dass keine Anzeige verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="80886-140">The most common error that causes a black box is “No ad available.”</span></span> <span data-ttu-id="80886-141">Dieser Fehler bedeutet, dass durch die Anforderung keine Anzeige zurückgegeben werden kann.</span><span class="sxs-lookup"><span data-stu-id="80886-141">This error means there is no ad available to return from the request.</span></span>
 
-3.  <span data-ttu-id="66b60-142">[AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) verhält sich normal.</span><span class="sxs-lookup"><span data-stu-id="66b60-142">The [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) is behaving normally.</span></span>
+3.  <span data-ttu-id="80886-142">[AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) verhält sich normal.</span><span class="sxs-lookup"><span data-stu-id="80886-142">The [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) is behaving normally.</span></span>
 
-    <span data-ttu-id="66b60-143">**AdControl** wird standardmäßig reduziert, wenn keine Anzeige dargestellt werden kann.</span><span class="sxs-lookup"><span data-stu-id="66b60-143">By default, the **AdControl** will collapse when it cannot display an ad.</span></span> <span data-ttu-id="66b60-144">Wenn andere Elemente demselben übergeordneten Element untergeordnet sind, können sie verschoben werden, um den freien Platz des reduzierten **AdControl**-Elements zu füllen, und bei der nächsten Anforderung erweitert werden.</span><span class="sxs-lookup"><span data-stu-id="66b60-144">If other elements are children of the same parent they may move to fill the gap of the collapsed **AdControl** and expand when the next request is made.</span></span>
+    <span data-ttu-id="80886-143">**AdControl** wird standardmäßig reduziert, wenn keine Anzeige dargestellt werden kann.</span><span class="sxs-lookup"><span data-stu-id="80886-143">By default, the **AdControl** will collapse when it cannot display an ad.</span></span> <span data-ttu-id="80886-144">Wenn andere Elemente demselben übergeordneten Element untergeordnet sind, können sie verschoben werden, um den freien Platz des reduzierten **AdControl**-Elements zu füllen, und bei der nächsten Anforderung erweitert werden.</span><span class="sxs-lookup"><span data-stu-id="80886-144">If other elements are children of the same parent they may move to fill the gap of the collapsed **AdControl** and expand when the next request is made.</span></span>
 
 <span id="xaml-adsnotrefreshing"/>
 
-### <a name="ads-not-refreshing"></a><span data-ttu-id="66b60-145">Anzeigen werden nicht aktualisiert</span><span class="sxs-lookup"><span data-stu-id="66b60-145">Ads not refreshing</span></span>
+### <a name="ads-not-refreshing"></a><span data-ttu-id="80886-145">Anzeigen werden nicht aktualisiert</span><span class="sxs-lookup"><span data-stu-id="80886-145">Ads not refreshing</span></span>
 
-1.  <span data-ttu-id="66b60-146">Überprüfen Sie die [IsAutoRefreshEnabled](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled)-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="66b60-146">Check the [IsAutoRefreshEnabled](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled) property.</span></span> <span data-ttu-id="66b60-147">Diese optionale Eigenschaft ist standardmäßig auf **True** festgelegt.</span><span class="sxs-lookup"><span data-stu-id="66b60-147">By default, this optional property is set to **True**.</span></span> <span data-ttu-id="66b60-148">Beim Wert **False** muss die [Refresh](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.refresh)-Methode verwendet werden, um eine weitere Anzeige abzurufen.</span><span class="sxs-lookup"><span data-stu-id="66b60-148">When set to **False**, the [Refresh](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.refresh) method must be used to retrieve another ad.</span></span>
+1.  <span data-ttu-id="80886-146">Überprüfen Sie die [IsAutoRefreshEnabled](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled)-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="80886-146">Check the [IsAutoRefreshEnabled](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled) property.</span></span> <span data-ttu-id="80886-147">Diese optionale Eigenschaft ist standardmäßig auf **True** festgelegt.</span><span class="sxs-lookup"><span data-stu-id="80886-147">By default, this optional property is set to **True**.</span></span> <span data-ttu-id="80886-148">Beim Wert **False** muss die [Refresh](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.refresh)-Methode verwendet werden, um eine weitere Anzeige abzurufen.</span><span class="sxs-lookup"><span data-stu-id="80886-148">When set to **False**, the [Refresh](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.refresh) method must be used to retrieve another ad.</span></span>
 
     > [!div class="tabbedCodeSnippets"]
     ``` xml
@@ -135,9 +135,9 @@ ms.locfileid: "4208152"
                   IsAutoRefreshEnabled="True" />
     ```
 
-2.  <span data-ttu-id="66b60-149">Überprüfen Sie Aufrufe der **Refresh**-Methode.</span><span class="sxs-lookup"><span data-stu-id="66b60-149">Check calls to the **Refresh** method.</span></span> <span data-ttu-id="66b60-150">Bei Verwendung der automatischen Aktualisierung kann **Refresh** nicht verwendet werden, um eine weitere Anzeige abzurufen.</span><span class="sxs-lookup"><span data-stu-id="66b60-150">When using automatic refresh, **Refresh** cannot be used to retrieve another ad.</span></span> <span data-ttu-id="66b60-151">Bei Verwendung der manuellen Aktualisierung sollte **Refresh** abhängig von der aktuellen Datenverbindung des Geräts erst nach mindestens 30 bis 60 Sekunden aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="66b60-151">When using manual refresh, **Refresh** should be called only after a minimum of 30 to 60 seconds depending on the device’s current data connection.</span></span>
+2.  <span data-ttu-id="80886-149">Überprüfen Sie Aufrufe der **Refresh**-Methode.</span><span class="sxs-lookup"><span data-stu-id="80886-149">Check calls to the **Refresh** method.</span></span> <span data-ttu-id="80886-150">Bei Verwendung der automatischen Aktualisierung kann **Refresh** nicht verwendet werden, um eine weitere Anzeige abzurufen.</span><span class="sxs-lookup"><span data-stu-id="80886-150">When using automatic refresh, **Refresh** cannot be used to retrieve another ad.</span></span> <span data-ttu-id="80886-151">Bei Verwendung der manuellen Aktualisierung sollte **Refresh** abhängig von der aktuellen Datenverbindung des Geräts erst nach mindestens 30 bis 60 Sekunden aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="80886-151">When using manual refresh, **Refresh** should be called only after a minimum of 30 to 60 seconds depending on the device’s current data connection.</span></span>
 
-    <span data-ttu-id="66b60-152">In den folgenden Codeausschnitten wird die Verwendung der **Refresh**-Methode veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="66b60-152">The following code snippets show an example of how to use the **Refresh** method.</span></span> <span data-ttu-id="66b60-153">Der erste Ausschnitt ist das XAML-UI-Markup.</span><span class="sxs-lookup"><span data-stu-id="66b60-153">The first snippet is the XAML UI markup.</span></span>
+    <span data-ttu-id="80886-152">In den folgenden Codeausschnitten wird die Verwendung der **Refresh**-Methode veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="80886-152">The following code snippets show an example of how to use the **Refresh** method.</span></span> <span data-ttu-id="80886-153">Der erste Ausschnitt ist das XAML-UI-Markup.</span><span class="sxs-lookup"><span data-stu-id="80886-153">The first snippet is the XAML UI markup.</span></span>
 
     > [!div class="tabbedCodeSnippets"]
     ``` xml
@@ -148,7 +148,7 @@ ms.locfileid: "4208152"
                   IsAutoRefreshEnabled="False" />
     ```
 
-    <span data-ttu-id="66b60-154">Dieser Codeausschnitt zeigt ein Beispiel für den C#-CodeBehind-Code des UI-Markups.</span><span class="sxs-lookup"><span data-stu-id="66b60-154">This code snippet shows an example of the C# code behind the UI markup.</span></span>
+    <span data-ttu-id="80886-154">Dieser Codeausschnitt zeigt ein Beispiel für den C#-CodeBehind-Code des UI-Markups.</span><span class="sxs-lookup"><span data-stu-id="80886-154">This code snippet shows an example of the C# code behind the UI markup.</span></span>
 
     > [!div class="tabbedCodeSnippets"]
     ``` cs
@@ -160,24 +160,24 @@ ms.locfileid: "4208152"
     }
     ```
 
-3.  <span data-ttu-id="66b60-155">**AdControl** verhält sich normal.</span><span class="sxs-lookup"><span data-stu-id="66b60-155">The **AdControl** is behaving normally.</span></span> <span data-ttu-id="66b60-156">In einigen Fällen wird dieselbe Anzeige mehrmals in Folge angezeigt, wodurch der Eindruck entsteht, dass Anzeigen nicht aktualisiert werden.</span><span class="sxs-lookup"><span data-stu-id="66b60-156">Sometimes the same ad will appear more than once in a row giving the appearance that ads are not refreshing.</span></span>
+3.  <span data-ttu-id="80886-155">**AdControl** verhält sich normal.</span><span class="sxs-lookup"><span data-stu-id="80886-155">The **AdControl** is behaving normally.</span></span> <span data-ttu-id="80886-156">In einigen Fällen wird dieselbe Anzeige mehrmals in Folge angezeigt, wodurch der Eindruck entsteht, dass Anzeigen nicht aktualisiert werden.</span><span class="sxs-lookup"><span data-stu-id="80886-156">Sometimes the same ad will appear more than once in a row giving the appearance that ads are not refreshing.</span></span>
 
 <span id="csharp"/>
 
-## <a name="c"></a><span data-ttu-id="66b60-157">C\#</span><span class="sxs-lookup"><span data-stu-id="66b60-157">C\#</span></span> #
+## <a name="c"></a><span data-ttu-id="80886-157">C\#</span><span class="sxs-lookup"><span data-stu-id="80886-157">C\#</span></span> #
 
 <span id="csharp-adcontrolnotappearing"/>
 
-### <a name="adcontrol-not-appearing"></a><span data-ttu-id="66b60-158">AdControl wird nicht angezeigt</span><span class="sxs-lookup"><span data-stu-id="66b60-158">AdControl not appearing</span></span>
+### <a name="adcontrol-not-appearing"></a><span data-ttu-id="80886-158">AdControl wird nicht angezeigt</span><span class="sxs-lookup"><span data-stu-id="80886-158">AdControl not appearing</span></span>
 
-1.  <span data-ttu-id="66b60-159">Stellen Sie sicher, dass die **Internet (Client)**-Funktion in „Package.appxmanifest“ ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="66b60-159">Ensure that the **Internet (Client)** capability is selected in Package.appxmanifest.</span></span>
+1.  <span data-ttu-id="80886-159">Stellen Sie sicher, dass die **Internet (Client)**-Funktion in „Package.appxmanifest“ ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="80886-159">Ensure that the **Internet (Client)** capability is selected in Package.appxmanifest.</span></span>
 
-2.  <span data-ttu-id="66b60-160">Stellen Sie sicher, dass **AdControl** instanziiert ist.</span><span class="sxs-lookup"><span data-stu-id="66b60-160">Ensure the **AdControl** is instantiated.</span></span> <span data-ttu-id="66b60-161">Wenn **AdControl** nicht instanziiert wird, ist es nicht verfügbar.</span><span class="sxs-lookup"><span data-stu-id="66b60-161">If the **AdControl** is not instantiated it will not be available.</span></span>
+2.  <span data-ttu-id="80886-160">Stellen Sie sicher, dass **AdControl** instanziiert ist.</span><span class="sxs-lookup"><span data-stu-id="80886-160">Ensure the **AdControl** is instantiated.</span></span> <span data-ttu-id="80886-161">Wenn **AdControl** nicht instanziiert wird, ist es nicht verfügbar.</span><span class="sxs-lookup"><span data-stu-id="80886-161">If the **AdControl** is not instantiated it will not be available.</span></span>
 
     > [!div class="tabbedCodeSnippets"]
     [!code-cs[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet1)]
 
-3.  <span data-ttu-id="66b60-162">Überprüfen Sie die ID der Anwendung und der Anzeigeneinheit.</span><span class="sxs-lookup"><span data-stu-id="66b60-162">Check the application ID and ad unit ID.</span></span> <span data-ttu-id="66b60-163">Diese IDs müssen mit der Anwendungs-ID und Anzeigeneinheits-ID übereinstimmen, die Sie im Windows Dev Center erhalten haben.</span><span class="sxs-lookup"><span data-stu-id="66b60-163">These IDs must match the application ID and ad unit ID that you obtained in Windows Dev Center.</span></span> <span data-ttu-id="66b60-164">Weitere Informationen finden Sie unter [Einrichten von Anzeigeneinheiten in Ihrer App](set-up-ad-units-in-your-app.md#live-ad-units).</span><span class="sxs-lookup"><span data-stu-id="66b60-164">For more information, see [Set up ad units in your app](set-up-ad-units-in-your-app.md#live-ad-units).</span></span>
+3.  <span data-ttu-id="80886-162">Überprüfen Sie die ID der Anwendung und der Anzeigeneinheit.</span><span class="sxs-lookup"><span data-stu-id="80886-162">Check the application ID and ad unit ID.</span></span> <span data-ttu-id="80886-163">Diese IDs müssen mit der Anwendungs-ID und Anzeigeneinheits-ID übereinstimmen, die Sie im Windows Dev Center erhalten haben.</span><span class="sxs-lookup"><span data-stu-id="80886-163">These IDs must match the application ID and ad unit ID that you obtained in Windows Dev Center.</span></span> <span data-ttu-id="80886-164">Weitere Informationen finden Sie unter [Einrichten von Anzeigeneinheiten in Ihrer App](set-up-ad-units-in-your-app.md#live-ad-units).</span><span class="sxs-lookup"><span data-stu-id="80886-164">For more information, see [Set up ad units in your app](set-up-ad-units-in-your-app.md#live-ad-units).</span></span>
 
     > [!div class="tabbedCodeSnippets"]
     ``` cs
@@ -187,7 +187,7 @@ ms.locfileid: "4208152"
     adControl.Width = 728;
     ```
 
-4.  <span data-ttu-id="66b60-165">Überprüfen Sie den **Height**-Parameter und **Width**-Parameter.</span><span class="sxs-lookup"><span data-stu-id="66b60-165">Check the **Height** and **Width** parameters.</span></span> <span data-ttu-id="66b60-166">Diese müssen auf eine der [unterstützten Anzeigengrößen für Werbebanner](supported-ad-sizes-for-banner-ads.md) festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="66b60-166">These must be set to one of the [supported ad sizes for banner ads](supported-ad-sizes-for-banner-ads.md).</span></span>
+4.  <span data-ttu-id="80886-165">Überprüfen Sie den **Height**-Parameter und **Width**-Parameter.</span><span class="sxs-lookup"><span data-stu-id="80886-165">Check the **Height** and **Width** parameters.</span></span> <span data-ttu-id="80886-166">Diese müssen auf eine der [unterstützten Anzeigengrößen für Werbebanner](supported-ad-sizes-for-banner-ads.md) festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="80886-166">These must be set to one of the [supported ad sizes for banner ads](supported-ad-sizes-for-banner-ads.md).</span></span>
 
     > [!div class="tabbedCodeSnippets"]
     ``` cs
@@ -197,16 +197,16 @@ ms.locfileid: "4208152"
     adControl.Height = 90;adControl.Width = 728;
     ```
 
-5.  <span data-ttu-id="66b60-167">Stellen Sie sicher, dass **AdControl** einem übergeordneten Element hinzugefügt wurde.</span><span class="sxs-lookup"><span data-stu-id="66b60-167">Ensure the **AdControl** is added to a parent element.</span></span> <span data-ttu-id="66b60-168">Damit **AdControl** angezeigt wird, muss es einem übergeordneten Steuerelement (z. B. **StackPanel** oder **Grid**) als untergeordnetes Element hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="66b60-168">To display, the **AdControl** must be added as a child to a parent control (for example, a **StackPanel** or **Grid**).</span></span>
+5.  <span data-ttu-id="80886-167">Stellen Sie sicher, dass **AdControl** einem übergeordneten Element hinzugefügt wurde.</span><span class="sxs-lookup"><span data-stu-id="80886-167">Ensure the **AdControl** is added to a parent element.</span></span> <span data-ttu-id="80886-168">Damit **AdControl** angezeigt wird, muss es einem übergeordneten Steuerelement (z. B. **StackPanel** oder **Grid**) als untergeordnetes Element hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="80886-168">To display, the **AdControl** must be added as a child to a parent control (for example, a **StackPanel** or **Grid**).</span></span>
 
     > [!div class="tabbedCodeSnippets"]
     ``` cs
     ContentPanel.Children.Add(adControl);
     ```
 
-6.  <span data-ttu-id="66b60-169">Überprüfen Sie den **Margin**-Parameter.</span><span class="sxs-lookup"><span data-stu-id="66b60-169">Check the **Margin** parameter.</span></span> <span data-ttu-id="66b60-170">**AdControl** muss sich im sichtbaren Bereich befinden.</span><span class="sxs-lookup"><span data-stu-id="66b60-170">The **AdControl** must be inside the viewable area.</span></span>
+6.  <span data-ttu-id="80886-169">Überprüfen Sie den **Margin**-Parameter.</span><span class="sxs-lookup"><span data-stu-id="80886-169">Check the **Margin** parameter.</span></span> <span data-ttu-id="80886-170">**AdControl** muss sich im sichtbaren Bereich befinden.</span><span class="sxs-lookup"><span data-stu-id="80886-170">The **AdControl** must be inside the viewable area.</span></span>
 
-7.  <span data-ttu-id="66b60-171">Überprüfen Sie die **Visibility**-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="66b60-171">Check the **Visibility** property.</span></span> <span data-ttu-id="66b60-172">Die optionale **Visibility**-Eigenschaft muss auf **Visible** festgelegt sein.</span><span class="sxs-lookup"><span data-stu-id="66b60-172">The optional **Visibility** property must be set to **Visible**.</span></span>
+7.  <span data-ttu-id="80886-171">Überprüfen Sie die **Visibility**-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="80886-171">Check the **Visibility** property.</span></span> <span data-ttu-id="80886-172">Die optionale **Visibility**-Eigenschaft muss auf **Visible** festgelegt sein.</span><span class="sxs-lookup"><span data-stu-id="80886-172">The optional **Visibility** property must be set to **Visible**.</span></span>
 
     > [!div class="tabbedCodeSnippets"]
     ``` cs
@@ -218,48 +218,48 @@ ms.locfileid: "4208152"
     adControl.Visibility = System.Windows.Visibility.Visible;
     ```
 
-8.  <span data-ttu-id="66b60-173">Überprüfen Sie das übergeordnete Element von **AdControl**.</span><span class="sxs-lookup"><span data-stu-id="66b60-173">Check the parent of the **AdControl**.</span></span> <span data-ttu-id="66b60-174">Das übergeordnete Element muss aktiv und sichtbar sein.</span><span class="sxs-lookup"><span data-stu-id="66b60-174">The parent must be active and visible.</span></span>
+8.  <span data-ttu-id="80886-173">Überprüfen Sie das übergeordnete Element von **AdControl**.</span><span class="sxs-lookup"><span data-stu-id="80886-173">Check the parent of the **AdControl**.</span></span> <span data-ttu-id="80886-174">Das übergeordnete Element muss aktiv und sichtbar sein.</span><span class="sxs-lookup"><span data-stu-id="80886-174">The parent must be active and visible.</span></span>
 
-9. <span data-ttu-id="66b60-175">Echte Werte für **ApplicationId** und **AdUnitId** sollten nicht im Emulator getestet werden.</span><span class="sxs-lookup"><span data-stu-id="66b60-175">Live values for **ApplicationId** and **AdUnitId** should not be tested in the emulator.</span></span> <span data-ttu-id="66b60-176">Um sicherzustellen, dass **AdControl** erwartungsgemäß funktioniert, verwenden Sie [test values](set-up-ad-units-in-your-app.md#test-ad-units) sowohl für **ApplicationId** und **AdUnitId**.</span><span class="sxs-lookup"><span data-stu-id="66b60-176">To ensure the **AdControl** is functioning as expected, use the [test values](set-up-ad-units-in-your-app.md#test-ad-units) for both **ApplicationId** and **AdUnitId**.</span></span>
+9. <span data-ttu-id="80886-175">Echte Werte für **ApplicationId** und **AdUnitId** sollten nicht im Emulator getestet werden.</span><span class="sxs-lookup"><span data-stu-id="80886-175">Live values for **ApplicationId** and **AdUnitId** should not be tested in the emulator.</span></span> <span data-ttu-id="80886-176">Um sicherzustellen, dass **AdControl** erwartungsgemäß funktioniert, verwenden Sie [test values](set-up-ad-units-in-your-app.md#test-ad-units) sowohl für **ApplicationId** und **AdUnitId**.</span><span class="sxs-lookup"><span data-stu-id="80886-176">To ensure the **AdControl** is functioning as expected, use the [test values](set-up-ad-units-in-your-app.md#test-ad-units) for both **ApplicationId** and **AdUnitId**.</span></span>
 
 <span id="csharp-blackboxblinksdisappears"/>
 
-### <a name="black-box-blinks-and-disappears"></a><span data-ttu-id="66b60-177">Blackbox blinkt und wird ausgeblendet</span><span class="sxs-lookup"><span data-stu-id="66b60-177">Black box blinks and disappears</span></span>
+### <a name="black-box-blinks-and-disappears"></a><span data-ttu-id="80886-177">Blackbox blinkt und wird ausgeblendet</span><span class="sxs-lookup"><span data-stu-id="80886-177">Black box blinks and disappears</span></span>
 
-1.  <span data-ttu-id="66b60-178">Überprüfen Sie noch einmal alle Schritte im Abschnitt oben [AdControl wird nicht angezeigt](#csharp-adcontrolnotappearing).</span><span class="sxs-lookup"><span data-stu-id="66b60-178">Double-check all steps in the [AdControl not appearing](#csharp-adcontrolnotappearing) section above.</span></span>
+1.  <span data-ttu-id="80886-178">Überprüfen Sie noch einmal alle Schritte im Abschnitt oben [AdControl wird nicht angezeigt](#csharp-adcontrolnotappearing).</span><span class="sxs-lookup"><span data-stu-id="80886-178">Double-check all steps in the [AdControl not appearing](#csharp-adcontrolnotappearing) section above.</span></span>
 
-2.  <span data-ttu-id="66b60-179">Behandeln Sie das **ErrorOccurred**-Ereignis, und bestimmen Sie anhand der an den Ereignishandler übergebenen Meldung, ob ein Fehler aufgetreten ist und welche Art von Fehler ausgelöst wurde.</span><span class="sxs-lookup"><span data-stu-id="66b60-179">Handle the **ErrorOccurred** event, and use the message that is passed to the event handler to determine whether an error occurred and what type of error was thrown.</span></span> <span data-ttu-id="66b60-180">Weitere Informationen finden Sie unter [Fehlerbehandlung in XAML/Exemplarische Vorgehensweise für C#](error-handling-in-xamlc-walkthrough.md).</span><span class="sxs-lookup"><span data-stu-id="66b60-180">See [Error handling in XAML/C# walkthrough](error-handling-in-xamlc-walkthrough.md) for more information.</span></span>
+2.  <span data-ttu-id="80886-179">Behandeln Sie das **ErrorOccurred**-Ereignis, und bestimmen Sie anhand der an den Ereignishandler übergebenen Meldung, ob ein Fehler aufgetreten ist und welche Art von Fehler ausgelöst wurde.</span><span class="sxs-lookup"><span data-stu-id="80886-179">Handle the **ErrorOccurred** event, and use the message that is passed to the event handler to determine whether an error occurred and what type of error was thrown.</span></span> <span data-ttu-id="80886-180">Weitere Informationen finden Sie unter [Fehlerbehandlung in XAML/Exemplarische Vorgehensweise für C#](error-handling-in-xamlc-walkthrough.md).</span><span class="sxs-lookup"><span data-stu-id="80886-180">See [Error handling in XAML/C# walkthrough](error-handling-in-xamlc-walkthrough.md) for more information.</span></span>
 
-    <span data-ttu-id="66b60-181">Die folgenden Beispiele veranschaulichen den grundlegenden Code zum Implementieren eines Fehleraufrufs.</span><span class="sxs-lookup"><span data-stu-id="66b60-181">The following examples show the basic code needed to implement an error call.</span></span> <span data-ttu-id="66b60-182">Durch diesen XAML-Code wird ein **TextBlock**-Element definiert, mit dem die Fehlermeldung angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="66b60-182">This XAML code defines a **TextBlock** that is used to display the error message.</span></span>
+    <span data-ttu-id="80886-181">Die folgenden Beispiele veranschaulichen den grundlegenden Code zum Implementieren eines Fehleraufrufs.</span><span class="sxs-lookup"><span data-stu-id="80886-181">The following examples show the basic code needed to implement an error call.</span></span> <span data-ttu-id="80886-182">Durch diesen XAML-Code wird ein **TextBlock**-Element definiert, mit dem die Fehlermeldung angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="80886-182">This XAML code defines a **TextBlock** that is used to display the error message.</span></span>
 
     > [!div class="tabbedCodeSnippets"]
     ``` xml
     <TextBlock x:Name="TextBlock1" TextWrapping="Wrap" Width="500" Height="250" />
     ```
 
-    <span data-ttu-id="66b60-183">Durch diesen C#-Code wird die Fehlermeldung abgerufen und in **TextBlock** angezeigt.</span><span class="sxs-lookup"><span data-stu-id="66b60-183">This C# code retrieves the error message and displays it in the **TextBlock**.</span></span>
+    <span data-ttu-id="80886-183">Durch diesen C#-Code wird die Fehlermeldung abgerufen und in **TextBlock** angezeigt.</span><span class="sxs-lookup"><span data-stu-id="80886-183">This C# code retrieves the error message and displays it in the **TextBlock**.</span></span>
 
     > [!div class="tabbedCodeSnippets"]
     [!code-cs[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet2)]
 
-    <span data-ttu-id="66b60-184">Eine Blackbox wird am häufigsten dadurch verursacht, dass keine Anzeige verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="66b60-184">The most common error that causes a black box is “No ad available.”</span></span> <span data-ttu-id="66b60-185">Dieser Fehler bedeutet, dass durch die Anforderung keine Anzeige zurückgegeben werden kann.</span><span class="sxs-lookup"><span data-stu-id="66b60-185">This error means there is no ad available to return from the request.</span></span>
+    <span data-ttu-id="80886-184">Eine Blackbox wird am häufigsten dadurch verursacht, dass keine Anzeige verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="80886-184">The most common error that causes a black box is “No ad available.”</span></span> <span data-ttu-id="80886-185">Dieser Fehler bedeutet, dass durch die Anforderung keine Anzeige zurückgegeben werden kann.</span><span class="sxs-lookup"><span data-stu-id="80886-185">This error means there is no ad available to return from the request.</span></span>
 
-3.  <span data-ttu-id="66b60-186">**AdControl** verhält sich normal.</span><span class="sxs-lookup"><span data-stu-id="66b60-186">**AdControl** is behaving normally.</span></span> <span data-ttu-id="66b60-187">In einigen Fällen wird dieselbe Anzeige mehrmals in Folge angezeigt, wodurch der Eindruck entsteht, dass Anzeigen nicht aktualisiert werden.</span><span class="sxs-lookup"><span data-stu-id="66b60-187">Sometimes the same ad will appear more than once in a row giving the appearance that ads are not refreshing.</span></span>
+3.  <span data-ttu-id="80886-186">**AdControl** verhält sich normal.</span><span class="sxs-lookup"><span data-stu-id="80886-186">**AdControl** is behaving normally.</span></span> <span data-ttu-id="80886-187">In einigen Fällen wird dieselbe Anzeige mehrmals in Folge angezeigt, wodurch der Eindruck entsteht, dass Anzeigen nicht aktualisiert werden.</span><span class="sxs-lookup"><span data-stu-id="80886-187">Sometimes the same ad will appear more than once in a row giving the appearance that ads are not refreshing.</span></span>
 
 <span id="csharp-adsnotrefreshing"/>
 
-### <a name="ads-not-refreshing"></a><span data-ttu-id="66b60-188">Anzeigen werden nicht aktualisiert</span><span class="sxs-lookup"><span data-stu-id="66b60-188">Ads not refreshing</span></span>
+### <a name="ads-not-refreshing"></a><span data-ttu-id="80886-188">Anzeigen werden nicht aktualisiert</span><span class="sxs-lookup"><span data-stu-id="80886-188">Ads not refreshing</span></span>
 
-1.  <span data-ttu-id="66b60-189">Überprüfen Sie, ob in der [IsAutoRefreshEnabled](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx)-Eigenschaft **AdControl** auf „false“ festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="66b60-189">Check whether the [IsAutoRefreshEnabled](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx) property of your **AdControl** is set to false.</span></span> <span data-ttu-id="66b60-190">Diese optionale Eigenschaft ist standardmäßig auf **true** festgelegt.</span><span class="sxs-lookup"><span data-stu-id="66b60-190">By default, this optional property is set to **true**.</span></span> <span data-ttu-id="66b60-191">Wenn sie auf **false** festgelegt ist, muss die Methode **Refresh** verwendet werden, um eine weitere Anzeige abzurufen.</span><span class="sxs-lookup"><span data-stu-id="66b60-191">When set to **false**, the **Refresh** method must be used to retrieve another ad.</span></span>
+1.  <span data-ttu-id="80886-189">Überprüfen Sie, ob in der [IsAutoRefreshEnabled](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx)-Eigenschaft **AdControl** auf „false“ festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="80886-189">Check whether the [IsAutoRefreshEnabled](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx) property of your **AdControl** is set to false.</span></span> <span data-ttu-id="80886-190">Diese optionale Eigenschaft ist standardmäßig auf **true** festgelegt.</span><span class="sxs-lookup"><span data-stu-id="80886-190">By default, this optional property is set to **true**.</span></span> <span data-ttu-id="80886-191">Wenn sie auf **false** festgelegt ist, muss die Methode **Refresh** verwendet werden, um eine weitere Anzeige abzurufen.</span><span class="sxs-lookup"><span data-stu-id="80886-191">When set to **false**, the **Refresh** method must be used to retrieve another ad.</span></span>
 
-2.  <span data-ttu-id="66b60-192">Überprüfen Sie Aufrufe der [Refresh](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx)-Methode.</span><span class="sxs-lookup"><span data-stu-id="66b60-192">Check calls to the [Refresh](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx) method.</span></span> <span data-ttu-id="66b60-193">Bei Verwendung der automatischen Aktualisierung ((**IsAutoRefreshEnabled** ist **true**)) kann **Refresh** nicht verwendet werden, um eine weitere Anzeige abzurufen.</span><span class="sxs-lookup"><span data-stu-id="66b60-193">When using automatic refresh (**IsAutoRefreshEnabled** is **true**), **Refresh** cannot be used to retrieve another ad.</span></span> <span data-ttu-id="66b60-194">Bei Verwendung der manuellen Aktualisierung (**IsAutoRefreshEnabled** ist **false**) sollte **Refresh** abhängig von der aktuellen Datenverbindung des Geräts erst nach mindestens 30 bis 60 Sekunden aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="66b60-194">When using manual refresh (**IsAutoRefreshEnabled** is **false**), **Refresh** should be called only after a minimum of 30 to 60 seconds depending on the device’s current data connection.</span></span>
+2.  <span data-ttu-id="80886-192">Überprüfen Sie Aufrufe der [Refresh](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx)-Methode.</span><span class="sxs-lookup"><span data-stu-id="80886-192">Check calls to the [Refresh](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx) method.</span></span> <span data-ttu-id="80886-193">Bei Verwendung der automatischen Aktualisierung ((**IsAutoRefreshEnabled** ist **true**)) kann **Refresh** nicht verwendet werden, um eine weitere Anzeige abzurufen.</span><span class="sxs-lookup"><span data-stu-id="80886-193">When using automatic refresh (**IsAutoRefreshEnabled** is **true**), **Refresh** cannot be used to retrieve another ad.</span></span> <span data-ttu-id="80886-194">Bei Verwendung der manuellen Aktualisierung (**IsAutoRefreshEnabled** ist **false**) sollte **Refresh** abhängig von der aktuellen Datenverbindung des Geräts erst nach mindestens 30 bis 60 Sekunden aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="80886-194">When using manual refresh (**IsAutoRefreshEnabled** is **false**), **Refresh** should be called only after a minimum of 30 to 60 seconds depending on the device’s current data connection.</span></span>
 
-    <span data-ttu-id="66b60-195">Das folgende Beispiel veranschaulicht, wie die **Refresh**-Methode aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="66b60-195">The following example demonstrates how to call the **Refresh** method.</span></span>
+    <span data-ttu-id="80886-195">Das folgende Beispiel veranschaulicht, wie die **Refresh**-Methode aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="80886-195">The following example demonstrates how to call the **Refresh** method.</span></span>
 
     > [!div class="tabbedCodeSnippets"]
     [!code-cs[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet3)]
 
-3.  <span data-ttu-id="66b60-196">**AdControl** verhält sich normal.</span><span class="sxs-lookup"><span data-stu-id="66b60-196">The **AdControl** is behaving normally.</span></span> <span data-ttu-id="66b60-197">In einigen Fällen wird dieselbe Anzeige mehrmals in Folge angezeigt, wodurch der Eindruck entsteht, dass Anzeigen nicht aktualisiert werden.</span><span class="sxs-lookup"><span data-stu-id="66b60-197">Sometimes the same ad will appear more than once in a row giving the appearance that ads are not refreshing.</span></span>
+3.  <span data-ttu-id="80886-196">**AdControl** verhält sich normal.</span><span class="sxs-lookup"><span data-stu-id="80886-196">The **AdControl** is behaving normally.</span></span> <span data-ttu-id="80886-197">In einigen Fällen wird dieselbe Anzeige mehrmals in Folge angezeigt, wodurch der Eindruck entsteht, dass Anzeigen nicht aktualisiert werden.</span><span class="sxs-lookup"><span data-stu-id="80886-197">Sometimes the same ad will appear more than once in a row giving the appearance that ads are not refreshing.</span></span>
 
  
 

@@ -17,66 +17,66 @@ dev-contact: tpaine
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: cde4b5d95a0c978faa647fcc108d74874ff52c40
-ms.sourcegitcommit: e4f3e1b2d08a02b9920e78e802234e5b674e7223
+ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "4209980"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "4263609"
 ---
-# <a name="split-view-control"></a><span data-ttu-id="d7ae8-104">Steuerelement für geteilte Ansicht</span><span class="sxs-lookup"><span data-stu-id="d7ae8-104">Split view control</span></span>
+# <a name="split-view-control"></a><span data-ttu-id="dd938-104">Steuerelement für geteilte Ansicht</span><span class="sxs-lookup"><span data-stu-id="dd938-104">Split view control</span></span>
 
-<span data-ttu-id="d7ae8-105">Ein Steuerelement für die geteilte Darstellung verfügt über einen erweiterbaren/reduzierbaren Bereich und einen Inhaltsbereich.</span><span class="sxs-lookup"><span data-stu-id="d7ae8-105">A split view control has an expandable/collapsible pane and a content area.</span></span>
+<span data-ttu-id="dd938-105">Ein Steuerelement für die geteilte Darstellung verfügt über einen erweiterbaren/reduzierbaren Bereich und einen Inhaltsbereich.</span><span class="sxs-lookup"><span data-stu-id="dd938-105">A split view control has an expandable/collapsible pane and a content area.</span></span>
 
-> <span data-ttu-id="d7ae8-106">**Wichtige APIs**: [SplitView-Klasse](https://msdn.microsoft.com/library/windows/apps/dn864360)</span><span class="sxs-lookup"><span data-stu-id="d7ae8-106">**Important APIs**: [SplitView class](https://msdn.microsoft.com/library/windows/apps/dn864360)</span></span>
+> <span data-ttu-id="dd938-106">**Wichtige APIs**: [SplitView-Klasse](https://msdn.microsoft.com/library/windows/apps/dn864360)</span><span class="sxs-lookup"><span data-stu-id="dd938-106">**Important APIs**: [SplitView class](https://msdn.microsoft.com/library/windows/apps/dn864360)</span></span>
 
-<span data-ttu-id="d7ae8-107">Dies ist ein Beispiel für die Verwendung von SplitView durch die Microsoft Edge-App, um den Hub anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="d7ae8-107">Here is an example of the Microsoft Edge app using SplitView to show its Hub.</span></span>
+<span data-ttu-id="dd938-107">Dies ist ein Beispiel für die Verwendung von SplitView durch die Microsoft Edge-App, um den Hub anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="dd938-107">Here is an example of the Microsoft Edge app using SplitView to show its Hub.</span></span>
 
 ![Beispiel für die geteilte Ansicht in Microsoft Edge](images/split_view_Edge.png)
 
 
- <span data-ttu-id="d7ae8-109">Der Inhaltsbereich einer geteilten Ansicht wird stets angezeigt.</span><span class="sxs-lookup"><span data-stu-id="d7ae8-109">A split view's content area is always visible.</span></span> <span data-ttu-id="d7ae8-110">Der Bereich kann erweitert und reduziert werden oder geöffnet bleiben. Er kann vom linken oder rechten Rand eines App-Fensters aus eingeblendet werden.</span><span class="sxs-lookup"><span data-stu-id="d7ae8-110">The pane can expand and collapse or remain in an open state, and can present itself from either the left side or right side of an app window.</span></span> <span data-ttu-id="d7ae8-111">Der Bereich verfügt über vier Modi:</span><span class="sxs-lookup"><span data-stu-id="d7ae8-111">The pane has four modes:</span></span>
+ <span data-ttu-id="dd938-109">Der Inhaltsbereich einer geteilten Ansicht wird stets angezeigt.</span><span class="sxs-lookup"><span data-stu-id="dd938-109">A split view's content area is always visible.</span></span> <span data-ttu-id="dd938-110">Der Bereich kann erweitert und reduziert werden oder geöffnet bleiben. Er kann vom linken oder rechten Rand eines App-Fensters aus eingeblendet werden.</span><span class="sxs-lookup"><span data-stu-id="dd938-110">The pane can expand and collapse or remain in an open state, and can present itself from either the left side or right side of an app window.</span></span> <span data-ttu-id="dd938-111">Der Bereich verfügt über vier Modi:</span><span class="sxs-lookup"><span data-stu-id="dd938-111">The pane has four modes:</span></span>
 
--   **<span data-ttu-id="d7ae8-112">Überlagerung</span><span class="sxs-lookup"><span data-stu-id="d7ae8-112">Overlay</span></span>**
+-   **<span data-ttu-id="dd938-112">Überlagerung</span><span class="sxs-lookup"><span data-stu-id="dd938-112">Overlay</span></span>**
 
-    <span data-ttu-id="d7ae8-113">Der Bereich ist ausgeblendet, bis er geöffnet wird.</span><span class="sxs-lookup"><span data-stu-id="d7ae8-113">The pane is hidden until opened.</span></span> <span data-ttu-id="d7ae8-114">Ist der Bereich geöffnet, überlagert er den Inhaltsbereich.</span><span class="sxs-lookup"><span data-stu-id="d7ae8-114">When open, the pane overlays the content area.</span></span>
+    <span data-ttu-id="dd938-113">Der Bereich ist ausgeblendet, bis er geöffnet wird.</span><span class="sxs-lookup"><span data-stu-id="dd938-113">The pane is hidden until opened.</span></span> <span data-ttu-id="dd938-114">Ist der Bereich geöffnet, überlagert er den Inhaltsbereich.</span><span class="sxs-lookup"><span data-stu-id="dd938-114">When open, the pane overlays the content area.</span></span>
 
--   **<span data-ttu-id="d7ae8-115">Inline</span><span class="sxs-lookup"><span data-stu-id="d7ae8-115">Inline</span></span>**
+-   **<span data-ttu-id="dd938-115">Inline</span><span class="sxs-lookup"><span data-stu-id="dd938-115">Inline</span></span>**
 
-    <span data-ttu-id="d7ae8-116">Der Bereich ist immer sichtbar und überlagert den Inhaltsbereich nicht.</span><span class="sxs-lookup"><span data-stu-id="d7ae8-116">The pane is always visible and doesn't overlay the content area.</span></span> <span data-ttu-id="d7ae8-117">Der Bereich und der Inhaltsbereich teilen sich die verfügbare Bildschirmfläche.</span><span class="sxs-lookup"><span data-stu-id="d7ae8-117">The pane and content areas divide the available screen real estate.</span></span>
+    <span data-ttu-id="dd938-116">Der Bereich ist immer sichtbar und überlagert den Inhaltsbereich nicht.</span><span class="sxs-lookup"><span data-stu-id="dd938-116">The pane is always visible and doesn't overlay the content area.</span></span> <span data-ttu-id="dd938-117">Der Bereich und der Inhaltsbereich teilen sich die verfügbare Bildschirmfläche.</span><span class="sxs-lookup"><span data-stu-id="dd938-117">The pane and content areas divide the available screen real estate.</span></span>
 
--   **<span data-ttu-id="d7ae8-118">CompactOverlay</span><span class="sxs-lookup"><span data-stu-id="d7ae8-118">CompactOverlay</span></span>**
+-   **<span data-ttu-id="dd938-118">CompactOverlay</span><span class="sxs-lookup"><span data-stu-id="dd938-118">CompactOverlay</span></span>**
 
-    <span data-ttu-id="d7ae8-119">Ein kleiner Teil des Bereich – gerade breit genug für die Anzeige von Symbolen – ist in diesem Modus immer sichtbar.</span><span class="sxs-lookup"><span data-stu-id="d7ae8-119">A narrow portion of the pane is always visible in this mode, which is just wide enough to show icons.</span></span> <span data-ttu-id="d7ae8-120">Die Standardbreite für den geschlossen Bereich ist 48px und kann mit `CompactPaneLength` geändert werden.</span><span class="sxs-lookup"><span data-stu-id="d7ae8-120">The default closed pane width is 48px, which can be modified with `CompactPaneLength`.</span></span> <span data-ttu-id="d7ae8-121">Wenn das Fenster geöffnet ist, wird den Inhaltsbereich überlagert werden.</span><span class="sxs-lookup"><span data-stu-id="d7ae8-121">If the pane is opened, it will overlay the content area.</span></span>
+    <span data-ttu-id="dd938-119">Ein kleiner Teil des Bereich – gerade breit genug für die Anzeige von Symbolen – ist in diesem Modus immer sichtbar.</span><span class="sxs-lookup"><span data-stu-id="dd938-119">A narrow portion of the pane is always visible in this mode, which is just wide enough to show icons.</span></span> <span data-ttu-id="dd938-120">Die Standardbreite für den geschlossen Bereich ist 48px und kann mit `CompactPaneLength` geändert werden.</span><span class="sxs-lookup"><span data-stu-id="dd938-120">The default closed pane width is 48px, which can be modified with `CompactPaneLength`.</span></span> <span data-ttu-id="dd938-121">Wenn das Fenster geöffnet ist, wird den Inhaltsbereich überlagert werden.</span><span class="sxs-lookup"><span data-stu-id="dd938-121">If the pane is opened, it will overlay the content area.</span></span>
 
--   **<span data-ttu-id="d7ae8-122">CompactInline</span><span class="sxs-lookup"><span data-stu-id="d7ae8-122">CompactInline</span></span>**
+-   **<span data-ttu-id="dd938-122">CompactInline</span><span class="sxs-lookup"><span data-stu-id="dd938-122">CompactInline</span></span>**
 
-    <span data-ttu-id="d7ae8-123">Ein kleiner Teil des Bereich – gerade breit genug für die Anzeige von Symbolen – ist in diesem Modus immer sichtbar.</span><span class="sxs-lookup"><span data-stu-id="d7ae8-123">A narrow portion of the pane is always visible in this mode, which is just wide enough to show icons.</span></span> <span data-ttu-id="d7ae8-124">Die Standardbreite für den geschlossen Bereich ist 48px und kann mit `CompactPaneLength` geändert werden.</span><span class="sxs-lookup"><span data-stu-id="d7ae8-124">The default closed pane width is 48px, which can be modified with `CompactPaneLength`.</span></span> <span data-ttu-id="d7ae8-125">Wenn das Fenster geöffnet ist, reduziert es den Platz für Inhalte, die weggeschoben werden.</span><span class="sxs-lookup"><span data-stu-id="d7ae8-125">If the pane is opened, it will reduce the space available for content, pushing the content out of its way.</span></span>
+    <span data-ttu-id="dd938-123">Ein kleiner Teil des Bereich – gerade breit genug für die Anzeige von Symbolen – ist in diesem Modus immer sichtbar.</span><span class="sxs-lookup"><span data-stu-id="dd938-123">A narrow portion of the pane is always visible in this mode, which is just wide enough to show icons.</span></span> <span data-ttu-id="dd938-124">Die Standardbreite für den geschlossen Bereich ist 48px und kann mit `CompactPaneLength` geändert werden.</span><span class="sxs-lookup"><span data-stu-id="dd938-124">The default closed pane width is 48px, which can be modified with `CompactPaneLength`.</span></span> <span data-ttu-id="dd938-125">Wenn das Fenster geöffnet ist, reduziert es den Platz für Inhalte, die weggeschoben werden.</span><span class="sxs-lookup"><span data-stu-id="dd938-125">If the pane is opened, it will reduce the space available for content, pushing the content out of its way.</span></span>
 
-## <a name="is-this-the-right-control"></a><span data-ttu-id="d7ae8-126">Ist dies das richtige Steuerelement?</span><span class="sxs-lookup"><span data-stu-id="d7ae8-126">Is this the right control?</span></span>
+## <a name="is-this-the-right-control"></a><span data-ttu-id="dd938-126">Ist dies das richtige Steuerelement?</span><span class="sxs-lookup"><span data-stu-id="dd938-126">Is this the right control?</span></span>
 
-<span data-ttu-id="d7ae8-127">Das Steuerelement für die geteilte Ansicht kann für eine Drawer-Ansicht verwendet werden, in der Benutzer den ergänzenden Bereich öffnen und schließen können.</span><span class="sxs-lookup"><span data-stu-id="d7ae8-127">The split view control can be used to create any "drawer" experience where users can open and close the supplemental pane.</span></span> <span data-ttu-id="d7ae8-128">Sie können z.B. SplitView verwenden, um das [Master/Details-](master-details.md)-Muster zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="d7ae8-128">For example, you can use SplitView to build the [master/details](master-details.md) pattern.</span></span>
+<span data-ttu-id="dd938-127">Das Steuerelement für die geteilte Ansicht kann für eine Drawer-Ansicht verwendet werden, in der Benutzer den ergänzenden Bereich öffnen und schließen können.</span><span class="sxs-lookup"><span data-stu-id="dd938-127">The split view control can be used to create any "drawer" experience where users can open and close the supplemental pane.</span></span> <span data-ttu-id="dd938-128">Sie können z.B. SplitView verwenden, um das [Master/Details-](master-details.md)-Muster zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="dd938-128">For example, you can use SplitView to build the [master/details](master-details.md) pattern.</span></span>
 
-<span data-ttu-id="d7ae8-129">Wenn Sie ein Navigationsmenü mit einer Schaltfläche zum Erweitern/Reduzieren und eine Liste mit Navigationselementen erstellen möchten, verwenden Sie das [NavigationView](navigationview.md)-Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="d7ae8-129">If you'd like to build a navigation menu with an expand/collapse button and a list of navigation items, then use the [NavigationView](navigationview.md) control.</span></span>
+<span data-ttu-id="dd938-129">Wenn Sie ein Navigationsmenü mit einer Schaltfläche zum Erweitern/Reduzieren und eine Liste mit Navigationselementen erstellen möchten, verwenden Sie das [NavigationView](navigationview.md)-Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="dd938-129">If you'd like to build a navigation menu with an expand/collapse button and a list of navigation items, then use the [NavigationView](navigationview.md) control.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="d7ae8-130">Beispiele</span><span class="sxs-lookup"><span data-stu-id="d7ae8-130">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="dd938-130">Beispiele</span><span class="sxs-lookup"><span data-stu-id="dd938-130">Examples</span></span>
 
 <table>
-<th align="left"><span data-ttu-id="d7ae8-131">XAML-Steuerelementekatalog</span><span class="sxs-lookup"><span data-stu-id="d7ae8-131">XAML Controls Gallery</span></span><th>
+<th align="left"><span data-ttu-id="dd938-131">XAML-Steuerelementekatalog</span><span class="sxs-lookup"><span data-stu-id="dd938-131">XAML Controls Gallery</span></span><th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p><span data-ttu-id="d7ae8-132">Wenn Sie die App <strong style="font-weight: semi-bold">XAML-Steuerelementekatalog</strong> installiert haben, klicken Sie hier, um <a href="xamlcontrolsgallery:/item/SplitView">die App zu öffnen und SplitView in Aktion zu sehen</a>.</span><span class="sxs-lookup"><span data-stu-id="d7ae8-132">If you have the <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> app installed, click here to <a href="xamlcontrolsgallery:/item/SplitView">open the app and see the SplitView in action</a>.</span></span></p>
+    <p><span data-ttu-id="dd938-132">Wenn Sie die App <strong style="font-weight: semi-bold">XAML-Steuerelementekatalog</strong> installiert haben, klicken Sie hier, um <a href="xamlcontrolsgallery:/item/SplitView">die App zu öffnen und SplitView in Aktion zu sehen</a>.</span><span class="sxs-lookup"><span data-stu-id="dd938-132">If you have the <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> app installed, click here to <a href="xamlcontrolsgallery:/item/SplitView">open the app and see the SplitView in action</a>.</span></span></p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT"><span data-ttu-id="d7ae8-133">Erwerben Sie die XAML-Steuerelementekatalog-App (Microsoft Store)</span><span class="sxs-lookup"><span data-stu-id="d7ae8-133">Get the XAML Controls Gallery app (Microsoft Store)</span></span></a></li>
-    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics"><span data-ttu-id="d7ae8-134">Erwerben Sie den Quellcode (GitHub)</span><span class="sxs-lookup"><span data-stu-id="d7ae8-134">Get the source code (GitHub)</span></span></a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT"><span data-ttu-id="dd938-133">Erwerben Sie die XAML-Steuerelementekatalog-App (Microsoft Store)</span><span class="sxs-lookup"><span data-stu-id="dd938-133">Get the XAML Controls Gallery app (Microsoft Store)</span></span></a></li>
+    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics"><span data-ttu-id="dd938-134">Erwerben Sie den Quellcode (GitHub)</span><span class="sxs-lookup"><span data-stu-id="dd938-134">Get the source code (GitHub)</span></span></a></li>
     </ul>
 </td>
 </tr>
 </table>
 
-## <a name="create-a-split-view"></a><span data-ttu-id="d7ae8-135">Erstellen einer geteilten Ansicht</span><span class="sxs-lookup"><span data-stu-id="d7ae8-135">Create a split view</span></span>
+## <a name="create-a-split-view"></a><span data-ttu-id="dd938-135">Erstellen einer geteilten Ansicht</span><span class="sxs-lookup"><span data-stu-id="dd938-135">Create a split view</span></span>
 
-<span data-ttu-id="d7ae8-136">Dies ist ein SplitView-Steuerelement mit einem offenen Bereich, der inline neben dem Inhaltsbereich angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="d7ae8-136">Here's a SplitView control with an open Pane appearing inline next to the Content.</span></span>
+<span data-ttu-id="dd938-136">Dies ist ein SplitView-Steuerelement mit einem offenen Bereich, der inline neben dem Inhaltsbereich angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="dd938-136">Here's a SplitView control with an open Pane appearing inline next to the Content.</span></span>
 ```xaml
 <SplitView IsPaneOpen="True"
            DisplayMode="Inline"
@@ -97,11 +97,11 @@ ms.locfileid: "4209980"
 </SplitView>
 ```
 
-## <a name="get-the-sample-code"></a><span data-ttu-id="d7ae8-137">Beispielcode herunterladen</span><span class="sxs-lookup"><span data-stu-id="d7ae8-137">Get the sample code</span></span>
+## <a name="get-the-sample-code"></a><span data-ttu-id="dd938-137">Beispielcode herunterladen</span><span class="sxs-lookup"><span data-stu-id="dd938-137">Get the sample code</span></span>
 
-- <span data-ttu-id="d7ae8-138">[Beispiel eines XAML-Steuerelementekatalogs](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) – Hier werden alle XAML-Steuerelemente in einem interaktiven Format dargestellt.</span><span class="sxs-lookup"><span data-stu-id="d7ae8-138">[XAML Controls Gallery sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) - See all the XAML controls in an interactive format.</span></span>
+- <span data-ttu-id="dd938-138">[Beispiel eines XAML-Steuerelementekatalogs](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) – Hier werden alle XAML-Steuerelemente in einem interaktiven Format dargestellt.</span><span class="sxs-lookup"><span data-stu-id="dd938-138">[XAML Controls Gallery sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) - See all the XAML controls in an interactive format.</span></span>
 
-## <a name="related-topics"></a><span data-ttu-id="d7ae8-139">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="d7ae8-139">Related topics</span></span>
-- [<span data-ttu-id="d7ae8-140">Navigationsbereichsmuster</span><span class="sxs-lookup"><span data-stu-id="d7ae8-140">Nav pane pattern</span></span>](navigationview.md)
-- [<span data-ttu-id="d7ae8-141">Listenansicht</span><span class="sxs-lookup"><span data-stu-id="d7ae8-141">List view</span></span>](lists.md)
-- [<span data-ttu-id="d7ae8-142">Master/Details</span><span class="sxs-lookup"><span data-stu-id="d7ae8-142">Master/details</span></span>](master-details.md)
+## <a name="related-topics"></a><span data-ttu-id="dd938-139">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="dd938-139">Related topics</span></span>
+- [<span data-ttu-id="dd938-140">Navigationsbereichsmuster</span><span class="sxs-lookup"><span data-stu-id="dd938-140">Nav pane pattern</span></span>](navigationview.md)
+- [<span data-ttu-id="dd938-141">Listenansicht</span><span class="sxs-lookup"><span data-stu-id="dd938-141">List view</span></span>](lists.md)
+- [<span data-ttu-id="dd938-142">Master/Details</span><span class="sxs-lookup"><span data-stu-id="dd938-142">Master/details</span></span>](master-details.md)
