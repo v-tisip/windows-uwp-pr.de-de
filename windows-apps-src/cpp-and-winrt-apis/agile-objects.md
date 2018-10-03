@@ -9,15 +9,15 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projektion, agil, objekt, agilität, IAgileObject
 ms.localizationpriority: medium
-ms.openlocfilehash: a9d65fad2b093b64166a6a1b5be033e23bdd905b
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 9af1fb0a9d23727924ae3c165bc8977fb9cc7774
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1818364"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4318012"
 ---
-# <a name="agile-objects-in-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Agile Objekte in [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
-In den meisten Fällen kann von jedem Thread aus auf eine Instanz einer Windows-Runtime-Klasse zugegriffen werden (wie auf ein Standard-C++ Objekt). Eine solche Klasse ist *agil*. Nur eine kleine Anzahl von Windows-Runtime-Klassen, die mit Windows bereitgestellt werden, sind nicht agil. Wenn Sie sie nutzen, müssen Sie ihr Threading-Modell und ihr Marshaling-Verhalten berücksichtigen (Marshaling ist die Weitergabe von Daten über eine Thread- oder eine Prozessgrenze). Es ist ein guter Standard für jedes Windows-Runtime-Objekt, agil zu sein, sodass Ihre eigenen C++/WinRT-Typen standardmäßig agil sind.
+# <a name="agile-objects-in-cwinrt"></a>Agile Objekte in C++/WinRT
+In den meisten Fällen kann von jedem Thread aus auf eine Instanz einer Windows-Runtime-Klasse zugegriffen werden (wie auf ein Standard-C++ Objekt). Eine solche Klasse ist *agil*. Nur eine kleine Anzahl von Windows-Runtime-Klassen, die mit Windows bereitgestellt werden, sind nicht agil. Wenn Sie sie nutzen, müssen Sie ihr Threading-Modell und ihr Marshaling-Verhalten berücksichtigen (Marshaling ist die Weitergabe von Daten über eine Thread- oder eine Prozessgrenze). Es ist ein guter Standard für jedes Windows-Runtime-Objekt, agil zu sein, Ihre eigenen [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Typen sind standardmäßig agil.
 
 Sie können jedoch auch von dieser Regel abweichen. Möglicherweise haben Sie einen zwingenden Grund, ein Objekt Ihres Typs zu beschränken (zum Beispiel in einer Anwendung mit einem einzelnen Thread). Dies hat typischerweise mit Wiedereinsprungsvoraussetzungen zu tun. Aber auch die UI-APIs (User Interface, Benutzerschnittstelle) bieten zunehmend agile Objekte. Im Allgemeinen ist Agilität die einfachste und leistungsfähigste Option. Auch wenn Sie eine Aktivierungs-Factory implementieren, muss diese agil sein (auch, wenn Ihre entsprechende Laufzeitklasse es nicht ist).
 

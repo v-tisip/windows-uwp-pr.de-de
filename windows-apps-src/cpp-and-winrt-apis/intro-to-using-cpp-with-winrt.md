@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, Standard, C++, CPP, WinRT, Projizierung, Einführung
 ms.localizationpriority: medium
-ms.openlocfilehash: 220c5c7395ed9388b02b74e0cbed5b913971bbba
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: 3e1563f85df6d437ce313c99df52ea319ef94a30
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4259609"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4318742"
 ---
 # <a name="introduction-to-cwinrt"></a>Einführung in C++/WinRT
 &nbsp;
@@ -41,7 +41,7 @@ Mit C++/WinRT können Sie auch eigene Runtime-Klassen mithilfe von C++-Standardc
 ## <a name="visual-studio-support-for-cwinrt-and-the-vsix"></a>Visual Studio-Unterstützung für C++/WinRT und VSIX
 Für C++/WinRT-Projektvorlagen in Visual Studio, sowie C++/WinRT MSBuild-Eigenschaften und -Ziele. Laden Sie die [C++/WinRT Visual Studio-Erweiterung (VSIX)](https://aka.ms/cppwinrt/vsix) im [Visual Studio Marketplace](https://marketplace.visualstudio.com/) herunter und installieren Sie sie.
 
-Sie benötigen Visual Studio2017 (mindestens Version 15,6; mindestens 15.7 empfohlen) und Windows SDK-Version 10.0.17134.0 (Windows10, Version 1803). Wenn Sie es bereits installiert haben, müssen Sie die **Tools für universelle Windows-Plattform C++** -Option aus im Visual Studio-Installationsprogramm installieren. Und in Windows- **Einstellungen** > **Update \ & Sicherheit** > **für Entwickler**, wählen Sie die Option **Querladen von apps** , anstatt die Option **Entwicklermodus** .
+Sie benötigen Visual Studio 2017 (Sie müssen mindestens Version 15,6, aber wir empfehlen mindestens 15.7), und Windows SDK-Version 10.0.17134.0 (Windows 10, Version 1803). Wenn Sie es bereits installiert haben, müssen Sie die **Tools für universelle Windows-Plattform C++** -Option aus im Visual Studio-Installationsprogramm installieren. Und in Windows- **Einstellungen** > **Update \ & Sicherheit** > **für Entwickler**, wählen Sie die Option **Querladen von apps** , anstatt die Option **Entwicklermodus** .
 
 Sie sehen dann möglicherweise zu erstellen und zu erstellen oder zu öffnen, eine C++ / WinRT Projekts in Visual Studio, und es bereitzustellen. Alternativ können Sie ein vorhandenes Projekt konvertieren, durch Hinzufügen der `<CppWinRTEnabled>true</CppWinRTEnabled>` -Eigenschaft verwenden, um die `.vcxproj` Datei.
 

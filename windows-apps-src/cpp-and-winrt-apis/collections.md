@@ -3,30 +3,29 @@ author: stevewhims
 description: C++ / WinRT stellt Funktionen und Basisklassen, die Sie speichern und viel Zeit und Mühe beim Implementieren und/oder Sammlungen übergeben werden soll.
 title: Sammlungen mit C++ / WinRT
 ms.author: stwhi
-ms.date: 09/21/2018
+ms.date: 10/03/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, Uwp, standard, c++, Cpp, Winrt, Projektion, Sammlung
 ms.localizationpriority: medium
-ms.openlocfilehash: c7ac3635a96b8dd3d757f25da1b826ea318c1ad4
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: e6a0cf8c2798adc59ffcf84381d6bbf64f2ce80e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4265365"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4312314"
 ---
-# <a name="collections-with-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Sammlungen mit [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
+# <a name="collections-with-cwinrt"></a>Sammlungen mit C++ / WinRT
 
-> [!NOTE]
-> **Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.**
-
-Intern verfügt über eine Windows-Runtime-Sammlung zahlreiche komplizierte bewegliche Teile. Aber wenn Sie ein Objekt Sammlung an eine Windows-Runtime-Funktion übergeben oder Ihre eigenen Sammlungseigenschaften und Sammlungstypen implementieren möchten, es Funktionen und Basisklassen in C++ gibt / WinRT, damit Sie unterstützen. Diese Features vereinfachen Sie Ihre Hände, und speichern Sie einen hohen Mehraufwand Zeit und Mühe.
-
-> [!IMPORTANT]
-> Die in diesem Thema beschriebenen Funktionen sind verfügbar, wenn Sie die [Windows 10 SDK Preview Build 17661](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)installiert haben, oder höher.
+Intern verfügt über eine Windows-Runtime-Sammlung zahlreiche komplizierte bewegliche Teile. Aber wenn Sie ein Objekt Sammlung an eine Windows-Runtime-Funktion übergeben oder Ihre eigenen Sammlungseigenschaften und Sammlungstypen implementieren möchten, es gibt Funktionen und Basisklassen in [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) , die Sie unterstützen. Diese Features vereinfachen Sie Ihre Hände, und speichern Sie einen hohen Mehraufwand Zeit und Mühe.
 
 [**IVector**](/uwp/api/windows.foundation.collections.ivector_t_) ist die Windows-Runtime-Schnittstelle, die von direktem Zugriff eine Sammlung von Elementen implementiert. Wenn Sie **IVector** selbst implementieren würden, müssen Sie auch [**IIterable**](/uwp/api/windows.foundation.collections.iiterable_t_), [**IVectorView**](/uwp/api/windows.foundation.collections.ivectorview_t_)und [**IIterator**](/uwp/api/windows.foundation.collections.iiterator_t_)implementieren. Selbst wenn Sie eine benutzerdefinierte Auflistung *müssen* eingeben, ist eine Menge Arbeit. Wenn Sie Daten in eine **Std:: Vector** (oder eine **Std:: Map**oder eine **std::unordered_map**) und alles, was Sie tun möchten, die an einer Windows-Runtime-API übergeben, möchten dann aber wäre, damit kein dieser Ebene der Arbeit, wenn möglich. Und es *ist* möglich, da C++ / WinRT können Sie zum Erstellen von Sammlungen effizient und mit minimalem Aufwand.
+
+Weitere Informationen finden Sie [XAML-items-Steuerelemente; binden an eine C++ / WinRT-Collection](binding-collection.md).
+
+> [!NOTE]
+> Wenn Sie noch nicht installiert, das Windows SDK Version 10.0.17763.0 (Windows 10, Version 1809 haben) oder höher ist, dann haben Sie keinen Zugriff auf Funktionen und Basisklassen, die in diesem Thema beschrieben werden. Stattdessen angezeigt, [Wenn Sie eine ältere Version des Windows SDK haben](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector#if-you-have-an-older-version-of-the-windows-sdk) eine Liste der eine Observable-Vektor-Vorlage, die Sie stattdessen verwenden können.
 
 ## <a name="helper-functions-for-collections"></a>Hilfsfunktionen für Sammlungen
 

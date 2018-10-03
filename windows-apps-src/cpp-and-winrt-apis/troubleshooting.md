@@ -9,16 +9,17 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, problembehandlung, HRESULT, fehler
 ms.localizationpriority: medium
-ms.openlocfilehash: bc2e7a8f28de4b43a42ff180fe0b12493c398dd0
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: 05542a42e362f024e92547d9eb496b936b85236c
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4259585"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4314664"
 ---
-# <a name="troubleshooting-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt-issues"></a>Problembehandlung bei [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)-Problemen
+# <a name="troubleshooting-cwinrt-issues"></a>Problembehandlung bei C++/WinRT-Problemen
+
 > [!NOTE]
-> Informationen zur Installation und Verwendung der C++/WinRT Visual Studio Extension (VSIX) (die Projektvorlagenunterstützung sowie C++/WinRT MSBuild-Eigenschaften und -Ziele bietet) finden Sie unter [Visual Studio-Unterstützung für C++/WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
+> Informationen zur Installation und Verwendung der [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Visual Studio Extension (VSIX) (bietet projektvorlagenunterstützung sowie C++ / WinRT MSBuild-Eigenschaften und-Ziele) finden Sie unter [Visual Studio-Unterstützung für C++ / WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix).
 
 Dieses Thema stellt vorsorgliche Informationen bereit. Sie sollten diese kennen, auch wenn Sie sie noch nicht sofort brauchen. Die Tabelle mit den Symptomen und Problembehandlungen in unten kann für Sie hilfreich sein, egal ob Sie neuen Code schreiben oder eine bestehende App portieren. Wenn Sie beim Portieren vorankommen möchten, und zu einem Punkt gelangen, an dem Ihr Projekt erstellt und ausgeführt werden kann, dann können Sie temporäre Fortschritte machen, indem Sie jeden nicht essentiellen Code mit Problemen auskommentieren oder streichen. Später können Sie den korrigierten Code wieder einfügen.
 
@@ -45,15 +46,14 @@ Wenn Ihre App beendet wird und Sie nur wissen, dass beim XAML-Markup-Parsing ein
 | Der C++ Compiler erzeugt einen „*WinRT-Typ erforderlich*”-Fehler für eine EventHandler- oder TypedEventHandler-Delegat-Spezialisierung.|Verwenden Sie stattdessen **winrt::delegate&lt;...T&gt;**. Siehe [Erstellen von Ereignissen mit C++/WinRT](author-events.md).|
 | Der C++ Compiler erzeugt einen „*WinRT-Typ erforderlich*”-Fehler für einen asynchron Windows-Runtime-Vorgang-Spezialisierung.|Erwägen Sie stattdessen, einen PPL-[**Task**](https://msdn.microsoft.com/library/hh750113) (Parallel Patterns Library) zurückzugeben. Siehe [Parallelität und asynchrone Vorgänge](concurrency.md).|
 | Der C++ Compiler erzeugt „*Fehler C2220: Warnung als Fehler behandelt – keine'Object'-Datei generiert*”.|Korrigieren Sie entweder die Warnung oder setzen Sie **C/C++** > **Allgemein** > **Warnung als Fehler behandeln** auf **Nein (/WX-)**.|
-| Ihre App stürzt ab, weil ein Ereignis-Handler in Ihrem C++/WinRT-Objekt aufgerufen wird, nachdem das Objekt zerstört wurde.|Siehe [Verwendung des *this*-Objekts in einem Ereignis-Handler](handle-events.md#using-the-this-object-in-an-event-handler).|
-| Der C++ Compiler generiert „*Fehler C2338: Dies wird nur für schwache Referenzen unterstützt.*”.|Sie fordern eine schwache Referenz für einen Typ an, der die **winrt::no_weak_ref**-Marker-Struktur als Template-Argument an seine Basisklasse übergeben hat. Siehe [Opt-out der Unterstützung von schwachen Referenzn](weak-references.md#opting-out-of-weak-reference-support).|
-| Der C++ Linker erzeugt "*Fehler LNK2019: nicht aufgelöstes externes Symbol*"|Finden Sie unter [Warum ist der Linker und mir ein "LNK2019: nicht aufgelöstes externes Symbol" Fehler?](faq.md#why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error)|
+| Ihre App stürzt ab, weil ein Ereignis-Handler in Ihrem C++/WinRT-Objekt aufgerufen wird, nachdem das Objekt zerstört wurde.|Finden Sie unter [problemlos den Zugriff auf den *diesem* Zeiger mit einen Delegaten für die Ereignisbehandlung](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).|
+| Der C++ Compiler generiert „*Fehler C2338: Dies wird nur für schwache Referenzen unterstützt.*”.|Sie fordern eine schwache Referenz für einen Typ an, der die **winrt::no_weak_ref**-Marker-Struktur als Template-Argument an seine Basisklasse übergeben hat. Finden Sie unter [Opt-Out der Unterstützung von schwachen Referenzen](weak-references.md#opting-out-of-weak-reference-support).|
+| Der C++ Linker erzeugt "*Fehler LNK2019: nicht aufgelöstes externes Symbol*"|Finden Sie unter [Warum ist der Linker und mir ein "LNK2019: nicht aufgelöstes externes Symbol" Fehler?](faq.md#why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error).|
 | Die toolkette LLVM und Clang erzeugt Fehler bei Verwendung mit C++ / WinRT.|Wir unterstützen nicht die toolkette LLVM und Clang wird für C++ / WinRT, aber wenn Sie emulieren möchten, wie wir sie intern nutzen, können Sie könnten versuchen ein Experiment wie das beschrieben [kann ich LLVM/Clang zum Kompilieren mit C++ verwenden / WinRT?](faq.md#can-i-use-llvmclang-to-compile-with-cwinrt).|
 | Der C++ Compiler erzeugt "*kein passender Standardkonstruktor verfügbar*" für einen projizierten Typ. | Wenn Sie versuchen, die Initialisierung einer Runtime-Klassenobjekt, verzögern zu nutzen und implementieren eine Laufzeitklasse im selben Projekt, und klicken Sie dann müssen Sie rufen Sie die `nullptr_t` Konstruktor. Weitere Informationen finden Sie unter [Nutzen von APIs mit C++/WinRT](consume-apis.md). |
 | Der C++ Compiler erzeugt "*Fehler C3861: 'From_abi': Bezeichner wurde nicht gefunden*", und andere Fehler mit Ursprung in *base.h*. Dieser Fehler kann angezeigt werden, wenn Sie Visual Studio 2017 verwenden (Version 15.8.0 oder höher), und für das Windows SDK-Version 10.0.17134.0 (Windows 10, Version 1803). | Entweder als Ziel einer späteren (größere Übereinstimmung) Version des Windows SDK oder der Set-Projekteigenschaft **C/C++-** > **Sprache** > **Konformitätsmodus: Nein** (auch, wenn **/ PERMISSIVE--** erscheint in Projekteigenschaft **C/C++-**  >  **Sprache** > **Befehlszeile** unter **Zusätzliche Optionen**, löschen Sie ihn). |
-| Der C++ Compiler erzeugt "*Fehler C2039: 'IUnknown': ist kein Mitglied des" \'global Namespace "*". | Finden Sie unter [wie I umgestellt Meine C++ / WinRT-Projekt auf eine neuere Version des Windows SDK?](faq.md#how-do-i-retarget-my-cwinrt-project-to-a-later-version-of-the-windows-sdk). |
-| Der C++ Linker erzeugt "*Fehler LNK2019: nicht aufgelöstes externes Symbol _WINRT_CanUnloadNow@0 verwiesen in Funktion _VSDesignerCanUnloadNow@0 *" | Finden Sie unter [wie I umgestellt Meine C++ / WinRT-Projekt auf eine neuere Version des Windows SDK?](faq.md#how-do-i-retarget-my-cwinrt-project-to-a-later-version-of-the-windows-sdk). |
-
+| Der C++ Compiler erzeugt "*Fehler C2039: 'IUnknown': ist kein Mitglied des" \'global Namespace "*". | Finden Sie unter [wie neu zuweisen, Ihre C++ / WinRT-Projekt auf eine neuere Version des Windows SDK](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk). |
+| Der C++ Linker erzeugt "*Fehler LNK2019: nicht aufgelöstes externes Symbol _WINRT_CanUnloadNow@0 verwiesen in Funktion _VSDesignerCanUnloadNow@0 *" | Finden Sie unter [wie neu zuweisen, Ihre C++ / WinRT-Projekt auf eine neuere Version des Windows SDK](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk). |
 
 > [!NOTE]
-> Wenn Ihre Frage in diesem Thema nicht beantwortet werden konnte, finden Sie ggf. hier Unterstützung: [`c++-winrt`-Tag auf Stack Overflow ](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt).
+> Wenn Ihre Frage in diesem Thema nicht beantwortet, und klicken Sie dann unter Hilfe Umständen finden Sie auf der [Visual Studio C++-Entwicklercommunity](https://developercommunity.visualstudio.com/spaces/62/index.html)oder mithilfe der [ `c++-winrt` -Tag auf Stack Overflow](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt).

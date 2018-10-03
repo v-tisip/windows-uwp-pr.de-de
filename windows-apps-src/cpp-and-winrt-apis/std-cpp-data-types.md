@@ -9,15 +9,16 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, datentypen
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b004b5dfbeaa1d123398db780582382857eec25
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.openlocfilehash: f9763e7f69b143dffe8fea611f25ae75284929cb
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4262089"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4316604"
 ---
-# <a name="standard-c-data-types-and-cwinrtwindowsuwpcpp-and-winrt-apisintro-to-using-cpp-with-winrt"></a>Standard C++ Datentypen und [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
-Mit C++/WinRT können Sie Windows-Runtime-APIs über Standard-C++ Datentypen aufrufen. Sie können standard Zeichenfolgen an APIs übergeben (finden Sie unter [String-Verarbeitung in C++ / WinRT](strings.md)), und Sie können übergeben Initialisierer Listen und standard-Containern auf APIs, die davon ausgehen, eine semantisch Sammlung dass.
+# <a name="standard-c-data-types-and-cwinrt"></a>C++-Standarddatentypen und C++/WinRT
+
+Mit [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), Sie können Windows-Runtime-APIs mit Standard-c++-Datentypen, z. B. einige Standard-c++ Datentypen aufrufen. Sie können standard Zeichenfolgen an APIs übergeben (finden Sie unter [String-Verarbeitung in C++ / WinRT](strings.md)), und Sie können übergeben Initialisierer Listen und standard-Containern auf APIs, die davon ausgehen, eine semantisch Sammlung dass.
 
 ## <a name="standard-initializer-lists"></a>Standard-Initialisierungslisten
 Eine Initialisierungsliste (**std::initializer_list**) ist ein Konstrukt aus der C++ Standard Library. Sie können Initialisierungslisten verwenden, wenn Sie bestimmte Windows-Runtime-Konstruktoren und -Methoden aufrufen. Beispielsweise können Sie [**DataWriter::WriteBytes**](/uwp/api/windows.storage.streams.datawriter.writebytes) mit einer Initialisierungsliste aufrufen.

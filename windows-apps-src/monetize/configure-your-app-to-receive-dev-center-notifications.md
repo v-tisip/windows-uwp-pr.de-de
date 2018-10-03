@@ -11,11 +11,11 @@ keywords: Windows10, UWP, Microsoft Store Services SDK, benutzerorientierte Push
 ms.assetid: 30c832b7-5fbe-4852-957f-7941df8eb85a
 ms.localizationpriority: medium
 ms.openlocfilehash: d44d4491d8f5f0a7cde65adbe8241a74e36e1506
-ms.sourcegitcommit: 1938851dc132c60348f9722daf994b86f2ead09e
+ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "4264019"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "4309088"
 ---
 # <a name="configure-your-app-for-targeted-push-notifications"></a>Konfigurieren Ihrer App für benutzerorientierte Pushbenachrichtigungen
 
