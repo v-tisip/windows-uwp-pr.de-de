@@ -12,7 +12,7 @@ ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e08208b7086023654b0b2404cccc8664e123d9ec
 ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
-ms.translationtype: HT
+ms.translationtype: Auto
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/06/2018
 ms.locfileid: "1983615"
@@ -20,7 +20,7 @@ ms.locfileid: "1983615"
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-uwp-app"></a>Lernprogramm: Unterstützen von Surface Dial (und anderen Radgeräten) in Ihrer UWP-App
 
 ![Abbildung: Surface Dial mit Surface Studio](images/radialcontroller/dial-pen-studio-600px.png)  
-*Surface Dial mit Surface Studio und Surface-Stift* (im [Microsoft Store](https://aka.ms/purchasesurfacedial) käuflich erhältlich).
+*Surface Dial mit Surface Studio und Surface Pen* (im [Microsoft Store](https://aka.ms/purchasesurfacedial) käuflich erhältlich).
 
 In diesem Lernprogramm erfahren Sie, wie Sie die von Radgeräten wie Surface Dial unterstützte Benutzerinteraktionen anpassen. Wie verwenden Codeausschnitte aus einer Beispiel-App, die Sie von GitHub herunterladen können (Siehe [Beispielcode](#sample-code)), um die verschiedenen Features und zugehörigen [**RadialController**](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller)-APIs zu veranschaulichen, die in den einzelnen Schrittenbeschrieben werden.
 

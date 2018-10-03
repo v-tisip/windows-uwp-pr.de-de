@@ -14,7 +14,7 @@ ms.assetid: e7deb1d6-feeb-471e-9a83-26386d1aaf37
 ms.localizationpriority: medium
 ms.openlocfilehash: a443dd7505ce399d82cbd33c5691ec9b35a18b93
 ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
-ms.translationtype: HT
+ms.translationtype: Auto
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/06/2018
 ms.locfileid: "1983697"
@@ -63,8 +63,8 @@ Diese integrierten Tools passen sich an den aktuellen Systemkontext an und umfas
 
 Das Surface Dial bietet nicht nur allgemeine Plattformunterstützung, sondern ist auch nahtlos in die Windows Ink-Plattformsteuerelemente ([**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.InkCanvas) und [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.InkToolbar)) integriert.
 
-![Surface Dial mit Surface-Stift](images/windows-wheel/dial-and-pen-400px.png)  
-*Surface Dial mit Surface-Stift*
+![Surface Dial mit Surface Pen](images/windows-wheel/dial-and-pen-400px.png)  
+*Surface Dial mit Surface Pen*
 
 Bei Verwendung mit dem Surface Dial bieten diese Steuerelemente zusätzliche Funktionen, mit denen Freihandattribute geändert und die Linealschablone der Freihandsymbolleiste gesteuert werden können.
 

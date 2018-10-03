@@ -12,7 +12,7 @@ ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 68624288ea223d0882ef0b8c33b174f000081411
 ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
-ms.translationtype: HT
+ms.translationtype: Auto
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/06/2018
 ms.locfileid: "1983386"
@@ -20,7 +20,7 @@ ms.locfileid: "1983386"
 # <a name="tutorial-support-ink-in-your-uwp-app"></a>Lernprogramm: Unterstützen von Freihandeingaben in Ihrer UWP-App
 
 ![Surface Pen](images/ink/ink-hero-small.png)  
-*Surface-Stift* (zum Kauf im [Microsoft Store](https://aka.ms/purchasesurfacepen) verfügbar).
+*Surface Pen* (zum Kauf im [Microsoft Store](https://aka.ms/purchasesurfacepen) verfügbar).
 
 Dieses Lernprogramm zeigt Ihnen, wie Sie eine einfachen Universelle Windows-Plattform-App (UWP-App) erstellen, die das Schreiben und Zeichnen mit Windows Ink unterstützt. Wir verwenden Ausschnitte aus einer Beispiel-App, die Sie von GitHub herunterladen können (unter [Beispielcode](#sample-code)), um die in den einzelnen Schritten erläuterten, verschiedenen Features und zugehörigen Windows Ink-APIs (siehe [Komponenten der Windows-Freihandplattform](#components-of-the-windows-ink-platform)) zu veranschaulichen.
 

@@ -14,15 +14,15 @@ ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 665a83743e2c4b5096b76b481c0e46274daf9c1f
 ms.sourcegitcommit: 346b5c9298a6e9e78acf05944bfe13624ea7062e
-ms.translationtype: HT
+ms.translationtype: Auto
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/05/2018
 ms.locfileid: "1707331"
 ---
 # <a name="pen-interactions-and-windows-ink-in-uwp-apps"></a>Stiftinteraktionen und Windows Ink in UWP-Apps
 
-![Surface-Stift](images/ink/hero-small.png)  
-*Surface-Stift* (zum Kauf im [Microsoft Store](https://aka.ms/purchasesurfacepen) verfügbar).
+![Surface Pen](images/ink/hero-small.png)  
+*Surface Pen* (zum Kauf im [Microsoft Store](https://aka.ms/purchasesurfacepen) verfügbar).
 
 ## <a name="overview"></a>Übersicht
 
