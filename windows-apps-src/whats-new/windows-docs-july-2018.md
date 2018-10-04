@@ -10,15 +10,15 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f41d25fd6757e5d3f80d00de341168de4f34e946
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4316730"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4359758"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>Neuigkeiten in der Windows-Entwicklerdokumentation im Juli 2018
 
-Die Entwicklerdokumentation für die Windows-Plattform wird ständig mit Informationen über neue Features für Entwickler aktualisiert. Die folgenden Featureübersichten, entwicklerleitfäden, Videos und Beispiele wurden im Juli zur Verfügung gestellt wurden.
+Die Entwicklerdokumentation für die Windows-Plattform wird ständig mit Informationen über neue Features für Entwickler aktualisiert. Die folgenden Featureübersichten, entwicklerleitfäden, Videos und Beispiele wurden in den Monat Juli zur Verfügung gestellt.
 
 Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/create-uwp-apps.md) oder sich mit der Verwendung von [vorhandenem App-Code unter Windows](../porting/index.md) vertraut machen.
 
@@ -26,7 +26,7 @@ Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?L
 
 ### <a name="progressive-web-apps-on-windows"></a>Progressive Web-Apps unter Windows
 
-[Progressive Web-Apps (PWAs)](https://developer.microsoft.com/windows/pwa) sind einfach Web-apps, die durch systemeigene app-ähnliche Features zur Unterstützung von Plattformen und Browser-Engines, z. B. Starten von Startseite Installation, offline-Supports und Push [schrittweise erweiterte](https://wikipedia.org/wiki/Progressive_enhancement) sind Benachrichtigungen. Genießen Sie den zusätzlichen Vorteil Ausführung unter Windows 10 mit der Microsoft Edge (EdgeHTML)-Engine, PWAs [unabhängig vom Browserfenster als UWP-apps.](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)
+[Progressive Web-Apps (PWAs)](https://developer.microsoft.com/windows/pwa) sind einfach Web-apps, die durch systemeigene app-ähnliche Features zur Unterstützung von Plattformen und Browser-Engines, z. B. Start-über-Startseite Installation, offline-Unterstützung und Push [schrittweise erweitert](https://wikipedia.org/wiki/Progressive_enhancement) werden Benachrichtigungen. Genießen Sie den zusätzlichen Vorteil Ausführung unter Windows 10 mit der Microsoft Edge (EdgeHTML)-Engine, PWAs [unabhängig von der Browserfenster als UWP-apps.](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)
 
 ![Ein Image des PWAs in Aktion zu sehen](images/progressive-web-apps.jpg)
 
@@ -44,7 +44,7 @@ In Windows 10 Insider Preview Build 17713, [Editor wurde aktualisiert und bietet
 
 ### <a name="design-landing-page"></a>Design-Startseite
 
-Sehen Sie sich das [Design Zielseite aktualisiert](https://developer.microsoft.com/windows/apps/design) auf einen Blick Überblick UWP Design Bereiche und Informationen über die neusten Fluent Design.
+Sehen Sie sich das [Design Zielseite aktualisiert](https://developer.microsoft.com/windows/apps/design) für einen Blick Überblick über UWP Design Bereiche und Informationen über die neusten Fluent Design.
 
 ### <a name="design-toolkits"></a>Design-Toolkits
 
@@ -52,13 +52,13 @@ Adobe XD und Adobe Illustrator-Toolkits wurden mit neuen Funktionen aktualisiert
 
 ### <a name="webvr"></a>WebVR
 
-Wir haben einige neue Themen in der [Dokumentation zu WebVR](https://docs.microsoft.com/microsoft-edge/webvr/
+Wir haben mehrere neue Themen in der [Dokumentation zu WebVR](https://docs.microsoft.com/microsoft-edge/webvr/
 )hinzugefügt:
 
 * [Was ist WebVR?](https://docs.microsoft.com/microsoft-edge/webvr/what-is-webvr
-) Wird erläutert, was WebVR ist, warum Sie sie verwenden sollten und für den Einstieg in die Entwicklung für sie.
+) Wird erläutert, was WebVR ist, warum Sie es verwenden sollten und für den Einstieg in die Entwicklung für sie.
 
-* [WebVR in Progressive Web-Apps](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-pwas): enthält Informationen zum Hinzufügen von WebVR in eine Progressive Web-App (PWA).
+* [WebVR in Progressive Web-Apps](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-pwas): erfahren Sie, wie Sie WebVR hinzufügen, um eine Progressive Web-App (PWA).
 
 * [WebVR in der Webansicht](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-webview): enthält Informationen zum Hinzufügen von WebVR zu einem WebView-Steuerelement in einer Windows 10-Anwendung.
 
@@ -80,7 +80,7 @@ Unsere [Erste Schritte-Dokumentation](../get-started/index.md) für Windows-Entw
 
 ### <a name="enhance-your-bot-with-project-personality-chat"></a>Verbessern Sie Ihre Bot mit Projekt Persönlichkeit chat
 
-Projekt Persönlichkeit Chat können Sie Ihre Chat-Bots eine anpassbare Rolle hinzufügen. Durch die Integration mit Microsoft Bot Framework SDK, können Sie kleine sprechen Funktionen für eine mehr gesprochener Möglichkeit zur Interaktion mit den Kunden hinzufügen. [Das Video ansehen](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) , erfahren Sie, wie Sie es, und dann [die interaktive Demo testen](http://aka.ms/PersonalityChat) für eine praktische Erfahrung zu implementieren.
+Projekt Persönlichkeit Chat können Sie Ihre Chat-Bots eine anpassbare Rolle hinzufügen. Durch die Integration mit Microsoft Bot Framework SDK, können Sie Small-sprechen Funktionen für eine mehr gesprochener Möglichkeit zur Interaktion mit den Kunden hinzufügen. [Das Video ansehen](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) , erfahren Sie, wie Sie es, und dann [die interaktive Demo ausprobieren](http://aka.ms/PersonalityChat) für eine praktische Erfahrung zu implementieren.
 
 ### <a name="one-dev-question"></a>One Dev Frage
 
@@ -92,13 +92,13 @@ Raymond Chen:
 
 Larry Osterman:
 
-* [Warum lassen wir nicht Entwickler das Standard-audio-Gerät ändern?](https://www.youtube.com/watch?v=6aNUoVfbnmg&feature=youtu.be)
-* [Warum sind so viele UWP-Funktionen Async?](https://www.youtube.com/watch?v=5M724QIy1Mk&feature=youtu.be)
+* [Warum lassen wir nicht Entwickler ändern Sie die Standard-audio-Gerät?](https://www.youtube.com/watch?v=6aNUoVfbnmg&feature=youtu.be)
+* [Warum sind so viele UWP Funktionen Async?](https://www.youtube.com/watch?v=5M724QIy1Mk&feature=youtu.be)
 
 ## <a name="samples"></a>Beispiele
 
 ### <a name="photo-editor-cwinrt"></a>Foto-Editor C++ / WinRT
 
-Die Foto-Editor-Beispiel-app-Entwicklung mit werden die [C++ / WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) Programmiersprache. Die app können Sie Fotos aus **der Bildbibliothek** abrufen und dann eine markierte Bild mit zugeordneten Fotoeffekte bearbeiten. [Beispiel Klonen Sie oder Herunterladen Sie das hier.](https://github.com/Microsoft/Windows-appsample-photo-editor)
+Die Foto-Editor-Beispiel-app werden die Entwicklung mit der [C++ / WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) Programmiersprache. Die app können Sie Fotos aus **der Bildbibliothek** abrufen und dann eine markierte Bild mit zugeordneten Fotoeffekte bearbeiten. [Klonen oder das Beispiel hier herunterladen.](https://github.com/Microsoft/Windows-appsample-photo-editor)
 
 ![Ein Beispiel für das Beispiel in Aktion zu sehen](images/photo-editor-banner.png)

@@ -18,11 +18,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 02b2c0d24c3f963025774c87c0c0a1c588c8a249
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4309178"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4358437"
 ---
 # <a name="implement-navigation-between-two-pages"></a>Implementieren der Navigation zwischen zwei Seiten
 
@@ -300,7 +300,7 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 ```
 
 > [!NOTE]
-> Der Code hier verwendet den Rückgabewert der [**Navigieren**](https://msdn.microsoft.com/library/windows/apps/br242694) , um eine app-Ausnahme auszulösen, wenn die Navigation zum anfänglichen fensterframe der app einen Fehler verursacht. Wenn **Navigate** den Wert **true** zurückgibt, findet die Navigation statt.
+> Der Code hier verwendet den Rückgabewert der [**Navigieren**](https://msdn.microsoft.com/library/windows/apps/br242694) zu eine app-Ausnahme auszulösen, wenn die Navigation zum anfänglichen fensterframe der app ein Fehler auftritt. Wenn **Navigate** den Wert **true** zurückgibt, findet die Navigation statt.
 
 Erstellen Sie nun die App, und führen Sie sie aus. Klicken Sie auf den Link „Click to go to page 2“. Die zweite Seite mit der Bezeichnung „Seite 2“ wird geladen und im Frame angezeigt.
 

@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 556a787eb1e92e4c8adb7457235afb45c02df2dc
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4316752"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4358556"
 ---
 # <a name="set-conditions-for-running-a-background-task"></a>Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe
 
@@ -31,11 +31,11 @@ ms.locfileid: "4316752"
 
 Erfahren Sie, wie Bedingungen festgelegt werden, die steuern, wann die Hintergrundaufgabe ausgeführt wird.
 
-Hintergrundaufgaben müssen in manchen Fällen bestimmte Bedingungen erfüllt sein, für die Hintergrundaufgabe erfolgreich ausgeführt werden kann. Wenn Sie Ihre Hintergrundaufgabe registrieren, können Sie mit [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) eine oder mehrere Bedingungen angeben. Die Bedingung wird geprüft werden, nachdem der Trigger ausgelöst wurde. Die Hintergrundaufgabe wird dann in die Warteschlange, aber es wird nicht ausgeführt, bis alle erforderlichen Bedingungen erfüllt sind.
+In manchen Fällen erfordern Hintergrundaufgaben bestimmte Bedingungen erfüllt sein, für die Hintergrundaufgabe erfolgreich ausgeführt werden kann. Wenn Sie Ihre Hintergrundaufgabe registrieren, können Sie mit [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) eine oder mehrere Bedingungen angeben. Die Bedingung wird geprüft werden, nachdem der Trigger ausgelöst wurde. Die Hintergrundaufgabe wird dann in die Warteschlange, aber es wird nicht ausgeführt, bis alle erforderlichen Bedingungen erfüllt sind.
 
-Wenn Sie Bedingungen für Hintergrundaufgaben speichert schonen Sie Akku und CPU-von Aufgaben verhindert unnötigen ausgeführt. Wenn Ihre Hintergrundaufgabe z. B. nach einem Timer ausgeführt wird und eine Internetverbindung benötigt, fügen Sie die **InternetAvailable**-Bedingung zum [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) hinzu, bevor Sie die Aufgabe registrieren. So wird verhindert, dass die Aufgabe unnötig Systemressourcen nutzt und Akkulaufzeit beansprucht, da nur die Hintergrundaufgabe ausgeführt wird, wenn der Timer abgelaufen *und* das Internet verfügbar ist.
+Wenn Sie Bedingungen für Hintergrundaufgaben speichert schonen Sie Akku und CPU von Aufgaben verhindert unnötigen ausgeführt. Wenn Ihre Hintergrundaufgabe z. B. nach einem Timer ausgeführt wird und eine Internetverbindung benötigt, fügen Sie die **InternetAvailable**-Bedingung zum [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) hinzu, bevor Sie die Aufgabe registrieren. So wird verhindert, dass die Aufgabe unnötig Systemressourcen nutzt und Akkulaufzeit beansprucht, da nur die Hintergrundaufgabe ausgeführt wird, wenn der Timer abgelaufen *und* das Internet verfügbar ist.
 
-Es ist auch möglich, mehrere Bedingungen kombinieren, indem Sie **AddCondition** mehrmals für denselben [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)aufrufen. Achten Sie darauf, keine in Konflikt stehenden Bedingungen wie **UserPresent** und **UserNotPresent** hinzuzufügen.
+Es ist auch möglich, mehrere Bedingungen kombinieren, indem Sie **AddCondition** mehrmals für das gleiche [**TaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)aufrufen. Achten Sie darauf, keine in Konflikt stehenden Bedingungen wie **UserPresent** und **UserNotPresent** hinzuzufügen.
 
 ## <a name="create-a-systemcondition-object"></a>Erstellen eines SystemCondition-Objekts
 
@@ -182,7 +182,7 @@ BackgroundTaskRegistration ^ task = recurringTaskBuilder->Register();
 ## <a name="remarks"></a>Hinweise
 
 > [!NOTE]
-> Wählen Sie die Bedingungen für die Hintergrundaufgabe, sodass er nur ausgeführt wird, wenn es benötigt wird, und nicht dann, wenn es nicht sollte. Unter [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) finden Sie Beschreibungen der verschiedenen Bedingungen für Hintergrundaufgaben.
+> Wählen Sie die Bedingungen für die Hintergrundaufgabe, sodass er nur ausgeführt wird, wenn es benötigt wird, und wird nicht ausgeführt, wenn es nicht sollte. Unter [**SystemConditionType**](https://msdn.microsoft.com/library/windows/apps/br224835) finden Sie Beschreibungen der verschiedenen Bedingungen für Hintergrundaufgaben.
 
 ## <a name="related-topics"></a>Verwandte Themen
 

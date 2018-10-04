@@ -14,11 +14,11 @@ f1_keywords:
 - vs.storeassociationwizard
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ce80206823694f06e4aa5c3480b4dcb30c4f95c
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4320014"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4359402"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Verpacken einer UWP-App mit Visual Studio
 
@@ -29,7 +29,7 @@ In Windows 10 können Sie ein app-Paket oder app-Bündel, eine vollständige app
 ## <a name="types-of-app-packages"></a>App-Pakettypen
 
 - **App-Paket (.appx oder .msix)**  
-    Eine Datei, die Ihre App in einem Format enthält, das auf einem Gerät quergeladen werden kann. Alle einzelnen app-Paketdatei von Visual Studio erstellte ist **nicht** an Dev Center übermittelt werden soll und für das querladen und nur zu Testzwecken verwendet werden soll. Wenn Sie Ihre App an Dev Center übermitteln möchten, verwenden Sie die App-Paketuploaddatei.  
+    Eine Datei, die Ihre App in einem Format enthält, das auf einem Gerät quergeladen werden kann. Jeder einzelnen app-Paketdatei von Visual Studio erstellte ist **nicht** an Dev Center übermittelt werden soll und für das querladen und nur zu Testzwecken verwendet werden soll. Wenn Sie Ihre App an Dev Center übermitteln möchten, verwenden Sie die App-Paketuploaddatei.  
 
 - **App-Bündel (.appxbundle oder .msixbundle)**  
     Ein App-Bündel ist ein Pakettyp, der mehrere App-Pakete enthalten kann, von denen jedes so erstellt wurde, dass es eine bestimmte Gerätearchitektur unterstützt. Beispielsweise kann ein App-Bündel drei separate App-Pakete für die Konfigurationen x86, x64 und ARM enthalten. App-Bündel sollten nach Möglichkeit generiert werden, da sie ermöglichen, dass Ihre App auf den verschiedensten Geräten verfügbar ist.  
@@ -80,7 +80,7 @@ Wenn Sie Ihre App über den Microsoft Store verteilen, kann Visual Studio Ihr Pa
 
 ## <a name="create-an-app-package-upload-file"></a>Erstellen einer App-Paketuploaddatei
 
-Um eine app über den Microsoft Store verteilen zu können, müssen Sie ein app-Paket (.appx oder .msix), app-Bündel (.appxbundle oder .msixbundle), oder ein Upload-Paket (.appxupload) und [die verpackte app an Dev Center übermitteln](https://docs.microsoft.com/windows/uwp/publish/app-submissions)erstellen. Es ist zwar möglich, nur ein App-Paket oder App-Bündel an Dev Center zu übermitteln, es wird jedoch empfohlen, ein Uploadpaket zu übermitteln.
+Wenn Sie eine app über den Microsoft Store verteilen möchten, müssen Sie ein app-Paket (.appx oder .msix), app-Bündel (.appxbundle oder .msixbundle), oder ein Upload-Paket (.appxupload) und [die verpackte app an Dev Center übermitteln](https://docs.microsoft.com/windows/uwp/publish/app-submissions)erstellen. Es ist zwar möglich, nur ein App-Paket oder App-Bündel an Dev Center zu übermitteln, es wird jedoch empfohlen, ein Uploadpaket zu übermitteln.
 
 >[!NOTE]
 > Die App-Paketuploaddatei (.appxupload) ist der **einzig** gültige App-Pakettyp für Dev Center, der mithilfe von Visual Studio erstellt werden kann. Weitere gültige [App-Pakete können manuell](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool), ohne Visual Studio erstellt werden. 

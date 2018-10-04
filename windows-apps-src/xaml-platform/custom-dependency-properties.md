@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ddeccfe4c5e198afd77eaa4a81fc017543291ba1
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315910"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4360721"
 ---
 # <a name="custom-dependency-properties"></a>Benutzerdefinierte Abhängigkeitseigenschaften
 
@@ -170,7 +170,7 @@ void ImageWithLabelControl::RegisterDependencyProperties()
 ```
 
 > [!NOTE]
-> Für die C++ / CX-code, den Grund, warum ein privates Feld und eine öffentliche Eigenschaft schreibgeschützt, die [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) Flächen ist, damit andere Aufrufer an, die Ihre Abhängigkeitseigenschaft auch Eigenschaftensystem Hilfsprogramm-APIs verwenden können, die erfordern, die Bezeichner öffentlich sein. Wenn Sie den Bezeichner nicht offenlegen, können Benutzer diese Hilfsprogramm-APIs nicht verwenden. Beispiele für eine API und Szenarien dieser Art sind [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359), [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361), [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358), [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257) und [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836). Ein öffentliches Feld kann dazu nicht verwendet werden, da Windows-Runtime-Metadatenregeln keine öffentlichen Felder zulassen.
+> Für die C++ / CX-code, den Grund, warum Sie ein privates Feld und eine öffentliche schreibgeschützte Eigenschaft, die [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) Flächen ist, damit andere Aufrufer an, die Ihre Abhängigkeitseigenschaft auch Eigenschaftensystem Hilfsprogramm-APIs verwenden können, die erfordern, die Bezeichner öffentlich sein. Wenn Sie den Bezeichner nicht offenlegen, können Benutzer diese Hilfsprogramm-APIs nicht verwenden. Beispiele für eine API und Szenarien dieser Art sind [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359), [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361), [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358), [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257) und [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836). Ein öffentliches Feld kann dazu nicht verwendet werden, da Windows-Runtime-Metadatenregeln keine öffentlichen Felder zulassen.
 
 ## <a name="dependency-property-name-conventions"></a>Namenskonventionen für Abhängigkeitseigenschaften
 
@@ -186,7 +186,7 @@ Kombinieren Sie beim Erstellen der Bezeichnereigenschaft den von Ihnen registrie
 Ihr Eigenschaftenwrapper sollte [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) in der **get**-Implementierung und [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) in der **set**-Implementierung aufrufen.
 
 > [!WARNING]
-> Alle von Ausnahmefällen abgesehen sollten Ihre Wrapperimplementierungen nur die [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) und [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) Vorgänge ausführen. Andernfalls erhalten Sie ein anderes Verhalten, wenn Ihre Eigenschaft über XAML anstelle über Code festgelegt wird. Aus Effizienzgründen umgeht der XAML-Parser Wrapper beim Festlegen von Abhängigkeitseigenschaften und kommuniziert mit dem Sicherungsspeicher über **SetValue**.
+> Von Ausnahmefällen abgesehen sollten Ihre Wrapperimplementierungen nur die [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) und [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) Vorgänge ausführen. Andernfalls erhalten Sie ein anderes Verhalten, wenn Ihre Eigenschaft über XAML anstelle über Code festgelegt wird. Aus Effizienzgründen umgeht der XAML-Parser Wrapper beim Festlegen von Abhängigkeitseigenschaften und kommuniziert mit dem Sicherungsspeicher über **SetValue**.
 
 ```csharp
 public String Label

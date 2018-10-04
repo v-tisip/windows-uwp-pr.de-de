@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 84e12d6c3e25a18902aaa55011949dd5b5ff97ca
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315268"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4360207"
 ---
 # <a name="shadows-in-windows-ui"></a>Schatten in Windows-UI
 
@@ -22,7 +22,7 @@ Die [DropShadow](/uwp/api/Windows.UI.Composition.DropShadow) -Klasse stellt Mitt
 
 ## <a name="basic-drop-shadow"></a>Grundlegende Schlagschatten
 
-Um eine grundlegende Schatten zu erstellen, erstellen Sie eine neue DropShadow und Ihre Visual zuzuordnen. Der Schatten sind standardmäßig rechteckig. Eine Reihe von Eigenschaften sind für das Aussehen und Verhalten der Schatten Optimierungseigenschaften verfügbar.
+Um eine grundlegende Schatten zu erstellen, erstellen Sie eine neue DropShadow und Ihre Visual zuzuordnen. Der Schatten sind standardmäßig rechteckig. Eine Reihe von Eigenschaften sind für das Erscheinungsbild des Schattens Optimierungseigenschaften verfügbar.
 
 ```cs
 var basicRectVisual = _compositor.CreateSpriteVisual();
@@ -43,13 +43,13 @@ basicRectVisual.Shadow = basicShadow;
 
 Es gibt verschiedene Möglichkeiten, die Form für Ihre DropShadow definieren:
 
-- **Verwenden Sie den vorgegebenen** - wird standardmäßig die DropShadow Form durch den Modus "Default" CompositionDropShadowSourcePolicy definiert. Für SpriteVisual wird standardmäßig rechteckig, es sei denn, eine Maske bereitgestellt wird. Für LayerVisual wird standardmäßig eine Maske mit dem Alphawert von den visuellen Pinsel erben.
+- **Verwenden Sie den vorgegebenen** - wird durch den Modus "Default" CompositionDropShadowSourcePolicy standardmäßig die DropShadow Form definiert. Für SpriteVisual wird standardmäßig rechteckig, es sei denn, eine Maske bereitgestellt wird. Für LayerVisual wird standardmäßig eine Maske mit dem Alphawert von den visuellen Pinsel erben.
 - **Legen Sie eine Maske** – Sie können die [Maske](/uwp/api/windows.ui.composition.dropshadow.mask) Eigenschaft zum Definieren einer Deckkraftmaske für den Schatten festlegen.
 - **Geben Sie mit dem vererbt Maske** – legen Sie die [SourcePolicy](/uwp/api/windows.ui.composition.dropshadow.sourcepolicy) -Eigenschaft [CompositionDropShadowSourcePolicy](/uwp/api/windows.ui.composition.compositiondropshadowsourcepolicy)verwenden. InheritFromVisualContent, verwenden Sie die Maske aus dem Alpha-Wert des visuellen Pinsels generiert.
 
 ## <a name="masking-to-match-your-content"></a>Maskierung entsprechend Ihren Inhalt
 
-Wenn Sie möchten Ihre Schatten entsprechend den visuellen Inhalt des visuellen Pinsel für Ihre Schatten Maske-Eigenschaft verwenden, können oder festlegen den Schatten Maske automatisch aus dem Inhalt erben. Wenn Sie eine LayerVisual verwenden, wird der Schatten die Maske standardmäßig erben.
+Wenn Sie möchten Ihre Schatten entsprechen den visuellen Inhalt des visuellen Pinsel für Ihre Schatten Mask-Eigenschaft verwenden, können oder festlegen den Schatten Maske automatisch vom Inhalt erben. Wenn Sie eine LayerVisual verwenden, wird der Schatten die Maske standardmäßig erben.
 
 ```cs
 var imageSurface = LoadedImageSurface.StartLoadFromUri(new Uri("ms-appx:///Assets/myImage.png"));
@@ -73,9 +73,9 @@ imageSpriteVisual.Shadow = shadow;
 
 ## <a name="using-an-alternative-mask"></a>Verwenden eine alternative Maske
 
-In einigen Fällen möchten möglicherweise den Schatten Form, sodass keine des visuellen Inhalt Übereinstimmung. Um diesen Effekt zu erzielen, müssen Sie explizit die Maske Eigenschaft Alpha mit einem Pinsel festgelegt.
+In einigen Fällen möchten Sie möglicherweise den Schatten Form, sodass keine des visuellen Inhalt Übereinstimmung. Um diesen Effekt zu erzielen, müssen Sie explizit die Maske Eigenschaft Alpha mit einem Pinsel festgelegt.
 
-In dem Beispiel unten haben wir zwei Oberflächen - eine für den visuellen Inhalt und eine für die Schatten Maske laden:
+In dem Beispiel unten haben wir zwei Oberflächen - eine für den visuellen Inhalt und eine für den Volumeschattenkopie-Maske laden:
 
 ```cs
 var imageSurface = LoadedImageSurface.StartLoadFromUri(new Uri("ms-appx:///Assets/myImage.png"));
@@ -101,7 +101,7 @@ imageSpriteVisual.Shadow = shadow;
 
 ## <a name="animating"></a>Animieren
 
-Als standard in der visuellen Ebene ist, können mit Kompositionsanimationen DropShadow Eigenschaften animiert werden. Unten ändern wir den Code aus dem wenig Präsentationslogik Beispiel oben aus, um den Weichzeichnerradius für den Schatten zu animieren.
+Als standard in der visuellen Ebene ist, können mithilfe von Kompositionsanimationen DropShadow Eigenschaften animiert werden. Unten ändern wir den Code aus den Weichzeichnerradius des Schattens animieren obigem Beispiel ergibt wenig Präsentationslogik.
 
 ```cs
 ScalarKeyFrameAnimation blurAnimation = _compositor.CreateScalarKeyFrameAnimation();
@@ -115,17 +115,17 @@ shadow.StartAnimation("BlurRadius", blurAnimation);
 
 ## <a name="shadows-in-xaml"></a>Schatten in XAML
 
-Wenn Sie einen Schatten komplexere Frameworkelemente hinzufügen möchten, gibt es verschiedene Möglichkeiten, Interoperabilität mit Schatten zwischen XAML und Komposition:
+Wenn Sie einen Schatten komplexere Frameworkelemente hinzufügen möchten, gibt es verschiedene Möglichkeiten, um Interoperabilität mit Schatten zwischen XAML und Komposition:
 
-1. Verwenden Sie die [DropShadowPanel](https://github.com/Microsoft/UWPCommunityToolkit/blob/master/Microsoft.Toolkit.Uwp.UI.Controls/DropShadowPanel/DropShadowPanel.Properties.cs) in der Windows-Community-Toolkit verfügbar. Einzelheiten finden Sie die [DropShadowPanel Dokumentation](https://docs.microsoft.com/windows/uwpcommunitytoolkit/controls/DropShadowPanel) zur Verwendung von verwenden.
+1. Verwenden Sie die [DropShadowPanel](https://github.com/Microsoft/UWPCommunityToolkit/blob/master/Microsoft.Toolkit.Uwp.UI.Controls/DropShadowPanel/DropShadowPanel.Properties.cs) in der Windows-Community-Toolkit verfügbar. Einzelheiten finden Sie die [DropShadowPanel Dokumentation](https://docs.microsoft.com/windows/uwpcommunitytoolkit/controls/DropShadowPanel) zur Verwendung von es.
 1. Erstellen eines visuellen Elements als Schatten Host verwenden und binden sie für die XAML-Handout Visuals.
-1. Verwenden Sie die Komposition-Beispielgalerie [SamplesCommon](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SamplesCommon/SamplesCommon) benutzerdefinierte CompositionShadow Steuerelement. Dieses Beispiel für die Verwendung angezeigt.
+1. Verwenden Sie die Komposition-Beispielgalerie [SamplesCommon](https://github.com/Microsoft/WindowsUIDevLabs/tree/master/SamplesCommon/SamplesCommon) benutzerdefinierte CompositionShadow Steuerelement. Siehe Beispiel für die Verwendung.
 
 ## <a name="performance"></a>Leistung
 
-Zwar der visuellen Ebene viele Optimierungen eingeführt, um Effekte effiziente und nutzbar zu erstellen, möglich generieren Schatten ein relativ aufwendig je nachdem, welche Optionen, die Sie festlegen. Im folgenden sind high Level "Kosten" für unterschiedliche Arten von Schatten. Beachten Sie, dass bestimmte Schatten teuer möglicherweise sie weiterhin können werden in bestimmten Szenarien sparsam verwendet.
+Obwohl sich die visuelle Ebene viele Optimierungen Designfeatures zum Effekte effiziente und nutzbar zu machen, kann generieren Schatten ein relativ aufwendig je nachdem, welche Optionen, die Sie festlegen. Im folgenden sind high Level "Kosten" für verschiedene Arten von Schatten. Beachten Sie, dass bestimmte Schatten teuer möglicherweise sie weiterhin können werden in bestimmten Szenarien sparsam verwendet.
 
-Schatten-Eigenschaften| Kosten
+Schatten Merkmale| Kosten
 ------------- | -------------
 „Rechteckiges Ausschneiden“    | Niedrig
 Shadow.Mask      | Hoch 

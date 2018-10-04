@@ -11,11 +11,11 @@ keywords: windows10, uwp, verpackung
 ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
 ms.localizationpriority: medium
 ms.openlocfilehash: dbde8f2f11276ded6ad0994a1cd52f7f12de229e
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4318346"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4358696"
 ---
 # <a name="create-an-app-package-with-the-makeappxexe-tool"></a>Erstellen eines App-Pakets mit dem Tool „MakeAppx.exe“
 
@@ -27,7 +27,7 @@ ms.locfileid: "4318346"
 
 Beachten Sie, dass **MakeAppx.exe** keine APPXUPLOAD-Datei erstellt. Die appxupload-Datei wird als Teil des Visual Studio-verpackungsvorgangs erstellt und enthält zwei weitere Dateien: .msix oder AppX- und appxsym. Die APPXSYM-Datei ist eine komprimierte PDB-Datei und enthält öffentliche Symbole Ihrer App, die für [Absturzanalysen](https://blogs.windows.com/buildingapps/2015/07/13/crash-analysis-in-the-unified-dev-center/) im Windows Dev Center verwendet wird. Eine reguläre APPX-Datei kann ebenfalls übermittelt werden. In diesem Fall sind jedoch keine Absturzanalysen oder Informationen zum Debuggen verfügbar. Weitere Informationen zum Übermitteln von Paketen an den Store finden Sie unter [Hochladen von App-Paketen](https://msdn.microsoft.com/windows/uwp/publish/upload-app-packages). 
 
- Updates für das Tool in der neuesten Version von Windows 10 haben keinen Einfluss auf die Nutzung der AppX-Paket. Sie können weiterhin mit diesem Tool mit AppX-Paketen oder verwenden Sie das Tool mit Unterstützung für .msix Pakete wie unten beschrieben.
+ Updates für das Tool in der neuesten Version von Windows 10 haben keinen Einfluss auf die AppX-Paket-Nutzung. Sie können auch weiterhin mit diesem Tool mit AppX-Paketen oder verwenden Sie das Tool mit Unterstützung für .msix Pakete wie unten beschrieben.
 
 So erstellen Sie manuell eine APPXUPLOAD-Datei:
 - Platzieren Sie die .msix und die appxsym-Datei in einem Ordner

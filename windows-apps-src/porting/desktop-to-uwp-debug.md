@@ -12,11 +12,11 @@ keywords: windows10, UWP
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 ms.localizationpriority: medium
 ms.openlocfilehash: b5110eebde087593f07704e89c2e4708b2fcbb8b
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315166"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4358924"
 ---
 # <a name="run-debug-and-test-a-packaged-desktop-application"></a>Führen Sie aus, Debuggen Sie und Testen Sie eine verpackte desktop-Anwendung
 
@@ -41,14 +41,14 @@ Add-AppxPackage –Register AppxManifest.xml
 ```
 Finden Sie Ihre App im Windows-Startmenü, um sie auszuführen.
 
-![Anwendungspakets im Menü "Start"](images/desktop-to-uwp/converted-app-installed.png)
+![Verpackte Anwendung im Menü "Start"](images/desktop-to-uwp/converted-app-installed.png)
 
 > [!NOTE]
 > Eine Anwendung immer als interaktiver Benutzer ausgeführt wird, und jedes Laufwerk durch die Installation Ihres Anwendungspakets unter muss auf NTFS-Format formatiert sein.
 
 ## <a name="debug-your-app"></a>Debuggen Sie Ihre App
 
-Wie Sie die Anwendung debuggen, hängt tool verwendet, um das Paket zu erstellen.
+Wie Sie die Anwendung debuggen, hängt von tool verwendet, um das Paket zu erstellen.
 
 Wenn Sie Ihr Paket mithilfe des in Version 15.4 von Visual Studio 2017 verfügbaren [neuen Paketerstellungsprojekts](desktop-to-uwp-packaging-dot-net.md#new-packaging-project) erstellt haben, legen Sie das Paketerstellungsprojekt als Startprojekt fest und drücken Sie F5, um Ihre App zu debuggen.
 
@@ -74,13 +74,13 @@ Wenn Sie Ihre Änderungen an Ihrer Anwendung zum Beheben von Fehlern, wechseln S
 
 In einigen Fällen sollten Sie eine differenziertere Steuerung des debugging-Vorgangs, einschließlich der Möglichkeit zum Debuggen Ihrer Anwendung, bevor er beginnt.
 
-Sie können [PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) verwenden, um volle Kontrolle über App-Lebenszyklus, einschließlich anhalten, fortsetzen und beenden erhalten.
+[PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) können Sie die vollständige Kontrolle über den Anwendungslebenszyklus, einschließlich anhalten, fortsetzen und beenden erhalten.
 
 [PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) ist im Windows SDK enthalten.
 
 ## <a name="test-your-app"></a>Testen der App
 
-Zum Testen Ihrer Anwendung in einer realistischen, wenn Sie für die Verteilung vorbereiten, empfiehlt es sich, Signieren Sie Ihre Anwendung, und installieren Sie es.
+Zum Testen Ihrer Anwendung in einer realistischen, wie Sie für die Verteilung vorbereiten, empfiehlt es sich, Signieren Sie Ihre Anwendung, und installieren Sie es.
 
 ### <a name="test-an-application-that-you-packaged-by-using-visual-studio"></a>Testen Sie eine Anwendung, die Sie mithilfe von Visual Studio verpackt
 
@@ -99,7 +99,7 @@ Sie können die Anwendung auch manuell signieren. So geht’s
 
 2. Installieren Sie das Zertifikat im Zertifikatsspeicher **Vertrauenswürdiger Stamm** oder **Vertrauenswürdige Personen** auf Ihrem System.
 
-3. Signieren Sie Ihre Anwendung anhand des Zertifikats, finden Sie unter [Signieren eines app-Pakets mithilfe von SignTool](../packaging/sign-app-package-using-signtool.md).
+3. Signieren Sie Ihre Anwendung anhand des Zertifikats, finden Sie unter [Signieren eines app-Pakets mit SignTool](../packaging/sign-app-package-using-signtool.md).
 
   > [!IMPORTANT]
   > Stellen Sie sicher, dass der Name des Herausgebers auf dem Zertifikat dem Namen des Herausgebers Ihrer App entspricht.
@@ -111,7 +111,7 @@ Sie können die Anwendung auch manuell signieren. So geht’s
 
 ### <a name="test-your-application-for-windows-10-s"></a>Testen Sie Ihre Anwendung für Windows 10 S
 
-Bevor Sie Ihre app veröffentlichen, stellen Sie sicher, dass sie korrekt auf Geräten, auf denen Windows 10 s ausgeführt Tatsächlich, wenn Sie Ihre Anwendung an den Microsoft Store veröffentlichen möchten, müssen Sie dies tun, da es eine Anforderung des Stores ist. Apps, die auf Geräten unter Windows10 S nicht ordnungsgemäß funktionieren, werden nicht zertifiziert.
+Bevor Sie Ihre app veröffentlichen, stellen Sie sicher, dass sie korrekt auf Geräten, auf denen Windows 10 s ausgeführt. Tatsächlich, wenn Sie Ihre Anwendung an den Microsoft Store veröffentlichen möchten, müssen Sie dies tun, da es eine Anforderung des Stores ist. Apps, die auf Geräten unter Windows10 S nicht ordnungsgemäß funktionieren, werden nicht zertifiziert.
 
 [Test der Windows-Anwendung für Windows 10 S](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-test-windows-s)angezeigt.
 

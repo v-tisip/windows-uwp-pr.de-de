@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Add-On-Verkäufe, Add-On-Käufe, IAP-Verkauf, In-App-Produkte, IAPS, Add-Ons
 ms.localizationpriority: medium
 ms.openlocfilehash: 019bb410e6ac65f9951f06052c78f40e9a5f32e2
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4317630"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4358322"
 ---
 # <a name="add-on-acquisitions-report"></a>Bericht zu Add-On-Käufen
 
@@ -32,7 +32,7 @@ In diesem Bericht bedeutet ein „Add-On-Kauf”, dass ein Kunde ein Add-On von 
 
 ## <a name="apply-filters"></a>Anwenden von Filtern
 
-Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist **30D** (30Tage), aber Sie können Daten für 3, 6 oder 12Monate anzeigen, oder für einen benutzerdefinierten Zeitraum, den Sie angeben. Sie können auch **1 H** oder **72 Stunden** Kaufdaten für eine Stunde oder 70-zwei Stunden nahezu in Echtzeit anzeigen auswählen. Diese Zeiträume gelten nur auf der Registerkarte " **Add-on täglich** " des Diagramms **Add-on-Käufe** und auf der Registerkarte " **Käufe** " des Diagramms **Märkte** . 
+Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist **30D** (30Tage), aber Sie können Daten für 3, 6 oder 12Monate anzeigen, oder für einen benutzerdefinierten Zeitraum, den Sie angeben. Sie können auch **1 H** oder **72 Stunden** Kaufdaten für eine Stunde oder 70-zwei Stunden nahezu in Echtzeit anzeigen auswählen. Diese Zeiträume gelten nur auf die Registerkarte **Add-on täglich** des Diagramms **Add-on-Käufe** und auf der Registerkarte " **Käufe** " des Diagramms **Märkte** . 
 
 Sie können ebenfalls **Filter** erweitern, um alle Daten auf dieser Seite nach bestimmten Add-Ons, Markt und/oder Gerätetyp zu filtern.
 

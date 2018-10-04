@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a1a82c91aeafa253427d8e526b38b8ac304591a2
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4313041"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4360246"
 ---
 # <a name="advertising-performance-report"></a>Bericht zur Anzeigenleistung
 
@@ -62,7 +62,7 @@ Der Bericht **Anzeigenleistung** enthält Daten für die folgenden Leistungsmetr
 | Füllrate  | Gibt den Prozentsatz der von Ihrer App gesendeten Anzeigenanforderungen an, bei denen eine Anzeige angezeigt wurde.  |
 | Klicks  |  Gibt an, wie häufig in Ihrer App auf eine Anzeige geklickt wurde. |
 | CTR  |  Gibt an, wie häufig auf eine Anzeige geklickt wurde – geteilt durch die Anzahl von Anzeigenaufrufen. |
-| Sichtbarkeit | Der Prozentsatz der anzeigenaufrufe, die in Ihrer app angezeigt werden. Weitere Informationen zu diesen Wert wie berechnet wird finden Sie unter [Optimieren der Sichtbarkeit von anzeigeneinheiten](../monetize/optimize-ad-unit-viewability.md). |
+| Die Sichtbarkeit | Der Prozentsatz der anzeigenaufrufe, die in Ihrer app angezeigt werden. Weitere Informationen zu diesen Wert wie berechnet wird finden Sie unter [Optimieren der Sichtbarkeit von anzeigeneinheiten](../monetize/optimize-ad-unit-viewability.md). |
 | Erworbenes Guthaben  | Bei [Community](https://docs.microsoft.com/windows/uwp/publish/about-community-ads)-Kampagnen gibt dies das Guthaben an, das Sie durch Anzeigen von Community-Anzeigen in Ihrer App für Werbefläche erworben haben.  |
 | Beanspruchtes Guthaben  | Bei [Community](https://docs.microsoft.com/windows/uwp/publish/about-community-ads)-Kampagnen gibt dies das für Ihre App beanspruchte Anzeigenguthaben an.  |
 

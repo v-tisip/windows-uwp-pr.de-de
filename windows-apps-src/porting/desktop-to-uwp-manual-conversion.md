@@ -12,11 +12,11 @@ keywords: windows10, UWP
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f14e7f8747639ef139e774416e09af954211940
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4310128"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4357798"
 ---
 # <a name="package-a-desktop-application-manually"></a>Manuelles Verpacken einer desktop-Anwendung
 
@@ -24,12 +24,12 @@ Dieses Thema zeigt, wie Sie Ihre Anwendung ohne Tools wie Visual Studio oder den
 
 Um Ihre App manuell zu verpacken, erstellen Sie eine Paketmanifestdatei, und führen Sie dann ein Befehlszeilentool aus, um ein Windows-App-Paket zu generieren.
 
-Berücksichtigen Sie die manuelle Verpackung, wenn Sie die Anwendung mithilfe der Befehls "Xcopy" installieren, oder Sie mit den auf dem System Ihren app Installer vorgenommenen Änderungen vertraut sind, und möchten Sie genauere Kontrolle über den Prozess.
+Berücksichtigen Sie die manuelle Verpackung, wenn Sie Ihre Anwendung mithilfe der Befehls "Xcopy" installieren, oder Sie mit den an das System Ihre app-Installer vorgenommenen Änderungen vertraut sind und genauere Kontrolle über den Prozess.
 
 Wenn Sie sich nicht darüber sicher sind, welche Änderungen an das System durch Ihren Installer vorgenommen werden oder wenn Sie lieber automatisierte Tools für das Generieren Ihres Paketmanifestes verwenden möchten, sollten Sie eine [dieser](desktop-to-uwp-root.md#convert) Optionen erwägen.
 
 >[!IMPORTANT]
->Die Fähigkeit zum Erstellen eines Windows-app-Pakets für Ihre desktop-Anwendung (andernfalls wird auch als der Desktop-Brücke wurde in Windows 10, Version 1607, eingeführt und kann nur in Projekten für die Windows 10 Anniversary Update (10.0; verwendet werden Build 14393) oder einer neueren Version in Visual Studio.
+>Die Fähigkeit zum Erstellen einer Windows-app-Paket für Ihre desktop-Anwendung (andernfalls wird auch als der Desktop-Brücke wurde in Windows 10, Version 1607, eingeführt und kann nur in Projekten für die Windows 10 Anniversary Update (10.0; verwendet werden Build 14393) oder einer neueren Version in Visual Studio.
 
 ## <a name="first-prepare-your-application"></a>Vorbereiten Ihrer Anwendung
 
@@ -121,7 +121,7 @@ Für desktop-apps, die Sie ein Paket erstellen, legen Sie immer die ``Name`` -At
 ```
 
 ### <a name="capabilities"></a>Funktionen
-Für desktop-apps, die ein Paket zu erstellen, für die Sie hinzugefügt haben die ``runFullTrust`` Funktion.
+Für desktop-apps, die Sie ein Paket erstellen, für, müssen Sie das Hinzufügen der ``runFullTrust`` Funktion.
 
 ```XML
 <Capabilities>
@@ -134,7 +134,7 @@ Geben Sie in diese Vorlage Informationen ein, die Ihre App beschreiben.
 
 ### <a name="application-element"></a>Anwendungselemente
 
-Für desktop-apps, die Sie ein Paket erstellen, das ``EntryPoint`` -Attribut des Application-Elements ist immer ``Windows.FullTrustApplication``.
+Für desktop-apps, die Sie erstellen Sie ein Paket für die ``EntryPoint`` Attribut des Application-Elements ist immer ``Windows.FullTrustApplication``.
 
 ```XML
 <Applications>
@@ -224,6 +224,6 @@ Weitere Informationen finden Sie unter [UserVoice](https://wpdev.uservoice.com/f
 
 Finden Sie unter [ausführen, Debuggen und testen eine verpackte desktop-Anwendung](desktop-to-uwp-debug.md)
 
-**Signieren Sie Ihre Anwendung, und verteilen Sie es**
+**Signieren Sie Ihre Anwendung und verteilen Sie es**
 
 Finden Sie unter [Verteilen einer verpackten desktop-Anwendung](desktop-to-uwp-distribute.md)

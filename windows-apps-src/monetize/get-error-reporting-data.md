@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienst, Microsoft Store-Analyse-API, Fehler
 ms.localizationpriority: medium
 ms.openlocfilehash: 15dd4d5febe0b57e164f0aadeeb8d7b816dcdd66
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4313906"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4358734"
 ---
 # <a name="get-error-reporting-data-for-your-app"></a>Abrufen von Fehlerberichtsdaten für Ihre App
 
@@ -145,7 +145,7 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 
 * [Integritätsbericht](../publish/health-report.md)
 * [Abrufen von Details zu einem Fehler in Ihrer App](get-details-for-an-error-in-your-app.md)
-* [Abrufen der Stapelüberwachung für einen Fehler in Ihrer App](get-the-stack-trace-for-an-error-in-your-app.md)
+* [Abrufen der Stapelüberwachung für einen Fehler in der App](get-the-stack-trace-for-an-error-in-your-app.md)
 * [Herunterladen der CAB-Datei bei einem Fehler in Ihrer App](download-the-cab-file-for-an-error-in-your-app.md)
 * [Zugreifen auf Analysedaten mit MicrosoftStore-Diensten](access-analytics-data-using-windows-store-services.md)
 * [Abrufen von App-Käufen](get-app-acquisitions.md)

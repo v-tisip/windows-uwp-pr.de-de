@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ca5b722ea97202d57f05613bec88ae6bee1db5f2
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315584"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4359225"
 ---
 # <a name="share-code-between-a-desktop-application-and-a-uwp-app"></a>Teilen von Code zwischen einer desktop-Anwendung und eine UWP-app
 
@@ -67,7 +67,7 @@ Ein Teil Ihres Codes ist plattformspezifisch und muss in Ihrem Desktopanwendungs
 
 ### <a name="example-migrating-data-access-code-to-a-net-standard-20-library"></a>Beispiel: Migrieren von Datenzugriffscode auf eine Bibliothek für .NET Standard 2.0
 
-Angenommen, haben wir eine sehr einfache Windows Forms-Anwendung, die Kunden aus unserer Northwind-Beispieldatenbank anzeigt.
+Angenommen, wir haben eine sehr einfache Windows Forms-Anwendung, die Kunden aus unserer Northwind-Beispieldatenbank anzeigt.
 
 ![Windows Forms-App](images/desktop-to-uwp/win-forms-app.png)
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b707479d11cc7aef62385b476720bff8477ed401
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315662"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4358814"
 ---
 # <a name="opening-a-developer-account"></a>Eröffnen eines Entwicklerkontos
 
@@ -51,7 +51,7 @@ Diese Übersicht zur Registrierung eines Entwicklerkontos für Microsoft Store u
 
 9.  Überprüfen Sie Ihre Kontoinformationen, und stellen Sie sicher, dass alle Angaben korrekt sind. Lesen und akzeptieren Sie anschließend die Bedingungen der [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement). Aktivieren Sie das Kontrollkästchen, um anzugeben, dass Sie die Bedingungen gelesen haben und ihnen zustimmen.
 
-10.  Klicken Sie auf **Fertig stellen**, um die Registrierung zu bestätigen. Ihre Zahlung wird verarbeitet werden, und wir senden eine Bestätigungsnachricht an Ihre e-Mail-Adresse.
+10.  Klicken Sie auf **Fertig stellen**, um die Registrierung zu bestätigen. Ihre Zahlung wird verarbeitet und wir senden eine Bestätigungsnachricht an Ihre e-Mail-Adresse.
 
 Nach Abschluss der Registrierung durchläuft Ihr Konto den Überprüfungsprozess. Bei individuellen Konten wird sichergestellt, dass der Anzeigename für den Herausgeber nicht bereits von einem anderen Unternehmen verwendet wird. Bei Unternehmenskonten dauert der Vorgang etwas länger, da zusätzlich geprüft werden muss, dass Sie zur Einrichtung des Kontos für Ihr Unternehmen autorisiert sind. Diese Überprüfung kann zwischen wenigen Tagen und mehreren Wochen dauern und umfasst häufig einen Telefonanruf bei Ihrem Unternehmen. Sie können den Überprüfungsstatus auf der Seite **Kontoeinstellungen** überprüfen.
 
@@ -59,13 +59,13 @@ Nach Abschluss der Registrierung durchläuft Ihr Konto den Überprüfungsprozess
 ## <a name="additional-guidelines-for-company-accounts"></a>Zusätzliche Richtlinien für Unternehmenskonten
 
 > [!IMPORTANT]
-> Wenn Sie mehrere Benutzer auf Ihr Dev Center-Konto zugreifen können, empfehlen wir die Verwendung von Azure Active Directory Zuweisen von Rollen zu einzelnen Benutzern (statt Freigabe Zugriff auf das Microsoft-Konto). Jeder Benutzer kann so auf das Dev Center-Konto zugreifen, indem er sich mit seinen individuellen Azure AD-Anmeldeinformationen anmeldet. Weitere Informationen finden Sie unter [Verwalten von Kontobenutzern](manage-account-users.md).
+> Wenn um mehrere Benutzer auf Ihr Dev Center-Konto zugreifen zu können, empfehlen wir die Verwendung von Azure Active Directory zum Zuweisen von Rollen für einzelne Benutzer (anstatt Freigabe Zugriff auf das Microsoft-Konto). Jeder Benutzer kann so auf das Dev Center-Konto zugreifen, indem er sich mit seinen individuellen Azure AD-Anmeldeinformationen anmeldet. Weitere Informationen finden Sie unter [Verwalten von Kontobenutzern](manage-account-users.md).
 
-Wenn Sie ein Unternehmenskonto erstellen möchten, können diese Richtlinien hilfreich, wenn mehrere Personen zugreifen, dass das Konto mit Microsoft-Konto, das das Konto eröffnete (und nicht als einzelne Benutzer, dem Dev Center-Konto hinzugefügt) signieren muss.
+Wenn Sie ein Unternehmenskonto erstellen möchten, können diese Richtlinien hilfreich, wenn mehrere Personen zugreifen, dass das Konto mit Microsoft-Konto, das das Konto eröffnete (und nicht als einzelne Benutzer auf das Dev Center-Konto hinzugefügt) signieren muss.
 
 -   Erstellen Sie Ihr Microsoft-Konto mit einer E-Mail-Adresse, die nicht bereits Ihnen oder einer anderen Person gehört, z.B. MyCompany_DevCenter@outlook.com. Verwenden Sie eine e-Mail-Adresse nicht zur Domäne Ihrer Firma, insbesondere dann, wenn Ihr Unternehmen bereits Azure AD verwendet. (Wie bereits erwähnt, können Sie weitere Benutzer hinzufügen, aus Ihrem Unternehmen Azure AD weiter unten.)
 -   Beschränken Sie den Zugriff auf dieses Microsoft-Konto auf so wenige Benutzer wie möglich.
--   Richten Sie eine firmeninterne e-Mail-Verteilerliste ein, die alle Benutzer enthält, die Zugriff auf das Entwicklerkonto benötigen, und fügen Sie diese e-Mail-Adresse für den [Sicherheitsinformationen, die mit dem Microsoft-Konto verknüpften [(https://account.microsoft.com/security). Dadurch können alle Mitarbeiter auf der Liste an diesen Aliasnamen gesendet Sicherheitscodes erhalten. Wenn die Einrichtung eine Verteilerliste nicht realisierbar ist, können Ihre Sicherheitsinformationen eines einzelnen Benutzers e-Mail-Adresse hinzugefügt, der Besitzer der e-Mail-Adresse werden jedoch einzige Person zugreifen kann, und teilen den Sicherheitscode bei entsprechender Aufforderung (z. B. wenn t neue Sicherheitsinformationen hinzugefügt werden er für das Konto, oder wenn sie von einem neuen Gerät zugegriffen wird).
+-   Richten Sie eine firmeninterne e-Mail-Verteilerliste ein, die alle Benutzer enthält, die Zugriff auf das Entwicklerkonto benötigen, und fügen Sie diese e-Mail-Adresse für den [Sicherheitsinformationen, die mit dem Microsoft-Konto verknüpften [(https://account.microsoft.com/security). Dadurch können alle Mitarbeiter auf die Liste an diesen Aliasnamen gesendet Sicherheitscodes erhalten. Wenn die Einrichtung eine Verteilerliste nicht realisierbar ist, können Ihre Sicherheitsinformationen eines einzelnen Benutzers e-Mail-Adresse hinzugefügt, aber der Besitzer der e-Mail-Adresse werden ein einzige Person zugreifen kann, und teilen den Sicherheitscode bei entsprechender Aufforderung (z. B. wenn t neue Sicherheitsinformationen hinzugefügt werden er für das Konto, oder wenn sie von einem neuen Gerät zugegriffen wird).
 -   Fügen Sie eine geschäftliche Telefonnummer des Microsoft-Kontos Sicherheitsinformationen hinzu. Verwenden Sie eine Zahl, die eine Erweiterung ist nicht erforderlich und wird auf wichtige Teammitglieder zugreifen.
 -   Im Entwickler sollten generell [Vertrauenswürdige Geräte](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) verwenden, um Entwicklerkonto Ihres Unternehmens anmelden. Alle wichtigen Teammitglieder müssen auf diese vertrauenswürdigen Geräte zugreifen können. So müssen beim Zugriff auf das Konto weniger Sicherheitscodes gesendet werden. Die Anzahl von Codes ist begrenzt, die pro Konto und Woche generiert werden können.
 -   Falls Sie den Zugriff auf das Konto über einen nicht vertrauenswürdigen PC zulassen müssen, sollten Sie den Zugriff auf maximal fünf Entwickler beschränken. Im Idealfall sollten diese Entwickler für den Zugriff auf das Konto Computer verwenden, die denselben geografischen Standort und dieselbe Netzwerkadresse nutzen.
@@ -78,7 +78,7 @@ Wir verwenden von Ihnen bereitgestellte Sicherheitsinformationen, um die Sicherh
 
 Es müssen mindestens zwei E-Mail-Adressen und/oder Telefonnummern für das Microsoft-Konto vorhanden sein. Wir empfehlen, so viele wie möglich hinzuzufügen. Beachten Sie bitte, dass einige Sicherheitsinformationen bestätigt werden müssen, ehe sie verwendet werden können. Überprüfen Sie außerdem regelmäßig, ob Ihre Sicherheitsinformationen aktuell sind. Sie können Ihre Sicherheitsinformationen verwalten, indem Sie zu https://account.microsoft.com/security wechseln und sich mit Ihrem Microsoft-Konto anmelden. Weitere Informationen finden Sie unter [Sicherheitsinformationen & Sicherheitscodes](https://support.microsoft.com/help/12428/microsoft-account-security-info-and-security-codes) .
 
-Wenn Sie sich bei Ihrem Windows Dev Center-Dashboard mit Ihrem Microsoft-Konto anmelden, kann das System an anfordern, dass Sie überprüfen, Ihre Identität ob per Sicherheitscode, den Sie angeben müssen, um die Anmeldung abzuschließen. Es wird empfohlen, verwendete PCs, mit denen Sie häufig als *Vertrauenswürdige Geräte*einzustufen. Wenn Sie über ein vertrauenswürdiges Gerät anmelden, wird nicht Sie in der Regel für eines Codes aufgefordert jedoch gelegentlich in bestimmten Situationen werden Sie möglicherweise aufgefordert, oder wenn Sie auf dem Gerät längere Zeit nicht angemeldet haben. Weitere Informationen finden Sie unter [ein vertrauenswürdiges Gerät für Ihr Microsoft-Konto hinzufügen](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) .
+Wenn Sie sich bei Ihrem Windows Dev Center-Dashboard mit Ihrem Microsoft-Konto anmelden, kann das System anfordern, dass Sie überprüfen, Ihre Identität ob durch Senden einen Sicherheitscode, den Sie angeben müssen, um die Anmeldung abzuschließen. Es wird empfohlen, verwendete PCs, mit denen Sie häufig als *Vertrauenswürdige Geräte*einzustufen. Wenn Sie über ein vertrauenswürdiges Gerät anmelden, werden nicht Sie in der Regel für einen Code aufgefordert jedoch gelegentlich in bestimmten Situationen werden Sie möglicherweise aufgefordert, oder wenn Sie auf dem Gerät längere Zeit nicht angemeldet haben. Weitere Informationen finden Sie unter [ein vertrauenswürdiges Gerät für Ihr Microsoft-Konto hinzufügen](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) .
 
 
 ## <a name="closing-your-account"></a>Schließen Ihres Kontos

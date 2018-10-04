@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: Die xBind-Markuperweiterung ist eine hohe Leistung Alternative zur Bindung. xBind - führt neue für Windows 10 – in kürzerer Zeit und mit weniger Arbeitsspeicher als Bindung und unterstützt eine bessere Debuggen.
+description: Die xBind-Markuperweiterung ist eine hohe Leistung Alternative zur Bindung. xBind - führt neue für Windows 10 - in kürzerer Zeit und mit weniger Arbeitsspeicher als Bindung und unterstützt eine bessere Debuggen.
 title: xBind-Markuperweiterung
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
 ms.author: jimwalk
@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 2e605ab70a3d251e92768fd26fd105ab68644995
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4313768"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4358147"
 ---
 # <a name="xbind-markup-extension"></a>{x:Bind}-Markuperweiterung
 
@@ -115,7 +115,7 @@ _Hinweis: Die C#-Umwandlungssyntax ist flexibler als die Syntax der angefügten 
 
 ## <a name="functions-in-binding-paths"></a>Funktionen in Bindungspfaden
 
-Ab Windows10, Version 1607, unterstützt **{x: Bind}** die Verwendung einer Funktion als blattbildenden Schrittdes Bindungspfades. Dies ist ein leistungsfähiges Feature für Databinding, die verschiedene Szenarien im Markup ermöglicht. Finden Sie unter [Funktion Bindungen](../data-binding/function-bindings.md) für Details.
+Ab Windows10, Version 1607, unterstützt **{x: Bind}** die Verwendung einer Funktion als blattbildenden Schrittdes Bindungspfades. Dies ist ein leistungsfähiges Feature für Databinding, die mehrere Szenarien im Markup ermöglicht. [Funktion Bindungen](../data-binding/function-bindings.md) Details angezeigt.
 
 ## <a name="event-binding"></a>Ereignisbindung
 

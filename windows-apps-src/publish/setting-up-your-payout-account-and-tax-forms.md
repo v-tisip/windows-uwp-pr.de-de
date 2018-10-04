@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f7359b2ae40e9b53d5ab73ee93402b11beab629
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4313472"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4360555"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Einrichten von Auszahlungskonten und Steuerformularen.
 
@@ -125,7 +125,7 @@ Berücksichtigen Sie auch folgende Punkte, um sicherzustellen, dass Ihre Auszahl
 
 ## <a name="tax-forms"></a>Steuerformulare
 
-Nachdem Sie [für ein Entwicklerkonto registriert](opening-a-developer-account.md) haben, und Sie Ihr [auszahlungskonto richten](#payout-account), können Sie Ihr *Steuerprofil* für den Microsoft Store erstellen, indem Sie die folgenden Schritte ausführen:
+Nachdem Sie [für ein Entwicklerkonto registriert](opening-a-developer-account.md) haben, und Sie Ihr [auszahlungskonto richten](#payout-account), können Sie Ihr *Steuerprofil* für den Microsoft Store erstellen, indem Sie die folgenden Schritte durchführen:
 
 -   Angeben des Wohnsitzlandes und der Staatsangehörigkeit
 -   Ausfüllen der entsprechenden Steuerformulare
