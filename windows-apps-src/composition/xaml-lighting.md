@@ -15,30 +15,30 @@ dev_langs:
 - cpp
 - cppwinrt
 ms.openlocfilehash: b4e3678e17e7545dfe9cb4049ace7ff864198156
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4319472"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4355572"
 ---
-# <a name="xaml-lighting"></a><span data-ttu-id="e848c-104">XAML-Beleuchtung</span><span class="sxs-lookup"><span data-stu-id="e848c-104">XAML lighting</span></span>
+# <a name="xaml-lighting"></a><span data-ttu-id="d7583-104">XAML-Beleuchtung</span><span class="sxs-lookup"><span data-stu-id="d7583-104">XAML lighting</span></span>
 
-<span data-ttu-id="e848c-105">[**CompositionLight**](/uwp/api/Windows.UI.Composition.CompositionLight)-Objekte werden zusammen mit [**SceneLightingEffect**](/uwp/api/Windows.UI.Composition.Effects.SceneLightingEffect) verwendet, um dynamische Beleuchtung und Reflexionsvermögen zu simulieren.</span><span class="sxs-lookup"><span data-stu-id="e848c-105">[**CompositionLight**](/uwp/api/Windows.UI.Composition.CompositionLight) objects are used in conjunction with [**SceneLightingEffect**](/uwp/api/Windows.UI.Composition.Effects.SceneLightingEffect) to simulate dynamic lighting and reflectivity.</span></span>
+<span data-ttu-id="d7583-105">[**CompositionLight**](/uwp/api/Windows.UI.Composition.CompositionLight)-Objekte werden zusammen mit [**SceneLightingEffect**](/uwp/api/Windows.UI.Composition.Effects.SceneLightingEffect) verwendet, um dynamische Beleuchtung und Reflexionsvermögen zu simulieren.</span><span class="sxs-lookup"><span data-stu-id="d7583-105">[**CompositionLight**](/uwp/api/Windows.UI.Composition.CompositionLight) objects are used in conjunction with [**SceneLightingEffect**](/uwp/api/Windows.UI.Composition.Effects.SceneLightingEffect) to simulate dynamic lighting and reflectivity.</span></span>
 
-<span data-ttu-id="e848c-106">Sie können Lichter auf [**visuelle Elemente**](https://msdn.microsoft.com/library/windows/apps/Dn706858) und XAML-[**UI-Elemente**](/uwp/api/Windows.UI.Xaml.UIElement) anwenden.</span><span class="sxs-lookup"><span data-stu-id="e848c-106">You can apply lights to [**Visuals**](https://msdn.microsoft.com/library/windows/apps/Dn706858) and XAML [**UIElements**](/uwp/api/Windows.UI.Xaml.UIElement).</span></span>
+<span data-ttu-id="d7583-106">Sie können Lichter auf [**visuelle Elemente**](https://msdn.microsoft.com/library/windows/apps/Dn706858) und XAML-[**UI-Elemente**](/uwp/api/Windows.UI.Xaml.UIElement) anwenden.</span><span class="sxs-lookup"><span data-stu-id="d7583-106">You can apply lights to [**Visuals**](https://msdn.microsoft.com/library/windows/apps/Dn706858) and XAML [**UIElements**](/uwp/api/Windows.UI.Xaml.UIElement).</span></span>
 
-## <a name="applying-lights-to-xaml-uielements"></a><span data-ttu-id="e848c-107">Anwenden von Lichtern auf XAML-UI-Elemente</span><span class="sxs-lookup"><span data-stu-id="e848c-107">Applying lights to XAML UIElements</span></span>
+## <a name="applying-lights-to-xaml-uielements"></a><span data-ttu-id="d7583-107">Anwenden von Lichtern auf XAML-UI-Elemente</span><span class="sxs-lookup"><span data-stu-id="d7583-107">Applying lights to XAML UIElements</span></span>
 
-<span data-ttu-id="e848c-108">[**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight)-Objekte werden auf [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight) angewendet, um XAML-UI-Elemente dynamisch zu beleuchten.</span><span class="sxs-lookup"><span data-stu-id="e848c-108">[**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) objects are used to apply [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight) to dynamically light XAML UIElements.</span></span> <span data-ttu-id="e848c-109">XamlLight bietet Methoden für die Auswahl-UI-Elemente oder XAML-Pinsel, Lichter auf UIElements verwaltet werden müssen, und die Lebensdauer von CompositionLight Ressourcen basierend auf der gibt an, ob sie sich gerade befinden verwenden.</span><span class="sxs-lookup"><span data-stu-id="e848c-109">XamlLight provides methods for targeting UIElements or XAML Brushes, applying lights to trees of UIElements, and helping manage the lifetime of CompositionLight resources based on whether they're currently in use.</span></span>
+<span data-ttu-id="d7583-108">[**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight)-Objekte werden auf [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight) angewendet, um XAML-UI-Elemente dynamisch zu beleuchten.</span><span class="sxs-lookup"><span data-stu-id="d7583-108">[**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) objects are used to apply [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight) to dynamically light XAML UIElements.</span></span> <span data-ttu-id="d7583-109">XamlLight stellt Methoden für die Auswahl-UI-Elemente oder XAML-Pinsel, Lichter auf UIElements verwaltet werden müssen, und die Lebensdauer von CompositionLight Ressourcen basierend auf der gibt an, ob sie sich gerade befinden verwenden.</span><span class="sxs-lookup"><span data-stu-id="d7583-109">XamlLight provides methods for targeting UIElements or XAML Brushes, applying lights to trees of UIElements, and helping manage the lifetime of CompositionLight resources based on whether they're currently in use.</span></span>
 
-- <span data-ttu-id="e848c-110">Wenn Sie XamlLight auf einen **Pinsel** anwenden, werden damit alle UI-Elemente beleuchtet, die den Pinsel nutzen.</span><span class="sxs-lookup"><span data-stu-id="e848c-110">If you target a **Brush** with a XamlLight then the portions of any UIElements using that Brush are lit by the light.</span></span>
-- <span data-ttu-id="e848c-111">Wenn Sie XamlLight auf ein **UI-Element** anwenden, wird damit das gesamte UI-Element einschließlich seiner Unterelemente beleuchtet.</span><span class="sxs-lookup"><span data-stu-id="e848c-111">If you target a **UIElement** with a XamlLight then the entire UIElement and its child UIElements are all lit by the light.</span></span>
+- <span data-ttu-id="d7583-110">Wenn Sie XamlLight auf einen **Pinsel** anwenden, werden damit alle UI-Elemente beleuchtet, die den Pinsel nutzen.</span><span class="sxs-lookup"><span data-stu-id="d7583-110">If you target a **Brush** with a XamlLight then the portions of any UIElements using that Brush are lit by the light.</span></span>
+- <span data-ttu-id="d7583-111">Wenn Sie XamlLight auf ein **UI-Element** anwenden, wird damit das gesamte UI-Element einschließlich seiner Unterelemente beleuchtet.</span><span class="sxs-lookup"><span data-stu-id="d7583-111">If you target a **UIElement** with a XamlLight then the entire UIElement and its child UIElements are all lit by the light.</span></span>
 
-## <a name="creating-and-using-a-xamllight"></a><span data-ttu-id="e848c-112">Erstellen und Verwenden von XamlLight</span><span class="sxs-lookup"><span data-stu-id="e848c-112">Creating and using a XamlLight</span></span>
+## <a name="creating-and-using-a-xamllight"></a><span data-ttu-id="d7583-112">Erstellen und Verwenden von XamlLight</span><span class="sxs-lookup"><span data-stu-id="d7583-112">Creating and using a XamlLight</span></span>
 
-<span data-ttu-id="e848c-113">[**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) ist eine Basisklasse zum Erstellen benutzerdefinierter Lichter.</span><span class="sxs-lookup"><span data-stu-id="e848c-113">[**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) is a base class which can be used to create custom lights.</span></span>
+<span data-ttu-id="d7583-113">[**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) ist eine Basisklasse zum Erstellen benutzerdefinierter Lichter.</span><span class="sxs-lookup"><span data-stu-id="d7583-113">[**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) is a base class which can be used to create custom lights.</span></span>
 
-<span data-ttu-id="e848c-114">Dieses Beispiel zeigt die Definition für ein benutzerdefiniertes XamlLight, die ein mehrfarbige Spotlight für gezielte UIElements und Pinsel gilt.</span><span class="sxs-lookup"><span data-stu-id="e848c-114">This example shows the definition for a custom XamlLight that applies a multicolored spotlight to targeted UIElements and Brushes.</span></span>
+<span data-ttu-id="d7583-114">Dieses Beispiel zeigt die Definition für ein benutzerdefiniertes XamlLight, das ein mehrfarbige Spotlight für gezielte UIElements und Pinsel gilt.</span><span class="sxs-lookup"><span data-stu-id="d7583-114">This example shows the definition for a custom XamlLight that applies a multicolored spotlight to targeted UIElements and Brushes.</span></span>
 
 ```csharp
 public sealed class OrangeSpotLight : XamlLight
@@ -461,10 +461,10 @@ Platform::String^ OrangeSpotLight::GetId()
 }
 ```
 
-<span data-ttu-id="e848c-115">Sie können dann diese Licht auf alle XAML-UIElement oder Pinsel, um sie zu beleuchten anwenden.</span><span class="sxs-lookup"><span data-stu-id="e848c-115">You can then apply this light to any XAML UIElement or Brush to light them.</span></span> <span data-ttu-id="e848c-116">Dieses Beispiel zeigt verschiedene potenzielle Verwendungen.</span><span class="sxs-lookup"><span data-stu-id="e848c-116">This example shows different potential usages.</span></span>
+<span data-ttu-id="d7583-115">Sie können dann diese Licht auf alle XAML-UIElement oder Pinsel, um sie zu beleuchten anwenden.</span><span class="sxs-lookup"><span data-stu-id="d7583-115">You can then apply this light to any XAML UIElement or Brush to light them.</span></span> <span data-ttu-id="d7583-116">Dieses Beispiel zeigt verschiedene potenzielle Verwendungen.</span><span class="sxs-lookup"><span data-stu-id="d7583-116">This example shows different potential usages.</span></span>
 
 > [!Important]
-> <span data-ttu-id="e848c-117">Für [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), entfernen Sie die zwei Vorkommen des `local:OrangeSpotLight.IsTarget="True"` aus dem Markup unten.</span><span class="sxs-lookup"><span data-stu-id="e848c-117">For [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), remove the two occurrences of `local:OrangeSpotLight.IsTarget="True"` from the markup below.</span></span> <span data-ttu-id="e848c-118">Die angefügten Eigenschaften sind bereits im Code-Behind festgelegt.</span><span class="sxs-lookup"><span data-stu-id="e848c-118">The attached properties are already set in code-behind.</span></span>
+> <span data-ttu-id="d7583-117">Für [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), entfernen Sie die zwei Vorkommen des `local:OrangeSpotLight.IsTarget="True"` aus dem Markup unten.</span><span class="sxs-lookup"><span data-stu-id="d7583-117">For [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), remove the two occurrences of `local:OrangeSpotLight.IsTarget="True"` from the markup below.</span></span> <span data-ttu-id="d7583-118">Die angefügten Eigenschaften sind bereits im Code-Behind festgelegt.</span><span class="sxs-lookup"><span data-stu-id="d7583-118">The attached properties are already set in code-behind.</span></span>
 
 ```xaml
 <StackPanel Width="100">
@@ -493,13 +493,13 @@ Platform::String^ OrangeSpotLight::GetId()
 </StackPanel>
 ```
 
-<span data-ttu-id="e848c-119">Die Ergebnisse dieser XAML-Code wie folgt aussehen.</span><span class="sxs-lookup"><span data-stu-id="e848c-119">The results of this XAML look like this.</span></span>
+<span data-ttu-id="d7583-119">Die Ergebnisse dieser XAML-Code wie folgt aussehen.</span><span class="sxs-lookup"><span data-stu-id="d7583-119">The results of this XAML look like this.</span></span>
 
 ![Beispiele für Elemente, die durch ein Xaml-Licht beleuchtet](images/orange-spot-light.png)
 
 > [!Important]
-> <span data-ttu-id="e848c-121">Die Einstellung UIElement.Lights im Markup des obigen Beispiels wird nur für Apps mit mindestens gleicher oder höherer Version des Windows10 Creators-Updates unterstützt.</span><span class="sxs-lookup"><span data-stu-id="e848c-121">Setting UIElement.Lights in markup as shown in the above example is only supported for apps with a Minimum Version equal to the Windows 10 Creators Update or later.</span></span> <span data-ttu-id="e848c-122">Für Apps, die ältere Versionen verwenden, müssen die Lichter in CodeBehind erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="e848c-122">For apps that target earlier versions, lights must be created in code-behind.</span></span>
+> <span data-ttu-id="d7583-121">Die Einstellung UIElement.Lights im Markup des obigen Beispiels wird nur für Apps mit mindestens gleicher oder höherer Version des Windows10 Creators-Updates unterstützt.</span><span class="sxs-lookup"><span data-stu-id="d7583-121">Setting UIElement.Lights in markup as shown in the above example is only supported for apps with a Minimum Version equal to the Windows 10 Creators Update or later.</span></span> <span data-ttu-id="d7583-122">Für Apps, die ältere Versionen verwenden, müssen die Lichter in CodeBehind erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="d7583-122">For apps that target earlier versions, lights must be created in code-behind.</span></span>
 
-## <a name="additional-resources"></a><span data-ttu-id="e848c-123">Weitere Ressourcen</span><span class="sxs-lookup"><span data-stu-id="e848c-123">Additional Resources</span></span>
+## <a name="additional-resources"></a><span data-ttu-id="d7583-123">Weitere Ressourcen</span><span class="sxs-lookup"><span data-stu-id="d7583-123">Additional Resources</span></span>
 
-* <span data-ttu-id="e848c-124">Erweiterte Beispiele für Benutzeroberfläche und Komposition finden Sie im [WindowsUIDevLabs-GitHub](https://github.com/microsoft/windowsuidevlabs).</span><span class="sxs-lookup"><span data-stu-id="e848c-124">Advanced UI and Composition samples in the [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs).</span></span>
+* <span data-ttu-id="d7583-124">Erweiterte Beispiele für Benutzeroberfläche und Komposition finden Sie im [WindowsUIDevLabs-GitHub](https://github.com/microsoft/windowsuidevlabs).</span><span class="sxs-lookup"><span data-stu-id="d7583-124">Advanced UI and Composition samples in the [WindowsUIDevLabs GitHub](https://github.com/microsoft/windowsuidevlabs).</span></span>
