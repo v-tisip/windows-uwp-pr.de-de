@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, Uwp, Inhalt-Gruppenzuordnung, Streaming-Installation, Uwp-App-Streaming-Installation, Quellinhalt-Gruppenzuordnung
 ms.localizationpriority: medium
 ms.openlocfilehash: 4ce32958d5a99dc9f3f772d6272450a4f2b0f81b
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4319590"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4351950"
 ---
 # <a name="create-and-convert-a-source-content-group-map"></a>Erstellen und konvertieren Sie eine Quellinhalt-Gruppenzuordnung.
 
@@ -27,7 +27,7 @@ Sie müssen eine `SourceAppxContentGroupMap.xml`-Datei erstellen, und entweder V
 
 Betrachten wir ein einfaches Szenario, in dem eine UWP-App-Streaming-Installation von Vorteil ist. 
 
-Angenommen Sie haben ein UWP-Spiel erstellt, aber die Größe der endgültigen App ist mehr als 100GB. Die soll eine lange dauern aus dem Microsoft Store herunterzuladen, was sehr umständlich sein kann. Wenn Sie sich für die UWP-App-Streaming-Installation entscheiden, können Sie die Reihenfolge angeben, in der die Dateien der App heruntergeladen werden. Indem der Benutzer dem Store anordnet, dass zunächst essenzielle Dateien heruntergeladen werden sollen, wird er Ihre App schneller ausprobieren können, während andere nicht unbedingt erforderlichen Dateien im Hintergrund heruntergeladen werden.
+Angenommen Sie haben ein UWP-Spiel erstellt, aber die Größe der endgültigen App ist mehr als 100GB. Die soll eine lange dauern aus der Microsoft Store herunterzuladen, was sehr umständlich sein kann. Wenn Sie sich für die UWP-App-Streaming-Installation entscheiden, können Sie die Reihenfolge angeben, in der die Dateien der App heruntergeladen werden. Indem der Benutzer dem Store anordnet, dass zunächst essenzielle Dateien heruntergeladen werden sollen, wird er Ihre App schneller ausprobieren können, während andere nicht unbedingt erforderlichen Dateien im Hintergrund heruntergeladen werden.
 
 > [!NOTE]
 > Die Verwendung der UWP-App-Streaming-Installation hängt stark von der Dateiorganisation Ihrer App ab. Es wird empfohlen, dass Sie sich so früh wie möglich Gedanken zum Layout des Inhalts in Bezug auf die UWP-App-Streaming-Installation machen, um das Segmentieren Ihrer App-Dateien zu vereinfachen.

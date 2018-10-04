@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: bed06d5f9f43acd5aa4ec5ff7b2b7139ad0dd26f
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4311024"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4353471"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a>Erweitern Sie Ihre Desktopanwendung mit modernen Windows-UWP-Komponenten
 
@@ -24,7 +24,7 @@ Einige Windows 10-Funktionen (z. B. eine touchfähige UI-Seite) müssen innerhal
 In vielen Fällen können Sie die UWP-APIs direkt aus Ihrer Desktopanwendung aufrufen. Bevor Sie dieses Handbuch lesen, lesen Sie [Für Windows10 verbessern](desktop-to-uwp-enhance.md).
 
 >[!NOTE]
->Dieses Handbuch wird davon ausgegangen, dass Sie ein Windows-app-Paket für Ihre Desktopanwendung erstellt haben. Wenn Sie dies noch nicht geschehen, finden Sie unter [Paket-desktopanwendungen](desktop-to-uwp-root.md).
+>Dieses Handbuch wird davon ausgegangen, dass Sie ein Windows-app-Paket für Ihre desktop-Anwendung erstellt haben. Wenn Sie dies noch nicht geschehen, finden Sie unter [Paket-desktopanwendungen](desktop-to-uwp-root.md).
 
 Wenn Sie bereit sind, lassen Sie uns starten.
 
@@ -40,7 +40,7 @@ Diese Abbildung zeigt ein Beispiel für eine Projektmappe.
 
 ![Erweitern des Startprojekts](images/desktop-to-uwp/extend-start-project.png)
 
-Wenn Ihre Lösung nicht paketprojekt enthält, finden Sie unter [Package Ihre desktop-Anwendung mit Visual Studio](desktop-to-uwp-packaging-dot-net.md).
+Wenn Ihre Projektmappe paketprojekt enthält, finden Sie unter [Package Ihrer desktop-Anwendung mit Visual Studio](desktop-to-uwp-packaging-dot-net.md).
 
 ### <a name="add-a-uwp-project"></a>Hinzufügen eines UWP-Projekts
 
@@ -85,7 +85,7 @@ Diese Abbildungzeigt eine Windows Forms-Anwendung, die eine XAML-basierte, moder
 ![adaptives Design](images/desktop-to-uwp/extend-xaml-ui.png)
 
 >[!NOTE]
->Dieses Beispiel zeigt eine XAML-UI durch ein UWP-Projekt der Projektmappe hinzufügen. Dies ist der stabil unterstützten Ansatz zum Anzeigen von XAML-Benutzeroberflächen in einer desktop-Anwendung. Die Alternative dieses Ansatzes ist mithilfe einer XAML-Insel UWP-XAML-Steuerelemente direkt an Ihre desktop-Anwendung hinzufügen. XAML-Inseln sind als Entwicklervorschau verfügbar. Obwohl wir Sie Sie diese in Ihrem eigenen Code Prototyp ausprobieren können, jetzt dazu ermutigen, empfohlen nicht, dass Sie sie in Produktionscode zu diesem Zeitpunkt verwenden. Diese APIs und Steuerelemente werden weiterhin breiter und Stabilisierung in zukünftigen Windows-Versionen. Weitere Informationen zu XAML-Inseln, finden Sie in [UWP-Steuerelemente in desktop-Apps](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
+>Dieses Beispiel zeigt eine XAML-UI durch ein UWP-Projekt der Projektmappe hinzufügen. Dies ist der stabil unterstützten Ansatz zum Anzeigen von XAML-Benutzeroberflächen in einer desktop-Anwendung. Die Alternative dieses Ansatzes ist Sie UWP-XAML-Steuerelemente mithilfe von einer XAML-Insel direkt an Ihre desktop-Anwendung hinzufügen. XAML-Inseln sind als Entwicklervorschau derzeit verfügbar ist. Obwohl wir Sie Sie diese in Ihrem eigenen Code Prototyp ausprobieren können, jetzt dazu ermutigen, empfohlen nicht, dass Sie sie in Produktionscode zu diesem Zeitpunkt verwenden. Diese APIs und Steuerelemente werden weiterhin breiter und Stabilisierung in zukünftigen Windows-Versionen. Weitere Informationen zu XAML-Inseln, finden Sie in [UWP-Steuerelemente in desktop-Apps](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
 
 ### <a name="the-design-pattern"></a>Das Entwurfsmuster
 
@@ -143,7 +143,7 @@ Fügen Sie Ihrem UWP-Projekt eine XAML-Benutzeroberfläche hinzu. Hier sehen Sie
 
 ### <a name="add-a-protocol-extension"></a>Hinzufügen einer Protokollerweiterung
 
-Klicken Sie im **Projektmappen-Explorer**öffnen Sie die Datei **"Package.appxmanifest"** des Verpackung-Projekts in Ihrer Projektmappe, und fügen Sie diese Erweiterung.
+Öffnen Sie im **Projektmappen-Explorer**die Datei **"Package.appxmanifest"** des Verpackung-Projekts in Ihrer Projektmappe und fügen Sie diese Erweiterung hinzu.
 
 ```xml
 <Extensions>
@@ -379,7 +379,7 @@ Erfahren Sie hier mehr über App-Dienste: [Erstellen und Verwenden eines App-Die
 
 Sie können Ihre Desktopanwendung als Freigabeziel einrichten, damit Benutzer einfach Daten wie Bilder aus anderen Apps freigeben können, die Freigaben unterstützen.
 
-Beispielsweise können Benutzer Ihre Anwendung Teilen von Bildern in Microsoft Edge, der Fotos-app auswählen. Hier ist eine WPF-beispielanwendung, die diese Funktion verfügt.
+Beispielsweise können Benutzer Ihre Anwendung zum Teilen von Bildern in Microsoft Edge, die Fotos-app auswählen. Hier ist eine WPF-Beispiel-Anwendung, die diese Funktion verfügt.
 
 ![Freigabeziel](images/desktop-to-uwp/share-target.png)
 
@@ -401,7 +401,7 @@ Damit einer Anwendung als Freigabeziel arbeitet, führen Sie folgende Aktionen a
 
 ### <a name="add-a-share-target-extension"></a>Hinzufügen der Freigabezielerweiterung
 
-Öffnen Sie im **Projektmappen-Explorer**die Datei **"Package.appxmanifest"** des Verpackung-Projekts in Ihrer Projektmappe und fügen Sie die Erweiterung.
+Öffnen Sie im **Projektmappen-Explorer**die Datei **"Package.appxmanifest"** des Verpackung-Projekts in Ihrer Projektmappe und fügen Sie die Erweiterung hinzu.
 
 ```xml
 <Extensions>
@@ -450,7 +450,7 @@ protected override async void OnNavigatedTo(NavigationEventArgs e)
 
 Sie fügen eine Hintergrundaufgaben hinzu, um selbst dann App-Code auszuführen, wenn die App angehalten wurde. Hintergrundaufgaben sind ideal für kleine Aufgaben, die keine Benutzerinteraktion erfordern. Beispielsweise kann Ihre Aufgabe E-Mails herunterladen, eine Popupbenachrichtigung über eine eingehende Chatnachricht zeigen oder auf eine Änderung in einer Systembedingung reagieren.
 
-Hier ist eine WPF-beispielanwendung, die eine Hintergrundaufgabe registriert.
+Hier ist eine WPF-Beispiel-Anwendung, die eine Hintergrundaufgabe registriert.
 
 ![hintergrundaufgabe](images/desktop-to-uwp/sample-background-task.png)
 

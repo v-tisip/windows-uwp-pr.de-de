@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a43f3b4c5684d93ea6986c4d1f1e4dae46c1a959
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315216"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4357339"
 ---
 # <a name="guidance-for-app-package-management"></a>Leitfaden für die Verwaltung von App-Paketen
 
@@ -77,7 +77,7 @@ Beachten Sie zudem, dass diese Beispiel-App kein Paket enthält, das auf Windows
 |--------------------------------------|----------------------------------------------|
 | Windows10 (universelle Gerätefamilie) | Windows10 (alle Gerätefamilien)             |
 
-In der Beispiel-App4 können Geräte unter Windows10 die App abrufen. Sie steht jedoch nicht für Kunden einer früheren Betriebssystemversion zur Verfügung. Da das UWP-Paket die universelle Gerätefamilie ausgerichtet ist, wird es für Windows 10-Geräten (pro [Gerät gerätefamilienverfügbarkeit Auswahl](device-family-availability.md)) zur Verfügung.
+In der Beispiel-App4 können Geräte unter Windows10 die App abrufen. Sie steht jedoch nicht für Kunden einer früheren Betriebssystemversion zur Verfügung. Da das UWP-Paket die universelle Gerätefamilie ausgerichtet ist, wird es für alle Windows 10-Gerät (pro [Gerät gerätefamilienverfügbarkeit Auswahl](device-family-availability.md)) zur Verfügung.
 
 
 ## <a name="removing-an-app-from-the-store"></a>Entfernen einer App aus dem Store
@@ -115,6 +115,6 @@ Wenn Sie eine app im Store verfügen, das nur Pakete für Windows 8.x und/oder W
 > [!NOTE]
 > Nachdem ein Kunde unter Windows 10 das UWP-Paket erhalten hat, können Sie für diesen Kunden kein Rollback für eine frühere Betriebssystemversion mehr ausführen. 
 
-Beachten Sie, dass die Versionsnummer des Ihrer Windows 10-Pakete höher sein als die für alle Windows 8, Windows 8.1 und/oder Windows Phone 8.1-Pakete muss, die Sie verwendet haben. Weitere Informationen finden Sie unter [Paketversionsnummern](package-version-numbering.md).
+Beachten Sie, dass die Versionsnummer des Ihrer Windows 10-Pakete höher sein als die für alle Windows 8, Windows 8.1 und/oder Windows Phone 8.1-Pakete werden muss, die Sie verwendet haben. Weitere Informationen finden Sie unter [Paketversionsnummern](package-version-numbering.md).
 
 Weitere Informationen zum Verpacken von UWP-Apps für den Store finden Sie unter [Verpacken von Apps](../packaging/index.md).

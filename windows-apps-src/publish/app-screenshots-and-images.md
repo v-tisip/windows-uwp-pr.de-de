@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Trailer, Video, Screenshot, Bild, Symbol, Store-Eintrag, Store-Eintragsbilder
 ms.localizationpriority: medium
 ms.openlocfilehash: d787ac620f9d0114d67d85def758416afd9f5f15
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4312896"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4355715"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>App-Screenshots, -Bilder und -Trailer
 
@@ -85,13 +85,13 @@ Dieses Bild kann auf verschiedenen Store-Seiten für Windows10 angezeigt werden 
 
 Dieses Bild ist für die ordnungsgemäße Anzeige auf Windows Phone8.1 und früheren Versionen erforderlich. Wenn Ihre App Windows Phone8.1 und frühere Versionen unterstützt und Sie dieses Bild nicht bereitstellen, sehen Kunden im Eintrag für Ihre App ein leeres Symbol. (Dies gilt auch für Kunden unter Windows10, wenn Ihre App nur Pakete für Windows Phone8.1 oder frühere Versionen enthält.) Wenn Ihre Übermittlung *nur* UWP-Pakete enthält, müssen Sie dieses Bild nicht bereitstellen. (Beachten Sie Folgendes: Wenn Ihre Übermittlung sowohl Windows Phone8.x-Pakete als auch UWP-Pakete enthält und Sie dieses Bild bereitstellen, kann es unter Windows10 in bestimmten Store-Layouts verwendet werden. Wenn Sie dies verhindern möchten, können Sie einen [plattformspezifischen Eintrag](create-platform-specific-store-listings.md) für die Windows Phone-Versionen erstellen, den Ihre App unterstützt, und nur das Symbol für die App-Kachel aufnehmen.
 
-### <a name="display-only-uploaded-logo-images-in-the-store"></a>Anzeige hochgeladen nur Logos im Store
+### <a name="display-only-uploaded-logo-images-in-the-store"></a>Anzeige nur hochgeladen Logo Bilder im Store.
 
-Sie haben die Möglichkeit zum verhindern, dass den Store die Logos in den Paketen Ihrer app zu verwenden, wenn Ihr Angebot für Kunden unter Windows 10 (einschließlich Xbox) angezeigt, und stattdessen der Store muss nur Bilder verwenden, die Sie hochladen. Dies bietet Ihnen mehr Kontrolle über die Darstellung Ihrer App in verschiedenen Anzeigen im Store für Kunden auf Windows 10 (einschließlich Xbox). (Wenn Ihr Produkt für frühere Betriebssystemversionen unterstützt, können diese Kunden weiterhin Bilder aus der verpackt werden, finden Sie unter auch dann, wenn Sie diese Option verwenden.)
+Sie haben die Möglichkeit, zu verhindern, dass des Stores die Logobilder in den Paketen Ihrer app, wenn Ihr Angebot für Kunden unter Windows 10 (einschließlich Xbox) angezeigt, und stattdessen der Store muss nur Bilder verwenden, die Sie hochladen. Dies bietet Ihnen mehr Kontrolle über die Darstellung Ihrer App in verschiedenen Anzeigen im Store für Kunden auf Windows 10 (einschließlich Xbox). (Wenn Ihr Produkt für frühere Betriebssystemversionen unterstützt, können diese Kunden weiterhin Bilder aus Ihrer Pakete, siehe auch dann, wenn Sie diese Option verwenden.)
 
-Der Store verwendet nur die Bilder, die Sie hochladen, (für Kunden unter Windows 10, einschließlich Xbox), und keine Bilder von Ihren Paketen verwenden, aktivieren Sie das Kontrollkästchen mit der Bezeichnung **für Kunden unter Windows 10 und Xbox muss, anzeigen hochgeladen Logo Images INSTEAD das Bild aus der meine Pakete **.
+Den Store verwendet nur die Bilder, die Sie hochladen, (für Kunden unter Windows 10, einschließlich Xbox), und keine Bilder aus Ihrer Pakete verwenden, aktivieren Sie das Kontrollkästchen mit der Bezeichnung **für Kunden unter Windows 10 und Xbox haben, anzeigen hochgeladen Logo Images INSTEAD die Bilder aus meiner Paketen **.
 
-Wenn Sie dieses Kontrollkästchen aktivieren, wird ein neuer Abschnitt namens **Store Bilder anzeigen** angezeigt. Hier können Sie 3 Bilder, u. a. die **1:1-app-Kachel Symbol (300 x 300 Pixel)** (Wenn Sie das Kontrollkästchen, das Feld zum Bereitstellen, dass das Bild in diesem Abschnitt verschoben) hochladen. Es wird empfohlen, alle drei Bildgrößen bereitzustellen, wenn Sie diese Option verwenden: 300 x 300, 150 x 150 und 71 x 71 Pixel. Es ist jedoch nur die Größe 300 x 300 erforderlich.
+Wenn Sie dieses Kontrollkästchen aktivieren, wird ein neuer Abschnitt namens **Store Bilder anzuzeigen** . Hier können Sie 3 Bilder, u. a. die **1:1-app-Kachel Symbol (300 x 300 Pixel)** (Wenn Sie das Kontrollkästchen, das Feld zum Bereitstellen, dass das Bild in diesem Abschnitt verschoben) hochladen. Es wird empfohlen, alle drei Bildgrößen bereitzustellen, wenn Sie diese Option verwenden: 300 x 300, 150 x 150 und 71 x 71 Pixel. Es ist jedoch nur die Größe 300 x 300 erforderlich.
 
 
 <span id="promotional-images" />

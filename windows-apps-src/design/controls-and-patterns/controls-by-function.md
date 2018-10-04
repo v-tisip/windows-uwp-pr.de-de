@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0840bab2e039ec55ea4070f8dad39c0ae4e74bbc
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4309756"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4354677"
 ---
 # <a name="controls-by-function"></a>Steuerelemente nach Funktion
 
@@ -559,7 +559,7 @@ Eine anpassungsfähige Container und flexible Navigationsmodell, der im linken N
 
 Referenz: [NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 
-Design und Vorgehensweise: [Feldsteuerelement NavigationView](navigationview.md)
+Design und Vorgehensweise: [Handbuch für NavigationView-Steuerelement](navigationview.md)
 
 ### <a name="splitview"></a>SplitView
 

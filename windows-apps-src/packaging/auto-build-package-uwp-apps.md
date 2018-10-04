@@ -11,11 +11,11 @@ keywords: Windows10, UWP
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
 ms.openlocfilehash: 7492f9d4fc2111880f27dcb6a48eff3ad0ccd315
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4320228"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4351333"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Einrichten automatisierter Builds für UWP-Apps
 
@@ -316,17 +316,17 @@ Sie müssen diesen Build manuell aktivieren. Sie können ihn zum Aktualisieren v
 
 Wenn Sie Ihre App verteilen möchten, ohne sie im Store zu veröffentlichen, können Sie die App direkt auf Geräte querladen, solange die Geräte das Zertifikat, das zum Signieren des App-Pakets verwendet wurde, als vertrauenswürdig ansehen. 
 
-Verwenden Sie zum Installieren von Apps das PowerShell-Skript `Add-AppDevPackage.ps1`. Dieses Skript wird fügt das Zertifikat im Abschnitt vertrauenswürdige Stammzertifizierungsstellen des lokalen Computers hinzu und dann installiert oder aktualisieren die app-Paketdatei.
+Verwenden Sie zum Installieren von Apps das PowerShell-Skript `Add-AppDevPackage.ps1`. Dieses Skript wird fügt das Zertifikat im Abschnitt vertrauenswürdige Stammzertifizierungsstellen des lokalen Computers hinzu und dann installiert oder aktualisieren Sie die app-Paketdatei.
 
 #### <a name="sideloading-your-app-with-the-windows-10-anniversary-update"></a>Querladen einer App mit dem Windows10 Anniversary Update
-In Windows 10 Anniversary Update können Sie auf die app-Paket-Datei doppelklicken und Ihre app durch Auswählen der Schaltfläche "installieren" in einem Dialogfeld installieren. 
+In Windows 10 Anniversary Update können Sie doppelklicken Sie auf die app-Paketdatei und Ihre app installieren, indem Sie die Schaltfläche "installieren" in einem Dialogfeld auswählen. 
 
 ![Querladen in rs1](images/building-screen18.png) 
 
 >[!NOTE]
 > Durch diese Methode werden keine Zertifikate oder zugehörigen Abhängigkeiten installiert.
 
-Wenn Sie Ihre Windows-app-Pakete von einer Website wie VSTS oder HockeyApp verteilen möchten, müssen Sie diese der Liste vertrauenswürdiger Websites in Ihrem Browser hinzufügen. Andernfalls wird die Datei von Windows als gesperrt markiert. 
+Wenn Sie Ihre Windows-app-Pakete von einer Website wie VSTS oder HockeyApp verteilen möchten, müssen Sie diese Website der Liste vertrauenswürdiger Websites in Ihrem Browser hinzufügen. Andernfalls wird die Datei von Windows als gesperrt markiert. 
 
 <span id="certificates-best-practices"/>
 

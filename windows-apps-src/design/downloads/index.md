@@ -11,11 +11,11 @@ ms.technology: uwp
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.openlocfilehash: 88a07db357125d3f9cb35a5e133e9b0add350069
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4319710"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4351262"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Design-Toolkits und Beispiele für UWP-Apps
  
@@ -96,7 +96,7 @@ Diese Toolkits bieten Steuerelemente und Layout-Vorlagen für das Design von UWP
         <a href="http://go.microsoft.com/fwlink/p/?LinkId=760394"><img src="images/tile-icon-generator.png" alt="Download the tile and icon generator"/></a>
     :::column-end:::
     :::column span="2":::
-      **Kachel- und Symbolgenerator für Adobe Photoshop** Dieser Satz von Aktionen für Adobe Photoshop generiert die 68 empfohlenen Kacheln und Symbole Ressourcen aus nur 7 Dateien. <br/><a href="http://go.microsoft.com/fwlink/p/?LinkId=760394">Kachel- und Symbolgenerator herunterladen</a></p>
+      **Kachel- und Symbolgenerator für Adobe Photoshop** Dieser Satz von Aktionen für Adobe Photoshop werden die 68 empfohlenen Kacheln und Symbole aus nur 7-Dateien. <br/><a href="http://go.microsoft.com/fwlink/p/?LinkId=760394">Kachel- und Symbolgenerator herunterladen</a></p>
     :::column-end:::
 :::row-end:::
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Märkte, Länder, Regionen
 ms.localizationpriority: medium
 ms.openlocfilehash: dd8cdb1f69a9a8a73700483f04d17f64de337347
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315180"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4357384"
 ---
 # <a name="define-market-selection"></a>Festlegen der Marktauswahl
 
@@ -50,7 +50,7 @@ Außerdem sehen Sie ein Kontrollkästchen, mit dem Sie angeben können, ob Ihre 
 
 ## <a name="microsoft-store-consumer-markets"></a>Microsoft Store-verbrauchermärkte
 
-Sie können Ihre App (oder Ihr Add-On) für mindestens einen der folgenden Märkte eintragen. Die Märkte mit einem Sternchen unterstützen den Microsoft Store auf Xbox One. Sie sehen die **Xbox** neben den Namen im **marktauswahl** Popup-Fenster.
+Sie können Ihre App (oder Ihr Add-On) für mindestens einen der folgenden Märkte eintragen. Die Märkte mit einem Sternchen unterstützen den Microsoft Store auf Xbox One. **Xbox** neben den Namen im **marktauswahl** Popup-Fenster angezeigt.
 
 
 <table>

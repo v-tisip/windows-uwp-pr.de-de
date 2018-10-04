@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Hintergrundaufgabe, für die
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e5db1e03ac86768e2b1b1181cd2cc416a151a80
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4318306"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4352124"
 ---
 # <a name="support-your-app-with-background-tasks"></a>Unterstützen Ihrer App mit Hintergrundaufgaben
 
@@ -30,12 +30,12 @@ Ab Windows 10 (Version 1607) ist die Wiedergabe von Audio im Hintergrund sehr vi
 
 Es gibt zwei Ansätze für das Implementieren von Hintergrundaufgaben:
 
-* In-Process: die app und der Hintergrundprozess ausgeführt, im gleichen Prozess
-* Out-of-Process-: die app und der Hintergrundprozess in separaten Prozessen ausgeführt.
+* In-Process: die app und ihr Hintergrundprozess ausgeführt, im gleichen Prozess
+* Out-of-Process: die app und der Hintergrundprozess in separaten Prozessen ausgeführt.
 
 Die Unterstützung für Hintergrundaufgaben innerhalb von Prozessen wurde mit Windows 10 (Version 1607) eingeführt, um das Schreiben von Hintergrundaufgaben zu vereinfachen. Es ist jedoch weiterhin möglich, Hintergrundaufgaben außerhalb von Prozessen zu schreiben. Unter [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md) finden Sie Empfehlungen dazu, wann Sie eine Hintergrundaufgabe innerhalb eines Prozesses und wann außerhalb eines Prozesses schreiben sollten.
 
-Out-of-Process-Hintergrundaufgaben sind stabiler, da der Hintergrundprozess Ihren app-Prozess Ausfall bringen kann, wenn ein Fehler auftritt. Höhere Stabilität geht jedoch mit einer höheren Komplexität der zum Verwalten der prozessübergreifenden Kommunikation zwischen der app und die Hintergrundaufgabe.
+Out-of-Process-Hintergrundaufgaben sind stabiler, da der Hintergrundprozess Ihren app-Prozess Ausfall bringen kann, wenn ein Fehler auftritt. Höhere Stabilität geht jedoch zum Preis von komplexeren zum Verwalten der prozessübergreifenden Kommunikation zwischen der app und die Hintergrundaufgabe.
 
 Out-of-Process-Hintergrundaufgaben werden als einfache Klassen implementiert, die [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794) -Schnittstelle implementieren, die das Betriebssystem in einem separaten Prozess (backgroundtaskhost.exe) ausführt. Registrieren einer Hintergrundaufgabe mithilfe der [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768) -Klasse. Der Klassenname wird beim Registrieren der Hintergrundaufgabe zum Angeben des Einstiegspunkts verwendet.
 
@@ -77,9 +77,9 @@ Weitere Informationen finden Sie unter [Reagieren auf Systemereignisse mit Hinte
 
 Fügen Sie die **InternetAvailable**-Bedingung zur Hintergrundaufgabe [BackgroundTaskBuilder.AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) hinzu, um die Hintergrundaufgabe zu verzögern, bis der Netzwerkstapel ausgeführt wird. Dies spart Energie, da die Hintergrundaufgabe nicht ausgeführt, bis das Netzwerk verfügbar ist. Diese Bedingung stellt keine Aktivierung in Echtzeit bereit.
 
-Wenn die Hintergrundaufgabe Netzwerkkonnektivität erforderlich ist, legen Sie [IsNetworkRequested](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) , um sicherzustellen, dass das Netzwerk während der Ausführung der Hintergrundaufgabe unterbrechungsfreie fest. Dies weist die Infrastruktur für Hintergrundaufgaben an, die Netzwerkverbindung für die Ausführung der Aufgabe auch dann beizubehalten, wenn sich das Gerät im verbundenen Standbymodus befindet. Wenn die Hintergrundaufgabe nicht **IsNetworkRequested**festgelegt wird, klicken Sie dann kann die Hintergrundaufgabe nicht Zugriff auf das Netzwerk, wenn sich dieses im verbundenen Standbymodus befindet (z. B., wenn der Bildschirm eines Smartphones ausgeschaltet ist).
+Wenn Ihre Hintergrundaufgabe Netzwerkkonnektivität erforderlich ist, legen Sie [IsNetworkRequested](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) , um sicherzustellen, dass das Netzwerk während der Ausführung der Hintergrundaufgabe unterbrechungsfreie. Dies weist die Infrastruktur für Hintergrundaufgaben an, die Netzwerkverbindung für die Ausführung der Aufgabe auch dann beizubehalten, wenn sich das Gerät im verbundenen Standbymodus befindet. Wenn die Hintergrundaufgabe nicht **IsNetworkRequested**festgelegt wird, dann kann die Hintergrundaufgabe nicht zum Zugriff auf das Netzwerk, wenn sich dieses im verbundenen Standbymodus befindet (z. B., wenn der Bildschirm eines Smartphones ausgeschaltet ist).
  
-Weitere Informationen zu hintergrundaufgabenbedingungen finden Sie unter [Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe](set-conditions-for-running-a-background-task.md).
+Weitere Informationen zu Bedingungen für Hintergrundaufgaben finden Sie unter [Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe](set-conditions-for-running-a-background-task.md).
 
 ## <a name="application-manifest-requirements"></a>App-Manifestanforderungen
 
@@ -183,7 +183,7 @@ Hintergrundaufgaben können mit Ereignissen und lokalem Speicher Fortschritt, Be
 
 * [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md)
 * [Zugreifen auf Sensoren und Geräte von einer Hintergrundaufgabe](access-sensors-and-devices-from-a-background-task.md)
-* [Erstellen und Registrieren einer Hintergrundaufgabe innerhalb von Prozessen](create-and-register-an-inproc-background-task.md)
+* [Erstellen und Registrieren einer In-Process-Hintergrundaufgabe](create-and-register-an-inproc-background-task.md)
 * [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb des Prozesses](create-and-register-a-background-task.md)
 * [Konvertieren einer Out-of-Process-Hintergrundaufgabe in eine In-Process-Hintergrundaufgabe](convert-out-of-process-background-task.md)
 * [Debuggen einer Hintergrundaufgabe](debug-a-background-task.md)
@@ -196,9 +196,9 @@ Hintergrundaufgaben können mit Ereignissen und lokalem Speicher Fortschritt, Be
 * [Registrieren einer Hintergrundaufgabe](register-a-background-task.md)
 * [Reagieren auf Systemereignisse mit Hintergrundaufgaben](respond-to-system-events-with-background-tasks.md)
 * [Ausführen einer Hintergrundaufgabe für einen Timer](run-a-background-task-on-a-timer-.md)
-* [Ausführen einer Hintergrundaufgabe, wenn Ihre UWP-App aktualisiert wird](run-a-background-task-during-updatetask.md)
+* [Ausführen einer Hintergrundaufgabe beim Aktualisieren der UWP-App](run-a-background-task-during-updatetask.md)
 * [Unbegrenzte Ausführung im Hintergrund](run-in-the-background-indefinetly.md)
 * [Festlegen von Bedingungen zum Ausführen einer Hintergrundaufgabe](set-conditions-for-running-a-background-task.md)
-* [Auslösen einer Hintergrundaufgabe in Ihrer App](trigger-background-task-from-app.md)
+* [Auslösen einer Hintergrundaufgabe in der App](trigger-background-task-from-app.md)
 * [Aktualisieren einer Live-Kachel über eine Hintergrundaufgabe](update-a-live-tile-from-a-background-task.md)
 * [Verwenden eines Wartungsauslösers](use-a-maintenance-trigger.md)

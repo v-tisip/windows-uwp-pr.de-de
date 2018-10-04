@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Hintergrundaufgabe, app-Dienst verbundene Geräte, remote-Systemen
 ms.localizationpriority: medium
 ms.openlocfilehash: d4aa5a4f379e0791e9da7db4ecd2a27c09cf0a3a
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4309350"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4356795"
 ---
 # <a name="launching-resuming-and-background-tasks"></a>Starten, Fortsetzen und Hintergrundaufgaben
 
@@ -102,7 +102,7 @@ Im Abschnitt [Hintergrundaufgaben](support-your-app-with-background-tasks.md) er
 | [Zugreifen auf Sensoren und Geräte mittels einer Hintergrundaufgabe](access-sensors-and-devices-from-a-background-task.md)   | [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) ermöglicht Ihrer universellen Windows-App, im Hintergrund auf Sensoren und Peripheriegeräte zuzugreifen, selbst dann, wenn die Vordergrund-App angehalten wurde. |
 | [Erstellen und Registrieren einer In-Process-Hintergrundaufgabe](create-and-register-an-inproc-background-task.md)       | Erstellen und registrieren Sie eine Hintergrundaufgabe, die im gleichen Prozess wie die Vordergrund-App ausgeführt wird. |
 | [Erstellen und Registrieren einer Out-of-Process-Hintergrundaufgabe](create-and-register-a-background-task.md)           | Erstellen und registrieren Sie eine Hintergrundaufgabe, die in einem von Ihrer App getrennten Prozess ausgeführt wird, und registrieren Sie sie für die Ausführung, wenn sich die App nicht im Vordergrund befindet. |
-| [Portieren einer Out-of-Process-Hintergrundaufgabe in eine in-Process-Hintergrundaufgabe](convert-out-of-process-background-task.md) | Hier erfahren Sie, wie Sie eine Out-of-Process-Hintergrundaufgabe in eine in-Process-Hintergrundaufgabe zu portieren, die im gleichen Prozess wie die Vordergrund-app ausgeführt wird.|
+| [Portieren einer Out-of-Process Hintergrundaufgabe in eine In-Process-Hintergrundaufgabe](convert-out-of-process-background-task.md) | Hier erfahren Sie, wie Sie eine Out-of-Process-Hintergrundaufgabe in eine in-Process-Hintergrundaufgabe zu portieren, die im gleichen Prozess wie die Vordergrund-app ausgeführt wird.|
 | [Debuggen einer Hintergrundaufgabe](debug-a-background-task.md)                                                       | Erfahren Sie, wie Sie eine Hintergrundaufgabe (einschließlich Hintergrundaufgabenaktivierung und Debugablaufverfolgung) im Windows-Ereignisprotokoll debuggen. |
 | [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md) | Sie können die Verwendung von Hintergrundaufgaben aktivieren, indem Sie diese im App-Manifest als Erweiterungen deklarieren. |
 | [Registrieren von Gruppen-Hintergrundaufgaben](group-background-tasks.md)                                             | Isolieren der Registrierung von Hintergrundaufgaben mit Gruppen. |

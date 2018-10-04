@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 2c78f5f43d93002b90902a7f9e5a943c7239946c
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4316436"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4354272"
 ---
 # <a name="handle-a-cancelled-background-task"></a>Behandeln einer abgebrochenen Hintergrundaufgabe
 
@@ -31,7 +31,7 @@ ms.locfileid: "4316436"
 
 Hier erfahren Sie, wie Sie eine Hintergrundaufgabe erstellen, die mithilfe des beständigen Speichers Abbruchanforderungen erkennt, die Ausführung beendet und den Abbruch an die App meldet.
 
-In diesem Thema wird davon ausgegangen, dass Sie bereits erstellt, haben eine hintergrundaufgabenklasse, einschließlich der **Run** -Methode, die als Einstiegspunkt der Hintergrundaufgabe verwendet wird. Um schnell mit dem Erstellen einer Hintergrundaufgabe zu beginnen, lesen Sie [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb von Prozessen](create-and-register-a-background-task.md) oder [Erstellen und Registrieren einer Hintergrundaufgabe innerhalb von Prozessen](create-and-register-an-inproc-background-task.md). Ausführlichere Informationen zu Bedingungen und Triggern finden Sie unter [Unterstützen der App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md).
+In diesem Thema wird davon ausgegangen, dass Sie bereits erstellt, verfügen über eine hintergrundaufgabenklasse, einschließlich der **Run** -Methode, die als Einstiegspunkt der Hintergrundaufgabe verwendet wird. Um schnell mit dem Erstellen einer Hintergrundaufgabe zu beginnen, lesen Sie [Erstellen und Registrieren einer Hintergrundaufgabe außerhalb von Prozessen](create-and-register-a-background-task.md) oder [Erstellen und Registrieren einer Hintergrundaufgabe innerhalb von Prozessen](create-and-register-an-inproc-background-task.md). Ausführlichere Informationen zu Bedingungen und Triggern finden Sie unter [Unterstützen der App mit Hintergrundaufgaben](support-your-app-with-background-tasks.md).
 
 Dieses Thema gilt auch für Hintergrundaufgaben innerhalb von Prozessen. Aber anstatt die Methode **ausgeführt** , ersetzen Sie **OnBackgroundActivated**. Hintergrundaufgaben innerhalb von Prozessen benötigen keinen beständigen Speicher, um den Abbruch zu signalisieren, da dieser mithilfe des App-Status übermittelt werden kann, wenn die Hintergrundaufgabe im selben Prozess ausgeführt wird, wie die Vordergrund-App.
 
@@ -181,7 +181,7 @@ else
 ```
 
 > [!NOTE]
-> Das oben gezeigte Codebeispiel verwendet die [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797). [**Status**](https://msdn.microsoft.com/library/windows/apps/br224800) -Eigenschaft verwendet wird, um der Fortschritt der Hintergrundaufgabe zu notieren. Der Fortschritt wird der App mithilfe der [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782)-Klasse gemeldet.
+> Das oben gezeigte Codebeispiel verwendet die [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797). [**Status**](https://msdn.microsoft.com/library/windows/apps/br224800) -Eigenschaft, die zum Aufzeichnen der Fortschritt der Hintergrundaufgabe verwendet wird. Der Fortschritt wird der App mithilfe der [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782)-Klasse gemeldet.
 
 Ändern Sie die **Run** -Methode, damit nach dem Anhalten der Arbeit aufzeichnet, ob die Aufgabe ausgeführt oder abgebrochen wurde. Dieser Schritt gilt für Hintergrundaufgaben außerhalb von Prozessen, da eine Möglichkeit für die Kommunikation zwischen Prozessen haben müssen, wenn die Hintergrundaufgabe abgebrochen wurde. Für Hintergrundaufgaben innerhalb von Prozessen können Sie den Status einfach mit der Anwendung teilen, um anzugeben, dass die Aufgabe abgebrochen wurde.
 
@@ -265,7 +265,7 @@ Zur Veranschaulichung zeigt der Beispielcode nur Teile der **Run** -Methode (und
 
 ## <a name="run-method-example"></a>Beispiel der Run-Methode
 
-Die vollständige **Run** -Methode und den timerrückruf-Code, aus dem [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) sind unten aufgeführt, für den Kontext.
+Die vollständige **Run** -Methode und den timerrückruf-Code, der aus dem [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) sind unten aufgeführt, für den Kontext.
 
 ```csharp
 // The Run method is the entry point of a background task.

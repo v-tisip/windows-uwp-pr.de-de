@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Hintergrundaufgabe, für die
 ms.localizationpriority: medium
 ms.openlocfilehash: f68c20a545e09d81912b8ef9a97a0ab0237ed0e0
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315782"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4355595"
 ---
 # <a name="debug-a-background-task"></a>Debuggen einer Hintergrundaufgabe
 
@@ -105,7 +105,7 @@ Wenn eine App mit Hintergrundaufgaben mit Visual Studio bereitgestellt wird und 
 -   Wenn für die Hintergrundaufgabe der Zugriff auf den Sperrbildschirm erforderlich ist, müssen Sie dafür sorgen, dass die App auf dem Sperrbildschirm platziert wird, bevor Sie versuchen, die Hintergrundaufgabe zu debuggen. Weitere Informationen zum Angeben von Manifestoptionen für sperrbildschirmfähige Apps finden Sie unter [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md).
 -   Parameter für die Registrierung von Hintergrundaufgaben werden zum Zeitpunkt der Registrierung überprüft. Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben. Stellen Sie sicher, dass Ihre App problemlos mit Szenarien ohne erfolgreiche Registrierung von Hintergrundaufgaben zurechtkommt. Andernfalls stürzt die App unter Umständen ab, wenn sie so konzipiert ist, dass nach dem Versuch, eine Aufgabe zu registrieren, ein gültiges Registrierungsobjekt vorhanden sein muss.
 
-Weitere Informationen zum Debuggen einer Hintergrundaufgabe mit VS finden Sie [Anleitungen zum Auslösen von anhalte-, fortsetzungs- und hintergrundereignissen in UWP-apps](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx).
+Weitere Informationen zum Debuggen einer Hintergrundaufgabe mit VS finden Sie [Anleitungen zum Auslösen anhalte-, fortsetzungs- und hintergrundereignissen in UWP-apps](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx).
 
 ## <a name="related-topics"></a>Verwandte Themen
 
@@ -114,7 +114,7 @@ Weitere Informationen zum Debuggen einer Hintergrundaufgabe mit VS finden Sie [A
 * [Registrieren einer Hintergrundaufgabe](register-a-background-task.md)
 * [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md)
 * [Richtlinien für Hintergrundaufgaben](guidelines-for-background-tasks.md)
-* [Anleitungen zum Auslösen von anhalte-, fortsetzungs- und hintergrundereignissen in UWP-apps](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx)
+* [Anleitungen zum Auslösen anhalte-, fortsetzungs- und hintergrundereignissen in UWP-apps](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx)
 * [Analysieren der Codequalität von UWP-apps mit der Codeanalyse von Visual Studio](https://msdn.microsoft.com/library/windows/apps/xaml/hh441471.aspx)
 
  

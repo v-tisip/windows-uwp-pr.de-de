@@ -1,6 +1,6 @@
 ---
 author: eliotcowley
-title: Verwenden Sie einen Software-trigger
+title: Verwenden eines Software-Triggers
 description: Hier erfahren Sie, wie Sie den Vorgang der Überprüfung von Software zu steuern.
 ms.author: elcowle
 ms.date: 08/29/2018
@@ -10,13 +10,13 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Point of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: ddd8ec979cb6d5a72b48b9b8b6a60adb73c35657
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4318208"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4361005"
 ---
-# <a name="use-a-software-trigger"></a>Verwenden Sie einen Software-trigger
+# <a name="use-a-software-trigger"></a>Verwenden eines Software-Triggers
 
 Es kann hilfreich sein, den Vorgang der Überprüfung von Software zu steuern, wenn Sie einen Strichcodescanner im Präsentationsmodus verwenden oder wenn der Scanner nicht über einen physischen Trigger wie einen Kamera-basierten Strichcodescanner verfügt. Sie können den Überprüfungsvorgang initiieren, indem Sie [StartSoftwareTriggerAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.startsoftwaretriggerasync#Windows_Devices_PointOfService_ClaimedBarcodeScanner_StartSoftwareTriggerAsync) aufrufen.
 
@@ -33,7 +33,7 @@ Legen Sie den gewünschten Wert der [IsDisabledOnDataReceived](https://docs.micr
 > [!Important]
 > Stellen Sie sicher, dass Ihre Strichcodescanner die Verwendung des Software-Trigger unterstützt, indem Sie zunächst die Eigenschaft [IsSoftwareTriggerSupported](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannercapabilities.issoftwaretriggersupported#Windows_Devices_PointOfService_BarcodeScannerCapabilities_IsSoftwareTriggerSupported) überprüfen.
 
-Das folgende Beispiel zeigt, wie zum Initiieren der Überprüfung mit einem Software-Trigger, der Überprüfung, nachdem sie einen Strichcode scannt beendet wird:
+Das folgende Beispiel zeigt, wie zum Initiieren der Überprüfung mithilfe eines Software-Triggers, der Überprüfung, nachdem sie einen Strichcode scannt beendet wird:
 
 ```cs
 private void SoftwareTrigger(BarcodeScanner barcodeScanner, ClaimedBarcodeScanner claimedBarcodeScanner) 

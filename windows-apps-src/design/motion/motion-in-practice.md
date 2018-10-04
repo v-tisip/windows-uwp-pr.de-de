@@ -15,11 +15,11 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 6001f955b3ab6a60446eb84296dc3bc52ad3a99e
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315826"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4361335"
 ---
 # <a name="bringing-it-together"></a>Alles zusammenführen
 
@@ -83,9 +83,9 @@ Im Folgenden finden Sie 3 Möglichkeiten, die Grundlagen für fließende Bewegun
 
 ## <a name="implicit-animations"></a>Implizite Animationen
 
-> **Vorschau**: implizite Animation ist der [neuesten Windows 10 Insider Preview-Build und SDK](https://insider.windows.com/for-developers/)erforderlich.
+> **Vorschau**: implizite Animation erfordert die [neuesten Windows 10 Insider Preview-Build und SDK](https://insider.windows.com/for-developers/).
 
-Implizite Animationen sind eine einfache Möglichkeit, Fluent-Bewegungen zu erreichen, indem Sie automatisch zwischen der alte und neue Werte bei einem Parameter interpoliert.
+Implizite Animationen sind eine einfache Möglichkeit, fließende Bewegung zu erzielen, indem Sie automatisch zwischen dem alte und neue Werte während einer Parameter interpoliert.
 
 Sie können implizit animieren, Änderungen an die folgenden Eigenschaften:
 
@@ -98,7 +98,7 @@ Sie können implizit animieren, Änderungen an die folgenden Eigenschaften:
 - [Rahmen](/uwp/api/windows.ui.xaml.controls.border), [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter)oder [Panel](/uwp/api/windows.ui.xaml.controls.panel)
   - **Hintergrund**
 
-Jede Eigenschaft, die Änderungen, die implizit animiert haben können hat eine entsprechende _Übergang_ -Eigenschaft. Um die Eigenschaft zu animieren, weisen Sie ein anderes Übergang auf die entsprechende _Übergang_ -Eigenschaft. In der folgenden Tabelle zeigt die Eigenschaften der _Übergang_ und Übergang Typs, der für jede Datei verwendet.
+Jede Eigenschaft, die Änderungen, die implizit animiert haben können verfügt über eine entsprechende _Übergang_ -Eigenschaft. Um die Eigenschaft zu animieren, wird die entsprechende Eigenschaft für den _Übergang_ ein Übergang zuweisen. In der folgenden Tabelle zeigt die Eigenschaften der _Übergang_ und Übergang Typs, der für jede Datei verwendet.
 
 | Animierten Eigenschaft | Übergang-Eigenschaft | Implizite Übergangstyp |
 | -- | -- | -- |

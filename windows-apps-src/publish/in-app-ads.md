@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 83c4645a09a38a76dfd230436e858e222d817eab
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4319690"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4361073"
 ---
 # <a name="in-app-ads"></a>In-App-Anzeigen
 
@@ -38,7 +38,7 @@ So erstellen Sie eine Anzeigeeinheit für eine [Banneranzeige](../monetize/banne
 4.  Wählen Sie in der Dropdownliste **Art der Anzeigeneinheit** den Anzeigentyp aus.
 
     * Wenn Sie eine Banneranzeige in Ihrer app angezeigt werden, wählen Sie **Banner**.
-    * Wenn Sie eine videointerstitialanzeige oder Banner-interstitialwerbung in Ihrer app angezeigt werden, wählen Sie **Video-interstitial** oder **Banner-interstitialwerbung** (Achten Sie darauf, die entsprechende Option für die Art der interstitialwerbung auszuwählen, die Sie anzeigen möchten).
+    * Wenn Sie eine videointerstitialanzeige oder Banner-interstitialwerbung in Ihrer app angezeigt werden, wählen Sie die **Video-interstitial** oder **Banner-interstitialwerbung** (Achten Sie auf die entsprechende Option für die Art der interstitialwerbung auswählen, die Sie anzeigen möchten).
     * Wenn Sie eine native Anzeige in Ihrer app angezeigt werden, klicken Sie auf **Systemeigen**.
 
 5. Wählen Sie in der Dropdownliste **Gerätefamilie** die Gerätefamilie aus, auf die Ihre App ausgerichtet ist, in der die Anzeigeneinheit verwendet werden. Folgende Optionen sind verfügbar: **UWP (Windows 10)**, **PC/Tablet (Windows 8.1)** oder **Mobile (Windows Phone 8.x)**.
@@ -87,7 +87,7 @@ So konfigurieren Sie die Anzeigenvermittlung für eine UWP-Anzeigeneinheit in Ih
 1. [Eine Anzeigeneinheit erstellen](#create-ad-unit) oder [Eine vorhandene Anzeigeneinheit auswählen](#available-ad-units).
 2. Wechseln Sie zu der **vermittlungseinstellungen** Abschnitt und die Konfiguration Ihrer Einstellungen, auf der Seite **In-app-anzeigen** .
 
-    * Standardmäßig ist das Kontrollkästchen **Let Microsoft choose the best mediation settings for your app** aktiviert. Es wird empfohlen, diese Option zu verwenden. Diese Option verwendet Machine Learning-Algorithmen, um automatisch die Anzeigenvermittlungseinstellungen für Ihre App auszuwählen, um Ihnen beim Optimieren der Anzeigenumsätze in den verschiedenen Märkten zu helfen, die Ihre App unterstützt. Wenn Sie diese Option verwenden, können Sie auch die anzeigennetzwerke auswählen, die Sie in der Konfiguration verwenden möchten. Deaktivieren Sie die anzeigennetzwerke, die nicht Teil der Konfiguration werden sollen und unser Algorithmus wird sichergestellt, dass Ihre app nur Anzeigen von den gewählten Anzeigennetzwerken empfängt.
+    * Standardmäßig ist das Kontrollkästchen **Let Microsoft choose the best mediation settings for your app** aktiviert. Es wird empfohlen, diese Option zu verwenden. Diese Option verwendet Machine Learning-Algorithmen, um automatisch die Anzeigenvermittlungseinstellungen für Ihre App auszuwählen, um Ihnen beim Optimieren der Anzeigenumsätze in den verschiedenen Märkten zu helfen, die Ihre App unterstützt. Wenn Sie diese Option verwenden, können Sie auch die anzeigennetzwerke auswählen, die Sie in der Konfiguration verwenden möchten. Deaktivieren Sie die anzeigennetzwerke, die nicht Teil der Konfiguration werden sollen und unser Algorithmus wird sichergestellt, dass Ihre app anzeigen nur von den gewählten Anzeigennetzwerken empfängt.
     * Wenn Sie Ihre eigenen anzeigenvermittlungseinstellungen auswählen möchten, wählen Sie die **Standardeinstellungen ändern**.
 
     > [!NOTE]
@@ -111,10 +111,10 @@ Die folgende Tabelle enthält die kostenpflichtigen Netzwerke, die wir derzeit f
 
 |  Anzeigennetzwerk  |  Beschreibung  |  Unterstützte Anzeigentypen  |
 |--------------|---------------|---------------------|
-| Oath und AppNexus |  Dies ist ein von Microsoft verwaltetes Anzeigennetzwerk, das Anzeigen über unsere Partnernetzwerke Oath und AppNexus bereitstellt.<p/>**Hinweis**: Oath und AppNexus stets den Rang in der Liste **Paid Ad Networks** für Banner-anzeigeneinheiten und kann kein niedrigerer Rang festgelegt für diese Art von anzeigen nicht geändert werden. | Banneranzeigen, Video-Interstitialanzeigen |
+| Oath und AppNexus |  Dies ist ein von Microsoft verwaltetes Anzeigennetzwerk, das Anzeigen über unsere Partnernetzwerke Oath und AppNexus bereitstellt.<p/>**Hinweis**: Oath und AppNexus stets den Rang in der Liste **Paid Ad Networks** für Banner-anzeigeneinheiten und es kann nicht geändert werden, um eine niedrigere Rangfolge für diese Art von anzeigen. | Banneranzeigen, Video-Interstitialanzeigen |
 | AppNexus (direkt) | Wählen Sie diese Option zum Bereitstellen von Anzeigen von [AppNexus](https://www.appnexus.com). | Video-Interstitialanzeigen, native Anzeigen  |
 | Microsoft-Anzeigen für die App-Installation | Wählen Sie diese Option, um Anzeigen für die App-Installation oder das Wiedereinschalten von Anzeigen in Apps anzuzeigen, die von anderen Entwicklern im Windows-Ökosystem erstellt wurden, die [Werbeanzeigenkampagnen für ihre Apps erstellen](create-an-ad-campaign-for-your-app.md).  |  Banneranzeigen, Banner-Interstitialwerbung, native Anzeigen  |
-| Content MSN-Empfehlungen |  Wählen Sie diese Option zum Bereitstellen von Anzeigen von Content MSN-Empfehlungen. |  Banneranzeigen, Banner-Interstitialwerbung  |
+| MSN-Content-Empfehlungen |  Wählen Sie diese Option zum Bereitstellen von Anzeigen von Content MSN-Empfehlungen. |  Banneranzeigen, Banner-Interstitialwerbung  |
 | Outbrain |  Wählen Sie diese Option zum Bereitstellen von Anzeigen von [Outbrain](https://www.outbrain.com/). |  Banneranzeigen, Banner-Interstitialwerbung  |
 | Revcontent |  Wählen Sie diese Option zum Bereitstellen von Anzeigen von [Revcontent](http://www.revcontent.com/). |  Banner, nativ  |
 | Smaato |  Wählen Sie diese Option zum Bereitstellen von Anzeigen von [Smaato](https://www.smaato.com/). |  Banner  |

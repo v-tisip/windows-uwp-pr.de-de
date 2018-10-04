@@ -11,18 +11,18 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, 3dprinting, 3D-Druck
 ms.localizationpriority: medium
 ms.openlocfilehash: acf0c9856328e26f8c39adf3f062a3516e7189e2
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4308918"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4357248"
 ---
 # <a name="3d-printing"></a>3D-Druck
 
 
 In diesem Abschnitt wird beschrieben, wie Sie den [Windows.Graphics.Printing3D-Namespace](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx) , um Ihre universelle Windows-app 3D-Druckfunktionen hinzufügen zu nutzen.  
 
-Weitere Informationen zum 3D-Druck mit Windows 10, einschließlich Ressourcen für Hardwarepartner, Community-Diskussionsforen und allgemeine Informationen zu 3D Funktionen finden Sie unter der Website [3D Drucken mit Windows 10](https://developer.microsoft.com/windows/hardware/3d-print-support-windows-10) im Hardware Dev Center.
+Weitere Informationen zum 3D-Druck mit Windows 10, einschließlich Ressourcen für Hardwarepartner, Community-Diskussionsforen und allgemeine Informationen zu 3D Funktionen für den finden Sie auf der Website [3D Drucken mit Windows 10](https://developer.microsoft.com/windows/hardware/3d-print-support-windows-10) im Hardware Dev Center.
 
 | Thema | Beschreibung |
 |-------|-------------|

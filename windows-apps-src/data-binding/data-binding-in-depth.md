@@ -4,22 +4,20 @@ ms.assetid: 41E1B4F1-6CAF-4128-A61A-4E400B149011
 title: Datenbindung im Detail
 description: Die Datenbindung ist eine Methode, mit der die Benutzeroberfläche Ihrer App Daten anzeigen und diese Daten optional synchronisieren kann.
 ms.author: markl
-ms.date: 02/08/2017
+ms.date: 10/03/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 72c7037e9e99ad69ff13c65fb2195bc6e3f8110f
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.openlocfilehash: 559bbbc3421151a9055b89c94bc1293a950ccb5b
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4318464"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4351451"
 ---
 # <a name="data-binding-in-depth"></a>Datenbindung im Detail
-
-
 
 **Wichtige APIs**
 
@@ -31,16 +29,15 @@ ms.locfileid: "4318464"
 > [!Note]
 > In diesem Thema werden die Datenbindungsfeatures ausführlich beschrieben. Eine kurze und praktische Einführung finden Sie unter [Übersicht „Datenbindung“](data-binding-quickstart.md).
 
-
 Die Datenbindung ist eine Methode, mit der die Benutzeroberfläche Ihrer App Daten anzeigen und diese Daten optional synchronisieren kann. Mit der Datenbindung können Sie Datenaspekte von Benutzeroberflächenaspekten trennen, was zu einem einfacheren konzeptionellen Modell und besserer Lesbarkeit, Testbarkeit und Wartung Ihrer App führt.
 
-Sie können die Datenbindung einfach verwenden, um nur Werte aus einer Datenquelle anzuzeigen, wenn die Benutzeroberfläche das erste Mal angezeigt wird, jedoch nicht auf Änderungen an diesen Werten reagieren. Dies wird als „einmalige Bindung“ bezeichnet und funktioniert gut für Daten, deren Werte während der Laufzeit nicht geändert werden. Darüber hinaus können Sie die Werte auch „feststellen“ und die Benutzeroberfläche bei einer Änderung aktualisieren. Dies wird als „unidirektionale Bindung“ bezeichnet und eignet sich gut für schreibgeschützte Daten. Letztendlich können Sie die Daten sowohl feststellen als auch aktualisieren, damit die vom Benutzer in der Benutzeroberfläche vorgenommenen Änderungen automatisch in die Datenquelle übernommen werden. Dies wird als „bidirektionale Bindung“ bezeichnet und eignet sich gut für Daten mit Lese-/Schreibberechtigung. Beispiele:
+Sie können die Datenbindung einfach verwenden, um nur Werte aus einer Datenquelle anzuzeigen, wenn die Benutzeroberfläche das erste Mal angezeigt wird, jedoch nicht auf Änderungen an diesen Werten reagieren. Dies ist ein Modus für die Bindung namens *einmalige*, und er eignet sich gut für ein Wert, der während der Laufzeit ändert. Alternativ können Sie auswählen, die Werte auch "feststellen" und die Benutzeroberfläche bei einer Änderung aktualisieren. Dies mehr heißt *unidirektionale*, und er eignet sich gut für schreibgeschützte Daten. Letztendlich können Sie die Daten sowohl feststellen als auch aktualisieren, damit die vom Benutzer in der Benutzeroberfläche vorgenommenen Änderungen automatisch in die Datenquelle übernommen werden. In diesem Modus heißt *bidirektionale*, und eignet sich gut für schreibgeschützte Daten. Beispiele:
 
--   Sie können die einmalige Bindung verwenden, um ein [**Image**](https://msdn.microsoft.com/library/windows/apps/BR242752) an das Foto des aktuellen Benutzers zu binden.
--   Sie können die unidirektionale Bindung verwenden, um ein [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)-Objekt an eine Sammlung von Nachrichtenartikeln in Echtzeit nach Zeitungsteil gruppiert zu binden.
--   Sie könnten eine bidirektionale Bindung verwenden, um ein [**TextBox**](https://msdn.microsoft.com/library/windows/apps/BR209683)-Objekt an den Namen eines Kunden in einem Formular zu binden.
+-   Sie könnten den einmaligen Modus verwenden, um ein [**Bild**](https://msdn.microsoft.com/library/windows/apps/BR242752) an das Foto des aktuellen Benutzers zu binden.
+-   Sie könnten den unidirektionalen Modus verwenden, um eine [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) an eine Sammlung von Nachrichtenartikeln in Echtzeit nach zeitungsteil gruppiert zu binden.
+-   Sie könnten den zwei-Wege-Modus verwenden, um ein [**TextBox-Element**](https://msdn.microsoft.com/library/windows/apps/BR209683) an den Namen eines Kunden in einem Formular zu binden.
 
-Es gibt zwei Arten von Bindungen. Diese werden in der Regel beide im Benutzeroberflächenmarkup deklariert. Sie können entweder die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783) oder die [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782) verwenden. Sie können sogar eine Mischung aus den beiden in derselben App verwenden – sogar im gleichen Benutzeroberflächenelement. {x:Bind} ist neu in Windows10 und bietet eine bessere Leistung. Alle in diesem Thema beschriebenen Details gelten für beide Arten von Bindungen, es sei denn, es wird ausdrücklich auf eine Abweichung hingewiesen.
+Unabhängig vom Modus, es gibt zwei Arten von Bindungen, und sie sind sowohl in der Regel im benutzeroberflächenmarkup deklariert. Sie können entweder die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783) oder die [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782) verwenden. Sie können sogar eine Mischung aus den beiden in derselben App verwenden – sogar im gleichen Benutzeroberflächenelement. {x:Bind} ist neu in Windows10 und bietet eine bessere Leistung. Alle in diesem Thema beschriebenen Details gelten für beide Arten von Bindungen, es sei denn, es wird ausdrücklich auf eine Abweichung hingewiesen.
 
 **Beispiel-Apps zur Veranschaulichung von {x:Bind}**
 
@@ -658,7 +655,7 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 | ElementName | `{x:Bind slider1.Value}` | `{Binding Value, ElementName=slider1}` | Mit {x:Bind} nehmen Sie eine Bindung an ein Feld vor; Path standardmäßig an Page als Stamm gebunden, damit auf jedes benannte Element über sein Feld zugegriffen werden kann. | 
 | RelativeSource: Self | `<Rectangle x:Name="rect1" Width="200" Height="{x:Bind rect1.Width}" ... />` | `<Rectangle Width="200" Height="{Binding Width, RelativeSource={RelativeSource Self}}" ... />` | Bei {x:Bind}: Benennen Sie das Element, und verwenden Sie den Namen in Path. | 
 | RelativeSource: TemplatedParent | Nicht erforderlich. | `{Binding <path>, RelativeSource={RelativeSource TemplatedParent}}` | Bei {X: Bind} gibt TargetType auf ControlTemplate Bindung an übergeordnete Vorlage an. Für {Binding} kann reguläre vorlagenbindung in Steuerelementvorlagen in den meisten Fällen verwendet werden. Verwenden Sie jedoch „TemplatedParent“, wenn Sie einen Konverter oder bidirektionale Bindungen verwenden müssen. | 
-| Source | Nicht erforderlich. | `<ListView ItemsSource="{Binding Orders, Source={StaticResource MyData}}"/>` | Für {X: Bind} können Sie direkt verwenden das benannte Element verwenden eine Eigenschaft oder einen statischen Pfad. | 
+| Source | Nicht erforderlich. | `<ListView ItemsSource="{Binding Orders, Source={StaticResource MyData}}"/>` | Für {x: Bind} direkt können das benannte Element, verwenden Sie eine Eigenschaft oder einen statischen Pfad. | 
 | Mode | `{x:Bind Name, Mode=OneWay}` | `{Binding Name, Mode=TwoWay}` | „Mode“ kann „OneTime“, „OneWay“ oder „TwoWay“ sein. Standardwert für {x:Bind} ist „OneTime“; Standardwert für {Binding} ist „OneWay“. | 
 | UpdateSourceTrigger | `{x:Bind Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}` | `{Binding UpdateSourceTrigger=PropertyChanged}` | UpdateSourceTrigger kann Default, LostFocus oder PropertyChanged sein. {X:Bind} unterstützt kein „UpdateSourceTrigger=Explicit”. {x:Bind} verwendet das PropertyChanged-Verhalten in allen Fällen, außer bei „TextBox.Text“, bei dem es das LostFocus-Verhalten nutzt. | 
 

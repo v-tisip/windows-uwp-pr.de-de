@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Erste Schritte, UWP, Windows10, Lernpfad, Layout, Formular
 ms.localizationpriority: medium
 ms.openlocfilehash: c2a851a442cabca4529cd202c90db692c43adcb5
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4311644"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4356134"
 ---
 # <a name="create-and-customize-a-form"></a>Erstellen und Anpassen eines Formulars
 
@@ -136,7 +136,7 @@ Wenn Sie komplexere Layouts mit mehr visuellen Elementen erstellen, finden Sie w
 
 ## <a name="going-further"></a>Vertiefung
 
-Auch wenn Sie hier ein Formular erstellt haben, gelten die Konzepte von Layouts und Steuerelementen für alle XAML-Benutzeroberflächen, die Sie möglicherweise erstellen. Passen Sie die Dokumente durcharbeiten, wir haben Sie verknüpft und experimentieren Sie mit dem Formular, das Sie neue Benutzeroberflächenfeatures hinzufügen und die Benutzeroberfläche eingrenzen haben. Wenn Sie die schrittweise Anleitung zu detaillierteren Layoutfeatures möchten, finden Sie unsere [Lernprogramm zu adaptiven Layouts](../design/basics/xaml-basics-adaptive-layout.md)
+Auch wenn Sie hier ein Formular erstellt haben, gelten die Konzepte von Layouts und Steuerelementen für alle XAML-Benutzeroberflächen, die Sie möglicherweise erstellen. Passen Sie die Dokumente durcharbeiten, wir haben Sie verknüpft und mit dem Formular, das Sie neue Benutzeroberflächenfeatures hinzufügen und die Benutzeroberfläche eingrenzen haben, das experimentieren. Wenn Sie die schrittweise Anleitung zu detaillierteren Layoutfeatures möchten, finden Sie unsere [Lernprogramm zu adaptiven Layouts](../design/basics/xaml-basics-adaptive-layout.md)
 
 Formulare existieren außerdem nicht in einem Vakuum – Sie können einen Schritt weiter gehen und Ihres in ein [Master-/Detailmuster](../design/controls-and-patterns/master-details.md) oder [Pivot-Steuerelement](../design/controls-and-patterns/tabs-pivot.md) einbetten. Oder wenn Sie an dem CodeBehind für Ihr Formular arbeiten möchten, finden Sie die ersten Schritte in unserer [Übersicht über Ereignisse](../xaml-platform/events-and-routed-events-overview.md).
 

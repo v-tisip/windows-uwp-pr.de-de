@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Eintrag, Beschreibung, Store-Seite, Versionshinweise, Titel
 ms.localizationpriority: medium
 ms.openlocfilehash: bd3585b1a2fee2a00c99990b32902b524f3318da
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4311974"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4357153"
 ---
 # <a name="create-app-store-listings"></a>Erstellen von Store-Einträgen für Apps
 
@@ -44,7 +44,7 @@ Wenn Sie Ihre Auswahl getroffen haben, klicken Sie auf **Speichern**, um zur Üb
 
 ## <a name="add-and-edit-store-listing-info"></a>Hinzufügen und Bearbeiten von Store-Eintrag Informationen
 
-Wählen Sie zum Bearbeiten eines Store-Eintrags den Namen der Sprache in der übermittlungsübersicht.
+Wählen Sie den Namen der Sprache zum Bearbeiten eines Store-Eintrags in der übermittlungsübersicht.
 
 Oben auf der Seite **Store-Eintrag** sehen Sie die Felder, die dem standardmäßigen Store-Eintrag für die ausgewählte Sprache zugeordnet sind. Diese Felder sind für alle Kunden sichtbar, sofern keine Pakete für frühere Betriebssystemversionen (Windows8.x oder früher, Windows Phone8.x oder früher) vorhanden sind und Sie keine plattformspezifischen Store-Einträge mit verschiedenen Screenshots oder Informationen erstellt haben, die Kunden unter den angegebenen Betriebssystemversionen angezeigt werden. Weitere Informationen finden Sie unter [Erstellen plattformspezifischer Store-Einträge](create-platform-specific-store-listings.md).
 
@@ -52,12 +52,12 @@ Oben auf der Seite **Store-Eintrag** sehen Sie die Felder, die dem standardmäß
 
 Diese Dropdown-Feld können Sie angeben, welche Namen im Store-Eintrag verwendet werden soll (Wenn Sie mehr als einen Namen für die app reserviert haben).
 
-Wenn Sie Pakete in der gleichen Sprache wie die Store-Eintrag, an denen Sie arbeiten hochgeladen haben, werden der Namen in diese Pakete ausgewählt. Wenn Sie zum [Benennen Sie der app](manage-app-names.md#rename-an-app-that-has-already-been-published) benötigen, nachdem es bereits veröffentlicht wurde, können Sie hier einen anderen reservierten Namen auswählen, wenn Sie eine neue Übermittlung mit Pakete erstellen, die den neuen Namen verwenden.
+Wenn Sie Pakete in der gleichen Sprache wie die Store-Eintrag, an denen Sie arbeiten hochgeladen haben, werden die Namen in diese Pakete ausgewählt. Wenn Sie zum [Benennen Sie der app](manage-app-names.md#rename-an-app-that-has-already-been-published) benötigen, nachdem es bereits veröffentlicht wurde, können Sie hier einen anderen reservierten Namen auswählen, bei der Erstellung einer neuen Übermittlungs mit Paketen, die den neuen Namen verwenden.
 
-Wenn Pakete für die Sprache erfolgreich hochgeladen wurden Sie arbeiten, und Sie mehr als einen Namen reserviert haben, müssen Sie eines Ihrer reservierten app-Namen auswählen, da es keine kein verknüpftes Paket in dieser Sprache aus dem der Name abgerufen werden könnte.
+Für die Sprache Pakete erfolgreich hochgeladen wurden Sie arbeiten, und Sie mehr als einen Namen reserviert haben, müssen Sie eines Ihrer reservierten app-Namen auswählen, da es keine kein verknüpftes Paket in dieser Sprache aus dem der Name abgerufen werden könnte.
 
 > [!NOTE]
-> Der **Produktname** nur gewählte gilt für den Store-Eintrag in der Sprache in dem Sie arbeiten. Es hat keinen Einfluss auf den Namen angezeigt, wenn ein Kunde die app installiert werden; Dieser Name stammt aus dem Manifest des Pakets, das installiert wird. Um Missverständnisse zu vermeiden, empfehlen wir, dass jede Sprache Pakete und Store-Eintrag den gleichen Namen verwenden.
+> Der **Produktname** nur gewählte bezieht sich auf die Store-Eintrag in der Sprache in dem Sie arbeiten. Es hat keinen Einfluss auf den Namen angezeigt, wenn ein Kunde die app installiert werden; Dieser Name stammt aus dem Manifest des Pakets, das installiert wird. Um Missverständnisse zu vermeiden, empfehlen wir, dass jede Sprache Pakete und Store-Eintrag den gleichen Namen verwenden.
 
 ## <a name="description"></a>Beschreibung
 
@@ -103,7 +103,7 @@ Weitere Informationen finden Sie unter [Zusätzliche Grafikobjekte](app-screensh
 
 <a id="supplemental-information" />
 
-## <a name="supplemental-fields"></a>Ergänzende Felder
+## <a name="supplemental-fields"></a>Zusätzliche Felder
 
 Die Felder in diesem Abschnitt sind alle optional. Überprüfen Sie die Informationen unten, um zu bestimmen, ob die Bereitstellung dieser Informationen für Ihre Übermittlung sinnvoll ist. Insbesondere die **Kurzbeschreibung** wird für die meisten Übermittlungen empfohlen. Die anderen Felder unterstützen eine optimale Erfahrung für Ihr Produkt in den verschiedenen Szenarien.
 
@@ -134,7 +134,7 @@ Eine kürzere, ansprechende Beschreibung, die am oberen Rand des Store-Eintrags 
 
 Bei Spielen erscheint die Kurzbeschreibung auch im Abschnitt „Informationen“ im Spiele-Hub auf Xbox One.
 
-Beachten Sie für optimale Ergebnisse zu erzielen Ihre kurze Beschreibung unter 270 Zeichen. Das Feld ist auf 500 Zeichen beschränkt, aber in einigen Ansichten, die nur die ersten 270 Zeichen angezeigt werden, (mit einem Link, der für den Rest des die Kurzbeschreibung anzuzeigen verfügbar ist).
+Beachten Sie für optimale Ergebnisse zu erzielen Ihre kurze Beschreibung unter 270 Zeichen. Das Feld ist auf 500 Zeichen beschränkt, aber in einigen Ansichten, die nur die ersten 270 Zeichen angezeigt werden, (mit einem Link, der für den Rest von die Kurzbeschreibung anzeigen verfügbar ist).
 
 
 ### <a name="additional-system-requirements"></a>Weitere Systemanforderungen

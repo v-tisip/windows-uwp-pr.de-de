@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Anzeige, Kampagne, bewerben
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c7e7c1e2cd9a2ca083cef5fed27a9067cf1e7e7
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4309290"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4352651"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Erstellen einer Anzeigenkampagne für Ihre App
 
@@ -86,7 +86,7 @@ So erstellen Sie eine Anzeigenkampagne zum Bewerben einer App.
             * **Anzeigen, dass meine App kostenlos ist**. Wenn Ihre App in allen ausgewählten Märkten kostenlos ist, können Sie dieses Kontrollkästchen aktivieren.
             * **Handlungsaufforderung**. Wenn **Mehr Interaktion in Ihrer App** als Ziel für Ihre Kampagne wählen, können Sie die Schaltfläche für die Handlungsaufforderung in Ihrer App auf **Öffnen**, **Spielen**, **Lesen**, **Hören** oder **Kaufen** festlegen.  
 
-    * **Benutzerdefiniert**. Wählen Sie diese Option aus, um Ihren eigenen Anzeigenentwurf zu verwenden. Hinweis: Wenn Sie ein Kundensegment früher ausgewählt haben, müssen Sie benutzerdefinierte Werbemittel verwenden. Sie können verschiedene Dateien für jede der verfügbaren Anzeigengrößen hochladen. Die Dateien müssen folgenden Anforderungen und Richtlinien entsprechen:
+    * **Benutzerdefiniert**. Wählen Sie diese Option aus, um Ihren eigenen Anzeigenentwurf zu verwenden. Beachten Sie, dass, wenn Sie ein Kundensegment früher ausgewählt haben, müssen Sie benutzerdefinierte Werbemittel verwenden. Sie können verschiedene Dateien für jede der verfügbaren Anzeigengrößen hochladen. Die Dateien müssen folgenden Anforderungen und Richtlinien entsprechen:
         * Jede Datei muss eine PNG- oder JPG-Datei mit höchstens 40KB sein.
         * Ihre Anzeigenentwürfe müssen die in der [Microsoft Creative Acceptance Policy](http://go.microsoft.com/fwlink?LinkId=532595) dargelegten Anforderungen erfüllen.
         * Der Inhalt in Ihren Anzeigenentwürfen muss für die beworbene App relevant sein. Anzeigenentwürfe, die nicht mit der App zusammenhängen, werden nicht in anderen Apps verteilt.

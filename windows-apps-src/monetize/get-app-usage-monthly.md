@@ -2,7 +2,7 @@
 author: Xansky
 ms.assetid: 4E4CB1E3-D213-4324-91E4-7D4A0EA19C53
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um monatliche app-Nutzungsdaten für einen bestimmten Zeitraum und andere optionale Filter abzurufen.
-title: Abrufen von monatlichen app-Nutzung
+title: Abrufen der monatlichen App-Nutzung
 ms.author: mhopkins
 ms.date: 08/15/2018
 ms.topic: article
@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Store-Dienste, Microsoft Store-Analyse-API, Nutzung
 ms.localizationpriority: medium
 ms.openlocfilehash: ad45422dea9b0c4335fa3cf67a594f819a60ca9c
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4310678"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4351386"
 ---
-# <a name="get-monthly-app-usage"></a>Abrufen von monatlichen app-Nutzung
+# <a name="get-monthly-app-usage"></a>Abrufen der monatlichen App-Nutzung
 
-Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um aggregierte Nutzungsdaten (nicht einschließlich Xbox Multiplayer-) im JSON-Format für eine Anwendung während eines bestimmten Zeitraums (letzten 90 Tage nur) und andere optionale Filter abzurufen. Diese Informationen sind auch im [Bericht "Nutzung"](../publish/usage-report.md) im Windows Dev Center-Dashboard verfügbar.
+Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um aggregierte Nutzungsdaten (nicht einschließlich Xbox multiplayer) im JSON-Format für eine Anwendung während eines bestimmten Zeitraums (letzten 90 Tage nur) und andere optionale Filter abzurufen. Diese Informationen sind auch im [Bericht "Nutzung"](../publish/usage-report.md) im Windows Dev Center-Dashboard verfügbar.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -88,14 +88,14 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | date                      | string  | Das erste Datum im Datumsbereich für die Nutzungsdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist dieser Wert das erste Datum in diesem Datumsbereich.                          |
 | applicationId             | string  | Die Store-ID der app, für die Sie Nutzungsdaten abrufen.                            |
 | applicationName           | string  | Der Anzeigename der App.                                                                |
-| market                    | string  | Der ISO 3166-Ländercode des Markts, in dem der Kunde Ihre app verwendet, werden soll.                   |
-| packageVersion            | string  | Die Version des Pakets, in dem Nutzung erfolgte.                                            |
-| deviceType                | string  | Eine der folgenden Zeichenfolgen, die den Typ des Geräts angibt, in dem Nutzung erfolgte:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**Tablet**</li><li>**IoT**</li><li>**Server**</li><li>**Holographic**</li><li>**Unknown**</li></ul>                                                                                                                           |
+| market                    | string  | Der ISO 3166-Ländercode des Markts, in denen der Kunde Ihre app verwendet, werden soll.                   |
+| packageVersion            | string  | Die Version des Pakets, in denen Nutzung aufgetreten ist.                                            |
+| deviceType                | string  | Eine der folgenden Zeichenfolgen gibt an, dass der Typ des Geräts, in denen Nutzung aufgetreten ist:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**Tablet**</li><li>**IoT**</li><li>**Server**</li><li>**Holographic**</li><li>**Unknown**</li></ul>                                                                                                                           |
 | subscriptionName          | String  | Gibt an, ob die Verwendung über Xbox Game Pass befand.                                              |
-| monthlySessionCount       | long    | Die Anzahl der benutzersitzungen während des Monats.                                              |
-| engagementDurationMinutes | doppelt  | Die Minuten, in denen Benutzer aktiv Ihrer App gemessen durch einen bestimmten Zeitraum, wenn die app gestartet wird (Prozessbeginn) und endet, wenn er beendet wird (Prozess End) oder nach einer Zeit der Inaktivität.                               |
+| monthlySessionCount       | long    | Die Anzahl der benutzersitzungen während dieses Monats.                                              |
+| engagementDurationMinutes | doppelt  | Der Minuten, in denen Benutzer aktiv Ihrer App gemessen werden, indem Sie einen bestimmten Zeitraum, wenn die app gestartet wird (Prozessbeginn) und endet bei beendet wird (Prozess End) oder nach einer Zeit der Inaktivität.                               |
 | monthlyActiveUsers        | long    | Die Anzahl der Kunden, die mit der app dieses Monats.                                           |
-| monthlyActiveDevices      | long    | Die Anzahl der Geräte, die app für einen bestimmten Zeitraum, wenn die app gestartet wird (Prozessbeginn) ausführen und endet, wenn er beendet wird (Prozess End) oder nach einer Zeit der Inaktivität.                                                        |
+| monthlyActiveDevices      | long    | Die Anzahl von Geräten, die app für einen bestimmten Zeitraum, wenn die app gestartet wird (Prozessbeginn) ausführen und endet, wenn er (Prozess End) beendet wird oder nach einer Zeit der Inaktivität.                                                        |
 | monthlyNewUsers           | long    | Die Anzahl der Kunden, die Ihre app zum ersten Mal dieses Monats verwendet.                    |
 | averageDailyActiveUsers   | doppelt  | Die durchschnittliche Anzahl der Kunden, die die app täglich.                             |
 | averageDailyActiveDevices | doppelt  | Die durchschnittliche Anzahl der Geräte, die von allen Benutzern täglich Interaktion mit Ihrer app verwendet. |

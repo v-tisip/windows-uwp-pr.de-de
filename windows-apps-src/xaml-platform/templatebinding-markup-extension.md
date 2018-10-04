@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c1812adc9d5610fffd6f9d275b4e093a4fa96e6
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4319378"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4354628"
 ---
 # <a name="templatebinding-markup-extension"></a>{TemplateBinding}-Markuperweiterung
 
@@ -67,7 +67,7 @@ Die [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.con
 
 Mit der Unterstützung von **X: Bind** können Sie jetzt sowohl [Funktion Bindungen](../data-binding/function-bindings.md) als auch als bidirektionale Bindungen in [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) verwenden
 
-Im folgenden Beispiel ergibt die TextBlock.Text Button.Content.ToString(). TargetType auf das ControlTemplate-Element dient als Datenquelle und führt zum gleiche Ergebnis wie TemplateBinding übergeordneten Element.
+Im folgenden Beispiel ergibt die TextBlock.Text Button.Content.ToString(). TargetType auf ControlTemplate fungiert als die Datenquelle und führt zum gleiche Ergebnis wie TemplateBinding übergeordneten Element.
 
 ```xaml
 <ControlTemplate TargetType="Button">

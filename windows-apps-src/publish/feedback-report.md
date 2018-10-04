@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: bceb1d2cc6682698d0ad06ed4b1865f3d6510442
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4319442"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4352179"
 ---
 # <a name="feedback-report"></a>Feedbackbericht
 
@@ -58,7 +58,7 @@ Im Bericht finden Sie das jeweilige Feedback von Ihren Kunden. Links neben dem F
 - **Populär**: Zeigt Feedback, das von anderen Kunden in den letzten sieben Tagen bewertet wurde, beginnend mit dem Feedback, das die letzte Aktivität aufweist.
 - **Aktuellste**: Zeigt sämtliches Feedback, beginnend mit dem zuletzt abgegebenen Feedback an.
 
-Neben jedem Kommentar werden der Typ des Feedbacks sowie das Datum angezeigt, an dem das Feedback abgegeben wurde. Sie werden auch den Markt des Kunden, das spezifische Paket angezeigt werden, die auf dem Gerät installiert wurde, die sie verwendet haben, als er das Feedback, den die Geräte- und **Windows-Insider-** links, wenn der Kunde das Feedback übermittelt hat ein Mitglied der Windows-Insider-ist Programm.
+Neben jedem Kommentar werden der Typ des Feedbacks sowie das Datum angezeigt, an dem das Feedback abgegeben wurde. Sie auch sehen den Markt des Kunden, das spezifische Paket, die auf dem Gerät installiert wurde, die sie verwendet haben, als er das Feedback, den Typ des Geräts und **Windows-Insider-** links, wenn der Kunde das Feedback übermittelt hat ein Mitglied der Windows-Insider-ist Programm.
 
 Hier sehen Sie auch eine Option, um auf das [Feedback zu antworten](respond-to-customer-feedback.md).
 

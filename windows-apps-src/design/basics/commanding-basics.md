@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 104788b98377b55564fcc204ecc161521d071c6b
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315458"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4353341"
 ---
 #  <a name="command-design-basics-for-uwp-apps"></a>Befehlsdesigngrundlagen für UWP-Apps
 
@@ -94,7 +94,7 @@ Eine vollständige Liste finden Sie unter [Steuerelemente und UI-Elemente](../co
 
 ## <a name="place-commands-on-the-right-surface"></a>Platzieren von Befehlen auf der passenden Oberfläche
 
-Sie können Befehlselemente auf einer Reihe von Oberflächen in Ihrer app, einschließlich der app-Canvas oder spezieller befehlscontainer, z. B. eine Befehlsleiste, Befehlsleiste Flyout, Menüleiste und Dialogfeld platzieren.
+Sie können Befehlselemente auf einer Reihe von Oberflächen in Ihrer app, einschließlich der app-Canvas oder spezieller befehlscontainer, wie z. B. eine Befehlsleiste, Befehlsleiste Flyout, Menüleiste und Dialogfeld platzieren.
 
 Beachten Sie, dass, wenn möglich, Sie sollten Benutzer mit den Befehlen, die auf den Inhalt zugreifen, anstatt Inhalte direkt zu bearbeiten. Beispielsweise können Benutzer Listen durch Ziehen und Ablegen von Listenelementen neu anordnen, anstatt die Befehlsschaltflächen nach oben und unten zu verwenden.
 

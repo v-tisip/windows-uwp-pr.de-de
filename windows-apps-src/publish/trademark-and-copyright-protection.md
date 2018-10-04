@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f99396b117efcf7c3bed3cb64f24b519734cc858
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4317920"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4361185"
 ---
 # <a name="trademark-and-copyright-protection"></a>Schutz von Marken und Urheberrechten
 
@@ -25,7 +25,7 @@ Hier erfahren Sie, was Sie tun können, wenn Ihrer Meinung nach eine App Ihre Re
 ### <a name="1-how-may-i-report-an-infringement-of-my-intellectual-property-rights-within-a-windows-app"></a>1. Wie kann ich eine Verletzung meines Rechts am geistigen Eigentum in einer Windows-App melden?
 
 
-Verwenden Sie das folgende [Formular](http://go.microsoft.com/fwlink/p/?LinkId=273879), um eine Beschwerde über die Verletzung von Urheber-, Marken- oder Veröffentlichungsrechten bei einer Windows-App einzureichen. Bei Beschwerden über die Verletzung von Urheber-, Marken- oder Veröffentlichungsrechten in mehreren Apps reichen Sie Ihren Antrag bei mktlegal@microsoft.com ein. Wenn Sie weitere Informationen zur DMCA-Richtlinie von Microsoft benötigen, besuchen Sie: [https://www.microsoft.com/info/cpyrtInfrg.aspx](http://go.microsoft.com/fwlink/p/?LinkId=626976).
+Verwenden Sie das folgende [Formular](http://go.microsoft.com/fwlink/p/?LinkId=273879), um eine Beschwerde über die Verletzung von Urheber-, Marken- oder Veröffentlichungsrechten bei einer Windows-App einzureichen. Bei Beschwerden über die Verletzung von Urheber-, Marken- oder Veröffentlichungsrechten in mehreren Apps reichen Sie Ihren Antrag bei mktlegal@microsoft.com ein. Wenn Sie zusätzliche Informationen zu Microsofts DMCA-Richtlinie benötigen, besuchen Sie: [https://www.microsoft.com/info/cpyrtInfrg.aspx](http://go.microsoft.com/fwlink/p/?LinkId=626976).
 
 ### <a name="2-i-created-my-app-to-work-with-a-microsoft-productservice-may-i-use-the-microsoft-productservice-name-in-the-name-of-my-app"></a>2. Ich habe meine App für die Verwendung mit einem Microsoft-Produkt/-Dienst erstellt. Darf ich den Namen des Microsoft-Produkts/-Dienstes im Namen meiner App verwenden?
 

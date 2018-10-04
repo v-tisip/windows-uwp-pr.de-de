@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: Windows 10, uwp, Standard, c++, cpp, winrt, projiziert, Projektion, Implementierung, implementieren, Laufzeitklasse, Aktivierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 2476161954c1d4d49fcf9f8f74cd1b7cf9180c0a
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4309270"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4361086"
 ---
 # <a name="author-apis-with-cwinrt"></a>Erstellen von APIs mit C++/WinRT
 
-Dieses Thema zeigt, wie man [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) -APIs mit der [**WinRT:: Implements**](/uwp/cpp-ref-for-winrt/implements) basieren Struktur, entweder direkt oder indirekt erstellt. In diesem Zusammenhang werden die Synonyme *Produzieren* oder *Implementieren* für den Begriff *Erstellen* verwendet. Dieses Thema behandelt die folgenden Szenarien für die Implementierung von APIs für einen C++/WinRT-Typ in dieser Reihenfolge.
+Dieses Thema zeigt, wie man [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) -APIs mit der [**WinRT:: Implements**](/uwp/cpp-ref-for-winrt/implements) Struktur basieren, entweder direkt oder indirekt erstellt. In diesem Zusammenhang werden die Synonyme *Produzieren* oder *Implementieren* für den Begriff *Erstellen* verwendet. Dieses Thema behandelt die folgenden Szenarien für die Implementierung von APIs für einen C++/WinRT-Typ in dieser Reihenfolge.
 
 - Sie erstellen *keine* Windows-Runtime-Klasse (Runtime-Klasse); Sie möchten lediglich eine oder mehrere Windows-Runtime-Schnittstellen für den lokalen Gebrauch in Ihrer App implementieren. Sie leiten sich in diesem Fall direkt von **winrt::implements** ab und implementieren Funktionen.
 - Sie schreiben eine *Laufzeitklasse*. Möglicherweise erstellen Sie eine Komponente, die von einer App genutzt werden soll. Oder Sie erstellen einen Typ, der von der XAML-Benutzeroberfläche (UI) genutzt werden soll, und in diesem Fall implementieren und nutzen Sie sowohl eine Laufzeitklasse innerhalb derselben Kompilierungseinheit. In diesen Fällen lassen Sie sich von den Tools Klassen generieren, die von **winrt::implements** abgeleitet sind.
@@ -262,7 +262,7 @@ IStringable istringable = winrt::make<MyType>();
 > [!NOTE]
 > Wenn Sie Ihren Typ jedoch in Ihrer XAML-Benutzeroberfläche referenzieren, gibt es sowohl einen Implementierungstyp als auch einen projizierten Typ im selben Projekt. **Stellen Sie** in diesem Fall gibt die eine Instanz des projizierten Typs zurück. Ein Codebeispiel für dieses Szenario finden Sie unter [XAML-Steuererlemente; Binden an eine C++/WinRT-Eigenschaft](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage).
 
-Wir können nur `istringable` (im obigen Codebeispiel) verwenden, um die Mitglieder der **IStringable**-Schnittstelle aufzurufen. Aber eine C++/WinRT-Schnittstelle (die eine projizierte Schnittstelle ist) ist von [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown) abgeleitet. Daher können Sie aufrufen [**IUnknown:: As**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (oder [**IUnknown:: Try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)) darauf Abfrage für andere projizierte Typen und Schnittstellen, die Sie ebenfalls verwenden oder zurückgeben können.
+Wir können nur `istringable` (im obigen Codebeispiel) verwenden, um die Mitglieder der **IStringable**-Schnittstelle aufzurufen. Aber eine C++/WinRT-Schnittstelle (die eine projizierte Schnittstelle ist) ist von [**winrt::Windows::Foundation::IUnknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown) abgeleitet. Daher können Sie aufrufen [**IUnknown:: As**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) (oder [**IUnknown:: Try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntryas-function)) auf diese Abfrage für andere projizierte Typen und Schnittstellen, die Sie ebenfalls verwenden oder zurückgeben können.
 
 ```cppwinrt
 istringable.ToString();
@@ -282,10 +282,10 @@ iclosable.Close();
 
 Die **MyType**-Klasse ist nicht Teil der Projizierung, sondern die Implementierung. Aber auf diese Weise können Sie die Implementierungsmethoden direkt aufrufen, ohne den Aufwand für einen virtuellen Funktionsaufruf. Obwohl im obigen Beispiel **MyType::ToString** die gleiche Signatur wie die projizierte Methode von **IStringable** verwendet, rufen wir die nicht-virtuelle Methode direkt auf, ohne die binäre Schnittstelle der Anwendung (ABI) zu verwenden. Der **com_ptr** enthält einfach einen Zeiger auf die **MyType**-Struktur, sodass Sie auch auf alle anderen internen Details von **MyType** über die Variable `myimpl` und den Pfeiloperator zugreifen können.
 
-Im Fall, in denen Sie ein Interface-Objekt, und Sie wissen, dass es sich um eine Schnittstelle für die Implementierung ist können Sie Sie wieder auf die Implementierung, die mit der Funktionsvorlage [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) abrufen. Auch hier handelt es sich um eine Technik, die virtuelle Funktionsaufrufe vermeidet und Sie direkt die Implementierung nutzen lässt.
+Im Fall, in denen Sie ein Interface-Objekt, und Sie wissen, dass es sich um eine Schnittstelle für die Implementierung ist können Sie Sie zurück auf die Implementierung, die mit der Funktionsvorlage [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self) abrufen. Auch hier handelt es sich um eine Technik, die virtuelle Funktionsaufrufe vermeidet und Sie direkt die Implementierung nutzen lässt.
 
 > [!NOTE]
-> Wenn Sie noch nicht installiert, das Windows SDK Version 10.0.17763.0 (Windows 10, Version 1809 haben) oder höher, dann Sie [**WinRT:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi) anstelle von [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self)aufrufen müssen.
+> Wenn Sie noch nicht installiert, das Windows SDK-Version 10.0.17763.0 (Windows 10, Version 1809 haben) oder höher, dann Sie [**WinRT:: from_abi**](/uwp/cpp-ref-for-winrt/from-abi) anstelle von [**winrt::get_self**](/uwp/cpp-ref-for-winrt/get-self)aufrufen müssen.
 
 Beispiel: [Implementieren der benutzerdefinierten Steuerelementklasse **BgLabelControl** ](xaml-cust-ctrl.md#implement-the-bglabelcontrol-custom-control-class)ist ein weiteres Beispiel.
 
@@ -318,7 +318,7 @@ IClosable ic1 = myimpl.as<IClosable>(); // error
 Wenn Sie eine Instanz Ihres Implementierungstyps haben und diese an eine Funktion übergeben müssen, die den entsprechenden projizierten Typ erwartet, dann können Sie dies tun. Für Ihre Implementierungstyp existiert ein Konvertierungsoperator (vorausgesetzt, dass der Implementierungstyp vom generiert wurde der `cppwinrt.exe` Tool), der Dies ermöglicht.
 
 ## <a name="deriving-from-a-type-that-has-a-non-default-constructor"></a>Abgeleitet von einem Typ, der einen nicht-Standardkonstruktor hat
-[**ToggleButtonAutomationPeer::ToggleButtonAutomationPeer(ToggleButton)**](/uwp/api/windows.ui.xaml.automation.peers.togglebuttonautomationpeer.-ctor#Windows_UI_Xaml_Automation_Peers_ToggleButtonAutomationPeer__ctor_Windows_UI_Xaml_Controls_Primitives_ToggleButton_) ist ein Beispiel für einen Standardkonstruktor. Es gibt keinen Standardkonstruktor. Um ein **ToggleButtonAutomationPeer** zu erstellen, müssen Sie also einen *Owner*übergeben. Wenn Sie von **ToggleButtonAutomationPeer** ableiten, dann müssen Sie also einen Konstruktor zur Verfügung stellen, der einen *Owner* entgegen nimmt und ihn an die Basisklasse übergibt. Mal sehen, wie das in der Praxis aussieht.
+[**ToggleButtonAutomationPeer::ToggleButtonAutomationPeer(ToggleButton)**](/uwp/api/windows.ui.xaml.automation.peers.togglebuttonautomationpeer.-ctor#Windows_UI_Xaml_Automation_Peers_ToggleButtonAutomationPeer__ctor_Windows_UI_Xaml_Controls_Primitives_ToggleButton_) ist ein Beispiel für einen nicht-Standardkonstruktor. Es gibt keinen Standardkonstruktor. Um ein **ToggleButtonAutomationPeer** zu erstellen, müssen Sie also einen *Owner*übergeben. Wenn Sie von **ToggleButtonAutomationPeer** ableiten, dann müssen Sie also einen Konstruktor zur Verfügung stellen, der einen *Owner* entgegen nimmt und ihn an die Basisklasse übergibt. Mal sehen, wie das in der Praxis aussieht.
 
 ```idl
 // MySpecializedToggleButton.idl

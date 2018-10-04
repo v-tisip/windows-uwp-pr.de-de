@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows10, verpackung, paketlayout, bestandspaket
 ms.localizationpriority: medium
 ms.openlocfilehash: 3f8cbb3989b58b726336b4bd757902bd9ea3f8c0
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4314190"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4353956"
 ---
 # <a name="package-creation-with-the-packaging-layout"></a>Paketerstellung mit dem Verpackungslayout  
 
@@ -147,7 +147,7 @@ Ressourcenpakete können mit dem **ResourcePackage**-Element angegeben werden. I
 
 Optionale Pakete besitzen jeweils ihre eigenen, eindeutigen Paketfamiliennamen und müssen mit **PackageFamily**-Elementen definiert werden, wenn das **Optional**-Attribut als **true** angegeben wird. Das **RelatedSet**-Attribut wird verwendet, um anzugeben, ob sich das optionale Paket innerhalb des zugehörigen Sets befindet (standardmäßig ist dieser Wert „true”), und ob das optionale Paket mit dem primären Paket aktualisiert werden soll.
 
-Das Element **PrebuiltPackage** wird verwendet, um Pakete hinzufügen, die nicht im verpackungslayout enthalten oder in den app-Bündel-Dateien zu erstellenden verwiesen werden definiert sind. In diesem Fall wird ein anderes optionales DLC-Paket hier enthalten sein, damit die primäre app-Bundle-Datei kann darauf verweisen und es Teil des zugehörigen Sets werden kann.
+Das Element **PrebuiltPackage** wird verwendet, um Pakete hinzufügen, die nicht im verpackungslayout enthalten oder in den app-Bundle-Dateien zu erstellenden verwiesen werden definiert sind. In diesem Fall wird ein anderes optionales DLC-Paket hier enthalten sein, damit die primäre app-Bundle-Datei kann darauf verweisen und es Teil des zugehörigen Sets werden kann.
 
 
 ## <a name="build-app-packages-with-a-packaging-layout-and-makeappxexe"></a>Erstellen von App-Paketen mit einem Verpackungslayout und MakeAppx.exe
@@ -163,7 +163,7 @@ Wenn Sie jedoch Ihre App aktualisieren, und einige Pakete keine geänderten Date
 MakeAppx.exe build /f PackagingLayout.xml /id "x64" /ip PreviousVersion\ /op OutputPackages\ /iv
 ```
 
-Mit dem `/id`-Kennzeichen können die zu erstellenden Pakete aus dem Verpackungslayout entsprechend dem **ID**-Attribut im Layout ausgewählt werden. `/ip` wird verwendet, um anzugeben, wo sich in diesem Fall die früheren Versionen der Pakete befinden. Die frühere Version muss bereitgestellt werden, da die app-Bundle-Datei weiterhin auf die vorherige Version des **Media** -Pakets verweisen muss. Mit dem `/iv`-Kennzeichen wird die Version der zu erstellenden Pakete automatisch erhöht (anstatt die Version in der **AppxManifest**-Datei zu ändern). Sie können auch die Switches `/pv` und `/bv` verwenden, um eine Paketversion (für alle zu erstellenden Pakete) bzw. eine Bündelversion (für alle zu erstellenden Bündel), direkt bereitzustellen.
+Mit dem `/id`-Kennzeichen können die zu erstellenden Pakete aus dem Verpackungslayout entsprechend dem **ID**-Attribut im Layout ausgewählt werden. `/ip` wird verwendet, um anzugeben, wo sich in diesem Fall die früheren Versionen der Pakete befinden. Die vorherige Version muss bereitgestellt werden, da die app-Bundle-Datei weiterhin auf die vorherige Version des **Media** -Pakets verweisen muss. Mit dem `/iv`-Kennzeichen wird die Version der zu erstellenden Pakete automatisch erhöht (anstatt die Version in der **AppxManifest**-Datei zu ändern). Sie können auch die Switches `/pv` und `/bv` verwenden, um eine Paketversion (für alle zu erstellenden Pakete) bzw. eine Bündelversion (für alle zu erstellenden Bündel), direkt bereitzustellen.
 Verwenden Sie diesen Befehl, wenn Sie mithilfe des erweiterten Verpackungslayoutbeispiels auf dieser Seite nur das optionale Bündel **Designs** und das App-Paket **Themes.main**, auf das es verweist, erstellen möchten:
 
 ``` example 

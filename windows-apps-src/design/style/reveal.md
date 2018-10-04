@@ -15,11 +15,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 67bd984f4216be9eded51b6175829828e9c332f1
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4309208"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4353247"
 ---
 # <a name="reveal-highlight"></a>Reveal-Highlight
 
@@ -30,7 +30,7 @@ Reveal-Highlight sind Lichteffekte, die wie z. B. Befehlsleisten, interaktive El
 > **Wichtige APIs**: [RevealBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [RevealBackgroundBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [RevealBorderBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [RevealBrushHelper-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [VisualState-Klasse](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
 
 ## <a name="how-it-works"></a>Funktionsweise
-Reveal-Highlight Aufrufe hebt interaktive Elemente der Container des Elements zeigt, wenn der Mauszeiger nähert, wie in der folgenden Abbildung dargestellt:
+Reveal-Highlight Aufrufe hebt interaktive Elemente durch Einblenden der Container des Elements, wenn der Mauszeiger nähert, wie in der folgenden Abbildung dargestellt:
 
 ![Reveal Visual](images/Nav_Reveal_Animation.gif)
 
@@ -58,7 +58,7 @@ Da durch Einblendungen die ausgeblendeten Rahmen um Objekte herum angezeigt werd
 
 ## <a name="how-to-use-it"></a>Verwendung
 
-„Reveal” funktioniert automatisch bei einigen Steuerelementen. Für andere Steuerelemente können Sie "Reveal" aktivieren, indem Sie das Steuerelement einen speziellen Stil zuweisen, wie in den Abschnitten [Aktivieren von Einblendungen für andere Steuerelemente](#enabling-reveal-on-other-controls) und [Aktivieren von Einblendungen für benutzerdefinierte Steuerelemente](#enabling-reveal-on-custom-controls) dieses Artikels beschrieben.
+„Reveal” funktioniert automatisch bei einigen Steuerelementen. Für andere Steuerelemente können Sie "Reveal" aktivieren, von dem Steuerelement einen speziellen Stil zuweisen, wie in der [Aktivierung für andere Steuerelemente einblenden](#enabling-reveal-on-other-controls) und [Aktivieren von "Reveal", für benutzerdefinierte Steuerelemente](#enabling-reveal-on-custom-controls) Abschnitten dieses Artikels beschrieben.
 
 ## <a name="controls-that-automatically-use-reveal"></a>Steuerelemente, die „Reveal” automatisch verwenden
 
@@ -69,7 +69,7 @@ Da durch Einblendungen die ausgeblendeten Rahmen um Objekte herum angezeigt werd
 - [**MediaTransportControl**](../controls-and-patterns/media-playback.md)
 - [**CommandBar**](../controls-and-patterns/app-bars.md)
 
-Diese Abbildung zeigt "einblenden" markieren, auf verschiedenen Steuerelementen:
+Diese Abbildung zeigt "einblenden" markieren, auf verschiedene Steuerelemente:
 
 ![Beispiele für „Reveal”](images/RevealExamples_Collage.png)
 
@@ -266,7 +266,7 @@ Wenn Sie "Reveal" für ein benutzerdefiniertes oder neues Steuerelement oder ein
 * Für benachbarte Steuerelemente, die sich fast berühren: Fügen Sie einen Rand von einem Pixel zwischen den beiden Elementen hinzu. 
 
 ## <a name="dos-and-donts"></a>Empfohlene und nicht empfohlene Vorgehensweisen
-### <a name="do"></a>Führen Sie aus:
+### <a name="do"></a>Führen Sie:
 - Verwenden Sie „Reveal” für Elemente, in denen der Benutzer viele Aktionen (CommandBars, Navigationsmenüs) ausführt
 - Verwenden Sie „Reveal” bei der Gruppierung von interaktiven Elementen, die nicht standardmäßig visuelle Trennzeichen haben (Listen, Menübänder)
 - Verwenden Sie „Reveal” in Bereichen mit vielen interaktiven Elementen (Befehlszenarios)

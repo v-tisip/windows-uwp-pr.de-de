@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, Standard, C++, CPP, WinRT, Projizierung, Einführung
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e1563f85df6d437ce313c99df52ea319ef94a30
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.openlocfilehash: 7848a0b00e2f6a2bbaa84c413dc26f1ea7238e8e
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4318742"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4350571"
 ---
 # <a name="introduction-to-cwinrt"></a>Einführung in C++/WinRT
 &nbsp;
@@ -22,7 +22,7 @@ ms.locfileid: "4318742"
 
 C++/WinRT ist eine vollständig standardisierte, moderne C++17-Sprachprojektion für Windows-Runtime-(WinRT)-APIs, die als headerdateibasierte Bibliothek implementiert ist und Ihnen einen erstklassigen Zugriff auf die moderne Windows-API bietet. Mit C++/WinRT können Sie Windows-Runtime-APIs mit jedem standardkonformen C++17-Compiler erstellen und verwenden. Das in Version 10.0.17134.0 (Windows 10, Version 1803) eingeführte Windows SDK enthält C++/WinRT.
 
-C++ / WinRT ist von Microsoft empfohlene Ersatz für die [C++ / CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) sprachprojektion und der [Windows-Runtime C++ Template Library (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl?branch=live). Die vollständige Liste der [Themen zu C++ / WinRT](index.md#topics-about-cwinrt) enthält Informationen zu Interoperabilität mit sowohl Portieren von, C++ / CX und WRL.
+C++ / WinRT ist von Microsoft empfohlene Ersatz für die [C++ / CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) sprachprojektion und der [Windows-Runtime C++ Template Library (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl?branch=live). Die vollständige Liste der [Themen zu C++ / WinRT](index.md#topics-about-cwinrt) enthält Informationen zu Interoperabilität mit sowohl Portieren von C++ / CX und WRL.
 
 > [!IMPORTANT]
 > Zwei der wichtigsten zu beachtenden Teile von C++/WinRT sind in den Abschnitten [SDK-Unterstützung für C++/WinRT](#sdk-support-for-cwinrt) und [Visual Studio-Unterstützung für C++/WinRT und VSIX](#visual-studio-support-for-cwinrt-and-the-vsix) beschrieben.
@@ -41,9 +41,14 @@ Mit C++/WinRT können Sie auch eigene Runtime-Klassen mithilfe von C++-Standardc
 ## <a name="visual-studio-support-for-cwinrt-and-the-vsix"></a>Visual Studio-Unterstützung für C++/WinRT und VSIX
 Für C++/WinRT-Projektvorlagen in Visual Studio, sowie C++/WinRT MSBuild-Eigenschaften und -Ziele. Laden Sie die [C++/WinRT Visual Studio-Erweiterung (VSIX)](https://aka.ms/cppwinrt/vsix) im [Visual Studio Marketplace](https://marketplace.visualstudio.com/) herunter und installieren Sie sie.
 
-Sie benötigen Visual Studio 2017 (Sie müssen mindestens Version 15,6, aber wir empfehlen mindestens 15.7), und Windows SDK-Version 10.0.17134.0 (Windows 10, Version 1803). Wenn Sie es bereits installiert haben, müssen Sie die **Tools für universelle Windows-Plattform C++** -Option aus im Visual Studio-Installationsprogramm installieren. Und in Windows- **Einstellungen** > **Update \ & Sicherheit** > **für Entwickler**, wählen Sie die Option **Querladen von apps** , anstatt die Option **Entwicklermodus** .
+> [!NOTE]
+> Mit Version 1.0.181002.2 (oder höher) des VSIX installiert haben, erstellen eine neue C++ / WinRT-Projekt installiert automatisch das [Microsoft.Windows.CppWinRT NuGet-Paket](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) für das Projekt. Das Microsoft.Windows.CppWinRT NuGet-Paket bietet verbesserte C++ / WinRT-Projekt Build-Unterstützung, erstellen Ihr Projekt tragbaren zwischen einem Entwicklungscomputer und einen Build-Agent (auf dem nur das NuGet-Paket und nicht VSIX, installiert ist).
+>
+> Für ein vorhandenes Projekt&mdash;nach der Installation von Version 1.0.181002.2 (oder höher) des VSIX&mdash;es wird empfohlen, dass Sie das Projekt in Visual Studio öffnen, klicken Sie auf **Projekt** \> **NuGet-Pakete verwalten...**  \>  **Durchsuchen**, geben oder fügen Sie **Microsoft.Windows.CppWinRT** in das Suchfeld ein, wählen Sie das Element in den Suchergebnissen, und dann auf **Installieren** , um das Paket für das Projekt zu installieren.
 
-Sie sehen dann möglicherweise zu erstellen und zu erstellen oder zu öffnen, eine C++ / WinRT Projekts in Visual Studio, und es bereitzustellen. Alternativ können Sie ein vorhandenes Projekt konvertieren, durch Hinzufügen der `<CppWinRTEnabled>true</CppWinRTEnabled>` -Eigenschaft verwenden, um die `.vcxproj` Datei.
+Sie benötigen Visual Studio 2017 (Sie müssen mindestens Version 15.6, aber wir empfehlen mindestens 15.7), und Windows SDK-Version 10.0.17134.0 (Windows 10, Version 1803). Wenn Sie es bereits installiert haben, müssen Sie die Option **C++ universelle Windows-Plattform-Tools** von innerhalb der Visual Studio-Installationsprogramm installieren. Und in Windows- **Einstellungen** > **Update \ & Security** > **für Entwickler**, wählen Sie die Option **Querladen von apps** , anstatt die Option **Entwicklermodus** .
+
+Sie sehen dann möglicherweise erstellen und zu erstellen oder zu öffnen, eine C++ / WinRT Projekts in Visual Studio, und es bereitzustellen. Alternativ können Sie ein vorhandenes Projekt konvertieren, durch Hinzufügen der `<CppWinRTEnabled>true</CppWinRTEnabled>` -Eigenschaft verwenden, um seine `.vcxproj` Datei.
 
 ```xml
 <Project ...>
@@ -54,7 +59,7 @@ Sie sehen dann möglicherweise zu erstellen und zu erstellen oder zu öffnen, ei
 
 Sobald Sie diese Eigenschaft hinzugefügt haben, steht Ihnen die C++/WinRT MSBuild-Unterstützung für das Projekt zur Verfügung, einschließlich des Aufrufs des `cppwinrt.exe`-Tools.
 
-Da C++ / WinRT Features aus dem C ++ 17-Standard verwendet, muss es Eigenschaft **C/C++-** Projekt > **Sprache** > **C++ Sprache Standard** > **ISO C ++ 17 Standard (/ Std: c ++ 17)**. Sie können außerdem **Konformitätsmodus: Ja (/permissive-)** festlegen, was Ihren Code für die Standardkonformität weiter einschränkt.
+Da C++ / WinRT Features aus dem C ++ 17-Standard verwendet, benötigt Eigenschaft **C/C++-** Projekt > **Sprache** > **C++ Sprache Standard** > **ISO C ++ 17 Standard (/ Std: c ++ 17)**. Sie können außerdem **Konformitätsmodus: Ja (/permissive-)** festlegen, was Ihren Code für die Standardkonformität weiter einschränkt.
 
 Eine weitere zu beachtende Projekteigenschaft ist **C/C++** > **Allgemein** > **Warnungen als Fehler behandeln**. Legen Sie diese auf **Ja (/WX)** oder **Nein (/WX-)** fest. Manchmal generieren vom `cppwinrt.exe`-Tool erzeugte Quelldateien Warnungen, bis Sie Ihre Implementierung hinzufügen.
 

@@ -12,24 +12,24 @@ keywords: Windows10, UWP
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: medium
 ms.openlocfilehash: e11bae84c7cb88ef89f8b627cc2109fc56e43163
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4309400"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4354365"
 ---
 # <a name="package-desktop-applications-desktop-bridge"></a>Paket-desktopanwendungen (Desktop-Brücke)
 
-Nehmen Sie Ihre vorhandene desktop-Anwendung, und fügen Sie moderne Umgebungen für Windows 10-Benutzer hinzu. Sorgen Sie über die Verteilung über den Microsoft Store für eine größerer Reichweite in internationalen Märkten. Sie können Ihre Anwendung viel einfacher vermarkten durch die Nutzung von Features aus dem Store. Natürlich müssen Sie den Store nicht verwenden. Sie können auch Ihre vorhandenen Vertriebskanäle nutzen.
+Nutzen Sie Ihre vorhandene desktop-Anwendung, und fügen Sie moderne Umgebungen für Windows 10-Benutzer hinzu. Sorgen Sie über die Verteilung über den Microsoft Store für eine größerer Reichweite in internationalen Märkten. Sie können Ihre Anwendung viel einfacher vermarkten durch die Nutzung der Features aus dem Store. Natürlich müssen Sie den Store nicht verwenden. Sie können auch Ihre vorhandenen Vertriebskanäle nutzen.
 
 ![Desktop-Brücke](images/desktop-to-uwp/desktop-bridge-4.png)
 
-Wenn Sie ein Paket für Ihre desktop-Anwendung erstellen, Ihre Anwendung eine Identität erhalten, und mit dieser Identität hat Ihre desktop-Anwendung den Zugriff auf Windows Universal Plattform (UWP) APIs. Sie können diese für moderne und ansprechende Benutzeroberflächen wie z.B. Live-Kacheln und Benachrichtigungen verwenden.  Verwenden Sie einfachen bedingten Kompilierung und lautzeitüberprüfungen, um UWP-Code nur ausgeführt, wenn die Anwendung unter Windows 10 ausgeführt wird.
+Wenn Sie ein Paket für Ihre desktop-Anwendung erstellen, Ihre Anwendung eine Identität erhalten, und mit dieser Identität hat Ihre desktop-Anwendung den Zugriff auf Windows Universal Plattform (UWP) APIs. Sie können diese für moderne und ansprechende Benutzeroberflächen wie z.B. Live-Kacheln und Benachrichtigungen verwenden.  Verwenden Sie einfachen bedingte Kompilierung und lautzeitüberprüfungen, um UWP-Code nur ausgeführt, wenn Ihre Anwendung unter Windows 10 ausgeführt wird.
 
-Abgesehen von den Code, den Sie verwenden, um die Windows 10-Funktionen zu verbessern, Ihre Anwendung bleibt unverändert, und Sie können weiterhin für Ihre vorhandene Windows 7-, Windows Vista oder Windows XP-Benutzerbasis bereitstellen. Unter Windows 10, Ihre Anwendung wird weiterhin in voller Vertrauenswürdigkeit ausgeführt Benutzermodus genau wie heute.
+Abgesehen von den Code, den Sie verwenden, um die Windows 10-Funktionen zu verbessern, Ihre Anwendung bleibt unverändert, und Sie können weiterhin Ihre vorhandenen Windows 7, Windows Vista oder Windows XP-Benutzerbasis verteilen. Unter Windows 10, Ihre Anwendung wird weiterhin in voller Vertrauenswürdigkeit ausgeführt Benutzermodus genau wie heute.
 
 >[!IMPORTANT]
->Die Fähigkeit zum Erstellen eines Windows-app-Pakets für Ihre desktop-Anwendung (andernfalls wird auch als der Desktop-Brücke wurde in Windows 10, Version 1607, eingeführt und kann nur in Projekten für die Windows 10 Anniversary Update (10.0; verwendet werden Build 14393) oder einer neueren Version in Visual Studio.
+>Die Fähigkeit zum Erstellen einer Windows-app-Paket für Ihre desktop-Anwendung (andernfalls wird auch als der Desktop-Brücke wurde in Windows 10, Version 1607, eingeführt und kann nur in Projekten für die Windows 10 Anniversary Update (10.0; verwendet werden Build 14393) oder einer neueren Version in Visual Studio.
 
 > [!NOTE]
 > Sehen Sie sich <a href="https://mva.microsoft.com/en-US/training-courses/developers-guide-to-the-desktop-bridge-17373?l=oZG0B1WhD_8406218965/">diese Reihe</a> von kurzen Videos an, die von der Microsoft Virtual Academy veröffentlicht wurden. Diese Videos erläutern den gesamten Prozess der Integration Ihrer desktop-Anwendung für die universelle Windows-Plattform (UWP).
@@ -52,7 +52,7 @@ Eine vollständige Liste der Vorteile finden Sie unter [Desktop-Brücke](https:/
 
 ## <a name="prepare"></a>Vorbereiten
 
-Bereiten Sie Ihrer Anwendung durch Überprüfen des Artikels [Vorbereiten Ihrer desktop-app zu verpacken](desktop-to-uwp-prepare.md), und klicken Sie dann behandeln eines der Probleme, die auf Ihre Anwendung anwenden, bevor Sie ein Windows-app-Paket für sie erstellen vor. Sie möglicherweise nicht viele Änderungen an Ihrer Anwendung vornehmen, bevor Sie das Paket erstellen. Es gibt jedoch einige Situationen, bei denen Sie Ihre Anwendung optimieren müssen, bevor Sie ein Paket für sie erstellen.
+Bereiten Sie Ihrer Anwendung durch Überprüfen des Artikels [Vorbereiten Ihrer desktop-app Verpacken](desktop-to-uwp-prepare.md)und dann Adressierung eines der Probleme, die für Ihre Anwendung angewendet werden soll, bevor Sie ein Windows-app-Paket erstellen vor. Sie möglicherweise nicht viele Änderungen an Ihrer Anwendung vornehmen, bevor Sie das Paket erstellen. Es gibt jedoch einige Situationen, bei denen Sie Ihre Anwendung optimieren müssen, bevor Sie ein Paket erstellen.
 
 <a id="convert" />
 
@@ -74,11 +74,11 @@ Desktop App Converter übersetzt die Aktionen des Installationsprogramms auf das
 
 : Heavy_check_mark: generiert ein Zertifikat, das Sie verwenden können, um Ihre app auszuführen.
 
-: Heavy_check_mark: überprüft Ihre Anwendung mit verpackte desktop-Anwendung und Microsoft Store-Anforderungen.
+: Heavy_check_mark: überprüft Ihre Anwendung vor verpackte desktop-Anwendung und Microsoft Store-Anforderungen.
 
-Ein weiterer guter Grund für den Desktop App Converter verwenden ist, wenn Sie Ihre Anwendung mit einer anderen Entwicklungsumgebung als Visual Studio verwalten. Sie können den Desktop App Converter verwenden, selbst wenn Ihre Anwendung kein Installationsprogramm besitzen.
+Ein weiterer guter Grund für den Desktop App Converter verwenden ist, wenn Sie Ihre Anwendung mithilfe von einer anderen Entwicklungsumgebung als Visual Studio verwalten. Sie können den Desktop App Converter verwenden, selbst wenn Ihre Anwendung kein Installationsprogramm besitzen.
 
-Finden Sie unter [Paket eine desktop-Anwendung mit der Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md)
+Finden Sie unter [Paket eine desktop-Anwendung mit dem Desktop App Converter](desktop-to-uwp-run-desktop-app-converter.md)
 
 ### <a name="visual-studio"></a>Visual Studio
 
@@ -138,7 +138,7 @@ Die FireGiant Appx-Erweiterung verwendet statische Analysen und eine intelligent
 
 Da die FireGiant Appx-Erweiterung Ihren Installer nicht über eine Ausführung konvertieren, können Sie das WiX-Installationsprogramm pflegen, ohne es immer wieder in Windows-App-Pakete zu konvertieren. Alle Benutzer der verschiedenen Versionen von Windows erhalten die neuesten Verbesserungen und brauchen sich darum zu kümmern, ob MSI- und Windows-App-Pakete identisch sind.
 
-Sehen Sie sich diese- [video](https://www.youtube.com/watch?v=AFBpdBiAYQE) und wie wenigen Codezeilen FireGiant-CEO Rob Mensching eine Appx (Windows-app-Paket) Version von der beliebten Open-Source-Tools 7 Zip erstellt und dann wie er Windows-Anwendung und MSI-Pakete mit verbessert ändert sich im selben WiX-Quellcode.
+Sehen Sie sich diese- [video](https://www.youtube.com/watch?v=AFBpdBiAYQE) und wie wenigen Codezeilen FireGiant-CEO Rob Mensching eine Appx (Windows-app-Paket) Version von den beliebten Open-Source-Tools 7 Zip erstellt und dann wie er Windows-Anwendung und MSI-Pakete mit verbessert ändert sich im selben WiX-Quellcode.
 
 #### <a name="installaware"></a>InstallAware
 
@@ -212,11 +212,11 @@ Mithilfe von [RayFlow](https://raynet.de/Raynet-Products/RayFlow), dem Unternehm
 
 Als letzte Möglichkeit können Sie Ihre Anwendung ohne Verwendung eines dieser Tools konvertieren. Wenn Sie eine präzise Steuerung der Konvertierung bevorzugen, können Sie eine Manifestdatei erstellen und anschließend das **MakeAppx.exe**-Tool ausführen, um das Windows-App-Paket zu erstellen.
 
-Finden Sie [eine desktop-Anwendung manuell zu verpacken](desktop-to-uwp-manual-conversion.md).
+Sehen Sie [eine desktop-Anwendung manuell zu verpacken](desktop-to-uwp-manual-conversion.md).
 
 ## <a name="integrate"></a>integrieren
 
-Wenn Ihre Anwendung mit dem System integrieren werden muss (z. B.: Einrichten der Firewallregeln), können Sie diese Dinge im Paketmanifest Ihrer Anwendung beschreiben und das Systems erledigt den Rest. Für die meisten dieser Aufgaben müssen Sie gar keinen Code schreiben. Mit etwas XML im Manifest können Sie Aktionen wie das Starten eines Prozesses, wenn der Benutzer anmeldet, integrieren Ihre Anwendung in der Datei-Explorer und fügen Sie Ihre Anwendung eine Liste der Druckerziele, die in anderen apps angezeigt werden.
+Wenn Ihre Anwendung mit dem System integrieren werden muss (z. B.: Einrichten der Firewallregeln), diese Dinge im Paketmanifest Ihrer Anwendung beschreiben und das Systems erledigt den Rest. Für die meisten dieser Aufgaben müssen Sie gar keinen Code schreiben. Mit etwas XML im Manifest können Sie Aktionen wie das Starten eines Prozesses, wenn der Benutzer anmeldet, integrieren Sie Ihre Anwendung in der Datei-Explorer und fügen Sie Ihre Anwendung eine Liste der Druckerziele, die in anderen apps angezeigt werden.
 
 [Integrieren Sie Ihre verpackte desktop-Anwendung mit Windows 10](desktop-to-uwp-extensions.md)angezeigt.
 
@@ -245,14 +245,14 @@ Weitere Informationen finden Sie unter [Teilen von Code zwischen einer Desktop-A
 
 ## <a name="test"></a>Test
 
-Zum Testen Ihrer Anwendung in einer realistischen, wenn Sie für die Verteilung vorbereiten, empfiehlt es sich, Signieren Sie Ihre Anwendung, und installieren Sie es. Mehr unter [Tests für Ihre App](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-debug#test-your-app).
+Zum Testen Ihrer Anwendung in einer realistischen, wie Sie für die Verteilung vorbereiten, empfiehlt es sich, Signieren Sie Ihre Anwendung, und installieren Sie es. Mehr unter [Tests für Ihre App](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-debug#test-your-app).
 
 >[!IMPORTANT]
 > Wenn Sie Ihre Anwendung an den Microsoft Store veröffentlichen möchten, stellen Sie sicher, dass Ihre Anwendung korrekt auf Geräten unter Windows 10 im S Modus ausgeführt. Dies ist eine Anforderung für den Store. Weitere Informationen finden Sie unter [Testen Ihrer Windows-App für Windows10 im S Modus](desktop-to-uwp-test-windows-s.md).
 
 ## <a name="validate"></a>Überprüfen
 
-Geben Sie der Anwendung die beste Möglichkeit eine Veröffentlichung im Microsoft Store oder [Windows-Zertifizierung](http://go.microsoft.com/fwlink/p/?LinkID=309666), überprüfen und sie lokal testen, bevor Sie sie zur Zertifizierung übermitteln.
+Geben Sie der Anwendung die Chancen für die Veröffentlichung auf dem Microsoft Store oder [Windows-Zertifizierung](http://go.microsoft.com/fwlink/p/?LinkID=309666), überprüfen und sie lokal testen, bevor Sie sie zur Zertifizierung übermitteln.
 
 Wenn Sie den DAC verwenden, um Ihre app zu verpacken, können Sie mithilfe der neuen ``-Verify`` Kennzeichen, um das Paket für die verpackte desktop-Anwendung und der Store-Anforderungen überprüfen. Weitere Informationen finden Sie unter [Verpacken einer App, Signieren der App, und Vorbereiten der App für die Übermittlung an den Store](desktop-to-uwp-run-desktop-app-converter.md#optional-parameters).
 
@@ -264,7 +264,7 @@ Informationen zur Liste der Tests, die die Windows-Apps-Zertifizierung für die 
 
 ## <a name="distribute"></a>Verteilen
 
-Sie können Ihre Anwendung verteilen, indem sie den Microsoft Store veröffentlichen oder durch das querladen es auf andere Systeme.
+Sie können Ihrer Anwendung verteilen, indem sie den Microsoft Store veröffentlichen oder durch das querladen es auf andere Systeme.
 
 [Verteilen einer verpackten desktop-app](desktop-to-uwp-distribute.md)angezeigt.
 
@@ -288,8 +288,8 @@ Weitere Informationen finden Sie unter [UserVoice](https://wpdev.uservoice.com/f
 | [Verpacken einer desktop-Anwendung mithilfe von Visual Studio](desktop-to-uwp-packaging-dot-net.md)| Zeigt, wie Sie Ihre desktop-Anwendung mit Visual Studio verpacken. |
 | [Integrieren Sie Ihre desktop-Anwendung mit Windows 10](desktop-to-uwp-extensions.md) | Integrieren Sie Ihre Anwendung mit Windows 10 mithilfe von Aufgaben in der Paketmanifestdatei Ihres Paketprojekts. |
 | [Verbessern Ihrer Desktopanwendung für Windows10](desktop-to-uwp-enhance.md)| Verwenden Sie UWP-APIs, um moderne Umgebungen für Windows10-Benutzer hinzuzufügen. |
-| [Eine verpackte desktop-Anwendung für UWP-APIs](desktop-to-uwp-supported-api.md) | Sehen Sie, welche UWP-APIs für Ihre verpackte desktop-Anwendung mit verfügbar sind. |
+| [Eine verpackte desktop-Anwendung zur UWP-APIs](desktop-to-uwp-supported-api.md) | Sehen Sie, welche UWP-APIs für Ihre verpackte desktop-Anwendung mit verfügbar sind. |
 | [Erweitern Ihrer Desktopanwendung mit modernen UWP-Komponenten](desktop-to-uwp-extend.md)| Fügen Sie erweiterte Funktionen hinzu, die in einem UWP-App-Container ausgeführt werden müssen. Verbinden Sie Ihre desktop-Anwendung mit dem UWP-Prozess mithilfe von app-Dienste.|
 | [Führen Sie aus, Debuggen Sie und Testen Sie eine verpackte desktop-Anwendung](desktop-to-uwp-debug.md) | Erläutert die Optionen für das Debuggen der verpacken App. |
 | [Verteilen einer verpackten desktop-Anwendungspakets ](desktop-to-uwp-distribute.md) | Erfahren Sie, wie Sie Ihre konvertierte Anwendung für Benutzer verteilen können.  |
-| [Bekannte Issues(desktop-to-uwp-known-issues.md) | Listet bekannte Probleme mit Verpacken desktop-Apps. |
+| [Bekannte Issues(desktop-to-uwp-known-issues.md) | Listet bekannte Probleme mit dem Verpacken von desktop-Apps. |

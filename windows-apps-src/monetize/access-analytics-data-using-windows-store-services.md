@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste Microsoft Store-Analyse-API
 ms.localizationpriority: medium
 ms.openlocfilehash: 26bed64053e8de9a42ac01ed3262c7b0f41d1d42
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4319410"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4357005"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Zugreifen auf Analysedaten mit Store-Diensten
 
@@ -84,9 +84,9 @@ Die folgenden Analysemethoden sind für UWP-Apps im Dev Center verfügbar.
 
 | Szenario       | Methoden      |
 |---------------|--------------------|
-| Käufe, Konvertierungen, Installationen und Nutzung |  <ul><li>[Abrufen von App-Käufen](get-app-acquisitions.md)</li><li>[Abrufen von App-Erwerbstrichterdaten](get-acquisition-funnel-data.md)</li><li>[Abrufen von App-Konvertierungen nach Kanal](get-app-conversions-by-channel.md)</li><li>[Abrufen von Add-On-Käufen](get-in-app-acquisitions.md)</li><li>[Abrufen von Add-On-Käufen für Abonnements](get-subscription-acquisitions.md)</li><li>[Abrufen von Add-On-Konvertierungen nach Kanal](get-add-on-conversions-by-channel.md)</li><li>[Abrufen von App-Installationen](get-app-installs.md)</li><li>[Abrufen von täglichen app-Nutzung](get-app-usage-daily.md)</li><li>[Abrufen von monatlichen app-Nutzung](get-app-usage-monthly.md)</li></ul> |
-| App-Fehler | <ul><li>[Abrufen von Fehlerberichtsdaten](get-error-reporting-data.md)</li><li>[Abrufen von Details zu einem Fehler in Ihrer App](get-details-for-an-error-in-your-app.md)</li><li>[Abrufen der Stapelüberwachung für einen Fehler in Ihrer App](get-the-stack-trace-for-an-error-in-your-app.md)</li><li>[Herunterladen der CAB-Datei bei einem Fehler in Ihrer App](download-the-cab-file-for-an-error-in-your-app.md)</li></ul> |
-| Insights | <ul><li>[Rufen Sie Einblicke Daten für Ihre app](get-insights-data-for-your-app.md)</li></ul>  |
+| Käufe, Konvertierungen, Installationen und Nutzung |  <ul><li>[Abrufen von App-Käufen](get-app-acquisitions.md)</li><li>[Abrufen von App-Erwerbstrichterdaten](get-acquisition-funnel-data.md)</li><li>[Abrufen von App-Konvertierungen nach Kanal](get-app-conversions-by-channel.md)</li><li>[Abrufen von Add-On-Käufen](get-in-app-acquisitions.md)</li><li>[Abrufen von Add-On-Käufen für Abonnements](get-subscription-acquisitions.md)</li><li>[Abrufen von Add-On-Konvertierungen nach Kanal](get-add-on-conversions-by-channel.md)</li><li>[Abrufen von App-Installationen](get-app-installs.md)</li><li>[Abrufen der täglichen App-Nutzung](get-app-usage-daily.md)</li><li>[Abrufen der monatlichen App-Nutzung](get-app-usage-monthly.md)</li></ul> |
+| App-Fehler | <ul><li>[Abrufen von Fehlerberichtsdaten](get-error-reporting-data.md)</li><li>[Abrufen von Details zu einem Fehler in der App](get-details-for-an-error-in-your-app.md)</li><li>[Abrufen der Stapelüberwachung für einen Fehler in der App](get-the-stack-trace-for-an-error-in-your-app.md)</li><li>[Herunterladen der CAB-Datei bei einem Fehler in der App](download-the-cab-file-for-an-error-in-your-app.md)</li></ul> |
+| Insights | <ul><li>[Abrufen von internen Daten über die App](get-insights-data-for-your-app.md)</li></ul>  |
 | Bewertungen und Prüfungen | <ul><li>[Abrufen von App-Bewertungen](get-app-ratings.md)</li><li>[Abrufen von App-Rezensionen](get-app-reviews.md)</li></ul> |
 | In-App-Werbung und Anzeigenkampagnen | <ul><li>[Abrufen von Anzeigenleistungsdaten](get-ad-performance-data.md)</li><li>[Abrufen der Leistungsdaten einer Anzeigenkampagne](get-ad-campaign-performance-data.md)</li></ul> |
 
@@ -97,9 +97,9 @@ Die folgenden Analysemethoden stehen für die Verwendung durch Entwicklerkonten 
 | Szenario       | Methoden      |
 |---------------|--------------------|
 | Installiert |  <ul><li>[Abrufen von Desktopanwendungsinstallationen](get-desktop-app-installs.md)</li></ul> |
-| Blöcke |  <ul><li>[Abrufen von Upgrade Blöcke für Ihre desktop-Anwendung](get-desktop-block-data.md)</li><li>[Abrufen von Upgrade-Blockierung Informationen zu Ihrer desktop-Anwendung](get-desktop-block-data-details.md)</li></ul> |
-| Anwendungsfehler |  <ul><li>[Abrufen von Fehlerberichtsdaten für Ihre Desktopanwendung](get-desktop-application-error-reporting-data.md)</li><li>[Abrufen von Details zu einem Fehler in Ihrer Desktopanwendung](get-details-for-an-error-in-your-desktop-application.md)</li><li>[Abrufen der Stapelüberwachung für einen Fehler in Ihrer Desktopanwendung](get-the-stack-trace-for-an-error-in-your-desktop-application.md)</li><li>[Herunterladen der CAB-Datei bei einem Fehler in Ihrer Desktopanwendung](download-the-cab-file-for-an-error-in-your-desktop-application.md)</li></ul> |
-| Insights | <ul><li>[Erhalten Sie Einblicke Daten für Ihre desktop-Anwendung](get-insights-data-for-your-desktop-app.md)</li></ul>  |
+| Blöcke |  <ul><li>[Abrufen von Upgrade Blöcke für Ihre desktop-Anwendung](get-desktop-block-data.md)</li><li>[Abrufen von Details zur Upgrade-Blockierung für die Desktopanwendung](get-desktop-block-data-details.md)</li></ul> |
+| Anwendungsfehler |  <ul><li>[Abrufen von Fehlerberichtsdaten für Ihre Desktopanwendung](get-desktop-application-error-reporting-data.md)</li><li>[Abrufen von Details zu einem Fehler in der Desktopanwendung](get-details-for-an-error-in-your-desktop-application.md)</li><li>[Abrufen der Stapelüberwachung für einen Fehler in der Desktopanwendung](get-the-stack-trace-for-an-error-in-your-desktop-application.md)</li><li>[Herunterladen der CAB-Datei bei einem Fehler in der Desktopanwendung](download-the-cab-file-for-an-error-in-your-desktop-application.md)</li></ul> |
+| Insights | <ul><li>[Abrufen von internen Daten für die Desktopanwendung](get-insights-data-for-your-desktop-app.md)</li></ul>  |
 
 ### <a name="methods-for-xbox-live-services"></a>Methoden für Xbox Live-Dienste
 
@@ -109,7 +109,7 @@ Die folgenden zusätzlichen Methoden stehen für Entwicklerkonten mit Spielen zu
 |---------------|--------------------|
 | Allgemeine Analysen |  <ul><li>[Abrufen von Xbox Live-Analysedaten](get-xbox-live-analytics.md)</li><li>[Abrufen von Xbox Live-Erfolgsdaten](get-xbox-live-achievements-data.md)</li><li>[Abrufen von Xbox Live-Daten zur gleichzeitigen Nutzung](get-xbox-live-concurrent-usage-data.md)</li></ul> |
 | Integritätsanalyse |  <ul><li>[Abrufen von Xbox Live-Integritätsdaten](get-xbox-live-health-data.md)</li></ul> |
-| Community-Analyse |  <ul><li>[Abrufen von Xbox Live-Spielehubdaten](get-xbox-live-game-hub-data.md)</li><li>[Abrufen von Xbox Live Clubdaten](get-xbox-live-club-data.md)</li><li>[Abrufen von Xbox Live Multiplayerdaten](get-xbox-live-multiplayer-data.md)</li></ul>  |
+| Community-Analyse |  <ul><li>[Abrufen von Xbox Live-Spielehubdaten](get-xbox-live-game-hub-data.md)</li><li>[Abrufen von Xbox Live-Clubdaten](get-xbox-live-club-data.md)</li><li>[Abrufen von Xbox Live Multiplayerdaten](get-xbox-live-multiplayer-data.md)</li></ul>  |
 
 ### <a name="methods-for-xbox-one-games"></a>Methoden für Xbox One-Spiele
 
@@ -121,7 +121,7 @@ Die folgenden zusätzlichen Methoden stehen für Entwicklerkonten mit Xbox One-S
 
 ### <a name="methods-for-hardware-and-drivers"></a>Methoden für Hardware und Treiber
 
-Konten für Entwickler, die an das [Windows Hardware Dev Center-Programm](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) gehören haben Zugriff auf eine Reihe von Methoden zum Abrufen von Analysedaten für Hardware und Treiber. Weitere Informationen finden Sie unter [Hardware-Dashboard-API](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api).
+Konten für Entwickler, die das [Windows Hardware Dev Center-Programm](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) gehört haben Zugriff auf eine Reihe von Methoden zum Abrufen von Analysedaten für Hardware und Treiber. Weitere Informationen finden Sie in der [Hardware-Dashboard-API](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api).
 
 ## <a name="code-example"></a>Codebeispiel
 

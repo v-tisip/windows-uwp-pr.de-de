@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: Windows10, UWP, Käufe, App-Verkäufe, App-Downloads, Installationen, Trichter, Käufe, Konvertierungen, Kanal, App-Seitenaufrufe
 ms.localizationpriority: medium
 ms.openlocfilehash: 75a3ce152257d10fe392b3f64381b3e82bc79961
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315478"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4352946"
 ---
 # <a name="acquisitions-report"></a>Bericht „Käufe“
 
 
-Der Bericht " **Käufe** " im Windows Dev Center-Dashboard können Sie sehen, wer hat erworben und installiert Ihrer app, und Sie können demografische und plattformspezifische Details einsehen und zeigt Informationen dazu, wie Kunden unter Windows 10 (einschließlich Xbox) zu Ihrer app gelangt sind Eintrag. Sie können auch in der Nähe in Echtzeit Kaufdaten für den letzten oder 70-zwei Stunden-Zeitraum anzeigen. 
+Der Bericht " **Käufe** " im Windows Dev Center-Dashboard können Sie sehen, wer hat erworben und installiert Ihre app, und Sie können demografische und plattformspezifische Details einsehen und zeigt Informationen dazu, wie Kunden unter Windows 10 (einschließlich Xbox) zu Ihrer app gelangt sind Eintrag. Sie können auch in der Nähe in Echtzeit Kaufdaten für den letzten oder 70-zwei Stunden-Zeitraum anzeigen. 
 
 Sie können diese Daten in Ihrem Dashboard anzeigen oder den [Bericht herunterladen](download-analytic-reports.md), um ihn offline anzuzeigen. Sie können diese Daten aber auch programmgesteuert mit unseren [REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
@@ -57,7 +57,7 @@ Sie können optional die Ergebnisse danach filtern, ob die Übernahme vom Client
 > [!NOTE]
 > Sie können diese Daten auch programmgesteuert mit der Methode [Abrufen von App-Käufen](../monetize/get-app-acquisitions.md) unserer [Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
-In der **App täglich** -Ansicht Wenn der **30d** Zeitraum ausgewählt wird, möglicherweise Kreis angezeigt. Diese stellen eine erhebliche Erhöhung oder einen bestimmten Wert, die wir glauben, dass Sie kennen sollten verringern. Das Datum, an dem der Kreis angezeigt wird, stellt das Ende der Woche, in der wir eine erhebliche Erhöhung oder Verringerung, die im Vergleich zu Woche festgestellt. Um weitere Informationen zu Änderungen anzuzeigen, zeigen Sie auf den Kreis.  
+In der **App täglich** -Ansicht Wenn die **30d** Zeitraum ausgewählt wird, möglicherweise Kreis angezeigt. Diese darstellen eine erhebliche Erhöhung oder in einem bestimmten Wert, den wir glauben, dass Sie wissen möchten, müssen verringern. Das Datum, an dem der Kreis angezeigt wird, stellt das Ende der Woche, in der wir eine erhebliche Erhöhung oder Verringerung, die im Vergleich zur vorherigen Woche, erkannt. Um weitere Informationen zu Änderungen anzuzeigen, zeigen Sie auf den Kreis.  
 
 > [!TIP]
 > Sie können weitere Einblicke im Zusammenhang mit erhebliche Änderungen an der letzten 30 Tage im [Bericht](insights-report.md)anzeigen.

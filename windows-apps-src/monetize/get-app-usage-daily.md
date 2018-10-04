@@ -2,7 +2,7 @@
 author: Xansky
 ms.assetid: 99DB5622-3700-4FB2-803B-DA447A1FD7B7
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um täglichen app-Nutzungsdaten für einen bestimmten Zeitraum und andere optionale Filter abzurufen.
-title: Abrufen von täglichen app-Nutzung
+title: Abrufen der täglichen App-Nutzung
 ms.author: mhopkins
 ms.date: 08/15/2018
 ms.topic: article
@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Store-Dienste, Microsoft Store-Analyse-API, Nutzung
 ms.localizationpriority: medium
 ms.openlocfilehash: 5060c24df7242d62e2895231d7441e904987d522
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4310174"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4350796"
 ---
-# <a name="get-daily-app-usage"></a>Abrufen von täglichen app-Nutzung
+# <a name="get-daily-app-usage"></a>Abrufen der täglichen App-Nutzung
 
-Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um aggregierte Nutzungsdaten (nicht einschließlich Xbox Multiplayer-) im JSON-Format für eine Anwendung während eines bestimmten Zeitraums (letzten 90 Tage nur) und andere optionale Filter abzurufen. Diese Informationen sind auch im [Bericht "Nutzung"](../publish/usage-report.md) im Windows Dev Center-Dashboard verfügbar.
+Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um aggregierte Nutzungsdaten (nicht einschließlich Xbox multiplayer) im JSON-Format für eine Anwendung während eines bestimmten Zeitraums (letzten 90 Tage nur) und andere optionale Filter abzurufen. Diese Informationen sind auch im [Bericht "Nutzung"](../publish/usage-report.md) im Windows Dev Center-Dashboard verfügbar.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -89,17 +89,17 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | date                      | string  | Das erste Datum im Datumsbereich für die Nutzungsdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist dieser Wert das erste Datum in diesem Datumsbereich.        |
 | applicationId             | string  | Die Store-ID der app, für die Sie Nutzungsdaten abrufen.          |
 | applicationName           | string  | Der Anzeigename der App.                                              |
-| deviceType                | string  | Eine der folgenden Zeichenfolgen, die den Typ des Geräts angibt, in dem Nutzung erfolgte:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**Tablet**</li><li>**IoT**</li><li>**Server**</li><li>**Holographic**</li><li>**Unbekannt**</li></ul>                                                                                                         |
-| packageVersion            | string  | Die Version des Pakets, in dem Nutzung erfolgte.                          |
-| market                    | string  | Der ISO 3166-Ländercode des Markts, in dem der Kunde Ihre app verwendet, werden soll. |
+| deviceType                | string  | Eine der folgenden Zeichenfolgen gibt an, dass der Typ des Geräts, in denen Nutzung aufgetreten ist:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**Tablet**</li><li>**IoT**</li><li>**Server**</li><li>**Holographic**</li><li>**Unbekannt**</li></ul>                                                                                                         |
+| packageVersion            | string  | Die Version des Pakets, in denen Nutzung aufgetreten ist.                          |
+| market                    | string  | Der ISO 3166-Ländercode des Markts, in denen der Kunde Ihre app verwendet, werden soll. |
 | subscriptionName          | String  | Gibt an, ob die Verwendung über Xbox Game Pass befand.                            |
 | dailySessionCount         | long    | Die Anzahl der benutzersitzungen an diesem Tag.                                  |
-| engagementDurationMinutes | doppelt  | Die Minuten, in denen Benutzer aktiv Ihrer App gemessen durch einen bestimmten Zeitraum, wenn die app gestartet wird (Prozessbeginn) und endet, wenn er beendet wird (Prozess End) oder nach einer Zeit der Inaktivität.             |
+| engagementDurationMinutes | doppelt  | Der Minuten, in denen Benutzer aktiv Ihrer App gemessen werden, indem Sie einen bestimmten Zeitraum, wenn die app gestartet wird (Prozessbeginn) und endet bei beendet wird (Prozess End) oder nach einer Zeit der Inaktivität.             |
 | dailyActiveUsers          | long    | Die Anzahl der Kunden, die die app an diesem Tag.                           |
 | dailyActiveDevices        | long    | Die Anzahl der täglichen Geräte, die von allen Benutzern zur Interaktion mit Ihrer app verwendet.  |
 | dailyNewUsers             | long    | Die Anzahl der Kunden, die Ihre app zum ersten Mal an diesem Tag verwendet.    |
 | monthlyActiveUsers        | long    | Die Anzahl der Kunden, die mit der app dieses Monats.                         |
-| monthlyActiveDevices      | long    | Die Anzahl der Geräte, die app für einen bestimmten Zeitraum, wenn die app gestartet wird (Prozessbeginn) ausführen und endet, wenn er beendet wird (Prozess End) oder nach einer Zeit der Inaktivität.                                      |
+| monthlyActiveDevices      | long    | Die Anzahl von Geräten, die app für einen bestimmten Zeitraum, wenn die app gestartet wird (Prozessbeginn) ausführen und endet, wenn er (Prozess End) beendet wird oder nach einer Zeit der Inaktivität.                                      |
 | monthlyNewUsers           | long    | Die Anzahl der Kunden, die Ihre app zum ersten Mal dieses Monats verwendet.  |
 
 

@@ -1,7 +1,7 @@
 ---
 author: jwmsft
 description: Die xBind-Markuperweiterung mit der Funktionen im Markup verwendet werden.
-title: 'Funktionen in X: Bind'
+title: 'X: Bind-Funktionen'
 ms.author: jimwalk
 ms.date: 04/26/2018
 ms.topic: article
@@ -10,13 +10,13 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, xBind
 ms.localizationpriority: medium
 ms.openlocfilehash: b160b1e711f6e56b14f0d6e0e83e9f9150be5e90
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4315147"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4355655"
 ---
-# <a name="functions-in-xbind"></a>Funktionen in X: Bind
+# <a name="functions-in-xbind"></a>X: Bind-Funktionen
 
 **Hinweis**  Allgemeine Informationen zur Verwendung der Datenbindung in Ihrer App mit **{x:Bind}** (sowie einen Gesamtvergleich von **{x:Bind}** und **{Binding}**) finden Sie unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
@@ -163,7 +163,7 @@ public class Person:INotifyPropertyChanged
 ```
 
 > [!TIP]
-> Sie können Funktionen in X: Bind verwenden, erreichen Sie die gleichen Szenarien wie was über Konverter und MultiBinding in WPF unterstützt wurde.
+> Sie können Funktionen in X: Bind um zu erreichen die gleichen Szenarien wie was über Konverter und MultiBinding in WPF unterstützt wurde.
 
 ## <a name="function-arguments"></a>Funktionsargumente
 

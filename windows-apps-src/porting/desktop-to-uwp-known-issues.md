@@ -12,13 +12,13 @@ keywords: windows10, UWP
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
 ms.openlocfilehash: 50a455dc43007a433bfabd995af7968e93fe1900
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4311138"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4354378"
 ---
-# <a name="known-issues-with-packaged-desktop-applications"></a>Bekannte Probleme mit verpackte desktop-Apps
+# <a name="known-issues-with-packaged-desktop-applications"></a>Bekannte Probleme mit verpackten desktop-Apps
 
 Dieser Artikel enthält bekannte Probleme, die auftreten können, wenn Sie ein Windows-app-Paket für Ihre desktop-Anwendung erstellen.
 
@@ -133,17 +133,17 @@ certutil -dump <cert_file.pfx>
 
 ### <a name="bad-pe-certificate-0x800700c1"></a>Ungültiges PE-Zertifikat (0x800700C1)
 
-Dies kann passieren, wenn Ihr Paket eine Binärdatei, die mit ein beschädigten Zertifikat enthält. Hier sehen Sie einige Gründe, warum dies geschieht:
+Dies kann passieren, wenn Ihr Paket eine Binärdatei mit ein beschädigten Zertifikat enthalten ist. Hier sehen Sie einige Gründe, warum dies geschieht:
 
-* Der Anfang des Zertifikats ist nicht am Ende eines Bilds.  
+* Beginn des Zertifikats ist nicht am Ende eines Bilds.  
 
 * Die Größe des Zertifikats ist nicht positiv.
 
-* Der Zertifikat-Startseite ist nicht nach der `IMAGE_NT_HEADERS32` Struktur für eine 32-Bit-ausführbare Datei oder nach der `IMAGE_NT_HEADERS64` Struktur für eine 64-Bit-ausführbare Datei.
+* Die Zertifikat-Start wird nicht nach der `IMAGE_NT_HEADERS32` Struktur für eine 32-Bit-ausführbare Datei oder nach der `IMAGE_NT_HEADERS64` Struktur für eine 64-Bit-ausführbare Datei.
 
 * Der Zertifikat-Zeiger ist nicht ordnungsgemäß für eine Struktur WIN_CERTIFICATE ausgerichtet.
 
-Zum Auffinden von Dateien, die eine ungültige PE-Zertifikat enthalten, öffnen Sie eine **Eingabeaufforderung**, und legen Sie die Umgebungsvariable `APPXSIP_LOG` auf den Wert 1.
+Zum Auffinden von Dateien, die eine ungültige PE-Zertifikat enthalten, öffnen Sie ein **Eingabeaufforderungsfenster**, und legen Sie die Umgebungsvariable `APPXSIP_LOG` auf dem Wert 1.
 
 ```
 set APPXSIP_LOG=1

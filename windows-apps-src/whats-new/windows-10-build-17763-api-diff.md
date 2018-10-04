@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 178bee54296c355a17a78cb63d17986f51132893
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4317580"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4351294"
 ---
 # <a name="new-apis-in-windows-10-build-17763"></a>Neue APIs in Windows 10 build 17763
 
@@ -1582,7 +1582,7 @@ Panel.backgroundtransition
 
 PasswordBox.canpasteclipboardcontent <br> PasswordBox.canpasteclipboardcontentproperty <br> PasswordBox.Description <br> PasswordBox.descriptionproperty <br> PasswordBox.pastefromclipboard <br> PasswordBox.selectionflyout <br> PasswordBox.selectionflyoutproperty
 
-#### [<a name="relativepanel"></a>relativepanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel)
+#### [<a name="relativepanel"></a>"relativepanel"](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel)
 
 relativepanel.backgroundsizing <br> relativepanel.backgroundsizingproperty
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 44ffafab761741b8d7bc05f13ea2d8ae50ff048b
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4320117"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4351768"
 ---
 # <a name="microsoft-store-marketing-guidelines-for-apps"></a>Microsoft Store marketing-Richtlinien für apps
 
@@ -23,7 +23,7 @@ Hier erfahren Sie, wie Sie Ihre apps und Inhalte im Microsoft Store zu bewerben.
 
 ## <a name="store-badges"></a>Store-Badges
 
-Wir haben spezielle Werbe-Badges Sie mehr Kunden zum Eintrag Ihrer app im Microsoft Store lenken können erstellt. Diese Badges sind in 44Sprachen verfügbar. Bedenken Sie, dass es bestimmte Anforderungen gibt, die Sie bei Verwendung dieser Bilder beachten müssen. Diese Vorgaben sowie Verwendungsbeispiele und Richtlinien sind in einer PDF-Datei verfügbar.
+Wir haben spezielle Werbe-Badges Sie mehr Kunden zum Eintrag Ihrer app im Microsoft Store lenken können erstellt werden. Diese Badges sind in 44Sprachen verfügbar. Bedenken Sie, dass es bestimmte Anforderungen gibt, die Sie bei Verwendung dieser Bilder beachten müssen. Diese Vorgaben sowie Verwendungsbeispiele und Richtlinien sind in einer PDF-Datei verfügbar.
 
 [ ![Schaltfläche "herunterladen"](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529769) **Microsoft Store-Badge-Richtlinien (PDF, Englisch)**
 

@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 784accda4299891fa86501236d35c0828e80cf8d
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4319244"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4352114"
 ---
 # <a name="create-your-app-by-reserving-a-name"></a>Erstellen einer App durch Reservieren eines Namens
 
@@ -26,7 +26,7 @@ Die Reservierung eines Namens für Ihre App ist möglich, auch wenn Sie noch nic
 Wenn Sie Ihre [App-Pakete hochladen](upload-app-packages.md), muss der [**Package/Properties/DisplayName**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-displayname) -Wert dem Namen entsprechen, den Sie für Ihre App reserviert haben. Wenn Sie das App-Paket mit MicrosoftVisual Studio erstellen, wird dieses Attribut für Sie ausgefüllt.
 
 > [!IMPORTANT]
-> Sie können zusätzliche Namen für eine app reservieren, und Sie können diese in der veröffentlichten Version Ihrer App anstelle der verwenden, die Sie reservieren, wenn Sie zunächst Ihre app im Dashboard erstellen. Beachten Sie jedoch, dass die hier eingegebenen Vorname in Teil Ihrer app [-Identitätsdetails](view-app-identity-details.md), z. B. den **Paketfamiliennamen (PFN)** verwendet werden. Diese Werte kann für einige Benutzer sichtbar sein, und nicht geändert, um sicherzustellen, dass der Namen reservieren für diese Verwendung geeignet ist.
+> Sie können zusätzliche Namen für eine app reservieren, und Sie können diese in der veröffentlichten Version Ihrer App anstelle der verwenden, die Sie reservieren, wenn Sie zunächst Ihre app im Dashboard erstellen. Beachten Sie jedoch, dass den Vornamen, den Sie hier einige der app [Identitätsdetails](view-app-identity-details.md), z. B. den **Paketfamiliennamen (PFN)** verwendet wird. Diese Werte möglicherweise für einige Benutzer sichtbar sein, und kann nicht geändert, um sicherzustellen, dass die Namen reservieren für diese Verwendung geeignet ist.
 
 
 ## <a name="create-your-app-by-reserving-a-new-name"></a>App-Erstellung durch Reservierung eines neuen Namens
@@ -51,10 +51,10 @@ Es ist sehr wichtig, für Ihre App den richtigen Namen auszuwählen. Wählen Sie
 
 -   **Halten Sie den Namen kurz.** Für die Anzeige des App-Namens ist meist nur wenig Platz – lassen Sie sich also einen möglichst kurzen Namen einfallen. Der Name der App kann bis zu 256Zeichen haben, aber möglicherweise ist das Ende eines sehr langen Namens für Kunden nicht immer sichtbar.
     > [!NOTE]
-    > Die tatsächliche Anzahl von an unterschiedlichen Stellen angezeigten Zeichen kann je nach zugewiesener Länge und im App-Namen verwendetem Zeichentyp variieren. So benötigen beispielsweise in der von Windows verwendeten Schriftart „SegoeUI“ etwa 30I-Zeichen genauso viel Platz wie zehn W-Zeichen. Aufgrund dieser Abweichung werden Sie sicher, dass Ihre app getestet und überprüfen, wie der Name auf den Kacheln angezeigt wird (Wenn Sie den app-Namen überlagern möchten), in Suchergebnissen und in der app selbst. Berücksichtigen Sie auch die Sprachen, in denen Sie die App anbieten möchten. Denken Sie daran, dass ostasiatische Zeichen im Allgemeinen breiter sind als lateinische Zeichen, sodass weniger Zeichen angezeigt werden.
+    > Die tatsächliche Anzahl von an unterschiedlichen Stellen angezeigten Zeichen kann je nach zugewiesener Länge und im App-Namen verwendetem Zeichentyp variieren. So benötigen beispielsweise in der von Windows verwendeten Schriftart „SegoeUI“ etwa 30I-Zeichen genauso viel Platz wie zehn W-Zeichen. Aufgrund dieser Abweichung werden Sie sicher, dass Ihre app getestet und überprüfen, wie der Name auf den Kacheln angezeigt wird (Wenn Sie auf den app-Namen überlagern), in Suchergebnissen und in der app selbst. Berücksichtigen Sie auch die Sprachen, in denen Sie die App anbieten möchten. Denken Sie daran, dass ostasiatische Zeichen im Allgemeinen breiter sind als lateinische Zeichen, sodass weniger Zeichen angezeigt werden.
 -   **Seien Sie unverwechselbar.** Suchen Sie einen eindeutigen App-Namen aus, damit die App nicht so leicht mit einer anderen App verwechselt werden kann.
 -   **Verwenden Sie keine von anderen geschützten Namen.** Stellen Sie sicher, dass sie zum Verwenden des reservierten Namens berechtigt sind. Wurde der Name als Marke eingetragen, kann ein Verstoß gemeldet werden, und Sie dürfen den Namen nicht weiter verwenden. Geschieht dies nach der Veröffentlichung Ihrer App, wird sie aus dem Store entfernt. Sie müssen dann den Namen der App sowie alle Vorkommen des Namens innerhalb Ihrer App und der zugehörigen Inhalte ändern, bevor Sie [die App erneut zur Zertifizierung einreichen](app-submissions.md).
--   **Fügen Sie Informationen zur Unterscheidung nicht am Ende des Namens hinzu.** Wenn Infos zur Unterscheidung mehrerer Apps am Ende eines Namens angefügt werden, werden sie von den Kunden vor allem bei langen Namen vielleicht übersehen, und es scheint, als hätten alle Apps den gleichen Namen. Wenn dies unvermeidbar ist, verwenden Sie unterschiedliche Logos und app-Bilder, um eine app voneinander zu unterscheiden zu vereinfachen.
+-   **Fügen Sie Informationen zur Unterscheidung nicht am Ende des Namens hinzu.** Wenn Infos zur Unterscheidung mehrerer Apps am Ende eines Namens angefügt werden, werden sie von den Kunden vor allem bei langen Namen vielleicht übersehen, und es scheint, als hätten alle Apps den gleichen Namen. Wenn dies unvermeidbar ist, verwenden Sie unterschiedliche Logos und app-Bilder, um eine Unterscheidung zu vereinfachen.
 -   **Verwenden Sie in Ihrem Namen keine Emoticons.** Sie können keinen Namen reservieren, der Emoticons oder andere nicht unterstützte Zeichen enthält.
 
 

@@ -1,156 +1,261 @@
 ---
 author: joannaleecy
-title: Erstellen einer Demo-App für den Einzelhandel
-description: Erstellen Sie eine Demo-App für den Einzelhandel (RDX-App, Retail Demo Experience-App). Dies ist eine App, die sowohl im Einzelhandels-Demomodus als auch im Normalmodus gestartet werden kann.
+title: Einzelhandel (RDX) Demo Features Ihrer app hinzufügen
+description: Bereiten Sie Ihre app für den Einzelhandel Demo-Modus, helfen, Ihre app auf die Verkaufsversion Vertriebsabteilung zu präsentieren.
 ms.assetid: f83f950f-7fdd-4f18-8127-b92a8f400061
 ms.author: joanlee
-ms.date: 02/08/2017
+ms.date: 10/02/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, Demo-App für den Einzelhandel
 ms.localizationpriority: medium
-ms.openlocfilehash: 19a22e09484943d63988cef6bb6a7e7c09e016dd
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 152c775c1b69bfd82d8969aed7e638f98646bdd7
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691016"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4351314"
 ---
-#  <a name="create-a-retail-demo-experience-rdx-app"></a>Erstellen einer Demo-App für den Einzelhandel (RDX-App, Retail Demo Experience-App)
+# <a name="add-retail-demo-rdx-features-to-your-app"></a>Einzelhandel (RDX) Demo Features Ihrer app hinzufügen
 
-Wenn Kunden ein Geschäft betreten, erwarten sie, dort die neuesten PCs und Mobiltelefone vorzufinden. Diese Geräte werden als Demogeräte für den Einzelhandel bezeichnet.
-Solche Vorführgeräte und die darauf installierten Inhalte sind zu großen Teilen für das Kundenerlebnis im Geschäft verantwortlich, da Kunden häufig viel Zeit damit verbringen, diese Geräte auszuprobieren.
+Fügen Sie einen Retail Demo-Modus in Ihrer Windows-app, damit Kunden, die PCs und Geräte auf die Vertriebsabteilung ausprobieren sofort beginnen können.
 
-Auf diesen PCs und Mobiltelefonen in den Einzelhandelsgeschäften muss eine Demo-App für den Einzelhandel (RDX-App) installiert sein. In diesem Artikel finden Sie Informationen zum Entwickeln und Gestalten einer Einzelhandels-Demoversion Ihrer App, die auf PCs und mobilen Demogeräten im Einzelhandel installiert wird.
+Wenn Kunden im Einzelhandel sind, erwarten sie, dass Demos von Computern und Geräten testen können. Sie sind häufig einen erheblichen Teil der Zeit mit apps über die [Demo Einzelhandel (RDX) auftreten](https://docs.microsoft.com/windows-hardware/customize/desktop/retail-demo-experience).
 
-Eine Demo-App für den Einzelhandel umfasst einen einzelnen Build, der in zwei verschiedenen Modi gestartet werden kann: im _Normalmodus_ oder im _Einzelhandelsmodus_.
-Aus Sicht unserer Kunden gibt es nur eine App. Damit sie zwischen den beiden Versionen unterscheiden können, empfiehlt es sich, dass die im Einzelhandelsmodus ausgeführte App in der Titelleiste oder an einer anderen entsprechenden Stelle gut sichtbar das Wort „Einzelhandel“ anzeigt.
+Sie können Ihre app einrichten, unterschiedliche Funktionen bereitstellen, während Sie sich im _normalen_ oder _Einzelhandel_ Modi müssen. Z. B. Wenn Ihre app mit einem Setupprozess beginnt, können Sie im einzelhandelsmodus überspringen und die app mit Einstellungen für die Daten und standardmäßig vorab, damit sie sofort beginnen können.
 
-Zusätzlich zu den Store-Anforderungen für Apps müssen RDX-Apps auch vollständig mit dem Einrichtungs-, Bereinigungs- und Aktualisierungssystem der Vorführgeräte kompatibel sein, damit die Erfahrung der Kunden im Geschäft durchgehend positiv ist.
+Aus Sicht unserer Kunden gibt es nur eine app. Um zwischen den beiden Modi unterscheiden können, empfehlen wir, während Ihre app im einzelhandelsmodus ist, das Wort "Einzelhandel" anzeigt hervorgehobener Stelle in der Titelleiste oder an einer geeigneten Stelle.
+
+Zusätzlich zu den Microsoft Store-Anforderungen für apps müssen RDX-fähige apps auch sein kompatibel mit der RDX-Setup, Bereinigung und Update-Prozesse, um sicherzustellen, dass Kunden ein Geschäft durchgehend positiv Erlebnis Aktualisierungssystem der Vorführgeräte haben.
 
 ## <a name="design-principles"></a>Designprinzipien
 
-### <a name="show-your-best"></a>Optimale Präsentation
+* **Optimale Präsentation**. Verwenden Sie die Demo-App, um Showcase Ihrer app großartig. Dies ist wahrscheinlich das erste Mal Ihr Kunde Ihre app, daher sie besten Seite zeigen angezeigt werden!
 
-Verwenden Sie die Demo-App, um zu zeigen, was an Ihrer Anwendung so großartig ist.  Wahrscheinlich ist dies das erste Mal, dass die Kunden Ihre Anwendung sehen, präsentieren Sie sie also von ihrer besten Seite.
+* **Zeigen sie schnell**. Kunden können ungeduldig sein – je schneller ein Benutzer den Wert ihrer App erfasst, desto besser.
 
-### <a name="show-it-fast"></a>Schnelle Vorführung
+* **Einfache Demonstration**. Die Demo-App ist ein Elevator Pitch für den Wert Ihrer app.
 
-Kunden können ungeduldig sein – je schneller ein Benutzer den Wert ihrer App erfasst, desto besser.
-
-### <a name="keep-the-story-simple"></a>Einfache Demonstration
-
-Die Demo-App ist ein Elevator Pitch für den Wert Ihrer App.
-
-### <a name="focus-on-the-experience"></a>Das Erlebnis in den Mittelpunkt stellen
-
-Geben Sie den Benutzern die Zeit, um Ihre Inhalte zu verdauen.  Es ist zwar wichtig, dass die Benutzer schnell zum wichtigsten Teil gelangen, aber nur mithilfe entsprechender Pausen können sie den Wert der App richtig erkennen.
+* **Fokus auf die Erfahrung**. Geben Sie den Benutzern die Zeit, um Ihre Inhalte zu verdauen. Es ist zwar wichtig, dass die Benutzer schnell zum wichtigsten Teil gelangen, aber nur mithilfe entsprechender Pausen können sie den Wert der App richtig erkennen.
 
 ## <a name="technical-requirements"></a>Technische Anforderungen
 
-Da Demo-Apps den Kunden im Einzelhandel Ihre App optimal präsentieren sollen, ist es wichtig, dass die technischen Anforderungen und Datenschutzrichtlinien des Stores in Bezug auf Demo-Apps für den Einzelhandel eingehalten werden.
-Dies kann auch als Checkliste in Vorbereitung auf den Prüfprozess verwendet werden und für Klarheit beim Testen sorgen. Beachten Sie, dass diese Anforderungen nicht nur für den Prüfprozess, sondern für die gesamte Lebensdauer der Demo-App für den Einzelhandel (d.h. solange Ihre App auf den Vorführgeräten ausgeführt wird) eingehalten werden müssen.
+Da RDX-fähige apps werden Ihrer App Einzelhandelskunden optimal präsentieren sollen, müssen technischen Anforderungen und Datenschutzrichtlinien in Bezug auf, die alle Retail Demo-apps für den Microsoft Store hat.
 
-### <a name="critical-level-requirements"></a>Kritische Anforderungen
+Dies kann als eine Prüfliste, um den Prozess der Validierung Vorbereitung und Klarheit in den Testprozess zu bieten verwendet werden. Beachten Sie, dass diese Anforderungen nicht nur für den Prüfprozess, sondern für die gesamte Lebensdauer der Demo-App für den Einzelhandel (d.h. solange Ihre App auf den Vorführgeräten ausgeführt wird) eingehalten werden müssen.
 
-RDX-Apps, die diese kritischen Anforderungen nicht erfüllen, werden umgehend von allen Vorführgeräten entfernt.
+### <a name="critical-requirements"></a>Kritische Anforderungen
 
-* Kein Anfordern personenbezogener Informationen
+RDX-fähige apps, die diese kritischen Anforderungen nicht erfüllen, werden so schnell wie möglich von allen vorführgeräten entfernt werden.
 
-    Die App darf Kunden nicht nach personenbezogenen Informationen fragen.  Dies umfasst Microsoft-Kontoinformationen, Kontaktdetails usw.
+* **Fragen Sie nicht nach personenbezogenen Informationen (PII)**. Dies umfasst die Anmeldedaten, Microsoft-Kontoinformationen oder Kontakt Details.
 
-* Fehlerfreie Ausführung
+* **Fehlerfreie auftreten**. Ihr App muss fehlerfrei funktionieren. Außerdem dürfen keine Fehler-Pop-ups oder -Benachrichtigungen angezeigt werden, wenn Kunden die Vorführgeräte verwenden. Fehler wider negativ auf die app selbst, Ihre Marke, des Geräts Marke, Hersteller des Geräts Marke und Microsoft Marke.
 
-    Ihr App muss fehlerfrei funktionieren. Außerdem dürfen keine Fehler-Pop-ups oder -Benachrichtigungen angezeigt werden, wenn Kunden die Vorführgeräte verwenden. Dies ist wichtig, da wir uns den Kunden von unserer besten Seite zeigen möchten – und diese muss fehlerfrei sein.
-    Zudem werfen Fehler ein schlechtes Licht auf die App, Ihr Unternehmen, das Gerät, auf dem die App ausgeführt wird, den Gerätehersteller und Microsoft selbst.
-
-* Testmodus für kostenpflichtige Apps
-
-    Damit Apps auf Vorführgeräten installiert werden können, müssen sie entweder kostenlos sein oder über einen Testmodus verfügen.  Kunden, die sich in einem Laden etwas ansehen, möchten dafür nicht zahlen. Weitere Informationen finden Sie unter [Ausschließen oder Einschränken von Features in einer Testversion](https://msdn.microsoft.com/windows/uwp/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app).
+* **Kostenpflichtige apps müssen über einen Testmodus verfügen**. Ihre app muss entweder ein kostenloses oder einen [Testmodus](https://msdn.microsoft.com/windows/uwp/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app)enthalten. Kunden, die sich in einem Laden etwas ansehen, möchten dafür nicht zahlen.
 
 ### <a name="high-priority-requirements"></a>Anforderungen mit hoher Priorität
 
-Bei RDX-Apps, die diese Anforderungen mit hoher Priorität nicht erfüllen, muss sofort untersucht werden, wie das Problem behoben werden kann. Wenn eine umgehende Problembehebung nicht möglich ist, kann diese App von allen Vorführgeräten entfernt werden.
+RDX-fähige apps, die diese Anforderungen mit hoher Priorität nicht erfüllen müssen für ein Update sofort untersucht werden. Wenn eine umgehende Problembehebung nicht möglich ist, kann diese App von allen Vorführgeräten entfernt werden.
 
-* Einprägsame Offline-Erfahrung
+* **Memorable offline auftreten**. Ihre app muss eine tolle offline-Erfahrung zu bieten, da etwa 50 % der Geräte an einzelhandelsstandorten offline sind. Dadurch wird sichergestellt, dass das Erlebnis für die Kunden auch dann positiv ist, wenn sie offline mit Ihrer App interagieren.
 
-    Ihre Demo-App für den Einzelhandel muss eine tolle Offline-Erfahrung bieten, da etwa 50% der Geräte an Einzelhandelsstandorten offline sind. Dadurch wird sichergestellt, dass das Erlebnis für die Kunden auch dann positiv ist, wenn sie offline mit Ihrer App interagieren.
+* **Aktualisierte Content-Erfahrung**. Ihre app sollte nie für Updates Online auffordern. Wenn Updates erforderlich sind, sollten sie im Hintergrund ausgeführt werden.
 
-* Aktualisierte Content-Erfahrung
+* **Keine anonyme Kommunikation**. Da ein Kunde ein Vorführgerät nutzen, anonyme Benutzer ist, sollten sie nicht Nachricht oder Inhalte Freigeben des Geräts können.
 
-    Damit die Kunden einen guten Eindruck von Ihrer App erhalten, muss diese immer aktuell sein, und Kunden sollten nicht aufgefordert werden, Aktualisierungen durchzuführen, wenn die App online ist.
+* **Konsistentes Erlebnis mit den Bereinigungsprozess zu übermitteln**. Die Verwendung eines Vorführgeräts sollte für alle Kunden gleich sein. Ihre app sollte [Bereinigungsprozess](#clean-up-process) verwenden, um nach jeder Verwendung zum gleichen Standardzustand zurückkehrt wird. Wir möchten wir nicht den nächsten Kunden um festzustellen, was die vorherigen Kunden hinterlassen. Dies umfasst z.B. Punktestände, Erfolge und aufgehobene Sperren.
 
-* Keine anonyme Kommunikation
-
-    Da Kunden, die ein Vorführgerät nutzen, anonyme Benutzer sind, dürfen sie über das Gerät keine Nachrichten versenden oder Inhalte freigeben.
-
-* Bereitstellen einer einheitlichen Benutzererfahrung mithilfe des Bereinigungsprozesses
-
-    Die Verwendung eines Vorführgeräts sollte für alle Kunden gleich sein. Verwenden Sie daher den [Bereinigungsprozess](#clean-up-process) für Ihre App, damit diese nach jeder Verwendung zum gleichen Standardzustand zurückkehrt. So wird Kunden nicht angezeigt, was die vorherigen Kunden ausgeführt haben.  Dies umfasst z.B. Punktestände, Erfolge und aufgehobene Sperren.
-
-* Altersgerechte Inhalte
-
-    Alle Inhalte von Demo-Apps für den Einzelhandel müssen für Jugendliche oder eine jüngere Altersklasse freigegeben sein. Weitere Informationen finden Sie unter [Einstufung Ihrer App durch die IARC](https://www.globalratings.com/for-developers.aspx) und [ESRB-Bewertung](https://www.esrb.org/ratings/ratings_guide.aspx).
+* **Altersgerechte Inhalte**. Alle app-Inhalt muss Altersklasse oder eine jüngere zugewiesen. Weitere Informationen finden Sie unter [abrufen, die die app durch die IARC bewertet](https://www.globalratings.com/for-developers.aspx) und [ESRB-Bewertung](https://www.esrb.org/ratings/ratings_guide.aspx).
 
 ### <a name="medium-priority-requirements"></a>Anforderungen mit mittlerer Priorität
 
 Das Windows-Team für den Einzelhandel setzt sich unter Umständen direkt mit Entwicklern in Verbindung, um mit ihnen zu besprechen, wie diese Probleme behoben werden können.
 
-* Möglichkeit zur Ausführung auf verschiedenen Geräten
+* **Möglichkeit zum erfolgreich über eine Vielzahl von Geräten ausgeführt werden**. Apps müssen auf allen Geräten, einschließlich Geräten mit Low-End-Spezifikationen ausgeführt werden. Wenn die app auf Geräten, die die Mindestanforderungen nicht erfüllt installiert ist, muss die app klar den Benutzer darüber zu informieren. Die Mindestgeräteanforderungen müssen bekanntgegeben werden, damit die App immer mit höchster Leistung ausgeführt werden kann.
 
-    Demo-Apps für den Einzelhandel müssen auf allen Geräten (einschließlich leistungsschwächeren Geräten) problemlos ausgeführt werden können. Wenn die Demo-App für den Einzelhandel auf Geräten installiert wird, die die Mindestspezifikationen zum Ausführen der App nicht erfüllt, müssen die Benutzer klar darauf hingewiesen werden. Die Mindestgeräteanforderungen müssen bekanntgegeben werden, damit die App immer mit höchster Leistung ausgeführt werden kann.
+* **Erfüllen der größenanforderungen für Einzelhandel**. Die App darf eine Größe von 800MB nicht übersteigen. Wenden Sie sich an das Windows-Einzelhandel-Team direkt Weitere Informationen zu Wenn RDX-fähige app die größenanforderungen nicht entspricht.
 
-* Erfüllen der Größenanforderungen für Vorführgeräte
+## <a name="retailinfo-api-preparing-your-code-for-demo-mode"></a>RetailInfo API: Vorbereiten von Ihrem Code für Demo-Modus
 
-    Die App darf eine Größe von 800MB nicht übersteigen. Wenden Sie sich direkt an das Windows-Team für den Einzelhandel, wenn Ihre Demo-App für den Einzelhandel den Größenanforderungen nicht entspricht.
+### <a name="isdemomodeenabled"></a>IsDemoModeEnabled
+Die [**IsDemoModeEnabled**](https://docs.microsoft.com/uwp/api/windows.system.profile.retailinfo.isdemomodeenabled) -Eigenschaft in den [**RetailInfo**](https://docs.microsoft.com/uwp/api/Windows.System.Profile.RetailInfo) -Hilfsklasse, die Teil des [Windows.System.Profile](https://docs.microsoft.com/uwp/api/windows.system.profile) Namespaces in Windows 10 SDK ist, wird als einen booleschen Indikator verwendet, an welcher Codepfad, Ihre app ausgeführt wird – die normale _ _oder den _Einzelhandel_ Modus.
 
-## <a name="preparing-codebase-for-retail-demo-mode-development"></a>Vorbereiten der Codebasis für den Demomodus für den Einzelhandel
+``` csharp
+using Windows.Storage;
 
-Die Eigenschaft [**IsDemoModeEnabled**](https://docs.microsoft.com/uwp/api/windows.system.profile.retailinfo.isdemomodeenabled) in der Hilfsklasse [**RetailInfo**](https://docs.microsoft.com/uwp/api/Windows.System.Profile.RetailInfo), die dem Namespace [Windows.System.Profile](https://docs.microsoft.com/uwp/api/windows.system.profile) im Windows 10 SDK angehört, ist ein Boolescher Wert, der angibt, welcher Codepfad Ihrer Anwendung im _Normalmodus_ oder im _Einzelhandelsmodus_ ausgeführt wird.
+StorageFolder folder = ApplicationData.Current.LocalFolder;
+
+if (Windows.System.Profile.RetailInfo.IsDemoModeEnabled) 
+{
+    // Use the demo specific directory
+    folder = await folder.GetFolderAsync(“demo”);
+}
+
+StorageFile file = await folder.GetFileAsync(“hello.txt”);
+// Now read from file
+```
+
+``` cpp
+using namespace Windows::Storage;
+
+StorageFolder^ localFolder = ApplicationData::Current->LocalFolder;
+
+if (Windows::System::Profile::RetailInfo::IsDemoModeEnabled) 
+{
+    // Use the demo specific directory
+    create_task(localFolder->GetFolderAsync(“demo”).then([this](StorageFolder^ demoFolder)
+    {
+        return demoFolder->GetFileAsync(“hello.txt”);
+    }).then([this](task<StorageFile^> fileTask)
+    {
+        StorageFile^ file = fileTask.get();
+    });
+    // Do something with file
+}
+else
+{
+    create_task(localFolder->GetFileAsync(“hello.txt”).then([this](StorageFile^ file)
+    {
+        // Do something with file
+    });
+}
+```
+
+``` javascript
+if (Windows.System.Profile.retailInfo.isDemoModeEnabled) {
+    console.log(“Retail mode is enabled.”);
+} else {
+    Console.log(“Retail mode is not enabled.”);
+}
+```
+
+### <a name="retailinfoproperties"></a>RetailInfo.Properties
 
 Wenn [**IsDemoModeEnabled**](https://docs.microsoft.com/uwp/api/windows.system.profile.retailinfo.isdemomodeenabled) „true“ zurückgibt, können Sie mithilfe von [**RetailInfo.Properties**](https://docs.microsoft.com/uwp/api/windows.system.profile.retailinfo.properties) einen Satz von Eigenschaften zum Gerät abfragen, um eine besser angepasste Verwendung der Demo-App zu ermöglichen. Diese Eigenschaften umfassen [**ManufacturerName**](https://docs.microsoft.com/uwp/api/windows.system.profile.knownretailinfoproperties.manufacturername), [**Screensize**](https://docs.microsoft.com/uwp/api/windows.system.profile.knownretailinfoproperties.screensize), [**Memory**](https://docs.microsoft.com/uwp/api/windows.system.profile.knownretailinfoproperties.memory) usw.
 
+```csharp
+using Windows.UI.Xaml.Controls;
+using Windows.System.Profile
 
-## <a name="clean-up-process"></a>Bereinigungsprozess
+TextBlock priceText = new TextBlock();
+priceText.Text = RetailInfo.Properties[KnownRetailInfo.Price];
+// Assume infoPanel is a StackPanel declared in XAML
+this.infoPanel.Children.Add(priceText);
+```
 
-Mit dem Bereinigungsprozess werden Vorführgeräte automatisch auf die ursprünglichen Standardeinstellungen zurückgesetzt, wenn für einen bestimmten Zeitraum keine Interaktion mit dem Gerät stattfindet. Dadurch wird sichergestellt, dass sich die Interaktion mit dem Gerät für alle Benutzer im Geschäft gleich gestaltet. Beim Entwickeln einer Demo-App für den Einzelhandel sind Kenntnisse darüber wichtig, wann und wie der Bereinigungsprozess ausgelöst wird, was bei der Standardbereinigung ausgeführt wird und wie dies angepasst werden kann, damit der Prozess der beabsichtigten Vorführanwendung entspricht.
+```cpp
+using namespace Windows::UI::Xaml::Controls;
+using namespace Windows::System::Profile;
 
-### <a name="when-does-clean-up-begin"></a>Wann beginnt die Bereinigung?
+TextBlock ^manufacturerText = ref new TextBlock();
+manufacturerText.set_Text(RetailInfo::Properties[KnownRetailInfoProperties::Price]);
+// Assume infoPanel is a StackPanel declared in XAML
+this->infoPanel->Children->Add(manufacturerText);
+```
 
-Die Bereinigung startet nach einer bestimmten Leerlaufzeit. Die Leerlaufzeit beginnt, wenn auf dem keine Touch-, Maus- oder Tastatureingabe mehr erfolgt.
+```javascript
+var pro = Windows.System.Profile;
+console.log(pro.retailInfo.properties[pro.KnownRetailInfoProperties.price);
+```
 
-#### <a name="desktoppc"></a>Desktop/PC
+#### <a name="idl"></a>IDL
 
-Nach 120 Sekunden Leerlaufzeit wird auf dem Gerät das Leerlaufvideo wiedergegeben. 5Sekunden später startet der Bereinigungsprozess.
+```
+//  Copyright (c) Microsoft Corporation. All rights reserved.
+//
+//  WindowsRuntimeAPISet
 
-#### <a name="phone"></a>Telefon
+import "oaidl.idl";
+import "inspectable.idl";
+import "Windows.Foundation.idl";
+#include <sdkddkver.h>
 
-Nach 60Sekunden Leerlaufzeit wird auf dem Gerät das Leerlaufvideo wiedergegeben, und der Bereinigungsprozess startet sofort.
+namespace Windows.System.Profile
+{
+    runtimeclass RetailInfo;
+    runtimeclass KnownRetailInfoProperties;
 
-### <a name="what-happens-during-a-default-clean-up-process"></a>Was geschieht bei einem Standardbereinigungsprozess?
+    [version(NTDDI_WINTHRESHOLD), uuid(0712C6B8-8B92-4F2A-8499-031F1798D6EF), exclusiveto(RetailInfo)]
+    [version(NTDDI_WINTHRESHOLD, Platform.WindowsPhone)]
+    interface IRetailInfoStatics : IInspectable
+    {
+        [propget] HRESULT IsDemoModeEnabled([out, retval] boolean *value);
+        [propget] HRESULT Properties([out, retval, hasvariant] Windows.Foundation.Collections.IMapView<HSTRING, IInspectable *> **value);
+    }
 
-#### <a name="step-1-clean-up"></a>Schritt1: Bereinigen
+    [version(NTDDI_WINTHRESHOLD), uuid(50BA207B-33C4-4A5C-AD8A-CD39F0A9C2E9), exclusiveto(KnownRetailInfoProperties)]
+    [version(NTDDI_WINTHRESHOLD, Platform.WindowsPhone)]
+    interface IKnownRetailInfoPropertiesStatics : IInspectable
+    {
+        [propget] HRESULT RetailAccessCode([out, retval] HSTRING *value);
+        [propget] HRESULT ManufacturerName([out, retval] HSTRING *value);
+        [propget] HRESULT ModelName([out, retval] HSTRING *value);
+        [propget] HRESULT DisplayModelName([out, retval] HSTRING *value);
+        [propget] HRESULT Price([out, retval] HSTRING *value);
+        [propget] HRESULT IsFeatured([out, retval] HSTRING *value);
+        [propget] HRESULT FormFactor([out, retval] HSTRING *value);
+        [propget] HRESULT ScreenSize([out, retval] HSTRING *value);
+        [propget] HRESULT Weight([out, retval] HSTRING *value);
+        [propget] HRESULT DisplayDescription([out, retval] HSTRING *value);
+        [propget] HRESULT BatteryLifeDescription([out, retval] HSTRING *value);
+        [propget] HRESULT ProcessorDescription([out, retval] HSTRING *value);
+        [propget] HRESULT Memory([out, retval] HSTRING *value);
+        [propget] HRESULT StorageDescription([out, retval] HSTRING *value);
+        [propget] HRESULT GraphicsDescription([out, retval] HSTRING *value);
+        [propget] HRESULT FrontCameraDescription([out, retval] HSTRING *value);
+        [propget] HRESULT RearCameraDescription([out, retval] HSTRING *value);
+        [propget] HRESULT HasNfc([out, retval] HSTRING *value);
+        [propget] HRESULT HasSdSlot([out, retval] HSTRING *value);
+        [propget] HRESULT HasOpticalDrive([out, retval] HSTRING *value);
+        [propget] HRESULT IsOfficeInstalled([out, retval] HSTRING *value);
+        [propget] HRESULT WindowsVersion([out, retval] HSTRING *value);
+    }
+
+    [version(NTDDI_WINTHRESHOLD), static(IRetailInfoStatics, NTDDI_WINTHRESHOLD)]
+    [version(NTDDI_WINTHRESHOLD, Platform.WindowsPhone), static(IRetailInfoStatics, NTDDI_WINTHRESHOLD, Platform.WindowsPhone)]
+    [threading(both)]
+    [marshaling_behavior(agile)]
+    runtimeclass RetailInfo
+    {
+    }
+
+    [version(NTDDI_WINTHRESHOLD), static(IKnownRetailInfoPropertiesStatics, NTDDI_WINTHRESHOLD)]
+    [version(NTDDI_WINTHRESHOLD, Platform.WindowsPhone), static(IKnownRetailInfoPropertiesStatics, NTDDI_WINTHRESHOLD, Platform.WindowsPhone)]
+    [threading(both)]
+    [marshaling_behavior(agile)]
+    runtimeclass KnownRetailInfoProperties
+    {
+    }
+}
+```
+
+## <a name="cleanup-process"></a>Bereinigungsprozess
+
+Bereinigung beginnt mit zwei Minuten nach dem ein Käufer beendet wird, interagiert mit dem Gerät. Die Retail Demo wiedergegeben wird, und Windows beginnt das Zurücksetzen Beispieldaten in die Kontakte, Fotos und anderen apps. Je nach Gerät kann dies zwischen 1 bis 5 Minuten vollständig alles wieder zurücksetzen dauern. Dadurch wird sichergestellt, dass jeder Kunde im Geschäft kann auf einem Gerät problemlos und die gleiche Erfahrung bei der Interaktion mit dem Gerät.
+
+Schritt 1: Bereinigen
 * Alle Win32- und Store-Apps werden geschlossen.
 * Alle Dateien in bekannten Ordnern wie __Bilder__, __Videos__, __Musik__, __Dokumente__, __SavedPictures__, __CameraRoll__, __Desktop__ und __Downloads__ Ordner werden gelöscht.
 * Unstrukturierte und strukturierte Roamingzustände werden gelöscht.
 * Strukturierte lokale Zustände werden gelöscht.
 
-#### <a name="step-2-set-up"></a>Schritt2: Einrichten
+Schritt 2: Einrichten
 * Offlinegeräte: Ordner bleiben leer
 * Onlinegeräte: Demoressourcen für den Einzelhandel können vom Microsoft Store per Push an das Gerät übertragen werden.
 
-### <a name="how-to-store-data-across-user-sessions"></a>Wie kann ich Daten sitzungsübergreifend speichern?
+### <a name="store-data-across-user-sessions"></a>Speichern von Daten auf benutzersitzungen
 
-Wenn Sie Daten sitzungsübergreifend speichern möchten, können Sie die Informationen in __ApplicationData.Current.TemporaryFolder__ speichern, da der Standardbereinigungsprozess die Daten in diesem Ordner nicht automatisch löscht. Die mithilfe von *LocalState* gespeicherten Informationen werden bei der Bereinigung gelöscht.
+Um Daten kann sitzungsübergreifend speichern, können Sie Informationen in __ApplicationData.Current.TemporaryFolder__ speichern, wie Daten in diesem Ordner mit der Standard-Bereinigungsprozess nicht automatisch gelöscht. Beachten Sie, dass mithilfe von *LocalState* gespeicherten Informationen während der Bereinigungsprozess gelöscht wird.
 
-### <a name="how-to-customize-the-clean-up-process"></a>Wie kann ich den Bereinigungsprozess anpassen?
+### <a name="customize-the-cleanup-process"></a>Anpassen des Bereinigungsprozess
 
-Wenn Sie den Bereinigungsprozess anpassen möchten, müssen Sie den `Microsoft-RetailDemo-Cleanup`-App-Dienst in Ihrer App implementieren.
+Um den Bereinigungsprozess anpassen, Implementieren der `Microsoft-RetailDemo-Cleanup` app-Dienst in Ihrer app.
 
-Szenarien, bei denen eine benutzerdefinierte Bereinigungslogik erforderlich ist, umfassen das Ausführen einer umfassenden Einrichtung, das Herunterladen und Zwischenspeichern von Daten oder das Beibehalten der *LocalState*-Daten.
+Szenarien, in denen eine benutzerdefinierte Bereinigungslogik erforderlich ist, umfassen das Ausführen einer umfassenden Einrichtung, das Herunterladen und Zwischenspeichern von Daten oder nicht *LocalState* Daten gelöscht werden sollen.
 
-Schritt1: Deklarieren des _Microsoft-RetailDemo-Cleanup_-Diensts in Ihrem Anwendungsmanifest
+Schritt 1: Deklarieren Sie die _Microsoft-RetailDemo-Cleanup_ -Dienst in Ihrem app-Manifest.
 ``` CSharp
   <Applications>
       <Extensions>
@@ -163,7 +268,7 @@ Schritt1: Deklarieren des _Microsoft-RetailDemo-Cleanup_-Diensts in Ihrem Anwend
 
 ```
 
-Schritt2: Implementieren der benutzerdefinierten Bereinigungslogik unter der _AppdataCleanup_-Funktion mithilfe der folgenden Beispielvorlage.
+Schritt 2: Implementieren der benutzerdefinierten Bereinigungslogik unter der _AppdataCleanup_ -Funktion mithilfe der Beispielvorlage.
 ``` CSharp
 using System;
 using System.IO;
@@ -261,8 +366,4 @@ namespace MyCompany.MyApp
 * [Speichern und Abrufen von App-Daten](https://msdn.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)
 * [Erstellen und Nutzen eines App-Diensts](https://msdn.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
 * [Lokalisieren von App-Inhalten](https://msdn.microsoft.com/windows/uwp/globalizing/globalizing-portal)
-
-
- 
-
- 
+* [Demo-App (RDX-App)](https://docs.microsoft.com/windows-hardware/customize/desktop/retail-demo-experience)

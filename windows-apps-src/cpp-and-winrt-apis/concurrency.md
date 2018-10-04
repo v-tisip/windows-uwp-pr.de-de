@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projektion, parallelität, async, asynchron, asynchronität
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f29828a800795aba70c17bcab19b56b85d56382
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4314756"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4356995"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>Parallelität und asynchrone Vorgänge mit C++/WinRT
 
@@ -67,7 +67,7 @@ Der Aufruf von **get** ermöglicht eine bequeme Codeerstellung und eignet sich p
 C++/WinRT integriert C++ Coroutinen in das Programmiermodell, um eine natürliche Möglichkeit zu bieten, kooperativ auf ein Ergebnis zu warten. Sie können Ihre eigene asynchronen Windows-Runtime-Vorgänge erzeugen, indem Sie eine Coroutine schreiben. Im folgenden Codebeispiel ist **ProcessFeedAsync** die Coroutine.
 
 > [!NOTE]
-> Die **get** -Funktion vorhanden ist, auf der C++ / WinRT-Projektion geben **Winrt::Windows::Foundation::IAsyncAction**, rufen Sie die Funktion in jeder C++ / WinRT-Projekt. Die Funktion, die als Mitglied der [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) -Schnittstelle, aufgeführt werden nicht gefunden werden, da **erhalten** nicht Teil der Application binary Interface (ABI) Fläche des tatsächlichen Windows-Runtime-Typs **IAsyncAction**ist.
+> Die **get** -Funktion vorhanden ist, auf der C++ / WinRT-Projektion geben **Winrt::Windows::Foundation::IAsyncAction**, rufen Sie die Funktion in jeder C++ / WinRT-Projekt. Nicht finden Sie die Funktion, die als Mitglied der [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) -Schnittstelle, da **erhalten** nicht Teil der Application binary Interface (ABI) Oberfläche des tatsächlichen Windows-Runtime-Typs **IAsyncAction**ist.
 
 ```cppwinrt
 // main.cpp
@@ -317,7 +317,7 @@ IAsyncAction DoWorkAsync(TextBlock textblock)
 
 ## <a name="canceling-an-asychronous-operation-and-cancellation-callbacks"></a>Abbrechen eines Vorgangs asychrone und Abbruch-Rückrufe
 
-Die Windows-Runtime-Features für die asynchrone Programmierung können Sie ein Flight asynchrone Aktion oder einen Vorgang abbrechen. Beginnen wir mit einem einfachen Beispiel.
+Die Windows-Runtime-Features für die asynchrone Programmierung können Sie eine Flight asynchrone Aktion oder den Vorgang abbrechen. Beginnen wir mit einem einfachen Beispiel.
 
 ```cppwinrt
 // pch.h
@@ -354,11 +354,11 @@ int main()
 }
 ```
 
-Wenn Sie im obigen Beispiel ausführen, erscheint das **ImplicitCancellationAsync** Druck eine Nachricht pro Sekunde drei Sekunden lang, nach denen es automatisch Zeit beendet aufgrund abgebrochen wird. Dies funktioniert, da auf dieser eine `co_await` Ausdruck eine Coroutine überprüft, ob er abgebrochen wurde. Wenn dies der Fall, kurzgeschlossen wird dann es sich; und wenn dies nicht der Fall, dann angehalten normal.
+Wenn Sie im obigen Beispiel ausführen, erscheint das **ImplicitCancellationAsync** Druck eine Nachricht pro Sekunde für drei Sekunden, nach denen es automatisch Zeit beendet aufgrund abgebrochen wird. Dies funktioniert, da auf dieser eine `co_await` Ausdruck, eine Coroutine überprüft, ob er abgebrochen wurde. Wenn dies der Fall, kurzgeschlossen wird dann es sich; und wenn dies nicht der Fall, dann angehalten normal.
 
-Abbruch kann natürlich auftreten, während die Coroutine angehalten ist. Nur, wenn die Coroutine fortgesetzt wird, oder ein anderes Treffer `co_await`, wird es nach einem Abbruch suchen. Das Problem ist der potenziell zu grob-differenziertere Latenz bei der Behandlung von Abbruch.
+Abbruch kann natürlich auftreten, während die Coroutine angehalten ist. Nur, wenn die Coroutine fortgesetzt wird, oder ein anderes Treffer `co_await`, sucht es nach Abbruch. Das Problem ist der potenziell zu grob-differenziertere Latenz bei der Behandlung von Abbruch.
 
-Daher ist eine weitere Möglichkeit explizit für den Abbruch von innerhalb der Coroutine ab. Aktualisieren Sie das obige Beispiel, mit der Code in den folgenden Eintrag. In diesem Beispiel neue **ExplicitCancellationAsync** Ruft das von der Funktion [**winrt::get_cancellation_token**](/uwp/cpp-ref-for-winrt/get-cancellation-token) zurückgegebene Objekt ab, und verwendet ihn zum Überprüfen Sie regelmäßig, ob die Coroutine abgebrochen wurde. Solange sie nicht abgebrochen wird, überblendanimation die Coroutine; Sobald der Vorgang abgebrochen wird, beenden Sie die Schleife und die Funktion in der Regel. Das Ergebnis ist identisch wie das vorherige Beispiel, aber hier beenden geschieht explizit und gesteuert.
+Daher ist eine weitere Möglichkeit explizit für die Löschung innerhalb Ihrer Coroutine ab. Aktualisieren Sie das obige Beispiel, mit der Code in den folgenden Eintrag. In diesem Beispiel neue **ExplicitCancellationAsync** Ruft das von der Funktion [**winrt::get_cancellation_token**](/uwp/cpp-ref-for-winrt/get-cancellation-token) zurückgegebene Objekt ab, und verwendet ihn zum Überprüfen Sie regelmäßig, ob die Coroutine abgebrochen wurde. Solange sie nicht abgebrochen wird, überblendanimation die Coroutine; Sobald der Vorgang abgebrochen wird, beenden Sie die Schleife und die Funktion normal. Das Ergebnis ist identisch mit dem vorherigen Beispiel, aber hier beenden geschieht explizit und gesteuert.
 
 ```cppwinrt
 ...
@@ -382,12 +382,12 @@ IAsyncAction MainCoroutineAsync()
 ...
 ```
 
-Warten auf **winrt::get_cancellation_token** Ruft ein Abbruchtoken mit Kenntnisse über die **IAsyncAction** , die die Coroutine liefern in Ihrem Auftrag. Sie können Funktionsaufrufoperators auf das Token verwenden, um den Abbruch Status abzufragen&mdash;im Wesentlichen für den Abbruch Abfragen. Wenn Sie einige rechengebundene Vorgang, oder einer großen Sammlung durchlaufen, ist dies eine angemessene Technik.
+Warten auf **winrt::get_cancellation_token** Ruft ein Abbruchtoken mit Kenntnisse über die **IAsyncAction** , die die Coroutine liefern in Ihrem Auftrag ab. Sie können Funktionsaufrufoperators auf das Token verwenden, um den Abbruch Zustand Abfragen&mdash;im Wesentlichen Abbruch abrufen. Wenn Sie einige rechengebundene Vorgang, oder einer großen Sammlung durchlaufen, ist dies eine angemessene Technik.
 
 ### <a name="register-a-cancellation-callback"></a>Registrieren eines Rückrufs Abbruch
-Die Windows-Runtime Abbruch übergeben nicht automatisch auf andere asynchrone Objekte. Aber&mdash;eingeführt in Windows SDK-Version 10.0.17763.0 (Windows 10, Version 1809)&mdash;können Sie einen Rückruf Abbruch registrieren. Hierbei handelt es sich um eine vorbeugenden Häkchen, Abbruch weitergegeben werden kann, und ermöglicht die Integration in vorhandene Concurrency-Bibliotheken.
+Die Windows-Runtime Abbruch fließen nicht automatisch auf andere asynchrone Objekte. Aber&mdash;eingeführt in Windows SDK-Version (Windows 10, Version 1809) 10.0.17763.0&mdash;können Sie einen Rückruf Abbruch registrieren. Hierbei handelt es sich um eine vorbeugenden Häkchen, Abbruch weitergegeben werden kann, und ermöglicht die Integration in vorhandene Concurrency-Bibliotheken.
 
-In dieses nächste Codebeispiel **NestedCoroutineAsync** funktioniert, aber es weist keine spezielle Abbruchlogik auf. **CancellationPropagatorAsync** ist im Grunde ein Wrapper für die geschachtelte Coroutine. der Wrapper leitet Abbruch präventiven.
+In diesem Codebeispiel weiter **NestedCoroutineAsync** funktioniert die, aber es weist keine spezielle Abbruchlogik auf. **CancellationPropagatorAsync** ist im Grunde ein Wrapper für die geschachtelte Coroutine. der Wrapper leitet Abbruch präventiven.
 
 ```cppwinrt
 // pch.h
@@ -437,11 +437,11 @@ int main()
 }
 ```
 
-**CancellationPropagatorAsync** registriert eine Lambda-Funktion für eine eigene Abbruch Rückruf, und es anschließend wartet (angehalten) bis die geschachtelte Arbeit abgeschlossen ist. Wenn oder **CancellationPropagatorAsync** abgebrochen wird, wird es den Abbruch an die geschachtelte Coroutine. Es ist nicht erforderlich für den Abbruch ab. Außerdem ist Abbruch auf unbestimmte Zeit blockiert. Dieser Mechanismus ist flexibel genug ist, können sie zum Interoperabilität mit einer Coroutine oder Concurrency-Bibliothek verwenden, die weiß nichts von C++ / WinRT.
+**CancellationPropagatorAsync** registriert eine Lambda-Funktion für eine eigene Abbruch Rückruf, und es anschließend wartet auf (angehalten) bis die geschachtelte Arbeit abgeschlossen ist. Wenn oder **CancellationPropagatorAsync** abgebrochen wird, wird es den Abbruch an die geschachtelte Coroutine weitergegeben. Es ist nicht erforderlich für den Abbruch ab. Außerdem ist Abbruch auf unbestimmte Zeit blockiert. Dieser Mechanismus ist flexibel genug ist, für die Sie für die Interoperabilität mit einer Coroutine oder Concurrency-Bibliothek verwenden, die weiß nichts von C++ / WinRT.
 
 ## <a name="reporting-progress"></a>Melden des Status
 
-Wenn Ihre Coroutine entweder [**IAsyncActionWithProgress**](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_)oder [**IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)zurückgibt, können dann das von der Funktion [**winrt::get_progress_token**](/uwp/cpp-ref-for-winrt/get-progress-token) zurückgegebene Objekt abzurufen, und verwenden, um den Fortschritt an einem Fortschritt Handler. Dies ist ein Codebeispiel:
+Wenn Ihre Coroutine entweder [**IAsyncActionWithProgress**](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_)oder [**IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)zurückgegeben wird, können dann von der Funktion [**winrt::get_progress_token**](/uwp/cpp-ref-for-winrt/get-progress-token) zurückgegebene Objekt abzurufen, und verwenden, um den Fortschritt an einem Fortschritt Handler. Dies ist ein Codebeispiel:
 
 ```cppwinrt
 // pch.h
@@ -501,7 +501,7 @@ int main()
 ```
 
 > [!NOTE]
-> Es ist nicht korrekt auf mehr als ein *Abschlusshandler* für eine asynchrone Aktion oder Operation implementieren. Sie können entweder einen einzelnen Delegaten für das abgeschlossene Ereignis haben, oder Sie können `co_await` es. Wenn Sie beide haben, wird die zweite fehl. Entweder eine der folgenden zwei Arten von Abschlusshandler eignet sich; nicht beide für das gleiche Async-Objekt.
+> Es ist nicht korrekt mehrere *Abschlusshandler* für eine asynchrone Aktion oder eines Vorgangs zu implementieren. Sie können entweder einen einzelnen Delegaten für das abgeschlossene Ereignis haben, oder Sie können `co_await` es. Wenn Sie beide haben, wird die zweite fehl. Entweder die folgenden zwei Arten von Abschlusshandler eignet sich; nicht beide für das gleiche Async-Objekt.
 
 ```cppwinrt
 auto async_op_with_progress{ CalcPiTo5DPs() };
@@ -516,11 +516,11 @@ auto async_op_with_progress{ CalcPiTo5DPs() };
 double pi{ co_await async_op_with_progress };
 ```
 
-Weitere Informationen zu Abschlusshandler finden Sie unter [Delegattypen für asynchrone Aktionen und Vorgänge](handle-events.md#delegate-types-for-asynchronous-actions-and-operations).
+Weitere Informationen zu Fertigstellung Handler finden Sie unter [Delegattypen für asynchrone Aktionen und Vorgänge](handle-events.md#delegate-types-for-asynchronous-actions-and-operations).
 
 ## <a name="fire-and-forget"></a>Auslösen und vergessen
 
-In manchen Fällen Sie haben eine Aufgabe, die gleichzeitig mit anderen Vorgängen ausgeführt werden kann, und Sie müssen nicht warten, dass dieser Vorgang abschließen (keine andere Aufgaben hängt es), auch nicht erforderlich, um einen Wert zurückgeben. In diesem Fall können Sie aus der Aufgabe ausgelöst und vergessen. Sie können dies tun, durch das Schreiben einer Coroutine, deren Rückgabetyp [**winrt::fire_and_forget**](/uwp/cpp-ref-for-winrt/fire-and-forget) (anstelle eines der Windows-Runtime-Typen für asynchrone Vorgänge, oder **Concurrency:: Task**) ist.
+In manchen Fällen Sie haben eine Aufgabe, die gleichzeitig mit anderen Vorgängen ausgeführt werden kann, und Sie müssen nicht warten, dass dieser Vorgang abschließen (keine anderen Vorgängen hängt es), auch nicht erforderlich, um einen Wert zurückgeben. In diesem Fall können Sie aus der Aufgabe ausgelöst und vergessen. Sie können dies tun, durch das Schreiben einer Coroutine, deren Rückgabetyp [**winrt::fire_and_forget**](/uwp/cpp-ref-for-winrt/fire-and-forget) (anstelle eines der Windows-Runtime-Typen für asynchrone Vorgänge, oder **Concurrency:: Task**) ist.
 
 ```cppwinrt
 // pch.h

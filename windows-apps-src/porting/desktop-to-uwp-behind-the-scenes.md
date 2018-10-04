@@ -11,11 +11,11 @@ keywords: windows10, UWP
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e6cd2b305a9d52a2239be46cc7f77650cdd6531
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4318296"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4352910"
 ---
 # <a name="behind-the-scenes-of-your-packaged-desktop-application"></a>Hinter den Kulissen der Ihre verpackte desktop-Anwendung
 
@@ -33,7 +33,7 @@ Nach der Bereitstellung werden Paketdateien als schreibgeschützt markiert und v
 
 ## <a name="file-system"></a>Dateisystem
 
-Die Anwendung "appdata" vorgenommenen Änderungen werden erfasst, um app-Zustands. Alle Schreibvorgänge in den AppData-Ordner des Benutzers (z.B. *C:\Benutzer\Benutzername\AppData*), einschließlich Erstellungs-, Lösch- und Aktualisierungsvorgänge, werden direkt an einen privaten Speicherort pro Benutzer und App kopiert. Dadurch entsteht den Eindruck, dass die Anwendung die tatsächliche AppData bearbeitet eigentlich eine private Kopie geändert wird. Durch eine derartige Umleitung von Schreibvorgängen kann das System alle von der App vorgenommenen Dateiänderungen nachverfolgen. Dadurch kann das System diese Dateien bereinigen, wenn die Anwendung deinstalliert wird, daher System "Rot" reduzieren und eine bessere Anwendung deinstallationsmöglichkeiten bereitstellen für den Benutzer.
+Die Anwendung "appdata" vorgenommenen Änderungen werden erfasst, um app-Zustands. Alle Schreibvorgänge in den AppData-Ordner des Benutzers (z.B. *C:\Benutzer\Benutzername\AppData*), einschließlich Erstellungs-, Lösch- und Aktualisierungsvorgänge, werden direkt an einen privaten Speicherort pro Benutzer und App kopiert. Dadurch entsteht den Eindruck, dass die verpackte Anwendung die tatsächliche AppData bearbeitet eigentlich eine private Kopie geändert wird. Durch eine derartige Umleitung von Schreibvorgängen kann das System alle von der App vorgenommenen Dateiänderungen nachverfolgen. Dadurch kann das System diese Dateien bereinigen, wenn die Anwendung deinstalliert wird, daher System "Rot" reduzieren und eine bessere Anwendung deinstallationsmöglichkeiten bereitstellen für den Benutzer.
 
 Zusätzlich zur Umleitung von "appdata", werden bekannte Windows-Ordner ("System32", Programmdateien (x86) usw.) dynamisch mit den entsprechenden Verzeichnissen im app-Paket zusammengeführt. Jedes verpackte Paket enthält im Stammverzeichnis einen Ordner mit dem Namen „VFS“. Alle Lesevorgänge für Verzeichnisse oder Dateien im VFS-Verzeichnis werden zur Laufzeit mit den jeweiligen nativen Entsprechungen zusammengeführt. Z. B. eine Anwendung könnte *C:\Program Files\WindowsApps\package_name\VFS\SystemX86\vc10.dll* als Teil des app-Pakets enthalten, aber die Datei sähe auf *C:\Windows\System32\vc10.dll*installiert werden.  Dies gewährleistet die Kompatibilität mit Desktopanwendungen, die davon ausgehen, dass sich Dateien an Speicherorten ohne Pakete befinden.
 
@@ -52,7 +52,7 @@ Schreibvorgänge außerhalb des Pakets | Zulässig, wenn der Benutzer über ents
 
 ### <a name="packaged-vfs-locations"></a>Gepackte VFS-Speicherorte
 
-Der folgenden Tabelle können Sie entnehmen, wo Dateien, die zu Ihrem Paket gehören, für die App im System überlagert sind. Ihre Anwendung wird, dass sich diese Dateien an den aufgeführten werden, wenn sie tatsächlich an den umgeleiteten Speicherorten in *C:\Program Files\WindowsApps\package_name\VFS*sind. Die FOLDERID-Speicherorte stammen von der [**KNOWNFOLDERID**](https://msdn.microsoft.com/library/windows/desktop/dd378457.aspx)-Konstante.
+Der folgenden Tabelle können Sie entnehmen, wo Dateien, die zu Ihrem Paket gehören, für die App im System überlagert sind. Ihre Anwendung wird, dass sich diese Dateien in den aufgeführten Systemspeicherorte befinden, wenn sie tatsächlich an den umgeleiteten Speicherorten in *C:\Program Files\WindowsApps\package_name\VFS*sind. Die FOLDERID-Speicherorte stammen von der [**KNOWNFOLDERID**](https://msdn.microsoft.com/library/windows/desktop/dd378457.aspx)-Konstante.
 
 Systemspeicherort | Umgeleiteter Speicherort (unter [Paketstammverzeichnis]\VFS\) | Gültig für Architekturen
  :--- | :--- | :---
@@ -94,7 +94,7 @@ Schreibvorgänge außerhalb des Pakets | Von der Brücke ignoriert. Zulässig, w
 
 ## <a name="uninstallation"></a>Deinstallation
 
-Wenn ein Paket vom Benutzer deinstalliert wird, werden alle Dateien und Ordner unter *C:\Programme Files\WindowsApps\package_name* , sowie alle umgeleiteten Schreibvorgänge für "appdata" oder die Registrierung entfernt, die während der Verpackung erfasst wurden.
+Wenn ein Paket vom Benutzer deinstalliert wird, werden alle Dateien und Ordner unter *C:\Programme Files\WindowsApps\package_name* sowie alle umgeleiteten Schreibvorgänge für "appdata" oder die Registrierung entfernt, die während der Verpackung erfasst wurden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

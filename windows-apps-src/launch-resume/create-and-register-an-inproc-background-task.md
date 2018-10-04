@@ -11,11 +11,11 @@ keywords: Windows 10, Uwp, Hintergrundaufgabe, für die
 ms.assetid: d99de93b-e33b-45a9-b19f-31417f1e9354
 ms.localizationpriority: medium
 ms.openlocfilehash: 5879977662dc2bd609d09e5fe53fc2a2f0b9180f
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4316282"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4356858"
 ---
 # <a name="create-and-register-an-in-process-background-task"></a>Erstellen und Registrieren einer Hintergrundaufgabe innerhalb von Prozessen
 
@@ -92,7 +92,7 @@ sealed partial class App : Application
 }
 ```
 
-Eine umfassendere **OnBackgroundActivated** Beispiel finden Sie in der [Konvertieren eines app-Diensts für die Ausführung im gleichen Prozess wie seine Host-app](convert-app-service-in-process.md).
+Eine umfassendere **OnBackgroundActivated** Beispiel finden Sie unter [Konvertieren eines app-Diensts für die Ausführung im gleichen Prozess wie seine Host-app](convert-app-service-in-process.md).
 
 ## <a name="handle-background-task-progress-and-completion"></a>Behandeln des Status und Abschlusses von Hintergrundaufgaben
 

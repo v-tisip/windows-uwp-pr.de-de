@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 Description: To run an experiment in your Universal Windows Platform (UWP) app with A/B testing, you must code the experiment in your app.
-title: Codieren Ihrer App für das Experiment
+title: Codieren der App für Tests
 ms.assetid: 6A5063E1-28CD-4087-A4FA-FBB511E9CED5
 ms.author: mcleans
 ms.date: 02/08/2017
@@ -11,13 +11,13 @@ ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store Services SDK, A/B-Tests, Experimente
 ms.localizationpriority: medium
 ms.openlocfilehash: b0931d712ca99b429e2aaa7dec4b855f41ce55ef
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4319758"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4352818"
 ---
-# <a name="code-your-app-for-experimentation"></a>Codieren Ihrer App für das Experiment
+# <a name="code-your-app-for-experimentation"></a>Codieren der App für Tests
 
 Nach dem [Erstellen eines Projekts und Festlegen von Remotevariablen im Dev Center-Dashboard](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) können Sie den Code in Ihrer App für die universelle Windows-Plattform (UWP) aktualisieren, um:
 * Werte von Remotevariablen von Windows Dev Center zu erhalten

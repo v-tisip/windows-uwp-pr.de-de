@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Store-Dienste, Microsoft Store-Analyse-API, Einblicke
 ms.localizationpriority: medium
 ms.openlocfilehash: 53fbd91437e5dc702f8672c6cbadeea32a8a96bf
-ms.sourcegitcommit: e6daa7ff878f2f0c7015aca9787e7f2730abcfbf
+ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4312956"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "4356692"
 ---
 # <a name="get-insights-data"></a>Abrufen von Daten Einblicke
 
-Verwenden Sie diese Methode in der Microsoft Store-Analyse-API zum Abrufen von Daten Einblicke während eines bestimmten Zeitraums und andere optionale Filter Käufe, Integrität und Nutzung Metrik für eine app im Zusammenhang. Diese Informationen sind auch im [Bericht](../publish/insights-report.md) in Windows Dev Center-Dashboard verfügbar.
+Verwenden Sie diese Methode in der Microsoft Store-Analyse-API zum Abrufen von Daten Einblicke Käufe, Integrität und Nutzung Metrik für eine app während eines bestimmten Zeitraums und andere optionale Filter im Zusammenhang mit. Diese Informationen sind auch im [Bericht](../publish/insights-report.md) in Windows Dev Center-Dashboard verfügbar.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -52,7 +52,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 | applicationId | string | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) der app, für die Sie Einblicke Daten abrufen möchten. Wenn Sie diesen Parameter nicht angeben, enthält der Antworttext Einblicke Daten für alle apps, die für Ihr Konto registriert wurden.  |  Nein  |
 | startDate | date | Das Startdatum im Datumsbereich der Einblicke Daten abgerufen. Der Standardwert ist 30Tage vor dem aktuellen Datum. |  Nein  |
 | endDate | date | Das Enddatum im Datumsbereich der Einblicke Daten abgerufen. Der Standardwert ist das aktuelle Datum. |  Nein  |
-| filter | string  | Mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Jede Anweisung enthält einen Feldnamen aus dem Antworttext und einen Wert, die mit den Operatoren **eq** oder **ne** verknüpft sind. Anweisungen können mit **and** oder **or** kombiniert werden. Zeichenfolgenwerte im Parameter *filter* müssen von einfachen Anführungszeichen eingeschlossen werden. Beispielsweise *Filter = DataType Eq 'Kauf"*. <p/><p/>Sie können die folgenden Filterfelder angeben:<p/><ul><li><strong>Erwerb</strong></li><li><strong>Gesundheit</strong></li><li><strong>Verwendung</strong></li></ul> | Nein   |
+| filter | string  | Mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Jede Anweisung enthält einen Feldnamen aus dem Antworttext und einen Wert, die mit den Operatoren **eq** oder **ne** verknüpft sind. Anweisungen können mit **and** oder **or** kombiniert werden. Zeichenfolgenwerte im Parameter *filter* müssen von einfachen Anführungszeichen eingeschlossen werden. Beispielsweise *Filter = DataType Eq "Kauf"*. <p/><p/>Sie können die folgenden Filterfelder angeben:<p/><ul><li><strong>Erwerb</strong></li><li><strong>Integrität</strong></li><li><strong>Nutzung</strong></li></ul> | Nein   |
 
 ### <a name="request-example"></a>Anforderungsbeispiel
 
@@ -69,7 +69,7 @@ Authorization: Bearer <your access token>
 
 | Wert      | Typ   | Beschreibung                  |
 |------------|--------|-------------------------------------------------------|
-| Wert      | array  | Ein Array von Objekten, die Einblicke Daten für die app enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie weiter unten im Abschnitt [Insight Werte](#insight-values) .                                                                                                                      |
+| Wert      | array  | Ein Array von Objekten, die Daten für die app Einblicke enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie weiter unten im Abschnitt [Insight Werte](#insight-values) .                                                                                                                      |
 | TotalCount | int    | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.                 |
 
 
@@ -81,7 +81,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 |---------------------|--------|-------------------------------------------|
 | applicationId       | string | Die Store-ID der app, für die Sie Einblicke Daten abrufen.     |
 | insightDate                | string | Das Datum, an dem wir die Änderung in einer bestimmten Metrik identifiziert. Dieses Datum stellt das Ende der Woche, in dem wir eine erhebliche Erhöhung erkannt, oder in einer Metrik im Vergleich zur vorherigen Woche, verringern. |
-| Datentyp     | string | Eine der folgenden Zeichenfolgen, die den allgemeine Analysen Bereich angibt, den diese Insight beschreibt:<p/><ul><li><strong>Erwerb</strong></li><li><strong>Gesundheit</strong></li><li><strong>Verwendung</strong></li></ul>   |
+| Datentyp     | string | Eine der folgenden Zeichenfolgen, die die allgemeine Analysen Bereich angibt, den diese Insight beschreibt:<p/><ul><li><strong>Erwerb</strong></li><li><strong>Integrität</strong></li><li><strong>Nutzung</strong></li></ul>   |
 | insightDetail          | array | Eine oder mehrere [InsightDetail Werte](#insightdetail-values) , die Details für aktuelle Insight darstellen.    |
 
 
@@ -89,10 +89,10 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 
 | Wert               | Typ   | Beschreibung                           |
 |---------------------|--------|-------------------------------------------|
-| FactName           | string | Die folgenden Werte, der die Metrik angibt, die das aktuelle Insight oder die aktuelle Dimension zu beschreiben, basierend auf der **DataType** -Wert.<ul><li>Für die **Integrität**ist dieser Wert immer **HitCount**.</li><li>Für den **Kauf**ist dieser Wert immer **AcquisitionQuantity**.</li><li>Für die **Nutzung**kann der Wert eine der folgenden Zeichenfolgen sein:<ul><li><strong>DailyActiveUsers</strong></li><li><strong>EngagementDurationMinutes</strong></li><li><strong>DailyActiveDevices</strong></li><li><strong>DailyNewUsers</strong></li><li><strong>DailySessionCount</strong></li></ul></ul>  |
+| FactName           | string | Die folgenden Werte, die die Metrik gibt an, die den aktuellen Insight oder die aktuelle Dimension beschreibt, basierend auf der **DataType** -Wert.<ul><li>Für die **Integrität**ist dieser Wert immer **HitCount**.</li><li>Für den **Kauf**ist dieser Wert immer **AcquisitionQuantity**.</li><li>Für die **Nutzung**kann der Wert eine der folgenden Zeichenfolgen sein:<ul><li><strong>DailyActiveUsers</strong></li><li><strong>EngagementDurationMinutes</strong></li><li><strong>DailyActiveDevices</strong></li><li><strong>DailyNewUsers</strong></li><li><strong>DailySessionCount</strong></li></ul></ul>  |
 | SubDimensions         | array |  Ein oder mehrere Objekte, die eine einzelne Metrik für die Einblicke zu beschreiben.   |
 | Prozent            | string |  Der Prozentsatz, den die Metrik über Ihres gesamten Kundenstamms geändert.  |
-| DimensionName           | string |  Der Name des die Metrik befindet sich in der aktuellen Dimension beschrieben. Beispiele sind **EventType**, **Markt**, **Gerätetyp**, **PackageVersion**, **AcquisitionType**, **AgeGroup** und **Gender**.   |
+| DimensionName           | string |  Der Name des die Metrik befindet sich in der aktuellen Dimension beschrieben. Beispiele: **EventType**, **Markt**, **Gerätetyp**, **PackageVersion**, **AcquisitionType**, **AgeGroup** und **Geschlecht**.   |
 | DimensionValue              | string | Der Wert der Metrik, die in der aktuellen Dimension beschrieben wird. Beispielsweise ist **DimensionName** **EventType**, **DimensionValue** **Absturz** oder **Blockade**möglicherweise.   |
 | FactValue     | string | Der absoluten Wert der Metrik auf das Datum, an das die Einblicke erkannt wurde.  |
 | Richtung | string |  Die Richtung der Änderung (**positiv** oder **negativ**).   |
