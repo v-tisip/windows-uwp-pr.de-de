@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Standard, c++, Cpp, Winrt, Projektion, Autor, COM, Komponente
 ms.localizationpriority: medium
 ms.openlocfilehash: 94f59833f4c657445b7135b1158974d8a553813f
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4358418"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4389740"
 ---
 # <a name="author-com-components-with-cwinrt"></a><span data-ttu-id="17ef1-104">Erstellen von COM-Komponenten mit C++ / WinRT</span><span class="sxs-lookup"><span data-stu-id="17ef1-104">Author COM components with C++/WinRT</span></span>
 

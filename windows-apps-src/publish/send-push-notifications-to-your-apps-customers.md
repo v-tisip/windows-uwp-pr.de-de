@@ -11,11 +11,11 @@ keywords: Windows10, UWP, zielgruppenorientierte Benachrichtigungen, Push-Benach
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d62f46ad1b55fbad3ab7c21a593625a2538b68f
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4352884"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4391957"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a><span data-ttu-id="4b5fb-103">Senden von Benachrichtigungen an die Kunden Ihrer App</span><span class="sxs-lookup"><span data-stu-id="4b5fb-103">Send notifications to your app's customers</span></span>
 

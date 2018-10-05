@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Steuern, App-Steuern, Steuergesetze, E-Commerce-Erweiterung, Steuersatz
 ms.localizationpriority: medium
 ms.openlocfilehash: 461c9303bbb26e5c4739ca60c03343008377df6c
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4357788"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4388009"
 ---
 # <a name="tax-details-for-paid-apps"></a><span data-ttu-id="bbd91-103">Steuerinformationen zu kostenpflichtigen Apps</span><span class="sxs-lookup"><span data-stu-id="bbd91-103">Tax details for paid apps</span></span>
 

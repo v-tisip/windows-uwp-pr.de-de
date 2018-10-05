@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Gamepad, Vibration
 ms.localizationpriority: medium
 ms.openlocfilehash: 2bf78b43bb09f97c196858d7cc4fcdb1e71462fc
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4359215"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4390613"
 ---
 # <a name="gamepad-and-vibration"></a><span data-ttu-id="002b2-104">Gamepad und Vibration</span><span class="sxs-lookup"><span data-stu-id="002b2-104">Gamepad and vibration</span></span>
 

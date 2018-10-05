@@ -16,11 +16,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ae344e9f10c5d1dbfd530950851e402da4bc2a0d
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4359182"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4394252"
 ---
 # <a name="control-templates"></a><span data-ttu-id="539f3-103">Steuerelementvorlagen</span><span class="sxs-lookup"><span data-stu-id="539f3-103">Control templates</span></span>
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: bceb1d2cc6682698d0ad06ed4b1865f3d6510442
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4352179"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4390898"
 ---
 # <a name="feedback-report"></a><span data-ttu-id="1c8a9-103">Feedbackbericht</span><span class="sxs-lookup"><span data-stu-id="1c8a9-103">Feedback report</span></span>
 

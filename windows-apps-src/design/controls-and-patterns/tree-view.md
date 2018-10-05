@@ -15,11 +15,11 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: 36b81cf07b92760235a18f4474a14b7b55e0a7be
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4353078"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4394233"
 ---
 # <a name="treeview"></a><span data-ttu-id="b7e92-103">TreeView</span><span class="sxs-lookup"><span data-stu-id="b7e92-103">TreeView</span></span>
 

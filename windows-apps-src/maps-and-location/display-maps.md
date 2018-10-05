@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows10, uwp, karten, standort, kartensteuerelement, kartenansichten
 ms.localizationpriority: medium
 ms.openlocfilehash: ba03d430031ad2bdad6959e2c59500dc6f2d2666
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4352851"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4394351"
 ---
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a><span data-ttu-id="243a8-104">Anzeigen von Karten mit 2D-, 3D- und Streetside-Ansichten</span><span class="sxs-lookup"><span data-stu-id="243a8-104">Display maps with 2D, 3D, and Streetside views</span></span>
 
