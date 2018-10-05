@@ -15,11 +15,11 @@ design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 518ce49ddb631e3e914a6c7662b4e74de247c29c
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4355805"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4383180"
 ---
 # <a name="combo-box"></a><span data-ttu-id="fb0e6-103">Kombinationsfeld</span><span class="sxs-lookup"><span data-stu-id="fb0e6-103">Combo box</span></span>
 

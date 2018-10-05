@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store Services SDK, A/B-Tests, Experimente
 ms.localizationpriority: medium
 ms.openlocfilehash: 25400d892f069f2536285a400cb850bedc2f09b3
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4359013"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4387450"
 ---
 # <a name="create-an-experiment-project-in-the-dashboard"></a><span data-ttu-id="31c4f-103">Erstellen eines Experimentprojekts im Dashboard</span><span class="sxs-lookup"><span data-stu-id="31c4f-103">Create an experiment project in the dashboard</span></span>
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: 87aafe36d05298a8fa157426e39c530190f98908
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4354173"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4383286"
 ---
 # <a name="tile-and-toast-notification-support-for-language-scale-and-high-contrast"></a><span data-ttu-id="19a09-103">Kachel- und Toast-Mitteilungsunterstützung für Sprache, Skalierung und hohen Kontrast</span><span class="sxs-lookup"><span data-stu-id="19a09-103">Tile and toast notification support for language, scale, and high contrast</span></span>
 

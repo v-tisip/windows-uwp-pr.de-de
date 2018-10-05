@@ -11,11 +11,11 @@ keywords: Windows 10, Uwp, Hintergrundaufgabe, für die
 ms.assetid: d99de93b-e33b-45a9-b19f-31417f1e9354
 ms.localizationpriority: medium
 ms.openlocfilehash: 5879977662dc2bd609d09e5fe53fc2a2f0b9180f
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4356858"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4384214"
 ---
 # <a name="create-and-register-an-in-process-background-task"></a><span data-ttu-id="9da37-104">Erstellen und Registrieren einer Hintergrundaufgabe innerhalb von Prozessen</span><span class="sxs-lookup"><span data-stu-id="9da37-104">Create and register an in-process background task</span></span>
 

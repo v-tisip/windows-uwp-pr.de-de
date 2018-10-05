@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: 24f41ac858e73041e5afb4db596ce52b7d9bf4d8
-ms.sourcegitcommit: 5c9a47b135c5f587214675e39c1ac058c0380f4c
+ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "4351569"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "4384624"
 ---
 # <a name="cryptographic-keys"></a><span data-ttu-id="0b5d1-104">Kryptografische Schlüssel</span><span class="sxs-lookup"><span data-stu-id="0b5d1-104">Cryptographic keys</span></span>
 
