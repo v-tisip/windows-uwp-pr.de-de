@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9802577f9252b590657406bcb59b0c28adeb4781
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4387329"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4417429"
 ---
 # <a name="app-submissions"></a><span data-ttu-id="ed179-103">App-Übermittlungen</span><span class="sxs-lookup"><span data-stu-id="ed179-103">App submissions</span></span>
 

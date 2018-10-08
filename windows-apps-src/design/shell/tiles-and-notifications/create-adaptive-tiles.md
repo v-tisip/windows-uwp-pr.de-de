@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 761d87654ef340f4b539dbefa0950c58f627d310
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4385533"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4432483"
 ---
 # <a name="create-adaptive-tiles"></a><span data-ttu-id="0fa2d-103">Erstellen adaptiver Kacheln</span><span class="sxs-lookup"><span data-stu-id="0fa2d-103">Create adaptive tiles</span></span>
 

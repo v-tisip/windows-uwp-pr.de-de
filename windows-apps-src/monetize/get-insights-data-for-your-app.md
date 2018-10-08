@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Store-Dienste, Microsoft Store-Analyse-API, Einblicke
 ms.localizationpriority: medium
 ms.openlocfilehash: 53fbd91437e5dc702f8672c6cbadeea32a8a96bf
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4387296"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4416067"
 ---
 # <a name="get-insights-data"></a><span data-ttu-id="8b245-104">Abrufen von Daten Einblicke</span><span class="sxs-lookup"><span data-stu-id="8b245-104">Get insights data</span></span>
 

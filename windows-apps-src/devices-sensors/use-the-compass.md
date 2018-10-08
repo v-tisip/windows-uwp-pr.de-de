@@ -10,46 +10,44 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 069f13926fda125ebb383f16bf96eab333a28523
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: f2bddb9ae3adf8ef6cfdf1b6c078db5eb026c93d
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "958655"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4420299"
 ---
-# <a name="use-the-compass"></a><span data-ttu-id="7d45b-104">Verwenden des Kompasses</span><span class="sxs-lookup"><span data-stu-id="7d45b-104">Use the compass</span></span>
+# <a name="use-the-compass"></a><span data-ttu-id="64d29-104">Verwenden des Kompasses</span><span class="sxs-lookup"><span data-stu-id="64d29-104">Use the compass</span></span>
 
 
-**<span data-ttu-id="7d45b-105">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="7d45b-105">Important APIs</span></span>**
+**<span data-ttu-id="64d29-105">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="64d29-105">Important APIs</span></span>**
 
--   [**<span data-ttu-id="7d45b-106">Windows.Devices.Sensors</span><span class="sxs-lookup"><span data-stu-id="7d45b-106">Windows.Devices.Sensors</span></span>**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**<span data-ttu-id="7d45b-107">Kompass</span><span class="sxs-lookup"><span data-stu-id="7d45b-107">Compass</span></span>**](https://msdn.microsoft.com/library/windows/apps/BR225705)
+-   [**<span data-ttu-id="64d29-106">Windows.Devices.Sensors</span><span class="sxs-lookup"><span data-stu-id="64d29-106">Windows.Devices.Sensors</span></span>**](https://msdn.microsoft.com/library/windows/apps/BR206408)
+-   [**<span data-ttu-id="64d29-107">Kompass</span><span class="sxs-lookup"><span data-stu-id="64d29-107">Compass</span></span>**](https://msdn.microsoft.com/library/windows/apps/BR225705)
 
-**<span data-ttu-id="7d45b-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7d45b-108">Sample</span></span>**
+**<span data-ttu-id="64d29-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="64d29-108">Sample</span></span>**
 
--   <span data-ttu-id="7d45b-109">Eine umfassendere Implementierung finden Sie unter [Beispiel für einen Kompass](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Compass).</span><span class="sxs-lookup"><span data-stu-id="7d45b-109">For a more complete implementation, see the [compass sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Compass).</span></span>
+-   <span data-ttu-id="64d29-109">Eine umfassendere Implementierung finden Sie unter [Beispiel für einen Kompass](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Compass).</span><span class="sxs-lookup"><span data-stu-id="64d29-109">For a more complete implementation, see the [compass sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Compass).</span></span>
 
-<span data-ttu-id="7d45b-110">\[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt.</span><span class="sxs-lookup"><span data-stu-id="7d45b-110">\[Some information relates to pre-released product which may be substantially modified before it's commercially released.</span></span> <span data-ttu-id="7d45b-111">Microsoft übernimmt keine Garantie, weder ausdrücklicher noch impliziter Art, für die hier bereitgestellten Informationen.\]</span><span class="sxs-lookup"><span data-stu-id="7d45b-111">Microsoft makes no warranties, express or implied, with respect to the information provided here.\]</span></span>
+<span data-ttu-id="64d29-110">Hier erfahren Sie, wie Sie mithilfe des Kompasses die aktuelle Richtung ermitteln.</span><span class="sxs-lookup"><span data-stu-id="64d29-110">Learn how to use the compass to determine the current heading.</span></span>
 
-<span data-ttu-id="7d45b-112">Hier erfahren Sie, wie Sie mithilfe des Kompasses die aktuelle Richtung ermitteln.</span><span class="sxs-lookup"><span data-stu-id="7d45b-112">Learn how to use the compass to determine the current heading.</span></span>
+<span data-ttu-id="64d29-111">Apps können die aktuelle Richtung anhand des magnetischen oder geografischen Nordpols bestimmen.</span><span class="sxs-lookup"><span data-stu-id="64d29-111">An app can retrieve the current heading with respect to magnetic, or true, north.</span></span> <span data-ttu-id="64d29-112">Navigations-Apps bestimmen mit dem Kompass die Richtung, in die das Gerät weist, und passen damit die Karte an.</span><span class="sxs-lookup"><span data-stu-id="64d29-112">Navigation apps use the compass to determine the direction a device is facing and then orient the map accordingly.</span></span>
 
-<span data-ttu-id="7d45b-113">Apps können die aktuelle Richtung anhand des magnetischen oder geografischen Nordpols bestimmen.</span><span class="sxs-lookup"><span data-stu-id="7d45b-113">An app can retrieve the current heading with respect to magnetic, or true, north.</span></span> <span data-ttu-id="7d45b-114">Navigations-Apps bestimmen mit dem Kompass die Richtung, in die das Gerät weist, und passen damit die Karte an.</span><span class="sxs-lookup"><span data-stu-id="7d45b-114">Navigation apps use the compass to determine the direction a device is facing and then orient the map accordingly.</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="64d29-113">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="64d29-113">Prerequisites</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="7d45b-115">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="7d45b-115">Prerequisites</span></span>
+<span data-ttu-id="64d29-114">Sie sollten mit XAML (Extensible Application Markup Language), Microsoft VisualC# und Ereignissen vertraut sein.</span><span class="sxs-lookup"><span data-stu-id="64d29-114">You should be familiar with Extensible Application Markup Language (XAML), Microsoft Visual C#, and events.</span></span>
 
-<span data-ttu-id="7d45b-116">Sie sollten mit XAML (Extensible Application Markup Language), Microsoft VisualC# und Ereignissen vertraut sein.</span><span class="sxs-lookup"><span data-stu-id="7d45b-116">You should be familiar with Extensible Application Markup Language (XAML), Microsoft Visual C#, and events.</span></span>
+<span data-ttu-id="64d29-115">Das verwendete Gerät oder der Emulator muss einen Kompass unterstützen.</span><span class="sxs-lookup"><span data-stu-id="64d29-115">The device or emulator that you're using must support a compass.</span></span>
 
-<span data-ttu-id="7d45b-117">Das verwendete Gerät oder der Emulator muss einen Kompass unterstützen.</span><span class="sxs-lookup"><span data-stu-id="7d45b-117">The device or emulator that you're using must support a compass.</span></span>
+## <a name="create-a-simple-compass-app"></a><span data-ttu-id="64d29-116">Erstellen einer einfachen Kompass-App</span><span class="sxs-lookup"><span data-stu-id="64d29-116">Create a simple compass app</span></span>
 
-## <a name="create-a-simple-compass-app"></a><span data-ttu-id="7d45b-118">Erstellen einer einfachen Kompass-App</span><span class="sxs-lookup"><span data-stu-id="7d45b-118">Create a simple compass app</span></span>
+<span data-ttu-id="64d29-117">Dieser Abschnitt ist in zwei Unterabschnitte unterteilt:</span><span class="sxs-lookup"><span data-stu-id="64d29-117">This section is divided into two subsections.</span></span> <span data-ttu-id="64d29-118">Der erste Unterabschnitt enthält die Schritte zum Erstellen einer einfachen Kompassanwendung.</span><span class="sxs-lookup"><span data-stu-id="64d29-118">The first subsection will take you through the steps necessary to create a simple compass application from scratch.</span></span> <span data-ttu-id="64d29-119">Im zweiten Unterabschnitt wird die erstellte App dann näher erläutert.</span><span class="sxs-lookup"><span data-stu-id="64d29-119">The following subsection explains the app you have just created.</span></span>
 
-<span data-ttu-id="7d45b-119">Dieser Abschnitt ist in zwei Unterabschnitte unterteilt:</span><span class="sxs-lookup"><span data-stu-id="7d45b-119">This section is divided into two subsections.</span></span> <span data-ttu-id="7d45b-120">Der erste Unterabschnitt enthält die Schritte zum Erstellen einer einfachen Kompassanwendung.</span><span class="sxs-lookup"><span data-stu-id="7d45b-120">The first subsection will take you through the steps necessary to create a simple compass application from scratch.</span></span> <span data-ttu-id="7d45b-121">Im zweiten Unterabschnitt wird die erstellte App dann näher erläutert.</span><span class="sxs-lookup"><span data-stu-id="7d45b-121">The following subsection explains the app you have just created.</span></span>
+### <a name="instructions"></a><span data-ttu-id="64d29-120">Anweisungen</span><span class="sxs-lookup"><span data-stu-id="64d29-120">Instructions</span></span>
 
-### <a name="instructions"></a><span data-ttu-id="7d45b-122">Anweisungen</span><span class="sxs-lookup"><span data-stu-id="7d45b-122">Instructions</span></span>
+-   <span data-ttu-id="64d29-121">Erstellen Sie ein neues Projekt. Wählen Sie dabei unter den Projektvorlagen für **VisualC#** die Option **Leere App (Universelle Windows-App)** aus.</span><span class="sxs-lookup"><span data-stu-id="64d29-121">Create a new project, choosing a **Blank App (Universal Windows)** from the **Visual C#** project templates.</span></span>
 
--   <span data-ttu-id="7d45b-123">Erstellen Sie ein neues Projekt. Wählen Sie dabei unter den Projektvorlagen für **VisualC#** die Option **Leere App (Universelle Windows-App)** aus.</span><span class="sxs-lookup"><span data-stu-id="7d45b-123">Create a new project, choosing a **Blank App (Universal Windows)** from the **Visual C#** project templates.</span></span>
-
--   <span data-ttu-id="7d45b-124">Öffnen Sie die Projektdatei „MainPage.xaml.cs“, und ersetzen Sie den vorhandenen Code durch den folgenden Code:</span><span class="sxs-lookup"><span data-stu-id="7d45b-124">Open your project's MainPage.xaml.cs file and replace the existing code with the following.</span></span>
+-   <span data-ttu-id="64d29-122">Öffnen Sie die Projektdatei „MainPage.xaml.cs“, und ersetzen Sie den vorhandenen Code durch den folgenden Code:</span><span class="sxs-lookup"><span data-stu-id="64d29-122">Open your project's MainPage.xaml.cs file and replace the existing code with the following.</span></span>
 
 ```csharp
     using System;
@@ -138,25 +136,25 @@ You'll need to rename the namespace in the previous snippet with the name you ga
     </Page>
 ```
 
-<span data-ttu-id="7d45b-125">Ersetzen Sie im obigen Codeausschnitt den ersten Teil des Klassennamens durch den Namespace Ihrer App.</span><span class="sxs-lookup"><span data-stu-id="7d45b-125">You'll need to replace the first part of the class name in the previous snippet with the namespace of your app.</span></span> <span data-ttu-id="7d45b-126">Wenn Sie z.B. ein Projekt mit dem Namen **CompassCS** erstellt haben, ersetzen Sie `x:Class="App1.MainPage"` durch `x:Class="CompassCS.MainPage"`.</span><span class="sxs-lookup"><span data-stu-id="7d45b-126">For example, if you created a project named **CompassCS**, you'd replace `x:Class="App1.MainPage"` with `x:Class="CompassCS.MainPage"`.</span></span> <span data-ttu-id="7d45b-127">Ersetzen Sie außerdem `xmlns:local="using:App1"` durch `xmlns:local="using:CompassCS"`.</span><span class="sxs-lookup"><span data-stu-id="7d45b-127">You should also replace `xmlns:local="using:App1"` with `xmlns:local="using:CompassCS"`.</span></span>
+<span data-ttu-id="64d29-123">Ersetzen Sie im obigen Codeausschnitt den ersten Teil des Klassennamens durch den Namespace Ihrer App.</span><span class="sxs-lookup"><span data-stu-id="64d29-123">You'll need to replace the first part of the class name in the previous snippet with the namespace of your app.</span></span> <span data-ttu-id="64d29-124">Wenn Sie z.B. ein Projekt mit dem Namen **CompassCS** erstellt haben, ersetzen Sie `x:Class="App1.MainPage"` durch `x:Class="CompassCS.MainPage"`.</span><span class="sxs-lookup"><span data-stu-id="64d29-124">For example, if you created a project named **CompassCS**, you'd replace `x:Class="App1.MainPage"` with `x:Class="CompassCS.MainPage"`.</span></span> <span data-ttu-id="64d29-125">Ersetzen Sie außerdem `xmlns:local="using:App1"` durch `xmlns:local="using:CompassCS"`.</span><span class="sxs-lookup"><span data-stu-id="64d29-125">You should also replace `xmlns:local="using:App1"` with `xmlns:local="using:CompassCS"`.</span></span>
 
--   <span data-ttu-id="7d45b-128">Drücken Sie F5 oder wählen Sie **Debuggen** > **Debugging starten** aus, um die App zu erstellen, bereitzustellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="7d45b-128">Press F5 or select **Debug** > **Start Debugging** to build, deploy, and run the app.</span></span>
+-   <span data-ttu-id="64d29-126">Drücken Sie F5 oder wählen Sie **Debuggen** > **Debugging starten** aus, um die App zu erstellen, bereitzustellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="64d29-126">Press F5 or select **Debug** > **Start Debugging** to build, deploy, and run the app.</span></span>
 
-<span data-ttu-id="7d45b-129">Wenn die App ausgeführt wird, können Sie die Kompasswerte ändern, indem Sie das Gerät bewegen oder die Emulatortools verwenden.</span><span class="sxs-lookup"><span data-stu-id="7d45b-129">Once the app is running, you can change the compass values by moving the device or using the emulator tools.</span></span>
+<span data-ttu-id="64d29-127">Wenn die App ausgeführt wird, können Sie die Kompasswerte ändern, indem Sie das Gerät bewegen oder die Emulatortools verwenden.</span><span class="sxs-lookup"><span data-stu-id="64d29-127">Once the app is running, you can change the compass values by moving the device or using the emulator tools.</span></span>
 
--   <span data-ttu-id="7d45b-130">Beenden Sie die App, indem Sie zu Visual Studio zurückkehren und UMSCHALT+F5 drücken oder **Debuggen** > **Debugging beenden** auswählen.</span><span class="sxs-lookup"><span data-stu-id="7d45b-130">Stop the app by returning to Visual Studio and pressing Shift+F5 or select **Debug** > **Stop Debugging** to stop the app.</span></span>
+-   <span data-ttu-id="64d29-128">Beenden Sie die App, indem Sie zu Visual Studio zurückkehren und UMSCHALT+F5 drücken oder **Debuggen** > **Debugging beenden** auswählen.</span><span class="sxs-lookup"><span data-stu-id="64d29-128">Stop the app by returning to Visual Studio and pressing Shift+F5 or select **Debug** > **Stop Debugging** to stop the app.</span></span>
 
-### <a name="explanation"></a><span data-ttu-id="7d45b-131">Erläuterung</span><span class="sxs-lookup"><span data-stu-id="7d45b-131">Explanation</span></span>
+### <a name="explanation"></a><span data-ttu-id="64d29-129">Erläuterung</span><span class="sxs-lookup"><span data-stu-id="64d29-129">Explanation</span></span>
 
-<span data-ttu-id="7d45b-132">Das vorherige Beispiel zeigt, wie wenig Code Sie schreiben müssen, um Kompasswerte in Ihre App zu integrieren.</span><span class="sxs-lookup"><span data-stu-id="7d45b-132">The previous example demonstrates how little code you'll need to write in order to integrate compass input in your app.</span></span>
+<span data-ttu-id="64d29-130">Das vorherige Beispiel zeigt, wie wenig Code Sie schreiben müssen, um Kompasswerte in Ihre App zu integrieren.</span><span class="sxs-lookup"><span data-stu-id="64d29-130">The previous example demonstrates how little code you'll need to write in order to integrate compass input in your app.</span></span>
 
-<span data-ttu-id="7d45b-133">Die App stellt eine Verbindung mit dem Standardkompass in der **MainPage**-Methode her.</span><span class="sxs-lookup"><span data-stu-id="7d45b-133">The app establishes a connection with the default compass in the **MainPage** method.</span></span>
+<span data-ttu-id="64d29-131">Die App stellt eine Verbindung mit dem Standardkompass in der **MainPage**-Methode her.</span><span class="sxs-lookup"><span data-stu-id="64d29-131">The app establishes a connection with the default compass in the **MainPage** method.</span></span>
 
 ```csharp
 _compass = Compass.GetDefault(); // Get the default compass object
 ```
 
-<span data-ttu-id="7d45b-134">Die App legt das Berichtsintervall in der **MainPage**-Methode fest.</span><span class="sxs-lookup"><span data-stu-id="7d45b-134">The app establishes the report interval within the **MainPage** method.</span></span> <span data-ttu-id="7d45b-135">Mit diesem Code wird das vom Gerät unterstützte Mindestintervall abgerufen und mit einem angeforderten Intervall von 16 Millisekunden verglichen (entspricht etwa einer Aktualisierungsrate von 60Hz).</span><span class="sxs-lookup"><span data-stu-id="7d45b-135">This code retrieves the minimum interval supported by the device and compares it to a requested interval of 16 milliseconds (which approximates a 60-Hz refresh rate).</span></span> <span data-ttu-id="7d45b-136">Wenn das unterstützte Mindestintervall größer als das angeforderte Intervall ist, legt der Code den Wert auf das Minimum fest.</span><span class="sxs-lookup"><span data-stu-id="7d45b-136">If the minimum supported interval is greater than the requested interval, the code sets the value to the minimum.</span></span> <span data-ttu-id="7d45b-137">Andernfalls wird der Wert auf das angeforderte Intervall festgelegt.</span><span class="sxs-lookup"><span data-stu-id="7d45b-137">Otherwise, it sets the value to the requested interval.</span></span>
+<span data-ttu-id="64d29-132">Die App legt das Berichtsintervall in der **MainPage**-Methode fest.</span><span class="sxs-lookup"><span data-stu-id="64d29-132">The app establishes the report interval within the **MainPage** method.</span></span> <span data-ttu-id="64d29-133">Mit diesem Code wird das vom Gerät unterstützte Mindestintervall abgerufen und mit einem angeforderten Intervall von 16 Millisekunden verglichen (entspricht etwa einer Aktualisierungsrate von 60Hz).</span><span class="sxs-lookup"><span data-stu-id="64d29-133">This code retrieves the minimum interval supported by the device and compares it to a requested interval of 16 milliseconds (which approximates a 60-Hz refresh rate).</span></span> <span data-ttu-id="64d29-134">Wenn das unterstützte Mindestintervall größer als das angeforderte Intervall ist, legt der Code den Wert auf das Minimum fest.</span><span class="sxs-lookup"><span data-stu-id="64d29-134">If the minimum supported interval is greater than the requested interval, the code sets the value to the minimum.</span></span> <span data-ttu-id="64d29-135">Andernfalls wird der Wert auf das angeforderte Intervall festgelegt.</span><span class="sxs-lookup"><span data-stu-id="64d29-135">Otherwise, it sets the value to the requested interval.</span></span>
 
 ```csharp
 uint minReportInterval = _compass.MinimumReportInterval;
@@ -164,14 +162,14 @@ uint reportInterval = minReportInterval > 16 ? minReportInterval : 16;
 _compass.ReportInterval = reportInterval;
 ```
 
-<span data-ttu-id="7d45b-138">Die neuen Kompassdaten werden in der **ReadingChanged**-Methode erfasst.</span><span class="sxs-lookup"><span data-stu-id="7d45b-138">The new compass data is captured in the **ReadingChanged** method.</span></span> <span data-ttu-id="7d45b-139">Wenn der Sensortreiber neue Daten vom Sensor empfängt, übergibt er die Werte mithilfe dieses Ereignishandlers an Ihre App.</span><span class="sxs-lookup"><span data-stu-id="7d45b-139">Each time the sensor driver receives new data from the sensor, it passes the values to your app using this event handler.</span></span> <span data-ttu-id="7d45b-140">Die App registriert diesen Ereignishandler in der folgenden Zeile.</span><span class="sxs-lookup"><span data-stu-id="7d45b-140">The app registers this event handler on the following line.</span></span>
+<span data-ttu-id="64d29-136">Die neuen Kompassdaten werden in der **ReadingChanged**-Methode erfasst.</span><span class="sxs-lookup"><span data-stu-id="64d29-136">The new compass data is captured in the **ReadingChanged** method.</span></span> <span data-ttu-id="64d29-137">Wenn der Sensortreiber neue Daten vom Sensor empfängt, übergibt er die Werte mithilfe dieses Ereignishandlers an Ihre App.</span><span class="sxs-lookup"><span data-stu-id="64d29-137">Each time the sensor driver receives new data from the sensor, it passes the values to your app using this event handler.</span></span> <span data-ttu-id="64d29-138">Die App registriert diesen Ereignishandler in der folgenden Zeile.</span><span class="sxs-lookup"><span data-stu-id="64d29-138">The app registers this event handler on the following line.</span></span>
 
 ```csharp
 _compass.ReadingChanged += new TypedEventHandler<Compass,
 CompassReadingChangedEventArgs>(ReadingChanged);
 ```
 
-<span data-ttu-id="7d45b-141">Die neuen Werte werden in die TextBlock-Elemente des XAML-Projektcodes geschrieben.</span><span class="sxs-lookup"><span data-stu-id="7d45b-141">These new values are written to the TextBlocks found in the project's XAML.</span></span>
+<span data-ttu-id="64d29-139">Die neuen Werte werden in die TextBlock-Elemente des XAML-Projektcodes geschrieben.</span><span class="sxs-lookup"><span data-stu-id="64d29-139">These new values are written to the TextBlocks found in the project's XAML.</span></span>
 
 ```xml
  <TextBlock HorizontalAlignment="Left" Height="22" Margin="8,18,0,0" TextWrapping="Wrap" Text="Magnetic Heading:" VerticalAlignment="Top" Width="104" Foreground="#FFFBF9F9"/>

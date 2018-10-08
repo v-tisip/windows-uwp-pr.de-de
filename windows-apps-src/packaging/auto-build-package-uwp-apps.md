@@ -11,11 +11,11 @@ keywords: Windows10, UWP
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
 ms.openlocfilehash: 7492f9d4fc2111880f27dcb6a48eff3ad0ccd315
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4392823"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4432596"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a><span data-ttu-id="e00c9-104">Einrichten automatisierter Builds für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="e00c9-104">Set up automated builds for your UWP app</span></span>
 

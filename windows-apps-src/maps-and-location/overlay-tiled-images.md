@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Karte, Standort, Bilder, Überlagerung
 ms.localizationpriority: medium
 ms.openlocfilehash: ba1f7d52a1b16fbb421202229ce724dab384ffa0
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4383903"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4419918"
 ---
 # <a name="overlay-tiled-images-on-a-map"></a><span data-ttu-id="cfe87-105">Überlagern von nebeneinander angeordneten Bildern in einer Karte</span><span class="sxs-lookup"><span data-stu-id="cfe87-105">Overlay tiled images on a map</span></span>
 

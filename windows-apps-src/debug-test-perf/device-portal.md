@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Device portal
 ms.localizationpriority: medium
 ms.openlocfilehash: 08e7d8fcfbab0d0b22fffa3e3e0aecc38d5b095c
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4389905"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4416561"
 ---
 # <a name="windows-device-portal-overview"></a><span data-ttu-id="bdc48-104">Übersicht über das Windows Device Portal</span><span class="sxs-lookup"><span data-stu-id="bdc48-104">Windows Device Portal overview</span></span>
 
