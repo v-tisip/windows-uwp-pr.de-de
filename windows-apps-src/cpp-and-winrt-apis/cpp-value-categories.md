@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Standard, c++, Cpp, Winrt, Projektion, verschieben, Weiterleitung, Wert Kategorien, Move-Semantik, perfekte Weiterleitung, l-Wert, r-Wert, Glvalue, Prvalue, Xvalue
 ms.localizationpriority: medium
 ms.openlocfilehash: cbccaf78b45d85d93619977d149431c4eec9e10a
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4421302"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4462314"
 ---
 # <a name="value-categories-and-references-to-them"></a>Wert Kategorien und Verweise auf diese
 Dieses Thema beschreibt die verschiedenen Kategorien der Werte (und Verweise auf Werte), die in C++ vorhanden sind. Sie werden Ausrichtungsattributs verwendet kenne *l-Werte* und *Rvalues*, aber möglicherweise nicht stellen sie in die Begriffe, die in diesem Thema wird vorgestellt. Und es gibt andere Arten von Werten, zu.

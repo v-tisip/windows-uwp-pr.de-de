@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, problembehandlung, HRESULT, fehler
 ms.localizationpriority: medium
 ms.openlocfilehash: 05542a42e362f024e92547d9eb496b936b85236c
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4416513"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4461885"
 ---
 # <a name="troubleshooting-cwinrt-issues"></a>Problembehandlung bei C++/WinRT-Problemen
 
