@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows10, verpackung, paketlayout, bestandspaket
 ms.localizationpriority: medium
 ms.openlocfilehash: 8aafac1c1217ce082cd9d6176c530967f32e4cdd
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4428275"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4470099"
 ---
 # <a name="introduction-to-asset-packages"></a><span data-ttu-id="d2ce5-104">Einführung zu Bestandspaketen</span><span class="sxs-lookup"><span data-stu-id="d2ce5-104">Introduction to asset packages</span></span>
 

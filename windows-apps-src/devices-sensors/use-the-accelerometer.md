@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 2848b9a7326bdac084120ec9b75f067718f14853
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4428881"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4468729"
 ---
 # <a name="use-the-accelerometer"></a><span data-ttu-id="85f00-104">Verwenden des Beschleunigungsmessers</span><span class="sxs-lookup"><span data-stu-id="85f00-104">Use the accelerometer</span></span>
 

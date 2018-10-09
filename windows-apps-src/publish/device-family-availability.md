@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Pakete, hochladen, Verfügbarkeit von Gerätefamilien
 ms.localizationpriority: medium
 ms.openlocfilehash: e86b56c09f907e45655a0ef9b94fad30a4959b59
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4445533"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4469666"
 ---
 # <a name="device-family-availability"></a><span data-ttu-id="1caef-103">Verfügbarkeit von Gerätefamilien</span><span class="sxs-lookup"><span data-stu-id="1caef-103">Device family availability</span></span>
 
