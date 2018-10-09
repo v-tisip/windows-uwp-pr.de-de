@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, XAML, steuerelement, binden, eigenschaft
 ms.localizationpriority: medium
-ms.openlocfilehash: f2b9d342e775b2834c6b3e7eb02a8b2e3d71728d
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.openlocfilehash: 2caec1c245514f7c1596d2a40749e974998fadcd
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4383220"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4445598"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a>XAML-Steuerelemente; Binden an eine C++/WinRT-Eigenschaft
 Eine Eigenschaft, die effektiv an ein XAML-Steuerelement gebunden werden kann, wird als *observable*-Eigenschaft bezeichnet. Dieses Konzept basiert auf dem Software-Design-Muster, das als *Observer-Pattern* bekannt ist. Dieses Thema zeigt, wie Sie Observable-Eigenschaften in implementieren [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), und wie man XAML-Steuerelemente an diese bindet.
@@ -178,7 +178,7 @@ namespace winrt::Bookstore::implementation
 {
     BookstoreViewModel::BookstoreViewModel()
     {
-        m_bookSku = make<Bookstore::implementation::BookSku>(L"Atticus");
+        m_bookSku = winrt::make<Bookstore::implementation::BookSku>(L"Atticus");
     }
 
     Bookstore::BookSku BookstoreViewModel::BookSku()
@@ -189,7 +189,7 @@ namespace winrt::Bookstore::implementation
 ```
 
 > [!NOTE]
-> Der Typ von `m_bookSku` ist der projizierte Typ (**winrt::Bookstore::BookSku**), und der Template-Parameter, den Sie mit **make** verwenden, ist der Implementierungstyp (**winrt::Bookstore::implementation::BookSku**). Dennoch gibt **make** eine Instanz des projizierten Typs zurück.
+> Die Art der `m_bookSku` ist der projizierte Typ (**Winrt::Bookstore::BookSku**) und der Template-Parameter, die Sie mit [**WinRT:: Make**](/uwp/cpp-ref-for-winrt/make) verwenden, ist der Implementierungstyp (**Winrt::Bookstore::implementation::BookSku**). Dennoch gibt **make** eine Instanz des projizierten Typs zurück.
 
 ## <a name="add-a-property-of-type-bookstoreviewmodel-to-mainpage"></a>Hinzufügen einer Eigenschaft vom Typ **BookstoreViewModel** zu **MainPage**
 Öffnen Sie `MainPage.idl` (unsere Haupt-UI-Seite) mit der Deklaration der Laufzeitklasse. Fügen Sie eine Import-Anweisung zum Import von `BookstoreViewModel.idl` hinzu und fügen Sie eine schreibgeschützte Eigenschaft namens MainViewModel vom Typ **BookstoreViewModel** hinzu. Entfernen Sie auch die **MyProperty** -Eigenschaft. Beachten Sie außerdem die `import` -Direktive in den folgenden Eintrag.
@@ -252,7 +252,7 @@ namespace winrt::Bookstore::implementation
 {
     MainPage::MainPage()
     {
-        m_mainViewModel = make<Bookstore::implementation::BookstoreViewModel>();
+        m_mainViewModel = winrt::make<Bookstore::implementation::BookstoreViewModel>();
         InitializeComponent();
     }
 

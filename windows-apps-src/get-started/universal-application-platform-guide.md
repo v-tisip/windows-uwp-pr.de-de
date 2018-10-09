@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, universal
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f0168f0a1baef5e68bccdf0a33c3ac7eb7683a7
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4394391"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4427379"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>Was ist eine Universelle Windows-Plattform (UWP)-App?
 

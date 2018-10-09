@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 30de119b7c3a00730b698eb9d4938280669219a7
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 2848b9a7326bdac084120ec9b75f067718f14853
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "958705"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4428881"
 ---
 # <a name="use-the-accelerometer"></a>Verwenden des Beschleunigungsmessers
 
@@ -28,8 +28,6 @@ ms.locfileid: "958705"
 **Beispiel**
 
 -   Eine umfassendere Implementierung finden Sie unter [Beispiel für einen Beschleunigungsmesser](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Accelerometer).
-
-\[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt keine Garantie, weder ausdrücklicher noch impliziter Art, für die hier bereitgestellten Informationen.\]
 
 Hier erfahren Sie, wie Sie mithilfe des Beschleunigungsmessers auf Benutzerbewegungen reagieren können.
 

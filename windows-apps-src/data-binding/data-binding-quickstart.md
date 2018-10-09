@@ -1,10 +1,10 @@
 ---
-author: mcleblanc
+author: stevewhims
 ms.assetid: A9D54DEC-CD1B-4043-ADE4-32CD4977D1BF
 title: Übersicht Datenbindung
 description: In diesem Thema erfahren Sie, wie Sie in einer UWP-App (Universelle Windows-Plattform) ein Steuerelement (oder ein anderes Benutzeroberflächenelement) an ein einzelnes Element oder ein Steuerelement eines Elements an eine Sammlung von Elementen binden.
-ms.author: markl
-ms.date: 07/06/2018
+ms.author: stwhi
+ms.date: 10/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
@@ -13,13 +13,13 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-- cpp
-ms.openlocfilehash: c088aa6a2a8b1922eb93ec758dcda8c9a5ec8965
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+- cppcx
+ms.openlocfilehash: 8375cc54e75df71b28cfd3f550f47914b4b65519
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4389866"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4426948"
 ---
 # <a name="data-binding-overview"></a>Übersicht über Datenbindung
 
@@ -76,7 +76,7 @@ namespace Quickstart
 // Recording.idl
 namespace Quickstart
 {
-    runtimeclass Recording : Windows.UI.Xaml.DependencyObject
+    runtimeclass Recording
     {
         Recording(String artistName, String compositionName, Windows.Globalization.Calendar releaseDateTime);
         String ArtistName{ get; };
@@ -91,7 +91,7 @@ import "Recording.idl";
 
 namespace Quickstart
 {
-    runtimeclass RecordingViewModel : Windows.UI.Xaml.DependencyObject
+    runtimeclass RecordingViewModel
     {
         RecordingViewModel();
         Quickstart.Recording DefaultRecording{ get; };
@@ -157,7 +157,7 @@ Quickstart::Recording RecordingViewModel::DefaultRecording()
 ...
 ```
 
-```cpp
+```cppcx
 // Recording.h
 #include <sstream>
 namespace Quickstart
@@ -278,7 +278,7 @@ Quickstart::RecordingViewModel MainPage::ViewModel()
 ...
 ```
 
-```cpp
+```cppcx
 // MainPage.h
 ...
 #include "Recording.h"
@@ -395,7 +395,7 @@ Windows::Foundation::Collections::IVector<Windows::Foundation::IInspectable> Rec
 ...
 ```
 
-```cpp
+```cppcx
 // Recording.h
 ...
 public ref class RecordingViewModel sealed
@@ -501,10 +501,10 @@ Sie haben zwei Möglichkeiten, dieses Verhalten zu implementieren. Sie können d
 > [!NOTE]
 > Bisher haben wir in diesem Thema nur die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783) verwendet. Die beiden weiter unten aufgeführten Methoden benötigen jedoch die flexiblere (aber weniger leistungsfähige) [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782).
 
-> [!IMPORTANT]
-> Wenn Sie verwenden [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), und klicken Sie dann das [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) -Attribut (siehe unten) ist verfügbar, wenn Sie das Windows SDK-Version 10.0.17763.0 (Windows 10, Version 1809) installiert haben oder höher. Ohne dieses Attribut müssen Sie die [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) und [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) -Schnittstellen implementieren, um die Markuperweiterung [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) verwenden können.
+Wenn Sie C++ verwenden / WinRT oder Visual C++-komponentenerweiterungen (C++ / CX) klicken, um die Markuperweiterung [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) zu verwenden, Sie müssen das Attribut [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) beliebigen Laufzeitklasse hinzufügen, die Sie binden möchten. Um [{X: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)verwenden zu können, benötigen Sie keine dieses Attribut.
 
-Wenn Sie C++ verwenden / WinRT oder Visual C++-komponentenerweiterungen (C++ / CX) dann, da wir die Markuperweiterung [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) verwenden, benötigen Sie müssen das Attribut [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) der **Aufnahme** -Klasse hinzufügen.
+> [!IMPORTANT]
+> Wenn Sie verwenden [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), und klicken Sie dann das Attribut [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) ist verfügbar, wenn Sie das Windows SDK-Version 10.0.17763.0 (Windows 10, Version 1809) installiert haben oder höher. Ohne dieses Attribut müssen Sie die [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) und [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) -Schnittstellen implementieren, um die Markuperweiterung [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) verwenden können.
 
 Sehen wir uns zuerst die [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770)-Methode an.
 
@@ -517,11 +517,11 @@ Sehen wir uns zuerst die [**SelectedItem**](https://msdn.microsoft.com/library/w
 // Add this attribute:
 ...
 [Windows.UI.Xaml.Data.Bindable]
-runtimeclass Recording : Windows.UI.Xaml.DependencyObject
+runtimeclass Recording
 ...
 ```
 
-```cpp
+```cppcx
 [Windows::UI::Xaml::Data::Bindable]
 public ref class Recording sealed
 {
@@ -678,7 +678,7 @@ namespace winrt::Quickstart::implementation
 }
 ```
 
-```cpp
+```cppcx
 ...
 public ref class StringFormatter sealed : Windows::UI::Xaml::Data::IValueConverter
 {

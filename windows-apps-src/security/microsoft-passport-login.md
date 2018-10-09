@@ -10,19 +10,14 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
-ms.openlocfilehash: 284609399f167a7229d0c7bb5858d0f0eda451ce
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.openlocfilehash: 106ea458502a95c53ecbf02d9118f3c31ff43978
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4389444"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4429073"
 ---
 # <a name="create-a-windows-hello-login-app"></a>Erstellen einer Windows Hello-Anmelde-App
-
-
-
-
-\[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt keine Garantie, weder ausdrücklicher noch impliziter Art, für die hier bereitgestellten Informationen.\]
 
 Dies ist der erste Teil einer umfassenden Schritt-für-Schritt-Lösung zum Erstellen einer Windows 10-App für die Universelle Windows-Plattform (UWP), die Windows Hello als Alternative zu herkömmlichen Authentifizierungssystemen mit Benutzername und Kennwort verwendet. Die App verwendet einen Benutzernamen für die Anmeldung und erstellt einen Hello-Schlüssel für jedes Konto. Diese Konten werden durch die PIN geschützt, die in den Windows-Einstellungen beim Konfigurieren von Windows Hello eingerichtet wird.
 
