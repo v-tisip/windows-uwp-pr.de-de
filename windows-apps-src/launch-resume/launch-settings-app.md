@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 03ec6cf478097a6cd00af85d52112555650db35f
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 22727f8d09b3d68970301677cdf632a0981c616a
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817145"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4468749"
 ---
 # <a name="launch-the-windows-settings-app"></a>Starten der Windows-Einstellungs-App
 
@@ -70,12 +70,13 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
 
 |Seite „Einstellungen“| URI |
 |-------------|-----|
-|Geschäfts- oder Schulkonto öffnen | ms-settings:workplace |
-|E-Mail- & App-Konten  | ms-settings:emailandaccounts |
-|Familie und andere Personen | ms-settings:otherusers |
-|Anmeldeoptionen | ms-settings:signinoptions<br>ms-settings:signinoptions-dynamiclock |
-|Einstellungen synchronisieren | ms-settings:sync |
-|Ihre Informationen | ms-settings:yourinfo |
+| Geschäfts- oder Schulkonto öffnen | ms-settings:workplace |
+| E-Mail- & App-Konten  | ms-settings:emailandaccounts |
+| Familie und andere Personen | ms-settings:otherusers |
+| Anmeldeoptionen | ms-settings:signinoptions<br>ms-settings:signinoptions-dynamiclock |
+| Einstellungen synchronisieren | ms-settings:sync |
+| Einrichten von Windows Hello | ms-settings:signinoptions-launchfaceenrollment<br>ms-settings:signinoptions-launchfingerprintenrollment |
+| Ihre Informationen | ms-settings:yourinfo |
 
 ## <a name="apps"></a>Apps
 
@@ -86,16 +87,21 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
 | Apps für Websites | ms-settings:appsforwebsites |
 | Standard-Apps | ms-settings:defaultapps |
 | Optionale Funktionen verwalten | ms-settings:optionalfeatures |
+| Offlinekarten | ms-settings:maps |
 | Startup-Apps | ms-settings:startupapps |
+| Videowiedergabe | ms-settings:videoplayback |
 
 ## <a name="cortana"></a>Cortana
 
 |Seite „Einstellungen“| URI |
 |-------------|-----|
-| Cortana-Berechtigungen und -Verlauf | ms-settings:cortana-permissions |
+| Berechtigungen und-Verlauf | ms-settings:cortana-permissions |
 | Weitere Details | ms-settings:cortana-moredetails |
-| Benachrichtigungen | ms-settings:cortana-notifications |
+| Cortana für meine Geräte | ms-settings:cortana-notifications |
 | Sprechen mit Cortana | ms-settings:cortana-language |
+
+> [!NOTE] 
+> In diesem Abschnitt Einstellungen auf dem Desktop wird Suche aufgerufen werden, wenn der PC, Regionen gesetzt ist, in denen Cortana ist derzeit nicht verfügbar oder Cortana deaktiviert wurde. Cortana-spezifische Seiten (Cortana für meine Geräte) und sprechen Sie mit Cortana werden in diesem Fall nicht aufgeführt. 
 
 ## <a name="devices"></a>Geräte
 
@@ -158,7 +164,7 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
 | Startseite „Einstellungen“ | ms-settings: |
 
 
-## <a name="network-wireless--internet"></a>Netzwerk, drahtlos und Internet
+## <a name="network--internet"></a>Netzwerk und Internet
 
 |Seite „Einstellungen“| URI |
 |-------------|-----|
@@ -189,9 +195,14 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
 | Navigationsleiste | ms-settings:personalization-navbar |
 | Personalisierung (Kategorie) | ms-settings:personalization |
 | Start | ms-settings:personalization-start |
-| Sounds | ms-settings:sounds |
-| Task-Leiste | ms-settings:taskbar |
+| Taskleiste | ms-settings:taskbar |
 | Designs | ms-settings:themes |
+
+## <a name="phone"></a>Phone
+
+|Seite „Einstellungen“| URI |
+|-------------|-----|
+| Ihr Smartphone | ms-settings:mobile-devices  |
 
 ## <a name="privacy"></a>Privatsphäre
 
@@ -257,7 +268,6 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
 | Microsoft-Nachrichten | ms-settings:messaging |
 | Multitasking | ms-settings:multitasking |
 | Einstellungen „Nachtmodus” | ms-settings:nightlight |
-| Offlinekarten | ms-settings:maps |
 | Telefon | ms-settings:phone-defaultapps |
 | Projizieren auf diesen PC | ms-settings:project |
 | Gemeinsame Erfahrung | ms-settings:crossdevice |
@@ -267,9 +277,9 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
 | Remotedesktop | Einstellungen „Remotedesktop” |
 | Telefon | ms-settings:phone |
 | Ein/Aus und Standbymodus | ms-settings:powersleep |
+| Sounds | ms-settings:sounds |
 | Speicher | ms-settings:storagesense |
 | Speicheroptimierung | ms-settings:storagepolicies |
-| Videowiedergabe | ms-settings:videoplayback |
 
 ## <a name="time-and-language"></a>Zeit und Sprache
 
@@ -290,21 +300,15 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
 | Sicherung | ms-settings:backup |
 | Übermittlungsoptimierung | ms-settings:delivery-optimization |
 | Mein Gerät suchen | ms-settings:findmydevice |
+| Für Entwickler | ms-settings:developers |
 | Wiederherstellung | ms-settings:recovery |
 | Problembehandlung | ms-settings:troubleshoot |
-| WindowsDefender | ms-settings:windowsdefender |
-| Einrichten von Windows Hello | ms-settings:signinoptions-launchfaceenrollment<br>ms-settings:signinoptions-launchfingerprintenrollment |
+| Windows-Sicherheit | ms-settings:windowsdefender |
 | Windows-Insider-Programm | ms-settings:windowsinsider (nur verfügbar, wenn der Benutzer bei WIP registriert ist) |
 | Windows Update | ms-settings:windowsupdate<br>ms-settings:windowsupdate-action |
 | Windows Update-Advanced options | ms-settings:windowsupdate-options |
 | Windows Update-Restart options | ms-settings:windowsupdate-restartoptions |
 | Windows-Update – Updateverlauf anzeigen | ms-settings:windowsupdate-history |
-
-## <a name="developers"></a>Entwickler
-
-|Seite „Einstellungen“| URI |
-|-------------|-----|
-| Für Entwickler | ms-settings:developers |
 
 ## <a name="user--accounts"></a>Benutzerkonten
 

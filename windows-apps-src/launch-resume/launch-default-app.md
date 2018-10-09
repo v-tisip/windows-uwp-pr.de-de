@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 1cdfc2beabb640764f85a5ee9f1b24e390b2f87a
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: dff7b641cad99407ce22e7a4d4b58c10e0ae94d1
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1664070"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4470000"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>Starten der Standard-App für einen URI
 
@@ -45,6 +45,7 @@ In diesem Thema werden einige der folgenden URI-Schemas beschrieben, die in Wind
 |[ms-store:](#store-app-uri-scheme)  | Store-App |
 |[ms-tonepicker:](#tone-picker-uri-scheme) | Tonauswahl |
 |[ms-yellowpage:](#nearby-numbers-app-uri-scheme) | Nearby Numbers-App |
+|[Msnweather:](#weather-app-uri-scheme) | Wetter-App |
 
 <br>
 Der folgende URI öffnet beispielsweise den Standardbrowser und zeigt die Bing-Website an.
@@ -240,3 +241,11 @@ Sie können das URI-Schema **ms-windows-store:** zum [Starten der UWP-App](launc
 `ms-windows-store://home/`
 
 Weitere Informationen finden Sie unter [Starten der UWP-App](launch-store-app.md).
+
+### <a name="weather-app-uri-scheme"></a>URI-Schema für Wetter-app
+
+Verwenden der **Msnweather:** zum Starten der Wetter-app-URI-Schema.
+
+| URI-Schema | Ergebnisse |
+|------------|---------|
+| Msnweather://Forecast?LA= \[latitude\] & lo = \ [Longitude\] | Startet die Wetter-app in die Planung Seite basierend auf einen geografischen Standort-Koordinaten.<br>`latitude` bezieht sich auf der Breitengrad des Speicherorts.<br> `longitude` bezieht sich auf die Länge der Position.<br> |

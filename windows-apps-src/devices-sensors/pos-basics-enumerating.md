@@ -3,18 +3,18 @@ author: TerryWarwick
 title: Auflisten von PointOfService-Geräten
 description: Hier erfahren Sie, wie Sie PointOfService Geräte auflisten.
 ms.author: jken
-ms.date: 08/30/2018
+ms.date: 10/08/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, Point of Service, POS
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e42ebb2eba7b6465be271e6095100c03798826f
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.openlocfilehash: 8796b2ea025a00015881d39449f2dd99d57121f8
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4445618"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4468709"
 ---
 # <a name="enumerating-point-of-service-devices"></a>Auflisten von Point of Service-Geräten
 In diesem Abschnitt erfahren Sie, wie Sie [eine Geräteauswahl definieren](https://docs.microsoft.com/windows/uwp/devices-sensors/build-a-device-selector), die verwendet wird, um die im System verfügbaren Geräte abzufragen, und verwenden diese Auswahl, um Point of Service-Geräte mithilfe einer der folgenden Methoden aufzulisten:
@@ -60,9 +60,6 @@ string selector = POSPrinter.GetDeviceSelector(PosConnectionTypes.Local);
 > Weitere Informationen zum Erstellen umfangreicherer Auswahlzeichenfolgen finden Sie unter [Erstellen einer Geräteauswahl](https://docs.microsoft.com/windows/uwp/devices-sensors/build-a-device-selector).
 
 ## <a name="method-1-use-a-device-picker"></a>Methode 1: Verwenden einer Geräteauswahl
-
-> [!NOTE]
-> Diese Methode erfordert das neueste [Windows SDK Insider Preview](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK).
 
 Die [DevicePicker](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker) -Klasse können Sie eine Auswahl-Flyout angezeigt wird, eine Liste der Geräte für den Benutzer zur Auswahl enthält. Die Eigenschaft [Filter](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker.filter) können Sie auswählen, welche Arten von Geräten in der Auswahl angezeigt. Diese Eigenschaft ist vom Typ [DevicePickerFilter](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter). Sie können den Filter mithilfe der Eigenschaft [SupportedDeviceClasses](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter.supporteddeviceclasses) oder [SupportedDeviceSelectors](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter.supporteddeviceselectors) Gerätetypen hinzufügen.
 

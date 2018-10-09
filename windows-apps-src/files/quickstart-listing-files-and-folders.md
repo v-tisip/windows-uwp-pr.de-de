@@ -4,37 +4,38 @@ ms.assetid: 4C59D5AC-58F7-4863-A884-E9E54228A5AD
 title: Aufzählen und Abfragen von Dateien und Ordnern
 description: Greifen Sie auf Dateien und Ordner zu, die sich in einem Ordner, in einer Bibliothek, auf einem Gerät oder an einer Netzwerkadresse befinden. Sie können auch durch Erstellen von Datei- und Ordnerabfragen Dateien und Ordner an bestimmten Speicherorten abrufen.
 ms.author: lahugh
-ms.date: 02/08/2017
+ms.date: 06/28/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 04cd59c454f0cd1561f35125f394c68bc5753002
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+dev_langs:
+- csharp
+- cppwinrt
+- cpp
+- vb
+ms.openlocfilehash: 312e351a39bf291e1fcd21921230a73ed10cfd17
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652859"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4468739"
 ---
 # <a name="enumerate-and-query-files-and-folders"></a>Aufzählen und Abfragen von Dateien und Ordnern
 
-
-
-
 Greifen Sie auf Dateien und Ordner zu, die sich in einem Ordner, in einer Bibliothek, auf einem Gerät oder an einer Netzwerkadresse befinden. Sie können auch durch Erstellen von Datei- und Ordnerabfragen Dateien und Ordner an bestimmten Speicherorten abrufen.
 
-Anleitungen zum Speichern der Daten Ihrer App für die Universelle Windows-Plattform finden Sie in der [ApplicationData](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.aspx)-Klasse.
+Anleitungen zum Speichern der Daten Ihrer App für die Universelle Windows-Plattform finden Sie in der [ApplicationData](/uwp/api/windows.storage.applicationdata)-Klasse.
 
 > [!NOTE]
 > Siehe auch das [Beispiel für Ordnerenumeration](http://go.microsoft.com/fwlink/p/?linkid=619993).
 
- 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 -   **Verstehen der asynchronen Programmierung für UWP-Apps (Universelle Windows-Plattform)**
 
-    Informationen zum Schreiben von asynchronen Apps in C# oder Visual Basic finden Sie unter [Aufrufen asynchroner APIs in C# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/mt187337). Informationen zum Schreiben von asynchronen Apps in C++ finden Sie unter [Asynchrone Programmierung in C++](https://msdn.microsoft.com/library/windows/apps/mt187334).
+    Informationen zum Schreiben von asynchronen Apps in C# oder Visual Basic finden Sie unter [Aufrufen asynchroner APIs in C# oder Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic). Informationen zum Schreiben von asynchronen apps in C++ / WinRT, finden Sie unter [Parallelität und asynchrone Vorgänge mit C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency). Informationen zum Schreiben von asynchronen apps in C++ / CX finden Sie unter [asynchrone Programmierung in C++ / CX](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).
 
 -   **Zugriffsberechtigungen für den Speicherort**
 
@@ -45,284 +46,384 @@ Anleitungen zum Speichern der Daten Ihrer App für die Universelle Windows-Platt
 > [!NOTE]
 > Denken Sie daran, die **picturesLibrary**-Funktion zu deklarieren.
 
-In diesem Beispiel verwenden wir zunächst die [**StorageFolder.GetFilesAsync**](https://msdn.microsoft.com/library/windows/apps/br227276)-Methode, um alle Dateien im Stammordner der [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) (nicht in den Unterordnern) abzurufen und die Namen der einzelnen Dateien aufzulisten. Als Nächstes verwenden wir die [**GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br227280)-Methode, um alle Unterordner in der **PicturesLibrary** abzurufen und die Namen der einzelnen Unterordner aufzulisten.
+In diesem Beispiel verwenden wir zunächst die [**StorageFolder.GetFilesAsync**](/uwp/api/windows.storage.storagefolder.getfilesasync) -Methode, um alle Dateien im Stammordner der [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary) (nicht in den Unterordnern) abzurufen und die Namen der einzelnen Dateien aufzulisten. Als Nächstes verwenden wir die [**StorageFolder.GetFoldersAsync**](/uwp/api/windows.storage.storagefolder.getfoldersasync) -Methode, um alle Unterordner in der **PicturesLibrary** abrufen und die Namen der einzelnen Unterordner aufzulisten.
 
-<!--BUGBUG: IAsyncOperation<IVectorView<StorageFolder^>^>^  causes build to flake out-->
-> [!div class="tabbedCodeSnippets"]
-> ```cpp
-> //#include <ppltasks.h>
-> //#include <string>
-> //#include <memory>
-> using namespace Windows::Storage;
-> using namespace Platform::Collections;
-> using namespace concurrency;
-> using namespace std;
->
-> // Be sure to specify the Pictures Folder capability in the appxmanifext file.
-> StorageFolder^ picturesFolder = KnownFolders::PicturesLibrary;
->
-> // Use a shared_ptr so that the string stays in memory
-> // until the last task is complete.
-> auto outputString = make_shared<wstring>();
-> *outputString += L"Files:\n";
->
-> // Get a read-only vector of the file objects
-> // and pass it to the continuation.
-> create_task(picturesFolder->GetFilesAsync())        
->    // outputString is captured by value, which creates a copy
->    // of the shared_ptr and increments its reference count.
->    .then ([outputString] (IVectorView\<StorageFile^>^ files)
->    {        
->        for ( unsigned int i = 0 ; i < files->Size; i++)
->        {
->            *outputString += files->GetAt(i)->Name->Data();
->            *outputString += L"\n";
->       }
->    })
->    // We need to explicitly state the return type
->    // here: -> IAsyncOperation<...>
->    .then([picturesFolder]() -> IAsyncOperation\<IVectorView\<StorageFolder^>^>^
->    {
->        return picturesFolder->GetFoldersAsync();
->    })
->    // Capture "this" to access m_OutputTextBlock from within the lambda.
->    .then([this, outputString](IVectorView/<StorageFolder^>^ folders)
->    {        
->        *outputString += L"Folders:\n";
->
->        for ( unsigned int i = 0; i < folders->Size; i++)
->        {
->           *outputString += folders->GetAt(i)->Name->Data();
->           *outputString += L"\n";
->        }
->
->        // Assume m_OutputTextBlock is a TextBlock defined in the XAML.
->        m_OutputTextBlock->Text = ref new String((*outputString).c_str());
->     });
-> ```
-> ```cs
-> StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
-> StringBuilder outputText = new StringBuilder();
->
-> IReadOnlyList<StorageFile> fileList = await picturesFolder.GetFilesAsync();
->
-> outputText.AppendLine("Files:");
-> foreach (StorageFile file in fileList)
-> {
->     outputText.Append(file.Name + "\n");
-> }
->
-> IReadOnlyList<StorageFolder> folderList = await picturesFolder.GetFoldersAsync();
->            
-> outputText.AppendLine("Folders:");
-> foreach (StorageFolder folder in folderList)
-> {
->     outputText.Append(folder.DisplayName + "\n");
-> }
-> ```
-> ```vb
-> Dim picturesFolder As StorageFolder = KnownFolders.PicturesLibrary
-> Dim outputText As New StringBuilder
->
-> Dim fileList As IReadOnlyList(Of StorageFile) =
->     Await picturesFolder.GetFilesAsync()
->
-> outputText.AppendLine("Files:")
-> For Each file As StorageFile In fileList
->
->     outputText.Append(file.Name & vbLf)
->
-> Next file
->
-> Dim folderList As IReadOnlyList(Of StorageFolder) =
->     Await picturesFolder.GetFoldersAsync()
->
-> outputText.AppendLine("Folders:")
-> For Each folder As StorageFolder In folderList
->
->     outputText.Append(folder.DisplayName & vbLf)
->
-> Next folder
-> ```
+```csharp
+StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
+StringBuilder outputText = new StringBuilder();
 
+IReadOnlyList<StorageFile> fileList = await picturesFolder.GetFilesAsync();
+
+outputText.AppendLine("Files:");
+foreach (StorageFile file in fileList)
+{
+    outputText.Append(file.Name + "\n");
+}
+
+IReadOnlyList<StorageFolder> folderList = await picturesFolder.GetFoldersAsync();
+           
+outputText.AppendLine("Folders:");
+foreach (StorageFolder folder in folderList)
+{
+    outputText.Append(folder.DisplayName + "\n");
+}
+```
+
+```cppwinrt
+// MainPage.h
+// In MainPage.xaml: <TextBlock x:Name="OutputTextBlock"/>
+#include <winrt/Windows.Storage.h>
+#include <sstream>
+...
+Windows::Foundation::IAsyncAction ExampleCoroutineAsync()
+{
+    // Be sure to specify the Pictures Folder capability in your Package.appxmanifest.
+    Windows::Storage::StorageFolder picturesFolder{
+        Windows::Storage::KnownFolders::PicturesLibrary()
+    };
+
+    std::wstringstream outputString;
+    outputString << L"Files:" << std::endl;
+
+    for (auto const& file : co_await picturesFolder.GetFilesAsync())
+    {
+        outputString << file.Name().c_str() << std::endl;
+    }
+
+    outputString << L"Folders:" << std::endl;
+    for (auto const& folder : co_await picturesFolder.GetFoldersAsync())
+    {
+        outputString << folder.Name().c_str() << std::endl;
+    }
+
+    OutputTextBlock().Text(outputString.str().c_str());
+}
+```
+
+```cpp
+#include <ppltasks.h>
+#include <string>
+#include <memory>
+
+using namespace Windows::Storage;
+using namespace Platform::Collections;
+using namespace concurrency;
+using namespace std;
+
+// Be sure to specify the Pictures Folder capability in the appxmanifext file.
+StorageFolder^ picturesFolder = KnownFolders::PicturesLibrary;
+
+// Use a shared_ptr so that the string stays in memory
+// until the last task is complete.
+auto outputString = make_shared<wstring>();
+*outputString += L"Files:\n";
+
+// Get a read-only vector of the file objects
+// and pass it to the continuation.
+create_task(picturesFolder->GetFilesAsync())        
+   // outputString is captured by value, which creates a copy
+   // of the shared_ptr and increments its reference count.
+   .then ([outputString] (IVectorView\<StorageFile^>^ files)
+   {        
+       for ( unsigned int i = 0 ; i < files->Size; i++)
+       {
+           *outputString += files->GetAt(i)->Name->Data();
+           *outputString += L"\n";
+      }
+   })
+   // We need to explicitly state the return type
+   // here: -IAsyncOperation<...>
+   .then([picturesFolder]() -IAsyncOperation\<IVectorView\<StorageFolder^>^>^
+   {
+       return picturesFolder->GetFoldersAsync();
+   })
+   // Capture "this" to access m_OutputTextBlock from within the lambda.
+   .then([this, outputString](IVectorView/<StorageFolder^>^ folders)
+   {        
+       *outputString += L"Folders:\n";
+
+       for ( unsigned int i = 0; i < folders->Size; i++)
+       {
+          *outputString += folders->GetAt(i)->Name->Data();
+          *outputString += L"\n";
+       }
+
+       // Assume m_OutputTextBlock is a TextBlock defined in the XAML.
+       m_OutputTextBlock->Text = ref new String((*outputString).c_str());
+    });
+```
+
+```vb
+Dim picturesFolder As StorageFolder = KnownFolders.PicturesLibrary
+Dim outputText As New StringBuilder
+
+Dim fileList As IReadOnlyList(Of StorageFile) =
+    Await picturesFolder.GetFilesAsync()
+
+outputText.AppendLine("Files:")
+For Each file As StorageFile In fileList
+
+    outputText.Append(file.Name & vbLf)
+
+Next file
+
+Dim folderList As IReadOnlyList(Of StorageFolder) =
+    Await picturesFolder.GetFoldersAsync()
+
+outputText.AppendLine("Folders:")
+For Each folder As StorageFolder In folderList
+
+    outputText.Append(folder.DisplayName & vbLf)
+
+Next folder
+```
 
 > [!NOTE]
 > Denken Sie daran, dass in C# oder Visual Basic das **async**-Schlüsselwort in der Deklaration jeder Methode anzugeben ist, in der Sie den **await**-Operator verwenden.
- 
 
-Alternativ können Sie die [**GetItemsAsync**](https://msdn.microsoft.com/library/windows/apps/br227286)-Methode verwenden, um alle Elemente (Dateien und Ordner) an einem bestimmten Speicherort abzurufen. Im folgenden Beispiel wird die **GetItemsAsync**-Methode verwendet, um alle Dateien und Unterordner im Stammordner der [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156) abzurufen (nicht in den Unterordnern). Anschließend werden die Namen der einzelnen Dateien und Unterordner aufgelistet. Wenn das Element ein Unterordner ist, wird dem Namen die Zeichenfolge `"folder"` angefügt.
+Alternativ können Sie die Methode [**StorageFolder.GetItemsAsync**](/uwp/api/windows.storage.storagefolder.getitemsasync) verwenden, um alle Elemente (Dateien und Unterordner) an einem bestimmten Speicherort abzurufen. Im folgenden Beispiel wird die **GetItemsAsync** -Methode, um alle Dateien und Unterordner im Stammordner der [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary) (nicht in den Unterordnern) abzurufen. Anschließend werden die Namen der einzelnen Dateien und Unterordner aufgelistet. Wenn das Element ein Unterordner ist, wird dem Namen die Zeichenfolge `"folder"` angefügt.
 
-> [!div class="tabbedCodeSnippets"]
-> ```cpp
-> // See previous example for comments, namespace and #include info.
-> StorageFolder^ picturesFolder = KnownFolders::PicturesLibrary;
-> auto outputString = make_shared<wstring>();
->
-> create_task(picturesFolder->GetItemsAsync())        
->     .then ([this, outputString] (IVectorView<IStorageItem^>^ items)
-> {        
->     for ( unsigned int i = 0 ; i < items->Size; i++)
->     {
->         *outputString += items->GetAt(i)->Name->Data();
->         if(items->GetAt(i)->IsOfType(StorageItemTypes::Folder))
->         {
->             *outputString += L"  folder\n";
->         }
->         else
->         {
->             *outputString += L"\n";
->         }
->         m_OutputTextBlock->Text = ref new String((*outputString).c_str());
->     }
-> });
-> ```
-> ```cs
-> StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
-> StringBuilder outputText = new StringBuilder();
->
-> IReadOnlyList<IStorageItem> itemsList = await picturesFolder.GetItemsAsync();
->
-> foreach (var item in itemsList)
-> {
->     if (item is StorageFolder)
->     {
->         outputText.Append(item.Name + " folder\n");
->
->     }
->     else
->     {
->         outputText.Append(item.Name + "\n");
->     }
-> }
-> ```
-> ```vb
-> Dim picturesFolder As StorageFolder = KnownFolders.PicturesLibrary
-> Dim outputText As New StringBuilder
->
-> Dim itemsList As IReadOnlyList(Of IStorageItem) =
->     Await picturesFolder.GetItemsAsync()
->
-> For Each item In itemsList
->
->     If TypeOf item Is StorageFolder Then
->
->         outputText.Append(item.Name & " folder" & vbLf)
->
->     Else
->
->         outputText.Append(item.Name & vbLf)
->
->     End If
->
-> Next item
-> ```
+```csharp
+StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
+StringBuilder outputText = new StringBuilder();
+
+IReadOnlyList<IStorageItem> itemsList = await picturesFolder.GetItemsAsync();
+
+foreach (var item in itemsList)
+{
+    if (item is StorageFolder)
+    {
+        outputText.Append(item.Name + " folder\n");
+
+    }
+    else
+    {
+        outputText.Append(item.Name + "\n");
+    }
+}
+```
+
+```cppwinrt
+// MainPage.h
+// In MainPage.xaml: <TextBlock x:Name="OutputTextBlock"/>
+#include <winrt/Windows.Storage.h>
+#include <sstream>
+...
+Windows::Foundation::IAsyncAction ExampleCoroutineAsync()
+{
+    // Be sure to specify the Pictures Folder capability in your Package.appxmanifest.
+    Windows::Storage::StorageFolder picturesFolder{
+        Windows::Storage::KnownFolders::PicturesLibrary()
+    };
+
+    std::wstringstream outputString;
+
+    for (Windows::Storage::IStorageItem const& item : co_await picturesFolder.GetItemsAsync())
+    {
+        outputString << item.Name().c_str();
+
+        if (item.IsOfType(Windows::Storage::StorageItemTypes::Folder))
+        {
+            outputString << L" folder" << std::endl;
+        }
+        else
+        {
+            outputString << std::endl;
+        }
+
+        OutputTextBlock().Text(outputString.str().c_str());
+    }
+}
+```
+
+```cpp
+// See previous example for comments, namespace and #include info.
+StorageFolder^ picturesFolder = KnownFolders::PicturesLibrary;
+auto outputString = make_shared<wstring>();
+
+create_task(picturesFolder->GetItemsAsync())        
+    .then ([this, outputString] (IVectorView<IStorageItem^>^ items)
+{        
+    for ( unsigned int i = 0 ; i < items->Size; i++)
+    {
+        *outputString += items->GetAt(i)->Name->Data();
+        if(items->GetAt(i)->IsOfType(StorageItemTypes::Folder))
+        {
+            *outputString += L"  folder\n";
+        }
+        else
+        {
+            *outputString += L"\n";
+        }
+        m_OutputTextBlock->Text = ref new String((*outputString).c_str());
+    }
+});
+```
+
+```vb
+Dim picturesFolder As StorageFolder = KnownFolders.PicturesLibrary
+Dim outputText As New StringBuilder
+
+Dim itemsList As IReadOnlyList(Of IStorageItem) =
+    Await picturesFolder.GetItemsAsync()
+
+For Each item In itemsList
+
+    If TypeOf item Is StorageFolder Then
+
+        outputText.Append(item.Name & " folder" & vbLf)
+
+    Else
+
+        outputText.Append(item.Name & vbLf)
+
+    End If
+
+Next item
+```
 
 ## <a name="query-files-in-a-location-and-enumerate-matching-files"></a>Abfragen von Dateien an einem Speicherort und Auflisten der entsprechenden Dateien
 
-In diesem Beispiel erfolgt eine Abfrage nach allen Dateien in der [**PicturesLibrary**](https://msdn.microsoft.com/library/windows/apps/br227156), die nach Monat gruppiert werden, wobei das Beispiel dieses Mal auch die Unterordner rekursiv durchsucht. Zunächst wird [**StorageFolder.CreateFolderQuery**](https://msdn.microsoft.com/library/windows/apps/br227262) aufgerufen und der [**CommonFolderQuery.GroupByMonth**](https://msdn.microsoft.com/library/windows/apps/br207957)-Wert an die Methode übergeben. Dadurch erhalten wir ein [**StorageFolderQueryResult**](https://msdn.microsoft.com/library/windows/apps/br208066)-Objekt.
+In diesem Beispiel, dass wir für alle Dateien in den [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary) gruppiert nach dem Monat und zu diesem Zeitpunkt Abfragen rekursiv im Beispiel Unterordner bearbeitet. Zunächst wird [**StorageFolder.CreateFolderQuery**](/uwp/api/windows.storage.storagefolder.createfolderquery) aufgerufen und der [**CommonFolderQuery.GroupByMonth**](/uwp/api/windows.storage.search.commonfolderquery)-Wert an die Methode übergeben. Dadurch erhalten wir ein [**StorageFolderQueryResult**](/uwp/api/windows.storage.search.storagefolderqueryresult)-Objekt.
 
-Als Nächstes wird [**StorageFolderQueryResult.GetFoldersAsync**](https://msdn.microsoft.com/library/windows/apps/br208074) aufgerufen, das [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)-Objekte zurückgibt, die virtuelle Ordner darstellen. In diesem Fall wird nach Monat gruppiert, sodass die virtuellen Ordner jeweils eine Gruppe von Dateien mit der gleichen Monatsangabe darstellen.
+Als Nächstes wird [**StorageFolderQueryResult.GetFoldersAsync**](/uwp/api/windows.storage.search.storagefolderqueryresult.getfoldersasync) aufgerufen, das [**StorageFolder**](/uwp/api/windows.storage.storagefolder)-Objekte zurückgibt, die virtuelle Ordner darstellen. In diesem Fall wird nach Monat gruppiert, sodass die virtuellen Ordner jeweils eine Gruppe von Dateien mit der gleichen Monatsangabe darstellen.
 
-> [!div class="tabbedCodeSnippets"]
-> ```cpp
-> //#include <ppltasks.h>
-> //#include <string>
-> //#include <memory>
-> using namespace Windows::Storage;
-> using namespace Windows::Storage::Search;
-> using namespace concurrency;
-> using namespace Platform::Collections;
-> using namespace Windows::Foundation::Collections;
-> using namespace std;
->
-> StorageFolder^ picturesFolder = KnownFolders::PicturesLibrary;
->
-> StorageFolderQueryResult^ queryResult =
->     picturesFolder->CreateFolderQuery(CommonFolderQuery::GroupByMonth);
->
-> // Use shared_ptr so that outputString remains in memory
-> // until the task completes, which is after the function goes out of scope.
-> auto outputString = std::make_shared<wstring>();
->
-> create_task( queryResult->GetFoldersAsync()).then([this, outputString] (IVectorView<StorageFolder^>^ view)
-> {        
->     for ( unsigned int i = 0; i < view->Size; i++)
->     {
->         create_task(view->GetAt(i)->GetFilesAsync()).then([this, i, view, outputString](IVectorView<StorageFile^>^ files)
->         {
->             *outputString += view->GetAt(i)->Name->Data();
->             *outputString += L"(";
->             *outputString += to_wstring(files->Size);
->             *outputString += L")\r\n";
->             for (unsigned int j = 0; j < files->Size; j++)
->             {
->                 *outputString += L"     ";
->                 *outputString += files->GetAt(j)->Name->Data();
->                 *outputString += L"\r\n";
->             }
->         }).then([this, outputString]()
->         {
->             m_OutputTextBlock->Text = ref new String((*outputString).c_str());
->         });
->     }    
-> });
-> ```
-> ```cs
-> StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
->
-> StorageFolderQueryResult queryResult =
->     picturesFolder.CreateFolderQuery(CommonFolderQuery.GroupByMonth);
->         
-> IReadOnlyList<StorageFolder> folderList =
->     await queryResult.GetFoldersAsync();
->
-> StringBuilder outputText = new StringBuilder();
->
-> foreach (StorageFolder folder in folderList)
-> {
->     IReadOnlyList<StorageFile> fileList = await folder.GetFilesAsync();
->
->     // Print the month and number of files in this group.
->     outputText.AppendLine(folder.Name + " (" + fileList.Count + ")");
->
->     foreach (StorageFile file in fileList)
->     {
->         // Print the name of the file.
->         outputText.AppendLine("   " + file.Name);
->     }
-> }
-> ```
-> ```vb
-> Dim picturesFolder As StorageFolder = KnownFolders.PicturesLibrary
-> Dim outputText As New StringBuilder
->
-> Dim queryResult As StorageFolderQueryResult =
->     picturesFolder.CreateFolderQuery(CommonFolderQuery.GroupByMonth)
->
-> Dim folderList As IReadOnlyList(Of StorageFolder) =
->     Await queryResult.GetFoldersAsync()
->
-> For Each folder As StorageFolder In folderList
->
->     Dim fileList As IReadOnlyList(Of StorageFile) =
->         Await folder.GetFilesAsync()
->
->     ' Print the month and number of files in this group.
->     outputText.AppendLine(folder.Name & " (" & fileList.Count & ")")
->
->     For Each file As StorageFile In fileList
->
->         ' Print the name of the file.
->         outputText.AppendLine("   " & file.Name)
->
->     Next file
->
-> Next folder
-> ```
+```csharp
+StorageFolder picturesFolder = KnownFolders.PicturesLibrary;
+
+StorageFolderQueryResult queryResult =
+    picturesFolder.CreateFolderQuery(CommonFolderQuery.GroupByMonth);
+        
+IReadOnlyList<StorageFolder> folderList =
+    await queryResult.GetFoldersAsync();
+
+StringBuilder outputText = new StringBuilder();
+
+foreach (StorageFolder folder in folderList)
+{
+    IReadOnlyList<StorageFile> fileList = await folder.GetFilesAsync();
+
+    // Print the month and number of files in this group.
+    outputText.AppendLine(folder.Name + " (" + fileList.Count + ")");
+
+    foreach (StorageFile file in fileList)
+    {
+        // Print the name of the file.
+        outputText.AppendLine("   " + file.Name);
+    }
+}
+```
+
+```cppwinrt
+// MainPage.h
+// In MainPage.xaml: <TextBlock x:Name="OutputTextBlock"/>
+#include <winrt/Windows.Storage.h>
+#include <winrt/Windows.Storage.Search.h>
+#include <sstream>
+...
+Windows::Foundation::IAsyncAction ExampleCoroutineAsync()
+{
+    // Be sure to specify the Pictures Folder capability in your Package.appxmanifest.
+    Windows::Storage::StorageFolder picturesFolder{
+        Windows::Storage::KnownFolders::PicturesLibrary()
+    };
+
+    Windows::Storage::Search::StorageFolderQueryResult queryResult{
+        picturesFolder.CreateFolderQuery(Windows::Storage::Search::CommonFolderQuery::GroupByMonth)
+    };
+
+    std::wstringstream outputString;
+
+    for (Windows::Storage::StorageFolder const& folder : co_await queryResult.GetFoldersAsync())
+    {
+        auto files{ co_await folder.GetFilesAsync() };
+        outputString << folder.Name().c_str() << L" (" << files.Size() << L")" << std::endl;
+
+        for (Windows::Storage::StorageFile const& file : files)
+        {
+            outputString << L"    " << file.Name().c_str() << std::endl;
+        }
+    }
+
+    OutputTextBlock().Text(outputString.str().c_str());
+}
+```
+
+```cpp
+#include <ppltasks.h>
+#include <string>
+#include <memory>
+using namespace Windows::Storage;
+using namespace Windows::Storage::Search;
+using namespace concurrency;
+using namespace Platform::Collections;
+using namespace Windows::Foundation::Collections;
+using namespace std;
+
+StorageFolder^ picturesFolder = KnownFolders::PicturesLibrary;
+
+StorageFolderQueryResult^ queryResult =
+    picturesFolder->CreateFolderQuery(CommonFolderQuery::GroupByMonth);
+
+// Use shared_ptr so that outputString remains in memory
+// until the task completes, which is after the function goes out of scope.
+auto outputString = std::make_shared<wstring>();
+
+create_task( queryResult->GetFoldersAsync()).then([this, outputString] (IVectorView<StorageFolder^>^ view)
+{        
+    for ( unsigned int i = 0; i < view->Size; i++)
+    {
+        create_task(view->GetAt(i)->GetFilesAsync()).then([this, i, view, outputString](IVectorView<StorageFile^>^ files)
+        {
+            *outputString += view->GetAt(i)->Name->Data();
+            *outputString += L" (";
+            *outputString += to_wstring(files->Size);
+            *outputString += L")\r\n";
+            for (unsigned int j = 0; j < files->Size; j++)
+            {
+                *outputString += L"     ";
+                *outputString += files->GetAt(j)->Name->Data();
+                *outputString += L"\r\n";
+            }
+        }).then([this, outputString]()
+        {
+            m_OutputTextBlock->Text = ref new String((*outputString).c_str());
+        });
+    }    
+});
+```
+
+```vb
+Dim picturesFolder As StorageFolder = KnownFolders.PicturesLibrary
+Dim outputText As New StringBuilder
+
+Dim queryResult As StorageFolderQueryResult =
+    picturesFolder.CreateFolderQuery(CommonFolderQuery.GroupByMonth)
+
+Dim folderList As IReadOnlyList(Of StorageFolder) =
+    Await queryResult.GetFoldersAsync()
+
+For Each folder As StorageFolder In folderList
+
+    Dim fileList As IReadOnlyList(Of StorageFile) =
+        Await folder.GetFilesAsync()
+
+    ' Print the month and number of files in this group.
+    outputText.AppendLine(folder.Name & " (" & fileList.Count & ")")
+
+    For Each file As StorageFile In fileList
+
+        ' Print the name of the file.
+        outputText.AppendLine("   " & file.Name)
+
+    Next file
+
+Next folder
+```
 
 Die Ausgabe des Beispiels sieht in etwa wie folgt aus:
 
-``` syntax
+```syntax
 July ‎2015 (2)
    MyImage3.png
    MyImage4.png
