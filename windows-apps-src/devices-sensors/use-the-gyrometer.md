@@ -10,46 +10,44 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 42b0d2ccb2eb00c9b4ca1e69d15ce12ca08d9f89
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 25be2cfab15378f14aed61dcaae1e7e85159f36e
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "958685"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4423234"
 ---
-# <a name="use-the-gyrometer"></a><span data-ttu-id="93c2f-104">Verwenden des Gyrometers</span><span class="sxs-lookup"><span data-stu-id="93c2f-104">Use the gyrometer</span></span>
+# <a name="use-the-gyrometer"></a><span data-ttu-id="7e12b-104">Verwenden des Gyrometers</span><span class="sxs-lookup"><span data-stu-id="7e12b-104">Use the gyrometer</span></span>
 
 
-**<span data-ttu-id="93c2f-105">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="93c2f-105">Important APIs</span></span>**
+**<span data-ttu-id="7e12b-105">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="7e12b-105">Important APIs</span></span>**
 
--   [**<span data-ttu-id="93c2f-106">Windows.Devices.Sensors</span><span class="sxs-lookup"><span data-stu-id="93c2f-106">Windows.Devices.Sensors</span></span>**](https://msdn.microsoft.com/library/windows/apps/BR206408)
--   [**<span data-ttu-id="93c2f-107">Gyrometer</span><span class="sxs-lookup"><span data-stu-id="93c2f-107">Gyrometer</span></span>**](https://msdn.microsoft.com/library/windows/apps/BR225718)
+-   [**<span data-ttu-id="7e12b-106">Windows.Devices.Sensors</span><span class="sxs-lookup"><span data-stu-id="7e12b-106">Windows.Devices.Sensors</span></span>**](https://msdn.microsoft.com/library/windows/apps/BR206408)
+-   [**<span data-ttu-id="7e12b-107">Gyrometer</span><span class="sxs-lookup"><span data-stu-id="7e12b-107">Gyrometer</span></span>**](https://msdn.microsoft.com/library/windows/apps/BR225718)
 
-**<span data-ttu-id="93c2f-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="93c2f-108">Sample</span></span>**
+**<span data-ttu-id="7e12b-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7e12b-108">Sample</span></span>**
 
--   <span data-ttu-id="93c2f-109">Eine umfassendere Implementierung finden Sie unter [Beispiel für ein Gyrometer](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/gyrometer).</span><span class="sxs-lookup"><span data-stu-id="93c2f-109">For a more complete implementation, see the [gyrometer sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/gyrometer).</span></span>
+-   <span data-ttu-id="7e12b-109">Eine umfassendere Implementierung finden Sie unter [Beispiel für ein Gyrometer](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/gyrometer).</span><span class="sxs-lookup"><span data-stu-id="7e12b-109">For a more complete implementation, see the [gyrometer sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/gyrometer).</span></span>
 
-<span data-ttu-id="93c2f-110">\[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt.</span><span class="sxs-lookup"><span data-stu-id="93c2f-110">\[Some information relates to pre-released product which may be substantially modified before it's commercially released.</span></span> <span data-ttu-id="93c2f-111">Microsoft übernimmt keine Garantie, weder ausdrücklicher noch impliziter Art, für die hier bereitgestellten Informationen.\]</span><span class="sxs-lookup"><span data-stu-id="93c2f-111">Microsoft makes no warranties, express or implied, with respect to the information provided here.\]</span></span>
+<span data-ttu-id="7e12b-110">Hier erfahren Sie, wie Sie mithilfe des Gyrometers Bewegungsänderungen des Benutzers erkennen.</span><span class="sxs-lookup"><span data-stu-id="7e12b-110">Learn how to use the gyrometer to detect changes in user movement.</span></span>
 
-<span data-ttu-id="93c2f-112">Hier erfahren Sie, wie Sie mithilfe des Gyrometers Bewegungsänderungen des Benutzers erkennen.</span><span class="sxs-lookup"><span data-stu-id="93c2f-112">Learn how to use the gyrometer to detect changes in user movement.</span></span>
+<span data-ttu-id="7e12b-111">Gyrometer und Beschleunigungssensoren ergänzen sich gegenseitig als Spielecontroller.</span><span class="sxs-lookup"><span data-stu-id="7e12b-111">Gyrometers compliment accelerometers as game controllers.</span></span> <span data-ttu-id="7e12b-112">Mit dem Beschleunigungsmesser können Sie die Bewegung in eine Richtung messen, während das Gyrometer die Winkelgeschwindigkeit (oder Drehbewegungen) misst.</span><span class="sxs-lookup"><span data-stu-id="7e12b-112">The accelerometer can measure linear motion while the gyrometer measures angular velocity or rotational motion.</span></span>
 
-<span data-ttu-id="93c2f-113">Gyrometer und Beschleunigungssensoren ergänzen sich gegenseitig als Spielecontroller.</span><span class="sxs-lookup"><span data-stu-id="93c2f-113">Gyrometers compliment accelerometers as game controllers.</span></span> <span data-ttu-id="93c2f-114">Mit dem Beschleunigungsmesser können Sie die Bewegung in eine Richtung messen, während das Gyrometer die Winkelgeschwindigkeit (oder Drehbewegungen) misst.</span><span class="sxs-lookup"><span data-stu-id="93c2f-114">The accelerometer can measure linear motion while the gyrometer measures angular velocity or rotational motion.</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="7e12b-113">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="7e12b-113">Prerequisites</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="93c2f-115">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="93c2f-115">Prerequisites</span></span>
+<span data-ttu-id="7e12b-114">Sie sollten mit XAML (Extensible Application Markup Language), Microsoft VisualC# und Ereignissen vertraut sein.</span><span class="sxs-lookup"><span data-stu-id="7e12b-114">You should be familiar with Extensible Application Markup Language (XAML), Microsoft Visual C#, and events.</span></span>
 
-<span data-ttu-id="93c2f-116">Sie sollten mit XAML (Extensible Application Markup Language), Microsoft VisualC# und Ereignissen vertraut sein.</span><span class="sxs-lookup"><span data-stu-id="93c2f-116">You should be familiar with Extensible Application Markup Language (XAML), Microsoft Visual C#, and events.</span></span>
+<span data-ttu-id="7e12b-115">Das verwendete Gerät oder der Emulator muss ein Gyrometer unterstützen.</span><span class="sxs-lookup"><span data-stu-id="7e12b-115">The device or emulator that you're using must support a gyrometer.</span></span>
 
-<span data-ttu-id="93c2f-117">Das verwendete Gerät oder der Emulator muss ein Gyrometer unterstützen.</span><span class="sxs-lookup"><span data-stu-id="93c2f-117">The device or emulator that you're using must support a gyrometer.</span></span>
+## <a name="create-a-simple-gyrometer-app"></a><span data-ttu-id="7e12b-116">Erstellen einer einfachen Gyrometer-App</span><span class="sxs-lookup"><span data-stu-id="7e12b-116">Create a simple gyrometer app</span></span>
 
-## <a name="create-a-simple-gyrometer-app"></a><span data-ttu-id="93c2f-118">Erstellen einer einfachen Gyrometer-App</span><span class="sxs-lookup"><span data-stu-id="93c2f-118">Create a simple gyrometer app</span></span>
+<span data-ttu-id="7e12b-117">Dieser Abschnitt ist in zwei Unterabschnitte unterteilt:</span><span class="sxs-lookup"><span data-stu-id="7e12b-117">This section is divided into two subsections.</span></span> <span data-ttu-id="7e12b-118">Der erste Unterabschnitt enthält die Schritte zum Erstellen einer einfachen Gyrometeranwendung.</span><span class="sxs-lookup"><span data-stu-id="7e12b-118">The first subsection will take you through the steps necessary to create a simple gyrometer application from scratch.</span></span> <span data-ttu-id="7e12b-119">Im zweiten Unterabschnitt wird die erstellte App dann näher erläutert.</span><span class="sxs-lookup"><span data-stu-id="7e12b-119">The following subsection explains the app you have just created.</span></span>
 
-<span data-ttu-id="93c2f-119">Dieser Abschnitt ist in zwei Unterabschnitte unterteilt:</span><span class="sxs-lookup"><span data-stu-id="93c2f-119">This section is divided into two subsections.</span></span> <span data-ttu-id="93c2f-120">Der erste Unterabschnitt enthält die Schritte zum Erstellen einer einfachen Gyrometeranwendung.</span><span class="sxs-lookup"><span data-stu-id="93c2f-120">The first subsection will take you through the steps necessary to create a simple gyrometer application from scratch.</span></span> <span data-ttu-id="93c2f-121">Im zweiten Unterabschnitt wird die erstellte App dann näher erläutert.</span><span class="sxs-lookup"><span data-stu-id="93c2f-121">The following subsection explains the app you have just created.</span></span>
+###  <a name="instructions"></a><span data-ttu-id="7e12b-120">Anweisungen</span><span class="sxs-lookup"><span data-stu-id="7e12b-120">Instructions</span></span>
 
-###  <a name="instructions"></a><span data-ttu-id="93c2f-122">Anweisungen</span><span class="sxs-lookup"><span data-stu-id="93c2f-122">Instructions</span></span>
+-   <span data-ttu-id="7e12b-121">Erstellen Sie ein neues Projekt. Wählen Sie dabei unter den Projektvorlagen für **VisualC#** die Option **Leere App (Universelle Windows-App)** aus.</span><span class="sxs-lookup"><span data-stu-id="7e12b-121">Create a new project, choosing a **Blank App (Universal Windows)** from the **Visual C#** project templates.</span></span>
 
--   <span data-ttu-id="93c2f-123">Erstellen Sie ein neues Projekt. Wählen Sie dabei unter den Projektvorlagen für **VisualC#** die Option **Leere App (Universelle Windows-App)** aus.</span><span class="sxs-lookup"><span data-stu-id="93c2f-123">Create a new project, choosing a **Blank App (Universal Windows)** from the **Visual C#** project templates.</span></span>
-
--   <span data-ttu-id="93c2f-124">Öffnen Sie die Projektdatei „MainPage.xaml.cs“, und ersetzen Sie den vorhandenen Code durch den folgenden Code.</span><span class="sxs-lookup"><span data-stu-id="93c2f-124">Open your project's MainPage.xaml.cs file and replace the existing code with the following.</span></span>
+-   <span data-ttu-id="7e12b-122">Öffnen Sie die Projektdatei „MainPage.xaml.cs“, und ersetzen Sie den vorhandenen Code durch den folgenden Code.</span><span class="sxs-lookup"><span data-stu-id="7e12b-122">Open your project's MainPage.xaml.cs file and replace the existing code with the following.</span></span>
 
 ```csharp
     using System;
@@ -114,9 +112,9 @@ ms.locfileid: "958685"
     }
 ```
 
-<span data-ttu-id="93c2f-125">Ersetzen Sie den Namespace aus dem vorhergehenden Codeausschnitt durch den Namen, den Sie für Ihr Projekt angegeben haben.</span><span class="sxs-lookup"><span data-stu-id="93c2f-125">You'll need to rename the namespace in the previous snippet with the name you gave your project.</span></span> <span data-ttu-id="93c2f-126">Wenn Sie z.B. ein Projekt mit dem Namen **GyrometerCS** erstellt haben, ersetzen Sie `namespace App1` durch `namespace GyrometerCS`.</span><span class="sxs-lookup"><span data-stu-id="93c2f-126">For example, if you created a project named **GyrometerCS**, you'd replace `namespace App1` with `namespace GyrometerCS`.</span></span>
+<span data-ttu-id="7e12b-123">Ersetzen Sie den Namespace aus dem vorhergehenden Codeausschnitt durch den Namen, den Sie für Ihr Projekt angegeben haben.</span><span class="sxs-lookup"><span data-stu-id="7e12b-123">You'll need to rename the namespace in the previous snippet with the name you gave your project.</span></span> <span data-ttu-id="7e12b-124">Wenn Sie z.B. ein Projekt mit dem Namen **GyrometerCS** erstellt haben, ersetzen Sie `namespace App1` durch `namespace GyrometerCS`.</span><span class="sxs-lookup"><span data-stu-id="7e12b-124">For example, if you created a project named **GyrometerCS**, you'd replace `namespace App1` with `namespace GyrometerCS`.</span></span>
 
--   <span data-ttu-id="93c2f-127">Öffnen Sie die Datei „MainPage.xaml“, und ersetzen Sie den ursprünglichen Inhalt durch den folgenden XML-Code.</span><span class="sxs-lookup"><span data-stu-id="93c2f-127">Open the file MainPage.xaml and replace the original contents with the following XML.</span></span>
+-   <span data-ttu-id="7e12b-125">Öffnen Sie die Datei „MainPage.xaml“, und ersetzen Sie den ursprünglichen Inhalt durch den folgenden XML-Code.</span><span class="sxs-lookup"><span data-stu-id="7e12b-125">Open the file MainPage.xaml and replace the original contents with the following XML.</span></span>
 
 ```xml
         <Page
@@ -140,25 +138,25 @@ ms.locfileid: "958685"
     </Page>
 ```
 
-<span data-ttu-id="93c2f-128">Der erste Teil des Klassennamens aus dem vorhergehenden Codeausschnitt muss durch den Namespace Ihrer App ersetzt werden.</span><span class="sxs-lookup"><span data-stu-id="93c2f-128">You'll need to replace the first part of the class name in the previous snippet with the namespace of your app.</span></span> <span data-ttu-id="93c2f-129">Wenn Sie etwa ein Projekt mit dem Namen **GyrometerCS** erstellt haben, ersetzen Sie `x:Class="App1.MainPage"` durch `x:Class="GyrometerCS.MainPage"`.</span><span class="sxs-lookup"><span data-stu-id="93c2f-129">For example, if you created a project named **GyrometerCS**, you'd replace `x:Class="App1.MainPage"` with `x:Class="GyrometerCS.MainPage"`.</span></span> <span data-ttu-id="93c2f-130">Ersetzen Sie außerdem `xmlns:local="using:App1"` durch `xmlns:local="using:GyrometerCS"`.</span><span class="sxs-lookup"><span data-stu-id="93c2f-130">You should also replace `xmlns:local="using:App1"` with `xmlns:local="using:GyrometerCS"`.</span></span>
+<span data-ttu-id="7e12b-126">Der erste Teil des Klassennamens aus dem vorhergehenden Codeausschnitt muss durch den Namespace Ihrer App ersetzt werden.</span><span class="sxs-lookup"><span data-stu-id="7e12b-126">You'll need to replace the first part of the class name in the previous snippet with the namespace of your app.</span></span> <span data-ttu-id="7e12b-127">Wenn Sie etwa ein Projekt mit dem Namen **GyrometerCS** erstellt haben, ersetzen Sie `x:Class="App1.MainPage"` durch `x:Class="GyrometerCS.MainPage"`.</span><span class="sxs-lookup"><span data-stu-id="7e12b-127">For example, if you created a project named **GyrometerCS**, you'd replace `x:Class="App1.MainPage"` with `x:Class="GyrometerCS.MainPage"`.</span></span> <span data-ttu-id="7e12b-128">Ersetzen Sie außerdem `xmlns:local="using:App1"` durch `xmlns:local="using:GyrometerCS"`.</span><span class="sxs-lookup"><span data-stu-id="7e12b-128">You should also replace `xmlns:local="using:App1"` with `xmlns:local="using:GyrometerCS"`.</span></span>
 
--   <span data-ttu-id="93c2f-131">Drücken Sie F5 oder wählen Sie **Debuggen** > **Debugging starten** aus, um die App zu erstellen, bereitzustellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="93c2f-131">Press F5 or select **Debug** > **Start Debugging** to build, deploy, and run the app.</span></span>
+-   <span data-ttu-id="7e12b-129">Drücken Sie F5 oder wählen Sie **Debuggen** > **Debugging starten** aus, um die App zu erstellen, bereitzustellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="7e12b-129">Press F5 or select **Debug** > **Start Debugging** to build, deploy, and run the app.</span></span>
 
-<span data-ttu-id="93c2f-132">Wenn die App ausgeführt wird, können Sie die Gyrometerwerte ändern, indem Sie das Gerät bewegen oder die Emulatortools verwenden.</span><span class="sxs-lookup"><span data-stu-id="93c2f-132">Once the app is running, you can change the gyrometer values by moving the device or using the emulator tools.</span></span>
+<span data-ttu-id="7e12b-130">Wenn die App ausgeführt wird, können Sie die Gyrometerwerte ändern, indem Sie das Gerät bewegen oder die Emulatortools verwenden.</span><span class="sxs-lookup"><span data-stu-id="7e12b-130">Once the app is running, you can change the gyrometer values by moving the device or using the emulator tools.</span></span>
 
--   <span data-ttu-id="93c2f-133">Beenden Sie die App, indem Sie zu Visual Studio zurückkehren und UMSCHALT+F5 drücken oder **Debuggen** > **Debugging beenden** auswählen.</span><span class="sxs-lookup"><span data-stu-id="93c2f-133">Stop the app by returning to Visual Studio and pressing Shift+F5 or select **Debug** > **Stop Debugging** to stop the app.</span></span>
+-   <span data-ttu-id="7e12b-131">Beenden Sie die App, indem Sie zu Visual Studio zurückkehren und UMSCHALT+F5 drücken oder **Debuggen** > **Debugging beenden** auswählen.</span><span class="sxs-lookup"><span data-stu-id="7e12b-131">Stop the app by returning to Visual Studio and pressing Shift+F5 or select **Debug** > **Stop Debugging** to stop the app.</span></span>
 
-###  <a name="explanation"></a><span data-ttu-id="93c2f-134">Erläuterung</span><span class="sxs-lookup"><span data-stu-id="93c2f-134">Explanation</span></span>
+###  <a name="explanation"></a><span data-ttu-id="7e12b-132">Erläuterung</span><span class="sxs-lookup"><span data-stu-id="7e12b-132">Explanation</span></span>
 
-<span data-ttu-id="93c2f-135">Das vorherige Beispiel zeigt, wie wenig Code Sie schreiben müssen, um Gyrometerangaben in Ihre App zu integrieren.</span><span class="sxs-lookup"><span data-stu-id="93c2f-135">The previous example demonstrates how little code you'll need to write in order to integrate gyrometer input in your app.</span></span>
+<span data-ttu-id="7e12b-133">Das vorherige Beispiel zeigt, wie wenig Code Sie schreiben müssen, um Gyrometerangaben in Ihre App zu integrieren.</span><span class="sxs-lookup"><span data-stu-id="7e12b-133">The previous example demonstrates how little code you'll need to write in order to integrate gyrometer input in your app.</span></span>
 
-<span data-ttu-id="93c2f-136">Die App stellt eine Verbindung mit dem Standardgyrometer in der **MainPage**-Methode her.</span><span class="sxs-lookup"><span data-stu-id="93c2f-136">The app establishes a connection with the default gyrometer in the **MainPage** method.</span></span>
+<span data-ttu-id="7e12b-134">Die App stellt eine Verbindung mit dem Standardgyrometer in der **MainPage**-Methode her.</span><span class="sxs-lookup"><span data-stu-id="7e12b-134">The app establishes a connection with the default gyrometer in the **MainPage** method.</span></span>
 
 ```csharp
 _gyrometer = Gyrometer.GetDefault(); // Get the default gyrometer sensor object
 ```
 
-<span data-ttu-id="93c2f-137">Die App legt das Berichtsintervall in der **MainPage**-Methode fest.</span><span class="sxs-lookup"><span data-stu-id="93c2f-137">The app establishes the report interval within the **MainPage** method.</span></span> <span data-ttu-id="93c2f-138">Mit diesem Code wird das vom Gerät unterstützte Mindestintervall abgerufen und mit einem angeforderten Intervall von 16 Millisekunden verglichen (entspricht etwa einer Aktualisierungsrate von 60Hz).</span><span class="sxs-lookup"><span data-stu-id="93c2f-138">This code retrieves the minimum interval supported by the device and compares it to a requested interval of 16 milliseconds (which approximates a 60-Hz refresh rate).</span></span> <span data-ttu-id="93c2f-139">Wenn das unterstützte Mindestintervall größer als das angeforderte Intervall ist, legt der Code den Wert auf das Minimum fest.</span><span class="sxs-lookup"><span data-stu-id="93c2f-139">If the minimum supported interval is greater than the requested interval, the code sets the value to the minimum.</span></span> <span data-ttu-id="93c2f-140">Andernfalls wird der Wert auf das angeforderte Intervall festgelegt.</span><span class="sxs-lookup"><span data-stu-id="93c2f-140">Otherwise, it sets the value to the requested interval.</span></span>
+<span data-ttu-id="7e12b-135">Die App legt das Berichtsintervall in der **MainPage**-Methode fest.</span><span class="sxs-lookup"><span data-stu-id="7e12b-135">The app establishes the report interval within the **MainPage** method.</span></span> <span data-ttu-id="7e12b-136">Mit diesem Code wird das vom Gerät unterstützte Mindestintervall abgerufen und mit einem angeforderten Intervall von 16 Millisekunden verglichen (entspricht etwa einer Aktualisierungsrate von 60Hz).</span><span class="sxs-lookup"><span data-stu-id="7e12b-136">This code retrieves the minimum interval supported by the device and compares it to a requested interval of 16 milliseconds (which approximates a 60-Hz refresh rate).</span></span> <span data-ttu-id="7e12b-137">Wenn das unterstützte Mindestintervall größer als das angeforderte Intervall ist, legt der Code den Wert auf das Minimum fest.</span><span class="sxs-lookup"><span data-stu-id="7e12b-137">If the minimum supported interval is greater than the requested interval, the code sets the value to the minimum.</span></span> <span data-ttu-id="7e12b-138">Andernfalls wird der Wert auf das angeforderte Intervall festgelegt.</span><span class="sxs-lookup"><span data-stu-id="7e12b-138">Otherwise, it sets the value to the requested interval.</span></span>
 
 ```csharp
 uint minReportInterval = _gyrometer.MinimumReportInterval;
@@ -166,14 +164,14 @@ uint reportInterval = minReportInterval > 16 ? minReportInterval : 16;
 _gyrometer.ReportInterval = reportInterval;
 ```
 
-<span data-ttu-id="93c2f-141">Die neuen Gyrometerdaten werden in der **ReadingChanged**-Methode erfasst.</span><span class="sxs-lookup"><span data-stu-id="93c2f-141">The new gyrometer data is captured in the **ReadingChanged** method.</span></span> <span data-ttu-id="93c2f-142">Wenn der Sensortreiber neue Daten vom Sensor empfängt, übergibt er die Werte mithilfe dieses Ereignishandlers an Ihre App.</span><span class="sxs-lookup"><span data-stu-id="93c2f-142">Each time the sensor driver receives new data from the sensor, it passes the values to your app using this event handler.</span></span> <span data-ttu-id="93c2f-143">Die App registriert diesen Ereignishandler in der folgenden Zeile.</span><span class="sxs-lookup"><span data-stu-id="93c2f-143">The app registers this event handler on the following line.</span></span>
+<span data-ttu-id="7e12b-139">Die neuen Gyrometerdaten werden in der **ReadingChanged**-Methode erfasst.</span><span class="sxs-lookup"><span data-stu-id="7e12b-139">The new gyrometer data is captured in the **ReadingChanged** method.</span></span> <span data-ttu-id="7e12b-140">Wenn der Sensortreiber neue Daten vom Sensor empfängt, übergibt er die Werte mithilfe dieses Ereignishandlers an Ihre App.</span><span class="sxs-lookup"><span data-stu-id="7e12b-140">Each time the sensor driver receives new data from the sensor, it passes the values to your app using this event handler.</span></span> <span data-ttu-id="7e12b-141">Die App registriert diesen Ereignishandler in der folgenden Zeile.</span><span class="sxs-lookup"><span data-stu-id="7e12b-141">The app registers this event handler on the following line.</span></span>
 
 ```csharp
 _gyrometer.ReadingChanged += new TypedEventHandler<Gyrometer,
 GyrometerReadingChangedEventArgs>(ReadingChanged);
 ```
 
-<span data-ttu-id="93c2f-144">Die neuen Werte werden in die TextBlock-Elemente des XAML-Projektcodes geschrieben.</span><span class="sxs-lookup"><span data-stu-id="93c2f-144">These new values are written to the TextBlocks found in the project's XAML.</span></span>
+<span data-ttu-id="7e12b-142">Die neuen Werte werden in die TextBlock-Elemente des XAML-Projektcodes geschrieben.</span><span class="sxs-lookup"><span data-stu-id="7e12b-142">These new values are written to the TextBlocks found in the project's XAML.</span></span>
 
 ```xml
         <TextBlock HorizontalAlignment="Left" Height="23" Margin="8,8,0,0" TextWrapping="Wrap" Text="X-Axis:" VerticalAlignment="Top" Width="46" Foreground="#FFFDFDFD"/>
@@ -184,6 +182,6 @@ GyrometerReadingChangedEventArgs>(ReadingChanged);
         <TextBlock x:Name="txtZAxis" HorizontalAlignment="Left" Height="21" Margin="54,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="63" Foreground="#FFF8F3F3"/>
 ```
 
- ## <a name="related-topics"></a><span data-ttu-id="93c2f-145">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="93c2f-145">Related topics</span></span>
+ ## <a name="related-topics"></a><span data-ttu-id="7e12b-143">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="7e12b-143">Related topics</span></span>
 
-* [<span data-ttu-id="93c2f-146">Gyrometerbeispiel</span><span class="sxs-lookup"><span data-stu-id="93c2f-146">Gyrometer Sample</span></span>](http://go.microsoft.com/fwlink/p/?linkid=241379)
+* [<span data-ttu-id="7e12b-144">Gyrometerbeispiel</span><span class="sxs-lookup"><span data-stu-id="7e12b-144">Gyrometer Sample</span></span>](http://go.microsoft.com/fwlink/p/?linkid=241379)

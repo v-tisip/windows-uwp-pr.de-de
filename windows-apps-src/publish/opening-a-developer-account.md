@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b707479d11cc7aef62385b476720bff8477ed401
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4389804"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4423188"
 ---
 # <a name="opening-a-developer-account"></a><span data-ttu-id="6f329-104">Eröffnen eines Entwicklerkontos</span><span class="sxs-lookup"><span data-stu-id="6f329-104">Opening a developer account</span></span>
 

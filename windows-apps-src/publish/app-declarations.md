@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 959e056d5edf5e1fe7a1c51a2f855c9e11512cb0
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4393291"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4427929"
 ---
 # <a name="product-declarations"></a><span data-ttu-id="153ec-103">Produktdeklarationen</span><span class="sxs-lookup"><span data-stu-id="153ec-103">Product declarations</span></span>
 

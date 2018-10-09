@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Monetisierung, Kundenbindung, Werben, Store-Dienste
 ms.localizationpriority: medium
 ms.openlocfilehash: 02ef073e319af3fe2cf3bdd7906a7027200c4854
-ms.sourcegitcommit: 63cef0a7805f1594984da4d4ff2f76894f12d942
+ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4392791"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "4426093"
 ---
 # <a name="monetization-engagement-and-store-services"></a><span data-ttu-id="135c4-104">Monetarisierung, Kundenbindung und Store-Dienste</span><span class="sxs-lookup"><span data-stu-id="135c4-104">Monetization, engagement, and Store services</span></span>
 
