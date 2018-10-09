@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 160a4ab0ff5bdc40ea46ff6d8fb9fd8e47f560e3
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4432403"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4461749"
 ---
 # <a name="hardware-drm"></a><span data-ttu-id="57f11-104">Hardwarebasiertes DRM</span><span class="sxs-lookup"><span data-stu-id="57f11-104">Hardware DRM</span></span>
 
