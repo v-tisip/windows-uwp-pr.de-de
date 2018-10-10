@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Fehler, Details, Desktopanwendung
 ms.localizationpriority: medium
 ms.openlocfilehash: 31b7684878eb0f8921d81c8fda9d262a21e12132
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4465066"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4503685"
 ---
 # <a name="get-details-for-an-error-in-your-desktop-application"></a><span data-ttu-id="456b6-104">Abrufen von Details zu einem Fehler in Ihrer Desktopanwendung</span><span class="sxs-lookup"><span data-stu-id="456b6-104">Get details for an error in your desktop application</span></span>
 
