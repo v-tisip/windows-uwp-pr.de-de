@@ -1,7 +1,7 @@
 ---
 author: joannaleecy
-title: Einzelhandel (RDX) Demo Features Ihrer app hinzufügen
-description: Bereiten Sie Ihre app für den Einzelhandel Demo-Modus, helfen, Ihre app auf die Verkaufsversion Vertriebsabteilung zu präsentieren.
+title: Einzelhandel (RDX-App) Demo Features Ihrer app hinzufügen
+description: Bereiten Sie Ihre app für den Einzelhandel Demo-Modus, helfen, Ihre app auf die Einzelhandels-Vertriebsabteilung zu präsentieren.
 ms.assetid: f83f950f-7fdd-4f18-8127-b92a8f400061
 ms.author: joanlee
 ms.date: 10/02/2018
@@ -11,27 +11,27 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Demo-App für den Einzelhandel
 ms.localizationpriority: medium
 ms.openlocfilehash: 152c775c1b69bfd82d8969aed7e638f98646bdd7
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4460902"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4500273"
 ---
-# <a name="add-retail-demo-rdx-features-to-your-app"></a>Einzelhandel (RDX) Demo Features Ihrer app hinzufügen
+# <a name="add-retail-demo-rdx-features-to-your-app"></a>Einzelhandel (RDX-App) Demo Features Ihrer app hinzufügen
 
-Fügen Sie einen Retail Demo-Modus in Ihrer Windows-app, damit Kunden, die PCs und Geräte auf die Vertriebsabteilung ausprobieren sofort beginnen können.
+Fügen Sie einer Einzelhandels-Demomodus in Ihrer Windows-app, damit Kunden, die PCs und Geräte auf die Vertriebsabteilung ausprobieren sofort beginnen können.
 
-Wenn Kunden im Einzelhandel sind, erwarten sie, dass Demos von Computern und Geräten testen können. Sie sind häufig einen erheblichen Teil der Zeit mit apps über die [Demo Einzelhandel (RDX) auftreten](https://docs.microsoft.com/windows-hardware/customize/desktop/retail-demo-experience).
+Wenn Kunden im Einzelhandel befinden, erwarten sie, dass Demos von Computern und Geräten testen können. Sie sind häufig einen erheblichen Teil der Zeit mit apps über den [Einzelhandel Demo auftreten (RDX-App)](https://docs.microsoft.com/windows-hardware/customize/desktop/retail-demo-experience).
 
-Sie können Ihre app einrichten, unterschiedliche Funktionen bereitstellen, während Sie sich im _normalen_ oder _Einzelhandel_ Modi müssen. Z. B. Wenn Ihre app mit einem Setupprozess beginnt, können Sie im einzelhandelsmodus überspringen und die app mit Einstellungen für die Daten und standardmäßig vorab, damit sie sofort beginnen können.
+Sie können Ihre app einrichten, um unterschiedliche Funktionen im _normalen_ oder _Einzelhandel_ Modi bereitzustellen. Z. B. Wenn Ihre app mit einem Setupprozess gestartet wird, können Sie im einzelhandelsmodus überspringen und die app mit Einstellungen für die Daten und standardmäßig vorab, damit sie sofort beginnen können.
 
-Aus Sicht unserer Kunden gibt es nur eine app. Um zwischen den beiden Modi unterscheiden können, empfehlen wir, während Ihre app im einzelhandelsmodus ist, das Wort "Einzelhandel" anzeigt hervorgehobener Stelle in der Titelleiste oder an einer geeigneten Stelle.
+Aus Sicht unserer Kunden besteht nur eine app. Um zwischen den beiden Modi unterscheiden können, empfehlen wir während Ihre app im einzelhandelsmodus ist, das Wort "Einzelhandel" anzeigt hervorgehobener Stelle in der Titelleiste oder an einer geeigneten Stelle.
 
-Zusätzlich zu den Microsoft Store-Anforderungen für apps müssen RDX-fähige apps auch sein kompatibel mit der RDX-Setup, Bereinigung und Update-Prozesse, um sicherzustellen, dass Kunden ein Geschäft durchgehend positiv Erlebnis Aktualisierungssystem der Vorführgeräte haben.
+Zusätzlich zu den Microsoft Store-Anforderungen für apps muss RDX-fähige apps auch mit dem RDX-Setup, Bereinigung und Update-Prozesse, um sicherzustellen, dass die Kunden ein Geschäft durchgehend positiv Erlebnis Aktualisierungssystem der Vorführgeräte kompatibel.
 
 ## <a name="design-principles"></a>Designprinzipien
 
-* **Optimale Präsentation**. Verwenden Sie die Demo-App, um Showcase Ihrer app großartig. Dies ist wahrscheinlich das erste Mal Ihr Kunde Ihre app, daher sie besten Seite zeigen angezeigt werden!
+* **Optimale Präsentation**. Verwenden Sie die Demo-App, um Showcase großartig von Ihrer app. Dies ist wahrscheinlich beim ersten Ihr Kunde Ihre app, so werden die besten Seite angezeigt, die angezeigt wird!
 
 * **Zeigen sie schnell**. Kunden können ungeduldig sein – je schneller ein Benutzer den Wert ihrer App erfasst, desto besser.
 
@@ -43,15 +43,15 @@ Zusätzlich zu den Microsoft Store-Anforderungen für apps müssen RDX-fähige a
 
 Da RDX-fähige apps werden Ihrer App Einzelhandelskunden optimal präsentieren sollen, müssen technischen Anforderungen und Datenschutzrichtlinien in Bezug auf, die alle Retail Demo-apps für den Microsoft Store hat.
 
-Dies kann als eine Prüfliste, um den Prozess der Validierung Vorbereitung und Klarheit in den Testprozess zu bieten verwendet werden. Beachten Sie, dass diese Anforderungen nicht nur für den Prüfprozess, sondern für die gesamte Lebensdauer der Demo-App für den Einzelhandel (d.h. solange Ihre App auf den Vorführgeräten ausgeführt wird) eingehalten werden müssen.
+Dies kann als eine Prüfliste, mit der Validierungsprozess Vorbereitung und Klarheit in den Testprozess verwendet werden. Beachten Sie, dass diese Anforderungen nicht nur für den Prüfprozess, sondern für die gesamte Lebensdauer der Demo-App für den Einzelhandel (d.h. solange Ihre App auf den Vorführgeräten ausgeführt wird) eingehalten werden müssen.
 
 ### <a name="critical-requirements"></a>Kritische Anforderungen
 
-RDX-fähige apps, die diese kritischen Anforderungen nicht erfüllen, werden so schnell wie möglich von allen vorführgeräten entfernt werden.
+RDX-fähige apps, die diese kritischen Anforderungen nicht erfüllen werden so schnell wie möglich von allen vorführgeräten entfernt.
 
 * **Fragen Sie nicht nach personenbezogenen Informationen (PII)**. Dies umfasst die Anmeldedaten, Microsoft-Kontoinformationen oder Kontakt Details.
 
-* **Fehlerfreie auftreten**. Ihr App muss fehlerfrei funktionieren. Außerdem dürfen keine Fehler-Pop-ups oder -Benachrichtigungen angezeigt werden, wenn Kunden die Vorführgeräte verwenden. Fehler wider negativ auf die app selbst, Ihre Marke, des Geräts Marke, Hersteller des Geräts Marke und Microsoft Marke.
+* **Fehlerfreie auftreten**. Ihr App muss fehlerfrei funktionieren. Außerdem dürfen keine Fehler-Pop-ups oder -Benachrichtigungen angezeigt werden, wenn Kunden die Vorführgeräte verwenden. Fehler wider negativ auf die app selbst, Ihre Marke, das Gerät Marke, Hersteller des Geräts Marke und Microsoft Marke.
 
 * **Kostenpflichtige apps müssen über einen Testmodus verfügen**. Ihre app muss entweder ein kostenloses oder einen [Testmodus](https://msdn.microsoft.com/windows/uwp/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app)enthalten. Kunden, die sich in einem Laden etwas ansehen, möchten dafür nicht zahlen.
 
@@ -61,7 +61,7 @@ RDX-fähige apps, die diese Anforderungen mit hoher Priorität nicht erfüllen m
 
 * **Memorable offline auftreten**. Ihre app muss eine tolle offline-Erfahrung zu bieten, da etwa 50 % der Geräte an einzelhandelsstandorten offline sind. Dadurch wird sichergestellt, dass das Erlebnis für die Kunden auch dann positiv ist, wenn sie offline mit Ihrer App interagieren.
 
-* **Aktualisierte Content-Erfahrung**. Ihre app sollte nie für Updates Online auffordern. Wenn Updates erforderlich sind, sollten sie im Hintergrund ausgeführt werden.
+* **Aktualisierte Content-Erfahrung**. Ihre app sollte nie für Updates Onlinemodus auffordern. Wenn Updates erforderlich sind, sollten sie im Hintergrund ausgeführt werden.
 
 * **Keine anonyme Kommunikation**. Da ein Kunde ein Vorführgerät nutzen, anonyme Benutzer ist, sollten sie nicht Nachricht oder Inhalte Freigeben des Geräts können.
 
@@ -73,14 +73,14 @@ RDX-fähige apps, die diese Anforderungen mit hoher Priorität nicht erfüllen m
 
 Das Windows-Team für den Einzelhandel setzt sich unter Umständen direkt mit Entwicklern in Verbindung, um mit ihnen zu besprechen, wie diese Probleme behoben werden können.
 
-* **Möglichkeit zum erfolgreich über eine Vielzahl von Geräten ausgeführt werden**. Apps müssen auf allen Geräten, einschließlich Geräten mit Low-End-Spezifikationen ausgeführt werden. Wenn die app auf Geräten, die die Mindestanforderungen nicht erfüllt installiert ist, muss die app klar den Benutzer darüber zu informieren. Die Mindestgeräteanforderungen müssen bekanntgegeben werden, damit die App immer mit höchster Leistung ausgeführt werden kann.
+* Die **Möglichkeit, nicht erfolgreich über eine Vielzahl von Geräten ausgeführt werden**. Apps müssen auf allen Geräten, einschließlich Geräten mit Low-End-Spezifikationen ausgeführt werden. Wenn die app auf Geräten, die nicht die Mindestanforderungen erfüllt installiert ist, muss die app klar den Benutzer darüber zu informieren. Die Mindestgeräteanforderungen müssen bekanntgegeben werden, damit die App immer mit höchster Leistung ausgeführt werden kann.
 
-* **Erfüllen der größenanforderungen für Einzelhandel**. Die App darf eine Größe von 800MB nicht übersteigen. Wenden Sie sich an das Windows-Einzelhandel-Team direkt Weitere Informationen zu Wenn RDX-fähige app die größenanforderungen nicht entspricht.
+* **Erfüllen der größenanforderungen für Einzelhandel**. Die App darf eine Größe von 800MB nicht übersteigen. Wenden Sie sich an das Windows-Einzelhandel-Team direkt Weitere Informationen zu Wenn Ihre RDX-fähige app die größenanforderungen nicht erfüllt.
 
 ## <a name="retailinfo-api-preparing-your-code-for-demo-mode"></a>RetailInfo API: Vorbereiten von Ihrem Code für Demo-Modus
 
 ### <a name="isdemomodeenabled"></a>IsDemoModeEnabled
-Die [**IsDemoModeEnabled**](https://docs.microsoft.com/uwp/api/windows.system.profile.retailinfo.isdemomodeenabled) -Eigenschaft in den [**RetailInfo**](https://docs.microsoft.com/uwp/api/Windows.System.Profile.RetailInfo) -Hilfsklasse, die Teil des [Windows.System.Profile](https://docs.microsoft.com/uwp/api/windows.system.profile) Namespaces in Windows 10 SDK ist, wird als einen booleschen Indikator verwendet, an welcher Codepfad, Ihre app ausgeführt wird – die normale _ _oder den _Einzelhandel_ Modus.
+Die Eigenschaft [**IsDemoModeEnabled**](https://docs.microsoft.com/uwp/api/windows.system.profile.retailinfo.isdemomodeenabled) [**RetailInfo**](https://docs.microsoft.com/uwp/api/Windows.System.Profile.RetailInfo) -Hilfsklasse, die Teil des [Windows.System.Profile](https://docs.microsoft.com/uwp/api/windows.system.profile) Namespaces in Windows 10 SDK ist, wird als einen booleschen Indikator verwendet, an welcher Codepfad, Ihre app ausgeführt wird – die normale _ _oder den _Einzelhandel_ Modus.
 
 ``` csharp
 using Windows.Storage;
@@ -233,7 +233,7 @@ namespace Windows.System.Profile
 
 ## <a name="cleanup-process"></a>Bereinigungsprozess
 
-Bereinigung beginnt mit zwei Minuten nach dem ein Käufer beendet wird, interagiert mit dem Gerät. Die Retail Demo wiedergegeben wird, und Windows beginnt das Zurücksetzen Beispieldaten in die Kontakte, Fotos und anderen apps. Je nach Gerät kann dies zwischen 1 bis 5 Minuten vollständig alles wieder zurücksetzen dauern. Dadurch wird sichergestellt, dass jeder Kunde im Geschäft kann auf einem Gerät problemlos und die gleiche Erfahrung bei der Interaktion mit dem Gerät.
+Bereinigung beginnt mit zwei Minuten nach dem ein Käufer reagiert interagiert mit dem Gerät. Die Retail Demo wiedergegeben wird, und Windows beginnt das Zurücksetzen Beispieldaten in die Kontakte, Fotos und anderen apps. Abhängig vom Gerät kann dies zwischen 1 bis 5 Minuten vollständig alles wieder zurücksetzen dauern. Dadurch wird sichergestellt, dass jeder Kunde im Geschäft kann auf einem Gerät problemlos und die gleiche Erfahrung bei der Interaktion mit dem Gerät.
 
 Schritt 1: Bereinigen
 * Alle Win32- und Store-Apps werden geschlossen.
@@ -247,13 +247,13 @@ Schritt 2: Einrichten
 
 ### <a name="store-data-across-user-sessions"></a>Speichern von Daten auf benutzersitzungen
 
-Um Daten kann sitzungsübergreifend speichern, können Sie Informationen in __ApplicationData.Current.TemporaryFolder__ speichern, wie Daten in diesem Ordner mit der Standard-Bereinigungsprozess nicht automatisch gelöscht. Beachten Sie, dass mithilfe von *LocalState* gespeicherten Informationen während der Bereinigungsprozess gelöscht wird.
+Um Daten kann sitzungsübergreifend speichern, können Sie Informationen in __ApplicationData.Current.TemporaryFolder__ speichern, wie der Bereinigungsprozess Standard Daten in diesem Ordner nicht automatisch gelöscht. Beachten Sie, dass Daten mithilfe von *LocalState* während der Bereinigungsprozess gelöscht wird.
 
 ### <a name="customize-the-cleanup-process"></a>Anpassen des Bereinigungsprozess
 
-Um den Bereinigungsprozess anpassen, Implementieren der `Microsoft-RetailDemo-Cleanup` app-Dienst in Ihrer app.
+Wenn Sie den Bereinigungsprozess anpassen möchten, Implementieren der `Microsoft-RetailDemo-Cleanup` app-Dienst in Ihre app.
 
-Szenarien, in denen eine benutzerdefinierte Bereinigungslogik erforderlich ist, umfassen das Ausführen einer umfassenden Einrichtung, das Herunterladen und Zwischenspeichern von Daten oder nicht *LocalState* Daten gelöscht werden sollen.
+Szenarien, in denen eine benutzerdefinierte Bereinigungslogik erforderlich ist, umfassen das Ausführen einer umfassenden Einrichtung, das Herunterladen und Zwischenspeichern von Daten oder nicht Entwicklerportal *LocalState* Daten gelöscht werden.
 
 Schritt 1: Deklarieren Sie die _Microsoft-RetailDemo-Cleanup_ -Dienst in Ihrem app-Manifest.
 ``` CSharp
@@ -268,7 +268,7 @@ Schritt 1: Deklarieren Sie die _Microsoft-RetailDemo-Cleanup_ -Dienst in Ihrem a
 
 ```
 
-Schritt 2: Implementieren der benutzerdefinierten Bereinigungslogik unter der _AppdataCleanup_ -Funktion mithilfe der Beispielvorlage.
+Schritt 2: Implementieren der benutzerdefinierten Bereinigungslogik unter der _AppdataCleanup_ -Funktion mithilfe der folgenden Beispielvorlage.
 ``` CSharp
 using System;
 using System.IO;

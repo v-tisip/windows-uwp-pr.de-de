@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 2e605ab70a3d251e92768fd26fd105ab68644995
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4468100"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4498441"
 ---
 # <a name="xbind-markup-extension"></a>{x:Bind}-Markuperweiterung
 
@@ -89,7 +89,7 @@ So sucht **Text="{x:Bind Employee.FirstName}"** z. B. auf einer Seite nach einem
 
 Für C++/CX kann **{x:Bind}** keine Bindungen an private Felder und Eigenschaften im Seiten- oder Datenmodell durchführen – Sie benötigen eine öffentliche Eigenschaft, damit die Bindung möglich ist. Der Oberflächenbereich für die Bindung muss als CX-Klassen/-Schnittstellen verfügbar gemacht werden, damit die relevanten Metadaten abgerufen werden können. Das **\[Bindable\]**-Attribut sollte nicht erforderlich sein.
 
-Mit **x:Bind** müssen Sie **ElementName=xxx** nicht als Teil des Bindungsausdrucks verwenden. Stattdessen können Sie den Namen des Elements als ersten Teil des Pfads für die Bindung verwenden, da benannte Elemente innerhalb der Seite oder des Benutzersteuerelements bzw. Feldern, die die stammbindungsquelle darstellt. 
+Mit **x:Bind** müssen Sie **ElementName=xxx** nicht als Teil des Bindungsausdrucks verwenden. In diesem Fall können Sie den Namen des Elements als ersten Teil des Pfads für die Bindung verwenden, da benannte Elemente innerhalb der Seite oder des Benutzersteuerelements bzw. Feldern, die die stammbindungsquelle darstellt. 
 
 
 ### <a name="collections"></a>Sammlungen
@@ -115,7 +115,7 @@ _Hinweis: Die C#-Umwandlungssyntax ist flexibler als die Syntax der angefügten 
 
 ## <a name="functions-in-binding-paths"></a>Funktionen in Bindungspfaden
 
-Ab Windows10, Version 1607, unterstützt **{x: Bind}** die Verwendung einer Funktion als blattbildenden Schrittdes Bindungspfades. Dies ist ein leistungsfähiges Feature für Databinding, die mehrere Szenarien im Markup ermöglicht. [Funktion Bindungen](../data-binding/function-bindings.md) Details angezeigt.
+Ab Windows10, Version 1607, unterstützt **{x: Bind}** die Verwendung einer Funktion als blattbildenden Schrittdes Bindungspfades. Dies ist ein leistungsfähiges Feature für Databinding, die mehrere Szenarien im Markup ermöglicht. [Funktion Bindungen](../data-binding/function-bindings.md) Details anzeigen
 
 ## <a name="event-binding"></a>Ereignisbindung
 

@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Azure Ad-Anwendung, Aad, Benutzer, Gruppen, mehrere Benutzer, mit mehreren Benutzern
 ms.localizationpriority: medium
 ms.openlocfilehash: 97502a0a2863ed6f7ab2ce5d842fbebc1ae8091c
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4470233"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4500895"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-dev-center-account"></a>Hinzufügen von Benutzern, Gruppen und Azure AD-Anwendungen zu Ihrem Dev Center-Konto
 
-Der Abschnitt für **Benutzer** von Windows Dev Center (unter **kontoeinstellungen**) können Sie die Azure Active Directory verwenden, um Benutzer zu Ihrem Dev Center-Konto hinzuzufügen. Jedem Benutzer wird eine Rolle (oder benutzerdefinierte Berechtigungen) zugewiesen, mit der er bestimmte Zugriffsberechtigungen für das Konto erhält. Sie können ebenfalls [Anwendergruppen](#groups) und [Azure AD-Anwendungen](#azure-ad-applications) hinzufügen, um Ihnen Zugriff auf Ihr Dev Center-Konto zu gewährleisten.
+Der Abschnitt **Benutzer** des Windows Dev Center (unter **kontoeinstellungen**) können Sie die Azure Active Directory verwenden, um Benutzer zu Ihrem Dev Center-Konto hinzuzufügen. Jedem Benutzer wird eine Rolle (oder benutzerdefinierte Berechtigungen) zugewiesen, mit der er bestimmte Zugriffsberechtigungen für das Konto erhält. Sie können ebenfalls [Anwendergruppen](#groups) und [Azure AD-Anwendungen](#azure-ad-applications) hinzufügen, um Ihnen Zugriff auf Ihr Dev Center-Konto zu gewährleisten.
 
 Nachdem Benutzer auf das Konto hinzugefügt wurden, können Sie [Kontodetails bearbeiten](#edit), [Rollen und Berechtigungen](set-custom-permissions-for-account-users.md) ändern oder [Benutzer entfernen](#remove).
 
@@ -45,7 +45,7 @@ Sie können Benutzer auswählen, die bereits im Mandanten Ihrer Organisation vor
 
 <span id="from-directory" />
 
-1.  Wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards), und wählen Sie dann die **kontoeinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Benutzer**.
+1.  Wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards), und wählen Sie die **kontoeinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Benutzer**ein.
 2.  Wählen Sie auf der Seite **Benutzer** **Benutzer hinzufügen** aus. 
 3.  Wählen Sie in der angezeigten Liste einen oder mehrere Benutzer aus. Im Suchfeld können Sie nach bestimmten Benutzern suchen.
     > [!TIP]
@@ -59,7 +59,7 @@ Sie können Benutzer auswählen, die bereits im Mandanten Ihrer Organisation vor
 Wenn Sie sich mit einem Managerkonto angemeldet haben, das über [globale Administrator](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)berechtigungen für den von Ihnen verwendeten Azure AD-Mandanten verfügt, werden zusätzliche Optionen angeboten, um dem Dev Center-Konto Benutzer hinzuzufügen. Sie müssen eine der folgenden Optionen auswählen:
 
 -   **Hinzufügen vorhandener Benutzer**: Benutzer, die bereits im Verzeichnis Ihrer Organisation vorhanden sind, und gewähren Sie ihnen Zugriff auf Ihr Dev Center-Konto mit der oben beschriebenen Methode auswählen.
--   **Neue Benutzer erstellen**: Erstellen Sie völlig neue Benutzerkonten sowohl das Verzeichnis Ihrer Organisation hinzu und Dev Center-Konto
+-   **Neue Benutzer erstellen**: Erstellen Sie völlig neuen Benutzerkonten sowohl das Verzeichnis Ihrer Organisation hinzu und Dev Center-Konto
 -   **Invite outside users** (Externe Benutzer einladen): Laden Sie Benutzer per E-Mail ein, die derzeit nicht im Verzeichnis der Organisation vorhanden sind. Diese werden eingeladen, auf Ihr Dev Center-Konto zuzugreifen. Es wird ein neues [Gastbenutzer](https://docs.microsoft.com/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b)-Konto für sie in Ihrem Azure AD-Mandanten erstellt.
 
 <span id="new-user" />
@@ -118,7 +118,7 @@ Sie können eine Gruppe aus dem Verzeichnis Ihrer Organisation dem Dev Center-Ko
 
 ### <a name="add-groups-from-your-organizations-directory"></a>Hinzufügen von Gruppen aus dem Verzeichnis der Organisation
 
-1.  Wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards), und wählen Sie dann die **kontoeinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Benutzer**.
+1.  Wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards), und wählen Sie die **kontoeinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Benutzer**ein.
 2. Wählen Sie die Seite " **Benutzer** " **Gruppen hinzufügen**.
 2.  Wählen Sie in der angezeigten Liste eine oder mehrere Gruppen aus. Im Suchfeld können Sie nach bestimmten Gruppen suchen.
     > [!TIP]
@@ -134,7 +134,7 @@ Sie können eine Gruppe aus dem Verzeichnis Ihrer Organisation dem Dev Center-Ko
 Wenn Sie einer völlig neuen Gruppe den Zugriff auf Dev Center ermöglichen möchten, können Sie im Abschnitt **Benutzer** eine neue Gruppe erstellen. Beachten Sie, dass hierdurch nicht nur in Ihrem Dev Center-Konto, sondern auch im Verzeichnis der Organisation eine neue Gruppe erstellt wird.
 
 1.  Klicken Sie auf der Seite " **Benutzer** " (unter **kontoeinstellungen**) auf **Gruppen hinzufügen**.
-2.  Wählen Sie auf der nächsten Seite **neue Gruppe**ein.
+2.  Wählen Sie auf der nächsten Seite das **neue Gruppe**ein.
 3.  Geben Sie den Anzeigenamen für die neue Gruppe ein.
 4.  Geben Sie die [Rollen oder angepasste Berechtigungen](set-custom-permissions-for-account-users.md) für die Gruppe an. Alle Mitglieder der Gruppe können auf das Dev Center-Konto mit den Berechtigungen zugreifen, die Sie der Gruppe zugewiesen haben, unabhängig von den Rollen/Berechtigungen, die mit individuellen Konto verknüpft sind.
 5.  Wählen Sie den/die Benutzer, die der neuen Gruppe in der Liste zugewiesen werden sollen, aus der angezeigten Liste aus. Im Suchfeld können Sie nach bestimmten Benutzern suchen.
@@ -151,7 +151,7 @@ Sie können Anwendungen oder Diensten, die Teil der Azure AD-Instanz Ihrer Organ
 
 ### <a name="add-azure-ad-applications-from-your-organizations-directory"></a>Hinzufügen von Azure AD-Anwendungen aus dem Verzeichnis Ihrer Organisation
 
-1.  1.  Wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards), und wählen Sie dann die **kontoeinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Benutzer**.
+1.  1.  Wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards), und wählen Sie die **kontoeinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Benutzer**ein.
 2. Wählen Sie auf der Seite **Benutzer** **Azure AD-Anwendungen hinzufügen** aus.
 3.  Wählen Sie eine oder mehrere Azure AD-Anwendungen aus der angezeigten Liste aus. Mithilfe des Suchfelds können Sie nach bestimmten Azure AD-Anwendungen suchen.
     > [!TIP]
@@ -187,7 +187,7 @@ Nachdem Sie eine Azure AD-Anwendung hinzugefügt oder erstellt haben, können Si
 
 Wenn die Azure AD-App Daten in Microsoft Azure AD liest und schreibt, benötigt sie einen Schlüssel. Sie können Schlüssel für eine Azure AD-App erstellen, indem Sie ihre Informationen in Dev Center bearbeiten. Sie können auch Schlüssel entfernen, die nicht mehr benötigt werden.
 
-1.  Wählen Sie aus der Seite " **Benutzer** " (unter **kontoeinstellungen**) den Namen der Azure AD-Anwendung.
+1.  Wählen Sie die Seite " **Benutzer** " (unter **kontoeinstellungen**) den Namen der Azure AD-Anwendung aus.
     > [!TIP]
     > Wenn Sie auf den Namen der Azure AD-App klicken, sehen Sie alle aktiven Schlüssel für die Azure AD-App mit dem jeweiligen Erstellungs- und Ablaufdatum des Schlüssels. Klicken Sie auf **Entfernen**, um einen nicht mehr benötigten Schlüssel zu entfernen.
 

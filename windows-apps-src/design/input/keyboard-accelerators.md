@@ -15,11 +15,11 @@ design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b4693c4ed6c02db9e4fe3f5f7fee6fe569c0e79
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4465460"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4500534"
 ---
 # <a name="keyboard-accelerators"></a>Zugriffstasten
 
@@ -361,10 +361,10 @@ Da Zugriffstasten in der Regel nicht direkt in der Benutzeroberfläche Ihrer UWP
 
 **Windows 10, Version 1803 (April 2018 Update) und höher**
 
-Standardmäßig wenn Zugriffstasten deklariert sind, stellen Sie alle Steuerelemente (außer [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem) und [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) die entsprechenden Tastenkombination in einer QuickInfo.
+Standardmäßig wenn Zugriffstasten deklariert werden, stellen Sie alle Steuerelemente (außer [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem) und [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) die entsprechenden Tastenkombination in einer QuickInfo.
 
 > [!NOTE] 
-> Wenn ein Steuerelement mehrere Zugriffstasten definiert sind, wird nur das erste angezeigt.
+> Wenn ein Steuerelement mehrere Zugriffstasten definiert sind, wird nur die erste angezeigt.
 
 ![QuickInfo für Zugriffstasten](images/accelerators/accelerators_tooltip_savebutton_small.png)
 
@@ -373,7 +373,7 @@ Standardmäßig wenn Zugriffstasten deklariert sind, stellen Sie alle Steuerelem
 Für die [Schaltfläche](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)und [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) -Objekte die Zugriffstaste des Steuerelements Standard-Tooltip angefügt. Für [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) und [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) Objekte, die Zugriffstaste wird mit den Flyout-Text angezeigt.
 
 > [!NOTE]
-> Angeben einer QuickInfos wird (Siehe das folgende Beispiel Button1) dieses Verhalten überschrieben.
+> Angeben einer QuickInfos wird (Siehe Button1 im folgenden Beispiel) dieses Verhalten überschrieben.
 
 ```xaml
 <StackPanel x:Name="Container" Grid.Row="0" Background="AliceBlue">
@@ -404,7 +404,7 @@ Für die [Schaltfläche](https://docs.microsoft.com/uwp/api/windows.ui.xaml.cont
 
 ![QuickInfo für Zugriffstasten](images/accelerators/accelerators-button-small.png)
 
-*Auf der Schaltfläche Standard-Tooltip angefügte Zugriffstastenkombination*
+*Auf der Schaltfläche "Standard-Tooltip angefügte Zugriffstastenkombination*
 
 ```xaml
 <AppBarButton Icon="Save" Label="Save">

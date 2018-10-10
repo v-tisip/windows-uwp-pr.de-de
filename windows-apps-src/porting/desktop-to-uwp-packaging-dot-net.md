@@ -2,7 +2,7 @@
 author: normesta
 Description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop application.
 Search.Product: eADQiWindows 10XVcnh
-title: Verpacken Sie eine desktop-Anwendung mithilfe von Visual Studio
+title: Verpacken einer desktop-Anwendungs mit Visual Studio
 ms.author: normesta
 ms.date: 08/30/2017
 ms.topic: article
@@ -12,13 +12,13 @@ keywords: windows10, UWP
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c9b7a30a50c26d2dbdaf6df04e85549addaf181
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4464553"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4502804"
 ---
-# <a name="package-a-desktop-application-by-using-visual-studio"></a>Verpacken Sie eine desktop-Anwendung mithilfe von Visual Studio
+# <a name="package-a-desktop-application-by-using-visual-studio"></a>Verpacken einer desktop-Anwendungs mit Visual Studio
 
 Sie können Visual Studio verwenden, um ein Paket für Ihre Desktop-App zu generieren. Anschließend können Sie das Paket im Windows Store veröffentlichen oder es auf einem oder mehreren PCs querladen.
 
@@ -29,7 +29,7 @@ Die aktuelle Version von Visual Studio bietet ein neue Version des Paketprojekts
 
 ## <a name="first-prepare-your-application"></a>Vorbereiten Ihrer Anwendung
 
-Lesen Sie dieses Handbuch, bevor Sie mit der paketerstellung für Ihre Anwendung beginnen: [Vorbereiten eine desktop-Anwendung zu verpacken](desktop-to-uwp-prepare.md).
+Dieses Handbuch lesen, bevor Sie mit der paketerstellung für Ihre Anwendung beginnen: [Vorbereiten eine desktop-Anwendung zu verpacken](desktop-to-uwp-prepare.md).
 
 <a id="new-packaging-project"/>
 

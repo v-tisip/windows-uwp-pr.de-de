@@ -10,14 +10,14 @@ ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, erste schritte
 ms.localizationpriority: medium
 ms.openlocfilehash: b5954aa8236a9abeee6e5c74a200f77fcccf97e3
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4468304"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4503884"
 ---
 # <a name="get-started-with-cwinrt"></a>Erste Schritte mit C++/WinRT
-Um Sie bei der Verwendung von Einstieg [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), durchgegangen ein einfaches Codebeispiel.
+Um Sie bei der Verwendung von Einstieg [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), in diesem Thema eine einfache Codebeispiele vorgestellt.
 
 ## <a name="a-cwinrt-quick-start"></a>Schnelleinstieg zu C++/WinRT
 > [!NOTE]
@@ -26,7 +26,7 @@ Um Sie bei der Verwendung von Einstieg [C++ / WinRT](/windows/uwp/cpp-and-winrt-
 Erstellen Sie ein neues **Windows Console Application (C++/WinRT)**-Projekt.
 
 > [!IMPORTANT]
-> Wenn Sie Visual Studio 2017 verwenden (Version 15.8.0 oder höher), und für das Windows SDK-Version 10.0.17134.0 (Windows 10, Version 1803), klicken Sie dann eine neu erstellte C++ / WinRT-Projekt wird möglicherweise mit dem Fehler kompilieren "*Fehler C3861: 'From_abi': Bezeichner nicht gefunden*", und mit anderen Fehlern mit Ursprung in *base.h*. Die Lösung besteht darin, entweder Ziel einer späteren (Weitere konform) Version des Windows SDK oder der Set-Projekteigenschaft **C/C++-** > **Sprache** > **Konformitätsmodus: Nein** (auch, wenn **/ PERMISSIVE--** erscheint in Projekteigenschaft ** C/C++** > **Sprache** > **Befehlszeile** unter **Zusätzliche Optionen**, löschen Sie ihn).
+> Wenn Sie Visual Studio 2017 verwenden (Version 15.8.0 oder höher), und für das Windows SDK-Version 10.0.17134.0 (Windows 10, Version 1803), klicken Sie dann eine neu erstellte C++ / WinRT-Projekt wird möglicherweise mit dem Fehler kompilieren "*Fehler C3861: 'From_abi': Bezeichner nicht gefunden*", und andere Fehler mit Ursprung in *base.h*. Die Lösung besteht darin, entweder Ziel einer späteren (Weitere konform) Version des Windows SDK oder der Set-Projekteigenschaft **C/C++-** > **Sprache** > **Konformitätsmodus: Nein** (auch, wenn **/ PERMISSIVE--** erscheint in Projekteigenschaft ** C/C++** > **Sprache** > **Befehlszeile** unter **Zusätzliche Optionen**, löschen Sie es).
 
 Bearbeiten Sie `pch.h` und `main.cpp` folgendermaßen.
 

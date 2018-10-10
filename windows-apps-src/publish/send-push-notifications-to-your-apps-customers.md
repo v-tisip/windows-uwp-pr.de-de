@@ -11,11 +11,11 @@ keywords: Windows10, UWP, zielgruppenorientierte Benachrichtigungen, Push-Benach
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d62f46ad1b55fbad3ab7c21a593625a2538b68f
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4467419"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4503514"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>Senden von Benachrichtigungen an die Kunden Ihrer App
 
@@ -123,7 +123,7 @@ Wenn Sie die Benachrichtigung und Ihre App wie oben beschrieben für das Messen 
 Um detaillierte Daten für jede Benachrichtigung zu überprüfen:
 
 1.  Erweitern Sie im Windows Dev Center-Dashboard den Abschnitt **Bewerten** und wählen Sie dann **Benachrichtigungen** aus.
-2.  Wählen Sie in der Tabelle der vorhandenen Benachrichtigungen **In Bearbeitung** oder **abgeschlossen**, und betrachten Sie dann die Spalten **Übermittlungsrate** und **App starten Rate** , um die allgemeine Leistung der einzelnen Benachrichtigungen finden Sie unter.
+2.  Wählen Sie in der Tabelle der vorhandenen Benachrichtigungen **In Bearbeitung** oder **abgeschlossen**, und sehen Sie sich in die allgemeine Leistung der einzelnen Benachrichtigungen finden Sie unter der Spalte **Übermittlungsrate** bzw. **App starten Rate** .
 3.  Um detailliertere Leistungsdetails anzuzeigen, wählen Sie einen Benachrichtigungsnamen aus. Im Abschnitt **Lieferstatistik** sehen Sie Daten zu **Anzahl** und **Prozentsatz** für die folgenden **Status**-Typen der Benachrichtigung angezeigt:
     * **Fehlgeschlagen**: Die Benachrichtigung wurde aus einem bestimmten Grund nicht übermittelt. Dies kann z.B. bei einem Problem im Windows-Benachrichtigungsdienst der Fall sein.
     * **Channel expiration failure**: Die Benachrichtigung konnte nicht übermittelt werden, da der Kanal zwischen der App und Dev Center abgelaufen ist. Dies kann beispielsweise vorkommen, wenn der Kunde Ihre App seit längerem nicht mehr geöffnet hat.
@@ -136,9 +136,9 @@ Aktivität Benutzerdaten für alle Ihre Benachrichtigungen zu analysieren:
 
 1.  Erweitern Sie im Windows Dev Center-Dashboard den Abschnitt **Bewerten** und wählen Sie dann **Benachrichtigungen** aus.
 2.  Klicken Sie auf der Seite " **Notifications** " auf der Registerkarte " **Analyse** ". Diese Registerkarte zeigt die folgenden Daten:
-    * Diagramm Ansichten für die verschiedenen Benutzer Aktion Zustände für Ihre Popups und Info-Center-Benachrichtigungen.
-    * Welt Kartenansichten der Click-über-Sätze für Ihre Popups und Aktion zentrieren Benachrichtigungen.
-3. Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist 30D (30Tage), aber Sie können Daten für 3, 6 oder 12Monate anzeigen, oder für einen benutzerdefinierten Zeitraum, den Sie angeben. Sie können auch **Filter** , um alle Daten von der app und der Markt zu filtern erweitern.
+    * Graph-Ansichten von den verschiedenen Benutzerzuständen Aktion für Ihre Popups und Info-Center-Benachrichtigungen.
+    * Welt Kartenansichten der Click-über-Sätze für Ihre Popups und die Aktion zentrieren Benachrichtigungen.
+3. Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist 30D (30Tage), aber Sie können Daten für 3, 6 oder 12Monate anzeigen, oder für einen benutzerdefinierten Zeitraum, den Sie angeben. Sie können auch **Filter** , um alle Daten von app und Markt zu filtern erweitern.
 
 ## <a name="translate-your-notifications"></a>Übersetzen Ihrer Benachrichtigungen
 

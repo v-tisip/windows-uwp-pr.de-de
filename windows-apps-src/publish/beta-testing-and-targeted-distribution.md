@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Betatests, eingeschränkter Vertrieb, Beta, Betas, testen, Tester
 ms.localizationpriority: medium
 ms.openlocfilehash: e453be22d752ed78263cb34011cdf9a333057e03
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4467665"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4498246"
 ---
 # <a name="beta-testing-and-targeted-distribution"></a>Betatests und zielgerichtete Verteilung
 
@@ -53,7 +53,7 @@ Weitere Informationen finden Sie unter [Flight-Pakete](package-flights.md).
 
 ## <a name="hiding-the-app-in-the-store-and-using-promotional-codes"></a>Ausblenden der App im Store und Verwenden von Werbecodes
 
-Diese Option bietet eine weitere Möglichkeit, um die Verteilung einer App nur eine bestimmte Gruppe von Testern verteilen möchten, und verhindert, dass andere Personen Ermitteln von Ihrer app im Store beschränken (oder ohne einen werbecode Erwerb). Allerdings kann im Gegensatz zu den privaten Zielgruppenoptionen möglicherweise jeder Benutzer den App-Eintrag sehen, wenn er über den direkten Link verfügt. Wenn die Vertraulichkeit für Ihre Übermittlung entscheidend ist, empfehlen wir stattdessen, diese nur an eine private Zielgruppe zu veröffentlichen.
+Diese Option bietet eine weitere Möglichkeit, um die Verteilung einer App nur eine bestimmte Gruppe von Testern verteilen möchten, während nicht ermitteln kann Ihre app im Store, dass andere Personen beschränken (oder ohne einen werbecode Erwerb). Allerdings kann im Gegensatz zu den privaten Zielgruppenoptionen möglicherweise jeder Benutzer den App-Eintrag sehen, wenn er über den direkten Link verfügt. Wenn die Vertraulichkeit für Ihre Übermittlung entscheidend ist, empfehlen wir stattdessen, diese nur an eine private Zielgruppe zu veröffentlichen.
 
 Das Ausblenden der App und das Verwenden von Werbecodes kann für Apps für jede Betriebssystemversion verwendet werden, Ihre Tester können die App allerdings nur dann abrufen, wenn sie Windows10 ausführen.
 

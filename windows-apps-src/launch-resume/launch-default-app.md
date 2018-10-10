@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: dff7b641cad99407ce22e7a4d4b58c10e0ae94d1
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4470000"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4502596"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>Starten der Standard-App für einen URI
 
@@ -242,10 +242,10 @@ Sie können das URI-Schema **ms-windows-store:** zum [Starten der UWP-App](launc
 
 Weitere Informationen finden Sie unter [Starten der UWP-App](launch-store-app.md).
 
-### <a name="weather-app-uri-scheme"></a>URI-Schema für Wetter-app
+### <a name="weather-app-uri-scheme"></a>URI-Schema der Wetter-app
 
 Verwenden der **Msnweather:** zum Starten der Wetter-app-URI-Schema.
 
 | URI-Schema | Ergebnisse |
 |------------|---------|
-| Msnweather://Forecast?LA= \[latitude\] & lo = \ [Longitude\] | Startet die Wetter-app in die Planung Seite basierend auf einen geografischen Standort-Koordinaten.<br>`latitude` bezieht sich auf der Breitengrad des Speicherorts.<br> `longitude` bezieht sich auf die Länge der Position.<br> |
+| Msnweather://Forecast?LA= \[latitude\] & lo = \ [Longitude\] | Startet die Wetter-app in die Planung Seite basierend auf einen geografischen Standort-Koordinaten.<br>`latitude` bezieht sich auf die Breite der Position.<br> `longitude` bezieht sich auf die Länge der Position.<br> |

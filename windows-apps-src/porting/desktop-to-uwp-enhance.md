@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 392f8166e16c028a57bc9e27039a9884f1d9714a
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4463656"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4503659"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Verbessern Sie Ihre Desktopanwendung für Windows10
 
@@ -78,7 +78,7 @@ Jetzt können Sie moderner Funktionen für Benutzer der Anwendung unter Windows1
 
 :white_check_mark: **Entscheiden Sie zunächst, welche Funktionen Sie hinzufügen möchten**
 
-Es gibt viele zur Auswahl. Beispielsweise können Sie Ihre Bestellung Reihenfolge Fluss mithilfe von monetisierungs-APIs oder mehr Aufmerksamkeit für Ihre Anwendung bei interessante, z. B. ein neues Bild teilen, die kaufablauf vereinfachen.
+Es gibt viele zur Auswahl. Beispielsweise können Sie Ihre Bestellung Reihenfolge Fluss mithilfe von monetisierungs-APIs oder mehr Aufmerksamkeit für Ihre Anwendung bei interessante, z. B. ein neues Bild freizugeben, der kaufablauf vereinfachen.
 
 ![Popup](images/desktop-to-uwp/toast.png)
 
@@ -224,7 +224,7 @@ Der Compiler erstellt den Code nur dann, wenn die Konstante in der aktiven Build
 
 ### <a name="runtime-checks"></a>Laufzeitprüfungen
 
-Sie können einen Satz von Binärdateien für alle Windows-Benutzer kompilieren, unabhängig davon, welche Version von Windows sie ausführen. Ihre Anwendung ruft UWP-APIs nur dann, wenn der Benutzer, die Ihre Anwendung als verpackten Anwendung für Windows 10 ausgeführt wird.
+Sie können einen Satz von Binärdateien für alle Windows-Benutzer kompilieren, unabhängig davon, welche Version von Windows sie ausführen. Ihre Anwendung ruft UWP-APIs nur dann, wenn der Benutzer die Anwendung als verpackten Anwendung für Windows 10 ausgeführt.
 
 Die einfachste Methode zum Hinzufügen von Laufzeitprüfungen zum Code ist die Installation des Nuget-Pakets [Desktop Bridge Helpers](https://www.nuget.org/packages/DesktopBridge.Helpers/) und die Verwendung der ``IsRunningAsUWP()``-Methode, um den ganzen UWP-Code abzugrenzen. Weitere Detail finden Sie in diesem Blogbeitrag: [Desktop-Brücke - Identifizieren des Anwendungskontexts](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
 

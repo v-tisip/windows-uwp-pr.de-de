@@ -8,32 +8,32 @@ ms.date: 07/11/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, Uwp, Device portal
+keywords: Windows 10, Uwp, geräteportal
 ms.localizationpriority: medium
 ms.openlocfilehash: 1192c200cd42ab28cc7e763c06fd8a5638aa3400
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4461273"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4501368"
 ---
 # <a name="provision-device-portal-with-a-custom-ssl-certificate"></a>Bereitstellen eines Geräteportals mit einem benutzerdefinierten SSL-Zertifikat
 In Windows 10 Creators Update hinzugefügt Windows Device Portal eine Möglichkeit für Administratoren das Gerät ein Zertifikat für die Verwendung in HTTPS-Kommunikation zu installieren. 
 
 Während Sie dies auf Ihrem eigenen PC tun können, ist dieses Feature hauptsächlich für Unternehmen vorgesehen, die eine vorhandene Zertifikatinfrastruktur verfügen.  
 
-Ein Unternehmen kann z. B. eine Zertifizierungsstelle (CA) verfügen, die es verwendet zum Signieren von Zertifikaten für Intranetsites über HTTPS bereitgestellt. Dieses Feature steht, Infrastruktur. 
+Z. B. möglicherweise ein Unternehmen eine Zertifizierungsstelle (CA), die verwendet wird zum Signieren von Zertifikaten für Intranetsites über HTTPS bereitgestellt. Dieses Feature steht oben in diesem Infrastruktur. 
 
 ## <a name="overview"></a>Übersicht
-Standardmäßig Device Portal generiert eine selbstsignierte Stammzertifizierungsstelle, und dann verwendet, die Sie um SSL-Zertifikate für jeden Endpunkt zu signieren, die es überwacht. Dazu gehören `localhost`, `127.0.0.1`, und `::1` (IPv6 Localhost).
+In der Standardeinstellung Device Portal generiert eine selbstsignierte Stammzertifizierungsstelle, und wird verwendet, die Sie um SSL-Zertifikate für jeden Endpunkt zu signieren, die er auf überwacht. Dazu gehören `localhost`, `127.0.0.1`, und `::1` (IPv6 Localhost).
 
-Ebenfalls enthalten sind Hostnamen des Geräts (z. B. `https://LivingRoomPC`) und jede Link-lokale IP-Adresse, die dem Gerät zugewiesene (bis zu zwei [IPv4, IPv6] pro Netzwerkadapter). Sie können die Link-lokale IP-Adressen für ein Gerät anzeigen, indem Sie das Networking-Tool im Device Portal betrachten. Beginnen sie mit `10.` oder `192.` für IPv4 oder `fe80:` für IPv6. 
+Das Gerät Hostnamen ebenfalls enthalten sind (z. B. `https://LivingRoomPC`) und jede Link-lokale IP-Adresse, die dem Gerät zugewiesene (bis zu zwei [IPv4, IPv6] pro Netzwerkadapter). Sie können die Link-lokale IP-Adressen für ein Gerät anzeigen, indem Sie das Tool Networking Device Portal betrachten. Beginnen sie mit `10.` oder `192.` für IPv4 oder `fe80:` für IPv6. 
 
-In der Standardeinstellung möglicherweise eine zertifikatwarnung aufgrund der nicht vertrauenswürdigen Stammzertifizierungsstelle in Ihrem Browser angezeigt. Genauer gesagt, ist das SSL-Zertifikat von Device Portal bereitgestellt von einer Stammzertifizierungsstelle signiert, die den Browser oder PC nicht vertraut. Dies kann durch Erstellen einer neuen vertrauenswürdigen Stammzertifizierungsstelle behoben werden.
+In der Standardeinstellung möglicherweise eine zertifikatwarnung aufgrund von nicht vertrauenswürdigen Stammzertifizierungsstelle in Ihrem Browser angezeigt. Genauer gesagt, ist von Device Portal bereitgestellten SSL-Zertifikat von einer Stammzertifizierungsstelle signiert, die den Browser oder PC nicht vertraut. Dies kann durch Erstellen einer neuen vertrauenswürdigen Stammzertifizierungsstelle behoben werden.
 
 ## <a name="create-a-root-ca"></a>Erstellen einer Stammzertifizierungsstelle
 
-Dies sollte nur durchgeführt werden, wenn Ihr Unternehmen (oder Home) eine Zertifikatinfrastruktur einrichten besitzt und sollte nur einmal ausgeführt werden. Das folgende PowerShell-Skript erstellt eine Stammzertifizierungsstelle _WdpTestCA.cer_aufgerufen. Installieren diese Datei auf des lokalen Computers vertrauenswürdige Stammzertifizierungsstellen bewirkt, dass Ihr Gerät SSL-Zertifikate zu vertrauen, die von diesem Stammzertifizierungsstelle signiert sind. Sie können (und sollten) dieses CER-Datei auf jedem PC installieren, die Sie Windows Device Portal herstellen möchten.  
+Dies sollte nur durchgeführt werden, wenn Ihr Unternehmen (oder Home) eine Zertifikatinfrastruktur einrichten besitzt und sollten nur einmal ausgeführt werden. Das folgende PowerShell-Skript erstellt eine Stammzertifizierungsstelle _WdpTestCA.cer_aufgerufen. Installieren diese Datei auf des lokalen Computers vertrauenswürdige Stammzertifizierungsstellen bewirkt, dass Ihr Gerät SSL-Zertifikate zu vertrauen, die von diesem Stammzertifizierungsstelle signiert sind. Sie können (und sollten) dieses CER-Datei auf jedem PC installieren, die Sie Windows Device Portal herstellen möchten.  
 
 ```PowerShell
 $CN = "PickAName"
@@ -46,13 +46,13 @@ $rootCA = New-SelfSignedCertificate -certstorelocation cert:\currentuser\my -Sub
 $rootCAFile = Export-Certificate -Cert $rootCA -FilePath $FilePath
 ```
 
-Nachdem diese erstellt wurde, können Sie die Datei _WdpTestCA.cer_ , SSL-Zertifikate zu signieren. 
+Nach erstellt wurden, können Sie die Datei _WdpTestCA.cer_ verwenden, um SSL-Zertifikate zu signieren. 
 
 ## <a name="create-an-ssl-certificate-with-the-root-ca"></a>Erstellen Sie ein SSL-Zertifikat mit der Stammzertifizierungsstelle
 
-SSL-Zertifikate verfügen über zwei wichtige Funktionen: schützen Ihre Verbindung über Verschlüsselung und überprüfen, dass Sie tatsächlich mit der in der Browser-Leiste angezeigten kommunizieren (Bing.com, 192.168.1.37, usw.) und keine schädliche von Drittanbietern.
+SSL-Zertifikate verfügen über zwei wichtige Funktionen: schützen Ihre Verbindung über Verschlüsselung und sicherstellen, dass Sie tatsächlich mit der in der Browser-Leiste angezeigten kommunizieren (Bing.com, 192.168.1.37, usw.) und keine schädliche von Drittanbietern.
 
-Das folgende PowerShell-Skript erstellt ein SSL-Zertifikat für die `localhost` Endpunkt. Jeden Endpunkt, die Device Portal überwacht benötigt ihr eigenes Zertifikat. Ersetzen Sie die `$IssuedTo` Argument im Skript mit jeweils unterschiedlichen Endpunkte für Ihr Gerät: den Hostnamen Localhost und die IP-Adressen.
+Das folgende PowerShell-Skript erstellt ein SSL-Zertifikat für die `localhost` Endpunkt. Jeden Endpunkt, die Device Portal überwacht benötigt ihr eigenes Zertifikat. Ersetzen Sie die `$IssuedTo` Argument im Skript mit jeweils unterschiedlichen Endpunkte für Ihr Gerät: der Hostname, Localhost und die IP-Adressen.
 
 ```PowerShell
 $IssuedTo = "localhost"
@@ -68,7 +68,7 @@ $cert = New-SelfSignedCertificate -certstorelocation cert:\localmachine\my -Subj
 $certFile = Export-PfxCertificate -cert $cert -FilePath $FilePath -Password (ConvertTo-SecureString -String $Password -Force -AsPlainText)
 ```
 
-Wenn Sie über mehrere Geräte verfügen, können Sie die Localhost-PFX-Dateien wiederverwenden, aber Sie müssen dennoch IP-Adresse und den Hostnamen Zertifikate für jedes Gerät separat zu erstellen.
+Wenn Sie über mehrere Geräte verfügen, können Sie die Localhost PFX-Dateien wiederverwenden, aber Sie müssen dennoch IP-Adresse und den Hostnamen Zertifikate für jedes Gerät separat zu erstellen.
 
 Wenn das Bündel PFX-Dateien generiert wird, müssen Sie diese in Windows Device Portal zu laden. 
 
@@ -96,4 +96,4 @@ sc start webmanagement
 
 > [!TIP]
 > IP-Adressen können im Laufe der Zeit ändern.
-Viele Netzwerke verwenden DHCP um IP-Adressen zu geben, damit Geräte nicht immer die gleiche IP-Adresse erhalten, die sie zuvor hatten. Wenn Sie ein Zertifikat für eine IP-Adresse auf einem Gerät erstellt haben und, die die Adresse des Geräts geändert hat, Windows Device Portal generiert ein neues Zertifikat mit der vorhandenen selbstsigniertes Zertifikat, und wird der Löschvorgang verwenden, die Sie erstellt haben. Dadurch wird die Zertifikat Warnseite in Ihrem Browser erneut angezeigt werden. Aus diesem Grund wird empfohlen, Herstellen einer Verbindung mit Ihrer Geräte über ihre Hostnamen, die Sie im Device Portal festlegen können. Diese bleibt unabhängig von der IP-Adressen.
+Viele Netzwerke verwenden DHCP um IP-Adressen zu geben, damit Geräte nicht immer die gleiche IP-Adresse erhalten, die sie zuvor hatten. Wenn Sie ein Zertifikat für die IP-Adresse auf einem Gerät erstellt haben, die die Adresse des Geräts geändert wurde, Windows Device Portal generiert ein neues Zertifikat mit der vorhandenen selbstsigniertes Zertifikat, und wird der Löschvorgang verwenden, die Sie erstellt haben. Dadurch wird die Zertifikat-Warnseite in Ihrem Browser erneut angezeigt werden. Aus diesem Grund wird empfohlen, Herstellen einer Verbindung mit Ihrer Geräte über ihre Hostnamen, die Sie im Device Portal festlegen können. Diese bleibt unabhängig von der IP-Adressen.

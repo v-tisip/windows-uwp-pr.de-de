@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b5515d0ed5dc6e200c7c4fc9a7785c993d4cab59
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4464460"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4509552"
 ---
 # <a name="creating-windows-runtime-components-in-ccx"></a>Erstellen von Komponenten für Windows-Runtime in C++/CX
 > [!NOTE]
@@ -29,7 +29,7 @@ Es gibt verschiedene Gründe für das Erstellen einer Windows-Runtime-Komponente
 
 Wenn Sie eine Projektmappe erstellen, die ein JavaScript- oder .NET-Projekt und ein Komponentenprojekt für Windows-Runtime enthält, werden die JavaScript-Projektdateien und die kompilierte DLL in ein Paket zusammengeführt, das Sie lokal im Simulator oder remote auf einem verbundenen Gerät debuggen können. Sie können auch nur das Komponentenprojekt als Erweiterungs-SDK verteilen. Weitere Informationen finden Sie unter [Erstellen eines Software Development Kit](https://msdn.microsoft.com/library/hh768146.aspx).
 
-Im Allgemeinen, wenn Sie code Ihre C++ / CX-Komponente, verwenden Sie die reguläre C++-Bibliothek und integrierte Typen außer an der Grenze abstrakte binäre Schnittstelle (ABI), in denen Sie Daten in und aus Code in einem anderen winmd-Paket übergeben. Verwenden Sie Windows-Runtime-Typen und die spezielle Syntax, C++ / CX zum Erstellen und Bearbeiten dieser Typen unterstützt. Darüber hinaus in Ihrer C++ / CX-code, Typen wie Delegaten und implementieren Sie in JavaScript, Visual Basic, C++ oder C#-Ereignisse, die von der Komponente ausgelöst und verarbeitet werden können. Weitere Informationen zu C++ / CX-Syntax finden Sie unter [Visual C++-Programmiersprachenreferenz (C++ / CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
+In der Regel, wenn Sie code Ihrer C++ / CX-Komponente, verwenden Sie die reguläre C++-Bibliothek und integrierte Typen außer an der Grenze abstrakte binäre Schnittstelle (ABI), in denen Sie Daten in und aus Code in einem anderen winmd-Paket übergeben. Verwenden Sie Windows-Runtime-Typen und die spezielle Syntax, C++ / CX zum Erstellen und Bearbeiten dieser Typen unterstützt. Darüber hinaus in Ihrer C++ / CX-code, Typen wie Delegaten und implementieren Sie in JavaScript, Visual Basic, C++ oder C#-Ereignisse, die von der Komponente ausgelöst und verarbeitet werden können. Weitere Informationen zu C++ / CX-Syntax finden Sie unter [Visual C++-Programmiersprachenreferenz (C++ / CX)](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx).
 
 ## <a name="casing-and-naming-rules"></a>Regeln für die Groß-/Kleinschreibung und die Benennung
 
@@ -77,7 +77,7 @@ ResultText.Text = num.ToString();
 ## <a name="ccx-built-in-types-library-types-and-windows-runtime-types"></a>C++ / CX integrierte Typen, Bibliothekstypen und Windows-Runtime-Typen
 Eine aktivierbare Klassen (auch als Verweisklasse bezeichnet) kann in einer anderen Sprache, wie z.B. JavaScript, C# oder Visual Basic, instanziiert werden. Um von einer anderen Sprache verwendet werden zu können, muss eine Komponente mindestens eine aktivierbare Klasse enthalten.
 
-Eine Komponente für Windows-Runtime kann mehrere öffentliche aktivierbare Klassen sowie zusätzliche Klassen enthalten, die der Komponente nur intern bekannt sind. Wenden Sie das Attribut [WebHostHidden](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx) in C++ / CX-Typen, die nicht für JavaScript sichtbar sein sollen.
+Eine Komponente für Windows-Runtime kann mehrere öffentliche aktivierbare Klassen sowie zusätzliche Klassen enthalten, die der Komponente nur intern bekannt sind. Wenden Sie das Attribut [WebHostHidden](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx) zu C++ / CX-Typen, die nicht für JavaScript sichtbar sein sollen.
 
 Alle öffentliche Klassen müssen sich im selben Stammnamespace befinden, der denselben Namen wie die Metadatendatei der Komponente hat. Zum Beispiel kann eine Klasse mit dem Namen A.B.C.MyClass nur instanziiert werden, wenn sie in einer Metadatendatei mit dem Namen A.winmd oder A.B.winmd oder A.B.C.winmd definiert ist. Der Name der DLL muss nicht mit dem Namen der WINMD-Datei übereinstimmen.
 
@@ -131,7 +131,7 @@ namespace CppComponent
 }
 ```
 
-Um benutzerdefinierte wertstrukturen über die ABI zu übergeben, definieren Sie ein JavaScript-Objekt, das die gleichen Member wie die wertstruktur verfügt, die in C++ definiert ist / CX. Sie können dieses Objekt dann als Argument übergeben, an eine C++ / CX-Methode, damit das Objekt implizit in C++ konvertiert wird / CX-Typ.
+Um benutzerdefinierte wertstrukturen über die ABI zu übergeben, definieren Sie ein JavaScript-Objekt, das die gleichen Member wie die wertstruktur verfügt, die in C++ definiert ist / CX. Sie können anschließend übergeben Sie dieses Objekt als Argument an eine C++ / CX-Methode, damit das Objekt implizit in C++ konvertiert wird / CX-Typ.
 
 ```javascript
 // Get and set the value struct
@@ -150,7 +150,7 @@ function GetAndSetPlayerData() {
 
 Ein anderer Ansatz besteht darin, eine Klasse zu definieren, die „IPropertySet” implementiert (nicht dargestellt).
 
-In den .NET-Sprachen erstellen Sie einfach eine Variable des Typs, der in C++ definiert ist / CX-Komponente.
+In den .NET-Sprachen erstellen Sie einfach eine Variable des Typs, die in C++ definiert ist / CX-Komponente.
 
 ```csharp
 private void GetAndSetPlayerData()
@@ -263,7 +263,7 @@ private void DateTimeExample()
 ```
 
 ## <a name="collections-and-arrays"></a>Sammlungen und Arrays
-Sammlungen werden immer über die ABI-Grenze hinweg als Handles an Windows-Runtime-Typen wie z.B. Windows::Foundation::Collections::IVector^ und Windows::Foundation::Collections::IMap^ übergeben. Wenn Sie beispielsweise ein Handle für Platform::Collections::Map zurückzugeben, wird er implizit in Windows::Foundation::Collections::IMap^ konvertiert. Die Sammlungsschnittstellen werden in einem Namespace, die von C++ definiert / CX-Klassen, die die konkrete Implementierung bereitstellen. JavaScript und .NET-Sprachen nutzen die Schnittstellen. Weitere Informationen finden Sie unter [Sammlungen (C++/CX)](https://msdn.microsoft.com//library/windows/apps/hh700103.aspx) und [Array und WriteOnlyArray (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh700131.aspx).
+Sammlungen werden immer über die ABI-Grenze hinweg als Handles an Windows-Runtime-Typen wie z.B. Windows::Foundation::Collections::IVector^ und Windows::Foundation::Collections::IMap^ übergeben. Wenn Sie beispielsweise ein Handle für Platform::Collections::Map zurückzugeben, wird er implizit in Windows::Foundation::Collections::IMap^ konvertiert. Die Sammlungsschnittstellen werden in einem Namespace, die unabhängig vom C++ definiert / CX-Klassen, die die konkrete Implementierung bereitstellen. JavaScript und .NET-Sprachen nutzen die Schnittstellen. Weitere Informationen finden Sie unter [Sammlungen (C++/CX)](https://msdn.microsoft.com//library/windows/apps/hh700103.aspx) und [Array und WriteOnlyArray (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh700131.aspx).
 
 ## <a name="passing-ivector"></a>Übergeben von „IVector“
 ```cpp
@@ -349,7 +349,7 @@ private void GetDictionary()
 ```
 
 ## <a name="properties"></a>Eigenschaften
-Eine öffentliche Verweisklasse in C++ / CX-komponentenerweiterungen macht öffentliche Datenmember als Eigenschaften verfügbar, mithilfe des Schlüsselworts "Property". Das Konzept ist identisch mit .NET Framework-Eigenschaften. Eine triviale Eigenschaft ähnelt einem Datenmember, da ihre Funktionalität implizit ist. Eine nicht triviale Eigenschaft verfügt über explizite Get- und Set-Accessoren und über eine benannte private Variable, die der „Sicherungsspeicher" für den Wert ist. In diesem Beispiel ist die private Membervariable „\_propertyAValue” der Sicherungsspeicher für „PropertyA“. Eine Eigenschaft kann ein Ereignis auslösen, wenn sich ihr Wert ändert, und eine Client-App kann sich für den Empfang dieses Ereignisses registrieren.
+Eine öffentliche Verweisklasse in C++ / CX-komponentenerweiterungen macht öffentliche Datenmember als Eigenschaften verfügbar, mit der Schlüsselworts "Property". Das Konzept ist identisch mit .NET Framework-Eigenschaften. Eine triviale Eigenschaft ähnelt einem Datenmember, da ihre Funktionalität implizit ist. Eine nicht triviale Eigenschaft verfügt über explizite Get- und Set-Accessoren und über eine benannte private Variable, die der „Sicherungsspeicher" für den Wert ist. In diesem Beispiel ist die private Membervariable „\_propertyAValue” der Sicherungsspeicher für „PropertyA“. Eine Eigenschaft kann ein Ereignis auslösen, wenn sich ihr Wert ändert, und eine Client-App kann sich für den Empfang dieses Ereignisses registrieren.
 
 ```cpp
 //Properties
@@ -511,7 +511,7 @@ nativeObject.fireEvent("The answer is ");
 In C# kann eine beliebige Anzahl von Ereignishandlern mit dem Operator += das Ereignis abonnieren, wie im vorherigen Beispiel gezeigt.
 
 ## <a name="enums"></a>Enumerationen
-Eine Windows-Runtime-Enumeration in C++ / CX wird mithilfe der öffentliche Klasse Enum; deklariert Sie ähnelt eine bereichsbezogenen Enumeration in Standard-c++.
+Eine Windows-Runtime-Enumeration in C++ / CX wird deklariert, mithilfe der öffentliche Klasse Enum; Es ähnelt eine Bereichsbezogene Enumeration in Standard-c++.
 
 ```cpp
 public enum class Direction {North, South, East, West};
@@ -546,7 +546,7 @@ C# und Visual Basic bieten Sprachunterstützung für Enumerationen. In diesen Sp
 ## <a name="asynchronous-methods"></a>Asynchrone Methoden
 Verwenden Sie die [task-Klasse (Concurrency Runtime)](https://msdn.microsoft.com/library/hh750113.aspx), um asynchrone Methoden zu nutzen, die von anderen Windows-Runtime-Objekten verfügbar gemacht werden. Weitere Informationen finden Sie unter [Aufgabenparallelität (Concurrency Runtime)](https://msdn.microsoft.com/library/dd492427.aspx).
 
-Implementieren Sie asynchrone Methoden in C++ / CX verwenden Sie die [Create\_async](https://msdn.microsoft.com/library/hh750102.aspx) -Funktion, die in "ppltasks.h" definiert ist. Weitere Informationen finden Sie unter [Erstellen von asynchronen Vorgängen in C++ / CX für UWP-apps](https://msdn.microsoft.com/library/vstudio/hh750082.aspx). Ein Beispiel finden Sie unter [Exemplarische Vorgehensweise: Erstellen einer einfachen Komponente für Windows-Runtime in C++ / CX und Aufrufen der Komponente über JavaScript oder C#-](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md). Die .NET-Sprachen verwenden C++ / CX asynchrone Methoden nur, wie eine asynchrone Methode, die in .NET Framework definiert ist.
+Zum Implementieren von asynchroner Methoden in C++ / CX verwenden Sie die [Create\_async](https://msdn.microsoft.com/library/hh750102.aspx) -Funktion, die in "ppltasks.h" definiert ist. Weitere Informationen finden Sie unter [Erstellen von asynchronen Vorgängen in C++ / CX für UWP-apps](https://msdn.microsoft.com/library/vstudio/hh750082.aspx). Ein Beispiel finden Sie [Exemplarische Vorgehensweise: Erstellen einer einfachen Komponente für Windows-Runtime in C++ / CX und Aufrufen der Komponente über JavaScript oder c#](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md). Die .NET-Sprachen verwenden C++ / CX asynchrone Methoden nur, wie eine asynchrone Methode, die in .NET Framework definiert ist.
 
 ## <a name="exceptions"></a>Ausnahmen
 Sie können jeden Ausnahmetyp auslösen, der von der Windows-Runtime definiert ist. Sie können keine benutzerdefinierten Typen von einem Windows-Runtime-Ausnahmetyp ableiten. Allerdings können Sie eine COMException auslösen und ein benutzerdefiniertes HRESULT bereitstellen, auf das der Code, der die Ausnahme abfängt, zugreifen kann. Es gibt keine Möglichkeit, eine benutzerdefinierte Meldung in einer COMException anzugeben.
@@ -556,7 +556,7 @@ Beim Debuggen einer JavaScript-Lösung mit einer Komponenten-DLL können Sie den
 
 Achten Sie darauf, entsprechende Funktionen im Paket-Designer auszuwählen. Wenn Sie zum Beispiel eine Bilddatei in der Bildbibliothek des Benutzers mit den Windows-Runtime-APIs öffnen möchten, müssen Sie das Kontrollkästchen „Bildbibliothek” im Bereich „Funktionen” des Manifest-Designers aktivieren.
 
-Wenn der JavaScript-Code die öffentlichen Eigenschaften oder Methoden in der Komponente nicht zu erkennen scheint, stellen Sie sicher, dass Sie in JavaScript die Kamelschreibweise verwenden. Beispielsweise wird die LogCalc c++ / CX-Methode muss als LogCalc in JavaScript referenziert werden.
+Wenn der JavaScript-Code die öffentlichen Eigenschaften oder Methoden in der Komponente nicht zu erkennen scheint, stellen Sie sicher, dass Sie in JavaScript die Kamelschreibweise verwenden. Beispielsweise wird die LogCalc c++ / CX-Methode muss als LogCalc in JavaScript darauf verwiesen werden.
 
 Wenn Sie eine C++ entfernen / CX-Windows-Runtime-Komponentenprojekt aus einer Projektmappe, müssen Sie auch manuell den Projektverweis aus dem JavaScript-Projekt entfernen. Andernfalls werden nachfolgende Debug- oder Buildvorgänge verhindert. Bei Bedarf können Sie dann einen Assemblyverweis zur DLL-Datei hinzufügen.
 

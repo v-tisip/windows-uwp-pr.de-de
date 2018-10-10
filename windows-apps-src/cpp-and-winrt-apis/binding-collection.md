@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, XAML, steuerelement, binden, collection
 ms.localizationpriority: medium
 ms.openlocfilehash: 22594c1cfc503b28163d9fca1f46a6861a4f59ad
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4464892"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4498276"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrt-collection"></a>XAML-Items-Steuerelemente; Binden an eine C++/WinRT-Collection
 
@@ -36,7 +36,7 @@ Wenn eine Laufzeitklasse, die eine Collection repräsentiert, das Ereignis [**IO
 In [XAML-Steuerelemente; Binden an eine C++/WinRT-Eigenschaft](binding-property.md) haben wir eine Eigenschaft vom Typ **BookSku** zu unserem Hauptansichtsmodell hinzugefügt. In diesem Schritt verwenden wir die [**winrt::single_threaded_observable_vector**](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector) Factory-Funktionsvorlage, die uns helfen eine Observable-Collection von **booksku-Objekten** für dasselbe Ansichtsmodell zu implementieren.
 
 > [!NOTE]
-> Wenn Sie noch nicht das Windows SDK-Version 10.0.17763.0 (Windows 10, Version 1809 installiert) oder höher ist, dann finden Sie [eine ältere Version des Windows SDK](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector#if-you-have-an-older-version-of-the-windows-sdk) für eine Liste der eine Observable-Vektor-Vorlage, die Sie anstelle von **winrt::single_ verwenden können Threaded_observable_vector**.
+> Wenn Sie noch nicht das Windows SDK-Version 10.0.17763.0 (Windows 10, Version 1809 installiert) oder höher ist, dann finden Sie [eine ältere Version von Windows SDK](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector#if-you-have-an-older-version-of-the-windows-sdk) eine Auflistung einer Observable-Vektor-Vorlage, mit denen Sie anstelle von **winrt::single_ Threaded_observable_vector**.
 
 Deklarieren Sie eine neue Eigenschaft in `BookstoreViewModel.idl`.
 

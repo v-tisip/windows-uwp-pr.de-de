@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, Uwp, Verwendung, benutzerdefiniertes Ereignis, Bericht, Telemetrie, Benutzersitzungen
 ms.localizationpriority: medium
 ms.openlocfilehash: 96d36ebbaa2b7f1a650e2b0f794a1976c1f525a6
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4471795"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4509587"
 ---
 # <a name="usage-report"></a>Nutzungsbericht
 
@@ -50,7 +50,7 @@ Dieses Diagramm enthält vier separate Registerkarten, die die Nutzung pro Tag o
 - **Dauer**: Zeigt die Gesamtanzahl der aktiven Stunden an (Stunden, in denen ein Benutzer aktiv Ihrer App verwendet).
 - **Beibehaltung**: Zeigt die Gesamtanzahl der **DAU/MAU** (tägliche aktive Benutzer/monatliche aktive Benutzer) über den ausgewählten Zeitraum an.
 
-Wenn der **30d** Zeitraum aktiviert ist, kann Kreis angezeigt, wenn die **Benutzer**oder **Geräte**, **Dauer** Registerkarten anzeigen. Diese darstellen eine erhebliche Erhöhung oder in einem bestimmten Wert, den wir glauben, dass Sie wissen möchten, müssen verringern. Das Datum, an dem der Kreis angezeigt wird, stellt das Ende der Woche, in der wir eine erhebliche Erhöhung oder Verringerung, die im Vergleich zur vorherigen Woche, erkannt. Um weitere Informationen zu Änderungen anzuzeigen, zeigen Sie auf den Kreis.  
+Wenn der **30d** Zeitraum aktiviert ist, sehen Sie Kreis Marker, wenn der **Benutzer**oder **Geräte**, **Dauer** Registerkarten angezeigt. Diese darstellen eine erhebliche Erhöhung oder in einem bestimmten Wert, den wir glauben, dass Sie wissen möchten verringern. Das Datum, an dem die Kreis angezeigt wird, stellt das Ende der Woche, in der wir eine erhebliche Erhöhung oder Verringerung, die im Vergleich zu Woche festgestellt. Um mehr Informationen zu Änderungen, zeigen Sie auf den Kreis.  
 
 > [!TIP]
 > Sie können weitere Einblicke im Zusammenhang mit erhebliche Änderungen an der letzten 30 Tage im [Bericht](insights-report.md)anzeigen.

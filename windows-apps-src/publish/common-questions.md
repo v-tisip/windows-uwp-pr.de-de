@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 89745d0bb93b76e4497d6cb5c57f4e6c091c8bd7
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4471595"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4509542"
 ---
 # <a name="common-questions-about-ad-campaigns"></a>Häufige Fragen zu Anzeigenkampagnen
 
@@ -41,7 +41,7 @@ Wenn Sie eine der Standardanzeigenvorlagen verwenden, können Sie die Größe, d
 
 ### <a name="where-will-my-ad-appear"></a>Wo erscheint meine Anzeige?
 
-Ihre Anzeige erscheint in Apps, die der Altersfreigabe und der Betriebssystemversion Ihrer App entsprechen. Sie können diese Eigenschaften festlegen, wenn Sie Ihre app im Microsoft Store veröffentlichen. Für „universelle” Kampagnen werden Ihre Anzeigen auch in MSN.com, Outlook.com, Skype und anderen Microsoft-Premium-Eigenschaften angezeigt.
+Ihre Anzeige erscheint in Apps, die der Altersfreigabe und der Betriebssystemversion Ihrer App entsprechen. Sie legen diese Eigenschaften, wenn Sie Ihre app im Microsoft Store veröffentlichen. Für „universelle” Kampagnen werden Ihre Anzeigen auch in MSN.com, Outlook.com, Skype und anderen Microsoft-Premium-Eigenschaften angezeigt.
 
 Anzeigenkampagnen werden derzeit in folgenden Ländern und Regionen unterstützt:
 
@@ -63,7 +63,7 @@ Wenn Sie nicht warten möchten, bis die Abrechnung erstellt wird, können Sie Ih
 
 ### <a name="how-do-i-delete-a-credit-card-or-edit-the-details-of-a-credit-card"></a>Wie kann ich eine Kreditkarte löschen oder die Details einer Kreditkarte bearbeiten?
 
-Wechseln Sie zu <http://commerce.microsoft.com>, melden Sie sich mit den Anmeldeinformationen Ihres Microsoft-Konto und die erforderlichen Änderungen vornehmen.
+Wechseln Sie zu <http://commerce.microsoft.com>, melden Sie sich mit den Anmeldeinformationen Ihres Microsoft-Konto an, und nehmen Sie die erforderlichen Änderungen vor.
 
 ### <a name="related-topics"></a>Verwandte Themen
 

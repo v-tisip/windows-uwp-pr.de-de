@@ -11,11 +11,11 @@ ms.technology: uwp
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.openlocfilehash: 88a07db357125d3f9cb35a5e133e9b0add350069
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4468974"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4502741"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Design-Toolkits und Beispiele für UWP-Apps
  
@@ -105,10 +105,10 @@ Diese Toolkits bieten Steuerelemente und Layout-Vorlagen für das Design von UWP
 
 ![VanArsdel Bild](images/VanArsdel_Screenshot.png)
 **VanArsdel**<br>
-Die Van Arsdel, Ltd. End-to-End-UWP-Beispiel-app wurde basiert auf der nächsten Generation Microsoft Fluent Design-Systems. Es wird ausgiebig Gebrauch von der verbesserten Dichte und neue Steuerelemente in der <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Windows-UI-Bibliothek</a> sowie die leistungsstarke zugrunde liegenden Features der Ux-Framework und Komposition. Das Beispiel zeigt, wie Sie eine umfassende und produktive Erfahrung für die Verwaltung und den Erwerb IoT-Geräte (in diesem Fall Leuchten) erstellen können.<br>
+Die Van Arsdel, Ltd. End-to-End-UWP-Beispiel-app wurde basiert auf der nächsten Generation Microsoft Fluent Design-Systems. Es wird ausgiebig Gebrauch von der verbesserten Dichte und neue Steuerelemente in der <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Windows-UI-Bibliothek</a> sowie die leistungsstarke zugrunde liegenden Features der Ux-Framework und Komposition. Im Beispiel wird gezeigt, wie Sie eine umfassende und produktive Erfahrung für die Verwaltung und den Erwerb IoT-Geräte (in diesem Fall Leuchten) erstellen können.<br>
 <a href="https://github.com/Microsoft/VanArsdel/archive/master.zip">Laden Sie das VanArsdel-Beispiel</a> <br><a href="https://github.com/microsoft/vanarsdel">Sehen Sie sich das VanArsdel-Beispiel auf GitHub</a>
 
-![Wandeln Image Erstellen](images/buildcast.png)
+![Cast Image Erstellen](images/buildcast.png)
 **BuildCast**<br>
 BuildCast ist ein End-to-End-Beispiel und basiert auf dem Fluent Design-Systems und UWP. Die App ermöglicht, Video-Podcasts wie Channel 9 und andere beliebte Feeds für Windows-Fans zu durchsuchen. Videos können ausgewählt, heruntergeladen und wiedergegeben werden. Es bietet außerdem Ink-Notizen, Lesezeichen und die Remote-Wiedergabe. Dieses Beispiel wurde anfänglich auf der Build-Konferenz 2017 während der Präsentation <a href="https://channel9.msdn.com/Events/Build/2017/B8034">Erstellen beeindruckender Apps mit Fluent Design</a> vorgestellt. <br>
 <a href="https://github.com/Microsoft/BuildCast/archive/master.zip">Beispiel-App BuildCast herunterladen</a> <br><a href="https://github.com/Microsoft/BuildCast">Beispiel-App BuildCast auf GitHub anzeigen</a>

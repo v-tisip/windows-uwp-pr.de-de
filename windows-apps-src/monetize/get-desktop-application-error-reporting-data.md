@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Fehler, Desktopanwendung
 ms.localizationpriority: medium
 ms.openlocfilehash: 66594fd6f59281011fccab21ad5618827db322dd
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4462185"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4498464"
 ---
 # <a name="get-error-reporting-data-for-your-desktop-application"></a>Abrufen von Fehlerberichtsdaten für Ihre Desktopanwendung
 
-Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um gesammelte Fehlerberichtsdaten für eine Desktopanwendung abzurufen, die Sie dem [Windows-Desktopanwendungsprogramm](https://msdn.microsoft.com/library/windows/desktop/mt826504) hinzugefügt haben. Diese Methode kann nur Fehlern abrufen, die in den letzten 30 Tagen aufgetreten sind. Diese Informationen sind auch im [Integritätsbericht](https://msdn.microsoft.com/library/windows/desktop/mt826504) für Desktopanwendungen im Windows Dev Center-Dashboard verfügbar.
+Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um gesammelte Fehlerberichtsdaten für eine Desktopanwendung abzurufen, die Sie dem [Windows-Desktopanwendungsprogramm](https://msdn.microsoft.com/library/windows/desktop/mt826504) hinzugefügt haben. Diese Methode kann nur Fehlern abrufen, die in den letzten 30 Tagen aufgetreten ist. Diese Informationen sind auch im [Integritätsbericht](https://msdn.microsoft.com/library/windows/desktop/mt826504) für Desktopanwendungen im Windows Dev Center-Dashboard verfügbar.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e2a919af3cb532ce19427967f305cb03adc149a1
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4468639"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4499828"
 ---
 # <a name="debugging-testing-and-performance"></a>Debuggen, Testen und Leistung
 
 
-In diesem Abschnitt wird veranschaulicht, wie mit Microsoft Visual Studio debuggen, testen und Optimieren Sie Ihre app. Es enthält außerdem Tools wie das Windows Device Portal (für die Überwachung von Gerät, und klicken Sie mit der Konfiguration) und das Zertifizierungskit für Windows-Apps (zum Vorbereiten Ihrer app für den Microsoft Store).
+In diesem Abschnitt wird gezeigt, wie mit Microsoft Visual Studio debuggen, testen und Optimieren Sie Ihre app. Es enthält außerdem Tools wie das Windows Device Portal (für die Überwachung von Gerät, und klicken Sie mit der Konfiguration) und das Zertifizierungskit für Windows-App (Ihre app für den Microsoft Store vorbereiten).
 
 | Thema | Beschreibung |
 |-------|-------------|

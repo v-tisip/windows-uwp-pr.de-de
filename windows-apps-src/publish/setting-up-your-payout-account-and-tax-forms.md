@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f7359b2ae40e9b53d5ab73ee93402b11beab629
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4468456"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4501564"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Einrichten von Auszahlungskonten und Steuerformularen.
 
@@ -125,7 +125,7 @@ Berücksichtigen Sie auch folgende Punkte, um sicherzustellen, dass Ihre Auszahl
 
 ## <a name="tax-forms"></a>Steuerformulare
 
-Nachdem Sie [für ein Entwicklerkonto registriert](opening-a-developer-account.md) haben, und Sie Ihr [auszahlungskonto richten](#payout-account), können Sie Ihr *Steuerprofil* für den Microsoft Store erstellen, indem Sie die folgenden Schritte durchführen:
+Nachdem Sie [für ein Entwicklerkonto registriert](opening-a-developer-account.md) haben, und Sie Ihr [auszahlungskonto richten](#payout-account), können Sie Ihr *Steuerprofil* für den Microsoft Store erstellen, indem Sie die folgenden Schritte:
 
 -   Angeben des Wohnsitzlandes und der Staatsangehörigkeit
 -   Ausfüllen der entsprechenden Steuerformulare
@@ -133,7 +133,7 @@ Nachdem Sie [für ein Entwicklerkonto registriert](opening-a-developer-account.m
 Sie können die Steuerformulare im Dashboard elektronisch ausfüllen und übermitteln. In den meisten Fällen müssen keine Formulare ausgedruckt und per Post gesendet werden.
 
 > [!IMPORTANT]
-> In den verschiedenen Ländern und Regionen gelten unterschiedliche Steuergesetze. Die genaue Höhe der zu zahlenden Steuern hängt von den Ländern und Regionen ab, in denen Sie Ihre Apps verkaufen. In der [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) sehen Sie, in welchen Ländern Microsoft für Sie Verkaufs- und Nutzungssteuern überweist. In anderen Ländern müssen Sie u.U. je nachdem, wo Sie registriert sind, Verkaufs- und Nutzungssteuern direkt an die örtliche Steuerbehörde überweisen. Des Weiteren müssen die Erlöse aus Ihren App-Verkäufen unter Umständen als Einkommen versteuert werden. Wir empfehlen Ihnen, wenden Sie sich an die zuständige Behörde in Ihrem Land oder Region, mit denen am besten Sie die richtigen Steuerinformationen für Ihre Microsoft Store-entwickleraktivitäten zu ermitteln kann.
+> In den verschiedenen Ländern und Regionen gelten unterschiedliche Steuergesetze. Die genaue Höhe der zu zahlenden Steuern hängt von den Ländern und Regionen ab, in denen Sie Ihre Apps verkaufen. In der [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) sehen Sie, in welchen Ländern Microsoft für Sie Verkaufs- und Nutzungssteuern überweist. In anderen Ländern müssen Sie u.U. je nachdem, wo Sie registriert sind, Verkaufs- und Nutzungssteuern direkt an die örtliche Steuerbehörde überweisen. Des Weiteren müssen die Erlöse aus Ihren App-Verkäufen unter Umständen als Einkommen versteuert werden. Wir empfehlen Ihnen nachdrücklich, wenden Sie sich an die zuständige Behörde in Ihrem Land oder Region, mit denen sich am besten Sie die richtigen Steuerinformationen für Ihre Microsoft Store-entwickleraktivitäten zu ermitteln kann.
 
  
 **So füllen Sie Ihr Steuerprofil aus**

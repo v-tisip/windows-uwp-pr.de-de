@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Store-Dienste, Microsoft Store-Analyse-API, Einblicke
 ms.localizationpriority: medium
 ms.openlocfilehash: e7ca6eed40af37276b5b4c98ec7b1b709bdadfb9
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4468430"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4498160"
 ---
 # <a name="get-insights-data-for-your-desktop-application"></a>Abrufen von internen Daten für die Desktopanwendung
 
-Verwenden Sie diese Methode in der Microsoft Store-Analyse-API zum Abrufen von Einblicken, die zugehörige Daten auf Health Metrik für eine desktop-Anwendung, die Sie in der [Windows-Desktop-Anwendung](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)hinzugefügt haben. Diese Daten sind auch im [Bericht "Integrität"](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) für desktopanwendungen im Windows Dev Center-Dashboard verfügbar.
+Verwenden Sie diese Methode in der Microsoft Store-Analyse-API zum Abrufen von Einblicken, die zugehörige Daten auf Health Metrik für eine desktop-Anwendung, die Sie in der [Windows-desktopanwendungsprogramm](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)hinzugefügt haben. Diese Daten sind auch im [Bericht "Integrität"](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#health-report) für desktopanwendungen im Windows Dev Center-Dashboard verfügbar.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -51,7 +51,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 | applicationId | string | Die Produkt-ID der Desktopanwendung, für die Sie Einblicke Daten erhalten möchten. Um die Produkt-ID einer Desktopanwendung zu erhalten, öffnen Sie einen [Dev Center-Analysebericht für Ihre Desktopanwendung](https://msdn.microsoft.com/library/windows/desktop/mt826504) (z.B. den **Integritätsbericht**) und rufen Sie die Produkt-ID aus der URL ab. Wenn Sie diesen Parameter nicht angeben, enthält der Antworttext Einblicke Daten für alle apps, die für Ihr Konto registriert wurden.  |  Nein  |
 | startDate | date | Das Startdatum im Datumsbereich der Einblicke Daten abgerufen. Der Standardwert ist 30Tage vor dem aktuellen Datum. |  Nein  |
 | endDate | date | Das Enddatum im Datumsbereich der Einblicke Daten abgerufen. Der Standardwert ist das aktuelle Datum. |  Nein  |
-| filter | string  | Mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Jede Anweisung enthält einen Feldnamen aus dem Antworttext und einen Wert, die mit den Operatoren **eq** oder **ne** verknüpft sind. Anweisungen können mit **and** oder **or** kombiniert werden. Zeichenfolgenwerte im Parameter *filter* müssen von einfachen Anführungszeichen eingeschlossen werden. Beispielsweise *Filter = DataType Eq "Kauf"*. <p/><p/>Diese Methode unterstützt derzeit nur der Filter- **Integrität**.  | Nein   |
+| filter | string  | Mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Jede Anweisung enthält einen Feldnamen aus dem Antworttext und einen Wert, die mit den Operatoren **eq** oder **ne** verknüpft sind. Anweisungen können mit **and** oder **or** kombiniert werden. Zeichenfolgenwerte im Parameter *filter* müssen von einfachen Anführungszeichen eingeschlossen werden. Beispielsweise *Filter = DataType Eq 'Erwerb"*. <p/><p/>Diese Methode unterstützt derzeit nur der Filter- **Integrität**.  | Nein   |
 
 ### <a name="request-example"></a>Anforderungsbeispiel
 
@@ -68,11 +68,11 @@ Authorization: Bearer <your access token>
 
 | Wert      | Typ   | Beschreibung                  |
 |------------|--------|-------------------------------------------------------|
-| Wert      | array  | Ein Array von Objekten, die Daten für die app Einblicke enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie weiter unten im Abschnitt [Insight Werte](#insight-values) .                                                                                                                      |
+| Wert      | array  | Ein Array von Objekten, die Einblicke Daten für die app enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unter [Einblicke Werte](#insight-values) im Abschnitt weiter unten.                                                                                                                      |
 | TotalCount | int    | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.                 |
 
 
-### <a name="insight-values"></a>Insight-Werte
+### <a name="insight-values"></a>Insight Werte
 
 Elemente im Array *Value* enthalten die folgenden Werte.
 
@@ -80,8 +80,8 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 |---------------------|--------|-------------------------------------------|
 | applicationId       | string | Die Produkt-ID der Desktopanwendung, für die Sie Einblicke Daten abgerufen wurden.     |
 | insightDate                | string | Das Datum, an dem wir die Änderung in einer bestimmten Metrik identifiziert. Dieses Datum stellt das Ende der Woche, in dem wir eine erhebliche Erhöhung erkannt, oder in einer Metrik im Vergleich zur vorherigen Woche, verringern. |
-| Datentyp     | string | Eine Zeichenfolge, die allgemeine Analysen Bereich angibt, den diese Insight informiert. Diese Methode unterstützt derzeit nur **Integrität**.    |
-| insightDetail          | array | Eine oder mehrere [InsightDetail Werte](#insightdetail-values) , die Details für aktuelle Insight darstellen.    |
+| Datentyp     | string | Eine Zeichenfolge, die allgemeine Analysen Bereich angibt, den diese Insight informiert. Diese Methode unterstützt derzeit nur **Health**.    |
+| insightDetail          | array | Eine oder mehrere [InsightDetail Werte](#insightdetail-values) , die Details für die aktuelle Insight darstellen.    |
 
 
 ### <a name="insightdetail-values"></a>InsightDetail Werte
@@ -93,9 +93,9 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | Prozent            | string |  Der Prozentsatz, den die Metrik über Ihres gesamten Kundenstamms geändert.  |
 | DimensionName           | string |  Der Name des die Metrik befindet sich in der aktuellen Dimension beschrieben. Beispiele sind **EventType**, **Markt**, **Gerätetyp**und **PackageVersion**.   |
 | DimensionValue              | string | Der Wert der Metrik, die in der aktuellen Dimension beschrieben wird. Beispielsweise ist **DimensionName** **EventType**, **DimensionValue** **Absturz** oder **Blockade**möglicherweise.   |
-| FactValue     | string | Der absoluten Wert der Metrik auf das Datum, an das die Einblicke erkannt wurde.  |
+| FactValue     | string | Den absoluten Wert der Metrik auf das Datum, an das die Einblicke erkannt wurde.  |
 | Richtung | string |  Die Richtung der Änderung (**positiv** oder **negativ**).   |
-| Date              | String |  Das Datum, an dem wir die Änderung im Zusammenhang mit der aktuellen Insight oder die aktuelle Dimension identifiziert.   |
+| Date              | String |  Das Datum, an dem wir die Änderung im Zusammenhang mit den aktuellen Einblick oder die aktuelle Dimension identifiziert.   |
 
 ### <a name="response-example"></a>Antwortbeispiel
 

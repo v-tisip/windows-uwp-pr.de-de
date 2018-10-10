@@ -14,11 +14,11 @@ f1_keywords:
 - vs.storeassociationwizard
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ce80206823694f06e4aa5c3480b4dcb30c4f95c
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4472823"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4502859"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Verpacken einer UWP-App mit Visual Studio
 
@@ -80,7 +80,7 @@ Wenn Sie Ihre App über den Microsoft Store verteilen, kann Visual Studio Ihr Pa
 
 ## <a name="create-an-app-package-upload-file"></a>Erstellen einer App-Paketuploaddatei
 
-Wenn Sie eine app über den Microsoft Store verteilen möchten, müssen Sie ein app-Paket (.appx oder .msix), app-Bündel (.appxbundle oder .msixbundle), oder ein Upload-Paket (.appxupload) und [die verpackte app an Dev Center übermitteln](https://docs.microsoft.com/windows/uwp/publish/app-submissions)erstellen. Es ist zwar möglich, nur ein App-Paket oder App-Bündel an Dev Center zu übermitteln, es wird jedoch empfohlen, ein Uploadpaket zu übermitteln.
+Wenn Sie eine app über den Microsoft Store verteilen möchten, müssen Sie ein app-Paket (.appx oder .msix), app-Bündel (.appxbundle oder .msixbundle), oder ein Upload-Paket (".appxupload") und [die verpackte app an Dev Center übermitteln](https://docs.microsoft.com/windows/uwp/publish/app-submissions)erstellen. Es ist zwar möglich, nur ein App-Paket oder App-Bündel an Dev Center zu übermitteln, es wird jedoch empfohlen, ein Uploadpaket zu übermitteln.
 
 >[!NOTE]
 > Die App-Paketuploaddatei (.appxupload) ist der **einzig** gültige App-Pakettyp für Dev Center, der mithilfe von Visual Studio erstellt werden kann. Weitere gültige [App-Pakete können manuell](https://docs.microsoft.com/windows/uwp/packaging/create-app-package-with-makeappx-tool), ohne Visual Studio erstellt werden. 

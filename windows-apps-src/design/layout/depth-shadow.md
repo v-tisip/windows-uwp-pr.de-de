@@ -1,6 +1,6 @@
 ---
 author: serenaz
-description: Z-Tiefe oder relativ Tiefe und Schatten gibt zwei Möglichkeiten, Tiefe in Ihre app zu konzentrieren, die natürlich und effizient zu integrieren.
+description: Z-Tiefe oder relativ Tiefe und Schatten gibt zwei Möglichkeiten, Tiefe in Ihre app an Benutzer beim Fokus natürlichen und effizienten unterstützen integrieren.
 title: Z-Tiefe und Schatten für UWP-apps
 template: detail.hbs
 ms.author: sezhen
@@ -13,11 +13,11 @@ pm-contact: chigy
 design-contact: balrayit
 ms.localizationpriority: medium
 ms.openlocfilehash: a1433b131b994ee2b1323909bc7c195e00f43cde
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4470013"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4501020"
 ---
 # <a name="z-depth-and-shadow"></a>Z-Tiefe und Schatten
 
@@ -37,15 +37,15 @@ In der realen Welt neigen wir auf Objekte zu konzentrieren, die näher an uns si
 
 ![Z-Tiefe im Menü "Inhalt"](images/elevation-shadow/whyelevation.svg)
 
-Bereitstellen des aussagekräftige visuelle Hierarchie, Z-Tiefe auch, treten Sie erstellen zusätzlich zu diesen Fluss nahtlos 2D, 3D Umgebungen, skalieren Ihre app für alle Geräte und Formfaktoren. 
+Zusätzlich zu Bereitstellen des aussagekräftige visuelle Hierarchie Z-Tiefe auch Benutzeroberflächen erstellen nahtlos 2D, 3D Umgebungen, Skalieren von Ihrer app für alle Geräte und Formfaktoren. 
 
-![Z-Tiefe in 2d, 3d](images/elevation-shadow/elevation-2d3d.svg)
+![Z-Tiefe, 2d, 3D](images/elevation-shadow/elevation-2d3d.svg)
 
 ### <a name="how-is-z-depth-perceived"></a>Wie wird die Z-Tiefe wahrgenommen?
 
 Basierend auf wie wir Tiefe in der realen Welt wahrnehmen, folgen Sie verschiedene Techniken, die verwendet werden können, um Näherung in digitale Benutzeroberfläche anzuzeigen.
 
-- **Skalierung** Weiter Objekte werden kleiner als näher Objekte mit der gleichen Größe angezeigt. Dies ist die Methode ist nur schwer zu veranschaulichen effektiv im 2D-Raum, sodass es im Allgemeinen nicht empfohlen wird. Allerdings können Sie zum Erstellen einer effektiven Simulations von Objekten, die dem Benutzer in 2D näher Skalierung und [Schatten](#what-is-shadow) .
+- **Skalierung** Weiter Objekte erscheinen kleiner als näher Objekte mit der gleichen Größe. Diese Methode wird nur schwer veranschaulichen effektiv im 2D-Raum, damit es im Allgemeinen nicht empfohlen wird. Allerdings können Maßstab und [Schatten](#what-is-shadow) Sie eine effektive Simulation von Objekten, die dem Benutzer in 2D näher erstellen.
 
     ![Näherung mit Skalierung](images/elevation-shadow/elevation-scale.svg)
 
@@ -59,7 +59,7 @@ Basierend auf wie wir Tiefe in der realen Welt wahrnehmen, folgen Sie verschiede
 
 ### <a name="recommendations-for-z-depth"></a>Empfehlungen für die Z-Tiefe
 
-Reduzieren Sie die Anzahl der mit erhöhten Rechten Ebenen klare visuelle Fokus bereitstellen. In den meisten Fällen zwei Ebenen reicht: eine für Vordergrund-Elemente (hohe Näherung) und ein weiteres für Hintergrundelemente (niedrig Näherung). Wenn Sie mehrere mit erhöhten Rechten Elemente, die nicht überlappen verfügen, Gruppieren der gleichen Ebene (d. h. Vordergrund), um die Anzahl der Ebenen reduzieren.
+Reduzieren Sie die Anzahl der mit erhöhten Rechten Ebenen klare visuelle Fokus bereitstellen. In den meisten Fällen zwei Ebenen reicht: eine für Vordergrund-Elemente (high Näherung) und ein weiteres für Hintergrundelemente (niedrig Näherung). Wenn Sie mehrere mit erhöhten Rechten Elemente, die nicht überlappen verfügen, Gruppieren der gleichen Ebene (d. h. Vordergrund), um die Anzahl der Ebenen reduzieren.
 
 ![Z-Tiefe innerhalb einer app](images/elevation-shadow/app-depth.svg)
 
@@ -67,22 +67,22 @@ Reduzieren Sie die Anzahl der mit erhöhten Rechten Ebenen klare visuelle Fokus 
 
 ![Schatten](images/elevation-shadow/shadow.svg)
 
-Schatten ist eine Möglichkeit, erhöhte Rechte wahrnehmen. Licht über ein mit erhöhten Rechten Objekt vorhanden ist, wird es ein Schatten auf der Oberfläche unten. Je höher das Objekt, die größere und weicher wird der Schatten. Beachten Sie, dass mit erhöhten Rechten Objekte benötigen nicht Schatten Schatten bedeuten erhöhte Rechte.
+Schatten ist eine Möglichkeit, erhöhte Rechte wahrnehmen. Wenn Licht über ein mit erhöhten Rechten Objekt vorhanden ist, besteht ein Schatten auf der Oberfläche, die weiter unten. Je höher das Objekt, die größere und weicher wird der Schatten. Beachten Sie, dass mit erhöhten Rechten Objekte benötigen nicht Schatten Schatten bedeuten erhöhte Rechte.
 
-In UWP-apps sollten Schatten gut gestaltete, nicht mutige sein. Wenn Schatten aus den Fokus und Produktivität beeinträchtigen, dann beschränken Sie die Verwendung von Schatten.
+In UWP-apps sollten Schatten gut gestaltete, nicht mutige sein. Wenn Schatten aus den Fokus und Produktivität beeinträchtigen, beschränken Sie die Verwendung von Schatten.
 
 Sie können Schatten mit dem ThemeShadow oder DropShadow-APIs verwenden.
 
 ## <a name="themeshadow"></a>ThemeShadow
 
-Die ThemeShadow, die Typ für alle XAML-Element zum Zeichnen angewendet werden kann, Schatten entsprechend basierend auf X, y, Z-Koordinaten. ThemeShadow passt sich automatisch auch für andere Umgebung Spezifikationen:
+Die ThemeShadow, den Typ für alle XAML-Element zum Zeichnen angewendet werden kann Schatten entsprechend basierend auf X, y, Z-Koordinaten. ThemeShadow passt sich automatisch auch für andere Umgebung Spezifikationen:
 
-- Änderungen der Beleuchtung, Benutzer-Design, den app-Umgebung und Shell anpasst.
+- Änderungen der Beleuchtung, Benutzer Design, den app-Umgebung und Shell anpasst.
 - Schatten Elemente automatisch basierend auf ihrer erhöhte Rechte.
-- Behält Elemente synchronisieren, beim Bewegen und erhöhte Rechte zu ändern.
+- Sorgt dafür Elemente synchronisieren beim Bewegen und erhöhte Rechte zu ändern.
 - Behält Schatten konsistent im gesamten und Anwendungen.
 
-Hier sind Beispiele für ThemeShadow an verschiedenen rechteerweiterungen mit der helle und dunkle Designs:
+Hier sind Beispiele für ThemeShadow an verschiedenen rechteerweiterungen mit dem helle und dunkle Designs:
 
 ![Intelligente Schatten mit hellem Design](images/elevation-shadow/smartshadow-light.svg)
 
@@ -102,12 +102,12 @@ Die folgenden allgemeinen Steuerelemente verwenden automatisch ThemeShadow, Scha
 
 ### <a name="themeshadow-in-popups"></a>ThemeShadow Popups
 
-ThemeShadow wandelt automatisch Schatten, wenn für alle XAML-Element in einem [Popup](/uwp/api/windows.ui.xaml.controls.primitives.popup)angewendet. Es wird auf den Inhalt des app-Hintergrund hinter es und alle anderen geöffneten Popups darunter Schatten umwandeln.
+ThemeShadow wandelt automatisch Schatten, wenn für alle XAML-Element in einem [Popup](/uwp/api/windows.ui.xaml.controls.primitives.popup)angewendet. Es wird Schatten auf den Inhalt des app-Hintergrund hinter es und alle anderen geöffneten Popups darunter umwandeln.
 
-Um ThemeShadow mit Popups zu verwenden, verwenden die `Shadow` -Eigenschaft verwenden, um ein XAML-Element eine ThemeShadow zuweisen. Anschließend Erhöhen des Elements von anderen Elementen dahinter, z. B. die Z-Komponente von der `Translation` Eigenschaft.
-Für die meisten Popup-UI ist die empfohlene Erhöhung relativ zu den Inhalt des app-Hintergrund 32 effektiven Pixeln.
+Um ThemeShadow Popups zu verwenden, verwenden die `Shadow` -Eigenschaft verwenden, um eine ThemeShadow auf ein XAML-Element angewendet. Anschließend Erhöhen des Elements von anderen Elementen dahinter, z. B. die Z-Komponente von der `Translation` Eigenschaft.
+Für die meisten Popup-UI ist die empfohlene erhöhte Rechte relativ zu den Inhalt des app-Hintergrund 32 effektiven Pixeln.
 
-Dieses Beispiel zeigt ein Rechteck in einem Popup scheinbar einen Schatten auf den Inhalt des app-Hintergrund und alle anderen Popups dahinter:
+In diesem Beispiel wird ein Rechteck in einem Popup scheinbar einen Schatten auf den Inhalt des app-Hintergrund und alle anderen Popups dahinter:
 
 ```xaml
 <Popup>
@@ -124,13 +124,13 @@ Dieses Beispiel zeigt ein Rechteck in einem Popup scheinbar einen Schatten auf d
 PopupRectangle.Translation += new Vector3(0, 0, 32);
 ```
 
-![Schatten von Codebeispiel](images/elevation-shadow/smartshadow-example.svg)
+![Schatten Codebeispiels](images/elevation-shadow/smartshadow-example.svg)
 
 ### <a name="themeshadow-in-other-elements"></a>ThemeShadow in anderen Elementen
 
-Um einen Schatten aus einem XAML-Element umgewandelt, die nicht in einem Popup ist, müssen Sie explizit die anderen Elemente, die den Schatten im empfangen können angeben der `ThemeShadow.Receivers` Auflistung.
+Um einen Schatten aus einem XAML-Element umzuwandeln, die nicht in einem Popup ist, müssen Sie explizit die anderen Elemente, die den Schatten im empfangen können angeben der `ThemeShadow.Receivers` Auflistung.
 
-Dieses Beispiel zeigt zwei Schaltflächen, die auf einem Raster hinter sie Schatten werfen:
+Dieses Beispiel zeigt zwei Schaltflächen, die auf einem Raster zugrunde liegenden Schatten werfen:
 
 ```xaml
 <Grid x:Name="BackgroundGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -152,13 +152,13 @@ Button1.Translation += new Vector3(0, 0, 16);
 Button2.Translation += new Vector3(0, 0, 32);
 ```
 
-### <a name="performance-best-practices-for-themeshadow"></a>Leistung bewährte Methoden für die ThemeShadow
+### <a name="performance-best-practices-for-themeshadow"></a>Bewährte Methoden für ThemeShadow Leistung
 
 1. Die Anzahl der benutzerdefinierten Empfänger Elemente auf das minimum zu beschränken. 
 
 2. Wenn mehrere Empfänger Elemente auf der gleichen erhöhte Rechte sind dann versuchen Sie, diese kombinieren, indem Sie ein einzelnes übergeordnetes Element stattdessen abzielen.
 
-3. Wenn mehrere Elemente den gleichen Typ von Schatten auf die gleiche Empfänger Elemente umgewandelt werden fügen Sie des Schattens als freigegebene Ressource und wiederverwenden.
+3. Wenn mehrere Elemente die gleiche Art von Schatten auf die gleiche Empfänger Elemente umgewandelt werden fügen Sie dann den Schatten als freigegebene Ressource und wiederverwenden.
 
 ## <a name="drop-shadow"></a>Schlagschatten
 
@@ -176,6 +176,6 @@ DropShadow reagiert nicht automatisch auf ihrer Umgebung und keine Lichtquellen.
 
 - Im Allgemeinen empfehlen wir die Verwendung von ThemeShadow, die automatisch an seiner Umgebung anpasst.
 - Wenn Sie Szenarien für benutzerdefinierte Schatten erweiterte haben, verwenden Sie DropShadow, wodurch ein stärker angepasst werden.
-- Für die Rückwärtsnavigation Kompatibilität, DropShadow verwenden.
+- Für die Rückwärtsnavigation Kompatibilität DropShadow verwenden.
 - Bedenken hinsichtlich der Leistung die Anzahl der Schatten oder DropShadow verwenden.
-- Verwenden Sie auf HMDs in "true" 3D ThemeShadow. Da DropShadow an einem angegebenen Offset aus dem Visual zeichnet, die sie von der Seite, übergeordnet ist, sucht es wie er im Raum verankert ist. Andererseits, ist die ThemeShadow auf die visuellen Elemente als Empfänger definiert gerendert.
+- Verwenden Sie auf HMDs "true" 3D ThemeShadow. Da DropShadow mit einem bestimmten Versatz von visuellen zeichnet, die sie auf der Seite, übergeordnet ist sieht es wie er im Raum verankert ist. Andererseits, ist ThemeShadow auf die visuellen Elemente als Empfänger definiert gerendert.

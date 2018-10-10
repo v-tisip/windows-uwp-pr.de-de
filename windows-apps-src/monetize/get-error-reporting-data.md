@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienst, Microsoft Store-Analyse-API, Fehler
 ms.localizationpriority: medium
 ms.openlocfilehash: 15dd4d5febe0b57e164f0aadeeb8d7b816dcdd66
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4471805"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4499268"
 ---
 # <a name="get-error-reporting-data-for-your-app"></a>Abrufen von Fehlerberichtsdaten für Ihre App
 
-Mittels dieser Methode in der Microsoft Store-Analyse-API können Sie aggregierte Fehlerberichtsdaten für Ihre App (im JSON-Format) für einen bestimmten Zeitraum und andere optionale Filter abrufen. Diese Methode kann nur Fehlern abrufen, die in den letzten 30 Tagen aufgetreten sind. Diese Informationen sind auch im Abschnitt **Fehler** des [Integritätsberichts](../publish/health-report.md) im Windows Dev Center-Dashboard verfügbar.
+Mittels dieser Methode in der Microsoft Store-Analyse-API können Sie aggregierte Fehlerberichtsdaten für Ihre App (im JSON-Format) für einen bestimmten Zeitraum und andere optionale Filter abrufen. Diese Methode kann nur Fehlern abrufen, die in den letzten 30 Tagen aufgetreten ist. Diese Informationen sind auch im Abschnitt **Fehler** des [Integritätsberichts](../publish/health-report.md) im Windows Dev Center-Dashboard verfügbar.
 
 Sie können zusätzliche Fehlerinformationen abrufen, indem Sie die Methoden [get error details](get-details-for-an-error-in-your-app.md), [get stack trace](get-the-stack-trace-for-an-error-in-your-app.md) und [download CAB file](download-the-cab-file-for-an-error-in-your-app.md) verwenden.
 

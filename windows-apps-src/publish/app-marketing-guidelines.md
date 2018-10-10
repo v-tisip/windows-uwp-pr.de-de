@@ -11,21 +11,21 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 44ffafab761741b8d7bc05f13ea2d8ae50ff048b
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4470351"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4502333"
 ---
 # <a name="microsoft-store-marketing-guidelines-for-apps"></a>Microsoft Store marketing-Richtlinien für apps
 
-Hier erfahren Sie, wie Sie Ihre apps und Inhalte im Microsoft Store zu bewerben. In diesen Richtlinien wird erläutert, wie Sie die verfügbaren Ressourcen in Kombination mit Empfehlungen für die Vermarktung von Apps in gedruckter und digitaler Werbung, in TV-Werbung und Werbung auf sozialen Plattformen verwenden.
+Erfahren Sie, wie Sie Ihre apps und Inhalten im Microsoft Store bewerben. In diesen Richtlinien wird erläutert, wie Sie die verfügbaren Ressourcen in Kombination mit Empfehlungen für die Vermarktung von Apps in gedruckter und digitaler Werbung, in TV-Werbung und Werbung auf sozialen Plattformen verwenden.
 
 ## <a name="store-badges"></a>Store-Badges
 
-Wir haben spezielle Werbe-Badges Sie mehr Kunden zum Eintrag Ihrer app im Microsoft Store lenken können erstellt werden. Diese Badges sind in 44Sprachen verfügbar. Bedenken Sie, dass es bestimmte Anforderungen gibt, die Sie bei Verwendung dieser Bilder beachten müssen. Diese Vorgaben sowie Verwendungsbeispiele und Richtlinien sind in einer PDF-Datei verfügbar.
+Wir haben spezielle Werbe-Badges Sie mehr Kunden zum Eintrag Ihrer app im Microsoft Store lenken können erstellt. Diese Badges sind in 44Sprachen verfügbar. Bedenken Sie, dass es bestimmte Anforderungen gibt, die Sie bei Verwendung dieser Bilder beachten müssen. Diese Vorgaben sowie Verwendungsbeispiele und Richtlinien sind in einer PDF-Datei verfügbar.
 
-[ ![Schaltfläche "herunterladen"](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529769) **Microsoft Store-Badge-Richtlinien (PDF, Englisch)**
+[ ![Schaltfläche "herunterladen"](images/downloadbutton.png)](http://go.microsoft.com/fwlink/p/?LinkId=529769) **Microsoft Store-Badge Richtlinien (PDF, Englisch)**
 
 
 ## <a name="badge-generator-and-images"></a>Badge-Generator und Bilder
@@ -47,7 +47,7 @@ Zur Vermarktung Ihrer App möchten Sie vielleicht zeigen, wie sie aussieht, wenn
 
 *Microsoft Marks* bedeutet das *Microsoft-Badge* auf der Seite " [Badge-Generator](http://go.microsoft.com/fwlink/p/?LinkID=534236) " beschrieben. Die Verwendung dieser Badges setzt Folgendes voraus:
 
--   Ihre app oder andere Inhalte verfügbar im Microsoft Store oder als Teil des [Microsoft-Partnerprogramms](http://go.microsoft.com/fwlink/p/?LinkId=624463).
+-   Ihre app oder andere verfügbare Inhalte im Microsoft Store oder als Teil des [Microsoft-Partnerprogramms](http://go.microsoft.com/fwlink/p/?LinkId=624463).
 
 -   Falls Sie bei Dev Center registriert sind, erfüllen Sie die Anforderungen im Abschnitt [„Lizenz für Microsoft Marks“](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement#license_to_mark) der Vereinbarung für App-Entwickler.
 

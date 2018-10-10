@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Bildschirmaufnahme
 ms.localizationpriority: medium
 ms.openlocfilehash: 3be1312b5dcc716d29bf15a8e16a2647ada68d49
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4464480"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4500928"
 ---
 # <a name="screen-capture"></a>Bildschirmaufnahme
 
@@ -170,7 +170,7 @@ Wenn **Recreate** aufgerufen wird, werden alle vorhandenen Frames verworfen. Dad
 Der folgende Codeausschnitt ist ein End-to-End-Beispiel für die Implementierung einer Bildschirmaufnahme in einer UWP-Anwendung. In diesem Beispiel haben wir eine Schaltfläche in der Front-End-, die beim Klicken auf, ruft die **Button_ClickAsync** -Methode.
 
 > [!NOTE]
-> Dieser Codeausschnitt wird die [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm), eine Bibliothek für 2D-Grafikrendering verwendet. Finden Sie in ihrer Dokumentation Informationen dazu, wie Sie es für Ihr Projekt festgelegt.
+> Dieser Codeausschnitt wird [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm), eine Bibliothek für 2D-Grafikrendering verwendet. Finden Sie in ihrer Dokumentation Informationen dazu, wie Sie es für Ihr Projekt festgelegt.
 
 ```cs
 using Microsoft.Graphics.Canvas;

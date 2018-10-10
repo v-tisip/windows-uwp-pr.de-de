@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Prüfung, Kommentar, Prüfer
 ms.localizationpriority: medium
 ms.openlocfilehash: 4500ebe7406db45a089f3ceba10c1d1e781ea679
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4471323"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4499881"
 ---
 # <a name="reviews-report"></a>Bericht „Rezensionen“
 
@@ -24,7 +24,7 @@ Der Bericht **"Rezensionen"** im Windows Dev Center-Dashboard gibt Aufschluss ü
 
 Sie können diese Daten in Ihrem Dashboard anzeigen oder den [Bericht herunterladen](download-analytic-reports.md), um ihn offline anzuzeigen. Alternativ können Sie diese Daten mithilfe der [app-Rezensionen get](../monetize/get-app-reviews.md) -Methode in der [Microsoft Store-Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md)programmgesteuert abrufen.
 
-Sie können auch für Kunden Rezensionen [direkt von dieser Seite](respond-to-customer-reviews.md), programmgesteuert [über die Microsoft Store-Rezensionen-API](../monetize/submit-responses-to-app-reviews.md), oder mit dem [Dev Center-app](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws)reagieren.
+Sie können auch auf Kunden Rezensionen [direkt von dieser Seite](respond-to-customer-reviews.md), programmgesteuert [über die Microsoft Store-Rezensionen-API](../monetize/submit-responses-to-app-reviews.md)oder mithilfe der [Dev Center-app](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws)reagieren.
 
 > [!TIP]
 > Um Rezensionen, Bewertungen und Benutzerfeedback für alle Ihre Apps in den letzten 30Tagen anzusehen, erweitern Sie **Einbeziehen** im linken Navigationsmenü und wählen Sie **Kritiken und Feedback** aus. 
@@ -52,7 +52,7 @@ Sie können **Filter** erweitern, um alle angezeigten Rezensionen auf dieser Sei
 
 ## <a name="ratings-breakdown"></a>Rezensionsübersicht
 
-Das Diagramm **Rezensionsübersicht** erscheint am Anfang dieser Bericht so, dass Sie einen kurzen Überblick über die folgenden können: 
+Das Diagramm **Rezensionsübersicht** erscheint am oberen Rand dieser Bericht so, dass Sie einen kurzen Überblick über die folgenden können: 
 - Den durchschnittlichen Bewertungsstern der Rezensionsübersicht für die App.
 - Die Gesamtanzahl der Bewertungen Ihrer App in den letzten 12Monaten.
 - Die Gesamtanzahl der Bewertungen für jede Bewertung von Sternen.
@@ -99,7 +99,7 @@ Beachten Sie, dass Kunden eine Bewertung für Ihre App abgeben können, ohne ein
 
 Sie können die Rezensionen auf der Seite nach Datum und/oder Bewertung in aufsteigender oder absteigender Reihenfolge sortieren. Klicken Sie auf den Link **Sortieren nach** , um Optionen zum Sortieren nach **Datum** und/oder **Bewertung**anzuzeigen.
 
-Sie können auch das Suchfeld verwenden, bestimmte Wörter oder Wortgruppen Rezensionen zu Ihrer app suchen. Beachten Sie, dass nur der ursprüngliche Rezension Text geschrieben vom Kunden gesucht wird, auch wenn die Überprüfung in einer anderen Sprache geschrieben wurde. Übersetzte Rezension Text wird nicht durchsucht.
+Sie können auch das Suchfeld verwenden, um nach bestimmten Wörtern oder Sätzen in Ihrer app-Rezensionen zu suchen. Beachten Sie, dass nur der ursprüngliche Rezension Text geschrieben vom Kunden gesucht wird, auch wenn die Überprüfung in einer anderen Sprache geschrieben wurde. Übersetzte Rezension Text wird nicht durchsucht.
 
 > [!NOTE]
 > Es kann vorkommen, dass Rezensionen in diesem Bericht nicht mehr angezeigt werden. Dies kann passieren, da Microsoft Rezensionen aus dem Store entfernt, die von Kunden mit bestimmten Vorabversionen und Insider-Builds von Windows10 geschrieben werden. Wir tun dies, um die Möglichkeit einer negativen Rezension zu verringern, die durch ein Problem in einer Vorabversion des Windows-Builds verursacht wird. Unter Umständen entfernen wir auch Rezensionen aus dem Store, die als Spam erkannt wurden, unangemessene oder anstößige Inhalte enthalten oder anderweitig gegen die Richtlinien verstoßen. Diese Verfahrensweise soll die Benutzerfreundlichkeit für unsere Kunden erhöhen.

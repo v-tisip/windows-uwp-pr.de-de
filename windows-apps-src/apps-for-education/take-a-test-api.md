@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, education
 ms.localizationpriority: medium
 ms.openlocfilehash: 38596ad12ac309db5dc60e4a5183eee9bf8c7b7c
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4468203"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4499976"
 ---
 # <a name="take-a-test-javascript-api"></a>JavaScript-API „Prüfung”
 
@@ -32,7 +32,7 @@ Die Prüfungs-APIs gibt es in den folgenden Namespaces. Beachten Sie, dass alle 
 
 ### <a name="security-namespace"></a>Sicherheitsnamespace
 
-Der sicherheitsnamespace können Sie das Gerät sperren, überprüfen Sie die Liste der Benutzer- und Systemprozesse, Abrufen von Mac- und IP-Adressen und Löschen von zwischengespeicherten Webressourcen.
+Der sicherheitsnamespace ermöglicht das Gerät sperren, überprüfen Sie die Liste der Benutzer- und Systemprozesse, Abrufen von Mac- und IP-Adressen und Löschen von zwischengespeicherten Webressourcen.
 
 | Methode | Beschreibung   |
 |--------|---------------|

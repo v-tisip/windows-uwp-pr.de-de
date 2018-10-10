@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c1812adc9d5610fffd6f9d275b4e093a4fa96e6
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4465796"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4501053"
 ---
 # <a name="templatebinding-markup-extension"></a>{TemplateBinding}-Markuperweiterung
 
@@ -61,7 +61,7 @@ Ein **TemplateBinding**-Element ist stets eine unidirektionale Bindung. Bei beid
 
 ### <a name="xbind-in-controltemplate"></a>X: Bind in ControlTemplate
 
-Beginnen mit dem nächsten wichtigen Update für Windows 10, können Sie **X: Bind** -Markuperweiterung an einer beliebigen Stelle Sie [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391) **TemplateBinding** verwendet. 
+Beginnend mit dem nächsten wichtigen Update für Windows 10, können Sie **X: Bind** -Markuperweiterung an einer beliebigen Stelle **TemplateBinding** in [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)verwendet. 
 
 Die [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype#Windows_UI_Xaml_Controls_ControlTemplate_TargetType) -Eigenschaft (nicht optional) muss auf [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) bei Verwendung von **X: Bind**.
 

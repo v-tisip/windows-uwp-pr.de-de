@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 602a0af685e812f5c65f94d07297cac9fc411923
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4472334"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4500283"
 ---
 # <a name="introduction-to-uwp-app-design"></a>Einführung in das UWP-App-Design
 
@@ -33,7 +33,7 @@ UWP-apps, die auf allen [Windows 10-Geräte](../devices/index.md), seien es TV T
 
 ![Dieselbe App auf verschiedenen Geräten](images/universal-image-1.jpg)
 
-UWP unterstützt, indem die UI-Elemente automatisch anpassen, sodass sie lesbar und leicht zu interagieren auf allen Geräten und Bildschirmgrößen sind.
+UWP unterstützt, indem Sie UI-Elemente automatisch anpassen, damit sie lesbar und leicht zu interagieren auf allen Geräten und Bildschirmgrößen sind.
 
 Wenn Ihre App auf einem Gerät ausgeführt wird, verwendet das System einen Algorithmus, um die Art der Anzeige der UI-Elemente auf dem Bildschirm zu normalisieren. Dieser Skalierungsalgorithmus berücksichtigt den Abstand zum Bildschirm und die Bildschirmdichte (Pixel pro Zoll), um die wahrgenommene Größe (anstelle der physischen Größe) zu optimieren. Mit dem Skalierungsalgorithmus wird sichergestellt, dass der Schriftgrad 24 Pixel auf einem 3 Meter entfernten Surface Hub genauso für den Benutzer lesbar ist wie der Schriftgrad 24 Pixel auf einem 5-Zoll-Smartphone, das nur einige Zentimeter entfernt ist.
 

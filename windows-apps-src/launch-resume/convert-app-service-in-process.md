@@ -11,11 +11,11 @@ keywords: Windows 10, Uwp, app-Dienst
 ms.assetid: 30aef94b-1b83-4897-a2f1-afbb4349696a
 ms.localizationpriority: medium
 ms.openlocfilehash: d259df2a65046acb1c34dd2958ab4513bc31f43b
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4471366"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4502386"
 ---
 # <a name="convert-an-app-service-to-run-in-the-same-process-as-its-host-app"></a>Umwandeln eines App-Diensts für die Ausführung im gleichen Prozess wie die Host-App
 
@@ -48,7 +48,7 @@ Die zweite Änderung besteht darin, die Dienstlogik aus ihrem eigenen Hintergrun
 
 Jetzt kann Ihre Anwendung den App-Dienst direkt ausführen. Z. B. in "App.Xaml.cs":
 
-[!NOTE] Der folgende Code unterscheidet sich z. B. 1 (Out-of-Process-Dienst) bereitgestellt. Der folgende Code wird nur zur Veranschaulichung bereitgestellt und sollte nicht als Teil des Beispiels 2 (in-Process-Dienst) verwendet werden.  Um den Vorgang fortzusetzen Übergang aus dem Beispiel im Artikel weiterhin 1 (Out-of-Process-Dienst) in Beispiel 2 (in-Process-Dienst) den Code zur Verfügung gestellt, z. B. 1 anstelle der Veranschaulichung der folgende Code zu verwenden.
+[!NOTE] Der folgende Code unterscheidet sich z. B. 1 (Out-of-Process-Dienst) bereitgestellt. Der folgende Code wird nur zur Veranschaulichung bereitgestellt und sollte nicht als Teil des Beispiels 2 (in-Process-Dienst) verwendet werden.  Um den Vorgang fortzusetzen Übergang aus dem Beispiel im Artikel weiterhin 1 (Out-of-Process-Dienst) in Beispiel 2 (in-Process-Dienst) den Code zur Verfügung gestellt, z. B. 1 anstatt zur Veranschaulichung der folgende Code zu verwenden.
 
 ``` cs
 using Windows.ApplicationModel.AppService;

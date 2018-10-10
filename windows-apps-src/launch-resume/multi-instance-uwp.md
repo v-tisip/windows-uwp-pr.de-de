@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: dd4e0ced4de2419858424a88f5fa5ce66f5b4286
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4462805"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4498022"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>Erstellen einer universellen Windows-App mit mehreren Instanzen
 
@@ -31,7 +31,7 @@ Wenn Sie eine neue Multiinstanz-Anwendung erstellen, können Sie die **Mehrfachi
 
 Es werden zwei Vorlagen installiert: **UWP-Apps mit mehreren Instanzen**, die die Vorlage für die Erstellung einer Mulitiinstanz-App bereitstellt sowie **Multi-Instance Redirection UWP app** (UWP-App mit Umleitung für mehrere Instanzen), die zusätzlich die Möglichkeit bietet, eine neue Instanz zu starten oder selektiv eine Instanz zu aktivieren, die bereits gestartet wurde. Wenn beispielsweise ein Dokument in nur einer einzelnen Instanz bearbeitet werden soll, verschieben Sie die Instanz, in der die Datei geöffnet ist, in den Vordergrund, statt eine neue Instanz zu erstellen.
 
-Beide Vorlagen fügen `SupportsMultipleInstances` für die `package.appxmanifest` Datei. Beachten Sie das Namespacepräfix `desktop4` und `iot2`: nur Projekte, die als den Desktop Ziel oder Internet der Dinge (IoT)-Projekte, Unterstützung für die multiinstanzerstellung.
+Beide Vorlagen fügen `SupportsMultipleInstances` auf die `package.appxmanifest` Datei. Beachten Sie das Namespacepräfix `desktop4` und `iot2`: nur Projekte, die den Desktop als Ziel oder Internet der Dinge (IoT)-Projekte, Unterstützung für die multiinstanzerstellung.
 
 ```xml
 <Package
@@ -56,13 +56,13 @@ Beide Vorlagen fügen `SupportsMultipleInstances` für die `package.appxmanifest
 
  Bei der Unterstützung für die Multiinstanzerstellung geht es nicht nur darum, den Start mehrerer Instanzen der App zu ermöglichen. Vielmehr bietet sie Ihnen die Möglichkeit auszuwählen, ob eine neue Instanz Ihrer App gestartet oder eine Instanz, die bereits ausgeführt wird, aktiviert werden soll. Wenn die App beispielsweise gestartet wird, um eine Datei zu bearbeiten, die bereits in einer anderen Instanz bearbeitet wird, können Sie die Aktivierung an die Instanz umleiten, statt eine neue Instanz zu öffnen.
 
-Um dies in Aktion zu sehen, sehen Sie sich ein Video zum Erstellen von UWP-apps mit mehreren Instanzen an.
+Um es in Aktion zu sehen, sehen Sie sich ein Video zum Erstellen von UWP-apps mit mehreren Instanzen an.
 
 > [!VIDEO https://www.youtube.com/embed/clnnf4cigd0]
 
-Die Vorlage **Multi-Instance Redirection UWP app** (UWP-App mit Umleitung für mehrere Instanzen) fügt der Datei „Package.appxmanifest” nicht nur wie oben beschrieben `SupportsMultipleInstances` hinzu, sondern fügt Ihrem Projekt auch die Funktion **Program.cs** (oder **Program.cpp**, wenn Sie die C++-Version der Vorlage verwenden), die eine `Main()`-Funktion enthält. Die Logik für die Umleitung der Aktivierung wird in die `Main`-Funktion eingefügt. Die Vorlage für **Program.cs** wird unten gezeigt.
+Die Vorlage **Multi-Instance Redirection UWP app** (UWP-App mit Umleitung für mehrere Instanzen) fügt der Datei „Package.appxmanifest” nicht nur wie oben beschrieben `SupportsMultipleInstances` hinzu, sondern fügt Ihrem Projekt auch die Funktion **Program.cs** (oder **Program.cpp**, wenn Sie die C++-Version der Vorlage verwenden), die eine `Main()`-Funktion enthält. Die Logik für die Umleitung der Aktivierung wird in die `Main`-Funktion eingefügt. Nachfolgend finden Sie die Vorlage für **Program.cs** .
 
-Die Eigenschaft [**AppInstance.RecommendedInstance**](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) stellt die Shell bereitgestellten bevorzugte Instanz für diese aktivierungsanforderung dar, sofern vorhanden (oder `null` Wenn nicht vorhanden ist). Wenn eine Einstellung in die Shell bereitgestellt wird, dann Sie können können Aktivierung an die Instanz umleiten oder kann ignoriert werden, wenn Sie auswählen.
+Die [**AppInstance.RecommendedInstance**](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) -Eigenschaft stellt die Shell bereitgestellten bevorzugte Instanz für diese aktivierungsanforderung dar, sofern vorhanden (oder `null` kein Computerkonto vorhanden ist). Wenn eine Einstellung von die Shell bereitgestellt wird, dann Sie können können Aktivierung an die Instanz umleiten und kann ignoriert werden, wenn Sie sich entscheiden.
 
 ``` csharp
 public static class Program
@@ -112,7 +112,7 @@ public static class Program
 }
 ```
 
-`Main()` ist der erste Schritt, der ausgeführt wird. Es wird vor [**OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_) und [**OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnActivated_Windows_ApplicationModel_Activation_IActivatedEventArgs_)ausgeführt. Dadurch können Sie bestimmen, ob Sie diese oder eine andere Instanz aktivieren möchten, bevor irgend ein anderer Initialisierungscode in Ihrer App ausgeführt wird.
+`Main()` ist der erste Schritt, der ausgeführt wird. Er wird vor dem [**OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_) und [**OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnActivated_Windows_ApplicationModel_Activation_IActivatedEventArgs_)ausgeführt. Dadurch können Sie bestimmen, ob Sie diese oder eine andere Instanz aktivieren möchten, bevor irgend ein anderer Initialisierungscode in Ihrer App ausgeführt wird.
 
 Der obige Code bestimmt, ob eine vorhandene oder neue Instanz der App aktiviert wird. Um festzustellen, ob eine vorhandene Instanz aktiviert werden kann, wird ein Schlüssel verwendet. Wenn Ihre App beispielsweise nach [Behandeln der Dateiaktivierung](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/handle-file-activation) gestartet wird, können Sie den Namen der Datei als Schlüssel verwenden. Anschließend können Sie überprüfen, ob bereits eine Instanz Ihrer App mit diesem Schlüssel registriert ist, und sie aktivieren, statt eine neue Instanz zu öffnen. Der Code erfüllt den folgenden Sinn: `var instance = AppInstance.FindOrRegisterInstanceForKey(key);`
 
@@ -136,7 +136,7 @@ Wenn eine Instanz gefunden wird, die bereits mit dem Schlüssel registriert ist,
 
 ## <a name="sample"></a>Beispiel
 
-Finden Sie ein Beispiel für die Umleitung der multiinstanz-Aktivierung- [Beispiel mit mehreren Instanzen](https://aka.ms/Kcrqst) .
+Finden Sie ein Beispiel für die Umleitung der multiinstanz-Aktivierung [mit mehreren Instanzen Beispiel](https://aka.ms/Kcrqst) .
 
 ## <a name="see-also"></a>Weitere Informationen:
 

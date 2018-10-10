@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9802577f9252b590657406bcb59b0c28adeb4781
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4462349"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4501584"
 ---
 # <a name="app-submissions"></a>App-Übermittlungen
 
@@ -25,9 +25,9 @@ Nachdem Sie Ihre [App durch die Reservierung eines Namens erstellt haben](create
 Sie beginnen mit der Einreichung, sobald Ihre App fertig und bereit für die Veröffentlichung ist. Sie können mit der Eingabe von Infos beginnen, noch bevor Sie eine einzige Codezeile programmiert haben. Updates, die Sie an Ihre Übermittlung werden gespeichert, sodass Sie können zurückkehren darauf und darauf zu arbeiten, wenn Sie bereit sind.
 
 > [!NOTE]
-> Benötigen Sie ein [Entwicklerkonto](http://go.microsoft.com/fwlink/p/?LinkId=615100) , um [Windows Dev Center](https://partner.microsoft.com/dashboard) zugreifen und apps im Microsoft Store übermitteln.
+> Benötigen Sie ein [Entwicklerkonto](http://go.microsoft.com/fwlink/p/?LinkId=615100) , um [Windows Dev Center](https://partner.microsoft.com/dashboard) zugreifen und apps an den Microsoft Store übermitteln.
 
-Nach der Veröffentlichung Ihrer App können Sie eine aktualisierte Version veröffentlichen, indem Sie eine weitere Einreichung im Dashboard erstellen. Durch die Erstellung einer neuen Einreichung können Sie alle erforderlichen Änderungen vornehmen und veröffentlichen – z. B. neue Pakete hochladen oder Preisdetails oder App-Kategorie ändern. Um eine neue Übermittlung für eine veröffentlichte App zu erstellen, klicken Sie neben der aktuellen Übermittlung, die auf der App-Übersichtsseite angezeigt wird, auf **Aktualisieren**. Sie können auch [eine app aus dem Store entfernen,](guidance-for-app-package-management.md#removing-an-app-from-the-store) Wenn Sie dazu (und dann zur Verfügung stellen später erneut, wenn Sie möchten) müssen.
+Nach der Veröffentlichung Ihrer App können Sie eine aktualisierte Version veröffentlichen, indem Sie eine weitere Einreichung im Dashboard erstellen. Durch die Erstellung einer neuen Einreichung können Sie alle erforderlichen Änderungen vornehmen und veröffentlichen – z. B. neue Pakete hochladen oder Preisdetails oder App-Kategorie ändern. Um eine neue Übermittlung für eine veröffentlichte App zu erstellen, klicken Sie neben der aktuellen Übermittlung, die auf der App-Übersichtsseite angezeigt wird, auf **Aktualisieren**. Sie können auch [eine app aus dem Speicher zu entfernen](guidance-for-app-package-management.md#removing-an-app-from-the-store) , wenn Sie müssen dazu (und dann zur Verfügung stellen später erneut, wenn Sie möchten).
 
 > [!NOTE]
 > In diesem Abschnitt der Dokumentation wird das Erstellen einer App-Übermittlung über das Dev Center-Dashboard beschrieben. Alternativ dazu können Sie auch die [Microsoft Store-Übermittlungs-API](../monetize/create-and-manage-submissions-using-windows-store-services.md) verwenden, um App-Übermittlungen zu automatisieren.
@@ -113,7 +113,7 @@ Sie benötigen alle erforderlichen Informationen für mindestens eine der von Ih
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **Optionen zum Anhalten der Veröffentlichung**     | Standard: Veröffentlichen Sie diese Übermittlung, sobald die Zertifizierung abgeschlossen ist (oder ab einem im Abschnitt des Zeitplans ausgewählten Datum)      | [Optionen zum Anhalten der Veröffentlichung](manage-submission-options.md#publishing-hold-options)    
 | **Hinweise für Zertifizierung**     | Empfohlen          | [Hinweise für Zertifizierung](notes-for-certification.md)             |
-| **Eingeschränkte Funktionen**     | Erforderlich, wenn Ihr Produkt alle [eingeschränkten Funktionen](../packaging/app-capability-declarations.md#restricted-capabilities) deklariert wird.    | [Eingeschränkte Funktionen](manage-submission-options.md#publishing-hold-options)       
+| **Eingeschränkte Funktionen**     | Erforderlich, wenn Ihr Produkt alle [eingeschränkten Funktionen](../packaging/app-capability-declarations.md#restricted-capabilities) deklariert    | [Eingeschränkte Funktionen](manage-submission-options.md#publishing-hold-options)       
 
 <span/>
 

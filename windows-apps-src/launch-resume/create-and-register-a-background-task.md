@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: a599fdef47bb681ef4909fe5bba2a01a1687ba66
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4471392"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4502343"
 ---
 # <a name="create-and-register-an-out-of-process-background-task"></a>Erstellen und Registrieren einer Out-of-Process-Hintergrundaufgabe
 
@@ -41,11 +41,11 @@ Sie können Code im Hintergrund ausführen, indem Sie Klassen schreiben, die die
 Die folgenden Schritte zeigen, wie Sie eine neue Klasse zum Implementieren der [**IBackgroundTask**](https://msdn.microsoft.com/library/windows/apps/br224794)-Schnittstelle schreiben.
 
 1.  Erstellen Sie ein neues Projekt für Hintergrundaufgaben, und fügen Sie es zu Ihrer Projektmappe hinzu. Zu diesem Zweck mit der rechten Maustaste auf Ihren Projektmappenknoten im **Projektmappen-Explorer** , und wählen Sie **Hinzufügen** \> **Neues Projekt**. Wählen Sie den Projekttyp **Windows-Runtime-Komponente** , nennen Sie das Projekt, und klicken Sie auf OK.
-2.  Verweisen Sie auf das Hintergrundaufgabenprojekt aus dem Projekt für UWP-Apps (Universelle Windows-Plattform). Für eine C#- oder C++-app in Ihrem app-Projekt mit der rechten Maustaste auf **Verweise** , und wählen Sie **Neuen Verweis hinzufügen**. Wählen Sie unter **Projektmappe** die Option **Projekte**. Wählen Sie dann den Namen Ihres Hintergrundaufgabenprojekts aus, und klicken Sie auf **OK**.
-3.  Fügen Sie auf das hintergrundaufgabenprojekt eine neue Klasse, die [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) -Schnittstelle implementiert. Die [**IBackgroundTask.Run**](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) -Methode ist ein erforderlicher Einstiegspunkt und, die aufgerufen wird, wenn das angegebene Ereignis ausgelöst wird. Diese Methode ist in jeder Hintergrundaufgabe erforderlich.
+2.  Verweisen Sie auf das Hintergrundaufgabenprojekt aus dem Projekt für UWP-Apps (Universelle Windows-Plattform). Für eine c# oder C++-app in Ihrem app-Projekt mit der rechten Maustaste auf **Verweise** , und wählen Sie **Neuen Verweis hinzufügen**. Wählen Sie unter **Projektmappe** die Option **Projekte**. Wählen Sie dann den Namen Ihres Hintergrundaufgabenprojekts aus, und klicken Sie auf **OK**.
+3.  Fügen Sie eine neue Klasse, die [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) Schnittstelle implementiert, auf das hintergrundaufgabenprojekt. Die [**IBackgroundTask.Run**](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) -Methode ist ein erforderlicher Einstiegspunkt und, die aufgerufen wird, wenn das angegebene Ereignis ausgelöst wird. Diese Methode ist in jeder Hintergrundaufgabe erforderlich.
 
 > [!NOTE]
-> Die hintergrundaufgabenklasse selbst&mdash;und alle anderen Klassen im hintergrundaufgabenprojekt&mdash;müssen **Öffentliche** Klassen, die **versiegelt** (oder **endgültigen**) sind.
+> Die hintergrundaufgabenklasse selbst&mdash;und alle anderen Klassen im hintergrundaufgabenprojekt&mdash; **Öffentliche** Klassen sein, die **versiegelt** (oder **endgültigen**) sind.
 
 Der folgende Beispielcode zeigt einen sehr einfachen Startpunkt für eine hintergrundaufgabenklasse.
 
@@ -211,7 +211,7 @@ Weitere Informationen zu asynchronen Mustern finden Sie unter [Asynchrone Progra
 Die folgenden Schritte werden in einer Ihrer App-Klassen durchgeführt (beispielsweise in "MainPage.xaml.cs").
 
 > [!NOTE]
-> Sie können auch eine Funktion für die Registrierung von Hintergrundaufgaben dedizierte erstellen&mdash;finden Sie unter [Registrieren einer Hintergrundaufgabe](register-a-background-task.md). In diesem Fall anstelle der nächsten drei Schritte, können einfach den Auslöser konstruieren und der Registrierungsfunktion zusammen mit den Tasknamen Einstiegspunkt und (optional) eine Bedingung zur Verfügung stellen.
+> Sie können auch eine Funktion für die Registrierung von Hintergrundaufgaben dedizierte erstellen&mdash;finden Sie unter [Registrieren einer Hintergrundaufgabe](register-a-background-task.md). In diesem Fall anstelle der nächsten drei Schritte können einfach den Auslöser konstruieren und der Registrierungsfunktion zusammen mit dem Aufgabennamen, Einstiegspunkt und (optional) eine Bedingung ermöglichen.
 
 ## <a name="register-the-background-task-to-run"></a>Registrieren der auszuführenden Hintergrundaufgabe
 
@@ -276,7 +276,7 @@ while (hascur)
 
 Der Hintergrundaufgabenauslöser bestimmt, ob die Hintergrundaufgabe ausgeführt wird. Eine Liste mit möglichen Auslösern erhalten Sie unter [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839).
 
-Beispielsweise wird dieser Code erstellt eine neue Hintergrundaufgabe und wird ausgeführt, wenn die **TimeZoneChanged** Auslösers:
+Beispielsweise wird dieser Code erstellt eine neue Hintergrundaufgabe und wird ausgeführt, wenn der Trigger **TimeZoneChanged** tritt auf:
 
 ```csharp
 var builder = new BackgroundTaskBuilder();
@@ -348,7 +348,7 @@ Weitere Informationen finden Sie unter [Richtlinien für Hintergrundaufgaben](gu
 
 ## <a name="handle-background-task-completion-using-event-handlers"></a>Behandeln des Abschlusses der Hintergrundaufgabe mithilfe von Ereignishandlern
 
-Sie sollten eine Methode mit dem [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)-Element registrieren, damit Ihre App Ergebnisse von der Hintergrundaufgabe abrufen kann. Wenn die app gestartet oder fortgesetzt wird, wird die markierte Methode aufgerufen, wenn die Hintergrundaufgabe seit dem letzten abgeschlossen wurde, die die app im Vordergrund befand. (Die OnCompleted-Methode wird sofort aufgerufen, wenn die Hintergrundaufgabe abgeschlossen wird, während sich Ihre App im Vordergrund befindet.)
+Sie sollten eine Methode mit dem [**BackgroundTaskCompletedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br224781)-Element registrieren, damit Ihre App Ergebnisse von der Hintergrundaufgabe abrufen kann. Wenn die app gestartet oder fortgesetzt wird, wird die markierte Methode aufgerufen, wenn die Hintergrundaufgabe seit dem letzten abgeschlossen hat, die app im Vordergrund befand. (Die OnCompleted-Methode wird sofort aufgerufen, wenn die Hintergrundaufgabe abgeschlossen wird, während sich Ihre App im Vordergrund befindet.)
 
 1.  Schreiben Sie eine OnCompleted-Methode, um den Abschluss von Hintergrundaufgaben zu behandeln. Das Ergebnis der Hintergrundaufgabe kann z.B. eine Aktualisierung der Benutzeroberfläche auslösen. Das hier gezeigte Methodenprofil ist für die OnCompleted-Ereignishandlermethode erforderlich, obwohl dieses Beispiel nicht den *args*-Parameter verwendet.
 
@@ -417,7 +417,7 @@ task->Completed += ref new BackgroundTaskCompletedEventHandler(this, &MainPage::
 
 ## <a name="declare-in-the-app-manifest-that-your-app-uses-background-tasks"></a>Deklarieren Sie in der app-Manifest, dass Ihre app Hintergrundaufgaben verwendet
 
-Bevor Ihre App Hintergrundaufgaben ausführen kann, müssen Sie alle Hintergrundaufgaben im App-Manifest deklarieren. Wenn Ihre app versucht, eine Hintergrundaufgabe mit einem Trigger zu registrieren, der im Manifest aufgeführt ist, wird die Registrierung der Hintergrundaufgabe mit dem Fehler "Runtime-Klasse nicht registriert" fehl.
+Bevor Ihre App Hintergrundaufgaben ausführen kann, müssen Sie alle Hintergrundaufgaben im App-Manifest deklarieren. Wenn Ihre app versucht, eine Hintergrundaufgabe mit einem Trigger zu registrieren, die nicht im Manifest aufgeführt ist, wird die Registrierung der Hintergrundaufgabe mit dem Fehler "Common Language Runtime-Klasse nicht registriert" fehl.
 
 1.  Öffnen Sie den Paketmanifest-Designer durch Öffnen der Datei namens „Package.appxmanifest“.
 2.  Öffnen Sie die Registerkarte **Deklarationen**.

@@ -15,11 +15,11 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 6001f955b3ab6a60446eb84296dc3bc52ad3a99e
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4463995"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4504240"
 ---
 # <a name="bringing-it-together"></a>Alles zusammenführen
 
@@ -85,7 +85,7 @@ Im Folgenden finden Sie 3 Möglichkeiten, die Grundlagen für fließende Bewegun
 
 > **Vorschau**: implizite Animation erfordert die [neuesten Windows 10 Insider Preview-Build und SDK](https://insider.windows.com/for-developers/).
 
-Implizite Animationen sind eine einfache Möglichkeit, fließende Bewegung zu erzielen, indem Sie automatisch zwischen dem alte und neue Werte während einer Parameter interpoliert.
+Implizite Animationen sind eine einfache Möglichkeit, Fluent-Bewegungen zu erreichen, indem Sie automatisch zwischen dem alte und neue Werte während der eine Änderung der Parameter interpoliert.
 
 Sie können implizit animieren, Änderungen an die folgenden Eigenschaften:
 
@@ -98,7 +98,7 @@ Sie können implizit animieren, Änderungen an die folgenden Eigenschaften:
 - [Rahmen](/uwp/api/windows.ui.xaml.controls.border), [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter)oder [Panel](/uwp/api/windows.ui.xaml.controls.panel)
   - **Hintergrund**
 
-Jede Eigenschaft, die Änderungen, die implizit animiert haben können verfügt über eine entsprechende _Übergang_ -Eigenschaft. Um die Eigenschaft zu animieren, wird die entsprechende Eigenschaft für den _Übergang_ ein Übergang zuweisen. In der folgenden Tabelle zeigt die Eigenschaften der _Übergang_ und Übergang Typs, der für jede Datei verwendet.
+Jede Eigenschaft, die Änderungen, die implizit animiert haben können hat eine entsprechende _Übergang_ -Eigenschaft. Um die Eigenschaft zu animieren, weisen Sie ein Übergang auf die entsprechende _Übergang_ -Eigenschaft. Diese Tabelle zeigt den _Übergang_ Eigenschaften und der Übergangstyp, verwenden Sie für jede.
 
 | Animierten Eigenschaft | Übergang-Eigenschaft | Implizite Übergangstyp |
 | -- | -- | -- |

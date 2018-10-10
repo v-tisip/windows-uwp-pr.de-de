@@ -10,14 +10,14 @@ ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, portieren, migrieren, interoperabilität, C++/CX
 ms.localizationpriority: medium
 ms.openlocfilehash: b60b0d7c201f172261de1546fc250e40b8cd670f
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4462711"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4498555"
 ---
 # <a name="interop-between-cwinrt-and-ccx"></a>Interoperabilität zwischen C++/WinRT und C++/CX
-Dieses Thema zeigt zwei Hilfsfunktionen, die verwendet werden können, für die Konvertierung zwischen [C++ / CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) und [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Objekte. Können Sie Sie verwenden, um Interoperabilität zwischen Code, der die beiden sprachprojektionen verwendet, oder Sie können die Funktionen verwenden, wie Sie den Code schrittweise von C++ verschieben / CX nach C++ / WinRT (siehe [Wechsel zu C++ / WinRT von C++ / CX](move-to-winrt-from-cx.md)).
+In diesem Thema werden zwei Hilfsfunktionen gezeigt, die verwendet werden können, für die Konvertierung zwischen [C++ / CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live) und [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Objekte. Sie können diese verwenden, um zwischen Code, der die beiden sprachprojektionen verwendet, oder Sie können die Funktionen verwenden, wie Sie Ihren Code schrittweise von C++ verschieben / CX nach C++ / WinRT (siehe [Wechsel zu C++ / WinRT von C++ / CX](move-to-winrt-from-cx.md)).
 
 ## <a name="fromcx-and-tocx-functions"></a>Funktionen from_cx und to_cx
 Die folgende Hilfsfunktion konvertiert ein C++/CX-Objekt in ein äquivalentes C++/WinRT-Objekt. Die Funktion bildet ein C++/CX-Objekt auf den zugrundeliegenden [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509) Schnittstellenzeiger ab. Sie ruft dann [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521) auf diesem Zeiger auf, um de Standardschnittstelle des C++/WinRT-Objekts abzurufen. **QueryInterface** ist das Windows-Runtime Application Binary Interface (ABI) Äquivalent zur safe_cast-Erweiterung von C++/CX. Und die Funktion [**winrt::put_abi**](/uwp/cpp-ref-for-winrt/put-abi) ermittelt die Adresse des zugrundeliegenden **IUnknown**-Schnittstellenzeiger eines C++/WinRT-Objekts, sodass er auf einen anderen Wert gesetzt werden kann.

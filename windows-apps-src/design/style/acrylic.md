@@ -15,11 +15,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 3bf91725a62c8d03c37448ddf69b072461288f11
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4469070"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4500828"
 ---
 # <a name="acrylic-material"></a>Acryl-Material
 
@@ -77,15 +77,15 @@ Die auffälligste Eigenschaft von Acryl ist seine Transparenz. Es gibt zwei Acry
 ## <a name="when-to-use-acrylic"></a>Wann sollte Acryl verwendet werden?
 
 * Verwenden Sie in-app-Acryl, für die Unterstützung von UI, z. B. NavigationView oder Inline-Steuerelemente. 
-* Verwenden Sie Hintergrund-Acryl, vorübergehende UI-Elemente, z. B. Kontextmenüs und Flyouts Licht-Dimsissable-UI.<br />Verwendung von Acryl in vorübergehende Szenarien, trägt dazu bei, eine visuelle Beziehung mit dem Inhalt beizubehalten, die die vorübergehende Benutzeroberfläche ausgelöst hat.
+* Verwenden Sie Hintergrund-Acryl, vorübergehende UI-Elemente, z. B. Kontextmenüs, Flyouts und Licht Dimsissable Benutzeroberfläche.<br />Verwendung von Acryl in vorübergehende Szenarien, trägt dazu bei, eine visuelle Beziehung mit dem Inhalt beizubehalten, die die vorübergehende Benutzeroberfläche ausgelöst hat.
 
-Wenn Sie in-app-Acryl auf Flächen Navigation verwenden, sollten Sie Inhalt unterhalb der acrylbereich zur Verbesserung des Fluss in Ihrer app zu erweitern. Mithilfe von NavigationView wird automatisch hierzu. Vermeiden Sie streifeneffekte, versuchen Sie nicht, platzieren Sie mehrere Acryl Edge-to-Edge - kann dies jedoch eine unerwünschte Naht zwischen den beiden verschwommen Flächen erstellen. Acryl kann ist ein Tool zum Erzeugen von visuellen Harmonie in Ihren Designs, jedoch bei inkorrekter Verwendung visuelle Störungen ergeben.
+Bei Verwendung von in-app-Acryl auf Navigation Flächen sollten Sie erweitern Inhalte unter den acrylbereich auf die Darstellung Ihrer App zu verbessern. Mithilfe von NavigationView diesen Schritt werden Sie automatisch durchführen. Vermeiden Sie streifeneffekte, versuchen Sie nicht in mehrere Teile von Acryl Edge-to-Edge - platzieren kann dies jedoch eine unerwünschte Naht zwischen den beiden verschwommen Flächen erstellen. Acryl kann ist ein Tool zum Erzeugen von visuellen Harmonie in Ihren Designs, jedoch bei inkorrekter Verwendung visuelle Störungen ergeben.
 
 Berücksichtigen Sie die folgenden Verwendungsmuster zu entscheiden, wie Acryl in Ihrer app zu integrieren:
 
 ### <a name="horizontal-navigation-or-commanding"></a>Horizontale Navigation oder Befehle
 
-Wenn Ihre app nicht NavigationView nutzen kann, und Sie Acryl selbst hinzufügen möchten, empfehlen wir die Verwendung von relativ durchsichtige Acryl mit 60 Prozent Farbton-Deckkraft.
+Wenn Ihre app nicht NavigationView nutzen und Sie Acryl selbst hinzufügen möchten, empfehlen wir die Verwendung von relativ durchsichtige Acryl mit 60 % Farbton-Deckkraft.
  - Wenn der Bereich als Überlagerung über anderen Inhalten der App geöffnet wird, sollte dies [60% In-App-Acryl](#acrylic-theme-resources) sein.
  - Wenn der Bereich parallel mit dem Hauptinhalt der App geöffnet wird, sollte dies [60% Hintergrund-Acryl](#acrylic-theme-resources)sein.
 
@@ -95,15 +95,15 @@ Darüber hinaus erhalten müssen Ihre Inhalte erweitern oder Bildlauf unter der 
 
 ### <a name="vertical-panes"></a>Vertikalen Bereichen
 
-Für vertikalen Bereichen oder Flächen, die im Abschnitt Inhalt Ihrer App zu unterstützen, empfehlen wir, dass Sie einen undurchsichtigen Hintergrund anstelle von Acryl verwenden. Wenn Ihre vertikalen Bereichen basieren auf Inhalte öffnen, sollten wie in NavigationView **Collapsed** oder **minimale** Modi, dass Sie in-app-Acryl verwenden, um die Seite Kontext zu behalten, wenn der Benutzer in diesem Bereich zu öffnen.
+Für vertikalen Bereichen oder Oberflächen, die Teil Ihrer app Inhalt unterstützen, empfehlen wir, dass Sie einen nicht transparenten Hintergrund anstelle von Acryl verwenden. Wenn Ihre vertikalen Bereichen basieren auf Inhalte öffnen, sollten wie in NavigationView **Collapsed** oder **minimierten** Modus, dass Sie in-app-Acryl verwenden, um die Seite Kontext zu behalten, wenn der Benutzer in diesem Bereich zu öffnen.
 
 ### <a name="transient-surfaces"></a>Vorübergehende Oberflächen
 
-Für apps mit Menü nicht Modal Popups, Flyouts oder Licht-schließen Bereiche, es wird empfohlen, Hintergrund-Acryl zu verwenden.
+Für apps mit Menü Flyouts, nicht Modal Popups oder einfach ausblendbarer von Bereichen, es wird empfohlen, Hintergrund-Acryl zu verwenden.
 
 ![Mail-app-Muster mit einem Informationszwecken flyout](images/Mail_TransientContextMenu.png)
 
-Viele der unsere Steuerelemente werden Acryl in der Standardeinstellung verwenden. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box), [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) und ähnliche Steuerelemente mit Licht-Dimiss Popups werden alle der vorübergehenden Acryl verwenden, wenn sie aufgerufen werden.
+Viele der unsere Steuerelemente werden Acryl in der Standardeinstellung verwenden. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box), [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) und ähnliche Steuerelemente mit Licht Dimiss Popups werden alle vorübergehenden Acryl verwenden, wenn sie aufgerufen werden.
 
 > [!Note]
 > Das Rendern von acryloberflächen ist GPU-intensiv, das Gerät den Energieverbrauch zu erhöhen und Akkulaufzeit verkürzt werden kann. Acryleffekte werden automatisch deaktiviert, wenn Geräte den Stromsparmodus versetzt, und Benutzer können acryleffekte für alle apps, deaktivieren, wenn der Benutzer.
@@ -325,7 +325,7 @@ Darüber hinaus müssen Sie den Titel der App, der normalerweise automatisch in 
 
 ## <a name="how-we-designed-acrylic"></a>Unser Acryl-Entwurfsansatz
 
-Wir haben die Hauptkomponenten des Acryls optimiert, um eine individuelle Darstellung und einzigartige Eigenschaften zu erhalten. Wir begannen mit Transparenz, weichzeichnungs- und Geräusch, flachen Oberflächen visuelle Tiefe und Dimension hinzuzufügen. Dann fügten wir eine Ausschluss-Mischmodus-Ebene hinzu, um den Kontrast und die Lesbarkeit der auf dem Acrylhintergrund platzierten UI sicherzustellen. Zuletzt fügten wir Farbtöne hinzu, um Personalisierungen zu ermöglichen. Zusammen ergeben diese Ebenen ein neues, einsatzbereites Material.
+Wir haben die Hauptkomponenten des Acryls optimiert, um eine individuelle Darstellung und einzigartige Eigenschaften zu erhalten. Wir begannen mit Transparenz, weichzeichnungs- und störungsfiltern visuelle Tiefe und Dimension, flachen Oberflächen hinzufügen. Dann fügten wir eine Ausschluss-Mischmodus-Ebene hinzu, um den Kontrast und die Lesbarkeit der auf dem Acrylhintergrund platzierten UI sicherzustellen. Zuletzt fügten wir Farbtöne hinzu, um Personalisierungen zu ermöglichen. Zusammen ergeben diese Ebenen ein neues, einsatzbereites Material.
 
 ![Acrylzusammensetzung](images/AcrylicRecipe_Diagram.jpg)
 <br/>Das Acryl setzt sich folgendermaßen zusammen: Hintergrund, Weichzeichnungsfilter, Ausschluss-Mischung, Überlagerung der Farbe/des Farbtons, Störungsfilter

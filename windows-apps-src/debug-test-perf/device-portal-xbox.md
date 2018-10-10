@@ -8,14 +8,14 @@ ms.date: 02/12/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, Uwp, Device portal
+keywords: Windows 10, Uwp, geräteportal
 ms.localizationpriority: medium
 ms.openlocfilehash: 404db3963d2f9508d7c81053abf96b0e742103f7
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4467519"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4499219"
 ---
 # <a name="device-portal-for-xbox"></a>Device Portal für Xbox
 
@@ -199,7 +199,7 @@ Dies ist ein leerer Arbeitsbereich, den Sie nach Belieben anpassen können. Sie 
 
 ### <a name="game-event-data"></a>Spiel Ereignisdaten
 
-Auf der Seite **Spiel Ereignisdaten** können Sie eine Echtzeit-Diagramm, Streams in die Anzahl der Spiel derzeit auf Ihrer Xbox One aufgezeichnete Event Tracing for Windows (ETW)-Ereignisse anzeigen. Wenn game-Ereignisse auf dem System vorhanden sind, können Sie auch Details (Ereignisnamen, Ereignis vorkommen und den Titel des Spiels) anzeigen, jedes Ereignis in einer Tabelle unter der Diagramm-Daten beschreibt. In der Tabelle ist nur verfügbar, wenn aufgezeichnete Ereignisse vorhanden sind.
+Auf der Seite **Spiel Ereignisdaten** können Sie einer Echtzeit-Grafik, Streams der Anzahl der derzeit auf Ihrer Xbox One aufgezeichnete Event Tracing for Windows (ETW) Spiel-Ereignisse anzeigen. Wenn game-Ereignisse auf dem System vorhanden sind, können Sie auch Details (Ereignisnamen, Ereignis vorkommen und den Titel des Spiels) anzeigen, jedes Ereignis in einer Tabelle unter der Diagramm-Daten beschreibt. In der Tabelle ist nur verfügbar, wenn es aufgezeichneten Ereignisse gibt.
 
 ![Spiel Ereignisdaten](images/device-portal-xbox-22.PNG)
 
