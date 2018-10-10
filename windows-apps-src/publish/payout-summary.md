@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10 UWP, Auszahlungszusammenfassung, Anweisung, Zahlungen, Einnahmen, Auszahlung, Einnahmen
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d9845fdbd9c8dad77c8599a04850a47573858e8
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4425232"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4472282"
 ---
 # <a name="payout-summary"></a><span data-ttu-id="3f18a-103">Auszahlungsübersicht</span><span class="sxs-lookup"><span data-stu-id="3f18a-103">Payout summary</span></span>
 

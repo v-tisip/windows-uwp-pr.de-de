@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Hintergrundaufgabe, für die
 ms.localizationpriority: medium
 ms.openlocfilehash: f68c20a545e09d81912b8ef9a97a0ab0237ed0e0
-ms.sourcegitcommit: fbdc9372dea898a01c7686be54bea47125bab6c0
+ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "4432566"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "4471022"
 ---
 # <a name="debug-a-background-task"></a><span data-ttu-id="98445-104">Debuggen einer Hintergrundaufgabe</span><span class="sxs-lookup"><span data-stu-id="98445-104">Debug a background task</span></span>
 
