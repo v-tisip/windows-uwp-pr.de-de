@@ -15,11 +15,11 @@ dev_langs:
 - cppcx
 - cppwinrt
 ms.openlocfilehash: 672efaa0899fa8b63b5ec0fda09a20f4f0ab7d67
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4466318"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4505312"
 ---
 # <a name="xaml-lighting"></a>XAML-Beleuchtung
 
@@ -29,7 +29,7 @@ Sie können Lichter auf [**visuelle Elemente**](https://msdn.microsoft.com/libra
 
 ## <a name="applying-lights-to-xaml-uielements"></a>Anwenden von Lichtern auf XAML-UI-Elemente
 
-[**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight)-Objekte werden auf [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight) angewendet, um XAML-UI-Elemente dynamisch zu beleuchten. XamlLight stellt Methoden für die Auswahl-UI-Elemente oder XAML-Pinsel, Lichter auf UIElements verwaltet werden müssen, und die Lebensdauer von CompositionLight Ressourcen basierend auf der gibt an, ob sie sich gerade befinden verwenden.
+[**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight)-Objekte werden auf [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight) angewendet, um XAML-UI-Elemente dynamisch zu beleuchten. XamlLight bietet Methoden für die Auswahl-UI-Elemente oder XAML-Pinsel, Lichter auf UIElements verwaltet werden müssen, und die Lebensdauer von CompositionLight Ressourcen basierend auf der gibt an, ob er sich gerade befinden verwenden.
 
 - Wenn Sie XamlLight auf einen **Pinsel** anwenden, werden damit alle UI-Elemente beleuchtet, die den Pinsel nutzen.
 - Wenn Sie XamlLight auf ein **UI-Element** anwenden, wird damit das gesamte UI-Element einschließlich seiner Unterelemente beleuchtet.

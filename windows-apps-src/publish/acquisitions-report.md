@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: Windows10, UWP, Käufe, App-Verkäufe, App-Downloads, Installationen, Trichter, Käufe, Konvertierungen, Kanal, App-Seitenaufrufe
 ms.localizationpriority: medium
 ms.openlocfilehash: 75a3ce152257d10fe392b3f64381b3e82bc79961
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4467608"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4505091"
 ---
 # <a name="acquisitions-report"></a>Bericht „Käufe“
 
 
-Der Bericht " **Käufe** " im Windows Dev Center-Dashboard können Sie sehen, wer hat erworben und installiert Ihre app, und Sie können demografische und plattformspezifische Details einsehen und zeigt Informationen dazu, wie Kunden unter Windows 10 (einschließlich Xbox) zu Ihrer app gelangt sind Eintrag. Sie können auch in der Nähe in Echtzeit Kaufdaten für den letzten oder 70-zwei Stunden-Zeitraum anzeigen. 
+Der Bericht " **Käufe** " im Windows Dev Center-Dashboard können Sie sehen, wer hat erworben und installiert Ihre app, und Sie können demografische und plattformspezifische Details einsehen und zeigt Informationen dazu, wie Kunden unter Windows 10 (einschließlich Xbox) zu Ihrer app gelangt sind auflisten. Sie können auch in der Nähe in Echtzeit Kaufdaten für den letzten oder 70-zwei Stunden-Zeitraum anzeigen. 
 
 Sie können diese Daten in Ihrem Dashboard anzeigen oder den [Bericht herunterladen](download-analytic-reports.md), um ihn offline anzuzeigen. Sie können diese Daten aber auch programmgesteuert mit unseren [REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
@@ -34,7 +34,7 @@ In diesem Bericht steht **Kauf** für einen neuen Kunden, der eine Lizenz Ihrer 
 
 ## <a name="apply-filters"></a>Anwenden von Filtern
 
-Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist **30D** (30Tage), aber Sie können Daten für 3, 6 oder 12Monate anzeigen, oder für einen benutzerdefinierten Zeitraum, den Sie angeben. In der Nähe Echtzeit Daten für alle Optionen angezeigt werden (außer in **App insgesamt** Daten). Die **1 H** und **72 Stunden** Zeit gelten nur Punkte, um die **täglich App** -Registerkarte des Diagramms **Käufe** und der Registerkarte " **Käufe** " des Diagramms **Märkte** . 
+Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist **30D** (30Tage), aber Sie können Daten für 3, 6 oder 12Monate anzeigen, oder für einen benutzerdefinierten Zeitraum, den Sie angeben. In der Nähe Echtzeit Daten für alle Optionen angezeigt werden (außer in **App insgesamt** Daten). Die **1 H** und **72 Stunden** Zeit gelten Punkte nur ein, um die **täglich App** -Registerkarte des Diagramms **Käufe** und der Registerkarte " **Käufe** " des Diagramms **Märkte** . 
 
 Sie können ebenfalls **Filter** erweitern, um alle Daten auf dieser Seite nach Markt und/oder Gerätetyp zu filtern.
 
@@ -48,7 +48,7 @@ Die Informationen in allen unten angezeigten Diagrammen beziehen sich auf den au
 
 Das Diagramm **Käufe** zeigt, wie oft Ihre Käufe (ein neuer Kunde, der eine Lizenz für Ihre App ausgewählt hat) im ausgewählten Zeitraum pro Tag oder Woche gekauft wurde. (Wenn Sie **Filter anwenden** zum Anzeigen von Daten für eine längere Dauer verwenden, werden die Kaufdaten nach Woche gruppiert.) Nur Käufe von Kunden, die auf einem gültigen Microsoft-Konto angemeldet sind, sind in diesem Diagramm enthalten. 
 
-Standardmäßig zeigen wir die **täglich App** -Ansicht, die in der Nähe Echtzeit-Daten enthält. Sie können auch anzeigen, wie oft die App während ihrer gesamten Lebensdauer gekauft wurde, indem Sie **App Insgesamt** auswählen. Zeigt den kumulierten Gesamtwert aller Käufe an (ab der ersten Veröffentlichung Ihrer App).
+Standardmäßig zeigen wir die **täglich App** -Ansicht, die in der Nähe Echtzeitdaten enthält. Sie können auch anzeigen, wie oft die App während ihrer gesamten Lebensdauer gekauft wurde, indem Sie **App Insgesamt** auswählen. Zeigt den kumulierten Gesamtwert aller Käufe an (ab der ersten Veröffentlichung Ihrer App).
 
 **Bruttoumsätze** für Ihre app (von Oktober 2016 - vorhanden) stehen auch in diesem Diagramm zeigt die Gesamtmenge aus app-Verkäufen (in US-Dollar) erzielt. Beachten Sie, dass dieser Betrag für alle Erstattungen, Rückbuchungen, Ausgleich usw. nicht berücksichtigt.
 
@@ -57,7 +57,7 @@ Sie können optional die Ergebnisse danach filtern, ob die Übernahme vom Client
 > [!NOTE]
 > Sie können diese Daten auch programmgesteuert mit der Methode [Abrufen von App-Käufen](../monetize/get-app-acquisitions.md) unserer [Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
-In der **App täglich** -Ansicht Wenn die **30d** Zeitraum ausgewählt wird, möglicherweise Kreis angezeigt. Diese darstellen eine erhebliche Erhöhung oder in einem bestimmten Wert, den wir glauben, dass Sie wissen möchten, müssen verringern. Das Datum, an dem der Kreis angezeigt wird, stellt das Ende der Woche, in der wir eine erhebliche Erhöhung oder Verringerung, die im Vergleich zur vorherigen Woche, erkannt. Um weitere Informationen zu Änderungen anzuzeigen, zeigen Sie auf den Kreis.  
+In der **App täglich** -Ansicht Wenn der **30d** Zeitraum ausgewählt wird, möglicherweise Kreis angezeigt. Diese darstellen eine erhebliche Erhöhung oder in einem bestimmten Wert, den wir glauben, dass Sie wissen möchten verringern. Das Datum, an dem die Kreis angezeigt wird, stellt das Ende der Woche, in der wir eine erhebliche Erhöhung oder Verringerung, die im Vergleich zu Woche festgestellt. Um mehr Informationen zu Änderungen, zeigen Sie auf den Kreis.  
 
 > [!TIP]
 > Sie können weitere Einblicke im Zusammenhang mit erhebliche Änderungen an der letzten 30 Tage im [Bericht](insights-report.md)anzeigen.

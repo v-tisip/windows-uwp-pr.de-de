@@ -12,11 +12,11 @@ keywords: Windows 10, UWP
 pm-contact: stmoy
 ms.localizationpriority: medium
 ms.openlocfilehash: a2923834fd968114a4ed607de214763fb2575697
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4462459"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4504993"
 ---
 # <a name="page-transitions"></a>Seitenübergänge
 
@@ -59,7 +59,7 @@ myFrame.Navigate(typeof(Page2), null, new DrillInNavigationTransitionInfo());
 
 ## <a name="horizontal-slide"></a>Horizontale Folie
 
-Verwenden Sie horizontale Folie, um anzuzeigen, dass geschwisterseiten nebeneinander angezeigt werden. Das [NavigationView](../controls-and-patterns/navigationview.md) -Steuerelement verwendet diese Animation automatisch für die oben Nav, aber wenn Sie Ihre eigenen horizontalen Navigationsfunktionalität erstellen, Sie können implementieren horizontale Folie mit SlideNavigationTransitionInfo.
+Verwenden Sie horizontale Folie, um anzuzeigen, dass geschwisterseiten nebeneinander angezeigt werden. Das [NavigationView](../controls-and-patterns/navigationview.md) -Steuerelement verwendet diese Animation automatisch für die oben Nav, aber wenn Sie Ihre eigene horizontalen Navigationsfunktionalität erstellen, Sie können implementieren horizontale Folie mit SlideNavigationTransitionInfo.
 
 Der gewünschte Effekt ist, dass der Benutzer zwischen Seiten navigieren, die nebeneinander befinden. 
 

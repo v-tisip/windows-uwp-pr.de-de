@@ -12,13 +12,13 @@ keywords: windows10, UWP
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
 ms.openlocfilehash: c81e8d07efa04e93128089eaec78fb83b822a4b9
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4461105"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4504941"
 ---
-# <a name="distribute-a-packaged-desktop-application"></a>Verteilen einer verpackten desktop-Anwendungspakets
+# <a name="distribute-a-packaged-desktop-application"></a>Verteilen einer verpackten desktop-Anwendungs
 
 Veröffentlichen Sie Ihre verpackte desktop-Anwendung auf einem Windows Store oder querladen es auf einem oder mehreren Geräten.  
 
@@ -29,7 +29,7 @@ Veröffentlichen Sie Ihre verpackte desktop-Anwendung auf einem Windows Store od
 
 Der [Microsoft Store](https://www.microsoft.com/store/apps) ist eine bequeme Möglichkeit für Kunden, Ihre App zu beziehen.
 
-Veröffentlichen Sie die Anwendung in diesem Store, um die größtmögliche Zielgruppe zu erreichen. Darüber hinaus können Unternehmenskunden Ihre Anwendung intern in ihren Organisationen über den [Microsoft Store für Unternehmen](https://www.microsoft.com/business-store)verteilen erwerben.
+Veröffentlichen Sie Ihre Anwendung in diesem Store, um die größtmögliche Zielgruppe zu erreichen. Darüber hinaus können Unternehmenskunden Ihre Anwendung intern in ihren Organisationen über den [Microsoft Store für Unternehmen](https://www.microsoft.com/business-store)verteilen erwerben.
 
 Wenn Sie eine Veröffentlichung im Microsoft Store planen, werden Ihnen als Teil des Übermittlungsprozesses einige zusätzliche Fragen gestellt. Der Grund dafür ist, dass Ihr Paketmanifest eine eingeschränkte Funktion mit dem Namen **runFullTrust** deklariert und wir die Verwendung dieser Funktion durch Ihre Anwendung genehmigen müssen. Weitere Informationen zu dieser Anforderung finden Sie hier: [Eingeschränkte Funktionen](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#restricted-capabilities).
 
@@ -40,13 +40,13 @@ Sie müssen Ihre Anwendung zu signieren, bevor Sie sie an den Store übermitteln
 
 <a id="side-load" />
 
-## <a name="distribute-your-application-without-placing-it-onto-the-microsoft-store"></a>Ihre Anwendung zu verteilen, ohne sie auf den Microsoft Store
+## <a name="distribute-your-application-without-placing-it-onto-the-microsoft-store"></a>Verteilen Sie Ihre Anwendung ohne sie auf der Microsoft Store
 
-Wenn Sie lieber Ihre Anwendung verteilen würde ohne Verwendung des Stores, können Sie apps auf einem oder mehreren Geräten manuell verteilen.
+Wenn Sie lieber Ihre Anwendung verteilen würde ohne Verwendung des Stores, können Sie apps auf einem oder mehreren Geräten manuell vertreiben.
 
 Dies eignet sich ggf., wenn Sie eine bessere Kontrolle über die Verteilung haben oder sich nicht mit dem Microsoft Store-Zertifizierungsprozess auseinandersetzen möchten.
 
-Um Ihre Anwendung auf anderen Geräten ohne sie auf den Store zu verteilen, müssen Sie ein Zertifikat benötigen, Signieren Ihre Anwendung mithilfe von das Zertifikat, und klicken Sie dann den querladen Ihrer Anwendung auf diesen Geräten.
+Um Ihre Anwendung auf anderen Geräten zu verteilen, ohne sie auf den Store müssen Sie ein Zertifikat benötigen, Signieren Sie Ihre Anwendung mithilfe von das Zertifikat, und klicken Sie dann den querladen Ihrer Anwendung auf diesen Geräten.
 
 Sie können [ein Zertifikat erstellen](../packaging/create-certificate-package-signing.md) oder eines von einem beliebten Anbieter wie z.B. [Verisign](https://www.verisign.com/) erhalten.
 
@@ -75,13 +75,13 @@ Bevor Sie Ihre App verteilen, sollten Sie das Hinzufügen einiger Erweiterungen 
 
 * Verweisen Sie mit vorhandenen Startkacheln und Taskleistenschaltflächen auf Ihre verpackte App.
 * Ihres Anwendungspakets einer Gruppe von Dateitypen zuordnen.
-* Stellen Sie die verpackte Anwendung, die bestimmte Dateitypen standardmäßig öffnet.
+* Stellen Sie Ihre verpackte Anwendung, die bestimmte Dateitypen standardmäßig öffnet.
 
 Eine vollständige Liste der Erweiterungen und die Richtlinien für deren Verwendung finden Sie unter [Umstellung von Benutzern auf Ihre App](desktop-to-uwp-extensions.md#transition-users-to-your-app).
 
 Erwägen Sie außerdem das Hinzufügen von Code zu Ihrer verpackten Anwendung, die diese Aufgaben erledigt:
 
-* Migrieren von Benutzerdaten, die Ihre desktop-Anwendung auf den entsprechenden Ordnerspeicherorten Ihrer verpackten App zugeordnet.
+* Migrieren von Benutzerdaten, die mit Ihrer desktop-Anwendung auf den entsprechenden Ordnerspeicherorten Ihrer verpackten App verknüpft ist.
 * Bereitstellung der Option für Benutzer, die Desktopversion Ihrer App zu deinstallieren
 
 Erfahren wir mehr über diese einzelnen Aufgaben. Wir beginnen mit der Migration von Benutzerdaten.

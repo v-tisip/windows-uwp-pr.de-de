@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 2aa30af537874f3c3f4845706de6f6788c7b08fb
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4463900"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4506149"
 ---
 # <a name="resolve-submission-errors"></a>Beheben von Übermittlungsfehlern
 
@@ -29,7 +29,7 @@ Wenn ein Kompilierungsfehler angezeigt wird, stellen Sie sicher, dass Sie die An
 
 ## <a name="desktop-application"></a>Desktop-Anwendung
 
-Wenn Sie beabsichtigen, ein Paket zu übermitteln, die Win32- und UWP-Binärdateien enthält, stellen Sie sicher, dass Sie das Paket erstellen, indem mithilfe des Windows-Verpackung-Projekts, das in Visual Studio 2017 Update 4 verfügbar ist. Wenn Sie das Paket mithilfe einer UWP-Projektvorlage erstellen, können Sie möglicherweise nicht übermitteln, die auf den Store oder querladen es auf anderen PCs verpacken. Auch wenn das Paket erfolgreich veröffentlicht werden, kann es auf dem PC des Benutzers unerwartetem Verhalten. Weitere Informationen finden Sie unter [Package eine app mit Visual Studio (Desktop-Brücke)]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
+Wenn Sie beabsichtigen, ein Paket zu übermitteln, die Win32- und UWP-Binärdateien enthält, stellen Sie sicher, dass Sie das Paket erstellen, indem Sie mithilfe des Windows-Verpackung-Projekts, das in Visual Studio 2017 Update 4 verfügbar ist. Wenn Sie das Paket mithilfe einer UWP-Projektvorlage erstellen, können Sie möglicherweise nicht übermitteln, die auf den Store oder querladen es auf anderen PCs zu verpacken. Auch wenn das Paket erfolgreich veröffentlicht werden, kann es auf dem PC des Benutzers unerwartetem Verhalten. Weitere Informationen finden Sie unter [Package einer app mit Visual Studio (Desktop-Brücke)]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
 ## <a name="windows-phone-8x-and-earlier"></a>Windows Phone 8.x und früheren Versionen
 
@@ -53,7 +53,7 @@ Möglicherweise wird Ihnen der folgende Fehler angezeigt: **Der Name des Pakets 
 - Wenn Ihre App bereits über eine Identität verfügt, müssen Sie möglicherweise dennoch den Namen reservieren, den Sie in Ihrem Paket verwenden möchten. Klicken Sie unter **App-Verwaltung** auf [App-Namen verwalten](manage-app-names.md). Geben Sie den Namen ein, den Sie reservieren möchten, und klicken Sie auf **App-Namen reservieren**.
 
 > [!IMPORTANT]
->  Wenn der Name, den Sie verwenden möchten, nicht verfügbar ist, eine andere app möglicherweise bereits diesen Namen reserviert haben. Wenn Ihre app bereits unter diesem Namen veröffentlicht wurde, oder wenn Sie sich vorstellen, Sie haben das Recht, [kontaktieren Sie den Support](https://go.microsoft.com/fwlink/p/?LinkId=331509)verwenden.  
+>  Wenn der Name, den Sie verwenden möchten, nicht verfügbar ist, eine andere app möglicherweise bereits diesen Namen reserviert haben. Wenn Ihre app bereits unter diesem Namen veröffentlicht wurde, oder wenn Sie sich vorstellen, Sie sind berechtigt, [kontaktieren Sie den Support](https://go.microsoft.com/fwlink/p/?LinkId=331509)verwenden.  
 
  
 

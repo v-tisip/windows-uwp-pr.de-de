@@ -13,11 +13,11 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 04263122c1a96aadc5e4d0ad8f804730d3a2a20f
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4471236"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4505219"
 ---
 # <a name="app-icons-and-logos"></a>App-Symbole und Logos 
 
@@ -37,13 +37,13 @@ Jede app verfügt über ein Symbol/Logo, das es darstellt, und das Symbol an meh
     :::column-end:::
 :::row-end:::
 
-In diesem Artikel werden die Grundlagen der Erstellung von app-Symbole, wie Sie Visual Studio zum Verwalten und wie sie manuell verwalten müssen Sie.
+In diesem Artikel werden die Grundlagen der Erstellung von app-Symbole, wie Sie Visual Studio zu verwalten, wie sie manuell verwalten müssen Sie.
  
-(Dieser Artikel ist insbesondere für Symbole, die die app selbst darstellen, allgemeine Symbol-Anleitung finden Sie im Artikel [Symbole](icons.md) .)
+(In diesem Artikel ist insbesondere für Symbole, die die app selbst darstellen, allgemeine Symbol-Anleitung finden Sie im Artikel [Symbole](icons.md) .)
 
 ## <a name="icon-types-locations-and-scale-factors"></a>Symbol Kontotypen, Standorte und Skalierungsfaktoren
 
-Standardmäßig speichert Visual Studio die Symbolressourcen in ein Unterverzeichnis Ressourcen. Hier ist eine Liste der verschiedenen Typen von Symbolen, wo sie angezeigt werden, und wie sie benannt sind. 
+Standardmäßig speichert Visual Studio Ihr Symbolressourcen in ein Unterverzeichnis Ressourcen. Hier ist eine Liste der verschiedenen Typen von Symbolen, wo sie angezeigt werden, und wie sie benannt sind. 
 
 | Symbol für Namen | Erscheint in | Asset-Dateiname |
 | ---      | ---        | --- |
@@ -54,13 +54,13 @@ Standardmäßig speichert Visual Studio die Symbolressourcen in ein Unterverzeic
 | App-Symbol | App-Liste im Startmenü, Taskleiste, Task-manager | Square44x44Logo.PNG |
 | Begrüßungsbildschirm | Begrüßungsbildschirm der app | SplashScreen.png  |
 | Signallogo | Die app Kacheln | BadgeLogo.png  |
-| Paket-Logo-Speicher-logo | App-Installer, Dev Center die Option "Melden eine app" im Store, die Option "Einen Prüfbericht schreiben" im Store | StoreLogo.png  |
+| Paket-Logo-Speicher-logo | App-Installer, Dev Center die Option "Eine app melden" im Store, die Option "Einen Prüfbericht schreiben" im Store | StoreLogo.png  |
 
-\ * Verwendet, es sei denn, Sie für die [Anzeige nur Bilder im Store hochgeladen](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store)auswählen. 
+\ * Verwendet, es sei denn, Sie für die [Anzeige nur hochgeladene Bilder im Store](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store)auswählen. 
 
 Um sicherzustellen, dass diese Symbole für jeden Bildschirm scharf aussehen, können Sie mehrere Versionen des gleichen Schildsymbols für unterschiedliche Skalierungsfaktoren erstellen. 
 
-Der Skalierungsfaktor bestimmt die Größe des UI-Elemente, z. B. Text. Skalierung von Faktoren reichen von 100 % und 400 %. Mit höheren Werten zu größeren UI-Elemente, erleichtern sie hohe DPI-Displays finden Sie unter erstellen. 
+Der Skalierungsfaktor bestimmt die Größe des UI-Elemente, z. B. Text. Skalierung von Faktoren reichen von 100 % und 400 %. Mit höheren Werten erstellen größer UI-Elemente, und daher leichter auf hohe DPI-Displays finden Sie unter. 
 
 :::row:::
     :::column:::
@@ -74,19 +74,19 @@ Der Skalierungsfaktor bestimmt die Größe des UI-Elemente, z. B. Text. Skalieru
 :::row-end:::  
 
 
-Da app-Symbolressourcen Bitmaps und Bitmaps nicht gut skalieren, es wird empfohlen, einer Version jedes Symbol-Ressource für jedes Skalierungsfaktor: 100 %, 125 %, 150 %, 200 % und 400 %. Das ist eine Menge von Symbolen! Fortunatly, Visual Studio bietet ein Tool, das zum Erstellen und aktualisieren diese Symbole erleichtert. 
+Da app-Symbolressourcen Bitmaps und Bitmaps nicht gut skalieren, es wird empfohlen, einer Version jedes Symbol-Ressource für jedes Skalierungsfaktor: 100 %, 125 %, 150 %, 200 % und 400 %. Das ist eine Menge von Symbolen! Fortunatly, Visual Studio bietet ein Tool, das vereinfacht das Erstellen und aktualisieren diese Symbole. 
 
 ## <a name="microsoft-store-listing-image"></a>Microsoft Store-Eintrag image
 
 "Festlegen-Images für meine app Eintrag im Microsoft Store?"
 
-Standardmäßig verwenden wir einige der Bilder von Ihren Paketen im Store wie in der Tabelle am Anfang dieser Seite (sowie andere [Bilder, die Sie während der Übermittlung bereitstellen](https://docs.microsoft.com/en-us/windows/uwp/publish/app-screenshots-and-images)) beschrieben. Allerdings haben Sie die Möglichkeit zu verhindern, dass der Store die Logos in den Paketen Ihrer app zu verwenden, wenn Ihr Angebot für Kunden unter Windows 10 (einschließlich Xbox) angezeigt, und stattdessen der Store muss nur Bilder verwenden, die Sie hochladen. Dies bietet Ihnen mehr Kontrolle über die Darstellung Ihrer app in verschiedenen anzeigen im Store. (Beachten Sie, dass wenn Ihr Produkt für frühere Betriebssystemversionen unterstützt, die Kunden weiterhin Bilder aus Ihrer Pakete, finden Sie unter möglicherweise auch dann, wenn Sie diese Option verwenden.) Dies ist im **Store-Logos** Teil der **Store-Eintrag** Schritt im Übermittlungsprozess möglich.
+Standardmäßig verwenden wir einige der Bilder von Ihren Paketen im Store, wie in der Tabelle am oberen Seitenrand (sowie andere [Bilder, die Sie während der Übermittlung bereitstellen](https://docs.microsoft.com/en-us/windows/uwp/publish/app-screenshots-and-images)) beschrieben. Allerdings haben Sie die Möglichkeit zu verhindern, dass den Speicher die Logobilder in den Paketen Ihrer app, wenn Ihr Angebot für Kunden unter Windows 10 (einschließlich Xbox) angezeigt, und stattdessen der Store muss nur Bilder verwenden, die Sie hochladen. Dies bietet Ihnen mehr Kontrolle über die Darstellung Ihrer app in verschiedenen anzeigen im Store. (Beachten Sie, dass Ihr Produkt für frühere Betriebssystemversionen unterstützt, diese Kunden weiterhin Bilder von Ihren Paketen finden Sie unter möglicherweise auch dann, wenn Sie diese Option verwenden.) Dies ist im **Store-Logos** Teil der **Store-Eintrag** Schritt im Übermittlungsprozess möglich.
 
-![Angeben von Store-Logos während der app-Übermittlung](images/app-icons/storelogodisplay.png)
+![Festlegen von Store-Logos während der app-Übermittlungsprozesses](images/app-icons/storelogodisplay.png)
 
-Wenn Sie dieses Kontrollkästchen aktivieren, wird ein neuer Abschnitt namens **Store Bilder anzuzeigen** . Hier können Sie hochladen, 3 Bildgrößen, die der Store "anstelle von" logobildern aus den Paketen Ihrer app verwenden: 300 x 300, 150 x 150 und 71 x 71 Pixel. Nur die Größe 300 x 300 ist erforderlich, obwohl es wird empfohlen, alle 3 Größen.
+Wenn Sie dieses Kontrollkästchen aktivieren, wird ein neuer Abschnitt namens **Store Bilder anzuzeigen** . Hier können Sie 3 Bildgrößen, das der Store "anstelle von" logobildern aus den Paketen Ihrer app verwenden, hochladen: 300 x 300, 150 x 150 und 71 x 71 Pixel. Nur die Größe 300 x 300 ist erforderlich, obwohl es wird empfohlen, alle 3 Größen.
 
-Weitere Informationen finden Sie in der [Anzeige im Store Logos nur hochgeladen](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store).
+Weitere Informationen finden Sie in der [Anzeige nur Logo Bilder im Store hochgeladen](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store).
 
 <!-- ### Fallback images for the Store
 
@@ -108,7 +108,7 @@ For more information, see [App screenshots, images, and trailers in the Microsof
 
 Visual Studio bietet ein sehr nützliches Tool für die Verwaltung von Ihrer app-Symbole im **Manifest-Designer**aufgerufen. 
 
-> Wenn Sie Visual Studio 2017 noch nicht, sind verschiedene Versionen verfügbar, z. B. eine kostenlose Version (Visual Studio 2017 Community Edition), und die anderen Versionen bieten kostenlose Testversionen. Sie können sie hier herunterladen:[https://developer.microsoft.com/windows/downloads](https://developer.microsoft.com/windows/downloads)
+> Wenn Sie Visual Studio 2017 noch nicht, mehrere Versionen zur Verfügung, z. B. eine kostenlose Version (Visual Studio 2017 Community Edition) verfügbar sind, und die anderen Versionen bieten kostenlose Testversionen. Sie können sie hier herunterladen:[https://developer.microsoft.com/windows/downloads](https://developer.microsoft.com/windows/downloads)
 
 
 So starten Sie den Manifest-Designer
@@ -135,7 +135,7 @@ So starten Sie den Manifest-Designer
 :::row-end:::
 :::row:::
     :::column:::
-        2. Doppelklicken Sie im **Projektmappen-Explorer**auf die Datei Package.appmxanifest.
+        2. Doppelklicken Sie im **Projektmappen-Explorer**auf die Package.appmxanifest.
     :::column-end:::
     :::column:::
         ![The Visual Studio 2017 Manifest Designer](images/icons/vs-solution-explorer.png)
@@ -158,48 +158,48 @@ So starten Sie den Manifest-Designer
     :::column-end:::
 :::row-end:::        
 
-## <a name="generating-all-assets-at-once"></a>Alle Objekte auf einmal generieren
+## <a name="generating-all-assets-at-once"></a>Erstellen alle Ressourcen auf einmal
 
 Das erste Menüelement in der Registerkarte " **Visuelle Anlagen** ", **Alle visuellen Ressourcen**, ist genau das, was der Name schon sagt: jede visuelle Ressource, die Ihre app mit dem Drücken der Taste a muss generiert.
 
 ![Generieren von alle visuellen Ressourcen in Visual Studio](images/app-icons/all-visual-assets.png)
 
-Alles, was Sie tun müssen ist ein einzelnes Bild bereitstellen, und Visual Studio generiert die kleine Kachel, mittelgroßen Kachel, große Kachel, Breite Kachel, große Kachel, app-Symbol, Begrüßungsbildschirm, und Flight-Logo-Ressourcen für jedes Skalierungsfaktor.
+Alles, was Sie tun müssen ist ein einzelnes Bild bereitstellen, und Visual Studio generiert die kleine Kachel mittelgroßen Kachel, große Kachel, Breite Kachel, große Kachel, app-Symbol, Begrüßungsbildschirm, und Flight-Logo-Ressourcen für jedes Skalierungsfaktor.
 
-Alle Objekte auf einmal zu generieren:
-1. Klicken Sie auf die **** neben der **Source** -Feld, und wählen Sie das Bild, das Sie verwenden möchten. Wenn Sie ein Bitmap-Bild verwenden, stellen Sie sicher, dass sie mindestens 400 400 Pixel ist, damit Sie scharfe Ergebnisse erhalten. Vektorbasierte Bilder funktionieren am besten; Visual Studio können Sie AI (Adobe Illustrator) und PDF-Dateien verwenden. 
+Um alle Ressourcen auf einmal zu generieren:
+1. Klicken Sie auf die **** neben der **Source** -Feld, und wählen Sie das Bild, das Sie verwenden möchten. Wenn Sie ein Bitmap-Bild verwenden, stellen Sie sicher, dass sie mindestens 400 um 400 Pixel ist, damit Sie scharfe Ergebnisse abrufen. Vektorbasierte Bilder funktionieren am besten; Visual Studio können Sie AI (Adobe Illustrator) und PDF-Dateien verwenden. 
 2. (Optional). Konfigurieren Sie im Abschnitt **Anzeigeeinstellungen** folgende Optionen:
 
-    a.  **Kurzname**: Geben Sie einen kurzen Namen für Ihre app.
+    a.  **Kurzname**: Geben Sie einen Kurznamen für Ihre app.
 
     b.  **Namen anzeigen**: angeben, ob der Kurzname auf Mittel, breit und große Kacheln angezeigt werden soll. 
 
     c. **Hintergrund-Kachel**: Geben Sie den Hexadezimalwert oder einen Farbnamen für die Hintergrundfarbe der Kachel. Beispiel: `#464646`. Der Standardwert lautet `transparent`.
 
-    d. **Hintergrund: Splash**: Geben Sie die hex-Wert oder Farbe für den Hintergrund des: Splash. 
+    d. **Hintergrund des: Splash**: Geben Sie die hex-Wert oder Farbe für den Hintergrund des: Splash. 
 
 3. Klicken Sie auf **generieren**. 
 
-Visual Studio generiert Bilddateien und Projekt hinzugefügt. Wenn Sie Ihre Ressourcen ändern möchten, wiederholen Sie einfach den Vorgang. 
+Visual Studio generiert die Dateien und Projekt hinzugefügt. Wenn Sie Ihre Ressourcen ändern möchten, wiederholen Sie einfach den Vorgang. 
 
 Skalierte Symbolressourcen führen Sie diese Datei Namenskonvention:
 
-*Dateiname*- Scale -*Skalierungsfaktor*PNG
+*Filename*- Scale -*Skalierungsfaktor*PNG
 
 Beispiel:
 
 Square150x150Logo-Scale-100.png, Square150x150Logo-Scale-200.png, Square150x150Logo-Scale-400.png
 
-Beachten Sie, dass ein signallogo standardmäßig von Visual Studio generiert wird. Ist, dass Ihre signallogo ist eindeutig und wahrscheinlich mit Ihrer app-Symbole sollte nicht übereinstimmen. Weitere Informationen finden Sie in der [signalbenachrichtigungen für UWP-apps-Artikel](/windows/uwp/design/shell/tiles-and-notifications/badges). 
+Beachten Sie, dass eine signallogo standardmäßig von Visual Studio generiert wird. Ist, dass Ihre signallogo ist eindeutig und wahrscheinlich mit Ihrer app-Symbole sollte nicht übereinstimmen. Weitere Informationen finden Sie in der [signalbenachrichtigungen für UWP-apps Artikel](/windows/uwp/design/shell/tiles-and-notifications/badges). 
 
 
 ## <a name="more-about-app-icon-assets"></a>Weitere Informationen zu Ressourcen für app-Symbol
 Visual Studio generiert alle app-Symbol-Ressourcen, die für das Projekt erforderlich, aber wenn Sie diese anpassen möchten, hilft es um zu verstehen, wie sie sich von anderen app-Ressourcen sind. 
 
-Das app-Symbol-Element wird angezeigt, in vielen Orten: der Windows-Taskleiste, der Aufgabenansicht, ALT + TAB und der unteren rechten Ecke von startkacheln. Da die app-Symbol-Ressource an vielen Orten angezeigt wird, verfügt über einige zusätzliche größenanpassung und Optionen, die die andere Ressourcen verfügen nicht über plating: Assets "Target-Size" und "unbeschichtete" Ressourcen. 
+Das app-Symbol-Element wird angezeigt, in vielen Orten: der Windows-Taskleiste, der Aufgabenansicht, ALT + TAB und der unteren rechten Ecke von startkacheln. Da die app-Symbol-Ressource an vielen Orten angezeigt wird, verfügt über einige zusätzliche größenanpassung und Optionen, die die andere Ressourcen verfügen nicht über plating: "Target-Size" Bestand und "unbeschichtete" Ressourcen. 
 
 ### <a name="target-size-app-icon-assets"></a>Zielgröße-app-Symbolressourcen
-Zusätzlich zu den standardmäßigen Skalierungsfaktor Größen ("Square44x44Logo.scale-400.png") empfehlen wir auch "Target-Size" Ressourcen erstellen. Wir bezeichnen diese Ressourcen-Zielgröße, da sie bestimmte Größen, z. B. bestimmte Skalierungsfaktoren, z. B. 400, anstatt 16 Pixel abzielen. Zielgröße-Ressourcen sind für Oberflächen, die Skalierung Plateau System nicht:
+Zusätzlich zu den standardmäßigen Skalierungsfaktor Größen ("Square44x44Logo.scale-400.png") empfehlen wir auch "Target-Size" Ressourcen erstellen. Wir bezeichnen diese Ressourcen Zielgröße, da sie bestimmte Größen, z. B. bestimmte Skalierungsfaktoren, z. B. 400, anstatt 16 Pixel abzielen. Zielgröße-Ressourcen sind für Oberflächen, die die Skalierung Plateau System keine verwenden:
 
 * Starten der Sprungliste (Desktop)
 * Starten der unteren Ecke der Kachel (Desktop)
@@ -246,7 +246,7 @@ Hier sind die Oberflächen, die Symbolressourcen unbeschichtete app verwenden:
 * ALT + TAB
 
 
-### <a name="target-and-unplated-sizing"></a>Ziel und zielbasierte anpassen
+### <a name="target-and-unplated-sizing"></a>Ziel und unbeschichtete anpassen
 
 Hier sind die Größe Empfehlungen für zielbasierte Ressourcen mit einer Skalierung von 100 %:
 
@@ -254,18 +254,18 @@ Hier sind die Größe Empfehlungen für zielbasierte Ressourcen mit einer Skalie
 
 
 ## <a name="more-about-splash-screen-assets"></a>Weitere Informationen zu Ressourcen für den Begrüßungsbildschirm
-Weitere Informationen über Begrüßungsbildschirme finden Sie im [UWP Begrüßungsbildschirm Bildschirme Artikel](/windows/uwp/launch-resume/splash-screens).
+Weitere Informationen zu Begrüßungsbildschirme finden Sie im [UWP Begrüßungsbildschirm Bildschirme Artikel](/windows/uwp/launch-resume/splash-screens).
 
 ## <a name="more-about-badge-logo-assets"></a>Weitere Informationen zur Badge-Logo-Ressourcen
 
-Wenn Sie den Asset-Generator verwenden, um alle Ressourcen zu generieren, Sie müssen, es gibt ein Grund, warum es Signal Logos standardmäßig generiert nicht: sie sind unterscheidet sich von anderen app-Ressourcen. Das signallogo ist ein Status-Bild, Benachrichtigungen und in der app Kacheln angezeigt wird. 
+Wenn Sie die Asset-Generator verwenden, um alle Ressourcen zu generieren, Sie müssen, besteht kein Grund, warum es Signal Logos standardmäßig generiert nicht: sie sind unterscheidet sich von anderen app-Ressourcen. Das signallogo ist ein Status-Bild, Benachrichtigungen und in der app-Kacheln angezeigt wird. 
 
-Weitere Informationen finden Sie in der [signalbenachrichtigungen für UWP-apps-Artikel](/windows/uwp/design/shell/tiles-and-notifications/badges).
+Weitere Informationen finden Sie in der [signalbenachrichtigungen für UWP-apps Artikel](/windows/uwp/design/shell/tiles-and-notifications/badges).
 
 
 ## <a name="customizing-asset-padding"></a>Anpassen der Ressource "Padding"
 
-Standardmäßig gilt Asset-Generator von Visual Studio empfohlen "Padding" für alle Bilder. Wenn Ihre Bilder "Padding" bereits enthalten oder wenn Sie randlose Bilder, die am Ende der Kachel erweitern möchten, können Sie dieses Feature deaktivieren deaktivieren Sie das Kontrollkästchen **"Padding" empfohlen anwenden** . 
+Standardmäßig gilt Asset-Generator von Visual Studio empfohlen "Padding" für alle Bilder. Wenn Ihre Bilder "Padding" bereits enthalten, oder Sie möchten randlose Bilder, die am Ende der Kachel erweitern, können Sie dieses Feature deaktivieren deaktivieren Sie das Kontrollkästchen **"Padding" empfohlen anwenden** . 
 
 ### <a name="tile-padding-recommendations"></a>Kachel "Padding" Empfehlungen
 Wenn Sie Ihre eigene Padding bereitstellen möchten, folgen Sie unsere Empfehlungen für die Kacheln. 
