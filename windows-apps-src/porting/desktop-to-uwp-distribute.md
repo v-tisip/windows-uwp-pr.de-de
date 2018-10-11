@@ -12,11 +12,11 @@ keywords: windows10, UWP
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
 ms.openlocfilehash: c81e8d07efa04e93128089eaec78fb83b822a4b9
-ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "4504941"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4533501"
 ---
 # <a name="distribute-a-packaged-desktop-application"></a><span data-ttu-id="4f86a-103">Verteilen einer verpackten desktop-Anwendungs</span><span class="sxs-lookup"><span data-stu-id="4f86a-103">Distribute a packaged desktop application</span></span>
 
