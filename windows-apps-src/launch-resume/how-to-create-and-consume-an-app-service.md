@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7475ae8db964b23de89488d883c135158ea20e74
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4461716"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4508564"
 ---
 # <a name="create-and-consume-an-app-service"></a><span data-ttu-id="23baa-104">Erstellen und Verwenden eines App-Diensts</span><span class="sxs-lookup"><span data-stu-id="23baa-104">Create and consume an app service</span></span>
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Hintergrundaufgabe, app-Dienst verbundene Geräte, remote-Systemen
 ms.localizationpriority: medium
 ms.openlocfilehash: d4aa5a4f379e0791e9da7db4ecd2a27c09cf0a3a
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4472040"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4508189"
 ---
 # <a name="launching-resuming-and-background-tasks"></a><span data-ttu-id="f9576-104">Starten, Fortsetzen und Hintergrundaufgaben</span><span class="sxs-lookup"><span data-stu-id="f9576-104">Launching, resuming, and background tasks</span></span>
 
