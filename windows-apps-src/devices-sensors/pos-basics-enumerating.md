@@ -10,24 +10,24 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Point of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 8796b2ea025a00015881d39449f2dd99d57121f8
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4468709"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4506950"
 ---
 # <a name="enumerating-point-of-service-devices"></a>Auflisten von Point of Service-Geräten
 In diesem Abschnitt erfahren Sie, wie Sie [eine Geräteauswahl definieren](https://docs.microsoft.com/windows/uwp/devices-sensors/build-a-device-selector), die verwendet wird, um die im System verfügbaren Geräte abzufragen, und verwenden diese Auswahl, um Point of Service-Geräte mithilfe einer der folgenden Methoden aufzulisten:
 
 **Methode 1:** [Verwenden einer Geräteauswahl](#method-1:-use-a-device-picker)
 <br/>
-Zeigen Sie eine Geräteauswahl-UI an und den Benutzer ein verbundenen Gerät auswählen. Diese Methode behandelt die Liste aktualisieren, wenn Geräte angeschlossen und entfernt werden, und es ist einfacher und sicherer als andere Methoden.
+Zeigen Sie eine Geräteauswahl-UI für das und den Benutzer ein verbundenen Gerät auswählen. Diese Methode behandelt die Liste aktualisieren, wenn Geräte angeschlossen und entfernt werden, und es ist einfacher und sicherer als andere Methoden.
 
-**Methode 2:** [Abrufen des ersten verfügbaren Geräts](#Method-1:-get-first-available-device)<br />Verwenden Sie [GetDefaultAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.getdefaultasync) , um das erste verfügbare Gerät in einer bestimmten Point of Service-Geräteklasse zugreifen.
+**Methode 2:** [Abrufen des ersten verfügbaren Geräts](#Method-1:-get-first-available-device)<br />Verwenden Sie [GetDefaultAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.getdefaultasync) , um das erste verfügbare Gerät in einer bestimmten Point-of-Service-Geräteklasse zugreifen.
 
-**Methode 3:** [Momentaufnahmen von Geräten](#Method-2:-Snapshot-of-devices)<br />Enumerieren einer Momentaufnahme von POS-Geräte, die auf dem System zu einem bestimmten Zeitpunkt vorhanden sind. Dies ist nützlich, wenn Sie eine eigene Benutzeroberfläche erstellen möchten oder Geräte auflisten müssen, ohne dem Benutzer eine Benutzeroberfläche anzuzeigen. [FindAllAsync](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync) hält Ergebnisse zurück, bis die gesamte Auflistung abgeschlossen ist.
+**Methode 3:** [Momentaufnahmen von Geräten](#Method-2:-Snapshot-of-devices)<br />Enumerieren einer Momentaufnahme von Point of Service-Geräte, die auf dem System zu einem bestimmten Zeitpunkt vorhanden sind. Dies ist nützlich, wenn Sie eine eigene Benutzeroberfläche erstellen möchten oder Geräte auflisten müssen, ohne dem Benutzer eine Benutzeroberfläche anzuzeigen. [FindAllAsync](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync) hält Ergebnisse zurück, bis die gesamte Auflistung abgeschlossen ist.
 
-**Methode 4:** [Auflisten und überwachen](#Method-3:-Enumerate-and-watch)<br />[DeviceWatcher](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) ist eine leistungsfähigere und flexiblere Enumeration-Modell, das ermöglicht Ihnen das Aufzählen von Geräten, die derzeit vorhanden sind, und außerdem Benachrichtigungen empfangen, wenn Geräte hinzugefügt oder aus dem System entfernt werden.  Dies ist hilfreich, wenn Sie eine aktuelle Liste von Geräten im Hintergrund zur Anzeige auf Ihrer Benutzeroberfläche verwalten möchten, statt darauf zu warten, bis eine Momentaufnahme erstellt wird.
+**Methode 4:** [Auflisten und überwachen](#Method-3:-Enumerate-and-watch)<br />[DeviceWatcher](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) ist eine leistungsfähigere und flexiblere auflistungsmodell, mit dem Sie zum Auflisten von Geräten, die derzeit vorhanden sind, und außerdem Benachrichtigungen empfangen, wenn Geräte hinzugefügt oder aus dem System entfernt werden.  Dies ist hilfreich, wenn Sie eine aktuelle Liste von Geräten im Hintergrund zur Anzeige auf Ihrer Benutzeroberfläche verwalten möchten, statt darauf zu warten, bis eine Momentaufnahme erstellt wird.
 
 ## <a name="define-a-device-selector"></a>Definieren einer Geräteauswahl
 Mit einer Geräteauswahl können Sie die Geräte begrenzen, die Sie beim Auflisten von Geräten durchsuchen.  Dadurch können Sie nur relevante Ergebnisse abrufen und die Zeit verkürzen benötigt wird, um die gewünschten Geräte aufzulisten.
@@ -48,7 +48,7 @@ Die **GetDeviceSelector** -Methoden für die verschiedenen Gerätetypen sind:
 * [MagneticStripeReader.GetDeviceSelector](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereader.getdeviceselector)
 * [PosPrinter.GetDeviceSelector](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.posprinter.getdeviceselector)
 
-Verwenden eine **GetDeviceSelector** -Methode, die einen [PosConnectionTypes](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.posconnectiontypes) Wert als Parameter annimmt, können Sie einschränken, Ihre Auswahl zum Auflisten von lokalen, Netzwerk- oder Bluetooth-attached POS-Geräte, reduziert den Zeitaufwand für die Abfrage abgeschlossen.  Das folgende Beispiel zeigt, dass eine Verwendung dieser Methode einen Selektor definieren, der nur lokal unterstützt POS-Drucker verbunden.
+Verwenden eine **GetDeviceSelector** -Methode, die einen [PosConnectionTypes](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.posconnectiontypes) Wert als Parameter akzeptiert, können Sie einschränken, Ihre Auswahl zum Auflisten von lokalen, Netzwerk- oder Bluetooth verbundene POS-Geräte, reduziert den Zeitaufwand für die Abfrage abgeschlossen.  Das folgende Beispiel zeigt, dass eine Verwendung dieser Methode einen Selektor definieren, der nur lokal unterstützt POS-Drucker verbunden.
 
  ```Csharp
 using Windows.Devices.PointOfService;
@@ -61,11 +61,11 @@ string selector = POSPrinter.GetDeviceSelector(PosConnectionTypes.Local);
 
 ## <a name="method-1-use-a-device-picker"></a>Methode 1: Verwenden einer Geräteauswahl
 
-Die [DevicePicker](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker) -Klasse können Sie eine Auswahl-Flyout angezeigt wird, eine Liste der Geräte für den Benutzer zur Auswahl enthält. Die Eigenschaft [Filter](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker.filter) können Sie auswählen, welche Arten von Geräten in der Auswahl angezeigt. Diese Eigenschaft ist vom Typ [DevicePickerFilter](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter). Sie können den Filter mithilfe der Eigenschaft [SupportedDeviceClasses](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter.supporteddeviceclasses) oder [SupportedDeviceSelectors](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter.supporteddeviceselectors) Gerätetypen hinzufügen.
+Die [DevicePicker](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker) -Klasse können Sie eine Auswahl-Flyout angezeigt wird, eine Liste der Geräte für den Benutzer zur Auswahl enthält. Die Eigenschaft [Filter](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker.filter) können Sie auswählen, welche Arten von Geräten, die in der Auswahl angezeigt. Diese Eigenschaft ist vom Typ [DevicePickerFilter](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter). Sie können Gerätetypen auf den Filter unter Verwendung der [SupportedDeviceClasses](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter.supporteddeviceclasses) oder [SupportedDeviceSelectors](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter.supporteddeviceselectors) hinzufügen.
 
 Wenn Sie die Geräteauswahl anzeigen möchten, können Sie die Methode [PickSingleDeviceAsync](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker.picksingledeviceasync) aufrufen wird die Auswahl-UI anzeigen und das ausgewählte Gerät zurück. Sie müssen eine [Rect](https://docs.microsoft.com/uwp/api/windows.foundation.rect) angeben, die bestimmt, wo das Flyout angezeigt wird. Diese Methode gibt ein [DeviceInformation](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation) -Objekt, damit es mit der POS-APIs verwenden, müssen Sie die **FromIdAsync** -Methode für die bestimmte Geräteklasse verwenden. Sie übergeben Sie die [DeviceInformation.Id](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.id) -Eigenschaft als den Parameter der Methode *DeviceId* , und rufen Sie eine Instanz der Geräteklasse als Rückgabewert.
 
-Der folgende Codeausschnitt erstellt ein **DevicePicker**, fügt ein Barcode-Scanner-Filter, hat der Benutzer ein Gerät auswählen und erstellt dann ein **BarcodeScanner** -Objekt basierend auf die Geräte-ID:
+Der folgende Codeausschnitt erstellt ein **DevicePicker**, fügt ein Barcode-Scanner-Filter, verfügt über den Benutzer auswählen eines Geräts, und erstellt dann ein **BarcodeScanner** -Objekt basierend auf die Geräte-ID:
 
 ```cs
 private async Task<BarcodeScanner> GetBarcodeScanner()
@@ -81,7 +81,7 @@ private async Task<BarcodeScanner> GetBarcodeScanner()
 
 ## <a name="method-2-get-first-available-device"></a>Methode 2: Abrufen des ersten verfügbaren Geräts
 
-Die einfachste Möglichkeit, ein POS-Gerät ist mit **GetDefaultAsync** des ersten verfügbaren Geräts innerhalb einer Geräteklasse Point of Service abgerufen. 
+Die einfachste Möglichkeit, ein POS-Gerät ist mit **GetDefaultAsync** des ersten verfügbaren Geräts innerhalb einer Geräteklasse Point-of-Service-abrufen. 
 
 Das folgende Beispiel veranschaulicht die Verwendung von [GetDefaultAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.getdefaultasync#Windows_Devices_PointOfService_BarcodeScanner_GetDefaultAsync) für [BarcodeScanner](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner). Das Codierungsmuster ist für alle POS-Geräteklassen ähnlich.
 
@@ -126,13 +126,13 @@ foreach (DeviceInformation devInfo in deviceCollection)
 ```
 
 > [!TIP] 
-> Wenn Sie mit den [Windows.Devices.Enumeration](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration)-APIs arbeiten, müssen Sie häufig [DeviceInformation](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation)-Objekte verwenden, um Informationen zu einem bestimmten Gerät zu erhalten. Beispielsweise kann die [DeviceInformation.ID](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.id) -Eigenschaft verwendet werden, zum Wiederherstellen und wiederverwenden dasselbe Gerät in einer zukünftigen Sitzung verfügbar ist und die [DeviceInformation.Name](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.name) -Eigenschaft kann für Anzeigezwecke in Ihrer app verwendet werden.  Informationen zu weiteren verfügbaren Eigenschaften finden Sie auf der [DeviceInformation](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation) Referenzseite.
+> Wenn Sie mit den [Windows.Devices.Enumeration](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration)-APIs arbeiten, müssen Sie häufig [DeviceInformation](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation)-Objekte verwenden, um Informationen zu einem bestimmten Gerät zu erhalten. Beispielsweise kann die [DeviceInformation.ID](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.id) -Eigenschaft verwendet werden, zum Wiederherstellen und wiederverwenden dasselbe Gerät, wenn es in einer zukünftigen Sitzung verfügbar ist und die [DeviceInformation.Name](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.name) -Eigenschaft für Anzeigezwecke in Ihrer app verwendet werden kann.  Informationen zu weiteren verfügbaren Eigenschaften finden Sie auf der [DeviceInformation](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation) Referenzseite.
 
 ## <a name="method-4-enumerate-and-watch"></a>Methode 4: Auflisten und überwachen
 
 Eine leistungsfähigere und flexiblere Methode für die Auflistung von Geräten ist die Erstellung eines [DeviceWatcher](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher)-Elements.  Ein Geräteüberwachungselement listet Geräte dynamisch auf, sodass die Anwendung Benachrichtigungen erhält, wenn Geräte hinzugefügt, entfernt oder geändert werden, nachdem die ursprüngliche Aufzählung abgeschlossen ist.  Ein **DeviceWatcher** können Sie erkennen, wann ein Netzwerk verbundenen Gerät online geschaltet ist ein Bluetooth-Gerät in Reichweite ist und ob ein lokal angeschlossenes Gerät entfernt wird, damit Sie die entsprechende Aktion innerhalb der Anwendung nutzen können.
 
-In diesem Beispiel wird die Erstellung einer **DeviceWatcher** oben definierte Auswahl verwendet sowie Ereignishandler für die [hinzugefügten](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.added), [entfernten](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.removed)oder [aktualisierten](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.updated) Benachrichtigungen definiert. Sie müssen die Details zu den Aktionen ausfüllen, die bei jeder Benachrichtigung durchgeführt werden sollen.
+In diesem Beispiel wird die Erstellung einer **DeviceWatcher** oben definierte Auswahl verwendet, sowie Ereignishandler für die [hinzugefügten](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.added), [entfernten](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.removed)oder [aktualisierten](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.updated) Benachrichtigungen definiert. Sie müssen die Details zu den Aktionen ausfüllen, die bei jeder Benachrichtigung durchgeführt werden sollen.
 
 ```Csharp
 using Windows.Devices.Enumeration;
@@ -159,7 +159,7 @@ void DeviceWatcher_Updated(DeviceWatcher sender, DeviceInformationUpdate args)
 ```
 
 > [!TIP]
-> Finden Sie weitere Informationen zur Verwendung von einem **DeviceWatcher** [enumerieren und Überwachen von Geräten]( https://docs.microsoft.com/windows/uwp/devices-sensors/enumerate-devices#enumerate-and-watch-devices) .
+> Weitere Informationen über die Verwendung von einem **DeviceWatcher**finden Sie unter [enumerieren und Überwachen von Geräten]( https://docs.microsoft.com/windows/uwp/devices-sensors/enumerate-devices#enumerate-and-watch-devices) .
 
 ## <a name="see-also"></a>Weitere Informationen:
 * [Erste Schritte mit Point Of Service-Geräten](pos-basics.md)

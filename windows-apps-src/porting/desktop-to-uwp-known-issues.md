@@ -12,13 +12,13 @@ keywords: windows10, UWP
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
 ms.openlocfilehash: 50a455dc43007a433bfabd995af7968e93fe1900
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4471196"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4508505"
 ---
-# <a name="known-issues-with-packaged-desktop-applications"></a>Bekannte Probleme mit verpackten desktop-Apps
+# <a name="known-issues-with-packaged-desktop-applications"></a>Bekannte Probleme mit verpackte desktop-Apps
 
 Dieser Artikel enthält bekannte Probleme, die auftreten können, wenn Sie ein Windows-app-Paket für Ihre desktop-Anwendung erstellen.
 
@@ -56,7 +56,7 @@ Dies ist eine bekannte Einschränkung, und derzeit sind keine Umgehungen vorhand
 
 Dies kann vorkommen, wenn die ausführbaren Dateien in Ihrer Anwendung die Erweiterung **. EXE** in Großbuchstaben aufweisen. Obwohl die Groß-/Kleinschreibung dieser Erweiterung keine Auswirkungen auf haben, ob die Anwendung ausgeführt wird, kann dies den DAC diesen Fehler generiert.
 
-Um dieses Problem zu beheben, versuchen Sie, das **-AppExecutable**-Kennzeichen beim Verpacken festzulegen, und verwenden Sie als Erweiterung Ihrer wichtigsten ausführbaren Datei „.exe” in Kleinbuchstaben (z.B.: MYAPP.exe).    Alternativ können Sie die Groß-/Kleinschreibung für alle ausführbaren Dateien in Ihrer Anwendung aus Kleinbuchstaben in Großbuchstaben ändern (z. B.: aus. EXE .exe).
+Um dieses Problem zu beheben, versuchen Sie, das **-AppExecutable**-Kennzeichen beim Verpacken festzulegen, und verwenden Sie als Erweiterung Ihrer wichtigsten ausführbaren Datei „.exe” in Kleinbuchstaben (z.B.: MYAPP.exe).    Alternativ können Sie die Groß-/Kleinschreibung für alle ausführbaren Dateien in der Anwendung in Großbuchstaben in Kleinbuchstaben ändern (z. B.: aus. EXE-Datei in .exe).
 
 ### <a name="corrupted-or-malformed-authenticode-signatures"></a>Beschädigte oder falsch formatierte Authenticode-Signaturen
 
@@ -139,7 +139,7 @@ Dies kann passieren, wenn Ihr Paket eine Binärdatei mit ein beschädigten Zerti
 
 * Die Größe des Zertifikats ist nicht positiv.
 
-* Die Zertifikat-Start wird nicht nach der `IMAGE_NT_HEADERS32` Struktur für eine 32-Bit-ausführbare Datei oder nach der `IMAGE_NT_HEADERS64` Struktur für eine 64-Bit-ausführbare Datei.
+* Der Zertifikat Start wird nicht nach der `IMAGE_NT_HEADERS32` Struktur für eine 32-Bit-ausführbare Datei oder nach dem die `IMAGE_NT_HEADERS64` Struktur für eine 64-Bit-ausführbare Datei.
 
 * Der Zertifikat-Zeiger ist nicht ordnungsgemäß für eine Struktur WIN_CERTIFICATE ausgerichtet.
 
@@ -149,7 +149,7 @@ Zum Auffinden von Dateien, die eine ungültige PE-Zertifikat enthalten, öffnen 
 set APPXSIP_LOG=1
 ```
 
-Signieren Sie über die **Befehlszeile**dann die Anwendung erneut. Beispiel:
+Klicken Sie dann über die **Befehlszeile**, Signieren Sie Ihre Anwendung erneut an. Beispiel:
 
 ```
 signtool.exe sign /a /v /fd SHA256 /f APPX_TEST_0.pfx C:\Users\Contoso\Desktop\pe\VLC.appx

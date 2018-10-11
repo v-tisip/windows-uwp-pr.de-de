@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ddeccfe4c5e198afd77eaa4a81fc017543291ba1
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4468818"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4506370"
 ---
 # <a name="custom-dependency-properties"></a>Benutzerdefinierte Abhängigkeitseigenschaften
 
@@ -177,7 +177,7 @@ void ImageWithLabelControl::RegisterDependencyProperties()
 Für Abhängigkeitseigenschaften gelten Namenskonventionen, die Sie bis auf bestimmte Ausnahmefälle befolgen müssen. Die Abhängigkeitseigenschaft selbst hat einen Basisnamen („Label“ im vorherigen Beispiel), der als erster Parameter von [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) angegeben wird. Dieser Name muss innerhalb jedes Registrierungstyps eindeutig sein. Diese Eindeutigkeit muss auch von vererbten Membern eingehalten werden. Abhängigkeitseigenschaften, die über Basistypen geerbt werden, werden als Teil des Registrierungstyps betrachtet. Die Namen geerbter Eigenschaften können nicht erneut registriert werden.
 
 > [!WARNING]
-> Obwohl der Name, die Sie angeben, dass hier kann jeder Zeichenfolgebezeichner sein, die bei der Programmierung einer Sprache Ihrer Wahl in gültig ist, möchten Sie in der Regel Ihre Abhängigkeitseigenschaft auch in XAML festlegen können. Für die Verwendung in XAML muss der von Ihnen gewählte Eigenschaftenname ein gültiger XAML-Name sein. Weitere Informationen finden Sie in der [XAML-Übersicht](xaml-overview.md).
+> Obwohl der Name, die Sie angeben, dass hier kann jeder Zeichenfolgebezeichner sein, die bei der Programmierung einer Sprache Ihrer Wahl in gilt, möchten Sie in der Regel Ihre Abhängigkeitseigenschaft auch in XAML festlegen können. Für die Verwendung in XAML muss der von Ihnen gewählte Eigenschaftenname ein gültiger XAML-Name sein. Weitere Informationen finden Sie in der [XAML-Übersicht](xaml-overview.md).
 
 Kombinieren Sie beim Erstellen der Bezeichnereigenschaft den von Ihnen registrierten Eigenschaftennamen mit dem Suffix „Property“ (beispielsweise „LabelProperty“). Diese Eigenschaft ist Ihr Bezeichner für die Abhängigkeitseigenschaft und wird als Eingabe für die [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361)- und [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359)-Aufrufe verwendet, die Sie in Ihren eigenen Eigenschaftenwrappern ausführen. Sie wird auch vom Eigenschaftensystem und anderen XAML-Prozessoren, wie z. B. [**{x:Bind}**](x-bind-markup-extension.md), verwendet.
 
@@ -186,7 +186,7 @@ Kombinieren Sie beim Erstellen der Bezeichnereigenschaft den von Ihnen registrie
 Ihr Eigenschaftenwrapper sollte [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) in der **get**-Implementierung und [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) in der **set**-Implementierung aufrufen.
 
 > [!WARNING]
-> Von Ausnahmefällen abgesehen sollten Ihre Wrapperimplementierungen nur die [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) und [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) Vorgänge ausführen. Andernfalls erhalten Sie ein anderes Verhalten, wenn Ihre Eigenschaft über XAML anstelle über Code festgelegt wird. Aus Effizienzgründen umgeht der XAML-Parser Wrapper beim Festlegen von Abhängigkeitseigenschaften und kommuniziert mit dem Sicherungsspeicher über **SetValue**.
+> Alle von Ausnahmefällen abgesehen sollten Ihre Wrapperimplementierungen nur die [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) und [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) Vorgänge ausführen. Andernfalls erhalten Sie ein anderes Verhalten, wenn Ihre Eigenschaft über XAML anstelle über Code festgelegt wird. Aus Effizienzgründen umgeht der XAML-Parser Wrapper beim Festlegen von Abhängigkeitseigenschaften und kommuniziert mit dem Sicherungsspeicher über **SetValue**.
 
 ```csharp
 public String Label
@@ -251,7 +251,7 @@ In den bisherigen Beispielen für den Aufruf von [**DependencyProperty.Register*
 In der Regel geben Sie einen [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) als inline erstellte Instanz innerhalb der Parameter für [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) an.
 
 > [!NOTE]
-> Wenn Sie eine Implementierung [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812) definieren, müssen Sie Aufruf eines Konstruktors [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) , anstatt die Hilfsmethode [**PropertyMetadata.Create**](https://msdn.microsoft.com/library/windows/apps/hh702099) verwenden, um die **PropertyMetadata** -Instanz definieren.
+> Wenn Sie eine [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812) -Implementierung definieren, müssen Sie Aufruf eines Konstruktors [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) , anstatt die Hilfsmethode [**PropertyMetadata.Create**](https://msdn.microsoft.com/library/windows/apps/hh702099) verwenden, um die Instanz **PropertyMetadata** definieren.
 
 Im nächsten Beispiel werden die zuvor gezeigten Beispiele für [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) modifiziert, indem auf eine [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771)-Instanz mit einem [**PropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/br208770)-Wert verwiesen wird. Die Implementierung des OnLabelChanged-Rückrufs wird später in diesem Abschnitt gezeigt.
 

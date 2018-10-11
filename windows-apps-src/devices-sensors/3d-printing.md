@@ -11,23 +11,23 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, 3dprinting, 3D-Druck
 ms.localizationpriority: medium
 ms.openlocfilehash: acf0c9856328e26f8c39adf3f062a3516e7189e2
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4465851"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4506027"
 ---
 # <a name="3d-printing"></a>3D-Druck
 
 
-In diesem Abschnitt wird beschrieben, wie Sie den [Windows.Graphics.Printing3D-Namespace](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx) , um Ihre universelle Windows-app 3D-Druckfunktionen hinzufügen zu nutzen.  
+In diesem Abschnitt wird beschrieben, wie die [Windows.Graphics.Printing3D-Namespace](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.aspx) , um Ihre universelle Windows-app 3D-Druckfunktionen hinzufügen zu nutzen.  
 
-Weitere Informationen zum 3D-Druck mit Windows 10, einschließlich Ressourcen für Hardwarepartner, Community-Diskussionsforen und allgemeine Informationen zu 3D Funktionen für den finden Sie auf der Website [3D Drucken mit Windows 10](https://developer.microsoft.com/windows/hardware/3d-print-support-windows-10) im Hardware Dev Center.
+Weitere Informationen zum 3D-Druck mit Windows 10, einschließlich Ressourcen für Hardwarepartner, Community-Diskussionsforen und allgemeine Informationen zu 3D Funktionen für den finden Sie unter den Standort [3D Drucken mit Windows 10](https://developer.microsoft.com/windows/hardware/3d-print-support-windows-10) im Hardware Dev Center.
 
 | Thema | Beschreibung |
 |-------|-------------|
 | [3D-Druck aus der App](3d-print-from-app.md) | Hier erfahren Sie, wie Sie Ihre UWP-app 3D-Druckfunktionen hinzufügen. In diesem Thema wird erläutert, wie das 3D-Drucken-Dialogfeld aufgerufen wird, nachdem Sie sich vergewissert haben, dass das 3D-Modell gedruckt werden kann und im richtigen Format vorliegt. |
-| [Generieren eines 3MF-Pakets](generate-3mf.md) | Beschreibt die Struktur des 3D Manufacturing Format-Dateityps und wie es erstellt und mit den APIs Windows.Graphics.Printing3D bearbeitet werden. |
+| [Generieren eines 3MF-Pakets](generate-3mf.md) | Beschreibt die Struktur des 3D Manufacturing Format-Dateityps und wie sie erstellt haben und mit den APIs Windows.Graphics.Printing3D bearbeitet werden. |
 
 ## <a name="related-topics"></a>Verwandte Themen
 

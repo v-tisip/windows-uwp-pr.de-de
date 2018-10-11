@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Dashboard, Devcenter, Entwicklungszentrum
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f5357b038091b72681915e46875f92077bb3c9e
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4472420"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4508423"
 ---
 # <a name="using-the-windows-dev-center-dashboard"></a>Verwenden des Windows Dev Center-Dashboards
 
@@ -37,9 +37,9 @@ Wenn Sie [eine Übermittlung für Ihre app erstellen](app-submissions.md) (erstm
 
 [Add-Ons (in-app-Produkte)](add-on-submissions.md) werden unabhängig von der app Übermittlung verwaltet. Dadurch sind Sie flexibler und können unabhängig Änderungen vornehmen.
 
-Windows Dev Center bietet auch Funktionen für [mehrere Benutzer hinzufügen](manage-account-users.md),[app-Verwaltung und Konfigurieren von Diensten](app-management-and-services.md), [Überprüfen von Analysedaten](analytics.md), [auszahlungsberichte](payout-summary.md), [Vermarktung von apps](attract-customers-and-promote-your-apps.md), [, die mit Ihrer Kunden](engage-with-your-customers.md), [Betatests](beta-testing-and-targeted-distribution.md), [Verteilen von BRANCHENSPEZIFISCHEN apps an Unternehmen](distribute-lob-apps-to-enterprises.md)und vieles mehr.
+Windows Dev Center bietet auch Funktionen für [mehrere Benutzer hinzufügen](manage-account-users.md),[app-Verwaltung und Konfigurieren von Diensten](app-management-and-services.md), [Überprüfen von Analysedaten](analytics.md), [auszahlungsberichte](payout-summary.md), [Vermarktung von apps](attract-customers-and-promote-your-apps.md), [mit Ihrer Kunden](engage-with-your-customers.md), [Betatests](beta-testing-and-targeted-distribution.md), [Verteilen von BRANCHENSPEZIFISCHEN apps an Unternehmen](distribute-lob-apps-to-enterprises.md)und vieles mehr.
 
-Ihr Feedback hilft uns dabei, die besten Funktionen zu erstellen und anzubieten. Während der Arbeit im Dashboard verwenden Sie den **Feedback** -Links in der oberen rechten Ecke des Dashboards, um Ihre Ideen und Vorschläge zu teilen.
+Ihr Feedback hilft uns dabei, die besten Funktionen zu erstellen und anzubieten. Während der Arbeit im Dashboard verwenden Sie den **Feedback** -Links in der oberen rechten Ecke des Dashboards für Ihre Ideen und Vorschläge.
 
 
  

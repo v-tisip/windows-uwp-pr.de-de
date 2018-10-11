@@ -11,11 +11,11 @@ keywords: Windows10, UWP
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
 ms.openlocfilehash: 7492f9d4fc2111880f27dcb6a48eff3ad0ccd315
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4462541"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4507306"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Einrichten automatisierter Builds für UWP-Apps
 
@@ -81,7 +81,7 @@ Mit dieser Aufgabe werden die in Ihrem Projekt definierten NuGet-Pakete wiederhe
 
 #### <a name="configure-the-build-solution-build-task"></a>Konfigurieren der Buildaufgabe „Projektmappe erstellen“
 
-Mit dieser Aufgabe wird jede Lösung, die im Arbeitsordner Binärdateien und erzeugt die Ausgabedatei für app-Paket kompiliert. In dieser Aufgabe werden MSBuild-Argumente verwendet.  Sie müssen den Wert dieser Argumente angeben. Orientieren Sie sich an der folgenden Tabelle. 
+Mit dieser Aufgabe wird eine Lösung, die im Arbeitsordner Binärdateien und erzeugt die Ausgabedatei für app-Paket kompiliert. In dieser Aufgabe werden MSBuild-Argumente verwendet.  Sie müssen den Wert dieser Argumente angeben. Orientieren Sie sich an der folgenden Tabelle. 
 
 |**MSBuild-Argument**|**Wert**|**Beschreibung**|
 |--------------------|---------|---------------|
@@ -216,7 +216,7 @@ Dieser Fehler tritt auf, da auf Projektmappenebene nicht eindeutig ist, welche A
 Entfernen Sie dann das MSBuild-Argument `AppxBundle` aus dem Buildschritt.
 
 ## <a name="set-up-a-continuous-deployment-build-for-sideloading"></a>Einrichten eines Continuous Deployment-Builds zum Querladen
-Wenn diese Art von Build abgeschlossen ist, können Benutzer die app-Bundle-Datei aus dem artefaktabschnitt der Seite mit den Buildergebnissen herunterladen. Wenn Sie Betatests für die App durchführen möchten, indem Sie eine komplexere Verteilung erstellen, können Sie den HockeyApp-Dienst verwenden. Dieser Dienst bietet erweiterte Funktionen für Betatests, Benutzeranalysen und Absturzdiagnosen.
+Wenn dieser Buildtyp abgeschlossen ist, können Benutzer die app-Bundle-Datei aus dem artefaktabschnitt der Seite mit den Buildergebnissen herunterladen. Wenn Sie Betatests für die App durchführen möchten, indem Sie eine komplexere Verteilung erstellen, können Sie den HockeyApp-Dienst verwenden. Dieser Dienst bietet erweiterte Funktionen für Betatests, Benutzeranalysen und Absturzdiagnosen.
 
 ### <a name="applying-version-numbers-to-your-builds"></a>Anwenden von Versionsnummern auf Builds
 
@@ -256,7 +256,7 @@ Installieren Sie zuerst die Visual Studio-Erweiterung [HockeyApp](https://market
 
 Konfigurieren Sie als Nächstes die HockeyApp-Verbindung mithilfe dieser Anleitung: [How to use HockeyApp with Visual Studio Team Services (VSTS) or Team Foundation Server (TFS)](https://support.hockeyapp.net/kb/third-party-bug-trackers-services-and-webhooks/how-to-use-hockeyapp-with-visual-studio-team-services-vsts-or-team-foundation-server-tfs). Sie können Ihr Microsoft-Konto, ein Social Media-Konto oder einfach eine E-Mail-Adresse verwenden, um Ihr HockeyApp-Konto einzurichten. Der kostenlose Plan umfasst zwei Apps, einen Besitzer und keine Dateneinschränkungen.
 
-Anschließend können Sie eine HockeyApp-app manuell oder indem Sie eine vorhandene app-Paketdatei hochladen erstellen. Weitere Informationen finden Sie unter [Erstellen einer neuen App](https://support.hockeyapp.net/kb/app-management-2/how-to-create-a-new-app).  
+Anschließend können Sie eine HockeyApp-app manuell oder eine vorhandene app-Paketdatei hochladen erstellen. Weitere Informationen finden Sie unter [Erstellen einer neuen App](https://support.hockeyapp.net/kb/app-management-2/how-to-create-a-new-app).  
 
 Um eine vorhandene app-Paketdatei zu verwenden, fügen Sie einen Buildschritt hinzu, und legen Sie den Parameter binären Dateipfad des Buildschritts fest. 
 
@@ -319,7 +319,7 @@ Wenn Sie Ihre App verteilen möchten, ohne sie im Store zu veröffentlichen, kö
 Verwenden Sie zum Installieren von Apps das PowerShell-Skript `Add-AppDevPackage.ps1`. Dieses Skript wird fügt das Zertifikat im Abschnitt vertrauenswürdige Stammzertifizierungsstellen des lokalen Computers hinzu und dann installiert oder aktualisieren Sie die app-Paketdatei.
 
 #### <a name="sideloading-your-app-with-the-windows-10-anniversary-update"></a>Querladen einer App mit dem Windows10 Anniversary Update
-In Windows 10 Anniversary Update können Sie doppelklicken Sie auf die app-Paketdatei und Ihre app installieren, indem Sie die Schaltfläche "installieren" in einem Dialogfeld auswählen. 
+In Windows 10 Anniversary Update können Sie doppelklicken Sie auf die app-Paketdatei und Ihre app durch Auswählen der Schaltfläche "installieren" in einem Dialogfeld installieren. 
 
 ![Querladen in rs1](images/building-screen18.png) 
 

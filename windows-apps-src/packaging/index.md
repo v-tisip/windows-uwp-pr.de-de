@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Verpacken
 ms.localizationpriority: medium
 ms.openlocfilehash: ce77391fc189ef33aba3002685b0662d7cab1953
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4468789"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4506924"
 ---
 # <a name="packaging-apps"></a>Verpacken von Apps
 
@@ -33,7 +33,7 @@ Dieser Abschnitt enthält Artikel oder Links zum Verpacken von UWP (Universelle 
 | [Optionale Pakete und die Erstellung zugehöriger Sets](optional-packages.md) | Optionale Pakete enthalten Inhalte, die in ein Hauptpaket integriert werden können. Diese sind nützlich für herunterladbare Inhalte (DLC), da große Apps so im Hinblick auf Größenbeschränkungen geteilt werden, oder auch, um zusätzliche Inhalte getrennt von der ursprünglichen App zu liefern. |
 | [Optionale Pakete mit ausführbarem Code](optional-packages-with-executable-code.md) | Erfahren Sie, wie Sie Visual Studio verwenden, um ein optionales Paket mit ausführbarem Code zu erstellen. |
 | [Installieren von UWP-Apps mit dem App-Installer](appinstaller-root.md) | Mit dem App-Installer können UWP-Apps durch Doppelklicken auf das App-Paket installiert werden. |
-| [Installieren von Apps mit dem Tool WinAppDeployCmd.exe](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) | Die Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befehlszeilentool, mit dem Sie eine UWP-App von einem Windows10-Computer auf beliebigen Windows10 Mobile-Geräten bereitstellen können. Sie können dieses Tool verwenden, um ein app-Paket bereitstellen, wenn Windows 10 Mobile-Gerät über USB verbunden ist oder sich im gleichen Subnetz verfügbar ist, ohne Sie Microsoft Visual Studio oder die Projektmappe für diese app. Dieser Artikel beschreibt, wie UWP-Apps mit diesem Tool installiert werden. |
+| [Installieren von Apps mit dem Tool WinAppDeployCmd.exe](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) | Die Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befehlszeilentool, mit dem Sie eine UWP-App von einem Windows10-Computer auf beliebigen Windows10 Mobile-Geräten bereitstellen können. Sie können dieses Tool verwenden, um ein app-Paket bereitstellen, wenn das Windows 10 Mobile-Gerät über USB verbunden ist oder sich im gleichen Subnetz verfügbar ist, ohne Sie Microsoft Visual Studio oder die Projektmappe für diese app. Dieser Artikel beschreibt, wie UWP-Apps mit diesem Tool installiert werden. |
 | [Einrichten automatisierter Builds für UWP-Apps](auto-build-package-uwp-apps.md) | Wenn Sie Ihre App als Teil eines automatisierten Buildprozesses packen möchten, erfahren Sie hier, wie Sie Visual Studio Team Services (VSTS) dazu verwenden können. |
 | [Deklarationen der App-Funktionen](app-capability-declarations.md) | Funktionen müssen im [Paketmanifest](https://msdn.microsoft.com/library/windows/apps/BR211474) der UWP-App für den Zugriff auf bestimmte APIs oder Ressourcen deklariert werden, z.B. Bilder, Musik oder Geräte wie die Kamera oder das Mikrofon. |
 | [Herunterladen und Installieren von Paketupdates aus dem Store](self-install-package-updates.md) | Ihre UWP-App kann programmgesteuert nach Paketupdates suchen und die Updates installieren. Ihre App kann auch Abfragen für Pakete ausführen, die im Windows Dev Center-Dashboard als obligatorisch gekennzeichnet wurden, und Funktionen deaktivieren, bis das erforderliche Update installiert wird.  |

@@ -16,11 +16,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ae344e9f10c5d1dbfd530950851e402da4bc2a0d
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4465188"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4507848"
 ---
 # <a name="control-templates"></a>Steuerelementvorlagen
 
@@ -62,7 +62,7 @@ Dieser XAML-Code erstellt eine [**ControlTemplate**](https://msdn.microsoft.com/
 [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) stellt eine spezielle Bindung dar, die den Wert einer Eigenschaft in einer Steuerelementvorlage mit dem Wert einer anderen Eigenschaft verknüpft, die im Steuerelement mit Vorlagen verfügbar gemacht wird. TemplateBinding kann nur in einer ControlTemplate-Definition in XAML verwendet werden. Weitere Informationen finden Sie unter [TemplateBinding-Markuperweiterung](../../xaml-platform/templatebinding-markup-extension.md).
 
 > [!NOTE]
-> Beginnen mit dem nächsten wichtigen Update für Windows 10, können Sie [**X: Bind**](https://msdn.microsoft.com/library/windows/apps/Mt204783) -Markuperweiterungen an Orten verwenden Sie [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md). Weitere Informationen finden Sie unter [TemplateBinding-Markuperweiterung](../../xaml-platform/templatebinding-markup-extension.md).
+> Beginnend mit dem nächsten wichtigen Update für Windows 10, können Sie [**X: Bind**](https://msdn.microsoft.com/library/windows/apps/Mt204783) -Markuperweiterungen an Orten verwenden Sie [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md). Weitere Informationen finden Sie unter [TemplateBinding-Markuperweiterung](../../xaml-platform/templatebinding-markup-extension.md).
 
 ```XAML
 <ControlTemplate x:Key="CheckBoxTemplate1" TargetType="CheckBox">

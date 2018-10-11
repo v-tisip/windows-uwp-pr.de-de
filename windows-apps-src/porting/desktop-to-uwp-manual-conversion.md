@@ -12,13 +12,13 @@ keywords: windows10, UWP
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f14e7f8747639ef139e774416e09af954211940
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4470151"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4506182"
 ---
-# <a name="package-a-desktop-application-manually"></a>Manuelles Verpacken einer desktop-Anwendung
+# <a name="package-a-desktop-application-manually"></a>Manuelles Verpacken einer desktop-Anwendungs
 
 Dieses Thema zeigt, wie Sie Ihre Anwendung ohne Tools wie Visual Studio oder den Desktop App Converter (DAC) verpacken.
 
@@ -33,7 +33,7 @@ Wenn Sie sich nicht darüber sicher sind, welche Änderungen an das System durch
 
 ## <a name="first-prepare-your-application"></a>Vorbereiten Ihrer Anwendung
 
-Lesen Sie dieses Handbuch, bevor Sie mit der paketerstellung für Ihre Anwendung beginnen: [Vorbereiten eine desktop-Anwendung zu verpacken](desktop-to-uwp-prepare.md).
+Dieses Handbuch lesen, bevor Sie mit der paketerstellung für Ihre Anwendung beginnen: [Vorbereiten eine desktop-Anwendung zu verpacken](desktop-to-uwp-prepare.md).
 
 ## <a name="create-a-package-manifest"></a>Erstellen eines Paketmanifests
 
@@ -91,7 +91,7 @@ Hier ist ein Beispiel für ein **Identitäts**-Element mit Platzhaltertext für 
 
 ### <a name="properties"></a>Eigenschaften
 
-Das [Eigenschaften](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-properties)-Element hat 3 erforderliche untergeordnete Elemente. Hier ist ein Beispiel für einen **Eigenschaften**-Knoten mit Platzhaltertext für die Elemente. **DisplayName** ist der Name der Anwendung, die Sie im Store für apps reservieren, die an den Store hochgeladen werden.
+Das [Eigenschaften](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-properties)-Element hat 3 erforderliche untergeordnete Elemente. Hier ist ein Beispiel für einen **Eigenschaften**-Knoten mit Platzhaltertext für die Elemente. **DisplayName** ist der Name der Anwendung, die Sie in den Speicher für apps reservieren, die an den Store hochgeladen werden.
 
 ```XML
 <Properties>
@@ -121,7 +121,7 @@ Für desktop-apps, die Sie ein Paket erstellen, legen Sie immer die ``Name`` -At
 ```
 
 ### <a name="capabilities"></a>Funktionen
-Für desktop-apps, die Sie ein Paket erstellen, für, müssen Sie das Hinzufügen der ``runFullTrust`` Funktion.
+Für desktop-apps, die ein Paket zu erstellen, für die Sie hinzugefügt haben die ``runFullTrust`` Funktion.
 
 ```XML
 <Capabilities>
@@ -134,7 +134,7 @@ Geben Sie in diese Vorlage Informationen ein, die Ihre App beschreiben.
 
 ### <a name="application-element"></a>Anwendungselemente
 
-Für desktop-apps, die Sie erstellen Sie ein Paket für die ``EntryPoint`` Attribut des Application-Elements ist immer ``Windows.FullTrustApplication``.
+Für desktop-apps, die Sie ein Paket für erstellen die ``EntryPoint`` -Attribut des Application-Elements ist immer ``Windows.FullTrustApplication``.
 
 ```XML
 <Applications>
@@ -208,7 +208,7 @@ Sie können Ihre Anwendung zu testen, lokal ohne Erwerb eines Zertifikats und si
 Ersetzen Sie zum Aktualisieren der EXE- oder DLL-Dateien Ihrer App die vorhandenen Dateien in Ihrem Paket durch die neuen, vergrößern Sie die Versionsnummer in der Datei „AppxManifest.xml“, und führen Sie den oben genannten Befehl erneut aus.
 
 > [!NOTE]
-> Eine Anwendung immer als interaktiver Benutzer ausgeführt wird, und jedes Laufwerk durch die Installation Ihres Anwendungspakets unter muss auf NTFS-Format formatiert sein.
+> Eine Anwendung immer als interaktiver Benutzer ausgeführt wird, und jedes Laufwerk durch die Installation Ihres Anwendungspakets zu muss auf NTFS-Format formatiert sein.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

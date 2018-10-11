@@ -12,15 +12,15 @@ keywords: windows10, UWP
 ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.localizationpriority: medium
 ms.openlocfilehash: fadd9c2b6a35a1418a782ab0a6ef419e3f127f42
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4470265"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4506846"
 ---
 # <a name="integrate-your-packaged-desktop-application-with-windows-10"></a>Integrieren Sie Ihre verpackte desktop-Anwendung mit Windows 10
 
-Verwenden Sie Erweiterungen, um Ihre verpackte desktop-Anwendung in Windows 10 auf vordefinierter Weise zu integrieren.
+Verwenden Sie Erweiterungen, um Ihre verpackte desktop-Anwendung mit Windows 10 auf vordefinierter Weise zu integrieren.
 
 Verwenden Sie z. B. eine Erweiterung, um eine Firewallausnahme festzulegen, machen Ihre Anwendung die standardanwendung für einen Dateityp oder verweisen Sie mit startkacheln auf die verpackte Version Ihrer App. Um eine Erweiterung zu verwenden, fügen Sie einfach XML-Codes zur Paketmanifestdatei Ihrer App hinzu. Es ist kein Code erforderlich.
 
@@ -31,7 +31,7 @@ In diesem Thema werden diese Erweiterungen und die Aufgaben beschrieben, die Sie
 Helfen Sie Ihren Benutzern, auf Ihre verpackte App umzustellen.
 
 * [Verweisen Sie mit vorhandenen Startkacheln Taskleistenschaltflächen auf die verpackte App.](#point)
-* [Stellen Sie die verpackte Anwendung und nicht Ihre desktop-app Dateien öffnet](#make)
+* [Stellen Sie Ihre verpackte Anwendung und nicht Ihre desktop-app Dateien öffnet](#make)
 * [Eine Gruppe von Dateitypen ordnen Sie Ihres Anwendungspakets zu](#associate)
 * [Fügen Sie den Kontextmenüs der Dateien, die einen bestimmten Dateityp haben, Optionen hinzu.](#add)
 * [Öffnen Sie bestimmte Dateitypen direkt anhand einer URL](#open)
@@ -94,9 +94,9 @@ Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uw
 
 <a id="make" />
 
-### <a name="make-your-packaged-application-open-files-instead-of-your-desktop-app"></a>Stellen Sie die verpackte Anwendung und nicht Ihre desktop-app Dateien öffnet
+### <a name="make-your-packaged-application-open-files-instead-of-your-desktop-app"></a>Stellen Sie Ihre verpackte Anwendung und nicht Ihre desktop-app Dateien öffnet
 
-Sie können überprüfen, dass Benutzer Ihre neue verpackte Anwendung standardmäßig für bestimmte Arten von Dateien, statt die desktop-Version Ihrer App öffnen.
+Sie können überprüfen, dass Benutzer Ihre neue verpackte Anwendung in der Standardeinstellung für bestimmte Arten von Dateien, statt die desktop-Version Ihrer App öffnen.
 
 Dazu müssen Sie den [programmgesteuerten Bezeichner (Programm-ID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) jeder Anwendung angeben, aus der Sie Dateizuordnungen übernehmen möchten.
 
@@ -123,7 +123,7 @@ Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uw
 |-------|-------------|
 |Kategorie |Immer ``windows.fileTypeAssociation``.
 |Name |Eine eindeutige ID für Ihre App. Diese ID wird intern verwendet, um einen [programmgesteuerte Bezeichner (Programm-ID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) mit Hash zu generieren, die mit Ihrer Dateitypzuordnung verknüpft ist. Mithilfe dieser ID können Sie Änderungen in zukünftigen Versionen Ihrer App verwalten. |
-|MigrationProgId |Der [programmgesteuerte Bezeichner (Programm-ID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) wird beschrieben, die die Anwendung, Komponente und Version der Desktopanwendung, aus der Sie dateizuordnungen übernehmen möchten.|
+|MigrationProgId |Der [programmgesteuerte Bezeichner (Programm-ID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) wird beschrieben, die die Anwendung, die Komponente und die Version der Desktopanwendung, aus der Sie dateizuordnungen übernehmen möchten.|
 
 #### <a name="example"></a>Beispiel
 
@@ -156,7 +156,7 @@ Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uw
 
 ### <a name="associate-your-packaged-application-with-a-set-of-file-types"></a>Eine Gruppe von Dateitypen ordnen Sie Ihres Anwendungspakets zu
 
-Sie können die verpackte Anwendung mit dateityperweiterungen verknüpft. Wenn ein Benutzer eine Datei klickt und die Option " **Öffnen mit** " auswählt, wird die Anwendung in der Liste der Vorschläge angezeigt.
+Sie können die verpackte Anwendung mit dateityperweiterungen zugeordnet. Wenn ein Benutzer eine Datei klickt und die Option " **Öffnen mit** " auswählt, wird die Anwendung in der Liste der Vorschläge angezeigt.
 
 #### <a name="xml-namespace"></a>XML-Namespace
 
@@ -245,8 +245,8 @@ Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uw
 |Kategorie | Immer ``windows.fileTypeAssociation``.
 |Name |Eine eindeutige ID für Ihre App. |
 |Verb |Der Name, der im Kontextmenü des Datei-Explorers angezeigt wird. Diese Zeichenfolge kann mithilfe von ```ms-resource``` lokalisiert werden.|
-|ID |Die eindeutige ID des Verbs. Wenn Ihre Anwendung eine UWP-app ist, wird übergeben, um Ihre app im Rahmen der aktivierungsereignisargumente Sie auch die Auswahl des Benutzers entsprechend verarbeiten kann. Wenn Ihre Anwendung eine vertrauenswürdig verpackte app ist, empfängt er Parameter stattdessen (siehe nächsten Aufzählungspunkt). |
-|Parameter |Die Liste mit Argumentparametern und -werten für das Verb. Wenn Ihre Anwendung eine vertrauenswürdig verpackte app ist, werden diese Parameter an die Anwendung als Ereignisargumente übergeben, wenn die Anwendung aktiviert ist. Sie können das Verhalten der Anwendung Grundlage anderer aktivierungsverben anpassen. Wenn eine Variable einen Dateipfad enthalten kann, schließen Sie den Parameterwert in Anführungszeichen. Dadurch werden jegliche Probleme vermieden, die in Fällen auftreten, bei denen der Pfad Leerzeichen enthält. Wenn Ihre Anwendung eine UWP-app handelt, können Sie keine Parameter übergeben. Die App empfängt stattdessen die ID (siehe das vorherige Aufzählungszeichen).|
+|ID |Die eindeutige ID des Verbs. Wenn Ihre Anwendung eine UWP-app ist, wird übergeben, um Ihre app im Rahmen der aktivierungsereignisargumente der Auswahl des Benutzers angemessen behandelt werden kann. Wenn Ihre Anwendung eine vertrauenswürdig verpackte app ist, empfängt er Parameter stattdessen (siehe nächsten Aufzählungspunkt). |
+|Parameter |Die Liste mit Argumentparametern und -werten für das Verb. Wenn Ihre Anwendung eine vertrauenswürdig verpackte app ist, werden diese Parameter an die Anwendung als Ereignisargumente übergeben, wenn die Anwendung aktiviert ist. Sie können das Verhalten von Ihrer Anwendung auf Grundlage anderer aktivierungsverben anpassen. Wenn eine Variable einen Dateipfad enthalten kann, schließen Sie den Parameterwert in Anführungszeichen. Dadurch werden jegliche Probleme vermieden, die in Fällen auftreten, bei denen der Pfad Leerzeichen enthält. Wenn Ihre Anwendung eine UWP-app ist, können Sie keine Parameter übergeben. Die App empfängt stattdessen die ID (siehe das vorherige Aufzählungszeichen).|
 |Erweitert |Gibt an, dass das Verb nur angezeigt werden soll, wenn der Benutzer zum Anzeigen des Kontextmenüs **UMSCHALT** gedrückt hält, bevor er mit der rechten Maustaste auf die Datei klickt. Dieses Attribut ist optional und standardmäßig auf den Wert von **False** (Verb soll immer angezeigt werden) festgelegt. Dieses Verhalten muss für jedes Verb einzeln angegeben werden – mit Ausnahme von „Öffnen“: Bei diesem Verb ist der Wert immer **False**.|
 
 #### <a name="example"></a>Beispiel
@@ -282,7 +282,7 @@ Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uw
 
 ### <a name="open-certain-types-of-files-directly-by-using-a-url"></a>Öffnen Sie bestimmte Dateitypen direkt anhand einer URL
 
-Sie können überprüfen, dass Benutzer Ihre neue verpackte Anwendung standardmäßig für bestimmte Arten von Dateien, statt die desktop-Version Ihrer App öffnen.
+Sie können überprüfen, dass Benutzer Ihre neue verpackte Anwendung in der Standardeinstellung für bestimmte Arten von Dateien, statt die desktop-Version Ihrer App öffnen.
 
 #### <a name="xml-namespaces"></a>XML-Namespaces
 
@@ -307,7 +307,7 @@ Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uw
 |-------|-------------|
 |Kategorie |Immer ``windows.fileTypeAssociation``.
 |Name |Eine eindeutige ID für Ihre App. |
-|UseUrl |Gibt an, ob Dateien direkt über eine URL-Ziel geöffnet werden sollen. Wenn Sie diesen Wert nicht festlegen, versucht Ihre Anwendung zum Öffnen einer Datei durch einer URL zu das System zum ersten Download die Datei lokal. |
+|UseUrl |Gibt an, ob Dateien direkt über eine URL-Ziel geöffnet werden sollen. Wenn Sie diesen Wert nicht festlegen, versucht Ihre Anwendung zum Öffnen einer Datei durch einer URL zu dem System zum ersten Download der Datei lokal. |
 |Parameter |Optionale Parameter. |
 |FileType |Die relevanten Dateierweiterungen. |
 
@@ -344,7 +344,7 @@ Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uw
 
 ### <a name="create-firewall-exception-for-your-app"></a>Erstellen von Firewallausnahmen für Ihre App
 
-Wenn Ihre Anwendung die Kommunikation über einen Anschluss erforderlich ist, können Sie Ihre Anwendung zur Liste der Firewallausnahmen hinzufügen.
+Wenn Ihre Anwendung Kommunikation über einen Anschluss erforderlich ist, können Sie Ihre Anwendung in der Liste der Firewallausnahmen hinzufügen.
 
 #### <a name="xml-namespace"></a>XML-Namespace
 
@@ -458,7 +458,7 @@ Deklarieren Sie diese Erweiterung auf der Paketebene des App-Manifests.
 
 Helfen Sie Benutzern beim Organisieren von Dateien und interagieren Sie mit Ihnen auf vertrauter Weise.
 
-* [Definieren Sie, wie sich Ihre Anwendung verhält, wenn Benutzer auswählen und öffnen mehrere Dateien gleichzeitig](#define)
+* [Definieren Sie, wie Ihre Anwendung verhält, wenn Benutzer auswählen und öffnen mehrere Dateien gleichzeitig](#define)
 * [Zeigen Sie Dateiinhalte in einem Miniaturbild im Datei-Explorer an.](#show)
 * [Zeigen Sie Dateiinhalte in einer Vorschau des Datei-Explorers an.](#preview)
 * [Ermöglichen Sie es Benutzern, Dateien mithilfe der Spalte „Art” im Datei-Explorer zu gruppieren.](#enable)
@@ -467,7 +467,7 @@ Helfen Sie Benutzern beim Organisieren von Dateien und interagieren Sie mit Ihne
 
 <a id="define" />
 
-### <a name="define-how-your-application-behaves-when-users-select-and-open-multiple-files-at-the-same-time"></a>Definieren Sie, wie sich Ihre Anwendung verhält, wenn Benutzer auswählen und öffnen mehrere Dateien gleichzeitig
+### <a name="define-how-your-application-behaves-when-users-select-and-open-multiple-files-at-the-same-time"></a>Definieren Sie, wie Ihre Anwendung verhält, wenn Benutzer auswählen und öffnen mehrere Dateien gleichzeitig
 
 Geben Sie an, wie Ihre Anwendung verhält, wenn ein Benutzer mehrere Dateien gleichzeitig öffnet.
 
@@ -503,7 +503,7 @@ Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uw
 
 Bei verpackten Desktop-Apps stehen die gleichen drei Optionen zur Verfügung wie bei regulären Desktop-Apps.
 
- * ``Player``: Ihre Anwendung wird einmal aktiviert. Alle der ausgewählten Dateien werden an die Anwendung als Argument-Parameter übergeben.
+ * ``Player``: Ihre Anwendung wird ein Mal aktiviert. Alle der ausgewählten Dateien werden an die Anwendung als Argument-Parameter übergeben.
  * ``Single``: Ihre Anwendung wird einmal für die erste markierte Datei aktiviert. Andere Dateien werden ignoriert.
  * ``Document``: Eine neue (eigene) Instanz Ihrer Anwendung wird für jede markierte Datei aktiviert.
 
@@ -861,7 +861,7 @@ Registrieren Sie die Handler, die Sie in Ihrer Anwendung implementieren. Sie kö
 
 ### <a name="start-your-application-by-using-a-protocol"></a>Starten Sie die Anwendung über ein Protokoll
 
-Protokollzuordnungen ermöglichen es anderen Programmen und Systemkomponenten, mit Ihrer verpackten App zu interagieren. Wenn Ihre Anwendung anhand eines Protokolls gestartet wird, können Sie bestimmte Parameter angeben, an die aktivierungsereignisargumente übergeben werden sollen, werden entsprechend Verhalten zu erreichen. Parameter werden nur für verpackte, vertrauenswürdige Apps unterstützt. UWP-Apps können die Parameter nicht verwenden.  
+Protokollzuordnungen ermöglichen es anderen Programmen und Systemkomponenten, mit Ihrer verpackten App zu interagieren. Wenn Ihre Anwendung anhand eines Protokolls gestartet wird, können Sie bestimmte Parameter angeben, an die aktivierungsereignisargumente übergeben, werden entsprechend Verhalten zu erreichen. Parameter werden nur für verpackte, vertrauenswürdige Apps unterstützt. UWP-Apps können die Parameter nicht verwenden.  
 
 #### <a name="xml-namespace"></a>XML-Namespace
 
@@ -885,7 +885,7 @@ Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uw
 |-------|-------------|
 |Kategorie |Immer ``windows.protocol``.
 |Name |Der Name des Protokolls. |
-|Parameter |Die Liste der Parameter und Werte, die für Ihre Anwendung als Ereignisargumente übergeben werden, wenn die Anwendung aktiviert ist. Wenn eine Variable einen Dateipfad enthalten kann, schließen Sie den Parameterwert in Anführungszeichen. Dadurch werden jegliche Probleme vermieden, die in Fällen auftreten, bei denen der Pfad Leerzeichen enthält. |
+|Parameter |Die Liste der Parameter und Werte für Ihre Anwendung als Ereignisargumente übergeben, wenn die Anwendung aktiviert ist. Wenn eine Variable einen Dateipfad enthalten kann, schließen Sie den Parameterwert in Anführungszeichen. Dadurch werden jegliche Probleme vermieden, die in Fällen auftreten, bei denen der Pfad Leerzeichen enthält. |
 
 ### <a name="example"></a>Beispiel
 
@@ -965,7 +965,7 @@ Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uw
 
 ### <a name="start-an-executable-file-when-users-log-into-windows"></a>Starten Sie eine ausführbare Datei, wenn Benutzer sich bei Windows anmelden.
 
-Startaufgaben können eine Anwendung eine ausführbare Datei automatisch ausgeführt werden, wenn sich ein Benutzer anmeldet.
+Startaufgaben können eine Anwendung auf eine ausführbare Datei automatisch ausgeführt, wenn sich ein Benutzer anmeldet.
 
 > [!NOTE]
 > Der Benutzer muss die Anwendung mindestens ein Mal starten, um diese Startaufgabe registrieren.
@@ -996,7 +996,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 |-------|-------------|
 |Kategorie |Immer ``windows.startupTask``.|
 |Ausführbare Datei |Der relative Pfad der ausführbaren Datei, die gestartet werden soll. |
-|TaskId |Ein eindeutiger Bezeichner Ihrer Aufgabe. Mit diesem Bezeichner kann Ihre Anwendung die APIs aufrufen in der [Windows.ApplicationModel.StartupTask](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.StartupTask) -Klasse, um programmgesteuert zu aktivieren oder deaktivieren eine Startaufgabe. |
+|TaskId |Ein eindeutiger Bezeichner Ihrer Aufgabe. Mit diesem Bezeichner kann Ihre Anwendung die APIs aufrufen in der [Windows.ApplicationModel.StartupTask](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.StartupTask) -Klasse, um programmgesteuert zu aktivieren oder deaktivieren Sie eine Startaufgabe. |
 |Enabled |Gibt an, ob die Aufgabe erst aktiviert oder deaktiviert gestartet wird. Aktivierte Aufgaben werden bei der nächsten Anmeldung des Benutzers ausgeführt (es sei denn, der Benutzer deaktiviert sie). |
 |DisplayName |Der Name der Aufgabe, die im Task-Manager angezeigt wird. Sie können diese Zeichenfolge mit ```ms-resource``` lokalisieren. |
 
@@ -1055,7 +1055,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
 |ContentEvent |Der Name eines Inhaltsereignisses, bei dem Benutzer mit Ihrem ``ActionDisplayName`` und ``ProviderDisplayName`` aufgefordert werden. Ein Inhaltsereignis wird ausgelöst, wenn ein Volumegerät wie etwa die Speicherkarte einer Kamera, eine DVD oder ein USB-Stick in den PC eingelegt bzw. daran angeschlossen wird. Sie finden die vollständige Liste dieser Ereignisse [hier](https://docs.microsoft.com/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference).  |
 |Verb |Die Einstellung Verb angeben eines Werts, das für Ihre Anwendung für die ausgewählte Option übergeben wird. Sie können mehrere Startaktionen für Ereignisse der automatischen Wiedergabe angeben und mit der Einstellung Verb ermitteln, welche Option ein Benutzer für Ihre App ausgewählt hat. Für welche Option sich der Benutzer entschieden hat, erfahren Sie durch Überprüfen der verb-Eigenschaft der an die App übergebenen Startereignisargumente. Für die Einstellung Verb können Sie einen beliebigen Wert verwenden. Einzige Ausnahme ist open: Dieser Wert ist reserviert. |
 |DropTargetHandler |Die Klassen-ID der Anwendung, die die [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) -Schnittstelle implementiert. Dateien aus Wechselmedien werden an die [Drop](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget.drop?view=visualstudiosdk-2017#Microsoft_VisualStudio_OLE_Interop_IDropTarget_Drop_Microsoft_VisualStudio_OLE_Interop_IDataObject_System_UInt32_Microsoft_VisualStudio_OLE_Interop_POINTL_System_UInt32__)-Methode Ihrer [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017)-Implementierung übergeben.  |
-|Parameter |Sie müssen die [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017)-Schnittstelle nicht für alle Inhaltsereignisse implementieren. Für jedes der Inhaltsereignisse können Sie Befehlszeilenparameter bereitstellen, anstatt die [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017)-Schnittstelle zu implementieren. Bei diesen Ereignissen wird automatische Wiedergabe mit diese Befehlszeilenparameter, um Ihre Anwendung starten. Sie können diese Parameter im Initialisierungscode Ihrer App analysieren, um festzustellen, ob sie von der automatischen Wiedergabe gestartet wurde, und dann Ihre benutzerdefinierte Implementierung bereitstellen. |
+|Parameter |Sie müssen die [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017)-Schnittstelle nicht für alle Inhaltsereignisse implementieren. Für jedes der Inhaltsereignisse können Sie Befehlszeilenparameter bereitstellen, anstatt die [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017)-Schnittstelle zu implementieren. Für diese Ereignisse wird automatische Wiedergabe diese Befehlszeilenparameter verwenden, um die Anwendung starten. Sie können diese Parameter im Initialisierungscode Ihrer App analysieren, um festzustellen, ob sie von der automatischen Wiedergabe gestartet wurde, und dann Ihre benutzerdefinierte Implementierung bereitstellen. |
 |DeviceEvent |Der Name eines Geräteereignisses, bei dem Benutzer mit Ihrem ``ActionDisplayName`` und ``ProviderDisplayName`` aufgefordert werden. Ein Geräteereignis wird ausgelöst, wenn ein Gerät an den PC angeschlossen wird. Geräteereignisse beginnen mit der Zeichenfolge ``WPD`` und sind [hier](https://docs.microsoft.com/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference) aufgelistet. |
 |HWEventHandler |Die Klassen-ID der Anwendung, die die [IHWEventHandler](https://msdn.microsoft.com/library/windows/desktop/bb775492.aspx) -Schnittstelle implementiert. |
 |InitCmdLine |Der Zeichenfolgeparameter, der an die [Initialize](https://msdn.microsoft.com/en-us/library/windows/desktop/bb775495.aspx)-Methode der [IHWEventHandler](https://msdn.microsoft.com/library/windows/desktop/bb775492.aspx)-Schnittstelle übergeben werden soll. |
@@ -1088,11 +1088,11 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
 
 Wenn Ihre Anwendung geöffnet ist, wenn Benutzer ein Update installieren, wird die Anwendung geschlossen.
 
-Wenn Sie möchten diese Anwendung neu starten, nachdem das Update abgeschlossen ist, rufen Sie die Funktion [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) in jeder Prozess, der neu gestartet werden soll.
+Wenn Sie möchten diese Anwendung neu starten, nachdem das Update abgeschlossen ist, rufen Sie die Funktion [RegisterApplicationRestart ist](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) in jeder Prozess, der neu gestartet werden soll.
 
-Jedes aktiven Fenster in Ihrer Anwendung erhält eine [WM_QUERYENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376890.aspx) -Nachricht. Zu diesem Zeitpunkt kann Ihre Anwendung die [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) -Funktion erneut aus, um die Befehlszeile bei Bedarf aktualisieren aufrufen.
+Jedes aktiven Fenster in Ihrer Anwendung erhält eine [WM_QUERYENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376890.aspx) Nachricht. An diesem Punkt kann Ihre Anwendung die [RegisterApplicationRestart ist](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) Funktion erneut aus, um die Befehlszeile bei Bedarf aktualisieren aufrufen.
 
-Wenn jedes aktiven Fenster in Ihre Anwendung die [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) Nachricht empfängt, sollte Ihre Anwendung Daten speichern und Herunterfahren.
+Wenn jedes aktiven Fenster in Ihrer Anwendung die [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) Nachricht empfängt, sollte Ihre Anwendung Daten speichern und Herunterfahren.
 
 >[!NOTE]
 Die aktiven Fenster auch Meldung die [WM_CLOSE](https://msdn.microsoft.com/library/windows/desktop/ms632617.aspx) für den Fall, dass die Anwendung die [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) Nachricht nicht behandelt.
@@ -1105,17 +1105,17 @@ Nachdem das Update abgeschlossen ist, startet die Anwendung neu.
 
 Mit anderen Apps integrieren, andere Prozesse starten oder Informationen freigeben.
 
-* [Stellen Sie Ihre Anwendung als Druckerziel in Anwendungen, die Unterstützung von Drucken angezeigt werden](#printing)
+* [Die Anwendung als Druckerziel in Anwendungen, die Unterstützung von Drucken angezeigt werden](#printing)
 * [Freigeben von Schriftarten für andere Windows-Anwendungen](#fonts)
 * [Starten Sie einen Win32-Prozess aus einer Universellen Windows-Plattform-App (UWP-App).](#win32-process)
 
 <a id="printing" />
 
-### <a name="make-your-application-appear-as-the-print-target-in-applications-that-support-printing"></a>Stellen Sie Ihre Anwendung als Druckerziel in Anwendungen, die Unterstützung von Drucken angezeigt werden
+### <a name="make-your-application-appear-as-the-print-target-in-applications-that-support-printing"></a>Die Anwendung als Druckerziel in Anwendungen, die Unterstützung von Drucken angezeigt werden
 
-Wenn Benutzer Daten aus einer anderen Anwendung wie z. B. Editor drucken möchten, können Sie Ihre Anwendung als Druckerziel in der app Liste der verfügbaren Druckerziele angezeigt vornehmen.
+Wenn Benutzer Daten aus einer anderen Anwendung wie z. B. Editor drucken möchten, können Sie Ihre Anwendung als Druckerziel in der app Liste der verfügbaren Druckerziele angezeigt werden lassen.
 
-Sie müssen Ihre Anwendung ändern, sodass sie Daten im XML Paper Specification (XPS)-Format empfängt.
+Sie müssen Ihre Anwendung so anpassen, dass sie Daten im XML Paper Specification (XPS)-Format empfängt.
 
 #### <a name="xml-namespaces"></a>XML-Namespaces
 
@@ -1137,7 +1137,7 @@ Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uw
 |-------|-------------|
 |Kategorie |Immer ``windows.appPrinter``.
 |DisplayName |Der Name, der in der Liste der Druckerziele für eine App angezeigt werden soll. |
-|Parameter |Parameter, die Ihre Anwendung benötigt, um die Anforderung ordnungsgemäß zu behandeln. |
+|Parameter |Parameter, die Ihre Anwendung erfordert, um die Anforderung ordnungsgemäß zu behandeln. |
 
 #### <a name="example"></a>Beispiel
 
@@ -1260,7 +1260,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
   </Applications>
 </Package>
 ```
-Diese Erweiterung kann hilfreich sein, wenn eine universelle Windows-Plattform-Benutzeroberfläche zu erstellen, die auf allen Geräten ausgeführt werden soll, aber Komponenten der Win32-Anwendung weiterhin in voller Vertrauenswürdigkeit ausgeführt werden soll.
+Diese Erweiterung kann hilfreich sein, wenn Sie eine universelle Windows-Plattform-Benutzeroberfläche erstellen möchten, die auf allen Geräten ausgeführt wird, aber Komponenten der Win32-Anwendung weiterhin in voller Vertrauenswürdigkeit ausgeführt werden soll.
 
 Erstellen Sie einfach ein Windows-app-Paket für Ihre Win32-app. Fügen Sie dann der Paketdatei Ihrer UWP-App diese Erweiterung hinzu. Diese Erweiterungen gibt an, dass Sie eine ausführbare Datei in der Windows-app-Paket starten möchten.  Wenn Sie zwischen Ihrer UWP-App und Ihrer Win32-App kommunizieren möchten, können Sie einen oder mehrere [App-Dienste](../launch-resume/app-services.md) dafür festlegen. Weitere Informationen zu diesem Szenario finden Sie [hier](https://blogs.msdn.microsoft.com/appconsult/2016/12/19/desktop-bridge-the-migrate-phase-invoking-a-win32-process-from-a-uwp-app/).
 

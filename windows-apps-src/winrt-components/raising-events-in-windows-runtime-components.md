@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 89c021bb2c094aafc9b534acef9b009817669461
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4467230"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4508170"
 ---
 # <a name="raising-events-in-windows-runtime-components"></a>Auslösen von Ereignissen in Komponenten für Windows-Runtime
 > [!NOTE]
-> Informationen zum Auslösen von Ereignissen in einer [C++ / WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) Komponente für Windows-Runtime, finden Sie unter [Erstellen von Ereignissen in C++ / WinRT](../cpp-and-winrt-apis/author-events.md).
+> Informationen zum Auslösen von Ereignissen in einer [C++ / WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) Windows-Runtime-Komponente, finden Sie unter [Erstellen von Ereignissen in C++ / WinRT](../cpp-and-winrt-apis/author-events.md).
 
 Wenn die Komponente für Windows-Runtime ein Ereignis eines benutzerdefinierten Delegattyps in einem Hintergrundthread (Arbeitsthread) auslöst und JavaScript in der Lage sein soll, das Ereignis zu empfangen, können Sie es auf eine der folgenden Weisen implementieren und/oder auslösen:
 
@@ -233,7 +233,7 @@ Wenn Sie das Projekt jetzt erstellen, sollte dies ordnungsgemäß ausgeführt we
 
 ## <a name="to-program-the-javascript-app"></a>So programmieren Sie die JavaScript-App
 
-Jetzt können Sie der JavaScript-App eine Schaltfläche hinzufügen, damit sie die Klasse verwendet, die Sie gerade zum Erstellen des Popups definiert haben. Vorher müssen Sie einen Verweis auf das ToasterComponent-Projekt hinzufügen, das Sie gerade erstellt haben. Öffnen Sie im Projektmappen-Explorer das Kontextmenü für das Projekt "toasterapplication" ein, wählen Sie **Hinzufügen &gt; Verweise**, und wählen Sie dann die Schaltfläche " **Neuen Verweis hinzufügen** ". Wählen Sie im Dialogfeld „Verweis hinzufügen” im linken Bereich unter „Projektmappe” das Komponentenprojekt aus, und wählen Sie dann im mittleren Bereich „ToasterComponent” aus. Klicken Sie auf die Schaltfläche **OK**.
+Jetzt können Sie der JavaScript-App eine Schaltfläche hinzufügen, damit sie die Klasse verwendet, die Sie gerade zum Erstellen des Popups definiert haben. Vorher müssen Sie einen Verweis auf das ToasterComponent-Projekt hinzufügen, das Sie gerade erstellt haben. Öffnen Sie im Projektmappen-Explorer das Kontextmenü für das Projekt "toasterapplication" ein, wählen Sie **Hinzufügen &gt; Verweise**, und wählen Sie dann auf die Schaltfläche " **Neuen Verweis hinzufügen** ". Wählen Sie im Dialogfeld „Verweis hinzufügen” im linken Bereich unter „Projektmappe” das Komponentenprojekt aus, und wählen Sie dann im mittleren Bereich „ToasterComponent” aus. Klicken Sie auf die Schaltfläche **OK**.
 
 Öffnen Sie im Projektmappen-Explorer das Kontextmenü für das ToasterApplication-Projekt, und wählen Sie **Als Startprojekt festlegen** aus.
 
@@ -332,7 +332,7 @@ midl /metadata_dir "%WindowsSdkDir%References\CommonConfiguration\Neutral" /iid 
 
 **Wichtige**  Für eine ARM oder X64 Projekt-Konfiguration, ändern Sie den MIDL/env Parameter X64 oder arm32.
 
-Um sicherzustellen, dass die IDL-Datei wird generiert, jedes Mal, wenn die winmd-Datei geändert wird, ändern **Postbuildereignis ausführen** , um **bei der Build die Projektausgabe updates.**
+Um sicherzustellen, dass die IDL-Datei wird generiert, jedes Mal, wenn die winmd-Datei geändert wird, ändern, **Führen Sie das Postbuildereignis** **Wenn der Build aktualisiert die Ausgabe.**
 Die Eigenschaftenseite Buildereignisse sollte wie folgt aussehen: ![Buildereignisse](./images/buildevents.png)
 
 Erstellen Sie die Projektmappe neu, um die IDL zu generieren und zu kompilieren.
@@ -341,7 +341,7 @@ Sie können überprüfen, ob MIDL die Projektmappe ordnungsgemäß kompiliert ha
 
 ## <a name="to-compile-the-proxy-and-stub-code-into-a-dll"></a>So kompilieren Sie den Proxy- und Stubcode in eine DLL-Datei
 
-Nachdem Sie nun über die erforderlichen Dateien verfügen, können Sie diese kompilieren, um eine DLL (C++-Datei) zu erstellen. Um dies so einfach wie möglich zu machen, fügen Sie ein neues Projekt hinzu, um das Erstellen der Proxys zu unterstützen. Öffnen Sie das Kontextmenü für die ToasterApplication-Projektmappe, und wählen Sie dann **Hinzufügen > Neues Projekt** aus. Erweitern Sie im linken Bereich des Dialogfelds **Neues Projekt** **Visual C++ &gt; Windows &gt; ausdrückt Windows**, und wählen Sie im mittleren Bereich **DLL (UWP-apps)**. (Beachten Sie, dass dies kein C++-Komponente für Windows-Runtime-Projekt handelt.) Nennen Sie das Projekt Proxys, und wählen Sie dann die Schaltfläche " **OK** ". Diese Dateien werden bei Änderungen der C#-Klasse von den Postbuildereignissen aktualisiert.
+Nachdem Sie nun über die erforderlichen Dateien verfügen, können Sie diese kompilieren, um eine DLL (C++-Datei) zu erstellen. Um dies so einfach wie möglich zu machen, fügen Sie ein neues Projekt hinzu, um das Erstellen der Proxys zu unterstützen. Öffnen Sie das Kontextmenü für die ToasterApplication-Projektmappe, und wählen Sie dann **Hinzufügen > Neues Projekt** aus. Erweitern Sie im linken Bereich des Dialogfelds **Neues Projekt** **Visual C++ &gt; Windows &gt; ausdrückt Windows**, und wählen Sie im mittleren Bereich **DLL (UWP-apps)**. (Beachten Sie, dass dies kein C++-Komponente für Windows-Runtime-Projekt handelt.) Nennen Sie das Projekt Proxys, und wählen Sie dann auf die Schaltfläche " **OK** ". Diese Dateien werden bei Änderungen der C#-Klasse von den Postbuildereignissen aktualisiert.
 
 Standardmäßig generiert das Proxies-Projekt Headerdateien (.h) und C++-Dateien (.cpp). Da die DLL aus den Dateien erstellt wird, die von MIDL generiert werden, sind die H- und CPP-Dateien nicht erforderlich. Öffnen Sie im Projektmappen-Explorer das Kontextmenü für diese Dateien, wählen Sie **Entfernen**, und bestätigen Sie dann die Löschung.
 

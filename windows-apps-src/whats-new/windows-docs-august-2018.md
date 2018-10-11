@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c294dedc8e19605bc2cee0308022bed8624df57e
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4466910"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4508880"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>Neuigkeiten in der Windows-Entwicklerdokumentation im August 2018
 
@@ -28,41 +28,41 @@ Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?L
 
 Die folgenden Features wurde der Windows Insider Preview-Builds, über das [Windows-Insider-](https://insider.windows.com/) Programm verfügbar hinzugefügt.
 
-* Der [Windows-UI-Bibliothek](https://aka.ms/winui-docs) ist ein Satz von NuGet-Pakete, die Steuerelemente und andere Elemente der interfact für UWP-apps bereitstellen. Diese Pakete sind auch kompatibel mit früheren Versionen von Windows 10, damit Ihre app funktioniert, auch wenn Ihre Benutzer die neueste Version des Betriebssystems besitzen.
+* Der [Windows-UI-Bibliothek](https://aka.ms/winui-docs) ist ein Satz von NuGet-Pakete, die Steuerelemente und andere Elemente einer interfact für UWP-apps bereitstellen. Diese Pakete sind auch kompatibel mit früheren Versionen von Windows 10, damit Ihre app funktioniert, auch wenn Ihre Benutzer die neueste Version des Betriebssystems besitzen.
 
 * [DropDownButton](../design/controls-and-patterns/buttons.md#create-a-drop-down-button), [SplitButton](../design/controls-and-patterns/buttons.md#create-a-split-button)und [ToggleSplitButton](../design/controls-and-patterns/buttons.md#create-a-toggle-split-button) bereit, die Steuerelemente mit speziellen Features zur Verbesserung der Benutzeroberfläche Ihrer app.
 
-![Eine geteilte Schaltfläche zum Auswählen von Vordergrundfarbe](../design/controls-and-patterns/images/split-button-rtb.png)
+![Eine geteilte Schaltfläche Dank Vordergrundfarbe](../design/controls-and-patterns/images/split-button-rtb.png)
 
-* NavigationView unterstützt jetzt in der [oberen Navigationsleiste](../design/controls-and-patterns/navigationview.md)für Fälle, in denen Ihre app verfügt über eine kleinere Anzahl Navigationsoptionen und erfordern mehr Platz für den Inhalt Ihrer app.
+* NavigationView unterstützt jetzt in der [oberen Navigationsleiste](../design/controls-and-patterns/navigationview.md)für Fälle, in denen Ihre app verfügt über eine kleinere Zahl von Navigationsoptionen und mehr Platz für den Inhalt Ihrer app erforderlich.
 
-* Strukturansicht wurde zur Unterstützung von erweitert [Daten binden, Elementvorlagen, und Drag & Drop.](../design/controls-and-patterns/tree-view.md)
+* Bezug genommen wurde zur Unterstützung von erweitert [die Datenbindung, Elementvorlagen, und Drag & Drop.](../design/controls-and-patterns/tree-view.md)
 
 ### <a name="package-support-framework"></a>Paket-Support-Framework
 
-Das Paket Support-Framework ist ein Open-Source-Kit, mit dem Sie die Updates auf Ihre Win32-Anwendung anwenden, wenn Sie keinen Zugriff auf den Quellcode, haben, damit sie in einem MSIX-Container ausgeführt werden kann.
+Das Paket Support-Framework ist ein Open-Source-Kit, das hilft Ihnen, wenden Sie Updates für Ihre win32-Anwendung, wenn Sie keinen Zugriff auf den Quellcode, haben, damit sie in einem MSIX-Container ausgeführt werden kann.
 
-Um mehr zu erfahren, finden Sie in der [Übernehmen Runtime behebt ein MSIX-Paket mit dem Paket Support-Framework](../porting/package-support-framework.md).
+Um mehr erfahren möchten, finden Sie in der [Übernehmen Runtime behebt zu einem MSIX-Paket mit dem Paket Support-Framework](../porting/package-support-framework.md).
 
 ## <a name="developer-guidance"></a>Anleitungen für Entwickler
 
 ### <a name="web-api-extensions"></a>Web-API-Erweiterungen
 
-Eine Liste der [Erweiterungen für ältere Microsoft-API](https://developer.mozilla.org/docs/Web/API/Microsoft_API_extensions) wurde in der Dokumentation Mozilla Developer Network browserübergreifende Webentwicklung hinzugefügt. Diese API-Erweiterungen sind spezifisch für Internet Explorer oder Microsoft Edge, und ergänzen vorhandene Informationen zur Kompatibilität und Browser-Unterstützung in der MDN Web-Dokumentation. Ältere Microsoft [CSS-Erweiterungen](https://developer.mozilla.org/docs/Web/CSS/Microsoft_Extensions) und [JavaScript-Erweiterungen](https://developer.mozilla.org/docs/Web/JavaScript/Microsoft_JavaScript_extensions) sind auch verfügbar, und finden Sie umfassende Web-API-Informationen aus MDN ermittlungsfunktionen direkt in [Visual Studio Code.](https://code.visualstudio.com/updates/v1_25#_new-css-pseudo-selectors-and-pseudo-elements-from-mdn)
+Eine Liste der [veralteten Erweiterungen für Microsoft-API](https://developer.mozilla.org/docs/Web/API/Microsoft_API_extensions) wurde in der Mozilla Developer Network-Dokumentation zur browserübergreifende Webentwicklung hinzugefügt. Diese API-Erweiterungen sind spezifisch für Internet Explorer oder Microsoft Edge, und ergänzen vorhandene Informationen zur Kompatibilität und Browser-Unterstützung in der MDN Web-Dokumentation. Ältere Microsoft [CSS-Erweiterungen](https://developer.mozilla.org/docs/Web/CSS/Microsoft_Extensions) und [JavaScript-Erweiterungen](https://developer.mozilla.org/docs/Web/JavaScript/Microsoft_JavaScript_extensions) sind ebenfalls verfügbar, und finden Sie umfassende Web-API-Informationen aus MDN ermittlungsfunktionen direkt in [Visual Studio Code.](https://code.visualstudio.com/updates/v1_25#_new-css-pseudo-selectors-and-pseudo-elements-from-mdn)
 
 ### <a name="cwinrt-code-examples"></a>C++ / WinRT-Code-Beispiele
 
-Wir haben 250 hinzugefügt [C++ / WinRT](../cpp-and-winrt-apis/index.md) Einträge zu Themen in unserer Dokumentation, begleitende vorhandenen C++-code / CX-Code-Beispiele.
+Wir haben 250 hinzugefügt [C++ / WinRT](../cpp-and-winrt-apis/index.md) code Einträge zu Themen in unserer Dokumentation, zugehörige vorhandenen C++ / CX-Codebeispiele.
 
 ### <a name="project-rome"></a>Projekt Rome
 
-Die [Projekt "ROME" Dokumente](https://docs.microsoft.com/windows/project-rome/) Website wurde in einen Ansatz Feature ausgelegt neu organisiert. Dies sollte einfacher für Entwickler zu finden, was sie suchen und Features ihrer Wahl für mehrere Plattformen zu implementieren.
+Die Website [Projekt "ROME"-Dokumente](https://docs.microsoft.com/windows/project-rome/) wurde in einen Ansatz Feature ausgelegt neu organisiert. Dies sollte einfacher für Entwickler zu finden, was sie suchen und Features ihrer Wahl für mehrere Plattformen zu implementieren.
 
 ## <a name="videos"></a>Videos
 
 ### <a name="xbox-live-unity-plugin"></a>Xbox Live Unity-Plug-in
 
-Die Xbox Live-Plug-In für Unity enthält Unterstützung für das Hinzufügen von Xbox Live zu signieren, Statistiken, Freunde-Listen, Cloud-Speicher und Bestenlisten auf den Titel. [Das Video ansehen](https://youtu.be/fVQZ-YgwNpY) , um mehr zu erfahren, und dann [das GitHub-Paket herunterzuladen](https://aka.ms/UnityPlugin) , für den Einstieg.
+Die Xbox Live-Plug-In für Unity bietet Unterstützung für das Hinzufügen von Xbox Live zu signieren, Statistiken, Freunde-Listen, Cloud-Speicher und Bestenlisten auf den Titel. [Das Video ansehen](https://youtu.be/fVQZ-YgwNpY) , um mehr zu erfahren, und [das GitHub-Paket herunterzuladen](https://aka.ms/UnityPlugin) , für den Einstieg.
 
 ### <a name="one-dev-question"></a>One Dev Frage
 
@@ -70,7 +70,7 @@ In der eine Dev Frage Videoserie behandelt seit Microsoft-Entwicklern eine Reihe
 
 Raymond Chen:
 
-* [Woher weiß der Kernel wann Videotreibers neu gestartet?](https://youtu.be/3SNAdyO1l5c)
+* [Woher weiß der Kernel beim Videotreibers neu gestartet?](https://youtu.be/3SNAdyO1l5c)
 
 Larry Osterman:
 

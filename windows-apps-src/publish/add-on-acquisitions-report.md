@@ -11,16 +11,16 @@ ms.technology: uwp
 keywords: Windows10, UWP, Add-On-Verkäufe, Add-On-Käufe, IAP-Verkauf, In-App-Produkte, IAPS, Add-Ons
 ms.localizationpriority: medium
 ms.openlocfilehash: 019bb410e6ac65f9951f06052c78f40e9a5f32e2
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4470191"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4509244"
 ---
 # <a name="add-on-acquisitions-report"></a>Bericht zu Add-On-Käufen
 
 
-Der Bericht " **Add-on-Käufe** " im Windows Dev Center-Dashboard können Sie sehen, wie viele Add-ons Sie, und Sie können demografische verkauft haben und plattformspezifische Details einsehen und zeigt Konvertierungsinformationen für Kunden unter Windows 10 (einschließlich Xbox). Sie können auch in der Nähe in Echtzeit Kaufdaten für den letzten oder 70-zwei Stunden-Zeitraum anzeigen.
+Der Bericht " **Add-on-Käufe** " im Windows Dev Center-Dashboard können Sie, wie viele Add-ons Sie, und Sie können demografische verkauft haben und plattformspezifische Details einsehen und zeigt Konvertierungsinformationen für Kunden unter Windows 10 (einschließlich Xbox). Sie können auch in der Nähe in Echtzeit Kaufdaten für den letzten oder 70-zwei Stunden-Zeitraum anzeigen.
 
 Sie können diese Daten in Ihrem Dashboard anzeigen oder den [Bericht herunterladen](download-analytic-reports.md), um ihn offline anzuzeigen. Sie können diese Daten auch programmgesteuert mit der Methode [get add-on acquisitions](../monetize/get-in-app-acquisitions.md) der [Microsoft Store-Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 

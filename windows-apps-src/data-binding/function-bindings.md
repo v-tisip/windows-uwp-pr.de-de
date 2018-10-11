@@ -1,7 +1,7 @@
 ---
 author: jwmsft
 description: Die xBind-Markuperweiterung mit der Funktionen im Markup verwendet werden.
-title: 'X: Bind-Funktionen'
+title: 'Funktionen in X: Bind'
 ms.author: jimwalk
 ms.date: 04/26/2018
 ms.topic: article
@@ -10,13 +10,13 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, xBind
 ms.localizationpriority: medium
 ms.openlocfilehash: b160b1e711f6e56b14f0d6e0e83e9f9150be5e90
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4472573"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4507868"
 ---
-# <a name="functions-in-xbind"></a>X: Bind-Funktionen
+# <a name="functions-in-xbind"></a>Funktionen in X: Bind
 
 **Hinweis**  Allgemeine Informationen zur Verwendung der Datenbindung in Ihrer App mit **{x:Bind}** (sowie einen Gesamtvergleich von **{x:Bind}** und **{Binding}**) finden Sie unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
@@ -108,7 +108,7 @@ Für die zu bindende Funktion müssen folgende Voraussetzungen gelten:
 - Die Argumenttypen müssen den übergebenen Daten entsprechen. Es werden keine einschränkenden Konvertierungen durchgeführt
 - Der Rückgabetyp der Funktion muss mit dem Typ der Eigenschaft übereinstimmen, für die die Bindung verwendet wird
 
-Beginnen mit dem nächsten wichtigen Update für Windows 10, wird das Bindungsmodul Benachrichtigungen über eigenschaftsänderungen mit den Namen der Funktion ausgelöst reagieren und Bindungen nach Bedarf neu ausgewertet. Beispiel: 
+Beginnend mit dem nächsten wichtigen Update für Windows 10, wird das Bindungsmodul Benachrichtigungen über eigenschaftsänderungen mit den Namen der Funktion ausgelöst reagieren und erneut auswerten Bindungen nach Bedarf. Beispiel: 
 
 ```XAML
 <DataTemplate x:DataType="local:Person">

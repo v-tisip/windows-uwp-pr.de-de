@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows10, verpackung, paketlayout, bestandspaket
 ms.localizationpriority: medium
 ms.openlocfilehash: 31c27430c850f861c8b97863521202a6dcab80f7
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4469917"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4505892"
 ---
 # <a name="developing-with-asset-packages-and-package-folding"></a>Entwickeln mit Bestandspaketen und Paketfaltung 
 
@@ -29,7 +29,7 @@ Wenn Sie die Verwendung von Bestandspaketen für Ihre App in Erwägung ziehen od
 
 Um zu verstehen, warum die Paketfaltung Ihren Entwicklungsprozesses nicht beeinflusst, müssen wir zunächst etwas weiter ausholen, um zu verstehen, was geschieht, wenn Sie Ihre App in mehrere Pakete (entweder mit Bestandspaketen oder Ressourcenpaketen) aufteilen. 
 
-Wenn Sie einige Dateien Ihrer App in andere Pakete (die keine Architekturpakete sind) aufteilen, können Sie nicht direkt von dem Speicherort auf diese Dateien zugreifen, wo Ihr Code ausgeführt wird. Der Grund hierfür ist, dass diese Pakete alle in verschiedenen Verzeichnissen als das Architekturpaket installiert sind. Beispielsweise können Sie ein Spiel erstellen und Ihr Spiel in lokalisiert ist Französisch und Deutsch und Sie für x X86- und X64 Maschinen erstellt, dann sollten Sie diese app-Paketdateien innerhalb der app-Bündel Ihres Spiels haben:
+Wenn Sie einige Dateien Ihrer App in andere Pakete (die keine Architekturpakete sind) aufteilen, können Sie nicht direkt von dem Speicherort auf diese Dateien zugreifen, wo Ihr Code ausgeführt wird. Der Grund hierfür ist, dass diese Pakete alle in verschiedenen Verzeichnissen als das Architekturpaket installiert sind. Z. B. wenn ein Spiel haben, und Ihr Spiel ist in lokalisiert Französisch und Deutsch und Sie für x X86- und X64 Maschinen erstellt, dann sollten Sie diese app-Paketdateien innerhalb der app-Bündel Ihres Spiels haben:
 
 -   MyGame_1.0_x86.appx
 -   MyGame_1.0_x64.appx

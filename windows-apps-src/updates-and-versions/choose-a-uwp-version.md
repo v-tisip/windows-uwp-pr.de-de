@@ -11,18 +11,18 @@ keywords: Windows10, UWP, Version, Build, Versionen, Windows, auswählen, aktual
 ms.assetid: a8b7830f-4929-44c6-90be-91f38be5f364
 ms.localizationpriority: medium
 ms.openlocfilehash: d2909e6e674d524327b676441f7f08fc51595772
-ms.sourcegitcommit: 49aab071aa2bd88f1c165438ee7e5c854b3e4f61
+ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "4472619"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "4508144"
 ---
 # <a name="choose-a-uwp-version"></a>Auswählen einer UWP-Version
 
 Jede Version von Windows10 hat neue und verbesserte Features für die UWP-Plattform hervorgebracht. Beim Erstellen einer UWP-App in Microsoft Visual Studio können Sie wählen, für welche Version die App bestimmt ist. Projekte mit [Standard .NET 2.0](https://docs.microsoft.com/dotnet/standard/net-standard) müssen eine **mindestens erforderliche Version** von 16299 oder höher verwenden.
 
 > [!WARNING]
-> UWP-Projekte, die in aktuellen Versionen von Visual Studio erstellt haben, können in Visual Studio 2015 geöffnet werden.
+> UWP-Projekte, die in aktuellen Versionen von Visual Studio erstellt haben, können nicht in Visual Studio 2015 geöffnet werden.
 
 In der folgenden Tabelle sind die verfügbaren Versionen von Windows10 beschrieben. Bitte beachten Sie, dass diese Tabelle nur für die Erstellung von UWP-Apps gilt, die nur auf Windows10 unterstützt werden. Sie können keine UWP-Apps für ältere Versionen von Windows entwickeln, und es muss [der entsprechende SDK-Build](http://go.microsoft.com/fwlink/?LinkId=821431) für die jeweilige Version installiert sein. 
 
@@ -46,7 +46,7 @@ Referenzthemen, in denen alle Gerätefamilien mit ihren Versionen und alle API-V
 
 ## <a name="net-api-availability-in-uwp-versions"></a>.NET API-Verfügbarkeit in UWP-Versionen
 
-UWP unterstützt eine eingeschränkte Teilmenge von .NET APIs, die unabhängig von der **Zielversion** oder die **Mindestversion** Ihres Projekts verfügbar sind. [Diese Seite enthält weitere Informationen zu verfügbaren Typen](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501(d=robot).aspx).
+UWP unterstützt eine eingeschränkte Teilmenge von .NET-APIs, die unabhängig von der **Zielversion** oder die **Mindestversion** Ihres Projekts verfügbar sind. [Diese Seite enthält weitere Informationen zu den verfügbaren Typen](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501(d=robot).aspx).
 
 Wenn Sie wiederverwendbare plattformübergreifenden Bibliotheken erstellen möchten, wird auf UWP .NET Standard unterstützt. [.NET Standard-Dokumentation](https://docs.microsoft.com/dotnet/standard/net-standard) enthält Informationen, die auf dem .NET Standard in der UWP-Versionen unterstützt wird.
 
