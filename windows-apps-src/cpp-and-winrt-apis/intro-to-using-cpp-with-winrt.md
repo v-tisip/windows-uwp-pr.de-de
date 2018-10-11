@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Standard, C++, CPP, WinRT, Projizierung, Einführung
 ms.localizationpriority: medium
 ms.openlocfilehash: 7848a0b00e2f6a2bbaa84c413dc26f1ea7238e8e
-ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "4503302"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4529910"
 ---
 # <a name="introduction-to-cwinrt"></a><span data-ttu-id="62e30-104">Einführung in C++/WinRT</span><span class="sxs-lookup"><span data-stu-id="62e30-104">Introduction to C++/WinRT</span></span>
 &nbsp;
