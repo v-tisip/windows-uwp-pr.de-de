@@ -1,21 +1,21 @@
 ---
-author: mithom
+author: eliotcowley
 title: Benutzeroberflächen-Navigationscontroller
 description: Verwenden Sie die Windows.Gaming.Input-Benutzeroberflächen-Navigationscontroller-APIs zum Erkennen und Lesen verschiedener Arten von Eingabegeräten für die Navigation auf der Benutzeroberfläche.
 ms.assetid: 5A14926D-8C2E-4DE8-AAFB-BEEB9BFE91A5
-ms.author: wdg-dev-content
+ms.author: elcowle
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Spiele, UI, Navigation
 ms.localizationpriority: medium
-ms.openlocfilehash: cae9d515ba5925ce81c90dfe5eb3785491128010
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 4f95094ebf31c4b80ee8858ad849da33ff16434a
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1656135"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4535084"
 ---
 # <a name="ui-navigation-controller"></a>Benutzeroberflächen-Navigationscontroller
 
@@ -215,7 +215,7 @@ In einigen Fällen möchten Sie möglicherweise ermitteln, ob eine Taste von „
 
 ## <a name="run-the-ui-navigation-controller-sample"></a>Beispiel zum Ausführen des Benutzeroberflächen-Navigationscontrollers
 
-Das [InputInterfacingUWP-Beispiel _(github)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/InputInterfacingUWP) veranschaulicht, wie sich verschiedene Eingabegeräte als Benutzeroberflächen-Navigationscontroller verhalten.
+Das [InputInterfacingUWP-Beispiel _(github)_](https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/UWPSamples/System/InputInterfacingUWP) veranschaulicht, wie sich verschiedene Eingabegeräte als Benutzeroberflächen-Navigationscontroller verhalten.
 
 ## <a name="see-also"></a>Weitere Informationen finden Sie unter
 [Windows.Gaming.Input.Gamepad][]
