@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: cc7119ba2d97bfc6e1fb3f1a519b6d650027b1a3
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4530580"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4566170"
 ---
-# <a name="copy-to-and-from-byte-arrays"></a><span data-ttu-id="510aa-104">Kopieren in und aus Bytearrays</span><span class="sxs-lookup"><span data-stu-id="510aa-104">Copy to and from byte arrays</span></span>
+# <a name="copy-to-and-from-byte-arrays"></a><span data-ttu-id="a11b7-104">Kopieren in und aus Bytearrays</span><span class="sxs-lookup"><span data-stu-id="a11b7-104">Copy to and from byte arrays</span></span>
 
 
 
-<span data-ttu-id="510aa-105">Dieser Beispielcode zeigt, wie Sie in und aus Bytearrays in einer UWP (Universelle Windows-Plattform)-App kopieren können.</span><span class="sxs-lookup"><span data-stu-id="510aa-105">This example code shows how to copy to and from byte arrays in an Universal Windows Platform (UWP) app.</span></span>
+<span data-ttu-id="a11b7-105">Dieser Beispielcode zeigt, wie Sie in und aus Bytearrays in einer UWP (Universelle Windows-Plattform)-App kopieren können.</span><span class="sxs-lookup"><span data-stu-id="a11b7-105">This example code shows how to copy to and from byte arrays in an Universal Windows Platform (UWP) app.</span></span>
 
 ```cs
 public void ByteArrayCopy()

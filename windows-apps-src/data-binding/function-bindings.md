@@ -10,25 +10,25 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, xBind
 ms.localizationpriority: medium
 ms.openlocfilehash: b160b1e711f6e56b14f0d6e0e83e9f9150be5e90
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4532167"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4575309"
 ---
-# <a name="functions-in-xbind"></a><span data-ttu-id="da887-104">Funktionen in X: Bind</span><span class="sxs-lookup"><span data-stu-id="da887-104">Functions in x:Bind</span></span>
+# <a name="functions-in-xbind"></a><span data-ttu-id="b2a3a-104">Funktionen in X: Bind</span><span class="sxs-lookup"><span data-stu-id="b2a3a-104">Functions in x:Bind</span></span>
 
-<span data-ttu-id="da887-105">**Hinweis**  Allgemeine Informationen zur Verwendung der Datenbindung in Ihrer App mit **{x:Bind}** (sowie einen Gesamtvergleich von **{x:Bind}** und **{Binding}**) finden Sie unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).</span><span class="sxs-lookup"><span data-stu-id="da887-105">**Note**  For general info about using data binding in your app with **{x:Bind}** (and for an all-up comparison between **{x:Bind}** and **{Binding}**), see [Data binding in depth](https://msdn.microsoft.com/library/windows/apps/mt210946).</span></span>
+<span data-ttu-id="b2a3a-105">**Hinweis**  Allgemeine Informationen zur Verwendung der Datenbindung in Ihrer App mit **{x:Bind}** (sowie einen Gesamtvergleich von **{x:Bind}** und **{Binding}**) finden Sie unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).</span><span class="sxs-lookup"><span data-stu-id="b2a3a-105">**Note**  For general info about using data binding in your app with **{x:Bind}** (and for an all-up comparison between **{x:Bind}** and **{Binding}**), see [Data binding in depth](https://msdn.microsoft.com/library/windows/apps/mt210946).</span></span>
 
-<span data-ttu-id="da887-106">Ab Windows10, Version 1607, unterstützt **{x: Bind}** die Verwendung einer Funktion als blattbildenden Schrittdes Bindungspfades.</span><span class="sxs-lookup"><span data-stu-id="da887-106">Starting in Windows 10, version 1607, **{x:Bind}** supports using a function as the leaf step of the binding path.</span></span> <span data-ttu-id="da887-107">Dadurch wird Folgendes ermöglicht:</span><span class="sxs-lookup"><span data-stu-id="da887-107">This enables:</span></span>
+<span data-ttu-id="b2a3a-106">Ab Windows10, Version 1607, unterstützt **{x: Bind}** die Verwendung einer Funktion als blattbildenden Schrittdes Bindungspfades.</span><span class="sxs-lookup"><span data-stu-id="b2a3a-106">Starting in Windows 10, version 1607, **{x:Bind}** supports using a function as the leaf step of the binding path.</span></span> <span data-ttu-id="b2a3a-107">Dadurch wird Folgendes ermöglicht:</span><span class="sxs-lookup"><span data-stu-id="b2a3a-107">This enables:</span></span>
 
-- <span data-ttu-id="da887-108">Eine einfachere Möglichkeit der Konvertierung von Werten</span><span class="sxs-lookup"><span data-stu-id="da887-108">A simpler way to achieve value conversion</span></span>
-- <span data-ttu-id="da887-109">Eine Möglichkeit, Bindungen von mehr als einem Parameter abhängig zu machen</span><span class="sxs-lookup"><span data-stu-id="da887-109">A way for bindings to depend on more than one parameter</span></span>
+- <span data-ttu-id="b2a3a-108">Eine einfachere Möglichkeit der Konvertierung von Werten</span><span class="sxs-lookup"><span data-stu-id="b2a3a-108">A simpler way to achieve value conversion</span></span>
+- <span data-ttu-id="b2a3a-109">Eine Möglichkeit, Bindungen von mehr als einem Parameter abhängig zu machen</span><span class="sxs-lookup"><span data-stu-id="b2a3a-109">A way for bindings to depend on more than one parameter</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="da887-110">Wenn Sie Funktionen für **{x: Bind}** verwenden möchten, muss die Ziel-SDK-Version 14393 oder höher sein.</span><span class="sxs-lookup"><span data-stu-id="da887-110">To use functions with **{x:Bind}**, your app's minimum target SDK version must be 14393 or later.</span></span> <span data-ttu-id="da887-111">Sie können keine Funktionen verwenden, wenn Ihre App für frühere Versionen von Windows10 bestimmt ist.</span><span class="sxs-lookup"><span data-stu-id="da887-111">You can't use functions when your app targets earlier versions of Windows 10.</span></span> <span data-ttu-id="da887-112">Weitere Informationen zu Zielversionen finden Sie unter [Versionsadaptiver Code](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).</span><span class="sxs-lookup"><span data-stu-id="da887-112">For more info about target versions, see [Version adaptive code](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).</span></span>
+> <span data-ttu-id="b2a3a-110">Wenn Sie Funktionen für **{x: Bind}** verwenden möchten, muss die Ziel-SDK-Version 14393 oder höher sein.</span><span class="sxs-lookup"><span data-stu-id="b2a3a-110">To use functions with **{x:Bind}**, your app's minimum target SDK version must be 14393 or later.</span></span> <span data-ttu-id="b2a3a-111">Sie können keine Funktionen verwenden, wenn Ihre App für frühere Versionen von Windows10 bestimmt ist.</span><span class="sxs-lookup"><span data-stu-id="b2a3a-111">You can't use functions when your app targets earlier versions of Windows 10.</span></span> <span data-ttu-id="b2a3a-112">Weitere Informationen zu Zielversionen finden Sie unter [Versionsadaptiver Code](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).</span><span class="sxs-lookup"><span data-stu-id="b2a3a-112">For more info about target versions, see [Version adaptive code](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).</span></span>
 
-<span data-ttu-id="da887-113">Im folgenden Beispiel werden Hintergrund und Vordergrund des Elements an Funktionen gebunden, um eine Konvertierung basierend auf dem Farbparameter durchzuführen</span><span class="sxs-lookup"><span data-stu-id="da887-113">In the following example, the background and foreground of the item are bound to functions to do conversion based on the color parameter</span></span>
+<span data-ttu-id="b2a3a-113">Im folgenden Beispiel werden Hintergrund und Vordergrund des Elements an Funktionen gebunden, um eine Konvertierung basierend auf dem Farbparameter durchzuführen</span><span class="sxs-lookup"><span data-stu-id="b2a3a-113">In the following example, the background and foreground of the item are bound to functions to do conversion based on the color parameter</span></span>
 
 ```xaml
 <DataTemplate x:DataType="local:ColorEntry">
@@ -56,17 +56,17 @@ class ColorEntry
 }
 ```
 
-## <a name="xaml-attribute-usage"></a><span data-ttu-id="da887-114">XAML-Attributsyntax</span><span class="sxs-lookup"><span data-stu-id="da887-114">XAML attribute usage</span></span>
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="b2a3a-114">XAML-Attributsyntax</span><span class="sxs-lookup"><span data-stu-id="b2a3a-114">XAML attribute usage</span></span>
 
 ``` syntax
 <object property="{x:Bind pathToFunction.FunctionName(functionParameter1, functionParameter2, ...), bindingProperties}" ... />
 ```
 
-## <a name="path-to-the-function"></a><span data-ttu-id="da887-115">Pfad der Funktion</span><span class="sxs-lookup"><span data-stu-id="da887-115">Path to the function</span></span>
+## <a name="path-to-the-function"></a><span data-ttu-id="b2a3a-115">Pfad der Funktion</span><span class="sxs-lookup"><span data-stu-id="b2a3a-115">Path to the function</span></span>
 
-<span data-ttu-id="da887-116">Der Pfad der Funktion wird wie jeder andere Eigenschaftspfad angegeben. Er kann Punkte (.), Indexer oder Umwandlungen für die Suche nach der Funktion enthalten.</span><span class="sxs-lookup"><span data-stu-id="da887-116">The path to the function is specified like other property paths and can include dots (.), indexers or casts to locate the function.</span></span>
+<span data-ttu-id="b2a3a-116">Der Pfad der Funktion wird wie jeder andere Eigenschaftspfad angegeben. Er kann Punkte (.), Indexer oder Umwandlungen für die Suche nach der Funktion enthalten.</span><span class="sxs-lookup"><span data-stu-id="b2a3a-116">The path to the function is specified like other property paths and can include dots (.), indexers or casts to locate the function.</span></span>
 
-<span data-ttu-id="da887-117">Statische Funktionen können mithilfe der XMLNamespace:ClassName.MethodName-Syntax angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="da887-117">Static functions can be specified using XMLNamespace:ClassName.MethodName syntax.</span></span> <span data-ttu-id="da887-118">Verwenden Sie z. B. die unten Syntax für die Bindung an statische Funktionen im CodeBehind.</span><span class="sxs-lookup"><span data-stu-id="da887-118">For example, use the below syntax for binding to static functions in code-behind.</span></span>
+<span data-ttu-id="b2a3a-117">Statische Funktionen können mithilfe der XMLNamespace:ClassName.MethodName-Syntax angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="b2a3a-117">Static functions can be specified using XMLNamespace:ClassName.MethodName syntax.</span></span> <span data-ttu-id="b2a3a-118">Verwenden Sie z. B. die unten Syntax für die Bindung an statische Funktionen im CodeBehind.</span><span class="sxs-lookup"><span data-stu-id="b2a3a-118">For example, use the below syntax for binding to static functions in code-behind.</span></span>
 
 ```xaml
 <Page 
@@ -88,7 +88,7 @@ public class MyPage : Page
 }
 ```
 
-<span data-ttu-id="da887-119">Sie können auch Systemfunktionen direkt im Markup verwenden, um einfache Szenarien wie das Datum formatieren, Formatieren von Text, Text Konkatinierungen usw., z. B. auszuführen:</span><span class="sxs-lookup"><span data-stu-id="da887-119">You can also use system functions directly in markup to accomplish simple scenarios like date formatting, text formatting, text concatenations, etc., For example:</span></span>
+<span data-ttu-id="b2a3a-119">Sie können auch Systemfunktionen direkt im Markup verwenden, um einfache Szenarien wie das Datum formatieren, Formatieren von Text, Text Konkatinierungen usw., z. B. auszuführen:</span><span class="sxs-lookup"><span data-stu-id="b2a3a-119">You can also use system functions directly in markup to accomplish simple scenarios like date formatting, text formatting, text concatenations, etc., For example:</span></span>
 ```xaml
 <Page 
      xmlns:sys="using:System"
@@ -99,16 +99,16 @@ public class MyPage : Page
 </Page>
 ```
 
-<span data-ttu-id="da887-120">Ist der Modus OneWay/TwoWay, wird auf den Pfad der Funktion eine Änderungserkennung angewendet, und die Bindung wird neu ausgewertet, wenn diese Objekte geändert wurden.</span><span class="sxs-lookup"><span data-stu-id="da887-120">If the mode is OneWay/TwoWay, then the function path will have change detection performed on it, and the binding will be re-evaluated if there are changes to those objects.</span></span>
+<span data-ttu-id="b2a3a-120">Ist der Modus OneWay/TwoWay, wird auf den Pfad der Funktion eine Änderungserkennung angewendet, und die Bindung wird neu ausgewertet, wenn diese Objekte geändert wurden.</span><span class="sxs-lookup"><span data-stu-id="b2a3a-120">If the mode is OneWay/TwoWay, then the function path will have change detection performed on it, and the binding will be re-evaluated if there are changes to those objects.</span></span>
 
-<span data-ttu-id="da887-121">Für die zu bindende Funktion müssen folgende Voraussetzungen gelten:</span><span class="sxs-lookup"><span data-stu-id="da887-121">The function being bound to needs to:</span></span>
+<span data-ttu-id="b2a3a-121">Für die zu bindende Funktion müssen folgende Voraussetzungen gelten:</span><span class="sxs-lookup"><span data-stu-id="b2a3a-121">The function being bound to needs to:</span></span>
 
-- <span data-ttu-id="da887-122">Code und die Metadaten müssen auf sie zugreifen können, d.h. interne/private Aktionen in C#, aber für C++/CX werden öffentliche WinRT-Methoden benötigt</span><span class="sxs-lookup"><span data-stu-id="da887-122">Be accessible to the code and metadata – so internal / private work in C#, but C++/CX will need methods to be public WinRT methods</span></span>
-- <span data-ttu-id="da887-123">Überladung basiert auf der Anzahl der Argumente, nicht auf ihrem Typ, und es wird die erste Übereinstimmung mit dieser Anzahl von Argumenten gesucht</span><span class="sxs-lookup"><span data-stu-id="da887-123">Overloading is based on the number of arguments, not type, and it will try to match to the first overload with that many arguments</span></span>
-- <span data-ttu-id="da887-124">Die Argumenttypen müssen den übergebenen Daten entsprechen. Es werden keine einschränkenden Konvertierungen durchgeführt</span><span class="sxs-lookup"><span data-stu-id="da887-124">The argument types need to match the data being passed in – we don’t do narrowing conversions</span></span>
-- <span data-ttu-id="da887-125">Der Rückgabetyp der Funktion muss mit dem Typ der Eigenschaft übereinstimmen, für die die Bindung verwendet wird</span><span class="sxs-lookup"><span data-stu-id="da887-125">The return type of the function needs to match the type of the property that is using the binding</span></span>
+- <span data-ttu-id="b2a3a-122">Code und die Metadaten müssen auf sie zugreifen können, d.h. interne/private Aktionen in C#, aber für C++/CX werden öffentliche WinRT-Methoden benötigt</span><span class="sxs-lookup"><span data-stu-id="b2a3a-122">Be accessible to the code and metadata – so internal / private work in C#, but C++/CX will need methods to be public WinRT methods</span></span>
+- <span data-ttu-id="b2a3a-123">Überladung basiert auf der Anzahl der Argumente, nicht auf ihrem Typ, und es wird die erste Übereinstimmung mit dieser Anzahl von Argumenten gesucht</span><span class="sxs-lookup"><span data-stu-id="b2a3a-123">Overloading is based on the number of arguments, not type, and it will try to match to the first overload with that many arguments</span></span>
+- <span data-ttu-id="b2a3a-124">Die Argumenttypen müssen den übergebenen Daten entsprechen. Es werden keine einschränkenden Konvertierungen durchgeführt</span><span class="sxs-lookup"><span data-stu-id="b2a3a-124">The argument types need to match the data being passed in – we don’t do narrowing conversions</span></span>
+- <span data-ttu-id="b2a3a-125">Der Rückgabetyp der Funktion muss mit dem Typ der Eigenschaft übereinstimmen, für die die Bindung verwendet wird</span><span class="sxs-lookup"><span data-stu-id="b2a3a-125">The return type of the function needs to match the type of the property that is using the binding</span></span>
 
-<span data-ttu-id="da887-126">Beginnend mit dem nächsten wichtigen Update für Windows 10, wird das Bindungsmodul Benachrichtigungen über eigenschaftsänderungen mit den Namen der Funktion ausgelöst reagieren und erneut auswerten Bindungen nach Bedarf.</span><span class="sxs-lookup"><span data-stu-id="da887-126">Starting with the next major update to Windows 10, the binding engine will react to property change notifications fired with the function name and re-evaluate bindings as necessary.</span></span> <span data-ttu-id="da887-127">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="da887-127">For example:</span></span> 
+<span data-ttu-id="b2a3a-126">Beginnend mit dem nächsten wichtigen Update für Windows 10, wird das Bindungsmodul Benachrichtigungen über eigenschaftsänderungen mit den Namen der Funktion ausgelöst reagieren und erneut auswerten Bindungen nach Bedarf.</span><span class="sxs-lookup"><span data-stu-id="b2a3a-126">Starting with the next major update to Windows 10, the binding engine will react to property change notifications fired with the function name and re-evaluate bindings as necessary.</span></span> <span data-ttu-id="b2a3a-127">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="b2a3a-127">For example:</span></span> 
 
 ```XAML
 <DataTemplate x:DataType="local:Person">
@@ -163,21 +163,21 @@ public class Person:INotifyPropertyChanged
 ```
 
 > [!TIP]
-> <span data-ttu-id="da887-128">Sie können Funktionen in X: Bind um zu erreichen die gleichen Szenarien wie was über Konverter und MultiBinding in WPF unterstützt wurde.</span><span class="sxs-lookup"><span data-stu-id="da887-128">You can use functions in x:Bind to achieve the same scenarios as what was supported through Converters and MultiBinding in WPF.</span></span>
+> <span data-ttu-id="b2a3a-128">Sie können Funktionen in X: Bind um zu erreichen die gleichen Szenarien wie was über Konverter und MultiBinding in WPF unterstützt wurde.</span><span class="sxs-lookup"><span data-stu-id="b2a3a-128">You can use functions in x:Bind to achieve the same scenarios as what was supported through Converters and MultiBinding in WPF.</span></span>
 
-## <a name="function-arguments"></a><span data-ttu-id="da887-129">Funktionsargumente</span><span class="sxs-lookup"><span data-stu-id="da887-129">Function arguments</span></span>
+## <a name="function-arguments"></a><span data-ttu-id="b2a3a-129">Funktionsargumente</span><span class="sxs-lookup"><span data-stu-id="b2a3a-129">Function arguments</span></span>
 
-<span data-ttu-id="da887-130">Mehrere Argumente können durch Komma (,) voneinander getrennt angegeben werden</span><span class="sxs-lookup"><span data-stu-id="da887-130">Multiple function arguments can be specified, separated by comma's (,)</span></span>
+<span data-ttu-id="b2a3a-130">Mehrere Argumente können durch Komma (,) voneinander getrennt angegeben werden</span><span class="sxs-lookup"><span data-stu-id="b2a3a-130">Multiple function arguments can be specified, separated by comma's (,)</span></span>
 
-- <span data-ttu-id="da887-131">Bindungspfad – dieselbe Syntax wie bei einer direkten Bindung an das Objekt.</span><span class="sxs-lookup"><span data-stu-id="da887-131">Binding Path – Same syntax as if you were binding directly to that object.</span></span>
-  - <span data-ttu-id="da887-132">Ist der Modus OneWay/TwoWay, wird eine Änderungserkennung angewendet, und die Bindung wird neu ausgewertet, wenn diese Objekte geändert wurden.</span><span class="sxs-lookup"><span data-stu-id="da887-132">If the mode is OneWay/TwoWay then change detection will be performed and the binding re-evaluated upon object changes</span></span>
-- <span data-ttu-id="da887-133">Konstante Zeichenfolge in Anführungszeichen – Anführungszeichen müssen gesetzt werden, um Zeichenfolgen kenntlich zu machen</span><span class="sxs-lookup"><span data-stu-id="da887-133">Constant string enclosed in quotes – quotes are needed to designate it as a string.</span></span> <span data-ttu-id="da887-134">Das Caret-Symbol (^) kann als Escapezeichen für Anführungszeichen innerhalb von Zeichenfolgen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="da887-134">Hat (^) can be used to escape quotes in strings</span></span>
-- <span data-ttu-id="da887-135">Konstante Zahl – z. B. -123.456</span><span class="sxs-lookup"><span data-stu-id="da887-135">Constant Number - for example -123.456</span></span>
-- <span data-ttu-id="da887-136">Boolean – als "x: True" oder "x: False" angeben</span><span class="sxs-lookup"><span data-stu-id="da887-136">Boolean – specified as "x:True" or "x:False"</span></span>
+- <span data-ttu-id="b2a3a-131">Bindungspfad – dieselbe Syntax wie bei einer direkten Bindung an das Objekt.</span><span class="sxs-lookup"><span data-stu-id="b2a3a-131">Binding Path – Same syntax as if you were binding directly to that object.</span></span>
+  - <span data-ttu-id="b2a3a-132">Ist der Modus OneWay/TwoWay, wird eine Änderungserkennung angewendet, und die Bindung wird neu ausgewertet, wenn diese Objekte geändert wurden.</span><span class="sxs-lookup"><span data-stu-id="b2a3a-132">If the mode is OneWay/TwoWay then change detection will be performed and the binding re-evaluated upon object changes</span></span>
+- <span data-ttu-id="b2a3a-133">Konstante Zeichenfolge in Anführungszeichen – Anführungszeichen müssen gesetzt werden, um Zeichenfolgen kenntlich zu machen</span><span class="sxs-lookup"><span data-stu-id="b2a3a-133">Constant string enclosed in quotes – quotes are needed to designate it as a string.</span></span> <span data-ttu-id="b2a3a-134">Das Caret-Symbol (^) kann als Escapezeichen für Anführungszeichen innerhalb von Zeichenfolgen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="b2a3a-134">Hat (^) can be used to escape quotes in strings</span></span>
+- <span data-ttu-id="b2a3a-135">Konstante Zahl – z. B. -123.456</span><span class="sxs-lookup"><span data-stu-id="b2a3a-135">Constant Number - for example -123.456</span></span>
+- <span data-ttu-id="b2a3a-136">Boolean – als "x: True" oder "x: False" angeben</span><span class="sxs-lookup"><span data-stu-id="b2a3a-136">Boolean – specified as "x:True" or "x:False"</span></span>
 
-### <a name="two-way-function-bindings"></a><span data-ttu-id="da887-137">Bidirektionale Funktionsbindung</span><span class="sxs-lookup"><span data-stu-id="da887-137">Two way function bindings</span></span>
+### <a name="two-way-function-bindings"></a><span data-ttu-id="b2a3a-137">Bidirektionale Funktionsbindung</span><span class="sxs-lookup"><span data-stu-id="b2a3a-137">Two way function bindings</span></span>
 
-<span data-ttu-id="da887-138">In einem Szenario mit bidirektionaler Bindung muss eine zweite Funktion für die umgekehrte Bindungsrichtung angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="da887-138">In a two-way binding scenario, a second function must be specified for the reverse direction of the binding.</span></span> <span data-ttu-id="da887-139">Dies erfolgt mithilfe der **BindBack** Binding-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="da887-139">This is done using the **BindBack** binding property.</span></span> <span data-ttu-id="da887-140">In dem Beispiel unten haben die Funktion zu ergreifende Maßnahme ein Argument, das dem Wert entspricht, die das Modell übernommen werden muss.</span><span class="sxs-lookup"><span data-stu-id="da887-140">In the below example, the function should take one argument which is the value that needs to be pushed back to the model.</span></span>
+<span data-ttu-id="b2a3a-138">In einem Szenario mit bidirektionaler Bindung muss eine zweite Funktion für die umgekehrte Bindungsrichtung angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="b2a3a-138">In a two-way binding scenario, a second function must be specified for the reverse direction of the binding.</span></span> <span data-ttu-id="b2a3a-139">Dies erfolgt mithilfe der **BindBack** Binding-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="b2a3a-139">This is done using the **BindBack** binding property.</span></span> <span data-ttu-id="b2a3a-140">In dem Beispiel unten haben die Funktion zu ergreifende Maßnahme ein Argument, das dem Wert entspricht, die das Modell übernommen werden muss.</span><span class="sxs-lookup"><span data-stu-id="b2a3a-140">In the below example, the function should take one argument which is the value that needs to be pushed back to the model.</span></span>
 ```xaml
 <TextBlock Text="{x:Bind a.MyFunc(b), BindBack=a.MyFunc2, Mode=TwoWay}" />
 ```

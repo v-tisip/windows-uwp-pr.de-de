@@ -11,21 +11,21 @@ keywords: Windows10, UWP
 design-contact: karenmui
 ms.localizationpriority: medium
 ms.openlocfilehash: e5d26d0e2fc8c040af81645477e3b75b0d128738
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4536704"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4565932"
 ---
-# <a name="color"></a><span data-ttu-id="85712-104">Farben</span><span class="sxs-lookup"><span data-stu-id="85712-104">Color</span></span>
+# <a name="color"></a><span data-ttu-id="ca54c-104">Farben</span><span class="sxs-lookup"><span data-stu-id="ca54c-104">Color</span></span>
 
 ![Favoritenbild](images/header-color.svg)
 
-<span data-ttu-id="85712-106">Farbe bietet eine intuitive Möglichkeit, Informationen an Benutzer in Ihrer App zu übermitteln – sie kann Interaktivität anzuzeigen, Feedback auf Benutzeraktionen geben und Ihrer Benutzeroberfläche ein Gefühl von visueller Kontinuität vermitteln.</span><span class="sxs-lookup"><span data-stu-id="85712-106">Color provides an intuitive way of communicating information to users in your app: it can be used to indicate interactivity, give feedback to user actions, and give your interface a sense of visual continuity.</span></span> 
+<span data-ttu-id="ca54c-106">Farbe bietet eine intuitive Möglichkeit, Informationen an Benutzer in Ihrer App zu übermitteln – sie kann Interaktivität anzuzeigen, Feedback auf Benutzeraktionen geben und Ihrer Benutzeroberfläche ein Gefühl von visueller Kontinuität vermitteln.</span><span class="sxs-lookup"><span data-stu-id="ca54c-106">Color provides an intuitive way of communicating information to users in your app: it can be used to indicate interactivity, give feedback to user actions, and give your interface a sense of visual continuity.</span></span> 
 
-<span data-ttu-id="85712-107">In UWP-Apps werden die Farben in erster Linie durch Akzentfarbe und Design bestimmt.</span><span class="sxs-lookup"><span data-stu-id="85712-107">In UWP apps, colors are primarily determined by accent color and theme.</span></span> <span data-ttu-id="85712-108">In diesem Artikel erläutern wir, wie Sie die Farbe in Ihrer App verwenden können, und wie Sie Akzentfarben und Designressourcen verwenden, um Ihre UWP-App in jedem beliebigen Design-Kontext verwendet zu können.</span><span class="sxs-lookup"><span data-stu-id="85712-108">In this article, we'll discuss how you can use color in your app, and how to use accent color and theme resources to make your UWP app usable in any theme context.</span></span> 
+<span data-ttu-id="ca54c-107">In UWP-Apps werden die Farben in erster Linie durch Akzentfarbe und Design bestimmt.</span><span class="sxs-lookup"><span data-stu-id="ca54c-107">In UWP apps, colors are primarily determined by accent color and theme.</span></span> <span data-ttu-id="ca54c-108">In diesem Artikel erläutern wir, wie Sie die Farbe in Ihrer App verwenden können, und wie Sie Akzentfarben und Designressourcen verwenden, um Ihre UWP-App in jedem beliebigen Design-Kontext verwendet zu können.</span><span class="sxs-lookup"><span data-stu-id="ca54c-108">In this article, we'll discuss how you can use color in your app, and how to use accent color and theme resources to make your UWP app usable in any theme context.</span></span> 
 
-## <a name="color-principles"></a><span data-ttu-id="85712-109">Farbprinzipien</span><span class="sxs-lookup"><span data-stu-id="85712-109">Color principles</span></span>
+## <a name="color-principles"></a><span data-ttu-id="ca54c-109">Farbprinzipien</span><span class="sxs-lookup"><span data-stu-id="ca54c-109">Color principles</span></span>
 
 :::row:::
     :::column:::
@@ -49,23 +49,23 @@ ms.locfileid: "4536704"
     :::column-end:::
 :::row-end:::
 
-## <a name="themes"></a><span data-ttu-id="85712-110">Designs</span><span class="sxs-lookup"><span data-stu-id="85712-110">Themes</span></span>
+## <a name="themes"></a><span data-ttu-id="ca54c-110">Designs</span><span class="sxs-lookup"><span data-stu-id="ca54c-110">Themes</span></span>
 
-<span data-ttu-id="85712-111">UWP-Apps können ein helles oder dunkles Anwendungsdesign verwenden.</span><span class="sxs-lookup"><span data-stu-id="85712-111">UWP apps can use a light or dark application theme.</span></span> <span data-ttu-id="85712-112">Das Design wirkt sich auf die Farben des App-Hintergrunds, Text, Symbole und [Standardsteuerelemente](../controls-and-patterns/index.md) aus.</span><span class="sxs-lookup"><span data-stu-id="85712-112">The theme affects the colors of the app's background, text, icons, and [common controls](../controls-and-patterns/index.md).</span></span>
+<span data-ttu-id="ca54c-111">UWP-Apps können ein helles oder dunkles Anwendungsdesign verwenden.</span><span class="sxs-lookup"><span data-stu-id="ca54c-111">UWP apps can use a light or dark application theme.</span></span> <span data-ttu-id="ca54c-112">Das Design wirkt sich auf die Farben des App-Hintergrunds, Text, Symbole und [Standardsteuerelemente](../controls-and-patterns/index.md) aus.</span><span class="sxs-lookup"><span data-stu-id="ca54c-112">The theme affects the colors of the app's background, text, icons, and [common controls](../controls-and-patterns/index.md).</span></span>
 
-### <a name="light-theme"></a><span data-ttu-id="85712-113">Helles Design</span><span class="sxs-lookup"><span data-stu-id="85712-113">Light theme</span></span>
+### <a name="light-theme"></a><span data-ttu-id="ca54c-113">Helles Design</span><span class="sxs-lookup"><span data-stu-id="ca54c-113">Light theme</span></span>
 
 ![Helles Design](images/color/light-theme.svg)
 
-### <a name="dark-theme"></a><span data-ttu-id="85712-115">Dunkles Design</span><span class="sxs-lookup"><span data-stu-id="85712-115">Dark theme</span></span>
+### <a name="dark-theme"></a><span data-ttu-id="ca54c-115">Dunkles Design</span><span class="sxs-lookup"><span data-stu-id="ca54c-115">Dark theme</span></span>
 
 ![Dunkles Design](images/color/dark-theme.svg)
 
-<span data-ttu-id="85712-117">Das Design der UWP-App folgt standardmäßig den Design-Einstellungen des Benutzers aus den Windows-Einstellungen oder dem Standarddesign des Geräts (d.h. dunkel auf XBox).</span><span class="sxs-lookup"><span data-stu-id="85712-117">By default, your UWP app's theme is the user’s theme preference from Windows Settings or the device's default theme (i.e., dark on XBox).</span></span> <span data-ttu-id="85712-118">Allerdings können Sie das Design für Ihre UWP-App festlegen.</span><span class="sxs-lookup"><span data-stu-id="85712-118">However, you can set the theme for your UWP app.</span></span> 
+<span data-ttu-id="ca54c-117">Das Design der UWP-App folgt standardmäßig den Design-Einstellungen des Benutzers aus den Windows-Einstellungen oder dem Standarddesign des Geräts (d.h. dunkel auf XBox).</span><span class="sxs-lookup"><span data-stu-id="ca54c-117">By default, your UWP app's theme is the user’s theme preference from Windows Settings or the device's default theme (i.e., dark on XBox).</span></span> <span data-ttu-id="ca54c-118">Allerdings können Sie das Design für Ihre UWP-App festlegen.</span><span class="sxs-lookup"><span data-stu-id="ca54c-118">However, you can set the theme for your UWP app.</span></span> 
 
-### <a name="changing-the-theme"></a><span data-ttu-id="85712-119">Ändern des Designs</span><span class="sxs-lookup"><span data-stu-id="85712-119">Changing the theme</span></span>
+### <a name="changing-the-theme"></a><span data-ttu-id="ca54c-119">Ändern des Designs</span><span class="sxs-lookup"><span data-stu-id="ca54c-119">Changing the theme</span></span>
 
-<span data-ttu-id="85712-120">Sie können Designs einfach ändern, indem Sie die **RequestedTheme**-Eigenschaft in `App.xaml`-Datei ändern:</span><span class="sxs-lookup"><span data-stu-id="85712-120">You can change themes by changing the **RequestedTheme** property in your `App.xaml` file.</span></span>
+<span data-ttu-id="ca54c-120">Sie können Designs einfach ändern, indem Sie die **RequestedTheme**-Eigenschaft in `App.xaml`-Datei ändern:</span><span class="sxs-lookup"><span data-stu-id="ca54c-120">You can change themes by changing the **RequestedTheme** property in your `App.xaml` file.</span></span>
 
 ```XAML
 <Application
@@ -77,34 +77,34 @@ ms.locfileid: "4536704"
 </Application>
 ```
 
-<span data-ttu-id="85712-121">Das Entfernen der **RequestedTheme**-Eigenschaft bedeutet, dass die Anwendung die Systemeinstellungen des Benutzers verwendet.</span><span class="sxs-lookup"><span data-stu-id="85712-121">Removing the **RequestedTheme** property means that your application will use the user’s system settings.</span></span>
+<span data-ttu-id="ca54c-121">Das Entfernen der **RequestedTheme**-Eigenschaft bedeutet, dass die Anwendung die Systemeinstellungen des Benutzers verwendet.</span><span class="sxs-lookup"><span data-stu-id="ca54c-121">Removing the **RequestedTheme** property means that your application will use the user’s system settings.</span></span>
 
-<span data-ttu-id="85712-122">Anwender können auch Designs mit hohem Kontrast verwenden, die eine kleine Palette von Farbkombinationen mit hohem Farbkontrast nutzen, durch die die Benutzeroberfläche leichter zu erkennen ist.</span><span class="sxs-lookup"><span data-stu-id="85712-122">Users can also select the high contrast theme, which uses a small palette of contrasting colors that makes the interface easier to see.</span></span> <span data-ttu-id="85712-123">In diesem Fall überschreibt das System Ihre RequestedTheme.</span><span class="sxs-lookup"><span data-stu-id="85712-123">In that case, the system will override your RequestedTheme.</span></span>
+<span data-ttu-id="ca54c-122">Anwender können auch Designs mit hohem Kontrast verwenden, die eine kleine Palette von Farbkombinationen mit hohem Farbkontrast nutzen, durch die die Benutzeroberfläche leichter zu erkennen ist.</span><span class="sxs-lookup"><span data-stu-id="ca54c-122">Users can also select the high contrast theme, which uses a small palette of contrasting colors that makes the interface easier to see.</span></span> <span data-ttu-id="ca54c-123">In diesem Fall überschreibt das System Ihre RequestedTheme.</span><span class="sxs-lookup"><span data-stu-id="ca54c-123">In that case, the system will override your RequestedTheme.</span></span>
 
-### <a name="testing-themes"></a><span data-ttu-id="85712-124">Testen von Designs</span><span class="sxs-lookup"><span data-stu-id="85712-124">Testing themes</span></span>
+### <a name="testing-themes"></a><span data-ttu-id="ca54c-124">Testen von Designs</span><span class="sxs-lookup"><span data-stu-id="ca54c-124">Testing themes</span></span>
 
-<span data-ttu-id="85712-125">Wenn Sie kein Design für Ihre App anfordern, sollten Sie unbedingt Ihre App in hellem und dunklem Design testen, um sicherzustellen, dass Ihre App unter allen Umständen lesbar ist.</span><span class="sxs-lookup"><span data-stu-id="85712-125">If you don't request a theme for your app, make sure to test your app in both light and dark themes to ensure that your app will be legible in all conditions.</span></span>
+<span data-ttu-id="ca54c-125">Wenn Sie kein Design für Ihre App anfordern, sollten Sie unbedingt Ihre App in hellem und dunklem Design testen, um sicherzustellen, dass Ihre App unter allen Umständen lesbar ist.</span><span class="sxs-lookup"><span data-stu-id="ca54c-125">If you don't request a theme for your app, make sure to test your app in both light and dark themes to ensure that your app will be legible in all conditions.</span></span>
 
-<span data-ttu-id="85712-126">**Hinweis:**: In Visual Studio ist das RequestedTheme standardmäßig hell, daher müssen Sie die RequestedTheme ändern, um beide zu testen.</span><span class="sxs-lookup"><span data-stu-id="85712-126">**Note**: In Visual Studio, the default RequestedTheme is light, so you'll need to change the RequestedTheme to test both.</span></span>
+<span data-ttu-id="ca54c-126">**Hinweis:**: In Visual Studio ist das RequestedTheme standardmäßig hell, daher müssen Sie die RequestedTheme ändern, um beide zu testen.</span><span class="sxs-lookup"><span data-stu-id="ca54c-126">**Note**: In Visual Studio, the default RequestedTheme is light, so you'll need to change the RequestedTheme to test both.</span></span>
 
-## <a name="theme-brushes"></a><span data-ttu-id="85712-127">Designpinsel</span><span class="sxs-lookup"><span data-stu-id="85712-127">Theme brushes</span></span>
+## <a name="theme-brushes"></a><span data-ttu-id="ca54c-127">Designpinsel</span><span class="sxs-lookup"><span data-stu-id="ca54c-127">Theme brushes</span></span>
 
-<span data-ttu-id="85712-128">Allgemeine Steuerelemente verwenden automatisch [Designpinsel](../controls-and-patterns/xaml-theme-resources.md#the-xaml-color-ramp-and-theme-dependent-brushes), um den Kontrast für helle und dunkle Designs anzupassen.</span><span class="sxs-lookup"><span data-stu-id="85712-128">Common controls automatically use [theme brushes](../controls-and-patterns/xaml-theme-resources.md#the-xaml-color-ramp-and-theme-dependent-brushes) to adjust contrast for light and dark themes.</span></span>
+<span data-ttu-id="ca54c-128">Allgemeine Steuerelemente verwenden automatisch [Designpinsel](../controls-and-patterns/xaml-theme-resources.md#the-xaml-color-ramp-and-theme-dependent-brushes), um den Kontrast für helle und dunkle Designs anzupassen.</span><span class="sxs-lookup"><span data-stu-id="ca54c-128">Common controls automatically use [theme brushes](../controls-and-patterns/xaml-theme-resources.md#the-xaml-color-ramp-and-theme-dependent-brushes) to adjust contrast for light and dark themes.</span></span>
 
-<span data-ttu-id="85712-129">Hier ist eine Abbildung, wie [AutoSuggestBox](../controls-and-patterns/auto-suggest-box.md) die Designpinsel verwendet:</span><span class="sxs-lookup"><span data-stu-id="85712-129">For example, here's an illustration of how the [AutoSuggestBox](../controls-and-patterns/auto-suggest-box.md) uses theme brushes:</span></span>
+<span data-ttu-id="ca54c-129">Hier ist eine Abbildung, wie [AutoSuggestBox](../controls-and-patterns/auto-suggest-box.md) die Designpinsel verwendet:</span><span class="sxs-lookup"><span data-stu-id="ca54c-129">For example, here's an illustration of how the [AutoSuggestBox](../controls-and-patterns/auto-suggest-box.md) uses theme brushes:</span></span>
 
 ![Beispiel für Steuerelement-Designpinsel](images/color/theme-brushes.svg)
 
-<span data-ttu-id="85712-131">Die Designpinsel werden für folgende Zwecke verwendet:</span><span class="sxs-lookup"><span data-stu-id="85712-131">The theme brushes are used for the following purposes:</span></span>
+<span data-ttu-id="ca54c-131">Die Designpinsel werden für folgende Zwecke verwendet:</span><span class="sxs-lookup"><span data-stu-id="ca54c-131">The theme brushes are used for the following purposes:</span></span>
 
-- <span data-ttu-id="85712-132">**Base** gilt für Text.</span><span class="sxs-lookup"><span data-stu-id="85712-132">**Base** is for text.</span></span>
-- <span data-ttu-id="85712-133">**ALT** ist das Gegenteil von Base.</span><span class="sxs-lookup"><span data-stu-id="85712-133">**Alt** is the inverse of Base.</span></span>
-- <span data-ttu-id="85712-134">**Chrome** richtet sich an die Elemente der obersten Ebene, z.B. Navigationsbereich oder Befehlsleisten.</span><span class="sxs-lookup"><span data-stu-id="85712-134">**Chrome** is for top-level elements, such as navigation panes or command bars.</span></span>
-- <span data-ttu-id="85712-135">**List** gilt für Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="85712-135">**List** is for list controls.</span></span>
+- <span data-ttu-id="ca54c-132">**Base** gilt für Text.</span><span class="sxs-lookup"><span data-stu-id="ca54c-132">**Base** is for text.</span></span>
+- <span data-ttu-id="ca54c-133">**ALT** ist das Gegenteil von Base.</span><span class="sxs-lookup"><span data-stu-id="ca54c-133">**Alt** is the inverse of Base.</span></span>
+- <span data-ttu-id="ca54c-134">**Chrome** richtet sich an die Elemente der obersten Ebene, z.B. Navigationsbereich oder Befehlsleisten.</span><span class="sxs-lookup"><span data-stu-id="ca54c-134">**Chrome** is for top-level elements, such as navigation panes or command bars.</span></span>
+- <span data-ttu-id="ca54c-135">**List** gilt für Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="ca54c-135">**List** is for list controls.</span></span>
 
-<span data-ttu-id="85712-136">**Niedrig**/**Mittel**/**Hoch** beziehen sich auf die Intensität der Farben.</span><span class="sxs-lookup"><span data-stu-id="85712-136">**Low**/**Medium**/**High** refer to the intensity of the color.</span></span>
+<span data-ttu-id="ca54c-136">**Niedrig**/**Mittel**/**Hoch** beziehen sich auf die Intensität der Farben.</span><span class="sxs-lookup"><span data-stu-id="ca54c-136">**Low**/**Medium**/**High** refer to the intensity of the color.</span></span>
 
-### <a name="using-theme-brushes"></a><span data-ttu-id="85712-137">Verwenden der Designpinsel</span><span class="sxs-lookup"><span data-stu-id="85712-137">Using theme brushes</span></span>
+### <a name="using-theme-brushes"></a><span data-ttu-id="ca54c-137">Verwenden der Designpinsel</span><span class="sxs-lookup"><span data-stu-id="ca54c-137">Using theme brushes</span></span>
 
 :::row:::
     :::column:::
@@ -137,11 +137,11 @@ ms.locfileid: "4536704"
 </ListView>
 ```
 
-<span data-ttu-id="85712-138">Weitere Informationen zur Verwendung von Designpinseln in Ihrer App finden Sie unter [Designressourcen](../controls-and-patterns/xaml-theme-resources.md).</span><span class="sxs-lookup"><span data-stu-id="85712-138">For more information about how to use theme brushes in your app, see [Theme Resources](../controls-and-patterns/xaml-theme-resources.md).</span></span>
+<span data-ttu-id="ca54c-138">Weitere Informationen zur Verwendung von Designpinseln in Ihrer App finden Sie unter [Designressourcen](../controls-and-patterns/xaml-theme-resources.md).</span><span class="sxs-lookup"><span data-stu-id="ca54c-138">For more information about how to use theme brushes in your app, see [Theme Resources](../controls-and-patterns/xaml-theme-resources.md).</span></span>
 
-## <a name="accent-color"></a><span data-ttu-id="85712-139">Akzentfarbe</span><span class="sxs-lookup"><span data-stu-id="85712-139">Accent color</span></span>
+## <a name="accent-color"></a><span data-ttu-id="ca54c-139">Akzentfarbe</span><span class="sxs-lookup"><span data-stu-id="ca54c-139">Accent color</span></span>
 
-<span data-ttu-id="85712-140">Allgemeine Steuerelemente verwenden eine Akzentfarbe, um die Zustandsinformationen zu vermitteln.</span><span class="sxs-lookup"><span data-stu-id="85712-140">Common controls use an accent color to convey state information.</span></span> <span data-ttu-id="85712-141">Standardmäßig ist die Akzentfarbe die `SystemAccentColor`, die der Benutzer in den Einstellungen auswählt.</span><span class="sxs-lookup"><span data-stu-id="85712-141">By default, the accent color is the `SystemAccentColor` that users select in their Settings.</span></span> <span data-ttu-id="85712-142">Sie können jedoch auch Akzentfarben entsprechend der Marke Ihrer App anpassen.</span><span class="sxs-lookup"><span data-stu-id="85712-142">However, you can also customize your app's accent color to reflect your brand.</span></span>
+<span data-ttu-id="ca54c-140">Allgemeine Steuerelemente verwenden eine Akzentfarbe, um die Zustandsinformationen zu vermitteln.</span><span class="sxs-lookup"><span data-stu-id="ca54c-140">Common controls use an accent color to convey state information.</span></span> <span data-ttu-id="ca54c-141">Standardmäßig ist die Akzentfarbe die `SystemAccentColor`, die der Benutzer in den Einstellungen auswählt.</span><span class="sxs-lookup"><span data-stu-id="ca54c-141">By default, the accent color is the `SystemAccentColor` that users select in their Settings.</span></span> <span data-ttu-id="ca54c-142">Sie können jedoch auch Akzentfarben entsprechend der Marke Ihrer App anpassen.</span><span class="sxs-lookup"><span data-stu-id="ca54c-142">However, you can also customize your app's accent color to reflect your brand.</span></span>
 
 ![Windows-Steuerelemente](images/color/windows-controls.svg)
 
@@ -156,9 +156,9 @@ ms.locfileid: "4536704"
     :::column-end:::
 :::row-end:::
 
-### <a name="overriding-the-accent-color"></a><span data-ttu-id="85712-144">Überschreiben der Akzentfarbe</span><span class="sxs-lookup"><span data-stu-id="85712-144">Overriding the accent color</span></span>
+### <a name="overriding-the-accent-color"></a><span data-ttu-id="ca54c-144">Überschreiben der Akzentfarbe</span><span class="sxs-lookup"><span data-stu-id="ca54c-144">Overriding the accent color</span></span>
 
-<span data-ttu-id="85712-145">Wenn Sie Ihre App-Akzentfarbe ändern möchten, platzieren Sie den folgenden Code in `app.xaml`.</span><span class="sxs-lookup"><span data-stu-id="85712-145">To change your app's accent color, place the following code in `app.xaml`.</span></span>
+<span data-ttu-id="ca54c-145">Wenn Sie Ihre App-Akzentfarbe ändern möchten, platzieren Sie den folgenden Code in `app.xaml`.</span><span class="sxs-lookup"><span data-stu-id="ca54c-145">To change your app's accent color, place the following code in `app.xaml`.</span></span>
 
 ```xaml
 <Application.Resources>
@@ -168,19 +168,19 @@ ms.locfileid: "4536704"
 </Application.Resources>
 ```
 
-### <a name="choosing-an-accent-color"></a><span data-ttu-id="85712-146">Auswählen einer Akzentfarbe</span><span class="sxs-lookup"><span data-stu-id="85712-146">Choosing an accent color</span></span>
+### <a name="choosing-an-accent-color"></a><span data-ttu-id="ca54c-146">Auswählen einer Akzentfarbe</span><span class="sxs-lookup"><span data-stu-id="ca54c-146">Choosing an accent color</span></span>
 
-<span data-ttu-id="85712-147">Wenn Sie eine benutzerdefinierte Akzentfarbe für Ihre App auswählen, stellen Sie sicher, dass Text und Hintergrund, die die Akzentfarbe verwenden, ausreichenden Kontrast für eine optimale Lesbarkeit haben.</span><span class="sxs-lookup"><span data-stu-id="85712-147">If you select a custom accent color for your app, please make sure that text and backgrounds that use the accent color have sufficient contrast for optimal readability.</span></span> <span data-ttu-id="85712-148">Um den Kontrast zu testen, können Sie das Farbauswahltool in den Windows-Einstellungen verwenden, oder Sie können diese [online Kontrast-Tools nutzen](https://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources).</span><span class="sxs-lookup"><span data-stu-id="85712-148">To test contrast, you can use the color picker tool in Windows Settings, or you can use these [online contrast tools](https://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources).</span></span>
+<span data-ttu-id="ca54c-147">Wenn Sie eine benutzerdefinierte Akzentfarbe für Ihre App auswählen, stellen Sie sicher, dass Text und Hintergrund, die die Akzentfarbe verwenden, ausreichenden Kontrast für eine optimale Lesbarkeit haben.</span><span class="sxs-lookup"><span data-stu-id="ca54c-147">If you select a custom accent color for your app, please make sure that text and backgrounds that use the accent color have sufficient contrast for optimal readability.</span></span> <span data-ttu-id="ca54c-148">Um den Kontrast zu testen, können Sie das Farbauswahltool in den Windows-Einstellungen verwenden, oder Sie können diese [online Kontrast-Tools nutzen](https://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources).</span><span class="sxs-lookup"><span data-stu-id="ca54c-148">To test contrast, you can use the color picker tool in Windows Settings, or you can use these [online contrast tools](https://www.w3.org/TR/WCAG20-TECHS/G18.html#G18-resources).</span></span>
 
 ![Benutzerdefinierter Akzentfarbwähler in den Windows-Einstellungen](images/color/color-picker.svg)
 
-## <a name="accent-color-palette"></a><span data-ttu-id="85712-150">Akzentfarbpalette</span><span class="sxs-lookup"><span data-stu-id="85712-150">Accent color palette</span></span>
+## <a name="accent-color-palette"></a><span data-ttu-id="ca54c-150">Akzentfarbpalette</span><span class="sxs-lookup"><span data-stu-id="ca54c-150">Accent color palette</span></span>
 
-<span data-ttu-id="85712-151">Ein Akzentfarbalgorithmus in der Windows-Shell generiert helle und dunkle Schattierungen der Akzentfarbe.</span><span class="sxs-lookup"><span data-stu-id="85712-151">An accent color algorithm in the Windows shell generates light and dark shades of the accent color.</span></span>
+<span data-ttu-id="ca54c-151">Ein Akzentfarbalgorithmus in der Windows-Shell generiert helle und dunkle Schattierungen der Akzentfarbe.</span><span class="sxs-lookup"><span data-stu-id="ca54c-151">An accent color algorithm in the Windows shell generates light and dark shades of the accent color.</span></span>
 
 ![Akzentfarbpalette](images/color/accent-color-palette.svg)
 
-<span data-ttu-id="85712-153">Diese Schattierungen sind als [Designressourcen](../controls-and-patterns/xaml-theme-resources.md) verfügbar:</span><span class="sxs-lookup"><span data-stu-id="85712-153">These shades can be accessed as [theme resources](../controls-and-patterns/xaml-theme-resources.md):</span></span>
+<span data-ttu-id="ca54c-153">Diese Schattierungen sind als [Designressourcen](../controls-and-patterns/xaml-theme-resources.md) verfügbar:</span><span class="sxs-lookup"><span data-stu-id="ca54c-153">These shades can be accessed as [theme resources](../controls-and-patterns/xaml-theme-resources.md):</span></span>
 
 - `SystemAccentColorLight3`
 - `SystemAccentColorLight2`
@@ -190,9 +190,9 @@ ms.locfileid: "4536704"
 - `SystemAccentColorDark3`
 
 <!-- check this is true -->
-<span data-ttu-id="85712-154">Sie können die Akzentfarbpalette auch programmgesteuert mit der [**UISettings.GetColorValue**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.UISettings#Windows_UI_ViewManagement_UISettings_GetColorValue_Windows_UI_ViewManagement_UIColorType_)-Methode und [**UIColorType**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.UIColorType)-Enumeration aufrufen.</span><span class="sxs-lookup"><span data-stu-id="85712-154">You can also access the accent color palette programmatically with the [**UISettings.GetColorValue**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.UISettings#Windows_UI_ViewManagement_UISettings_GetColorValue_Windows_UI_ViewManagement_UIColorType_) method and [**UIColorType**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.UIColorType) enum.</span></span>
+<span data-ttu-id="ca54c-154">Sie können die Akzentfarbpalette auch programmgesteuert mit der [**UISettings.GetColorValue**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.UISettings#Windows_UI_ViewManagement_UISettings_GetColorValue_Windows_UI_ViewManagement_UIColorType_)-Methode und [**UIColorType**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.UIColorType)-Enumeration aufrufen.</span><span class="sxs-lookup"><span data-stu-id="ca54c-154">You can also access the accent color palette programmatically with the [**UISettings.GetColorValue**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.UISettings#Windows_UI_ViewManagement_UISettings_GetColorValue_Windows_UI_ViewManagement_UIColorType_) method and [**UIColorType**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.UIColorType) enum.</span></span>
 
-<span data-ttu-id="85712-155">Sie können die Akzentfarbpalette für Designfarben in Ihrer App verwenden.</span><span class="sxs-lookup"><span data-stu-id="85712-155">You can use the accent color palette for color theming in your app.</span></span> <span data-ttu-id="85712-156">Hier ist ein Beispiel für die Verwendung der Akzentfarbpalette auf einer Schaltfläche.</span><span class="sxs-lookup"><span data-stu-id="85712-156">Below is an example of how you can use the accent color palette on a button.</span></span>
+<span data-ttu-id="ca54c-155">Sie können die Akzentfarbpalette für Designfarben in Ihrer App verwenden.</span><span class="sxs-lookup"><span data-stu-id="ca54c-155">You can use the accent color palette for color theming in your app.</span></span> <span data-ttu-id="ca54c-156">Hier ist ein Beispiel für die Verwendung der Akzentfarbpalette auf einer Schaltfläche.</span><span class="sxs-lookup"><span data-stu-id="ca54c-156">Below is an example of how you can use the accent color palette on a button.</span></span>
 
 ![Akzentfarbpalette auf einer Schaltfläche](images/color/color-theme-button.svg)
 
@@ -212,40 +212,40 @@ ms.locfileid: "4536704"
 <Button Content="Button"></Button>
 ```
 
-<span data-ttu-id="85712-158">Wenn Sie farbigen Text auf farbigem Hintergrund verwenden, stellen Sie sicher, dass genügend Kontrast zwischen Text und Hintergrund vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="85712-158">When using colored text on a colored background, make sure there is enough contrast between text and background.</span></span> <span data-ttu-id="85712-159">Standardmäßig werden Hyperlinks oder Hypertext in der Akzentfarbe des Benutzers dargestellt.</span><span class="sxs-lookup"><span data-stu-id="85712-159">By default, hyperlink or hypertext will use the accent color.</span></span> <span data-ttu-id="85712-160">Wenden Sie Varianten der Akzentfarbe im Hintergrund an, sollten Sie eine Variante der ursprüngliche Akzentfarbe verwenden, um den Kontrast von farbigem Text auf farbigem Hintergrund zu optimieren.</span><span class="sxs-lookup"><span data-stu-id="85712-160">If you apply variations of the accent color to the background, you should use a variation of the original accent color to optimize the contrast of colored text on a colored background.</span></span>
+<span data-ttu-id="ca54c-158">Wenn Sie farbigen Text auf farbigem Hintergrund verwenden, stellen Sie sicher, dass genügend Kontrast zwischen Text und Hintergrund vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="ca54c-158">When using colored text on a colored background, make sure there is enough contrast between text and background.</span></span> <span data-ttu-id="ca54c-159">Standardmäßig werden Hyperlinks oder Hypertext in der Akzentfarbe des Benutzers dargestellt.</span><span class="sxs-lookup"><span data-stu-id="ca54c-159">By default, hyperlink or hypertext will use the accent color.</span></span> <span data-ttu-id="ca54c-160">Wenden Sie Varianten der Akzentfarbe im Hintergrund an, sollten Sie eine Variante der ursprüngliche Akzentfarbe verwenden, um den Kontrast von farbigem Text auf farbigem Hintergrund zu optimieren.</span><span class="sxs-lookup"><span data-stu-id="ca54c-160">If you apply variations of the accent color to the background, you should use a variation of the original accent color to optimize the contrast of colored text on a colored background.</span></span>
 
-<span data-ttu-id="85712-161">Das folgende Diagramm zeigt ein Beispiel für die unterschiedlichen Hell/Dunkel-Töne der Akzentfarbe, und gibt an, wie der Farbtyp auf einer farbige Oberfläche angewendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="85712-161">The chart below illustrates an example of the various light/dark shades of accent color, and how colored type can be applied on a colored surface.</span></span>
+<span data-ttu-id="ca54c-161">Das folgende Diagramm zeigt ein Beispiel für die unterschiedlichen Hell/Dunkel-Töne der Akzentfarbe, und gibt an, wie der Farbtyp auf einer farbige Oberfläche angewendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="ca54c-161">The chart below illustrates an example of the various light/dark shades of accent color, and how colored type can be applied on a colored surface.</span></span>
 
 ![Farbe auf Farbe](images/color/color-on-color.svg)
 
-<span data-ttu-id="85712-163">Weitere Informationen zum Verwenden der Stil-Steuerelemente finden Sie unter [XAML-Style](../controls-and-patterns/xaml-styles.md).</span><span class="sxs-lookup"><span data-stu-id="85712-163">For more information about styling controls, see [XAML styles](../controls-and-patterns/xaml-styles.md).</span></span>
+<span data-ttu-id="ca54c-163">Weitere Informationen zum Verwenden der Stil-Steuerelemente finden Sie unter [XAML-Style](../controls-and-patterns/xaml-styles.md).</span><span class="sxs-lookup"><span data-stu-id="ca54c-163">For more information about styling controls, see [XAML styles](../controls-and-patterns/xaml-styles.md).</span></span>
 
-## <a name="color-api"></a><span data-ttu-id="85712-164">Farb-API</span><span class="sxs-lookup"><span data-stu-id="85712-164">Color API</span></span>
+## <a name="color-api"></a><span data-ttu-id="ca54c-164">Farb-API</span><span class="sxs-lookup"><span data-stu-id="ca54c-164">Color API</span></span>
 
-<span data-ttu-id="85712-165">Es gibt verschiedene APIs, um Farbe auf Ihrer Anwendung hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="85712-165">There are several APIs that can be used to add color to your application.</span></span> <span data-ttu-id="85712-166">Zuerst kommt die [**Farb**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.colors)-Klasse, die eine umfangreiche Liste vordefinierter Farben implementiert.</span><span class="sxs-lookup"><span data-stu-id="85712-166">First, the [**Colors**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.colors) class, which implements a large list of predefined colors.</span></span> <span data-ttu-id="85712-167">Auf diese kann automatisch mithilfe der XAML-Eigenschaften zugegriffen werden.</span><span class="sxs-lookup"><span data-stu-id="85712-167">These can be accessed automatically with XAML properties.</span></span> <span data-ttu-id="85712-168">Im folgenden Beispiel erstellen wir eine Schaltfläche und legen Sie Farbeigenschaften im Hintergrund und Vordergrund auf Mitglieder der **Farb**-Klasse fest.</span><span class="sxs-lookup"><span data-stu-id="85712-168">In the example below, we create a button and set the background and foreground color properties to members of the **Colors** class.</span></span>
+<span data-ttu-id="ca54c-165">Es gibt verschiedene APIs, um Farbe auf Ihrer Anwendung hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="ca54c-165">There are several APIs that can be used to add color to your application.</span></span> <span data-ttu-id="ca54c-166">Zuerst kommt die [**Farb**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.colors)-Klasse, die eine umfangreiche Liste vordefinierter Farben implementiert.</span><span class="sxs-lookup"><span data-stu-id="ca54c-166">First, the [**Colors**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.colors) class, which implements a large list of predefined colors.</span></span> <span data-ttu-id="ca54c-167">Auf diese kann automatisch mithilfe der XAML-Eigenschaften zugegriffen werden.</span><span class="sxs-lookup"><span data-stu-id="ca54c-167">These can be accessed automatically with XAML properties.</span></span> <span data-ttu-id="ca54c-168">Im folgenden Beispiel erstellen wir eine Schaltfläche und legen Sie Farbeigenschaften im Hintergrund und Vordergrund auf Mitglieder der **Farb**-Klasse fest.</span><span class="sxs-lookup"><span data-stu-id="ca54c-168">In the example below, we create a button and set the background and foreground color properties to members of the **Colors** class.</span></span>
 
 ```xaml
 <Button Background="MediumSlateBlue" Foreground="White">Button text</Button>
 ```
 
-<span data-ttu-id="85712-169">Sie können Ihre eigenen Farben aus RGB- und hex-Werten mithilfe der [**Farb**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.color)-Struktur in XAML erstellen.</span><span class="sxs-lookup"><span data-stu-id="85712-169">You can create your own colors from RGB or hex values using the [**Color**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.color) struct in XAML.</span></span>
+<span data-ttu-id="ca54c-169">Sie können Ihre eigenen Farben aus RGB- und hex-Werten mithilfe der [**Farb**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.color)-Struktur in XAML erstellen.</span><span class="sxs-lookup"><span data-stu-id="ca54c-169">You can create your own colors from RGB or hex values using the [**Color**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.color) struct in XAML.</span></span>
 
 ```xaml
 <Color x:Key="LightBlue">#FF36C0FF</Color>
 ```
 
-<span data-ttu-id="85712-170">Sie können auch die gleiche Farbe im Code mit der **FromArgb**-Methode erstellen.</span><span class="sxs-lookup"><span data-stu-id="85712-170">You can also create the same color in code by using the **FromArgb** method.</span></span>
+<span data-ttu-id="ca54c-170">Sie können auch die gleiche Farbe im Code mit der **FromArgb**-Methode erstellen.</span><span class="sxs-lookup"><span data-stu-id="ca54c-170">You can also create the same color in code by using the **FromArgb** method.</span></span>
 
 ```csharp
 Color LightBlue = Color.FromArgb(255,54,192,255);
 ```
 
-<span data-ttu-id="85712-171">Die Buchstaben "Argb" bedeutet Alpha (Deckkraft), Rot, Grün und Blau, die vier Komponenten einer Farbe.</span><span class="sxs-lookup"><span data-stu-id="85712-171">The letters "Argb" stands for Alpha (opacity), Red, Green, and Blue, which are the four components of a color.</span></span> <span data-ttu-id="85712-172">Jedes Argument reicht von 0 bis 255.</span><span class="sxs-lookup"><span data-stu-id="85712-172">Each argument can range from 0 to 255.</span></span> <span data-ttu-id="85712-173">Sie können den ersten Wert auslassen, was eine standardmäßige Deckkraft von 255 oder 100% undurchsichtig ergibt.</span><span class="sxs-lookup"><span data-stu-id="85712-173">You can choose to omit the first value, which will give you a default opacity of 255, or 100% opaque.</span></span>
+<span data-ttu-id="ca54c-171">Die Buchstaben "Argb" bedeutet Alpha (Deckkraft), Rot, Grün und Blau, die vier Komponenten einer Farbe.</span><span class="sxs-lookup"><span data-stu-id="ca54c-171">The letters "Argb" stands for Alpha (opacity), Red, Green, and Blue, which are the four components of a color.</span></span> <span data-ttu-id="ca54c-172">Jedes Argument reicht von 0 bis 255.</span><span class="sxs-lookup"><span data-stu-id="ca54c-172">Each argument can range from 0 to 255.</span></span> <span data-ttu-id="ca54c-173">Sie können den ersten Wert auslassen, was eine standardmäßige Deckkraft von 255 oder 100% undurchsichtig ergibt.</span><span class="sxs-lookup"><span data-stu-id="ca54c-173">You can choose to omit the first value, which will give you a default opacity of 255, or 100% opaque.</span></span>
 
 > [!Note]
-> <span data-ttu-id="85712-174">Wenn Sie C++ verwenden, müssen Sie Farben mit der [**ColorHelper**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.colorhelper)-Klasse erstellen.</span><span class="sxs-lookup"><span data-stu-id="85712-174">If you're using C++, you must create colors by using the [**ColorHelper**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.colorhelper) class.</span></span>
+> <span data-ttu-id="ca54c-174">Wenn Sie C++ verwenden, müssen Sie Farben mit der [**ColorHelper**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.colorhelper)-Klasse erstellen.</span><span class="sxs-lookup"><span data-stu-id="ca54c-174">If you're using C++, you must create colors by using the [**ColorHelper**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.colorhelper) class.</span></span>
 
-<span data-ttu-id="85712-175">Am häufigsten wird für eine **Farbe** ein Argument für [**SolidColorBrush**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.solidcolorbrush) verwendet, das zum Zeichnen von UI-Elementen im Volltonfarbe verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="85712-175">The most common use for a **Color** is as an argument for a [**SolidColorBrush**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.solidcolorbrush), which can be used to paint UI elements a single solid color.</span></span> <span data-ttu-id="85712-176">Diese Pinsel sind in der Regel durch das [**ResourceDictionary**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.ResourceDictionary) definiert, sodass sie für mehrere Elemente wiederverwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="85712-176">These brushes are generally defined in a [**ResourceDictionary**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.ResourceDictionary), so they can be reused for multiple elements.</span></span>
+<span data-ttu-id="ca54c-175">Am häufigsten wird für eine **Farbe** ein Argument für [**SolidColorBrush**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.solidcolorbrush) verwendet, das zum Zeichnen von UI-Elementen im Volltonfarbe verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="ca54c-175">The most common use for a **Color** is as an argument for a [**SolidColorBrush**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.solidcolorbrush), which can be used to paint UI elements a single solid color.</span></span> <span data-ttu-id="ca54c-176">Diese Pinsel sind in der Regel durch das [**ResourceDictionary**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.ResourceDictionary) definiert, sodass sie für mehrere Elemente wiederverwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="ca54c-176">These brushes are generally defined in a [**ResourceDictionary**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.ResourceDictionary), so they can be reused for multiple elements.</span></span>
 
 ```xaml
 <ResourceDictionary>
@@ -254,36 +254,36 @@ Color LightBlue = Color.FromArgb(255,54,192,255);
 </ResourceDictionary>
 ```
 
-<span data-ttu-id="85712-177">Weitere Informationen über die Verwendung der Pinsel finden Sie unter [XAML-Pinsel](brushes.md).</span><span class="sxs-lookup"><span data-stu-id="85712-177">For more information on how to use brushes, see [XAML brushes](brushes.md).</span></span>
+<span data-ttu-id="ca54c-177">Weitere Informationen über die Verwendung der Pinsel finden Sie unter [XAML-Pinsel](brushes.md).</span><span class="sxs-lookup"><span data-stu-id="ca54c-177">For more information on how to use brushes, see [XAML brushes](brushes.md).</span></span>
 
-## <a name="scoping-system-colors"></a><span data-ttu-id="85712-178">Begrenzen von Systemfarben</span><span class="sxs-lookup"><span data-stu-id="85712-178">Scoping system colors</span></span>
+## <a name="scoping-system-colors"></a><span data-ttu-id="ca54c-178">Begrenzen von Systemfarben</span><span class="sxs-lookup"><span data-stu-id="ca54c-178">Scoping system colors</span></span>
 
-<span data-ttu-id="85712-179">Zusätzlich zur Definition von Ihre eigenen Farben in Ihrer app, können Sie auch unsere systematized Farben, die gewünschten Regionen in der gesamten app einen Bereich unter Verwendung des **ColorSchemeResources** -Tags.</span><span class="sxs-lookup"><span data-stu-id="85712-179">In addition to defining your own colors in your app, you can also scope our systematized colors to desired regions throughout your app by using the **ColorSchemeResources** tag.</span></span> <span data-ttu-id="85712-180">Mithilfe dieser API können Sie nicht nur einfärben und Design große Steuerelementgruppen gleichzeitig durch Festlegen von einige Eigenschaften, sondern auch erhalten Sie viele andere System, dass Sie die Vorteile würde nicht in der Regel mit definieren Ihre eigenen benutzerdefinierten Farben manuell erhalten:</span><span class="sxs-lookup"><span data-stu-id="85712-180">This API allows you to not only colorize and theme large groups of controls at once by setting a few properties, but also gives you many other system benefits that you wouldn't normally get with defining your own custom colors manually:</span></span>
+<span data-ttu-id="ca54c-179">Zusätzlich zur Definition von Ihre eigenen Farben in Ihrer app, können Sie auch unsere systematized Farben, die gewünschten Regionen in der gesamten app einen Bereich unter Verwendung des **ColorSchemeResources** -Tags.</span><span class="sxs-lookup"><span data-stu-id="ca54c-179">In addition to defining your own colors in your app, you can also scope our systematized colors to desired regions throughout your app by using the **ColorSchemeResources** tag.</span></span> <span data-ttu-id="ca54c-180">Mithilfe dieser API können Sie nicht nur einfärben und Design große Steuerelementgruppen gleichzeitig durch Festlegen von einige Eigenschaften, sondern auch erhalten Sie viele andere System, dass Sie die Vorteile würde nicht in der Regel mit definieren Ihre eigenen benutzerdefinierten Farben manuell erhalten:</span><span class="sxs-lookup"><span data-stu-id="ca54c-180">This API allows you to not only colorize and theme large groups of controls at once by setting a few properties, but also gives you many other system benefits that you wouldn't normally get with defining your own custom colors manually:</span></span>
 
-- <span data-ttu-id="85712-181">Eine beliebige Farbe mit **ColorSchemeResources** festgelegt werden mit hohem Kontrast.</span><span class="sxs-lookup"><span data-stu-id="85712-181">Any color set using **ColorSchemeResources** will not effect High Contrast</span></span>
-  * <span data-ttu-id="85712-182">D. h. Ihrer app kann an mehrere Personen ohne zusätzliche Design oder Dev Kosten zugegriffen werden</span><span class="sxs-lookup"><span data-stu-id="85712-182">Meaning your app will be accessible to more people without any additional design or dev cost</span></span>
-- <span data-ttu-id="85712-183">Leicht lassen Farben hellen, dunklen oder umfassend über beide Designs sich durch das Festlegen einer Eigenschaft in der API</span><span class="sxs-lookup"><span data-stu-id="85712-183">Can easily set colors to Light, Dark or pervasive across both themes by setting one property on the API</span></span>
-- <span data-ttu-id="85712-184">Farben für **ColorSchemeResources** festgelegt werden auf alle Steuerelemente ähnlichen hin kaskadiert, die auch die Systemfarbe</span><span class="sxs-lookup"><span data-stu-id="85712-184">Colors set on **ColorSchemeResources** will cascade down to all similar controls that also use that system color</span></span>
-  * <span data-ttu-id="85712-185">Dadurch wird sichergestellt, dass Sie eine einheitliche Farbe Story in der gesamten app hat und gleichzeitig das Erscheinungsbild Ihrer Marke</span><span class="sxs-lookup"><span data-stu-id="85712-185">This ensures that you will have a consistent color story across your app while maintaining the look of your brand</span></span>
-- <span data-ttu-id="85712-186">Alle visuellen Zustände, Animationen und Deckkraft Varianten Effekte ohne stilistisch</span><span class="sxs-lookup"><span data-stu-id="85712-186">Effects all visual states, animations and opacity variations without needing to re-template</span></span>
+- <span data-ttu-id="ca54c-181">Eine beliebige Farbe mit **ColorSchemeResources** festgelegt werden mit hohem Kontrast.</span><span class="sxs-lookup"><span data-stu-id="ca54c-181">Any color set using **ColorSchemeResources** will not effect High Contrast</span></span>
+  * <span data-ttu-id="ca54c-182">D. h. Ihrer app kann an mehrere Personen ohne zusätzliche Design oder Dev Kosten zugegriffen werden</span><span class="sxs-lookup"><span data-stu-id="ca54c-182">Meaning your app will be accessible to more people without any additional design or dev cost</span></span>
+- <span data-ttu-id="ca54c-183">Leicht lassen Farben hellen, dunklen oder umfassend über beide Designs sich durch das Festlegen einer Eigenschaft in der API</span><span class="sxs-lookup"><span data-stu-id="ca54c-183">Can easily set colors to Light, Dark or pervasive across both themes by setting one property on the API</span></span>
+- <span data-ttu-id="ca54c-184">Farben für **ColorSchemeResources** festgelegt werden auf alle Steuerelemente ähnlichen hin kaskadiert, die auch die Systemfarbe</span><span class="sxs-lookup"><span data-stu-id="ca54c-184">Colors set on **ColorSchemeResources** will cascade down to all similar controls that also use that system color</span></span>
+  * <span data-ttu-id="ca54c-185">Dadurch wird sichergestellt, dass Sie eine einheitliche Farbe Story in der gesamten app hat und gleichzeitig das Erscheinungsbild Ihrer Marke</span><span class="sxs-lookup"><span data-stu-id="ca54c-185">This ensures that you will have a consistent color story across your app while maintaining the look of your brand</span></span>
+- <span data-ttu-id="ca54c-186">Alle visuellen Zustände, Animationen und Deckkraft Varianten Effekte ohne stilistisch</span><span class="sxs-lookup"><span data-stu-id="ca54c-186">Effects all visual states, animations and opacity variations without needing to re-template</span></span>
 
-### <a name="how-to-use-colorschemeresources"></a><span data-ttu-id="85712-187">Wie Sie ColorSchemeResources verwenden</span><span class="sxs-lookup"><span data-stu-id="85712-187">How to use ColorSchemeResources</span></span>
+### <a name="how-to-use-colorschemeresources"></a><span data-ttu-id="ca54c-187">Wie Sie ColorSchemeResources verwenden</span><span class="sxs-lookup"><span data-stu-id="ca54c-187">How to use ColorSchemeResources</span></span>
 
-<span data-ttu-id="85712-188">ColorSchemeResources ist eine API, die mitteilt, dass das System, welche Ressourcen werden, Where beschränkt.</span><span class="sxs-lookup"><span data-stu-id="85712-188">ColorSchemeResources is an API that tells the system what resources are being scoped where.</span></span> <span data-ttu-id="85712-189">ColorSchemeResources muss ein [X: Key](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute), ausführen, die eine der drei Optionen werden können:</span><span class="sxs-lookup"><span data-stu-id="85712-189">ColorSchemeResources must take an [x:Key](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute), that can be one of three choices:</span></span>
-- <span data-ttu-id="85712-190">Standard</span><span class="sxs-lookup"><span data-stu-id="85712-190">Default</span></span>
-  * <span data-ttu-id="85712-191">Die Farbe Änderungen werden im [Licht](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme) und [dunklen](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme) Design angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="85712-191">Will show your color changes in both [Light](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme) and [Dark](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme) theme</span></span>
-- <span data-ttu-id="85712-192">Licht</span><span class="sxs-lookup"><span data-stu-id="85712-192">Light</span></span>
-  * <span data-ttu-id="85712-193">Die Farbe Änderungen werden nur in einem [hellen Design](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme) angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="85712-193">Will show your color changes only in [Light theme](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme)</span></span> 
-- <span data-ttu-id="85712-194">Dark</span><span class="sxs-lookup"><span data-stu-id="85712-194">Dark</span></span>
-  * <span data-ttu-id="85712-195">Die Farbe Änderungen werden nur im [dunklen Design](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme) angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="85712-195">Will show your color changes only in [Dark theme](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme)</span></span>
+<span data-ttu-id="ca54c-188">ColorSchemeResources ist eine API, die mitteilt, dass das System, welche Ressourcen werden, Where beschränkt.</span><span class="sxs-lookup"><span data-stu-id="ca54c-188">ColorSchemeResources is an API that tells the system what resources are being scoped where.</span></span> <span data-ttu-id="ca54c-189">ColorSchemeResources muss ein [X: Key](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute), ausführen, die eine der drei Optionen werden können:</span><span class="sxs-lookup"><span data-stu-id="ca54c-189">ColorSchemeResources must take an [x:Key](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute), that can be one of three choices:</span></span>
+- <span data-ttu-id="ca54c-190">Standard</span><span class="sxs-lookup"><span data-stu-id="ca54c-190">Default</span></span>
+  * <span data-ttu-id="ca54c-191">Die Farbe Änderungen werden im [Licht](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme) und [dunklen](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme) Design angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="ca54c-191">Will show your color changes in both [Light](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme) and [Dark](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme) theme</span></span>
+- <span data-ttu-id="ca54c-192">Licht</span><span class="sxs-lookup"><span data-stu-id="ca54c-192">Light</span></span>
+  * <span data-ttu-id="ca54c-193">Die Farbe Änderungen werden nur in einem [hellen Design](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme) angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="ca54c-193">Will show your color changes only in [Light theme](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme)</span></span> 
+- <span data-ttu-id="ca54c-194">Dark</span><span class="sxs-lookup"><span data-stu-id="ca54c-194">Dark</span></span>
+  * <span data-ttu-id="ca54c-195">Die Farbe Änderungen werden nur im [dunklen Design](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme) angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="ca54c-195">Will show your color changes only in [Dark theme](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme)</span></span>
 
-<span data-ttu-id="85712-196">Festlegen, X: Key wird sichergestellt, dass Ihre Farben entsprechend auf das System- oder app-Design ändern, sollten Sie eine andere benutzerdefinierte Darstellung in beiden Designs möchten.</span><span class="sxs-lookup"><span data-stu-id="85712-196">Setting that x:Key will ensure that your colors change appropriately to the system or app theme, should you want a different custom appearance when in either theme.</span></span>
+<span data-ttu-id="ca54c-196">Festlegen, X: Key wird sichergestellt, dass Ihre Farben entsprechend auf das System- oder app-Design ändern, sollten Sie eine andere benutzerdefinierte Darstellung in beiden Designs möchten.</span><span class="sxs-lookup"><span data-stu-id="ca54c-196">Setting that x:Key will ensure that your colors change appropriately to the system or app theme, should you want a different custom appearance when in either theme.</span></span>
 
-### <a name="how-to-apply-scoped-colors"></a><span data-ttu-id="85712-197">Bereichsbezogene Farben anwenden</span><span class="sxs-lookup"><span data-stu-id="85712-197">How to apply scoped colors</span></span>
+### <a name="how-to-apply-scoped-colors"></a><span data-ttu-id="ca54c-197">Bereichsbezogene Farben anwenden</span><span class="sxs-lookup"><span data-stu-id="ca54c-197">How to apply scoped colors</span></span>
 
-<span data-ttu-id="85712-198">Begrenzen Ressourcen über das **ColorSchemeResources** API im XAML-Code können Sie alle Systemfarbe oder Pinsel, der in unserer Bibliothek [Designressourcen](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-theme-resources) und definieren sie innerhalb des Bereichs von einer Seite oder im Container.</span><span class="sxs-lookup"><span data-stu-id="85712-198">Scoping resources through the **ColorSchemeResources** API in XAML allows you to take any system color or brush that's in our [theme resources](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-theme-resources) library and redefine them within the scope of a page or container.</span></span>
+<span data-ttu-id="ca54c-198">Begrenzen Ressourcen über das **ColorSchemeResources** API im XAML-Code können Sie alle Systemfarbe oder Pinsel, der in unserer Bibliothek [Designressourcen](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-theme-resources) und definieren sie innerhalb des Bereichs von einer Seite oder im Container.</span><span class="sxs-lookup"><span data-stu-id="ca54c-198">Scoping resources through the **ColorSchemeResources** API in XAML allows you to take any system color or brush that's in our [theme resources](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-theme-resources) library and redefine them within the scope of a page or container.</span></span>
 
-<span data-ttu-id="85712-199">Beispielsweise, wenn Sie definiert zwei Systemfarben - **SystemBaseLowColor** und **SystemBaseMediumLowColor** in einem Raster, und klicken Sie dann zwei Schaltflächen auf der Seite platziert: innerhalb dieses Gitter und eine außen:</span><span class="sxs-lookup"><span data-stu-id="85712-199">For example, if you defined two system colors - **SystemBaseLowColor** and **SystemBaseMediumLowColor** inside a grid, and then placed two buttons on your page: one inside that grid, and one outside:</span></span>
+<span data-ttu-id="ca54c-199">Beispielsweise, wenn Sie definiert zwei Systemfarben - **SystemBaseLowColor** und **SystemBaseMediumLowColor** in einem Raster, und klicken Sie dann zwei Schaltflächen auf der Seite platziert: innerhalb dieses Gitter und eine außen:</span><span class="sxs-lookup"><span data-stu-id="ca54c-199">For example, if you defined two system colors - **SystemBaseLowColor** and **SystemBaseMediumLowColor** inside a grid, and then placed two buttons on your page: one inside that grid, and one outside:</span></span>
 
 ```xaml
 <Grid x:Name="Grid_A">
@@ -298,12 +298,12 @@ Color LightBlue = Color.FromArgb(255,54,192,255);
 <Buton Content="Button_B"/>
 ```
 
-<span data-ttu-id="85712-200">Erhalten Sie **Button_A** mit den angewendeten neuen Farben und **Button_B** bleiben würde, wie unsere Standardschaltfläche System suchen:</span><span class="sxs-lookup"><span data-stu-id="85712-200">You would get **Button_A** with the applied new colors, and **Button_B** would remain looking like our system default button:</span></span>
+<span data-ttu-id="ca54c-200">Erhalten Sie **Button_A** mit den angewendeten neuen Farben und **Button_B** bleiben würde, wie unsere Standardschaltfläche System suchen:</span><span class="sxs-lookup"><span data-stu-id="ca54c-200">You would get **Button_A** with the applied new colors, and **Button_B** would remain looking like our system default button:</span></span>
 
 ![Bereichsbezogene Systemfarben auf-Taste](images/color/scopedcolors_cyan_button.png)
 
-<span data-ttu-id="85712-202">Da alle unsere Systemfarben zu auf andere Steuerelemente und Kaskadieren wirkt Festlegen von **SystemBaseLowColor** und **SystemBaseMediumLowColor** mehr als nur Schaltflächen sich jedoch.</span><span class="sxs-lookup"><span data-stu-id="85712-202">However, since all our system colors cascade down to other controls too, setting **SystemBaseLowColor** and **SystemBaseMediumLowColor** will affect more than just buttons.</span></span> <span data-ttu-id="85712-203">In diesem Fall Steuerelemente wie **ToggleButton**, **RadioButton** und **Slider** auch durch diese Farbe ändert, Proxydiensts diesen Steuerelementen vorgesehen ist, oben Exampl Grid-Bereich ist.</span><span class="sxs-lookup"><span data-stu-id="85712-203">In this case, controls like **ToggleButton**, **RadioButton** and **Slider** will also be effected by these system color changes, should those controls be put in above exampl grid's scope.</span></span>
-<span data-ttu-id="85712-204">Wenn Sie ein System Farbe ändern *, nur eine einzelne Steuerelemente* einschränken möchten, können Sie dies tun, durch die Definition von **ColorSchemeResources** innerhalb des Steuerelements Ressourcen:</span><span class="sxs-lookup"><span data-stu-id="85712-204">If you wish to scope a system color change *to a single controls only* you can do so by defining **ColorSchemeResources** within that control's resources:</span></span>
+<span data-ttu-id="ca54c-202">Da alle unsere Systemfarben zu auf andere Steuerelemente und Kaskadieren wirkt Festlegen von **SystemBaseLowColor** und **SystemBaseMediumLowColor** mehr als nur Schaltflächen sich jedoch.</span><span class="sxs-lookup"><span data-stu-id="ca54c-202">However, since all our system colors cascade down to other controls too, setting **SystemBaseLowColor** and **SystemBaseMediumLowColor** will affect more than just buttons.</span></span> <span data-ttu-id="ca54c-203">In diesem Fall Steuerelemente wie **ToggleButton**, **RadioButton** und **Slider** auch durch diese Farbe ändert, Proxydiensts diesen Steuerelementen vorgesehen ist, oben Exampl Grid-Bereich ist.</span><span class="sxs-lookup"><span data-stu-id="ca54c-203">In this case, controls like **ToggleButton**, **RadioButton** and **Slider** will also be effected by these system color changes, should those controls be put in above exampl grid's scope.</span></span>
+<span data-ttu-id="ca54c-204">Wenn Sie ein System Farbe ändern *, nur eine einzelne Steuerelemente* einschränken möchten, können Sie dies tun, durch die Definition von **ColorSchemeResources** innerhalb des Steuerelements Ressourcen:</span><span class="sxs-lookup"><span data-stu-id="ca54c-204">If you wish to scope a system color change *to a single controls only* you can do so by defining **ColorSchemeResources** within that control's resources:</span></span>
 
 ```xaml
 <Grid x:Name="Grid_A">
@@ -317,11 +317,11 @@ Color LightBlue = Color.FromArgb(255,54,192,255);
 </Grid>
 <Button Content="Button_B"/>
 ```
-<span data-ttu-id="85712-205">Sie müssen im Wesentlichen genaue das gleiche wie vor, aber nun andere Steuerelemente hinzugefügt, um das Raster werden nicht dort weiterzumachen ändert sich die Farbe.</span><span class="sxs-lookup"><span data-stu-id="85712-205">You essentially have the exact same thing as before, but now any other controls added to the grid will not pick up the color changes.</span></span> <span data-ttu-id="85712-206">Dies ist, da diese Systemfarben nur auf **Button_A** beschränkt sind.</span><span class="sxs-lookup"><span data-stu-id="85712-206">This is because those system colors are scoped to **Button_A** only.</span></span>
+<span data-ttu-id="ca54c-205">Sie müssen im Wesentlichen genaue das gleiche wie vor, aber nun andere Steuerelemente hinzugefügt, um das Raster werden nicht dort weiterzumachen ändert sich die Farbe.</span><span class="sxs-lookup"><span data-stu-id="ca54c-205">You essentially have the exact same thing as before, but now any other controls added to the grid will not pick up the color changes.</span></span> <span data-ttu-id="ca54c-206">Dies ist, da diese Systemfarben nur auf **Button_A** beschränkt sind.</span><span class="sxs-lookup"><span data-stu-id="ca54c-206">This is because those system colors are scoped to **Button_A** only.</span></span>
 
-### <a name="nesting-scoped-resources"></a><span data-ttu-id="85712-207">Schachtelung Gültigkeitsbereich Ressourcen</span><span class="sxs-lookup"><span data-stu-id="85712-207">Nesting scoped resources</span></span>
+### <a name="nesting-scoped-resources"></a><span data-ttu-id="ca54c-207">Schachtelung Gültigkeitsbereich Ressourcen</span><span class="sxs-lookup"><span data-stu-id="ca54c-207">Nesting scoped resources</span></span>
 
-<span data-ttu-id="85712-208">Schachtelung von Systemfarben ist auch möglich, und erfolgt dies durch das Platzieren von **ColorSchemeResources** in der geschachtelten Elemente innerhalb des Markups von Ihrer app-Layout Ressourcen:</span><span class="sxs-lookup"><span data-stu-id="85712-208">Nesting system colors is also possible, and is done so by placing **ColorSchemeResources** in the nested elements' resources within the markup of your app layout:</span></span>
+<span data-ttu-id="ca54c-208">Schachtelung von Systemfarben ist auch möglich, und erfolgt dies durch das Platzieren von **ColorSchemeResources** in der geschachtelten Elemente innerhalb des Markups von Ihrer app-Layout Ressourcen:</span><span class="sxs-lookup"><span data-stu-id="ca54c-208">Nesting system colors is also possible, and is done so by placing **ColorSchemeResources** in the nested elements' resources within the markup of your app layout:</span></span>
 
 ```xaml
 <Grid x:Name="Grid_A">
@@ -344,17 +344,17 @@ Color LightBlue = Color.FromArgb(255,54,192,255);
 </Grid>
 ```
 
-<span data-ttu-id="85712-209">In diesem Beispiel **Button_A** erbt Farben in **Grid_A**Ressourcen definieren und **Schaltfläche geschachtelt** ist Farben **Grid_B**Ressourcen erben.</span><span class="sxs-lookup"><span data-stu-id="85712-209">In this example, **Button_A** is inheriting colors define in **Grid_A**'s resources, and **Nested Button** is inheriting colors from **Grid_B**'s resources.</span></span> <span data-ttu-id="85712-210">Durch die Erweiterung Dies bedeutet, die alle anderen Steuerelemente in **Grid_B** platziert überprüfen oder **Grid_B**Ressourcen zunächst anwenden, bevor Sie überprüfen oder **Grid_A**Ressourcen angewendet wird, und schließlich unsere Standardfarben anwenden, wenn nichts auf definiert die Seiten- oder app-Ebene.</span><span class="sxs-lookup"><span data-stu-id="85712-210">By extension, this means that any other controls placed within **Grid_B** will check or apply **Grid_B**'s resources first, before checking or applying **Grid_A**'s resources, and finally applying our default colors if nothing is defined at the page or app level.</span></span>
+<span data-ttu-id="ca54c-209">In diesem Beispiel **Button_A** erbt Farben in **Grid_A**Ressourcen definieren und **Schaltfläche geschachtelt** ist Farben **Grid_B**Ressourcen erben.</span><span class="sxs-lookup"><span data-stu-id="ca54c-209">In this example, **Button_A** is inheriting colors define in **Grid_A**'s resources, and **Nested Button** is inheriting colors from **Grid_B**'s resources.</span></span> <span data-ttu-id="ca54c-210">Durch die Erweiterung Dies bedeutet, die alle anderen Steuerelemente in **Grid_B** platziert überprüfen oder **Grid_B**Ressourcen zunächst anwenden, bevor Sie überprüfen oder **Grid_A**Ressourcen angewendet wird, und schließlich unsere Standardfarben anwenden, wenn nichts auf definiert die Seiten- oder app-Ebene.</span><span class="sxs-lookup"><span data-stu-id="ca54c-210">By extension, this means that any other controls placed within **Grid_B** will check or apply **Grid_B**'s resources first, before checking or applying **Grid_A**'s resources, and finally applying our default colors if nothing is defined at the page or app level.</span></span>
 
-<span data-ttu-id="85712-211">Dies eignet sich für eine beliebige Anzahl von geschachtelten Elementen, dessen Ressourcen Farbe Definitionen verfügen.</span><span class="sxs-lookup"><span data-stu-id="85712-211">This works for any number of nested elements whose resources have color definitions.</span></span>
+<span data-ttu-id="ca54c-211">Dies eignet sich für eine beliebige Anzahl von geschachtelten Elementen, dessen Ressourcen Farbe Definitionen verfügen.</span><span class="sxs-lookup"><span data-stu-id="ca54c-211">This works for any number of nested elements whose resources have color definitions.</span></span>
 
-### <a name="scoping-with-a-resourcedictionary"></a><span data-ttu-id="85712-212">Bereiche mit einem ResourceDictionary</span><span class="sxs-lookup"><span data-stu-id="85712-212">Scoping with a ResourceDictionary</span></span>
+### <a name="scoping-with-a-resourcedictionary"></a><span data-ttu-id="ca54c-212">Bereiche mit einem ResourceDictionary</span><span class="sxs-lookup"><span data-stu-id="ca54c-212">Scoping with a ResourceDictionary</span></span>
 
-<span data-ttu-id="85712-213">Sie sind nicht auf einem Container oder des Seitenressourcen beschränkt und können diese Systemfarben in einem ResourceDictionary, die dann zusammengeführt werden kann an einem beliebigen Bereich die Möglichkeit, die Sie in der Regel ein Wörterbuch zusammenführen, würden auch definieren.</span><span class="sxs-lookup"><span data-stu-id="85712-213">You are not limited to a container or page’s resources, and can also define these system colors in a ResourceDictionary that can then be merged at any scope the way you normally would merge a dictionary.</span></span>
+<span data-ttu-id="ca54c-213">Sie sind nicht auf einem Container oder des Seitenressourcen beschränkt und können diese Systemfarben in einem ResourceDictionary, die dann zusammengeführt werden kann an einem beliebigen Bereich die Möglichkeit, die Sie in der Regel ein Wörterbuch zusammenführen, würden auch definieren.</span><span class="sxs-lookup"><span data-stu-id="ca54c-213">You are not limited to a container or page’s resources, and can also define these system colors in a ResourceDictionary that can then be merged at any scope the way you normally would merge a dictionary.</span></span>
 
-#### <a name="mycustomthemexaml"></a><span data-ttu-id="85712-214">MyCustomTheme.xaml</span><span class="sxs-lookup"><span data-stu-id="85712-214">MyCustomTheme.xaml</span></span>
+#### <a name="mycustomthemexaml"></a><span data-ttu-id="ca54c-214">MyCustomTheme.xaml</span><span class="sxs-lookup"><span data-stu-id="ca54c-214">MyCustomTheme.xaml</span></span>
 
-<span data-ttu-id="85712-215">Erstellen Sie zunächst ein ResourceDictionary.</span><span class="sxs-lookup"><span data-stu-id="85712-215">First, you would create a ResourceDictionary.</span></span> <span data-ttu-id="85712-216">Platzieren Sie den **ColorSchemeResources** innerhalb der ThemeDictionaries und überschreiben Sie die gewünschte Systemfarben:</span><span class="sxs-lookup"><span data-stu-id="85712-216">Then place the **ColorSchemeResources** within the ThemeDictionaries and override the desired system colors:</span></span>
+<span data-ttu-id="ca54c-215">Erstellen Sie zunächst ein ResourceDictionary.</span><span class="sxs-lookup"><span data-stu-id="ca54c-215">First, you would create a ResourceDictionary.</span></span> <span data-ttu-id="ca54c-216">Platzieren Sie den **ColorSchemeResources** innerhalb der ThemeDictionaries und überschreiben Sie die gewünschte Systemfarben:</span><span class="sxs-lookup"><span data-stu-id="ca54c-216">Then place the **ColorSchemeResources** within the ThemeDictionaries and override the desired system colors:</span></span>
 
 ```xaml
 <ResourceDictionary
@@ -372,9 +372,9 @@ Color LightBlue = Color.FromArgb(255,54,192,255);
 </ResourceDictionary>
 ```
 
-#### <a name="mainpagexaml"></a><span data-ttu-id="85712-217">MainPage.xaml</span><span class="sxs-lookup"><span data-stu-id="85712-217">MainPage.xaml</span></span>
+#### <a name="mainpagexaml"></a><span data-ttu-id="ca54c-217">MainPage.xaml</span><span class="sxs-lookup"><span data-stu-id="ca54c-217">MainPage.xaml</span></span>
 
-<span data-ttu-id="85712-218">Auf der Seite, das Layout enthält führen Sie einfach zusammen Sie diese Wörterbuch im an den gewünschten Bereich:</span><span class="sxs-lookup"><span data-stu-id="85712-218">On the page containing your layout, simply merge that dictionary in at the scope you want:</span></span>
+<span data-ttu-id="ca54c-218">Auf der Seite, das Layout enthält führen Sie einfach zusammen Sie diese Wörterbuch im an den gewünschten Bereich:</span><span class="sxs-lookup"><span data-stu-id="ca54c-218">On the page containing your layout, simply merge that dictionary in at the scope you want:</span></span>
 
 ```xaml
 <Grid x:Name="Grid_A">
@@ -390,11 +390,11 @@ Color LightBlue = Color.FromArgb(255,54,192,255);
 </Grid>
 ```
 
-<span data-ttu-id="85712-219">Nun können alle Ressourcen, Designs und benutzerdefinierte Farben in einem einzigen **MyCustomTheme** Ressourcenverzeichnis platziert und sein Gültigkeitsbereich bei Bedarf ohne zusätzliche unübersichtliche in Ihrem Layout-Markup darum kümmern.</span><span class="sxs-lookup"><span data-stu-id="85712-219">Now, all resources, theming, and custom colors can be placed in a single **MyCustomTheme** resource dictionary and scoped where needed without having to worry about extra clutter in your layout markup.</span></span>
+<span data-ttu-id="ca54c-219">Nun können alle Ressourcen, Designs und benutzerdefinierte Farben in einem einzigen **MyCustomTheme** Ressourcenverzeichnis platziert und sein Gültigkeitsbereich bei Bedarf ohne zusätzliche unübersichtliche in Ihrem Layout-Markup darum kümmern.</span><span class="sxs-lookup"><span data-stu-id="ca54c-219">Now, all resources, theming, and custom colors can be placed in a single **MyCustomTheme** resource dictionary and scoped where needed without having to worry about extra clutter in your layout markup.</span></span>
 
-### <a name="other-ways-to-define-color-resources"></a><span data-ttu-id="85712-220">Andere Methoden, um die Farbressourcen definieren</span><span class="sxs-lookup"><span data-stu-id="85712-220">Other ways to define color resources</span></span>
+### <a name="other-ways-to-define-color-resources"></a><span data-ttu-id="ca54c-220">Andere Methoden, um die Farbressourcen definieren</span><span class="sxs-lookup"><span data-stu-id="ca54c-220">Other ways to define color resources</span></span>
 
-<span data-ttu-id="85712-221">ColorSchemeResources ermöglicht es auch für Systemfarben platziert werden und als Wrapper, anstatt in Zeile direkt darin definieren:</span><span class="sxs-lookup"><span data-stu-id="85712-221">ColorSchemeResources also allows for system colors to be placed and defining directly within it as a wrapper, rather than in line:</span></span>
+<span data-ttu-id="ca54c-221">ColorSchemeResources ermöglicht es auch für Systemfarben platziert werden und als Wrapper, anstatt in Zeile direkt darin definieren:</span><span class="sxs-lookup"><span data-stu-id="ca54c-221">ColorSchemeResources also allows for system colors to be placed and defining directly within it as a wrapper, rather than in line:</span></span>
 
 ``` xaml
 <ColorSchemeResources x:Key="Dark">
@@ -402,7 +402,7 @@ Color LightBlue = Color.FromArgb(255,54,192,255);
 </ColorSchemeResources>
 ```
 
-## <a name="usability"></a><span data-ttu-id="85712-222">Benutzerfreundlichkeit</span><span class="sxs-lookup"><span data-stu-id="85712-222">Usability</span></span>
+## <a name="usability"></a><span data-ttu-id="ca54c-222">Benutzerfreundlichkeit</span><span class="sxs-lookup"><span data-stu-id="ca54c-222">Usability</span></span>
 
 :::row:::
     :::column:::
@@ -439,7 +439,7 @@ Color LightBlue = Color.FromArgb(255,54,192,255);
     :::column-end:::
 :::row-end:::
 
-## <a name="related-articles"></a><span data-ttu-id="85712-223">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="85712-223">Related articles</span></span>
+## <a name="related-articles"></a><span data-ttu-id="ca54c-223">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="ca54c-223">Related articles</span></span>
 
-- [<span data-ttu-id="85712-224">XAML-Formatvorlagen</span><span class="sxs-lookup"><span data-stu-id="85712-224">XAML Styles</span></span>](../controls-and-patterns/xaml-styles.md)
-- [<span data-ttu-id="85712-225">XAML-Designressourcen</span><span class="sxs-lookup"><span data-stu-id="85712-225">XAML Theme Resources</span></span>](../controls-and-patterns/xaml-theme-resources.md)
+- [<span data-ttu-id="ca54c-224">XAML-Formatvorlagen</span><span class="sxs-lookup"><span data-stu-id="ca54c-224">XAML Styles</span></span>](../controls-and-patterns/xaml-styles.md)
+- [<span data-ttu-id="ca54c-225">XAML-Designressourcen</span><span class="sxs-lookup"><span data-stu-id="ca54c-225">XAML Theme Resources</span></span>](../controls-and-patterns/xaml-theme-resources.md)
