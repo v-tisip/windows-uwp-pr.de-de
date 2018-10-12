@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 1cd6f8391de9375ddd1c20471dd10c37e99f782f
-ms.sourcegitcommit: 8e30651fd691378455ea1a57da10b2e4f50e66a0
+ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "4506862"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "4536632"
 ---
 # <a name="barcode-scanner"></a><span data-ttu-id="7e704-104">Strichcodescanner</span><span class="sxs-lookup"><span data-stu-id="7e704-104">Barcode scanner</span></span>
 
