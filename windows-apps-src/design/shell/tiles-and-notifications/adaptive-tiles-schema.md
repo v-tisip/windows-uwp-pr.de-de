@@ -13,19 +13,19 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 30a0e3056f8b7be2ed9d033e2da57795aec6946f
-ms.sourcegitcommit: 933e71a31989f8063b020746fdd16e9da94a44c4
+ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "4539031"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "4573666"
 ---
-# <a name="adaptive-tile-templates-schema-and-guidance"></a><span data-ttu-id="4e992-103">Vorlagen für adaptive Kacheln: Schema und Richtlinien</span><span class="sxs-lookup"><span data-stu-id="4e992-103">Adaptive tile templates: schema and guidance</span></span>
+# <a name="adaptive-tile-templates-schema-and-guidance"></a><span data-ttu-id="c3719-103">Vorlagen für adaptive Kacheln: Schema und Richtlinien</span><span class="sxs-lookup"><span data-stu-id="c3719-103">Adaptive tile templates: schema and guidance</span></span>
 
  
 
-<span data-ttu-id="4e992-104">Im Folgenden werden Elemente und Attribute aufgeführt, mit denen Sie adaptive Kacheln erstellen können.</span><span class="sxs-lookup"><span data-stu-id="4e992-104">Here are the elements and attributes you use to create adaptive tiles.</span></span> <span data-ttu-id="4e992-105">Anweisungen und Beispiele finden Sie unter [Erstellen adaptiver Kacheln](create-adaptive-tiles.md).</span><span class="sxs-lookup"><span data-stu-id="4e992-105">For instructions and examples, see [Create adaptive tiles](create-adaptive-tiles.md).</span></span>
+<span data-ttu-id="c3719-104">Im Folgenden werden Elemente und Attribute aufgeführt, mit denen Sie adaptive Kacheln erstellen können.</span><span class="sxs-lookup"><span data-stu-id="c3719-104">Here are the elements and attributes you use to create adaptive tiles.</span></span> <span data-ttu-id="c3719-105">Anweisungen und Beispiele finden Sie unter [Erstellen adaptiver Kacheln](create-adaptive-tiles.md).</span><span class="sxs-lookup"><span data-stu-id="c3719-105">For instructions and examples, see [Create adaptive tiles](create-adaptive-tiles.md).</span></span>
 
-## <a name="tile-element"></a><span data-ttu-id="4e992-106">Kachel-Element</span><span class="sxs-lookup"><span data-stu-id="4e992-106">tile element</span></span>
+## <a name="tile-element"></a><span data-ttu-id="c3719-106">Kachel-Element</span><span class="sxs-lookup"><span data-stu-id="c3719-106">tile element</span></span>
 
 
 ``` xml
@@ -37,7 +37,7 @@ ms.locfileid: "4539031"
 </tile>
 ```
 
-## <a name="visual-element"></a><span data-ttu-id="4e992-107">Visuelles Element</span><span class="sxs-lookup"><span data-stu-id="4e992-107">visual element</span></span>
+## <a name="visual-element"></a><span data-ttu-id="c3719-107">Visuelles Element</span><span class="sxs-lookup"><span data-stu-id="c3719-107">visual element</span></span>
 
 
 ``` xml
@@ -56,7 +56,7 @@ ms.locfileid: "4539031"
 </visual>
 ```
 
-## <a name="binding-element"></a><span data-ttu-id="4e992-108">Bindungselement</span><span class="sxs-lookup"><span data-stu-id="4e992-108">binding element</span></span>
+## <a name="binding-element"></a><span data-ttu-id="c3719-108">Bindungselement</span><span class="sxs-lookup"><span data-stu-id="c3719-108">binding element</span></span>
 
 
 ``` xml
@@ -81,7 +81,7 @@ ms.locfileid: "4539031"
 </binding>
 ```
 
-## <a name="image-element"></a><span data-ttu-id="4e992-109">Bildelement</span><span class="sxs-lookup"><span data-stu-id="4e992-109">image element</span></span>
+## <a name="image-element"></a><span data-ttu-id="c3719-109">Bildelement</span><span class="sxs-lookup"><span data-stu-id="c3719-109">image element</span></span>
 
 
 ``` xml
@@ -95,7 +95,7 @@ ms.locfileid: "4539031"
   hint-align? = "stretch" | "left" | "center" | "right" />
 ```
 
-## <a name="text-element"></a><span data-ttu-id="4e992-110">Textelement</span><span class="sxs-lookup"><span data-stu-id="4e992-110">text element</span></span>
+## <a name="text-element"></a><span data-ttu-id="c3719-110">Textelement</span><span class="sxs-lookup"><span data-stu-id="c3719-110">text element</span></span>
 
 
 ``` xml
@@ -112,9 +112,9 @@ ms.locfileid: "4539031"
 </text>
 ```
 
-<span data-ttu-id="4e992-111">textStyle values: caption captionSubtle body bodySubtle base baseSubtle subtitle subtitleSubtle title titleSubtle titleNumeral subheader subheaderSubtle subheaderNumeral header headerSubtle headerNumeral</span><span class="sxs-lookup"><span data-stu-id="4e992-111">textStyle values: caption captionSubtle body bodySubtle base baseSubtle subtitle subtitleSubtle title titleSubtle titleNumeral subheader subheaderSubtle subheaderNumeral header headerSubtle headerNumeral</span></span>
+<span data-ttu-id="c3719-111">textStyle values: caption captionSubtle body bodySubtle base baseSubtle subtitle subtitleSubtle title titleSubtle titleNumeral subheader subheaderSubtle subheaderNumeral header headerSubtle headerNumeral</span><span class="sxs-lookup"><span data-stu-id="c3719-111">textStyle values: caption captionSubtle body bodySubtle base baseSubtle subtitle subtitleSubtle title titleSubtle titleNumeral subheader subheaderSubtle subheaderNumeral header headerSubtle headerNumeral</span></span>
 
-## <a name="group-element"></a><span data-ttu-id="4e992-112">Gruppenelement</span><span class="sxs-lookup"><span data-stu-id="4e992-112">group element</span></span>
+## <a name="group-element"></a><span data-ttu-id="c3719-112">Gruppenelement</span><span class="sxs-lookup"><span data-stu-id="c3719-112">group element</span></span>
 
 
 ``` xml
@@ -126,7 +126,7 @@ ms.locfileid: "4539031"
 </group>
 ```
 
-## <a name="subgroup-element"></a><span data-ttu-id="4e992-113">Untergruppenelement</span><span class="sxs-lookup"><span data-stu-id="4e992-113">subgroup element</span></span>
+## <a name="subgroup-element"></a><span data-ttu-id="c3719-113">Untergruppenelement</span><span class="sxs-lookup"><span data-stu-id="c3719-113">subgroup element</span></span>
 
 
 ``` xml
@@ -142,10 +142,10 @@ ms.locfileid: "4539031"
 </subgroup>
 ```
 
-## <a name="related-topics"></a><span data-ttu-id="4e992-114">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="4e992-114">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="c3719-114">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="c3719-114">Related topics</span></span>
 
 
-* [<span data-ttu-id="4e992-115">Erstellen adaptiver Kacheln</span><span class="sxs-lookup"><span data-stu-id="4e992-115">Create adaptive tiles</span></span>](create-adaptive-tiles.md)
+* [<span data-ttu-id="c3719-115">Erstellen adaptiver Kacheln</span><span class="sxs-lookup"><span data-stu-id="c3719-115">Create adaptive tiles</span></span>](create-adaptive-tiles.md)
  
 
  
