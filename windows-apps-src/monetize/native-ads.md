@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Erfahren Sie, wie Sie native Anzeigen zu Ihrer UWP-App hinzufügen.
 title: Native Anzeigen
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 05/11/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Anzeigen, Werbung, Ad-Steuerelement, native Anzeige
 ms.localizationpriority: medium
-ms.openlocfilehash: 5479efef22d31c5a23086b7e596553542e6e9e51
-ms.sourcegitcommit: 834992ec14a8a34320c96e2e9b887a2be5477a53
-ms.translationtype: HT
+ms.openlocfilehash: 4a529cc360d6a357cf4ff6aa36370c4339b37ed6
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2018
-ms.locfileid: "1881111"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4614303"
 ---
 # <a name="native-ads"></a>Native Anzeigen
 
@@ -49,7 +49,7 @@ Befolgen Sie diesen Anweisungen, um eine native Anzeige in Ihrer App zu integrie
 
     [!code-cs[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#Namespaces)]
 
-5.  Deklarieren Sie an einer geeigneten Stelle in Ihrer App (z.B. in ```MainPage``` oder einer anderen Seite) ein **NativeAdsManagerV2**-Objekt und mehrere Zeichenfolgenfelder, die die Anwendungs-ID und Anzeigeneinheits-ID für die native Anzeige darstellen. Im folgenden Codebeispiel werden die Felder `myAppId` und `myAdUnitId` den [Testwerten](set-up-ad-units-in-your-app.md#test-ad-units) für native Anzeigen zugewiesen.
+5.  Deklarieren Sie an einer geeigneten Stelle in Ihrer App (z.B. in ```MainPage``` oder einer anderen Seite) ein [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2)-Objekt und mehrere Zeichenfolgenfelder, die die Anwendungs-ID und Anzeigeneinheits-ID für die native Anzeige darstellen. Im folgenden Codebeispiel werden die Felder `myAppId` und `myAdUnitId` den [Testwerten](set-up-ad-units-in-your-app.md#test-ad-units) für native Anzeigen zugewiesen.
     > [!NOTE]
     > Jedes **NativeAdsManagerV2**-Objekt verfügt über eine entsprechende *Anzeigeneinheit*, die durch unsere Dienste zum Anzeigen des nativen Anzeigensteuerelements verwendet wird, und jede Anzeigeneinheit besteht aus einer *Anzeigeneinheits-ID* und *Anwendungs-ID*. In den folgenden Schritten weisen Sie dem Steuerelement eine Anzeigeneinheits-ID und Anwendungs-ID zu. Dieser Test Werte können nur in einer Testversion Ihrer App verwendet werden. Bevor Sie Ihre App im Store veröffentlichen, müssen Sie [die Testwerte mit den Live-Werten](#release) aus dem Windows Dev Center ersetzen.
 
@@ -63,7 +63,7 @@ Befolgen Sie diesen Anweisungen, um eine native Anzeige in Ihrer App zu integrie
 
     [!code-cs[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#RequestAd)]
 
-8.  Wenn eine native Anzeige für Ihre App bereit ist, wird Ihr **AdReady**-Ereignishandler aufgerufen und ein **NativeAdV2**-Objekt für die native Anzeige wird im *e*-Parameter übergeben. Verwenden Sie die **NativeAdV2**-Eigenschaften, um jedes Element der nativen Anzeige abzurufen und diese Elemente auf der Seite anzuzeigen. Achten Sie darauf, dass Sie auch die **RegisterAdContainer**-Methode aufrufen, um die UI-Element zu registrieren, die als Container für die native Anzeige dienen. Dies ist erforderlich, um Anzeigenaufrufe und -klicks ordnungsgemäß nachzuverfolgen.
+8.  Wenn eine native Anzeige für Ihre App bereit ist, wird Ihr [AdReady](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2.adready)-Ereignishandler aufgerufen und ein [NativeAdV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadv2)-Objekt für die native Anzeige wird im *e*-Parameter übergeben. Verwenden Sie die **NativeAdV2**-Eigenschaften, um jedes Element der nativen Anzeige abzurufen und diese Elemente auf der Seite anzuzeigen. Achten Sie darauf, dass Sie auch die **RegisterAdContainer**-Methode aufrufen, um die UI-Element zu registrieren, die als Container für die native Anzeige dienen. Dies ist erforderlich, um Anzeigenaufrufe und -klicks ordnungsgemäß nachzuverfolgen.
     > [!NOTE]
     > Einige Elemente der nativen Anzeige sind erforderlich und müssen immer in Ihrer App angezeigt werden. Weitere Informationen finden Sie in unseren [Richtlinien für native Anzeigen](ui-and-user-experience-guidelines.md#guidelines-for-native-ads).
 
@@ -119,7 +119,7 @@ Nachdem Sie bestätigt, dass der Implementierung der nativen Anzeige erfolgreich
 
 3. Sie können optional die Anzeigenvermittlung für die native Anzeige durch Konfigurieren der Einstellungen im Abschnitt [Vermittlungseinstellungen](../publish/in-app-ads.md#mediation) auf der [In-App-Anzeigen](../publish/in-app-ads.md)-Seite aktivieren. Mit der Anzeigenvermittlung können Sie Ihren Anzeigenumsatz und Funktionalitäten zur App-Bewerbung durch die Darstellung von Anzeigen aus mehreren Anzeigennetzwerken verbessern.
 
-4.  Ersetzen Sie in Ihrem Code die Testwerte der Anzeigeneinheit (Parameter *applicationId* und *adUnitId* des **NativeAdsManagerV2**-Konstruktors) mit den Live-Werten, die Sie in Dev Center generiert haben.
+4.  Ersetzen Sie in Ihrem Code die Testwerte der Anzeigeneinheit (Parameter *applicationId* und *adUnitId* des [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2.-ctor)-Konstruktors) mit den Live-Werten, die Sie in Dev Center generiert haben.
 
 5.  [Übermitteln Sie Ihre App](../publish/app-submissions.md) mithilfe des Dev Center-Dashboards an den Store.
 

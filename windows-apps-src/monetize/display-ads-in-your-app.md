@@ -1,25 +1,25 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 63A9EDCF-A418-476C-8677-D8770B45D1D7
 description: Mit dem Microsoft Advertising-SDK haben Sie mehrere Möglichkeiten zur Monetarisierung Ihrer App mit Anzeigen.
 title: Zeigt Werbung mithilfe der Microsoft Advertising-SDK in Ihrer App an
-ms.author: mcleans
-ms.date: 05/02/2018
+ms.author: mhopkins
+ms.date: 06/20/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Anzeigen, Werbung, banner, Anzeigensteuerelement,Interstitial
 ms.localizationpriority: medium
-ms.openlocfilehash: 601f3fe67d6ed44403c65427af75042456bdfddb
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: c0dde67e3f7ab43734ffb0bf2a5826cc54691e17
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843020"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613561"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Zeigt Werbung mithilfe der Microsoft Advertising-SDK in Ihrer App an
 
-Erhöhen Sie Ihre Umsatzchancen, indem Sie mithilfe des Microsoft Advertising-SDKs Anzeigen in Ihre universelle Windows-Plattform-App für Windows 10 einfügen. Unsere Anzeigen-Monetarisierungsplattform bietet verschiedene Anzeigentypen und unterstützt die Anzeigenvermittlung mit unterschiedlichen beliebten Anzeigennetzwerken.
+Erhöhen Sie Ihre Umsatzchancen, indem Sie mithilfe des Microsoft Advertising-SDKs Anzeigen in Ihre universelle Windows-Plattform-App für Windows 10 einfügen. Unsere anzeigen-monetarisierungsplattform bietet eine Vielzahl von Ad-Formate, die nahtlos in Ihre apps und unterstützt die anzeigenvermittlung mit unterschiedlichen beliebten Anzeigennetzwerken integriert werden kann. Unsere Plattform ist kompatibel mit OpenRTB, große 2.x, MRAID 2 und 3 VPAID Standards und ist kompatibel mit MOAT und IAS. 
 
 <br/>
 
@@ -121,7 +121,7 @@ Weitere Hilfe zum Microsoft Advertising-SDK finden Sie in den folgenden Ressourc
 
 ## <a name="windows-81-and-windows-phone-8x-apps"></a>Windows 8.1 und Windows Phone 8.x-Apps
 
-Für Apps für Windows8.1 und Windows Phone8.x bieten wir das [Microsoft Advertising-SDK for Windows and Windows Phone 8.x](http://aka.ms/store-8-sdk). Weitere Informationen zur Verwendung des SDKs für Anzeigen in einer Windows8.1- oder Windows Phone8.x-App finden Sie in [diesem Artikel](https://msdn.microsoft.com/library/windows/apps/xaml/dn792120.aspx).
+Für Apps für Windows8.1 und Windows Phone8.x bieten wir das [Microsoft Advertising-SDK for Windows and Windows Phone 8.x](http://aka.ms/store-8-sdk). Weitere Informationen zur Verwendung des SDKs für Anzeigen in einer Windows8.1- oder Windows Phone8.x-App finden Sie in [diesem Artikel](https://docs.microsoft.com/en-us/previous-versions/windows/apps/dn792120(v=win.10)).
 
 ## <a name="related-topics"></a>Verwandte Themen
 

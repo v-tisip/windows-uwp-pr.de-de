@@ -1,8 +1,8 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Hier erfahren Sie, wie Sie die REST-API für App-Metadaten verwenden, um auf bestimmte Typen von Metadaten für Apps zuzugreifen. Diese API soll von Anzeigennetzwerken verwendet werden, um Informationen zu Apps im Microsoft Store abzurufen und so den Vertrieb von Werbeflächen an Inserenten zu verbessern.
 title: App-Metadaten-API für Anzeigennetzwerke
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
@@ -10,12 +10,12 @@ ms.technology: uwp
 keywords: Windows10, UWP, Anzeigennetzwerke, App-Metadaten
 ms.assetid: f0904086-d61f-4adb-82b6-25968cbec7f3
 ms.localizationpriority: medium
-ms.openlocfilehash: bc5cb5bed964528b34339742e34b5d2761de2b95
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 16603bfe8c3fe0bfeaef1e19018798d0c6477b85
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654739"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613541"
 ---
 # <a name="app-metadata-api-for-advertising-networks"></a>App-Metadaten-API für Anzeigennetzwerke
 

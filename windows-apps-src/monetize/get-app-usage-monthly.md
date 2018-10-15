@@ -1,7 +1,7 @@
 ---
 author: Xansky
 ms.assetid: 4E4CB1E3-D213-4324-91E4-7D4A0EA19C53
-description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um monatliche app-Nutzungsdaten für einen bestimmten Zeitraum und andere optionale Filter abzurufen.
+description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um die monatlichen app-Nutzungsdaten für eines bestimmten Zeitraums und andere optionale Filter abzurufen.
 title: Abrufen der monatlichen App-Nutzung
 ms.author: mhopkins
 ms.date: 08/15/2018
@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Store-Dienste, Microsoft Store-Analyse-API, Nutzung
 ms.localizationpriority: medium
 ms.openlocfilehash: ad45422dea9b0c4335fa3cf67a594f819a60ca9c
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574081"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4611352"
 ---
 # <a name="get-monthly-app-usage"></a>Abrufen der monatlichen App-Nutzung
 
@@ -60,7 +60,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 ### <a name="request-example"></a>Anforderungsbeispiel
 
-Das folgende Beispiel zeigt eine Anforderung zum Abrufen von app-Nutzungsdaten monatlichen. Ersetzen Sie den Wert *applicationId* durch die Store-ID Ihrer App.
+Das folgende Beispiel zeigt eine Anforderung zum Abrufen der monatlichen app-Nutzungsdaten. Ersetzen Sie den Wert *applicationId* durch die Store-ID Ihrer App.
 
 ```http
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/usagemonthly?applicationId=XXXXXXXXXXXX&startDate=2018-06-01&endDate=2018-07-01 HTTP/1.1  
@@ -74,12 +74,12 @@ Authorization: Bearer <your access token>
 
 | Wert      | Typ   | Beschreibung                                                                                                                         |
 |------------|--------|-------------------------------------------------------------------------------------------------------------------------------------|
-| Wert      | array  | Ein Array von Objekten, die aggregierte Daten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie in der folgenden Tabelle. |
+| Wert      | array  | Ein Array von Objekten, die aggregierte Nutzungsdaten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie in der folgenden Tabelle. |
 | @nextLink  | String | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10000 festgelegt ist, es jedoch mehr als 10.000 Zeilen mit Rezensionsdaten für die Abfrage gibt.                 |
 | TotalCount | int    | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.                                                                          |
 
  
-### <a name="usage-values"></a>Werte
+### <a name="usage-values"></a>Nutzung Werte
 
 Elemente im Array *Value* enthalten die folgenden Werte.
 
@@ -88,15 +88,15 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | date                      | string  | Das erste Datum im Datumsbereich für die Nutzungsdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist dieser Wert das erste Datum in diesem Datumsbereich.                          |
 | applicationId             | string  | Die Store-ID der app, für die Sie Nutzungsdaten abrufen.                            |
 | applicationName           | string  | Der Anzeigename der App.                                                                |
-| market                    | string  | Der ISO 3166-Ländercode des Markts, in dem der Kunde Ihre app verwendet.                   |
+| market                    | string  | Der ISO 3166-Ländercode des Markts, in denen Ihre app an der Kunden verwendet.                   |
 | packageVersion            | string  | Die Version des Pakets, in denen Nutzung aufgetreten ist.                                            |
-| deviceType                | string  | Eine der folgenden Zeichenfolgen gibt an, dass der Typ des Geräts, bei der Nutzung aufgetreten ist:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**Tablet**</li><li>**IoT**</li><li>**Server**</li><li>**Holographic**</li><li>**Unknown**</li></ul>                                                                                                                           |
+| deviceType                | string  | Eine der folgenden Zeichenfolgen gibt an, dass der Typ des Geräts, in denen Nutzung aufgetreten ist:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**Tablet**</li><li>**IoT**</li><li>**Server**</li><li>**Holographic**</li><li>**Unknown**</li></ul>                                                                                                                           |
 | subscriptionName          | String  | Gibt an, ob die Verwendung über Xbox Game Pass befand.                                              |
-| monthlySessionCount       | long    | Die Anzahl von benutzersitzungen während des Monats.                                              |
+| monthlySessionCount       | long    | Die Anzahl der benutzersitzungen während dieses Monats.                                              |
 | engagementDurationMinutes | doppelt  | Der Minuten, in denen Benutzer aktiv Ihrer App gemessen durch einen bestimmten Zeitraum, wenn die app gestartet wird (Prozessbeginn) und endet bei beendet wird (Prozess End) oder nach einer Zeit der Inaktivität.                               |
-| monthlyActiveUsers        | long    | Die Anzahl der Kunden, die die app dieses Monats.                                           |
-| monthlyActiveDevices      | long    | Die Anzahl der Geräte, die app für einen bestimmten Zeitraum, wenn die app gestartet wird (Prozessbeginn) ausführen und endet, wenn er beendet wird (Prozess End) oder nach einer Zeit der Inaktivität.                                                        |
-| monthlyNewUsers           | long    | Die Anzahl der Kunden, mit denen Sie Ihre app zum ersten Mal dieses Monats.                    |
+| monthlyActiveUsers        | long    | Die Anzahl der Kunden, die mit der app dieses Monats.                                           |
+| monthlyActiveDevices      | long    | Die Anzahl der Geräte, die app für einen bestimmten Zeitraum Mal, wenn die app gestartet wird (Prozessbeginn) ausführen und endet, wenn er beendet wird (Prozess End) oder nach einer Zeit der Inaktivität.                                                        |
+| monthlyNewUsers           | long    | Die Anzahl der Kunden, die Ihre app zum ersten Mal dieses Monats verwendet.                    |
 | averageDailyActiveUsers   | doppelt  | Die durchschnittliche Anzahl der Kunden, die die app täglich.                             |
 | averageDailyActiveDevices | doppelt  | Die durchschnittliche Anzahl der Geräte, die von allen Benutzern täglich Interaktion mit Ihrer app verwendet. |
 

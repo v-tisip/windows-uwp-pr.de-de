@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: c5246681-82c7-44df-87e1-a84a926e6496
 description: Verwenden Sie diese Methode in der Microsoft Store-Werbungs-API, um Werbemittel für Werbeanzeigenkampagnen zu verwalten.
 title: Verwalten von Werbemitteln
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store Werbungs-API, Anzeigenkampagnen
 ms.localizationpriority: medium
-ms.openlocfilehash: f29920bba22be689c79f2264836ebcee6d8dfe5c
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 838329101695c21abfb7ac89dd9c83330b7bd26b
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1664020"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4614056"
 ---
 # <a name="manage-creatives"></a>Verwalten von Werbemitteln
 
@@ -127,7 +127,7 @@ Die Anforderungs- und Antworttexte für diese Methoden enthalten die folgenden F
 |  landingUrl   |  Zeichenfolge   |  Wenn Sie für die Messung von Installationsanalysen für Ihre App einen Kampagnenachverfolgungsdienst wie Kochava, AppsFlyer oder Tune verwenden, weisen Sie die Nachverfolgungs-URL in diesem Feld zu, wenn Sie die POST-Methode aufrufen (wenn angegeben; dieser Wert muss ein gültiger URI sein). Wenn Sie keinen Kampagnennachverfolgungsdienst verwenden, lassen Sie diesen Wert beim Aufruf der POST-Methode aus. (In diesem Fall wird diese URL automatisch erstellt.)   |  Nein    |     |   Ja    |       
 |  format   |  Zeichenfolge   |   Das Anzeigenformat. Zurzeit ist **Banner** der einzige Wert, der unterstützt wird.    |   Nein    |  Banner   |  Nein     |       
 |  imageAttributes   | [ImageAttributes](#image-attributes)    |   Stellt Attribute für das Werbemittel bereit.     |   Nein    |      |   Ja    |       
-|  storeProductId   |  Zeichenfolge   |   Die [Store-ID](in-app-purchases-and-trials.md#store-ids) der App, der diese Anzeigenkampagne zugeordnet ist. Ein Beispiel für eine Store-ID eines Produkts ist 9nblggh42cfd.    |   Nein    |    |  Nein     |   |  
+|  storeProductId   |  String   |   Die [Store-ID](in-app-purchases-and-trials.md#store-ids) der App, der diese Anzeigenkampagne zugeordnet ist. Ein Beispiel für eine Store-ID eines Produkts ist 9nblggh42cfd.    |   Nein    |    |  Nein     |   |  
 
 
 <span id="image-attributes"/>

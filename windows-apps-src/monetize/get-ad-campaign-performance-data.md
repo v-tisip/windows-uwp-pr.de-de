@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: A26A287C-B4B0-49E9-BB28-6F02472AE1BA
 description: Verwenden Sie diese Methode der Microsoft Store-Analyse-API, um die aggregierten Leistungsdaten einer Anzeigenkampagne für die angegebene Anwendung während eines bestimmten Zeitraums sowie andere optionale Filter abzurufen.
 title: Abrufen der Leistungsdaten einer Anzeigenkampagne
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Anzeigenkampagnen
 ms.localizationpriority: medium
-ms.openlocfilehash: 79901ef38ca837ae547f1d25f98bb42a440c2619
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: ce3f51e0eec2356262811bd126f0a63d555c28bd
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663630"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613475"
 ---
 # <a name="get-ad-campaign-performance-data"></a>Abrufen der Leistungsdaten einer Anzeigenkampagne
 
@@ -109,7 +109,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | impressions           | lang | Die Anzahl der Anzeigenaufrufe für die Kampagne.        |
 | installs              | lang | Die Anzahl der App-Installationen im Zusammenhang mit der Kampagne.   |
 | clicks            | lang | Die Anzahl der Klicks für die Kampagne.      |
-| iapInstalls            | lang | Die Anzahl der Add-On-Installationen im Zusammenhang mit der Kampagne, auch In-App-Einkäufe (In-App-Purchases, IAP) genannt.      |
+| iapInstalls            | long | Die Anzahl der Add-On-Installationen im Zusammenhang mit der Kampagne, auch In-App-Einkäufe (In-App-Purchases, IAP) genannt.      |
 | activeUsers            | long | Die Anzahl von Benutzern, die auf eine Anzeige geklickt haben, die Teil der Kampagne ist und an die App zurückgegeben wird.      |
 
 

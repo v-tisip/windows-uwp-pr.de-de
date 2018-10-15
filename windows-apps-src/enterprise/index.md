@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f7c5ad355aa6b99f8f76df230fefb283e54cffd
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567920"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4614843"
 ---
 # <a name="enterprise"></a>Enterprise
 
@@ -23,7 +23,7 @@ Diese Roadmap enthält eine Übersicht über wichtige Unternehmensfeatures für 
 
 **Hinweis**  Dieser Artikel ist für Entwickler bestimmt, die UWP-Apps für Unternehmen schreiben. Informationen zur allgemeinen UWP-Entwicklung finden Sie unter [Anleitungen für Windows 10-Apps](https://msdn.microsoft.com/library/windows/apps/mt244352). Informationen zur WPF-, Windows Forms- und Win32-Entwicklung finden Sie unter [Desktop Dev Center](https://dev.windows.com/desktop). Ressourcen für IT-Experten, z.B. Bereitstellen von Windows 10 oder Verwalten von Unternehmenssicherheitsfeatures finden Sie unter [Windows 10 auf TechNet](https://msdn.microsoft.com/library/dn986868).
 
-Gibt es eine Version dieser Anwendung, die Teil der Speicherschutzfeatures anzeigt, die bei Build, während diese Präsentation [Schnell konstruieren LOB-Anwendungen mit UWP und Visual Studio präsentiert wurden](https://channel9.msdn.com/Events/Build/2018/BRK3502)
+Gibt es eine Version dieser Anwendung, die Teil der Speicherschutzfeatures anzeigt, die bei Build während dieser Präsentation [Schnell konstruieren LOB-Anwendungen mit UWP und Visual Studio](https://channel9.msdn.com/Events/Build/2018/BRK3502) präsentiert wurden
 
 Dinge, die im Vordergrund aufrufen:
 
@@ -45,7 +45,7 @@ Nachfolgend finden Sie einige Tools, Bibliotheken und Funktionen, die relativ er
 
 ### <a name="windows-template-studio"></a>Windows Template Studio
 
-Windows Template Studio ist eine Visual Studio-2017-Erweiterung, die die Erstellung des neuen universellen Windows-Plattform (UWP)-apps, die mit einer Umgebung beschleunigt. Das resultierende UWP-Projekt ist wohlgeformte, lesbare Code, der die neuesten Windows 10-Features mit bewährten Muster und bewährten Methoden implementieren.
+Windows Template Studio ist eine Visual Studio-2017-Erweiterung, die die Erstellung von neue universelle Windows-Plattform (UWP)-apps, die durch eine assistentenbasierte Umgebung beschleunigt. Das resultierende UWP-Projekt ist wohlgeformte, lesbaren Codes, die die neuesten Windows 10-Features mit bewährten Muster und bewährten Methoden implementieren.
 
 ![Windows Template Studio](images/windows-template-studio.png)
 
@@ -57,7 +57,7 @@ Finden Sie unter [Windows Template Studio](https://marketplace.visualstudio.com/
 
 Wir haben neue UWP-XAML-Steuerelemente zur Verfügung, die die Lücke zwischen einer herkömmlichen Desktopanwendung UI und eine UWP-UI.
 
-Z. B. die neuen [Menüleiste](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/menus?branch=jimwalk%2Frs5-menu-bar), [DropDownButton](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-drop-down-button), [SplitButton](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-split-button)und [CommandBarFlyout](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/command-bar-flyout?branch=jimwalk%2Frs5-command-bar-flyout) Steuerelemente bieten Ihnen die flexiblere Methoden, Befehle verfügbar zu machen, und lassen Sie uns der Benutzer eingeben der [EditableComboBox](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/combo-box?branch=rs5#make-a-combo-box-editable) Werte, die nicht genannt sind in einer vordefinierten Liste von Optionen.
+Z. B. die neuen [Menüleiste](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/menus?branch=jimwalk%2Frs5-menu-bar), [DropDownButton](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-drop-down-button), [SplitButton](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/buttons#create-a-split-button)und [CommandBarFlyout](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/command-bar-flyout?branch=jimwalk%2Frs5-command-bar-flyout) Steuerelemente bieten Ihnen die flexiblere Methoden, Befehle verfügbar zu machen, und lassen Sie uns der Benutzer eingeben [EditableComboBox](https://review.docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/combo-box?branch=rs5#make-a-combo-box-editable) Werte, die nicht genannt sind in einer vordefinierten Liste von Optionen.
 
 ![Menüleiste](images/menu-bar.png)
 
@@ -74,7 +74,7 @@ Das [TreeView](https://docs.microsoft.com/windows/uwp/design/controls-and-patter
 
 ### <a name="windows-ui-library"></a>Windows-UI-Bibliothek
 
-Der Windows-UI-Bibliothek ist ein Satz von NuGet-Pakete, die Steuerelemente und andere Elemente der Benutzeroberfläche für UWP-apps bereitstellen. Darüber hinaus ermöglicht Sie älter Kompatibilität mit früheren Versionen von Windows 10, damit Ihre app funktioniert, auch wenn Benutzer nicht über das neueste Betriebssystem verfügen.
+Der Windows-UI-Bibliothek ist ein Satz von NuGet-Pakete, die Steuerelemente und andere Elemente der Benutzeroberfläche für UWP-apps bereitstellen. Darüber hinaus ermöglicht Sie kompatible Kompatibilität mit früheren Versionen von Windows 10, damit Ihre app funktioniert, auch wenn Benutzer nicht über das neueste Betriebssystem verfügen.
 
 ![Windows-UI-Bibliothek](images/win-ui.png)
 
@@ -84,7 +84,7 @@ Finden Sie unter [Windows-UI-Bibliothek (Preview-Version)](https://docs.microsof
 
 ### <a name="uwp-controls-in-desktop-applications"></a>UWP-Steuerelemente in desktop-Apps
 
-Windows 10 können jetzt Sie UWP-Steuerelemente in WPF-, Windows Forms und C++ Win32-desktopanwendungen verwenden. Dies bedeutet, dass Sie das Erscheinungsbild, und Funktionen Ihrer vorhandenen desktop-Anwendungen mit den neuesten Windows 10-UI-Funktionen, die nur über UWP-Steuerelemente, z. B. Windows Ink und Steuerelemente, die das Fluent Design-System unterstützen verbessern können. Dieses Feature ist XAML-Inseln bezeichnet.
+Windows 10 können jetzt UWP-Steuerelemente in WPF-, Windows Forms und C++ Win32-desktopanwendungen verwenden. Dies bedeutet, dass Sie das Erscheinungsbild und Funktionalität Ihrer vorhandenen desktop-Anwendungen mit den neuesten Windows 10-UI-Funktionen, die nur über UWP-Steuerelemente, z. B. Windows Ink und Steuerelemente, die das Fluent Design-System unterstützen verfügbar sind verbessern können. Dieses Feature ist XAML-Inseln bezeichnet.
 
 Finden Sie in [UWP-Steuerelemente in desktop-Apps](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls).
 
@@ -92,7 +92,7 @@ Finden Sie in [UWP-Steuerelemente in desktop-Apps](https://docs.microsoft.com/wi
 
 ### <a name="net-standard-20"></a>.NET Standard 2.0
 
-.NET Standard enthält über 20.000 weitere APIs als .NET Standard 1.x. Dadurch sehr viel einfacher zu migrieren von vorhandenen .NET Framework-Bibliotheken verwenden Sie diese über verschiedene .NET Anwendungen einschließlich Ihrer UWP-Anwendung.
+.NET Standard enthält über 20.000 weitere APIs als .NET Standard 1.x. Dadurch sehr viel einfacher zu migrieren von vorhandenen .NET Framework-Bibliotheken und dann über verschiedene .NET Anwendungen einschließlich Ihrer UWP-Anwendung zu verwenden.
 
 ![NET-standard](images/dot-net-standard-project-template.png)
 
@@ -110,9 +110,9 @@ Mehr unter [Verwenden einer SQL Server-Datenbank in einer UWP-App](https://docs.
 
 ### <a name="msix-deployment"></a>MSIX-Bereitstellung
 
-MSIX ist das Windows-app-Paket-Format, die eine moderne Verpackung gewährleistet für alle Windows-apps. MSIX-Paketformat behält die Funktionalität der vorhandenen app-Pakete und Dateien zusätzlich zum Aktivieren von neuen, modernen paketerstellungs und -Features, Win32, WPF und Windows Forms-apps installieren.
+MSIX ist das Windows-app-Paketformat, das eine moderne Packaging-Erlebnis für alle Windows-apps bietet. MSIX-Paketformat behält die Funktionalität der vorhandenen app-Pakete und Dateien zusätzlich zum Aktivieren von neuen, modernen paketerstellungs und -Features für Win32, WPF und Windows Forms-apps installieren.
 
-MSIX ist eine Paketformat entwickelt, um sicher, sicher und zuverlässig, basierend auf einer Kombination von MSI, AppX, App-V und ClickOnce Installation Technologien.
+MSIX ist eine Paketformat erstellt, um sicher, sicher und zuverlässig, basierend auf einer Kombination von MSI, AppX, App-V und ClickOnce Installation Technologien.
 
 ![MSIX-Symbol](images/WinUI_MSIX_2col_740x417.png)
 
@@ -171,27 +171,27 @@ Viele Benutzer bringen in der heutigen Zeit ihre eigenen Telefone oder Tablets z
 |-------|-------------|
 | [Anleitung für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn894631) | In dieser Anleitung können Sie sich mit der UWP-Plattform unter Windows10 vertraut machen. Sie erhalten u. a. Informationen dazu, was eine Gerätefamilie ist, wie Sie entscheiden, auf welche Ihre Apps abzielen sollen, Informationen zu neuen UI-Steuerelementen und Bereichen, mit denen Sie Ihre Benutzeroberfläche für verschiedene Geräte-Formfaktoren anpassen können, sowie zur für Ihre App verfügbaren API-Oberfläche und wie Sie diese steuern können. |
 | [Adaptives XAML-UI-Codebeispiel](http://go.microsoft.com/fwlink/p/?LinkId=619992) | Dieses Codebeispiel zeigt die möglichen Layoutoptionen und Steuerelemente für Ihre App, unabhängig von der Art des Geräts, und veranschaulicht eine Interaktion mit den Bereichen, um das gewünschte Layout zu erzielen. Neben der Reaktion der Steuerelemente und der App selbst auf verschiedene Formfaktoren, werden die verschiedenen Methoden zum Erzielen einer adaptiven Benutzeroberfläche aufgezeigt. |
-| [Xamarin-Thema]() | Xamarin für für phone |
+| [Xamarin Thema]() | Xamarin für für phone |
 
 ## <a name="deployment"></a>Bereitstellung
 
-Es stehen verschiedene Optionen für die Verteilung von Apps für die Benutzer in Ihrer Organisation zur Verfügung. Sie können Microsoft Store für Unternehmen, die vorhandene mobile geräteverwaltung oder können Sie apps auf Geräte querladen. Sie können auch Ihre apps auf der allgemeinen öffentlichen durch Veröffentlichung im Microsoft Store zur Verfügung.
+Es stehen verschiedene Optionen für die Verteilung von Apps für die Benutzer in Ihrer Organisation zur Verfügung. Sie können Microsoft Store für Unternehmen, die vorhandene mobile geräteverwaltung oder können Sie apps auf Geräte querladen. Sie können auch Ihre apps auf der allgemeinen öffentlichen durch die Veröffentlichung auf dem Microsoft Store zur Verfügung.
 
 | Thema | Beschreibung |
 |-------|-------------|
-| [Verteilen von branchenspezifischen Apps an Unternehmen](https://msdn.microsoft.com/library/windows/apps/mt608995) | Sie können Line-of-Business-apps direkt für Unternehmen Volumenlizenzen über den Microsoft Store für Unternehmen veröffentlichen, ohne die apps Allgemein zur Verfügung für der Öffentlichkeit. |
+| [Verteilen von branchenspezifischen Apps an Unternehmen](https://msdn.microsoft.com/library/windows/apps/mt608995) | Sie können Line-of-Business apps direkt für Unternehmen für den Erwerb von Volumenlizenzen über den Microsoft Store für Unternehmen, veröffentlichen, ohne die apps für der Öffentlichkeit Allgemein zur Verfügung stellen. |
 | [Querladen von Apps](https://technet.microsoft.com/library/mt269549) | Wenn Sie eine App querladen, stellen Sie ein signiertes App-Paket auf einem Gerät bereit. Das Signieren, Hosten und Bereitstellen dieser Apps wird beibehalten. Der Prozess zum Querladen von Apps ist für Windows 10 optimiert.             |
-| [Veröffentlichen von apps im Microsoft Store](https://dev.windows.com/publish) | Einheitliche Microsoft Store können Sie all Ihre apps für alle Windows-Geräte verwalten und veröffentlichen. Passen Sie die Verfügbarkeit Ihrer App mit marktspezifischen Preisen, Steuerelementen für Verteilung und Sichtbarkeit und weiteren Optionen an. |
+| [Veröffentlichen von apps im Microsoft Store](https://dev.windows.com/publish) | Im einheitlichen Microsoft Store können Sie all Ihre apps für alle Windows-Geräte verwalten und veröffentlichen. Passen Sie die Verfügbarkeit Ihrer App mit marktspezifischen Preisen, Steuerelementen für Verteilung und Sichtbarkeit und weiteren Optionen an. |
 
 ## <a name="enterprise-uwp-samples"></a>Enterprise-UWP-Beispiele
 
-Hier können Sie Einführung Text einfügen.
+Einführung in Text Einfügen hier.
 
-Aktion - sprechen Sie mit Josh und/oder Karl, um weitere Beispiele für Enterprise-orientierte zusammen zu erhalten.
+Aktion – sprechen Sie mit Josh und/oder Karl, um weitere Beispiele für Enterprise-orientierte zusammen zu erhalten.
 
 | Thema |  Beschreibung |
 |------ |--------------|
-| [VanArsdel Inventar-Beispiel](https://github.com/Microsoft/InventorySample) | Eine Beispiel für Windows 10-Anwendung (mit der universellen Windows-Plattform) konzentriert in Line-of-Business-Szenarien, zeigt, wie Sie die neuesten Windows-Funktionen in Desktop-Apps zu verwenden. Im Beispiel rund erstellen und Verwalten von Kunden, Aufträge und Produkte für die fiktive Firma VanArsdel.
+| [VanArsdel Inventar-Beispiel](https://github.com/Microsoft/InventorySample) | Eine Beispiel für Windows 10-Anwendung (mit der universellen Windows-Plattform) konzentrierten sich in Line-of-Business-Szenarien, zeigt, wie Sie die neuesten Windows-Funktionen in Desktop-Apps zu verwenden. Das Beispiel rund erstellen und Verwalten von Kunden, Aufträge und Produkte für die fiktive Firma VanArsdel.
 Highlights MVVM SQL-Datenbank, Entity Framework. Listen Sie andere.|
 
 ## <a name="patterns-and-practices"></a>Muster und Methoden

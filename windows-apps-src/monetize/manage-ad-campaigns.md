@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 7b07a6ca-4be1-497c-a901-0a2da3762555
 description: Verwenden Sie diese Methode in der Microsoft Store-Angebots-API, um Werbeanzeigenkampagnen zu erstellen, zu bearbeiten und abzurufen.
 title: Verwalten von Anzeigenkampagnen
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store Werbungs-API, Anzeigenkampagnen
 ms.localizationpriority: medium
-ms.openlocfilehash: 125e67e7b56ac4f8d7d15a36ceca3922ea58ac82
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: f707c252e404da3aaf6e82317c80a266f4d91d26
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1664230"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4611265"
 ---
 # <a name="manage-ad-campaigns"></a>Verwalten von Anzeigenkampagnen
 
@@ -54,9 +54,9 @@ Diese Methoden haben die folgenden URIs.
 
 ### <a name="header"></a>Header
 
-| Header        | Typ   | Beschreibung         |
+| Kopfzeile        | Typ   | Beschreibung         |
 |---------------|--------|---------------------|
-| Autorisierung | String | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer-** &lt;*Token*&gt;. |
+| Autorisierung | String | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*-Token*&gt;. |
 | Tracking-ID   | GUID   | Optional. Eine ID, die den Abfrageablauf verfolgt.                                  |
 
 
@@ -151,10 +151,10 @@ Die Anforderungs- und Antworttexte für diese Methoden enthalten die folgenden F
 
 | Feld        | Typ   |  Beschreibung      |  Schreibgeschützt  | Standard  | Erforderlich für POST |  
 |--------------|--------|---------------|------|-------------|------------|
-|  ID   |  Ganzzahl   |  Die ID der Anzeigenkampagne.     |   Ja.    |      |  Nein.     |       
+|  ID   |  Ganzzahl   |  Die ID der Anzeigenkampagne.     |   Ja.    |      |  Nein     |       
 |  Name   |  string   |   Der Name der Anzeigenkampagne.    |    Nein   |      |  Ja     |       
 |  configuredStatus   |  String   |  Einer der folgenden Werte, der den Status der vom Entwickler angegebenen Anzeigenkampagne angibt: <ul><li>**Aktiv**</li><li>**Inaktiv**</li></ul>     |  Nein     |  Aktiv    |   Ja    |       
-|  effectiveStatus   |  String   |   Einer der folgenden Werte, der den effektiven Status der Anzeigenkampagne basierend auf der Systemüberprüfung angibt: <ul><li>**Active**</li><li>**Inactive**</li><li>**Verarbeitung**</li></ul>    |    Ja   |      |   Nein      |       
+|  effectiveStatus   |  String   |   Einer der folgenden Werte, der den effektiven Status der Anzeigenkampagne basierend auf der Systemüberprüfung angibt: <ul><li>**Active**</li><li>**Inaktiv**</li><li>**Verarbeitung**</li></ul>    |    Ja   |      |   Nein      |       
 |  effectiveStatusReasons   |  Array   |  Einer oder mehrere der folgenden Werte, die den Grund für den effektive Status der Anzeigenkampagne angeben: <ul><li>**AdCreativesInactive**</li><li>**BillingFailed**</li><li>**AdLinesInactive**</li><li>**ValidationFailed**</li><li>**Fehlgeschlagen**</li></ul>      |  Ja     |     |    Nein     |       
 |  storeProductId   |  String   |  Die [Store-ID](in-app-purchases-and-trials.md#store-ids) der App, der diese Anzeigenkampagne zugeordnet ist. Ein Beispiel für eine Store-ID eines Produkts ist 9nblggh42cfd.     |   Ja    |      |  Ja     |       
 |  Beschriftungen   |  Array   |   Eine oder mehrere Zeichenfolgen, die benutzerdefinierte Beschriftungen für die Kampagne darstellen. Diese Beschriftungen werden für das Suchen und Kennzeichnen von Kampagnen verwendet.    |   Nein    |  Null    |    Nein     |       

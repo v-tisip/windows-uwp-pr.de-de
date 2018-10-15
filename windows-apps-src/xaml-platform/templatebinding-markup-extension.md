@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c1812adc9d5610fffd6f9d275b4e093a4fa96e6
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4570259"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4614877"
 ---
 # <a name="templatebinding-markup-extension"></a>{TemplateBinding}-Markuperweiterung
 
@@ -61,13 +61,13 @@ Ein **TemplateBinding**-Element ist stets eine unidirektionale Bindung. Bei beid
 
 ### <a name="xbind-in-controltemplate"></a>X: Bind in ControlTemplate
 
-Beginnend mit dem nächsten wichtigen Update für Windows 10, können Sie **X: Bind** -Markuperweiterung an einer beliebigen Stelle **TemplateBinding** in [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)verwendet. 
+Beginnend mit dem nächsten wichtigen Update für Windows 10, können Sie **X: Bind** -Markuperweiterung **TemplateBinding** an einer beliebigen Stelle in [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)verwendet. 
 
-Die [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype#Windows_UI_Xaml_Controls_ControlTemplate_TargetType) -Eigenschaft (nicht optional) muss auf [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) bei Verwendung von **X: Bind**.
+Die [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype#Windows_UI_Xaml_Controls_ControlTemplate_TargetType) -Eigenschaft (nicht optional) erforderlich auf [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) bei Verwendung von **X: Bind**.
 
-Mit der Unterstützung von **X: Bind** können Sie jetzt sowohl [Funktion Bindungen](../data-binding/function-bindings.md) als auch als bidirektionale Bindungen in [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) verwenden
+Mit der Unterstützung von **X: Bind** können Sie jetzt sowohl [Funktion Bindungen](../data-binding/function-bindings.md) als auch bidirektionale Bindungen in [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) verwenden
 
-Im folgenden Beispiel ergibt die TextBlock.Text Button.Content.ToString(). TargetType auf ControlTemplate fungiert als die Datenquelle und führt zum gleiche Ergebnis wie TemplateBinding übergeordneten Element.
+Im folgenden Beispiel ergibt die TextBlock.Text Button.Content.ToString(). TargetType auf das ControlTemplate-Element dient als Datenquelle und führt zum gleiche Ergebnis wie TemplateBinding übergeordneten Element.
 
 ```xaml
 <ControlTemplate TargetType="Button">

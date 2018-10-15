@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um die aggregierten Kaufdaten für eine Anwendung während eines bestimmten Zeitraums und andere optionale Filter abzurufen.
 title: Abrufen von App-Käufen
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/23/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, App-Käufe
 ms.localizationpriority: medium
-ms.openlocfilehash: d108d66ff8f7533056b8a5eeb1955e54ef006a38
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 7b712c41f8288502e9e2abd1f05396ef1720390e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691349"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613590"
 ---
 # <a name="get-app-acquisitions"></a>Abrufen von App-Käufen
 
@@ -96,12 +96,12 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | applicationName     | string | Der Anzeigename der App.   |
 | deviceType          | String | Eine der folgenden Zeichenfolgen, die den Typ des Geräts angibt, auf der Kauf aufgetreten ist:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Unknown</strong></li></ul>    |
 | orderName           | string | Der Name der Bestellung.  |
-| storeClient         | string | Eine der folgenden Zeichenfolgen, die die Version des Store anzeigt, wo der Kauf getätigt wurde:<ul><li>**Windows Phone Store (client)**</li><li>**Microsoft Store (Client)** (oder **Windows Store (Client)** bei Abfragen von Daten vor dem 23.März2018)</li><li>**Microsoft Store (Web)** (oder **Windows Store (Web)** bei Abfragen von Daten vor dem 23.März2018)</li><li>**Volumenkäufe durch Organisationen**</li><li>**Sonstiges**</li></ul>                                                                                            |
+| storeClient         | string | Eine der folgenden Zeichenfolgen, die die Version des Store anzeigt, wo der Kauf getätigt wurde:<ul><li>**Windows Phone Store (Client)**</li><li>**Microsoft Store (Client)** (oder **Windows Store (Client)** bei Abfragen von Daten vor dem 23.März2018)</li><li>**Microsoft Store (Web)** (oder **Windows Store (Web)** bei Abfragen von Daten vor dem 23.März2018)</li><li>**Volumenkäufe durch Organisationen**</li><li>**Sonstiges**</li></ul>                                                                                            |
 | osVersion           | string | Eine der folgenden Zeichenfolgen, die die Version des Betriebssystems angibt, auf dem der Kauf erfolgte:<ul><li><strong>Windows Phone7.5</strong></li><li><strong>Windows Phone 8</strong></li><li><strong>Windows Phone 8.1</strong></li><li><strong>Windows Phone 10</strong></li><li><strong>Windows8</strong></li><li><strong>Windows8.1</strong></li><li><strong>Windows 10</strong></li><li><strong>Unknown</strong></li></ul>  |
 | market              | string | Die ISO 3166-Ländercode des Markts, in dem der Kauf erfolgte.  |
-| gender              | string | Eine der folgenden Zeichenfolgen, die das Geschlecht des Benutzers angibt, der den Kauf getätigt hat:<ul><li><strong>m</strong></li><li><strong>f</strong></li><li><strong>Unknown</strong></li></ul>    |
+| gender              | String | Eine der folgenden Zeichenfolgen, die das Geschlecht des Benutzer angibt, der den Kauf getätigt hat:<ul><li><strong>m</strong></li><li><strong>f</strong></li><li><strong>Unknown</strong></li></ul>    |
 | ageGroup            | string | Eine der folgenden Zeichenfolgen, die die Altersgruppe angibt, die den Kauf getätigt hat:<ul><li><strong>less than 13</strong></li><li><strong>13-17</strong></li><li><strong>18-24</strong></li><li><strong>25-34</strong></li><li><strong>35-44</strong></li><li><strong>44-55</strong></li><li><strong>greater than 55</strong></li><li><strong>Unknown</strong></li></ul>  |
-| acquisitionType     | string | Eine der folgenden Zeichenfolgen, die den Typ des Kaufes angibt:<ul><li><strong>Free</strong></li><li><strong>Trial</strong></li><li><strong>Paid</strong></li><li><strong>Angebotscode</strong></li><li><strong>lap</strong></li></ul>   |
+| acquisitionType     | String | Eine der folgenden Zeichenfolgen, die den Typ des Kaufes angibt:<ul><li><strong>Free</strong></li><li><strong>Testversion</strong></li><li><strong>Kostenpflichtig</strong></li><li><strong>Angebotscode</strong></li><li><strong>lap</strong></li></ul>   |
 | acquisitionQuantity | number | Die Anzahl der Käufe, die während der angegebenen Aggregationsebene erfolgten.    |
 
 

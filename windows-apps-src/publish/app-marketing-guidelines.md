@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 44ffafab761741b8d7bc05f13ea2d8ae50ff048b
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4570736"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613975"
 ---
 # <a name="microsoft-store-marketing-guidelines-for-apps"></a>Microsoft Store marketing-Richtlinien für apps
 
@@ -39,7 +39,7 @@ Von folgendem Link können Sie auch den vollständigen Satz von Badge-Bildern (i
 
 ## <a name="device-images"></a>Gerätebilder
 
-Zur Vermarktung Ihrer App möchten Sie vielleicht zeigen, wie sie aussieht, wenn sie auf einem Windows-Gerät ausgeführt wird. Ihnen steht eine Vielzahl von Gerätechassisbildern zur Auswahl, darunter Telefone, Tablets, Laptops und PCs. Bewährte Methoden und technische Spezifikationen für die Verwendung dieser Bilder können in den [Microsoft Store-Marketingrichtlinien](http://go.microsoft.com/fwlink/p/?LinkId=529769)gefunden werden.
+Zur Vermarktung Ihrer App möchten Sie vielleicht zeigen, wie sie aussieht, wenn sie auf einem Windows-Gerät ausgeführt wird. Ihnen steht eine Vielzahl von Gerätechassisbildern zur Auswahl, darunter Telefone, Tablets, Laptops und PCs. Bewährte Methoden und technische Spezifikationen für die Verwendung dieser Bilder finden Sie in den [Microsoft Store-Marketingrichtlinien](http://go.microsoft.com/fwlink/p/?LinkId=529769).
 
 [![Schaltfläche „Herunterladen“](images/downloadbutton.png)](https://go.microsoft.com/fwlink/p/?LinkId=533057) **Grafiken für Windows-Geräte**
 
@@ -47,13 +47,13 @@ Zur Vermarktung Ihrer App möchten Sie vielleicht zeigen, wie sie aussieht, wenn
 
 *Microsoft Marks* bedeutet das *Microsoft-Badge* auf der Seite " [Badge-Generator](http://go.microsoft.com/fwlink/p/?LinkID=534236) " beschrieben. Die Verwendung dieser Badges setzt Folgendes voraus:
 
--   Ihre app oder andere verfügbare Inhalte im Microsoft Store oder als Teil des [Microsoft-Partnerprogramms](http://go.microsoft.com/fwlink/p/?LinkId=624463).
+-   Ihre app oder andere Inhalte verfügbar im Microsoft Store oder als Teil des [Microsoft-Partnerprogramms](http://go.microsoft.com/fwlink/p/?LinkId=624463).
 
 -   Falls Sie bei Dev Center registriert sind, erfüllen Sie die Anforderungen im Abschnitt [„Lizenz für Microsoft Marks“](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement#license_to_mark) der Vereinbarung für App-Entwickler.
 
--   Wenn Sie nicht mit dem Windows Dev Center registriert sind, gewährt Microsoft Ihnen eine weltweite nicht exklusive, nicht übertragbare, gebührenfreie Lizenz zur Verwendung der Badges ausschließlich gemäß den Microsoft Store-Badge-Richtlinien. Diese Richtlinien können von Microsoft geändert werden. In diesem Fall unternimmt Microsoft jedoch angemessene Schritte, um Sie zu neuen URLs weiterzuleiten, unter denen die Spezifikationen bereitgestellt werden. Microsoft behält sich alle hierin nicht ausdrücklich eingeräumten Rechte vor.
+-   Wenn Sie nicht mit dem Windows Dev Center registriert sind, gewährt Microsoft Ihnen eine weltweite, nicht exklusive, nicht übertragbare und gebührenfreie Ausführung Lizenz um die Signale ausschließlich gemäß den Microsoft Store-Badge-Richtlinien zu verwenden. Diese Richtlinien können von Microsoft geändert werden. In diesem Fall unternimmt Microsoft jedoch angemessene Schritte, um Sie zu neuen URLs weiterzuleiten, unter denen die Spezifikationen bereitgestellt werden. Microsoft behält sich alle hierin nicht ausdrücklich eingeräumten Rechte vor.
 
--   Führen Sie die logonutzungsbedingungen, die in den [Microsoft Store-Badge-Richtlinien](http://go.microsoft.com/fwlink/p/?LinkId=529769)beschrieben.
+-   Beachten Sie die logonutzungsbedingungen, die in den [Microsoft Store-Badge-Richtlinien](http://go.microsoft.com/fwlink/p/?LinkId=529769)beschrieben.
 
 Microsoft ist der alleinige Eigentümer der Microsoft Marks und des damit verbundenen Firmenwerts sowie der alleinige Begünstigte des Firmenwerts, der sich aus Ihrer Nutzung der Microsoft Marks ergibt. Microsoft kann diese Lizenz jederzeit und nach eigenem Ermessen widerrufen.
 

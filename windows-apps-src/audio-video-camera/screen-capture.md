@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Bildschirmaufnahme
 ms.localizationpriority: medium
 ms.openlocfilehash: 3be1312b5dcc716d29bf15a8e16a2647ada68d49
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4566279"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612673"
 ---
 # <a name="screen-capture"></a>Bildschirmaufnahme
 
@@ -28,11 +28,11 @@ Mit der Bildschirmaufnahme können Entwickler sichere System-UIs für Endbenutze
 
 ## <a name="add-the-screen-capture-capability"></a>Hinzufügen der Bildschirmaufnahmefunktion
 
-Die APIs finden Sie in der **Windows.Graphics.Capture** -Namespace erfordern eine allgemeine Funktion in Ihrem App Manifest deklariert werden:
+Die APIs finden Sie in der **Windows.Graphics.Capture** -Namespace erfordern eine allgemeine Funktion in Ihrem Anwendungsmanifest deklariert werden:
     
 1. Öffnen Sie **"Package.appxmanifest"** im **Projektmappen-Explorer**.
 2. Wählen Sie die Registerkarte **Funktionen** aus.
-3. Überprüfen Sie die **Grafiken zu erfassen**.
+3. Überprüfen Sie **Grafiken zu erfassen**.
 
 ![Grafik-Erfassung](images/screen-capture-1.png)
 
@@ -72,7 +72,7 @@ public async Task StartCaptureAsync()
 }
 ```
 
-Da dies Benutzeroberflächencode ist, muss sie für den UI-Thread aufgerufen werden. Wenn Sie es aus CodeBehind für eine Seite Ihrer Anwendung (z. B. **"MainPage.Xaml.cs"**) aufrufen für Sie erfolgt dies automatisch, aber wenn nicht, Sie können es auf den UI-Thread mit dem folgenden Code ausgeführt erzwingen:
+Da dies Benutzeroberflächencode ist, muss sie für den UI-Thread aufgerufen werden. Wenn Sie es aus dem CodeBehind für eine Seite Ihrer Anwendung (z. B. **"MainPage.Xaml.cs"**) aufrufen für Sie erfolgt dies automatisch, aber wenn nicht, Sie können es auf den UI-Thread mit dem folgenden Code ausgeführt erzwingen:
 
 ```cs
 CoreWindow window = CoreApplication.MainView.CoreWindow;

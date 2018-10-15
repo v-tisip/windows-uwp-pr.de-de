@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 3569C505-8D8C-4D85-B383-4839F13B2466
 description: Verwenden Sie diese Microsoft zum Verlängern eines Microsoft Store-Schlüssels.
 title: Verlängern eines Microsoft Store-ID-Schlüssels
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Sammlungs-API, Microsoft Store-Einkaufs-API, Microsoft Store-ID-Schlüssel, verlängern
 ms.localizationpriority: medium
-ms.openlocfilehash: 430eaaa040e731e429eba15d58f554e41349a959
-ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
-ms.translationtype: HT
+ms.openlocfilehash: 70bda5022e52c0b18a43563a0492bd56d09b88a0
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
-ms.locfileid: "1664823"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612444"
 ---
 # <a name="renew-a-microsoft-store-id-key"></a>Verlängern eines Microsoft Store-ID-Schlüssels
 
@@ -32,7 +32,7 @@ Zur Verwendung dieser Methode benötigen Sie:
 
 Weitere Informationen finden Sie unter [Verwalten von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md).
 
-## <a name="request"></a>Anfordern
+## <a name="request"></a>Anforderung
 
 ### <a name="request-syntax"></a>Anforderungssyntax
 
@@ -56,7 +56,7 @@ Weitere Informationen finden Sie unter [Verwalten von Produktansprüchen aus ein
 | Parameter     | Typ   | Beschreibung                       | Erforderlich |
 |---------------|--------|-----------------------------------|----------|
 | serviceTicket | string | Das Azure AD-Zugriffstoken.        | Ja      |
-| key           | string | Der abgelaufene Microsoft Store-ID-Schlüssel. | Nein       |
+| key           | string | Der abgelaufene Microsoft Store-ID-Schlüssel. | Ja       |
 
 
 ### <a name="request-example"></a>Anforderungsbeispiel
@@ -78,9 +78,9 @@ Host: collections.mp.microsoft.com
 
 ### <a name="response-body"></a>Antworttext
 
-| Parameter | Typ   | Beschreibung                                                                                                            | Erforderlich |
-|-----------|--------|------------------------------------------------------------------------------------------------------------------------|----------|
-| key       | string | Der aktualisierte Microsoft Store-Schlüssel kann dann für zukünftige Aufrufe der Sammlungs- oder Einkaufs-API von Microsoft Store verwendet werden. | Nein       |
+| Parameter | Typ   | Beschreibung                                                                                                            |
+|-----------|--------|------------------------------------------------------------------------------------------------------------------------|
+| key       | string | Der aktualisierte Microsoft Store-Schlüssel kann dann für zukünftige Aufrufe der Sammlungs- oder Einkaufs-API von Microsoft Store verwendet werden. |
 
 
 ### <a name="response-example"></a>Antwortbeispiel
@@ -103,8 +103,8 @@ Date: Tue, 13 Sep 2015 07:31:12 GMT
 ## <a name="error-codes"></a>Fehlercodes
 
 
-| Code | Fehler        | Interner Fehlercode           | Beschreibung                                                                                                                                                                           |
-|------|--------------|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Code | Fehler        | Interner Fehlercode           | Beschreibung   |
+|------|--------------|----------------------------|---------------|
 | 401  | Nicht autorisiert | AuthenticationTokenInvalid | Das Azure AD-Zugriffstoken ist ungültig. In einigen Fällen enthalten die Details zu ServiceError weitere Informationen, z. B. wenn das Token abgelaufen ist oder der *appid*-Anspruch fehlt. |
 | 401  | Nicht autorisiert | InconsistentClientId       | Der *clientId*-Anspruch im Microsoft Store-ID-Schlüssel und der *appid*-Anspruch im Azure AD-Zugriffstoken stimmen nicht überein.                                                                     |
 

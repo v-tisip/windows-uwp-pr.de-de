@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: FA55C65C-584A-4B9B-8451-E9C659882EDE
 description: Verwenden Sie diese Methode in der Microsoft Store-Einkaufs-API, um einem bestimmten Benutzer eine kostenlose App oder ein kostenloses Add-On zu gewähren.
 title: Gewähren kostenloser Produkte
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Einkaufs-API, Produkte gewähren
 ms.localizationpriority: medium
-ms.openlocfilehash: c1ecb1f7db755fd21014ebc7edf979e7a25e7c7f
-ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
-ms.translationtype: HT
+ms.openlocfilehash: 432d5976cb018148ba0f53aae6446a046f0a3b2f
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
-ms.locfileid: "1665026"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4610596"
 ---
 # <a name="grant-free-products"></a>Gewähren kostenloser Produkte
 
@@ -62,9 +62,9 @@ Weitere Informationen finden Sie unter [Verwalten von Produktansprüchen aus ein
 | language       | string | Die Sprache des Benutzers.  | Ja      |
 | market         | string | Der Markt des Benutzers.       | Ja      |
 | orderId        | guid   | Eine für den Auftrag generierte GUID. Dieser Wert muss für den Benutzer eindeutig sein, aber nicht auftragsübergreifend.    | Ja      |
-| Produkt-ID      | String | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für das [Produkt](in-app-purchases-and-trials.md#products-skus-and-availabilities) aus dem MicrosoftStore-Katalog. Ein Beispiel für die Store-ID eines Produkts ist 9NBLGGH42CFD. | Ja      |
+| Produkt-ID      | string | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für das [Produkt](in-app-purchases-and-trials.md#products-skus-and-availabilities) aus dem MicrosoftStore-Katalog. Ein Beispiel für eine Store-ID für ein Produkt ist 9NBLGGH42CFD. | Ja      |
 | quantity       | int    | Die Kaufmenge. Derzeit wird als einziger Wert 1 unterstützt. Ohne Angabe wird standardmäßig der Wert1 verwendet.   | Nein       |
-| skuId          | String | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für die [Produkt-SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) aus dem MicrosoftStore-Katalog. Ein Beispiel für die Store-ID einer SKU ist 0010.     | Ja      |
+| skuId          | string | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) für die [Produkt-SKU](in-app-purchases-and-trials.md#products-skus-and-availabilities) aus dem MicrosoftStore-Katalog. Ein Beispiel für eine Store-ID für eine SKU ist 0010.     | Ja      |
 
 
 ### <a name="request-example"></a>Anforderungsbeispiel

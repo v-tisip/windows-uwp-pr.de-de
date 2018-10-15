@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 Description: The Microsoft Store Services SDK provides libraries and tools that you can use to add features to your apps that help you make more money and gain customers.
 title: Kundengewinnung mit Microsoft Store Services SDK
 ms.assetid: 518516DB-70A7-49C4-B3B6-CD8A98320B9C
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 08/21/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store Services SDK
 ms.localizationpriority: medium
-ms.openlocfilehash: ed40494b8498a1d990df0e4c041b1a81024176f5
-ms.sourcegitcommit: b8c77ac8e40a27cf762328d730c121c28de5fbc4
-ms.translationtype: HT
+ms.openlocfilehash: 070e1e5bcccee27a19f3afb8a1c9d8ae356a9d73
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2018
-ms.locfileid: "1672807"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4612363"
 ---
 # <a name="engage-customers-with-the-microsoft-store-services-sdk"></a>Kundengewinnung mit Microsoft Store Services SDK
 
@@ -28,14 +28,14 @@ Das Microsoft Store Services SDK bietet Features, mit denen Sie in Ihren Apps f�
 
 ## <a name="scenarios-supported-by-the-microsoft-store-services-sdk"></a>Durch das Microsoft Store Services SDK unterstützte Szenarien
 
-Das Microsoft Store Services SDK unterstützt derzeit die folgenden Szenarien für UWP-Apps. Die API-Referenzdokumentation finden Sie unter [Microsoft Store Services SDK-API-Referenz](https://msdn.microsoft.com/library/windows/apps/mt691886.aspx).
+Das Microsoft Store Services SDK unterstützt derzeit die folgenden Szenarien für UWP-Apps. Die API-Referenzdokumentation finden Sie unter [Microsoft Store Services SDK-API-Referenz](https://docs.microsoft.com/uwp/api/overview/engagement).
 
 |  Szenario  |  Beschreibung   |
 |------------|----------------|
-|  [Durchführen von Experimenten mit A/B-Tests in Ihrer UWP-App](run-app-experiments-with-a-b-testing.md)    |  Führen Sie A/B-Tests in Ihrer App für die universelle Windows-Plattform (UWP) aus, um die Effektivität der Features für einige Kunden zu messen, bevor Sie die Features für alle Benutzer freigeben. Verwenden Sie nach der Definition eines Experiments im Dev Center-Dashboard die [StoreServicesExperimentVariation](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesexperimentvariation.aspx)-Klasse zum Abrufen von Varianten für Ihr Experiment in der App, verwenden Sie diese Daten zum Ändern des Verhaltens des Features, das Sie testen, und verwenden Sie dann die [LogForVariation](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation.aspx)-Methode zum Senden des Anzeigeereignisses und der Umwandlungsereignisse an Dev Center. Verwenden Sie dann das Dashboard zum Anzeigen der Ergebnisse und zum Verwalten des Experiments.  |
-|  [Starten des Feedback-Hubs über Ihre UWP-App](launch-feedback-hub-from-your-app.md)    |  Verwenden Sie die [StoreServicesFeedbackLauncher](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesfeedbacklauncher.aspx)-Klasse in Ihrer UWP-App, um Ihre Windows10-Kunden auf den Feedback-Hub zu verweisen. Dort können Kunden ihre Probleme und Vorschläge übermitteln und das Feedback anderer Benutzer lesen und bewerten. Verwalten Sie anschließend dieses Feedback im [Feedbackbericht](../publish/feedback-report.md) im Dev Center-Dashboard. |
-|  [Konfigurieren Sie Ihre UWP-App zum Empfangen von Dev Center-Pushbenachrichtigungen](configure-your-app-to-receive-dev-center-notifications.md)    |  Verwenden Sie die [StoreServicesEngagementManager](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicesengagementmanager.aspx)-Klasse in Ihrer UWP-App zum Registrieren Ihrer App für den Empfang benutzerorientierter Pushbenachrichtigungen, die Sie Ihren Kunden mithilfe des Windows Dev Center-Dashboards senden.  |
-|   [Protokollieren Sie benutzerdefinierte Ereignisse in Ihrer UWP-App für den Nutzungsbericht in Dev Center](log-custom-events-for-dev-center.md)   |  Verwenden Sie die [StoreServicesCustomEventLogger](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.storeservicescustomeventlogger.log.aspx)-Klasse in Ihrer UWP-App, um benutzerdefinierte Ereignisse zu protokollieren, die Ihrer App im Dev Center zugeordnet sind. Überprüfen Sie dann alle Instanzen für Ihre benutzerdefinierten Ereignisse im Abschnitt **Benutzerdefinierte Ereignisse** des [Nutzungsberichts](https://msdn.microsoft.com/windows/uwp/publish/usage-report) im Dev Center-Dashboard.  |
+|  [Durchführen von Experimenten mit A/B-Tests in Ihrer UWP-App](run-app-experiments-with-a-b-testing.md)    |  Führen Sie A/B-Tests in Ihrer App für die universelle Windows-Plattform (UWP) aus, um die Effektivität der Features für einige Kunden zu messen, bevor Sie die Features für alle Benutzer freigeben. Verwenden Sie nach der Definition eines Experiments im Dev Center-Dashboard die [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation)-Klasse zum Abrufen von Varianten für Ihr Experiment in der App, verwenden Sie diese Daten zum Ändern des Verhaltens des Features, das Sie testen, und verwenden Sie dann die [LogForVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation)-Methode zum Senden des Anzeigeereignisses und der Umwandlungsereignisse an Dev Center. Verwenden Sie dann das Dashboard zum Anzeigen der Ergebnisse und zum Verwalten des Experiments.  |
+|  [Starten des Feedback-Hubs über Ihre UWP-App](launch-feedback-hub-from-your-app.md)    |  Verwenden Sie die [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher)-Klasse in Ihrer UWP-App, um Ihre Windows10-Kunden auf den Feedback-Hub zu verweisen. Dort können Kunden ihre Probleme und Vorschläge übermitteln und das Feedback anderer Benutzer lesen und bewerten. Verwalten Sie anschließend dieses Feedback im [Feedbackbericht](../publish/feedback-report.md) im Dev Center-Dashboard. |
+|  [Konfigurieren Sie Ihre UWP-App zum Empfangen von Dev Center-Pushbenachrichtigungen](configure-your-app-to-receive-dev-center-notifications.md)    |  Verwenden Sie die [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager)-Klasse in Ihrer UWP-App zum Registrieren Ihrer App für den Empfang benutzerorientierter Pushbenachrichtigungen, die Sie Ihren Kunden mithilfe des Windows Dev Center-Dashboards senden.  |
+|   [Protokollieren Sie benutzerdefinierte Ereignisse in Ihrer UWP-App für den Nutzungsbericht in Dev Center](log-custom-events-for-dev-center.md)   |  Verwenden Sie die [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log)-Klasse in Ihrer UWP-App, um benutzerdefinierte Ereignisse zu protokollieren, die Ihrer App im Dev Center zugeordnet sind. Überprüfen Sie dann alle Instanzen für Ihre benutzerdefinierten Ereignisse im Abschnitt **Benutzerdefinierte Ereignisse** des [Nutzungsberichts](https://msdn.microsoft.com/windows/uwp/publish/usage-report) im Dev Center-Dashboard.  |
 
 <span id="prerequisites" />
 
@@ -123,7 +123,7 @@ Befolgen Sie nach der Installation des Microsoft Store Services SDKs über das M
 
 2. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Verweise**, und wählen Sie **Verweis hinzufügen...** aus.
 
-3. Erweitern Sie im **Verweis-Manager** die Option **Universelles Windows**, klicken Sie auf **Erweiterungen**, und aktivieren Sie dann das Kontrollkästchen neben **Microsoft Engagement Framework**. Dadurch können Sie die APIs im [Microsoft.Services.Store.Engagement](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.aspx)-Namespace verwenden.
+3. Erweitern Sie im **Verweis-Manager** die Option **Universelles Windows**, klicken Sie auf **Erweiterungen**, und aktivieren Sie dann das Kontrollkästchen neben **Microsoft Engagement Framework**. Dadurch können Sie die APIs im [Microsoft.Services.Store.Engagement](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement)-Namespace verwenden.
 
 3. Klicken Sie auf **OK**.
 
@@ -134,7 +134,7 @@ Befolgen Sie nach der Installation des Microsoft Store Services SDKs über das M
 
 ## <a name="understanding-framework-packages-in-the-sdk"></a>Die Frameworkpakete im SDK
 
-Die Bibliothek „Microsoft.Services.Store.Engagement.dll“ im Microsoft Store Services SDK ist als *Frameworkpaket* konfiguriert. Diese Bibliothek enthält die APIs im [Microsoft.Services.Store.Engagement](https://msdn.microsoft.com/library/windows/apps/microsoft.services.store.engagement.aspx)-Namespace.
+Die Bibliothek „Microsoft.Services.Store.Engagement.dll“ im Microsoft Store Services SDK ist als *Frameworkpaket* konfiguriert. Diese Bibliothek enthält die APIs im [Microsoft.Services.Store.Engagement](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement)-Namespace.
 
 Da es sich bei dieser Bibliothek um ein Frameworkpaket handelt, bedeutet dies Folgendes: Nachdem ein Benutzer eine Version Ihrer App installiert hat, die diese Bibliothek verwendet, wird diese Bibliothek automatisch auf dessen Gerät über Windows Update aktualisiert, wenn eine neue Version der Bibliothek mit Fixes und Leistungsverbesserungen veröffentlicht wird. Dadurch wird sichergestellt, dass Ihre Kunden stets die neueste Version der Bibliothek auf ihren Geräten installiert haben.
 
@@ -142,7 +142,7 @@ Wenn wir eine neue Version des SDKs veröffentlichen, in der neue APIs oder Feat
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Microsoft Store Services SDK-API-Referenz](https://msdn.microsoft.com/library/windows/apps/mt691886.aspx)
+* [Microsoft Store Services SDK-API-Referenz](https://docs.microsoft.com/uwp/api/overview/engagement)
 * [Ausführen von Experimenten mit A/B-Tests](run-app-experiments-with-a-b-testing.md)
 * [Starten des Feedback-Hubs über Ihre App](launch-feedback-hub-from-your-app.md)
 * [Konfigurieren Ihrer App zum Empfangen von Dev Center-Pushbenachrichtigungen](configure-your-app-to-receive-dev-center-notifications.md)

@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um die aggregierten Kaufdaten für ein Xbox One Spiel während eines bestimmten Zeitraums und mit anderen optionalen Filtern abzurufen.
 title: Abrufen von Xbox One Spielekäufen
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/23/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Xbox One Spielekäufe
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b0caceae9f5b1e2fabb1b55de33d47e5980e2b5
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: a175096860fe2d2e73259ab9e82cbd5c33b8b889
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691573"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4614104"
 ---
 # <a name="get-xbox-one-game-acquisitions"></a>Abrufen von Xbox One Spielekäufen
 
@@ -23,7 +23,7 @@ Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um aggregierte K
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Um diese Methode zu verwenden, sind die folgenden Schritte erforderlich:
+Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](access-analytics-data-using-windows-store-services.md#prerequisites) für die Microsoft Store-Analyse-API.
 * [Rufen Sie ein Azure AD-Zugriffstoken ab](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
@@ -93,7 +93,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | date                | string | Das erste Datum im Datumsbereich für die Kaufdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist dieser Wert das erste Datum in diesem Datumsbereich. |
 | applicationId       | String | Die Produkt-ID des Xbox One Spiels, für das Sie Kaufdaten abrufen. |
 | applicationName     | String | Der Anzeigename des Spiels.       |
-| acquisitionType     | String | Eine der folgenden Zeichenfolgen, die den Typ des Kaufes angibt:<ul><li><strong>Kostenfrei</strong></li><li><strong>Testversion</strong></li><li><strong>Kostenpflichtig</strong></li><li><strong>Werbecode</strong></li><li><strong>Vorbestellung</strong></li><li>**Xbox Game Pass** (oder **Game Pass** beim Abfragen von Daten vor dem 23.März2018)</li><li><strong>Festplatte</strong></li><li><strong>Prepaid-Code</strong></li></ul>    |
+| acquisitionType     | String | Eine der folgenden Zeichenfolgen, die den Typ des Kaufes angibt:<ul><li><strong>Free</strong></li><li><strong>Testversion</strong></li><li><strong>Kostenpflichtig</strong></li><li><strong>Werbecode</strong></li><li><strong>Vorbestellung</strong></li><li>**Xbox Game Pass** (oder **Game Pass** beim Abfragen von Daten vor dem 23.März2018)</li><li><strong>Festplatte</strong></li><li><strong>Prepaid-Code</strong></li></ul>    |
 | ageGroup            | String | Eine der folgenden Zeichenfolgen, die die Altersgruppe des Benutzers anzeigt, der den Kauf getätigt hat:<ul><li><strong>jünger als 13</strong></li><li><strong>13-17</strong></li><li><strong>18-24</strong></li><li><strong>25-34</strong></li><li><strong>35-44</strong></li><li><strong>44-55</strong></li><li><strong>greater than 55</strong></li><li><strong>Unknown</strong></li></ul>     |
 | deviceType          | String | Eine der folgenden Zeichenfolgen, die den Typ des Geräts angibt, mit dem der Kauf getätigt wurde:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Server</strong></li><li><strong>Tablet</strong></li><li><strong>Hologramm</strong></li><li><strong>Unbekannt</strong></li></ul>  |
 | gender              | String | Eine der folgenden Zeichenfolgen, die das Geschlecht des Benutzer angibt, der den Kauf getätigt hat:<ul><li><strong>m</strong></li><li><strong>f</strong></li><li><strong>Unknown</strong></li></ul>     |
@@ -101,7 +101,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | osVersion           | string | Die Version des Betriebssystems, auf dem der Kauf ausgeführt wurde. Bei dieser Methode ist dieser Wert immer **Windows10**.</li></ul>    |
 | paymentInstrumentType           | String | Eine der folgenden Zeichenfolgen, die die Kaufanweisungen anzeigt, die für den Erwerb verwendet wurde:<ul><li><strong>Kreditkarte</strong></li><li><strong>Lastschriftkarte</strong></li><li><strong>Abgeleiteter Kauf</strong></li><li><strong>MS Saldo</strong></li><li><strong>Mobilfunkanbieter</strong></li><li><strong>Online-Überweisung</strong></li><li><strong>PayPal</strong></li><li><strong>Geteilte Transaktion</strong></li><li><strong>Token einlösen</strong></li><li><strong>Nullbetrag gezahlt</strong></li><li><strong>eWallet</strong></li><li><strong>Unbekannt</strong></li></ul>    |
 | sandboxId              | String | Das Sandbox-ID, die für das Spiel erstellt wurde. Dies kann der Wert **RETAIL** sein oder die ID für die private Sandbox.  |
-| storeClient         | String | Eine der folgenden Zeichenfolgen, die die Version des Store anzeigt, wo der Kauf getätigt wurde:<ul><li>**Windows Phone Store (Client)**</li><li>**Microsoft Store (Client)** (oder **Windows Store (Client)** bei Abfragen von Daten vor dem 23.März2018)</li><li>**Microsoft Store (Web)** (oder **Windows Store (Web)** bei Abfragen von Daten vor dem 23.März2018)</li><li>**Volumenkäufe durch Organisationen**</li><li>**Andere**</li></ul>                             |
+| storeClient         | string | Eine der folgenden Zeichenfolgen, die die Version des Store anzeigt, wo der Kauf getätigt wurde:<ul><li>**Windows Phone Store (Client)**</li><li>**Microsoft Store (Client)** (oder **Windows Store (Client)** bei Abfragen von Daten vor dem 23.März2018)</li><li>**Microsoft Store (Web)** (oder **Windows Store (Web)** bei Abfragen von Daten vor dem 23.März2018)</li><li>**Volumenkäufe durch Organisationen**</li><li>**Andere**</li></ul>                             |
 | xboxTitleIdHex              | String | Die Xbox Live Titel-ID (dargestellt in hexadezimalen Wert), die vom der Xbox Developer-Portal (XDP) für Xbox Live-fähige Spiele zugewiesen wurde.  |
 | acquisitionQuantity | number | Die Anzahl der Käufe, die während der angegebenen Aggregationsebene erfolgten.     |
 | purchasePriceUSDAmount | number | Der vom Kunden gezahlte Betrag für den Kauf, der mithilfe des monatlichen Wechselkurses in USD konvertiert wurde.    |
