@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Mittels dieser Methode in der Microsoft Store-Analyse-API können Sie gesammelte Fehlerberichtsdaten für eine Desktopanwendung für einen bestimmten Zeitraum und andere optionale Filter abrufen.
 title: Abrufen von Fehlerberichtsdaten für Ihre Desktopanwendung
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 09/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Fehler, Desktopanwendung
 ms.localizationpriority: medium
-ms.openlocfilehash: 66594fd6f59281011fccab21ad5618827db322dd
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.openlocfilehash: d3f966d2026d32276fee2ed43a353c4a2898d6a1
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4573824"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613445"
 ---
 # <a name="get-error-reporting-data-for-your-desktop-application"></a><span data-ttu-id="7e22f-104">Abrufen von Fehlerberichtsdaten für Ihre Desktopanwendung</span><span class="sxs-lookup"><span data-stu-id="7e22f-104">Get error reporting data for your desktop application</span></span>
 

@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um detaillierte Daten zu einem spezifischen Fehler für Ihre Desktopanwendung zu erhalten.
 title: Abrufen von Details zu einem Fehler in Ihrer Desktopanwendung
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 06/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Fehler, Details, Desktopanwendung
 ms.localizationpriority: medium
-ms.openlocfilehash: 31b7684878eb0f8921d81c8fda9d262a21e12132
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.openlocfilehash: b6e8a19b665c5e01ef227e7d5f643a311efa5c58
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4565188"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616130"
 ---
 # <a name="get-details-for-an-error-in-your-desktop-application"></a><span data-ttu-id="f5e1a-104">Abrufen von Details zu einem Fehler in Ihrer Desktopanwendung</span><span class="sxs-lookup"><span data-stu-id="f5e1a-104">Get details for an error in your desktop application</span></span>
 

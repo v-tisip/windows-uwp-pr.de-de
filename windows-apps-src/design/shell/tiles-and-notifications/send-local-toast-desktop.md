@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, win32, Desktop, Popupbenachrichtigungen, Popup senden, lokale Popupbenachrichtigungen senden, Desktop Bridge, C#, C-Sharp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3bda3e85fd89ef7a8b819fcd809acea4fd9a276b
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4573222"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4615108"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a><span data-ttu-id="98d67-103">Senden von Popupbenachrichtigungen über C#-Apps</span><span class="sxs-lookup"><span data-stu-id="98d67-103">Send a local toast notification from desktop C# apps</span></span>
 

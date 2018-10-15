@@ -17,11 +17,11 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: b144c7e790d0462688795d9e1a6c4f076b569eb3
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4569234"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4613887"
 ---
 # <a name="parallax"></a><span data-ttu-id="c7577-103">Parallax</span><span class="sxs-lookup"><span data-stu-id="c7577-103">Parallax</span></span>
 

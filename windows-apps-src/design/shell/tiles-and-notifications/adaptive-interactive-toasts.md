@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Popupbenachrichtigungen, interaktive Popups, adaptive Popups, Popup-Inhalt, Nutzlast des Popups
 ms.localizationpriority: medium
 ms.openlocfilehash: de999528d07e6bd7d243e53708e9afc465004af7
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4566598"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4611098"
 ---
 # <a name="toast-content"></a><span data-ttu-id="04e96-103">Popupinhalt</span><span class="sxs-lookup"><span data-stu-id="04e96-103">Toast content</span></span>
 
