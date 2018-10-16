@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f801e9093676ec9fbf55c4ec4af7c5c444ed3ead
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4612340"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4685141"
 ---
 # <a name="launch-an-app-with-a-uri"></a><span data-ttu-id="c45ad-104">Starten einer App mit einem URI</span><span class="sxs-lookup"><span data-stu-id="c45ad-104">Launch an app with a URI</span></span>
 

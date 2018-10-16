@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Bewertungen, Rezensionen
 ms.localizationpriority: medium
 ms.openlocfilehash: cc3dce673b434673f0e8a72158c2d3a593f02c52
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4610126"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4689884"
 ---
 # <a name="request-ratings-and-reviews-for-your-app"></a><span data-ttu-id="8cc35-103">Anfordern von Bewertungen und Prüfungen für Ihre App</span><span class="sxs-lookup"><span data-stu-id="8cc35-103">Request ratings and reviews for your app</span></span>
 
