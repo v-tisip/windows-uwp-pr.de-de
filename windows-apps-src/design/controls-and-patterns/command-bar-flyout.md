@@ -15,12 +15,12 @@ design-contact: ksulliv
 dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: ed17299051ae7da32f238eb57876b81597c8effa
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: 22d965d14c4f10f904a4d94a18ce83721c49491c
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4617950"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4680121"
 ---
 # <a name="command-bar-flyout"></a>Befehlsleisten-Flyout
 
@@ -149,7 +149,7 @@ Wenn Sie Kontextbefehlen reaktiv als Kontextmenü angezeigt wird, sind die sekun
 
 Um Befehle in einem Kontextmenü anzuzeigen, weisen Sie in der Regel das Flyout zu der [ContextFlyout](/uwp/api/windows.ui.xaml.uielement.contextflyout) -Eigenschaft eines Benutzeroberflächenelements. Auf diese Weise das Flyout Öffnen des Elements behandelt wird, und Sie müssen nichts weiter tun.
 
-Wenn Sie verarbeiten das Flyout (z. B. auf ein Ereignis [RightTapped](/uwp/api/windows.ui.xaml.uielement.righttapped) ) angezeigt, die das Flyout [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode) zum **Standard** in das Flyout im erweiterten Modus zu öffnen und weisen Sie ihm den Fokus.
+Wenn Sie das Flyout (z. B. auf ein Ereignis [RightTapped](/uwp/api/windows.ui.xaml.uielement.righttapped) ) angezeigt behandeln, legen Sie das Flyout [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode) auf **Standard** in das Flyout im erweiterten Modus zu öffnen und weisen Sie ihm den Fokus.
 
 > [!TIP]
 > Weitere Informationen zu den Optionen beim Anzeigen von einem Flyout und zur Platzierung von das Flyout zu steuern finden Sie unter [Flyouts](../controls-and-patterns/dialogs-and-flyouts/flyouts.md).
