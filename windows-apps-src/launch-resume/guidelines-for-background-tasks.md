@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Hintergrundaufgabe, für die
 ms.localizationpriority: medium
 ms.openlocfilehash: 7adfecbe216dce25d0f80eb3ef1f528196299db4
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4569568"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4621959"
 ---
 # <a name="guidelines-for-background-tasks"></a><span data-ttu-id="be938-104">Richtlinien für Hintergrundaufgaben</span><span class="sxs-lookup"><span data-stu-id="be938-104">Guidelines for background tasks</span></span>
 

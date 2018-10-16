@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 39b3ba05b06b6d484804999a935accc7223b5c60
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4575249"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4621969"
 ---
 # <a name="download-and-install-package-updates-from-the-store"></a><span data-ttu-id="68967-104">Herunterladen und Installieren von Paketupdates aus dem Store</span><span class="sxs-lookup"><span data-stu-id="68967-104">Download and install package updates from the Store</span></span>
 
