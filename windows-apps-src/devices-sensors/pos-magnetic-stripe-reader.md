@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, zeigen Sie Service, pos, Magnetstreifenleser
 ms.localizationpriority: medium
 ms.openlocfilehash: 8ce34623a0af9de6e0d678052719fb02f2a9672b
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4615027"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4679483"
 ---
 # <a name="magnetic-stripe-reader"></a><span data-ttu-id="7d373-104">Magnetstreifenleser</span><span class="sxs-lookup"><span data-stu-id="7d373-104">Magnetic stripe reader</span></span>
 
