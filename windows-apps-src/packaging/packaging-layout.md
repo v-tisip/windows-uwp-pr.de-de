@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows10, verpackung, paketlayout, bestandspaket
 ms.localizationpriority: medium
 ms.openlocfilehash: 3f8cbb3989b58b726336b4bd757902bd9ea3f8c0
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574332"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623558"
 ---
 # <a name="package-creation-with-the-packaging-layout"></a>Paketerstellung mit dem Verpackungslayout  
 
@@ -55,7 +55,7 @@ Hier sehen Sie ein Beispiel für ein einfaches Verpackungslayout:
 Analysieren wir dieses Beispiel, um zu verstehen, wie es funktioniert.
 
 ### <a name="packagefamily"></a>PackageFamily
-Dieses verpackungslayout erstellt eine einzelne flache app-Bündel-Datei mit einer X64 architekturpaket und einem Bestandspaket namens "Medien". 
+Dieses verpackungslayout erstellt eine einzelne flache app-Bundle-Datei mit einer X64 architekturpaket und einem Bestandspaket namens "Medien". 
 
 Das **PackageFamily**-Element wird verwendet, um ein App-Bündel zu definieren. Sie müssen das **ManifestPath**-Attribut verwenden, um für das Bündel eine **AppxManifest**-Datei bereitzustellen, wobei diese **AppxManifest**-Datei der **AppxManifest**-Datei für das Architekturpaket des Bündels entsprechen sollte. Das **ID**-Attribut muss ebenfalls angegeben werden. Dies wird während der Erstellung des Pakets zusammen mit MakeAppx.exe verwendet, damit Sie nur dieses Paket erstellen können, wenn Sie möchten, und das ist der Dateiname des resultierenden Pakets. Das **FlatBundle**-Attribut wird verwendet, um zu beschreiben, welche Art von Bündel Sie erstellen möchten, wobei **true** für ein flaches Bündel (über das Sie hier mehr lesen können), und **false** für ein klassisches Bündel steht. Das **ResourceManager**-Attribut wird verwendet, um anzugeben, ob die Ressourcenpakete innerhalb dieses Bündels MRT verwenden, um auf die Dateien zuzugreifen. Dies ist standardmäßig **true**, ab Windows10, Version 1803, ist es jedoch noch nicht fertig, daher muss dieses Attribut auf **false** gesetzt werden.
 
@@ -147,7 +147,7 @@ Ressourcenpakete können mit dem **ResourcePackage**-Element angegeben werden. I
 
 Optionale Pakete besitzen jeweils ihre eigenen, eindeutigen Paketfamiliennamen und müssen mit **PackageFamily**-Elementen definiert werden, wenn das **Optional**-Attribut als **true** angegeben wird. Das **RelatedSet**-Attribut wird verwendet, um anzugeben, ob sich das optionale Paket innerhalb des zugehörigen Sets befindet (standardmäßig ist dieser Wert „true”), und ob das optionale Paket mit dem primären Paket aktualisiert werden soll.
 
-Das Element **PrebuiltPackage** wird verwendet, um Pakete hinzufügen, die nicht im verpackungslayout, enthalten oder referenziert in den app-Bundle-Dateien zu erstellenden definiert sind. In diesem Fall wird ein anderes optionales DLC-Paket enthalten wird, damit die primäre app-Bundle-Datei kann darauf verweisen und es Teil des zugehörigen Sets werden kann.
+Das Element **PrebuiltPackage** wird verwendet, um Pakete hinzufügen, die nicht im verpackungslayout enthalten oder in den app-Bündel-Dateien zu erstellenden verwiesen werden definiert sind. In diesem Fall wird ein anderes optionales DLC-Paket hier enthalten sein, damit die primäre app-Bundle-Datei kann darauf verweisen und es Teil des zugehörigen Sets werden kann.
 
 
 ## <a name="build-app-packages-with-a-packaging-layout-and-makeappxexe"></a>Erstellen von App-Paketen mit einem Verpackungslayout und MakeAppx.exe

@@ -11,19 +11,19 @@ keywords: windows10, UWP
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e6cd2b305a9d52a2239be46cc7f77650cdd6531
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567516"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623182"
 ---
 # <a name="behind-the-scenes-of-your-packaged-desktop-application"></a>Hinter den Kulissen der Ihre verpackte desktop-Anwendung
 
-Dieser Artikel beschäftigt sich eingehender damit auf was auf Dateien und Registrierungseinträge, geschieht Wenn Sie ein Windows-app-Paket für Ihre desktop-Anwendung erstellen.
+Dieser Artikel beschäftigt sich eingehender damit auf was mit Dateien und Registrierungseinträge beim Erstellen einer Windows-app-Paket für Ihre desktop-Anwendung geschieht.
 
 Ein wichtiges Ziel der ein modernes Paket ist, Anwendungszustand vom Systemzustand bei gleichzeitiger Gewährleistung der Kompatibilität mit anderen apps so weit wie möglich zu trennen. Die Brücke erreicht dies, indem sie die Anwendung in einem Paket für die universelle Windows-Plattform (UWP) platziert und anschließend einige zur Laufzeit am Dateisystem und an der Registrierung vorgenommene Änderungen ermittelt und umleitet.
 
-Pakete, die Sie für Ihre desktop-Anwendung erstellen, sind nur Desktop vertrauenswürdigen Anwendungen und nicht virtualisierten oder Sandbox. Dies ermöglicht es ihnen, auf die gleiche Weise mit anderen Apps zu interagieren wie klassische Desktop-Anwendungen.
+Pakete, die Sie für Ihre desktop-Anwendung erstellen, sind nur Desktop vertrauenswürdigen Anwendungen und sind nicht virtualisierten oder Sandbox. Dies ermöglicht es ihnen, auf die gleiche Weise mit anderen Apps zu interagieren wie klassische Desktop-Anwendungen.
 
 ## <a name="installation"></a>Installation
 
@@ -33,7 +33,7 @@ Nach der Bereitstellung werden Paketdateien als schreibgeschützt markiert und v
 
 ## <a name="file-system"></a>Dateisystem
 
-Die Anwendung "appdata" vorgenommenen Änderungen werden erfasst, um app-Zustands. Alle Schreibvorgänge in den AppData-Ordner des Benutzers (z.B. *C:\Benutzer\Benutzername\AppData*), einschließlich Erstellungs-, Lösch- und Aktualisierungsvorgänge, werden direkt an einen privaten Speicherort pro Benutzer und App kopiert. Dadurch entsteht den Eindruck, dass die verpackte Anwendung die tatsächliche AppData bearbeitet eigentlich eine private Kopie geändert wird. Durch eine derartige Umleitung von Schreibvorgängen kann das System alle von der App vorgenommenen Dateiänderungen nachverfolgen. Dadurch kann das System diese Dateien bereinigen, wenn die Anwendung deinstalliert wird, also System "Running" reduzieren und eine bessere Anwendung deinstallationsmöglichkeiten bereitstellen für den Benutzer.
+Die Anwendung "appdata" vorgenommenen Änderungen werden erfasst, um app-Zustands. Alle Schreibvorgänge in den AppData-Ordner des Benutzers (z.B. *C:\Benutzer\Benutzername\AppData*), einschließlich Erstellungs-, Lösch- und Aktualisierungsvorgänge, werden direkt an einen privaten Speicherort pro Benutzer und App kopiert. Dadurch entsteht den Eindruck, dass die verpackte Anwendung die tatsächliche AppData bearbeitet eigentlich eine private Kopie geändert wird. Durch eine derartige Umleitung von Schreibvorgängen kann das System alle von der App vorgenommenen Dateiänderungen nachverfolgen. Dadurch kann das System diese Dateien bereinigen, wenn die Anwendung deinstalliert wird, daher System "Running" reduzieren und eine bessere Anwendung deinstallationsmöglichkeiten bereitstellen für den Benutzer.
 
 Zusätzlich zur Umleitung von "appdata", werden bekannte Windows-Ordner ("System32", Programmdateien (x86) usw.) dynamisch mit den entsprechenden Verzeichnissen im app-Paket zusammengeführt. Jedes verpackte Paket enthält im Stammverzeichnis einen Ordner mit dem Namen „VFS“. Alle Lesevorgänge für Verzeichnisse oder Dateien im VFS-Verzeichnis werden zur Laufzeit mit den jeweiligen nativen Entsprechungen zusammengeführt. Z. B. eine Anwendung könnte *C:\Program Files\WindowsApps\package_name\VFS\SystemX86\vc10.dll* als Teil des app-Pakets enthalten, aber die Datei sähe auf *C:\Windows\System32\vc10.dll*installiert werden.  Dies gewährleistet die Kompatibilität mit Desktopanwendungen, die davon ausgehen, dass sich Dateien an Speicherorten ohne Pakete befinden.
 
@@ -94,7 +94,7 @@ Schreibvorgänge außerhalb des Pakets | Von der Brücke ignoriert. Zulässig, w
 
 ## <a name="uninstallation"></a>Deinstallation
 
-Wenn ein Paket vom Benutzer deinstalliert wird, werden alle Dateien und Ordner unter *C:\Programme Files\WindowsApps\package_name* , sowie alle umgeleiteten Schreibvorgänge für "appdata" oder die Registrierung entfernt, die während der Verpackung erfasst wurden.
+Wenn ein Paket vom Benutzer deinstalliert wird, werden alle Dateien und Ordner unter *C:\Programme Files\WindowsApps\package_name* , sowie alle umgeleiteten Schreibvorgänge für "appdata" oder die Registrierung entfernt, die während des Verpackungsprozesses erfasst wurden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

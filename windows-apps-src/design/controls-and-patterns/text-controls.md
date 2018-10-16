@@ -16,11 +16,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: ad7326acf728aef66f10c72ee04461fd90e5f775
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4565413"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619040"
 ---
 # <a name="text-controls"></a>Textsteuerelemente
 
@@ -127,7 +127,7 @@ Ab Windows10, Version 1803, verfügen XAML-Texteingabefelder über eine integrie
 
 ![Textfeld wird erweitert, wenn mit einem Stift darauf getippt wird](images/pen-input-expand.gif)
 
-Weitere Informationen finden Sie unter [Texteingabe mit der Handschrift-Ansicht](text-handwriting-view.md).
+Weitere Informationen finden Sie in der [Texteingabe mit der Handschrift-Ansicht](text-handwriting-view.md).
 
 ## <a name="choose-the-right-keyboard-for-your-text-control"></a>Auswählen der richtigen Tastatur für Ihr Textsteuerelement
 

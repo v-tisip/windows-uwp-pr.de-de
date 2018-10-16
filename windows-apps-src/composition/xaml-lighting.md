@@ -15,11 +15,11 @@ dev_langs:
 - cppcx
 - cppwinrt
 ms.openlocfilehash: 672efaa0899fa8b63b5ec0fda09a20f4f0ab7d67
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4565036"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623476"
 ---
 # <a name="xaml-lighting"></a>XAML-Beleuchtung
 
@@ -38,7 +38,7 @@ Sie können Lichter auf [**visuelle Elemente**](https://msdn.microsoft.com/libra
 
 [**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) ist eine Basisklasse zum Erstellen benutzerdefinierter Lichter.
 
-Dieses Beispiel zeigt die Definition für ein benutzerdefiniertes XamlLight, das ein mehrfarbige Spotlight für gezielte UIElements und Pinsel gilt.
+Dieses Beispiel zeigt die Definition für ein benutzerdefiniertes XamlLight, die eine mehrfarbige Spotlight zum gezielte UIElements und Pinsel angewendet wird.
 
 ```csharp
 public sealed class OrangeSpotLight : XamlLight

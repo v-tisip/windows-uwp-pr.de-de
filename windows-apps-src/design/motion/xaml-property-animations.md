@@ -12,31 +12,31 @@ pm-contact: stmoy
 design-contact: jeffarn
 ms.localizationpriority: medium
 ms.openlocfilehash: a03ffc8d5ea78ee6cbdf78feaae7ba1cd1448f37
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4568900"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4622064"
 ---
 # <a name="animating-xaml-elements-with-composition-animations"></a>Animieren von XAML-Elemente mit kompositionsanimationen
 
-Dieser Artikel führt neue Eigenschaften, mit die Sie eine XAML-UIElement das einfache XAML-Eigenschaften festlegen und die Leistung von kompositionsanimationen animieren können.
+Dieser Artikel führt neue Eigenschaften, mit die Sie eine XAML-UIElement mit der Leistung von kompositionsanimationen und die einfache Einstellung XAML-Eigenschaften animieren können.
 
 Vor Windows 10, Version 1809, mussten Sie 2 Optionen zum Erstellen von Animationen in Ihren UWP-apps:
 
 - Verwenden Sie XAML-Konstrukte wie [storyboardanimationen](storyboarded-animations.md), oder die _* ThemeTransition_ und _* ThemeAnimation_ Klassen im Namespace [Windows.UI.Xaml.Media.Animation](/uwp/api/windows.ui.xaml.media.animation) .
-- Verwenden Sie kompositionsanimationen, wie bei der [Verwendung der visuellen Ebene mit XAML](../../composition/using-the-visual-layer-with-xaml.md)beschrieben.
+- Verwenden Sie kompositionsanimationen, wie sich [mit der visuellen Ebene mit XAML](../../composition/using-the-visual-layer-with-xaml.md)beschrieben.
 
-Mit der visuellen Ebene bietet eine bessere Leistung als mit der XAML-Code erstellt. Aber [ElementCompositionPreview](/uwp/api/Windows.UI.Xaml.Hosting.ElementCompositionPreview) zum Abrufen des Elements zugrunde liegenden Composition [Visual](/uwp/api/windows.ui.composition.visual) -Objekts verwenden und anschließend Animieren des visuellen Elements mit kompositionsanimationen, ist schwieriger zu verwenden.
+Mit der visuellen Ebene bietet eine bessere Leistung als mit der XAML-Code erstellt. Aber mit [ElementCompositionPreview](/uwp/api/Windows.UI.Xaml.Hosting.ElementCompositionPreview) des Elements zugrunde liegenden Composition [Visual](/uwp/api/windows.ui.composition.visual) -Objekt abzurufen, und klicken Sie dann Animieren des visuellen Elements mit kompositionsanimationen, ist schwieriger zu verwenden.
 
 Ab Windows 10, Version 1809, können Sie Eigenschaften für ein UIElement direkt mit kompositionsanimationen ohne die Anforderung zum Abrufen der zugrunde liegenden Kompositions Visual animieren.
 
 > [!NOTE]
-> Um diese Eigenschaften auf UIElement verwenden zu können, muss die Zielversion des UWP-Projekts 1809 oder höher sein. Weitere Informationen zum Konfigurieren von Ihrer Version des Projekts finden Sie unter [versionsadaptive apps](../../debug-test-perf/version-adaptive-apps.md).
+> Um diese Eigenschaften auf UIElement zu verwenden, muss Ihre UWP-Projekt-Zielversion 1809 oder höher sein. Weitere Informationen zum Konfigurieren von Ihrem Projektversion finden Sie unter [versionsadaptive apps](../../debug-test-perf/version-adaptive-apps.md).
 
 ## <a name="new-rendering-properties-replace-old-rendering-properties"></a>Neue Renderingeigenschaften ersetzen alte Renderingeigenschaften
 
-Diese Tabelle zeigt die Eigenschaften, mit denen Sie die Wiedergabe eines UI-Elements, ändern, die auch mit einem [CompositionAnimation](/uwp/api/windows.ui.composition.compositionanimation)animiert werden kann.
+Diese Tabelle zeigt die Eigenschaften, mit denen Sie die Darstellung eines UI-Elements, ändern, die auch mit einem [CompositionAnimation](/uwp/api/windows.ui.composition.compositionanimation)animiert werden kann.
 
 | Eigenschaft | Typ | Beschreibung |
 | -- | -- | -- |
@@ -48,7 +48,7 @@ Diese Tabelle zeigt die Eigenschaften, mit denen Sie die Wiedergabe eines UI-Ele
 | [RotationAxis](/uwp/api/windows.ui.xaml.uielement.rotationaxis) | Vector3 | Die Drehachse |
 | [CenterPoint](/uwp/api/windows.ui.xaml.uielement.centerpoint) | Vector3 | Der Mittelpunkt der Skalierung und Drehung |
 
-Der Wert der TransformMatrix-Eigenschaft wird in Kombination mit der Skalierung, Drehung und Übersetzung Eigenschaften in der folgenden Reihenfolge: TransformMatrix, Skalierung, Drehung, Translation.
+Der Wert der TransformMatrix-Eigenschaft ist in Kombination mit der Skalierung, Drehung und Translation Eigenschaften in der folgenden Reihenfolge: TransformMatrix, Skalierung, Drehung, Translation.
 
 Diese Eigenschaften wirken sich nicht auf das Element Layout, also ändern diese Eigenschaften nicht dazu, dass ein neues [Measure](/uwp/api/windows.ui.xaml.uielement.measure)/[Anordnungsübergabe](/uwp/api/windows.ui.xaml.uielement.arrange) .
 
@@ -71,16 +71,16 @@ button.Scale = new Vector3(2.0f,2.0f,1.0f);
 ### <a name="mutual-exclusivity-between-new-and-old-properties"></a>Gegenseitigen Ausschließlichkeit zwischen neuen und alten Eigenschaften
 
 > [!NOTE]
-> Die **Opacity** -Eigenschaft wird nicht die gegenseitige Exklusivität in diesem Abschnitt beschriebenen erzwungen. Sie verwenden die gleiche Opacity-Eigenschaft, ob Sie die Verwendung von XAML oder Komposition Animationen.
+> Die **Opacity** -Eigenschaft wird die gegenseitige Exklusivität in diesem Abschnitt beschriebenen nicht erzwungen. Sie verwenden die gleiche Opacity-Eigenschaft, ob Sie die Verwendung von XAML oder Komposition Animationen.
 
-Die Eigenschaften, die mit einem CompositionAnimation animiert werden können sind Ersatz für mehrere vorhandene UIElement-Eigenschaften:
+Die Eigenschaften, die mit einem CompositionAnimation animiert werden können sind Ersatz für mehrere vorhandenen UIElement-Eigenschaften:
 
 - [RenderTransform](/uwp/api/windows.ui.xaml.uielement.rendertransform)
 - [RenderTransformOrigin](/uwp/api/windows.ui.xaml.uielement.rendertransformorigin)
 - [Projection](/uwp/api/windows.ui.xaml.uielement.projection)
 - [Transform3D](/uwp/api/windows.ui.xaml.uielement.transform3d)
 
-Wenn Sie festgelegt (oder animieren) den neuen Eigenschaften des können nicht Sie die alten Eigenschaften verwenden. Im Gegensatz dazu festlegen (oder animieren) der alten Eigenschaften, kann nicht die neuen Eigenschaften verwenden.
+Wenn Sie festgelegt (oder animieren) der neuen Eigenschaften, können nicht Sie die alten Eigenschaften verwenden. Im Gegensatz dazu festlegen (oder animieren) der alten Eigenschaften, kann nicht die neuen Eigenschaften verwenden.
 
 Sie können nicht die neuen Eigenschaften auch verwenden, wenn Sie ElementCompositionPreview zum Abrufen und Verwalten des visuellen Elements selbst mithilfe der folgenden Methoden verwenden:
 
@@ -88,17 +88,17 @@ Sie können nicht die neuen Eigenschaften auch verwenden, wenn Sie ElementCompos
 - [ElementCompositionPreview.SetIsTranslationEnabled](/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.setistranslationenabled)
 
 > [!IMPORTANT]
-> Wenn Sie versuchen, die Verwendung von zwei Gruppen von Eigenschaften zu mischen bewirkt, dass die API-Aufruf fehl, und erstellen eine Fehlermeldung angezeigt.
+> Wenn Sie versuchen, die Verwendung von zwei Gruppen von Eigenschaften mischen bewirkt, dass die API-Aufruf fehl, und erstellen eine Fehlermeldung angezeigt.
 
-Es ist möglich, die von einer Reihe von Eigenschaften wechseln, indem löschen, obwohl der Einfachheit halber nicht empfohlen wird. Wenn die Eigenschaft von DependencyProperty unterstützt wird (z. B. UIElement.Projection gesichert durch UIElement.ProjectionProperty), rufen Sie dann ClearValue zum Zustand "nicht verwendete" wiederherstellen. Andernfalls (z. B. die Scale-Eigenschaft), festlegen die Eigenschaft auf den Standardwert.
+Es ist möglich, wechseln aus einer Reihe von Eigenschaften durch deaktivieren, obwohl der Einfachheit halber nicht empfohlen wird. Wenn die Eigenschaft durch einen DependencyProperty unterstützt wird (z. B. UIElement.Projection durch UIElement.ProjectionProperty gesichert ist), rufen Sie dann ClearValue zum Zustand "nicht verwendete" wiederherstellen. Andernfalls (z. B. die Scale-Eigenschaft), festlegen die Eigenschaft auf den Standardwert.
 
 ## <a name="animating-uielement-properties-with-compositionanimation"></a>Animieren von UIElement Eigenschaften mit CompositionAnimation
 
-Sie können die Renderingeigenschaften, die in der Tabelle mit einer CompositionAnimation aufgeführten animieren. Diese Eigenschaften können auch von einer [ExpressionAnimation](/uwp/api/windows.ui.composition.expressionanimation)verwiesen werden.
+Sie können in der Tabelle mit einer CompositionAnimation aufgeführten Renderingeigenschaften animieren. Diese Eigenschaften können auch von einer [ExpressionAnimation](/uwp/api/windows.ui.composition.expressionanimation)verwiesen werden.
 
-Verwenden Sie die Methoden [StartAnimation](/uwp/api/windows.ui.xaml.uielement.startanimation) und ["stopanimation"](/uwp/api/windows.ui.xaml.uielement.stopanimation) auf "UIElement" UIElement-Eigenschaften animieren.
+Verwenden Sie die Methoden [StartAnimation](/uwp/api/windows.ui.xaml.uielement.startanimation) und ["stopanimation"](/uwp/api/windows.ui.xaml.uielement.stopanimation) auf UIElement UIElement-Eigenschaften animieren.
 
-### <a name="example-animating-the-scale-property-with-a-vector3keyframeanimation"></a>Beispiel: Animieren der Scale-Eigenschaft mit einem Vector3KeyFrameAnimation
+### <a name="example-animating-the-scale-property-with-a-vector3keyframeanimation"></a>Beispiel: Animieren der Skalierung-Eigenschaft mit einem Vector3KeyFrameAnimation
 
 In diesem Beispiel wird veranschaulicht, wie die Skalierung einer Schaltfläche animieren.
 
@@ -113,7 +113,7 @@ animation.Target = "Scale";
 button.StartAnimation(animation);
 ```
 
-### <a name="example-animating-the-scale-property-with-an-expressionanimation"></a>Beispiel: Animieren der Scale-Eigenschaft mit einer ExpressionAnimation
+### <a name="example-animating-the-scale-property-with-an-expressionanimation"></a>Beispiel: Animieren der Skalierungseigenschaft mit einer ExpressionAnimation
 
 Eine Seite verfügt über zwei Schaltflächen. Die zweite Schaltfläche animiert, um doppelt so groß (über Skalierung) sein wie die erste Schaltfläche.
 
