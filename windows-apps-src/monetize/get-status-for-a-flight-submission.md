@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: C78176D6-47BB-4C63-92F8-426719A70F04
 description: Verwenden Sie diese Methode der Microsoft Store-Übermittlungs-API, um den Status einer Flight-Paket-Übermittlung abzurufen.
 title: Abrufen des Status einer Flight-Paketübermittlung
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Flight-Übermittlung, Status
 ms.localizationpriority: medium
-ms.openlocfilehash: 9dbc15b2418c79aa3dee922a61c70364835afe87
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.openlocfilehash: 7d661800371d90f15a5b7e355c2f06b7bd631f6b
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4566746"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623975"
 ---
 # <a name="get-the-status-of-a-package-flight-submission"></a><span data-ttu-id="9c9da-104">Abrufen des Status einer Flight-Paketübermittlung</span><span class="sxs-lookup"><span data-stu-id="9c9da-104">Get the status of a package flight submission</span></span>
 
