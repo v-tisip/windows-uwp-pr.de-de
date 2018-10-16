@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Bewertungen
 ms.localizationpriority: medium
-ms.openlocfilehash: d3d09aa395f9c0924951a44f5b0abaf9c99cb32e
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: 0671015ead96b57515b4b451a06ff3c9cf1a94cb
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4620842"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4694627"
 ---
 # <a name="get-app-ratings"></a>Abrufen von App-Bewertungen
 
@@ -106,20 +106,20 @@ Authorization: Bearer <your access token>
 
 Elemente im Array *Value* enthalten die folgenden Werte.
 
-| Wert           | Typ    | Beschreibung                                                                                                                                                                                                                          |
-|-----------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Wert           | Typ    | Beschreibung       |
+|-----------------|---------|-------------------|
 | date            | string  | Das erste Datum im Datumsbereich für die Bewertungsdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist dieser Wert das erste Datum in diesem Datumsbereich. |
-| applicationId   | string  | Die Store-ID der App, für die Sie Bewertungsdaten abrufen.                                                                                                                                                                 |
-| applicationName | string  | Der Anzeigename der App.                                                                                                                                                                                                         |
-| market          | string  | Die ISO 3166-Ländervorwahl für den Markt, in dem die Bewertung übermittelt wurde.                                                                                                                                                              |
-| osVersion       | string  | Die Version des Betriebssystems, auf dem die Bewertung übermittelt wurde. Eine Liste der unterstützten Zeichenfolgen finden Sie oben im Abschnitt [Filterfelder](#filter-fields).                                                                                               |
-| deviceType      | string  | Der Typ des Geräts, auf dem die Bewertung übermittelt wurde. Eine Liste der unterstützten Zeichenfolgen finden Sie oben im Abschnitt [Filterfelder](#filter-fields).                                                                                           |
-| isRevised       | Boolescher Wert | Der Wert **true** gibt an, dass die Bewertung überprüft wurde; andernfalls **false**.                                                                                                                                                       |
-| oneStar         | number  | Die Anzahl von Bewertungen mit einem Stern.                                                                                                                                                                                                      |
-| twoStars        | number  | Die Anzahl von Bewertungen mit zwei Sternen.                                                                                                                                                                                                      |
-| threeStars      | number  | Die Anzahl von Bewertungen mit drei Sternen.                                                                                                                                                                                                    |
-| fourStars       | number  | Die Anzahl von Bewertungen mit vier Sternen.                                                                                                                                                                                                     |
-| fiveStars       | number  | Die Anzahl von Bewertungen mit fünf Sternen.            |
+| applicationId   | string  | Die Store-ID der App, für die Sie Bewertungsdaten abrufen.         |
+| applicationName | string  | Der Anzeigename der App.    |
+| market          | string  | Die ISO 3166-Ländervorwahl für den Markt, in dem die Bewertung übermittelt wurde.        |
+| osVersion       | string  | Die Version des Betriebssystems, auf dem die Bewertung übermittelt wurde. Eine Liste der unterstützten Zeichenfolgen finden Sie oben im Abschnitt [Filterfelder](#filter-fields).            |
+| deviceType      | string  | Der Typ des Geräts, auf dem die Bewertung übermittelt wurde. Eine Liste der unterstützten Zeichenfolgen finden Sie oben im Abschnitt [Filterfelder](#filter-fields).            |
+| isRevised       | Boolescher Wert | Der Wert **true** gibt an, dass die Bewertung überprüft wurde; andernfalls **false**.   |
+| oneStar         | number  | Die Anzahl von Bewertungen mit einem Stern.        |
+| twoStars        | number  | Die Anzahl von Bewertungen mit zwei Sternen.    |
+| threeStars      | number  | Die Anzahl von Bewertungen mit drei Sternen.   |
+| fourStars       | number  | Die Anzahl von Bewertungen mit vier Sternen.    |
+| fiveStars       | number  | Die Anzahl von Bewertungen mit fünf Sternen.    |
 
 
 ### <a name="response-example"></a>Antwortbeispiel

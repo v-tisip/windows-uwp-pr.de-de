@@ -17,12 +17,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 359c6527c341a08eca23aa6dd28acd27ddb19205
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: 7df91069615b77ab54745690accc8f9353ff0163
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4611365"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4679979"
 ---
 # <a name="implement-navigation-between-two-pages"></a>Implementieren der Navigation zwischen zwei Seiten
 
@@ -320,7 +320,7 @@ Wenn eine Seite in das Frame geladen wird, wird diese Seite als [**PageStackEntr
 
 Unsere App navigiert zwischen zwei Seiten, sie bietet jedoch noch keine interessanten Funktionen. Bei vielen Apps mit mehreren Seiten müssen die Seiten Informationen freigeben. Übergeben wir also einige Informationen der ersten Seite an die zweite Seite.
 
-Ersetzen Sie in „Page1.xaml“ das zuvor hinzugefügte **HyperlinkButton**-Element mit der folgenden [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635)-Klasse.
+Ersetzen Sie in "Page1.xaml" zuvor **HyperlinkButton** Sie hinzugefügt haben, mit dem folgenden [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635).
 
 Hier werden eine [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)-Bezeichnung und ein [**TextBox**](https://msdn.microsoft.com/library/windows/apps/br209683)-Element (`name`) zum Eingeben einer Textzeichenfolge hinzugefügt.
 

@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Steuerelemente, Eingabe
 ms.localizationpriority: medium
-ms.openlocfilehash: 84230759f03cb60b5b776d3407ac0f96e090d495
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 563ca17864f95cfa98313608f5a5c32e64f44a16
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675297"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4680198"
 ---
 # <a name="add-controls"></a>Hinzufügen von Steuerelementen
 
@@ -99,7 +99,7 @@ Status | Beschreibung
 Das Spiel wechselt in den **WaitForInput**-Zustand, wenn das Spiel angehalten wurde. Dies passiert, wenn der Spieler den Zeiger aus dem Hauptfenster des Spiels bewegt oder die Pause-Taste drückt (P-TASTE oder **Start**-Taste auf dem Gamepad), drückt. Die **MoveLookController-Instanz** registriert die Tastenbetätigung und informiert die Spielschleife, wenn sie die [**IsPauseRequested**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L107-L127)-Methode aufruft. Wenn **IsPauseRequested** jetzt **true** zurückgibt, ruft die Spielschleife **WaitForPress** für die **MoveLookController**-Instanz auf, um den Controller in den Zustand **WaitForInput** zu versetzen. 
 
 
-Im **WaitForInput**-Zustand beendet das Spiel die Verarbeitung von fast allen Eingabeereignissen, bis der Controller wieder in den **Active**-Zustand übergeht. Eine Ausnahme ist die Pause-Taste, da durch Drücken der Taste das Spiel zum aktiven Zustand zurückkehret. Außer der Pause-Taste muss der Spieler keine andere Taste drücken, um wieder zum **aktiven** Zustand des Spieles für die Auswahl eines Menüelement zu gelangen. 
+Im **WaitForInput**-Zustand beendet das Spiel die Verarbeitung von fast allen Eingabeereignissen, bis der Controller wieder in den **Active**-Zustand übergeht. Eine Ausnahme ist die Pause-Taste, da durch Drücken der Taste das Spiel zum aktiven Zustand zurückkehret. Außer der Pause-Taste muss in der Reihenfolge für das Spiel zum **aktiven** Zustand zurückkehret der Spieler ein Menüelement auszuwählen. 
 
 
 
@@ -579,7 +579,7 @@ Ein-/Aus-Menütaste | Anhalten oder Fortsetzen des Spiels
 
 
 
-In der [**InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L68-L103)-Methode fügen wir zwei neue Ereignisse hinzu, um festzustellen, ob ein Gamepad [hinzugefügt](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1100-L1105) oder [entfernt](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1109-L1114) wurde. Diese Ereignisse aktualisieren die **m_gamepadsChanged**-Eigenschaft. Dies wird in der **UpdatePollingDevices**-Methode verwendet, um zu überprüfen, ob die Liste der bekannten Gamepads geändert wurde. 
+In der [**InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L68-L103)-Methode fügen wir zwei neue Ereignisse hinzu, um festzustellen, ob ein Gamepad [hinzugefügt](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1100-L1105) oder [entfernt](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1109-L1114) wurde. Diese Ereignisse aktualisieren die **m_gamepadsChanged**-Eigenschaft. Dies wird in der **UpdatePollingDevices** -Methode verwendet, um zu überprüfen, ob die Liste der bekannten Gamepads geändert wurde. 
 
 ```cpp
     // Detect gamepad connection and disconnection events.

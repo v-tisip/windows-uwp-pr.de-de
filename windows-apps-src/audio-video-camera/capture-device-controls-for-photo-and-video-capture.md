@@ -9,15 +9,16 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: d0d7a429cf702455d969e1ac1c62def6181e8dd0
-ms.sourcegitcommit: 64cfb79fd27b09d49df99e8c9c46792c884593a7
+ms.localizationpriority: medium
+ms.openlocfilehash: 4bed72b17ea59494a7eee6850d1ff4be2172c694
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "235737"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4681761"
 ---
 # <a name="manual-camera-controls-for-photo-and-video-capture"></a>Manuelle Kamerasteuerelemente für Foto- und Videoaufnahmen
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 
 In diesem Artikel wird veranschaulicht, wie Sie manuelle Gerätesteuerelemente verwenden, um erweiterte Foto- und Videoaufnahmeszenarien (einschließlich optischer Bildstabilisierung und fließendem Zoom) zu ermöglichen.
@@ -102,7 +103,7 @@ Legen Sie im Handler des Kontrollkästchens für die Reduzierung des Rote-Augen-
 
 Legen Sie schließlich im Handler des Kontrollkästchens für die Videotaschenlampe die [**Enabled**](https://msdn.microsoft.com/library/windows/apps/dn279078)-Eigenschaft auf den gewünschten Wert fest.
 
-[!code-cs[Taschenlampe](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTorch)]
+[!code-cs[Torch](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTorch)]
 
 > [!NOTE] 
 >  Auf einigen Geräten sendet die Taschenlampe auch dann kein Licht aus, wenn [**TorchControl.Enabled**](https://msdn.microsoft.com/library/windows/apps/dn279078) auf „true“ festgelegt ist. Es sei denn, für das Gerät wird ein Vorschaudatenstrom ausgeführt, und die Videoaufnahme ist aktiv. Folgende Reihenfolge wird empfohlen: Schalten Sie die Videovorschau ein, und aktivieren Sie dann die Taschenlampe, indem Sie **Enabled** auf „true“ festlegen. Initiieren Sie anschließend die Videoaufnahme. Auf einigen Geräten wird das Licht der Taschenlampe aktiviert, nachdem die Vorschau gestartet wurde. Auf anderen Geräten kann es sein, dass die Taschenlampe erst aufleuchtet, wenn die Videoaufnahme gestartet wird.
@@ -205,7 +206,7 @@ Der Fokuswert muss innerhalb des vom Gerät unterstützten Bereichs liegen und e
 
 Legen Sie den Wert des Schieberegler-Steuerelements auf den aktuellen Wert von **FocusControl** fest, nachdem Sie die Registrierung des [**ValueChanged**](https://msdn.microsoft.com/library/windows/apps/br209737)-Ereignishandlers aufgehoben haben. Das Ereignis wird dann nicht ausgelöst, wenn der Wert festgelegt wird.
 
-[!code-cs[Fokus](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFocus)]
+[!code-cs[Focus](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetFocus)]
 
 Rufen Sie im **Checked**-Ereignishandler für das Optionsfeld für den manuellen Fokus das **FocusControl**-Objekt ab, und rufen Sie [**LockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608075) auf, falls Ihre App den Fokus durch einen Aufruf von [**UnlockAsync**](https://msdn.microsoft.com/library/windows/apps/dn608081) entsperrt hat.
 
@@ -268,7 +269,7 @@ Legen Sie [**OpticalImageStabilizationControl.Mode**](https://msdn.microsoft.com
 ## <a name="powerline-frequency"></a>Leitungsfrequenz
 Einige Kamerageräte unterstützen die Anti-Flacker-Verarbeitung. Hierfür muss die Wechselstromfrequenz der Stromleitungen in der derzeitigen Umgebung bekannt sein. Einige Geräte unterstützen die automatische Ermittlung der Leitungsfrequenz, und bei anderen Geräten muss die Frequenz manuell festgelegt werden. Im folgenden Codebeispiel wird veranschaulicht, wie Sie die Unterstützung der Leitungsfrequenz für das Gerät ermitteln und, falls erforderlich, die Frequenz manuell festlegen. 
 
-Rufen Sie zuerst die **VideoDeviceController**-Methode auf [**TryGetPowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/br206898), indem Sie einen Ausgabeparameter vom Typ [**PowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.PowerlineFrequency) übergeben. Wenn dieser Aufruf nicht erfolgreich ist, wird die Steuerung der Leitungsfrequenz auf dem aktuellen Gerät nicht unterstützt. Wenn die Funktion unterstützt wird, können Sie ermitteln, ob der automatische Modus auf dem Gerät verfügbar ist, indem Sie versuchen, den automatischen Modus festzulegen. Rufen Sie hierzu [**TrySetPowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/br206899) auf, und übergeben Sie den Wert **Auto**. Wenn der Aufruf erfolgreich ist, bedeutet dies, dass die automatische Leitungsfrequenz unterstützt wird. Wenn die Steuerung der Leitungsfrequenz auf dem Gerät unterstützt wird, die automatische Frequenzerkennung aber nicht, können Sie die Frequenz trotzdem manuell mit **TrySetPowerlineFrequency** festlegen. In diesem Beispiel ist **MyCustomFrequencyLookup** eine benutzerdefinierte Methode, die Sie implementieren, um für die aktuelle Position des Geräts die richtige Frequenz zu ermitteln. 
+Rufen Sie zuerst die **VideoDeviceController**-Methode auf [**TryGetPowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/br206898), indem Sie einen Ausgabeparameter vom Typ [**PowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.PowerlineFrequency) übergeben. Wenn dieser Aufruf nicht erfolgreich ist, wird die Steuerung der Leitungsfrequenz auf dem aktuellen Gerät nicht unterstützt. Wenn die Funktion unterstützt wird, können Sie ermitteln, ob der automatische Modus auf dem Gerät verfügbar ist, indem Sie versuchen, den automatischen Modus festzulegen. Zu diesem Zweck [**TrySetPowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/br206899) aufrufen und den Wert **Auto**übergeben. Wenn der Aufruf erfolgreich ist, bedeutet dies, dass die automatische leitungsfrequenz unterstützt wird. Wenn die Steuerung der Leitungsfrequenz auf dem Gerät unterstützt wird, die automatische Frequenzerkennung aber nicht, können Sie die Frequenz trotzdem manuell mit **TrySetPowerlineFrequency** festlegen. In diesem Beispiel ist **MyCustomFrequencyLookup** eine benutzerdefinierte Methode, die Sie implementieren, um für die aktuelle Position des Geräts die richtige Frequenz zu ermitteln. 
 
 [!code-cs[PowerlineFrequency](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetPowerlineFrequency)]
 
@@ -338,7 +339,7 @@ Auf einem Gerät mit Mehrfingereingabe wird der Zoomfaktor üblicherweise durch 
 
 Aktualisieren Sie den Zoomfaktor im Handler für das **ManipulationDelta**-Ereignis basierend auf der Änderung der Zusammendrückbewegung. Der [**ManipulationDelta.Scale**](https://msdn.microsoft.com/library/windows/apps/br242016)-Wert stellt die Änderung der Skalierung der Zusammendrückbewegung wie folgt dar: Eine geringfügige Vergrößerung der Zusammendrückbewegung wird durch eine Zahl dargestellt, die etwas größer als1 ist. Eine geringfügige Verkleinerung wird durch eine Zahl dargestellt, die etwas kleiner als1 ist. In diesem Beispiel wird der aktuelle Wert des Zoom-Steuerelements mit dem Skalierungsdelta multipliziert.
 
-Bevor Sie den Zoomfaktor festlegen, müssen Sie sich vergewissern, dass der Wert nicht kleiner als der vom Gerät unterstützte Mindestwert (angegeben durch die [**ZoomControl.Min**](https://msdn.microsoft.com/library/windows/apps/dn633817)-Eigenschaft) ist. Vergewissern Sie sich außerdem, dass der Wert maximal dem [**ZoomControl.Max**](https://msdn.microsoft.com/library/windows/apps/dn608150)-Wert entspricht. Und schließlich müssen Sie sich vergewissern, dass der Zoomfaktor ein Vielfaches der vom Gerät unterstützten Zoomschrittgröße (angegeben durch die [**Step**](https://msdn.microsoft.com/library/windows/apps/dn633818)-Eigenschaft) ist. Falls der Zoomfaktor diese Anforderungen nicht erfüllt, wird eine Ausnahme ausgelöst, wenn Sie versuchen, den Zoomfaktor für das Aufnahmegerät festzulegen.
+Bevor Sie den Zoomfaktor festlegen, müssen Sie sich vergewissern, dass der Wert nicht kleiner als der vom Gerät unterstützte Mindestwert (angegeben durch die [**ZoomControl.Min**](https://msdn.microsoft.com/library/windows/apps/dn633817)-Eigenschaft) ist. Vergewissern Sie sich außerdem, dass der Wert maximal dem [**ZoomControl.Max**](https://msdn.microsoft.com/library/windows/apps/dn608150)-Wert entspricht. Schließlich müssen Sie sicherstellen, dass der Zoomfaktor ein Vielfaches der vom Gerät unterstützten, angegeben durch die Eigenschaft [**Schritt**](https://msdn.microsoft.com/library/windows/apps/dn633818) Zoom Schrittgröße ist. Falls der Zoomfaktor diese Anforderungen nicht erfüllt, wird eine Ausnahme ausgelöst, wenn Sie versuchen, den Zoomfaktor für das Aufnahmegerät festzulegen.
 
 Legen Sie den Zoomfaktor auf dem Aufnahmegerät fest, indem Sie ein neues [**ZoomSettings**](https://msdn.microsoft.com/library/windows/apps/dn926722)-Objekt erstellen. Legen Sie die [**Mode**](https://msdn.microsoft.com/library/windows/apps/dn926723)-Eigenschaft auf [**ZoomTransitionMode.Smooth**](https://msdn.microsoft.com/library/windows/apps/dn926726) fest, und legen Sie dann die [**Value**](https://msdn.microsoft.com/library/windows/apps/dn926724)-Eigenschaft auf den gewünschten Zoomfaktor fest. Rufen Sie schließlich [**ZoomControl.Configure**](https://msdn.microsoft.com/library/windows/apps/dn926719) auf, um den neuen Zoomwert auf dem Gerät festzulegen. Es erfolgt ein sanfter Übergang zum neuen Zoomwert.
 
