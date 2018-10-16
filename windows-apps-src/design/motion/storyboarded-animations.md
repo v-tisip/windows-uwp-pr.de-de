@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c03d99781114c4fefff04cc25930748ec16182f
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4615269"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4681794"
 ---
 # <a name="storyboarded-animations"></a><span data-ttu-id="09c7b-104">Storyboardanimationen</span><span class="sxs-lookup"><span data-stu-id="09c7b-104">Storyboarded animations</span></span>
 

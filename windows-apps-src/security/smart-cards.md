@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: dda2b580a82c72ad2e31c771a9c76f8d770049ec
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4610288"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4680997"
 ---
 # <a name="smart-cards"></a><span data-ttu-id="4bf96-104">Smartcards</span><span class="sxs-lookup"><span data-stu-id="4bf96-104">Smart cards</span></span>
 
