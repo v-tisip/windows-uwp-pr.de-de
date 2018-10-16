@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 8bd1dffe4da7b3725ef7716fe9cf28bdf8eaf34f
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4612850"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4687487"
 ---
 # <a name="working-with-symbologies"></a>Arbeiten mit Symbologien
 Eine [Strichcodesymbologie](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies) ist eine Zuordnung von Daten zu einem bestimmten Strichcodeformat. Einige allgemeinen Symbologien enthalten UPC, Code 128, QR-Code und So weiter.  Die universelle Windows-Plattform-Strichcodescanner-APIs ermöglichen einer Anwendung zu steuern, wie der Scanner die Symbologien verarbeitet, ohne manuell den Scanner konfigurieren. 

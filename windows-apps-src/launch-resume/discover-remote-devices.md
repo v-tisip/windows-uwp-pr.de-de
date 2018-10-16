@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, verbundenen Geräten, remote-Systemen, "ROME" Projekt "ROME"
 ms.localizationpriority: medium
 ms.openlocfilehash: 02d04074ece0033da8c3454a95bc35af201903f3
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4619259"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4685239"
 ---
 # <a name="discover-remote-devices"></a>Ermitteln von Remotegeräten
 Ihre App kann die WLAN-, Bluetooth- und Cloud-Verbindung nutzen, um Windows-Geräte zu ermitteln, die mit demselben Microsoft-Konto wie das ermittelnde Gerät angemeldet sind. Auf den Remotegeräten muss keine spezielle Software installiert sein, damit sie erkennbar sind.

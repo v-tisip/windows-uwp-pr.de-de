@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projiziert, projektion, implementierung, laufzeitklasse, aktivierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b1cd05f974bf9193e84919a5e679ef996746d7e
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: f0e99d23e54bd096a9dd7fa8d878929086711c81
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4617832"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4684664"
 ---
 # <a name="consume-apis-with-cwinrt"></a>Verwenden von APIs mit C++/WinRT
 
@@ -46,7 +46,7 @@ Der enthaltene Header `winrt/Windows.Foundation.h` ist Teil des SDKs und befinde
 
 Im obigen Codebeispiel wird nach der Initialisierung von C++/WinRT ein Wert des projizierten Typs **winrt::Windows::Foundation::Uri** mit Stapelzuordnung über einen seiner öffentlich dokumentierten Konstruktoren (in diesem Beispiel [**Uri(String)**](/uwp/api/windows.foundation.uri#Windows_Foundation_Uri__ctor_System_String_)) zugewiesen. Für diesen häufigsten Anwendungsfall müssen Sie in der Regel nichts weiter tun. Wenn Sie einen projizierten C++/WinRT-Typwert haben, können Sie diesen behandeln, als wäre er eine Instanz des tatsächlichen Windows-Runtime-Typs, da er über die gleichen Mitglieder verfügt.
 
-Tatsächlich ist dieser projizierte Wert ein Proxy; im Grunde ist er nur ein intelligenter Zeiger auf ein zugrunde liegendes Objekt. Die Konstruktoren des projizierten Werts rufen [**RoActivateInstance**](https://msdn.microsoft.com/library/br224646) auf, um eine Instanz der zugrunde liegenden Windows-Runtime-Klasse (in diesem Fall **Windows.Foundation.Uri**) zu erstellen und die Standardschnittstelle dieses Objekts im neuen projizierten Wert zu speichern. Wie unten dargestellt werden Ihre Aufrufe der Mitglieder des projizierten Werts tatsächlich über den intelligenten Zeiger an das zugrunde liegende Objekt delegiert; hier erfolgen die Zustandsänderungen.
+Tatsächlich ist dieser projizierte Wert ein Proxy; im Grunde ist er nur ein intelligenter Zeiger auf ein zugrunde liegendes Objekt. Die Konstruktoren des projizierten Werts rufen [**RoActivateInstance**](https://msdn.microsoft.com/library/br224646) auf, um eine Instanz der zugrunde liegenden Windows-Runtime-Klasse (in diesem Fall **Windows.Foundation.Uri**) zu erstellen und die Standardschnittstelle dieses Objekts im neuen projizierten Wert zu speichern. Wie unten dargestellt, delegieren die Aufrufe von Mitglieder des projizierten Werts tatsächlich über den intelligenten Zeiger an das zugrunde liegende Objekt; Dies ist, in denen Zustandsänderungen auftreten.
 
 ![Der projizierte Windows::Foundation::Uri-Typ](images/uri.png)
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Bezahlung, App-Verkäufe, App-Erlöse, Auszahlung, Store-Gebühr, Auszahlungssperre, Prozentsatz
 ms.localizationpriority: medium
 ms.openlocfilehash: 0c128bedd1c889f4c2dcf0565c7c10575eb75013
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4621707"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4683953"
 ---
 # <a name="getting-paid"></a>Bezahlung
 Im Folgenden finden Sie wichtige Informationen, mit deren Hilfe Sie sicherstellen können, dass Sie für Ihre Apps, Add-Ons und Ihren Advertising-Verdienst bezahlt werden.

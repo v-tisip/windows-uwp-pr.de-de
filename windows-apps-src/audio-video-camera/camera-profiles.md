@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f842b10ce056d02d1c30c2fe285a87d5fe20dca8
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: ead9efdd0a1d37a051f24e94b40a7c61212f6b19
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832254"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4690109"
 ---
 # <a name="discover-and-select-camera-capabilities-with-camera-profiles"></a>Entdecken und Auswählen von Kamerafunktionen mit Kameraprofilen
 
@@ -77,7 +77,7 @@ Die folgende Beispielmethode zeigt, wie Sie **MediaFrameSourceGroup**-Objekte ve
 > [!NOTE] 
 > Die in diesem Abschnittbeschriebenen APIs sind ab Windows10, Version 1803 veraltet. Lesen Sie den vorherigen Abschnitt **Verwenden von Framequellgruppen von Medien, um Profile abzurufen**.
 
-Das Auswählen eines Profils, das HDR unterstützt, beginnt wie die anderen Szenarien. Erstellen Sie ein **MediaCaptureInitializationSettings**-Objekt und eine Zeichenfolge für die Aufnahmegerät-ID. Fügen Sie eine boolesche Variable hinzu, die aufzeichnet, ob HDR-Video unterstützt wird.
+Das Auswählen eines Profils, das HDR unterstützt, beginnt wie die anderen Szenarien. Erstellen Sie eine **MediaCaptureInitializationSettings** und eine Zeichenfolge, um die Aufnahmegeräte-ID. Fügen Sie eine boolesche Variable hinzu, die aufzeichnet, ob HDR-Video unterstützt wird.
 
 [!code-cs[GetHdrProfileSetup](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetHdrProfileSetup)]
 

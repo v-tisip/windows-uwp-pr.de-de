@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-On-Übermittlung, Status
 ms.localizationpriority: medium
 ms.openlocfilehash: 07c1dd89ce31ad70e5ee3b79c09caf36a89ad926
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4621877"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4687928"
 ---
 # <a name="get-the-status-of-an-add-on-submission"></a>Abrufen des Status einer Add-On-Übermittlung
 

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, xBind
 ms.localizationpriority: medium
 ms.openlocfilehash: b160b1e711f6e56b14f0d6e0e83e9f9150be5e90
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4575309"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4691957"
 ---
 # <a name="functions-in-xbind"></a>Funktionen in X: Bind
 
@@ -108,7 +108,7 @@ Für die zu bindende Funktion müssen folgende Voraussetzungen gelten:
 - Die Argumenttypen müssen den übergebenen Daten entsprechen. Es werden keine einschränkenden Konvertierungen durchgeführt
 - Der Rückgabetyp der Funktion muss mit dem Typ der Eigenschaft übereinstimmen, für die die Bindung verwendet wird
 
-Beginnend mit dem nächsten wichtigen Update für Windows 10, wird das Bindungsmodul Benachrichtigungen über eigenschaftsänderungen mit den Namen der Funktion ausgelöst reagieren und erneut auswerten Bindungen nach Bedarf. Beispiel: 
+Beginnend mit dem nächsten wichtigen Update für Windows 10, wird das Bindungsmodul Benachrichtigungen über eigenschaftsänderungen mit den Namen der Funktion ausgelöst reagieren und Bindungen nach Bedarf neu ausgewertet. Beispiel: 
 
 ```XAML
 <DataTemplate x:DataType="local:Person">
@@ -177,7 +177,7 @@ Mehrere Argumente können durch Komma (,) voneinander getrennt angegeben werden
 
 ### <a name="two-way-function-bindings"></a>Bidirektionale Funktionsbindung
 
-In einem Szenario mit bidirektionaler Bindung muss eine zweite Funktion für die umgekehrte Bindungsrichtung angegeben werden. Dies erfolgt mithilfe der **BindBack** Binding-Eigenschaft. In dem Beispiel unten haben die Funktion zu ergreifende Maßnahme ein Argument, das dem Wert entspricht, die das Modell übernommen werden muss.
+In einem Szenario mit bidirektionaler Bindung muss eine zweite Funktion für die umgekehrte Bindungsrichtung angegeben werden. Dies erfolgt mithilfe der **BindBack** Binding-Eigenschaft. In dem Beispiel unten haben die Funktion zu ergreifende Maßnahme ein Argument der der Wert ist, die an das Modell übernommen werden muss.
 ```xaml
 <TextBlock Text="{x:Bind a.MyFunc(b), BindBack=a.MyFunc2, Mode=TwoWay}" />
 ```

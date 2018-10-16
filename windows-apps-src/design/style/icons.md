@@ -14,12 +14,12 @@ keywords: Windows10, UWP
 design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 077967c37f76c8f1d0942f365344de65db13b041
-ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
-ms.translationtype: HT
+ms.openlocfilehash: 57856872fc664670756c310410223acaf9708bc5
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "1983573"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4688579"
 ---
 # <a name="icons-for-uwp-apps"></a>Symbole für UWP-Apps
 
@@ -29,7 +29,9 @@ Symbole bieten eine visuelle Kurzform für eine Aktion, ein Konzept oder ein Pro
 
 Symbole können in Apps angezeigt werden – und außerhalb von Apps: 
 
-:::row::: :::column::: **Symbole in der App**
+:::row:::
+    :::column:::
+        **Icons inside the app**
 
         ![icons inside the app](images/icons/inside-icons.png)
         Inside your app, you use icons to represent an action, such as copying text or navigating to the settings page.
@@ -48,7 +50,10 @@ In diesem Artikel werden Symbole in Ihrer App beschrieben. Informationen zu Symb
 
 Symbole können Platz sparen, aber wann ist eine Verwendung sinnvoll? 
 
-:::row::: :::column::: ![Sinnvoll](images/do.svg) ![Standardbild für Symbole](images/icons/icons-standard.svg)<br>
+:::row:::
+    :::column:::
+        ![do](images/do.svg)
+        ![icons standard image](images/icons/icons-standard.svg)<br>
 
         Use an icon for actions, like cut, copy, paste, and save, or for navigation items in a navigation menu.
     :::column-end:::
@@ -60,7 +65,10 @@ Symbole können Platz sparen, aber wann ist eine Verwendung sinnvoll?
     :::column-end:::
 :::row-end:::
 
-:::row::: :::column::: ![Sinnvoll](images/do.svg) ![Einkaufswagensymbol](images/icons/icon-shopping-cart.svg)<br>
+:::row:::
+    :::column:::
+        ![do](images/do.svg)
+        ![icon shopping cart](images/icons/icon-shopping-cart.svg)<br>
 
         Use an icon if it's easy for the user to understand what the icon means and it's simple enough to be clear at small sizes.
     :::column-end:::
@@ -79,24 +87,59 @@ Symbole können Platz sparen, aber wann ist eine Verwendung sinnvoll?
 Es gibt viele Möglichkeiten, ein Symbol zu erstellen. Sie können eine Symbolschriftart wie Segoe MDL2 Assets verwenden. Sie können ein eigenes vektorbasiertes Bild erstellen. Sie können sogar ein Bitmap-Bild verwenden, auch wenn das nicht empfohlen wird. Hier ist eine Übersicht über die verschiedenen Möglichkeiten zum Hinzufügen eines Symbols zu Ihrer App. 
 
 ### <a name="use-a-predefined-icon"></a>Verwenden eines vordefinierten Symbols
-:::row::: :::column::: Microsoft bietet mehr als 1.000 Symbole in Form der Segoe MDL2 Assets-Schrift. Möglicherweise ist es nicht intuitiv, ein Symbol aus einer Schriftart zu nehmen, aber unsere Schriftanzeigetechnologie bedeutet, dass diese Symbole klar und scharf auf jedem Bildschirm, bei jeder Auflösung und in jeder Größe angezeigt werden. :::column-end::: :::column::: ![Vordefiniertes Symbolbild](images/icons/predefined-icon.png) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        Microsoft provides over 1000 icons in the form of the Segoe MDL2 Assets font. It might not be intuitive to get an icon from a font, but our font display technology means these icons will look crisp and sharp on any display, at any resolution, and at any size. 
+    :::column-end:::
+    :::column:::
+        ![pre-defined icon image](images/icons/predefined-icon.png)
+    :::column-end:::
+:::row-end:::
 
 ### <a name="use-a-font"></a>Verwenden einer Schriftart
-:::row::: :::column::: Sie müssen nicht die Segoe MDL2 Assets-Schrift verwenden, sondern können jede Schriftart nutzen, die der Benutzer auf seinem System installiert hat, z. B. Wingdings oder Webdings.
-:::column-end::: :::column::: ![Wingdings-Bild](images/icons/wingdings.png) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        You don't have to use the Segoe MDL2 Assets font--you can use any font the user has installed on their system, such as Wingdings or Webdings.
+    :::column-end:::
+    :::column:::
+        ![wingdings image](images/icons/wingdings.png)
+    :::column-end:::
+:::row-end:::
 
 ### <a name="use-a-scalable-vector-graphics-svg-file"></a>Verwenden einer SVG-Datei (Scalable Vector Graphics)
-:::row::: :::column::: SVG-Ressourcen sind ideal für Symbole geeignet, weil sie in jeder Größe oder Auflösung immer gestochen scharf aussehen. Die meisten Zeichenanwendungen können in das SVG-Format exportieren. :::column-end::: :::column::: ![SVG-Bild](images/icons/icon-scale.gif) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        SVG resources are ideal for icons, because they always look sharp at any size or resolution. Most drawing applications can export to SVG. 
+    :::column-end:::
+    :::column:::
+        ![SVG image](images/icons/icon-scale.gif)
+    :::column-end:::
+:::row-end:::
 
 ### <a name="use-geometry-objects"></a>Verwenden geometrischer Objekte
-::: Zeile:::::: Spalte::: Wie SVG-Dateien sind Geometrien eine vektorbasierte Ressource und werden deshalb immer gestochen scharf dargestellt. Das Erstellen einer Geometrie ist jedoch kompliziert, da Sie jeden Punkt und jede Kurve einzeln angeben müssen. Es ist wirklich nur eine gute Option, wenn Sie das Symbol ändern müssen, während Ihre App ausgeführt wird (z.B. um es zu animieren). Anweisungen finden Sie unter [Befehle zum Verschieben und Zeichnen von Geometrien](../../xaml-platform/move-draw-commands-syntax.md). :::column-end::: :::column::: ![Bild eines Geometrieobjekts](images/icons/geometry-objects.png) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        Like SVG files, geometries are a vector-based resource, so they always look sharp. However, creating a geometry is complicated because you have to individually specify each point and curve. It's really only a good choice if you need to modify the icon while your app is running (to animate it, for example). For instructions, see [Move and draw commands for geometries](../../xaml-platform/move-draw-commands-syntax.md). 
+    :::column-end:::
+    :::column:::
+        ![Geometry objects image](images/icons/geometry-objects.png)
+    :::column-end:::
+:::row-end:::
 
 ### <a name="you-can-also-use-a-bitmap-image-such-as-png-gif-or-jpeg-although-we-dont-recommend-it"></a>Sie können auf ein Bitmap-Bild wie PNG, GIF oder JPEG verwenden, auch wenn das nicht empfohlen wird.
-:::row::: :::column::: Bitmap-Bilder werden in einer bestimmten Größe erstellt, sodass sie je nach gewünschter Symbolgröße und Auflösung des Bildschirms vergrößert oder verkleinert werden müssen. Wenn das Bild verkleinert wird, kann es verschwommen angezeigt werden. Wenn es vergrößert wird, kann es eckig und verpixelt aussehen. Wenn Sie ein Bitmap-Bild verwenden müssen, empfehlen wir die Verwendung einer PNG- oder GIF-Datei anstelle des JPEG-Formats. :::column-end::: :::column::: ![Nicht sinnvoll](images/dont.svg) ![Bitmap-Bild](images/icons/bitmap-image.png) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        Bitmap images are created at a specific size, so they have to be scaled up or down depending on how large you want the icon to be and the resolution of the screen. When the image is scaled down (shrunk), it can appear blurry; when it's scaled up, it can appear blocky and pixelated. If you have to use a bitmap image we recommend using a PNG or GIF over a JPEG. 
+    :::column-end:::
+    :::column:::
+        ![don't](images/dont.svg)
+        ![Bitmap image](images/icons/bitmap-image.png)
+    :::column-end:::
+:::row-end:::
 
 ## <a name="make-the-icon-do-something"></a>Festlegen einer Aktion für das Symbol
 
-Sobald Sie ein Symbol haben, besteht der nächste Schritt darin, es Aktion ausführen zu lassen, indem Sie ihm einen Befehl oder eine Navigationsaktion zuordnen. Am einfachsten können Sie dies erreichen, indem Sie das Symbol zu einer Schaltfläche oder Befehlsleiste hinzufügen. 
+Sobald Sie ein Symbol haben, besteht der nächste Schritt darin, es Aktion ausführen zu lassen, indem Sie ihm einen Befehl oder eine Navigationsaktion zuordnen. Die beste Möglichkeit hierzu ist das Symbol zu einer Schaltfläche oder Befehlsleiste hinzufügen. 
 
 ![Befehlsleistenbild](images/icons/app-bar-desktop.svg)
 
@@ -106,15 +149,32 @@ Sie können ein Symbol in eine Standardschaltfläche einfügen. Da Sie Schaltfl�
 
 Es gibt verschiedene Möglichkeiten, ein Symbol zu einer Schaltfläche hinzuzufügen:
 
-:::row::: :::column span="2"::: <b>Schritt 1</b><br>
-        Legen Sie die Schriftfamilie der Schaltfläche auf `Segoe MDL2 Assets` und seine Inhaltseigenschaft auf den Unicode-Wert des gewünschten Symbols fest: ::column-end::: :::column::: ![Erstellen einer Symbolschaltfläche – Schritt1](images/icons/create-icon-step-1.svg) :::column-end::: :::row-end:::
+:::row:::
+    :::column span="2":::
+        <b>Step 1</b><br>
+        Set the button's font family to `Segoe MDL2 Assets` and its content property to the unicode value of the glyph you want to use:
+    :::column-end:::
+    :::column:::
+        ![Create an icon button step 1](images/icons/create-icon-step-1.svg)
+    :::column-end:::
+:::row-end:::
 
 ```xaml 
 <Button FontFamily="Segoe MDL2 Assets" Content="&#xE102;" />
 ```
 
-:::row::: :::column span="2"::: <b>Schritt 2</b><br>
-        Sie können eins der Symbolelementobjekte verwenden: [BitmapIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.bitmapicon), [FontIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon), [PathIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pathicon) oder [SymbolIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbolicon). Damit werden Ihnen mehr Symboltypen zur Auswahl gestellt, und Sie können bei Bedarf Symbole und andere Arten von Inhalten wie Text kombinieren: :::column-end::: :::column::: ![Erstellen einer Symbolschaltfläche – Schritt2](images/icons/icon-text-step-2.svg) :::column-end::: :::row-end:::
+:::row:::
+    :::column span="2":::
+        <b>Step 2</b><br>
+        You can use one of the icon element objects: [BitmapIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.bitmapicon),
+        [FontIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon), 
+        [PathIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pathicon), or
+        [SymbolIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbolicon). This gives you more types of icons to choose from, and enables you to combine icons and other types of content, such as text, if you want:
+    :::column-end:::
+    :::column:::
+        ![Create an icon button step 2](images/icons/icon-text-step-2.svg)
+    :::column-end:::
+:::row-end:::
 
 ```xaml 
 <Button>
@@ -127,7 +187,14 @@ Es gibt verschiedene Möglichkeiten, ein Symbol zu einer Schaltfläche hinzuzuf�
 
 ## <a name="create-a-series-of-icons-in-a-command-bar"></a>Erstellen einer Reihe von Symbolen in einer Befehlsleiste
 
-:::row::: :::column span::: Wenn Sie eine Reihe von Befehlen haben, die zusammengehöhren, z.B. Ausschneiden/Kopieren/Einfügen oder eine Reihe von Zeichenbefehlen für ein Fotobearbeitungsprogramm, setzen Sie diese zusammen in eine [Befehlsleiste](../controls-and-patterns/app-bars.md). Eine Befehlsleiste enthält eine oder mehrere Schaltflächen oder Umschaltflächen der App-Leiste, die jeweils eine Aktion darstellen. Jede Schaltfläche verfügt über eine [Symbol](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.appbarbutton#Windows_UI_Xaml_Controls_AppBarButton_Icon)-Eigenschaft, mit der Sie steuern, welches Symbol angezeigt wird. Es gibt eine Vielzahl von Möglichkeiten, um das Symbol anzugeben. :::column-end::: :::column::: ![Beispiel einer Befehlsleiste mit Symbolen](images/icons/create-icon-command-bar.svg) :::column-end::: :::row-end:::
+:::row:::
+    :::column span:::
+        When you have a series of commands that go together, such as cut/copy/paste or a set of drawing commands for a photo-editing program, put them together in a [command bar](../controls-and-patterns/app-bars.md). A command bar takes one or more app bar buttons or app bar toggle buttons, each of which represents an action. Each button has an [Icon](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.appbarbutton#Windows_UI_Xaml_Controls_AppBarButton_Icon) property you use to control which icon it displays. There are a variety of ways to specify the icon. 
+    :::column-end:::
+    :::column:::
+        ![Example of a command bar with icons](images/icons/create-icon-command-bar.svg)
+    :::column-end:::
+:::row-end:::
 
 Die einfachste Möglichkeit ist die Verwendung der von uns bereitgestellten Liste vordefinierter Symbole: Geben Sie einfach den Namen des Symbols an, z.B. „Zurück“ oder „Beenden“, und das System zeichnet das entsprechende Symbol: 
 

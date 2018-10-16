@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Rezensionen
 ms.localizationpriority: medium
-ms.openlocfilehash: ce1f9c3a360209bc9ac7b03ac162460a333c7192
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.openlocfilehash: c14b2ce6dd9fa7058ef3dbcd8e7e7a17a05fe78e
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4613574"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4686214"
 ---
 # <a name="get-app-reviews"></a>Abrufen von App-Rezensionen
 
@@ -109,43 +109,43 @@ Authorization: Bearer <your access token>
 
 ### <a name="response-body"></a>Antworttext
 
-| Wert      | Typ   | Beschreibung                                                                                                                                                                                                                                                                            |
-|------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Wert      | array  | Ein Array von Objekten, die Rezensionsdaten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unten im Abschnitt [Rezensionswerte](#review-values).                                                                                                                                      |
+| Wert      | Typ   | Beschreibung      |
+|------------|--------|------------------|
+| Wert      | array  | Ein Array von Objekten, die Rezensionsdaten enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unten im Abschnitt [Rezensionswerte](#review-values).       |
 | @nextLink  | String | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10000 festgelegt ist, es jedoch mehr als 10.000 Zeilen mit Rezensionsdaten für die Abfrage gibt. |
-| TotalCount | int    | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.                                    |
+| TotalCount | int    | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.  |
 
  
 ### <a name="review-values"></a>Rezensionswerte
 
 Elemente im Array *Value* enthalten die folgenden Werte.
 
-| Wert                  | Typ    | Beschreibung                                                                                                                                                                                                                          |
-|------------------------|---------|---------------------|
-| date                   | string  | Das erste Datum im Datumsbereich für die Rezensionsdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist dieser Wert das erste Datum in diesem Datumsbereich.  |
-| applicationId          | string  | Die Store-ID der App, für die Sie Rezensionsdaten abrufen.        |
-| applicationName        | string  | Der Anzeigename der App.   |
-| market                 | string  | Der ISO 3166-Ländercode für den Markt, in dem die Rezension übermittelt wurde.       |
-| osVersion              | string  | Die Version des Betriebssystems, auf dem die Rezension übermittelt wurde. Eine Liste der unterstützten Zeichenfolgen finden Sie oben im Abschnitt [Filterfelder](#filter-fields).         |
-| deviceType             | string  | Der Typ des Geräts, auf dem die Rezension übermittelt wurde. Eine Liste der unterstützten Zeichenfolgen finden Sie oben im Abschnitt [Filterfelder](#filter-fields).      |
-| isRevised              | Boolescher Wert | Der Wert **true** gibt an, dass die Rezension überprüft wurde; andernfalls **false**.         |
-| packageVersion         | string  | Die Version des App-Pakets, das überprüft wurde.   |
-| deviceModel            | string  | Der Typ des Geräts, auf dem die App überprüft wurde.      |
-| productFamily          | string  | Der Name der Gerätefamilie. Eine Liste der unterstützten Zeichenfolgen finden Sie oben im Abschnitt [Filterfelder](#filter-fields).  |
-| deviceRAM              | number  | Der physische Arbeitsspeicher (RAM) in MB.        |
-| deviceScreenResolution | string  | Die Auflösung des Gerätebildschirms im Format „*Breite* x *Höhe*“.        |
-| deviceStorageCapacity  | number  | Die Kapazität des primären Datenspeichers in GB.   |
-| isTouchEnabled         | Boolean | Der Wert **true** gibt an, dass die Toucheingabe aktiviert ist; andernfalls **false**.      |
-| reviewerName           | string  | Der Name der Person, die die App rezensiert hat.      |
-| rating                 | number  | Die App-Bewertung in Sternen.         |
-| reviewTitle            | string  | Der Titel der Rezension.       |
-| reviewText             | string  | Der Textinhalt der Rezension.     |
-| helpfulCount           | number  | Die Häufigkeit, mit der die Rezension als nützlich markiert wurde.     |
-| notHelpfulCount        | number  | Die Häufigkeit, mit der die Rezension als nicht nützlich markiert wurde.               |
-| responseDate           | string  | Das Datum, an dem eine Antwort übermittelt wurde.                 |
-| responseText           | string  | Der Textinhalt der Antwort.        |
-| ID                     | string  | Die ID der Rezension (dies ist eine GUID). Sie können diese ID in den Methoden [Antwortinformationen für App-Rezensionen abrufen](get-response-info-for-app-reviews.md) und [Antworten auf App-Rezensionen übermitteln](submit-responses-to-app-reviews.md) verwenden.       |
- 
+| Wert           | Typ    | Beschreibung       |
+|-----------------|---------|-------------------|
+| date            | string  | Das erste Datum im Datumsbereich für die Rezensionsdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist dieser Wert das erste Datum in diesem Datumsbereich. |
+| applicationId   | string  | Die Store-ID der App, für die Sie Rezensionsdaten abrufen.         |
+| applicationName | string  | Der Anzeigename der App.    |
+| market          | string  | Der ISO 3166-Ländercode für den Markt, in dem die Rezension übermittelt wurde.        |
+| osVersion       | string  | Die Version des Betriebssystems, auf dem die Rezension übermittelt wurde. Eine Liste der unterstützten Zeichenfolgen finden Sie oben im Abschnitt [Filterfelder](#filter-fields).            |
+| deviceType      | string  | Der Typ des Geräts, auf dem die Rezension übermittelt wurde. Eine Liste der unterstützten Zeichenfolgen finden Sie oben im Abschnitt [Filterfelder](#filter-fields).            |
+| isRevised       | Boolescher Wert | Der Wert **true** gibt an, dass die Rezension überprüft wurde; andernfalls **false**.   |
+| packageVersion  | string  | Die Version des App-Pakets, das überprüft wurde.        |
+| deviceModel        | string  |Der Typ des Geräts, auf dem die App überprüft wurde.     |
+| productFamily      | string  | Der Name der Gerätefamilie. Eine Liste der unterstützten Zeichenfolgen finden Sie oben im Abschnitt [Filterfelder](#filter-fields).   |
+| deviceRAM       | number  | Der physische Arbeitsspeicher (RAM) in MB.    |
+| deviceScreenResolution       | string  | Die Auflösung des Gerätebildschirms im Format „*Breite* x *Höhe*“.    |
+| deviceStorageCapacity | number | Die Kapazität des primären Datenspeichers in GB. |
+| isTouchEnabled | Boolean | Der Wert **true** gibt an, dass die Toucheingabe aktiviert ist; andernfalls **false**. |
+| reviewerName | string | Der Name der Person, die die App rezensiert hat. |
+| rating | number | Die App-Bewertung in Sternen. |
+| reviewTitle | string | Der Titel der Rezension. |
+| reviewText | string | Der Textinhalt der Rezension. |
+| helpfulCount | number | Die Häufigkeit, mit der die Rezension als nützlich markiert wurde. |
+| notHelpfulCount | number | Die Häufigkeit, mit der die Rezension als nicht nützlich markiert wurde. |
+| responseDate | string | Das Datum, an dem eine Antwort übermittelt wurde. |
+| responseText | string | Der Textinhalt der Antwort. |
+| ID | string | Die ID der Rezension (dies ist eine GUID). Sie können diese ID in den Methoden [Antwortinformationen für App-Rezensionen abrufen](get-response-info-for-app-reviews.md) und [Antworten auf App-Rezensionen übermitteln](submit-responses-to-app-reviews.md) verwenden. |
+
 
 ### <a name="response-example"></a>Antwortbeispiel
 

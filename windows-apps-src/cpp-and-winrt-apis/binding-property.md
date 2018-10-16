@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, XAML, steuerelement, binden, eigenschaft
 ms.localizationpriority: medium
 ms.openlocfilehash: 2caec1c245514f7c1596d2a40749e974998fadcd
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4610735"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4684380"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a>XAML-Steuerelemente; Binden an eine C++/WinRT-Eigenschaft
 Eine Eigenschaft, die effektiv an ein XAML-Steuerelement gebunden werden kann, wird als *observable*-Eigenschaft bezeichnet. Dieses Konzept basiert auf dem Software-Design-Muster, das als *Observer-Pattern* bekannt ist. Dieses Thema zeigt, wie Sie Observable-Eigenschaften in implementieren [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), und wie man XAML-Steuerelemente an diese bindet.
