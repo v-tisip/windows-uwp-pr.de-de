@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 039B8810-5C9E-4DB9-A6AF-33E7401311FF
 description: Verwenden Sie diese Methode der Microsoft Store-Übermittlungs-API, um den Status einer App-Übermittlung abzurufen.
 title: Abrufen des Status einer App-Übermittlung
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, App-Übermittlung, Status
 ms.localizationpriority: medium
-ms.openlocfilehash: 546b634333d568482cc41d72bb8985b1070c1ff7
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 7d14ce17f4e6dff08351ca0764f3b6a173550426
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817095"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4624148"
 ---
 # <a name="get-the-status-of-an-app-submission"></a>Abrufen des Status einer App-Übermittlung
 

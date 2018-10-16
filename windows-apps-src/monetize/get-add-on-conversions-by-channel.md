@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um aggregierte Konversionen nach Kanal für ein Add-On während eines bestimmten Zeitraums und andere optionale Filter abzurufen.
 title: Abrufen von Add-On-Konvertierungen nach Kanal
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 08/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Add-On-Konversionen, Kanäle
 ms.localizationpriority: medium
-ms.openlocfilehash: 43c32cc30d65c798c09592ac46d64c2c1c550b64
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: af29c790df5508a22c545cdc5a2ca2faac15e134
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663420"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623994"
 ---
 # <a name="get-add-on-conversions-by-channel"></a>Abrufen von Add-On-Konvertierungen nach Kanal
 
@@ -92,7 +92,7 @@ Authorization: Bearer <your access token>
 
 Objekte im Array *Value* enthalten die folgenden Werte.
 
-| Value               | Typ   | Beschreibung                           |
+| Wert               | Typ   | Beschreibung                           |
 |---------------------|--------|-------------------------------------------|
 | date                | Zeichenfolge | Das erste Datum im Datumsbereich für die Konversionsdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist dieser Wert das erste Datum in diesem Datumsbereich. |
 | inAppProductId      | Zeichenfolge  | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) des Add-Ons, für das Sie Konversionsdaten abrufen.     |
@@ -104,7 +104,7 @@ Objekte im Array *Value* enthalten die folgenden Werte.
 | referrerUriDomain           | Zeichenfolge |  Gibt die Domäne, in denen die App-Eintrag mit der benutzerdefinierten App Promotion Kampagnen-ID aktiviert wurde.   |
 | channelType           | Zeichenfolge |  Einer der folgenden Zeichenfolgen, der den Kanal für die Konversion angibt:<ul><li><strong>CustomCampaignId</strong></li><li><strong>Store-Verkehr</strong></li><li><strong>Sonstiges</strong></li></ul>    |
 | storeClient         | Zeichenfolge | Die Version des Store, in dem der Konversion erfolgte. Derzeit wird als einziger Wert **SFC** unterstützt.    |
-| deviceType          | Zeichenfolge | Eine der folgenden Zeichenfolgen:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Unknown</strong></li></ul>            |
+| deviceType          | string | Eine der folgenden Zeichenfolgen:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Unknown</strong></li></ul>            |
 | market              | Zeichenfolge | Die ISO 3166-Ländercode des Markts, in dem die Konversion erfolgte.    |
 | clickCount              | number  |     Die Anzahl der Kundenklicks auf den Link zum App-Eintrag.      |           
 | conversionCount            | number  |   Die Anzahl der Kundenkonvertierungen.         |         

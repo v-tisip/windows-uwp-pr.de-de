@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um Xbox Live gleichzeitige Nutzungsdaten abzurufen.
 title: Abrufen von Xbox Live gleichzeitigen Nutzungsdaten
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, Uwp, Store-Diensten, Microsoft Store-Analyse-API, Xbox Live-Analyse, gleichzeitige Nutzung
 ms.localizationpriority: medium
-ms.openlocfilehash: 47e9a23ba046e70a4d755a3ac9dc1bbf4d62f307
-ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
-ms.translationtype: HT
+ms.openlocfilehash: 0853d3fce7a3af7539cce26229942f2bc31cb1a0
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "1976175"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4623822"
 ---
 # <a name="get-xbox-live-concurrent-usage-data"></a>Abrufen von Xbox Live gleichzeitigen Nutzungsdaten
 
