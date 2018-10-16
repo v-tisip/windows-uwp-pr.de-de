@@ -1,25 +1,25 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: adb2fa45-e18f-4254-bd8b-a749a386e3b4
 description: Hier erfahren Sie, wie Sie die AdControl-Klasse nutzen können, um Werbebanner in einer JavaScript/HTML-App für Windows 10 (UWP) anzuzeigen.
 title: AdControl in HTML 5 und JavaScript
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Anzeigen, Werbung, AdControl, Anzeigen-Steuerelement, HTML, Javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 84c6b924072c9a55bf0610883252b511f612dff1
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 37f7754e8f88e61df571fe561ae94dc4b71468ed
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690136"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618368"
 ---
 # <a name="adcontrol-in-html-5-and-javascript"></a>„AdControl“ in HTML 5 und JavaScript
 
-In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie die [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx)-Klasse nutzen können, um Werbebanner in einer Universellen Windows-Plattform-, JavaScript-/HTML-App für Windows 10 anzuzeigen.
+In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie die [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol)-Klasse nutzen können, um Werbebanner in einer Universellen Windows-Plattform-, JavaScript-/HTML-App für Windows 10 anzuzeigen.
 
 Ein vollständiges Beispiel-Projekt mit einer Veranschaulichung, wie Sie Werbebanner einer JavaScript/HTML-App hinzufügen, finden Sie unter den [Anzeigenbeispielen auf GitHub](http://aka.ms/githubads).
 
@@ -28,7 +28,7 @@ Ein vollständiges Beispiel-Projekt mit einer Veranschaulichung, wie Sie Werbeba
 * Installieren Sie das [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) mit Visual Studio2015 oder einer neueren Version von Visual Studio. Installationsanweisungen finden Sie in [diesem Artikel](install-the-microsoft-advertising-libraries.md).
 
 > [!NOTE]
-> Wenn Sie Windows10 SDK Version 10.0.14393 (Anniversary Update) oder eine höhere Version des Windows SDKs installiert haben, müssen Sie auch die WinJS-Bibliothek installieren. Diese Bibliothek war in den früheren Versionen von Windows SDK für Windows 10 enthalten, aber ab Windows 10 Anniversary SDK Version 10.0.14393 (Anniversary Update) muss diese Bibliothek separat installiert werden. Informationen zur Installation von WinJS finden Sie unter [WinJS herunterladen](http://try.buildwinjs.com/download/GetWinJS/).
+> Wenn Sie das Windows 10 SDK Version 10.0.14393 (Anniversary Update) oder eine höhere Version des Windows SDKS installiert haben, müssen Sie auch die [WinJS](https://github.com/winjs/winjs) -Bibliothek installieren. Diese Bibliothek war in den früheren Versionen von Windows SDK für Windows 10 enthalten, aber ab Windows 10 Anniversary SDK Version 10.0.14393 (Anniversary Update) muss diese Bibliothek separat installiert werden. 
 
 ## <a name="integrate-a-banner-ad-into-your-app"></a>Banneranzeige in Ihrer App integrieren
 
@@ -42,7 +42,7 @@ Ein vollständiges Beispiel-Projekt mit einer Veranschaulichung, wie Sie Werbeba
 3. Hinzufügen eines Verweises auf die Microsoft Advertising-SDK in Ihrem Projekt:
 
     1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Verweise**, und wählen Sie **Verweis hinzufügen...** aus.
-    2.  Erweitern Sie im **Verweis-Manager** den Knoten **Universal Windows**, klicken Sie auf **Erweiterungen**, und wählen Sie dann das Kontrollkästchen neben **Microsoft Advertising-SDK für JavaScript** (Version10.0).
+    2.  Erweitern Sie im **Verweis-Manager** den Knoten **Universal Windows**, klicken Sie auf **Erweiterungen**, und wählen Sie dann das Kontrollkästchen neben **Microsoft Advertising-SDK für JavaScript** (Version 10.0).
     3.  Klicken Sie im **Verweis-Manager** auf „OK“.
 
 6.  Öffnen Sie die Datei „index.html“ (oder je nach Projekt eine andere HTML-Datei).
@@ -119,7 +119,7 @@ Wenn Sie diesen Code verwenden und keine Anzeigen angezeigt werden, können Sie 
 
 1. Stellen Sie sicher, dass die Verwendung von Werbebannern in Ihrer App unseren [Richtlinien für das Anzeigen von Werbebannern](ui-and-user-experience-guidelines.md#guidelines-for-banner-ads) entspricht.
 
-1.  Wechseln Sie im Dev Center-Dashboard auf die Seite [In-App-Anzeigen](../publish/in-app-ads.md) und [erstellen Sie eine Anzeigeneinheit](set-up-ad-units-in-your-app.md#live-ad-units). Geben Sie als Typ für die Anzeigeneinheit **Banner** an. Notieren Sie die ID der Anzeigeneinheit und die Anwendungs-ID.
+1.  Wechseln Sie im Dev Center-Dashboard auf die Seite [In-App-Anzeigen](../publish/in-app-ads.md) und [erstellen Sie eine Anzeigeneinheit](set-up-ad-units-in-your-app.md#live-ad-units). Geben Sie als Typ für die Anzeigeneinheit **Banner** an. Notieren Sie die Anzeigeneinheits-ID und die Anwendungs-ID.
     > [!NOTE]
     > Die Anwendungs-IDs für Test-Anzeigeneinheiten und Live-UWP-Anzeigeneinheiten besitzen unterschiedliche Formate. Testanwendungs-ID sind GUIDs. Wenn Sie eine Live-UWP-Anzeigeneinheit im Dashboard erstellen, entspricht die Anwendungs-ID für die Anzeigeneinheit immer der Store-ID Ihrer App (ein Beispiel für einen Store-ID-Wert ist 9NBLGGH4R315).
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Trailer, Video, Screenshot, Bild, Symbol, Store-Eintrag, Store-Eintragsbilder
 ms.localizationpriority: medium
 ms.openlocfilehash: d787ac620f9d0114d67d85def758416afd9f5f15
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567800"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617280"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>App-Screenshots, -Bilder und -Trailer
 
@@ -87,11 +87,11 @@ Dieses Bild ist für die ordnungsgemäße Anzeige auf Windows Phone8.1 und früh
 
 ### <a name="display-only-uploaded-logo-images-in-the-store"></a>Anzeige hochgeladen nur Logo Bilder im Store
 
-Sie haben die Möglichkeit, zu verhindern, dass des Stores die Logobilder in den Paketen Ihrer app, wenn Ihr Angebot für Kunden unter Windows 10 (einschließlich Xbox) angezeigt, und stattdessen der Store muss nur Bilder verwenden, die Sie hochladen. Dies bietet Ihnen mehr Kontrolle über die Darstellung Ihrer App in verschiedenen Anzeigen im Store für Kunden auf Windows 10 (einschließlich Xbox). (Wenn Ihr Produkt für frühere Betriebssystemversionen unterstützt, können diese Kunden weiterhin Bilder von Ihren Paketen finden Sie unter auch dann, wenn Sie diese Option verwenden.)
+Sie haben die Möglichkeit, zu verhindern, dass der Store die Logobilder in den Paketen Ihrer app, wenn Ihr Angebot für Kunden unter Windows 10 (einschließlich Xbox) angezeigt, und stattdessen der Store muss nur Bilder verwenden, die Sie hochladen. Dies bietet Ihnen mehr Kontrolle über die Darstellung Ihrer App in verschiedenen Anzeigen im Store für Kunden auf Windows 10 (einschließlich Xbox). (Wenn Ihr Produkt für frühere Betriebssystemversionen unterstützt, können diese Kunden weiterhin Bilder von Ihren Paketen finden Sie unter auch dann, wenn Sie diese Option verwenden.)
 
-In der Store verwendet nur die Bilder, die Sie hochladen, (für Kunden unter Windows 10, einschließlich Xbox), und keine Bilder von Ihren Paketen verwenden, aktivieren Sie das Kontrollkästchen mit der Bezeichnung **für Kunden unter Windows 10 und Xbox muss, zeigen Sie hochgeladen Logo Images INSTEAD die Bilder aus meiner Paketen **.
+In den Store verwendet nur die Bilder, die Sie hochladen (für Kunden unter Windows 10, einschließlich Xbox), und keine Bilder von Ihren Paketen verwenden, aktivieren Sie das Kontrollkästchen mit der Bezeichnung **für Kunden unter Windows 10 und Xbox haben, zeigen Sie hochgeladen Logo Images INSTEAD die Bilder aus meiner Paketen **.
 
-Wenn Sie dieses Kontrollkästchen aktivieren, wird ein neuer Abschnitt namens **Store Bilder anzuzeigen** . Hier können Sie 3 Bilder, u. a. die **1:1-app-Kachel Symbol (300 x 300 Pixel)** (Wenn Sie das Kontrollkästchen, das Feld zum Bereitstellen, dass das Bild in diesem Abschnitt verschoben) hochladen. Es wird empfohlen, alle drei Bildgrößen bereitzustellen, wenn Sie diese Option verwenden: 300 x 300, 150 x 150 und 71 x 71 Pixel. Es ist jedoch nur die Größe 300 x 300 erforderlich.
+Wenn Sie dieses Kontrollkästchen aktivieren, wird ein neuer Abschnitt namens **Store Bilder anzuzeigen** . Hier können Sie 3 Bilder, u. a. die **1:1-app-Kachel Symbol (300 x 300 Pixel)** (Wenn Sie das Kontrollkästchen, das Feld zum Bereitstellen, dass dieses Bild in diesem Abschnitt verschoben) hochladen. Es wird empfohlen, alle drei Bildgrößen bereitzustellen, wenn Sie diese Option verwenden: 300 x 300, 150 x 150 und 71 x 71 Pixel. Es ist jedoch nur die Größe 300 x 300 erforderlich.
 
 
 <span id="promotional-images" />

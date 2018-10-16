@@ -2,7 +2,7 @@
 author: normesta
 Description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop application.
 Search.Product: eADQiWindows 10XVcnh
-title: Verpacken einer desktop-Anwendungs mit Visual Studio
+title: Verpacken Sie eine desktop-Anwendung mithilfe von Visual Studio
 ms.author: normesta
 ms.date: 08/30/2017
 ms.topic: article
@@ -12,13 +12,13 @@ keywords: windows10, UWP
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c9b7a30a50c26d2dbdaf6df04e85549addaf181
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4566011"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4621591"
 ---
-# <a name="package-a-desktop-application-by-using-visual-studio"></a>Verpacken einer desktop-Anwendungs mit Visual Studio
+# <a name="package-a-desktop-application-by-using-visual-studio"></a>Verpacken Sie eine desktop-Anwendung mithilfe von Visual Studio
 
 Sie können Visual Studio verwenden, um ein Paket für Ihre Desktop-App zu generieren. Anschließend können Sie das Paket im Windows Store veröffentlichen oder es auf einem oder mehreren PCs querladen.
 

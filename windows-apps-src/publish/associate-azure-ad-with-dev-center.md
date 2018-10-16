@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Azure Ad, Azure-Mandant, AAD-Mandant, Azure AD-Mandant, Mandantenverwaltung, Mandanten
 ms.localizationpriority: medium
 ms.openlocfilehash: dd729d76705849c981516109da39bbd27c140286
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4575209"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4615811"
 ---
 # <a name="associate-azure-active-directory-with-your-dev-center-account"></a>Zuordnen Ihres Azure Active Directory zum Dev Center-Konto
 
@@ -35,7 +35,7 @@ Ebenso können mehrere Dev Center-Konten einem Azure AD-Mandant zugeordnet werde
 
 Wenn Ihre Organisation Azure AD bereits verwendet, gehen Sie folgendermaßen vor, um Ihr Dev Center-Konto zu verknüpfen.
 
-1.  Wählen Sie aus dem [Windows Dev Center-Dashboard](https://partner.microsoft.com/dashboard)das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards), und wählen Sie dann die **kontoeinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Mandanten**aus.
+1.  Wählen Sie aus dem [Windows Dev Center-Dashboard](https://partner.microsoft.com/dashboard)das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards), und wählen Sie die **kontoeinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Mandanten**.
 2.  Wählen Sie **Zuordnen von AzureAD zu Ihrem Dev Center-Konto**.
 3.  Geben Sie Ihre Azure AD-Anmeldeinformationen für den Mandanten ein, den Sie zuordnen möchten.
 4.  Überprüfen Sie den Organisations- und den Domänennamen für den Azure AD-Mandant. Wählen Sie zum Abschließen der Zuordnung **Bestätigen** aus.
@@ -49,7 +49,7 @@ Wenn Ihre Organisation Azure AD bereits verwendet, gehen Sie folgendermaßen vor
 
 Wenn Sie ein neues Azure AD einrichten müssen, um diesem Ihr Dev Center-Konto zuzuordnen, gehen Sie folgendermaßen vor.
 
-1.  Wählen Sie aus dem [Windows Dev Center-Dashboard](https://partner.microsoft.com/dashboard)das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards), und wählen Sie dann die **kontoeinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Mandanten**aus.
+1.  Wählen Sie aus dem [Windows Dev Center-Dashboard](https://partner.microsoft.com/dashboard)das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards), und wählen Sie die **kontoeinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Mandanten**.
 2.  Wählen Sie **Neues Azure AD erstellen**.
 3.  Geben Sie die Verzeichnisinformationen für das neue Azure AD ein:
     - **Domänenname**: Der eindeutige Name, der für Ihre Azure AD-Domäne verwendet wird, zusammen mit „.onmicrosoft.com“. Wenn Sie beispielsweise „beispiel“ eingegeben haben, wäre Ihre Azure AD-Domäne „beispiel.onmicrosoft.com“.

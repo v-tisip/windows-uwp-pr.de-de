@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: AD80F9B3-CED0-40BD-A199-AB81CDAE466C
 description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Löschen eines Flight-Pakets für eine App, die für Ihr Windows Dev Center-Konto registriert ist.
 title: Löschen eines Flight-Pakets
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Flight löschen
 ms.localizationpriority: medium
-ms.openlocfilehash: d907d87929a64178b3ebd3d169e30b04f6577eb4
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 436a28cc1be0c106928784086731fe078d789527
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1815505"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618358"
 ---
 # <a name="delete-a-package-flight"></a>Löschen eines Flight-Pakets
 

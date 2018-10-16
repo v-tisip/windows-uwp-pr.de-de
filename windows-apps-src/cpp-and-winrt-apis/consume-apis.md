@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projiziert, projektion, implementierung, laufzeitklasse, aktivierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 9b1cd05f974bf9193e84919a5e679ef996746d7e
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4571322"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617832"
 ---
 # <a name="consume-apis-with-cwinrt"></a>Verwenden von APIs mit C++/WinRT
 
-Dieses Thema zeigt, wie Sie nutzen [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) APIs implementierte von Windows, von einem Drittanbieter-Komponente Lieferanten oder implementierten selbst vornehmen.
+Dieses Thema zeigt, wie Sie nutzen [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) APIs, egal ob sie Teil von Windows, stehen von einem Drittanbieter-Komponentenanbieter implementiert oder durch selbst implementiert.
 
 ## <a name="if-the-api-is-in-a-windows-namespace"></a>Wenn sich die API in einem Windows-Namespace befindet
 Dies ist der häufigste Fall, bei dem Sie eine Windows-Runtime-API verwenden. Für jeden Typ in einem Windows-Namespace, der in den Metadaten festgelegt ist, definiert C++/WinRT ein C++-freundliches Äquivalent (den *projizierten Typ*). Ein projizierter Typ verfügt über den gleichen vollqualifizierten Namen wie der Windows-Typ, wird unter Verwendung der C++-Syntax jedoch im C++-**winrt**-Namespace abgelegt. Beispielsweise wird [**Windows::Foundation::Uri**](/uwp/api/windows.foundation.uri) in C++/WinRT als **winrt::Windows::Foundation::Uri** projiziert.

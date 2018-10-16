@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 1A69A388-B1CC-4D2C-886B-EA07E6E60252
 description: Verwenden Sie diese Methode der Microsoft Store-Übermittlungs-API zum Löschen einer vorhandenen Flight-Paketübermittlung.
 title: Löschen einer Flight-Paketübermittlung
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Flight-Übermittlungen, löschen, Flight-Paket
 ms.localizationpriority: medium
-ms.openlocfilehash: 4142d5341ccf906073d2fa6c3895135cba8a0d50
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 8618d93b1a6ec465a95956d01648444313cdf142
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817651"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617715"
 ---
 # <a name="delete-a-package-flight-submission"></a>Löschen einer Flight-Paketübermittlung
 

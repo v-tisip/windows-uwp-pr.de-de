@@ -1,6 +1,6 @@
 ---
 author: stevewhims
-description: C++ / WinRT helfen Ihnen zum Erstellen von klassischer COM-Komponenten, wie Sie Windows-Runtime-Klassen erstellen können.
+description: C++ / WinRT helfen Ihnen zum Erstellen von klassischer COM-Komponenten, wie Sie Windows-Runtime-Klassen man erleichtert.
 title: Erstellen von COM-Komponenten mit C++ / WinRT
 ms.author: stwhi
 ms.date: 09/06/2018
@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Standard, c++, Cpp, Winrt, Projektion, "author", COM, Komponente
 ms.localizationpriority: medium
 ms.openlocfilehash: 94f59833f4c657445b7135b1158974d8a553813f
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4570213"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618087"
 ---
 # <a name="author-com-components-with-cwinrt"></a>Erstellen von COM-Komponenten mit C++ / WinRT
 
-[C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) helfen Ihnen klassische Component Object Model (COM)-Komponenten (oder Co-Klassen) man genauso, wie Sie Windows-Runtime-Klassen erstellen können. Hier ist eine einfache Darstellung, die Sie testen können, wenn Sie den Code in Einfügen der `pch.h` und `main.cpp` eines neuen **Windows Console Application (C++ / WinRT)** Projekt.
+[C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) helfen Sie klassische Component Object Model (COM)-Komponenten (oder Co-Klassen) erstellen, wie Sie Windows-Runtime-Klassen man erleichtert. Hier ist eine einfache Darstellung, die Sie testen können, wenn Sie den Code in Einfügen der `pch.h` und `main.cpp` eines neuen **Windows Console Application (C++ / WinRT)** Projekt.
 
 ```cppwinrt
 // pch.h
@@ -69,15 +69,15 @@ int main()
 
 Weitere Informationen finden Sie [nutzen COM-Komponenten mit C++ / WinRT](consume-com.md).
 
-## <a name="a-more-realistic-and-interesting-example"></a>Ein Beispiel für mehr realistisch und interessante
+## <a name="a-more-realistic-and-interesting-example"></a>Beispiel für einen realistisch und interessante
 
-Im verbleibenden Teil dieses Themas führt durch einen minimalen Console Application Projekt erstellen, C++ verwendet / WinRT zur Implementierung einer grundlegenden Co-Klasse (COM-Komponente oder COM-Klasse) und die Klassenfactory. Die Beispiel-Anwendung zeigt, wie Sie eine Popupbenachrichtigung mit einer Schaltfläche Rückruf darauf zu übermitteln und die Co-Klasse (die die **INotificationActivationCallback** COM-Schnittstelle implementiert) kann die Anwendung gestartet und aufgerufen werden zurück, wenn der Benutzer auf diese Schaltfläche im Popup klickt.
+Im verbleibenden Teil dieses Themas führt durch die Erstellung einer minimalen Konsole Anwendung-Projekt, das C++ verwendet / WinRT zur Implementierung einer grundlegenden Co-Klasse (COM-Komponente oder COM-Klasse) und die Klassenfactory. Die Anwendung Beispiel zeigt, wie Sie eine Popupbenachrichtigung mit einer Schaltfläche Rückruf darauf zu übermitteln, und die Co-Klasse (die die **INotificationActivationCallback** COM-Schnittstelle implementiert) kann die Anwendung gestartet und aufgerufen werden zurück, wenn der Benutzer auf diese Schaltfläche im Popup klickt.
 
-Weitere Hintergrundinformationen zu den Popup-Benachrichtigung Featurebereich finden Sie unter [einer lokalen Popupbenachrichtigung senden](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast). Keine Codebeispiele in diesem Abschnitt der Dokumentation verwenden C++ / WinRT, aber es wird empfohlen, dass Sie den Code in diesem Thema aufgeführten bevorzugen.
+Weitere Hintergrundinformationen zu dem Popup-Infobereich Feature finden Sie unter [einer lokalen Popupbenachrichtigung senden](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast). Keine Codebeispiele in diesem Abschnitt der Dokumentation verwenden C++ / WinRT, aber es wird empfohlen, dass Sie den Code in diesem Thema aufgeführten bevorzugen.
 
 ## <a name="create-a-windows-console-application-project-toastandcallback"></a>Erstellen eines Projekts Windows Console Application (ToastAndCallback)
 
-Erstellen Sie zunächst ein neues Projekt in Microsoft Visual Studio. Erstellen Sie eine **Visual C++** > **Windows-Desktop** > **Windows Console Application (C++ / WinRT)** Projekt und nennen Sie es *ToastAndCallback*.
+Erstellen Sie zunächst ein neues Projekt in Microsoft Visual Studio. Erstellen Sie eine **Visual C++** > **Windows-Desktop** > **Windows Console Application (C++ / WinRT)** -Projekt und nennen Sie es *ToastAndCallback*.
 
 Open `pch.h`, und fügen `#include <unknwn.h>` vor der enthält für alle C++ / WinRT-Header.
 
@@ -109,7 +109,7 @@ using namespace Windows::UI::Notifications;
 
 ## <a name="implement-the-coclass-and-class-factory"></a>Implementieren Sie die Factory CO- und -Klasse
 
-In C++ / WinRT können Sie Co-Klassen, und implementieren Klassenfactorys durch eine Ableitung von der [**WinRT:: Implements**](/uwp/cpp-ref-for-winrt/implements) Basisstruktur. Unmittelbar nach der drei using-Direktiven oben gezeigten (und vor dem `main`), fügen Sie diesen Code, um Ihre Popupbenachrichtigung Benachrichtigung COM-Aktivator-Komponente zu implementieren.
+In C++ / WinRT können Sie Co-Klassen, und implementieren Klassenfactorys durch eine Ableitung von der [**WinRT:: Implements**](/uwp/cpp-ref-for-winrt/implements) Basisstruktur. Unmittelbar nach der drei using--Direktiven oben gezeigten (und vor dem `main`), fügen Sie diesen Code, um Ihre Popupbenachrichtigung Benachrichtigung COM-Aktivator Komponente zu implementieren.
 
 ```cppwinrt
 static constexpr GUID callback_guid // BAF2FA85-E121-4CC9-A942-CE335B6F917F
@@ -165,21 +165,21 @@ struct callback_factory : implements<callback_factory, IClassFactory>
 };
 ```
 
-Die Implementierung der oben genannten Co-folgt das gleiche Muster, die im Code gezeigt wird [Erstellen von APIs mit C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-not-authoring-a-runtime-class). Daher können Sie das gleiche Verfahren verwenden, um COM-Schnittstellen als auch für Windows-Runtime-Schnittstellen implementieren. COM-Komponenten und Windows-Runtime-Klassen verfügbar machen ihre Funktionen über Schnittstellen. Jede COM-Schnittstelle abgeleitet letztendlich die [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509) -Schnittstelle. Windows-Runtime basiert auf COM&mdash;eine Unterscheidung wird, die Windows-Runtime-Schnittstellen abgeleitet letztendlich die [**IInspectable-Schnittstelle**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) (und **IInspectable** abgeleitet von **IUnknown**).
+Die Implementierung der oben genannten Co-folgt das gleiche Muster, die im Code gezeigt wird ["author"-APIs mit C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-not-authoring-a-runtime-class). Daher können Sie das gleiche Verfahren verwenden, um COM-Schnittstellen als auch für Windows-Runtime-Schnittstellen implementieren. COM-Komponenten und Windows-Runtime-Klassen verfügbar machen ihre Funktionen über Schnittstellen. Jede COM-Schnittstelle abgeleitet letztendlich die [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509) -Schnittstelle. Windows-Runtime basiert auf COM&mdash;eine Unterscheidung wird, die Windows-Runtime-Schnittstellen ableiten letztendlich die [**IInspectable-Schnittstelle**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) (und **IInspectable** abgeleitet von **IUnknown**).
 
-In der Co-Klasse in der obige Code implementieren wir die **INotificationActivationCallback::Activate** Methode, die die Funktion, die aufgerufen wird, wenn der Benutzer auf eine Popupbenachrichtigung die Callback-Schaltfläche klickt. Aber bevor diese Funktion aufgerufen werden kann, muss eine Instanz der Co-erstellt werden, und der Auftrag der **IClassFactory:: CreateInstance** -Funktion.
+In der Co-Klasse in der obige Code implementieren wir die **INotificationActivationCallback::Activate** -Methode, die die Funktion, die aufgerufen wird ist, wenn der Benutzer die Schaltfläche "Rückruf" auf eine Popupbenachrichtigung klickt. Aber bevor diese Funktion aufgerufen werden kann, muss eine Instanz der Co-erstellt werden, und ist, die die Aufgabe der **IClassFactory:: CreateInstance** -Funktion.
 
-Die Co-Klasse, die wir gerade implementiert wird als die *COM-Aktivator* für Benachrichtigungen bezeichnet und hat die Klassen-Id (CLSID) in Form von der `callback_guid` Bezeichner (des Typs **GUID**), die oben angezeigt. Wir verwenden diesen Bezeichner später in Form einer Verknüpfung im Startmenü und ein Windows-Registrierungseintrag. Die COM-Aktivator CLSID und den Pfad zu den entsprechenden COM-Server (das den Pfad der ausführbaren Datei, die wir hier entwickeln) ist der Mechanismus, mit dem eine Popupbenachrichtigung weiß, welche Klasse erstellt eine Instanz der bei die Callback-Schaltfläche geklickt wird (an, ob die Benachrichtigung wird im Info-Center oder nicht geklickt).
+Die Co-Klasse, die wir gerade implementiert wird als die *COM-Aktivator* für Benachrichtigungen bezeichnet und dessen seine Klassen-Id (CLSID) in Form von der `callback_guid` Bezeichner (des Typs **GUID**), die oben angezeigt. Wir verwenden diesen Bezeichner später in Form von eine Verknüpfung im Startmenü und einen Windows-Registrierungseintrag. Die COM-Aktivator CLSID und den Pfad zu den entsprechenden COM-Server (also den Pfad zu der ausführbaren Datei, die wir hier erstellen) ist der Mechanismus, mit dem eine Popupbenachrichtigung weiß, welche Klasse erstellt eine Instanz der bei die Callback-Schaltfläche geklickt wird (an, ob die Benachrichtigung wird im Info-Center oder nicht geklickt).
 
 ## <a name="best-practices-for-implementing-com-methods"></a>Bewährte Methoden für die Implementierung von COM-Methoden
 
-Techniken für die Fehlerbehandlung und zur Verwaltung von Hand in Hand zu gelangen. Es ist mehr praktische Art und Weise Ausnahmen als Fehlercodes verwendet werden. Und wenn Sie die Ressource Erwerb ist Initialisierung (RAII) Ausdrucksweise einsetzen, dann können nicht explizit für Fehlercodes geprüft, und klicken Sie dann durch die explizite Freigabe von Ressourcen. Expliziten Kontrollen gestalten Sie Ihre mehr als notwendig unübersichtlich und gibt Fehler unzählige Orten ausblenden. Verwenden Sie stattdessen RAII, und Ausnahmen auslösen/Catch. Auf diese Weise können die Ressource Zuweisungen sind ausnahmesicheren, und Ihr Code ist einfach.
+Techniken für die Fehlerbehandlung und zur Verwaltung von Hand in Hand zu gelangen. Es ist praktisch und praktische Ausnahmen als Fehlercodes verwendet werden. Und wenn Sie die Ressource Erwerb ist Initialisierung (RAII) Ausdrucksweise einsetzen, dann können nicht explizit Suchen nach Fehlercodes und dann durch die explizite Freigabe von Ressourcen. Kontrollen expliziten gestalten Sie Ihre mehr als notwendig unübersichtlich und gibt Fehler unzählige Orten ausblenden. Verwenden Sie stattdessen RAII, und Ausnahmen auslösen/Catch. Auf diese Weise können die Ressource Zuweisungen sind ausnahmesicheren, und Ihr Code ist einfach.
 
-Allerdings ermöglicht Ihnen Ausnahmen für die Implementierung der COM-Methode als Escapezeichen darf nicht an. Können Sie sicherstellen, dass mit dem `noexcept` Bezeichner für die COM-Methoden. Es ist für Ausnahmen an einer beliebigen Stelle in der Aufruf der Methode ausgelöst werden, solange Sie behandelt werden, bevor die Methode beendet wird. Bei Verwendung von `noexcept`, aber Sie können dann eine Ausnahme für die Methode als Escapezeichen, und dann Ihre Anwendung beendet.
+Allerdings ermöglicht Ihnen Ausnahmen Ihrer COM-Methode Implementierungen als Escapezeichen für darf nicht an. Können Sie sicherstellen, dass mithilfe der `noexcept` Bezeichner für Ihre COM-Methoden. Es ist in Ordnung für Ausnahmen an einer beliebigen Stelle in der Aufruf der Methode ausgelöst werden, solange Sie behandelt werden, bevor die Methode beendet wird. Bei Verwendung von `noexcept`, aber Sie können dann eine Ausnahme Ihrer Methode als Escapezeichen für, und klicken Sie dann Ihre Anwendung beendet.
 
 ## <a name="add-helper-types-and-functions"></a>Hinzufügen von Hilfstypen und Funktionen
 
-In diesem Schritt fügen wir, dass einige Hilfstypen und Funktionen, die der Rest des Codes vereinfacht verwenden. In diesem Fall vor dem `main`, fügen Sie Folgendes hinzu.
+In diesem Schritt fügen wir, dass einige Hilfstypen und Funktionen, die der Rest des Codes erheblich vereinfacht verwenden. Dies der Fall ist, bevor Sie `main`, fügen Sie Folgendes hinzu.
 
 ```cppwinrt
 struct prop_variant : PROPVARIANT
@@ -251,7 +251,7 @@ std::wstring get_shortcut_path()
 
 ## <a name="implement-the-remaining-functions-and-the-wmain-entry-point-function"></a>Implementieren Sie die restlichen Funktionen und die Wmain EntryPoint-Funktion
 
-Die Projektvorlage erstellt eine `main` Funktion für Sie. Löschen, die `main` funktionieren und an dessen Stelle fügen Sie diesen Code Eintrag, der Code zum Registrieren Ihrer Co-Klasse enthält, und klicken Sie dann auf einem Popup kann der Rückruf Ihrer Anwendungs zu übermitteln.
+Die Projektvorlage generiert ein `main` Funktion für Sie. Löschen, die `main` funktionieren und an dessen Stelle fügen Sie diesen Code Eintrag, der Code zum Registrieren Ihrer Co-Klasse enthält, und klicken Sie dann auf einem Popup kann der Rückruf Ihrer Anwendungs bereitzustellen.
 
 ```cppwinrt
 void register_callback()
@@ -409,15 +409,15 @@ void LaunchedFromNotification(HANDLE consoleHandle, INPUT_RECORD & buffer, DWORD
 }
 ```
 
-## <a name="how-to-test-the-example-application"></a>Wie Sie die Beispiel-Anwendung zu testen
+## <a name="how-to-test-the-example-application"></a>So testen Sie die Beispiel-Anwendung
 
-Erstellen Sie die Anwendung, und klicken Sie dann als Administrator die Registrierung und andere Ausführung von Code-Setup bewirken, dass mindestens einmal ausgeführt. Ob Sie es als Administrator ausführen, und drücken Sie dann ' t ', dazu führen, dass ein Popup angezeigt werden. Sie können dann die Schaltfläche **Rückruf ToastAndCallback** entweder direkt von der Popupbenachrichtigung Knacken nach oben oder über das Info-Center und Ihre Anwendung gestartet, instanziiert Co-Klasse und die **INotificationActivationCallback :: Aktivieren Sie** Methode ausgeführt.
+Erstellen Sie die Anwendung, und klicken Sie dann als Administrator für die Registrierung und andere Setup Ausführung von Code dazu führen, dass mindestens einmal ausführen. Gibt an, ob davon, ob Sie es als Administrator ausführen, und drücken Sie dann ' t ', dazu führen, dass ein Popup angezeigt werden. Sie können dann die Schaltfläche **Rückruf ToastAndCallback** entweder direkt aus der Popupbenachrichtigung, dass Knacken nach oben oder über das Info-Center und Ihrer Anwendung gestartet werden, instanziiert Co-Klasse und die **INotificationActivationCallback :: Aktivieren Sie** Methode ausgeführt.
 
 ## <a name="in-process-com-server"></a>In-Process-COM-server
 
-Die *ToastAndCallback* Beispiel-app über Funktionen als COM-Server lokal (oder Out-of-Process). Dies wird durch den [LocalServer32](/windows/desktop/com/localserver32) Windows-Registrierungsschlüssel angegeben, dass Sie verwenden, um die CLSID des der Co-Klasse zu registrieren. Ein lokaler COM-Server hostet die coclass(es) innerhalb einer ausführbaren Binärdatei (ein `.exe`).
+Die *ToastAndCallback* Beispiel-app über Funktionen als COM-Server lokal (oder Out-of-Process). Dies wird durch den [LocalServer32](/windows/desktop/com/localserver32) Windows-Registrierungsschlüssel angegeben, dass Sie verwenden, um die CLSID des der Co-Klasse zu registrieren. Ein lokaler com-Server hostet die coclass(es) innerhalb einer ausführbaren Binärdatei (ein `.exe`).
 
-Alternativ (und wohl mit höherer Wahrscheinlichkeit), Sie können auch Ihre coclass(es) innerhalb einer DLL-Bibliothek hosten (eine `.dll`). Ein COM-Server in Form einer DLL wird als in-Process-com-Server bezeichnet, und es wird angegeben, indem CLSIDs mithilfe des Schlüssels [InprocServer32](/windows/desktop/com/inprocserver32) Windows-Registrierung registriert wurden.
+Sie können auch (und wohl mit höherer Wahrscheinlichkeit) die Möglichkeit, Ihre coclass(es) innerhalb einer DLL-Bibliothek hosten (eine `.dll`). Ein COM-Server in Form von eine DLL-Datei wird als in-Process-com-Server bezeichnet und sind durch CLSIDs mithilfe des Schlüssels [InprocServer32](/windows/desktop/com/inprocserver32) Windows-Registrierung registriert wurden.
 
 ### <a name="create-a-dynamic-link-library-dll-project"></a>Erstellen eines Projekts dll-Bibliothek (DLL)
 
@@ -425,15 +425,15 @@ Die Aufgabe beim Erstellen eines in-Process-COM-Servers durch Erstellen eines ne
 
 ### <a name="set-project-properties"></a>Set-Projekteigenschaften
 
-Gehen Sie zum Projekt-Eigenschaft, die **Allgemeine** \> **Windows SDK-Version**, und wählen Sie **Alle Konfigurationen** und **Alle Plattformen**. Legen Sie die **Windows SDK-Version** *10.0.17134.0 (Windows 10, Version 1803)*, oder höher.
+Navigieren Sie zum Projekt-Eigenschaft, die **Allgemeine** \> **Windows SDK-Version**, und wählen Sie **Alle Konfigurationen** und **Alle Plattformen**. Legen Sie **Windows SDK-Version** *10.0.17134.0 (Windows 10, Version 1803)*, oder höher.
 
 Hinzufügen von Visual Studio-Unterstützung für C++ / WinRT zu Ihrem Projekt bearbeiten Ihrer `.vcxproj` Datei, suchen Sie `<PropertyGroup Label="Globals">` aus, und legen Sie innerhalb dieser Eigenschaftengruppe die Eigenschaft `<CppWinRTEnabled>true</CppWinRTEnabled>`.
 
-Da C++ / WinRT Features aus dem C ++ 17-Standard verwendet, Projekteigenschaft **C/C++-** > **Sprache** > **C++ Sprache Standard** in *ISO C ++ 17 Standard (/ Std: c ++ 17)*.
+Da C++ / WinRT Features aus dem C ++ 17-Standard verwendet, legen Sie die Projekteigenschaft **C/C++-** > **Sprache** > **C++ Sprache Standard** in *ISO C ++ 17 Standard (/ Std: c ++ 17)*.
 
 ### <a name="the-precompiled-header"></a>Die vorkompilierte Headerdatei
 
-Benennen Sie Ihr `stdafx.h` und `stdafx.cpp` , `pch.h` und `pch.cpp`bzw.. Projekteigenschaft **C/C++-** > **Vorkompilierte Header** > **Vorkompilierte Headerdatei** *pch.h*.
+Benennen Sie Ihre `stdafx.h` und `stdafx.cpp` auf `pch.h` und `pch.cpp`bzw.. Setzen Sie die Projekteigenschaft **C/C++-** > **Vorkompilierte Header** > **Vorkompilierte Headerdatei** *pch.h*.
 
 Suchen und Ersetzen Sie den gesamten `#include "stdafx.h"` mit `#include "pch.h"`.
 
@@ -451,9 +451,9 @@ Stellen Sie sicher, dass Sie nicht betroffen sind [Warum nicht Mein neue Projekt
 
 Open `dllmain.cpp`, und fügen Sie im Codebeispiel unten gezeigt hinzu.
 
-Wenn Sie bereits über eine DLL-Datei haben, die C++ implementiert / WinRT-Windows-Runtime-Klassen, und klicken Sie dann Sie bereits die unten angezeigte **DllCanUnloadNow** -Funktion müssen. Wenn Sie diese DLL Co-Klassen hinzufügen möchten, können Sie die Funktion **DllGetClassObject** hinzufügen.
+Wenn Sie bereits eine DLL-Datei verfügen, die implementiert C++ / WinRT-Windows-Runtime-Klassen, und klicken Sie dann Sie bereits die unten angezeigte **DllCanUnloadNow** -Funktion müssen. Wenn Sie diese DLL Co-Klassen hinzufügen möchten, können Sie die Funktion **DllGetClassObject** hinzufügen.
 
-Wenn keine vorhandenen [Windows-Runtime C++ Template Library (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) -Code, der mit kompatibel bleiben soll haben, dann können Sie die WRL-Teile der gezeigte Code entfernen.
+Wenn keine vorhandenen [Windows-Runtime C++ Template Library (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) -Code, der mit kompatibel bleiben soll haben, dann können Sie die WRL Teile der gezeigte Code entfernen.
 
 ```cppwinrt
 // dllmain.cpp

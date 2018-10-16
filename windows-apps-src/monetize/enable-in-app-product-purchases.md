@@ -1,28 +1,28 @@
 ---
-author: mcleanbyron
+author: Xansky
 Description: Whether your app is free or not, you can sell content, other apps, or new app functionality (such as unlocking the next level of a game) from right within the app. Here we show you how to enable these products in your app.
 title: Unterstützen des Kaufs von In-App-Produkten
 ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B
 keywords: UWP, Add-Ons, In-App-Käufe, IAPs Windows.ApplicationModel.Store
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 08/25/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1fd54d469898007f4a0435313a64629360816287
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: dcdedda655011cf700df2548140b312f4b0f817d
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "958463"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618149"
 ---
 # <a name="enable-in-app-product-purchases"></a>Unterstützen von In-App-Produktkäufen
 
 Sie können unabhängig davon, ob Ihre App kostenlos oder kostenpflichtig ist, Inhalte, andere Apps oder neue App-Funktionen (wie das Freischalten des nächsten Levels eines Spiels) direkt in der App verkaufen. Hier zeigen wir Ihnen, wie Sie diese Produkte in Ihrer App aktivieren können.
 
 > [!IMPORTANT]
-> Dieser Artikel beschreibt, wie Sie Mitglieder des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace verwenden, um In-App-Produktkäufe zu ermöglichen. Dieser Namespace wird nicht mehr mit neuen Funktionen aktualisiert, daher wird empfohlen, dass Sie stattdessen den [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) Namespace verwenden. Der **Windows.Services.Store**-Namespace unterstützt die neuesten Add-On-Typen, wie Store-verwaltete Endverbraucher-Add-Ons und Abonnements, und ist so gestaltet, dass er mit zukünftigen Arten von Produkten und Features kompatibel ist, die von Windows Dev Center und dem Store unterstützt werden. Der **Windows.Services.Store**-Namespace wurde in Windows10, Version 1607, eingeführt und kann nur in Projekten für die **Windows10 Anniversary Edition (10.0; Build 14393)** oder einer neueren Version in Visual Studio verwendet werden. Weitere Informationen zum Erwerb von innerhalb der app-Produkten mit dem Namespace **Windows.Services.Store** aktivieren finden Sie unter [in diesem Artikel](enable-in-app-purchases-of-apps-and-add-ons.md).
+> Dieser Artikel beschreibt, wie Sie Mitglieder des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace verwenden, um In-App-Produktkäufe zu ermöglichen. Dieser Namespace wird nicht mehr mit neuen Funktionen aktualisiert, daher wird empfohlen, dass Sie stattdessen den [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) Namespace verwenden. Der **Windows.Services.Store**-Namespace unterstützt die neuesten Add-On-Typen, wie Store-verwaltete Endverbraucher-Add-Ons und Abonnements, und ist so gestaltet, dass er mit zukünftigen Arten von Produkten und Features kompatibel ist, die von Windows Dev Center und dem Store unterstützt werden. Der **Windows.Services.Store**-Namespace wurde in Windows10, Version 1607, eingeführt und kann nur in Projekten für die **Windows10 Anniversary Edition (10.0; Build 14393)** oder einer neueren Version in Visual Studio verwendet werden. Weitere Informationen zum Aktivieren von in-app-Produktkäufe mit dem **Windows.Services.Store** -Namespace finden Sie [in diesem Artikel](enable-in-app-purchases-of-apps-and-add-ons.md).
 
 > [!NOTE]
 > In-App-Produkte können nicht in einer Testversion einer App angeboten werden. Kunden, die eine Testversion Ihrer App verwenden, können nur dann In-App-Produkte kaufen, wenn sie eine Vollversion der App kaufen.
@@ -97,6 +97,6 @@ Wenn Sie anhand von Belegen überprüfen möchten, ob ein Kunde einen In-App-Ein
 
 
 * [Käufe von konsumierbaren In-App-Produkten aktivieren](enable-consumable-in-app-product-purchases.md)
-* [Verwalten eines großen Katalogs mit In-App-Produkten](manage-a-large-catalog-of-in-app-products.md)
+* [Verwalten eines großen Katalogs von In-App-Produkten](manage-a-large-catalog-of-in-app-products.md)
 * [Überprüfen von Produktkäufen anhand von Belegen](use-receipts-to-verify-product-purchases.md)
 * [Store-Beispiel (zeigt Testversionen und In-App-Einkäufe)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)

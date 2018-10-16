@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: C7428551-4B31-4259-93CD-EE229007C4B8
 description: Verwenden Sie diese Methoden in der Microsoft Store-Übermittlungs-API, um Übermittlungen für Apps zu verwalten, die in Ihrem Windows Dev Center-Konto registriert wurden.
 title: Verwalten von App-Übermittlungen
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 04/30/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, App-Übermittlungen
 ms.localizationpriority: medium
-ms.openlocfilehash: db74614c9455bfeffb9cfa286e84f4de6d97f52d
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: f0edcde4916311a629d248b800320f6e1c596600
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832431"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617920"
 ---
 # <a name="manage-app-submissions"></a>Verwalten von App-Übermittlungen
 
@@ -358,7 +358,7 @@ Die Ressource hat die folgenden Werte.
 | notesForCertification           |  string  |   Enthält [Hinweise zur Zertifizierung](https://msdn.microsoft.com/windows/uwp/publish/notes-for-certification) für Ihre App.    |    
 | status           |   string  |  Der Status der Übermittlung. Folgende Werte sind möglich: <ul><li>None</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>      |    
 | statusDetails           |   object  | Eine [Ressource für Statusdetails](#status-details-object), die zusätzliche Details über den Status der Übermittlung enthält, einschließlich Fehlerinformationen.       |    
-| fileUploadUrl           |   string  | Der Shared Access Signature (SAS)-URI für das Hochladen der Pakete für die Übermittlung. Wenn Sie neue Pakete, Eintragsbilder oder Trailer-Dateien für die Übermittlung hinzufügen, müssen Sie das ZIP-Archiv, das die Pakete und Bilder enthält, zu dieser URI hochladen. Weitere Informationen finden Sie unter [Erstellen einer App-Übermittlung](#create-an-app-submission).       |    
+| fileUploadUrl           |   String  | Der Shared Access Signature (SAS)-URI für das Hochladen der Pakete für die Übermittlung. Wenn Sie neue Pakete, Eintragsbilder oder Trailer-Dateien für die Übermittlung hinzufügen, müssen Sie das ZIP-Archiv, das die Pakete und Bilder enthält, zu dieser URI hochladen. Weitere Informationen finden Sie unter [Erstellen einer App-Übermittlung](#create-an-app-submission).       |    
 | applicationPackages           |   array  | Ein Array von [Ressourcen für Anwendungspakete](#application-package-object), die Details über die einzelnen Pakete in der Übermittlung bereitstellen. |    
 | packageDeliveryOptions    | object  | Eine [Ressource für Paketübermittlungsoptionen](#package-delivery-options-object), die Einstellungen zu graduellen Paketrollouts und zu verpflichtenden Updates für die Übermittlung enthält.  |
 | enterpriseLicensing           |  string  |  Einer der [Werte für Enterprise-Lizenzierung](#enterprise-licensing), die das Verhalten der Enterprise-Lizenzierung für die App angeben.  |    

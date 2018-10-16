@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: dd4e0ced4de2419858424a88f5fa5ce66f5b4286
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4563426"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4620606"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a>Erstellen einer universellen Windows-App mit mehreren Instanzen
 
@@ -31,7 +31,7 @@ Wenn Sie eine neue Multiinstanz-Anwendung erstellen, können Sie die **Mehrfachi
 
 Es werden zwei Vorlagen installiert: **UWP-Apps mit mehreren Instanzen**, die die Vorlage für die Erstellung einer Mulitiinstanz-App bereitstellt sowie **Multi-Instance Redirection UWP app** (UWP-App mit Umleitung für mehrere Instanzen), die zusätzlich die Möglichkeit bietet, eine neue Instanz zu starten oder selektiv eine Instanz zu aktivieren, die bereits gestartet wurde. Wenn beispielsweise ein Dokument in nur einer einzelnen Instanz bearbeitet werden soll, verschieben Sie die Instanz, in der die Datei geöffnet ist, in den Vordergrund, statt eine neue Instanz zu erstellen.
 
-Beide Vorlagen fügen `SupportsMultipleInstances` auf die `package.appxmanifest` Datei. Beachten Sie das Namespacepräfix `desktop4` und `iot2`: nur Projekte, die den Desktop als Ziel oder Internet der Dinge (IoT)-Projekte, Unterstützung für die multiinstanzerstellung.
+Beide Vorlagen fügen `SupportsMultipleInstances` auf die `package.appxmanifest` Datei. Beachten Sie das Namespacepräfix `desktop4` und `iot2`: nur Projekte, die auf den Desktop abzielen oder Internet der Dinge (IoT)-Projekte, bieten Unterstützung für die multiinstanzerstellung.
 
 ```xml
 <Package
@@ -62,7 +62,7 @@ Um es in Aktion zu sehen, sehen Sie sich ein Video zum Erstellen von UWP-apps mi
 
 Die Vorlage **Multi-Instance Redirection UWP app** (UWP-App mit Umleitung für mehrere Instanzen) fügt der Datei „Package.appxmanifest” nicht nur wie oben beschrieben `SupportsMultipleInstances` hinzu, sondern fügt Ihrem Projekt auch die Funktion **Program.cs** (oder **Program.cpp**, wenn Sie die C++-Version der Vorlage verwenden), die eine `Main()`-Funktion enthält. Die Logik für die Umleitung der Aktivierung wird in die `Main`-Funktion eingefügt. Nachfolgend finden Sie die Vorlage für **Program.cs** .
 
-Die [**AppInstance.RecommendedInstance**](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) -Eigenschaft stellt die Shell bereitgestellten bevorzugte Instanz für diese aktivierungsanforderung dar, sofern vorhanden (oder `null` kein Computerkonto vorhanden ist). Wenn eine Einstellung von die Shell bereitgestellt wird, dann Sie können können Aktivierung an die Instanz umleiten und kann ignoriert werden, wenn Sie sich entscheiden.
+Die Eigenschaft [**AppInstance.RecommendedInstance**](/uwp/api/windows.applicationmodel.appinstance.recommendedinstance) stellt die Shell bereitgestellten bevorzugte Instanz für diese aktivierungsanforderung dar, sofern vorhanden (oder `null` kein Computerkonto vorhanden ist). Wenn die Shell eine Einstellung enthält, dann Sie können können Aktivierung an die Instanz umleiten oder kann ignoriert werden, wenn Sie auswählen.
 
 ``` csharp
 public static class Program

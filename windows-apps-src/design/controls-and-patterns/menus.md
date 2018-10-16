@@ -17,11 +17,11 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 20b6f54f39be116ad77cb5a179ff8c3d188eb8c4
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4574404"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617247"
 ---
 # <a name="menus-and-context-menus"></a>Menüs und Kontextmenüs
 
@@ -29,9 +29,9 @@ Menüs und Kontextmenüs zeigen auf Anforderung des Benutzers eine Liste von Bef
 
 ![Beispiel für ein typisches Kontextmenü](images/contextmenu_rs2_icons.png)
 
-| **Windows-UI-Bibliothek herunterladen** |
+| **Abrufen der Windows-UI-Bibliothek** |
 | - |
-| Dieses Steuerelement ist Bestandteil der Windows-UI-Bibliothek, NuGet-Paket, das neue Steuerelemente und UI-Features für UWP-apps enthält. Weitere Informationen, einschließlich installationsanweisungen finden Sie unter der [Übersicht über die Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/). |
+| Dieses Steuerelement ist Bestandteil der Windows-UI-Bibliothek NuGet-Paket, das neue Steuerelemente und UI-Features für UWP-apps enthält. Weitere Informationen einschließlich installationsanweisungen finden Sie in der [Übersicht über die Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/). |
 
 | **Plattform-APIs** | **Windows-UI-Bibliothek APIs** |
 | - | - |
@@ -45,9 +45,9 @@ Menüs und Kontextmenüs sind für das Organisieren von Befehlen. Verwenden Sie 
 
 ### <a name="menubar-vs-menuflyout"></a>Menüleiste im Vergleich zu MenuFlyout
 
-Um ein Menü in einem Flyout auf ein UI-Element auf Canvas angefügt anzuzeigen, verwenden Sie das MenuFlyout-Steuerelement zum Hosten Ihrer Menüelemente. Sie können ein Flyout "Menü" als eine reguläre Menü oder ein Kontextmenü aufrufen. Ein Flyout "Menü" hostet ein einziges auf oberster Ebene Menü (und optional Untermenüs).
+Um ein Menü in einem Flyout auf ein UI-Element auf Canvas angefügte anzuzeigen, verwenden Sie das MenuFlyout-Steuerelement zum Hosten Ihrer Menüelemente. Sie können ein Flyout "Menü" als reguläre Menü oder als ein Kontextmenü aufrufen. Ein Flyout "Menü" hostet ein einziges auf oberster Ebene Menü (und optional Untermenüs).
 
-Um eine Reihe von mehreren Menüs der obersten Ebene in einer horizontalen Zeile anzuzeigen, verwenden Sie eine Menüleiste. In der Regel positionieren Sie die Menüleiste am oberen Rand des app-Fensters.
+Verwenden Sie zum Anzeigen eines Satzes von mehreren Menüs der obersten Ebene in einer horizontalen Zeile eine Menüleiste. In der Regel positionieren Sie die Menüleiste am oberen Rand des app-Fensters.
 
 ### <a name="menubar-vs-commandbar"></a>Menüleiste im Vergleich zu CommandBar
 
@@ -107,7 +107,7 @@ Erwägen Sie in folgenden Fällen Symbole für die Menüpunkte einzurichten:
 
 - Die am häufigsten verwendete Elemente.
 - Menüelemente, dessen Symbol bekannte oder Standardsymbole ist.
-- Menüelemente, dessen Symbol Ihrer Funktionen veranschaulicht.
+- Menüelemente, dessen Symbol veranschaulicht was der Befehl führt.
 
 Fühlen Sie sich nicht dazu verpflichtet, Befehle mit einem Symbol zu versehen, für die keine Standardsymbole vorhanden sind. Kryptische Symbole sind nicht hilfreich, machen das Menü unübersichtlich und hindern Benutzer daran, wichtige Menüpunkte einfach aufzufinden.
 
@@ -131,9 +131,9 @@ Fühlen Sie sich nicht dazu verpflichtet, Befehle mit einem Symbol zu versehen, 
 > [!TIP]
 > Die Größe des Symbols in einem MenuFlyoutItem ist 16x16px. Wenn Sie SymbolIcon, FontIcon oder PathIcon verwenden, wird das Symbol automatisch auf die richtige Größe mit verlustfrei skaliert. Achten Sie bei der Verwendung von BitmapIcon darauf, dass Ihr Element 16x16px groß sein muss.  
 
-## <a name="create-a-menu-flyout-or-a-context-menu"></a>Erstellen Sie ein Menü-Flyout oder ein Kontextmenü
+## <a name="create-a-menu-flyout-or-a-context-menu"></a>Erstellen Sie ein Flyout "Menü" oder ein Kontextmenü
 
-Um ein Menü-Flyout oder ein Kontextmenü zu erstellen, verwenden Sie die [MenuFlyout-Klasse](https://msdn.microsoft.com/library/windows/apps/dn299030). Sie definieren den Inhalt des Menüs, indem Sie dem MenuFlyout die Objekte [MenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutitem.aspx), [ToggleMenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.togglemenuflyoutitem.aspx) und [MenuFlyoutSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutseparator.aspx) hinzufügen.
+Um ein Flyout "Menü" oder ein Kontextmenü erstellen, verwenden Sie die [MenuFlyout-Klasse](https://msdn.microsoft.com/library/windows/apps/dn299030). Sie definieren den Inhalt des Menüs, indem Sie dem MenuFlyout die Objekte [MenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutitem.aspx), [ToggleMenuFlyoutItem](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.togglemenuflyoutitem.aspx) und [MenuFlyoutSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.menuflyoutseparator.aspx) hinzufügen.
 
 Diese Objekte erfüllen folgende Zwecke:
 
@@ -219,14 +219,14 @@ Einfach ausgeblendete Steuerelemente wie Menüs, Kontextmenüs und andere Flyout
 
 ## <a name="create-a-menu-bar"></a>Erstellen Sie eine Menüleiste
 
-> **Vorschau**: Menüleiste erfordert, das [neueste Windows 10 Insider Preview-Build und SDK](https://insider.windows.com/for-developers/) oder der [Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/).
+> **Vorschau**: Menüleiste erfordert die [neuesten Windows 10 Insider Preview-Build und SDK](https://insider.windows.com/for-developers/) oder der [Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/).
 
-Sie verwenden die gleichen Elementen Menüs in einer Menüleiste wie in einem Flyout "Menü" zu erstellen. Allerdings gruppieren anstelle von Gruppierung von MenuFlyoutItem-Objekten in einer MenuFlyout, Sie können in einem MenuBarItem-Element. Jeder MenuBarItem wird als ein Menü der obersten Ebene der Menüleiste hinzugefügt.
+Sie verwenden die gleichen Elementen, erstellen Sie Menüs in einer Menüleiste wie in einem Flyout "Menü". Allerdings gruppieren anstelle von Gruppierung von MenuFlyoutItem-Objekten in einer MenuFlyout, Sie können in einem MenuBarItem-Element. Jeder MenuBarItem wird als ein Menü der obersten Ebene der Menüleiste hinzugefügt.
 
 ![Beispiel für eine Menüleiste](images/menu-bar-submenu.png)
 
 > [!NOTE]
-> In diesem Beispiel wird veranschaulicht, wie die UI-Struktur erstellt, aber Implementierung einer der Befehle wird nicht angezeigt.
+> Dieses Beispiel zeigt nur so erstellen Sie die Struktur der Benutzeroberfläche jedoch Implementierung einer der Befehle wird nicht angezeigt.
 
 ```xaml
 <MenuBar>

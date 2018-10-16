@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um Xbox Live Integritätsdaten abzurufen.
 title: Abrufen von Xbox Live Integritätsdaten
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 06/04/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, Uwp, Store-Diensten, Microsoft Store-Analyse-API, Xbox Live-Analyse, Integrität, Clientfehler
 ms.localizationpriority: medium
-ms.openlocfilehash: 2882ea7759068777d1a8816e3833cbd8c6325c8a
-ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
-ms.translationtype: HT
+ms.openlocfilehash: e7802db965ee4d1515090270125430871544d9f1
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "1976255"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618745"
 ---
 # <a name="get-xbox-live-health-data"></a>Abrufen von Xbox Live Integritätsdaten
 

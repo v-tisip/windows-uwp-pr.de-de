@@ -14,11 +14,11 @@ f1_keywords:
 - vs.storeassociationwizard
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ce80206823694f06e4aa5c3480b4dcb30c4f95c
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4571917"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616964"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a>Verpacken einer UWP-App mit Visual Studio
 
@@ -29,7 +29,7 @@ In Windows 10 können Sie ein app-Paket oder app-Bündel, eine vollständige app
 ## <a name="types-of-app-packages"></a>App-Pakettypen
 
 - **App-Paket (.appx oder .msix)**  
-    Eine Datei, die Ihre App in einem Format enthält, das auf einem Gerät quergeladen werden kann. Jeder einzelnen app-Paketdatei von Visual Studio erstellte ist **nicht** an Dev Center übermittelt werden soll und für das querladen und nur zu Testzwecken verwendet werden soll. Wenn Sie Ihre App an Dev Center übermitteln möchten, verwenden Sie die App-Paketuploaddatei.  
+    Eine Datei, die Ihre App in einem Format enthält, das auf einem Gerät quergeladen werden kann. Jeder einzelnen app-Paketdatei von Visual Studio erstellte ist **nicht** dafür vorgesehen, an Dev Center übermittelt werden und für das querladen und nur zu Testzwecken verwendet werden soll. Wenn Sie Ihre App an Dev Center übermitteln möchten, verwenden Sie die App-Paketuploaddatei.  
 
 - **App-Bündel (.appxbundle oder .msixbundle)**  
     Ein App-Bündel ist ein Pakettyp, der mehrere App-Pakete enthalten kann, von denen jedes so erstellt wurde, dass es eine bestimmte Gerätearchitektur unterstützt. Beispielsweise kann ein App-Bündel drei separate App-Pakete für die Konfigurationen x86, x64 und ARM enthalten. App-Bündel sollten nach Möglichkeit generiert werden, da sie ermöglichen, dass Ihre App auf den verschiedensten Geräten verfügbar ist.  
@@ -102,7 +102,7 @@ Verwenden Sie dazu den Assistenten **App-Pakete erstellen**. Führen Sie die fol
 4.  Melden Sie sich mit Ihrem Entwicklerkonto beim Windows Dev Center an. Wenn Sie noch kein Entwicklerkonto besitzen, hilft Ihnen der Assistent bei der Erstellung.
 5.  Wählen Sie den App-Namen für das Paket aus, oder reservieren Sie einen neuen Namen, wenn Sie noch kein Paket im Windows Dev Center-Portal reserviert haben.  
     ![Dialogfeld „App-Pakete erstellen“ mit Auswahl des App-Namens](images/packaging-screen4.jpg)
-6.  Stellen Sie sicher, dass Sie im Dialogfeld **Auswählen und Konfigurieren von Paketen** alle drei Architekturkonfigurationen (x86, x64 und ARM) auswählen, um zu gewährleisten, dass Ihre App auf einer breiten Palette von Geräten bereitgestellt werden kann. Wählen Sie im Listenfeld **App-Bündel erstellen** die Option **Immer**. Ein app-Bündel (.appxbundle) wird über eine einzelne app-Paketdatei bevorzugt, da es enthält eine Sammlung von app-Pakete, die für jeden Prozessor-Architekturtyp konfiguriert sind. Wenn Sie das App-Bündel generieren, wird es zusammen mit Informationen für das Debugging und die Absturzanalyse in die endgültige App-Paketuploaddatei (.appxupload) mit aufgenommen. Wenn Sie nicht sicher sind, welche Architektur(en) Sie auswählen sollen, oder wenn Sie mehr darüber erfahren möchten, welche Architekturen von verschiedenen Geräten verwendet werden, finden Sie weitere Informationen unter [App-Paketarchitekturen](https://docs.microsoft.com/windows/uwp/packaging/device-architecture).  
+6.  Stellen Sie sicher, dass Sie im Dialogfeld **Auswählen und Konfigurieren von Paketen** alle drei Architekturkonfigurationen (x86, x64 und ARM) auswählen, um zu gewährleisten, dass Ihre App auf einer breiten Palette von Geräten bereitgestellt werden kann. Wählen Sie im Listenfeld **App-Bündel erstellen** die Option **Immer**. Ein app-Bündel (.appxbundle) wird über eine einzelne app-Paketdatei bevorzugt, da es enthält eine Sammlung von app-Pakete für jeden Prozessor-Architekturtyp konfiguriert sind. Wenn Sie das App-Bündel generieren, wird es zusammen mit Informationen für das Debugging und die Absturzanalyse in die endgültige App-Paketuploaddatei (.appxupload) mit aufgenommen. Wenn Sie nicht sicher sind, welche Architektur(en) Sie auswählen sollen, oder wenn Sie mehr darüber erfahren möchten, welche Architekturen von verschiedenen Geräten verwendet werden, finden Sie weitere Informationen unter [App-Paketarchitekturen](https://docs.microsoft.com/windows/uwp/packaging/device-architecture).  
     ![Dialogfeld „App-Pakete erstellen“ mit Paketkonfiguration](images/packaging-screen5.jpg)
 
 

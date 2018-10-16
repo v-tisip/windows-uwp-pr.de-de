@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: D1F233EC-24B5-4F84-A92F-2030753E608E
 description: Verwenden Sie diese Methode in der Microsoft Store-Sammlungs-API, um alle Produkte, die sich im Besitz eines Kunden befinden, für Apps abzurufen, die Ihrer Azure AD-Client-ID zugeordnet sind. Sie können die Abfrage auf ein bestimmtes Produkt beschränken oder weitere Filter verwenden.
 title: Produktabfrage
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/16/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Sammlungs-API, Produkte anzeigen
 ms.localizationpriority: medium
-ms.openlocfilehash: 696d2c0ca4f8d0d92bef66efb9d551a2f19d2aa3
-ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
-ms.translationtype: HT
+ms.openlocfilehash: 066660c307be9f3592aa38cb21a6e00cd960aa73
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
-ms.locfileid: "1664966"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618835"
 ---
 # <a name="query-for-products"></a>Produktabfrage
 

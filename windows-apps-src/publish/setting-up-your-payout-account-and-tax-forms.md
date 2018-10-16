@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f7359b2ae40e9b53d5ab73ee93402b11beab629
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4569515"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616439"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Einrichten von Auszahlungskonten und Steuerformularen.
 
@@ -27,7 +27,7 @@ Falls Sie ausschließlich kostenlose Apps anbieten möchten (und keine In-App-Ei
 > [!NOTE]
 > In [bestimmten Märkten](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) können Entwickler nur kostenlose Apps übermitteln. Wenn Ihr Konto in einem dieser Märkte registriert ist, steht die Option zum Einrichten eines Auszahlungskontos nicht zur Verfügung.
 
-Nachdem Sie [Ihr Entwicklerkonto eingerichtet](opening-a-developer-account.md)haben, Dinge gibt es zwei, die Sie ausführen müssen, bevor Sie apps (oder -Add-Ons) verkaufen können im Microsoft Store:
+Nachdem Sie [Ihr Entwicklerkonto eingerichtet](opening-a-developer-account.md)haben, gibt es zwei Dinge, die Sie ausführen müssen, bevor Sie apps (oder -Add-Ons) verkaufen können im Microsoft Store:
 
 -   [Einrichten eines Auszahlungskontos](#payout-account)
 -   [Ausfüllen der Steuerformulare](#tax-forms)
@@ -125,7 +125,7 @@ Berücksichtigen Sie auch folgende Punkte, um sicherzustellen, dass Ihre Auszahl
 
 ## <a name="tax-forms"></a>Steuerformulare
 
-Nachdem Sie [für ein Entwicklerkonto registriert](opening-a-developer-account.md) haben, und Sie Ihr [auszahlungskonto richten](#payout-account), können Sie Ihr *Steuerprofil* für den Microsoft Store erstellen, indem Sie die folgenden Schritte:
+Nachdem Sie Ihr [auszahlungskonto](#payout-account)einrichten und [für ein Entwicklerkonto registriert haben](opening-a-developer-account.md) , können Sie Ihr *Steuerprofil* für den Microsoft Store erstellen, indem Sie die folgenden Schritte durchführen:
 
 -   Angeben des Wohnsitzlandes und der Staatsangehörigkeit
 -   Ausfüllen der entsprechenden Steuerformulare
@@ -133,7 +133,7 @@ Nachdem Sie [für ein Entwicklerkonto registriert](opening-a-developer-account.m
 Sie können die Steuerformulare im Dashboard elektronisch ausfüllen und übermitteln. In den meisten Fällen müssen keine Formulare ausgedruckt und per Post gesendet werden.
 
 > [!IMPORTANT]
-> In den verschiedenen Ländern und Regionen gelten unterschiedliche Steuergesetze. Die genaue Höhe der zu zahlenden Steuern hängt von den Ländern und Regionen ab, in denen Sie Ihre Apps verkaufen. In der [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) sehen Sie, in welchen Ländern Microsoft für Sie Verkaufs- und Nutzungssteuern überweist. In anderen Ländern müssen Sie u.U. je nachdem, wo Sie registriert sind, Verkaufs- und Nutzungssteuern direkt an die örtliche Steuerbehörde überweisen. Des Weiteren müssen die Erlöse aus Ihren App-Verkäufen unter Umständen als Einkommen versteuert werden. Wir empfehlen Ihnen nachdrücklich, wenden Sie sich an die zuständige Behörde in Ihrem Land oder Region, mit denen sich am besten Sie die richtigen Steuerinformationen für Ihre Microsoft Store-entwickleraktivitäten zu ermitteln kann.
+> In den verschiedenen Ländern und Regionen gelten unterschiedliche Steuergesetze. Die genaue Höhe der zu zahlenden Steuern hängt von den Ländern und Regionen ab, in denen Sie Ihre Apps verkaufen. In der [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) sehen Sie, in welchen Ländern Microsoft für Sie Verkaufs- und Nutzungssteuern überweist. In anderen Ländern müssen Sie u.U. je nachdem, wo Sie registriert sind, Verkaufs- und Nutzungssteuern direkt an die örtliche Steuerbehörde überweisen. Des Weiteren müssen die Erlöse aus Ihren App-Verkäufen unter Umständen als Einkommen versteuert werden. Wir empfehlen Ihnen, wenden Sie sich an die zuständige Behörde in Ihrem Land oder Region, mit denen am besten Sie die richtigen Steuerinformationen für Ihre Microsoft Store-entwickleraktivitäten zu ermitteln kann.
 
  
 **So füllen Sie Ihr Steuerprofil aus**
@@ -148,7 +148,7 @@ Sie können die Steuerformulare im Dashboard elektronisch ausfüllen und übermi
 4.  Beantworten Sie die Frage bezüglich der amerikanischen Staatsbürgerschaft und des Wohnsitzes in den USA, und klicken Sie dann auf **Weiter**.
 5.  Bestätigen Sie Ihren Namen und Ihre Adressinformationen zu Steuerzwecken, wenn diese angezeigt werden.
 
-Daraufhin werden elektronische Versionen der Steuerformulare angezeigt, die Sie ausfüllen müssen. – Unabhängig von Ihrem Wohnsitzland oder ihrer Staatsangehörigkeit – müssen Sie die Steuerformulare für apps oder Add-ons über den Microsoft Store verkaufen USA ausfüllen. Entwickler, die bestimmte Kriterien für den Wohnsitz USA erfüllen, müssen ein IRS W-9-Formular ausfüllen. Entwickler außerhalb der USA müssen ein IRS W-8-Formular ausfüllen. Sie können diese Formulare online ausfüllen, wenn Sie Ihr Steuerprofil angeben.
+Daraufhin werden elektronische Versionen der Steuerformulare angezeigt, die Sie ausfüllen müssen. – Unabhängig von Ihrem Wohnsitzland oder ihrer Staatsangehörigkeit – müssen Sie Steuerformulare für apps oder Add-ons über den Microsoft Store verkaufen USA ausfüllen. Entwickler, die bestimmte Kriterien für den Wohnsitz USA erfüllen, müssen ein IRS W-9-Formular ausfüllen. Entwickler außerhalb der USA müssen ein IRS W-8-Formular ausfüllen. Sie können diese Formulare online ausfüllen, wenn Sie Ihr Steuerprofil angeben.
 
 Eine US-amerikanische Steueridentifikationsnummer (Individual Taxpayer Identification Number, ITIN) ist nicht erforderlich, um Zahlungen von Microsoft zu erhalten oder die Vorteile eines Steuerabkommens in Anspruch zu nehmen.
 

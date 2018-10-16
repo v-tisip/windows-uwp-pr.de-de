@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 49ac0b2094b17120af8a0c85505cd03af389f1f4
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4567990"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618935"
 ---
 # <a name="segoe-mdl2-icons"></a>Segoe MDL2-Symbole
 
@@ -59,7 +59,7 @@ Wenn Sie ein Glyphen der Schriftart **Segoe MDL2 Assets** verwenden möchten, da
 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;"/>
 ```
 
-Sie können auch die statische Ressource `SymbolThemeFontFamily` auf **Segoe MDL2 Assets**, statt die Schriftart nach Namen anzugeben:
+Sie können auch die statische Ressource `SymbolThemeFontFamily` **Segoe MDL2 Assets**, anstatt die Schriftart anhand des Namens Zugriff auf:
 ```xaml
 <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE700;"/>
 ```
@@ -2366,7 +2366,7 @@ Beachten Sie zudem, dass die Schriftart **Segoe MDL2-Ressourcen** viel mehr Symb
  </tr>
 <tr><td><img src="images/segoe-mdl/E9D5.png" width="32" height="32" alt="CheckList" /></td>
   <td>E9D5</td>
-  <td>Prüfliste</td>
+  <td>Prüfliste für die</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E9D9.png" width="32" height="32" alt="Diagnostic" /></td>
   <td>E9D9</td>

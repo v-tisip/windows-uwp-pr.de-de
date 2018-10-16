@@ -15,15 +15,15 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 5bb6ed36c772e5ae80a3cb801b4b6b36bb1ab18c
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4566046"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618188"
 ---
 # <a name="pivot"></a>Pivot
 
-Das [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) -Steuerelement kann zwischen einer kleinen Gruppe Inhaltsabschnitte Touch Wischen.
+Das [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) -Steuerelement kann zwischen eine kleine Menge von Inhaltsabschnitte Touch Wischen.
 
 > **Wichtige APIs**: [Pivot-Klasse](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [NavigationView-Klasse](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
 
@@ -34,7 +34,7 @@ Das [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) -
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p>Wenn Sie die <strong style="font-weight: semi-bold">XAML-Steuerelementekatalog</strong> -app installiert haben, klicken Sie hier, um <a href="xamlcontrolsgallery:/item/Pivot">die app zu öffnen und das Pivot-Steuerelement in Aktion zu sehen</a>.</p>
+    <p>Wenn Sie die <strong style="font-weight: semi-bold">XAML-Steuerelementekatalog</strong> -app installiert haben, klicken Sie hier, um <a href="xamlcontrolsgallery:/item/Pivot">die app zu öffnen und finden Sie unter das Pivot-Steuerelement in Aktion zu sehen</a>.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">Erwerben Sie die XAML-Steuerelementekatalog-App (Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics">Erwerben Sie den Quellcode (GitHub)</a></li>
@@ -43,7 +43,7 @@ Das [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) -
 </tr>
 </table>
 
-Das Pivot-Steuerelement, genau wie [NavigationView](navigationview.md), unterstreicht das ausgewählte Element.
+Das Pivot-Steuerelement, genau wie [NavigationView](navigationview.md)unterstreicht das ausgewählte Element.
 
 ![Standardfokus als Unterstrich des ausgewählten Headers](images/pivot_focus_selectedHeader.png)
 
@@ -51,18 +51,18 @@ Das Pivot-Steuerelement, genau wie [NavigationView](navigationview.md), unterstr
 
 Um allgemeine oberen Navigationsleiste und Registerkarten Muster zu erreichen, empfehlen wir die Verwendung von [NavigationView](navigationview.md), die automatisch an verschiedene Bildschirmgrößen anpasst und für eine umfassendere Anpassung ermöglicht.
 
-Jedoch, wenn Ihre Navigation Touch-Lesegerät erforderlich ist, empfehlen wir die Verwendung Pivot.
+Jedoch, wenn Ihre Navigation Touch Wischen erforderlich ist, empfehlen wir die Verwendung Pivot.
 
 Die wichtigsten Unterschiede zwischen den Steuerelementen NavigationView und Pivot gibt das Standardverhalten Überlauf und die Navigation API:
 
-- Pivot-Karussells Überlauf, die Objekte, verwendet NavigationView eine Dropdown-Menü Liste Überlauf, damit Benutzer alle Elemente sehen können.
-- Pivot steuert die Navigation zwischen Inhaltsabschnitte, während NavigationView mehr Kontrolle über das Verhalten ermöglicht.
+- Pivot-Karussells Überlauf, die Elemente, während NavigationView eine Dropdown-Menü "Liste verwendet overflow, damit Benutzer alle Elemente sehen können.
+- Pivot steuert die Navigation zwischen Inhaltsabschnitte, während NavigationView mehr Kontrolle über Navigationsverhalten ermöglicht.
 
 ## <a name="use-navigationview-instead-of-pivot"></a>Pivot anstelle von NavigationView
 
 Wenn Benutzeroberfläches Ihrer app das Pivot-Steuerelement verwendet, können Sie Pivot in NavigationView durch den folgenden Code konvertieren.
 
-Dieser XAML-Code erstellt ein NavigationView mit 3 Inhaltsbereichen, wie im Beispiel Pivot erstellen [ein Pivot-Steuerelement](#create-a-pivot-control).
+Dieser XAML-Code erstellt ein NavigationView mit 3 Inhaltsbereichen, wie im Beispiel Pivot in [ein Pivot-Steuerelement erstellen](#create-a-pivot-control).
 
 ```xaml
 <NavigationView x:Name="rootNavigationView" Header="Category Title"
@@ -87,7 +87,7 @@ Dieser XAML-Code erstellt ein NavigationView mit 3 Inhaltsbereichen, wie im Beis
 </Page>
 ```
 
-NavigationView bietet mehr Kontrolle über die Navigation zum Anpassen und zugehörige CodeBehind erfordert. Um den oben genannten XAML-Code hinzugefügt werden, verwenden Sie die folgenden Code-Behind-Datei:
+NavigationView bietet mehr Kontrolle über die Navigation zum Anpassen und entsprechende Code-Behind erfordert. Um den oben genannten XAML-Code hinzugefügt werden, verwenden Sie die folgende Code-Behind-Datei:
 
 ```csharp
 private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
@@ -116,7 +116,7 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 }
 ```
 
-Dieser Code wird das Pivot-Steuerelement integrierte Navigationsfunktionalität, abzüglich der Touch-Lesegerät Erfahrung zwischen Inhaltsabschnitte imitiert. Wie Sie sehen können, könnten Sie einige Punkte, einschließlich der animierten Übergang Navigation Parameter und Stapel Funktionen auch anpassen.
+Dieser Code wird das Pivot-Steuerelement integrierte Navigationsfunktionalität abzüglich der Touch-Lesegerät Erfahrung zwischen Inhaltsabschnitte imitiert. Wie Sie sehen können, könnten Sie einige Punkte, einschließlich der animierten Übergang, Navigation Parameter und Stapel Funktionen auch anpassen.
 
 ## <a name="create-a-pivot-control"></a>Erstellen eines Pivot-Steuerelements
 

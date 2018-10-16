@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 4920D262-B810-409E-BA3A-F68AADF1B1BC
 description: Verwenden Sie die Java-Codebeispiele in diesem Abschnitt, um mehr über die Verwendung der Microsoft Store-Übermittlungs-API zu erfahren.
 title: 'Java-Beispiel: Übermittlungen für Apps, Add-Ons und Flights'
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Codebeispiele, Java
 ms.localizationpriority: medium
-ms.openlocfilehash: efbf5e075737a1611e1114c82c1df982fe4751c2
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: e058e456b16b5415984e6cf8de0a0fdb68159f07
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654449"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616633"
 ---
 # <a name="java-sample-submissions-for-apps-add-ons-and-flights"></a>Java-Beispiel: Übermittlungen für Apps, Add-Ons und Flights
 

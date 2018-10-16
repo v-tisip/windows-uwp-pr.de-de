@@ -12,11 +12,11 @@ keywords: Windows10, UWP, Titelleiste
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 7c3e0e6ec7331e860c9153e2a2e29a51fb5848bd
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4569558"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618476"
 ---
 # <a name="designing-for-sets"></a>Entwerfen für Sets
 
@@ -119,7 +119,7 @@ Wenn Sie Inhalte oder Funktionalität in der benutzerdefinierten Titelleisten-UI
 
 Um sicherzustellen, dass Ihr App-Symbol in einem Set optimal aussieht, sollten Sie ein alternatives, nicht belegtes Symbol für Ihre App bereitstellen. (Das auf der Registerkarte Ihrer App verwendete App-Symbol ist das gleiche Symbol, das in der Taskleiste verwendet wird.) Der Zweck des alternativen Symbols ist, vor jeder Hintergrundfarbe gut auszusehen. Das alternative Symbol wird verwendet, falls verfügbar.
 
-Geben Sie in Ihrem App-Manifest zusätzlich zu Ihrem regulären Symbol ein anderes unbelegtes Symbol an. Weitere Informationen finden Sie in der [App-Symbole und Logos](/windows/uwp/design/style/app-icons-and-logos). Das anzugebende Symbol wird als "Target-Size List Assets without Plate" im Abschnitt [Weitere Informationen zu app-Symbolressourcen](/windows/uwp/design/style/app-icons-and-logos#more-about-app-icon-assets) des Artikels dokumentiert.
+Geben Sie in Ihrem App-Manifest zusätzlich zu Ihrem regulären Symbol ein anderes unbelegtes Symbol an. Weitere Informationen finden Sie in der [App-Symbole und Logos](/windows/uwp/design/style/app-icons-and-logos). Das anzugebende Symbol wird als "Target-Size List Assets without Plate" im Abschnitt [Weitere Informationen zur app Symbolressourcen](/windows/uwp/design/style/app-icons-and-logos#more-about-app-icon-assets) des Artikels dokumentiert.
 
 Wenn Sie im App-Manifest kein alternatives Symbol angeben, wird das System das Kachelsymbol wieder mit der Registerkartenfarbe versehen und es so verwenden.
 

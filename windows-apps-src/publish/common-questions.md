@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 89745d0bb93b76e4497d6cb5c57f4e6c091c8bd7
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4570223"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616193"
 ---
 # <a name="common-questions-about-ad-campaigns"></a>Häufige Fragen zu Anzeigenkampagnen
 
@@ -41,7 +41,7 @@ Wenn Sie eine der Standardanzeigenvorlagen verwenden, können Sie die Größe, d
 
 ### <a name="where-will-my-ad-appear"></a>Wo erscheint meine Anzeige?
 
-Ihre Anzeige erscheint in Apps, die der Altersfreigabe und der Betriebssystemversion Ihrer App entsprechen. Sie legen diese Eigenschaften, wenn Sie Ihre app im Microsoft Store veröffentlichen. Für „universelle” Kampagnen werden Ihre Anzeigen auch in MSN.com, Outlook.com, Skype und anderen Microsoft-Premium-Eigenschaften angezeigt.
+Ihre Anzeige erscheint in Apps, die der Altersfreigabe und der Betriebssystemversion Ihrer App entsprechen. Sie legen diese Eigenschaften fest, wenn Sie Ihre app im Microsoft Store veröffentlichen. Für „universelle” Kampagnen werden Ihre Anzeigen auch in MSN.com, Outlook.com, Skype und anderen Microsoft-Premium-Eigenschaften angezeigt.
 
 Anzeigenkampagnen werden derzeit in folgenden Ländern und Regionen unterstützt:
 

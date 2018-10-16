@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Beschreibt das erweiterte JSON-Datenschema für Store-Produkte im Windows.Services.Store-Namespace.
 title: Datenschemata für Store-Produkte
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 09/26/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP, ExtendedJsonData, Store-Produkte, Schema
 ms.localizationpriority: medium
-ms.openlocfilehash: 053391e78b4356e7e8042ba7864d99f1c95b2aad
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 77faa88524f348736c4c997dcd18ded200e9fd86
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1673827"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4621607"
 ---
 # <a name="data-schemas-for-store-products"></a>Datenschemata für Store-Produkte
 
@@ -79,5 +79,5 @@ Das folgende Schema beschreibt die JSON-formatierte Zeichenfolge die von [StoreP
 * [Abrufen von Produktinformationen zu Apps und Add-Ons](get-product-info-for-apps-and-add-ons.md)
 * [Abrufen von Lizenzinformationen zu Apps und Add-Ons](get-license-info-for-apps-and-add-ons.md)
 * [Aktivieren von In-App-Käufen von Apps und Add-Ons](enable-in-app-purchases-of-apps-and-add-ons.md)
-* [Unterstützen von Endverbraucher-Add-On-Käufen](enable-consumable-add-on-purchases.md)
+* [Unterstützen von Käufen konsumierbarer Add-Ons](enable-consumable-add-on-purchases.md)
 * [Implementieren einer Testversion Ihrer App](implement-a-trial-version-of-your-app.md)

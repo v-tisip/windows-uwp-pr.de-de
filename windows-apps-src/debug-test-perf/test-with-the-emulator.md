@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 17e5aa64fff2c42974dbb78ce3cdcff1ca414946
-ms.sourcegitcommit: d10fb9eb5f75f2d10e1c543a177402b50fe4019e
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "4569797"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4618861"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Tests mit dem Emulator für Microsoft Windows10Mobile
 
@@ -68,7 +68,7 @@ Wenn Sie den Microsoft-Emulator für Windows10Mobile deinstallieren, wird automa
 
 ### <a name="running"></a>Running
 
-Wählen Sie zum Ausführen einer app im Emulator einfach einen emulierten Gerät **Ausführen** Dropdown-Menü in Visual Studio.
+Wählen Sie zum Ausführen einer app im Emulator einfach einen emulierten Gerät aus dem **führen** Dropdown-Menü in Visual Studio.
 
 ![Verfügbare Emulatoren mit Auflösung, Größe und Arbeitsspeicher](images/em-list.png)
 

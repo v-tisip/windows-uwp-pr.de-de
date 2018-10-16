@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: 1f970d38-2338-470e-b5ba-811402752fc4
 description: Hier erfahren Sie, wie Sie Interstitialwerbung in UWP-Apps für Windows10 mithilfe des Microsoft Advertising-SDK einfügen.
 title: Interstitialwerbung
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 03/22/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Anzeigen, Werbung, Anzeigensteuerelement, Interstitial
 ms.localizationpriority: medium
-ms.openlocfilehash: 0915d1be4ea3de89265815d299ed7e60ead528ff
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 547a582064262d18467df4868df17a08e73b279c
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1690866"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4617315"
 ---
 # <a name="interstitial-ads"></a>Interstitialwerbung
 
@@ -72,10 +72,10 @@ Dieser Abschnitt enthält Beispiele für C#. Visual Basic und C++ werden jedoch 
 
     [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet1)]
 
-4.  Deklarieren Sie an einer geeigneten Stelle in Ihrer App (z.B. in ```MainPage``` oder einer anderen Seite) ein [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx)-Objekt und mehrere Zeichenfolgenfelder, die die Anwendungs-ID und Anzeigeneinheits-ID für die Interstitialwerbung darstellen. Im folgenden Codebeispiel werden die Felder `myAppId` und `myAdUnitId` den [Testwerten](set-up-ad-units-in-your-app.md#test-ad-units) für Interstitialwerbung zugewiesen.
+4.  Deklarieren Sie an einer geeigneten Stelle in Ihrer App (z.B. in ```MainPage``` oder einer anderen Seite) ein [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad)-Objekt und mehrere Zeichenfolgenfelder, die die Anwendungs-ID und Anzeigeneinheits-ID für die Interstitialwerbung darstellen. Im folgenden Codebeispiel werden die Felder `myAppId` und `myAdUnitId` den [Testwerten](set-up-ad-units-in-your-app.md#test-ad-units) für Interstitialwerbung zugewiesen.
 
     > [!NOTE]
-    > Jedes **InterstitialAd** verfügt über ein entsprechendes *Anzeigeneinheit*, die von unseren Diensten verwendet wird, um Werbung auf das Steuerelement zu übertragen, und jede Anzeigeneinheit besteht aus einer *Anzeigeneinheits-ID* und *Anwendungs-ID*. In den folgenden Schrittenweisen Sie eine Test Anzeigeneinheits-ID und Anwendungs-ID für Ihr Steuerelement zu. Diese Testwerte können nur in einer Testversion Ihrer App verwendet werden. Bevor Sie Ihre App im Store veröffentliche, müssen Sie die [Testwerte mit den Livewerten aus dem Windows Dev Center ersetzen](#release).
+    > Jedes **InterstitialAd** verfügt über ein entsprechendes *Anzeigeneinheit*, die von unseren Diensten verwendet wird, um Werbung auf das Steuerelement zu übertragen, und jede Anzeigeneinheit besteht aus einer *Anzeigeneinheits-ID* und *Anwendungs-ID*. In den folgenden Schrittenweisen Sie eine Test Anzeigeneinheits-ID und Anwendungs-ID für Ihr Steuerelement zu. Dieser Test Werte können nur in einer Testversion Ihrer App verwendet werden. Bevor Sie Ihre App im Store veröffentliche, müssen Sie die [Testwerte mit den Livewerten aus dem Windows Dev Center ersetzen](#release).
 
     [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet2)]
 
@@ -83,17 +83,17 @@ Dieser Abschnitt enthält Beispiele für C#. Visual Basic und C++ werden jedoch 
 
     [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet3)]
 
-6.  Wenn Sie *Video-Interstitialwerbung* verwenden möchten: Verwenden Sie ungefähr 30 bis 60Sekunden, bevor Sie die Interstitialwerbung benötigen, die [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx)-Methode, um die Anzeige vorab abzurufen. Dadurch bleibt genügend Zeit, um die Anzeige anzufordern und vorzubereiten, bevor sie angezeigt werden soll. Achten Sie darauf, **AdType.Video** für den Anzeigentyp festzulegen.
+6.  Wenn Sie *Video-Interstitialwerbung* verwenden möchten: Verwenden Sie ungefähr 30 bis 60Sekunden, bevor Sie die Interstitialwerbung benötigen, die [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad)-Methode, um die Anzeige vorab abzurufen. Dadurch bleibt genügend Zeit, um die Anzeige anzufordern und vorzubereiten, bevor sie angezeigt werden soll. Achten Sie darauf, **AdType.Video** für den Anzeigentyp festzulegen.
 
     [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet4)]
 
-    Wenn Sie *Interstitialwerbung* verwenden möchten: Verwenden Sie ungefähr 5 bis 8Sekunden bevor Sie die Interstitialwerbung benötigen, die [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx)-Methode, um die Anzeige vorab abzurufen. Dadurch bleibt genügend Zeit, um die Anzeige anzufordern und vorzubereiten, bevor sie angezeigt werden soll. Achten Sie darauf, **AdType.Display** für den Anzeigentyp festzulegen.
+    Wenn Sie *Interstitialwerbung* verwenden möchten: Verwenden Sie ungefähr 5 bis 8Sekunden bevor Sie die Interstitialwerbung benötigen, die [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad)-Methode, um die Anzeige vorab abzurufen. Dadurch bleibt genügend Zeit, um die Anzeige anzufordern und vorzubereiten, bevor sie angezeigt werden soll. Achten Sie darauf, **AdType.Display** für den Anzeigentyp festzulegen.
 
     ```csharp
     myInterstitialAd.RequestAd(AdType.Display, myAppId, myAdUnitId);
     ```
 
-6.  An dem Punkt des Codes, an dem Sie die Video- oder Banner-Interstitialwerbung anzeigen möchten, bestätigen Sie, dass **InterstitialAd** bereit zur Anzeige ist, und zeigen sie anschließend mittels der [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx)-Methode an.
+6.  An dem Punkt des Codes, an dem Sie die Video- oder Banner-Interstitialwerbung anzeigen möchten, bestätigen Sie, dass **InterstitialAd** bereit zur Anzeige ist, und zeigen sie anschließend mittels der [Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show)-Methode an.
 
     [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet5)]
 
@@ -116,7 +116,7 @@ Bei den folgenden Anweisungen wird davon ausgegangen, dass Sie ein universelles 
 3. Hinzufügen eines Verweises auf die Microsoft Advertising-SDK in Ihrem Projekt:
 
     1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Verweise**, und wählen Sie **Verweis hinzufügen...** aus.
-    2.  Erweitern Sie im **Verweis-Manager** den Knoten **Universal Windows**, klicken Sie auf **Erweiterungen**, und wählen Sie dann das Kontrollkästchen neben **Microsoft Advertising-SDK für JavaScript** (Version10.0).
+    2.  Erweitern Sie im **Verweis-Manager** den Knoten **Universal Windows**, klicken Sie auf **Erweiterungen**, und wählen Sie dann das Kontrollkästchen neben **Microsoft Advertising-SDK für JavaScript** (Version 10.0).
     3.  Klicken Sie im **Verweis-Manager** auf „OK“.
 
 3.  Fügen Sie im Abschnitt **&lt;head&gt;** der HTML-Datei im Projekt nach den JavaScript-Projektverweisen von „default.css“ und „default.js“ den Verweis auf „ad.js“ ein.
@@ -125,7 +125,7 @@ Bei den folgenden Anweisungen wird davon ausgegangen, dass Sie ein universelles 
     <script src="//Microsoft.Advertising.JavaScript/ad.js"></script>
     ```
 
-4.  Deklarieren Sie in einer JS-Datei in Ihrem Projekt ein [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx)-Objekt und mehrere Felder, die die Anwendungs-ID und Anzeigeneinheits-ID für die Interstitialwerbung enthalten. Im folgenden Codebeispiel werden die Felder `applicationId` und `adUnitId` den [Testwerten](set-up-ad-units-in-your-app.md#test-ad-units) für Interstitialwerbung zugewiesen.
+4.  Deklarieren Sie in einer JS-Datei in Ihrem Projekt ein [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad)-Objekt und mehrere Felder, die die Anwendungs-ID und Anzeigeneinheits-ID für die Interstitialwerbung enthalten. Im folgenden Codebeispiel werden die Felder `applicationId` und `adUnitId` den [Testwerten](set-up-ad-units-in-your-app.md#test-ad-units) für Interstitialwerbung zugewiesen.
 
     > [!NOTE]
     > Jedes **InterstitialAd** verfügt über ein entsprechendes *Anzeigeneinheit*, die von unseren Diensten verwendet wird, um Werbung auf das Steuerelement zu übertragen, und jede Anzeigeneinheit besteht aus einer *Anzeigeneinheits-ID* und *Anwendungs-ID*. In den folgenden Schrittenweisen Sie eine Test Anzeigeneinheits-ID und Anwendungs-ID für Ihr Steuerelement zu. Dieser Test Werte können nur in einer Testversion Ihrer App verwendet werden. Bevor Sie Ihre App im Store veröffentlichen, müssen Sie [die Testwerte mit den Live-Werten](#release) aus dem Windows Dev Center ersetzen.
@@ -136,11 +136,11 @@ Bei den folgenden Anweisungen wird davon ausgegangen, dass Sie ein universelles 
 
     [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/script.js#Snippet2)]
 
-5. Wenn Sie *Video-Interstitialwerbung* verwenden möchten: Verwenden Sie ungefähr 30 bis 60Sekunden, bevor Sie die Interstitialwerbung benötigen, die [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx)-Methode, um die Anzeige vorab abzurufen. Dadurch bleibt genügend Zeit, um die Anzeige anzufordern und vorzubereiten, bevor sie angezeigt werden soll. Achten Sie darauf, **InterstitialAdType.video** für den Anzeigentyp festzulegen.
+5. Wenn Sie *Video-Interstitialwerbung* verwenden möchten: Verwenden Sie ungefähr 30 bis 60Sekunden, bevor Sie die Interstitialwerbung benötigen, die [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad)-Methode, um die Anzeige vorab abzurufen. Dadurch bleibt genügend Zeit, um die Anzeige anzufordern und vorzubereiten, bevor sie angezeigt werden soll. Achten Sie darauf, **InterstitialAdType.video** für den Anzeigentyp festzulegen.
 
     [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/script.js#Snippet3)]
 
-    Wenn Sie *Interstitialwerbung* verwenden möchten: Verwenden Sie ungefähr 5 bis 8Sekunden bevor Sie die Interstitialwerbung benötigen, die [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx)-Methode, um die Anzeige vorab abzurufen. Dadurch bleibt genügend Zeit, um die Anzeige anzufordern und vorzubereiten, bevor sie angezeigt werden soll. Achten Sie darauf, **InterstitialAdType.display** für den Anzeigentyp festzulegen.
+    Wenn Sie *Interstitialwerbung* verwenden möchten: Verwenden Sie ungefähr 5 bis 8Sekunden bevor Sie die Interstitialwerbung benötigen, die [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad)-Methode, um die Anzeige vorab abzurufen. Dadurch bleibt genügend Zeit, um die Anzeige anzufordern und vorzubereiten, bevor sie angezeigt werden soll. Achten Sie darauf, **InterstitialAdType.display** für den Anzeigentyp festzulegen.
 
     ```js
     if (interstitialAd) {
@@ -148,7 +148,7 @@ Bei den folgenden Anweisungen wird davon ausgegangen, dass Sie ein universelles 
     }
     ```
 
-6.  Bestätigen Sie an der Stelle im Code, an der die Anzeige angezeigt werden soll, dass **InterstitialAd** bereit zum Einblenden ist, und zeigen Sie sie dann mit der [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx)-Methode an.
+6.  Bestätigen Sie an der Stelle im Code, an der die Anzeige angezeigt werden soll, dass **InterstitialAd** bereit zum Einblenden ist, und zeigen Sie sie dann mit der [Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show)-Methode an.
 
     [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/samples.js#Snippet4)]
 
@@ -172,7 +172,7 @@ In diesem Beispiel wird angenommen, dass Sie ein C++-Projekt **DirectX- und XAML
     2.  Erweitern Sie im **Verweis-Manager** den Knoten **Universal Windows**, klicken Sie auf **Erweiterungen**, und wählen Sie dann das Kontrollkästchen neben **Microsoft Advertising-SDK für XAML** (Version 10.0).
     3.  Klicken Sie im **Verweis-Manager** auf „OK“.
 
-2.  Deklarieren Sie in einer geeigneten Headerdatei für Ihre App (z.B. DirectXPage.xaml.h) ein [InterstitialAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.aspx)-Objekt und verwandte Ereignishandlermethoden.  
+2.  Deklarieren Sie in einer geeigneten Headerdatei für Ihre App (z.B. DirectXPage.xaml.h) ein [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad)-Objekt und verwandte Ereignishandlermethoden.  
 
     [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.h#Snippet1)]
 
@@ -191,17 +191,17 @@ In diesem Beispiel wird angenommen, dass Sie ein C++-Projekt **DirectX- und XAML
 
     [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet4)]
 
-7. Wenn Sie *Video-Interstitialwerbung* verwenden möchten: Verwenden Sie ungefähr 30 bis 60Sekunden, bevor Sie die Interstitialwerbung benötigen, die [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx)-Methode, um die Anzeige vorab abzurufen. Dadurch bleibt genügend Zeit, um die Anzeige anzufordern und vorzubereiten, bevor sie angezeigt werden soll. Achten Sie darauf, **AdType::Video** für den Anzeigentyp festzulegen.
+7. Wenn Sie *Video-Interstitialwerbung* verwenden möchten: Verwenden Sie ungefähr 30 bis 60Sekunden, bevor Sie die Interstitialwerbung benötigen, die [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad)-Methode, um die Anzeige vorab abzurufen. Dadurch bleibt genügend Zeit, um die Anzeige anzufordern und vorzubereiten, bevor sie angezeigt werden soll. Achten Sie darauf, **AdType::Video** für den Anzeigentyp festzulegen.
 
     [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet5)]
 
-    Wenn Sie *Interstitialwerbung* verwenden möchten: Verwenden Sie ungefähr 5 bis 8Sekunden bevor Sie die Interstitialwerbung benötigen, die [RequestAd](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.requestad.aspx)-Methode, um die Anzeige vorab abzurufen. Dadurch bleibt genügend Zeit, um die Anzeige anzufordern und vorzubereiten, bevor sie angezeigt werden soll. Achten Sie darauf, **AdType::Display** für den Anzeigentyp festzulegen.
+    Wenn Sie *Interstitialwerbung* verwenden möchten: Verwenden Sie ungefähr 5 bis 8Sekunden bevor Sie die Interstitialwerbung benötigen, die [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad)-Methode, um die Anzeige vorab abzurufen. Dadurch bleibt genügend Zeit, um die Anzeige anzufordern und vorzubereiten, bevor sie angezeigt werden soll. Achten Sie darauf, **AdType::Display** für den Anzeigentyp festzulegen.
 
     ```cpp
     m_interstitialAd->RequestAd(AdType::Display, myAppId, myAdUnitId);
     ```
 
-7.  Bestätigen Sie an der Stelle im Code, an der die Anzeige angezeigt werden soll, dass **InterstitialAd** bereit zum Einblenden ist, und zeigen Sie sie dann mit der [Show](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.interstitialad.show.aspx)-Methode an.
+7.  Bestätigen Sie an der Stelle im Code, an der die Anzeige angezeigt werden soll, dass **InterstitialAd** bereit zum Einblenden ist, und zeigen Sie sie dann mit der [Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show)-Methode an.
 
     [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet6)]
 
@@ -244,4 +244,4 @@ Können mehrere Steuerelemente für **InterstitialAd** in einer einzelnen App ve
 * [Beispielcode für Interstitialwerbung in C#](interstitial-ad-sample-code-in-c.md)
 * [Beispielcode für Interstitialwerbung in JavaScript](interstitial-ad-sample-code-in-javascript.md)
 * [Anzeigenbeispiele auf GitHub](http://aka.ms/githubads)
-* [Einrichten von Anzeigenblöcken für die App](set-up-ad-units-in-your-app.md)
+* [Einrichten von Anzeigeneinheiten für die App](set-up-ad-units-in-your-app.md)

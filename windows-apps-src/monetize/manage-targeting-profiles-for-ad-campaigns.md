@@ -1,21 +1,21 @@
 ---
-author: mcleanbyron
+author: Xansky
 ms.assetid: d305746a-d370-4404-8cde-c85765bf3578
 description: Verwenden Sie diese Methode in der Microsoft Store-Werbungs-API, um Zielgruppenprofile für Werbeanzeigenkampagnen zu verwalten.
 title: Verwalten von Zielgruppenprofilen
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store Werbungs-API, Anzeigenkampagnen
 ms.localizationpriority: medium
-ms.openlocfilehash: 692da5c2cc45e64d3feeab6136c1e50c72a7b0b0
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 8fa142f1df672703d2f14dc185481bb248efe07b
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1664190"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4619152"
 ---
 # <a name="manage-targeting-profiles"></a>Verwalten von Zielgruppenprofilen
 
@@ -44,7 +44,7 @@ Diese Methoden haben die folgenden URIs.
 
 ### <a name="header"></a>Header
 
-| Header        | Typ   | Beschreibung         |
+| Kopfzeile        | Typ   | Beschreibung         |
 |---------------|--------|---------------------|
 | Autorisierung | String | Erforderlich. Das Azure AD-Zugriffstoken im Format **Bearer** &lt;*-Token*&gt;. |
 | Tracking-ID   | GUID   | Optional. Eine ID, die den Abfrageablauf verfolgt.                                  |
@@ -145,7 +145,7 @@ Die Anforderungs- und Antworttexte für diese Methoden enthalten die folgenden F
 
 | Feld        | Typ   |  Beschreibung      |  Schreibgeschützt  | Standard  | Erforderlich für POST |  
 |--------------|--------|---------------|------|-------------|------------|
-|  ID   |  Ganzzahl   |  Die ID des Zielgruppenprofils.     |   Ja.    |       |   Nein.      |       
+|  ID   |  Ganzzahl   |  Die ID des Zielgruppenprofils.     |   Ja.    |       |   Nein      |       
 |  Name   |  String   |   Der Name des Zielgruppenprofils.    |    Nein.   |      |  Ja.     |       
 |  targetingType   |  String   |  Einer der folgenden Werte: <ul><li>**Automatisch**: Geben Sie diesen Wert an, damit Microsoft das Zielgruppenprofil auf der Grundlage der Einstellungen für Ihre App im Dev Center auswählen kann.</li><li>**Manuell**: Geben Sie diesen Wert an, um Ihr eigenes Zielgruppenprofil zu definieren.</li></ul>     |  Nein.     |  Auto    |   Ja.    |       
 |  Alter   |  Array   |   Eine oder mehrere ganze Zahlen, die den Altersbereich der Benutzer in der Zielgruppe angeben. Eine vollständige Liste von ganzen Zahlen finden Sie unter [Alterswerte](#age-values) in diesem Artikel.    |    Nein.    |  Null    |     Nein.    |       
@@ -443,7 +443,7 @@ Das Feld *country* in dem Objekt [TargetingProfile](#targeting-profile) enthält
 |     124      |            KW                  |
 |     125      |            KG                  |
 |     126      |            LA                  |
-|     127      |            LB                  |
+|     127 Zeichen lang sein      |            LB                  |
 |     133      |            MK                  |
 |     135      |            MW                  |
 |     138      |            MT                  |
@@ -453,7 +453,7 @@ Das Feld *country* in dem Objekt [TargetingProfile](#targeting-profile) enthält
 |     147      |            MZ                  |
 |     148      |            NA                  |
 |     150      |            NP                  |
-|     151      |            NI                  |
+|     151.      |            NI                  |
 |     153      |            NG                  |
 |     154      |            OM                  |
 |     155      |            PK                  |

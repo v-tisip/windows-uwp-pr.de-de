@@ -1,20 +1,20 @@
 ---
-author: mcleanbyron
+author: Xansky
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um die Erwerbstrichterdaten für eine Anwendung während eines bestimmten Zeitraums und andere optionale Filter abzurufen.
 title: Abrufen von App-Erwerbstrichterdaten
-ms.author: mcleans
+ms.author: mhopkins
 ms.date: 08/04/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Kauf, Trichter
 ms.localizationpriority: medium
-ms.openlocfilehash: 85ffe2219ce7bc1dc47ff92240eeeff1374b5f43
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 362bcc956fa5945f9685aac7d6351b9fda7690de
+ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663580"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "4616081"
 ---
 # <a name="get-app-acquisition-funnel-data"></a>Abrufen von App-Erwerbstrichterdaten
 
@@ -65,7 +65,7 @@ Die folgenden Filterfelder werden unterstützt. Zeichenfolgenwerte im Parameter 
 |---------------|-----------------|
 | campaignId | Die ID-Zeichenfolge für einen [Werbekampagne für benutzerdefinierte Apps](../publish/create-a-custom-app-promotion-campaign.md), die dem Kauf zugeordnet ist. |
 | market | Eine Zeichenfolge, die den ISO 3166-Ländercode des Markts enthält, in dem der Kauf erfolgte. |
-| deviceType | Eine der folgenden Zeichenfolgen, die den Typ des Geräts angibt, auf der Kauf aufgetreten ist:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Unbekannt</strong></li></ul> |
+| deviceType | Eine der folgenden Zeichenfolgen, die den Typ des Geräts angibt, auf der Kauf aufgetreten ist:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Holographic</strong></li><li><strong>Unknown</strong></li></ul> |
 | ageGroup | Eine der folgenden Zeichenfolgen, die den Typ der Age-Group des Benutzer angibt, der den Kauf abgeschlossen hat:<ul><li><strong>0 – 17</strong></li><li><strong>18 – 24</strong></li><li><strong>25 – 34</strong></li><li><strong>35 – 49</strong></li><li><strong>50 oder mehr</strong></li><li><strong>Unbekannt</strong></li></ul> |
 | gender | Eine der folgenden Zeichenfolgen, die das Geschlecht des Benutzer angibt, der den Kauf abgeschlossen hat:<ul><li><strong>M</strong></li><li><strong>F</strong></li><li><strong>Unbekannt</strong></li></ul> |
 
