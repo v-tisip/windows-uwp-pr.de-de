@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, zeigen Sie Service, pos, Magnetstreifenleser
 ms.localizationpriority: medium
 ms.openlocfilehash: 8ce34623a0af9de6e0d678052719fb02f2a9672b
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4679483"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4741997"
 ---
 # <a name="magnetic-stripe-reader"></a>Magnetstreifenleser
 
@@ -24,8 +24,8 @@ Mithilfe einer Magnetstreifenleser in Ihrer universellen Windows-Plattform (UWP)
 
 Die folgenden Themen enthalten weitere Informationen zur Verwendung einer Magnetstreifenleser in Ihrer Anwendung.
 
-## <a name="in-this-section"></a>Inhalt dieses Abschnitts
+## <a name="in-this-section"></a>In diesem Abschnitt
 
 | Thema | Beschreibung |
 |-------|-------------|
-| [Rufen Sie ab und verstehen Sie Magnetstreifen Daten](../devices-sensors/pos-magnetic-stripe-reader-data.md) | Enthält Informationen zum Erhalt und interpretiert die Daten aus einer Magnetstreifen. |
+| [Abrufen und Verstehen von Magnetstreifendaten](../devices-sensors/pos-magnetic-stripe-reader-data.md) | Enthält Informationen zum Erhalt und interpretiert die Daten aus einer Magnetstreifen. |

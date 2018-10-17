@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Xbox One Spielekäufe
 ms.localizationpriority: medium
-ms.openlocfilehash: a175096860fe2d2e73259ab9e82cbd5c33b8b889
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.openlocfilehash: 39d932a49e573d55a0ccb9cb69568006feede8a7
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4686592"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4741687"
 ---
 # <a name="get-xbox-one-game-acquisitions"></a>Abrufen von Xbox One Spielekäufen
 
@@ -93,7 +93,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | date                | string | Das erste Datum im Datumsbereich für die Kaufdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist dieser Wert das erste Datum in diesem Datumsbereich. |
 | applicationId       | String | Die Produkt-ID des Xbox One Spiels, für das Sie Kaufdaten abrufen. |
 | applicationName     | String | Der Anzeigename des Spiels.       |
-| acquisitionType     | String | Eine der folgenden Zeichenfolgen, die den Typ des Kaufes angibt:<ul><li><strong>Free</strong></li><li><strong>Testversion</strong></li><li><strong>Kostenpflichtig</strong></li><li><strong>Werbecode</strong></li><li><strong>Vorbestellung</strong></li><li>**Xbox Game Pass** (oder **Game Pass** beim Abfragen von Daten vor dem 23.März2018)</li><li><strong>Festplatte</strong></li><li><strong>Prepaid-Code</strong></li></ul>    |
+| acquisitionType     | String | Eine der folgenden Zeichenfolgen, die den Typ des Kaufes angibt:<ul><li><strong>Free</strong></li><li><strong>Testversion</strong></li><li><strong>Kostenpflichtig</strong></li><li><strong>Angebotscode</strong></li><li><strong>lap</strong></li><li><strong>Abonnement Iap</strong></li><li><strong>Private Zielgruppe</strong></li><li><strong>Pre-Reihenfolge</strong></li><li><strong>Xbox Game Pass</strong> (oder <strong>Game Pass</strong> beim Abfragen von Daten vor dem 23.März2018)</li><li><strong>Festplatte</strong></li><li><strong>Prepaid-Code</strong></li><li><strong>Berechnete Pre-Reihenfolge</strong></li><li><strong>Abgebrochenen Pre-Reihenfolge</strong></li><li><strong>Fehlgeschlagene Pre-Reihenfolge</strong></li></ul>    |
 | ageGroup            | String | Eine der folgenden Zeichenfolgen, die die Altersgruppe des Benutzers anzeigt, der den Kauf getätigt hat:<ul><li><strong>jünger als 13</strong></li><li><strong>13-17</strong></li><li><strong>18-24</strong></li><li><strong>25-34</strong></li><li><strong>35-44</strong></li><li><strong>44-55</strong></li><li><strong>greater than 55</strong></li><li><strong>Unknown</strong></li></ul>     |
 | deviceType          | String | Eine der folgenden Zeichenfolgen, die den Typ des Geräts angibt, mit dem der Kauf getätigt wurde:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Server</strong></li><li><strong>Tablet</strong></li><li><strong>Hologramm</strong></li><li><strong>Unbekannt</strong></li></ul>  |
 | gender              | String | Eine der folgenden Zeichenfolgen, die das Geschlecht des Benutzer angibt, der den Kauf getätigt hat:<ul><li><strong>m</strong></li><li><strong>f</strong></li><li><strong>Unknown</strong></li></ul>     |

@@ -10,11 +10,11 @@ ms.technology: uwp, windows forms, wpf
 keywords: Windows 10, Uwp, Windows Forms-, WPF-, win32
 ms.localizationpriority: medium
 ms.openlocfilehash: 59072374e19da1c5c7e6e6a5e6a7b8c172d74052
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4686562"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4741974"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>Unter Verwendung des UWP-XAML hosting-API in einer desktop-Anwendung
 
@@ -295,7 +295,7 @@ Die folgenden Schritte veranschaulichen eine Möglichkeit zur Behandlung von die
 
 Der XAML-Code hosting-API teilt dieselben Einschränkungen wie alle anderen Arten von XAML-Steuerelemente für Windows 10. Eine detaillierte Liste finden Sie in der [XAML-Host-Steuerelement Einschränkungen](xaml-host-controls.md#limitations).
 
-## <a name="troubleshooting"></a>Problembehandlung
+## <a name="troubleshooting"></a>Fehlerbehebung
 
 ### <a name="error-using-uwp-xaml-hosting-api-in-a-uwp-app"></a>Fehler bei der Verwendung von UWP-XAML hosting-API in einer UWP-app
 
@@ -317,4 +317,4 @@ Der XAML-Code hosting-API teilt dieselben Einschränkungen wie alle anderen Arte
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [UWP-Steuerelemente in desktop-Apps](xaml-host-controls.md)
+* [UWP-Steuerelemente in Desktopanwendungen](xaml-host-controls.md)
