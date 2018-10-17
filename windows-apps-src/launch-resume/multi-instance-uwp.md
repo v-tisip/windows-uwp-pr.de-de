@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: dd4e0ced4de2419858424a88f5fa5ce66f5b4286
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4693197"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4743823"
 ---
 # <a name="create-a-multi-instance-universal-windows-app"></a><span data-ttu-id="edbb3-104">Erstellen einer universellen Windows-App mit mehreren Instanzen</span><span class="sxs-lookup"><span data-stu-id="edbb3-104">Create a multi-instance Universal Windows App</span></span>
 

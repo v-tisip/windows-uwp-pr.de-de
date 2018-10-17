@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows10, Uwp, verfolgbare Kacheln, Live-Kacheln, verfolgbare Kachelbenachrichtigungen
 ms.localizationpriority: medium
 ms.openlocfilehash: b6d86d8881e0027a28f0f2a737e5f3fcb46a6ab5
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4680696"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4741100"
 ---
 # <a name="chaseable-tile-notifications"></a><span data-ttu-id="5e908-103">Verfolgbare Kachelbenachrichtigungen</span><span class="sxs-lookup"><span data-stu-id="5e908-103">Chaseable tile notifications</span></span>
 
