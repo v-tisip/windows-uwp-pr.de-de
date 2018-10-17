@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Übernehmen einer Flight-Übermittlung
 ms.localizationpriority: medium
 ms.openlocfilehash: e3a52bc3a7a815bfde8a4fa8c12b73ab8932e2df
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4610308"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4694229"
 ---
 # <a name="commit-a-package-flight-submission"></a><span data-ttu-id="63b9d-104">Ausführen eines Commit für eine Flight-Paket-Übermittlung</span><span class="sxs-lookup"><span data-stu-id="63b9d-104">Commit a package flight submission</span></span>
 

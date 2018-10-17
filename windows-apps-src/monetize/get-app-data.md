@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, App-Daten
 ms.localizationpriority: medium
 ms.openlocfilehash: 6940c1079c7973bc4fd639345c5d5e3f33b0221f
-ms.sourcegitcommit: 106aec1e59ba41aae2ac00f909b81bf7121a6ef1
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "4618584"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4694457"
 ---
 # <a name="get-app-data"></a><span data-ttu-id="40553-104">Abrufen von App-Daten</span><span class="sxs-lookup"><span data-stu-id="40553-104">Get app data</span></span>
 
