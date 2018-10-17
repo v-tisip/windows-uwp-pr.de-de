@@ -1,7 +1,7 @@
 ---
 author: jwmsft
 description: Die xBind-Markuperweiterung mit der Funktionen im Markup verwendet werden.
-title: 'Funktionen in X: Bind'
+title: Funktionen in x:Bind
 ms.author: jimwalk
 ms.date: 04/26/2018
 ms.topic: article
@@ -10,13 +10,13 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, xBind
 ms.localizationpriority: medium
 ms.openlocfilehash: b160b1e711f6e56b14f0d6e0e83e9f9150be5e90
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4691957"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4747018"
 ---
-# <a name="functions-in-xbind"></a>Funktionen in X: Bind
+# <a name="functions-in-xbind"></a>Funktionen in x:Bind
 
 **Hinweis**  Allgemeine Informationen zur Verwendung der Datenbindung in Ihrer App mit **{x:Bind}** (sowie einen Gesamtvergleich von **{x:Bind}** und **{Binding}**) finden Sie unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
 

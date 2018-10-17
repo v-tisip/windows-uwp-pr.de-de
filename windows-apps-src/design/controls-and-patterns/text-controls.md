@@ -15,12 +15,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ad7326acf728aef66f10c72ee04461fd90e5f775
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.openlocfilehash: 2cd5f7e7022f246fce3d08286fe77c74503ddc5d
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4691520"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4744875"
 ---
 # <a name="text-controls"></a>Textsteuerelemente
 
@@ -125,7 +125,7 @@ Richtlinien für Schriftarten finden Sie in den folgenden Artikeln:
 
 Ab Windows10, Version 1803, verfügen XAML-Texteingabefelder über eine integrierte Unterstützung für Stifteingaben mit [Windows Ink](../input/pen-and-stylus-interactions.md). Wenn ein Benutzer einen Windows-Stift für Eingaben in ein Textfeld verwendet, wird das Textfeld transformiert, sodass der Benutzer mit einem Stift direkt in das Feld schreiben kann, anstatt einen separaten Eingabebereich öffnen zu müssen.
 
-![Textfeld wird erweitert, wenn mit einem Stift darauf getippt wird](images/pen-input-expand.gif)
+![Textfeld wird erweitert, wenn mit einem Stift darauf getippt wird](images/handwritingview/handwritingview2.gif)
 
 Weitere Informationen finden Sie in der [Texteingabe mit der Handschrift-Ansicht](text-handwriting-view.md).
 

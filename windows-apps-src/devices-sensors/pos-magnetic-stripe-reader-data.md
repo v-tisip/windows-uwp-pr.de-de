@@ -1,6 +1,6 @@
 ---
 author: eliotcowley
-title: Rufen Sie ab und verstehen Sie Magnetstreifen Daten
+title: Abrufen und Verstehen von Magnetstreifendaten
 description: Enthält Informationen zum Erhalt und interpretiert die Daten aus einer Magnetstreifen.
 ms.author: elcowle
 ms.date: 10/04/2018
@@ -10,13 +10,13 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, zeigen Sie Service, pos, Magnetstreifenleser
 ms.localizationpriority: medium
 ms.openlocfilehash: ad954e8c03d92307fa72ead236d5428ac2bdddab
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4690089"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4749901"
 ---
-# <a name="obtain-and-understand-magnetic-stripe-data"></a>Rufen Sie ab und verstehen Sie Magnetstreifen Daten
+# <a name="obtain-and-understand-magnetic-stripe-data"></a>Abrufen und Verstehen von Magnetstreifendaten
 
 Nachdem Sie Ihre Magnetstreifenleser in Ihrer Anwendung mithilfe der Schritte in [Erste Schritte mit Point of Service](pos-basics.md)eingerichtet haben, können Sie mit dem Abrufen von Daten von ihm begonnen.
 

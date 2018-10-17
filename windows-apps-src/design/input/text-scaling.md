@@ -1,7 +1,7 @@
 ---
 author: Karl-Bridge-Microsoft
 Description: Build UWP apps and custom/templated controls that support platform text scaling.
-title: Textskalierung von
+title: Textskalierung
 label: Text scaling
 template: detail.hbs
 keywords: UWP, Text, Skalierung, Barrierefreiheit, "erleichterte Bedienung" anzuzeigen, "Können den Text vergrößern", Benutzerinteraktion, Eingabe
@@ -12,13 +12,13 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 885ccc89fcbd4315eeed40c3546ef485c515294e
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/17/2018
-ms.locfileid: "4693686"
+ms.locfileid: "4745711"
 ---
-# <a name="text-scaling"></a>Textskalierung von
+# <a name="text-scaling"></a>Textskalierung
 
 ![Beispiel für die Skalierung von 100 % bis 225 % text](images/coretext/text-scaling-news-hero-small.png)  
 *Beispiel für Text Skalierung in Windows 10 (100 % bis 225 %)*

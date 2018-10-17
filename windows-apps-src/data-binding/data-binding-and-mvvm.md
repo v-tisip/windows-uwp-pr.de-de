@@ -1,7 +1,7 @@
 ---
 author: KarlErickson
 ms.assetid: F46306EC-DFF3-4FF0-91A8-826C1F8C4A52
-title: Datenbindung und MVVM
+title: Datenbindungen und MVVM
 description: Die Datenbindung ist das Herzstück des Musters Architektur Model-View-ViewModel (MVVM)-UI und ermöglicht die Kopplung zwischen UI und nicht-UI-Code.
 ms.author: karler
 ms.date: 10/02/2018
@@ -11,13 +11,13 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: eda370db8b68232066052cca3d0abfa6e3876167
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4686128"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4747931"
 ---
-# <a name="data-binding-and-mvvm"></a>Datenbindung und MVVM
+# <a name="data-binding-and-mvvm"></a>Datenbindungen und MVVM
 
 Model-View-ViewModel (MVVM) ist ein UI-Architektur-Muster für das Entkoppeln von Benutzeroberfläche und nicht-UI-Code. Das MVVM deklarativ definieren die Benutzeroberfläche in XAML und bindungsmarkup Daten für die Verbindung zu anderen Ebenen, die Daten und Befehle verwenden. Die Datenbindung Infrastruktur bietet eine Kopplung, die die Benutzeroberfläche hält und die verknüpften Daten synchronisiert und leitet Benutzereingaben an die entsprechenden Befehle weiter. 
 

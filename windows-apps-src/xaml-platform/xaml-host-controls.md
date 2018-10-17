@@ -1,7 +1,7 @@
 ---
 author: mcleanbyron
 description: Diese Anleitung hilft Ihnen, Fluent-basierte UWP-UIs direkt in einer WPF- oder Windows Forms-Anwendung zu erstellen.
-title: UWP-Steuerelemente in desktop-Apps
+title: UWP-Steuerelemente in Desktopanwendungen
 ms.author: mcleans
 ms.date: 09/21/2018
 ms.topic: article
@@ -10,13 +10,13 @@ ms.technology: uwp, windows forms, wpf
 keywords: Windows 10, UWP, Windows Forms, WPF
 ms.localizationpriority: medium
 ms.openlocfilehash: b9757466502283c673c7b2106b4a7775be412faf
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4688533"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4746833"
 ---
-# <a name="uwp-controls-in-desktop-applications"></a>UWP-Steuerelemente in desktop-Apps
+# <a name="uwp-controls-in-desktop-applications"></a>UWP-Steuerelemente in Desktopanwendungen
 
 > [!NOTE]
 > Die APIs und in diesem Artikel beschriebenen Steuerelemente sind als Entwicklervorschau derzeit verfügbar ist. Obwohl wir Sie diese in Ihrem eigenen Code Prototyp ausprobieren können, jetzt dazu ermutigen, empfehlen wir nicht, dass Sie sie zu diesem Zeitpunkt in Produktionscode verwenden. Diese APIs und Steuerelemente werden weiterhin breiter und Stabilisierung in zukünftigen Windows-Versionen. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.

@@ -1,6 +1,6 @@
 ---
 author: QuinnRadich
-title: Starten Sie Bildschirm snipping
+title: Ausschnitt & Skizze starten
 description: In diesem Thema wird das ms-Screenclip und ms-Screensketch URI-Schemas. Ihre app kann diese URI-Schemas zum Starten der app Ausschnitt & Skizze oder um einen neuen Ausschnitt Öffnen verwenden.
 ms.author: quradic
 ms.date: 8/1/2017
@@ -10,13 +10,13 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Uri, Ausschneiden, Skizze
 ms.localizationpriority: medium
 ms.openlocfilehash: e18662125ef72051a289b3f1d0f3dc09b452d256
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4682651"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4745152"
 ---
-# <a name="launch-screen-snipping"></a>Starten Sie Bildschirm snipping
+# <a name="launch-screen-snipping"></a>Ausschnitt & Skizze starten
 
 Die **ms-Screenclip:** und **ms-Screensketch:** URI-Schemas ermöglicht es Ihnen, snipping oder Bearbeiten von Screenshots zu initiieren.
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f7c5ad355aa6b99f8f76df230fefb283e54cffd
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4680513"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4745073"
 ---
 # <a name="enterprise"></a>Enterprise
 
@@ -36,7 +36,7 @@ Nachfolgend finden Sie einige Tools, Bibliotheken und Funktionen, die relativ er
 > * [Erstellen von Benutzeroberflächen, die Desktop-Stil-Steuerelemente](#desktop-style-UI)
 > * [Steuerelemente zur Unterstützung von Enterprise-Szenarios](#enterprise)
 > * [Windows-UI-Bibliothek](#UI-library)
-> * [UWP-Steuerelemente in desktop-Apps](#xaml-islands)
+> * [UWP-Steuerelemente in Desktopanwendungen](#xaml-islands)
 > * [.NET Standard 2.0](#standard)
 > * [SQL Server-Konnektivität](#sql-server)
 > * [MSIX-Bereitstellung](#MSIX)
@@ -82,7 +82,7 @@ Finden Sie unter [Windows-UI-Bibliothek (Preview-Version)](https://docs.microsof
 
 <a id="xaml-islands" />
 
-### <a name="uwp-controls-in-desktop-applications"></a>UWP-Steuerelemente in desktop-Apps
+### <a name="uwp-controls-in-desktop-applications"></a>UWP-Steuerelemente in Desktopanwendungen
 
 Windows 10 können jetzt UWP-Steuerelemente in WPF-, Windows Forms und C++ Win32-desktopanwendungen verwenden. Dies bedeutet, dass Sie das Erscheinungsbild und Funktionalität Ihrer vorhandenen desktop-Anwendungen mit den neuesten Windows 10-UI-Funktionen, die nur über UWP-Steuerelemente, z. B. Windows Ink und Steuerelemente, die das Fluent Design-System unterstützen verfügbar sind verbessern können. Dieses Feature ist XAML-Inseln bezeichnet.
 
