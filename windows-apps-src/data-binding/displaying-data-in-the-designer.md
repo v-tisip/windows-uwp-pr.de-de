@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 00a6bbf06f918c0b86bcaed7ae7891b474baefe8
-ms.sourcegitcommit: 73ea31d42a9b352af38b5eb5d3c06504b50f6754
+ms.localizationpriority: medium
+ms.openlocfilehash: a92be54e55e06b4e7ffd61b1526425920ea80f96
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2017
-ms.locfileid: "852880"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4694173"
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>Beispieldaten für die Entwurfsoberfläche und Prototyperstellung
 =============================================================================================
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 **Hinweis**  Der Bedarf an Beispieldaten und deren Nutzen für Sie hängen davon ab, ob für die Bindungen die [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782) oder die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783) verwendet wird. Die in diesem Thema beschriebenen Verfahren basieren auf der Verwendung eines [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) und eignen sich deshalb nur für **{Binding}**. Wenn Sie jedoch **{x:Bind}** verwenden, zeigen die Bindungen zumindest Platzhalterwerte auf der Entwurfsoberfläche an (selbst für Elementsteuerelemente). Deshalb besteht ein geringerer Bedarf an Beispieldaten.
@@ -143,7 +143,7 @@ Bisher haben wir zum Laden von Entwurfszeit-Beispieldaten aus einer XAML- oder J
         d:Source="{d:DesignInstance Type=local:Recordings, IsDesignTimeCreatable=True}"/>
 ```
 
-Die **IsDesignTimeCreatable**-Eigenschaft gibt an, dass das Entwicklungstool eigentlich eine Instanz der Klasse erstellen soll. Dies bedeutet, dass die Klasse über einen öffentlichen Standardkonstruktor verfügt und sich selbst mit Daten (echte oder Beispieldaten) auffüllt. Wenn Sie **IsDesignTimeCreatable** nicht festlegen (oder wenn Sie es auf **False** festlegen), werden auf der Entwurfsoberfläche keine Beispieldaten angezeigt. In diesem Fall analysiert das Entwicklungstool lediglich die Klasse im Hinblick auf ihre bindbaren Eigenschaften und zeigt diese im Bereich **Daten** sowie im Dialogfeld **Datenbindung erstellen** an.
+Die **IsDesignTimeCreatable**-Eigenschaft gibt an, dass das Entwicklungstool eigentlich eine Instanz der Klasse erstellen soll. Dies bedeutet, dass die Klasse über einen öffentlichen Standardkonstruktor verfügt und sich selbst mit Daten (echte oder Beispieldaten) auffüllt. Wenn Sie **IsDesignTimeCreatable** nicht festlegen (oder wenn Sie es auf **False** festlegen), werden auf der Entwurfsoberfläche keine Beispieldaten angezeigt. In diesem Fall das Entwicklungstool lediglich analysieren Sie die Klasse für ihre bindbaren Eigenschaften und zeigt diese im Bereich **Daten** und im Dialogfeld " **Datenbindung erstellen** ".
 
 <a name="sample-data-for-prototyping"></a>Beispieldaten für die Prototyperstellung
 --------------------------------------------------------

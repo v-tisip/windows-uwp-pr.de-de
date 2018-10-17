@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
-ms.openlocfilehash: 5309b33e0f65a1a06e1a3c0060a84e4c4a88ef9d
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.openlocfilehash: 8f3aa529e1c292bcea816e21222ca2a5e07f4319
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1700796"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4692315"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung, hohen Kontrast und anderen Qualifizierern
 
@@ -48,7 +48,7 @@ Hier ist ein Beispiel für die Verwendung von Qualifizierer zum Benennen von Ord
 \Assets\Images\contrast-white\<logo.png, and other image files>
 ```
 
-Wenn Sie Ihre Ordner wie im obigen Beispiel benennen, verwendet Ihre App den hohen Kontrast zum Laden von Dateien aus dem Ordner mit dem Namen für den entsprechenden Qualifizierer. Wenn die Einstellung hoher Kontrast (Schwarz) ist, werden die Ressourcendateien in den Ordern `\Assets\Images\contrast-black` geladen. Wenn die Einstellung "Keine" ist (d.h. der Computer ist nicht im Modus mit hohem Kontrast), werden die Ressourcendateien in den Ordner `\Assets\Images\standard` geladen.
+Wenn Sie Ihre Ordner wie im obigen Beispiel benennen, verwendet Ihre App den hohen Kontrast zum Laden von Dateien aus dem Ordner mit dem Namen für den entsprechenden Qualifizierer. Wenn die Einstellung hoher Kontrast (Schwarz) ist, werden die Ressourcendateien in den Ordern `\Assets\Images\contrast-black` geladen. Wenn die Einstellung "Keine" ist (d.h. der Computer ist nicht im Modus mit hohem Kontrast), werden die Ressourcendateien in den Ordner `\Assets\Images\contrast-standard` geladen.
 
 ## <a name="use-qualifiers-in-file-names"></a>Qualifizierer in Dateinamen verwenden
 

@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 166b015b4605c10f8c778c7e9aa24cc4993d3472
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: c60fcd705acf2d0d1e3162e80bc1d85095aa0fb4
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1818356"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4694252"
 ---
 # <a name="detect-and-respond-to-audio-state-changes"></a>Erkennen und reagieren auf Änderungen der Audiodatenstromebene
 Ab Windows10, Version 1803, erkennt Ihre App, wenn das System die Lautstärke der Audioaufnahme Ihrer App oder des Audiodatenstroms reduziert oder stummschaltet. Sie können Benachrichtigungen für die Erfassung und die Wiedergabe von Datenströmen erhalten, für ein bestimmtes Audio-Gerät und eine Audiokategorie oder für eine [**MediaPlayer**](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Playback.MediaPlayer)-Objekt, das ist Ihrer App für die Medienwiedergabe verwendet. Beispielsweise kann das System die Audiowiedergabe-Ebene reduzieren, wenn ein Alarm klingelt. Das System schaltet Ihre App stumm, wenn sie in den Hintergrund wechselt, falls Ihre App die *BackgroundMediaPlayback*-Funktion im App-Manifest nicht aktiviert hat. 
@@ -26,7 +26,7 @@ Das Muster für die Behandlung von Audio-Zustandsänderungen ist für alle unter
 
 [!code-cs[SoundLevelDeviceIdCategory](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetSoundLevelDeviceIdCategory)]
 
-Sie können Sie im **SoundLevelChanged** Ereignis-Handler den Aufnahmedatenstrom der [**SoundLevel**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor.soundlevel)-Eigenschaft des **AudioStateMonitor**-Senders für den Handler überprüfen, um die neue Soundebene für the Stream zu bestimmen. In diesem Beispiel wird die Aufzeichnung von Audio von der App beendet, wenn die Lautstärke stumm geschaltet ist, und fortgesetzt, wenn die volle Lautstärke wieder eingeschaltet wird.
+Überprüfen Sie im Ereignishandler **SoundLevelChanged** [**SoundLevel**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor.soundlevel) -Eigenschaft des an den Handler übergebenen **AudioStateMonitor** Absenders zu ermitteln, was die neue Soundebene für den Stream. In diesem Beispiel wird die Aufzeichnung von Audio von der App beendet, wenn die Lautstärke stumm geschaltet ist, und fortgesetzt, wenn die volle Lautstärke wieder eingeschaltet wird.
 
 [!code-cs[GameChatSoundLevelChanged](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetGameChatSoundLevelChanged)]
 

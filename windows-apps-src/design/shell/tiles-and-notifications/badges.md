@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a3348eb6c5355ba025745efecee8629f381778b
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: fc09e7a9d98d04c53aac0d76293b9d8e4dc6ed91
+ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653619"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "4691676"
 ---
 # <a name="badge-notifications-for-uwp-apps"></a>Signalbenachrichtigungen für UWP-Apps
 
@@ -132,7 +132,7 @@ Anstelle einer Zahl kann in einem Signal eine der nicht erweiterbaren Statusglyp
 
 ## <a name="create-a-badge"></a>Erstellen eines Signals
 
-Diese Beispiele zeigen, wie eine Signalaktualisierung erstellt wird.
+Diese Beispiele zeigen, wie eine signalaktualisierung erstellt.
 
 ### <a name="create-a-numeric-badge"></a>Erstellen eines numerischen Signals
 
