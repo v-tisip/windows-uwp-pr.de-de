@@ -15,12 +15,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ad7326acf728aef66f10c72ee04461fd90e5f775
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.openlocfilehash: 2cd5f7e7022f246fce3d08286fe77c74503ddc5d
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4691520"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4744875"
 ---
 # <a name="text-controls"></a><span data-ttu-id="5f5ad-103">Textsteuerelemente</span><span class="sxs-lookup"><span data-stu-id="5f5ad-103">Text controls</span></span>
 
@@ -125,7 +125,7 @@ ms.locfileid: "4691520"
 
 <span data-ttu-id="5f5ad-186">Ab Windows10, Version 1803, verfügen XAML-Texteingabefelder über eine integrierte Unterstützung für Stifteingaben mit [Windows Ink](../input/pen-and-stylus-interactions.md).</span><span class="sxs-lookup"><span data-stu-id="5f5ad-186">Starting with Windows 10, version 1803, XAML text input boxes feature embedded support for pen input using [Windows Ink](../input/pen-and-stylus-interactions.md).</span></span> <span data-ttu-id="5f5ad-187">Wenn ein Benutzer einen Windows-Stift für Eingaben in ein Textfeld verwendet, wird das Textfeld transformiert, sodass der Benutzer mit einem Stift direkt in das Feld schreiben kann, anstatt einen separaten Eingabebereich öffnen zu müssen.</span><span class="sxs-lookup"><span data-stu-id="5f5ad-187">When a user taps into a text input box using a Windows pen, the text box transforms to let the user write directly into it with a pen, rather than opening a separate input panel.</span></span>
 
-![Textfeld wird erweitert, wenn mit einem Stift darauf getippt wird](images/pen-input-expand.gif)
+![Textfeld wird erweitert, wenn mit einem Stift darauf getippt wird](images/handwritingview/handwritingview2.gif)
 
 <span data-ttu-id="5f5ad-189">Weitere Informationen finden Sie in der [Texteingabe mit der Handschrift-Ansicht](text-handwriting-view.md).</span><span class="sxs-lookup"><span data-stu-id="5f5ad-189">For more info, see [Text input with the handwriting view](text-handwriting-view.md).</span></span>
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Anzeigen, Werbung, Anzeigensteuerelement, Interstitial
 ms.localizationpriority: medium
 ms.openlocfilehash: 547a582064262d18467df4868df17a08e73b279c
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4689944"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4745537"
 ---
 # <a name="interstitial-ads"></a><span data-ttu-id="68b9a-104">Interstitialwerbung</span><span class="sxs-lookup"><span data-stu-id="68b9a-104">Interstitial ads</span></span>
 

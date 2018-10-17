@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Spiele, UI, Navigation
 ms.localizationpriority: medium
 ms.openlocfilehash: 4f95094ebf31c4b80ee8858ad849da33ff16434a
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4692658"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4749816"
 ---
 # <a name="ui-navigation-controller"></a><span data-ttu-id="9e349-104">Benutzeroberflächen-Navigationscontroller</span><span class="sxs-lookup"><span data-stu-id="9e349-104">UI navigation controller</span></span>
 

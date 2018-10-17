@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, standard, c++, Cpp, Winrt, Projektion, eine sichere, schwache, Referenz
 ms.localizationpriority: medium
 ms.openlocfilehash: 414a73c8df31e4547b8bd154945a8e9960529320
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4680131"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4748769"
 ---
 # <a name="strong-and-weak-references-in-cwinrt"></a><span data-ttu-id="4c9c4-104">Starke und schwache Referenzen in C++ / WinRT</span><span class="sxs-lookup"><span data-stu-id="4c9c4-104">Strong and weak references in C++/WinRT</span></span>
 

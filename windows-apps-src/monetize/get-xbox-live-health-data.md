@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, Uwp, Store-Diensten, Microsoft Store-Analyse-API, Xbox Live-Analyse, Integrität, Clientfehler
 ms.localizationpriority: medium
 ms.openlocfilehash: e7802db965ee4d1515090270125430871544d9f1
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4681091"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4747259"
 ---
 # <a name="get-xbox-live-health-data"></a><span data-ttu-id="90c0f-104">Abrufen von Xbox Live Integritätsdaten</span><span class="sxs-lookup"><span data-stu-id="90c0f-104">Get Xbox Live health data</span></span>
 

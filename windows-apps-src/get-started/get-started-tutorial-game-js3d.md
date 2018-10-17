@@ -11,11 +11,11 @@ keywords: windows 10, uwp
 ms.assetid: fb4249b2-f93c-4993-9e4d-57a62c04be66
 ms.localizationpriority: medium
 ms.openlocfilehash: fa3722c5b011d16ca793b3541efe124b7c255dfd
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4694647"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4746013"
 ---
 # <a name="creating-a-3d-javascript-game-using-threejs"></a><span data-ttu-id="6e8cd-104">Erstellen eines 3D-JavaScript-Spiels mit three.js</span><span class="sxs-lookup"><span data-stu-id="6e8cd-104">Creating a 3D JavaScript game using three.js</span></span>
 

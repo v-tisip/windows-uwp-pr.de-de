@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Überprüfen Sie Windows 10, Uwp, reagiert, Antworten,
 ms.localizationpriority: medium
 ms.openlocfilehash: 2a043a0b721ee6eabdc3520960ae6da253587c33
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4680088"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4748614"
 ---
 # <a name="respond-to-customer-reviews"></a><span data-ttu-id="43df1-103">Reagieren auf Kundenrezensionen</span><span class="sxs-lookup"><span data-stu-id="43df1-103">Respond to customer reviews</span></span>
 

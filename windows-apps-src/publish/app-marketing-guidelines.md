@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 44ffafab761741b8d7bc05f13ea2d8ae50ff048b
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4694527"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4749442"
 ---
 # <a name="microsoft-store-marketing-guidelines-for-apps"></a><span data-ttu-id="8a7a1-103">Microsoft Store marketing-Richtlinien für apps</span><span class="sxs-lookup"><span data-stu-id="8a7a1-103">Microsoft Store marketing guidelines for apps</span></span>
 
