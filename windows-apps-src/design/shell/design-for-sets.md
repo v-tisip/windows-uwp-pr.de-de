@@ -12,11 +12,11 @@ keywords: Windows10, UWP, Titelleiste
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 7c3e0e6ec7331e860c9153e2a2e29a51fb5848bd
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4692925"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4755114"
 ---
 # <a name="designing-for-sets"></a><span data-ttu-id="64b67-104">Entwerfen für Sets</span><span class="sxs-lookup"><span data-stu-id="64b67-104">Designing for Sets</span></span>
 

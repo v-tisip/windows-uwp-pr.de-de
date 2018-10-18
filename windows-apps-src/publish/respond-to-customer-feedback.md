@@ -11,11 +11,11 @@ keywords: Windows10, UWP
 ms.assetid: 04983b80-2a18-4ace-93d3-e8c33c04bfb9
 ms.localizationpriority: medium
 ms.openlocfilehash: 7c9819890dffcf70f56f6c0b09d9a1a24a8818db
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4690533"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4753391"
 ---
 # <a name="respond-to-customer-feedback"></a><span data-ttu-id="8c10d-104">Reagieren auf Kundenfeedback</span><span class="sxs-lookup"><span data-stu-id="8c10d-104">Respond to customer feedback</span></span>
 
