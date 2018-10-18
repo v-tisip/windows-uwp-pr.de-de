@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a4685a891facab39cb984f0b2d5f697e22477233
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4750395"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "4967610"
 ---
 # <a name="drag-and-drop"></a><span data-ttu-id="50cf5-104">Drag & Drop</span><span class="sxs-lookup"><span data-stu-id="50cf5-104">Drag and drop</span></span>
 

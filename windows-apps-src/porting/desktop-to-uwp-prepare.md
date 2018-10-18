@@ -12,11 +12,11 @@ keywords: windows10, UWP
 ms.assetid: 71a57ca2-ca00-471d-8ad9-52f285f3022e
 ms.localizationpriority: medium
 ms.openlocfilehash: 54c5f061cbb10759785bf0014a163adc8c3e3288
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4747804"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "4967058"
 ---
 # <a name="prepare-to-package-a-desktop-application"></a><span data-ttu-id="fdc29-103">Vorbereiten des Verpackens eine desktop-Anwendung</span><span class="sxs-lookup"><span data-stu-id="fdc29-103">Prepare to package a desktop application</span></span>
 

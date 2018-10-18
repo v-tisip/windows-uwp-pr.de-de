@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, app-installer, AppInstaller, querladen
 ms.localizationpriority: medium
 ms.openlocfilehash: 6158b804e1d4ece3c76099a3f8d33d5fa562078d
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4746772"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "4966962"
 ---
 # <a name="create-an-app-installer-file-with-visual-studio"></a><span data-ttu-id="e0f02-104">Erstellen einer App-Installer-Datei mit Visual Studio</span><span class="sxs-lookup"><span data-stu-id="e0f02-104">Create an App Installer file with Visual Studio</span></span>
 
