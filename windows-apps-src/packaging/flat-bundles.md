@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows10, verpacken, paketkonfiguration, flat bundle
 ms.localizationpriority: medium
 ms.openlocfilehash: 63206619d75bedb92ad6c6d05c3188272c0760de
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4689371"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4752083"
 ---
 # <a name="flat-bundle-app-packages"></a><span data-ttu-id="b9cb5-104">Flat-Bundle App-Pakete</span><span class="sxs-lookup"><span data-stu-id="b9cb5-104">Flat bundle app packages</span></span> 
 

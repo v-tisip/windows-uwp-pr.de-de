@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Kategorie, Unterkategorie, Genre, Kategorien, Genres
 ms.localizationpriority: medium
 ms.openlocfilehash: 3f43ae7c70a9471f279927d87c9d55aac8519d6a
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4685581"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "4755581"
 ---
 # <a name="category-and-subcategory-table"></a><span data-ttu-id="51343-103">Kategorie- und Unterkategorietabelle</span><span class="sxs-lookup"><span data-stu-id="51343-103">Category and subcategory table</span></span>
 

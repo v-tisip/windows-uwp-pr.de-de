@@ -15,11 +15,11 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1c9f44f13df05aa408757a0766b2a652037707d1
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4688149"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4751634"
 ---
 # <a name="navigation-view-preview-version"></a><span data-ttu-id="1eb68-103">Navigationsansicht (Preview-Version)</span><span class="sxs-lookup"><span data-stu-id="1eb68-103">Navigation view (Preview version)</span></span>
 
