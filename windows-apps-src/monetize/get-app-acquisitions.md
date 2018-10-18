@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, App-Käufe
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b712c41f8288502e9e2abd1f05396ef1720390e
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.openlocfilehash: 997f4e088edfced94189c2c0977bcfff60166059
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4690069"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4753705"
 ---
 # <a name="get-app-acquisitions"></a>Abrufen von App-Käufen
 
@@ -101,7 +101,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | market              | string | Die ISO 3166-Ländercode des Markts, in dem der Kauf erfolgte.  |
 | gender              | String | Eine der folgenden Zeichenfolgen, die das Geschlecht des Benutzer angibt, der den Kauf getätigt hat:<ul><li><strong>m</strong></li><li><strong>f</strong></li><li><strong>Unknown</strong></li></ul>    |
 | ageGroup            | string | Eine der folgenden Zeichenfolgen, die die Altersgruppe angibt, die den Kauf getätigt hat:<ul><li><strong>less than 13</strong></li><li><strong>13-17</strong></li><li><strong>18-24</strong></li><li><strong>25-34</strong></li><li><strong>35-44</strong></li><li><strong>44-55</strong></li><li><strong>greater than 55</strong></li><li><strong>Unknown</strong></li></ul>  |
-| acquisitionType     | String | Eine der folgenden Zeichenfolgen, die den Typ des Kaufes angibt:<ul><li><strong>Free</strong></li><li><strong>Testversion</strong></li><li><strong>Kostenpflichtig</strong></li><li><strong>Angebotscode</strong></li><li><strong>lap</strong></li></ul>   |
+| acquisitionType     | String | Eine der folgenden Zeichenfolgen, die den Typ des Kaufes angibt:<ul><li><strong>Free</strong></li><li><strong>Testversion</strong></li><li><strong>Kostenpflichtig</strong></li><li><strong>Angebotscode</strong></li><li><strong>lap</strong></li><li><strong>Abonnement Iap</strong></li><li><strong>Private Zielgruppe</strong></li><li><strong>Pre-Reihenfolge</strong></li><li><strong>Xbox Game Pass</strong> (oder <strong>Game Pass</strong> beim Abfragen von Daten vor dem 23.März2018)</li><li><strong>Festplatte</strong></li><li><strong>Prepaid-Code</strong></li></ul>   |
 | acquisitionQuantity | number | Die Anzahl der Käufe, die während der angegebenen Aggregationsebene erfolgten.    |
 
 
