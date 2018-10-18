@@ -11,17 +11,17 @@ ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste
 ms.localizationpriority: medium
 ms.openlocfilehash: d53fa39d0c6359e6f081c62a415cbf1874549b8f
-ms.sourcegitcommit: 9354909f9351b9635bee9bb2dc62db60d2d70107
+ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4692540"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "4752932"
 ---
 # <a name="microsoft-store-services"></a>Microsoft Store-Dienste
 
 Im Microsoft Store stellt mehrere Dienste, die Sie über REST-APIs, um programmgesteuert auf bestimmte Datentypen für apps zuzugreifen, die für Ihre oder das Ihrer Organisation Windows Dev Center-Konto registriert sind aufrufen können.
 
-## <a name="in-this-section"></a>Inhalt dieses Abschnitts
+## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 | Thema            | Beschreibung                 |
