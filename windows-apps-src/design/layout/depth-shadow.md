@@ -13,11 +13,11 @@ pm-contact: chigy
 design-contact: balrayit
 ms.localizationpriority: medium
 ms.openlocfilehash: a1433b131b994ee2b1323909bc7c195e00f43cde
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4748512"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "4969052"
 ---
 # <a name="z-depth-and-shadow"></a>Z-Tiefe und Schatten
 
@@ -65,7 +65,7 @@ Reduzieren Sie die Anzahl der mit erhöhten Rechten Ebenen klare visuelle Fokus 
 
 ## <a name="what-is-shadow"></a>Was ist Schatten?
 
-![Schatten](images/elevation-shadow/shadow.svg)
+![shadow](images/elevation-shadow/shadow.svg)
 
 Schatten ist eine Möglichkeit, erhöhte Rechte wahrnehmen. Wenn Licht über ein mit erhöhten Rechten Objekt vorhanden ist, gibt es ein Schatten auf der Oberfläche unten an. Je höher das Objekt, die größere und weicher wird der Schatten. Beachten Sie, dass mit erhöhten Rechten Objekte müssen nicht Schatten verfügen über Schatten bedeuten erhöhte Rechte.
 
