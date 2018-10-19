@@ -10,12 +10,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows10, uwp, In-app-käufe, IAPs-add-ons, Testversionen, verbrauchbar, dauerhaft, abonnement
 ms.localizationpriority: medium
-ms.openlocfilehash: d35e2469fa303a40967cf4c15800786eb2d17aca
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.openlocfilehash: b116e4794f024ecc5cf44d73e22c09ab8ee33ff4
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4750192"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "4953168"
 ---
 # <a name="in-app-purchases-and-trials"></a>In-App-Käufe und Testversionen
 
@@ -162,7 +162,7 @@ So schränken Sie mit dem **Windows.Services.Store**-Namespace Features in einer
 
 Wenn Ihre App APIs im **Windows.Services.Store**-Namespace zum Implementieren von In-App-Käufe und Testfunktionen verwendet, müssen Sie Ihre App im Store veröffentlichen und die App auf Ihrem Entwicklungsgerät herunterladen, um seine Lizenz für Tests zu verwenden. Gehen Sie folgendermaßen vor, um Ihren Code zu testen:
 
-1. Wenn Ihre App noch nicht veröffentlicht und im Store verfügbar ist, stellen Sie sicher, dass diese die minimalen Anforderungen des [Zertifizierungskits für Windows-Apps](https://developer.microsoft.com/windows/develop/app-certification-kit) erfüllt, [übermitteln Sie die App](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) an das Windows Dev Center-Dashboard, und stellen Sie sicher, dass Ihre App den Zertifizierungsprozess bestanden hat. Optional können Sie [die App so konfigurieren, daher sie während der Tests im Store nicht auffindbar](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) ist.
+1. Wenn Ihre App noch nicht veröffentlicht und im Store verfügbar ist, stellen Sie sicher, dass diese die minimalen Anforderungen des [Zertifizierungskits für Windows-Apps](https://developer.microsoft.com/windows/develop/app-certification-kit) erfüllt, [übermitteln Sie die App](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) an das Windows Dev Center-Dashboard, und stellen Sie sicher, dass Ihre App den Zertifizierungsprozess bestanden hat. Optional können Sie [die App so konfigurieren, daher sie während der Tests im Store nicht auffindbar](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) ist. Bitte beachten Sie die ordnungsgemäße Konfiguration des [Flight-Pakete](../publish/package-flights.md). Falsch konfigurierte Paket, die Flight-Pakete sind möglicherweise nicht heruntergeladen werden.
 
 2. Stellen Sie anschließend sicher, dass die folgenden Schritte durchgeführt wurden:
 
@@ -288,7 +288,7 @@ Wenn Ihre App den **Windows.ApplicationModel.Store**-Namespace verwendet, müsse
 * [Abrufen von Lizenzinformationen zu Apps und Add-Ons](get-license-info-for-apps-and-add-ons.md)
 * [Aktivieren von In-App-Käufen von Apps und Add-Ons](enable-in-app-purchases-of-apps-and-add-ons.md)
 * [Unterstützen von Käufen konsumierbarer Add-Ons](enable-consumable-add-on-purchases.md)
-* [Aktivieren von Abonnements für Add-Ons für Ihre App](enable-subscription-add-ons-for-your-app.md)
+* [Aktivieren von Abonnement-Add-Ons für die App](enable-subscription-add-ons-for-your-app.md)
 * [Implementieren einer Testversion Ihrer App](implement-a-trial-version-of-your-app.md)
 * [Fehlercodes für Store-Vorgänge](error-codes-for-store-operations.md)
 * [In-App-Käufe und Testversionen mit dem Windows.ApplicationModel.Store-Namespace](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)
