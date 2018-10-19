@@ -11,11 +11,11 @@ keywords: Windows10, UWP
 ms.assetid: 65d578a6-4e26-484c-90af-b2cd916f3634
 ms.localizationpriority: medium
 ms.openlocfilehash: 407ffb5fdebdc90a63ed7f65b4e97f8358dc58c8
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4964065"
+ms.locfileid: "5158268"
 ---
 # <a name="gradual-package-rollout"></a><span data-ttu-id="d4e7d-103">Schrittweiser Paketrollout</span><span class="sxs-lookup"><span data-stu-id="d4e7d-103">Gradual package rollout</span></span>
 

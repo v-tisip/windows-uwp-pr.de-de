@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Anzeigenkampagnen
 ms.localizationpriority: medium
 ms.openlocfilehash: ce3f51e0eec2356262811bd126f0a63d555c28bd
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4951297"
+ms.locfileid: "5130372"
 ---
 # <a name="get-ad-campaign-performance-data"></a><span data-ttu-id="409a0-104">Abrufen der Leistungsdaten einer Anzeigenkampagne</span><span class="sxs-lookup"><span data-stu-id="409a0-104">Get ad campaign performance data</span></span>
 

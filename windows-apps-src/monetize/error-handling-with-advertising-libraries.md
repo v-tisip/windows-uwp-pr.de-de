@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Anzeige, Werbung, Fehlerbehandlung, Javascript, XAML, C#
 ms.localizationpriority: medium
 ms.openlocfilehash: 49748a616654ae69c496dca74b25fd5e925e80ee
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4949223"
+ms.locfileid: "5157015"
 ---
 # <a name="handle-ad-errors"></a><span data-ttu-id="bd6a4-104">Behandeln von Fehlern bei Anzeigen</span><span class="sxs-lookup"><span data-stu-id="bd6a4-104">Handle ad errors</span></span>
 

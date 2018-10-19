@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7bf04632c4c99f2d58e3cd936e678af168750ff0
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4948589"
+ms.locfileid: "5158120"
 ---
 # <a name="enable-in-app-purchases-of-apps-and-add-ons"></a><span data-ttu-id="2b307-104">Aktivieren von In-App-Käufen von Apps und Add-Ons</span><span class="sxs-lookup"><span data-stu-id="2b307-104">Enable in-app purchases of apps and add-ons</span></span>
 

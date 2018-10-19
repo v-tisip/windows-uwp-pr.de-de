@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, Uwp, Store-Diensten, Microsoft Store-Analyse-API, Xbox Live-Analyse, Erfolge
 ms.localizationpriority: medium
 ms.openlocfilehash: f4f60cc8ecbdd3d6d05312238166bd666e238e37
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4966536"
+ms.locfileid: "5131624"
 ---
 # <a name="get-xbox-live-achievements-data"></a><span data-ttu-id="7cd62-104">Abrufen von Xbox Live Erfolgsdaten</span><span class="sxs-lookup"><span data-stu-id="7cd62-104">Get Xbox Live achievements data</span></span>
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: 1db3af004831f010a3dd4918898ce5f7cf70bb1a
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4963540"
+ms.locfileid: "5133944"
 ---
 # <a name="intro-to-certificates"></a><span data-ttu-id="7f018-104">Einführung in Zertifikate</span><span class="sxs-lookup"><span data-stu-id="7f018-104">Intro to certificates</span></span>
 

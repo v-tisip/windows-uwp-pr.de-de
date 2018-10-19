@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, StartScreenManager, primäre Kachel anheften, primäre Kachel-APIs, überprüfen, ob die Kachel angeheftet ist, Live-Kachel
 ms.localizationpriority: medium
 ms.openlocfilehash: 42b4c014dfd49c42497b8846e37e37af53cc3885
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4953749"
+ms.locfileid: "5130502"
 ---
 # <a name="primary-tile-apis"></a><span data-ttu-id="c545f-103">Primärkachel-APIs</span><span class="sxs-lookup"><span data-stu-id="c545f-103">Primary tile APIs</span></span>
  

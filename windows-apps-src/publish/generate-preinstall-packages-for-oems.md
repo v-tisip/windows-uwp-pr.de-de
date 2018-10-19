@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 598a73b291d5f8b3c004f1e9adeddf0b92b841ab
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4953287"
+ms.locfileid: "5134193"
 ---
 # <a name="generate-preinstall-packages-for-oems"></a><span data-ttu-id="ed3fc-103">Generieren von Vorinstallationspaketen für OEMs</span><span class="sxs-lookup"><span data-stu-id="ed3fc-103">Generate preinstall packages for OEMs</span></span>
 

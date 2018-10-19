@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: dcdedda655011cf700df2548140b312f4b0f817d
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4961308"
+ms.locfileid: "5134548"
 ---
 # <a name="enable-in-app-product-purchases"></a><span data-ttu-id="9e5c1-103">Unterstützen von In-App-Produktkäufen</span><span class="sxs-lookup"><span data-stu-id="9e5c1-103">Enable in-app product purchases</span></span>
 

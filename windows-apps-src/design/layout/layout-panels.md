@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a839379150ecd38fc1925c81d4e11d588018011f
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4963273"
+ms.locfileid: "5130586"
 ---
 # <a name="layout-panels"></a><span data-ttu-id="ad536-103">Layoutpanels</span><span class="sxs-lookup"><span data-stu-id="ad536-103">Layout panels</span></span>
 

@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Win32, Desktop, Popupbenachrichtigungen, Desktop-Brücke, Optionen zum Senden von Popups, COM-Server, COM-Aktivator, COM, gefälschter COM, kein COM, ohne COM, Senden von Popupbenachrichtigungen
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f54519fd0ddc975c1e57c2aebde583ef971850d
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4946434"
+ms.locfileid: "5130667"
 ---
 # <a name="toast-notifications-from-desktop-apps"></a><span data-ttu-id="04995-103">Popupbenachrichtigungen über Desktop-Apps</span><span class="sxs-lookup"><span data-stu-id="04995-103">Toast notifications from desktop apps</span></span>
 

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Point of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: b33c1d33fe88a09de36e8f80a3034b915d338861
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4963243"
+ms.locfileid: "5134500"
 ---
 # <a name="configure-a-barcode-scanner"></a><span data-ttu-id="4aaf9-104">Konfigurieren eines Strichcodescanners</span><span class="sxs-lookup"><span data-stu-id="4aaf9-104">Configure a barcode scanner</span></span>
 
