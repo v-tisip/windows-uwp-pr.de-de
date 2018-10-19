@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projektion, agil, objekt, agilität, IAgileObject
 ms.localizationpriority: medium
 ms.openlocfilehash: 9af1fb0a9d23727924ae3c165bc8977fb9cc7774
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4961559"
+ms.locfileid: "5128644"
 ---
 # <a name="agile-objects-in-cwinrt"></a><span data-ttu-id="625f6-105">Agile Objekte in C++/WinRT</span><span class="sxs-lookup"><span data-stu-id="625f6-105">Agile objects in C++/WinRT</span></span>
 <span data-ttu-id="625f6-106">In den meisten Fällen kann von jedem Thread aus auf eine Instanz einer Windows-Runtime-Klasse zugegriffen werden (wie auf ein Standard-C++ Objekt).</span><span class="sxs-lookup"><span data-stu-id="625f6-106">In the vast majority of cases, an instance of a Windows Runtime class&mdash;like a standard C++ object&mdash;can be accessed from any thread.</span></span> <span data-ttu-id="625f6-107">Eine solche Klasse ist *agil*.</span><span class="sxs-lookup"><span data-stu-id="625f6-107">Such a class is *agile*.</span></span> <span data-ttu-id="625f6-108">Nur eine kleine Anzahl von Windows-Runtime-Klassen, die mit Windows bereitgestellt werden, sind nicht agil. Wenn Sie sie nutzen, müssen Sie ihr Threading-Modell und ihr Marshaling-Verhalten berücksichtigen (Marshaling ist die Weitergabe von Daten über eine Thread- oder eine Prozessgrenze).</span><span class="sxs-lookup"><span data-stu-id="625f6-108">Only a small number of Windows Runtime classes that ship with Windows are non-agile, but when you consume them you need to take into consideration their threading model and marshaling behavior (marshaling is passing data across a thread or process boundary).</span></span> <span data-ttu-id="625f6-109">Es ist ein guter Standard für jedes Windows-Runtime-Objekt, agil zu sein, Ihre eigenen [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Typen sind standardmäßig agil.</span><span class="sxs-lookup"><span data-stu-id="625f6-109">It's a good default for every Windows Runtime object to be agile, so your own [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) types are agile by default.</span></span>

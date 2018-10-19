@@ -15,11 +15,11 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 57856872fc664670756c310410223acaf9708bc5
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4955763"
+ms.locfileid: "5129994"
 ---
 # <a name="icons-for-uwp-apps"></a><span data-ttu-id="8fd93-103">Symbole für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="8fd93-103">Icons for UWP apps</span></span>
 

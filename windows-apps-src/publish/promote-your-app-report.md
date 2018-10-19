@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, bewerben, App, Kampagnen, Bericht, Installationen
 ms.localizationpriority: medium
 ms.openlocfilehash: b5f63b53fca8a97c4f6e61aa38f45a749ca0621b
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4957176"
+ms.locfileid: "5125945"
 ---
 # <a name="ad-campaign-report"></a><span data-ttu-id="2652f-104">Bericht „Anzeigenkampagne“</span><span class="sxs-lookup"><span data-stu-id="2652f-104">Ad campaign report</span></span>
 

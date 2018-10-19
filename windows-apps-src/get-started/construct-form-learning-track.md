@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Erste Schritte, UWP, Windows10, Lernpfad, Layout, Formular
 ms.localizationpriority: medium
 ms.openlocfilehash: c2a851a442cabca4529cd202c90db692c43adcb5
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "4954791"
+ms.locfileid: "5141340"
 ---
 # <a name="create-and-customize-a-form"></a><span data-ttu-id="f0f68-104">Erstellen und Anpassen eines Formulars</span><span class="sxs-lookup"><span data-stu-id="f0f68-104">Create and customize a form</span></span>
 
