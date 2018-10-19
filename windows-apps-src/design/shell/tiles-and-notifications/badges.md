@@ -13,128 +13,128 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: fc09e7a9d98d04c53aac0d76293b9d8e4dc6ed91
-ms.sourcegitcommit: 1c6325aa572868b789fcdd2efc9203f67a83872a
+ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "4746196"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "4961770"
 ---
-# <a name="badge-notifications-for-uwp-apps"></a><span data-ttu-id="27ace-103">Signalbenachrichtigungen für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="27ace-103">Badge notifications for UWP apps</span></span>
+# <a name="badge-notifications-for-uwp-apps"></a><span data-ttu-id="71c78-103">Signalbenachrichtigungen für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="71c78-103">Badge notifications for UWP apps</span></span>
 
  
 
 <div style="float:left; font-size:80%; text-align:left; margin: 0px 15px 15px 0px;">
-<img src="images/badge-example.png" alt="A tile with a numeric badge displaying the number 63 to indicate 63 unread mails." style="padding-bottom:0.0em; margin-bottom: 2px" /><br/><span data-ttu-id="27ace-104">Eine Kachel, die mit dem numerischen Signal „63“</span><span class="sxs-lookup"><span data-stu-id="27ace-104">A tile with a numeric badge displaying</span></span><br/> <span data-ttu-id="27ace-105">auf 63 ungelesene E-Mails hinweist.</span><span class="sxs-lookup"><span data-stu-id="27ace-105">the number 63 to indicate 63 unread mails.</span></span></div>
+<img src="images/badge-example.png" alt="A tile with a numeric badge displaying the number 63 to indicate 63 unread mails." style="padding-bottom:0.0em; margin-bottom: 2px" /><br/><span data-ttu-id="71c78-104">Eine Kachel, die mit dem numerischen Signal „63“</span><span class="sxs-lookup"><span data-stu-id="71c78-104">A tile with a numeric badge displaying</span></span><br/> <span data-ttu-id="71c78-105">auf 63 ungelesene E-Mails hinweist.</span><span class="sxs-lookup"><span data-stu-id="71c78-105">the number 63 to indicate 63 unread mails.</span></span></div>
 
-<span data-ttu-id="27ace-106">Ein Benachrichtigungssignal enthält eine Zusammenfassung oder Statusinformationen für Ihre App.</span><span class="sxs-lookup"><span data-stu-id="27ace-106">A notification badge conveys summary or status information specific to your app.</span></span> <span data-ttu-id="27ace-107">Diese Informationen können numerisch (1–99) oder eine Gruppe der vom System bereitgestellten Glyphen sein.</span><span class="sxs-lookup"><span data-stu-id="27ace-107">They can be numeric (1-99) or one of a set of system-provided glyphs.</span></span> <span data-ttu-id="27ace-108">Beispiele für Informationen, die am besten über ein Signal vermittelt werden, sind der Netzwerkverbindungsstatus in einem Onlinespiel, der Benutzerstatus in einer Nachrichten-App, die Anzahl ungelesener Nachrichten in einer E-Mail-App und die Anzahl neuer Beiträge in einer Social-Media-App.</span><span class="sxs-lookup"><span data-stu-id="27ace-108">Examples of information best conveyed through a badge include network connection status in an online game, user status in a messaging app, number of unread mails in a mail app, and number of new posts in a social media app.</span></span> 
+<span data-ttu-id="71c78-106">Ein Benachrichtigungssignal enthält eine Zusammenfassung oder Statusinformationen für Ihre App.</span><span class="sxs-lookup"><span data-stu-id="71c78-106">A notification badge conveys summary or status information specific to your app.</span></span> <span data-ttu-id="71c78-107">Diese Informationen können numerisch (1–99) oder eine Gruppe der vom System bereitgestellten Glyphen sein.</span><span class="sxs-lookup"><span data-stu-id="71c78-107">They can be numeric (1-99) or one of a set of system-provided glyphs.</span></span> <span data-ttu-id="71c78-108">Beispiele für Informationen, die am besten über ein Signal vermittelt werden, sind der Netzwerkverbindungsstatus in einem Onlinespiel, der Benutzerstatus in einer Nachrichten-App, die Anzahl ungelesener Nachrichten in einer E-Mail-App und die Anzahl neuer Beiträge in einer Social-Media-App.</span><span class="sxs-lookup"><span data-stu-id="71c78-108">Examples of information best conveyed through a badge include network connection status in an online game, user status in a messaging app, number of unread mails in a mail app, and number of new posts in a social media app.</span></span> 
 
-<span data-ttu-id="27ace-109">Benachrichtigungssignale werden unabhängig davon, ob die App gerade ausgeführt wird, auf dem Taskleisten-Symbol Ihrer App und in der unteren rechten Ecke der zugehörigen Kachel angezeigt.</span><span class="sxs-lookup"><span data-stu-id="27ace-109">Notification badges appear on your app's taskbar icon and in the lower-right corner of its start tile, regardless of whether the app is running.</span></span> <span data-ttu-id="27ace-110">Signale können auf allen Kachelgrößen angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="27ace-110">Badges can be displayed on all tile sizes.</span></span>  
+<span data-ttu-id="71c78-109">Benachrichtigungssignale werden unabhängig davon, ob die App gerade ausgeführt wird, auf dem Taskleisten-Symbol Ihrer App und in der unteren rechten Ecke der zugehörigen Kachel angezeigt.</span><span class="sxs-lookup"><span data-stu-id="71c78-109">Notification badges appear on your app's taskbar icon and in the lower-right corner of its start tile, regardless of whether the app is running.</span></span> <span data-ttu-id="71c78-110">Signale können auf allen Kachelgrößen angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="71c78-110">Badges can be displayed on all tile sizes.</span></span>  
 
 > [!NOTE]
-> <span data-ttu-id="27ace-111">Es ist nicht möglich, ein eigenes Signalbild bereitzustellen. Sie können nur die vom System bereitgestellten Signalbilder verwenden.</span><span class="sxs-lookup"><span data-stu-id="27ace-111">You cannot provide your own badge image; only system-provided badge images can be used.</span></span>
+> <span data-ttu-id="71c78-111">Es ist nicht möglich, ein eigenes Signalbild bereitzustellen. Sie können nur die vom System bereitgestellten Signalbilder verwenden.</span><span class="sxs-lookup"><span data-stu-id="71c78-111">You cannot provide your own badge image; only system-provided badge images can be used.</span></span>
 
 
-## <a name="numeric-badges"></a><span data-ttu-id="27ace-112">Numerische Signale</span><span class="sxs-lookup"><span data-stu-id="27ace-112">Numeric badges</span></span>
+## <a name="numeric-badges"></a><span data-ttu-id="71c78-112">Numerische Signale</span><span class="sxs-lookup"><span data-stu-id="71c78-112">Numeric badges</span></span>
 
 <table>
     <tr>
-        <th><span data-ttu-id="27ace-113">Wert</span><span class="sxs-lookup"><span data-stu-id="27ace-113">Value</span></span></th>
-        <th><span data-ttu-id="27ace-114">Signal</span><span class="sxs-lookup"><span data-stu-id="27ace-114">Badge</span></span></th>
-        <th><span data-ttu-id="27ace-115">XML</span><span class="sxs-lookup"><span data-stu-id="27ace-115">XML</span></span></th>
+        <th><span data-ttu-id="71c78-113">Wert</span><span class="sxs-lookup"><span data-stu-id="71c78-113">Value</span></span></th>
+        <th><span data-ttu-id="71c78-114">Signal</span><span class="sxs-lookup"><span data-stu-id="71c78-114">Badge</span></span></th>
+        <th><span data-ttu-id="71c78-115">XML</span><span class="sxs-lookup"><span data-stu-id="71c78-115">XML</span></span></th>
     </tr>
     <tr>
-        <td><span data-ttu-id="27ace-116">Eine Zahl zwischen 1 und 99</span><span class="sxs-lookup"><span data-stu-id="27ace-116">A number from 1 to 99.</span></span> <span data-ttu-id="27ace-117">Ein Nullwert entspricht dem Glyphenwert "none" und führt dazu, dass das Signal gelöscht wird.</span><span class="sxs-lookup"><span data-stu-id="27ace-117">A value of 0 is equivalent to the glyph value "none" and will clear the badge.</span></span></td>
+        <td><span data-ttu-id="71c78-116">Eine Zahl zwischen 1 und 99</span><span class="sxs-lookup"><span data-stu-id="71c78-116">A number from 1 to 99.</span></span> <span data-ttu-id="71c78-117">Ein Nullwert entspricht dem Glyphenwert "none" und führt dazu, dass das Signal gelöscht wird.</span><span class="sxs-lookup"><span data-stu-id="71c78-117">A value of 0 is equivalent to the glyph value "none" and will clear the badge.</span></span></td>
         <td><img src="images/badges/badge-numeric.png" alt="A numeric badge less than 100." /></td>
         <td>`<badge value="1"/>`</td>
     </tr>
     <tr>
-        <td><span data-ttu-id="27ace-118">Eine beliebige Zahl über 99</span><span class="sxs-lookup"><span data-stu-id="27ace-118">Any number greater than 99.</span></span></td>
+        <td><span data-ttu-id="71c78-118">Eine beliebige Zahl über 99</span><span class="sxs-lookup"><span data-stu-id="71c78-118">Any number greater than 99.</span></span></td>
         <td><img src="images/badges/badge-numeric-greater.png" alt="A numeric badge greater than 99." /></td></td>
         <td>`<badge value="100"/>`</td>
     </tr>    
 </table>
 
-## <a name="glyph-badges"></a><span data-ttu-id="27ace-119">Glyphensignale</span><span class="sxs-lookup"><span data-stu-id="27ace-119">Glyph badges</span></span>
-<span data-ttu-id="27ace-120">Anstelle einer Zahl kann in einem Signal eine der nicht erweiterbaren Statusglyphen angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="27ace-120">Instead of a number, a badge can display one of a non-extensible set of status glyphs.</span></span> 
+## <a name="glyph-badges"></a><span data-ttu-id="71c78-119">Glyphensignale</span><span class="sxs-lookup"><span data-stu-id="71c78-119">Glyph badges</span></span>
+<span data-ttu-id="71c78-120">Anstelle einer Zahl kann in einem Signal eine der nicht erweiterbaren Statusglyphen angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="71c78-120">Instead of a number, a badge can display one of a non-extensible set of status glyphs.</span></span> 
 
 <table>
 <tr>
-    <th><span data-ttu-id="27ace-121">Status</span><span class="sxs-lookup"><span data-stu-id="27ace-121">Status</span></span></th>
-    <th><span data-ttu-id="27ace-122">Glyphe</span><span class="sxs-lookup"><span data-stu-id="27ace-122">Glyph</span></span></th>
-    <th><span data-ttu-id="27ace-123">XML</span><span class="sxs-lookup"><span data-stu-id="27ace-123">XML</span></span></th>
+    <th><span data-ttu-id="71c78-121">Status</span><span class="sxs-lookup"><span data-stu-id="71c78-121">Status</span></span></th>
+    <th><span data-ttu-id="71c78-122">Glyphe</span><span class="sxs-lookup"><span data-stu-id="71c78-122">Glyph</span></span></th>
+    <th><span data-ttu-id="71c78-123">XML</span><span class="sxs-lookup"><span data-stu-id="71c78-123">XML</span></span></th>
 </tr>
 <tr>
-    <td><span data-ttu-id="27ace-124">keine</span><span class="sxs-lookup"><span data-stu-id="27ace-124">none</span></span></td>
-    <td><span data-ttu-id="27ace-125">(Es wird kein Signal angezeigt.)</span><span class="sxs-lookup"><span data-stu-id="27ace-125">(No badge shown.)</span></span></td>
+    <td><span data-ttu-id="71c78-124">keine</span><span class="sxs-lookup"><span data-stu-id="71c78-124">none</span></span></td>
+    <td><span data-ttu-id="71c78-125">(Es wird kein Signal angezeigt.)</span><span class="sxs-lookup"><span data-stu-id="71c78-125">(No badge shown.)</span></span></td>
     <td>`<badge value="none"/>`</td>
 </tr>
 <tr>
-    <td><span data-ttu-id="27ace-126">Aktivität</span><span class="sxs-lookup"><span data-stu-id="27ace-126">activity</span></span></td>
+    <td><span data-ttu-id="71c78-126">Aktivität</span><span class="sxs-lookup"><span data-stu-id="71c78-126">activity</span></span></td>
     <td><img src="images/badges/badge-activity.png" alt="Glyph" /></td>
     <td>`<badge value="activity"/>`</td>
 </tr>
 <tr>
-    <td><span data-ttu-id="27ace-127">Alarm</span><span class="sxs-lookup"><span data-stu-id="27ace-127">alarm</span></span></td>
+    <td><span data-ttu-id="71c78-127">Alarm</span><span class="sxs-lookup"><span data-stu-id="71c78-127">alarm</span></span></td>
     <td><img src="images/badges/badge-alarm.png" alt="Glyph" /></td>
     <td>`<badge value="alarm"/>`</td>
 </tr>
 <tr>
-    <td><span data-ttu-id="27ace-128">Benachrichtigung</span><span class="sxs-lookup"><span data-stu-id="27ace-128">alert</span></span></td>
+    <td><span data-ttu-id="71c78-128">Benachrichtigung</span><span class="sxs-lookup"><span data-stu-id="71c78-128">alert</span></span></td>
     <td><img src="images/badges/badge-alert.png" alt="Glyph" /></td>
     <td>`<badge value="alert"/>`</td>
 </tr>
 <tr>
-    <td><span data-ttu-id="27ace-129">Achtung</span><span class="sxs-lookup"><span data-stu-id="27ace-129">attention</span></span></td>
+    <td><span data-ttu-id="71c78-129">Achtung</span><span class="sxs-lookup"><span data-stu-id="71c78-129">attention</span></span></td>
     <td><img src="images/badges/badge-attention.png" alt="Glyph" /></td>
     <td>`<badge value="attention"/>`</td>
 </tr>
 <tr>
-    <td><span data-ttu-id="27ace-130">verfügbar</span><span class="sxs-lookup"><span data-stu-id="27ace-130">available</span></span></td>
+    <td><span data-ttu-id="71c78-130">verfügbar</span><span class="sxs-lookup"><span data-stu-id="71c78-130">available</span></span></td>
     <td><img src="images/badges/badge-available.png" alt="Glyph" /></td>
     <td>`<badge value="available"/>`</td>
 </tr>
 <tr>
-    <td><span data-ttu-id="27ace-131">abwesend</span><span class="sxs-lookup"><span data-stu-id="27ace-131">away</span></span></td>
+    <td><span data-ttu-id="71c78-131">abwesend</span><span class="sxs-lookup"><span data-stu-id="71c78-131">away</span></span></td>
     <td><img src="images/badges/badge-away.png" alt="Glyph" /></td>
     <td>`<badge value="away"/>`</td>
 </tr>
 <tr>
-    <td><span data-ttu-id="27ace-132">beschäftigt</span><span class="sxs-lookup"><span data-stu-id="27ace-132">busy</span></span></td>
+    <td><span data-ttu-id="71c78-132">beschäftigt</span><span class="sxs-lookup"><span data-stu-id="71c78-132">busy</span></span></td>
     <td><img src="images/badges/badge-busy.png" alt="Glyph" /></td>
     <td>`<badge value="busy"/>`</td>
 </tr>
 <tr>
-    <td><span data-ttu-id="27ace-133">Fehler</span><span class="sxs-lookup"><span data-stu-id="27ace-133">error</span></span></td>
+    <td><span data-ttu-id="71c78-133">Fehler</span><span class="sxs-lookup"><span data-stu-id="71c78-133">error</span></span></td>
     <td><img src="images/badges/badge-error.png" alt="Glyph" /></td>
     <td>`<badge value="error"/>`</td>
 </tr>
 <tr>
-    <td><span data-ttu-id="27ace-134">newMessage</span><span class="sxs-lookup"><span data-stu-id="27ace-134">newMessage</span></span></td>
+    <td><span data-ttu-id="71c78-134">newMessage</span><span class="sxs-lookup"><span data-stu-id="71c78-134">newMessage</span></span></td>
     <td><img src="images/badges/badge-newMessage.png" alt="Glyph" /></td>
     <td>`<badge value="newMessage"/>`</td>
 </tr>
 <tr>
-    <td><span data-ttu-id="27ace-135">angehalten</span><span class="sxs-lookup"><span data-stu-id="27ace-135">paused</span></span></td>
+    <td><span data-ttu-id="71c78-135">angehalten</span><span class="sxs-lookup"><span data-stu-id="71c78-135">paused</span></span></td>
     <td><img src="images/badges/badge-paused.png" alt="Glyph" /></td>
     <td>`<badge value="paused"/>`</td>
 </tr>
 <tr>
-    <td><span data-ttu-id="27ace-136">Wiedergabe</span><span class="sxs-lookup"><span data-stu-id="27ace-136">playing</span></span></td>
+    <td><span data-ttu-id="71c78-136">Wiedergabe</span><span class="sxs-lookup"><span data-stu-id="71c78-136">playing</span></span></td>
     <td><img src="images/badges/badge-playing.png" alt="Glyph" /></td>
     <td>`<badge value="playing"/>`</td>
 </tr>
 <tr>
-    <td><span data-ttu-id="27ace-137">nicht verfügbar</span><span class="sxs-lookup"><span data-stu-id="27ace-137">unavailable</span></span></td>
+    <td><span data-ttu-id="71c78-137">nicht verfügbar</span><span class="sxs-lookup"><span data-stu-id="71c78-137">unavailable</span></span></td>
     <td><img src="images/badges/badge-unavailable.png" alt="Glyph" /></td>
     <td>`<badge value="unavailable"/>`</td>
 </tr>
 </table>
 
-## <a name="create-a-badge"></a><span data-ttu-id="27ace-138">Erstellen eines Signals</span><span class="sxs-lookup"><span data-stu-id="27ace-138">Create a badge</span></span>
+## <a name="create-a-badge"></a><span data-ttu-id="71c78-138">Erstellen eines Signals</span><span class="sxs-lookup"><span data-stu-id="71c78-138">Create a badge</span></span>
 
-<span data-ttu-id="27ace-139">Diese Beispiele zeigen, wie eine signalaktualisierung erstellt.</span><span class="sxs-lookup"><span data-stu-id="27ace-139">These examples show you how to create a badge update.</span></span>
+<span data-ttu-id="71c78-139">Diese Beispiele zeigen, wie eine signalaktualisierung erstellt.</span><span class="sxs-lookup"><span data-stu-id="71c78-139">These examples show you how to create a badge update.</span></span>
 
-### <a name="create-a-numeric-badge"></a><span data-ttu-id="27ace-140">Erstellen eines numerischen Signals</span><span class="sxs-lookup"><span data-stu-id="27ace-140">Create a numeric badge</span></span>
+### <a name="create-a-numeric-badge"></a><span data-ttu-id="71c78-140">Erstellen eines numerischen Signals</span><span class="sxs-lookup"><span data-stu-id="71c78-140">Create a numeric badge</span></span>
 
 ````csharp
 private void setBadgeNumber(int num)
@@ -161,7 +161,7 @@ private void setBadgeNumber(int num)
 }
 ````
 
-### <a name="create-a-glyph-badge"></a><span data-ttu-id="27ace-141">Erstellen eines Glyphensignals</span><span class="sxs-lookup"><span data-stu-id="27ace-141">Create a glyph badge</span></span>
+### <a name="create-a-glyph-badge"></a><span data-ttu-id="71c78-141">Erstellen eines Glyphensignals</span><span class="sxs-lookup"><span data-stu-id="71c78-141">Create a glyph badge</span></span>
 ````csharp
 private void updateBadgeGlyph()
 {
@@ -189,7 +189,7 @@ private void updateBadgeGlyph()
 }
 ````
 
-### <a name="clear-a-badge"></a><span data-ttu-id="27ace-142">Löschen eines Signals</span><span class="sxs-lookup"><span data-stu-id="27ace-142">Clear a badge</span></span>
+### <a name="clear-a-badge"></a><span data-ttu-id="71c78-142">Löschen eines Signals</span><span class="sxs-lookup"><span data-stu-id="71c78-142">Clear a badge</span></span>
 
 ````csharp
 private void clearBadge()
@@ -198,12 +198,12 @@ private void clearBadge()
 }
 ````
 
-## <a name="get-the-sample-code"></a><span data-ttu-id="27ace-143">Beispielcode herunterladen</span><span class="sxs-lookup"><span data-stu-id="27ace-143">Get the sample code</span></span>
+## <a name="get-the-sample-code"></a><span data-ttu-id="71c78-143">Beispielcode herunterladen</span><span class="sxs-lookup"><span data-stu-id="71c78-143">Get the sample code</span></span>
 
-* [<span data-ttu-id="27ace-144">Benachrichtigungsbeispiel</span><span class="sxs-lookup"><span data-stu-id="27ace-144">Notifications sample</span></span>](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/Notifications)<br/> <span data-ttu-id="27ace-145">Zeigt, wie Sie Live-Kacheln erstellen, Signalupdates senden und Popupbenachrichtigungen anzeigen können.</span><span class="sxs-lookup"><span data-stu-id="27ace-145">Shows how to create live tiles, send badge updates, and display toast notifications.</span></span> 
+* [<span data-ttu-id="71c78-144">Benachrichtigungsbeispiel</span><span class="sxs-lookup"><span data-stu-id="71c78-144">Notifications sample</span></span>](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/Notifications)<br/> <span data-ttu-id="71c78-145">Zeigt, wie Sie Live-Kacheln erstellen, Signalupdates senden und Popupbenachrichtigungen anzeigen können.</span><span class="sxs-lookup"><span data-stu-id="71c78-145">Shows how to create live tiles, send badge updates, and display toast notifications.</span></span> 
 
-## <a name="related-articles"></a><span data-ttu-id="27ace-146">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="27ace-146">Related articles</span></span>
+## <a name="related-articles"></a><span data-ttu-id="71c78-146">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="71c78-146">Related articles</span></span>
 
-* [<span data-ttu-id="27ace-147">Adaptive und interaktive Popupbenachrichtigungen</span><span class="sxs-lookup"><span data-stu-id="27ace-147">Adaptive and interactive toast notifications</span></span>](adaptive-interactive-toasts.md)
-* [<span data-ttu-id="27ace-148">Erstellen von Kacheln</span><span class="sxs-lookup"><span data-stu-id="27ace-148">Create tiles</span></span>](creating-tiles.md)
-* [<span data-ttu-id="27ace-149">Erstellen adaptiver Kacheln</span><span class="sxs-lookup"><span data-stu-id="27ace-149">Create adaptive tiles</span></span>](create-adaptive-tiles.md)
+* [<span data-ttu-id="71c78-147">Adaptive und interaktive Popupbenachrichtigungen</span><span class="sxs-lookup"><span data-stu-id="71c78-147">Adaptive and interactive toast notifications</span></span>](adaptive-interactive-toasts.md)
+* [<span data-ttu-id="71c78-148">Erstellen von Kacheln</span><span class="sxs-lookup"><span data-stu-id="71c78-148">Create tiles</span></span>](creating-tiles.md)
+* [<span data-ttu-id="71c78-149">Erstellen adaptiver Kacheln</span><span class="sxs-lookup"><span data-stu-id="71c78-149">Create adaptive tiles</span></span>](create-adaptive-tiles.md)
