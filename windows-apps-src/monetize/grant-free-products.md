@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Einkaufs-API, Produkte gewähren
 ms.localizationpriority: medium
 ms.openlocfilehash: 432d5976cb018148ba0f53aae6446a046f0a3b2f
-ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "5134163"
+ms.locfileid: "5158281"
 ---
 # <a name="grant-free-products"></a><span data-ttu-id="dcce9-104">Gewähren kostenloser Produkte</span><span class="sxs-lookup"><span data-stu-id="dcce9-104">Grant free products</span></span>
 
