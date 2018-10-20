@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projiziert, projektion, implementierung, laufzeitklasse, aktivierung
 ms.localizationpriority: medium
-ms.openlocfilehash: f0e99d23e54bd096a9dd7fa8d878929086711c81
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.openlocfilehash: dbd657c966cac2310a1078c889ff31b8147c3a59
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "4955737"
+ms.lasthandoff: 10/20/2018
+ms.locfileid: "5166975"
 ---
 # <a name="consume-apis-with-cwinrt"></a>Verwenden von APIs mit C++/WinRT
 
@@ -172,7 +172,7 @@ struct MainPage : MainPageT<MainPage>
 
 MainPage::MainPage()
 {
-    m_mainViewModel = make<Bookstore::implementation::BookstoreViewModel>();
+    m_mainViewModel = winrt::make<Bookstore::implementation::BookstoreViewModel>();
     ...
 }
 ```
@@ -180,7 +180,7 @@ MainPage::MainPage()
 Weitere Details, Code und eine exemplarische Vorgehensweise für die Nutzung einer im verwendenden Projekt implementierten Laufzeitklasse finden Sie unter [XAML-Steuerelemente; Binden an eine C++/WinRT-Eigenschaft](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage).
 
 ## <a name="instantiating-and-returning-projected-types-and-interfaces"></a>Instanziierung und Rückgabe von projizierten Typen und Schnittstellen
-Hier ist ein Beispiel dafür, wie projizierte Typen und Schnittstellen in Ihrem Projekt aussehen könnten.
+Hier ist ein Beispiel dafür, wie projizierte Typen und Schnittstellen in Ihrem Projekt aussehen könnten. Denken Sie daran, dass ein Projizierter Typ (wie in diesem Beispiel), Tool generiert wird, und nicht etwas, würde sich selbst zu erstellen.
 
 ```cppwinrt
 struct MyRuntimeClass : MyProject::IMyRuntimeClass, impl::require<MyRuntimeClass,
