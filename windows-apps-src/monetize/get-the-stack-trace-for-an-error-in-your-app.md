@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Stapelüberwachung, Fehler
 ms.localizationpriority: medium
 ms.openlocfilehash: 54c39d157bc2fcab6a67bd273f5d00eedd80be54
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "4965978"
+ms.lasthandoff: 10/20/2018
+ms.locfileid: "5171109"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-app"></a><span data-ttu-id="10b4b-104">Abrufen der Stapelüberwachung für einen Fehler in Ihrer App</span><span class="sxs-lookup"><span data-stu-id="10b4b-104">Get the stack trace for an error in your app</span></span>
 

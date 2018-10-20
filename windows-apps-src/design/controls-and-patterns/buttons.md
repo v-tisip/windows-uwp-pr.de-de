@@ -17,11 +17,11 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: badaefc406daa5f4500c76262d916f47d82e7a52
-ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5131491"
+ms.lasthandoff: 10/20/2018
+ms.locfileid: "5171962"
 ---
 # <a name="buttons"></a><span data-ttu-id="b7eef-103">Schaltflächen</span><span class="sxs-lookup"><span data-stu-id="b7eef-103">Buttons</span></span>
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Flight-Übermittlungen
 ms.localizationpriority: medium
 ms.openlocfilehash: df685e0886b1db59e5868717a425b95e40217bdf
-ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5135389"
+ms.lasthandoff: 10/20/2018
+ms.locfileid: "5171494"
 ---
 # <a name="manage-package-flight-submissions"></a><span data-ttu-id="7aa31-104">Verwalten von Flight-Paket-Übermittlungen</span><span class="sxs-lookup"><span data-stu-id="7aa31-104">Manage package flight submissions</span></span>
 

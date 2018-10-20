@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, uwp, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: d065fdffe2fcb32a9d574c90f59eb7115597167a
-ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5128749"
+ms.lasthandoff: 10/20/2018
+ms.locfileid: "5171942"
 ---
 # <a name="compile-resources-manually-with-makepriexe"></a><span data-ttu-id="cd0af-103">Manuelles Kompilieren von Ressourcen mit MakePri.exe</span><span class="sxs-lookup"><span data-stu-id="cd0af-103">Compile resources manually with MakePri.exe</span></span>
 
