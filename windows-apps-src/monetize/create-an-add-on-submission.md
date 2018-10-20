@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Erstellen einer Add-On-Übermittlung, In-App-Produkt, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 39af744d8c8e4b9d26cd9d82a9489396857ffa5b
-ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "5125935"
+ms.locfileid: "5164933"
 ---
 # <a name="create-an-add-on-submission"></a><span data-ttu-id="0b785-104">Erstellen einer Add-On-Übermittlung</span><span class="sxs-lookup"><span data-stu-id="0b785-104">Create an add-on submission</span></span>
 

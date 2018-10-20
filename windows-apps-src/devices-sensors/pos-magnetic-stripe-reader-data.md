@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, zeigen Sie Service, pos, Magnetstreifenleser
 ms.localizationpriority: medium
 ms.openlocfilehash: ad954e8c03d92307fa72ead236d5428ac2bdddab
-ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5132841"
+ms.lasthandoff: 10/20/2018
+ms.locfileid: "5168869"
 ---
 # <a name="obtain-and-understand-magnetic-stripe-data"></a><span data-ttu-id="918c2-104">Abrufen und Verstehen von Magnetstreifendaten</span><span class="sxs-lookup"><span data-stu-id="918c2-104">Obtain and understand magnetic stripe data</span></span>
 

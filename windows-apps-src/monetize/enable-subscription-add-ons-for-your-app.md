@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3575d4d30515a3c26bf99e1cc37afa3b98f4e7dc
-ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "5127539"
+ms.locfileid: "5161916"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a><span data-ttu-id="5c620-104">Aktivieren von Abonnements für Add-Ons für Ihre App</span><span class="sxs-lookup"><span data-stu-id="5c620-104">Enable subscription add-ons for your app</span></span>
 

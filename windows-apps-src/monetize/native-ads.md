@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Anzeigen, Werbung, Ad-Steuerelement, native Anzeige
 ms.localizationpriority: medium
 ms.openlocfilehash: 4a529cc360d6a357cf4ff6aa36370c4339b37ed6
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "4966397"
+ms.lasthandoff: 10/20/2018
+ms.locfileid: "5166170"
 ---
 # <a name="native-ads"></a><span data-ttu-id="40988-104">Native Anzeigen</span><span class="sxs-lookup"><span data-stu-id="40988-104">Native ads</span></span>
 

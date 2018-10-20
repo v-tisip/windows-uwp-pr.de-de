@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e0d63cac488e294629d430c7470dc58ad64059f9
-ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5130732"
+ms.lasthandoff: 10/20/2018
+ms.locfileid: "5168806"
 ---
 # <a name="manage-your-ad-campaign"></a><span data-ttu-id="eb767-103">Verwalten Ihrer Anzeigenkampagne</span><span class="sxs-lookup"><span data-stu-id="eb767-103">Manage your ad campaign</span></span>
 

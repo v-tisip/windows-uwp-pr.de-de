@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Anzeigen, Werbung, AdControl, Problembehandlung, HTML, Javascript
 ms.localizationpriority: medium
 ms.openlocfilehash: 5474ac51d57decfe2c4f4d5f1969da5b4436fd14
-ms.sourcegitcommit: e16c9845b52d5bd43fc02bbe92296a9682d96926
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "4948311"
+ms.lasthandoff: 10/20/2018
+ms.locfileid: "5166617"
 ---
 # <a name="html-and-javascript-troubleshooting-guide"></a><span data-ttu-id="936a8-104">Anleitung zur Problembehandlung für HTML und JavaScript</span><span class="sxs-lookup"><span data-stu-id="936a8-104">HTML and JavaScript troubleshooting guide</span></span>
 

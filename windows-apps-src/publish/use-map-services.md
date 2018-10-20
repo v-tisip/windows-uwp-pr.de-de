@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d322a22898f2f45a89b4cd30051149133bc3e2bf
-ms.sourcegitcommit: 310a4555fedd4246188a98b31f6c094abb33ec60
+ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/19/2018
-ms.locfileid: "5134048"
+ms.locfileid: "5156842"
 ---
 # <a name="use-map-services"></a><span data-ttu-id="04c8f-103">Verwenden von Kartendiensten</span><span class="sxs-lookup"><span data-stu-id="04c8f-103">Use map services</span></span>
 
