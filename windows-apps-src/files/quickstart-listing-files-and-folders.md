@@ -16,11 +16,11 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: 312e351a39bf291e1fcd21921230a73ed10cfd17
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5171576"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5399298"
 ---
 # <a name="enumerate-and-query-files-and-folders"></a><span data-ttu-id="a2855-105">Aufzählen und Abfragen von Dateien und Ordnern</span><span class="sxs-lookup"><span data-stu-id="a2855-105">Enumerate and query files and folders</span></span>
 

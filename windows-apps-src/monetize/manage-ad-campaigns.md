@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store Werbungs-API, Anzeigenkampagnen
 ms.localizationpriority: medium
 ms.openlocfilehash: f707c252e404da3aaf6e82317c80a266f4d91d26
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5165272"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5396345"
 ---
 # <a name="manage-ad-campaigns"></a><span data-ttu-id="544e7-104">Verwalten von Anzeigenkampagnen</span><span class="sxs-lookup"><span data-stu-id="544e7-104">Manage ad campaigns</span></span>
 

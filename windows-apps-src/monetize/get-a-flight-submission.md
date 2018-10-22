@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Flight-Übermittlung
 ms.localizationpriority: medium
 ms.openlocfilehash: 6772625d2939052e617c4edaafb2f06042dd244a
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5163860"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5403153"
 ---
 # <a name="get-a-package-flight-submission"></a><span data-ttu-id="9ecbf-104">Abrufen einer Flight-Paket-Übermittlung</span><span class="sxs-lookup"><span data-stu-id="9ecbf-104">Get a package flight submission</span></span>
 

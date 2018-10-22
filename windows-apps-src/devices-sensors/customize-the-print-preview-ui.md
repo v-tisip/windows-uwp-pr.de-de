@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, das Drucken
 ms.localizationpriority: medium
 ms.openlocfilehash: fe4086cc87699083304594eb4ccc8e7bb137b19f
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5164988"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5396802"
 ---
 # <a name="customize-the-print-preview-ui"></a><span data-ttu-id="84b56-104">Anpassen der Benutzeroberfläche für die Druckvorschau</span><span class="sxs-lookup"><span data-stu-id="84b56-104">Customize the print preview UI</span></span>
 

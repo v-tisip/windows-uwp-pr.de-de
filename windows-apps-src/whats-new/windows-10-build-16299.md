@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ffe7de94e4a8564b4971fda0b64f6648d9b6088b
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5159325"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5400134"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-16299"></a><span data-ttu-id="fcd45-104">Neuigkeiten für Entwickler in Windows10, Build 16299</span><span class="sxs-lookup"><span data-stu-id="fcd45-104">What's New in Windows 10 for developers, build 16299</span></span>
 

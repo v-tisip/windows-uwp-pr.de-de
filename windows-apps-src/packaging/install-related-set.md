@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, App-Installer, AppInstaller, querladen, verwandte Gruppe, optionale Pakete
 ms.localizationpriority: medium
 ms.openlocfilehash: 965ef217fa00131504841ef2209dbe6aa54f50af
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5159482"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5402344"
 ---
 # <a name="install-a-related-set-using-an-app-installer-file"></a><span data-ttu-id="14d75-105">Installieren einer verwandten Gruppe mithilfe einer App-Installer-Datei</span><span class="sxs-lookup"><span data-stu-id="14d75-105">Install a related set using an App Installer file</span></span>
 

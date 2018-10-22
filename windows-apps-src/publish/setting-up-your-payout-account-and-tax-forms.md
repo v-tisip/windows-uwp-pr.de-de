@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f7359b2ae40e9b53d5ab73ee93402b11beab629
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5161354"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5398738"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a><span data-ttu-id="b9f1b-103">Einrichten von Auszahlungskonten und Steuerformularen.</span><span class="sxs-lookup"><span data-stu-id="b9f1b-103">Set up your payout account and tax forms</span></span>
 
