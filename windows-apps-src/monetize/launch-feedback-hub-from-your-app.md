@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Feedback-Hub, Starten
 ms.localizationpriority: medium
 ms.openlocfilehash: 6617c3d5901fbb1a1e9a7f271f4c80d4f38e41f6
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/22/2018
-ms.locfileid: "5171972"
+ms.locfileid: "5396289"
 ---
 # <a name="launch-feedback-hub-from-your-app"></a>Starten des Feedback-Hubs über Ihre App
 

@@ -9,12 +9,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projiziert, projizierung, varbeiten, ereignis, delegat
 ms.localizationpriority: medium
-ms.openlocfilehash: c64b4a23e3b63c939d192e828e890a9ceb92e5ab
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.openlocfilehash: 96655c14f9c21f804ef5ebfdfe73cee0b04edfe3
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5162992"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5400058"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>Verarbeiten von Ereignissen über Delegaten in C++/WinRT
 
@@ -142,7 +142,7 @@ struct Example : ExampleT<Example>
     }
 
 private:
-    winrt::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase> m_event_revoker;
+    winrt::Windows::UI::Xaml::Controls::Button::Click_revoker m_event_revoker;
 };
 ```
 
@@ -156,11 +156,13 @@ winrt::event_token Click(winrt::Windows::UI::Xaml::RoutedEventHandler const& han
 void Click(winrt::event_token const& token) const;
 
 // Revoke with event_revoker
-winrt::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase> Click(winrt::auto_revoke_t,
+Button::Click_revoker Click(winrt::auto_revoke_t,
     winrt::Windows::UI::Xaml::RoutedEventHandler const& handler) const;
 ```
 
-Ein ähnliches Muster gilt für alle C++/WinRT-Ereignisse.
+> [!NOTE]
+> Im obigen Codebeispiel `Button::Click_revoker` ist ein Typalias für `winrt::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase>`. Ein ähnliches Muster gilt für alle C++/WinRT-Ereignisse. Jedes Windows-Runtime-Ereignis verfügt über eine Überladung der Revoke-Funktion, die einen Event-Revoker zurückgibt und Revoker Typ ist ein Mitglied der Ereignisquelle. Um ein weiteres Beispiel zu nutzen, hat das [**corewindow:: SizeChanged**](/uwp/api/windows.ui.core.corewindow.sizechanged) -Ereignis also eine Überladung der Registrierung-Funktion, die einen Wert vom Typ **CoreWindow::SizeChanged_revoker**zurückgibt.
+
 
 In einem Seitennavigationsszenario kann es sinnvoll sein, Handler zu widerrufen. Wenn Sie wiederholt auf eine Seite navigieren und diese dann wieder verlassen, können Sie alle Handler widerrufen, wenn Sie von der Seite weg navigieren. Wenn Sie dieselbe Seiteninstanz wiederverwenden, dann überprüfen Sie alternativ den Wert Ihres Tokens und registrieren Sie sich nur, wenn er noch nicht festgelegt ist (`if (!m_token){ ... }`). Eine dritte Möglichkeit besteht darin, einen Event-Revoker als Datenelement der Seite zu speichern. Und eine vierte Möglichkeit (wird später in diesem Thema beschrieben) besteht darin, eine starke oder schwache Referenz auf das *this*-Objekt in Ihrer Lambda-Funktion zu verwenden.
 
