@@ -11,11 +11,11 @@ keywords: Windows10, UWP, Microsoft Store-Services-SDK, Ereignisse protokolliere
 ms.assetid: 4aa591e0-c22a-4c90-b316-0b5d0410af19
 ms.localizationpriority: medium
 ms.openlocfilehash: 06cf3be8755fc375eb0604e188e34d6a5afee9c1
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5166100"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5406397"
 ---
 # <a name="log-custom-events-for-dev-center"></a>Protokollieren benutzerdefinierter Ereignisse für Dev Center
 
