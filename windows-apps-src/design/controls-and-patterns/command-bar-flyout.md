@@ -16,11 +16,11 @@ dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 22d965d14c4f10f904a4d94a18ce83721c49491c
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5162586"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5410888"
 ---
 # <a name="command-bar-flyout"></a><span data-ttu-id="ab7c0-103">Befehlsleisten-Flyout</span><span class="sxs-lookup"><span data-stu-id="ab7c0-103">Command bar flyout</span></span>
 

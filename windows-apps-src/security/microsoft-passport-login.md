@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: 106ea458502a95c53ecbf02d9118f3c31ff43978
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "5167847"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5409861"
 ---
 # <a name="create-a-windows-hello-login-app"></a><span data-ttu-id="f909e-104">Erstellen einer Windows Hello-Anmelde-App</span><span class="sxs-lookup"><span data-stu-id="f909e-104">Create a Windows Hello login app</span></span>
 

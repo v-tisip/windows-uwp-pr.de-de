@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 41c7286493e08fd62ad4b207d0e014dd4fbd5318
-ms.sourcegitcommit: 72835733ec429a5deb6a11da4112336746e5e9cf
+ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "5161561"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "5406205"
 ---
 # <a name="handle-uri-activation"></a><span data-ttu-id="9e5dc-104">Behandeln der URI-Aktivierung</span><span class="sxs-lookup"><span data-stu-id="9e5dc-104">Handle URI activation</span></span>
 
