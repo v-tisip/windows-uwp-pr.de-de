@@ -12,43 +12,43 @@ ms.technology: uwp
 keywords: Windows10, UWP, sekundäre Kacheln, Anheften, anheften, Schnellstart, Codebeispiel, Beispiel, Sekundärkachel
 ms.localizationpriority: medium
 ms.openlocfilehash: 437d149e22f035fdd0cb1f5251a114b6dd4765e4
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5436168"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475772"
 ---
-# <a name="pin-secondary-tiles"></a><span data-ttu-id="d4362-103">Sekundäre Kacheln anheften</span><span class="sxs-lookup"><span data-stu-id="d4362-103">Pin secondary tiles</span></span>
+# <a name="pin-secondary-tiles"></a><span data-ttu-id="526fb-103">Sekundäre Kacheln anheften</span><span class="sxs-lookup"><span data-stu-id="526fb-103">Pin secondary tiles</span></span>
 
 
-<span data-ttu-id="d4362-104">Dieses Thema führt Sie durch die Schritte zum Erstellen einer sekundären Kachel für Ihre UWP-App und Anheften der Kachel an das Startmenü.</span><span class="sxs-lookup"><span data-stu-id="d4362-104">This topic walks you through the steps to create a secondary tile for your UWP app and pin it to the Start menu.</span></span>
+<span data-ttu-id="526fb-104">Dieses Thema führt Sie durch die Schritte zum Erstellen einer sekundären Kachel für Ihre UWP-App und Anheften der Kachel an das Startmenü.</span><span class="sxs-lookup"><span data-stu-id="526fb-104">This topic walks you through the steps to create a secondary tile for your UWP app and pin it to the Start menu.</span></span>
 
 ![Screenshot von sekundären Kacheln](images/secondarytiles.png)
 
-<span data-ttu-id="d4362-106">Weitere Informationen zum Erstellen und Anheften von Sekundärkacheln finden Sie unter [Übersicht über sekundäre Kacheln](secondary-tiles.md).</span><span class="sxs-lookup"><span data-stu-id="d4362-106">To learn more about secondary tiles, please see the [Secondary tiles overview](secondary-tiles.md).</span></span>
+<span data-ttu-id="526fb-106">Weitere Informationen zum Erstellen und Anheften von Sekundärkacheln finden Sie unter [Übersicht über sekundäre Kacheln](secondary-tiles.md).</span><span class="sxs-lookup"><span data-stu-id="526fb-106">To learn more about secondary tiles, please see the [Secondary tiles overview](secondary-tiles.md).</span></span>
 
 
-## <a name="add-namespace"></a><span data-ttu-id="d4362-107">Hinzufügen von Namespaces</span><span class="sxs-lookup"><span data-stu-id="d4362-107">Add namespace</span></span>
+## <a name="add-namespace"></a><span data-ttu-id="526fb-107">Hinzufügen von Namespaces</span><span class="sxs-lookup"><span data-stu-id="526fb-107">Add namespace</span></span>
 
-<span data-ttu-id="d4362-108">Der Windows.UI. StartScreen-Namespace enthält die SecondaryTile-Klasse.</span><span class="sxs-lookup"><span data-stu-id="d4362-108">The Windows.UI.StartScreen namespace includes the SecondaryTile class.</span></span>
+<span data-ttu-id="526fb-108">Der Windows.UI. StartScreen-Namespace enthält die SecondaryTile-Klasse.</span><span class="sxs-lookup"><span data-stu-id="526fb-108">The Windows.UI.StartScreen namespace includes the SecondaryTile class.</span></span>
 
 ```csharp
 using Windows.UI.StartScreen;
 ```
 
 
-## <a name="initialize-the-secondary-tile"></a><span data-ttu-id="d4362-109">Initialisieren Sie die sekundäre Kachel</span><span class="sxs-lookup"><span data-stu-id="d4362-109">Initialize the secondary tile</span></span>
+## <a name="initialize-the-secondary-tile"></a><span data-ttu-id="526fb-109">Initialisieren Sie die sekundäre Kachel</span><span class="sxs-lookup"><span data-stu-id="526fb-109">Initialize the secondary tile</span></span>
 
-<span data-ttu-id="d4362-110">Sekundäre Kacheln bestehen aus einigen wichtigen Komponenten...</span><span class="sxs-lookup"><span data-stu-id="d4362-110">Secondary tiles are composed of a few key components...</span></span>
+<span data-ttu-id="526fb-110">Sekundäre Kacheln bestehen aus einigen wichtigen Komponenten...</span><span class="sxs-lookup"><span data-stu-id="526fb-110">Secondary tiles are composed of a few key components...</span></span>
 
-* <span data-ttu-id="d4362-111">**TileId**: Ein eindeutiger Bezeichner, mit dem Sie die Kachel von Ihren anderen sekundären Kacheln identifizieren können.</span><span class="sxs-lookup"><span data-stu-id="d4362-111">**TileId**: A unique identifier that lets you identify the tile among your other secondary tiles.</span></span>
-* <span data-ttu-id="d4362-112">**DisplayName**: Der Name, der auf der Kachel angezeigt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="d4362-112">**DisplayName**: The name you want shown on the tile.</span></span>
-* <span data-ttu-id="d4362-113">**Argumente**: Die Argumente, die an Ihre App zurück übergeben werden sollen, wenn der Benutzer auf Ihre Kachel klickt.</span><span class="sxs-lookup"><span data-stu-id="d4362-113">**Arguments**: The arguments you want passed back to your app when the user clicks your tile.</span></span>
-* <span data-ttu-id="d4362-114">**Square150x150Logo**: Das erforderliche Logo, das auf der mittelgroßen Kachel angezeigt wird (die in verkleinerter Kachelgröße angezeigt wird, wenn kein kleines Logo bereitgestellt wird).</span><span class="sxs-lookup"><span data-stu-id="d4362-114">**Square150x150Logo**: The required logo, displayed on the medium size tile (and resized to small size tile if no small logo provided).</span></span>
+* <span data-ttu-id="526fb-111">**TileId**: Ein eindeutiger Bezeichner, mit dem Sie die Kachel von Ihren anderen sekundären Kacheln identifizieren können.</span><span class="sxs-lookup"><span data-stu-id="526fb-111">**TileId**: A unique identifier that lets you identify the tile among your other secondary tiles.</span></span>
+* <span data-ttu-id="526fb-112">**DisplayName**: Der Name, der auf der Kachel angezeigt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="526fb-112">**DisplayName**: The name you want shown on the tile.</span></span>
+* <span data-ttu-id="526fb-113">**Argumente**: Die Argumente, die an Ihre App zurück übergeben werden sollen, wenn der Benutzer auf Ihre Kachel klickt.</span><span class="sxs-lookup"><span data-stu-id="526fb-113">**Arguments**: The arguments you want passed back to your app when the user clicks your tile.</span></span>
+* <span data-ttu-id="526fb-114">**Square150x150Logo**: Das erforderliche Logo, das auf der mittelgroßen Kachel angezeigt wird (die in verkleinerter Kachelgröße angezeigt wird, wenn kein kleines Logo bereitgestellt wird).</span><span class="sxs-lookup"><span data-stu-id="526fb-114">**Square150x150Logo**: The required logo, displayed on the medium size tile (and resized to small size tile if no small logo provided).</span></span>
 
-<span data-ttu-id="d4362-115">Sie **MÜSSEN** initialisierte Werte für alle oben genannten Eigenschaften anbieten, da andernfalls eine Ausnahme ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="d4362-115">You **MUST** provide initialized values for all of the above properties, or else you will get an exception.</span></span>
+<span data-ttu-id="526fb-115">Sie **MÜSSEN** initialisierte Werte für alle oben genannten Eigenschaften anbieten, da andernfalls eine Ausnahme ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="526fb-115">You **MUST** provide initialized values for all of the above properties, or else you will get an exception.</span></span>
 
-<span data-ttu-id="d4362-116">Es gibt eine Vielzahl von Konstruktoren, die Sie verwenden können, das Verwenden des Konstruktors, der TileId, DisplayName, Argumente, Square150x150Logo und DesiredSize annimmt, stellt allerdings sicher, dass Sie alle erforderlichen Eigenschaften festlegen.</span><span class="sxs-lookup"><span data-stu-id="d4362-116">There are a variety of constructors you can use, but using the constructor that takes in the tileId, displayName, arguments, square150x150Logo, and desiredSize helps ensure you set all of the required properties.</span></span>
+<span data-ttu-id="526fb-116">Es gibt eine Vielzahl von Konstruktoren, die Sie verwenden können, das Verwenden des Konstruktors, der TileId, DisplayName, Argumente, Square150x150Logo und DesiredSize annimmt, stellt allerdings sicher, dass Sie alle erforderlichen Eigenschaften festlegen.</span><span class="sxs-lookup"><span data-stu-id="526fb-116">There are a variety of constructors you can use, but using the constructor that takes in the tileId, displayName, arguments, square150x150Logo, and desiredSize helps ensure you set all of the required properties.</span></span>
 
 ```csharp
 // Construct a unique tile ID, which you will need to use later for updating the tile
@@ -71,13 +71,13 @@ SecondaryTile tile = new SecondaryTile(
 ```
 
 
-## <a name="optional-add-support-for-larger-tile-sizes"></a><span data-ttu-id="d4362-117">Optional: Hinzufügen von Unterstützung für größere Kacheln</span><span class="sxs-lookup"><span data-stu-id="d4362-117">Optional: Add support for larger tile sizes</span></span>
+## <a name="optional-add-support-for-larger-tile-sizes"></a><span data-ttu-id="526fb-117">Optional: Hinzufügen von Unterstützung für größere Kacheln</span><span class="sxs-lookup"><span data-stu-id="526fb-117">Optional: Add support for larger tile sizes</span></span>
 
-<span data-ttu-id="d4362-118">Wenn Sie vorhaben, umfassende Kachelbenachrichtigungen auf der sekundären Kachel anzuzeigen, sollten Sie dem Anwender ermöglichen, die Breite oder Größe ihrer Kachel zu ändern, damit noch mehr Inhalte angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="d4362-118">If you're going to be displaying rich tile notifications on your secondary tile, you'll likely want to allow the user to resize their tile to be wide or large, so that they can see even more of your content.</span></span>
+<span data-ttu-id="526fb-118">Wenn Sie vorhaben, umfassende Kachelbenachrichtigungen auf der sekundären Kachel anzuzeigen, sollten Sie dem Anwender ermöglichen, die Breite oder Größe ihrer Kachel zu ändern, damit noch mehr Inhalte angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="526fb-118">If you're going to be displaying rich tile notifications on your secondary tile, you'll likely want to allow the user to resize their tile to be wide or large, so that they can see even more of your content.</span></span>
 
-<span data-ttu-id="d4362-119">Um breite und große Kachelgrößen zu aktivieren, müssen Sie *Wide310x150Logo* und *Square310x310Logo* angeben.</span><span class="sxs-lookup"><span data-stu-id="d4362-119">To enable wide and large tile sizes, you need to provide the *Wide310x150Logo* and *Square310x310Logo*.</span></span> <span data-ttu-id="d4362-120">Wenn möglich, sollten Sie ebenfalls *Square71x71Logo* für die kleine Kachelgröße bereitstellen (andernfalls wird die erforderliche Größe Square150x150Logo für die kleine Kachel angewandt).</span><span class="sxs-lookup"><span data-stu-id="d4362-120">Also, if possible, you should provide the *Square71x71Logo* for the small tile size (otherwise we will downsize your required Square150x150Logo for the small tile).</span></span>
+<span data-ttu-id="526fb-119">Um breite und große Kachelgrößen zu aktivieren, müssen Sie *Wide310x150Logo* und *Square310x310Logo* angeben.</span><span class="sxs-lookup"><span data-stu-id="526fb-119">To enable wide and large tile sizes, you need to provide the *Wide310x150Logo* and *Square310x310Logo*.</span></span> <span data-ttu-id="526fb-120">Wenn möglich, sollten Sie ebenfalls *Square71x71Logo* für die kleine Kachelgröße bereitstellen (andernfalls wird die erforderliche Größe Square150x150Logo für die kleine Kachel angewandt).</span><span class="sxs-lookup"><span data-stu-id="526fb-120">Also, if possible, you should provide the *Square71x71Logo* for the small tile size (otherwise we will downsize your required Square150x150Logo for the small tile).</span></span>
 
-<span data-ttu-id="d4362-121">Sie können ebenfalls ein eindeutiges *Square44x44Logo* bereitstellen, das optional in der unteren rechten Ecke angezeigt wird, wenn eine Benachrichtigung vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="d4362-121">You can also provide a unique *Square44x44Logo*, which is optionally displayed on the bottom right corner when a notification is present.</span></span> <span data-ttu-id="d4362-122">Wenn Sie diese nicht angeben, wird stattdessen *Square44x44Logo* aus der primären Kachel verwendet.</span><span class="sxs-lookup"><span data-stu-id="d4362-122">If you don't provide one, the *Square44x44Logo* from your primary tile will be used instead.</span></span>
+<span data-ttu-id="526fb-121">Sie können ebenfalls ein eindeutiges *Square44x44Logo* bereitstellen, das optional in der unteren rechten Ecke angezeigt wird, wenn eine Benachrichtigung vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="526fb-121">You can also provide a unique *Square44x44Logo*, which is optionally displayed on the bottom right corner when a notification is present.</span></span> <span data-ttu-id="526fb-122">Wenn Sie diese nicht angeben, wird stattdessen *Square44x44Logo* aus der primären Kachel verwendet.</span><span class="sxs-lookup"><span data-stu-id="526fb-122">If you don't provide one, the *Square44x44Logo* from your primary tile will be used instead.</span></span>
 
 ```csharp
 // Enable wide and large tile sizes
@@ -92,9 +92,9 @@ tile.VisualElements.Square44x44Logo = new Uri("ms-appx:///Assets/CityTiles/Squar
 ```
 
 
-## <a name="optional-enable-showing-the-display-name"></a><span data-ttu-id="d4362-123">Optional: Aktivieren Sie die Anzeige des Anzeigenamens</span><span class="sxs-lookup"><span data-stu-id="d4362-123">Optional: Enable showing the display name</span></span>
+## <a name="optional-enable-showing-the-display-name"></a><span data-ttu-id="526fb-123">Optional: Aktivieren Sie die Anzeige des Anzeigenamens</span><span class="sxs-lookup"><span data-stu-id="526fb-123">Optional: Enable showing the display name</span></span>
 
-<span data-ttu-id="d4362-124">Der Anzeigename wird standardmäßig nicht angezeigt.</span><span class="sxs-lookup"><span data-stu-id="d4362-124">By default the display name will NOT be shown.</span></span> <span data-ttu-id="d4362-125">Um den Anzeigenamen in mittelgroß, breit, groß anzuzeigen, fügen Sie den folgenden Code hinzu.</span><span class="sxs-lookup"><span data-stu-id="d4362-125">To show the display name on medium/wide/large, add the following code.</span></span>
+<span data-ttu-id="526fb-124">Der Anzeigename wird standardmäßig nicht angezeigt.</span><span class="sxs-lookup"><span data-stu-id="526fb-124">By default the display name will NOT be shown.</span></span> <span data-ttu-id="526fb-125">Um den Anzeigenamen in mittelgroß, breit, groß anzuzeigen, fügen Sie den folgenden Code hinzu.</span><span class="sxs-lookup"><span data-stu-id="526fb-125">To show the display name on medium/wide/large, add the following code.</span></span>
 
 ```csharp
 // Show the display name on all sizes
@@ -104,17 +104,17 @@ tile.VisualElements.ShowNameOnSquare310x310Logo = true;
 ```
 
 
-## <a name="optional-3d-secondary-tiles"></a><span data-ttu-id="d4362-126">Optional: Sekundäre 3D-Kacheln</span><span class="sxs-lookup"><span data-stu-id="d4362-126">Optional: 3D secondary tiles</span></span>
-<span data-ttu-id="d4362-127">Sie können die sekundäre Kachel für Windows Mixed Reality verbessern, indem Sie 3D-Ressourcen hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="d4362-127">You can enhance your secondary tile for Windows Mixed Reality by adding 3D assets.</span></span> <span data-ttu-id="d4362-128">Benutzer können 3D-Kacheln direkt in ihre Windows Mixed Reality Home-Umgebung anstelle des Startmenüs platzieren, wenn sie Ihre App in einer Mixed Reality-Umgebung verwenden.</span><span class="sxs-lookup"><span data-stu-id="d4362-128">Users can place 3D tiles directly in their Windows Mixed Reality home instead of the Start menu when using your app in a Mixed Reality environment.</span></span> <span data-ttu-id="d4362-129">Sie können z.B. 360° Photospheres erstellen, die direkt in einer 360°-Foto-App verknüpft werden oder Ihren Benutzern ermöglichen, ein 3D-Modell eines Stuhls aus einem Möbelkatalog zu platzieren, das eine Seite zu den Optionen für Preise und Farben für das Objekt öffnet, wenn es ausgewählt wird.</span><span class="sxs-lookup"><span data-stu-id="d4362-129">For example, you can create 360° photospheres that link directly into a 360° photo viewer app, or let users place a 3D model of a chair from a furniture catalog that opens a details page about the pricing and color options for that object when selected.</span></span> <span data-ttu-id="d4362-130">Informationen zu ersten Schritten finden Sie in der [Mixed Reality-Entwicklerdokumentation](https://developer.microsoft.com/windows/mixed-reality/implementing_3d_deep_links_for_your_app_in_the_windows_mixed_reality_home).</span><span class="sxs-lookup"><span data-stu-id="d4362-130">To get started, refer to the [Mixed Reality developer documentation](https://developer.microsoft.com/windows/mixed-reality/implementing_3d_deep_links_for_your_app_in_the_windows_mixed_reality_home).</span></span>
+## <a name="optional-3d-secondary-tiles"></a><span data-ttu-id="526fb-126">Optional: Sekundäre 3D-Kacheln</span><span class="sxs-lookup"><span data-stu-id="526fb-126">Optional: 3D secondary tiles</span></span>
+<span data-ttu-id="526fb-127">Sie können die sekundäre Kachel für Windows Mixed Reality verbessern, indem Sie 3D-Ressourcen hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="526fb-127">You can enhance your secondary tile for Windows Mixed Reality by adding 3D assets.</span></span> <span data-ttu-id="526fb-128">Benutzer können 3D-Kacheln direkt in ihre Windows Mixed Reality Home-Umgebung anstelle des Startmenüs platzieren, wenn sie Ihre App in einer Mixed Reality-Umgebung verwenden.</span><span class="sxs-lookup"><span data-stu-id="526fb-128">Users can place 3D tiles directly in their Windows Mixed Reality home instead of the Start menu when using your app in a Mixed Reality environment.</span></span> <span data-ttu-id="526fb-129">Sie können z.B. 360° Photospheres erstellen, die direkt in einer 360°-Foto-App verknüpft werden oder Ihren Benutzern ermöglichen, ein 3D-Modell eines Stuhls aus einem Möbelkatalog zu platzieren, das eine Seite zu den Optionen für Preise und Farben für das Objekt öffnet, wenn es ausgewählt wird.</span><span class="sxs-lookup"><span data-stu-id="526fb-129">For example, you can create 360° photospheres that link directly into a 360° photo viewer app, or let users place a 3D model of a chair from a furniture catalog that opens a details page about the pricing and color options for that object when selected.</span></span> <span data-ttu-id="526fb-130">Informationen zu ersten Schritten finden Sie in der [Mixed Reality-Entwicklerdokumentation](https://developer.microsoft.com/windows/mixed-reality/implementing_3d_deep_links_for_your_app_in_the_windows_mixed_reality_home).</span><span class="sxs-lookup"><span data-stu-id="526fb-130">To get started, refer to the [Mixed Reality developer documentation](https://developer.microsoft.com/windows/mixed-reality/implementing_3d_deep_links_for_your_app_in_the_windows_mixed_reality_home).</span></span>
 
 
 
-## <a name="pin-the-secondary-tile"></a><span data-ttu-id="d4362-131">Anheften der sekundären Kachel</span><span class="sxs-lookup"><span data-stu-id="d4362-131">Pin the secondary tile</span></span>
+## <a name="pin-the-secondary-tile"></a><span data-ttu-id="526fb-131">Anheften der sekundären Kachel</span><span class="sxs-lookup"><span data-stu-id="526fb-131">Pin the secondary tile</span></span>
 
-<span data-ttu-id="d4362-132">Fordern Sie schließlich das Anheften der Kachel auf.</span><span class="sxs-lookup"><span data-stu-id="d4362-132">Finally, request to pin the tile.</span></span> <span data-ttu-id="d4362-133">Beachten Sie, dass dies von einem UI-Thread aufgerufen werden muss.</span><span class="sxs-lookup"><span data-stu-id="d4362-133">Note that this must be called from a UI thread.</span></span> <span data-ttu-id="d4362-134">Auf dem Desktop wird ein Dialogfeld angezeigt, das den Benutzer auffordert zu bestätigen, ob er die Kachel anheften möchte.</span><span class="sxs-lookup"><span data-stu-id="d4362-134">On Desktop, a dialog will appear asking the user to confirm whether they would like to pin the tile.</span></span>
+<span data-ttu-id="526fb-132">Fordern Sie schließlich das Anheften der Kachel auf.</span><span class="sxs-lookup"><span data-stu-id="526fb-132">Finally, request to pin the tile.</span></span> <span data-ttu-id="526fb-133">Beachten Sie, dass dies von einem UI-Thread aufgerufen werden muss.</span><span class="sxs-lookup"><span data-stu-id="526fb-133">Note that this must be called from a UI thread.</span></span> <span data-ttu-id="526fb-134">Auf dem Desktop wird ein Dialogfeld angezeigt, das den Benutzer auffordert zu bestätigen, ob er die Kachel anheften möchte.</span><span class="sxs-lookup"><span data-stu-id="526fb-134">On Desktop, a dialog will appear asking the user to confirm whether they would like to pin the tile.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="d4362-135">Bei einer Windows-Desktopanwendung, die die Desktop-Brücke verwendet, müssen Sie zuerst einen zusätzlichen Schritt ausführen, wie unter [Anheften ab einer Desktopanwendung](secondary-tiles-desktop-pinning.md) beschrieben</span><span class="sxs-lookup"><span data-stu-id="d4362-135">If you are a Windows desktop application using the Desktop Bridge, you must first perform an extra step as described in [Pin from desktop application](secondary-tiles-desktop-pinning.md)</span></span>
+> <span data-ttu-id="526fb-135">Bei einer Windows-Desktopanwendung, die die Desktop-Brücke verwendet, müssen Sie zuerst einen zusätzlichen Schritt ausführen, wie unter [Anheften ab einer Desktopanwendung](secondary-tiles-desktop-pinning.md) beschrieben</span><span class="sxs-lookup"><span data-stu-id="526fb-135">If you are a Windows desktop application using the Desktop Bridge, you must first perform an extra step as described in [Pin from desktop application](secondary-tiles-desktop-pinning.md)</span></span>
 
 ```csharp
 // Pin the tile
@@ -124,11 +124,11 @@ bool isPinned = await tile.RequestCreateAsync();
 ```
 
 
-## <a name="check-if-a-secondary-tile-exists"></a><span data-ttu-id="d4362-136">Überprüfen Sie, ob eine sekundäre Kachel vorhanden ist</span><span class="sxs-lookup"><span data-stu-id="d4362-136">Check if a secondary tile exists</span></span>
+## <a name="check-if-a-secondary-tile-exists"></a><span data-ttu-id="526fb-136">Überprüfen Sie, ob eine sekundäre Kachel vorhanden ist</span><span class="sxs-lookup"><span data-stu-id="526fb-136">Check if a secondary tile exists</span></span>
 
-<span data-ttu-id="d4362-137">Wenn Ihre Benutzer eine Seite in Ihrer App besuchen, die sie bereits auf der Startseite angeheftet haben, möchten Sie stattdessen eine Schaltfläche "Entfernen" anzeigen.</span><span class="sxs-lookup"><span data-stu-id="d4362-137">If your user visits a page in your app that they have already pinned to Start, you will want to instead display an "Unpin" button.</span></span>
+<span data-ttu-id="526fb-137">Wenn Ihre Benutzer eine Seite in Ihrer App besuchen, die sie bereits auf der Startseite angeheftet haben, möchten Sie stattdessen eine Schaltfläche "Entfernen" anzeigen.</span><span class="sxs-lookup"><span data-stu-id="526fb-137">If your user visits a page in your app that they have already pinned to Start, you will want to instead display an "Unpin" button.</span></span>
 
-<span data-ttu-id="d4362-138">Daher sollten Sie bei der Auswahl der Schaltfläche, die angezeigt werden soll zunächst überprüfen, ob derzeit deren sekundäre Kachel angeheftet ist.</span><span class="sxs-lookup"><span data-stu-id="d4362-138">Therefore, when choosing what button to display, you need to first check whether the secondary tile is currently pinned.</span></span>
+<span data-ttu-id="526fb-138">Daher sollten Sie bei der Auswahl der Schaltfläche, die angezeigt werden soll zunächst überprüfen, ob derzeit deren sekundäre Kachel angeheftet ist.</span><span class="sxs-lookup"><span data-stu-id="526fb-138">Therefore, when choosing what button to display, you need to first check whether the secondary tile is currently pinned.</span></span>
 
 ```csharp
 // Check if the secondary tile is pinned
@@ -138,9 +138,9 @@ bool isPinned = SecondaryTile.Exists(tileId);
 ```
 
 
-## <a name="unpinning-a-secondary-tile"></a><span data-ttu-id="d4362-139">Lösen einer sekundären Kachel</span><span class="sxs-lookup"><span data-stu-id="d4362-139">Unpinning a secondary tile</span></span>
+## <a name="unpinning-a-secondary-tile"></a><span data-ttu-id="526fb-139">Lösen einer sekundären Kachel</span><span class="sxs-lookup"><span data-stu-id="526fb-139">Unpinning a secondary tile</span></span>
 
-<span data-ttu-id="d4362-140">Wenn die Kachel zurzeit angeheftet ist und der Benutzer klickt auf die Schaltfläche „Lösen”, sollte die Kachel gelöst (gelöscht) werden.</span><span class="sxs-lookup"><span data-stu-id="d4362-140">If the tile is currently pinned, and the user clicks your unpin button, you'll want to unpin (delete) the tile.</span></span>
+<span data-ttu-id="526fb-140">Wenn die Kachel zurzeit angeheftet ist und der Benutzer klickt auf die Schaltfläche „Lösen”, sollte die Kachel gelöst (gelöscht) werden.</span><span class="sxs-lookup"><span data-stu-id="526fb-140">If the tile is currently pinned, and the user clicks your unpin button, you'll want to unpin (delete) the tile.</span></span>
 
 ```csharp
 // Initialize a secondary tile with the same tile ID you want removed
@@ -151,9 +151,9 @@ await toBeDeleted.RequestDeleteAsync();
 ```
 
 
-## <a name="updating-a-secondary-tile"></a><span data-ttu-id="d4362-141">Aktualisieren einer sekundären Kachel</span><span class="sxs-lookup"><span data-stu-id="d4362-141">Updating a secondary tile</span></span>
+## <a name="updating-a-secondary-tile"></a><span data-ttu-id="526fb-141">Aktualisieren einer sekundären Kachel</span><span class="sxs-lookup"><span data-stu-id="526fb-141">Updating a secondary tile</span></span>
 
-<span data-ttu-id="d4362-142">Wenn Sie die Logos, Anzeigenamen oder anderen Elementen auf der sekundären Kachel aktualisieren müssen, können Sie *RequestUpdateAsync* verwenden.</span><span class="sxs-lookup"><span data-stu-id="d4362-142">If you need to update the logos, display name, or anything else on the secondary tile, you can use *RequestUpdateAsync*.</span></span>
+<span data-ttu-id="526fb-142">Wenn Sie die Logos, Anzeigenamen oder anderen Elementen auf der sekundären Kachel aktualisieren müssen, können Sie *RequestUpdateAsync* verwenden.</span><span class="sxs-lookup"><span data-stu-id="526fb-142">If you need to update the logos, display name, or anything else on the secondary tile, you can use *RequestUpdateAsync*.</span></span>
 
 ```csharp
 // Initialize a secondary tile with the same tile ID you want to update
@@ -166,9 +166,9 @@ await tile.UpdateAsync();
 ```
 
 
-## <a name="enumerating-all-pinned-secondary-tiles"></a><span data-ttu-id="d4362-143">Auflisten aller angehefteten sekundären Kacheln</span><span class="sxs-lookup"><span data-stu-id="d4362-143">Enumerating all pinned secondary tiles</span></span>
+## <a name="enumerating-all-pinned-secondary-tiles"></a><span data-ttu-id="526fb-143">Auflisten aller angehefteten sekundären Kacheln</span><span class="sxs-lookup"><span data-stu-id="526fb-143">Enumerating all pinned secondary tiles</span></span>
 
-<span data-ttu-id="d4362-144">Wenn Sie alle Kacheln ermitteln müssen, die der Benutzer angeheftet hat, verwenden Sie anstelle von *SecondaryTile.Exists* *SecondaryTile.FindAllAsync()*.</span><span class="sxs-lookup"><span data-stu-id="d4362-144">If you need to discover all the tiles your user has pinned, instead of using *SecondaryTile.Exists*, you can alternatively use *SecondaryTile.FindAllAsync()*.</span></span>
+<span data-ttu-id="526fb-144">Wenn Sie alle Kacheln ermitteln müssen, die der Benutzer angeheftet hat, verwenden Sie anstelle von *SecondaryTile.Exists* *SecondaryTile.FindAllAsync()*.</span><span class="sxs-lookup"><span data-stu-id="526fb-144">If you need to discover all the tiles your user has pinned, instead of using *SecondaryTile.Exists*, you can alternatively use *SecondaryTile.FindAllAsync()*.</span></span>
 
 ```csharp
 // Get all secondary tiles
@@ -176,15 +176,15 @@ var tiles = await SecondaryTile.FindAllAsync();
 ```
 
 
-## <a name="send-a-tile-notification"></a><span data-ttu-id="d4362-145">Senden einer Kachelbenachrichtigungen</span><span class="sxs-lookup"><span data-stu-id="d4362-145">Send a tile notification</span></span>
+## <a name="send-a-tile-notification"></a><span data-ttu-id="526fb-145">Senden einer Kachelbenachrichtigungen</span><span class="sxs-lookup"><span data-stu-id="526fb-145">Send a tile notification</span></span>
 
-<span data-ttu-id="d4362-146">Weitere Informationen zum Anzeigen umfassender Inhalte auf einer Kachel per Kachelbenachrichtigungen finden Sie unter [Senden einer lokalen Kachelbenachrichtigung](sending-a-local-tile-notification.md).</span><span class="sxs-lookup"><span data-stu-id="d4362-146">To learn how to display rich content on your tile via tile notifications, please see [Send a local tile notification](sending-a-local-tile-notification.md).</span></span>
+<span data-ttu-id="526fb-146">Weitere Informationen zum Anzeigen umfassender Inhalte auf einer Kachel per Kachelbenachrichtigungen finden Sie unter [Senden einer lokalen Kachelbenachrichtigung](sending-a-local-tile-notification.md).</span><span class="sxs-lookup"><span data-stu-id="526fb-146">To learn how to display rich content on your tile via tile notifications, please see [Send a local tile notification](sending-a-local-tile-notification.md).</span></span>
 
 
-## <a name="related"></a><span data-ttu-id="d4362-147">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="d4362-147">Related</span></span>
+## <a name="related"></a><span data-ttu-id="526fb-147">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="526fb-147">Related</span></span>
 
-* [<span data-ttu-id="d4362-148">Übersicht über sekundäre Kacheln</span><span class="sxs-lookup"><span data-stu-id="d4362-148">Secondary tiles overview</span></span>](secondary-tiles.md)
-* [<span data-ttu-id="d4362-149">Anleitung für sekundäre Kacheln</span><span class="sxs-lookup"><span data-stu-id="d4362-149">Secondary tiles guidance</span></span>](secondary-tiles-guidance.md)
-* [<span data-ttu-id="d4362-150">Kachelressourcen</span><span class="sxs-lookup"><span data-stu-id="d4362-150">Tile assets</span></span>](app-assets.md)
-* [<span data-ttu-id="d4362-151">Dokumentation für den Kachelinhalt</span><span class="sxs-lookup"><span data-stu-id="d4362-151">Tile content documentation</span></span>](create-adaptive-tiles.md)
-* [<span data-ttu-id="d4362-152">Senden einer lokalen Kachelbenachrichtigung</span><span class="sxs-lookup"><span data-stu-id="d4362-152">Send a local tile notification</span></span>](sending-a-local-tile-notification.md)
+* [<span data-ttu-id="526fb-148">Übersicht über sekundäre Kacheln</span><span class="sxs-lookup"><span data-stu-id="526fb-148">Secondary tiles overview</span></span>](secondary-tiles.md)
+* [<span data-ttu-id="526fb-149">Anleitung für sekundäre Kacheln</span><span class="sxs-lookup"><span data-stu-id="526fb-149">Secondary tiles guidance</span></span>](secondary-tiles-guidance.md)
+* [<span data-ttu-id="526fb-150">Kachelressourcen</span><span class="sxs-lookup"><span data-stu-id="526fb-150">Tile assets</span></span>](app-assets.md)
+* [<span data-ttu-id="526fb-151">Dokumentation für den Kachelinhalt</span><span class="sxs-lookup"><span data-stu-id="526fb-151">Tile content documentation</span></span>](create-adaptive-tiles.md)
+* [<span data-ttu-id="526fb-152">Senden einer lokalen Kachelbenachrichtigung</span><span class="sxs-lookup"><span data-stu-id="526fb-152">Send a local tile notification</span></span>](sending-a-local-tile-notification.md)

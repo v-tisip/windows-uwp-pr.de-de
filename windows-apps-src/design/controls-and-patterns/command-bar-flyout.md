@@ -15,90 +15,82 @@ design-contact: ksulliv
 dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 22d965d14c4f10f904a4d94a18ce83721c49491c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.openlocfilehash: 9650a60dd7e653ee7021603328a3cf6de0c13926
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445478"
+ms.locfileid: "5469716"
 ---
-# <a name="command-bar-flyout"></a><span data-ttu-id="ab7c0-103">Befehlsleisten-Flyout</span><span class="sxs-lookup"><span data-stu-id="ab7c0-103">Command bar flyout</span></span>
+# <a name="command-bar-flyout"></a><span data-ttu-id="713be-103">Befehlsleisten-Flyout</span><span class="sxs-lookup"><span data-stu-id="713be-103">Command bar flyout</span></span>
 
-<span data-ttu-id="ab7c0-104">Die Befehlsleisten-Flyout können Sie Benutzer mit einfachen Zugriff auf allgemeine Aufgaben bereitstellen, indem Befehle in einem schwebenden Symbolleisten im Zusammenhang mit eines Elements auf die UI-Canvas angezeigt.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-104">The command bar flyout lets you provide users with easy access to common tasks by showing commands in a floating toolbar related to an element on your UI canvas.</span></span>
+<span data-ttu-id="713be-104">Das Befehlsleisten-Flyout können Sie Benutzer mit einfachen Zugriff auf allgemeine Aufgaben bereitstellen, indem Befehle in einem schwebenden Symbolleisten im Zusammenhang mit eines Elements auf die UI-Canvas angezeigt.</span><span class="sxs-lookup"><span data-stu-id="713be-104">The command bar flyout lets you provide users with easy access to common tasks by showing commands in a floating toolbar related to an element on your UI canvas.</span></span>
 
-![Eine erweiterte Text Befehlsleisten-flyout](images/command-bar-flyout-text-full.png)
+![Eine erweiterte Text Befehlsleisten-flyout](images/command-bar-flyout-header.png)
 
-> <span data-ttu-id="ab7c0-106">Verwandte Informationen finden Sie unter [Flyouts](../controls-and-patterns/dialogs-and-flyouts/flyouts.md), [Menüs und Kontextmenüs](menus.md)und [Befehlsleisten](app-bars.md).</span><span class="sxs-lookup"><span data-stu-id="ab7c0-106">For related info, see [Flyouts](../controls-and-patterns/dialogs-and-flyouts/flyouts.md), [Menus and context menus](menus.md), and [Command bars](app-bars.md).</span></span>
+> <span data-ttu-id="713be-106">CommandBarFlyout erfordert Windows 10, Version 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) oder höher, oder in der [Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/).</span><span class="sxs-lookup"><span data-stu-id="713be-106">CommandBarFlyout requires Windows 10, version 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) or later, or the [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/).</span></span>
 
-<span data-ttu-id="ab7c0-107">Wie [CommandBar](app-bars.md)hat CommandBarFlyout **PrimaryCommands** und **"secondarycommands"** Eigenschaften, mit denen Sie Befehle hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-107">Like [CommandBar](app-bars.md), CommandBarFlyout has **PrimaryCommands** and **SecondaryCommands** properties you can use to add commands.</span></span> <span data-ttu-id="ab7c0-108">Sie können entweder Sammlung oder beide Befehle versehen.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-108">You can place commands in either collection, or both.</span></span> <span data-ttu-id="ab7c0-109">Wann und wie die primären und sekundären Befehle angezeigt werden, hängt von den Anzeigemodus.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-109">When and how the primary and secondary commands are displayed depends on the display mode.</span></span>
+> - <span data-ttu-id="713be-107">**Plattform-APIs**: [CommandBarFlyout-Klasse](/uwp/api/windows.ui.xaml.controls.commandbarflyout), [TextCommandBarFlyout-Klasse](/uwp/api/windows.ui.xaml.controls.textcommandbarflyout), [AppBarButton-Klasse](/uwp/api/windows.ui.xaml.controls.appbarbutton), [Klasse "appbartogglebutton"](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [Klasse "appbarseparator"](/uwp/api/windows.ui.xaml.controls.appbarseparator)</span><span class="sxs-lookup"><span data-stu-id="713be-107">**Platform APIs**: [CommandBarFlyout class](/uwp/api/windows.ui.xaml.controls.commandbarflyout), [TextCommandBarFlyout class](/uwp/api/windows.ui.xaml.controls.textcommandbarflyout), [AppBarButton class](/uwp/api/windows.ui.xaml.controls.appbarbutton), [AppBarToggleButton class](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [AppBarSeparator class](/uwp/api/windows.ui.xaml.controls.appbarseparator)</span></span>
+>- <span data-ttu-id="713be-108">**Windows-UI-Bibliothek-APIs**: [CommandBarFlyout-Klasse](/uwp/api/microsoft.ui.xaml.controls.commandbarflyout), [TextCommandBarFlyout-Klasse](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout)</span><span class="sxs-lookup"><span data-stu-id="713be-108">**Windows UI Library APIs**: [CommandBarFlyout class](/uwp/api/microsoft.ui.xaml.controls.commandbarflyout), [TextCommandBarFlyout class](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout)</span></span>
 
-<span data-ttu-id="ab7c0-110">Die Befehlsleisten-Flyout verfügt über zwei Anzeigemodi: *reduziert* und *Erweitert*.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-110">The command bar flyout has two display modes: *collapsed* and *expanded*.</span></span>
+<span data-ttu-id="713be-109">Wie [CommandBar](app-bars.md)hat CommandBarFlyout **PrimaryCommands** und **"secondarycommands"** Eigenschaften, mit denen Sie Befehle hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="713be-109">Like [CommandBar](app-bars.md), CommandBarFlyout has **PrimaryCommands** and **SecondaryCommands** properties you can use to add commands.</span></span> <span data-ttu-id="713be-110">Sie können entweder Sammlung oder beide Befehle versehen.</span><span class="sxs-lookup"><span data-stu-id="713be-110">You can place commands in either collection, or both.</span></span> <span data-ttu-id="713be-111">Wann und wie die primären und sekundären Befehle angezeigt werden, hängt von den Anzeigemodus.</span><span class="sxs-lookup"><span data-stu-id="713be-111">When and how the primary and secondary commands are displayed depends on the display mode.</span></span>
 
-- <span data-ttu-id="ab7c0-111">In den Modus "Collapsed" werden nur die primären Befehle angezeigt.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-111">In the collapsed mode, only the primary commands are shown.</span></span> <span data-ttu-id="ab7c0-112">Verfügt Ihr Befehlsleisten-Flyout primäre und sekundäre Befehle, eine "Schaltfläche" Weitere, dargestellt durch Auslassungspunkte \ [• • •] wird angezeigt.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-112">If your command bar flyout has both primary and secondary commands, a "see more" button, which is represented by an ellipsis \[•••\], is displayed.</span></span> <span data-ttu-id="ab7c0-113">Dadurch kann der Benutzer, die Zugriff auf die sekundären Befehle zu erhalten, indem Wechsel zur erweiterten Modus.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-113">This lets the user get access to the secondary commands by transitioning to expanded mode.</span></span>
-- <span data-ttu-id="ab7c0-114">Im erweiterten Modus werden die primären und sekundären Befehle angezeigt.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-114">In the expanded mode, both the primary and secondary commands are shown.</span></span> <span data-ttu-id="ab7c0-115">(Wenn das Steuerelement nur sekundäre Elemente verfügt, werden sie in einer Weise ähnelt dem MenuFlyout-Steuerelement angezeigt.)</span><span class="sxs-lookup"><span data-stu-id="ab7c0-115">(If the control has only secondary items, they are shown in a way similar to the MenuFlyout control.)</span></span>
+<span data-ttu-id="713be-112">Das Befehlsleisten-Flyout verfügt über zwei Anzeigemodi: *reduziert* und *Erweitert*.</span><span class="sxs-lookup"><span data-stu-id="713be-112">The command bar flyout has two display modes: *collapsed* and *expanded*.</span></span>
 
-| **<span data-ttu-id="ab7c0-116">Abrufen der Windows-UI-Bibliothek</span><span class="sxs-lookup"><span data-stu-id="ab7c0-116">Get the Windows UI Library</span></span>** |
-| - |
-| <span data-ttu-id="ab7c0-117">Dieses Steuerelement ist Bestandteil der Windows-UI-Bibliothek NuGet-Paket, das neue Steuerelemente und UI-Features für UWP-apps enthält.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-117">This control is included as part of the Windows UI Library, a NuGet package that contains new controls and UI features for UWP apps.</span></span> <span data-ttu-id="ab7c0-118">Weitere Informationen einschließlich installationsanweisungen finden Sie in der [Übersicht über die Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/).</span><span class="sxs-lookup"><span data-stu-id="ab7c0-118">For more info, including installation instructions, see the [Windows UI Library overview](https://docs.microsoft.com/uwp/toolkits/winui/).</span></span> |
+- <span data-ttu-id="713be-113">Im Modus "Collapsed" werden nur die primären Befehle angezeigt.</span><span class="sxs-lookup"><span data-stu-id="713be-113">In the collapsed mode, only the primary commands are shown.</span></span> <span data-ttu-id="713be-114">Verfügt Ihr Befehlsleisten-Flyout primären und sekundären Befehle, eine "Schaltfläche" Weitere, dargestellt durch Auslassungspunkte \ [• • •] wird angezeigt.</span><span class="sxs-lookup"><span data-stu-id="713be-114">If your command bar flyout has both primary and secondary commands, a "see more" button, which is represented by an ellipsis \[•••\], is displayed.</span></span> <span data-ttu-id="713be-115">So kann der Benutzer den Zugriff auf die sekundären Befehle Wechsel zur erweiterten Modus abrufen.</span><span class="sxs-lookup"><span data-stu-id="713be-115">This lets the user get access to the secondary commands by transitioning to expanded mode.</span></span>
+- <span data-ttu-id="713be-116">Im erweiterten Modus werden die primären und sekundären Befehle angezeigt.</span><span class="sxs-lookup"><span data-stu-id="713be-116">In the expanded mode, both the primary and secondary commands are shown.</span></span> <span data-ttu-id="713be-117">(Wenn das Steuerelement nur sekundäre Elemente verfügt, werden sie in einer Weise ähnelt dem MenuFlyout-Steuerelement angezeigt.)</span><span class="sxs-lookup"><span data-stu-id="713be-117">(If the control has only secondary items, they are shown in a way similar to the MenuFlyout control.)</span></span>
 
-| **<span data-ttu-id="ab7c0-119">Plattform-APIs</span><span class="sxs-lookup"><span data-stu-id="ab7c0-119">Platform APIs</span></span>** | **<span data-ttu-id="ab7c0-120">Windows-UI-Bibliothek APIs</span><span class="sxs-lookup"><span data-stu-id="ab7c0-120">Windows UI Library APIs</span></span>** |
-| - | - |
-| <span data-ttu-id="ab7c0-121">[CommandBarFlyout-Klasse](/uwp/api/windows.ui.xaml.controls.commandbarflyout), [TextCommandBarFlyout-Klasse](/uwp/api/windows.ui.xaml.controls.textcommandbarflyout), [AppBarButton-Klasse](/uwp/api/windows.ui.xaml.controls.appbarbutton), [Klasse "appbartogglebutton"](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [Klasse "appbarseparator"](/uwp/api/windows.ui.xaml.controls.appbarseparator)</span><span class="sxs-lookup"><span data-stu-id="ab7c0-121">[CommandBarFlyout class](/uwp/api/windows.ui.xaml.controls.commandbarflyout), [TextCommandBarFlyout class](/uwp/api/windows.ui.xaml.controls.textcommandbarflyout), [AppBarButton class](/uwp/api/windows.ui.xaml.controls.appbarbutton), [AppBarToggleButton class](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [AppBarSeparator class](/uwp/api/windows.ui.xaml.controls.appbarseparator)</span></span> | <span data-ttu-id="ab7c0-122">[CommandBarFlyout-Klasse](/uwp/api/microsoft.ui.xaml.controls.commandbarflyout), [TextCommandBarFlyout-Klasse](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout)</span><span class="sxs-lookup"><span data-stu-id="ab7c0-122">[CommandBarFlyout class](/uwp/api/microsoft.ui.xaml.controls.commandbarflyout), [TextCommandBarFlyout class](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout)</span></span> |
+## <a name="is-this-the-right-control"></a><span data-ttu-id="713be-118">Ist dies das richtige Steuerelement?</span><span class="sxs-lookup"><span data-stu-id="713be-118">Is this the right control?</span></span>
 
-## <a name="is-this-the-right-control"></a><span data-ttu-id="ab7c0-123">Ist dies das richtige Steuerelement?</span><span class="sxs-lookup"><span data-stu-id="ab7c0-123">Is this the right control?</span></span>
+<span data-ttu-id="713be-119">Verwenden Sie das CommandBarFlyout-Steuerelement, um eine Sammlung von Befehlen für dem Benutzer, z. B. Schaltflächen und Menüelemente im Kontext eines Elements auf der app-Canvas anzeigen.</span><span class="sxs-lookup"><span data-stu-id="713be-119">Use the CommandBarFlyout control to show a collection of commands to the user, such as buttons and menu items, in the context of an element on the app canvas.</span></span>
 
-<span data-ttu-id="ab7c0-124">Verwenden Sie die CommandBarFlyout-Steuerelement, um eine Sammlung von Befehlen für dem Benutzer, z. B. Schaltflächen und Menüelemente im Kontext eines Elements auf der app-Canvas anzeigen.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-124">Use the CommandBarFlyout control to show a collection of commands to the user, such as buttons and menu items, in the context of an element on the app canvas.</span></span>
+<span data-ttu-id="713be-120">Die TextCommandBarFlyout zeigt Textbefehle im TextBlock, TextBox, RichEditBox, RichTextBlock und PasswordBox-Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="713be-120">The TextCommandBarFlyout displays text commands in TextBox, TextBlock, RichEditBox, RichTextBlock, and PasswordBox controls.</span></span> <span data-ttu-id="713be-121">Die Befehle werden automatisch auf die aktuelle Textauswahl entsprechend konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="713be-121">The commands are automatically configured appropriately to the current text selection.</span></span> <span data-ttu-id="713be-122">Verwenden Sie eine CommandBarFlyout, um die Standard-Text-Befehle für Textsteuerelemente ersetzen.</span><span class="sxs-lookup"><span data-stu-id="713be-122">Use a CommandBarFlyout to replace the default text commands on text controls.</span></span>
 
-<span data-ttu-id="ab7c0-125">Die TextCommandBarFlyout zeigt Textbefehle im TextBlock, TextBox, RichEditBox, RichTextBlock und PasswordBox-Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-125">The TextCommandBarFlyout displays text commands in TextBox, TextBlock, RichEditBox, RichTextBlock, and PasswordBox controls.</span></span> <span data-ttu-id="ab7c0-126">Die Befehle sind für die aktuelle Textauswahl automatisch entsprechend konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-126">The commands are automatically configured appropriately to the current text selection.</span></span> <span data-ttu-id="ab7c0-127">Verwenden Sie eine CommandBarFlyout, um die Standard-Text-Befehle auf Text-Steuerelemente ersetzen.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-127">Use a CommandBarFlyout to replace the default text commands on text controls.</span></span>
+<span data-ttu-id="713be-123">Zum Einblenden von kontextbezogenen folgen Befehle auf Listenelemente der Anleitung im [Contextual Befehle für Sammlungen und Listen](collection-commanding.md).</span><span class="sxs-lookup"><span data-stu-id="713be-123">To show contextual commands on list items follow the guidance in [Contextual commanding for collections and lists](collection-commanding.md).</span></span>
 
-<span data-ttu-id="ab7c0-128">Zum Einblenden von kontextbezogenen folgen Befehle auf Listenelemente der Anleitung im [Contextual Befehle für Sammlungen und Listen](collection-commanding.md).</span><span class="sxs-lookup"><span data-stu-id="ab7c0-128">To show contextual commands on list items follow the guidance in [Contextual commanding for collections and lists](collection-commanding.md).</span></span>
+### <a name="commandbarflyout-vs-menuflyout"></a><span data-ttu-id="713be-124">CommandBarFlyout Vs MenuFlyout</span><span class="sxs-lookup"><span data-stu-id="713be-124">CommandBarFlyout vs MenuFlyout</span></span>
 
-### <a name="commandbarflyout-vs-menuflyout"></a><span data-ttu-id="ab7c0-129">CommandBarFlyout Vs MenuFlyout</span><span class="sxs-lookup"><span data-stu-id="ab7c0-129">CommandBarFlyout vs MenuFlyout</span></span>
+<span data-ttu-id="713be-125">Um Befehle in einem Kontextmenü angezeigt werden, können Sie CommandBarFlyout oder MenuFlyout verwenden.</span><span class="sxs-lookup"><span data-stu-id="713be-125">To show commands in a context menu, you can use CommandBarFlyout or MenuFlyout.</span></span> <span data-ttu-id="713be-126">CommandBarFlyout wird empfohlen, da es mehr Funktionen als MenuFlyout bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="713be-126">We recommend CommandBarFlyout because it provides more functionality than MenuFlyout.</span></span> <span data-ttu-id="713be-127">Sie können CommandBarFlyout mit nur sekundäre Befehle verwenden, um das Verhalten abzurufen und Suchen von einem MenuFlyout oder verwenden Sie das vollständige Befehlsleisten-Flyout mit primären und sekundären Befehlen.</span><span class="sxs-lookup"><span data-stu-id="713be-127">You can use CommandBarFlyout with only secondary commands to get the behavior and look of a MenuFlyout, or use the full command bar flyout with both primary and secondary commands.</span></span>
 
-<span data-ttu-id="ab7c0-130">Um Befehle in einem Kontextmenü angezeigt werden, können Sie CommandBarFlyout oder MenuFlyout verwenden.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-130">To show commands in a context menu, you can use CommandBarFlyout or MenuFlyout.</span></span> <span data-ttu-id="ab7c0-131">CommandBarFlyout wird empfohlen, da es mehr Funktionen als MenuFlyout bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-131">We recommend CommandBarFlyout because it provides more functionality than MenuFlyout.</span></span> <span data-ttu-id="ab7c0-132">Sie können CommandBarFlyout mit nur sekundäre Befehle verwenden, um das Verhalten abzurufen und Darstellung des ein MenuFlyout oder verwenden Sie die vollständige Befehlsleisten-Flyout mit primären und sekundären Befehlen.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-132">You can use CommandBarFlyout with only secondary commands to get the behavior and look of a MenuFlyout, or use the full command bar flyout with both primary and secondary commands.</span></span>
+> <span data-ttu-id="713be-128">Verwandte Informationen finden Sie unter [Flyouts](../controls-and-patterns/dialogs-and-flyouts/flyouts.md), [Menüs und Kontextmenüs](menus.md)und [Befehlsleisten](app-bars.md).</span><span class="sxs-lookup"><span data-stu-id="713be-128">For related info, see [Flyouts](../controls-and-patterns/dialogs-and-flyouts/flyouts.md), [Menus and context menus](menus.md), and [Command bars](app-bars.md).</span></span>
 
-## <a name="examples"></a><span data-ttu-id="ab7c0-133">Beispiele</span><span class="sxs-lookup"><span data-stu-id="ab7c0-133">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="713be-129">Beispiele</span><span class="sxs-lookup"><span data-stu-id="713be-129">Examples</span></span>
 
 <table>
-<th align="left"><span data-ttu-id="ab7c0-134">XAML-Steuerelementekatalog</span><span class="sxs-lookup"><span data-stu-id="ab7c0-134">XAML Controls Gallery</span></span><th>
+<th align="left"><span data-ttu-id="713be-130">XAML-Steuerelementekatalog</span><span class="sxs-lookup"><span data-stu-id="713be-130">XAML Controls Gallery</span></span><th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p><span data-ttu-id="ab7c0-135">Wenn Sie die <strong style="font-weight: semi-bold">XAML-Steuerelementekatalog</strong> -app installiert haben, klicken Sie hier, um <a href="xamlcontrolsgallery:/item/CommandBarFlyout">die app zu öffnen und finden Sie unter den CommandBarFlyout in Aktion zu sehen</a>.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-135">If you have the <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> app installed, click here to <a href="xamlcontrolsgallery:/item/CommandBarFlyout">open the app and see the CommandBarFlyout in action</a>.</span></span></p>
+    <p><span data-ttu-id="713be-131">Wenn Sie die <strong style="font-weight: semi-bold">XAML-Steuerelementekatalog</strong> -app installiert haben, klicken Sie hier, um <a href="xamlcontrolsgallery:/item/CommandBarFlyout">die app zu öffnen und finden Sie unter den CommandBarFlyout in Aktion zu sehen</a>.</span><span class="sxs-lookup"><span data-stu-id="713be-131">If you have the <strong style="font-weight: semi-bold">XAML Controls Gallery</strong> app installed, click here to <a href="xamlcontrolsgallery:/item/CommandBarFlyout">open the app and see the CommandBarFlyout in action</a>.</span></span></p>
     <ul>
-    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT"><span data-ttu-id="ab7c0-136">Erwerben Sie die XAML-Steuerelementekatalog-App (Microsoft Store)</span><span class="sxs-lookup"><span data-stu-id="ab7c0-136">Get the XAML Controls Gallery app (Microsoft Store)</span></span></a></li>
-    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics"><span data-ttu-id="ab7c0-137">Erwerben Sie den Quellcode (GitHub)</span><span class="sxs-lookup"><span data-stu-id="ab7c0-137">Get the source code (GitHub)</span></span></a></li>
+    <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT"><span data-ttu-id="713be-132">Erwerben Sie die XAML-Steuerelementekatalog-App (Microsoft Store)</span><span class="sxs-lookup"><span data-stu-id="713be-132">Get the XAML Controls Gallery app (Microsoft Store)</span></span></a></li>
+    <li><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics"><span data-ttu-id="713be-133">Erwerben Sie den Quellcode (GitHub)</span><span class="sxs-lookup"><span data-stu-id="713be-133">Get the source code (GitHub)</span></span></a></li>
     </ul>
 </td>
 </tr>
 </table>
 
-## <a name="proactive-vs-reactive-invocation"></a><span data-ttu-id="ab7c0-138">Im Vergleich zu reaktive Aufruf proaktive</span><span class="sxs-lookup"><span data-stu-id="ab7c0-138">Proactive vs. reactive invocation</span></span>
+## <a name="proactive-vs-reactive-invocation"></a><span data-ttu-id="713be-134">Im Vergleich zu reaktive Aufruf proaktive</span><span class="sxs-lookup"><span data-stu-id="713be-134">Proactive vs. reactive invocation</span></span>
 
-<span data-ttu-id="ab7c0-139">Es gibt in der Regel zwei Möglichkeiten zum Aufrufen eines Flyout oder das Menü ", die mit einem Element auf Ihrer Benutzeroberfläche Canvas verknüpft ist: _proaktive aufrufen_ und das _reaktive Aufruf_.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-139">There are typically two ways to invoke a flyout or menu that's associated with an element on your UI canvas: _proactive invocation_ and _reactive invocation_.</span></span>
+<span data-ttu-id="713be-135">Es gibt in der Regel zwei Möglichkeiten zum Aufrufen eines Flyout oder das Menü ", die mit einem Element auf Ihrer Benutzeroberfläche Canvas zugeordnet ist: _proaktive aufrufen_ und das _reaktive Aufruf_.</span><span class="sxs-lookup"><span data-stu-id="713be-135">There are typically two ways to invoke a flyout or menu that's associated with an element on your UI canvas: _proactive invocation_ and _reactive invocation_.</span></span>
 
-<span data-ttu-id="ab7c0-140">Proaktive Aufruf werden Befehle automatisch angezeigt, wenn der Benutzer mit dem Element interagiert, die die Befehle zugeordnet sind.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-140">In proactive invocation, commands appear automatically when the user interacts with the item that the commands are associated with.</span></span> <span data-ttu-id="ab7c0-141">Z. B. möglicherweise Text Formatierungsbefehle eingeblendet, wenn der Benutzer Text in einem Textfeld auswählt.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-141">For example, text formatting commands might pop up when the user selects text in a text box.</span></span> <span data-ttu-id="ab7c0-142">In diesem Fall wird die Befehlsleisten-Flyout nicht den Fokus erhalten.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-142">In this case, the command bar flyout does not take focus.</span></span> <span data-ttu-id="ab7c0-143">Stattdessen stellt relevante Befehle nahe dem Element, dem der Benutzer mit interagiert dar.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-143">Instead, it presents relevant commands close to the item the user is interacting with.</span></span> <span data-ttu-id="ab7c0-144">Wenn der Benutzer mit den Befehlen interagieren nicht, werden sie geschlossen.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-144">If the user doesn't interact with the commands, they are dismissed.</span></span>
+<span data-ttu-id="713be-136">Unter proaktive Aufruf werden Befehle automatisch angezeigt, wenn der Benutzer mit dem Element interagiert, die die Befehle zugeordnet sind.</span><span class="sxs-lookup"><span data-stu-id="713be-136">In proactive invocation, commands appear automatically when the user interacts with the item that the commands are associated with.</span></span> <span data-ttu-id="713be-137">Z. B. möglicherweise Text Formatierungsbefehle eingeblendet, wenn der Benutzer Text in einem Textfeld auswählt.</span><span class="sxs-lookup"><span data-stu-id="713be-137">For example, text formatting commands might pop up when the user selects text in a text box.</span></span> <span data-ttu-id="713be-138">In diesem Fall akzeptiert das Befehlsleisten-Flyout nicht den Fokus.</span><span class="sxs-lookup"><span data-stu-id="713be-138">In this case, the command bar flyout does not take focus.</span></span> <span data-ttu-id="713be-139">Stattdessen zeigt sie geeignete Befehle nahe dem Element, dem mit der Benutzer interagiert.</span><span class="sxs-lookup"><span data-stu-id="713be-139">Instead, it presents relevant commands close to the item the user is interacting with.</span></span> <span data-ttu-id="713be-140">Wenn der Benutzer mit den Befehlen interagieren nicht, werden sie geschlossen.</span><span class="sxs-lookup"><span data-stu-id="713be-140">If the user doesn't interact with the commands, they are dismissed.</span></span>
 
-<span data-ttu-id="ab7c0-145">Reaktive Aufruf werden Befehle in Reaktion auf eine explizite Benutzeraktion angezeigt, die Befehle anfordern. Beispiel: ein mit der rechten Maustaste.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-145">In reactive invocation, commands are shown in response to an explicit user action to request the commands; for example, a right-click.</span></span> <span data-ttu-id="ab7c0-146">Dies entspricht dem herkömmliche-Konzept von ein [Kontextmenü](menus.md).</span><span class="sxs-lookup"><span data-stu-id="ab7c0-146">This corresponds to the traditional concept of a [context menu](menus.md).</span></span>
+<span data-ttu-id="713be-141">In reaktive Aufruf werden Befehle in Reaktion auf eine explizite Benutzeraktion angezeigt, um die Befehle anzufordern; Beispiel: ein Rechtsklick.</span><span class="sxs-lookup"><span data-stu-id="713be-141">In reactive invocation, commands are shown in response to an explicit user action to request the commands; for example, a right-click.</span></span> <span data-ttu-id="713be-142">Dies entspricht dem herkömmlichen Konzept eines [Kontextmenüs](menus.md).</span><span class="sxs-lookup"><span data-stu-id="713be-142">This corresponds to the traditional concept of a [context menu](menus.md).</span></span>
 
-<span data-ttu-id="ab7c0-147">Sie können die CommandBarFlyout in Weise oder sogar eine Mischung aus den beiden verwenden.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-147">You can use the CommandBarFlyout in either way, or even a mixture of the two.</span></span>
+<span data-ttu-id="713be-143">Sie können die CommandBarFlyout in Weise oder sogar eine Mischung aus den beiden verwenden.</span><span class="sxs-lookup"><span data-stu-id="713be-143">You can use the CommandBarFlyout in either way, or even a mixture of the two.</span></span>
 
-## <a name="create-a-command-bar-flyout"></a><span data-ttu-id="ab7c0-148">Erstellen Sie eine Befehlsleisten-flyout</span><span class="sxs-lookup"><span data-stu-id="ab7c0-148">Create a command bar flyout</span></span>
+## <a name="create-a-command-bar-flyout"></a><span data-ttu-id="713be-144">Erstellen Sie eine Befehlsleisten-flyout</span><span class="sxs-lookup"><span data-stu-id="713be-144">Create a command bar flyout</span></span>
 
-> <span data-ttu-id="ab7c0-149">**Vorschau**: CommandBarFlyout erfordert die [neuesten Windows 10 Insider Preview-Build und SDK](https://insider.windows.com/for-developers/) oder der [Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/).</span><span class="sxs-lookup"><span data-stu-id="ab7c0-149">**Preview**: CommandBarFlyout requires the [latest Windows 10 Insider Preview build and SDK](https://insider.windows.com/for-developers/) or the [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/).</span></span>
+<span data-ttu-id="713be-145">Dieses Beispiel zeigt, wie Sie eine Befehlsleisten-Flyout erstellen und verwenden sie proaktiv und reaktiv.</span><span class="sxs-lookup"><span data-stu-id="713be-145">This example shows how to create a command bar flyout and use it both proactively and reactively.</span></span> <span data-ttu-id="713be-146">Wenn das Bild getippt wird, wird das Flyout im Modus "Collapsed" angezeigt.</span><span class="sxs-lookup"><span data-stu-id="713be-146">When the image is tapped, the flyout is shown in its collapsed mode.</span></span> <span data-ttu-id="713be-147">Wenn als Kontextmenü angezeigt wird, wird das Flyout im erweiterten Modus angezeigt.</span><span class="sxs-lookup"><span data-stu-id="713be-147">When shown as a context menu, the flyout is shown in its expanded mode.</span></span> <span data-ttu-id="713be-148">In beiden Fällen kann der Benutzer erweitern oder reduzieren das Flyout, nachdem er geöffnet wird.</span><span class="sxs-lookup"><span data-stu-id="713be-148">In either case, the user can expand or collapse the flyout after it's opened.</span></span>
 
-<span data-ttu-id="ab7c0-150">In diesem Beispiel wird veranschaulicht, wie ein Befehlsleisten-Flyout erstellen und verwenden sie proaktiv und reaktiv.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-150">This example shows how to create a command bar flyout and use it both proactively and reactively.</span></span> <span data-ttu-id="ab7c0-151">Wenn das Bild getippt wird, wird das Flyout im Modus "Collapsed" angezeigt.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-151">When the image is tapped, the flyout is shown in its collapsed mode.</span></span> <span data-ttu-id="ab7c0-152">Wenn als Kontextmenü angezeigt wird, wird das Flyout im erweiterten Modus angezeigt.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-152">When shown as a context menu, the flyout is shown in its expanded mode.</span></span> <span data-ttu-id="ab7c0-153">In beiden Fällen kann der Benutzer erweitern oder reduzieren das Flyout, nachdem er geöffnet wird.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-153">In either case, the user can expand or collapse the flyout after it's opened.</span></span>
+![Beispiel für eine "Collapsed" Befehlsleisten-flyout](images/command-bar-flyout-img-collapsed.png)
 
-:::row:::
-    :::column:::
-        A collapsed command bar flyout<br/>
-        ![Example of a collapsed command bar flyout](images/command-bar-flyout-img-collapsed.png)
-    :::column-end:::
-    :::column:::
-        An expanded command bar flyout<br/>
-        ![Example of an expanded command bar flyout](images/command-bar-flyout-img-expanded.png)
-    :::column-end:::
-:::row-end:::
+> _<span data-ttu-id="713be-150">Ein "Collapsed" Befehlsleisten-flyout</span><span class="sxs-lookup"><span data-stu-id="713be-150">A collapsed command bar flyout</span></span>_
+
+![Beispiel für eine erweiterte Befehlsleisten-flyout](images/command-bar-flyout-img-expanded.png)
+
+> _<span data-ttu-id="713be-152">Eine erweiterte Befehlsleisten-flyout</span><span class="sxs-lookup"><span data-stu-id="713be-152">An expanded command bar flyout</span></span>_
 
 ```xaml
 <Grid>
@@ -108,13 +100,13 @@ ms.locfileid: "5445478"
             <AppBarButton Icon="Copy" ToolTipService.ToolTip="Copy"/>
             <AppBarButton Icon="Share" ToolTipService.ToolTip="Share"/>
             <CommandBarFlyout.SecondaryCommands>
-                <AppBarButton Label="Rotate" Icon="Rotate"/>
+                <AppBarButton Label="Select all"/>
                 <AppBarButton Label="Delete" Icon="Delete"/>
             </CommandBarFlyout.SecondaryCommands>
         </CommandBarFlyout>
     </Grid.Resources>
 
-    <Image Source="Assets/licorice.png" Width="300"
+    <Image Source="Assets/image1.png" Width="300"
            Tapped="Image_Tapped" FlyoutBase.AttachedFlyout="{x:Bind ImageCommandsFlyout}"
            ContextFlyout="{x:Bind ImageCommandsFlyout}"/>
 </Grid>
@@ -135,122 +127,161 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 }
 ```
 
-### <a name="show-commands-proactively"></a><span data-ttu-id="ab7c0-154">Befehle proaktiv anzeigen</span><span class="sxs-lookup"><span data-stu-id="ab7c0-154">Show commands proactively</span></span>
+### <a name="show-commands-proactively"></a><span data-ttu-id="713be-153">Befehle proaktiv anzeigen</span><span class="sxs-lookup"><span data-stu-id="713be-153">Show commands proactively</span></span>
 
-<span data-ttu-id="ab7c0-155">Wenn Sie Kontextbefehlen proaktiv angezeigt wird, sollte nur die primären Befehle standardmäßig angezeigt werden (die Befehlsleisten-Flyout sollte reduziert werden).</span><span class="sxs-lookup"><span data-stu-id="ab7c0-155">When you show contextual commands proactively, only the primary commands should be shown by default (the command bar flyout should be collapsed).</span></span> <span data-ttu-id="ab7c0-156">Platzieren Sie die wichtigsten Befehle in die primäre Befehle Erfassung und weitere Befehle, die normalerweise in einem Kontextmenü in die sekundären Befehle Auflistung würde.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-156">Place the most important commands in the primary commands collection, and additional commands that would traditionally go in a context menu into the secondary commands collection.</span></span>
+<span data-ttu-id="713be-154">Wenn Sie proaktiv Kontextbefehlen anzeigen, sollte nur die primären Befehle in der Standardeinstellung angezeigt werden (das Befehlsleisten-Flyout sollte reduziert werden).</span><span class="sxs-lookup"><span data-stu-id="713be-154">When you show contextual commands proactively, only the primary commands should be shown by default (the command bar flyout should be collapsed).</span></span> <span data-ttu-id="713be-155">Platzieren Sie die wichtigsten Befehle in der Auflistung der primäre Befehle und zusätzliche Befehle, die normalerweise in einem Kontextmenü in die sekundären Befehle Auflistung würde.</span><span class="sxs-lookup"><span data-stu-id="713be-155">Place the most important commands in the primary commands collection, and additional commands that would traditionally go in a context menu into the secondary commands collection.</span></span>
 
-<span data-ttu-id="ab7c0-157">Zum Einblenden von Befehlen proaktiv behandeln Sie in der Regel das Ereignis [Klicken](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) oder [Tapped](/uwp/api/windows.ui.xaml.uielement.tapped) , um die Befehlsleisten-Flyout anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-157">To proactively show commands, you typically handle the [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) or [Tapped](/uwp/api/windows.ui.xaml.uielement.tapped) event to show the command bar flyout.</span></span> <span data-ttu-id="ab7c0-158">Legen Sie das Flyout [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode) **vorübergehende** oder **TransientWithDismissOnPointerMoveAway** , um das Flyout im Modus "Collapsed" zu öffnen, ohne den Fokus fest.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-158">Set the flyout's [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode) to **Transient** or **TransientWithDismissOnPointerMoveAway** to open the flyout in its collapsed mode without taking focus.</span></span>
+<span data-ttu-id="713be-156">Zum Einblenden von Befehlen proaktiv behandeln Sie in der Regel das Ereignis [Klicken](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) oder [Tapped](/uwp/api/windows.ui.xaml.uielement.tapped) , um die Befehlsleisten-Flyout anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="713be-156">To proactively show commands, you typically handle the [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) or [Tapped](/uwp/api/windows.ui.xaml.uielement.tapped) event to show the command bar flyout.</span></span> <span data-ttu-id="713be-157">Legen Sie das Flyout [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode) **vorübergehende** oder **TransientWithDismissOnPointerMoveAway** , um das Flyout im Modus "Collapsed" zu öffnen, ohne den Fokus fest.</span><span class="sxs-lookup"><span data-stu-id="713be-157">Set the flyout's [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode) to **Transient** or **TransientWithDismissOnPointerMoveAway** to open the flyout in its collapsed mode without taking focus.</span></span>
 
-<span data-ttu-id="ab7c0-159">Ab Windows 10 Insider Preview, Textsteuerelemente verfügen über eine **SelectionFlyout** -Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-159">Starting in the Windows 10 Insider Preview, text controls have a **SelectionFlyout** property.</span></span> <span data-ttu-id="ab7c0-160">Wenn Sie diese Eigenschaft ein Flyout zuordnen, wird er automatisch angezeigt, wenn Text markiert ist.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-160">When you assign a flyout to this property, it is automatically shown when text is selected.</span></span>
+<span data-ttu-id="713be-158">Ab Windows 10 Insider Preview, Text-Steuerelemente verfügen über eine **SelectionFlyout** -Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="713be-158">Starting in the Windows 10 Insider Preview, text controls have a **SelectionFlyout** property.</span></span> <span data-ttu-id="713be-159">Wenn Sie diese Eigenschaft ein Flyout zuordnen, wird er automatisch angezeigt, wenn Text markiert ist.</span><span class="sxs-lookup"><span data-stu-id="713be-159">When you assign a flyout to this property, it is automatically shown when text is selected.</span></span>
 
-### <a name="show-commands-reactively"></a><span data-ttu-id="ab7c0-161">Befehle reaktiv anzeigen</span><span class="sxs-lookup"><span data-stu-id="ab7c0-161">Show commands reactively</span></span>
+### <a name="show-commands-reactively"></a><span data-ttu-id="713be-160">Befehle reaktiv anzeigen</span><span class="sxs-lookup"><span data-stu-id="713be-160">Show commands reactively</span></span>
 
-<span data-ttu-id="ab7c0-162">Wenn Sie Kontextbefehlen reaktiv als Kontextmenü angezeigt wird, sind die sekundären Befehle standardmäßig angezeigt (die Befehlsleisten-Flyout sollte erweitert werden).</span><span class="sxs-lookup"><span data-stu-id="ab7c0-162">When you show contextual commands reactively, as a context menu, the secondary commands are shown by default (the command bar flyout should be expanded).</span></span> <span data-ttu-id="ab7c0-163">In diesem Fall wird möglicherweise die Befehlsleisten-Flyout primären und sekundären Befehlen oder nur sekundäre Befehle.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-163">In this case, the command bar flyout might have both primary and secondary commands, or secondary commands only.</span></span>
+<span data-ttu-id="713be-161">Wenn Sie Kontextbefehlen reaktiv als Kontextmenü angezeigt wird, werden die sekundären Befehle standardmäßig angezeigt (das Befehlsleisten-Flyout sollte erweitert werden).</span><span class="sxs-lookup"><span data-stu-id="713be-161">When you show contextual commands reactively, as a context menu, the secondary commands are shown by default (the command bar flyout should be expanded).</span></span> <span data-ttu-id="713be-162">In diesem Fall wird möglicherweise das Befehlsleisten-Flyout primären und sekundären Befehlen oder nur sekundäre Befehle.</span><span class="sxs-lookup"><span data-stu-id="713be-162">In this case, the command bar flyout might have both primary and secondary commands, or secondary commands only.</span></span>
 
-<span data-ttu-id="ab7c0-164">Um Befehle in einem Kontextmenü anzuzeigen, weisen Sie in der Regel das Flyout zu der [ContextFlyout](/uwp/api/windows.ui.xaml.uielement.contextflyout) -Eigenschaft eines Benutzeroberflächenelements.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-164">To show commands in a context menu, you typically assign the flyout to the [ContextFlyout](/uwp/api/windows.ui.xaml.uielement.contextflyout) property of a UI element.</span></span> <span data-ttu-id="ab7c0-165">Auf diese Weise das Flyout Öffnen des Elements behandelt wird, und Sie müssen nichts weiter tun.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-165">This way, opening the flyout is handled by the element, and you don't need to do anything more.</span></span>
+<span data-ttu-id="713be-163">Um Befehle in einem Kontextmenü anzuzeigen, weisen Sie in der Regel das Flyout zu der [ContextFlyout](/uwp/api/windows.ui.xaml.uielement.contextflyout) -Eigenschaft eines Benutzeroberflächenelements.</span><span class="sxs-lookup"><span data-stu-id="713be-163">To show commands in a context menu, you typically assign the flyout to the [ContextFlyout](/uwp/api/windows.ui.xaml.uielement.contextflyout) property of a UI element.</span></span> <span data-ttu-id="713be-164">Auf diese Weise wird das Flyout Öffnen des Elements behandelt, und Sie müssen nichts weiter tun.</span><span class="sxs-lookup"><span data-stu-id="713be-164">This way, opening the flyout is handled by the element, and you don't need to do anything more.</span></span>
 
-<span data-ttu-id="ab7c0-166">Wenn Sie das Flyout (z. B. auf ein Ereignis [RightTapped](/uwp/api/windows.ui.xaml.uielement.righttapped) ) angezeigt behandeln, legen Sie das Flyout [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode) auf **Standard** in das Flyout im erweiterten Modus zu öffnen und weisen Sie ihm den Fokus.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-166">If you handle showing the flyout yourself (for example, on a [RightTapped](/uwp/api/windows.ui.xaml.uielement.righttapped) event), set the flyout's [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode) to **Standard** to open the flyout in its expanded mode and give it focus.</span></span>
+<span data-ttu-id="713be-165">Wenn Sie das Flyout (z. B. auf ein Ereignis [RightTapped](/uwp/api/windows.ui.xaml.uielement.righttapped) ) anzeigen behandeln, legen Sie das Flyout [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode) auf **Standard** in das Flyout im erweiterten Modus zu öffnen, und weisen Sie ihm den Fokus.</span><span class="sxs-lookup"><span data-stu-id="713be-165">If you handle showing the flyout yourself (for example, on a [RightTapped](/uwp/api/windows.ui.xaml.uielement.righttapped) event), set the flyout's [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode) to **Standard** to open the flyout in its expanded mode and give it focus.</span></span>
 
 > [!TIP]
-> <span data-ttu-id="ab7c0-167">Weitere Informationen zu den Optionen beim Anzeigen von einem Flyout und zur Platzierung von das Flyout zu steuern finden Sie unter [Flyouts](../controls-and-patterns/dialogs-and-flyouts/flyouts.md).</span><span class="sxs-lookup"><span data-stu-id="ab7c0-167">For more info about options when showing a flyout and how to control placement of the flyout, see [Flyouts](../controls-and-patterns/dialogs-and-flyouts/flyouts.md).</span></span>
+> <span data-ttu-id="713be-166">Weitere Informationen zu den Optionen beim Anzeigen von einem Flyout und zur Platzierung von das Flyout zu steuern finden Sie unter [Flyouts](../controls-and-patterns/dialogs-and-flyouts/flyouts.md).</span><span class="sxs-lookup"><span data-stu-id="713be-166">For more info about options when showing a flyout and how to control placement of the flyout, see [Flyouts](../controls-and-patterns/dialogs-and-flyouts/flyouts.md).</span></span>
 
-## <a name="commands-and-content"></a><span data-ttu-id="ab7c0-168">Befehle und Inhalt</span><span class="sxs-lookup"><span data-stu-id="ab7c0-168">Commands and content</span></span>
+## <a name="commands-and-content"></a><span data-ttu-id="713be-167">Befehle und Inhalt</span><span class="sxs-lookup"><span data-stu-id="713be-167">Commands and content</span></span>
 
-<span data-ttu-id="ab7c0-169">Das CommandBarFlyout-Steuerelement verfügt über 2 Eigenschaften Sie Befehle und Inhalte hinzufügen können: [PrimaryCommands](/uwp/api/windows.ui.xaml.controls.commandbarflyout.primarycommands) und ["secondarycommands"](/uwp/api/windows.ui.xaml.controls.commandbarflyout.secondarycommands).</span><span class="sxs-lookup"><span data-stu-id="ab7c0-169">The CommandBarFlyout control has 2 properties you can use to add commands and content: [PrimaryCommands](/uwp/api/windows.ui.xaml.controls.commandbarflyout.primarycommands) and [SecondaryCommands](/uwp/api/windows.ui.xaml.controls.commandbarflyout.secondarycommands).</span></span>
+<span data-ttu-id="713be-168">Das CommandBarFlyout-Steuerelement verfügt über 2 Eigenschaften Sie Befehle und Inhalte hinzufügen können: [PrimaryCommands](/uwp/api/windows.ui.xaml.controls.commandbarflyout.primarycommands) und ["secondarycommands"](/uwp/api/windows.ui.xaml.controls.commandbarflyout.secondarycommands).</span><span class="sxs-lookup"><span data-stu-id="713be-168">The CommandBarFlyout control has 2 properties you can use to add commands and content: [PrimaryCommands](/uwp/api/windows.ui.xaml.controls.commandbarflyout.primarycommands) and [SecondaryCommands](/uwp/api/windows.ui.xaml.controls.commandbarflyout.secondarycommands).</span></span>
 
-<span data-ttu-id="ab7c0-170">Befehlsleistenelemente werden standardmäßig der **PrimaryCommands**-Sammlung hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-170">By default, command bar items are added to the **PrimaryCommands** collection.</span></span> <span data-ttu-id="ab7c0-171">Diese Befehle werden angezeigt, in der Befehlsleiste und in den Modi "Collapsed" und erweiterten sichtbar sind.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-171">These commands are shown in the command bar and are visible in both the collapsed and expanded modes.</span></span> <span data-ttu-id="ab7c0-172">Im Gegensatz zu CommandBar primäre Befehle nicht automatisch Überlauf auf sekundäre Befehle und möglicherweise abgeschnitten.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-172">Unlike CommandBar, primary commands do not automatically overflow to the secondary commands and might be truncated.</span></span>
+<span data-ttu-id="713be-169">Befehlsleistenelemente werden standardmäßig der **PrimaryCommands**-Sammlung hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="713be-169">By default, command bar items are added to the **PrimaryCommands** collection.</span></span> <span data-ttu-id="713be-170">Diese Befehle werden angezeigt, in der Befehlsleiste und in den Modi "Collapsed" und erweiterten sichtbar sind.</span><span class="sxs-lookup"><span data-stu-id="713be-170">These commands are shown in the command bar and are visible in both the collapsed and expanded modes.</span></span> <span data-ttu-id="713be-171">Im Gegensatz zu CommandBar primäre Befehle nicht automatisch Überlauf auf sekundäre Befehle und möglicherweise abgeschnitten.</span><span class="sxs-lookup"><span data-stu-id="713be-171">Unlike CommandBar, primary commands do not automatically overflow to the secondary commands and might be truncated.</span></span>
 
-<span data-ttu-id="ab7c0-173">Sie können auch Befehle zur Auflistung **"secondarycommands"** hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-173">You can also add commands to the **SecondaryCommands** collection.</span></span> <span data-ttu-id="ab7c0-174">Sekundäre Befehle werden im Menü "Teil des Steuerelements angezeigt und sind nur in der erweiterten Modus sichtbar.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-174">Secondary commands are shown in the menu portion of the control and are visible only in the expanded mode.</span></span>
+<span data-ttu-id="713be-172">Sie können auch Befehle zur Auflistung **"secondarycommands"** hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="713be-172">You can also add commands to the **SecondaryCommands** collection.</span></span> <span data-ttu-id="713be-173">Sekundäre Befehle werden im Menü Teil des Steuerelements angezeigt und sind nur im erweiterten Modus sichtbar.</span><span class="sxs-lookup"><span data-stu-id="713be-173">Secondary commands are shown in the menu portion of the control and are visible only in the expanded mode.</span></span>
 
-### <a name="app-bar-buttons"></a><span data-ttu-id="ab7c0-175">App-Leistenschaltflächen</span><span class="sxs-lookup"><span data-stu-id="ab7c0-175">App bar buttons</span></span>
+### <a name="app-bar-buttons"></a><span data-ttu-id="713be-174">App-Leistenschaltflächen</span><span class="sxs-lookup"><span data-stu-id="713be-174">App bar buttons</span></span>
 
-<span data-ttu-id="ab7c0-176">Sie können die PrimaryCommands und "secondarycommands" direkt mit Steuerelementen [AppBarButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx), [AppBarToggleButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbartogglebutton.aspx)und [AppBarSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarseparator.aspx) auffüllen.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-176">You can populate the PrimaryCommands and SecondaryCommands directly with [AppBarButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx), [AppBarToggleButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbartogglebutton.aspx), and [AppBarSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarseparator.aspx) controls.</span></span>
+<span data-ttu-id="713be-175">Sie können die PrimaryCommands und "secondarycommands" direkt mit Steuerelementen [AppBarButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx), [AppBarToggleButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbartogglebutton.aspx)und [AppBarSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarseparator.aspx) auffüllen.</span><span class="sxs-lookup"><span data-stu-id="713be-175">You can populate the PrimaryCommands and SecondaryCommands directly with [AppBarButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarbutton.aspx), [AppBarToggleButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbartogglebutton.aspx), and [AppBarSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarseparator.aspx) controls.</span></span>
 
-<span data-ttu-id="ab7c0-177">Die Steuerelemente für die App-Leistenschaltfläche zeichnen sich durch ein Symbol und eine Textbeschriftung aus.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-177">The app bar button controls are characterized by an icon and text label.</span></span> <span data-ttu-id="ab7c0-178">Diese Steuerelemente sind für die Verwendung in Befehlsleisten optimiert, und ihr Erscheinungsbild ändert, je nachdem, ob das Steuerelement in der Befehlsleiste oder im Überlaufmenü angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-178">These controls are optimized for use in a command bar, and their appearance changes depending on whether the control is shown in the command bar or the overflow menu.</span></span>
+<span data-ttu-id="713be-176">Die Steuerelemente für die App-Leistenschaltfläche zeichnen sich durch ein Symbol und eine Textbeschriftung aus.</span><span class="sxs-lookup"><span data-stu-id="713be-176">The app bar button controls are characterized by an icon and text label.</span></span> <span data-ttu-id="713be-177">Diese Steuerelemente sind für die Verwendung in Befehlsleisten optimiert, und ihre Darstellung ändert, je nachdem, ob das Steuerelement in der Befehlsleiste oder im Überlaufmenü angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="713be-177">These controls are optimized for use in a command bar, and their appearance changes depending on whether the control is shown in the command bar or the overflow menu.</span></span>
 
-- <span data-ttu-id="ab7c0-179">App-Leistenschaltflächen als primäre Befehle verwendet werden in der Befehlsleiste mit nur ihre Symbol angezeigt. die Beschriftung wird nicht angezeigt.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-179">App bar buttons used as primary commands are shown in the command bar with only their icon; the text label is not shown.</span></span> <span data-ttu-id="ab7c0-180">Es wird empfohlen, dass Sie eine QuickInfo verwenden, um einen beschreibenden Text für den Befehl anzuzeigen wie hier gezeigt.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-180">We recommend that you use a tooltip to show a text description of the command, as shown here.</span></span>
+- <span data-ttu-id="713be-178">App-Leistenschaltflächen als primäre Befehle verwendet werden in der Befehlsleiste mit nur ihre Symbol angezeigt. die Beschriftung wird nicht angezeigt.</span><span class="sxs-lookup"><span data-stu-id="713be-178">App bar buttons used as primary commands are shown in the command bar with only their icon; the text label is not shown.</span></span> <span data-ttu-id="713be-179">Es wird empfohlen, dass Sie eine QuickInfo verwenden, um einen beschreibenden Text für den Befehl anzuzeigen wie hier gezeigt.</span><span class="sxs-lookup"><span data-stu-id="713be-179">We recommend that you use a tooltip to show a text description of the command, as shown here.</span></span>
     ```xaml
     <AppBarButton Icon="Copy" ToolTipService.ToolTip="Copy"/>
     ```
-- <span data-ttu-id="ab7c0-181">App-Leistenschaltflächen als sekundäre Befehle verwendet werden im Menü "", mit der Bezeichnung und die Symbol sichtbar angezeigt.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-181">App bar buttons used as secondary commands are shown in the menu, with both the label and icon visible.</span></span>
+- <span data-ttu-id="713be-180">App-Leistenschaltflächen als sekundäre Befehle verwendet werden Sie im Menü mit der Bezeichnung und die Symbol sichtbar angezeigt.</span><span class="sxs-lookup"><span data-stu-id="713be-180">App bar buttons used as secondary commands are shown in the menu, with both the label and icon visible.</span></span>
 
-### <a name="other-content"></a><span data-ttu-id="ab7c0-182">Andere Inhalte</span><span class="sxs-lookup"><span data-stu-id="ab7c0-182">Other content</span></span>
+### <a name="other-content"></a><span data-ttu-id="713be-181">Andere Inhalte</span><span class="sxs-lookup"><span data-stu-id="713be-181">Other content</span></span>
 
-<span data-ttu-id="ab7c0-183">Sie können eine Befehlsleisten-Flyout eine AppBarElementContainer umschließen andere Steuerelemente hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-183">You can add other controls to a command bar flyout by wrapping them in an AppBarElementContainer.</span></span> <span data-ttu-id="ab7c0-184">Auf diese Weise können Sie die Steuerelemente wie [DropDownButton]() oder [SplitButton]()hinzugefügt oder Containern wie [StackPanel]() um komplexere Benutzeroberfläche zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-184">This lets you add controls like [DropDownButton]() or [SplitButton](), or add containers like [StackPanel]() to create more complex UI.</span></span>
+<span data-ttu-id="713be-182">Sie können eine Befehlsleisten-Flyout eine AppBarElementContainer umschließen andere Steuerelemente hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="713be-182">You can add other controls to a command bar flyout by wrapping them in an AppBarElementContainer.</span></span> <span data-ttu-id="713be-183">Auf diese Weise können Sie das Hinzufügen von Steuerelementen wie [DropDownButton]() oder [SplitButton]()oder Containern wie [StackPanel]() zum Erstellen komplexer Benutzeroberfläche hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="713be-183">This lets you add controls like [DropDownButton]() or [SplitButton](), or add containers like [StackPanel]() to create more complex UI.</span></span>
+
+<span data-ttu-id="713be-184">Um den primären oder sekundären Befehl Sammlungen von einem Befehlsleisten-Flyout hinzugefügt werden, muss ein Element die [ICommandBarElement](/uwp/api/windows.ui.xaml.controls.icommandbarelement) -Schnittstelle implementieren.</span><span class="sxs-lookup"><span data-stu-id="713be-184">In order to be added to the primary or secondary command collections of a command bar flyout, an element must implement the [ICommandBarElement](/uwp/api/windows.ui.xaml.controls.icommandbarelement) interface.</span></span> <span data-ttu-id="713be-185">AppBarElementContainer ist ein Wrapper, der diese Schnittstelle implementiert, sodass Sie ein Element zu einer Befehlsleiste hinzufügen können, auch wenn es nicht die Schnittstelle selbst implementiert.</span><span class="sxs-lookup"><span data-stu-id="713be-185">AppBarElementContainer is a wrapper that implements this interface so you can add an element to a command bar even if it doesn't implement the interface itself.</span></span>
+
+<span data-ttu-id="713be-186">Hier wird ein AppBarElementContainer verwendet, um zusätzliche Elemente zu einer Befehlsleisten-Flyout hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="713be-186">Here, an AppBarElementContainer is used to add extra elements to a command bar flyout.</span></span> <span data-ttu-id="713be-187">Die primären Befehle Auswahl an Farben ermöglicht wird ein SplitButton hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="713be-187">A SplitButton is added to the primary commands to allow selection of colors.</span></span> <span data-ttu-id="713be-188">StackPanel wird die sekundären Befehle ein komplexeres Layouts für Zoomsteuerelemente zulassen hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="713be-188">A StackPanel is added to the secondary commands to allow a more complex layout for zoom controls.</span></span>
+
+> [!TIP]
+> <span data-ttu-id="713be-189">In der Standardeinstellung Elemente für die app-Canvas entwickelt möglicherweise nicht dann fehlerhaft in einer Befehlsleiste.</span><span class="sxs-lookup"><span data-stu-id="713be-189">By default, elements designed for the app canvas might not look right in a command bar.</span></span> <span data-ttu-id="713be-190">Wenn Sie ein Element mittels AppBarElementContainer hinzufügen, gibt es einige Schritte, die Sie ausführen sollten, um sicherzustellen, das Element andere Leiste Befehlselemente entsprechen:</span><span class="sxs-lookup"><span data-stu-id="713be-190">When you add an element using AppBarElementContainer, there are some steps you should take to make the element match other command bar elements:</span></span>
+>
+> - <span data-ttu-id="713be-191">Überschreiben Sie die standardmäßige Pinsel mit [einfache Formatierung](/design/controls-and-patterns/xaml-styles#lightweight-styling) , um sicherzustellen, des Elements Hintergrund- und Rand die app-Leistenschaltflächen übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="713be-191">Override the default brushes with [lightweight styling](/design/controls-and-patterns/xaml-styles#lightweight-styling) to make the element's background and border match the app bar buttons.</span></span>
+> - <span data-ttu-id="713be-192">Anpassen der Größe und Position des Elements.</span><span class="sxs-lookup"><span data-stu-id="713be-192">Adjust the size and position of the element.</span></span>
+> - <span data-ttu-id="713be-193">Umschließen Sie Symbole in einer Viewbox mit einer Breite und Höhe des 16px.</span><span class="sxs-lookup"><span data-stu-id="713be-193">Wrap icons in a Viewbox with a Width and Height of 16px.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="ab7c0-185">Um den primären oder sekundären Befehl Sammlungen von einem Befehlsleisten-Flyout hinzugefügt werden, muss ein Element der [ICommandBarElement](/uwp/api/windows.ui.xaml.controls.icommandbarelement) -Schnittstelle implementieren.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-185">In order to be added to the primary or secondary command collections of a command bar flyout, an element must implement the [ICommandBarElement](/uwp/api/windows.ui.xaml.controls.icommandbarelement) interface.</span></span> <span data-ttu-id="ab7c0-186">AppBarElementContainer ist ein Wrapper, der diese Schnittstelle implementiert, sodass Sie ein Element zu einer Befehlsleiste hinzufügen können, auch wenn es nicht die Schnittstelle selbst implementiert.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-186">AppBarElementContainer is a wrapper that implements this interface so you can add an element to a command bar even if it doesn't implement the interface itself.</span></span>
+> <span data-ttu-id="713be-194">Dieses Beispiel zeigt nur dem Befehlsleisten-Flyout UI, es keine Befehle implementiert, die angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="713be-194">This example shows only the command bar flyout UI, it does not implement any of the commands that are shown.</span></span> <span data-ttu-id="713be-195">Weitere Informationen zur Implementierung der Befehle finden Sie unter [Schaltflächen](buttons.md) und [befehlsdesigngrundlagen](../basics/commanding-basics.md).</span><span class="sxs-lookup"><span data-stu-id="713be-195">For more info about implementing the commands, see [Buttons](buttons.md) and [Command design basics](../basics/commanding-basics.md).</span></span>
 
-<span data-ttu-id="ab7c0-187">Hier wird ein AppBarElementContainer verwendet, um zusätzliche Elemente zu einer Befehlsleisten-Flyout hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-187">Here, an AppBarElementContainer is used to add extra elements to a command bar flyout.</span></span> <span data-ttu-id="ab7c0-188">Die primären Befehle Auswahl an Farben ermöglicht wird ein SplitButton hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-188">A SplitButton is added to the primary commands to allow selection of colors.</span></span> <span data-ttu-id="ab7c0-189">StackPanel wird die sekundären Befehle ein komplexeres Layouts für Zoomsteuerelemente zulassen hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-189">A StackPanel is added to the secondary commands to allow a more complex layout for zoom controls.</span></span>
+![Ein Befehlsleisten-Flyout mit einer Split-Schaltfläche](images/command-bar-flyout-split-button.png)
 
-> [!NOTE]
-> <span data-ttu-id="ab7c0-190">Dieses Beispiel zeigt nur die Befehlsleisten-Flyout UI, es keine Befehle implementiert, die angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-190">This example shows only the command bar flyout UI, it does not implement any of the commands that are shown.</span></span> <span data-ttu-id="ab7c0-191">Weitere Informationen zur Implementierung der Befehle finden Sie unter [Schaltflächen](buttons.md) und [befehlsdesigngrundlagen](../basics/commanding-basics.md).</span><span class="sxs-lookup"><span data-stu-id="ab7c0-191">For more info about implementing the commands, see [Buttons](buttons.md) and [Command design basics](../basics/commanding-basics.md).</span></span>
+> _<span data-ttu-id="713be-197">Ein "Collapsed" Befehlsleisten-Flyout mit einer offenen SplitButton</span><span class="sxs-lookup"><span data-stu-id="713be-197">A collapsed command bar flyout with an open SplitButton</span></span>_
 
-:::row:::
-    :::column:::
-        A collapsed command bar flyout with an open SplitButton<br/>
-        ![A command bar flyout with a split button](images/command-bar-flyout-split-button.png)
-    :::column-end:::
-    :::column:::
-        An expanded command bar flyout with custom zoom UI in the menu<br/>
-        ![A command bar flyout with complex UI](images/command-bar-flyout-complex-ui.png)
-    :::column-end:::
-:::row-end:::
+![Ein Befehlsleisten-Flyout mit komplexen UI](images/command-bar-flyout-custom-ui.png)
+
+> _<span data-ttu-id="713be-199">Eine erweiterte Befehlsleisten-Flyout mit benutzerdefinierten Zoom UI im Menü ""</span><span class="sxs-lookup"><span data-stu-id="713be-199">An expanded command bar flyout with custom zoom UI in the menu</span></span>_
+
 
 ```xaml
 <CommandBarFlyout>
     <AppBarButton Icon="Cut" ToolTipService.ToolTip="Cut"/>
     <AppBarButton Icon="Copy" ToolTipService.ToolTip="Copy"/>
     <AppBarButton Icon="Paste" ToolTipService.ToolTip="Paste"/>
-    <!-- Color controls -->
+    <!-- Alignment controls -->
     <AppBarElementContainer>
-        <SplitButton Height="Auto" Margin="0,4,0,0"
-                     ToolTipService.ToolTip="Colors"
-                     Background="{ThemeResource AppBarItemBackgroundThemeBrush}">
+        <SplitButton ToolTipService.ToolTip="Alignment">
+            <SplitButton.Resources>
+                <!-- Override default brushes to make the SplitButton 
+                     match other command bar elements. -->
+                <Style TargetType="SplitButton">
+                    <Setter Property="Height" Value="38"/>
+                </Style>
+                <SolidColorBrush x:Key="SplitButtonBackground"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="SplitButtonBackgroundPressed"
+                                 Color="{ThemeResource SystemListMediumColor}"/>
+                <SolidColorBrush x:Key="SplitButtonBackgroundPointerOver"
+                                 Color="{ThemeResource SystemListLowColor}"/>
+                <SolidColorBrush x:Key="SplitButtonBorderBrush" Color="Transparent"/>
+                <SolidColorBrush x:Key="SplitButtonBorderBrushPointerOver"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="SplitButtonBorderBrushChecked"
+                                 Color="Transparent"/>
+            </SplitButton.Resources>
             <SplitButton.Content>
-                <Rectangle Width="20" Height="20">
-                    <Rectangle.Fill>
-                        <SolidColorBrush Color="Red"/>
-                    </Rectangle.Fill>
-                </Rectangle>
+                <Viewbox Width="16" Height="16" Margin="0,2,0,0">
+                    <SymbolIcon Symbol="AlignLeft"/>
+                </Viewbox>
             </SplitButton.Content>
             <SplitButton.Flyout>
                 <MenuFlyout>
-                    <MenuFlyoutItem Text="Red"/>
-                    <MenuFlyoutItem Text="Yellow"/>
-                    <MenuFlyoutItem Text="Green"/>
-                    <MenuFlyoutItem Text="Blue"/>
+                    <MenuFlyoutItem Icon="AlignLeft" Text="Align left"/>
+                    <MenuFlyoutItem Icon="AlignCenter" Text="Center"/>
+                    <MenuFlyoutItem Icon="AlignRight" Text="Align right"/>
                 </MenuFlyout>
             </SplitButton.Flyout>
         </SplitButton>
     </AppBarElementContainer>
-    <!-- end Color controls -->
+    <!-- end Alignment controls -->
     <CommandBarFlyout.SecondaryCommands>
         <!-- Zoom controls -->
         <AppBarElementContainer>
             <AppBarElementContainer.Resources>
-                <Style TargetType="Button">
-                    <Setter Property="Background"
-                            Value="{ThemeResource AppBarItemBackgroundThemeBrush}"/>
-                </Style>
+                <!-- Override default brushes to make the Buttons 
+                     match other command bar elements. -->
+                <SolidColorBrush x:Key="ButtonBackground"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="ButtonBackgroundPressed"
+                                 Color="{ThemeResource SystemListMediumColor}"/>
+                <SolidColorBrush x:Key="ButtonBackgroundPointerOver"
+                                 Color="{ThemeResource SystemListLowColor}"/>
+                <SolidColorBrush x:Key="ButtonBorderBrush"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="ButtonBorderBrushChecked"
+                                 Color="Transparent"/>
                 <Style TargetType="TextBlock">
                     <Setter Property="VerticalAlignment" Value="Center"/>
                 </Style>
+                <Style TargetType="Button">
+                    <Setter Property="Height" Value="40"/>
+                    <Setter Property="Width" Value="40"/>
+                </Style>
             </AppBarElementContainer.Resources>
-            <Grid Margin="12,0">
+            <Grid Margin="12,-4">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="86"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="76"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Text="Zoom"/>
-                <StackPanel Orientation="Horizontal" Grid.Column="1">
-                    <Button>
-                        <SymbolIcon Symbol="Remove"/>
+                <Viewbox Width="16" Height="16" Margin="0,2,0,0">
+                    <SymbolIcon Symbol="Zoom"/>
+                </Viewbox>
+                <TextBlock Text="Zoom" Margin="10,0,0,0" Grid.Column="1"/>
+                <StackPanel Orientation="Horizontal" Grid.Column="2">
+                    <Button ToolTipService.ToolTip="Zoom out">
+                        <Viewbox Width="16" Height="16">
+                            <SymbolIcon Symbol="ZoomOut"/>
+                        </Viewbox>
                     </Button>
                     <TextBlock Text="50%" Width="40"
                                HorizontalTextAlignment="Center"/>
-                    <Button>
-                        <SymbolIcon Symbol="Add"/>
+                    <Button ToolTipService.ToolTip="Zoom in">
+                        <Viewbox Width="16" Height="16">
+                            <SymbolIcon Symbol="ZoomIn"/>
+                        </Viewbox>
                     </Button>
                 </StackPanel>
             </Grid>
@@ -259,16 +290,18 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
         <AppBarSeparator/>
         <AppBarButton Label="Undo" Icon="Undo"/>
         <AppBarButton Label="Redo" Icon="Redo"/>
-        <AppBarButton Label="Select all"/>
+        <AppBarButton Label="Select all" Icon="SelectAll"/>
     </CommandBarFlyout.SecondaryCommands>
 </CommandBarFlyout>
 ```
 
-## <a name="create-a-context-menu-with-secondary-commands-only"></a><span data-ttu-id="ab7c0-192">Erstellen Sie ein Kontextmenü mit nur sekundäre Befehle</span><span class="sxs-lookup"><span data-stu-id="ab7c0-192">Create a context menu with secondary commands only</span></span>
+## <a name="create-a-context-menu-with-secondary-commands-only"></a><span data-ttu-id="713be-200">Erstellen Sie ein Kontextmenü mit nur sekundäre Befehle</span><span class="sxs-lookup"><span data-stu-id="713be-200">Create a context menu with secondary commands only</span></span>
 
-<span data-ttu-id="ab7c0-193">Sie können eine CommandBarFlyout mit nur sekundäre Befehle als ein [Kontextmenü](menus.md)anstelle einer MenuFlyout verwenden.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-193">You can use a CommandBarFlyout with only secondary commands as a [context menu](menus.md), in place of a MenuFlyout.</span></span>
+<span data-ttu-id="713be-201">Sie können eine CommandBarFlyout mit nur sekundäre Befehle als [Kontextmenü](menus.md), anstelle einer MenuFlyout verwenden.</span><span class="sxs-lookup"><span data-stu-id="713be-201">You can use a CommandBarFlyout with only secondary commands as a [context menu](menus.md), in place of a MenuFlyout.</span></span>
 
 ![Ein Befehlsleisten-Flyout mit nur sekundäre Befehle](images/command-bar-flyout-context-menu.png)
+
+> _<span data-ttu-id="713be-203">Befehlsleisten-Flyout als Kontextmenü</span><span class="sxs-lookup"><span data-stu-id="713be-203">Command bar flyout as a context menu</span></span>_
 
 ```xaml
 <Grid>
@@ -276,82 +309,109 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
         <!-- A command bar flyout with only secondary commands. -->
         <CommandBarFlyout x:Name="ContextMenu">
             <CommandBarFlyout.SecondaryCommands>
-                <AppBarButton Label="Pin" Icon="Pin"/>
-                <AppBarButton Label="Unpin" Icon="UnPin"/>
                 <AppBarButton Label="Copy" Icon="Copy"/>
+                <AppBarButton Label="Save" Icon="Save"/>
+                <AppBarButton Label="Print" Icon="Print"/>
                 <AppBarSeparator />
                 <AppBarButton Label="Properties"/>
             </CommandBarFlyout.SecondaryCommands>
         </CommandBarFlyout>
     </Grid.Resources>
 
-    <Image Source="Assets/licorice.png" Width="300"
+    <Image Source="Assets/image1.png" Width="300"
            ContextFlyout="{x:Bind ContextMenu}"/>
 </Grid>
 ```
 
-<span data-ttu-id="ab7c0-195">Sie können auch eine CommandBarFlyout mit einem DropDownButton verwenden, zum Erstellen eines Standardmenüs.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-195">You can also use a CommandBarFlyout with a DropDownButton to create a standard menu.</span></span>
+<span data-ttu-id="713be-204">Sie können auch eine CommandBarFlyout mit einem DropDownButton verwenden, zum Erstellen eines Standardmenüs.</span><span class="sxs-lookup"><span data-stu-id="713be-204">You can also use a CommandBarFlyout with a DropDownButton to create a standard menu.</span></span>
 
-![Ein Befehlsleisten-Flyout mit als ein Dropdown-Menü "Schaltfläche" "](images/command-bar-flyout-button-menu.png)
+![Ein Befehlsleisten-Flyout mit als ein Dropdown-Menü "Schaltfläche" "](images/command-bar-flyout-dropdown.png)
+
+> _<span data-ttu-id="713be-206">Ein Dropdown-Menü "Schaltfläche" in einem Befehlsleisten-flyout</span><span class="sxs-lookup"><span data-stu-id="713be-206">A drop down button menu in a command bar flyout</span></span>_
 
 ```xaml
-<DropDownButton Content="Mail">
-    <DropDownButton.Flyout>
-        <CommandBarFlyout Placement="BottomEdgeAlignedLeft">
-            <CommandBarFlyout.SecondaryCommands>
-                <AppBarButton Icon="MailForward" Label="Forward"/>
-                <AppBarButton Icon="MailReply" Label="Reply"/>
-                <AppBarButton Icon="MailReplyAll" Label="Reply all"/>
-            </CommandBarFlyout.SecondaryCommands>
-        </CommandBarFlyout>
-    </DropDownButton.Flyout>
-</DropDownButton>
+<CommandBarFlyout>
+    <AppBarButton Icon="Placeholder"/>
+    <AppBarElementContainer>
+        <DropDownButton Content="Mail">
+            <DropDownButton.Resources>
+                <!-- Override default brushes to make the DropDownButton 
+                     match other command bar elements. -->
+                <Style TargetType="DropDownButton">
+                    <Setter Property="Height" Value="38"/>
+                </Style>
+                <SolidColorBrush x:Key="ButtonBackground"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="ButtonBackgroundPressed"
+                                 Color="{ThemeResource SystemListMediumColor}"/>
+                <SolidColorBrush x:Key="ButtonBackgroundPointerOver"
+                                 Color="{ThemeResource SystemListLowColor}"/>
+
+                <SolidColorBrush x:Key="ButtonBorderBrush"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="ButtonBorderBrushPointerOver"
+                                 Color="Transparent"/>
+                <SolidColorBrush x:Key="ButtonBorderBrushChecked"
+                                 Color="Transparent"/>
+            </DropDownButton.Resources>
+            <DropDownButton.Flyout>
+                <CommandBarFlyout Placement="BottomEdgeAlignedLeft">
+                    <CommandBarFlyout.SecondaryCommands>
+                        <AppBarButton Icon="MailReply" Label="Reply"/>
+                        <AppBarButton Icon="MailReplyAll" Label="Reply all"/>
+                        <AppBarButton Icon="MailForward" Label="Forward"/>
+                    </CommandBarFlyout.SecondaryCommands>
+                </CommandBarFlyout>
+            </DropDownButton.Flyout>
+        </DropDownButton>
+    </AppBarElementContainer>
+    <AppBarButton Icon="Placeholder"/>
+    <AppBarButton Icon="Placeholder"/>
+</CommandBarFlyout>
 ```
 
-## <a name="command-bar-flyouts-for-text-controls"></a><span data-ttu-id="ab7c0-197">Flyouts auf einer Befehlsleiste für Textsteuerelemente</span><span class="sxs-lookup"><span data-stu-id="ab7c0-197">Command bar flyouts for text controls</span></span>
+## <a name="command-bar-flyouts-for-text-controls"></a><span data-ttu-id="713be-207">Flyouts auf einer Befehlsleiste für Textsteuerelemente</span><span class="sxs-lookup"><span data-stu-id="713be-207">Command bar flyouts for text controls</span></span>
 
-<span data-ttu-id="ab7c0-198">Die [TextCommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout) ist eine spezielle Befehlsleisten-Flyout, die Befehle zum Bearbeiten von Text enthält.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-198">The [TextCommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout) is a specialized command bar flyout that contains commands for editing text.</span></span> <span data-ttu-id="ab7c0-199">Jedes Textsteuerelement zeigt die TextCommandBarFlyout automatisch als Kontextmenü (Rechtsklick), oder wenn Text markiert ist.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-199">Each text control shows the TextCommandBarFlyout automatically as a context menu (right-click), or when text is selected.</span></span> <span data-ttu-id="ab7c0-200">Der Text Befehlsleisten-Flyout passt sich die Textauswahl nur relevante Befehle angezeigt.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-200">The text command bar flyout adapts to the text selection to only show relevant commands.</span></span>
+<span data-ttu-id="713be-208">Die [TextCommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout) ist eine spezielle Befehlsleisten-Flyout, die Befehle zum Bearbeiten von Text enthält.</span><span class="sxs-lookup"><span data-stu-id="713be-208">The [TextCommandBarFlyout](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout) is a specialized command bar flyout that contains commands for editing text.</span></span> <span data-ttu-id="713be-209">Jedes Textsteuerelement zeigt die TextCommandBarFlyout automatisch als Kontextmenü (Rechtsklick), oder wenn Text markiert ist.</span><span class="sxs-lookup"><span data-stu-id="713be-209">Each text control shows the TextCommandBarFlyout automatically as a context menu (right-click), or when text is selected.</span></span> <span data-ttu-id="713be-210">Das Text Befehlsleisten-Flyout passt sich die Textauswahl nur relevante Befehle angezeigt.</span><span class="sxs-lookup"><span data-stu-id="713be-210">The text command bar flyout adapts to the text selection to only show relevant commands.</span></span>
 
-:::row:::
-    :::column:::
-        A text command bar flyout on text selection<br/>
-        ![A collapsed text command bar flyout](images/command-bar-flyout-text-selection.png)
-    :::column-end:::
-    :::column:::
-        An expanded text command bar flyout<br/>
-        ![An expanded text command bar flyout](images/command-bar-flyout-text-full.png)
-    :::column-end:::
-:::row-end:::
+![Ein "Collapsed" Text Befehlsleisten-flyout](images/command-bar-flyout-text-selection.png)
 
-### <a name="available-commands"></a><span data-ttu-id="ab7c0-201">Verfügbaren Befehle</span><span class="sxs-lookup"><span data-stu-id="ab7c0-201">Available commands</span></span>
+> _<span data-ttu-id="713be-212">Ein Text Befehlsleisten-Flyout auf Textauswahl</span><span class="sxs-lookup"><span data-stu-id="713be-212">A text command bar flyout on text selection</span></span>_
 
-<span data-ttu-id="ab7c0-202">Diese Tabelle zeigt die Befehle in einer TextCommandBarFlyout, und wenn diese angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-202">This table shows the commands that are included in a TextCommandBarFlyout, and when they are shown.</span></span>
+![Eine erweiterte Text Befehlsleisten-flyout](images/command-bar-flyout-text-full.png)
 
-| <span data-ttu-id="ab7c0-203">Befehl</span><span class="sxs-lookup"><span data-stu-id="ab7c0-203">Command</span></span> | <span data-ttu-id="ab7c0-204">Gezeigt …</span><span class="sxs-lookup"><span data-stu-id="ab7c0-204">Shown...</span></span> |
+> _<span data-ttu-id="713be-214">Eine erweiterte Text Befehlsleisten-flyout</span><span class="sxs-lookup"><span data-stu-id="713be-214">An expanded text command bar flyout</span></span>_
+
+
+### <a name="available-commands"></a><span data-ttu-id="713be-215">Verfügbare Befehle</span><span class="sxs-lookup"><span data-stu-id="713be-215">Available commands</span></span>
+
+<span data-ttu-id="713be-216">Diese Tabelle enthält die Befehle, die in einem TextCommandBarFlyout, und wenn diese angezeigt werden enthalten sind.</span><span class="sxs-lookup"><span data-stu-id="713be-216">This table shows the commands that are included in a TextCommandBarFlyout, and when they are shown.</span></span>
+
+| <span data-ttu-id="713be-217">Befehl</span><span class="sxs-lookup"><span data-stu-id="713be-217">Command</span></span> | <span data-ttu-id="713be-218">Dargestellt …</span><span class="sxs-lookup"><span data-stu-id="713be-218">Shown...</span></span> |
 | ------- | -------- |
-| <span data-ttu-id="ab7c0-205">Fett</span><span class="sxs-lookup"><span data-stu-id="ab7c0-205">Bold</span></span> | <span data-ttu-id="ab7c0-206">Wenn der Text-Steuerelement keine schreibgeschützt (RichEditBox nur) ist.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-206">when the text control is not read-only (RichEditBox only).</span></span> |
-| <span data-ttu-id="ab7c0-207">Kursiv</span><span class="sxs-lookup"><span data-stu-id="ab7c0-207">Italic</span></span> | <span data-ttu-id="ab7c0-208">Wenn der Text-Steuerelement keine schreibgeschützt (RichEditBox nur) ist.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-208">when the text control is not read-only (RichEditBox only).</span></span> |
-| <span data-ttu-id="ab7c0-209">Unterstreichen</span><span class="sxs-lookup"><span data-stu-id="ab7c0-209">Underline</span></span> | <span data-ttu-id="ab7c0-210">Wenn der Text-Steuerelement keine schreibgeschützt (RichEditBox nur) ist.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-210">when the text control is not read-only (RichEditBox only).</span></span> |
-| <span data-ttu-id="ab7c0-211">Nachweis von Manipulation</span><span class="sxs-lookup"><span data-stu-id="ab7c0-211">Proofing</span></span> | <span data-ttu-id="ab7c0-212">Wenn IsSpellCheckEnabled **"true"** ist und falsch geschrieben wird Text ausgewählt.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-212">when IsSpellCheckEnabled is **true** and misspelled text is selected.</span></span> |
-| <span data-ttu-id="ab7c0-213">Ausschneiden</span><span class="sxs-lookup"><span data-stu-id="ab7c0-213">Cut</span></span> | <span data-ttu-id="ab7c0-214">Wenn die Text-Steuerelement ist nicht schreibgeschützt, und Text ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-214">when the text control is not read-only and text is selected.</span></span> |
-| <span data-ttu-id="ab7c0-215">Kopieren</span><span class="sxs-lookup"><span data-stu-id="ab7c0-215">Copy</span></span> | <span data-ttu-id="ab7c0-216">Wenn Text ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-216">when text is selected.</span></span> |
-| <span data-ttu-id="ab7c0-217">Einfügen</span><span class="sxs-lookup"><span data-stu-id="ab7c0-217">Paste</span></span> | <span data-ttu-id="ab7c0-218">Wenn der Text-Steuerelement nicht schreibgeschützt und der Zwischenablage Inhalt.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-218">when the text control is not read-only and the clipboard has content.</span></span> |
-| <span data-ttu-id="ab7c0-219">Rückgängig machen</span><span class="sxs-lookup"><span data-stu-id="ab7c0-219">Undo</span></span> | <span data-ttu-id="ab7c0-220">Wenn eine Aktion, die rückgängig gemacht werden kann.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-220">when there is an action that can be undone.</span></span> |
-| <span data-ttu-id="ab7c0-221">Alle auswählen</span><span class="sxs-lookup"><span data-stu-id="ab7c0-221">Select all</span></span> | <span data-ttu-id="ab7c0-222">Wenn Text ausgewählt werden können.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-222">when text can be selected.</span></span> |
+| <span data-ttu-id="713be-219">Fett</span><span class="sxs-lookup"><span data-stu-id="713be-219">Bold</span></span> | <span data-ttu-id="713be-220">Wenn das Text-Steuerelement keine schreibgeschützt (RichEditBox nur) ist.</span><span class="sxs-lookup"><span data-stu-id="713be-220">when the text control is not read-only (RichEditBox only).</span></span> |
+| <span data-ttu-id="713be-221">Kursiv</span><span class="sxs-lookup"><span data-stu-id="713be-221">Italic</span></span> | <span data-ttu-id="713be-222">Wenn das Text-Steuerelement keine schreibgeschützt (RichEditBox nur) ist.</span><span class="sxs-lookup"><span data-stu-id="713be-222">when the text control is not read-only (RichEditBox only).</span></span> |
+| <span data-ttu-id="713be-223">Unterstreichen</span><span class="sxs-lookup"><span data-stu-id="713be-223">Underline</span></span> | <span data-ttu-id="713be-224">Wenn das Text-Steuerelement keine schreibgeschützt (RichEditBox nur) ist.</span><span class="sxs-lookup"><span data-stu-id="713be-224">when the text control is not read-only (RichEditBox only).</span></span> |
+| <span data-ttu-id="713be-225">Nachweis von Manipulation</span><span class="sxs-lookup"><span data-stu-id="713be-225">Proofing</span></span> | <span data-ttu-id="713be-226">Wenn IsSpellCheckEnabled **"true"** ist und falsch geschrieben wird Text ausgewählt.</span><span class="sxs-lookup"><span data-stu-id="713be-226">when IsSpellCheckEnabled is **true** and misspelled text is selected.</span></span> |
+| <span data-ttu-id="713be-227">Ausschneiden</span><span class="sxs-lookup"><span data-stu-id="713be-227">Cut</span></span> | <span data-ttu-id="713be-228">Wenn das Textsteuerelement ist nicht nur-Lese- und Text ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="713be-228">when the text control is not read-only and text is selected.</span></span> |
+| <span data-ttu-id="713be-229">Kopieren</span><span class="sxs-lookup"><span data-stu-id="713be-229">Copy</span></span> | <span data-ttu-id="713be-230">Wenn Text ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="713be-230">when text is selected.</span></span> |
+| <span data-ttu-id="713be-231">Einfügen</span><span class="sxs-lookup"><span data-stu-id="713be-231">Paste</span></span> | <span data-ttu-id="713be-232">Wenn das Text-Steuerelement ist nicht schreibgeschützt, und der Inhalt die Zwischenablage ist.</span><span class="sxs-lookup"><span data-stu-id="713be-232">when the text control is not read-only and the clipboard has content.</span></span> |
+| <span data-ttu-id="713be-233">Rückgängig machen</span><span class="sxs-lookup"><span data-stu-id="713be-233">Undo</span></span> | <span data-ttu-id="713be-234">Wenn es ist eine Aktion, die rückgängig gemacht werden kann.</span><span class="sxs-lookup"><span data-stu-id="713be-234">when there is an action that can be undone.</span></span> |
+| <span data-ttu-id="713be-235">Alle auswählen</span><span class="sxs-lookup"><span data-stu-id="713be-235">Select all</span></span> | <span data-ttu-id="713be-236">Wenn Text ausgewählt werden kann.</span><span class="sxs-lookup"><span data-stu-id="713be-236">when text can be selected.</span></span> |
 
-### <a name="custom-text-command-bar-flyouts"></a><span data-ttu-id="ab7c0-223">Benutzerdefinierter Text, der Flyouts auf einer Befehlsleiste</span><span class="sxs-lookup"><span data-stu-id="ab7c0-223">Custom text command bar flyouts</span></span>
+### <a name="custom-text-command-bar-flyouts"></a><span data-ttu-id="713be-237">Benutzerdefinierter Text, der Flyouts auf einer Befehlsleiste</span><span class="sxs-lookup"><span data-stu-id="713be-237">Custom text command bar flyouts</span></span>
 
-<span data-ttu-id="ab7c0-224">TextCommandBarFlyout nicht angepasst werden, und wird durch jedes Textsteuerelement automatisch verwaltet.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-224">TextCommandBarFlyout can't be customized, and is managed automatically by each text control.</span></span> <span data-ttu-id="ab7c0-225">Allerdings können Sie die standardmäßige TextCommandBarFlyout mit benutzerdefinierten Befehlen ersetzen.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-225">However, you can replace the default TextCommandBarFlyout with custom commands.</span></span>
+<span data-ttu-id="713be-238">TextCommandBarFlyout kann nicht angepasst werden, und von jedes Textsteuerelement automatisch verwaltet wird.</span><span class="sxs-lookup"><span data-stu-id="713be-238">TextCommandBarFlyout can't be customized, and is managed automatically by each text control.</span></span> <span data-ttu-id="713be-239">Allerdings können Sie die standardmäßige TextCommandBarFlyout mit benutzerdefinierten Befehlen ersetzen.</span><span class="sxs-lookup"><span data-stu-id="713be-239">However, you can replace the default TextCommandBarFlyout with custom commands.</span></span>
 
-- <span data-ttu-id="ab7c0-226">Um die Standard-TextCommandBarFlyout ersetzen, die auf Textauswahl angezeigt wird, können Sie Erstellen einer benutzerdefinierten CommandBarFlyout (oder andere Flyout-Typ) und weisen sie die **SelectionFlyout** -Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-226">To replace the default TextCommandBarFlyout that's shown on text selection, you can create a custom CommandBarFlyout (or other flyout type) and assign it to the **SelectionFlyout** property.</span></span> <span data-ttu-id="ab7c0-227">Wenn Sie SelectionFlyout auf **null**festlegen, werden keine Befehle auf Auswahl angezeigt.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-227">If you set SelectionFlyout to **null**, no commands are shown on selection.</span></span>
-- <span data-ttu-id="ab7c0-228">Um die Standard-TextCommandBarFlyout ersetzen, die im Kontextmenü angezeigt wird, weisen Sie eine benutzerdefinierte CommandBarFlyout (oder andere Flyout-Typ) für die **ContextFlyout** -Eigenschaft für ein Text-Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-228">To replace the default TextCommandBarFlyout that's shown as the context menu, assign a custom CommandBarFlyout (or other flyout type) to the **ContextFlyout** property on a text control.</span></span> <span data-ttu-id="ab7c0-229">Wenn Sie ContextFlyout auf **null**festgelegt, wird das Flyout "Menü" angezeigt, in früheren Versionen des Textsteuerelements anstelle der TextCommandBarFlyout angezeigt.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-229">If you set ContextFlyout to **null**, the menu flyout shown in previous versions of the text control is shown instead of the TextCommandBarFlyout.</span></span>
+- <span data-ttu-id="713be-240">Um die standardmäßige TextCommandBarFlyout ersetzen, die auf markierten Text angezeigt wird, können Sie Erstellen einer benutzerdefinierten CommandBarFlyout (oder andere Flyout-Typ) und weisen sie die **SelectionFlyout** -Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="713be-240">To replace the default TextCommandBarFlyout that's shown on text selection, you can create a custom CommandBarFlyout (or other flyout type) and assign it to the **SelectionFlyout** property.</span></span> <span data-ttu-id="713be-241">Wenn Sie SelectionFlyout auf **null**festlegen, werden keine Befehle auf Auswahl angezeigt.</span><span class="sxs-lookup"><span data-stu-id="713be-241">If you set SelectionFlyout to **null**, no commands are shown on selection.</span></span>
+- <span data-ttu-id="713be-242">Um die standardmäßige TextCommandBarFlyout ersetzen, die im Kontextmenü angezeigt wird, weisen Sie eine benutzerdefinierte CommandBarFlyout (oder andere Flyout-Typ) für die **ContextFlyout** -Eigenschaft für ein Text-Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="713be-242">To replace the default TextCommandBarFlyout that's shown as the context menu, assign a custom CommandBarFlyout (or other flyout type) to the **ContextFlyout** property on a text control.</span></span> <span data-ttu-id="713be-243">Wenn Sie ContextFlyout auf **null**festgelegt, wird das Flyout "Menü" angezeigt, in früheren Versionen des Textsteuerelements anstelle der TextCommandBarFlyout angezeigt.</span><span class="sxs-lookup"><span data-stu-id="713be-243">If you set ContextFlyout to **null**, the menu flyout shown in previous versions of the text control is shown instead of the TextCommandBarFlyout.</span></span>
 
-## <a name="get-the-sample-code"></a><span data-ttu-id="ab7c0-230">Beispielcode herunterladen</span><span class="sxs-lookup"><span data-stu-id="ab7c0-230">Get the sample code</span></span>
+## <a name="get-the-sample-code"></a><span data-ttu-id="713be-244">Beispielcode herunterladen</span><span class="sxs-lookup"><span data-stu-id="713be-244">Get the sample code</span></span>
 
-- <span data-ttu-id="ab7c0-231">[Beispiel eines XAML-Steuerelementekatalogs](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) – Hier werden alle XAML-Steuerelemente in einem interaktiven Format dargestellt.</span><span class="sxs-lookup"><span data-stu-id="ab7c0-231">[XAML Controls Gallery sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) - See all the XAML controls in an interactive format.</span></span>
-- [<span data-ttu-id="ab7c0-232">Beispiel für XAML-Befehle</span><span class="sxs-lookup"><span data-stu-id="ab7c0-232">XAML Commanding sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=620019)
+- <span data-ttu-id="713be-245">[Beispiel eines XAML-Steuerelementekatalogs](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) – Hier werden alle XAML-Steuerelemente in einem interaktiven Format dargestellt.</span><span class="sxs-lookup"><span data-stu-id="713be-245">[XAML Controls Gallery sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) - See all the XAML controls in an interactive format.</span></span>
+- [<span data-ttu-id="713be-246">Beispiel für XAML-Befehle</span><span class="sxs-lookup"><span data-stu-id="713be-246">XAML Commanding sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=620019)
 
-## <a name="related-articles"></a><span data-ttu-id="ab7c0-233">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="ab7c0-233">Related articles</span></span>
+## <a name="related-articles"></a><span data-ttu-id="713be-247">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="713be-247">Related articles</span></span>
 
-- [<span data-ttu-id="ab7c0-234">Befehlsdesigngrundlagen für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="ab7c0-234">Command design basics for UWP apps</span></span>](../basics/commanding-basics.md)
-- [<span data-ttu-id="ab7c0-235">CommandBar-Klasse</span><span class="sxs-lookup"><span data-stu-id="ab7c0-235">CommandBar class</span></span>](https://msdn.microsoft.com/library/windows/apps/dn279427)
+- [<span data-ttu-id="713be-248">Befehlsdesigngrundlagen für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="713be-248">Command design basics for UWP apps</span></span>](../basics/commanding-basics.md)
+- [<span data-ttu-id="713be-249">CommandBar-Klasse</span><span class="sxs-lookup"><span data-stu-id="713be-249">CommandBar class</span></span>](https://msdn.microsoft.com/library/windows/apps/dn279427)

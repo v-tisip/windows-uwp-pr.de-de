@@ -10,20 +10,20 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 3690e294a3af29d1af261189310dca1a13ac5130
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5439297"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475876"
 ---
-# <a name="engage-with-your-customers"></a><span data-ttu-id="ce986-103">Kundenkontakte intensivieren</span><span class="sxs-lookup"><span data-stu-id="ce986-103">Engage with your customers</span></span>
+# <a name="engage-with-your-customers"></a><span data-ttu-id="c8df0-103">Kundenkontakte intensivieren</span><span class="sxs-lookup"><span data-stu-id="c8df0-103">Engage with your customers</span></span>
 
-<span data-ttu-id="ce986-104">Intensivieren Sie die Kundenbindung und fördern Sie die Kundenzufriedenheit mithilfe von Features wie Benachrichtigungen, zielgerichteten Angeboten und Reaktionen auf Kritiken und Feedback usw.</span><span class="sxs-lookup"><span data-stu-id="ce986-104">Drive customer engagement and satisfaction by using features like notifications, targeted offers, responding to reviews and feedback, and more.</span></span>
+<span data-ttu-id="c8df0-104">Intensivieren Sie die Kundenbindung und fördern Sie die Kundenzufriedenheit mithilfe von Features wie Benachrichtigungen, zielgerichteten Angeboten und Reaktionen auf Kritiken und Feedback usw.</span><span class="sxs-lookup"><span data-stu-id="c8df0-104">Drive customer engagement and satisfaction by using features like notifications, targeted offers, responding to reviews and feedback, and more.</span></span>
 
--   [<span data-ttu-id="ce986-105">Erstellen von Kundengruppen</span><span class="sxs-lookup"><span data-stu-id="ce986-105">Create customer groups</span></span>](create-customer-groups.md)
--   [<span data-ttu-id="ce986-106">Reagieren auf Kundenrezensionen</span><span class="sxs-lookup"><span data-stu-id="ce986-106">Respond to customer reviews</span></span>](respond-to-customer-reviews.md)
--   [<span data-ttu-id="ce986-107">Reagieren auf Kundenfeedback</span><span class="sxs-lookup"><span data-stu-id="ce986-107">Respond to customer feedback</span></span>](respond-to-customer-feedback.md)
--   [<span data-ttu-id="ce986-108">Senden von Benachrichtigungen an die Kunden Ihrer App</span><span class="sxs-lookup"><span data-stu-id="ce986-108">Send notifications to your app's customers</span></span>](send-push-notifications-to-your-apps-customers.md)
--   [<span data-ttu-id="ce986-109">Verwenden Sie zielgerichtete Angebote, um Interaktionen und Abschlüsse zu maximieren.</span><span class="sxs-lookup"><span data-stu-id="ce986-109">Use targeted offers to maximize engagement and conversions</span></span>](use-targeted-offers-to-maximize-engagement-and-conversions.md)
+-   [<span data-ttu-id="c8df0-105">Erstellen von Kundengruppen</span><span class="sxs-lookup"><span data-stu-id="c8df0-105">Create customer groups</span></span>](create-customer-groups.md)
+-   [<span data-ttu-id="c8df0-106">Reagieren auf Kundenrezensionen</span><span class="sxs-lookup"><span data-stu-id="c8df0-106">Respond to customer reviews</span></span>](respond-to-customer-reviews.md)
+-   [<span data-ttu-id="c8df0-107">Reagieren auf Kundenfeedback</span><span class="sxs-lookup"><span data-stu-id="c8df0-107">Respond to customer feedback</span></span>](respond-to-customer-feedback.md)
+-   [<span data-ttu-id="c8df0-108">Senden von Benachrichtigungen an die Kunden Ihrer App</span><span class="sxs-lookup"><span data-stu-id="c8df0-108">Send notifications to your app's customers</span></span>](send-push-notifications-to-your-apps-customers.md)
+-   [<span data-ttu-id="c8df0-109">Verwenden Sie zielgerichtete Angebote, um Interaktionen und Abschlüsse zu maximieren.</span><span class="sxs-lookup"><span data-stu-id="c8df0-109">Use targeted offers to maximize engagement and conversions</span></span>](use-targeted-offers-to-maximize-engagement-and-conversions.md)
 
- 
+ 
