@@ -10,11 +10,11 @@ ms.technology: uwp, windows forms, wpf
 keywords: Windows 10, UWP, Windows Forms, WPF
 ms.localizationpriority: medium
 ms.openlocfilehash: b9757466502283c673c7b2106b4a7775be412faf
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5405010"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5438340"
 ---
 # <a name="uwp-controls-in-desktop-applications"></a><span data-ttu-id="50a26-104">UWP-Steuerelemente in Desktopanwendungen</span><span class="sxs-lookup"><span data-stu-id="50a26-104">UWP controls in desktop applications</span></span>
 

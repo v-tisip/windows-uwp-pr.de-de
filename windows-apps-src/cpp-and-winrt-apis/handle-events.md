@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projiziert, projizierung, varbeiten, ereignis, delegat
 ms.localizationpriority: medium
 ms.openlocfilehash: 96655c14f9c21f804ef5ebfdfe73cee0b04edfe3
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5400058"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5439864"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a><span data-ttu-id="3e03e-104">Verarbeiten von Ereignissen über Delegaten in C++/WinRT</span><span class="sxs-lookup"><span data-stu-id="3e03e-104">Handle events by using delegates in C++/WinRT</span></span>
 

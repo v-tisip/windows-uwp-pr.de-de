@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-on, löschen, In-App-Produkt, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: ff108f3f7f09aa737f6a955d9cb91810f6047f8c
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5400848"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5441300"
 ---
 # <a name="delete-an-add-on"></a><span data-ttu-id="afd40-104">Löschen eines Add-Ons</span><span class="sxs-lookup"><span data-stu-id="afd40-104">Delete an add-on</span></span>
 

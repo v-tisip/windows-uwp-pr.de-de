@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, app-Namen ändern des app-Namen, Update-app-Namen, game Namen, Produktname
 ms.localizationpriority: medium
 ms.openlocfilehash: 878b105541691834dbbe35b5210f33045afdc47b
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5409184"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5438208"
 ---
 # <a name="manage-app-names"></a><span data-ttu-id="57b55-103">Verwalten von App-Namen</span><span class="sxs-lookup"><span data-stu-id="57b55-103">Manage app names</span></span>
 

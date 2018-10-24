@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e91d4bd481188f4d29af68af2c4572b26d446ae
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5408897"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5432611"
 ---
 # <a name="send-a-local-tile-notification"></a><span data-ttu-id="f98e7-103">Senden einer lokalen Kachelbenachrichtigung</span><span class="sxs-lookup"><span data-stu-id="f98e7-103">Send a local tile notification</span></span>
  

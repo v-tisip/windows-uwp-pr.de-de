@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-API für gezielte Angebote, gezielte Angebote abrufen
 ms.localizationpriority: medium
 ms.openlocfilehash: 1032831492443460bd63671012a09edfceca2690
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5400000"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5436000"
 ---
 # <a name="get-targeted-offers"></a><span data-ttu-id="7a388-104">Abrufen gezielter Angebote</span><span class="sxs-lookup"><span data-stu-id="7a388-104">Get targeted offers</span></span>
 
