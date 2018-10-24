@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, app-Namen ändern des app-Namen, Update-app-Namen, game Namen, Produktname
 ms.localizationpriority: medium
 ms.openlocfilehash: 878b105541691834dbbe35b5210f33045afdc47b
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438208"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468628"
 ---
 # <a name="manage-app-names"></a>Verwalten von App-Namen
 
@@ -64,9 +64,9 @@ Nachdem Ihre app mit dem neuen Namen veröffentlicht wurde, können Sie alle äl
 > [!TIP]
 > Jede app erscheint in Ihrem Dashboard mit den Vornamen, die Sie für sie reserviert. **Wenn Sie die oben beschriebenen Schritte zum Benennen Sie einer app befolgt haben, und Sie es in Ihrem Dashboard mit dem neuen Namen angezeigt werden möchten, müssen Sie der ursprüngliche Name löschen (auf der Seite " **Verwalten von app-Namen** ").** 
 
- 
+ 
 
- 
+ 
 
 
 

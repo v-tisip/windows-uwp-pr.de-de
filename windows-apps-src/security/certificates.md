@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: 1db3af004831f010a3dd4918898ce5f7cf70bb1a
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438119"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468598"
 ---
 # <a name="intro-to-certificates"></a>Einführung in Zertifikate
 
@@ -26,7 +26,7 @@ In diesem Artikel wird die Verwendung von Zertifikaten in UWP-Apps (Universelle 
 
 ### <a name="shared-certificate-stores"></a>Freigegebene Zertifikatspeicher
 
-UWP-Apps verwenden das neue Isolationsanwendungsmodell, das in Windows8 eingeführt wurde. In diesem Modell werden Apps in einem Low-Level-Betriebssystemkonstrukt ausgeführt, das App-Container genannt wird. In diesem Konstrukt wird verhindert, dass die App auf Ressourcen oder Dateien zugreift, die außerhalb des eigenen Umfangs liegen, wobei der Zugriff auch ausdrücklich erlaubt und dadurch ermöglicht werden kann. In den folgenden Abschnitten werden die Auswirkungen auf die Public Key-Infrastruktur (PKI) erläutert.
+UWP-apps verwenden das neue Anwendungsmodell für isolierten Windows8 eingeführt. In diesem Modell werden Apps in einem Low-Level-Betriebssystemkonstrukt ausgeführt, das App-Container genannt wird. In diesem Konstrukt wird verhindert, dass die App auf Ressourcen oder Dateien zugreift, die außerhalb des eigenen Umfangs liegen, wobei der Zugriff auch ausdrücklich erlaubt und dadurch ermöglicht werden kann. In den folgenden Abschnitten werden die Auswirkungen auf die Public Key-Infrastruktur (PKI) erläutert.
 
 ### <a name="certificate-storage-per-app-container"></a>Zertifikatspeicher pro App-Container
 

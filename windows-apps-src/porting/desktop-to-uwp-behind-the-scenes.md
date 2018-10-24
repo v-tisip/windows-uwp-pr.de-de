@@ -11,15 +11,15 @@ keywords: windows10, UWP
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e6cd2b305a9d52a2239be46cc7f77650cdd6531
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5441588"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468803"
 ---
 # <a name="behind-the-scenes-of-your-packaged-desktop-application"></a>Hinter den Kulissen der Ihre verpackte desktop-Anwendung
 
-Dieser Artikel beschäftigt sich eingehender damit auf was mit Dateien und Registrierungseinträge beim Erstellen einer Windows-app-Paket für Ihre desktop-Anwendung geschieht.
+Dieser Artikel beschäftigt sich eingehender damit auf was mit Dateien und Registrierungseinträge, geschieht Wenn Sie ein Windows-app-Paket für Ihre desktop-Anwendung erstellen.
 
 Ein wichtiges Ziel der ein modernes Paket ist, Anwendungszustand vom Systemzustand bei gleichzeitiger Gewährleistung der Kompatibilität mit anderen apps so weit wie möglich zu trennen. Die Brücke erreicht dies, indem sie die Anwendung in einem Paket für die universelle Windows-Plattform (UWP) platziert und anschließend einige zur Laufzeit am Dateisystem und an der Registrierung vorgenommene Änderungen ermittelt und umleitet.
 
@@ -27,13 +27,13 @@ Pakete, die Sie für Ihre desktop-Anwendung erstellen, sind nur Desktop vertraue
 
 ## <a name="installation"></a>Installation
 
-App-Pakete werden mit der ausführbaren Datei *app_name.exe* unter *C:\Programme\WindowsApps\package_name* installiert. Jeder Paketordner enthält ein Manifest (AppxManifest.xml), das einen speziellen XML-Namespace für verpackte Apps enthält. In der Manifestdatei ist ein ```<EntryPoint>```-Element enthalten, das auf die vertrauenswürdige App verweist. Wenn die Anwendung gestartet wird, es wird nicht im app-Container ausgeführt, jedoch stattdessen ausgeführt als des Benutzers wie gewohnt.
+App-Pakete werden mit der ausführbaren Datei *app_name.exe* unter *C:\Programme\WindowsApps\package_name* installiert. Jeder Paketordner enthält ein Manifest (AppxManifest.xml), das einen speziellen XML-Namespace für verpackte Apps enthält. In der Manifestdatei ist ein ```<EntryPoint>```-Element enthalten, das auf die vertrauenswürdige App verweist. Wenn die Anwendung gestartet wird, wird es nicht im app-Container ausgeführt, jedoch stattdessen ausgeführt als des Benutzers wie gewohnt.
 
 Nach der Bereitstellung werden Paketdateien als schreibgeschützt markiert und vom Betriebssystem gesperrt. Windows verhindert, dass Apps gestartet werden, wenn diese Dateien manipuliert werden.
 
 ## <a name="file-system"></a>Dateisystem
 
-Die Anwendung "appdata" vorgenommenen Änderungen werden erfasst, um app-Zustands. Alle Schreibvorgänge in den AppData-Ordner des Benutzers (z.B. *C:\Benutzer\Benutzername\AppData*), einschließlich Erstellungs-, Lösch- und Aktualisierungsvorgänge, werden direkt an einen privaten Speicherort pro Benutzer und App kopiert. Dadurch entsteht den Eindruck, dass die verpackte Anwendung die tatsächliche AppData bearbeitet eigentlich eine private Kopie geändert wird. Durch eine derartige Umleitung von Schreibvorgängen kann das System alle von der App vorgenommenen Dateiänderungen nachverfolgen. Dadurch kann das System diese Dateien bereinigen, wenn die Anwendung deinstalliert wird, daher System "Running" reduzieren und eine bessere Anwendung deinstallationsmöglichkeiten bereitstellen für den Benutzer.
+Die Anwendung "appdata" vorgenommenen Änderungen werden erfasst, um app-Zustands. Alle Schreibvorgänge in den AppData-Ordner des Benutzers (z.B. *C:\Benutzer\Benutzername\AppData*), einschließlich Erstellungs-, Lösch- und Aktualisierungsvorgänge, werden direkt an einen privaten Speicherort pro Benutzer und App kopiert. Dadurch entsteht den Eindruck, dass die verpackte Anwendung die tatsächliche AppData bearbeiten ist eigentlich eine private Kopie geändert wird. Durch eine derartige Umleitung von Schreibvorgängen kann das System alle von der App vorgenommenen Dateiänderungen nachverfolgen. Dadurch kann das System diese Dateien bereinigen, wenn die Anwendung deinstalliert wird, daher System "Running" reduzieren und eine bessere Anwendung deinstallationsmöglichkeiten bereitstellen für den Benutzer.
 
 Zusätzlich zur Umleitung von "appdata", werden bekannte Windows-Ordner ("System32", Programmdateien (x86) usw.) dynamisch mit den entsprechenden Verzeichnissen im app-Paket zusammengeführt. Jedes verpackte Paket enthält im Stammverzeichnis einen Ordner mit dem Namen „VFS“. Alle Lesevorgänge für Verzeichnisse oder Dateien im VFS-Verzeichnis werden zur Laufzeit mit den jeweiligen nativen Entsprechungen zusammengeführt. Z. B. eine Anwendung könnte *C:\Program Files\WindowsApps\package_name\VFS\SystemX86\vc10.dll* als Teil des app-Pakets enthalten, aber die Datei sähe auf *C:\Windows\System32\vc10.dll*installiert werden.  Dies gewährleistet die Kompatibilität mit Desktopanwendungen, die davon ausgehen, dass sich Dateien an Speicherorten ohne Pakete befinden.
 
@@ -52,7 +52,7 @@ Schreibvorgänge außerhalb des Pakets | Zulässig, wenn der Benutzer über ents
 
 ### <a name="packaged-vfs-locations"></a>Gepackte VFS-Speicherorte
 
-Der folgenden Tabelle können Sie entnehmen, wo Dateien, die zu Ihrem Paket gehören, für die App im System überlagert sind. Ihre Anwendung wird, dass sich diese Dateien in den aufgeführten Systemspeicherorte befinden, wenn sie tatsächlich an den umgeleiteten Speicherorten in *C:\Program Files\WindowsApps\package_name\VFS*sind. Die FOLDERID-Speicherorte stammen von der [**KNOWNFOLDERID**](https://msdn.microsoft.com/library/windows/desktop/dd378457.aspx)-Konstante.
+Der folgenden Tabelle können Sie entnehmen, wo Dateien, die zu Ihrem Paket gehören, für die App im System überlagert sind. Ihre Anwendung wird, dass sich diese Dateien in den aufgeführten Speicherorten befinden, wenn sie tatsächlich an den umgeleiteten Speicherorten innerhalb *C:\Program Files\WindowsApps\package_name\VFS*sind. Die FOLDERID-Speicherorte stammen von der [**KNOWNFOLDERID**](https://msdn.microsoft.com/library/windows/desktop/dd378457.aspx)-Konstante.
 
 Systemspeicherort | Umgeleiteter Speicherort (unter [Paketstammverzeichnis]\VFS\) | Gültig für Architekturen
  :--- | :--- | :---
@@ -79,7 +79,7 @@ Nur Schlüssel unter *HKLM\Software* sind Teil des Pakets. Schlüssel unter *HKC
 
 Alle Schreibvorgänge unter „HKCU“ entsprechen Kopie bei Schreibvorgang an einem privaten Speicherort pro Benutzer und App. In der Regel können Deinstallationsprogramme *HKEY_CURRENT_USER* nicht bereinigen, da die Bereitstellung von Registrierungsdaten für abgemeldete Benutzer aufgehoben wird und die Daten daher nicht verfügbar sind.
 
-Alle Schreibvorgänge werden während des Pakets Upgrades beibehalten und nur gelöscht, wenn die Anwendung vollständig entfernt wird.
+Alle Schreibvorgänge werden während des Upgrades Paket beibehalten und nur gelöscht, wenn die Anwendung vollständig entfernt wird.
 
 ### <a name="common-operations"></a>Allgemeine Vorgänge
 
@@ -94,7 +94,7 @@ Schreibvorgänge außerhalb des Pakets | Von der Brücke ignoriert. Zulässig, w
 
 ## <a name="uninstallation"></a>Deinstallation
 
-Wenn ein Paket vom Benutzer deinstalliert wird, werden alle Dateien und Ordner unter *C:\Programme Files\WindowsApps\package_name* , sowie alle umgeleiteten Schreibvorgänge für "appdata" oder die Registrierung entfernt, die während des Verpackungsprozesses erfasst wurden.
+Wenn ein Paket vom Benutzer deinstalliert wird, werden alle Dateien und Ordner unter *C:\Programme Files\WindowsApps\package_name* sowie alle umgeleiteten Schreibvorgänge für "appdata" oder die Registrierung entfernt, die während des Verpackungsprozesses erfasst wurden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

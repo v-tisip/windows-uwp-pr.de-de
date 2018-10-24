@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Steuern, App-Steuern, Steuergesetze, E-Commerce-Erweiterung, Steuersatz
 ms.localizationpriority: medium
 ms.openlocfilehash: 461c9303bbb26e5c4739ca60c03343008377df6c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5444828"
+ms.locfileid: "5474385"
 ---
 # <a name="tax-details-for-paid-apps"></a>Steuerinformationen zu kostenpflichtigen Apps
 
@@ -30,7 +30,7 @@ Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu Auswirkungen 
 > 
 > Steuerliche Verantwortung für Händlerländer/-regionen und Umstände (wie [unten](#reseller-countriesregions) beschrieben) unterliegen der AnlageC der [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), ungeachtet der Informationen in der folgenden Tabelle
 
- 
+ 
 
 | Land/Region                   | Steuerliche Aspekte bei der Preisfestlegung                                                                                                             | Auswirkung auf Auszahlungen                    | Steuerpflichtiger |
 |----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|--------------------|
@@ -226,7 +226,7 @@ Informationen zu steuerlichen Aspekten bei der Preisfestlegung, zu Auswirkungen 
 | Sambia                           | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 | Simbabwe                         | Der festgelegte Preis ist der endgültige Verkaufspreis und enthält alle jeweils gültigen Steuern.                                                                   | 70% des festgelegten Preises                 | Entwickler          |
 
- 
+ 
 
 ## <a name="mixed-remittance-countriesregions"></a>Länder/Regionen mit gemischter Überweisung
 
@@ -238,7 +238,7 @@ Bestimmte Abrechnungspartner von Microsoft können den Einzug und die Überweisu
 | Südafrika                       |
 | Vietnam                            |
 
- 
+ 
 
 ## <a name="reseller-countriesregions"></a>Händlerländer/-regionen
 
@@ -250,11 +250,11 @@ In bestimmten Ländern/Regionen fungiert Microsoft bei der Bereitstellung Ihrer 
 | China (mit Ausnahme mobiler Kommunikationsgeräte mit Windows Phone7.x und Computern mit Windows8.x) |
 | Brasilien (nur für Einkäufe über Geräte mit Windows10)     |
 
- 
+ 
 
 
 
- 
+ 
 
 
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d6132c2ede9f14cd1f4d29195916c8b484abfe9f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435553"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468360"
 ---
 # <a name="create-add-on-store-listings"></a>Erstellen von Store-Einträgen für Add-Ons
 
@@ -50,9 +50,9 @@ Wenn Sie mehr Informationen als nur einen Titel anzeigen möchten, können Sie h
 
 Sie können auch ein Bild bereitstellen, das dem Kunden angezeigt wird. Dabei muss es sich um eine PNG-Datei mit exakt 300 x 300 Pixeln handeln.
 
- 
+ 
 
- 
+ 
 
 
 

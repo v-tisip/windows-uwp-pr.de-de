@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Anzeigen, Werbung, Anzeigeeinheiten, Test
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f7257e6cae518458c5c0bbc525d8013708717e5
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5444372"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468501"
 ---
 # <a name="set-up-ad-units-in-your-app"></a>Einrichten von Anzeigeneinheiten in der App
 
@@ -87,6 +87,6 @@ Können mehrere Steuerelemente für Banner-, Interstitialwerbungen und native An
 * [Native Anzeigen](native-ads.md)
 
 
- 
+ 
 
- 
+ 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e0d63cac488e294629d430c7470dc58ad64059f9
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438547"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468376"
 ---
 # <a name="manage-your-ad-campaign"></a>Verwalten Ihrer Anzeigenkampagne
 
@@ -50,9 +50,9 @@ Zum Vornehmen von Änderungen an einer Anzeigenkampagne klicken Sie auf deren Na
 * [Über Eigenwerbung](about-house-ads.md)
 * [Bericht „Anzeigen für die App-Installation“](app-install-ads-reports.md)
 * [Allgemeine Fragen](common-questions.md)
- 
+ 
 
- 
+ 
 
 
 

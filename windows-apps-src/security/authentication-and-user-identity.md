@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f446299dcf1a0bcf93d483d13c926c6e4cd230f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432713"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468314"
 ---
 # <a name="authentication-and-user-identity"></a>Authentifizierung und Benutzeridentität
 
@@ -25,7 +25,7 @@ UWP (Universelle Windows-Plattform)-Apps bieten mehrere Optionen für die Benutz
 
 Normale App-Verbindungen mit Identitätsanbieterdiensten von Drittanbietern, z.B. Facebook, Twitter, Flickr usw., verwenden den [Webauthentifizierungsbroker](web-authentication-broker.md). Verwenden Sie das [Schließfach für Anmeldeinformationen](credential-locker.md), um die Benutzerfreundlichkeit beim Speichern und Roaming der Anmeldeinformationen des Benutzers zu verbessern.
 
-Für Unternehmen, die Windows10 nutzen, empfiehlt es sich unbedingt, [MicrosoftPassport und WindowsHello](microsoft-passport.md) zu verwenden, um eine äußerst sichere zweistufige Authentifizierung zu erzielen. Wenn MicrosoftPassport nicht verwendet werden kann, bieten [Smartcards](smart-cards.md) und der [biometrische Fingerabdruck](fingerprint-biometrics.md) eine zusätzliche Sicherheitsstufe.
+Unternehmen mit Windows 10 sollten unbedingt mit [Microsoft Passport und Windows Hello](microsoft-passport.md), wodurch äußerst sicheren zweistufigen Authentifizierung. Wenn MicrosoftPassport nicht verwendet werden kann, bieten [Smartcards](smart-cards.md) und der [biometrische Fingerabdruck](fingerprint-biometrics.md) eine zusätzliche Sicherheitsstufe.
 
 <table>
 <tr><th>Thema</th><th>Beschreibung</th></tr>
