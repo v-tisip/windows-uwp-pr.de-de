@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, app-Zertifizierung
 ms.localizationpriority: medium
 ms.openlocfilehash: b7a72a89704aa3768cc43cdfbb75b620bae303e3
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5410146"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5443544"
 ---
 # <a name="windows-app-certification-kit"></a><span data-ttu-id="04ee7-105">Zertifizierungskit für Windows-Apps</span><span class="sxs-lookup"><span data-stu-id="04ee7-105">Windows App Certification Kit</span></span>
 

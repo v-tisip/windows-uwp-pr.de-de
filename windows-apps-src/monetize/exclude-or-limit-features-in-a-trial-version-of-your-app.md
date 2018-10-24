@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 18d9fb3ba5b0fbd1e964450a75d8e0e417265e7f
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5404699"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5444328"
 ---
 # <a name="exclude-or-limit-features-in-a-trial-version"></a><span data-ttu-id="8b77f-103">Ausschließen oder Beschränken von Features in einer Testversion</span><span class="sxs-lookup"><span data-stu-id="8b77f-103">Exclude or limit features in a trial version</span></span>
 

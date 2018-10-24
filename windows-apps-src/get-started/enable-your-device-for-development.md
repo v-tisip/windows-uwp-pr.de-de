@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ad817bbae2fb8b28b95095880aa1a65c391720f3
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5400953"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5443935"
 ---
 # <a name="enable-your-device-for-development"></a><span data-ttu-id="023a1-104">Aktivieren Ihres Geräts für die Entwicklung</span><span class="sxs-lookup"><span data-stu-id="023a1-104">Enable your device for development</span></span>
 
