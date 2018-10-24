@@ -11,11 +11,11 @@ keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Paketrollout, App-
 ms.assetid: 4ce79fe3-deda-4d31-b938-d672c3869051
 ms.localizationpriority: medium
 ms.openlocfilehash: 90ebfa61fa200342e32beb87be6cd27ea11e8f40
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5400838"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5440405"
 ---
 # <a name="halt-the-rollout-for-an-app-submission"></a><span data-ttu-id="3fc3e-104">Anhalten des Rollouts einer App-Übermittlung</span><span class="sxs-lookup"><span data-stu-id="3fc3e-104">Halt the rollout for an app submission</span></span>
 

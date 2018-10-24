@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Add-On-Konversionen, Kanäle
 ms.localizationpriority: medium
 ms.openlocfilehash: af29c790df5508a22c545cdc5a2ca2faac15e134
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5409084"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5430999"
 ---
 # <a name="get-add-on-conversions-by-channel"></a><span data-ttu-id="33ee5-104">Abrufen von Add-On-Konvertierungen nach Kanal</span><span class="sxs-lookup"><span data-stu-id="33ee5-104">Get add-on conversions by channel</span></span>
 
