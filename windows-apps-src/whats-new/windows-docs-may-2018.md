@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 322bc056411095019dfc027078cbfef7de0883fb
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.openlocfilehash: 4a9e55de039087ce3fdaae6a003293a50938af90
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5400081"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5430986"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>Neuigkeiten in der Windows-Entwicklerdokumentation im Mai 2018
 
@@ -99,7 +99,7 @@ Das Projekt "ROME"-Team hat ihre IOS- und Android-SDKs, Hinzufügen neuer Funkti
 
 ### <a name="sets"></a>Sets
 
-Die Funktion ist in Windows-Insider Preview-builds verfügbar. Wenn das Sets-Feature verwendet, wird Ihre app in einem Fenster gezeichnet, die mit anderen apps zu jeder app müssen eine eigene Registerkarte in der Titelleiste gemeinsam genutzt werden kann. [Entwerfen für Sets](../design/shell/design-for-sets.md) enthält eine Anleitung zum Optimieren Sie Ihre app, um die bestmögliche Erfahrung in der Benutzeroberfläche legt zu bieten.
+Die Funktion ist in Windows-Insider Preview-builds verfügbar. Wenn das Sets-Feature verwendet, wird Ihre app in einem Fenster gezeichnet, die mit anderen apps zu jeder app müssen eine eigene Registerkarte in der Titelleiste gemeinsam genutzt werden kann. 
 
 ## <a name="developer-guidance"></a>Anleitungen für Entwickler
 

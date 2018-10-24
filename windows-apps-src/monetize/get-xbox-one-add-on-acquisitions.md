@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Store-Dienste, Microsoft Store-Analyse-API, Xbox One Add-on-Käufe
 ms.localizationpriority: medium
 ms.openlocfilehash: 931cd7b351a122c22a59a3a0bc2975c61dc38aaa
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5404881"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5431699"
 ---
 # <a name="get-xbox-one-add-on-acquisitions"></a>Abrufen von Xbox One Add-on-Käufen
 
