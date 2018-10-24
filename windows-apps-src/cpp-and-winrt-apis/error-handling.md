@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, fehler, behandlung, ausnahme
 ms.localizationpriority: medium
 ms.openlocfilehash: 9a4cf60fea70722e66eb44d52542be248e9ad01c
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5406185"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5442527"
 ---
 # <a name="error-handling-with-cwinrt"></a>Fehlerbehandlung bei C++/WinRT
 

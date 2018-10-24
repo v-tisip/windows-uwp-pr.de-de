@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Anzeige, Werbung, Fehlerbehandlung, JavaScript
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e25de40c7fd28cb43c308bd0361b400e7bf6909
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5398057"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "5443221"
 ---
 # <a name="error-handling-in-javascript-walkthrough"></a>Exemplarische Vorgehensweise zur Fehlerbehandlung in JavaScript
 

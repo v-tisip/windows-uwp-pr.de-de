@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 424ca52020bd5b9aeab745030dd6eef4cd4430b6
-ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
-ms.translationtype: HT
+ms.openlocfilehash: 548f5f5d1810347527c3c9bfe761a766c4a35c7f
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "1862419"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5445577"
 ---
 # <a name="create-and-host-an-app-extension"></a>Erstellen und Hosten einer App-Erweiterung
 
@@ -126,11 +126,11 @@ Die `<uap3:AppExtension>`-Attribute haben folgende Bedeutungen:
 
 |Attribut|Beschreibung|Erforderlich|
 |---------|-----------|:------:|
-|**Name**|Dies ist der Erweiterungsvertragsname. Wenn sie dem auf einem Host deklarierten **Namen** entspricht, kann dieser Host diese Erweiterung finden.|:heavy_check_mark:|
-|**ID**| Identifiziert diese Erweiterung eindeutig. Da es möglicherweise mehrere Erweiterungen mit dem gleichen Erweiterungsvertragsnamen gibt (wie eine Paint-App, die mehrere Erweiterungen unterstützt), können Sie die ID verwenden, um sie auseinanderzuhalten. App-Erweiterungshosts können die ID verwenden, um den Typ der Erweiterung zu überprüfen. Beispielsweise können Sie eine Erweiterung für den Desktop und eine weitere für Mobilgeräte haben, wobei die ID das Unterscheidungsmerkmal ist. Sie können ebenfalls dafür das Element **Eigenschaften** verwenden.|:heavy_check_mark:|
+|**Name**|Dies ist der Erweiterungsvertragsname. Wenn sie dem auf einem Host deklarierten **Namen** entspricht, kann dieser Host diese Erweiterung finden.| :heavy_check_mark: |
+|**ID**| Identifiziert diese Erweiterung eindeutig. Da es möglicherweise mehrere Erweiterungen mit dem gleichen Erweiterungsvertragsnamen gibt (wie eine Paint-App, die mehrere Erweiterungen unterstützt), können Sie die ID verwenden, um sie auseinanderzuhalten. App-Erweiterungshosts können die ID verwenden, um den Typ der Erweiterung zu überprüfen. Beispielsweise können Sie eine Erweiterung für den Desktop und eine weitere für Mobilgeräte haben, wobei die ID das Unterscheidungsmerkmal ist. Sie können ebenfalls dafür das Element **Eigenschaften** verwenden.| :heavy_check_mark: |
 |**DisplayName**| Kann von der Host-App verwendet werden, um die Erweiterung für den Benutzer zu identifizieren. Ist abfragbar vom und verwendet das [Neue Ressourcenverwaltungssystem](https://docs.microsoft.com/windows/uwp/app-resources/using-mrt-for-converted-desktop-apps-and-games) (`ms-resource:TokenName`) für die Lokalisierung. Der lokalisierte Inhalt wird vom App-Erweiterungspaket und nicht von der Host-App geladen. | |
 |**Beschreibung** | Kann von der Host-App verwendet werden, um die Erweiterung für den Benutzer zu beschreiben. Ist abfragbar vom und verwendet das [Neue Ressourcenverwaltungssystem](https://docs.microsoft.com/windows/uwp/app-resources/using-mrt-for-converted-desktop-apps-and-games) (`ms-resource:TokenName`) für die Lokalisierung. Der lokalisierte Inhalt wird vom App-Erweiterungspaket und nicht von der Host-App geladen. | |
-|**PublicFolder**|Der Name eines Ordners, relativ zum Stammverzeichnis des Pakets, in dem Sie Inhalte mit dem Erweiterungshost teilen können. Üblicherweise ist der Name "Public", Sie können allerdings einen beliebigen Namen verwenden, der einem Ordner in der Erweiterung entspricht.|:heavy_check_mark:|
+|**PublicFolder**|Der Name eines Ordners, relativ zum Stammverzeichnis des Pakets, in dem Sie Inhalte mit dem Erweiterungshost teilen können. Üblicherweise ist der Name "Public", Sie können allerdings einen beliebigen Namen verwenden, der einem Ordner in der Erweiterung entspricht.| :heavy_check_mark: |
 
 `<uap3:Properties>` ist ein optionales Element, das benutzerdefinierte Metadaten enthält, die Hosts zur Laufzeit lesen können. Im Codebeispiel ist die Erweiterung als App-Dienst implementiert, damit der Host den Namen des App-Diensts abrufen kann und ihn damit aufrufen kann. Der Name des App-Diensts ist im <Service>-Element definiert, das wir definiert haben (der Name spielt dabei keine Rolle). Der Host im Codebeispiel sucht zur Laufzeit nach dieser Eigenschaft, um den Namen des App-Diensts zu erfahren.
 

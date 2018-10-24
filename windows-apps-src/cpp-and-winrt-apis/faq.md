@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projektion, häufig, gestellte, fragen, faq
 ms.localizationpriority: medium
 ms.openlocfilehash: 5fe355c4ee4ee2dcc9d2e48130773e5632eb4a90
-ms.sourcegitcommit: c4d3115348c8b54fcc92aae8e18fdabc3deb301d
+ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "5409481"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5445548"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Häufig gestellte Fragen zu C++/WinRT
 Antworten auf Fragen, die Sie wahrscheinlich zur Erstellung und Nutzung von Windows-Runtime-APIs mit werden [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
