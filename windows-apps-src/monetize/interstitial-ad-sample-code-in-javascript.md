@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Anzeigen, Werbung, Interstitialwerbung, JavaScript, Beispielcode
 ms.localizationpriority: medium
 ms.openlocfilehash: 894053298428818c2f3304220f14afb6c44ba2af
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435311"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5477164"
 ---
 # <a name="interstitial-ad-sample-code-in-javascript"></a>Beispielcode für Interstitialwerbung in JavaScript
 
@@ -51,4 +51,4 @@ Ersetzen Sie die Werte der Variablen ```applicationId``` und ```adUnitId``` durc
 
 * [Anzeigenbeispiele bei GitHub](http://aka.ms/githubads)
 
- 
+ 

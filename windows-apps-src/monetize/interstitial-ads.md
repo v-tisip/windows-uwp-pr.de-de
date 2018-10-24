@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Anzeigen, Werbung, Anzeigensteuerelement, Interstitial
 ms.localizationpriority: medium
 ms.openlocfilehash: 547a582064262d18467df4868df17a08e73b279c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5436848"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5477710"
 ---
 # <a name="interstitial-ads"></a>Interstitialwerbung
 
@@ -163,7 +163,7 @@ Bei den folgenden Anweisungen wird davon ausgegangen, dass Sie ein universelles 
 ### <a name="c-directx-interop"></a>C++ (DirectX Interop)
 
 In diesem Beispiel wird angenommen, dass Sie ein C++-Projekt **DirectX- und XAML-App (Universelle Windows-App)** in Visual Studio erstellt haben, das auf eine bestimmte CPU-Architektur ausgerichtet ist.
- 
+ 
 1. Öffnen Sie das Projekt in Visual Studio.
 
 3. Hinzufügen eines Verweises auf die Microsoft Advertising-SDK in Ihrem Projekt:

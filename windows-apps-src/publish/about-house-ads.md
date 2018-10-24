@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 155b8f67b5cd6080554afb889c7c27c921c998f8
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5439277"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5479754"
 ---
 # <a name="about-house-ads"></a>Über Eigenwerbung
 
@@ -34,7 +34,7 @@ Wenn Eigenwerbung für App A in App B erscheint, wird der Aufruf weder in Rechnu
 >[!NOTE]
 > Ein einzelner Endbenutzer sieht bestimmte Eigenwerbung nur maximal fünfmal am Tag.
 
- 
+ 
 
 ### <a name="related-topics"></a>Verwandte Themen
 

@@ -10,18 +10,18 @@ ms.technology: uwp
 keywords: Windows10, UWP, Xbox Analyse, Xbox Live-Analyse, Xbox-Statistiken
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e69c41ec2ae6dface93b9f3148e699e448faa18
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433650"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475198"
 ---
 # <a name="xbox-analytics-report"></a>Xbox Analysebericht
 
 Der **Xbox Analysebericht** im Windows Dev Center-Dashboard zeigt Ihnen Statistiken darüber an, wie Ihre Kunden die Xbox-Features in Ihrem Spiel nutzen. Es enthält auch Informationen zur Dienstintegrität, um Clientfehler zu beheben.
 
 > [!IMPORTANT]
-> Dieser Bericht wird nur angezeigt, wenn Sie ein Spiel für Xbox oder ein Spiel veröffentlichen, das Xbox Live-Dienste verwendet. Zu diesem Zweck Sie [konzeptgenehmigungsprozess](../gaming/concept-approval.md), einschließlich Spiele, die von [Microsoft-Partnern](../xbox-live/developer-program-overview.md#microsoft-partners) veröffentlicht und Spiele über übermittelt durchlaufen müssen die [ ID@Xbox Programm](../xbox-live/developer-program-overview.md#id). Spiele, die über das [Xbox Live Creators-Programm](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) veröffentlicht sind derzeit nicht sichtbar in diesem Bericht.
+> Dieser Bericht wird nur angezeigt, wenn Sie ein Spiel für Xbox oder ein Spiel veröffentlichen, das Xbox Live-Dienste verwendet. Zu diesem Zweck Sie [konzeptgenehmigungsprozess](../gaming/concept-approval.md), einschließlich Spiele, die von [Microsoft-Partnern](../xbox-live/developer-program-overview.md#microsoft-partners) veröffentlicht und Spiele über übermittelt durchlaufen müssen die [ ID@Xbox Programm](../xbox-live/developer-program-overview.md#id). Spiele, die über das [Xbox Live Creators-Programm](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) veröffentlicht werden nicht in diesem Bericht derzeit angezeigt.
 
 Zeigen Sie den **Xbox Analyse**-Bericht im linken Navigationsmenü für Ihr Spiel an, indem Sie **Analyse** erweitern und **Xbox Analyse** auswählen.  Sie können diese Daten in Ihrem Dashboard anzeigen oder den [Bericht herunterladen](download-analytic-reports.md), um ihn offline anzuzeigen.
 
@@ -143,6 +143,6 @@ Sie können auch nur Ratenbegrenzungsfehler anzeigen, indem Sie **Begrenzung der
 
 
 
- 
+ 
 
- 
+ 

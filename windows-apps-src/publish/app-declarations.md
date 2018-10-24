@@ -11,21 +11,21 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 959e056d5edf5e1fe7a1c51a2f855c9e11512cb0
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5430726"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5469311"
 ---
 # <a name="product-declarations"></a>Produktdeklarationen
 
-Die **produktdeklarationen** -Abschnitt der Seite " [Eigenschaften](enter-app-properties.md) " des [Übermittlungsprozesses](app-submissions.md) hilft bei stellen sicher, dass Ihre app entsprechend angezeigt und angeboten, die richtigen Kunden und hilft ihnen verstehen, wie Ihre app verwendet werden kann.
+Die **produktdeklarationen** -Abschnitt der Seite " [Eigenschaften](enter-app-properties.md) " des [Übermittlungsprozesses](app-submissions.md) hilft bei stellen Sie sicher, dass Ihre app entsprechend angezeigt und angeboten, die richtigen Kunden und hilft ihnen verstehen, wie Ihre app verwendet werden kann.
 
 Den folgenden Abschnitten werden einige der Deklarationen und was Sie bei der Entscheidung, ob sich eine Deklaration für Ihre app gilt berücksichtigen müssen. Beachten Sie, dass zwei dieser Deklarationen standardmäßig aktiviert sind (wie unten beschrieben). Je nach Kategorie des Produkts können Sie auch zusätzliche Deklarationen angezeigt. Achten Sie darauf, dass alle Deklarationen überprüfen und sicherzustellen, dass sie Ihre Übermittlung genau widerspiegeln.
 
-## <a name="this-app-allows-users-to-make-purchases-but-does-not-use-the-microsoft-store-commerce-system"></a>Diese app ermöglicht es Benutzern, Einkäufe zu tätigen, verwendet jedoch nicht der Microsoft Store-e-Commerce-Systems.
+## <a name="this-app-allows-users-to-make-purchases-but-does-not-use-the-microsoft-store-commerce-system"></a>Diese app ermöglicht es Benutzern, Einkäufe zu tätigen, verwendet jedoch nicht des Microsoft Store-e-Commerce-Systems.
 
-Nahezu jede Übermittlung sollten Sie diese Option deaktiviert lassen, seit apps, die Möglichkeiten zum Kauf anbieten müssen Elementen, die sind oder können verbraucht oder innerhalb Ihrer app verwendet den Microsoft Store in-app-Einkaufs-API zum Erstellen und Übermitteln von Add-ons verwenden. Gemäß der [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)konnte apps, die erstellt und vor dem 29 Juni 2015 eingereicht wurden, weiterhin im app-einkauffunktionalität anbieten, ohne Verwendung von Microsoft e-Commerce-Engine, solange die einkaufsfunktionalität die [aber Microsoft Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies#108-financial-transactions). Wenn dies auf Ihre App zutrifft, müssen Sie dieses Kontrollkästchen aktivieren. Lassen Sie das Kontrollkästchen andernfalls deaktiviert.
+Nahezu jede Übermittlung sollten Sie diese Option deaktiviert lassen, seit apps, die Möglichkeiten zum Kauf anbieten müssen Elemente, die sind oder können verbraucht oder innerhalb Ihrer app verwendet die Microsoft Store-app-Einkaufs-API zum Erstellen und Übermitteln von Add-ons verwenden. Gemäß der [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)könnte apps, die erstellt und vor dem 29 Juni 2015 eingereicht wurden, weiterhin in-app-einkauffunktionalität anbieten, ohne Verwendung von Microsoft e-Commerce-Engine, solange die einkaufsfunktionalität die [aber Microsoft Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies#108-financial-transactions). Wenn dies auf Ihre App zutrifft, müssen Sie dieses Kontrollkästchen aktivieren. Lassen Sie das Kontrollkästchen andernfalls deaktiviert.
 
 ## <a name="this-app-has-been-tested-to-meet-accessibility-guidelines"></a>Diese App wurde auf Einhaltung der Richtlinien zur Barrierefreiheit getestet.
 
@@ -44,15 +44,15 @@ Wenn Sie Ihre App als barrierefrei ausweisen, erklären Sie ausdrücklich, dass 
 Weitere Informationen finden Sie unter [Eingabehilfen](../design/accessibility/accessibility.md), [zum Testen der Barrierefreiheit](../design/accessibility/accessibility-testing.md)und [Barrierefreiheit im Store](../design/accessibility/accessibility-in-the-store.md).
 
 > [!IMPORTANT]
-> Weisen Sie die App nur dann als barrierefrei aus, wenn Sie sie ausdrücklich für diesen Zweck entwickelt und getestet haben. Falls Ihre App als barrierefrei ausgewiesen ist, jedoch eigentlich keine Barrierefreiheit unterstützt, werden Sie wahrscheinlich negatives Feedback von der Community erhalten.
+> Weisen Sie die App nur dann als barrierefrei aus, wenn Sie sie ausdrücklich für diesen Zweck entwickelt und getestet haben. Falls Ihre App als barrierefrei ausgewiesen ist, jedoch eigentlich keine Barrierefreiheit unterstützt, werden Sie wahrscheinlich negatives Feedback von der Community erhalten.
 
 ## <a name="customers-can-install-this-app-to-alternate-drives-or-removable-storage"></a>Kunden können diese App auf alternativen Laufwerken oder Wechselmedien installieren.
 
 Dieses Kontrollkästchen ist standardmäßig aktiviert, damit Kunden Ihre app für externe oder auf Wechseldatenträgern zu installieren, wie etwa einer SD-Karte oder auf einem systemfremden Volumelaufwerk wie einem externen Laufwerk zu steuern. (Für Windows Phone 8.1 wurde dies zuvor über "storemanifest.xml" angegeben.)
 
-Wenn Sie verhindern, dass Ihre app auf alternativen Laufwerken oder Wechselmedien installiert wird, und nur die Installation auf die interne Festplatte auf ihrem Gerät zulassen möchten, deaktivieren Sie dieses Kontrollkästchen.
+Wenn Sie verhindern, dass Ihre app auf alternativen Laufwerken oder Wechselmedien installiert wird, und nur die Installation auf die interne Festplatte auf dem Gerät zulassen möchten, deaktivieren Sie dieses Kontrollkästchen.
 
-Beachten Sie, dass es ist keine Option zum Einschränken der Installation eine app kann *nur* werden auf Wechselmedien installiert.
+Beachten Sie, dass es keine Option zum Einschränken der Installation gibt, damit eine app kann *nur* sein auf Wechselmedien installiert.
 
 
 ## <a name="windows-can-include-this-apps-data-in-automatic-backups-to-onedrive"></a>Windows kann die Daten dieser App in automatische Sicherungen auf OneDrive einschließen.
@@ -68,11 +68,11 @@ Wenn Ihre app Kinect-Daten verwendet und sie an einen externen Dienst sendet, m�
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, app-Installer, AppInstaller, querladen, im Zusammenhang mit festgelegten, optionale Pakete, IIS-Server
 ms.localizationpriority: medium
 ms.openlocfilehash: 214ddd2b55bca1acecbab0a841cf2048335e7b3a
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443423"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470845"
 ---
 # <a name="install-a-uwp-app-from-an-iis-server"></a>Installieren einer UWP-App von einem IIS-Server
 
@@ -30,7 +30,7 @@ Um erfolgreich mit diesem Lernprogramm durchlaufen, benötigen Sie Folgendes:
 2. Web-Entwicklungstools und IIS 
 3. UWP-App-Paket – das App-Paket, die Sie verteilen möchten
 
-Optional: [Startprojekt](https://github.com/AppInstaller/MySampleWebApp) auf GitHub. Dies ist hilfreich, wenn Sie keinen app-Pakete mit arbeiten, aber dennoch möchten erfahren, wie Sie dieses Feature verwenden.
+Optional: [Startprojekt](https://github.com/AppInstaller/MySampleWebApp) auf GitHub. Dies ist hilfreich, wenn Sie keinen app-Pakete haben mit funktionieren, aber dennoch möchten erfahren, wie Sie dieses Feature verwenden.
 
 ## <a name="step-1---install-iis-and-aspnet"></a>Schritt 1: Installieren von IIS und ASP.NET 
 
@@ -39,15 +39,15 @@ Optional: [Startprojekt](https://github.com/AppInstaller/MySampleWebApp) auf Git
 Suchen Sie und wählen Sie **Internet Information Services** , IIS zu installieren.
 
 > [!NOTE]
-> Sie müssen nicht alle Kontrollkästchen unter Internet Information Services wählen. Nur diejenigen, die ausgewählt, wenn Sie überprüfen, dass **Internet Information Services** reichen.
+> Sie müssen nicht alle Kontrollkästchen unter Internet Information Services wählen. Nur diejenigen ausgewählt, wenn Sie überprüfen, dass **Internet Information Services** reichen.
 
 Sie müssen auch ASP.NET 4.5 oder höher installieren. Um die Installation, suchen Sie nach **Internet Information Services -> World Wide Web Services -> Anwendungsentwicklungsfeatures**. Wählen Sie eine Version von ASP.NET, die größer als oder gleich ASP.NET 4.5 ist.
 
 ![Installieren von ASP.NET](images/install-asp.png)
 
-## <a name="step-2---install-visual-studio-2017-and-web-development-tools"></a>Schritt 2: installieren Visual Studio 2017 und Webentwicklung-tools 
+## <a name="step-2---install-visual-studio-2017-and-web-development-tools"></a>Schritt 2: Install Visual Studio 2017 und Webentwicklung-tools 
 
-[Installieren Sie Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio) , wenn Sie nicht bereits installiert haben. Wenn Sie Visual Studio 2017 noch, stellen Sie sicher, dass die folgenden Workloads installiert sind. Wenn die Workloads nicht auf Ihre Installation vorhanden sind, führen Sie entlang mit dem Visual Studio Installer (finden Sie im Menü "Start").  
+[Installieren Sie Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio) , wenn Sie nicht bereits installiert haben. Wenn Sie bereits über Visual Studio 2017 haben, stellen Sie sicher, dass die folgenden Workloads installiert sind. Wenn die Arbeitslasten nicht auf Ihre Installation vorhanden sind, führen Sie entlang mithilfe der Visual Studio Installer (aus dem Menü "Start" gefunden).  
 
 Wählen Sie während der Installation **ASP.NET und Webentwicklung** und dass andere Workloads, denen Sie von Interesse sind. 
 
@@ -55,11 +55,11 @@ Sobald die Installation abgeschlossen ist, starten Sie Visual Studio, und Erstel
 
 ## <a name="step-3---build-a-web-app"></a>Schritt 3: Erstellen einer Web-App
 
-Starten Sie Visual Studio 2017 als **Administrator** , und erstellen Sie ein neues Projekt **Visual C#-Web-Anwendung** mit einer **leeren** Projektvorlage "". 
+Starten Sie Visual Studio 2017 als **Administrator** , und erstellen Sie ein neues Projekt **Visual C#-Web-Anwendung** mit einer **leeren** Projektvorlage. 
 
 ![Neues Projekt](images/sample-web-app.png)
 
-## <a name="step-4---configure-iis-with-our-web-app"></a>Schritt 4: Konfigurieren von IIS mit unseren Web-App 
+## <a name="step-4---configure-iis-with-our-web-app"></a>Schritt 4: Konfigurieren von IIS mit unserer Web-App 
 
 Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Root-Projekt, und wählen Sie **Eigenschaften**.
 
@@ -71,24 +71,24 @@ Wählen Sie in der Web-app-Eigenschaften der Registerkarte " **Web** ". Wählen 
 
 Fügen Sie das app-Paket, das Sie in der Anwendung verteilen möchten. Sie können das app-Paket verwenden, das Teil der bereitgestellten [Starter Projektpakete](https://github.com/AppInstaller/MySampleWebApp/tree/master/MySampleWebApp/packages) auf GitHub ist, besitzen Sie ein app-Paket zur Verfügung. Die Zertifikat (MySampleApp.cer), mit dem das Paket signiert wurde, ist ebenfalls im Beispiel auf GitHub enthalten. Sie müssen das Zertifikat vor der Installation der app (Schritt 9) auf Ihrem Gerät installiert haben.
 
-In die Web-App mit Starter-Projekt ein neuer Ordner namens Web-app hinzugefügt wurde `packages` , enthält die app-Pakete verteilt werden soll. Um den Ordner "in Visual Studio erstellen, klicken Sie mit der rechten Maustaste auf das Stammverzeichnis des Projektmappen-Explorer, wählen Sie **Hinzufügen** -> **Neuen Ordner** und nennen Sie es `packages`. Zum Hinzufügen von app-Pakete in den Ordner, klicken Sie mit der rechten Maustaste auf die `packages` Ordner und **Hinzufügen** -> **Vorhandenes Element** und navigieren Sie zu der app-Pakets Speicherort. 
+In der Web-Anwendung Starter-Projekt, ein neuer Ordner namens Web-app hinzugefügt wurde `packages` , enthält die app-Pakete verteilt werden soll. Um den Ordner "in Visual Studio erstellen, klicken Sie mit der rechten Maustaste auf das Stammverzeichnis des Projektmappen-Explorer, wählen Sie **Hinzufügen** -> **Neuen Ordner** und nennen Sie es `packages`. Zum Hinzufügen von app-Pakete in den Ordner, klicken Sie mit der rechten Maustaste auf die `packages` Ordner, und wählen Sie **Add** -> **Vorhandenes Element** und navigieren Sie zu der app-Pakets Speicherort. 
 
 ![Paket hinzufügen](images/add-package.png)
 
 ## <a name="step-6---create-a-web-page"></a>Schritt 6: Erstellen einer Webseite
 
-Diese Beispiel-Web-app unter Verwendung von einfachen HTML. Sie können Ihre Web-app nach Bedarf pro Ihren Anforderungen erstellen. 
+Diese Beispiel-Web-app verwendet einfaches HTML. Sie können nach Bedarf pro Ihre Bedürfnisse Ihrer Web-app erstellen. 
 
 Klicken Sie mit der rechten Maustaste auf das Stammprojekt der Projektmappen-Explorer, wählen Sie **Hinzufügen** -> **Neues Element**, und fügen Sie eine neue **HTML-Seite** aus dem **Web** -Abschnitt.
 
 Wenn die HTML-Seite erstellt wurde, klicken Sie mit der rechten Maustaste auf die HTML-Seite im Projektmappen-Explorer, und wählen Sie **Als Startseite festlegen**.  
 
-Doppelklicken Sie auf die HTML-Datei, um sie im Code-Editor-Fenster zu öffnen. In diesem Lernprogramm werden nur für die Elemente im erforderlichen auf der Webseite zum Aufrufen der App-Installer-app erfolgreich zum Installieren von Windows 10-app verwendet werden. 
+Doppelklicken Sie auf die HTML-Datei, um sie im Code-Editor-Fenster zu öffnen. In diesem Lernprogramm werden nur für die Elemente in der erforderlichen auf der Webseite zum Aufrufen der App-Installer-app erfolgreich zum Installieren von Windows 10-app verwendet werden. 
 
-Fügen Sie den folgenden HTML-Code in Ihrer Webseite. Die Taste, um erfolgreich Aufrufen von App-Installer ist die Verwendung von benutzerdefinierten Schema, die App-Installer mit dem Betriebssystem registriert: `ms-appinstaller:?source=`. Siehe Codebeispiel unten für weitere Details.
+Fügen Sie den folgenden HTML-Code in Ihrer Webseite. Der Schlüssel zum Aufrufen von App-Installer erfolgreich benutzerdefinierte Schema verwenden, die mit dem Betriebssystem App-Installer registriert ist: `ms-appinstaller:?source=`. Im Codebeispiel unten für weitere Details angezeigt.
 
 > [!NOTE]
-> Stellen Sie sicher, dass die URL-Pfad angegeben, nachdem das benutzerdefinierte Schema die Projekt-Url in der Registerkarte "Web" die VS-Projektmappe übereinstimmt.
+> Stellen Sie sicher, dass den URL-Pfad angegeben wird, nachdem das benutzerdefinierte Schema die Projekt-Url in der Registerkarte "Web" der VS-Projektmappe übereinstimmt.
  
 ```HTML
 <html>
@@ -104,7 +104,7 @@ Fügen Sie den folgenden HTML-Code in Ihrer Webseite. Die Taste, um erfolgreich 
 
 ## <a name="step-7---configure-the-web-app-for-app-package-mime-types"></a>Schritt 7: Konfigurieren der Web-app für app-Paket-MIME-Typen
 
-Öffnen Sie die **Datei "Web.config** " im Projektmappen-Explorer und fügen Sie die folgenden Zeilen in der `<configuration>` Element. 
+Öffnen Sie die **Datei "Web.config** " im Projektmappen-Explorer und fügen Sie die folgenden Zeilen innerhalb der `<configuration>` Element. 
 
 ```xml
 <system.webServer>
@@ -121,7 +121,7 @@ Fügen Sie den folgenden HTML-Code in Ihrer Webseite. Die Taste, um erfolgreich 
 
 ## <a name="step-8---add-loopback-exemption-for-app-installer"></a>Schritt 8: Hinzufügen von loopbackausnahme für App-Installer
 
-Aufgrund der Netzwerkisolation sind UWP-apps, z. B. App-Installer beschränkt IP-Loopbackadressen wie verwenden http://localhost/. Bei Verwendung von lokalen IIS-Server muss der App-Installer der ausgenommene Loopback-Liste hinzugefügt werden. 
+Aufgrund der Netzwerkisolation, sind UWP-apps, z. B. App-Installer beschränkt IP-Loopbackadressen wie verwenden http://localhost/. Wenn Sie lokalen IIS-Server zu verwenden, müssen App-Installer der ausgenommene Loopback-Liste hinzugefügt werden. 
 
 Zu diesem Zweck öffnen Sie die **Befehlszeile** als **Administrator** , und geben Sie Folgendes: ''' Befehlszeile CheckNetIsolation.exe LoopbackExempt - a-n=microsoft.desktopappinstaller_8wekyb3d8bbwe
 ```
@@ -133,7 +133,7 @@ CheckNetIsolation.exe LoopbackExempt -s
 
 Finden Sie `microsoft.desktopappinstaller_8wekyb3d8bbwe` in der Liste.
 
-Sobald die lokale Überprüfung des app-Installation über App-Installer abgeschlossen ist, können Sie die loopbackausnahme entfernen, die Sie in diesem Schritt hinzugefügt:
+Sobald die lokale Überprüfung des app-Installation über App-Installer abgeschlossen ist, können Sie die loopbackausnahme entfernen, die Sie in diesem Schritt durch hinzugefügt:
 
 ''' Befehlszeile CheckNetIsolation.exe LoopbackExempt -d-n=microsoft.desktopappinstaller_8wekyb3d8bbwe
 ```

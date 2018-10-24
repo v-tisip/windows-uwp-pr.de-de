@@ -1,6 +1,6 @@
 ---
 author: andrewleader
-Description: Notifications Visualizer is a new Universal Windows Platform (UWP) app in the Store that helps developers design adaptive live tiles for Windows 10.
+Description: Notifications Visualizer is a new Universal Windows Platform (UWP) app in the Store that helps developers design adaptive live tiles for Windows 10.
 title: Notifications Visualizer
 ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
 template: detail.hbs
@@ -12,18 +12,18 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: af8b2489346e1ef81c5cae304802814b79b8b950
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432528"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5473998"
 ---
 # <a name="notifications-visualizer"></a>Notifications Visualizer
 
  
 
 
-Notifications Visualizer ist eine neue App für die Universelle Windows-Plattform (UWP) im [Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1), die Entwickler dabei unterstützt, adaptive Livekacheln und interaktive Popupbenachrichtigungen für Windows 10 zu entwerfen.
+Notifications Visualizer ist eine neue universelle Windows-Plattform (UWP)-app [im Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) , die Entwickler dabei unterstützt entwerfen adaptiver Live-Kacheln und interaktive Popupbenachrichtigungen für Windows 10.
 
 
 ## <a name="overview"></a>Übersicht
@@ -34,13 +34,13 @@ Dieser Screenshot der App zeigt die XML-Nutzlast und die Art und Weise, wie Kach
 
 ![Screenshot des App-Editors von Notifications Visualizer mit Code und Kacheln](images/notif-visualizer-001.png)
 
- 
+ 
 
 Mit Notifications Visualizer können Sie adaptive Kachel-oder Popupnutzlasten erstellen und testen, ohne Ihre App selbst bearbeiten und bereitstellen zu müssen. Nachdem Sie eine Nutzlast mit idealen visuellen Ergebnisse erstellt haben, können Sie sie in Ihre App integrieren. Informationen finden Sie unter [Senden einer lokalen Kachelbenachrichtigung](sending-a-local-tile-notification.md) und [Senden einer lokalen Popupbenachrichtigung](send-local-toast.md).
 
-**Hinweis**   Die Simulation des Windows-Startmenüs und der Popupbenachrichtigung mit Notifications Visualizer ist nicht immer hundertprozentig genau, und bestimmte erweiterte Nutzlasteigenschaften werden nicht unterstützt. Wenn Sie das gewünschte Kachel- oder Popupdesign fertig haben, testen Sie es, indem Sie die Kachel oder Popupbenachrichtigung an das tatsächliche Startmenü anheften, um sicherzustellen, dass es wie gewünscht angezeigt wird.
+**Hinweis:**  Simulation des Windows-Startmenüs und der Popupbenachrichtigung Notifications Visualizer des ist nicht immer hundertprozentig genau, und bestimmte erweiterte nutzlasteigenschaften werden nicht unterstützt. Wenn Sie das gewünschte Kachel- oder Popupdesign fertig haben, testen Sie es, indem Sie die Kachel oder Popupbenachrichtigung an das tatsächliche Startmenü anheften, um sicherzustellen, dass es wie gewünscht angezeigt wird.
 
- 
+ 
 
 ## <a name="features"></a>Features
 
@@ -54,7 +54,7 @@ Dieser Screenshot der App zeigt den Kachel-Editor:
 
 ![Screenshot des Notifications Visualizer-Editors mit Kacheln](images/notif-visualizer-004.png)
 
- 
+ 
 
 ## <a name="related-topics"></a>Verwandte Themen
 

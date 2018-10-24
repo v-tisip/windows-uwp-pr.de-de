@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Mobilfunkanbieter, mobile Abrechnung, Abrechnung über den Mobilfunkanbieter
 ms.localizationpriority: medium
 ms.openlocfilehash: da08e63cc42987f1a3876e13a713d670a80cf9ba
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432644"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5471852"
 ---
 # <a name="mobile-operator-billing"></a>Abrechnung über den Mobilfunkanbieter
 
@@ -23,7 +23,7 @@ ms.locfileid: "5432644"
 Der Microsoft Store bietet Abrechnung über den Mobilfunkanbieter als Zahlungsmethode für Geräte mit Windows10, Smartphones mit Windows10 Mobile und Xbox One-Konsolen an. Wenn der Mobilfunkanbieter eines Kunden diese unterstützt, kann der Kunde die Abrechnung über den Mobilfunkanbieter als Zahlungsmethode hinzufügen und verwenden, um Store-Käufe über sein Mobilfunkkonto zu tätigen.
 
 > [!TIP]
->  Wenn der Mobilfunkanbieter eines Kunden die Abrechnung über das Mobilfunkkonto anbietet, diese Option auf dem Gerät des Kunden jedoch nicht zu finden ist, lesen Sie diese [Schritte](http://go.microsoft.com/fwlink/p/?LinkId=523993) erneut durch.
+>  Wenn der Mobilfunkanbieter eines Kunden die Abrechnung über das Mobilfunkkonto anbietet, diese Option auf dem Gerät des Kunden jedoch nicht zu finden ist, lesen Sie diese [Schritte](http://go.microsoft.com/fwlink/p/?LinkId=523993) erneut durch.
 
 Wir arbeiten ständig mit Mobilfunkanbietern zusammen, um die Verfügbarkeit dieser Zahlungsmethode auszubauen. Wenden Sie sich an den Mobilfunkanbieter und bitten Sie diesen, die Zahlungsmethode hinzuzufügen, wenn Sie einen Mobilfunkanbieter vorschlagen möchten, der unten in der Liste nicht aufgeführt ist.
 
@@ -57,16 +57,16 @@ Die Abrechnung über den Mobilfunkanbieter wird aktuell von den folgenden Mobilf
 | USA   | Sprint, Verizon                  |
 | Vereinigtes Königreich  | O2, 3 UK, EE                     |
 
- 
+ 
 
 
 
- 
+ 
 
 
- 
+ 
 
- 
+ 
 
 
 

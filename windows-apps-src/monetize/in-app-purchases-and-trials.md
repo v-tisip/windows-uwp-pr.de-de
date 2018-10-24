@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows10, uwp, In-app-käufe, IAPs-add-ons, Testversionen, verbrauchbar, dauerhaft, abonnement
 ms.localizationpriority: medium
 ms.openlocfilehash: b116e4794f024ecc5cf44d73e22c09ab8ee33ff4
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5441650"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5468872"
 ---
 # <a name="in-app-purchases-and-trials"></a>In-App-Käufe und Testversionen
 
@@ -162,7 +162,7 @@ So schränken Sie mit dem **Windows.Services.Store**-Namespace Features in einer
 
 Wenn Ihre App APIs im **Windows.Services.Store**-Namespace zum Implementieren von In-App-Käufe und Testfunktionen verwendet, müssen Sie Ihre App im Store veröffentlichen und die App auf Ihrem Entwicklungsgerät herunterladen, um seine Lizenz für Tests zu verwenden. Gehen Sie folgendermaßen vor, um Ihren Code zu testen:
 
-1. Wenn Ihre App noch nicht veröffentlicht und im Store verfügbar ist, stellen Sie sicher, dass diese die minimalen Anforderungen des [Zertifizierungskits für Windows-Apps](https://developer.microsoft.com/windows/develop/app-certification-kit) erfüllt, [übermitteln Sie die App](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) an das Windows Dev Center-Dashboard, und stellen Sie sicher, dass Ihre App den Zertifizierungsprozess bestanden hat. Optional können Sie [die App so konfigurieren, daher sie während der Tests im Store nicht auffindbar](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) ist. Bitte beachten Sie die ordnungsgemäße Konfiguration des [Flight-Pakete](../publish/package-flights.md). Falsch konfigurierte Paket, die Flight-Pakete sind möglicherweise nicht heruntergeladen werden.
+1. Wenn Ihre App noch nicht veröffentlicht und im Store verfügbar ist, stellen Sie sicher, dass diese die minimalen Anforderungen des [Zertifizierungskits für Windows-Apps](https://developer.microsoft.com/windows/develop/app-certification-kit) erfüllt, [übermitteln Sie die App](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) an das Windows Dev Center-Dashboard, und stellen Sie sicher, dass Ihre App den Zertifizierungsprozess bestanden hat. Optional können Sie [die App so konfigurieren, daher sie während der Tests im Store nicht auffindbar](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) ist. Bitte beachten Sie die ordnungsgemäße Konfiguration des [Flight-Pakete](../publish/package-flights.md). Falsch konfigurierte Paket, die Pakete sind möglicherweise nicht heruntergeladen werden.
 
 2. Stellen Sie anschließend sicher, dass die folgenden Schritte durchgeführt wurden:
 

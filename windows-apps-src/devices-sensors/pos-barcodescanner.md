@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 1cd6f8391de9375ddd1c20471dd10c37e99f782f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5444034"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475729"
 ---
 # <a name="barcode-scanner"></a>Strichcodescanner
 
@@ -24,7 +24,7 @@ Dieser Abschnitt enthält Anleitungen zur Erstellung von Apps für die Universel
 
 |Thema |Beschreibung |
 |------|------------|
-| [Konfigurieren eines Strichcodescanners](../devices-sensors/pos-barcodescanner-configure.md)  | Hier erfahren Sie, wie Sie einen Strichcodescanner für die Anwendung konfigurieren. |
+| [Konfigurieren eines Strichcodescanners](../devices-sensors/pos-barcodescanner-configure.md)  | Erfahren Sie, wie Sie einen Strichcodescanner für die Anwendung konfigurieren. |
 | [Verwenden eines Software-Triggers](../devices-sensors/pos-barcodescanner-software-trigger.md) | Hier erfahren Sie, wie Sie den Vorgang der Überprüfung von Software zu steuern. |
 | [Arbeiten mit Symbologien](pos-barcodescanner-symbologies.md) | Erfahren Sie, wie Sie die Strichcodetypen ermitteln können, die ein Strichcodescanner unterstützt, und steuern Sie, welche Strichcodetypen vom Strichcodescanner Ihrer Anwendung erkannt werden. |
 | [Abrufen und Verstehen von Strichcode-Daten](pos-barcodescanner-scan-data.md) | Erfahren Sie, wie zum Erhalt und der Interpretation der Strichcode-Daten, die Sie scannen. |

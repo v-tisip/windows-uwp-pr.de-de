@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cppcx
 ms.openlocfilehash: 8375cc54e75df71b28cfd3f550f47914b4b65519
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5441627"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5471865"
 ---
 # <a name="data-binding-overview"></a>Übersicht über Datenbindung
 
@@ -39,7 +39,7 @@ Jede Bindung besteht aus einem Bindungsziel und einer Bindungsquelle. In der Reg
 
 Wenn Sie c# oder C++ verwenden / CX, klicken Sie dann Ihr Projekt eine neue Klasse hinzu, und nennen Sie die Klasse **Aufzeichnung**.
 
-Wenn Sie verwenden [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), dann neue **Midl-Datei (.idl)** Elemente hinzuzufügen, auf das Projekt, mit dem Namen wie gezeigt in der C++ / WinRT Beispiel Codebeispiel unten. Ersetzen Sie den Inhalt dieser neue Dateien mit dem [MIDL 3.0](/uwp/midl-3/intro) -Code in der Liste angezeigt, erstellen Sie das Projekt zu generieren `Recording.h` und `.cpp` und `RecordingViewModel.h` und `.cpp`, und fügen Sie Code für die generierten Dateien, die den Eintrag übereinstimmen. Weitere Informationen über die generierten Dateien und wie Sie diese in Ihr Projekt kopieren, finden Sie unter [XAML-Steuerelemente; binden an eine C++ / WinRT-Eigenschaft](/windows/uwp/cpp-and-winrt-apis/binding-property).
+Wenn Sie verwenden [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), dann neue **Midl-Datei (.idl)** Elemente hinzuzufügen, auf das Projekt, mit dem Namen wie dargestellt in der C++ / WinRT Beispiel Codebeispiel unten. Ersetzen Sie den Inhalt dieser neue Dateien mit dem [MIDL 3.0](/uwp/midl-3/intro) -Code in der Liste angezeigt, erstellen Sie das Projekt zu generieren `Recording.h` und `.cpp` und `RecordingViewModel.h` und `.cpp`, und fügen Sie Code für die generierten Dateien, die den Eintrag übereinstimmen. Weitere Informationen zu diesen generierten Dateien und wie Sie diese in Ihr Projekt kopieren, finden Sie unter [XAML-Steuerelemente; binden an eine C++ / WinRT-Eigenschaft](/windows/uwp/cpp-and-winrt-apis/binding-property).
 
 ```csharp
 namespace Quickstart
@@ -227,7 +227,7 @@ namespace Quickstart
 
 Machen Sie als Nächstes die Bindungsquellklasse aus der Klasse verfügbar, die die Markupseite darstellt. Zu diesem Zweck fügen Sie eine Eigenschaft vom Typ **RecordingViewModel** zu **MainPage** hinzu.
 
-Wenn Sie verwenden [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), und klicken Sie dann erste Update `MainPage.idl`. Erstellen Sie das Projekt erneut `MainPage.h` und `.cpp`, und führen Sie die Änderungen in die generierten Dateien mit derjenigen, die in Ihrem Projekt.
+Wenn Sie verwenden [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), und klicken Sie dann erste Update `MainPage.idl`. Erstellen Sie das Projekt neu generieren `MainPage.h` und `.cpp`, und führen Sie die Änderungen in die generierten Dateien mit derjenigen, die in Ihrem Projekt.
 
 ```csharp
 namespace Quickstart
@@ -320,7 +320,7 @@ Der letzte Codeteil ist das Binden eines **TextBlock** an die **ViewModel.Defaul
 </Page>
 ```
 
-Wenn Sie verwenden [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), müssen Sie so entfernen Sie die Funktion **MainPage:: clickHandler** in der Reihenfolge für das Projekt zu erstellen.
+Wenn Sie verwenden [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), müssen Sie in der Reihenfolge für das Projekt zum Erstellen von der Funktion **MainPage:: clickHandler** entfernt.
 
 Dies ist das Ergebnis.
 
@@ -330,7 +330,7 @@ Dies ist das Ergebnis.
 
 Ein häufiges Szenario ist das Binden an eine Sammlung von Geschäftsobjekten. In C# und Visual Basic stellt die generische [**ObservableCollection&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/xaml/ms668604.aspx)-Klasse eine gute Wahl für die Datenbindung bei Sammlungen dar, da sie die  [**INotifyPropertyChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.componentmodel.inotifypropertychanged.aspx)-Schnittstelle und die [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx)-Schnittstelle implementiert. Diese Schnittstellen bieten eine Änderungsbenachrichtigung für Bindungen, wenn Elemente hinzugefügt oder entfernt werden oder eine Eigenschaft der Liste selbst geändert wird. Wenn Ihre gebundenen Steuerelemente bei Änderungen an Eigenschaften von Objekten in der Sammlung aktualisiert werden sollen, muss das Geschäftsobjekt auch **INotifyPropertyChanged** implementieren. Weitere Informationen finden Sie unter [Datenbindung im Detail](data-binding-in-depth.md).
 
-Wenn Sie verwenden [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), und klicken Sie dann Sie mehr über das Binden an eine Observable-Collection in erfahren können [XAML-items-Steuerelemente; binden an eine C++ / WinRT-Collection](/windows/uwp/cpp-and-winrt-apis/binding-collection). Wenn Sie in diesem Thema zuerst, Sie dann den Zweck der C++ lesen / WinRT-Codebeispiel unten wird deutlicher werden.
+Wenn Sie verwenden [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), und klicken Sie dann Sie mehr über das Binden an eine Observable-Collection in erfahren können [XAML-items-Steuerelemente; binden an eine C++ / WinRT-Collection](/windows/uwp/cpp-and-winrt-apis/binding-collection). Wenn Sie dieses Thema zuerst Sie dann die Absicht der C++ lesen / WinRT-Codebeispiel unten wird deutlicher werden.
 
 In diesem nächsten Beispiel wird eine [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) an eine Sammlung von `Recording`-Objekten gebunden. Beginnen wir, indem wir die Sammlung zum Ansichtsmodell hinzufügen. Fügen Sie einfach diese neuen Member zur **RecordingViewModel**-Klasse hinzu.
 
@@ -456,7 +456,7 @@ Wir haben noch keine Datenvorlage für die **Recording**-Klasse bereitgestellt. 
 
 ![Binden einer Listenansicht](images/xaml-databinding1.png)
 
-Um dieses Problem zu beheben, überschreiben wir entweder [**ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx) um den Wert der **OneLineSummary**zurückzugeben, oder wir können eine Datenvorlage bereitstellen. Die Daten Vorlage-Option ist eine weitere üblichen Lösung, und eine flexiblere. Sie legen eine Datenvorlage mithilfe der [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209369)-Eigenschaft eines Inhaltssteuerelements oder mit der [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242830)-Eigenschaft eines Elementsteuerelements fest. Nachfolgend sind zwei Möglichkeiten zum Entwerfen einer Datenvorlage für **Recording** dargestellt, zusammen mit einer Abbildung des Ergebnisses.
+Um dieses Problem zu beheben, überschreiben wir entweder [**ToString**](https://msdn.microsoft.com/library/windows/apps/system.object.tostring.aspx) um den Wert der **OneLineSummary**zurückzugeben, oder wir können eine Datenvorlage bereitstellen. Die Vorlage Data-Option ist eine mehr üblichen Lösung und eine flexiblere. Sie legen eine Datenvorlage mithilfe der [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/BR209369)-Eigenschaft eines Inhaltssteuerelements oder mit der [**ItemTemplate**](https://msdn.microsoft.com/library/windows/apps/BR242830)-Eigenschaft eines Elementsteuerelements fest. Nachfolgend sind zwei Möglichkeiten zum Entwerfen einer Datenvorlage für **Recording** dargestellt, zusammen mit einer Abbildung des Ergebnisses.
 
 ```xml
 <ListView ItemsSource="{x:Bind ViewModel.Recordings}"
@@ -496,15 +496,15 @@ Weitere Informationen zur XAML-Syntax finden Sie unter [Erstellen einer Benutzer
 
 Sie können auch alle Details der **Recording**-Objekte in [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878)-Elementen anzeigen. Dies nimmt jedoch sehr viel Platz in Anspruch. Stattdessen können Sie gerade so viele Daten im Element anzeigen, um es zu identifizieren, und wenn der Benutzer dann eine Auswahl vornimmt, können Sie alle Details des ausgewählten Elements in einem separaten Teil der Benutzeroberfläche anzeigen, der als „Detailansicht“ bezeichnet wird. Diese Anordnung wird auch als „Haupt-/Detailansicht“ oder „Listen-/Detailansicht“ bezeichnet.
 
-Sie haben zwei Möglichkeiten, dieses Verhalten zu implementieren. Sie können die Detailansicht an die [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770)-Eigenschaft der [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) binden. Oder Sie können eine [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833)verwenden, der in diesem Fall binden Sie sowohl **ListView** als auch die Detailansicht an die **CollectionViewSource** (tun dies der Fall ist dauert Vorsicht das derzeit ausgewählte Elements für Sie). Beide Methoden sind unten aufgeführt, und beide bieten umfassende dieselben Ergebnisse (in der Abbildung gezeigt).
+Sie haben zwei Möglichkeiten, dieses Verhalten zu implementieren. Sie können die Detailansicht an die [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770)-Eigenschaft der [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) binden. Oder Sie können eine [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/BR209833)verwenden, der in diesem Fall binden Sie sowohl **ListView** als auch die Detailansicht an die **CollectionViewSource** (tun dies dauert Vorsicht das derzeit ausgewählte Elements für Sie). Beide Methoden sind unten aufgeführt, und beide Geben Sie die gleichen Ergebnisse (in der Abbildung gezeigt).
 
 > [!NOTE]
 > Bisher haben wir in diesem Thema nur die [{x:Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783) verwendet. Die beiden weiter unten aufgeführten Methoden benötigen jedoch die flexiblere (aber weniger leistungsfähige) [{Binding}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782).
 
-Wenn Sie C++ verwenden / WinRT oder Visual C++-komponentenerweiterungen (C++ / CX) dann, um die Markuperweiterung [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) zu verwenden, Sie müssen das Attribut [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) beliebigen Laufzeitklasse hinzufügen, die Sie binden möchten. Um [{X: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)zu verwenden, benötigen Sie keine dieses Attribut.
+Wenn Sie C++ verwenden / WinRT oder für VisualC++-komponentenerweiterungen (C++ / CX) klicken, um die Markuperweiterung [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) zu verwenden, Sie müssen das Attribut [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) beliebigen Laufzeitklasse hinzufügen, die Sie binden möchten. Um [{X: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)zu verwenden, benötigen Sie keine dieses Attribut.
 
 > [!IMPORTANT]
-> Wenn Sie verwenden [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), und klicken Sie dann das [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) -Attribut ist verfügbar, wenn Sie das Windows SDK-Version 10.0.17763.0 (Windows 10, Version 1809), installiert haben oder höher. Ohne dieses Attribut müssen Sie die [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) und [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) -Schnittstellen implementieren, um die Markuperweiterung [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) verwenden können.
+> Wenn Sie verwenden [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), und klicken Sie dann das Attribut [**BindableAttribute**](https://msdn.microsoft.com/library/windows/apps/Hh701872) ist verfügbar, wenn Sie das Windows SDK Version 10.0.17763.0 (Windows 10, Version 1809), installiert haben oder höher. Ohne dieses Attribut müssen Sie die [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) und [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) -Schnittstellen implementieren, um die Markuperweiterung [{Binding}](https://msdn.microsoft.com/library/windows/apps/Mt204782) verwenden können.
 
 Sehen wir uns zuerst die [**SelectedItem**](https://msdn.microsoft.com/library/windows/apps/BR209770)-Methode an.
 
@@ -585,7 +585,7 @@ Nachfolgend ist das identische Ergebnis für die beiden Methoden dargestellt.
 
 ## <a name="formatting-or-converting-data-values-for-display"></a>Formatieren oder Konvertieren von Datenwerten für die Anzeige
 
-Es liegt ein Problem mit dem oben gezeigten Rendering. Die **ReleaseDateTime** -Eigenschaft ist nicht nur ein Datum, sondern ein [**Datum/Uhrzeit**](/uwp/api/windows.foundation.datetime) (Wenn Sie C++ verwenden, ist es einem [**Kalender**](/uwp/api/windows.globalization.calendar)). Also in c#, wird es ausgestellt mit mehr Präzision als wir benötigen. Und in C++ wird es als Typname gerendert wird. Eine Lösung besteht darin, eine Zeichenfolgeneigenschaft zur **Aufnahme** Klasse hinzufügen, die das Äquivalent zurückgibt `this.ReleaseDateTime.ToString("d")`. Diese Eigenschaft **ReleaseDate** würde bedeuten, dass sie ein Datum und kein Datum und Uhrzeit zurückgibt. Die Benennung als **ReleaseDateAsString** gibt dann auch noch an, dass sie eine Zeichenfolge zurückgibt.
+Es liegt ein Problem mit dem oben gezeigten Rendering. Die Eigenschaft **ReleaseDateTime** ist nicht nur ein Datum, es ist ein [**Datum/Uhrzeit**](/uwp/api/windows.foundation.datetime) (Wenn Sie C++ verwenden, ist es einen [**Kalender**](/uwp/api/windows.globalization.calendar)). Also in c#, wird es ausgestellt mit mehr Präzision als wir benötigen. Und in C++ wird es als Typname gerendert wird. Eine Lösung besteht darin, eine Zeichenfolgeneigenschaft zur **Aufnahme** Klasse hinzufügen, die die Entsprechung der zurückgibt `this.ReleaseDateTime.ToString("d")`. Diese Eigenschaft **ReleaseDate** würde bedeuten, dass sie ein Datum und kein Datum und die Uhrzeit zurückgibt. Die Benennung als **ReleaseDateAsString** gibt dann auch noch an, dass sie eine Zeichenfolge zurückgibt.
 
 Eine flexiblere Lösung ist die Verwendung eines so genannten „Wertkonverters“. Nachfolgend ist ein Beispiel zum Erstellen Ihres eigenen Wertkonverter aufgeführt. Fügen Sie diesen Code zu Ihrer „Recording.cs“-Quellcodedatei hinzu.
 
@@ -718,14 +718,14 @@ Jetzt können wir eine Instanz von **StringFormatter** als Seitenressource hinzu
 ...
 ```
 
-Wie oben zu sehen ist, verwenden Sie zum Formatieren von Flexibilität wir das Markup eine Formatzeichenfolge in den Konverter durch den Konverterparameter übergeben. In den Codebeispielen in diesem Thema nur die C#-Wertkonverter macht angezeigt dieses Parameters verwenden. Aber Sie leicht übergeben Sie eine C++-Stil-Zeichenfolge als den Konverterparameter konnte, und verwenden, die in der Wertkonverter mit einer Formatierung Funktion wie z. B. **Wprintf** oder **Swprintf**.
+Wie oben zu sehen ist, verwenden Sie zum Formatieren von Flexibilität wir das Markup eine Formatzeichenfolge in den Konverter über den Konverterparameter übergeben. In den Codebeispielen in diesem Thema, nur die C#-Wertkonverter dargestellt, macht dieses Parameters verwenden. Aber Sie leicht übergeben Sie eine C++-Stil-Zeichenfolge als Konverterparameter konnte, und verwenden, die in der Wertkonverter mit einer Formatierung Funktion wie z. B. **Wprintf** oder **Swprintf**.
 
 Dies ist das Ergebnis.
 
 ![Anzeigen eines Datums mit benutzerdefinierter Formatierung](images/xaml-databinding5.png)
 
 > [!NOTE]
-> Ab Windows 10, Version 1607, bietet das XAML-Framework einen integrierten Boolean-Sichtbarkeit Konverter. Der Konverter ordnet den Enumerationswert **Visibility.Visible einstellen** und **"false"** , wenn **Visibility.Collapsed** **"true"** , sodass Sie eine Visibility-Eigenschaft an einen booleschen Wert binden können, ohne einen Konverter zu erstellen. Für die Verwendung des integrierten Konverters muss die SDK-Zielversion der App mindestens 14393 lauten. Die Verwendung ist nicht möglich, wenn Ihre App für frühere Versionen von Windows10 bestimmt ist. Weitere Informationen zu Zielversionen finden Sie unter [Version adaptivem Code](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
+> Ab Windows 10, Version 1607, bietet das XAML-Framework einen integrierten Boolean-zu-Sichtbarkeit Konverter. Der Konverter ordnet den Enumerationswert **Visibility.Visible einstellen** und **"false"** , wenn **Visibility.Collapsed** **"true"** , sodass Sie eine Visibility-Eigenschaft an einen booleschen Wert binden können, ohne einen Konverter zu erstellen. Für die Verwendung des integrierten Konverters muss die SDK-Zielversion der App mindestens 14393 lauten. Die Verwendung ist nicht möglich, wenn Ihre App für frühere Versionen von Windows10 bestimmt ist. Weitere Informationen zu Zielversionen finden Sie unter [Version adaptiven Code](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
 ## <a name="see-also"></a>Weitere Informationen
 * [Datenbindung](index.md)

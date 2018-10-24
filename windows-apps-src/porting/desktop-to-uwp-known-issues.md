@@ -12,13 +12,13 @@ keywords: windows10, UWP
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
 ms.openlocfilehash: 731d449d779806fbd4104787b692d3b7d0408036
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5431800"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5476548"
 ---
-# <a name="known-issues-with-packaged-desktop-applications"></a>Bekannte Probleme mit verpackte desktop-Apps
+# <a name="known-issues-with-packaged-desktop-applications"></a>Bekannte Probleme mit verpackten desktop-Apps
 
 Dieser Artikel enthält bekannte Probleme, die auftreten können, wenn Sie ein Windows-app-Paket für Ihre desktop-Anwendung erstellen.
 
@@ -54,9 +54,9 @@ Dies ist eine bekannte Einschränkung, und derzeit sind keine Umgehungen vorhand
 
 ### <a name="error-found-in-xml-the-executable-attribute-is-invalid---the-value-myappexe-is-invalid-according-to-its-datatype"></a>Fehler in XML gefunden. Das Attribut „Ausführbare Datei” ist ungültig. – Der Wert MyApp.EXE ist gemäß dem Datentyp ungültig.
 
-Dies kann vorkommen, wenn die ausführbaren Dateien in Ihrer Anwendung die Erweiterung **. EXE** in Großbuchstaben aufweisen. Obwohl die Groß-/Kleinschreibung dieser Erweiterung keine Auswirkungen auf haben, ob die Anwendung ausgeführt wird, kann dies dazu führen, dass den DAC diesen Fehler generiert.
+Dies kann vorkommen, wenn die ausführbaren Dateien in Ihrer Anwendung die Erweiterung **. EXE** in Großbuchstaben aufweisen. Obwohl die Groß-/Kleinschreibung dieser Erweiterung keine Auswirkungen auf haben, ob die Anwendung ausgeführt wird, kann den DAC diesen Fehler generiert verursachen.
 
-Um dieses Problem zu beheben, versuchen Sie, das **-AppExecutable**-Kennzeichen beim Verpacken festzulegen, und verwenden Sie als Erweiterung Ihrer wichtigsten ausführbaren Datei „.exe” in Kleinbuchstaben (z.B.: MYAPP.exe).    Alternativ können Sie die Groß-/Kleinschreibung für alle ausführbaren Dateien in Ihrer Anwendung aus Kleinbuchstaben in Großbuchstaben ändern (z. B.: aus. EXE-Datei in .exe).
+Um dieses Problem zu beheben, versuchen Sie, das **-AppExecutable**-Kennzeichen beim Verpacken festzulegen, und verwenden Sie als Erweiterung Ihrer wichtigsten ausführbaren Datei „.exe” in Kleinbuchstaben (z.B.: MYAPP.exe).    Alternativ können Sie die Groß-/Kleinschreibung für alle ausführbaren Dateien in Ihrer Anwendung aus Kleinbuchstaben in Großbuchstaben ändern (z. B.: aus. EXE .exe).
 
 ### <a name="corrupted-or-malformed-authenticode-signatures"></a>Beschädigte oder falsch formatierte Authenticode-Signaturen
 
@@ -123,7 +123,7 @@ Doppelklicken Sie im Datei-Explorer auf das Zertifikat, wählen Sie die Register
 
 **Option3: CertUtil**
 
-Führen Sie **Certutil** über die Befehlszeile aus, auf die PFX-Datei, und kopieren Sie das Feld *Betreff* aus der Ausgabe.
+Führen Sie **Certutil** auf die PFX-Datei über die Befehlszeile aus, und kopieren Sie das Feld *Betreff* der Ausgabe.
 
 ```cmd
 certutil -dump <cert_file.pfx>
@@ -133,7 +133,7 @@ certutil -dump <cert_file.pfx>
 
 ### <a name="bad-pe-certificate-0x800700c1"></a>Ungültiges PE-Zertifikat (0x800700C1)
 
-Dies kann passieren, wenn Ihr Paket eine Binärdatei mit ein beschädigten Zertifikat enthalten ist. Hier sehen Sie einige Gründe, warum dies geschieht:
+Dies kann passieren, wenn Ihr Paket eine Binärdatei mit ein beschädigtes Zertifikat enthalten ist. Hier sehen Sie einige Gründe, warum dies geschieht:
 
 * Beginn des Zertifikats ist nicht am Ende eines Bilds.  
 
@@ -141,9 +141,9 @@ Dies kann passieren, wenn Ihr Paket eine Binärdatei mit ein beschädigten Zerti
 
 * Der Zertifikat Start wird nicht nach der `IMAGE_NT_HEADERS32` Struktur für eine 32-Bit-ausführbare Datei oder nach dem die `IMAGE_NT_HEADERS64` Struktur für eine 64-Bit-ausführbare Datei.
 
-* Der Zertifikat Zeiger ist nicht ordnungsgemäß für eine Struktur WIN_CERTIFICATE ausgerichtet.
+* Der Zertifikat-Zeiger ist nicht ordnungsgemäß für eine Struktur WIN_CERTIFICATE ausgerichtet.
 
-Zum Auffinden von Dateien, die eine ungültige PE-Zertifikat enthalten, öffnen Sie ein **Eingabeaufforderungsfenster**, und legen Sie die Umgebungsvariable `APPXSIP_LOG` auf dem Wert 1.
+Zum Auffinden von Dateien, die eine ungültige PE-Zertifikat enthalten, öffnen Sie ein **Eingabeaufforderungsfenster**, und legen Sie die Umgebungsvariable `APPXSIP_LOG` auf einen Wert von 1.
 
 ```
 set APPXSIP_LOG=1
@@ -155,7 +155,7 @@ Signieren Sie dann über die **Befehlszeile**, Ihre Anwendung erneut aus. Beispi
 signtool.exe sign /a /v /fd SHA256 /f APPX_TEST_0.pfx C:\Users\Contoso\Desktop\pe\VLC.appx
 ```
 
-Informationen zu Dateien, die eine ungültige PE-Zertifikat enthalten wird im **Konsolenfenster**angezeigt. Beispiel:
+Informationen zu Dateien, die eine ungültige PE-Zertifikat enthalten, werden im **Konsolenfenster**angezeigt. Beispiel:
 
 ```
 ...

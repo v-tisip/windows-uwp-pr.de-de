@@ -16,11 +16,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ae344e9f10c5d1dbfd530950851e402da4bc2a0d
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433499"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478076"
 ---
 # <a name="control-templates"></a>Steuerelementvorlagen
 
@@ -62,7 +62,7 @@ Dieser XAML-Code erstellt eine [**ControlTemplate**](https://msdn.microsoft.com/
 [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md) stellt eine spezielle Bindung dar, die den Wert einer Eigenschaft in einer Steuerelementvorlage mit dem Wert einer anderen Eigenschaft verknüpft, die im Steuerelement mit Vorlagen verfügbar gemacht wird. TemplateBinding kann nur in einer ControlTemplate-Definition in XAML verwendet werden. Weitere Informationen finden Sie unter [TemplateBinding-Markuperweiterung](../../xaml-platform/templatebinding-markup-extension.md).
 
 > [!NOTE]
-> Beginnend mit dem nächsten wichtigen Update für Windows 10, können Sie [**X: Bind**](https://msdn.microsoft.com/library/windows/apps/Mt204783) -Markuperweiterungen an Orten verwenden Sie [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md). Weitere Informationen finden Sie unter [TemplateBinding-Markuperweiterung](../../xaml-platform/templatebinding-markup-extension.md).
+> Beginnen mit dem nächsten wichtigen Update für Windows 10, können Sie [**X: Bind**](https://msdn.microsoft.com/library/windows/apps/Mt204783) -Markuperweiterungen an Orten verwenden Sie [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md). Weitere Informationen finden Sie unter [TemplateBinding-Markuperweiterung](../../xaml-platform/templatebinding-markup-extension.md).
 
 ```XAML
 <ControlTemplate x:Key="CheckBoxTemplate1" TargetType="CheckBox">
@@ -112,7 +112,7 @@ Diese Tabelle enthält die möglichen Werte von [**IsChecked**](https://msdn.mic
 | **false**           | `Unchecked`        | Leer.                  |
 | **Null**            | `Indeterminate`    | Enthält einen Kreis.      |
 
- 
+ 
 
 Das Erscheinungsbild eines Steuerelements in verschiedenen Zuständen wird mithilfe von [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007)-Objekten angegeben. Eine **VisualState**-Klasse enthält eine [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817)- oder [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br243053)-Eigenschaft, mit der die Darstellung der Elementen in der [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)-Klasse geändert wird. Wenn das Steuerelement in den Zustand übergeht, den die [**VisualState.Name**](https://msdn.microsoft.com/library/windows/apps/br209031) angibt, werden die Änderungen in der **Setter**- oder [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490)-Eigenschaft angewendet. Verlässt das Steuerelement den Zustand wieder, werden die Änderungen entfernt. **VisualState**-Objekte werden [**VisualStateGroup**](https://msdn.microsoft.com/library/windows/apps/br209014)-Objekten hinzugefügt. **VisualStateGroup**-Objekte werden der angefügten [**VisualStateManager.VisualStateGroups**](https://msdn.microsoft.com/library/windows/apps/hh738505)-Eigenschaft hinzugefügt. Diesel legen Sie im [**FrameworkElement**](https://msdn.microsoft.com/library/windows/apps/br208706)-Stammelement der **ControlTemplate**-Klasse fest.
 
@@ -188,7 +188,7 @@ Zum besseren Verständnis der Funktionsweise von [**VisualState**](https://msdn.
 | Von `Checked` in `Indeterminate`.   | Der [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817)-Wert von `Indeterminate` [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) wird angewendet. Daher hat die [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity)-Eigenschaft von `IndeterminateGlyph` den Wert1. Der **Setter**-Wert von `Checked` **VisualState** wird entfernt. Daher hat die [**Opacity**](https://msdn.microsoft.com/library/windows/apps/br228078)-Eigenschaft des `CheckGlyph`-Zustands den Wert0. | Ein Kreis wird angezeigt.                            |
 | Von `Indeterminate` in `Unchecked`. | Der [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817)-Wert von `Indeterminate` [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007) wird entfernt. Daher hat die [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity)-Eigenschaft des `IndeterminateGlyph`-Zustands den Wert0.                                                                                                                                           | Es wird nichts angezeigt.                             |
 
- 
+ 
 Weitere Informationen zum Erstellen visueller Zustände für Steuerelemente und insbesondere zum Verwenden der [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/br210490)-Klasse und der Animationstypen finden Sie unter [Storyboardanimationen für visuelle Zustände](https://msdn.microsoft.com/library/windows/apps/xaml/jj819808).
 
 ## <a name="use-tools-to-work-with-themes-easily"></a>Verwenden Sie für die Arbeit mit Designs Tools.
@@ -211,11 +211,11 @@ Die Themen, in denen die Stile und Vorlagen für XAML-Steuerelemente dokumentier
 
 Möglicherweise sind Ihnen bei einigen Attributen in den XAML-Beispielen Ressourcenverweise aufgefallen, für die die [{ThemeResource}-Markuperweiterung](../../xaml-platform/themeresource-markup-extension.md) verwendet wird. Mit diesem Verfahren kann eine einzelne Steuerelementvorlage Ressourcen nutzen, bei denen es sich um unterschiedliche Werte handeln kann. Dies hängt davon ab, welches Design gerade aktiv ist. Besonders wichtig ist dies für Pinsel und Farben, da der Hauptzweck der Designs darin besteht, den Benutzern die Auswahl eines dunklen Designs, hellen Designs oder Designs mit hohem Kontrast zu ermöglichen, das auf das gesamte System angewendet wird. Apps, für die das XAML-Ressourcensystem verwendet wird, können einen für das jeweilige Design geeigneten Ressourcensatz nutzen. Die Designauswahl in der UI einer App spiegelt dann die systemweite Designauswahl des Benutzers wider.
 
- ## <a name="get-the-sample-code"></a>Beispielcode herunterladen
+ ## Beispielcode herunterladen
 * [Beispiel für XAML-UI-Grundlagen](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/XamlUIBasics)
 * [Beispiel für ein benutzerdefiniertes Textbearbeitungssteuerelement](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/CustomEditControl)
 
- 
+ 
 
 
 

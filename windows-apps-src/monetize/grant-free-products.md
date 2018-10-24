@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Einkaufs-API, Produkte gewähren
 ms.localizationpriority: medium
 ms.openlocfilehash: 432d5976cb018148ba0f53aae6446a046f0a3b2f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5441763"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5474886"
 ---
 # <a name="grant-free-products"></a>Gewähren kostenloser Produkte
 
@@ -229,7 +229,7 @@ Date: Tue, 13 Oct 2015 21:21:51 GMT
 | 401  | Nicht autorisiert | InconsistentClientId       | Der *clientId*-Anspruch im Microsoft Store-ID-Schlüssel im Anforderungstext und der *appid*-Anspruch im Azure AD-Zugriffstoken im Autorisierungsheader stimmen nicht überein.       |
 | 400  | BadRequest   | InvalidParameter           | Die Details enthalten Informationen zum Anforderungstext und zu Feldern mit ungültigem Wert.           |
 
-<span/> 
+<span/> 
 
 ## <a name="related-topics"></a>Verwandte Themen
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 2eebb967a7bf11163dc2e0ba502b40495901b39b
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432988"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5476450"
 ---
 # <a name="optimize-animations-media-and-images"></a>Optimieren von Animationen, Medien und Bildern
 
@@ -58,7 +58,7 @@ Webinhalte innerhalb eines [**WebView**](https://msdn.microsoft.com/library/wind
 
 Auch das Animieren eines [**MediaPlayerElement**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx)-Objekts ist nicht empfehlenswert. Abgesehen von den Leistungsbeeinträchtigungen kann dies im wiedergegebenen Videoinhalt zu Bildstörungen und anderen Artefakten führen.
 
-> **Hinweis**   Die Empfehlungen in diesem Artikel für **MediaPlayerElement** gelten auch für [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926). **MediaPlayerElement** ist nur in Windows10, Version 1607 verfügbar. Wenn Sie daher eine App für eine frühere Version von Windows verwenden, müssen Sie **MediaElement** verwenden.
+> **Hinweis:**  die Empfehlungen in diesem Artikel für **MediaPlayerElement** gelten auch für [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926). **MediaPlayerElement** ist nur in Windows10, Version 1607 verfügbar. Wenn Sie daher eine App für eine frühere Version von Windows verwenden, müssen Sie **MediaElement** verwenden.
 
 ### <a name="use-infinite-animations-sparingly"></a>Setzen Sie Endlosanimationen sparsam ein.
 
@@ -70,7 +70,7 @@ Das Hinzufügen eines Handlers für [**CompositionTarget.Rendering**](https://ms
 
 Der [**Windows.UI.Xaml.Media.Animation**](https://msdn.microsoft.com/library/windows/apps/BR243232)-Namespace umfasst eine Bibliothek mit schnellen Hochleistungsanimationen, deren Erscheinungsbild mit anderen Windows-Animation konsistent ist. Die relevanten Klassen enthalten „Design“ in ihrem Namen und werden in [Übersicht über Animationen](https://msdn.microsoft.com/library/windows/apps/Mt187350) beschrieben. Diese Bibliothek unterstützt viele gängige Animationsszenarien, z.B. die Animation der ersten Ansicht einer App oder die Erstellung von Zustands- und Inhaltsübergängen. Wir empfehlen, die Animationsbibliothek so oft wie möglich zu nutzen, um die Leistung und Konsistenz für UWP-UI zu verbessern.
 
-> **Hinweis**   Von der Animationsbibliothek können nicht alle möglichen Eigenschaften animiert werden. Informationen zu XAML-Szenarien, bei denen die Animationsbibliothek nicht verwendet werden kann, finden Sie unter [Storyboardanimationen](https://msdn.microsoft.com/library/windows/apps/Mt187354).
+> **Hinweis:**  die animationsbibliothek kann nicht alle mögliche Eigenschaften animiert. Informationen zu XAML-Szenarien, bei denen die Animationsbibliothek nicht verwendet werden kann, finden Sie unter [Storyboardanimationen](https://msdn.microsoft.com/library/windows/apps/Mt187354).
 
 
 ### <a name="animate-compositetransform3d-properties-independently"></a>Eigenständiges Animieren von CompositeTransform3D-Eigenschaften
@@ -223,7 +223,7 @@ myImage.Source = bitmapImage;
 bitmapImage.UriSource = new URI("ms-appx:///Assets/cool-image.png", UriKind.RelativeOrAbsolute);
 ```
 
-Beispiel 2 – CodeBehind (schlecht) – Festlegen der UriSource von BitmapImage, bevor Sie mit der Struktur verbunden.
+Beispiel 2 – CodeBehind (schlecht) – Festlegen der UriSource von BitmapImage, bevor es mit der Struktur verbunden.
 
 ```csharp
 var bitmapImage = new BitmapImage();

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c1812adc9d5610fffd6f9d275b4e093a4fa96e6
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5437683"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475315"
 ---
 # <a name="templatebinding-markup-extension"></a>{TemplateBinding}-Markuperweiterung
 
@@ -57,17 +57,17 @@ Ein **TemplateBinding**-Element ist stets eine unidirektionale Bindung. Bei beid
 
 **TemplateBinding** ist eine Markuperweiterung. Markuperweiterungen werden in der Regel implementiert, wenn für Attributwerte Escapezeichen verwendet werden müssen, damit sie keine Literalwerte oder Handlernamen darstellen, und es nicht ausreicht, Typkonverter für bestimmte Typen oder Eigenschaften zu verwenden. Alle Markuperweiterungen in XAML verwenden die Zeichen „{” und „}” in ihrer Attributsyntax. Anhand dieser Konvention erkennt ein XAML-Prozessor, dass eine Markuperweiterung das Attribut verarbeiten muss.
 
-**Hinweis**  Die XAML-Prozessorimplementierung der Windows-Runtime enthält keine Sicherungsklassendarstellung für **TemplateBinding**. **TemplateBinding** ist ausschließlich für die Verwendung im XAML-Markup vorgesehen. Es gibt keine einfache Methode zum Reproduzieren des Verhaltens im Code.
+**Hinweis:** In der Windows-Runtime-XAML-prozessorimplementierung, es gibt keine sicherungsklassendarstellung für **TemplateBinding**. **TemplateBinding** ist ausschließlich für die Verwendung im XAML-Markup vorgesehen. Es gibt keine einfache Methode zum Reproduzieren des Verhaltens im Code.
 
 ### <a name="xbind-in-controltemplate"></a>X: Bind in ControlTemplate
 
-Beginnend mit dem nächsten wichtigen Update für Windows 10, können Sie **X: Bind** -Markuperweiterung **TemplateBinding** an einer beliebigen Stelle in [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)verwendet. 
+Beginnen mit dem nächsten wichtigen Update für Windows 10, können Sie **X: Bind** -Markuperweiterung an einer beliebigen Stelle **TemplateBinding** in [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)verwendet. 
 
 Die [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype#Windows_UI_Xaml_Controls_ControlTemplate_TargetType) -Eigenschaft (nicht optional) erforderlich auf [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) bei Verwendung von **X: Bind**.
 
-Mit der Unterstützung von **X: Bind** können Sie jetzt sowohl [Funktion Bindungen](../data-binding/function-bindings.md) als auch bidirektionale Bindungen in [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) verwenden
+Mit der Unterstützung von **X: Bind** können Sie jetzt sowohl [Funktion Bindungen](../data-binding/function-bindings.md) als auch als bidirektionale Bindungen in [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/br209391) verwenden
 
-Im folgenden Beispiel ergibt die TextBlock.Text Button.Content.ToString(). TargetType auf das ControlTemplate-Element dient als Datenquelle und führt zum gleiche Ergebnis wie TemplateBinding übergeordneten Element.
+Im folgenden Beispiel ergibt die TextBlock.Text Button.Content.ToString(). TargetType auf das ControlTemplate-Element dient als Datenquelle und führt zum gleiche Ergebnis wie TemplateBinding zum übergeordneten Element.
 
 ```xaml
 <ControlTemplate TargetType="Button">
@@ -84,5 +84,5 @@ Im folgenden Beispiel ergibt die TextBlock.Text Button.Content.ToString(). Targe
 * [**ControlTemplate**](https://msdn.microsoft.com/library/windows/apps/br209391)
 * [Übersicht über XAML](xaml-overview.md)
 * [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
- 
+ 
 

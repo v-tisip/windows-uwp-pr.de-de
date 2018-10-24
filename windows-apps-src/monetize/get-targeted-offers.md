@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-API für gezielte Angebote, gezielte Angebote abrufen
 ms.localizationpriority: medium
 ms.openlocfilehash: 1032831492443460bd63671012a09edfceca2690
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5436000"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5479076"
 ---
 # <a name="get-targeted-offers"></a>Abrufen gezielter Angebote
 
@@ -83,6 +83,6 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 
 * [Verwalten von gezielten Angeboten mithilfe von Store-Diensten](manage-targeted-offers-using-windows-store-services.md)
 
- 
+ 
 
- 
+ 

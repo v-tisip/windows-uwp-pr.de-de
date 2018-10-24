@@ -12,11 +12,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, sekundäre Kacheln
 ms.localizationpriority: medium
 ms.openlocfilehash: d8d6a79ddd497bc3ada777af25791e9938355c79
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432959"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475436"
 ---
 # <a name="secondary-tiles"></a>Sekundäre Kacheln
 
@@ -70,7 +70,7 @@ In einigen entscheidenden Punkten unterscheiden sich sekundäre Kacheln jedoch v
 * Benutzer können ihre sekundären Kacheln jederzeit löschen, ohne dabei die übergeordnete App zu löschen.
 * Sekundäre Kacheln können zur Laufzeit erstellt werden. App-Kacheln können nur bei der Installation erstellt werden.
 * Vom Benutzer wird in einem Flyout eine Bestätigung angefordert, bevor eine sekundäre Kachel hinzugefügt wird.
-* Sie können für den Sperrbildschirm nicht programmgesteuert über eine Anfrage an den Benutzer ausgewählt werden. Der Benutzer muss die sekundäre Kachel auf der Seite personalisieren manuell unter "Einstellungen" PC hinzufügen.
+* Sie können für den Sperrbildschirm nicht programmgesteuert über eine Anfrage an den Benutzer ausgewählt werden. Der Benutzer muss die sekundäre Kachel Seite personalisieren in PC-Einstellungen manuell hinzufügen.
 
 Für Kachel- und Signalupdater und Pushbenachrichtigungskanäle für sekundäre Kacheln gibt es besondere Methoden, um Benachrichtigungen zu senden. Sie entsprechen den Versionen, die mit primären Kacheln verwendet werden. Beispiel: CreateBadgeUpdaterForApplication und CreateBadgeUpdaterForSecondaryTile.
 

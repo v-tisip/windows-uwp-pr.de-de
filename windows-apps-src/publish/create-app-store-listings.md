@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Eintrag, Beschreibung, Store-Seite, Versionshinweise, Titel
 ms.localizationpriority: medium
 ms.openlocfilehash: bd3585b1a2fee2a00c99990b32902b524f3318da
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5442504"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5473223"
 ---
 # <a name="create-app-store-listings"></a>Erstellen von Store-Einträgen für Apps
 
@@ -42,7 +42,7 @@ Im Abschnitt **Additional Store listing languages** können Sie auf **Manage add
 
 Wenn Sie Ihre Auswahl getroffen haben, klicken Sie auf **Speichern**, um zur Übermittlungsübersicht zurückzukehren.
 
-## <a name="add-and-edit-store-listing-info"></a>Hinzufügen und Bearbeiten von Store-Eintrag Informationen
+## <a name="add-and-edit-store-listing-info"></a>Hinzufügen und Bearbeiten von Informationen Store-Einträgen
 
 Wählen Sie zum Bearbeiten eines Store-Eintrags den Namen der Sprache in der übermittlungsübersicht.
 
@@ -52,9 +52,9 @@ Oben auf der Seite **Store-Eintrag** sehen Sie die Felder, die dem standardmäß
 
 Diese Dropdown-Feld können Sie angeben, welche Namen im Store-Eintrag verwendet werden soll (Wenn Sie mehr als einen Namen für die app reserviert haben).
 
-Wenn Sie Pakete in der gleichen Sprache als die Store-Eintrag, an denen Sie arbeiten hochgeladen haben, werden die Namen in diese Pakete ausgewählt. Wenn Sie zum [Benennen Sie der app](manage-app-names.md#rename-an-app-that-has-already-been-published) benötigen, nachdem es bereits veröffentlicht wurde, können Sie hier einen anderen reservierten Namen auswählen, wenn Sie eine neue Übermittlung mit Paketen erstellen, verwenden den Namen des neuen.
+Wenn Sie Pakete in der gleichen Sprache wie der Store-Eintrag, an denen Sie arbeiten hochgeladen haben, werden der Namen in diese Pakete ausgewählt. Wenn Sie zum [Benennen Sie der app](manage-app-names.md#rename-an-app-that-has-already-been-published) benötigen, nachdem es bereits veröffentlicht wurde, können Sie hier einen anderen reservierten Namen auswählen, wenn Sie eine neue Übermittlung mit Paketen erstellen, die den neuen Namen verwenden.
 
-Wenn Sie Pakete für die Sprache erfolgreich hochgeladen wurden arbeiten an, und Sie mehr als einen Namen reserviert haben, müssen Sie eines Ihrer reservierten app-Namen auswählen, da es kein verknüpftes Paket in dieser Sprache aus dem der Name abgerufen werden könnte.
+Wenn für die Sprache Pakete erfolgreich hochgeladen wurden Sie arbeiten an, und Sie mehr als einen Namen reserviert haben, müssen Sie eines Ihrer reservierten app-Namen auswählen, da es kein verknüpftes Paket in dieser Sprache aus dem der Name abgerufen werden könnte.
 
 > [!NOTE]
 > Der **Produktname** nur gewählte bezieht sich auf die Store-Eintrag in der Sprache in dem Sie arbeiten. Es hat keinen Einfluss auf den Namen angezeigt, wenn ein Kunde die app installiert werden; Dieser Name stammt aus dem Manifest des Pakets, das installiert wird. Um Missverständnisse zu vermeiden, empfehlen wir, dass jede Sprache Pakete und Store-Eintrag den gleichen Namen verwenden.
@@ -134,7 +134,7 @@ Eine kürzere, ansprechende Beschreibung, die am oberen Rand des Store-Eintrags 
 
 Bei Spielen erscheint die Kurzbeschreibung auch im Abschnitt „Informationen“ im Spiele-Hub auf Xbox One.
 
-Beachten Sie für optimale Ergebnisse zu erzielen Ihre kurze Beschreibung unter 270 Zeichen. Das Feld ist auf 500 Zeichen beschränkt, aber in einigen Ansichten, die nur die ersten 270 Zeichen angezeigt werden, (mit einem Link, der für den Rest des die Kurzbeschreibung anzuzeigen verfügbar ist).
+Beachten Sie für optimale Ergebnisse zu erzielen Ihre kurze Beschreibung unter 270 Zeichen. Das Feld ist auf 500 Zeichen beschränkt, aber in einigen Ansichten werden nur die ersten 270 Zeichen (mit einem Link zur Verfügung, um den Rest der kurze Beschreibung anzuzeigen) angezeigt werden.
 
 
 ### <a name="additional-system-requirements"></a>Weitere Systemanforderungen

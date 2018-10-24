@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a4685a891facab39cb984f0b2d5f697e22477233
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5445887"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5469464"
 ---
 # <a name="drag-and-drop"></a>Drag & Drop
 
@@ -102,7 +102,7 @@ Das System zeigt automatisch die entsprechenden Animationen zum Ablegen in einen
 
 ## <a name="implementing-custom-drag-and-drop"></a>Implementieren von benutzerdefiniertem Drag&Drop
 
-Die [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement)-Klasse übernimmt die meiste Arbeit bei der Implementierung von Drag&Drop für Sie. Aber wenn Sie möchten, können Sie eine eigene Version implementieren, mithilfe der APIs im [Windows.ApplicationModel.DataTransfer.DragDrop.Core-Namespace](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.datatransfer.dragdrop.core).
+Die [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement)-Klasse übernimmt die meiste Arbeit bei der Implementierung von Drag&Drop für Sie. Aber wenn Sie möchten, können Sie eine eigene Version implementieren, indem Sie mithilfe der APIs im [Windows.ApplicationModel.DataTransfer.DragDrop.Core-Namespace](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.datatransfer.dragdrop.core).
 
 | Funktion | WinRT-API |
 | --- | --- |

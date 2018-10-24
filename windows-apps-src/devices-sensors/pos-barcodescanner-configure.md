@@ -1,7 +1,7 @@
 ---
 author: TerryWarwick
 title: Konfigurieren eines Strichcodescanners
-description: Hier erfahren Sie, wie Sie einen Strichcodescanner für die Anwendung konfigurieren.
+description: Erfahren Sie, wie Sie einen Strichcodescanner für die Anwendung konfigurieren.
 ms.author: jken
 ms.date: 08/29/2018
 ms.topic: article
@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Point of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: b33c1d33fe88a09de36e8f80a3034b915d338861
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5431689"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5477154"
 ---
 # <a name="configure-a-barcode-scanner"></a>Konfigurieren eines Strichcodescanners
 
@@ -30,8 +30,8 @@ Der Hersteller des Strichcodescanners hat möglicherweise einen anbieterspezifis
 ## <a name="bluetooth-barcode-scanner"></a>Bluetooth-Strichcodescanner
 Ein mit Bluetooth verbundener Scanner muss im **Seriellen Port-Protokoll – einfache serielle Schnittstelle (SPP-SSI)**-Modus für die Arbeit mit UWP Strichcodescanner-APIs konfiguriert sein.  Weitere Informationen finden Sie in der Dokumentation der Strichcodescanner oder wenden Sie sich an den Hersteller des Scanners für weitere Anweisungen zum Aktivieren des **SSI-SPP-Modus**.
 
-Vor der Verwendung Ihres Bluetooth-Strichcodescanners müssen Sie es mittels koppeln **Einstellungen > Geräte > Bluetooth & andere Geräte > Bluetooth- oder anderen Gerät hinzufügen**.
+Vor der Verwendung Ihres Bluetooth-Strichcodescanners müssen Sie es mit koppeln **Einstellungen > Geräte > Bluetooth & andere Geräte > Bluetooth- oder anderen Gerät hinzufügen**.
 
-Sie können initiieren und steuern den kopplungsprozess mithilfe der [Windows.Devices.Enumeration](https://docs.microsoft.com/uwp/api/windows.devices.enumeration) -Namespace.  Weitere Informationen finden Sie unter [Geräte koppeln](https://docs.microsoft.com/windows/uwp/devices-sensors/pair-devices).
+Sie können initiieren und steuern den kopplungsprozess mithilfe des [Windows.Devices.Enumeration](https://docs.microsoft.com/uwp/api/windows.devices.enumeration) -Namespaces.  Weitere Informationen finden Sie unter [Geräte koppeln](https://docs.microsoft.com/windows/uwp/devices-sensors/pair-devices).
 
 [!INCLUDE [feedback](./includes/pos-feedback.md)]

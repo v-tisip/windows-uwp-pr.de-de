@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Beschreibung, beschreiben, Store-Eintrag, Marketing
 ms.localizationpriority: medium
 ms.openlocfilehash: 54877e43ced6044e0866f951a653f2b32d040d9d
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5442226"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472244"
 ---
 # <a name="write-a-great-app-description"></a>Erstellen einer interessanten App-Beschreibung
 
@@ -30,7 +30,7 @@ Hier einige Tipps für eine optimale App-Beschreibung.
 -   **Verwenden Sie Listen und kurze Absätze.** Potenzielle Kunden werfen u.U. nur einen kurzen Blick auf die Beschreibung Ihrer App. Erleichtern Sie das Überfliegen, indem Sie den Inhalt in kurzen Absätzen und Listen zusammenfassen.
 
     > [!NOTE]
-    > Das Hinzufügen einer Liste der [App-Features](create-app-store-listings.md#app-features) ist ebenfalls eine großartige Methode, um Funktion und Zweck Ihrer App schnell erkennbar zu machen. Diese Liste wird direkt unter der App-Beschreibung angezeigt.
+    > Das Hinzufügen einer Liste der [App-Features](create-app-store-listings.md#app-features) ist ebenfalls eine großartige Methode, um Funktion und Zweck Ihrer App schnell erkennbar zu machen. Diese Liste wird direkt unter der App-Beschreibung angezeigt.
 
 -   **Vermeiden Sie trockene Formulierungen.** Verwenden Sie bei der Beschreibung lebendige Sprache. Achten Sie darauf, dass der Zweck Ihrer App eindeutig beschrieben ist, die Beschreibung jedoch nicht langweilig klingt. Für viele Apps eignet sich ein ungezwungener, freundlicher Tonfall.
 -   **Verwenden Sie die richtige Länge.** Eine gute Beschreibung lässt sich schnell lesen und enthält genügend Infos, um das Interesse des Lesers zu wecken und den Zweck der App zu erläutern. Eine komplexe App erfordert eine etwas längere Beschreibung; bei einer einfachen App reichen u.U. wenige Sätze aus. In den meisten Fällen beträgt die ideale Länge über 200, jedoch weit unter 3000Wörtern.
@@ -41,9 +41,9 @@ Hier einige Tipps für eine optimale App-Beschreibung.
 -   **Verwenden Sie keine HTML-Tags.** HTML oder anderer Code wird nicht gerendert. Die Beschreibung darf nur Text enthalten.
 -   **Holen Sie sich Anregungen, indem Sie die Beschreibungen ähnlicher Apps im Store lesen.** Informieren Sie sich, wie andere Entwickler ihre Apps beschreiben. Dadurch erfahren Sie auch, welche besonderen Merkmale Ihrer App Sie hervorheben können.
 
- 
+ 
 
- 
+ 
 
 
 

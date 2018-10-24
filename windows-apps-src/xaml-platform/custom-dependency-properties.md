@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: ddeccfe4c5e198afd77eaa4a81fc017543291ba1
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5441532"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5469039"
 ---
 # <a name="custom-dependency-properties"></a>Benutzerdefinierte Abhängigkeitseigenschaften
 
@@ -70,7 +70,7 @@ Das Definieren einer Abhängigkeitseigenschaft umfasst mehrere Konzepte. Bei die
 - (Optional) Platzieren Sie Attribute wie [**ContentPropertyAttribute**](https://msdn.microsoft.com/library/windows/apps/br228011) auf dem Wrapper.
 
 > [!NOTE]
-> Wenn Sie eine benutzerdefinierte angefügte Eigenschaft definieren, wird der Wrapper für gewöhnlich weggelassen. Stattdessen verwenden Sie einen anderen Accessor-Stil, den ein XAML-Prozessor verwenden kann. Siehe [Benutzerdefinierte angefügte Eigenschaften](custom-attached-properties.md). 
+> Wenn Sie eine benutzerdefinierte angefügte Eigenschaft definieren, wird der Wrapper für gewöhnlich weggelassen. Stattdessen verwenden Sie einen anderen Accessor-Stil, den ein XAML-Prozessor verwenden kann. Siehe [Benutzerdefinierte angefügte Eigenschaften](custom-attached-properties.md). 
 
 ## <a name="registering-the-property"></a>Registrieren der Eigenschaft
 
@@ -170,14 +170,14 @@ void ImageWithLabelControl::RegisterDependencyProperties()
 ```
 
 > [!NOTE]
-> Für die C++ / CX-code, der Grund, warum Sie haben ein privates Feld und eine öffentliche schreibgeschützte Eigenschaft, die die [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) Flächen ist, damit andere Aufrufer an, die Ihre Abhängigkeitseigenschaft auch Eigenschaftensystem Hilfsprogramm-APIs verwenden können, die erfordern, die Bezeichner öffentlich sein. Wenn Sie den Bezeichner nicht offenlegen, können Benutzer diese Hilfsprogramm-APIs nicht verwenden. Beispiele für eine API und Szenarien dieser Art sind [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359), [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361), [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358), [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257) und [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836). Ein öffentliches Feld kann dazu nicht verwendet werden, da Windows-Runtime-Metadatenregeln keine öffentlichen Felder zulassen.
+> Für die C++ / CX-code, den Grund, warum Sie haben ein privates Feld und eine öffentliche schreibgeschützte Eigenschaft, die [**DependencyProperty**](https://msdn.microsoft.com/library/windows/apps/br242362) Flächen ist, damit andere Aufrufer, die Ihre Abhängigkeitseigenschaft verwenden können auch Eigenschaftensystem Hilfsprogramm-APIs verwenden, die erfordern, die Bezeichner öffentlich sein. Wenn Sie den Bezeichner nicht offenlegen, können Benutzer diese Hilfsprogramm-APIs nicht verwenden. Beispiele für eine API und Szenarien dieser Art sind [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359), [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361), [**ClearValue**](https://msdn.microsoft.com/library/windows/apps/br242357), [**GetAnimationBaseValue**](https://msdn.microsoft.com/library/windows/apps/br242358), [**SetBinding**](https://msdn.microsoft.com/library/windows/apps/br244257) und [**Setter.Property**](https://msdn.microsoft.com/library/windows/apps/br208836). Ein öffentliches Feld kann dazu nicht verwendet werden, da Windows-Runtime-Metadatenregeln keine öffentlichen Felder zulassen.
 
 ## <a name="dependency-property-name-conventions"></a>Namenskonventionen für Abhängigkeitseigenschaften
 
 Für Abhängigkeitseigenschaften gelten Namenskonventionen, die Sie bis auf bestimmte Ausnahmefälle befolgen müssen. Die Abhängigkeitseigenschaft selbst hat einen Basisnamen („Label“ im vorherigen Beispiel), der als erster Parameter von [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) angegeben wird. Dieser Name muss innerhalb jedes Registrierungstyps eindeutig sein. Diese Eindeutigkeit muss auch von vererbten Membern eingehalten werden. Abhängigkeitseigenschaften, die über Basistypen geerbt werden, werden als Teil des Registrierungstyps betrachtet. Die Namen geerbter Eigenschaften können nicht erneut registriert werden.
 
 > [!WARNING]
-> Obwohl der Name, die Sie angeben, dass hier kann jeder Zeichenfolgebezeichner sein, die bei der Programmierung einer Sprache Ihrer Wahl in gilt, möchten Sie in der Regel Ihre Abhängigkeitseigenschaft auch in XAML festlegen können. Für die Verwendung in XAML muss der von Ihnen gewählte Eigenschaftenname ein gültiger XAML-Name sein. Weitere Informationen finden Sie in der [XAML-Übersicht](xaml-overview.md).
+> Obwohl der Name, die Sie angeben, dass hier kann jeder Zeichenfolgebezeichner sein, die bei der Programmierung einer Sprache Ihrer Wahl in gültig ist, möchten Sie in der Regel Ihre Abhängigkeitseigenschaft auch in XAML festlegen können. Für die Verwendung in XAML muss der von Ihnen gewählte Eigenschaftenname ein gültiger XAML-Name sein. Weitere Informationen finden Sie in der [XAML-Übersicht](xaml-overview.md).
 
 Kombinieren Sie beim Erstellen der Bezeichnereigenschaft den von Ihnen registrierten Eigenschaftennamen mit dem Suffix „Property“ (beispielsweise „LabelProperty“). Diese Eigenschaft ist Ihr Bezeichner für die Abhängigkeitseigenschaft und wird als Eingabe für die [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361)- und [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359)-Aufrufe verwendet, die Sie in Ihren eigenen Eigenschaftenwrappern ausführen. Sie wird auch vom Eigenschaftensystem und anderen XAML-Prozessoren, wie z. B. [**{x:Bind}**](x-bind-markup-extension.md), verwendet.
 
@@ -186,7 +186,7 @@ Kombinieren Sie beim Erstellen der Bezeichnereigenschaft den von Ihnen registrie
 Ihr Eigenschaftenwrapper sollte [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) in der **get**-Implementierung und [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) in der **set**-Implementierung aufrufen.
 
 > [!WARNING]
-> Von Ausnahmefällen abgesehen sollten Ihre Wrapperimplementierungen nur die Operationen [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) und [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) ausführen. Andernfalls erhalten Sie ein anderes Verhalten, wenn Ihre Eigenschaft über XAML anstelle über Code festgelegt wird. Aus Effizienzgründen umgeht der XAML-Parser Wrapper beim Festlegen von Abhängigkeitseigenschaften und kommuniziert mit dem Sicherungsspeicher über **SetValue**.
+> Von Ausnahmefällen abgesehen sollten Ihre Wrapperimplementierungen nur die [**GetValue**](https://msdn.microsoft.com/library/windows/apps/br242359) und [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) Vorgänge ausführen. Andernfalls erhalten Sie ein anderes Verhalten, wenn Ihre Eigenschaft über XAML anstelle über Code festgelegt wird. Aus Effizienzgründen umgeht der XAML-Parser Wrapper beim Festlegen von Abhängigkeitseigenschaften und kommuniziert mit dem Sicherungsspeicher über **SetValue**.
 
 ```csharp
 public String Label
@@ -251,7 +251,7 @@ In den bisherigen Beispielen für den Aufruf von [**DependencyProperty.Register*
 In der Regel geben Sie einen [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) als inline erstellte Instanz innerhalb der Parameter für [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) an.
 
 > [!NOTE]
-> Wenn Sie eine [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812) Implementierung definieren, müssen Sie der Hilfsmethode [**PropertyMetadata.Create**](https://msdn.microsoft.com/library/windows/apps/hh702099) , anstatt Aufruf eines Konstruktors [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) verwenden, um die **PropertyMetadata** Instanz definieren.
+> Wenn Sie eine Implementierung [**CreateDefaultValueCallback**](https://msdn.microsoft.com/library/windows/apps/hh701812) definieren, müssen Sie Aufruf eines Konstruktors [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771) , anstatt der Hilfsmethode [**PropertyMetadata.Create**](https://msdn.microsoft.com/library/windows/apps/hh702099) verwenden, um die Instanz **PropertyMetadata** definieren.
 
 Im nächsten Beispiel werden die zuvor gezeigten Beispiele für [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829) modifiziert, indem auf eine [**PropertyMetadata**](https://msdn.microsoft.com/library/windows/apps/br208771)-Instanz mit einem [**PropertyChangedCallback**](https://msdn.microsoft.com/library/windows/apps/br208770)-Wert verwiesen wird. Die Implementierung des OnLabelChanged-Rückrufs wird später in diesem Abschnitt gezeigt.
 
@@ -476,7 +476,7 @@ Hier gilt der allgemeine Grundsatz, dass Klassenkonstruktoren keine virtuellen M
 
 ### <a name="registering-the-dependency-properties-for-ccx-apps"></a>Registrieren der Abhängigkeitseigenschaften für C++/CX-Apps
 
-Die Implementierung für das Registrieren einer Eigenschaft in C++/CX ist schwieriger als für C#, zum einen aufgrund der Aufteilung in Kopfzeile und Implementierungsdatei und zum anderen, weil die Initialisierung im Stammbereich der Implementierungsdatei nicht empfohlen wird. (Visual C++-Komponentenerweiterungen (C++/CX) platzieren statischen Initialisierungscode aus dem Stammbereich direkt in **DllMain**, während C#-Compiler die statischen Initialisierer Klassen zuweisen und so **DllMain**-Ladeprobleme vermeiden). Die bewährte Methode besteht hier im Deklarieren einer Hilfsfunktion, die die gesamte Registrierung von Abhängigkeitseigenschaften für eine Klasse durchführt, d.h. eine Funktion pro Klasse. Für jede benutzerdefinierte Klasse, die Ihre App nutzt, müssen Sie dann auf die Hilfsregistrierungsfunktion verweisen, die von den einzelnen benutzerdefinierten Klassen jeweils verfügbar gemacht wird, die Sie verwenden möchten. Rufen Sie jede Hilfsregistrierungsfunktion einmalig als Teil des [**Application constructor**](https://msdn.microsoft.com/library/windows/apps/br242325) (`App::App()`) vor `InitializeComponent` auf. Dieser Konstruktor wird nur ausgeführt, wenn wirklich zum ersten Mal auf die App verwiesen wir. Er wird nicht erneut ausgeführt, wenn beispielsweise eine angehaltene App fortgesetzt wird. Wie im vorherigen C++-Registrierungsbeispiel gezeigt, ist auch die **nullptr**-Überprüfung jedes [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)-Aufrufs wichtig, da hierdurch sichergestellt wird, dass kein Aufrufer der Funktion die Eigenschaft zweimal registrieren kann. Bei einem zweiten Registrierungsaufruf würde Ihre App ohne eine solche Überprüfung wahrscheinlich abstürzen, da der Eigenschaftsname doppelt vorhanden wäre. Dieses Implementierungsmuster können Sie im [XAML-Beispiel für Benutzer und benutzerdefinierte Steuerelemente](http://go.microsoft.com/fwlink/p/?linkid=238581) im Code für die C++/CX-Version des Beispiels sehen.
+Die Implementierung für das Registrieren einer Eigenschaft in C++/CX ist schwieriger als für C#, zum einen aufgrund der Aufteilung in Kopfzeile und Implementierungsdatei und zum anderen, weil die Initialisierung im Stammbereich der Implementierungsdatei nicht empfohlen wird. (Für VisualC++-komponentenerweiterungen (C++ / CX) Fügt statischen Initialisierungscode aus dem Stammbereich direkt in **DllMain**, ein, während die C#-Compiler die statischen Initialisierer Klassen zuweisen und somit vermeiden Sie Probleme beim Laden der Sperre **DllMain** .). Die bewährte Methode besteht hier im Deklarieren einer Hilfsfunktion, die die gesamte Registrierung von Abhängigkeitseigenschaften für eine Klasse durchführt, d.h. eine Funktion pro Klasse. Für jede benutzerdefinierte Klasse, die Ihre App nutzt, müssen Sie dann auf die Hilfsregistrierungsfunktion verweisen, die von den einzelnen benutzerdefinierten Klassen jeweils verfügbar gemacht wird, die Sie verwenden möchten. Rufen Sie jede Hilfsregistrierungsfunktion einmalig als Teil des [**Application constructor**](https://msdn.microsoft.com/library/windows/apps/br242325) (`App::App()`) vor `InitializeComponent` auf. Dieser Konstruktor wird nur ausgeführt, wenn wirklich zum ersten Mal auf die App verwiesen wir. Er wird nicht erneut ausgeführt, wenn beispielsweise eine angehaltene App fortgesetzt wird. Wie im vorherigen C++-Registrierungsbeispiel gezeigt, ist auch die **nullptr**-Überprüfung jedes [**Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)-Aufrufs wichtig, da hierdurch sichergestellt wird, dass kein Aufrufer der Funktion die Eigenschaft zweimal registrieren kann. Bei einem zweiten Registrierungsaufruf würde Ihre App ohne eine solche Überprüfung wahrscheinlich abstürzen, da der Eigenschaftsname doppelt vorhanden wäre. Dieses Implementierungsmuster können Sie im [XAML-Beispiel für Benutzer und benutzerdefinierte Steuerelemente](http://go.microsoft.com/fwlink/p/?linkid=238581) im Code für die C++/CX-Version des Beispiels sehen.
 
 ## <a name="related-topics"></a>Verwandte Themen
 
@@ -484,4 +484,4 @@ Die Implementierung für das Registrieren einer Eigenschaft in C++/CX ist schwie
 - [**DependencyProperty.Register**](https://msdn.microsoft.com/library/windows/apps/hh701829)
 - [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
 - [XAML-Beispiel für Benutzer und benutzerdefinierte Steuerelemente](http://go.microsoft.com/fwlink/p/?linkid=238581)
- 
+ 

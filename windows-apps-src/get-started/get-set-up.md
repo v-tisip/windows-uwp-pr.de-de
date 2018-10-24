@@ -2,7 +2,7 @@
 author: QuinnRadich
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
 title: Vorbereitung
-description: Das Durchführen der Vorbereitung ist einfacher, als Sie denken. Befolgen Sie diese Anweisungen, um mit dem Erstellen von Universellen Windows-Plattform (UWP)-Apps für Windows 10 zu beginnen.
+description: Das Durchführen der Vorbereitung ist einfacher, als Sie denken. Befolgen Sie diese Anweisungen, und starten Sie universelle Windows-Plattform (UWP) apps für Windows 10 erstellen.
 ms.author: quradic
 ms.date: 05/07/2018
 ms.topic: article
@@ -11,23 +11,23 @@ ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 378544282981c62d7a57f9abc3f666e8964b7117
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445617"
+ms.locfileid: "5474759"
 ---
 # <a name="get-set-up"></a>Vorbereiten
 
 ![Vorbereitungen für die Verwendung von Visual Studio](images/VisualStudio2017Hero_ImageXL-LG.png)
 
-Die Vorbereitung ist einfacher, als Sie denken. Befolgen Sie diese Anweisungen, um mit dem Erstellen von Universellen Windows-Plattform (UWP)-Apps für Windows 10 zu beginnen.
+Die Vorbereitung ist einfacher, als Sie denken. Befolgen Sie diese Anweisungen, und starten Sie universelle Windows-Plattform (UWP) apps für Windows 10 erstellen.
 
 ## <a name="1-download-or-update-visual-studio"></a>1. Laden Sie Visual Studio herunter, oder aktualisieren Sie es.
 
-Microsoft Visual Studio2017 unterstützt Sie bei Entwurf, Codierung, Testen und Debuggen Ihrer Apps.
+Microsoft Visual Studio2017 trägt entwerfen, codieren, testen und Debuggen Ihrer apps.
 
-Wenn Sie Visual Studio2017 noch nicht verwenden, können Sie Microsoft Visual Studio Community2017 kostenlos installieren. Dieser Download umfasst auch Geräte-Simulatoren zum Testen Ihrer Apps:
+Wenn Sie bereits über Visual Studio2017 besitzen, können Sie das kostenlose Microsoft Visual Studio Community2017 installieren. Dieser Download umfasst auch Geräte-Simulatoren zum Testen Ihrer Apps:
 
 -   [Windows10-Entwicklertools herunterladen](https://go.microsoft.com/fwlink/p/?LinkID=534189)
 

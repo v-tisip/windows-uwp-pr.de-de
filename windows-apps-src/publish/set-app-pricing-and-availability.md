@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Preis, verfügbar, sichtbar, kostenlose Testversion, Testversionen, Testversion, Apps, Veröffentlichungsdatum
 ms.localizationpriority: medium
 ms.openlocfilehash: 20c52687b375f9bf33dd491eeb37d4142acace99
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433732"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478462"
 ---
 # <a name="set-app-pricing-and-availability"></a>Festlegen der Preise und Verfügbarkeit von Apps
 
@@ -61,7 +61,7 @@ Es gibt zwei Arten von Testversionen, die Sie auswählen können, und Sie haben 
 
 Wählen Sie **Zeitlich begrenzt**, um es Benutzern zu ermöglichen, Ihre App für eine bestimmte Anzahl von Tagen kostenlos zu testen: **1 Tag**, **7 Tage**, **15 Tage** oder **30 Tage**. Sie können Features durch Hinzufügen von Code zum [Ausschließen oder Beschränken von Features in der Testversion](../monetize/in-app-purchases-and-trials.md) einschränken oder Kunden den Zugriff auf die vollständigen Funktionen während dieses Zeitraums gewähren. 
 > [!NOTE]
-> Zeitlich begrenzte Testversionen werden für Kunden unter Windows 10 Build 10.0.10586 oder früheren Versionen bzw. für Kunden unter Windows Phone8.1 und früheren Versionen nicht angezeigt.
+> Zeitlich begrenzte Testversionen werden für Kunden unter Windows 10 Build 10.0.10586 oder früheren Versionen bzw. für Kunden unter Windows Phone8.1 und früheren Versionen nicht angezeigt.
 
 ### <a name="unlimited"></a>Unbegrenzt
 
@@ -74,7 +74,7 @@ Standardmäßig wird Ihre Testversion verfügbar, sobald Ihre App veröffentlich
 >[!NOTE]
 > Diese Datumsangabe gilt nur für Kunden mit Windows10 (inklusive Xbox). Wenn Ihre App für Kunden mit früheren Betriebssystemversionen verfügbar ist, wird die Testversion für diese Kunden angeboten, solange Ihr Produkt verfügbar ist. 
 
-Zum Festlegen des Datums für das Anbieten der Testversion für Kunden von Windows 10 ändern Sie die Angabe im Dropdownfeld **Starts on** und/oder **Ends on** in **at** und wählen anschließend Datum und Uhrzeit. In diesem Fall können Sie entweder **UTC** auswählen, sodass die ausgewählte Uhrzeit UTC-Zeit (Universal Coordinated Time, Koordinierte Weltzeit) ist, oder **Lokal** festlegen, damit diese Uhrzeiten in jeder Zeitzone für einen Markt verwendet werden. (Beachten Sie, dass für Märkte, die mehr als eine Zeitzone umfassen, nur eine Zeitzone in diesem Markt verwendet wird. Für die USA wird die Eastern Time verwendet.) Sie können **für bestimmte Märkte anpassen** auswählen, wenn Sie ein anderes Datum für alle Märkte festlegen möchten.
+Zum Festlegen des Datums für das Anbieten der Testversion für Kunden von Windows 10 ändern Sie die Angabe im Dropdownfeld **Starts on** und/oder **Ends on** in **at** und wählen anschließend Datum und Uhrzeit. In diesem Fall können Sie entweder **UTC** auswählen, sodass die ausgewählte Uhrzeit UTC-Zeit (Universal Coordinated Time, Koordinierte Weltzeit) ist, oder **Lokal** festlegen, damit diese Uhrzeiten in jeder Zeitzone für einen Markt verwendet werden. (Beachten Sie, dass für Märkte, die mehr als eine Zeitzone umfassen, nur eine Zeitzone in diesem Markt verwendet wird. Für die USA wird die Eastern Time Zone verwendet.) Sie können **für bestimmte Märkte anpassen** auswählen, wenn Sie ein anderes Datum für alle Märkte festlegen möchten.
 
 
 ## <a name="sale-pricing"></a>Sonderpreise

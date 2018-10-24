@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, anpassen, Eintrag, Beschreibung, früher
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f30a825cc7aec1b6f7dbf5cff0ea1c17c43ffd7
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438904"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478392"
 ---
 # <a name="create-platform-specific-store-listings"></a>Erstellen plattformspezifischer Store-Einträge
 
@@ -23,12 +23,12 @@ ms.locfileid: "5438904"
 Wenn Ihre App Pakete enthält, die auf unterschiedliche Betriebssysteme ausgerichtet sind, haben Sie die Möglichkeit, Teile Ihres Store-Eintrags für Kunden mit früheren Betriebssystemversionen anzupassen (Windows8.x oder früher und/oder Windows Phone8.x oder früher). 
 
 > [!IMPORTANT]
-> Kunden unter Windows10 wird immer der standardmäßige [Store-Eintrag](create-app-store-listings.md) angezeigt. Sie sehen keine Option, plattformspezifische Store-Einträge zu erstellen, es sei denn, Sie haben bereits Pakete hochgeladen, die eine oder mehrere frühere Betriebssystemversionen unterstützen. 
+> Kunden unter Windows 10 werden immer die standardmäßige [Store-Eintrag](create-app-store-listings.md)angezeigt. Sie sehen keine Option, plattformspezifische Store-Einträge zu erstellen, es sei denn, Sie haben bereits Pakete hochgeladen, die eine oder mehrere frühere Betriebssystemversionen unterstützen. 
 
 Mit plattformspezifischen Store-Einträgen können Sie Features betonen, die nur in einer Betriebssystemversion vorkommen, oder Screenshots speziell für ein bestimmtes Betriebssystem (unabhängig vom Gerätetyp) bereitstellen, anstatt allen Kunden denselben Store-Eintrag anzuzeigen.
 
 > [!NOTE]
-> Durch das Erstellen eines plattformspezifischen Store-Eintrags in einer Sprache erstellen Sie nicht automatisch plattformspezifische Store-Einträge in den anderen von Ihrer App unterstützten Sprachen. Sie müssen den plattformspezifischen Store-Eintrag getrennt für jede Sprache erstellen. Beachten Sie außerdem, dass Sie für plattformspezifische Einträge keine Daten für Store-Einträge importieren und exportieren können.
+> Durch das Erstellen eines plattformspezifischen Store-Eintrags in einer Sprache erstellen Sie nicht automatisch plattformspezifische Store-Einträge in den anderen von Ihrer App unterstützten Sprachen. Sie müssen den plattformspezifischen Store-Eintrag getrennt für jede Sprache erstellen. Beachten Sie außerdem, dass Sie für plattformspezifische Einträge keine Daten für Store-Einträge importieren und exportieren können.
 
 
 ## <a name="creating-a-platform-specific-store-listing"></a>Erstellen eines plattformspezifischen Store-Eintrags
@@ -38,7 +38,7 @@ Wenn Ihre App frühere Versionen (Windows 8.x oder früher und/oder Windows Phon
 > [!TIP]
 > Die Option zum Erstellen plattformspezifischer Store-Einträge können erst nach dem Hochladen von Paketen erstellt werden.
 
-Nach Auswahl dieser Option werden Sie aufgefordert, die gewünschten Betriebssystemversionen auszuwählen, die Ihre Übermittlung unterstützen. Wenn Sie bereits plattformspezifische Store-Einträge für alle Betriebssystemversionen erstellt haben, auf die die App ausgerichtet ist, können Sie keine weitere Auswahl vornehmen. (Windows10 ist nicht in der Liste der Optionen enthalten, da Kunden unter Windows10 immer der standardmäßige Store-Eintrag der App angezeigt wird.)
+Nach Auswahl dieser Option werden Sie aufgefordert, die gewünschten Betriebssystemversionen auszuwählen, die Ihre Übermittlung unterstützen. Wenn Sie bereits plattformspezifische Store-Einträge für alle Betriebssystemversionen erstellt haben, auf die die App ausgerichtet ist, können Sie keine weitere Auswahl vornehmen. (Windows 10 ist nicht in der Liste der Optionen, enthalten, da Kunden unter Windows 10 immer, der app angezeigt werden standardmäßige Store-Eintrag.)
 
 Sie können den standardmäßigen Store-Eintrag als Ausgangsbasis verwenden, wodurch dafür eingegebene Texte und Bilder übernommen werden. Vor dem Speichern können Sie dann beliebige Änderungen eingeben. Alternativ können Sie mit einem vollständig leeren Store-Eintrag starten.
 
@@ -57,9 +57,9 @@ Wenn Sie einen plattformspezifischen Store-Eintrag erstellen und später festste
 
 Nachdem Sie bestätigt haben, dass die Kunden Ihren standardmäßigen Store-Eintrag sehen sollen, wählen Sie **OK**. Der plattformspezifischen Store-Eintrag wird entfernt (für alle Sprachen, in denen er vorhanden ist), und Kunden mit dieser Version des Betriebssystems sehen nun den standardmäßigen Store-Eintrag. Wenn Sie ihn später wieder benötigen, können Sie mit den obigen Schritten einen neuen plattformspezifischen Store-Eintrag für das Betriebssystem erstellen.
 
- 
+ 
 
- 
+ 
 
 
 

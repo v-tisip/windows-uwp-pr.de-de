@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a25980c964e399931a088e281e959df3095ffe9a
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434304"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472561"
 ---
 # <a name="put-apps-and-add-ons-on-sale"></a>Anbieten vergünstigter Apps und Add-Ons
 
@@ -29,7 +29,7 @@ Bei der Verwendung des Abschnitts **Sonderpreise** der Seite **Preise und Verfü
 Während der Zeit, in der Ihr ein Produkt als Sonderangebot angeboten wird, können Kunden es während des Zeitraums, den Sie ausgewählt haben, zu dem niedrigeren Preis erwerben. Wenn Sie den Preis auf **Kostenlos** senken, können Kunden die App bzw. das IAP während des Zeitraums für das Sonderangebot herunterladen, ohne dafür zu bezahlen.
 
 > [!IMPORTANT]
-> Sonderpreise werden nur für Kunden mit Windows 10-Geräten, einschließlich Xbox One, angezeigt. Sonderpreise für Besitzer eines Ihrer anderen Produkte, werden nur für Kunden unter Windows10, Version 1607 oder höher angezeigt.
+> Sonderpreise werden nur für Kunden mit Windows 10-Geräten, einschließlich Xbox One angezeigt. Sonderpreise für Besitzer eines Ihrer anderen Produkte, werden nur für Kunden unter Windows10, Version 1607 oder höher angezeigt.
 > 
 > Bei anderen Betriebssystemen wird den Kunden der reguläre Preis für Ihre App oder Ihr Add-On angezeigt und können diese nicht zu Sonderpreisen erwerben. Sie können einen Preis jederzeit ändern, indem Sie ein anderes Preisniveau bei einer neuen Übermittlung auswählen, dieser wird jedoch nicht als Sonderangebot für einen begrenzten Zeitraum angezeigt.
 
@@ -83,7 +83,7 @@ Nachdem Ihre Übermittlung den Zertifizierungsprozess durchlaufen hat, werden di
 > [!IMPORTANT]
 > Wenn ein Sonderangebot bereits begonnen hat, können Sie das Startdatum nicht bearbeiten. Sie können das Enddatum zwar bearbeiten, es wird jedoch empfohlen, ein Angebot nicht so zu ändern, dass es vor dem ursprüngliche Enddatum endet. Es kann für potenzielle Kunden frustrierend sein, wenn Sie ein Sonderangebot vor dem ursprünglich veröffentlichten Datum beenden (da Kunden das geplante Enddatum sehen, wenn sie den Store-Eintrag Ihrer App anzeigen).
 
- **So brechen Sie ein noch nicht begonnenes Sonderangebot ab**
+ **So brechen Sie ein noch nicht begonnenes Sonderangebot ab**
 
 1.  Wechseln Sie auf der Seite **Preise und Verfügbarkeit** einer aktiven App- oder Add-On-Übermittlung zum Abschnitt **Verkaufspreise**.
 2.  Navigieren Sie zum Sonderangebot, das Sie abbrechen möchten, und klicken Sie auf **Entfernen**, um es zu entfernen.

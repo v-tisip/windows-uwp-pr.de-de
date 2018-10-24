@@ -11,11 +11,11 @@ keywords: Windows10, UWP
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
 ms.openlocfilehash: 7492f9d4fc2111880f27dcb6a48eff3ad0ccd315
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5431905"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5472519"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Einrichten automatisierter Builds für UWP-Apps
 
@@ -81,7 +81,7 @@ Mit dieser Aufgabe werden die in Ihrem Projekt definierten NuGet-Pakete wiederhe
 
 #### <a name="configure-the-build-solution-build-task"></a>Konfigurieren der Buildaufgabe „Projektmappe erstellen“
 
-Mit dieser Aufgabe wird jede Lösung, die in den Arbeitsordner zu den Binärdateien und erzeugt die Ausgabedatei für app-Paket kompiliert. In dieser Aufgabe werden MSBuild-Argumente verwendet.  Sie müssen den Wert dieser Argumente angeben. Orientieren Sie sich an der folgenden Tabelle. 
+Mit dieser Aufgabe wird jede Lösung, die im Arbeitsordner zu den Binärdateien und erzeugt die Ausgabedatei für app-Paket kompiliert. In dieser Aufgabe werden MSBuild-Argumente verwendet.  Sie müssen den Wert dieser Argumente angeben. Orientieren Sie sich an der folgenden Tabelle. 
 
 |**MSBuild-Argument**|**Wert**|**Beschreibung**|
 |--------------------|---------|---------------|
@@ -216,7 +216,7 @@ Dieser Fehler tritt auf, da auf Projektmappenebene nicht eindeutig ist, welche A
 Entfernen Sie dann das MSBuild-Argument `AppxBundle` aus dem Buildschritt.
 
 ## <a name="set-up-a-continuous-deployment-build-for-sideloading"></a>Einrichten eines Continuous Deployment-Builds zum Querladen
-Wenn diese Art von Build abgeschlossen ist, können Benutzer die app-Bundle-Datei aus dem artefaktabschnitt der Seite mit den Buildergebnissen herunterladen. Wenn Sie Betatests für die App durchführen möchten, indem Sie eine komplexere Verteilung erstellen, können Sie den HockeyApp-Dienst verwenden. Dieser Dienst bietet erweiterte Funktionen für Betatests, Benutzeranalysen und Absturzdiagnosen.
+Wenn dieser Buildtyp abgeschlossen ist, können Benutzer die app-Bundle-Datei aus dem artefaktabschnitt der Seite mit den Buildergebnissen herunterladen. Wenn Sie Betatests für die App durchführen möchten, indem Sie eine komplexere Verteilung erstellen, können Sie den HockeyApp-Dienst verwenden. Dieser Dienst bietet erweiterte Funktionen für Betatests, Benutzeranalysen und Absturzdiagnosen.
 
 ### <a name="applying-version-numbers-to-your-builds"></a>Anwenden von Versionsnummern auf Builds
 
@@ -286,7 +286,7 @@ Anschließend müssen Sie sicherstellen, dass der Buildschritt den folgenden Par
 /p:UapAppxPackageBuildMode=StoreUpload 
 ```
 
-Dadurch wird eine Uploaddatei generiert, die an den Store übermittelt werden kann.
+Dadurch wird eine Upload-Datei generiert, die an den Store übermittelt werden kann.
 
 
 #### <a name="configure-automatic-store-submission"></a>Konfigurieren der automatischen Übermittlung an den Store
@@ -319,7 +319,7 @@ Wenn Sie Ihre App verteilen möchten, ohne sie im Store zu veröffentlichen, kö
 Verwenden Sie zum Installieren von Apps das PowerShell-Skript `Add-AppDevPackage.ps1`. Dieses Skript wird fügt das Zertifikat im Abschnitt vertrauenswürdige Stammzertifizierungsstellen des lokalen Computers hinzu und dann installiert oder aktualisieren Sie die app-Paketdatei.
 
 #### <a name="sideloading-your-app-with-the-windows-10-anniversary-update"></a>Querladen einer App mit dem Windows10 Anniversary Update
-In Windows 10 Anniversary Update können Sie doppelklicken Sie auf die app-Paketdatei und Ihre app durch Auswählen der Schaltfläche "installieren" in einem Dialogfeld installieren. 
+In der Windows 10 Anniversary Update können Sie doppelklicken Sie auf die app-Paketdatei und Ihre app durch Auswählen der Schaltfläche "installieren" in einem Dialogfeld installieren. 
 
 ![Querladen in rs1](images/building-screen18.png) 
 

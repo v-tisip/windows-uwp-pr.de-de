@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 3ba33a1e79a2447c5dac546ce0f1caeaf16929a3
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434112"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470732"
 ---
 # <a name="capture-photos-and-video-with-windows-built-in-camera-ui"></a>Aufnehmen von Fotos und Videos mit der in Windows integrierten Kamera-UI
 
@@ -26,7 +26,7 @@ Dieser Artikel beschreibt, wie Sie die „CameraCaptureUI“-Klasse zum Aufnehme
 Wenn Sie eine eigene Kamera-UI bereitstellen möchten oder Ihr Szenario eine zuverlässigere Steuerung des Aufnahmevorgangs auf unterster Ebene erfordert, sollten Sie das [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124)-Objekt verwenden und Ihre eigene Aufzeichnungsoberfläche implementieren. Weitere Informationen finden Sie unter [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md).
 
 > [!NOTE]
-> Sie sollten die **Webcam-** oder **Mikrofonfunktion** Funktionen nicht in Ihrer app-Manifestdatei angeben, wenn Ihre app nur "cameracaptureui" verwendet. Andernfalls wird Ihre App in den Datenschutzeinstellungen für die Kamera angezeigt. Aber auch wenn der Benutzer den Kamerazugriff auf Ihre App verweigert, wird dadurch nicht verhindert, dass „CameraCaptureUI“ Medien aufzeichnet. Das liegt daran, dass es sich bei der integrierten Kamera-App von Windows um eine vertrauenswürdige Erstanbieter-App handelt, die erfordert, dass der Benutzer die Foto-, Audio- und Videoaufnahme durch einen Tastendruck initiiert. Ihre app möglicherweise Windows Application Certification Kit besteht bei Zertifizierung an den Store übermittelt werden, wenn Sie die Funktionen Webcam- oder Mikrofonfunktion angeben, wenn "cameracaptureui" als einzige Foto Aufnahme Mechanismus verwenden.
+> Sie sollten die **Webcam-** oder **Mikrofonfunktion** Funktionen nicht in Ihrer app-Manifestdatei angeben, wenn Ihre app nur "cameracaptureui" verwendet. Andernfalls wird Ihre App in den Datenschutzeinstellungen für die Kamera angezeigt. Aber auch wenn der Benutzer den Kamerazugriff auf Ihre App verweigert, wird dadurch nicht verhindert, dass „CameraCaptureUI“ Medien aufzeichnet. Das liegt daran, dass es sich bei der integrierten Kamera-App von Windows um eine vertrauenswürdige Erstanbieter-App handelt, die erfordert, dass der Benutzer die Foto-, Audio- und Videoaufnahme durch einen Tastendruck initiiert. Ihre app möglicherweise nicht Windows Application Certification Kit zertifiziert beim an den Store übermittelt werden, wenn Sie die Funktionen Webcam- oder Mikrofonfunktion angeben, wenn "cameracaptureui" als einzige Foto Aufnahme Mechanismus verwenden.
 > Sie müssen die Webcam- oder Mikrofonfunktion in Ihrem App-Manifest angeben, wenn Sie „MediaCapture“ für die programmgesteuerte Audio-, Foto- oder Videoaufnahme verwenden.
 
 ## <a name="capture-a-photo-with-cameracaptureui"></a>Aufnehmen eines Fotos mit „CameraCaptureUI“
@@ -88,16 +88,16 @@ Fügen Sie zunächst der XAML-Seite ein [**MediaPlayerElement**](https://docs.mi
 Erstellen Sie mit der von der Kameraaufnahme-UI zurückgegebenen Videodatei eine neue [**MediaSource**](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource), indem Sie **[CreateFromStorageFile](https://docs.microsoft.com/uwp/api/windows.media.core.mediasource.createfromstoragefile)** aufrufen. Rufen Sie zur Wiedergabe des Videos die **[Play](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.Play)**-Methode aus dem Standard-**[MediaPlayer](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer)** auf, der dem **MediaPlayerElement** zugeordnet ist.
 
 [!code-cs[PlayVideo](./code/CameraCaptureUIWin10/cs/MainPage.xaml.cs#SnippetPlayVideo)]
- 
+ 
 
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Kamera](camera.md)
 * [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [**CameraCaptureUI**](https://msdn.microsoft.com/library/windows/apps/br241030) 
- 
+ 
 
- 
+ 
 
 
 

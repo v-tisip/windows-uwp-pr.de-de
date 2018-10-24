@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Märkte, Länder, Regionen
 ms.localizationpriority: medium
 ms.openlocfilehash: dd8cdb1f69a9a8a73700483f04d17f64de337347
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435707"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470881"
 ---
 # <a name="define-market-selection"></a>Festlegen der Marktauswahl
 
@@ -43,14 +43,14 @@ Beachten Sie, dass Ihre Auswahl hier nur für neue Käufe gilt. Wenn ein Benutze
 Bestimmte Apps werden u.U. aufgrund von örtlich geltenden Gesetzen und Beschränkungen oder anderen Faktoren in bestimmten Märkten nicht angeboten, obwohl Sie alle Märkte ausgewählt haben. Außerdem haben einige Märkte möglicherweise spezifische Anforderungen für Altersfreigaben. Wenn Ihre App diese Anforderungen nicht erfüllt, können wir sie auf diesem Markt nicht anbieten. Weitere Informationen finden Sie unter [Altersfreigaben](age-ratings.md).
 
 > [!NOTE]
-> Für Apps für Windows 8 oder Windows 8.1 werden einige einzelne Märkte zusammen als "Restliche Welt" behandelt. Weitere Informationen finden Sie unter [Märkte "Restliche Welt" für Windows 8.x](#rest-of-world-markets-for-windows-8x).
+> Für apps, die Windows8 oder Windows8.1 werden einige einzelnen Märkte zusammen als "Restliche Welt" zusammengefasst behandelt. Weitere Informationen finden Sie unter [Märkte "Restliche Welt" für Windows 8.x](#rest-of-world-markets-for-windows-8x).
 
 Außerdem sehen Sie ein Kontrollkästchen, mit dem Sie angeben können, ob Ihre App in Märkten angeboten werden soll, die der Store in Zukunft vielleicht hinzufügt. Wenn Sie diese Option aktiviert lassen und wir später neue Märkte hinzufügen, werden der Basispreis und das Datum der allgemeinen Verfügbarkeit für die Übermittlung für Ihre App in diesen Märkten verwendet. Wenn Sie dies nicht möchten, können Sie dieses Kontrollkästchen deaktivieren. In diesem Fall werden wir Ihre App nicht in zukünftigen Märkten aufführen (Sie können sie jedoch später noch jederzeit hinzufügen).
- 
+ 
 
 ## <a name="microsoft-store-consumer-markets"></a>Microsoft Store-verbrauchermärkte
 
-Sie können Ihre App (oder Ihr Add-On) für mindestens einen der folgenden Märkte eintragen. Die Märkte mit einem Sternchen unterstützen den Microsoft Store auf Xbox One. **Xbox** wird neben den Namen im **marktauswahl** Popup-Fenster angezeigt werden.
+Sie können Ihre App (oder Ihr Add-On) für mindestens einen der folgenden Märkte eintragen. Die Märkte mit einem Sternchen unterstützen den Microsoft Store auf Xbox One. **Xbox** neben den Namen im **marktauswahl** Popup-Fenster angezeigt.
 
 
 <table>
@@ -476,13 +476,13 @@ Die Regulierung zur Markterweiterung wird ab dem Datum des Inkrafttretens auf al
 | Vereinigtes Königreich       | Geschenkkarte       | 2,24%                         | März 2016     |
 | Vereinigte Staaten        | Geschenkkarte       | 2,24%                         | März 2016     |
 
- 
+ 
 
 ## <a name="rest-of-world-markets-for-windows-8x"></a>Märkte "Restliche Welt" für Windows 8.x
 
-Enthält die app-Pakete für Windows 8.x, es ist wichtig zu beachten, dass eine Reihe von Märkten behandelt werden, als eine einzelne "restliche Welt" Märkte für Kunden im Store unter Windows 8.x, obwohl diese im Windows Dev Center als einzelne Märkte angezeigt werden Dashboard (im Gegensatz zum früheren Store-Dashboard, bei denen eine "Restliche Welt" Markt Option alle für diese Märkte gruppieren).
+Enthält die app-Pakete für Windows 8.x, es ist wichtig zu beachten, dass eine Reihe von Märkten behandelt werden, als eine einzelne "restliche Welt" Märkte für Kunden im Store unter Windows 8.x, obwohl diese im Windows Dev Center als einzelne Märkte angezeigt werden Dashboard (im Gegensatz zum früheren Store-Dashboard, wo es wurde eine "Restliche Welt" Markt Option alle für diese Märkte gruppieren).
 
-Wenn Sie die Standardeinstellung beim Übermitteln der App beibehalten, brauchen Sie sich darüber keine Gedanken zu machen, und Ihre App wird für alle möglichen Märkte verfügbar sein. Wenn Sie jedoch bestimmte Märkte ausschließen möchten, müssen Sie bedenken, dass bei Ausschluss eines einzigen dieser Märkte der „Restlichen Welt“ Ihre App in keinem der Märkte der „Restlichen Welt“ für Kunden mit Windows8 oder Windows8.1 mehr zur Verfügung steht.
+Wenn Sie die Standardeinstellung beim Übermitteln der App beibehalten, brauchen Sie sich darüber keine Gedanken zu machen, und Ihre App wird für alle möglichen Märkte verfügbar sein. Allerdings sollten Sie bestimmte Märkte ausschließen, denken Sie daran, die Ausschließen von auch nur eine dieser Märkte "Restliche Welt" bedeutet, dass Ihre app verfügbar in keinem der Märkte "Restliche Welt" für Kunden mit Windows8 oder Windows8.1 nicht.
 
 Folgende Märkte sind in "Restliche Welt" für Windows 8.x enthalten:
 
@@ -743,4 +743,4 @@ Folgende Märkte sind in "Restliche Welt" für Windows 8.x enthalten:
 </table>
 
 > [!NOTE]
-> Eine Liste der Länder und Regionen, in denen Sie sich für ein Entwicklerkonto registrieren können, finden Sie unter [Kontotypen, Standorte und Gebühren](account-types-locations-and-fees.md).
+> Eine Liste der Länder und Regionen, in denen Sie sich für ein Entwicklerkonto registrieren können, finden Sie unter [Kontotypen, Standorte und Gebühren](account-types-locations-and-fees.md).

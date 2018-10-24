@@ -12,23 +12,23 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e91d4bd481188f4d29af68af2c4572b26d446ae
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432611"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478520"
 ---
 # <a name="send-a-local-tile-notification"></a>Senden einer lokalen Kachelbenachrichtigung
  
 
-Primäre App-Kacheln in Windows 10 werden im App-Manifest definiert, sekundäre Kacheln werden dagegen programmgesteuert erstellt und vom App-Code definiert. In diesem Artikel wird beschrieben, wie Sie eine lokale Benachrichtigung an eine primäre Kachel und an eine sekundäre Kachel mit adaptiven Kachelvorlagen senden. (Eine lokale Benachrichtigung wird vom App-Code gesendet, im Gegensatz zu Benachrichtigungen, die ein Webserver per Push oder Pull sendet.)
+Primäre app-Kacheln in Windows 10 werden in Ihrem app-Manifest definiert, während sekundäre Kacheln programmgesteuert erstellt und vom app-Code definiert sind. In diesem Artikel wird beschrieben, wie Sie eine lokale Benachrichtigung an eine primäre Kachel und an eine sekundäre Kachel mit adaptiven Kachelvorlagen senden. (Eine lokale Benachrichtigung wird vom App-Code gesendet, im Gegensatz zu Benachrichtigungen, die ein Webserver per Push oder Pull sendet.)
 
 ![Standardkachel und Kachel mit Benachrichtigung](images/sending-local-tile-01.png)
 
 > [!NOTE] 
 >Weitere Informationen über das [Erstellen von adaptiven Kacheln](create-adaptive-tiles.md) und das [Kachelinhaltsschema](../tiles-and-notifications/tile-schema.md).
 
- 
+ 
 
 ## <a name="install-the-nuget-package"></a>Installieren des NuGet-Pakets
 
@@ -50,7 +50,7 @@ using Microsoft.Toolkit.Uwp.Notifications; // Notifications library
 ## <a name="create-the-notification-content"></a>Erstellen des Benachrichtigungsinhalts
 
 
-In Windows10 werden Kachelnutzlasten mit adaptiven Kachelvorlagen definiert, mit denen Sie benutzerdefinierte visuelle Layouts für Ihre Benachrichtigungen erstellen können. (Informationen darüber, was mit adaptiven Kacheln möglich ist, finden Sie unter [Erstellen adaptiver Kacheln und Vorlagen für adaptive Kacheln](create-adaptive-tiles.md).)
+In Windows 10 werden kachelnutzlasten mit Vorlagen für adaptive Kacheln, die Ihnen ermöglichen, erstellen Sie benutzerdefinierte visuelle Layouts für Ihre Benachrichtigungen definiert. (Informationen darüber, was mit adaptiven Kacheln möglich ist, finden Sie unter [Erstellen adaptiver Kacheln und Vorlagen für adaptive Kacheln](create-adaptive-tiles.md).)
 
 Dieses Codebeispiel erstellt adaptive Kachelinhalte für mittelgroße und breite Kacheln.
 
@@ -297,9 +297,9 @@ var notification = new TileNotification(doc);
 * [**Windows.UI.Notifications-Namespace**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications)
 * [So wird’s gemacht: Verwenden der Benachrichtigungswarteschlange (XAML)](https://msdn.microsoft.com/library/windows/apps/xaml/hh868234)
 * [Zustellen von Benachrichtigungen](choosing-a-notification-delivery-method.md)
- 
+ 
 
- 
+ 
 
 
 

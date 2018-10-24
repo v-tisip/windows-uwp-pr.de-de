@@ -11,20 +11,20 @@ ms.technology: uwp
 keywords: Windows10, UWP, benutzerdefiniert, App, Werbung, Kampagnen
 ms.localizationpriority: medium
 ms.openlocfilehash: 13ee8d7482a2ce0716d4e133af329cd0ea42c184
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435265"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478783"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a>Erstellen einer Werbekampagne für benutzerdefinierte Apps
 
 Neben dem Erstellen einer [Anzeigenkampagne für Ihre App](create-an-ad-campaign-for-your-app.md), die in Windows-Apps ausgeführt wird, können Sie Ihre App auch über andere Kanäle bewerben. Beispielsweise können Sie Ihre App mit einem Drittanbieter für App-Marketing bewerben oder Links zu Ihrer App in sozialen Netzwerken bereitstellen. Diese Aktivitäten werden als *benutzerdefinierte Kampagnen* bezeichnet.
 
-Wenn Sie benutzerdefinierte Kampagnen für Ihre App ausführen, können Sie die relative Leistung der einzelnen Kampagnen nachverfolgen, indem Sie für jede benutzerdefinierte Kampagne eine andere URL mit jeweils unterschiedlichen *Kampagnen-IDs* erstellen. Wenn ein Kunde, der Windows10 ausführt, auf eine URL mit einer Kampagnen-ID klickt, ordnet Microsoft den Klick der entsprechenden benutzerdefinierten Kampagne zu und stellt Ihnen diese Daten zur Verfügung.
+Wenn Sie benutzerdefinierte Kampagnen für Ihre App ausführen, können Sie die relative Leistung der einzelnen Kampagnen nachverfolgen, indem Sie für jede benutzerdefinierte Kampagne eine andere URL mit jeweils unterschiedlichen *Kampagnen-IDs* erstellen. Wenn ein Kunde unter Windows 10 eine URL, die eine Kampagnen-ID enthält klickt, Microsoft ordnet der Klick der entsprechenden benutzerdefinierten Kampagne und diese Daten für Sie verfügbar gemacht.
 
 > [!IMPORTANT]
-> Diese Daten werden nur für Kunden mit Windows 10 nachverfolgt. Kunden, die andere Betriebssysteme verwenden, können trotzdem den Link zu Ihrem App-Eintrag aufrufen, es werden jedoch keine Daten über die Aktivitäten dieser Kunden eingeschlossen.
+> Diese Daten werden nur auf Windows 10 für Kunden nachverfolgt. Kunden, die andere Betriebssysteme verwenden, können trotzdem den Link zu Ihrem App-Eintrag aufrufen, es werden jedoch keine Daten über die Aktivitäten dieser Kunden eingeschlossen.
 
 Es gibt im Wesentlichen zwei Typen von Daten zu benutzerdefinierten Kampagnen: *Seitenaufrufe* für den Store-Eintrag Ihrer App und *Konvertierungen*. Als Konvertierung wird ein App-Erwerb bezeichnet, der daraus resultiert, dass ein Kunde von einer über eine benutzerdefinierte Kampagne enthaltene URL aus auf die Store-Eintragsseite für Ihre App klickt. Weitere Informationen zu Konvertierungen finden Sie unter [Wann gelten App-Erwerbe als Konvertierungen?](#understanding-how-acquisitions-qualify-as-conversions) in diesem Thema.
 

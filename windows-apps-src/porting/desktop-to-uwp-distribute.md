@@ -12,11 +12,11 @@ keywords: windows10, UWP
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
 ms.openlocfilehash: c81e8d07efa04e93128089eaec78fb83b822a4b9
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5436713"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5476348"
 ---
 # <a name="distribute-a-packaged-desktop-application"></a>Verteilen einer verpackten desktop-Anwendungs
 
@@ -25,7 +25,7 @@ Veröffentlichen Sie Ihre verpackte desktop-Anwendung auf einem Windows Store od
 > [!NOTE]
 > Haben Sie einen Plan für wie Benutzer auf Ihre verpackte Anwendung übertragen werden kann? Schauen Sie sich den Abschnitt [Umstellung von Benutzern auf Ihre verpackte App](#transition-users) dieses Handbuchs an, um eine Vorstellung davon zu bekommen, bevor Sie Ihre App verteilen.
 
-## <a name="distribute-your-application-by-publishing-it-to-the-microsoft-store"></a>Verteilen Sie Ihre Anwendung, indem sie an den Microsoft Store veröffentlichen.
+## <a name="distribute-your-application-by-publishing-it-to-the-microsoft-store"></a>Verteilen Sie Ihre Anwendung, indem sie an den Microsoft Store veröffentlichen
 
 Der [Microsoft Store](https://www.microsoft.com/store/apps) ist eine bequeme Möglichkeit für Kunden, Ihre App zu beziehen.
 
@@ -40,24 +40,24 @@ Sie müssen Ihre Anwendung zu signieren, bevor Sie sie an den Store übermitteln
 
 <a id="side-load" />
 
-## <a name="distribute-your-application-without-placing-it-onto-the-microsoft-store"></a>Verteilen Sie Ihre Anwendung, ohne zu auf dem Microsoft Store veröffentlichen
+## <a name="distribute-your-application-without-placing-it-onto-the-microsoft-store"></a>Verteilen Sie Ihrer Anwendung ohne zu auf dem Microsoft Store veröffentlichen.
 
-Wenn Sie lieber Ihre Anwendung verteilen würde ohne Verwendung des Stores, können Sie apps auf einem oder mehreren Geräten manuell vertreiben.
+Wenn Sie ohne Verwendung des Stores anstatt Ihrer Anwendung verteilen möchten, können Sie apps auf einem oder mehreren Geräten manuell verteilen.
 
 Dies eignet sich ggf., wenn Sie eine bessere Kontrolle über die Verteilung haben oder sich nicht mit dem Microsoft Store-Zertifizierungsprozess auseinandersetzen möchten.
 
-Um Ihre Anwendung auf anderen Geräten zu verteilen, ohne zu auf dem Store veröffentlichen, müssen Sie ein Zertifikat benötigen, Signieren Sie Ihre Anwendung mithilfe von das Zertifikat, und klicken Sie dann den querladen Ihrer Anwendung auf diesen Geräten.
+Um Ihre Anwendung auf anderen Geräten ohne platzieren Sie diese auf den Store zu verteilen, müssen Sie ein Zertifikat erhalten, Signieren Sie Ihre Anwendung mit das Zertifikat, und klicken Sie dann den querladen Ihrer Anwendung auf diesen Geräten.
 
 Sie können [ein Zertifikat erstellen](../packaging/create-certificate-package-signing.md) oder eines von einem beliebten Anbieter wie z.B. [Verisign](https://www.verisign.com/) erhalten.
 
-Wenn Sie beabsichtigen, Ihre Anwendung auf Geräte mit Windows 10 S verteilen möchten, muss Ihre Anwendung vom Microsoft Store angemeldet sein, daher müssen Sie die Store-Übermittlung durchlaufen, bevor Sie Ihre Anwendung auf diesen Geräte vertreiben können.
+Wenn Sie beabsichtigen, Ihre Anwendung auf Geräte mit Windows 10 S verteilen möchten, muss die Anwendung vom Microsoft Store signiert werden, daher müssen Sie die Store-Übermittlung durchlaufen, bevor Sie Ihre Anwendung auf diesen Geräte vertreiben können.
 
 Wenn Sie ein Zertifikat zu erstellen, müssen Sie es im Zertifikatspeicher **Vertrauenswürdiger Stamm** oder **Vertrauenswürdige Personen** von jedem Gerät installieren, auf dem Ihre App ausgeführt wird. Wenn Sie ein Zertifikat von einem beliebten Anbieter erhalten, müssen Sie auf anderen Systemen neben Ihrer App nichts weiteres installieren.  
 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass der Name des Herausgebers auf dem Zertifikat dem Namen des Herausgebers Ihrer App entspricht.
 
-Um Ihre Anwendung mit einem Zertifikat zu signieren, finden Sie in der [Anmeldung eines Anwendungspakets mithilfe von SignTool](../packaging/sign-app-package-using-signtool.md).
+Um Ihre Anwendung mit einem Zertifikat signieren, finden Sie in der [Anmeldung eines Anwendungspakets mithilfe von SignTool](../packaging/sign-app-package-using-signtool.md).
 
 Querladen Ihrer Anwendung auf anderen Geräten finden Sie unter [Querladen von Branchen-apps in Windows 10](https://technet.microsoft.com/itpro/windows/deploy/sideload-apps-in-windows-10).
 
@@ -81,7 +81,7 @@ Eine vollständige Liste der Erweiterungen und die Richtlinien für deren Verwen
 
 Erwägen Sie außerdem das Hinzufügen von Code zu Ihrer verpackten Anwendung, die diese Aufgaben erledigt:
 
-* Migrieren von Benutzerdaten, die mit Ihrer desktop-Anwendung auf den entsprechenden Ordnerspeicherorten Ihrer verpackten App verknüpft ist.
+* Migrieren von Benutzerdaten, die Ihre desktop-Anwendung auf den entsprechenden Ordnerspeicherorten Ihrer verpackten App zugeordnet.
 * Bereitstellung der Option für Benutzer, die Desktopversion Ihrer App zu deinstallieren
 
 Erfahren wir mehr über diese einzelnen Aufgaben. Wir beginnen mit der Migration von Benutzerdaten.
@@ -127,7 +127,7 @@ private void MigrateUserData()
 
 ### <a name="uninstall-the-desktop-version-of-your-app"></a>Deinstallieren Sie die Desktopversion Ihrer App.
 
-Es ist besser, die Benutzer-desktop-Anwendung ohne diese Berechtigung nicht deinstallieren. Zeigen Sie ein Dialogfeld an, das den Benutzer nach dieser Berechtigung fragt. Benutzer möchten gegebenenfalls die Desktop-Version Ihrer App nicht deinstallieren. In diesem Fall müssen Sie entscheiden, ob Sie Nutzung der desktop-Anwendung blockieren oder die Side-by-Side-Nutzung beider Apps unterstützen möchten.
+Es ist besser, die Benutzer-desktop-Anwendung ohne diese Berechtigung nicht deinstallieren. Zeigen Sie ein Dialogfeld an, das den Benutzer nach dieser Berechtigung fragt. Benutzer möchten gegebenenfalls die Desktop-Version Ihrer App nicht deinstallieren. In diesem Fall müssen Sie entscheiden, ob Sie die Nutzung der desktop-Anwendung blockieren oder die Side-by-Side-Nutzung beider Apps unterstützen möchten.
 
 Hier ist ein Beispiel, wie Sie dies in einer NET-basierten verpackten App erreichen können.
 
@@ -151,7 +151,7 @@ private void RemoveDesktopApp()
 
         if (uninstallResult.Equals(DialogResult.Yes))
         {
-                    string[] uninstallArgs = uninstallString.Split(' ');
+                    string[] uninstallArgs = uninstallString.Split(' ');
 
             Process process = new Process();
             process.StartInfo.FileName = uninstallArgs[0];

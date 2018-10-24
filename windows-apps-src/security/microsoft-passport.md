@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: b81bf3c55b493d8e36f186ec56b68367c6245cc7
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434059"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478187"
 ---
 # <a name="windows-hello"></a>Windows Hello
 
@@ -451,7 +451,7 @@ Mission erfüllt! Sie haben das Internet gerade sicherer gemacht!
 | TPM                 | Mit dem TPM (Trusted Platform Module) können kryptografische Schlüsselpaare bestehend aus einem öffentlichen und privaten Schlüssel so erstellt werden, dass der private Schlüssel außerhalb des TPMs niemals aufgedeckt oder verwendet werden kann (nicht migrierbarer Schlüssel).                                                                                                                                                                                                                                                                                                               |
 | TPM-Schlüsselnachweis | Ein Protokoll, durch das kryptografisch geprüft wird, ob ein Schlüssel TPM-gebunden ist. Mithilfe dieses Nachweistyps kann gewährleistet werden, dass ein bestimmter kryptografischer Vorgang im TPM eines bestimmten Computers ausgeführt wurde.                                                                                                                                                                                                                                                                                                                       |
 
- 
+ 
 
 ## <a name="related-topics"></a>Verwandte Themen
 

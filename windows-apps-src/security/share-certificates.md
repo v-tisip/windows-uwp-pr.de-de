@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: 863658438ce53f2c74faddb845a7d17c6ec3130c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443476"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470855"
 ---
 # <a name="share-certificates-between-apps"></a>Freigabe von Zertifikaten zwischen Apps
 
@@ -78,9 +78,9 @@ Nachdem Sie nun über mindestens einen sicheren Webdienst verfügen, können Ihr
 
 Falls keine Clientzertifikate verfügbar sind, muss der Benutzer dem Zertifikatspeicher ein Zertifikat hinzufügen. Sie können Code in die App einfügen, der Benutzern die Auswahl einer PFX-Datei mit einem Clientzertifikat und das Importieren dieses Zertifikats in den Clientzertifikatspeicher ermöglicht.
 
-**Tipp** Verwenden Sie „makecert.exe“ zum Erstellen einer PFX-Datei zur Verwendung für diese Schnellstartanleitung. Informationen zur Verwendung von „makecert.exe“ finden Sie unter [MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968).
+**Tipp:** können makecert.exe zum Erstellen einer PFX-Datei mit diesem Schnellstart verwenden. Informationen zur Verwendung von „makecert.exe“ finden Sie unter [MakeCert](https://msdn.microsoft.com/library/windows/desktop/aa386968).
 
- 
+ 
 
 1.  Öffnen Sie Visual Studio, und erstellen Sie auf der Startseite ein neues Projekt. Geben Sie dem neuen Projekt den Namen "FirstContosoBankApp". Klicken Sie auf **OK**, um das neue Projekt zu erstellen.
 2.  Fügen Sie in der Datei "MainPage.xaml" dem standardmäßigen **Grid**-Element den folgenden XAML-Code hinzu. Dieser XAML-Code enthält Folgendes: eine Schaltfläche zum Suchen nach einer zu importierenden PFX-Datei, ein Textfeld zum Eingeben eines Kennworts für eine kennwortgeschützte PFX-Datei, eine Schaltfläche zum Importieren einer ausgewählten PFX-Datei, eine Schaltfläche zum Anmelden beim sicheren Webdienst und einen Textblock zum Anzeigen des Zustands der aktuellen Aktion.

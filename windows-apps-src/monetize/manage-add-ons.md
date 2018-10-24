@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-Ons, In-App-Produkt, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: be0d383fc271084fe20a958d20f6fa3a340da187
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433073"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475162"
 ---
 # <a name="manage-add-ons"></a>Verwalten von Add-Ons
 
@@ -158,7 +158,7 @@ Die Ressource hat die folgenden Werte.
 |-----------------|---------|------------------|
 | id            | string  | Die ID der Übermittlung.    |
 | resourceLocation   | string  | Ein relativer Pfad, den Sie an den Basisanforderungs-URI ```https://manage.devcenter.microsoft.com/v1.0/my/``` anfügen können, um die vollständigen Daten für die Übermittlung abzurufen.     |
- 
+ 
 <span/>
 
 ## <a name="related-topics"></a>Verwandte Themen

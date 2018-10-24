@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Threads, Threadpool
 ms.localizationpriority: medium
 ms.openlocfilehash: 29d7fc361e446207c8e14f83ca3f663bd5072e6e
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435298"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478148"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Übermitteln einer Arbeitsaufgabe an den Threadpool
 
@@ -354,11 +354,11 @@ Beachten Sie, dass vom Vervollständigungshandler überprüft wird, ob die Arbei
 
 ## <a name="summary-and-next-steps"></a>Zusammenfassung und nächste Schritte
 
-Weitere Informationen erhalten Sie durch das Herunterladen des Codes in dieser Schnellstartanleitung unter [Beispiel für das Erstellen einer Threadpool-Arbeitsaufgabe](http://go.microsoft.com/fwlink/p/?LinkID=328569) für Windows 8.1 und die erneute Verwendung des Quellcodes in einer win\_unap Windows10-App.
+Weitere Informationen finden Sie durch das Herunterladen des Codes in dieser schnellstartanleitung unter dem [Erstellen einer ThreadPool Element Beispiel funktioniert](http://go.microsoft.com/fwlink/p/?LinkID=328569) für Windows8.1, geschrieben und den Quellcode in einer Win\_unap Windows 10-app wiederverwenden.
 
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Senden einer Arbeitsaufgabe an den Threadpool](submit-a-work-item-to-the-thread-pool.md)
 * [Bewährte Methoden zum Verwenden des Threadpools](best-practices-for-using-the-thread-pool.md)
 * [Senden einer Arbeitsaufgabe mithilfe eines Timers](use-a-timer-to-submit-a-work-item.md)
- 
+ 

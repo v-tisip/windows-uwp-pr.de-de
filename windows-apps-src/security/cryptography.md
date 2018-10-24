@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: aa01cc3d70db7a94667e944d1a1739e911f94b0c
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5439149"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5469769"
 ---
 # <a name="cryptography"></a>Kryptografie
 
@@ -46,7 +46,7 @@ Die folgende Terminologie wird bei der Kryptografie und bei Public Key-Infrastru
 | Schlüsselspeicheranbieter        | Ein Container zum Speichern von Schlüsselmaterial. Derzeit können Schlüssel in Software, Smartcards und dem Trusted Platform Module (TPM) gespeichert werden.                                                                   |
 | X.509-Zertifikat           | Ein digitales Dokument, das in der Regel von einer Zertifizierungsstelle ausgegeben wird, um die Identität einer Person, eines Systems oder einer Entität für andere interessierte Parteien zu überprüfen.                                            |
 
- 
+ 
 ## <a name="namespaces"></a>Namespaces
 
 Die folgenden Namespaces stehen für die Verwendung in einer App zur Verfügung:
@@ -152,4 +152,4 @@ Die folgenden Artikel enthalten weitere Informationen zu Sicherheitsszenarien:
 | [Exporteinschränkungen hinsichtlich Kryptografie](export-restrictions-on-cryptography.md) | Anhand der Informationen in diesem Abschnitt können Sie ermitteln, ob Ihre App Kryptografiefunktionen in einer Weise verwendet, die unter Umständen dazu führt, dass sie im Microsoft Store nicht angezeigt wird.                                                                                                                                                                                                                                                                                                                                                                                            |
 | [Allgemeine Kryptografieaufgaben](common-cryptography-tasks.md)                     | Die folgenden Artikel enthalten Beispielcode für allgemeine UWP-Kryptografieaufgaben, z.B. Erstellen zufälliger Zahlen, Vergleichen von Puffern, Konvertieren zwischen Zeichenfolgen und binären Daten, Kopieren in und aus Bytearrays sowie Codieren und Decodieren von Daten.                                                                                                                                                                                                                                                                                    |
 
- 
+ 

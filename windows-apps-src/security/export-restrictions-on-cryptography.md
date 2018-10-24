@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: 842d26a2bb257dd182813832c5e6480237a9f220
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5431214"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5478452"
 ---
 # <a name="export-restrictions-on-cryptography"></a>Exportbeschränkungen hinsichtlich Kryptografie
 
@@ -25,9 +25,9 @@ Anhand der Informationen in diesem Abschnitt können Sie ermitteln, ob Ihre App 
 
 Das Bureau of Industry and Security (BIS) im United States Department of Commerce kontrolliert den Export von Technologie, die bestimmte Arten von Verschlüsselung verwendet. Bei allen im Microsoft Store aufgelisteten Apps müssen diese Gesetze und Bestimmungen beachtet werden, da die App-Dateien in den USA gespeichert werden können. Sogar bei Apps, die von App-Entwicklern aus anderen Ländern zur Verteilung außerhalb der USA hochgeladen werden, müssen diese Bestimmungen befolgt werden. Daher müssen alle App-Entwickler beim Übermitteln einer App an den Microsoft Store bestätigen, dass ihre Apps keine Technologien enthalten, die gemäß diesen Bestimmungen eingeschränkt sind.
 
-> **Hinweis**  In den hier bereitgestellten Informationen finden Sie einige Richtlinien. Sie sind jedoch als App-Entwickler, der Apps im Microsoft Store veröffentlicht, für die Einhaltung aller geltenden Gesetze und Bestimmungen verantwortlich.
+> **Hinweis:** die hier bereitgestellte Informationen bietet einige Anleitungen, aber es liegt in Ihrer Verantwortung als app-Entwickler apps im Microsoft Store veröffentlichen um sicherzustellen, dass Ihre app für die Einhaltung aller geltenden Gesetze und Bestimmungen verantwortlich.
 
- 
+ 
 
 Weitere Informationen zum United States Department of Commerce und dem BIS finden Sie unter [Informationen zum Bureau of Industry and Security](http://go.microsoft.com/fwlink/p/?LinkID=245644).
 
@@ -37,7 +37,7 @@ Informationen zu den Export Administration Regulations (EAR), die den Export von
 
 Ermitteln Sie zunächst, ob Ihre App eine Art von Kryptografie verwendet, die durch die Export Administration Regulations geregelt wird. Die Frage enthält die in der Liste enthaltenen Beispiele. Diese Liste enthält jedoch nicht alle möglichen Anwendungsmöglichkeiten von Kryptografie.
 
-> **Wichtig**  Berücksichtigen Sie hierbei nicht nur den Code, den Sie für die App geschrieben haben, sondern auch alle Softwarebibliotheken, Hilfsprogramme und Betriebssystemkomponenten, die Ihre App enthält oder mit denen sie verknüpft ist.
+> **Wichtige**berücksichtigen nicht nur den Code, die Sie für Ihre app aber auch alle Softwarebibliotheken, Hilfsprogramme und Betriebssystemkomponenten, die Ihre app enthält oder links geschrieben haben.
 
 -   Jede Verwendung einer digitalen Signatur, z.B. Authentifizierung oder Integritätsprüfung
 -   Verschlüsselung von Daten oder Dateien, die die App verwendet oder auf die sie zugreift

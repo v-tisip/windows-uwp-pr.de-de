@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f99396b117efcf7c3bed3cb64f24b519734cc858
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5441198"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5471569"
 ---
 # <a name="trademark-and-copyright-protection"></a>Schutz von Marken und Urheberrechten
 
@@ -67,9 +67,9 @@ Nein, nicht ohne Genehmigung. Die Idee eines Spiels ist zwar urheberrechtlich ni
 
 Lesen Sie die Benachrichtigung von Microsoft sorgfältig durch, und befolgen sie die Anweisungen. Die Benachrichtigung von Microsoft enthält möglicherweise bestimmte Schritte, die Sie unternehmen können, um uns zu informieren, was Sie getan haben, um das Problem zu beheben, dass Sie der Beschwerde widersprechen und/oder dass Sie Ihre App erneut im Store einreichen möchten.
 
- 
+ 
 
- 
+ 
 
 
 

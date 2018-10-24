@@ -12,11 +12,11 @@ keywords: windows10, UWP
 ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 ms.localizationpriority: medium
 ms.openlocfilehash: bde2e58934e24df7db2cb77fb793106aa65e3834
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435005"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5470765"
 ---
 # <a name="package-a-desktop-application-using-the-desktop-app-converter"></a>Verpacken einer desktop-Anwendungs mit dem Desktop App Converter
 
@@ -33,7 +33,7 @@ Sie können dieses Paket mithilfe des Add-AppxPackage-PowerShell-Cmdlets auf Ihr
 Der Konverter führt den Desktop-Installer in einer isolierten Windows-Umgebung mit einem sauberen Basisimage als Teil des Konverterdownloads aus. Es werden alle Registrierungs- und Dateisystem-E/A des Desktop-Installers erfasst und als Teil der Ausgabe gepackt.
 
 >[!IMPORTANT]
->Die Fähigkeit zum Erstellen einer Windows-app-Paket für Ihre desktop-Anwendung (andernfalls wird auch als der Desktop-Brücke wurde in Windows 10, Version 1607, eingeführt und kann nur in Projekten für die Windows 10 Anniversary Update (10.0; verwendet werden Build 14393) oder einer neueren Version in Visual Studio.
+>Die Fähigkeit zum Erstellen eines Windows-app-Pakets für Ihre desktop-Anwendung (andernfalls wird auch als der Desktop-Brücke wurde in Windows 10, Version 1607, eingeführt und kann nur in Projekten für die Windows 10 Anniversary Update (10.0; verwendet werden Build 14393) oder einer neueren Version in Visual Studio.
 
 > [!NOTE]
 > Sehen Sie sich <a href="https://mva.microsoft.com/en-US/training-courses/developers-guide-to-the-desktop-bridge-17373?l=oZG0B1WhD_8406218965/">diese Reihe</a> von kurzen Videos an, die von der Microsoft Virtual Academy veröffentlicht wurden. Diese Videos erläutern einige gängige Verwendungsmethoden des Desktop App Converters.
@@ -190,7 +190,7 @@ Die ``InstallerArguments``-Parameter ist optional. Da der Desktop-App-Konverter 
 
 #### <a name="package-an-application-that-doesnt-have-an-installer"></a>Packen einer Anwendung, die kein Installationsprogramm besitzt
 
-In diesem Beispiel verwendet die ``Installer`` Parameter, um in den Stammordner Ihrer Anwendung Dateien zu verweisen.
+In diesem Beispiel verwenden Sie die ``Installer`` Parameter, um in den Stammordner Ihrer Anwendung Dateien zu verweisen.
 
 Verwenden Sie den `AppExecutable`-Parameter, um auf die ausführbare Datei Ihrer Apps zu verweisen.
 
@@ -209,7 +209,7 @@ DesktopAppConverter.exe -Installer C:\Installer\MyApp\ -AppExecutable MyApp.exe 
 
 #### <a name="package-an-app-sign-the-app-and-run-validation-checks-on-the-package"></a>Verpacken einer App, Signieren Sie die App und Ausführen von Validierungstests für das Paket
 
-In diesem Beispiel ähnelt erste es zeigt, wie Sie Ihre Anwendung für das lokale Testen signieren und Ihre Anwendung mit app-Paket und Microsoft Store-Anforderungen überprüfen können.
+Dieses Beispiel ist ähnlich, das erste, außer dass es zeigt, wie Sie Ihre Anwendung für das lokale Testen signieren und Ihre Anwendung mit app-Paket und Microsoft Store-Anforderungen überprüfen können.
 
 ```cmd
 DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.exe -InstallerArguments "/S" -Destination C:\Output\MyApp -PackageName "MyApp" -Publisher "CN=MyPublisher" -Version 0.0.0.1 -MakeAppx -Sign -Verbose -Verify
@@ -217,7 +217,7 @@ DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.exe -InstallerArgumen
 >[!IMPORTANT]
 >Stellen Sie sicher, dass Sie auch den Parameter <i>-AppId</i> übergeben und nur das Zeichenfolgensuffix (nach dem Punkt-Trennzeichen) als Wert dieses Parameters verwenden, wenn das Dev Center Ihrem Paket eine Identität zuweist, die mit einer Zahl beginnt.
 
-Die ``Sign`` -Parameter generiert ein Zertifikat und dann signiert Ihre Anwendung mit ihm. Sie müssen das erstellte Zertifikat installieren, um Ihre App ausführen zu können. Weitere Informationen hierzu finden Sie unter dem Abschnitt [Ausführung der verpackten App](#run-app) dieses Handbuchs.
+Die ``Sign`` -Parameter generiert ein Zertifikat und dann Ihre Anwendung mit es signiert. Sie müssen das erstellte Zertifikat installieren, um Ihre App ausführen zu können. Weitere Informationen hierzu finden Sie unter dem Abschnitt [Ausführung der verpackten App](#run-app) dieses Handbuchs.
 
 Sie können überprüfen Sie Anwendung mithilfe der ``Verify`` Parameter.
 
@@ -267,7 +267,7 @@ Sie können auch die gesamte Liste anzeigen, indem Sie den ``Get-Help``-Befehl i
 |<a id="conversion-params" /> <strong>Konvertierungsparameter</strong>|||
 |-AppInstallPath &lt;String&gt;  |Optional |Der vollständige Pfad zum Stammordner Ihrer Anwendung für die installierten Dateien, wenn sie installiert wurde (z.B. „C:\Programme (x86) \MyApp“).|
 |-Destination &lt;String&gt; |Erforderlich |Das gewünschte Ziel für die APPX-Ausgabe des Konverters. DesktopAppConverter kann diesen Speicherort erstellen, wenn er nicht bereits vorhanden ist.|
-|-Installer &lt;String&gt; |Erforderlich |Der Pfad zum Installationsprogramm für Ihre Anwendung. Muss im unbeaufsichtigten Modus bzw. automatisch ausgeführt werden können. Konvertierung ohne Installationsprogramm ist dies der Pfad zum Stammverzeichnis Ihrer Anwendung-Dateien. |
+|-Installer &lt;String&gt; |Erforderlich |Der Pfad zum Installationsprogramm für Ihre Anwendung. Muss im unbeaufsichtigten Modus bzw. automatisch ausgeführt werden können. Konvertierung ohne Installationsprogramm ist dies der Pfad zum Stammverzeichnis Ihrer Anwendung Dateien. |
 |-InstallerArguments &lt;String&gt; |Optional |Eine durch Trennzeichen getrennte Liste oder Zeichenfolge mit Argumenten, die das unbeaufsichtigte bzw. automatische Ausführen des Installers erzwingen. Dieser Parameter ist optional, wenn der Installer eine MSI-Datei ist. Geben Sie zum Abrufen eines Protokolls vom Installer hier das Argument für die Protokollierung an, und verwenden Sie den Pfad &lt;log_folder&gt;, ein Token, das vom Konverter mit dem entsprechenden Pfad ersetzt wird. <br><br>**Hinweis**: Unbeaufsichtigte/automatische Flags und Protokollargumente können bei den verschiedenen Installationstechnologien variieren. <br><br>Ein Verwendungsbeispiel für diesen Parameter: -InstallerArguments "/silent /log &lt;log_folder&gt;\install.log" Ein weiteres Beispiel, in dem keine Protokolldatei generiert wird, kann wie folgt aussehen: ```-InstallerArguments "/quiet", "/norestart"``` Alle Protokolle müssen auf den Tokenpfad &lt;log_folder&gt; verweisen, wenn der Konverter diese erfassen und im endgültigen Protokollordner speichern soll.|
 |-InstallerValidExitCodes &lt;Int32&gt; |Optional |Eine durch Trennzeichen getrennte Liste mit Exitcodes, die angeben, das der Installer erfolgreich ausgeführt wurde (z. B.: 0, 1234, 5678).  Standardmäßig ist dieser 0 für Nicht-MSI-Dateien und 0, 1641, 3010 für MSI-Dateien.|
 |-MakeAppx [&lt;SwitchParameter&gt;]  |Optional |Ein Switch, mit dem, falls vorhanden, dieses Skript zum Aufrufen von MakeAppx für die Ausgabe angewiesen wird. |
@@ -296,7 +296,7 @@ Sie können auch die gesamte Liste anzeigen, indem Sie den ``Get-Help``-Befehl i
 |-LogFile &lt;String&gt;  |Optional |Gibt eine Protokolldatei an. Wird dieser nicht angegeben, wird ein temporärer Speicherort für eine Protokolldatei erstellt. |
 | – Zeichen [&lt;SwitchParameter&gt;] |Optional |Weisen Sie diesen Skript an, das ausgehende Windows-App-Paket mit einem generierten Zertifikat für Testzwecke zu signieren. Dieser Switch sollte ebenso vorhanden sein, wie der Switch ```-MakeAppx```. |
 |&lt;Allgemeine Parameter&gt; |Erforderlich |Dieses Cmdlet unterstützt die folgenden allgemeinen Parameter: *Verbose*, *Debug*, *ErrorAction*, *ErrorVariable*, *WarningAction*, *WarningVariable*, *OutBuffer*, *PipelineVariable* und *OutVariable*. Weitere Informationen finden Sie unter [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216). |
-| -Überprüfen [&lt;SwitchParameter&gt;] |Optional |Ein Switch, der, wenn vorhanden, die das app-Paket auf app-Paket und Microsoft Store-Anforderungen überprüfen DAC angewiesen wird. Das Ergebnis ist ein Überprüfungsbericht „VerifyReport.xml“, der am besten in einem Browser angezeigt wird. Dieser Switch sollte ebenso vorhanden sein, wie der Switch `-MakeAppx`. |
+| -Überprüfen [&lt;SwitchParameter&gt;] |Optional |Ein Switch, der, wenn vorhanden, den das app-Paket anhand von app-Paket und Microsoft Store-Anforderungen überprüfen DAC angewiesen wird. Das Ergebnis ist ein Überprüfungsbericht „VerifyReport.xml“, der am besten in einem Browser angezeigt wird. Dieser Switch sollte ebenso vorhanden sein, wie der Switch `-MakeAppx`. |
 |-PublishComRegistrations| Optional| Scant alle Öffentlichen COM-Registrierungen, die von Ihrem Installer erstellt wurden, und veröffentlicht die gültigen in Ihrem Manifest. Verwenden Sie dieses Flag nur dann, wenn Sie diese Registrierungen für andere Anwendungen verfügbar machen möchten. Sie müssen dieses Flag verwenden, wenn diese Registrierungen nur von Ihrer Anwendung verwendet werden. <br><br>Lesen Sie [diesen Artikel](https://blogs.windows.com/buildingapps/2017/04/13/com-server-ole-document-support-desktop-bridge/#lDg5gSFxJ2TDlpC6.97), um sicherzustellen, dass die COM-Registrierungen nach der Verpackung Ihrer App erwartungsgemäß funktionieren.
 
 <a id="run-app" />
@@ -307,7 +307,7 @@ Es gibt zwei Möglichkeiten, Ihre App auszuführen.
 
 Eine Möglichkeit besteht darin, eine PowerShell-Eingabeaufforderung zu öffnen, und den folgenden Befehl einzugeben: ```Add-AppxPackage –Register AppxManifest.xml```. Es ist wahrscheinlich die einfachste Möglichkeit, Ihre Anwendung ausgeführt werden, da Sie nicht signieren müssen.
 
-Eine weitere Möglichkeit ist die Anwendung mit einem Zertifikat signieren. Bei Verwendung der ```sign``` Parameter, der Desktop App Converter eines für Sie generiert, und signieren Sie Ihre Anwendung mit ihm. Diese Datei heißt **auto-generated.cer**; Sie finden sie im Stammordner der verpackten App.
+Eine weitere Möglichkeit ist die Anwendung mit einem Zertifikat signieren. Wenn Sie verwenden die ```sign``` Parameter, der Desktop App Converter Generieren eines für Sie und melden Sie sich dann Ihre Anwendung mit ihm wird. Diese Datei heißt **auto-generated.cer**; Sie finden sie im Stammordner der verpackten App.
 
 Führen Sie die folgenden Schritte aus, um das generierte Zertifikat zu installieren, und führen Sie anschließend Ihre App aus.
 
@@ -334,9 +334,9 @@ Führen Sie die folgenden Schritte aus, um das generierte Zertifikat zu installi
 
 ## <a name="modify-the-packaged-app"></a>Ändern der verpackten App
 
-Sie werden wahrscheinlich Änderungen an der verpackten Anwendung Fehler zu beheben, visuelle Ressourcen hinzuzufügen oder verbessern Sie Ihre Anwendung mit modernen Funktionen wie live-Kacheln.
+Sie werden wahrscheinlich Änderungen vornehmen, um die verpackte Anwendung Fehler zu beheben, visuelle Ressourcen hinzuzufügen oder verbessern Sie Ihre Anwendung mit modernen Funktionen wie live-Kacheln.
 
-Wenn Sie die Änderungen vorgenommen haben, müssen Sie den Konverter nicht erneut ausführen. In den meisten Fällen Sie können Ihre Anwendung mithilfe des Tools makeappx und Umpacken der "appxmanifest.xml"-Datei der DAC für Ihre app generiert. Weitere Informationen erhalten Sie unter [Erstellen eines Windows-App-Pakets](desktop-to-uwp-manual-conversion.md#make-appx).
+Wenn Sie die Änderungen vorgenommen haben, müssen Sie den Konverter nicht erneut ausführen. In den meisten Fällen Sie können Ihre Anwendung mithilfe des Tools makeappx und Umpacken die Datei "appxmanifest.xml" der DAC für Ihre app generiert. Weitere Informationen erhalten Sie unter [Erstellen eines Windows-App-Pakets](desktop-to-uwp-manual-conversion.md#make-appx).
 
 * Wenn Sie die visuellen Ressourcen Ihrer App nach der Erstellung des Pakets ändern, generieren Sie eine neue Paketressourcendatei, und führen Sie dann das MakeAppx-Tool erneut aus, um ein neues Paket zu erstellen. Siehe [Paketressourcendateien (Package Resource Index, PRI) generieren](desktop-to-uwp-manual-conversion.md#make-pri).
 

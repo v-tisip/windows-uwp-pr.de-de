@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, DirectX, App-Objekt
 ms.localizationpriority: medium
 ms.openlocfilehash: fcbe68516e3ad8b2643faf68900e3305f18e8bbf
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5444296"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5475054"
 ---
 # <a name="the-app-object-and-directx"></a>Das App-Objekt und DirectX
 
@@ -23,7 +23,7 @@ ms.locfileid: "5444296"
 
 Für die Universelle Windows-Plattform (UWP) mit DirectX-Spielen werden nur wenige der UI-Elemente und -objekte der Windows-Benutzeroberfläche genutzt. Da sie auf einer niedrigeren Ebene des Windows-Runtime-Stapels ausgeführt werden, müssen sie stattdessen auf eine grundlegendere Weise mit dem Benutzeroberflächenframework interagieren, und zwar indem sie direkt auf das App-Objekt zugreifen und mit diesem interagieren. Im Folgenden erfahren Sie, zu welchem Zeitpunkt und auf welche Weise eine solche Interaktion erfolgt und wie Sie dieses Modell als DirectX-Entwickler beim Entwickeln von UWP-Apps effizient nutzen können.
 
-Sehen Sie sich die [Direct3D-Grafiken Glossar](../graphics-concepts/index.md) Informationen Grafiken unbekannte Begriffe und Konzepte, die Sie beim Lesen auftreten.
+Sehen Sie sich die [Direct3D-Grafiken Glossar](../graphics-concepts/index.md) Informationen Grafiken unbekannte Begriffe und Konzepte, die beim Lesen auftreten.
 
 ## <a name="the-important-core-user-interface-namespaces"></a>Die wichtigen Benutzeroberflächen-Hauptnamespaces
 
@@ -36,9 +36,9 @@ Zunächst sind die Windows-Runtime-Namespaces zu erwähnen, die Sie (mit **using
 -   [**Windows.System**](https://msdn.microsoft.com/library/windows/apps/br241814)
 -   [**Windows.Foundation**](https://msdn.microsoft.com/library/windows/apps/br226021)
 
-> **Hinweis**   Wenn Sie keine UWP-App entwickeln, verwenden Sie die Benutzeroberflächenkomponenten aus den JavaScript- oder XAML-spezifischen Bibliotheken und Namespaces anstelle der Typen in diesen Namespaces.
+> **Hinweis:**  Wenn Sie nicht über eine UWP-app entwickeln, verwenden die Komponenten der Benutzeroberfläche in den JavaScript - XAML-spezifische Bibliotheken und Namespaces anstelle der Typen in diesen Namespaces bereitgestellten bereitgestellt.
 
- 
+ 
 
 ## <a name="the-windows-runtime-app-object"></a>Das Windows-Runtime-App-Objekt
 
@@ -114,7 +114,7 @@ Sie können das Threadingverhalten der Ereignisverteilung für ein Fenster mit d
 | [**CoreProcessEventsOption.ProcessUntilQuit**](https://msdn.microsoft.com/library/windows/apps/br208217)        | Warten Sie auf neue Ereignisse, und verteilen Sie alle verfügbaren Ereignisse. Setzen Sie dieses Verhalten fort, bis das Fenster geschlossen wird oder die Anwendung die [**Close**](https://msdn.microsoft.com/library/windows/apps/br208260)-Methode für die [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Instanz aufruft. |
 | [**CoreProcessEventsOption.ProcessAllIfPresent**](https://msdn.microsoft.com/library/windows/apps/br208217)     | Verteilen Sie alle derzeit in der Warteschlange verfügbaren Ereignisse. Wenn keine Ereignisse ausstehen, kehren Sie sofort zurück.                                                                                                                                          |
 
- 
+ 
 
 UWP mit DirectX muss die [**CoreProcessEventsOption.ProcessAllIfPresent**](https://msdn.microsoft.com/library/windows/apps/br208217)-Option verwenden, um blockierendes Verhalten zu verhindern, das Grafikaktualisierungen beeinträchtigen könnte.
 
@@ -155,9 +155,9 @@ Wenn Sie vorhandenen Code zur Ausführung in einem ASTA-Thread portieren, sollte
 
 Im Allgemeinen sollten Sie bei der Entwicklung Ihrer UWP-App den [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) für [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) und [**CoreDispatcher::ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) Ihrer App verwenden, um alle UI-Threads zu behandeln, anstatt eigene MTA-Threads zu erstellen und zu verwalten. Wenn Sie einen separaten Thread benötigen, der nicht mit dem **CoreDispatcher** behandelt werden kann, verwenden Sie asynchrone Muster, und beachten Sie die bereits erwähnten Ratschläge zur Vermeidung von Problemen mit Einstiegsinvarianzen.
 
- 
+ 
 
- 
+ 
 
 
 

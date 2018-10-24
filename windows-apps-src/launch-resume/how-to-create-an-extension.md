@@ -10,11 +10,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 548f5f5d1810347527c3c9bfe761a766c4a35c7f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445577"
+ms.locfileid: "5473894"
 ---
 # <a name="create-and-host-an-app-extension"></a>Erstellen und Hosten einer App-Erweiterung
 
@@ -411,7 +411,7 @@ Der Hauptunterschied zwischen [optionalen Paketen](https://docs.microsoft.com/wi
 
 App-Erweiterungen sind Teil eines offenen Ökosystems. Wenn Ihre App-Erweiterungen hosten kann, kann jeder Benutzer eine Erweiterung für den Host schreiben, solange er die Methode des Übergebens und Empfangens von Informationen aus der Erweiterung verwendet. Dies unterscheidet sich von optionalen Paketen, die Teil eines geschlossenen Ökosystem sind. Dort entscheidet der Herausgeber, wer ein optionales Paket erstellen darf, das mit der App verwendet werden kann.
 
-App-Erweiterungen sind unabhängige Pakete und eigenständige Apps. Sie dürfen keine Abhängigkeit in puncto Bereitstellung auf einer anderen App besitzen. Bei optionalen Paketen ist das primäre Pakets erforderlich und diese können nicht ohne ausgeführt werden.
+App-Erweiterungen sind unabhängige Pakete und eigenständige Apps. Sie dürfen keine Abhängigkeit in puncto Bereitstellung auf einer anderen App besitzen.Bei optionalen Paketen ist das primäre Pakets erforderlich und diese können nicht ohne ausgeführt werden.
 
 Ein Erweiterungspaket für ein Spiel wäre ein guter Kandidat für ein optionales Paket, da es eng mit dem Spiel verbunden ist und nicht unabhängig auf dem Spiel ausgeführt werden kann. Erweiterungspakete sollten nicht von beliebigen Entwickler im Ökosystem erstellt werden.
 

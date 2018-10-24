@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Bildschirmaufnahme
 ms.localizationpriority: medium
 ms.openlocfilehash: 3be1312b5dcc716d29bf15a8e16a2647ada68d49
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5444076"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5471970"
 ---
 # <a name="screen-capture"></a>Bildschirmaufnahme
 
@@ -28,7 +28,7 @@ Mit der Bildschirmaufnahme können Entwickler sichere System-UIs für Endbenutze
 
 ## <a name="add-the-screen-capture-capability"></a>Hinzufügen der Bildschirmaufnahmefunktion
 
-Die APIs finden Sie in der **Windows.Graphics.Capture** -Namespace erfordern eine allgemeine Funktion in Ihrem Anwendungsmanifest deklariert werden:
+Die APIs finden Sie in der **Windows.Graphics.Capture** -Namespace erfordern eine allgemeine Funktion in Ihrem App Manifest deklariert werden:
     
 1. Öffnen Sie **"Package.appxmanifest"** im **Projektmappen-Explorer**.
 2. Wählen Sie die Registerkarte **Funktionen** aus.
@@ -72,7 +72,7 @@ public async Task StartCaptureAsync()
 }
 ```
 
-Da dies Benutzeroberflächencode ist, muss sie für den UI-Thread aufgerufen werden. Wenn Sie es aus dem CodeBehind für eine Seite Ihrer Anwendung (z. B. **"MainPage.Xaml.cs"**) aufrufen für Sie erfolgt dies automatisch, aber wenn nicht, Sie können es auf den UI-Thread mit dem folgenden Code ausgeführt erzwingen:
+Da dies Benutzeroberflächencode ist, muss sie für den UI-Thread aufgerufen werden. Wenn Sie es aus CodeBehind für eine Seite Ihrer Anwendung (z. B. **"MainPage.Xaml.cs"**) aufrufen sind für Sie erfolgt dies automatisch, aber wenn nicht, Sie können sie für die Ausführung der UI-Thread mit dem folgenden Code erzwingen:
 
 ```cs
 CoreWindow window = CoreApplication.MainView.CoreWindow;
@@ -170,7 +170,7 @@ Wenn **Recreate** aufgerufen wird, werden alle vorhandenen Frames verworfen. Dad
 Der folgende Codeausschnitt ist ein End-to-End-Beispiel für die Implementierung einer Bildschirmaufnahme in einer UWP-Anwendung. In diesem Beispiel haben wir eine Schaltfläche in der Front-End-, die beim Klicken auf, ruft die **Button_ClickAsync** -Methode.
 
 > [!NOTE]
-> Dieser Codeausschnitt wird [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm), eine Bibliothek für 2D-Grafikrendering verwendet. Finden Sie in ihrer Dokumentation Informationen dazu, wie Sie es für Ihr Projekt festgelegt.
+> Dieser Codeausschnitt wird [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm), eine Bibliothek für 2D-Grafikrendering verwendet. Finden Sie in ihrer Dokumentation Informationen dazu, wie Sie es für Ihr Projekt einrichten.
 
 ```cs
 using Microsoft.Graphics.Canvas;

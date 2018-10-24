@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: 24f41ac858e73041e5afb4db596ce52b7d9bf4d8
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5436769"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5471895"
 ---
 # <a name="cryptographic-keys"></a>Kryptografische Schlüssel
 
@@ -79,4 +79,4 @@ Es ist häufig erforderlich, zusätzliche Schlüssel von einem gemeinsamen gehei
 | [**BuildForSP800108**](https://msdn.microsoft.com/library/windows/apps/br241526)  | Erstellt ein KeyDerivationParameters-Objekt zur Verwendung in einer Funktion zum Ableiten von Schlüsseln im Zählermodus mit einem Hash-basierten Nachrichtenauthentifizierungscode (Hash-based Message Authentication Code, HMAC). |
 | [**BuildForSP80056a**](https://msdn.microsoft.com/library/windows/apps/br241527)  | Erstellt ein KeyDerivationParameters-Objekt zur Verwendung in der Funktion SP800-56A zum Ableiten von Schlüsseln.                                                 |
 
- 
+ 
