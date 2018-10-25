@@ -3,19 +3,19 @@ author: jnHs
 Description: Learn about the tax forms issued by Microsoft, including who will receive them and when they are made available.
 title: Kennenlernen der von Microsoft ausgestellten IRS-Steuerformulare
 ms.author: wdg-dev-content
-ms.date: 03/08/2018
+ms.date: 10/25/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, UWP, Steuern, IRS, Bundessteuerbehörde der USA (IRS), Steuern, Einkommensteuer, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
-ms.openlocfilehash: ffefc1d645a79296989e95c2fa033b8848e91c3b
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: e7f7560d2f069a36d0f6d5837c3282b84840d927
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5475469"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5512530"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Kennenlernen der von Microsoft ausgestellten IRS-Steuerformulare
 
@@ -31,7 +31,25 @@ Nachfolgend erläutern wir diese Formulare eingehender, etwa, wer sie erhält un
 |1042-S | Im Zusammenhang mit den Zahlungen an Sie, die der Quellensteuer der USA unterliegen | Gedruckte Formulare werden mit elektronischen Siegeln mit spätestens dem **15.März** versehen, und die PDF-Kopien werden zur gleichen Zeit im Dev Center zur Verfügung stehen (**Dashboard > Kontoeinstellungen > Steuerprofil**) |
 
 > [!NOTE]
-> Die Adresse auf den IRS.Steuerformularen entspricht der Adresse in Ihrem [Steuerprofil](setting-up-your-payout-account-and-tax-forms.md#tax-forms).. Wenn sich Ihre Adresse geändert hat, aktualisieren Sie die Adresse auch in Ihrem **Steuerprofil**.
+> Die Adresse, mit denen wir auf IRS-Steuerformularen ergibt sich aus der Adresse in Ihr [Steuerprofil](setting-up-your-payout-account-and-tax-forms.md#tax-forms). Wenn sich Ihre Adresse geändert hat, aktualisieren Sie die Adresse auch in Ihrem **Steuerprofil**.
+
+Die Steuerformulare werden über die folgenden Adressen an Sie gesendet werden:
+
+**US-Bürger:**
+<table>
+<tr><th>Business-Gruppe</th><th>Juristische Person</th><th>Address</th></tr>
+<tr><td>Windows, Office, Azure</td><td>Microsoft Corporation</td><td>One Microsoft Way<br>Redmond WA 98052 USA</td></tr>
+<tr><td>Werbung</td><td>Microsoft Online Inc.</td><td>6100 Neil Road<br>Reno, NV 89511 USA</td></tr>
+<table> 
+
+**US-Bürger:**
+<table>
+<tr><th>Business-Gruppe</th><th>Juristische Person</th><th>Address</th></tr>
+<tr><td>Windows, Office, Azure</td><td>Microsoft Irland Operations Limited (Zahlung erfolgt durch Microsoft Corporation über Microsoft Irland fungiert als qualifizierter Vermittler für Microsoft Corporation)</td><td>One Microsoft Ort<br>Südkorea&nbsp;County&nbsp;Business&nbsp;Park<br>Leopardstown, Dublin 18 Irland</td></tr>
+<tr><td>Werbung *</td><td>Microsoft Irland Operations Limited (Zahlung erfolgt durch Microsoft Online Inc. über Microsoft Irland fungiert als Auszahlung Agent für Microsoft Online Inc.)</td><td>One Microsoft Ort<br>Südkorea&nbsp;County&nbsp;Business&nbsp;Park<br>Leopardstown, Dublin 18 Irland</td></tr>
+<tr><td>Werbung</td><td>Microsoft Online Inc.</td><td>6100 Neil Road<br>Reno, NV 89511 USA</td></tr>
+<tr><td colspan="3">* Bürger der folgenden Länder Umsatz mit Werbung Einnahmen werden über Microsoft Irland Operations Limited bezahlt: Österreich, Belgien, Bulgarien, Kroatien, Zypern, Tschechische Republik, Dänemark, Estland, Finnland, Frankreich, Deutschland, Griechenland, Ungarn, Irland, Isle Of Man, Italien, Lettland, Liechtenstein, Litauen, Luxemburg, Malta, Monaco, Niederlande, Norwegen, Polen, Portugal, Rumänien, Slowakei, Slowenien, Südafrika, Spanien, Schweden, Schweiz, Vereinigtes Königreich</td></tr>
+</table>
 
 ## <a name="for-developers-located-in-the-united-states"></a>Für Entwickler in den USA
 
@@ -42,23 +60,15 @@ Nachfolgend erläutern wir diese Formulare eingehender, etwa, wer sie erhält un
   </tr>
   <tr> 
      <td valign="top">Ich habe <b>mehr als 200 App-Verkäufe</b> mit einem Gesamtumsatz von <b>mehr als 20.000 US-Dollar</b> im entsprechenden Geschäftsjahr (Verkäufe über den Microsoft Store unter Windows 10 Brasilien und China werden <b>nicht</b> gezählt) getätigt</td>
-    <td valign="top"><b>1099-K</b>:<br>
-Einreichende Instanz: Microsoft Corporation<br>
-EIN: \*\*\*\*\*4442<br>
-<br>
-**Wichtig:** Formular 1099-K enthält **Bruttoeinkaufsbeträge**, keine an Sie erfolgten Zahlungen.</td>
+    <td valign="top"><b>1099-K</b>:<br>Einreichende Instanz: Microsoft Corporation<br>EIN: *** 4442<br><br><b>Wichtig</b>: Formular 1099-K enthält <b>Brutto</b> Beträge, keine Zahlungen an Sie.</td>
   </tr>
   <tr> 
      <td valign="top">Ich habe <b>mindestens 10 Dollar an Zahlungen</b> für (i) App-Verkäufe in Brasilien und China über den Microsoft Store auf Windows10 oder (ii) Verkäufe über den Minecraft Marketplace erhalten.<br>
 <br>
-**ODER**<br>
+<b>ODER</b><br>
 <br>
 Ich habe mindestens 600 US-Dollar an Zahlungen erhalten, die nicht im Zusammenhang mit App-Verkäufen von Microsoft im entsprechenden Geschäftsjahr stehen (z.B. Anreizzahlungen oder Zahlungen für einen Wettbewerb oder eine Werbeaktion)</td>
-    <td valign="top"><b>1099-MISC</b>:<br>
-Zahlende Instanz: Microsoft Corporation<br>
-EIN: \*\*\*\*\*4442<br>
-<br>
-**Wichtig:** Bestimmte Unternehmenseinheiten erhalten keine 1099-MISC-Formulare, ungeachtet der erhaltenen Zahlungen von Microsoft.  Weitere Informationen erhalten Sie bei Ihrem Steuerberater.</td>
+    <td valign="top"><b>1099-MISC</b>:<br>Zahlende Instanz: Microsoft Corporation<br>EIN: *** 4442<br><br><b>Wichtig</b>: bestimmte Unternehmenseinheiten erhalten keine 1099-MISC-Formulare, ungeachtet der Zahlung von Microsoft erhalten.  Weitere Informationen erhalten Sie bei Ihrem Steuerberater.</td>
   </tr>
   <tr>
     <td valign="top">Keine der Antworten oben trifft zu.</td>
@@ -69,16 +79,12 @@ EIN: \*\*\*\*\*4442<br>
     <td valign="top">&nbsp;</td>
   </tr>
   <tr>
-     <th>Wenn ich Entwickler in den USA bin, kostenpflichtige Apps verkaufe und... </th>
+     <th>Wenn ich bin Vereinigten Staaten Entwickler zum Verkaufen von anzeigen in apps und … </th>
      <th> Ich sollte dieses Formular erhalten</th>
   </tr>
   <tr> 
      <td valign="top">Ich habe <b>mindestens 600 US-Dollar an Zahlungen</b> für Anzeigen in Apps im entsprechenden Geschäftsjahr erhalten.</td>
-    <td valign="top"><b>1099-MISC</b>:<br>
-Zahlende Instanz: Microsoft Online Inc<br>
-EIN: \*\*\*\*\*0505<br>
-<br>
-**Wichtig:** Bestimmte Unternehmenseinheiten erhalten keine 1099-MISC-Formulare, ungeachtet der erhaltenen Zahlungen von Microsoft.  Weitere Informationen erhalten Sie bei Ihrem Steuerberater.  </td>
+    <td valign="top"><b>1099-MISC</b>:<br>Zahlende Instanz: Microsoft Online Inc<br>EIN: *** 0505<br><br><b>Wichtig</b>: bestimmte Unternehmenseinheiten erhalten keine 1099-MISC-Formulare, ungeachtet der Zahlung von Microsoft erhalten.  Weitere Informationen erhalten Sie bei Ihrem Steuerberater.</td>
   </tr>
   <tr> 
      <td valign="top">Ich habe <b>weniger als 600 US-Dollar an Zahlungen</b> für Anzeigen in Apps entsprechenden Geschäftsjahr erhalten.</td>
@@ -102,11 +108,7 @@ EIN: \*\*\*\*\*0505<br>
     <td valign="top"><b>Warum wurde Steuer auf meine Zahlungen einbehalten, als ich ein Formular W8 ausgefüllt habe?</b></td>
     <td valign="top">Steuern werden in einem der folgenden Fälle einbehalten:<br>
      1. Sie haben den Abschnittzum Steuerabkommen des W8 nicht ordnungsgemäß ausgefüllt oder<br>
-     2. Sie wohnen in einem Land, das über kein Steuerabkommen mit den USA verfügt.
-
-     You can visit Dev Center at any time to submit an updated W8 form.<br>
-     <br>
-     **Note:** Not all income is subject to tax withholding.</td>
+     2. Sie wohnen in einem Land, das über kein Steuerabkommen mit den USA verfügt.<br><br>Besuchen Sie Dev Center zu einem beliebigen Zeitpunkt ein aktualisiertes W8-Formular zu übermitteln.<br><br><b>Hinweis</b>: nicht alle Einnahmen Quellensteuer unterliegt.</td>
   </tr>
   <tr>
     <td valign="top"><b>Ich habe ein aktualisiertes W8-Formular mit gültigen Informationen zum Abkommen übermittelt. Kann Microsoft mir die einbehaltene Steuer zurückerstatten?</b></td>

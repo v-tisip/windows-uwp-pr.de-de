@@ -12,11 +12,11 @@ keywords: windows10, UWP
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 ms.localizationpriority: medium
 ms.openlocfilehash: b5110eebde087593f07704e89c2e4708b2fcbb8b
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5470820"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5512154"
 ---
 # <a name="run-debug-and-test-a-packaged-desktop-application"></a>Führen Sie aus, Debuggen Sie und Testen Sie eine verpackte desktop-Anwendung
 
