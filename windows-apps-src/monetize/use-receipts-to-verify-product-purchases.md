@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, In-App-Einkäufe, IAPs, Belege, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: ee6ca7876588efd8b8a5c86cfc8896d84ede91b9
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5439545"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5479627"
 ---
 # <a name="use-receipts-to-verify-product-purchases"></a>Überprüfen von Produktkäufen anhand von Belegen
 
@@ -154,6 +154,6 @@ Dieses Element enthält Informationen zu einem In-App-Kauf für die aktuelle App
 |  **ProductType**  |    Legt den Produkttyp fest. Zurzeit wird nur der Wert **Durable** unterstützt.          |  
 |  **PurchaseDate**  |    Das Datum, an dem der Kauf erfolgte.          |  |
 
- 
+ 
 
- 
+ 

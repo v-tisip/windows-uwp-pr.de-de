@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0840bab2e039ec55ea4070f8dad39c0ae4e74bbc
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433835"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5482372"
 ---
 # <a name="controls-by-function"></a>Steuerelemente nach Funktion
 
@@ -555,7 +555,7 @@ Siehe „Medienelement“.
 
 ### <a name="navigationview"></a>NavigationView
 
-Eine anpassungsfähige Container und flexible Navigationsmodell, der linken Navigationsbereich angezeigt, oberen Navigationsleiste und registerkartenmuster implementiert.
+Eine anpassungsfähige Container und flexible Navigationsmodell, der im linken Navigationsbereich, oberen Navigationsleiste und registerkartenmuster implementiert.
 
 Referenz: [NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 

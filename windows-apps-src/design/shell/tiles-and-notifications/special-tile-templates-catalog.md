@@ -12,27 +12,27 @@ ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e408509f4cebbc89587237c6e0dc67bc88b1558
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5430936"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481333"
 ---
 # <a name="special-tile-templates"></a>Spezielle Kachelvorlagen
  
 
-Spezielle Kachelvorlagen sind individuelle Vorlagen, die animiert sind oder mit denen Sie Vorgänge durchführen können, die mit adaptiven Kacheln nicht möglich sind. Jede spezielle Kachelvorlage wurde speziell für Windows10 erstellt, mit Ausnahme der Iconic-Kachelvorlage, einer klassischen Spezialvorlage, die für Windows10 aktualisiert wurde. In diesem Artikel werden drei spezielle Kachelvorlagen behandelt: Iconic, Fotos und Kontakte.
+Spezielle Kachelvorlagen sind individuelle Vorlagen, die animiert sind oder mit denen Sie Vorgänge durchführen können, die mit adaptiven Kacheln nicht möglich sind. Jede spezielle kachelvorlage wurde speziell für Windows 10, mit Ausnahme der iconic-kachelvorlage, eine klassische spezialvorlage erstellt, die für Windows 10 aktualisiert wurde. In diesem Artikel werden drei spezielle Kachelvorlagen behandelt: Iconic, Fotos und Kontakte.
 
 ## <a name="iconic-tile-template"></a>Iconic-Kachelvorlage
 
 
-Mit der Iconic-Vorlage (auch als „IconWithBadge“-Vorlage bezeichnet) können Sie ein kleines Bild in der Mitte der Kachel anzeigen. Windows10 unterstützt die Vorlage sowohl auf Telefonen als auch auf Tablets/Desktops.
+Mit der Iconic-Vorlage (auch als „IconWithBadge“-Vorlage bezeichnet) können Sie ein kleines Bild in der Mitte der Kachel anzeigen. Windows 10 unterstützt die Vorlage auf Handy und Tablets/Desktops.
 
 ![Kleine und mittelgroße E-Mail-Kacheln](images/iconic-template-mail-2sizes.png)
 
 ### <a name="how-to-create-an-iconic-tile"></a>Erstellen einer ikonischen Kachel
 
-In den folgenden Schritten wird alles erläutert, was Sie zum Erstellen einer Iconic-Kachel für Windows10 wissen müssen. Auf hoher Ebene benötigen Sie Ihre Iconic-Bildressource. Dann senden Sie mithilfe der Iconic-Vorlage eine Benachrichtigung an die Kachel und senden schließlich eine Signalbenachrichtigung, die die auf der Kachel anzuzeigende Zahl bereitstellt.
+Die folgenden Schritte erläutert alles, was Sie zum Erstellen einer iconic-Kachel für Windows 10 wissen müssen. Auf hoher Ebene benötigen Sie Ihre Iconic-Bildressource. Dann senden Sie mithilfe der Iconic-Vorlage eine Benachrichtigung an die Kachel und senden schließlich eine Signalbenachrichtigung, die die auf der Kachel anzuzeigende Zahl bereitstellt.
 
 ![Entwicklerablauf der Iconic-Kachel](images/iconic-template-dev-flow.png)
 
@@ -188,7 +188,7 @@ TileContent content = new TileContent()
 ## <a name="people-tile-template"></a>Kachelvorlage „Kontakte“
 
 
-Die Kontakte-App in Windows 10 verwendet eine spezielle Kachelvorlage, die eine Sammlung von Bildern in Kreisen anzeigt, die sich auf der Kachel vertikal oder horizontal verschieben. Diese Kachelvorlage ist seit Windows10 Build10572 verfügbar und kann jederzeit in Apps verwendet werden.
+Die Kontakte-App in Windows 10 verwendet eine spezielle Kachelvorlage, die eine Sammlung von Bildern in Kreisen anzeigt, die sich auf der Kachel vertikal oder horizontal verschieben. Diese kachelvorlage wurde seit Windows 10 Build 10572 verfügbar, und alle Personen in ihrer app verwendet wird.
 
 Die Kachelvorlage „Kontakte“ funktioniert auf Kacheln folgender Größen:
 
@@ -196,19 +196,19 @@ Die Kachelvorlage „Kontakte“ funktioniert auf Kacheln folgender Größen:
 
 ![Mittelgroße Kachel „Kontakte“](images/people-tile-medium.png)
 
- 
+ 
 
 **Breite Kachel** (TileWide)
 
 ![Breite Kachel „Kontakte“](images/people-tile-wide.png)
 
- 
+ 
 
 **Große Kachel (nur Desktop)** (TileLarge)
 
 ![Große Kachel „Kontakte“](images/people-tile-large.png)
 
- 
+ 
 
 Bei Verwendung der [Benachrichtigungsbibliothek](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) müssen Sie zum Verwenden der Kachelvorlage „Kontakte“ nur ein neues *TileBindingContentPeople*-Objekt für Ihren *TileBinding*-Inhalt erstellen. Die *TileBindingContentPeople*-Klasse verfügt über eine Bildereigenschaft, mit der Sie Ihre Bilder hinzufügen.
 
@@ -281,9 +281,9 @@ Informationen zum Senden der Benachrichtigung finden Sie unter [Auswählen einer
 * [Kacheln, Signale und Benachrichtigungen](index.md)
 * [Erstellen adaptiver Kacheln](create-adaptive-tiles.md)
 * [Kachelinhaltsschema](../tiles-and-notifications/tile-schema.md)
- 
+ 
 
- 
+ 
 
 
 

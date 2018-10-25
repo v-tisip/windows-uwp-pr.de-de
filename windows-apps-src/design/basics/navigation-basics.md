@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b388a196e1f5fa6649ac1fb072c80d01bba45e20
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5431136"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5482744"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Navigationsdesigngrundlagen für UWP-Apps
 
@@ -58,7 +58,7 @@ Beginnen wir mit den Grundprinzipien eines guten Navigationsdesigns:
 
 ### <a name="consistency"></a>Konsistenz
 
-Die Navigation sollte den Erwartungen der Benutzer entsprechen. Verwenden [Standardsteuerelemente](#use-the-right-controls) , dass der Benutzer mit vertraut sind und folgende Standardkonventionen für Symbole, machen Position und Formatierung Navigation vorhersehbar und intuitiv für Benutzer.
+Die Navigation sollte den Erwartungen der Benutzer entsprechen. [Standardsteuerelemente](#use-the-right-controls) sind Benutzer mit vertraut sind und der folgenden Standardkonventionen für Symbole verwenden, nehmen Position und Formatierung Navigation vorhersehbar und intuitiv für Benutzer.
 
 ![Bild mit Seitenkomponenten](images/nav/page-components.svg)
 
@@ -187,9 +187,9 @@ Sobald Sie sich für eine Seitenstruktur entschieden haben, müssen Sie entschei
         
         Use top navigation when:
 
-        - Alle Navigationsoptionen auf dem Bildschirm angezeigt werden soll.
+        - Möchten Sie alle Navigationsoptionen auf dem Bildschirm anzuzeigen.
         - Sie möchten mehr Platz für den Inhalt Ihrer app.
-        - Symbole können nicht klar Ihrer Navigationskategorien beschreiben.
+        - Symbole können nicht Ihre Navigationskategorien deutlich beschreiben.
         
         Verwendung Registerkarten Gründe:
 

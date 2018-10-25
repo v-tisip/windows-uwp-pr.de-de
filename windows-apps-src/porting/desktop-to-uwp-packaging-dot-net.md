@@ -12,11 +12,11 @@ keywords: windows10, UWP
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
 ms.openlocfilehash: 091782d926949b87db9b29c08ec8cf98f485f0df
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435071"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483113"
 ---
 # <a name="package-a-desktop-application-by-using-visual-studio"></a>Verpacken Sie eine desktop-Anwendung mithilfe von Visual Studio
 
@@ -25,7 +25,7 @@ Sie können Visual Studio verwenden, um ein Paket für Ihre Desktop-App zu gener
 Die aktuelle Version von Visual Studio bietet ein neue Version des Paketprojekts, um manuelle Schritte zu eliminieren, die beim Verpacken Ihrer App erforderlich sind. Sie müssen nur Ihr Paketprojekt hinzufügen, auf das Desktopprojekt verweisen und F5 drücken, um Ihre App zu debuggen. Es sind keine manuellen Optimierungsmethoden mehr erforderlich. Das neue optimierte Design ist eine enorme Verbesserung über die Benutzeroberfläche, die in der vorherigen Version von Visual Studio verfügbar war.
 
 >[!IMPORTANT]
->Die Fähigkeit zum Erstellen einer Windows-app-Paket für Ihre desktop-Anwendung (andernfalls wird auch als der Desktop-Brücke wurde in Windows 10, Version 1607, eingeführt und kann nur in Projekten für die Windows 10 Anniversary Update (10.0; verwendet werden Build 14393) oder einer neueren Version in Visual Studio.
+>Die Fähigkeit zum Erstellen eines Windows-app-Pakets für Ihre desktop-Anwendung (andernfalls wird auch als der Desktop-Brücke wurde in Windows 10, Version 1607, eingeführt und kann nur in Projekten für die Windows 10 Anniversary Update (10.0; verwendet werden Build 14393) oder einer neueren Version in Visual Studio.
 
 ## <a name="first-prepare-your-application"></a>Vorbereiten Ihrer Anwendung
 
@@ -62,7 +62,7 @@ Dieses Handbuch lesen, bevor Sie mit der paketerstellung für Ihre Anwendung beg
 
    ![Als Einstiegspunkt festlegen](images/desktop-to-uwp/entry-point-set.png)
 
-6. Erstellen Sie das Paketprojekt, um sicherzustellen, dass keine Fehler angezeigt werden.  Wenn Sie Fehlermeldungen erhalten, **Konfigurations-Manager** öffnen, und stellen Sie sicher, dass Ihre Projekte die gleichen Zielplattform.
+6. Erstellen Sie das Paketprojekt, um sicherzustellen, dass keine Fehler angezeigt werden.  Wenn Fehler angezeigt werden, öffnen Sie den **Konfigurations-Manager** und sicherzustellen Sie, dass Ihre Projekte derselben Plattform Ziel.
 
    ![Konfigurations-manager](images/desktop-to-uwp/config-manager.png)
 

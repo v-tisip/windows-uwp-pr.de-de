@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a1a82c91aeafa253427d8e526b38b8ac304591a2
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435015"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483492"
 ---
 # <a name="advertising-performance-report"></a>Bericht zur Anzeigenleistung
 
@@ -62,7 +62,7 @@ Der Bericht **Anzeigenleistung** enthält Daten für die folgenden Leistungsmetr
 | Füllrate  | Gibt den Prozentsatz der von Ihrer App gesendeten Anzeigenanforderungen an, bei denen eine Anzeige angezeigt wurde.  |
 | Klicks  |  Gibt an, wie häufig in Ihrer App auf eine Anzeige geklickt wurde. |
 | CTR  |  Gibt an, wie häufig auf eine Anzeige geklickt wurde – geteilt durch die Anzahl von Anzeigenaufrufen. |
-| Die Sichtbarkeit | Der Prozentsatz der anzeigenaufrufe, die in Ihrer app angezeigt werden. Weitere Informationen darüber, wie dieser Wert berechnet wird finden Sie unter [Optimieren der anzeigbarkeit Ihrer Werbeeinheiten](../monetize/optimize-ad-unit-viewability.md). |
+| Die Sichtbarkeit | Der Prozentsatz der anzeigenaufrufe, die in Ihrer app angezeigt werden. Weitere Informationen zu diesen Wert wie berechnet wird finden Sie unter [Optimieren der Sichtbarkeit von anzeigeneinheiten](../monetize/optimize-ad-unit-viewability.md). |
 | Erworbenes Guthaben  | Bei [Community](https://docs.microsoft.com/windows/uwp/publish/about-community-ads)-Kampagnen gibt dies das Guthaben an, das Sie durch Anzeigen von Community-Anzeigen in Ihrer App für Werbefläche erworben haben.  |
 | Beanspruchtes Guthaben  | Bei [Community](https://docs.microsoft.com/windows/uwp/publish/about-community-ads)-Kampagnen gibt dies das für Ihre App beanspruchte Anzeigenguthaben an.  |
 
@@ -73,4 +73,4 @@ Der Bericht **Anzeigenleistung** enthält Daten für die folgenden Leistungsmetr
 * [Optimieren der Sichtbarkeit von Anzeigeneinheiten](../monetize/optimize-ad-unit-viewability.md)
 
 
- 
+ 

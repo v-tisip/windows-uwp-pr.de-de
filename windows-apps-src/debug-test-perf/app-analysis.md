@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f14f241eb6a1a39b29216fe703c3804b34f8a3bc
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5432631"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480060"
 ---
 # <a name="app-analysis-overview"></a>App-Analyse – Übersicht
 
@@ -64,7 +64,7 @@ myImage.Source = bitmapImage;
 bitmapImage.UriSource = new URI("ms-appx:///Assets/cool-image.png", UriKind.RelativeOrAbsolute);
 ```
 
-Beispiel 2 – CodeBehind (schlecht) – Festlegen der UriSource von BitmapImage, bevor Sie mit der Struktur verbunden.
+Beispiel 2 – CodeBehind (schlecht) – Festlegen der UriSource von BitmapImage, bevor es mit der Struktur verbunden.
 
 ```vb
 var bitmapImage = new BitmapImage();

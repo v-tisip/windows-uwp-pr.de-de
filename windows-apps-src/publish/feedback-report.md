@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: bceb1d2cc6682698d0ad06ed4b1865f3d6510442
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434683"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483680"
 ---
 # <a name="feedback-report"></a>Feedbackbericht
 
@@ -31,7 +31,7 @@ Verwenden Sie die Feedback-API im [Microsoft Store Services SDK](http://aka.ms/s
 Feedback ist ebenfalls wertvoll, wenn Sie [Flight-Pakete](package-flights.md) verwenden, da im Feedbackbericht das spezifische Paket aufgeführt wird, das auf dem Gerät des jeweiligen Kunden installiert war, als er das Feedback abgegeben hat.
 
 > [!TIP]
-> Für einen kurzen Überblick über die Rezensionen, Bewertungen und Benutzerfeedback für alle Ihre Apps in den letzten 30 Tagen, erweitern Sie im linken Navigationsmenü **einbeziehen** , und wählen Sie **Kritiken und Feedback.** 
+> Für einen kurzen Überblick über die Rezensionen, Bewertungen und Benutzerfeedback für alle Ihre apps in den letzten 30 Tagen, erweitern Sie im linken Navigationsmenü **einbeziehen** , und wählen Sie **Kritiken und Feedback.** 
 
 
 ## <a name="apply-filters"></a>Anwenden von Filtern
@@ -58,14 +58,14 @@ Im Bericht finden Sie das jeweilige Feedback von Ihren Kunden. Links neben dem F
 - **Populär**: Zeigt Feedback, das von anderen Kunden in den letzten sieben Tagen bewertet wurde, beginnend mit dem Feedback, das die letzte Aktivität aufweist.
 - **Aktuellste**: Zeigt sämtliches Feedback, beginnend mit dem zuletzt abgegebenen Feedback an.
 
-Neben jedem Kommentar werden der Typ des Feedbacks sowie das Datum angezeigt, an dem das Feedback abgegeben wurde. Sie werden auch den Markt des Kunden, das spezifische Paket angezeigt, die auf dem Gerät installiert wurde, die sie verwendet haben, als er das Feedback, den Typ dieses Gerät, und **Windows-Insider-** verlassen, wenn der Kunde das Feedback übermittelt hat ein Mitglied der Windows-Insider-ist Programm.
+Neben jedem Kommentar werden der Typ des Feedbacks sowie das Datum angezeigt, an dem das Feedback abgegeben wurde. Sie werden auch den Markt des Kunden, das spezifische Paket sehen, die auf dem Gerät installiert wurde, die sie verwendet haben, als er das Feedback, den Typ dieses Gerät, und **Windows-Insider-** verlassen, wenn der Kunde das Feedback übermittelt hat ein Mitglied der Windows-Insider-ist Programm.
 
 Hier sehen Sie auch eine Option, um auf das [Feedback zu antworten](respond-to-customer-feedback.md).
 
 
 ## <a name="translating-feedback"></a>Übersetzen von Feedback
 
-Standardmäßig ist Feedback, die nicht in Ihrer bevorzugten Sprache verfasst wurde für Sie übersetzt. Falls gewünscht, können Sie die Übersetzung von Feedback deaktivieren, indem Sie das Kontrollkästchen **Feedback übersetzen** neben der Seitenfilter deaktivieren.
+Standardmäßig wird Feedback, die nicht in Ihrer bevorzugten Sprache verfasst wurde für Sie übersetzt. Falls gewünscht, können Sie die Übersetzung von Feedback deaktivieren, indem Sie das Kontrollkästchen **Feedback übersetzen** neben der Seitenfilter deaktivieren.
 
 Da das Feedback durch ein automatisches Übersetzungssystem übersetzt wird, sind die resultierenden Übersetzungen u. U. nicht immer exakt. Für den Fall, dass sie ihn mit der Übersetzung vergleichen oder auf andere Weise übersetzen lassen möchten, steht der Originaltext zur Verfügung.
 

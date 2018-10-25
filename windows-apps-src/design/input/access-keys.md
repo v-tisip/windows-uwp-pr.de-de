@@ -16,11 +16,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e842d6c5b8e62a9c043c97849fdf17f524ccfc7
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5435513"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481119"
 ---
 # <a name="access-keys"></a>Zugriffstasten
 
@@ -263,16 +263,16 @@ Falls Sie jedoch mehr Kontrolle über die Positionierung der Zugriffstasteninfo 
 
     a.  Die Zugriffstasteninfo sollte sich **in der Nähe** des Elements mit der Zugriffstaste befinden (Besitzer).  
     b.  Die Zugriffstasteninfo sollte **aktivierte Elemente nicht verdecken**, die Zugriffstasten aufweisen.   
-    c.  Wenn eine Zugriffstasteninfo nicht in der Nähe des Besitzers platziert werden kann, sollte sie mit dem Besitzer überlappen. 
+    c.  Wenn eine Zugriffstasteninfo nicht in der Nähe des Besitzers platziert werden kann, sollte sie mit dem Besitzer überlappen. 
 
 2.  **Auffindbarkeit**: Der Benutzer kann das Steuerelement mit der Zugriffstasteninfo schnell auffinden.
 
-    a.  Die Zugriffstasteninfo sollte andere Zugriffstasteninfos nie **überlappen**.  
+    a.  Die Zugriffstasteninfo sollte andere Zugriffstasteninfos nie **überlappen**.  
 
 3.  **Lesbarkeit:** Der Benutzer kann die Zugriffstasteninfos einfach überfliegen.
 
     a.  Zugriffstasteninfos sollten aneinander und am UI-Element **ausgerichtet** sein.
-    b.  Zugriffstasteninfos sollten so weitgehend wie möglich **gruppiert** sein. 
+    b.  Zugriffstasteninfos sollten so weitgehend wie möglich **gruppiert** sein. 
 
 ### <a name="relative-position"></a>Relative Position
 

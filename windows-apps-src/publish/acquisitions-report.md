@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Käufe, App-Verkäufe, App-Downloads, Installationen, Trichter, Käufe, Konvertierungen, Kanal, App-Seitenaufrufe
 ms.localizationpriority: medium
 ms.openlocfilehash: 75a3ce152257d10fe392b3f64381b3e82bc79961
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5439512"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480794"
 ---
 # <a name="acquisitions-report"></a>Bericht „Käufe“
 
@@ -34,7 +34,7 @@ In diesem Bericht steht **Kauf** für einen neuen Kunden, der eine Lizenz Ihrer 
 
 ## <a name="apply-filters"></a>Anwenden von Filtern
 
-Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist **30D** (30Tage), aber Sie können Daten für 3, 6 oder 12Monate anzeigen, oder für einen benutzerdefinierten Zeitraum, den Sie angeben. In der Nähe Echtzeit Daten für alle Optionen angezeigt werden (außer in **App insgesamt** Daten). Die **1 H** und **72 Stunden** Zeit gelten Punkte nur auf der Registerkarte " **App täglich** " des Diagramms **Käufe** und auf der Registerkarte " **Käufe** " des Diagramms **Märkte** . 
+Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist **30D** (30Tage), aber Sie können Daten für 3, 6 oder 12Monate anzeigen, oder für einen benutzerdefinierten Zeitraum, den Sie angeben. In der Nähe Echtzeit Daten für alle Optionen angezeigt werden (außer in **kumulativen App** -Daten). Die **1 H** und **72 Stunden** Zeit gelten nur Punkte, um die **täglich App** -Registerkarte des Diagramms **Käufe** und der Registerkarte " **Käufe** " des Diagramms **Märkte** . 
 
 Sie können ebenfalls **Filter** erweitern, um alle Daten auf dieser Seite nach Markt und/oder Gerätetyp zu filtern.
 
@@ -48,7 +48,7 @@ Die Informationen in allen unten angezeigten Diagrammen beziehen sich auf den au
 
 Das Diagramm **Käufe** zeigt, wie oft Ihre Käufe (ein neuer Kunde, der eine Lizenz für Ihre App ausgewählt hat) im ausgewählten Zeitraum pro Tag oder Woche gekauft wurde. (Wenn Sie **Filter anwenden** zum Anzeigen von Daten für eine längere Dauer verwenden, werden die Kaufdaten nach Woche gruppiert.) Nur Käufe von Kunden, die auf einem gültigen Microsoft-Konto angemeldet sind, sind in diesem Diagramm enthalten. 
 
-Standardmäßig zeigen wir die **täglich App** -Ansicht, die in der Nähe Echtzeitdaten enthält. Sie können auch anzeigen, wie oft die App während ihrer gesamten Lebensdauer gekauft wurde, indem Sie **App Insgesamt** auswählen. Zeigt den kumulierten Gesamtwert aller Käufe an (ab der ersten Veröffentlichung Ihrer App).
+Standardmäßig zeigen wir die **täglich App** -Ansicht, die in der Nähe Echtzeit-Daten enthält. Sie können auch anzeigen, wie oft die App während ihrer gesamten Lebensdauer gekauft wurde, indem Sie **App Insgesamt** auswählen. Zeigt den kumulierten Gesamtwert aller Käufe an (ab der ersten Veröffentlichung Ihrer App).
 
 **Bruttoumsätze** für Ihre app (von Oktober 2016 - vorhanden) stehen auch in diesem Diagramm zeigt die Gesamtmenge aus app-Verkäufen (in US-Dollar) erzielt. Beachten Sie, dass dieser Betrag für alle Erstattungen, Rückbuchungen, Ausgleich usw. nicht berücksichtigt.
 
@@ -57,7 +57,7 @@ Sie können optional die Ergebnisse danach filtern, ob die Übernahme vom Client
 > [!NOTE]
 > Sie können diese Daten auch programmgesteuert mit der Methode [Abrufen von App-Käufen](../monetize/get-app-acquisitions.md) unserer [Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
-In der Ansicht **täglich App** bei der **30d** Zeitraum aktiviert ist, möglicherweise Kreis angezeigt. Diese darstellen eine erhebliche Erhöhung oder in einem bestimmten Wert, den wir glauben, dass Sie kennen sollten verringern. Das Datum, an dem die Kreis angezeigt wird, steht das Ende der Woche, in der wir eine erhebliche Erhöhung oder Verringerung im Vergleich zur vorherigen Woche davor erkannt. Um weitere Informationen zu Änderungen zu sehen, zeigen Sie auf den Kreis.  
+In der Ansicht **App täglich** Wenn der **30d** Zeitraum ausgewählt wird, möglicherweise Kreis Marker angezeigt. Diese darstellen eine erhebliche Erhöhung oder einen bestimmten Wert, die wir glauben, dass Sie kennen sollten verringern. Das Datum, an dem der Kreis angezeigt wird, stellt das Ende der Woche, in der wir eine erhebliche Erhöhung oder Verringerung, die im Vergleich zur vorherigen Woche davor erkannt. Um weitere Informationen zu Änderungen anzuzeigen, zeigen Sie auf den Kreis.  
 
 > [!TIP]
 > Sie können weitere Einblicke im Zusammenhang mit erhebliche Änderungen an der letzten 30 Tage im [Bericht](insights-report.md)anzeigen.
@@ -113,11 +113,11 @@ Das Diagramm **Kundendemografie** zeigt demografische Informationen zu den Perso
 > [!NOTE]
 > Einige Kunden haben festgelegt, dass sie diese Informationen nicht freigeben möchten. Falls die Altersgruppe oder das Geschlecht nicht ermittelt werden konnten, wird der Kauf als **Unbekannt** kategorisiert.
 
- 
+ 
 
 ## <a name="app-page-views-and-conversions-by-channel"></a>App-Seitenaufrufe und Konvertierungen nach -Kanal
 
-Mit dem Diagramm **App-Seitenaufrufe und Konvertierungen nach -Kanal** können Sie sehen, wie Kunden unter Windows 10 zu dem Eintrag Ihrer App im ausgewählten Zeitraum gelangt sind.
+Das **App-Seitenaufrufe und Konvertierungen nach-Kanal** Diagramm können Sie sehen, wie Kunden unter Windows 10 zum Eintrag Ihrer app über den ausgewählten Zeitraum gelangt.
 
 In diesem Diagramm bezieht sich ein *Kanal* auf die Methode, über die ein Kunde zu der Eintragsseite für Ihre App gelangt ist (z.B. durch Browsen und Suchen im Store, über einen Link von einer externen Website oder einen Link aus einer Ihrer benutzerdefinierten Kampagnen usw.). Die folgenden Kanaltypen sind enthalten:
 
@@ -125,7 +125,7 @@ In diesem Diagramm bezieht sich ein *Kanal* auf die Methode, über die ein Kunde
 -   **Benutzerdefinierte Kampagne:** Der Kunde ist einem Link gefolgt, der eine [benutzerdefinierte Kampagnen-ID](create-a-custom-app-promotion-campaign.md) verwendet.
 -   **Sonstiges:** Der Kunde ist einem externen Link von einer Website (ohne benutzerdefinierte Kampagnen-ID) zu Ihrem App-Eintrag gefolgt oder der Kunde ist einem Link zu Ihrem App-Eintrag gefolgt, der von einer Onlinesuchmaschine zurückgegeben wurde.
 
-Ein *Seitenaufruf* bedeutet, dass ein Kunde die Store-Eintragsseite für Ihre App über den webbasierten Store oder innerhalb der Store-App auf Windows10 angezeigt hat. Dies umfasst Kontakte, die nicht mit einem Microsoft-Konto angemeldet sind. Einige Kunden haben festgelegt, das sie Microsoft diese Informationen nicht zur Verfügung stellen möchten.
+Eine *Seitenansicht* bedeutet, dass ein Kunde Ihre app Store-Eintragsseite, entweder über den webbasierten Store oder über angezeigt die Store-app auf Windows 10. Dies umfasst Kontakte, die nicht mit einem Microsoft-Konto angemeldet sind. Einige Kunden haben festgelegt, das sie Microsoft diese Informationen nicht zur Verfügung stellen möchten.
 
 *Konvertierung* bedeutet, dass ein Kunde (der mit einem Microsoft-Konto angemeldet ist) eine Lizenz für Ihre App (entweder für eine kostenpflichtige oder eine kostenlose App) neu erworben hat.
 
@@ -149,6 +149,6 @@ Das Diagramm der **Gesamtanzahl der Konvertierungen pro Kampagne** enthält die 
 
 
 
- 
+ 
 
- 
+ 

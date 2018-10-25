@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 104788b98377b55564fcc204ecc161521d071c6b
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443492"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480692"
 ---
 #  <a name="command-design-basics-for-uwp-apps"></a>Befehlsdesigngrundlagen für UWP-Apps
 
@@ -94,9 +94,9 @@ Eine vollständige Liste finden Sie unter [Steuerelemente und UI-Elemente](../co
 
 ## <a name="place-commands-on-the-right-surface"></a>Platzieren von Befehlen auf der passenden Oberfläche
 
-Sie können Befehlselemente auf einer Reihe von Oberflächen in Ihrer app, einschließlich der app-Canvas oder spezieller befehlscontainer, wie z. B. eine Befehlsleiste, Befehlsleisten-Flyout, Menüleiste und Dialogfeld "platzieren.
+Sie können Befehlselemente auf einer Reihe von Oberflächen in Ihrer app, einschließlich der app-Canvas oder spezieller befehlscontainer, wie z. B. eine Befehlsleiste, Befehlsleisten-Flyout, Menüleiste und Dialogfeld platzieren.
 
-Beachten Sie, dass, wann immer möglich, Sie sollten Benutzer mit den Befehlen, die auf den Inhalt zugreifen, anstatt Inhalte direkt zu bearbeiten. Beispielsweise können Benutzer Listen durch Ziehen und Ablegen von Listenelementen neu anordnen, anstatt die Befehlsschaltflächen nach oben und unten zu verwenden.
+Beachten Sie, dass, wenn möglich, Sie sollten Benutzer mit den Befehlen, die auf den Inhalt zugreifen, anstatt Inhalte direkt zu bearbeiten. Beispielsweise können Benutzer Listen durch Ziehen und Ablegen von Listenelementen neu anordnen, anstatt die Befehlsschaltflächen nach oben und unten zu verwenden.
 
 Wenn Benutzer Inhalte aber nicht direkt manipulieren können, platzieren Sie Befehlselemente auf einer Befehlsoberfläche in Ihrer App: Hier eine Liste mit einigen der gängigsten Befehlsoberflächen.
 
@@ -157,7 +157,7 @@ Hier sind einige Möglichkeiten, um Feedback in Ihrer App bereitzustellen.
     :::column span="2":::
         <b>Flyouts</b>
 
-       <a href="../controls-and-patterns/dialogs-and-flyouts/index.md">Flyouts</a> sind einfache kontextbezogene Popups, die durch Antippen oder klicken außerhalb des Flyouts verworfen werden können.
+       <a href="../controls-and-patterns/dialogs-and-flyouts/index.md">Flyouts</a> sind lightweight kontextbezogene-Popups, die durch Antippen oder klicken außerhalb des Flyouts verworfen werden können.
 :::row-end:::
 
 :::row:::

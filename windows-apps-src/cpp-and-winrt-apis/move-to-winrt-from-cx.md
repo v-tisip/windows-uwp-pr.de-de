@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, portieren, migrieren, C++/CX
 ms.localizationpriority: medium
 ms.openlocfilehash: 29144f110a76227ae6a1bc1e7d7aa9f051babc9d
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5431641"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483590"
 ---
 # <a name="move-to-cwinrt-from-ccx"></a>Wechsel zu C++/WinRT von C++/CX
 
@@ -22,12 +22,12 @@ Dieses Thema zeigt, wie Sie den Code in Portieren einer [C++ / CX](/cpp/cppcx/vi
 
 ## <a name="porting-strategies"></a>Portieren von Strategien
 
-Wenn Sie nach und nach Ihrem C + portieren möchten / CX-Code in C++ / WinRT, können Sie. C++ / CX- und C++ / WinRT-Code kann gleichzeitig im selben Projekt, mit Ausnahme der XAML-Compiler-Unterstützung und Komponenten für Windows-Runtime verwendet werden. Für diese zwei Ausnahmen müssen Sie in der Zielgruppe entweder C + / CX oder C++ / WinRT im selben Projekt.
+Wenn Sie Ihre C++ schrittweise portieren möchten / CX-Code in C++ / WinRT, können Sie. C++ / CX- und C++ / WinRT-Code kann gleichzeitig im selben Projekt, mit Ausnahme der XAML-Compiler-Unterstützung und Komponenten für Windows-Runtime verwendet werden. Für diese zwei Ausnahmen, müssen Sie in der Zielgruppe entweder C++ / CX oder C++ / WinRT im selben Projekt.
 
 > [!IMPORTANT]
-> Wenn Ihr Projekt eine XAML-Anwendung erstellt wird, dann eine Vorgehensweise, die wir empfehlen ist die zunächst erstellen Sie ein neues Projekt in Visual Studio mit einer von C++ / WinRT-Projektvorlagen (finden Sie unter [Visual Studio-Unterstützung für C++ / WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)). Starten Sie anschließend auf Kopieren Source Code und Markup über von C++ / CX-Projekt. Sie können neue XAML-Seiten mit **Projekt**hinzufügen \> **Neues Element hinzufügen**  \>  **Visual C++** > **leere Seite (C++ / WinRT)**.
+> Wenn Ihr Projekt eine XAML-Anwendung erstellt wird, dann einen Workflow, deren empfohlen wird, zunächst ein neues Projekt in Visual Studio mit einer von C++ erstellen / WinRT-Projektvorlagen (siehe [Visual Studio-Unterstützung für C++ / WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)). Starten Sie anschließend auf Kopieren Source Code und Markup über von C++ / CX-Projekt. Sie können neue XAML-Seiten mit **Projekt**hinzufügen \> **Neues Element hinzufügen**  \>  **Visual C++** > **leere Seite (C++ / WinRT)**.
 >
-> Alternativ können Sie einer Komponente für Windows-Runtime-Faktor-Code aus dem XAML-C++ / CX projizieren, wie Sie es portieren. Entweder bewegen Sie so viel C++ / CX-code kann in einer Komponente, und ändern Sie die XAML-Projekt in C++ / WinRT. Oder lassen Sie andernfalls das XAML-Projekt als C++ / CX, erstellen Sie eine neue C++ / WinRT-Komponente, und beginnen Portieren von C++ / CX-Code aus dem XAML-Projekt und in der Komponente. Sie haben könnten auch eine C++ / CX-Komponentenprojekt zusammen mit eine C++ / WinRT-Komponentenprojekt innerhalb der gleichen Projektmappe verweisen auf beide aus Ihrem Anwendungsprojekt und schrittweise aus einem anderen port. Finden Sie unter [Interoperabilität zwischen C++ / WinRT und C++ / CX](interop-winrt-cx.md) für Weitere Informationen zur Verwendung der beiden sprachprojektionen im selben Projekt.
+> Alternativ können Sie einer Komponente für Windows-Runtime-Faktor-Code aus dem XAML-C++ / CX projizieren, wie Sie es portieren. Entweder bewegen Sie so viel C++ / CX-code wie möglich in einer Komponente, und ändern Sie dann das XAML-Projekt in C++ / WinRT. Oder lassen Sie andernfalls das XAML-Projekt als C++ / CX, erstellen Sie eine neue C++ / WinRT-Komponente, und beginnen Sie Portieren von C++ / CX-Code aus dem XAML-Projekt und in der Komponente. Sie haben könnte auch eine C++ / CX-Komponentenprojekt zusammen mit C++ / WinRT-Komponentenprojekt innerhalb der gleichen Projektmappe verweisen auf beide Eigenschaften aus Ihrem Anwendungsprojekt und schrittweise aus einem anderen port. Finden Sie unter [Interoperabilität zwischen C++ / WinRT und C++ / CX](interop-winrt-cx.md) für Weitere Informationen zur Verwendung der beiden sprachprojektionen im selben Projekt.
 
 > [!NOTE]
 > Sowohl [C++/CX ](/cpp/cppcx/visual-c-language-reference-c-cx) als auch das Windows SDK deklarieren Typen im Root-Namespace **Windows**. Ein Windows-Typ, der in C++/WinRT projiziert wird, verfügt über den gleichen vollqualifizierten Namen wie der Windows-Typ, befindet sich aber im C++/**winrt**-Namespace. Diese unterschiedlichen Namespaces ermöglichen die Portierung von C++/CX nach C++/WinRT in Ihrem eigenen Tempo.
@@ -190,8 +190,8 @@ private:
 };
 ```
 
-## <a name="converting-from-a-base-runtime-class-to-a-derived-one"></a>Konvertieren von einer Basisklasse Laufzeitklasse in einen abgeleiteten
-Es ist üblich, eine Verweis auf Basis verfügen, die Sie wissen, dass auf ein Objekt eines abgeleiteten Typs verweist. In C++ / CX verwenden Sie `dynamic_cast` auf eine *Umwandlung* der Referenz-Basis in eine Referenz-zu-abgeleitet. Die `dynamic_cast` ist eigentlich nur ein versteckten Aufruf von [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521). Hier ist ein typisches Beispiel&mdash;können Sie eine Abhängigkeit geänderter Eigenschaft-Ereignis behandeln und von **DependencyObject** zurück in den tatsächlichen Typ umgewandelt, die die Abhängigkeitseigenschaft besitzt werden soll.
+## <a name="converting-from-a-base-runtime-class-to-a-derived-one"></a>Konvertieren von einer Basisklasse Laufzeitklasse in eine abgeleitete
+Es ist üblich, eine Verweis auf Basis verfügen, die Sie wissen, dass auf ein Objekt eines abgeleiteten Typs verweist. In C++ / CX verwenden Sie `dynamic_cast` zu *wandeln* der Referenz-Basis in einer Referenz-zu-abgeleitet. Die `dynamic_cast` ist eigentlich nur ein versteckten Aufruf von [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521). Hier ist ein typisches Beispiel&mdash;können Sie eine Abhängigkeit geänderter Eigenschaft-Ereignis behandeln und von **DependencyObject** zurück in den tatsächlichen Typ umgewandelt, die die Abhängigkeitseigenschaft besitzt werden soll.
 
 ```cpp
 void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject^ d, Windows::UI::Xaml::DependencyPropertyChangedEventArgs^ e)

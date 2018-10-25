@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store Services SDK, A/B-Tests, Experimente
 ms.localizationpriority: medium
 ms.openlocfilehash: 21c6eab0e021f703c8103462a8459ea190693a10
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443998"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5482793"
 ---
 # <a name="code-your-app-for-experimentation"></a>Codieren der App für Tests
 
@@ -60,7 +60,7 @@ In den folgenden Schritten werden die wichtigen Schritte dieses Verfahrens ausf�
 
 2. Deklarieren Sie eine Zeichenfolgenvariable, die der [Projekt-ID](run-app-experiments-with-a-b-testing.md#terms) für das Experiment zugewiesen wird, das Sie abrufen möchten.
     > [!NOTE]
-    > Sie erhalten eine Projekt-ID, wenn Sie [ein Projekt im Dev Center-Dashboard erstellen](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md). Der hier gezeigte Projekt-ID dient nur als Beispiel.
+    > Sie erhalten eine Projekt ID, wenn Sie [ein Projekt im Dev Center-Dashboard erstellen](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md). Der hier gezeigte Projekt-ID dient nur als Beispiel.
 
     [!code-cs[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet2)]
 

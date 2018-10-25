@@ -15,22 +15,22 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 67bd984f4216be9eded51b6175829828e9c332f1
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443595"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481968"
 ---
 # <a name="reveal-highlight"></a>Reveal-Highlight
 
 ![Favoritenbild](images/header-reveal-highlight.svg)
 
-Reveal-Highlight sind Lichteffekte, der interaktive Elemente, z. B. Befehlsleisten, hervorhebt, wenn der Benutzer den Zeiger Nähe bewegt. 
+Reveal-Highlight sind Lichteffekte, die wie z. B. Befehlsleisten, interaktive Elemente hervorhebt, wenn der Benutzer den Zeiger Nähe bewegt. 
 
 > **Wichtige APIs**: [RevealBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [RevealBackgroundBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [RevealBorderBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [RevealBrushHelper-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [VisualState-Klasse](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
 
 ## <a name="how-it-works"></a>Funktionsweise
-Reveal-Highlight Aufrufe hebt interaktive Elemente zeigt der Container des Elements, wenn der Mauszeiger nähert, wie in der folgenden Abbildung dargestellt:
+Reveal-Highlight lenkt interaktiven Elemente in der Container des Elements zeigt, wenn der Mauszeiger nähert, wie in der folgenden Abbildung dargestellt:
 
 ![Reveal Visual](images/Nav_Reveal_Animation.gif)
 
@@ -260,7 +260,7 @@ Hier sehen Sie eine gesamte Vorlage und wie eine Schaltfläche zum Einblenden au
 ### <a name="fine-tuning-the-reveal-effect-on-a-custom-control"></a>Optimieren des Effekts von „Reveal” für ein benutzerdefiniertes Steuerelement 
 
 Wenn Sie "Reveal" für ein benutzerdefiniertes oder neues Steuerelement oder eine benutzerdefinierte Befehlsoberfläche aktivieren, können diese Tipps den Effekt optimieren hilfreich sein:
- 
+ 
 * Auf benachbarten Elementen mit einer Größe, die nicht in Höhe oder Breite (insbesondere in Listen) ausgerichtet ist: entfernen Sie das Verhalten des Rahmens und aktivieren Sie die Rahmen nur für das Draufzeigen.
 * Für Befehlselemente, die häufig aktiviert oder deaktiviert werden: platzieren Sie den Pinsel für den Rahmen auf die Backplates der Elemente sowie deren Rahmen, um ihren Zustand zu betonen.
 * Für benachbarte Steuerelemente, die sich fast berühren: Fügen Sie einen Rand von einem Pixel zwischen den beiden Elementen hinzu. 

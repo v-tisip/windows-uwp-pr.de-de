@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP, Anzeigen, Werbung, Bekannte Probleme, Problembehandlung
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ca7949b3092b03500f25249ce1af3832a9e61ba
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443403"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481304"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>Bekannte Probleme und Informationen zur Problembehandlung von Anzeigen in Apps
 
@@ -97,6 +97,6 @@ Die Festlegung von Rahmeneigenschaften, die **AdControl** von seiner übergeordn
 
 Weitere Informationen zu den neuesten bekannten Problemen im Zusammenhang mit den Microsoft Advertising-SDKs finden Sie im [Forum](http://go.microsoft.com/fwlink/p/?LinkId=401266). Dort können Sie auch Fragen veröffentlichen.
 
- 
+ 
 
- 
+ 

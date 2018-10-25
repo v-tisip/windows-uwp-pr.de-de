@@ -10,15 +10,15 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f017dbb30586d3ec3c2da54d0f262c4b159328cc
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5436296"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5479248"
 ---
-# <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>Neuigkeiten in der Windows-Entwicklerdokumentation im September 2018
+# <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>Was ist neu in der Windows-Entwicklerdokumentation im September 2018
 
-Die Entwicklerdokumentation für die Windows-Plattform wird ständig mit Informationen über neue Features für Entwickler aktualisiert. Die folgenden Featureübersichten, entwicklerleitfäden und Videos wurden im Monat September zur Verfügung gestellt wurden.
+Die Entwicklerdokumentation für die Windows-Plattform wird ständig mit Informationen über neue Features für Entwickler aktualisiert. Die folgenden Featureübersichten, entwicklerleitfäden und Videos wurden im Monat September zur Verfügung gestellt.
 
 Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/create-uwp-apps.md) oder sich mit der Verwendung von [vorhandenem App-Code unter Windows](../porting/index.md) vertraut machen.
 
@@ -26,17 +26,17 @@ Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?L
 
 ### <a name="windows-machine-learning"></a>Windows Machine Learning
 
-[The Windows Machine Learning-Dokumentation](https://docs.microsoft.com/windows/ai/) jetzt befinden sich auf ihre eigenen Website, und für das aktuelle Windows-Insider-SDK aktualisiert werden. Es gibt Desktop und UWP-Lernprogramme in C++ und c#, die Ihnen helfen erste Schritte WinML Ihrer Anwendung hinzufügen.
+[Die Windows Machine Learning-Dokumentation](https://docs.microsoft.com/windows/ai/) jetzt befinden sich auf ihre eigenen Website, und sind für das aktuelle Windows Insider SDK aktualisiert. Es gibt Desktop und UWP-Lernprogramme in C++ und c#, die Ihnen helfen erste Schritte WinML Ihrer Anwendung hinzufügen.
 
-[Die Windows.AI.MachineLearning-API-Referenz](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning) wurde aktualisiert, für das aktuelle Windows-Insider-SDK.
+[Die Windows.AI.MachineLearning-API-Referenz](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning) wurde für das aktuelle Windows Insider SDK aktualisiert.
 
-[Die Windows Machine Learning-GitHub-Repository](https://github.com/Microsoft/Windows-Machine-Learning) wurde mit neuen Beispiele aktualisiert, mit denen das aktuelle SDK zusammenarbeiten.
+[Die Windows-Computer-Learning GitHub-Repository](https://github.com/Microsoft/Windows-Machine-Learning) wurde mit neuen Beispiele aktualisiert, mit denen das aktuelle SDK zusammenarbeiten.
 
 ![Windows Machine Learning-Grafik](images/winml-graphic.png)
 
-### <a name="windows-ui-library"></a>Windows-UI-Bibliothek
+### <a name="windows-ui-library"></a>UI-Bibliothek für Windows
 
-[Die Windows-UI-Bibliothek](https://aka.ms/winui-docs) ist ein Satz von NuGet-Pakete, die Steuerelemente und andere Elemente der Benutzeroberfläche für UWP-apps bereitstellen. Diese Pakete sind auch mit früheren Versionen von Windows 10 kompatibel, damit Ihre app funktioniert, auch wenn Ihre Benutzer die neueste Version des Betriebssystems besitzen.
+[Die Windows-UI-Bibliothek](https://aka.ms/winui-docs) ist ein Satz von NuGet-Pakete, die Steuerelemente und andere Elemente der Benutzeroberfläche für UWP-apps bereitstellen. Diese Pakete sind auch mit früheren Versionen von Windows 10, kompatibel, sodass Ihre app funktioniert, auch wenn Ihre Benutzer die neueste Version des Betriebssystems besitzen.
 
 Weitere Informationen zu den Windows-UI-Bibliothek finden Sie unter [Diese Liste mit API-Namespaces in das NuGet-Paket enthalten.](https://docs.microsoft.com/uwp/api/overview/winui/)
 
@@ -44,11 +44,11 @@ Weitere Informationen zu den Windows-UI-Bibliothek finden Sie unter [Diese Liste
 
 ### <a name="how-blur-effects-work"></a>Wie Weichzeichnen Effekte Arbeit
 
-Eine der unsere Autoren, die esteemed Mike Jacobs hat eine Reihe von Artikeln in Mittel über Weichzeichner aus Schrift zu Foto bei dem Entwerfen der Apps und spielen begonnen. Wenn Sie mehr über diese weit verbreitete Grafikeffekt interessiert sind, sehen Sie sich [im ersten Artikel auf Vision und Foto](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) und [das zweite auf Antialiasing in Grafiken.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
+Eine der unsere Autoren, die esteemed Mike Jacobs hat eine Reihe von Artikeln in Mittel zur Weichzeichner aus Schrift zu Foto bei dem Entwerfen der Apps und spielen begonnen. Wenn Sie mehr über diese weit verbreitete Grafikeffekt interessiert sind, sehen Sie sich [im ersten Artikel auf Vision und Foto](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) und [die zweite in Antialiasing in Grafiken.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
 
 ![Weichzeichner in Aktion zu sehen](images/blur-example.jpg)
 
-### <a name="contributing-guidance"></a>Beitragenden Anleitungen
+### <a name="contributing-guidance"></a>Beitragenden Richtlinien
 
 Wir haben [unsere Beitragenden Anleitung](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) für unsere Dokumentation UWP aktualisiert. Diese neue Anleitungen verdeutlicht Workflow und Erwartungen an externe Beiträge unserer Dokumente.
 
@@ -56,7 +56,7 @@ Wir haben [unsere Beitragenden Anleitung](https://github.com/MicrosoftDocs/windo
 
 ### <a name="one-dev-question"></a>One Dev Frage
 
-In der One Dev Frage Videoserie behandelt seit Microsoft-Entwicklern eine Reihe von Fragen zur Windows-Entwicklung, Teamkultur, und zum Verlauf. Hier ist die neuesten Fragen, die wir beantwortet haben!
+In der One Dev Frage Videoserie behandelt seit Microsoft-Entwicklern eine Reihe von Fragen zur Windows-Entwicklung, Teamkultur und Verlauf. Hier ist die neueste Fragen, die wir beantwortet haben!
 
 Aaron Gustafson:
 

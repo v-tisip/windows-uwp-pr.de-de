@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Benutzerrollen, Benutzerberechtigung, benutzerdefinierte Rollen, Zugriff für Benutzer, Berechtigungen anpassen, Standardrollen
 ms.localizationpriority: medium
 ms.openlocfilehash: a4100248857af655f388ad318bb3ae5176aaf046
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434429"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480218"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Legen Sie Rollen oder benutzerdefinierte Berechtigungen für Kontenbenutzer fest
 
@@ -170,7 +170,7 @@ Beachten Sie, dass einige Berechtigungen nicht für Add-Ons festgelegt werden k�
     </tr>
     </thead>
     <tbody>
-    <tr><td align="left">    <b>Käufe</b>     </td><td>    Kann die Berichte <a href="acquisitions-report.md">Käufe</a> und <a href="add-on-acquisitions-report.md">Add-On-Käufe</a> für das Produkt anzeigen.        </td><td>    Nicht verfügbar    </td><td>    N/v (Einstellungen für das übergeordnete Produkt umfassen den Bericht " **Add-on-Käufe** ")        </td><td>    Nicht verfügbar                         </td></tr>
+    <tr><td align="left">    <b>Käufe</b>     </td><td>    Kann die Berichte <a href="acquisitions-report.md">Käufe</a> und <a href="add-on-acquisitions-report.md">Add-On-Käufe</a> für das Produkt anzeigen.        </td><td>    Nicht verfügbar    </td><td>    N/v (Einstellungen für das übergeordnete Produkt umfassen den Bericht " **Add-On-Käufe** ")        </td><td>    Nicht verfügbar                         </td></tr>
     <tr><td align="left">    <b>Nutzung</b> </td><td>    Kann den <a href="usage-report.md">Bericht „Nutzung“</a> für das Produkt anzeigen.     </td><td>    Nicht verfügbar       </td><td>    n.a.     </td><td>    Nicht verfügbar         </td></tr>
     <tr><td align="left">    <b>Integrität</b> </td><td>    Kann den <a href="health-report.md">Bericht „Integrität“</a> für das Produkt anzeigen.    </td><td>    Nicht verfügbar     </td><td>    n.a.     </td><td>    Nicht verfügbar         </td></tr>
     <tr><td align="left">    <b>Kundenfeedback</b>    </td><td>    Kann die Berichte <a href="reviews-report.md">Rezensionen</a> und <a href="feedback-report.md">Feedback</a> für das Produkt anzeigen.       </td><td>    Nicht verfügbar (Um auf Feedback oder Rezensionen reagieren zu können, muss die Berechtigung <b>Kunden kontaktieren</b> erteilt werden)   </td><td>    Nicht verfügbar     </td><td>    Nicht verfügbar         </td></tr>

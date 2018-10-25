@@ -13,11 +13,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: de14d35b7a39776f43feeefc94ebe77af0c97373
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5442625"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481369"
 ---
 # <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a>Erkennen von Windows Ink-Strichen als Text und Formen
 
@@ -212,7 +212,7 @@ private async void RecognizeStrokes_Click(object sender, RoutedEventArgs e)
         }
     }
 ```
-6. Im Folgenden wird die Funktion zum Zeichnen eines TextBlock-Elements im Erkennungszeichenbereich beschrieben. Wir verwenden das umgebende Rechteck der zugehörigen Freihandstriche auf dem Freihandeingabe-Zeichenbereich, um die Position und den Schriftgrad des TextBlock-Elements festzulegen.
+6. Im Folgenden wird die Funktion zum Zeichnen eines TextBlock-Elements im Erkennungszeichenbereich beschrieben. Wir verwenden das umgebende Rechteck der zugehörigen Freihandstriche auf dem Freihandeingabe-Zeichenbereich, um die Position und den Schriftgrad des TextBlock-Elements festlegen.
 ```csharp
 /// <summary>
 /// Draw ink recognition text string on the recognitionCanvas.
@@ -477,8 +477,7 @@ Im Abschnitt der Eigenschaften [**InkRecognizer.Name**](https://msdn.microsoft.c
 
 Ihre App kann den Satz der installierten Schrifterkennungsmodule abfragen und eines davon verwenden, oder der Benutzer wählt die bevorzugte Sprache aus.
 
-**Hinweis:**  
-Die Benutzer können über **Einstellungen -&gt; Zeit& Sprache** eine Liste der installierten Sprachen anzeigen. Die installierten Sprachen werden unter **Sprachen** aufgeführt.
+**Hinweis:**  Benutzer können eine Liste der installierten Sprachen anzeigen, indem Sie zum wechseln **Einstellungen –&gt; Zeit & Sprache**. Die installierten Sprachen werden unter **Sprachen** aufgeführt.
 
 So installieren Sie ein neues Sprachpaket und aktivieren die Schrifterkennung für die Sprache
 
@@ -488,7 +487,7 @@ So installieren Sie ein neues Sprachpaket und aktivieren die Schrifterkennung f�
 4.  Klicken Sie auf die Sprache, und wählen Sie **Optionen** aus.
 5.  Laden Sie auf der Seite **Sprachoptionen** das **Schrifterkennungsmodul** herunter. (Sie können auch das vollständige Sprachpaket, das Spracherkennungsmodul und das Tastaturlayout hier herunterladen.)
 
- 
+ 
 
 Hier wird gezeigt, wie auf Grundlage der ausgewählten Erkennung mit dem Schrifterkennungsmodul eine Reihe von Freihandstrichen in einer [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Klasse interpretiert werden.
 
@@ -873,4 +872,4 @@ In diesem Beispiel werden die gleichen Einstellungen für Benutzeroberfläche un
 * [Familiennotizbeispiel](https://aka.ms/cpubsample-familynotessample)
 
 
- 
+ 

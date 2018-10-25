@@ -11,11 +11,11 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c7dc6436e1a233a6b0a74a787b5c30de47899eff
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5443502"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481139"
 ---
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-uwp-app"></a>Lernprogramm: Unterstützen von Surface Dial (und anderen Radgeräten) in Ihrer UWP-App
 
@@ -62,7 +62,7 @@ Das Dial unterstützt drei grundlegende Gesten:
 6. Wechseln Sie zurück zu Ihrem Windows-Gerät und wählen Sie **Bluetooth oder ein anderes Gerät hinzufügen**.
 7. Wählen Sie im Dialogfeld **Hinzufügen eines Geräts** **Bluetooth** > **Surface Dial**. Ihre Surface Dial sollte jetzt eine Verbindung herstellen und der Liste der Geräte unter **Maus, Tastatur und Stift** auf der Einstellungsseite **Bluetooth & andere Geräte** hinzugefügt werden.
 8. Testen Sie das Dial, indem Sie sie einige Sekunden lang gedrückt halten, um das integrierte Menü anzuzeigen.
-9. Wenn das Menü nicht auf dem Bildschirm angezeigt wird (das Dial sollte auch Vibrieren), wechseln Sie zurück zu den Bluetooth-Einstellungen, entfernen Sie das Gerät, und versuchen Sie das Gerät erneut zu verbinden.
+9. Wenn das Menü nicht auf dem Bildschirm angezeigt wird (das Dial sollte auch Vibrieren), wechseln Sie zurück zu den Bluetooth-Einstellungen, entfernen Sie das Gerät, und versuchen Sie, das Gerät erneut zu verbinden.
 
 > [!NOTE]
 > Wheel-Geräte können in den **Rad**-Einstellungen angepasst werden:

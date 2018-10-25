@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, App-Installationen
 ms.localizationpriority: medium
 ms.openlocfilehash: 7a5a947d58ecec7ca52a355ef44f8a880864df5d
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5436743"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483550"
 ---
 # <a name="get-app-installs"></a>Abrufen von App-Installationen
 
@@ -61,7 +61,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 | orderby | String | Eine Anweisung, die die Ergebnisdatenwerte für die einzelnen Installationen anfordert. Die Syntax lautet <em>orderby=field [order],field [order],...</em>, wobei der Parameter <em>field</em> eines der folgenden Felder aus dem Antworttext sein kann:<p/><ul><li><strong>applicationName</strong></li><li><strong>date</strong><li><strong>deviceType</strong></li><li><strong>market</strong></li><li><strong>osVersion</strong></li><li><strong>packageVersion</strong></li><li><strong>successfulInstallCount</strong></li></ul><p>Der Parameter <em>order</em> ist optional und kann <strong>asc</strong> oder <strong>desc</strong> sein, um die auf- oder absteigende Anordnung der einzelnen Felder anzugeben. Der Standard ist <strong>asc</strong>.</p><p>Dies ist eine Beispielzeichenfolge für <em>orderby</em>: <em>orderby=date,market</em></p> |  Nein  |
 | groupby | string | Eine Anweisung, die Datenaggregationen nur auf die angegebenen Felder anwendet. Sie können die folgenden Felder aus dem Antworttext angeben:<p/><ul><li><strong>applicationName</strong></li><li><strong>date</strong><li><strong>deviceType</strong></li><li><strong>market</strong></li><li><strong>osVersion</strong></li><li><strong>packageVersion</strong></li></ul><p>Die zurückgegebenen Datenzeilen enthalten die Felder, die im Parameter <em>groupby</em> angegeben sind, sowie die folgenden:</p><ul><li><strong>date</strong></li><li><strong>applicationId</strong></li><li><strong>successfulInstallCount</strong></li></ul><p>Der Parameter <em>groupby</em> kann mit dem Parameter <em>aggregationLevel</em> verwendet werden. Beispiel: <em>&amp;groupby=ageGroup,market&amp;aggregationLevel=week</em></p> |  Nein  |
 
- 
+ 
 ### <a name="request-example"></a>Anforderungsbeispiel
 
 Das folgende Beispiel zeigt verschiedene Anforderungen für das Abrufen von Installationsdaten für Apps. Ersetzen Sie den *applicationId*-Wert durch die Store-ID Ihrer App.

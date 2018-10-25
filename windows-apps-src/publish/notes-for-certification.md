@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Hinweise für Tester
 ms.localizationpriority: medium
 ms.openlocfilehash: 741925a3ac49273bd7ba826dfbadd2e18724f307
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5441988"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5482242"
 ---
 # <a name="notes-for-certification"></a>Hinweise für Zertifizierung
 
@@ -44,9 +44,9 @@ Berücksichtigen Sie beim Zusammenstellen der Informationen Folgendes:
 -   **Formulieren Sie knapp und verständlich.** Sollten weitere detaillierte Erläuterungen erforderlich sein, können Sie eine URL zu einer Seite mit weiteren Informationen angeben. Denken Sie allerdings daran, dass Ihre App-Kunden diese Hinweise nicht sehen können. Wenn Sie komplizierte Anweisungen zum Testen Ihrer App benötigen, überlegen Sie, ob die App vereinfacht werden kann, damit Ihre Kunden (und Tester) wissen, wie sie zu verwenden ist.
 -   **Dienste und externe Komponenten müssen online und verfügbar sein.** Falls Ihre App im Rahmen ihrer Funktion eine Verbindung mit einem Dienst herstellen muss, muss der Dienst online und verfügbar sein. Stellen Sie alle erforderlichen Informationen zum entsprechenden Dienst für Tester bereit, wie beispielsweise Anmeldeinformationen. Falls Ihre App während des Tests nicht auf einen erforderlichen Dienst zugreifen kann, ist die Zertifizierung u. U. nicht erfolgreich.
 
- 
+ 
 
- 
+ 
 
 
 

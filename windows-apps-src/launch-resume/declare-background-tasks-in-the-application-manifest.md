@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, Uwp, Hintergrundaufgabe, für die
 ms.localizationpriority: medium
 ms.openlocfilehash: 00e685085c004cced24b9a42ef2261a26eef10bb
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445647"
+ms.locfileid: "5481491"
 ---
 # <a name="declare-background-tasks-in-the-application-manifest"></a>Deklarieren von Hintergrundaufgaben im Anwendungsmanifest
 
@@ -94,7 +94,7 @@ Kopieren Sie diesen Code in das "Extensions"-Element (Attribute werden in den fo
 
 2.  Ändern Sie die Liste der Aufgabentypenattribute, um den für diese Hintergrundaufgabe verwendeten Typ der Aufgabenregistrierung anzugeben. Wenn die Hintergrundaufgabe mit mehreren Triggertypen registriert wird, fügen Sie für jeden Typ zusätzliche Task-Elemente und Type-Attribute hinzu.
 
-    **Hinweis** Listen Sie alle verwendeten Triggertypen auf, da die Hintergrundaufgabe ansonsten die nicht deklarierten Triggertypen nicht registriert (bei der [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772)-Methode tritt ein Fehler auf, und eine Ausnahme wird ausgelöst).
+    **Hinweis:** Vergewissern Sie sich zum Auflisten aller Triggertypen Sie, oder wenn die Hintergrundaufgabe wird nicht mit Triggertypen (die Methode [**Registrieren**](https://msdn.microsoft.com/library/windows/apps/br224772) fehl und löst eine Ausnahme) registriert.
 
     Dieses Beispiel veranschaulicht die Verwendung von Systemereignistriggern und Pushbenachrichtigungen:
 

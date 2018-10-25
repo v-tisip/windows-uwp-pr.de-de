@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Add-Ons, IAP, dauerhaft, konsumbierbar, Abonnement, Produkt, Typ, Produkt-ID, In-App-Kauf, In-App-Produkt
 ms.localizationpriority: medium
 ms.openlocfilehash: 0673048fc9a1ed8fb7c439607ebc4197039699e9
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5436723"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483426"
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a>Festlegen von Produkt-ID und Produkttyp für das Add-On
 
@@ -72,4 +72,4 @@ Folgende Dinge sollten bei der Wahl einer Produkt-ID beachtet werden:
 -   Folgende Zeichen dürfen nicht in der Produkt-ID enthalten sein: **&lt; &gt; \* % & : \\ ? + ,**
 -   Um das Add-On unter allen Betriebssystemversionen anzubieten, dürfen nur alphanumerische Zeichen, Punkte und/oder Unterstriche verwendet werden. Bei Verwendung anderer Zeichen kann das Add-On von Kunden mit Windows Phone8.1 oder früheren Versionen nicht erworben werden.
 -   Eine Produkt-ID muss zwar nicht im Microsoft Store, aber für Ihr Entwicklerkonto eindeutig sein.
- 
+ 

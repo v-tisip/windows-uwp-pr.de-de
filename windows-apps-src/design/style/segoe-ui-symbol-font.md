@@ -14,11 +14,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 49ac0b2094b17120af8a0c85505cd03af389f1f4
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445438"
+ms.locfileid: "5482352"
 ---
 # <a name="segoe-mdl2-icons"></a>Segoe MDL2-Symbole
 
@@ -47,7 +47,7 @@ Alle Glyphen in **Segoe MDL2 Assets** haben dieselbe feste Breite mit einer kons
 Viele der Symbole verfügen zudem über gespiegelte Formen, die in Sprachen verwendet werden können, in denen die Rechts-nach-Links-Ausrichtung verwendet wird, beispielsweise Arabisch, Farsi und Hebräisch.
 
 ## <a name="using-the-icons"></a>Verwenden der Symbole
-Wenn Sie eine app in c#/VB/C++- und XAML entwickeln, können Sie bestimmte Glyphen der Segoe MDL2 Assets mit dem [Symbol-Enumeration](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol). 
+Wenn Sie eine app in c#/VB/C++ und XAML entwickeln, können Sie bestimmte Glyphen Segoe MDL2 Assets mit der [Symbol-Enumeration](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol). 
 
 ```xaml
 <SymbolIcon Symbol="GlobalNavigationButton"/>
@@ -67,7 +67,7 @@ Sie können auch die statische Ressource `SymbolThemeFontFamily` **Segoe MDL2 As
 
 ## <a name="how-do-i-get-this-font"></a>Wie erhalte ich diese Schriftart?
 * Klicken Sie auf Windows 10: Vorhanden ist, Sie müssen, nichts weiter, die Schriftart im Lieferumfang von Windows.
-* Auf einem Mac müssen Sie zum Herunterladen und installieren Sie die Schriftart: <a href="https://aka.ms/SegoeFonts">erhalten Sie die Segoe UI und MDL2 Symbolschriftarten</a>
+* Auf einem Mac, müssen Sie zum Herunterladen und installieren Sie die Schriftart: <a href="https://aka.ms/SegoeFonts">erhalten Sie die Segoe UI und MDL2 Symbolschriftarten</a>
 
 ## <a name="icon-list"></a>Liste der Symbole
 Beachten Sie zudem, dass die Schriftart **Segoe MDL2-Ressourcen** viel mehr Symbole enthält, als hier gezeigt werden kann. Viele der Symbole dienen speziellen Zwecken und werden für gewöhnlich nicht an anderer Stelle verwendet.
@@ -2366,7 +2366,7 @@ Beachten Sie zudem, dass die Schriftart **Segoe MDL2-Ressourcen** viel mehr Symb
  </tr>
 <tr><td><img src="images/segoe-mdl/E9D5.png" width="32" height="32" alt="CheckList" /></td>
   <td>E9D5</td>
-  <td>Prüfliste für die</td>
+  <td>Prüfliste</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E9D9.png" width="32" height="32" alt="Diagnostic" /></td>
   <td>E9D9</td>
@@ -4746,7 +4746,7 @@ Beachten Sie zudem, dass die Schriftart **Segoe MDL2-Ressourcen** viel mehr Symb
  </tr>
 <tr><td><img src="images/segoe-mdl/F540.png" width="32" height="32" alt="Safe" /></td>
   <td>F540</td>
-  <td>Safe</td>
+  <td>Sichere</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/F552.png" width="32" height="32" alt="LaptopSecure" /></td>
   <td>F552</td>

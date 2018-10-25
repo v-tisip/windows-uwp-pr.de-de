@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Add-Ons, Eigenschaften, Abonnementzeitraum, Produktlebensdauer, Inhaltstyp, IAP, In-App-Kauf, In-App-Produkt
 ms.localizationpriority: medium
 ms.openlocfilehash: 73a494ea1899f3a764a668ae61c1235808eff1a7
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438517"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483527"
 ---
 # <a name="enter-add-on-properties"></a>Eingeben von Add-On-Eigenschaften
 
@@ -89,7 +89,7 @@ Sie können für jedes eingereichte Add-On bis zu zehn Schlüsselwörter von jew
 Verwenden Sie zur Abfrage des Felds die Eigenschaft [StoreProduct.Keywords](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Keywords) in [Windows.Services.Store namespace](https://docs.microsoft.com/uwp/api/Windows.Services.Store). (Wenn Sie [Windows.ApplicationModel.Store-Namespace](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store) verwenden, nutzen Sie die Eigenschaft [ProductListing.Keywords](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.Keywords).)
 
 > [!NOTE]
-> Schlüsselwörter stehen für Pakete, die auf Windows 8 und Windows 8.1 ausgerichtet sind, nicht zur Verfügung.
+> Schlüsselwörter sind nicht für den Einsatz in abzielen Windows8 und Windows8.1 verfügbar.
 
 <span id="custom-developer-data" />
 
@@ -102,10 +102,10 @@ Nehmen Sie beispielsweise an, dass Sie ein Spiel anbieten und Add-Ons verkaufen,
 Verwenden Sie zur Abfrage des Felds die Eigenschaft [StoreSku.CustomDeveloperData](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.customdeveloperdata#Windows_Services_Store_StoreSku_CustomDeveloperData) unter [Windows.Services.Store namespace](https://docs.microsoft.com/uwp/api/Windows.Services.Store). (Wenn Sie [Windows.ApplicationModel.Store-Namespace](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store) verwenden, nutzen Sie die Eigenschaft [ProductListing.Tag](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.tag#Windows_ApplicationModel_Store_ProductListing_Tag).)
 
 > [!NOTE]
-> Das Feld **Benutzerdefinierte Entwicklerdaten** ist nicht in Paketen verfügbar, die für Windows8 und Windows8.1 entwickelt wurden.
+> Das **benutzerdefinierte entwicklerdaten** -Feld ist nicht für den Einsatz in abzielen Windows8 und Windows8.1 verfügbar.
 
- 
+ 
 
- 
+ 
 
- 
+ 

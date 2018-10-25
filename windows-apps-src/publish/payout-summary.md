@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10 UWP, Auszahlungszusammenfassung, Anweisung, Zahlungen, Einnahmen, Auszahlung, Einnahmen
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d9845fdbd9c8dad77c8599a04850a47573858e8
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445279"
+ms.locfileid: "5481665"
 ---
 # <a name="payout-summary"></a>Auszahlungsübersicht
 
@@ -72,7 +72,7 @@ Beachten Sie, dass in den oben genannten Abschnitten nur Informationen zu Ihren 
 | Historischer Saldo        | Auszahlungskontostände aus einem historischen Zahlungssystem                                                             |
 | Passin-Steuer              | Steueranpassung in Bezug auf Verkäufe in Korea                                                                   |
 
- 
+ 
 
 ## <a name="downloading-payment-transactions"></a>Herunterladen der Zahlungsvorgänge
 
@@ -112,11 +112,11 @@ In der folgenden Tabelle werden die Felder der CSV-Datei erläutert. Beachten Si
 | Qualifikationsdatum/Uhrzeit   | Datum und Uhrzeit, an dem/zu der der Transaktionserlös zur Auszahlung qualifiziert wird (UTC). Wenn eine Auszahlung erstellt wird, enthält diese Transaktionserlöse, die einen Qualifizierungszeitpunkt enthalten, der vor dem Erstellungsdatum der Auszahlung liegt. (Nur enthalten in der **reservierten** .csv-Datei.)                                                                     |
 | Gebühren                 | Zeigt eine Aufschlüsselung aller Gebührendetails, aggregiert in der Spalte „Transaktionsbetrag“. (Nur für Azure Marketplace; nicht enthalten in der **reservierten** .csv-Datei.)          |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Karte, Standort, Bilder, Überlagerung
 ms.localizationpriority: medium
 ms.openlocfilehash: ba1f7d52a1b16fbb421202229ce724dab384ffa0
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433898"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481792"
 ---
 # <a name="overlay-tiled-images-on-a-map"></a>Überlagern von nebeneinander angeordneten Bildern in einer Karte
 
@@ -29,8 +29,7 @@ ms.locfileid: "5433898"
 
 Kartendienste wie Nokia Karten und Bing Maps teilen Karten zum schnellen Abrufen und Anzeigen in quadratische Kacheln ein. Diese Kacheln messen 256 x 256 Pixel und werden vorab auf mehrere Detailebenen gerendert. Viele Dienste von Drittanbietern umfassen auch kartenbasierte Daten, die in Kacheln aufgeteilt sind. Verwenden Sie Kachelquellen, um Kacheln von Drittanbietern abzurufen oder benutzerdefinierte Kacheln zu erstellen. Überlagern Sie diese auf der angezeigten Karte im [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)-Objekt.
 
-**Wichtig**  
-Wenn Sie Kachelquellen verwenden, müssen Sie keinen Code schreiben, um einzelne Kacheln anzufordern oder zu positionieren. Das [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)-Objekt fordert bei Bedarf Kacheln an. Bei jeder Anforderung werden die X- und Y-Koordinaten und der Zoomfaktor für die einzelnen Kacheln angegeben. Geben Sie einfach das Format des URIs oder Dateinamens an, um die Kacheln in der **UriFormatString**-Eigenschaft abzurufen. Dazu fügen Sie ersetzbare Parameter in den Basis-URI oder Dateinamen ein, um anzugeben, wo die X- und Y-Koordinaten und der Zoomfaktor für jede Kachel übergeben werden.
+**Wichtige**  Wenn Sie kachelquellen verwenden, müssen Sie keinen Schreiben von Code zum Anfordern oder um einzelne Kacheln zu positionieren. Das [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004)-Objekt fordert bei Bedarf Kacheln an. Bei jeder Anforderung werden die X- und Y-Koordinaten und der Zoomfaktor für die einzelnen Kacheln angegeben. Geben Sie einfach das Format des URIs oder Dateinamens an, um die Kacheln in der **UriFormatString**-Eigenschaft abzurufen. Dazu fügen Sie ersetzbare Parameter in den Basis-URI oder Dateinamen ein, um anzugeben, wo die X- und Y-Koordinaten und der Zoomfaktor für jede Kachel übergeben werden.
 
 In diesem Beispiel sehen Sie eine [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636992)-Eigenschaft für eine [**HttpMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636986)-Klasse. Diese zeigt die ersetzbaren Parameter für die X- und Y-Koordinaten und den Zoomfaktor an.
 
@@ -196,7 +195,7 @@ Zum Laden von Kacheln aus dem lokalen Speicher können Sie die folgenden Protoko
 | ms-appdata:///temp | Verweist auf die temporären Ordner der App. |
 |  | Dies ist der Pfad, auf den die [ApplicationData.TemporaryFolder](https://msdn.microsoft.com/library/windows/apps/br241629)-Eigenschaft verweist. |
 
- 
+ 
 
 Im folgenden Beispiel werden Kacheln, die als Dateien im Installationsverzeichnis der App gespeichert werden, mithilfe des `ms-appx:///`-Protokolls geladen. Der Wert der [**UriFormatString**](https://msdn.microsoft.com/library/windows/apps/dn636998)-Eigenschaft ist im Konstruktor der [**LocalMapTileDataSource**](https://msdn.microsoft.com/library/windows/apps/dn636994)-Klasse angegeben. In diesem Beispiel werden Kacheln nur angezeigt, wenn der Zoomfaktor für die Karte innerhalb des Bereichs liegt, der durch die optionale [**ZoomLevelRange**](https://msdn.microsoft.com/library/windows/apps/dn637171)-Eigenschaft angegeben ist.
 

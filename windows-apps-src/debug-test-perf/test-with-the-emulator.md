@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 17e5aa64fff2c42974dbb78ce3cdcff1ca414946
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5431603"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483830"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Tests mit dem Emulator für Microsoft Windows10Mobile
 
@@ -49,7 +49,7 @@ Informationen zum Überprüfen der BIOS-Anforderungen finden Sie unter [So wird'
 
 Wählen Sie zum Überprüfen der RAM- und Betriebssystemanforderungen in der Systemsteuerung **System und Sicherheit** und anschließend **System**.
 
-Microsoft-Emulator für Windows 10 Mobile erfordert Visual Studio 2015 oder höher. Es ist nicht kompatibel mit früheren Versionen von Visual Studio.
+Microsoft-Emulator für Windows 10 Mobile erfordert Visual Studio 2015 oder höher; Es ist nicht kompatibel mit früheren Versionen von Visual Studio.
 
 Der Microsoft-Emulator für Windows10Mobile kann keine Apps laden, die für eine WindowsPhone-Betriebssystemversion vor Windows Phone OS7.1 konzipiert sind.
 
@@ -68,7 +68,7 @@ Wenn Sie den Microsoft-Emulator für Windows10Mobile deinstallieren, wird automa
 
 ### <a name="running"></a>Running
 
-Wählen Sie zum Ausführen einer app im Emulator einfach einen emulierten Gerät aus dem **führen** Dropdown-Menü in Visual Studio.
+Wählen Sie zum Ausführen einer app im Emulator **Ausführen** Dropdown-Menü in Visual Studio einfach einen emulierten Gerät.
 
 ![Verfügbare Emulatoren mit Auflösung, Größe und Arbeitsspeicher](images/em-list.png)
 
@@ -181,7 +181,7 @@ In allen Modi bietet das Emulatorfenster drei interessante Bereiche.
 -   Rechts oben befinden sich die Protokolle. Wenn Sie ein Gerätepaar aneinander oder ein Gerät an das POS-Terminal halten, wird dieses Ereignis protokolliert. Gleiches gilt, wenn die Geräte wieder voneinander getrennt werden. In diesem Abschnitt wird auch erfasst, ob Ihre App vor dem Verbindungsabbruch reagiert hat, und alle Aktionen, die Sie auf der Benutzeroberfläche des Emulators ausgeführt haben, werden mit Zeitstempel dokumentiert. Die Protokolle bleiben beim Moduswechsel erhalten und können mithilfe der Löschschaltfläche**** über dem Protokollbildschirm**** jederzeit gelöscht werden.
 -   Die untere Bildschirmhälfte fungiert als Meldungsprotokoll und zeigt abhängig vom ausgewählten Modus die Aufzeichnung aller Meldungen, die über die derzeit ausgewählte Verbindung gesendet oder empfangen werden.
 
-> **Wichtig**  Beim erstmaligen Starten des Tapper-Tools erscheint eine Eingabeaufforderung der Windows-Firewall. Aktivieren Sie unbedingt alle drei Kontrollkästchen, und lassen Sie das Tool durch die Firewall, da es ansonsten nicht funktioniert.
+> **Wichtige**beim erstmaligen des Tapper-Tools starten erhalten Sie eine Windows-Firewall auffordern. Aktivieren Sie unbedingt alle drei Kontrollkästchen, und lassen Sie das Tool durch die Firewall, da es ansonsten nicht funktioniert.
 
 Halten Sie sich nach dem Starten des Schnellstart-Installationsprogramms an die obige Anweisung, und aktivieren Sie in der Eingabeaufforderung der Firewall alle drei Kontrollkästchen. Das Tapper-Tool muss außerdem auf dem gleichen physischen Hostcomputer installiert und verwendet werden wie der Microsoft-Emulator.
 
@@ -369,7 +369,7 @@ Im Modus **Route** können Sie über die Dropdownliste eines der folgenden Gesch
 | Speed Limit | Die Geschwindigkeitsbegrenzung der Route. | Nicht zutreffend   | Die Route wird unter Berücksichtigung der geltenden Geschwindigkeitsbegrenzung durchlaufen. |
 | Walking     | 5km/h                   | 1,39m/s           | Die Route wird mit einer natürlichen Schrittgeschwindigkeit von 5km/h durchlaufen. |
 | Biking      | 25 km/h                  | 6,94 m/s           | Die Route wird mit einer natürlichen Radfahrergeschwindigkeit von 25km/h durchlaufen. |
-| Fast        |                          |                  |Die Route wird ohne Berücksichtigung der geltenden Geschwindigkeitsbegrenzung durchlaufen. | 
+| Fast        |                          |                  |Die Route wird ohne Berücksichtigung der geltenden Geschwindigkeitsbegrenzung durchlaufen. | 
 
 **Modus "Route"**
 
@@ -456,7 +456,7 @@ Die Registerkarte **SD-Karte** simuliert mithilfe eines Ordner auf dem Entwicklu
         -   Wenn Sie während des Synchronisierungsvorgangs auf **Synchronisierung abbrechen** klicken, wird die Karte ausgeworfen, und die Ergebnisse des Synchronisierungsvorgangs sind unvollständig.
     -   Die Schaltfläche **Eject SD card** wird wieder zu **Insert SD card**.
 
-> **Hinweis**  Da die vom Smartphone verwendete SD-Karte mit dem FAT32-Dateisystem formatiert ist, beträgt die maximale Dateigröße 32 GB.
+> **Hinweis:** vom Smartphone verwendete da SD-Karte mit dem FAT32-Dateisystem formatiert ist, beträgt die maximale Dateigröße 32GB.
 
 Die Geschwindigkeit von Lese- und Schreibvorgängen wird für die simulierte SD-Karte realistisch gedrosselt. Der Zugriff auf eine SD-Karte dauert länger als der Zugriff auf die Festplatte des Computers.
 
@@ -625,17 +625,17 @@ Im Folgenden werden bekannte Probleme mit dem Emulator sowie Möglichkeiten besc
 
 ### <a name="error-message-failed-while-removing-virtual-ethernet-switch"></a>Fehlermeldung: „Fehler beim Entfernen des virtuellen Ethernet-Switchs.“
 
-In bestimmten Situationen (etwa beim Aktualisieren auf einen neuen Windows10-Test-Flight), kann es vorkommen, dass ein dem Emulator zugeordneter virtueller Netzwerkswitch in einen Zustand versetzt wird, in dem er nicht mehr über die Benutzeroberfläche gelöscht werden kann.
+In bestimmten Situationen, etwa beim Aktualisieren auf einen neuen Windows 10-Flight, können Sie dem Emulator zugeordneter virtueller Netzwerkswitch in einen Zustand abrufen, in denen es nicht über die Benutzeroberfläche gelöscht werden kann.
 
 Führen Sie zum Beheben dieses Problems an einer Eingabeaufforderung mit Administratorrechten den Befehl „Netcfg -d“ aus: `C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`. Starten Sie den Computer nach Ausführung des Befehls neu, um den Wiederherstellungsvorgang abzuschließen.
 
-**Hinweis**  Dieser Befehl löscht nicht nur die mit dem Emulator verknüpften Geräte, sondern alle Netzwerkgeräte. Beim Neustart des Computers werden alle Hardwarenetzwerkgeräte automatisch erkannt.
- 
+**Hinweis:** dieser Befehl löscht alle Netzwerkgeräte, nicht nur die mit dem Emulator verknüpften. Beim Neustart des Computers werden alle Hardwarenetzwerkgeräte automatisch erkannt.
+ 
 ### <a name="unable-to-launch-the-emulators"></a>Die Emulatoren können nicht gestartet werden.
 
 Der Microsoft-Emulator enthält „XDECleanup.exe“ – ein Tool, das alle VMs, differenzierenden Datenträger und emulatorspezifischen Netzwerkswitches löscht. Dieses Tool ist bereits in den Binärdateien (XDE) des Emulators enthalten. Verwenden Sie dieses Tool zum Bereinigen von Emulator-VMs, wenn diese einen fehlerhaften Zustand aufweisen. Führen Sie das Tool über eine Eingabeaufforderung mit Administratorrechten aus:`C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`
 
-> **Hinweis**  „XDECleanup.exe“ löscht alle emulatorspezifischen Hyper-V-VMs sowie alle VM-Prüfpunkte und gespeicherten Zustände.
+> **Hinweis:** XDECleanup.exe löscht alle emulatorspezifischen Hyper-V-VMs, und es auch alle VM-Prüfpunkte und gespeicherten Zustände.
 
 ### <a name="uninstall-windows-10-for-mobile-image"></a>Deinstallieren des Windows10Mobile-Image
 
@@ -666,5 +666,5 @@ Antworten und Problemlösungen für die Windows10-Tools finden Sie im [Forum fü
 
 * [Ausführen von WindowsPhone-Apps im Emulator](https://msdn.microsoft.com/library/windows/apps/xaml/dn632391.aspx)
 * [Windows und Windows Phone SDK-Archiv](https://dev.windows.com/downloads/sdk-archive)
- 
+ 
 

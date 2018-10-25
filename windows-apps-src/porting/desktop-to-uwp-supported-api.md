@@ -12,13 +12,13 @@ keywords: windows10, UWP
 ms.assetid: 142b9c9b-3f7d-41b6-80da-1505de2810f9
 ms.localizationpriority: medium
 ms.openlocfilehash: c39301c37c83f57a67dca35c3628bd9f3eda2583
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5431709"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5482262"
 ---
-# <a name="uwp-apis-available-to-a-packaged-desktop-app"></a>UWP-APIs für eine verpackte desktop-app verfügbar
+# <a name="uwp-apis-available-to-a-packaged-desktop-app"></a>UWP-APIs verfügbar, um eine verpackte desktop-app
 
 Verpackte Desktop-Apps können eine Vielzahl von UWP-APIs (Universelle Windows Plattform) verwenden, selbst wenn ihre Umwandlung in eine UWP-App nicht vollständig ist. Dieser Artikel führt die verfügbaren Klassen auf, die Ihre verpackten App verwenden kann.
 

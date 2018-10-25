@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Bewertungen, Rezensionen
 ms.localizationpriority: medium
 ms.openlocfilehash: cc3dce673b434673f0e8a72158c2d3a593f02c52
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5431409"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483690"
 ---
 # <a name="request-ratings-and-reviews-for-your-app"></a>Anfordern von Bewertungen und Prüfungen für Ihre App
 
@@ -25,7 +25,7 @@ Sie können Code zu Ihrer Universellen Windows-Plattform (UWP)-App hinzufügen, 
 Wenn Sie Ihre Bewertungs- und Rezensionsdaten analysieren möchten, können Sie die Daten im Windows Dev Center-Dashboard einsehen oder die Microsoft Store-Analyse-API zum programmgesteuerten Abrufen dieser Daten verwenden.
 
 > [!IMPORTANT]
-> Wenn Sie eine Bewertung-Funktion innerhalb Ihrer app hinzufügen, müssen alle Rezensionen der Benutzer auf den Store Bewertung Mechanismen, unabhängig von der Bewertung ausgewählte Star senden. Wenn Sie Feedback oder Kommentare von Benutzern zu erfassen, muss es deutlich gemacht werden, dass es ist nicht im Zusammenhang mit der app-Bewertung oder Rezensionen im Store jedoch direkt an die app-Entwickler gesendet. Finden Sie unter den Entwickler Verhaltensregeln für Weitere Informationen im Zusammenhang mit [Fraudulent oder unredliche Aktivitäten](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities).
+> Wenn Sie eine Bewertung Funktion innerhalb Ihrer app hinzufügen, müssen alle Rezensionen der Benutzer auf den Store Bewertung Mechanismen, unabhängig von der Bewertung ausgewählte Star senden. Wenn Sie Feedback oder Kommentare von Benutzern erfassen, muss es deutlich gemacht werden, dass er bezieht sich nicht auf die app-Bewertung oder Rezensionen im Store jedoch direkt an die app-Entwickler gesendet. Finden Sie unter den Entwickler Verhaltensregeln für Weitere Informationen im Zusammenhang mit [Fraudulent oder unredliche Aktivitäten](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities).
 
 ## <a name="show-a-rating-and-review-dialog-in-your-app"></a>Ein Bewertungs- und Rezensionsdialogfeld in Ihrer App anzeigen
 
@@ -65,8 +65,8 @@ Nach Übermittlung der Anforderung zum Anzeigen eines Bewertungs- und Rezensions
 Das folgende Beispiel veranschaulicht den Rückgabewert für diese Anforderung, nachdem der Kunde erfolgreich eine Bewertung oder Rezension übermittelt hat.
 
 ```json
-{ 
-  "status": "success", 
+{ 
+  "status": "success", 
   "data": {
     "updated": false
   },
@@ -77,8 +77,8 @@ Das folgende Beispiel veranschaulicht den Rückgabewert für diese Anforderung, 
 Das folgende Beispiel veranschaulicht den Rückgabewert für diese Anforderung, nachdem der Kunde gewählt hat, keine Bewertung oder Rezension zu übermitteln.
 
 ```json
-{ 
-  "status": "aborted", 
+{ 
+  "status": "aborted", 
   "errorDetails": "Navigation was unsuccessful"
 }
 ```

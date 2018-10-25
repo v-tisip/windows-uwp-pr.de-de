@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, werben, Werbung, Highlights, Showcase, Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 18b2212a0b063611a546c3f627016fc7d3179071
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5440294"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480915"
 ---
 # <a name="make-your-app-easier-to-promote"></a>Einfacheres Bewerben Ihrer App
 
@@ -47,7 +47,7 @@ Im MicrosoftStore werden verschiedene Apps nach Kategorie oder Thema angezeigt. 
 
 
 
- 
+ 
 
 
 

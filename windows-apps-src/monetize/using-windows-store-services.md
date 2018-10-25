@@ -11,15 +11,15 @@ ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste
 ms.localizationpriority: medium
 ms.openlocfilehash: d53fa39d0c6359e6f081c62a415cbf1874549b8f
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5439390"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483227"
 ---
 # <a name="microsoft-store-services"></a>Microsoft Store-Dienste
 
-Im Microsoft Store stellt mehrere Dienste, die Sie über REST-APIs, um programmgesteuert auf bestimmte Datentypen für apps zuzugreifen, die für Ihre oder das Ihrer Organisation Windows Dev Center-Konto registriert sind aufrufen können.
+Im Microsoft Store stellt mehrere Dienste, die Sie aufrufen können, über REST-APIs, um programmgesteuert auf bestimmte Datentypen für apps zuzugreifen, die für Ihre oder das Ihrer Organisation Windows Dev Center-Konto registriert sind bereit.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -31,5 +31,5 @@ Im Microsoft Store stellt mehrere Dienste, die Sie über REST-APIs, um programmg
 | [Ausführen von Anzeigenkampagnen](run-ad-campaigns-using-windows-store-services.md) | Verwenden Sie die *Microsoft Store-werbungs-API* können Sie programmgesteuert werbeanzeigenkampagnen für Ihre apps verwalten. Mit dieser API können Sie Ihre Kampagnen und andere zugehörige Ressourcen, z.B. Zielgruppen und Werbemittel, erstellen, aktualisieren und überwachen. Diese API ist besonders für Entwickler nützlich, die umfangreiche Kampagnen erstellen und dies nicht im Windows Dev Center-Dashboards ausführen möchten. |
 | [Erstellen und Verwalten von Übermittlungen](create-and-manage-submissions-using-windows-store-services.md) | Verwenden Sie die *Microsoft Store-Übermittlungs-API*, um Übermittlungen für Apps, Add-Ons und Flight-Pakete für Ihr Windows Dev Center-Konto oder das Konto Ihres Unternehmens programmgesteuert abzufragen und zu erstellen. Diese API ist hilfreich, wenn über Ihr Konto viele Apps oder Add-Ons verwaltet werden und Sie den Übermittlungsprozess für diese Ressourcen automatisieren und optimieren möchten. |
 | [Verwalten von gezielten Angeboten ](manage-targeted-offers-using-windows-store-services.md) | Verwenden Sie die *Microsoft Store für gezielte Angebote API* , um programmgesteuert Inanspruchnahme ein gezieltes Angebots, das den erfolgreichen Kauf des Add-Ons in Ihrer app zugeordnet ist. |
-| [Verwalten von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md)  | Wenn Sie einen Katalog mit apps und Add-ons im Store verfügen, können Sie mithilfe des *Microsoft Store-Sammlungs-API* und *Microsoft Store-Einkaufs-API* Besitzerinformationen zu diesen Produkten aus Ihren Diensten, Melden eines verbrauchsprodukts als erfüllt für einen Benutzer und eine Berechtigung für ein Benutzer ein kostenloses Produkt gewähren.  |
+| [Verwalten von Produktansprüchen aus einem Dienst](view-and-grant-products-from-a-service.md)  | Wenn Sie einen Katalog mit apps und Add-ons im Store verfügen, können Sie mithilfe des *Microsoft Store-Sammlungs-API* und *Microsoft Store-Einkaufs-API* Besitzerinformationen zu diesen Produkten aus Ihren Diensten, Melden eines verbrauchsprodukts als erfüllt für einen Benutzer, und eine Berechtigung für ein Benutzer ein kostenloses Produkt gewähren.  |
 | [App-Metadaten-API für Anzeigennetzwerke](app-metadata-api-for-advertising-networks.md)  | Anzeigennetzwerke kann diese API verwenden, um programmgesteuert Metadaten zu apps im Microsoft Store, einschließlich Details wie die Beschreibung und Kategorie für den Store-Eintrag der app und gibt an, ob die app für Kinder unter 13 Jahren zielt abzurufen. Der Zugriff auf die API beschränkt sich derzeit auf Entwickler, die von Microsoft eine Berechtigung erhalten haben.  |

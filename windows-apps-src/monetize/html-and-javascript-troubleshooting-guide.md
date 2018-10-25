@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Anzeigen, Werbung, AdControl, Problembehandlung, HTML, Javascript
 ms.localizationpriority: medium
 ms.openlocfilehash: 5474ac51d57decfe2c4f4d5f1969da5b4436fd14
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5445927"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481942"
 ---
 # <a name="html-and-javascript-troubleshooting-guide"></a>Anleitung zur Problembehandlung für HTML und JavaScript
 
@@ -379,6 +379,6 @@ Dieses Thema enthält Lösungen für allgemeine Entwicklungsprobleme mit den Mic
 
 3.  **AdControl** verhält sich normal. In einigen Fällen wird dieselbe Anzeige mehrmals in Folge angezeigt, wodurch der Eindruck entsteht, dass Anzeigen nicht aktualisiert werden.
 
- 
+ 
 
- 
+ 

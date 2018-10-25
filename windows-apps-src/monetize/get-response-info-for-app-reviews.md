@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-API für Rezensionen, Antwortinformationen
 ms.localizationpriority: medium
 ms.openlocfilehash: 0212d7457ab85749fd66397876144acecd5dfcf1
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5437838"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5483276"
 ---
 # <a name="get-response-info-for-reviews"></a>Antwortinformationen für Rezensionen abrufen
 
@@ -74,7 +74,7 @@ Authorization: Bearer <your access token>
 | CanRespond      | Boolean  | Der Wert **true** gibt an, dass Sie auf die angegebene Rezension antworten können oder dass Sie berechtigt sind, auf eine beliebige Rezensionen für die angegebene App zu antworten. Andernfalls ist dieser Wert **false**.       |
 | DefaultSupportEmail  | string |  Die von Ihrer App [unterstütze E-Mail-Adresse](../publish/enter-app-properties.md#support-contact-info) finden Sie im Store-Eintrag Ihrer App. Wenn Sie keine unterstützte E-Mail-Adresse angegeben haben, ist dieses Feld leer.    |
 
- 
+ 
 ### <a name="response-example"></a>Antwortbeispiel
 
 Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese Anforderung.

@@ -4,18 +4,18 @@ Description: The Usage report in the Windows Dev Center dashboard lets you see h
 title: Nutzungsbericht
 ms.assetid: 5F0E7F94-D121-4AD3-A6E5-9C0DEC437BD3
 ms.author: wdg-dev-content
-ms.date: 06/01/2018
+ms.date: 10/05/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows10, Uwp, Verwendung, benutzerdefiniertes Ereignis, Bericht, Telemetrie, Benutzersitzungen
 ms.localizationpriority: medium
-ms.openlocfilehash: 96d36ebbaa2b7f1a650e2b0f794a1976c1f525a6
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.openlocfilehash: c5ef2136eaf17fc902dcfc7840ff6dbdac56ef0d
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5439123"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480186"
 ---
 # <a name="usage-report"></a>Nutzungsbericht
 
@@ -48,9 +48,10 @@ Dieses Diagramm enthält vier separate Registerkarten, die die Nutzung pro Tag o
 - **Benutzer**: Zeigt die Gesamtanzahl der **Benutzersitzungen** über den ausgewählten Zeitraum an. Jede Benutzersitzung stellt einen unterschiedlichen Zeitraum dar und beginnt, wenn die App gestartet wird (Prozessbeginn) und endet bei Prozessende oder nach einer bestimmten Zeit der Inaktivität. Aus diesem Grund kann ein einzelner Kunde mehrere Benutzersitzungen am gleichen Tag oder in der gleichen Woche haben. Die Gesamtanzahl der **aktiven Benutzer** (alle Kunden, die die App an diesem Tag oder in dieser Woche nutzen) und **neuen Benutzer** (ein Kunde, der Ihre App das erste Mal an diesem Tag oder in der Woche nutzt) wird ebenfalls angezeigt. Wenn Sie Filter auf der Seite angewendet haben, werden **neue Benutzer** in diesem Diagramm nicht angezeigt.
 - **Geräte**: Zeigt die Anzahl der täglichen Geräte an, die von allen Benutzern zur Interaktion mit Ihrer App verwendet werden.
 - **Dauer**: Zeigt die Gesamtanzahl der aktiven Stunden an (Stunden, in denen ein Benutzer aktiv Ihrer App verwendet).
+- **Engagement**: Zeigt die durchschnittliche Engagement Minuten pro Benutzer (durchschnittliche Dauer alle benutzersitzungen). 
 - **Beibehaltung**: Zeigt die Gesamtanzahl der **DAU/MAU** (tägliche aktive Benutzer/monatliche aktive Benutzer) über den ausgewählten Zeitraum an.
 
-Wenn **30d** Zeitraum aktiviert ist, sehen Sie Kreis Marker, wenn der **Benutzer**oder **Geräte**, **Dauer** Registerkarten angezeigt. Diese darstellen eine erhebliche Erhöhung oder in einem bestimmten Wert, den wir glauben, dass Sie kennen sollten verringern. Das Datum, an dem die Kreis angezeigt wird, steht das Ende der Woche, in der wir eine erhebliche Erhöhung oder Verringerung im Vergleich zur vorherigen Woche davor erkannt. Um weitere Informationen zu Änderungen zu sehen, zeigen Sie auf den Kreis.  
+Wenn der **30d** Zeitraum aktiviert ist, kann Kreis Markierungen angezeigt, wenn die **Benutzer**oder **Geräte**, **Dauer** Registerkarten anzeigen. Diese darstellen eine erhebliche Erhöhung oder einen bestimmten Wert, die wir glauben, dass Sie kennen sollten verringern. Das Datum, an dem der Kreis angezeigt wird, stellt das Ende der Woche, in der wir eine erhebliche Erhöhung oder Verringerung, die im Vergleich zur vorherigen Woche davor erkannt. Um weitere Informationen zu Änderungen anzuzeigen, zeigen Sie auf den Kreis.  
 
 > [!TIP]
 > Sie können weitere Einblicke im Zusammenhang mit erhebliche Änderungen an der letzten 30 Tage im [Bericht](insights-report.md)anzeigen.
@@ -90,4 +91,4 @@ Für jedes Ereignis wird der Name des Ereignisses und ein Ereignisanzahl angezei
 
 
 
- 
+ 

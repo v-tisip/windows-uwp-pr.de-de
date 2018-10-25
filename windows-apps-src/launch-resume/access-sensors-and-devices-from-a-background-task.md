@@ -8,14 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
-keywords: Windows 10, Uwp, Hintergrundaufgabe, für die
+keywords: Windows 10 Uwp, Hintergrund Aufgabe
 ms.localizationpriority: medium
 ms.openlocfilehash: 99f853da53302d4080bfa9462da0ec524e8d2064
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5436158"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480840"
 ---
 # <a name="access-sensors-and-devices-from-a-background-task"></a>Zugreifen auf Sensoren und Geräte mittels einer Hintergrundaufgabe
 
@@ -33,7 +33,7 @@ Erstellen Sie zum Zugreifen auf Sensoren oder Peripheriegeräte im Hintergrund e
 
 Wenn Ihre App für den Benutzer nicht mehr sichtbar ist, wird die App von Windows angehalten oder beendet, um Arbeitsspeicher und CPU-Ressourcen freizugeben. Dies ermöglicht anderen Apps die Ausführung im Vordergrund und reduziert den Stromverbrauch. In diesem Fall wären alle laufenden Datenereignisse ohne die Hilfe einer Hintergrundaufgabe verloren. Windows stellt den Trigger für die Hintergrundaufgabe bereit: [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337). Damit kann Ihre App lange Synchronisierungs- und Überwachungsvorgänge auf Geräten und Sensoren auch dann sicher im Hintergrund ausführen, wenn Ihre App angehalten wurde. Weitere Informationen zum App-Lebenszyklus finden Sie unter [Starten, Fortsetzen und Hintergrundaufgaben](index.md). Weitere Informationen zu Hintergrundaufgaben finden Sie unter [Unterstützen von Apps durch Hintergrundaufgaben](support-your-app-with-background-tasks.md).
 
-**Hinweis**  In einer universellen Windows-App erfordert das Synchronisieren eines Geräts im Hintergrund, dass der Benutzer das Synchronisieren im Hintergrund für Ihre App genehmigt hat. Das Gerät muss – mit E/A-Aktivierung – auch mit dem PC verbunden oder gekoppelt sein und kann maximal zehn Minuten lang Aktivitäten im Hintergrund ausführen. Weitere Details zur Richtlinienerzwingung sind weiter unten in diesem Thema beschrieben.
+**Hinweis:** In einer universellen Windows-app Synchronisieren eines Geräts im Hintergrund erfordert, dass der Benutzer Hintergrund Synchronisierung von Ihrer app genehmigt hat. Das Gerät muss – mit E/A-Aktivierung – auch mit dem PC verbunden oder gekoppelt sein und kann maximal zehn Minuten lang Aktivitäten im Hintergrund ausführen. Weitere Details zur Richtlinienerzwingung sind weiter unten in diesem Thema beschrieben.
 
 ### <a name="limitation-critical-device-operations"></a>Einschränkung: Kritische Gerätevorgänge
 
@@ -85,10 +85,9 @@ Führen Sie diese grundlegenden Schritte aus, um [**DeviceUseTrigger**](https://
 8.  Windows überwacht die Systembedingungen und die Aufgabenlaufzeit und bricht die Aufgabe ggf. ab, falls die erforderlichen Bedingungen nicht mehr erfüllt sind.
 9.  Wenn die Hintergrundaufgabe den aktuellen Status oder den Abschluss des Vorgangs meldet, empfängt die App diese Ereignisse über die Status- und Abschlussereignisse der registrierten Aufgabe.
 
-**Wichtig**  
-Beachten Sie bei der Verwendung von [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) diese wichtigen Punkte:
+**Wichtige**  die [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)verwenden diese wichtigen Punkte berücksichtigen:
 
--   Die Möglichkeit zur programmgesteuerten Auslösung von Hintergrundaufgaben mithilfe von [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) wurde erstmals in Windows 8.1 und Windows Phone 8.1 eingeführt.
+-   Die Möglichkeit, programmgesteuert Hintergrundaufgaben auslösen, mit denen die [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) wurde erstmals in Windows8.1 und Windows Phone 8.1 eingeführt.
 
 -   Bestimmte Richtlinien werden von Windows erzwungen, um sicherzustellen, dass die Zustimmung des Benutzers vorliegt, wenn Peripheriegeräte auf dem PC aktualisiert werden.
 
@@ -96,8 +95,8 @@ Beachten Sie bei der Verwendung von [**DeviceUseTrigger**](https://msdn.microsof
 
 -   Hintergrundaufgaben, für die [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) verwendet wird, können von Windows ggf. abgebrochen werden, wenn bestimmte Richtlinienanforderungen nicht mehr erfüllt sind, einschließlich einer Maximaldauer für die Hintergrundzeit (Gesamtbetrachtungszeit). Es ist wichtig, diese Richtlinienanforderungen zu berücksichtigen, wenn Sie diese Hintergrundaufgaben zum Interagieren mit Ihrem Peripheriegerät verwenden.
 
-**Tipp**  Laden Sie ein Beispiel herunter, um zu sehen, wie diese Hintergrundaufgaben funktionieren. Ein Beispiel für die Vorgehensweise auf einem PC finden Sie unter [Beispiel für ein benutzerdefiniertes USB-Gerät](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Ein Beispiel für ein Smartphone finden Sie unter [Beispiel für Hintergrundsensoren](http://go.microsoft.com/fwlink/p/?LinkId=393307).
- 
+**Tipp:** Laden Sie ein Beispiel, um zu sehen, wie diese Hintergrundaufgaben funktionieren. Ein Beispiel für die Vorgehensweise auf einem PC finden Sie unter [Beispiel für ein benutzerdefiniertes USB-Gerät](http://go.microsoft.com/fwlink/p/?LinkId=301975 ). Ein Beispiel für ein Smartphone finden Sie unter [Beispiel für Hintergrundsensoren](http://go.microsoft.com/fwlink/p/?LinkId=393307).
+ 
 ## <a name="frequency-and-foreground-restrictions"></a>Einschränkungen in Bezug auf die Häufigkeit und den Vordergrund
 
 Es besteht keine Einschränkung hinsichtlich der Häufigkeit, mit der Ihre App Vorgänge initiieren kann, aber sie kann nur jeweils einen Hintergrundaufgabenvorgang mit [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) ausführen (dies wirkt sich nicht auf andere Arten von Hintergrundaufgaben aus) und eine Hintergrundaufgabe nur initiieren, während sich Ihre App im Vordergrund befindet. Wenn sich Ihre App nicht im Vordergrund befindet, kann sie eine Hintergrundaufgabe nicht mit **DeviceUseTrigger** initiieren. Ihre App kann keine zweite **DeviceUseTrigger**-Hintergrundaufgabe initiieren, bevor die erste Hintergrundaufgabe abgeschlossen wurde.

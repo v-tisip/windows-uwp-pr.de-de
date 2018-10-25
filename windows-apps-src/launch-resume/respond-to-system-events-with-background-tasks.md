@@ -15,11 +15,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 45f6e10bc355e3a2dc054d54fef35fbeb1095dc7
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5438436"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5481540"
 ---
 # <a name="respond-to-system-events-with-background-tasks"></a>Reagieren auf Systemereignisse mit Hintergrundaufgaben
 
@@ -89,7 +89,7 @@ Rufen Sie [**RemoveAccess**](https://msdn.microsoft.com/library/windows/apps/hh7
 
 > [!NOTE]
 > Parameter für die Registrierung von Hintergrundaufgaben werden zum Zeitpunkt der Registrierung überprüft. Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben. Stellen Sie sicher, dass Ihre App Szenarien, in denen die Registrierung von Hintergrundaufgaben einen Fehler verursacht, problemlos verarbeitet.
- 
+ 
 ## <a name="remarks"></a>Anmerkungen
 
 Laden Sie das [Beispiel zu Hintergrundaufgaben](http://go.microsoft.com/fwlink/p/?LinkId=618666) herunter, um die Registrierung der Hintergrundaufgabe in Aktion zu sehen.

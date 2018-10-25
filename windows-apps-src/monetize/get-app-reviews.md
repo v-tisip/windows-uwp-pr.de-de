@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Rezensionen
 ms.localizationpriority: medium
 ms.openlocfilehash: c14b2ce6dd9fa7058ef3dbcd8e7e7a17a05fe78e
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5433395"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5480935"
 ---
 # <a name="get-app-reviews"></a>Abrufen von App-Rezensionen
 
@@ -115,7 +115,7 @@ Authorization: Bearer <your access token>
 | @nextLink  | String | Wenn weitere Seiten mit Daten vorhanden sind, enthält diese Zeichenfolge einen URI, mit dem Sie die nächste Seite mit Daten anfordern können. Beispielsweise wird dieser Wert zurückgegeben, wenn der Parameter **top** der Anforderung auf 10000 festgelegt ist, es jedoch mehr als 10.000 Zeilen mit Rezensionsdaten für die Abfrage gibt. |
 | TotalCount | int    | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.  |
 
- 
+ 
 ### <a name="review-values"></a>Rezensionswerte
 
 Elemente im Array *Value* enthalten die folgenden Werte.

@@ -10,15 +10,15 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ca47bfb26649f2e8a9fc1344c3264d90548eb836
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445727"
+ms.locfileid: "5482312"
 ---
 # <a name="attract-customers-and-promote-your-apps"></a>Kunden gewinnen und Bewerben von Apps
 
-Nachdem Ihre app im Microsoft Store ist, ist es Zeit für die es so vielen Kunden wie möglich präsentieren. Wir bieten viele Features, mit denen Sie Ihre Produkte bewerben und Ihre Kundenbasis vergrößern können, einschließlich Anzeigenkampagnen, Angebotscodes, Sonderpreise und vielem mehr.
+Sobald Ihre app im Microsoft Store ist, ist es Zeit, um es so viele Kunden wie möglich präsentieren. Wir bieten viele Features, mit denen Sie Ihre Produkte bewerben und Ihre Kundenbasis vergrößern können, einschließlich Anzeigenkampagnen, Angebotscodes, Sonderpreise und vielem mehr.
 
 -   [Generieren von Werbecodes](generate-promotional-codes.md)
 -   [Erstellen einer Anzeigenkampagne für Ihre App](create-an-ad-campaign-for-your-app.md)
@@ -28,6 +28,6 @@ Nachdem Ihre app im Microsoft Store ist, ist es Zeit für die es so vielen Kunde
 -   [Erstellen eines Links zu Ihrer App](link-to-your-app.md)
 -   [Einfacheres Bewerben Ihrer App](make-your-app-easier-to-promote.md)
 
- 
+ 
 
- 
+ 

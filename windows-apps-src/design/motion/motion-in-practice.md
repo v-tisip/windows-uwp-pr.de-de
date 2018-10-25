@@ -15,11 +15,11 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 6001f955b3ab6a60446eb84296dc3bc52ad3a99e
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "5434102"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "5482995"
 ---
 # <a name="bringing-it-together"></a>Alles zusammenführen
 
@@ -85,9 +85,9 @@ Im Folgenden finden Sie 3 Möglichkeiten, die Grundlagen für fließende Bewegun
 
 > **Vorschau**: implizite Animation ist der [neuesten Windows 10 Insider Preview-Build und SDK](https://insider.windows.com/for-developers/)erforderlich.
 
-Implizite Animationen sind eine einfache Möglichkeit, Fluent-Bewegungen zu erreichen, indem Sie automatisch zwischen dem alte und neue Werte während der eine Änderung der Parameter interpoliert.
+Implizite Animationen sind eine einfache Möglichkeit, fließende Bewegung zu erzielen, indem Sie automatisch zwischen der alten und neuen Werte während der eine Änderung der Parameter interpoliert.
 
-Sie können implizit Änderungen an die folgenden Eigenschaften animieren:
+Sie können implizit animieren, Änderungen an die folgenden Eigenschaften:
 
 - [UIElement](/uwp/api/windows.ui.xaml.uielement)
   - **Opacity**
@@ -98,7 +98,7 @@ Sie können implizit Änderungen an die folgenden Eigenschaften animieren:
 - [Rahmen](/uwp/api/windows.ui.xaml.controls.border), [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter)oder [Panel](/uwp/api/windows.ui.xaml.controls.panel)
   - **Hintergrund**
 
-Jede Eigenschaft, die Änderungen, die implizit animiert haben können verfügt über eine entsprechende _Übergang_ -Eigenschaft. Um die Eigenschaft zu animieren, weisen Sie ein anderes Übergang auf die entsprechende _Übergang_ -Eigenschaft. Diese Tabelle zeigt den _Übergang_ Eigenschaften und der Übergangstyp, verwenden Sie für jede Datei.
+Jede Eigenschaft, die Änderungen implizit animiert haben können hat eine entsprechende _Übergang_ -Eigenschaft. Um die Eigenschaft zu animieren, weisen Sie ein anderes Übergang auf die entsprechende _Übergang_ -Eigenschaft. Diese Tabelle zeigt den _Übergang_ Eigenschaften und den Übergangstyp für jeden Typ verwenden.
 
 | Animierten Eigenschaft | Übergang-Eigenschaft | Implizite Übergangstyp |
 | -- | -- | -- |
@@ -110,7 +110,7 @@ Jede Eigenschaft, die Änderungen, die implizit animiert haben können verfügt 
 | [ContentPresenter.Background](/uwp/api/windows.ui.xaml.controls.contentpresenter.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.contentpresenter.backgroundtransition) | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
 | [Panel.Background](/uwp/api/windows.ui.xaml.controls.panel.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.panel.backgroundtransition)  | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
 
-In diesem Beispiel wird veranschaulicht, wie mit der Opacity-Eigenschaft und Übergang zu einer Schaltfläche eingeblendet, wenn das Steuerelement aktiviert ist und ausblenden, wenn es deaktiviert ist.
+In diesem Beispiel wird veranschaulicht, wie Sie die Opacity-Eigenschaft und Übergang zum Stellen einer Schaltfläche eingeblendet, wenn das Steuerelement aktiviert ist und ausblendungsanimationen, wenn es deaktiviert ist.
 
 ```xaml
 <Button x:Name="SubmitButton"
