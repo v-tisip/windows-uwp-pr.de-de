@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Stapelüberwachung, Fehler, Desktopanwendung
 ms.localizationpriority: medium
 ms.openlocfilehash: 60f4ed7251fa934190a96e8c7d6f0edd21520980
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5472163"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5513536"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-desktop-application"></a><span data-ttu-id="eccc4-104">Abrufen der Stapelüberwachung für einen Fehler in Ihrer Desktopanwendung</span><span class="sxs-lookup"><span data-stu-id="eccc4-104">Get the stack trace for an error in your desktop application</span></span>
 

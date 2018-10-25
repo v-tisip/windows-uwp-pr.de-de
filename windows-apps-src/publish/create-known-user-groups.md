@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Zielgruppe, Kunden, Flight-Gruppe, Benutzergruppen, bekannte Benutzer
 ms.localizationpriority: medium
 ms.openlocfilehash: e15b5a4a2f76cbfc33db593c3110ac6f2d054b5b
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5483373"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5513714"
 ---
 # <a name="create-known-user-groups"></a><span data-ttu-id="37528-103">Erstellen bekannter Benutzergruppen</span><span class="sxs-lookup"><span data-stu-id="37528-103">Create known user groups</span></span>
 

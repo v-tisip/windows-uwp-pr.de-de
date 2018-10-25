@@ -8,99 +8,97 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 73a2a619c32e7d6a7f2fff768c9cec5b7986c3c1
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: eef41642d371f3a8be451c2687eee007608c3b2e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044709"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5542294"
 ---
-# <a name="textures-with-alpha-channels"></a><span data-ttu-id="75216-104">Texturen mit Alphakanälen</span><span class="sxs-lookup"><span data-stu-id="75216-104">Textures with alpha channels</span></span>
+# <a name="textures-with-alpha-channels"></a><span data-ttu-id="72cb7-104">Texturen mit Alphakanälen</span><span class="sxs-lookup"><span data-stu-id="72cb7-104">Textures with alpha channels</span></span>
 
 
-<span data-ttu-id="75216-105">Es gibt zwei Möglichkeiten, Texturabbildungen mit komplexer Transparenz zu codieren.</span><span class="sxs-lookup"><span data-stu-id="75216-105">There are two ways to encode texture maps that exhibit more complex transparency.</span></span> <span data-ttu-id="75216-106">In jedem Fall geht ein Block, der die Transparenz beschreibt, dem bereits beschriebenen 64-Bit-Block voraus.</span><span class="sxs-lookup"><span data-stu-id="75216-106">In each case, a block that describes the transparency precedes the 64-bit block already described.</span></span> <span data-ttu-id="75216-107">Die Transparenz wird entweder als 4x4-Bitmap mit 4Bits pro Pixel (explizite Kodierung) oder mit weniger Bits und linearer Interpolation dargestellt, die mit der für Farben verwendeten Kodierung vergleichbar ist.</span><span class="sxs-lookup"><span data-stu-id="75216-107">The transparency is either represented as a 4x4 bitmap with 4 bits per pixel (explicit encoding), or with fewer bits and linear interpolation that is analogous to what is used for color encoding.</span></span>
+<span data-ttu-id="72cb7-105">Es gibt zwei Möglichkeiten, Texturabbildungen mit komplexer Transparenz zu codieren.</span><span class="sxs-lookup"><span data-stu-id="72cb7-105">There are two ways to encode texture maps that exhibit more complex transparency.</span></span> <span data-ttu-id="72cb7-106">In jedem Fall geht ein Block, der die Transparenz beschreibt, dem bereits beschriebenen 64-Bit-Block voraus.</span><span class="sxs-lookup"><span data-stu-id="72cb7-106">In each case, a block that describes the transparency precedes the 64-bit block already described.</span></span> <span data-ttu-id="72cb7-107">Die Transparenz wird entweder als 4x4-Bitmap mit 4Bits pro Pixel (explizite Kodierung) oder mit weniger Bits und linearer Interpolation dargestellt, die mit der für Farben verwendeten Kodierung vergleichbar ist.</span><span class="sxs-lookup"><span data-stu-id="72cb7-107">The transparency is either represented as a 4x4 bitmap with 4 bits per pixel (explicit encoding), or with fewer bits and linear interpolation that is analogous to what is used for color encoding.</span></span>
 
-<span data-ttu-id="75216-108">Die Transparenzblock und der Farbblock sind wie in der folgenden Tabelle gezeigt angeordnet.</span><span class="sxs-lookup"><span data-stu-id="75216-108">The transparency block and the color block are arranged as shown in the following table.</span></span>
+<span data-ttu-id="72cb7-108">Die Transparenzblock und der Farbblock sind wie in der folgenden Tabelle gezeigt angeordnet.</span><span class="sxs-lookup"><span data-stu-id="72cb7-108">The transparency block and the color block are arranged as shown in the following table.</span></span>
 
-| <span data-ttu-id="75216-109">Wort-Adresse</span><span class="sxs-lookup"><span data-stu-id="75216-109">Word address</span></span> | <span data-ttu-id="75216-110">64-Bit-Block</span><span class="sxs-lookup"><span data-stu-id="75216-110">64-bit block</span></span>                      |
+| <span data-ttu-id="72cb7-109">Wort-Adresse</span><span class="sxs-lookup"><span data-stu-id="72cb7-109">Word address</span></span> | <span data-ttu-id="72cb7-110">64-Bit-Block</span><span class="sxs-lookup"><span data-stu-id="72cb7-110">64-bit block</span></span>                      |
 |--------------|-----------------------------------|
-| <span data-ttu-id="75216-111">3:0</span><span class="sxs-lookup"><span data-stu-id="75216-111">3:0</span></span>          | <span data-ttu-id="75216-112">Transparenzblock</span><span class="sxs-lookup"><span data-stu-id="75216-112">Transparency block</span></span>                |
-| <span data-ttu-id="75216-113">7:4</span><span class="sxs-lookup"><span data-stu-id="75216-113">7:4</span></span>          | <span data-ttu-id="75216-114">Zuvor beschriebener 64-Bit-Block</span><span class="sxs-lookup"><span data-stu-id="75216-114">Previously described 64-bit block</span></span> |
+| <span data-ttu-id="72cb7-111">3:0</span><span class="sxs-lookup"><span data-stu-id="72cb7-111">3:0</span></span>          | <span data-ttu-id="72cb7-112">Transparenzblock</span><span class="sxs-lookup"><span data-stu-id="72cb7-112">Transparency block</span></span>                |
+| <span data-ttu-id="72cb7-113">7:4</span><span class="sxs-lookup"><span data-stu-id="72cb7-113">7:4</span></span>          | <span data-ttu-id="72cb7-114">Zuvor beschriebener 64-Bit-Block</span><span class="sxs-lookup"><span data-stu-id="72cb7-114">Previously described 64-bit block</span></span> |
 
- 
+ 
 
-## <a name="span-idexplicit-texture-encodingspanspan-idexplicit-texture-encodingspanspan-idexplicit-texture-encodingspanexplicit-texture-encoding"></a><span data-ttu-id="75216-115"><span id="Explicit-Texture-Encoding"></span><span id="explicit-texture-encoding"></span><span id="EXPLICIT-TEXTURE-ENCODING"></span>Explizite Texturkodierung</span><span class="sxs-lookup"><span data-stu-id="75216-115"><span id="Explicit-Texture-Encoding"></span><span id="explicit-texture-encoding"></span><span id="EXPLICIT-TEXTURE-ENCODING"></span>Explicit texture encoding</span></span>
+## <a name="span-idexplicit-texture-encodingspanspan-idexplicit-texture-encodingspanspan-idexplicit-texture-encodingspanexplicit-texture-encoding"></a><span data-ttu-id="72cb7-115"><span id="Explicit-Texture-Encoding"></span><span id="explicit-texture-encoding"></span><span id="EXPLICIT-TEXTURE-ENCODING"></span>Explizite Texturkodierung</span><span class="sxs-lookup"><span data-stu-id="72cb7-115"><span id="Explicit-Texture-Encoding"></span><span id="explicit-texture-encoding"></span><span id="EXPLICIT-TEXTURE-ENCODING"></span>Explicit texture encoding</span></span>
 
 
-<span data-ttu-id="75216-116">Für die explizite Texturkodierung (Format BC2) werden die Alphakomponenten der Texel, die die Transparenz beschreiben, in einer 4 x 4-Bitmap mit 4 Bits pro Texel kodiert.</span><span class="sxs-lookup"><span data-stu-id="75216-116">For explicit texture encoding (BC2 format), the alpha components of the texels that describe transparency are encoded in a 4x4 bitmap with 4 bits per texel.</span></span> <span data-ttu-id="75216-117">Diese vier Bits kann können auf verschiedene Weise gewonnen werden, etwa durch Dithering oder durch Verwendung der vier wichtigsten Bits der Alphadaten.</span><span class="sxs-lookup"><span data-stu-id="75216-117">These four bits can be achieved through a variety of means such as dithering or by using the four most significant bits of the alpha data.</span></span> <span data-ttu-id="75216-118">Wie auch immer sie produziert werden, so sind sie, ohne irgendeine Art von Interpolation.</span><span class="sxs-lookup"><span data-stu-id="75216-118">However they are produced, they are used just as they are, without any form of interpolation.</span></span>
+<span data-ttu-id="72cb7-116">Für die explizite Texturkodierung (Format BC2) werden die Alphakomponenten der Texel, die die Transparenz beschreiben, in einer 4 x 4-Bitmap mit 4 Bits pro Texel kodiert.</span><span class="sxs-lookup"><span data-stu-id="72cb7-116">For explicit texture encoding (BC2 format), the alpha components of the texels that describe transparency are encoded in a 4x4 bitmap with 4 bits per texel.</span></span> <span data-ttu-id="72cb7-117">Diese vier Bits kann können auf verschiedene Weise gewonnen werden, etwa durch Dithering oder durch Verwendung der vier wichtigsten Bits der Alphadaten.</span><span class="sxs-lookup"><span data-stu-id="72cb7-117">These four bits can be achieved through a variety of means such as dithering or by using the four most significant bits of the alpha data.</span></span> <span data-ttu-id="72cb7-118">Wie auch immer sie produziert werden, so sind sie, ohne irgendeine Art von Interpolation.</span><span class="sxs-lookup"><span data-stu-id="72cb7-118">However they are produced, they are used just as they are, without any form of interpolation.</span></span>
 
-<span data-ttu-id="75216-119">Das folgende Diagramm zeigt einen 64-Bit-Transparenzblock.</span><span class="sxs-lookup"><span data-stu-id="75216-119">The following diagram shows a 64-bit transparency block.</span></span>
+<span data-ttu-id="72cb7-119">Das folgende Diagramm zeigt einen 64-Bit-Transparenzblock.</span><span class="sxs-lookup"><span data-stu-id="72cb7-119">The following diagram shows a 64-bit transparency block.</span></span>
 
 ![Diagramm eines 64-Bit-Transparenzblocks](images/colors4.png)
 
-<span data-ttu-id="75216-121">**Hinweis** Die Komprimierungsmethode von Direct3D verwendet die vier wichtigsten Bits.</span><span class="sxs-lookup"><span data-stu-id="75216-121">**Note**   The compression method of Direct3D uses the four most significant bits.</span></span>
+<span data-ttu-id="72cb7-121">**Hinweis:**  die Komprimierungsmethode von Direct3D verwendet die vier wichtigsten Bits.</span><span class="sxs-lookup"><span data-stu-id="72cb7-121">**Note** The compression method of Direct3D uses the four most significant bits.</span></span>
 
- 
+ 
 
-<span data-ttu-id="75216-122">Die folgenden Tabellen illustrieren, wie die Alpha-Informationen für jedes 16-Bit-Wort im Speicher repräsentiert sind.</span><span class="sxs-lookup"><span data-stu-id="75216-122">The following tables illustrate how the alpha information is laid out in memory, for each 16-bit word.</span></span>
+<span data-ttu-id="72cb7-122">Die folgenden Tabellen illustrieren, wie die Alpha-Informationen für jedes 16-Bit-Wort im Speicher repräsentiert sind.</span><span class="sxs-lookup"><span data-stu-id="72cb7-122">The following tables illustrate how the alpha information is laid out in memory, for each 16-bit word.</span></span>
 
-<span data-ttu-id="75216-123">Layout für Wort 0:</span><span class="sxs-lookup"><span data-stu-id="75216-123">Layout for word 0:</span></span>
+<span data-ttu-id="72cb7-123">Layout für Wort 0:</span><span class="sxs-lookup"><span data-stu-id="72cb7-123">Layout for word 0:</span></span>
 
-| <span data-ttu-id="75216-124">Bits</span><span class="sxs-lookup"><span data-stu-id="75216-124">Bits</span></span>          | <span data-ttu-id="75216-125">Alpha</span><span class="sxs-lookup"><span data-stu-id="75216-125">Alpha</span></span>      |
+| <span data-ttu-id="72cb7-124">Bits</span><span class="sxs-lookup"><span data-stu-id="72cb7-124">Bits</span></span>          | <span data-ttu-id="72cb7-125">Alpha</span><span class="sxs-lookup"><span data-stu-id="72cb7-125">Alpha</span></span>      |
 |---------------|------------|
-| <span data-ttu-id="75216-126">3:0 (LSB\*)</span><span class="sxs-lookup"><span data-stu-id="75216-126">3:0 (LSB\*)</span></span>   | <span data-ttu-id="75216-127">\[0\]\[0\]</span><span class="sxs-lookup"><span data-stu-id="75216-127">\[0\]\[0\]</span></span> |
-| <span data-ttu-id="75216-128">7:4</span><span class="sxs-lookup"><span data-stu-id="75216-128">7:4</span></span>           | <span data-ttu-id="75216-129">\[0\]\[1\]</span><span class="sxs-lookup"><span data-stu-id="75216-129">\[0\]\[1\]</span></span> |
-| <span data-ttu-id="75216-130">11:8</span><span class="sxs-lookup"><span data-stu-id="75216-130">11:8</span></span>          | <span data-ttu-id="75216-131">\[0\]\[2\]</span><span class="sxs-lookup"><span data-stu-id="75216-131">\[0\]\[2\]</span></span> |
-| <span data-ttu-id="75216-132">15:12 (MSB\*)</span><span class="sxs-lookup"><span data-stu-id="75216-132">15:12 (MSB\*)</span></span> | <span data-ttu-id="75216-133">\[0\]\[3\]</span><span class="sxs-lookup"><span data-stu-id="75216-133">\[0\]\[3\]</span></span> |
+| <span data-ttu-id="72cb7-126">3:0 (LSB\*)</span><span class="sxs-lookup"><span data-stu-id="72cb7-126">3:0 (LSB\*)</span></span>   | <span data-ttu-id="72cb7-127">\[0\]\[0\]</span><span class="sxs-lookup"><span data-stu-id="72cb7-127">\[0\]\[0\]</span></span> |
+| <span data-ttu-id="72cb7-128">7:4</span><span class="sxs-lookup"><span data-stu-id="72cb7-128">7:4</span></span>           | <span data-ttu-id="72cb7-129">\[0\]\[1\]</span><span class="sxs-lookup"><span data-stu-id="72cb7-129">\[0\]\[1\]</span></span> |
+| <span data-ttu-id="72cb7-130">11:8</span><span class="sxs-lookup"><span data-stu-id="72cb7-130">11:8</span></span>          | <span data-ttu-id="72cb7-131">\[0\]\[2\]</span><span class="sxs-lookup"><span data-stu-id="72cb7-131">\[0\]\[2\]</span></span> |
+| <span data-ttu-id="72cb7-132">15:12 (MSB\*)</span><span class="sxs-lookup"><span data-stu-id="72cb7-132">15:12 (MSB\*)</span></span> | <span data-ttu-id="72cb7-133">\[0\]\[3\]</span><span class="sxs-lookup"><span data-stu-id="72cb7-133">\[0\]\[3\]</span></span> |
 
- 
+ 
 
-<span data-ttu-id="75216-134">\*am wenigsten wichtigstes Bit, wichtigstes Bit (MSB)</span><span class="sxs-lookup"><span data-stu-id="75216-134">\*least-significant bit, most significant bit (MSB)</span></span>
+<span data-ttu-id="72cb7-134">\*am wenigsten wichtigstes Bit, wichtigstes Bit (MSB)</span><span class="sxs-lookup"><span data-stu-id="72cb7-134">\*least-significant bit, most significant bit (MSB)</span></span>
 
-<span data-ttu-id="75216-135">Layout für Wort 1:</span><span class="sxs-lookup"><span data-stu-id="75216-135">Layout for word 1:</span></span>
+<span data-ttu-id="72cb7-135">Layout für Wort 1:</span><span class="sxs-lookup"><span data-stu-id="72cb7-135">Layout for word 1:</span></span>
 
-| <span data-ttu-id="75216-136">Bits</span><span class="sxs-lookup"><span data-stu-id="75216-136">Bits</span></span>        | <span data-ttu-id="75216-137">Alpha</span><span class="sxs-lookup"><span data-stu-id="75216-137">Alpha</span></span>      |
+| <span data-ttu-id="72cb7-136">Bits</span><span class="sxs-lookup"><span data-stu-id="72cb7-136">Bits</span></span>        | <span data-ttu-id="72cb7-137">Alpha</span><span class="sxs-lookup"><span data-stu-id="72cb7-137">Alpha</span></span>      |
 |-------------|------------|
-| <span data-ttu-id="75216-138">3:0 (LSB)</span><span class="sxs-lookup"><span data-stu-id="75216-138">3:0 (LSB)</span></span>   | <span data-ttu-id="75216-139">\[1\]\[0\]</span><span class="sxs-lookup"><span data-stu-id="75216-139">\[1\]\[0\]</span></span> |
-| <span data-ttu-id="75216-140">7:4</span><span class="sxs-lookup"><span data-stu-id="75216-140">7:4</span></span>         | <span data-ttu-id="75216-141">\[1\]\[1\]</span><span class="sxs-lookup"><span data-stu-id="75216-141">\[1\]\[1\]</span></span> |
-| <span data-ttu-id="75216-142">11:8</span><span class="sxs-lookup"><span data-stu-id="75216-142">11:8</span></span>        | <span data-ttu-id="75216-143">\[1\]\[2\]</span><span class="sxs-lookup"><span data-stu-id="75216-143">\[1\]\[2\]</span></span> |
-| <span data-ttu-id="75216-144">15:12 (MSB)</span><span class="sxs-lookup"><span data-stu-id="75216-144">15:12 (MSB)</span></span> | <span data-ttu-id="75216-145">\[1\]\[3\]</span><span class="sxs-lookup"><span data-stu-id="75216-145">\[1\]\[3\]</span></span> |
+| <span data-ttu-id="72cb7-138">3:0 (LSB)</span><span class="sxs-lookup"><span data-stu-id="72cb7-138">3:0 (LSB)</span></span>   | <span data-ttu-id="72cb7-139">\[1\]\[0\]</span><span class="sxs-lookup"><span data-stu-id="72cb7-139">\[1\]\[0\]</span></span> |
+| <span data-ttu-id="72cb7-140">7:4</span><span class="sxs-lookup"><span data-stu-id="72cb7-140">7:4</span></span>         | <span data-ttu-id="72cb7-141">\[1\]\[1\]</span><span class="sxs-lookup"><span data-stu-id="72cb7-141">\[1\]\[1\]</span></span> |
+| <span data-ttu-id="72cb7-142">11:8</span><span class="sxs-lookup"><span data-stu-id="72cb7-142">11:8</span></span>        | <span data-ttu-id="72cb7-143">\[1\]\[2\]</span><span class="sxs-lookup"><span data-stu-id="72cb7-143">\[1\]\[2\]</span></span> |
+| <span data-ttu-id="72cb7-144">15:12 (MSB)</span><span class="sxs-lookup"><span data-stu-id="72cb7-144">15:12 (MSB)</span></span> | <span data-ttu-id="72cb7-145">\[1\]\[3\]</span><span class="sxs-lookup"><span data-stu-id="72cb7-145">\[1\]\[3\]</span></span> |
 
- 
+ 
 
-<span data-ttu-id="75216-146">Layout für Wort 2:</span><span class="sxs-lookup"><span data-stu-id="75216-146">Layout for word 2:</span></span>
+<span data-ttu-id="72cb7-146">Layout für Wort 2:</span><span class="sxs-lookup"><span data-stu-id="72cb7-146">Layout for word 2:</span></span>
 
-| <span data-ttu-id="75216-147">Bits</span><span class="sxs-lookup"><span data-stu-id="75216-147">Bits</span></span>        | <span data-ttu-id="75216-148">Alpha</span><span class="sxs-lookup"><span data-stu-id="75216-148">Alpha</span></span>      |
+| <span data-ttu-id="72cb7-147">Bits</span><span class="sxs-lookup"><span data-stu-id="72cb7-147">Bits</span></span>        | <span data-ttu-id="72cb7-148">Alpha</span><span class="sxs-lookup"><span data-stu-id="72cb7-148">Alpha</span></span>      |
 |-------------|------------|
-| <span data-ttu-id="75216-149">3:0 (LSB)</span><span class="sxs-lookup"><span data-stu-id="75216-149">3:0 (LSB)</span></span>   | <span data-ttu-id="75216-150">\[2\]\[0\]</span><span class="sxs-lookup"><span data-stu-id="75216-150">\[2\]\[0\]</span></span> |
-| <span data-ttu-id="75216-151">7:4</span><span class="sxs-lookup"><span data-stu-id="75216-151">7:4</span></span>         | <span data-ttu-id="75216-152">\[2\]\[1\]</span><span class="sxs-lookup"><span data-stu-id="75216-152">\[2\]\[1\]</span></span> |
-| <span data-ttu-id="75216-153">11:8</span><span class="sxs-lookup"><span data-stu-id="75216-153">11:8</span></span>        | <span data-ttu-id="75216-154">\[2\]\[2\]</span><span class="sxs-lookup"><span data-stu-id="75216-154">\[2\]\[2\]</span></span> |
-| <span data-ttu-id="75216-155">15:12 (MSB)</span><span class="sxs-lookup"><span data-stu-id="75216-155">15:12 (MSB)</span></span> | <span data-ttu-id="75216-156">\[2\]\[3\]</span><span class="sxs-lookup"><span data-stu-id="75216-156">\[2\]\[3\]</span></span> |
+| <span data-ttu-id="72cb7-149">3:0 (LSB)</span><span class="sxs-lookup"><span data-stu-id="72cb7-149">3:0 (LSB)</span></span>   | <span data-ttu-id="72cb7-150">\[2\]\[0\]</span><span class="sxs-lookup"><span data-stu-id="72cb7-150">\[2\]\[0\]</span></span> |
+| <span data-ttu-id="72cb7-151">7:4</span><span class="sxs-lookup"><span data-stu-id="72cb7-151">7:4</span></span>         | <span data-ttu-id="72cb7-152">\[2\]\[1\]</span><span class="sxs-lookup"><span data-stu-id="72cb7-152">\[2\]\[1\]</span></span> |
+| <span data-ttu-id="72cb7-153">11:8</span><span class="sxs-lookup"><span data-stu-id="72cb7-153">11:8</span></span>        | <span data-ttu-id="72cb7-154">\[2\]\[2\]</span><span class="sxs-lookup"><span data-stu-id="72cb7-154">\[2\]\[2\]</span></span> |
+| <span data-ttu-id="72cb7-155">15:12 (MSB)</span><span class="sxs-lookup"><span data-stu-id="72cb7-155">15:12 (MSB)</span></span> | <span data-ttu-id="72cb7-156">\[2\]\[3\]</span><span class="sxs-lookup"><span data-stu-id="72cb7-156">\[2\]\[3\]</span></span> |
 
- 
+ 
 
-<span data-ttu-id="75216-157">Layout für Wort 3:</span><span class="sxs-lookup"><span data-stu-id="75216-157">Layout for word 3:</span></span>
+<span data-ttu-id="72cb7-157">Layout für Wort 3:</span><span class="sxs-lookup"><span data-stu-id="72cb7-157">Layout for word 3:</span></span>
 
-| <span data-ttu-id="75216-158">Bits</span><span class="sxs-lookup"><span data-stu-id="75216-158">Bits</span></span>        | <span data-ttu-id="75216-159">Alpha</span><span class="sxs-lookup"><span data-stu-id="75216-159">Alpha</span></span>      |
+| <span data-ttu-id="72cb7-158">Bits</span><span class="sxs-lookup"><span data-stu-id="72cb7-158">Bits</span></span>        | <span data-ttu-id="72cb7-159">Alpha</span><span class="sxs-lookup"><span data-stu-id="72cb7-159">Alpha</span></span>      |
 |-------------|------------|
-| <span data-ttu-id="75216-160">3:0 (LSB)</span><span class="sxs-lookup"><span data-stu-id="75216-160">3:0 (LSB)</span></span>   | <span data-ttu-id="75216-161">\[3\]\[0\]</span><span class="sxs-lookup"><span data-stu-id="75216-161">\[3\]\[0\]</span></span> |
-| <span data-ttu-id="75216-162">7:4</span><span class="sxs-lookup"><span data-stu-id="75216-162">7:4</span></span>         | <span data-ttu-id="75216-163">\[3\]\[1\]</span><span class="sxs-lookup"><span data-stu-id="75216-163">\[3\]\[1\]</span></span> |
-| <span data-ttu-id="75216-164">11:8</span><span class="sxs-lookup"><span data-stu-id="75216-164">11:8</span></span>        | <span data-ttu-id="75216-165">\[3\]\[2\]</span><span class="sxs-lookup"><span data-stu-id="75216-165">\[3\]\[2\]</span></span> |
-| <span data-ttu-id="75216-166">15:12 (MSB)</span><span class="sxs-lookup"><span data-stu-id="75216-166">15:12 (MSB)</span></span> | <span data-ttu-id="75216-167">\[3\]\[3\]</span><span class="sxs-lookup"><span data-stu-id="75216-167">\[3\]\[3\]</span></span> |
+| <span data-ttu-id="72cb7-160">3:0 (LSB)</span><span class="sxs-lookup"><span data-stu-id="72cb7-160">3:0 (LSB)</span></span>   | <span data-ttu-id="72cb7-161">\[3\]\[0\]</span><span class="sxs-lookup"><span data-stu-id="72cb7-161">\[3\]\[0\]</span></span> |
+| <span data-ttu-id="72cb7-162">7:4</span><span class="sxs-lookup"><span data-stu-id="72cb7-162">7:4</span></span>         | <span data-ttu-id="72cb7-163">\[3\]\[1\]</span><span class="sxs-lookup"><span data-stu-id="72cb7-163">\[3\]\[1\]</span></span> |
+| <span data-ttu-id="72cb7-164">11:8</span><span class="sxs-lookup"><span data-stu-id="72cb7-164">11:8</span></span>        | <span data-ttu-id="72cb7-165">\[3\]\[2\]</span><span class="sxs-lookup"><span data-stu-id="72cb7-165">\[3\]\[2\]</span></span> |
+| <span data-ttu-id="72cb7-166">15:12 (MSB)</span><span class="sxs-lookup"><span data-stu-id="72cb7-166">15:12 (MSB)</span></span> | <span data-ttu-id="72cb7-167">\[3\]\[3\]</span><span class="sxs-lookup"><span data-stu-id="72cb7-167">\[3\]\[3\]</span></span> |
 
- 
+ 
 
-<span data-ttu-id="75216-168">Der Farbvergleich, der in BC1 verwendet wird, um festzustellen, ob der Texel transparent ist, wird in diesem Format nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="75216-168">The color compare used in BC1 to determine if the texel is transparent is not used in this format.</span></span> <span data-ttu-id="75216-169">Es wird angenommen, dass die Farbdaten ohne den Farbvergleich immer wie im 4-Farben-Modus behandelt werden.</span><span class="sxs-lookup"><span data-stu-id="75216-169">It is assumed that without the color compare the color data is always treated as if in 4-color mode.</span></span>
+<span data-ttu-id="72cb7-168">Der Farbvergleich, der in BC1 verwendet wird, um festzustellen, ob der Texel transparent ist, wird in diesem Format nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="72cb7-168">The color compare used in BC1 to determine if the texel is transparent is not used in this format.</span></span> <span data-ttu-id="72cb7-169">Es wird angenommen, dass die Farbdaten ohne den Farbvergleich immer wie im 4-Farben-Modus behandelt werden.</span><span class="sxs-lookup"><span data-stu-id="72cb7-169">It is assumed that without the color compare the color data is always treated as if in 4-color mode.</span></span>
 
-## <a name="span-idthree-bit-linear-alpha-interpolationspanspan-idthree-bit-linear-alpha-interpolationspanspan-idthree-bit-linear-alpha-interpolationspanthree-bit-linear-alpha-interpolation"></a><span data-ttu-id="75216-170"><span id="Three-Bit-Linear-Alpha-Interpolation"></span><span id="three-bit-linear-alpha-interpolation"></span><span id="THREE-BIT-LINEAR-ALPHA-INTERPOLATION"></span>Lineare Drei-Bit-Alpha-Interpolation</span><span class="sxs-lookup"><span data-stu-id="75216-170"><span id="Three-Bit-Linear-Alpha-Interpolation"></span><span id="three-bit-linear-alpha-interpolation"></span><span id="THREE-BIT-LINEAR-ALPHA-INTERPOLATION"></span>Three-bit linear alpha interpolation</span></span>
+## <a name="span-idthree-bit-linear-alpha-interpolationspanspan-idthree-bit-linear-alpha-interpolationspanspan-idthree-bit-linear-alpha-interpolationspanthree-bit-linear-alpha-interpolation"></a><span data-ttu-id="72cb7-170"><span id="Three-Bit-Linear-Alpha-Interpolation"></span><span id="three-bit-linear-alpha-interpolation"></span><span id="THREE-BIT-LINEAR-ALPHA-INTERPOLATION"></span>Lineare Drei-Bit-Alpha-Interpolation</span><span class="sxs-lookup"><span data-stu-id="72cb7-170"><span id="Three-Bit-Linear-Alpha-Interpolation"></span><span id="three-bit-linear-alpha-interpolation"></span><span id="THREE-BIT-LINEAR-ALPHA-INTERPOLATION"></span>Three-bit linear alpha interpolation</span></span>
 
 
-<span data-ttu-id="75216-171">Die Kodierung der Transparenz für das Format BC3 basiert auf einem Konzept, das der für Farbe verwendeten linearen Kodierung ähnelt.</span><span class="sxs-lookup"><span data-stu-id="75216-171">The encoding of transparency for the BC3 format is based on a concept similar to the linear encoding used for color.</span></span> <span data-ttu-id="75216-172">Zwei 8-Bit-Alphawerte und eine 4 x 4-Bitmap mit drei Bits pro Pixel sind in den ersten acht Bytes des Blocks gespeichert.</span><span class="sxs-lookup"><span data-stu-id="75216-172">Two 8-bit alpha values and a 4x4 bitmap with three bits per pixel are stored in the first eight bytes of the block.</span></span> <span data-ttu-id="75216-173">Die repräsentativen Alphawerte werden zum Interpolieren der Alpha-Zwischenwerte verwendet.</span><span class="sxs-lookup"><span data-stu-id="75216-173">The representative alpha values are used to interpolate intermediate alpha values.</span></span> <span data-ttu-id="75216-174">Die Art und Weise der beiden Alphawerte bietet weitere Informationen.</span><span class="sxs-lookup"><span data-stu-id="75216-174">Additional information is available in the way the two alpha values are stored.</span></span> <span data-ttu-id="75216-175">Wenn alpha\_0 größer als alpha\_1 ist, erstellt die Interpolation sechs Alpha-Zwischenwerte.</span><span class="sxs-lookup"><span data-stu-id="75216-175">If alpha\_0 is greater than alpha\_1, then six intermediate alpha values are created by the interpolation.</span></span> <span data-ttu-id="75216-176">Andernfalls werden vier Alpha-Zwischenwerte zwischen den angegebenen Alpha-Extremen interpoliert.</span><span class="sxs-lookup"><span data-stu-id="75216-176">Otherwise, four intermediate alpha values are interpolated between the specified alpha extremes.</span></span> <span data-ttu-id="75216-177">Die zwei zusätzlichen impliziten Alphawerte sind 0 (vollständig transparent) und 255 (vollständig opak).</span><span class="sxs-lookup"><span data-stu-id="75216-177">The two additional implicit alpha values are 0 (fully transparent) and 255 (fully opaque).</span></span>
+<span data-ttu-id="72cb7-171">Die Kodierung der Transparenz für das Format BC3 basiert auf einem Konzept, das der für Farbe verwendeten linearen Kodierung ähnelt.</span><span class="sxs-lookup"><span data-stu-id="72cb7-171">The encoding of transparency for the BC3 format is based on a concept similar to the linear encoding used for color.</span></span> <span data-ttu-id="72cb7-172">Zwei 8-Bit-Alphawerte und eine 4 x 4-Bitmap mit drei Bits pro Pixel sind in den ersten acht Bytes des Blocks gespeichert.</span><span class="sxs-lookup"><span data-stu-id="72cb7-172">Two 8-bit alpha values and a 4x4 bitmap with three bits per pixel are stored in the first eight bytes of the block.</span></span> <span data-ttu-id="72cb7-173">Die repräsentativen Alphawerte werden zum Interpolieren der Alpha-Zwischenwerte verwendet.</span><span class="sxs-lookup"><span data-stu-id="72cb7-173">The representative alpha values are used to interpolate intermediate alpha values.</span></span> <span data-ttu-id="72cb7-174">Die Art und Weise der beiden Alphawerte bietet weitere Informationen.</span><span class="sxs-lookup"><span data-stu-id="72cb7-174">Additional information is available in the way the two alpha values are stored.</span></span> <span data-ttu-id="72cb7-175">Wenn alpha\_0 größer als alpha\_1 ist, erstellt die Interpolation sechs Alpha-Zwischenwerte.</span><span class="sxs-lookup"><span data-stu-id="72cb7-175">If alpha\_0 is greater than alpha\_1, then six intermediate alpha values are created by the interpolation.</span></span> <span data-ttu-id="72cb7-176">Andernfalls werden vier Alpha-Zwischenwerte zwischen den angegebenen Alpha-Extremen interpoliert.</span><span class="sxs-lookup"><span data-stu-id="72cb7-176">Otherwise, four intermediate alpha values are interpolated between the specified alpha extremes.</span></span> <span data-ttu-id="72cb7-177">Die zwei zusätzlichen impliziten Alphawerte sind 0 (vollständig transparent) und 255 (vollständig opak).</span><span class="sxs-lookup"><span data-stu-id="72cb7-177">The two additional implicit alpha values are 0 (fully transparent) and 255 (fully opaque).</span></span>
 
-<span data-ttu-id="75216-178">Das folgende Codebeispiel veranschaulicht diesen Algorithmus.</span><span class="sxs-lookup"><span data-stu-id="75216-178">The following code example illustrates this algorithm.</span></span>
+<span data-ttu-id="72cb7-178">Das folgende Codebeispiel veranschaulicht diesen Algorithmus.</span><span class="sxs-lookup"><span data-stu-id="72cb7-178">The following code example illustrates this algorithm.</span></span>
 
 ```
 // 8-alpha or 6-alpha block?    
@@ -126,31 +124,31 @@ else {
 }
 ```
 
-<span data-ttu-id="75216-179">Das Speicherlayout des Alphablocks ist wie folgt:</span><span class="sxs-lookup"><span data-stu-id="75216-179">The memory layout of the alpha block is as follows:</span></span>
+<span data-ttu-id="72cb7-179">Das Speicherlayout des Alphablocks ist wie folgt:</span><span class="sxs-lookup"><span data-stu-id="72cb7-179">The memory layout of the alpha block is as follows:</span></span>
 
-| <span data-ttu-id="75216-180">Byte</span><span class="sxs-lookup"><span data-stu-id="75216-180">Byte</span></span> | <span data-ttu-id="75216-181">Alpha</span><span class="sxs-lookup"><span data-stu-id="75216-181">Alpha</span></span>                                                          |
+| <span data-ttu-id="72cb7-180">Byte</span><span class="sxs-lookup"><span data-stu-id="72cb7-180">Byte</span></span> | <span data-ttu-id="72cb7-181">Alpha</span><span class="sxs-lookup"><span data-stu-id="72cb7-181">Alpha</span></span>                                                          |
 |------|----------------------------------------------------------------|
-| <span data-ttu-id="75216-182">0</span><span class="sxs-lookup"><span data-stu-id="75216-182">0</span></span>    | <span data-ttu-id="75216-183">Alpha\_0</span><span class="sxs-lookup"><span data-stu-id="75216-183">Alpha\_0</span></span>                                                       |
-| <span data-ttu-id="75216-184">1</span><span class="sxs-lookup"><span data-stu-id="75216-184">1</span></span>    | <span data-ttu-id="75216-185">Alpha\_1</span><span class="sxs-lookup"><span data-stu-id="75216-185">Alpha\_1</span></span>                                                       |
-| <span data-ttu-id="75216-186">2</span><span class="sxs-lookup"><span data-stu-id="75216-186">2</span></span>    | <span data-ttu-id="75216-187">\[0\]\[2\] (2 MSBs), \[0\]\[1\], \[0\]\[0\]</span><span class="sxs-lookup"><span data-stu-id="75216-187">\[0\]\[2\] (2 MSBs), \[0\]\[1\], \[0\]\[0\]</span></span>                    |
-| <span data-ttu-id="75216-188">3</span><span class="sxs-lookup"><span data-stu-id="75216-188">3</span></span>    | <span data-ttu-id="75216-189">\[1\]\[1\] (1 MSB), \[1\]\[0\], \[0\]\[3\], \[0\]\[2\] (1 LSB)</span><span class="sxs-lookup"><span data-stu-id="75216-189">\[1\]\[1\] (1 MSB), \[1\]\[0\], \[0\]\[3\], \[0\]\[2\] (1 LSB)</span></span> |
-| <span data-ttu-id="75216-190">4</span><span class="sxs-lookup"><span data-stu-id="75216-190">4</span></span>    | <span data-ttu-id="75216-191">\[1\]\[3\], \[1\]\[2\], \[1\]\[1\] (2 LSBs)</span><span class="sxs-lookup"><span data-stu-id="75216-191">\[1\]\[3\], \[1\]\[2\], \[1\]\[1\] (2 LSBs)</span></span>                    |
-| <span data-ttu-id="75216-192">5</span><span class="sxs-lookup"><span data-stu-id="75216-192">5</span></span>    | <span data-ttu-id="75216-193">\[2\]\[2\] (2 MSBs), \[2\]\[1\], \[2\]\[0\]</span><span class="sxs-lookup"><span data-stu-id="75216-193">\[2\]\[2\] (2 MSBs), \[2\]\[1\], \[2\]\[0\]</span></span>                    |
-| <span data-ttu-id="75216-194">6</span><span class="sxs-lookup"><span data-stu-id="75216-194">6</span></span>    | <span data-ttu-id="75216-195">\[3\]\[1\] (1 MSB), \[3\]\[0\], \[2\]\[3\], \[2\]\[2\] (1 LSB)</span><span class="sxs-lookup"><span data-stu-id="75216-195">\[3\]\[1\] (1 MSB), \[3\]\[0\], \[2\]\[3\], \[2\]\[2\] (1 LSB)</span></span> |
-| <span data-ttu-id="75216-196">7</span><span class="sxs-lookup"><span data-stu-id="75216-196">7</span></span>    | <span data-ttu-id="75216-197">\[3\]\[3\], \[3\]\[2\], \[3\]\[1\] (2 LSBs)</span><span class="sxs-lookup"><span data-stu-id="75216-197">\[3\]\[3\], \[3\]\[2\], \[3\]\[1\] (2 LSBs)</span></span>                    |
+| <span data-ttu-id="72cb7-182">0</span><span class="sxs-lookup"><span data-stu-id="72cb7-182">0</span></span>    | <span data-ttu-id="72cb7-183">Alpha\_0</span><span class="sxs-lookup"><span data-stu-id="72cb7-183">Alpha\_0</span></span>                                                       |
+| <span data-ttu-id="72cb7-184">1</span><span class="sxs-lookup"><span data-stu-id="72cb7-184">1</span></span>    | <span data-ttu-id="72cb7-185">Alpha\_1</span><span class="sxs-lookup"><span data-stu-id="72cb7-185">Alpha\_1</span></span>                                                       |
+| <span data-ttu-id="72cb7-186">2</span><span class="sxs-lookup"><span data-stu-id="72cb7-186">2</span></span>    | <span data-ttu-id="72cb7-187">\[0\]\[2\] (2 MSBs), \[0\]\[1\], \[0\]\[0\]</span><span class="sxs-lookup"><span data-stu-id="72cb7-187">\[0\]\[2\] (2 MSBs), \[0\]\[1\], \[0\]\[0\]</span></span>                    |
+| <span data-ttu-id="72cb7-188">3</span><span class="sxs-lookup"><span data-stu-id="72cb7-188">3</span></span>    | <span data-ttu-id="72cb7-189">\[1\]\[1\] (1 MSB), \[1\]\[0\], \[0\]\[3\], \[0\]\[2\] (1 LSB)</span><span class="sxs-lookup"><span data-stu-id="72cb7-189">\[1\]\[1\] (1 MSB), \[1\]\[0\], \[0\]\[3\], \[0\]\[2\] (1 LSB)</span></span> |
+| <span data-ttu-id="72cb7-190">4</span><span class="sxs-lookup"><span data-stu-id="72cb7-190">4</span></span>    | <span data-ttu-id="72cb7-191">\[1\]\[3\], \[1\]\[2\], \[1\]\[1\] (2 LSBs)</span><span class="sxs-lookup"><span data-stu-id="72cb7-191">\[1\]\[3\], \[1\]\[2\], \[1\]\[1\] (2 LSBs)</span></span>                    |
+| <span data-ttu-id="72cb7-192">5</span><span class="sxs-lookup"><span data-stu-id="72cb7-192">5</span></span>    | <span data-ttu-id="72cb7-193">\[2\]\[2\] (2 MSBs), \[2\]\[1\], \[2\]\[0\]</span><span class="sxs-lookup"><span data-stu-id="72cb7-193">\[2\]\[2\] (2 MSBs), \[2\]\[1\], \[2\]\[0\]</span></span>                    |
+| <span data-ttu-id="72cb7-194">6</span><span class="sxs-lookup"><span data-stu-id="72cb7-194">6</span></span>    | <span data-ttu-id="72cb7-195">\[3\]\[1\] (1 MSB), \[3\]\[0\], \[2\]\[3\], \[2\]\[2\] (1 LSB)</span><span class="sxs-lookup"><span data-stu-id="72cb7-195">\[3\]\[1\] (1 MSB), \[3\]\[0\], \[2\]\[3\], \[2\]\[2\] (1 LSB)</span></span> |
+| <span data-ttu-id="72cb7-196">7</span><span class="sxs-lookup"><span data-stu-id="72cb7-196">7</span></span>    | <span data-ttu-id="72cb7-197">\[3\]\[3\], \[3\]\[2\], \[3\]\[1\] (2 LSBs)</span><span class="sxs-lookup"><span data-stu-id="72cb7-197">\[3\]\[3\], \[3\]\[2\], \[3\]\[1\] (2 LSBs)</span></span>                    |
 
- 
+ 
 
-<span data-ttu-id="75216-198">Der Farbvergleich, der in BC1 verwendet wird, um festzustellen, ob der Texel transparent ist, wird in diesen Formaten nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="75216-198">The color compare used in BC1 to determine if the texel is transparent is not used with these formats.</span></span> <span data-ttu-id="75216-199">Es wird angenommen, dass die Farbdaten ohne den Farbvergleich immer wie im 4-Farben-Modus behandelt werden.</span><span class="sxs-lookup"><span data-stu-id="75216-199">It is assumed that without the color compare the color data is always treated as if in 4-color mode.</span></span>
+<span data-ttu-id="72cb7-198">Der Farbvergleich, der in BC1 verwendet wird, um festzustellen, ob der Texel transparent ist, wird in diesen Formaten nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="72cb7-198">The color compare used in BC1 to determine if the texel is transparent is not used with these formats.</span></span> <span data-ttu-id="72cb7-199">Es wird angenommen, dass die Farbdaten ohne den Farbvergleich immer wie im 4-Farben-Modus behandelt werden.</span><span class="sxs-lookup"><span data-stu-id="72cb7-199">It is assumed that without the color compare the color data is always treated as if in 4-color mode.</span></span>
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="75216-200"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="75216-200"><span id="related-topics"></span>Related topics</span></span>
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="72cb7-200"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="72cb7-200"><span id="related-topics"></span>Related topics</span></span>
 
 
-[<span data-ttu-id="75216-201">Komprimierte Texturressourcen</span><span class="sxs-lookup"><span data-stu-id="75216-201">Compressed texture resources</span></span>](compressed-texture-resources.md)
+[<span data-ttu-id="72cb7-201">Komprimierte Texturressourcen</span><span class="sxs-lookup"><span data-stu-id="72cb7-201">Compressed texture resources</span></span>](compressed-texture-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

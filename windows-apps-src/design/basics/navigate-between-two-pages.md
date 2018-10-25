@@ -18,11 +18,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 7df91069615b77ab54745690accc8f9353ff0163
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5472671"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5515427"
 ---
 # <a name="implement-navigation-between-two-pages"></a><span data-ttu-id="54d0c-103">Implementieren der Navigation zwischen zwei Seiten</span><span class="sxs-lookup"><span data-stu-id="54d0c-103">Implement navigation between two pages</span></span>
 

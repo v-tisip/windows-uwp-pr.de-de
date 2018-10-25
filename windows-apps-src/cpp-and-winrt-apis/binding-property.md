@@ -10,11 +10,11 @@ ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, XAML, steuerelement, binden, eigenschaft
 ms.localizationpriority: medium
 ms.openlocfilehash: 2caec1c245514f7c1596d2a40749e974998fadcd
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5481149"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5517565"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a><span data-ttu-id="e1894-105">XAML-Steuerelemente; Binden an eine C++/WinRT-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="e1894-105">XAML controls; bind to a C++/WinRT property</span></span>
 <span data-ttu-id="e1894-106">Eine Eigenschaft, die effektiv an ein XAML-Steuerelement gebunden werden kann, wird als *observable*-Eigenschaft bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="e1894-106">A property that can be effectively bound to a XAML control is known as an *observable* property.</span></span> <span data-ttu-id="e1894-107">Dieses Konzept basiert auf dem Software-Design-Muster, das als *Observer-Pattern* bekannt ist.</span><span class="sxs-lookup"><span data-stu-id="e1894-107">This idea is based on the software design pattern known as the *observer pattern*.</span></span> <span data-ttu-id="e1894-108">Dieses Thema zeigt, wie Sie Observable-Eigenschaften in implementieren [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), und wie man XAML-Steuerelemente an diese bindet.</span><span class="sxs-lookup"><span data-stu-id="e1894-108">This topic shows how to implement observable properties in [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), and how to bind XAML controls to them.</span></span>
