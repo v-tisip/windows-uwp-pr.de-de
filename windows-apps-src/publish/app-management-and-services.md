@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d0e4be450aa972ad8561f27a8d4749050458520a
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5472450"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5512995"
 ---
 # <a name="app-management-and-services"></a><span data-ttu-id="053b8-103">App-Verwaltung und -Dienste</span><span class="sxs-lookup"><span data-stu-id="053b8-103">App management and services</span></span>
 

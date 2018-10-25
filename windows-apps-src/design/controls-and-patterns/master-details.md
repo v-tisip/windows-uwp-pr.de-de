@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f1236c2ade0423f6e092024e786741f3f3bf6d11
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5470088"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5512510"
 ---
 # <a name="masterdetails-pattern"></a><span data-ttu-id="67824-103">Master/Details-Muster</span><span class="sxs-lookup"><span data-stu-id="67824-103">Master/details pattern</span></span>
 
