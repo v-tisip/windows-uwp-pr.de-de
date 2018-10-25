@@ -11,11 +11,11 @@ keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Paket-Rollout, Tes
 ms.assetid: ee9aa223-e945-4c11-b430-1f4b1e559743
 ms.localizationpriority: medium
 ms.openlocfilehash: 6cd360f4c4aac0e628699e52534ee3e2f42e49d4
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5477674"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5516642"
 ---
 # <a name="update-the-rollout-percentage-for-a-flight-submission"></a>Aktualisieren des Prozentsatzes eines Rollouts für eine Flight-Paketübermittlung
 

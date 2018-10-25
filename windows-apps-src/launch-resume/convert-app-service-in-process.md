@@ -11,11 +11,11 @@ keywords: Windows 10, Uwp, app-Dienst
 ms.assetid: 30aef94b-1b83-4897-a2f1-afbb4349696a
 ms.localizationpriority: medium
 ms.openlocfilehash: d259df2a65046acb1c34dd2958ab4513bc31f43b
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5472306"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5518691"
 ---
 # <a name="convert-an-app-service-to-run-in-the-same-process-as-its-host-app"></a>Umwandeln eines App-Diensts für die Ausführung im gleichen Prozess wie die Host-App
 
@@ -46,7 +46,7 @@ Entfernen Sie die `EntryPoint` -Attribut aus der `<Extension>` Element da nun [O
 
 Die zweite Änderung besteht darin, die Dienstlogik aus ihrem eigenen Hintergrundaufgabenprojekt in Methoden zu verschieben, die über **OnBackgroundActivated()** aufgerufen werden können.
 
-Jetzt kann Ihre Anwendung den App-Dienst direkt ausführen. In "App.Xaml.cs":
+Jetzt kann Ihre Anwendung den App-Dienst direkt ausführen. Z. B. in "App.Xaml.cs":
 
 [!NOTE] Der folgende Code unterscheidet sich z. B. 1 (Out-of-Process-Dienst) bereitgestellt. Der folgende Code wird nur zur Veranschaulichung bereitgestellt und sollte nicht als Teil des Beispiel 2 (in-Process-Dienst) verwendet werden.  Um den Vorgang fortzusetzen Übergang aus dem Beispiel im Artikel weiterhin 1 (Out-of-Process-Dienst) in Beispiel 2 (in-Process-Service) den Code zur Verfügung gestellt, z. B. 1 anstatt zur Veranschaulichung der folgende Code verwenden.
 

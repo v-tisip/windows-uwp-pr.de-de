@@ -1,30 +1,28 @@
 ---
 author: v-angraf
 ms.assetid: 5aeb009c-1f2f-7c04-4477-cbe92c473174
-title: Netzwerkseite (Dev-Startseite)
-description: Enthält Informationen zu der Netzwerkseite der app Dev-Startseite für Xbox ein.
+title: Netzwerkseite (Dev Home)
+description: Enthält Informationen zu der Netzwerkseite der Dev Home-app für Xbox One.
 ms.author: v-angraf@microsoft.com
 ms.date: 08/09/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 permalink: en-us/docs/xdk/devhome-networking.html
 ms.localizationpriority: medium
-ms.openlocfilehash: ae160956f555f691e681abc4992ac21789c387b5
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 5968a2dad76343a1aa589caadf62ec3cd823aed0
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1015459"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5572579"
 ---
-# <a name="networking-page-dev-home"></a>Netzwerkseite (Dev-Startseite)
+# <a name="networking-page-dev-home"></a>Netzwerkseite (Dev Home)
    
   
-Die Seite **Netzwerk** Dev Home simuliert verschiedene Netzwerke Ursachen für die Problembehandlung. Darüber hinaus können Sie einen Netzwerk-Paket Trace initiieren.   
- ![Netzwerkseite des Developer-Startseite](images/devhome_networking.png)   
+Der Seite " **Netzwerk** " der Dev Home simuliert verschiedene Netzwerke Ursachen für die Problembehandlung. Außerdem können Sie einen Netzwerk-Paket-Trace initiieren.   
+ ![Netzwerkseite von Dev Home](images/devhome_networking.png)   
   
-Die **Netzwerk** -Seite enthält die folgenden Bereiche:   
+Die Seite " **Netzwerk** " enthält die folgenden Bereichen:   
  
    *  [Netzwerksimulation](#ID4EEB)  
    *  [XBTrace (Netcap)](#ID4EOB)  
@@ -37,7 +35,7 @@ Die **Netzwerk** -Seite enthält die folgenden Bereiche:
 ## <a name="network-simulation"></a>Netzwerksimulation  
    
   
-Des Fensters **Netzwerk** führt eine Netzwerksimulation mit verschiedenen Bandbreite Profile testen.   
+Der Bereich **Netzwerksimulation** führt eine Netzwerksimulation mit verschiedenen Bandbreite Profile testen.   
   
 <a id="ID4EOB"></a>
 
@@ -46,13 +44,13 @@ Des Fensters **Netzwerk** führt eine Netzwerksimulation mit verschiedenen Bandb
 ## <a name="xbtrace-netcap"></a>XBTrace (Netcap)  
    
   
-Im Bereich **XBTrace (Netcap)** startet oder beendet einen Netzwerk-Paket Trace.   
+Der Bereich **XBTrace (Netcap)** startet oder beendet einen Netzwerk-Paket-Trace.   
   
 <a id="ID4E2B"></a>
 
    
 
-## <a name="see-also"></a>Weitere Informationen  
- [Entwickler-Homepage in der Konsole (Dev-Startseite)](dev-home.md)
+## <a name="see-also"></a>Weitere Informationen:  
+ [Entwickler-Startbildschirm auf der Konsole (Dev Home)](dev-home.md)
 
   

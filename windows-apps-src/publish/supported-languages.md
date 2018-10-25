@@ -4,18 +4,18 @@ Description: You can submit apps to the Microsoft Store in over 100 languages.
 title: Unterstützte Sprachen
 ms.assetid: FCA66311-4145-46AC-8B20-1E736F940976
 ms.author: wdg-dev-content
-ms.date: 02/08/2017
+ms.date: 10/25/2018
 ms.topic: article
 ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: e76f63fa30c3a294e1917bf1bed9ea79897390b2
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 5095aafd0b78b6b8cadc0e3852e2079507800c75
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5483343"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5519099"
 ---
 # <a name="supported-languages"></a>Unterstützte Sprachen
 
@@ -27,7 +27,9 @@ Weitere Informationen zum Konfigurieren von Sprachen in Ihren apps, [Globalisier
 ## <a name="supported-languages"></a>Unterstützte Sprachen
 
 
-Hierbei handelt es sich um die Sprachen, die im Microsoft Store unterstützt. Ihre App muss mindestens eine dieser Sprachen unterstützen, und sie darf keine Sprachcodes angeben, die hier nicht aufgeführt sind.
+Hierbei handelt es sich um die Sprachen, die im Microsoft Store unterstützt. Ihre app muss mindestens eine dieser Sprachen unterstützen. 
+
+Sprachcodes, die hier nicht aufgeführt sind, werden nicht vom Store unterstützt. Es wird empfohlen, dass Sie keinen abzielen Sprachcodes als denjenigen unten aufgeführten enthalten; solche Pakete nicht an Kunden verteilt werden, und können Verzögerungen oder Fehlern Zertifizierung verursachen.
 
 | Name der Sprache         | Unterstützte Sprachcodes                                                                                                                                                                              |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

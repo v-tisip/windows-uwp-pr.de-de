@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e616f5a04e50b400c4bd7a700981396570a6c1d
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 8ddac5d69ce0c562129255832adfc49380946510
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044659"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5572379"
 ---
 # <a name="choosing-a-resource"></a>Auswählen einer Ressource
 
@@ -40,7 +38,7 @@ Diese Tabelle enthält die Ressourcentypen, die an die einzelnen Pipelinephasen 
 | Ausgabezusammenführungsphase   | Ausgabe    | Renderzielansicht     | Puffer, Texture1D, Texture2D, Texture3D |
 | Ausgabezusammenführungsphase   | Ausgabe    | Ansicht/Tiefenschablone     | Texture1D, Texture2D                    |
 
- 
+ 
 
 ## <a name="span-ididentifyusagespanspan-ididentifyusagespanspan-ididentifyusagespanidentify-how-each-resource-will-be-used"></a><span id="Identify_Usage"></span><span id="identify_usage"></span><span id="IDENTIFY_USAGE"></span>Identifizieren der Verwendungsweise einer Ressource
 
@@ -56,7 +54,7 @@ Die Hardware, auf der die App ausgeführt wird, muss mindestens eine CPU und ein
 | Staging        | GPU                                  | Nicht zutreffend                 |
 | Unveränderlich      | CPU (nur zum Zeitpunkt der Erstellung der Ressource) | Nicht zutreffend                 |
 
- 
+ 
 
 „Standardverwendung” sollte für eine Ressource verwendet werden, die von der CPU voraussichtlich selten (weniger als einmal pro Frame) aktualisiert wird. Im Idealfall schreibt die CPU nie direkt auf eine Ressource mit Standardverwendung, um potenzielle Leistungseinbußen zu verhindern.
 
@@ -75,7 +73,7 @@ Anders ausgedrückt handelt es sich hier darum, wie die Anwendung die Ressource 
 | Rendering auf Textur                     | Standard              |
 | CPU-Zugriff auf GPU-Daten                | Staging              |
 
- 
+ 
 
 Wenn Sie nicht sicher sind, welche Nutzung am besten ist, beginnen Sie mit der generell verwendeten Standardnutzung. Der Shaderkonstanten-Puffer ist der einzige Ressourcentyp, der immer mit der Standardnutzung verwendet werden sollte.
 
@@ -95,9 +93,9 @@ Das in diesem Beispiel dargestellte Verfahren kann die Leistung durch ein Isolie
 
 [Ressourcen](resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

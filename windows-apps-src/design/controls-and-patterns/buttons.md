@@ -16,12 +16,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: badaefc406daa5f4500c76262d916f47d82e7a52
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: b3afb0cba92e5f3c08de19c926bd5fb949185379
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5469944"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5517411"
 ---
 # <a name="buttons"></a>Schaltflächen
 
@@ -36,9 +36,9 @@ Steuerelement | Beschreibung
 [Button](/uwp/api/windows.ui.xaml.controls.button) | Beginn eine sofortige Aktion aus. Kann mit einem Klickereignis oder einem Befehl Bindung verwendet werden.
 [RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | Eine Schaltfläche, die ein Click-Ereignis kontinuierlich während gedrückt auslöst.
 [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | Eine Schaltfläche, die formatiert wurde, z. B. ein Hyperlink, für die Navigation verwendet. Weitere Informationen finden Sie unter [Hyperlinks](hyperlinks.md).
-[DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | (Vorschau) Eine Schaltfläche mit einem Chevron ein angefügtes Flyout geöffnet.
-[SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) | (Vorschau) Eine Schaltfläche mit zwei Seiten. Eine Seite initiiert eine Aktion und die anderen Seite wird ein Menü geöffnet.
-[ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | (Vorschau) Eine Umschaltfläche mit zwei Seiten. Eine Seite Schaltet ein-/ausschalten, und die anderen Seite wird ein Menü geöffnet.
+[DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | Eine Schaltfläche mit einem Chevron ein angefügtes Flyout geöffnet.
+[SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) | Eine Schaltfläche mit zwei Seiten. Eine Seite initiiert eine Aktion und die anderen Seite wird ein Menü geöffnet.
+[ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | Eine Umschaltfläche mit zwei Seiten. Eine Seite Schaltet ein-/ausschalten, und die anderen Seite wird ein Menü geöffnet.
 
 | **Abrufen der Windows-UI-Bibliothek** |
 | - |
@@ -210,7 +210,7 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 
 ## <a name="create-a-drop-down-button"></a>Erstellen einer Dropdown-Schaltfläche
 
-> **Vorschau**: DropDownButton erfordert die [neuesten Windows 10 Insider Preview-Build und SDK](https://insider.windows.com/for-developers/) oder der [Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/).
+> DropDownButton erfordert Windows 10, Version 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) oder höher, oder in der [Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 Eine [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) ist eine Schaltfläche, die ein Chevron als einen visuellen Hinweis anzeigt, dass es ein angefügtes Flyout besitzt, das weitere Optionen enthält. Es verfügt über das gleiche Verhalten wie eine Standardschaltfläche mit einem Flyout; nur die Darstellung unterscheidet.
 
@@ -269,7 +269,7 @@ private void AlignmentMenuFlyoutItem_Click(object sender, RoutedEventArgs e)
 
 ## <a name="create-a-split-button"></a>Erstellen Sie eine geteilte Schaltfläche
 
-> **Vorschau**: SplitButton erfordert die [neuesten Windows 10 Insider Preview-Build und SDK](https://insider.windows.com/for-developers/) oder der [Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/).
+> SplitButton erfordert Windows 10, Version 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) oder höher, oder in der [Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 Ein [SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) besteht aus zwei Teilen, die separat aufgerufen werden können. Ein Teil verhält sich wie eine Standardschaltfläche und ruft eine sofortige Aktion. Das andere Teil Ruft ein Flyout, die zusätzliche Optionen, mit denen der Benutzer auswählen kann.
 
@@ -376,7 +376,7 @@ public sealed partial class MainPage : Page
 
 ## <a name="create-a-toggle-split-button"></a>Erstellen Sie eine geteilte Umschaltfläche
 
-> **Vorschau**: ToggleSplitButton erfordert die [neuesten Windows 10 Insider Preview-Build und SDK](https://insider.windows.com/for-developers/) oder der [Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/).
+> ToggleSplitButton erfordert Windows 10, Version 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) oder höher, oder in der [Windows-UI-Bibliothek](https://docs.microsoft.com/uwp/toolkits/winui/).
 
 Eine [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) besteht aus zwei Teilen, die separat aufgerufen werden können. Ein Teil verhält sich wie eine Umschaltfläche, die aktiviert oder deaktiviert werden können. Das andere Teil Ruft ein Flyout, die zusätzliche Optionen, mit denen der Benutzer auswählen kann.
 

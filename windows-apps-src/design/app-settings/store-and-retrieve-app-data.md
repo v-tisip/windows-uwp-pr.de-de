@@ -12,12 +12,12 @@ ms.prod: windows
 ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 47383cd8f89e5da104ac73878b0613c364240459
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: f73a99ea4dc58880f1de517853a05aa0b0d6dd6b
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817298"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5512902"
 ---
 # <a name="store-and-retrieve-settings-and-other-app-data"></a>Speichern und Abrufen von Einstellungen und anderen App-Daten
 
@@ -172,7 +172,7 @@ Roamingdaten für Apps sind in der Cloud verfügbar, solange der Benutzer innerh
 -   Führen Sie kein Roaming für gerätespezifische App-Daten durch. Manche dieser Informationen sind ausschließlich lokal relevant, wie beispielsweise der Pfadname zu einer lokalen Dateiressource. Wenn Sie lokale Informationen als Roamingdaten verwenden möchten, stellen Sie sicher, dass die App wiederhergestellt werden kann, wenn die Informationen auf dem zweiten Gerät nicht gültig sind.
 -   Führen Sie kein Roaming für große App-Datenmengen durch. Die Menge der App-Daten für das Roaming ist begrenzt. Verwenden Sie die Eigenschaft [**RoamingStorageQuota**](https://msdn.microsoft.com/library/windows/apps/br241625), um diese maximale Datenmenge zu implementieren. Wenn eine App diese Grenze erreicht, wird so lange kein Datenroaming durchgeführt, bis die Größe des App-Datenspeichers wieder unter die Grenze fällt. Berücksichtigen Sie beim App-Design, wie eine Grenze für größere Datenmengen festgelegt wird, sodass die Begrenzung nicht überschritten wird. Wenn für das Speichern eines Spielstands beispielsweise jeweils 10KB erforderlich sind, sollte die App unter Umständen höchstens zulassen, dass 10 Spielstände gespeichert werden.
 -   Verwenden Sie Roaming nicht für Daten, die von einer sofortigen Synchronisierung abhängig sind. Windows garantiert keine sofortige Synchronisierung; die Synchronisierung kann erheblich verzögert werden, wenn Benutzer offline oder mit einem Netzwerk mit hoher Latenz verbunden sind. Stellen Sie sicher, dass die UI nicht von einer sofortigen Synchronisierung abhängig ist.
--   Verwenden Sie Roaming nicht für sich häufig ändernde Daten. Wenn Ihre App beispielsweise Informationen nachverfolgt, die sich häufig ändern (z.B. die Position eines Musiktitels in Sekunden), speichern Sie diese Daten nicht als Roaming-App-Daten. Wählen Sie stattdessen eine weniger häufige angepasste Darstellung, die trotzdem eine gute Benutzererfahrung gewährleistet, z. B. den aktuell wiedergegebenen Titel.
+-   Verwenden Sie roaming nicht für häufig ändernde Daten. Wenn Ihre App beispielsweise Informationen nachverfolgt, die sich häufig ändern (z.B. die Position eines Musiktitels in Sekunden), speichern Sie diese Daten nicht als Roaming-App-Daten. Wählen Sie stattdessen eine weniger häufige angepasste Darstellung, die trotzdem eine gute Benutzererfahrung gewährleistet, z. B. den aktuell wiedergegebenen Titel.
 
 ### <a name="roaming-pre-requisites"></a>Voraussetzungen für Roaming
 

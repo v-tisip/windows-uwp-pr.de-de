@@ -11,11 +11,11 @@ ms.technology: uwp
 keywords: Windows10, UWP, Anzeige, Kampagne, bewerben
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c7e7c1e2cd9a2ca083cef5fed27a9067cf1e7e7
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5468511"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5522862"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Erstellen einer Anzeigenkampagne für Ihre App
 
@@ -54,7 +54,7 @@ So erstellen Sie eine Anzeigenkampagne zum Bewerben einer App.
 
     * Wenn Sie von Microsoft einen Gutschein für eine Anzeigenkampagne erhalten haben, klicken Sie auf **Use a coupon**, geben Sie den Gutscheincode ein, und klicken Sie auf **Übernehmen**, um den Gutschein für die Kampagne zu übernehmen.
 
-    Klicken Sie anschließend auf **Speichern und Weiter**, um zum Schritt **Zielgruppe** zu gelangen. Dieser Schritt ist nicht für eigenwerbungskampagnen, verfügbar, da diese nur in Ihren eigenen apps ausgeführt werden.
+    Klicken Sie anschließend auf **Speichern und Weiter**, um zum Schritt **Zielgruppe** zu gelangen. Dieser Schritt ist nicht für eigenwerbungskampagnen, zur Verfügung, da diese nur in Ihren eigenen apps ausgeführt werden.
 
 9.  Auf der Seite **Zielgruppe** zeigen wir die Einstellungen für die Zielgruppe an, die für Ihre Kampagne empfohlen wird. Optional können Sie diese Informationen anpassen:
     * **Länder/Regionen**: Wählen Sie bis zu 5 Länder oder Regionen, in denen die Anzeige angezeigt werden soll. Eine Liste der unterstützten Länder oder Regionen finden Sie unter [Häufig gestellte Fragen zu Anzeigenkampagnen](common-questions.md#where-will-my-ad-appear).
@@ -86,7 +86,7 @@ So erstellen Sie eine Anzeigenkampagne zum Bewerben einer App.
             * **Anzeigen, dass meine App kostenlos ist**. Wenn Ihre App in allen ausgewählten Märkten kostenlos ist, können Sie dieses Kontrollkästchen aktivieren.
             * **Handlungsaufforderung**. Wenn **Mehr Interaktion in Ihrer App** als Ziel für Ihre Kampagne wählen, können Sie die Schaltfläche für die Handlungsaufforderung in Ihrer App auf **Öffnen**, **Spielen**, **Lesen**, **Hören** oder **Kaufen** festlegen.  
 
-    * **Benutzerdefiniert**. Wählen Sie diese Option aus, um Ihren eigenen Anzeigenentwurf zu verwenden. Beachten Sie, dass wenn Sie ein Kundensegment früher ausgewählt haben, müssen Sie benutzerdefinierte Werbemittel verwenden. Sie können verschiedene Dateien für jede der verfügbaren Anzeigengrößen hochladen. Die Dateien müssen folgenden Anforderungen und Richtlinien entsprechen:
+    * **Benutzerdefiniert**. Wählen Sie diese Option aus, um Ihren eigenen Anzeigenentwurf zu verwenden. Beachten Sie, dass, wenn Sie ein Kundensegment früher ausgewählt haben, müssen Sie benutzerdefinierte Werbemittel verwenden. Sie können verschiedene Dateien für jede der verfügbaren Anzeigengrößen hochladen. Die Dateien müssen folgenden Anforderungen und Richtlinien entsprechen:
         * Jede Datei muss eine PNG- oder JPG-Datei mit höchstens 40KB sein.
         * Ihre Anzeigenentwürfe müssen die in der [Microsoft Creative Acceptance Policy](http://go.microsoft.com/fwlink?LinkId=532595) dargelegten Anforderungen erfüllen.
         * Der Inhalt in Ihren Anzeigenentwürfen muss für die beworbene App relevant sein. Anzeigenentwürfe, die nicht mit der App zusammenhängen, werden nicht in anderen Apps verteilt.

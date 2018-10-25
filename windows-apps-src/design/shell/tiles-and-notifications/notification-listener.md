@@ -13,11 +13,11 @@ ms.technology: uwp
 keywords: Windows10, Uwp, notification listener, Usernotificationlistener, Dokumentation, Zugriff auf Benachrichtigungen
 ms.localizationpriority: medium
 ms.openlocfilehash: f4d8cb9ef7589bd8f0c56586ab8fcfec7c1f01e3
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5468412"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5520401"
 ---
 # <a name="notification-listener-access-all-notifications"></a>Notification-Listener: Zugriff auf alle Benachrichtigungen
 
@@ -281,9 +281,9 @@ foreach (uint id in toBeRemoved)
 ## <a name="foreground-event-for-notification-addeddismissed"></a>Vordergrundereignis für hinzugefügt/geschlossene Benachrichtigungen
 
 > [!IMPORTANT] 
-> Bekanntes Problem: das Ereignis im Vordergrund bewirkt eine Schleife CPU auf neueren Versionen von Windows und zuvor vor, die nicht funktioniert. Verwenden Sie nicht das Ereignis im Vordergrund. In einem bevorstehenden-Update für Windows werden wir dieses Problem beheben.
+> Bekanntes Problem: das Ereignis im Vordergrund bewirkt eine Schleife CPU auf die aktuellen Versionen von Windows und zuvor davor nicht funktioniert. Verwenden Sie nicht das Ereignis im Vordergrund. Ein bevorstehenden Windows Update werden wir dieses Problem beheben.
 
-Verwenden Sie anstelle das vordergrundereignis für eine Hintergrundaufgabe [gemeinsamen Prozessmodells](../../../launch-resume/create-and-register-an-inproc-background-task.md) den zuvor aufgeführten Code. Die Hintergrundaufgabe zudem können Sie Änderung ereignisbenachrichtigungen beide erhalten, während Ihre app geschlossen ist oder ausgeführt wird.
+Verwenden Sie anstelle das vordergrundereignis für eine Hintergrundaufgabe [gemeinsamen Prozessmodells](../../../launch-resume/create-and-register-an-inproc-background-task.md) den zuvor aufgeführten Code. Zudem wird die Hintergrundaufgabe können Sie Änderung ereignisbenachrichtigungen beide erhalten, während Ihre app geschlossen ist oder ausgeführt wird.
 
 ```csharp
 // Subscribe to foreground event (DON'T USE THIS)
@@ -298,4 +298,4 @@ private void Listener_NotificationChanged(UserNotificationListener sender, UserN
 
 ## <a name="howto-fixdelays-in-the-background-task"></a>So wird's gemacht Fixdelays in der Hintergrundaufgabe
 
-Beim Testen Ihrer Anwendung werden Sie möglicherweise feststellen, dass die Hintergrundaufgabe manchmal verzögert ist und mehrere Minuten lang nicht ausgelöst wird. Um dieses Problem zu beheben, sollten Sie dazu auffordern den Benutzer Togo auf den Systemeinstellungen -> System -> Akku -> Akkunutzung nach app, suchen Sie Ihre app in der Liste, wählen Sie ihn und ändern Sie den Wert "immer im Hintergrund zugelassen".Danach sollte die Hintergrundaufgabe immer innerhalb einer Sekunde der Benachrichtigung angestoßen werden.
+Beim Testen Ihrer Anwendung werden Sie möglicherweise feststellen, dass die Hintergrundaufgabe manchmal verzögert ist und mehrere Minuten lang nicht ausgelöst wird. Um dieses Problem zu beheben, sollten Sie fordern Sie den Benutzer Togo auf den Systemeinstellungen -> System -> Akku -> Akkunutzung nach app, suchen Sie Ihre app in der Liste, wählen Sie ihn und ändern Sie den Wert "Immer im Hintergrund zugelassen" sein.Danach sollte die Hintergrundaufgabe immer innerhalb einer Sekunde der Benachrichtigung angestoßen werden.

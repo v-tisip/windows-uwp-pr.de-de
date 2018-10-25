@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 73a2a619c32e7d6a7f2fff768c9cec5b7986c3c1
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: eef41642d371f3a8be451c2687eee007608c3b2e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044709"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5542294"
 ---
 # <a name="textures-with-alpha-channels"></a>Texturen mit Alphakanälen
 
@@ -30,7 +28,7 @@ Die Transparenzblock und der Farbblock sind wie in der folgenden Tabelle gezeigt
 | 3:0          | Transparenzblock                |
 | 7:4          | Zuvor beschriebener 64-Bit-Block |
 
- 
+ 
 
 ## <a name="span-idexplicit-texture-encodingspanspan-idexplicit-texture-encodingspanspan-idexplicit-texture-encodingspanexplicit-texture-encoding"></a><span id="Explicit-Texture-Encoding"></span><span id="explicit-texture-encoding"></span><span id="EXPLICIT-TEXTURE-ENCODING"></span>Explizite Texturkodierung
 
@@ -41,9 +39,9 @@ Das folgende Diagramm zeigt einen 64-Bit-Transparenzblock.
 
 ![Diagramm eines 64-Bit-Transparenzblocks](images/colors4.png)
 
-**Hinweis** Die Komprimierungsmethode von Direct3D verwendet die vier wichtigsten Bits.
+**Hinweis:**  die Komprimierungsmethode von Direct3D verwendet die vier wichtigsten Bits.
 
- 
+ 
 
 Die folgenden Tabellen illustrieren, wie die Alpha-Informationen für jedes 16-Bit-Wort im Speicher repräsentiert sind.
 
@@ -56,7 +54,7 @@ Layout für Wort 0:
 | 11:8          | \[0\]\[2\] |
 | 15:12 (MSB\*) | \[0\]\[3\] |
 
- 
+ 
 
 \*am wenigsten wichtigstes Bit, wichtigstes Bit (MSB)
 
@@ -69,7 +67,7 @@ Layout für Wort 1:
 | 11:8        | \[1\]\[2\] |
 | 15:12 (MSB) | \[1\]\[3\] |
 
- 
+ 
 
 Layout für Wort 2:
 
@@ -80,7 +78,7 @@ Layout für Wort 2:
 | 11:8        | \[2\]\[2\] |
 | 15:12 (MSB) | \[2\]\[3\] |
 
- 
+ 
 
 Layout für Wort 3:
 
@@ -91,7 +89,7 @@ Layout für Wort 3:
 | 11:8        | \[3\]\[2\] |
 | 15:12 (MSB) | \[3\]\[3\] |
 
- 
+ 
 
 Der Farbvergleich, der in BC1 verwendet wird, um festzustellen, ob der Texel transparent ist, wird in diesem Format nicht verwendet. Es wird angenommen, dass die Farbdaten ohne den Farbvergleich immer wie im 4-Farben-Modus behandelt werden.
 
@@ -139,7 +137,7 @@ Das Speicherlayout des Alphablocks ist wie folgt:
 | 6    | \[3\]\[1\] (1 MSB), \[3\]\[0\], \[2\]\[3\], \[2\]\[2\] (1 LSB) |
 | 7    | \[3\]\[3\], \[3\]\[2\], \[3\]\[1\] (2 LSBs)                    |
 
- 
+ 
 
 Der Farbvergleich, der in BC1 verwendet wird, um festzustellen, ob der Texel transparent ist, wird in diesen Formaten nicht verwendet. Es wird angenommen, dass die Farbdaten ohne den Farbvergleich immer wie im 4-Farben-Modus behandelt werden.
 
@@ -148,9 +146,9 @@ Der Farbvergleich, der in BC1 verwendet wird, um festzustellen, ob der Texel tra
 
 [Komprimierte Texturressourcen](compressed-texture-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

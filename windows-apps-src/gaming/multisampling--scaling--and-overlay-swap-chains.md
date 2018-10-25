@@ -6,19 +6,18 @@ ms.assetid: 3e4d2d19-cac3-eebc-52dd-daa7a7bc30d1
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Swapketten-Skalierung, Einblendungen, directx
-ms.openlocfilehash: 02088fce03c88b4166d49cd36754ac956f254199
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 9d159a78412bea528c1a12428288daebe31d1fe1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233696"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5560503"
 ---
-# <a name="swap-chain-scaling-and-overlays"></a>Swapketten-Skalierung und Einblendungen
+# <a name="swap-chain-scaling-and-overlays"></a>Swapchainskalierung und Überlagerungen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Hier erfahren Sie, wie Sie skalierte Swapchains zum schnelleren Rendern auf mobilen Geräten erstellen und Überlagerungsswapchains (falls verfügbar) verwenden, um die visuelle Qualität zu steigern.
 
@@ -47,7 +46,7 @@ Wenn Ihr Spiel nicht auf der neuesten Hardware ausgeführt wird – oder auf Har
     swapChainDesc.SampleDesc.Quality = 0;
     swapChainDesc.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
     swapChainDesc.BufferCount = 2; // Use double-buffering to minimize latency.
-    swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL; // All Windows Store apps must use this SwapEffect.
+    swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL; // All UWP apps must use this SwapEffect.
     swapChainDesc.Flags = 0;
     swapChainDesc.Scaling = DXGI_SCALING_STRETCH;
 
@@ -151,9 +150,9 @@ Führen Sie die folgenden Schritte aus, um eine Vordergrund-Swapchain zu erstell
     m_overlaySupportExists = dxgiOutput2->SupportsOverlays() ? true : false;
     ```
     
-    > **Hinweis**   Wenn der DXGI-Adapter Überlagerungen unterstützt, fahren Sie mit dem nächsten Schritt fort. Wenn das Gerät Überlagerungen nicht unterstützt, ist das Rendern mit mehreren Swapchains nicht effizient. Rendern Sie die UI stattdessen mit reduzierter Auflösung in derselben Swapchain wie die Echtzeitinhalte des Spiels.
+    > **Hinweis:**  Wenn der DXGI-Adapter Überlagerungen unterstützt, fahren Sie mit dem nächsten Schritt fort. Wenn das Gerät Überlagerungen nicht unterstützt, ist das Rendern mit mehreren Swapchains nicht effizient. Rendern Sie die UI stattdessen mit reduzierter Auflösung in derselben Swapchain wie die Echtzeitinhalte des Spiels.
 
-     
+     
 
 2.  Erstellen Sie die Vordergrund-Swapchain mit [**IDXGIFactory2::CreateSwapChainForCoreWindow**](https://msdn.microsoft.com/library/windows/desktop/hh404559). In der für den *pDesc*-Parameter bereitgestellten [**DXGI\_SWAP\_CHAIN\_DESC1**](https://msdn.microsoft.com/library/windows/desktop/hh404528)-Struktur müssen folgende Optionen festgelegt werden:
 
@@ -167,7 +166,7 @@ Führen Sie die folgenden Schritte aus, um eine Vordergrund-Swapchain zu erstell
      foregroundSwapChainDesc.AlphaMode = DXGI_ALPHA_MODE_PREMULTIPLIED; // Foreground swap chain alpha values must be premultiplied.
     ```
 
-    > **Hinweis**   Legen Sie das [**DXGI\_SWAP\_CHAIN\_FLAG\_FOREGROUND\_LAYER**](https://msdn.microsoft.com/library/windows/desktop/bb173076)-Flag bei jeder Größenänderung der Swapchain neu fest.
+    > **Hinweis:**  die [**DXGI\_SWAP\_CHAIN\_FLAG\_FOREGROUND\_LAYER**](https://msdn.microsoft.com/library/windows/desktop/bb173076) noch einmal festlegen, jedes Mal, wenn die Größe die SwapChain geändert wird.
 
     ```cpp
     HRESULT hr = m_foregroundSwapChain->ResizeBuffers(
@@ -325,9 +324,9 @@ Führen Sie die folgenden Schritte aus, um eine Vordergrund-Swapchain zu erstell
     }
     ```
 
- 
+ 
 
- 
+ 
 
 
 

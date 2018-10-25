@@ -1,7 +1,7 @@
 ---
 author: QuinnRadich
 title: Was ist neu in Windows-Dokumentation im Mai 2018 – Entwicklung von UWP-apps
-description: Neue Features, Videos und entwicklerleitfäden verfügen über die Windows 10-Entwicklerdokumentation für Mai 2018 und der Microsoft Build-Konferenz hinzugefügt wurde.
+description: Neue Features, Videos und entwicklerleitfäden haben die Windows 10-Entwicklerdokumentation für Mai 2018 und der Microsoft Build-Konferenz hinzugefügt wurde.
 keywords: Neuigkeiten, update, features, Anleitungen für Entwickler, Windows 10, Mai, Build
 ms.author: quradic
 ms.date: 5/7/2018
@@ -10,15 +10,15 @@ ms.prod: windows
 ms.technology: uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4a9e55de039087ce3fdaae6a003293a50938af90
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5474365"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5519921"
 ---
-# <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>Neuigkeiten in der Windows-Entwicklerdokumentation im Mai 2018
+# <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>Was ist neu in der Windows-Entwicklerdokumentation im Mai 2018
 
-Die Entwicklerdokumentation für die Windows-Plattform wird ständig mit Informationen über neue Features für Entwickler aktualisiert. Die folgenden Featureübersichten, entwicklerleitfäden, Videos und Beispiele wurden im Mai mit der [Microsoft Build 2018](https://www.microsoft.com/build) -Entwicklerkonferenz zur Verfügung gestellt wurden.
+Die Entwicklerdokumentation für die Windows-Plattform wird ständig mit Informationen über neue Features für Entwickler aktualisiert. Die folgenden Featureübersichten, entwicklerleitfäden, Videos und Beispiele wurden im Mai mit der [Microsoft Build 2018](https://www.microsoft.com/build) Entwicklerkonferenz zusammenfallen zur Verfügung gestellt.
 
 Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/create-uwp-apps.md) oder sich mit der Verwendung von [vorhandenem App-Code unter Windows](../porting/index.md) vertraut machen.
 
@@ -26,11 +26,11 @@ Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?L
 
 ### <a name="motion-in-fluent-design"></a>Bewegung in der Fluent Design
 
-Der Benutzer der Bewegung in der Fluent Design-Systems wird weiterentwickelt, die auf die Grundlagen der Timing, geschwindigkeitsverlauf, direktionalität und Schwerkraft erstellt. Anwenden von diesen Grundlagen hilft Führung des Benutzers über Ihre app und Spiegeln der natürlichen Welt mit seiner digitalen Erfahrung verbunden. Weitere Informationen finden Sie in diesen Artikeln:
+Der Benutzer der Bewegung in der Fluent Design-System ist entwickelt, die auf die Grundlagen der Timing, geschwindigkeitsverlauf, direktionalität und Schwerkraft erstellt. Anwenden von diesen Grundlagen Führung des Benutzers über Ihre app hilft und durch Reflektieren der natürlichen Welt mit seiner digitalen Erfahrung verbunden. Weitere Informationen finden Sie in diesen Artikeln:
 
-* [Übersicht über die Bewegungen](../design/motion/index.md) wurde aktualisiert, um diese Grundlagen widerspiegeln.
+* [Übersicht über die Bewegung](../design/motion/index.md) wurde aktualisiert, um diese Grundlagen widerspiegeln.
 * [In der Praxis Bewegung](../design/motion/motion-in-practice.md) enthält Beispiele zur Verwendung von diesen Grundlagen innerhalb Ihrer app anwenden.
-* [Direktionalität und Schwerkraft](../design/motion/directionality-and-gravity.md) festigt das mentale Benutzermodell Ihrer App.
+* [Direktionalität und Schwerkraft](../design/motion/directionality-and-gravity.md) festigt das mentale Modell des Benutzers, der Ihre app.
 * [Timing und geschwindigkeitsverlauf](../design/motion/timing-and-easing.md) wird die Bewegung in Ihrer app Realismus hinzugefügt.
 
 ![Bewegung in Aktion zu sehen](../design/motion/images/contextual.gif)
@@ -52,20 +52,20 @@ Visuelle Updates und geringfügigen Änderungen wurden die folgenden Fluent Desi
 
 Darüber hinaus haben wir die folgenden Seiten mit neuen Informationen zu ihren Inhaltsbereiche umgeschrieben:
 
-* [Symbole](../design/style/icons.md) enthält jetzt praktische Empfehlungen für Symbole und dass diese geklickt werden kann.
+* [Symbole](../design/style/icons.md) enthält jetzt praktische Empfehlungen für mit Symbolen und das darauf geklickt werden kann.
 * [Typografie](../design/style/typography.md) konsolidiert Informationen aus ähnlichen Artikeln Sie alles an einem Ort mit aktualisierten Hilfestellungen und Illustrationen einfügen.
 
 ![Bild mit Farbpalette](../design/style/images/color/accent-color-palette.svg)
 
 ### <a name="app-installer-files-in-visual-studio"></a>App-Installer-Dateien in Visual Studio
 
-App-Installer-Dateien können jetzt mit Visual Studio 2017, Update 15.7 erstellt werden. [Erfahren Sie, wie Sie Visual Studio zum Erstellen einer App-Installer-Datei verwenden](../packaging/create-appinstallerfile-vs.md) und aktivieren Sie automatische Updates für Ihre apps. Wenn Probleme auftreten, finden Sie unter [Problembehandlung bei der Installation mit der App-Installer-Datei](../packaging/troubleshoot-appinstaller-issues.md) , um allgemeine Probleme und Lösungen anzuzeigen.
+App-Installer-Dateien können mit Visual Studio 2017, Update 15.7 jetzt erstellt werden. [Erfahren Sie, wie Sie Visual Studio zum Erstellen einer App-Installer-Datei verwenden](../packaging/create-appinstallerfile-vs.md) , und aktivieren Sie automatische Updates in Ihren apps. Wenn Probleme auftreten, finden Sie unter [Problembehandlung bei der Installation mit der App-Installer-Datei](../packaging/troubleshoot-appinstaller-issues.md) , um allgemeine Probleme und Lösungen anzuzeigen.
 
-### <a name="edge-webview-control-for-windows-forms-and-wpf-applications"></a>Edge-WebView-Steuerelement für Windows Forms oder WPF-Anwendung
+### <a name="edge-webview-control-for-windows-forms-and-wpf-applications"></a>Edge-WebView-Steuerelement von Windows Forms und WPF-Apps
 
-Anzeigen von Webinhalten in Ihrer desktop-Anwendung mit der WebView-Steuerelement, das zuvor nur für UWP-Anwendungen verfügbar. Dieses Steuerelement verwendet die Microsoft Edge Modul zu eine Ansicht einbetten rendert Rich-Text HTML formatiert Inhalte von einem Remotewebserver, dynamisch generiertem Code oder Inhaltsdateien rendern. Suchen Sie das WebView-Steuerelement in der neuesten Version von der [Windows Community Toolkit.](https://docs.microsoft.com/windows/uwpcommunitytoolkit/)
+Zeigen Sie Webinhalte in Ihrer desktop-Anwendung mit das WebView-Steuerelement, das zuvor nur für UWP-Anwendungen verfügbar. Dieses Steuerelement verwendet der Microsoft Edge Modul zu eine Ansicht einbetten rendert grafisch HTML formatiert Inhalte von einem Remotewebserver, dynamisch generiertem Code oder Inhaltsdateien rendern. Suchen Sie das WebView-Steuerelement in der neuesten Version von der [Windows Community Toolkit.](https://docs.microsoft.com/windows/uwpcommunitytoolkit/)
 
-Suchen Sie für andere Steuerelemente wie WebView im Windows Community Toolkit finden in zukünftigen Versionen. Weitere Informationen finden Sie unter [Host-UWP-Steuerelemente in WPF- oder Windows Forms-Anwendung.](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
+Für andere Steuerelemente wie WebView Windows Community Toolkit in zukünftigen Versionen suchen. Weitere Informationen finden Sie unter [Host-UWP-Steuerelemente in WPF- oder Windows Forms-Anwendung.](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)
 
 ### <a name="gaze-input-and-interactions"></a>Eingabe via anvisieren und Interaktionen
 
@@ -73,21 +73,21 @@ Suchen Sie für andere Steuerelemente wie WebView im Windows Community Toolkit f
 
 ### <a name="msix-packaging-format"></a>MSIX-Paketformat
 
-MSIX ist auf der Microsoft Build 2018 Konferenz angekündigt, eine neue Containerization-Paketformat, die für alle Windows-desktopanwendungen, die z. B. Win32, Windows Forms, WPF und UWP gilt. Dieses neue Format erbt großartige Features von UWP:
+MSIX ist auf der Microsoft Build 2018 Konferenz angekündigt, ein neues Containerization-Paket-Format, das für alle Windows-Anwendungen, einschließlich der Win32, Windows Forms, WPF und UWP gilt. Dieses neue Format erbt großartige Features von UWP:
 
 * Stabile Installation und Aktualisierung. 
-* Sicherheitsmodell mit einer flexiblen Funktion des Systems verwaltet.
+* Sicherheitsmodell mit einem flexiblen Funktion System verwaltet.
 * Unterstützung für den Microsoft Store, Enterprise Management und viele benutzerdefinierte Verteilung Modelle.
 
 Tools zur Erstellung dieser Pakete werden in einer zukünftigen Version von Visual Studio und Windows SDK verfügbar sein.
 
-MSIX-Paketformat ist ein open-Source-Format mit einer leichter unsere Partner mit das MSIX-Ökosystem mit Tools und Lösungen für ihr unterstützen kann. Weitere Informationen zu den MSIX-Paketformat erhalten, finden Sie unter [MSIX-SDK](https://github.com/Microsoft/msix-packaging). 
+MSIX-Paketformat ist ein open-Source-Format das für unsere Partner zur Unterstützung des MSIX-Ökosystems ihre Tools und Lösungen erleichtert. Weitere Informationen zu den MSIX-Paketformat erhalten, finden Sie unter [MSIX-SDK](https://github.com/Microsoft/msix-packaging). 
 
 ![MSIX-Packaging-image](images/msix.png)
 
 ### <a name="optional-packages-with-executable-code"></a>Optionale Pakete mit ausführbarem Code
 
-Optionale Pakete in Ihrer app können nun ausführbaren C#-Code enthalten. [Hier erfahren Sie, wie Sie mithilfe von Visual Studio so konfigurieren Sie optionale Add-on Pakete zum das Haupt-app-Paket zu unterstützen.](../packaging/optional-packages-with-executable-code.md)
+Optionale Pakete in Ihrer app können nun ausführbaren C#-Code enthalten. [Hier erfahren Sie, wie Sie mithilfe von Visual Studio so konfigurieren Sie optionale Add-On-Pakete um das Haupt-app-Paket zu unterstützen.](../packaging/optional-packages-with-executable-code.md)
 
 ### <a name="page-transitions"></a>Seitenübergänge
 
@@ -95,17 +95,17 @@ Optionale Pakete in Ihrer app können nun ausführbaren C#-Code enthalten. [Hier
 
 ### <a name="project-rome"></a>Projekt Rome
 
-Das Projekt "ROME"-Team hat ihre IOS- und Android-SDKs, Hinzufügen neuer Funktionen wie Aktivitäten des Benutzers und Umgestaltung Großteil ihres Codes, um eine konsistente programmiererfahrung über die verschiedenen SDKs bieten überholt. [Alle neuen API-Referenz und Vorgehensweisen Dokumente](https://docs.microsoft.com/windows/project-rome/) werden während der Build 2018-Entwicklerkonferenz freischalten.
+Das Projekt "ROME"-Team hat ihre IOS- und Android-SDKs, Hinzufügen neuer Funktionen wie Aktivitäten des Benutzers und Umgestaltung Großteil ihres Codes, um eine konsistente programmiererfahrung über die verschiedenen SDKs bieten überholt. [Alle neuen API-Referenz und Vorgehensweisen Dokumente](https://docs.microsoft.com/windows/project-rome/) werden während der Build 2018 Entwicklerkonferenz freischalten.
 
-### <a name="sets"></a>Sets
+### <a name="sets"></a>Gruppen
 
-Die Funktion ist in Windows-Insider Preview-builds verfügbar. Wenn das Sets-Feature verwendet, wird Ihre app in einem Fenster gezeichnet, die mit anderen apps zu jeder app müssen eine eigene Registerkarte in der Titelleiste gemeinsam genutzt werden kann. 
+Das Sets-Feature ist in Windows-Insider Preview-builds verfügbar. Wenn Sie das Sets-Feature verwenden, wird Ihre app in einem Fenster gezeichnet, die mit anderen apps, zu jeder app müssen eine eigene Registerkarte in der Titelleiste gemeinsam genutzt werden kann. 
 
 ## <a name="developer-guidance"></a>Anleitungen für Entwickler
 
 ### <a name="get-started"></a>Erste Schritte
 
-Wir haben unsere Get revitalized Inhalte mit neuen Lernpfade gestartet. Diese neuen Themen zielt darauf ab, bieten neuen Windows 10-Entwickler mit Informationen über eine Reihe häufiger Aufgaben, dass sie möglicherweise erreichen möchten. Sie sind nicht Lernprogramme und eine tragbaren dieser exemplarischen Vorgehensweise nicht bereitstellen, sondern stattdessen weisen Sie darauf hin, in denen Dokumentation vorhanden ist und wie sie zu verwenden. Sehen Sie sich die überarbeitete [Programmieren](../get-started/create-uwp-apps.md) Seite oder Erkunden Sie jede einzelne Lernpfad:
+Wir haben unsere Get revitalized Inhalte mit neuen Lernpfade gestartet. Diese neuen Themen Ziel, bieten Entwicklern die neue Windows 10 mit Informationen über eine Reihe häufiger Aufgaben, dass sie möglicherweise erreichen möchten. Sie sind nicht Lernprogramme und tragbaren eine exemplarische Vorgehensweise nicht bereitstellen, sondern stattdessen weisen Sie darauf hin, in denen Dokumentation vorhanden ist und wie sie zu verwenden. Sehen Sie sich die überarbeitete [Programmieren](../get-started/create-uwp-apps.md) Seite oder Erkunden Sie jede einzelne Lernpfad:
 
 * [Erstellen eines Formulars](../get-started/construct-form-learning-track.md)
 * [Anzeigen von Kunden in einer Liste](../get-started/display-customers-in-list-learning-track.md)
@@ -116,11 +116,11 @@ Wir haben unsere Get revitalized Inhalte mit neuen Lernpfade gestartet. Diese ne
 
 ### <a name="advertising-performance-report"></a>Bericht zur Anzeigenleistung
 
-Der [Bericht zur anzeigen-Performance](../publish/advertising-performance-report.md) in Dev Center-Dashboard bietet jetzt Metriken. Wir haben auch den [Optimieren der anzeigbarkeit Ihrer Werbeeinheiten](../monetize/optimize-ad-unit-viewability.md) Artikel aus, um Empfehlungen für das Optimieren der anzeigbarkeit Ihrer anzeigen bieten hinzugefügt.
+[Bericht zur Advertising Performance](../publish/advertising-performance-report.md) in Dev Center-Dashboard bietet jetzt Metriken. Wir haben den Artikel [Optimieren der Sichtbarkeit von anzeigeneinheiten](../monetize/optimize-ad-unit-viewability.md) , um Empfehlungen für das Optimieren der anzeigbarkeit Ihrer anzeigen bieten auch hinzugefügt.
 
 ### <a name="targeted-push-notifications"></a>Benutzerorientierte Pushbenachrichtigungen
 
-Die Seite " [Notifications](../publish/send-push-notifications-to-your-apps-customers.md) " im Dev Center-Dashboard bietet jetzt zusätzliche Analysedaten für Ihre Benachrichtigungen in Diagramm- und weltkartenform Kartenansichten.
+Die Seite " [Notifications](../publish/send-push-notifications-to-your-apps-customers.md) " in Dev Center-Dashboard bietet jetzt zusätzliche Analysedaten für alle Ihre Benachrichtigungen in Diagramm- und weltkartenform Kartenansichten.
 
 ## <a name="videos"></a>Videos
 
@@ -130,10 +130,10 @@ C++ / WinRT ist eine neue Art der Erstellung und Nutzung von Windows-Runtime-API
 
 ### <a name="multi-instance-uwp-apps"></a>UWP-Apps mit mehreren Instanzen
 
-Windows können nun mehrere Instanzen von Ihrer UWP-app mit jeweils in eine eigene getrennten Prozess ausgeführt werden. Erfahren Sie, wie Sie eine neue app erstellen, die dieses Feature, dann [Lesen Sie die Entwicklerdokumentation](../launch-resume/multi-instance-uwp.md) für Weitere Hinweise zur Verwendung unterstützt und warum Sie dieses Feature verwenden [das Video ansehen](https://www.youtube.com/watch?v=clnnf4cigd0&feature=youtu.be) .
+Windows kann jetzt Sie mehrere Instanzen von Ihrer UWP-app mit jeweils in eine eigene getrennten Prozess ausgeführt. [Das Video ansehen](https://www.youtube.com/watch?v=clnnf4cigd0&feature=youtu.be) , erfahren Sie, wie Sie eine neue app erstellen, die dieses Feature, dann [Lesen Sie die Entwicklerdokumentation](../launch-resume/multi-instance-uwp.md) für Weitere Hinweise zur Verwendung unterstützt und warum Sie dieses Feature verwenden.
 
 ## <a name="samples"></a>Beispiele
 
 ### <a name="customer-database-tutorial"></a>Lernprogramm für die Kunden
 
-In diesem Lernprogramm erstellt eine einfache UWP-app für die Verwaltung von eine Liste der Kunden und führt Konzepte und Verfahren vorherrschen hilfreich. Es führt Sie durch die Implementierung von UI-Elemente und Vorgänge mit einer lokalen SQLite-Datenbank hinzufügen und losen Hinweise zum Herstellen einer Verbindung mit einer REST Remotedatenbank, wenn Sie fortfahren möchten. [Sehen Sie sich das Lernprogramm hier](../enterprise/customer-database-tutorial.md)
+In diesem Lernprogramm erstellt eine einfache UWP-app für die Verwaltung von eine Liste der Kunden und führt Konzepte und Verfahren vorherrschen hilfreich. Es führt Sie durch die Implementierung von UI-Elemente und Vorgänge mit einer lokalen SQLite-Datenbank hinzufügen und losen Hinweise zum Herstellen einer Verbindung mit einer Remotedatenbank REST, wenn Sie fortfahren möchten. [Sehen Sie sich hier das Lernprogramm](../enterprise/customer-database-tutorial.md)
