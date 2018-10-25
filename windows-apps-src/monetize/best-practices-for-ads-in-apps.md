@@ -11,26 +11,26 @@ ms.technology: uwp
 keywords: Windows10, UWP, Anzeigen, Werbung, exemplarische Vorgehensweisen
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c1974618c65dd057c4c8152d9c4c9556869a3ef
-ms.sourcegitcommit: 4b97117d3aff38db89d560502a3c372f12bb6ed5
+ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/24/2018
-ms.locfileid: "5445707"
+ms.locfileid: "5482642"
 ---
-# <a name="best-practices-for-ads-in-apps"></a><span data-ttu-id="637d7-104">Bewährte Methoden für Anzeigen in Apps</span><span class="sxs-lookup"><span data-stu-id="637d7-104">Best practices for ads in apps</span></span>
+# <a name="best-practices-for-ads-in-apps"></a><span data-ttu-id="5b7c3-104">Bewährte Methoden für Anzeigen in Apps</span><span class="sxs-lookup"><span data-stu-id="5b7c3-104">Best practices for ads in apps</span></span>
 
-<span data-ttu-id="637d7-105">Die Artikel in diesem Abschnitt enthalten Richtlinien für die Benutzerumgebung und Richtlinien für die Fehlerbehandlung von Banneranzeigen, Interstitialwerbung und nativen Anzeigen in Ihren UWP-Apps.</span><span class="sxs-lookup"><span data-stu-id="637d7-105">The articles in this section provide user experience guidelines and error handling guidance for banner ads, interstitial ads, and native ads in your UWP apps.</span></span>
+<span data-ttu-id="5b7c3-105">Die Artikel in diesem Abschnitt enthalten Richtlinien für die Benutzerumgebung und Richtlinien für die Fehlerbehandlung von Banneranzeigen, Interstitialwerbung und nativen Anzeigen in Ihren UWP-Apps.</span><span class="sxs-lookup"><span data-stu-id="5b7c3-105">The articles in this section provide user experience guidelines and error handling guidance for banner ads, interstitial ads, and native ads in your UWP apps.</span></span>
 
-## <a name="in-this-section"></a><span data-ttu-id="637d7-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="637d7-106">In this section</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="5b7c3-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="5b7c3-106">In this section</span></span>
 
-|  <span data-ttu-id="637d7-107">Thema</span><span class="sxs-lookup"><span data-stu-id="637d7-107">Topic</span></span>    | <span data-ttu-id="637d7-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="637d7-108">Description</span></span> |               
+|  <span data-ttu-id="5b7c3-107">Thema</span><span class="sxs-lookup"><span data-stu-id="5b7c3-107">Topic</span></span>    | <span data-ttu-id="5b7c3-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5b7c3-108">Description</span></span> |               
 |----------|-------|
-| [<span data-ttu-id="637d7-109">Richtlinien für die Benutzeroberfläche und Benutzerumgebung</span><span class="sxs-lookup"><span data-stu-id="637d7-109">UI and user experience guidelines</span></span>](ui-and-user-experience-guidelines.md) | <span data-ttu-id="637d7-110">Enthält Richtlinien für eine gute Benutzererfahrung bei Banneranzeigen und Interstitialanzeigen in Ihren Apps.</span><span class="sxs-lookup"><span data-stu-id="637d7-110">Provides guidelines for providing great user experiences with banner ads and interstitial ads in your apps.</span></span> |
-| [<span data-ttu-id="637d7-111">Optimieren der Sichtbarkeit von Anzeigeneinheiten</span><span class="sxs-lookup"><span data-stu-id="637d7-111">Optimize the viewability of your ad units</span></span>](optimize-ad-unit-viewability.md) | <span data-ttu-id="637d7-112">Enthält Richtlinien zur optimalen Darstellung von Anzeigeneinheiten.</span><span class="sxs-lookup"><span data-stu-id="637d7-112">Provides guidelines for optimizing the viewable impressions for your ad units.</span></span> |
-| [<span data-ttu-id="637d7-113">Behandeln von Fehlern bei Anzeigen</span><span class="sxs-lookup"><span data-stu-id="637d7-113">Handle ad errors</span></span>](error-handling-with-advertising-libraries.md)     |  <span data-ttu-id="637d7-114">Enthält Informationen zum Behandeln von Fehlern für Banneranzeigen, Interstitialwerbung und nativen Anzeigen in Ihren Apps.</span><span class="sxs-lookup"><span data-stu-id="637d7-114">Learn how to handle errors for banner ads, interstitial ads, and native ads in your apps.</span></span>          |
+| [<span data-ttu-id="5b7c3-109">Richtlinien für die Benutzeroberfläche und Benutzerumgebung</span><span class="sxs-lookup"><span data-stu-id="5b7c3-109">UI and user experience guidelines</span></span>](ui-and-user-experience-guidelines.md) | <span data-ttu-id="5b7c3-110">Enthält Richtlinien für eine gute Benutzererfahrung bei Banneranzeigen und Interstitialanzeigen in Ihren Apps.</span><span class="sxs-lookup"><span data-stu-id="5b7c3-110">Provides guidelines for providing great user experiences with banner ads and interstitial ads in your apps.</span></span> |
+| [<span data-ttu-id="5b7c3-111">Optimieren der Sichtbarkeit von Anzeigeneinheiten</span><span class="sxs-lookup"><span data-stu-id="5b7c3-111">Optimize the viewability of your ad units</span></span>](optimize-ad-unit-viewability.md) | <span data-ttu-id="5b7c3-112">Enthält Richtlinien zur optimalen Darstellung von Anzeigeneinheiten.</span><span class="sxs-lookup"><span data-stu-id="5b7c3-112">Provides guidelines for optimizing the viewable impressions for your ad units.</span></span> |
+| [<span data-ttu-id="5b7c3-113">Behandeln von Fehlern bei Anzeigen</span><span class="sxs-lookup"><span data-stu-id="5b7c3-113">Handle ad errors</span></span>](error-handling-with-advertising-libraries.md)     |  <span data-ttu-id="5b7c3-114">Enthält Informationen zum Behandeln von Fehlern für Banneranzeigen, Interstitialwerbung und nativen Anzeigen in Ihren Apps.</span><span class="sxs-lookup"><span data-stu-id="5b7c3-114">Learn how to handle errors for banner ads, interstitial ads, and native ads in your apps.</span></span>          |
 
 
 
- 
+ 
 
- 
+ 
