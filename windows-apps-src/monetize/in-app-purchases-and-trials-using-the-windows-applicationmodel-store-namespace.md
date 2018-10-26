@@ -6,16 +6,14 @@ title: In-App-Käufe und Testversionen mit dem Windows.ApplicationModel.Store-Na
 ms.author: mhopkins
 ms.date: 08/25/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: uwp, in-app-käufe, IAPs, add-ons, testversionen, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: bb2c242ea4b7e3881751874c096165279854aa5e
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 330631afed95c3b0082de69d9369a62aad5a66d5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5521620"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571495"
 ---
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a><span data-ttu-id="a9b3d-104">In-App-Käufe und Testversionen mit dem Windows.ApplicationModel.Store-Namespace</span><span class="sxs-lookup"><span data-stu-id="a9b3d-104">In-app purchases and trials using the Windows.ApplicationModel.Store namespace</span></span>
 

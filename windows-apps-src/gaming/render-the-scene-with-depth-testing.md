@@ -6,27 +6,26 @@ ms.assetid: bf496dfb-d7f5-af6b-d588-501164608560
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Rendern, Szene, Tiefentest, Direct3D, Schatten
-ms.openlocfilehash: 538ebe9a604daaa5a444b0f7f1764770eec8ce7c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: dc776a60e771cc8d5961e8c7b9c67eb99fabea3a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233566"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569022"
 ---
-# <a name="render-the-scene-with-depth-testing"></a><span data-ttu-id="512dc-104">Rendern der Szene mit Tiefentest</span><span class="sxs-lookup"><span data-stu-id="512dc-104">Render the scene with depth testing</span></span>
+# <a name="render-the-scene-with-depth-testing"></a><span data-ttu-id="59074-104">Rendern der Szene mit Tiefentest</span><span class="sxs-lookup"><span data-stu-id="59074-104">Render the scene with depth testing</span></span>
 
 
-<span data-ttu-id="512dc-105">\[ Aktualisiert für UWP-Apps unter Windows 10.</span><span class="sxs-lookup"><span data-stu-id="512dc-105">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="512dc-106">Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="512dc-106">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
 
-<span data-ttu-id="512dc-107">Erstellen Sie einen Schatteneffekt, indem Sie dem Vertex-Shader (bzw. Geometry-Shader) und dem Pixel-Shader einen Tiefentest hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="512dc-107">Create a shadow effect by adding depth testing to your vertex (or geometry) shader and your pixel shader.</span></span> <span data-ttu-id="512dc-108">Teil3 von [Exemplarische Vorgehensweise: Implementieren von Schattenvolumes mithilfe von Tiefenpuffern in Direct3D11](implementing-depth-buffers-for-shadow-mapping.md).</span><span class="sxs-lookup"><span data-stu-id="512dc-108">Part 3 of [Walkthrough: Implement shadow volumes using depth buffers in Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).</span></span>
+<span data-ttu-id="59074-105">Erstellen Sie einen Schatteneffekt, indem Sie dem Vertex-Shader (bzw. Geometry-Shader) und dem Pixel-Shader einen Tiefentest hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="59074-105">Create a shadow effect by adding depth testing to your vertex (or geometry) shader and your pixel shader.</span></span> <span data-ttu-id="59074-106">Teil3 von [Exemplarische Vorgehensweise: Implementieren von Schattenvolumes mithilfe von Tiefenpuffern in Direct3D11](implementing-depth-buffers-for-shadow-mapping.md).</span><span class="sxs-lookup"><span data-stu-id="59074-106">Part 3 of [Walkthrough: Implement shadow volumes using depth buffers in Direct3D 11](implementing-depth-buffers-for-shadow-mapping.md).</span></span>
 
-## <a name="include-transformation-for-light-frustum"></a><span data-ttu-id="512dc-109">Einfügen der Transformation für Licht-Frustum</span><span class="sxs-lookup"><span data-stu-id="512dc-109">Include transformation for light frustum</span></span>
+## <a name="include-transformation-for-light-frustum"></a><span data-ttu-id="59074-107">Einfügen der Transformation für Licht-Frustum</span><span class="sxs-lookup"><span data-stu-id="59074-107">Include transformation for light frustum</span></span>
 
 
-<span data-ttu-id="512dc-110">Ihr Vertex-Shader muss für jeden Scheitelpunkt (Vertex) die transformierte Position im Lichtraum berechnen.</span><span class="sxs-lookup"><span data-stu-id="512dc-110">Your vertex shader needs to compute the transformed light space position for each vertex.</span></span> <span data-ttu-id="512dc-111">Geben Sie die Modell-, Ansichts- und Projektionsmatrizen für den Lichtraum mithilfe eines Konstantenpuffers an.</span><span class="sxs-lookup"><span data-stu-id="512dc-111">Provide the light space model, view, and projection matrices using a constant buffer.</span></span> <span data-ttu-id="512dc-112">Sie können diesen Konstantenpuffer auch verwenden, um die Lichtposition und Normale für Lichtberechnungen bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="512dc-112">You can also use this constant buffer to provide the light position and normal for lighting calculations.</span></span> <span data-ttu-id="512dc-113">Die transformierte Position im Lichtraum wird während des Tiefentests verwendet.</span><span class="sxs-lookup"><span data-stu-id="512dc-113">The transformed position in light space will be used during the depth test.</span></span>
+<span data-ttu-id="59074-108">Ihr Vertex-Shader muss für jeden Scheitelpunkt (Vertex) die transformierte Position im Lichtraum berechnen.</span><span class="sxs-lookup"><span data-stu-id="59074-108">Your vertex shader needs to compute the transformed light space position for each vertex.</span></span> <span data-ttu-id="59074-109">Geben Sie die Modell-, Ansichts- und Projektionsmatrizen für den Lichtraum mithilfe eines Konstantenpuffers an.</span><span class="sxs-lookup"><span data-stu-id="59074-109">Provide the light space model, view, and projection matrices using a constant buffer.</span></span> <span data-ttu-id="59074-110">Sie können diesen Konstantenpuffer auch verwenden, um die Lichtposition und Normale für Lichtberechnungen bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="59074-110">You can also use this constant buffer to provide the light position and normal for lighting calculations.</span></span> <span data-ttu-id="59074-111">Die transformierte Position im Lichtraum wird während des Tiefentests verwendet.</span><span class="sxs-lookup"><span data-stu-id="59074-111">The transformed position in light space will be used during the depth test.</span></span>
 
 ```cpp
 PixelShaderInput main(VertexShaderInput input)
@@ -65,12 +64,12 @@ PixelShaderInput main(VertexShaderInput input)
 }
 ```
 
-<span data-ttu-id="512dc-114">Als Nächstes wird vom Pixelshader die vom Vertex-Shader bereitgestellte interpolierte Lichtraumposition verwendet, um zu testen, ob das Pixel im Schatten liegt.</span><span class="sxs-lookup"><span data-stu-id="512dc-114">Next, the pixel shader will use the interpolated light space position provided by the vertex shader to test whether the pixel is in shadow.</span></span>
+<span data-ttu-id="59074-112">Als Nächstes wird vom Pixelshader die vom Vertex-Shader bereitgestellte interpolierte Lichtraumposition verwendet, um zu testen, ob das Pixel im Schatten liegt.</span><span class="sxs-lookup"><span data-stu-id="59074-112">Next, the pixel shader will use the interpolated light space position provided by the vertex shader to test whether the pixel is in shadow.</span></span>
 
-## <a name="test-whether-the-position-is-in-the-light-frustum"></a><span data-ttu-id="512dc-115">Testen, ob sich die Position im Licht-Frustum befindet</span><span class="sxs-lookup"><span data-stu-id="512dc-115">Test whether the position is in the light frustum</span></span>
+## <a name="test-whether-the-position-is-in-the-light-frustum"></a><span data-ttu-id="59074-113">Testen, ob sich die Position im Licht-Frustum befindet</span><span class="sxs-lookup"><span data-stu-id="59074-113">Test whether the position is in the light frustum</span></span>
 
 
-<span data-ttu-id="512dc-116">Prüfen Sie zuerst, ob sich das Pixel im Ansichts-Frustum des Lichts befindet, indem Sie die X- und Y-Koordinaten normalisieren.</span><span class="sxs-lookup"><span data-stu-id="512dc-116">First, check that the pixel is in the view frustum of the light by normalizing the X and Y coordinates.</span></span> <span data-ttu-id="512dc-117">Wenn diese beide innerhalb des Bereichs \[0, 1\] liegen, ist es möglich, dass das Pixel im Schatten liegt.</span><span class="sxs-lookup"><span data-stu-id="512dc-117">If they are both within the range \[0, 1\] then it's possible for the pixel to be in shadow.</span></span> <span data-ttu-id="512dc-118">Andernfalls können Sie den Tiefentest überspringen.</span><span class="sxs-lookup"><span data-stu-id="512dc-118">Otherwise you can skip the depth test.</span></span> <span data-ttu-id="512dc-119">Mit einem Shader kann dies ohne viel Zeitaufwand getestet werden, indem [Saturate](https://msdn.microsoft.com/library/windows/desktop/hh447231) aufgerufen und das Ergebnis mit dem Originalwert verglichen wird.</span><span class="sxs-lookup"><span data-stu-id="512dc-119">A shader can test for this quickly by calling [Saturate](https://msdn.microsoft.com/library/windows/desktop/hh447231) and comparing the result against the original value.</span></span>
+<span data-ttu-id="59074-114">Prüfen Sie zuerst, ob sich das Pixel im Ansichts-Frustum des Lichts befindet, indem Sie die X- und Y-Koordinaten normalisieren.</span><span class="sxs-lookup"><span data-stu-id="59074-114">First, check that the pixel is in the view frustum of the light by normalizing the X and Y coordinates.</span></span> <span data-ttu-id="59074-115">Wenn diese beide innerhalb des Bereichs \[0, 1\] liegen, ist es möglich, dass das Pixel im Schatten liegt.</span><span class="sxs-lookup"><span data-stu-id="59074-115">If they are both within the range \[0, 1\] then it's possible for the pixel to be in shadow.</span></span> <span data-ttu-id="59074-116">Andernfalls können Sie den Tiefentest überspringen.</span><span class="sxs-lookup"><span data-stu-id="59074-116">Otherwise you can skip the depth test.</span></span> <span data-ttu-id="59074-117">Mit einem Shader kann dies ohne viel Zeitaufwand getestet werden, indem [Saturate](https://msdn.microsoft.com/library/windows/desktop/hh447231) aufgerufen und das Ergebnis mit dem Originalwert verglichen wird.</span><span class="sxs-lookup"><span data-stu-id="59074-117">A shader can test for this quickly by calling [Saturate](https://msdn.microsoft.com/library/windows/desktop/hh447231) and comparing the result against the original value.</span></span>
 
 ```cpp
 // Compute texture coordinates for the current point's location on the shadow map.
@@ -89,10 +88,10 @@ if ((saturate(shadowTexCoords.x) == shadowTexCoords.x) &&
 {
 ```
 
-## <a name="depth-test-against-the-shadow-map"></a><span data-ttu-id="512dc-120">Tiefentest unter Verwendung der Schattenmap</span><span class="sxs-lookup"><span data-stu-id="512dc-120">Depth test against the shadow map</span></span>
+## <a name="depth-test-against-the-shadow-map"></a><span data-ttu-id="59074-118">Tiefentest unter Verwendung der Schattenmap</span><span class="sxs-lookup"><span data-stu-id="59074-118">Depth test against the shadow map</span></span>
 
 
-<span data-ttu-id="512dc-121">Verwenden Sie eine Samplevergleichsfunktion (entweder [SampleCmp](https://msdn.microsoft.com/library/windows/desktop/bb509696) oder [SampleCmpLevelZero](https://msdn.microsoft.com/library/windows/desktop/bb509697)), um die Tiefe des Pixels im Lichtraum unter Verwendung der Tiefenmap zu testen.</span><span class="sxs-lookup"><span data-stu-id="512dc-121">Use a sample comparison function (either [SampleCmp](https://msdn.microsoft.com/library/windows/desktop/bb509696) or [SampleCmpLevelZero](https://msdn.microsoft.com/library/windows/desktop/bb509697)) to test the pixel's depth in light space against the depth map.</span></span> <span data-ttu-id="512dc-122">Berechnen Sie den normalisierten Lichtraum-Tiefenwert, für den `z / w` gilt, und übergeben Sie den Wert an die Vergleichsfunktion.</span><span class="sxs-lookup"><span data-stu-id="512dc-122">Compute the normalized light space depth value, which is `z / w`, and pass the value to the comparison function.</span></span> <span data-ttu-id="512dc-123">Da wir für den Sampler einen LessOrEqual-Vergleichstest verwenden, wird von der systeminternen Funktion null zurückgegeben, wenn der Vergleichstest bestanden wurde; dies gibt an, dass das Pixel im Schatten liegt.</span><span class="sxs-lookup"><span data-stu-id="512dc-123">Since we use a LessOrEqual comparison test for the sampler, the intrinsic function returns zero when the comparison test passes; this indicates that the pixel is in shadow.</span></span>
+<span data-ttu-id="59074-119">Verwenden Sie eine Samplevergleichsfunktion (entweder [SampleCmp](https://msdn.microsoft.com/library/windows/desktop/bb509696) oder [SampleCmpLevelZero](https://msdn.microsoft.com/library/windows/desktop/bb509697)), um die Tiefe des Pixels im Lichtraum unter Verwendung der Tiefenmap zu testen.</span><span class="sxs-lookup"><span data-stu-id="59074-119">Use a sample comparison function (either [SampleCmp](https://msdn.microsoft.com/library/windows/desktop/bb509696) or [SampleCmpLevelZero](https://msdn.microsoft.com/library/windows/desktop/bb509697)) to test the pixel's depth in light space against the depth map.</span></span> <span data-ttu-id="59074-120">Berechnen Sie den normalisierten Lichtraum-Tiefenwert, für den `z / w` gilt, und übergeben Sie den Wert an die Vergleichsfunktion.</span><span class="sxs-lookup"><span data-stu-id="59074-120">Compute the normalized light space depth value, which is `z / w`, and pass the value to the comparison function.</span></span> <span data-ttu-id="59074-121">Da wir für den Sampler einen LessOrEqual-Vergleichstest verwenden, wird von der systeminternen Funktion null zurückgegeben, wenn der Vergleichstest bestanden wurde; dies gibt an, dass das Pixel im Schatten liegt.</span><span class="sxs-lookup"><span data-stu-id="59074-121">Since we use a LessOrEqual comparison test for the sampler, the intrinsic function returns zero when the comparison test passes; this indicates that the pixel is in shadow.</span></span>
 
 ```cpp
 // Use an offset value to mitigate shadow artifacts due to imprecise 
@@ -121,10 +120,10 @@ lighting = float(shadowMap.SampleCmpLevelZero(
     );
 ```
 
-## <a name="compute-lighting-in-or-out-of-shadow"></a><span data-ttu-id="512dc-124">Berechnen der Beleuchtung innerhalb und außerhalb des Schattens</span><span class="sxs-lookup"><span data-stu-id="512dc-124">Compute lighting in or out of shadow</span></span>
+## <a name="compute-lighting-in-or-out-of-shadow"></a><span data-ttu-id="59074-122">Berechnen der Beleuchtung innerhalb und außerhalb des Schattens</span><span class="sxs-lookup"><span data-stu-id="59074-122">Compute lighting in or out of shadow</span></span>
 
 
-<span data-ttu-id="512dc-125">Wenn das Pixel nicht im Schatten liegt, kann der Pixelshader die direkte Beleuchtung berechnen und dem Pixelwert hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="512dc-125">If the pixel is not in shadow, the pixel shader should compute direct lighting and add it to the pixel value.</span></span>
+<span data-ttu-id="59074-123">Wenn das Pixel nicht im Schatten liegt, kann der Pixelshader die direkte Beleuchtung berechnen und dem Pixelwert hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="59074-123">If the pixel is not in shadow, the pixel shader should compute direct lighting and add it to the pixel value.</span></span>
 
 ```cpp
 return float4(input.color * (ambient + DplusS(N, L, NdotL, input.view)), 1.f);
@@ -153,17 +152,17 @@ float3 DplusS(float3 N, float3 L, float NdotL, float3 view)
 }
 ```
 
-<span data-ttu-id="512dc-126">Andernfalls sollte der Pixelshader den Pixelwert mithilfe des Umgebungslichts berechnen.</span><span class="sxs-lookup"><span data-stu-id="512dc-126">Otherwise, the pixel shader should compute the pixel value using ambient lighting.</span></span>
+<span data-ttu-id="59074-124">Andernfalls sollte der Pixelshader den Pixelwert mithilfe des Umgebungslichts berechnen.</span><span class="sxs-lookup"><span data-stu-id="59074-124">Otherwise, the pixel shader should compute the pixel value using ambient lighting.</span></span>
 
 ```cpp
 return float4(input.color * ambient, 1.f);
 ```
 
-<span data-ttu-id="512dc-127">Der nächste Teil dieser exemplarischen Vorgehensweise beschäftigt sich mit dem [Unterstützen von Schattenmaps für unterschiedliche Hardware](target-a-range-of-hardware.md).</span><span class="sxs-lookup"><span data-stu-id="512dc-127">In the next part of this walkthrough, learn how to [Support shadow maps on a range of hardware](target-a-range-of-hardware.md).</span></span>
+<span data-ttu-id="59074-125">Der nächste Teil dieser exemplarischen Vorgehensweise beschäftigt sich mit dem [Unterstützen von Schattenmaps für unterschiedliche Hardware](target-a-range-of-hardware.md).</span><span class="sxs-lookup"><span data-stu-id="59074-125">In the next part of this walkthrough, learn how to [Support shadow maps on a range of hardware](target-a-range-of-hardware.md).</span></span>
 
- 
+ 
 
- 
+ 
 
 
 

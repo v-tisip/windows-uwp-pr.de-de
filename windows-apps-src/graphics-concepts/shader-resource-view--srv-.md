@@ -8,33 +8,31 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 213ff4e2a120c91211720d887ab8f777b9265106
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: e98b9942dfc14604c061a036cd3c9803abaf3915
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1043539"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567685"
 ---
-# <a name="shader-resource-view-srv-and-unordered-access-view-uav"></a><span data-ttu-id="800eb-105">Shaderressourcenansicht (SRV) und Unsortierte Zugriffsansicht (UAV)</span><span class="sxs-lookup"><span data-stu-id="800eb-105">Shader resource view (SRV) and Unordered Access view (UAV)</span></span>
+# <a name="shader-resource-view-srv-and-unordered-access-view-uav"></a><span data-ttu-id="b955d-105">Shaderressourcenansicht (SRV) und Unsortierte Zugriffsansicht (UAV)</span><span class="sxs-lookup"><span data-stu-id="b955d-105">Shader resource view (SRV) and Unordered Access view (UAV)</span></span>
 
 
-<span data-ttu-id="800eb-106">Shaderressourcenansichten verpacken Texturen in der Regel in einem Format, sodass die Shader darauf zugreifen können.</span><span class="sxs-lookup"><span data-stu-id="800eb-106">Shader resource views typically wrap textures in a format that the shaders can access them.</span></span> <span data-ttu-id="800eb-107">Eine unsortierte Zugriffsansicht bietet ähnlichen Funktionen, ermöglicht aber das Lesen und Schreiben der Textur (oder einer anderen Ressource) in beliebiger Reihenfolge.</span><span class="sxs-lookup"><span data-stu-id="800eb-107">An unordered access view provides similar functionality, but enables the reading and writing to the texture (or other resource) in any order.</span></span>
+<span data-ttu-id="b955d-106">Shaderressourcenansichten verpacken Texturen in der Regel in einem Format, sodass die Shader darauf zugreifen können.</span><span class="sxs-lookup"><span data-stu-id="b955d-106">Shader resource views typically wrap textures in a format that the shaders can access them.</span></span> <span data-ttu-id="b955d-107">Eine unsortierte Zugriffsansicht bietet ähnlichen Funktionen, ermöglicht aber das Lesen und Schreiben der Textur (oder einer anderen Ressource) in beliebiger Reihenfolge.</span><span class="sxs-lookup"><span data-stu-id="b955d-107">An unordered access view provides similar functionality, but enables the reading and writing to the texture (or other resource) in any order.</span></span>
 
-<span data-ttu-id="800eb-108">Das Verpacken einer einzelnen Textur ist wahrscheinlich die einfachste Form der Shaderressourcenansicht.</span><span class="sxs-lookup"><span data-stu-id="800eb-108">Wrapping a single texture is probably the simplest form of shader resource view.</span></span> <span data-ttu-id="800eb-109">Komplexere Beispiele wären eine Sammlung von Unterressourcen (einzelne Arrays, Ebenen oder Farben aus einer Mipmap-Textur), 3D-Texturen, 1D-Texturfarbverläufe usw.</span><span class="sxs-lookup"><span data-stu-id="800eb-109">More complex examples would be a collection of subresources (individual arrays, planes, or colors from a mipmapped texture), 3D textures, 1D texture color gradients, and so on.</span></span>
+<span data-ttu-id="b955d-108">Das Verpacken einer einzelnen Textur ist wahrscheinlich die einfachste Form der Shaderressourcenansicht.</span><span class="sxs-lookup"><span data-stu-id="b955d-108">Wrapping a single texture is probably the simplest form of shader resource view.</span></span> <span data-ttu-id="b955d-109">Komplexere Beispiele wären eine Sammlung von Unterressourcen (einzelne Arrays, Ebenen oder Farben aus einer Mipmap-Textur), 3D-Texturen, 1D-Texturfarbverläufe usw.</span><span class="sxs-lookup"><span data-stu-id="b955d-109">More complex examples would be a collection of subresources (individual arrays, planes, or colors from a mipmapped texture), 3D textures, 1D texture color gradients, and so on.</span></span>
 
-<span data-ttu-id="800eb-110">Unsortierte Zugriffsansichten sind in Bezug auf die Leistung etwas aufwändiger, ermöglichen aber z.B., dass in eine Textur geschrieben und diese gleichzeitig gelesen wird.</span><span class="sxs-lookup"><span data-stu-id="800eb-110">Unordered access views are slightly more costly in terms of performance, but allow, for example, a texture to be written to at the same time that it is being read from.</span></span> <span data-ttu-id="800eb-111">Dadurch kann die aktualisierte Textur von der Grafikpipeline zu einem anderen Zweck wiederverwendet werden.</span><span class="sxs-lookup"><span data-stu-id="800eb-111">This enables the updated texture to be re-used by the graphics pipeline for some other purpose.</span></span> <span data-ttu-id="800eb-112">Shaderressourcenansichten sind nur zum Lesen vorgesehen (das ist die gängigste Verwendung von Ressourcen).</span><span class="sxs-lookup"><span data-stu-id="800eb-112">Shader resource views are for read only use (which is the most common use of resources).</span></span>
+<span data-ttu-id="b955d-110">Unsortierte Zugriffsansichten sind in Bezug auf die Leistung etwas aufwändiger, ermöglichen aber z.B., dass in eine Textur geschrieben und diese gleichzeitig gelesen wird.</span><span class="sxs-lookup"><span data-stu-id="b955d-110">Unordered access views are slightly more costly in terms of performance, but allow, for example, a texture to be written to at the same time that it is being read from.</span></span> <span data-ttu-id="b955d-111">Dadurch kann die aktualisierte Textur von der Grafikpipeline zu einem anderen Zweck wiederverwendet werden.</span><span class="sxs-lookup"><span data-stu-id="b955d-111">This enables the updated texture to be re-used by the graphics pipeline for some other purpose.</span></span> <span data-ttu-id="b955d-112">Shaderressourcenansichten sind nur zum Lesen vorgesehen (das ist die gängigste Verwendung von Ressourcen).</span><span class="sxs-lookup"><span data-stu-id="b955d-112">Shader resource views are for read only use (which is the most common use of resources).</span></span>
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="800eb-113"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="800eb-113"><span id="related-topics"></span>Related topics</span></span>
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="b955d-113"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="b955d-113"><span id="related-topics"></span>Related topics</span></span>
 
 
-[<span data-ttu-id="800eb-114">Ansichten</span><span class="sxs-lookup"><span data-stu-id="800eb-114">Views</span></span>](views.md)
+[<span data-ttu-id="b955d-114">Ansichten</span><span class="sxs-lookup"><span data-stu-id="b955d-114">Views</span></span>](views.md)
 
- 
+ 
 
- 
+ 
 
 
 

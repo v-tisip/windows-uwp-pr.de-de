@@ -6,16 +6,14 @@ title: Erkennen und reagieren auf Änderungen der Audiodatenstromebene
 ms.author: drewbat
 ms.date: 04/03/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: c60fcd705acf2d0d1e3162e80bc1d85095aa0fb4
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 53ac8dff5895522c24c1645e4db95c90d575df95
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5470552"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572050"
 ---
 # <a name="detect-and-respond-to-audio-state-changes"></a><span data-ttu-id="06814-104">Erkennen und reagieren auf Änderungen der Audiodatenstromebene</span><span class="sxs-lookup"><span data-stu-id="06814-104">Detect and respond to audio state changes</span></span>
 <span data-ttu-id="06814-105">Ab Windows10, Version 1803, erkennt Ihre App, wenn das System die Lautstärke der Audioaufnahme Ihrer App oder des Audiodatenstroms reduziert oder stummschaltet.</span><span class="sxs-lookup"><span data-stu-id="06814-105">Starting with Windows 10, version 1803, your app can detect when the system lowers or mutes the audio level of an audio stream your app is using.</span></span> <span data-ttu-id="06814-106">Sie können Benachrichtigungen für die Erfassung und die Wiedergabe von Datenströmen erhalten, für ein bestimmtes Audio-Gerät und eine Audiokategorie oder für eine [**MediaPlayer**](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Playback.MediaPlayer)-Objekt, das ist Ihrer App für die Medienwiedergabe verwendet.</span><span class="sxs-lookup"><span data-stu-id="06814-106">You can receive notifications for capture and render streams, for a particular audio device and audio category, or for a [**MediaPlayer**](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Playback.MediaPlayer) object your app is using for media playback.</span></span> <span data-ttu-id="06814-107">Beispielsweise kann das System die Audiowiedergabe-Ebene reduzieren, wenn ein Alarm klingelt.</span><span class="sxs-lookup"><span data-stu-id="06814-107">For example, the system may lower, or "duck", the audio playback level when an alarm is ringing.</span></span> <span data-ttu-id="06814-108">Das System schaltet Ihre App stumm, wenn sie in den Hintergrund wechselt, falls Ihre App die *BackgroundMediaPlayback*-Funktion im App-Manifest nicht aktiviert hat.</span><span class="sxs-lookup"><span data-stu-id="06814-108">The system will mute your app when it goes into the background if your app has not declared the *backgroundMediaPlayback* capability in the app manifest.</span></span> 

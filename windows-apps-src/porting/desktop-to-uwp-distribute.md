@@ -6,17 +6,15 @@ title: Veröffentlichen Sie Ihre verpackte desktop-Anwendung auf einem Windows S
 ms.author: normesta
 ms.date: 05/18/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, UWP
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
-ms.openlocfilehash: c81e8d07efa04e93128089eaec78fb83b822a4b9
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 9b16e06c81eeb90e500e40fc9b4d7ab709651091
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5517086"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569093"
 ---
 # <a name="distribute-a-packaged-desktop-application"></a><span data-ttu-id="d1c99-103">Verteilen einer verpackten desktop-Anwendungs</span><span class="sxs-lookup"><span data-stu-id="d1c99-103">Distribute a packaged desktop application</span></span>
 

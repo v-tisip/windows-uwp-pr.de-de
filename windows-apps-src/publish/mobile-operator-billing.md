@@ -6,16 +6,14 @@ ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
 ms.author: wdg-dev-content
 ms.date: 10/02/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Mobilfunkanbieter, mobile Abrechnung, Abrechnung über den Mobilfunkanbieter
 ms.localizationpriority: medium
-ms.openlocfilehash: da08e63cc42987f1a3876e13a713d670a80cf9ba
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: ff02cfc287bc1d88485a713390e233fc7a742a01
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5471852"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567109"
 ---
 # <a name="mobile-operator-billing"></a><span data-ttu-id="33b29-103">Abrechnung über den Mobilfunkanbieter</span><span class="sxs-lookup"><span data-stu-id="33b29-103">Mobile operator billing</span></span>
 

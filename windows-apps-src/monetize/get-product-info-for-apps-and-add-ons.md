@@ -6,16 +6,14 @@ title: Abrufen von Produktinformationen zu Apps und deren Add-Ons
 ms.author: mhopkins
 ms.date: 02/08/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, In-App-Einkäufe, IAPs, Add-Ons, Windows.Services.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 417478df3b82967656d2210b3b532c5341f1fb2e
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: e8f82bc3045d56f93e8d42ea183e2ac2bc788380
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5520000"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569931"
 ---
 # <a name="get-product-info-for-apps-and-add-ons"></a><span data-ttu-id="adcdc-104">Abrufen von Produktinformationen zu Apps und deren Add-Ons</span><span class="sxs-lookup"><span data-stu-id="adcdc-104">Get product info for apps and add-ons</span></span>
 

@@ -5,17 +5,15 @@ title: Konfigurieren Ihrer App für benutzerorientierte Pushbenachrichtigungen
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store Services SDK, benutzerorientierte Pushbenachrichtigungen, Dev Center
 ms.assetid: 30c832b7-5fbe-4852-957f-7941df8eb85a
 ms.localizationpriority: medium
-ms.openlocfilehash: 39ea899f9f0ee08d14ca5f182fdf07649ddd1d2e
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 451643387076a8f944ffe94206ea6fac08524026
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5512761"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564199"
 ---
 # <a name="configure-your-app-for-targeted-push-notifications"></a><span data-ttu-id="f7527-103">Konfigurieren Ihrer App für benutzerorientierte Pushbenachrichtigungen</span><span class="sxs-lookup"><span data-stu-id="f7527-103">Configure your app for targeted push notifications</span></span>
 

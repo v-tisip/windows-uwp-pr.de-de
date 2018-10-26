@@ -4,23 +4,21 @@ layout: LandingPage
 Description: See how to publish your Windows apps to the Microsoft Store.
 title: Veröffentlichen von Windows-Apps
 ms.author: wdg-dev-content
-ms.date: 01/08/2018
+ms.date: 08/07/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Veröffentlichung, veröffentlichen, Verkauf, verkaufen, Verteilung, verteilen, Store, Dashboard
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
-ms.localizationpriority: high
-ms.openlocfilehash: 37cfce48a60f95109dfff99b45750fa8fbe1f220
-ms.sourcegitcommit: 4e39a2bdb5b895ed09b64957dc1a86ccf1f8e1af
-ms.translationtype: HT
+ms.localizationpriority: medium
+ms.openlocfilehash: 98e47934f936b6995ab37623b610869219254b85
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "1718664"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566121"
 ---
 # <a name="publish-windows-apps-and-games"></a>Veröffentlichen von Windows-Apps und -Spielen  
  
-Sie können Ihre Apps und Spiele über das Windows Dev Center-Dashboard im Microsoft Store veröffentlichen. <a href="//developer.microsoft.com/store/register">Registrieren Sie sich noch heute.</a>
+Das [Windows Dev Center-Dashboard](https://partner.microsoft.com/dashboard) können Sie Ihre apps und Spiele im Microsoft Store veröffentlichen. <a href="//developer.microsoft.com/store/register">Registrieren Sie sich noch heute.</a>
 <br>
 <ul id="cardtypes-K" class="cardsK panelContent">
     <li>
@@ -123,8 +121,8 @@ Sie können Ihre Apps und Spiele über das Windows Dev Center-Dashboard im Micro
                 </div>
                 <div class="cardText">
                     <h3>Bewerben Ihrer Apps</h3>   
-                    <p><a href="generate-promotional-codes.md">Generieren von Werbecodes</a></p>
                     <p><a href="create-an-ad-campaign-for-your-app.md">Erstellen con Anzeigenkampagnen</a></p>
+                    <p><a href="generate-promotional-codes.md">Generieren von Werbecodes</a></p>
                     <p><a href="put-apps-and-add-ons-on-sale.md">Anbieten von Sonderpreisen</a></p>
                 </div>
             </div>

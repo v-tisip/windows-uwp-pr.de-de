@@ -5,16 +5,14 @@ title: Layoutpanels für UWP-Apps (Apps für die Universelle Windows-Plattform)
 ms.author: quradic
 ms.date: 04/02/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: a839379150ecd38fc1925c81d4e11d588018011f
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 623ca1484091f9f15b5a6dbedb85ed9d5149154e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5521138"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570379"
 ---
 # <a name="layout-panels"></a><span data-ttu-id="9ffab-103">Layoutpanels</span><span class="sxs-lookup"><span data-stu-id="9ffab-103">Layout panels</span></span>
 

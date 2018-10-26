@@ -6,16 +6,14 @@ description: Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befe
 ms.author: lahugh
 ms.date: 09/30/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 229f0e9993abc9c5600c55a1a0eddc2e262f1c4c
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 13468ce3b74992c026d94223b5e67aea99d79991
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5513744"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569731"
 ---
 # <a name="install-apps-with-the-winappdeploycmdexe-tool"></a><span data-ttu-id="9260f-104">Installieren von Apps mit dem Tool „WinAppDeployCmd.exe“</span><span class="sxs-lookup"><span data-stu-id="9260f-104">Install apps with the WinAppDeployCmd.exe tool</span></span>
 
