@@ -6,16 +6,14 @@ ms.assetid: A57FE7B4-9947-4AA0-BC99-5FE4686B611D
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c74b05974bcfd9dd8c592d18f6f5fe4ff388f03
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 1fe2460dfc5ab11a9168f1d1d87207d2b9490026
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675347"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572599"
 ---
 # <a name="xaml-syntax-guide"></a>Anleitung zur XAML-Syntax
 
@@ -91,7 +89,7 @@ Im folgenden gekürzten Beispiel wird Initialisierungstext verwendet, um Werte f
 </UserControl ...>
 ```
 
-**Hinweis**  Manche Strukturen können nicht als Objektelemente deklariert werden. Initialisierungstext wird nicht unterstützt, und die Strukturen können nicht als Ressourcen verwendet werden. Sie müssen eine Attributsyntax verwenden, um in XAML Eigenschaften auf diese Werte festzulegen. Diese Typen sind: [**Duration**](https://msdn.microsoft.com/library/windows/apps/br242377), [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/br210411), [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870), [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994) und [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995).
+**Hinweis:** einige Strukturen können nicht als Objektelemente deklariert werden. Initialisierungstext wird nicht unterstützt, und die Strukturen können nicht als Ressourcen verwendet werden. Sie müssen eine Attributsyntax verwenden, um in XAML Eigenschaften auf diese Werte festzulegen. Diese Typen sind: [**Duration**](https://msdn.microsoft.com/library/windows/apps/br242377), [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/br210411), [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870), [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994) und [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995).
 
 ## <a name="setting-properties"></a>Festlegen von Eigenschaften
 
@@ -242,7 +240,7 @@ Zunächst gibt das Vorhandensein des Objektelements an, dass ein neues *objectNa
 
 Eine weitere XAML-Regel ist, dass es möglich sein muss, Attribute eines Elements in beliebiger Reihenfolge festzulegen. Zwischen `<Rectangle Height="50" Width="100" />` und `<Rectangle Width="100"  Height="50" />` besteht z. B. kein Unterschied. Welche Reihenfolge Sie verwenden, ist eine Frage des Programmierstils.
 
-**Hinweis**  Wenn Sie andere Entwurfsoberflächen als den XML-Editor verwenden, geben XAML-Designer oft Sortierungskonventionen vor. Sie können diesen XAML-Code später jedoch beliebig bearbeiten, um die Reihenfolge der Attribute zu ändern oder neue Attribute hinzuzufügen.
+**Hinweis:** XAML-Designer oft Schreibreihenfolge Konventionen bewerben, wenn Sie andere Entwurfsoberflächen als den XML-Editor verwenden, aber Sie dieses XAML später frei bearbeiten können, um die Attribute neu anordnen oder neue einzuführen.
 
 ## <a name="attached-properties"></a>Angefügte Eigenschaften
 
@@ -271,8 +269,8 @@ Weitere Informationen finden Sie unter [Übersicht über angefügte Eigenschafte
 
 Da die öffnende geschweifte Klammer „\{“ der Anfang der Markuperweiterungssequenz ist, können Sie mithilfe einer Escapesequenz einen Literalzeichenfolgenwert angeben, der mit „\{“ beginnt. Die Escapesequenz ist „\{\}“. Geben Sie beispielsweise zum Angeben eines Zeichenfolgenwerts, der eine einzelne öffnende geschweifte Klammer ist, den Attributwert als „\{\}\{“ an. Sie können auch die alternativen Anführungszeichen (z.B. **'** innerhalb eines durch **""** getrennten Attributwerts) verwenden, um einen „\{“-Wert als Zeichenfolge anzugeben.
 
-**Hinweis**  „\\}“ kann auch in einem Attribut in Anführungszeichen verwendet werden.
- 
+**Hinweis:**"\}" funktioniert auch, wenn sie sich in einem Attribut in Anführungszeichen befindet.
+ 
 ## <a name="enumeration-values"></a>Enumerationswerte
 
 Viele Eigenschaften in der Windows-Runtime-API verwenden als Werte Enumerationen. Wenn es sich beim Member um eine Lese-/Schreibeigenschaft handelt, können Sie die Eigenschaft durch Angeben eines Attributwerts festlegen. Den als Eigenschaftswert zu verwendenden Enumerationswert geben Sie anhand des nicht qualifizierten Namens des Konstantennamens an. Folgendes Beispiel zeigt, wie Sie [**UIElement.Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992) in XAML festlegen: `<Button Visibility="Visible"/>`. Hier ist das „Visible“-Element als Zeichenfolge direkt einer benannten Konstante der [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br209006)-Enumeration zugeordnet, **Visible**.
@@ -280,7 +278,7 @@ Viele Eigenschaften in der Windows-Runtime-API verwenden als Werte Enumerationen
 -   Verwenden Sie keine qualifizierte Form, weil dies nicht funktioniert. Folgende XAML-Syntax ist z.B. ungültig: `<Button Visibility="Visibility.Visible"/>`.
 -   Verwenden Sie nicht den Wert der Konstante. Anders ausgedrückt: Verlassen Sie sich nicht auf den ganzzahligen Wert der Enumeration, die explizit oder implizit von der Definitionsweise der Enumeration abhängt. Auch wenn dies scheinbar funktioniert, ist in XAML bzw. im Code davon abzuraten, weil Sie sich auf ein potenziell kurzlebiges Implementierungsdetail verlassen. Verwenden Sie beispielsweise nicht Folgendes: `<Button Visibility="1"/>`.
 
-**Hinweis**  Klicken Sie in Referenzthemen zu einer API, die XAML und Enumerationen verwendet, im Abschnitt **Eigenschaftswert** unter **Syntax** auf den Link zu dem Enumerationstyp. So gelangen Sie auf die Enumerationsseite, auf der Sie die benannten Konstanten für diese Enumeration ermitteln können.
+**Hinweis:** In Referenzthemen für APIs, die XAML und Enumerationen verwendet, klicken Sie auf den Link zum Enumerationstyp im Abschnitt **Eigenschaftswert** der **Syntax**. So gelangen Sie auf die Enumerationsseite, auf der Sie die benannten Konstanten für diese Enumeration ermitteln können.
 
 Enumerationen können flagspezifisch sein. In diesem Fall wird ihnen **FlagsAttribute** zugeordnet. Wenn Sie eine Kombination von Werten für eine flagspezifische Enumeration als XAML-Attributwert angeben müssen, verwenden Sie die Namen der einzelnen Enumerationskonstanten getrennt durch Kommas (,) und ohne Leerzeichen. Flagspezifische Attribute kommen im Windows-Runtime-XAML-Vokabular nicht häufig vor, aber [**ManipulationModes**](https://msdn.microsoft.com/library/windows/apps/br227934) ist ein Beispiel für einen Fall, in dem das Festlegen eines flagspezifischen Enumerationswerts im XAML-Code unterstützt wird.
 
@@ -290,7 +288,7 @@ In seltenen Fällen liegt eine XAML-Syntax vor, in der der Typ einer Eigenschaft
 
 ## <a name="xaml-placeholder-conventions-in-windows-runtime-reference"></a>XAML-Platzhalterkonventionen in der Windows-Runtime-Referenz
 
-Wenn Sie den Abschnitt **Syntax** der Referenzthemen für Windows-Runtime-APIs überprüft haben, die XAML verwenden können, ist Ihnen wahrscheinlich aufgefallen, dass die Syntax mehrere Platzhalter enthält. Die XAML-Syntax unterscheidet sich von der Syntax der C#-, Microsoft Visual Basic- oder VisualC++-Komponentenerweiterungen (C++/CX), da es sich bei der XAML-Syntax um eine Verwendungssyntax handelt. Sie gibt einen Hinweis auf die spätere Verwendung in Ihren XAML-Dateien, gibt jedoch nicht zu genau vor, welche Werte verwendet werden können. Die Verwendung beschreibt also in der Regel einen Grammatiktyp, bei dem Literale und Platzhalter gemischt werden, und definiert einige der Platzhalter im Abschnitt **XAML-Werte**.
+Wenn Sie den Abschnitt **Syntax** der Referenzthemen für Windows-Runtime-APIs überprüft haben, die XAML verwenden können, ist Ihnen wahrscheinlich aufgefallen, dass die Syntax mehrere Platzhalter enthält. XAML-Syntax unterscheidet sich von der Verwendung von c#, Microsoft Visual Basic oder für VisualC++-komponentenerweiterungen (C++ / CX) Syntax, da die XAML-Syntax eine Verwendungssyntax handelt. Sie gibt einen Hinweis auf die spätere Verwendung in Ihren XAML-Dateien, gibt jedoch nicht zu genau vor, welche Werte verwendet werden können. Die Verwendung beschreibt also in der Regel einen Grammatiktyp, bei dem Literale und Platzhalter gemischt werden, und definiert einige der Platzhalter im Abschnitt **XAML-Werte**.
 
 Wenn in einer XAML-Syntax für eine Eigenschaft Typ-/Elementnamen angezeigt werden, steht der angezeigte Name für den Typ, der die Eigenschaft ursprünglich definiert. Windows-Runtime-XAML unterstützt jedoch ein Klassenvererbungsmodell für die [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)-basierten Klassen. Sie können also häufig ein Attribut für eine Klasse verwenden, bei der es sich nicht direkt um die definierende Klasse handelt, sondern die von einer Klasse abgeleitet ist, mit der die Eigenschaft bzw. das Attribut zuerst definiert wurde. Sie können beispielsweise unter Verwendung einer tiefen Vererbung [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992) als Attribut für eine beliebige abgeleitete [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)-Kasse festlegen. Beispiel: `<Button Visibility="Visible" />`. Nehmen Sie den in einer XAML-Verwendungssyntax angezeigten Elementnamen also nicht zu wörtlich. Die Syntax ist ggf. für Elemente, die die Klasse darstellen, sowie für Elemente geeignet, die eine abgeleitete Klasse darstellen. Wenn der als das definierende Element angezeigte Typ selten oder gar nicht in einer realen Verwendung eingesetzt werden kann, wird dieser Typname in der Syntax absichtlich in Kleinbuchstaben angegeben. Die für **UIElement.Visibility** angezeigte Syntax lautet beispielsweise folgendermaßen:
 
@@ -320,5 +318,5 @@ In den XAML-Verwendungsabschnitten werden ebenfalls verschiedene generalisierte 
 * [Übersicht über XAML](xaml-overview.md)
 * [XAML-Namespaces und Namespacezuordnung](xaml-namespaces-and-namespace-mapping.md)
 * [ResourceDictionary- und XAML-Ressourcenreferenzen](https://msdn.microsoft.com/library/windows/apps/mt187273)
- 
+ 
 

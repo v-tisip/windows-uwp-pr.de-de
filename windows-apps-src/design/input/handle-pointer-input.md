@@ -9,15 +9,13 @@ keywords: Stift, Maus, Touchpad, Toucheingabe, Zeiger, Eingabe, Benutzerinterakt
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a0753081af4128cf2cad3eeff9d8c919c42eb596
-ms.sourcegitcommit: 588171ea8cb629d2dd6aa2080e742dc8ce8584e5
-ms.translationtype: HT
+ms.openlocfilehash: ba685f30eb0cf94314996587073a82440cf6c951
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "1895139"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572609"
 ---
 # <a name="handle-pointer-input"></a>Behandeln von Zeigereingaben
 
@@ -37,7 +35,7 @@ Bei den meisten Interaktionsfunktionen ist typischerweise der Benutzer involvier
 
 > [!NOTE]
 > Gerätespezifische Informationen werden auch von den HID-Rohdaten weitergeleitet, falls dies für die App erforderlich ist.
- 
+ 
 
 Jeder Eingabepunkt (oder Kontakt) in dem Eingabestapel wird durch ein [**Pointer**](https://msdn.microsoft.com/library/windows/apps/br227968)-Objekt dargestellt, das über den [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076)-Parameter in den verschiedenen Zeigerereignishandlern zur Verfügung gestellt wird. Bei Verwendung mehrerer Stifte oder der Mehrfingereingabe wird jeder Kontakt als separater Eingabezeiger behandelt.
 
@@ -50,7 +48,7 @@ UWP-Apps können die folgenden Zeigerereignisse überwachen:
 
 > [!NOTE]
 > Schränken Sie Zeigereingaben auf ein bestimmtes UI-Element ein, indem Sie [**CapturePointer**](https://msdn.microsoft.com/library/windows/apps/br208918) für dieses Element in einem Zeigerereignishandler aufrufen. Wenn ein Zeiger von einem Element erfasst wurde, empfängt nur dieses Objekt die Zeigereingabeereignisse, auch wenn sich der Mauszeiger aus dem Begrenzungsbereich des Objekts heraus bewegt. Die Option [**IsInContact**](https://msdn.microsoft.com/library/windows/apps/br227976) (gedrückte Maustaste, Touch oder Stift in Kontakt) muss „true“ sein, damit **CapturePointer** erfolgreich ausgeführt werden kann.
- 
+ 
 
 <table>
 <colgroup>
@@ -79,10 +77,10 @@ UWP-Apps können die folgenden Zeigerereignisse überwachen:
 <td align="left"><p><a href="https://msdn.microsoft.com/library/windows/apps/br208965"><strong>PointerCaptureLost</strong></a></p></td>
 <td align="left"><p>Tritt auf, wenn ein anderes Benutzeroberflächenelement den Zeiger erfasst, der Zeiger freigegeben wurde oder ein anderer Zeiger programmgesteuert erfasst wurde.</p>
 <div class="alert">
-<strong>Hinweis</strong>  Es gibt kein entsprechendes Zeigererfassungsereignis.
+<strong>Hinweis:</strong>es gibt kein entsprechendes zeigererfassungsereignis.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -127,7 +125,7 @@ UWP-Apps können die folgenden Zeigerereignisse überwachen:
 <p>Die Mauseingabe wird einem einzelnen Zeiger zugeordnet, der bei der ersten Ermittlung einer Mauseingabe zugewiesen wird. Durch das Klicken auf eine Maustaste (links, Mausrad oder rechts) wird über das [PointerMoved](https://msdn.microsoft.com/library/windows/apps/br208970)-Ereignis eine zweite Zuordnung zwischen dem Zeiger und dieser Taste erstellt.</p></td>
 </tr>
 </tbody>
-</table> 
+</table> 
 
 ## <a name="pointer-event-example"></a>Beispiel für Zeigerereignis
 
@@ -247,8 +245,7 @@ Im nächsten Schritt wird UI-Feedback verwendet, um die Verwendung einfacher Zei
 -   Der folgende Handler kontrolliert das [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971)-Ereignis. Das Ereignis wird zum Ereignisprotokoll hinzugefügt, der Zeiger wird zum aktiven Zeigerverzeichnis hinzugefügt, und die Zeigerdetails werden angezeigt.
 
     > [!NOTE]
-    > Die Ereignisse [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) und [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) treten nicht immer paarweise auf. Die App sollte auf jedes Ereignis lauschen und dieses behandeln, das einen Zeiger nach unten beenden könnte (beispielsweise [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969), [**PointerCanceled**](https://msdn.microsoft.com/library/windows/apps/br208964) und [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965)).
-         
+    > Die Ereignisse [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971) und [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) treten nicht immer paarweise auf. Die App sollte auf jedes Ereignis lauschen und dieses behandeln, das einen Zeiger nach unten beenden könnte (beispielsweise [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969), [**PointerCanceled**](https://msdn.microsoft.com/library/windows/apps/br208964) und [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965)).      
 
 ```csharp
 /// <summary>
@@ -330,7 +327,7 @@ private void Target_PointerEntered(object sender, PointerRoutedEventArgs e)
 -   Der folgende Handler kontrolliert das [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970)-Ereignis. Das Ereignis wird zum Ereignisprotokoll hinzugefügt, und die Zeigerdetails werden aktualisiert.
 
     > [!Important]
-    > Die Mauseingabe wird einem einzelnen Zeiger zugeordnet, der bei der ersten Ermittlung einer Mauseingabe zugewiesen wird. Durch das Klicken auf eine Maustaste (links, Mausrad oder rechts) wird über das [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971)-Ereignis eine zweite Zuordnung zwischen dem Zeiger und dieser Taste erstellt. Das [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972)-Ereignis wird nur ausgelöst, wenn dieselbe Maustaste losgelassen wird (dem Zeiger kann erst eine andere Taste zugeordnet werden, wenn dieses Ereignis abgeschlossen ist). Aufgrund dieser exklusiven Zuordnung werden Klicks auf andere Maustasten über das [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970)-Ereignis geleitet.     
+    > Die Mauseingabe wird einem einzelnen Zeiger zugeordnet, der bei der ersten Ermittlung einer Mauseingabe zugewiesen wird. Durch das Klicken auf eine Maustaste (links, Mausrad oder rechts) wird über das [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971)-Ereignis eine zweite Zuordnung zwischen dem Zeiger und dieser Taste erstellt. Das [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972)-Ereignis wird nur ausgelöst, wenn dieselbe Maustaste losgelassen wird (dem Zeiger kann erst eine andere Taste zugeordnet werden, wenn dieses Ereignis abgeschlossen ist). Aufgrund dieser exklusiven Zuordnung werden Klicks auf andere Maustasten über das [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208970)-Ereignis geleitet.     
 
 ```csharp
 /// <summary>
@@ -536,7 +533,7 @@ private void Target_PointerCanceled(object sender, PointerRoutedEventArgs e)
 -   Der folgende Handler kontrolliert das [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965)-Ereignis. Das Ereignis wird zum Ereignisprotokoll hinzugefügt, der Zeiger wird aus dem Zeigerarray entfernt, und die Zeigerdetails werden aktualisiert.
 
     > [!NOTE]
-    > [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965) kann anstelle von [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) eintreten. Die Zeigererfassung kann aus verschiedenen Gründen verloren gehen, darunter eine Benutzerinteraktion, die programmgesteuerte Erfassung von einem anderen Zeiger, das Aufrufen von [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972).     
+    > [**PointerCaptureLost**](https://msdn.microsoft.com/library/windows/apps/br208965) kann anstelle von [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) eintreten. Die Zeigererfassung kann aus verschiedenen Gründen verloren gehen, darunter eine Benutzerinteraktion, die programmgesteuerte Erfassung von einem anderen Zeiger, das Aufrufen von [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972).     
 
 ```csharp
 /// <summary>
