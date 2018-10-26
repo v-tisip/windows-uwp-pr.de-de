@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, string
 ms.localizationpriority: medium
 ms.openlocfilehash: 72032c3c522a8434d266842a83c443889e8efc19
-ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5593808"
+ms.locfileid: "5665280"
 ---
 # <a name="string-handling-in-cwinrt"></a><span data-ttu-id="3bf2a-104">Zeichenkettenverarbeitung in C++/WinRT</span><span class="sxs-lookup"><span data-stu-id="3bf2a-104">String handling in C++/WinRT</span></span>
 

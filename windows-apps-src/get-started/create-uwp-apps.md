@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Erste Schritte, Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: dde635624101fdcf0803770bc69e7922f56f704e
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5542807"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5665402"
 ---
 # <a name="start-coding"></a><span data-ttu-id="c66ca-104">Beginnen mit der Codierung</span><span class="sxs-lookup"><span data-stu-id="c66ca-104">Start coding</span></span>
 
