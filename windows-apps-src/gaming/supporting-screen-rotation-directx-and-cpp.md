@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Spiele, Bildschirmausrichtung, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: 4ed8739f8ba7b2049af154d458ccaa831b8526a5
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5548252"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5593725"
 ---
 # <a name="supporting-screen-orientation-directx-and-c"></a><span data-ttu-id="a1c51-104">Unterstützen der Bildschirmausrichtung (DirectX und C++)</span><span class="sxs-lookup"><span data-stu-id="a1c51-104">Supporting screen orientation (DirectX and C++)</span></span>
 

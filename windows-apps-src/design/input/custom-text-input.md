@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 14a2811f59b8de33db51b255aee8892abf553198
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5555412"
+ms.locfileid: "5621759"
 ---
 # <a name="custom-text-input"></a><span data-ttu-id="35b10-103">Benutzerdefinierte Texteingabe</span><span class="sxs-lookup"><span data-stu-id="35b10-103">Custom text input</span></span>
 

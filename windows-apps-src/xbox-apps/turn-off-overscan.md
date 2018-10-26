@@ -9,11 +9,11 @@ keywords: Windows 10, UWP
 ms.assetid: 1adb221f-6f70-4255-9329-2046a486ca45
 ms.localizationpriority: medium
 ms.openlocfilehash: 32932845db47ed47b7e80f68cf4e424ba97e85c0
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5565203"
+ms.locfileid: "5595660"
 ---
 # <a name="how-to-draw-ui-to-the-edge-of-the-screen"></a><span data-ttu-id="d4831-104">So wird's gemacht - Zeichnen der Benutzeroberfläche bis zum Bildschirmrand</span><span class="sxs-lookup"><span data-stu-id="d4831-104">How to draw UI to the edge of the screen</span></span>   
 <span data-ttu-id="d4831-105">Standardmäßig befinden sich die Begrenzungen von Anwendungen an den Rändern des Viewports, um den fernsehsicheren Bereich zu berücksichtigen (Weitere Informationen finden Sie unter [Entwerfen für Xbox und Fernsehgeräte](../design/devices/designing-for-tv.md#tv-safe-area)).</span><span class="sxs-lookup"><span data-stu-id="d4831-105">By default, applications will have borders placed at the edges of the viewport to account for the TV-safe area (for more information, see [Designing for Xbox and TV](../design/devices/designing-for-tv.md#tv-safe-area)).</span></span> 

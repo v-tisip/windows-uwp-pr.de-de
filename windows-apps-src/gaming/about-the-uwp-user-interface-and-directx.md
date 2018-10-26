@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, DirectX, App-Objekt
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e29a19410915836be3c54c0dc04a6d7dc29ceeb
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5570856"
+ms.locfileid: "5596291"
 ---
 # <a name="the-app-object-and-directx"></a><span data-ttu-id="12906-104">Das App-Objekt und DirectX</span><span class="sxs-lookup"><span data-stu-id="12906-104">The app object and DirectX</span></span>
 

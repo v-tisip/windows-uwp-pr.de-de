@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Konzeptgenehmigung
 ms.localizationpriority: medium
 ms.openlocfilehash: a14a9b3f1e059019afa042a47dcaeb9373a69934
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5571531"
+ms.locfileid: "5596073"
 ---
 # <a name="concept-approval"></a><span data-ttu-id="3df0a-104">Konzeptgenehmigung</span><span class="sxs-lookup"><span data-stu-id="3df0a-104">Concept approval</span></span>
 

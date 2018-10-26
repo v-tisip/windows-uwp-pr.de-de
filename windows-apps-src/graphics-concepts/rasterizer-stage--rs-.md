@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 17d58a05a57fa833003b7c229db91473f6cde3d4
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5545721"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5594477"
 ---
 # <a name="rasterizer-rs-stage"></a><span data-ttu-id="f244b-104">Rasterizerphase (RS)</span><span class="sxs-lookup"><span data-stu-id="f244b-104">Rasterizer (RS) stage</span></span>
 

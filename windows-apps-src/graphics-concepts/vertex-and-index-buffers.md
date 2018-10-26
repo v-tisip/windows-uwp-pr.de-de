@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 2327036eb53ac34c406aef53163be642468fbddc
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5556263"
+ms.locfileid: "5597132"
 ---
 # <a name="vertex-and-index-buffers"></a><span data-ttu-id="cf85b-104">Scheitelpunkt- und Indexpuffer</span><span class="sxs-lookup"><span data-stu-id="cf85b-104">Vertex and index buffers</span></span>
 

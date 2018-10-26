@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: c647846aaaf8f7a5cef96e267ad979dc68ee004a
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5549534"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5593015"
 ---
 # <a name="camera-barcode-scanner"></a><span data-ttu-id="3b572-104">Kamera-Strichcodescanner</span><span class="sxs-lookup"><span data-stu-id="3b572-104">Camera barcode scanner</span></span>
 <span data-ttu-id="3b572-105">Ein Kamera-Strichcodescanner wird dynamisch erstellt, wenn Windows die Kamera(s) koppelt, die mit einen Software-Decoder an den Computer angeschlossen sind.</span><span class="sxs-lookup"><span data-stu-id="3b572-105">A camera barcode scanner is created dynamically as Windows pairs the camera(s) attached to your computer with a software decoder.</span></span>  <span data-ttu-id="3b572-106">Jede Kamera – gekoppelter Decoder ist ein voll funktionsfähiger Strichcodescanner.</span><span class="sxs-lookup"><span data-stu-id="3b572-106">Each camera - decoder pair is a fully functional barcode scanner.</span></span>   

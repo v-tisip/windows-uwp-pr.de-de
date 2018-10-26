@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d6b9d76dd20c4537fadf8c0701c200740c31b784
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5559649"
+ms.locfileid: "5597911"
 ---
 # <a name="expose-basic-accessibility-information"></a><span data-ttu-id="a4ff6-103">Verfügbarmachen von grundlegenden Informationen zur Barrierefreiheit</span><span class="sxs-lookup"><span data-stu-id="a4ff6-103">Expose basic accessibility information</span></span>  
 

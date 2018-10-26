@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Spiele, Renderingframeworks, konvertieren, Direct3D 9, Direct3D 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 044a0dc7bf264a82b849623a53d00268d7b30fd9
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5569631"
+ms.locfileid: "5611204"
 ---
 # <a name="convert-the-rendering-framework"></a><span data-ttu-id="b6103-104">Konvertieren des Renderingframeworks</span><span class="sxs-lookup"><span data-stu-id="b6103-104">Convert the rendering framework</span></span>
 
