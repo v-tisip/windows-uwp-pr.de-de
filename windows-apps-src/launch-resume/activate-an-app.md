@@ -1,186 +1,279 @@
 ---
 author: TylerMSFT
 title: Behandeln der App-Aktivierung
-description: "Erfahren Sie, wie Sie die App-Aktivierung durch Überschreiben der OnLaunched-Methode behandeln."
+description: Erfahren Sie, wie Sie die App-Aktivierung durch Überschreiben der OnLaunched-Methode behandeln.
 ms.assetid: DA9A6A43-F09D-4512-A2AB-9B6132431007
 ms.author: twhitney
-ms.date: 02/08/2017
+ms.date: 07/02/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-keywords: "Windows 10, UWP"
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: b6d41cc48ccf43e343aba9c844c2d74b49b1496e
-ms.lasthandoff: 02/07/2017
-
+keywords: Windows10, UWP
+ms.localizationpriority: medium
+dev_langs:
+- csharp
+- cppwinrt
+- cpp
+- vb
+ms.openlocfilehash: 4d69680df1684da756219c180bbe6d47263801b9
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549054"
 ---
+# <a name="handle-app-activation"></a><span data-ttu-id="e487c-104">Behandeln der App-Aktivierung</span><span class="sxs-lookup"><span data-stu-id="e487c-104">Handle app activation</span></span>
 
-# <a name="handle-app-activation"></a>Behandeln der App-Aktivierung
+<span data-ttu-id="e487c-105">Hier erfahren Sie, wie Sie app-Aktivierung durch Überschreiben der [**Application.OnLaunched**](/uwp/api/windows.ui.xaml.application.onlaunched) -Methode behandeln.</span><span class="sxs-lookup"><span data-stu-id="e487c-105">Learn how to handle app activation by overriding the [**Application.OnLaunched**](/uwp/api/windows.ui.xaml.application.onlaunched) method.</span></span>
 
+## <a name="override-the-launch-handler"></a><span data-ttu-id="e487c-106">Überschreiben des Starthandlers</span><span class="sxs-lookup"><span data-stu-id="e487c-106">Override the launch handler</span></span>
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
+<span data-ttu-id="e487c-107">Wenn eine app, aus irgendeinem Grund aktiviert wird, sendet das System das [**CoreApplicationView.Activated**](/uwp/api/windows.applicationmodel.core.coreapplicationview.activated) -Ereignis.</span><span class="sxs-lookup"><span data-stu-id="e487c-107">When an app is activated, for any reason, the system sends the [**CoreApplicationView.Activated**](/uwp/api/windows.applicationmodel.core.coreapplicationview.activated) event.</span></span> <span data-ttu-id="e487c-108">Eine Liste der Aktivierungstypen finden Sie in der [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693)-Enumeration.</span><span class="sxs-lookup"><span data-stu-id="e487c-108">For a list of activation types, see the [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693) enumeration.</span></span>
 
+<span data-ttu-id="e487c-109">Die [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324)-Klasse definiert Methoden, die außer Kraft gesetzt werden können, um die verschiedenen Aktivierungstypen zu behandeln.</span><span class="sxs-lookup"><span data-stu-id="e487c-109">The [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324) class defines methods you can override to handle the various activation types.</span></span> <span data-ttu-id="e487c-110">Verschiedene Aktivierungstypen verfügen über eine spezifische Methode, die außer Kraft gesetzt werden kann.</span><span class="sxs-lookup"><span data-stu-id="e487c-110">Several of the activation types have a specific method that you can override.</span></span> <span data-ttu-id="e487c-111">Setzen Sie für die übrigen Aktivierungstypen die [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)-Methode außer Kraft.</span><span class="sxs-lookup"><span data-stu-id="e487c-111">For the other activation types, override the [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) method.</span></span>
 
-Erfahren Sie, wie Sie die App-Aktivierung durch Überschreiben der [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)-Methode behandeln.
-
-## <a name="override-the-launch-handler"></a>Überschreiben des Starthandlers
-
-Beim Aktivieren einer App – gleich aus welchem Grund – wird vom System das [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018)-Ereignis gesendet. Eine Liste der Aktivierungstypen finden Sie in der [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693)-Enumeration.
-
-Die [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324)-Klasse definiert Methoden, die außer Kraft gesetzt werden können, um die verschiedenen Aktivierungstypen zu behandeln. Verschiedene Aktivierungstypen verfügen über eine spezifische Methode, die außer Kraft gesetzt werden kann. Setzen Sie für die übrigen Aktivierungstypen die [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)-Methode außer Kraft.
-
-Definieren Sie die Klasse für Ihre Anwendung.
+<span data-ttu-id="e487c-112">Definieren Sie die Klasse für Ihre Anwendung.</span><span class="sxs-lookup"><span data-stu-id="e487c-112">Define the class for your application.</span></span>
 
 ```xml
-<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="AppName.App" >
+<Application
+    x:Class="AppName.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 ```
 
-Überschreiben Sie die [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)-Methode. Diese Methode wird immer dann aufgerufen, wenn der Benutzer die App startet. Der [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731)-Parameter enthält den vorherigen Status der App sowie die Aktivierungsargumente.
+<span data-ttu-id="e487c-113">Überschreiben Sie die [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)-Methode.</span><span class="sxs-lookup"><span data-stu-id="e487c-113">Override the [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) method.</span></span> <span data-ttu-id="e487c-114">Diese Methode wird immer dann aufgerufen, wenn der Benutzer die App startet.</span><span class="sxs-lookup"><span data-stu-id="e487c-114">This method is called whenever the user launches the app.</span></span> <span data-ttu-id="e487c-115">Der [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731)-Parameter enthält den vorherigen Status der App sowie die Aktivierungsargumente.</span><span class="sxs-lookup"><span data-stu-id="e487c-115">The [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731) parameter contains the previous state of your app and the activation arguments.</span></span>
 
-**Hinweis**  Für Windows Phone Store-Apps wird diese Methode jedes Mal aufgerufen, wenn der Benutzer die App über die Startkachel oder App-Liste startet. Dies ist auch dann der Fall, wenn die App derzeit im Arbeitsspeicher angehalten ist. Unter Windows wird beim Starten einer angehaltenen App über die Startkachel oder die App-Liste diese Methode nicht aufgerufen.
+> [!NOTE]
+> <span data-ttu-id="e487c-116">Unter Windows Aufrufen nicht starten einer angehaltenen app über die startkachel oder app-Liste diese Methode.</span><span class="sxs-lookup"><span data-stu-id="e487c-116">On Windows, launching a suspended app from Start tile or app list doesn't call this method.</span></span>
 
-> [!div class="tabbedCodeSnippets"]
-> ```cs
-> using System;
-> using Windows.ApplicationModel.Activation;
-> using Windows.UI.Xaml;
->
-> namespace AppName
-> {
->    public partial class App
->    {
->       async protected override void OnLaunched(LaunchActivatedEventArgs args)
->       {
->          EnsurePageCreatedAndActivate();
->       }
->
->       // Creates the MainPage if it isn't already created.  Also activates
->       // the window so it takes foreground and input focus.
->       private MainPage EnsurePageCreatedAndActivate()
->       {
->          if (Window.Current.Content == null)
->          {
->              Window.Current.Content = new MainPage();
->          }
->
->          Window.Current.Activate();
->          return Window.Current.Content as MainPage;
->       }
->    }
-> }
-> ```
-> ```vb
-> Class App
->    Protected Overrides Sub OnLaunched(args As LaunchActivatedEventArgs)
->       Window.Current.Content = New MainPage()
->       Window.Current.Activate()
->    End Sub
-> End Class
-> ```
-> ```cpp
-> using namespace Windows::ApplicationModel::Activation;
-> using namespace Windows::Foundation;
-> using namespace Windows::UI::Xaml;
-> using namespace AppName;
-> void App::OnLaunched(LaunchActivatedEventArgs^ args)
-> {
->    EnsurePageCreatedAndActivate();
-> }
->
-> // Creates the MainPage if it isn't already created.  Also activates
-> // the window so it takes foreground and input focus.
-> void App::EnsurePageCreatedAndActivate()
-> {
->     if (_mainPage == nullptr)
->     {
->         // Save the MainPage for use if we get activated later
->         _mainPage = ref new MainPage();
->     }
->     Window::Current->Content = _mainPage;
->     Window::Current->Activate();
-> }
-> ```
+```csharp
+using System;
+using Windows.ApplicationModel.Activation;
+using Windows.UI.Xaml;
 
-## <a name="restore-application-data-if-app-was-suspended-then-terminated"></a>Wiederherstellen von App-Daten, wenn die App angehalten und dann beendet wurde
+namespace AppName
+{
+   public partial class App
+   {
+      async protected override void OnLaunched(LaunchActivatedEventArgs args)
+      {
+         EnsurePageCreatedAndActivate();
+      }
 
+      // Creates the MainPage if it isn't already created.  Also activates
+      // the window so it takes foreground and input focus.
+      private MainPage EnsurePageCreatedAndActivate()
+      {
+         if (Window.Current.Content == null)
+         {
+             Window.Current.Content = new MainPage();
+         }
 
-Wenn der Benutzer zur beendeten App wechselt, sendet das System das [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018)-Ereignis, wobei [**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) auf **Launch** und [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) auf **Terminated** oder **ClosedByUser** festgelegt ist. Von der App werden die gespeicherten Anwendungsdaten geladen, und der angezeigte Inhalt wird aktualisiert.
+         Window.Current.Activate();
+         return Window.Current.Content as MainPage;
+      }
+   }
+}
+```
 
-> [!div class="tabbedCodeSnippets"]
-> ```cs
-> async protected override void OnLaunched(LaunchActivatedEventArgs args)
-> {
->    if (args.PreviousExecutionState == ApplicationExecutionState.Terminated ||
->        args.PreviousExecutionState == ApplicationExecutionState.ClosedByUser)
->    {
->       // TODO: Populate the UI with the previously saved application data
->    }
->    else
->    {
->       // TODO: Populate the UI with defaults
->    }
->
->    EnsurePageCreatedAndActivate();
-> }
-> ```
-> ```vb
-> Protected Overrides Sub OnLaunched(args As Windows.ApplicationModel.Activation.LaunchActivatedEventArgs)
->    Dim restoreState As Boolean = False
->
->    Select Case args.PreviousExecutionState
->       Case ApplicationExecutionState.Terminated
->          ' TODO: Populate the UI with the previously saved application data
->          restoreState = True
->       Case ApplicationExecutionState.ClosedByUser
->          ' TODO: Populate the UI with the previously saved application data
->          restoreState = True
->       Case Else
->          ' TODO: Populate the UI with defaults
->    End Select
->
->    Window.Current.Content = New MainPage(restoreState)
->    Window.Current.Activate()
-> End Sub
-> ```
-> ```cpp
-> void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ args)
-> {
->    if (args->PreviousExecutionState == ApplicationExecutionState::Terminated ||
->        args->PreviousExecutionState == ApplicationExecutionState::ClosedByUser)
->    {
->       // TODO: Populate the UI with the previously saved application data
->    }
->    else
->    {
->       // TODO: Populate the UI with defaults
->    }
->
->    EnsurePageCreatedAndActivate();
-> }
-> ```
+```vb
+Class App
+   Protected Overrides Sub OnLaunched(args As LaunchActivatedEventArgs)
+      Window.Current.Content = New MainPage()
+      Window.Current.Activate()
+   End Sub
+End Class
+```
 
-Wenn der Wert von [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) gleich **NotRunning** ist, konnten die Anwendungsdaten von der App nicht erfolgreich gespeichert werden. Die App muss in diesem Fall neu gestartet werden, als ob sie erstmalig gestartet wird.
+```cppwinrt
+...
+#include "MainPage.h"
+#include "winrt/Windows.ApplicationModel.Activation.h"
+#include "winrt/Windows.UI.Xaml.h"
+#include "winrt/Windows.UI.Xaml.Controls.h"
+...
+using namespace winrt;
+using namespace Windows::ApplicationModel::Activation;
+using namespace Windows::UI::Xaml;
+using namespace Windows::UI::Xaml::Controls;
 
-## <a name="remarks"></a>Anmerkungen
+struct App : AppT<App>
+{
+    App();
 
-> **Hinweis**  Für Windows Phone Store-Apps folgt auf das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339)-Ereignis immer [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335), auch wenn Ihre App derzeit angehalten ist und der Benutzer Ihre App über eine primäre Kachel oder die App-Liste neu startet. Apps können die Initialisierung überspringen, wenn für das aktuelle Fenster bereits Inhalte festgelegt wurden. Überprüfen Sie die [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736)-Eigenschaft, um zu ermitteln, ob die App über eine primäre oder sekundäre Kachel gestartet wurde. Entscheiden Sie basierend auf dieser Information, ob die App neu gestartet oder fortgesetzt werden soll.
+    /// <summary>
+    /// Invoked when the application is launched normally by the end user.  Other entry points
+    /// will be used such as when the application is launched to open a specific file.
+    /// </summary>
+    /// <param name="e">Details about the launch request and process.</param>
+    void OnLaunched(LaunchActivatedEventArgs const& e)
+    {
+        Frame rootFrame{ nullptr };
+        auto content = Window::Current().Content();
+        if (content)
+        {
+            rootFrame = content.try_as<Frame>();
+        }
 
-## <a name="related-topics"></a>Verwandte Themen
+        // Do not repeat app initialization when the Window already has content,
+        // just ensure that the window is active
+        if (rootFrame == nullptr)
+        {
+            // Create a Frame to act as the navigation context and associate it with
+            // a SuspensionManager key
+            rootFrame = Frame();
 
-* [Behandeln des Anhaltens von Apps](suspend-an-app.md)
-* [Behandeln der App-Fortsetzung](resume-an-app.md)
-* [Richtlinien für das Anhalten und Fortsetzen von Apps](https://msdn.microsoft.com/library/windows/apps/hh465088)
-* [App-Lebenszyklus](app-lifecycle.md)
+            rootFrame.NavigationFailed({ this, &App::OnNavigationFailed });
 
-**Referenzen**
+            if (e.PreviousExecutionState() == ApplicationExecutionState::Terminated)
+            {
+                // Restore the saved session state only when appropriate, scheduling the
+                // final launch steps after the restore is complete
+            }
 
-* [**Windows.ApplicationModel.Activation**](https://msdn.microsoft.com/library/windows/apps/br224766)
-* [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324)
+            if (e.PrelaunchActivated() == false)
+            {
+                if (rootFrame.Content() == nullptr)
+                {
+                    // When the navigation stack isn't restored navigate to the first page,
+                    // configuring the new page by passing required information as a navigation
+                    // parameter
+                    rootFrame.Navigate(xaml_typename<BlankApp1::MainPage>(), box_value(e.Arguments()));
+                }
+                // Place the frame in the current Window
+                Window::Current().Content(rootFrame);
+                // Ensure the current window is active
+                Window::Current().Activate();
+            }
+        }
+        else
+        {
+            if (e.PrelaunchActivated() == false)
+            {
+                if (rootFrame.Content() == nullptr)
+                {
+                    // When the navigation stack isn't restored navigate to the first page,
+                    // configuring the new page by passing required information as a navigation
+                    // parameter
+                    rootFrame.Navigate(xaml_typename<BlankApp1::MainPage>(), box_value(e.Arguments()));
+                }
+                // Ensure the current window is active
+                Window::Current().Activate();
+            }
+        }
+    }
+};
+```
 
- 
+```cpp
+using namespace Windows::ApplicationModel::Activation;
+using namespace Windows::Foundation;
+using namespace Windows::UI::Xaml;
+using namespace AppName;
+void App::OnLaunched(LaunchActivatedEventArgs^ args)
+{
+   EnsurePageCreatedAndActivate();
+}
 
- 
+// Creates the MainPage if it isn't already created.  Also activates
+// the window so it takes foreground and input focus.
+void App::EnsurePageCreatedAndActivate()
+{
+    if (_mainPage == nullptr)
+    {
+        // Save the MainPage for use if we get activated later
+        _mainPage = ref new MainPage();
+    }
+    Window::Current->Content = _mainPage;
+    Window::Current->Activate();
+}
+```
 
+## <a name="restore-application-data-if-app-was-suspended-then-terminated"></a><span data-ttu-id="e487c-117">Wiederherstellen von App-Daten, wenn die App angehalten und dann beendet wurde</span><span class="sxs-lookup"><span data-stu-id="e487c-117">Restore application data if app was suspended then terminated</span></span>
+
+<span data-ttu-id="e487c-118">Wenn der Benutzer zur beendeten App wechselt, sendet das System das [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018)-Ereignis, wobei [**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) auf **Launch** und [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) auf **Terminated** oder **ClosedByUser** festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="e487c-118">When the user switches to your terminated app, the system sends the [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018) event, with [**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) set to **Launch** and [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) set to **Terminated** or **ClosedByUser**.</span></span> <span data-ttu-id="e487c-119">Von der App werden die gespeicherten Anwendungsdaten geladen, und der angezeigte Inhalt wird aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="e487c-119">The app should load its saved application data and refresh its displayed content.</span></span>
+
+```csharp
+async protected override void OnLaunched(LaunchActivatedEventArgs args)
+{
+   if (args.PreviousExecutionState == ApplicationExecutionState.Terminated ||
+       args.PreviousExecutionState == ApplicationExecutionState.ClosedByUser)
+   {
+      // TODO: Populate the UI with the previously saved application data
+   }
+   else
+   {
+      // TODO: Populate the UI with defaults
+   }
+
+   EnsurePageCreatedAndActivate();
+}
+```
+
+```vb
+Protected Overrides Sub OnLaunched(args As Windows.ApplicationModel.Activation.LaunchActivatedEventArgs)
+   Dim restoreState As Boolean = False
+
+   Select Case args.PreviousExecutionState
+      Case ApplicationExecutionState.Terminated
+         ' TODO: Populate the UI with the previously saved application data
+         restoreState = True
+      Case ApplicationExecutionState.ClosedByUser
+         ' TODO: Populate the UI with the previously saved application data
+         restoreState = True
+      Case Else
+         ' TODO: Populate the UI with defaults
+   End Select
+
+   Window.Current.Content = New MainPage(restoreState)
+   Window.Current.Activate()
+End Sub
+```
+
+```cppwinrt
+void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs const& e)
+{
+    if (e.PreviousExecutionState() == ApplicationExecutionState::Terminated ||
+        e.PreviousExecutionState() == ApplicationExecutionState::ClosedByUser)
+    {
+        // Populate the UI with the previously saved application data.
+    }
+    else
+    {
+        // Populate the UI with defaults.
+    }
+    ...
+}
+```
+
+```cpp
+void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ args)
+{
+   if (args->PreviousExecutionState == ApplicationExecutionState::Terminated ||
+       args->PreviousExecutionState == ApplicationExecutionState::ClosedByUser)
+   {
+      // TODO: Populate the UI with the previously saved application data
+   }
+   else
+   {
+      // TODO: Populate the UI with defaults
+   }
+
+   EnsurePageCreatedAndActivate();
+}
+```
+
+<span data-ttu-id="e487c-120">Wenn der Wert von [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) gleich **NotRunning** ist, konnten die Anwendungsdaten von der App nicht erfolgreich gespeichert werden. Die App muss in diesem Fall neu gestartet werden, als ob sie erstmalig gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="e487c-120">If the value of [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) is **NotRunning**, the app failed to save its application data successfully and the app should start over as if it were being initially launched.</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="e487c-121">Anmerkungen</span><span class="sxs-lookup"><span data-stu-id="e487c-121">Remarks</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="e487c-122">Apps können die Initialisierung überspringen, wenn für das aktuelle Fenster bereits Inhalte festgelegt wurden.</span><span class="sxs-lookup"><span data-stu-id="e487c-122">Apps can skip initialization if there is already content set on the current window.</span></span> <span data-ttu-id="e487c-123">Sie können die [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) -Eigenschaft, um zu bestimmen, ob die app über eine primäre oder eine sekundäre Kachel gestartet wurde und, basierend auf dieser Information entscheiden, ob Sie ein neuer präsentieren oder Fortsetzen der app-Erfahrung überprüfen.</span><span class="sxs-lookup"><span data-stu-id="e487c-123">You can check the [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) property to determine whether the app was launched from a primary or a secondary tile and, based on that information, decide whether you should present a fresh or resume app experience.</span></span>
+
+## <a name="important-apis"></a><span data-ttu-id="e487c-124">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="e487c-124">Important APIs</span></span>
+* [<span data-ttu-id="e487c-125">Windows.ApplicationModel.Activation</span><span class="sxs-lookup"><span data-stu-id="e487c-125">Windows.ApplicationModel.Activation</span></span>](https://msdn.microsoft.com/library/windows/apps/br224766)
+* [<span data-ttu-id="e487c-126">Windows.UI.Xaml.Application</span><span class="sxs-lookup"><span data-stu-id="e487c-126">Windows.UI.Xaml.Application</span></span>](https://msdn.microsoft.com/library/windows/apps/br242324)
+
+## <a name="related-topics"></a><span data-ttu-id="e487c-127">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="e487c-127">Related topics</span></span>
+* [<span data-ttu-id="e487c-128">Behandeln des Anhaltens von Apps</span><span class="sxs-lookup"><span data-stu-id="e487c-128">Handle app suspend</span></span>](suspend-an-app.md)
+* [<span data-ttu-id="e487c-129">Behandeln der App-Fortsetzung</span><span class="sxs-lookup"><span data-stu-id="e487c-129">Handle app resume</span></span>](resume-an-app.md)
+* [<span data-ttu-id="e487c-130">Richtlinien für das Anhalten und Fortsetzen von Apps</span><span class="sxs-lookup"><span data-stu-id="e487c-130">Guidelines for app suspend and resume</span></span>](https://msdn.microsoft.com/library/windows/apps/hh465088)
+* [<span data-ttu-id="e487c-131">App-Lebenszyklus</span><span class="sxs-lookup"><span data-stu-id="e487c-131">App lifecycle</span></span>](app-lifecycle.md)

@@ -6,30 +6,28 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: ee55a932857611e19dc24170d5b61c9c26b51c13
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 91c95019c327f39a58a7397a66f9d4bbc88f843d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652719"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548688"
 ---
-# <a name="compute-pipeline"></a><span data-ttu-id="c21a7-104">Compute-Pipeline</span><span class="sxs-lookup"><span data-stu-id="c21a7-104">Compute pipeline</span></span>
+# <a name="compute-pipeline"></a><span data-ttu-id="a24c9-104">Compute-Pipeline</span><span class="sxs-lookup"><span data-stu-id="a24c9-104">Compute pipeline</span></span>
 
 
-<span data-ttu-id="c21a7-105">\[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt.</span><span class="sxs-lookup"><span data-stu-id="c21a7-105">\[Some information relates to pre-released product which may be substantially modified before it's commercially released.</span></span> <span data-ttu-id="c21a7-106">Microsoft übernimmt für die hier bereitgestellten Informationen keine Garantien, weder ausdrücklicher noch impliziter Art.\]</span><span class="sxs-lookup"><span data-stu-id="c21a7-106">Microsoft makes no warranties, express or implied, with respect to the information provided here.\]</span></span>
+<span data-ttu-id="a24c9-105">\[Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt.</span><span class="sxs-lookup"><span data-stu-id="a24c9-105">\[Some information relates to pre-released product which may be substantially modified before it's commercially released.</span></span> <span data-ttu-id="a24c9-106">Microsoft übernimmt für die hier bereitgestellten Informationen keine Garantien, weder ausdrücklicher noch impliziter Art.\]</span><span class="sxs-lookup"><span data-stu-id="a24c9-106">Microsoft makes no warranties, express or implied, with respect to the information provided here.\]</span></span>
 
 
-<span data-ttu-id="c21a7-107">Die Direct3D-Compute-Pipeline wurde für die Behandlung von Berechnungen konzipiert, die hauptsächlich parallel zur Grafikpipeline ausgeführt werden können.</span><span class="sxs-lookup"><span data-stu-id="c21a7-107">The Direct3D compute pipeline is designed to handle calculations that can be done mostly in parallel with the graphics pipeline.</span></span> <span data-ttu-id="c21a7-108">Die Compute-Pipeline enthält nur wenige Schritte, bei der Daten zwischen Eingabe und Ausgabe über von Eingaben über die programmierbare Computeshaderphase fließen.</span><span class="sxs-lookup"><span data-stu-id="c21a7-108">There are only a few steps in the compute pipeline, with data flowing from input to output through the programmable compute shader stage.</span></span>
+<span data-ttu-id="a24c9-107">Die Direct3D-Compute-Pipeline wurde für die Behandlung von Berechnungen konzipiert, die hauptsächlich parallel zur Grafikpipeline ausgeführt werden können.</span><span class="sxs-lookup"><span data-stu-id="a24c9-107">The Direct3D compute pipeline is designed to handle calculations that can be done mostly in parallel with the graphics pipeline.</span></span> <span data-ttu-id="a24c9-108">Die Compute-Pipeline enthält nur wenige Schritte, bei der Daten zwischen Eingabe und Ausgabe über von Eingaben über die programmierbare Computeshaderphase fließen.</span><span class="sxs-lookup"><span data-stu-id="a24c9-108">There are only a few steps in the compute pipeline, with data flowing from input to output through the programmable compute shader stage.</span></span>
 
 | | |
 |-|-|
-|<span data-ttu-id="c21a7-109">Zweck</span><span class="sxs-lookup"><span data-stu-id="c21a7-109">Purpose</span></span>|<span data-ttu-id="c21a7-110">Wie andere programmierbare Shader wurde auch die [Computeshaderphase (CS)](compute-shader-stage--cs-.md) mit HLSL entwickelt und implementiert.</span><span class="sxs-lookup"><span data-stu-id="c21a7-110">Like other programmable shaders, [Compute Shader (CS) stage](compute-shader-stage--cs-.md) is designed and implemented with HLSL.</span></span> <span data-ttu-id="c21a7-111">Ein Computeshader bietet schnelle, allgemeine Berechnungen und nutzt die große Anzahl von parallelen Prozessoren auf dem Grafikprozessor (GPU).</span><span class="sxs-lookup"><span data-stu-id="c21a7-111">A compute shader provides high-speed general purpose computing and takes advantage of the large numbers of parallel processors on the graphics processing unit (GPU).</span></span> <span data-ttu-id="c21a7-112">Der Computeshader bietet die Freigabe des Arbeitsspeichers und Threadsynchronisierung, um effektivere parallele Programmiermethoden zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="c21a7-112">The compute shader provides memory sharing and thread synchronization features to allow more effective parallel programming methods.</span></span>|
-|<span data-ttu-id="c21a7-113">Eingabe</span><span class="sxs-lookup"><span data-stu-id="c21a7-113">Input</span></span>|<span data-ttu-id="c21a7-114">Im Gegensatz zu anderen programmierbaren Shadern ist die Definition der Eingabe abstrakt.</span><span class="sxs-lookup"><span data-stu-id="c21a7-114">Unlike other programmable shaders, the definition of input is abstract.</span></span> <span data-ttu-id="c21a7-115">Die Eingabe kann ein-, zwei- oder dreidimensionaler Natur sein, um die Anzahl der auszufühRendern Aufrufe des Computeshaders festzulegen.</span><span class="sxs-lookup"><span data-stu-id="c21a7-115">The input can be one, two or three-dimensional in nature, determining the number of invocations of the compute shader to execute.</span></span> <span data-ttu-id="c21a7-116">Es ist möglich, gemeinsam genutzte Daten für einen Satz zu lesender Aufrufe zu definieren.</span><span class="sxs-lookup"><span data-stu-id="c21a7-116">It is possible to define shared data for one set of invocations to read.</span></span>|
-|<span data-ttu-id="c21a7-117">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="c21a7-117">Output</span></span>|<span data-ttu-id="c21a7-118">Ausgabedaten des Computeshaders können die stark variiert und mit der Grafikrenderingpipeline synchronisiert werden, wenn die berechneten Daten erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="c21a7-118">Output data from the compute shader, which can be highly varied, can be synchronized with the graphics rendering pipeline when the computed data is required.</span></span>|
+|<span data-ttu-id="a24c9-109">Zweck</span><span class="sxs-lookup"><span data-stu-id="a24c9-109">Purpose</span></span>|<span data-ttu-id="a24c9-110">Wie andere programmierbare Shader wurde auch die [Computeshaderphase (CS)](compute-shader-stage--cs-.md) mit HLSL entwickelt und implementiert.</span><span class="sxs-lookup"><span data-stu-id="a24c9-110">Like other programmable shaders, [Compute Shader (CS) stage](compute-shader-stage--cs-.md) is designed and implemented with HLSL.</span></span> <span data-ttu-id="a24c9-111">Ein Computeshader bietet schnelle, allgemeine Berechnungen und nutzt die große Anzahl von parallelen Prozessoren auf dem Grafikprozessor (GPU).</span><span class="sxs-lookup"><span data-stu-id="a24c9-111">A compute shader provides high-speed general purpose computing and takes advantage of the large numbers of parallel processors on the graphics processing unit (GPU).</span></span> <span data-ttu-id="a24c9-112">Der Computeshader bietet die Freigabe des Arbeitsspeichers und Threadsynchronisierung, um effektivere parallele Programmiermethoden zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="a24c9-112">The compute shader provides memory sharing and thread synchronization features to allow more effective parallel programming methods.</span></span>|
+|<span data-ttu-id="a24c9-113">Eingabe</span><span class="sxs-lookup"><span data-stu-id="a24c9-113">Input</span></span>|<span data-ttu-id="a24c9-114">Im Gegensatz zu anderen programmierbaren Shadern ist die Definition der Eingabe abstrakt.</span><span class="sxs-lookup"><span data-stu-id="a24c9-114">Unlike other programmable shaders, the definition of input is abstract.</span></span> <span data-ttu-id="a24c9-115">Die Eingabe kann ein-, zwei- oder dreidimensionaler Natur sein, um die Anzahl der auszufühRendern Aufrufe des Computeshaders festzulegen.</span><span class="sxs-lookup"><span data-stu-id="a24c9-115">The input can be one, two or three-dimensional in nature, determining the number of invocations of the compute shader to execute.</span></span> <span data-ttu-id="a24c9-116">Es ist möglich, gemeinsam genutzte Daten für einen Satz zu lesender Aufrufe zu definieren.</span><span class="sxs-lookup"><span data-stu-id="a24c9-116">It is possible to define shared data for one set of invocations to read.</span></span>|
+|<span data-ttu-id="a24c9-117">Ausgabe</span><span class="sxs-lookup"><span data-stu-id="a24c9-117">Output</span></span>|<span data-ttu-id="a24c9-118">Ausgabedaten des Computeshaders können die stark variiert und mit der Grafikrenderingpipeline synchronisiert werden, wenn die berechneten Daten erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="a24c9-118">Output data from the compute shader, which can be highly varied, can be synchronized with the graphics rendering pipeline when the computed data is required.</span></span>|
 | | |
 
 
@@ -58,11 +56,11 @@ ms.locfileid: "1652719"
 </table>
 -->
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="c21a7-119"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="c21a7-119"><span id="related-topics"></span>Related topics</span></span>
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="a24c9-119"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="a24c9-119"><span id="related-topics"></span>Related topics</span></span>
 
 
-[<span data-ttu-id="c21a7-120">Direct3D-Grafik-Lernanleitung</span><span class="sxs-lookup"><span data-stu-id="c21a7-120">Direct3D Graphics Learning Guide</span></span>](index.md)
+[<span data-ttu-id="a24c9-120">Direct3D-Grafik-Lernanleitung</span><span class="sxs-lookup"><span data-stu-id="a24c9-120">Direct3D Graphics Learning Guide</span></span>](index.md)
 
- 
+ 
 
- 
+ 

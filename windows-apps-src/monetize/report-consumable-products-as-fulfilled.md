@@ -6,16 +6,14 @@ title: Verbrauchsprodukte als erfüllt melden
 ms.author: mhopkins
 ms.date: 03/16/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Sammlungs-API, erfüllen, Verbrauchsprodukt
 ms.localizationpriority: medium
-ms.openlocfilehash: 2cbacd35a25e8eaf9673d118fcbece835572e289
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 69795a40ae5e46f95330cd6a6d2738adc9a74686
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5518628"
+ms.locfileid: "5560674"
 ---
 # <a name="report-consumable-products-as-fulfilled"></a><span data-ttu-id="8b13c-105">Verbrauchsprodukte als erfüllt melden</span><span class="sxs-lookup"><span data-stu-id="8b13c-105">Report consumable products as fulfilled</span></span>
 

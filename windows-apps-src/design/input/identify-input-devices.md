@@ -9,33 +9,31 @@ keywords: Gerät, Digitalisierer, Eingabe, Interaktion
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 40abeae4048784599deadd9a1a62a995447159be
-ms.sourcegitcommit: 03a3c02c7b3b0b0a3d1b14705cc1fd73788ac034
-ms.translationtype: HT
+ms.openlocfilehash: 77d2a914147fb2cd20f8043e0b52a824ddf3710d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "1903194"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546612"
 ---
-# <a name="identify-input-devices"></a><span data-ttu-id="5c98d-103">Identifizieren von Eingabegeräten</span><span class="sxs-lookup"><span data-stu-id="5c98d-103">Identify input devices</span></span>
+# <a name="identify-input-devices"></a><span data-ttu-id="04ed3-103">Identifizieren von Eingabegeräten</span><span class="sxs-lookup"><span data-stu-id="04ed3-103">Identify input devices</span></span>
 
 
-<span data-ttu-id="5c98d-104">Identifizieren Sie die Eingabegeräte, die mit einem Gerät für die universelle Windows-Plattform (UWP) verbunden sind, sowie deren Funktionen und Attribute.</span><span class="sxs-lookup"><span data-stu-id="5c98d-104">Identify the input devices connected to a Universal Windows Platform (UWP) device and identify their capabilities and attributes.</span></span>
+<span data-ttu-id="04ed3-104">Identifizieren Sie die Eingabegeräte, die mit einem Gerät für die universelle Windows-Plattform (UWP) verbunden sind, sowie deren Funktionen und Attribute.</span><span class="sxs-lookup"><span data-stu-id="04ed3-104">Identify the input devices connected to a Universal Windows Platform (UWP) device and identify their capabilities and attributes.</span></span>
 
-> <span data-ttu-id="5c98d-105">**Wichtige APIs**: [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br208383), [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</span><span class="sxs-lookup"><span data-stu-id="5c98d-105">**Important APIs**: [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br208383), [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</span></span>
+> <span data-ttu-id="04ed3-105">**Wichtige APIs**: [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br208383), [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</span><span class="sxs-lookup"><span data-stu-id="04ed3-105">**Important APIs**: [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648), [**Windows.UI.Input**](https://msdn.microsoft.com/library/windows/apps/br208383), [**Windows.UI.Xaml.Input**](https://msdn.microsoft.com/library/windows/apps/br242084)</span></span>
 
-## <a name="retrieve-mouse-properties"></a><span data-ttu-id="5c98d-106">Abrufen von Mauseigenschaften</span><span class="sxs-lookup"><span data-stu-id="5c98d-106">Retrieve mouse properties</span></span>
+## <a name="retrieve-mouse-properties"></a><span data-ttu-id="04ed3-106">Abrufen von Mauseigenschaften</span><span class="sxs-lookup"><span data-stu-id="04ed3-106">Retrieve mouse properties</span></span>
 
 
-<span data-ttu-id="5c98d-107">Der [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)-Namespace enthält die [**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626)-Klasse, mit der Sie die Eigenschaften abrufen können, die von einer oder mehreren angeschlossenen Mäusen bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="5c98d-107">The [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) namespace contains the [**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626) class used to retrieve the properties exposed by one or more connected mice.</span></span> <span data-ttu-id="5c98d-108">Erstellen Sie einfach ein neues **MouseCapabilities**-Objekt, und rufen Sie die benötigten Eigenschaften ab.</span><span class="sxs-lookup"><span data-stu-id="5c98d-108">Just create a new **MouseCapabilities** object and get the properties you're interested in.</span></span>
+<span data-ttu-id="04ed3-107">Der [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)-Namespace enthält die [**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626)-Klasse, mit der Sie die Eigenschaften abrufen können, die von einer oder mehreren angeschlossenen Mäusen bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="04ed3-107">The [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) namespace contains the [**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626) class used to retrieve the properties exposed by one or more connected mice.</span></span> <span data-ttu-id="04ed3-108">Erstellen Sie einfach ein neues **MouseCapabilities**-Objekt, und rufen Sie die benötigten Eigenschaften ab.</span><span class="sxs-lookup"><span data-stu-id="04ed3-108">Just create a new **MouseCapabilities** object and get the properties you're interested in.</span></span>
 
-<span data-ttu-id="5c98d-109">**Hinweis**  Die von den hier beschriebenen Eigenschaften zurückgegebenen Werte basieren auf allen ermittelten Mäusen: Boolesche Eigenschaften geben Werte ungleich 0 zurück, wenn mindestens eine Maus eine bestimmte Funktion unterstützt, während numerische Eigenschaften den größten Wert einer der Mäuse zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="5c98d-109">**Note**  The values returned by the properties discussed here are based on all detected mice: Boolean properties return non-zero if at least one mouse supports a specific capability, and numeric properties return the maximum value exposed by any one mouse.</span></span>
+<span data-ttu-id="04ed3-109">**Hinweis:** die von den hier beschriebenen Eigenschaften zurückgegebenen Werte basieren auf allen ermittelten Mäusen: boolesche Eigenschaften geben ungleich 0 zurück, wenn mindestens eine Maus eine bestimmte Funktion unterstützt, während numerische Eigenschaften den größten Wert von jedem anderen zurückgeben Maus.</span><span class="sxs-lookup"><span data-stu-id="04ed3-109">**Note**The values returned by the properties discussed here are based on all detected mice: Boolean properties return non-zero if at least one mouse supports a specific capability, and numeric properties return the maximum value exposed by any one mouse.</span></span>
 
- 
+ 
 
-<span data-ttu-id="5c98d-110">Der folgende Code verwendet eine Reihe von [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)-Elementen, um die einzelnen Mauseigenschaften und -werte anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="5c98d-110">The following code uses a series of [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) elements to display the individual mouse properties and values.</span></span>
+<span data-ttu-id="04ed3-110">Der folgende Code verwendet eine Reihe von [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)-Elementen, um die einzelnen Mauseigenschaften und -werte anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="04ed3-110">The following code uses a series of [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) elements to display the individual mouse properties and values.</span></span>
 
 ```CSharp
 private void GetMouseProperties()
@@ -49,12 +47,12 @@ private void GetMouseProperties()
 }
 ```
 
-## <a name="retrieve-keyboard-properties"></a><span data-ttu-id="5c98d-111">Abrufen von Tastatureigenschaften</span><span class="sxs-lookup"><span data-stu-id="5c98d-111">Retrieve keyboard properties</span></span>
+## <a name="retrieve-keyboard-properties"></a><span data-ttu-id="04ed3-111">Abrufen von Tastatureigenschaften</span><span class="sxs-lookup"><span data-stu-id="04ed3-111">Retrieve keyboard properties</span></span>
 
 
-<span data-ttu-id="5c98d-112">Der [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)-Namespace enthält die [**KeyboardCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225623)-Klasse, mit der Sie ermitteln können, ob eine Tastatur angeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="5c98d-112">The [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) namespace contains the [**KeyboardCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225623) class used to retrieve whether a keyboard is connected.</span></span> <span data-ttu-id="5c98d-113">Erstellen Sie einfach ein neues **KeyboardCapabilities**-Objekt, und rufen Sie die [**KeyboardPresent**](https://msdn.microsoft.com/library/windows/apps/br225625)-Eigenschaft ab.</span><span class="sxs-lookup"><span data-stu-id="5c98d-113">Just create a new **KeyboardCapabilities** object and get the [**KeyboardPresent**](https://msdn.microsoft.com/library/windows/apps/br225625) property.</span></span>
+<span data-ttu-id="04ed3-112">Der [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)-Namespace enthält die [**KeyboardCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225623)-Klasse, mit der Sie ermitteln können, ob eine Tastatur angeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="04ed3-112">The [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) namespace contains the [**KeyboardCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225623) class used to retrieve whether a keyboard is connected.</span></span> <span data-ttu-id="04ed3-113">Erstellen Sie einfach ein neues **KeyboardCapabilities**-Objekt, und rufen Sie die [**KeyboardPresent**](https://msdn.microsoft.com/library/windows/apps/br225625)-Eigenschaft ab.</span><span class="sxs-lookup"><span data-stu-id="04ed3-113">Just create a new **KeyboardCapabilities** object and get the [**KeyboardPresent**](https://msdn.microsoft.com/library/windows/apps/br225625) property.</span></span>
 
-<span data-ttu-id="5c98d-114">Der folgende Code verwendet ein [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)-Element, um die Tastatureigenschaft und ihren Wert anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="5c98d-114">The following code uses a [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) element to display the keyboard property and value.</span></span>
+<span data-ttu-id="04ed3-114">Der folgende Code verwendet ein [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)-Element, um die Tastatureigenschaft und ihren Wert anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="04ed3-114">The following code uses a [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) element to display the keyboard property and value.</span></span>
 
 ```CSharp
 private void GetKeyboardProperties()
@@ -64,16 +62,16 @@ private void GetKeyboardProperties()
 }
 ```
 
-## <a name="retrieve-touch-properties"></a><span data-ttu-id="5c98d-115">Abrufen von Berührungseigenschaften</span><span class="sxs-lookup"><span data-stu-id="5c98d-115">Retrieve touch properties</span></span>
+## <a name="retrieve-touch-properties"></a><span data-ttu-id="04ed3-115">Abrufen von Berührungseigenschaften</span><span class="sxs-lookup"><span data-stu-id="04ed3-115">Retrieve touch properties</span></span>
 
 
-<span data-ttu-id="5c98d-116">Der [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)-Namespace enthält die [**TouchCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225644)-Klasse, mit der Sie ermitteln können, ob Touchdigitalisierungsgeräte angeschlossen sind.</span><span class="sxs-lookup"><span data-stu-id="5c98d-116">The [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) namespace contains the [**TouchCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225644) class used to retrieve whether any touch digitizers are connected.</span></span> <span data-ttu-id="5c98d-117">Erstellen Sie einfach ein neues **TouchCapabilities**-Objekt, und rufen Sie die benötigten Eigenschaften ab.</span><span class="sxs-lookup"><span data-stu-id="5c98d-117">Just create a new **TouchCapabilities** object and get the properties you're interested in.</span></span>
+<span data-ttu-id="04ed3-116">Der [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)-Namespace enthält die [**TouchCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225644)-Klasse, mit der Sie ermitteln können, ob Touchdigitalisierungsgeräte angeschlossen sind.</span><span class="sxs-lookup"><span data-stu-id="04ed3-116">The [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) namespace contains the [**TouchCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225644) class used to retrieve whether any touch digitizers are connected.</span></span> <span data-ttu-id="04ed3-117">Erstellen Sie einfach ein neues **TouchCapabilities**-Objekt, und rufen Sie die benötigten Eigenschaften ab.</span><span class="sxs-lookup"><span data-stu-id="04ed3-117">Just create a new **TouchCapabilities** object and get the properties you're interested in.</span></span>
 
-<span data-ttu-id="5c98d-118">**Hinweis**  Die von den hier beschriebenen Eigenschaften zurückgegebenen Werte basieren auf allen ermittelten Touchdigitalisierungsgeräten: Boolesche Eigenschaften geben Werte ungleich 0 zurück, wenn mindestens ein Digitalisierungsgerät eine bestimmte Funktion unterstützt, während numerische Eigenschaften den größten Wert eines der Digitalisierungsgeräte zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="5c98d-118">**Note**  The values returned by the properties discussed here are based on all detected touch digitizers: Boolean properties return non-zero if at least one digitizer supports a specific capability, and numeric properties return the maximum value exposed by any one digitizer.</span></span>
+<span data-ttu-id="04ed3-118">**Hinweis:** die von den hier beschriebenen Eigenschaften zurückgegebenen Werte basieren auf allen ermittelten touchdigitalisierungsgeräten: boolesche Eigenschaften geben ungleich 0 zurück, wenn mindestens ein Digitalisierungsgerät eine bestimmte Funktion unterstützt, während numerische Eigenschaften den größten Wert zurückgeben von eines verfügbar gemacht werden.</span><span class="sxs-lookup"><span data-stu-id="04ed3-118">**Note**The values returned by the properties discussed here are based on all detected touch digitizers: Boolean properties return non-zero if at least one digitizer supports a specific capability, and numeric properties return the maximum value exposed by any one digitizer.</span></span>
 
- 
+ 
 
-<span data-ttu-id="5c98d-119">Der folgende Code verwendet eine Reihe von [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)-Elementen, um die Eigenschaften und Werte der einzelnen Touchdigitalisierer anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="5c98d-119">The following code uses a series of [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) elements to display the touch properties and values.</span></span>
+<span data-ttu-id="04ed3-119">Der folgende Code verwendet eine Reihe von [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652)-Elementen, um die Eigenschaften und Werte der einzelnen Touchdigitalisierer anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="04ed3-119">The following code uses a series of [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/br209652) elements to display the touch properties and values.</span></span>
 
 ```CSharp
 private void GetTouchProperties()
@@ -84,14 +82,14 @@ private void GetTouchProperties()
 }
 ```
 
-## <a name="retrieve-pointer-properties"></a><span data-ttu-id="5c98d-120">Abrufen von Zeigereigenschaften</span><span class="sxs-lookup"><span data-stu-id="5c98d-120">Retrieve pointer properties</span></span>
+## <a name="retrieve-pointer-properties"></a><span data-ttu-id="04ed3-120">Abrufen von Zeigereigenschaften</span><span class="sxs-lookup"><span data-stu-id="04ed3-120">Retrieve pointer properties</span></span>
 
 
-<span data-ttu-id="5c98d-121">Der [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)-Namespace enthält die [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633)-Klasse, mit der Sie abrufen können, ob eines der erkannten Geräte Zeigereingaben (Toucheingabe, Stift oder Maus) unterstützt.</span><span class="sxs-lookup"><span data-stu-id="5c98d-121">The [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) namespace contains the [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) class used to retrieve whether any detected devices support pointer input (touch, touchpad, mouse, or pen).</span></span> <span data-ttu-id="5c98d-122">Erstellen Sie einfach ein neues **PointerDevice**-Objekt, und rufen Sie die benötigten Eigenschaften ab.</span><span class="sxs-lookup"><span data-stu-id="5c98d-122">Just create a new **PointerDevice** object and get the properties you're interested in.</span></span>
+<span data-ttu-id="04ed3-121">Der [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)-Namespace enthält die [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633)-Klasse, mit der Sie abrufen können, ob eines der erkannten Geräte Zeigereingaben (Toucheingabe, Stift oder Maus) unterstützt.</span><span class="sxs-lookup"><span data-stu-id="04ed3-121">The [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648) namespace contains the [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633) class used to retrieve whether any detected devices support pointer input (touch, touchpad, mouse, or pen).</span></span> <span data-ttu-id="04ed3-122">Erstellen Sie einfach ein neues **PointerDevice**-Objekt, und rufen Sie die benötigten Eigenschaften ab.</span><span class="sxs-lookup"><span data-stu-id="04ed3-122">Just create a new **PointerDevice** object and get the properties you're interested in.</span></span>
 
-<span data-ttu-id="5c98d-123">**Hinweis**  Die von den hier beschriebenen Eigenschaften zurückgegebenen Werte basieren auf allen ermittelten Zeigegeräten: Boolesche Eigenschaften geben Werte ungleich 0 zurück, wenn mindestens ein Zeigegerät eine bestimmte Funktion unterstützt, während numerische Eigenschaften den größten Wert eines der Zeigegeräte zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="5c98d-123">**Note**  The values returned by the properties discussed here are based on all detected pointer devices: Boolean properties return non-zero if at least one device supports a specific capability, and numeric properties return the maximum value exposed by any one pointer device.</span></span>
+<span data-ttu-id="04ed3-123">**Hinweis:** die von den hier beschriebenen Eigenschaften zurückgegebenen Werte basieren auf allen ermittelten Zeigegeräten: boolesche Eigenschaften geben ungleich 0 zurück, wenn mindestens ein Gerät eine bestimmte Funktion unterstützt, während numerische Eigenschaften den größten Wert zurückgeben von jedem Gerät einen Zeiger.</span><span class="sxs-lookup"><span data-stu-id="04ed3-123">**Note**The values returned by the properties discussed here are based on all detected pointer devices: Boolean properties return non-zero if at least one device supports a specific capability, and numeric properties return the maximum value exposed by any one pointer device.</span></span>
 
-<span data-ttu-id="5c98d-124">Der folgende Code zeigt in einer Tabelle die Eigenschaften und Werte der einzelnen Zeigergeräte an.</span><span class="sxs-lookup"><span data-stu-id="5c98d-124">The following code uses a table to display the properties and values for each pointer device.</span></span>
+<span data-ttu-id="04ed3-124">Der folgende Code zeigt in einer Tabelle die Eigenschaften und Werte der einzelnen Zeigergeräte an.</span><span class="sxs-lookup"><span data-stu-id="04ed3-124">The following code uses a table to display the properties and values for each pointer device.</span></span>
 
 ```CSharp
 private void GetPointerDevices()
@@ -178,19 +176,19 @@ private void GetPointerDevices()
     }
 ```
 
-## <a name="related-articles"></a><span data-ttu-id="5c98d-125">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="5c98d-125">Related articles</span></span>
+## <a name="related-articles"></a><span data-ttu-id="04ed3-125">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="04ed3-125">Related articles</span></span>
 
 
-**<span data-ttu-id="5c98d-126">Beispiele</span><span class="sxs-lookup"><span data-stu-id="5c98d-126">Samples</span></span>**
-* [<span data-ttu-id="5c98d-127">Einfaches Eingabebeispiel</span><span class="sxs-lookup"><span data-stu-id="5c98d-127">Basic input sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [<span data-ttu-id="5c98d-128">Beispiel für Eingabe mit niedriger Latenz</span><span class="sxs-lookup"><span data-stu-id="5c98d-128">Low latency input sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [<span data-ttu-id="5c98d-129">Beispiel für den Benutzerinteraktionsmodus</span><span class="sxs-lookup"><span data-stu-id="5c98d-129">User interaction mode sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=619894)
+**<span data-ttu-id="04ed3-126">Beispiele</span><span class="sxs-lookup"><span data-stu-id="04ed3-126">Samples</span></span>**
+* [<span data-ttu-id="04ed3-127">Einfaches Eingabebeispiel</span><span class="sxs-lookup"><span data-stu-id="04ed3-127">Basic input sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [<span data-ttu-id="04ed3-128">Beispiel für Eingabe mit niedriger Latenz</span><span class="sxs-lookup"><span data-stu-id="04ed3-128">Low latency input sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [<span data-ttu-id="04ed3-129">Beispiel für den Benutzerinteraktionsmodus</span><span class="sxs-lookup"><span data-stu-id="04ed3-129">User interaction mode sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=619894)
 
-**<span data-ttu-id="5c98d-130">Archivbeispiele</span><span class="sxs-lookup"><span data-stu-id="5c98d-130">Archive samples</span></span>**
-* [<span data-ttu-id="5c98d-131">Eingabe: Beispiel für Gerätefunktionen</span><span class="sxs-lookup"><span data-stu-id="5c98d-131">Input: Device capabilities sample</span></span>](http://go.microsoft.com/fwlink/p/?linkid=231530)
- 
+**<span data-ttu-id="04ed3-130">Archivbeispiele</span><span class="sxs-lookup"><span data-stu-id="04ed3-130">Archive samples</span></span>**
+* [<span data-ttu-id="04ed3-131">Eingabe: Beispiel für Gerätefunktionen</span><span class="sxs-lookup"><span data-stu-id="04ed3-131">Input: Device capabilities sample</span></span>](http://go.microsoft.com/fwlink/p/?linkid=231530)
+ 
 
- 
+ 
 
 
 

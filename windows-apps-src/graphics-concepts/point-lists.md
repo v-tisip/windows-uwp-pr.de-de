@@ -8,31 +8,29 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b9bff41dd1963bf2703fae63573949d96f7f436
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: b4c2e0f6e99099df4bdda9452521acf3b0cd2b8f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044919"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550664"
 ---
-# <a name="point-lists"></a><span data-ttu-id="824ad-105">Punktelisten</span><span class="sxs-lookup"><span data-stu-id="824ad-105">Point lists</span></span>
+# <a name="point-lists"></a><span data-ttu-id="dcfab-105">Punktelisten</span><span class="sxs-lookup"><span data-stu-id="dcfab-105">Point lists</span></span>
 
 
-<span data-ttu-id="824ad-106">Eine Punkteliste ist eine Sammlung von Scheitelpunkten, die als isolierte Punkte dargestellt werden.</span><span class="sxs-lookup"><span data-stu-id="824ad-106">A point list is a collection of vertices that are rendered as isolated points.</span></span> <span data-ttu-id="824ad-107">Die Anwendung kann Punktelisten in 3D-Szenen für Sternenfelder oder gepunktete Linien auf der Oberfläche eines Polygons verwenden.</span><span class="sxs-lookup"><span data-stu-id="824ad-107">Your application can use point lists in 3D scenes for star fields, or dotted lines on the surface of a polygon.</span></span>
+<span data-ttu-id="dcfab-106">Eine Punkteliste ist eine Sammlung von Scheitelpunkten, die als isolierte Punkte dargestellt werden.</span><span class="sxs-lookup"><span data-stu-id="dcfab-106">A point list is a collection of vertices that are rendered as isolated points.</span></span> <span data-ttu-id="dcfab-107">Die Anwendung kann Punktelisten in 3D-Szenen für Sternenfelder oder gepunktete Linien auf der Oberfläche eines Polygons verwenden.</span><span class="sxs-lookup"><span data-stu-id="dcfab-107">Your application can use point lists in 3D scenes for star fields, or dotted lines on the surface of a polygon.</span></span>
 
-## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span data-ttu-id="824ad-108"><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Beispiel</span><span class="sxs-lookup"><span data-stu-id="824ad-108"><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Example</span></span>
+## <a name="span-idexamplespanspan-idexamplespanspan-idexamplespanexample"></a><span data-ttu-id="dcfab-108"><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Beispiel</span><span class="sxs-lookup"><span data-stu-id="dcfab-108"><span id="Example"></span><span id="example"></span><span id="EXAMPLE"></span>Example</span></span>
 
 
-<span data-ttu-id="824ad-109">Die folgende Abbildungzeigt eine gerenderte Punkteliste.</span><span class="sxs-lookup"><span data-stu-id="824ad-109">The following illustration depicts a rendered point list.</span></span>
+<span data-ttu-id="dcfab-109">Die folgende Abbildungzeigt eine gerenderte Punkteliste.</span><span class="sxs-lookup"><span data-stu-id="dcfab-109">The following illustration depicts a rendered point list.</span></span>
 
 ![Abbildungeiner Punkteliste](images/pointlst.png)
 
-<span data-ttu-id="824ad-111">Die Anwendung kann Materialien und Texturen auf eine Punkteliste anwenden.</span><span class="sxs-lookup"><span data-stu-id="824ad-111">Your application can apply materials and textures to a point list.</span></span> <span data-ttu-id="824ad-112">Die Farben im Material oder der Textur werden nur bei dem gezeichneten Punkt angezeigt, nicht an anderen Stellen zwischen den Punkten.</span><span class="sxs-lookup"><span data-stu-id="824ad-112">The colors in the material or texture appear only at the points drawn, and not anywhere between the points.</span></span>
+<span data-ttu-id="dcfab-111">Die Anwendung kann Materialien und Texturen auf eine Punkteliste anwenden.</span><span class="sxs-lookup"><span data-stu-id="dcfab-111">Your application can apply materials and textures to a point list.</span></span> <span data-ttu-id="dcfab-112">Die Farben im Material oder der Textur werden nur bei dem gezeichneten Punkt angezeigt, nicht an anderen Stellen zwischen den Punkten.</span><span class="sxs-lookup"><span data-stu-id="dcfab-112">The colors in the material or texture appear only at the points drawn, and not anywhere between the points.</span></span>
 
-<span data-ttu-id="824ad-113">Der folgende Code zeigt, wie Scheitelpunkte für diese Punkteliste erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="824ad-113">The following code shows how to create vertices for this point list.</span></span>
+<span data-ttu-id="dcfab-113">Der folgende Code zeigt, wie Scheitelpunkte für diese Punkteliste erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="dcfab-113">The following code shows how to create vertices for this point list.</span></span>
 
 ```
 struct CUSTOMVERTEX
@@ -51,7 +49,7 @@ CUSTOMVERTEX Vertices[] =
 };
 ```
 
-<span data-ttu-id="824ad-114">Im folgenden Codebeispiel wird veranschaulicht, wie Sie diese Punkteliste in Direct3D rendern.</span><span class="sxs-lookup"><span data-stu-id="824ad-114">The code example below shows how to render this point list in Direct3D.</span></span>
+<span data-ttu-id="dcfab-114">Im folgenden Codebeispiel wird veranschaulicht, wie Sie diese Punkteliste in Direct3D rendern.</span><span class="sxs-lookup"><span data-stu-id="dcfab-114">The code example below shows how to render this point list in Direct3D.</span></span>
 
 ```
 //
@@ -61,14 +59,14 @@ CUSTOMVERTEX Vertices[] =
 d3dDevice->DrawPrimitive( D3DPT_POINTLIST, 0, 6 );
 ```
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="824ad-115"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="824ad-115"><span id="related-topics"></span>Related topics</span></span>
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="dcfab-115"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="dcfab-115"><span id="related-topics"></span>Related topics</span></span>
 
 
-[<span data-ttu-id="824ad-116">Grundtypen</span><span class="sxs-lookup"><span data-stu-id="824ad-116">Primitives</span></span>](primitives.md)
+[<span data-ttu-id="dcfab-116">Grundtypen</span><span class="sxs-lookup"><span data-stu-id="dcfab-116">Primitives</span></span>](primitives.md)
 
- 
+ 
 
- 
+ 
 
 
 

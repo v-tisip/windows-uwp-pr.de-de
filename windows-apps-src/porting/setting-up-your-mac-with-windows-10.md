@@ -1,51 +1,48 @@
 ---
-author: mcleblanc
-description: "Verwenden Sie Ihren aktuellen Mac-Computer zum Entwickeln von Apps für Windows."
-title: "Einrichten von Windows 10 auf Ihrem Mac"
+author: stevewhims
+description: Verwenden Sie Ihren aktuellen Mac-Computer zum Entwickeln von Apps für Windows.
+title: Einrichten von Windows10 auf Ihrem Mac
 ms.assetid: 6D520610-5DE0-476E-A792-AA57E002D309
-ms.author: markl
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-translationtype: Human Translation
-ms.sourcegitcommit: c6b64cff1bbebc8ba69bc6e03d34b69f85e798fc
-ms.openlocfilehash: c73a1d1695e3b8a2eee8f073a5d25586a24a9d24
-ms.lasthandoff: 02/07/2017
-
+ms.localizationpriority: medium
+ms.openlocfilehash: 661c324fbe7a80a6ff150da06536879a25c0c0c2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546325"
 ---
+# <a name="setting-up-your-mac-with-windows-10"></a><span data-ttu-id="fb3e4-104">Einrichten von Windows 10 auf Ihrem Mac</span><span class="sxs-lookup"><span data-stu-id="fb3e4-104">Setting up your Mac with Windows 10</span></span>
 
-# <a name="setting-up-your-mac-with-windows-10"></a>Einrichten von Windows 10 auf Ihrem Mac
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
+<span data-ttu-id="fb3e4-105">Verwenden Sie Ihren aktuellen Mac-Computer zum Entwickeln von Apps für Windows.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-105">Use your current Mac computer to develop apps for Windows.</span></span>
 
-Verwenden Sie Ihren aktuellen Mac-Computer zum Entwickeln von Apps für Windows.
+## <a name="run-windows-on-your-mac-and-use-visual-studio"></a><span data-ttu-id="fb3e4-106">Ausführen von Windows auf einem Mac und Verwenden von Visual Studio</span><span class="sxs-lookup"><span data-stu-id="fb3e4-106">Run Windows on your Mac and use Visual Studio</span></span>
 
-## <a name="run-windows-on-your-mac-and-use-visual-studio"></a>Ausführen von Windows auf einem Mac und Verwenden von Visual Studio
+<span data-ttu-id="fb3e4-107">Sie sind bereit zum Entwickeln universeller Windows-Apps, haben aber keinen PC zur Hand?</span><span class="sxs-lookup"><span data-stu-id="fb3e4-107">Are you ready to start developing Universal Windows apps, but you don't have a PC handy?</span></span> <span data-ttu-id="fb3e4-108">Das ist kein Problem – Sie können auch Ihren Mac verwenden!</span><span class="sxs-lookup"><span data-stu-id="fb3e4-108">That's okay — you can use your Mac!</span></span> <span data-ttu-id="fb3e4-109">Mit beliebter Drittanbieterlösungen wie Apple Boot Camp, Oracle VirtualBox, VMware Fusion und Parallels Desktop können Sie Windows 10 und Microsoft Visual Studio auf Ihrem Apple-Computer installieren.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-109">With popular third-party solutions like Apple Boot Camp, Oracle VirtualBox, VMware Fusion, and Parallels Desktop, you can install Windows10 and Microsoft Visual Studio on your Apple computer.</span></span>
 
-Sie sind bereit zum Entwickeln universeller Windows-Apps, haben aber keinen PC zur Hand? Das ist kein Problem – Sie können auch Ihren Mac verwenden! Installieren Sie Windows 10 und Microsoft Visual Studio mithilfe beliebter Drittanbieterlösungen wie Apple Boot Camp, Oracle VirtualBox, VMware Fusion und Parallels Desktop auf Ihrem Apple-Computer.
+<span data-ttu-id="fb3e4-110">**Hinweis:** Sie benötigen ein startbares Windows 10-Image auf einem Datenträger oder USB-Flashlaufwerk.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-110">**Note**You will need a Windows10 bootable image on disk or USB flash drive.</span></span> <span data-ttu-id="fb3e4-111">Wenn Sie MSDN-Abonnent sind, können Sie das Image aus dem Center mit Downloads für MSDN-Abonnenten herunterladen.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-111">If you are a MSDN Subscriber, you can download the install image from the MSDN Subscriber Downloads center.</span></span> <span data-ttu-id="fb3e4-112">Wenn Sie ein Abonnent sind, kann das Installationsprogramm aus dem [Microsoft Store](http://apps.microsoft.com/windows/app)erworben werden.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-112">If you aren't a subscriber, the installer can be purchased from the [Microsoft Store](http://apps.microsoft.com/windows/app).</span></span> <span data-ttu-id="fb3e4-113">Sie können es auch [hier](http://go.microsoft.com/fwlink/?LinkId=623906) herunterladen. Das ist hilfreich, wenn Sie Windows bereits verwenden und ein Upgrade ausführen möchten.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-113">You can also download it from [this location](http://go.microsoft.com/fwlink/?LinkId=623906), which is useful if you are already running Windows and wish to upgrade.</span></span>
 
-**Hinweis**: Sie benötigen ein startbares Windows 10-Image auf der Festplatte oder auf einem USB-Flashlaufwerk. Wenn Sie MSDN-Abonnent sind, können Sie das Image aus dem Center mit Downloads für MSDN-Abonnenten herunterladen. Wenn Sie ein Abonnent sind, kann das Installationsprogramm im [Windows Store](http://apps.microsoft.com/windows/app) erworben werden. Sie können es auch [hier](http://go.microsoft.com/fwlink/?LinkId=623906) herunterladen. Das ist hilfreich, wenn Sie Windows bereits verwenden und ein Upgrade ausführen möchten.
+<span data-ttu-id="fb3e4-114">Sobald Sie Windows ausgeführt haben, können Sie anschließend installieren Sie die neueste Version von Visual Studio aus [entwicklerdownloads für Windows 10](https://developer.microsoft.com/en-us/windows/downloads) und mit dem Schreiben von apps beginnen!</span><span class="sxs-lookup"><span data-stu-id="fb3e4-114">Once you have Windows running, you can then install the latest release of Visual Studio from [Developer downloads for Windows10](https://developer.microsoft.com/en-us/windows/downloads) and start writing apps!</span></span>
 
-Sobald Windows ausgeführt wird, können Sie Visual Studio 2015 unter [Entwicklerdownloads für Windows 10](https://developer.microsoft.com/en-us/windows/downloads) herunterladen und mit dem Schreiben von Apps beginnen!
+<span data-ttu-id="fb3e4-115">**Hinweis:** Wenn Sie die Visual Studio-Geräteemulatoren verwenden möchten, **müssen** Sie eine 64-Bit (x 64)-Version von Windows 10 Pro oder höher installieren.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-115">**Note**If you plan to use the Visual Studio device emulators, you **must** install a 64-bit (x64) version of Windows10 Pro or better.</span></span> <span data-ttu-id="fb3e4-116">Leider unterstützen einige ältere Macs 64-Bit-Versionen von Windows nicht.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-116">Unfortunately, some older Macs cannot run 64-bit Windows.</span></span> <span data-ttu-id="fb3e4-117">Auf dieser[Supportseite von Apple](http://go.microsoft.com/fwlink/p/?LinkID=397959)können Sie nachsehen, ob Ihre Hardware kompatibel ist.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-117">Please check with Apple if your hardware is compatible on this[Apple support page](http://go.microsoft.com/fwlink/p/?LinkID=397959).</span></span>
 
-**Hinweis**: Wenn Sie die Visual Studio-Geräteemulatoren verwenden möchten, **müssen** Sie eine 64-Bit (x64)-Version von Windows 10 Pro oder höher installieren. Leider unterstützen einige ältere Macs 64-Bit-Versionen von Windows nicht. Auf dieser[Supportseite von Apple](http://go.microsoft.com/fwlink/p/?LinkID=397959)können Sie nachsehen, ob Ihre Hardware kompatibel ist.
+## <a name="apple-boot-camp"></a><span data-ttu-id="fb3e4-118">Apple Boot Camp</span><span class="sxs-lookup"><span data-stu-id="fb3e4-118">Apple Boot Camp</span></span>
 
-## <a name="apple-boot-camp"></a>Apple Boot Camp
+<span data-ttu-id="fb3e4-119">Die app Boot Camp-Assistent ist auf jedem neueren Mac vorinstalliert und führt Sie durch den Prozess zum Installieren von Windows 10.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-119">The Boot Camp Assistant app is pre-installed on every recent Mac, and launching it will walk you through the process of installing Windows10.</span></span> <span data-ttu-id="fb3e4-120">Sie benötigen nur eine Kopie von Windows (aus den oben aufgeführten Quellen) und mindestens 30GB freien Speicherplatz.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-120">All you need is a copy of Windows (from the sources listed above) and at least 30 Gb of free disk space.</span></span> <span data-ttu-id="fb3e4-121">Nach der Installation können Sie mit MacOSX oder Windows10 starten.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-121">Once installed, you can choose to boot into Mac OSX or Windows 10.</span></span> <span data-ttu-id="fb3e4-122">Weitere Informationen finden Sie auf der [Seite mit Anweisungen zu Boot Camp](http://go.microsoft.com/fwlink/?LinkId=623912) von Apple.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-122">For more info, see Apple's [Boot Camp instructions page](http://go.microsoft.com/fwlink/?LinkId=623912).</span></span>
 
-Die App Boot Camp-Assistent ist auf jedem neueren Mac vorinstalliert und führt Sie durch die Installation von Windows 10. Sie benötigen nur eine Kopie von Windows (aus den oben aufgeführten Quellen) und mindestens 30 GB freien Speicherplatz. Nach der Installation können Sie mit Mac OSX oder Windows 10 starten. Weitere Informationen finden Sie auf der [Seite mit Anweisungen zu Boot Camp](http://go.microsoft.com/fwlink/?LinkId=623912) von Apple.
+## <a name="parallels-desktop"></a><span data-ttu-id="fb3e4-123">Parallels Desktop</span><span class="sxs-lookup"><span data-stu-id="fb3e4-123">Parallels Desktop</span></span>
 
-## <a name="parallels-desktop"></a>Parallels Desktop
+<span data-ttu-id="fb3e4-124">Mit Parallels Desktop 11 können Sie Windows-Apps (einschließlich Visual Studio und Cortana) nebeneinander mit vorhandenen Mac-Anwendungen ausführen.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-124">Using Parallels Desktop 11, you can run Windows apps side-by-side with existing Mac applications, including Visual Studio and Cortana.</span></span> <span data-ttu-id="fb3e4-125">Eine Pro-Version mit zusätzlichen Features für Entwickler, einschließlich verbesserten Debuggingfunktionen, und Unterstützung für Docker und Jenkins.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-125">A pro version is available that includes extra features for developers, including improved debugging, and support for Docker and Jenkins.</span></span> <span data-ttu-id="fb3e4-126">Weitere Informationen und eine kostenlose Testversion finden Sie unter [Parallels Desktop](http://go.microsoft.com/fwlink/p/?LinkId=281827).</span><span class="sxs-lookup"><span data-stu-id="fb3e4-126">For more info, and a free trial version, see [Parallels Desktop](http://go.microsoft.com/fwlink/p/?LinkId=281827).</span></span>
 
-Mit Parallels Desktop 11 können Sie Windows-Apps (einschließlich Visual Studio und Cortana) nebeneinander mit vorhandenen Mac-Anwendungen ausführen. Eine Pro-Version mit zusätzlichen Features für Entwickler, einschließlich verbesserten Debuggingfunktionen, und Unterstützung für Docker und Jenkins. Weitere Informationen und eine kostenlose Testversion finden Sie unter [Parallels Desktop](http://go.microsoft.com/fwlink/p/?LinkId=281827).
+## <a name="vmware-fusion"></a><span data-ttu-id="fb3e4-127">VMWare Fusion</span><span class="sxs-lookup"><span data-stu-id="fb3e4-127">VMWare Fusion</span></span>
 
-## <a name="vmware-fusion"></a>VMWare Fusion
+<span data-ttu-id="fb3e4-128">Mit Fusion 8 von VMWare können Sie Visual Studio direkt auf Ihrem Mac-Desktop ausführen.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-128">Fusion 8 from VMWare will let you run Visual Studio right on your Mac desktop.</span></span> <span data-ttu-id="fb3e4-129">Hiervon steht eine Pro-Version für Entwickler mit erweiterten Features wie etwa vSphere-Unterstützung zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-129">A pro version is available to offer developers some more advanced features such as vSphere support.</span></span> <span data-ttu-id="fb3e4-130">Weitere Informationen und eine kostenlose Testversion finden Sie unter [VMware Fusion](http://go.microsoft.com/fwlink/p/?LinkId=281826).</span><span class="sxs-lookup"><span data-stu-id="fb3e4-130">For more info, and a free trial version, see [VMware Fusion](http://go.microsoft.com/fwlink/p/?LinkId=281826).</span></span>
 
-Mit Fusion 8 von VMWare können Sie Visual Studio direkt auf Ihrem Mac-Desktop ausführen. Hiervon steht eine Pro-Version für Entwickler mit erweiterten Features wie etwa vSphere-Unterstützung zur Verfügung. Weitere Informationen und eine kostenlose Testversion finden Sie unter [VMware Fusion](http://go.microsoft.com/fwlink/p/?LinkId=281826).
+## <a name="oracle-virtualbox"></a><span data-ttu-id="fb3e4-131">Oracle VirtualBox</span><span class="sxs-lookup"><span data-stu-id="fb3e4-131">Oracle VirtualBox</span></span>
 
-## <a name="oracle-virtualbox"></a>Oracle VirtualBox
-
-VirtualBox ist eine kostenlose Anwendung für die Ausführung virtueller Computer auf Ihrem Computer, die die Ausführung von Windows auf einem Mac unterstützt. Dies ist eine einfache Option zu einem ansprechenden Preis. Weitere Informationen finden Sie unter [VirtualBox](http://go.microsoft.com/fwlink/p/?LinkId=280599).
-
+<span data-ttu-id="fb3e4-132">VirtualBox ist eine kostenlose Anwendung für die Ausführung virtueller Computer auf Ihrem Computer, die die Ausführung von Windows auf einem Mac unterstützt.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-132">VirtualBox is a free application for running virtual machines on your computer, and it supports running Windows on Mac.</span></span> <span data-ttu-id="fb3e4-133">Dies ist eine einfache Option zu einem ansprechenden Preis.</span><span class="sxs-lookup"><span data-stu-id="fb3e4-133">It is a no-frills option, but the price is appealing.</span></span> <span data-ttu-id="fb3e4-134">Weitere Informationen finden Sie unter [VirtualBox](http://go.microsoft.com/fwlink/p/?LinkId=280599).</span><span class="sxs-lookup"><span data-stu-id="fb3e4-134">For more info, see [VirtualBox](http://go.microsoft.com/fwlink/p/?LinkId=280599).</span></span>
 

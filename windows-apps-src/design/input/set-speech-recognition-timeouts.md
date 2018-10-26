@@ -9,35 +9,33 @@ keywords: Sprache, Stimme, Spracherkennung, natürliche Sprache, diktieren, Eing
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c82e0d77804e293176c53a9d8079e32054f9cca6
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 00923b4448d96943cf00eade46c39c42e87c4f96
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652749"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549567"
 ---
-# <a name="set-speech-recognition-timeouts"></a><span data-ttu-id="877b3-103">Festlegen von Timeouts für die Spracherkennung</span><span class="sxs-lookup"><span data-stu-id="877b3-103">Set speech recognition timeouts</span></span>
+# <a name="set-speech-recognition-timeouts"></a><span data-ttu-id="3e46c-103">Festlegen von Timeouts für die Spracherkennung</span><span class="sxs-lookup"><span data-stu-id="3e46c-103">Set speech recognition timeouts</span></span>
 
 
-<span data-ttu-id="877b3-104">Legen Sie fest, wie lange eine Spracherkennung Stille oder nicht erkennbare Geräusche (Störgeräusche) ignoriert und weiterhin auf Spracheingabe wartet.</span><span class="sxs-lookup"><span data-stu-id="877b3-104">Set how long a speech recognizer ignores silence or unrecognizable sounds (babble) and continues listening for speech input.</span></span>
+<span data-ttu-id="3e46c-104">Legen Sie fest, wie lange eine Spracherkennung Stille oder nicht erkennbare Geräusche (Störgeräusche) ignoriert und weiterhin auf Spracheingabe wartet.</span><span class="sxs-lookup"><span data-stu-id="3e46c-104">Set how long a speech recognizer ignores silence or unrecognizable sounds (babble) and continues listening for speech input.</span></span>
 
-> <span data-ttu-id="877b3-105">**Wichtige APIs**: [**Timeouts**](https://msdn.microsoft.com/library/windows/apps/dn653253), [**SpeechRecognizerTimeouts**](https://msdn.microsoft.com/library/windows/apps/dn653230)</span><span class="sxs-lookup"><span data-stu-id="877b3-105">**Important APIs**: [**Timeouts**](https://msdn.microsoft.com/library/windows/apps/dn653253), [**SpeechRecognizerTimeouts**](https://msdn.microsoft.com/library/windows/apps/dn653230)</span></span>
+> <span data-ttu-id="3e46c-105">**Wichtige APIs**: [**Timeouts**](https://msdn.microsoft.com/library/windows/apps/dn653253), [**SpeechRecognizerTimeouts**](https://msdn.microsoft.com/library/windows/apps/dn653230)</span><span class="sxs-lookup"><span data-stu-id="3e46c-105">**Important APIs**: [**Timeouts**](https://msdn.microsoft.com/library/windows/apps/dn653253), [**SpeechRecognizerTimeouts**](https://msdn.microsoft.com/library/windows/apps/dn653230)</span></span>
 
-## <a name="set-a-timeout"></a><span data-ttu-id="877b3-106">Festlegen eines Timeouts</span><span class="sxs-lookup"><span data-stu-id="877b3-106">Set a timeout</span></span>
+## <a name="set-a-timeout"></a><span data-ttu-id="3e46c-106">Festlegen eines Timeouts</span><span class="sxs-lookup"><span data-stu-id="3e46c-106">Set a timeout</span></span>
 
 
-<span data-ttu-id="877b3-107">Hier geben wir verschiedene [**Timeouts**](https://msdn.microsoft.com/library/windows/apps/dn653253)-Werte an:</span><span class="sxs-lookup"><span data-stu-id="877b3-107">Here, we specify various [**Timeouts**](https://msdn.microsoft.com/library/windows/apps/dn653253) values:</span></span>
+<span data-ttu-id="3e46c-107">Hier geben wir verschiedene [**Timeouts**](https://msdn.microsoft.com/library/windows/apps/dn653253)-Werte an:</span><span class="sxs-lookup"><span data-stu-id="3e46c-107">Here, we specify various [**Timeouts**](https://msdn.microsoft.com/library/windows/apps/dn653253) values:</span></span>
 
--   <span data-ttu-id="877b3-108">InitialSilenceTimeout – Die Zeitspanne, für die ein Spracherkennungsmodul Stille erkennt (vor Generierung etwaiger Erkennungsergebnisse) und davon ausgeht, dass keine Spracheingabe erfolgen wird.</span><span class="sxs-lookup"><span data-stu-id="877b3-108">InitialSilenceTimeout - The length of time that a SpeechRecognizer detects silence (before any recognition results have been generated) and assumes speech input is not forthcoming.</span></span>
--   <span data-ttu-id="877b3-109">BabbleTimeout – Die Zeitspanne, für die ein Spracherkennungsmodul weiterhin auf erkennbare Geräusche (Störgeräusche) wartet, bevor davon ausgegangen wird, dass die Spracheingabe beendet ist, und der Erkennungsvorgangs beendet wird.</span><span class="sxs-lookup"><span data-stu-id="877b3-109">BabbleTimeout - The length of time that a SpeechRecognizer continues to listen to unrecognizable sounds (babble) before it assumes speech input has ended and finalizes the recognition operation.</span></span>
--   <span data-ttu-id="877b3-110">EndSilenceTimeout – Die Zeitspanne, für die das Spracherkennungsmodul Stille erkennt (nach Generierung von Erkennungsergebnissen) und davon ausgeht, dass die Spracheingabe beendet ist.</span><span class="sxs-lookup"><span data-stu-id="877b3-110">EndSilenceTimeout - The length of time that a SpeechRecognizer detects silence (after recognition results have been generated) and assumes speech input has ended.</span></span>
+-   <span data-ttu-id="3e46c-108">InitialSilenceTimeout – Die Zeitspanne, für die ein Spracherkennungsmodul Stille erkennt (vor Generierung etwaiger Erkennungsergebnisse) und davon ausgeht, dass keine Spracheingabe erfolgen wird.</span><span class="sxs-lookup"><span data-stu-id="3e46c-108">InitialSilenceTimeout - The length of time that a SpeechRecognizer detects silence (before any recognition results have been generated) and assumes speech input is not forthcoming.</span></span>
+-   <span data-ttu-id="3e46c-109">BabbleTimeout – Die Zeitspanne, für die ein Spracherkennungsmodul weiterhin auf erkennbare Geräusche (Störgeräusche) wartet, bevor davon ausgegangen wird, dass die Spracheingabe beendet ist, und der Erkennungsvorgangs beendet wird.</span><span class="sxs-lookup"><span data-stu-id="3e46c-109">BabbleTimeout - The length of time that a SpeechRecognizer continues to listen to unrecognizable sounds (babble) before it assumes speech input has ended and finalizes the recognition operation.</span></span>
+-   <span data-ttu-id="3e46c-110">EndSilenceTimeout – Die Zeitspanne, für die das Spracherkennungsmodul Stille erkennt (nach Generierung von Erkennungsergebnissen) und davon ausgeht, dass die Spracheingabe beendet ist.</span><span class="sxs-lookup"><span data-stu-id="3e46c-110">EndSilenceTimeout - The length of time that a SpeechRecognizer detects silence (after recognition results have been generated) and assumes speech input has ended.</span></span>
 
-<span data-ttu-id="877b3-111">**Hinweis**: Timeouts können pro Erkennungsmodul festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="877b3-111">**Note**  Timeouts can be set on a per-recognizer basis.</span></span>
+<span data-ttu-id="3e46c-111">**Hinweis:** Timeouts für eine pro Erkennungsmodul festgelegt werden kann.</span><span class="sxs-lookup"><span data-stu-id="3e46c-111">**Note**Timeouts can be set on a per-recognizer basis.</span></span>
 
- 
+ 
 
 ```CSharp
 // Set timeout settings.
@@ -46,16 +44,16 @@ recognizer.Timeouts.BabbleTimeout = TimeSpan.FromSeconds(4.0);
 recognizer.Timeouts.EndSilenceTimeout = TimeSpan.FromSeconds(1.2);
 ```
 
-## <a name="related-articles"></a><span data-ttu-id="877b3-112">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="877b3-112">Related articles</span></span>
+## <a name="related-articles"></a><span data-ttu-id="3e46c-112">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="3e46c-112">Related articles</span></span>
 
 
-* <span data-ttu-id="877b3-113">[Interaktionen mit der Spracherkennung](speech-interactions.md)
-**Beispiele**</span><span class="sxs-lookup"><span data-stu-id="877b3-113">[Speech interactions](speech-interactions.md)
+* <span data-ttu-id="3e46c-113">[Interaktionen mit der Spracherkennung](speech-interactions.md)
+**Beispiele**</span><span class="sxs-lookup"><span data-stu-id="3e46c-113">[Speech interactions](speech-interactions.md)
 **Samples**</span></span>
-* [<span data-ttu-id="877b3-114">Beispiel zu Spracherkennung und Sprachsynthese</span><span class="sxs-lookup"><span data-stu-id="877b3-114">Speech recognition and speech synthesis sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=619897)
- 
+* [<span data-ttu-id="3e46c-114">Beispiel zu Spracherkennung und Sprachsynthese</span><span class="sxs-lookup"><span data-stu-id="3e46c-114">Speech recognition and speech synthesis sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=619897)
+ 
 
- 
+ 
 
 
 

@@ -6,16 +6,14 @@ title: Abrufen des Status einer Add-On-Übermittlung
 ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-On-Übermittlung, Status
 ms.localizationpriority: medium
-ms.openlocfilehash: 07c1dd89ce31ad70e5ee3b79c09caf36a89ad926
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 0a656d06c2be720e4231ccf4ee0e5626466b5fd8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5514398"
+ms.locfileid: "5547226"
 ---
 # <a name="get-the-status-of-an-add-on-submission"></a><span data-ttu-id="c1a84-104">Abrufen des Status einer Add-On-Übermittlung</span><span class="sxs-lookup"><span data-stu-id="c1a84-104">Get the status of an add-on submission</span></span>
 

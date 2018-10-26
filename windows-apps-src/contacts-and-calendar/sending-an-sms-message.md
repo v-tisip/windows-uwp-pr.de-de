@@ -7,25 +7,23 @@ keywords: Kontakte, SMS, Senden
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-ms.openlocfilehash: e5c3678e6c12a65b6821d2fc2a54e0710f7dcef3
-ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.localizationpriority: medium
+ms.openlocfilehash: 06d84646685c6944ab0e816b42cf6fb2125f8a57
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2017
-ms.locfileid: "665360"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545565"
 ---
-# <a name="send-an-sms-message"></a><span data-ttu-id="3954c-106">Senden einer SMS</span><span class="sxs-lookup"><span data-stu-id="3954c-106">Send an SMS message</span></span>
+# <a name="send-an-sms-message"></a><span data-ttu-id="ea4ec-106">Senden einer SMS</span><span class="sxs-lookup"><span data-stu-id="ea4ec-106">Send an SMS message</span></span>
 
-<span data-ttu-id="3954c-107">\[ Aktualisiert für UWP-Apps unter Windows10.</span><span class="sxs-lookup"><span data-stu-id="3954c-107">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="3954c-108">Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="3954c-108">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
+<span data-ttu-id="ea4ec-107">In diesem Thema erfahren Sie, wie Sie das Dialogfeld zum Verfassen einer SMS starten, damit Benutzer eine SMS senden können.</span><span class="sxs-lookup"><span data-stu-id="ea4ec-107">This topic shows you how to launch the compose SMS dialog to allow the user to send an SMS message.</span></span> <span data-ttu-id="ea4ec-108">Sie können die Felder der SMS vor dem Anzeigen des Dialogfelds mit Daten füllen.</span><span class="sxs-lookup"><span data-stu-id="ea4ec-108">You can pre-populate the fields of the SMS with data before showing the dialog.</span></span> <span data-ttu-id="ea4ec-109">Die Nachricht wird erst gesendet, wenn Benutzer auf die Schaltfläche „Senden“ tippen.</span><span class="sxs-lookup"><span data-stu-id="ea4ec-109">The message will not be sent until the user taps the send button.</span></span>
 
+<span data-ttu-id="ea4ec-110">Um diesen Code jeweils aufzurufen, deklarieren Sie die **Chat**, **SmsSend**und **ChatSystem** Funktionen im Paketmanifest.</span><span class="sxs-lookup"><span data-stu-id="ea4ec-110">To call this code, declare the **chat**, **smsSend**, and **chatSystem** capabilities in your package manifest.</span></span> <span data-ttu-id="ea4ec-111">Hierbei handelt es sich um [eingeschränkte Funktionen](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#special-and-restricted-capabilities) , aber Sie können diese in Ihrer app verwenden.</span><span class="sxs-lookup"><span data-stu-id="ea4ec-111">These are [restricted capabilities](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#special-and-restricted-capabilities) but you can use them in your app.</span></span> <span data-ttu-id="ea4ec-112">Sie benötigen die konzeptgenehmigung nur dann, wenn Sie beabsichtigen, Ihre app im Store veröffentlichen.</span><span class="sxs-lookup"><span data-stu-id="ea4ec-112">You need approval only if you intend to publish your app to the Store.</span></span> <span data-ttu-id="ea4ec-113">Finden Sie unter [Kontotypen, Standorte und Gebühren](https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees).</span><span class="sxs-lookup"><span data-stu-id="ea4ec-113">See [Account types, locations, and fees](https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees).</span></span>
 
-<span data-ttu-id="3954c-109">In diesem Thema erfahren Sie, wie Sie das Dialogfeld zum Verfassen einer SMS starten, damit Benutzer eine SMS senden können.</span><span class="sxs-lookup"><span data-stu-id="3954c-109">This topic shows you how to launch the compose SMS dialog to allow the user to send an SMS message.</span></span> <span data-ttu-id="3954c-110">Sie können die Felder der SMS vor dem Anzeigen des Dialogfelds mit Daten füllen.</span><span class="sxs-lookup"><span data-stu-id="3954c-110">You can pre-populate the fields of the SMS with data before showing the dialog.</span></span> <span data-ttu-id="3954c-111">Die Nachricht wird erst gesendet, wenn Benutzer auf die Schaltfläche „Senden“ tippen.</span><span class="sxs-lookup"><span data-stu-id="3954c-111">The message will not be sent until the user taps the send button.</span></span>
+## <a name="launch-the-compose-sms-dialog"></a><span data-ttu-id="ea4ec-114">Starten des Dialogfelds zum Verfassen einer SMS</span><span class="sxs-lookup"><span data-stu-id="ea4ec-114">Launch the compose SMS dialog</span></span>
 
-## <a name="launch-the-compose-sms-dialog"></a><span data-ttu-id="3954c-112">Starten des Dialogfelds zum Verfassen einer SMS</span><span class="sxs-lookup"><span data-stu-id="3954c-112">Launch the compose SMS dialog</span></span>
-
-<span data-ttu-id="3954c-113">Erstellen Sie ein neues [**ChatMessage**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.chat.chatmessage)-Objekt, und legen Sie die Daten fest, die im Dialogfeld zum Verfassen einer E-Mail bereits vorhanden sein sollen.</span><span class="sxs-lookup"><span data-stu-id="3954c-113">Create a new [**ChatMessage**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.chat.chatmessage) object and set the data that you want to be pre-populated in the compose email dialog.</span></span> <span data-ttu-id="3954c-114">Rufen Sie [**ShowComposeSmsMessageAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.chat.chatmessagemanager.showcomposesmsmessageasync) auf, um das Dialogfeld anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="3954c-114">Call [**ShowComposeSmsMessageAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.chat.chatmessagemanager.showcomposesmsmessageasync) to show the dialog.</span></span>
+<span data-ttu-id="ea4ec-115">Erstellen Sie ein neues [**ChatMessage**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.chat.chatmessage)-Objekt, und legen Sie die Daten fest, die im Dialogfeld zum Verfassen einer E-Mail bereits vorhanden sein sollen.</span><span class="sxs-lookup"><span data-stu-id="ea4ec-115">Create a new [**ChatMessage**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.chat.chatmessage) object and set the data that you want to be pre-populated in the compose email dialog.</span></span> <span data-ttu-id="ea4ec-116">Rufen Sie [**ShowComposeSmsMessageAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.chat.chatmessagemanager.showcomposesmsmessageasync) auf, um das Dialogfeld anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="ea4ec-116">Call [**ShowComposeSmsMessageAsync**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.chat.chatmessagemanager.showcomposesmsmessageasync) to show the dialog.</span></span>
 
 ```cs
 private async void ComposeSms(Windows.ApplicationModel.Contacts.Contact recipient,
@@ -56,10 +54,19 @@ private async void ComposeSms(Windows.ApplicationModel.Contacts.Contact recipien
 }
 ```
 
-## <a name="summary-and-next-steps"></a><span data-ttu-id="3954c-115">Zusammenfassung und nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="3954c-115">Summary and next steps</span></span>
+<span data-ttu-id="ea4ec-117">Mit dem folgenden Code können Sie ermitteln, ob das Gerät, das Ihre app ausgeführt wird zum Senden von SMS-Nachrichten werden kann.</span><span class="sxs-lookup"><span data-stu-id="ea4ec-117">You can use the following code to determine whether the device that is running your app is able to send SMS messages.</span></span>
 
-<span data-ttu-id="3954c-116">In diesem Thema haben Sie erfahren, wie Sie das Dialogfeld zum Verfassen einer SMS starten.</span><span class="sxs-lookup"><span data-stu-id="3954c-116">This topic has shown you how to launch the compose SMS dialog.</span></span> <span data-ttu-id="3954c-117">Informationen zum Auswählen von Kontakten als SMS-Empfänger finden Sie unter [Auswählen von Kontakten](selecting-contacts.md).</span><span class="sxs-lookup"><span data-stu-id="3954c-117">For information on selecting contacts to use as recipients for an SMS message, see [Select contacts](selecting-contacts.md).</span></span> <span data-ttu-id="3954c-118">Laden Sie die [Beispiele für universelle Windows-Apps](http://go.microsoft.com/fwlink/p/?linkid=619979) von GitHub herunter, um sich weitere Beispiele zum Senden und Empfangen von SMS-Nachrichten unter Verwendung einer Hintergrundaufgabe anzusehen.</span><span class="sxs-lookup"><span data-stu-id="3954c-118">Download the [Universal Windows app samples](http://go.microsoft.com/fwlink/p/?linkid=619979) from GitHub to see more examples of how to send and receive SMS messages by using a background task.</span></span>
+```csharp
+if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.ApplicationModel.Chat"))
+{
+   // Call code here.
+}
+```
 
-## <a name="related-topics"></a><span data-ttu-id="3954c-119">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="3954c-119">Related topics</span></span>
+## <a name="summary-and-next-steps"></a><span data-ttu-id="ea4ec-118">Zusammenfassung und nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="ea4ec-118">Summary and next steps</span></span>
 
-* [<span data-ttu-id="3954c-120">Auswählen von Kontakten</span><span class="sxs-lookup"><span data-stu-id="3954c-120">Select contacts</span></span>](selecting-contacts.md)
+<span data-ttu-id="ea4ec-119">In diesem Thema haben Sie erfahren, wie Sie das Dialogfeld zum Verfassen einer SMS starten.</span><span class="sxs-lookup"><span data-stu-id="ea4ec-119">This topic has shown you how to launch the compose SMS dialog.</span></span> <span data-ttu-id="ea4ec-120">Informationen zum Auswählen von Kontakten als SMS-Empfänger finden Sie unter [Auswählen von Kontakten](selecting-contacts.md).</span><span class="sxs-lookup"><span data-stu-id="ea4ec-120">For information on selecting contacts to use as recipients for an SMS message, see [Select contacts](selecting-contacts.md).</span></span> <span data-ttu-id="ea4ec-121">Laden Sie die [Beispiele für universelle Windows-Apps](http://go.microsoft.com/fwlink/p/?linkid=619979) von GitHub herunter, um sich weitere Beispiele zum Senden und Empfangen von SMS-Nachrichten unter Verwendung einer Hintergrundaufgabe anzusehen.</span><span class="sxs-lookup"><span data-stu-id="ea4ec-121">Download the [Universal Windows app samples](http://go.microsoft.com/fwlink/p/?linkid=619979) from GitHub to see more examples of how to send and receive SMS messages by using a background task.</span></span>
+
+## <a name="related-topics"></a><span data-ttu-id="ea4ec-122">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="ea4ec-122">Related topics</span></span>
+
+* [<span data-ttu-id="ea4ec-123">Auswählen von Kontakten</span><span class="sxs-lookup"><span data-stu-id="ea4ec-123">Select contacts</span></span>](selecting-contacts.md)

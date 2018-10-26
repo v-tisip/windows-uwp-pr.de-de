@@ -8,18 +8,16 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/02/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 57856872fc664670756c310410223acaf9708bc5
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 4d5f1ded66ce9d41c386fb55ba8a4e609450d20d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5520935"
+ms.locfileid: "5543411"
 ---
 # <a name="icons-for-uwp-apps"></a><span data-ttu-id="4e5d5-103">Symbole für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="4e5d5-103">Icons for UWP apps</span></span>
 

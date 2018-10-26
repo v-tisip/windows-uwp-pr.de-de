@@ -6,19 +6,17 @@ template: detail.hbs
 ms.author: jimwalk
 ms.date: 10/25/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 31e940c87626a05ee6911d3ffda36ab8dfd3fad0
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 77050103bb78788a5c1868a41d315edd6832a5fe
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5519977"
+ms.locfileid: "5543235"
 ---
 # <a name="connected-animation-for-uwp-apps"></a><span data-ttu-id="ca756-104">Verbundene Animation für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="ca756-104">Connected animation for UWP apps</span></span>
 

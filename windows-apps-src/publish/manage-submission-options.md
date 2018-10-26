@@ -5,16 +5,14 @@ title: Verwalten der Übermittlungsoptionen
 ms.author: wdg-dev-content
 ms.date: 05/09/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Anhalten der Veröffentlichung, Veröffentlichungsdatum, Genehmigungsprozess für eingeschränkte Funktionen
 ms.localizationpriority: medium
-ms.openlocfilehash: 147f34c40cc5d2b612dcdd92edc0c76340cf58f7
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 51b816ece884f1464d0dbf039aef5d80e2ca7341
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5470480"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548444"
 ---
 # <a name="manage-submission-options"></a><span data-ttu-id="50c48-103">Verwalten der Übermittlungsoptionen</span><span class="sxs-lookup"><span data-stu-id="50c48-103">Manage submission options</span></span>
 

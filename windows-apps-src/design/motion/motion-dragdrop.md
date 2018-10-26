@@ -8,68 +8,66 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 803bdc34301ed05c5edd2d84c6de661e260869bb
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: d271d0b9c8e7ce73835457789aca3fa2cb5eda97
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652519"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546126"
 ---
-# <a name="drag-animations"></a><span data-ttu-id="4e372-103">Animationen für Drag & Drop-Vorgang</span><span class="sxs-lookup"><span data-stu-id="4e372-103">Drag animations</span></span>
+# <a name="drag-animations"></a><span data-ttu-id="10eee-103">Animationen für Drag & Drop-Vorgang</span><span class="sxs-lookup"><span data-stu-id="10eee-103">Drag animations</span></span>
 
 
 
 
-<span data-ttu-id="4e372-104">Verwenden Sie Drag & Drop-Animationen, wenn Benutzer Objekte verschieben, z. B. wenn sie ein Element innerhalb einer Liste verschieben oder ein Element auf einem anderen ablegen.</span><span class="sxs-lookup"><span data-stu-id="4e372-104">Use drag-and-drop animations when users move objects, such as moving an item within a list, or dropping an item on top of another.</span></span>
+<span data-ttu-id="10eee-104">Verwenden Sie Drag & Drop-Animationen, wenn Benutzer Objekte verschieben, z. B. wenn sie ein Element innerhalb einer Liste verschieben oder ein Element auf einem anderen ablegen.</span><span class="sxs-lookup"><span data-stu-id="10eee-104">Use drag-and-drop animations when users move objects, such as moving an item within a list, or dropping an item on top of another.</span></span>
 
-> <span data-ttu-id="4e372-105">**Wichtige APIs**: [**DragItemThemeAnimation class**](https://msdn.microsoft.com/library/windows/apps/br243174)</span><span class="sxs-lookup"><span data-stu-id="4e372-105">**Important APIs**: [**DragItemThemeAnimation class**](https://msdn.microsoft.com/library/windows/apps/br243174)</span></span>
-
-
-## <a name="dos-and-donts"></a><span data-ttu-id="4e372-106">Empfohlene und nicht empfohlene Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="4e372-106">Do's and don'ts</span></span>
+> <span data-ttu-id="10eee-105">**Wichtige APIs**: [**DragItemThemeAnimation class**](https://msdn.microsoft.com/library/windows/apps/br243174)</span><span class="sxs-lookup"><span data-stu-id="10eee-105">**Important APIs**: [**DragItemThemeAnimation class**](https://msdn.microsoft.com/library/windows/apps/br243174)</span></span>
 
 
-**<span data-ttu-id="4e372-107">Animation für das Starten des Ziehens</span><span class="sxs-lookup"><span data-stu-id="4e372-107">Drag start animation</span></span>**
-
--   <span data-ttu-id="4e372-108">Verwenden Sie die Animation für das Starten des Ziehens, wenn Benutzer beginnen, ein Objekt zu verschieben.</span><span class="sxs-lookup"><span data-stu-id="4e372-108">Use the drag start animation when the user begins to move an object.</span></span>
--   <span data-ttu-id="4e372-109">Nehmen Sie betroffene Objekte nur dann in die Animation auf, wenn andere Objekte vorhanden sind, die von dem Drag & Drop-Vorgang betroffen sein können.</span><span class="sxs-lookup"><span data-stu-id="4e372-109">Include affected objects in the animation if and only if there are other objects that can be affected by the drag-and-drop operation.</span></span>
--   <span data-ttu-id="4e372-110">Verwenden Sie die Animation für das Beenden des Ziehens, um eine mit der Animation für das Starten des Ziehens begonnene Animationssequenz abzuschließen.</span><span class="sxs-lookup"><span data-stu-id="4e372-110">Use the drag end animation to complete any animation sequence that began with the drag start animation.</span></span> <span data-ttu-id="4e372-111">Dadurch wird die Größenänderung des gezogenen Objekts, die durch die Animation für das Starten des Ziehens ausgelöst wurde, zurückgesetzt.</span><span class="sxs-lookup"><span data-stu-id="4e372-111">This reverses the size change in the dragged object that was caused by the drag start animation.</span></span>
-
-**<span data-ttu-id="4e372-112">Animation für das Beenden des Ziehens</span><span class="sxs-lookup"><span data-stu-id="4e372-112">Drag end animation</span></span>**
-
--   <span data-ttu-id="4e372-113">Verwenden Sie die Animation für das Beenden des Ziehens, wenn Benutzer ein gezogenes Objekt ablegen.</span><span class="sxs-lookup"><span data-stu-id="4e372-113">Use the drag end animation when the user drops a dragged object.</span></span>
--   <span data-ttu-id="4e372-114">Verwenden Sie die Animation für das Beenden des Ziehens zusammen mit Animationen für das Hinzufügen und Löschen bei Listen.</span><span class="sxs-lookup"><span data-stu-id="4e372-114">Use the drag end animation in combination with add and delete animations for lists.</span></span>
--   <span data-ttu-id="4e372-115">Nehmen Sie betroffene Objekte nur dann in die Animation für das Beenden des Ziehens auf, wenn Sie die gleichen Objekte in die Animation für das Starten des Ziehens aufgenommen haben.</span><span class="sxs-lookup"><span data-stu-id="4e372-115">Include affected objects in the drag end animation if and only if you included those same affected objects in the drag start animation.</span></span>
--   <span data-ttu-id="4e372-116">Verwenden Sie die Animation für das Beenden des Ziehens nicht, wenn Sie vorher nicht die Animation für das Starten des Ziehens verwendet haben.</span><span class="sxs-lookup"><span data-stu-id="4e372-116">Don't use the drag end animation if you have not first used the drag start animation.</span></span> <span data-ttu-id="4e372-117">Sie müssen beide Animationen verwenden, damit die Objekte nach Abschluss der Ziehsequenz wieder zu ihrer ursprünglichen Größe zurückkehren.</span><span class="sxs-lookup"><span data-stu-id="4e372-117">You need to use both animations to return objects to their original sizes after the drag sequence is complete.</span></span>
-
-**<span data-ttu-id="4e372-118">Animation für das Starten des Zwischenziehens</span><span class="sxs-lookup"><span data-stu-id="4e372-118">Drag between enter animation</span></span>**
-
--   <span data-ttu-id="4e372-119">Verwenden Sie die Animation für das Starten des Zwischenziehens, wenn Benutzer die Ziehquelle in einen Ablagebereich ziehen, in dem sie zwischen zwei anderen Objekten abgelegt werden kann.</span><span class="sxs-lookup"><span data-stu-id="4e372-119">Use the drag between enter animation when the user drags the drag source into a drop area where it can be dropped between two other objects.</span></span>
--   <span data-ttu-id="4e372-120">Wählen Sie einen angemessenen Zielbereich zum Ablegen aus.</span><span class="sxs-lookup"><span data-stu-id="4e372-120">Choose a reasonable drop target area.</span></span> <span data-ttu-id="4e372-121">Dieser Bereich sollte nicht so klein sein, dass es den Benutzern schwerfällt, die Ziehquelle zum Ablegen zu positionieren.</span><span class="sxs-lookup"><span data-stu-id="4e372-121">This area should not be so small that it is difficult for the user to position the drag source for the drop.</span></span>
--   <span data-ttu-id="4e372-122">Als Richtung für das Verschieben betroffener Objekte, um den Ablagebereich anzuzeigen, empfiehlt es sich, die Objekte direkt auseinanderzuziehen.</span><span class="sxs-lookup"><span data-stu-id="4e372-122">The recommended direction to move affected objects to show the drop area is directly apart from each other.</span></span> <span data-ttu-id="4e372-123">Ob es sich um eine vertikale oder horizontale Bewegung handelt, hängt davon ab, wie die betroffenen Objekte zueinander ausgerichtet sind.</span><span class="sxs-lookup"><span data-stu-id="4e372-123">Whether they move vertically or horizontally depends on the orientation of the affected objects to each other.</span></span>
--   <span data-ttu-id="4e372-124">Verwenden Sie die Animation für das Starten des Zwischenziehens nicht, wenn die Ziehquelle nicht in einem Bereich abgelegt werden kann.</span><span class="sxs-lookup"><span data-stu-id="4e372-124">Don't use the drag between enter animation if the drag source cannot be dropped in an area.</span></span> <span data-ttu-id="4e372-125">An der Animation für das Starten des Zwischenziehens erkennen Benutzer, dass die Ziehquelle zwischen den betroffenen Objekten abgelegt werden kann.</span><span class="sxs-lookup"><span data-stu-id="4e372-125">The drag between enter animation tells the user that the drag source can be dropped between the affected objects.</span></span>
-
-**<span data-ttu-id="4e372-126">Animation für das Beenden des Zwischenziehens</span><span class="sxs-lookup"><span data-stu-id="4e372-126">Drag between leave animation</span></span>**
-
--   <span data-ttu-id="4e372-127">Verwenden Sie die Animation für das Beenden des Zwischenziehens, wenn Benutzer ein Objekt von einem Bereich wegziehen, in dem es zwischen zwei anderen Objekten abgelegt werden könnte.</span><span class="sxs-lookup"><span data-stu-id="4e372-127">Use the drag between leave animation when the user drags an object away from an area where it could have been dropped between two other objects.</span></span>
--   <span data-ttu-id="4e372-128">Verwenden Sie die Animation für das Beenden des Zwischenziehens nicht, wenn Sie zuvor nicht die Animation für das Starten des Zwischenziehens verwendet haben.</span><span class="sxs-lookup"><span data-stu-id="4e372-128">Don't use the drag between leave animation if you have not first used the drag between enter animation.</span></span>
+## <a name="dos-and-donts"></a><span data-ttu-id="10eee-106">Empfohlene und nicht empfohlene Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="10eee-106">Do's and don'ts</span></span>
 
 
-## <a name="related-articles"></a><span data-ttu-id="4e372-129">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="4e372-129">Related articles</span></span>
+**<span data-ttu-id="10eee-107">Animation für das Starten des Ziehens</span><span class="sxs-lookup"><span data-stu-id="10eee-107">Drag start animation</span></span>**
 
-**<span data-ttu-id="4e372-130">Für Entwickler</span><span class="sxs-lookup"><span data-stu-id="4e372-130">For developers</span></span>**
-* [<span data-ttu-id="4e372-131">Übersicht über Animationen</span><span class="sxs-lookup"><span data-stu-id="4e372-131">Animations overview</span></span>](https://msdn.microsoft.com/library/windows/apps/mt187350)
-* [<span data-ttu-id="4e372-132">Animieren von Drag & Drop-Sequenzen</span><span class="sxs-lookup"><span data-stu-id="4e372-132">Animating drag-and-drop sequences</span></span>](https://msdn.microsoft.com/library/windows/apps/xaml/jj649427)
-* [<span data-ttu-id="4e372-133">Schnellstart: Animieren der Benutzeroberfläche mithilfe von Bibliotheksanimationen</span><span class="sxs-lookup"><span data-stu-id="4e372-133">Quickstart: Animating your UI using library animations</span></span>](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
-* [**<span data-ttu-id="4e372-134">DragItemThemeAnimation-Klasse</span><span class="sxs-lookup"><span data-stu-id="4e372-134">DragItemThemeAnimation class</span></span>**](https://msdn.microsoft.com/library/windows/apps/br243174)
-* [**<span data-ttu-id="4e372-135">DropTargetItemThemeAnimation-Klasse</span><span class="sxs-lookup"><span data-stu-id="4e372-135">DropTargetItemThemeAnimation class</span></span>**](https://msdn.microsoft.com/library/windows/apps/br243186)
-* [**<span data-ttu-id="4e372-136">DragOverThemeAnimation-Klasse</span><span class="sxs-lookup"><span data-stu-id="4e372-136">DragOverThemeAnimation class</span></span>**](https://msdn.microsoft.com/library/windows/apps/br243180)
+-   <span data-ttu-id="10eee-108">Verwenden Sie die Animation für das Starten des Ziehens, wenn Benutzer beginnen, ein Objekt zu verschieben.</span><span class="sxs-lookup"><span data-stu-id="10eee-108">Use the drag start animation when the user begins to move an object.</span></span>
+-   <span data-ttu-id="10eee-109">Nehmen Sie betroffene Objekte nur dann in die Animation auf, wenn andere Objekte vorhanden sind, die von dem Drag & Drop-Vorgang betroffen sein können.</span><span class="sxs-lookup"><span data-stu-id="10eee-109">Include affected objects in the animation if and only if there are other objects that can be affected by the drag-and-drop operation.</span></span>
+-   <span data-ttu-id="10eee-110">Verwenden Sie die Animation für das Beenden des Ziehens, um eine mit der Animation für das Starten des Ziehens begonnene Animationssequenz abzuschließen.</span><span class="sxs-lookup"><span data-stu-id="10eee-110">Use the drag end animation to complete any animation sequence that began with the drag start animation.</span></span> <span data-ttu-id="10eee-111">Dadurch wird die Größenänderung des gezogenen Objekts, die durch die Animation für das Starten des Ziehens ausgelöst wurde, zurückgesetzt.</span><span class="sxs-lookup"><span data-stu-id="10eee-111">This reverses the size change in the dragged object that was caused by the drag start animation.</span></span>
+
+**<span data-ttu-id="10eee-112">Animation für das Beenden des Ziehens</span><span class="sxs-lookup"><span data-stu-id="10eee-112">Drag end animation</span></span>**
+
+-   <span data-ttu-id="10eee-113">Verwenden Sie die Animation für das Beenden des Ziehens, wenn Benutzer ein gezogenes Objekt ablegen.</span><span class="sxs-lookup"><span data-stu-id="10eee-113">Use the drag end animation when the user drops a dragged object.</span></span>
+-   <span data-ttu-id="10eee-114">Verwenden Sie die Animation für das Beenden des Ziehens zusammen mit Animationen für das Hinzufügen und Löschen bei Listen.</span><span class="sxs-lookup"><span data-stu-id="10eee-114">Use the drag end animation in combination with add and delete animations for lists.</span></span>
+-   <span data-ttu-id="10eee-115">Nehmen Sie betroffene Objekte nur dann in die Animation für das Beenden des Ziehens auf, wenn Sie die gleichen Objekte in die Animation für das Starten des Ziehens aufgenommen haben.</span><span class="sxs-lookup"><span data-stu-id="10eee-115">Include affected objects in the drag end animation if and only if you included those same affected objects in the drag start animation.</span></span>
+-   <span data-ttu-id="10eee-116">Verwenden Sie die Animation für das Beenden des Ziehens nicht, wenn Sie vorher nicht die Animation für das Starten des Ziehens verwendet haben.</span><span class="sxs-lookup"><span data-stu-id="10eee-116">Don't use the drag end animation if you have not first used the drag start animation.</span></span> <span data-ttu-id="10eee-117">Sie müssen beide Animationen verwenden, damit die Objekte nach Abschluss der Ziehsequenz wieder zu ihrer ursprünglichen Größe zurückkehren.</span><span class="sxs-lookup"><span data-stu-id="10eee-117">You need to use both animations to return objects to their original sizes after the drag sequence is complete.</span></span>
+
+**<span data-ttu-id="10eee-118">Animation für das Starten des Zwischenziehens</span><span class="sxs-lookup"><span data-stu-id="10eee-118">Drag between enter animation</span></span>**
+
+-   <span data-ttu-id="10eee-119">Verwenden Sie die Animation für das Starten des Zwischenziehens, wenn Benutzer die Ziehquelle in einen Ablagebereich ziehen, in dem sie zwischen zwei anderen Objekten abgelegt werden kann.</span><span class="sxs-lookup"><span data-stu-id="10eee-119">Use the drag between enter animation when the user drags the drag source into a drop area where it can be dropped between two other objects.</span></span>
+-   <span data-ttu-id="10eee-120">Wählen Sie einen angemessenen Zielbereich zum Ablegen aus.</span><span class="sxs-lookup"><span data-stu-id="10eee-120">Choose a reasonable drop target area.</span></span> <span data-ttu-id="10eee-121">Dieser Bereich sollte nicht so klein sein, dass es den Benutzern schwerfällt, die Ziehquelle zum Ablegen zu positionieren.</span><span class="sxs-lookup"><span data-stu-id="10eee-121">This area should not be so small that it is difficult for the user to position the drag source for the drop.</span></span>
+-   <span data-ttu-id="10eee-122">Als Richtung für das Verschieben betroffener Objekte, um den Ablagebereich anzuzeigen, empfiehlt es sich, die Objekte direkt auseinanderzuziehen.</span><span class="sxs-lookup"><span data-stu-id="10eee-122">The recommended direction to move affected objects to show the drop area is directly apart from each other.</span></span> <span data-ttu-id="10eee-123">Ob es sich um eine vertikale oder horizontale Bewegung handelt, hängt davon ab, wie die betroffenen Objekte zueinander ausgerichtet sind.</span><span class="sxs-lookup"><span data-stu-id="10eee-123">Whether they move vertically or horizontally depends on the orientation of the affected objects to each other.</span></span>
+-   <span data-ttu-id="10eee-124">Verwenden Sie die Animation für das Starten des Zwischenziehens nicht, wenn die Ziehquelle nicht in einem Bereich abgelegt werden kann.</span><span class="sxs-lookup"><span data-stu-id="10eee-124">Don't use the drag between enter animation if the drag source cannot be dropped in an area.</span></span> <span data-ttu-id="10eee-125">An der Animation für das Starten des Zwischenziehens erkennen Benutzer, dass die Ziehquelle zwischen den betroffenen Objekten abgelegt werden kann.</span><span class="sxs-lookup"><span data-stu-id="10eee-125">The drag between enter animation tells the user that the drag source can be dropped between the affected objects.</span></span>
+
+**<span data-ttu-id="10eee-126">Animation für das Beenden des Zwischenziehens</span><span class="sxs-lookup"><span data-stu-id="10eee-126">Drag between leave animation</span></span>**
+
+-   <span data-ttu-id="10eee-127">Verwenden Sie die Animation für das Beenden des Zwischenziehens, wenn Benutzer ein Objekt von einem Bereich wegziehen, in dem es zwischen zwei anderen Objekten abgelegt werden könnte.</span><span class="sxs-lookup"><span data-stu-id="10eee-127">Use the drag between leave animation when the user drags an object away from an area where it could have been dropped between two other objects.</span></span>
+-   <span data-ttu-id="10eee-128">Verwenden Sie die Animation für das Beenden des Zwischenziehens nicht, wenn Sie zuvor nicht die Animation für das Starten des Zwischenziehens verwendet haben.</span><span class="sxs-lookup"><span data-stu-id="10eee-128">Don't use the drag between leave animation if you have not first used the drag between enter animation.</span></span>
 
 
- 
+## <a name="related-articles"></a><span data-ttu-id="10eee-129">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="10eee-129">Related articles</span></span>
+
+**<span data-ttu-id="10eee-130">Für Entwickler</span><span class="sxs-lookup"><span data-stu-id="10eee-130">For developers</span></span>**
+* [<span data-ttu-id="10eee-131">Übersicht über Animationen</span><span class="sxs-lookup"><span data-stu-id="10eee-131">Animations overview</span></span>](https://msdn.microsoft.com/library/windows/apps/mt187350)
+* [<span data-ttu-id="10eee-132">Animieren von Drag & Drop-Sequenzen</span><span class="sxs-lookup"><span data-stu-id="10eee-132">Animating drag-and-drop sequences</span></span>](https://msdn.microsoft.com/library/windows/apps/xaml/jj649427)
+* [<span data-ttu-id="10eee-133">Schnellstart: Animieren der Benutzeroberfläche mithilfe von Bibliotheksanimationen</span><span class="sxs-lookup"><span data-stu-id="10eee-133">Quickstart: Animating your UI using library animations</span></span>](https://msdn.microsoft.com/library/windows/apps/xaml/hh452703)
+* [**<span data-ttu-id="10eee-134">DragItemThemeAnimation-Klasse</span><span class="sxs-lookup"><span data-stu-id="10eee-134">DragItemThemeAnimation class</span></span>**](https://msdn.microsoft.com/library/windows/apps/br243174)
+* [**<span data-ttu-id="10eee-135">DropTargetItemThemeAnimation-Klasse</span><span class="sxs-lookup"><span data-stu-id="10eee-135">DropTargetItemThemeAnimation class</span></span>**](https://msdn.microsoft.com/library/windows/apps/br243186)
+* [**<span data-ttu-id="10eee-136">DragOverThemeAnimation-Klasse</span><span class="sxs-lookup"><span data-stu-id="10eee-136">DragOverThemeAnimation class</span></span>**](https://msdn.microsoft.com/library/windows/apps/br243180)
+
+
+ 
 
 
 

@@ -5,16 +5,14 @@ title: Abrufen von Xbox Live Clubdaten
 ms.author: mhopkins
 ms.date: 06/04/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, Uwp, Store-Diensten, Microsoft Store-Analyse-API, Xbox Live Analyse, Clubs
 ms.localizationpriority: medium
-ms.openlocfilehash: f9f901ce5a91443321f7cc5b182a5ea64279dbfb
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: b7a37b30634006f0865d0ba1c1c2844a7acf4139
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5519151"
+ms.locfileid: "5547236"
 ---
 # <a name="get-xbox-live-club-data"></a><span data-ttu-id="a1289-104">Abrufen von Xbox Live Clubdaten</span><span class="sxs-lookup"><span data-stu-id="a1289-104">Get Xbox Live club data</span></span>
 
