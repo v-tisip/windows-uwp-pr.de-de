@@ -6,16 +6,14 @@ ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
 ms.author: joanlee
 ms.date: 10/24/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Einrichtung, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b1a993f16d2d9403f16c1f4cc15805b0c5f36a9
-ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
-ms.translationtype: HT
+ms.openlocfilehash: 9100e80e0b4ac436ae872698e94fe29e5c8cab46
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
-ms.locfileid: "1488914"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559626"
 ---
 # <a name="set-up-the-game-project"></a>Einrichten des Spieleprojekts
 
@@ -37,7 +35,7 @@ Wenn Sie Erfahrung mit der Entwicklung von UWP haben, empfehlen wir die Verwendu
 
 ### <a name="use-directx-template-to-create-a-project"></a>Verwenden Sie DirectX-Vorlagen, um ein Projekt zu erstellen
 
-Eine Visual Studio-Vorlage ist eine Sammlung von Einstellungen und Codedateien, die abhängig von der bevorzugten Sprache und Technologie auf eine bestimmte Art von App ausgerichtet sind. In Microsoft Visual Studio2017 stehen einige Vorlagen zur Verfügung, die die Entwicklung des Spiels und der Grafik deutlich vereinfachen können. Ohne Verwendung einer Vorlage müssen Sie einen Großteil des grundlegenden Rendering- und Anzeigeframeworks für die Grafik selbst entwickeln, was insbesondere für neue Spieleentwickler recht mühsam sein kann.
+Eine Visual Studio-Vorlage ist eine Sammlung von Einstellungen und Codedateien, die abhängig von der bevorzugten Sprache und Technologie auf eine bestimmte Art von App ausgerichtet sind. In Microsoft Visual Studio2017 finden Sie eine Reihe von Vorlagen, die app-Entwicklung Spiels und der Grafik deutlich vereinfachen können. Ohne Verwendung einer Vorlage müssen Sie einen Großteil des grundlegenden Rendering- und Anzeigeframeworks für die Grafik selbst entwickeln, was insbesondere für neue Spieleentwickler recht mühsam sein kann.
 
 Die richtige Vorlage für dieses Tutorial ist die Vorlage **DirectX 11 App (Universal Windows)**. 
 
@@ -155,7 +153,7 @@ Ein paar Dateien haben wir uns für den Schluss aufgehoben. Diese Dateien bieten
 | SamplePixelShader.hlsl       | Inhalt                | Enthält den Code der High-Level-Shader-Language (HLSL) für einen sehr einfachen Pixel-Shader.                                            |
 | SampleVertexShader.hlsl      | Inhalt                | Enthält den Code der High-Level Shader Language (HLSL) für einen sehr einfachen Vertex-Shader.                                           |
 | ShaderStructures.h           | Inhalt                | Enthält die Shader-Strukturen, die zum Senden von MVP-Matrizen und Vertex-Daten an den Vertexshader verwendet werden können.  |
-| pch.h/.cpp                   | Main                   | Enthält alles, was das Windows-System für die von einer Direct3D-App genutzten APIs (einschließlich DirectX11-APIs) enthält.| 
+| pch.h/.cpp                   | Main                   | Enthält alles, was das Windows-System für die von einer Direct3D-App genutzten APIs (einschließlich DirectX11-APIs) enthält.| 
 
 ### <a name="next-steps"></a>Nächste Schritte
 
@@ -163,9 +161,9 @@ Hier haben Sie gelernt, wie Sie ein UWP-DirectX-Spieleprojekts mithilfe der **Di
 
 Der nächste Abschnittist [Definieren des UWP-App-Frameworks für das Spiel](tutorial--building-the-games-uwp-app-framework.md). Wir untersuchen, wie dieses Spiel viele der Konzepte und Komponenten verwendet und erweitert, die die Vorlage bereitstellt.
 
- 
+ 
 
- 
+ 
 
 
 

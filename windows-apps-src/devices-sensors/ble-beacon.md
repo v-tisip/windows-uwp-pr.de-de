@@ -5,17 +5,15 @@ description: Dieser Abschnitt enthält Artikel zur Integration von Bluetooth Low
 ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.assetid: ff10bbc0-03a7-492c-b5fe-c5b9ce8ca32e
 ms.localizationpriority: medium
-ms.openlocfilehash: 1be2aad5a6a0fe76caefa4710ebf946e418cf151
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 38f850cfb811260758377d5404e01c8e540e7ec2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "300440"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560211"
 ---
 # <a name="bluetooth-le-advertisements"></a>Bluetooth LE-Ankündigungen
 
@@ -47,7 +45,7 @@ Um Bluetooth LE-Grundfunktionalität in einer App für die Universelle Windows-P
 
 Bluetooth LE-Ankündigungen ermöglichen Ihrem Gerät, konstant eine spezifische Nutzlast („Ankündigung“ genannt) zu signalisieren. Diese Ankündigung kann von jedem Bluetooth LE-kompatiblen Gerät in der Nähe erkannt werden, wenn es für den Empfang dieser spezifischen Ankündigung eingerichtet wurde.
 
-> **Hinweis**: für den Datenschutz für Benutzer, die Lebensdauer Ihrer Anzeige an, die Ihrer App gebunden ist. Sie können einen BluetoothLEAdvertisementPublisher erstellen und in einer Hintergrundaufgabe „Start“ aufrufen, um die Ankündigung im Hintergrund auszuführen. Weitere Informationen zu Hintergrundaufgaben finden Sie unter [Starten, Fortsetzen und Hintergrundaufgaben](https://msdn.microsoft.com/windows/uwp/launch-resume/index).
+> **Hinweis**: für Datenschutz für Benutzer, ist die Lebensdauer von der Ankündigung an diejenige der app gebunden. Sie können einen BluetoothLEAdvertisementPublisher erstellen und in einer Hintergrundaufgabe „Start“ aufrufen, um die Ankündigung im Hintergrund auszuführen. Weitere Informationen zu Hintergrundaufgaben finden Sie unter [Starten, Fortsetzen und Hintergrundaufgaben](https://msdn.microsoft.com/windows/uwp/launch-resume/index).
 
 ### <a name="basic-publishing"></a>Grundlegende Veröffentlichung
 

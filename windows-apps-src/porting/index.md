@@ -1,26 +1,24 @@
 ---
 author: stevewhims
 ms.assetid: ba2ac5f5-1e0d-4f1d-a6f8-6a65b4cff501
-description: In diesem Abschnitt wird beschrieben, wie Sie Ihre vorhandene App auf die Universelle Windows-Plattform (UWP) portieren können, um ein einzelnes Windows10-App-Paket zu erstellen, das Ihre Kunden auf allen Arten von Geräten installieren können. Ihre App profitiert von spannender, neuer Hardware, hervorragenden Umsatzchancen, einem modernen API-Satz, adaptiven UI-Steuerelementen und verschiedenen Eingabemodalitäten, darunter Maus und Tastatur, Toucheingabe und Spracherkennung.
-title: Portieren von Apps auf Windows 10
+description: In diesem Abschnitt wird beschrieben, wie Sie Ihre vorhandene app auf die universelle Windows Plattform (UWP) portieren, in denen Sie ein einzelnes Windows 10-app-Paket erstellen können, das Ihre Kunden auf allen Arten von Geräten installieren können. Ihre App profitiert von spannender, neuer Hardware, hervorragenden Umsatzchancen, einem modernen API-Satz, adaptiven UI-Steuerelementen und verschiedenen Eingabemodalitäten, darunter Maus und Tastatur, Toucheingabe und Spracherkennung.
+title: Portieren von apps auf Windows 10
 ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 8057bd4efcf1d7bfdc704f6217915fac6a019386
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: bb5c6ae373e4e35e640223fe08a5a49f2e7a5dd3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1815575"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560168"
 ---
-# <a name="porting-apps-to-windows-10"></a>Portieren von Apps auf Windows 10
+# <a name="porting-apps-to-windows10"></a>Portieren von apps auf Windows 10
 
 
-In diesem Abschnitt wird beschrieben, wie Sie Ihre vorhandene App auf die Universelle Windows-Plattform (UWP) portieren können, um ein einzelnes Windows10-App-Paket zu erstellen, das Ihre Kunden auf allen Arten von Geräten installieren können. Ihre App profitiert von spannender, neuer Hardware, hervorragenden Umsatzchancen, einem modernen API-Satz, adaptiven UI-Steuerelementen und verschiedenen Eingabemodalitäten, darunter Maus und Tastatur, Toucheingabe und Spracherkennung.
+In diesem Abschnitt wird beschrieben, wie Sie Ihre vorhandene app auf die universelle Windows Plattform (UWP) portieren, in denen Sie ein einzelnes Windows 10-app-Paket erstellen können, das Ihre Kunden auf allen Arten von Geräten installieren können. Ihre App profitiert von spannender, neuer Hardware, hervorragenden Umsatzchancen, einem modernen API-Satz, adaptiven UI-Steuerelementen und verschiedenen Eingabemodalitäten, darunter Maus und Tastatur, Toucheingabe und Spracherkennung.
 
 Mit der Windows-Runtime (WinRT)-Technologie können Sie Apps der universellen Windows-Plattform (UWP) erstellen. Unter [Was ist eine App der universellen Windows-Plattform (UWP)?](https://msdn.microsoft.com/library/windows/apps/dn726767) erhalten Sie weitere Infos zu WinRT- und UWP-Apps.
 

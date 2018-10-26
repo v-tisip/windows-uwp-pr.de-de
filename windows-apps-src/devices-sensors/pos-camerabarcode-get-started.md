@@ -5,16 +5,14 @@ description: Umgang mit dem Kamera-Strichcodescanner
 ms.author: jken
 ms.date: 05/1/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
-ms.openlocfilehash: 861233de6967a6199bae5d81c1a3938bf8645246
-ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
-ms.translationtype: HT
+ms.openlocfilehash: 12aabff66fc116f510dced78aa56f3df5f84c850
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "1976032"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559993"
 ---
 # <a name="getting-started-with-a-camera-barcode-scanner"></a>Erste Schrittemit dem Kamera-Strichcodescanner
 ## <a name="step-1-add-capability-declarations-to-your-app-manifest"></a>Schritt 1: Hinzufügen von Funktionsdeklarationen zum App-Manifest
@@ -88,3 +86,14 @@ Eine Kameravorschau ist für den Benutzer notwendig, um die Kamera auf Barcodes 
 
 > [!TIP]
 > Unter See [Hosting-Vorschau](pos-camerabarcode-hosting-preview.md) erfahren Sie, wie Sie die Vorschau für Kamera-Strichcodescanner in Ihrer Anwendung hosten.
+
+## <a name="step-8-initiate-scan"></a>Schritt 8: Initialisieren scan 
+Sie können den Überprüfungsvorgang initiieren, indem Sie [**StartSoftwareTriggerAsync**](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.startsoftwaretriggerasync#Windows_Devices_PointOfService_ClaimedBarcodeScanner_StartSoftwareTriggerAsync) aufrufen.  
+Je nach Wert des [**IsDisabledOnDataReceived**](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isdisabledondatareceived#Windows_Devices_PointOfService_ClaimedBarcodeScanner_IsDisabledOnDataReceived) kann der Scanner nur einen Strichcode scannen und diesen beenden oder kontinuierlich bis zum Aufruf von [**StopSoftwareTriggerAsync**](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.stopsoftwaretriggerasync#Windows_Devices_PointOfService_ClaimedBarcodeScanner_StopSoftwareTriggerAsync) scannen.
+
+Legen Sie den gewünschten Wert der [**IsDisabledOnDataReceived**](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isdisabledondatareceived#Windows_Devices_PointOfService_ClaimedBarcodeScanner_IsDisabledOnDataReceived) fest, um das Verhalten des Scanners zu steuern, wenn ein Strichcode decodiert wird.
+
+| Wert | Beschreibung |
+| ----- | ----------- |
+| Wahr   | Nur einen Barcode scannen und dann beenden |
+| False  | Scannen Sie Barcodes ohne Unterbrechung |

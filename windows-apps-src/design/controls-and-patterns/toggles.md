@@ -8,20 +8,18 @@ template: detail.hbs
 ms.author: quradic
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, UWP
 pm-contact: kisai
 design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 796ee4ffaa551c23286110ec7164f511655d6017
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: d166e872af0824c9eb5df15510f9597d0303f483
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5468924"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560013"
 ---
 # <a name="toggle-switches"></a>Umschalter
 
@@ -71,7 +69,7 @@ Für einige Aktionen kann entweder ein Umschalter oder ein Kontrollkästchen ver
 - Verwenden Sie ein Kontrollkästchen, wenn der Benutzer zusätzliche Schritte ausführen muss, damit die Änderungen wirksam werden. Verwenden Sie beispielsweise ein Kontrollkästchen, wenn der Benutzer auf die Schaltfläche „Übermitteln“ oder „Weiter“ klicken muss, damit Änderungen übernommen werden.
 - Verwenden Sie Kontrollkästchen, wenn der Benutzer mehrere Elemente auswählen kann, die sich auf eine einzelne Einstellung oder ein einzelnes Feature beziehen.
 
-## <a name="toggle-switches-in-the-windows-ui"></a>Ein/aus-Schalter in der Windows-Benutzeroberfläche
+## <a name="toggle-switches-in-the-windows-ui"></a>Umschalter in der Windows-Benutzeroberfläche
 
 Diese Bilder zeigen, wie Umschalter in der Windows-Benutzeroberfläche verwendet werden. Hier sehen Sie, wie Umschalter auf der Seite für intelligente Speichereinstellungen verwendet werden:
 

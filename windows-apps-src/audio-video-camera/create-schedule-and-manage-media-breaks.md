@@ -6,16 +6,14 @@ title: Erstellen, Planen und Verwalten von Medienunterbrechungen
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b8d25047435ece1c55a982e69be45fa0e6efb74
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 0feb7f6771254bf500e4b64fd0e632daad9817e4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843663"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560023"
 ---
 # <a name="create-schedule-and-manage-media-breaks"></a>Erstellen, Planen und Verwalten von Medienunterbrechungen
 
@@ -88,10 +86,6 @@ Im folgenden Beispiel wird die [**Source**](https://msdn.microsoft.com/library/w
 
 [!code-cs[BreakSeekedOver](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetBreakSeekedOver)]
 
-## <a name="get-information-about-the-current-media-break"></a>Abrufen von Informationen über die aktuelle Medienunterbrechung
-Wie in diesem Artikel bereits erwähnt, kann die [**CurrentItemIndex**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackList.CurrentItemIndex)-Eigenschaft verwendet werden, um zu ermitteln, welches Medienelement in einer Medienunterbrechung gerade wiedergegeben wird. Es empfiehlt sich, in regelmäßigen Abständen eine Überprüfung auf das gerade wiedergegebene Element durchzuführen, um die Benutzeroberfläche zu aktualisieren. Überprüfen Sie unbedingt zuerst die [**CurrentBreak**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager.CurrentBreak)-Eigenschaft auf null. Wenn die Eigenschaft null ist, wird gerade keine Medienunterbrechung wiedergegeben.
-
-[!code-cs[GetCurrentBreakItemIndex](./code/MediaBreaks_RS1/cs/MainPage.xaml.cs#SnippetGetCurrentBreakItemIndex)]
 
 ## <a name="access-the-current-playback-session"></a>Zugreifen auf die aktuelle Wiedergabesitzung
 Das [**MediaPlaybackSession**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession)-Objekt verwendet die **MediaPlayer**-Klasse, um Daten und Ereignisse in Zusammenhang mit den gerade wiedergegebenen Medieninhalten bereitzustellen. Der [**MediaBreakManager**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaBreakManager) verfügt auch über eine **MediaPlaybackSession**, auf die Sie zugreifen können, um Daten und Ereignisse abzurufen, die sich speziell auf den Inhalt der Medienunterbrechung beziehen, der gerade wiedergegeben wird. Zu den Informationen, die Sie aus der Wiedergabesitzung erhalten können, gehören der aktuelle Wiedergabestatus, Wiedergabe oder Angehalten, und die aktuelle Wiedergabeposition innerhalb des Inhalts. Sie können die Eigenschaften [**NaturalVideoWidth**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoWidth) und [**NaturalVideoHeight**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoHeight) sowie [**NaturalVideoSizeChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.NaturalVideoSizeChanged) verwenden, um die Video-Benutzeroberfläche anzupassen, wenn der Inhalt der Medienunterbrechung ein anderes Seitenverhältnis besitzt als der Hauptinhalt. Sie können auch Ereignisse empfangen, wie z. B. [**BufferingStarted**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.BufferingStarted), [**BufferingEnded**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.BufferingEnded) und [**DownloadProgressChanged**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlaybackSession.DownloadProgressChanged), die wertvolle Telemetriedaten zur Leistung Ihrer App liefern können.
@@ -107,9 +101,9 @@ Im folgenden Beispiel wird ein Handler für das **BufferingProgressChanged-Ereig
 * [Wiedergeben von Audio- und Videoinhalten mit „MediaPlayer“](play-audio-and-video-with-mediaplayer.md)
 * [Manuelle Steuerung der Steuerelemente für den Systemmedientransport](system-media-transport-controls.md)
 
- 
+ 
 
- 
+ 
 
 
 
