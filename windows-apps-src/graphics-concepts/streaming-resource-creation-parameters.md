@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f2a17f69ae0353bb7682a1dbfa48d5909f48d4aa
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 0129b44b6f1c6c8b18555e3e0e0b350a695cabe1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652989"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548930"
 ---
 # <a name="streaming-resource-creation-parameters"></a>Parameter für das Erstellen von Streamingressourcen
 
@@ -26,22 +24,22 @@ Es gibt einige Einschränkungen für den Typ der Direct3D-Ressourcen, die Sie al
 <span id="Supported-Resource-Type"></span><span id="supported-resource-type"></span><span id="SUPPORTED-RESOURCE-TYPE"></span>**Unterstützter Ressourcentyp**  
 Texture2D\ [Array\] (einschließlich TextureCube\[Array\], der eine Variante von Texture2D\[Array\]) oder Buffer ist.
 
-**NICHT unterstützt: **Texture1D\[Array\].
+**Nicht unterstützt:** Texture1D\ [Array\].
 
 <span id="Supported-Resource-Usage"></span><span id="supported-resource-usage"></span><span id="SUPPORTED-RESOURCE-USAGE"></span>**Unterstützte Ressourcenverwendung**  
 Standardverwendung.
 
-**NICHT unterstützt: **Dynamisch, Staging oder Unveränderlich.
+**Nicht unterstützt:** Dynamisch, staging oder unveränderlich.
 
 <span id="Supported-Resource-Misc-Flags"></span><span id="supported-resource-misc-flags"></span><span id="SUPPORTED-RESOURCE-MISC-FLAGS"></span>**Sonstige unterstützte Ressourcen-Flags**  
 Unterteilt; d.h. Streaming (gemäß Definition), Texturwürfel, indirekte Argumente zeichnen, Puffer lässt Rohdatenansichten zu, strukturierter Puffer, Ressourcenklammerung oder Mips generieren.
 
-**NICHT unterstützt: **Freigegeben, freigegebenes Schlüsselmutex, GDI-kompatibel, freigegebenes NT-Handle, eingeschränkter Inhalt, eingeschränkte freigegebene Ressource, eingeschränkter freigegebener Ressourcentreiber, geschützt oder Kachelpool.
+**Nicht unterstützt:** freigegeben, freigegebenes schlüsselmutex, GDI-kompatibel, freigegebenes NT-Handle, eingeschränkter Inhalt, eingeschränkte freigegebene Ressource, ressourcentreiber, geschützt oder kachelpool.
 
 <span id="Supported-Bind-Flags"></span><span id="supported-bind-flags"></span><span id="SUPPORTED-BIND-FLAGS"></span>**Unterstützte Bindungsflags**  
 Als Shaderressource binden, Renderziel, Tiefenschablone oder unsortierter Zugriff.
 
-**NICHT unterstützt: **Als Konstantenpuffer binden, Vertexpuffer (Binden eines geteilten Puffers als SRV/UAV/RTV wird unterstützt), Indexpuffer, Streamausgabe, Decoder oder Video-Encoder.
+**Nicht unterstützt:** Als Konstanten Puffer, Vertexpuffer (Binden eines geteilten Puffers als SRV/UAV/RTV wird unterstützt), Indexpuffer binden Puffer, Streamausgabe, Decoder oder video-Encoder.
 
 <span id="Supported-Formats"></span><span id="supported-formats"></span><span id="SUPPORTED-FORMATS"></span>**Unterstützte Formate**  
 Alle Formate, die für die gegebene Konfiguration verfügbar sind, unabhängig davon, ob sie eine geteilte Anordnung verwenden, mit einigen Ausnahmen.
@@ -76,16 +74,16 @@ Der anfängliche Inhalt des Kachelpoolspeichers ist nicht definiert.
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
 
 
 [Erstellen von Streamingressourcen](creating-streaming-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

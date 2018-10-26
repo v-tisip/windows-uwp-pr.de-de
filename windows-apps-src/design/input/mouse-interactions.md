@@ -8,23 +8,21 @@ template: detail.hbs
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 2fbd6566afeff365a91c5d2ee670c0cafcb3def0
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: b79edc5499343498801081dd00554128c3b57eae
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1395009"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546242"
 ---
 # <a name="mouse-interactions"></a>Mausinteraktionen
 
 
 Optimieren Sie das Design Ihrer UWP-Apps für die Toucheingabe, und freuen Sie sich über die standardmäßige allgemeine Unterstützung von Mausgeräten.
 
- 
+ 
 
 ![Maus](images/input-patterns/input-mouse.jpg)
 
@@ -69,10 +67,10 @@ Ein kompakter Satz von Mausinteraktionen wird durchgängig im ganzen System verw
 <td align="left"><p>Rechtsklick, um Auswahl zu treffen und Befehl auszuwählen</p></td>
 <td align="left"><p>Klicken Sie mit der rechten Maustaste, um die Navigationsleiste (sofern verfügbar) und die App-Leiste mit globalen Befehlen anzuzeigen. Klicken Sie mit der rechten Maustaste auf ein Element, um es auszuwählen und die App-Leiste mit Kontextbefehlen für das ausgewählte Element anzuzeigen.</p>
 <div class="alert">
-<strong>Hinweis</strong> Klicken Sie mit der rechten Maustaste, um ein Kontextmenü anzuzeigen, wenn die in der Auswahl oder der App-Leiste verfügbaren Befehle nicht das gewünschte Benutzeroberflächenverhalten ermöglichen. Wir empfehlen jedoch ausdrücklich, die App-Leiste für alle Befehlsverhalten zu verwenden.
+<strong>Hinweis:</strong>mit der rechten Maustaste, um ein Kontextmenü anzuzeigen, wenn die Auswahl oder der app-Leiste verfügbaren Befehle nicht gewünschte Benutzeroberflächenverhalten. Wir empfehlen jedoch ausdrücklich, die App-Leiste für alle Befehlsverhalten zu verwenden.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -100,7 +98,7 @@ Reagieren Sie in Ihren Apps auf Mauseingaben, indem Sie die gleichen einfachen Z
 
 Verwenden Sie [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)-Ereignisse, um grundlegende Eingabefunktionen zu implementieren, ohne separaten Code für jedes Zeigereingabegerät schreiben zu müssen. Sie können aber trotzdem die speziellen Funktionen jedes Geräts nutzen (z. B. die Ereignisse des Mausrads), indem Sie die Zeiger-, Gestik- und Manipulationsereignisse dieses Objekts verwenden.
 
-**Beispiele: **Sehen Sie sich unter [Beispiele für Apps](http://go.microsoft.com/fwlink/p/?LinkID=264996) diese Funktionalität in Aktion an.
+**Beispiele:** Diese Funktionalität in Aktion zu sehen in unserer [Beispiele](http://go.microsoft.com/fwlink/p/?LinkID=264996)wird angezeigt.
 
 
 - [Eingabe: Beispiel für Gerätefunktionen](http://go.microsoft.com/fwlink/p/?linkid=231530)
@@ -153,10 +151,10 @@ Beachten Sie beim Anpassen des Mauszeigers Folgendes:
 * [Eingabe: Beispiel für XAML-Benutzereingabeereignisse](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoom](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [Eingabe: Gesten und Manipulationen mit GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
- 
- 
+ 
+ 
 
- 
+ 
 
 
 

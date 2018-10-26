@@ -6,16 +6,14 @@ ms.assetid: E363490A-C886-4D92-9A64-52E3C24F1D98
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 27b458c7ec5cabdc27ebd90c9eb024df2f35e402
-ms.sourcegitcommit: 54c2cd58fde08af889093a0c85e7297e33e6a0eb
-ms.translationtype: HT
+ms.openlocfilehash: 6fd7377294e0d460720f6a16e71981ab0924ac9a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2018
-ms.locfileid: "1664953"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549280"
 ---
 # <a name="launch-the-windows-maps-app"></a>Starten der Windows-Karten-App
 
@@ -103,7 +101,7 @@ Bei einer Standortsuche mithilfe des *q*-Parameters wird empfohlen, die Suchbegr
 | bingmaps:?cp=40.726966~-74.006076&where=New%20York            | Sucht nach New York in der Nähe des angegebenen Mittelpunkts.                             |
 | bingmaps:?bb=39.719\_-74.52~41.71\_-73.5&q=pizza              | Suche nach einer Pizzeria im angegebenen Begrenzungsrahmen (d.h. in New York City).      |
 
- 
+ 
 ## <a name="display-multiple-points"></a>Anzeigen mehrerer Punkte
 
 
@@ -117,7 +115,7 @@ Verwenden Sie den *collection*-Parameter zum Anzeigen eines benutzerdefinierten 
 | bingmaps:?collection=point.40.726966\_-74.006076\_Fake%255FBusiness%255Fwith%255FUnderscore                                                                        | Zeigt New York mit der Ortsmarke „Fake\_Business\_with\_Underscore“ an.                                                  |
 | bingmaps:?collection=name.Hotel%20List~point.36.116584\_-115.176753\_Caesars%20Palace~point.36.113126\_-115.175188\_The%20Bellagio&lvl=16&cp=36.114902~-115.176669 | Zeigt die Liste „Hotel List“ und die beiden Ortsmarken „Caesars Palace“ und „The Bellagio“ in Las Vegas mit dem Zoomfaktor 16 an. |
 
- 
+ 
 
 ## <a name="display-directions-and-traffic"></a>Anzeigen von Wegbeschreibungen und Verkehr
 
@@ -251,10 +249,10 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 </ul>
 <p>Unter Windows 10 sind die Stile der Luftansicht und der 3D-Ansicht identisch.</p>
 <div class="alert">
-**Hinweis**  Wenn der **sty**-Parameter ausgelassen wird, werden dieselben Ergebnisse wie bei sty=r zurückgegeben.
+**Hinweis:** der **Sty** Parameter ausgelassen erzeugt dieselben Ergebnisse wie bei Sty = R.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -289,10 +287,10 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 <p>ss=1</p></td>
 <td align="left"><p>Gibt an, dass bei <code>ss=1</code> Straßenbilder angezeigt werden. Wenn der <b>ss</b>-Parameter ausgelassen wird, wird dasselbe Ergebnis wie bei <code>ss=0</code> zurückgegeben. Verwenden Sie den Wert in Verbindung mit dem <b>cp</b>-Parameter, um die Position der Straßenansicht festzulegen.</p>
 <div class="alert">
-**Hinweis**  Straßenbilder sind nicht in allen Regionen verfügbar.
+**Hinweis:** Straßenbilder sind nicht in allen Regionen verfügbar.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -303,10 +301,10 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 <p>trfc=1</p></td>
 <td align="left"><p>Gibt an, ob die Karte Verkehrsinformationen enthält. Wenn der trfc-Parameter ausgelassen wird, werden dieselben Ergebnisse wie bei <code>trfc=0</code> zurückgegeben.</p>
 <div class="alert">
-**Hinweis**  Verkehrsinformationen sind nicht in allen Regionen verfügbar.
+**Hinweis:** Datenverkehr Daten sind nicht in allen Regionen verfügbar.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="even">
@@ -332,10 +330,10 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 <p>Bei einer unvollständigen Route wird keine Routenlinie gezeichnet.</p>
 <p>Geben Sie dies zusammen mit dem **mode**-Parameter an, um die Transportmethode (fahren, laufen oder öffentliche Verkehrsmittel) anzugeben. Wenn **mode** nicht angegeben ist, werden Wegbeschreibungen mithilfe der Einstellung für die Transportmethode des Benutzers bereitgestellt.</p>
 <div class="alert">
-**Hinweis**  Ein Titel kann für eine Position verwendet werden, wenn diese durch den **pos**-Parameterwert festgelegt ist. Anstatt der Breiten- und Längengrade wird der Titel angezeigt.
+**Hinweis:** ein Titel kann für einen Ort verwendet werden, wenn der Standort durch den **pos** -Parameterwert angegeben ist. Anstatt der Breiten- und Längengrade wird der Titel angezeigt.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -377,7 +375,7 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 </tbody>
 </table>
 
-  
+  
 <span id="ms-drive-to-param-reference"/>
 
 ## <a name="ms-drive-to-parameter-reference"></a>ms-drive-to: Parameterverweis
@@ -387,7 +385,7 @@ Der URI zum Starten einer Anforderung für detaillierte Wegbeschreibungen muss n
 
 > **Hinweis**  In diesem URI-Schema wird der Startpunkt nicht angegeben. Beim Startpunkt wird immer davon ausgegangen, dass es sich um die aktuelle Position handelt. Wenn Sie einen anderen Startpunkt als die aktuelle Position angeben müssen, finden Sie weitere Informationen unter [Anzeigen von Wegbeschreibungen und Verkehr](#display-directions-and-traffic).
 
- 
+ 
 
 | Parameter | Definition | Beispiel | Details |
 |------------|-----------|---------|---------|
@@ -395,7 +393,7 @@ Der URI zum Starten einer Anforderung für detaillierte Wegbeschreibungen muss n
 | **destination.longitude** | Längengrad des Ziels | Beispiel: destination.longitude=-122.141964733601 | Der Längengrad des Ziels. Gültige Längengradwerte liegen zwischen -180 und einschließlich +180. |
 | **destination.name** | Name des Ziels | Beispiel: destination.name=Redmond, WA | Der Name des Ziels. Eine Codierung des URI oder des **destination.name**-Werts ist nicht erforderlich. |
 
- 
+ 
 <span id="ms-walk-to-param-reference"/>
 
 ## <a name="ms-walk-to-parameter-reference"></a>ms-walk-to: Parameterverweis
@@ -404,7 +402,7 @@ Der URI zum Starten einer Anforderung für detaillierte Wegbeschreibungen muss n
 Der URI zum Starten einer Anforderung für detaillierte Fußwegbeschreibungen muss nicht codiert werden und hat das folgende Format.
 
 > **Hinweis**  In diesem URI-Schema wird der Startpunkt nicht angegeben. Beim Startpunkt wird immer davon ausgegangen, dass es sich um die aktuelle Position handelt. Wenn Sie einen anderen Startpunkt als die aktuelle Position angeben müssen, finden Sie weitere Informationen unter [Anzeigen von Wegbeschreibungen und Verkehr](#display-directions-and-traffic).
- 
+ 
 
 | Parameter | Definition | Beispiel | Details |
 |-----------|------------|---------|----------|
@@ -414,7 +412,7 @@ Der URI zum Starten einer Anforderung für detaillierte Fußwegbeschreibungen mu
 
 ## <a name="ms-settings-parameter-reference"></a>ms-settings: Parameterverweis
 
-Die Syntax für Karten-App-spezifische Parameter für das **ms-settings:**-URI-Schema wird unten definiert. **maps-downloadmaps** wird zusammen mit dem **ms-settings:**-URI in Form von **ms-settings:maps-downloadmaps?** angegeben, um die Offlineseite für Karteneinstellungen anzugeben. 
+Die Syntax für Karten-App-spezifische Parameter für das **ms-settings:**-URI-Schema wird unten definiert. **maps-downloadmaps** wird zusammen mit dem **ms-settings:**-URI in Form von **ms-settings:maps-downloadmaps?** angegeben, um die Offlineseite für Karteneinstellungen anzugeben. 
 
 | Parameter | Definition | Beispiel | Details |
 |-----------|------------|---------|----------|

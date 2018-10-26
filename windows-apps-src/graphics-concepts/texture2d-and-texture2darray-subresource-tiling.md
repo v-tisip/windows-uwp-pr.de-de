@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 292adb2f06022fbb8fc063c49442cd69ccf64534
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 245581e4eb2a8526b242feadb5877590283e24f9
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044139"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549927"
 ---
 # <a name="texture2d-and-texture2darray-subresource-tiling"></a>Unterteilung von Texture2D- und Texture2DArray-Unterressourcen
 
@@ -38,7 +36,7 @@ Die folgende Tabelle zeigt die Unterteilung von [**Texture2D**](https://msdn.mic
 | BC1, 4                       | 512 x 256                       |
 | BC2, 3, 5, 6, 7                 | 256 x 256                       |
 
- 
+ 
 
 Format-Bitanzahlen, die bei Streamingressourcen nicht unterstützt werden, sind 96-bpp-Formate, Videoformate, DXGI\_FORMAT\_R1\_UNORM, DXGI\_FORMAT\_R8G8\_B8G8\_UNORM, and DXGI\_FORMAT\_R8R8\_G8B8\_UNORM.
 
@@ -55,7 +53,7 @@ Die folgende Tabelle zeigt die Unterteilung von [**Texture2D**](https://msdn.mic
 | 8                           | 4 x 2                           |
 | 16                          | 4 x 4                           |
 
- 
+ 
 
 Es sind ausschließlich Beispielanzahlen von 1 und 4 erforderlich (und zulässig), um mit Streamingressourcen unterstützt zu werden. Anzahlen von 2, 8 und 16 werden derzeit von Streamingressourcen nicht unterstützt, auch wenn sie angezeigt werden.
 
@@ -70,9 +68,9 @@ Die Einschränkungen bei der Anzahl unterstützter Beispiele und Formate gehen a
 
 [So unterteilen Sie den Bereich einer Streamingressource](how-a-streaming-resource-s-area-is-tiled.md)
 
- 
+ 
 
- 
+ 
 
 
 

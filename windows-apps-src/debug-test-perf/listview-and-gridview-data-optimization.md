@@ -6,21 +6,19 @@ description: Verbessern Sie die Leistung und Startzeit von ListView und GridView
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: eab90ebf2bcb1912292af6503f833e3bfa334d8b
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: 92b81c79eb1be9e21aa7c306ef31b0b3bb62e7d1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894710"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5547292"
 ---
 # <a name="listview-and-gridview-data-virtualization"></a>ListView- und GridView-Datenvirtualisierung
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-**Hinweis**  Weitere Informationen finden Sie unter der „//build/“-Sitzung [Erhebliches Erhöhen der Leistung bei der Interaktion von Benutzern mit großen Mengen von Daten in GridView und ListView](https://channel9.msdn.com/Events/Build/2013/3-158).
+**Hinweis:** Weitere Informationen finden Sie unter der //build/ Sitzung [Erhebliches Erhöhen der Leistung bei der Interaktion von Benutzern mit großen Mengen von Daten in GridView und ListView](https://channel9.msdn.com/Events/Build/2013/3-158).
 
 Verbessern Sie die Leistung und Startzeit von [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) und [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) durch Datenvirtualisierung. Informationen zu UI-Virtualisierung, Elementreduzierung und die progressive Aktualisierung von Elementen finden Sie unter [Optimieren der ListView- und GridView-Benutzeroberfläche](optimize-gridview-and-listview.md).
 
@@ -31,7 +29,7 @@ Eine Methode zur Datenvirtualisierung ist für einen Datensatz erforderlich, der
 -   Die Quelle des Datasets (lokaler Datenträger, Netzwerk oder Cloud)
 -   Die gesamte Arbeitsspeichernutzung Ihrer App
 
-**Hinweis**  Beachten Sie, dass für „ListView“ und „GridView“ standardmäßig ein Feature aktiviert ist, das temporäre Platzhalter für visuelle Elemente anzeigt, wenn der Benutzer den Bildausschnitt schnell verschiebt oder einen schnellen Bildlauf durchführt. Beim Laden von Daten werden diese Platzhalter für visuelle Elemente durch die Elementvorlage ersetzt. Sie können das Feature deaktivieren, indem Sie [**ListViewBase.ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) auf „false“ festlegen. In diesem Fall wird jedoch empfohlen, das „x: Phase“-Attribut zu verwenden, um die Elemente in der Elementvorlage progressiv zu rendern. Siehe [Progressives Aktualisieren von ListView- und GridView-Elementen](optimize-gridview-and-listview.md#update-items-incrementally).
+**Hinweis:** Beachten Sie, dass ein Feature für ListView und GridView, das temporäre Platzhalter für visuelle Elemente anzeigt, während der Benutzer Schwenken/Bildlauf schnell ist standardmäßig aktiviert ist. Beim Laden von Daten werden diese Platzhalter für visuelle Elemente durch die Elementvorlage ersetzt. Sie können das Feature deaktivieren, indem Sie [**ListViewBase.ShowsScrollingPlaceholders**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) auf „false“ festlegen. In diesem Fall wird jedoch empfohlen, das „x: Phase“-Attribut zu verwenden, um die Elemente in der Elementvorlage progressiv zu rendern. Siehe [Progressives Aktualisieren von ListView- und GridView-Elementen](optimize-gridview-and-listview.md#update-items-incrementally).
 
 Hier erhalten Sie weitere Informationen über die Verfahren der inkrementellen Datenvirtualisierung und der Datenvirtualisierung mit wahlfreiem Zugriff.
 
@@ -45,7 +43,7 @@ Bei der inkrementellen Datenvirtualisierung werden Daten sequenziell geladen. Ei
 
 Eine derartige Datenquelle ist eine speicherinterne Liste, die ständig erweitert werden kann. Das Elementsteuerelement fordert die Elemente mithilfe der standardmäßigen „Indexer“- und „Count“-Eigenschaften von [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx) an. Die Anzahl sollte die Anzahl der lokalen Elemente darstellen, nicht die tatsächliche Größe des Datasets.
 
-Wenn sich das Elementsteuerelement dem Ende der vorhandenen Daten nähert, ruft es [**ISupportIncrementalLoading.HasMoreItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.hasmoreitems) auf. Wenn **true** zurückgegeben wird, ruft es [**ISupportIncrementalLoading.LoadMoreItemsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.loadmoreitemsasync) auf und übergibt eine empfohlene Anzahl von zu ladenden Elementen. Je nachdem, von wo die Daten (lokaler Datenträger, Netzwerk oder Cloud) geladen werden, können Sie eine andere als die empfohlene Anzahl von Elementen laden. Wenn Ihr Dienst z.B. Stapel von 50 Elementen unterstützt, aber das Elementsteuerelement nur 10 anfordert, dann können Sie 50 Elemente laden. Laden Sie die Daten vom Back-End, fügen Sie sie zur Liste hinzu, und lösen Sie über [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) oder [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) eine Änderungsbenachrichtigung aus, damit das Elementsteuerelement über die neuen Elemente informiert wird. Geben Sie außerdem die Anzahl der tatsächlich geladenen Elemente zurück. Wenn Sie weniger Artikel als empfohlen laden oder das Elementsteuerelement in der Zwischenzeit noch weiter verschoben/durchlaufen wurde, dann wird die Datenquelle erneut aufgerufen, um weitere Elemente zu laden, und der Zyklus wird anschließend fortgesetzt. Weitere Informationen finden Sie durch Herunterladen des [XAML-Datenbindungsbeispiel](https://code.msdn.microsoft.com/windowsapps/Data-Binding-7b1d67b5) für Windows 8.1 und der Wiederverwendung des Quellcodes in Ihrer App für Windows 10.
+Wenn sich das Elementsteuerelement dem Ende der vorhandenen Daten nähert, ruft es [**ISupportIncrementalLoading.HasMoreItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.hasmoreitems) auf. Wenn **true** zurückgegeben wird, ruft es [**ISupportIncrementalLoading.LoadMoreItemsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.loadmoreitemsasync) auf und übergibt eine empfohlene Anzahl von zu ladenden Elementen. Je nachdem, von wo die Daten (lokaler Datenträger, Netzwerk oder Cloud) geladen werden, können Sie eine andere als die empfohlene Anzahl von Elementen laden. Wenn Ihr Dienst z.B. Stapel von 50 Elementen unterstützt, aber das Elementsteuerelement nur 10 anfordert, dann können Sie 50 Elemente laden. Laden Sie die Daten vom Back-End, fügen Sie sie zur Liste hinzu, und lösen Sie über [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) oder [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) eine Änderungsbenachrichtigung aus, damit das Elementsteuerelement über die neuen Elemente informiert wird. Geben Sie außerdem die Anzahl der tatsächlich geladenen Elemente zurück. Wenn Sie weniger Artikel als empfohlen laden oder das Elementsteuerelement in der Zwischenzeit noch weiter verschoben/durchlaufen wurde, dann wird die Datenquelle erneut aufgerufen, um weitere Elemente zu laden, und der Zyklus wird anschließend fortgesetzt. Sie können mehr erfahren, indem Sie das [XAML-Datenbindungsbeispiel](https://code.msdn.microsoft.com/windowsapps/Data-Binding-7b1d67b5) für Windows8.1 herunterladen und dessen Quellcode in Ihrer Windows 10-app wiederverwenden.
 
 ## <a name="random-access-data-virtualization"></a>Datenvirtualisierung mit wahlfreiem Zugriff
 

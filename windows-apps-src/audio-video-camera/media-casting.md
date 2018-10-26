@@ -6,21 +6,20 @@ title: Medienumwandlung
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 8ba90e1538962fdb7ef1434698ea52845713c634
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: da0bb4d25166dd62372d5902ff89221d20189c22
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233859"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543298"
 ---
 # <a name="media-casting"></a>Medienumwandlung
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
-In diesem Artikel wird beschrieben, wie Sie Medien aus einer universellen Windows-App zu Remotegeräten umwandeln.
+In diesem Artikel wird beschrieben, wie Sie Medien von einer universellen Windows-App für Remotegeräte umwandeln.
 
 ## <a name="built-in-media-casting-with-mediaplayerelement"></a>Integrierte Medienumwandlung mit MediaPlayerElement
 
@@ -156,9 +155,9 @@ Implementieren Sie zum Schluss den Handler für die Schaltfläche zum Trennen. B
 
 [!code-cs[DisconnectButton](./code/MediaCasting_RS1/cs/MainPage.xaml.cs#SnippetDisconnectButton)]
 
- 
+ 
 
- 
+ 
 
 
 

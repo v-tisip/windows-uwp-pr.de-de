@@ -1,33 +1,31 @@
 ---
 author: TylerMSFT
-title: Aktivieren von apps für Websites mit app-URI-Handler
-description: Laufwerk Benutzer Engagements mit Ihrer app durch die Unterstützung von Apps für Websites-Feature.
+title: Aktivieren von apps für Websites mit app-URI-Handlern
+description: Fördern Sie Nutzer an Ihrer app durch die Unterstützung von Apps für Websites Feature.
 keywords: Deep-Links in Windows
 ms.author: twhitney
 ms.date: 08/25/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
 ms.localizationpriority: medium
-ms.openlocfilehash: 8482c3b14a6845dc3bfd5912c8260b5cd3214249
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 7f6438b8d1d7b8a8ce47ed4e5baddcb59285e660
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "958313"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548824"
 ---
-# <a name="enable-apps-for-websites-using-app-uri-handlers"></a>Aktivieren von apps für Websites mit app-URI-Handler
+# <a name="enable-apps-for-websites-using-app-uri-handlers"></a>Aktivieren von apps für Websites mit app-URI-Handlern
 
-Apps für Websites ordnet Ihre app mit einer Website, sodass Ihre app Wenn jemand einen Link zu Ihrer Website geöffnet wird, anstatt den Browser öffnen gestartet werden ist. Wenn Ihre app nicht installiert ist, wird Ihre Website im Browser die wie gewohnt geöffnet. Benutzer können dieser Erfahrung vertrauen, da nur Urheber verifizierten Contents registrieren können. Benutzer können alle ihre registrierten Web-app-Hyperlinks prüfen, indem Sie auf Einstellungen > Apps > Apps für Websites.
+Apps für Websites ordnet Ihrer app mit einer Website, sodass Ihre app, wenn ein Benutzer einen Link zu Ihrer Website öffnet, statt des Browsers gestartet werden wird. Wenn Ihre app nicht installiert ist, öffnet Ihre Website wie gewohnt im Browser. Benutzer können dieser Erfahrung vertrauen, da nur Urheber verifizierten Contents registrieren können. Benutzer kann auf alle ihre registrierten Web-zu-app Hyperlinks überprüfen, indem Sie zu Einstellungen > Apps > Apps für Websites.
 
-Zum Aktivieren der Web-an-app-verknüpfen Sie müssen:
+Um Web-zu-app Verlinkung zu aktivieren müssen:
 - Identifizieren Sie die URIs, die Ihrer App in der Manifestdatei behandeln wird.
-- Ein JSON-Datei, die die Zuordnung zwischen Ihrer app und Ihrer Website definiert. mit der app-Familie Paketname am gleichen Host Stamm als die app-Manifestdatei Methodendeklaration hinzu.
+- Eine JSON-Datei, die Zuordnung zwischen Ihrer app und Ihre Website definiert. mit dem Paketfamiliennamen app im selben Stammverzeichnis wie die app-manifest Deklaration.
 - Behandeln Sie die Aktivierung in der App
 
 > [!Note]
-> Beginnend mit dem 10 Ersteller von Windows Update, wird unterstützte Links in Microsoft Edge geklickt die entsprechende app gestartet. Unterstützte Links geklickt in anderen Browsern (z. B. Internet Explorer, usw.), wird Sie in das Browsen beibehalten.
+> Ab Windows 10 Creators Update, wird unterstützten Links in Microsoft Edge geklickt die entsprechende app gestartet. Unterstützte Links geklickt in anderen Browsern (z. B. Internet Explorer, usw.), wird Sie in das Browsen erhalten bleiben.
 
 ## <a name="register-to-handle-http-and-https-links-in-the-app-manifest"></a>Registrieren Sie sich, um HTTP- und Https-Links im App-Manifest zu behandeln.
 
@@ -80,7 +78,7 @@ Das obige für eine JSON-Datei veranschaulicht die Verwendung von Platzhaltern. 
 | **\***       | Repräsentiert eine beliebige Teilzeichenfolge      |
 | **?**        | Steht für ein einzelnes Zeichen |
 
-Angenommen, `"excludePaths" : [ "/news/*", "/blog/*" ]` im obigen Beispiel Ihre app unterstützt alle Pfade, die mit Ihrer Website-Adressen (z. B. MSN-), **außer** denen unter beginnen `/news/` und `/blog/`. **msn.com/weather.html** wird unterstützt, aber nicht ****msn.com/news/topnews.html****.
+Angenommen, `"excludePaths" : [ "/news/*", "/blog/*" ]` im obigen Beispiel wird Ihre app alle Pfade, die mit Ihrer Website Adresse (z. B. msn.com), **mit Ausnahme von** Pfade unter beginnen unterstützen `/news/` und `/blog/`. **msn.com/weather.html** wird unterstützt, aber nicht ****msn.com/news/topnews.html****.
 
 ### <a name="multiple-apps"></a>Mehrere Apps
 
@@ -168,9 +166,9 @@ Testen Sie die Konfiguration Ihrer App und, indem Sie dieses Werkzeug mit folgen
 -   Paketfamiliennamen (PFN): Ihre App-PFN
 -   Dateipfad: die JSON-Datei für die lokale Überprüfung (z. B. C:\\SomeFolder\\windows-App-Web-link)
 
-Wenn das Tool nicht nichts zurück, funktioniert die Überprüfung für diese Datei beim Hochladen. Wenn ein Fehlercode vorhanden ist, ist dieser nicht funktionsfähig.
+Wenn das Tool keine nichts zurückgibt, funktioniert Überprüfung für diese Datei beim Hochladen. Wenn ein Fehlercode vorhanden ist, wird es nicht funktionieren.
 
-Sie können den folgenden Registrierungsschlüssel so erzwingen Sie Pfad Abgleich für apps Seite geladen als Teil des lokalen Validierung aktivieren:
+Sie können den folgenden Registrierungsschlüssel Pfad Abgleich für quergeladene apps als Teil des lokalen Überprüfung erzwingen aktivieren:
 
 `HKCU\Software\Classes\LocalSettings\Software\Microsoft\Windows\CurrentVersion\
 AppModel\SystemAppData\YourApp\AppUriHandlers`
@@ -199,7 +197,7 @@ Wenn Sie der protocol activation logic zu folgen möchten, legen Sie einen Halte
 
 ## <a name="see-also"></a>Siehe auch
 
-[Web-App-Beispielprojekt](https://github.com/project-rome/AppUriHandlers/tree/master/NarwhalFacts)
-[windows.protocol Registrierung](https://msdn.microsoft.com/library/windows/apps/br211458.aspx)
-[Behandeln URI Aktivierung](https://msdn.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
-[Zuordnung starten Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) veranschaulicht, wie die LaunchUriAsync()-API verwenden.
+[Web-zu-App-Beispielprojekt](https://github.com/project-rome/AppUriHandlers/tree/master/NarwhalFacts)
+[windows.protocol-Registrierung](https://msdn.microsoft.com/library/windows/apps/br211458.aspx)
+[Behandeln der URI-Aktivierung](https://msdn.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
+[Zuordnung starten-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) veranschaulicht, wie die LaunchUriAsync() API verwenden.

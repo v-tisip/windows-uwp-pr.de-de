@@ -6,18 +6,17 @@ title: Verarbeiten von Mediendateien im Hintergrund
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 8d3166b40120799818598300a049a4148a40d2cc
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 866fedf35aa6f1f585825195b18cdd1fed4bad11
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233828"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548371"
 ---
 # <a name="process-media-files-in-the-background"></a>Verarbeiten von Mediendateien im Hintergrund
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 In diesem Artikel wird beschrieben, wie Sie [**MediaProcessingTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806005) und eine Hintergrundaufgabe verwenden, um Mediendateien im Hintergrund zu verarbeiten.
@@ -127,9 +126,13 @@ Registrieren Sie die Hintergrundaufgabe durch Aufrufen von [**Register**](https:
 
 [!code-cs[RegisterBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetRegisterBackgroundTask)]
 
-Starten Sie die Hintergrundaufgabe durch Aufrufen der [**RequestAsync**](https://msdn.microsoft.com/library/windows/apps/dn765071)-Methode des **MediaProcessingTrigger**-Objekts. Das von dieser Methode zurückgegebene [**MediaProcessingTriggerResult**](https://msdn.microsoft.com/library/windows/apps/dn806007)-Objekt informiert Sie darüber, ob die Hintergrundaufgabe erfolgreich gestartet wurde. Zudem teilt es Ihnen bei einem Fehler mit, warum die Hintergrundaufgabe nicht gestartet wurde.
+Eine typische app wird ihre Hintergrundaufgabe registriert, wenn die app anfänglich gestartete, z. B. des **OnNavigatedTo** -Ereignisses wird.
+
+Starten Sie die Hintergrundaufgabe durch Aufrufen der [**RequestAsync**](https://msdn.microsoft.com/library/windows/apps/dn765071)-Methode des **MediaProcessingTrigger**-Objekts. Das von dieser Methode zurückgegebene [**MediaProcessingTriggerResult**](https://msdn.microsoft.com/library/windows/apps/dn806007)-Objekt informiert Sie darüber, ob die Hintergrundaufgabe erfolgreich gestartet wurde. Zudem teilt es Ihnen bei einem Fehler mit, warum die Hintergrundaufgabe nicht gestartet wurde. 
 
 [!code-cs[LaunchBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetLaunchBackgroundTask)]
+
+Eine typische app startet die Hintergrundaufgabe in Reaktion auf Benutzerinteraktionen, z. B. im Ereignis **Klicken Sie auf** ein UI-Steuerelement.
 
 Der **OnProgress**-Ereignishandler wird aufgerufen, wenn die Hintergrundaufgabe den Vorgangsstatus aktualisiert. Sie können diese Möglichkeit nutzen, um die Benutzeroberfläche mit Statusinformationen zu aktualisieren.
 
@@ -140,9 +143,9 @@ Der **OnCompleted**-Ereignishandler wird aufgerufen, wenn die Ausführung der Hi
 [!code-cs[OnCompleted](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetOnCompleted)]
 
 
- 
+ 
 
- 
+ 
 
 
 

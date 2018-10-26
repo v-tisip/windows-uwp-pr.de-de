@@ -5,16 +5,15 @@ description: Erfahren Sie, wie Sie auf Xbox-Entwicklereinstellungen zugreifen.
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: 6ab12b99-2944-49c9-92d9-f995efc4f6ce
-ms.openlocfilehash: dfde4c45a4aa5a520e0aa98cd7f31f7d84854e08
-ms.sourcegitcommit: 0e44f197e7e649d542ec3f67cd790a61dbe1226f
+ms.localizationpriority: medium
+ms.openlocfilehash: 8f3d0c09b242f8d60b06ee0dc510ad9a756466c5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2017
-ms.locfileid: "662506"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544560"
 ---
 # <a name="developer-settings-api-reference"></a>Referenz zur API für Entwicklereinstellungen   
 Mit dieser API können Sie auf Xbox One-Einstellungen zugreifen, die für die Entwicklung nützlich sind.
@@ -44,18 +43,20 @@ GET | /ext/settings
 **Antwort**   
 Die Antwort ist ein JSON-Einstellungsarray mit allen Einstellungen. Jedes Einstellungsobjekt enthält die folgenden Felder:
 
-Name (Zeichenfolge): Der Name der Einstellung.
-Value (Zeichenfolge): Der Wert der Einstellung.
-RequiresReboot („Yes“|„No“): Dieses Feld gibt an, ob ein Neustart erforderlich ist, damit die Einstellung wirksam wird.
-Disabled – („Yes“ | „No“): Dieses Feld gibt an, ob die Einstellung deaktiviert ist und nicht bearbeitet werden kann.
-Category (String): Die Kategorie der Einstellung.
-Type („Text“ | „Number“ | „Bool“ | „Select“): Dieses Feld gibt den Einstellungstyp an– Texteingabe, ein boolescher Wert („true“ oder „false“), eine Zahl mit einem Mindestwert oder Maximalwert oder Auswahl aus einer bestimmten Liste mit Werten.
+* Name (Zeichenfolge): Der Name der Einstellung.
+* Value (Zeichenfolge): Der Wert der Einstellung.
+* RequiresReboot („Yes“|„No“): Dieses Feld gibt an, ob ein Neustart erforderlich ist, damit die Einstellung wirksam wird.
+* Disabled – („Yes“ | „No“): Dieses Feld gibt an, ob die Einstellung deaktiviert ist und nicht bearbeitet werden kann.
+* Category (String): Die Kategorie der Einstellung.
+* Type („Text“ | „Number“ | „Bool“ | „Select“): Dieses Feld gibt den Einstellungstyp an– Texteingabe, ein boolescher Wert („true“ oder „false“), eine Zahl mit einem Mindestwert oder Maximalwert oder Auswahl aus einer bestimmten Liste mit Werten.
 
-Wenn die Einstellung eine Zahl ist; Min. – (Number): Dieses Feld gibt den numerischen Mindestwert der Einstellung an.
-Max. – (Number): Dieses Feld gibt den numerischen Maximalwert der Einstellung an.
+Wenn die Einstellung eine Zahl ist:
+* Min. – (Number): Dieses Feld gibt den minimalen numerischen Wert der Einstellung an.
+* Max. – (Number): Dieses Feld gibt den numerischen Maximalwert der Einstellung.
 
-Wenn die Einstellung „Select“ ist; OptionsVariable – („Yes“ | „No“): Dieses Feld gibt an, ob die Einstellungsoptionen variabel sind und ob die gültigen Optionen ohne Neustart geändert werden können.
-Options: JSON-Array mit den gültigen Auswahloptionen als Zeichenfolgen.
+Wenn die Einstellung "select" ist:
+* OptionsVariable – ("Yes" | "No") dieses Feld gibt an, ob die Einstellungsoptionen variabel sind, ob die gültigen Optionen ohne Neustart geändert werden können.
+* Options: JSON-Array mit den gültigen Auswahloptionen als Zeichenfolgen.
 
 **Statuscode**
 
@@ -93,18 +94,20 @@ GET | /ext/settings/\<setting name\>
 **Antwort**   
 Die Antwort ist ein JSON-Objekt mit folgenden Feldern:
 
-Name (Zeichenfolge): Der Name der Einstellung.
-Value (Zeichenfolge): Der Wert der Einstellung.
-RequiresReboot („Yes“|„No“): Dieses Feld gibt an, ob ein Neustart erforderlich ist, damit die Einstellung wirksam wird.
-Disabled – („Yes“ | „No“): Dieses Feld gibt an, ob die Einstellung deaktiviert ist und nicht bearbeitet werden kann.
-Category (String): Die Kategorie der Einstellung.
-Type („Text“ | „Number“ | „Bool“ | „Select“): Dieses Feld gibt den Einstellungstyp an– Texteingabe, ein boolescher Wert („true“ oder „false“), eine Zahl mit einem Mindestwert oder Maximalwert oder Auswahl aus einer bestimmten Liste mit Werten.
+* Name (Zeichenfolge): Der Name der Einstellung.
+* Value (Zeichenfolge): Der Wert der Einstellung.
+* RequiresReboot („Yes“|„No“): Dieses Feld gibt an, ob ein Neustart erforderlich ist, damit die Einstellung wirksam wird.
+* Disabled – („Yes“ | „No“): Dieses Feld gibt an, ob die Einstellung deaktiviert ist und nicht bearbeitet werden kann.
+* Category (String): Die Kategorie der Einstellung.
+* Type („Text“ | „Number“ | „Bool“ | „Select“): Dieses Feld gibt den Einstellungstyp an– Texteingabe, ein boolescher Wert („true“ oder „false“), eine Zahl mit einem Mindestwert oder Maximalwert oder Auswahl aus einer bestimmten Liste mit Werten.
 
-Wenn die Einstellung eine Zahl ist; Min. – (Number): Dieses Feld gibt den numerischen Mindestwert der Einstellung an.
-Max. – (Number): Dieses Feld gibt den numerischen Maximalwert der Einstellung an.
+Wenn die Einstellung eine Zahl ist:
+* Min. – (Number): Dieses Feld gibt den minimalen numerischen Wert der Einstellung an.
+* Max. – (Number): Dieses Feld gibt den numerischen Maximalwert der Einstellung.
 
-Wenn die Einstellung „Select“ ist; OptionsVariable – („Yes“ | „No“): Dieses Feld gibt an, ob die Einstellungsoptionen variabel sind und ob die gültigen Optionen ohne Neustart geändert werden können.
-Options: JSON-Array mit den gültigen Auswahloptionen als Zeichenfolgen.
+Wenn die Einstellung "select" ist:
+* OptionsVariable – ("Yes" | "No") dieses Feld gibt an, ob die Einstellungsoptionen variabel sind, ob die gültigen Optionen ohne Neustart geändert werden können.
+* Options: JSON-Array mit den gültigen Auswahloptionen als Zeichenfolgen.
 
 **Statuscode**
 

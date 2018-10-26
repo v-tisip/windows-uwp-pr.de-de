@@ -6,16 +6,14 @@ title: Löschen einer Add-On-Übermittlung
 ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-On-Übermittlung, löschen, In-App-Produkt, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c4b9214f821c23c7507562512e8337820db1fc0
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 4c5d9e905f6b3d8acffc53e943d946f6ac7c3c68
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5517186"
+ms.locfileid: "5547025"
 ---
 # <a name="delete-an-add-on-submission"></a>Löschen einer Add-On-Übermittlung
 

@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8706b10756eeec5d4b8a872c0d436a157ef74970
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: bcfdb8f6258547ff210d80136a6113e04092aad2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044939"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545833"
 ---
 # <a name="span-iddirect3dconceptsfloating-pointrulesspanfloating-point-rules"></a><span id="direct3dconcepts.floating-point_rules"></span>Regeln für Gleitkommazahlen
 
@@ -33,12 +31,10 @@ Es gibt zwei Gruppen von Regeln – solche, die IEEE-754 entsprechen, und solche
 Einige dieser Regeln entsprechen nur einer einzigen der von IEEE-754 angebotenen Optionen.
 
 -   Die Division durch 0 ergibt +/-INF. Ausnahme: 0/0 ergibt NaN.
--   Die Berechnung des Logarithmus von (+/-) 0 ergibt -INF.
-     
+-   Die Berechnung des Logarithmus von (+/-) 0 ergibt -INF.  
 
     Die Berechnung des Logarithmus eines negativen Werts (außer -0) ergibt NaN.
--   Die Berechnung der reziproken Quadratwurzel (rsq) oder der Quadratwurzel (sqrt) einer negativen Zahl ergibt NaN.
-     
+-   Die Berechnung der reziproken Quadratwurzel (rsq) oder der Quadratwurzel (sqrt) einer negativen Zahl ergibt NaN.  
 
     Die Ausnahme ist -0: sqrt(-0) ergibt -0, und rsq(-0) ergibt -INF.
 -   INF - INF = NaN
@@ -158,9 +154,9 @@ Die Regeln für 32-Bit-Gleitkommazahlen gelten auch für 11-Bit- und 10-Bit-Glei
 
 [Texturen](https://msdn.microsoft.com/library/windows/desktop/ff476902)
 
- 
+ 
 
- 
+ 
 
 
 

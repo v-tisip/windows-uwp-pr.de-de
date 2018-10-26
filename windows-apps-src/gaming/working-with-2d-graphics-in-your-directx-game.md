@@ -6,19 +6,18 @@ ms.assetid: ad69e680-d709-83d7-4a4c-7bbfe0766bc7
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Directx, 2D, Grafiken
-ms.openlocfilehash: 702b47d4002e9a2d0d62cc67e71432bb630e21d4
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 8628588cdc20179e9505e45694d43788eb1d7cb6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233681"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543155"
 ---
 # <a name="2d-graphics-for-directx-games"></a>2D-Grafiken für DirectX-Spiele
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Hier finden Sie Informationen zum Einsatz von 2D-Bitmapgrafiken und -effekten im Allgemeinen und in Ihrem Spiel.
 
@@ -62,16 +61,3 @@ In Sachen Optik sind großartige Grafiken Ihre wichtigste Ressource. Ihre Bitmap
 -   [Übersicht über Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987)
 -   [Schnellstartanleitung für Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd535473)
 -   [Übersicht über die Interoperabilität von Direct2D und Direct3D](https://msdn.microsoft.com/library/windows/desktop/dd370966)
-
-> **Hinweis**  
-Dieser Artikel ist für Windows10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
-
- 
-
- 
-
- 
-
-
-
-

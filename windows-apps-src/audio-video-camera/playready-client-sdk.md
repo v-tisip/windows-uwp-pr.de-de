@@ -6,16 +6,14 @@ title: PlayReady DRM
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: c466587a9e1d190368de0f142fea9d902e731aba
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.openlocfilehash: 773216dc392f7bb234e232f3dd3e7c2190a22de1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1692195"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543767"
 ---
 # <a name="playready-drm"></a>PlayReady DRM
 
@@ -23,7 +21,7 @@ ms.locfileid: "1692195"
 
 In diesem Abschnitt wird beschrieben, wie Sie Ihrer UWP-App (Universelle Windows-Plattform) PlayReady-geschützte Medieninhalte hinzufügen.
 
-PlayReady DRM ermöglicht Entwicklern das Erstellen von UWP-Apps, die PlayReady-geschützte Inhalte für den Benutzer bereitstellen und gleichzeitig vom Inhaltsanbieter definierte Regeln erzwingen können. In diesem Abschnitt werden die Änderungen beschrieben, die für Windows 10 am Microsoft PlayReady DRM vorgenommen wurden. Außerdem wird erläutert, wie Sie Ihre UWP-App mit PlayReady ändern, um die Änderungen in der Windows 10-Version (gegenüber der Windows 8.1-Version) zu unterstützen.
+PlayReady DRM ermöglicht Entwicklern das Erstellen von UWP-Apps, die PlayReady-geschützte Inhalte für den Benutzer bereitstellen und gleichzeitig vom Inhaltsanbieter definierte Regeln erzwingen können. Dieser Abschnitt beschreibt die Änderungen an Microsoft PlayReady DRM für Windows 10 sowie zum Ändern Ihrer PlayReady-UWP-app, um die Änderungen, die aus der vorherigen Version Windows8.1 in die Windows 10-Version zu unterstützen.
  
 | Thema                                                                     | Beschreibung                                                                                                                                                                                                                                                                             |
 |---------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -32,7 +30,7 @@ PlayReady DRM ermöglicht Entwicklern das Erstellen von UWP-Apps, die PlayReady-
 
 ## <a name="whats-new-in-playready-drm"></a>Neuigkeiten bei PlayReady DRM
 
-In der folgenden Liste werden die neuen Features und Änderungen von PlayReady DRM unter Windows10 beschrieben.
+Die folgende Liste beschreibt die neuen Features und Änderungen von PlayReady DRM für Windows 10.
 
 -   Hardwarebasierte Verwaltung digitaler Rechte (Hardware Digital Rights Management, HWDRM) wurde hinzugefügt.
 
@@ -409,16 +407,16 @@ Die folgende Tabelle beschreibt die Implementierung von PlayReady DRM für Windo
 Bevor Sie mit der Erstellung Ihrer PlayReady-geschützten UWP-App beginnen, müssen Sie die folgende Software auf Ihrem System installieren:
 
 -   Windows 10.
--   Wenn Sie Beispiele für PlayReady DRM für UWP-Apps kompilieren, müssen Sie Microsoft Visual Studio 2015 oder höher zum Kompilieren der Beispiele verwenden. Microsoft Visual Studio 2013 kann weiterhin zum Kompilieren der Beispiele aus PlayReady DRM für Windows 8.1-Store-Apps verwendet werden.
+-   Wenn Sie die Beispiele für PlayReady DRM für UWP-apps kompilieren, müssen Sie Microsoft Visual Studio2015 verwenden oder höher zum Kompilieren der Beispiele. Sie können Microsoft Visual Studio2013 weiterhin zum Kompilieren der Beispiele aus PlayReady DRM für Windows8.1 Store-Apps verwenden.
 
 <!--This is no longer available-->
 <!--If you are planning to play back MPEG-2/H.262 content on your app, you must also download and install [Windows 8.1 Media Center Pack](http://go.microsoft.com/fwlink/p/?LinkId=626876).-->
 
 ## <a name="playready-uwp-app-migration-guide"></a>Migrationshandbuch für UWP-Apps mit PlayReady
 
-Dieser Abschnitt enthält Informationen zum Migrieren Ihrer vorhandenen Windows8.x-Store-Apps mit PlayReady zu Windows10.
+Dieser Abschnitt enthält Informationen zum Migrieren Ihrer vorhandenen PlayReady Windows 8.x-Store-apps zu Windows 10.
 
-Der Namespace für UWP-Apps mit PlayReady unter Windows 10 wurde von **Microsoft.Media.PlayReadyClient** in [**Windows.Media.Protection.PlayReady**](https://msdn.microsoft.com/library/windows/apps/dn986454) geändert. Sie müssen also in Ihrem Code den alten Namespace suchen und durch den neuen Namespace ersetzen. Sie verweisen weiterhin auf eine WINMD-Datei. Sie ist Teil von „windows.media.winmd“ im Betriebssystem Windows 10. Sie ist in „windows.winmd“ als Teil des TH WindowsSDK enthalten. Bei UWP wird darauf in „windows.foundation.univeralappcontract.winmd“ verwiesen.
+Der Namespace für PlayReady-UWP-apps unter Windows 10 wurde von **Microsoft.Media.PlayReadyClient** in [**Windows.Media.Protection.PlayReady**](https://msdn.microsoft.com/library/windows/apps/dn986454)geändert. Sie müssen also in Ihrem Code den alten Namespace suchen und durch den neuen Namespace ersetzen. Sie verweisen weiterhin auf eine WINMD-Datei. Es ist Teil des windows.media.winmd des Betriebssystems Windows 10. Sie ist in „windows.winmd“ als Teil des TH WindowsSDK enthalten. Bei UWP wird darauf in „windows.foundation.univeralappcontract.winmd“ verwiesen.
 
 Zum Wiedergeben von PlayReady-geschützten High-Definition (HD)-Inhalten (1080p) und Ultra-High-Definition (UHD)-Inhalten müssen Sie das Hardware-DRM mit PlayReady implementieren. Informationen zum Implementieren des Hardware-DRM mit PlayReady finden Sie unter [Hardware-DRM](hardware-drm.md).
 

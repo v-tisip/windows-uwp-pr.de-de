@@ -5,16 +5,14 @@ description: Eine Übersicht über die Emulation von x86-Apps auf ARM.
 ms.author: misatran
 ms.date: 02/15/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10 s, always connected, x86-emulation of ARM
 ms.localizationpriority: medium
-ms.openlocfilehash: d8304bb49b1eeeea8b0aa17f7548197a360cbcf8
-ms.sourcegitcommit: 11edca90aaf7856c762e68903483079d30ad3877
-ms.translationtype: HT
+ms.openlocfilehash: 6b596ab9abd31fa10d0ca07dec973082b495262e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2018
-ms.locfileid: "1595135"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548582"
 ---
 # <a name="how-x86-emulation-works-on-arm"></a>Funktionsweise der x86-Emulation auf ARM
 Emulation für x86-Anwendungen macht das reichhaltige Ökosystem von Win32-Anwendungen auf ARM verfügbar. Dies bietet dem Benutzer die einzigartige Erfahrung, eine bestehende x86 win32-App ohne Änderungen an der App auszuführen. Die App selbst weiß nicht einmal, dass sie unter Windows auf einem ARM-PC ausgeführt wird, es sei denn, sie ruft bestimmte APIs auf ([IsWoW64Process2](https://msdn.microsoft.com/en-us/library/windows/desktop/mt804318.aspx)).

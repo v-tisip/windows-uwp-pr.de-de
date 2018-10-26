@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: ee3948fc4c7ab83657e8bca127306bb037d491a8
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
-ms.translationtype: HT
+ms.openlocfilehash: 7c0fcd158dac77b3b3322167b82131e51f62390f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
-ms.locfileid: "1494137"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544246"
 ---
 # <a name="images-and-image-brushes"></a>Bilder und Bildpinsel
 
@@ -60,7 +58,7 @@ Hier ist das gerenderte Image-Objekt.
 
 ![Beispiel für ein Image-Element](images/Image_Licorice.jpg)
 
-Die [Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx)-Eigenschaft in diesem Beispiel gibt den Speicherort des Bildes an, das Sie anzeigen möchten. Sie können die Quelle festlegen, indem Sie die absolute URL (z.B. „http://contoso.com/myPicture.jpg“) oder eine URL relativ zu Ihrer App-Verpackungsstruktur angeben. In unserem Beispiel legen wir die Bilddatei „licorice.jpg“ im Stammverzeichnis unseres Projekts ab und deklarieren Projekteinstellungen, die die Bilddatei als Inhalt einbeziehen.
+Die [Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx)-Eigenschaft in diesem Beispiel gibt den Speicherort des Bildes an, das Sie anzeigen möchten. Sie können die Quelle festlegen, indem Sie die absolute URL (z. B. http://contoso.com/myPicture.jpg) oder indem Sie eine URL relativ zu Ihrer app-Verpackungsstruktur angeben. In unserem Beispiel legen wir die Bilddatei „licorice.jpg“ im Stammverzeichnis unseres Projekts ab und deklarieren Projekteinstellungen, die die Bilddatei als Inhalt einbeziehen.
 
 ### <a name="imagebrush"></a>ImageBrush
 

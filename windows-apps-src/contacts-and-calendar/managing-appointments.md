@@ -6,19 +6,17 @@ ms.assetid: 292E9249-07C3-4791-B32C-6EC153C2B538
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Termine, Kalender
-ms.openlocfilehash: d4bc4832dd489508eabbddd486f782ac8b0191a3
-ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.localizationpriority: medium
+ms.openlocfilehash: 345bbabb2bd80f0cbb8465941bec07c7172156e8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2017
-ms.locfileid: "665700"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548920"
 ---
 # <a name="manage-appointments"></a>Verwalten von Terminen
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Mit dem [**Windows.ApplicationModel.Appointments**](https://msdn.microsoft.com/library/windows/apps/Dn263359)-Namespace können Sie in der Kalender-App eines Benutzers Termine erstellen und verwalten. Hier erfahren Sie, wie Sie einen Termin erstellen, einer Kalender-App hinzufügen, in der Kalender-App ersetzen und aus der Kalender-App entfernen. Außerdem wird erläutert, wie Sie eine Zeitspanne für eine Kalender-App anzeigen und ein Terminwiederholungsobjekt erstellen.
@@ -286,7 +284,7 @@ private async void Add-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-**Hinweis**  Bei WindowsPhone Store-Apps funktioniert [**ShowAddAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) insofern genau wie [**ShowEditNewAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync), als das zum Hinzufügen des Termins angezeigte Dialogfeld bearbeitet werden kann.
+**Hinweis:** für Windows Phone Store-apps, [**ShowAddAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) Funktionen wie [**ShowEditNewAppointment**](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) , das zum Hinzufügen des Termins angezeigte Dialogfeld bearbeitet werden kann.
 
 ## <a name="replace-an-appointment-in-the-users-calendar"></a>Ersetzen eines Termins im Kalender des Benutzers
 
@@ -574,6 +572,6 @@ Sie verfügen nun über Grundkenntnisse zur Terminverwaltung. Laden Sie die [Bei
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Beispiel zur Termin-API](http://go.microsoft.com/fwlink/p/?linkid=309836)
- 
+ 
 
- 
+ 

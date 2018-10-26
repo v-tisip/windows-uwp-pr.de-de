@@ -5,16 +5,14 @@ description: Hier erfahren Sie, wie Sie die Anzahl der angeschlossenen physische
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 292c9c29149b56b9be4255215e97e703278d8abf
-ms.sourcegitcommit: c104b653601d9b81cfc8bb6032ca434cff8fe9b1
-ms.translationtype: HT
+ms.openlocfilehash: 5e0b85293ada8619246c3c23ef2103ead5f40c23
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "1921246"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5547058"
 ---
 # <a name="controller-api-reference"></a>Controller– API-Referenz   
 Mit dieser REST-API können Sie die Anzahl der angeschlossenen physischen Controller abrufen und deaktivieren.

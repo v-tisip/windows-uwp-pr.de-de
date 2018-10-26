@@ -6,16 +6,14 @@ description: Jedem Gerät sind DeviceInformation-Eigenschaften zugeordnet, die S
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c8fe51fd98f70e6f920a7421a9932e69bba11377
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 2ad87bdfa468c98a2e10d57f81b8e8d187bfbcef
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "959246"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543367"
 ---
 # <a name="device-information-properties"></a>Geräteinformationseigenschaften
 
@@ -35,10 +33,10 @@ Ein [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR22
 
 Ein [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)-Objekt verfügt über einige grundlegende Eigenschaften, z. B. [**Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id) und [**Kind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.kind.aspx), aber die meisten Eigenschaften werden in einer Eigenschaftensammlung unter [**Properties**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.properties.aspx) gespeichert. Aus diesem Grund enthält die Eigenschaftensammlung die Eigenschaften, mit denen die Eigenschaften aus der Eigenschaftensammlung bezogen werden. Verwenden Sie z. B. [System.ItemNameDisplay](https://msdn.microsoft.com/library/windows/desktop/Bb760770), um die [**Name**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.name)-Eigenschaft zu beziehen. Dabei handelt es sich um eine gängige und bekannte Eigenschaft mit einem benutzerfreundlichen Namen. Windows stellt mehrere dieser benutzerfreundlichen Namen bereit, um die Abfrage von Eigenschaften zu erleichtern.
 
-Beim Anfordern von Eigenschaften sind Sie nicht auf allgemeine Eigenschaften mit benutzerfreundlichen Namen beschränkt. Sie können die zugrunde liegende GUID und Eigenschafts-ID (Property ID, PID) angeben, um eine beliebige verfügbare Eigenschaft anzufordern – auch benutzerdefinierte Eigenschaften, die von einem bestimmten Gerät oder Treiber bereitgestellt werden. Das Format für die Angabe einer benutzerdefinierten Eigenschaft lautet „`{GUID} PID`“. Beispiel: "`{744e3bed-3684-4e16-9f8a-07953a8bf2ab} 7`". 
+Beim Anfordern von Eigenschaften sind Sie nicht auf allgemeine Eigenschaften mit benutzerfreundlichen Namen beschränkt. Sie können die zugrunde liegende GUID und Eigenschafts-ID (Property ID, PID) angeben, um eine beliebige verfügbare Eigenschaft anzufordern – auch benutzerdefinierte Eigenschaften, die von einem bestimmten Gerät oder Treiber bereitgestellt werden. Das Format für die Angabe einer benutzerdefinierten Eigenschaft lautet „`{GUID} PID`“. Zum Beispiel: "`{744e3bed-3684-4e16-9f8a-07953a8bf2ab} 7`". 
 
 > [!Note]
-> Die Liste der GUIDs-Eigenschaft finden Sie in der Geräte-Eigenschaft wichtige Headerdatei des Gerätetreibers.
+> Die Liste der Eigenschaft GUIDs finden Sie in der Eigenschaft schlüsselkopf Datei des Gerätetreibers.
 
 Einige Eigenschaften gelten für alle [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind)-Objekte, aber die meisten sind für eine bestimmte Art vorgesehen. Die folgenden Abschnitte enthalten einige allgemeine Eigenschaften, die nach den einzelnen **DeviceInformationKind**-Elementen sortiert sind. Weitere Informationen zu den Beziehungen zwischen den verschiedenen Arten finden Sie unter **DeviceInformationKind**.
 
@@ -57,7 +55,7 @@ Einige Eigenschaften gelten für alle [**DeviceInformationKind**](https://msdn.m
 | **System.Devices.Icon**               | String  | Symbolpfad.                                                                                                                                                                                                                                                                                                                                                                                                |
 | **System.ItemNameDisplay**            | String  | Der beste Anzeigenamen für das Geräteobjekt.                                                                                                                                                                                                                                                                                                                                                              |
 
- 
+ 
 
 ## <a name="device-properties"></a>Geräteeigenschaften
 
@@ -75,7 +73,7 @@ Einige Eigenschaften gelten für alle [**DeviceInformationKind**](https://msdn.m
 | **System.Devices.Present**            | Boolescher Wert    | Gibt an, ob das Gerät derzeit vorhanden und verfügbar ist.                                                                                                                                                                                                                         |
 | **System.ItemNameDisplay**            | String     | Der beste Anzeigename für dieses Geräteobjekt. In diesem Fall ist dies nicht unbedingt der beste Name für Benutzer. Benutzerfreundlichere Namen lassen sich eher durch einen Verweis auf die **System.ItemNameDisplay** des zugeordneten **DeviceContainer** oder der zugeordneten **DeviceInterface** finden. |
 
- 
+ 
 
 ## <a name="devicecontainer-properties"></a>DeviceContainer-Eigenschaften
 
@@ -95,7 +93,7 @@ Einige Eigenschaften gelten für alle [**DeviceInformationKind**](https://msdn.m
 | **System.Devices.Paired**         | Boolescher Wert    | Gibt an, ob eines der untergeordneten **DeviceInformationKind.Device**-Objekte ein Drahtlos- oder Netzwerkgerät ist, das derzeit mit dem System gekoppelt ist.             |
 | **System.ItemNameDisplay**        | String     | Der beste Anzeigename für dieses Gerät.                                                                                                                             |
 
- 
+ 
 
 ## <a name="deviceinterfaceclass-properties"></a>DeviceInterfaceClass-Eigenschaften
 
@@ -103,7 +101,7 @@ Einige Eigenschaften gelten für alle [**DeviceInformationKind**](https://msdn.m
 |----------------------------|--------|----------------------------------------|
 | **System.ItemNameDisplay** | String | Der beste Anzeigename für dieses Gerät. |
 
- 
+ 
 
 ## <a name="associationendpoint-properties"></a>AssociationEndpoint-Eigenschaften
 
@@ -124,7 +122,7 @@ Einige Eigenschaften gelten für alle [**DeviceInformationKind**](https://msdn.m
 | **System.Devices.Aep.SignalStrength** | Int32      | Die Signalstärke des Geräts. Diese Eigenschaft gilt nur für bestimmte Protokolle.                                                                                                                                                                                                                                                                                                                                                                                                |
 | **System.ItemNameDisplay**            | String     | Der beste Anzeigename für das Gerät.                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
- 
+ 
 
 ## <a name="associationendpointcontainer-properties"></a>AssociationEndpointContainer-Eigenschaften
 
@@ -146,7 +144,7 @@ Einige Eigenschaften gelten für alle [**DeviceInformationKind**](https://msdn.m
 | **System.Devices.AepContainer.SupportsVideo**       | Boolescher Wert    | Gibt an, ob dieses Gerät Videoübertragungen unterstützt.                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | **System.ItemNameDisplay**                          | String     | Der beste Anzeigename für das Gerät.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
- 
+ 
 
 ## <a name="associationendpointservice-properties"></a>AssociationEndpointService-Eigenschaften
 
@@ -160,8 +158,8 @@ Einige Eigenschaften gelten für alle [**DeviceInformationKind**](https://msdn.m
 | **System.Devices.AeoService.ServiceId**         | String  | Die Identität dieses Diensts. Dies ist auch der Wert von [**DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id). |
 | **System.ItemNameDisplay**                      | String  | Der beste Anzeigename für den Dienst.                                                                           |
 
- 
+ 
 
- 
+ 
 
- 
+ 

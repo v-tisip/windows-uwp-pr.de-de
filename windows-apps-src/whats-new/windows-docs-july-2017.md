@@ -6,15 +6,13 @@ keywords: Neuigkeiten, Update, Features, Anleitungen für Entwickler, Windows10
 ms.author: quradic
 ms.date: 07/05/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e439c0b1c20f03c9519d29a24979e5008f3de94e
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.openlocfilehash: 62afbef1cc1f47bbc88c45a166572deca28d47a4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691839"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546586"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2017"></a>Neuigkeiten in der Windows-Entwicklerdokumentation im Juli 2017
 
@@ -110,7 +108,7 @@ Der Artikel [Verarbeiten von Medienframes mit MediaFrameReader](../audio-video-c
 
 ### <a name="scoped-search"></a>Begrenzter Suchbereich
 
-Der Bereich „UWP“ wurde zum [UWP-Konzeptthema](../get-started/universal-application-platform-guide.md) und der [API-Referenzdokumentation](https://docs.microsoft.com/en-us/uwp/api/) unter docs.microsoft.com hinzugefügt. Sofern dieser Bereich nicht deaktiviert ist, werden bei Suchen innerhalb von diesen Bereichen nur UWP-Dokumente zurückgegeben.
+Der [konzeptionellen UWP-Dokumentation](../get-started/universal-application-platform-guide.md) und der [API-Referenz](https://docs.microsoft.com/en-us/uwp/api/) auf docs.microsoft.com wurde der Bereich „UWP” hinzugefügt. Bis dieser Bereich deaktiviert ist, liefern Suchvorgänge in diesen Umgebungen nur UWP-Dokumente.
 
 ![Begrenzter Suchbereich](images/scoped-search.png)
 

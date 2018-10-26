@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d51d20ddaeca5aa0689104b3dd71e36b1a5d4132
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 17970d509fa2bf6b80431e1c07b5d135c7dcb112
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1043989"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544355"
 ---
 # <a name="texture3d-subresource-tiling"></a>Unterteilung von Texture3D-Unterressourcen
 
@@ -25,9 +23,9 @@ Diese Tabelle zeigt die Unterteilung von [**Texture3D**](https://msdn.microsoft.
 
 Diese Tabelle nimmt die [**Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff471525)-Unterteilung und dividiert die x/y-Dimensionen jeweils durch 4 und fügt 16 Tiefenebenen hinzu. Alle Kacheln für die erste Ebene (2D-Kachelebene, die die ersten 16 Tiefenebenen definiert) erscheinen vor allen folgenden Ebenen.
 
-**Hinweis** Die [**Texture3D**](https://msdn.microsoft.com/library/windows/desktop/ff471562)-Unterstützung in Streamingressourcen ist in der ursprünglichen Implementierung der Streamingressourcen nicht verfügbar, die gewünschten Kachelformen werden hier jedoch aufgeführt, da sie in einer künftigen Version möglicherweise unterstützt werden.
+**Hinweis:** [**Texture3D**](https://msdn.microsoft.com/library/windows/desktop/ff471562) -Unterstützung in Streamingressourcen ist in der ursprünglichen Implementierung der streaming-Ressourcen verfügbar, aber die gewünschten kachelformen werden hier aufgeführt, in einer zukünftigen Version möglicherweise unterstützt.
 
- 
+ 
 
 | Bits/Pixel (1Sample/Pixel) | Kachelabmessungen (Pixel, B x H x T) |
 |-----------------------------|---------------------------------|
@@ -39,7 +37,7 @@ Diese Tabelle nimmt die [**Texture2D**](https://msdn.microsoft.com/library/windo
 | BC1, 4                       | 128 x 64 x 16                       |
 | BC2, 3, 5, 6, 7                 | 64 x 64 x 16                        |
 
- 
+ 
 
 Format-Bitanzahlen, die bei Streamingressourcen nicht unterstützt werden, sind 96-bpp-Formate, Videoformate, DXGI\_FORMAT\_R1\_UNORM, DXGI\_FORMAT\_R8G8\_B8G8\_UNORM, and DXGI\_FORMAT\_R8R8\_G8B8\_UNORM.
 
@@ -48,9 +46,9 @@ Format-Bitanzahlen, die bei Streamingressourcen nicht unterstützt werden, sind 
 
 [So unterteilen Sie den Bereich einer Streamingressource](how-a-streaming-resource-s-area-is-tiled.md)
 
- 
+ 
 
- 
+ 
 
 
 

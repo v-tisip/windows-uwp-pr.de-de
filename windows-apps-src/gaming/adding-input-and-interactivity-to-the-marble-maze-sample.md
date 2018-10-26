@@ -6,16 +6,14 @@ ms.assetid: b946bf62-c0ca-f9ec-1a87-8195b89a5ab4
 ms.author: elcowle
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Eingabe, Beispiel
 ms.localizationpriority: medium
-ms.openlocfilehash: 2be43690726112d8597747ee51dd94baf0f40f0e
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 0b7e9a3f655b8be1b93334ed8decf9fe6fa8bbf2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1817045"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544471"
 ---
 # <a name="adding-input-and-interactivity-to-the-marble-maze-sample"></a>Hinzufügen von Eingaben und Interaktivität zum Marble Maze-Beispiel
 
@@ -27,7 +25,7 @@ UWP-Spiele können auf den verschiedensten Geräten ausgeführt werden, beispiel
 > [!NOTE]
 > Den Beispielcode für dieses Dokument finden Sie im [DirectX-Beispielspiel Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
 
- 
+ 
 Hier sind einige der wichtigsten in diesem Dokument erörterten Punkte für das Arbeiten mit Eingaben in Ihrem Spiel:
 
 -   Unterstützen Sie nach Möglichkeit mehrere Eingabegeräte, damit die Kunden Ihr Spiel ganz nach ihren persönlichen Vorlieben und Fähigkeiten spielen können. Die Verwendung eines Gamecontrollers und Sensors ist zwar optional, wird aber dringend empfohlen, um die Benutzerfreundlichkeit für die Spieler zu erhöhen. Die APIs für Gamecontroller und Sensoren soll Ihnen die Integration dieser Eingabegeräte erleichtern.
@@ -50,12 +48,12 @@ Marble Maze unterstützt Xbox-Controller, Maus und Toucheingabe zum Auswählen v
 > [!NOTE]
 > In diesem Dokument wird der Begriff Toucheingabe für Touch- und Mauseingabe und sowie Zeigereingabe verwendet. Damit sind alle Geräte gemeint, die Zeigerereignisse verwenden. Da bei der Touch- und Mauseingabe Standardzeigerereignisse verwendet werden, können Sie jedes der Geräte verwenden, um Menüelemente auszuwählen und den Spielverlauf zu steuern.
 
- 
+ 
 
 > [!NOTE]
 > Das Paketmanifest legt das **Querformat** als unterstützte Drehung für das Spiel fest. Damit wird verhindert, dass sich die Ausrichtung ändert, wenn Sie das Gerät drehen, um die Murmel zu bewegen. Um das Paketmanifest zu sehen, öffnen Sie **Package.appxmanifest** unter **Solution Explorer** in Visual Studio.
 
- 
+ 
 
 ## <a name="initializing-input-devices"></a>Initialisieren von Eingabegeräten
 
@@ -541,7 +539,7 @@ Wir überprüfen, ob die Eingabe vom linken Analogstick außerhalb des inaktiven
 > [!IMPORTANT]
 > Berücksichtigen Sie immer den inaktiven Bereich, wenn Sie mit dem Xbox-Controller arbeiten. Der inaktive Bereich bezieht sich auf die unterschiedliche Empfindlichkeit von Gamepads für die ersten Bewegungen. Bei manchen Controllern ergibt eine kleine Bewegung keinen Messwert, während sie bei anderen zu einem messbaren Ergebnis führt. Berücksichtigen Sie dies in Ihrem Spiel, indem Sie für die ersten Bewegungen des Ministicks einen Bereich für Nichtbewegungen erstellen. Weitere Informationen finden über den inaktiven Bereich finden Sie unter [Lesen der Ministicks](gamepad-and-vibration.md#reading-the-thumbsticks).
 
- 
+ 
 
 ###  <a name="applying-input-to-the-game-state"></a>Anwenden von Eingaben auf den Spielzustand
 
@@ -550,7 +548,7 @@ Geräte melden Eingabewerte auf unterschiedliche Weise. So wird eine Zeigereinga
 > [!TIP]
 > Auch wenn Ihre Anwendung eine einzige Eingabemethode verwendet, sollten Sie die Eingabewerte immer normalisieren. Auf diese Weise können Sie die Interpretation der Eingabe durch andere Komponenten des Spiels wie beispielsweise die Simulation von Physikeffekten vereinfachen und leichter Spiele schreiben, die sich für unterschiedliche Bildschirmauflösungen eignen.
 
- 
+ 
 
 Nachdem die **MarbleMazeMain::Update**-Methode die Eingabe verarbeitet hat, erstellt sie einen Vektor, der die Auswirkung der Neigung des Labyrinths auf die Murmel darstellt. Das folgende Beispiel zeigt, wie Marble Maze mit der [XMVector3Normalize](https://msdn.microsoft.com/library/windows/desktop/microsoft.directx_sdk.geometric.xmvector3normalize)-Funktion einen normalisierten Schwerkraftvektor erstellt. Die **maxTilt**-Variable schränkt die Neigung des Labyrinths ein und verhindert, dass das Labyrinth auf die Seite gekippt wird.
 
@@ -621,9 +619,9 @@ Lesen Sie [Hinzufügen von Audio zum Marble Maze-Beispiel](adding-audio-to-the-m
 * [Hinzufügen von visuellen Inhalten zum Marble Maze-Beispiel](adding-visual-content-to-the-marble-maze-sample.md)
 * [Entwickeln von Marble Maze, einem UWP-Spiel in C++ und DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
- 
+ 
 
- 
+ 
 
 
 

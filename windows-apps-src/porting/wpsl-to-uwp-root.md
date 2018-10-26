@@ -1,40 +1,39 @@
 ---
-author: mcleblanc
-description: Entwickler, die über eine Windows Phone Silverlight-App verfügen, können beim Wechsel zu Windows 10 auf Ihre Kenntnisse und Fähigkeiten zurückgreifen und Ihren vorhandenen Quellcode umfassend nutzen.
-title: Wechsel von Windows Phone Silverlight zur UWP
+author: stevewhims
+description: Wenn Sie ein mit einer WindowsPhone Silverlight-app-Entwickler sind, und klicken Sie dann Ihre und Fähigkeiten zurückgreifen und Ihren Quellcode beim Wechsel zu Windows 10 nutzen können.
+title: Wechsel von WindowsPhone Silverlight zu UWP
 ms.assetid: 9E0C0315-6097-488B-A3AF-7120CCED651A
-ms.author: markl
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-keywords: windows10, UWP
-ms.openlocfilehash: d055f576cfa56502da845e849c100f66dd0c7ccf
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+keywords: Windows10, UWP
+ms.localizationpriority: medium
+ms.openlocfilehash: eb2617fc3fbd14d17635435c8bfd6d58817a7a1b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "235148"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546652"
 ---
-#  <a name="move-from-windows-phone-silverlight-to-uwp"></a>Wechsel von Windows Phone Silverlight zur UWP
+#  <a name="move-from-windowsphone-silverlight-to-uwp"></a>Wechsel von WindowsPhone Silverlight zu UWP
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Entwickler, die über eine Windows Phone Silverlight-App verfügen, können beim Wechsel zu Windows 10 auf Ihre Kenntnisse und Fähigkeiten zurückgreifen und Ihren vorhandenen Quellcode umfassend nutzen. Mit Windows 10 können Sie eine UWP (Universelle Windows-Plattform)-App erstellen, also ein einzelnes App-Paket, das Ihre Kunden auf jeder Art von Gerät installieren können. Unter [Anleitung für UWP (Universelle Windows-Plattform)-Apps](https://msdn.microsoft.com/library/windows/apps/dn894631)finden Sie weitere Hintergrundinformationen zu Windows 10, UWP-Apps und den Konzepten von adaptivem Code und adaptiver UI, die in diesem Portierungshandbuch behandelt werden.
+Wenn Sie ein mit einer WindowsPhone Silverlight-app-Entwickler sind, und klicken Sie dann Ihre und Fähigkeiten zurückgreifen und Ihren Quellcode beim Wechsel zu Windows 10 nutzen können. Mit Windows 10 können Sie eine app (universelle Windows Plattform) erstellen, also ein einzelnes app-Paket, das Ihre Kunden auf jeder Art von Gerät installieren können. Weitere Hintergrundinformationen zu Windows 10 UWP-apps und den Konzepten von adaptivem Code und adaptiver UI, die wir in diesem portierungshandbuch erörtern werden finden Sie in der [Anleitung für universelle Windows-Plattform (UWP) apps](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
-Wenn Sie Ihre WindowsPhone Silverlight-App zu einer Windows10-App portieren, können Sie den neuesten Stand für die Mobilgerätfeatures herstellen, die [mit Windows Phone8.1 eingeführt](https://msdn.microsoft.com/library/windows/apps/dn632424) wurden. Außerdem können Sie einen großen Schritt darüber hinaus machen, indem Sie die universelle Windows-Plattform (UWP) nutzen, deren App-Modell und Benutzeroberflächenframework universell für alle Windows10-Geräte gelten. Dies ermöglicht die Unterstützung von PCs, Tablets, Telefonen und einer großen Zahl von anderen Gerätearten – mit einer Codebasis und einem App-Paket. Zudem vervielfacht sich die potenzielle Zielgruppe Ihrer App, und Sie erhalten neue Möglichkeiten durch freigegebene Daten, gekaufte Consumables usw. Weitere Informationen zu den neuen Features finden Sie unter [Neues bei Windows 10 für Entwickler](https://dev.windows.com/getstarted/whats-new-windows-10).
+Wenn Sie Ihre WindowsPhone Silverlight-app zu einer Windows 10-app portieren, müssen Sie möglicherweise mithalten auf mobilen Features, die [in Windows Phone 8.1 eingeführt](https://msdn.microsoft.com/library/windows/apps/dn632424)wurden, und gehen weit darüber hinaus die universelle Windows-Plattform (UWP), deren app-Modell und Benutzeroberflächenframework verwenden universell auf allen Windows 10-Geräten gelten. Dies ermöglicht die Unterstützung von PCs, Tablets, Telefonen und einer großen Zahl von anderen Gerätearten – mit einer Codebasis und einem App-Paket. Zudem vervielfacht sich die potenzielle Zielgruppe Ihrer App, und Sie erhalten neue Möglichkeiten durch freigegebene Daten, gekaufte Consumables usw. [Was ist neu für Entwickler in Windows 10](https://dev.windows.com/getstarted/whats-new-windows-10)finden Sie weitere Informationen zu den neuen Features.
 
-Bei Bedarf können Sie die Windows Phone Silverlight-Version Ihrer App und die Windows 10-Version gleichzeitig für Kunden verfügbar machen.
+Wenn Sie die verwenden, können die WindowsPhone Silverlight-Version Ihrer App und die Windows 10-Version beide für Kunden zur Verfügung zur gleichen Zeit sein.
 
-**Hinweis**  Dieser Leitfaden soll Sie beim manuellen Portieren Ihrer WindowsPhone Silverlight-App zu Windows10 unterstützen. Zum Portieren Ihrer App können Sie neben den Informationen in diesem Leitfaden auch die Developer Preview der **Silverlight-Brücke von Mobilize.Net** ausprobieren, um den Portierungsprozess zu automatisieren. Dieses Tool analysiert den Quellcode Ihrer App und konvertiert Verweise auf Windows Phone Silverlight-Steuerelemente und -APIs in ihre UWP-Entsprechungen. Da dieses Tool noch die Developer Preview-Version aufweist, unterstützt es noch nicht alle Konvertierungsszenarien. Die meisten Entwickler sollten mit dem Einstieg in dieses Tool jedoch Zeit und Mühe sparen. Besuchen Sie die [Website von Mobilize.NET](http://go.microsoft.com/fwlink/p/?LinkId=624546), um die Developer Preview zu testen.
+**Hinweis:** dieses Handbuchs soll Sie manuell Portieren Ihrer WindowsPhone Silverlight-app zu Windows 10 helfen. Zum Portieren Ihrer App können Sie neben den Informationen in diesem Leitfaden auch die Developer Preview der **Silverlight-Brücke von Mobilize.Net** ausprobieren, um den Portierungsprozess zu automatisieren. Dieses Tool analysiert Quellcode Ihrer app und konvertiert Verweise auf WindowsPhone Silverlight-Steuerelemente und-APIs in ihre UWP-Entsprechungen. Da dieses Tool noch die Developer Preview-Version aufweist, unterstützt es noch nicht alle Konvertierungsszenarien. Die meisten Entwickler sollten mit dem Einstieg in dieses Tool jedoch Zeit und Mühe sparen. Besuchen Sie die [Website von Mobilize.NET](http://go.microsoft.com/fwlink/p/?LinkId=624546), um die Developer Preview zu testen.
 
 ## <a name="xaml-and-net-or-html"></a>XAML und .NET oder HTML?
 
-Windows Phone Silverlight verfügt über ein XAML-Benutzeroberflächenframework, das auf Silverlight 4.0 basiert, und Sie programmieren mit einer Version von .NET Framework sowie einer kleinen Teilmenge von UWP-APIs. Da Sie Extensible Application Markup Language (XAML) in Ihrer Windows Phone Silverlight-App verwendet haben, werden Sie sich für Ihre Windows 10-Version wahrscheinlich für XAML entscheiden. Ein Großteil Ihres Wissens und Ihrer Erfahrung sind übertragbar, und dies gilt auch für Ihren Quellcode und die verwendeten Softwaremuster. Auch Ihr UI-Markup und -Design lassen sich mühelos portieren. Ihnen werden die verwalteten APIs, das XAML-Markup, das Benutzeroberflächenframework und die Tools angenehm vertraut vorkommen, und Sie können C++, C# oder Visual Basic zusammen mit XAML in einer UWP-App verwenden. Obwohl es die eine oder andere Herausforderung zu meistern gilt, werden Sie vielleicht überrascht sein, wie einfach der Prozess letztlich ist.
+WindowsPhone Silverlight verfügt über ein XAML-UI-Framework, das auf Silverlight 4.0 basiert, und Sie Programmieren mit einer Version von .NET Framework sowie einer kleinen Teilmenge von UWP-APIs. Da Sie Extensible Application Markup Language (XAML) in Ihrer WindowsPhone Silverlight-app verwendet haben, ist es wahrscheinlich, dass XAML Ihrer Wahl für Ihre Windows 10-Version werden, da die meisten Ihrer Kenntnisse und Erfahrungen zu übertragen werden, wie viel von Ihrem Quellcode werden, und die Softwaremuster, die Sie verwenden. Auch Ihr UI-Markup und -Design lassen sich mühelos portieren. Ihnen werden die verwalteten APIs, das XAML-Markup, das Benutzeroberflächenframework und die Tools angenehm vertraut vorkommen, und Sie können C++, C# oder Visual Basic zusammen mit XAML in einer UWP-App verwenden. Obwohl es die eine oder andere Herausforderung zu meistern gilt, werden Sie vielleicht überrascht sein, wie einfach der Prozess letztlich ist.
 
 Siehe [Roadmap für Universal Windows Platform (UWP)-Apps mit C# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/br229583).
 
-**Hinweis**  Windows10 unterstützt einen deutlich größeren Teil von .NET Framework als Windows Phone Store-Apps. Windows10 verfügt beispielsweise über mehrere System.ServiceModel.\*-Namespaces sowie über System.Net, System.Net.NetworkInformation und System.Net.Sockets. Der Zeitpunkt für das Portieren von Windows Phone Silverlight ist also günstig, da Sie Ihren .NET-Code für die Ausführung auf der neuen Plattform einfach kompilieren können. Weitere Informationen finden Sie unter [Namespace- und Klassenzuordnungen](wpsl-to-uwp-namespace-and-class-mappings.md).
-Ein weiterer guter Grund zum Neukompilieren Ihres vorhandenen .NET-Quellcodes in eine Windows 10-App ist, dass Sie von .NET Native profitieren. Dabei handelt es sich um eine fortschrittliche Kompilierungstechnologie, mit der MSIL-Code in Computercode für die systemeigene Ausführung konvertiert wird. .NET Native-Apps starten schneller, verbrauchen weniger Arbeitsspeicher und benötigen weniger Akkuenergie als ihre MSIL-Gegenstücke.
+**Hinweis:** Windows 10 unterstützt einen deutlich größeren von .NET Framework als Windows Phone Store-Apps. Windows 10 verfügt beispielsweise über mehrere System.ServiceModel.\* Namespaces als auch System.Net, System.Net.NetworkInformation und System.Net.Sockets. Daher ist jetzt ein idealer Zeitpunkt für das Portieren von WindowsPhone Silverlight haben .NET Code einfach kompilieren und auf der neuen Plattform funktionieren. Weitere Informationen finden Sie unter [Namespace- und Klassenzuordnungen](wpsl-to-uwp-namespace-and-class-mappings.md).
+Ein weiterer guter Grund zum Neukompilieren Ihrer vorhandenen .NET Quellcodes in eine Windows 10-app besteht darin, dass Sie von .NET Native profitieren die eine ahead-des-kompilierungstechnologie, mit der MSIL nativ-Computercode konvertiert. .NET Native-Apps starten schneller, verbrauchen weniger Arbeitsspeicher und benötigen weniger Akkuenergie als ihre MSIL-Gegenstücke.
 
 In diesem Portierungshandbuch geht es vorrangig um XAML. Alternativ können Sie mit JavaScript, Cascading Stylesheets (CSS) und HTML5 sowie der Windows-Bibliothek für JavaScript eine funktional vergleichbare App erstellen– viele der verwendeten UWP-APIs sind in diesem Fall identisch. Obwohl sich die Windows-Runtime-Benutzeroberflächenframeworks von XAML und HTML unterscheiden, funktionieren beide für sämtliche Windows-Geräte.
 
@@ -58,9 +57,9 @@ Die im vorherigen Abschnitt gewählte Option bestimmt die Palette an Geräten, a
 
 Beim Lesen dieses Portierungshandbuchs können Sie auch die Informationen unter [Namespace- und Klassenzuordnungen](wpsl-to-uwp-namespace-and-class-mappings.md) nutzen. Im Allgemeinen wird eine einfache Zuordnung verwendet, und in der Tabelle mit den Namespace- und Klassenzuordnungen werden etwaige Ausnahmen beschrieben.
 
-Die gute Nachricht ist, dass auf der Featureebene nur sehr wenig nicht in der UWP unterstützt wird. Wenn Sie den Rest dieses Handbuchs für das Portieren lesen, werden Sie feststellen, dass sich die meisten Ihrer Kenntnisse und der Großteil Ihres Quellcodes sehr gut auf UWP-Apps übertragen lassen. In der folgenden Tabelle sind die wenigen WindowsPhone Silverlight-Features aufgeführt, die Sie vielleicht verwendet haben und für die es keine Entsprechung in der UWP gibt.
+Die gute Nachricht ist, dass auf der Featureebene nur sehr wenig nicht in der UWP unterstützt wird. Wenn Sie den Rest dieses Handbuchs für das Portieren lesen, werden Sie feststellen, dass sich die meisten Ihrer Kenntnisse und der Großteil Ihres Quellcodes sehr gut auf UWP-Apps übertragen lassen. Hier sind jedoch einige WindowsPhone Silverlight Features, die Sie möglicherweise verwendet haben für die gibt es kein UWP-äquivalent ist.
 
-| Feature, für das es kein UWP-Äquivalent gibt | WindowsPhone Silverlight-Dokumentation für das Feature |
+| Feature, für das es kein UWP-Äquivalent gibt | WindowsPhone Silverlight-Dokumentation für das feature |
 |----------------------------------------------|---------------------------------------------------------|
 | Microsoft XNA. Im Allgemeinen wird als Ersatz [Microsoft DirectX](https://msdn.microsoft.com/library/windows/desktop/ee663274) mit C++ verwendet. Siehe [Entwickeln von Spielen](https://msdn.microsoft.com/library/windows/apps/hh452744) und [Interoperabilität von DirectX und XAML](https://msdn.microsoft.com/library/windows/apps/hh825871). | [XNA-Framework-Klassenbibliothek](http://msdn.microsoft.com/library/bb203940.aspx) | 
 |Foto-Apps | [Foto-Apps für Windows Phone8](http://msdn.microsoft.com/library/windows/apps/jj206990.aspx) |
@@ -69,20 +68,20 @@ Die gute Nachricht ist, dass auf der Featureebene nur sehr wenig nicht in der UW
 
 | Thema| Beschreibung|
 |------|------------| 
-| [Namespace- und Klassenzuordnungen](wpsl-to-uwp-namespace-and-class-mappings.md) | Dieses Thema bietet eine umfassende Zuordnung der Windows Phone Silverlight-APIs zu ihren UWP-Äquivalenten. |
-| [Portieren des Projekts](wpsl-to-uwp-porting-to-a-uwp-project.md) | Sie beginnen den Portierungsprozess, indem Sie zunächst in Visual Studio ein neues Windows 10-Projekt erstellen und Ihre Dateien in das Projekt kopieren. |
+| [Namespace- und Klassenzuordnungen](wpsl-to-uwp-namespace-and-class-mappings.md) | Dieses Thema enthält eine umfassende Zuordnung der WindowsPhone Silverlight-APIs zu ihren UWP-äquivalenten. |
+| [Portieren des Projekts](wpsl-to-uwp-porting-to-a-uwp-project.md) | Sie beginnen den portierungsprozess durch Erstellen eines neuen Windows 10-Projekts in Visual Studio und Ihre Dateien in diese kopiert. |
 | [Fehlerbehebung](wpsl-to-uwp-troubleshooting.md) | Wir empfehlen dringend, dieses Handbuch für das Portieren vollständig zu lesen. Wir wissen aber auch, dass Sie möglichst schnell die Phase erreichen möchten, in der Ihr Projekt erstellt und ausgeführt wird. Zu diesem Zweck können Sie einen temporären Fortschritt erzielen, indem Sie allen nicht unbedingt erforderlichen Code auskommentieren und anschließend zurückkehren, um die Schulden später zu bezahlen. Die Tabelle mit Symptomen und Möglichkeiten zur Problembehandlung in diesem Thema kann in dieser Phase hilfreich für Sie sein, ersetzt jedoch nicht das Lesen der nächsten Themen. Sie können die Tabelle jederzeit zu Rate ziehen, während Sie die weiteren Themen lesen. |
-| [Portieren von XAML und UI](wpsl-to-uwp-porting-xaml-and-ui.md) | Die Vorgehensweise zum Definieren einer UI in Form von deklarativem XAML-Markup lässt sich sehr gut von WindowsPhone Silverlight- auf UWP-Apps übertragen. Sie werden feststellen, dass große Abschnitte Ihres Markups kompatibel sind, sobald Sie Verweise auf Systemressourcenschlüssel aktualisiert, einige Namen von Elementtypen geändert und „clr-namespace“ in „using“ geändert haben. |
+| [Portieren von XAML und UI](wpsl-to-uwp-porting-xaml-and-ui.md) | Die Vorgehensweise zum Definieren einer Benutzeroberfläche in Form von deklarativem XAML-Markup lässt sich sehr gut von WindowsPhone Silverlight zu UWP-apps. Sie werden feststellen, dass große Abschnitte Ihres Markups kompatibel sind, sobald Sie Verweise auf Systemressourcenschlüssel aktualisiert, einige Namen von Elementtypen geändert und „clr-namespace“ in „using“ geändert haben. |
 | [Portieren: E/A, Gerät und App-Modell](wpsl-to-uwp-input-and-sensors.md) | Code, der in das Gerät selbst integriert und auf dessen Sensoren abgestimmt ist, umfasst auch Eingaben vom und Ausgaben an den Benutzer. Auch die Datenverarbeitung kann einbezogen werden. Aber dieser Code wird in der Regel nicht als UI-Ebene oder Datenebene betrachtet. Dieser Code enthält die Integration in Vibrationscontroller, Beschleunigungsmesser, Gyroskop, Mikrofon und Lautsprecher (überschneiden sich mit Spracherkennung und Sprachsynthese), (geografischen) Standort und Eingabemodalitäten, z.B. Touch, Maus, Tastatur und Stift. |
 | [Portieren der Geschäfts- und Datenebene](wpsl-to-uwp-business-and-data.md) | Im Hintergrund Ihrer UI befinden sich Ihre Geschäfts- und Datenebenen. Der Code auf diesen Ebenen ruft Betriebssystem- und .NET Framework-APIs auf (z. B. Hintergrundverarbeitung, Position, Kamera, Dateisystem, Netzwerk und andere Datenzugriffsfunktionen). Die meisten dieser APIs sind [für UWP-Apps verfügbar](https://msdn.microsoft.com/library/windows/apps/br211369). Sie können daher davon ausgehen, dass sich ein Großteil dieses Codes ohne Änderungen portieren lässt. |
 | [Portieren für Formfaktor und Benutzerfreundlichkeit](wpsl-to-uwp-form-factors-and-ux.md) | Windows-Apps weisen auf PCs, Mobilgeräten und vielen anderen Arten von Geräten ein einheitliches Erscheinungsbild auf. Die Benutzeroberfläche, Eingabe und Interaktionsmuster sind fast identisch, und Benutzer profitieren von einer einheitlichen Umgebung auf allen Geräten.|
-|[Fallstudie: Bookstore1](wpsl-to-uwp-case-study-bookstore1.md) | In diesem Thema wird eine Fallstudie für das Portieren einer sehr einfachen Windows Phone Silverlight-App zu einer UWP-App für Windows10 vorgestellt. Mit Windows 10 können Sie ein einzelnes App-Paket erstellen, das Ihre Kunden auf einer Vielzahl von Geräten installieren können – und genau das werden wir in dieser Fallstudie tun. |
-| [Fallstudie: Bookstore2](wpsl-to-uwp-case-study-bookstore2.md) | Diese Fallstudie baut auf den Informationen aus [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md) auf und beginnt mit einer WindowsPhone Silverlight-App, die gruppierte Daten in einem **LongListSelector**-Element anzeigt. Im Ansichtsmodell stellt jede Instanz der **Author**-Klasse die Gruppe der vom betreffenden Autor verfassten Titel dar. In **LongList Selector** können wir dann entweder die Bücherliste nach Autoren gruppiert anzeigen oder die Liste verkleinern, um eine Sprungliste der Autoren zu erhalten. |
+|[Fallstudie: Bookstore1](wpsl-to-uwp-case-study-bookstore1.md) | Dieses Thema enthält eine Fallstudie für das Portieren einer sehr einfachen WindowsPhone Silverlight-app zu einer app Windows10UWP. Mit Windows 10, können Sie ein einzelnes app-Paket erstellen, die Ihre Kunden können auf einer Vielzahl von Geräten installieren und ist, was wir in dieser Fallstudie tun. |
+| [Fallstudie: Bookstore2](wpsl-to-uwp-case-study-bookstore2.md) | Diese Fallstudie – baut auf den Informationen in [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md)– beginnt mit einer WindowsPhone Silverlight-app, die gruppierte Daten in einem **LongListSelector**. Im Ansichtsmodell stellt jede Instanz der **Author**-Klasse die Gruppe der vom betreffenden Autor verfassten Titel dar. In **LongList Selector** können wir dann entweder die Bücherliste nach Autoren gruppiert anzeigen oder die Liste verkleinern, um eine Sprungliste der Autoren zu erhalten. |
 
 ## <a name="related-topics"></a>Verwandte Themen
 
 **Dokumentation**
-* [Neuigkeiten für Entwickler in Windows10](https://dev.windows.com/getstarted/whats-new-windows-10)
+* [Neuigkeiten für Entwickler in Windows 10](https://dev.windows.com/getstarted/whats-new-windows-10)
 * [Anleitung für Universelle Windows-Plattform-Apps (UWP)](https://msdn.microsoft.com/library/windows/apps/dn894631)
 * [Roadmap für Universal Windows Platform (UWP)-Apps mit C# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/br229583)
 * [Nächste Schritte für Windows Phone8-Entwickler](https://msdn.microsoft.com/library/windows/apps/xaml/dn655121.aspx)
@@ -91,6 +90,6 @@ Die gute Nachricht ist, dass auf der Featureebene nur sehr wenig nicht in der UW
 * [Visual Studio Magazine: Windows Phone8.1: Ein Riesenschritt für die Konvergenz](http://go.microsoft.com/fwlink/p/?LinkID=398541)
 
 **Präsentationen**
-* [The Story of Bringing Nokia Music from Windows Phone to Windows 8 (Beschreibung der Bereitstellung von Nokia Music von Windows Phone unter Windows 8)](http://go.microsoft.com/fwlink/p/?LinkId=321521)
- 
+* [Die Story of Bringing Bereitstellung Nokia Music von Windows Phone zu Windows8](http://go.microsoft.com/fwlink/p/?LinkId=321521)
+ 
 

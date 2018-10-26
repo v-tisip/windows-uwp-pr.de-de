@@ -7,15 +7,13 @@ keywords: Freihand, Freihandeingabe, Lernprogramm
 ms.author: kbridge
 ms.date: 01/25/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 68624288ea223d0882ef0b8c33b174f000081411
-ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
-ms.translationtype: Auto
+ms.openlocfilehash: 933c3f1c4c2c57cc0a7a92334223f6c6d4bbb010
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "1983386"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543175"
 ---
 # <a name="tutorial-support-ink-in-your-uwp-app"></a>Lernprogramm: Unterstützen von Freihandeingaben in Ihrer UWP-App
 
@@ -69,9 +67,9 @@ Diese Objekte bieten den Großteil der Freihandfunktionen für UWP-Apps.
 
 | Komponente | Beschreibung |
 | --- | --- |
-| [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) | Ein XAML-UI-Plattformsteuerelement, das standardmäßig alle Eingaben von einem Stift als Freihandstriche oder Löschen von Freihandstrichen empfängt und anzeigt. |
+| [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) | Ein XAMLUI Plattform-Steuerelement, das in der Standardeinstellung empfängt und zeigt alle Eingaben von einem Stift als letzten Strich oder ausradierten Strich. |
 | [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) | Ein CodeBehind-Objekt, das zusammen mit einem [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement instanziiert wird (über die [**InkCanvas.InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.InkPresenter)-Eigenschaft verfügbar gemacht). Dieses Objekt stellt alle Standardfreihandfunktionen bereit, die vom [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)-Steuerelement zur Verfügung gestellt werden, sowie einen umfassenden Satz von APIs für zusätzliche Anpassung und Personalisierung. |
-| [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | Ein XAML-UI-Plattformsteuerelement enthält eine anpassbare und erweiterbare Sammlung von Schaltflächen, die Features für Freihandeingaben in einem verknüpften [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)-Steuerelement aktivieren. |
+| [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | Ein XAMLUI-plattformsteuerelement, enthält eine anpassbare und erweiterbare Sammlung von Schaltflächen, die Freihand-Features in einem verknüpften [**InkCanvas-Steuerelement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)aktivieren. |
 | [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263)<br/>Diese Funktionalität wird von uns hier nicht erläutert. Weitere Informationen finden Sie unter [Komplexes Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620314). | Ermöglicht das Rendern von Freihandstrichen im angegebenen Direct2D-Gerätekontext einer universellen Windows-App statt im standardmäßigen [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement. |
 
 ## <a name="step-1-run-the-sample"></a>Schritt1: Ausführen des Beispiels

@@ -6,19 +6,18 @@ ms.assetid: 2989c91f-7b45-7377-4e83-9daa0325e92e
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, DirectX, Grafiken
-ms.openlocfilehash: 2ac11ce220bc1c62c81df12fbf9c2a41fda1d940
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: e9834a83620343f26acaabd0e05b30cc2c1dcfab
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233590"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543680"
 ---
 # <a name="basic-3d-graphics-for-directx-games"></a>Grundlegendes zu 3D-Grafiken für DirectX-Spiele
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Im Folgenden zeigen wir Ihnen, wie Sie grundlegende Konzepte von 3D-Grafiken durch die Programmierung mit DirectX umsetzen können.
 
@@ -36,9 +35,9 @@ Es wird davon ausgegangen, dass Sie mit C+ vertraut sind. Sie müssen außerdem 
 
 Hier geht es um die Entwicklung von 3D-Grafiken mit DirectX und C ++\\Cx. In diesem fünfteiligen Lernprogramm werden die [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466)-API sowie die Konzepte und der Code vorgestellt, die auch in zahlreichen anderen DirectX-Beispielen zum Einsatz kommen. Die einzelnen Teile bauen aufeinander auf. Sie behandeln u. a. das Konfigurieren von DirectX für Ihre UWP-App mit C++ sowie Grundtypen mit Texturen und das Hinzufügen von Effekten.
 
-> **Hinweis**  In diesem Lernprogramm wird ein rechtshändiges Koordinatensystem mit Spaltenvektoren verwendet. Bei vielen DirectX-Beispielen und -Apps wird ein linkshändiges Koordinatensystem mit Zeilenvektoren verwendet. Für eine umfangreichere mathematische Grafiklösung, die ein linkshändiges Koordinatensystem mit Zeilenvektoren unterstützt, sollten Sie [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833) verwenden. Weitere Informationen finden Sie unter [Verwenden von DirectXMath mit Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff729728#Use_DXMath_with_D3D).
+> **Hinweis:** in diesem Lernprogramm wird ein rechtshändiges Koordinatensystem mit Spaltenvektoren verwendet. Bei vielen DirectX-Beispielen und -Apps wird ein linkshändiges Koordinatensystem mit Zeilenvektoren verwendet. Für eine umfangreichere mathematische Grafiklösung, die ein linkshändiges Koordinatensystem mit Zeilenvektoren unterstützt, sollten Sie [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833) verwenden. Weitere Informationen finden Sie unter [Verwenden von DirectXMath mit Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff729728#Use_DXMath_with_D3D).
 
- 
+ 
 
 Folgende Inhalte werden behandelt:
 
@@ -48,10 +47,9 @@ Folgende Inhalte werden behandelt:
 -   Rastern der Szene (Glätten der 3D-Szene auf eine 2D-Projektion)
 -   Culling verborgener Oberflächen
 
-> **Hinweis**  
-Dieser Artikel ist für Windows10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows 8.x oder Windows Phone 8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
+> **Hinweis**  
 
- 
+ 
 
 Als Nächstes erstellen wir ein Direct3D-Gerät, eine Swapchain sowie eine Renderingzielansicht und stellen das gerenderte Bild auf dem Display dar.
 
@@ -64,9 +62,9 @@ Als Nächstes erstellen wir ein Direct3D-Gerät, eine Swapchain sowie eine Rende
 * [DXGI](https://msdn.microsoft.com/library/windows/desktop/hh404534)
 * [HLSL](https://msdn.microsoft.com/library/windows/desktop/bb509561)
 
- 
+ 
 
- 
+ 
 
 
 

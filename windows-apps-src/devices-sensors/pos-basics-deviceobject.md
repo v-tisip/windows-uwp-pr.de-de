@@ -3,18 +3,16 @@ author: TerryWarwick
 title: PointOfService-Geräteobjekte
 description: Hier erfahren Sie, wie PointOfService-Geräteobjekte erstellt werden.
 ms.author: jken
-ms.date: 06/4/2018
+ms.date: 06/19/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
-ms.openlocfilehash: eaaeeae3e21549510258ee9370ef6ffb0d9f9020
-ms.sourcegitcommit: 633dd07c3a9a4d1c2421b43c612774c760b4ee58
-ms.translationtype: HT
+ms.openlocfilehash: 31af943ab4a9231f58fb2e3d5489e9ae80d8d565
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "1976738"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5550129"
 ---
 # <a name="pointofservice-device-objects"></a>PointOfService-Geräteobjekte
 
@@ -24,16 +22,18 @@ Nachdem Sie das PointOfService-Gerät, das Sie verwenden möchten, identifiziert
 In diesem Beispiel wird versucht, ein neues BarcodeScanner-Objekt mit FromIdAsync über eine Geräte-ID zu erstellen. Kommt es beim Erstellen des Objekts zu einem Fehler, wird eine Debugmeldung ausgegeben.
 
 ```Csharp
-using windows.devices.enumeration;
 
-try
-{
     BarcodeScanner barcodeScanner = await BarcodeScanner.FromIdAsync(DeviceId);
-}
-catch (Exception ex)
-{
-    Debug.WriteLine("Failure: - " + ex.Message);
-}
+
+    if(barcodeScanner != null)
+    {
+        // after successful creation, claim the scanner for exclusive use and enable it to exchange data
+    }
+    else
+    {
+        Debug.WriteLine("Failure to create barcodeScanner object");
+    }
+    
 ```
 
 Wenn Sie ein Geräteobjekt haben, können Sie auf die Methoden, Eigenschaften und Ereignisse des Geräts zugreifen.  

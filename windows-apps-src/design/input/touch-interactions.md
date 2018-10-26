@@ -9,15 +9,13 @@ keywords: Touch, Zeiger, Eingabe, Benutzerinteraktion
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ef67c179e691d14f3636a663a24ebbb862c35f7
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: fbb2b6e5edee47d75d7115a38f95abf5ae71529a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675187"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543480"
 ---
 # <a name="touch-interactions"></a>Toucheingabe-Interaktionen
 
@@ -78,14 +76,13 @@ In der folgenden Tabelle sind einige der Unterschiede zwischen den Eingabegerät
 
 
 
-**Hinweis**  
-Die indirekte Eingabe hat den Vorteil, dass sie über 25Jahre optimiert wurde. Features wie durch Zeigen ausgelöste QuickInfos wurden als Lösung für die Erforschung der UI speziell für die Eingabe über Touchpad, Maus, Zeichen- oder Eingabestift und Tastatur entworfen. Solche UI-Funktionen wurden neu entworfen, um der umfassenden Toucheingabefunktion gerecht zu werden, ohne die Benutzererfahrung auf den anderen Geräten zu beeinträchtigen.
+**Hinweis:**  indirekte Eingabe hat den Vorteil, mehr als 25 Jahre Verfeinerung wurde. Features wie durch Zeigen ausgelöste QuickInfos wurden als Lösung für die Erforschung der UI speziell für die Eingabe über Touchpad, Maus, Zeichen- oder Eingabestift und Tastatur entworfen. Solche UI-Funktionen wurden neu entworfen, um der umfassenden Toucheingabefunktion gerecht zu werden, ohne die Benutzererfahrung auf den anderen Geräten zu beeinträchtigen.
 
- 
+ 
 
 ## <a name="use-touch-feedback"></a>Verwenden von Feedback für die Fingereingabe
 
-Durch entsprechendes visuelles Feedback bei Interaktionen mit der App helfen Sie den Benutzern, zu erkennen und zu lernen, wie ihre Interaktionen von der App und der Windows-Plattform interpretiert werden, und sich daran anzupassen. Visuelles Feedback kann auf erfolgreiche Interaktionen hinweisen, über den Systemstatus informieren, das Gefühl der Kontrolle verstärken, Fehler verringern, Benutzern das Verständnis des Systems und des Eingabegeräts erleichtern und zu Interaktionen ermutigen.
+Entsprechendes visuelles Feedback bei Interaktionen mit der app helfen Sie den Benutzern zu erkennen und zu lernen, und anpassen, wie ihre Interaktionen von der app und die Windowsplatform interpretiert werden. Visuelles Feedback kann auf erfolgreiche Interaktionen hinweisen, über den Systemstatus informieren, das Gefühl der Kontrolle verstärken, Fehler verringern, Benutzern das Verständnis des Systems und des Eingabegeräts erleichtern und zu Interaktionen ermutigen.
 
 Visuelles Feedback ist wichtig, wenn der Benutzer die Fingereingabe für Aktivitäten verwendet, bei denen Positionsgenauigkeit gefragt ist. Zeigen Sie immer Feedback an, wenn Toucheingabe erkannt wird, damit der Benutzer die von der App und den Steuerelementen definierten angepassten Zielbestimmungsregeln versteht.
 
@@ -156,9 +153,9 @@ Darüber hinaus wird Folgendes dringend empfohlen:
 -   Die Interaktionen sollten zusammengesetzte Manipulationen unterstützen. Beispiel: Zoomen durch Zusammendrücken und gleichzeitiges Ziehen der Finger, um etwas zu verschieben.
 -   Die Interaktionen sollten nicht anhand der Zeit unterschieden werden. Eine Interaktion sollte unabhängig von der Ausführungsdauer immer zum gleichen Ergebnis führen. Zeitbasierte Aktivierungen führen zu obligatorischen Verzögerungen für Benutzer und beeinträchtigen die immersive Natur der direkten Manipulation und die Wahrnehmung der Reaktion des Systems.
 
-    **Hinweis**  Eine Ausnahme ist die Verwendung bestimmter zeitlich festgelegter Interaktionen zur Unterstützung beim Testen und Erkunden (z.B. Drücken und Halten).
+    **Hinweis:** eine Ausnahme ist, in denen Sie bestimmte zeitlich festgelegte Interaktionen verwenden, um bei Learning und erkunden (z. B. drücken und halten) zu unterstützen.
 
-     
+     
 
 -   Entsprechende Beschreibungen und visuelle Hinweise haben einen großen Einfluss auf die Verwendung erweiterter Interaktionen.
 
@@ -207,7 +204,7 @@ Hier sehen Sie den grundlegenden Satz von Touchgesten, die von der UWP unterstü
 | Zusammendrücken          | Manipulationsgeste | Mindestens zwei Finger berühren den Bildschirm und bewegen sich dichter zusammen.                         |
 | Aufziehen        | Manipulationsgeste | Mindestens zwei Finger berühren den Bildschirm und bewegen sich weiter auseinander.                           |
 
- 
+ 
 
 <!-- mijacobs: Removing for now. We don't have a real page to link to yet. 
 For more info about gestures, manipulations, and interactions, see [Custom user interactions](custom-user-input-portal.md).
@@ -239,7 +236,7 @@ Nachfolgend finden Sie eine Liste der Zeigerereignisse und der jeweiligen Ereign
 | [**PointerWheelChanged**](https://msdn.microsoft.com/library/windows/apps/br208973)   | Tritt auf, wenn sich der Deltawert eines Mausrads ändert.         |
 | [**PointerRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh943076) | Stellt Daten für alle Zeigerereignisse bereit.                         |
 
- 
+ 
 
 Das folgende Beispiel zeigt, wie die Ereignisse [**PointerPressed**](https://msdn.microsoft.com/library/windows/apps/br208971), [**PointerReleased**](https://msdn.microsoft.com/library/windows/apps/br208972) und [**PointerExited**](https://msdn.microsoft.com/library/windows/apps/br208969) verwendet werden, um eine Tippinteraktion für ein [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)-Objekt zu behandeln ist.
 
@@ -435,15 +432,15 @@ Nachfolgend finden Sie eine Liste der Manipulationsereignisse und der jeweiligen
 | [**ManipulationVelocities**](https://msdn.microsoft.com/library/windows/apps/br242032)                                              | Beschreibt die Geschwindigkeit, mit der die Bearbeitung stattfindet.                                                                                         |
 | [**ManipulationCompletedRoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/hh702035)             | Stellt Daten für das [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945)-Ereignis bereit.                                       |
 
- 
+ 
 
 Eine Bewegung setzt sich aus einer Reihe von Bearbeitungsereignissen zusammen. Jede Geste beginnt mit einem [**ManipulationStarted**](https://msdn.microsoft.com/library/windows/apps/br208950) (z.B., wenn ein Benutzer den Bildschirm berührt).
 
 Anschließend wird mindestens ein [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946)-Ereignis ausgelöst. Beispielsweise, wenn Sie den Bildschirm berühren und dann den Finger über den Bildschirm ziehen. Schließlich wird ein [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945)-Ereignis ausgelöst, wenn die Interaktion beendet ist.
 
-**Hinweis**  Wenn Sie keinen Touchscreen besitzen, können Sie Ihren Manipulationsereigniscode in der Simulation mithilfe einer Maus- und Mausradschnittstelle testen.
+**Hinweis:** Wenn Sie keinen Touchscreen besitzen, können Sie Ihren manipulationsereigniscode in der Simulator mithilfe einer Maus- und mausradschnittstelle testen.
 
- 
+ 
 
 Das folgende Beispiel zeigt, wie die [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946)-Ereignisse verwendet werden, um eine Ziehen-Interaktion für ein [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) zu behandeln und es über den Bildschirm zu bewegen.
 
@@ -607,9 +604,9 @@ Alle hier erwähnten Zeiger-, Gestik- und Manipulationsereignisse werden als *Ro
 * [Eingabe: Beispiel für XAML-Benutzereingabeereignisse](http://go.microsoft.com/fwlink/p/?linkid=226855)
 * [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoom](http://go.microsoft.com/fwlink/p/?linkid=251717)
 * [Eingabe: Gesten und Manipulationen mit GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
- 
+ 
 
- 
+ 
 
 
 

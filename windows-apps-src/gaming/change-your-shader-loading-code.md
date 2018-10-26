@@ -6,19 +6,18 @@ ms.assetid: 3678a264-e3f9-72d2-be91-f79cd6f7c4ca
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, OpenGL, Direct3D, Shaderpipeline
-ms.openlocfilehash: 20d02d9b9724c0cfd8120d4d38fa476b9efa3bb3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: f8e3671b5d3490cf565db34ec891c203ee1f7c7a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "235310"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5547121"
 ---
 # <a name="compare-the-opengl-es-20-shader-pipeline-to-direct3d"></a>Vergleichen der OpenGLES2.0-Shaderpipeline mit Direct3D
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -54,7 +53,7 @@ In Direct3D werden Shaderressourcen nicht vor dem Kompilieren und Laden erstellt
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | glCreateShader | Nachdem das kompilierte Shaderobjekt (Compiled Shader Object, CSO) geladen wurde, rufen Sie [**ID3D11Device1::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) und [**ID3D11Device1::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513) auf. Übergeben Sie die CSO-Datei dabei als Puffer. |
 
- 
+ 
 
 ## <a name="compiling-a-shader"></a>Kompilieren eines Shaders
 
@@ -66,7 +65,7 @@ Direct3D-Shader müssen in UWP-Apps (Universelle Windows-Plattform) als CSO-Date
 | glCompileShader                        | Nicht verfügbar Kompilieren Sie die Shader in Visual Studio in CSO-Dateien, und fügen Sie sie Ihrem Paket hinzu.                                                                                     |
 | Verwenden von "glGetShaderiv" für den Kompilierungsstatus | Nicht verfügbar Überprüfen Sie, ob die Kompilierungsausgabe des FX-Compilers (FXC) von Visual Studio Fehler enthält. Bei erfolgreicher Kompilierung wird eine entsprechende CSO-Datei erstellt. |
 
- 
+ 
 
 ## <a name="loading-a-shader"></a>Laden eines Shaders
 
@@ -77,7 +76,7 @@ Wie im Abschnitt zum Erstellen eines Shaders erwähnt, erstellt Direct3D11 den S
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ShaderSource  | Nachdem das kompilierte Shaderobjekt geladen wurde, rufen Sie [**ID3D11Device1::CreateVertexShader**](https://msdn.microsoft.com/library/windows/desktop/ff476524) und [**ID3D11Device1::CreatePixelShader**](https://msdn.microsoft.com/library/windows/desktop/ff476513) auf. |
 
- 
+ 
 
 ## <a name="setting-up-the-pipeline"></a>Einrichten der Pipeline
 
@@ -91,7 +90,7 @@ In OpenGLES2.0 wird das "Shaderprogrammobjekt" verwendet, das mehrere Shader fü
 | glUseProgram    | Nicht verfügbar In Direct3D11 wird die Shaderprogrammobjekt-Abstraktion nicht verwendet.                          |
 | glGetProgramiv  | Verwenden Sie den erstellten Verweis auf [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598). |
 
- 
+ 
 
 Erstellen Sie mit der statischen [**D3D11CreateDevice**](https://msdn.microsoft.com/library/windows/desktop/ff476082)-Methode eine Instanz von [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/hh404598) und [**ID3D11Device1**](https://msdn.microsoft.com/library/windows/desktop/dn280493).
 
@@ -108,7 +107,7 @@ D3D11CreateDevice(
   creationFlags, // Set set debug and Direct2D compatibility flags.
   featureLevels, // List of feature levels this app can support.
   ARRAYSIZE(featureLevels),
-  D3D11_SDK_VERSION, // Always set this to D3D11_SDK_VERSION for Windows Store apps.
+  D3D11_SDK_VERSION, // Always set this to D3D11_SDK_VERSION for UWP apps.
   &device, // Returns the Direct3D device created.
   &m_featureLevel, // Returns feature level of device created.
   &m_d3dContext // Returns the device's immediate context.
@@ -136,7 +135,7 @@ m_d3dContext->RSSetViewports(1, &viewport);
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | glViewport    | [**CD3D11\_VIEWPORT**](https://msdn.microsoft.com/library/windows/desktop/jj151722), [**ID3D11DeviceContext::RSSetViewports**](https://msdn.microsoft.com/library/windows/desktop/ff476480) |
 
- 
+ 
 
 ## <a name="configuring-the-vertex-shaders"></a>Konfigurieren der Vertex-Shader
 
@@ -149,7 +148,7 @@ Die Konfiguration eines Vertex-Shaders erfolgt in Direct3D11 beim Laden des Shad
 | glGetShaderiv, glGetShaderSource | [**ID3D11DeviceContext1::VSGetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476489)                       |
 | glGetUniformfv, glGetUniformiv   | [**ID3D11DeviceContext1::VSGetConstantBuffers1**](https://msdn.microsoft.com/library/windows/desktop/hh446793). |
 
- 
+ 
 
 ## <a name="configuring-the-pixel-shaders"></a>Konfigurieren der Pixelshader
 
@@ -162,7 +161,7 @@ Die Konfiguration eines Pixelshaders erfolgt in Direct3D11 beim Laden des Shader
 | glGetShaderiv, glGetShaderSource | [**ID3D11DeviceContext1::PSGetShader**](https://msdn.microsoft.com/library/windows/desktop/ff476468)                       |
 | glGetUniformfv, glGetUniformiv   | [**ID3D11DeviceContext1::PSGetConstantBuffers1**](https://msdn.microsoft.com/library/windows/desktop/hh404645). |
 
- 
+ 
 
 ## <a name="generating-the-final-results"></a>Generieren der endgültigen Ergebnisse
 
@@ -174,7 +173,7 @@ Wenn die Pipeline abgeschlossen ist, zeichnen Sie die Ergebnisse der Shaderstufe
 | glDrawElements | [**ID3D11DeviceContext1::Draw**](https://msdn.microsoft.com/library/windows/desktop/ff476407), [**ID3D11DeviceContext1::DrawIndexed**](https://msdn.microsoft.com/library/windows/desktop/ff476409) (oder andere Draw\*-Methoden für [**ID3D11DeviceContext1**](https://msdn.microsoft.com/library/windows/desktop/ff476385)). |
 | eglSwapBuffers | [**IDXGISwapChain1::Present1**](https://msdn.microsoft.com/library/windows/desktop/hh446797)                                                                                                                                                                              |
 
- 
+ 
 
 ## <a name="porting-glsl-to-hlsl"></a>Portieren von GLSL zu HLSL
 
@@ -186,7 +185,7 @@ GLSL und HLSL unterscheiden sich abgesehen von der Unterstützung komplexer Type
 | Direct3D11 HLSL          | ~4.30                                                                                                                                                                                                                    | SM5.0                |
 | GLSLES für OpenGLES2.0 | 1.40. Ältere Implementierungen von GLSLES für OpenGLES2.0 verwenden möglicherweise die Versionen1.10 bis1.30. Überprüfen Sie den ursprünglichen Code mit „glGetString(GL\_SHADING\_LANGUAGE\_VERSION)“ oder „glGetString(SHADING\_LANGUAGE\_VERSION“, um festzustellen, ob dies der Fall ist. | ~SM2.0               |
 
- 
+ 
 
 Weitere Informationen zu den Unterschieden zwischen den beiden Shaderprogrammiersprachen und allgemeine Syntaxzuordnungen finden Sie in der [GLSL-zu-HLSL-Referenz](glsl-to-hlsl-reference.md).
 
@@ -209,7 +208,7 @@ Die folgende Tabelle enthält einige Zuordnungen für allgemeine systeminterne O
 | gl\_FragColor       | COLOR(n) für RGBA-Farbdaten, die an einen Shader übergeben werden. Diese Daten werden wie Koordinatendaten behandelt. Durch die Semantik können Sie nur leichter erkennen, dass es sich um Farbdaten handelt. |
 | gl\_FragData\[n\]   | SV\_Target\[n\] zum Schreiben aus einem Pixelshader in eine Zieltextur oder einen anderen Pixelpuffer.                                                                               |
 
- 
+ 
 
 Die Methode zum Codieren der Semantik unterscheidet sich von der Verwendung systeminterner Funktionen in OpenGLES2.0. In OpenGL können Sie auf viele der systeminternen Funktionen direkt ohne Konfiguration oder Deklaration zugreifen. In Direct3D müssen Sie ein Feld in einem bestimmten Konstantenpuffer deklarieren, um eine bestimmte Semantik verwenden zu können, oder es als Rückgabewert für die **main()**-Methode eines Shaders deklarieren.
 
@@ -246,9 +245,9 @@ In diesem Fall ist SV\_TARGET die Position des Renderziels, in das die Pixelfarb
 
 Ausführliche Informationen zur Verwendung der Semantik mit Direct3D finden Sie unter [HLSL-Semantik](https://msdn.microsoft.com/library/windows/desktop/bb509647).
 
- 
+ 
 
- 
+ 
 
 
 

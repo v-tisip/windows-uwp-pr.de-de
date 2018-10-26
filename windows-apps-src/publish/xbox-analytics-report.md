@@ -5,16 +5,14 @@ title: Bericht der Xbox Analyse
 ms.author: wdg-dev-content
 ms.date: 06/04/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Xbox Analyse, Xbox Live-Analyse, Xbox-Statistiken
 ms.localizationpriority: medium
-ms.openlocfilehash: 9e69c41ec2ae6dface93b9f3148e699e448faa18
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: e3a5ec3c81b9cddce4c38ad7f764d35bd6f34f86
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5522849"
+ms.locfileid: "5572699"
 ---
 # <a name="xbox-analytics-report"></a>Xbox Analysebericht
 

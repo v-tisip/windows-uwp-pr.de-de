@@ -7,8 +7,6 @@ template: detail.hbs
 ms.author: quradic
 ms.date: 10/2/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.assetid: f04d1a3c-7dcd-4bc8-9586-3396923b312e
 pm-contact: kisai
@@ -16,12 +14,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b3afb0cba92e5f3c08de19c926bd5fb949185379
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 922dccc61954e2022cbe76f2ca5d5b1f9e548733
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5517411"
+ms.locfileid: "5560602"
 ---
 # <a name="buttons"></a>Schaltflächen
 
@@ -33,7 +31,7 @@ Das XAML-Framework bietet ein standard-Schaltflächen-Steuerelement als auch meh
 
 Steuerelement | Beschreibung
 ------- | -----------
-[Button](/uwp/api/windows.ui.xaml.controls.button) | Beginn eine sofortige Aktion aus. Kann mit einem Klickereignis oder einem Befehl Bindung verwendet werden.
+[Button](/uwp/api/windows.ui.xaml.controls.button) | Beginn eine sofortige Aktion aus. Can be used with a Click event or Command binding.
 [RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | Eine Schaltfläche, die ein Click-Ereignis kontinuierlich während gedrückt auslöst.
 [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | Eine Schaltfläche, die formatiert wurde, z. B. ein Hyperlink, für die Navigation verwendet. Weitere Informationen finden Sie unter [Hyperlinks](hyperlinks.md).
 [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | Eine Schaltfläche mit einem Chevron ein angefügtes Flyout geöffnet.

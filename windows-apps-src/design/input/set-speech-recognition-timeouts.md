@@ -9,15 +9,13 @@ keywords: Sprache, Stimme, Spracherkennung, natürliche Sprache, diktieren, Eing
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c82e0d77804e293176c53a9d8079e32054f9cca6
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 00923b4448d96943cf00eade46c39c42e87c4f96
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652749"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549567"
 ---
 # <a name="set-speech-recognition-timeouts"></a>Festlegen von Timeouts für die Spracherkennung
 
@@ -35,9 +33,9 @@ Hier geben wir verschiedene [**Timeouts**](https://msdn.microsoft.com/library/wi
 -   BabbleTimeout – Die Zeitspanne, für die ein Spracherkennungsmodul weiterhin auf erkennbare Geräusche (Störgeräusche) wartet, bevor davon ausgegangen wird, dass die Spracheingabe beendet ist, und der Erkennungsvorgangs beendet wird.
 -   EndSilenceTimeout – Die Zeitspanne, für die das Spracherkennungsmodul Stille erkennt (nach Generierung von Erkennungsergebnissen) und davon ausgeht, dass die Spracheingabe beendet ist.
 
-**Hinweis**: Timeouts können pro Erkennungsmodul festgelegt werden.
+**Hinweis:** Timeouts für eine pro Erkennungsmodul festgelegt werden kann.
 
- 
+ 
 
 ```CSharp
 // Set timeout settings.
@@ -52,9 +50,9 @@ recognizer.Timeouts.EndSilenceTimeout = TimeSpan.FromSeconds(1.2);
 * [Interaktionen mit der Spracherkennung](speech-interactions.md)
 **Beispiele**
 * [Beispiel zu Spracherkennung und Sprachsynthese](http://go.microsoft.com/fwlink/p/?LinkID=619897)
- 
+ 
 
- 
+ 
 
 
 

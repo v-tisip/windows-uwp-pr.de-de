@@ -6,23 +6,21 @@ ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f90821fdadea0939dbad316ad9be4424b31a926
-ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
-ms.translationtype: HT
+ms.openlocfilehash: 69d316ad48645d8995e602b270a5615322c8b43f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
-ms.locfileid: "1573047"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549177"
 ---
 # <a name="binding-markup-extension"></a>{Binding}-Markuperweiterung
 
 
-**Hinweis**: Es steht ein neuer Bindungsmechanismus für Windows10 zur Verfügung, der in Bezug auf die Leistung und Entwicklerproduktivität optimiert wurde. Weitere Informationen finden Sie unter [{x:Bind}-Markuperweiterung](x-bind-markup-extension.md)
+**Hinweis:** ein neuen Bindungsmechanismus steht für Windows 10, die für die Leistung und Entwickler Produktivität optimiert ist. Weitere Informationen finden Sie unter [{x:Bind}-Markuperweiterung](x-bind-markup-extension.md)
 
-**Hinweis**  Allgemeine Informationen zur Verwendung der Datenbindung in Ihrer App mit **{Binding}** (sowie einen vollständigen Vergleich von **{x:Bind}** und **{Binding}**) finden Sie unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
+**Hinweis:** allgemeine Informationen zur Verwendung von Daten Bindung in Ihrer app mit **{Binding}** (und die für einen vollständigen Vergleich zwischen **{X: Bind}** und **{Binding}**), finden Sie unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 Die Markuperweiterung **{Binding}** wird verwendet, um Eigenschaften von Steuerelementen per Datenbindung mit Werten zu verknüpfen, die von einer Datenquelle stammen, z.B. Code. description: Die **{Binding}**-Markuperweiterung wird beim Laden von XAML in eine Instanz der [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)-Klasse konvertiert. Dieses Bindungsobjekt erhält einen Wert von der Eigenschaft einer Datenquelle und leitet ihn an die Eigenschaft des Steuerelements weiter. Das Bindungsobjekt kann optional konfiguriert werden, um Änderungen am Wert der Datenquelleneigenschaft zu beobachten und sich basierend auf diesen Änderungen zu aktualisieren. Es kann optional auch so konfiguriert werden, dass Änderungen am Wert des Steuerelements per Push zurück an die Quelleigenschaft gesendet werden. Die als Ziel einer Datenbindung verwendete Eigenschaft muss eine Abhängigkeitseigenschaft sein. Weitere Informationen finden Sie unter [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md).
 
@@ -83,7 +81,7 @@ Weitere Informationen zur Zeichenfolgensyntax für einen Eigenschaftspfad, zu Ei
 | [**TargetNullValue**](https://msdn.microsoft.com/library/windows/apps/dn279347) | Gibt einen Wert an, der angezeigt wird, wenn der Quellwert aufgelöst werden kann, aber explizit **null** ist. |
 | [**UpdateSourceTrigger**](https://msdn.microsoft.com/library/windows/apps/dn279350) | Gibt den Zeitpunkt für Aktualisierungen von Bindungsquellen an. Wenn keine Angabe erfolgt, lautet der Standardwert **Default**. |
 
-**Hinweis**  Wenn Sie Markup von **{Binding}** in **{x:Bind}** konvertieren, ist es ratsam, die unterschiedlichen Standardwerte der **Mode**-Eigenschaft zu beachten.
+**Hinweis:** Wenn Sie Markup von **{X: Bind}** auf **{Binding}** Konvertierung, beachten Sie Werte die Unterschiede im Standardmodus für die **Mode** -Eigenschaft.
 
 [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) und **ConverterLanguage** hängen mit der Konvertierung eines Werts oder Typs aus der Bindungsquelle in einen mit der Bindungszieleigenschaft kompatiblen Typ oder Wert zusammen. Weitere Informationen und Beispiele finden Sie im Abschnitt „Datenkonvertierungen“ unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
@@ -92,7 +90,7 @@ Weitere Informationen zur Zeichenfolgensyntax für einen Eigenschaftspfad, zu Ei
 
 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832), [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) und [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828) geben eine Bindungsquelle an und schließen sich somit gegenseitig aus.
 
-**Tipp**  Wenn Sie eine einzelne geschweifte Klammer für einen Wert angeben müssen, beispielsweise in [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830) oder [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), sollten Sie ihr einen umgekehrten Schrägstrich voranstellen: `\{`. Setzen Sie alternativ die gesamte Zeichenfolge mit den geschweiften Klammern, für die Escapezeichen verwendet werden müssen, in weitere Anführungszeichen, z.B. `ConverterParameter='{Mix}'`.
+**Tipp:** Wenn Sie eine einzelne geschweifte Klammer für einen Wert angeben müssen, z. B. in [**Pfad**](https://msdn.microsoft.com/library/windows/apps/br209830) oder [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), dann stellen Sie ihr einen umgekehrten Schrägstrich voran: `\{`. Setzen Sie alternativ die gesamte Zeichenfolge mit den geschweiften Klammern, für die Escapezeichen verwendet werden müssen, in weitere Anführungszeichen, z.B. `ConverterParameter='{Mix}'`.
 
 ## <a name="examples"></a>Beispiele
 
@@ -129,4 +127,4 @@ Beachten Sie, dass der [**Converter**](https://msdn.microsoft.com/library/window
 
 Mit Microsoft IntelliSense in Microsoft Visual Studio werden die Eigenschaften des Datenkontexts beim Erstellen von **{Binding}** im XAML-Markup-Editor angezeigt. Sobald Sie „{Binding“ eingeben, werden für die [**Path**](https://msdn.microsoft.com/library/windows/apps/br209830)-Eigenschaft geeignete Datenkontexteigenschaften in der Dropdownliste angezeigt. IntelliSense bietet auch Unterstützung für andere Eigenschaften von [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820). Damit dies funktioniert muss der Datenkontext oder der Entwurfszeit-Datenkontext auf der Markupseite festgelegt werden. **Gehe zu Definition** (F12) funktioniert auch bei **{Binding}**. Alternativ können Sie das Dialogfeld „Datenbindung“ verwenden.
 
- 
+ 

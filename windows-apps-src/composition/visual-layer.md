@@ -6,19 +6,18 @@ description: Die Windows.UI.Composition-API ermöglicht den Zugriff auf die Komp
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: b292be46ccddd4355f3bef13e37da6b6cec452fa
-ms.sourcegitcommit: b42d14c775efbf449a544ddb881abd1c65c1ee86
+ms.localizationpriority: medium
+ms.openlocfilehash: 2dd8c53dad735cf1094410bf97a81f6b0247bdc7
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2017
-ms.locfileid: "839488"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545744"
 ---
 # <a name="visual-layer"></a>Visuelle Ebene
 
-Die visuelle Ebene bietet eine hohe Leistung, Speichermodus-API für Grafiken, Effekte und Animationen und ist die Grundlage für alle UI-Elemente für Windows-Geräte. Sie definieren die UI auf einfache Weise und die visuelle Ebene nutzt Hardwarebeschleunigungsgrafiken, um sicherzustellen, dass Ihre Inhalte, Effekte und Animationen reibungslos, störungsfrei und unabhängig vom UI-Thread der App gerendert werden.
+Die visuelle Ebene bietet eine hohe Leistung, Speichermodus-API für Grafiken, Effekte und Animationen und ist die Grundlage für alle UI-Elemente für Windows-Geräte.Sie definieren die UI auf einfache Weise und die visuelle Ebene nutzt Hardwarebeschleunigungsgrafiken, um sicherzustellen, dass Ihre Inhalte, Effekte und Animationen reibungslos, störungsfrei und unabhängig vom UI-Thread der App gerendert werden.
 
 Wichtige Highlights:
 
@@ -41,7 +40,7 @@ Die wichtigsten Funktionen der visuellen Ebene sind:
 
 ### <a name="content"></a>Inhalt
 
-Inhalt wird vom Animations- und Effektsystem mit visuellen Elementen für die Verwendung gehostet, transformiert und zur Verfügung gestellt. An der Basis der Klassenhierarchie befindet sich die [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)-Klasse, ein leichter Thread-Agile-Proxy im App-Prozess zum visuellen Zustand im Kompositor. Zu den Unterklassen der Visual-Klasse gehört  [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810), sodass untergeordnete Elemente ermöglicht werden und Strukturen von visuellen Elementen und [**SpriteVisual**](https://msdn.microsoft.com/library/windows/apps/Mt589433) erstellt werden können. Dieses weist Inhalt auf und kann mit Volltonfarben, benutzerdefinierten gezeichneten Inhalten oder visuellen Effekten gezeichnet werden. Zusammen bilden diese Visual-Typen die visuelle Struktur für die 2D-UI und stützen die meisten sichtbaren XAML-FrameworkElements.
+Inhalt wird vom Animations- und Effektsystem mit visuellen Elementen für die Verwendung gehostet, transformiert und zur Verfügung gestellt. An der Basis der Klassenhierarchie befindet sich die [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)-Klasse, ein leichter Thread-Agile-Proxy im App-Prozess zum visuellen Zustand im Kompositor. Unterklassen der Visual [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) zulassen für Kinder erstellen Strukturen von visuellen Elementen und [**spritevisual-Element**](https://msdn.microsoft.com/library/windows/apps/Mt589433) , das enthält Inhalte enthalten und können mit Volltonfarben, benutzerdefinierten gezeichneten Inhalten oder visuellen Effekten gezeichnet werden. Zusammen bilden diese Visual-Typen die visuelle Struktur für die 2D-UI und stützen die meisten sichtbaren XAML-FrameworkElements.
 
 Weitere Informationen finden Sie in der Übersicht [Visuelle Kompositionseffekte](composition-visual-tree.md).
 
@@ -55,7 +54,7 @@ Weitere Informationen finden Sie in der Übersicht [Kompositionseffekte](composi
 
 ### <a name="animations"></a>Animationen
 
-Das Animationssystem in der visuellen Ebene ermöglicht das Verschieben von visuellen Elementen, Animieren von Effekten und Erstellen von Transformationen, Clips und anderen Eigenschaften.  Es ist ein Framework-agnostisches System, das durchgehend im Hinblick auf hohe Leistung entwickelt wurde.  Es wird unabhängig vom UI-Thread ausgeführt, um Gleichmäßigkeit und Skalierbarkeit sicherzustellen.  Während es Ihnen ermöglicht, mithilfe vertrauter KeyFrame-Animationen Eigenschaften im Laufe der Zeit zu ändern, ermöglicht es auch das Aufstellen von mathematischen Beziehungen zwischen unterschiedlichen Eigenschaften, z.B. Benutzereingaben, mit denen Sie direkt nahtlos choreographierte Umgebungen erstellen können.
+Das Animationssystem in der visuellen Ebene ermöglicht das Verschieben von visuellen Elementen, Animieren von Effekten und Erstellen von Transformationen, Clips und anderen Eigenschaften.Es ist ein Framework-agnostisches System, das durchgehend im Hinblick auf hohe Leistung entwickelt wurde.Es wird unabhängig vom UI-Thread ausgeführt, um Gleichmäßigkeit und Skalierbarkeit sicherzustellen.Während es Ihnen ermöglicht, mithilfe vertrauter KeyFrame-Animationen Eigenschaften im Laufe der Zeit zu ändern, ermöglicht es auch das Aufstellen von mathematischen Beziehungen zwischen unterschiedlichen Eigenschaften, z.B. Benutzereingaben, mit denen Sie direkt nahtlos choreographierte Umgebungen erstellen können.
 
 Weitere Informationen finden Sie in der Übersicht [Kompositionsanimationen](composition-animation.md).
 

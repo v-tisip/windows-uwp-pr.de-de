@@ -5,16 +5,14 @@ description: In diesem Lernprogramm wird veranschaulicht, wie Sie einen IIS-Serv
 ms.author: cdon
 ms.date: 05/30/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, Uwp, app-Installer, AppInstaller, querladen, im Zusammenhang mit festgelegten, optionale Pakete, IIS-Server
 ms.localizationpriority: medium
-ms.openlocfilehash: 214ddd2b55bca1acecbab0a841cf2048335e7b3a
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 2898a3450f75379492bae1ade5c85581cc8e5a4e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5516007"
+ms.locfileid: "5544570"
 ---
 # <a name="install-a-uwp-app-from-an-iis-server"></a>Installieren einer UWP-App von einem IIS-Server
 

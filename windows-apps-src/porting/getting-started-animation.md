@@ -1,23 +1,22 @@
 ---
-author: mcleblanc
+author: stevewhims
 title: Erste Schritte mit Animationen
 ms.assetid: C1C3F5EA-B775-4700-9C45-695E78C16205
 description: In diesem Projekt verschieben wir ein Rechteck, wenden einen Ausblendeeffekt an und blenden das Rechteck wieder ein
-ms.author: markl
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: a45de584c4374afefe0fdca198eb7234351ac42d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 4822a436225bea92fdf1e981ad33378996adefe4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "234412"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550878"
 ---
 # <a name="getting-started-animation"></a>Erste Schritte: Animationen
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## <a name="adding-animations"></a>Hinzufügen von Animationen
 
@@ -129,7 +128,7 @@ Wenn Sie die Datei MainPage.xaml in der **XAML**-Ansicht öffnen, können Sie de
 
 Sie können diesen XAML-Code manuell bearbeiten oder zu Blend zurückkehren, um dort weiter an diesem zu arbeiten. Mit Blend können Sie spielerisch interessante Benutzeroberflächen erstellen und sie mit einem Grafiktool animieren, was die Entwicklung erheblich beschleunigt. Weitere Informationen zu Animationen finden Sie unter [Übersicht über Animationen](https://msdn.microsoft.com/library/windows/apps/mt187350).
 
-**Hinweis**  Informationen zu Animationen für WindowsStore-Apps, die JavaScript und HTML verwenden, finden Sie unter [Animieren der Benutzeroberfläche (HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165).
+**Hinweis:** Informationen zu Animationen für <span class="legacy-term">UWP-apps mit JavaScript und HTML</span>finden Sie unter [Animieren der Benutzeroberfläche (HTML)](https://msdn.microsoft.com/library/windows/apps/hh465165).
 
 ### <a name="next-step"></a>Nächster Schritt
 

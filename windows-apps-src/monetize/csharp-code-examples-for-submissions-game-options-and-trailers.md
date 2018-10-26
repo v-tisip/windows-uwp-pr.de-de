@@ -5,16 +5,14 @@ title: C#-Beispiel – App-Übermittlung mit Spieloptionen und Trailer
 ms.author: mhopkins
 ms.date: 07/10/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, Uwp, Microsoft Store-Übermittlungs-API, Codebeispiele, Spieloptionen, Trailer, erweiterte Angebote, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: e22081435bea8c73f509719aec1ce31d9157a315
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: ab186c6139755ca2a8c823093268e6cf21956c90
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5476087"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5547964"
 ---
 # <a name="c-sample-app-submission-with-game-options-and-trailers"></a>C\#-Beispiel: App-Übermittlung mit Spieloptionen und Trailer
 

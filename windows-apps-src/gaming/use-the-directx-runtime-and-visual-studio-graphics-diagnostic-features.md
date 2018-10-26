@@ -6,23 +6,22 @@ ms.assetid: 629ea462-18ed-a333-07e9-cc87ea2dcd93
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Grafiken, Diagnose, Tools, directx
-ms.openlocfilehash: 076020d88889a9cc8b417befa2dd54b41d688e5e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: aa1c14d15a966f23b86753cf8e5e62e067d10310
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233733"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545227"
 ---
 # <a name="graphics-diagnostics-tools"></a>Tools für die Grafikdiagnose
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
-Unter Windows10 stehen die Grafikdiagnosetools jetzt als optionales Feature in Windows zur Verfügung. Installieren Sie das optionale Grafiktoolfeature, um die in der Runtime und in VisualStudio bereitgestellten Grafikdiagnosefeatures für die Entwicklung von DirectX-Apps oder -Spielen zu nutzen:
+Mit Windows 10 sind die Grafiken Diagnosetools jetzt als optionales Feature in Windows zur Verfügung. Installieren Sie das optionale Grafiktoolfeature, um die in der Runtime und in VisualStudio bereitgestellten Grafikdiagnosefeatures für die Entwicklung von DirectX-Apps oder -Spielen zu nutzen:
 
-1.  Klicken Sie unter **Einstellungen**> **System**> **Apps und Features** auf **Optionale Features verwalten**.
+1.  Wechseln Sie zu **Einstellungen**, wählen Sie **Apps aus**, und klicken Sie dann auf **optionale Features verwalten**.
 2.  Klicken Sie auf **Feature hinzufügen**.   
 3.  Wählen Sie in der Liste **Optionale Features** **Grafiktools** aus, und klicken Sie dann auf **Installieren**.
 
@@ -37,9 +36,9 @@ Die Grafikdiagnosefeatures ermöglichen das Erstellen von Direct3D-Debugging-Ger
 
 [Übersicht über die Grafikdiagnose in Visual Studio](http://go.microsoft.com/fwlink/p/?LinkID=526382)
 
- 
+ 
 
- 
+ 
 
 
 

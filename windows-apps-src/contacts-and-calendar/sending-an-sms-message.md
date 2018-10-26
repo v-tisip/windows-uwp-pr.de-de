@@ -7,21 +7,19 @@ keywords: Kontakte, SMS, Senden
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-ms.openlocfilehash: e5c3678e6c12a65b6821d2fc2a54e0710f7dcef3
-ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.localizationpriority: medium
+ms.openlocfilehash: 06d84646685c6944ab0e816b42cf6fb2125f8a57
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2017
-ms.locfileid: "665360"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545565"
 ---
 # <a name="send-an-sms-message"></a>Senden einer SMS
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-
 In diesem Thema erfahren Sie, wie Sie das Dialogfeld zum Verfassen einer SMS starten, damit Benutzer eine SMS senden können. Sie können die Felder der SMS vor dem Anzeigen des Dialogfelds mit Daten füllen. Die Nachricht wird erst gesendet, wenn Benutzer auf die Schaltfläche „Senden“ tippen.
+
+Um diesen Code jeweils aufzurufen, deklarieren Sie die **Chat**, **SmsSend**und **ChatSystem** Funktionen im Paketmanifest. Hierbei handelt es sich um [eingeschränkte Funktionen](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#special-and-restricted-capabilities) , aber Sie können diese in Ihrer app verwenden. Sie benötigen die konzeptgenehmigung nur dann, wenn Sie beabsichtigen, Ihre app im Store veröffentlichen. Finden Sie unter [Kontotypen, Standorte und Gebühren](https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees).
 
 ## <a name="launch-the-compose-sms-dialog"></a>Starten des Dialogfelds zum Verfassen einer SMS
 
@@ -53,6 +51,15 @@ private async void ComposeSms(Windows.ApplicationModel.Contacts.Contact recipien
         chatMessage.Recipients.Add(phone.Number);
     }
     await Windows.ApplicationModel.Chat.ChatMessageManager.ShowComposeSmsMessageAsync(chatMessage);
+}
+```
+
+Mit dem folgenden Code können Sie ermitteln, ob das Gerät, das Ihre app ausgeführt wird zum Senden von SMS-Nachrichten werden kann.
+
+```csharp
+if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.ApplicationModel.Chat"))
+{
+   // Call code here.
 }
 ```
 

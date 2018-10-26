@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b882c70701d2ea2f8abef14a7d3319616696ea4
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 672d7b2ddc913ea3a966fbd0a095367521a27d7c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044729"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550192"
 ---
 # <a name="span-iddirect3dconceptsopaqueand1-bitalphatexturesspanopaque-and-1-bit-alpha-textures"></a><span id="direct3dconcepts.opaque_and_1-bit_alpha_textures"></span>Undurchsichtige und 1-Bit-Alpha-Texturen
 
@@ -70,7 +68,7 @@ Im folgenden findet sich das Speicherlayout für den 8-Byte-Block (64-Bit):
 | 2            | Bitmap-Word\_0 |
 | 3            | Bitmap Word\_1 |
 
- 
+ 
 
 Farbe\_0 und Farbe\_1, die Farben der beiden Extreme sind wie folgt angeordnet:
 
@@ -80,7 +78,7 @@ Farbe\_0 und Farbe\_1, die Farben der beiden Extreme sind wie folgt angeordnet:
 | 10:5        | Grün-Komponente |
 | 15:11       | Rot-Komponente   |
 
- 
+ 
 
 \*niederwertigstes Bit
 
@@ -97,7 +95,7 @@ Bitmap-Word\_0 wird wie folgt dargestellt:
 | 13:12         | Texel\[1\]\[2\] |
 | 15:14 (MSB\*) | Texel\[1\]\[3\] |
 
- 
+ 
 
 \*höchstwertiges Bit (MSB)
 
@@ -114,7 +112,7 @@ Bitmap-Word\_1 wird wie folgt dargestellt:
 | 13:12       | Texel\[3\]\[2\] |
 | 15:14 (MSB) | Texel\[3\]\[3\] |
 
- 
+ 
 
 ## <a name="span-idexampleofopaquecolorencodingspanspan-idexampleofopaquecolorencodingspanspan-idexampleofopaquecolorencodingspanexample-of-opaque-color-encoding"></a><span id="Example_of_Opaque_Color_Encoding"></span><span id="example_of_opaque_color_encoding"></span><span id="EXAMPLE_OF_OPAQUE_COLOR_ENCODING"></span>Beispiel für eine undurchsichtige Codierung
 
@@ -134,9 +132,9 @@ Die Bitmap sieht dann wie im folgenden Diagramm aus.
 
 Dies sieht wie die nachstehend dargestellten Reihe von Farben aus.
 
-**Hinweis:**   In einem Bild wird Pixel (0,0) oben links angezeigt.
+**Hinweis:**  In einem Bild wird Pixel (0,0) oben links angezeigt.
 
- 
+ 
 
 ![Abbildungeines undurchsichtig codierten Farbverlaufs](images/redsquares.png)
 
@@ -169,9 +167,9 @@ Die Bitmap sieht dann wie im folgenden Diagramm aus.
 
 [Komprimierte Texturressourcen](compressed-texture-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

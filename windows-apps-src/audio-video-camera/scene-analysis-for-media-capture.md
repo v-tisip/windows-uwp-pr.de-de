@@ -6,18 +6,17 @@ title: Effekte für die Analyse von Kamera-Frames
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 3fc55919942c1edc82f7c2e5da2608b5f1b1445b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: d948dee234ad6c49da847324422737b1bae27e30
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233830"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5547658"
 ---
 # <a name="effects-for-analyzing-camera-frames"></a>Effekte für die Analyse von Kamera-Frames
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 
 Dieser Artikel beschreibt, wie Sie mit [**SceneAnalysisEffect**](https://msdn.microsoft.com/library/windows/apps/dn948902) und [**FaceDetectionEffect**](https://msdn.microsoft.com/library/windows/apps/dn948776) den Inhalt des Vorschaudatenstroms der Medienaufnahme analysieren.
@@ -36,11 +35,11 @@ Wenn der Effekt die Verwendung von HDR empfiehlt, können Sie dies auf folgende 
 
 ### <a name="scene-analysis-namespaces"></a>Namespaces der Szenenanalyse
 
-Um die Szenenanalyse verwenden zu können, muss Ihre App zusätzlich zu den für die grundlegende Medienaufnahme erforderlichen Namespaces die folgenden Namespaces enthalten.
+Um die Szenenanalyse verwenden zu können, muss Ihre App die folgenden Namespaces zusätzlich zu den für die grundlegende Medienaufnahme erforderlichen Namespaces enthalten.
 
 [!code-cs[SceneAnalysisUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSceneAnalysisUsing)]
 
-### <a name="initialize-the-scene-analysis-effect-and-add-it-to-the-preview-stream"></a>Initialisieren und Hinzufügen des Szenenanalyseneffekts zum Vorschaudatenstrom
+### <a name="initialize-the-scene-analysis-effect-and-add-it-to-the-preview-stream"></a>Initialisieren des Szenenanalyseneffekts und Hinzufügen von diesem zum Vorschaudatenstrom
 
 Videoeffekte werden mit zwei APIs, einer Effektdefinition, die die für das Aufnahmegerät benötigten Einstellungen zum Initialisieren des Effekts bereitstellt, und einer Effektinstanz implementiert, die zum Steuern des Effekts verwendet werden kann. Da Sie ggf. von mehreren Stellen innerhalb des Codes aus auf die Effektinstanz zugreifen müssen, sollten Sie in der Regel eine Membervariable als Container für das Objekt deklarieren.
 
@@ -80,7 +79,7 @@ Um die Gesichtserkennung verwenden zu können, muss Ihre App die folgenden Names
 
 [!code-cs[FaceDetectionUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFaceDetectionUsing)]
 
-### <a name="initialize-the-face-detection-effect-and-add-it-to-the-preview-stream"></a>Initialisieren und Hinzufügen des Gesichterkennungseffekts zum Vorschaudatenstrom
+### <a name="initialize-the-face-detection-effect-and-add-it-to-the-preview-stream"></a>Initialisieren des Gesichterkennungseffekts und Hinzufügen von diesem zum Vorschaudatenstrom
 
 Videoeffekte werden mit zwei APIs, einer Effektdefinition, die die für das Aufnahmegerät benötigten Einstellungen zum Initialisieren des Effekts bereitstellt, und einer Effektinstanz implementiert, die zum Steuern des Effekts verwendet werden kann. Da Sie ggf. von mehreren Stellen innerhalb des Codes aus auf die Effektinstanz zugreifen müssen, sollten Sie in der Regel eine Membervariable als Container für das Objekt deklarieren.
 
@@ -120,9 +119,9 @@ Nicht alle Geräte verfügen über ein Aufnahmegerät, das den Fokus und die Bel
 
 * [Kamera](camera.md)
 * [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md)
- 
+ 
 
- 
+ 
 
 
 

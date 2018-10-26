@@ -6,16 +6,14 @@ title: Verarbeiten von Audioframes mit „MediaFrameReader“
 ms.author: drewbat
 ms.date: 04/18/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 7606596937c0fa3297c049da1a313c155b1a35b9
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: d69e8d8cca3932045d4b43d727210f84e816f30b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1833182"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5542827"
 ---
 # <a name="process-audio-frames-with-mediaframereader"></a>Verarbeiten von Audioframes mit „MediaFrameReader“
 
@@ -85,7 +83,7 @@ Sie können Sie ein [**AudioFrame**](https://docs.microsoft.com/uwp/api/windows.
 * [Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [Beispiel für Kameraframes](http://go.microsoft.com/fwlink/?LinkId=823230)
 * [Audiodiagramme](audio-graphs.md)
- 
+ 
 
 
 

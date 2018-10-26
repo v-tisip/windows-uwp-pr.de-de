@@ -1,28 +1,26 @@
 ---
 author: v-angraf
 ms.assetid: 4c03e06b-c12c-f64f-c53f-b38716101822
-title: Xbox Live Seite (Dev-Startseite)
-description: Enthält Informationen zu der Xbox Live-Seite der app Dev-Startseite für Xbox ein.
+title: Xbox Live-Seite (Dev Home)
+description: Enthält Informationen über die Xbox Live-Seite die Dev Home-App für Xbox One.
 ms.author: v-angraf@microsoft.com
 ms.date: 08/09/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 permalink: en-us/docs/xdk/devhome-live.html
 ms.localizationpriority: medium
-ms.openlocfilehash: 8af78e5ecb30dc879bd12f52bfeadde70af18a39
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 96f22cb971f5c8266653a6b3c3f4bcc7dd61546d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1015258"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546682"
 ---
-# <a name="xbox-live-page-dev-home"></a>Xbox Live Seite (Dev-Startseite)
+# <a name="xbox-live-page-dev-home"></a>Xbox Live-Seite (Dev Home)
    
   
-Die Seite **Xbox Live** Developer Home mehrere Spieler Informationen erfasst und zeigt den aktuellen Status des Xbox Live-Dienstes.   
- ![Xbox Live Seite Dev-Startseite](images/devhome_live.png)   
+**Xbox Live** -Seite im Dev Home Multiplayer-Informationen erfasst und zeigt den aktuellen Status des Xbox Live-Diensts.   
+ ![Xbox Live-Seite des Dev Home](images/devhome_live.png)   
   
 Die **Xbox Live** -Seite enthält die folgenden Bereiche:   
  
@@ -37,7 +35,7 @@ Die **Xbox Live** -Seite enthält die folgenden Bereiche:
 ## <a name="xbtrace-advancedmp"></a>XBTrace (Advancedmp)  
    
   
-Die Seite **XBTrace (Advancedmp)** startet oder beendet einer Ablaufverfolgung für mehrere Spieler erfasst werden. Sie können auch eine Momentaufnahme des aktuellen Zustands mehrere Spieler erfassen.   
+Die Seite " **XBTrace (Advancedmp)** " startet oder beendet Erfassung von einem Multiplayer-Trace. Sie können auch eine Momentaufnahme des aktuellen Multiplayer-Zustands erfassen.   
   
 <a id="ID4E3B"></a>
 
@@ -46,13 +44,13 @@ Die Seite **XBTrace (Advancedmp)** startet oder beendet einer Ablaufverfolgung f
 ## <a name="xbox-live-status"></a>Xbox Live-Status  
    
   
-Im **Statusbereich Xbox Live** zeigt den Status von Xbox Live zu Problemen mit Diensten oder Ausfälle feed.   
+Klicken Sie im **Xbox Live-Status** zeigt den Status von Xbox Live Dienstprobleme oder Ausfälle feed.   
   
 <a id="ID4EPC"></a>
 
    
 
-## <a name="see-also"></a>Weitere Informationen  
- [Entwickler-Homepage in der Konsole (Dev-Startseite)](dev-home.md)
+## <a name="see-also"></a>Weitere Informationen:  
+ [Entwickler-Startbildschirm auf der Konsole (Dev Home)](dev-home.md)
 
   

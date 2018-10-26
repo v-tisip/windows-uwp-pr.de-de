@@ -6,33 +6,31 @@ title: Windows Runtime 8.x zu UWP – Fallstudie Bookstore2
 ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: e965db6b69014e418e59608571e98b4cf1c02a5a
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 36d37f2507f3e4c96c3462fd075dbe945117dd82
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "235400"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545051"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore2"></a>Windows Runtime 8.x zu UWP – Fallstudie: Bookstore2
 
 
-Diese Fallstudie baut auf den Informationen in [Bookstore1](w8x-to-uwp-case-study-bookstore1.md) auf und beginnt mit einer universellen8.1-App, die gruppierte Daten in einem [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)-Steuerelement anzeigt. Im Ansichtsmodell stellt jede Instanz der **Author**-Klasse die Gruppe der vom betreffenden Autor verfassten Titel dar. In **SemanticZoom** können wir dann entweder die Bücherliste nach Autoren gruppiert anzeigen oder die Liste verkleinern, um eine Sprungliste der Autoren zu erhalten. Die Sprungliste ermöglicht eine wesentlich schnellere Navigation im Vergleich zum Blättern in der Bücherliste. Wir führen Sie durch die Schritte zum Portieren der App zu einer UWP (Universelle Windows-Plattform)-App für Windows 10.
+Diese Fallstudie baut auf den Informationen in [Bookstore1](w8x-to-uwp-case-study-bookstore1.md) auf und beginnt mit einer universellen8.1-App, die gruppierte Daten in einem [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)-Steuerelement anzeigt. Im Ansichtsmodell stellt jede Instanz der **Author**-Klasse die Gruppe der vom betreffenden Autor verfassten Titel dar. In **SemanticZoom** können wir dann entweder die Bücherliste nach Autoren gruppiert anzeigen oder die Liste verkleinern, um eine Sprungliste der Autoren zu erhalten. Die Sprungliste ermöglicht eine wesentlich schnellere Navigation im Vergleich zum Blättern in der Bücherliste. Wir gehen Sie durch die Schritte zum Portieren der app zu einer app Windows10Universal Windows-Plattform (UWP).
 
-**Hinweis**   Wenn beim Öffnen von „Bookstore2Universal\_10“ in Visual Studio die Meldung „Visual Studio-Update erforderlich“ angezeigt wird, führen Sie die Schritte unter [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md) aus.
+**Hinweis:**  Wenn beim Öffnen von Bookstore2Universal\_10 in Visual Studio die Meldung "Visual Studio-Update erforderlich", klicken Sie dann die Schritte im [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md).
 
 ## <a name="downloads"></a>Downloads
 
 [Laden Sie die universelle 8.1-App „Bookstore2\_81“ herunter](http://go.microsoft.com/fwlink/?linkid=532951).
 
-[Laden Sie die Windows10-App „Bookstore2Universal\_10“ herunter](http://go.microsoft.com/fwlink/?linkid=532952).
+[Laden der Bookstore2Universal\_10 Windows 10-app](http://go.microsoft.com/fwlink/?linkid=532952).
 
 ## <a name="the-universal-81-app"></a>Die universelle8.1-App
 
-So sieht Bookstore2\_81 aus– die App, die wir portieren werden. Über einen [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) mit horizontalem Bildlauf (Windows Phone: vertikalem Bildlauf) werden Bücher nach Autoren gruppiert angezeigt. Sie können die Liste auf die Sprungliste verkleinern und von dort aus wieder zurück zu einer beliebigen Gruppe navigieren. Die App besteht aus zwei Hauptteilen: dem Ansichtsmodell, das die gruppierte Datenquelle bereitstellt, und der Benutzeroberfläche, die an dieses Ansichtsmodell gebunden ist. Wir werden feststellen, dass sich beide Teile problemlos von der WinRT 8.1-Technologie zu Windows 10 portieren lassen.
+So sieht Bookstore2\_81 aus– die App, die wir portieren werden. Über einen [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) mit horizontalem Bildlauf (Windows Phone: vertikalem Bildlauf) werden Bücher nach Autoren gruppiert angezeigt. Sie können die Liste auf die Sprungliste verkleinern und von dort aus wieder zurück zu einer beliebigen Gruppe navigieren. Die App besteht aus zwei Hauptteilen: dem Ansichtsmodell, das die gruppierte Datenquelle bereitstellt, und der Benutzeroberfläche, die an dieses Ansichtsmodell gebunden ist. Wir sehen, beide Teile problemlos von WinRT 8.1-Technologie zu Windows 10 portieren.
 
 ![bookstore2\-81 unter Windows, vergrößerte Ansicht](images/w8x-to-uwp-case-studies/c02-01-win81-zi-how-the-app-looks.png)
 
@@ -51,11 +49,11 @@ Bookstore2\_81 unter Windows Phone, vergrößerte Ansicht
 
 Bookstore2\_81 unter Windows Phone, verkleinerte Ansicht
 
-##  <a name="porting-to-a-windows-10-project"></a>Portieren auf ein Windows 10-Projekt
+##  <a name="porting-to-a-windows10-project"></a>Portieren auf ein Windows 10-Projekt
 
-Die Bookstore2\_81-Projektmappe ist ein universelles 8.1-App-Projekt. Das Bookstore2\_81.Windows-Projekt erstellt das App-Paket für Windows 8.1, und das Bookstore2\_81.WindowsPhone-Projekt erstellt das App-Paket für Windows Phone 8.1. Bookstore2\_81.Shared ist das Projekt, das den Quellcode, die Markupdateien sowie andere Assets und Ressourcen enthält, die von den beiden anderen Projekten verwendet werden.
+Die Bookstore2\_81-Projektmappe ist ein universelles 8.1-App-Projekt. Das bookstore2\_81-Projekt erstellt das app-Paket für Windows8.1 und das bookstore2\_81-Projekt erstellt das app-Paket für Windows Phone 8.1. Bookstore2\_81.Shared ist das Projekt, das den Quellcode, die Markupdateien sowie andere Assets und Ressourcen enthält, die von den beiden anderen Projekten verwendet werden.
 
-Wie bei der vorherigen Fallstudie wählen wir (aus den unter [Bei einer universellen8.1-App](w8x-to-uwp-root.md) beschriebenen Optionen) die Option zum Portieren der Inhalte des freigegebenen Projekts in ein Windows10-Projekt aus, die für die universelle Gerätefamilie geeignet ist.
+Genau wie die vorherige – Fallstudie, die Option, mit denen wir sehen (of diejenigen in [bei einer universellen 8.1-app](w8x-to-uwp-root.md)beschrieben) Portieren ist-Projekts den Inhalt der Shared in einer Windows 10, abzielt die universellen Gerätefamilie.
 
 Erstellen Sie zunächst ein neues Projekt vom Typ „Leere Anwendung“ (Windows Universal). Geben Sie ihm den Namen „Bookstore2Universal\_10“. Dies sind die Dateien, die von Bookstore2\_81 in Bookstore2Universal\_10 kopiert werden sollen.
 
@@ -67,26 +65,26 @@ Erstellen Sie zunächst ein neues Projekt vom Typ „Leere Anwendung“ (Windows
 
 **Aus dem Windows-Projekt**
 
--   Kopieren Sie „BookstoreStyles.xaml“. Wir verwenden diese Datei als Ausgangspunkt, da alle Ressourcenschlüssel in dieser Datei in eine Windows 10-App aufgelöst werden können (einige in der entsprechenden WindowsPhone-Datei werden nicht aufgelöst).
+-   Kopieren Sie „BookstoreStyles.xaml“. Wir verwenden hier als ein guter Ausgangspunkt, da alle Ressourcenschlüssel in dieser Datei in einer Windows 10-app aufgelöst werden; Einige in der entsprechenden WindowsPhone-Datei werden nicht.
 -   Kopieren Sie SeZoUC.xaml und SeZoUC.xaml.cs. Wir beginnen mit der Windows-Version dieser Ansicht, die für breite Fenster geeignet ist, und passen sie später für kleinere Fenster und folglich kleinere Geräte an.
 
 Bearbeiten Sie den Quellcode und die Markupdateien, die Sie gerade kopiert haben, und ändern Sie alle Verweise auf den Namespace „Bookstore2\_81“ in „Bookstore2Universal\_10“. Eine schnelle Möglichkeit dafür ist die Verwendung des Features **In Dateien ersetzen**. Weder im Ansichtsmodell, noch in einem anderen imperativen Code sind Codeänderungen erforderlich. Um leichter erkennen zu können, welche App-Version ausgeführt wird, sollten Sie den von der **Bookstore2Universal\_10.BookstoreViewModel.AppName**-Eigenschaft zurückgegebenen Wert von „Bookstore2\_81“ in „BOOKSTORE2UNIVERSAL\_10“ ändern.
 
-Jetzt können Sie mit der Erstellung und Ausführung beginnen. Ihre neue UWP-App sieht wie folgt aus, nachdem noch keine Arbeit für das Portieren zu Windows 10 investiert wurde.
+Jetzt können Sie mit der Erstellung und Ausführung beginnen. Hier sehen Sie, wie unsere neue UWP-app aussieht, nahezu ohne Arbeit und Mühe zu Windows 10 portiert.
 
 ![Die Windows10-App mit Änderungen am ursprünglichen Quellcode auf einem Desktopgerät, vergrößerte Ansicht](images/w8x-to-uwp-case-studies/c02-05-desk10-zi-initial-source-code-changes.png)
 
-Die Windows 10-App mit Änderungen am ursprünglichen Quellcode auf einem Desktopgerät, vergrößerte Ansicht
+Die Windows 10-app mit Änderungen am ursprünglichen Quellcode auf einem Desktopgerät, vergrößerte Ansicht
 
 ![Die Windows10-App mit Änderungen am ursprünglichen Quellcode auf einem Desktopgerät, verkleinerte Ansicht](images/w8x-to-uwp-case-studies/c02-06-desk10-zo-initial-source-code-changes.png)
 
-Die Windows 10-App mit Änderungen am ursprünglichen Quellcode auf einem Desktopgerät, verkleinerte Ansicht
+Die Windows 10-app mit Änderungen am ursprünglichen Quellcode auf einem Desktopgerät, verkleinerte Ansicht
 
-Das Ansichtsmodell und die vergrößerten sowie verkleinerten Ansichten arbeiten ordnungsgemäß zusammen, auch wenn man dies nicht auf Anhieb sieht. Ein Problem besteht darin, dass der [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) keinen Bildlauf durchführt. Das liegt daran, dass in Windows10 der Standardstil eines [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)-Elements zur vertikalen Anordnung führt (und in den Windows10-Designrichtlinien empfohlen wird, diese in neuen und portierten Apps zu verwenden). Die Einstellungen für den horizontalen Bildlauf in der benutzerdefinierten ItemsPanel-Vorlage, die wir vom Bookstore2\_81-Projekt (das für die 8.1-App entwickelt wurde) übernommen haben, stehen mit den Einstellungen für den vertikalen Bildlauf im Windows10-Standardstil in Konflikt, der infolge der Portierung zu einer Windows10-App angewendet wird. Das zweite Problem besteht darin, dass sich die Benutzeroberfläche der App noch nicht anpasst, um eine bestmögliche Anzeige in verschieden großen Fenstern und auf kleinen Geräten zu ermöglichen. Drittens werden noch nicht die richtigen Stile und Pinsel verwendet, wodurch ein Großteil des Texts nicht sichtbar ist (einschließlich der Gruppenköpfe, auf die Sie zum Verkleinern klicken können). In den nächsten drei Abschnitten ([Designänderungen an semantischem Zoom und GridView](#semanticzoom-and-gridview-design-changes), [Adaptive UI](#adaptive-ui) und [Universelle Formatierung](#universal-styling)) werden wir diese drei Probleme beheben.
+Das Ansichtsmodell und die vergrößerten sowie verkleinerten Ansichten arbeiten ordnungsgemäß zusammen, auch wenn man dies nicht auf Anhieb sieht. Ein Problem besteht darin, dass der [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) keinen Bildlauf durchführt. Dies liegt daran, in Windows 10, der Standardstil des [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) bewirkt, dass es vertikal angeordnet werden (und die Windows 10-Entwurfsrichtlinien wird empfohlen, dass wir es auf diese Weise in neuen und portierten Apps zu verwenden). Horizontalen Bildlauf Einstellungen in der benutzerdefinierten ItemsPanel-Vorlage, die wir vom Bookstore2\_81-Projekt kopiert (für die 8.1 entwickelt wurde app) infolge vertikalen Bildlauf Einstellungen in der Windows 10-Standardstil, die folglich angewendet wird Wir müssen in eine app für Windows 10 portiert werden. Das zweite Problem besteht darin, dass sich die Benutzeroberfläche der App noch nicht anpasst, um eine bestmögliche Anzeige in verschieden großen Fenstern und auf kleinen Geräten zu ermöglichen. Drittens werden noch nicht die richtigen Stile und Pinsel verwendet, wodurch ein Großteil des Texts nicht sichtbar ist (einschließlich der Gruppenköpfe, auf die Sie zum Verkleinern klicken können). In den nächsten drei Abschnitten ([Designänderungen an semantischem Zoom und GridView](#semanticzoom-and-gridview-design-changes), [Adaptive UI](#adaptive-ui) und [Universelle Formatierung](#universal-styling)) werden wir diese drei Probleme beheben.
 
 ## <a name="semanticzoom-and-gridview-design-changes"></a>Designänderungen an SemanticZoom und GridView
 
-Die Designänderungen in Windows10 am [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)-Steuerelement werden im Abschnitt [Änderungen an „SemanticZoom”](w8x-to-uwp-porting-xaml-and-ui.md) beschrieben. In diesem Abschnitt sind keine Überarbeitungen aufgrund der Änderungen erforderlich.
+Die Designänderungen in Windows 10 auf das Steuerelement [**"semanticzoom"**](https://msdn.microsoft.com/library/windows/apps/hh702601) werden im Abschnitt ["semanticzoom" Änderungen](w8x-to-uwp-porting-xaml-and-ui.md)beschrieben. In diesem Abschnitt sind keine Überarbeitungen aufgrund der Änderungen erforderlich.
 
 Die Änderungen an [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) werden im Abschnitt [Änderungen an „GridView/ListView”](w8x-to-uwp-porting-xaml-and-ui.md) beschrieben. Diese Änderungen erfordern einige geringfügige Anpassungen, die nachfolgend beschrieben werden.
 
@@ -105,7 +103,7 @@ Eine minimale Fensterbreite von 548Epx eignet sich in diesem Anwendungsfall, da 
 
 Welche Eigenschaften müssen wir also festlegen – und ändern – um diese beiden unterschiedlichen Layouts zu erreichen? Es gibt zwei Alternativen, für die jeweils ein anderer Ansatz erforderlich ist.
 
-1.  Wir können zwei [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)-Steuerelemente in unserem Markup platzieren. Eine wäre eine Kopie des Markups, die wir wurden in der Windows-Runtime 8.x app (mithilfe der darin enthaltenen Steuerelemente [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) ) verwenden, und standardmäßig reduziert. Die andere Variante ist eine Kopie des Markups, das wir in der Windows Phone Store-App verwenden (mit [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)-Steuerelementen), und das standardmäßig eingeblendet sind. Der visuelle Zustand würde die Sichtbarkeitseigenschaften der beiden **SemanticZoom**-Steuerelemente verändern. Dies wäre keine schwierige Aufgabe, die Technik ist im Allgemeinen jedoch nicht besonders effizient. Wenn Sie sie verwenden, sollten Sie ein Profil Ihrer App erstellen und sicherstellen, dass sie Ihre Leistungsvorgaben noch erfüllt.
+1.  Wir können zwei [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)-Steuerelemente in unserem Markup platzieren. Eine wäre eine Kopie des Markups, das wir wurden in der Windows-Runtime 8.x-app (mit darin enthaltenen [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) -Steuerelemente) verwenden, und das standardmäßig ausgeblendet. Die andere Variante ist eine Kopie des Markups, das wir in der Windows Phone Store-App verwenden (mit [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)-Steuerelementen), und das standardmäßig eingeblendet sind. Der visuelle Zustand würde die Sichtbarkeitseigenschaften der beiden **SemanticZoom**-Steuerelemente verändern. Dies wäre keine schwierige Aufgabe, die Technik ist im Allgemeinen jedoch nicht besonders effizient. Wenn Sie sie verwenden, sollten Sie ein Profil Ihrer App erstellen und sicherstellen, dass sie Ihre Leistungsvorgaben noch erfüllt.
 2.  Wir können einen einzelnen [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) mit [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)-Steuerelementen verwenden. Zur Umsetzung unserer beiden Layouts würden wir im breiten visuellen Zustand die Eigenschaften der **ListView**-Steuerelemente ändern, einschließlich der darauf angewendeten Vorlagen, damit sie ebenso wie die [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) angeordnet werden. Das kann die Leistung verbessern, aber es gibt so viele feine Unterschiede zwischen den verschiedenen Stilen und Vorlagen der **GridView** und **ListView** und ihren verschiedenen Elementtypen, dass diese Lösung schwieriger umzusetzen ist. Diese Lösung ist zu diesem Zeitpunkt eng mit der Zuweisungsart der Standardstile und -vorlagen gekoppelt und daher für künftige Änderungen der Standards anfällig.
 
 In dieser Fallstudie werden wir die erste Alternative untersuchen. Wenn Sie möchten, können Sie aber auch die zweite Variante testen und prüfen, ob diese besser für Sie geeignet ist. Führen Sie die folgenden Schritte aus, um die erste Alternative zu implementieren.
@@ -159,19 +157,19 @@ Nach den letzten Formatierungsvorgängen sieht die App folgendermaßen aus.
 
 ![Die portierte Windows10-App auf einem Desktopgerät, vergrößerte Ansicht, zwei Fenstergrößen](images/w8x-to-uwp-case-studies/c02-07-desk10-zi-ported.png)
 
-Die portierte Windows 10-App auf einem Desktopgerät, vergrößerte Ansicht, zwei Fenstergrößen
+Die portierte Windows 10-app auf einem Desktopgerät, vergrößerte Ansicht, zwei Fenstergrößen
 
 ![Die portierte Windows 10-App auf einem Desktopgerät, verkleinerte Ansicht, zwei Fenstergrößen](images/w8x-to-uwp-case-studies/c02-08-desk10-zo-ported.png)
 
-Die portierte Windows 10-App auf einem Desktopgerät, verkleinerte Ansicht, zwei Fenstergrößen
+Die portierte Windows 10-app auf einem Desktopgerät, verkleinerte Ansicht, zwei Fenstergrößen
 
 ![Die portierte Windows 10-App auf einem mobilen Gerät, vergrößerte Ansicht](images/w8x-to-uwp-case-studies/c02-09-mob10-zi-ported.png)
 
-Die portierte Windows 10-App auf einem mobilen Gerät, vergrößerte Ansicht
+Die portierte Windows 10-app auf einem mobilen Gerät, vergrößerte Ansicht
 
 ![Die portierte Windows 10-App auf einem mobilen Gerät, verkleinerte Ansicht](images/w8x-to-uwp-case-studies/c02-10-mob10-zo-ported.png)
 
-Die portierte Windows 10-App auf einem mobilen Gerät, verkleinerte Ansicht
+Die portierte Windows 10-app auf einem mobilen Gerät, verkleinerte Ansicht
 
 ## <a name="conclusion"></a>Fazit
 

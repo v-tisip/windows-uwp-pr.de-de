@@ -6,19 +6,17 @@ description: Erstellen Sie UWP-Apps (Universelle Windows-Plattform) mit optimale
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: e36103953ad3fb04ee5beef7e263fc326f817c0b
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: 25ddcc6c9ceaecd858733a0222c22c18682041b8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894770"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5545247"
 ---
 # <a name="best-practices-for-your-apps-startup-performance"></a>Bewährte Methoden für die Leistung Ihrer App beim Starten
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Erstellen Sie UWP-Apps (Universelle Windows-Plattform) mit optimalen Startzeiten, indem Sie die Vorgehensweise bei Start und Aktivierung optimieren.
 

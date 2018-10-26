@@ -6,16 +6,14 @@ ms.assetid: A19DFF78-E692-47AE-8221-AB5EA9470E8B
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a4303075bb9fc8133ab40a0fb48b3742c1f2637
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: a1aebe3d9aac460d444a5dffcd63142300c022b7
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1656175"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546523"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping"></a>XAML-Namespaces und Namespacezuordnung
 
@@ -65,7 +63,7 @@ Der XAML-Namespace „d:“ soll der Designerunterstützung dienen, speziell der
 
 -   **Attribute „d:DesignHeight“ und „d:DesignWidth“:** Diese Attribute werden gelegentlich auf den Stamm der XAML-Datei angewendet, die von Visual Studio oder einer anderen XAML-Designeroberfläche erstellt wird. Beispielsweise werden diese Attribute am [**UserControl**](https://msdn.microsoft.com/library/windows/apps/br227647)-Stamm des XAML festgelegt, das beim Hinzufügen eines neuen **UserControl** zu Ihrem App-Projekt erstellt wird. Diese Attribute vereinfachen das Entwerfen der Zusammensetzung des XAML-Inhalts, sodass Sie bereits im Voraus die Layoutbeschränkungen berücksichtigen können, die u.U. vorhanden sind, sobald der XAML-Inhalt für eine Steuerelementinstanz oder einen anderen Teil einer größeren UI-Seite verwendet wird.
 
-   **Hinweis**  Wenn Sie XAML aus MicrosoftSilverlight migrieren, sind diese Attribute u.U. in Stammelementen enthalten, die eine gesamte UI-Seite darstellen. In diesem Fall wird empfohlen, die Attribute zu entfernen. Andere Features des XAML-Designers wie der Simulator eignen sich wahrscheinlich besser zum Entwerfen von Seitenlayouts für die Verarbeitung von Skalierungen und Ansichtszuständen als ein Seitenlayout mit fester Größe mit **d:DesignHeight** und **d:DesignWidth**.
+   **Hinweis:** Wenn Sie XAML aus Microsoft Silverlight migrieren, sind Sie möglicherweise diese Attribute in Stammelementen enthalten, die eine gesamte UI-Seite darstellen. In diesem Fall wird empfohlen, die Attribute zu entfernen. Andere Features des XAML-Designers wie der Simulator eignen sich wahrscheinlich besser zum Entwerfen von Seitenlayouts für die Verarbeitung von Skalierungen und Ansichtszuständen als ein Seitenlayout mit fester Größe mit **d:DesignHeight** und **d:DesignWidth**.
 
 -   **d:DataContext-Attribut:** Sie können dieses Attribut für einen Seitenstamm oder ein Steuerelement festlegen, um alle expliziten oder geerbten [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713)-Elemente zu überschreiben, die das Objekt ansonsten aufweist.
 -   **d:DesignSource-Attribut:** Gibt eine Entwurfszeit-Datenquelle für [**CollectionViewSource**](https://msdn.microsoft.com/library/windows/apps/br209833) an, die [**Source**](https://msdn.microsoft.com/library/windows/apps/br209835) überschreibt.
@@ -118,5 +116,5 @@ Wenn Sie auf angefügte Eigenschaften verweisen, muss der Besitzer-Typ-Teil der 
 * [Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic](https://msdn.microsoft.com/library/windows/apps/xaml/hh441572.aspx)
 * [C#-, VB- und C++-Projektvorlagen für Windows-Runtime-Apps](https://msdn.microsoft.com/library/windows/apps/hh768232)
 * [Migrieren von Silverlight- oder WPFXAML-Code in Windows-Runtime-Apps](https://msdn.microsoft.com/library/windows/apps/br229571)
- 
+ 
 

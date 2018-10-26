@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b24b50c18716f14c58244e52bbb77668760b042
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: b38dc50f38276fb367402b230e6199fbabdcef80
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1045039"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549603"
 ---
 # <a name="swap-chains"></a>Swapchains
 
@@ -34,7 +32,7 @@ Direct3D implementiert zwei Optionen, um ein Abreißen zu vermeiden:
 
 -   Eine Option, um nur Aktualisierungen des Monitors bei der vertikalen Synchronisierung zuzulassen. Ein Monitor aktualisiert das Bild in der Regel durch einen Lichtpunkt, der horizontal in Zickzacklinien von links oben nach rechts unten verläuft. Wenn der Lichtpunkt unten angekommen ist, setzt der Monitor den Lichtpunkt wieder zurück nach links oben, sodass der Vorgang erneut beginnen kann.
 
-    Diese Rekalibrierungsprozess wird eine vertikale Synchronisierung aufgerufen. Während einer vertikalen Sync ist der Monitor nicht alles und-Zeichnung, die ein Update auf den Front-Puffer nicht angezeigt wird, bis der Monitor beginnt erneut gezeichnet wird. Die vertikale Synchronisierung ist relativ langsam. Allerdings nicht langsam genug, um eine komplexe Szenen beim Warten zu rendern. Um ein Abreißen zu vermeiden und komplexe Szenen zu rendern, wird ein Prozess benötigt, der als Hintergrundpufferung bezeichnet wird.
+    Diese Neukalibrierung wird vertikale Synchronisierung genannt. Bei einer vertikalen Synchronisierung ist der Monitor nicht nichts, zeichnen daher werden Aktualisierungen in den Frontpuffer nicht angezeigt wird, bis der Monitor erneut zu zeichnen beginnt. Die vertikale Synchronisierung ist relativ langsam. Allerdings nicht langsam genug, um eine komplexe Szenen beim Warten zu rendern. Um ein Abreißen zu vermeiden und komplexe Szenen zu rendern, wird ein Prozess benötigt, der als Hintergrundpufferung bezeichnet wird.
 
 -   Eine Option, um die als Hintergrundpufferung bezeichnete Technik zu verwenden. Hintergrundpufferung ist der Prozess des Zeichnens einer Szene auf eine Offscreenoberfläche, die Hintergrundpuffer genannt wird. Jede Oberfläche mit Ausnahme des Frontpuffers wird als Offscreenoberfläche bezeichnet, weil diese nie direkt vom Monitor angezeigt werden.
 
@@ -54,9 +52,9 @@ Das Kippen der Oberfläche ist in Multimedia-, Animations- und Spielesoftware wi
 
 [Geräte](devices.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -8,20 +8,18 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a26679bab35590d61f9188f64df977fbaf78d90
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: e808bf0fe1f521a60aa347efd148ede96be95964
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653229"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548900"
 ---
 # <a name="compressed-texture-resources"></a>Komprimierte Texturressourcen
 
 
-Texturabbildungen sind digitale Bilder, die auf dreidimensionale Formen gezeichnete werden, um diesen mehr Details zu verleihen. Sie werden während der Rasterung in diesen Formen wiedergegeben. Der Prozess kann große Mengen des Systembuses und des Speichers verbrauchen. Um den von den Texturen verbrauchten Speicherplatz zu reduzieren, unterstützt Direct3D die Komprimierung von Texturoberflächen. Einige Direct3D-Geräte bieten eine systemeigene Unterstützung für komprimierte Texturoberflächen. Wenn Sie auf solchen Geräten eine komprimierte Oberfläche erstellt und die Daten geladen haben, kann die Oberfläche in Direct3D wie jede andere Texturoberfläche verwendet werden. Direct3D verarbeitet die Dekomprimierung, wenn die Textur einem 3D-Objekt zugeordnet wird.
+Texturzuordnungen sind digitale Bilder, die auf dreidimensionale Formen gezeichnet werden, um diesen mehr Details zu verleihen. Sie werden während der Rasterung in diesen Formen wiedergegeben. Der Prozess kann große Mengen des Systembuses und des Speichers verbrauchen. Um den von den Texturen verbrauchten Speicherplatz zu reduzieren, unterstützt Direct3D die Komprimierung von Texturoberflächen. Einige Direct3D-Geräte bieten eine systemeigene Unterstützung für komprimierte Texturoberflächen. Wenn Sie auf solchen Geräten eine komprimierte Oberfläche erstellt und die Daten geladen haben, kann die Oberfläche in Direct3D wie jede andere Texturoberfläche verwendet werden. Direct3D verarbeitet die Dekomprimierung, wenn die Textur einem 3D-Objekt zugeordnet wird.
 
 ## <a name="span-idstorage-efficiency-and-texture-compressionspanspan-idstorage-efficiency-and-texture-compressionspanspan-idstorage-efficiency-and-texture-compressionspanstorage-efficiency-and-texture-compression"></a><span id="Storage-Efficiency-and-Texture-Compression"></span><span id="storage-efficiency-and-texture-compression"></span><span id="STORAGE-EFFICIENCY-AND-TEXTURE-COMPRESSION"></span>Speichereffizienz und Texturkomprimierung
 
@@ -73,16 +71,16 @@ Direct3D bietet Services zum Komprimieren von Oberflächen, die für das Anwende
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
 
 
 [Texturen](textures.md)
 
- 
+ 
 
- 
+ 
 
 
 

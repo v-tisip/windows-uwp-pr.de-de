@@ -6,16 +6,14 @@ ms.assetid: A3A46E03-0751-4DBD-A2A1-2323DB09BDBA
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, Karten, Standort, Geofence, Benachrichtigungen
 ms.localizationpriority: medium
-ms.openlocfilehash: 02baf078d127f516d57e947145ec639df5ba891b
-ms.sourcegitcommit: 11edca90aaf7856c762e68903483079d30ad3877
-ms.translationtype: HT
+ms.openlocfilehash: 8e9fa71b3d6ae002aa37e14e23b55793876156c8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2018
-ms.locfileid: "1594778"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5542274"
 ---
 # <a name="set-up-a-geofence"></a>Einrichten eines Geofence
 
@@ -479,7 +477,7 @@ Das Testen und Debuggen von Geofencing-Apps kann eine Herausforderung sein, da d
 
 Bevor Ihre App auf Positionsdaten zugreifen kann, muss **Position** auf dem Gerät aktiviert sein. Vergewissern Sie sich in der **Einstellungs**-App, dass die folgenden **Datenschutzeinstellungen für den Standort** aktiviert sind:
 
--   **Position dieses Geräts** ist **aktiviert** (gilt nicht für Windows 10 Mobile)
+-   **Position dieses Geräts...** ist **aktiviert (gilt nicht für Windows 10 Mobile)**
 -   Die Einstellung **Position** der Positionsdienste ist **aktiviert**.
 -   Ihre App hat unter **Wählen Sie Apps aus, die Ihre Position verwenden dürfen** die Einstellung **Ein**.
 

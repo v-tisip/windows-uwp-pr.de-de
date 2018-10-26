@@ -6,16 +6,14 @@ ms.assetid: EC9820D3-3A46-474F-8A01-AE1C27442750
 ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f6b56d9ac156dabc17be3245a77cb6c126317aa9
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: c874c690826dfa74b8dcb2312204cd549db3db2b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "975762"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5551033"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -62,7 +60,7 @@ Der [**Windows.Web.Http.Headers**](https://msdn.microsoft.com/library/windows/ap
 
 ## <a name="send-a-simple-get-request-over-http"></a>Senden einer einfachen GET-Anforderung über HTTP
 
-Wie weiter oben in diesem Artikel beschrieben wurde, können UWP-Apps mit dem [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692)-Namespace GET-Anforderungen senden. Im folgenden Codeausschnitt wird gezeigt, wie das Senden einer GET-Anforderung zu http://www.contoso.com mithilfe der [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) -Klasse und der [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) -Klasse zum Lesen der Antwort aus der GET-Anforderung.
+Wie weiter oben in diesem Artikel beschrieben wurde, können UWP-Apps mit dem [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692)-Namespace GET-Anforderungen senden. Der folgende Codeausschnitt veranschaulicht, wie eine GET-Anforderung zu senden http://www.contoso.com mithilfe der [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) -Klasse und der [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) -Klasse, um die Antwort der GET-Anforderung zu lesen.
 
 ```csharp
 //Create an HTTP client object
@@ -108,7 +106,7 @@ catch (Exception ex)
 
 Eine Ausnahme wird ausgelöst, wenn eine ungültige Zeichenfolge für einen Uniform Resource Identifier (URI) an den Konstruktor für das [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998)-Objekt übergeben wird.
 
-**NET:**  Der [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998)-Typ wird in C# und VB als [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) angezeigt.
+**NET:** der [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) -Typ wird als [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) in c# und VB.
 
 In C# und Visual Basic kann dieser Fehler vermieden werden, indem die [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx)-Klasse in .NET4.5 und eine der [**System.Uri.TryCreat**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.trycreate.aspx)-Methoden zum Testen der von einem Benutzer erhaltenen Zeichenfolge verwendet wird, bevor der URI erstellt wird.
 
@@ -116,7 +114,7 @@ In C++ gibt es keine Methode zum Analysieren einer Zeichenfolge für einen URI. 
 
 [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692) bietet keine Funktion, die die Behandlung von Ausnahmen erleichtert. Eine App, die [**HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) und andere Klassen in diesem Namespace verwendet, muss daher den **HRESULT**-Wert verwenden.
 
-In Apps in C# und VB.NET, die .NET Framework4.5 verwenden, stellt [System.Exception](http://msdn.microsoft.com/library/system.exception.aspx) einen Fehler während der App-Ausführung dar, wenn eine Ausnahme auftritt. Die [System.Exception.HResult](http://msdn.microsoft.com/library/system.exception.hresult.aspx)-Eigenschaft gibt den **HRESULT**-Wert zurück, der der jeweiligen Ausnahme zugewiesen ist. Die [System.Exception.Message](http://msdn.microsoft.com/library/system.exception.message.aspx)-Eigenschaft gibt die Meldung zurück, die die Ausnahme beschreibt. Mögliche **HRESULT**-Werte sind in der Headerdatei *Winerror.h* aufgeführt. Eine App kann nach bestimmten **HRESULT**-Werten filtern, um das App-Verhalten je nach Ausnahmeursache zu ändern.
+In apps unter Verwendung der .NET Framework4.5 in c#, VB.NET, der [System.Exception](http://msdn.microsoft.com/library/system.exception.aspx) einen Fehler darstellt während der Ausführung der app beim Auftreten einer Ausnahme. Die [System.Exception.HResult](http://msdn.microsoft.com/library/system.exception.hresult.aspx)-Eigenschaft gibt den **HRESULT**-Wert zurück, der der jeweiligen Ausnahme zugewiesen ist. Die [System.Exception.Message](http://msdn.microsoft.com/library/system.exception.message.aspx)-Eigenschaft gibt die Meldung zurück, die die Ausnahme beschreibt. Mögliche **HRESULT**-Werte sind in der Headerdatei *Winerror.h* aufgeführt. Eine App kann nach bestimmten **HRESULT**-Werten filtern, um das App-Verhalten je nach Ausnahmeursache zu ändern.
 
 In Apps mit verwaltetem C++ stellt das [Platform::Exception](http://msdn.microsoft.com/library/windows/apps/hh755825.aspx)-Objekt einen Fehler während der App-Ausführung dar, wenn eine Ausnahme auftritt. Die [Platform::Exception::HResult](http://msdn.microsoft.com/library/windows/apps/hh763371.aspx)-Eigenschaft gibt den **HRESULT**-Wert zurück, der der jeweiligen Ausnahme zugewiesen ist. Die [Platform::Exception::Message](http://msdn.microsoft.com/library/windows/apps/hh763375.aspx)-Eigenschaft gibt die vom System bereitgestellte Zeichenfolge zurück, die dem **HRESULT**-Wert zugeordnet ist. Mögliche **HRESULT**-Werte sind in der Headerdatei *Winerror.h* aufgeführt. Eine App kann nach bestimmten **HRESULT**-Werten filtern, um das App-Verhalten je nach Ausnahmeursache zu ändern.
 

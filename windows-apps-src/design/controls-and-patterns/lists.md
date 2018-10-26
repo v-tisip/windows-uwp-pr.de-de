@@ -8,20 +8,18 @@ template: detail.hbs
 ms.author: mukin
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 pm-contact: predavid
 design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 85151700f4050c0cefa7d7cca893cffa3c8252f4
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: f54985d446c0c95f4ee0b917a1d91e546e359483
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1655139"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549041"
 ---
 # <a name="lists"></a>Listen
 
@@ -85,7 +83,7 @@ Dies ist eine einfache Listenansicht mit gruppierten Daten auf einem Telefon.
 </tr>
 <tr class="even">
 <td align="left"><p><a href="item-containers-templates.md">Elementcontainer und Vorlagen</a></p></td>
-<td align="left"><p>Die Elemente, die Sie in einer Liste oder einem Raster anzeigen, können eine wichtige Rolle für das Gesamtdesign Ihrer App spielen. Ändern Sie Steuerelementvorlagen und Datenvorlagen, um das Erscheinungsbild der Elemente zu definieren, damit Ihre App ansprechend aussieht.</p></td>
+<td align="left"><p>Die Elemente, die Sie in einer Liste oder Raster anzeigen, können eine wichtige Rolle für das Gesamtdesign Ihrer App spielen. Ändern Sie Steuerelementvorlagen und Datenvorlagen, um das Erscheinungsbild der Elemente zu definieren, damit Ihre App ansprechend aussieht.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="item-templates-listview.md">Elementvorlagen für Listenansicht</a></p></td>

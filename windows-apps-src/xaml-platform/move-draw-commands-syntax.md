@@ -6,16 +6,14 @@ ms.assetid: 7772BC3E-A631-46FF-9940-3DD5B9D0E0D9
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: a66faebf8447253cc158ea8aa2312eb61474bc08
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: d77049cbaa289fe8621e8cf91883952e6edda9b2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675257"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550694"
 ---
 # <a name="move-and-draw-commands-syntax"></a>Syntax für die Verschieben- und Zeichnen-Befehle
 
@@ -83,7 +81,7 @@ Gibt den Anfangspunkt einer neuen Figur an.
 
 Der Großbuchstabe **M** gibt an, dass *startPoint* eine absolute Koordinate ist. Der Kleinbuchstabe **m** gibt an, dass *startPoint* ein Offset zum vorherigen Punkt ist. Wenn kein vorheriger Punkt vorhanden ist, wird (0,0) angegeben.
 
-**Hinweis**  Sie können nach dem Verschieben-Befehl mehrere Points angeben. Es wird eine Linie zu diesen Punkten gezeichnet, als hätten Sie den Linienbefehl angegeben. Dieser Stil wird aber nicht empfohlen, verwenden Sie stattdessen den speziellen Linienbefehl.
+**Hinweis:** es ist zulässig, nach dem Verschieben-Befehl mehrere Points angeben. Es wird eine Linie zu diesen Punkten gezeichnet, als hätten Sie den Linienbefehl angegeben. Dieser Stil wird aber nicht empfohlen, verwenden Sie stattdessen den speziellen Linienbefehl.
 
 **Zeichnen-Befehle**
 
@@ -141,7 +139,7 @@ Erstellt eine kubische Bézierkurve zwischen dem aktuellen Punkt und dem angegeb
 |------|-------------|
 | *controlPoint1* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> Der erste Kontrollpunkt der Kurve, der die Anfangstangente der Kurve bestimmt. |
 | *controlPoint2* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> Der zweite Kontrollpunkt der Kurve, der die Endtangente der Kurve bestimmt. |
-| *endPoint* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> Der Punkt, zu dem die Kurve gezeichnet wird. | 
+| *endPoint* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> Der Punkt, zu dem die Kurve gezeichnet wird. | 
 
 **Befehl für eine quadratische Bézierkurve**
 
@@ -197,7 +195,7 @@ Erstellt einen Ellipsenbogen zwischen dem aktuellen Punkt und dem angegebenen En
 | *isLargeArcFlag* | Legen Sie „1“ fest, wenn der Winkel des Bogens mindestens 180 Grad entsprechen soll. Legen Sie anderenfalls „0“ fest. |
 | *sweepDirectionFlag* | Legen Sie „1“ fest, wenn der Bogen in Richtung eines positiven Winkels gezeichnet wird. Legen Sie anderenfalls „0“ fest. |
 | *endPoint* | [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870) <br/> Der Punkt, zu dem die Kurve gezeichnet wird.|
- 
+ 
 **Schließen-Befehl**
 
 Beendet die aktuelle Figur und erstellt eine Linie, die den aktuellen Punkt mit dem Anfangspunkt der Figur verbindet. Dieser Befehl erstellt eine Linienverbindung (Ecke) zwischen dem letzten Segment und dem ersten Segment der Figur.
@@ -214,7 +212,7 @@ Beschreibt die x-Koordinate und y-Koordinate eines Punkts. Weitere Informationen
 |--------|
 | *x*,*y*<br/> - oder - <br/>*x* *y* |
 
-| Benennung | Beschreibung |
+| Begriff | Beschreibung |
 |------|-------------|
 | *x* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> Die x-Koordinate des Punkts |
 | *y* | [**Double**](https://msdn.microsoft.com/library/windows/apps/system.double.aspx) <br/> Die y-Koordinate des Punkts |
@@ -231,11 +229,11 @@ Anstelle von Dezimalzahlen oder Ganzzahlen können Sie die wissenschaftliche Not
 
 ## <a name="design-tools-that-produce-move-and-draw-commands"></a>Designtools zum Erzeugen von Verschieben- und Zeichnen-Befehlen
 
-Mit dem **Pen**-Tool und anderen Zeichentools in Blend for Microsoft Visual Studio 2015 erzeugen Sie normalerweise ein [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path)-Objekt mit Verschieben- und Zeichnen-Befehlen.
+Mit **dem Stift** und anderen Zeichentools in Blend für Visual Studio2015 Microsoft wird in der Regel Erzeugen einer [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path) -Objekt, mit verschieben- und zeichnen-Befehle.
 
 Möglicherweise sehen Sie vorhandene Daten für Verschieben- und Zeichnen-Befehle in einigen Steuerelementkomponenten, die in den Standardvorlagen für Steuerelemente in Windows-Runtime-XAML definiert sind. So verwenden zum Beispiel einige Steuerelemente ein [**PathIcon**](https://msdn.microsoft.com/library/windows/apps/dn252722)-Objekt, dessen Daten als Verschieben- und Zeichnen-Befehle definiert sind.
 
-Für andere häufig verwendete Vektorgrafik-Designtools, die den Vektor in XAML-Form ausgeben können, sind Exporter oder Plug-Ins verfügbar. Diese erstellen gewöhnlich [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path)-Objekte in einem Layoutcontainer mit Verschieben- und Zeichnen-Befehlen für die [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356)-Eigenschaft. XAML kann mehrere **Path**-Elemente enthalten, sodass verschiedene Pinsel angewendet werden können. Viele dieser Exporter oder Plug-Ins wurden ursprünglich für Windows Presentation Foundation (WPF), XAML oder Silverlight geschrieben, aber die XAML-Pfadsyntax ist mit Windows-Runtime-XAML identisch. In der Regel können Sie XAML-Abschnitte aus einem Exporter verwenden und direkt in eine Windows-Runtime-XAML-Seite einfügen. (Es ist aber nicht möglich, einen **RadialGradientBrush**-Pinsel zu verwenden, wenn dieser Bestandteil der konvertierten XAML war, da Windows-Runtime-XAML diesen Pinsel nicht unterstützt.)
+Für andere häufig verwendete Vektorgrafik-Designtools, die den Vektor in XAML-Form ausgeben können, sind Exporter oder Plug-Ins verfügbar. Diese erstellen gewöhnlich [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path)-Objekte in einem Layoutcontainer mit Verschieben- und Zeichnen-Befehlen für die [**Path.Data**](https://msdn.microsoft.com/library/windows/apps/br243356)-Eigenschaft. XAML kann mehrere **Path**-Elemente enthalten, sodass verschiedene Pinsel angewendet werden können. Viele dieser Exporter oder Plug-Ins wurden ursprünglich für Windows Presentation Foundation (WPF) XAML oder Silverlight geschrieben, aber die XAML-Pfadsyntax ist mit Windows-Runtime-XAML identisch. In der Regel können Sie XAML-Abschnitte aus einem Exporter verwenden und direkt in eine Windows-Runtime-XAML-Seite einfügen. (Es ist aber nicht möglich, einen **RadialGradientBrush**-Pinsel zu verwenden, wenn dieser Bestandteil der konvertierten XAML war, da Windows-Runtime-XAML diesen Pinsel nicht unterstützt.)
 
 ## <a name="related-topics"></a>Verwandte Themen
 

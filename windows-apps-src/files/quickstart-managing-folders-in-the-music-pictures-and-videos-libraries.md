@@ -4,23 +4,18 @@ ms.assetid: 1AE29512-7A7D-4179-ADAC-F02819AC2C39
 title: Dateien und Ordner in den Musik-, Bild- und Videobibliotheken
 description: Fügen Sie vorhandene Musik-, Bilder- oder Video-Ordner den entsprechenden Bibliotheken hinzu. Sie können auch Ordner aus Bibliotheken entfernen, die Liste der Ordner in einer Bibliothek abrufen und gespeicherte Fotos, Musik und Videos untersuchen.
 ms.author: lahugh
-ms.date: 02/08/2017
+ms.date: 06/18/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f8f81f3b6abea2ceb07ab4442d0b5dc24104408
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 1859d758806b4e92758decb40b8a30d02acb254d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654439"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549744"
 ---
 # <a name="files-and-folders-in-the-music-pictures-and-videos-libraries"></a>Dateien und Ordner in den Musik-, Bild- und Videobibliotheken
-
-
-
 
 Fügen Sie vorhandene Musik-, Bilder- oder Video-Ordner den entsprechenden Bibliotheken hinzu. Sie können auch Ordner aus Bibliotheken entfernen, die Liste der Ordner in einer Bibliothek abrufen und gespeicherte Fotos, Musik und Videos untersuchen.
 
@@ -47,7 +42,7 @@ Eine Bibliothek ist eine virtuelle Sammlung von Ordnern, die standardmäßig ein
 
 > [!NOTE]
 > Denken Sie daran, die Funktion entsprechend zu deklarieren. Weitere Informationen finden Sie unter [Deklarationen für App-Funktionen](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
- 
+ 
 
 Rufen Sie die [**StorageLibrary.GetLibraryAsync**](https://msdn.microsoft.com/library/windows/apps/dn251725)-Methode auf, um einen Verweis auf die Musik-, Bilder- oder Videobibliothek des Benutzers zu erhalten. Geben Sie den entsprechenden Wert der [**KnownLibraryId**](https://msdn.microsoft.com/library/windows/apps/dn298399)-Enumeration ein.
 
@@ -147,7 +142,7 @@ private async void getSongs()
     QueryOptions queryOption = new QueryOptions
         (CommonFileQuery.OrderByTitle, new string[] { ".mp3", ".mp4", ".wma" });
 
-    queryOption.FolderDepth = FolderDepth.Deep
+    queryOption.FolderDepth = FolderDepth.Deep;
 
     Queue<IStorageFolder> folders = new Queue<IStorageFolder>();
 

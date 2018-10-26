@@ -6,19 +6,17 @@ description: Betatests bieten Ihnen die Möglichkeit zum Verbessern Ihrer App an
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 6f5a4e7f2961143f44acb533f045783fb4e4b7c1
-ms.sourcegitcommit: e8cc657d85566768a6efb7cd972ebf64c25e0628
+ms.localizationpriority: medium
+ms.openlocfilehash: 7d1e60270b43a8c14067df70ff3e8489f4af2887
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2017
-ms.locfileid: "692912"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544746"
 ---
 # <a name="beta-testing"></a>Betatests
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 *Betatests* bieten Ihnen die Möglichkeit zum Verbessern Ihrer App anhand des Feedbacks von Personen außerhalb Ihres App-Entwicklungsteams, die die noch nicht freigegebene App auf ihren eigenen Geräten testen.
@@ -36,7 +34,7 @@ Mit Betatests können Sie folgende Aktionen ausführen:
 -   Ihre App auf einer Vielzahl von Geräten testen
 -   Leistungsprobleme und andere Fehler aufdecken, die Sie möglicherweise andernfalls nicht gefunden haben
 -   Realistische Informationen zum Verbessern der Benutzerfreundlichkeit erhalten
--   Feedback ohne Auswirkungen auf die öffentlichen Bewertungen im Windows Store erhalten
+-   Erhalten Sie Feedback ohne Auswirkungen auf die öffentlichen Bewertungen im Microsoft Store
 
 ## <a name="when-to-beta-test"></a>Gründe für Betatests
 
@@ -48,9 +46,9 @@ Im einheitlichen Windows Dev Center-Dashboard können Sie die Verteilung Ihrer A
 
 Informationen zum Übermitteln Ihrer App an den Store für Betatests finden Sie unter [Betatests und zielgerichtete Verteilung](https://msdn.microsoft.com/library/windows/apps/Mt185377).
 
- 
+ 
 
- 
+ 
 
 
 

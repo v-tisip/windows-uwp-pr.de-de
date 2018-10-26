@@ -5,16 +5,14 @@ title: 'Python-Beispiel: App-Übermittlung mit Spieloptionen und Trailer'
 ms.author: mhopkins
 ms.date: 07/10/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, Uwp, Microsoft Store-Übermittlungs-API, Codebeispiele, Spieloptionen, Trailer, erweiterte Angebote, Python
 ms.localizationpriority: medium
-ms.openlocfilehash: d3617e7868f62c5d8e430deb4be295bc552dff18
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 53267caadcb903ad7eebe31d3a38c5be57a34036
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/25/2018
-ms.locfileid: "5516185"
+ms.locfileid: "5542251"
 ---
 # <a name="python-sample-app-submission-with-game-options-and-trailers"></a>Python-Beispiel: App-Übermittlung mit Spieloptionen und Trailer
 

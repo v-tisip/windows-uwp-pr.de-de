@@ -6,19 +6,18 @@ ms.assetid: 86d5791b-1faa-17e4-44a8-bbba07062756
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Direct3D, Tiefenpuffer
-ms.openlocfilehash: 87e4248545288f4725e0cf0b104a75f1925ad3a3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 091ac04b2a41c54fbce7294bcf6651f4ad4aafd2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233687"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549332"
 ---
 # <a name="create-depth-buffer-device-resources"></a>Erstellen von Tiefenpuffer-Geräteressourcen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Hier erfahren Sie, wie Sie die zum Unterstützen von Tiefentests für Schattenvolumen erforderlichen Direct3D-Geräteressourcen erstellen. Teil 1 von [Exemplarische Vorgehensweise: Implementieren von Schattenvolumen mithilfe von Tiefenpuffern in Direct3D11](implementing-depth-buffers-for-shadow-mapping.md).
@@ -261,9 +260,9 @@ m_shadowViewport.MaxDepth = 1.f;
 
 Im nächsten Teil dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie die Schattenkarte durch [Rendern in den Tiefenpuffer](render-the-shadow-map-to-the-depth-buffer.md) erstellen.
 
- 
+ 
 
- 
+ 
 
 
 

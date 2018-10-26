@@ -6,16 +6,14 @@ title: Erstellen eines Projekts in Visual Studio
 ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 75c85f96537c3a660692bf3c9d910155f39b37a3
-ms.sourcegitcommit: d780e3a087ab5240ea643346480a1427bea9e29b
-ms.translationtype: HT
+ms.openlocfilehash: 3b10d615146c8989231c4fe36ad9588716c59c34
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
-ms.locfileid: "1572867"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5547569"
 ---
 # <a name="getting-started-creating-a-project"></a>Erste Schritte: Erstellen eines Projekts
 
@@ -29,11 +27,11 @@ Im folgenden Video werden Xcode und Visual Studio verglichen.
 
 Sie werden außerdem den [Blogbeitrag zum Erstellen von Apps für Windows](https://blogs.windows.com/buildingapps/2016/01/27/visual-studio-walkthrough-for-ios-developers/) sehr hilfreich finden.
 
-Das Erstellen einer App für Windows 10 (formeller als UWP-App bezeichnet) entspricht in etwa dem Erstellen einer iOS-App mit Storyboards. Die Windows10-App wird (ähnlich einer Website) häufig über mehrere Seiten konstruiert, die jeweils einen anderen Teil der Benutzeroberfläche enthalten. Jeder Seite sind normalerweise zwei Quelldateien zugeordnet: eine zum Speichern der Benutzeroberfläche im unter [Übersicht über XAML](https://msdn.microsoft.com/library/windows/apps/mt185595) definierten Format und eine für den Quellcode, häufig C#. Beim Interagieren mit der App navigiert der Benutzer zwischen diesen Seiten. In dieser exemplarischen Vorgehensweise wird eine App mit zwei Seiten erstellt.
+Erstellen einer app für Windows 10 (formeller als universelle Windows-Plattform (UWP)-app bezeichnet) entspricht in etwa dem Erstellen einer iOS-app mit Storyboards. Die Windows 10-app wird häufig über mehrere Seiten jeder Seite mit einem anderen Teil der Benutzeroberfläche, z. B. eine Website erstellt. Jeder Seite sind normalerweise zwei Quelldateien zugeordnet: eine zum Speichern der Benutzeroberfläche im unter [Übersicht über XAML](https://msdn.microsoft.com/library/windows/apps/mt185595) definierten Format und eine für den Quellcode, häufig C#. Beim Interagieren mit der App navigiert der Benutzer zwischen diesen Seiten. In dieser exemplarischen Vorgehensweise wird eine App mit zwei Seiten erstellt.
 
-**Hinweis**  Ein wichtiges Feature von Windows 10-Apps ist, dass unabhängig von der Plattform der gleiche Quellcode und der gleiche API-Satz zur Verfügung steht. Wie Sie wissen, können Sie beim Schreiben einer universellen iOS-App für iPhone und iPad zur Laufzeit feststellen, auf welcher Plattform Ihre App ausgeführt wird, und entsprechende Maßnahmen ergreifen. Auf ähnliche Weise können Windows 10-Apps zur Laufzeit mitteilen, auf welchem Gerät sie ausgeführt werden. Bei einer UWP-App entfallen die \#ifdefs in Ihrem Quellcode zum Erstellen von Telefon- bzw. Desktopbuilds. Windows 10-Apps setzen auch ihre Benutzeroberflächen-Steuerelemente abhängig vom Gerät ein: Wenn Ihre App beispielsweise auf ein Datumsauswahl-Steuerelement verweist, weist dieses je nachdem, ob die App auf einem Desktop- oder Telefonbildschirm ausgeführt wird, unterschiedliches Aussehen und unterschiedliche Funktionsweisen auf. Der Quellcode bleibt jedoch unverändert.
+**Hinweis:** ein wichtiges Feature von Windows 10-apps ist die Tatsache, dass der gleiche Quellcode und die gleiche API-Satz, unabhängig von der Plattform für Sie verfügbar ist. Wie Sie wissen, können Sie beim Schreiben einer universellen iOS-App für iPhone und iPad zur Laufzeit feststellen, auf welcher Plattform Ihre App ausgeführt wird, und entsprechende Maßnahmen ergreifen. Auf ähnliche Weise können Windows 10-apps, zur Laufzeit, mitteilen welchem Gerät, das Sie ausgeführt werden. Bei einer UWP-App entfallen die \#ifdefs in Ihrem Quellcode zum Erstellen von Telefon- bzw. Desktopbuilds. Windows 10-apps verwenden praktischerweise auf intelligente Weise auch ihre Benutzeroberflächen-Steuerelemente abhängig vom Gerät: z. B. Ihre app kann ein Datumsauswahl-Steuerelement verweisen, und das Steuerelement wird automatisch suchen und je nachdem, ob sie verfügt auf einem Desktop- oder telefonbildschirm ausgeführt. Der Quellcode bleibt jedoch unverändert.
 
-Sehen wir uns an, wie eine Windows 10-App erstellt wird. Führen Sie zuerst Visual Studio2013 aus. Bei der ersten Ausführung des Programms werden Sie von Visual Studio zum Anfordern einer Entwicklerlizenz aufgefordert. Mithilfe einer Entwicklerlizenz können Sie UWP-Apps auf Ihrem lokalen Computer installieren und testen, bevor Sie sie an den Microsoft Store senden. Befolgen Sie zum Anfordern einer Lizenz die Bildschirmanweisungen, um sich mit einem Microsoft-Konto anzumelden. Wenn Sie kein Microsoft-Konto haben, klicken Sie im Dialogfeld **Entwicklerlizenz** auf den Link **Registrieren** und befolgen Sie die Bildschirmanweisungen.
+Sehen wir uns an, wie wir eine Windows 10-app erstellen können. Führen Sie zuerst Visual Studio2013 aus. Bei der ersten Ausführung des Programms werden Sie von Visual Studio zum Anfordern einer Entwicklerlizenz aufgefordert. Mithilfe einer Entwicklerlizenz können Sie UWP-Apps auf Ihrem lokalen Computer installieren und testen, bevor Sie sie an den Microsoft Store senden. Befolgen Sie zum Anfordern einer Lizenz die Bildschirmanweisungen, um sich mit einem Microsoft-Konto anzumelden. Wenn Sie kein Microsoft-Konto haben, klicken Sie im Dialogfeld **Entwicklerlizenz** auf den Link **Registrieren** und befolgen Sie die Bildschirmanweisungen.
 
 Zum Vergleich: beim Starten von Xcode wird zunächst der Bildschirm **Willkommen zu Xcode** angezeigt, der der folgenden Abbildung ähnelt.
 

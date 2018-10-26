@@ -8,17 +8,15 @@ title: Benutzerdefinierte Videoeffekte
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.assetid: 40a6bd32-a756-400f-ba34-2c5f507262c0
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a1f53bb1165561865124a960940fab3f4325061
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 08d861355a235c9217f51ce6f925224a27a562ef
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843320"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544756"
 ---
 # <a name="custom-video-effects"></a>Benutzerdefinierte Videoeffekte
 
@@ -99,7 +97,7 @@ Das System überprüft die [**SupportedEncodingProperties**](https://msdn.micros
 > [!NOTE] 
 > Wenn Sie eine leere Liste mit [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217)-Objekten von **SupportedEncodingProperties** zurückgeben, verwendet das System standardmäßig die ARGB32-Codierung.
 
- 
+ 
 
 ### <a name="supportedmemorytypes-property"></a>SupportedMemoryTypes-Eigenschaft
 
@@ -111,7 +109,7 @@ Das System überprüft die [**SupportedMemoryTypes**](https://msdn.microsoft.com
 > [!NOTE]
 > Wenn Sie [**MediaMemoryTypes.GpuAndCpu**](https://msdn.microsoft.com/library/windows/apps/dn764822) angeben, verwendet das System entweder den GPU- oder Systemarbeitsspeicher, je nachdem, welcher für die Pipeline effizienter ist. Wenn Sie diesen Wert verwenden, müssen Sie in der [**ProcessFrame**](https://msdn.microsoft.com/library/windows/apps/dn764794)-Methode prüfen, ob [**SoftwareBitmap**](https://msdn.microsoft.com/library/windows/apps/dn887358) oder [**IDirect3DSurface**](https://msdn.microsoft.com/library/windows/apps/dn965505), das an die Methode übergeben wird, Daten enthält, und den Frame dann entsprechend verarbeiten.
 
- 
+ 
 
 ### <a name="timeindependent-property"></a>TimeIndependent-Eigenschaft
 
@@ -154,7 +152,7 @@ Fügen Sie den folgenden Code in den Namespace für den Effekt ein, um die Schni
 > 2.  Wählen Sie die Registerkarte **Erstellen** aus.
 > 3.  Aktivieren Sie das Kontrollkästchen **Unsicheren Code zulassen**.
 
- 
+ 
 
 Sie können nun die **ProcessFrame**-Methodenimplementierung hinzufügen. Zunächst erhält diese Methode ein [**BitmapBuffer**](https://msdn.microsoft.com/library/windows/apps/dn887325)-Objekt aus den Ein- und Ausgabesoftwarebitmaps. Beachten Sie, dass der Ausgabeframe zum Schreiben und die Eingabe zum Lesen geöffnet wird. Als Nächstes wird ein [**IMemoryBufferReference**](https://msdn.microsoft.com/library/windows/apps/dn921671)-Objekt für jeden Puffer durch Aufrufen von [**CreateReference**](https://msdn.microsoft.com/library/windows/apps/dn949046) abgerufen. Danach wird der tatsächliche Datenpuffer durch Umwandeln der **IMemoryBufferReference**-Objekte wie die oben definierte COMInterop-Schnittstelle, **IMemoryByteAccess**, und anschließendes Aufrufen von **GetBuffer** abgerufen.
 

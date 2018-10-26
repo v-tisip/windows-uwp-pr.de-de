@@ -1,46 +1,45 @@
 ---
 author: mtoepke
 title: Unterstützen der Bildschirmausrichtung (DirectX und C++)
-description: An dieser Stelle erläutern wir die bewährten Methoden zum Umgang mit der Bildschirmausrichtung in Ihrer UWP-DirectX-App, sodass die Grafikhardware der Windows 10-Geräte effizient und effektiv verwendet wird.
+description: Hier erläutern wir bewährte Methoden für die Behandlung von Drehung des Bildschirms in Ihrer UWP-DirectX-app, damit das Windows 10-Gerät Grafikhardware werden effizienter und effektiver verwendet.
 ms.assetid: f23818a6-e372-735d-912b-89cabeddb6d4
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, Spiele, Bildschirmausrichtung, DirectX
-ms.openlocfilehash: 606d32d16ad94e45cb63c73f1869735a9fbd7d25
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 4ed8739f8ba7b2049af154d458ccaa831b8526a5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "235458"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548252"
 ---
 # <a name="supporting-screen-orientation-directx-and-c"></a>Unterstützen der Bildschirmausrichtung (DirectX und C++)
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-Ihre App für die universelle Windows-Plattform (UWP) kann beim Behandeln des [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268)-Ereignisses mehrere Bildschirmausrichtungen unterstützen. An dieser Stelle erläutern wir die bewährten Methoden zum Umgang mit der Bildschirmausrichtung in Ihrer UWP-DirectX-App, sodass die Grafikhardware der Windows10-Geräte effizient und effektiv verwendet wird.
+Ihre App für die universelle Windows-Plattform (UWP) kann beim Behandeln des [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268)-Ereignisses mehrere Bildschirmausrichtungen unterstützen. Hier erläutern wir bewährte Methoden für die Behandlung von Drehung des Bildschirms in Ihrer UWP-DirectX-app, damit das Windows 10-Gerät Grafikhardware werden effizienter und effektiver verwendet.
 
-Beachten Sie vor Beginn, dass Grafikhardware grundsätzlich auf irgendeine Art und Weise Pixeldaten ausgibt und dass die Ausrichtung des Geräts dabei keine Rolle spielt. Windows 10-Geräte können ihre aktuelle Anzeigeausrichtung selbst bestimmen (mithilfe eines Sensors oder einer Softwareumschaltung), und sie ermöglichen dem Benutzer das Ändern der Anzeigeeinstellungen. Aufgrund dessen übernimmt Windows10 die Drehung von Bildern selbst, um sicherzustellen, dass sie basierend auf der Ausrichtung des Geräts "aufrecht" angezeigt werden. Standardmäßig empfangen Apps eine Benachrichtigung mit dem Hinweis, dass bezüglich der Ausrichtung eine Änderung vorgenommen wurde (beispielsweise eine Änderung der Fenstergröße). Wenn dieser Fall eintritt, dreht Windows10 das Bild sofort für die endgültige Anzeige. Für drei der vier speziellen Bildschirmausrichtungen (diese werden zu einem späteren Zeitpunkt erläutert) verwendet Windows10 zusätzliche Grafikressourcen und Berechnungen, um das endgültige Bild anzuzeigen.
+Beachten Sie vor Beginn, dass Grafikhardware grundsätzlich auf irgendeine Art und Weise Pixeldaten ausgibt und dass die Ausrichtung des Geräts dabei keine Rolle spielt. Windows 10-Geräte können ihre aktuelle anzeigeausrichtung bestimmen, (mit einigen Sortierung des Sensors oder einer softwareumschaltung) und Benutzern das Ändern der Anzeigeeinstellungen. Aufgrund dieser, Windows 10 selbst übernimmt die Drehung der Bilder um sicherzustellen, dass sie sind "aufrecht angezeigt", basierend auf der Ausrichtung des Geräts. Standardmäßig empfangen Apps eine Benachrichtigung mit dem Hinweis, dass bezüglich der Ausrichtung eine Änderung vorgenommen wurde (beispielsweise eine Änderung der Fenstergröße). Wenn dieser Fall eintritt, dreht Windows 10 das Bild für die endgültige Anzeige sofort. Für drei der vier speziellen bildschirmausrichtungen (finden Sie weiter unten) verwendet Windows 10 zusätzliche Grafikressourcen und Berechnungen, um das endgültige Bild anzuzeigen.
 
 Für UWP-DirectX-Apps stellt das [**DisplayInformation**](https://msdn.microsoft.com/library/windows/apps/dn264258)-Objekt grundlegende Bildschirmausrichtungsdaten bereit, die von der App abgefragt werden können. Die Standardausrichtung lautet *Querformat*, wobei die Pixelbreite der Anzeige größer ist als die Höhe. Die alternative Ausrichtung lautet *Hochformat*, in der die Anzeige um 90Grad in eine Richtung gedreht und die Breite kleiner als die Höhe wird.
 
-Windows 10 definiert vier spezielle Bildschirmausrichtungsmodi:
+Windows 10 definiert vier spezielle bildschirmausrichtungsmodi:
 
--   Querformat – dies ist die Bildschirmstandardausrichtung für Windows10, und sie wird als Basis- oder Identitätswinkel für die Drehung betrachtet (0 Grad).
+-   Querformat – die bildschirmstandardausrichtung für Windows 10, und gilt der Basis- oder identitätswinkel für die Drehung (0 Grad).
 -   Hochformat – die Anzeige wurde um 90 Grad im Uhrzeigersinn gedreht (oder um 270 entgegen dem Uhrzeigersinn).
 -   Querformat, gedreht – die Anzeige wurde um 180 Grad gedreht (auf den Kopf gedreht).
 -   Hochformat, gedreht – die Anzeige wurde um 270 Grad im Uhrzeigersinn gedreht (oder um 90 Grad entgegen dem Uhrzeigersinn).
 
-Wenn die Anzeige von einer Ausrichtung in eine andere gedreht wird, führt Windows10 intern einen Drehvorgang aus, um das dargestellte Bild an die neue Ausrichtung anzupassen, und dem Benutzer wird auf dem Bildschirm ein aufrechtes Bild angezeigt.
+Wenn die Anzeige von einer Ausrichtung auf eine andere gedreht wird, führt Windows 10 intern einen Drehvorgang um das dargestellte Bild an die neue Ausrichtung anzupassen, und der Benutzer wird ein aufrechtes Bild auf dem Bildschirm.
 
-Zudem zeigt Windows 10 automatische Übergangsanimationen an, um beim Wechseln zwischen den Ausrichtungen sanfte Übergänge zu erzeugen. Einen Wechsel der Bildschirmausrichtung nimmt der Benutzer mit einer festen Vergrößerung und einer Drehungsanimation des auf dem Bildschirm angezeigten Bilds wahr. Der App wird von Windows10 Zeit für das Layout in der neuen Ausrichtung zugewiesen.
+Zudem zeigt Windows 10 automatische Übergangsanimationen an, um eine flüssige Benutzeroberfläche zu erstellen, wenn von einer Ausrichtung zu einer anderen zu verschieben. Einen Wechsel der Bildschirmausrichtung nimmt der Benutzer mit einer festen Vergrößerung und einer Drehungsanimation des auf dem Bildschirm angezeigten Bilds wahr. Zeit wird von Windows 10 an die app für das Layout in der neuen Ausrichtung zugewiesen.
 
 Im Großen und Ganzen lautet der allgemeine Prozess zum Behandeln von Änderungen bezüglich der Bildschirmausrichtung wie folgt:
 
 1.  Verwenden Sie eine Kombination aus den Fensterabgrenzungswerten und den Bildschirmausrichtungsdaten, um die Ausrichtung der Swapchain an der systemeigenen Bildschirmausrichtung des Geräts beizubehalten.
-2.  Benachrichtigen Sie Windows10 mithilfe von [**IDXGISwapChain1::SetRotation**](https://msdn.microsoft.com/library/windows/desktop/hh446801) über die Ausrichtung der Swapchain.
+2.  Windows 10, der die Ausrichtung der SwapChain mit [**idxgiswapchain1:: SetRotation**](https://msdn.microsoft.com/library/windows/desktop/hh446801)zu benachrichtigen.
 3.  Ändern Sie den Code zum Rendern, um Bilder zu generieren, die an die benutzerdefinierte Ausrichtung des Geräts angepasst sind.
 
 ## <a name="resizing-the-swap-chain-and-pre-rotating-its-contents"></a>Ändern der Swapchaingröße und Vorgeben der Bildschirmausrichtung für die Inhalte
@@ -161,7 +160,7 @@ void DX::DeviceResources::CreateWindowSizeDependentResources()
         swapChainDesc.SampleDesc.Quality = 0;
         swapChainDesc.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
         swapChainDesc.BufferCount = 2; // Use double-buffering to minimize latency.
-        swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL; // All Windows Store apps must use this SwapEffect.
+        swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL; // All UWP apps must use this SwapEffect.
         swapChainDesc.Flags = 0;    
         swapChainDesc.Scaling = DXGI_SCALING_NONE;
         swapChainDesc.AlphaMode = DXGI_ALPHA_MODE_IGNORE;
@@ -320,7 +319,7 @@ void DX::DeviceResources::CreateWindowSizeDependentResources()
 
     m_d2dContext->SetTarget(m_d2dTargetBitmap.Get());
 
-    // Grayscale text anti-aliasing is recommended for all Windows Store apps.
+    // Grayscale text anti-aliasing is recommended for all UWP apps.
     m_d2dContext->SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE_GRAYSCALE);
 
 }
@@ -333,7 +332,7 @@ Nachdem Sie die aktuellen Höhen- und Breitenwerte des Fensters für den nächst
 
 0.5f wird hinzugefügt, um die Rundung auf den nächsten ganzzahligen Wert sicherzustellen.
 
-Beachten Sie dabei, dass [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Koordinaten immer in DIPs definiert werden. In Windows10 undfrüheren Versionen von Windows ist ein DIP als 1/96 Zoll definiert, und es wird an die Betriebssystemdefinition für *oben* angepasst. Beim Drehen der Bildschirmausrichtung in das Hochformat vertauscht die App die Breite und Höhe von **CoreWindow**, und die Renderzielgröße (Begrenzungen) muss entsprechend geändert werden. Da die Direct3D-Koordinaten immer in physischen Pixeln angegeben sind, müssen Sie die DIP-Werte von **CoreWindow** in ganzzahlige Pixelwerte konvertieren, bevor Sie diese Werte zum Einrichten der Swapchain an Direct3D übergeben.
+Beachten Sie dabei, dass [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Koordinaten immer in DIPs definiert werden. Für Windows 10 und früheren Versionen von Windows ist ein DIP als 1/96 Zoll und an die betriebssystemdefinition *auf-* definiert. Beim Drehen der Bildschirmausrichtung in das Hochformat vertauscht die App die Breite und Höhe von **CoreWindow**, und die Renderzielgröße (Begrenzungen) muss entsprechend geändert werden. Da die Direct3D-Koordinaten immer in physischen Pixeln angegeben sind, müssen Sie die DIP-Werte von **CoreWindow** in ganzzahlige Pixelwerte konvertieren, bevor Sie diese Werte zum Einrichten der Swapchain an Direct3D übergeben.
 
 Für die einzelnen Prozesse ist die Arbeit ein wenig umfangreicher als bei einer einfachen Änderung der Swapchaingröße: Sie drehen die Direct2D- und Direct3D-Komponenten Ihres Bilds, bevor Sie sie für die Darstellung zusammenstellen, und Sie informieren die Swapchain darüber, dass Sie die Ergebnisse in einer neuen Ausrichtung gerendert haben. Nachstehend finden Sie etwas mehr Details zu diesem Prozess, wie im Codebeispiel für **DX::DeviceResources::CreateWindowSizeDependentResources** veranschaulicht wird:
 
@@ -348,11 +347,11 @@ Für die einzelnen Prozesse ist die Arbeit ein wenig umfangreicher als bei einer
     -   Querformat, gedreht (DXGI\_MODE\_ROTATION\_ROTATE180)
     -   Hochformat, gedreht (DXGI\_MODE\_ROTATION\_ROTATE90)
 
-    Die Auswahl der richtigen Matrix erfolgt basierend auf den von Windows10 bereitgestellten Daten (beispielsweise basierend auf den Ergebnissen von [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268)) zum Bestimmen der Bildschirmausrichtung. Sie wird mit den Koordinaten der einzelnen Pixel (Direct2D) oder Vertizes (Direct3D) in der Szene multipliziert, wodurch sie zur Anpassung an die Bildschirmausrichtung effektiv gedreht werden. (Beachten Sie, dass der Bildschirmursprung in Direct2D als obere linke Ecke und in Direct3D als logische Mitte des Fensters definiert ist.)
+    Die richtige Matrix basierend auf den bereitgestellten Windows 10 (z. B. das Ergebnis der [**Displayinformation**](https://msdn.microsoft.com/library/windows/apps/dn264268)) für die Bestimmung der bildschirmausrichtung Daten ausgewählt ist, und es werden durch die Koordinaten der einzelnen Pixel (Direct2D) oder Vertizes multipliziert (Direct3D) in der Szene effektiv gedreht werden sie an die Ausrichtung des Bildschirms ausgerichtet. (Beachten Sie, dass der Bildschirmursprung in Direct2D als obere linke Ecke und in Direct3D als logische Mitte des Fensters definiert ist.)
 
-> **Hinweis:** Weitere Informationen zu den für die Drehung verwendeten 2D-Transformationen und zu deren Definition finden Sie unter [Definieren von Matrizen für die Bildschirmdrehung (2D)](#appendix-a-applying-matrices-for-screen-rotation-2-d). Weitere Informationen zu den für die Drehung verwendeten 3D-Transformationen finden Sie unter [Definieren von Matrizen für die Bildschirmdrehung (3D)](#appendix-b-applying-matrices-for-screen-rotation-3-d).
+> **Hinweis:**  Weitere Informationen zu den 2-D-Transformationen für Drehung und zu deren Definition finden Sie unter [Definieren von Matrizen für die bildschirmdrehung (2D)](#appendix-a-applying-matrices-for-screen-rotation-2-d). Weitere Informationen zu den für die Drehung verwendeten 3D-Transformationen finden Sie unter [Definieren von Matrizen für die Bildschirmdrehung (3D)](#appendix-b-applying-matrices-for-screen-rotation-3-d).
 
- 
+ 
 
 Nun zum wichtigen Teil: rufen Sie [**IDXGISwapChain1::SetRotation**](https://msdn.microsoft.com/library/windows/desktop/hh446801) auf, und stellen Sie dafür die aktualisierte Rotationsmatrix bereit – Beispiel:
 
@@ -369,7 +368,7 @@ Stellen Sie nun die Swapchain dar.
 ## <a name="reduce-the-rotation-delay-by-using-corewindowresizemanager"></a>Reduzieren der Rotationsverzögerung mit „CoreWindowResizeManager“
 
 
-Standardmäßig wird in Windows 10 für beliebige Apps ein kurzes, aber wahrnehmbares Zeitfenster für die Drehung des Bilds bereitgestellt. Dies ist unabhängig vom Modell oder der Sprache der App. Wenn die App die Drehungsberechnung mithilfe einer der hier beschriebenen Techniken ausführt, ist dieser Vorgang möglicherweise bereits abgeschlossen, bevor dieses Zeitfenster abgelaufen ist. Es wäre doch wünschenswert, diese Zeit zurückzugewinnen und die Drehungsanimation abzuschließen, oder? An dieser Stelle kommt [**CoreWindowResizeManager**](https://msdn.microsoft.com/library/windows/apps/jj215603) ins Spiel.
+Windows 10 bietet standardmäßig eine kurze aber wahrnehmbares Zeitfenster für jede app, unabhängig von der app-Modell oder der Sprache für die Drehung des Bilds bereitgestellt. Wenn die App die Drehungsberechnung mithilfe einer der hier beschriebenen Techniken ausführt, ist dieser Vorgang möglicherweise bereits abgeschlossen, bevor dieses Zeitfenster abgelaufen ist. Es wäre doch wünschenswert, diese Zeit zurückzugewinnen und die Drehungsanimation abzuschließen, oder? An dieser Stelle kommt [**CoreWindowResizeManager**](https://msdn.microsoft.com/library/windows/apps/jj215603) ins Spiel.
 
 So verwenden Sie [**CoreWindowResizeManager**](https://msdn.microsoft.com/library/windows/apps/jj215603): Beim Auslösen eines [**DisplayInformation::OrientationChanged**](https://msdn.microsoft.com/library/windows/apps/dn264268)-Ereignisses rufen Sie [**CoreWindowResizeManager::GetForCurrentView**](https://msdn.microsoft.com/library/windows/apps/hh404170) innerhalb des Handlers für das Ereignis auf, um eine Instanz von **CoreWindowResizeManager** zu erhalten. Wenn das Layout für die neue Ausrichtung abgeschlossen ist und dargestellt wird, rufen Sie [**NotifyLayoutCompleted**](https://msdn.microsoft.com/library/windows/apps/jj215605) auf, um Windows darüber zu informieren, dass die Drehungsanimation abgeschlossen und der App-Bildschirm angezeigt werden kann.
 
@@ -383,13 +382,13 @@ CoreWindowResizeManager^ resizeManager = Windows::UI::Core::CoreWindowResizeMana
 resizeManager->NotifyLayoutCompleted();
 ```
 
-Wenn ein Benutzer die Bildschirmausrichtung dreht, zeigt Windows10 unabhängig von der App eine Animation als Feedback für den Benutzer an. Diese Animation besteht aus drei Teilen, die in der folgenden Reihenfolge ablaufen:
+Wenn ein Benutzer die Ausrichtung der Anzeige dreht, zeigt Windows 10 eine Animation unabhängig von der app als Feedback für dem Benutzer. Diese Animation besteht aus drei Teilen, die in der folgenden Reihenfolge ablaufen:
 
--   Windows10 verkleinert das ursprüngliche Bild.
--   Windows10 speichert das Bild während der Neuerstellung des neuen Layouts. Dies entspricht dem Zeitfenster, das Sie verkürzen möchten, weil die App wahrscheinlich nicht das gesamte Zeitfenster benötigt.
+-   Windows 10 verkleinert das ursprüngliche Bild.
+-   Windows 10 speichert das Bild für die Zeit, die benötigt wird, um das neue Layout neu erstellen. Dies entspricht dem Zeitfenster, das Sie verkürzen möchten, weil die App wahrscheinlich nicht das gesamte Zeitfenster benötigt.
 -   Bei Ablauf des Zeitfensters für das Layout oder beim Empfang einer Benachrichtigung über den Layoutabschluss dreht Windows das Bild, und es erfolgt eine Vergrößerung mit Überblendung in die neue Ausrichtung.
 
-Gemäß Punkt drei beendet Windows10 beim Aufrufen von [**NotifyLayoutCompleted**](https://msdn.microsoft.com/library/windows/apps/jj215605) durch eine App das Zeitüberschreitungsfenster. Zudem wird die Drehungsanimation abgeschlossen und die Kontrolle wieder an die App übergeben, die die Darstellung nun in der neuen Bildschirmausrichtung ausführt. In der Gesamtheit fühlt sich die App nun ein wenig flüssiger und schneller an, und sie arbeitet etwas effizienter!
+Wie im dritten Punkt vorgeschlagen Wenn eine app [**NotifyLayoutCompleted**](https://msdn.microsoft.com/library/windows/apps/jj215605), ruft Windows 10 beendet das Timeout-Fenster, wird die Drehungsanimation abgeschlossen und gibt die Kontrolle an Ihre app, die nun in der neuen bildschirmausrichtung ausführt. In der Gesamtheit fühlt sich die App nun ein wenig flüssiger und schneller an, und sie arbeitet etwas effizienter!
 
 ## <a name="appendix-a-applying-matrices-for-screen-rotation-2-d"></a>AnhangA: Anwenden von Matrizen für die automatische Bildschirmausrichtung (2-D)
 
@@ -452,9 +451,9 @@ default:
 
 Nachdem Sie die richtige Drehungsmatrix und den Ursprung für das 2D-Bild ausgewählt haben, legen Sie sie bzw. ihn durch Aufrufen von [**ID2D1DeviceContext::SetTransform**](https://msdn.microsoft.com/library/windows/desktop/dd742857) zwischen den Aufrufen von [**ID2D1DeviceContext::BeginDraw**](https://msdn.microsoft.com/library/windows/desktop/dd371768) und [**ID2D1DeviceContext::EndDraw**](https://msdn.microsoft.com/library/windows/desktop/dd371924) fest.
 
-**Warnung** Direct2D hat keinen Transformationsstapel. Wenn die App zudem [**ID2D1DeviceContext::SetTransform**](https://msdn.microsoft.com/library/windows/desktop/dd742857) als Teil des zugehörigen Zeichnungscodes verwendet, muss diese Matrix im Nachhinein für alle angewendeten Transformationen multipliziert werden.
+**Warnung**  Direct2D nicht hat keinen Transformationsstapel. Wenn die App zudem [**ID2D1DeviceContext::SetTransform**](https://msdn.microsoft.com/library/windows/desktop/dd742857) als Teil des zugehörigen Zeichnungscodes verwendet, muss diese Matrix im Nachhinein für alle angewendeten Transformationen multipliziert werden.
 
- 
+ 
 
 ```cpp
     ID2D1DeviceContext* context = m_deviceResources->GetD2DDeviceContext();
@@ -554,9 +553,9 @@ m_constantBufferData.projection = mul(m_constantBufferData.projection, m_rotatio
 
 Wenn Sie nun die Rendermethode aufrufen, wird die aktuelle Drehungsmatrix (gemäß Angabe durch die Klassenvariable **m\_orientationTransform3D**) mit der aktuellen Projektionsmatrix multipliziert, und die Ergebnisse dieses Vorgangs werden als neue Projektionsmatrix für den Renderer zugeordnet. Stellen Sie die Swapchain dar, um die Szene in der aktualisierten Bildschirmausrichtung anzuzeigen.
 
- 
+ 
 
- 
+ 
 
 
 

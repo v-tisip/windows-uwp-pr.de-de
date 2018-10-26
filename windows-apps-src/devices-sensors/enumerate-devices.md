@@ -6,16 +6,14 @@ description: Der Enumeration-Namespace ermöglicht die Suche nach Geräten, die 
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 1cf6e8fe3205d70479a590bf73f7a01cd7ac3848
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: df6082665136442c03273dea4132417b0fd7033c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "958915"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5544166"
 ---
 # <a name="enumerate-devices"></a>Auflisten von Geräten
 
@@ -72,7 +70,7 @@ Beim Arbeiten mit Enumerations-APIs werden Sie häufig [**DeviceInformation**](h
 | **DeviceInformation.Kind**       | Diese gibt die Art des Geräteobjekts an, das durch das [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)-Objekt dargestellt wird. Dies entspricht nicht der Gerätekategorie oder dem Gerätetyp. Ein einzelnes Gerät kann durch mehrere verschiedene **DeviceInformation**-Objekte unterschiedlicher Art dargestellt werden. Die möglichen Werte dieser Eigenschaft sowie ihre Beziehung zueinander werden unter [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind.aspx) aufgeführt.                           |
 | **DeviceInformation.Properties** | Die Eigenschaftensammlung enthält Informationen, die für das [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)-Objekt angefordert werden. Auf die gebräuchlichsten Eigenschaften wird einfach als Eigenschaften des **DeviceInformation**-Objekts verwiesen, z.B. mit [**DeviceInformation.Name**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.name). Weitere Informationen finden Sie unter [Geräteinformationseigenschaften](device-information-properties.md).                                                                |
 
- 
+ 
 
 ## <a name="devicepicker-ui"></a>DevicePicker-UI
 
@@ -86,9 +84,9 @@ Der [**DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn930841)
 
 Während [**DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn930841) angezeigt wird, werden die Inhalte der Benutzeroberfläche automatisch aktualisiert, wenn Geräte hinzugefügt, entfernt oder aktualisiert werden.
 
-**Hinweis**  Sie können [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind.aspx) nicht mithilfe von [**DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn930841) angeben. Wenn Sie Geräte mit einem bestimmten **DeviceInformationKind** ermitteln möchten, müssen Sie einen [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) erstellen und eine eigene Benutzeroberfläche bereitstellen.
+**Hinweis:** der [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind.aspx) mithilfe der [**DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn930841)kann nicht angegeben werden. Wenn Sie Geräte mit einem bestimmten **DeviceInformationKind** ermitteln möchten, müssen Sie einen [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) erstellen und eine eigene Benutzeroberfläche bereitstellen.
 
- 
+ 
 
 Für die Übertragung von Medieninhalten und DIAL werden jeweils eigene Auswahlelemente bereitgestellt, wenn Sie diese verwenden möchten. Diese sind jeweils [**CastingDevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn972525) und [**DialDevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn946783).
 
@@ -127,9 +125,9 @@ Zum Erstellen von [**DeviceWatcher**](https://msdn.microsoft.com/library/windows
 
 Die Geräteüberwachung als Hintergrundaufgabe ist nahezu identisch mit der oben beschriebenen Erstellung von [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446). Tatsächlich müssen Sie zunächst ein normales **DeviceWatcher**-Objekt erstellen wie im vorangehenden Abschnitt beschrieben. Nach der Erstellung rufen Sie [**GetBackgroundTrigger**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.devicewatcher.enumerationcompleted.aspx) anstelle von [**DeviceWatcher.Start**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.devicewatcher.start) auf. Beim Aufruf von **GetBackgroundTrigger** müssen Sie angeben, welche der Benachrichtigungen Ihnen wichtig sind: Hinzufügen, Entfernen oder Aktualisieren. Benachrichtigungen über das Aktualisieren oder Entfernen können nur zusammen mit einer Benachrichtigung über das Hinzufügen angefordert werden. Nachdem Sie den Trigger registriert haben, wird die Ausführung von **DeviceWatcher** sofort im Hintergrund gestartet. Ab dann wird die Hintergrundaufgabe jedes Mal ausgelöst, wenn sie eine neue mit den Kriterien übereinstimmende Benachrichtigung für Ihre Anwendung empfängt. Sie teilt Ihnen die seit der letzten Auslösung der Anwendung vorgenommenen Änderungen mit.
 
-**Wichtig**  Ihre Anwendung wird erstmalig von [**DeviceWatcherTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn913838) ausgelöst, wenn die Überwachung den Zustand **EnumerationCompleted** erreicht. Dies bedeutet, dass alle anfänglich verfügbaren Ergebnisse enthalten sind. Wenn die Anwendung in Zukunft ausgelöst wird, enthält die Hintergrundaufgabe nur die Benachrichtigungen über Hinzufügungs-, Aktualisierungs- und Entfernungsvorgänge, die seit dem letzten Trigger aufgetreten sind. Dies unterscheidet sich geringfügig von dem im Vordergrund ausgeführten [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446)-Objekt, da die anfänglichen Ergebnisse nicht nacheinander eingehen, sondern erst nach Erreichen des Zustands **EnumerationCompleted** gebündelt übermittelt werden.
+**Wichtige**zum erste Mal, eine [**DeviceWatcherTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn913838) Ihrer Anwendung löst werden, wenn die Überwachung den **EnumerationCompleted** Status erreicht. Dies bedeutet, dass alle anfänglich verfügbaren Ergebnisse enthalten sind. Wenn die Anwendung in Zukunft ausgelöst wird, enthält die Hintergrundaufgabe nur die Benachrichtigungen über Hinzufügungs-, Aktualisierungs- und Entfernungsvorgänge, die seit dem letzten Trigger aufgetreten sind. Dies unterscheidet sich geringfügig von dem im Vordergrund ausgeführten [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446)-Objekt, da die anfänglichen Ergebnisse nicht nacheinander eingehen, sondern erst nach Erreichen des Zustands **EnumerationCompleted** gebündelt übermittelt werden.
 
- 
+ 
 
 Abhängig davon, ob der Scanvorgang im Vorder- oder Hintergrund ausgeführt wird, unterscheidet sich das Verhalten einiger Drahtlosprotokolle. Einige Protokolle unterstützen möglicherweise keine Scans im Hintergrund. Für Scans im Hintergrund gibt es drei Möglichkeiten. Die folgende Tabelle enthält die Möglichkeiten und Auswirkungen, die sich ggf. für die Anwendung ergeben. Für Bluetooth und Wi-Fi Direct werden Hintergrundscans beispielsweise nicht unterstützt, sodass auch [**DeviceWatcherTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn913838) nicht unterstützt wird.
 
@@ -139,7 +137,7 @@ Abhängig davon, ob der Scanvorgang im Vorder- oder Hintergrund ausgeführt wird
 | Nur passive Hintergrundscans | Beim Warten auf einen passiven Scan dauert die Geräteermittlung möglicherweise länger.                                                           |
 | Keine Unterstützung von Hintergrundscans            | Von [**DeviceWatcherTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn913838) werden keine Geräte erkannt, und es werden keine Updates gemeldet. |
 
- 
+ 
 
 Wenn [**DeviceWatcherTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn913838) ein Protokoll enthält, von dem das Scannen als Hintergrundaufgabe nicht unterstützt wird, ist der Trigger trotzdem funktionsfähig. Sie sind jedoch nicht in der Lage, Updates oder Ergebnisse über dieses Protokoll abzurufen. Die Updates für andere Protokolle oder Geräte werden weiterhin auf normale Weise erkannt.
 
@@ -160,9 +158,9 @@ Beim Enumerieren von **AssociationEndpoint**-, **AssociationEndpointContainer**-
 Jedes [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)-Objekt wird durch eine Kombination aus zwei Informationselementen eindeutig identifiziert: [**DeviceInformation.Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id) und [**DeviceInformation.Kind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.kind.aspx). Wenn Sie diese beiden Informationselemente beibehalten, können Sie ein **DeviceInformation**-Objekt erneut erstellen, nachdem es verloren gegangen ist, indem Sie diese Informationen für [**CreateFromIdAsync**](https://msdn.microsoft.com/library/windows/apps/br225425.aspx) bereitstellen. Auf diese Weise können Sie Benutzereinstellungen für ein Gerät speichern, mit dem die App verwendet wird.
 
 
- 
+ 
 
- 
+ 
 
 
 

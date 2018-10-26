@@ -7,16 +7,14 @@ template: detail.hbs
 ms.author: stwhi
 ms.date: 11/07/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
-ms.openlocfilehash: c951d8aacef1a327740ca09f19bbc33caa3695df
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 48244889dd927f41d0998214cf1120377c4bb251
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1395579"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543522"
 ---
 # <a name="make-your-app-localizable"></a>App lokalisierbar machen
 
@@ -54,9 +52,9 @@ Zudem können Zeichenfolgen wie „text“ oder „fas“ in der englischen Spra
 
 Kurz gesagt, gliedern Sie die Zeichenfolgen in Teile, die in allen Kontexten verwendbar sind. Es wird Fälle geben, in denen eine Zeichenfolge ein vollständiger Satz sein muss.
 
-Beispiel: „{0} konnte nicht synchronisiert werden.“
+Berücksichtigen Sie die folgende Zeichenfolge: "die {0} konnte nicht synchronisiert werden."
 
-Der Platzhalter {0} kann durch zahlreiche Wörter ersetzt werden, z. B. durch Termin, Aufgabe oder Dokument. Dieses Beispiel funktioniert zwar in der englischen Sprache, aber nicht in jedem Fall im entsprechenden deutschen Satz (beispielsweise). Sie sehen, dass in den folgenden deutschen Sätzen einige der Wörter in der Vorlagenzeichenfolge („Der“, „Die“, „Das“) zum parametrisierten Wort passen müssen:
+Kann durch zahlreiche Wörter ersetzt {0}, z. B. "Termin", "Aufgabe" oder "Dokument". Dieses Beispiel funktioniert zwar in der englischen Sprache, aber nicht in jedem Fall im entsprechenden deutschen Satz (beispielsweise). Sie sehen, dass in den folgenden deutschen Sätzen einige der Wörter in der Vorlagenzeichenfolge („Der“, „Die“, „Das“) zum parametrisierten Wort passen müssen:
 
 | Englisch                                    | Deutsch                                           |
 |:------------------------------------------ |:------------------------------------------------ |
@@ -64,7 +62,7 @@ Der Platzhalter {0} kann durch zahlreiche Wörter ersetzt werden, z. B. durch Te
 | The task could not be synchronized.        | Die Aufgabe konnte nicht synchronisiert werden.  |
 | The document could not be synchronized.    | Das Dokument konnte nicht synchronisiert werden. |
 
-Betrachten Sie als weiteres Beispiel den Satz „Remind me in {0} minute(s).“ Während „minute(s)" im Englischen passt, werden in anderen Sprachen möglicherweise unterschiedliche Begriffe verwendet. Auf Polnisch heißt es je nach Kontext „minuta“, „minuty“ oder „minut“.
+Erwägen Sie als weiteres Beispiel den Satz "Remind me in {0} Minute(s).". " Während „minute(s)" im Englischen passt, werden in anderen Sprachen möglicherweise unterschiedliche Begriffe verwendet. Auf Polnisch heißt es je nach Kontext „minuta“, „minuty“ oder „minut“.
 
 Lokalisieren Sie den gesamten Satz, statt nur ein einzelnes Wort, um das Problem zu beheben. Auf den ersten Blick wirkt diese Lösung vielleicht nicht ganz so elegant und sieht nach überflüssiger Arbeit aus, die Gründe sprechen jedoch für sich:
 
@@ -100,7 +98,7 @@ Gehen Sie nicht davon aus, dass Parameter in allen Sprachen in der gleichen Reih
     string.Format("Every {0} {1}", monthName, dayNumber); // For example, "Every April 1".
 ```
 
-Die Formatzeichenfolge in diesem Beispiel ist für Englisch (USA) richtig. Sie ist jedoch nicht für Deutsch (Deutschland) geeignet, da in dieser Sprache Tag und Monat in umgekehrter Reihenfolge angezeigt werden. Stellen Sie sicher, dass der Übersetzer die Bedeutung der einzelnen Parameter kennt, damit er die Reihenfolge der Formatelemente in einer Formatzeichenfolge (z. B. „{1} {0}”) entsprechend der Zielsprache ändern kann.
+Die Formatzeichenfolge in diesem Beispiel ist für Englisch (USA) richtig. Sie ist jedoch nicht für Deutsch (Deutschland) geeignet, da in dieser Sprache Tag und Monat in umgekehrter Reihenfolge angezeigt werden. Stellen Sie sicher, dass der Übersetzer die Bedeutung der einzelnen Parameter kennt, damit sie die Reihenfolge der Formatelemente in einer Formatzeichenfolge stornieren können (z. B. "{1} {0}") entsprechend der Zielsprache.
 
 ## <a name="dont-over-localize"></a>Vermeiden Sie eine zu starke Lokalisierung.
 

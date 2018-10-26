@@ -6,18 +6,17 @@ ms.assetid: BD17780E-6A34-4A38-8D11-9703107E247E
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: a629fb07bfa2e3f8bb3d070e9fe4994baba4336b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 17ee99553b5713acb1917ccb697abb2387d00da2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "235032"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549197"
 ---
 # <a name="xphase-attribute"></a>x:Phase-Attribut
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Verwenden Sie **x:Phase** mit der [{x:Bind}-Markuperweiterung](x-bind-markup-extension.md) zum inkrementellen Rendern von [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) und [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705)-Elementen und zur Verbesserung des Verschiebungserlebnisses. **x:Phase** bietet eine deklarative Möglichkeit, die gleiche Wirkung zu erzielen wie bei Verwendung des [**ContainerContentChanging**](https://msdn.microsoft.com/library/windows/apps/dn298914)-Ereignisses zum manuellen Steuern des Renderns von Listenelementen. Weitere Informationen finden Sie auch unter [Inkrementelles Aktualisieren von ListView- und GridView-Elementen](../debug-test-perf/optimize-gridview-and-listview.md#update-items-incrementally).
 
@@ -33,7 +32,7 @@ Verwenden Sie **x:Phase** mit der [{x:Bind}-Markuperweiterung](x-bind-markup-ext
 
 | Benennung | Beschreibung |
 |------|-------------|
-| PhaseValue | Eine Zahl, die die Phase gibt an, in der das Element verarbeitet wird. Der Standardwert ist 0. | 
+| PhaseValue | Eine Zahl, die die Phase gibt an, in der das Element verarbeitet wird. Der Standardwert ist 0. | 
 
 ## <a name="remarks"></a>Anmerkungen
 
@@ -45,23 +44,23 @@ Phasing ermöglicht das inkrementelle Rendern der Datenvorlage, sodass der Inhal
 
 ```xml
 <DataTemplate x:Key="PhasedFileTemplate" x:DataType="model:FileItem">
-    <Grid Width="200" Height="80">
-        <Grid.ColumnDefinitions>
-           <ColumnDefinition Width="75" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <Image Grid.RowSpan="4" Source="{x:Bind ImageData}" MaxWidth="70" MaxHeight="70" x:Phase="3"/>
-        <TextBlock Text="{x:Bind DisplayName}" Grid.Column="1" FontSize="12"/>
-        <TextBlock Text="{x:Bind prettyDate}"  Grid.Column="1"  Grid.Row="1" FontSize="12" x:Phase="1"/>
-        <TextBlock Text="{x:Bind prettyFileSize}"  Grid.Column="1"  Grid.Row="2" FontSize="12" x:Phase="2"/>
-        <TextBlock Text="{x:Bind prettyImageSize}"  Grid.Column="1"  Grid.Row="3" FontSize="12" x:Phase="2"/>
-    </Grid>
+    <Grid Width="200" Height="80">
+        <Grid.ColumnDefinitions>
+           <ColumnDefinition Width="75" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Image Grid.RowSpan="4" Source="{x:Bind ImageData}" MaxWidth="70" MaxHeight="70" x:Phase="3"/>
+        <TextBlock Text="{x:Bind DisplayName}" Grid.Column="1" FontSize="12"/>
+        <TextBlock Text="{x:Bind prettyDate}"  Grid.Column="1"  Grid.Row="1" FontSize="12" x:Phase="1"/>
+        <TextBlock Text="{x:Bind prettyFileSize}"  Grid.Column="1"  Grid.Row="2" FontSize="12" x:Phase="2"/>
+        <TextBlock Text="{x:Bind prettyImageSize}"  Grid.Column="1"  Grid.Row="3" FontSize="12" x:Phase="2"/>
+    </Grid>
 </DataTemplate>
 ```
 
@@ -82,5 +81,5 @@ Phasennummern müssen nicht fortlaufend sein und sind mit den Wert der [**Contai
 
 Phasing wirkt sich nur auf [{x:Bind}](x-bind-markup-extension.md) -Bindungen aus, nicht auf [{Binding}](binding-markup-extension.md)-Bindungen.
 
-Phasing gilt nur, wenn die Elementvorlage mithilfe eines Steuerelements gerendert wird, das Phasing erkennt. Für Windows 10 bedeutet das [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) und [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705). Phasing gilt nicht für Datenvorlagen, die in anderen Elementsteuerelementen verwendet werden, oder für andere Szenarien, wie zum Beispiel die Abschnitte [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/br209369) oder [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) – in diesen Fällen werden alle UI-Elemente auf einmal an Daten gebunden.
+Phasing gilt nur, wenn die Elementvorlage mithilfe eines Steuerelements gerendert wird, das Phasing erkennt. Für Windows 10 bedeutet, dass [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878) und [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705). Phasing gilt nicht für Datenvorlagen, die in anderen Elementsteuerelementen verwendet werden, oder für andere Szenarien, wie zum Beispiel die Abschnitte [**ContentTemplate**](https://msdn.microsoft.com/library/windows/apps/br209369) oder [**Hub**](https://msdn.microsoft.com/library/windows/apps/dn251843) – in diesen Fällen werden alle UI-Elemente auf einmal an Daten gebunden.
 

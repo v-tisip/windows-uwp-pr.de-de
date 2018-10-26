@@ -6,16 +6,14 @@ ms.assetid: 43f1977a-7e1d-614c-696e-7669dd8a9cc7
 ms.author: elcowle
 ms.date: 08/10/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, uwp, Spiele, beispiel, directx, 3d
 ms.localizationpriority: medium
-ms.openlocfilehash: 91b3e37664543b57839387a187d0876f4830222c
-ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
-ms.translationtype: HT
+ms.openlocfilehash: 7a808c36ab319d76f16c653c5812ebe4b269ec59
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
-ms.locfileid: "1488824"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5543624"
 ---
 # <a name="developing-marble-maze-a-uwp-game-in-c-and-directx"></a>Entwickeln von Marble Maze, einem UWP-Spiel in C++ und DirectX
 
@@ -30,7 +28,7 @@ In diesem Thema wird das Erstellen von UWP-3D-Spielen (Universelle Windows-Platt
 > [!IMPORTANT]
 > Aus Marble Maze werden Entwurfsmuster ersichtlich, die als bewährte Methoden zum Erstellen von UWP-Spielen empfohlen werden. Viele der Implementierungsdetails können Sie an Ihre eigenen Vorgehensweisen und die konkreten Anforderungen des von Ihnen entwickelten Spiels anpassen. Wenn es Ihren Anforderungen besser entgegenkommt, können Sie natürlich auch andere Verfahren oder Bibliotheken verwenden. (Achten Sie jedoch stets darauf, dass Ihr Code die Anforderungen des [ Zertifizierungskits für Windows-Apps](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit) erfüllt.) Wenn eine Marble Maze-Implementierung als unerlässlich für die erfolgreiche Spieleentwicklung erachtet wird, ist dies in der vorliegenden Dokumentation entsprechend gekennzeichnet.
 
- 
+ 
 
 ## <a name="introducing-marble-maze"></a>Einführung in Marble Maze
 
@@ -46,8 +44,8 @@ Marble Maze bietet dem Benutzer mehrere Möglichkeiten zur Interaktion mit dem S
 ## <a name="prerequisites"></a>Voraussetzungen
 
 
--   Windows10 Creators Update
--   [Microsoft Visual Studio 2017](https://www.visualstudio.com/downloads/)
+-   Windows 10 Creators Update
+-   [Microsoft Visual Studio2017](https://www.visualstudio.com/downloads/)
 -   Kenntnisse in der C++-Programmierung
 -   Erfahrung mit DirectX und der Terminologie von DirectX
 -   Grundkenntnisse in COM
@@ -55,7 +53,7 @@ Marble Maze bietet dem Benutzer mehrere Möglichkeiten zur Interaktion mit dem S
 ## <a name="who-should-read-this"></a>Wer sollte diese Dokumentation lesen?
 
 
-Wenn Sie sich für die Erstellung von 3D-Spielen oder anderen grafikintensiven Anwendungen für Windows 10 interessieren, ist diese Dokumentation für Sie gedacht. Wir hoffen, dass Ihnen die in dieser Dokumentation skizzierten Prinzipien und praktischen Vorgehensweisen dabei helfen, eigene UWP-Spiele zu erstellen. Den größten Nutzen aus dieser Dokumentation werden Sie ziehen, wenn Sie bereits über Erfahrungen mit C++ und DirectX verfügen oder sich sehr dafür interessieren. Wenn Sie noch keine Erfahrung mit DirectX, dafür aber mit ähnlichen 3D-Grafikprogrammierumgebungen haben, wird Ihnen die Dokumentation ebenfalls nutzen.
+Wenn Sie sich bei der Erstellung von 3D-Spielen oder anderen grafikintensiven Anwendungen für Windows 10 interessieren, ist diese Dokumentation für Sie. Wir hoffen, dass Ihnen die in dieser Dokumentation skizzierten Prinzipien und praktischen Vorgehensweisen dabei helfen, eigene UWP-Spiele zu erstellen. Den größten Nutzen aus dieser Dokumentation werden Sie ziehen, wenn Sie bereits über Erfahrungen mit C++ und DirectX verfügen oder sich sehr dafür interessieren. Wenn Sie noch keine Erfahrung mit DirectX, dafür aber mit ähnlichen 3D-Grafikprogrammierumgebungen haben, wird Ihnen die Dokumentation ebenfalls nutzen.
 
 Im Dokument [Exemplarische Vorgehensweise: Erstellen eines einfachen UWP-Spiels mit DirectX](tutorial--create-your-first-uwp-directx-game.md) wird ein weiteres Beispiel beschrieben, in dem ein einfacher 3D-Shooter mit DirectX und C++ implementiert wird.
 
@@ -101,11 +99,11 @@ Es wird empfohlen, mit den [Grundlagen des Marble Maze-Beispiels](marble-maze-sa
 | [Hinzufügen von Eingaben und Interaktivität zum Marble Maze-Beispiel](adding-input-and-interactivity-to-the-marble-maze-sample.md) | Beschreibt die Zusammenarbeit von Marble Maze mit Beschleunigungsmesser, Touchgeräten und XboxOne-Controllereingaben, um den Benutzern das Navigieren in den Menüs und die Interaktion mit dem Spielbrett zu ermöglichen. Beschreibt außerdem einige bewährte Methoden, die bei der Arbeit mit Eingaben beachtet werden sollten. |
 | [Hinzufügen von Audiodaten zum Marble Maze-Beispiel](adding-audio-to-the-marble-maze-sample.md)                                     | Beschreibt die Zusammenarbeit von Marble Maze mit Audio, um der Spielumgebung Musik und Soundeffekte hinzuzufügen.                                                                                                                                                  |
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

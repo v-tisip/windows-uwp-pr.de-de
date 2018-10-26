@@ -6,19 +6,18 @@ ms.assetid: 80262992-89FC-42FC-8298-5AABF58F8212
 ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
-ms.openlocfilehash: 70ef1ab7bc31fde2f0d4744394c1ae69c8caf7fd
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 6461b6889f110bde8929e1f370f9197caa33e5f3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "234924"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549021"
 ---
 # <a name="distributing-a-managed-windows-runtime-component"></a>Verteilen einer verwalteten Komponente für Windows-Runtime
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 Sie können Ihre Komponente für Windows-Runtime durch Kopieren der Dateien verteilen. Wenn Ihre Komponente aus vielen Dateien besteht, kann die Installation für Ihre Benutzer aber sehr mühsam sein. Außerdem verursachen Fehler beim Platzieren der Dateien oder beim Festlegen von Verweisen möglicherweise Probleme. Sie können eine komplexe Komponente als Visual Studio-Erweiterungs-SDK packen, um die Installation und Verwendung einfacher zu gestalten. Benutzer müssen nur einen Verweis für das gesamte Paket festlegen. Benutzer können Ihre Komponente mit dem Dialogfeld **Erweiterungen und Updates** problemlos suchen und installieren, wie in der MSDN Library unter [Suchen und Verwenden von Visual Studio-Erweiterungen](https://msdn.microsoft.com/library/vstudio/dd293638.aspx) beschrieben.
 
@@ -42,13 +41,13 @@ Die Entscheidung darüber, wie Sie Ihre Komponente verteilen, hängt von Komplex
 
 Ein Erweiterungs-SDK ist besonders nützlich, wenn mindestens einer der oben genannten Punkte zutrifft.
 
-> **Hinweis**  Für komplexe Komponenten bietet das NuGet-Paketverwaltungssystem eine Open-Source-Alternative zu Erweiterungs-SDKs. Wie mit Erweiterungs-SDKs können Sie mit NuGet Pakete erstellen, die die Installation komplexer Komponenten vereinfachen. Ein Vergleich von NuGet-Paketen und Visual Studio-Erweiterungs-SDKs finden Sie unter [Hinzufügen von Referenzen mithilfe von NuGet im Vergleich zu einer SDK-Erweiterung](https://msdn.microsoft.com/library/jj161096.aspx) in der MSDN Library.
+> **Hinweis:** für komplexe Komponenten bietet das NuGet-paketverwaltungssystem eine open-Source-Alternative zu Erweiterungs-SDKs. Wie mit Erweiterungs-SDKs können Sie mit NuGet Pakete erstellen, die die Installation komplexer Komponenten vereinfachen. Ein Vergleich von NuGet-Paketen und Visual Studio-Erweiterungs-SDKs finden Sie unter [Hinzufügen von Referenzen mithilfe von NuGet im Vergleich zu einer SDK-Erweiterung](https://msdn.microsoft.com/library/jj161096.aspx) in der MSDN Library.
 
 ## <a name="distribution-by-file-copy"></a>Verteilung durch Kopieren von Dateien
 
 Wenn Ihre Komponente aus einer einzigen WINMD-Datei oder einer WINMD-Datei und einer Ressourcenindexdatei (PRI) besteht, können Sie einfach die WINMD-Datei so bereitstellen, dass Benutzer sie kopieren können. Benutzer können die Datei an einer beliebige Position in ein Projekt einfügen, im Dialogfeld **Vorhandenes Element hinzufügen** die WINMD-Datei dem Projekt hinzufügen und dann mit dem Dialogfeld „Verweis-Manager” einen Verweis erstellen. Wenn Sie eine PRI-Datei oder eine XML-Datei einbeziehen, sollten Sie die Benutzer anweisen, diese Dateien in dasselbe Verzeichnis wie die WINMD-Datei zu kopieren.
 
-> **Hinweis**  Visual Studio erzeugt stets eine PRI-Datei, wenn Sie Ihre Windows-Runtime-Komponente erstellen, auch wenn Ihr Projekt keine Ressourcen enthält. Wenn Sie über eine Test-App für Ihre Komponente verfügen, können Sie feststellen, ob die PRI-Datei verwendet wird, indem Sie den Inhalt des App-Pakets im Ordner bin\\debug\\AppX" überprüfen. Wenn die PRI-Datei Ihrer Komponente dort nicht angezeigt wird, müssen Sie sie nicht verteilen. Sie können auch mit dem Tool [MakePRI.exe](https://msdn.microsoft.com/library/windows/apps/jj552945.aspx) die Ressourcendatei aus Ihrem Komponentenprojekt für Windows-Runtime ausgeben. Geben Sie z.B. im Eingabeaufforderungsfenster von Visual Studio Folgendes ein: makepri dump /if MyComponent.pri /of MyComponent.pri.xml. Weitere Informationen zu PRI-Dateien finden Sie unter [Ressourcenverwaltungssystem (Windows)](https://msdn.microsoft.com/library/windows/apps/jj552947.aspx).
+> **Hinweis:** Visual Studio erzeugt stets eine PRI-Datei bei der Erstellung Ihrer Komponente für Windows-Runtime, auch wenn Ihr Projekt keine Ressourcen enthält. Wenn Sie über eine Test-App für Ihre Komponente verfügen, können Sie feststellen, ob die PRI-Datei verwendet wird, indem Sie den Inhalt des App-Pakets im Ordner bin\\debug\\AppX" überprüfen. Wenn die PRI-Datei Ihrer Komponente dort nicht angezeigt wird, müssen Sie sie nicht verteilen. Sie können auch mit dem Tool [MakePRI.exe](https://msdn.microsoft.com/library/windows/apps/jj552945.aspx) die Ressourcendatei aus Ihrem Komponentenprojekt für Windows-Runtime ausgeben. Geben Sie z.B. im Eingabeaufforderungsfenster von Visual Studio Folgendes ein: makepri dump /if MyComponent.pri /of MyComponent.pri.xml. Weitere Informationen zu PRI-Dateien finden Sie unter [Ressourcenverwaltungssystem (Windows)](https://msdn.microsoft.com/library/windows/apps/jj552947.aspx).
 
 ## <a name="distribution-by-extension-sdk"></a>Verteilung durch Erweiterungs-SDK
 

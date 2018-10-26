@@ -6,16 +6,14 @@ ms.assetid: 77c23d0a-af6d-17b5-d69e-51d9885b0d44
 ms.author: elcowle
 ms.date: 10/18/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Audio, Spiele, Beispiel
 ms.localizationpriority: medium
-ms.openlocfilehash: 4534675395f415ccd742dff646bc6c498aa7faa6
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.openlocfilehash: 89612e3fbc4ef2ccb855f7709820f9445d0fd77c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1700906"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546860"
 ---
 # <a name="adding-audio-to-the-marble-maze-sample"></a>Hinzufügen von Audiodaten zum Marble Maze-Beispiel
 
@@ -352,7 +350,7 @@ CoTaskMemFree(waveFormat);
 > [!IMPORTANT]
 > Die [MFCreateWaveFormatExFromMFMediaType](https://msdn.microsoft.com/library/windows/desktop/ms702177)-Methode verwendet **CoTaskMemAlloc** zum Zuordnen des [WAVEFORMATEX](https://msdn.microsoft.com/library/windows/hardware/ff538799)-Objekts. Rufen Sie daher unbedingt **CoTaskMemFree** auf, wenn Sie dieses Objekt nicht mehr verwenden.
 
- 
+ 
 
 Die **MediaStreamer::Initialize**-Methode wird beendet, indem die Länge des Streams **m\_maxStreamLengthInBytes**,“ in Byte berechnet wird. Dazu ruft sie die [IMFSourceReader::IMFSourceReader::GetPresentationAttribute](https://msdn.microsoft.com/library/windows/desktop/dd374662)-Methode auf, um die Dauer des Audiostreams in Einheiten von jeweils 100 Nanosekunden abzurufen, konvertiert die Dauer in Abschnitte und multipliziert dann diese Zahl mit der durchschnittlichen Datenübertragungsrate in Bytes pro Sekunde. Diesen Wert verwendet Marble Maze später, um den Puffer zuzuordnen, in dem sich die einzelnen Spielsounds befinden.
 
@@ -402,7 +400,7 @@ Die folgende Tabelle zeigt die Beziehung zwischen den einzelnen Werten, die Date
 | MenuChangeEvent   | MenuChange.wav | Wird wiedergegeben, wenn der Benutzer das aktuelle Menüelement ändert. |
 | MenuSelectedEvent | MenuSelect.wav | Wird wiedergegeben, wenn der Benutzer ein Menüelement auswählt.           |
 
- 
+ 
 
 Das folgende Beispiel zeigt, wie die **Audio::CreateResources**-Methode die Quellstimme für die Hintergrundmusik erstellt. Die [XAUDIO2\_SEND\_DESCRIPTOR](https://msdn.microsoft.com/library/windows/desktop/ee419244)-Struktur definiert die Zielstimme einer anderen Stimme und gibt an, ob ein Filter verwendet werden soll. Marble Maze ruft die **Audio::SetSoundEffectFilter**-Methode auf, um mit den Filtern den Sound der rollenden Murmel zu ändern. Die [XAUDIO2\_VOICE\_SENDS](https://msdn.microsoft.com/library/windows/desktop/ee419246)-Struktur definiert die Stimmen, die Daten von einer einzelnen Ausgabestimme empfangen sollen. Marble Maze sendet Daten von der Quellstimme an die Masterstimme (für den direkten oder unveränderten Teil eines wiedergegebenen Sounds) und an die zwei Submixstimmen, die den mit einem Effekt versehenen oder hallenden Teil eines wiedergegebenen Sounds implementieren.
 

@@ -5,15 +5,14 @@ description: Hier erfahren Sie mehr über die Prozessorarchitekturen, die beim E
 ms.author: lahugh
 ms.date: 7/13/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, Uwp, Verpacken, Architektur, Paket-Konfiguration
-ms.openlocfilehash: 70188734e7fc26f66b68d0c31921071c47e8b7a8
-ms.sourcegitcommit: 6c6f3c265498d7651fcc4081c04c41fafcbaa5e7
+ms.localizationpriority: medium
+ms.openlocfilehash: 3e265df32a8c4168cddced905e7b0712e4601264
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2017
-ms.locfileid: "884055"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5548708"
 ---
 # <a name="app-package-architectures"></a>App-Paketarchitektur
 
@@ -27,11 +26,11 @@ Es ist **dringend** empfohlen, dass Sie alle Architekturen als Ziel Ihrer App-Pa
 ## <a name="windows-10-devices-and-architectures"></a>Windows 10-Geräte und -Architekturen
 
 > [!div class="mx-tableFixed"]
-| UWP-Architektur | Desktop (x86)      | Desktop (x64)      | Desktop (ARM)      | Mobilgeräte             | HoloLens           | Xbox               | IoT Core (geräteabhängig) | 
-|------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|-----------------------------|
-| x86              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: | :x:                | :heavy_check_mark:          |
-| x64              | :x:                | :heavy_check_mark: | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark:          |
-| ARM              | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:          |
+| UWP-Architektur | Desktop (x86)      | Desktop (x64)      | Desktop (ARM)      | Mobilgeräte             | HoloLens           | Xbox               | IoT Core (geräteabhängig) | Surface Hub        |
+|------------------|--------------------|--------------------|--------------------|--------------------|--------------------|--------------------|-----------------------------|--------------------|
+| x86              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: | :x:                | :heavy_check_mark:          | :heavy_check_mark: |
+| x64              | :x:                | :heavy_check_mark: | :x:                | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark:          | :heavy_check_mark: |
+| ARM              | :x:                | :x:                | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark:          | :x:                |
  
 
 Befassen wir uns ausführlicher mit Architekturen. 

@@ -6,16 +6,14 @@ ms.assetid: b7e53ab5-2828-4fb7-8656-2bec70b3467f
 ms.author: normesta
 ms.date: 05/18/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, Kontakte, Kalender, Termine, E-Mail-Nachrichten
 ms.localizationpriority: medium
-ms.openlocfilehash: 2224ab78d5f3424904dfc2e211d9890648080574
-ms.sourcegitcommit: c0f58410c4ff5b907176b1ffa275e2c202f099d4
-ms.translationtype: HT
+ms.openlocfilehash: c020a871863df6fac3dabc3ffab4bafc57227b50
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "1905335"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5549322"
 ---
 # <a name="contacts-my-people-and-calendar"></a>Kontakte, Meine Kontakte und Kalender
 
@@ -35,7 +33,7 @@ Die folgenden Themen enthalten Informationen zu verschiedenen Verfahren, wie Ihr
 | [„Meine Kontakte” freigeben](my-people-sharing.md) | Zeigt, wie Sie Unterstützung für die Freigabe von „Meine Kontakte” hinzufügen, sodass Benutzer Inhalte für ihre angehefteten Kontakte freigeben können, indem sie Dateien aus dem Datei-Explorer auf die Startseite von „Meine Kontakte” anheften. |
 | [Meine Kontakte – Benachrichtigungen](my-people-notifications.md) | Zeigt, wie Sie Benachrichtigungen für Meine Kontakte erstellen und verwenden. Dies ist eine neue Art von Popupbenachrichtigungen, die von einem angehefteten Kontakt gesendet werden. |
 
- 
+ 
 
 ## <a name="related-topics"></a>Verwandte Themen
 

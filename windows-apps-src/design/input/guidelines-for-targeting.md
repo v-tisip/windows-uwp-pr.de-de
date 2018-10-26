@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c9feb6460512a7266dfd5d2979b89084f6487f5
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 3af31535dcdb1cb5eb8beebbbb91312adafe353a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653449"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5546952"
 ---
 # <a name="guidelines-for-targeting"></a>Richtlinien für die Zielbestimmung
 
@@ -104,7 +102,7 @@ Die folgende Tabelle enthält die Mindestgrößen und die empfohlenen Größen f
 </tbody>
 </table>
 
- 
+ 
 
 Sie können diese Empfehlungen für die Zielgröße an die Anforderungen des jeweiligen Szenarios anpassen. In die Empfehlungen sind unter anderem die folgenden Überlegungen eingeflossen:
 
@@ -168,9 +166,9 @@ Halten Sie sich an die folgenden Richtlinien, wenn Sie Scrubbinginteraktionen en
 * [Eingabe: Beispiel für Windows8-Bewegungen](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Eingabe: Beispiel für Manipulationen und Gesten (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Beispiel für die DirectX-Fingereingabe](http://go.microsoft.com/fwlink/p/?LinkID=231627)
- 
+ 
 
- 
+ 
 
 
 

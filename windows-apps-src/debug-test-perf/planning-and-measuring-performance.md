@@ -6,19 +6,17 @@ description: Benutzer erwarten, dass ihre Apps zuverlässig und reibungslos funk
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: d25620c0fc86f76b8c0d4de6e606250186b9ce37
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: e62e724cceb458ba922143e61058dffa8d16a0b8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894790"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "5547882"
 ---
 # <a name="planning-for-performance"></a>Planen der Leistung
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Benutzer erwarten, dass ihre Apps zuverlässig und reibungslos funktionieren und den Akku nicht übermäßig beanspruchen. Technisch gesehen ist die Leistung keine funktionale Anforderung. Wenn Sie die Leistung aber als Feature behandeln, hilft es Ihnen dabei, die Erwartungen der Benutzer zu erfüllen. Das Festlegen von Zielen und deren Messung sind wichtige Faktoren. Ermitteln Sie die für Sie leistungskritischen Szenarien, und legen Sie fest, was unter guter Leistung zu verstehen ist. Messen Sie die Ziele dann während des gesamten Lebenszyklus Ihres Projekts frühzeitig und häufig, um sicherzustellen, dass Sie Ihre Ziele erreichen.
@@ -44,7 +42,7 @@ Es ist besser, ein erstes Ziel festzulegen und es später zu überdenken, anstat
 | Kontinuierlich              | Wird nicht mehr als dynamisch wahrgenommen      | 500Millisekunden | 5Sekunden        | Datei aus dem Internet herunterladen                                            |
 | Träge                 | Lang; Benutzer könnte Interesse verlieren    | 500Millisekunden | 10Sekunden       | Mehrere Apps aus dem Store installieren                                         |
 
- 
+ 
 
 Sie können den Leistungsszenarien Ihrer App jetzt Interaktionsklassen zuweisen. Sie können jedem Szenario den Bezugszeitpunkt der App, einen Teil der Benutzererfahrung und eine Interaktionsklasse zuweisen. Hier folgen einige Vorschläge für eine Beispiel-App für Lebensmittel und Gastronomie.
 
@@ -175,7 +173,7 @@ Verwenden Sie diese Verfahren und Tools zum Testen, wie Ihre App gegenüber den 
     -   Führen Sie die App mehrmals aus, um zufällige Testvariablen so gut es geht auszuschließen und dadurch konsistente Messungen zu ermöglichen.
 -   Führen Sie Tests zur verringerten Leistungsverfügbarkeit durch. Das Gerät der Benutzer weist möglicherweise eine deutlich geringere Leistung als das Entwicklungssystem auf. Windows wurde unter Berücksichtigung von Geräten mit niedrigem Stromverbrauch, z.B. mobile Geräte, konzipiert. Apps, die auf der Plattform ausgeführt werden, sollten sicherstellen, dass sie auch auf diesen Geräten ordnungsgemäß ausgeführt werden können. Sie können davon ausgehen, dass ein energiesparendes Gerät ungefähr viermal langsamer ist als ein Desktop-PC. Legen Sie Ihre Ziele entsprechend fest.
 -   Verwenden Sie eine Kombination von Tools wie Microsoft Visual Studio und Windows Performance Analyzer, um die App-Leistung zu messen. Visual Studio stellt eine Analyse bereit, die auf die App ausgerichtet ist, beispielsweise die Quellcodeverknüpfung. Windows Performance Analyzer bietet dagegen eine systemorientierte Analyse, beispielsweise die Bereitstellung von Systeminfos, Infos zu Touchmanipulationsereignissen sowie Infos zur Datenträger-E/A und Grafikprozessorauslastung (GPU). Beide Tools können Ablaufverfolgungsdateien sammeln und exportieren und freigegebene sowie Post-Mortem-Traces erneut öffnen.
--   Bevor Sie Ihre App zur Zertifizierung an den Store übermitteln, sollten Sie die leistungsbezogenen Testfälle in Ihre Testpläne integrieren, so wie im Abschnitt „Leistungstests“ unter [Tests im Zertifizierungskit für Windows-Apps](windows-app-certification-kit-tests.md) und im Abschnitt „Leistung und Stabilität“ unter [Testfälle für WindowsStore-Apps](https://msdn.microsoft.com/library/windows/apps/Dn275879) beschrieben.
+-   Bevor Sie Ihre app zur Zertifizierung an den Store übermitteln, müssen Sie die leistungsbezogenen Testfälle in Ihre Testpläne integrieren, wie beschrieben im Abschnitt "Leistungstests" des [Zertifizierungskits für Windows-Apps Tests](windows-app-certification-kit-tests.md) und in der "Leistung und Stabilität"im Abschnitt [Testfälle für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/Dn275879).
 
 Weitere Informationen finden Sie unter diesen Ressourcen und Tools zur Profilerstellung.
 

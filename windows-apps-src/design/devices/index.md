@@ -9,15 +9,13 @@ keywords: Gerät, Eingabe, Interaktion
 ms.author: mijacobs
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c36e60d0435db6536ea7bb0eee3011937668cb7
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 6f5e6c96c67052f1933bf4fb69988ae1eae27ee0
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1395389"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550835"
 ---
 #  <a name="device-primer-for-universal-windows-platform-uwp-apps"></a>Einführung der Geräte für UWP-Apps (Universelle Windows-Plattform)
 
@@ -133,7 +131,7 @@ Typische Gerätefunktionen
 
 Smartphones sind mittlerweile die am häufigsten genutzten Geräte und bieten auch bei begrenzter Bildschirmfläche und eingeschränkten Eingabeverfahren viele Möglichkeiten. Smartphones sind in zahlreichen verschiedenen Größen verfügbar. Größere Handys werden als Phablets bezeichnet. App-Benutzeroberflächen auf Phablets ähneln den Benutzeroberflächen auf Smartphones, aber die größere Bildschirmfläche von Phablets ermöglicht einige wichtige Änderungen bei der Nutzung von Inhalten.
 
-Mit Continuum für Smartphones, einem neuen Angebot für kompatible mobile Windows 10-Geräte, können Benutzer ihre Smartphones an einen Bildschirm anschließen und sogar mit Maus und Tastatur auf Ihren Smartphones wie auf einem Laptop arbeiten. (Weitere Informationen finden Sie im [Artikel zu Continuum für Smartphones](http://go.microsoft.com/fwlink/p/?LinkID=699431).)
+Mit Continuum für Smartphones, einer neuen Funktion für kompatible Windows 10 mobile Geräte, können Benutzer ihre Smartphones an einen Bildschirm anschließen und sogar Maus und Tastatur verwenden, damit ihr Gerät wie einen Laptop. (Weitere Informationen finden Sie im [Artikel zu Continuum für Smartphones](http://go.microsoft.com/fwlink/p/?LinkID=699431).)
 
 Bildschirmgrößen
 -   4 bis 5 Zoll bei Smartphones
@@ -166,7 +164,7 @@ Typische Gerätefunktionen
 -   Bewegungssensoren
 -   Positionssensoren
 
- 
+ 
 
 ## <a name="surface-hub-devices"></a>SurfaceHub-Geräte
 
@@ -199,7 +197,7 @@ Typische Gerätefunktionen
 -   Kamera
 -   Mikrofon
 
- 
+ 
 
 ## <a name="windows-iot-devices"></a>WindowsIoT-Geräte
 

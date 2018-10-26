@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 11/16/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
-ms.openlocfilehash: ad1ba185e70a34a4e7bfed0609412ac7bbca2d4a
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: fdaa8cd73bb2f1199e7214206ec2b0b52628a906
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653689"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5550921"
 ---
 # <a name="controls-and-patterns-for-uwp-apps"></a>Steuerelemente und Muster für UWP-Apps
  
@@ -32,20 +30,19 @@ Die Artikel in diesem Abschnitt enthalten Designrichtlinien und Codierungsanweis
 
 Allgemeine Anweisungen und Codebeispiele für das Hinzufügen und Formatieren von Steuerelementen in XAML und C#.
 
-<div class="side-by-side">
-<div class="side-by-side-content">
-  <div class="side-by-side-content-left">
-   <p><b><a href="controls-and-events-intro.md">Hinzufügen von Steuerelementen und Verarbeiten von Ereignissen</a></b> <br/>
-Es gibt 3 wichtige Schritte, die Sie ausführen müssen, um Ihrer App Steuerelemente hinzuzufügen: das Hinzufügen eines Steuerelements zu Ihrer App-UI, das Festlegen der Eigenschaften für das Steuerelement und das Hinzufügen von Code zu den Ereignishandlern des Steuerelements, sodass dieses eine Aktion ausführt.</li>
-</ul> 
-</p>
-  </div>
-  <div class="side-by-side-content-right">
-   <p><b><a href="xaml-styles.md">Formatieren von Steuerelementen</a></b> <br/>
+:::row:::
+    :::column:::
+      <p><b><a href="controls-and-events-intro.md">Hinzufügen von Steuerelementen und Verarbeiten von Ereignissen</a></b> <br/>
+Es gibt 3 wichtige Schritte, die Sie ausführen müssen, um Ihrer App Steuerelemente hinzuzufügen: das Hinzufügen eines Steuerelements zu Ihrer App-UI, das Festlegen der Eigenschaften für das Steuerelement und das Hinzufügen von Code zu den Ereignishandlern des Steuerelements, sodass dieses eine Aktion ausführt.</p>
+    :::column-end:::
+    :::column:::
+      <p><b><a href="xaml-styles.md">Formatieren von Steuerelementen</a></b> <br/>
 Das XAML-Framework bietet zahlreiche Anpassungsmöglichkeiten für die App-Darstellung. Sie können mit Formaten die Steuerelementeigenschaften festlegen und diese Einstellungen dann für andere Steuerelemente wiederverwenden, um ein einheitliches Erscheinungsbild zu erzielen.</p>
-  </div>
-</div>
-</div>
+    :::column-end:::
+:::row-end:::
+
+## <a name="get-the-windows-ui-library"></a>Abrufen der Windows-UI-Bibliothek
+Einige Steuerelemente sind nur in der Windows-UI-Bibliothek verfügbar. Um es zu erhalten, finden Sie in der [UI-Bibliothek für Windows-Übersicht und Installation Anweisungen](/uwp/toolkits/winui/).
 
 ## <a name="alphabetical-index"></a>Alphabetischer Index 
 
@@ -67,7 +64,7 @@ Detaillierte Informationen zu bestimmten Steuerelementen und Mustern. (Eine nach
 
 <li style="list-style-type: none;"><a href="date-and-time.md">Datums- und Uhrzeitsteuerelemente</a></li>
 
-<li style="list-style-type: none;"><a href="dialogs.md">Dialogfelder und Flyouts</a></li>
+<li style="list-style-type: none;"><a href="dialogs-and-flyouts/index.md">Dialogfelder und Flyouts</a></li>
 
 <li style="list-style-type: none;"><a href="flipview.md">Flip-Ansicht</a></li>
 
@@ -93,7 +90,9 @@ Detaillierte Informationen zu bestimmten Steuerelementen und Mustern. (Eine nach
 
 <li style="list-style-type: none;"><a href="navigationview.md">Navigationsansicht</a></li>
 
-<li style="list-style-type: none;"><a href="person-picture.md">Bild der Person</a></li>
+<li style="list-style-type: none;"><a href="person-picture.md">Bild einer Person</a></li>
+
+<li style="list-style-type: none;"><a href="pivot.md">Pivot</a></li>
 
 <li style="list-style-type: none;"><a href="progress-controls.md">Statussteuerelemente</a></li>
 
@@ -112,8 +111,6 @@ Detaillierte Informationen zu bestimmten Steuerelementen und Mustern. (Eine nach
 <li style="list-style-type: none;"><a href="slider.md">Schieberegler</a></li>
 
 <li style="list-style-type: none;"><a href="split-view.md">Geteilte Ansicht</a></li>
-
-<li style="list-style-type: none;"><a href="tabs-pivot.md">Registerkarten und Pivots</a></li>
 
 <li style="list-style-type: none;"><a href="text-controls.md">Textsteuerelemente</a></li>
 
