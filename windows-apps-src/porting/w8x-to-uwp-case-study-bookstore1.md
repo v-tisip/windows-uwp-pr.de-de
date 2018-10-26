@@ -1,37 +1,36 @@
 ---
-author: mcleblanc
+author: stevewhims
 title: Windows Runtime 8.x zu UWP – Fallstudie, Bookstore1
 ms.assetid: e4582717-afb5-4cde-86bb-31fb1c5fc8f3
-description: Dieses Thema enthält eine Fallstudie für das Portieren einer sehr einfachen universellen8.1-App zu einer UWP (Universelle Windows-Plattform)-App für Windows 10.
-ms.author: markl
+description: Dieses Thema enthält eine Fallstudie für das Portieren einer sehr einfachen universellen 8.1-Apps zu einer app für Windows 10 universelle Windows-Plattform (UWP).
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: a1c39852e6521d2dc20711471196781aad7770d7
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: cec8171b381a607616e2054784fa888074d3f90e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "235359"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567119"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore1"></a>Windows Runtime 8.x zu UWP – Fallstudie, Bookstore1
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
-Dieses Thema enthält eine Fallstudie für das Portieren einer sehr einfachen universellen8.1-App zu einer UWP (Universelle Windows-Plattform)-App für Windows 10. Bei einer universellen 8.1-App wird ein App-Paket für Windows 8.1 und ein anderes App-Paket für Windows Phone 8.1 erstellt. Mit Windows 10 können Sie ein einzelnes App-Paket erstellen, das Ihre Kunden auf einer Vielzahl von Geräten installieren können – und genau das werden wir in dieser Fallstudie tun. Weitere Informationen finden Sie unter [Anleitung für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn894631).
+Dieses Thema enthält eine Fallstudie für das Portieren einer sehr einfachen universellen 8.1-Apps zu einer app Windows10Universal Windows-Plattform (UWP). Eine universelle 8.1-app wird ein ein app-Paket für Windows8.1 und ein anderes app-Paket für Windows Phone 8.1 erstellt. Mit Windows 10, können Sie ein einzelnes app-Paket erstellen, die Ihre Kunden können auf einer Vielzahl von Geräten installieren und ist, was wir in dieser Fallstudie tun. Weitere Informationen finden Sie unter [Anleitung für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
 Die portierte App besteht aus einem **ListBox**-Element, das an ein Ansichtsmodell gebunden ist. Das Ansichtsmodell verfügt über eine Liste mit Büchern, für die Titel, Autor und Bucheinband angezeigt werden. Für die Bucheinbandbilder ist **Buildvorgang** auf **Inhalt** und **In Ausgabeverzeichnis kopieren** auf **Nicht kopieren** festgelegt.
 
 Die vorherigen Themen in diesem Abschnitt beschreiben die Unterschiede zwischen den Plattformen und bieten umfassende Informationen und Anleitungen zum Portierungsprozess für verschiedene Aspekte einer App, vom XAML-Markup über die Bindung an ein Ansichtsmodell bis hin zum Zugreifen auf Daten. Dieser Leitfaden soll anhand einer Fallstudie ergänzt werden, indem ein praktisches Beispiel vorgestellt wird. Bei den Fallstudien wird davon ausgegangen, dass Sie die Anleitung gelesen haben. Sie wird nicht wiederholt.
 
-**Hinweis**   Wenn beim Öffnen von Bookstore1Universal\_10 in Visual Studio die Meldung „Visual Studio-Update erforderlich“ angezeigt wird, führen Sie die Schritte unter [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md) aus.
+**Hinweis:**  Wenn beim Öffnen von Bookstore1Universal\_10 in Visual Studio die Meldung "Visual Studio-Update erforderlich", klicken Sie dann die Schritte im [TargetPlatformVersion](w8x-to-uwp-troubleshooting.md).
 
 ## <a name="downloads"></a>Downloads
 
 [Laden Sie die universelle8.1-App „Bookstore1\_81“ herunter](http://go.microsoft.com/fwlink/?linkid=532946).
 
-[Laden Sie die Windows 10-App „Bookstore1Universal\_10“ herunter](http://go.microsoft.com/fwlink/?linkid=532950).
+[Laden der Bookstore1Universal\_10 Windows 10-app](http://go.microsoft.com/fwlink/?linkid=532950).
 
 ## <a name="the-universal-81-app"></a>Die universelle8.1-App
 
@@ -45,15 +44,15 @@ So sieht „Bookstore1\_81“ aus, die App, die wir portieren werden. Es handelt
 
 „Bookstore1\_81“ unter Windows Phone
 
-##  <a name="porting-to-a-windows-10-project"></a>Portieren auf ein Windows 10-Projekt
+##  <a name="porting-to-a-windows10-project"></a>Portieren auf ein Windows 10-Projekt
 
 Die Bookstore1\_81-Projektmappe ist ein universelles 8.1-App-Projekt und enthält diese Projekte.
 
--   Bookstore1\_81.Windows. Dies ist das Projekt, das das App-Paket für Windows 8.1 erstellt.
+-   Bookstore1\_81.Windows. Dies ist das Projekt, das app-Paket für Windows8.1 erstellt.
 -   Bookstore1\_81.WindowsPhone. Dies ist das Projekt, das das App-Paket für Windows Phone 8.1 erstellt.
 -   Bookstore1\_81.Shared. Dies ist das Projekt, das den Quellcode, die Markupdateien und andere Assets und Ressourcen enthält, die von den beiden anderen Projekten verwendet werden.
 
-Für diese Fallstudie verwenden wir die üblichen Optionen, die unter [Bei einer Universal8.1-App](w8x-to-uwp-root.md) in Bezug auf die zu unterstützenden Geräte beschrieben sind. Die Entscheidung hier ist ganz einfach: Diese App bietet die gleichen Features und verwendet dafür meist denselben Code in Windows 8.1- und Windows Phone 8.1-Formularen. Daher müssen wir den Inhalt des freigegebenen Projekts (und sonstiger Elemente, die wir aus den anderen Projekten benötigen) zu einem Windows10-Projekt portieren, das auf die universelle Gerätefamilie ausgerichtet ist (eine App, die Sie auf der breitestmöglichen Palette an Geräten installieren können).
+Für diese Fallstudie verwenden wir die üblichen Optionen, die unter [Bei einer Universal8.1-App](w8x-to-uwp-root.md) in Bezug auf die zu unterstützenden Geräte beschrieben sind. Die Entscheidung hier ist ganz einfach: Diese app bietet die gleichen Features und verwendet dafür meist denselben Code in seiner Windows8.1 und Windows Phone 8.1-Formularen. Daher müssen wir den Inhalt des freigegebenen Projekts (und sonstiger Elemente, die wir aus den anderen Projekten benötigen) zu Portieren einer Windows 10, die zielt auf die universelle Gerätefamilie (eines, das Sie auf einer breiten Palette von Geräten installieren können).
 
 Das Erstellen eines neuen Projekts in Visual Studio ist sehr schnell: Kopieren Sie Dateien aus Bookstore1\_81, und fügen Sie die kopierten Dateien in das neue Projekt ein. Erstellen Sie zunächst ein neues Projekt vom Typ „Leere Anwendung“ (Windows Universal). Geben Sie ihm den Namen „Bookstore1Universal\_10“. Dies sind die Dateien, die von „Bookstore1\_81“ nach „Bookstore1Universal\_10“ kopiert werden sollen.
 
@@ -65,25 +64,25 @@ Das Erstellen eines neuen Projekts in Visual Studio ist sehr schnell: Kopieren S
 
 **Aus dem Windows-Projekt**
 
--   Kopieren Sie „BookstoreStyles.xaml“. Wir verwenden diese Datei als Ausgangspunkt, da alle Ressourcenschlüssel in dieser Datei in eine Windows10-App aufgelöst werden können (einige in der entsprechenden WindowsPhone-Datei werden nicht aufgelöst).
+-   Kopieren Sie „BookstoreStyles.xaml“. Wir verwenden hier als ein guter Ausgangspunkt, da alle Ressourcenschlüssel in dieser Datei in einer Windows 10-app aufgelöst werden; Einige in der entsprechenden WindowsPhone-Datei werden nicht.
 
 Bearbeiten Sie den Quellcode und die Markupdateien, die Sie gerade kopiert haben, und ändern Sie alle Verweise auf den Namespace „Bookstore1\_81“ in „Bookstore1Universal\_10“. Eine schnelle Möglichkeit dafür ist die Verwendung des Features **In Dateien ersetzen**. Weder im Ansichtsmodell, noch in einem anderen imperativen Code sind Codeänderungen erforderlich. Um leichter erkennen zu können, welche App-Version ausgeführt wird, sollten Sie jedoch den von der **Bookstore1Universal\_10.BookstoreViewModel.AppName**-Eigenschaft zurückgegebenen Wert „BOOKSTORE1\_81“ in „BOOKSTORE1UNIVERSAL\_10“ ändern.
 
-Jetzt können Sie mit der Erstellung und Ausführung beginnen. Hier ist eine Darstellung der neuen UWP-App, die nahezu ohne Arbeit und Mühe zu Windows 10 portiert wurde.
+Jetzt können Sie mit der Erstellung und Ausführung beginnen. Hier sehen Sie, wie unsere neue UWP-app aussieht, nahezu ohne Arbeit und Mühe zu Windows 10 portiert.
 
 ![Die Windows10-App mit Änderungen am ursprünglichen Quellcode](images/w8x-to-uwp-case-studies/c01-03-desk10-initial-source-code-changes.png)
 
-Die Windows 10-App mit Änderungen am ursprünglichen Quellcode auf einem Desktopgerät
+Die Windows 10-app mit Änderungen am ursprünglichen Quellcode auf einem Desktopgerät
 
 ![Die Windows10-App mit Änderungen am ursprünglichen Quellcode](images/w8x-to-uwp-case-studies/c01-04-mob10-initial-source-code-changes.png)
 
-Die Windows 10-App mit Änderungen am ursprünglichen Quellcode auf einem mobilen Gerät
+Die Windows 10-app mit Änderungen am ursprünglichen Quellcode auf einem mobilen Gerät
 
 Die Ansicht und das Ansichtsmodell arbeiten ordnungsgemäß zusammen, und das **ListBox**-Element funktioniert. Wir müssen lediglich die Formatierung ändern. Auf einem mobilen Gerät mit hellem Design können wir den Rahmen des Listenfelds sehen, der sich jedoch einfach ausblenden lässt. Und die Schrift ist zu groß, sodass wir die verwendeten Stile ändern. Darüber hinaus sollte die App helle Farben verwenden, wenn sie auf einem Desktopgerät ausgeführt wird, damit sie standardmäßig aussieht. Wir werden dies also ändern.
 
 ## <a name="universal-styling"></a>Universelle Formatierung
 
-Die Bookstore1\_81-App verwendet zwei unterschiedliche Ressourcenwörterbücher („BookstoreStyles.xaml“), mit denen die Stile an die Betriebssysteme Windows 8.1 und Windows Phone 8.1 angepasst werden können. Keine dieser beiden BookstoreStyles.xaml-Dateien enthält genau die Stile, die wir für unsere Windows10-App benötigen. Die gute Nachricht ist jedoch, dass unsere Vorstellungen tatsächlich sehr viel einfacher sind als diese beiden. In den nächsten Schritten werden wir daher hauptsächlich unsere Projektdateien und das Markup entfernen und vereinfachen. Die Schritte finden Sie nachfolgend: Sie können die Links oben in diesem Thema verwenden, um die Projekte herunterzuladen und die Ergebnisse dieser Änderungen zwischen diesem Punkt und dem Ende der Fallstudie anzuzeigen.
+Die app "bookstore1\_81" verwendet zwei unterschiedliche Ressourcenwörterbücher ("bookstorestyles.xaml"), um die Stile an die Betriebssysteme Windows8.1 und Windows Phone 8.1 anpassen. Keine dieser beiden BookstoreStyles.xaml-Dateien enthält genau die Stile, die wir für unsere Windows 10-app benötigen. Die gute Nachricht ist jedoch, dass unsere Vorstellungen tatsächlich sehr viel einfacher sind als diese beiden. In den nächsten Schritten werden wir daher hauptsächlich unsere Projektdateien und das Markup entfernen und vereinfachen. Die Schritte finden Sie nachfolgend: Sie können die Links oben in diesem Thema verwenden, um die Projekte herunterzuladen und die Ergebnisse dieser Änderungen zwischen diesem Punkt und dem Ende der Fallstudie anzuzeigen.
 
 -   Um den Abstand zwischen den Elementen zu verkleinern, suchen Sie die `BookTemplate`-Datenvorlage in „MainPage.xaml“, und löschen Sie `Margin="0,0,0,8"` aus dem Stamm-**Grid**.
 -   Auch in `BookTemplate`gibt es Verweise auf `BookTemplateTitleTextBlockStyle` und `BookTemplateAuthorTextBlockStyle`. Bookstore1\_81 verwendete diese Schlüssel als eine Dereferenzierung, sodass ein einzelner Schlüssel unterschiedliche Implementierungen in den beiden Apps aufwies. Diese Dereferenzierung wird nicht mehr benötigt; wir können direkt auf die Systemstile verweisen. Ersetzen Sie daher diese Verweise durch `TitleTextBlockStyle` bzw. `SubtitleTextBlockStyle`.
@@ -96,11 +95,11 @@ Nach den letzten Formatierungsvorgängen sieht die App folgendermaßen aus.
 
 ![Die fast portierte Windows10-App](images/w8x-to-uwp-case-studies/c01-05-desk10-almost-ported.png)
 
-Die fast portierte Windows 10-App auf einem Desktopgerät
+Die fast portierte Windows 10-app auf einem Desktopgerät
 
 ![Die fast portierte Windows10-App](images/w8x-to-uwp-case-studies/c01-06-mob10-almost-ported.png)
 
-Die fast portierte Windows 10-App auf einem mobilen Gerät
+Die fast portierte Windows 10-app auf einem mobilen Gerät
 
 ## <a name="an-optional-adjustment-to-the-list-box-for-mobile-devices"></a>Eine optionale Anpassung des Listenfelds für Mobilgeräte
 
@@ -123,7 +122,7 @@ Kopieren Sie schließlich `BookstoreListBoxStyle` in „BookstoreStyles.xaml“,
 
 ![Die portierte Windows10-App](images/w8x-to-uwp-case-studies/c01-07-mob10-ported.png)
 
-Die portierte Windows 10-App auf einem mobilen Gerät
+Die portierte Windows 10-app auf einem mobilen Gerät
 
 ## <a name="conclusion"></a>Fazit
 

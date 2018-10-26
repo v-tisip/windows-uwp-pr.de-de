@@ -1,23 +1,22 @@
 ---
-author: mcleblanc
+author: stevewhims
 description: Welche Optionen gibt es beim Entwickeln von plattformübergreifenden Apps?
 title: Auswählen eines Ansatzes für die Entwicklung von iOS- und UWP-Apps
 ms.assetid: 5CDAB313-07B7-4A32-A49B-026361DCC853
-ms.author: markl
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: ccacfc1257af529fcc2363285c6dd9e4ab2315ac
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: c62624e83d1e8334cce711869088817e2f9dc5e0
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "234214"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566261"
 ---
 # <a name="selecting-an-approach-to-ios-and-uwp-app-development"></a>Auswählen eines Ansatzes für die Entwicklung von iOS- und UWP-Apps
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Welche Optionen gibt es beim Entwickeln von plattformübergreifenden Apps?
 

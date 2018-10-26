@@ -5,16 +5,14 @@ description: Hier erfahren Sie, wie Sie eine Hintergrundaufgabe erstellen, die a
 ms.author: twhitney
 ms.date: 05/7/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, erweitern, aufschlüsseln, App-Dienst, Paket, Erweiterung
 ms.localizationpriority: medium
-ms.openlocfilehash: 6920b448146f25433335234ec67fde473e096cbd
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 624d52ff96fb2537afa3affb2d842aa29e1e6667
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843653"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564772"
 ---
 # <a name="extend-your-app-with-services-extensions-and-packages"></a>Bauen Sie Ihre App mit Diensten, Erweiterungen und Paketen aus
 

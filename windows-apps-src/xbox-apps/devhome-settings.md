@@ -1,37 +1,35 @@
 ---
 author: v-angraf
 ms.assetid: ec3945e7-cfb1-b91a-7ae6-e767a7227f8a
-title: Einstellungsseite (Dev-Startseite)
-description: Enthält Informationen zu der Seite Einstellungen der app Dev-Startseite für Xbox ein.
+title: Seite "Einstellungen" (Dev Home)
+description: Enthält Informationen über die Seite "Einstellungen" der Dev Home-app für Xbox One.
 ms.author: v-angraf@microsoft.com
 ms.date: 08/09/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 permalink: en-us/docs/xdk/devhome-settings.html
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e26a5000e6f219f5b617cc806d386cbd9ded298
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: ec27464c2bcece46e4a658cc59ac8ef0b7f390f7
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1015600"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568178"
 ---
-# <a name="settings-page-dev-home"></a>Einstellungsseite (Dev-Startseite)
+# <a name="settings-page-dev-home"></a>Seite "Einstellungen" (Dev Home)
    
   
-Der Seite **Einstellungen** der Developer-Startseite ermöglicht den Zugriff auf verschiedene Einstellungen für die Entwicklung-Konsole.   
- ![Einstellungsseite der Developer-Startseite](images/devhome_settings.png)   
+Die Seite " **Einstellungen** " des Dev Home bietet Zugriff auf verschiedene Einstellungen für die entwicklungskonsole.   
+ ![Seite "Einstellungen" des Dev Home](images/devhome_settings.png)   
   
-Die **Einstellungen** -Seite enthält die folgenden Bereiche:   
+Die Seite " **Einstellungen** " enthält die folgenden Bereichen:   
  
    *  [Konsoleneinstellungen](#ID4EEB)  
-   *  [OS wiederherstellungseinstellungen update](#ID4EOB)  
+   *  [OS Recovery Update-Einstellungen](#ID4EOB)  
    *  [Visual Studio](#ID4EYB)  
-   *  [Debug-Einstellungen](#ID4ECC)  
-   *  [Unbeaufsichtigtes Skript für Konfiguration](#ID4EMC)  
-   *  [Default Home Erfahrung](#ID4E3C)  
+   *  [Debuggen von Einstellungen](#ID4ECC)  
+   *  [Unbeaufsichtigte Konfiguration](#ID4EMC)  
+   *  [Standard-Home-Erfahrung](#ID4E3C)  
 
  
 <a id="ID4EEB"></a>
@@ -41,16 +39,16 @@ Die **Einstellungen** -Seite enthält die folgenden Bereiche:
 ## <a name="console-settings"></a>Konsoleneinstellungen  
    
   
-Im Bereich der **Konsole Einstellungen** bietet eine Ansicht "auf einen Blick" der Konsole Einstellungen und Informationen. Sie können diese Tools zum Anzeigen und Bearbeiten der Konsole Hostname Sandkasten und Sicherheitseinstellungen für Access.   
+Der **konsoleneinstellungen** -Bereich bietet eine Ansicht "auf einen Blick" der konsoleneinstellungen und Informationen. Sie können diese Tools zum Anzeigen und Bearbeiten der Konsole Hostname, Sandbox und Sicherheitseinstellungen für den Zugriff verwenden.   
   
 <a id="ID4EOB"></a>
 
    
 
-## <a name="os-recovery-update-settings"></a>OS wiederherstellungseinstellungen update  
+## <a name="os-recovery-update-settings"></a>OS Recovery Update-Einstellungen  
    
   
-Im Bereich **OS Recovery aktualisieren Einstellungen** konfiguriert Einstellungen für die Konsole automatische Updates. Hinweis, die mit diesen Einstellungen ändern kann wirksam werden bis zu 24 Stunden dauern.   
+Der Bereich **Betriebssystem-Wiederherstellung Aktualisieren von Einstellungen** konfiguriert Einstellungen für die Konsole automatische Updates. Beachten Sie, das an diese Einstellungen ändert dauert bis zu 24 Stunden wirksam wird.   
   
 <a id="ID4EYB"></a>
 
@@ -59,40 +57,40 @@ Im Bereich **OS Recovery aktualisieren Einstellungen** konfiguriert Einstellunge
 ## <a name="visual-studio"></a>Visual Studio  
    
   
-Der **Visual Studio** -Bereich wird verwendet, um die Konsole mit Visual Studio Kopplung. Sie können auch alle kombinierte Visual Studio-Instanzen entfernen.   
+Der **Visual Studio** -Bereich wird verwendet, um die Konsole mit Visual Studio koppeln. Sie können auch alle gekoppelten Visual Studio-Instanzen entfernen.   
   
 <a id="ID4ECC"></a>
 
    
 
-## <a name="debug-settings"></a>Debug-Einstellungen  
+## <a name="debug-settings"></a>Debuggen von Einstellungen  
    
   
-Bereich **Debuggen Einstellungen** wird verwendet, um anzeigen und ein-/ausschalten Allgemeine Einstellungen zu debuggen.   
+Der Bereich **Debugeinstellungen** dient zum Anzeigen und allgemeine umschalten Debugeinstellungen.   
   
 <a id="ID4EMC"></a>
 
    
 
-## <a name="unattended-script-configuration"></a>Unbeaufsichtigtes Skript für Konfiguration  
+## <a name="unattended-script-configuration"></a>Unbeaufsichtigte Konfiguration  
    
   
-Der Bereich **Unattended Skript für Konfiguration** verwaltet Skripts für eine Xbox-Konsolen Installation.   
+Der Bereich **unbeaufsichtigten Skript Konfiguration** verwaltet Setupskripts für Xbox One-Konsolen.   
   
 <a id="ID4E3C"></a>
 
    
 
-## <a name="default-home-experience"></a>Default Home Erfahrung  
+## <a name="default-home-experience"></a>Standard-Home-Erfahrung  
    
   
-Im Bereich **Home Erfahrung Standard** bestimmt, ob im Einzelhandel Startbildschirm oder im [für Entwickler in der Konsole (Dev-Startseite)](dev-home.md) Startbildschirm angezeigt wird, wenn die Konsole gestartet wird.   
+Der **Standard-Erfahrung Home** -Bereich bestimmt, ob dem Einzelhandel-Startbildschirm oder das [Entwickler-Startbildschirm auf der Konsole (Dev Home)](dev-home.md) Bildschirm angezeigt wird, wenn die Konsole wird gestartet.   
   
 <a id="ID4EJD"></a>
 
    
 
-## <a name="see-also"></a>Weitere Informationen  
- [Entwickler-Homepage in der Konsole (Dev-Startseite)](dev-home.md)
+## <a name="see-also"></a>Weitere Informationen:  
+ [Entwickler-Startbildschirm auf der Konsole (Dev Home)](dev-home.md)
 
   

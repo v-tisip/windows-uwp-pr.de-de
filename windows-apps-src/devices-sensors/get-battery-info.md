@@ -6,16 +6,14 @@ description: Erfahren Sie, wie Sie mithilfe von APIs im Windows.Devices.Power-Na
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: c191a9f2da29f0ad10d0ba61507873b4fd652ddc
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: c745b99104495b4d0b3c60202c378285dbfdd7b6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "959075"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565351"
 ---
 # <a name="get-battery-information"></a>Abrufen von Akkuinformationen
 
@@ -32,7 +30,7 @@ Erfahren Sie, wie Sie mithilfe von APIs im [**Windows.Devices.Power**](https://m
 
 Einige Geräte verfügen über mehr als einen Akku, und es ist nicht immer eindeutig, in welcher Form die einzelnen Akkus zur gesamten Energiekapazität des Geräts beitragen. An dieser Stelle wird die [**AggregateBattery**](https://msdn.microsoft.com/library/windows/apps/Dn895011)-Klasse verwendet. *AggregateBattery* repräsentiert alle Akkucontroller, die mit dem Gerät verbunden sind. Damit kann ein zusammengefasstes [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005)-Objekt bereitgestellt werden.
 
-**Hinweis**  Eine [**Battery**](https://msdn.microsoft.com/library/windows/apps/Dn895004)-Klasse entspricht einem Akkucontroller. Je nach Gerät kann der Controller auch am physischen Akku angeschlossen sein, und es kommt auch vor, dass er am Gehäuse des Geräts angeschlossen ist. So kann auch dann ein Akkuobjekt erstellt werden, wenn keine Akkus vorhanden sind. In anderen Fällen kann für das Akkuobjekt **null** gelten.
+**Hinweis:** eine [**den Akku**](https://msdn.microsoft.com/library/windows/apps/Dn895004) -Klasse entspricht einem akkucontroller. Je nach Gerät kann der Controller auch am physischen Akku angeschlossen sein, und es kommt auch vor, dass er am Gehäuse des Geräts angeschlossen ist. So kann auch dann ein Akkuobjekt erstellt werden, wenn keine Akkus vorhanden sind. In anderen Fällen kann für das Akkuobjekt **null** gelten.
 
 Wenn Sie über ein zusammengefasstes Akkuobjekt verfügen, rufen Sie [**GetReport**](https://msdn.microsoft.com/library/windows/apps/windows.devices.power.battery.getreport) auf, um den entsprechenden [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005) abzurufen.
 
@@ -340,7 +338,7 @@ Wenn Ihre App nicht den Namen **App1** hat, müssen Sie den Namespace im vorheri
 
 Führen Sie schließlich Folgendes aus, um diese einfache Akku-App auszuführen: Klicken Sie im Menü **Debuggen** auf **Debuggen starten**, um die Projektmappe zu testen.
 
-**Tipp**  Um numerische Werte über das [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005)-Objekt zu erhalten, debuggen Sie Ihre App auf dem **lokalen Computer** oder einem externen **Gerät** (z.B. einem Windows Phone). Beim Debuggen mit einem Geräteemulator gibt das **BatteryReport**-Objekt für die Kapazitäts- und Rateneigenschaften **null** zurück.
+**Tipp:** um numerische Werte aus dem [**BatteryReport**](https://msdn.microsoft.com/library/windows/apps/Dn895005) -Objekt zu erhalten, Debuggen Sie Ihre app auf dem **Lokalen Computer** oder ein externes **Gerät** (z. B. eine Windows Phone). Beim Debuggen mit einem Geräteemulator gibt das **BatteryReport**-Objekt für die Kapazitäts- und Rateneigenschaften **null** zurück.
 
- 
+ 
 

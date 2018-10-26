@@ -6,16 +6,14 @@ description: In diesem Lernprogramm wird beschrieben, wie Gerätefunktionen in M
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 693a33bc212f6fe1b35414a20f2a6c44393c0b87
-ms.sourcegitcommit: cd91724c9b81c836af4773df8cd78e9f808a0bb4
-ms.translationtype: HT
+ms.openlocfilehash: a7250c41795373b089f7a4c76b603c169b1e4dc3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "1989444"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566271"
 ---
 # <a name="enable-device-capabilities"></a>Aktivieren von Gerätefunktionen
 
@@ -28,8 +26,7 @@ In diesem Lernprogramm wird beschrieben, wie Gerätefunktionen in Microsoft Visu
 
 Windows-Apps erfordern eine Angabe im App-Paketmanifest, wenn Sie bestimmte Gerätetypen verwenden. In Visual Studio können Sie die meisten Funktionen mit dem [Manifest-Designer](https://msdn.microsoft.com/library/windows/apps/xaml/br230259.aspx) deklarieren oder die Funktionen wie unter [So wird's gemacht: Angeben von Gerätefunktionen in einem Paketmanifest (manuell)](https://msdn.microsoft.com/library/windows/apps/Dn263092) beschrieben manuell hinzufügen. In diesem Lernprogramm wird vorausgesetzt, dass Sie den Manifest-Designer verwenden.
 
-**Hinweis**  
-Einige Gerätetypen (z.B. Drucker, Scanner und Sensoren) müssen nicht im App-Paketmanifest deklariert werden.
+**Hinweis:**  einige Arten von Geräten, z. B. Drucker, Scanner und Sensoren, müssen nicht im app-Paketmanifest deklariert werden.
 
 -   Doppelklicken Sie im Projektmappen-Explorer von Visual Studio auf die Paketmanifestdatei **Package.appxmanifest**.
 -   Öffnen Sie die Registerkarte **Funktionen**.

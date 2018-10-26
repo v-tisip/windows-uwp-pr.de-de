@@ -6,16 +6,14 @@ ms.assetid: 79c3b4c0-86eb-5019-97bb-5feee5667a2d
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, uwp, spiele, directx 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 47df8489364d37c009a56df444aa0fe4f30a443f
-ms.sourcegitcommit: be5b71a8ec7b686d5f93d56d10cb9a50c3c5bb4a
+ms.openlocfilehash: 06a4c9b434afedabc17a48e9929da8dc4460fe03
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "233761"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567202"
 ---
 # <a name="directx-11-porting-faq"></a>DirectX11 – Häufig gestellte Fragen zur Portierung
 
@@ -48,10 +46,10 @@ Spiele, die noch immer die RDTSC-Anweisung verwenden, müssen aktualisiert werde
 
 Das Communityprojekt [DirectX-Toolkit (DirectXTK)](http://go.microsoft.com/fwlink/p/?LinkID=248929) bietet Hilfsklassen zur Verwendung mit Direct3D11.
 
-##  <a name="how-do-i-maintain-code-paths-for-the-desktop-and-the-microsoft-store"></a>Wie: Verwalten von Codepfade für den Desktop und die Microsoft-Store
+##  <a name="how-do-i-maintain-code-paths-for-the-desktop-and-the-microsoft-store"></a>Verwalten ich wie Codepfade für den Desktop und Microsoft Store?
 
 
-Chuck Walbourns Artikelserie mit dem Titel [Dual-Verwendung Codierungstechniken für Spiele](http://go.microsoft.com/fwlink/p/?LinkID=286210) enthält einige Tipps zum Freigeben von Code für den Desktop und die Microsoft Store Codepfade.
+Chuck Walbourns Artikelserie [Dual-Use Coding Techniques for Games](http://go.microsoft.com/fwlink/p/?LinkID=286210) bietet Informationen zum Freigeben von Code zwischen Desktop und Microsoft Store-Codepfaden.
 
 ##  <a name="how-do-i-load-image-resources-in-my-directx-uwp-app"></a>Wie lade ich Bildressourcen in meine DirectX-UWP-App?
 
@@ -137,9 +135,9 @@ Informationen hierzu finden Sie in der [Funktionszuordnung](feature-mapping.md#f
 
 Informationen hierzu finden Sie in der [Oberflächenformatzuordnung](feature-mapping.md#surface-format-mapping) in „Zuordnung von DirectX9-Funktionen zu DirectX11-APIs“.
 
- 
+ 
 
- 
+ 
 
 
 

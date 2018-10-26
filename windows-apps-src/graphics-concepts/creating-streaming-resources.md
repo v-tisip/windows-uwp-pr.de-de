@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d78c6e070dd5d29a8e615f70f67507830e5f3938
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: a796897aa786283499c25b0f405e302feeb5f938
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653089"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565063"
 ---
 # <a name="creating-streaming-resources"></a>Erstellen von Streamingressourcen
 
@@ -48,7 +46,7 @@ Verwechseln Sie dieses Konzept nicht mit der Zuordnung einer Direct3D-Ressource 
 <tbody>
 <tr class="odd">
 <td align="left"><p><a href="mappings-are-into-a-tile-pool.md">Zuordnungen in einen Kachelpool</a></p></td>
-<td align="left"><p>Beim Erstellen einer Ressource als Streamingressource stammen die Kacheln, die die Ressource bilden, aus zugeordneten Speicherorten in einem Pool. Ein Kachelpool ist ein Arbeitsspeicherpool (der durch eine oder mehrere Zuordnungen hinter den Kulissen unterstützt wird und von der Anwendung nicht sichtbar ist).</p></td>
+<td align="left"><p>Beim Erstellen einer Ressource als Streaming-Ressource stammen die Kacheln, die die Ressource bilden, aus Speicherorten in einem Kachelpool. Ein Kachelpool ist ein Arbeitsspeicherpool (der durch eine oder mehrere Zuordnungen hinter den Kulissen unterstützt wird und von der Anwendung nicht sichtbar ist).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="streaming-resource-creation-parameters.md">Parameter für das Erstellen von Streamingressourcen</a></p></td>
@@ -60,7 +58,7 @@ Verwechseln Sie dieses Konzept nicht mit der Zuordnung einer Direct3D-Ressource 
 </tr>
 <tr class="even">
 <td align="left"><p><a href="streaming-resource-cross-process-and-device-sharing.md">Geräte- und prozessübergreifende Streamingressourcen</a></p></td>
-<td align="left"><p>Kachelpools können von anderen Prozessen wie herkömmliche Ressourcen freigegeben werden. Streamingressourcen, die auf Kachelpools verweisen, können nicht auf allen Geräten und Prozessen freigegeben werden.</p></td>
+<td align="left"><p>Kachelpools können mit anderen Prozessen wie herkömmliche Ressourcen geteilt werden. Streamingressourcen, die auf Kachelpools verweisen, können nicht auf allen Geräten und Prozessen freigegeben werden.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="operations-available-on-streaming-resources.md">Vorgänge für Streamingressourcen</a></p></td>
@@ -77,16 +75,16 @@ Verwechseln Sie dieses Konzept nicht mit der Zuordnung einer Direct3D-Ressource 
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
 
 
 [Streamingressourcen](streaming-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

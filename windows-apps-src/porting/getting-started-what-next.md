@@ -6,16 +6,14 @@ description: Mithilfe dieser grundlegenden Informationen können Sie nun interes
 ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 37473c362514b2ca24dd6e02cf247a8e37f108f7
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 5f8a6165df7bf839154ede4db3fda8a5e1662880
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "234457"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568758"
 ---
 # <a name="getting-started-what-next"></a>Erste Schritte – Was kommt als Nächstes?
 
@@ -33,7 +31,7 @@ Mithilfe dieser grundlegenden Informationen können Sie nun interessantere UWP-A
 
 Nutzen Sie auch unsere [Community-Ressourcen](https://developer.microsoft.com/en-us/windows/support), um zu erfahren, wie Sie über Entwicklerforen, Blogs, Entwicklercamps und -workshops sowie über lokale Microsoft-Veranstaltungen und -Kontakte Hilfe erhalten und andere Entwickler kennen lernen können.
 
-Wir sind davon überzeugt, dass Ihnen Windows10 neue Möglichkeiten zur App-Entwicklung eröffnen wird. Wir freuen uns auf die großartigen Apps, die Sie erstellen werden!
+Wir glauben, dass Windows 10 neue Möglichkeiten app-Entwicklung eröffnen Sie geöffnet wird. Wir freuen uns auf die großartigen Apps, die Sie erstellen werden!
 
 ## <a name="related-topics"></a>Verwandte Themen
 

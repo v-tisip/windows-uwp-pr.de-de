@@ -6,16 +6,14 @@ ms.assetid: e45186fa-57a3-dc70-2b59-408bff0c0b41
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, DirectX, Laden von Ressourcen
 ms.localizationpriority: medium
-ms.openlocfilehash: 12dd2fd39ff0b39e747488952779cfeb180f06fa
-ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
-ms.translationtype: HT
+ms.openlocfilehash: 1bea3f515ba8ff810fc6dfd6281f0488c4f3e235
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "1983553"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565328"
 ---
 # <a name="load-resources-in-your-directx-game"></a>Laden von Ressourcen im DirectX-Spiel
 
@@ -73,7 +71,7 @@ Sie können über die folgenden Links auf den vollständigen Code für diese Bei
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="instructions"></a>Anweisungen
 
@@ -216,7 +214,7 @@ Als Nächstes werden die Bytedaten aus der Datei des Gitters abgerufen. Im Beisp
 -   Die nachfolgenden Bits (numVertices \* sizeof(**BasicVertex**)) enthalten die Vertexdaten.
 -   Die letzten Bits (numIndices \* 16) enthalten die Indexdaten, dargestellt als Abfolge von uint16-Werten.
 
-Entscheidend ist: Sie sollten das Bitebenenlayout der geladenen Gitterdaten kennen. Stellen Sie außerdem sicher, dass für Endian-Konsistenz gesorgt ist. Für alle Windows 8-Plattformen wird „Little Endian“ verwendet.
+Entscheidend ist: Sie sollten das Bitebenenlayout der geladenen Gitterdaten kennen. Stellen Sie außerdem sicher, dass für Endian-Konsistenz gesorgt ist. Alle Windows8 Plattformen sind little Endian.
 
 Im Beispiel wird die „CreateMesh“-Methode aus der **LoadMeshAsync**-Methode aufgerufen, um diese Interpretation auf Bitebene durchzuführen.
 
@@ -707,9 +705,9 @@ Sie sollten jetzt mit den Methoden zum asynchronen Laden häufig verwendeter Res
 * [Vollständiger Code für BasicReaderWriter](complete-code-for-basicreaderwriter.md)
 * [Vollständiger Code für DDSTextureLoader](complete-code-for-ddstextureloader.md)
 
- 
+ 
 
- 
+ 
 
 
 

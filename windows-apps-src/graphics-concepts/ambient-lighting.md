@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 08b44ae8348e7b9d1d8dff0b98e5f1c553ec79b2
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 87b5c72ef99e3802a348ddfd28951bc2865891e5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044129"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565223"
 ---
 # <a name="ambient-lighting"></a>Umgebungslicht
 
@@ -40,7 +38,7 @@ Dabei gilt:
 | Summe               | Nicht zutreffend           | Nicht zutreffend           | Summe des Umgebungslichts                                                                                          |
 | L<sub>ai</sub>    | (0,0,0,0)     | D3DVECTOR     | Helle Umgebungsfarbe der ith-Beleuchtung                                                                              |
 
- 
+ 
 
 Der Wert für Cₐ ist entweder:
 
@@ -48,9 +46,9 @@ Der Wert für Cₐ ist entweder:
 -   Vertexfarbe2, wenn AMBIENTMATERIALSOURCE = D3DMCS\_FARBE2 und die zweite Vertexfarbe in der Vertex-Deklaration angegeben wird.
 -   Materielle Umgebungsfarbe.
 
-**Hinweis**   Wenn eine der beiden AMBIENTMATERIALSOURCE-Optionen verwendet wird und die Vertexfarbe nicht angegeben ist, wird die materielle Umgebungsfarbe verwendet.
+**Hinweis:**  Wenn Option AMBIENTMATERIALSOURCE verwendet wird, und die Vertexfarbe nicht angegeben, wird die materielle Umgebungsfarbe verwendet wird.
 
- 
+ 
 
 Um die materielle Umgebungsfarbe anzuwenden, verwenden Sie „SetMaterial” wie im folgenden Beispielcode dargestellt.
 
@@ -89,9 +87,9 @@ Verwenden Sie neben dem Umgebungslicht diffuses oder Glanzlicht, um Objekten ein
 
 [Beleuchtungsmathematik](mathematics-of-lighting.md)
 
- 
+ 
 
- 
+ 
 
 
 

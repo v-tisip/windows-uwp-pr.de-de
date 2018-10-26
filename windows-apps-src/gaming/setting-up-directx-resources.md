@@ -6,19 +6,18 @@ ms.assetid: d54d96fe-3522-4acb-35f4-bb11c3a5b064
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, Spiele, DirectX, Ressourcen, Bilder
-ms.openlocfilehash: 1aeb4ef581254ae914efae4bc38853611dbde488
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 24fd038bdd447491da43e5d5803445d00147ba2d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233803"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567705"
 ---
 # <a name="set-up-directx-resources-and-display-an-image"></a>Einrichten von DirectX-Ressourcen und Darstellen eines Bilds
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Hier zeigen wir Ihnen das Erstellen eines Direct3D-Geräts, einer Swapchain und einer Renderziel-Ansicht sowie die Darstellung des gerenderten Bilds auf dem Bildschirm.
 
@@ -233,7 +232,7 @@ In dieser Schleife wird Folgendes aufgerufen:
 Da wir zuvor die maximale Framelatenz auf 1 festgelegt haben, reduziert Windows die Geschwindigkeit der Renderschleife generell auf die Bildschirmaktualisierungsrate, die normalerweise etwa 60 Hz beträgt. Windows reduziert die Geschwindigkeit der Renderschleife, indem die App in den Ruhezustand versetzt wird, wenn sie [**Present**](https://msdn.microsoft.com/library/windows/desktop/bb174576) aufruft. Windows versetzt die App so lange in den Ruhezustand, bis die Bildschirmanzeige aktualisiert wird.
 
 ```cpp
-        // Enter the render loop.  Note that Windows Store apps should never exit.
+        // Enter the render loop.  Note that UWP apps should never exit.
         while (true)
         {
             // Process events incoming to the window.
@@ -288,9 +287,9 @@ Als Nächstes zeichnen wir ein Dreieck auf dem Bildschirm.
 
 [Erstellen von Shadern und Zeichnen von Primitiven](creating-shaders-and-drawing-primitives.md)
 
- 
+ 
 
- 
+ 
 
 
 

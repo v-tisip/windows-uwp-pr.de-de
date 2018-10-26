@@ -9,15 +9,13 @@ keywords: Tastatur, Text, Eingabe, Benutzerinteraktionen
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e28d90cdac94f4eafa153de161a338b9d4c7bf5e
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: c0bc236fd3e9e37a759f83e3f24bfcad4817f068
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653889"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564368"
 ---
 # <a name="selecting-text-and-images"></a>Auswählen von Text und Bildern
 
@@ -51,20 +49,20 @@ Für die Auswahl und Manipulation von Text ergeben sich durch Fingereingabeinter
 
 **Überlegungen und Empfehlungen**
 
-Verwenden Sie die integrierten Steuerelemente der Sprachframeworks in Windows, um Apps mit sämtlichen Benutzerinteraktionsfunktionen der Plattform – einschließlich Auswahl- und Manipulationsverhalten – zu erstellen. Die Interaktionsfunktionen der integrierten Steuerelemente sollten daher für die meisten UWP-Apps ausreichen.
+Verwenden Sie die integrierten Steuerelemente der sprachframeworks in Windowsto Build apps, die die vollständige Plattform Benutzerinteraktion-Erfahrung, einschließlich Auswahl- und manipulationsverhalten – zu bieten. Die Interaktionsfunktionen der integrierten Steuerelemente sollten daher für die meisten UWP-Apps ausreichen.
 
 Bei Verwendung der standardmäßigen UWP-Textsteuerelemente können die in diesem Thema beschriebenen Auswahlverhalten und visuellen Elemente nicht angepasst werden.
 
 **Textauswahl**
 
-Falls Ihre App eine benutzerdefinierte Benutzeroberfläche erfordert, die die Textauswahl unterstützt, empfehlen wir, die hier beschriebenen Auswahlverhalten von Windows anzuwenden.
+Wenn Ihre app eine benutzerdefinierte Benutzeroberfläche, die die Textauswahl unterstützt erfordert, empfehlen wir, dass Sie die Windowsselection hier beschriebenen Auswahlverhalten.
 
 **Bearbeitbare und nicht bearbeitbare Inhalte**
 
 
-Bei der Fingereingabe werden Auswahlinteraktionen hauptsächlich durch Bewegungen ausgeführt, z.B. Tippen, um einen Einfügecursor zu setzen oder ein Wort auszuwählen, und Ziehen, um eine Auswahl zu ändern. Wie bei anderen Fingereingabeinteraktionen in Windowssind zeitgesteuerte Interaktionen zum Anzeigen einer Informationsbenutzeroberfläche auf die Gedrückthaltebewegung beschränkt. Weitere Informationen finden Sie unter [Richtlinien für visuelles Feedback](guidelines-for-visualfeedback.md).
+Bei der Fingereingabe werden Auswahlinteraktionen hauptsächlich durch Bewegungen ausgeführt, z.B. Tippen, um einen Einfügecursor zu setzen oder ein Wort auszuwählen, und Ziehen, um eine Auswahl zu ändern. Wie bei anderen Interaktionen Windowstouch zeitlich festgelegte Interaktionen sind beschränkt auf das Drücken und Gedrückthaltebewegung Anzeigen einer informationsbenutzeroberfläche auf. Weitere Informationen finden Sie unter [Richtlinien für visuelles Feedback](guidelines-for-visualfeedback.md).
 
-Windowserkennt zwei mögliche Zustände für Auswahlinteraktionen (bearbeitbar und nicht bearbeitbar) und passt Auswahl-UI, Feedback und Funktionalität entsprechend an.
+Windowsrecognizes zwei möglichen Zustände für Auswahl Interaktionen, bearbeitbare und nicht bearbeitbare und Auswahl-UI, Feedback und Funktionalität entsprechend angepasst.
 
 **Bearbeitbare Inhalte**
 
@@ -82,9 +80,9 @@ Im folgenden Bild wird veranschaulicht, wie Sie das Kontextmenü aufrufen, indem
 
 ![Tippen (oder drücken und halten) Sie in die Auswahl oder auf ein Ziehelement, um das Kontextmenü aufzurufen.](images/textselection-show-context.png)
 
-**Hinweis**  Bei einem falsch geschriebenen Wort weichen diese Interaktionen etwas ab. Wenn Sie auf ein Wort tippen, das als falsch geschrieben gekennzeichnet ist, wird das gesamte Wort hervorgehoben. Außerdem wird das Kontextmenü mit der vorgeschlagenen Schreibweise aufgerufen.
+**Hinweis:** weichen diese Interaktionen etwas im Falle eines falsch geschriebenen Worts. Wenn Sie auf ein Wort tippen, das als falsch geschrieben gekennzeichnet ist, wird das gesamte Wort hervorgehoben. Außerdem wird das Kontextmenü mit der vorgeschlagenen Schreibweise aufgerufen.
 
- 
+ 
 
 **Nicht bearbeitbare Inhalte**
 
@@ -130,9 +128,9 @@ Zielelemente können wie in den folgenden Abbildungen dargestellt z.B. auch in B
 * [Eingabe: Beispiel für Windows8-Bewegungen](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Eingabe: Beispiel für Manipulationen und Gesten (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Beispiel für die DirectX-Fingereingabe](http://go.microsoft.com/fwlink/p/?LinkID=231627)
- 
+ 
 
- 
+ 
 
 
 

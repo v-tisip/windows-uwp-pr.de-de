@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 9cc30dbd9fd501d310bb037726414356354af294
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 9bffed44921df05a72025e86917901a65fe7ea82
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653419"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565440"
 ---
 # <a name="rotation"></a>Drehung
 
@@ -48,8 +46,7 @@ Verwenden Sie Drehung, damit Benutzer leichter UI-Elemente direkt drehen können
 
 ![Diagramm zur Veranschaulichung verschiedener Fingerhaltungen, die für Drehungen unterstützt werden](images/ux-rotate-positions.png)
 
-**Hinweis**  
-Intuitiv ist der Drehungspunkt in den meisten Fällen einer der zwei Berührungspunkte, es sei denn, der Benutzer kann einen Drehungspunkt angeben, der in keinem Bezug zu den Kontaktpunkten steht (beispielsweise in einer Zeichen- oder Layoutanwendung). In den folgenden Abbildungen wird gezeigt, wie die Benutzeroberfläche beeinträchtigt werden kann, wenn der Drehungspunkt nicht auf diese Weise eingeschränkt ist.
+**Hinweis:**  intuitiv in den meisten Fällen ist der drehungspunkt ist einer der zwei Berührungspunkte, wenn der Benutzer kann einen drehungspunkt Bezug zu den Kontaktpunkten (z. B. in einer Zeichen- oder layoutanwendung) angeben. In den folgenden Abbildungen wird gezeigt, wie die Benutzeroberfläche beeinträchtigt werden kann, wenn der Drehungspunkt nicht auf diese Weise eingeschränkt ist.
 
 In der ersten Abbildung sehen Sie den ersten (Daumen) und den zweiten Berührungspunkt (Zeigefinger): Der Zeigefinger berührt einen Baum, und der Daumen berührt einen Holzblock.
 
@@ -64,9 +61,9 @@ In dieser letzten Abbildung wurde der Mittelpunkt der Drehung durch die Anwendun
 
 ![Abbildung mit einem gedrehten Bild, dessen Drehungspunkt durch den am weitesten links angeordneten Mittelpunkt des Bilds anstatt durch die zwei anfänglichen Berührungspunkte eingeschränkt ist](images/ux-rotate-points4.png)
 
- 
+ 
 
-Windows8 unterstützt drei Drehungsarten: frei, eingeschränkt und kombiniert.
+Windows8 unterstützt drei drehungsarten: frei, eingeschränkt und kombiniert.
 
 <table>
 <colgroup>
@@ -93,16 +90,16 @@ Windows8 unterstützt drei Drehungsarten: frei, eingeschränkt und kombiniert.
 <td align="left">Kombinierte Drehung</td>
 <td align="left"><p>Die kombinierte Drehung unterstützt freie Drehung mit Zonen (ähnlich wie Führungsschienen unter <a href="guidelines-for-panning.md">Richtlinien für Verschiebung</a>) an jedem der 90-Grad-Andockpunkte, die durch die eingeschränkte Drehung erzwungen werden. Wenn das Objekt außerhalb einer der 90-Grad-Zonen losgelassen wird, bleibt das Objekt in dieser Position. Anderenfalls wird das Objekt automatisch zu einem Andockpunkt gedreht.</p>
 <div class="alert">
-<strong>Hinweis</strong> Eine Benutzeroberflächen-Führungsschiene ist ein Feature, bei dem ein Bereich um ein Ziel die Bewegung zu einem bestimmten Wert oder einer bestimmten Stelle hin einschränkt, um die Auswahl zu beeinflussen.
+<strong>Hinweis:</strong>eine Benutzeroberflächen-Führungsschiene ist ein Feature, in denen ein Bereich um ein Ziel beschränkt die Bewegung zu einem bestimmten Wert oder Speicherort für die Auswahl zu beeinflussen.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="related-topics"></a>Verwandte Themen
 
@@ -122,9 +119,9 @@ Windows8 unterstützt drei Drehungsarten: frei, eingeschränkt und kombiniert.
 * [Eingabe: Gesten und Manipulationen mit GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Eingabe: Beispiel für Manipulationen und Gesten (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Beispiel für die DirectX-Fingereingabe](http://go.microsoft.com/fwlink/p/?LinkID=231627)
- 
+ 
 
- 
+ 
 
 
 

@@ -5,16 +5,14 @@ description: Lernen Sie, wie man mit dem InertiaModifier-Feature eines Interacti
 ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, Uwp, animation
 ms.localizationpriority: medium
-ms.openlocfilehash: 484b7e1a5e10ed3d7653e403ca4978bff458268a
-ms.sourcegitcommit: 67cb03db41556cf0d58993073654cd0706aede84
-ms.translationtype: HT
+ms.openlocfilehash: 20c10b1cc621da834a8a7c411e75eb92b1944b5a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
-ms.locfileid: "1480816"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568080"
 ---
 # <a name="create-snap-points-with-inertia-modifiers"></a>Erstellen von Einrastpunkten mit Inertia-Modifiern
 

@@ -2,27 +2,43 @@
 author: Mtoepke
 title: Beispiele für UWP auf Xbox One
 description: Beispiele und Bibliotheken, mit denen Sie großartige Xbox One- und TV-Inhalte erstellen können.
-ms.author: mtoepke
-ms.date: 02/08/2017
+ms.author: scotmi
+ms.date: 10/26/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-keywords: Windows 10, UWP
+keywords: Windows10, UWP
 ms.assetid: 9ef40050-7df6-49bd-8563-1bd58bb6e3f0
-ms.openlocfilehash: 98f3704556eb027ecaab1ec135261716ef558eeb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 3be6cfbc40fc645bfb66ef2f0fb9b8b5f2976da8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "234948"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565086"
 ---
 # <a name="uwp-on-xbox-one-samples"></a>Beispiele für UWP auf Xbox One
 
-TVHelpers ist ein Satz von JavaScript- und XAML-/C#-Beispielen und -Bibliotheken, mit denen Sie großartige Xbox One-Inhalte und TV-Inhalte in JavaScript und C# erstellen können. TVJS ist eine Bibliothek, mit der Sie Premium-UWP-Apps (Universelle Windows-Plattform) für Xbox One erstellen können. 
+Es gibt mehrere plattformübergreifenden UWP-Beispiele, die während der Ausführung auf dieser Plattform für Xbox One optimiert wurden. Sie können durchsuchen Sie den Code auf GitHub, lesen Sie der Readme-Datei und des Wiki und Klonen Sie die Projekte auf Ihrem Computer.
+
+## <a name="tvhelpers"></a>TVHelpers
+
+TVHelpers ist ein Satz von JavaScript- und XAML-/C#-Beispielen und -Bibliotheken, mit denen Sie großartige Xbox One-Inhalte und TV-Inhalte in JavaScript und C# erstellen können. TVJS ist eine Bibliothek, mit der Sie Premium-UWP-Apps (Universelle Windows-Plattform) für Xbox One erstellen können.
 
 TVJS bietet u.a. Unterstützung für die automatische Controllernavigation, Rich-Media-Wiedergabe und Suche. Sie können TVJS mit einer gehosteten Web-App genauso einfach wie mit einer gepackten UWP-Web-App mit vollständigem Zugriff auf Windows-Runtime-APIs verwenden.
-  
+
 Weitere Informationen finden Sie im Projekt [TVHelpers](https://github.com/Microsoft/TVHelpers) und im Projekt [wiki](https://github.com/Microsoft/TVHelpers/wiki).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="the-news-experience"></a>Die Nachrichten-Erfahrung
 
-- [UWP auf XboxOne](index.md)
+[Die Nachrichten auftreten](https://github.com/Microsoft/uwp-experiences/tree/news/apps/News), vierte "Kaffee", ist ein Beispiel für Nachrichten-app, die auf Desktop, Telefon und Xbox One funktioniert und bietet eine Premium-Funktion, die von jedem Gerät Stärken nutzt. Auf der Xbox ist es für Gamepad optimiert, die Benutzeroberfläche ist speziell für die 10 Fuß-Erfahrung und TV-sicheren Bereich zwischen anderen Optimierungen Content behält. Finden Sie [im Blogbeitrag](https://blogs.windows.com/buildingapps/2016/09/09/tailoring-your-app-for-xbox-and-the-tv-app-dev-on-xbox-series/) Weitere Informationen.
+
+![Die Nachrichten-Erfahrung](images/samples-1.png)
+
+## <a name="gamepad-style-navigation-xaml-sample"></a>Beispiel für die Gamepad-Stil Navigation (XAML)
+
+Das [Beispiel für die Gamepad-Stil Navigation (XAML)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlGamepadNavigation) ist ein Beispiel für UWP, die Methoden zur Verbesserung der direktionale Navigation in Ihrer app anzeigt. Während dies auch für desktop-Apps gilt, in denen ein Kunde möchte eine Tastatur verwenden, um die app zu navigieren können, ist es für Xbox Applications, wobei die main-Methode der Eingabe Gamepad oder Fernbedienung ist besonders wichtig.
+
+![Universelle Windows-Plattform-Beispiel: app-Ansicht Größe](images/samples-2.png)
+
+## <a name="see-also"></a>Weitere Informationen:
+
+- [UWP auf Xbox One](index.md)

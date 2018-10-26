@@ -1,32 +1,30 @@
 ---
 author: v-angraf
 ms.assetid: d40056bc-76bc-c123-4d36-973ec46d11fc
-title: Seite "Leistung" (Dev-Startseite)
-description: Enthält Informationen zur Seite "Leistung" der app Dev-Startseite für Xbox ein.
+title: Seite "Performance" (Dev Home)
+description: Enthält Informationen über die Seite "Performance" der Dev Home-app für Xbox One.
 ms.author: v-angraf@microsoft.com
 ms.date: 08/09/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 permalink: en-us/docs/xdk/devhome-performance.html
 ms.localizationpriority: medium
-ms.openlocfilehash: f0bf93c9670e16ec008b55779410a076d89d867c
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 6035463473eb6ddb1a3ec7fa554f9a12b8f764fc
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1015295"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565693"
 ---
-# <a name="performance-page-dev-home"></a>Seite "Leistung" (Dev-Startseite)
+# <a name="performance-page-dev-home"></a>Seite "Performance" (Dev Home)
    
   
-Auf der Seite **Leistung** Dev Home simuliert verschiedene Datenträgeraktivität und CPU-Auslastung Bedingungen für die Problembehandlung.   
- ![Seite "Leistung" Dev Home](images/devhome_performance.png)   
+Die Seite " **Performance** " des Dev Home simuliert verschiedene Festplatten-Aktivität und CPU-Auslastung Bedingungen für die Problembehandlung.   
+ ![Seite "Performance" des Dev Home](images/devhome_performance.png)   
   
-Die Seite " **Leistung** " enthält die folgenden Bereiche:   
+Die Seite " **Performance** " enthält die folgenden Bereichen:   
  
-   *  [Datenträger simulation](#ID4EEB)  
+   *  [Datenträger-simulation](#ID4EEB)  
    *  [CPU-Simulation](#ID4EOB)  
 
  
@@ -34,10 +32,10 @@ Die Seite " **Leistung** " enthält die folgenden Bereiche:
 
    
 
-## <a name="disk-simulation"></a>Datenträger simulation  
+## <a name="disk-simulation"></a>Datenträger-simulation  
    
   
-Der Bereich **Datenträger Simulation** simuliert Datenträgeraktivität vom System oder anderen apps.   
+Der Bereich **Datenträger Simulation** simuliert Festplatten-Aktivität vom System oder anderen apps.   
   
 <a id="ID4EOB"></a>
 
@@ -46,13 +44,13 @@ Der Bereich **Datenträger Simulation** simuliert Datenträgeraktivität vom Sys
 ## <a name="cpu-simulation"></a>CPU-Simulation  
    
   
-Im Bereich **CPU Simulation** simuliert Aktivitäten auf CPU6 (die freigegebene Core).   
+Der Bereich **CPU-Simulation** simuliert Aktivität auf CPU6 (dem freigegebenen Kern).   
   
 <a id="ID4EYB"></a>
 
    
 
-## <a name="see-also"></a>Weitere Informationen  
- [Entwickler-Homepage in der Konsole (Dev-Startseite)](dev-home.md)
+## <a name="see-also"></a>Weitere Informationen:  
+ [Entwickler-Startbildschirm auf der Konsole (Dev Home)](dev-home.md)
 
   

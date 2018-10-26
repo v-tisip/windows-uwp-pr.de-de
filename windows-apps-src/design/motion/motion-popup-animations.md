@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: bcec5b62f400f2eb1410a61615d550f26520357f
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 1a304df30986c904f19cc2401c9a1fb468514f6f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1651939"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566846"
 ---
 # <a name="pop-up-ui-animations"></a>Animationen für Popupbenutzeroberflächen
 
@@ -44,9 +42,9 @@ Verwenden Sie Popupanimationen, um Popup-UI-Elemente für Flyouts oder benutzerd
 * [**PopOutThemeAnimation-Klasse**](https://msdn.microsoft.com/library/windows/apps/br210391)
 * [**PopupThemeTransition-Klasse**](https://msdn.microsoft.com/library/windows/apps/hh969172)
 
- 
+ 
 
- 
+ 
 
 
 

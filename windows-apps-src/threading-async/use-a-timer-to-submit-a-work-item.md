@@ -6,19 +6,17 @@ description: Hier erfahren Sie, wie Sie eine Arbeitsaufgabe erstellen, die nach 
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Timer, Threads
-ms.openlocfilehash: 214a3ad9d84ffb8bc26a4aa02d79d0b1c06f2bfe
-ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.localizationpriority: medium
+ms.openlocfilehash: d65faebfc2be0e9ed254185d00932da9a57f718b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2017
-ms.locfileid: "665350"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564977"
 ---
 # <a name="use-a-timer-to-submit-a-work-item"></a>Timergesteuertes Übermitteln einer Arbeitsaufgabe
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ** Wichtige APIs **
 
@@ -31,7 +29,7 @@ Hier erfahren Sie, wie Sie eine Arbeitsaufgabe erstellen, die nach dem Ablaufen 
 
 Verwenden Sie die [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/Hh967921)-Methode, um einen Timer für die Arbeitsaufgabe zu erstellen. Stellen Sie eine Lambda-Funktion zum Ausführen der Arbeit bereit, und geben Sie mit dem *delay*-Parameter an, wie lange der Threadpool warten soll, bevor er die Arbeitsaufgabe einem verfügbaren Thread zuweist. Die Verzögerung wird mithilfe einer [**TimeSpan**](https://msdn.microsoft.com/library/windows/apps/BR225996)-Struktur angegeben.
 
-> **Hinweis:**  Sie können [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) verwenden, um auf die Benutzeroberfläche zuzugreifen und den Status der Arbeitsaufgabe anzuzeigen.
+> **Hinweis:** können Sie [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) verwenden, um auf die Benutzeroberfläche zuzugreifen und den Fortschritt der Arbeitsaufgabe anzuzeigen.
 
 Im folgenden Beispiel wird eine Arbeitsaufgabe erstellt, die in drei Minuten ausgeführt wird:
 
@@ -225,7 +223,7 @@ Wenn der Timer weiter läuft, die Arbeitsaufgabe aber nicht mehr benötigt wird,
 
 UWP (Universelle Windows-Plattform)-Apps können **Thread.Sleep** nicht verwenden, da dies den UI-Thread blockieren kann. Verwenden Sie zum Erstellen einer Arbeitsaufgabe stattdessen einen [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587). Dieser Timer verzögert die von der Arbeitsaufgabe ausgeführte Aufgabe, ohne den UI-Thread zu blockieren.
 
-Ein vollständiges Codebeispiel für Arbeitsaufgaben, Arbeitsaufgaben mit Zeitgeber und regelmäßige Arbeitsaufgaben finden Sie im [Beispiel für den Threadpool](http://go.microsoft.com/fwlink/p/?linkid=255387). Das Codebeispiel wurde ursprünglich für Windows8.1 geschrieben, der Code kann jedoch für Windows10 wiederverwendet werden.
+Ein vollständiges Codebeispiel für Arbeitsaufgaben, Arbeitsaufgaben mit Zeitgeber und regelmäßige Arbeitsaufgaben finden Sie im [Beispiel für den Threadpool](http://go.microsoft.com/fwlink/p/?linkid=255387). Das Codebeispiel wurde ursprünglich für Windows8.1 geschrieben, aber der Code kann in Windows 10 wiederverwendet werden.
 
 Informationen zu Wiederholungstimern finden Sie unter [Erstellen einer regelmäßigen Arbeitsaufgabe](create-a-periodic-work-item.md).
 
@@ -234,6 +232,6 @@ Informationen zu Wiederholungstimern finden Sie unter [Erstellen einer regelmä�
 * [Senden einer Arbeitsaufgabe an den Threadpool](submit-a-work-item-to-the-thread-pool.md)
 * [Bewährte Methoden zum Verwenden des Threadpools](best-practices-for-using-the-thread-pool.md)
 * [Senden einer Arbeitsaufgabe mithilfe eines Timers](use-a-timer-to-submit-a-work-item.md)
- 
+ 
 
- 
+ 

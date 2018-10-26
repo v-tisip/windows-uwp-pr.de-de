@@ -11,16 +11,14 @@ template: detail.hbs
 ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 36f7e92f1652b4c67ef63ca3cf3b536126e3c995
-ms.sourcegitcommit: ab92c3e0dd294a36e7f65cf82522ec621699db87
-ms.translationtype: HT
+ms.openlocfilehash: e576814617204749a37963ac5f2724f290520349
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "1832708"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567652"
 ---
 # <a name="xaml-theme-resources"></a>XAML-Designressourcen
 
@@ -96,7 +94,8 @@ Diese Tabelle enthält den Schlüssel, den einfachen Namen und die Zeichenfolgen
 | SystemListLowColor              | ListLow                | \#19000000 | \#19FFFFFF |
 | SystemListMediumColor           | ListMedium             | \#33000000 | \#33FFFFFF |
 
-:::row::: :::column:::
+:::row:::
+    :::column:::
         #### Light theme
     :::column-end:::
     :::column:::
@@ -104,21 +103,49 @@ Diese Tabelle enthält den Schlüssel, den einfachen Namen und die Zeichenfolgen
     :::column-end:::
 :::row-end:::
 
-#### <a name="base"></a>Basis
+#### <a name="base"></a>Base
 
-:::row::: :::column::: ![The base light theme](images/themes/light-base.png) :::column-end::: :::column::: ![Das dunkle Basisdesign](images/themes/dark-base.png) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![The base light theme](images/themes/light-base.png)
+    :::column-end:::
+    :::column:::
+        ![The base dark theme](images/themes/dark-base.png)
+    :::column-end:::
+:::row-end:::
 
 #### <a name="alt"></a>Alternativ
 
-:::row::: :::column::: ![Das helle Alternativdesign](images/themes/light-alt.png) :::column-end::: :::column::: ![Das dunkle Alternativdesign](images/themes/dark-alt.png) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![The alt light theme](images/themes/light-alt.png)
+    :::column-end:::
+    :::column:::
+        ![The alt dark theme](images/themes/dark-alt.png)
+    :::column-end:::
+:::row-end:::
 
 #### <a name="list"></a>Liste
 
-:::row::: :::column::: ![Das helle Listendesign](images/themes/light-list.png) :::column-end::: :::column::: ![Das dunkle Listendesign](images/themes/dark-list.png) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![The list light theme](images/themes/light-list.png)
+    :::column-end:::
+    :::column:::
+        ![The list dark theme](images/themes/dark-list.png)
+    :::column-end:::
+:::row-end:::
 
 #### <a name="chrome"></a>Chrom
 
-:::row::: :::column::: ![Das helle Chromdesign](images/themes/light-chrome.png) :::column-end::: :::column::: ![Das dunkle Chromdesign](images/themes/dark-chrome.png) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![The chrome light theme](images/themes/light-chrome.png)
+    :::column-end:::
+    :::column:::
+        ![The chrome dark theme](images/themes/dark-chrome.png)
+    :::column-end:::
+:::row-end:::
 
 ### <a name="windows-system-high-contrast-colors"></a>Windows-Systemfarben mit hohem Kontrast
 
@@ -350,7 +377,7 @@ Stellt die gemeinsamen Eigenschaften für alle anderen [RichTextBlock](https://m
 </Style>
 ```
 
-**Hinweis**: Die [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/br227565)-Stile verfügen nicht über alle Texthierarchiestile von [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652). Dies liegt hauptsächlich daran, dass das blockbasierte Dokumentobjektmodell für **RichTextBlock** das Festlegen von Attributen für die einzelnen Textelemente erleichtert. Außerdem entsteht, wenn Sie [TextBlock.Text](https://msdn.microsoft.com/library/windows/apps/br209676) mit der XAML-Inhaltseigenschaft festlegen, eine Situation, in der kein zu formatierendes Textelement vorhanden ist und Sie daher den Container formatieren müssen. Das ist für **RichTextBlock** kein Problem, da sein Textinhalt immer in spezifischen Textelementen wie [Paragraph](https://msdn.microsoft.com/library/windows/apps/br244503) enthalten sein muss, in denen Sie XAML-Stile für die Kopfzeile, die Seitenunterüberschrift und ähnliche Texthierarchiedefinitionen festlegen können.
+**Hinweis**: die [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/br227565) -Stile verfügen nicht über alle Text Typhierarchie Stile, die [TextBlock-Element](https://msdn.microsoft.com/library/windows/apps/br209652) der Fall ist, Dies liegt hauptsächlich daran, da das blockbasierte Dokumentobjektmodell für **RichTextBlock** Festlegen von Attributen für die einzelnen Text erleichtert Elemente. Außerdem entsteht, wenn Sie [TextBlock.Text](https://msdn.microsoft.com/library/windows/apps/br209676) mit der XAML-Inhaltseigenschaft festlegen, eine Situation, in der kein zu formatierendes Textelement vorhanden ist und Sie daher den Container formatieren müssen. Das ist für **RichTextBlock** kein Problem, da sein Textinhalt immer in spezifischen Textelementen wie [Paragraph](https://msdn.microsoft.com/library/windows/apps/br244503) enthalten sein muss, in denen Sie XAML-Stile für die Kopfzeile, die Seitenunterüberschrift und ähnliche Texthierarchiedefinitionen festlegen können.
 
 ## <a name="miscellaneous-named-styles"></a>Sonstige benannte Stile
 

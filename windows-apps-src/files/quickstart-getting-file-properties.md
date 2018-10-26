@@ -6,16 +6,14 @@ description: Es werden Eigenschaften&\#8212;oberster Ebene, grundlegend und erwe
 ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f3edb012f04026251d151da99f34accb9e1848c3
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 8fc44300376efb5b56f390457e516f35a3ec4202
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662730"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565460"
 ---
 # <a name="get-file-properties"></a>Abrufen von Dateieigenschaften
 
@@ -32,7 +30,7 @@ Es werden Eigenschaften – oberste Ebene, grundlegend und erweitert – für ei
 > [!NOTE]
 > Siehe auch das [Dateizugriff-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=619995).
 
- 
+ 
 
 
 ## <a name="prerequisites"></a>Voraussetzungen
@@ -49,9 +47,9 @@ Es werden Eigenschaften – oberste Ebene, grundlegend und erweitert – für ei
 
 Auf viele Dateieigenschaften der obersten Ebene kann in Form von Membern der [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Klasse zugegriffen werden. Diese Eigenschaften enthalten für eine Datei Attribute, Inhaltstyp, Erstellungsdatum, Anzeigename, Dateityp usw.
 
-**Hinweis**  Denken Sie daran, die **picturesLibrary**-Funktion anzugeben.
+**Hinweis:** Denken Sie daran, die **PicturesLibrary** -Funktion zu deklarieren.
 
- 
+ 
 
 In diesem Beispiel werden alle Dateien der Bildbibliothek aufgezählt, wobei für jede Datei auf einige Eigenschaften der obersten Ebene zugegriffen wird.
 
@@ -142,6 +140,6 @@ foreach (Windows.Storage.StorageFile file in files)
 }
 ```
 
- 
+ 
 
- 
+ 

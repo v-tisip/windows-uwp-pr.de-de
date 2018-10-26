@@ -6,16 +6,14 @@ description: Mithilfe von FileSavePicker können Benutzer den Namen und Speicher
 ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 007030d1449768f484db7902fdd74867ff1f701b
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 2a053047324fcb795a30951d70c5e0e78fbb5547
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1663740"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564619"
 ---
 # <a name="save-a-file-with-a-picker"></a>Speichern einer Datei mit einer Auswahl
 
@@ -27,9 +25,9 @@ ms.locfileid: "1663740"
 Mithilfe von [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) können Benutzer den Namen und Speicherort zum Speichern einer Datei durch die App angeben.
 
 > [!NOTE]
-> Informationen finden Sie auch unter [Beispiel zur Dateiauswahl](http://go.microsoft.com/fwlink/p/?linkid=619994).
+> Informationen finden Sie auch unter [Beispiel zur Dateiauswahl](http://go.microsoft.com/fwlink/p/?linkid=619994).
 
- 
+ 
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -63,14 +61,14 @@ Legen Sie Eigenschaften für das Dateiauswahlobjekt fest, die für Ihre Benutzer
 In diesem Beispiel werden drei Eigenschaften festgelegt: [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880), [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875) und [**SuggestedFileName**](https://msdn.microsoft.com/library/windows/apps/br207878).
 
 > [!NOTE]
-> [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)-Objekte zeigen die Dateiauswahl mithilfe von [**PickerViewMode.List**](https://msdn.microsoft.com/library/windows/apps/br207891) an.
-     
+>[**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871)-Objekte zeigen die Dateiauswahl mithilfe von [**PickerViewMode.List**](https://msdn.microsoft.com/library/windows/apps/br207891) an.
+     
 - Da der Benutzer in unserem Fall ein Dokument oder eine Textdatei speichert, wird im Beispiel [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207880) auf den lokalen Ordner der App mithilfe von [**LocalFolder**](https://msdn.microsoft.com/library/windows/apps/br241621) festgelegt. Legen Sie [**SuggestedStartLocation**](https://msdn.microsoft.com/library/windows/apps/br207854) auf einen Speicherort fest, der dem Typ der gespeicherten Datei entspricht, z. B. Musik, Bilder, Videos oder Dokumente. Der Benutzer kann vom Ausgangspfad aus zu anderen Speicherorten navigieren.
 
 - Da wir sicherstellen möchten, dass unsere App die Datei nach dem Speichern öffnen kann, verwenden wir im Beispiel [**FileTypeChoices**](https://msdn.microsoft.com/library/windows/apps/br207875) für die Angabe der vom Beispiel unterstützten Dateitypen (Microsoft Word-Dokumente und Textdateien). Stellen Sie sicher, dass alle von Ihnen angegebenen Dateitypen von Ihrer App unterstützt werden. Die Benutzer können ihre Datei unter einem beliebigen der von Ihnen angegebenen Dateitypen speichern. Sie können auch den Dateityp ändern, indem sie einen anderen von Ihnen angegebenen Dateityp auswählen. Der erste Dateityp in der Liste ist standardmäßig ausgewählt; Sie können diesen mit der [**DefaultFileExtension**](https://msdn.microsoft.com/library/windows/apps/br207873)-Eigenschaft festlegen.
 
 > [!NOTE]
-> Für die Dateiauswahl wird zudem der aktuell ausgewählte Dateityp zum Filtern nach den angezeigten Dateien verwendet, sodass dem Benutzer nur die Dateitypen angezeigt werden, die mit den ausgewählten Dateitypen übereinstimmen.
+> Für die Dateiauswahl wird zudem der aktuell ausgewählte Dateityp zum Filtern nach den angezeigten Dateien verwendet, sodass dem Benutzer nur die Dateitypen angezeigt werden, die mit den ausgewählten Dateitypen übereinstimmen.
 
 - Um dem Benutzer einige Eingaben zu ersparen, legt das Beispiel einen [**SuggestedFileName**](https://msdn.microsoft.com/library/windows/apps/br207878) fest. Verwenden Sie als vorgeschlagenen Dateinamen einen Namen, der für die gespeicherte Datei relevant ist. Beispielsweise können Sie wie in Word den vorhandenen Dateinamen vorschlagen, sofern vorhanden. Sie können auch die erste Zeile eines Dokuments vorschlagen, wenn der Benutzer eine noch nicht benannte Datei speichert.
 
@@ -109,4 +107,4 @@ In diesem Beispiel werden drei Eigenschaften festgelegt: [**SuggestedStartLocati
 
 Im Beispiel wird überprüft, ob die Datei gültig ist. Danach wird der eigene Dateiname in die Datei geschrieben. Weitere Informationen finden Sie unter [Erstellen, Lesen und Schreiben einer Datei](quickstart-reading-and-writing-files.md)
 
-**Tipp**  Sie sollten vor einer weiteren Verarbeitung immer die Gültigkeit der gespeicherten Datei überprüfen. Anschließend können Sie Inhalte dem Zweck der App entsprechend in der Datei speichern und das Verhalten für den Fall festlegen, dass die ausgewählte Datei nicht gültig ist.
+**Tipp:** sollten Sie die gespeicherte Datei, um sicherzustellen, dass es ist zulässig, vor dem Durchführen einer weiteren Verarbeitung immer überprüfen. Anschließend können Sie Inhalte dem Zweck der App entsprechend in der Datei speichern und das Verhalten für den Fall festlegen, dass die ausgewählte Datei nicht gültig ist.

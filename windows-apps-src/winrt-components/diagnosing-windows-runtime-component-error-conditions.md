@@ -6,16 +6,14 @@ ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
 ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7f1dba2c60ce480b0aa89115f1cf9e72b1bb454f
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 833dd0a6447e9d0bb49c21a18d17bd7b0dc3455d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691229"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566028"
 ---
 # <a name="diagnosing-windows-runtime-component-error-conditions"></a>Diagnostizieren von Fehlerbedingungen für Komponenten für Windows-Runtime
 
@@ -33,11 +31,11 @@ Verwaltete Komponenten für Windows-Runtime können die UWP-Schnittstellen (Univ
 
 | Fehlernummer | Meldungstext|       
 |--------------|-------------|
-| WME1084      | Der Typ '{0}' implementiert die Async-Schnittstelle '{1}' für Windows-Runtime. Windows-Runtime-Typen dürfen keine Async-Schnittstellen implementieren. Verwenden Sie die System.Runtime.InteropServices.WindowsRuntime.AsyncInfo-Klasse, um asynchrone Vorgänge für den Export in die Windows-Runtime zu erstellen. |
+| WME1084      | Typ '{0}'implementiert Windows-Runtime-Async-Schnittstelle'{1}'. Windows-Runtime-Typen dürfen keine Async-Schnittstellen implementieren. Verwenden Sie die System.Runtime.InteropServices.WindowsRuntime.AsyncInfo-Klasse, um asynchrone Vorgänge für den Export in die Windows-Runtime zu erstellen. |
 
-> **Hinweis** In Fehlermeldungen, die auf die Windows-Runtime verweisen, wird veraltete Terminologie verwendet. Dies wird nun als die universelle Windows-Plattform (UWP) bezeichnet. Zum Beispiel werden Windows-Runtime-Typen jetzt als UWP-Typen bezeichnet.
+> **Hinweis:** die Fehlermeldungen, die auf der Windows-Runtime verweisen verwenden veraltete Terminologie. Dies wird nun als die universelle Windows-Plattform (UWP) bezeichnet. Zum Beispiel werden Windows-Runtime-Typen jetzt als UWP-Typen bezeichnet.
 
- 
+ 
 
 ## <a name="missing-references-to-mscorlibdll-or-systemruntimedll"></a>Fehlende Verweise auf mscorlib.dll oder System.Runtime.dll
 
@@ -49,22 +47,22 @@ Dieses Problem tritt nur auf, wenn Sie Winmdexp.exe aus der Befehlszeile ausfüh
 | WME1009      | Es wurde kein Verweis auf "mscorlib.dll" festgelegt. Für den ordnungsgemäßen Export ist ein Verweis auf diese Metadatendatei erforderlich.                               |
 | WME1090      | Die Kernverweisassembly konnte nicht ermittelt werden. Stellen Sie sicher, dass mithilfe des /reference-Schalters auf "mscorlib.dll" und "System.Runtime.dll" verwiesen wird. |
 
- 
+ 
 
 ## <a name="operator-overloading-is-not-allowed"></a>Operatorüberladung ist nicht zulässig
 
 
 In einer Komponente für Windows-Runtime, die in verwaltetem Code geschrieben wurde, können Sie keine überladenen Operatoren für öffentliche Typen verfügbar machen.
 
-> **Hinweis** In der Fehlermeldung wird der Operator über seinen Metadatennamen identifiziert, zum Beispiel op\_Addition, op\_Multiply, op\_ExclusiveOr, op\_Implicit (implizite Konvertierung) usw.
+> **Hinweis:** In der Fehlermeldung wird der Operator über seinen Metadatennamen, z. B. Beispiel Op\_Addition, Op\_Multiply, Op\_ExclusiveOr, Op\_Implicit (implizite Konvertierung) usw. identifiziert.
 
- 
+ 
 
 | Fehlernummer | Meldungstext                                                                                          |
 |--------------|-------------------------------------------------------------------------------------------------------|
-| WME1087      | '{0}' ist eine Überladung des Operators. Verwaltete Typen können in der Windows-Runtime keine überladenen Operatoren verfügbar machen. |
+| WME1087      | "{0}" ist eine Überladung des Operators. Verwaltete Typen können in der Windows-Runtime keine überladenen Operatoren verfügbar machen. |
 
- 
+ 
 
 ## <a name="constructors-on-a-class-have-the-same-number-of-parameters"></a>Konstruktoren einer Klasse haben die gleiche Anzahl von Parametern
 
@@ -73,9 +71,9 @@ In der UWP kann eine Klasse nur einen Konstruktor mit einer bestimmten Anzahl vo
 
 | Fehlernummer | Meldungstext                                                                                                                                            |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| WME1099      | Typ '{0}' enthält mehrere Konstruktoren mit '{1}' Argument(en). Windows-Runtime-Typen dürfen nicht mehrere Konstruktoren mit derselben Anzahl von Argumenten enthalten. |
+| WME1099      | Typ '{0}'enthält mehrere Konstruktoren mit'{1}' Argument(en). Windows-Runtime-Typen dürfen nicht mehrere Konstruktoren mit derselben Anzahl von Argumenten enthalten. |
 
- 
+ 
 
 ## <a name="must-specify-a-default-for-overloads-that-have-the-same-number-of-parameters"></a>Ein Standard für Überladungen mit derselben Anzahl von Parametern muss festgelegt werden
 
@@ -84,19 +82,19 @@ In der UWP können überladene Methoden nur dann über dieselbe Anzahl von Param
 
 | Fehlernummer | Meldungstext                                                                                                                                                                      |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| WME1059      | Mehrere {0}-Parameterüberladungen von '{1}.{2}' sind mit Windows.Foundation.Metadata.DefaultOverloadAttribute versehen.                                                            |
-| WME1085      | Für die {0}-Parameterüberladungen von {1}.{2} muss genau eine Methode als Standardüberladung angegeben werden, indem diese mit Windows.Foundation.Metadata.DefaultOverloadAttribute versehen wird. |
+| WME1059      | Mehrere {0}--parameterüberladungen von '{1}. {2}' sind mit Windows.Foundation.Metadata.DefaultOverloadAttribute versehen.                                                            |
+| WME1085      | Die {0}--parameterüberladungen von {1}. {2} muss genau eine Methode werden, indem diese mit Windows.Foundation.Metadata.defaultoverloadattribute versehen wird als standardüberladung angegeben haben. |
 
- 
+ 
 
 ## <a name="namespace-errors-and-invalid-names-for-the-output-file"></a>Namespacefehler und ungültige Namen für die Ausgabedatei
 
 
 In der universellen Windows-Plattform müssen sich alle öffentlichen Typen in einer Windows-Metadatendatei (WINMD) in einem Namespace mit demselben Namen wie die WINMD-Datei oder in Subnamespaces des Dateinamens befinden. Wenn Ihr Visual Studio-Projekt beispielsweise A.B heißt (d. h. die Komponente für Windows-Runtime ist A.B.WINMD), kann es die öffentlichen Klassen A.B.Class1 und A.B.C.Class2 enthalten, aber nicht A.Class3 (WME0006) oder D.Class4 (WME1044).
 
-> **Hinweis**  Diese Einschränkungen gelten nur für öffentliche Typen, nicht jedoch für bei der Implementierung verwendete private Typen.
+> **Hinweis:** diese Einschränkungen gelten nur für öffentliche Typen, nicht jedoch in der Implementierung verwendete private Typen.
 
- 
+ 
 
 Für A.Class3 können Sie Class3 in einen anderen Namespace verschieben oder den Namen der Komponente für Windows-Runtime in A.WINMD ändern. Obwohl WME0006 eine Warnung ist, sollten Sie sie als Fehler behandeln. Im vorherigen Beispiel kann A.Class3 nicht vom Code, der A.B.WINMD aufruft, gefunden werden.
 
@@ -108,20 +106,20 @@ Die Komponente muss mindestens einen **public sealed**-Typ (**Public NotInherita
 
 Ein Typ in einer Komponente für Windows-Runtime darf nicht wie ein Namespace benannt werden (WME1068).
 
-> **Achtung**  Wenn Sie Winmdexp.exe direkt aufrufen und für die Benennung der Komponente für Windows-Runtime nicht die Option „/out” verwenden, versucht „Winmdexp.exe“, einen Namen zu generieren, der alle Namespaces in der Komponente enthält. Die Umbenennung von Namespaces kann zur Änderung des Komponentennamens führen.
+> **Achtung**Wenn Sie Winmdexp.exe direkt aufrufen und verwenden Sie nicht die Option/out einen Namen für Ihre Windows-Runtime-Komponente festlegen, versucht Winmdexp.exe, einen Namen zu generieren, der alle Namespaces in der Komponente enthält. Die Umbenennung von Namespaces kann zur Änderung des Komponentennamens führen.
 
- 
+ 
 
 | Fehlernummer | Meldungstext                                                                                                                                                                                                                                                                                                                                             |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| WME0006      | '{0}' ist kein gültiger WinMD-Dateiname für diese Assembly. Alle Typen in einer Windows-Metadatendatei müssen sich in einem Subnamespace des im Dateinamen enthaltenen Namespace befinden. Typen, die nicht in solch einem Subnamespace vorhanden sind, werden zur Laufzeit nicht gefunden. In dieser Assembly lautet der kleinste gemeinsame Namespace, der als Dateiname verwendet werden könnte, '{1}'. |
+| WME0006      | '{0}' ist kein gültiger Winmd-Dateiname für diese Assembly. Alle Typen in einer Windows-Metadatendatei müssen sich in einem Subnamespace des im Dateinamen enthaltenen Namespace befinden. Typen, die nicht in solch einem Subnamespace vorhanden sind, werden zur Laufzeit nicht gefunden. In dieser Assembly lautet der kleinste gemeinsame Namespace, der als Dateiname verwendet werden konnte ist "{1}". |
 | WME1042      | Das Eingabemodul muss mindestens einen öffentlichen Typ enthalten, der sich in einem Namespace befindet.                                                                                                                                                                                                                                                                   |
 | WME1043      | Das Eingabemodul muss mindestens einen öffentlichen Typ enthalten, der sich in einem Namespace befindet. In den Namespaces wurden nur private Typen gefunden.                                                                                                                                                                                                               |
-| WME1044      | Ein öffentlicher Typ hat einen Namespace ('{1}'), der kein gemeinsames Präfix mit anderen Namespaces ('{0}') aufweist. Alle Typen in einer Windows-Metadatendatei müssen sich in einem Subnamespace des im Dateinamen enthaltenen Namespace befinden.                                                                                                                              |
-| WME1067      | Namespace-Namen dürfen sich nicht nur in der Groß-/Kleinschreibung unterscheiden: '{0}', '{1}'.                                                                                                                                                                                                                                                                                                |
-| WME1068      | Der Typ '{0}' darf nicht denselben Namen wie der Namespace '{1}' aufweisen.                                                                                                                                                                                                                                                                                                 |
+| WME1044      | Ein öffentlicher Typ hat einen Namespace ('{1}'), die kein gemeinsames Präfix teilt sich mit anderen Namespaces ('{0}'). Alle Typen in einer Windows-Metadatendatei müssen sich in einem Subnamespace des im Dateinamen enthaltenen Namespace befinden.                                                                                                                              |
+| WME1067      | Namespace-Namen dürfen sich nicht nur der Groß-/Kleinschreibung unterscheiden: '{0}','{1}'.                                                                                                                                                                                                                                                                                                |
+| WME1068      | Typ '{0}'keinen den gleichen Namen wie der Namespace'{1}'.                                                                                                                                                                                                                                                                                                 |
 
- 
+ 
 
 ## <a name="exporting-types-that-arent-valid-universal-windows-platform-types"></a>Exportieren von Typen, die keine gültigen universellen Windows-Plattform-Typen sind
 
@@ -132,11 +130,11 @@ Viele dieser Zuordnungen sind Schnittstellen. Zum Beispiel wird [IList&lt;T&gt;]
 
 Im Allgemeinen sollte die Schnittstelle ausgewählt werden, die dem Typ am nächsten ist. Für Dictionary&lt;int, string&gt; ist beispielsweise IDictionary&lt;int, string&gt; am besten geeignet.
 
-> **Wichtig** JavaScript verwendet die Schnittstelle, die zuerst in der Liste der Schnittstellen angezeigt wird, die von einem verwalteten Typ implementiert werden. Wenn Sie beispielsweise Dictionary&lt;int, string&gt; an JavaScript-Code zurückgeben, wird IDictionary&lt;int, string&gt; angezeigt, unabhängig davon, welche Schnittstelle Sie als Rückgabetyp angeben. Das bedeutet, dass die erste Schnittstelle Member enthalten muss, die in den nächsten Schnittstellen erscheinen, damit diese Member für JavaScript sichtbar sind.
+> **Wichtige**JavaScript verwendet die Schnittstelle, die zuerst in der Liste der Schnittstellen angezeigt wird, die ein verwalteter Typ implementiert. Wenn Sie beispielsweise Dictionary&lt;int, string&gt; an JavaScript-Code zurückgeben, wird IDictionary&lt;int, string&gt; angezeigt, unabhängig davon, welche Schnittstelle Sie als Rückgabetyp angeben. Das bedeutet, dass die erste Schnittstelle Member enthalten muss, die in den nächsten Schnittstellen erscheinen, damit diese Member für JavaScript sichtbar sind.
 
-> **Achtung**  Vermeiden Sie die nicht generischen Schnittstellen [IList](https://msdn.microsoft.com/library/system.collections.ilist.aspx) und [IEnumerable](https://msdn.microsoft.com/library/system.collections.ienumerable.aspx), wenn die Komponente von JavaScript verwendet wird. Diese Schnittstellen werden [IBindableVector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.ibindablevector.aspx) und [IBindableIterator](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.ibindableiterator.aspx) zugeordnet. Sie unterstützen die Bindung für XAML-Steuerelemente und sind für JavaScript nicht sichtbar. JavaScript generiert die Laufzeitfehlermeldung „Die Funktion '%s' kann aufgrund einer ungültigen Signatur nicht aufgerufen werden.”
+> **Achtung**vermeiden Sie die Verwendung der nicht generische [IList](https://msdn.microsoft.com/library/system.collections.ilist.aspx) und [IEnumerable](https://msdn.microsoft.com/library/system.collections.ienumerable.aspx) -Schnittstellen, wenn Ihre Komponente von JavaScript verwendet wird. Diese Schnittstellen werden [IBindableVector](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.ibindablevector.aspx) und [IBindableIterator](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.ibindableiterator.aspx) zugeordnet. Sie unterstützen die Bindung für XAML-Steuerelemente und sind für JavaScript nicht sichtbar. JavaScript generiert die Laufzeitfehlermeldung „Die Funktion '%s' kann aufgrund einer ungültigen Signatur nicht aufgerufen werden.”
 
- 
+ 
 
 <table>
 <colgroup>
@@ -152,26 +150,26 @@ Im Allgemeinen sollte die Schnittstelle ausgewählt werden, die dem Typ am näch
 <tbody>
 <tr class="odd">
 <td align="left">WME1033</td>
-<td align="left">Die Methode '{0}' weist den Parameter '{1}' vom Typ '{1}' auf. '{2}' ist kein gültiger Windows-Runtime-Parametertyp.</td>
+<td align="left">Methode '{0}'weist den Parameter'{1}'vom Typ'{2}'. '{2}' ist kein gültiger Windows-Runtime-Parametertyp.</td>
 </tr>
 <tr class="even">
 <td align="left">WME1038</td>
-<td align="left">Die Methode '{0}' weist in der Signatur einen Parameter vom Typ '{1}' auf. Obwohl dieser Typ kein gültiger Windows-Runtime-Typ ist, implementiert er Schnittstellen, bei denen es sich um gültige Windows-Runtime-Typen handelt. Ändern Sie die Methodensignatur stattdessen eventuell für die Verwendung eines der folgenden Typen: '{2}'.</td>
+<td align="left">Methode "{0}"hat einen Parameter vom Typ"{1}" in der Signatur. Obwohl dieser Typ kein gültiger Windows-Runtime-Typ ist, implementiert er Schnittstellen, bei denen es sich um gültige Windows-Runtime-Typen handelt. Überlegen, ob die Methodensignatur stattdessen verwenden Sie einen der folgenden Typen: '{2}'.</td>
 </tr>
 <tr class="odd">
 <td align="left">WME1039</td>
-<td align="left"><p>Die Methode '{0}' weist in der Signatur einen Parameter vom Typ '{1}' auf. Obwohl es sich bei diesem generischen Typ nicht um einen gültigen Windows-Runtime-Typ handelt, werden von diesem Typ oder von dessen generischen Parametern Schnittstellen implementiert, die gültige Windows-Runtime-Typen sind. {2}</p>
-> **Hinweis**  Für {2} fügt „Winmdexp.exe“ eine Liste von Alternativen an, wie z.B. „Ändern Sie eventuell den Typ 'System.Collections.Generic.List&lt;T&gt;' in der Methodensignatur in einen der folgenden Typen: 'System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'“.
+<td align="left"><p>Methode "{0}"hat einen Parameter vom Typ"{1}" in der Signatur. Obwohl es sich bei diesem generischen Typ nicht um einen gültigen Windows-Runtime-Typ handelt, werden von diesem Typ oder von dessen generischen Parametern Schnittstellen implementiert, die gültige Windows-Runtime-Typen sind. {2}</p>
+> **Hinweis:** für {2}, Winmdexp.exe fügt eine Liste von alternativen an, wie z. B. "ändern Sie den Typ ' System.Collections.Generic.List&lt;T&gt;" in der Methodensignatur in einen der folgenden Typen: ' System.Collections.Generic.IList&lt;T&gt;, System.Collections.Generic.IReadOnlyList&lt;T&gt;, System.Collections.Generic.IEnumerable&lt;T&gt;'. "
 </td>
 </tr>
 <tr class="even">
 <td align="left">WME1040</td>
-<td align="left">Die Methode '{0}' weist in der Signatur einen Parameter vom Typ '{1}' auf. Verwenden Sie anstelle eines verwalteten Aufgabentyps Windows.Foundation.IAsyncAction, Windows.Foundation.IAsyncOperation oder eine der anderen Async-Schnittstellen für Windows-Runtime. Das Standardmuster für .NET-Await wird auch auf diese Schnittstellen angewendet. Weitere Informationen zum Konvertieren von verwalteten Task-Objekten in Async-Schnittstellen für Windows-Runtime finden Sie unter „ System.Runtime.InteropServices.WindowsRuntime.AsyncInfo”.</td>
+<td align="left">Methode "{0}"hat einen Parameter vom Typ"{1}" in der Signatur. Verwenden Sie anstelle eines verwalteten Aufgabentyps Windows.Foundation.IAsyncAction, Windows.Foundation.IAsyncOperation oder eine der anderen Async-Schnittstellen für Windows-Runtime. Das Standardmuster für .NET-Await wird auch auf diese Schnittstellen angewendet. Weitere Informationen zum Konvertieren von verwalteten Task-Objekten in Async-Schnittstellen für Windows-Runtime finden Sie unter „ System.Runtime.InteropServices.WindowsRuntime.AsyncInfo”.</td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="structures-that-contain-fields-of-disallowed-types"></a>Strukturen, die Felder mit unzulässigen Typen enthalten
 
@@ -180,26 +178,26 @@ In der UWP kann eine Struktur nur Felder enthalten, und nur Strukturen können F
 
 | Fehlernummer | Meldungstext                                                                                                                                                                                                                                                            |
 |--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| WME1060      | Die Struktur '{0}' weist das Feld '{1}' vom Typ '{1}' auf. '{2}' ist kein gültiger Windows-Runtime-Feldtyp. Die Felder in einer Windows-Runtime-Struktur müssen vom Typ UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, Single, Double, Boolean, String, Enum sein oder selbst eine Struktur darstellen. |
+| WME1060      | Struktur '{0}'weist das Feld'{1}'vom Typ'{2}'. '{2}' ist kein gültiger Windows-Runtime-Feldtyp. Die Felder in einer Windows-Runtime-Struktur müssen vom Typ UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, Single, Double, Boolean, String, Enum sein oder selbst eine Struktur darstellen. |
 
- 
+ 
 
 ## <a name="restrictions-on-arrays-in-member-signatures"></a>Einschränkungen für Arrays in Membersignaturen
 
 
 In der UWP müssen Arrays in Membersignaturen eindimensional sein und eine Untergrenze von 0 (null) aufweisen. Geschachtelte Arraytypen wie `myArray[][]` (`myArray()()` in Visual Basic) sind nicht zulässig.
 
-> **Hinweis** Diese Einschränkung gilt nicht für Arrays, die Sie intern in der Implementierung verwenden.
+> **Hinweis:** diese Einschränkung gilt nicht für Arrays, die Sie intern in Ihrer Implementierung verwenden.
 
- 
+ 
 
 | Fehlernummer | Meldungstext                                                                                                                                                     |
 |--------------|--------------------|
-| WME1034      | Die Methode '{0}' weist ein Array des Typs '{1}' auf, dessen untere Grenze in der Signatur ungleich null ist. Arrays in Windows-Runtime-Methodensignaturen müssen eine Untergrenze von NULL aufweisen. |
-| WME1035      | Die Methode '{0}' weist in der Signatur ein mehrdimensionales Array des Typs '{1}' auf. Arrays in Signaturen von Windows-Runtime-Methoden müssen eindimensional sein.                  |
-| WME1036      | Die Methode '{0}' weist in der Signatur ein geschachteltes Array des Typs '{1}' auf. Arrays dürfen in Windows-Runtime-Methodensignaturen nicht geschachtelt sein.                                    |
+| WME1034      | Methode '{0}'weist ein Array des Typs'{1}' ungleich NULL dessen untere Grenze ist in der Signatur. Arrays in Windows-Runtime-Methodensignaturen müssen eine Untergrenze von NULL aufweisen. |
+| WME1035      | Methode "{0}"hat ein mehrdimensionales Array des Typs"{1}" in der Signatur. Arrays in Signaturen von Windows-Runtime-Methoden müssen eindimensional sein.                  |
+| WME1036      | Methode "{0}"hat ein geschachteltes Array des Typs"{1}" in der Signatur. Arrays dürfen in Windows-Runtime-Methodensignaturen nicht geschachtelt sein.                                    |
 
- 
+ 
 
 ## <a name="array-parameters-must-specify-whether-array-contents-are-readable-or-writable"></a>Arrayparameter müssen angeben, ob Arrayinhalt lesbar oder schreibbar sind
 
@@ -208,12 +206,12 @@ In der UWP müssen Parameter schreibgeschützt oder lesegeschützt sein. Paramet
 
 | Fehlernummer | Meldungstext         |
 |--------------|----------------------|
-| WME1101      | Die Methode '{0}' weist den Parameter '{1}' auf, bei dem es sich um ein Array handelt, und der {2} und {3} enthält. Die Inhalte von Arrayparametern müssen in der Windows-Runtime entweder lesbar oder schreibbar sein. Entfernen Sie eines der Attribute aus '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| WME1102      | Die Methode '{0}' weist den Ausgabeparameter '{1}' auf, bei dem es sich zwar um ein Array handelt, der jedoch {2} enthält. Die Inhalte von Ausgabearrays sind in der Windows-Runtime schreibbar. Entfernen Sie das Attribut aus '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| WME1103      | Die Methode '{0}' weist den Parameter '{1}' auf. Hierbei handelt es sich um ein Array, das entweder ein System.Runtime.InteropServices.InAttribute oder ein System.Runtime.InteropServices.OutAttribute enthält. Arrayparameter müssen für Windows-Runtime entweder {2} oder {3} enthalten. Entfernen Sie diese Attribute, oder ersetzen Sie sie bei Bedarf durch das entsprechende Windows-Runtime-Attribut.                                                                                                                                                                                                                                                                                                                                                                                          |
-| WME1104      | Die Methode '{0}' weist den Parameter '{1}' auf, bei dem es sich um ein Array handelt, und der entweder einen {2} oder einen {3} enthält. Das Markieren von Nicht-Arrayparametern mit {2} oder {3} wird von Windows-Runtime nicht unterstützt.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| WME1105      | Die Methode '{0}' enthält den Parameter '{1}' mit einem System.Runtime.InteropServices.InAttribute oder System.Runtime.InteropServices.OutAttribute. Das Markieren von Parametern mit System.Runtime.InteropServices.InAttribute oder System.Runtime.InteropServices.OutAttribute wird von Windows-Runtime nicht unterstützt. Entfernen Sie eventuell System.Runtime.InteropServices.InAttribute, und ersetzen Sie System.Runtime.InteropServices.OutAttribute stattdessen durch den 'out'-Modifizierer. Die Methode '{0}' enthält den Parameter '{1}' mit einem System.Runtime.InteropServices.InAttribute oder System.Runtime.InteropServices.OutAttribute. Windows-Runtime unterstützt nur das Markieren von ByRef-Parametern mit System.Runtime.InteropServices.OutAttribute. Eine andere Verwendung dieser Attribute ist nicht möglich. |
-| WME1106      | Die Methode '{0}' weist den Parameter '{1}' auf, bei dem es sich um ein Array handelt. Die Inhalte von Array-Parametern müssen in der Windows-Runtime entweder lesbar oder schreibbar sein. Wenden Sie entweder {2} oder {3} auf '{1}' an.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| WME1101      | Methode '{0}'weist den Parameter'{1}' dabei ein Array handelt, und der {2} und {3}. Die Inhalte von Arrayparametern müssen in der Windows-Runtime entweder lesbar oder schreibbar sein. Entfernen Sie eines der Attribute aus '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| WME1102      | Methode "{0}"hat einen Ausgabeparameter"{1}" Dies ist ein Array, der jedoch {2}. Die Inhalte von Ausgabearrays sind in der Windows-Runtime schreibbar. Entfernen Sie das Attribut aus '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| WME1103      | Methode '{0}'weist den Parameter'{1}' dabei ein Array handelt, und der entweder ein System.Runtime.InteropServices.InAttribute oder ein System.Runtime.InteropServices.OutAttribute enthält. Windows-Runtime Arrayparameter müssen entweder {2} oder {3}. Entfernen Sie diese Attribute, oder ersetzen Sie sie bei Bedarf durch das entsprechende Windows-Runtime-Attribut.                                                                                                                                                                                                                                                                                                                                                                                          |
+| WME1104      | Methode '{0}'weist den Parameter'{1}' dem es sich um ein Array, und der entweder einen {2} oder eine {3}. Windows-Runtime unterstützt nicht das Markieren von nicht-Arrayparametern mit {2} oder {3}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| WME1105      | Methode '{0}'weist den Parameter'{1}"mit einem System.Runtime.InteropServices.InAttribute oder System.Runtime.InteropServices.OutAttribute. Das Markieren von Parametern mit System.Runtime.InteropServices.InAttribute oder System.Runtime.InteropServices.OutAttribute wird von Windows-Runtime nicht unterstützt. Entfernen Sie eventuell System.Runtime.InteropServices.InAttribute, und ersetzen Sie System.Runtime.InteropServices.OutAttribute stattdessen durch den 'out'-Modifizierer. Methode '{0}'weist den Parameter'{1}"mit einem System.Runtime.InteropServices.InAttribute oder System.Runtime.InteropServices.OutAttribute. Windows-Runtime unterstützt nur das Markieren von ByRef-Parametern mit System.Runtime.InteropServices.OutAttribute. Eine andere Verwendung dieser Attribute ist nicht möglich. |
+| WME1106      | Methode '{0}'weist den Parameter'{1}' dabei ein Array handelt. Die Inhalte von Array-Parametern müssen in der Windows-Runtime entweder lesbar oder schreibbar sein. Wenden Sie entweder {2} oder {3} auf '{1}'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 
 ## <a name="member-with-a-parameter-named-value"></a>Member mit einem Parameter mit dem Namen „Value"
@@ -240,16 +238,16 @@ In der UWP werden Rückgabewerte als Ausgabeparameter betrachtet, und die Namen 
     > <Out> ByRef highValue As Integer) As <ReturnValueName("average")> String
     > ```
 
-> **Hinweis**  Wenn Sie den Namen des Rückgabewerts ändern und der neue Name mit dem Namen eines anderen Parameters in Konflikt steht, erhalten Sie die Fehlermeldung WME1091.
+> **Hinweis:** Wenn Sie den Namen des Rückgabewerts ändern und der neue Name mit dem Namen eines anderen Parameters kollidiert, erhalten Sie die Fehlermeldung WME1091.
 
 JavaScript-Code kann auf die Ausgabeparameter einer Methode, einschließlich des Rückgabewerts, über den Namen zugreifen. Ein Beispiel finden Sie unter [ReturnValueNameAttribute](https://msdn.microsoft.com/library/windows/apps/system.runtime.interopservices.windowsruntime.returnvaluenameattribute.aspx).
 
 | Fehlernummer | Meldungstext |
 |--------------|--------------|
-| WME1091 | Die Methode '\{0}' weist den Rückgabewert mit dem Namen '\{1}' auf, bei dem es sich um denselben Namen wie der Parametername handelt. Methodenparameter und Rückgabewerte müssen für Windows-Runtime eindeutige Namen aufweisen. |
-| WME1092 | Die Methode '\{0}' weist einen Parameter mit dem Namen '\{1}' auf, der mit dem Standardnamen des Rückgabewerts identisch ist. Verwenden Sie ggf. einen anderen Namen für den Parameter, oder verwenden Sie das System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute, um den Namen des Rückgabewerts explizit anzugeben. |
+| WME1091 | Die Methode ' \{0}' weist den Rückgabewert mit dem Namen ' \{1}"Dies ist identisch mit dem Namen eines Parameters. Methodenparameter und Rückgabewerte müssen für Windows-Runtime eindeutige Namen aufweisen. |
+| WME1092 | Die Methode ' \{0}' weist einen Parameter mit dem Namen ' \{1}' des Rückgabewerts der identisch mit der Standardwert ist. Verwenden Sie ggf. einen anderen Namen für den Parameter, oder verwenden Sie das System.Runtime.InteropServices.WindowsRuntime.ReturnValueNameAttribute, um den Namen des Rückgabewerts explizit anzugeben. |
 
-**Hinweis**  Der Standardname lautet „returnValue" für Eigenschaftenaccessoren und „Value" für alle anderen Methoden.
+**Hinweis:** der Standardname lautet "ReturnValue" für Eigenschaftenaccessoren und "Value" für alle anderen Methoden.
 
 
 ## <a name="related-topics"></a>Verwandte Themen

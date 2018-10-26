@@ -9,15 +9,13 @@ keywords: Sprache, Stimme, Spracherkennung, natürliche Sprache, diktieren, Eing
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e8abeb4cb690f39a5d9145c3975edbb5a5252765
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 7ce8146cc952d22eb0aa365be707cbd2cef7aabf
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654519"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567790"
 ---
 # <a name="speech-recognition"></a>Spracherkennung
 
@@ -53,7 +51,7 @@ Sie können verschiedene Arten von Einschränkungen bei der Spracherkennung nutz
 
     Die Grammatik für die Websuche enthält wie die Diktiergrammatik eine große Anzahl von Wörtern und Ausdrücken, die Benutzer sagen können. Sie ist allerdings für die Erkennung von Begriffen optimiert, die beim Suchen im Web häufig verwendet werden.
 
-    **Hinweis:** Da vordefinierte Diktier- und Websuchgrammatiken sehr umfangreich sein können und online bereitgestellt werden (nicht auf dem Gerät), kann die Leistung schlechter sein als bei einer lokal auf dem Gerät installierten benutzerdefinierten Grammatik.     
+    **Hinweis:** da vordefinierte Diktier- und Websuche Grammatiken groß sein können und diese online sind (nicht auf dem Gerät), Leistung ist möglicherweise nicht so gut wie bei einer lokal auf dem Gerät installierten benutzerdefinierten Grammatik.     
 
     Diese vordefinierten Grammatiken können zum Erkennen von bis zu zehn Sekunden Spracheingabe verwendet werden. Sie müssen dazu keinen Code selbst erstellen. Sie erfordern jedoch eine Netzwerkverbindung.
 
@@ -104,10 +102,10 @@ Sie können verschiedene Arten von Einschränkungen bei der Spracherkennung nutz
 
     Verwenden Sie eine Voice Command Definition-(VCD-)XML-Datei, um die Befehle zu definieren, mit denen der Benutzer Aktionen initiieren kann, wenn er Ihre App aktiviert. Weitere Details finden Sie unter [Starten einer Vordergrund-App mit Sprachbefehlen in Cortana](https://msdn.microsoft.com/cortana/voicecommands/launch-a-foreground-app-with-voice-commands-in-cortana).
 
-**Hinweis:** Der von Ihnen verwendete Einschränkungstyp richtet sich nach der Komplexität der Erkennungsfunktion, die Sie erstellen möchten. Für eine bestimmte Erkennungsaufgabe kann jeweils einer der Ansätze am besten geeignet sein, und vielleicht haben Sie in Ihrer App sogar für alle Einschränkungsarten Verwendung.
+**Hinweis:** welche Art von Einschränkungstyp Ihnen richtet sich nach der Komplexität der Erkennungsfunktion, die Sie erstellen möchten. Für eine bestimmte Erkennungsaufgabe kann jeweils einer der Ansätze am besten geeignet sein, und vielleicht haben Sie in Ihrer App sogar für alle Einschränkungsarten Verwendung.
 Informationen zu den ersten Schritten mit Einschränkungen finden Sie unter [Definieren von benutzerdefinierten Erkennungseinschränkungen](define-custom-recognition-constraints.md).
 
- 
+ 
 
 Die vordefinierte Diktiergrammatik von universellen Windows-Apps erkennt die meisten Wörter und kurzen Wortgruppen einer Sprache. Sie wird standardmäßig aktiviert, wenn ein Spracherkennungsobjekt ohne benutzerdefinierte Einschränkungen instanziiert wird.
 
@@ -201,9 +199,9 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 * [Entwicklungsrichtlinien für die Spracherkennung](https://msdn.microsoft.com/library/windows/apps/dn596121)
 **Beispiele**
 * [Beispiel zu Spracherkennung und Sprachsynthese](http://go.microsoft.com/fwlink/p/?LinkID=619897)
- 
+ 
 
- 
+ 
 
 
 

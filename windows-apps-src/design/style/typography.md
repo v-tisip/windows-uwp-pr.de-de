@@ -5,16 +5,14 @@ title: Typografie in UWP-Apps
 ms.author: mijacobs
 ms.date: 04/06/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 505167775b61908be7f47068dbf3221c293f6112
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 62f5aa7d1089b38131c742c588ae741e88197533
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843370"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565010"
 ---
 # <a name="typography"></a>Typografie
 
@@ -30,9 +28,16 @@ Verwenden Sie eine Schriftart in der gesamten Benutzeroberfläche Ihrer App. Es 
 
 Weitere Informationen zum Anzeigen anderer Sprachen als Englisch oder um eine andere Schriftart für Ihre App auszuwählen finden Sie unter [Sprachen](#Languages) und [Schriftarten](#Fonts) für unsere empfohlenen Schriftarten für UWP-Apps.
 
-:::row::: :::column::: ![Ja](images/do.svg) Wählen Sie eine Schriftart für Ihre Benutzeroberfläche aus.
-:::column-end::: :::column::: ![Nein](images/dont.svg) Mischen Sie nicht mehrere Schriftarten.
-:::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![do](images/do.svg)
+        Pick one font for your UI.
+    :::column-end:::
+    :::column:::
+        ![don't](images/dont.svg)
+        Don't mix multiple fonts.
+    :::column-end:::
+:::row-end:::
 
 ## <a name="size-and-scaling"></a>Größe und Skalierung
 
@@ -42,14 +47,27 @@ Schriftgrade in UWP-Apps werden automatisch auf allen Geräten skaliert. Mit dem
 
 Aufgrund der Funktionsweise der Skalierung, entwerfen Sie in effektiven Pixeln, nicht in den tatsächlichen physischen Pixeln, und Sie müssen den Schriftgrad für unterschiedliche Bildschirmgrößen und Auflösungen nicht ändern.
 
-::: Zeile:::::: Spalte::: ![Ja](images/do.svg) Folgen Sie der UWP-[Typhierarchie](#type-ramp)-Größe.
-::: Spalte End:::::: Spalte::: ![Nein](images/dont.svg) Verwenden Sie einen Schriftgrad, der kleiner als 12 Pixel ist.
-:::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![do](images/do.svg)
+        Follow the UWP [type ramp](#type-ramp) sizing.
+    :::column-end:::
+    :::column:::
+        ![don't](images/dont.svg)
+        Use a font size smaller than 12 px.
+    :::column-end:::
+:::row-end:::
 
 ## <a name="hierarchy"></a>Hierarchie
 
-:::row::: :::column::: Benutzer verlassen Sie sich auf die visuelle Hierarchie beim Scannen eines Seitenabschnitts: Header fassen Inhalte zusammen und Textkörper enthalten weitere Details. Um eine klare visuelle Hierarchie in Ihrer App zu erstellen, folgen Sie der UWP-Typhierarchie.
-:::column-end::: :::column::: ![Textblock-Stile](images/type/type-hierarchy.svg) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        Users rely on visual hierarchy when scanning a page: headers summarize content, and body text provides more detail. To create a clear visual hierarchy in your app, follow the UWP type ramp.
+    :::column-end:::
+    :::column:::
+        ![text block styles](images/type/type-hierarchy.svg)
+    :::column-end:::
+:::row-end:::
 
 ### <a name="type-ramp"></a>Typhierarchie
 
@@ -59,8 +77,14 @@ Die UWP-Typhierarchie stellt wichtige Beziehungen zwischen den Schriftschnitte a
 
 ### <a name="using-the-type-ramp"></a>Die Typhierarchie verwenden
 
-:::row::: :::column::: Sie können Ebenen der Typhierarchie als [statische Ressourcen](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp) für XAML erreichen. Stile folgen der `*TextBlockStyle` Namenskonvention
-:::column-end::: :::column::: ![Textblock-Stile](images/type/text-block-type-ramp.svg) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        You can access levels of the type ramp as XAML [static resources](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp). The styles follow the `*TextBlockStyle` naming convention.
+    :::column-end:::
+    :::column:::
+        ![text block styles](images/type/text-block-type-ramp.svg)
+    :::column-end:::
+:::row-end:::
 
 ```XAML
 <TextBlock Text="Header" Style="{StaticResource HeaderTextBlockStyle}"/>
@@ -72,7 +96,10 @@ Die UWP-Typhierarchie stellt wichtige Beziehungen zwischen den Schriftschnitte a
 <TextBlock Text="Caption" Style="{StaticResource CaptionTextBlockStyle}"/>
 ```
 
-:::row::: :::column::: ![Ja](images/do.svg) Verwenden Sie den "Inhalt" für den meisten Text.
+:::row:::
+    :::column:::
+        ![do](images/do.svg)
+        Use "Body" for most text.
 
         Use "Base" for titles when space is constrained.
     :::column-end:::
@@ -96,9 +123,16 @@ Standardmäßig ist das [TextAlignment](https://docs.microsoft.com/uwp/api/windo
 
 ## <a name="character-count"></a>Zeichenanzahl
 
-:::row::: :::column::: ![Ja](images/do.svg) Bleiben Sie bei 50 bis 60 Wörtern pro Zeile zur besseren Lesbarkeit.
-:::column-end::: :::column::: ![Nein](images/dont.svg) Weniger als 20 Zeichen oder mehr als 60 Zeichen pro Zeile lassen sich schwer lesen.
-:::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![do](images/do.svg)
+        Keep to 50–60 letters per line for ease of reading.
+    :::column-end:::
+    :::column:::
+        ![don't](images/dont.svg)
+        Less than 20 characters or more than 60 characters per line is difficult to read.
+    :::column-end:::
+:::row-end:::
 
 ## <a name="clipping-and-ellipses"></a>Beschnitt und Ellipsen
 
@@ -110,9 +144,16 @@ Wenn die Textmenge den verfügbaren Speicherplatz überschreitet, wird empfohlen
 <TextBlock TextWrapping="WrapWholeWords" TextTrimming="Clip"/>
 ```
 
-:::row::: :::column::: ![Ja](images/do.svg) Text zuschneiden und umbrechen, wenn mehrere Zeilen vorhanden sind.
-:::column-end::: :::column::: ![Nein](images/dont.svg) Verwenden Sie Ellipsen für mehr Übersichtlichkeit.
-:::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        ![do](images/do.svg)
+        Clip text, and wrap if multiple lines are enabled.
+    :::column-end:::
+    :::column:::
+        ![don't](images/dont.svg)
+        Use ellipses to avoid visual clutter.
+    :::column-end:::
+:::row-end:::
 
 **Hinweis**: Bei Containern, die nicht klar definiert sind (also sich etwa nicht durch eine andere Hintergrundfarbe abheben) oder wenn ein Link zu mehr Text existiert, kann eine Ellipse verwendet werden.
 

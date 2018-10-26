@@ -6,16 +6,14 @@ ms.assetid: 0383b774-bc1b-910e-8eb6-cc969b3dcc08
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Portieren, Shader, Direct3D, OpenGL
 ms.localizationpriority: medium
-ms.openlocfilehash: 09e8d6441ffc65095ac69d7388a2735821487539
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: bbf7e05a93ccce4188d62f9800a5f225be713cc6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "233774"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567222"
 ---
 # <a name="port-the-shader-objects"></a>Portieren der Shaderobjekte
 
@@ -29,9 +27,9 @@ ms.locfileid: "233774"
 
 Beim Portieren des einfachen Renderers aus OpenGL ES 2.0 ist der erste Schritt das Einrichten der äquivalenten Vertex- und Fragmentshaderobjekte in Direct3D 11. Stellen Sie außerdem sicher, dass das Hauptprogramm mit den Shaderobjekten kommunizieren kann, nachdem diese kompiliert wurden.
 
-> **Hinweis**   Haben Sie ein neues Direct3D-Projekt erstellt? Falls nicht, befolgen Sie die Anleitung unter [Erstellen eines neuen DirectX 11-Projekts für die Universelle Windows-Plattform (UWP)](user-interface.md). Bei dieser exemplarischen Vorgehensweise wird vorausgesetzt, dass Sie die DXGI- und Direct3D-Ressourcen zum Zeichnen auf den Bildschirm erstellt haben, die auch in der Vorlage bereitgestellt werden.
+> **Hinweis:**  haben Sie ein neues Direct3D-Projekt erstellt? Falls nicht, befolgen Sie die Anleitung unter [Erstellen eines neuen DirectX 11-Projekts für die Universelle Windows-Plattform (UWP)](user-interface.md). Bei dieser exemplarischen Vorgehensweise wird vorausgesetzt, dass Sie die DXGI- und Direct3D-Ressourcen zum Zeichnen auf den Bildschirm erstellt haben, die auch in der Vorlage bereitgestellt werden.
 
- 
+ 
 
 Wie unter OpenGLES2.0 auch, müssen die kompilierten Shader in Direct3D einem Kontext für das Zeichnen zugeordnet werden. Direct3D verfügt jedoch nicht per se über das Konzept eines Shaderprogrammobjekts. Daher weisen Sie die Shader direkt einem [**ID3D11DeviceContext**](https://msdn.microsoft.com/library/windows/desktop/ff476385) zu. Bei diesem Schritt wird der OpenGL ES 2.0-Prozess zum Erstellen und Binden von Shaderobjekten eingehalten, und es werden die entsprechenden API-Verhalten in Direct3D bereitgestellt.
 
@@ -82,9 +80,9 @@ GLuint __cdecl CompileShader (GLenum shaderType, const char *shaderSrcStr)
 
 In Direct3D werden Shader nicht während der Laufzeit kompiliert. Sie werden immer in CSO-Dateien kompiliert, wenn auch die restlichen Daten des Programms kompiliert werden. Wenn Sie die App mit Microsoft Visual Studio kompilieren, werden die HLSL-Dateien in CSO-Dateien (.cso) kompiliert, die von der App geladen werden müssen. Achten Sie darauf, diese CSO-Dateien der App beim Verpacken hinzuzufügen!
 
-> **Hinweis**   Im folgenden Beispiel wird das asynchrone Laden und Kompilieren des Shaders mit dem **auto**-Schlüsselwort und der Lambdasyntax durchgeführt. ReadDataAsync() ist eine für die Vorlage implementierte Methode, mit der eine CSO-Datei als Array mit Bytedaten (fileData) eingelesen wird.
+> **Hinweis:**  im folgenden Beispiel wird das Laden und Kompilieren des Shaders asynchron mit Syntax für die **Automatische** Schlüsselwort und Lambda-Funktion. ReadDataAsync() ist eine für die Vorlage implementierte Methode, mit der eine CSO-Datei als Array mit Bytedaten (fileData) eingelesen wird.
 
- 
+ 
 
 Direct3D 11: Kompilieren eines Shaders
 
@@ -320,9 +318,9 @@ Der Vertexpuffer wird auf ähnliche Weise erstellt und aktualisiert. Dies ist im
 
 [Zeichnen auf den Bildschirm](draw-to-the-screen.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -6,19 +6,18 @@ ms.assetid: aeed09e3-c47a-4dd9-d0e8-d1b8bdd7e9b4
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Texturen, DirectX
-ms.openlocfilehash: cc25d7bcc5809dd10b43418ccd42f78c10d1336e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 252613bbea7f4cdb720758d3435cf0920dd93efa
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233837"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567331"
 ---
 # <a name="apply-textures-to-primitives"></a>Anwenden von Texturen auf Grundtypen
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Wir laden an dieser Stelle unformatierte Texturdaten und wenden diese auf einen 3D-Grundtyp an. Dazu verwenden wir den Würfel, den wir unter [Verwenden von Tiefe und Effekten auf Grundtypen](using-depth-and-effects-on-primitives.md) erstellt haben. Außerdem stellen wir ein einfaches Skalarprodukt-Lichtmodell vor. Die Oberflächen des Würfels im Modell sind, je nach Entfernung von der und Winkel zur Lichtquelle, heller oder dunkler.
 
@@ -523,9 +522,9 @@ Analog zu früheren Lernprogrammen wird mit einem Aufruf von [**IDXGISwapChain::
 
 Wir haben unformatierte Textdaten geladen und diese Daten auf einen 3D-Grundtyp angewendet.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -5,17 +5,15 @@ title: Benutzerdefinierte Audioeffekte
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.assetid: 360faf3f-7e73-4db4-8324-3391f801d827
 ms.localizationpriority: medium
-ms.openlocfilehash: 576277ab4bf3d2ea3bfe679da4039da194aabb70
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: a9c62dac489be07a08acc4ad17ecb79bcc54f57a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843260"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565108"
 ---
 # <a name="custom-audio-effects"></a>Benutzerdefinierte Audioeffekte
 
@@ -85,7 +83,7 @@ Der Zugriff auf den Datenpuffers eines **AudioFrame** erfordert COM-Interoperabi
 > 2.  Wählen Sie die Registerkarte **Erstellen** aus.
 > 3.  Aktivieren Sie das Kontrollkästchen **Unsicheren Code zulassen**.
 
- 
+ 
 
 Sie können nun Ihrem Effekt die **ProcessFrame**-Methodenimplementierung hinzufügen. Zunächst erhält diese Methode ein [**AudioBuffer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.AudioBuffer)-Objekt aus den Ein- und Ausgabe-Audioframes. Beachten Sie, dass der Ausgabeframe zum Schreiben und die Eingabe zum Lesen geöffnet wird. Als Nächstes wird ein [**IMemoryBufferReference**](https://msdn.microsoft.com/library/windows/apps/dn921671)-Objekt für jeden Puffer durch Aufrufen von [**CreateReference**](https://msdn.microsoft.com/library/windows/apps/dn949046) abgerufen. Danach wird der tatsächliche Datenpuffer durch Umwandeln der **IMemoryBufferReference**-Objekte wie die oben definierte COMInterop-Schnittstelle, **IMemoryByteAccess**, und anschließendes Aufrufen von **GetBuffer** abgerufen.
 
@@ -154,7 +152,7 @@ Der folgende Codeausschnitt veranschaulicht das Hinzufügen des benutzerdefinier
 * [Win2D-Dokumentation](http://go.microsoft.com/fwlink/p/?LinkId=519078)
 * [Medienwiedergabe](media-playback.md)
 
- 
+ 
 
 
 

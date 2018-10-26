@@ -6,19 +6,18 @@ ms.assetid: AFC53D75-B3DD-4FF6-9FC0-9335242EE327
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 8aa2070606f7ef077dfa4392d576f212b2f8ea84
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 0fbbe1978cc59afcc7d681331dadc9a06e3eb2d0
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "235284"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564441"
 ---
 # <a name="launch-an-app-for-results"></a>Starten einer App für Ergebnisse
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -28,7 +27,7 @@ ms.locfileid: "235284"
 
 Hier erfahren Sie, wie Sie eine App aus einer anderen App heraus starten und Daten zwischen den beiden Apps austauschen. Dieser Vorgang wird als *Starten einer App für Ergebnisse* bezeichnet. Dieses Beispiel veranschaulicht die Verwendung von [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686) zum Starten einer App für Ergebnisse.
 
-Mit den neuen APIs für die App-zu-App-Kommunikation in Windows10 können Windows-Apps (und Windows-Web-Apps) Apps starten und Daten und Dateien austauschen. Dies ermöglicht Ihnen das Erstellen kombinierter Lösungen aus mehreren Apps. Dank dieser neuen APIs können komplexe Aufgaben, für die Benutzer bisher mehrere Apps nutzen mussten, jetzt nahtlos durchgeführt werden. Ihrer App kann z.B. eine App für ein soziales Netzwerk starten, um einen Kontakt auszuwählen, oder eine Kassen-App, um einen Bezahlvorgang durchzuführen.
+Neuen APIs in Windows 10-app-zu-app-Kommunikation ermöglichen es für Windows-apps (und Windows-Web-apps) zum Starten einer app und Exchange-Daten und Dateien. Dies ermöglicht Ihnen das Erstellen kombinierter Lösungen aus mehreren Apps. Dank dieser neuen APIs können komplexe Aufgaben, für die Benutzer bisher mehrere Apps nutzen mussten, jetzt nahtlos durchgeführt werden. Ihrer App kann z.B. eine App für ein soziales Netzwerk starten, um einen Kontakt auszuwählen, oder eine Kassen-App, um einen Bezahlvorgang durchzuführen.
 
 Die App, die für Ergebnisse geöffnet wird, wird als gestartete App bezeichnet. Die App, die die App startet, wird als aufrufende App bezeichnet. In diesem Beispiel schreiben Sie die aufrufende App und die gestartete App.
 
@@ -204,6 +203,6 @@ Anschließend übergeben Sie sie über **LaunchUriForResultsAsync** an die gesta
 * [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686)
 * [**ValueSet**](https://msdn.microsoft.com/library/windows/apps/dn636131)
 
- 
+ 
 
- 
+ 

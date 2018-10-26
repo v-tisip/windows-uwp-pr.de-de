@@ -8,24 +8,22 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 36af11829728e07c00b3306d5a997764db130c9f
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: c55f371e97daba5f81945812f8179eb708bbadd6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1043089"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567182"
 ---
 # <a name="multipass-texture-blending"></a>Mehrstufige Texturvermischung
 
 
 Direct3D-Anwendungen können durch die Anwendung verschiedener Texturen auf einen Grundtyp im Laufe von mehreren Berechnungs- und Ausgabedurchläufen zahlreiche Spezialeffekte erzielen. Der allgemeine Begriff dafür ist *Mehrstufige Texturmischung*. Eine typische Anwendung der mehrstufigen Texturmischung ist die Nachbildung der Effekte komplexer Beleuchtungs- und Schattierungsmodelle durch die Anwendung mehrerer Farben aus mehreren unterschiedlichen Texturen. Eine solche Anwendung heißt *Lichtzuordnung*. Siehe [Lichtzuordnung mit Texturen](light-mapping-with-textures.md).
 
-+**Hinweis:**   Einige Geräte können mehrere Texturen auf Primitive in einem einzigen Durchgang anwenden. Siehe [Texturvermischung](texture-blending.md).
+**Hinweis:**  einige Geräte können mehrere Texturen auf primitive in einem einzigen Durchgang anwenden. Siehe [Texturvermischung](texture-blending.md).
 
- 
+ 
 
 Wenn die Hardware des Benutzers die Vermischung mehrerer Texturen nicht unterstützt, kann Ihre Anwendung die mehrstufige Texturvermischung verwenden, um die gleichen visuellen Effekte zu erzielen. Die Anwendung kann jedoch nicht die Bildwechselfrequenzen erhalten, die bei Verwendung der Vermischung mehrerer Texturen möglich sind.
 
@@ -43,9 +41,9 @@ Durchführen der mehrstufigen Texturvermischung in einer C/C++-Anwendung:
 
 [Texturvermischung](texture-blending.md)
 
- 
+ 
 
- 
+ 
 
 
 

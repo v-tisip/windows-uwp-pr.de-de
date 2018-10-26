@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 5cd6f279505a960be0b9e1e2e5918a769ff56930
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: e48045e27e8ee7796f5dda2afb691a9f6e5371b2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1655059"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565338"
 ---
 # <a name="control-patterns-and-interfaces"></a>Steuerelementmuster und Schnittstellen  
 
@@ -63,7 +61,7 @@ Beim Implementieren eines Steuerelementmusters sollten Sie auch die Dokumentatio
 | **Transform** | [**ITransformProvider**](https://msdn.microsoft.com/library/windows/apps/BR242656) | Wird für Steuerelemente verwendet, deren Größe geändert werden kann und die verschoben und gedreht werden können. Gewöhnlich wird das Steuerelementmuster für Transformation in Designern, Formen, Grafikeditoren und Zeichenanwendungen verwendet. |
 | **Value** | [**IValueProvider**](https://msdn.microsoft.com/library/windows/apps/BR242663) | Ermöglicht es Clients, einen Wert von Steuerelementen abzurufen, die keinen Wertebereich unterstützen, oder einen Wert dafür festzulegen. |
 | **VirtualizedItem** | [**IVirtualizedItemProvider**](https://msdn.microsoft.com/library/windows/apps/BR242668) | Macht Elemente in Containern verfügbar, die virtualisiert sind und vollständig als Benutzeroberflächenautomatisierungs-Elemente zur Verfügung stehen müssen. |
-| **Window** | [**IWindowProvider**](https://msdn.microsoft.com/library/windows/apps/BR242670) | Macht für bestimmte Fenster spezifische Informationen verfügbar. Hierbei handelt es sich um ein grundlegendes Konzept des MicrosoftWindows-Betriebssystems. Beispiele für Steuerelemente als Fenster: untergeordnete Fenster und Dialogfelder. |
+| **Window** | [**IWindowProvider**](https://msdn.microsoft.com/library/windows/apps/BR242670) | Bestimmte Fenster spezifische Informationen ein grundlegendes Konzept des Microsoft Windows-Betriebssystems zur Verfügung gestellt. Beispiele für Steuerelemente als Fenster: untergeordnete Fenster und Dialogfelder. |
 
 > [!NOTE]
 > Implementierungen all dieser Muster sind in vorhandenen XAML-Steuerelementen nicht immer enthalten. Einige Muster verfügen nur über Schnittstellen, um die Parität mit der allgemeinen Benutzeroberflächenautomatierungs-Frameworkdefinition für Muster sowie Automatisierungspeerszenarien zu unterstützen, die für die Unterstützung dieses Musters eine rein benutzerdefinierte Implementierung benötigen.

@@ -6,16 +6,14 @@ ms.assetid: d15e6501-1a1d-d99c-d1d8-ad79b849db90
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, DirectX, Schattenvolumen, Tiefenpuffer, DirectX 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 369fd133ffba2947b06a3fc9391979c17973ea52
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 269f8423795d7c2515ce555cf8e65f14a8c63431
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653699"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5565752"
 ---
 # <a name="walkthrough-implement-shadow-volumes-using-depth-buffers-in-direct3d-11"></a>Exemplarische Vorgehensweise - Implementieren von Schattenvolumen mithilfe von Tiefenpuffern in Direct3D 11
 
@@ -54,12 +52,12 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie Schattenvolumen mi
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="shadow-mapping-application-to-direct3d-9-desktop-porting"></a>Schattenabbildung – Portieren von Direct3D9-Desktop-Apps
 
 
-In Windows8 wurden Featureebene9\_1 und 9\_3 Funktionen für den Tiefenvergleich hinzugefügt. Jetzt können Sie Renderingcode mit Schattenvolumen zu DirectX11 migrieren. Der Direct3D11-Renderer ist abwärtskompatibel mit Geräten der Featureebene9. In dieser exemplarischen Vorgehensweise zeigen wir, wie herkömmliche Schattenvolumen mit Tiefentests in Direct3D11-Apps oder -Spielen implementiert werden können. Der Code umfasst die folgenden Prozesse:
+Windows8 den tiefenvergleich hinzugefügt Funktionen auf Featureebene 9\_1 und 9\_3. Jetzt können Sie Renderingcode mit Schattenvolumen zu DirectX11 migrieren. Der Direct3D11-Renderer ist abwärtskompatibel mit Geräten der Featureebene9. In dieser exemplarischen Vorgehensweise zeigen wir, wie herkömmliche Schattenvolumen mit Tiefentests in Direct3D11-Apps oder -Spielen implementiert werden können. Der Code umfasst die folgenden Prozesse:
 
 1.  Erstellen von Direct3D-Geräteressourcen für die Schattenabbildung
 2.  Hinzufügen eines Renderingdurchgangs zum Erstellen der Tiefenkarte
@@ -72,7 +70,7 @@ Nach Abschluss dieser exemplarischen Vorgehensweise wissen Sie, wie Sie eine ein
 ## <a name="prerequisites"></a>Voraussetzungen
 
 
-Führen Sie die Schritte unter [Vorbereiten der Entwicklungsumgebung für die Entwicklung von Spielen für die universelle Windows-Plattform (UWP) und DirectX](prepare-your-dev-environment-for-windows-store-directx-game-development.md) aus. Sie benötigen noch keine Vorlage, aber Microsoft Visual Studio2015, um das Codebeispiel für diese exemplarische Vorgehensweise erstellen zu können.
+Führen Sie die Schritte unter [Vorbereiten der Entwicklungsumgebung für die Entwicklung von Spielen für die universelle Windows-Plattform (UWP) und DirectX](prepare-your-dev-environment-for-windows-store-directx-game-development.md) aus. Sie benötigen eine Vorlage noch, aber Sie benötigen Microsoft Visual Studio2015 auf das Codebeispiel für diese exemplarische Vorgehensweise erstellen.
 
 ## <a name="related-topics"></a>Verwandte Themen
 
@@ -87,9 +85,9 @@ Führen Sie die Schritte unter [Vorbereiten der Entwicklungsumgebung für die En
 * [Allgemeine Artikel zum Verbessern von Tiefenkarten für Schatten](https://msdn.microsoft.com/library/windows/desktop/ee416324)
 * [Überlappende Schattenkarten](https://msdn.microsoft.com/library/windows/desktop/ee416307)
 
- 
+ 
 
- 
+ 
 
 
 

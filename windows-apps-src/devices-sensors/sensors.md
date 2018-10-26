@@ -6,16 +6,14 @@ description: Mithilfe von Sensoren können Apps die Beziehung zwischen einem Ger
 ms.author: mukin
 ms.date: 06/06/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 3bf1d905874fc420dc0a39c1082e213e4ea4c327
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 0e05c18bd2c8fa2ddd7d6a9bc8e474d02f27a93e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "959175"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567371"
 ---
 # <a name="sensors"></a>Sensoren
 
@@ -112,7 +110,7 @@ Mit dem [**Neigungssensor**](https://msdn.microsoft.com/library/windows/apps/BR2
 
 Für Apps, bei denen die Ansicht der Ausrichtung des Geräts entsprechend geändert werden soll, kann der Neigungssensor verwendet werden. Eine App, bei der Nick-, Gier- und Rollwinkel eines Flugzeugs angezeigt werden, würde ebenfalls Neigungsmesserdaten verwenden.
 
-Eine beispielhafte finden Sie im Beispiel Inclinometer [https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer).
+Ein Beispiel einer Implementierung, finden Sie unter neigungssensors [https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Inclinometer).
 
 ## <a name="light-sensor"></a>Belichtungssensor
 

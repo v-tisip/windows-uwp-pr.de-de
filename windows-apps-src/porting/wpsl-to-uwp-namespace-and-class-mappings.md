@@ -1,35 +1,33 @@
 ---
 author: stevewhims
-description: Dieses Thema enthält eine umfassende Zuordnung der Windows Phone Silverlight-APIs zu ihren Entsprechungen in der universellen Windows-Plattform (UWP).
-title: Windows Phone Silverlight zu UWP – Namespace- und Klassenzuordnungen
+description: Dieses Thema enthält eine umfassende Zuordnung der WindowsPhone Silverlight-APIs zu ihren Entsprechungen universelle Windows-Plattform (UWP).
+title: WindowsPhone Silverlight zu UWP – Namespace- und klassenzuordnungen
 ms.assetid: 33f06706-4790-48f3-a2e4-ebef9ddb61a4
 ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f7bd31b8157af00817738cb1d224c827acb6ca6
-ms.sourcegitcommit: 929fa4b3273862dcdc76b083bf6c3b2c872dd590
-ms.translationtype: HT
+ms.openlocfilehash: 54118b41fc1f3036dddba9a0cfb8ecd860c1e233
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "1935810"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566161"
 ---
-# <a name="windows-phone-silverlight-to-uwp-api-mappings"></a>Windows Phone Silverlight zu UWP-API – Zuordnungen
+# <a name="windowsphone-silverlight-to-uwp-api-mappings"></a>WindowsPhone Silverlight zu UWP-API – Zuordnungen
 
 
-Dieses Thema enthält eine umfassende Zuordnung der Windows Phone Silverlight-APIs zu ihren Universelle Windows-Plattform (UWP)-Entsprechungen. Im Allgemeinen erfolgt keine 1: 1-Zuordnung von Funktionen, jedoch gilt: Jede Plattform kann ggf. mehr oder weniger Funktionalität bieten als ihr Gegenstück in einem Namespace oder einer Klasse.
+Dieses Thema enthält eine umfassende Zuordnung der WindowsPhone Silverlight-APIs zu ihren Entsprechungen universelle Windows-Plattform (UWP). Im Allgemeinen erfolgt keine 1: 1-Zuordnung von Funktionen, jedoch gilt: Jede Plattform kann ggf. mehr oder weniger Funktionalität bieten als ihr Gegenstück in einem Namespace oder einer Klasse.
 
-Die Zuordnungstabelle ist hilfreich, wenn Sie in einem UWP-Projekt arbeiten und Quellcode aus einem Windows Phone Silverlight-Projekt erneut verwenden. Zwischen den beiden Plattformen gibt es Unterschiede bei den Namen von Namespaces und Klassen (einschließlich UI-Steuerelemente). In vielen Fällen ist es einfach: Sie ändern z.B. einen Namespacenamen, und der Code wird kompiliert Manchmal wird neben dem Namespacenamen auch der Name einer Klasse oder API geändert In anderen Fällen ist die Zuordnung etwas schwieriger, und in seltenen Fällen muss der Ansatz geändert werden.
+Die Zuordnungstabelle hilft Ihnen, wenn Sie in einem UWP-Projekt arbeiten und Sie sind Quellcode aus einem WindowsPhone Silverlight-Projekt wiederverwenden. Zwischen den beiden Plattformen gibt es Unterschiede bei den Namen von Namespaces und Klassen (einschließlich UI-Steuerelemente). In vielen Fällen ist es einfach: Sie ändern z.B. einen Namespacenamen, und der Code wird kompiliert Manchmal wird neben dem Namespacenamen auch der Name einer Klasse oder API geändert In anderen Fällen ist die Zuordnung etwas schwieriger, und in seltenen Fällen muss der Ansatz geändert werden.
 
-**So verwenden Sie die Tabelle:  ** Suchen Sie zunächst nach dem Namen der Klasse, die Sie verwenden. Klassen werden aufgelistet, wenn es sich um eine kompliziertere Zuordnung als eine Änderung des Namespacenamens handelt. Wenn Ihre Klasse nicht aufgeführt ist, handelt es sich bei der Zuordnung nur um eine Namespaceänderung. Wenn Sie den Namespacenamen Ihrer Klasse finden, finden Sie auch den entsprechenden Namen des UWP-Namespaces. Ihre Klasse ist in diesem Namespace enthalten. Wenn der Namespace nicht aufgeführt ist, hat sich dessen Name nicht geändert.
+**So verwenden Sie die Tabelle:** Suchen Sie zunächst nach den Namen der Klasse, die Sie verwenden. Klassen werden aufgelistet, wenn es sich um eine kompliziertere Zuordnung als eine Änderung des Namespacenamens handelt. Wenn Ihre Klasse nicht aufgeführt ist, handelt es sich bei der Zuordnung nur um eine Namespaceänderung. Wenn Sie den Namespacenamen Ihrer Klasse finden, finden Sie auch den entsprechenden Namen des UWP-Namespaces. Ihre Klasse ist in diesem Namespace enthalten. Wenn der Namespace nicht aufgeführt ist, hat sich dessen Name nicht geändert.
 
-**Hinweis**  Windows10 unterstützt einen deutlich größeren Teil von .NET Framework als Windows Phone Store-Apps. Windows10 verfügt beispielsweise über mehrere System.ServiceModel.\*-Namespaces sowie über System.Net, System.Net.NetworkInformation und System.Net.Sockets.
-Außerdem profitieren Sie in einer Windows 10-App von .NET Native. Dabei handelt es sich um eine fortschrittliche Kompilierungstechnologie, mit der MSIL-Code in Computercode für die systemeigene Ausführung konvertiert wird. .NET Native-Apps starten schneller, verbrauchen weniger Arbeitsspeicher und benötigen weniger Akkuenergie als ihre MSIL-Gegenstücke.
+**Hinweis:** Windows 10 unterstützt einen deutlich größeren von .NET Framework als Windows Phone Store-Apps. Windows 10 verfügt beispielsweise über mehrere System.ServiceModel.\* Namespaces als auch System.Net, System.Net.NetworkInformation und System.Net.Sockets.
+Darüber hinaus in einer Windows 10-app profitieren Sie von .NET Native, die eine ahead-des-kompilierungstechnologie, mit der MSIL nativ-Computercode konvertiert. .NET Native-Apps starten schneller, verbrauchen weniger Arbeitsspeicher und benötigen weniger Akkuenergie als ihre MSIL-Gegenstücke.
 
-| Windows Phone Silverlight | Windows-Runtime |
+| WindowsPhone Silverlight | Windows-Runtime |
 | ------------------------- | --------------- |
 | Werbung | |
 | **Microsoft.Advertising.Mobile.UI.AdControl**-Klasse | [AdControl](http://msdn.microsoft.com/library/advertising-windows-sdk-api-reference-adcontrol.aspx)-Klasse |

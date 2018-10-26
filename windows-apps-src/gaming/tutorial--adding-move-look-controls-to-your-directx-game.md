@@ -6,19 +6,18 @@ ms.assetid: 4b4d967c-3de9-8a97-ae68-0327f00cc933
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Bewegungs-/Blicksteuerungen, Steuerelemente
-ms.openlocfilehash: 40af05538aa6a6fff6e159fe8aa8812090e8b44b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 219d014eb03803ace440dc1c1773043a9ecbc99f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "235309"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5566141"
 ---
 # <a name="span-iddevgamingtutorialaddingmove-lookcontrolstoyourdirectxgamespanmove-look-controls-for-games"></a><span id="dev_gaming.tutorial__adding_move-look_controls_to_your_directx_game"></span>Bewegungs-/Blicksteuerungen für Spiele
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Hier erfahren Sie, wie Sie Ihrem DirectX-Spiel herkömmliche Bewegungs-/Blicksteuerungen für Maus und Tastatur (auch als Maussteuerungen bezeichnet) hinzufügen.
 
@@ -580,14 +579,11 @@ myFirstPersonCamera->SetViewParameters(
 
 Herzlichen Glückwunsch! Sie haben einfache Bewegungs-/Blicksteuerungen für Touchscreens und Tastatur-/Mauseingabe in Ihrem Spiel implementiert.
 
-> **Hinweis**  
-Dieser Artikel ist für Windows10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
- 
 
- 
+ 
 
- 
+ 
 
 
 

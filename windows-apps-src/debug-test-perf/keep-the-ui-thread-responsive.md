@@ -6,19 +6,17 @@ description: Benutzer erwarten, dass eine App beim Durchführen einer Berechnung
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: d5be2a8ea14f35d048b4402f2cfb1018d5998c3d
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: 7884c7187bf127e15aaaed38a55e5f9827a3990d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894640"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567023"
 ---
 # <a name="keep-the-ui-thread-responsive"></a>Aufrechterhalten der Reaktionsfähigkeit des UI-Threads
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Benutzer erwarten, dass eine App beim Durchführen einer Berechnung reaktionsfähig bleibt, unabhängig vom jeweiligen Computertyp. Das bedeutet für jede App etwas anderes. Für einige Apps bedeutet dies z.B. Folgendes: realistischere physische Effekte bereitstellen, Daten vom Datenträger oder aus dem Internet schneller laden, komplexe Szenen schnell darstellen, schnell zwischen Seiten navigieren, Anweisungen im Nu finden oder schnelles Verarbeiten von Daten. Unabhängig von der Art der Berechnung möchten Benutzer, dass die App auf ihre Eingabe reagiert. Es stört sie, wenn die App scheinbar nicht reagiert, während sie "denkt".
 
@@ -26,7 +24,7 @@ Ihre App ist ereignisgesteuert, was bedeutet, dass Ihr Code in Reaktion auf ein 
 
 Sie müssen den UI-Thread verwenden, um fast alle Änderungen am UI-Thread vorzunehmen, einschließlich der Erstellung von UI-Typen und des Zugriffs auf ihre Member. Sie können die UI nicht aus einem Hintergrundthread aktualisieren, können jedoch mit [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) eine Nachricht posten, damit der Code dort ausgeführt wird.
 
-> **Hinweis**  Die einzige Ausnahme besteht darin, dass es einen separaten Renderthread gibt, der UI-Änderungen ohne Auswirkungen auf die Eingabeverarbeitung oder auf das Basislayout anwenden kann. Viele Animationen und Übergänge, die sich nicht auf das Layout auswirken, können z. B. auf diesem Renderthread ausgeführt werden.
+> **Hinweis:** die einzige Ausnahme besteht darin, einen separaten Renderthread, die UI-Änderungen anwenden können, die ohne Auswirkungen auf die Eingabeverarbeitung oder das Basislayout vorhanden ist. Viele Animationen und Übergänge, die sich nicht auf das Layout auswirken, können z. B. auf diesem Renderthread ausgeführt werden.
 
 ## <a name="delay-element-instantiation"></a>Verzögern der Element-Instanziierung
 
@@ -45,7 +43,7 @@ Zur Verbesserung der Reaktionsfähigkeit der App stellt die Plattform asynchrone
 
 Schreiben Sie Ereignishandler, die schnell zurückgegeben werden. In Fällen, in denen umfassende Arbeiten vorgenommen werden müssen, sollten Sie sie in einem Hintergrundthread planen und zurückgeben.
 
-Mit dem Operator **await** in C#, dem Operator **Await** in Visual Basic oder mit Delegaten in C++ können Sie Arbeit auch asynchron planen. Dies garantiert jedoch nicht, dass die geplante Arbeit in einem Hintergrundthread ausgeführt wird. Viele der UWP-APIs planen für Sie die Arbeit im Hintergrundthread, wenn Sie Ihren App-Code jedoch nur mit **await** oder einem Delegaten aufrufen, führen Sie diesen Delegaten oder diese Methode in einem UI-Thread aus. Wenn Sie Ihren App-Code in einem Hintergrundthread ausführen möchten, müssen Sie dies explizit angeben. In C# und Visual Basic können Sie dies erreichen, indem Sie Code an [**Task.Run**](https://msdn.microsoft.com/library/windows/apps/xaml/system.threading.tasks.task.run.aspx) übergeben.
+Mit dem Operator **await** in C#, dem Operator **Await** in Visual Basic oder mit Delegaten in C++ können Sie Arbeit auch asynchron planen. Dies garantiert jedoch nicht, dass die geplante Arbeit in einem Hintergrundthread ausgeführt wird. Viele der UWP-APIs planen für Sie die Arbeit im Hintergrundthread, wenn Sie Ihren App-Code jedoch nur mit **await** oder einem Delegaten aufrufen, führen Sie diesen Delegaten oder diese Methode in einem UI-Thread aus. Wenn Sie Ihren App-Code in einem Hintergrundthread ausführen möchten, müssen Sie dies explizit angeben. In c# und Visual Basic können Sie dies erreichen, indem Sie Code an [**Task.Run**](https://msdn.microsoft.com/library/windows/apps/xaml/system.threading.tasks.task.run.aspx)übergeben.
 
 Denken Sie daran, dass nur aus dem UI-Thread auf UI-Elemente zugegriffen werden kann. Verwenden Sie den UI-Thread für den Zugriff auf UI-Elemente vor dem Starten der Hintergrundverarbeitung und/oder der Verwendung von [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) oder [**CoreDispatcher.RunIdleAsync**](https://msdn.microsoft.com/library/windows/apps/Hh967918) im Hintergrundthread.
 
@@ -105,7 +103,7 @@ public class AsyncExample
 
 In diesem Beispiel wird der `NextMove-Click`-Handler bei **await** zurückgegeben, damit der UI-Thread reaktionsfähig bleibt. Die Ausführung wird jedoch in diesem Handler fortgesetzt, nachdem `ComputeNextMove` abgeschlossen ist (in einem Hintergrundthread ausgeführt). Der restliche Code im Handler aktualisiert die UI mit den Ergebnissen.
 
-> **Hinweis**  Es gibt darüber hinaus eine [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/BR229621)- und eine [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.aspx)-API für die UWP, die für ähnliche Szenarien verwendet werden können. Weitere Informationen finden Sie unter [Threading und asynchrone Programmierung](https://msdn.microsoft.com/library/windows/apps/Mt187340).
+> **Hinweis:** es gibt auch eine [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/BR229621) und [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.aspx) API für die UWP, die für ähnliche Szenarien verwendet werden kann. Weitere Informationen finden Sie unter [Threading und asynchrone Programmierung](https://msdn.microsoft.com/library/windows/apps/Mt187340).
 
 ## <a name="related-topics"></a>Verwandte Themen
 
