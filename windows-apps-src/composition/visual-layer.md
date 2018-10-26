@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 2dd8c53dad735cf1094410bf97a81f6b0247bdc7
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5545744"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5666486"
 ---
 # <a name="visual-layer"></a><span data-ttu-id="26c29-104">Visuelle Ebene</span><span class="sxs-lookup"><span data-stu-id="26c29-104">Visual layer</span></span>
 

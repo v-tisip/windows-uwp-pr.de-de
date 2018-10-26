@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Analyse-API, CAB herunterladen
 ms.localizationpriority: medium
 ms.openlocfilehash: af32a994f8dbfc7563c56f853bc0226f0da45940
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5558159"
+ms.locfileid: "5641891"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-app"></a><span data-ttu-id="f4cd6-104">Herunterladen der CAB-Datei bei einem Fehler in Ihrer App</span><span class="sxs-lookup"><span data-stu-id="f4cd6-104">Download the CAB file for an error in your app</span></span>
 

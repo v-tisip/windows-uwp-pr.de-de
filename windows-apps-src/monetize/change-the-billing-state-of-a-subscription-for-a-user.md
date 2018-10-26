@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Einkaufs-API, Abonnements
 ms.localizationpriority: medium
 ms.openlocfilehash: 8daec4928867c92734fc3f6322836eb923aeda21
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5549662"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5641734"
 ---
 # <a name="change-the-billing-state-of-a-subscription-for-a-user"></a><span data-ttu-id="a37a4-104">Ändern des Abrechnungszustands eines Abonnements für Benutzer</span><span class="sxs-lookup"><span data-stu-id="a37a4-104">Change the billing state of a subscription for a user</span></span>
 

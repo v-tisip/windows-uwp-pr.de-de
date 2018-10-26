@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: af172b67a3981b61f4f86078710d87f760f9be3b
-ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5594151"
+ms.locfileid: "5666506"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a><span data-ttu-id="1c5ff-104">Bildschirmgrößen und Breakpoints</span><span class="sxs-lookup"><span data-stu-id="1c5ff-104">Screen sizes and breakpoints</span></span>
 

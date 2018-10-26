@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP, App-Installer, AppInstaller, querladen, verwandte Gruppe, optionale Pakete
 ms.localizationpriority: medium
 ms.openlocfilehash: f3da1f4f393eea1362b6e59d2ad7e9a2a97bc33b
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5545502"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5666516"
 ---
 # <a name="install-uwp-apps-with-app-installer"></a><span data-ttu-id="52f90-104">Installieren von UWP-Apps mit dem App-Installer</span><span class="sxs-lookup"><span data-stu-id="52f90-104">Install UWP apps with App Installer</span></span>
 

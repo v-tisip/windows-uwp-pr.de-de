@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, Uwp, animation
 ms.localizationpriority: medium
 ms.openlocfilehash: bf6d3f16c7b240ca370c01a787fef09862f35863
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5568817"
+ms.locfileid: "5641202"
 ---
 # <a name="time-based-animations"></a><span data-ttu-id="8ffa4-104">Zeitbasierte Animationen</span><span class="sxs-lookup"><span data-stu-id="8ffa4-104">Time based animations</span></span>
 

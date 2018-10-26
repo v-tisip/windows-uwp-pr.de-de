@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b79bfa9ecdf76d2d59e3c0991240d88599dbe6dd
-ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5605223"
+ms.locfileid: "5638033"
 ---
 # <a name="open-files-and-folders-with-a-picker"></a><span data-ttu-id="998da-105">Öffnen von Dateien und Ordnern mit einer Auswahl</span><span class="sxs-lookup"><span data-stu-id="998da-105">Open files and folders with a picker</span></span>
 

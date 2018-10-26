@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Flight-Übermittlung, Aktualisieren
 ms.localizationpriority: medium
 ms.openlocfilehash: c6e1cd9f1496485f0e7792d95ceb019406e47c89
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5544342"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5683910"
 ---
 # <a name="update-a-package-flight-submission"></a><span data-ttu-id="450eb-104">Aktualisieren einer Flight-Paketübermittlung</span><span class="sxs-lookup"><span data-stu-id="450eb-104">Update a package flight submission</span></span>
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, datentypen
 ms.localizationpriority: medium
 ms.openlocfilehash: 5aa6e17fcd95813b6abe05e9e42ad7c86657159f
-ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5594757"
+ms.locfileid: "5639255"
 ---
 # <a name="standard-c-data-types-and-cwinrt"></a><span data-ttu-id="6318e-104">C++-Standarddatentypen und C++/WinRT</span><span class="sxs-lookup"><span data-stu-id="6318e-104">Standard C++ data types and C++/WinRT</span></span>
 

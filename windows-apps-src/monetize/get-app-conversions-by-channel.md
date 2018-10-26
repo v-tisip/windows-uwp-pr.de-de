@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, App-Konversionen, Kanäle
 ms.localizationpriority: medium
 ms.openlocfilehash: 60e166b70c6a2aacf20673b30461002f3aa61305
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5569681"
+ms.locfileid: "5639984"
 ---
 # <a name="get-app-conversions-by-channel"></a><span data-ttu-id="21ad4-104">Abrufen von App-Konvertierungen nach Kanal</span><span class="sxs-lookup"><span data-stu-id="21ad4-104">Get app conversions by channel</span></span>
 

@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a721e618864155e4eec66d222e8eeafa2e0ca038
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5557041"
+ms.locfileid: "5641140"
 ---
 # <a name="select-contacts"></a><span data-ttu-id="4173a-104">Auswählen von Kontakten</span><span class="sxs-lookup"><span data-stu-id="4173a-104">Select contacts</span></span>
 

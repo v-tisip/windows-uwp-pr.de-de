@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Einrichtung, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 9100e80e0b4ac436ae872698e94fe29e5c8cab46
-ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5617849"
+ms.locfileid: "5638303"
 ---
 # <a name="set-up-the-game-project"></a><span data-ttu-id="f8227-104">Einrichten des Spieleprojekts</span><span class="sxs-lookup"><span data-stu-id="f8227-104">Set up the game project</span></span>
 

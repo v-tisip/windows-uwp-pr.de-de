@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 4bec4bd5d35fc2bb3013b37c1386520a769ddeb6
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5571035"
+ms.locfileid: "5639722"
 ---
 # <a name="xuid-directive"></a><span data-ttu-id="25388-105">x:Uid-Direktive</span><span class="sxs-lookup"><span data-stu-id="25388-105">x:Uid directive</span></span>
 

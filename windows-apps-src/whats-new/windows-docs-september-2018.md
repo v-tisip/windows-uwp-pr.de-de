@@ -8,11 +8,11 @@ ms.date: 09/10/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 918fd0208d6af17c25ad184a856b2a87a6f61791
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5557593"
+ms.locfileid: "5639222"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a><span data-ttu-id="dec09-104">Was ist neu in der Windows-Entwicklerdokumentation im September 2018</span><span class="sxs-lookup"><span data-stu-id="dec09-104">What's New in the Windows Developer Docs in September 2018</span></span>
 

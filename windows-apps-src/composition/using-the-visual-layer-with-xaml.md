@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 1f25cda10d5fde88bbe2cff75406cc0454780a5b
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5559326"
+ms.locfileid: "5640406"
 ---
 # <a name="using-the-visual-layer-with-xaml"></a><span data-ttu-id="bd10b-104">Benutzung des Visual Layer mit XAML</span><span class="sxs-lookup"><span data-stu-id="bd10b-104">Using the Visual Layer with XAML</span></span>
 
