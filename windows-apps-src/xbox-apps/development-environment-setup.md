@@ -5,17 +5,15 @@ description: Schritte zum Einrichten und Testen der Umgebung für die UWP-Entwic
 ms.author: scotmi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.assetid: 8801c0d9-94a5-41a2-bec3-14f523d230df
 ms.localizationpriority: medium
-ms.openlocfilehash: f2b8792832bd4014732ee0535ccaa74b2a3e00d3
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 2234b7d39f130da03562176f0df878701d524635
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1689866"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568662"
 ---
 # <a name="set-up-your-uwp-on-xbox-development-environment"></a>Einrichten der UWP-Entwicklungsumgebung auf Xbox
 
@@ -27,7 +25,7 @@ In diesem Artikel werden die Schritte zum Einrichten und Testen der Entwicklungs
 
 ## <a name="visual-studio-setup"></a>Einrichten von Visual Studio
 
-1. Installieren Sie Visual Studio 2017 oder Visual Studio 2015 Update 3. Weitere Informationen und Downloads für die Installation finden Sie unter [Downloads und Tools für Windows 10](https://dev.windows.com/downloads).
+1. Installieren Sie Visual Studio 2017 oder Visual Studio 2015 Update 3, die neueste Version von Visual Studio. Weitere Informationen und Downloads für die Installation finden Sie unter [Downloads und Tools für Windows 10](https://dev.windows.com/downloads). Es wird empfohlen, dass Sie die neueste Version von Visual Studio verwenden, damit Sie die neuesten Updates für Entwickler und Sicherheit erhalten können.
 
 2. Wenn Sie Visual Studio2017 erneut installieren, stellen Sie sicher, dass Sie die Arbeitsauslastung **Entwicklung für die universelle Windows-Plattform** auswählen. Wenn Sie ein C++-Entwickler sind, stellen Sie sicher, dass Sie auch das Kontrollkästchen ** 	UWP-Tools für C++** im Bereich **Zusammenfassung** rechts unter **Entwicklung für die universelle Windows-Plattform** wählen. Es ist nicht Teil der Standardinstallation.
 

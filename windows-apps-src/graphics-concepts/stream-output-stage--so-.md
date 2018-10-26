@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 30c3ed335360d7b259c045722b65bb08a71b6e0c
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: a86aa5a78bc4df9deaeea239356345c33736d942
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044039"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568843"
 ---
 # <a name="stream-output-so-stage"></a>Streamausgabephase (SO)
 
@@ -47,7 +45,7 @@ Vertexdaten aus einer vorherigen Shaderphase.
 
 Die Streamausgabephase (SO) gibt (oder streamt) kontinuierlich Vertexdaten aus der vorherigen aktiven Phase, z.B. der Geometry-Shaderphase (GS), in einen oder mehrere Puffer im Arbeitsspeicher aus. Wenn die Geometry-Shaderphase (GS) inaktiv ist, gibt die Streamausgabephase (SO) kontinuierlich Vertexdaten aus der Domänen-Shaderphase (DS) an Puffer im Arbeitsspeicher aus (oder wenn DS auch inaktiv ist, aus der Vertex-Shaderphase (VS)).
 
-Wenn ein Streifen Dreieck oder in der Zeile in die Phase Eingabe Assembler (IA) gebunden ist, wird jede Streifen in eine Liste konvertiert, bevor sie out gestreamt werden. Scheitelpunkte werden immer als vollständige Primitives (beispielsweise 3 Scheitelpunkte zu einem Zeitpunkt für Dreiecke); ausgegeben. Unvollständige Primitives werden nie out gestreamt. Grundtypen mit Nähe die Nähe Daten vor streaming von Daten zu löschen.
+Wenn ein Dreiecks- oder zeilenstrip an die Phase Eingabe-Assembler (IA) gebunden ist, wird jeder Strip in eine Liste konvertiert, bevor er gestreamt wird. Vertices werden immer als vollständige Grundtypen (z. B. 3 Vertices für Dreiecke gleichzeitig); ausgegeben. Unvollständige Grundtypen werden niemals gestreamt. Angrenzende Grundtypen verwerfen die angrenzenden Daten vor dem streaming out.
 
 Die Streamausgabephase unterstützt gleichzeitig bis zu 4Puffer.
 
@@ -59,9 +57,9 @@ Die Streamausgabephase unterstützt gleichzeitig bis zu 4Puffer.
 
 [Grafikpipeline](graphics-pipeline.md)
 
- 
+ 
 
- 
+ 
 
 
 

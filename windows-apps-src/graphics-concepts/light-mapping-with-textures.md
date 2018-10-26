@@ -8,20 +8,18 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d5d4a5e5a9fa656737ae86451a38a00edbe99c92
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 9bbb723cc039d6ecca8a5ebcd30ef03559076934
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652449"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570830"
 ---
 # <a name="light-mapping-with-textures"></a>Lichtzuordnung mit Texturen
 
 
-Eine Lichtzuordnung ist eine Textur oder Texturgruppe, die Informationen über Licht in einer 3D-Szene enthält. Lichtzuordnungen ordnen Licht- und Schattenbereiche Grundtypen zu. Multipass und das Mischen mehrerer Texturen ermöglichen Ihrer Anwendung, Szenen mit einer realistischeren Darstellung zu rendern als mit Schattierungstechniken.
+Eine Lichtzuordnung ist eine Textur oder Texturgruppe, die Informationen über das Licht in einer 3D-Szene enthält. Lichtzuordnungen ordnen Licht- und Schattenbereiche Grundtypen zu. Multipass und das Mischen mehrerer Texturen ermöglichen Ihrer Anwendung, Szenen mit einer realistischeren Darstellung zu rendern als mit Schattierungstechniken.
 
 Damit eine Anwendung eine 3D-Szene realistisch rendern kann, muss der Effekt von Lichtquellen in der Darstellung der Szene berücksichtigt werden. Obwohl Techniken wie Flat und Gouraud Shading in dieser Hinsicht wertvolle Tools darstellen, sind sie für Ihre Anforderungen möglicherweise unzureichend. Direct3D unterstützt auch Multipass und das Mischen mehrerer Texturen. Mit diesen Funktionen kann Ihre Anwendung Szenen in einer realistischeren Darstellung rendern als nur mit Shading-Techniken gerenderte Szenen. Durch die Anwendung einer oder mehrerer Lichtzuordnungen kann Ihre Anwendung Licht- und Schattenbereiche ihren Grundtypen zuordnen.
 
@@ -69,16 +67,16 @@ Informationen zur Verwendung der Texturverblendung in Direct3D zum Ausführen ei
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
 
 
 [Texturen](textures.md)
 
- 
+ 
 
- 
+ 
 
 
 

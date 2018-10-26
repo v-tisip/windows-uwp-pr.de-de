@@ -7,16 +7,14 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 4525cf151d53790a44995bd8a8dd77a88332cdd0
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: d02bfb8b8bd112a969895d4f2bd5d324fce9d6b8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1673447"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567642"
 ---
 # <a name="periodic-notification-overview"></a>Übersicht über regelmäßige Benachrichtigungen
  
@@ -29,9 +27,9 @@ Regelmäßige Benachrichtigungen – auch als abgerufene Benachrichtigungen beze
 
 Regelmäßige Benachrichtigungen bieten Ihnen Live-Kachelaktualisierungen mit minimaler Investition in Clouddienst und Client. Sie stellen auch eine gute Methode zum Verteilen desselben Inhalts an eine große Zielgruppe dar.
 
-**Hinweis**   Wenn Sie weitere Informationen benötigen, laden Sie das [Beispiel für Pushbenachrichtigungen und regelmäßige Benachrichtigungen](http://go.microsoft.com/fwlink/p/?linkid=231476) für Windows8.1 herunter, verwenden Sie den Quellcode in Ihrer App für Windows10.
+**Hinweis:**  Weitere durch [Pushbenachrichtigungen und regelmäßige benachrichtigungsbeispiel](http://go.microsoft.com/fwlink/p/?linkid=231476) für Windows8.1 heruntergeladen und dessen Quellcode in Ihrer Windows 10-app wiederverwenden.
 
- 
+ 
 
 ## <a name="how-it-works"></a>Funktionsweise
 
@@ -110,4 +108,4 @@ Sie müssen einen eindeutigen URI für jede Benachrichtigung angeben, die Window
 * [Richtlinien für regelmäßige Benachrichtigungen](https://msdn.microsoft.com/library/windows/apps/hh761461)
 * [So wird's gemacht: Einrichten regelmäßiger Benachrichtigungen für Signale](https://msdn.microsoft.com/library/windows/apps/hh761476)
 * [So wird's gemacht: Einrichten regelmäßiger Benachrichtigungen für Kacheln](https://msdn.microsoft.com/library/windows/apps/hh761476)
- 
+ 

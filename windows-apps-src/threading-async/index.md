@@ -6,16 +6,14 @@ description: Mithilfe von Threading und der asynchronen Programmierung kann Ihre
 ms.author: twhitney
 ms.date: 05/14/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, asynchron, Threads, Threading
 ms.localizationpriority: medium
-ms.openlocfilehash: 9bdbc9e73d2ffe25ac848a1ed1b88a649214b9f5
-ms.sourcegitcommit: e4627686138ec8c885696c4c511f2f05195cf8ff
-ms.translationtype: HT
+ms.openlocfilehash: f01142695b676ebadea2f227cf5f8beb65ba6f9c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "1893492"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570399"
 ---
 # <a name="threading-and-async-programming"></a>Threading und asynchrone Programmierung
 Mithilfe von Threading und der asynchronen Programmierung kann Ihre App Aufgaben asynchron in parallelen Threads ausführen.
@@ -34,7 +32,7 @@ Der Threadpool bietet eine höhere Effizienz beim Verwalten von Threads, da der 
 
 | Thema                                                                                                          | Beschreibung                         |
 |----------------------------------------------------------------------------------------------------------------|-------------------------------------|
-| [Asynchrone Programmierung (UWP-Apps)](asynchronous-programming-universal-windows-platform-apps.md)              | In diesem Thema werden die asynchrone Programmierung auf der Universellen Windows-Plattform (UWP) und ihre Darstellung in C#, Microsoft Visual Basic.NET, VisualC++-Komponentenerweiterungen (C++/CX) und JavaScript erläutert. |
+| [Asynchrone Programmierung (UWP-Apps)](asynchronous-programming-universal-windows-platform-apps.md)              | In diesem Thema wird beschrieben, asynchrone Programmierung in die universelle Windows-Plattform (UWP) und ihre Darstellung in c#, Microsoft Visual Basic, für VisualC++-komponentenerweiterungen (C++ / CX), und JavaScript. |
 | [Asynchrone Programmierung in C++/CX (UWP-Apps)](asynchronous-programming-in-cpp-universal-windows-platform-apps.md)| In diesem Artikel wird die empfohlene Vorgehensweise zur Verwendung asynchroner Methoden in C++/CX mithilfe der <code>task</code>-Klasse beschrieben, die im <code>concurrency</code>-Namespace in „ppltasks.h“ definiert wird. |
 | [Bewährte Methoden zum Verwenden des Threadpools](best-practices-for-using-the-thread-pool.md)                         | In diesem Thema werden bewährte Methoden für die Verwendung des Threadpools beschrieben. |
 | [Aufrufen asynchroner APIs in C# oder Visual Basic](call-asynchronous-apis-in-csharp-or-visual-basic.md)             | Die Universelle Windows-Plattform (UWP) enthält viele asynchrone APIs. Diese sorgen dafür, dass Ihre App reaktionsfähig bleibt, wenn sie über einen längeren Zeitraum mit einer Aufgabe beschäftigt ist. In diesem Thema wird die Verwendung asynchroner Methoden aus der Universellen Windows-Plattform (UWP) in C# oder Microsoft Visual Basic erläutert. |

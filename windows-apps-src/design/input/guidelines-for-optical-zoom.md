@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: b49afdd4a9fe1db28c8195bdf166d6a74e153020
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: f1643638eaf7eb625defe1f25b44cae20faf0a5c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653799"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568266"
 ---
 # <a name="optical-zoom-and-resizing"></a>Optischer Zoom und Größenänderung
 
@@ -41,10 +39,9 @@ Die folgenden Diagramme verdeutlichen die Unterschiede zwischen Größenänderun
 
 ![Wenn die Finger aufeinander zu bewegt werden, wird das Objekt verkleinert, beim Spreizen der Finger wird es vergrößert.](images/objectresize.png)
 
-**Hinweis**  
-Der optische Zoom ist nicht mit dem [semantischen Zoom](../controls-and-patterns/semantic-zoom.md) zu verwechseln. Zwar werden bei beiden Interaktionen dieselben Gesten ausgeführt, jedoch bezieht sich der semantische Zoom auf die Darstellung von und die Navigation in Inhalten in einer einzelnen Ansicht (z.B. in der Ordnerstruktur eines Computers, einer Dokumentbibliothek oder einem Fotoalbum).
+**Hinweis:**  optischen Zoom dürfen nicht mit dem [Semantischen Zoom](../controls-and-patterns/semantic-zoom.md)verwechselt werden. Zwar werden bei beiden Interaktionen dieselben Gesten ausgeführt, jedoch bezieht sich der semantische Zoom auf die Darstellung von und die Navigation in Inhalten in einer einzelnen Ansicht (z.B. in der Ordnerstruktur eines Computers, einer Dokumentbibliothek oder einem Fotoalbum).
 
- 
+ 
 
 ## <a name="dos-and-donts"></a>Empfohlene und nicht empfohlene Vorgehensweisen
 
@@ -70,10 +67,9 @@ Beachten Sie die folgenden Richtlinien für Apps, die entweder Größenänderung
     -   Zeichnungsprogramme, in denen in der Größe anpassbare Elemente in einem Zeichenbereich oder auf einer Zeichenfläche, dessen bzw. deren Größe geändert werden kann, angezeigt werden können
     -   Webseiten mit einem eingebetteten Objekt, z.B. einer Karte
 
-    **Hinweis**  
-    In allen Fällen wird die Größe des Inhaltsbereichs geändert, es sei denn, alle Berührungspunkte befinden sich in dem in der Größe anpassbaren Objekt.
+    **Hinweis:**  In allen Fällen wird der Inhaltsbereich angepasst, es sei denn, alle Berührungspunkte innerhalb der Größe anpassbaren Objekt sind.
 
-     
+     
 
 ## <a name="related-articles"></a>Verwandte Artikel
 
@@ -93,9 +89,9 @@ Beachten Sie die folgenden Richtlinien für Apps, die entweder Größenänderung
 * [Eingabe: Beispiel für Windows8-Bewegungen](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Eingabe: Beispiel für Manipulationen und Gesten (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Beispiel für die DirectX-Fingereingabe](http://go.microsoft.com/fwlink/p/?LinkID=231627)
- 
+ 
 
- 
+ 
 
 
 

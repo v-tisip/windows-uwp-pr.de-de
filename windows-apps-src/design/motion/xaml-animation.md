@@ -6,16 +6,14 @@ description: Verwenden Sie die Animationen aus der Windows-Runtime-Animationsbib
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 23af2883e0e1bc4fe8aa67bb72a8690082369ab4
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: d7c3c4a9e46ce38298d7dcdd50477c4de0e9960c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1656275"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570061"
 ---
 # <a name="animations-in-xaml"></a>Animationen in XAML
 
@@ -138,7 +136,7 @@ In der folgenden Tabelle werden die Animationen zusammengefasst, die zum Erstell
 | Inhalt eines UI-Containers | [**ContentThemeTransition**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.contentthemetransition.contentthemetransition) |
 | Für Steuerelemente oder wenn keine andere Animation zutrifft | [**FadeInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.fadeinthemeanimation.fadeinthemeanimation.aspx) und [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) |
 
- 
+ 
 
 ## <a name="transition-animation-examples"></a>Beispiele zu Übergangsanimationen
 
@@ -307,7 +305,7 @@ Es stehen verschiedene Übergangseffekte zur Verfügung, um UI-Elemente beim Hin
 | [**ReorderThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210409) | Stellt animiertes Übergangsverhalten für Änderungen in der Anordnung der Elemente von Listenansicht-Steuerelementen bereit. Dies ist typischerweise die Folge von Drag & Drop-Vorgängen. Die Animationsmerkmale können sich je nach Steuerelement und Design unterscheiden. |
 | [**RepositionThemeTransition**](https://msdn.microsoft.com/library/windows/apps/BR210429) | Stellt animiertes Übergangsverhalten für Positionsänderungen von Steuerelementen bereit. |
 
- 
+ 
 
 ## <a name="theme-animation-examples"></a>Beispiele zu Designanimationen
 
@@ -353,9 +351,9 @@ void BlankPage::Rectangle_Tapped(Object^ sender, PointerRoutedEventArgs^ e)
 
 Anders als Übergangsanimationen besitzt eine Designanimation keinen integrierten Trigger (der Übergang), der sie automatisch ausführt. Verwenden Sie ein [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490), um eine Designanimation bei Definition in XAML zu integrieren. Außerdem können Sie das Standardverhalten der Animation ändern. Sie können z. B. die Geschwindigkeit beim Ausblenden verringern, indem Sie den [**Duration**](https://msdn.microsoft.com/library/windows/apps/BR243207)-Zeitwert für [**FadeOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/BR210302) erhöhen.
 
-**Hinweis**  Zur Veranschaulichung grundlegender Animationsverfahren verwenden wir App-Code, um die Animation durch den Aufruf von [**Storyboard**](https://msdn.microsoft.com/library/windows/apps/BR210490)-Methoden zu starten. Sie können mit den **Storyboard**-Methoden [**Begin**](https://msdn.microsoft.com/library/windows/apps/BR210491), [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.stop), [**Pause**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.pause.aspx) und [**Resume**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.resume.aspx) steuern, wie die **Storyboard**-Animationen ausgeführt werden. Bibliotheksanimationen werden so jedoch normalerweise nicht in Apps integriert. Integrieren Sie stattdessen Bibliotheksanimationen in die XAML-Stile und -Vorlagen für Steuerelemente oder Elemente. Vorlagen und Ansichtszustände sind etwas komplexer. Die Verwendung von Bibliotheksanimationen in Ansichtszuständen wird jedoch im Thema [Storyboardanimationen für visuelle Zustände](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808) behandelt.
+**Hinweis:** zur Veranschaulichung grundlegender animationsverfahren, verwenden wir app-Code zum Starten der Animation durch Aufrufen der Methoden des [**Storyboards**](https://msdn.microsoft.com/library/windows/apps/BR210490). Sie können mit den **Storyboard**-Methoden [**Begin**](https://msdn.microsoft.com/library/windows/apps/BR210491), [**Stop**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.stop), [**Pause**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.pause.aspx) und [**Resume**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.storyboard.resume.aspx) steuern, wie die **Storyboard**-Animationen ausgeführt werden. Bibliotheksanimationen werden so jedoch normalerweise nicht in Apps integriert. Integrieren Sie stattdessen Bibliotheksanimationen in die XAML-Stile und -Vorlagen für Steuerelemente oder Elemente. Vorlagen und Ansichtszustände sind etwas komplexer. Die Verwendung von Bibliotheksanimationen in Ansichtszuständen wird jedoch im Thema [Storyboardanimationen für visuelle Zustände](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808) behandelt.
 
- 
+ 
 
 Sie können noch eine Reihe weiterer Designanimationen auf UI-Elemente anwenden und so Animationseffekte erreichen. Die Namen dieser APIs enthalten alle „ThemeAnimation“:
 
@@ -376,7 +374,7 @@ Sie können noch eine Reihe weiterer Designanimationen auf UI-Elemente anwenden 
 | [**DrillInThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.drillinthemeanimation) | Stellt eine vorkonfigurierte Animation bereit, die ausgeführt wird, wenn ein Benutzer in einer logischen Hierarchie in Vorwärtsrichtung navigiert, wie von einer Gestaltungsvorlage zu einer Detailseite. |
 | [**DrillOutThemeAnimation**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.animation.drilloutthemeanimation.aspx) | Stellt eine vorkonfigurierte Animation bereit, die ausgeführt wird, wenn ein Benutzer in einer logischen Hierarchie in Rückwärtsrichtung navigiert, wie von einer Detailseite zu einer Gestaltungsvorlage. |
 
- 
+ 
 
 ## <a name="create-your-own-animations"></a>Erstellen eigener Animationen
 
@@ -386,9 +384,9 @@ Damit eine Eigenschaft animiert werden kann, muss es sich um eine *Abhängigkeit
 
 Der größte Bereich einer App-UI-Definition in XAML, in dem benutzerdefinierte Storyboardanimationen definiert werden, ist das Definieren visueller Zustände für Steuerelemente in XAML. Dies erfolgt entweder beim Erstellen einer neuen Steuerelementklasse oder beim erneuten Erstellen einer Vorlage für ein vorhandenes Steuerelement, das visuelle Zustände in der Steuerelementvorlage aufweist. Weitere Informationen finden Sie unter [Storyboardanimationen für visuelle Zustände](https://msdn.microsoft.com/library/windows/apps/xaml/JJ819808).
 
- 
+ 
 
- 
+ 
 
 
 

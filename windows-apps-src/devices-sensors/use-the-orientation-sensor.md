@@ -6,16 +6,14 @@ description: Hier erfahren Sie, wie Sie mithilfe der Ausrichtungssensoren die Au
 ms.author: mukin
 ms.date: 06/06/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: d9a9270ba675b0797344d3370aec433de90d80d5
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 49199a91f6713b3f18928eaafb6875a49deaf451
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "958885"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570674"
 ---
 # <a name="use-the-orientation-sensor"></a>Verwenden des Ausrichtungssensors
 
@@ -48,7 +46,7 @@ Die [**SimpleOrientation**](https://msdn.microsoft.com/library/windows/apps/BR20
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Sie sollten mit XAML (Extensible Application Markup Language), Microsoft VisualC# und Ereignissen vertraut sein.
+Sie sollten mit Extensible Application Markup Language (XAML), Microsoft für VisualC++ c# und Ereignissen vertraut sein.
 
 Das verwendete Gerät oder der Emulator muss einen Ausrichtungssensor unterstützen.
 

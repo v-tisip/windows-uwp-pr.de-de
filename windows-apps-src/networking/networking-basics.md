@@ -6,16 +6,14 @@ ms.assetid: 1F47D33B-6F00-4F74-A52D-538851FD38BE
 ms.author: stwhi
 ms.date: 06/01/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e68d674ecb3ab29170036d1dff6c69ab3ba759c
-ms.sourcegitcommit: ee77826642fe8fd9cfd9858d61bc05a96ff1bad7
-ms.translationtype: HT
+ms.openlocfilehash: 50ac9fcf984fa6c4ebad7e480ebfc2d002256e26
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "2018556"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569691"
 ---
 # <a name="networking-basics"></a>Networking-Grundlagen
 Aktionen, die Sie für eine netzwerkfähige App ausführen müssen.
@@ -40,7 +38,7 @@ In bestimmten Situationen sind möglicherweise weitere Funktionen für Ihre App 
 | **sharedUserCertificates** | Ermöglicht einer App den Zugriff auf Software- und Hardwarezertifikate wie etwa Smartcardzertifikate. Wenn diese Funktion zur Laufzeit aufgerufen wird, muss der Benutzer eine Aktion ausführen (z. B. eine Karte einsetzen oder ein Zertifikat auswählen). <br/> Bei dieser Funktion werden Ihre Software- und Hardwarezertifikate oder eine Smartcard zur Identifikation in der Anwendung verwendet. Diese Funktion kann von Ihrem Arbeitgeber, Ihrer Bank oder Regierungsbehörden zur Identifikation verwendet werden. |
 
 ## <a name="communicating-when-your-app-is-not-in-the-foreground"></a>Kommunikation, wenn Ihre App nicht im Vordergrund ausgeführt wird
-[Unterstützen Ihrer App mit Hintergrundaufgaben](https://msdn.microsoft.com/library/windows/apps/mt299103) enthält allgemeine Informationen zur Verwendung von Hintergrundaufgaben, um Aufgaben auszuführen, während sich Ihre App nicht im Vordergrund befindet. Genauer gesagt muss Ihr Code besondere Schritte vornehmen, damit eine Benachrichtigung erfolgt, wenn es sich dabei nicht um die aktuelle App im Vordergrund handelt und diese Daten über das Netzwerk empfängt. Sie haben in Windows 8 zu diesem Zweck Steuerkanalauslöser verwendet. Diese werden in Windows 10 weiterhin unterstützt. Vollständige Informationen zur Verwendung der Steuerkanalauslöser finden Sie [**hier**](https://msdn.microsoft.com/library/windows/apps/hh701032). Eine neue Technologie in Windows 10 bietet für einige Szenarien eine bessere Funktionalität mit weniger Aufwand wie etwa pushfähige Datenstromsockets: die Socketbroker und Socket-Aktivitätsauslöser.
+[Unterstützen Ihrer App mit Hintergrundaufgaben](https://msdn.microsoft.com/library/windows/apps/mt299103) enthält allgemeine Informationen zur Verwendung von Hintergrundaufgaben, um Aufgaben auszuführen, während sich Ihre App nicht im Vordergrund befindet. Genauer gesagt muss Ihr Code besondere Schritte vornehmen, damit eine Benachrichtigung erfolgt, wenn es sich dabei nicht um die aktuelle App im Vordergrund handelt und diese Daten über das Netzwerk empfängt. Sie in Windows8 zu diesem Zweck Steuerkanalauslöser verwendet, und sie werden in Windows 10 weiterhin unterstützt. Vollständige Informationen zur Verwendung der Steuerkanalauslöser finden Sie [**hier**](https://msdn.microsoft.com/library/windows/apps/hh701032). Eine neue Technologie in Windows 10 bietet eine bessere Funktionalität mit weniger Aufwand für einige Szenarien, wie etwa pushfähige Datenstromsockets: die socketbroker und Socket-aktivitätsauslöser.
 
 Wenn die App [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319), [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882) oder [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906) verwendet, kann sie die Beteiligung eines offenen Sockets an einen vom System bereitgestellten Socketbroker übertragen und sie dann im Vordergrund belassen oder sogar beenden. Wenn eine Verbindung zum übertragenen Socket hergestellt oder Datenverkehr auf diesem Socket empfangen wird, wird Ihre App oder die festgelegten Hintergrundaufgabe aktiviert. Wenn Ihre App nicht ausgeführt wird, wird sie gestartet. Der Socketbroker benachrichtigt Ihre App mittels [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) darüber, dass neuer Datenverkehr eingegangen ist. Ihre App gibt den Socket aus dem Socketbroker frei und verarbeitet den Datenverkehr auf dem Socket. Das heißt, Ihre App beansprucht deutlich weniger Systemressourcen, wenn es aktiv keinen Netzwerkdatenverkehr verarbeitet.
 
@@ -468,7 +466,7 @@ Wenn die erste Anforderung vom Client nicht diesen Wert enthält oder einen Wert
 So werden beim Herstellen einer Verbindung über das Netzwerk die Authentifizierungsanmeldeinformationen bereitgestellt.
 
 ### <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>Bereitstellen eines Clientzertifikats mit der StreamSocket-Klasse
-Die [**Windows.Networking.StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)-Klasse unterstützt die Verwendung von SSL/TLS zum Authentifizieren des Servers, mit dem die App kommuniziert. In bestimmten Fällen muss auch die App selbst mit einem TLS-Clientzertifikat am Server authentifiziert werden. In Windows 10 können Sie ein Clientzertifikat zu dem [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226893)-Objekt bereitstellen (dies muss festgelegt werden, bevor der TLS-Handshake gestartet wird). Wenn der Server das Clientzertifikat anfordert, reagiert Windows mit dem bereitgestellten Zertifikat.
+Die [**Windows.Networking.StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)-Klasse unterstützt die Verwendung von SSL/TLS zum Authentifizieren des Servers, mit dem die App kommuniziert. In bestimmten Fällen muss auch die App selbst mit einem TLS-Clientzertifikat am Server authentifiziert werden. In Windows 10 können Sie ein Clientzertifikat für das Objekt [**StreamSocket.Control**](https://msdn.microsoft.com/library/windows/apps/br226893) bereitstellen (Dies muss festgelegt werden, bevor der TLS-Handshake gestartet wird). Wenn der Server das Clientzertifikat anfordert, reagiert Windows mit dem bereitgestellten Zertifikat.
 
 Hier ist ein Codeausschnitt, in dem die Implementierung dazu dargestellt wird:
 

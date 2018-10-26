@@ -6,18 +6,17 @@ title: Bildmetadaten
 ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: e69508ae558d93281e0170913fa0ccdc5891cc64
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: a3e2f10174412b49ce60f3da6a4bb73b2efc4411
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233664"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569486"
 ---
 # <a name="image-metadata"></a>Bildmetadaten
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In diesem Artikel werden das Lesen und Schreiben von Eigenschaften von Bildmetadaten und das Hinzufügen von Geomarkierungen zu Dateien mithilfe der [**GeotagHelper**](https://msdn.microsoft.com/library/windows/apps/dn903683)-Hilfsklasse erläutert.
@@ -88,9 +87,9 @@ Erstellen Sie ein [**BitmapPropertySet**](https://msdn.microsoft.com/library/win
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Bildverarbeitung](imaging.md)
- 
+ 
 
- 
+ 
 
 
 

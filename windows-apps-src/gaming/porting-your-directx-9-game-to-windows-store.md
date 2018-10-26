@@ -6,19 +6,18 @@ ms.assetid: 536c0b99-cdf3-1527-1ee2-4187f50a2cf0
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Directx 9, Directx 11, Portieren
-ms.openlocfilehash: 9ea27288fd239b2af4b63985a3c8e0ad4055b0b9
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 05549b0f3696067689f7e8fbd05dfb0f8f1bb528
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233710"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5567954"
 ---
 # <a name="port-from-directx-9-to-universal-windows-platform-uwp"></a>Portieren von DirectX9 zur Universellen Windows-Plattform (UWP)
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Dieser Abschnitt enthält Artikel, Übersichten und exemplarische Vorgehensweisen zum Portieren von DirectX 9-Spielen zur Universellen Windows-Plattform (UWP).
 
@@ -36,9 +35,9 @@ Dieser Abschnitt enthält Artikel, Übersichten und exemplarische Vorgehensweise
 -   Die exemplarische Vorgehensweise unter [Portieren einer einfachen Direct3D 9-App zu DirectX 11 und zu UWP](walkthrough--simple-port-from-direct3d-9-to-11-1.md) enthält einen direkten Vergleich von Direct3D 9- und Direct3D 11-Grafikframeworks. Außerdem erhalten Sie dort einen Code zum Einrichten eines App-Fensters und -Viewports.
 -   Antworten auf häufig gestellte Fragen zum Portieren aus DirectX 9 finden Sie unter [DirectX 11.-Portierung – Häufig gestellte Fragen](directx-porting-faq.md).
 
- 
+ 
 
- 
+ 
 
 
 

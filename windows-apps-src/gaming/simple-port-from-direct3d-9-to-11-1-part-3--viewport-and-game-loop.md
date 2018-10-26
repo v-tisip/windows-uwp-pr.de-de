@@ -6,16 +6,14 @@ ms.assetid: 070dd802-cb27-4672-12ba-a7f036ff495c
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, Spiele, portieren, Spielschleife, Direct3D9, DirectX11
 ms.localizationpriority: medium
-ms.openlocfilehash: baf230559ebeb285d5faa3e2de8e38b355638070
-ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
-ms.translationtype: HT
+ms.openlocfilehash: 4db2ed74144ead22643ece17a7496b6267f7e6b8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
-ms.locfileid: "1488844"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569420"
 ---
 # <a name="port-the-game-loop"></a>Portieren der Spielschleife
 
@@ -37,9 +35,9 @@ Zum Einrichten eines Desktopfensters mit einem Direct3D 9-Viewport musste das he
 
 Dagegen verfügt die UWP-Umgebung über ein deutlich einfacheres System. Anstatt ein herkömmliches Fenster einzurichten, wird von einem Microsoft Store-Spiel, für das DirectX verwendet wird, das [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)-Element implementiert. Diese Schnittstelle ist für DirectX-Apps und -Spiele vorhanden, um die direkte Ausführung in einem [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) innerhalb des App-Containers zu ermöglichen.
 
-> **Hinweis**: Von Windows werden verwaltete Zeiger auf Ressourcen bereitgestellt, z.B. auf das Quellanwendungsobjekt und [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225). Informationen finden Sie unter [**Handle to Object Operator (^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
+> **Hinweis:**  Windows werden verwaltete Zeiger auf Ressourcen wie das Quellobjekt für die Anwendung und die [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)quellanwendungsobjekt. Finden Sie unter [**Handle to Object Operator (^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
 
- 
+ 
 
 Ihre main-Klasse muss von [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) erben und die fünf **IFrameworkView**-Methoden implementieren: [**Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495), [**SetWindow**](https://msdn.microsoft.com/library/windows/apps/hh700509), [**Load**](https://msdn.microsoft.com/library/windows/apps/hh700501), [**Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) und [**Uninitialize**](https://msdn.microsoft.com/library/windows/apps/hh700523). Zusätzlich zur Erstellung des **IFrameworkView**-Elements, in dem Ihr Spiel (im Wesentlichen) enthalten ist, müssen Sie eine Factoryklasse implementieren, über die eine Instanz des **IFrameworkView**-Elements erstellt wird. Das Spiel verfügt weiterhin über eine ausführbare Datei mit einer **main()**-Methode. Mithilfe von "main" kann jedoch lediglich die Factory verwendet werden, um die **IFrameworkView**-Instanz zu erstellen.
 
@@ -141,9 +139,9 @@ Lesen Sie sich die folgenden ausführlichen Artikel zur Entwicklung von Microsof
 -   [Audio für Spiele](working-with-audio-in-your-directx-game.md)
 -   [Bewegungs-/Blicksteuerungen für Spiele](tutorial--adding-move-look-controls-to-your-directx-game.md)
 
- 
+ 
 
- 
+ 
 
 
 

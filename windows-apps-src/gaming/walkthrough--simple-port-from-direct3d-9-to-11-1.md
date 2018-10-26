@@ -6,16 +6,14 @@ ms.assetid: d4467e1f-929b-a4b8-b233-e142a8714c96
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Directx, Port, direct3d 9, direct3d 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 97cb8341497ad72ab6b4b4f50a7cfbd7bdb4afb7
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: bd0a8c07be58d670e60aa3a23504d3f5119e6b50
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653099"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569136"
 ---
 # <a name="walkthrough-port-a-simple-direct3d-9-app-to-directx-11-and-universal-windows-platform-uwp"></a>Exemplarische Vorgehensweise Portieren einer einfachen Direct3D 9-App zu DirectX 11 und zur universellen Windows-Plattform (UWP)
 
@@ -50,7 +48,7 @@ In dieser Portierungsübung wird veranschaulicht, wie Sie ein einfaches Renderin
 </tbody>
 </table>
 
- 
+ 
 
 Es werden zwei Codepfade durchgegangen, mit denen jeweils die gleiche grundlegende Grafikaufgabe durchgeführt wird: das Anzeigen eines sich drehenden Würfels mit Vertexschattierung. In beiden Fällen wird mit dem Code der folgende Prozess abgedeckt:
 
@@ -72,7 +70,7 @@ Beachten Sie, dass in dieser exemplarischen Vorgehensweise der Einfachheit halbe
 ## <a name="prerequisites"></a>Voraussetzungen
 
 
-Führen Sie die Schritte unter [Vorbereiten der Entwicklungsumgebung für die Entwicklung von UWP-DirectX-Spielen](prepare-your-dev-environment-for-windows-store-directx-game-development.md) aus. Sie müssen noch keine Vorlage laden, aber Sie benötigen Microsoft Visual Studio 2015, um die Codebeispiele für diese exemplarische Vorgehensweise zu laden.
+Führen Sie die Schritte unter [Vorbereiten der Entwicklungsumgebung für die Entwicklung von UWP-DirectX-Spielen](prepare-your-dev-environment-for-windows-store-directx-game-development.md) aus. Sie benötigen eine Vorlage noch, aber Sie benötigen Microsoft Visual Studio2015 um die Codebeispiele für diese exemplarische Vorgehensweise zu laden.
 
 Lesen Sie sich die Informationen unter [Konzepte und Aspekte der Portierung](porting-considerations.md) durch, um ein besseres Verständnis der in dieser exemplarischen Vorgehensweise verwendeten Programmierkonzepte für DirectX11 und UWP zu entwickeln.
 

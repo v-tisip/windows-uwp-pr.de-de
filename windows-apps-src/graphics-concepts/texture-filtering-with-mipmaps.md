@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: af0c9c7013b663bceb5c3747ff5d5250f62c54c7
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: d32d5a77fe9bc840ea676c7156c1b59e498d07e1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044569"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571639"
 ---
 # <a name="texture-filtering-with-mipmaps"></a>Texturfilterung mit Mipmaps
 
@@ -51,9 +49,9 @@ Anschließend muss Ihre Anwendung das Filterungsverfahren einrichten, das Direct
 
 Mipmap-Texturen werden in 3D-Szenen verwendet, um den Zeitaufwand für das Rendern einer Szene zu verringern. Dazu kommt, dass sie den Realismus einer Szene verbessern. Andererseits erfordern sie jedoch viel Speicherplatz.
 
-**Hinweis** Jede Oberfläche in einer Mipmap-Kette hat halb so große Abmessungen wie die vorherige Oberfläche in der Kette. Wenn der Mipmap der obersten Ebene die Abmessungen 256 x 128 hat, hat der Mipmap der zweiten Ebene 128 x 64, der der dritten Ebene 64 x 32 und so weiter bis 1 x 1. Sie können keine Anzahl von Mipmap-Ebenen anfordern, die dazu führen würde, dass die breite oder die Höhe eines der Mipmaps in der Kette kleiner als 1 wäre. Im einem einfachen Fall einer 4 x 2-Mipmap-Oberfläche auf der obersten Ebene ist der maximal zulässige Wert für Ebenen drei. Die Abmessungen der obersten Ebene sind 4 x 2, die der zweiten Ebene 2 x 1, und die der dritten Ebene sind 1 x 1. Ein Wert von mehr als drei Ebenen führt zu einem Bruchwert der Höhe des Mipmaps der zweiten Ebene und ist daher nicht zulässig.
+**Hinweis:**  jede Oberfläche in einer Mipmap-Kette hat Dimensionen, die halb, die die vorherige Oberfläche in der Kette sind. Wenn der Mipmap der obersten Ebene die Abmessungen 256 x 128 hat, hat der Mipmap der zweiten Ebene 128 x 64, der der dritten Ebene 64 x 32 und so weiter bis 1 x 1. Sie können keine Anzahl von Mipmap-Ebenen anfordern, die dazu führen würde, dass die breite oder die Höhe eines der Mipmaps in der Kette kleiner als 1 wäre. Im einem einfachen Fall einer 4 x 2-Mipmap-Oberfläche auf der obersten Ebene ist der maximal zulässige Wert für Ebenen drei. Die Abmessungen der obersten Ebene sind 4 x 2, die der zweiten Ebene 2 x 1, und die der dritten Ebene sind 1 x 1. Ein Wert von mehr als drei Ebenen führt zu einem Bruchwert der Höhe des Mipmaps der zweiten Ebene und ist daher nicht zulässig.
 
- 
+ 
 
 Direct3D kann die Mipmap-Texturfilterung automatisch ausführen. Anwendungen können manuell eine Mipmap-Kette durchlaufen, um Bitmap-Daten zu jeder Oberfläche in der Kette zu laden. Dies ist häufig der einzige Grund zum Durchlaufen der Kette. Das automatische Generieren von Mipmaps zum Zeitpunkt der Erstellung der Textur nutzt die Hardware-Filterung, da Mipmaps sich im Videospeicher befinden.
 
@@ -62,9 +60,9 @@ Direct3D kann die Mipmap-Texturfilterung automatisch ausführen. Anwendungen kö
 
 [Texturfilterung](texture-filtering.md)
 
- 
+ 
 
- 
+ 
 
 
 

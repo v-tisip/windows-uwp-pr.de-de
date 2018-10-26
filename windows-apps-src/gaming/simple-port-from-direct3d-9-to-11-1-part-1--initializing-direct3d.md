@@ -6,19 +6,18 @@ ms.assetid: 1bd5e8b7-fd9d-065c-9ff3-1a9b1c90da29
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, Spiele, Direct3D 11, Initialisierung, portieren, Direct3D 9
-ms.openlocfilehash: d4c4c905ad7d7452251ad13d95cbdc53b137c6c8
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 5f6aa5bca3ecc242e90b42081a0111358afdfa9b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233661"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571921"
 ---
 # <a name="initialize-direct3d-11"></a>Initialisieren von Direct3D11
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Zusammenfassung**
 
@@ -76,9 +75,9 @@ Zuerst wird das Gerät erstellt. Dazu rufen wir eine Liste der Featureebenen ab,
 
 Nach dem Erstellen des Direct3D11-Geräts und -Kontexts kann die COM-Zeigerfunktion zum Abrufen der jeweils aktuellen Version der Schnittstellen verwendet werden, die über zusätzliche Funktionen verfügt. Dies ist stets zu empfehlen.
 
-> **Hinweis**  D3D\_FEATURE\_LEVEL\_9\_1 (entspricht Shadermodell 2.0) ist die Mindestebene, die vom Windows Store-Spiel unterstützt werden muss. (Die ARM-Pakete des Spiels erhalten keine Zertifizierung, wenn 9\_1 nicht unterstützt wird.) Wenn das Spiel auch einen Renderpfad für die Features von Shadermodell3 enthält, sollten Sie D3D_FEATURE\_LEVEL\_9\_3 in das Array einbeziehen.
+> **Hinweis:**  D3D\_FEATURE\_LEVEL\_9\_1 (entspricht Shadermodell 2.0) ist die mindestens notwendige Stufe, Ihr Microsoft Store-Spiel erforderlich ist, um zu unterstützen. (Die ARM-Pakete des Spiels erhalten keine Zertifizierung, wenn 9\_1 nicht unterstützt wird.) Wenn das Spiel auch einen Renderpfad für die Features von Shadermodell3 enthält, sollten Sie D3D_FEATURE\_LEVEL\_9\_3 in das Array einbeziehen.
 
- 
+ 
 
 Direct3D11
 
@@ -109,7 +108,7 @@ D3D11CreateDevice(
     creationFlags,
     featureLevels,
     ARRAYSIZE(featureLevels),
-    D3D11_SDK_VERSION, // Windows Store apps must set this to D3D11_SDK_VERSION.
+    D3D11_SDK_VERSION, // UWP apps must set this to D3D11_SDK_VERSION.
     &device, // Returns the Direct3D device created.
     nullptr,
     &context // Returns the device immediate context.
@@ -128,9 +127,9 @@ Direct3D 11 enthält eine Geräte-API mit der Bezeichnung DirectX Graphics Infra
 
 Vom Direct3D-Gerät wird eine COM-Schnittstelle für DXGI implementiert. Zuerst muss diese Schnittstelle abgerufen und verwendet werden, um den DXGI-Adapter anzufordern, mit dem das Gerät gehostet wird. Anschließend wird der DXGI-Adapter zum Erstellen einer DXGI-Factory genutzt.
 
-> **Hinweis**  Hierbei handelt es sich um COM-Schnittstellen, sodass Sie wahrscheinlich zuerst an die Verwendung von [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521) denken. Stattdessen sollten Sie intelligente [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)-Zeiger nutzen. Rufen Sie anschließend einfach die [**As()**](https://msdn.microsoft.com/library/windows/apps/br230426.aspx)-Methode auf, und stellen Sie einen leeren COM-Zeiger mit dem passenden Schnittstellentyp bereit.
+> **Hinweis:**  Hierbei handelt es sich um COM-Schnittstellen, sodass Ihre erste Antwort [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521)verwenden. Stattdessen sollten Sie intelligente [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)-Zeiger nutzen. Rufen Sie anschließend einfach die [**As()**](https://msdn.microsoft.com/library/windows/apps/br230426.aspx)-Methode auf, und stellen Sie einen leeren COM-Zeiger mit dem passenden Schnittstellentyp bereit.
 
- 
+ 
 
 **Direct3D11**
 
@@ -152,9 +151,9 @@ dxgiAdapter->GetParent(
 
 Da die DXGI-Factory jetzt vorhanden ist, können wir sie zum Erstellen der Swapchain verwenden. Als Nächstes werden die Parameter der Swapchain definiert. Das Oberflächenformat muss angegeben werden, und wir wählen [**DXGI\_FORMAT\_B8G8R8A8\_UNORM**](https://msdn.microsoft.com/library/windows/desktop/bb173059), weil es mit Direct2D kompatibel ist. Die Anzeigeskalierung, Multisampling und das Stereorendering werden deaktiviert, weil diese Funktionen in diesem Beispiel nicht verwendet werden. Da die Ausführung direkt in einem CoreWindow-Objekt erfolgt, können wir die Breite und Höhe auf der Einstellung 0 belassen und automatisch Vollbildwerte erhalten.
 
-> **Hinweis**  Legen Sie den Parameter *SDKVersion* für UWP-Apps immer auf D3D11\_SDK\_VERSION fest.
+> **Hinweis:**  immer den *SDKVersion* -Parameter für UWP-apps auf D3D11\_SDK\_VERSION festlegen.
 
- 
+ 
 
 **Direct3D11**
 
@@ -172,9 +171,9 @@ swapChain.As(&m_swapChain);
 
 Um sicherzustellen, dass nur so häufig Rendervorgänge ausgeführt werden, wie diese vom Bildschirm auch angezeigt werden können, legen wir die Framelatenz auf1 fest und verwenden [**DXGI\_SWAP\_EFFECT\_FLIP\_SEQUENTIAL**](https://msdn.microsoft.com/library/windows/desktop/bb173077). So kann Energie gespart werden. Außerdem ist dies eine Anforderung für die Store-Zertifizierung. Weitere Informationen zur Darstellung auf dem Bildschirm erhalten Sie in Teil 2 dieser exemplarischen Vorgehensweise.
 
-> **Hinweis**  Sie können das Multithreading verwenden (beispielsweise [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/br229642)-Arbeitsaufgaben), um weiterarbeiten zu können, während der Renderthread blockiert ist.
+> **Hinweis:**  können Sie multithreading verwenden (z. B. [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/br229642) Arbeitsaufgaben) um weiterarbeiten während der Renderthread blockiert ist.
 
- 
+ 
 
 **Direct3D11**
 
@@ -227,9 +226,9 @@ m_d3dContext->RSSetViewports(1, &viewport);
 
 Da wir jetzt über ein Gerätehandle und ein Vollbild-Renderziel verfügen, sind wir bereit zum Laden und Zeichnen der Geometrie. Fahren Sie mit [Teil2: Rendern](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md) fort.
 
- 
+ 
 
- 
+ 
 
 
 

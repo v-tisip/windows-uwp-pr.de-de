@@ -7,16 +7,14 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 43c90d3d32876bdfd6b91f597ad94eba33907e90
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 6b39211c4b21a68fc0e563f73805805dcf1f4641
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675197"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570366"
 ---
 # <a name="code-generated-by-the-push-notification-wizard"></a>Vom Assistenten für Pushbenachrichtigungen generierter Code
  
@@ -211,9 +209,9 @@ function sendNotifications(request) {
 
 Von der sendNotifications-Funktion wird eine einzelne Benachrichtigung als Popupbenachrichtigung gesendet. Sie können auch andere Arten von Pushbenachrichtigungen verwenden.
 
-**Tipp**  Informationen zu verfügbarer Hilfe beim Bearbeiten von Skripts finden Sie unter [Aktivieren von IntelliSense für serverseitigen JavaScript-Code](http://go.microsoft.com/fwlink/p/?LinkId=309275).
+**Tipp:** Informationen dazu, wie Sie Hilfe beim Bearbeiten von Skripts zu erhalten, finden Sie unter [Aktivieren von IntelliSense für serverseitigen JavaScript](http://go.microsoft.com/fwlink/p/?LinkId=309275).
 
- 
+ 
 
 ## <a name="push-notification-types"></a>Arten von Pushbenachrichtigungen
 
@@ -237,9 +235,9 @@ Sie können den Windows-Pushbenachrichtigungsdienst (WNS) auch direkt aufrufen, 
 
 Sie können Pushbenachrichtigungen auch senden, indem Sie in Ihrem mobilen Dienst eine geplante Aufgabe ausführen. Weitere Informationen finden Sie unter [Planen von wiederkehrenden Aufträgen in Mobile Services](http://go.microsoft.com/fwlink/p/?linkid=301694).
 
-**Warnung**  Wenn Sie den Assistenten für Pushbenachrichtigungen einmal ausgeführt haben, führen Sie ihn nicht ein zweites Mal aus, um Registrierungscode für andere mobile Dienste hinzuzufügen. Wenn Sie den Assistenten mehr als einmal pro Projekt ausführen, wird Code generiert, der überlappende Aufrufe in der [**CreatePushNotificationChannelForApplicationAsync**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync)-Methode zur Folge hat. Dies führt zu einer Laufzeitausnahme. Wenn Sie sich für Pushbenachrichtigungen für mehr als einen mobilen Dienst registrieren möchten, führen Sie den Assistenten einmal aus. Schreiben Sie dann den Registrierungscode neu, um sicherzustellen, dass Aufrufe für **CreatePushNotificationChannelForApplicationAsync** nicht zur gleichen Zeit ausgeführt werden. Sie können dies beispielsweise umsetzen, indem Sie den vom Assistenten generierten Code in „push.register.\*” (einschließlich des Aufrufs von **CreatePushNotificationChannelForApplicationAsync**) an eine Position außerhalb des OnLaunched-Ereignisses verschieben. Die diesbezüglichen Spezifikationen hängen aber von der Architektur Ihrer App ab.
+**Warnung**Nachdem Sie den Assistenten für Pushbenachrichtigungen einmal ausgeführt haben, nicht führen Sie den Assistenten ein zweites Mal um Registrierungscode für andere mobile Dienste hinzuzufügen. Wenn Sie den Assistenten mehr als einmal pro Projekt ausführen, wird Code generiert, der überlappende Aufrufe in der [**CreatePushNotificationChannelForApplicationAsync**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync)-Methode zur Folge hat. Dies führt zu einer Laufzeitausnahme. Wenn Sie sich für Pushbenachrichtigungen für mehr als einen mobilen Dienst registrieren möchten, führen Sie den Assistenten einmal aus. Schreiben Sie dann den Registrierungscode neu, um sicherzustellen, dass Aufrufe für **CreatePushNotificationChannelForApplicationAsync** nicht zur gleichen Zeit ausgeführt werden. Sie können dies beispielsweise umsetzen, indem Sie den vom Assistenten generierten Code in „push.register.\*” (einschließlich des Aufrufs von **CreatePushNotificationChannelForApplicationAsync**) an eine Position außerhalb des OnLaunched-Ereignisses verschieben. Die diesbezüglichen Spezifikationen hängen aber von der Architektur Ihrer App ab.
 
- 
+ 
 
 ## <a name="related-topics"></a>Verwandte Themen
 
@@ -249,9 +247,9 @@ Sie können Pushbenachrichtigungen auch senden, indem Sie in Ihrem mobilen Diens
 * [Herstellen einer Verbindung mit Microsoft Azure-Mobile Dienste (JavaScript)](https://msdn.microsoft.com/library/windows/apps/dn263160)
 * [Herstellen einer Verbindung mit Microsoft Azure-Mobile Dienste (C#/C++/VB)](https://msdn.microsoft.com/library/windows/apps/xaml/dn263175)
 * [Schnellstart: Hinzufügen von Pushbenachrichtigungen für einen mobilen Dienst (JavaScript)](https://msdn.microsoft.com/library/windows/apps/dn263163)
- 
+ 
 
- 
+ 
 
 
 

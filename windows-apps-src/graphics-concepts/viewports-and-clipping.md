@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: defea1e9adbb4d0f9edb24c936069191944b94be
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 4dd319c686bebf2a30431017f399f48b08618cb6
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044719"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569216"
 ---
 # <a name="viewports-and-clipping"></a>Viewports und Zuschneiden
 
@@ -49,9 +47,9 @@ Die Werte, die Sie für die Mitglieder X, Y, Breite und Höhe angeben, sind Bild
 
 Direct3D nimmt an, dass das Viewport-Zuschneidungsvolumen von -1,0 bis 1,0 in X und von 1,0 bis -1,0 in Y reicht. Dies sind die Einstellungen die in der Vergangenheit am häufigsten von Anwendungen verwendet wurden. Sie können das Viewport-Seitenverhältnis vor dem Zuschneiden mit der [Projektionstransformation](projection-transform.md) anpassen.
 
-**Hinweis:**   MinZ und MaxZ geben die Tiefenbereiche für das Rendern der Szene an und werden nicht zum Zuschneiden verwendet. Die meisten Anwendungen setzen diese Werte zwischen 0,0 und 1,0, damit das System das Rendering für den gesamten Bereich der Tiefenwerte im Tiefenpuffer durchführen kann. In manchen Fällen können Sie durch die Verwendung anderer Tiefenbereiche besondere Effekte erzielen. So können Sie beispielsweise zum Rendern einer Heads-up-Ansicht in einem Spiel beide Werte auf 0,0 setzen, damit das System Objekte in einer Szene im Vordergrund rendert; oder Sie setzen beide Werte auf 1,0, um ein Objekt zu rendern, das sich immer im Hintergrund befinden soll.
+**Hinweis:**  MinZ und MaxZ geben die Tiefenbereiche, in dem die Szene gerendert werden, und sind nicht zum Zuschneiden verwendet. Die meisten Anwendungen setzen diese Werte zwischen 0,0 und 1,0, damit das System das Rendering für den gesamten Bereich der Tiefenwerte im Tiefenpuffer durchführen kann. In manchen Fällen können Sie durch die Verwendung anderer Tiefenbereiche besondere Effekte erzielen. So können Sie beispielsweise zum Rendern einer Heads-up-Ansicht in einem Spiel beide Werte auf 0,0 setzen, damit das System Objekte in einer Szene im Vordergrund rendert; oder Sie setzen beide Werte auf 1,0, um ein Objekt zu rendern, das sich immer im Hintergrund befinden soll.
 
- 
+ 
 
 Die Abmessungen, die für die Mitglieder X, Y, Breite und Höhe einer Viewport-Struktur verwendet werden, legen den Ort und die Abmessungen des Viewports auf der Renderzieloberfläche fest. Diese Werte sind in Bildschirmkoordinaten relativ zur oberen linken Ecke der Oberfläche ausgedrückt.
 
@@ -61,9 +59,9 @@ Direct3D verwendet Position und Abmessungen des Viewports zur Skalierung der Sch
 
 Diese Matrix skaliert Scheitelpunkte gemäß den Viewport-Abmessungen und dem gewünschten Tiefenbereich und übersetzt sie zum jeweiligen Ort auf der Renderzieloberfläche. Die Matrix wechselt auch die y-Koordinate zur Reflexion eines Bildschirmursprungs in der linken oberen Ecke mit abwärts zunehmenden y-Werten. Nach der Anwendung der Matrix sind die Scheitelpunkte weiterhin homogen – das heißt, sie sind \[x,y,z,w\]-Scheitelpunkte – und müssen zu nicht-homogenen Koordinaten konvertiert werden, bevor sie an den Rasterizer gesendet werden.
 
-**Hinweis**   Anwendungen setzen MinZ und MaxZ typischerweise auf 0,0 und 1,0, damit das System das Rendering für den gesamten Tiefenbereich durchführt. Sie können aber auch andere Werte verwenden, um besondere Effekte zu erzielen. So können Sie etwa beide Werte auf 0,0 setzen, um alle Objekte in den Vordergrund zu zwingen, oder auf 1,0, um alle Objekte im Hintergrund zu rendern.
+**Hinweis:**  Anwendungen in der Regel setzen MinZ und MaxZ auf 0,0 und 1,0, damit das System für den gesamten Tiefenbereich verursachen. Sie können aber auch andere Werte verwenden, um besondere Effekte zu erzielen. So können Sie etwa beide Werte auf 0,0 setzen, um alle Objekte in den Vordergrund zu zwingen, oder auf 1,0, um alle Objekte im Hintergrund zu rendern.
 
- 
+ 
 
 ## <a name="span-idclearingaviewportspanspan-idclearingaviewportspanspan-idclearingaviewportspanclearing-a-viewport"></a><span id="Clearing_a_Viewport"></span><span id="clearing_a_viewport"></span><span id="CLEARING_A_VIEWPORT"></span>Löschen eines Viewports
 
@@ -86,11 +84,11 @@ Dabei gilt: x, y, z und w stehen für die Scheitelpunktkoordinaten nach Anwendun
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
 
 
-[Koordinatensystem und Geometrie](coordinate-systems-and-geometry.md)
+[Koordinatensysteme und Geometrie](coordinate-systems-and-geometry.md)
 
- 
+ 
 
- 
+ 
 
 
 

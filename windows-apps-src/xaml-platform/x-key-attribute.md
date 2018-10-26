@@ -6,18 +6,17 @@ ms.assetid: 141FC5AF-80EE-4401-8A1B-17CB22C2277A
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, UWP
-ms.openlocfilehash: 4b76c16d276af295a1b2eed292ebeffc56b2e604
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 8d48ccb93a411e92b57059192de38366f27353a3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "235034"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569176"
 ---
 # <a name="xkey-attribute"></a>x:Key-Attribut
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Dient zum eindeutigen Identifizieren von Elementen, die als Ressourcen erstellt und referenziert werden und innerhalb eines [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)-Elements vorhanden sind.
 
@@ -42,7 +41,7 @@ Dient zum eindeutigen Identifizieren von Elementen, die als Ressourcen erstellt 
 | Benennung | Beschreibung |
 |------|-------------|
 | object | Beliebige Objekte, die freigegeben werden können. Weitere Informationen finden Sie unter [ResourceDictionary- und XAML-Ressourcenverweise](https://msdn.microsoft.com/library/windows/apps/mt187273). |
-| stringKeyValue | Eine als Schlüssel verwendete echte Zeichenfolge, die der _XamlName_-Grammatik entsprechen muss. Weitere Informationen erhalten Sie in "XamlName-Grammatik" unten. | 
+| stringKeyValue | Eine als Schlüssel verwendete echte Zeichenfolge, die der _XamlName_-Grammatik entsprechen muss. Weitere Informationen erhalten Sie in "XamlName-Grammatik" unten. | 
 
 ##  <a name="xamlname-grammar"></a>XamlName-Grammatik
 

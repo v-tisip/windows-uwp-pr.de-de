@@ -6,19 +6,18 @@ ms.assetid: f6ca1147-9bb8-719a-9a2c-b7ee3e34bd18
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, Spiele, Renderingframeworks, konvertieren, Direct3D 9, Direct3D 11
-ms.openlocfilehash: d33a694cf835ba3d997a7c4a111349c117e2493e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 044a0dc7bf264a82b849623a53d00268d7b30fd9
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233750"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569631"
 ---
 # <a name="convert-the-rendering-framework"></a>Konvertieren des Renderingframeworks
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Zusammenfassung**
 
@@ -100,18 +99,17 @@ In Direct3D11 können Sie weiterhin HLSL-Shader verwenden. Jeder Shader wird in 
 
 Beim Definieren des Eingabelayouts haben wir sichergestellt, dass die gleiche Datenstruktur abgebildet wurde, die zum Speichern der Daten pro Vertex im Systemspeicher und im GPU-Speicher verwendet wurde. Ebenso sollte die Ausgabe eines Vertex-Shaders mit der Struktur übereinstimmen, die als Eingabe für den Pixelshader verwendet wird. Die Regeln entsprechen dabei nicht den Regeln zum Übergeben von Daten aus einer Funktion in eine andere unter C++. Sie können nicht verwendete Variablen am Ende der Struktur weglassen. Die Reihenfolge kann jedoch nicht erneuert werden, und Sie können Inhalte in der Mitte der Datenstruktur nicht überspringen.
 
-> **Hinweis**  
-Die Regeln in Direct3D 9 zum Binden von Vertex-Shadern an Pixelshader waren nicht so strikt wie die Regeln in Direct3D 11. Die Direct3D9-Anordnung war zwar flexibel, aber ineffizient.
+> **Hinweis:**  die Regeln in Direct3D 9 zum Binden Vertex-Shadern an PixelShader waren strikt wie die Regeln in Direct3D 11. Die Direct3D9-Anordnung war zwar flexibel, aber ineffizient.
 
- 
+ 
 
 Es ist möglich, dass von Ihren HLSL-Dateien ältere Syntax für die Shadersemantik verwendet wird, beispielsweise COLOR anstelle von SV\_TARGET. In diesem Fall müssen Sie den HLSL-Kompatibilitätsmodus (Compileroption "/Gec") aktivieren oder die Shader[semantik](https://msdn.microsoft.com/library/windows/desktop/bb509647) auf die aktuelle Syntax aktualisieren. Der Vertex-Shader in diesem Beispiel wurde mit der aktuellen Syntax aktualisiert.
 
 Unten ist der Vertex-Shader für die Hardwaretransformation in einer eigenen Datei definiert.
 
-> **Hinweis**: Vertexshader sind erforderlich, um die SV\_POSITION-Systemwertsemantik auszugeben. Mit dieser Semantik werden die Vertexpositionsdaten zu Koordinatenwerten aufgelöst, wobei "x" zwischen-1 und1 und "y" zwischen-1 und1 liegt. "z" wird durch den ursprünglichen homogenen Koordinatenwert"w" dividiert (z/w), und "w" ist1 dividiert durch den Originalwert"w" (1/w).
+> **Hinweis:** Vertex-Shader sind erforderlich, um die SV\_POSITION-systemwertsemantik auszugeben. Mit dieser Semantik werden die Vertexpositionsdaten zu Koordinatenwerten aufgelöst, wobei "x" zwischen-1 und1 und "y" zwischen-1 und1 liegt. "z" wird durch den ursprünglichen homogenen Koordinatenwert"w" dividiert (z/w), und "w" ist1 dividiert durch den Originalwert"w" (1/w).
 
- 
+ 
 
 HLSL-Vertex-Shader (Featureebene9.1)
 
@@ -156,9 +154,9 @@ VS_OUTPUT main(VS_INPUT input) // main is the default function name
 
 Dies ist alles, was wir für den Pass-Through-Pixelshader brauchen. Obwohl die Bezeichnung "Pass-Through" verwendet wird, werden für jedes Pixel jeweils für die Perspektive passende interpolierte Farbdaten abgerufen. Beachten Sie, dass die SV\_TARGET-Systemwertsemantik hier vom Pixelshader auf die Farbwertausgabe angewendet wird, wie dies für die API erforderlich ist.
 
-> **Hinweis**: Pixelshader der Shaderebene 9\_x können nicht aus der SV\_POSITION-Systemwertsemantik auslesen. Für Pixelshader des Modells4.0 (oder höher) kann das SV\_POSITION-Element zum Abrufen der Pixelposition auf dem Bildschirm verwendet werden, wobei "x" zwischen0 und der Breite des Renderziels und "y" zwischen0 und der Höhe des Renderziels liegt (jeweils um den Wert0,5 versetzt).
+> **Hinweis:** PixelShader der Featureebene 9\_x können nicht aus der SV\_POSITION-systemwertsemantik gelesen. Für Pixelshader des Modells4.0 (oder höher) kann das SV\_POSITION-Element zum Abrufen der Pixelposition auf dem Bildschirm verwendet werden, wobei "x" zwischen0 und der Breite des Renderziels und "y" zwischen0 und der Höhe des Renderziels liegt (jeweils um den Wert0,5 versetzt).
 
- 
+ 
 
 Die meisten Pixelshader sind viel komplexer als ein Pass-Through-Element aufgebaut. Beachten Sie, dass höhere Direct3D-Featureebenen auch eine deutlich größere Anzahl an Berechnungen pro Shaderprogramm ermöglichen.
 
@@ -240,9 +238,9 @@ m_d3dDevice->CreateVertexShader(
 
 Fügen Sie zum Einbinden von Shader-Bytecode in das kompilierte App-Paket dem Visual Studio-Projekt einfach die HLSL-Datei hinzu. In Visual Studio wird das [Effektcompiler-Tool](https://msdn.microsoft.com/library/windows/desktop/bb232919) (FXC) verwendet, um HLSL-Dateien in kompilierte Shaderobjekte (CSO-Dateien) zu kompilieren und in das App-Paket einzubinden.
 
-> **Hinweis**: Stellen Sie sicher, dass Sie die richtige Zielfeatureebene für den HLSL-Compiler festlegen: Klicken Sie in Visual Studio mit der rechten Maustaste auf die HLSL-Quelldatei, wählen Sie „Eigenschaften“ aus, und ändern Sie unter **HLSL Compiler -&gt; General** die Einstellung **Shader Model**. In Direct3D wird diese Eigenschaft anhand der Hardwarefunktionen überprüft, wenn von der App die Direct3D-Shaderressource erstellt wird.
+> **Hinweis:**  müssen Sie die richtige zielfeatureebene für den HLSL-Compiler festlegen: mit der rechten Maustaste der HLSL-Quelldatei in Visual Studio, klicken Sie auf Eigenschaften und ändern Sie die **Shader Model** -Einstellung unter **HLSL-Compiler -&gt; allgemeine**. In Direct3D wird diese Eigenschaft anhand der Hardwarefunktionen überprüft, wenn von der App die Direct3D-Shaderressource erstellt wird.
 
- 
+ 
 
 ![HLSL-Shadereigenschaften](images/hlslshaderpropertiesmenu.png)![HLSL-Shadertyp](images/hlslshadertypeproperties.png)
 
@@ -250,9 +248,9 @@ Dies ist ein guter Ort zum Erstellen des Eingabelayouts, welches der Deklaration
 
 Daten pro Vertex müssen im Systemspeicher in Form von kompatiblen Typen gespeichert werden. Hierbei können DirectXMath-Datentypen hilfreich sein. DXGI\_FORMAT\_R32G32B32\_FLOAT entspricht beispielsweise [**XMFLOAT3**](https://msdn.microsoft.com/library/windows/desktop/ee419475).
 
-> **Hinweis**: Von Konstantenpuffern wird ein festes Eingabelayout mit gleichzeitiger Ausrichtung für vier Gleitkommazahlen verwendet. [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608) (und die Ableitungen) wird für die Daten von Konstantenpuffern empfohlen.
+> **Hinweis:**  Konstantenpuffer verwendet eine feste festes eingabelayout mit für vier Gleitkommazahlen gleichzeitig verwenden. [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608) (und die Ableitungen) wird für die Daten von Konstantenpuffern empfohlen.
 
- 
+ 
 
 Festlegen des Eingabelayouts in Direct3D11
 
@@ -489,9 +487,9 @@ m_swapChain->Present(1, 0);
 
 Die gerade erstellte Renderkette wird von einer Spielschleife aufgerufen, die in der [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505)-Methode implementiert ist. Dies wird unter [Teil3: Viewport und Spielschleife](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md) veranschaulicht.
 
- 
+ 
 
- 
+ 
 
 
 

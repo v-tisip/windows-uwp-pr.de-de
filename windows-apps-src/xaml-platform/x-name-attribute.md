@@ -6,18 +6,17 @@ ms.assetid: 4FF1F3ED-903A-4305-B2BD-DCD29E0C9E6D
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, UWP
-ms.openlocfilehash: 9fa472869ed3b81a9f688652a487b1b93986b777
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 43b4b7e6ba9e251a5907154125eff08e8d92a713
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "234889"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571987"
 ---
 # <a name="xname-attribute"></a>x:Name-Attribut
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Dient zum eindeutigen Identifizieren von Objektelementen für den Zugriff auf das instanziierte Objekt aus CodeBehind oder allgemeinem Code. Nach Anwendung auf ein zugrunde liegendes Programmiermodell kann **x:Name** als Äquivalent der Variablen mit einem Objektverweis betrachtet werden (gemäß Rückgabe von einem Konstruktor).
 
@@ -60,7 +59,7 @@ Entwurfstools erzeugen oft automatisch **x:Name**-Werte für Elemente, wenn dies
 
 **x:Name** kann nicht in der XAML-Eigenschaftselementsyntax oder in Code mit [**SetValue**](https://msdn.microsoft.com/library/windows/apps/br242361) festgelegt werden. **x:Name** kann nur über die XAML-Attributsyntax für Elemente festgelegt werden.
 
-**Hinweis**  Speziell bei C++-/CX-Apps wird für das Stammelement einer XAML-Datei oder -Seite kein Sicherungsfeld für einen **x:Name**-Verweis erstellt. Wenn Sie in C++-CodeBehind auf das Stammobjekt verweisen müssen, verwenden Sie andere APIs oder eine Strukturtraversierung. Sie können beispielsweise erst [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) für ein bekanntes benanntes Unterelement und anschließend [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739) aufrufen.
+**Hinweis:** speziell bei C++ / CX-apps kein Sicherungsfeld für einen Verweis **X: Name** wird für das Stammelement einer XAML-Datei oder-Seite nicht erstellt. Wenn Sie in C++-CodeBehind auf das Stammobjekt verweisen müssen, verwenden Sie andere APIs oder eine Strukturtraversierung. Sie können beispielsweise erst [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) für ein bekanntes benanntes Unterelement und anschließend [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739) aufrufen.
 
 ### <a name="xname-and-other-name-properties"></a>x:Name und andere Name-Eigenschaften
 
@@ -68,7 +67,7 @@ Einige in UWP-XAML verwendete Typen verfügen auch über die Eigenschaft **Name*
 
 Falls **Name** als einstellbare Eigenschaft für ein Element verfügbar ist, können **Name** und **x:Name** in XAML synonym verwendet werden. Werden allerdings beide Attribute für das gleiche Element angegeben, tritt ein Fehler auf. In einigen Fällen ist zwar eine **Name**-Eigenschaft vorhanden, diese ist jedoch schreibgeschützt (z.B. [**VisualState.Name**](https://msdn.microsoft.com/library/windows/apps/br209031)). In diesem Fällen verwenden Sie immer **Name** zum Benennen dieses Elements im XAML, und die schreibgeschützte **Name** ist für seltener verwendete Codeszenarien vorhanden.
 
-**Hinweis**  [**FrameworkElement.Name**](https://msdn.microsoft.com/library/windows/apps/br208735) sollte im Allgemeinen nicht zum Ändern von Werten verwendet werden, die ursprünglich von **x:Name** festgelegt wurde. Einige Szenarien bilden jedoch Ausnahmen zu dieser Regel. In typischen Szenarien handelt es sich bei der Erstellung und Definition von XAML-Namescopes um Vorgänge des XAML-Prozessors. Das Ändern von **FrameworkElement.Name** zur Laufzeit kann einen inkonsistenten XAML-Namescope bzw. eine inkonsistente Benennungsausrichtung privater Felder zur Folge haben, was im CodeBehind nur schwer nachvollziehbar ist.
+**Hinweis:** [**FrameworkElement.Name**](https://msdn.microsoft.com/library/windows/apps/br208735) sollte als eine Möglichkeit, den **X: Name**ursprünglich festgelegten Werte ändern, es gibt jedoch einige Szenarien, die Ausnahmen von dieser Regel sind in der Regel nicht verwendet werden. In typischen Szenarien handelt es sich bei der Erstellung und Definition von XAML-Namescopes um Vorgänge des XAML-Prozessors. Das Ändern von **FrameworkElement.Name** zur Laufzeit kann einen inkonsistenten XAML-Namescope bzw. eine inkonsistente Benennungsausrichtung privater Felder zur Folge haben, was im CodeBehind nur schwer nachvollziehbar ist.
 
 ### <a name="xname-and-xkey"></a>x:Name und x:Key
 

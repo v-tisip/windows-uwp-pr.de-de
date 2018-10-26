@@ -1,31 +1,30 @@
 ---
-author: mcleblanc
+author: stevewhims
 ms.assetid: E2B73380-D673-48C6-9026-96976D745017
 description: Erste Schritte mit allgemeinen Steuerelementen
 title: Erste Schritte mit allgemeinen Steuerelementen
-ms.author: markl
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 4df9785b0d8ccea0561a780fa2b807201332cda8
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: bbb07da7fa28aed6e45c97d128f9bd04ca986fe7
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "234361"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572030"
 ---
 # <a name="getting-started-common-controls"></a>Erste Schritte: Allgemeine Steuerelemente
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
-## <a name="common-controls-list"></a>Liste „Allgemeine Steuerelemente“
+## <a name="common-controls-list"></a>Liste "Allgemeine Steuerelemente"
 
 Im vorherigen Abschnitt haben Sie mit nur zwei Steuerelementen gearbeitet: Schaltflächen und Textblöcken. Natürlich steht Ihnen eine Vielzahl weiterer Steuerelemente zur Verfügung. Hier sind einige gängige Steuerelemente, die Sie in Ihren Apps und unter iOS verwenden können. Die iOS-Steuerelemente sind in alphabetischer Reihenfolge neben den entsprechenden UWP-Steuerelementen aufgeführt.
 
 Das Besondere bei UWP-Steuerelementen ist, dass sie den Typ des Geräts erkennen, auf dem sie ausgeführt werden, und ihre Darstellung und Funktionalität entsprechend ändern können. Wenn Ihr Projekt z.B. das [**DatePicker**](https://msdn.microsoft.com/library/windows/apps/br211681)-Steuerelement verwendet, ist dieses in der Lage, seine Darstellung und sein Verhalten auf einem Desktopcomputer im Vergleich zu einem Telefon entsprechend zu optimieren und anzupassen. Sie müssen nichts weiter unternehmen: die Steuerelemente passen sich automatisch zur Laufzeit an.
 
-| iOS-Steuerelement (Klasse/Protokoll) | Entsprechendes Windows Store-App-Steuerelement |
+| iOS-Steuerelement (Klasse/Protokoll) | Entsprechende UWP-Steuerelement |
 |------------------------------|--------------------------------------|
 | Aktivitätsanzeige (**UIActivityIndicatorView**) | [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) <br/> Siehe auch [Schnellstart: Hinzufügen von Statussteuerelementen](https://msdn.microsoft.com/library/windows/apps/xaml/hh780651) |
 | Anzeigenbanner-Ansicht (**ADBannerView**) und Anzeigenbanner-Ansichtsdelegat (**ADBannerViewDelegate**) | [AdControl](https://msdn.microsoft.com/library/windows/apps/microsoft.advertising.winrt.ui.adcontrol.aspx) <br/> Siehe auch [Anzeigen von Werbung in Ihrer App](../monetize/display-ads-in-your-app.md) |
@@ -33,7 +32,7 @@ Das Besondere bei UWP-Steuerelementen ist, dass sie den Typ des Geräts erkennen
 | Datumsauswahl (UIDatePicker) | [DatePicker](https://msdn.microsoft.com/library/windows/apps/br211681) |
 | Bildansicht (UIImageView) | [Image](https://msdn.microsoft.com/library/windows/apps/br242752) <br/> Siehe auch [Image und ImageBrush](https://msdn.microsoft.com/library/windows/apps/mt280382) |
 | Bezeichnung (UILabel) | [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) <br/> Siehe auch [Schnellstart: Anzeigen von Text](https://msdn.microsoft.com/library/windows/apps/xaml/hh700392) |
-| Kartenansicht (MKMapView) und Kartenansichtsdelegat (MKMapViewDelegate) | Siehe [Bing Maps für WindowsStore-Apps](http://go.microsoft.com/fwlink/p/?LinkId=263496) |
+| Kartenansicht (MKMapView) und Kartenansichtsdelegat (MKMapViewDelegate) | Finden Sie unter [Bing Maps für UWP-apps](http://go.microsoft.com/fwlink/p/?LinkId=263496) |
 | Navigationscontrollerdelegat (UINavigationController) und Navigationscontrollerdelegat (UINavigationControllerDelegate) | [Frame](https://msdn.microsoft.com/library/windows/apps/br242682) <br/> Siehe auch [Navigation](https://msdn.microsoft.com/library/windows/apps/mt187344) |
 | Seitensteuerung (UIPageControl) | [Page](https://msdn.microsoft.com/library/windows/apps/br227503) <br/> Siehe auch [Navigation](https://msdn.microsoft.com/library/windows/apps/mt187344) |
 | Auswahlansicht (UIPickerView) und Auswahlansichtsdelegat (UIPickerViewDelegate) | [ComboBox](https://msdn.microsoft.com/library/windows/apps/br209348) <br/> Siehe auch [Hinzufügen von Kombinationsfeldern und Listenfeldern](https://msdn.microsoft.com/library/windows/apps/xaml/hh780616) |
@@ -54,7 +53,7 @@ Das Besondere bei UWP-Steuerelementen ist, dass sie den Typ des Geräts erkennen
 
 Unter [Steuerelementliste](https://msdn.microsoft.com/library/windows/apps/mt185406) finden Sie noch mehr Steuerelemente.
 
-**Hinweis**  Eine Liste mit Steuerelementen für WindowsStore-Apps mit JavaScript und HTML finden Sie unter [Steuerelementliste](https://msdn.microsoft.com/library/windows/apps/hh465453).
+**Hinweis:** eine Liste mit Steuerelementen für UWP-apps mit JavaScript und HTML, finden Sie in der [Liste der Steuerelemente](https://msdn.microsoft.com/library/windows/apps/hh465453).
 
 ### <a name="next-step"></a>Nächster Schritt
 

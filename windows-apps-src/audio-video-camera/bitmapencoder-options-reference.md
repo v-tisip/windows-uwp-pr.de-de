@@ -6,18 +6,17 @@ title: Referenz zu BitmapEncoder-Optionen
 ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: adfd360c22fd6737d9e95e6e3153f4e2767a4c99
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 13f19ce909703b6748ab00aec1026e30d5c70a64
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233517"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5570578"
 ---
 # <a name="bitmapencoder-options-reference"></a>Referenz zu BitmapEncoder-Optionen
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 In diesem Artikel sind die Codierungsoptionen aufgeführt, die mit [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206) verwendet werden können. Eine Codierungsoption wird durch ihren Namen (eine Zeichenfolge) und einen Wert mit einem bestimmten Datentyp definiert ([**Windows.Foundation.PropertyType**](https://msdn.microsoft.com/library/windows/apps/br225871)). Weitere Informationen zur Verwendung von Bildern finden Sie unter [Erstellen, Bearbeiten und Speichern von Bitmapbildern](imaging.md).
 
@@ -35,14 +34,14 @@ In diesem Artikel sind die Codierungsoptionen aufgeführt, die mit [**BitmapEnco
 | SuppressApp0            | boolean      | Gibt an, ob die Erstellung eines App0-Metadatenblocks unterdrückt wird                                        | JPEG          |
 | EnableV5Header32bppBGRA | boolean      | Gibt an, ob die Codierung als Version5 des BMP-Formats erfolgen soll, die Alphawerte unterstützt.                                         | BMP           |
 
- 
+ 
 
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Erstellen, Bearbeiten und Speichern von Bitmapbildern](imaging.md)
 * [Unterstützte Codecs](supported-codecs.md)
 
- 
+ 
 
 
 

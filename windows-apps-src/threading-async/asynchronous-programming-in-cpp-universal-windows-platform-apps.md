@@ -1,27 +1,25 @@
 ---
 author: normesta
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
-description: In diesem Artikel wird die empfohlene Vorgehensweise zur Verwendung asynchroner Methoden in VisualC++-Komponentenerweiterungen (C++/CX) mithilfe der Task-Klasse beschrieben, die im Concurrency-Namespace in „ppltasks.h“ definiert wird.
+description: Dieser Artikel beschreibt die empfohlene Vorgehensweise zur Verwendung asynchroner Methoden in für VisualC++-komponentenerweiterungen (C++ / CX) mithilfe der Task-Klasse im Concurrency Namespace in "ppltasks.h" definiert.
 title: Asynchrone Programmierung in C++
 ms.author: normesta
 ms.date: 05/14/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Threads, asynchron, C++
 ms.localizationpriority: medium
-ms.openlocfilehash: 869ba45929e015f27c5342af57da450f0b99b607
-ms.sourcegitcommit: c104b653601d9b81cfc8bb6032ca434cff8fe9b1
-ms.translationtype: HT
+ms.openlocfilehash: 33b110e713608260cd5c19544292e9211904a730
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "1921208"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571208"
 ---
 # <a name="asynchronous-programming-in-ccx"></a>Asynchrone Programmierung in C++/CX
 > [!NOTE]
 > In diesem Thema erhalten Sie Unterstützung bei der Verwaltung Ihrer C++/CX-Anwendung. Es wird jedoch empfohlen, dass Sie [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) für neue Anwendungen nutzen. C++/WinRT ist eine vollständig standardisierte, moderne C++17 Sprachprojektion für Windows-Runtime-(WinRT)-APIs, die als headerdateibasierte Bibliothek implementiert ist und Ihnen einen erstklassigen Zugriff auf die moderne Windows-API bietet.
 
-In diesem Artikel wird die empfohlene Vorgehensweise zur Verwendung asynchroner Methoden in VisualC++-Komponentenerweiterungen (C++/CX) mithilfe der `task`-Klasse beschrieben, die im `concurrency`-Namespace in „ppltasks.h“ definiert wird.
+Dieser Artikel beschreibt die empfohlene Vorgehensweise zur Verwendung asynchroner Methoden in für VisualC++-komponentenerweiterungen (C++ / CX) mithilfe der `task` -Klasse, die in definiert ist die `concurrency` Namespace in "ppltasks.h".
 
 ## <a name="universal-windows-platform-uwp-asynchronous-types"></a>Asynchrone UWP-Typen (Universelle Windows-Plattform)
 Die Universelle Windows-Plattform (UWP) umfasst ein ausgearbeitetes Modell für den Aufruf asynchroner Methoden und stellt die Typen bereit, die Sie für die Verwendung dieser Methoden benötigen. Wenn Sie mit dem asynchronen Modell der UWP nicht vertraut sind, sollten Sie den Artikel [Asynchrone Programmierung][AsyncProgramming] lesen, bevor Sie mit diesen Erläuterungen fortfahren.
@@ -116,7 +114,7 @@ Das Beispiel oben illustriert vier zentrale Aspekte:
 
 -   Da die zweite Fortsetzung auf einem Wert basiert, wird sie nicht ausgeführt, wenn der mit dem Aufruf [**DeleteAsync**][deleteAsync] gestartete Vorgang eine Ausnahme auslöst.
 
-**Hinweis:** Aufgabenabfolgen sind nur eine Möglichkeit, die **Task**-Klasse zum Erstellen asynchroner Vorgänge zu verwenden. Sie können Vorgänge auch mit den Verknüpfungs- und Auswahloperatoren **&&** und **||** erstellen. Weitere Informationen finden Sie unter [Task-Parallelität (Konkurrenz-Runtime)][taskParallelism].
+**Hinweis:** Aufgabenabfolgen ist nur eine der Methoden, um die **Task** -Klasse verwenden, um asynchrone Vorgänge verfassen. Sie können Vorgänge auch mit den Verknüpfungs- und Auswahloperatoren **&&** und **||** erstellen. Weitere Informationen finden Sie unter [Task-Parallelität (Konkurrenz-Runtime)][taskParallelism].
 
 ## <a name="lambda-function-return-types-and-task-return-types"></a>Rückgabetypen für Lambda-Funktionen und Aufgaben
 Bei Aufgabenfortsetzungen ist der Rückgabetyp der Lambda-Funktion von einem **task**-Objekt umschlossen. Wenn die Lambda-Funktion den **double**-Typ zurückgibt, hat die Fortsetzungsaufgabe den **task<double>**-Typ. Das Aufgabenobjekt ist jedoch so konzipiert, dass es keine unnötig geschachtelten Rückgabetypen erzeugt. Wenn eine Lambda-Funktion den **IAsyncOperation<SyndicationFeed^>^**-Typ zurückgibt, gibt die Fortsetzung den **task<SyndicationFeed^>**-Typ und nicht **task<task<SyndicationFeed^>>** oder **task<IAsyncOperation<SyndicationFeed^>^>^** zurück. Dieser Vorgang wird als *asynchrones Entpacken* bezeichnet und sorgt dafür, dass der asynchrone Vorgang in der Fortsetzung vor dem Aufruf der nächsten Fortsetzung beendet wird.

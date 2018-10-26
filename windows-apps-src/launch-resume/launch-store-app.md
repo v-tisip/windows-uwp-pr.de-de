@@ -1,29 +1,27 @@
 ---
 author: TylerMSFT
 title: Starten der Microsoft Store-App
-description: In diesem Thema wird das URI-Schema „ms-windows-store“ beschrieben. Ihre app kann dieser URI-Schema verwenden, um die Microsoft Store-app zu bestimmten Seiten im Speicher zu starten.
+description: In diesem Thema wird das URI-Schema „ms-windows-store“ beschrieben. Ihre app kann dieses URI-Schema verwenden, um die Microsoft Store-app mit bestimmten Seiten im Speicher zu starten.
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
 ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b97e4da92a7cd4066ca555189f052e3e82006fe
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 42dfecd7d1bc2c298a70fec2bdebfc4c4f9dd66c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "975652"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571941"
 ---
 # <a name="launch-the-microsoft-store-app"></a>Starten der Microsoft Store-App
 
 
 
-In diesem Thema wird das **ms-windows-store:**-URI-Schema beschrieben. Ihre app kann dieser URI-Schema verwenden, um die Microsoft Store-app zu bestimmten Seiten im Speicher zu starten, mithilfe der [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) -Methode.
+In diesem Thema wird das **ms-windows-store:**-URI-Schema beschrieben. Ihre app kann zum Starten der Microsoft Store-app mit bestimmten Seiten im Store mithilfe der Methode [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) dieses URI-Schema verwenden.
 
-Dieses Beispiel zeigt, wie Sie den Speicher auf der Seite Spiele zu öffnen:
+Dieses Beispiel zeigt, wie Sie den Speicher auf der Seite "Spiele" zu öffnen:
 
 ```cs
 bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-store://navigatetopage/?Id=Games"));
@@ -139,6 +137,6 @@ Startet eine Suche für die angegebene Abfrage. Leerzeichen in der Abfrage sind 
 </tr>
 </table>
 
- 
+ 
 
- 
+ 

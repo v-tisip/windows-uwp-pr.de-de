@@ -6,16 +6,14 @@ description: Hier erfahren Sie, wie Sie mithilfe des Neigungsmessers Werte für 
 ms.author: mukin
 ms.date: 06/06/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 82e7b6446306d85af036bf49d05c14db79eaf388
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: dd335d56fb2a01ed1b9255f974bcaacd47f623f5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "958675"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571075"
 ---
 # <a name="use-the-inclinometer"></a>Verwenden des Neigungsmessers
 
@@ -35,7 +33,7 @@ Bei einigen 3D-Spielen wird ein Neigungsmesser als Eingabegerät benötigt. Ein 
 
  ## <a name="prerequisites"></a>Voraussetzungen
 
-Sie sollten mit XAML (Extensible Application Markup Language), Microsoft VisualC# und Ereignissen vertraut sein.
+Sie sollten mit Extensible Application Markup Language (XAML), Microsoft für VisualC++ c# und Ereignissen vertraut sein.
 
 Das verwendete Gerät oder der Emulator muss einen Neigungsmesser unterstützen.
 

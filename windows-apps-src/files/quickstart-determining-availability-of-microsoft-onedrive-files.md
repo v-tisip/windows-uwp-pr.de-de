@@ -6,16 +6,14 @@ description: Ermitteln Sie mithilfe der StorageFile.IsAvailable-Eigenschaft, ob 
 ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c5de157d320b401fdc0e542eb0f1bdc241e2f21
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 87eb93fbc100d143ab9fe75d34bb9c4d2caaf01d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "459763"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569711"
 ---
 # <a name="determining-availability-of-microsoft-onedrive-files"></a>Ermitteln der Verfügbarkeit von MicrosoftOneDrive-Dateien
 
@@ -51,7 +49,7 @@ Benutzer können OneDrive-Dateien als „Offline verfügbar“ (Standardeinstell
 | Als "Nur online verfügbar" gekennzeichnete OneDrive-Datei       | True   | Basierend auf Benutzereinstellungen | False   |
 | Netzwerkdatei                              | True   | Basierend auf Benutzereinstellungen | False   |
 
- 
+ 
 
 Die folgenden Schritte zeigen, wie festgestellt wird, ob eine Datei momentan verfügbar ist.
 

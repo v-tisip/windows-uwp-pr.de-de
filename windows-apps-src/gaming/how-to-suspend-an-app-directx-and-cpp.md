@@ -1,24 +1,23 @@
 ---
 author: mtoepke
-title: 'So wird&quot;s gemacht: Anhalten einer App (DirectX und C++)'
+title: "So wird's gemacht: Anhalten einer App (DirectX und C++)"
 description: In diesem Thema wird gezeigt, wie wichtige Systemzustände und App-Daten gespeichert werden, wenn das System Ihre DirectX-App für die Universelle Windows-Plattform (UWP) anhält.
 ms.assetid: 5dd435e5-ec7e-9445-fed4-9c0d872a239e
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, anhalten, DirectX
-ms.openlocfilehash: 028350f3e4bf6bda5a72663c009e8117c9311b3e
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 204d61430f59c820e9ef9ef36832cd1c24ee7f9c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233640"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569651"
 ---
 # <a name="how-to-suspend-an-app-directx-and-c"></a>So wird's gemacht: Anhalten einer App (DirectX und C++)
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 In diesem Thema wird gezeigt, wie wichtige Systemzustände und App-Daten gespeichert werden, wenn das System Ihre DirectX-App für die universelle Windows-Plattform (UWP) anhält.
 
@@ -100,7 +99,7 @@ void App::Run()
 ## <a name="call-trim"></a>Aufrufen von „Trim()“
 
 
-Ab Windows8.1 muss von allen DirectX-Windows Store-Apps beim Anhalten [**IDXGIDevice3::Trim**](https://msdn.microsoft.com/library/windows/desktop/dn280346) aufgerufen werden. Dieser Aufruf weist den Grafiktreiber an, alle für die App zugeordneten temporären Puffer freizugeben. Dadurch wird die Wahrscheinlichkeit verringert, dass die angehaltene App beendet wird, um Arbeitsspeicherressourcen freizugeben. Dies ist eine Zertifizierungsanforderung für Windows8.1.
+Windows8.1 ab, müssen alle DirectX-UWP-apps [**Idxgidevice3**](https://msdn.microsoft.com/library/windows/desktop/dn280346) aufrufen, wenn "Suspending". Dieser Aufruf weist den Grafiktreiber an, alle für die App zugeordneten temporären Puffer freizugeben. Dadurch wird die Wahrscheinlichkeit verringert, dass die angehaltene App beendet wird, um Arbeitsspeicherressourcen freizugeben. Dies ist eine zertifizierungsanforderung für Windows8.1.
 
 ```cpp
 void App::OnSuspending(Platform::Object^ sender, SuspendingEventArgs^ args)
@@ -151,9 +150,9 @@ Das System benachrichtigt eine App nicht, wenn sie beendet wird. Wenn Ihre App a
 * [So wird's gemacht: Reaktivieren einer App (DirectX und C++)](how-to-resume-an-app-directx-and-cpp.md)
 * [So wird's gemacht: Aktivieren einer App (DirectX und C++)](how-to-activate-an-app-directx-and-cpp.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -8,24 +8,22 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e2750de79dbdb01081aa099ff955fcef2999dcbf
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 6f690e08d211692b05f0a80722aa4a3e3a06b39f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652495"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569196"
 ---
 # <a name="lighting"></a>Beleuchtung
 
 
-Lichter werden verwendet, um Objekte in einer Szene zu beleuchten. Die Farbe eines Objekt-Vertex basiert auf der aktuellen Texturmap, Vertexfarben und Lichtquellen.
+Lichter werden verwendet, um Objekte in einer Szene zu beleuchten. Die Farbe jedes Objektscheitelpunkts basiert auf der aktuellen Texturzuordnung, Scheitelpunktfarben und Lichtquellen.
 
-**Hinweis:**   Dieser Abschnitt gilt ausschließlich für die Pipeline mit festgelegtem Funktionsumfang. Programmierbare Shader führen jede Beleuchtung explizit aus.
+**Hinweis:**  dieser Abschnitt gilt nur für die Pipeline mit fester Funktion. Programmierbare Shader führen jede Beleuchtung explizit aus.
 
- 
+ 
 
 ## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>In diesem Abschnitt
 
@@ -56,21 +54,21 @@ Lichter werden verwendet, um Objekte in einer Szene zu beleuchten. Die Farbe ein
 </tr>
 <tr class="even">
 <td align="left"><p><a href="mathematics-of-lighting.md">Beleuchtungsmathematik</a></p></td>
-<td align="left"><p>Das Direct3D-Beleuchtungsmodell deckt ambiente, diffuse, spiegelnde und ausstrahlende Beleuchtung ab. Dies bietet eine ausreichende Flexibilität zum Lösen einer breiten Palette an Beleuchtungssituationen. Die Gesamtmenge an Licht in einer Szene wird als <em>globale Beleuchtung</em> bezeichnet.</p></td>
+<td align="left"><p>Das Direct3D-Beleuchtungsmodell deckt Umgebungs-, diffuse, spiegelnde und ausstrahlende Beleuchtung ab. Dies bietet eine ausreichende Flexibilität zum Lösen einer breiten Palette an Beleuchtungssituationen. Die Gesamtmenge an Licht in einer Szene wird als <em>globale Beleuchtung</em> bezeichnet.</p></td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
 
 
-[Lernanleitung für Direct3D-Grafiken](index.md)
+[Direct3D-Grafik-Lernanleitung](index.md)
 
- 
+ 
 
- 
+ 
 
 
 

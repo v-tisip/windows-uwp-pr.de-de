@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 84036edd2071d9545b3a492ea5cf0b397d9e722e
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 5846edda167823b7ae161d332fbde450ccf20d72
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044429"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572166"
 ---
 # <a name="diffuse-lighting"></a>Diffuse Beleuchtung
 
@@ -41,7 +39,7 @@ Diffuse Beleuchtung = sum\[C<sub>d</sub>\*L<sub>d</sub>\*(N<sup>.</sup>L<sub>dir
 | Atten           | N/V           | FLOAT         | Lichtdämpfung Weitere Informationen unter [Dämpfung- und Spotlight-Faktor](attenuation-and-spotlight-factor.md). |
 | Spotlight            | N/V           | FLOAT         | Spotlight Faktor. Weitere Informationen unter [Dämpfung- und Spotlight-Faktor](attenuation-and-spotlight-factor.md).  |
 
- 
+ 
 
 Weitere Informationen zur Berechnung der Dämpfung- (Atten) oder Spotlight-Eigenschaften (Spot) finden Sie unter [Dämpfung- und Spotlight-Faktor](attenuation-and-spotlight-factor.md).
 
@@ -73,9 +71,9 @@ Die Berechnung der diffusen Beleuchtung ist aufwendig als die der Ambiente-Beleu
 
 [Beleuchtungsmathematik](mathematics-of-lighting.md)
 
- 
+ 
 
- 
+ 
 
 
 

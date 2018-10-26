@@ -6,15 +6,13 @@ keywords: Neuigkeiten, was ist neu, Updates, Windows10, 1709, Fall, Creators, AP
 ms.author: quradic
 ms.date: 11/02/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e779f50857bc74f7e5d4912bde167cb9ed8ac101
-ms.sourcegitcommit: e2dfc05b989b8e1e02c79dfa664b16d509edc5de
-ms.translationtype: HT
+ms.openlocfilehash: 95f7b7adb351db840647cc3f4a69ad7f43663a03
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2017
-ms.locfileid: "1456948"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5568735"
 ---
 # <a name="new-apis-in-windows-10-build-16299"></a>Neue APIs in Windows10, Build 16299
 

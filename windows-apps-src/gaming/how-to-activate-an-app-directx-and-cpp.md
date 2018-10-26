@@ -1,24 +1,23 @@
 ---
 author: mtoepke
-title: So wird&quot;s gemacht - Aktivieren einer App (DirectX und C++)
+title: So wird's gemacht - Aktivieren einer App (DirectX und C++)
 description: In diesem Thema erfahren Sie, wie Sie die Aktivierungsbenutzeroberfläche für eine DirectX-App für die Universelle Windows-Plattform (UWP) definieren.
 ms.assetid: b07c7da1-8a5e-5b57-6f77-6439bf653a53
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, DirectX, Aktivierung
-ms.openlocfilehash: 4d3585e28ca4a3665a881df4f16a3cc3f82fcc52
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: b7f700ab97566ad9ec03d0595c55721dd9a9be98
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233604"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5572060"
 ---
 # <a name="how-to-activate-an-app-directx-and-c"></a>So wird's gemacht - Aktivieren einer App (DirectX und C++)
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 In diesem Thema erfahren Sie, wie Sie die Aktivierungsbenutzeroberfläche für eine DirectX-App für die Universelle Windows-Plattform (UWP) definieren.
 
@@ -91,9 +90,9 @@ void App::Run()
 * [So wird's gemacht: Anhalten einer App (DirectX und C++)](how-to-suspend-an-app-directx-and-cpp.md)
 * [So wird's gemacht: Reaktivieren einer App (DirectX und C++)](how-to-resume-an-app-directx-and-cpp.md)
 
- 
+ 
 
- 
+ 
 
 
 

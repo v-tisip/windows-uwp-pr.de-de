@@ -6,17 +6,15 @@ title: Windows-Apps-Konzeptzuordnung für Android- und iOS-Entwickler
 ms.author: jken
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, UWP
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ddf2066273439f14b63b0594a146927dec23ef6
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 821a28109c511bb2bd96bf5cbccb190cbe928abc
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691459"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569539"
 ---
 #<a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Windows-Apps-Konzeptzuordnung für Android- und iOS-Entwickler
 
@@ -341,7 +339,7 @@ Siehe auch die Portierungsinformationen in [Wechsel von iOS zu UWP](ios-to-uwp-r
 <td align="left"><strong>Ansichtsoptimierung für eine reaktionsfähige Benutzeroberfläche.</strong> <br><br>Verbessern der Leistung durch Optimieren der Ansichten.</td>
 <td align="left">Das Optimieren der <strong>Layouthierarchien</strong> mit dem Tool Hierarchy Viewer, das <strong>Wiederverwenden von Layouts</strong> und das Laden von <strong>Ansichten bei Bedarf</strong> sind Verfahren, mit denen Sie die Reaktionsfähigkeit des UI-Threads erhalten und verhindern, dass &quot;ANR&quot;-Meldungen (<strong>Application Not Responding</strong>) ausgegeben werden.<br/></td>
 <td align="left">Beheben von UI-Problemen mit <strong>Offscreen-Rendering</strong>, <strong>Mischebenen</strong> und <strong>Rasterung</strong> mithilfe des Tools <strong>Core Animation</strong>, um die Reaktionsfähigkeit des UI-Threads zu erhalten.</td>
-<td align="left">Sie können mit einigen einfachen Schritten das XAML-<strong>Markup</strong> und die XAML-<strong>Layouts</strong> <strong>optimieren</strong>. Dazu gehören das Reduzieren der Layoutstruktur, das Minimieren der Elementanzahl und das Minimieren der Überzeichnung. <br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt185403.aspx">Aufrechterhalten der Reaktionsfähigkeit des UI-Threads</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt204779.aspx">Optimieren Ihres XAML-Markups</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt404609.aspx">Optimieren des XAML-Layouts</a></td>
+<td align="left">Sie können mit einigen einfachen Schritten das XAML-<strong>Markup</strong> und die XAML-<strong>Layouts</strong> <strong>optimieren</strong>. Dazu gehören das Reduzieren der Layoutstruktur, das Minimieren der Elementanzahl und das Minimieren der Überzeichnung. <br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt185403.aspx">Aufrechterhalten der Reaktionsfähigkeit des UI-Threads</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt204779.aspx">Optimieren des XAML-Markups</a><br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt404609.aspx">Optimieren des XAML-Layouts</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>Threading.</strong> <br><br>Verwenden von Threading zum Aufrechterhalten der <strong>Reaktionsfähigkeit der Benutzeroberfläche</strong> und <strong>parallelen Ausführen mehrerer Aufgaben</strong>.</td>

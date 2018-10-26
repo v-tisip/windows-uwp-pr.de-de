@@ -1,24 +1,23 @@
 ---
 author: mtoepke
-title: So wird&quot;s gemacht - Reaktivieren einer App (DirectX und C++)
+title: So wird's gemacht - Reaktivieren einer App (DirectX und C++)
 description: In diesem Thema erfahren Sie, wie wichtige Anwendungsdaten wiederhergestellt werden, wenn das System Ihre DirectX-App für die Universelle Windows-Plattform (UWP) fortsetzt.
 ms.assetid: 5e6bb673-6874-ace5-05eb-f88c045f2178
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, fortsetzen, DirectX
-ms.openlocfilehash: 0ef4617417526cd2e39ce968e4d682b4015e22d3
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 1149bebfd837e3d4051b5e0fca10aac248d909c5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233606"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5571389"
 ---
 # <a name="how-to-resume-an-app-directx-and-c"></a>So wird's gemacht - Fortsetzen einer App (DirectX und C++)
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 In diesem Thema erfahren Sie, wie wichtige Anwendungsdaten wiederhergestellt werden, wenn das System Ihre DirectX-App für die Universelle Windows-Plattform (UWP) fortsetzt.
 
@@ -96,9 +95,9 @@ Das System hält Ihre App an, wenn der Benutzer zu einer anderen App oder zum De
 * [So wird's gemacht: Anhalten einer App (DirectX und C++)](how-to-suspend-an-app-directx-and-cpp.md)
 * [So wird's gemacht: Aktivieren einer App (DirectX und C++)](how-to-activate-an-app-directx-and-cpp.md)
 
- 
+ 
 
- 
+ 
 
 
 

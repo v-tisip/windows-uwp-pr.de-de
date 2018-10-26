@@ -6,19 +6,18 @@ ms.assetid: bf496dfb-d7f5-af6b-d588-501164608560
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Rendern, Szene, Tiefentest, Direct3D, Schatten
-ms.openlocfilehash: 538ebe9a604daaa5a444b0f7f1764770eec8ce7c
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: dc776a60e771cc8d5961e8c7b9c67eb99fabea3a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233566"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569022"
 ---
 # <a name="render-the-scene-with-depth-testing"></a>Rendern der Szene mit Tiefentest
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Erstellen Sie einen Schatteneffekt, indem Sie dem Vertex-Shader (bzw. Geometry-Shader) und dem Pixel-Shader einen Tiefentest hinzufügen. Teil3 von [Exemplarische Vorgehensweise: Implementieren von Schattenvolumes mithilfe von Tiefenpuffern in Direct3D11](implementing-depth-buffers-for-shadow-mapping.md).
@@ -161,9 +160,9 @@ return float4(input.color * ambient, 1.f);
 
 Der nächste Teil dieser exemplarischen Vorgehensweise beschäftigt sich mit dem [Unterstützen von Schattenmaps für unterschiedliche Hardware](target-a-range-of-hardware.md).
 
- 
+ 
 
- 
+ 
 
 
 

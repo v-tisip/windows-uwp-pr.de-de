@@ -4,27 +4,26 @@ ms.assetid: 76776b0f-3163-48c9-835b-3f4213968079
 title: Datenzugriff
 description: In diesem Abschnitt wird das Speichern von Daten auf dem Gerät in einer privaten Datenbank und die Verwendung der objektrelationalen Zuordnung in UWP-Apps (Universelle Windows-Plattform) erläutert.
 ms.author: normesta
-ms.date: 02/08/2017
+ms.date: 11/13/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, Daten, Datenbank, relational, Tabellen, sqlite
-ms.openlocfilehash: 19690b6877fb4304b7740e6098711ca0b097d567
-ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.localizationpriority: medium
+ms.openlocfilehash: beca20d358430ecd82cd1bc57459a6f6af36be77
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2017
-ms.locfileid: "665320"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569862"
 ---
 # <a name="data-access"></a>Datenzugriff
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
-In diesem Abschnitt wird das Speichern von Daten auf dem Gerät in einer privaten Datenbank und die Verwendung der objektrelationalen Zuordnung in UWP-Apps (Universelle Windows-Plattform) erläutert.
-
-SQLite ist im UWP-SDK enthalten. Entity FrameworkCore funktioniert mit SQLite in UWP-Apps. Verwenden Sie diese Technologien, um für Offline- bzw. zeitweilige Konnektivitätsszenarien zu entwickeln und um Daten zwischen App-Sitzungen beizubehalten.
+Sie können Daten mithilfe einer SQLite-Datenbank auf dem Gerät des Benutzers speichern. Sie können Ihre app auch direkt mit einer SQL Server-Datenbank verbinden, ohne jegliche Art von Dienstebene verwenden zu müssen.
 
 | Thema | Beschreibung|
 |-------|------------|
-| [Entity Framework Core mit SQLite für C#-Apps](entity-framework-7-with-sqlite-for-csharp-apps.md) | Entity Framework (EF) ist eine objektrelationale Zuordnung, die Ihnen über domänenspezifische Objekte die Verwendung relationaler Daten ermöglicht. In diesem Artikel wird erläutert, wie Sie Entity Framework Core mit einer SQLite-Datenbank in einer universellen Windows-App verwenden können. |
-| [SQLite-Datenbanken](sqlite-databases.md) | SQLite ist ein eingebettetes Datenbankmodul ohne Server. In diesem Artikel wird erläutert, wie die im SDK enthaltene SQLite-Bibliothek verwendet wird und wie Ihre eigene SQLite-Bibliothek in einer universellen Windows-App verpackt oder aus der Quelle erstellt wird. |
+| [Verwenden einer SQLite-Datenbank in einer UWP-App](sqlite-databases.md) | Zeigt, wie Sie SQLite verwenden, um Daten in einer Lightweight-Datenbank auf dem Gerät des Benutzers speichern und abrufen. SQLite ist ein eingebettetes Datenbankmodul ohne Server. |
+| [Verwenden einer SQL Server-Datenbank in einer UWP-app](sql-server-databases.md) | Beschreibt, wie Sie sich direkt mit einer SQL Server-Datenbank verbinden und dann speichern und Abrufen von Daten mithilfe der Klassen im [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) -Namespace. Es ist keine Dienstebene erforderlich. |
+
+## <a name="related-topics"></a>Verwandte Themen
+
+* [Customer Orders Database-Beispiel](https://github.com/Microsoft/Windows-appsample-customers-orders-database)

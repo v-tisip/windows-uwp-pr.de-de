@@ -6,16 +6,14 @@ ms.assetid: 6080f0d3-478a-8bbe-d064-73fd3d432074
 ms.author: elcowle
 ms.date: 09/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, Uwp, Spiele, Beispiel, Directx, Struktur
 ms.localizationpriority: medium
-ms.openlocfilehash: c26b547d5cc94f3277d0c898804e65d75e6d17e2
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.openlocfilehash: 1272200bf128443c82807aec9df5559f207819e1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1700876"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5569116"
 ---
 # <a name="marble-maze-application-structure"></a>Anwendungsstruktur von Marble Maze
 
@@ -27,7 +25,7 @@ Die Struktur einer DirectX-UWP-App unterscheidet sich von der einer herkömmlich
 > [!NOTE]
 > Den Beispielcode für dieses Dokument finden Sie im [DirectX-Beispielspiel Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
 
- 
+ 
 ## 
 Es folgen einige wichtige Punkte, die in diesem Dokument für das Strukturieren von Spielcode erläutert werden:
 
@@ -65,7 +63,7 @@ Einige der Komponenten in Marble Maze können mit geringfügigen oder ohne Ände
 | StepTimer.h               | Definiert die **StepTimer**-Klasse, die eine einfache Möglichkeit zum Abrufen von Gesamtzeiten und verstrichenen Zeiten bietet.
 | UserInterface.h, UserInterface.cpp         | Definiert die Funktionalität, die mit der Benutzeroberfläche (z. B. dem Menüsystem und der Bestenliste) verknüpft ist.                                                                        |
 
- 
+ 
 
 ##  <a name="design-time-versus-run-time-resource-formats"></a>Entwurfszeit- und Laufzeitressourcenformate
 
@@ -114,7 +112,7 @@ Damit das Spiel innerhalb von 5 Sekunden nach dem Starten auf Fensterereignisse 
 > [!NOTE]
 > Sie können auch das Hauptmenü anzeigen, wenn es bereit ist, und den übrigen Ressourcen erlauben, den Ladevorgang im Hintergrund fortzusetzen. Wenn der Benutzer eine Menüoption auswählt, bevor alle Ressourcen geladen wurden, kann beispielsweise durch Anzeigen einer Statusleiste angegeben werden, dass Szenenressourcen weiter geladen werden.
 
- 
+ 
 
 Selbst wenn das Spiel relativ wenige Spielressourcen enthält, empfiehlt es sich aus zwei Gründen, diese asynchron zu laden. Zum einen ist es schwierig, sicherzustellen, dass alle Ressourcen auf allen Geräten und in allen Konfigurationen schnell geladen werden. Zum anderen ist der Code bei frühzeitiger Integration des asynchronen Ladens zum Skalieren bereit, wenn Sie Funktionalitäten hinzufügen.
 
@@ -134,7 +132,7 @@ Weitere Informationen zur asynchronen Programmierung für UWP-Apps finden Sie un
 > [!TIP]
 > Sollten Sie z.B. einen Spielcode schreiben, der Teil einer Windows-Runtime-C++-Bibliothek (d.h. eine DLL) ist, können Sie im Abschnitt [Erstellen asynchroner Vorgänge in C++ für UWP-Apps](https://docs.microsoft.com/cpp/parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps) lesen, wie asynchrone Vorgänge erstellt werden, die von Apps und anderen Bibliotheken genutzt werden können.
 
- 
+ 
 
 ## <a name="the-game-loop"></a>Die Spielschleife
 
@@ -431,9 +429,9 @@ Informationen zu einigen der wichtigsten Vorgehensweisen, die Sie beim Verwenden
 * [Grundlagen am Beispiel von Marble Maze](marble-maze-sample-fundamentals.md)
 * [Entwickeln von Marble Maze, einem UWP-Spiel in C++ und DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
- 
+ 
 
- 
+ 
 
 
 
