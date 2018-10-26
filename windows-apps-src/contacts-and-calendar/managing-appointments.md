@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Termine, Kalender
 ms.localizationpriority: medium
 ms.openlocfilehash: 345bbabb2bd80f0cbb8465941bec07c7172156e8
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5548920"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5604829"
 ---
 # <a name="manage-appointments"></a>Verwalten von Terminen
 
