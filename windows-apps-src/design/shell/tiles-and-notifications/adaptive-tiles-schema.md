@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ed938ec247f308559566ad299bec8eb8ea75674
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5564464"
+ms.locfileid: "5665483"
 ---
 # <a name="adaptive-tile-templates-schema-and-guidance"></a>Vorlagen für adaptive Kacheln: Schema und Richtlinien
 
