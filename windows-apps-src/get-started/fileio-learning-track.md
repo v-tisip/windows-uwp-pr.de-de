@@ -5,16 +5,14 @@ description: Hier erfahren Sie, wie Sie in der Universellen Windows-Plattform mi
 ms.author: twhitney
 ms.date: 05/01/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Erste Schritte, UWP, Windows10, Lernpfad, Dateien, Datei-E/A, Datei lesen, Datei schreiben, Datei erstellen, Text schreiben, Text lesen
 ms.localizationpriority: medium
-ms.openlocfilehash: ae89b5c0e072eceec155009c07b3b3a7cf563a20
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 02ac4d3f157343182097e67dc8825dde940302c3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5521412"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553161"
 ---
 # <a name="work-with-files"></a><span data-ttu-id="726fd-104">Arbeiten mit Dateien</span><span class="sxs-lookup"><span data-stu-id="726fd-104">Work with files</span></span>
 

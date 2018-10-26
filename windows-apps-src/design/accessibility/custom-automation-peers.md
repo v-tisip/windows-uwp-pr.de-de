@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: mhopkins
 ms.date: 07/13/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: a2f9caf8519aa76ef9487e5318a238a6e1d53fe2
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 37f75686c51e876cd4e6b608d0f527d3e32e4e24
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5472094"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557419"
 ---
 # <a name="custom-automation-peers"></a><span data-ttu-id="ff122-103">Benutzerdefinierte Automatisierungs-Peers</span><span class="sxs-lookup"><span data-stu-id="ff122-103">Custom automation peers</span></span>  
 

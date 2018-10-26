@@ -6,16 +6,14 @@ title: Abrufen von Lizenzinformationen für Ihre Apps und deren Add-Ons
 ms.author: mhopkins
 ms.date: 12/04/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Lizenzen, Apps, Add-Ons, In-App-Einkäufe, IAPs, Windows.Services.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 83889dce2959a3d373081808864a6b7913fb142b
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 032f2419f39e50c023e2c301b70778f421f447f8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5515948"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558510"
 ---
 # <a name="get-license-info-for-apps-and-add-ons"></a><span data-ttu-id="c23c9-104">Abrufen von Lizenzinformationen zu Apps und deren Add-Ons</span><span class="sxs-lookup"><span data-stu-id="c23c9-104">Get license info for apps and add-ons</span></span>
 

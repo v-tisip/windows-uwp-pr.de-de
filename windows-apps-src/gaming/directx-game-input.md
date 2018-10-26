@@ -6,26 +6,24 @@ ms.assetid: 4c7dff42-978b-475e-a1a6-88c99bf2350a
 ms.author: joanlee
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiel, Directx, Eingabe, Maus, Touch, Steuerelement
 ms.localizationpriority: medium
-ms.openlocfilehash: 0380f81cdc171a3eac721c0d3d609d3ba18fb534
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 8787400cc1d77afb32df51ba943ae72a99c2b470
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652709"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555743"
 ---
-# <a name="game-input-for-directx-games"></a><span data-ttu-id="c01d7-104">Eingaben für DirectX-Spiele</span><span class="sxs-lookup"><span data-stu-id="c01d7-104">Game input for DirectX games</span></span>
+# <a name="game-input-for-directx-games"></a><span data-ttu-id="144d4-104">Eingaben für DirectX-Spiele</span><span class="sxs-lookup"><span data-stu-id="144d4-104">Game input for DirectX games</span></span>
 
-<span data-ttu-id="c01d7-105">Dieser Abschnitt enthält Informationen zum Hinzufügen von verschiedenen Arten von Eingaben zu Ihren DirectX-Spielen.</span><span class="sxs-lookup"><span data-stu-id="c01d7-105">This section provides information about adding various types of inputs for your DirectX games.</span></span>
+<span data-ttu-id="144d4-105">Dieser Abschnitt enthält Informationen zum Hinzufügen von verschiedenen Arten von Eingaben zu Ihren DirectX-Spielen.</span><span class="sxs-lookup"><span data-stu-id="144d4-105">This section provides information about adding various types of inputs for your DirectX games.</span></span>
 
-<span data-ttu-id="c01d7-106">Im Thema „Bewegungs-/Blicksteuerungen für Spiele” wird erläutert, wie Sie Ihrem DirectX-Spiel herkömmliche Steuerungen für Maus und Tastatur hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="c01d7-106">Move-look controls for games topic explains how to add traditional mouse and keyboard controls to your DirectX game.</span></span>
+<span data-ttu-id="144d4-106">Im Thema „Bewegungs-/Blicksteuerungen für Spiele” wird erläutert, wie Sie Ihrem DirectX-Spiel herkömmliche Steuerungen für Maus und Tastatur hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="144d4-106">Move-look controls for games topic explains how to add traditional mouse and keyboard controls to your DirectX game.</span></span>
 
-<span data-ttu-id="c01d7-107">Im Thema „Relative Mausbewegung” wird erläutert, wie Maus-Steuerelemente implementiert werden können, indem Sie das Pixeldelta zwischen Mausebewegungen nachverfolgen.</span><span class="sxs-lookup"><span data-stu-id="c01d7-107">Relative mouse movement topic discusses how you can implement mouse control by tracking the pixel delta between mouse movements.</span></span>
+<span data-ttu-id="144d4-107">Im Thema „Relative Mausbewegung” wird erläutert, wie Maus-Steuerelemente implementiert werden können, indem Sie das Pixeldelta zwischen Mausebewegungen nachverfolgen.</span><span class="sxs-lookup"><span data-stu-id="144d4-107">Relative mouse movement topic discusses how you can implement mouse control by tracking the pixel delta between mouse movements.</span></span>
 
-<span data-ttu-id="c01d7-108">Im Thema „Toucheingabesteuerelemente für Spiele” wird erläutert, wie Sie touchbasierte Steuerelemente hinzufügen, um eine Kamera mit fester Ebene in einer Direct3D-Umgebung zu bewegen.</span><span class="sxs-lookup"><span data-stu-id="c01d7-108">Touch controls for games topic explains how to add touch-based controls to move a fixed-plane camera in a Direct3D environment.</span></span>
+<span data-ttu-id="144d4-108">Im Thema „Toucheingabesteuerelemente für Spiele” wird erläutert, wie Sie touchbasierte Steuerelemente hinzufügen, um eine Kamera mit fester Ebene in einer Direct3D-Umgebung zu bewegen.</span><span class="sxs-lookup"><span data-stu-id="144d4-108">Touch controls for games topic explains how to add touch-based controls to move a fixed-plane camera in a Direct3D environment.</span></span>
 
 <table>
 <colgroup>
@@ -34,22 +32,22 @@ ms.locfileid: "1652709"
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><span data-ttu-id="c01d7-109">Thema</span><span class="sxs-lookup"><span data-stu-id="c01d7-109">Topic</span></span></th>
-<th align="left"><span data-ttu-id="c01d7-110">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c01d7-110">Description</span></span></th>
+<th align="left"><span data-ttu-id="144d4-109">Thema</span><span class="sxs-lookup"><span data-stu-id="144d4-109">Topic</span></span></th>
+<th align="left"><span data-ttu-id="144d4-110">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="144d4-110">Description</span></span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="tutorial--adding-move-look-controls-to-your-directx-game.md"><span data-ttu-id="c01d7-111">Bewegungs-/Blicksteuerungen für Spiele</span><span class="sxs-lookup"><span data-stu-id="c01d7-111">Move-look controls for games</span></span></a></p></td>
-<td align="left"><p><span data-ttu-id="c01d7-112">Fügen Sie Bewegungs-/Blicksteuerungen hinzu.</span><span class="sxs-lookup"><span data-stu-id="c01d7-112">Add move-look controls.</span></span></p></td>
+<td align="left"><p><a href="tutorial--adding-move-look-controls-to-your-directx-game.md"><span data-ttu-id="144d4-111">Bewegungs-/Blicksteuerungen für Spiele</span><span class="sxs-lookup"><span data-stu-id="144d4-111">Move-look controls for games</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="144d4-112">Fügen Sie Bewegungs-/Blicksteuerungen hinzu.</span><span class="sxs-lookup"><span data-stu-id="144d4-112">Add move-look controls.</span></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="relative-mouse-movement.md"><span data-ttu-id="c01d7-113">Relative Mausbewegung</span><span class="sxs-lookup"><span data-stu-id="c01d7-113">Relative mouse movement</span></span></a></p></td>
-<td align="left"><p><span data-ttu-id="c01d7-114">Behandeln Sie die relative Mausbewegung.</span><span class="sxs-lookup"><span data-stu-id="c01d7-114">Handle relative mouse movement.</span></span></p></td>
+<td align="left"><p><a href="relative-mouse-movement.md"><span data-ttu-id="144d4-113">Relative Mausbewegung</span><span class="sxs-lookup"><span data-stu-id="144d4-113">Relative mouse movement</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="144d4-114">Behandeln Sie die relative Mausbewegung.</span><span class="sxs-lookup"><span data-stu-id="144d4-114">Handle relative mouse movement.</span></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="tutorial--adding-touch-controls-to-your-directx-game.md"><span data-ttu-id="c01d7-115">Toucheingabesteuerelemente für Spiele</span><span class="sxs-lookup"><span data-stu-id="c01d7-115">Touch controls for games</span></span></a></p></td>
-<td align="left"><p><span data-ttu-id="c01d7-116">Fügen Sie Ihrem Spiel einfache touchbasierte Steuerelemente hinzu.</span><span class="sxs-lookup"><span data-stu-id="c01d7-116">Add basic touch controls to your game.</span></span></p></td>
+<td align="left"><p><a href="tutorial--adding-touch-controls-to-your-directx-game.md"><span data-ttu-id="144d4-115">Toucheingabesteuerelemente für Spiele</span><span class="sxs-lookup"><span data-stu-id="144d4-115">Touch controls for games</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="144d4-116">Fügen Sie Ihrem Spiel einfache touchbasierte Steuerelemente hinzu.</span><span class="sxs-lookup"><span data-stu-id="144d4-116">Add basic touch controls to your game.</span></span></p></td>
 </tr>
 </tbody>
 </table>

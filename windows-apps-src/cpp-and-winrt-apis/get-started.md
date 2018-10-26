@@ -5,16 +5,14 @@ title: Erste Schritte mit C++/WinRT
 ms.author: stwhi
 ms.date: 10/19/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, erste schritte
 ms.localizationpriority: medium
-ms.openlocfilehash: b8f8425fa602c844803cc632f523949b8b04d551
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: 6cb8e18904f61976103689c8d83475ec248eb38b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5483800"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558020"
 ---
 # <a name="get-started-with-cwinrt"></a><span data-ttu-id="37cdc-104">Erste Schritte mit C++/WinRT</span><span class="sxs-lookup"><span data-stu-id="37cdc-104">Get started with C++/WinRT</span></span>
 
@@ -146,7 +144,7 @@ std::wcout << titleAsHstring.c_str() << std::endl;
 #include <winrt/base.h>
 ```
 
-## <a name="linking"></a><span data-ttu-id="37cdc-156">Verknüpfen</span><span class="sxs-lookup"><span data-stu-id="37cdc-156">Linking</span></span>
+### <a name="linking"></a><span data-ttu-id="37cdc-156">Verknüpfen</span><span class="sxs-lookup"><span data-stu-id="37cdc-156">Linking</span></span>
 
 <span data-ttu-id="37cdc-157">C++ / WinRT-sprachprojektion hängt von bestimmten Windows-Runtime-freien (nicht-Mitglieds)-Funktionen und Einstiegspunkten ab, erfordern, die Verknüpfung mit der überbibliothek ["windowsapp.lib"](/uwp/win32-and-com/win32-apis) .</span><span class="sxs-lookup"><span data-stu-id="37cdc-157">The C++/WinRT language projection depends on certain Windows Runtime free (non-member) functions, and entry points, that require linking to the [WindowsApp.lib](/uwp/win32-and-com/win32-apis) umbrella library.</span></span> <span data-ttu-id="37cdc-158">Dieser Abschnitt beschreibt die drei Arten den Linker Anfall.</span><span class="sxs-lookup"><span data-stu-id="37cdc-158">This section describes three ways of satisfying the linker.</span></span>
 

@@ -5,17 +5,15 @@ title: Farbe in UWP-Apps
 ms.author: jimwalk
 ms.date: 4/7/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 design-contact: karenmui
 ms.localizationpriority: medium
-ms.openlocfilehash: e5d26d0e2fc8c040af81645477e3b75b0d128738
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: cbc884fa3079eaa9db348de3430ed6d59d1e8a0d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5483406"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555697"
 ---
 # <a name="color"></a><span data-ttu-id="f5991-104">Farben</span><span class="sxs-lookup"><span data-stu-id="f5991-104">Color</span></span>
 

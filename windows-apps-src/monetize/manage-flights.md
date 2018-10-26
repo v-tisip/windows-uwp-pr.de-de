@@ -6,16 +6,14 @@ title: Verwalten von Flight-Paketen
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Flights
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a761edf50888fb7f3130886a2c7e6e65b7c0a1d
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 41cf0d224dfca4d11bbd1e3fde7da44c5201a601
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5518778"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556385"
 ---
 # <a name="manage-package-flights"></a><span data-ttu-id="4e138-104">Verwalten von Flight-Paketen</span><span class="sxs-lookup"><span data-stu-id="4e138-104">Manage package flights</span></span>
 

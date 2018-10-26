@@ -8,33 +8,31 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9e26a446bdd1e5a692e826d2c0ba303688bbd3d7
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: cca90c705c7bb4dd1c7e283a9c3ed267cd282b56
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044199"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554452"
 ---
-# <a name="constant-buffer-view-cbv"></a><span data-ttu-id="39999-105">Konstantenpufferansicht (CBV)</span><span class="sxs-lookup"><span data-stu-id="39999-105">Constant buffer view (CBV)</span></span>
+# <a name="constant-buffer-view-cbv"></a><span data-ttu-id="1577d-105">Konstantenpufferansicht (CBV)</span><span class="sxs-lookup"><span data-stu-id="1577d-105">Constant buffer view (CBV)</span></span>
 
 
-<span data-ttu-id="39999-106">Konstantenpuffer enthalten Konstantendaten für Shader.</span><span class="sxs-lookup"><span data-stu-id="39999-106">Constant buffers contain shader constant data.</span></span> <span data-ttu-id="39999-107">Der Nutzen ist, dass die Daten erhalten bleiben und jeder GPU-Shader darauf zugreifen kann, bis eine Änderung der Daten erforderlich wird.</span><span class="sxs-lookup"><span data-stu-id="39999-107">The value of them is that the data persists, and can be accessed by any GPU shader, until it is necessary to change the data.</span></span>
+<span data-ttu-id="1577d-106">Konstantenpuffer enthalten Konstantendaten für Shader.</span><span class="sxs-lookup"><span data-stu-id="1577d-106">Constant buffers contain shader constant data.</span></span> <span data-ttu-id="1577d-107">Der Nutzen ist, dass die Daten erhalten bleiben und jeder GPU-Shader darauf zugreifen kann, bis eine Änderung der Daten erforderlich wird.</span><span class="sxs-lookup"><span data-stu-id="1577d-107">The value of them is that the data persists, and can be accessed by any GPU shader, until it is necessary to change the data.</span></span>
 
-<span data-ttu-id="39999-108">Typische Daten für einen Konstantenpuffer sind globale, Ansichts- und Projektionsmatrizen, die während des Zeichnens eines Frames konstant bleiben.</span><span class="sxs-lookup"><span data-stu-id="39999-108">Typical data for a constant buffer would be world, projection and view matrices, which remain constant throughout the drawing of one frame.</span></span>
+<span data-ttu-id="1577d-108">Typische Daten für einen Konstantenpuffer sind globale, Ansichts- und Projektionsmatrizen, die während des Zeichnens eines Frames konstant bleiben.</span><span class="sxs-lookup"><span data-stu-id="1577d-108">Typical data for a constant buffer would be world, projection and view matrices, which remain constant throughout the drawing of one frame.</span></span>
 
-<span data-ttu-id="39999-109">Das Konstantenpuffer-Layout sollte mit dem HLSL-Layout übereinstimmen (weitere Informationen finden Sie unter [Regeln für das Packen von Konstantenvariablen](https://msdn.microsoft.com/library/windows/desktop/bb509632.aspx)).</span><span class="sxs-lookup"><span data-stu-id="39999-109">Constant buffer layout should match the HLSL layout (refer to [Packing Rules for Constant Variables](https://msdn.microsoft.com/library/windows/desktop/bb509632.aspx)).</span></span>
+<span data-ttu-id="1577d-109">Das Konstantenpuffer-Layout sollte mit dem HLSL-Layout übereinstimmen (weitere Informationen finden Sie unter [Regeln für das Packen von Konstantenvariablen](https://msdn.microsoft.com/library/windows/desktop/bb509632.aspx)).</span><span class="sxs-lookup"><span data-stu-id="1577d-109">Constant buffer layout should match the HLSL layout (refer to [Packing Rules for Constant Variables](https://msdn.microsoft.com/library/windows/desktop/bb509632.aspx)).</span></span>
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="39999-110"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="39999-110"><span id="related-topics"></span>Related topics</span></span>
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="1577d-110"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="1577d-110"><span id="related-topics"></span>Related topics</span></span>
 
 
-[<span data-ttu-id="39999-111">Ansichten</span><span class="sxs-lookup"><span data-stu-id="39999-111">Views</span></span>](views.md)
+[<span data-ttu-id="1577d-111">Ansichten</span><span class="sxs-lookup"><span data-stu-id="1577d-111">Views</span></span>](views.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -5,16 +5,14 @@ title: Abrufen von Xbox Live Erfolgsdaten
 ms.author: mhopkins
 ms.date: 06/04/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, Uwp, Store-Diensten, Microsoft Store-Analyse-API, Xbox Live-Analyse, Erfolge
 ms.localizationpriority: medium
-ms.openlocfilehash: f4f60cc8ecbdd3d6d05312238166bd666e238e37
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: a589ee480ee025f2940de93efaf7e453af488690
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5480247"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556834"
 ---
 # <a name="get-xbox-live-achievements-data"></a><span data-ttu-id="0ce1b-104">Abrufen von Xbox Live Erfolgsdaten</span><span class="sxs-lookup"><span data-stu-id="0ce1b-104">Get Xbox Live achievements data</span></span>
 

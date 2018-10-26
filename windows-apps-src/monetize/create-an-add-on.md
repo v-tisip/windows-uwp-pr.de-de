@@ -6,16 +6,14 @@ title: Erstellen eines Add-Ons
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Erstellen eines Add-Ons, In-App-Produkt, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: a24355ca09380c46d8e648899ca2fe96f9e989c7
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 36b6be05d1efc1cbc23f26a509230750c8896c87
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5522341"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558261"
 ---
 # <a name="create-an-add-on"></a><span data-ttu-id="b9c5e-104">Erstellen eines Add-Ons</span><span class="sxs-lookup"><span data-stu-id="b9c5e-104">Create an add-on</span></span>
 

@@ -6,15 +6,13 @@ keywords: Neues in, neu, Updates, Windows 10, neueste, apis, 17763, Oktober
 ms.author: quradic
 ms.date: 10/02/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3aa3e586e82fc5c2da78cc201f772112699a9035
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 1e51a7fb64dae42307960aa90f85463d11aecadc
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5516338"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559094"
 ---
 # <a name="new-apis-in-windows-10-build-17763"></a><span data-ttu-id="8216d-104">Neue APIs in Windows 10 build 17763</span><span class="sxs-lookup"><span data-stu-id="8216d-104">New APIs in Windows 10 build 17763</span></span>
 

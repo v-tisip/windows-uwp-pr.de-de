@@ -5,37 +5,37 @@ description: Anleitungen zum Deaktivieren des Standardmausmodus
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.assetid: e57ee4e6-7807-4943-a933-c2b4dc80fc01
-ms.openlocfilehash: 980779b110523ceecf608b5077cb8446fb9a1e2b
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 9cc6989103442deb364654ec006c0fe4b1455511
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "234945"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553042"
 ---
-# <a name="how-to-disable-mouse-mode"></a><span data-ttu-id="fc603-104">Deaktivieren des Mausmodus</span><span class="sxs-lookup"><span data-stu-id="fc603-104">How to disable mouse mode</span></span>
-<span data-ttu-id="fc603-105">Der Mausmodus ist standardmäßig für alle Anwendungen aktiviert. Das bedeutet, dass alle Anwendungen, für die die Option nicht deaktiviert wurde, einen Mauszeiger erhalten (ähnlich dem Zeiger im Edge-Browser auf der Konsole).</span><span class="sxs-lookup"><span data-stu-id="fc603-105">Mouse mode is on by default for all applications, which means that all applications that have not opted out will receive a mouse pointer (similar to the one in the Edge browser on the console).</span></span> <span data-ttu-id="fc603-106">Es wird nachdrücklich empfohlen, diese Option zu deaktivieren und die direktionale Navigation über den Controller zu optimieren.</span><span class="sxs-lookup"><span data-stu-id="fc603-106">We strongly recommend that you turn this off and optimize for directional controller navigation.</span></span>   
+# <a name="how-to-disable-mouse-mode"></a><span data-ttu-id="50121-104">Deaktivieren des Mausmodus</span><span class="sxs-lookup"><span data-stu-id="50121-104">How to disable mouse mode</span></span>
+<span data-ttu-id="50121-105">Der Mausmodus ist standardmäßig für alle Anwendungen aktiviert. Das bedeutet, dass alle Anwendungen, für die die Option nicht deaktiviert wurde, einen Mauszeiger erhalten (ähnlich dem Zeiger im Edge-Browser auf der Konsole).</span><span class="sxs-lookup"><span data-stu-id="50121-105">Mouse mode is on by default for all applications, which means that all applications that have not opted out will receive a mouse pointer (similar to the one in the Edge browser on the console).</span></span> <span data-ttu-id="50121-106">Es wird nachdrücklich empfohlen, diese Option zu deaktivieren und die direktionale Navigation über den Controller zu optimieren.</span><span class="sxs-lookup"><span data-stu-id="50121-106">We strongly recommend that you turn this off and optimize for directional controller navigation.</span></span>   
    
-## <a name="html"></a><span data-ttu-id="fc603-107">HTML</span><span class="sxs-lookup"><span data-stu-id="fc603-107">HTML</span></span>   
-<span data-ttu-id="fc603-108">Um die direktionale Navigation über den Controller in einer JavaScript-UWP-App (Universelle Windows-Plattform) zu aktivieren, verwenden Sie die JavaScript-Bibliothek [TVHelpers für die direktionale Navigation](https://github.com/Microsoft/TVHelpers/wiki/Using-DirectionalNavigation).</span><span class="sxs-lookup"><span data-stu-id="fc603-108">To turn on directional controller navigation in a JavaScript Universal Windows Platform (UWP) app, use the [TVHelpers directional navigation](https://github.com/Microsoft/TVHelpers/wiki/Using-DirectionalNavigation) JavaScript library.</span></span> <span data-ttu-id="fc603-109">Fügen Sie die JavaScript-Datei für die direktionale Navigation in Ihr App-Paket ein, und fügen Sie einen Verweis auf diese in allen HTML-Seiten ein, die eine direktionale Navigation über den Controller erfordern:</span><span class="sxs-lookup"><span data-stu-id="fc603-109">Include the directional navigation JavaScript file in your app package, and add a reference to it in all of the HTML pages that require directional controller navigation:</span></span>
+## <a name="html"></a><span data-ttu-id="50121-107">HTML</span><span class="sxs-lookup"><span data-stu-id="50121-107">HTML</span></span>   
+<span data-ttu-id="50121-108">Um die direktionale Navigation über den Controller in einer JavaScript-UWP-App (Universelle Windows-Plattform) zu aktivieren, verwenden Sie die JavaScript-Bibliothek [TVHelpers für die direktionale Navigation](https://github.com/Microsoft/TVHelpers/wiki/Using-DirectionalNavigation).</span><span class="sxs-lookup"><span data-stu-id="50121-108">To turn on directional controller navigation in a JavaScript Universal Windows Platform (UWP) app, use the [TVHelpers directional navigation](https://github.com/Microsoft/TVHelpers/wiki/Using-DirectionalNavigation) JavaScript library.</span></span> <span data-ttu-id="50121-109">Fügen Sie die JavaScript-Datei für die direktionale Navigation in Ihr App-Paket ein, und fügen Sie einen Verweis auf diese in allen HTML-Seiten ein, die eine direktionale Navigation über den Controller erfordern:</span><span class="sxs-lookup"><span data-stu-id="50121-109">Include the directional navigation JavaScript file in your app package, and add a reference to it in all of the HTML pages that require directional controller navigation:</span></span>
 
 ```code
 <script src="directionalnavigation-1.0.0.0.js"></script>
 ```
-<span data-ttu-id="fc603-110">Weitere Informationen finden Sie im [Wiki für direktionale Navigation](https://github.com/Microsoft/TVHelpers/wiki/Using-DirectionalNavigation).</span><span class="sxs-lookup"><span data-stu-id="fc603-110">For more details, see the [directional navigation wiki](https://github.com/Microsoft/TVHelpers/wiki/Using-DirectionalNavigation).</span></span>
+<span data-ttu-id="50121-110">Weitere Informationen finden Sie im [Wiki für direktionale Navigation](https://github.com/Microsoft/TVHelpers/wiki/Using-DirectionalNavigation).</span><span class="sxs-lookup"><span data-stu-id="50121-110">For more details, see the [directional navigation wiki](https://github.com/Microsoft/TVHelpers/wiki/Using-DirectionalNavigation).</span></span>
 
-<span data-ttu-id="fc603-111">Wenn Sie stattdessen den Mausmodus deaktivieren und die DOM- oder WinRT-Gamepad-APIs direkt verwenden möchten, führen Sie folgende Schritte für jede Seite aus, für die dies erforderlich ist:</span><span class="sxs-lookup"><span data-stu-id="fc603-111">If you instead want to turn off mouse mode and use the DOM or WinRT gamepad APIs directly, run the following for every page that requires it:</span></span> 
+<span data-ttu-id="50121-111">Wenn Sie stattdessen den Mausmodus deaktivieren und die DOM- oder WinRT-Gamepad-APIs direkt verwenden möchten, führen Sie folgende Schritte für jede Seite aus, für die dies erforderlich ist:</span><span class="sxs-lookup"><span data-stu-id="50121-111">If you instead want to turn off mouse mode and use the DOM or WinRT gamepad APIs directly, run the following for every page that requires it:</span></span> 
    
 ```code
 navigator.gamepadInputEmulation = "gamepad";
 ```   
 
-   <span data-ttu-id="fc603-112">Diese Eigenschaft ist standardmäßig auf `mouse` festgelegt, wodurch der Mausmodus aktiviert wird.</span><span class="sxs-lookup"><span data-stu-id="fc603-112">This property defaults to `mouse`, which enables mouse mode.</span></span> <span data-ttu-id="fc603-113">Wenn Sie diese auf `keyboard` festlegen, wird der Mausmodus deaktiviert, und Gamepad-Eingaben generieren DOM-Tastaturereignisse.</span><span class="sxs-lookup"><span data-stu-id="fc603-113">Setting it to `keyboard` turns off mouse mode, and instead gamepad input generates DOM keyboard events.</span></span> <span data-ttu-id="fc603-114">Wenn Sie diese auf `gamepad` festlegen, wird der Mausmodus deaktiviert, und es werden keine DOM-Tastaturereignisse generiert. Auf diese Weise können Sie nur die DOM- oder WinRT-Gamepad-APIs verwenden.</span><span class="sxs-lookup"><span data-stu-id="fc603-114">Setting it to `gamepad` turns off mouse mode and does not generate DOM keyboard events, and allows you to just use the DOM or WinRT gamepad APIs.</span></span>
+   <span data-ttu-id="50121-112">Diese Eigenschaft ist standardmäßig auf `mouse` festgelegt, wodurch der Mausmodus aktiviert wird.</span><span class="sxs-lookup"><span data-stu-id="50121-112">This property defaults to `mouse`, which enables mouse mode.</span></span> <span data-ttu-id="50121-113">Wenn Sie diese auf `keyboard` festlegen, wird der Mausmodus deaktiviert, und Gamepad-Eingaben generieren DOM-Tastaturereignisse.</span><span class="sxs-lookup"><span data-stu-id="50121-113">Setting it to `keyboard` turns off mouse mode, and instead gamepad input generates DOM keyboard events.</span></span> <span data-ttu-id="50121-114">Wenn Sie diese auf `gamepad` festlegen, wird der Mausmodus deaktiviert, und es werden keine DOM-Tastaturereignisse generiert. Auf diese Weise können Sie nur die DOM- oder WinRT-Gamepad-APIs verwenden.</span><span class="sxs-lookup"><span data-stu-id="50121-114">Setting it to `gamepad` turns off mouse mode and does not generate DOM keyboard events, and allows you to just use the DOM or WinRT gamepad APIs.</span></span>
 
-## <a name="xaml"></a><span data-ttu-id="fc603-115">XAML</span><span class="sxs-lookup"><span data-stu-id="fc603-115">XAML</span></span>    
-<span data-ttu-id="fc603-116">Um den Mausmodus zu deaktivieren, fügen Sie dem Konstruktor für Ihre App Folgendes hinzu:</span><span class="sxs-lookup"><span data-stu-id="fc603-116">To turn off mouse mode, add the following to the constructor for your app:</span></span>   
+## <a name="xaml"></a><span data-ttu-id="50121-115">XAML</span><span class="sxs-lookup"><span data-stu-id="50121-115">XAML</span></span>    
+<span data-ttu-id="50121-116">Um den Mausmodus zu deaktivieren, fügen Sie dem Konstruktor für Ihre App Folgendes hinzu:</span><span class="sxs-lookup"><span data-stu-id="50121-116">To turn off mouse mode, add the following to the constructor for your app:</span></span>   
    
 ```code
 public App() {
@@ -45,10 +45,10 @@ public App() {
 }
 ```
 
-## <a name="cdirectx"></a><span data-ttu-id="fc603-117">C++/DirectX</span><span class="sxs-lookup"><span data-stu-id="fc603-117">C++/DirectX</span></span>   
-<span data-ttu-id="fc603-118">Wenn Sie eine C++-/DirectX-App schreiben, müssen Sie keine Schritte ausführen.</span><span class="sxs-lookup"><span data-stu-id="fc603-118">If you are writing a C++/DirectX app, there's nothing to do.</span></span> <span data-ttu-id="fc603-119">Der Mausmodus gilt nur für HTML- und XAML-Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="fc603-119">Mouse mode only applies to HTML and XAML applications.</span></span>
+## <a name="cdirectx"></a><span data-ttu-id="50121-117">C++/DirectX</span><span class="sxs-lookup"><span data-stu-id="50121-117">C++/DirectX</span></span>   
+<span data-ttu-id="50121-118">Wenn Sie eine C++-/DirectX-App schreiben, müssen Sie keine Schritte ausführen.</span><span class="sxs-lookup"><span data-stu-id="50121-118">If you are writing a C++/DirectX app, there's nothing to do.</span></span> <span data-ttu-id="50121-119">Der Mausmodus gilt nur für HTML- und XAML-Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="50121-119">Mouse mode only applies to HTML and XAML applications.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="fc603-120">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="fc603-120">See also</span></span>
-- [<span data-ttu-id="fc603-121">Bewährte Methoden für Xbox</span><span class="sxs-lookup"><span data-stu-id="fc603-121">Best practices for Xbox</span></span>](tailoring-for-xbox.md)
-- [<span data-ttu-id="fc603-122">UWP auf XboxOne</span><span class="sxs-lookup"><span data-stu-id="fc603-122">UWP on Xbox One</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="50121-120">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="50121-120">See also</span></span>
+- [<span data-ttu-id="50121-121">Bewährte Methoden für Xbox</span><span class="sxs-lookup"><span data-stu-id="50121-121">Best practices for Xbox</span></span>](tailoring-for-xbox.md)
+- [<span data-ttu-id="50121-122">UWP auf XboxOne</span><span class="sxs-lookup"><span data-stu-id="50121-122">UWP on Xbox One</span></span>](index.md)
 

@@ -9,41 +9,39 @@ keywords: Cortana, Cortana-Canvas, Cortana-Design, Benutzeroberfläche, Sprachbe
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e2194876954936880287b05f2bcd912caa01048b
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 67be6cacee3b0062118d51105eec9037dd29135b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1815935"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559497"
 ---
-# <a name="cortana-interactions-in-uwp-apps"></a><span data-ttu-id="03df5-103">Cortana-Interaktionen in UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="03df5-103">Cortana interactions in UWP apps</span></span>
+# <a name="cortana-interactions-in-uwp-apps"></a><span data-ttu-id="94af8-103">Cortana-Interaktionen in UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="94af8-103">Cortana interactions in UWP apps</span></span>
 
-<span data-ttu-id="03df5-104">Cortana bietet ein stabiles und umfassendes Erweiterungsframework, mit dem Sie Funktionen aus Ihrer App oder einem Dienst nahtlos in die Cortana-Benutzeroberfläche integrieren können.</span><span class="sxs-lookup"><span data-stu-id="03df5-104">Cortana offers a robust and comprehensive extensibility framework that enables you to seamlessly incorporate functionality from your app or service into the Cortana experience.</span></span>
+<span data-ttu-id="94af8-104">Cortana bietet ein stabiles und umfassendes Erweiterungsframework, mit dem Sie Funktionen aus Ihrer App oder einem Dienst nahtlos in die Cortana-Benutzeroberfläche integrieren können.</span><span class="sxs-lookup"><span data-stu-id="94af8-104">Cortana offers a robust and comprehensive extensibility framework that enables you to seamlessly incorporate functionality from your app or service into the Cortana experience.</span></span>
 
-## <a name="weve-moved"></a><span data-ttu-id="03df5-105">Wir sind umgezogen</span><span class="sxs-lookup"><span data-stu-id="03df5-105">We've moved</span></span>
+## <a name="weve-moved"></a><span data-ttu-id="94af8-105">Wir sind umgezogen</span><span class="sxs-lookup"><span data-stu-id="94af8-105">We've moved</span></span>
 
-<span data-ttu-id="03df5-106">Die gesamte Entwicklerdokumentation für Cortana-Features und -Dienste ist jetzt über [Cortana Dev Center](https://developer.microsoft.com/cortana) verfügbar.</span><span class="sxs-lookup"><span data-stu-id="03df5-106">All developer documentation for Cortana features and services is now available through the [Cortana dev center](https://developer.microsoft.com/cortana).</span></span>
+<span data-ttu-id="94af8-106">Die gesamte Entwicklerdokumentation für Cortana-Features und -Dienste ist jetzt über [Cortana Dev Center](https://developer.microsoft.com/cortana) verfügbar.</span><span class="sxs-lookup"><span data-stu-id="94af8-106">All developer documentation for Cortana features and services is now available through the [Cortana dev center](https://developer.microsoft.com/cortana).</span></span>
 
-<span data-ttu-id="03df5-107">Informationen zu den ersten Schritten finden Sie im [Überblick über das Cortana Skills Kit](https://docs.microsoft.com/cortana/skills/overview).</span><span class="sxs-lookup"><span data-stu-id="03df5-107">To get started, see the [Cortana Skills Kit overview](https://docs.microsoft.com/cortana/skills/overview).</span></span>
+<span data-ttu-id="94af8-107">Informationen zu den ersten Schritten finden Sie im [Überblick über das Cortana Skills Kit](https://docs.microsoft.com/cortana/skills/overview).</span><span class="sxs-lookup"><span data-stu-id="94af8-107">To get started, see the [Cortana Skills Kit overview](https://docs.microsoft.com/cortana/skills/overview).</span></span>
 
-<span data-ttu-id="03df5-108">Informationen zum Erweitern von Cortana mit Funktionen aus einer UWP-App mit Sprachbefehlen finden Sie unter [Cortana-Sprachbefehle](https://docs.microsoft.com/cortana/voice-commands/vcd).</span><span class="sxs-lookup"><span data-stu-id="03df5-108">To learn how to extend Cortana with functionality from a UWP app using voice commands, see [Cortana voice commands](https://docs.microsoft.com/cortana/voice-commands/vcd).</span></span> 
+<span data-ttu-id="94af8-108">Informationen zum Erweitern von Cortana mit Funktionen aus einer UWP-App mit Sprachbefehlen finden Sie unter [Cortana-Sprachbefehle](https://docs.microsoft.com/cortana/voice-commands/vcd).</span><span class="sxs-lookup"><span data-stu-id="94af8-108">To learn how to extend Cortana with functionality from a UWP app using voice commands, see [Cortana voice commands](https://docs.microsoft.com/cortana/voice-commands/vcd).</span></span> 
 
-## <a name="related-articles"></a><span data-ttu-id="03df5-109">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="03df5-109">Related articles</span></span>
+## <a name="related-articles"></a><span data-ttu-id="94af8-109">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="94af8-109">Related articles</span></span>
 
-* [**<span data-ttu-id="03df5-110">VCD-Elemente und -Attribute v1.2</span><span class="sxs-lookup"><span data-stu-id="03df5-110">VCD elements and attributes v1.2</span></span>**](https://docs.microsoft.com/uwp/schemas/voicecommands/voice-command-elements-and-attributes-1-2)
+* [**<span data-ttu-id="94af8-110">VCD-Elemente und -Attribute v1.2</span><span class="sxs-lookup"><span data-stu-id="94af8-110">VCD elements and attributes v1.2</span></span>**](https://docs.microsoft.com/uwp/schemas/voicecommands/voice-command-elements-and-attributes-1-2)
 
-**<span data-ttu-id="03df5-111">Designer</span><span class="sxs-lookup"><span data-stu-id="03df5-111">Designers</span></span>**
-* [<span data-ttu-id="03df5-112">Richtlinien für den Sprachentwurf</span><span class="sxs-lookup"><span data-stu-id="03df5-112">Speech design guidelines</span></span>](speech-interactions.md)
-* [<span data-ttu-id="03df5-113">Cortana-Entwurfsrichtlinien für Sprachbefehle</span><span class="sxs-lookup"><span data-stu-id="03df5-113">Cortana design guidelines for voice commands</span></span>](https://docs.microsoft.com/cortana/voice-commands/voicecommand-design-guidelines)
+**<span data-ttu-id="94af8-111">Designer</span><span class="sxs-lookup"><span data-stu-id="94af8-111">Designers</span></span>**
+* [<span data-ttu-id="94af8-112">Richtlinien für den Sprachentwurf</span><span class="sxs-lookup"><span data-stu-id="94af8-112">Speech design guidelines</span></span>](speech-interactions.md)
+* [<span data-ttu-id="94af8-113">Cortana-Entwurfsrichtlinien für Sprachbefehle</span><span class="sxs-lookup"><span data-stu-id="94af8-113">Cortana design guidelines for voice commands</span></span>](https://docs.microsoft.com/cortana/voice-commands/voicecommand-design-guidelines)
 
-**<span data-ttu-id="03df5-114">Beispiele</span><span class="sxs-lookup"><span data-stu-id="03df5-114">Samples</span></span>**
-* [<span data-ttu-id="03df5-115">Cortana-Sprachbefehlbeispiel</span><span class="sxs-lookup"><span data-stu-id="03df5-115">Cortana voice command sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=619899)
- 
+**<span data-ttu-id="94af8-114">Beispiele</span><span class="sxs-lookup"><span data-stu-id="94af8-114">Samples</span></span>**
+* [<span data-ttu-id="94af8-115">Cortana-Sprachbefehlbeispiel</span><span class="sxs-lookup"><span data-stu-id="94af8-115">Cortana voice command sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=619899)
+ 
 
- 
+ 
 
 
 

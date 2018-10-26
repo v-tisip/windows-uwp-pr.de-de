@@ -6,16 +6,14 @@ description: Dieser Abschnitt enthält Artikel oder Links zum Verpacken von UWP 
 ms.author: lahugh
 ms.date: 09/30/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Verpacken
 ms.localizationpriority: medium
-ms.openlocfilehash: ce77391fc189ef33aba3002685b0662d7cab1953
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: d8728094292f1de81eb90752ee496090df4cb6e0
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5516903"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559054"
 ---
 # <a name="packaging-apps"></a><span data-ttu-id="b3636-104">Verpacken von Apps</span><span class="sxs-lookup"><span data-stu-id="b3636-104">Packaging apps</span></span>
 
