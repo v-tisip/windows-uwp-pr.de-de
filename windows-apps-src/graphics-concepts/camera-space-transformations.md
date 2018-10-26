@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 032518fe793db99309d098b28f2f8e94bbb072ba
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 9de6759fb15aef4b32a5e9022a27cab09af300f8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1043929"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553495"
 ---
 # <a name="camera-space-transformations"></a>Kameraraumtransformationen
 
@@ -56,16 +54,16 @@ L<sub>dir</sub> = norm(V \* Lₚ). Dabei werden die Parameter in der folgenden T
 | Lₚ              | Nicht zutreffend           | 3D-Vektor (X-, Y- und Z-Gleitkommawerte) | Position der Lichtquelle im Kameraraum                            |
 | vMatrix         | Identität      | 4x4-Matrix der Gleitkommawerte           | Matrix mit Ansichtstransformation                      |
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
 
 
 [Beleuchtungsmathematik](mathematics-of-lighting.md)
 
- 
+ 
 
- 
+ 
 
 
 

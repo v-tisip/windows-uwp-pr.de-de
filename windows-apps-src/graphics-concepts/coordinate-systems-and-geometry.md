@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cea4368ce995ce50726499b6c1c6875f83b72e7b
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: ce3b1ebfc2f18a06ff4fa960c91749f61f5011d9
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652329"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556484"
 ---
 # <a name="coordinate-systems-and-geometry"></a>Koordinatensysteme und Geometrie
 
@@ -64,7 +62,7 @@ Für das Programmieren von Direct3D-Anwendungen muss der Anwender mit geometrisc
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="transforms.md">Transformationen</a></p></td>
-<td align="left"><p>Das Transformationsmodul ist der Teil von Direct3D, der die Geometrie über die Geometriepipeline mit fester Funktion mithilfe von Push überträgt. Es ermittelt das Modell und die Anzeige im Raum, projiziert Scheitelpunkte für die Anzeige auf den Bildschirm und beschneidet Scheitelpunkte im Viewport. Das Transformationsmodul führt ebenfalls Beleuchtungsberechnungen durch, um diffuse und Glanzlichtkomponenten bei jedem Scheitelpunkt zu ermitteln.</p></td>
+<td align="left"><p>Der Teil von Direct3D, der die Geometrie über die Geometrie-Pipeline mit fester Funktion überträgt, ist die Transformationsengine. Es ermittelt das Modell und die Anzeige im Raum, projiziert Scheitelpunkte für die Anzeige auf den Bildschirm und beschneidet Scheitelpunkte im Viewport. Das Transformationsmodul führt ebenfalls Beleuchtungsberechnungen durch, um diffuse und Glanzlichtkomponenten bei jedem Scheitelpunkt zu ermitteln.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="viewports-and-clipping.md">Ansichten und Zuschneiden</a></p></td>
@@ -73,16 +71,16 @@ Für das Programmieren von Direct3D-Anwendungen muss der Anwender mit geometrisc
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
 
 
-[Lernanleitung für Direct3D-Grafiken](index.md)
+[Direct3D-Grafik-Lernanleitung](index.md)
 
- 
+ 
 
- 
+ 
 
 
 

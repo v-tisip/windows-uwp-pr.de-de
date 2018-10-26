@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 45062f82955b1e353def2eadbeae36d1c9e81ce6
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 24c8787efd108acb2353f6705dbb65a34d358ef2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652659"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558858"
 ---
 # <a name="mappings-are-into-a-tile-pool"></a>Zuordnungen erfolgen in einen Kachelpool
 
@@ -35,7 +33,7 @@ Lassen Sie uns herausfinden, welchen Speicherplatz die Seitentabelle im ungünst
 
 Nehmen wir an, dass jeder Seitentabelleneintrag 64 Bits umfasst.
 
-Für die ungünstigste Größe der Seitentabelle für eine einzelne Fläche nehmen wir unter Anwendung der Ressourcengrenzen in Direct3D11 die Erstellung einer Streaming-Ressource mit einem Format von 128 Bit pro Element an (z. B. eine RGBA-Gleitkommazahl), also enthält eine 64 KB große Kachel nur 4096 Pixel. Die maximal unterstützte [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526)-Größe von 16384\*16384\*2048 (jedoch mit nur einer Mip-Map) würde etwa 1 GB Speicherplatz in der Seitentabelle erfordern, wenn vollständig gefüllt (ohne Mip-Maps), bei Verwendung von 64-Bit-Einträgen. Durch das Hinzufügen von Mip-Maps würde der Speicherbedarf der vollständig zugeordneten (ungünstigster Fall) Seitetabelle um etwa ein Drittel anwachsen, auf etwa 1,3 GB.
+Für die ungünstigste Tabelle enthält die Größe der Seitentabelle für eine einzelne Fläche, die Ressourcengrenzen in Direct3D11, nehmen streaming-Ressource mit einem Format von 128 Bit pro Element (z. B. eine RGBA-Gleitkommazahl), also eine 64 KB große Kachel nur 4096 Pixel. Die maximal unterstützte [**Texture2DArray**](https://msdn.microsoft.com/library/windows/desktop/ff471526)-Größe von 16384\*16384\*2048 (jedoch mit nur einer Mip-Map) würde etwa 1 GB Speicherplatz in der Seitentabelle erfordern, wenn vollständig gefüllt (ohne Mip-Maps), bei Verwendung von 64-Bit-Einträgen. Durch das Hinzufügen von Mip-Maps würde der Speicherbedarf der vollständig zugeordneten (ungünstigster Fall) Seitetabelle um etwa ein Drittel anwachsen, auf etwa 1,3 GB.
 
 Dieser Fall würde einen Zugriff auf etwa 10,6 Terabyte adressierbaren Speicher erlauben. Möglicherweise gibt es jedoch eine Grenze für die Menge an adressierbarem Speicher, wodurch sich diese Mengen verringern würden, vielleicht auf einen Wert im Terabytebereich.
 
@@ -64,7 +62,7 @@ Der anfängliche Inhalt der Seitentabelle ist **NULL** für alle Einträge. Anwe
 <tbody>
 <tr class="odd">
 <td align="left"><p><a href="tile-pool-creation.md">Erstellung eines Kachelpools</a></p></td>
-<td align="left"><p>Anwendungen können einen oder mehrere Kachelpools pro Direct3D-Gerät erstellen. Die Gesamtgröße jedes Kachelpools ist auf Direct3D11 Ressourcengröße beschränkt, die ungefähr 1/4 GPU-Arbeitsspeicher beträgt.</p></td>
+<td align="left"><p>Anwendungen können einen oder mehrere Kachelpools pro Direct3D-Gerät erstellen. Die Gesamtgröße jedes kachelpools ist auf Direct3D11s Ressourcengröße beschränkt, die ungefähr 1/4 GPU-Arbeitsspeicher beträgt beschränkt.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="tile-pool-resizing.md">Ändern der Größe des Kachelpools</a></p></td>
@@ -77,16 +75,16 @@ Der anfängliche Inhalt der Seitentabelle ist **NULL** für alle Einträge. Anwe
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
 
 
-[Erstellen von Streaming-Ressourcen](creating-streaming-resources.md)
+[Erstellen von Streamingressourcen](creating-streaming-resources.md)
 
- 
+ 
 
- 
+ 
 
 
 

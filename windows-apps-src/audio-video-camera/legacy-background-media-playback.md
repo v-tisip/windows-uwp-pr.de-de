@@ -6,20 +6,22 @@ title: Medienwiedergabe im Hintergrund (Legacy)
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 68695125c2056adca8186120db7875cb3a68baf8
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 319343a06eeb49fc4ec0ca2fcd340f655654f718
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233772"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554636"
 ---
 # <a name="legacy-background-media-playback"></a>Medienwiedergabe im Hintergrund (Legacy)
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 In diesem Artikel wird das ältere Modell zur Unterstützung von Hintergrundaudio für Ihre UWP-App beschrieben, das zwei Prozesse umfasst. Ab Windows 10, Version 1607, wird ein Modell für die Audiowiedergabe im Hintergrund verwendet, das nur einen Prozess umfasst und sehr viel einfacher zu implementieren ist. Weitere Informationen zu den aktuellen Empfehlungen für Hintergrundaudio finden Sie unter [Wiedergeben von Medien im Hintergrund](background-audio.md). Dieser Artikel bietet Hilfe bei der Unterstützung von Apps, die unter Verwendung des älteren Modells mit zwei Prozessen entwickelt wurden.
+
+> [!NOTE]
+> Ab Windows, Version 1703, **BackgroundMediaPlayer** ist veraltet und möglicherweise nicht in zukünftigen Versionen von Windows zur Verfügung.
 
 ## <a name="background-audio-architecture"></a>Architektur von Hintergrundaudio
 
@@ -121,9 +123,9 @@ In der folgenden Tabelle ist aufgeführt, welche Richtlinie auf welchen Gerätet
 | **Freigegebene Lebensdauer**    | Aktiviert  | Deaktiviert | Deaktiviert |
 
 
- 
+ 
 
- 
+ 
 
 
 

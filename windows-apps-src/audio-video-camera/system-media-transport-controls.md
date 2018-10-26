@@ -6,18 +6,17 @@ title: Manuelle Steuerung der Steuerelemente für den Systemmedientransport
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 1c0b24bce21ed145d61f6b5d05392a6fc3cc30aa
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: b0ece9a25a2fd2892553d66847c39637e7faae70
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233836"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554061"
 ---
 # <a name="manual-control-of-the-system-media-transport-controls"></a>Manuelle Steuerung der Steuerelemente für den Systemmedientransport
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 Ab Windows10, Version1607, werden UWP-Apps, welche die [**MediaPlayer**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Playback.MediaPlayer)-Klasse für die Medienwiedergabe verwenden, standardmäßig und automatisch in die Steuerelemente für den Systemmedientransport (System Media Transport Controls, SMTC) integriert. Dies ist für die meisten Szenarien die empfohlene Methode für die Interaktion mit den SMTC. Weitere Informationen zum Anpassen der standardmäßigen SMTC-Integration mit **MediaPlayer** finden Sie unter [Integration in die Steuerelemente für den Systemmedientransport](integrate-with-systemmediatransportcontrols.md).
 
@@ -93,7 +92,7 @@ Es gibt eine Reihe von Steuerelementeigenschaften für den Systemmedientransport
 | [**PlaybackRate**](https://msdn.microsoft.com/library/windows/apps/mt218756)     | [**PlaybackRateChangeRequested**](https://msdn.microsoft.com/library/windows/apps/mt218757)     |
 | [**ShuffleEnabled**](https://msdn.microsoft.com/library/windows/apps/mt218758) | [**ShuffleEnabledChangeRequested**](https://msdn.microsoft.com/library/windows/apps/mt218759) |
 
- 
+ 
 Registrieren Sie zum Behandeln von Benutzerinteraktionen mit einem der folgenden Steuerelemente zunächst einen Handler für das zugeordnete Ereignis.
 
 [!code-cs[RegisterPlaybackChangedHandler](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetRegisterPlaybackChangedHandler)]
@@ -114,10 +113,10 @@ Weitere Informationen zur Audiowiedergabe im Hintergrund finden Sie unter [Wiede
 
 ## <a name="related-topics"></a>Verwandte Themen
 * [Medienwiedergabe](media-playback.md)
-* [Integration in die Steuerelemente für den Systemmedientransport](integrate-with-systemmediatransportcontrols.md) 
+* [Integration in die Steuerelemente für den Systemmedientransport](integrate-with-systemmediatransportcontrols.md) 
 * [Beispiel für den Systemmedientransport](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls) 
 
- 
+ 
 
 
 

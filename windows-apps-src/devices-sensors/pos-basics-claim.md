@@ -1,38 +1,84 @@
 ---
 author: TerryWarwick
-title: PointOfService-Gerätebeanspruchungsmodell
-description: Weitere Informationen zum PointOfService-Beanspruchungsmodell
+title: PointOfService-Geräts beanspruchen und aktivieren Sie Modell
+description: Erfahren Sie mehr über PointOfService Anspruch und Modell aktivieren
 ms.author: jken
-ms.date: 06/4/2018
+ms.date: 06/19/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
-ms.openlocfilehash: 202234530945e55ef9c0d0fb68cf9ca83d2e15c3
-ms.sourcegitcommit: ce45a2bc5ca6794e97d188166172f58590e2e434
-ms.translationtype: HT
+ms.openlocfilehash: df9c4764b8f7d752a132d6759054660f481cce55
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "1983731"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5551977"
 ---
-# <a name="point-of-service-device-claim-model"></a>POS-Gerätebeanspruchungsmodell
+# <a name="point-of-service-device-claim-and-enable-model"></a>POS-Gerät beanspruchen und aktivieren Sie Modell
 
-## <a name="claiming-a-device-for-exclusive-use"></a>Beanspruchung der exklusiven Nutzung eines Geräts
+## <a name="claiming-for-exclusive-use"></a>Für die exklusive Nutzung beanspruchen
 
 Nachdem Sie erfolgreich ein PointOfService-Geräteobjekt erfolgreich erstellt haben, müssen Sie es mithilfe der entsprechenden Beanspruchungsmethode für den Gerätetyp beanspruchen, bevor Sie das Gerät für die Ein- und Ausgabe verwenden können.  Die Beanspruchung gewährt der Anwendung einen exklusiven Zugriff auf viele Funktionen des Geräts, um sicherzustellen, dass eine Anwendung die Verwendung des Geräts durch eine andere Anwendung nicht beeinträchtigt.  Es kann jeweils nur eine Anwendung die exklusive Verwendung eines PointOfService-Geräts beanspruchen. 
+
+> [!Note]
+> Die Aktion Anspruch stellt eine exklusive Sperre auf einem Gerät her, jedoch nicht in den betriebsbereiten Zustand versetzt.  Weitere Informationen finden Sie unter [Aktivieren Geräts für die e/a-Vorgänge](#Enable-device-for-I/O-operations) .
+
+### <a name="apis-used-to-claim--release"></a>APIs verwendet, um beanspruchen / release
+
+|Gerät|Anspruch | Version | 
+|-|:-|:-|
+|BarcodeScanner | [BarcodeScanner.ClaimScannerAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.claimscannerasync) | [ClaimedBarcodeScanner.Close](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.close) |
+|CashDrawer | [CashDrawer.ClaimDrawerAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.cashdrawer.claimdrawerasync) | [ClaimedCashDrawer.Close](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.close) | 
+|LineDisplay | [LineDisplay.ClaimAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.linedisplay.claimasync) |  [ClaimedineDisplay.Close](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedlinedisplay.close) | 
+|MagneticStripeReader | [MagneticStripeReader.ClaimReaderAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereader.claimreaderasync) |  [ClaimedMagneticStripeReader.Close](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.close) | 
+|PosPrinter | [PosPrinter.ClaimPrinterAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.posprinter.claimprinterasync) |  [ClaimedPosPrinter.Close](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.close) | 
+ | 
+
+## <a name="enable-device-for-io-operations"></a>Aktivieren des Geräts für die e/a-Vorgänge
+
+Die Aktion Anspruch einfach stellt einen exklusiven Zugriff auf das Gerät her, jedoch nicht in den betriebsbereiten Zustand versetzt.  Um Ereignisse empfangen oder keine Ausgabevorgänge ausführen, müssen Sie das Gerät mithilfe der **EnableAsync**aktivieren.  Im Gegensatz dazu können Sie **DisableAsync** zum Überwachen von Ereignissen über das verwendete Gerät oder eine Ausgabe beenden aufrufen.  Sie können auch **IsEnabled** verwenden, um den Zustand des Geräts zu ermitteln.
+
+### <a name="apis-used-enable--disable"></a>Verwendete APIs aktivieren / deaktivieren
+
+| Gerät | Aktivieren | Deaktivieren | IsEnabled? |
+|-|:-|:-|:-|
+|ClaimedBarcodeScanner | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.disableasync) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isenabled) | 
+|ClaimedCashDrawer | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.disableasync) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.isenabled) |
+|ClaimedLineDisplay | Nicht Applicable¹ | Nicht Applicable¹ | Nicht Applicable¹ | 
+|ClaimedMagneticStripeReader | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.disableasync) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.isenabled) |  
+|ClaimedPosPrinter | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.disableasyc) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.isenabled) |
+|
+
+¹ Zeilenanzeige erfordert keine explizit aktivieren, das Gerät für die e/a-Vorgänge.  Aktivierung erfolgt automatisch durch die PointOfService-LineDisplay-APIs die e/a durchführen.
+
+## <a name="code-sample-claim-and-enable"></a>Codebeispiel: beanspruchen und aktivieren
 
 Im folgenden Beispiel ist gezeigt, wie Sie ein Strichcodescanner-Gerät beanspruchen, nachdem Sie erfolgreich ein Strichcodescanner-Objekt erstellt haben.
 
 ```Csharp
-try
-{
-    claimedBarcodeScanner = await barcodeScanner.ClaimScannerAsync();
-}
-catch (Exception ex)
-{
-    Debug.WriteLine("EX: ClaimScannerAsync() - " + ex.Message);
-}
+
+    BarcodeScanner barcodeScanner = await BarcodeScanner.FromIdAsync(DeviceId);
+
+    if(barcodeScanner != null)
+    {
+        // after successful creation, claim the scanner for exclusive use 
+        claimedBarcodeScanner = await barcodeScanner.ClaimScannerAsync();
+
+        if(claimedBarcodeScanner != null)
+        {
+            // after successful claim, enable scanner for data events to fire
+            await claimedBarcodeScanner.EnableAsync();
+        }
+        else
+        {
+            Debug.WriteLine("Failure to claim barcodeScanner");
+        }
+    }
+    else
+    {
+        Debug.WriteLine("Failure to create barcodeScanner object");
+    }
+    
 ```
 
 > [!Warning]
@@ -40,16 +86,6 @@ catch (Exception ex)
 > 1. Eine andere App hat einen Anspruch auf dasselbe Gerät angefordert, und Ihre App hat kein **RetainDevice** in Reaktion auf das Ereignis **ReleaseDeviceRequested** ausgestellt.  (Weitere Informationen finden Sie im Abschnitt [Anspruchsaushandlung](#Claim-negotiation) weiter unten).
 > 2. Ihre App wurde unterbrochen, was dazu geführt hat, dass das Geräteobjekt geschlossen wurde und der Anspruch daher nicht mehr gültig ist. (Weitere Informationen finden Sie unter [Lebenszyklus von Geräteobjekten](pos-basics-deviceobject.md#device-object-lifecycle).)
 
-### <a name="apis-used-for-claiming"></a>Für die Beanspruchung verwendete APIs
-
-|Gerät|Anspruch |
-|-|:-|
-|BarcodeScanner | [ClaimScannerAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.claimscannerasync) | 
-|CashDrawer | [ClaimDrawerAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.cashdrawer.claimdrawerasync) | 
-|LineDisplay | [ClaimAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.linedisplay.claimasync) |
-|MagneticStripeReader | [ClaimReaderAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereader.claimreaderasync) | 
-|PosPrinter | [ClaimPrinterAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.posprinter.claimprinterasync) | 
-|
 
 ## <a name="claim-negotiation"></a>Anspruchsaushandlung
 
@@ -59,17 +95,51 @@ Wenn eine zweite Anwendung auf demselben Computer ein PointOfService-Peripherieg
 
 Wenn die Anwendung mit dem aktiven Anspruch nicht sofort mit **RetainDevice** antwortet, wird davon ausgegangen, dass die Anwendung unterbrochen wurde oder das Gerät nicht benötigt, und der Anspruch wird widerrufen und an die neue Anwendung übergeben. 
 
-In diesem Beispiel wird veranschaulicht, wie der Anspruch auf einen Strichcodescanner aufrechterhalten wird, wenn eine andere App fordert, das Gerät freizugegeben.  
+Der erste Schritt ist einen Ereignishandler erstellen, die auf das Ereignis **ReleaseDeviceRequested** mit **RetainDevice**reagiert.  
 
 ```Csharp
-claimedBarcodeScanner.ReleaseDeviceRequested += claimedBarcodeScanner_ReleaseDeviceRequested;
-
-void claimedBarcodeScanner_ReleaseDeviceRequested(object sender, ClaimedBarcodeScanner myScanner)
-{
-    // Retain exclusive access to the device
-    myScanner.RetainDevice();  
-}
+    /// <summary>
+    /// Event handler for the ReleaseDeviceRequested event which occurs when 
+    /// the claimed barcode scanner receives a Claim request from another application
+    /// </summary>
+    void claimedBarcodeScanner_ReleaseDeviceRequested(object sender, ClaimedBarcodeScanner myScanner)
+    {
+        // Retain exclusive access to the device
+        myScanner.RetainDevice();
+    }
 ```
+
+Klicken Sie dann registrieren Sie den Ereignishandler im Zusammenhang mit Ihrem beanspruchtes Gerät
+
+```Csharp
+    BarcodeScanner barcodeScanner = await BarcodeScanner.FromIdAsync(DeviceId);
+
+    if(barcodeScanner != null)
+    {
+        // after successful creation, claim the scanner for exclusive use 
+        claimedBarcodeScanner = await barcodeScanner.ClaimScannerAsync();
+
+        if(claimedBarcodeScanner != null)
+        {
+            // register a release request handler to prevent loss of scanner during active use
+            claimedBarcodeScanner.ReleaseDeviceRequested += claimedBarcodeScanner_ReleaseDeviceRequested;
+
+            // after successful claim, enable scanner for data events to fire
+            await claimedBarcodeScanner.EnableAsync();          
+        }
+        else
+        {
+            Debug.WriteLine("Failure to claim barcodeScanner");
+        }
+    }
+    else
+    {
+        Debug.WriteLine("Failure to create barcodeScanner object");
+    }
+```
+
+
+
 ### <a name="apis-used-for-claim-negotiation"></a>Für die Anspruchsaushandlung verwendete APIs
 
 |Beanspruchtes Gerät|Benachrichtigungsversion| Gerät beibehalten |

@@ -6,16 +6,14 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 32beeae8d2398457311a14fa53afe330acdc75f2
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.openlocfilehash: 32f55b0a387221b792e37072f129edddf285195b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1700846"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552689"
 ---
 # <a name="transform-overview"></a>Übersicht über Transformationen
 
@@ -32,7 +30,7 @@ Die Geometrie-Pipeline verwendet Scheitelpunkte als Eingabe. Die Transform-Engin
 | Transformation der Projektion zum Projektionsbereich    | Der nächste Schrittist die [Projektionstransformation](projection-transform.md), die Konvertierung vom Ansichtsbereich zum Projektionsbereich. In diesem Teil der Pipeline werden Objekte in der Regel in Bezug auf ihre Entfernung vom Betrachter skaliert, um einer Szene die Illusion von Tiefe zu geben. Nahe Objekte erscheinen dadurch größer als entfernte Objekte. Der Einfachheit halber bezeichnet diese Dokumentation den Bereich mit den Scheitelpunkten nach der Projektionstransformation als *Projektionsbereich*. Einige Grafikbücher bezeichnen den Projektionsbereich möglicherweise als *postperspektivischen homogenen Bereich*. Nicht alle Projektionstransformationen skalieren Objekte in einer Szene nach der Größe. Eine solche Projektion wird manchmal als *affine* oder *orthogonale Projektion* bezeichnet. |
 | Zuschneiden im Bildschirmbereich                      | Im letzten Teil der Pipeline werden alle Scheitelpunkte, die nicht auf dem Bildschirm zu sehen sind, entfernt, so dass der Rasterizer keine Zeit für die Berechnung der Farben und der Schattierungen für Dinge aufwenden muss, die niemals zu sehen sind. Dieser Vorgang wird als *Zuschneiden* bezeichnet. Nach dem Zuschneiden werden die verbleibenden Scheitelpunkte nach den Viewportparametern skaliert und in Bildschirmkoordinaten umgewandelt. Die resultieRendern Scheitelpunkte, die bei der Rasterisierung der Szene auf dem Bildschirm zu sehen sind, befinden sich im *Bildschirmbereich*.                                                                                                                                                                                                                                                    |
 
- 
+ 
 
 Transformationen werden verwendet, um die Objektgeometrie von einem Koordinatenbereich zu einem anderen zu konvertieren. Direct3D verwendet Matrizen für die Durchführung von 3D-Transformationen. Matrizen erstellen-3D-Transformationen. Sie können Matrizen kombinieren, um eine einzelne Matrix zu erstellen, die dann mehrere Transformationen umfasst.
 
@@ -163,9 +161,9 @@ Unabhängig davon, welche Art von Matrix Sie erstellen: Beachten Sie immer die L
 
 [Transformationen](transforms.md)
 
- 
+ 
 
- 
+ 
 
 
 

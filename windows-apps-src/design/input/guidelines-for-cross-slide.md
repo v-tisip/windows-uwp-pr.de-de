@@ -6,16 +6,14 @@ ms.assetid: 897555e2-c567-4bbe-b600-553daeb223d5
 ms.author: kbridge
 ms.date: 10/25/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: ecce3c9e0eee30864c2777b657e9b951a8ab0b06
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 5c9234463ad011cc0b4d289bba9fe1ff1873ed46
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1393829"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559432"
 ---
 # <a name="guidelines-for-cross-slide"></a>Richtlinien für Querziehen
 
@@ -60,16 +58,16 @@ Beachten Sie die folgenden Richtlinien, wenn Sie eine Querziehfunktion in Ihrer 
 
 Verwenden Sie das Querziehen für Listen oder Auflistungen, bei denen ein Bildlauf nur in eine Richtung möglich ist. Weitere Informationen finden Sie unter [Hinzufügen von ListView-Steuerelementen](https://msdn.microsoft.com/library/windows/apps/hh465382).
 
-**Hinweis**  In Fällen, in denen der Inhaltsbereich in zwei Richtungen verschoben werden kann, z.B. in einem Webbrowser oder E-Reader, sollte die zeitlich festgelegte Interaktion des Gedrückthaltens verwendet werden, um das Kontextmenü für Objekte wie Bilder und Links aufzurufen.
+**Hinweis:** In Fällen, in denen der Inhaltsbereich in zwei Richtungen, z. B. einem Webbrowser oder e-Reader verschoben werden kann, zeitlich festgelegte Interaktion des drücken und halten sollte verwendet werden, um das Kontextmenü für Objekte wie Bilder und Links aufzurufen.
 
- 
+ 
 
 |                                                                                         |                                                                                         |
 |-----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | ![Horizontal verschiebbare zweidimensionale Liste](images/groupedlistview1.png)                | ![Vertikal verschiebbare eindimensionale Liste](images/listviewlistlayout.png)                |
 | Hier sehen Sie eine horizontal verschiebbare zweidimensionale Liste. Ziehen Sie vertikal, um ein Element auszuwählen oder zu verschieben. | Hier sehen Sie eine vertikal verschiebbare eindimensionale Liste. Ziehen Sie horizontal, um ein Element auszuwählen oder zu verschieben. |
 
- 
+ 
 
 ### <span id="selection"></span><span id="SELECTION"></span>
 
@@ -150,9 +148,9 @@ Wenn mehrere Objekte verschoben werden müssen, geben Sie dem Benutzer die Mögl
 * [Eingabe: Beispiel für Windows8-Bewegungen](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Eingabe: Beispiel für Manipulationen und Gesten (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Beispiel für die DirectX-Fingereingabe](http://go.microsoft.com/fwlink/p/?LinkID=231627)
- 
+ 
 
- 
+ 
 
 
 

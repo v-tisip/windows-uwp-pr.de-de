@@ -6,19 +6,18 @@ ms.assetid: b84dd17a-756b-2369-8fee-f1ec7d865239
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Programmierung
-ms.openlocfilehash: 736f5f5864edc9c7a976e8e0f062779ddd1f86c5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: d201caefedca0d810f78d893ea779bd6b814f007
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233782"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559452"
 ---
 # <a name="game-programming-resources"></a>Ressourcen für die Spieleprogrammierung
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 Weitere Informationen zur Spieleprogrammierung unter Windows finden Sie in den folgenden Ressourcen.
@@ -32,7 +31,7 @@ Weitere Informationen zur Spieleprogrammierung unter Windows finden Sie in den f
 ## <a name="game-design-guidance"></a>Designleitfaden für Spiele
 
 
--   [Index der UX-Richtlinien für WindowsStore-Apps](https://msdn.microsoft.com/library/windows/apps/hh465424)
+-   [Index der UX-Richtlinien für UWP-apps](https://msdn.microsoft.com/library/windows/apps/hh465424)
 
 ## <a name="blogs"></a>Blogs
 
@@ -48,7 +47,7 @@ Weitere Informationen zur Spieleprogrammierung unter Windows finden Sie in den f
 -   [DirectXTex-Texturverarbeitungsbibliothek](  http://go.microsoft.com/fwlink/p/?LinkID=248926)
 -   Microsoft Visual Studio-[Grafikdiagnose](https://msdn.microsoft.com/library/windows/apps/hh873207.aspx)
 -   [Win2D](https://github.com/Microsoft/Win2D) –Einfach zu verwendende Windows-Runtime-API für 2D-Grafikrendering im unmittelbaren Modus mit GPU-Beschleunigung.
--   [ANGLE für Windows Store](http://go.microsoft.com/fwlink/p/?linkid=618387) –Dient zur Ausführung von OpenGL ES-Inhalten unter Windows, indem OpenGL ES-API-Aufrufe in DirectX 11-API-Aufrufe übersetzt werden.
+-   [ANGLE für Microsoft Store](http://go.microsoft.com/fwlink/p/?linkid=618387) - Ausführung von OpenGL ES-Inhalten unter Windows von OpenGL ES-API-Aufrufe in DirectX 11-API-Aufrufe übersetzen.
 
 ## <a name="gdc-2015-game-dev-session-videos"></a>Videos zu GDC2015-Spieleentwicklersitzungen
 
@@ -81,9 +80,9 @@ Weitere Informationen zur Spieleprogrammierung unter Windows finden Sie in den f
 -   [CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=76627)
 -   [GameDev.net](http://go.microsoft.com/fwlink/p/?LinkID=288870)
 
- 
+ 
 
- 
+ 
 
 
 

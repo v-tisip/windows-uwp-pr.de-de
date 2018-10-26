@@ -7,16 +7,14 @@ template: detail.hbs
 ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 887600366fdf1bf3951091df27d10f54516c2bf0
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 3e1a015d5d51ad0c15f20755afcb0d324acd1f36
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674547"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556050"
 ---
 # <a name="raw-notification-overview"></a>Übersicht über unformatierte Benachrichtigungen
 
@@ -28,7 +26,7 @@ Unformatierte Benachrichtigungen können für verschiedenste Zwecke verwendet we
 > [!IMPORTANT]
 > Um die Funktionsweise von unformatierten Benachrichtigungen verstehen zu können, sollten Sie mit den in [Übersicht über den den Windows-Pushbenachrichtigungsdienst (Windows Push Notification Service, WNS)](windows-push-notification-services--wns--overview.md) erörterten Konzepten vertraut sein.
 
- 
+ 
 
 Wie bei Popup-, Kachel- und Signalpushbenachrichtigungen wird eine unformatierte Benachrichtigung vom Clouddienst Ihrer App über einen zugewiesenen Kanal-URI (Uniform Resource Identifier) an WNS gesendet. WNS wiederum übermittelt die Benachrichtigung an das Gerät und das Benutzerkonto, das diesem Kanal zugeordnet ist. Im Gegensatz zu anderen Pushbenachrichtigungen weisen unformatierte Benachrichtigungen kein bestimmtes Format auf. Der Inhalt der Nutzlast wird ausschließlich durch die App definiert.
 
@@ -97,7 +95,7 @@ Falls die App nicht aktiv ist und keine [Hintergrundaufgaben](#background-tasks-
 > [!IMPORTANT]
 > Vor der Verwendung von Hintergrundaufgaben für unformatierte Benachrichtigungen, muss einer App über [**BackgroundExecutionManager.RequestAccessAsync**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundExecutionManager#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessAsync_System_String_) die Berechtigung zum Ausführen von Hintergrundaufgaben erteilt werden.
 
- 
+ 
 
 Die Hintergrundaufgabe muss mit einem [**PushNotificationTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger) registriert sein. Ist die Aufgabe nicht registriert, wird sie beim Empfang einer unformatierten Benachrichtigung nicht ausgeführt.
 
@@ -117,7 +115,7 @@ Für jede App kann jeweils nur eine Hintergrundaufgabe ausgeführt werden. Wird 
 ## <a name="other-resources"></a>Weitere Ressourcen
 
 
-Weitere Informationen erhalten Sie, indem Sie das [Beispiel für unformatierte Benachrichtigungen](http://go.microsoft.com/fwlink/p/?linkid=241553) für Windows8.1 und das [Beispiel für Pushbenachrichtigungen und regelmäßige Benachrichtigungen](http://go.microsoft.com/fwlink/p/?LinkId=231476) für Windows8.1 herunterladen und den Quellcode in Ihrer Windows10-App wiederverwenden.
+Erfahren Sie mehr durch das [Beispiel für unformatierte Benachrichtigungen](http://go.microsoft.com/fwlink/p/?linkid=241553) für Windows8.1 für Windows8.1 und [Pushbenachrichtigungen und regelmäßige Benachrichtigungen-Beispiel](http://go.microsoft.com/fwlink/p/?LinkId=231476) herunterladen und ihren Quellcode in Ihrer Windows 10-app wiederverwenden.
 
 ## <a name="related-topics"></a>Verwandte Themen
 
@@ -126,9 +124,9 @@ Weitere Informationen erhalten Sie, indem Sie das [Beispiel für unformatierte B
 * [Schnellstart: Abfangen von Pushbenachrichtigungen für aktive Apps](https://msdn.microsoft.com/library/windows/apps/jj709908)
 * [**RawNotification**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.RawNotification)
 * [**BackgroundExecutionManager.RequestAccessAsync**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundExecutionManager#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessAsync_System_String_)
- 
+ 
 
- 
+ 
 
 
 

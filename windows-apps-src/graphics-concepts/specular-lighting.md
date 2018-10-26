@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 305924b19914bf4e85366695add2476c3c81c281
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 283ea63d118f9a61fe745dd3eb60b68594c32279
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044809"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553609"
 ---
 # <a name="specular-lighting"></a>Spiegelbeleuchtung
 
@@ -36,7 +34,7 @@ Spiegelbeleuchtung wird durch die folgende Formel beschrieben:
 |-----------------------------------------------------------------------------|
 | Spiegelbeleuchtung = Cₛ \* Summe\[Lₛ \* (N · H)<sup>P</sup> \* Dämpfung \* Spotlight\] |
 
- 
+ 
 
 Variablen, Typen und Bereiche:
 
@@ -51,7 +49,7 @@ Variablen, Typen und Bereiche:
 | Dämpfung        | N/V           | Gleitkomma                                                   | Lichtdämpfungswert. Siehe [Dämpfungs- und Spotlight-Faktor](attenuation-and-spotlight-factor.md) |
 | Spotlight         | N/V           | Gleitkomma                                                   | Spotlight-Faktor. Siehe [Dämpfungs- und Spotlight-Faktor](attenuation-and-spotlight-factor.md)        |
 
- 
+ 
 
 Cₛ ist einer der folgenden Werte:
 
@@ -59,9 +57,9 @@ Cₛ ist einer der folgenden Werte:
 -   Vertexfarbe2, wenn die Glanzmaterialquelle die Glanzvertexfarbe ist und die zweite Vertexfarbe in der Vertexdeklaration angegeben ist
 -   Materialglanzfarbe
 
-**Hinweis**  Wenn die Option für die Glanzmaterialquelle verwendet wird und die Vertexfarbe nicht angegeben ist, wird die Materialglanzfarbe verwendet.
+**Hinweis:**  Wenn Option glanzmaterialquelle verwendet wird und die Vertexfarbe nicht angegeben, wird die materialglanzfarbe verwendet wird.
 
- 
+ 
 
 Nachdem alle Lichter verarbeitet und getrennt interpoliert wurden, sollten Glanzkomponenten auf Werte zwischen0 bis255 festgelegt sein.
 
@@ -74,7 +72,7 @@ Die Winkelhalbierende (H) befindet sich in der Mitte zwischen zwei Vektoren: dem
 |-------------------------------------------|
 | H = norm(norm(Cₚ - Vₚ) + L<sub>dir</sub>) |
 
- 
+ 
 
 | Parameter       | Standardwert | Typ                                          | Beschreibung                                                  |
 |-----------------|---------------|-----------------------------------------------|--------------------------------------------------------------|
@@ -82,7 +80,7 @@ Die Winkelhalbierende (H) befindet sich in der Mitte zwischen zwei Vektoren: dem
 | Vₚ              | N/V           | 3D-Vektor (X-, Y- und Z-Gleitkommawerte) | Vertexposition                                             |
 | L<sub>dir</sub> | Nicht zutreffend           | 3D-Vektor (X-, Y- und Z-Gleitkommawerte) | Richtungsvektor von der Vertexposition zur Lichtposition |
 
- 
+ 
 
 Die Bestimmung der Winkelhalbierenden auf diese Weise kann rechenintensiv sein. Als Alternative wird bei der Verwendung orthogonaler Glanzlichter (anstelle von Glanzlichtern relativ zur Kamera) das System angewiesen, sich so zu verhalten, als ob sich der Blickpunkt unendlich entfernt auf der Z-Achse befinden würde. Die Formel für diese Berechnung sieht folgendermaßen aus:
 
@@ -90,7 +88,7 @@ Die Bestimmung der Winkelhalbierenden auf diese Weise kann rechenintensiv sein. 
 |-------------------------------------|
 | H = norm((0,0,1) + L<sub>dir</sub>) |
 
- 
+ 
 
 Diese Einstellung ist weniger rechenintensiv, aber auch viel unpräziser, daher sollte sie am besten in Anwendungen mit orthogonalen Projektion verwendet werden.
 
@@ -120,9 +118,9 @@ Für die Spiegelbeleuchtung ist eine intensivere Berechnung als für die diffuse
 
 [Beleuchtungsmathematik](mathematics-of-lighting.md)
 
- 
+ 
 
- 
+ 
 
 
 

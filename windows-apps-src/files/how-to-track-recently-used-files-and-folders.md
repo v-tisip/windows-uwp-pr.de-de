@@ -6,16 +6,14 @@ description: Sie können Dateien nachverfolgen, auf die häufig zugegriffen wird
 ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6437176ed5dce4fbcd2a7686cf7083a8b0af2557
-ms.sourcegitcommit: 1773bec0f46906d7b4d71451ba03f47017a87fec
-ms.translationtype: HT
+ms.openlocfilehash: 12b8a6462f6cc39ba85cddfaa7a92212955a79f5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
-ms.locfileid: "1662790"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559346"
 ---
 # <a name="track-recently-used-files-and-folders"></a>Nachverfolgen kürzlich verwendeter Dateien und Ordner
 
@@ -29,9 +27,9 @@ Sie können Dateien nachverfolgen, auf die häufig zugegriffen wird, indem Sie s
 Ihre App-MRU-Liste wird durch die [**StorageItemMostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207475)-Klasse repräsentiert, die Sie aus der statischen [**StorageApplicationPermissions.MostRecentlyUsedList**](https://msdn.microsoft.com/library/windows/apps/br207458)-Eigenschaft abrufen können. MRU-Elemente werden als [**IStorageItem**](https://msdn.microsoft.com/library/windows/apps/br227129)-Objekte gespeichert. Das bedeutet, dass sowohl [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/br227171)-Objekte (die Dateien darstellen) als auch [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230)-Objekte (die Ordner darstellen) der MRU-Liste hinzugefügt werden können.
 
 > [!NOTE]
-> Weitere Informationen finden Sie im [Dateiauswahl-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=619994) und im [Dateizugriff-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=619995).
+> Weitere Informationen finden Sie im [Dateiauswahl-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=619994) und im [Dateizugriff-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=619995).
 
- 
+ 
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

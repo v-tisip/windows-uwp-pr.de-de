@@ -6,19 +6,18 @@ ms.assetid: 35a9e388-b25e-2aac-0534-577b15dae364
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Directx, direct3d 9, 11, direct3d, Änderungen
-ms.openlocfilehash: e46bb663a5497cb17f396b410fbdcb5d0295e5fe
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 969d8f2620adbc289c1f4c89242e0282901357c2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233829"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554475"
 ---
 # <a name="important-changes-from-direct3d-9-to-direct3d-11"></a>Wichtige Änderungen beim Wechsel von Direct3D 9 zu Direct3D 11
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Zusammenfassung**
 
@@ -108,13 +107,13 @@ Alle Shader sind unter Verwendung von HLSL-Code mit einem Shaderprofil geschrieb
 
 Unter Direct3D9 wurden Konstanten für Shader mithilfe eines freigegebenen Arrays mit „SetVertexShaderConstant“ und „SetPixelShaderConstant“ verwaltet. Unter Direct3D11 werden Konstantenpuffer verwendet, bei denen es sich um Ressourcen handelt, z.B. ein Vertexpuffer oder ein Indexpuffer. Konstantenpuffer sind für eine effiziente Aktualisierung ausgelegt. Anstelle der Anordnung aller Shaderkonstanten in einem einzelnen globalen Array, ordnen Sie die Konstanten in logischen Gruppierungen an und verwalten sie mithilfe eines oder mehrerer Konstantenpuffer. Wenn Sie Ihr Direct3D9-Spiel zu Direct3D11 portieren, sollten Sie die Organisation der Konstantenpuffer so planen, dass diese entsprechend aktualisiert werden können. Gruppieren Sie Shaderkonstanten, die nicht für jeden Frame aktualisiert werden, in einem separaten Konstantenpuffer, damit diese Daten nicht ständig zusammen mit den dynamischeren Shaderkonstanten an den Grafikadapter hochgeladen werden müssen.
 
-> **Hinweis**   In den meisten Direct3D9-Anwendungen werden ausgiebig Shader eingesetzt. Gelegentlich werden sie aber auch mit älteren festen Funktionen kombiniert. Beachten Sie, dass von Direct3D11 nur ein programmierbares Shadermodell verwendet wird. Die Legacyfeatures von Direct3D9 mit festen Funktionen werden als veraltet angesehen.
+> **Hinweis:**  meisten Direct3D 9-Anwendungen werden ausgiebig Shader, aber gelegentlich verwendeter Speicher des älteren mit fester Funktion Verhaltens gemischt. Beachten Sie, dass von Direct3D11 nur ein programmierbares Shadermodell verwendet wird. Die Legacyfeatures von Direct3D9 mit festen Funktionen werden als veraltet angesehen.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

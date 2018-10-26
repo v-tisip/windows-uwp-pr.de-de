@@ -6,18 +6,17 @@ ms.assetid: CAE933C6-EF13-465A-9831-AB003AF23907
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: ff1b373e2038824c6349961b3b878f5570babceb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 4d7b08138ab22d4cf2cbf4fb5273759f000a7c94
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "235068"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552457"
 ---
 # <a name="template-settings-classes"></a>Vorlageneinstellungsklassen
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -57,7 +56,7 @@ Hier sehen Sie ein Beispiel aus den ersten XAML-Standardvorlagen für Steuerelem
     Fill="{TemplateBinding Foreground}"/>
 ```
 
-Der vollständige XAML-Code für die [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538)-Vorlage umfasst mehrere hundert Zeilen, hierbei handelt es sich also nur um einen sehr kleinen Auszug. Dieser XAML-Code definiert einen Teil des Steuerelements, das als eines von sechs [**Ellipse**](https://msdn.microsoft.com/library/windows/apps/br243343)-Elementen die sich drehende Animation für einen unbestimmten Fortschritt darstellt. Ihnen als Entwickler gefallen die Kreise möglicherweise nicht, und Sie möchten einen anderen Grafikgrundtyp oder eine andere grundlegende Form für den Animationsverlauf verwenden. Sie können stattdessen z.B. ein **ProgressRing**-Element erstellen, das eine Reihe von in einem Quadrat angeordneten [**Rectangle**](https://msdn.microsoft.com/library/windows/apps/br243371)-Elementen enthält. Dabei kann jede einzelne **Rectangle**-Komponente Ihrer neuen Vorlage wie folgt aussehen:
+Der vollständige XAML-Code für die [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538)-Vorlage umfasst mehrere hundert Zeilen, hierbei handelt es sich also nur um einen sehr kleinen Auszug. Dieser XAML-Code definiert einen Teil des Steuerelements, das als eines von sechs [**Ellipse**](/uwp/api/Windows.UI.Xaml.Shapes.Ellipse)-Elementen die sich drehende Animation für einen unbestimmten Fortschritt darstellt. Ihnen als Entwickler gefallen die Kreise möglicherweise nicht, und Sie möchten einen anderen Grafikgrundtyp oder eine andere grundlegende Form für den Animationsverlauf verwenden. Sie können stattdessen z.B. ein **ProgressRing**-Element erstellen, das eine Reihe von in einem Quadrat angeordneten [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)-Elementen enthält. Dabei kann jede einzelne **Rectangle**-Komponente Ihrer neuen Vorlage wie folgt aussehen:
 
 ```xml
 <Rectangle
@@ -98,8 +97,7 @@ Hier sehen Sie ein weiteres Beispiel für die Verwendung von standardmäßigen X
 
 Da auch diese Vorlage viel XAML-Code enthält, zeigen wir wieder nur einen Auszug. Dies ist nur ein Beispiel für die Zustände und Designanimationen, die dieselben [**ComboBoxTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227752)-Eigenschaften verwenden. Für [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348) erzwingt die Verwendung der **ComboBoxTemplateSettings**-Werte durch Bindungen, dass verwandte Animationen in der Vorlage beendet werden und an Positionen beginnen, die auf gemeinsamen Werten basieren. Dadurch ist der Übergang nahtlos.
 
-**Hinweis**  
-Wenn Sie **TemplateSettings**-Werte als Teil Ihrer Steuerelementvorlage verwenden, achten Sie darauf, Eigenschaften festzulegen, die dem Typ des Werts entsprechen. Andernfalls müssen Sie u.U. einen Wertkonverter für die Bindung erstellen, damit der Zieltyp der Bindung von einem anderen Quelltyp des **TemplateSettings**-Werts konvertiert werden kann. Weitere Informationen finden Sie unter [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903).
+**Hinweis:**  Wenn Sie **TemplateSettings** Werte als Teil Ihrer Steuerelementvorlage verwenden, stellen Sie sicher, Sie sind Festlegen von Eigenschaften, die den Typ des Werts entsprechen. Andernfalls müssen Sie u.U. einen Wertkonverter für die Bindung erstellen, damit der Zieltyp der Bindung von einem anderen Quelltyp des **TemplateSettings**-Werts konvertiert werden kann. Weitere Informationen finden Sie unter [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903).
 
 ## <a name="related-topics"></a>Verwandte Themen
 

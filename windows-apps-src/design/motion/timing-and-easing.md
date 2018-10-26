@@ -7,19 +7,17 @@ template: detail.hbs
 ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 pm-contact: stmoy
 design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 412ba7e36c2bb36562ceee13bb1e204ff402a882
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: 9983c62804dad4f0202fc83e3f9b5f23714352d2
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843817"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555638"
 ---
 # <a name="timing-and-easing"></a>Timing und Geschwindigkeitsverlauf
 
@@ -41,19 +39,38 @@ Für das Timing von Fluent-Bewegungen gelten 500 ms (eine halbe Sekunde) als Gru
 
 ### <a name="150ms-exit"></a>**150 ms** (Verlassen)
 
-:::row::: :::column::: Verwenden Sie diese Zeit für Objekte oder Seiten, die eine Szene verlassen oder schließen.
-Sie ermöglicht eine sehr schnelle direktionale Rückmeldung der UI, bei der das Timing die Framerate nicht beeinträchtigt und so eine flüssige Animation unterstützt.
-:::column-end::: :::column::: ![150 ms Bewegung](images/150msAlt.gif) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        Use for objects or pages that are exiting the scene or closing.
+        Allows for very quick directional feedback of exiting UI where timing does not impede upon framerate to achieve a smooth animation.
+    :::column-end:::
+    :::column:::
+        ![150ms motion](images/150msAlt.gif)
+    :::column-end:::
+:::row-end:::
 
 ### <a name="300ms-enter"></a>**300 ms** (Eintreten)
 
-:::row::: :::column::: Verwenden Sie diese Zeit für Objekte oder Seiten, die in eine Szene eintreten oder sie öffnen
-Dies ist eine angemessene Zeitspanne, um Inhalte zu erkennen, wenn sie in die Szene eintreten.
-:::column-end::: :::column::: ![300 ms Bewegung](images/300ms.gif) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        Use for objects or pages that are entering the scene or opening.
+        Allows a reasonable amount of time to celebrate content as it enters the scene.
+    :::column-end:::
+    :::column:::
+        ![300ms motion](images/300ms.gif)
+    :::column-end:::
+:::row-end:::
 
 ### <a name="500ms-move"></a>**≤ 500 ms** (Durchqueren)
 
-::: Zeile:::::: Spalte::: Verwenden Sie diese Zeit für Objekte, die eine einzelne Szene oder mehrere Szenen durchqueren. :::column-end::: :::column::: ![500 ms Bewegung](images/500ms.gif) :::column-end::: :::row-end:::
+:::row:::
+    :::column:::
+        Use for objects which are translating across a single scene or multiple scenes. 
+    :::column-end:::
+    :::column:::
+        ![500ms motion](images/500ms.gif)
+    :::column-end:::
+:::row-end:::
 
 ## <a name="easing-in-fluent-motion"></a>Geschwindigkeitsverlauf in Fluent-Bewegungen
 
@@ -69,7 +86,9 @@ Die Codebeispiele zeigen, wie die empfohlene Werte auf Storyboardanimationen (XA
 
 ### <a name="accelerate-exit"></a>**Beschleunigen** (Verlassen)
 
-:::row::: :::column::: Verwenden Sie dies für UI oder Objekte, die eine Szene verlassen.
+:::row:::
+    :::column:::
+        Use for UI or objects that are exiting the scene.
 
         Objects become powered and gain momentum until they reach escape velocity.
         The resulting feel is that the object is trying its hardest to get out of the user's way and make room for new content to come in.
@@ -106,7 +125,9 @@ _exitAnimation.Duration = TimeSpan.FromMilliseconds(150);
 
 ### <a name="decelerate-enter"></a>**Verlangsamen** (Eintreten)
 
-:::row::: :::column::: Verwenden Sie dies für Objekte oder Seiten, die in eine Szene eintreten oder sie öffnen
+:::row:::
+    :::column:::
+        Use for objects or UI entering the scene, either navigating or spawning.
 
         Once on-scene, the object is met with extreme friction, which slows the object to rest.
         The resulting feel is that the object traveled from a long distance away and entered at an extreme velocity, or is quickly returning to a rest state.
@@ -145,8 +166,10 @@ _enterAnimation.Duration = TimeSpan.FromMilliseconds(300);
 
 ### <a name="standard-easing-move"></a>**Standard** (Durchqueren)
 
-:::row::: :::column::: Dies ist der grundlegende Geschwindigkeitsverlauf für jede Änderung animierter Parameter innerhalb des Systems.
-Verwenden Sie diesen Standard-Geschwindigkeitsverlauf für Objekte, die auf dem Bildschirm von Status zu Status wechseln, z. B. bei einer einfachen Positionsänderung. Verwenden Sie ihn zudem für Objekte, die sich in der Szene kontinuierlich verändern (Morphing), beispielsweise wachsen.
+:::row:::
+    :::column:::
+        This is the baseline easing for any animated parameter change inside of the system.
+        Use standard easing for objects that change from state to state on-screen, such as a simple position change. Also, use it for objects morphing in-scene, like an object that grows.
 
         The resulting feel is that objects changing state from A to B are overcoming, and taken over by, natural forces.
     :::column-end:::

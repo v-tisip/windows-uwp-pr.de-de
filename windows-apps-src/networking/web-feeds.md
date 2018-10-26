@@ -6,16 +6,14 @@ ms.assetid: B196E19B-4610-4EFA-8FDF-AF9B10D78843
 ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 82d01ab6fc70397824b4bd6b267dd5e7cdeac0ee
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 309dd2aedb2195362652da93c13648d07e5ea9f8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "975802"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559692"
 ---
 # <a name="rssatom-feeds"></a>RSS-/Atom-Feeds
 
@@ -48,7 +46,7 @@ Mit der Netzwerkisolation kann ein Entwickler für jede App den Umfang des erfor
 
 Die Netzwerkisolation wirkt sich auf alle Klassenelemente in den [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632)-Namespace und im [**Windows.Web.AtomPub**](https://msdn.microsoft.com/library/windows/apps/br210609)-Namespace aus, die versuchen, auf das Netzwerk zuzugreifen. Die Netzwerkisolation wird unter Windows aktiv erzwungen. Ein Aufruf eines Klassenelements im **Windows.Web.Syndication**-Namespace oder **Windows.Web.AtomPub**-Namespace, der zu einem Netzwerkzugriff führt, kann aufgrund der Netzwerkisolation einen Fehler verursachen, falls die geeignete Netzwerkfunktion nicht aktiviert wurde.
 
-Die Netzwerkfunktionen für eine App werden beim Erstellen der App im App-Manifest konfiguriert. Netzwerkfunktionen werden normalerweise bei der Entwicklung einer App mithilfe von Microsoft Visual Studio 2015 hinzugefügt. Sie können aber auch manuell mit einem Texteditor in der App-Manifestdatei festgelegt werden.
+Die Netzwerkfunktionen für eine App werden beim Erstellen der App im App-Manifest konfiguriert. Netzwerkfunktionen werden normalerweise mithilfe von Microsoft Visual Studio2015, bei der Entwicklung der app hinzugefügt. Sie können aber auch manuell mit einem Texteditor in der App-Manifestdatei festgelegt werden.
 
 Ausführlichere Informationen zu Netzwerkisolation und Netzwerkfunktionen finden Sie im Abschnitt „Funktionen“ des Themas [Grundlagen zum Netzwerk](networking-basics.md).
 

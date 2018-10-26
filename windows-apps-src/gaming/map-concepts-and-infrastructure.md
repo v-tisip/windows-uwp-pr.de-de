@@ -6,16 +6,14 @@ ms.assetid: 7f9b136c-aa22-04b3-d385-6e9e1f38b948
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, OpenGL, Direct3D, Portieren
 ms.localizationpriority: medium
-ms.openlocfilehash: a00a24d2c270e1c4f3aa3b8b716a6637d5da4af1
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 532c2a0a9779ae3eaedb2217175dc0805514f792
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652209"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555239"
 ---
 # <a name="map-opengl-es-20-to-direct3d-11"></a>Zuordnen von OpenGLES2.0 zu Direct3D11
 
@@ -54,16 +52,16 @@ Machen Sie sich zu Beginn des Prozesses zur ersten Portierung Ihrer Grafikarchit
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="notes-on-specific-opengl-es-20-providers"></a>Hinweise zu bestimmten OpenGLES2.0-Anbietern
 
 
 In diesen Themen wird die OpenGLES2.0-Spezifikation von Khronos mit der plattformagnostischen ProgrammierspracheC verwendet. Sowohl von iOS als auch von Android wird dieselbe Spezifikation genutzt, und der für diese Plattformen entwickelte OpenGLES2.0-Code weist große Ähnlichkeit mit den Codeausschnitten auf, die wir durchgehen werden, obwohl diese meist als objektorientierte APIs verfügbar gemacht werden. Aufgrund der Eigenheiten und Sprachunterschiede der einzelnen Plattformen können geringe Unterschiede bestehen, vor allem bei den Typen der Methodenparameter oder bei der allgemeinen Sprachsyntax. Für iOS wird beispielsweise Objective-C genutzt. Für Android kann C++ verwendet werden. Einige Entwickler verlassen sich jedoch möglicherweise auf eine reine Java-Implementierung. Trotz dieser Unterschiede sind diese Themen hilfreich, da bei den allgemeinen Konzepten, dem Aufbau und der Verwendung der OpenGLES-APIs keine Abweichungen bestehen.
 
- 
+ 
 
- 
+ 
 
 
 

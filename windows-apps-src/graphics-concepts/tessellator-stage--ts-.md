@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f2bdcf77a9c150195a7a4c27a064d26c525472a
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 1d57c60e8cba9be75e936c55800bac93f8df3e30
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044819"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556614"
 ---
 # <a name="tessellator-ts-stage"></a>Tessellatorphase (TS)
 
@@ -72,7 +70,7 @@ Die Tessellatorphase (TS) arbeitet in zwei Phasen:
     | Integer              | TessFactor-Bereich: \[1..64\] |
     | Pow2                 | TessFactor-Bereich: \[1..64\] |
 
-     
+     
 
 Tessellation wird mit zwei programmierbaren Shaderphasen implementiert: einem [Hüllen-Shader](hull-shader-stage--hs-.md) und einem [Domänen-Shader](domain-shader-stage--ds-.md). Diese Shaderphasen werden mit HLSL-Code programmiert, der im Shadermodell5 definiert ist. Die Shaderziele sind: hs\_5\_0 und ds\_5\_0. Der Titel erstellt den Shader, dann wird der Code für die Hardware aus den kompilierten Shadern extrahiert und an die Laufzeit übergeben, wenn Shader an die Pipeline gebunden werden.
 
@@ -97,9 +95,9 @@ Die Tessellator gibt UV-Koordinaten (und optional W-Koordinaten) und die Oberfl�
 
 [Grafikpipeline](graphics-pipeline.md)
 
- 
+ 
 
- 
+ 
 
 
 

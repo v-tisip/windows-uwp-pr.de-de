@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c7f68984274cbdb3adec0a88a0c99f7a7342380
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: a6ceb1e779f8622d3e358bc131b21f6ec66ac2f8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1045113"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556413"
 ---
 # <a name="data-type-conversion"></a>Konvertieren von Datentypen
 
@@ -37,7 +35,7 @@ Der folgende Begriffe werden nachfolgend zur Beschreibung der verschiedenen Form
 | FLOAT | Ein Gleitkommawert in einer von Direct3D definierten Darstellung.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | SRGB  | Ähnlich wie bei UNORM stehen hier alle Bits auf 0 für 0,0f und alle Bits auf 1 für 1,0f. Im Gegensatz zu UNORM stellen bei SRGB Ganzzahlen-Bitfolgen zwischen nur 0 und nur 1 einen nicht linearen Verlauf von Gleitkommazahlen zwischen 0,0f und 1,0f dar. Als Farbwerte dargestellt würde dieser nichtlineare Verlauf bei SRGB für einen "durchschnittlichen" Betrachter unter "durchschnittlichen" Betrachtungsbedingungen auf einem "durchschnittlichen" Display als linearer Verlauf von Helligkeitsstufen erscheinen. Ausführliche Informationen finden Sie im SRGB-Standard IEC 61996-2-1 der IEC (International Electrotechnical Commission).                |
 
- 
+ 
 
 Die oben genannten Begriffe werden häufig als "Format Name Modifiers" verwendet. Sie beschreiben in diesem Zusammenhang, wie Daten im Speicher angeordnet sind und welche Konvertierung beim Transportpfad (u. U. einschließlich Filterung) aus dem Speicher zu einer Pipelineeinheit wie z.B. einem Shader ausgeführt werden müssen.
 
@@ -189,7 +187,7 @@ Sofern nicht anders angegeben, werden bei Ganzzahlen alle Konvertierungen zu und
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idfixedpointintegerconversionspanspan-idfixedpointintegerconversionspanspan-idfixedpointintegerconversionspanfixed-point-integer-conversion"></a><span id="Fixed_Point_Integer_Conversion"></span><span id="fixed_point_integer_conversion"></span><span id="FIXED_POINT_INTEGER_CONVERSION"></span>Konvertierung von Festkomma-Ganzzahlwerten
 
@@ -238,22 +236,22 @@ Im Rahmen von Direct3D werden Festkomma-Ganzzahl-Darstellungen auf zwei Arten ve
 <td align="left">Festkomma-Ganzzahl</td>
 <td align="left">FLOAT</td>
 <td align="left"><p>Gehen wir davon aus, dass eine bestimmte Festkommadarstellung in einen Gleitkommawert konvertiert wird, der nicht mehr als 24Bit Informationen speichern kann und bei dem nicht mehr 23 Bits für die Nachkommakomponente reserviert sind. Nehmen wir an, die Festkommazahl fxp liegt in der Form i,f (i = Ganzahl-Bits, f = Nachkomma-Bits) vor. Die Konvertierung zu einem Gleitkommawert lässt sich in Pseudocode folgendermaßen darstellen.</p>
-<p>float Ergebnis = (Float) (Fxp &gt; &gt; f) + / / extract ganze Zahl</p>
-((Float) (Fxp &amp; (2<sup>f</sup> - 1)) / (2<sup>f</sup>)); Teiler extrahieren</td>
+<p>float Ergebnis = (Float) (Fxp &gt; &gt; f) + / / Ganzzahl</p>
+((Float) (Fxp &amp; (2<sup>f</sup> - 1)) / (2<sup>f</sup>)); Nachkommawert</td>
 </tr>
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
 
 
 [Anhänge](appendix.md)
 
- 
+ 
 
- 
+ 
 
 
 

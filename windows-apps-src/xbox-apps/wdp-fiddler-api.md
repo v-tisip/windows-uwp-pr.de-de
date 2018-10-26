@@ -5,26 +5,24 @@ description: Erfahren Sie, wie Sie die Fiddler-Ablaufverfolgung programmgesteuer
 ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
 ms.localizationpriority: medium
-ms.openlocfilehash: 819f039f04d1e0a7fd035b10e3cbe408645e8f4d
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 8e0faf3a0b6a4f13c0fce24aa093cf94a1e7ee7e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "409946"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558656"
 ---
 # <a name="fiddler-settings-api-reference"></a>Fiddler-Einstellungen – API-Referenz   
 Sie können die Fiddler-Netzwerkablaufverfolgung für Ihr Dev Kit mittels dieser REST-API aktivieren und deaktivieren.
 
-## <a name="determine-if-fiddler-tracing-is-enabled"></a>Bestimmen Sie, ob Fiddler Tracing aktiviert ist
+## <a name="determine-if-fiddler-tracing-is-enabled"></a>Ermitteln Sie, ob Fiddler-Ablaufverfolgung aktiviert ist.
 
 **Anforderung**
 
-Sie können überprüfen, um festzustellen, ob auf dem Gerät mithilfe der folgenden Anforderung Fiddler Tracing aktiviert ist.
+Sie können überprüfen, um festzustellen, ob Fiddler-Ablaufverfolgung mithilfe der folgenden Anforderung für das Gerät aktiviert ist.
 
 Methode      | Anforderungs-URI
 :------     | :-----
@@ -44,7 +42,7 @@ GET | /ext/fiddler
 
 **Antwort**   
 
-- JSON Bool-Eigenschaft IsProxyEnabled welche Bezeichner gibt an, ob der Proxy aktiviert ist oder nicht.
+- JSON Bool Eigenschaft IsProxyEnabled welche Bezeichner gibt an, ob der Proxy aktiviert ist oder nicht.
 
 **Statuscode**
 

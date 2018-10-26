@@ -6,18 +6,17 @@ title: Kameraunabhängige Taschenlampe
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 7777b1b3f72090667f1e75f3c9e23b6adcd9f2d5
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 913faf70531509a604cde52bb71886c128edae46
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233619"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555556"
 ---
 # <a name="camera-independent-flashlight"></a>Kameraunabhängige Taschenlampe
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In diesem Artikel wird beschrieben, wie Sie auf die Taschenlampe eines Geräts zugreifen und diese verwenden, sofern vorhanden. Die Taschenlampenfunktion wird unabhängig von der Kamera des Geräts und der Blitzfunktion der Kamera verwaltet. Neben dem Abrufen eines Verweises auf die Leuchte und dem Anpassen ihrer Einstellungen erfahren Sie in diesem Artikel auch, wie die Leuchtenressourcen korrekt freigegeben werden, wenn sie nicht verwendet wird. Außerdem wird beschrieben, wie Sie ermitteln können, wann sich die Verfügbarkeit der Leuchte ändert, falls sie von einer anderen App verwendet wird.
@@ -79,7 +78,7 @@ Wenn Sie die Leuchte nicht mehr verwenden, sollten Sie sie deaktivieren und [**L
 ## <a name="related-topics"></a>Verwandte Themen
 - [Medienwiedergabe](media-playback.md)
 
- 
+ 
 
 
 

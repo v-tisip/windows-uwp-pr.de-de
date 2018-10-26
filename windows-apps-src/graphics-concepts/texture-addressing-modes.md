@@ -12,15 +12,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 75aa946f3a0f1259adf1207e9568ca6da783883e
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 0e817dcc92741ca2e738784f387cfe49399a108c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044749"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552806"
 ---
 # <a name="texture-addressing-modes"></a>Texturadressierungsmodi
 
@@ -43,7 +41,7 @@ Die Aktivierung des Texturumbruchs macht Texturkoordinaten außerhalb des Bereic
 | Anklemmen                   | Klemmt Ihre Texturkoordinaten an den Bereich \[0,0, 1,0\]. Dabei wird die Textur einmal angewendet, und die Farbe der Kantenpixel wird verstrichen. |
 | Randfarbe            | Verwende eine beliebige *Randfarbe* für alle Texturkoordinaten außerhalb des Bereichs von 0,0 bis 1,0 (einschließlich).                         |
 
- 
+ 
 
 ## <a name="span-idwraptextureaddressmodespanspan-idwraptextureaddressmodespanspan-idwraptextureaddressmodespanwrap-texture-address-mode"></a><span id="Wrap_texture_address_mode"></span><span id="wrap_texture_address_mode"></span><span id="WRAP_TEXTURE_ADDRESS_MODE"></span>Texturadressierungsmodus Umbruch
 
@@ -101,9 +99,9 @@ Die Einschränkungen für Texturwiederholungen können von der Größe der Textu
 
 [Texturen](textures.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,29 +1,27 @@
 ---
-title: Direct3D-Grafikkonzepte
-description: Beschreibt das Grafikkonzept, auf dem Microsoft Direct3D aufgebaut ist.
+title: Direct3D-Grafiken Glossar
+description: Definiert die Grafiken Begriffe, die von Microsoft Direct3D verwendet.
 ms.assetid: c3850a92-4d05-4f72-bf0f-6a0c79e841eb
 keywords:
-- Direct3D-Grafik – Lernanleitung
+- Direct3D-Grafiken Glossar
 author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e1fed9eaf3003bc67a86a5282fccbb923019a36
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 0e325494cefeab4cf3ed40939f5b24de5e921b68
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1653019"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555576"
 ---
-# <a name="direct3d-graphics-concepts"></a>Direct3D-Grafikkonzepte
+# <a name="direct3d-graphics-glossary"></a>Direct3D-Grafiken Glossar
 
 
-Beschreibt Microsoft Direct3D-Grafikkonzepte. Dieses Handbuch erklärt die allgemeinen Direct3D-Computer-Grafikkonzepte, die in der Direct3D-Spiele- und App-Entwicklung verwendet werden.
+Microsoft Direct3D-Grafiken Begriffe definiert. In diesem Glossar definiert, auf ein high-Level, allgemeine 3D Computer Grafiken Begriffe, die in der Direct3D-Spiel und app-Entwicklung verwendet werden.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>In diesem Abschnitt
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>Inhalt dieses Abschnitts
 
 
 <table>
@@ -89,8 +87,8 @@ Beschreibt Microsoft Direct3D-Grafikkonzepte. Dieses Handbuch erklärt die allge
 </tbody>
 </table>
 
- 
+ 
 
- 
+ 
 
- 
+ 

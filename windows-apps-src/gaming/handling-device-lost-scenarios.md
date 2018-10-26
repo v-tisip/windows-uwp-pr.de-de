@@ -6,19 +6,18 @@ ms.assetid: 8f905acd-08f3-ff6f-85a5-aaa99acb389a
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, DirectX 11, Gerät verloren gegangen
-ms.openlocfilehash: 3d7a93ed0b1ce78cba278232eb5325e463c12789
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 888b3ec7ab667a8a92ae638a9d5c456c3180df0d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233752"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558603"
 ---
 # <a name="span-iddevgaminghandlingdevice-lostscenariosspanhandle-device-removed-scenarios-in-direct3d-11"></a><span id="dev_gaming.handling_device-lost_scenarios"></span>Behandeln von Szenarien mit entfernten Geräten in Direct3D 11
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 In diesem Thema wird erläutert, wie Sie die Geräteschnittstellenkette für Direct3D und DXGI neu erstellen, wenn die Grafikkarte entfernt oder neu initialisiert wird.
 
@@ -29,7 +28,7 @@ In DirectX9 kann für Anwendungen die Bedingung "[Gerät ist nicht mehr auffindb
 -   Das Grafikgerät reagiert nicht mehr und wird zurückgesetzt.
 -   Eine Grafikkarte wird physisch angeschlossen oder entfernt.
 
-Unter diesen Umständen wird von DXGI ein Fehlercode zurückgegeben, der angibt, dass das Direct3D-Gerät neu initialisiert werden muss und die Geräteressourcen neu erstellt werden müssen. In dieser exemplarischen Vorgehensweise wird erläutert, wie Direct3D11-Apps und -Spiele Fälle, in denen die Grafikkarte zurückgesetzt, entfernt oder geändert wird, erkennen und darauf reagieren kann. Codebeispiele sind in der DirectX11-Vorlage für Apps (Universelle Windows-Plattform) in Microsoft Visual Studio2015 enthalten.
+Unter diesen Umständen wird von DXGI ein Fehlercode zurückgegeben, der angibt, dass das Direct3D-Gerät neu initialisiert werden muss und die Geräteressourcen neu erstellt werden müssen. In dieser exemplarischen Vorgehensweise wird erläutert, wie Direct3D11-Apps und -Spiele Fälle, in denen die Grafikkarte zurückgesetzt, entfernt oder geändert wird, erkennen und darauf reagieren kann. Codebeispiele sind in der Vorlage DirectX 11-App (Universal Windows) in Microsoft Visual Studio2015 bereitgestellt.
 
 ## <a name="instructions"></a>Anweisungen
 

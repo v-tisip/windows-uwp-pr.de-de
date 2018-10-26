@@ -6,16 +6,14 @@ ms.assetid: e7f6fa41-ab05-8a1e-a154-704834e72e6d
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Opengl, Direct3D 11, Portieren
 ms.localizationpriority: medium
-ms.openlocfilehash: 63a0baee79873203f9f52fd1e9acae03c7647240
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: e7541a8f54f64197c17acea5f1737e36b0e6f670
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652809"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556864"
 ---
 # <a name="port-a-simple-opengl-es-20-renderer-to-direct3d-11"></a>Portieren eines einfachen OpenGL ES 2.0-Renderers zu Direct3D 11
 
@@ -84,9 +82,9 @@ typedef struct
 
 Diese Struktur verfügt über eine Instanz und enthält alle erforderlichen Komponenten zum Rendern eines sehr einfach aufgebauten Gitters mit Vertexschattierung.
 
-> **Hinweis**  Der in diesem Thema verwendete OpenGL ES 2.0-Code basiert auf der Windows-API-Implementierung der Khronos Group, und es wird die Programmiersyntax von Windows C verwendet.
+> **Hinweis:** Any OpenGL ES 2.0-Code in diesem Thema basiert auf der von der Khronos Group bereitgestellten Windows-API-Implementierung und Programmiersyntax Windows C verwendet.
 
- 
+ 
 
 ## <a name="what-you-need-to-know"></a>Wissenswertes
 
@@ -134,7 +132,7 @@ Diese Struktur verfügt über eine Instanz und enthält alle erforderlichen Komp
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idadditionalresourcesspanadditional-resources"></a><span id="additional_resources"></span>Weitere Ressourcen
 
@@ -143,9 +141,9 @@ Diese Struktur verfügt über eine Instanz und enthält alle erforderlichen Komp
 -   [Erstellen eines neuen DirectX11-Projekts für UWP](user-interface.md)
 -   [Zuordnen von OpenGLES2.0-Konzepten und -Infrastruktur zu Direct3D11](map-concepts-and-infrastructure.md)
 
- 
+ 
 
- 
+ 
 
 
 

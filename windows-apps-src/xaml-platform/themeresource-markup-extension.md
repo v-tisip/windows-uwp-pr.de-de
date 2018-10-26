@@ -6,16 +6,14 @@ ms.assetid: 8A1C79D2-9566-44AA-B8E1-CC7ADAD1BCC5
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: eb2b292688d05e9886851016f2d3526a1926e418
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 024e48380941c0d79eef65780396ec9b89edc3c7
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1675097"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557659"
 ---
 # <a name="themeresource-markup-extension"></a>{ThemeResource}-Markuperweiterung
 
@@ -71,7 +69,7 @@ Für die XAML-Definitionen von Ansichtszuständen in einer Steuerelementvorlage 
 
 Die Verwendung von **ThemeResource** kann als eine Reihe abhängiger Werte verstanden werden. Beispielsweise kann für einen [**Color**](https://msdn.microsoft.com/library/windows/apps/hh673723)-Wert, der von einem [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/br242962)-Element verwendet wird, bei dem es sich außerdem um eine Ressource mit Schlüssel handelt, ein **ThemeResource**-Verweis verwendet werden. Für alle UI-Eigenschaften, von denen die **SolidColorBrush**-Ressource mit Schlüssel verwendet wird, würde jedoch auch ein **ThemeResource**-Verweis verwendet werden. Eine dynamische Änderung des Werts bei einer Designänderung wird also jeweils speziell von den Eigenschaften vom Typ [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) ermöglicht.
 
-**Hinweis**  Die Auswertung von `{ThemeResource}` und Laufzeitressourcen beim Wechseln von Designs wird in Windows 8.1-XAML-Code unterstützt, jedoch nicht in XAML-Code für Apps, die für Windows 8 bestimmt sind.
+**Hinweis:** `{ThemeResource}` und Evaluierung Laufzeitressourcen beim Wechseln von Designs wird in Windows8.1-XAML unterstützt, aber im XAML-Code für apps für Windows8 nicht unterstützt.
 
 ### <a name="system-resources"></a>Systemressourcen
 
@@ -140,13 +138,13 @@ In allen anderen Designverzeichnissen sind diese Pinsel ebenfalls definiert, z.B
 
 Hier ist der [**Color**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) -Wert ein weiterer **ThemeResource**-Verweis auf eine Systemressource. Wenn Sie auf eine Systemressource verweisen und diese als Reaktion auf eine Designänderung ändern möchten, sollten Sie zum Erstellen des Verweises das **ThemeResource**-Element verwenden.
 
-## <a name="windows-8-behavior"></a>Windows8-Verhaltensweise
+## <a name="windows8-behavior"></a>Windows8 Verhalten
 
-Unter Windows8 wurde die **ThemeResource**-Markuperweiterung nicht unterstützt. Sie ist ab Windows8.1 verfügbar. Außerdem wurde unter Windows8 auch das dynamische Umschalten zwischen den designbezogenen Ressourcen für eine Windows-Runtime-App nicht unterstützt. Die App musste neu gestartet werden, damit die Designänderung für die XAML-Vorlagen und -Formate wirksam wurde. Dieses Verhalten beeinträchtigt die Benutzerfreundlichkeit. Es wird daher dringend empfohlen, Apps neu zu kompilieren und auf Windows8.1 auszurichten, damit Formate mit Nutzung von **ThemeResource** verwendet werden können und dynamisch zwischen Designs gewechselt werden kann, wenn Benutzer dies wünschen. Apps, die für Windows8 kompiliert wurden, aber unter Windows8.1 ausgeführt werden, weisen weiterhin das Windows8-Verhalten auf.
+Windows8 hat die **ThemeResource** -Markuperweiterung nicht unterstützt, ist es ab Windows8.1 verfügbar. Darüber hinaus wurde Windows8 nicht unterstützt dynamische Umschalten zwischen den designbezogenen Ressourcen für eine Windows-Runtime-app. Die App musste neu gestartet werden, damit die Designänderung für die XAML-Vorlagen und -Formate wirksam wurde. Dies ist eine gute benutzererfahrung gewährleistet, apps, damit diese Formate, mit **ThemeResource** Verwendungen verwenden können und dynamisch Designs wechseln können, wenn der Benutzer wird dringend empfohlen, kompilieren Sie neu und Ziel Windows8.1 sind. Apps, die für Windows8 jedoch auf Windows8.1 weiterhin verwenden, das Verhalten Windows8 kompiliert wurden.
 
 ## <a name="design-time-tools-support-for-the-themeresource-markup-extension"></a>Unterstützung von Entwurfszeittools für die **{ThemeResource}**-Markuperweiterung
 
-Microsoft Visual Studio2013 kann mögliche Schlüsselwerte in die MicrosoftIntelliSense-Dropdownelemente einbinden, wenn Sie die **{ThemeResource}**-Markuperweiterung auf einer XAML-Seite verwenden. Sobald Sie z.B. „{ThemeResource” eingeben, wird ein beliebiger Ressourcenschlüssel aus den [XAML-Designressourcen](https://msdn.microsoft.com/library/windows/apps/mt187274) angezeigt.
+Microsoft Visual Studio2013 können mögliche Schlüsselwerte in die Microsoft IntelliSense-Dropdownelemente einbinden enthalten, wenn Sie die Markuperweiterung **{ThemeResource}** in einer XAML-Seite verwenden. Sobald Sie z.B. „{ThemeResource” eingeben, wird ein beliebiger Ressourcenschlüssel aus den [XAML-Designressourcen](https://msdn.microsoft.com/library/windows/apps/mt187274) angezeigt.
 
 Sobald ein Ressourcenschlüssel als Teil einer **{ThemeResource}**-Verwendung vorhanden ist, kann das Feature **Gehe zu Definition** (F12) diese Ressource auflösen und Ihnen die Datei „generic.xaml” für die Entwurfszeit anzeigen, in der die Designressource definiert ist. Da Designressourcen öfter definiert werden (eine pro Design), leitet **Gehe zu Definition** Sie zu der ersten Definition weiter, die in der Datei gefunden wird; dabei handelt es sich um die Definition für **Default**. Sollten Sie die anderen Definitionen benötigen, können Sie innerhalb der Datei anhand des Schlüsselnamens nach den Definitionen der anderen Designs suchen.
 
@@ -156,5 +154,5 @@ Sobald ein Ressourcenschlüssel als Teil einer **{ThemeResource}**-Verwendung vo
 * [XAML-Designressourcen](https://msdn.microsoft.com/library/windows/apps/mt187274)
 * [**Ressourcenwörterbuch**](https://msdn.microsoft.com/library/windows/apps/br208794)
 * [x:Key-Attribut](x-key-attribute.md)
- 
+ 
 

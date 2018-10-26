@@ -7,25 +7,23 @@ template: detail.hbs
 ms.author: jimwalk
 ms.date: 10/02/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 pm-contact: stmoy
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 518ce49ddb631e3e914a6c7662b4e74de247c29c
-ms.sourcegitcommit: 82c3fc0b06ad490c3456ad18180a6b23ecd9c1a7
+ms.openlocfilehash: f641ec3333ed0eda1fdfa5ff82ef236b5ec186ba
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "5468435"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558079"
 ---
 # <a name="combo-box"></a>Kombinationsfeld
 
-Verwenden Sie ein Kombinationsfeld (auch bekannt als eine Dropdown-Liste), um eine Liste von Elementen, vorhanden sind, die ein Benutzer eine Auswahl treffen kann. Ein Kombinationsfeld wird in einem kompakten Zustand gestartet und erweitert, um eine Liste mit auswählbaren Elementen anzuzeigen.
+Verwenden Sie ein Kombinationsfeld (auch bekannt als eine Dropdown-Liste), um eine Liste der Elemente darzustellen, die ein Benutzer eine Auswahl treffen kann. Ein Kombinationsfeld wird in einem kompakten Zustand gestartet und erweitert, um eine Liste mit auswählbaren Elementen anzuzeigen.
 
-Wenn das Kombinationsfeld geschlossen wird, es zeigt die aktuelle Auswahl oder ist leer, wenn kein Element ausgewählt ist. Wenn der Benutzer das Kombinationsfeld erweitert, zeigt die Liste mit auswählbaren Elementen an.
+Wenn das Kombinationsfeld geschlossen wird, es zeigt entweder die aktuelle Auswahl oder ist leer, wenn kein Element ausgewählt ist. Wenn der Benutzer das Kombinationsfeld erweitert, zeigt es die Liste mit auswählbaren Elementen.
 
 > **Wichtige APIs**: [ComboBox-Klasse](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [IsEditable-Eigenschaft](/uwp/api/windows.ui.xaml.controls.combobox.iseditable), [Text-Eigenschaft](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [TextSubmitted-Ereignis](/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
 
@@ -70,7 +68,7 @@ Wenn die Liste in einem Kombinationsfeld lang genug ist, wird eine Bildlaufleist
 
 ## <a name="create-a-combo-box"></a>Erstellen Sie ein Kombinationsfeld
 
-Durch Hinzufügen von Objekten direkt zur Sammlung [Items](/uwp/api/windows.ui.xaml.controls.itemscontrol.items) oder binden die [ItemsSource](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) -Eigenschaft auf eine Datenquelle zu füllen Sie das Kombinationsfeld. Elemente, die dem Kombinationsfeld hinzugefügt werden in [ComboBoxItem](/uwp/api/windows.ui.xaml.controls.comboboxitem) Container eingeschlossen.
+Sie füllen das Kombinationsfeld, indem Objekte direkt mit der Sammlung [Elemente](/uwp/api/windows.ui.xaml.controls.itemscontrol.items) hinzufügen oder die [ItemsSource](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) -Eigenschaft an eine Datenquelle zu binden. Elemente, die dem Kombinationsfeld hinzugefügt werden in [ComboBoxItem](/uwp/api/windows.ui.xaml.controls.comboboxitem) Container eingeschlossen.
 
 Hier ist ein einfaches Kombinationsfeld mit Elementen in XAML hinzugefügt.
 
@@ -104,18 +102,18 @@ public MainPage()
 
 ### <a name="item-selection"></a>Elementauswahl
 
-Wie ListView und GridView wird [der Auswahl](/uwp/api/windows.ui.xaml.controls.primitives.selector), ComboBox abgeleitet, so Sie die Auswahl des Benutzers auf die gleiche Weise standard erhalten.
+ComboBox wird wie ListView und GridView- [Selektor](/uwp/api/windows.ui.xaml.controls.primitives.selector), abgeleitet, so Sie die Auswahl des Benutzers auf die gleiche Weise standard erhalten.
 
 Sie können abrufen oder des Kombinationsfelds ausgewählte Element durch die Verwendung der [SelectedItem](/uwp/api/windows.ui.xaml.controls.primitives.selector.selecteditem) -Eigenschaft und Abrufen oder festlegen den Index des ausgewählten Elements mithilfe der [SelectedIndex](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectedindex) -Eigenschaft.
 
-Um den Wert einer bestimmten Eigenschaft auf das ausgewählte Datenelement zu erhalten, können Sie die [SelectedValue](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectedvalue) -Eigenschaft verwenden. In diesem Fall legen Sie die [SelectedValuePath](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectedvaluepath) an, welche Eigenschaft auf das ausgewählte Element zum Abrufen des Werts aus.
+Um den Wert einer bestimmten Eigenschaft auf das ausgewählte Datenelement zu erhalten, können Sie die [SelectedValue](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectedvalue) -Eigenschaft verwenden. In diesem Fall legen Sie die [SelectedValuePath](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectedvaluepath) an, welche Eigenschaft für das ausgewählte Element auf den Wert abgerufen.
 
 > [!TIP]
-> Wenn Sie SelectedItem oder SelectedIndex an, dass die Standardauswahl festlegen, wird eine Ausnahmebedingung ausgelöst, wenn die Eigenschaft festgelegt ist, bevor die Kombinationsfeld Feld Items-Sammlung gefüllt wird. Es sei denn, Sie Ihre Elemente in XAML definieren, empfiehlt es sich um das Kombinationsfeld Feld Loaded-Ereignis behandeln, und legen SelectedItem oder SelectedIndex im Loaded-Ereignis-Handler.
+> Wenn Sie SelectedItem oder SelectedIndex an, dass die Standardauswahl festlegen, wird eine Ausnahmebedingung ausgelöst, wenn die Eigenschaft festgelegt ist, bevor die Kombinationsfeld Feld Items-Sammlung gefüllt wird. Es sei denn, Sie Ihre Elemente in XAML definieren, empfiehlt es sich das Kombinationsfeld Feld Loaded-Ereignis behandeln, und legen Sie SelectedItem oder SelectedIndex im Ereignishandler Loaded-Ereignis.
 
-Sie können diese Eigenschaften in XAML binden oder behandeln das [SelectionChanged](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectionchanged) -Ereignis zum Reagieren auf Änderungen der Auswahl.
+Sie können diese Eigenschaften in XAML binden oder behandeln Sie das [SelectionChanged](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectionchanged) -Ereignis zum Reagieren auf Änderungen der Auswahl.
 
-In den Ereignisdaten können Ereignishandlercode Sie das ausgewählte Element aus der [SelectionChangedEventArgs.AddedItems](/uwp/api/windows.ui.xaml.controls.selectionchangedeventargs.addeditems) -Eigenschaft abrufen. Das zuvor ausgewählte Element (sofern vorhanden) können Sie aus der [SelectionChangedEventArgs.RemovedItems](/uwp/api/windows.ui.xaml.controls.selectionchangedeventargs.removeditems) -Eigenschaft abrufen. Die Addeditems- und RemovedItems-Sammlungen jedes enthalten nur 1 Element, da das Kombinationsfeld Auswahl mehrerer nicht unterstützt.
+In den Ereignisdaten können Ereignishandlercode Sie das ausgewählte Element aus der [SelectionChangedEventArgs.AddedItems](/uwp/api/windows.ui.xaml.controls.selectionchangedeventargs.addeditems) -Eigenschaft abrufen. Sie können zuvor ausgewählten Elements (sofern vorhanden) aus der [SelectionChangedEventArgs.RemovedItems](/uwp/api/windows.ui.xaml.controls.selectionchangedeventargs.removeditems) -Eigenschaft abrufen. Die Addeditems- und RemovedItems-Sammlungen jedes enthalten nur 1 Element, weil das Kombinationsfeld Auswahl mehrerer nicht unterstützt.
 
 In diesem Beispiel wird veranschaulicht, wie das SelectionChanged-Ereignis behandelt, und wie Sie auf das ausgewählte Element binden.
 
@@ -165,21 +163,21 @@ private void ColorComboBox_SelectionChanged(object sender, SelectionChangedEvent
 
 #### <a name="selectionchanged-and-keyboard-navigation"></a>SelectionChanged und Tastatur navigation
 
-Standardmäßig tritt ein, das SelectionChanged-Ereignis, wenn ein Benutzer klickt, tippt oder drückt EINGABETASTE auf ein Element in der Liste, um ihre Auswahl zu übernehmen, und das Kombinationsfeld wird geschlossen. Auswahl ändern nicht, wenn der Benutzer das Öffnen Kombinationsfeld mit den Pfeiltasten der Tastatur navigiert.
+Standardmäßig tritt das SelectionChanged-Ereignis auf, wenn ein Benutzer klickt, tippt oder drückt EINGABETASTE auf ein Element in der Liste, um ihre Auswahl zu übernehmen, und das Kombinationsfeld wird geschlossen. Auswahl ändern nicht, wenn der Benutzer das Öffnen Kombinationsfeld mit den Pfeiltasten der Tastatur navigiert.
 
-Um ein Kombinationsfeld, das "live aktualisiert" während der Benutzer mit den Pfeiltasten (z. B. eine Schriftart Auswahl Dropdown-Liste) den geöffnete Liste navigiert, [müssen Sie SelectionChangedTrigger](/uwp/api/windows.ui.xaml.controls.combobox.selectionchangedtrigger) auf [immer](/uwp/api/windows.ui.xaml.controls.comboboxselectionchangedtrigger)festgelegt. Dadurch wird das SelectionChanged-Ereignis treten auf, wenn der Fokus auf ein anderes Element in der Liste öffnen geändert wird.
+Um ein Kombinationsfeld zu erstellen, das "live aktualisiert" während der Benutzer die Liste öffnen mit den Pfeiltasten (z. B. eine Schriftart Auswahl Dropdown-Liste) navigiert zu machen, [müssen Sie SelectionChangedTrigger](/uwp/api/windows.ui.xaml.controls.combobox.selectionchangedtrigger) auf [immer](/uwp/api/windows.ui.xaml.controls.comboboxselectionchangedtrigger)festgelegt. Dadurch wird das SelectionChanged-Ereignis auf, wenn der Fokus auf ein anderes Element in der Liste öffnen geändert wird.
 
 #### <a name="selected-item-behavior-change"></a>Änderung des ausgewählten Elements Verhaltens
 
-Im RS5 (Windows SDK-Version 10.0.NNNNN.0 (Windows 10, Version jjmm), das Verhalten der ausgewählten Elemente wird aktualisiert, um bearbeitbaren Kombinationsfelder unterstützen.
+In RS5 (Windows SDK-Version 10.0.NNNNN.0 (Windows 10, Version jjmm), das Verhalten der ausgewählten Elemente wird aktualisiert, um bearbeitbare Kombinationsfelder unterstützen.
 
-Vor dem RS5, den Wert der SelectedItem-Eigenschaft (und daher SelectedValue und SelectedIndex) wurde, in dem Kombinationsfeld Items-Sammlung erforderlich. Mit dem vorherigen Beispiel wird die Einstellung `colorComboBox.SelectedItem = "Pink"` ergibt:
+Vor dem RS5, den Wert der SelectedItem-Eigenschaft (und daher SelectedValue und SelectedIndex) war, in dem Kombinationsfeld Items-Sammlung erforderlich. Mit dem vorherigen Beispiel wird die Einstellung `colorComboBox.SelectedItem = "Pink"` ergibt:
 
 - SelectedItem = Null
 - SelectedValue = Null
 - SelectedIndex =-1
 
-In RS5 und höher wird der Wert der SelectedItem-Eigenschaft (und daher SelectedValue und SelectedIndex) ist nicht erforderlich, um in das Kombinationsfeld Items-Sammlung sein. Mit dem vorherigen Beispiel wird die Einstellung `colorComboBox.SelectedItem = "Pink"` ergibt:
+In RS5 und höher wird der Wert der SelectedItem-Eigenschaft (und daher SelectedValue und SelectedIndex) ist nicht erforderlich, in dem Kombinationsfeld Items-Sammlung. Mit dem vorherigen Beispiel wird die Einstellung `colorComboBox.SelectedItem = "Pink"` ergibt:
 
 - SelectedItem = rosa
 - SelectedValue = rosa
@@ -187,7 +185,7 @@ In RS5 und höher wird der Wert der SelectedItem-Eigenschaft (und daher Selected
 
 ### <a name="text-search"></a>Textsuche
 
-Kombinationsfelder unterstützen automatisch die Suche in ihren Sammlungen. Wenn ein Benutzer über eine physische Tastatur Zeichen eingibt, während sich der Fokus auf einem geöffneten oder geschlossenen Kombinationsfeld befindet, werden Vorschläge angezeigt, die der vom Benutzer eingegebenen Zeichenfolge entsprechen. Diese Funktionalität ist besonders bei der Navigation durch eine lange Liste nützlich. Beispielsweise können bei der Interaktion mit einer Dropdownliste, die eine Liste von Bundesstaaten enthält Benutzer die Taste "w", um "Washington" anzuzeigen und schnell auswählen zu drücken. Textsuche ist nicht Groß-/Kleinschreibung berücksichtigt.
+Kombinationsfelder unterstützen automatisch die Suche in ihren Sammlungen. Wenn ein Benutzer über eine physische Tastatur Zeichen eingibt, während sich der Fokus auf einem geöffneten oder geschlossenen Kombinationsfeld befindet, werden Vorschläge angezeigt, die der vom Benutzer eingegebenen Zeichenfolge entsprechen. Diese Funktionalität ist besonders bei der Navigation durch eine lange Liste nützlich. Beispielsweise können bei der Interaktion mit einer Dropdownliste, enthält eine Liste von Bundesstaaten Benutzer die Taste "w", um "Washington" anzuzeigen und schnell auswählen zu drücken. Textsuche ist nicht Groß-/Kleinschreibung berücksichtigt.
 
 Sie können die [IsTextSearchEnabled](/uwp/api/windows.ui.xaml.controls.combobox.istextsearchenabled) -Eigenschaft auf **"false"** zum Deaktivieren dieser Funktion festlegen.
 
@@ -196,15 +194,15 @@ Sie können die [IsTextSearchEnabled](/uwp/api/windows.ui.xaml.controls.combobox
 > [!IMPORTANT]
 > Dieses Feature erfordert die [neuesten Windows 10 Insider Preview-Build und SDK](https://insider.windows.com/for-developers/).
 
-Standardmäßig ein Kombinationsfeld ermöglicht es dem Benutzer aus einer vordefinierten Liste von Optionen auswählen. Es gibt jedoch auch Fälle, in denen die Liste enthält nur eine Teilmenge der gültige Werte, und der Benutzer sollte in der Lage, andere Werte eingeben, die nicht genannt sind. Um dies zu unterstützen, können Sie das Kombinationsfeld bearbeitbar sein.
+Standardmäßig ein Kombinationsfeld ermöglicht es dem Benutzer aus einer vordefinierten Liste von Optionen auswählen. Es gibt jedoch Fälle, in denen die Liste enthält nur eine Teilmenge der gültige Werte, und der Benutzer sollte in der Lage, andere Werte eingeben, die nicht aufgelistet werden. Um dies zu unterstützen, können Sie das Kombinationsfeld bearbeitbar sein.
 
-Um ein Kombinationsfeld bearbeitbar, die [IsEditable](/uwp/api/windows.ui.xaml.controls.combobox.iseditable) -Eigenschaft auf **"true"** festgelegt. Behandeln Sie dann das [TextSubmitted](/uwp/api/Windows.UI.Xaml.Controls.ComboBox) -Ereignis, das mit dem vom Benutzer eingegebenen Wert funktionieren.
+Um ein Kombinationsfeld bearbeitbar, die [IsEditable](/uwp/api/windows.ui.xaml.controls.combobox.iseditable) -Eigenschaft auf **"true"** festgelegt. Behandeln Sie dann das [TextSubmitted](/uwp/api/Windows.UI.Xaml.Controls.ComboBox) -Ereignis mit dem vom Benutzer eingegebenen Wert funktioniert.
 
-Standardmäßig wird der Wert SelectedItem aktualisiert, wenn der Benutzer die benutzerdefinierten Text absendet. Sie können dieses Verhalten überschreiben, indem **Handled** auf **"true"** in den Ereignisargumenten TextSubmitted. Wenn das Ereignis als behandelt markiert ist, wird das Kombinationsfeld wird keine weiteren Maßnahmen nach dem Ereignis und bleibt in der Bearbeitung Zustand. SelectedItem wird nicht aktualisiert werden.
+Standardmäßig wird der SelectedItem-Wert aktualisiert, wenn der Benutzer benutzerdefinierten Text absendet. Sie können dieses Verhalten überschreiben, indem **Handled** auf **"true"** in den Ereignisargumenten TextSubmitted. Wenn das Ereignis als behandelt markiert ist, wird das Kombinationsfeld wird keine weiteren Maßnahmen nach dem Ereignis und bleibt in der Bearbeitung Zustand. SelectedItem wird nicht aktualisiert werden.
 
-Dieses Beispiel zeigt ein einfaches bearbeitbaren Kombinationsfeld. Die Liste enthält einfache Textzeichenfolgen, und einen beliebigen Wert vom Benutzer eingegebenen wird verwendet, wie Sie eingegeben wurden.
+Dieses Beispiel zeigt ein einfaches bearbeitbaren Kombinationsfeld. Die Liste enthält einfache Zeichenfolgen, und einen beliebigen Wert, der vom Benutzer eingegebenen wird verwendet, wie Sie eingegeben wurden.
 
-Eine Auswahl "zuletzt verwendete Namen" ermöglicht Benutzern die Eingabe von benutzerdefinierter Zeichenfolgen. Die "RecentlyUsedNames" Liste enthält einige Werte, denen der Benutzer auswählen kann, aber der Benutzer kann auch einen neuen, benutzerdefinierten Wert hinzufügen. Die Eigenschaft "CurrentName" stellt den derzeit eingegebenen Namen.
+Eine Auswahl "zuletzt verwendete Namen" kann Benutzer benutzerdefinierte Zeichenfolgen eingeben. Die Liste 'RecentlyUsedNames' enthält einige Werte, denen der Benutzer auswählen kann, aber der Benutzer kann auch einen neuen, benutzerdefinierten Wert hinzufügen. Die Eigenschaft "CurrentName" darstellt, der derzeit eingegebene Name.
 
 ```xaml
 <ComboBox IsEditable="true"
@@ -214,21 +212,21 @@ Eine Auswahl "zuletzt verwendete Namen" ermöglicht Benutzern die Eingabe von be
 
 ### <a name="text-submitted"></a>Text übermittelt
 
-Sie können das Ereignis [TextSubmitted](/uwp/api/Windows.UI.Xaml.Controls.ComboBox) Arbeit mit den vom Benutzer eingegebenen Wert behandeln. Im Falle Handler, Sie in der Regel überprüft werden kann, dass der Wert, der vom Benutzer eingegebenen gültig ist, verwenden Sie den Wert in Ihrer app. Abhängig von der Situation können Sie auch den Wert auf das Kombinationsfeld Liste von Optionen für die zukünftige Verwendung hinzufügen.
+Sie können das Ereignis [TextSubmitted](/uwp/api/Windows.UI.Xaml.Controls.ComboBox) arbeiten mit dem vom Benutzer eingegebenen Wert behandeln. Im Ereignis-Handler Sie in der Regel überprüft werden kann, dass der vom Benutzer eingegebenen Wert gültig ist, verwenden Sie den Wert in Ihrer app. Abhängig von der Situation können Sie auch den Wert des Kombinationsfelds Liste der Optionen für die zukünftige Verwendung hinzufügen.
 
-Das TextSubmitted-Ereignis tritt auf, wenn diese Bedingungen erfüllt sind:
+Das TextSubmitted-Ereignis tritt auf, wenn diese Bedingung erfüllt sind:
 
-- Die IsEditable-Eigenschaft ist **"true"**
+- Die Eigenschaft IsEditable ist **"true"**
 - Der Benutzer gibt Text, die nicht mit einen vorhandenen Eintrag in der Liste des Kombinationsfelds übereinstimmt
-- Der Benutzer drückt EINGABETASTE oder verlagert den Fokus aus dem Kombinationsfeld.
+- Der Benutzer hat die EINGABETASTE gedrückt oder verlagert den Fokus aus dem Kombinationsfeld.
 
 Das TextSubmitted-Ereignis tritt nicht auf, wenn der Benutzer Text eingibt und dann nach oben oder unten durch die Liste navigiert.
 
 ### <a name="sample---validate-input-and-use-locally"></a>Beispiel - Eingabe überprüfen und lokal verwenden
 
-In diesem Beispiel eine Schriftart Größe Auswahl enthält eine Reihe von Werten, die Schriftart Größe Typhierarchie entsprechen, aber der Benutzer möglicherweise Schriftgrößen, die nicht in der Liste sind eingeben.
+In diesem Beispiel eine Schriftart Größe Chooser enthält eine Reihe von Werten, die Schriftart Größe Typhierarchie entsprechen, aber der Benutzer möglicherweise Schriftgrößen, die nicht in der Liste sind eingeben.
 
-Wenn der Benutzer einen Wert einfügt, die nicht in der Liste, die Schriftart Größe Updates, aber der Wert wird die Liste der Schriftgrößen nicht hinzugefügt.
+Wenn der Benutzer einen Wert einfügt, die nicht in der Liste, die Schriftart Größe Updates, aber der Wert wird die Liste der Schriftgrade nicht hinzugefügt.
 
 Ist der neu eingegebene Wert nicht gültig ist, wird Sie SelectedValue verwenden, um die Text-Eigenschaft auf das letzte Wiederherstellen bekannten guten Wert.
 

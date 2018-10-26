@@ -1,6 +1,6 @@
 ---
 author: normesta
-Description: Dies ist ein Übersichtsthema mit umfassenden Informationen für Entwickler zum Zusammenhang zwischen der Windows Information Protection (WIP) und Dateien, Puffern, der Zwischenablage, dem Netzwerk, Hintergrundaufgaben und dem Schutz von Daten bei Sperre.
+Description: This is a hub topic covering the full developer picture of how Windows Information Protection (WIP) relates to files, buffers, clipboard, networking, background tasks, and data protection under lock.
 MS-HAID: dev\_enterprise.edp\_hub
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -8,15 +8,15 @@ title: Windows Information Protection (WIP)
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, Uwp, Windows Information Protection, Unternehmensdaten, Schutz von Unternehmensdaten, edp, optimierte Apps
 ms.assetid: 08f0cfad-f15d-46f7-ae7c-824a8b1c44ea
-ms.openlocfilehash: f624d20d33f560f151b40bd1a405711d697fd4cb
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: dec05e663e6ca7390dc3974b8a3cde2971b50426
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233697"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555864"
 ---
 # <a name="windows-information-protection-wip"></a>Windows Information Protection (WIP)
 
@@ -63,7 +63,7 @@ Beispiel: Wenn die Richtlinie Benutzern erlaubt, Unternehmensdaten in einem priv
 
 Wenn Sie bereit sind, die App zu optimieren, sehen Sie sich eines dieser Handbücher an:
 
-**Für Universelle Windows-Plattform (UWP)-Apps, die Sie mithilfe von C erstellen#**
+**Für universelle Windows-Plattform (UWP) apps, die Sie erstellen, indem Sie mithilfe von c#**
 
 [Entwicklerhandbuch für Windows Information Protection (WIP)](wip-dev-guide.md)
 
@@ -98,4 +98,4 @@ Wenn Ihre App in einer MAM-Richtlinie enthalten sein soll, müssen Sie sie optim
 
 
 
- 
+ 

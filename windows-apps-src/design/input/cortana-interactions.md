@@ -9,15 +9,13 @@ keywords: Cortana, Cortana-Canvas, Cortana-Design, Benutzeroberfläche, Sprachbe
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e2194876954936880287b05f2bcd912caa01048b
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 67be6cacee3b0062118d51105eec9037dd29135b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1815935"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559497"
 ---
 # <a name="cortana-interactions-in-uwp-apps"></a>Cortana-Interaktionen in UWP-Apps
 
@@ -41,9 +39,9 @@ Informationen zum Erweitern von Cortana mit Funktionen aus einer UWP-App mit Spr
 
 **Beispiele**
 * [Cortana-Sprachbefehlbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=619899)
- 
+ 
 
- 
+ 
 
 
 

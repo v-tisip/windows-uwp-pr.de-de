@@ -6,16 +6,14 @@ ms.assetid: 5317D771-808D-4B97-8063-63492B23292F
 ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: a2baf9058f841c2d8de938df65d07f0584b736e9
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: f1869038ad98b8b4103b9706534a2d456f17e734
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "302450"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555167"
 ---
 # <a name="net-framework-mappings-of-windows-runtime-types"></a>.NET Framework-Zuordnungen von Windows-Runtime-Typen
 
@@ -59,7 +57,7 @@ Tabelle1: UWP-Typen, die .NET Framework-Typen mit einem anderen Namen und/oder N
 | PropertyChangedEventArgs (Windows.UI.Xaml.Data)               | PropertyChangedEventArgs (System.ComponentModel)                       | System.ObjectModel.dll                            |
 | TypeName (Windows.UI.Xaml.Interop)                            | Type (System)                                                          | System.Runtime.dll                                |
 
- 
+ 
 
 Tabelle2: UWP-Typen, die .NET Framework-Typen mit demselben Namen und Namespace zugeordnet sind.
 
@@ -83,7 +81,7 @@ Tabelle2: UWP-Typen, die .NET Framework-Typen mit demselben Namen und Namespace 
 | Windows.UI.Xaml.Media.Animation     | RepeatBehaviorTyp | System.Runtime.WindowsRuntime.UI.Xaml.dll |
 | Windows.UI.Xaml.Media.Media3D       | Matrix3D           | System.Runtime.WindowsRuntime.UI.Xaml.dll |
 
- 
+ 
 
 ## <a name="related-topics"></a>Verwandte Themen
 

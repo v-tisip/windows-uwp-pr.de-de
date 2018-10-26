@@ -6,18 +6,16 @@ template: detail.hbs
 ms.author: stwhi
 ms.date: 10/10/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, uwp, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
-ms.openlocfilehash: 06e80e0a928c179d9dcbf2d092135fafa337d403
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 4db96cea273348b4e1bc7059446f7528ba30a645
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691319"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557904"
 ---
-# <a name="load-images-and-assets-tailored-for-scale-theme-high-contrast-and-others"></a>Laden von Bildern und Ressourcen mit Anpassung an Skalierung, Design, hohen Kontrast usw.
+# <a name="load-images-and-assets-tailored-for-scale-theme-high-contrast-and-others"></a>Laden von Bilder und Ressourcen mit Anpassung an Skalierung, Design, hohen Kontrast und anders
 Ihre App kann Bild-Ressourcendateien mit Bildern (und andere Ressourcendateien) laden, die speziell auf den [Skalierungsfaktor für die Anzeige](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md), das Design, den hohen Kontrast und anderen Laufzeitkontexte angepasst wurden Auf diese Bilder kann im imperativen Code oder im XAML-Markup verwiesen werden, z.B. als **Quellen**-Eigenschaft eines **Bildes**. Sie können auch in Ihrer App-Paketmanifest-Quelldatei erscheinen (in der Datei `Package.appxmanifest`), z.B. als Wert für das App-Symbol auf der Registerkarte „Visuelle Anlagen” des Manifest-Designers von Visual Studio, oder auf Ihren Kacheln und Popups. Indem Sie Qualifizierer in den Dateinamen Ihrer Bilder verwenden und die Bilder optional mit Hilfe eines [**ResourceContext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live) dynamisch laden, können Sie die am besten passende Bilddatei laden, die den Runtime-Einstellungen des Benutzers für Bildschirmskalierung, Design, hohen Kontrast, Sprache und andere Kontexte am besten entspricht.
 
 Eine Bildressource ist in einer Bildressourcendatei enthalten. Sie können Bilder auch als Ressource betrachten, und die Datei, die es enthält als Ressourcendatei. Diese Arten von Ressourcendateien finden Sie im Ordner des Projekts \Assets. Hintergrundinformationen zur Verwendung von Qualifizierern in den Namen der Bild-Ressourcendateien finden Sie unter [Passen Sie Ihrer Ressourcen der Sprache, Skalierung und anderen Qualifizierern an](tailor-resources-lang-scale-contrast.md).
@@ -199,7 +197,7 @@ private void RefreshUIImages()
 * [MapChanged](/uwp/api/windows.foundation.collections.iobservablemap-2.mapchanged?branch=live)
 
 ## <a name="related-topics"></a>Verwandte Themen
-* [Passen Sie Ihrer Ressourcen der Sprache, Skalierung und anderen Qualifizierern an](tailor-resources-lang-scale-contrast.md)
+* [Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung und anderen](tailor-resources-lang-scale-contrast.md)
 * [Lokalisieren der Zeichenfolge im Paketmanifest der Benutzeroberfläche und der App](localize-strings-ui-manifest.md)
 * [Speichern und Abrufen von Einstellungen und anderen App-Daten](../design/app-settings/store-and-retrieve-app-data.md)
 * [Kachel- und Popupunterstützung für die Sprache, den Skalierungsfaktor für die Anzeige, das Design und den hohen Kontrastsupport for language, scale, and high contrast](tile-toast-language-scale-contrast.md)

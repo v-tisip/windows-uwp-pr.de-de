@@ -5,16 +5,14 @@ description: Hier erfahren Sie, wie Sie Ihre Anwendung für Xbox optimieren.
 ms.author: wdg-dev-content
 ms.date: 10/12/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 1794e4b7ddf97b0b5c41ff29295892e512453a07
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 604e6dc5381a36d4dbda70e3435e5cd6fa44cc04
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "927255"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5551894"
 ---
 # <a name="xbox-best-practices"></a>Bewährte Methoden für Xbox
 
@@ -26,7 +24,7 @@ Standardmäßig können UWP-Apps auf Xbox One ohne zusätzlichen Aufwand von Ihr
 
 ### <a name="do-turn-off-mouse-mode"></a>*Empfohlen:* Deaktivieren des Mausmodus
 
-Xbox Benutzer liebe ihren Controller. Deaktivieren Sie zur Optimierung der Controller-Eingabe den Mausmodus [Deaktivieren des Mausmodus](how-to-disable-mouse-mode.md) und ermöglichen Sie die direktionale Navigation (auch als [XY-Fokus](../design/devices/designing-for-tv.md#xy-focus-navigation-and-interaction) bezeichnet). Achten Sie auf den Fokus Traps und Benutzeroberfläche nicht zugegriffen werden.
+Xbox-Benutzer lieben ihren Controller. Deaktivieren Sie zur Optimierung der Controller-Eingabe den Mausmodus [Deaktivieren des Mausmodus](how-to-disable-mouse-mode.md) und ermöglichen Sie die direktionale Navigation (auch als [XY-Fokus](../design/devices/designing-for-tv.md#xy-focus-navigation-and-interaction) bezeichnet). Achten Sie auf fokustrapping und nicht zugängliche Benutzeroberfläche.
 
 ### <a name="do-draw-a-focus-rectangle-that-is-appropriate-for-a-10-foot-experience"></a>*Empfohlen:* Ziehen Sie ein Fokusrechteck, das für einen Abstand von 3m geeignet ist
 
@@ -47,7 +45,7 @@ Viele Fernseher schneiden das Bild an den Bildschirmrändern ab. Daher sollte de
 
 ### <a name="consider-use-tv-safe-colors"></a>*Beachten:* Verwenden von fernsehsicheren Farben
 
-Fernsehgeräte gehen mit hohen Farbintensitäten nicht so gut wie Computermonitore um. Vermeiden Sie in Ihren Apps Farben mit hoher Intensität, damit die Benutzer keine merkwürdigen Bandeffekte und keine verwaschenen Bilder sehen. Beachten Sie auch, dass Unterschiede zwischen Fernsehern dazu führen können, dass Farben, die auf *Ihrem* Fernseher gut aussehen, für Ihre Benutzer völlig anders aussehen können. Lesen Sie [Farben](../design/devices/designing-for-tv.md#colors) , um zu verstehen, wie Sie Ihre app hervorragende an alle Teilnehmer zu suchen.
+Fernsehgeräte gehen mit hohen Farbintensitäten nicht so gut wie Computermonitore um. Vermeiden Sie in Ihren Apps Farben mit hoher Intensität, damit die Benutzer keine merkwürdigen Bandeffekte und keine verwaschenen Bilder sehen. Beachten Sie auch, dass Unterschiede zwischen Fernsehern dazu führen können, dass Farben, die auf *Ihrem* Fernseher gut aussehen, für Ihre Benutzer völlig anders aussehen können. Lesen Sie [Farben](../design/devices/designing-for-tv.md#colors) , um zu verstehen, wie Ihre app für alle toll aussieht machen!
 
 ### <a name="remember-you-can-disable-scaling"></a>*Denken Sie daran:* Die Skalierung kann deaktiviert werden.
 
@@ -69,12 +67,12 @@ Die folgenden Gespräche auf [Channel 9](https://channel9.msdn.com/) sind eine h
 
 ## <a name="app-dev-on-xbox"></a>App-Entwicklung auf Xbox
 
-Das **App-Entwicklung auf Xbox** -Ereignis ist ein guter Ausgangspunkt für Entwickler zum Erstellen von apps auf Xbox.
+Das **App-Entwicklung auf Xbox** -Ereignis ist ein hervorragender Ausgangspunkt für Entwickler zum Erstellen von apps auf Xbox.
 
-* [Sehen Sie sich die aufgezeichneten Sitzungen](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#WatchNow)
-* [Lesen der Blogbeiträge](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#BlogSeries)
+* [Schauen Sie sich die aufgezeichneten Sitzungen](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#WatchNow)
+* [Lesen Sie die Blogbeiträge](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#BlogSeries)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [UWP auf Xbox One](index.md)
 - [Entwerfen für Xbox und Fernsehgeräte](../design/devices/designing-for-tv.md)

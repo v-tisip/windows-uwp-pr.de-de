@@ -6,19 +6,17 @@ title: Medienwiedergabe
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 888131d37a86793d67ce71376b158bd7de734331
-ms.sourcegitcommit: 23cda44f10059bcaef38ae73fd1d7c8b8330c95e
+ms.localizationpriority: medium
+ms.openlocfilehash: dbcd2a4f9cec02882c62c7d6493746931b7919a8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2017
-ms.locfileid: "837027"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557550"
 ---
 # <a name="media-playback"></a>Medienwiedergabe
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \].
 
 Dieser Abschnitt enthält Informationen zum Erstellen von universellen Windows-Apps, mit denen Videos oder Audiodateien wiedergegeben werden können. 
 
@@ -46,7 +44,7 @@ Die folgenden SDK-Beispiele veranschaulichen die Funktionen zur Medienwiedergabe
 * [Beispiel für adaptives Streaming](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/AdaptiveStreaming)
 * [Beispiel für Hintergrundaudio](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundMediaPlayback)
 * [Beispiel für Systemmedientransport](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls)                                                                                               
- 
+ 
 
 
 

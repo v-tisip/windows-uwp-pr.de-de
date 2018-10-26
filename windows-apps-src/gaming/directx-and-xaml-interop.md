@@ -6,16 +6,14 @@ ms.assetid: 0fb2819a-61ed-129d-6564-0b67debf5c6b
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, uwp, Spiele, directx, xaml-interoperabilität
 ms.localizationpriority: medium
-ms.openlocfilehash: 107501bb06af62035e78ef1ac65291b2bdec5c62
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 7f3a70be3dd31b0a5e4214621ab9fb4efa72cc54
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674987"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5555180"
 ---
 # <a name="directx-and-xaml-interop"></a>Interoperabilität von DirectX und XAML
 
@@ -25,9 +23,9 @@ In Spielen oder Apps für die universelle Windows-Plattform (UWP) können Sie ei
 
 Wenn Ihre App hauptsächlich 2-D-Rendering verwendet, empfiehlt sich unter Umständen die Verwendung der [Win2D](https://github.com/microsoft/win2d) Windows-Runtime-Bibliothek. Diese Bibliothek wird von Microsoft verwaltet und basiert auf den Direct2D-Kerntechnologien. Sie trägt erheblich zur Vereinfachung des Verwendungsmusters für die Implementierung von 2D-Grafik bei und enthält hilfreiche Abstraktionen für einige der in diesem Dokument beschriebenen Techniken. Ausführlichere Informationen finden Sie auf der Projektseite. Bei diesem Dokument handelt es sich um einen Leitfaden für App-Entwickler, die sich *gegen* die Verwendung von Win2D entschieden haben.
 
-> **Hinweis:** DirectX-APIs sind nicht als Windows-Runtime-Typen definiert. Daher werden in der Regel VisualC++-Komponentenerweiterungen (C++/CX) verwendet, um mit DirectX kompatible XAML-UWP-Komponenten zu entwickeln. Sie können UWP-DirectX-Apps auch mit C# und XAML erstellen, indem Sie die DirectX-Aufrufe in eine separate Windows-Runtime-Metadatendatei einschließen.
+> **Hinweis:** DirectX-APIs sind nicht als Windows-Runtime-Typen definiert, verwenden Sie normalerweise für VisualC++-komponentenerweiterungen (C++ / CX) XAML-UWP-Komponenten zu entwickeln, die mit DirectX kompatible. Sie können UWP-DirectX-Apps auch mit C# und XAML erstellen, indem Sie die DirectX-Aufrufe in eine separate Windows-Runtime-Metadatendatei einschließen.
 
- 
+ 
 
 ## <a name="xaml-and-directx"></a>XAML und DirectX
 
@@ -386,7 +384,7 @@ Falls Sie in **SwapChainPanel** Zeigereingaben mit geringer Verzögerung empfang
 > **Hinweis:**   Im Allgemeinen sollten Ihre DirectX-Apps Swapchains im Querformat und entsprechend der angezeigten Fenstergröße erstellen (in den meisten MicrosoftStore-Spielen für gewöhnlich die native Bildschirmauflösung). Dadurch wird sichergestellt, dass Ihre App die optimale Swapchain-Implementierung verwendet, wenn sie über keine sichtbaren XAML-Overlays verfügt. Wenn die App in das Hochformat gedreht wird, sollte sie [IDXGISwapChain1::SetRotation](https://msdn.microsoft.com/library/windows/desktop/hh446801) in der vorhandenen Swapchain aufrufen, eine Umwandlung des Inhalts anwenden, wenn erforderlich, und anschließend erneut [SetSwapChain](https://msdn.microsoft.com/library/windows/desktop/dn302144) auf der gleichen Swapchain aufrufen. Darüber hinaus sollte Ihre App jedes Mal erneut **SetSwapChain** auf der gleichen Swapchain aufrufen, wenn die Größe der Swapchain geändert wird, indem [IDXGISwapChain::ResizeBuffers](https://msdn.microsoft.com/library/windows/desktop/bb174577) aufgerufen wird.
 
 
- 
+ 
 
 Im Folgenden erfahren Sie mehr über die grundlegende Vorgehensweise zum Erstellen und Aktualisieren eines [SwapChainPanel](https://msdn.microsoft.com/library/windows/apps/dn252834)-Objekts im CodeBehind:
 
@@ -471,9 +469,9 @@ Im Folgenden erfahren Sie mehr über die grundlegende Vorgehensweise zum Erstell
 * [ISwapChainPanelNative](https://msdn.microsoft.com/library/windows/desktop/dn302143)
 * [Programmieranleitung für Direct3D11](https://msdn.microsoft.com/library/windows/desktop/ff476345)
 
- 
+ 
 
- 
+ 
 
 
 

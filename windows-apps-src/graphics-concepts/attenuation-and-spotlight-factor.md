@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 18746ef231f7d2b387866fba82e4f12a44476001
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 65b9f6700ddd11c41193820a5247a90c2382c98b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044619"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558179"
 ---
 # <a name="attenuation-and-spotlight-factor"></a>Dämpfungs- und Spotlight-Faktor
 
@@ -39,7 +37,7 @@ Dabei gilt:
 | att2<sub>i</sub> | 0,0           | Gleitkomma | Quadratischer Dämpfungsfaktor                    | 0 bis +unendlich |
 | d                | Nicht zutreffend           | Gleitkomma | Abstand zwischen Vertexposition und Position der Lichtquelle | Nicht zutreffend            |
 
- 
+ 
 
 -   Dämpfung = 1, wenn das Licht ein gerichtetes Licht ist.
 -   Dämpfung = 0, wenn der Abstand zwischen Licht und Vertex die Reichweite des Lichts überschreitet.
@@ -54,7 +52,7 @@ Dabei gilt:
 |-----------------|---------------|--------------------------------------------------|-------------------------------------------------------------|
 | L<sub>dir</sub> | Nicht zutreffend           | 3D-Vektor mit X-, Y- und Z-Gleitkommawerten | Richtungsvektor von der Vertexposition bis zur Position der Lichtquelle |
 
- 
+ 
 
 Wenn d größer als die Reichweite des Lichts ist, nimmt Direct3D keine weiteren abnehmenden Berechnungen vor und wendet keine Effekte von der Lichtquelle bis zum Vertex an.
 
@@ -76,7 +74,7 @@ Die folgende Gleichung legt den Spotlight-Faktor fest.
 | theta<sub>i</sub> | 0,0           | Gleitkomma | Kernschatten-Winkel für Spotlight i nach Bogenmaß    | \[0, pi)                 |
 | Farbverlauf           | 0,0           | Gleitkomma | Farbverlaufsfaktor                           | (-unendlich +unendlich)   |
 
- 
+ 
 
 Dabei gilt:
 
@@ -89,7 +87,7 @@ und
 | L<sub>dcs</sub> | Nicht zutreffend           | 3D-Vektor mit X-, Y- und Z-Gleitkommawerten | Der negativen Wert der Lichteinfallsrichtung im Kamerabereich         |
 | L<sub>dir</sub> | Nicht zutreffend           | 3D-Vektor mit X-, Y- und Z-Gleitkommawerten | Richtungsvektor von der Vertexposition bis zur Position der Lichtquelle |
 
- 
+ 
 
 Nach dem Berechnen der Lichtdämpfung berücksichtigt Direct3D auch eventuelle Spotlight-Effekte, den vom Licht von der Oberfläche reflektierten Winkel und den Reflexionsgrad des aktuellen Materials, um die diffusen und Glanzlichtkomponenten für den Vertex zu berechnen. Siehe auch Spotlight unter [Lichttypen](light-types.md).
 
@@ -98,9 +96,9 @@ Nach dem Berechnen der Lichtdämpfung berücksichtigt Direct3D auch eventuelle S
 
 [Beleuchtungsmathematik](mathematics-of-lighting.md)
 
- 
+ 
 
- 
+ 
 
 
 

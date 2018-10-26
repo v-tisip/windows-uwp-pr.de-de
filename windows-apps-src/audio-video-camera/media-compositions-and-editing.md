@@ -6,18 +6,17 @@ title: Medienkompositionen und -bearbeitung
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 66d14ae9335edcc5535d0dcc37cca2273874f61d
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: f32d63bf03a469d8282262c358153140587d9033
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "235315"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557351"
 ---
 # <a name="media-compositions-and-editing"></a>Medienkompositionen und -bearbeitung
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In diesem Artikel wird beschrieben, wie Sie mithilfe der APIs im [**Windows.Media.Editing**](https://msdn.microsoft.com/library/windows/apps/dn640565)-Namespace schnell Apps entwickeln, die Benutzern das Erstellen von Medienkompositionen aus Audio- und Videoquelldateien ermöglichen. Zu den Features des Frameworks zählen die Möglichkeit, programmgesteuert mehrere Videoclips zusammen anzufügen, Video- und Bildüberlagerungen sowie Hintergrundaudio hinzuzufügen und Audio- und Videoeffekte anzuwenden. Nach der Erstellung können Medienkompositionen zur Wiedergabe oder Freigabe in eine Medienflatfile gerendert werden; alternativ können sie auch auf einen Datenträger serialisiert und von diesem deserialisiert werden, sodass die Benutzer Kompositionen laden und ändern können, die sie zuvor erstellt haben. Alle diese Funktionen werden in einer benutzerfreundlichen Windows-Runtime-Schnittstelle bereitgestellt, die den Umfang und die Komplexität des zum Ausführen dieser Aufgaben erforderlichen Codes im Vergleich zur [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) -Low-Level-API erheblich verringert.
@@ -152,9 +151,9 @@ Medienkompositionen können aus einer Datei deserialisiert werden, sodass der Be
 
 -   Wenn eine Mediendatei in der Komposition an einem Speicherort abgelegt ist, auf den Ihre App nicht zugreifen kann, und nicht in der [**FutureAccessList**](https://msdn.microsoft.com/library/windows/apps/br207457)-Eigenschaft der [**StorageApplicationPermissions**](https://msdn.microsoft.com/library/windows/apps/br207456)-Klasse für Ihre App enthalten ist, tritt beim Laden der Komposition ein Fehler auf.
 
- 
+ 
 
- 
+ 
 
 
 

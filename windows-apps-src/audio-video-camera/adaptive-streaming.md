@@ -6,16 +6,14 @@ title: Adaptives Streaming
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: ae99a7a92ce933c8536dc30f9807d60a1441a809
-ms.sourcegitcommit: f9690c33bb85f84466560efac6f23cca2daf5a02
-ms.translationtype: HT
+ms.openlocfilehash: ef8e3ab4abd9ee9159dc7d5aa757f55e00817a51
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "1912968"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5551566"
 ---
 # <a name="adaptive-streaming"></a>Adaptives Streaming
 
@@ -120,10 +118,10 @@ Wenn Sie Ereignishandler für die gebundene adaptive Medienquelle registrieren m
 
 ## <a name="related-topics"></a>Verwandte Themen
 * [Medienwiedergabe](media-playback.md)
-* [Unterstützung von HLS-Tags](hls-tag-support.md) 
-* [DASH-Profilunterstützung](dash-profile-support.md) 
+* [Unterstützung von HLS-Tags](hls-tag-support.md) 
+* [DASH-Profilunterstützung](dash-profile-support.md) 
 * [Wiedergeben von Audio- und Videoinhalten mit „MediaPlayer“](play-audio-and-video-with-mediaplayer.md)
-* [Wiedergeben von Medien im Hintergrund](background-audio.md) 
+* [Wiedergeben von Medien im Hintergrund](background-audio.md) 
 
 
 

@@ -6,19 +6,18 @@ ms.assetid: a31b8c5a-5577-4142-fc60-53217302ec3a
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, OpenGL, direct3d
-ms.openlocfilehash: d2642abbfbfc6030aa00f68f30d4a45eb0e86ee1
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 2308c0b931b58209d1233205c355ac09680803dd
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233820"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5554765"
 ---
 # <a name="plan-your-port-from-opengl-es-20-to-direct3d"></a>Planen der Portierung von OpenGLES2.0 zu Direct3D
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -65,7 +64,7 @@ Direct3D11 bietet Unterstützung für die Hardwarefunktionsebenen 9\_1 (Direct3D
 | [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833)                  | DirectXMath stellt einen Satz von APIs und Makros für die Behandlung allgemeiner linearer Algebra sowie trigonometrischer Typen, Werte und Funktionen bereit. Diese Typen und Funktionen sind so konzipiert, dass sie gut mit Direct3D und den zugehörigen Shadervorgängen funktionieren.                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | [DirectXHLSL](https://msdn.microsoft.com/library/windows/desktop/bb509580) | Die von Direct3D-Shadern verwendete aktuelle HLSL-Syntax. Sie implementiert das Direct3D-Shadermodell5.0.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
- 
+ 
 
 ## <a name="review-the-windows-runtime-apis-and-template-library"></a>Überprüfen der Windows-Runtime-APIs und -Vorlagenbibliothek
 
@@ -108,7 +107,7 @@ Direct3D kann jedoch ein rechtshändiges Koordinatensystem unterstützen. Direct
 | [**XMMatrixPerspectiveOffCenterRH**](https://msdn.microsoft.com/library/windows/desktop/ee419983)   | Erstellt eine benutzerdefinierte Version einer rechtshändigen perspektivischen Projektionsmatrix.                                                    |
 | [**XMMatrixPerspectiveRH**](https://msdn.microsoft.com/library/windows/desktop/ee419984)                     | Erstellt eine rechtshändige perspektivische Projektionsmatrix.                                                                        |
 
- 
+ 
 
 ## <a name="opengl-es20-to-direct3d-11-porting-frequently-asked-questions"></a>Häufig gestellte Fragen zur Portierung von OpenGLES2.0 zu Direct3D11
 
@@ -116,9 +115,9 @@ Direct3D kann jedoch ein rechtshändiges Koordinatensystem unterstützen. Direct
 -   Frage: Kann ich generell nach bestimmten Zeichenfolgen oder Mustern in meinem OpenGL-Code suchen und sie durch die Direct3D-Entsprechungen ersetzen?
 -   Antwort: Nein. OpenGLES2.0 und Direct3D11 stammen aus verschiedenen Generationen der Grafikpipelinemodellierung. Obwohl es Ähnlichkeiten zwischen den Konzepten und APIs gibt (z.B. der Renderkontext und die Instanziierung von Shadern), sollten Sie sowohl diesen Leitfaden als auch die Direct3D11-Referenz lesen, um beim Neuerstellen Ihrer Pipeline die beste Wahl treffen zu können. Eine 1:1-Zuordnung ist nicht zu empfehlen. Wenn Sie aber von GLSL zu HLSL portieren, kann das Erstellen eines allgemeinen Satzes von Aliasen für Variablen, systeminterne Elemente und Funktionen von GLSL nicht nur die Portierung vereinfachen, sondern es bietet Ihnen auch die Möglichkeit, mit einem einzigen Satz von Shadercodedateien zu arbeiten.
 
- 
+ 
 
- 
+ 
 
 
 

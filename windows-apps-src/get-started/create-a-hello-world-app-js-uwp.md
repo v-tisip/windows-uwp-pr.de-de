@@ -2,24 +2,22 @@
 author: GrantMeStrength
 ms.assetid: 3a17e682-40be-41b4-8bd3-fbf0b15259d6
 title: Erstellen der App Hello, world (JS)
-description: In diesem Lernprogramm erfahren Sie, wie Sie JavaScript und HTML zum Erstellen einer einfachen &\#0034;Hello, World&\#0034;-App für die universelle Windows-Plattform (UWP) unter Windows10 verwenden.
+description: Dieses Lernprogramm zeigt Ihnen wie mit JavaScript und HTML zum Erstellen einer einfachen & \#0034; Hello, World & \#0034; -App für die universelle Windows Plattform (UWP) auf Windows 10 verwenden.
 ms.author: jken
 ms.date: 03/06/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: b541f2388fd4980af4b405a89ee6a04b700a3e84
-ms.sourcegitcommit: 1eabcf511c7c7803a19eb31f600c6ac4a0067786
-ms.translationtype: HT
+ms.openlocfilehash: 4d8fb1dc486c039007c3ea0d4ee36d72c0c511f9
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1692741"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5556854"
 ---
 # <a name="create-a-hello-world-app-js"></a>Erstellen der App Hello, world (JS)
 
-In diesem Lernprogramm erfahren Sie, wie Sie JavaScript und HTML zum Erstellen einer einfachen „Hello, World“-App für die universelle Windows-Plattform (UWP) unter Windows 10 verwenden. Mit nur einem Projekt in Microsoft Visual Studio können Sie eine App erstellen, die auf allen Geräten mit Windows10 ausgeführt werden kann.
+Dieses Lernprogramm zeigt Ihnen wie mit JavaScript und HTML zum Erstellen einer einfachen "Hello, World"-App für die universelle Windows Plattform (UWP) auf Windows 10 verwenden. Mit einem einzigen Projekt in Microsoft Visual Studio können Sie eine app erstellen, die auf jedem Windows 10-Gerät ausgeführt wird.
 
 > [!NOTE]
 > In diesem Lernprogramm wird Visual Studio Community 2017 verwendet. Wenn Sie eine andere Version von Visual Studio verwenden, kann das Programm für Sie etwas anders aussehen.
@@ -27,7 +25,7 @@ In diesem Lernprogramm erfahren Sie, wie Sie JavaScript und HTML zum Erstellen e
 
 Hier erfahren Sie Folgendes:
 
--   Erstellen Sie ein neues **Visual Studio 2017**-Projekt für **Windows 10** und die **UWP**.
+-   Erstellen Sie ein neues **Visual Studio 2017** -Projekt, das auf **Windows 10** und die **UWP**abzielt.
 -   Fügen Sie HTML und JavaScript-Inhalt hinzu
 -   Führen Sie das Projekt auf dem lokalen Desktop in Visual Studio aus
 
@@ -159,7 +157,7 @@ Jetzt können Sie die App ausführen, indem Sie F5 drücken. Die App wird gelade
 ## <a name="summary"></a>Zusammenfassung
 
 
-Herzlichen Glückwunsch, Sie haben eine JavaScript-App für Windows10 und die UWP erstellt! Dies ist ein sehr einfaches Beispiel, aber nun können Sie Ihre bevorzugten JavaScript-Bibliotheken und -Frameworks zum Erstellen Ihrer eigenen App hinzufügen. Und da es sich um eine UWP-App handelt, können Sie sie im Store veröffentlichen. Beispiele zum Hinzufügen von Drittanbieter-Frameworks finden Sie in diesen Projekten:
+Herzlichen Glückwunsch, Sie haben eine JavaScript-app für Windows 10 und die UWP erstellt! Dies ist ein sehr einfaches Beispiel, aber nun können Sie Ihre bevorzugten JavaScript-Bibliotheken und -Frameworks zum Erstellen Ihrer eigenen App hinzufügen. Und da es sich um eine UWP-App handelt, können Sie sie im Store veröffentlichen. Beispiele zum Hinzufügen von Drittanbieter-Frameworks finden Sie in diesen Projekten:
 
 * [Ein einfaches 2D-UWP-Spiel für den Microsoft Store, geschrieben in JavaScript und CreateJS](get-started-tutorial-game-js2d.md)
 * [Ein 3D-UWP-Spiel für den Microsoft Store, geschrieben in JavaScript und ThreeJS](get-started-tutorial-game-js3d.md)

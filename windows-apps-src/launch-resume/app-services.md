@@ -1,23 +1,21 @@
 ---
 author: PatrickFarley
-title: Verwenden von app-Services und Erweiterungen
+title: Verwenden von App-Diensten und -Erweiterungen
 description: In diesem Abschnitt wird die Integration von App-Diensten in Ihre UWP-App beschrieben, um die Freigabe von Daten und Funktionen für alle Apps zu ermöglichen.
 ms.assetid: 30003e60-492b-4511-b426-24b97d70694a
 ms.author: pafarley
 ms.date: 10/04/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 940d847edc587bf7185fafc17a5cdd6dfcb3c1ad
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: a2fd10df36954b611745135b77872fa3597ac55d
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "477567"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5557238"
 ---
-# <a name="use-app-services-and-extensions"></a>Verwenden von app-Services und Erweiterungen
+# <a name="use-app-services-and-extensions"></a>Verwenden von App-Diensten und -Erweiterungen
 
 In diesem Abschnitt wird die Integration von App-Diensten in Ihre UWP-App beschrieben, um die Freigabe von Daten und Funktionen für alle Apps zu ermöglichen.
 

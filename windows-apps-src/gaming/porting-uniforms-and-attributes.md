@@ -6,19 +6,18 @@ ms.assetid: 9b215874-6549-80c5-cc70-c97b571c74fe
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, OpenGL, Direct3D, Puffer, uniform-Variablen, Vertexattribute
-ms.openlocfilehash: d25495b282dce38c3dcad0ec996c185e64165b13
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: bc0192eb4b89ef91bc895a96e46cd39524f24c44
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233822"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558235"
 ---
 # <a name="compare-opengl-es-20-buffers-uniforms-and-vertex-attributes-to-direct3d"></a>Vergleichen von OpenGLES2.0-Puffern, uniform-Variablen und Vertexattributen mit Direct3D
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 
 **Wichtige APIs**
@@ -41,7 +40,7 @@ Unten ist die grundlegende Zuordnung angegeben.
 | Framepufferobjekt (Frame Buffer Object, FBO) | Renderziel(e); siehe [**ID3D11RenderTargetView**](https://msdn.microsoft.com/library/windows/desktop/ff476582) mit [**ID3D11Texture2D**](https://msdn.microsoft.com/library/windows/desktop/ff476635)                                       |
 | Hintergrundpuffer               | Swapchain mit „Hintergrundpuffer“-Oberfläche; siehe [**IDXGISwapChain1**](https://msdn.microsoft.com/library/windows/desktop/hh404631) mit [**IDXGISurface1**](https://msdn.microsoft.com/library/windows/desktop/ff471343) als Anhang                       |
 
- 
+ 
 
 ## <a name="port-buffers"></a>Portieren von Puffern
 
@@ -298,9 +297,9 @@ struct VertexShaderInput
 };
 ```
 
- 
+ 
 
- 
+ 
 
 
 

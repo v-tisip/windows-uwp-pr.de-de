@@ -6,15 +6,14 @@ ms.assetid: 4073b835-c900-4ff2-9fc5-da52f9432a1f
 ms.author: mtoepke
 ms.date: 06/13/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, Spiele, DirectX
-ms.openlocfilehash: 2f98c038c745615d16227334d7e87426394d5c79
-ms.sourcegitcommit: a61e9fc06f74dc54c36abf7acb85eeb606e475b8
+ms.localizationpriority: medium
+ms.openlocfilehash: 1642251ac7019d8bdf0216487eb7085d616863cf
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2017
-ms.locfileid: "678225"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553052"
 ---
 # <a name="game-programming"></a>Programmierung von Spielen
 
@@ -29,11 +28,6 @@ Die Universelle Windows-Plattform (UWP) bietet neue Möglichkeiten zum Erstellen
 
 Weitere Informationen zum Entwickeln von UWP-Spielen mit DirectX finden Sie unter [DirectX-Programmierung ](directx-programming.md).
 
-> **Hinweis:**  
-Dieser Artikel ist für Windows10-Entwickler bestimmt, die Apps für die universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, hilft Ihnen die [archivierte Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132) weiter.
-
- 
-
 Damit Sie die Übersichten und Lernprogramme zur Spieleentwicklung optimal nutzen können, sollten Sie mit den folgenden Themen vertraut sein:
 
 -   Microsoft C++ mit Komponentenerweiterungen (C++/CX). Dies ist ein Update für MicrosoftC++, das die automatische Verweiszählung einführt. Außerdem handelt es sich hierbei um die Sprache für die Entwicklung eines UWP-Spiels mit DirectX11.1 oder einer höheren Version
@@ -41,9 +35,9 @@ Damit Sie die Übersichten und Lernprogramme zur Spieleentwicklung optimal nutze
 -   Grundlegende Konzepte der Windows-Programmierung
 -   Grundlegende Kenntnisse der APIs von Direct3D 9 oder 11
 
- 
+ 
 
- 
+ 
 
 
 

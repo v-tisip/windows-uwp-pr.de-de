@@ -6,22 +6,19 @@ description: Verbessern Sie die Leistung und Startzeit von ListView und GridView
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 5cff6e2785434eb4fdb922d8b89b55aca242655f
-ms.sourcegitcommit: 91511d2d1dc8ab74b566aaeab3ef2139e7ed4945
-ms.translationtype: HT
+ms.openlocfilehash: 25eeea58e1e03eedfca3aaafda1cee13cac1f3c4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2018
-ms.locfileid: "1816905"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553645"
 ---
 # <a name="listview-and-gridview-ui-optimization"></a>Optimieren der ListView- und GridView-Benutzeroberfläche
 
 
-**Hinweis:**  
-Weitere Informationen finden Sie im Abschnitt zur „//build/“Sitzung [Erhebliches Erhöhen der Leistung bei der Interaktion von Benutzern mit großen Mengen von Daten in GridView und ListView](https://channel9.msdn.com/events/build/2013/3-158).
+**Hinweis:**  Weitere Informationen finden Sie unter der //build/ Sitzung [Erhebliches Erhöhen der Leistung bei der Interaktion von Benutzern mit großen Mengen von Daten in GridView und ListView](https://channel9.msdn.com/events/build/2013/3-158).
 
 Verbessern Sie die Leistung und Startzeit von [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) und [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) durch UI-Virtualisierung, Elementreduzierung und die progressive Aktualisierung von Elementen. Weitere Informationen zu Datenvirtualisierungstechniken finden Sie unter [Virtualisierung von ListView- und GridView-Daten](listview-and-gridview-data-optimization.md).
 
@@ -325,5 +322,5 @@ Wenn ein Element (**ListViewItem**/**GridViewItem**) wiederverwendet wird, muss 
 
 Bei einer ungleichmäßigen Verteilung von Elementen, die unterschiedliche Elementvorlagen verwenden, müssen während des Schwenkens wahrscheinlich neue Elementvorlagen erstellt werden, was viele der Vorteile der Virtualisierung zunichtemacht. Zudem berücksichtigt ein Elementvorlagenselektor nur fünf mögliche Kandidaten beim Auswerten, ob ein bestimmter Container für das aktuelle Datenelement wiederverwendet werden kann. Daher sollten Sie sorgfältig überlegen, ob Ihre Daten für die Verwendung eines Elementvorlagenselektors geeignet sind, bevor Sie ihn in Ihrer App verwenden. Wenn Ihre Sammlung überwiegend homogen ist, gibt der Selektor in den meisten Fällen (möglicherweise immer) denselben Typ zurück. Seien Sie sich jedoch bewusst, welche Folgen diese seltenen Homogenitätsausnahmen für Sie haben, und überlegen Sie, ob die Verwendung von [**ChoosingItemContainer**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) (oder zwei Elementsteuerelementen) nicht vorzuziehen wäre.
 
- 
+ 
 

@@ -4,16 +4,14 @@ description: Häufig auftretende Probleme mit x86-Apps bei der Ausführung auf A
 ms.author: misatran
 ms.date: 05/09/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10 s, always connected, x86-emulation auf ARM, problembehandlung
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a6ec4429ee2d0e95cac8373a5aa00a79f87d51c
-ms.sourcegitcommit: 4b6c197e1567d86e19af3ab5da516c022f1b6dfb
-ms.translationtype: HT
+ms.openlocfilehash: 01ef13f6f27b45a4cc41244e4ebed0a54804fc8e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "1877112"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5553207"
 ---
 # <a name="troubleshooting-x86-desktop-apps"></a>Problembehandlung bei x86-Desktop-Apps
 >[!IMPORTANT]

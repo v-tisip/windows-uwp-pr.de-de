@@ -6,15 +6,15 @@ title: Verbinden der App mit Aktionen auf einer Visitenkarte
 ms.author: normesta
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, Kontakte, Visitenkarte, Anmerkung
 ms.assetid: 0edabd9c-ecfb-4525-bc38-53f219d744ff
-ms.openlocfilehash: e882566fcc81941669dd4844235bcbd899ea3079
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: eb1c01a4fe370f899da185dc39b7d3abe6a1904e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233740"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5558828"
 ---
 # <a name="connect-your-app-to-actions-on-a-contact-card"></a>Verbinden der App mit Aktionen auf einer Visitenkarte
 

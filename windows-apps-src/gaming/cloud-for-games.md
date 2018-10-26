@@ -6,16 +6,14 @@ ms.assetid: 1a7088e0-0d7b-11e6-8e05-0002a5d5c51b
 ms.author: joanlee
 ms.date: 03/27/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Cloud-Dienste
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a0ffc3779f604b68c699e30068e07f3461f568d
-ms.sourcegitcommit: cceaf2206ec53a3e9155f97f44e4795a7b6a1d78
-ms.translationtype: HT
+ms.openlocfilehash: 5d15d3e6b6beb773a8d606db7a5d8a17544270be
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2018
-ms.locfileid: "1700826"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5552182"
 ---
 #  <a name="using-cloud-services-for-uwp-games"></a>Nutzen von Clouddiensten für UWP-Spiele
 
@@ -203,7 +201,7 @@ In diesem Abschnitt lernen Sie Möglichkeiten zur Nutzung der Azure Cloudangebot
 ## <a name="learning-resources"></a>Lernressourcen
 
 * //Build 2016: [CodeLabs &mdash; Einsatz von Microsoft Azure App Service und Microsoft SQL Azure als Back-End zur Speicherung von Spielständen in Unity](https://github.com/Microsoft-Build-2016/CodeLabs-GameDev-6-Azure)
-* //Build 2017: [Bereitstellen von erstklassigen Spielumgebungen mit Microsoft Azure: Erkenntnisse aus Titel wie Halo, Hitman und Walking Dead (Video)](https://channel9.msdn.com/Events/Build/2017/P4062)
+* Build 2017: [Übermitteln von spielumgebungen mit Microsoft Azure: Erkenntnisse aus Titel wie Halo, Hitman und WalkingDead (Video)](https://channel9.msdn.com/Events/Build/2017/P4062)
 * Wiederverwendbare leistungsstarke Bausteine, Projekte, Dienste und bewährte Methoden, die allgemeine Gaming-Arbeitslasten mithilfe von Azure auf GitHub unterstützen: [Bausteine für Spiele in Azure](https://github.com/MicrosoftDX/nether)
 * [Gaming-Dienste auf Azure (Videos)](https://channel9.msdn.com/Series/Gaming-Services-on-Azure)
 
@@ -232,6 +230,6 @@ Wir bieten ständig Innovationen an und fügen neue Features hinzu. Weitere Info
 * [ID@Xbox](http://www.xbox.com/Developers/id)
 
 
- 
+ 
 
- 
+ 

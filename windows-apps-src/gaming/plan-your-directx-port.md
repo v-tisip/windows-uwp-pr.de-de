@@ -6,19 +6,18 @@ ms.assetid: 3c0c33ca-5d15-ae12-33f8-9b5d8da08155
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Portieren von Windows10, UWP, Directx
-ms.openlocfilehash: e255bceae44ace0722a2df0c53d60ec0f8fa35fe
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: dea6455b4e9aaef2a4239ef70d0919a4b8841bc5
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233643"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5559537"
 ---
 # <a name="plan-your-directx-port"></a>Planen der DirectX-Portierung
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Zusammenfassung**
 
@@ -38,9 +37,9 @@ Das Upgrade von Direct3D9 auf Direct3D11 ist mehr als nur ein Suchen-und-Ersetze
 
 Ersetzen Sie die Hilfsbibliotheken D3DX und DXUT durch Ihre eigenen Hilfsbibliotheken oder durch Communitytools. Weitere Informationen finden Sie im Abschnitt [Featurezuordnung](feature-mapping.md).
 
-> **Hinweis**   Sie können das [DirectX Tool Kit](http://go.microsoft.com/fwlink/p/?LinkID=248929) oder [DirectXTex](http://go.microsoft.com/fwlink/p/?LinkID=248926) verwenden, um einige Funktionen zu ersetzen, die bisher von D3DX und DXUT bereitgestellt wurden.
+> **Hinweis:**  können Sie mithilfe der [DirectX-Toolkit](http://go.microsoft.com/fwlink/p/?LinkID=248929) oder [DirectXTex](http://go.microsoft.com/fwlink/p/?LinkID=248926) um einige Funktionen zu ersetzen, die bisher von D3DX und DXUT bereitgestellt wurden.
 
- 
+ 
 
 In Assemblysprache geschriebene Shader sollten mit den Funktionen des Shadermodells 4 (Ebene 9_1 oder 9_3) auf HLSL aktualisiert werden. Für die Effektbibliothek geschriebene Shader müssen auf eine neuere Version der HLSL-Syntax aktualisiert werden. Weitere Informationen finden Sie im Abschnitt [Featurezuordnung](feature-mapping.md).
 
@@ -64,9 +63,9 @@ Zwei Konzepte werden Sie jedoch häufig anwenden:
 -   Verwaltete Verweise ([**^ Operator**](https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx)) und [**verwaltete Klassen**](https://msdn.microsoft.com/library/windows/apps/6w96b5h7.aspx) (Verweisklassen) sind wesentliche Bestandteile der Windows-Runtime. Die Verwendung von verwalteten Verweisklassen ist erforderlich, um Schnittstellen zu Windows-Runtime-Komponenten wie [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478) einzurichten. Weitere Informationen finden Sie in der exemplarischen Vorgehensweise.
 -   Verwenden Sie beim Arbeiten mit Direct3D 11-COM-Schnittstellen den [**Microsoft::WRL::ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx)-Vorlagetyp, um die Nutzung von COM-Zeigern zu vereinfachen.
 
- 
+ 
 
- 
+ 
 
 
 
