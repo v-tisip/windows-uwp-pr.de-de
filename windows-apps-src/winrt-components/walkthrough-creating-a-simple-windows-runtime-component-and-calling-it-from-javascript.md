@@ -6,33 +6,32 @@ ms.assetid: 1565D86C-BF89-4EF3-81FE-35367DB8D671
 ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: 381e1d264e27d2b68e644895d0b795128540a5d7
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 49b9fe0833151155b11b7d7b796e395bb6a2ca7f
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "235207"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564659"
 ---
 # <a name="walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript"></a>Exemplarische Vorgehensweise: Erstellen einer einfachen Komponente für Windows-Runtime und Aufrufen der Komponente über JavaScript
 
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie .NET Framework mit Visual Basic oder C# verwenden, um eigene Windows-Runtime-Typen zu erstellen, die in einer Komponente für Windows-Runtime verpackt sind, und wie Sie die Komponente in Ihrer universellen Windows-App aufrufen, die mit JavaScript für Windows erstellt wurde.
 
-Visual Studio erleichtert das Hinzufügen einer Komponente für Windows-Runtime, die mit C# oder Visual Basic geschrieben wurde, zu Ihrer App, und das Erstellen von Windows-Runtime-Typen, die Sie von JavaScript aus aufrufen können. Intern können Ihre Windows-Runtime-Typen jede .NET Framework-Funktion verwenden, die in einer universellen Windows-App zulässig ist. (Weitere Informationen finden Sie unter [Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) und [Übersicht über .NET für WindowsStore-Apps](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx).) Extern können die Member des Typs nur Windows-Runtime-Typen für ihre Parameter und Rückgabewerte verfügbar machen. Wenn Sie Ihre Projektmappe erstellen, erstellt Visual Studio das .NET Framework-Komponentenprojekt für Windows-Runtime und führt dann einen Buildschritt aus, der eine Windows-Metadatendatei (WINMD) erstellt. Hierbei handelt es sich um Ihre Komponente für Windows-Runtime, die Visual Studio in Ihre App einschließt.
+Visual Studio erleichtert das Hinzufügen einer Komponente für Windows-Runtime, die mit C# oder Visual Basic geschrieben wurde, zu Ihrer App, und das Erstellen von Windows-Runtime-Typen, die Sie von JavaScript aus aufrufen können. Intern können Ihre Windows-Runtime-Typen jede .NET Framework-Funktion verwenden, die in einer universellen Windows-App zulässig ist. (Weitere Informationen finden Sie unter [Erstellen von Windows-Runtime-Komponenten in c# und Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) und [.NET für UWP-apps-Übersicht](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx).) Extern können können die Member des Typs nur Windows-Runtime-Typen für ihre Parameter und Rückgabewerte verfügbar machen. Wenn Sie Ihre Projektmappe erstellen, erstellt Visual Studio das .NET Framework-Komponentenprojekt für Windows-Runtime und führt dann einen Buildschritt aus, der eine Windows-Metadatendatei (WINMD) erstellt. Hierbei handelt es sich um Ihre Komponente für Windows-Runtime, die Visual Studio in Ihre App einschließt.
 
-> **Hinweis**  .NET Framework ordnet automatisch einige häufig verwendete .NET Framework-Typen, z. B. primitive Datentypen und Collectiontypen, ihren Windows-Runtime-Entsprechungen zu. Diese .NET Framework-Typen können in der öffentlichen Schnittstelle einer Komponente für Windows-Runtime verwendet werden und werden Benutzern der Komponente als die entsprechenden Windows-Runtime-Typen angezeigt. Informationen finden Sie unter [Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
+> **Hinweis:**.NET Framework ordnet automatisch einige häufig verwendeten .NET Framework-Typen, z. B. primitive Datentypen und collectiontypen, ihren Windows-Runtime-Entsprechungen. Diese .NET Framework-Typen können in der öffentlichen Schnittstelle einer Komponente für Windows-Runtime verwendet werden und werden Benutzern der Komponente als die entsprechenden Windows-Runtime-Typen angezeigt. Informationen finden Sie unter [Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md).
 
 In dieser exemplarischen Vorgehensweise werden die folgenden Aufgaben veranschaulicht. Nachdem Sie den ersten Abschnitt abgeschlossen haben, in dem die Windows-App mit JavaScript einrichtet wird, können Sie die restlichen Abschnitte in beliebiger Reihenfolge abschließen.
 
 ## <a name="prerequisites"></a>Voraussetzungen:
 
 -   Windows 10
--   Microsoft Visual Studio 2015 oder Microsoft Visual Studio Community 2015
+-   Microsoft Visual Studio2015 oder Microsoft Visual Studio Community2015
 
 ## <a name="creating-a-simple-windows-runtime-class"></a>Erstellen eine einfache Windows-Runtime-Klasse
 
@@ -100,14 +99,14 @@ function basics2() {
 
 Beachten Sie, dass der erste Buchstaben der einzelnen Membernamen von Großbuchstaben in Kleinbuchstaben geändert wird. Diese Transformation ist Teil der Unterstützung, die JavaScript bereitstellt, um die natürliche Verwendung von Windows-Runtime zu ermöglichen. Für Namespaces und Klassennamen wird die Pascal-Schreibweise verwendet. Für Membernamen wird mit Ausnahme von Ereignisnamen, die nur aus Kleinbuchstaben bestehen, die Camel-Schreibweise verwendet. Informationen finden Sie unter [Verwenden der Windows-Runtime in JavaScript](https://msdn.microsoft.com/library/hh710230.aspx). Die Regeln für die Camel-Schreibweise können verwirrend sein. Normalerweise wird eine Reihe von anfänglichen Großbuchstaben als Kleinbuchstaben angezeigt, aber wenn ein Kleinbuchstabe drei Großbuchstaben folgt, werden nur die ersten beiden Buchstaben in Kleinbuchstaben angezeigt: Ein Element mit dem Namen „IDStringKind“ wird z. B. als „idStringKind“ angezeigt. In Visual Studio können Sie Ihr Komponentenprojekt für Windows-Runtime erstellen und dann IntelliSense in Ihrem JavaScript-Projekt verwenden, um die richtige Groß- und Kleinschreibung anzuzeigen.
 
-In ähnlicher Weise unterstützt .NET Framework die natürliche Verwendung der Windows-Runtime in verwaltetem Code. Dies wird in den folgenden Abschnitten dieses Artikels und in den Artikeln [Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) und [.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime](https://msdn.microsoft.com/library/hh694558.aspx) erläutert.
+In ähnlicher Weise unterstützt .NET Framework die natürliche Verwendung der Windows-Runtime in verwaltetem Code. Dies wird in den folgenden Abschnitten dieses Artikels und in den Artikeln [Erstellen von Windows-Runtime-Komponenten in c# und Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) und [.NET Framework-Unterstützung für UWP-apps und Windows-Runtime](https://msdn.microsoft.com/library/hh694558.aspx)erläutert.
 
 ## <a name="create-a-simple-user-interface"></a>Erstellen einer einfachen Benutzeroberfläche
 
 
 Öffnen Sie in Ihrem JavaScript-Projekt die Datei „default.HTML“, und aktualisieren Sie den Text wie im folgenden Code dargestellt. Dieser Code enthält den vollständigen Satz von Steuerelementen für die Beispiel-App und gibt die Funktionsnamen für die Klickereignisse an.
 
-> **Hinweis**  Wenn Sie die App zum ersten Mal ausführen, werden nur die Schaltflächen „Basics1“ und „Basics2“ unterstützt.
+> **Hinweis:** Wenn Sie die app zum ersten Mal ausführen, werden nur die Schaltflächen "basics1" und "Basics2" unterstützt.
 
 ```html
 <body>
@@ -184,9 +183,9 @@ Wählen Sie die Schaltfläche „Basics1“ aus, um dem Ausgabebereich den Rück
 
 Wählen Sie Schaltfläche „Basics2“ aus, um den Wert der SampleProperty-Eigenschaft zu erhöhen und den neuen Wert im Ausgabebereich anzuzeigen. Primitive Typen wie Zeichenfolgen und Zahlen können als Parameter- und Rückgabetypen verwendet werden und zwischen verwaltetem Code und JavaScript übergeben werden. Da Zahlen in JavaScript im Gleitkommaformat mit doppelter Genauigkeit gespeichert werden, werden sie in numerische .NET Framework-Typen konvertiert.
 
-> **Hinweis**  Standardmäßig können Sie Haltepunkte nur im JavaScript-Code festlegen. Informationen zum Debuggen des Visual Basic- oder C#-Codes finden Sie unter „Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic“.
+> **Hinweis:** standardmäßig können Sie Haltepunkte nur im JavaScript-Code festlegen. Informationen zum Debuggen des Visual Basic- oder C#-Codes finden Sie unter „Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic“.
 
- 
+ 
 
 Wechseln Sie von der App zu Visual Studio, und drücken Sie Umschalt+F5, um den Debugmodus zu beenden und die App zu schließen.
 
@@ -195,9 +194,9 @@ Wechseln Sie von der App zu Visual Studio, und drücken Sie Umschalt+F5, um den 
 
 Windows-Runtime kann aus JavaScript oder verwaltetem Code aufgerufen werden. Windows-Runtime-Objekte können zwischen den beiden übergeben werden, und Ergebnisse können auf beiden Seiten behandelt werden. Allerdings unterscheiden sich die Verwendungsmöglichkeiten der Windows-Runtime-Typen in den beiden Umgebungen in einigen Details, da JavaScript und .NET Framework Windows-Runtime unterschiedlich unterstützen. Das folgende Beispiel veranschaulicht diese Unterschiede mithilfe der [Windows.Foundation.Collections.PropertySet](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.propertyset.aspx)-Klasse. In diesem Beispiel erstellen Sie eine Instanz der PropertySet-Sammlung in verwaltetem Code und registrieren einen Ereignishandler zum Nachverfolgen der Änderungen in der Sammlung. Dann fügen Sie JavaScript-Code hinzu, der die Auflistung abruft, einen eigenen Ereignishandler registriert und die Auflistung verwendet. Zuletzt fügen Sie eine Methode hinzu, die Änderungen an der Sammlung von verwaltetem Code aus vornimmt und das Behandeln einer verwalteten Ausnahme durch JavaScript zeigt.
 
-> **Wichtig**  In diesem Beispiel wird das Ereignis im UI-Thread ausgelöst. Wenn Sie das Ereignis über einen Hintergrundthread auslösen, z. B. in einem asynchronen Aufruf, müssen Sie einige zusätzliche Arbeiten ausführen, damit JavaScript das Ereignis behandelt. Weitere Informationen finden Sie unter [Auslösen von Ereignissen in Komponenten für Windows-Runtime](raising-events-in-windows-runtime-components.md).
+> **Wichtige**In diesem Beispiel wird das Ereignis im UI-Thread ausgelöst. Wenn Sie das Ereignis über einen Hintergrundthread auslösen, z. B. in einem asynchronen Aufruf, müssen Sie einige zusätzliche Arbeiten ausführen, damit JavaScript das Ereignis behandelt. Weitere Informationen finden Sie unter [Auslösen von Ereignissen in Komponenten für Windows-Runtime](raising-events-in-windows-runtime-components.md).
 
- 
+ 
 
 Fügen Sie im SampleComponent-Projekt eine neue **public sealed**-Klasse (**Public NotInheritable**-Klasse in Visual Basic) mit dem Namen „PropertySetStats“ hinzu. Die Klasse umschließt eine PropertySet-Auflistung und behandelt das MapChanged-Ereignis. Der Ereignishandler verfolgt die Anzahl der aufgetretenen Änderungen jeder Art, und die DisplayStats-Methode erstellt einen Bericht, der in HTML formatiert ist. Beachten Sie die zusätzliche **using**-Anweisung (**Imports**-Anweisung in Visual Basic). Achten Sie darauf, diese Anweisung den vorhandenen **using**-Anweisungen hinzuzufügen, anstatt sie zu überschreiben.
 
@@ -271,7 +270,7 @@ Fügen Sie im SampleComponent-Projekt eine neue **public sealed**-Klasse (**Publ
 > End Class
 > ```
 
-Der Ereignishandler folgt dem vertrauten .NET Framework-Ereignismuster mit der Ausnahme, dass der Absender des Ereignisses (in diesem Fall das PropertySet-Objekt) in die Schnittstelle „IObservableMap&lt;string, object&gt;“ („IObservableMap(Of String, Object)“ in Visual Basic) umgewandelt wird, was eine Instanziierung der Windows-Runtime-Schnittstelle [IObservableMap&lt;K, V&gt;](https://msdn.microsoft.com/library/windows/apps/br226050.aspx) darstellt. (Sie können den Absender ggf. in den Typ umwandeln.) Darüber hinaus werden die Ereignisargumente als Schnittstelle und nicht als Objekt dargestellt.
+Der Ereignishandler folgt das vertraute .NET Framework-Ereignismuster mit der Ausnahme, dass der Absender des Ereignisses (in diesem Fall das PropertySet-Objekt) in der IObservableMap umgewandelt wird&lt;Zeichenfolge, Objekt&gt; Schnittstelle (IObservableMap (Of String, Object) in Visual Basic), wird eine Instanziierung der Windows-Runtime-Schnittstelle [IObservableMap&lt;K, V&gt;](https://msdn.microsoft.com/library/windows/apps/br226050.aspx). (Sie können den Absender zu deren Typ ggf. umwandeln.) Darüber hinaus werden die Ereignisargumente als Schnittstelle und nicht als Objekt dargestellt.
 
 Fügen Sie in der Datei „default.js“ die Runtime1-Funktion wie gezeigt hinzu: Dieser Code erstellt ein PropertySetStats-Objekt, ruft die PropertySet-Auflistung ab und fügt einen eigenen Ereignishandler, die OnMapChanged-Funktion, für die Behandlung des MapChanged-Ereignisses hinzu. Nach dem Ändern der Auflistung ruft „runtime1“ die DisplayStats-Methode auf, um eine Zusammenfassung der Änderungstypen anzuzeigen.
 
@@ -376,7 +375,7 @@ runtimeButton2.addEventListener("click", runtime2, false);
 
 Drücken Sie zum Ausführen der App die F5-TASTE. Wählen Sie **Runtime1** und dann **Runtime2** aus. Der JavaScript-Ereignishandler meldet die erste Änderung an die Sammlung. Die zweite Änderung verfügt jedoch über einen doppelten Schlüssel. Benutzer von .NET Framework-Wörterbüchern erwarten, dass die Add-Methode eine Ausnahme auslöst, was auch geschieht. JavaScript behandelt die .NET Framework-Ausnahme.
 
-> **Hinweis**  Sie können die Ausnahmemeldung nicht aus JavaScript-Code heraus anzeigen. Der Meldungstext wird durch eine Ablaufverfolgung ersetzt. Weitere Informationen finden Sie unter „Auslösen von Ausnahmen“ unter „Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic“.
+> **Hinweis:** die Ausnahmemeldung aus JavaScript-Code können nicht angezeigt werden. Der Meldungstext wird durch eine Ablaufverfolgung ersetzt. Weitere Informationen finden Sie unter „Auslösen von Ausnahmen“ unter „Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic“.
 
 Im Gegensatz dazu wird der Wert des Elements geändert, wenn JavaScript die Insert-Methode mit einem doppelten Schlüssel aufruft. Dieser Verhaltensunterschied entsteht aufgrund der unterschiedlichen Methoden, mit denen JavaScript und .NET Framework Windows-Runtime unterstützen, wie in [Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic](creating-windows-runtime-components-in-csharp-and-visual-basic.md) erläutert wird.
 
@@ -414,9 +413,9 @@ Zusätzlich zum Zurückgeben von Windows-Runtime-Typen, die Sie in der Komponent
 
 Beachten Sie, dass das Wörterbuch als Schnittstelle zurückgegeben werden muss, die von [Dictionary&lt;TKey, TValue&gt;](https://msdn.microsoft.com/library/xfhwa508.aspx) implementiert wird und die einer Windows-Runtime-Schnittstelle zugeordnet ist. In diesem Fall ist die Schnittstelle „IDictionary&lt;int, string&gt;“ („IDictionary(Of Integer, String)“ in Visual Basic). Wenn der Windows-Runtime-Typ „IMap&lt;int, string&gt;“ an verwalteten Code übergeben wird, wird er als „IDictionary&lt;int, string&gt; angezeigt. Der umgekehrte Fall gilt, wenn der verwaltete Typ an JavaScript übergeben wird.
 
-**Wichtig**  Wenn ein verwalteter Typ mehrere Schnittstellen implementiert, verwendet JavaScript die Schnittstelle, die zuerst in der Liste angezeigt wird. Wenn Sie beispielsweise „Dictionary&lt;int, string&gt;“ an JavaScript-Code zurückgeben, wird „IDictionary&lt;int, string&gt;“ angezeigt, unabhängig davon, welche Schnittstelle Sie als Rückgabetyp angeben. Das bedeutet, dass die erste Schnittstelle Member enthalten muss, die in den nächsten Schnittstellen erscheinen, damit diese Member für JavaScript sichtbar sind.
+**Wichtige**Wenn ein verwalteter Typ mehrere Schnittstellen implementiert, verwendet JavaScript die Schnittstelle, die zuerst in der Liste angezeigt wird. Wenn Sie beispielsweise Dictionary&lt;int, string&gt; an JavaScript-Code zurückgeben, wird IDictionary&lt;int, string&gt; angezeigt, unabhängig davon, welche Schnittstelle Sie als Rückgabetyp angeben. Das bedeutet, dass die erste Schnittstelle Member enthalten muss, die in den nächsten Schnittstellen erscheinen, damit diese Member für JavaScript sichtbar sind.
 
- 
+ 
 
 Fügen Sie zum Testen der neuen Methode und Verwenden des Wörterbuchs die Funktionen „returns1“ und „returns2“ zu „default.js“ hinzu:
 
@@ -473,7 +472,7 @@ JavaScript ist natürlich keine stark typisierte Sprache, sodass das Verwenden s
 
 Ein weiteres unerwartetes Verhalten: Wenn Sie eine nicht zugewiesene JavaScript-Variable als Zeichenfolgenargument übergeben, erhalten Sie die Zeichenfolge „undefined“. Kurz gesagt sollten Sie mit Bedacht vorgehen, wenn Sie .NET Framework-Sammlungstypen an Ihren JavaScript-Code übergeben.
 
-> **Hinweis**  Wenn große Textmengen verkettet werden müssen, können Sie dies effizienter erledigen, indem Sie den Code in eine .NET Framework-Methode verschieben und die StringBuilder-Klasse verwenden, wie in der showMap-Funktion gezeigt wird.
+> **Hinweis:** Wenn große Textmengen verkettet werden müssen, können Sie dies tun effizienter durch den Code in einer .NET Framework-Methode verschieben und die StringBuilder-Klasse, wie in der ShowMap-Funktion gezeigt.
 
 Obwohl Sie Ihre eigenen generischen Typen aus einer Komponente für Windows-Runtime nicht verfügbar machen können, können Sie generische .NET Framework-Collections für Windows-Runtime-Klassen zurückgeben, indem Sie Code wie den folgenden verwenden:
 
@@ -675,7 +674,7 @@ In diesem Abschnitt wird ein abbrechbarer asynchroner Vorgang veranschaulicht, d
     -   Das [WinJS.Promise](https://msdn.microsoft.com/library/windows/apps/br211867.aspx)-Objekt stellt Funktionen zum Verarbeiten der zurückgegebenen Ergebnisse, zum Reagieren auf einen Abbruch und zum Behandeln von Statusberichten bereit.
     -   Die AsyncInfo.Run-Methode erstellt eine Abbruchquelle und ein Objekt, das die IProgress&lt;T&gt;-Schnittstelle implementiert. Sie übergibt ein [CancellationToken](https://msdn.microsoft.com/library/system.threading.cancellationtoken.aspx)-Token aus der Abbruchquelle und die [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx)-Schnittstelle an den Delegaten.
 
-        > **Hinweis**  Wenn das Promise-Objekt keine Funktion für das Reagieren auf einen Abbruch bereitstellt, übergibt „AsyncInfo.Run“ dennoch ein Token, das abgebrochen werden kann, und der Abbruch ist weiterhin möglich. Wenn das Promise-Objekt keine Funktion zum Behandeln von Statusaktualisierungen bereitstellt, stellt „AsyncInfo.Run“ dennoch ein Objekt bereit, das „ IProgress&lt;T&gt;“ implementiert, aber seine Berichte werden ignoriert.
+        > **Hinweis:**, wenn das Promise-Objekt keine Funktion auf einen Abbruch reagieren auf angeben, "asyncinfo.Run" dennoch ein abbrechbarer Token übergibt und Abbruch weiterhin möglich. Wenn das Promise-Objekt keine Funktion zum Behandeln von Statusaktualisierungen bereitstellt, stellt „AsyncInfo.Run“ dennoch ein Objekt bereit, das „ IProgress&lt;T&gt;“ implementiert, aber seine Berichte werden ignoriert.
 
     -   Der Delegat verwendet die Methode [Task.Run&lt;TResult&gt;(Func&lt;TResult&gt;, CancellationToken](https://msdn.microsoft.com/library/hh160376.aspx)), um eine gestartete Aufgabe zu erstellen, die das Token und die Statusschnittstelle verwendet. Der Delegat für die gestartete Aufgabe wird durch eine Lambdafunktion bereitgestellt, die das gewünschte Ergebnis berechnet. Mehr dazu später.
     -   Die AsyncInfo.Run-Methode erstellt ein Objekt, das die Schnittstelle [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/br206594.aspx) implementiert, den Windows-Runtime-Abbruchmechanismus mit der Tokenquelle verbindet und die Statusberichtsfunktion des Promise-Objekts mit der IProgress&lt;T&gt;-Schnittstelle verbindet.
@@ -738,6 +737,6 @@ Drücken Sie zum Ausführen der App die F5-TASTE. Wählen Sie zum Starten des as
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Übersicht über .NET für WindowsStore-Apps](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
+* [.NET für UWP-apps (Übersicht)](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
 * [.NET für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
 * [Exemplarische Vorgehensweise: Erstellen einer einfachen Komponente für Windows-Runtime und Aufrufen der Komponente über JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)

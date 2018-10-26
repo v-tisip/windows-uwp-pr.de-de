@@ -5,16 +5,14 @@ description: In diesem Abschnitt überprüfen wir die erforderlichen Schritte, d
 ms.author: lahugh
 ms.date: 11/16/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, App-Installer, AppInstaller, querladen, zusammengehörig, optionale Pakete
 ms.localizationpriority: medium
-ms.openlocfilehash: d0368743e3afa6e9cdb5e5ac95672430416fc824
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 98a761bf04b56d13745f2505b8d0806fc4fdf3e1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1434785"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560985"
 ---
 # <a name="installing-uwp-apps-from-a-web-page"></a>Installieren von UWP-Apps von einer Webseite
 
@@ -31,8 +29,11 @@ Die direkte App-Installation ist nur im Windows 10 Fall Creators Update verfügb
 Bei diesem Mechanismus wird der App-Installer mit dem Betriebssystem für ein Protokollaktivierungsschema registriert. Wenn Benutzer auf einen Weblink klicken, sucht der Browser mithilfe des Betriebssystems nach Apps, die für diesen Weblink registriert sind. Wenn das Schema mit dem vom App-Installer angegebenen Aktivierungsprotokollschema übereinstimmt, wird der App-Installer aufgerufen. Es ist wichtig zu beachten, dass dieser Mechanismus vom Browser unabhängig ist. Dies ist z.B. für Websiteadministratoren besonders nützlich, die beim Einbinden auf eine Webseite keine Unterschiede bei Webbrowsern berücksichtigen müssen. 
 
 ### <a name="requirements-for-protocol-activation-scheme"></a>Anforderungen für das Aktivierungsprotokollschema
-   - Webserver, die Anforderungen des Byte-Bereichs (HTTP/1.1) unterstützen
-   - App-Pakete müssen auf Servern gehostet werden, die das HTTP/1.1-Protokoll unterstützen   
+
+1. Webserver benötigen Unterstützung für die Anforderungen des Byte-Bereichs (HTTP/1.1)
+    - Server, die HTTP/1.1-Protokoll unterstützen sollten Unterstützung für die Anforderungen des Byte-Bereichs verfügen. 
+2. Web-Server werden über die Windows 10-app-Paket-Inhaltstypen wissen müssen
+    - Hier wird beschrieben, wie die neuen Inhaltstypen als Teil des [Web-Konfigurationsdatei](web-install-IIS.md#step-7---configure-the-web-app-for-app-package-mime-types) deklarieren
 
 ### <a name="how-to-enable-this-on-a-webpage"></a>So aktiviere ich dies auf einer Webseite 
 App-Entwickler, die App-Pakete auf Ihren Websites hosten möchten, müssen folgenden Schritt durchführen:

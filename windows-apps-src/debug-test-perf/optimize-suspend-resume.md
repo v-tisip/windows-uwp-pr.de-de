@@ -6,19 +6,17 @@ description: Erstellen Sie Apps für die Universelle Windows-Plattform (UWP), di
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: f9e045c381fc6c51a769be31403114ad15cf06bd
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: 4cbaa56f9c25c0e4ea1f10c79b4f7d1100748532
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894690"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562022"
 ---
 # <a name="optimize-suspendresume"></a>Optimieren von Anhalten/Fortsetzen
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Erstellen Sie Apps für die Universelle Windows-Plattform (UWP), die die Verwendung des Prozesslebensdauer-Systems optimieren und nach dem Anhalten oder Beenden effizient fortgesetzt werden.
 
@@ -90,9 +88,9 @@ Bei den meisten Apps ist keine Behandlung des [**Resuming**](https://msdn.micros
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Richtlinien für das Anhalten und Fortsetzen von Apps](https://msdn.microsoft.com/library/windows/apps/Hh465088)
- 
+ 
 
- 
+ 
 
 
 

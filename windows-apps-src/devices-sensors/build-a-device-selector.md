@@ -6,16 +6,14 @@ description: Durch das Erstellen einer Geräteauswahl können Sie die Geräte be
 ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: c80f604e9b8dc31eec1fe684f073bceb2337d91f
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 036ea8b7d9797112dca9b6594e9bc1e33e923588
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "959165"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563146"
 ---
 # <a name="build-a-device-selector"></a>Erstellen einer Geräteauswahl
 
@@ -40,9 +38,9 @@ Bei Verwendung der [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/
 
 Die [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)-APIs enthalten eine Canonical AQS-Syntax, die jedoch nicht alle Operatoren unterstützt. Eine Liste der beim Erstellen der Filterzeichenfolge verfügbaren Eigenschaften finden Sie unter [Geräteinformationseigenschaften](device-information-properties.md).
 
-**Achtung**  Mithilfe des `{GUID} PID`-Formats definierte benutzerdefinierte Eigenschaften können beim Erstellen der AQS-Filterzeichenfolge nicht verwendet werden. Dies liegt daran, dass der Eigenschaftstyp vom bekannten Eigenschaftennamen abgeleitet wird.
+**Achtung**benutzerdefinierte Eigenschaften, die definiert werden mithilfe der `{GUID} PID` Format nicht verwendet werden, wenn der AQS-Filterzeichenfolge. Dies liegt daran, dass der Eigenschaftstyp vom bekannten Eigenschaftennamen abgeleitet wird.
 
- 
+ 
 
 Die folgende Tabelle enthält die AQS-Operatoren mit den von ihnen unterstützten Parametertypen.
 
@@ -64,9 +62,9 @@ Die folgende Tabelle enthält die AQS-Operatoren mit den von ihnen unterstützte
 | **COP\_APPLICATION\_SPECIFIC** | Nicht unterstützt                                                               |
 
 
-> **Tipp**  Sie können für **COP\_EQUAL** oder **COP\_NOTEQUAL** den Wert **NULL** angeben. Dies führt zu einer Eigenschaft ohne Wert oder ohne vorhandenen Wert. In AQS geben Sie **NULL** mithilfe leerer Klammern \[\] an.
+> **Tipp:** können Sie **NULL** für **cop\_notequal** oder **null**angeben. Dies führt zu einer Eigenschaft ohne Wert oder ohne vorhandenen Wert. In AQS geben Sie **NULL** mithilfe leerer Klammern \[\] an.
 
-> **Wichtig**  Bei Verwendung der Operatoren **COP\_VALUE\_CONTAINS** und **COP\_VALUE\_NOTCONTAINS** verhalten sie sich bei Zeichenfolgen und Zeichenfolgenarrays auf andere Weise. Im Falle einer Zeichenfolge führt das System eine Suche ohne Berücksichtigung der Groß-/Kleinschreibung durch, um festzustellen, ob das Gerät die angegebene Zeichenfolge als Teilzeichenfolge enthält. Im Falle eines Zeichenfolgenarrays werden Teilzeichenfolgen nicht gesucht. Mit dem Zeichenfolgenarray wird das Array durchsucht, um festzustellen, ob es die gesamte angegebene Zeichenfolge enthält. Es ist nicht möglich, ein Zeichenfolgenarray zu durchsuchen, um festzustellen, ob die Elemente im Array eine Teilzeichenfolge enthalten.
+> **Wichtige**bei der Verwendung der Operatoren **COP\_VALUE\_CONTAINS** und **COP\_VALUE\_NOTCONTAINS** Verhalten Sie sich bei Zeichenfolgen und Zeichenfolgenarrays. Im Falle einer Zeichenfolge führt das System eine Suche ohne Berücksichtigung der Groß-/Kleinschreibung durch, um festzustellen, ob das Gerät die angegebene Zeichenfolge als Teilzeichenfolge enthält. Im Falle eines Zeichenfolgenarrays werden Teilzeichenfolgen nicht gesucht. Mit dem Zeichenfolgenarray wird das Array durchsucht, um festzustellen, ob es die gesamte angegebene Zeichenfolge enthält. Es ist nicht möglich, ein Zeichenfolgenarray zu durchsuchen, um festzustellen, ob die Elemente im Array eine Teilzeichenfolge enthalten.
 
 Wenn keine einzelne AQS-Filterzeichenfolge erstellt werden kann, die den richtigen Ergebnisbereich herausfiltert, können Sie Ihre Ergebnisse nach Erhalt filtern. In diesem Fall wird jedoch empfohlen, die Ergebnisse der anfänglichen AQS-Filterzeichenfolge so weit wie möglich einzuschränken, wenn Sie sie für [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)-APIs bereitstellen. Dadurch wird die Leistung der Anwendung verbessert.
 
@@ -115,6 +113,6 @@ Wenn dieser Filter zusammen mit einer [**DeviceInformationKind**](https://msdn.m
 System.Devices.IpAddress:=[]
 ```
 
- 
+ 
 
- 
+ 

@@ -5,21 +5,17 @@ title: E-Mail senden
 ms.assetid: 74511E90-9438-430E-B2DE-24E196A111E5
 keywords: Kontakte, E-Mail, Senden
 ms.author: normesta
-ms.date: 02/08/2017
+ms.date: 10/11/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-ms.openlocfilehash: bfeec341b0b4e63b4fe37118c1f7daac67929018
-ms.sourcegitcommit: 378382419f1fda4e4df76ffa9c8cea753d271e6a
+ms.localizationpriority: medium
+ms.openlocfilehash: 0a28809210f71bf523e3cc5f9c8da1db9fbcc90c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2017
-ms.locfileid: "665390"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560932"
 ---
-# <a name="send-email"></a>E-Mail senden
-
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
-
+# <a name="send-email"></a>Senden von E-Mails
 
 Hier erfahren Sie, wie Sie das Dialogfeld zum Verfassen einer E-Mail starten, damit Benutzer eine E-Mail senden können. Sie können die Felder der E-Mail vor dem Anzeigen des Dialogfelds mit Daten füllen. Die Nachricht wird erst gesendet, wenn Benutzer auf die Schaltfläche „Senden“ tippen.
 
@@ -35,34 +31,25 @@ Erstellen Sie ein neues [**EmailMessage**](https://msdn.microsoft.com/library/wi
 
 ``` cs
 private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipient,
-    string messageBody,
-    StorageFile attachmentFile)
+    string subject, string messageBody)
 {
     var emailMessage = new Windows.ApplicationModel.Email.EmailMessage();
     emailMessage.Body = messageBody;
-
-    if (attachmentFile != null)
-    {
-        var stream = Windows.Storage.Streams.RandomAccessStreamReference.CreateFromFile(attachmentFile);
-
-        var attachment = new Windows.ApplicationModel.Email.EmailAttachment(
-            attachmentFile.Name,
-            stream);
-
-        emailMessage.Attachments.Add(attachment);
-    }
 
     var email = recipient.Emails.FirstOrDefault<Windows.ApplicationModel.Contacts.ContactEmail>();
     if (email != null)
     {
         var emailRecipient = new Windows.ApplicationModel.Email.EmailRecipient(email.Address);
         emailMessage.To.Add(emailRecipient);
+        emailMessage.Subject = subject;
     }
 
     await Windows.ApplicationModel.Email.EmailManager.ShowComposeNewEmailAsync(emailMessage);
-
 }
 ```
+
+>[!NOTE]
+> Anlagen, die Sie eine e-Mail mit der Klasse [EmailAttachment](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.emailattachment) hinzufügen werden nur in der Mail-app angezeigt. Wenn Benutzer alle anderen e-Mail-Programm als das standardmäßige e-Mail-Programm konfiguriert haben, wird das Fenster zum Verfassen einer ohne den Anhang angezeigt. Dies ist ein bekanntes Problem.
 
 ## <a name="summary-and-next-steps"></a>Zusammenfassung und nächste Schritte
 
@@ -72,6 +59,6 @@ In diesem Thema haben Sie erfahren, wie Sie das Dialogfeld zum Verfassen einer E
 
 * [Auswählen von Kontakten](selecting-contacts.md)
 * [Fortsetzen von Windows Phone-Apps nach dem Aufrufen einer Dateiauswahl](https://msdn.microsoft.com/library/windows/apps/xaml/Dn614994)
- 
+ 
 
- 
+ 

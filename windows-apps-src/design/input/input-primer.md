@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f59675c3feaab47ee79eaf160c5592876b7564a2
-ms.sourcegitcommit: 3500825bc2e5698394a8b1d2efece7f071f296c1
-ms.translationtype: HT
+ms.openlocfilehash: 9babc1f96b83123cef4bf103f4d13696697cc897
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "1862099"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562012"
 ---
 # <a name="interaction-primer"></a>Einführung in die Interaktion
 
@@ -68,7 +66,7 @@ Der Formfaktor von Surface Dial entspricht einer Drehaktion (oder -geste). Surfa
 
 ## <a name="cortana"></a>Cortana
 
-In Windows10 können Sie mit der Erweiterung **Cortana** Sprachbefehle von einem Benutzer behandeln und die Anwendung zum Ausführen einer einzelnen Aktion starten.
+In Windows 10 können Sie **die Cortana** -Erweiterbarkeit Sprachbefehle von einem Benutzer behandeln und das Starten der Anwendungs, um eine einzelne Aktion auszuführen.
 
 ### <a name="device-support"></a>Unterstützung von Geräten
 
@@ -91,7 +89,7 @@ Ein Sprachbefehl ist eine einzelne, in einer Sprachbefehldefinitions-Datei (VCD-
 ### <a name="more-info"></a>Weitere Informationen
 
 [Cortana-Entwurfsrichtlinien](https://msdn.microsoft.com/library/windows/apps/dn974233)
- 
+ 
 
 ## <a name="speech"></a>Spracherkennung
 
@@ -140,13 +138,13 @@ Das Diktieren wird in der Regel verwendet, wenn eine App die Bedeutung oder die 
 ### <a name="more-info"></a>Weitere Informationen
 
 [Richtlinien für den Sprachentwurf](https://msdn.microsoft.com/library/windows/apps/dn596121)
- 
+ 
 
 ## <a name="pen"></a>Stift
 
 Ein (Eingabe-)Stift kann ähnlich wie eine Maus als pixelgenaues Zeigegerät verwendet werden, und er eignet sich optimal für die Freihandeingabe.
 
-**Hinweis**  Es gibt zwei Arten von Stiften: aktive und passive.
+**Hinweis:** es gibt zwei Arten von Stiften: aktive und passive.
   -   Passive Stifte enthalten keine Elektronik, und sie emulieren effektiv die Toucheingabe über einen Finger. Sie benötigen eine Basisgerätanzeige, welche die Eingabe basierend auf dem Berührungsdruck erkennt. Da Benutzer beim Schreiben auf der Eingabeoberfläche häufig die Hand ablegen, können Eingabedaten wegen des nicht erfolgreichen Ablehnens der Handfläche verzerrt werden.
   -   Aktive Stifte enthalten Elektronik und können mit komplexen Gerätedisplays zusammenwirken und viel umfassendere Eingabedaten (u.a. Daten bei Daraufzeigen oder Näherung) für das System und die App liefern. Die Handflächenablehnung ist sehr viel robuster.
 
@@ -173,7 +171,7 @@ Sie müssen stiftspezifische Benutzeroberflächenbefehle (oder Angebote) zur Unt
 ### <a name="more-info"></a>Weitere Informationen
 
 [Zeichenstift-Designrichtlinien](https://msdn.microsoft.com/library/windows/apps/dn456352)
- 
+ 
 
 ## <a name="touch"></a>Toucheingabe
 
@@ -208,7 +206,7 @@ Im Allgemeinen weist die Toucheingabe folgende Merkmale auf:
 ### <a name="more-info"></a>Weitere Informationen
 
 [Richtlinien für die Toucheingabe](https://msdn.microsoft.com/library/windows/apps/hh465370)
- 
+ 
 
 ## <a name="touchpad"></a>Touchpad
 
@@ -232,13 +230,13 @@ Sie müssen mausspezifische Benutzeroberflächenbefehle (oder Angebote) zur Unte
 ### <a name="more-info"></a>Weitere Informationen
 
 [Touchpad-Designrichtlinien](https://msdn.microsoft.com/library/windows/apps/dn456353)
- 
+ 
 
 ## <a name="keyboard"></a>Tastatur
 
 Eine Tastatur ist das Haupteingabegerät für Text und häufig unentbehrlich für Personen mit bestimmten körperlichen Beeinträchtigungen oder für Benutzer, die die Tastatur als schnellere und effizientere Interaktionsmethode betrachten.
 
-Mit [Continuum für Smartphones](http://go.microsoft.com/fwlink/p/?LinkID=699431), einer neuen Funktion für kompatible Windows 10-Mobilgeräte können Benutzer ihre Smartphones mit einer Maus und einer Tastatur verbinden und damit Ihr Gerät wie einen Laptop nutzen.
+Mit [Continuum für Smartphones](http://go.microsoft.com/fwlink/p/?LinkID=699431), einer neuen Funktion für kompatible Windows 10 mobile Geräte, können Benutzer ihre Smartphones mit einer Maus und Tastatur, damit ihr Gerät wie einen Laptop verbinden.
 
 ### <a name="device-support"></a>Unterstützung von Geräten
 
@@ -260,7 +258,7 @@ Bei der Bildschirmtastatur handelt es sich um eine visuelle Softwaretastatur, di
 
 Bei der Bildschirmtastatur handelt es sich um eine visuelle Softwaretastatur für die Texteingabe per Touchscreen. Die Touchtastatur ist kein Ersatz für die Bildschirmtastatur. Sie wird nur für die Texteingabe (ohne Emulierung der Hardwaretastatur) verwendet und nur angezeigt, wenn der Fokus auf einem Textfeld oder einem anderen bearbeitbaren Textsteuerelement liegt. Die Bildschirmtastatur unterstützt keine App- oder Systembefehle.
 
-**Hinweis**  Die Bildschirmtastatur hat Vorrang vor der Touchtastatur. Ist die Bildschirmtastatur vorhanden, wird die Touchtastatur nicht angezeigt.
+**Hinweis:** die Bildschirmtastatur hat Priorität gegenüber der Touch-Tastatur, die nicht angezeigt, wenn die Bildschirmtastatur vorhanden ist.
 
 Im Allgemeinen weist eine Tastatur folgende Merkmale auf:
 
@@ -272,7 +270,7 @@ Im Allgemeinen weist eine Tastatur folgende Merkmale auf:
 ### <a name="more-info"></a>Weitere Informationen
 
 [Tastaturentwurfsrichtlinien](https://msdn.microsoft.com/library/windows/apps/hh972345)
- 
+ 
 
 ## <a name="mouse"></a>Maus
 
@@ -299,7 +297,7 @@ Sie müssen mausspezifische Benutzeroberflächenbefehle (oder Angebote) zur Unte
 ### <a name="more-info"></a>Weitere Informationen
 
 [Richtlinien für die Mausinteraktion](https://msdn.microsoft.com/library/windows/apps/dn456351)
- 
+ 
 
 ## <a name="gesture"></a>Geste
 
@@ -370,6 +368,6 @@ Personen kommunizieren untereinander mit einer Mischung aus Sprache und Gesten, 
 
 
 
- 
+ 
 
- 
+ 

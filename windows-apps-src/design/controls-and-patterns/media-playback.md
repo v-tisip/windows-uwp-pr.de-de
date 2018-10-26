@@ -9,16 +9,14 @@ template: detail.hbs
 ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d680ddfb1dd121d2b9763c1d8af646db6de4797
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
-ms.translationtype: HT
+ms.openlocfilehash: 113acbe1f4e9bb3814b2f9b61beb79488995d3e3
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
-ms.locfileid: "1494037"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563344"
 ---
 # <a name="media-player"></a>Media Player
 
@@ -101,9 +99,9 @@ Das [MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/windows
 ### <a name="set-the-media-source"></a>Festlegen der Medienquelle
 Um Dateien im Netzwerk oder in die App eingebettete Dateien wiederzugeben, legen Sie die [Source](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)-Eigenschaft auf eine [MediaSource](https://msdn.microsoft.com/library/windows/apps/windows.media.core.mediasource.aspx) mit dem Pfad der Datei fest.
 
-**Tipp**  Zum Öffnen von Dateien aus dem Internet müssen Sie die **Internet (Client)**-Funktion im App-Manifest (Package.appxmanifest) deklarieren. Weitere Informationen zum Deklarieren von Funktionen finden Sie unter [Deklarieren von App-Funktionen](https://msdn.microsoft.com/library/windows/apps/mt270968).
+**Tipp:** zum Öffnen von Dateien aus dem Internet müssen Sie die Funktion **Internet (Client)** in Ihrem app Manifest (Package.appxmanifest) deklarieren. Weitere Informationen zum Deklarieren von Funktionen finden Sie unter [Deklarieren von App-Funktionen](https://msdn.microsoft.com/library/windows/apps/mt270968).
 
- 
+ 
 
 Dieser Code versucht, die [Source](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)-Eigenschaft des im XAML-Code definierten [MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) auf den Pfad einer Datei festzulegen, der in ein [TextBox](https://msdn.microsoft.com/library/windows/apps/br209683)-Element eingegeben wurde.
 

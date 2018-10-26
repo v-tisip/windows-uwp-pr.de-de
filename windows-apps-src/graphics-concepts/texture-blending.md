@@ -8,20 +8,18 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f1014ed205c5cf0eda2c9b71c8406a98394b1463
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: d4121bd402b048ee6102ed3be30b94a66e274273
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1652899"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562198"
 ---
 # <a name="texture-blending"></a>Texturmischung
 
 
-Direct3D kann bis zu acht Texturen auf Grundtypen in einer einzigen Übergabe auf Grundtypen mischen. Die Verwendung von mehreren gemischten Texturen kann die Framerate einer Direct3D-Anwendung erheblich erhöhen. Eine Anwendung verwendet mehrere Texturmischungen zur Anwendung von Texturen, Schatten, glänzender Beleuchtung, diffuser Beleuchtung und anderer Spezialeffekte in einem einzigen Durchgang.
+Direct3D kann bis zu acht Texturen auf Grundtypen in einem einzigen Durchlauf auf Grundtypen mischen. Die Verwendung von mehreren gemischten Texturen kann die Framerate einer Direct3D-Anwendung erheblich erhöhen. Eine Anwendung verwendet mehrere Texturmischungen zur Anwendung von Texturen, Schatten, glänzender Beleuchtung, diffuser Beleuchtung und anderer Spezialeffekte in einem einzigen Durchgang.
 
 Um die Texturmischung verwenden zu können, muss Ihre Anwendung zuerst prüfen, ob dies von der Hardware des Benutzers unterstützt wird.
 
@@ -34,9 +32,9 @@ Direct3D unterstützt die mehrfache Texturmischung in einem Durchgang durch die 
 
 Wie das obige Diagramm zeigt, mischen Texturphasen zwei Argumente unter Verwendung eines angegebenen Operators. Häufig ausgeführte Vorgänge sind u.a. die einfache Modulation oder Hinzufügung der Farb- oder Alphakomponenten der Argumente, insgesamt werden jedoch mehr als zwei Dutzend Vorgänge unterstützt. Die Argumente für eine Phase können eine zugeordnete Textur, der iterierte Farb- oder Alphawert (iteriert im Rahmen der Gouraud-Schattierung), ein beliebiger Farb- oder Alphawert oder das Ergebnis der vorherigen Texturphase sein.
 
-**Hinweis** Direct3D unterscheidet die Farbmischung von der Alphamischung. Anwendungen stellen Mischvorgänge und Argumente für Farbe und Alpha einzeln ein, und die Ergebnisse dieser Einstellungen sind voneinander unabhängig.
+**Hinweis:**  Direct3D farbmischung von der alphamischung. Anwendungen stellen Mischvorgänge und Argumente für Farbe und Alpha einzeln ein, und die Ergebnisse dieser Einstellungen sind voneinander unabhängig.
 
- 
+ 
 
 Die Kombination der von mehreren Mischphasen verwendeten Argumente und Vorgänge definiert eine einfache, ablaufbasierte Mischungssprache. Die Ergebnisse werden von einer Phase an die nächste übergeben, von dieser Phase wieder an die nächste und so weiter. Dieses Konzept der Weitergabe der Ergebnisse von Phase zu Phase bis zur schließlichen Rasterisierung auf einem Vieleck wird oft als „Texturmischungskaskade“ bezeichnet. Das folgende Diagramm zeigt, wie einzelne Texturphasen die Texturmischungskaskade bilden.
 
@@ -74,16 +72,16 @@ Wenn Ihre Anwendung für unterschiedliche Situationen unterschiedlich viele Phas
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Verwandte Themen
 
 
 [Texturen](textures.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c70293960947070a0a6b94d7a63fd55f503c8e18
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 70380dd0bd07cfe0c81e8339f8606029663b47d4
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1045069"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562851"
 ---
 # <a name="bc7-format"></a>BC7-Format
 
@@ -65,7 +63,7 @@ Die folgende Tabelle enthält die Komponenten der einzelnen Blocktypen.
 | Farb- + Alphawert kombiniert    | erforderlich  | Nicht zutreffend           | Nicht zutreffend                | Optional       | erforderlich             | Optional | Erforderlich           |
 | Separater Farb- und Alphawert | erforderlich  | erforderlich      | Optional           | Nicht zutreffend            | erforderlich             | Nicht zutreffend      | erforderlich           |
 
- 
+ 
 
 BC7 definiert eine Farbpalette auf einer ungefähren Linie zwischen zwei Endpunkten. Der Moduswert bestimmt die Anzahl der interpolierten Endpunktpaare pro Block. BC7 speichert einen Farbpaletten-Index pro Texel.
 
@@ -356,9 +354,9 @@ In BC7 können Sie die Alpha-Komponente auf eine der folgenden Weisen codieren:
 
 [Texturblockkomprimierung](texture-block-compression.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: stwhi
 ms.date: 11/09/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 485d16cb9c40769c123719f8f55e81d804f220a3
-ms.sourcegitcommit: f9a4854b6aecfda472fb3f8b4a2d3b271b327800
-ms.translationtype: HT
+ms.openlocfilehash: 04a0288d0b28c12eb68cf56225747224e8df9777
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
-ms.locfileid: "1393989"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563456"
 ---
 # <a name="use-templates-and-patterns-to-format-dates-and-times"></a>Verwenden von Mustern zum Formatieren von Datums- und Uhrzeitwerten
 
@@ -29,7 +27,7 @@ Die Klasse [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformat
 
 Wenn Sie allerdings noch mehr Kontrolle über Reihenfolge und Format der Komponenten des anzuzeigenden [**DateTime**](/uwp/api/windows.foundation.datetime?branch=live) -Objekts haben möchten, können Sie ein Formatmuster an das *formatTemplate*-Argument des Konstruktors übergeben. Ein Formatmuster verwendet eine spezielle Syntax, mit der Sie einzelne Komponenten eines **DateTime**-Objekts (beispielsweise nur den Monatsnamen oder nur den Jahreswert) abrufen können, um sie in einem bestimmten benutzerdefinierten Format anzuzeigen. Darüber hinaus kann das Muster mittels Lokalisierung für andere Sprachen und Regionen angepasst werden.
 
-**Hinweis**  Dies ist nur eine Übersicht über Formatmuster. Eine ausführlichere Besprechung der Formatvorlagen und Formatmuster finden Sie in der Dokumentation zur [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live)-Klasse im Abschnitt „Anmerkungen“.
+**Hinweis:** Dies ist nur eine Übersicht über Formatmuster. Eine ausführlichere Besprechung der Formatvorlagen und Formatmuster finden Sie in der Dokumentation zur [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live)-Klasse im Abschnitt „Anmerkungen“.
 
 ## <a name="the-difference-between-format-templates-and-format-patterns"></a>Der Unterschied zwischen Formatvorlagen und Formatmustern
 
@@ -63,7 +61,7 @@ Im obigen Beispiel haben wir eine kulturunabhängige Formatzeichenfolge eingegeb
 var dateFormatter = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("{month.full} {day.integer}");
 ```
 
-Der obige Formatierer gibt kulturspezifische Werte für die einzelnen Komponenten innerhalb der {}-Klammern zurück. Aber die Reihenfolge der Komponenten in einem Formatmuster ist unveränderlich. Sie erhalten also stets genau das, was Sie anfordern, und das ist unter Umständen nicht immer für die jeweilige Kultur geeignet. Diese Formatierer gilt für Englisch (USA), aber nicht für Französisch (Frankreich) oder Japanisch.
+Der obige Formatierer gibt kulturspezifische Werte für die einzelnen Komponenten innerhalb der Klammern {}. Aber die Reihenfolge der Komponenten in einem Formatmuster ist unveränderlich. Sie erhalten also stets genau das, was Sie anfordern, und das ist unter Umständen nicht immer für die jeweilige Kultur geeignet. Diese Formatierer gilt für Englisch (USA), aber nicht für Französisch (Frankreich) oder Japanisch.
 
 ``` syntax
 En-US: January 1
@@ -117,7 +115,7 @@ var time = timeFormatter.Format(dateToFormat);
 string output = string.Format(resourceLoader.GetString("CustomDateTimeFormatString"), date, time);
 ```
 
-`CustomDateTimeFormatString` ist ein Ressourcenbezeichner, der auf eine lokalisierbare Ressource in einer Ressourcendatei (.resw) verweist. Für die Standardsprache Englisch (USA) würde dieser auf den Wert „{0} | {1}” festgelegt werden, zusammen mit einem Kommentar, der angibt, dass {0} das Datum und {1} die Zeit ist. Somit können Übersetzer die Formatelemente wie gewünscht anpassen. Sie können beispielsweise die Reihenfolge der Komponenten ändern, falls in bestimmten Sprachen oder Regionen die Uhrzeit vor dem Datum stehen soll. Oder Sie können „|“ durch ein anderes Trennzeichen ersetzen.
+`CustomDateTimeFormatString` ist ein Ressourcenbezeichner, der auf eine lokalisierbare Ressource in einer Ressourcendatei (.resw) verweist. Für die Standardsprache Englisch (USA), dieser würde festgelegt werden, auf einen Wert von "{0} | {1}"zusammen mit einem Kommentar gibt an, dass"{0}"ist das Datum und"{1}"ist die Zeit. Somit können Übersetzer die Formatelemente wie gewünscht anpassen. Sie können beispielsweise die Reihenfolge der Komponenten ändern, falls in bestimmten Sprachen oder Regionen die Uhrzeit vor dem Datum stehen soll. Oder Sie können „|“ durch ein anderes Trennzeichen ersetzen.
 
 Eine andere Möglichkeit zum Implementieren dieses Beispiels besteht darin, die beiden Formatierer nach ihren Formatmustern abzufragen, diese miteinander zu verketten und dann aus dem resultierenden Formatmuster einen dritten Formatierer zu erstellen.
 

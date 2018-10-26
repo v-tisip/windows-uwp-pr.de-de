@@ -4,31 +4,31 @@ description: Um die Netzwerkkommunikation fortzusetzen, während sie sich nicht 
 title: Netzwerkkommunikation im Hintergrund
 ms.assetid: 537F8E16-9972-435D-85A5-56D5764D3AC2
 ms.author: stwhi
-ms.date: 3/23/2018
+ms.date: 06/14/2018
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 442e2f37ab5c7c83f06ecb444e6ae79f9c2a74dd
-ms.sourcegitcommit: 6618517dc0a4e4100af06e6d27fac133d317e545
-ms.translationtype: HT
+ms.openlocfilehash: 34fad804bb36ad1b4ce92a56772c33318e10faa8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "1691179"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5561189"
 ---
 # <a name="network-communications-in-the-background"></a>Netzwerkkommunikation im Hintergrund
-Um die Netzwerkkommunikation fortzusetzen, während sie sich nicht im Vordergrund befindet, kann eine App Hintergrundaufgaben und entweder Socketbroker- oder Steuerkanaltrigger verwenden. Apps, die Sockets für dauerhafte Verbindungen verwenden, können den Besitz eines Sockets an einen System-Socketbroker delegieren, sobald sie in den Hintergrund wechseln. Der Broker aktiviert die App, wenn Datenverkehr auf dem Socket eintrifft, überträgt den Besitz zurück an die App, und die App verarbeitet den eingehenden Datenverkehr.
+Um die Netzwerkkommunikation fortzusetzen, während Sie sich nicht im Vordergrund befindet, kann Ihre app Hintergrundaufgaben und eine der folgenden zwei Optionen verwenden.
+- Socketbroker. Wenn Ihre app Sockets für dauerhafte Verbindungen verwendet, wenn sie den Vordergrund verlässt, kann er den Besitz eines Sockets an einen System-socketbroker delegieren. Der Broker dann: Ihre app aktiviert, wenn Datenverkehr, für den Socket eingeht; überträgt den Besitz zurück an Ihre app; und Ihre app verarbeitet dann den eingehenden Datenverkehr.
+- Steuerkanaltrigger. 
 
 ## <a name="performing-network-operations-in-background-tasks"></a>Netzwerkvorgänge in Hintergrundaufgaben
 - Verwenden Sie einen [SocketActivityTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.socketactivitytrigger), um die Hintergrundaufgabe zu aktivieren, wenn ein Paket empfangen wird und Sie eine kurzlebige Aufgabe ausführen müssen. Nach dem Ausführen der Aufgabe sollte die Hintergrundaufgabe beendet werden, um Energie zu sparen.
-Verwenden Sie einen [ControlChannelTrigger](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger), um die Hintergrundaufgabe zu aktivieren, wenn ein Paket empfangen wird und Sie eine langlebige Aufgabe ausführen müssen.
+- Verwenden Sie einen [ControlChannelTrigger](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger), um die Hintergrundaufgabe zu aktivieren, wenn ein Paket empfangen wird und Sie eine langlebige Aufgabe ausführen müssen.
 
-**Netzwerkbezogene Bedingungen und Flags**
+**Netzwerkbezogene Bedingungen und flags**
 
 - Fügen Sie die **InternetAvailable**-Bedingung zur Hintergrundaufgabe [BackgroundTaskBuilder.AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) hinzu, um die Hintergrundaufgabe zu verzögern, bis der Netzwerkstapel ausgeführt wird. Dies spart Energie, da die Hintergrundaufgabe nicht ausgeführt wird, bis das Netzwerk verfügbar ist. Diese Bedingung stellt keine Aktivierung in Echtzeit bereit.
 
-Unabhängig vom verwendeten Auslöser, legen Sie [IsNetworkRequested](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder) für die Hintergrundaufgabe fest, um sicherzustellen, dass das Netzwerk während der Ausführung der Hintergrundaufgabe unterbrechungsfreie ausgeführt wird. Dies weist die Infrastruktur für Hintergrundaufgaben an, die Netzwerkverbindung für die Ausführung der Aufgabe auch dann beizubehalten, wenn sich das Gerät im verbundenen Standbymodus befindet. Wenn die Hintergrundaufgabe **IsNetworkRequested** nicht verwendet, hat sie keinen Zugriff auf das Netzwerk, wenn sich dieses im verbundenen Standbymodus befindet (z.B. wenn der Bildschirm eines Smartphones ausgeschaltet ist).
+Unabhängig vom verwendeten Auslöser, legen Sie [IsNetworkRequested](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder) für die Hintergrundaufgabe fest, um sicherzustellen, dass das Netzwerk während der Ausführung der Hintergrundaufgabe unterbrechungsfreie ausgeführt wird. Dies weist die Infrastruktur für Hintergrundaufgaben an, die Netzwerkverbindung für die Ausführung der Aufgabe auch dann beizubehalten, wenn sich das Gerät im verbundenen Standbymodus befindet. Wenn Ihre Hintergrundaufgabe keine **IsNetworkRequested**verwendet werden, klicken Sie dann kann Ihre Hintergrundaufgabe nicht Zugriff auf das Netzwerk, wenn sich dieses im verbundenen Standbymodus befindet (z. B. wenn der Bildschirm eines Smartphones ausgeschaltet ist).
 
 ## <a name="socket-broker-and-the-socketactivitytrigger"></a>Socketbroker und SocketActivityTrigger
 Wenn Ihre App eine [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)-, [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)- oder [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)-Verbindung verwendet, sollten Sie mithilfe von [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) und Socketbroker Benachrichtigungen einrichten, um über eingehenden Datenverkehr für ihre App informiert zu werden, wenn diese im Hintergrund ausgeführt wird.
@@ -157,9 +157,9 @@ Ein vollständiges Beispiel zur Verwendung des [**SocketActivityTrigger**](https
 Wahrscheinlich wird Ihnen auffallen, dass im Beispiel beim Erstellen eines neuen Sockets oder beim Aufrufen eines vorhandenen Sockets **TransferOwnership** aufgerufen wird und dazu nicht der in diesem Thema beschriebene **OnSuspending**-Ereignishandler verwendet wird. Dies liegt daran, dass in diesem Beispiel schwerpunktmäßig der [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) veranschaulicht werden soll und der Socket während der Ausführung für keine weiteren Aktivitäten verwendet wird. In der Regel wird Ihre App komplexer sein, sodass Sie mit **OnSuspending** bestimmen sollten, wann **TransferOwnership** aufgerufen wird.
 
 ## <a name="control-channel-triggers"></a>Steuerkanaltrigger
-Stellen Sie zunächst sicher, dass Steuerkanaltrigger korrekt verwendet werden. Wenn Sie [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)-, [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)- oder [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)-Verbindungen verwenden, sollten Sie [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) verwenden. Sie können Steuerkanaltrigger für **StreamSocket** verwenden, wobei diese jedoch mehr Ressourcen belegen und möglicherweise nicht im verbundenen Standbymodus funktionieren.
+Stellen Sie zunächst sicher, dass Steuerkanaltrigger korrekt verwendet werden. Wenn Sie [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)oder [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882), [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906) Verbindungen verwenden, empfehlen wir, dass Sie [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009)verwenden. Sie können Steuerkanaltrigger für **StreamSocket** verwenden, wobei diese jedoch mehr Ressourcen belegen und möglicherweise nicht im verbundenen Standbymodus funktionieren.
 
-Wenn Sie WebSockets, [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) oder **Windows.Web.Http.HttpClient** verwenden, müssen Sie [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) verwenden.
+Wenn Sie WebSockets, [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639)oder [**Windows.Web.Http.HttpClient**](/uwp/api/windows.web.http.httpclient)verwenden, müssen Sie [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)verwenden.
 
 ## <a name="controlchanneltrigger-with-websockets"></a>ControlChannelTrigger mit WebSockets
 Bei Verwendung von [**MessageWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226842) oder [**StreamWebSocket**](https://msdn.microsoft.com/library/windows/apps/br226923) mit [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) sind einige wichtige Punkte zu berücksichtigen. Bei Verwendung von **MessageWebSocket** oder **StreamWebSocket** mit **ControlChannelTrigger** sollten Sie transportspezifische Verwendungsmuster und bewährte Methoden nutzen. Diese Aspekte beeinflussen, wie Anforderungen für den Paketempfang über **StreamWebSocket** verarbeitet werden. Anforderungen für den Paketempfang über **MessageWebSocket** sind davon nicht betroffen.
@@ -432,8 +432,8 @@ Weitere Informationen zur Verwendung von [**MessageWebSocket**](https://msdn.mic
 ## <a name="controlchanneltrigger-with-httpclient"></a>ControlChannelTrigger mit HttpClient
 Bei Verwendung von [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) mit [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) müssen einige besondere Punkte berücksichtigt werden. Bei Verwendung von [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) mit **ControlChannelTrigger** sollten Sie sich an einige transportspezifische Verwendungsmuster und bewährte Methoden halten. Diese Aspekte beeinflussen, wie Anforderungen für den Paketempfang in der [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637)-Klasse verarbeitet werden.
 
-**Hinweis:**  [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) in Verbindung mit SSL wird derzeit bei Verwendung des Netzwerktriggerfeatures und von [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) nicht unterstützt.
- 
+**Hinweis:** [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) mit SSL wird derzeit nicht unterstützt unter Verwendung des netzwerktriggerfeatures und [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032).
+ 
 Beachten Sie bei Verwendung von [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637) mit [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032) die folgenden Verwendungsmuster und bewährten Methoden:
 
 -   Die App muss möglicherweise verschiedene Eigenschaften und Header für das [HttpClient](http://go.microsoft.com/fwlink/p/?linkid=241637)- oder [HttpClientHandler](http://go.microsoft.com/fwlink/p/?linkid=241638)-Objekt im [System.Net.Http](http://go.microsoft.com/fwlink/p/?linkid=227894)-Namespace festlegen, bevor die Anforderung an den entsprechenden URI gesendet wird.

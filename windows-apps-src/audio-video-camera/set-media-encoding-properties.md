@@ -6,18 +6,17 @@ title: Festlegen von Format, Auflösung und Bildfrequenz für „MediaCapture“
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
-ms.openlocfilehash: cf46cefc6491178444a13917a3ce2b0ffb73c19a
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: ba07f897111e27dc895aa187172841cac4b44f73
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233680"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5561867"
 ---
 # <a name="set-format-resolution-and-frame-rate-for-mediacapture"></a>Festlegen von Format, Auflösung und Bildfrequenz für „MediaCapture“
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 
 In diesem Artikel erfahren Sie, wie Sie die [**IMediaEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701011)-Schnittstelle verwenden, um die Auflösung und Framerate des Kameravorschau-Datenstroms sowie von aufgenommenen Fotos und Videos festzulegen. In ihm wird auch gezeigt, wie Sie sicherstellen, dass das Seitenverhältnis des Vorschaudatenstroms mit dem Seitenverhältnis der aufgenommenen Medien übereinstimmt.
@@ -33,8 +32,7 @@ Der Code in diesem Artikel wurde aus dem [CameraResolution-Beispiel](http://go.m
 
 Durch das Erstellen einer einfachen Hilfsklasse zum Umschließen der Funktionalität der [**IMediaEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701011)-Schnittstelle ist es einfacher, eine Reihe von Codierungseigenschaften auszuwählen, die bestimmte Kriterien erfüllen. Aufgrund des folgenden Verhaltens des Codierungseigenschaftenfeatures ist diese Hilfsklasse besonders hilfreich:
 
-**Warnung**  
-Die [**VideoDeviceController.GetAvailableMediaStreamProperties**](https://msdn.microsoft.com/library/windows/apps/br211994)-Methode akzeptiert einen Member der [**MediaStreamType**](https://msdn.microsoft.com/library/windows/apps/br226640)-Enumeration, z. B. **VideoRecord** oder **Photo**, und gibt eine Liste von [**ImageEncodingProperties-Objekten**](https://msdn.microsoft.com/library/windows/apps/hh700993) oder [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217)-Objekten zurück, die die Datenstrom-Codierungseinstellungen, z. B. die Auflösung des aufgenommenen Fotos oder Videos, angeben. Die Ergebnisse des Aufrufs von **GetAvailableMediaStreamProperties** können **ImageEncodingProperties** oder **VideoEncodingProperties** enthalten, unabhängig vom angegebenen **MediaStreamType**-Wert. Aus diesem Grund sollten Sie vor dem Zugriff auf die Eigenschaftswerte immer den Typ jedes zurückgegebenen Werts überprüfen und ihn in den entsprechenden Typ umwandeln.
+**Warnung**  die [**VideoDeviceController.GetAvailableMediaStreamProperties**](https://msdn.microsoft.com/library/windows/apps/br211994) -Methode akzeptiert ein Mitglied der [**MediaStreamType**](https://msdn.microsoft.com/library/windows/apps/br226640) -Enumeration, z. B. **VideoRecord** oder **Fotos**, und gibt eine Liste der beiden [** ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) oder [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217) -Objekte, die den Datenstrom zu vermitteln encoding-Einstellungen, z. B. die Auflösung des aufgenommenen Fotos oder Videos. Die Ergebnisse des Aufrufs von **GetAvailableMediaStreamProperties** können **ImageEncodingProperties** oder **VideoEncodingProperties** enthalten, unabhängig vom angegebenen **MediaStreamType**-Wert. Aus diesem Grund sollten Sie vor dem Zugriff auf die Eigenschaftswerte immer den Typ jedes zurückgegebenen Werts überprüfen und ihn in den entsprechenden Typ umwandeln.
 
 Die nachfolgend definierte Hilfsklasse behandelt die Typüberprüfung und -umwandlung für [**ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) oder [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217), damit der App-Code nicht zwischen den beiden Typen unterscheiden muss. Darüber hinaus macht die Hilfsklasse Eigenschaften für das Seitenverhältnis der Eigenschaften, die Framerate (nur für Videocodierungseigenschaften) und einen Anzeigenamen verfügbar, der das Anzeigen der Codierungseigenschaften auf der App-UI erleichtert.
 
@@ -78,17 +76,16 @@ Eine typische Kamera-App stellt zwar UI-Elemente bereit, mit denen der Benutzer 
 
 -   Wählen Sie die Vorschauauflösung aus, die möglichst genau der Größe des [**CaptureElement**](https://msdn.microsoft.com/library/windows/apps/br209278)-Elements entspricht, damit nicht mehr Pixel als nötig die Pipeline für den Vorschaudatenstrom durchlaufen.
 
-**Wichtig**  
-Bei einigen Geräten kann für den Vorschau- und Aufnahmedatenstrom der Kamera ein unterschiedliches Seitenverhältnis festgelegt werden. Durch diese Abweichung verursachtes Zuschneiden von Frames kann dazu führen, dass in den aufgenommenen Medien Inhalt vorhanden ist, der in der Vorschau nicht sichtbar war, sodass eine negative Benutzererfahrung die Folge ist. Es wird dringend empfohlen, für den Vorschau- und Aufnahmedatenstrom das gleiche Seitenverhältnis innerhalb eines kleinen Toleranzfensters zu verwenden. Solange das Seitenverhältnis nahezu übereinstimmt, können für Aufnahme und Vorschau vollkommen unterschiedliche Auflösungen aktiviert sein.
+**Wichtige**  ist es möglich, auf einigen Geräten kann für ein anderes Seitenverhältnis für die Kameravorschau-Datenstroms und Aufnahmedatenstrom festgelegt. Durch diese Abweichung verursachtes Zuschneiden von Frames kann dazu führen, dass in den aufgenommenen Medien Inhalt vorhanden ist, der in der Vorschau nicht sichtbar war, sodass eine negative Benutzererfahrung die Folge ist. Es wird dringend empfohlen, für den Vorschau- und Aufnahmedatenstrom das gleiche Seitenverhältnis innerhalb eines kleinen Toleranzfensters zu verwenden. Solange das Seitenverhältnis nahezu übereinstimmt, können für Aufnahme und Vorschau vollkommen unterschiedliche Auflösungen aktiviert sein.
 
 
 Um sicherzustellen, dass das Seitenverhältnis des Foto- oder Videoaufnahme-Datenstroms mit dem Seitenverhältnis des Vorschaudatenstroms übereinstimmt, wird in diesem Beispiel [**VideoDeviceController.GetMediaStreamProperties**](https://msdn.microsoft.com/library/windows/apps/br211995) aufgerufen und der **VideoPreview**-Enumerationswert übergeben, um die aktuellen Datenstromeigenschaften des Vorschaudatenstroms anzufordern. Anschließend wird ein kleines Toleranzfenster für das Seitenverhältnis definiert, damit Seitenverhältnisse eingeschlossen werden können, die nicht genau mit dem Seitenverhältnis des Vorschaudatenstroms übereinstimmen, solange die Abweichung nicht groß ist. Dann werden mithilfe einer Linq-Erweiterungsmethode nur die **StreamPropertiesHelper**-Objekte ausgewählt, in denen das Seitenverhältnis im definierten Toleranzbereich des Vorschaudatenstroms liegt.
 
 [!code-cs[MatchPreviewAspectRatio](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetMatchPreviewAspectRatio)]
 
- 
+ 
 
- 
+ 
 
 
 

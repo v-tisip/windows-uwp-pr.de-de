@@ -8,16 +8,14 @@ template: detail.hbs
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 27db679e653873be4aac3ed9298d7d0e59e99d2b
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 31725c6cb9a966f02f8d1f8d62ca980e72c95326
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1654399"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5561038"
 ---
 # <a name="guidelines-for-panning"></a>Anleitungen für das Verschieben
 
@@ -36,9 +34,9 @@ Mit einer Verschiebung oder einem Bildlauf können Benutzer innerhalb einer einz
 
 -   Zeigen Sie Verschiebungsindikatoren und Bildlaufleisten an, um Hinweise zu Position und Größe bereitzustellen. Blenden Sie sie aus, wenn Sie eine benutzerdefinierte Navigationsfunktion bereitstellen.
 
-    **Hinweis**  Anders als standardmäßige Bildlaufleisten haben Verschiebungsindikatoren rein informativen Charakter. Sie werden nicht für Eingabegeräte verfügbar gemacht und können in keiner Weise geändert werden.
+    **Hinweis:** anders als standardmäßige Bildlaufleisten haben verschiebungsindikatoren rein informativen Charakter sind. Sie werden nicht für Eingabegeräte verfügbar gemacht und können in keiner Weise geändert werden.
 
-     
+     
 
 **Verschiebung entlang einer Achse (eindimensionaler Überlauf)**
 
@@ -80,7 +78,7 @@ Mit einer Verschiebung oder einem Bildlauf können Benutzer innerhalb einer einz
 
 ## <a name="additional-usage-guidance"></a>Weitere Hinweise zur Verwendung
 
-Das Verschieben per Toucheingabe mittels Streif- oder Ziehbewegung mit einem oder mehreren Fingern funktioniert wie der Bildlauf mit der Maus. Die Verschiebungsinteraktion gleicht eher dem Drehen des Mausrads oder Verschieben des Bildlauffelds als dem Klicken auf die Bildlaufleiste. Sofern keine Unterscheidung in einer API gemacht wird oder für eine gerätespezifische Windows-UI erforderlich ist, bezeichnen wir beide Interaktionen einfach als Verschiebung.
+Das Verschieben per Toucheingabe mittels Streif- oder Ziehbewegung mit einem oder mehreren Fingern funktioniert wie der Bildlauf mit der Maus. Die Verschiebungsinteraktion gleicht eher dem Drehen des Mausrads oder Verschieben des Bildlauffelds als dem Klicken auf die Bildlaufleiste. Sofern keine Unterscheidung in einer API gemacht oder für eine gerätespezifische Windows-UI erforderlich ist, bezeichnen wir beide Interaktionen einfach als Verschiebung.
 
 > <div id="main">
 > <strong>Windows10 Fall Creators Update – Abweichende Funktionsweise</strong>
@@ -120,9 +118,9 @@ Abhängig vom erkannten Eingabegerät sind zwei Anzeigemodi für die Verschiebun
 -   Verschiebungsanzeigen für Fingereingabe.
 -   Bildlaufleisten für andere Eingabegeräte wie Maus, Touchpad, Tastatur und Eingabestift.
 
-**Hinweis**  Verschiebungsanzeigen sind nur sichtbar, wenn der Berührungskontakt innerhalb des verschiebbaren Bereichs erfolgt. Ebenso ist die Bildlaufleiste nur sichtbar, wenn sich der Mauszeiger, Eingabe-/Zeichenstiftcursor oder Tastaturfokus im bildlauffähigen Bereich befindet.
+**Hinweis:** verschiebungsanzeigen sind nur sichtbar, wenn der berührungskontakt innerhalb des verschiebbaren Bereichs erfolgt. Ebenso ist die Bildlaufleiste nur sichtbar, wenn sich der Mauszeiger, Eingabe-/Zeichenstiftcursor oder Tastaturfokus im bildlauffähigen Bereich befindet.
 
- 
+ 
 
 **Verschiebungsindikatoren** Verschiebungsindikatoren sind mit dem Bildlauffeld auf einer Bildlaufleiste vergleichbar. Sie zeigen das Verhältnis zwischen dem angezeigten Inhalt und dem gesamten verschiebbaren Bereich und die relative Position des angezeigten Inhalts im verschiebbaren Bereich an.
 
@@ -149,7 +147,7 @@ Die folgenden Diagramme zeigen, wie der Inhalt automatisch zu einem logischen Or
 | ![Abbildung eines verschiebbaren Bereichs](images/ux-panning-snap1.png) | ![Abbildung eines verschiebbaren Bereichs, der nach links verschoben wird](images/ux-panning-snap2.png) | ![Abbildung eines verschiebbaren Bereichs, in dem die Verschiebung an einem logischen Andockpunkt beendet wurde](images/ux-panning-snap3.png) |
 | Streifen zum Verschieben.                                                  | Aufheben des Berührungskontakts.                                                                     | Der verschiebbare Bereich stoppt am Andockpunkt, nicht an der Stelle, an der der Berührungskontakt aufgehoben wurde.                                |
 
- 
+ 
 
 **Führungsschienen** Inhalt kann breiter und höher als die Abmessungen und die Auflösung eines Anzeigegeräts sein. Aus diesem Grund ist oft eine zweidimensionale Verschiebung (horizontal und vertikal) erforderlich. Führungsschienen verbessern in diesen Fällen die Benutzerfreundlichkeit, da sie die Verschiebung entlang der Bewegungsachse (vertikal oder horizontal) hervorheben.
 
@@ -195,9 +193,9 @@ Dieser Leitfaden ist auch für Apps wie Fotoalben oder Karten-Apps hilfreich, di
 * [Eingabe: Beispiel für Windows8-Bewegungen](http://go.microsoft.com/fwlink/p/?LinkId=264995)
 * [Eingabe: Beispiel für Manipulationen und Gesten (C++)](http://go.microsoft.com/fwlink/p/?linkid=231605)
 * [Beispiel für die DirectX-Fingereingabe](http://go.microsoft.com/fwlink/p/?LinkID=231627)
- 
+ 
 
- 
+ 
 
 
 

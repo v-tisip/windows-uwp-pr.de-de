@@ -5,20 +5,18 @@ description: Anstatt Ihre Benutzeroberfläche für die vielen Geräte im gesamte
 ms.author: mijacobs
 ms.date: 08/30/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c61b4076ed2529fddfcec53264c95c8290297a0
-ms.sourcegitcommit: 517c83baffd344d4c705bc644d7c6d2b1a4c7e1a
-ms.translationtype: HT
+ms.openlocfilehash: af172b67a3981b61f4f86078710d87f760f9be3b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "1843030"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563324"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>Bildschirmgrößen und Breakpoints
 
-UWP-Apps können auf jedem Gerät mit Windows 10 ausgeführt werden – z. B. Telefone, Tablets, Desktops, Fernseher und mehr. Anstatt Ihre Benutzeroberfläche für die vielen Geräte im gesamten Windows 10-Ökosystem zu optimieren, empfehlen wir, ein Design für einige Schlüsselbreiten (sogenannte Breakpoints) zu erstellen. 
+UWP-Apps können auf jedem Gerät mit Windows 10 ausgeführt werden – z. B. Telefone, Tablets, Desktops, Fernseher und mehr. Mit einer großen Anzahl der geräteziele und Bildschirmgrößen bei Windows 10-Ökosystem, anstatt die Optimierung der Benutzeroberfläche für jedes Gerät empfehlen wir, ein Design für einige schlüsselbreiten (sogenannte "Breakpoints"): 
 - Klein (kleiner als 640 Pixel)
 - Mittel (641 Pixel bis 1007 Pixel)
 - Groß (1008 Pixel und größer)
@@ -103,6 +101,6 @@ UWP-Apps skalieren Ihre Benutzeroberfläche automatisch, um sicherzustellen, das
 - Platzieren Sie den [Navigationsbereich](../controls-and-patterns/navigationview.md) im angedockten Modus so, dass er immer angezeigt wird.
 
 >[!TIP] 
-> Mit [**Continuum for Phones**](http://go.microsoft.com/fwlink/p/?LinkID=699431), können Anwender sich mit kompatiblen Windows 10-Mobilgeräten mit einem Bildschirm, einer Maus und einer Tastatur verbinden und damit ihr Gerät wie einen Laptop nutzen. Berücksichtigen Sie diese neue Funktion beim Entwerfen für bestimmte Breakpoints – ein Mobiltelefon bleibt nicht immer in einer Klasse mit geringer Größe.
+> Mit [**Continuum für Smartphones**](http://go.microsoft.com/fwlink/p/?LinkID=699431)können Benutzer kompatible Windows 10 mobile-Geräte mit Monitor, Maus und Tastatur auf ihren Smartphones wie Laptops arbeiten stellen verbinden. Berücksichtigen Sie diese neue Funktion beim Entwerfen für bestimmte Breakpoints – ein Mobiltelefon bleibt nicht immer in einer Klasse mit geringer Größe.
 
 

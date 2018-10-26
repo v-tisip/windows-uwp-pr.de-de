@@ -6,19 +6,18 @@ ms.assetid: 43137bfc-7876-70e0-515c-4722f68bd064
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, Spiele, Visual Studio, Tools, DirectX
-ms.openlocfilehash: 5f5c1ef45dd476565d302ef10f8d47ab2b819993
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: eec406fd317abbd0034ba573cc0e791f9e32ba98
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233672"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563680"
 ---
 # <a name="visual-studio-tools-for-game-programming"></a>Visual Studio-Tools für die Spieleprogrammierung
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 **Zusammenfassung**
 
@@ -48,9 +47,9 @@ Erstellen Sie [Buildanpassungsdateien](#build-customizations-for-3d-assets), um 
 
 Weitere Informationen finden Sie unter [Arbeiten mit Texturen und Bildern](https://msdn.microsoft.com/library/windows/apps/hh873119.aspx).
 
-> **Hinweis**: Der Grafik-Editor ist nicht als Ersatz für eine Bildbearbeitungs-App mit vollem Funktionsumfang gedacht, aber für viele einfache Anzeige- und Bearbeitungsfälle geeignet.
+> **Hinweis:** der Grafik-Editor ist kein Ersatz für eine bildbearbeitungs app gedacht, aber für viele einfache Anzeige- und bearbeitungsfälle geeignet ist.
 
- 
+ 
 
 ## <a name="model-editor"></a>Modell-Editor
 
@@ -67,9 +66,9 @@ Dies ist ein Screenshot eines Modells im Editor, auf das Beleuchtungsfunktionen 
 
 Weitere Informationen finden Sie unter [Arbeiten mit 3D-Modellen](https://msdn.microsoft.com/library/windows/apps/hh873114.aspx).
 
-> **Hinweis**: Der Modell-Editor ist nicht als Ersatz für eine Modellbearbeitungs-App mit vollem Funktionsumfang gedacht, aber für viele einfache Anzeige- und Bearbeitungsfälle geeignet.
+> **Hinweis:** der Modell-Editor ist kein Ersatz für eine modellbearbeitungs app gedacht, aber für viele einfache Anzeige- und bearbeitungsfälle geeignet ist.
 
- 
+ 
 
 ## <a name="shader-designer"></a>Shader-Designer
 
@@ -119,7 +118,7 @@ Weitere Informationen finden Sie unter [Arbeiten mit Shadern](https://msdn.micro
 
 Sie können dem Projekt Buildanpassungen hinzufügen, sodass Ressourcen von Visual Studio in nutzbare Formate konvertiert werden. Danach können Sie die Objekte in die App laden und verwenden, indem Sie DirectX-Ressourcen wie in jeder anderen DirectX-App auch erstellen und füllen.
 
-Zum Hinzufügen von Buildanpassungen klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt und wählen die Option **Buildanpassungen...**. Sie können dem Projekt die folgenden Arten von Buildanpassungen hinzufügen:
+Zum Hinzufügen von Buildanpassungen klicken Sie mit der rechten Maustaste auf das Projekt im **Projektmappen-Explorer** , und wählen Sie **Anpassungen erstellen**. Sie können die folgenden Arten von Buildanpassungen zu Ihrem Projekt hinzufügen.
 
 -   Von der Bildinhaltpipeline werden Bilddateien als Eingaben verwendet und DirectDraw Surface-Dateien (.dds) ausgegeben.
 -   Von der Gitterinhaltpipeline werden Gitterdateien (z.B. FBX) als Eingabe verwendet und CMO-Gitterdateien ausgegeben.
@@ -144,13 +143,12 @@ Visual Studio enthält grafikspezifische Debugtools. Verwenden Sie diese Tools z
 
 Weitere Informationen finden Sie unter [Debuggen von DirectX-Grafiken](https://msdn.microsoft.com/library/windows/apps/hh315751.aspx).
 
-> **Hinweis**: Dieser Artikel ist für Windows10-Entwickler gedacht, die Apps für die Universelle Windows-Plattform (UWP) schreiben. Wenn Sie für Windows8.x oder Windows Phone8.x entwickeln, finden Sie Informationen dazu in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

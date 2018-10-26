@@ -6,16 +6,14 @@ ms.assetid: FF3ECF47-D81F-46E3-BE01-C839E0398025
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 2939150e1ca15dfc910d92ea669e794026ef8685
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: a94782165027c2194f677dfdbb9f2dec11541080
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674677"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560244"
 ---
 # <a name="property-path-syntax"></a>Eigenschaftspfadsyntax
 
@@ -58,7 +56,7 @@ Ein Eigenschaftspfad für Datenbindungen kann Verweise auf indizierte Eigenschaf
 
 Nehmen wir zum Beispiel ein Geschäftsobjekt, bei dem es eine Liste von „Teams“ gibt (geordnete Liste), von denen jedes ein Wörterbuch von „Players“ aufweist, wobei als Schlüssel für jeden Spieler der Nachname verwendet wird. Ein Beispiel eines Eigenschaftspfads zu einem bestimmen Spieler im zweiten Team lautet: „Teams\[1\].Players\[Smith\]“. (Sie verwenden 1, um das zweite Element in „Teams“ anzugeben, da die Liste nullindiziert ist.)
 
-**Hinweis**  Die Unterstützung der Indizierung für C++-Datenquellen ist beschränkt. Informationen hierzu finden Sie unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
+**Hinweis:** Unterstützung der Indizierung für C++-Datenquellen ist beschränkt; sehen Sie [die Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 ### <a name="attached-properties"></a>Angefügte Eigenschaften
 
@@ -96,7 +94,7 @@ Mithilfe des folgenden Eigenschaftspfads können Sie beispielsweise angeben, das
 
 Wenn auch dies selten vorkommt, kann eine angefügte Eigenschaft animiert werden, sofern die angefügte Eigenschaft einen Eigenschaftswert aufweist, der mit einem Animationstyp übereinstimmt. Da der Bezeichnername einer angefügten Eigenschaft bereits einen Punkt enthält, muss ein Name für die angefügte Eigenschaft in runden Klammern hinzugefügt werden, damit der Punkt nicht als Objekteigenschaftsschritt interpretiert wird. Verwenden Sie beispielsweise für die Zeichenfolge, die zum Animieren der angefügten [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795)-Eigenschaft auf einem Objekt angegeben werden muss, den Eigenschaftspfad „(Grid.Row)“.
 
-**Hinweis**  In diesem Beispiel ist der Wert von [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) ein **Int32**-Eigenschaftstyp. Daher ist die Animation mit einer **Double**-Animation nicht möglich. Definieren Sie stattdessen eine [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320)-Klasse, die über [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132)-Komponenten verfügt, wobei [**ObjectKeyFrame.Value**](https://msdn.microsoft.com/library/windows/apps/br210344) auf eine ganze Zahl wie „0“ oder „1“ festgelegt wird.
+**Hinweis:** in diesem Beispiel ist der Wert der [**Grid.Row**](https://msdn.microsoft.com/library/windows/apps/hh759795) ein **Int32** Eigenschaftstyp. Daher ist die Animation mit einer **Double**-Animation nicht möglich. Definieren Sie stattdessen eine [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320)-Klasse, die über [**DiscreteObjectKeyFrame**](https://msdn.microsoft.com/library/windows/apps/br243132)-Komponenten verfügt, wobei [**ObjectKeyFrame.Value**](https://msdn.microsoft.com/library/windows/apps/br210344) auf eine ganze Zahl wie „0“ oder „1“ festgelegt wird.
 
 ## <a name="rules-for-the-properties-in-an-animation-targeting-property-path"></a>Regeln für die Eigenschaften in einem Animationsausrichtungs-Eigenschaftspfad
 

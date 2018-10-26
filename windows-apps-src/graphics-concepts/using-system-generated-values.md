@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a99cb28818cd8fc3fd9057b3df72a678c2d1aca
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 9f187495568892f5b489f6e109669811f4c45ab1
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1044889"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5561526"
 ---
 # <a name="span-iddirect3dconceptsusingsystem-generatedvaluesspanusing-system-generated-values"></a><span id="direct3dconcepts.using_system-generated_values"></span>Verwenden von systemgenerierten Werten
 
@@ -68,7 +66,7 @@ Die folgenden Tabellen zeigen die vom System generierten Werte für die Instanz 
 | **Scheitelpunkt-ID**   | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   |
 | **Instanz-ID** | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 0   |
 
- 
+ 
 
 Dreieckstreifen-Instanz U hat 3 Dreieck-Grundtypen, mit den folgenden vom System generierten Werten:
 
@@ -77,7 +75,7 @@ Dreieckstreifen-Instanz U hat 3 Dreieck-Grundtypen, mit den folgenden vom System
 | **Grundtyp-ID** | 0   | 1   | 2   |
 | **Instanz-ID**  | 0   | 0   | 0   |
 
- 
+ 
 
 Die folgenden Tabellen zeigen die vom System generierten Werte für die Instanz V.
 
@@ -86,7 +84,7 @@ Die folgenden Tabellen zeigen die vom System generierten Werte für die Instanz 
 | **Scheitelpunkt-ID**   | 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   |
 | **Instanz-ID** | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   |
 
- 
+ 
 
 Dreieckstreifen-Instanz V hat 3 Dreieck-Grundtypen, mit den folgenden vom System generierten Werten:
 
@@ -95,7 +93,7 @@ Dreieckstreifen-Instanz V hat 3 Dreieck-Grundtypen, mit den folgenden vom System
 | **Grundtyp-ID** | 0   | 1   | 2   |
 | **Instanz-ID**  | 1   | 1   | 1   |
 
- 
+ 
 
 Die [Eingabe-Assembler (IA)-Phase](input-assembler-stage--ia-.md) generiert die IDs (Scheitelpunkt, Grundtyp und Instanz); Beachten Sie, dass jeder Instanz eine eindeutige Instanz-ID zugeordnet ist Die Daten enden mit dem Streifenschnitt, der die einzelnen Instanzen des Dreieckstreifens voneinander trennt.
 
@@ -104,9 +102,9 @@ Die [Eingabe-Assembler (IA)-Phase](input-assembler-stage--ia-.md) generiert die 
 
 [Eingabe-Assemblerphase (IA)](input-assembler-stage--ia-.md)
 
- 
+ 
 
- 
+ 
 
 
 

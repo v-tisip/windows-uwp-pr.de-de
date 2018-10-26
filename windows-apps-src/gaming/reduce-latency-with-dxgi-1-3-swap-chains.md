@@ -6,19 +6,18 @@ ms.assetid: c99b97ed-a757-879f-3d55-7ed77133f6ce
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Latenz, DXGI, Swapchains, Directx
-ms.openlocfilehash: 9f2babdac40e3baf27bec9b2e214e9350d1f2539
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 51a1dd6d7f1c39d82201d3b9741276a54e4c06a8
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233647"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563772"
 ---
 # <a name="reduce-latency-with-dxgi-13-swap-chains"></a>Reduzieren der Latenz mit DXGI 1.3-Swapchains
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Verwenden Sie DXGI 1.3 zum Reduzieren der geltenden Framelatenz, indem Sie warten, bis die Swapchain den geeigneten Zeitpunkt zum Beginnen mit dem Rendern eines neuen Frames signalisiert. Spiele müssen in der Regel die geringstmögliche Latenz aufweisen, was den Zeitraum vom Eingang der Spielereingabe bis zur Reaktion des Spiels auf die Eingabe betrifft, indem die Anzeige aktualisiert wird. In diesem Thema wird ein Verfahren erläutert, das ab Version Direct3D11.2 verfügbar ist. Damit können Sie in Ihrem Spiel die geltende Framelatenz verringern.
 
@@ -38,9 +37,9 @@ Geben Sie das [**DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT**](ht
 swapChainDesc.Flags = DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT; // Enable GetFrameLatencyWaitableObject().
 ```
 
-> **Hinweis**   Dieses Flag kann nicht wie andere Flags mithilfe von [**ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577) hinzugefügt oder entfernt werden. Von DXGI wird ein Fehlercode zurückgegeben, wenn dieses Flag anders als bei der Erstellung der Swapchain festgelegt wird.
+> **Hinweis:**  Flags dieses Flag kann nicht hinzugefügt oder entfernt werden mithilfe von [**ResizeBuffers**](https://msdn.microsoft.com/library/windows/desktop/bb174577). Von DXGI wird ein Fehlercode zurückgegeben, wenn dieses Flag anders als bei der Erstellung der Swapchain festgelegt wird.
 
- 
+ 
 
 ```cpp
 // If the swap chain already exists, resize it.
@@ -159,9 +158,9 @@ Weitere Informationen zur Programmierung mit Multithreading unter Windows finden
 * [Synchronisierung](https://msdn.microsoft.com/library/windows/desktop/ms686353)
 * [Verwenden von Ereignisobjekten (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms686915)
 
- 
+ 
 
- 
+ 
 
 
 

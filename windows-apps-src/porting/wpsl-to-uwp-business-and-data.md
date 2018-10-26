@@ -1,23 +1,22 @@
 ---
-author: mcleblanc
+author: stevewhims
 description: Im Hintergrund Ihrer Benutzeroberfläche befinden sich Ihre Geschäfts- und Datenebenen.
-title: Portieren von Windows Phone Silverlight-Geschäfts- und -Datenebenen zu UWP
+title: Portieren von Unternehmen WindowsPhone Silverlight und Daten-Datenebenen zu UWP
 ms.assetid: 27c66759-2b35-41f5-9f7a-ceb97f4a0e3f
-ms.author: markl
+ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
-keywords: windows10, UWP
-ms.openlocfilehash: 860b42ca05c95768ca694d13971da278e2129142
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+keywords: Windows10, UWP
+ms.localizationpriority: medium
+ms.openlocfilehash: 301dcbe95d7509db07d5b7dd11a16460063bbffe
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "234901"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5561923"
 ---
-#  <a name="porting-windows-phone-silverlight-business-and-data-layers-to-uwp"></a>Portieren von Windows Phone Silverlight-Geschäfts- und -Datenebenen zu UWP
+#  <a name="porting-windowsphone-silverlight-business-and-data-layers-to-uwp"></a>Portieren von Unternehmen WindowsPhone Silverlight und Daten-Datenebenen zu UWP
 
-\[ Aktualisiert für UWP-Apps unter Windows10. Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132). \]
 
 Das vorherige Thema war [Portieren: E/A, Gerät und App-Modell](wpsl-to-uwp-input-and-sensors.md).
 
@@ -29,11 +28,11 @@ Einer der Hauptvorteile der universellen Windows-Plattform (UWP) besteht darin, 
 
 ## <a name="background-processing"></a>Hintergrundverarbeitung
 
-Eine WindowsPhone Silverlight-App kann ein verwaltetes **ScheduledTaskAgent**-Objekt verwenden, um eine Aufgabe auszuführen, während sich die App nicht im Vordergrund befindet. UWP-Apps verwenden auf ähnliche Weise die [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)-Klasse zum Erstellen und Registrieren von Hintergrundaufgaben. Sie definieren eine Klasse, die die Arbeit Ihrer Hintergrundaufgabe implementiert. Das System führt die Hintergrundaufgabe regelmäßig aus, indem die [**Run**](https://msdn.microsoft.com/library/windows/apps/br224811)-Methode der Klasse zum Ausführen der Arbeit aufgerufen wird. Denken Sie bei einer UWP-App daran, die Deklaration **Hintergrundaufgaben** im App-Paketmanifest festzulegen. Weitere Informationen finden Sie unter [Unterstützen der App mit Hintergrundaufgaben](https://msdn.microsoft.com/library/windows/apps/mt299103).
+Eine WindowsPhone Silverlight-app kann ein verwaltetes **ScheduledTaskAgent** Objekt verwenden, um eine Aufgabe auszuführen, während die app nicht im Vordergrund befindet. UWP-Apps verwenden auf ähnliche Weise die [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)-Klasse zum Erstellen und Registrieren von Hintergrundaufgaben. Sie definieren eine Klasse, die die Arbeit Ihrer Hintergrundaufgabe implementiert. Das System führt die Hintergrundaufgabe regelmäßig aus, indem die [**Run**](https://msdn.microsoft.com/library/windows/apps/br224811)-Methode der Klasse zum Ausführen der Arbeit aufgerufen wird. Denken Sie bei einer UWP-App daran, die Deklaration **Hintergrundaufgaben** im App-Paketmanifest festzulegen. Weitere Informationen finden Sie unter [Unterstützen der App mit Hintergrundaufgaben](https://msdn.microsoft.com/library/windows/apps/mt299103).
 
-Um große Datendateien im Hintergrund zu übertragen, verwendet eine WindowsPhone Silverlight-App die **BackgroundTransferService**-Klasse. Eine UWP-App verwendet zu diesem Zweck APIs im [**Windows.Networking.BackgroundTransfer**](https://msdn.microsoft.com/library/windows/apps/br207242)-Namespace. Die Features initiieren Übertragungen anhand eines ähnlichen Musters, die neue API verfügt aber über verbesserte Funktionen und eine höhere Leistung. Weitere Informationen finden Sie unter [Übertragen von Daten im Hintergrund](https://msdn.microsoft.com/library/windows/apps/xaml/hh452975).
+Um große Datendateien im Hintergrund zu übertragen, verwendet eine WindowsPhone Silverlight-app die **BackgroundTransferService** -Klasse. Eine UWP-App verwendet zu diesem Zweck APIs im [**Windows.Networking.BackgroundTransfer**](https://msdn.microsoft.com/library/windows/apps/br207242)-Namespace. Die Features initiieren Übertragungen anhand eines ähnlichen Musters, die neue API verfügt aber über verbesserte Funktionen und eine höhere Leistung. Weitere Informationen finden Sie unter [Übertragen von Daten im Hintergrund](https://msdn.microsoft.com/library/windows/apps/xaml/hh452975).
 
-Eine WindowsPhone Silverlight-App verwendet die verwalteten Klassen im **Microsoft.Phone.BackgroundAudio**-Namespace zum Wiedergeben von Audio, während sich die App nicht im Vordergrund befindet. Die UWP verwendet das Windows Phone Store-App-Modell. Weitere Informationen finden Sie unter [Hintergrundaudio](https://msdn.microsoft.com/library/windows/apps/mt282140) und im [Hintergrundaudio](http://go.microsoft.com/fwlink/p/?linkid=619997)-Beispiel.
+Eine WindowsPhone Silverlight-app verwendet die verwalteten Klassen im **Microsoft.Phone.BackgroundAudio** -Namespace zum Wiedergeben von audio während die app nicht im Vordergrund befindet. Die UWP verwendet das Windows Phone Store-App-Modell. Weitere Informationen finden Sie unter [Hintergrundaudio](https://msdn.microsoft.com/library/windows/apps/mt282140) und im [Hintergrundaudio](http://go.microsoft.com/fwlink/p/?linkid=619997)-Beispiel.
 
 ## <a name="cloud-services-networking-and-databases"></a>Clouddienste, Netzwerk und Datenbanken
 
@@ -47,13 +46,13 @@ UWP-Apps bieten zurzeit keine integrierte Unterstützung für datenintensive Sze
 
 ## <a name="launchers-and-choosers"></a>Launcher und Chooser
 
-Mit Launchern und Choosern (im **Microsoft.Phone.Tasks**-Namespace) kann eine WindowsPhone Silverlight-App mit dem Betriebssystem interagieren, um allgemeine Vorgänge auszuführen (z.B. Erstellen einer E-Mail, Auswählen eines Fotos oder Teilen bestimmter Arten von Daten mit einer anderen App). Den entsprechenden UWP-Typ finden Sie unter **Microsoft.Phone.Tasks** im Thema [Windows Phone Silverlight zu Windows10: Namespace- und Klassenzuordnungen](wpsl-to-uwp-namespace-and-class-mappings.md). Diese reichen von ähnlichen Mechanismen (so genannten Launchern und Pickern) bis zur Implementierung eines Vertrags zum Teilen von Daten zwischen Apps.
+Launcher und Chooser (zu finden im **Microsoft.Phone.Tasks** -Namespace), eine WindowsPhone Silverlight-app kann interagieren mit dem Betriebssystem zum Ausführen allgemeiner Operationen wie Verfassen einer e-Mails, Auswählen eines Fotos oder Teilen bestimmter Arten von Daten mit einer anderen app. Suchen Sie nach **Microsoft.Phone.Tasks** unter dem Thema [Windows Phone Silverlight zu Windows 10 Namespace- und klassenzuordnungen](wpsl-to-uwp-namespace-and-class-mappings.md) zu den entsprechenden UWP-Typ finden. Diese reichen von ähnlichen Mechanismen (so genannten Launchern und Pickern) bis zur Implementierung eines Vertrags zum Teilen von Daten zwischen Apps.
 
-Wenn z. B. die Fotoauswahlaufgabe verwendet wird, kann eine Windows Phone Silverlight-App in einen Ruhezustand versetzt oder sogar als veraltet markiert werden. Eine UWP-App bleibt aktiv und wird weiter ausgeführt, wenn die [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)-Klasse verwendet wird.
+Eine WindowsPhone Silverlight-app kann in einen Ruhezustand versetzt oder sogar als veraltet markiert versetzt werden, wenn, z. B. die fotoauswahlaufgabe. Eine UWP-App bleibt aktiv und wird weiter ausgeführt, wenn die [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)-Klasse verwendet wird.
 
 ## <a name="monetization-trial-mode-and-in-app-purchases"></a>Monetisierung (Testmodus und In-App-Einkäufe)
 
-Für den Großteil der Funktionen, die im Testmodus und für In-App-Einkäufe verwendet werden, kann eine WindowsPhone Silverlight-App die UWP [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765)-Klasse verwenden. Daher muss kein Code portiert werden. Eine WindowsPhone Silverlight-App ruft jedoch **MarketplaceDetailTask.Show** auf, um die App zum Kauf anzubieten:
+Eine WindowsPhone Silverlight-app kann für die meisten seiner Testmodus und in-app-Kauf-Funktionen, die UWP- [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) -Klasse verwenden, sodass muss kein Code portiert werden. Eine WindowsPhone Silverlight-app ruft jedoch **MarketplaceDetailTask.Show** um die app zum Kauf anzubieten:
 
 ```csharp
     private void Buy()
@@ -77,7 +76,7 @@ Falls Sie über Code verfügen, der Ihre Features für App-Kauf und In-App-Eink�
 
 ## <a name="notifications-for-tile-or-toast-updates"></a>Benachrichtigungen für Kachel- oder Popupaktualisierungen
 
-Benachrichtigungen sind eine Erweiterung des Pushbenachrichtigungsmodells für Windows Phone Silverlight-Apps. Wenn Sie eine Benachrichtigung vom Windows-Pushbenachrichtigungsdienst (WNS) empfangen, können Sie die Informationen mit einer Kachelaktualisierung oder einem Popup in der Benutzeroberfläche anzeigen. Informationen zum Portieren des Benutzeroberflächenteils Ihrer Benachrichtigungsfeatures finden Sie unter [Kacheln und Popups](w8x-to-uwp-porting-xaml-and-ui.md).
+Benachrichtigungen sind eine Erweiterung des pushbenachrichtigungsmodells für WindowsPhone Silverlight-apps. Wenn Sie eine Benachrichtigung vom Windows-Pushbenachrichtigungsdienst (WNS) empfangen, können Sie die Informationen mit einer Kachelaktualisierung oder einem Popup in der Benutzeroberfläche anzeigen. Informationen zum Portieren des Benutzeroberflächenteils Ihrer Benachrichtigungsfeatures finden Sie unter [Kacheln und Popups](w8x-to-uwp-porting-xaml-and-ui.md).
 
 Ausführlichere Informationen zur Verwendung von Benachrichtigungen in UWP-Apps finden Sie unter [Senden von Popupbenachrichtigungen](https://msdn.microsoft.com/library/windows/apps/xaml/hh868266).
 
@@ -85,7 +84,7 @@ Informationen und Lernprogramme zur Verwendung von Kacheln, Popups, Signalen, Ba
 
 ## <a name="storage-file-access"></a>Speicher (Dateizugriff)
 
-Windows Phone Silverlight-Code, der App-Einstellungen als Schlüssel-Wert-Paare in isoliertem Speicher speichert, kann problemlos portiert werden. Hier sehen Sie ein Vorher-Nachher-Beispiel, und zwar zuerst die Windows Phone Silverlight-Version:
+WindowsPhone Silverlight-Code, der app-Einstellungen als Schlüssel-Wert-Paare in isoliertem Speicher speichert, kann problemlos portiert werden. Hier ist ein vorher-nachher-Beispiel, zunächst die WindowsPhone Silverlight-Version:
 
 ```csharp
     var propertySet = IsolatedStorageSettings.ApplicationSettings;
@@ -104,7 +103,7 @@ Und hier die UWP-Entsprechung:
     string myFavoriteAuthor = propertySet.ContainsKey(key) ? (string)propertySet[key] : "<none>";
 ```
 
-Obwohl eine Teilmenge des **Windows.Storage**-Namespaces für sie verfügbar ist, führen viele WindowsPhone Silverlight-Apps E/A-Dateivorgänge mit der **IsolatedStorageFile**-Klasse aus, da diese schon länger unterstützt wird. Hier sehen Sie ein Vorher-Nachher-Beispiel für das Schreiben und Lesen einer Datei unter Verwendung von **IsolatedStorageFile**, und zwar zuerst die WindowsPhone Silverlight-Version:
+Obwohl eine Teilmenge des **Windows.Storage** -Namespace für sie verfügbar ist, führen viele WindowsPhone Silverlight-apps Datei-e/a mit **IsolatedStorageFile** Klasse, da es für schon länger unterstützt wird. Unter der Annahme, dass **IsolatedStorageFile** verwendet wird, wird hier ein vorher-nachher-Beispiel schreiben und Lesen einer Datei zunächst die WindowsPhone Silverlight-Version:
 
 ```csharp
     const string filename = "FavoriteAuthor.txt";
@@ -132,7 +131,7 @@ Und hier die gleiche Funktionalität mit der UWP:
     string myFavoriteAuthor = await Windows.Storage.FileIO.ReadTextAsync(file);
 ```
 
-Eine Windows Phone Silverlight-App hat schreibgeschützten Zugriff auf die optionale SD-Karte. Eine UWP-App hat Lese-/Schreibzugriff auf die SD-Karte. Weitere Informationen finden Sie unter [Zugreifen auf die SD-Karte](https://msdn.microsoft.com/library/windows/apps/mt188699).
+Eine WindowsPhone Silverlight-app verfügt über schreibgeschützten Zugriff auf die optionale SD-Karte. Eine UWP-App hat Lese-/Schreibzugriff auf die SD-Karte. Weitere Informationen finden Sie unter [Zugreifen auf die SD-Karte](https://msdn.microsoft.com/library/windows/apps/mt188699).
 
 Informationen zum Zugriff auf Fotos, Musik und Videodateien in einer UWP-App finden Sie unter [Dateien und Ordner in den Musik-, Bild- und Videobibliotheken](https://msdn.microsoft.com/library/windows/apps/mt188703).
 
@@ -143,5 +142,5 @@ Das nächste Thema ist [Portieren für Formfaktor und Benutzerfreundlichkeit](wp
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Namespace- und Klassenzuordnungen](wpsl-to-uwp-namespace-and-class-mappings.md)
- 
+ 
 

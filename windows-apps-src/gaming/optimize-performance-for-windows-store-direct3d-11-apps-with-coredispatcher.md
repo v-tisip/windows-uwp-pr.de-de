@@ -6,19 +6,18 @@ ms.assetid: e18cd1a8-860f-95fb-098d-29bf424de0c0
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Directx, Eingabelatenz
-ms.openlocfilehash: cf83b02a6388f71f94641e7c24e011a540790fa0
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: a2e92dc10dbcdc3a511c1b1a1271ae759cc03c60
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233823"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564629"
 ---
 #  <a name="optimize-input-latency-for-universal-windows-platform-uwp-directx-games"></a>Optimieren der Eingabelatenz für UWP-DirectX-Spiele (Universelle Windows-Plattform)
 
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 Die Eingabelatenz kann das Spielerlebnis erheblich beeinträchtigen. Spiele wirken professioneller, wenn in diesem Bereich eine Optimierung vorgenommen wird. Außerdem kann eine richtige Optimierung der Eingabeereignisse zu einer besseren Akkulaufzeit führen. Hier erfahren Sie, wie Sie die richtigen Verarbeitungsoptionen für CoreDispatcher-Eingabeereignisse auswählen, um sicherzustellen, dass die Eingaben im Spiel so reibungslos wie möglich verarbeitet werden.
 
@@ -236,7 +235,7 @@ void JigsawPuzzleMain::StartRenderThread()
 }
 ```
 
-In der Vorlage **DirectX 11- und XAML-App (Universelle Windows-App)** in Microsoft Visual Studio 2015 wird die Spielschleife auf ähnliche Weise in mehrere Threads unterteilt. Dabei wird das [**Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460)-Objekt verwendet, um einen Thread für die Behandlung der Eingabe zu starten. Außerdem wird ein Renderthread erstellt, der unabhängig vom XAML-UI-Thread ist. Weitere Informationen zu diesen Vorlagen finden Sie unter [Erstellen eines UWP- und eines DirectX-Spieleprojekts aus einer Vorlage](user-interface.md).
+Die Vorlage für **DirectX 11- und XAML-App (Universal Windows)** in Microsoft Visual Studio2015 teilt die spielschleife in mehreren Threads auf ähnliche Weise. Dabei wird das [**Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460)-Objekt verwendet, um einen Thread für die Behandlung der Eingabe zu starten. Außerdem wird ein Renderthread erstellt, der unabhängig vom XAML-UI-Thread ist. Weitere Informationen zu diesen Vorlagen finden Sie unter [Erstellen eines UWP- und eines DirectX-Spieleprojekts aus einer Vorlage](user-interface.md).
 
 ## <a name="additional-ways-to-reduce-input-latency"></a>Weitere Möglichkeiten zur Reduzierung der Eingabelatenz
 
@@ -249,7 +248,7 @@ Abbildung1
 
 ![Abbildung 1: Eingabelatenz in DirectX ](images/input-latency1.png)
 
-Unter Windows 8.1 wurde mit DXGI das **DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT**-Flag für die Swapchain eingeführt. Damit können Apps diese Latenz leicht reduzieren, ohne dass eine Heuristik implementiert werden muss, mit der die Present-Warteschlange leer gehalten wird. Mit diesem Flag erstellte Swapchains werden als Swapchains mit Wartemöglichkeit bezeichnet. Abbildung2 zeigt den ungefähren Lebenszyklus und die Reaktion auf ein Eingabeereignis bei Verwendung von Swapchains mit Wartemöglichkeit:
+Windows8.1 DXGI, das **DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT** -Flag für die SwapChain, damit können apps diese Latenz leicht reduzieren, ohne dass diese die vorhandene Warteschlange leer gehalten implementieren eingeführt. Mit diesem Flag erstellte Swapchains werden als Swapchains mit Wartemöglichkeit bezeichnet. Abbildung2 zeigt den ungefähren Lebenszyklus und die Reaktion auf ein Eingabeereignis bei Verwendung von Swapchains mit Wartemöglichkeit:
 
 Abbildung2
 
@@ -257,9 +256,9 @@ Abbildung2
 
 Diese Abbildungen zeigen, dass die Eingabelatenz bei Spielen um zwei volle Frames reduziert werden kann, wenn das Rendern und Darstellen der einzelnen Frames innerhalb des Zeitraums von 16,7 ms durchgeführt werden kann, der durch die Aktualisierungsrate des Displays vorgegeben ist. Im Beispiel mit dem Puzzle werden Swapchains mit Wartemöglichkeit verwendet, und das Limit der Present-Warteschlange wird per Aufruf des folgenden Elements gesteuert:` m_deviceResources->SetMaximumFrameLatency(1);`
 
- 
+ 
 
- 
+ 
 
 
 

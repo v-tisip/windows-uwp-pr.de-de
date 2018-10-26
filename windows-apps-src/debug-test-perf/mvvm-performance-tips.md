@@ -6,19 +6,17 @@ description: In diesem Thema werden einige Leistungsaspekte in Bezug auf die Wah
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: d308fd8b8ded0ac737fc39c4760bc52d8414b3cb
-ms.sourcegitcommit: ec18e10f750f3f59fbca2f6a41bf1892072c3692
+ms.localizationpriority: medium
+ms.openlocfilehash: b39f68d6f5f00f8e33a080b77614b9ba11627989
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2017
-ms.locfileid: "894490"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562410"
 ---
 # <a name="mvvm-and-language-performance-tips"></a>Tipps zu MVVM und Sprachleistung
 
-\[ Aktualisiert für UWP-Apps unter Windows 10. Artikel zu Windows 8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]
 
 In diesem Thema werden einige Leistungsaspekte in Bezug auf die Wahl von Softwaredesignmustern und Programmiersprachen erläutert.
 

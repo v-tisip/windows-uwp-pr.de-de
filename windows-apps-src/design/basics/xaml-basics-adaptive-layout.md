@@ -6,15 +6,13 @@ keywords: XAML, UWP, Erste Schritte
 ms.author: mukin
 ms.date: 08/30/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fee97ecefd2d0c0694bd50ef7255488f3fb567f3
-ms.sourcegitcommit: ef5a1e1807313a2caa9c9b35ea20b129ff7155d0
-ms.translationtype: HT
+ms.openlocfilehash: 000aa2d8f3684aa813b85076d9124a87a71b6a8c
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
-ms.locfileid: "1639845"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563301"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>Tutorial: Erstellen von adaptiven Layouts
 
@@ -40,7 +38,7 @@ Die **Detailsseite** zeigt ein einzelnes Foto an, nachdem es ausgewählt wurde. 
 
 Für dieses Tutorial starten Sie mit einer vereinfachten Version des PhotoLab-Beispiels. 
 
-1. Gehen Sie zu [https://github.com/Microsoft/Windows-appsample-photo-lab.](https://github.com/Microsoft/Windows-appsample-photo-lab) Sie gelangen auf die GitHub-Seite für das Beispiel. 
+1. Wechseln Sie zu [https://github.com/Microsoft/Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab). Sie gelangen auf die GitHub-Seite für das Beispiel. 
 2. Als nächstes müssen Sie das Beispiel klonen oder herunterladen. Klicken Sie auf die Schaltfläche **Clone or download**. Ein Untermenü erscheint.
     <figure>
         <img src="../basics/images/xaml-basics/clone-repo.png" alt="The Clone or download menu on GitHub">

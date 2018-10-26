@@ -6,14 +6,14 @@ title: Kamera-UI-Features für mobile Geräte
 ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
-ms.openlocfilehash: 7b9db18d83c9d4811c446f90c40ff3e0044dccf2
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 062ca589b2a63db1f56ada4e2df4f99bc7f8b0fb
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233499"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563994"
 ---
 #<a name="camera-ui-features-for-mobile-devices"></a>Kamera-UI-Features für mobile Geräte
 
@@ -56,9 +56,6 @@ Im Handler für das **CameraPressed**-Ereignis können Sie die Aufnahme eines Fo
 Wenn die App heruntergefahren wird oder der Benutzer die Medienaufnahmeseite der App verlässt, heben Sie die Registrierung des Hardwaretastenhandlers auf.
 
 [!code-cs[UnregisterCameraButtonHandler](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetUnregisterCameraButtonHandler)]
-
-> [!NOTE]
-> Dieser Artikel ist für Windows10-Entwickler bestimmt, die UWP (Universelle Windows-Plattform)-Apps schreiben. Informationen zur Entwicklung unter Windows8.x oder Windows Phone8.x finden Sie in der [archivierten Dokumentation](http://go.microsoft.com/fwlink/p/?linkid=619132).                                                                                   |
 
 ## <a name="related-topics"></a>Verwandte Themen
 

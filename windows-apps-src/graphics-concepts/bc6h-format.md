@@ -8,15 +8,13 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: abff26c7f2e874d4a5e8e964fe716fcf2f1592cb
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: be88f06cd5893f2f67697a54754826440bdf7d18
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1045093"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5563865"
 ---
 # <a name="bc6h-format"></a>BC6H-Format
 
@@ -34,15 +32,15 @@ BC6H wird durch die folgenden DXGI\_FORMAT-Enumerationswerte angegeben:
 -   **DXGI\_FORMAT\_BC6H\_UF16**. Dieses BC6H-Format verwendet keine Bit mit Vorzeichen im 16-Bit-Gleitkommawert des Farbkanals.
 -   **DXGI\_FORMAT\_BC6H\_SF16**. Dieses BC6H-Format verwendet eine Bit mit Vorzeichen im 16-Bit-Gleitkommawert des Farbkanals.
 
-**Hinweis:** Das 16-Bit-Gleitkommaformat für Farbkanäle wird häufig als „halb”-Gleitkommaformat bezeichnet. Dieses Format hat das folgende Bit-Layout:
+**Hinweis:**  das 16-Bit-Gleitkommaformat für Farbkanäle wird häufig bezeichnet als ein "halb"-Gleitkommaformat. Dieses Format hat das folgende Bit-Layout:
 |                       |                                                 |
 |-----------------------|-------------------------------------------------|
 | UF16 (Gleitkomma ohne Vorzeichen) | 5Bit Exponent + 11Bit Mantisse              |
 | SF16 (Gleitkomma mit Vorzeichen)   | 1Bit mit Vorzeichen + 5Bit Exponent + 10Bit Mantisse |
 
- 
+ 
 
- 
+ 
 
 Das BC6H-Format kann für Texturressourcen wie [Texture2D](https://msdn.microsoft.com/library/windows/desktop/bb205277) (einschließlich Arrays), Texture3D oder TextureCube (einschließlich Arrays verwendet werden. Das Format gilt ebenfalls für alle Mip-Map-Oberflächen, die mit diesen Ressourcen verbunden sind.
 
@@ -114,7 +112,7 @@ Die folgende Tabelle enthält die Anzahl und Werte der Bit für jedes der 14 mö
 | 13   | 63Bit           | 0Bit    | 60Bit (12.8, 12.8, 12.8)       | 5Bit (01011) |
 | 14   | 63Bit           | 0Bit    | 60Bit (16.4, 16.4, 16.4)       | 5Bit (01111) |
 
- 
+ 
 
 Jedes Format dieser Tabelle kann durch Modus-Bits eindeutig identifiziert werden. Die ersten zehn Modi werden für Kacheln mit zwei Regionen verwendet, wobei das Modus-Bitfeld entweder 2 oder 5Bit lang sein kann. Diese Blöcke haben ebenfalls Felder für die komprimierten Farbendpunkte (72 oder 75Bit), die Partition (5Bit) und die Partitionsindizes (46Bit).
 
@@ -160,7 +158,7 @@ Die Feldnamen in der obigen Tabelle sind wie folgt definiert:
 | by    | endpt\[1\].A\[2\] |
 | bz    | endpt\[1\].B\[2\] |
 
- 
+ 
 
 Endpt\[i\], wobei i entweder 0 oder 1 ist und sich auf den 0. oder 1. Satz von Endpunkten bezieht.
 ## <a name="span-idsign-extension-for-endpoint-valuesspanspan-idsign-extension-for-endpoint-valuesspanspan-idsign-extension-for-endpoint-valuesspansign-extension-for-endpoint-values"></a><span id="Sign-extension-for-endpoint-values"></span><span id="sign-extension-for-endpoint-values"></span><span id="SIGN-EXTENSION-FOR-ENDPOINT-VALUES"></span>Zeichenerweiterung für Endpunktwerte
@@ -329,9 +327,9 @@ unsigned short finish_unquantize(int comp)
 
 [Texturblockkomprimierung](texture-block-compression.md)
 
- 
+ 
 
- 
+ 
 
 
 

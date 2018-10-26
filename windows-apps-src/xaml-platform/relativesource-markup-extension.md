@@ -6,16 +6,14 @@ ms.assetid: B87DEF36-BE1F-4C16-B32E-7A896BD09272
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: c89793dd92a458c47a33aac4f7d4c728088cf1dc
-ms.sourcegitcommit: 2470c6596d67e1f5ca26b44fad56a2f89773e9cc
-ms.translationtype: HT
+ms.openlocfilehash: 5bb9d241569afdbbc9df95fa11cd2261e78c077a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
-ms.locfileid: "1674357"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562726"
 ---
 # <a name="relativesource-markup-extension"></a>{RelativeSource}-Markuperweiterung
 
@@ -43,7 +41,7 @@ Stellt eine Methode bereit, um die Quelle einer Bindung als relative Beziehung i
 | Benennung | Beschreibung |
 |------|-------------|
 | {RelativeSource Self} | Erzeugt den [<strong>Mode</strong>](https://msdn.microsoft.com/library/windows/apps/br209915)-Wert <strong>Self</strong>. Das Zielelement sollte als Quelle für diese Bindung verwendet werden. Dies ist nützlich, wenn eine Eigenschaft eines Elements an eine andere Eigenschaft im gleichen Element gebunden werden soll. |
-| {RelativeSource TemplatedParent} | Erzeugt eine [<strong>ControlTemplate</strong>](https://msdn.microsoft.com/library/windows/apps/br209391), die als Quelle für diese Bindung angewendet wird. Dies ist nützlich, wenn Laufzeitinformationen in Bindungen auf Vorlagenebene angewendet werden sollen. | 
+| {RelativeSource TemplatedParent} | Erzeugt eine [<strong>ControlTemplate</strong>](https://msdn.microsoft.com/library/windows/apps/br209391), die als Quelle für diese Bindung angewendet wird. Dies ist nützlich, wenn Laufzeitinformationen in Bindungen auf Vorlagenebene angewendet werden sollen. | 
 
 ## <a name="remarks"></a>Anmerkungen
 
@@ -64,7 +62,7 @@ Im Folgenden finden Sie ein Beispiel hierfür. Dieses [**Rechteck**](/uwp/api/Wi
 
 Darüber hinaus kann `RelativeSource={RelativeSource Self}` auch verwendet werden, um den [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713) eines Objekts auf sich selbst festzulegen.  Dieses Verfahren kommt etwa in einigen der SDK-Beispiele zum Einsatz, bei denen die [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503)-Klasse mit einer benutzerdefinierten Eigenschaft erweitert wurde, die bereits ein verwendungsbereites Modell für die eigene Datenbindung bereitstellt. Beispiel: `<common:LayoutAwarePage ... DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}">`
 
-**Hinweis**  Die Verwendung von **RelativeSource** in XAML zeigt nur die beabsichtigte Verwendung, nämlich das Festlegen eines Werts für [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) in XAML als Teil eines Bindungsausdrucks. Theoretisch sind andere Verwendungen möglich, wenn Sie eine Eigenschaft mit einem [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913)-Wert festlegen.
+**Hinweis:** die Verwendung von **RelativeSource** zeigt nur die Verwendung, für die es bestimmt ist: Festlegen eines Werts für [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) in XAML als Teil eines Bindungsausdrucks. Theoretisch sind andere Verwendungen möglich, wenn Sie eine Eigenschaft mit einem [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913)-Wert festlegen.
 
 ## <a name="related-topics"></a>Verwandte Themen
 

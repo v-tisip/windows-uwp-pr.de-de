@@ -6,16 +6,14 @@ ms.assetid: 6c33bf09-b46a-4bb5-8a59-ca83ce257eb3
 ms.author: joanlee
 ms.date: 10/24/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows 10, UWP, Spiele, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 57763c25d1fe9bd4f1e55aa9083e755f7f257029
-ms.sourcegitcommit: 0ab8f6fac53a6811f977ddc24de039c46c9db0ad
-ms.translationtype: HT
+ms.openlocfilehash: 610b794c0ded6791e93c14d8960366132afd973b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
-ms.locfileid: "1655119"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560437"
 ---
 # <a name="game-flow-management"></a>Spielablaufverwaltung
 
@@ -293,7 +291,7 @@ Dies sind die in diesem Beispiel verwendeten Ereignishandler sowie die jeweils b
 <td align="left">OnDpiChanged</td>
 <td align="left">Behandelt <a href="https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation#Windows_Graphics_Display_DisplayInformation_DpiChanged"><strong>Graphics::Display::DisplayInformation::DpiChanged</strong></a>. Der DPI-Wert der Anzeige hat sich geändert, und das Spiel passt seine Ressourcen entsprechend an.
 <div class="alert">
-<strong>Hinweis</strong>  [<strong>CoreWindow</strong>](https://msdn.microsoft.com/library/windows/desktop/hh404559) -Koordinaten werden genau wie in [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987) in DIPs (Device Independent Pixels; geräteunabhängige Pixel) angegeben. Daher müssen Sie Direct2D über die DPI-Änderung informieren, damit die 2D-Ressourcen oder -Grundtypen korrekt angezeigt werden.
+<strong>Hinweis:</strong>[<strong>CoreWindow</strong>] (https://msdn.microsoft.com/library/windows/desktop/hh404559) -Koordinaten werden in DIPs (Device Independent Pixels) für [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370987). Daher müssen Sie Direct2D über die DPI-Änderung informieren, damit die 2D-Ressourcen oder -Grundtypen korrekt angezeigt werden.
 </div>
 <div>
 </div></td>

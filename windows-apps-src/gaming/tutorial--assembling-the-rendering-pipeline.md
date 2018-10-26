@@ -6,20 +6,18 @@ ms.assetid: 1da3670b-2067-576f-da50-5eba2f88b3e6
 ms.author: joanlee
 ms.date: 10/24/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, Rendern
 ms.localizationpriority: medium
-ms.openlocfilehash: 450f95e68c85a325e43127df90ffeddbaa850afa
-ms.sourcegitcommit: 842ddba19fa3c028ea43e7922011515dbeb34e9c
-ms.translationtype: HT
+ms.openlocfilehash: 7e8df200e8e989015834608d38cb8dfb0d36917b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
-ms.locfileid: "1488864"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5560483"
 ---
 # <a name="rendering-framework-i-intro-to-rendering"></a>Rendering-Framework I: Einführung in das Rendering
 
-Mittlerweile wissen Sie, wie ein Spiel für die universelle Windows-Plattform (UWP) aufgebaut sein muss, damit es verwendet werden kann, und wie Sie einen Zustandsautomaten zum Behandeln des Spielablaufs definieren. Jetzt erfahren Sie, wie Sie die Rendering-Framework zusammenstellen. Sehen wir uns an, wie das Beispielspiel die Szene des Spiels mit Direct3D11 (auch bezeichnet als DirectX11) rendert.
+Mittlerweile wissen Sie, wie ein Spiel für die universelle Windows-Plattform (UWP) aufgebaut sein muss, damit es verwendet werden kann, und wie Sie einen Zustandsautomaten zum Behandeln des Spielablaufs definieren. Jetzt erfahren Sie, wie Sie die Rendering-Framework zusammenstellen. Sehen wir uns an, wie das Beispielspiel die Szene des Spiele mit Direct3D11 (auch bezeichnet als DirectX 11) rendert.
 
 >[!Note]
 >Wenn Sie den neuesten Code für dieses Beispiel noch nicht heruntergeladen haben, wechseln Sie zu [Direct3D-Spielbeispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX). Dieses Beispiel gehört zu einer großen Sammlung von UWP-Featurebeispielen. Anweisungen zum Herunterladen des Beispiels finden Sie unter [Abrufen der UWP-Beispiele von GitHub](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples).
@@ -620,7 +618,7 @@ Weitere Informationen zu finden Sie unter [Einführung in Puffer in Direct3D 11]
 
 ### <a name="dxgi"></a>DXGI
 
-Microsoft DirectX Graphics Infrastructure (DXGI) ist ein neues Subsystem, das mit Windows Vista eingeführt wurde und Low-Level-Aufgaben umfasst, die von Direct3D10, 10.1, 11 und 11.1 benötigt werden. Bei Verwendung von DXGI in einer Multithread-Anwendung ist besondere Vorsicht geboten, um sicherzustellen, dass keine Deadlocks auftreten. Weitere Informationen finden Sie unter [DirectX Graphics Infrastructure (DXGI): Best Practices – Multithreading](https://msdn.microsoft.com/library/windows/desktop/ee417025.aspx#multithreading_and_dxgi)
+Microsoft DirectX Graphics Infrastructure (DXGI) ist ein neues Subsystem, das mit WindowsVista eingeführt wurde, die Low-Level-Aufgaben umfasst, die von Direct3D 10 benötigt werden 10.1, 11 und 11.1. Bei Verwendung von DXGI in einer Multithread-Anwendung ist besondere Vorsicht geboten, um sicherzustellen, dass keine Deadlocks auftreten. Weitere Informationen finden Sie unter [DirectX Graphics Infrastructure (DXGI): Best Practices – Multithreading](https://msdn.microsoft.com/library/windows/desktop/ee417025.aspx#multithreading_and_dxgi)
 
 ### <a name="feature-level"></a>Featureebene
 
@@ -630,7 +628,7 @@ Jede Grafikkarte implementiert eine gewisse DirectX-Funktion, abhängig von den 
 
 Mit der Featureebene können Sie bei der Erstellung eines Geräts versuchen, ein Gerät für die Featureebene zu erstellen, die Sie anfordern möchten. Wenn die Geräteerstellung funktioniert, ist die Featureebene vorhanden, andernfalls wird die Featureebene von der Hardware nicht unterstützt. Sie können entweder versuchen, ein Gerät auf einer niedrigeren Featureebene neu zu erstellen oder Sie können die Anwendung beenden. Beispielsweise muss die Featureebene 12\_0 Direct3D11.3 oder Direct3D12 und Shadermodell 5.1 ausführen. Weitere Informationen finden Sie unter [Direct3D-Featureebenen: Übersicht über jede Featureebene](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx#Overview).
 
-Mithilfe von Featureebenen, können Sie eine Anwendung für Direct3D9, Microsoft Direct3D10 oder Direct3D11 entwickeln und diese auf 9, 10 oder 11 Hardware ausführen (mit einigen Ausnahmen). Weitere Informationen finden Sie unter [Direct3D-Featureebenen](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx).
+Mithilfe von featureebenen, können Sie eine Anwendung für Direct3D9 oder Microsoft Direct3D10, Direct3D11 entwickeln und führen Sie diese auf 9, 10 oder 11 Hardware (mit einigen Ausnahmen). Weitere Informationen finden Sie unter [Direct3D-Featureebenen](https://msdn.microsoft.com/library/windows/desktop/ff476876.aspx).
 
 ### <a name="stereo-rendering"></a>Stereorendering
 

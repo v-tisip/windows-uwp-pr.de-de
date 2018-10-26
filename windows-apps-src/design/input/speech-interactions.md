@@ -9,15 +9,13 @@ keywords: Sprache, Stimme, Spracherkennung, natürliche Sprache, diktieren, Eing
 ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3bdbe841e486a5024c594b1458e3beb57e228e1d
-ms.sourcegitcommit: db09dcb08da5995c46c2729896e56be3774ee5ba
-ms.translationtype: HT
+ms.openlocfilehash: 4006cdedffdbc601b498ce64caddfdefcbf4877a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2018
-ms.locfileid: "1554246"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5564186"
 ---
 # <a name="speech-interactions"></a>Spracherkennungsinteraktionen
 
@@ -222,12 +220,12 @@ Beide Probleme können durch Verwendung von SSML anstelle von Nur-Text als Synth
 * [Spracherkennungsinteraktionen](https://msdn.microsoft.com/library/windows/apps/mt185614)
 * [Cortana-Interaktionen](https://msdn.microsoft.com/library/windows/apps/mt185598)
 
- **Beispiele**
+ **Beispiele**
 
 * [Beispiel zu Spracherkennung und Sprachsynthese](http://go.microsoft.com/fwlink/p/?LinkID=619897)
- 
+ 
 
- 
+ 
 
 
 
