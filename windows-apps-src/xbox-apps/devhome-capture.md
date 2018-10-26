@@ -1,48 +1,46 @@
 ---
 author: v-angraf
 ms.assetid: 67934477-337a-5235-b0de-8ac038177267
-title: Media erfassen Seite (Dev-Startseite)
-description: Enthält Informationen zu der Seite Medien Erfassen der app Dev-Startseite für Xbox ein.
+title: Aufzeichnen von Medien Seite (Dev Home)
+description: Enthält Informationen zu der Seite "Medienerfassung" der Dev Home-app für Xbox One.
 ms.author: v-angraf@microsoft.com
 ms.date: 08/09/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP
 permalink: en-us/docs/xdk/devhome-capture.html
 ms.localizationpriority: medium
-ms.openlocfilehash: 21fe8eeb4ce3b5062aca625537061209e74c503f
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: 1866c4f94c5ef681080ae2a5658c6edba11ec44b
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1015248"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562923"
 ---
-# <a name="media-capture-page-dev-home"></a><span data-ttu-id="04377-104">Media erfassen Seite (Dev-Startseite)</span><span class="sxs-lookup"><span data-stu-id="04377-104">Media Capture Page (Dev Home)</span></span>
+# <a name="media-capture-page-dev-home"></a><span data-ttu-id="feed2-104">Aufzeichnen von Medien Seite (Dev Home)</span><span class="sxs-lookup"><span data-stu-id="feed2-104">Media Capture Page (Dev Home)</span></span>
    
   
-<span data-ttu-id="04377-105">Die Seite **Medien erfassen** der Dev Home nimmt Video des Titels, die derzeit in der Konsole ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="04377-105">The **Media capture** page of Dev Home captures video of the title that is currently running on the console.</span></span>   
- ![Erfassen Sie die Seite der Developer-Startseite](images/devhome_capture.png)   
+<span data-ttu-id="feed2-105">Der Seite " **medienerfassung** " von Dev Home nimmt Video des Titels, die derzeit auf der Konsole ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="feed2-105">The **Media capture** page of Dev Home captures video of the title that is currently running on the console.</span></span>   
+ ![Seite des Dev Home zu erfassen](images/devhome_capture.png)   
   
-<span data-ttu-id="04377-107">Die **Medien erfassen** Seite enthält die folgenden Bereiche:</span><span class="sxs-lookup"><span data-stu-id="04377-107">The **Media capture** page contains the following panes:</span></span>   
+<span data-ttu-id="feed2-107">Die Seite " **medienerfassung** " enthält die folgenden Bereichen:</span><span class="sxs-lookup"><span data-stu-id="feed2-107">The **Media capture** page contains the following panes:</span></span>   
  
-   *  [<span data-ttu-id="04377-108">Videoaufnahme</span><span class="sxs-lookup"><span data-stu-id="04377-108">Video capture</span></span>](#ID4EHB)  
+   *  [<span data-ttu-id="feed2-108">Die Videoaufnahme</span><span class="sxs-lookup"><span data-stu-id="feed2-108">Video capture</span></span>](#ID4EHB)  
 
  
 <a id="ID4EHB"></a>
 
    
 
-## <a name="video-capture"></a><span data-ttu-id="04377-109">Videoaufnahme</span><span class="sxs-lookup"><span data-stu-id="04377-109">Video capture</span></span>  
+## <a name="video-capture"></a><span data-ttu-id="feed2-109">Die Videoaufnahme</span><span class="sxs-lookup"><span data-stu-id="feed2-109">Video capture</span></span>  
    
   
-<span data-ttu-id="04377-110">Im Bereich **Video Capture** enthält Tools, mit die Videodatenstrom aus der Developer-Konsole zu erfassen.</span><span class="sxs-lookup"><span data-stu-id="04377-110">The **Video capture** pane contains tools that record a video stream from the developer console.</span></span> <span data-ttu-id="04377-111">Sie können auch Video mit den letzten Sekunden in der Konsole erfassen.</span><span class="sxs-lookup"><span data-stu-id="04377-111">You can also capture video of the last few seconds from the console.</span></span>   
+<span data-ttu-id="feed2-110">Der Aufzeichnungsbereich **Video** enthält Tools, die einen Videostream von der Konsole Entwickler aufzeichnen.</span><span class="sxs-lookup"><span data-stu-id="feed2-110">The **Video capture** pane contains tools that record a video stream from the developer console.</span></span> <span data-ttu-id="feed2-111">Sie können auch Video zu den letzten Sekunden von der Konsole erfassen.</span><span class="sxs-lookup"><span data-stu-id="feed2-111">You can also capture video of the last few seconds from the console.</span></span>   
   
 <a id="ID4ERB"></a>
 
    
 
-## <a name="see-also"></a><span data-ttu-id="04377-112">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="04377-112">See also</span></span>  
- [<span data-ttu-id="04377-113">Entwickler-Homepage in der Konsole (Dev-Startseite)</span><span class="sxs-lookup"><span data-stu-id="04377-113">Developer Home on the Console (Dev Home)</span></span>](dev-home.md)
+## <a name="see-also"></a><span data-ttu-id="feed2-112">Weitere Informationen:</span><span class="sxs-lookup"><span data-stu-id="feed2-112">See also</span></span>  
+ [<span data-ttu-id="feed2-113">Entwickler-Startbildschirm auf der Konsole (Dev Home)</span><span class="sxs-lookup"><span data-stu-id="feed2-113">Developer Home on the Console (Dev Home)</span></span>](dev-home.md)
 
   

@@ -6,17 +6,15 @@ title: Vorbereiten des Verpackens eine desktop-Anwendung (Desktop-Brücke)
 ms.author: normesta
 ms.date: 05/18/20188
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: windows10, UWP
 ms.assetid: 71a57ca2-ca00-471d-8ad9-52f285f3022e
 ms.localizationpriority: medium
-ms.openlocfilehash: 54c5f061cbb10759785bf0014a163adc8c3e3288
-ms.sourcegitcommit: 2c4daa36fb9fd3e8daa83c2bd0825f3989d24be8
+ms.openlocfilehash: 9abd10a352243e7c7ca7e665b3fb5ee774e0346e
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5514724"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562231"
 ---
 # <a name="prepare-to-package-a-desktop-application"></a><span data-ttu-id="e68de-103">Vorbereiten des Verpackens eine desktop-Anwendung</span><span class="sxs-lookup"><span data-stu-id="e68de-103">Prepare to package a desktop application</span></span>
 

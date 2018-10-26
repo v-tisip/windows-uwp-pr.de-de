@@ -1,54 +1,53 @@
 ---
 author: mtoepke
-title: Vollständiger Code für &quot;BasicReaderWriter&quot;
+title: Vollständiger Code für "BasicReaderWriter"
 description: Vollständiger Code für eine Klasse und Methoden zum allgemeinen Lesen und Schreiben von Binärdatendateien.
 ms.assetid: af968edd-df5c-b8e6-479e-bfa9689380fc
 ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 keywords: Windows10, UWP, Spiele, BasicReaderWriter
-ms.openlocfilehash: 1dc7ba0b25ceeb5b27bc718bed1db0e2db39b6c0
-ms.sourcegitcommit: 909d859a0f11981a8d1beac0da35f779786a6889
+ms.localizationpriority: medium
+ms.openlocfilehash: 7a5d644a2a141a83316575a235805fa56657bf3a
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.locfileid: "233729"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5561404"
 ---
-# <a name="complete-code-for-basicreaderwriter"></a><span data-ttu-id="6e735-104">Vollständiger Code für "BasicReaderWriter"</span><span class="sxs-lookup"><span data-stu-id="6e735-104">Complete code for BasicReaderWriter</span></span>
+# <a name="complete-code-for-basicreaderwriter"></a><span data-ttu-id="7eb85-104">Vollständiger Code für "BasicReaderWriter"</span><span class="sxs-lookup"><span data-stu-id="7eb85-104">Complete code for BasicReaderWriter</span></span>
 
 
-<span data-ttu-id="6e735-105">\[ Aktualisiert für UWP-Apps unter Windows10.</span><span class="sxs-lookup"><span data-stu-id="6e735-105">\[ Updated for UWP apps on Windows 10.</span></span> <span data-ttu-id="6e735-106">Artikel zu Windows8.x finden Sie im [Archiv](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span><span class="sxs-lookup"><span data-stu-id="6e735-106">For Windows 8.x articles, see the [archive](http://go.microsoft.com/fwlink/p/?linkid=619132) \]</span></span>
 
-<span data-ttu-id="6e735-107">Vollständiger Code für eine Klasse und Methoden zum allgemeinen Lesen und Schreiben von Binärdatendateien.</span><span class="sxs-lookup"><span data-stu-id="6e735-107">Complete code for a class and methods for reading and writing binary data files in general.</span></span> <span data-ttu-id="6e735-108">Wird von der [BasicLoader](complete-code-for-basicloader.md)-Klasse verwendet.</span><span class="sxs-lookup"><span data-stu-id="6e735-108">Used by the [BasicLoader](complete-code-for-basicloader.md) class.</span></span>
+<span data-ttu-id="7eb85-105">Vollständiger Code für eine Klasse und Methoden zum allgemeinen Lesen und Schreiben von Binärdatendateien.</span><span class="sxs-lookup"><span data-stu-id="7eb85-105">Complete code for a class and methods for reading and writing binary data files in general.</span></span> <span data-ttu-id="7eb85-106">Wird von der [BasicLoader](complete-code-for-basicloader.md)-Klasse verwendet.</span><span class="sxs-lookup"><span data-stu-id="7eb85-106">Used by the [BasicLoader](complete-code-for-basicloader.md) class.</span></span>
 
-<span data-ttu-id="6e735-109">Dieses Thema enthält die folgenden Abschnitte:</span><span class="sxs-lookup"><span data-stu-id="6e735-109">This topic contains these sections:</span></span>
+<span data-ttu-id="7eb85-107">Dieses Thema enthält die folgenden Abschnitte:</span><span class="sxs-lookup"><span data-stu-id="7eb85-107">This topic contains these sections:</span></span>
 
--   [<span data-ttu-id="6e735-110">Technologien</span><span class="sxs-lookup"><span data-stu-id="6e735-110">Technologies</span></span>](#technologies)
--   [<span data-ttu-id="6e735-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6e735-111">Requirements</span></span>](#requirements)
--   [<span data-ttu-id="6e735-112">Anzeigen des Codes (C++)</span><span class="sxs-lookup"><span data-stu-id="6e735-112">View the code (C++)</span></span>](#view-the-code-c)
-
-
-## <a name="download-location"></a><span data-ttu-id="6e735-113">Downloadort</span><span class="sxs-lookup"><span data-stu-id="6e735-113">Download location</span></span>
-
-<span data-ttu-id="6e735-114">Dieses Beispiel kann nicht heruntergeladen werden.</span><span class="sxs-lookup"><span data-stu-id="6e735-114">This sample is not available for download.</span></span>
+-   [<span data-ttu-id="7eb85-108">Technologien</span><span class="sxs-lookup"><span data-stu-id="7eb85-108">Technologies</span></span>](#technologies)
+-   [<span data-ttu-id="7eb85-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="7eb85-109">Requirements</span></span>](#requirements)
+-   [<span data-ttu-id="7eb85-110">Anzeigen des Codes (C++)</span><span class="sxs-lookup"><span data-stu-id="7eb85-110">View the code (C++)</span></span>](#view-the-code-c)
 
 
-## <a name="technologies"></a><span data-ttu-id="6e735-115">Technologien</span><span class="sxs-lookup"><span data-stu-id="6e735-115">Technologies</span></span>
+## <a name="download-location"></a><span data-ttu-id="7eb85-111">Downloadort</span><span class="sxs-lookup"><span data-stu-id="7eb85-111">Download location</span></span>
 
-<span data-ttu-id="6e735-116">**Programmiersprachen** – C++</span><span class="sxs-lookup"><span data-stu-id="6e735-116">**Programming languages** -  C++</span></span>  
-<span data-ttu-id="6e735-117">**Programmiermodelle** – Windows-Runtime</span><span class="sxs-lookup"><span data-stu-id="6e735-117">**Programming models** - Windows Runtime</span></span>
-
-
-## <a name="requirements"></a><span data-ttu-id="6e735-118">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6e735-118">Requirements</span></span>
-
- <span data-ttu-id="6e735-119">**Unterstützte Mindestversion (Client)** – Windows 10</span><span class="sxs-lookup"><span data-stu-id="6e735-119">**Minimum supported client** - Windows 10</span></span>       
-<span data-ttu-id="6e735-120"> **Unterstützte Mindestversion (Server)** – Windows Server 2016 Technical Preview</span><span class="sxs-lookup"><span data-stu-id="6e735-120"> **Minimum supported server** - Windows Server 2016 Technical Preview</span></span> 
-
-## <a name="view-the-code-c"></a><span data-ttu-id="6e735-121">Anzeigen des Codes (C++)</span><span class="sxs-lookup"><span data-stu-id="6e735-121">View the code (C++)</span></span>
+<span data-ttu-id="7eb85-112">Dieses Beispiel kann nicht heruntergeladen werden.</span><span class="sxs-lookup"><span data-stu-id="7eb85-112">This sample is not available for download.</span></span>
 
 
-## <a name="basicreaderwriterh"></a><span data-ttu-id="6e735-122">BasicReaderWriter.h</span><span class="sxs-lookup"><span data-stu-id="6e735-122">BasicReaderWriter.h</span></span>
+## <a name="technologies"></a><span data-ttu-id="7eb85-113">Technologien</span><span class="sxs-lookup"><span data-stu-id="7eb85-113">Technologies</span></span>
+
+<span data-ttu-id="7eb85-114">**Programmiersprachen** – C++</span><span class="sxs-lookup"><span data-stu-id="7eb85-114">**Programming languages** -  C++</span></span>  
+<span data-ttu-id="7eb85-115">**Programmiermodelle** – Windows-Runtime</span><span class="sxs-lookup"><span data-stu-id="7eb85-115">**Programming models** - Windows Runtime</span></span>
+
+
+## <a name="requirements"></a><span data-ttu-id="7eb85-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="7eb85-116">Requirements</span></span>
+
+ <span data-ttu-id="7eb85-117">**Unterstützte Mindestversion (Client)** – Windows 10</span><span class="sxs-lookup"><span data-stu-id="7eb85-117">**Minimum supported client** - Windows 10</span></span>       
+ <span data-ttu-id="7eb85-118">**Unterstützte Mindestversion (Server)** – Windows Server 2016 Technical Preview</span><span class="sxs-lookup"><span data-stu-id="7eb85-118">**Minimum supported server** - Windows Server 2016 Technical Preview</span></span> 
+
+## <a name="view-the-code-c"></a><span data-ttu-id="7eb85-119">Anzeigen des Codes (C++)</span><span class="sxs-lookup"><span data-stu-id="7eb85-119">View the code (C++)</span></span>
+
+
+## <a name="basicreaderwriterh"></a><span data-ttu-id="7eb85-120">BasicReaderWriter.h</span><span class="sxs-lookup"><span data-stu-id="7eb85-120">BasicReaderWriter.h</span></span>
 
 
 ```cpp
@@ -97,7 +96,7 @@ internal:
 };
 ```
 
-## <a name="basicreaderwritercpp"></a><span data-ttu-id="6e735-123">BasicReaderWriter.cpp</span><span class="sxs-lookup"><span data-stu-id="6e735-123">BasicReaderWriter.cpp</span></span>
+## <a name="basicreaderwritercpp"></a><span data-ttu-id="7eb85-121">BasicReaderWriter.cpp</span><span class="sxs-lookup"><span data-stu-id="7eb85-121">BasicReaderWriter.cpp</span></span>
 
 
 ```cpp
@@ -262,9 +261,9 @@ task<void> BasicReaderWriter::WriteDataAsync(
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

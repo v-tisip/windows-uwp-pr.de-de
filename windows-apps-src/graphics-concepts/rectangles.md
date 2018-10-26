@@ -8,25 +8,23 @@ author: michaelfromredmond
 ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
-ms.prod: windows
-ms.technology: uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c493b6189cfc8c396568ca42faa4162e40501f5
-ms.sourcegitcommit: 897a111e8fc5d38d483800288ad01c523e924ef4
+ms.openlocfilehash: cb870fa851e51773d95d23ebf9d31f76774924de
+ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "1043119"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5562185"
 ---
-# <a name="rectangles"></a><span data-ttu-id="05d34-104">Rechtecke</span><span class="sxs-lookup"><span data-stu-id="05d34-104">Rectangles</span></span>
+# <a name="rectangles"></a><span data-ttu-id="6392c-104">Rechtecke</span><span class="sxs-lookup"><span data-stu-id="6392c-104">Rectangles</span></span>
 
 
-<span data-ttu-id="05d34-105">In Direct3D und in der Windows-Programmierung werden Objekte auf dem Bildschirm als umgebende Rechtecke bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="05d34-105">Throughout Direct3D and Windows programming, objects on the screen are referred to in terms of bounding rectangles.</span></span> <span data-ttu-id="05d34-106">Die Seiten des umgebenden Rechtecks sind immer parallel zu den Seiten des Bildschirms. So kann das Rechteck mit zwei Punkten, nämlich der obere linke Ecke und der unteren rechten Ecke, beschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="05d34-106">The sides of a bounding rectangle are always parallel to the sides of the screen, so the rectangle can be described by two points, the upper-left corner and lower-right corner.</span></span>
+<span data-ttu-id="6392c-105">In Direct3D und in der Windows-Programmierung werden Objekte auf dem Bildschirm als umgebende Rechtecke bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="6392c-105">Throughout Direct3D and Windows programming, objects on the screen are referred to in terms of bounding rectangles.</span></span> <span data-ttu-id="6392c-106">Die Seiten des umgebenden Rechtecks sind immer parallel zu den Seiten des Bildschirms. So kann das Rechteck mit zwei Punkten, nämlich der obere linke Ecke und der unteren rechten Ecke, beschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="6392c-106">The sides of a bounding rectangle are always parallel to the sides of the screen, so the rectangle can be described by two points, the upper-left corner and lower-right corner.</span></span>
 
-## <a name="span-idboundingrectanglesspanspan-idboundingrectanglesspanspan-idboundingrectanglesspanbounding-rectangles"></a><span data-ttu-id="05d34-107"><span id="Bounding_rectangles"></span><span id="bounding_rectangles"></span><span id="BOUNDING_RECTANGLES"></span>Umgebende Rechtecke</span><span class="sxs-lookup"><span data-stu-id="05d34-107"><span id="Bounding_rectangles"></span><span id="bounding_rectangles"></span><span id="BOUNDING_RECTANGLES"></span>Bounding rectangles</span></span>
+## <a name="span-idboundingrectanglesspanspan-idboundingrectanglesspanspan-idboundingrectanglesspanbounding-rectangles"></a><span data-ttu-id="6392c-107"><span id="Bounding_rectangles"></span><span id="bounding_rectangles"></span><span id="BOUNDING_RECTANGLES"></span>Umgebende Rechtecke</span><span class="sxs-lookup"><span data-stu-id="6392c-107"><span id="Bounding_rectangles"></span><span id="bounding_rectangles"></span><span id="BOUNDING_RECTANGLES"></span>Bounding rectangles</span></span>
 
 
-<span data-ttu-id="05d34-108">Die meisten Anwendungen verwenden die [**RECT**](https://msdn.microsoft.com/library/windows/desktop/dd162897)-Struktur (oder ein Typedef-Alias) als Träger von Informationen über ein umgebendes Rechteck, die beim Blitten auf den Bildschirm oder bei der Trefferermittlung verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="05d34-108">Most applications use the [**RECT**](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure (or a typedef'd alias for it) to carry information about a bounding rectangle to use when blitting to the screen or when performing hit detection.</span></span> <span data-ttu-id="05d34-109">In C++ die **RECT** Struktur hat folgende Definition.</span><span class="sxs-lookup"><span data-stu-id="05d34-109">In C++, the **RECT** structure has the following definition.</span></span>
+<span data-ttu-id="6392c-108">Die meisten Anwendungen verwenden die [**RECT**](https://msdn.microsoft.com/library/windows/desktop/dd162897)-Struktur (oder ein Typedef-Alias) als Träger von Informationen über ein umgebendes Rechteck, die beim Blitten auf den Bildschirm oder bei der Trefferermittlung verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="6392c-108">Most applications use the [**RECT**](https://msdn.microsoft.com/library/windows/desktop/dd162897) structure (or a typedef'd alias for it) to carry information about a bounding rectangle to use when blitting to the screen or when performing hit detection.</span></span> <span data-ttu-id="6392c-109">In C++ die **RECT** Struktur hat folgende Definition.</span><span class="sxs-lookup"><span data-stu-id="6392c-109">In C++, the **RECT** structure has the following definition.</span></span>
 
 ```
 typedef struct tagRECT { 
@@ -37,22 +35,22 @@ typedef struct tagRECT {
 } RECT, *PRECT, NEAR *NPRECT, FAR *LPRECT; 
 ```
 
-<span data-ttu-id="05d34-110">In diesem Beispiel bilden die linken und oberen Elemente die x- und y-Koordinaten für die linke obere Ecke des umgebenden Rechtecks.</span><span class="sxs-lookup"><span data-stu-id="05d34-110">In the preceding example, the left and top members are the x- and y-coordinates of a bounding rectangle's upper-left corner.</span></span> <span data-ttu-id="05d34-111">Entsprechend bilden die rechten und unteren Elemente die Koordinaten der unteren rechten Ecke.</span><span class="sxs-lookup"><span data-stu-id="05d34-111">Similarly, the right and bottom members make up the coordinates of the lower-right corner.</span></span> <span data-ttu-id="05d34-112">Die folgende Abbildungzeigt, wie Sie diese Werte darstellen können.</span><span class="sxs-lookup"><span data-stu-id="05d34-112">The following illustration shows how you can visualize these values.</span></span>
+<span data-ttu-id="6392c-110">In diesem Beispiel bilden die linken und oberen Elemente die x- und y-Koordinaten für die linke obere Ecke des umgebenden Rechtecks.</span><span class="sxs-lookup"><span data-stu-id="6392c-110">In the preceding example, the left and top members are the x- and y-coordinates of a bounding rectangle's upper-left corner.</span></span> <span data-ttu-id="6392c-111">Entsprechend bilden die rechten und unteren Elemente die Koordinaten der unteren rechten Ecke.</span><span class="sxs-lookup"><span data-stu-id="6392c-111">Similarly, the right and bottom members make up the coordinates of the lower-right corner.</span></span> <span data-ttu-id="6392c-112">Die folgende Abbildungzeigt, wie Sie diese Werte darstellen können.</span><span class="sxs-lookup"><span data-stu-id="6392c-112">The following illustration shows how you can visualize these values.</span></span>
 
 ![Abbildungdes durch die linken, oberen, rechten und unteren Werte begrenzten umgebenden Rechtecks](images/rect.png)
 
-<span data-ttu-id="05d34-114">Die Pixelspalte am rechten Rand sowie die Pixelzeile am unteren Rand sind nicht im RECT enthalten.</span><span class="sxs-lookup"><span data-stu-id="05d34-114">The column of pixels at the right edge and the row of pixels at the bottom edge are not included in the RECT.</span></span> <span data-ttu-id="05d34-115">Das Sperren eines RECT mit den Elementen {10, 10, 138, 138} ergibt ein Objekt, das 128Pixel breit und hoch ist.</span><span class="sxs-lookup"><span data-stu-id="05d34-115">For example, locking a RECT with members {10, 10, 138, 138} results in an object 128 pixels in width and height.</span></span>
+<span data-ttu-id="6392c-114">Die Pixelspalte am rechten Rand sowie die Pixelzeile am unteren Rand sind nicht im RECT enthalten.</span><span class="sxs-lookup"><span data-stu-id="6392c-114">The column of pixels at the right edge and the row of pixels at the bottom edge are not included in the RECT.</span></span> <span data-ttu-id="6392c-115">Das Sperren eines RECT mit den Elementen {10, 10, 138, 138} ergibt ein Objekt, das 128Pixel breit und hoch ist.</span><span class="sxs-lookup"><span data-stu-id="6392c-115">For example, locking a RECT with members {10, 10, 138, 138} results in an object 128 pixels in width and height.</span></span>
 
-<span data-ttu-id="05d34-116">Für erhöhte Effizienz, Konsistenz und Bedienerfreundlichkeit arbeiten alle Direct3D-Darstellungsfunktionen mit Rechtecken.</span><span class="sxs-lookup"><span data-stu-id="05d34-116">For efficiency, consistency, and ease of use, all Direct3D presentation functions work with rectangles.</span></span>
+<span data-ttu-id="6392c-116">Für erhöhte Effizienz, Konsistenz und Bedienerfreundlichkeit arbeiten alle Direct3D-Darstellungsfunktionen mit Rechtecken.</span><span class="sxs-lookup"><span data-stu-id="6392c-116">For efficiency, consistency, and ease of use, all Direct3D presentation functions work with rectangles.</span></span>
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="05d34-117"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="05d34-117"><span id="related-topics"></span>Related topics</span></span>
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="6392c-117"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="6392c-117"><span id="related-topics"></span>Related topics</span></span>
 
 
-[<span data-ttu-id="05d34-118">Koordinatensystem und Geometrie</span><span class="sxs-lookup"><span data-stu-id="05d34-118">Coordinate systems and geometry</span></span>](coordinate-systems-and-geometry.md)
+[<span data-ttu-id="6392c-118">Koordinatensysteme und Geometrie</span><span class="sxs-lookup"><span data-stu-id="6392c-118">Coordinate systems and geometry</span></span>](coordinate-systems-and-geometry.md)
 
- 
+ 
 
- 
+ 
 
 
 
