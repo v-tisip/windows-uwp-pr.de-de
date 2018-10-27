@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, Windows 10, UWP, app-Installer, AppInstaller, querladen, im Zusammenhang mit festgelegten, optionale Pakete, AWS
 ms.localizationpriority: medium
 ms.openlocfilehash: f24abac93e2444a3c9f454c8883902e5db4d31be
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5548834"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5695630"
 ---
 # <a name="hosting-uwp-app-packages-on-aws-for-web-install"></a>Hosten von UWP-App-Paketen auf AWS für die Webinstallation
 
