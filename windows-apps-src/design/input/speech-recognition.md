@@ -7,15 +7,15 @@ label: Speech recognition
 template: detail.hbs
 keywords: Sprache, Stimme, Spracherkennung, natürliche Sprache, diktieren, Eingabe, Benutzerinteraktion
 ms.author: kbridge
-ms.date: 02/08/2017
+ms.date: 10/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ce8146cc952d22eb0aa365be707cbd2cef7aabf
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: b9148b2d57c55bdff09be9a9d6bb8a6b65d93f12
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5567790"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5707429"
 ---
 # <a name="speech-recognition"></a>Spracherkennung
 
@@ -26,94 +26,271 @@ Nutzen Sie die Spracherkennung als Eingabemöglichkeit oder zum Ausführen einer
 
 Die Spracherkennung besteht aus einer Sprachlaufzeit, Erkennungs-APIs zum Programmieren der Laufzeit, einsatzfähiger Grammatik für das Diktieren und die Websuche und einer Standard-UI, die Benutzern das Auffinden und Verwenden der Spracherkennungsfeatures erleichtert.
 
+## <a name="configure-speech-recognition"></a>Konfigurieren Sie die Spracherkennung
 
-## <a name="set-up-the-audio-feed"></a>Einrichten des Audiofeeds
+Um Spracherkennung mit Ihrer app zu unterstützen, muss der Benutzer eine Verbindung herstellen und ein Mikrofon auf ihrem Gerät aktivieren und akzeptieren Sie die Microsoft-Datenschutzrichtlinie Berechtigung für Ihre app um es zu verwenden.
 
+Den Benutzer automatisch aufgefordert, mit ein systemdialogfeld anfordern und Zugriffsberechtigung für das Mikrofon verwenden des Audio feed (Beispiel von der [Spracherkennung und Speech Synthesis Beispiel](http://go.microsoft.com/fwlink/p/?LinkID=619897) unten dargestellt), der gerade Satz das **Mikrofon** [Gerät Funktion](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-devicecapability) in der [App-Paket-manifest](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest). Weitere Details finden Sie unter [Deklaration der App](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
 
-Stellen Sie sicher, dass Ihr Gerät über ein Mikrofon oder Ähnliches verfügt.
+![Datenschutzrichtlinie für den Zugriff auf das Mikrofon](images/speech/privacy.png)
 
-Legen Sie die Gerätefunktion **Mikrofon** ([**DeviceCapability**](https://msdn.microsoft.com/library/windows/apps/br211430)) im [App-Paket](https://msdn.microsoft.com/library/windows/apps/br211474)manifest (**package.appxmanifest**-Datei) fest, um Zugriff auf den Audiofeed des Mikrofons zu erhalten. Mit dieser Funktion kann die App Audio von angeschlossenen Mikrofonen aufzeichnen.
+Wenn der Benutzer klickt auf "Ja", um Zugriff auf das Mikrofon gewähren Ihrer app wird hinzugefügt, der Liste der zugelassenen Anwendungen auf die Einstellungen -> Datenschutz -> Mikrofon Seite. Allerdings wie der Benutzer auswählen kann, um diese Einstellung zu einem beliebigen Zeitpunkt deaktivieren, sollten Sie sicherstellen, dass Ihre app den Zugriff auf das Mikrofon verfügt, bevor Sie versuchen, sie zu verwenden.
 
-Informationen finden Sie unter [Deklaration der App-Funktionen](https://msdn.microsoft.com/library/windows/apps/mt270968).
+Wenn Sie auch diktieren, Cortana, unterstützen möchten oder andere Spracherkennung-(z. B. eine [vordefinierte Grammatik](#predefined-grammars) in eine Einschränkung zu einem Thema definiert Dienste), Sie müssen sich vergewissern, dass **Online Spracherkennung** (Einstellungen -> Datenschutz -> Speech) ist aktiviert.
+
+Dieser Codeausschnitt zeigt, wie Ihre app überprüfen kann, wenn ein Mikrofon vorhanden ist und verfügt über die Berechtigung zum verwenden.
+
+```csharp
+public class AudioCapturePermissions
+{
+    // If no microphone is present, an exception is thrown with the following HResult value.
+    private static int NoCaptureDevicesHResult = -1072845856;
+
+    /// <summary>
+    /// Note that this method only checks the Settings->Privacy->Microphone setting, it does not handle
+    /// the Cortana/Dictation privacy check.
+    ///
+    /// You should perform this check every time the app gets focus, in case the user has changed
+    /// the setting while the app was suspended or not in focus.
+    /// </summary>
+    /// <returns>True, if the microphone is available.</returns>
+    public async static Task<bool> RequestMicrophonePermission()
+    {
+        try
+        {
+            // Request access to the audio capture device.
+            MediaCaptureInitializationSettings settings = new MediaCaptureInitializationSettings();
+            settings.StreamingCaptureMode = StreamingCaptureMode.Audio;
+            settings.MediaCategory = MediaCategory.Speech;
+            MediaCapture capture = new MediaCapture();
+
+            await capture.InitializeAsync(settings);
+        }
+        catch (TypeLoadException)
+        {
+            // Thrown when a media player is not available.
+            var messageDialog = new Windows.UI.Popups.MessageDialog("Media player components are unavailable.");
+            await messageDialog.ShowAsync();
+            return false;
+        }
+        catch (UnauthorizedAccessException)
+        {
+            // Thrown when permission to use the audio capture device is denied.
+            // If this occurs, show an error or disable recognition functionality.
+            return false;
+        }
+        catch (Exception exception)
+        {
+            // Thrown when an audio capture device is not present.
+            if (exception.HResult == NoCaptureDevicesHResult)
+            {
+                var messageDialog = new Windows.UI.Popups.MessageDialog("No Audio Capture devices are present on this system.");
+                await messageDialog.ShowAsync();
+                return false;
+            }
+            else
+            {
+                throw;
+            }
+        }
+        return true;
+    }
+}
+```
+
+```cpp
+/// <summary>
+/// Note that this method only checks the Settings->Privacy->Microphone setting, it does not handle
+/// the Cortana/Dictation privacy check.
+///
+/// You should perform this check every time the app gets focus, in case the user has changed
+/// the setting while the app was suspended or not in focus.
+/// </summary>
+/// <returns>True, if the microphone is available.</returns>
+IAsyncOperation<bool>^  AudioCapturePermissions::RequestMicrophonePermissionAsync()
+{
+    return create_async([]() 
+    {
+        try
+        {
+            // Request access to the audio capture device.
+            MediaCaptureInitializationSettings^ settings = ref new MediaCaptureInitializationSettings();
+            settings->StreamingCaptureMode = StreamingCaptureMode::Audio;
+            settings->MediaCategory = MediaCategory::Speech;
+            MediaCapture^ capture = ref new MediaCapture();
+
+            return create_task(capture->InitializeAsync(settings))
+                .then([](task<void> previousTask) -> bool
+            {
+                try
+                {
+                    previousTask.get();
+                }
+                catch (AccessDeniedException^)
+                {
+                    // Thrown when permission to use the audio capture device is denied.
+                    // If this occurs, show an error or disable recognition functionality.
+                    return false;
+                }
+                catch (Exception^ exception)
+                {
+                    // Thrown when an audio capture device is not present.
+                    if (exception->HResult == AudioCapturePermissions::NoCaptureDevicesHResult)
+                    {
+                        auto messageDialog = ref new Windows::UI::Popups::MessageDialog("No Audio Capture devices are present on this system.");
+                        create_task(messageDialog->ShowAsync());
+                        return false;
+                    }
+
+                    throw;
+                }
+                return true;
+            });
+        }
+        catch (Platform::ClassNotRegisteredException^ ex)
+        {
+            // Thrown when a media player is not available. 
+            auto messageDialog = ref new Windows::UI::Popups::MessageDialog("Media Player Components unavailable.");
+            create_task(messageDialog->ShowAsync());
+            return create_task([] {return false; });
+        }
+    });
+}
+```
+
+```js
+var AudioCapturePermissions = WinJS.Class.define(
+    function () { }, {},
+    {
+        requestMicrophonePermission: function () {
+            /// <summary>
+            /// Note that this method only checks the Settings->Privacy->Microphone setting, it does not handle
+            /// the Cortana/Dictation privacy check.
+            ///
+            /// You should perform this check every time the app gets focus, in case the user has changed
+            /// the setting while the app was suspended or not in focus.
+            /// </summary>
+            /// <returns>True, if the microphone is available.</returns>
+            return new WinJS.Promise(function (completed, error) {
+
+                try {
+                    // Request access to the audio capture device.
+                    var captureSettings = new Windows.Media.Capture.MediaCaptureInitializationSettings();
+                    captureSettings.streamingCaptureMode = Windows.Media.Capture.StreamingCaptureMode.audio;
+                    captureSettings.mediaCategory = Windows.Media.Capture.MediaCategory.speech;
+
+                    var capture = new Windows.Media.Capture.MediaCapture();
+                    capture.initializeAsync(captureSettings).then(function () {
+                        completed(true);
+                    },
+                    function (error) {
+                        // Audio Capture can fail to initialize if there's no audio devices on the system, or if
+                        // the user has disabled permission to access the microphone in the Privacy settings.
+                        if (error.number == -2147024891) { // Access denied (microphone disabled in settings)
+                            completed(false);
+                        } else if (error.number == -1072845856) { // No recording device present.
+                            var messageDialog = new Windows.UI.Popups.MessageDialog("No Audio Capture devices are present on this system.");
+                            messageDialog.showAsync();
+                            completed(false);
+                        } else {
+                            error(error);
+                        }
+                    });
+                } catch (exception) {
+                    if (exception.number == -2147221164) { // REGDB_E_CLASSNOTREG
+                        var messageDialog = new Windows.UI.Popups.MessageDialog("Media Player components not available on this system.");
+                        messageDialog.showAsync();
+                        return false;
+                    }
+                }
+            });
+        }
+    })
+```
 
 ## <a name="recognize-speech-input"></a>Erkennen von Spracheingabe
 
-
 Mit einer *Einschränkung* werden die Wörter und Wortgruppen (Vokabular) definiert, die eine App bei der Spracheingabe erkennt. Einschränkungen sind der Kern der Spracherkennung und verleihen Ihrer App mehr Kontrolle über die Genauigkeit der Spracherkennung.
 
-Sie können verschiedene Arten von Einschränkungen bei der Spracherkennung nutzen:
+Sie können die folgenden Arten von Einschränkungen für die Erkennung von Spracheingabe verwenden.
 
-1.  **Vordefinierte Grammatiken** ([**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446)).
+### <a name="predefined-grammars"></a>Vordefinierte Grammatiken
 
-    Mit vordefinierten Diktier- und Websuchgrammatiken können Sie eine Spracherkennung für Ihre App bereitstellen, ohne eine Grammatik erstellen zu müssen. Bei Verwendung dieser Grammatiken wird die Spracherkennung von einem Remotewebdienst durchgeführt, und die Ergebnisse werden an das Gerät zurückgegeben.
+Mit vordefinierten Diktier- und Websuchgrammatiken können Sie eine Spracherkennung für Ihre App bereitstellen, ohne eine Grammatik erstellen zu müssen. Bei Verwendung dieser Grammatiken wird die Spracherkennung von einem Remotewebdienst durchgeführt, und die Ergebnisse werden an das Gerät zurückgegeben.
 
-    Die Standardgrammatik der Freitext-Diktierfunktion erkennt die meisten Wörter und Ausdrücke, die Benutzer in einer bestimmten Sprache sagen können, und ist für die Erkennung kurzer Ausdrücke optimiert. Die vordefinierte Grammatik für das Diktieren kommt dann zum Einsatz, wenn Sie keine Einschränkungen für Ihr [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226)-Objekt festlegen. Die Freitext-Diktierfunktion ist nützlich, wenn Sie nicht einschränken möchten, was Benutzer sagen können. Typische Verwendungsmöglichkeiten sind das Erstellen von Notizen oder das Diktieren eines Nachrichtentexts.
+Die Standardgrammatik der Freitext-Diktierfunktion erkennt die meisten Wörter und Ausdrücke, die Benutzer in einer bestimmten Sprache sagen können, und ist für die Erkennung kurzer Ausdrücke optimiert. Die vordefinierte Grammatik für das Diktieren kommt dann zum Einsatz, wenn Sie keine Einschränkungen für Ihr [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226)-Objekt festlegen. Die Freitext-Diktierfunktion ist nützlich, wenn Sie nicht einschränken möchten, was Benutzer sagen können. Typische Verwendungsmöglichkeiten sind das Erstellen von Notizen oder das Diktieren eines Nachrichtentexts.
 
-    Die Grammatik für die Websuche enthält wie die Diktiergrammatik eine große Anzahl von Wörtern und Ausdrücken, die Benutzer sagen können. Sie ist allerdings für die Erkennung von Begriffen optimiert, die beim Suchen im Web häufig verwendet werden.
+Die Grammatik für die Websuche enthält wie die Diktiergrammatik eine große Anzahl von Wörtern und Ausdrücken, die Benutzer sagen können. Sie ist allerdings für die Erkennung von Begriffen optimiert, die beim Suchen im Web häufig verwendet werden.
 
-    **Hinweis:** da vordefinierte Diktier- und Websuche Grammatiken groß sein können und diese online sind (nicht auf dem Gerät), Leistung ist möglicherweise nicht so gut wie bei einer lokal auf dem Gerät installierten benutzerdefinierten Grammatik.     
+**Hinweis:** da vordefinierte Diktier- und Websuche Grammatiken groß sein können und diese online sind (nicht auf dem Gerät), Leistung ist möglicherweise nicht so gut wie bei einer lokal auf dem Gerät installierten benutzerdefinierten Grammatik.     
 
-    Diese vordefinierten Grammatiken können zum Erkennen von bis zu zehn Sekunden Spracheingabe verwendet werden. Sie müssen dazu keinen Code selbst erstellen. Sie erfordern jedoch eine Netzwerkverbindung.
+Diese vordefinierten Grammatiken können zum Erkennen von bis zu zehn Sekunden Spracheingabe verwendet werden. Sie müssen dazu keinen Code selbst erstellen. Sie erfordern jedoch eine Netzwerkverbindung.
 
-    Zum Verwenden der Webdiensteinschränkungen muss die Unterstützung für die Spracheingabe und das Diktieren unter **Einstellungen** **-> Datenschutz -> Datenschutzeinstellungen für Sprache, Freihand, Eingabe** aktiviert sein.
+Zum Verwenden der Webdiensteinschränkungen muss die Unterstützung für die Spracheingabe und das Diktieren unter **Einstellungen** **-> Datenschutz -> Datenschutzeinstellungen für Sprache, Freihand, Eingabe** aktiviert sein.
 
-    Hier wird erläutert, wie Sie testen, ob die Spracheingabe aktiviert ist, und wie Sie die Seite „Einstellungen -> Datenschutz -> Datenschutzeinstellungen für Sprache, Freihand und Eingabe“ öffnen.
+Hier wird erläutert, wie Sie testen, ob die Spracheingabe aktiviert ist, und wie Sie die Seite „Einstellungen -> Datenschutz -> Datenschutzeinstellungen für Sprache, Freihand und Eingabe“ öffnen.
 
-    Zuerst initialisieren wir eine globale Variable (HResultPrivacyStatementDeclined) für den HResult-Wert 0x80045509. Weitere Informationen finden Sie unter [Ausnahmebehandlung in C# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/dn532194).
+Zuerst initialisieren wir eine globale Variable (HResultPrivacyStatementDeclined) für den HResult-Wert 0x80045509. Weitere Informationen finden Sie unter [Ausnahmebehandlung in C# oder Visual Basic](https://msdn.microsoft.com/library/windows/apps/dn532194).
 
-    ```csharp
-    private static uint HResultPrivacyStatementDeclined = 0x80045509;
-    ```
+```csharp
+private static uint HResultPrivacyStatementDeclined = 0x80045509;
+```
 
-    Anschließend fangen wir während der Erkennung alle standardmäßigen Ausnahmen ab und testen, ob der [**HResult**](https://msdn.microsoft.com/library/windows/apps/br206579)-Wert dem Wert der HResultPrivacyStatementDeclined-Variablen entspricht. Wenn ja, zeigen wir eine Warnung an und rufen `await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-accounts"));` auf, um die Seite „Einstellungen“ zu öffnen.
-    
-    ```csharp
-    catch (Exception exception)
-    {
-      // Handle the speech privacy policy error.
-      if ((uint)exception.HResult == HResultPrivacyStatementDeclined)
-      {
-        resultTextBlock.Visibility = Visibility.Visible;
-        resultTextBlock.Text = "The privacy statement was declined." + 
-          "Go to Settings -> Privacy -> Speech, inking and typing, and ensure you" +
-          "have viewed the privacy policy, and 'Get To Know You' is enabled.";
-        // Open the privacy/speech, inking, and typing settings page.
-        await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-accounts")); 
-      }
-      else
-      {
-        var messageDialog = new Windows.UI.Popups.MessageDialog(exception.Message, "Exception");
-        await messageDialog.ShowAsync();
-      }
-    }
-    ```
+Anschließend fangen wir während der Erkennung alle standardmäßigen Ausnahmen ab und testen, ob der [**HResult**](https://msdn.microsoft.com/library/windows/apps/br206579)-Wert dem Wert der HResultPrivacyStatementDeclined-Variablen entspricht. Wenn ja, zeigen wir eine Warnung an und rufen `await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-accounts"));` auf, um die Seite „Einstellungen“ zu öffnen.
 
-2.  **Einschränkungen per programmgesteuerter Liste** ([**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421))
+```csharp
+catch (Exception exception)
+{
+  // Handle the speech privacy policy error.
+  if ((uint)exception.HResult == HResultPrivacyStatementDeclined)
+  {
+    resultTextBlock.Visibility = Visibility.Visible;
+    resultTextBlock.Text = "The privacy statement was declined." + 
+      "Go to Settings -> Privacy -> Speech, inking and typing, and ensure you" +
+      "have viewed the privacy policy, and 'Get To Know You' is enabled.";
+    // Open the privacy/speech, inking, and typing settings page.
+    await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-accounts")); 
+  }
+  else
+  {
+    var messageDialog = new Windows.UI.Popups.MessageDialog(exception.Message, "Exception");
+    await messageDialog.ShowAsync();
+  }
+}
+```
 
-    Einschränkungen per programmgesteuerter Liste sind eine unkomplizierte Methode für die Erstellung einfacher Grammatiken in Form einer Liste von Wörtern und Ausdrücken. Eine Einschränkungsliste eignet sich gut für die Erkennung kurzer, einzelner Ausdrücke. Das explizite Angeben aller Wörter in einer Grammatik verbessert auch die Erkennungsgenauigkeit, da das Spracherkennungsmodul nur eine Übereinstimmung bestätigen muss. Die Liste kann auch programmgesteuert aktualisiert werden.
+Finden Sie unter [**SpeechRecognitionTopicConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631446).
 
-    Eine Einschränkungsliste besteht aus einem Array von Zeichenfolgen, die die Spracheingaben darstellen, die von Ihrer App für einen Erkennungsvorgang akzeptiert werden. Sie können in Ihrer App eine Einschränkungsliste einrichten, indem Sie ein Einschränkungslistenobjekt für die Spracherkennung erstellen und ein Array mit Zeichenfolgen übergeben. Fügen Sie dieses Objekt dann der Einschränkungsauflistung der Erkennung hinzu. Die Erkennung ist erfolgreich, wenn die Spracherkennung die Zeichenfolgen des Arrays erkennt.
+### <a name="programmatic-list-constraints"></a>Einschränkungen per programmgesteuerter Liste 
 
-3.  **SRGS-Grammatiken** ([**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412))
+Einschränkungen per programmgesteuerter Liste sind eine unkomplizierte Methode für die Erstellung einfacher Grammatiken in Form einer Liste von Wörtern und Ausdrücken. Eine Einschränkungsliste eignet sich gut für die Erkennung kurzer, einzelner Ausdrücke. Das explizite Angeben aller Wörter in einer Grammatik verbessert auch die Erkennungsgenauigkeit, da das Spracherkennungsmodul nur eine Übereinstimmung bestätigen muss. Die Liste kann auch programmgesteuert aktualisiert werden.
 
-    Eine Speech Recognition Grammar Specification (SRGS)-Grammatik ist ein statisches Dokument, das im Gegensatz zu einer Einschränkung per programmgesteuerter Liste das in [SRGS Version1.0](http://go.microsoft.com/fwlink/p/?LinkID=262302) definierte XML-Format verwendet. Eine SRGS-Grammatik bietet die höchstmögliche Kontrolle über die Spracherkennungsfunktion, da Sie mehrere semantische Bedeutungen in einem einzigen Erkennungsvorgang erfassen können.
+Eine Einschränkungsliste besteht aus einem Array von Zeichenfolgen, die die Spracheingaben darstellen, die von Ihrer App für einen Erkennungsvorgang akzeptiert werden. Sie können in Ihrer App eine Einschränkungsliste einrichten, indem Sie ein Einschränkungslistenobjekt für die Spracherkennung erstellen und ein Array mit Zeichenfolgen übergeben. Fügen Sie dieses Objekt dann der Einschränkungsauflistung der Erkennung hinzu. Die Erkennung ist erfolgreich, wenn die Spracherkennung die Zeichenfolgen des Arrays erkennt.
 
-4.  **Einschränkungen für Sprachbefehle** ([**SpeechRecognitionVoiceCommandDefinitionConstraint**](https://msdn.microsoft.com/library/windows/apps/dn653220))
+Finden Sie unter [**SpeechRecognitionListConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631421).
 
-    Verwenden Sie eine Voice Command Definition-(VCD-)XML-Datei, um die Befehle zu definieren, mit denen der Benutzer Aktionen initiieren kann, wenn er Ihre App aktiviert. Weitere Details finden Sie unter [Starten einer Vordergrund-App mit Sprachbefehlen in Cortana](https://msdn.microsoft.com/cortana/voicecommands/launch-a-foreground-app-with-voice-commands-in-cortana).
+### <a name="srgs-grammars"></a>SRGS-Grammatik
 
-**Hinweis:** welche Art von Einschränkungstyp Ihnen richtet sich nach der Komplexität der Erkennungsfunktion, die Sie erstellen möchten. Für eine bestimmte Erkennungsaufgabe kann jeweils einer der Ansätze am besten geeignet sein, und vielleicht haben Sie in Ihrer App sogar für alle Einschränkungsarten Verwendung.
+Eine Speech Recognition Grammar Specification (SRGS)-Grammatik ist ein statisches Dokument, das im Gegensatz zu einer Einschränkung per programmgesteuerter Liste das in [SRGS Version1.0](http://go.microsoft.com/fwlink/p/?LinkID=262302) definierte XML-Format verwendet. Eine SRGS-Grammatik bietet die höchstmögliche Kontrolle über die Spracherkennungsfunktion, da Sie mehrere semantische Bedeutungen in einem einzigen Erkennungsvorgang erfassen können.
+
+ Finden Sie unter [**SpeechRecognitionGrammarFileConstraint**](https://msdn.microsoft.com/library/windows/apps/dn631412).
+
+### <a name="voice-command-constraints"></a>Einschränkungen für Sprachbefehle
+
+Verwenden Sie eine Voice Command Definition-(VCD-)XML-Datei, um die Befehle zu definieren, mit denen der Benutzer Aktionen initiieren kann, wenn er Ihre App aktiviert. Weitere Details finden Sie unter [Starten einer Vordergrund-App mit Sprachbefehlen in Cortana](https://msdn.microsoft.com/cortana/voicecommands/launch-a-foreground-app-with-voice-commands-in-cortana).
+
+Finden Sie unter [ **SpeechRecognitionVoiceCommandDefinitionConstraint**](https://msdn.microsoft.com/library/windows/apps/dn653220)/
+
+**Hinweis:** die Art der Einschränkung, den Sie verwenden, hängt von der Komplexität der Erkennungsfunktion, die Sie erstellen möchten. Für eine bestimmte Erkennungsaufgabe kann jeweils einer der Ansätze am besten geeignet sein, und vielleicht haben Sie in Ihrer App sogar für alle Einschränkungsarten Verwendung.
 Informationen zu den ersten Schritten mit Einschränkungen finden Sie unter [Definieren von benutzerdefinierten Erkennungseinschränkungen](define-custom-recognition-constraints.md).
-
- 
 
 Die vordefinierte Diktiergrammatik von universellen Windows-Apps erkennt die meisten Wörter und kurzen Wortgruppen einer Sprache. Sie wird standardmäßig aktiviert, wenn ein Spracherkennungsobjekt ohne benutzerdefinierte Einschränkungen instanziiert wird.
 
 In diesem Beispiel zeigen wir Ihnen, wie Sie:
 
--   eine Spracherkennung erstellen,
--   die standardmäßigen Einschränkungen von universellen Windows-Apps kompilieren (es wurde keine Grammatik zum Grammatiksatz der Spracherkennung hinzugefügt) und
--   die Spracherkennung starten, indem Sie die einfache Erkennungs-UI und das TTS-Feedback der [**RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245)-Methode verwenden. Verwenden Sie die [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/dn653244)-Methode, wenn die Standard-UI nicht benötigt wird.
+- eine Spracherkennung erstellen,
+- die standardmäßigen Einschränkungen von universellen Windows-Apps kompilieren (es wurde keine Grammatik zum Grammatiksatz der Spracherkennung hinzugefügt) und
+- die Spracherkennung starten, indem Sie die einfache Erkennungs-UI und das TTS-Feedback der [**RecognizeWithUIAsync**](https://msdn.microsoft.com/library/windows/apps/dn653245)-Methode verwenden. Verwenden Sie die [**RecognizeAsync**](https://msdn.microsoft.com/library/windows/apps/dn653244)-Methode, wenn die Standard-UI nicht benötigt wird.
 
 ```CSharp
 private async void StartRecognizing_Click(object sender, RoutedEventArgs e)

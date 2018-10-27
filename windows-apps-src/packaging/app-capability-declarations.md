@@ -8,12 +8,12 @@ ms.date: 09/20/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c17c802e77d13e6e980ed5046c19bfc106d5cff
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.openlocfilehash: 451a8041e0a81d43d91692e92046c32d458e0982
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5563271"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5710613"
 ---
 # <a name="app-capability-declarations"></a>Deklarationen von App-Funktionen
 
@@ -211,6 +211,8 @@ Die folgende Tabelle enthält die eingeschränkten Funktionen. Sie können eine 
 | **Erhöhte Rechte** | Die **AllowElevation** eingeschränkte Funktion ermöglicht apps, die Microsoft-Partner und Unternehmen können vorhandene desktop-Funktionalität beibehalten, die automatische heraufstufung beim Starten oder während der Lebensdauer einer app erfordert erstellt werden.<br/><br/>Es wird nicht empfohlen, diese Funktion in Apps zu deklarieren, die an den Store übermittelt werden. Für die meisten Entwickler wird die Verwendung dieser Funktion nicht genehmigt. Es wird nur für Line-of-Business-apps, die vom Unternehmen dem privaten Store über den Microsoft Store für Unternehmen bereitgestellt genehmigt werden.  |
 | **Windows Team-Gerät Anmeldeinformationen** | Die **TeamEditionDeviceCredentials** eingeschränkte Funktion ermöglicht apps den Zugriff auf APIs, die die Gerätekonto-Anmeldeinformationen auf einem Surface Hub-Gerät mit Windows 10, Version 1703 oder höher anfordern.<br/><br/>Es wird nicht empfohlen, diese Funktion in Apps zu deklarieren, die an den Store übermittelt werden. Für die meisten Entwickler wird die Verwendung dieser Funktion nicht genehmigt. |
 | **Windows-Team Anwendung anzeigen** | Die **TeamEditionView** eingeschränkte Funktion ermöglicht apps den Zugriff auf APIs für das Hosten von einer Anwendung Ansicht auf einem Surface Hub-Gerät mit Windows 10, Version 1703 oder höher.<br/><br/>Es wird nicht empfohlen, diese Funktion in Apps zu deklarieren, die an den Store übermittelt werden. Für die meisten Entwickler wird die Verwendung dieser Funktion nicht genehmigt. |
+| **Kamera die Verarbeitung der Erweiterung** | Die **CameraProcessingExtension** eingeschränkt-Funktion ermöglicht apps die Bilder, die von der Kamera ohne direkte Kamera Steuerelement erfasst verarbeiten.<br /><br />Diese Funktion ist erforderlich, im [Windows.Devices.PointOfService.Provider](/uwp/api/windows.devices.pointofservice.provider) -Namespace-APIs aufzurufen.<br /><br />Jeder kann den Zugriff auf diese Funktion für die Übermittlung an den Store anfordern. |
+| **Datennutzung Management*** | Die **NetworkDataUsageManagement** eingeschränkte Funktion ermöglicht apps das Netzwerk Daten Nutzungsinformationen zu sammeln.<br /><br />Diese Funktion ist erforderlich, um [GetAttributedNetworkUsageAsync](/uwp/api/windows.networking.connectivity.connectionprofile.getattributednetworkusageasync)aufzurufen.<br /><br />Jeder kann den Zugriff auf diese Funktion für die Übermittlung an den Store anfordern. |
 
 ## <a name="custom-capabilities"></a>Benutzerdefinierte Funktionen
 

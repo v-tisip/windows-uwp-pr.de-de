@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, Uwp, Inhalt-Gruppenzuordnung, Streaming-Installation, Uwp-App-Streaming-Installation, Quellinhalt-Gruppenzuordnung
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a2922d6d3f54d693a9fe9c0982ea06cc5f2caae
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5542982"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5710560"
 ---
 # <a name="create-and-convert-a-source-content-group-map"></a>Erstellen und konvertieren Sie eine Quellinhalt-Gruppenzuordnung.
 
