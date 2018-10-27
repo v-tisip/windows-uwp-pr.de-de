@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP, Bewertungen, Rezensionen
 ms.localizationpriority: medium
 ms.openlocfilehash: d736fa47251c85491a29b324a3ed59181a5060c8
-ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5592935"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5709790"
 ---
 # <a name="request-ratings-and-reviews-for-your-app"></a><span data-ttu-id="eb60b-103">Anfordern von Bewertungen und Prüfungen für Ihre App</span><span class="sxs-lookup"><span data-stu-id="eb60b-103">Request ratings and reviews for your app</span></span>
 

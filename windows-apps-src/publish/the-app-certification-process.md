@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, veröffentlichen, vorverarbeitung, Zertifizierung, freigeben, Ausstehend, übermitteln, veröffentlichen, Status, Zeit
 ms.localizationpriority: medium
 ms.openlocfilehash: 24eec7e0f9b52d83d9cda5b964e6b23274a5e6e6
-ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5643262"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5709085"
 ---
 # <a name="the-app-certification-process"></a><span data-ttu-id="07f7d-103">Der App-Zertifizierungsprozess</span><span class="sxs-lookup"><span data-stu-id="07f7d-103">The app certification process</span></span>
 

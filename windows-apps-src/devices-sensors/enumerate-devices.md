@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: df6082665136442c03273dea4132417b0fd7033c
-ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5653852"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5709760"
 ---
 # <a name="enumerate-devices"></a><span data-ttu-id="4ee4b-104">Auflisten von Geräten</span><span class="sxs-lookup"><span data-stu-id="4ee4b-104">Enumerate devices</span></span>
 

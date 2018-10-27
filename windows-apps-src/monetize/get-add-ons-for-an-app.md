@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-Ons, In-App-Produkte, IAPs
 ms.localizationpriority: medium
 ms.openlocfilehash: a9924bf749499318c257001eafffabd902cddaa9
-ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5593128"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5709316"
 ---
 # <a name="get-add-ons-for-an-app"></a><span data-ttu-id="44086-104">Abrufen von Add-Ons für eine App</span><span class="sxs-lookup"><span data-stu-id="44086-104">Get add-ons for an app</span></span>
 

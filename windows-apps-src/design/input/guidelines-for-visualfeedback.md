@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: baf23062595d5d81fc59a2d757dcbada685c0f97
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5565985"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5708183"
 ---
 # <a name="guidelines-for-visual-feedback"></a><span data-ttu-id="8fd86-103">Richtlinien für visuelles Feedback</span><span class="sxs-lookup"><span data-stu-id="8fd86-103">Guidelines for visual feedback</span></span>
 

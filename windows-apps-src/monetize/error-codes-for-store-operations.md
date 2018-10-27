@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, in-app-Einkäufe, IAPs, Add-ons, Fehlercodes
 ms.localizationpriority: medium
 ms.openlocfilehash: 1a4eff890da48bd60405cadee2d7ecb92bb1b2fa
-ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5593278"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5709032"
 ---
 # <a name="error-codes-for-store-operations"></a><span data-ttu-id="0c0f0-104">Fehlercodes für Store-Vorgänge</span><span class="sxs-lookup"><span data-stu-id="0c0f0-104">Error codes for Store operations</span></span>
 

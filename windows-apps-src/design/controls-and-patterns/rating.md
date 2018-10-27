@@ -13,11 +13,11 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 45cea3986f149714b1f0f14743bdecd83f8b6782
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5544156"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5706030"
 ---
 # <a name="rating-control"></a><span data-ttu-id="47344-104">Bewertungssteuerelement</span><span class="sxs-lookup"><span data-stu-id="47344-104">Rating control</span></span>
 
