@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 2a053047324fcb795a30951d70c5e0e78fbb5547
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5564619"
+ms.locfileid: "5704833"
 ---
 # <a name="save-a-file-with-a-picker"></a>Speichern einer Datei mit einer Auswahl
 

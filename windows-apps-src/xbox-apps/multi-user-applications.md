@@ -9,11 +9,11 @@ keywords: Windows10, UWP
 ms.assetid: 2dde6ed3-7f53-48a6-aebe-2605230decb8
 ms.localizationpriority: medium
 ms.openlocfilehash: 7534b6764bc98c415b557d100d869df186453626
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5568109"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5687224"
 ---
 # <a name="introduction-to-multi-user-applications"></a>Einführung in Anwendungen mit mehreren Benutzern
 

@@ -15,11 +15,11 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 922dccc61954e2022cbe76f2ca5d5b1f9e548733
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5560602"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5686451"
 ---
 # <a name="buttons"></a>Schaltflächen
 
@@ -31,7 +31,7 @@ Das XAML-Framework bietet ein standard-Schaltflächen-Steuerelement als auch meh
 
 Steuerelement | Beschreibung
 ------- | -----------
-[Button](/uwp/api/windows.ui.xaml.controls.button) | Beginn eine sofortige Aktion aus. Can be used with a Click event or Command binding.
+[Button](/uwp/api/windows.ui.xaml.controls.button) | Beginn eine sofortige Aktion aus. Kann mit einem Klickereignis oder einem Befehl Bindung verwendet werden.
 [RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | Eine Schaltfläche, die ein Click-Ereignis kontinuierlich während gedrückt auslöst.
 [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | Eine Schaltfläche, die formatiert wurde, z. B. ein Hyperlink, für die Navigation verwendet. Weitere Informationen finden Sie unter [Hyperlinks](hyperlinks.md).
 [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | Eine Schaltfläche mit einem Chevron ein angefügtes Flyout geöffnet.
