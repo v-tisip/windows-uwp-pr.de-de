@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 48244889dd927f41d0998214cf1120377c4bb251
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5543522"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5641648"
 ---
 # <a name="make-your-app-localizable"></a><span data-ttu-id="a5ccc-103">App lokalisierbar machen</span><span class="sxs-lookup"><span data-stu-id="a5ccc-103">Make your app localizable</span></span>
 
