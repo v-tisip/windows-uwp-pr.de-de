@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, Uwp, animation
 ms.localizationpriority: medium
 ms.openlocfilehash: 0a991d692b4ba4c7a221932218a7d25e48fe16ca
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5553655"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5687090"
 ---
 # <a name="custom-manipulation-experiences-with-interactiontracker"></a><span data-ttu-id="352f7-104">Angepasste Manipulation mit InteractionTracker</span><span class="sxs-lookup"><span data-stu-id="352f7-104">Custom manipulation experiences with InteractionTracker</span></span>
 

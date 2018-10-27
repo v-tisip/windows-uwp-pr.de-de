@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 2af9aec9742a950f7bd35794ff4d10763e6c2c5c
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5548454"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "5683665"
 ---
 # <a name="store-and-retrieve-settings-and-other-app-data"></a><span data-ttu-id="c82d6-103">Speichern und Abrufen von Einstellungen und anderen App-Daten</span><span class="sxs-lookup"><span data-stu-id="c82d6-103">Store and retrieve settings and other app data</span></span>
 

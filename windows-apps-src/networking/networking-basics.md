@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 50ac9fcf984fa6c4ebad7e480ebfc2d002256e26
-ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5666776"
+ms.locfileid: "5711021"
 ---
 # <a name="networking-basics"></a><span data-ttu-id="c57fb-104">Networking-Grundlagen</span><span class="sxs-lookup"><span data-stu-id="c57fb-104">Networking basics</span></span>
 <span data-ttu-id="c57fb-105">Aktionen, die Sie für eine netzwerkfähige App ausführen müssen.</span><span class="sxs-lookup"><span data-stu-id="c57fb-105">Things you must do for any network-enabled app.</span></span>

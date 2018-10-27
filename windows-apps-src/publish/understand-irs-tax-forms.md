@@ -9,11 +9,11 @@ keywords: Windows10, UWP, Steuern, IRS, Bundessteuerbehörde der USA (IRS), Steu
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
 ms.openlocfilehash: e16333b061c3f50d4c0d66b0704bf0977570595e
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5570175"
+ms.locfileid: "5682340"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a><span data-ttu-id="7cf0f-103">Kennenlernen der von Microsoft ausgestellten IRS-Steuerformulare</span><span class="sxs-lookup"><span data-stu-id="7cf0f-103">Understand IRS tax forms issued by Microsoft</span></span>
 

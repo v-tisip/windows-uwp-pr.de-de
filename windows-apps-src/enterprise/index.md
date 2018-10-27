@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ffdc88449c025ba0a590ccc2bbd3f0c05346630f
-ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5666666"
+ms.locfileid: "5682558"
 ---
 # <a name="enterprise"></a><span data-ttu-id="48d3a-104">Enterprise</span><span class="sxs-lookup"><span data-stu-id="48d3a-104">Enterprise</span></span>
 

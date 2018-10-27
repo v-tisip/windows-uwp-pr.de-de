@@ -9,11 +9,11 @@ keywords: Windows10, UWP
 ms.assetid: f384ca56-f2b2-4793-b251-f7f5735376bb
 ms.localizationpriority: medium
 ms.openlocfilehash: 536679068d66a279e158790bf0fcc0f8757709cc
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5563009"
+ms.locfileid: "5685033"
 ---
 # <a name="application-development-for-windows-as-a-service"></a><span data-ttu-id="50d98-104">Anwendungsentwicklung für Windows as a Service</span><span class="sxs-lookup"><span data-stu-id="50d98-104">Application development for Windows as a service</span></span>
 

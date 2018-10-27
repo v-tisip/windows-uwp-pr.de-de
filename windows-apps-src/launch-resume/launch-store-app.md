@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 42dfecd7d1bc2c298a70fec2bdebfc4c4f9dd66c
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5571941"
+ms.locfileid: "5685078"
 ---
 # <a name="launch-the-microsoft-store-app"></a><span data-ttu-id="905ae-105">Starten der Microsoft Store-App</span><span class="sxs-lookup"><span data-stu-id="905ae-105">Launch the Microsoft Store app</span></span>
 

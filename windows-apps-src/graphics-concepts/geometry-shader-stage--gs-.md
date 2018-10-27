@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c4659ee4200915a7cc82f46c90f0e53965f322d5
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/26/2018
-ms.locfileid: "5567411"
+ms.locfileid: "5711327"
 ---
 # <a name="geometry-shader-gs-stage"></a><span data-ttu-id="eb160-104">Geometry-Shader-Stufe (GS-Stufe)</span><span class="sxs-lookup"><span data-stu-id="eb160-104">Geometry Shader (GS) stage</span></span>
 

@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 19734964c9b4ab087f7d5fd6ea749b57cccce26c
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5568469"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5687427"
 ---
 # <a name="mathematics-of-lighting"></a><span data-ttu-id="1a9de-106">Beleuchtungsmathematik</span><span class="sxs-lookup"><span data-stu-id="1a9de-106">Mathematics of lighting</span></span>
 
