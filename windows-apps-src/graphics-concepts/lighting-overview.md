@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6eca73beae6634d1809c0e9e779d80a43b495a65
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5544368"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5699966"
 ---
 # <a name="lighting-overview"></a><span data-ttu-id="04a4a-105">Beleuchtung– Übersicht</span><span class="sxs-lookup"><span data-stu-id="04a4a-105">Lighting overview</span></span>
 

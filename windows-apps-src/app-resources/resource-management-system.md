@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: b80eda57ff700d732ba2402582ed6402acca4fc6
-ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5605059"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5700328"
 ---
 # <a name="resource-management-system"></a><span data-ttu-id="33022-103">Ressourcenverwaltungssystem</span><span class="sxs-lookup"><span data-stu-id="33022-103">Resource Management System</span></span>
 <span data-ttu-id="33022-104">Das Ressourcenverwaltungssystem verfügt sowohl über Buildzeit- als auch über Laufzeitfeatures.</span><span class="sxs-lookup"><span data-stu-id="33022-104">The Resource Management System has both build-time and run-time features.</span></span> <span data-ttu-id="33022-105">Während der Buildzeit erstellt das System einen Index aller verschiedenen Varianten der Ressourcen, die mit Ihrer App gepackt sind.</span><span class="sxs-lookup"><span data-stu-id="33022-105">At build time, the system creates an index of all the different variants of the resources that are packaged up with your app.</span></span> <span data-ttu-id="33022-106">Dieser ebenfalls im App-Paket enthaltene Index ist der Package Resource Index oder kurz PRI.</span><span class="sxs-lookup"><span data-stu-id="33022-106">This index is the Package Resource Index, or PRI, and it's also included in your app's package.</span></span> <span data-ttu-id="33022-107">Zur Laufzeit erkennt das System die momentan geltenden Benutzer- und Computereinstellungen, fragt die Informationen im PRI ab und lädt automatisch die Ressourcen, die für diese Einstellungen am besten geeignet sind.</span><span class="sxs-lookup"><span data-stu-id="33022-107">At run-time, the system detects the user and machine settings that are in effect, consults the information in the PRI, and automatically loads the resources that are the best match for those settings.</span></span>

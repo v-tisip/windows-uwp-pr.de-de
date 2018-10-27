@@ -15,11 +15,11 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 9c926f9dc7a87b83550bb2cd3a5bff856ec27866
-ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5594131"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5698148"
 ---
 # <a name="check-boxes"></a><span data-ttu-id="790a1-103">Kontrollkästchen</span><span class="sxs-lookup"><span data-stu-id="790a1-103">Check boxes</span></span>
 

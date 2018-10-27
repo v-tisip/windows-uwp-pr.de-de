@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b93b3028c7968c417d4476a6f183805cdec797b0
-ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5598277"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5701390"
 ---
 # <a name="windows-runtime-components"></a><span data-ttu-id="c75f3-104">Komponenten für Windows-Runtime</span><span class="sxs-lookup"><span data-stu-id="c75f3-104">Windows Runtime components</span></span>
 <span data-ttu-id="c75f3-105">Komponenten für Windows-Runtime sind unabhängige Objekte, die Sie instanziieren und von jeder Sprache aus verwenden können, einschließlich C#, Visual Basic, JavaScript und C++.</span><span class="sxs-lookup"><span data-stu-id="c75f3-105">Windows Runtime components are self-contained objects that you can instantiate and use from any language, including C#, Visual Basic, JavaScript, and C++.</span></span>

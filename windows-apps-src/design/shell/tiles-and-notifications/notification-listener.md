@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows10, Uwp, notification listener, Usernotificationlistener, Dokumentation, Zugriff auf Benachrichtigungen
 ms.localizationpriority: medium
 ms.openlocfilehash: 635ee4cbdd0139ec9e431726ea5b040713abe97d
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5568833"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5701176"
 ---
 # <a name="notification-listener-access-all-notifications"></a><span data-ttu-id="59efd-103">Notification-Listener: Zugriff auf alle Benachrichtigungen</span><span class="sxs-lookup"><span data-stu-id="59efd-103">Notification listener: Access all notifications</span></span>
 

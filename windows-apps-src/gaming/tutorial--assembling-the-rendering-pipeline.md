@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Rendern
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e8df200e8e989015834608d38cb8dfb0d36917b
-ms.sourcegitcommit: b7e3d222e229cdbf04e837fcb94fb7d84a93de09
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5618162"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5699933"
 ---
 # <a name="rendering-framework-i-intro-to-rendering"></a><span data-ttu-id="db217-105">Rendering-Framework I: Einführung in das Rendering</span><span class="sxs-lookup"><span data-stu-id="db217-105">Rendering framework I: Intro to rendering</span></span>
 

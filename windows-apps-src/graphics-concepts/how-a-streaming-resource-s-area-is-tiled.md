@@ -12,11 +12,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 49ad096389c27fb65970424569c7c1d2ea0cb097
-ms.sourcegitcommit: d0e836dfc937ebf7dfa9c424620f93f3c8e0a7e8
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5665195"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5703542"
 ---
 # <a name="how-a-streaming-resources-area-is-tiled"></a><span data-ttu-id="233f8-106">So strukturieren Sie den Bereich einer Streamingressource</span><span class="sxs-lookup"><span data-stu-id="233f8-106">How a streaming resource's area is tiled</span></span>
 

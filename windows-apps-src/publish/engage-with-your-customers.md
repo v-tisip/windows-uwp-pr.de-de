@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 1612f4d2f2a68c1367980cf5a064ac8712b9073b
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5547078"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5696535"
 ---
 # <a name="engage-with-your-customers"></a><span data-ttu-id="c8df0-103">Kundenkontakte intensivieren</span><span class="sxs-lookup"><span data-stu-id="c8df0-103">Engage with your customers</span></span>
 

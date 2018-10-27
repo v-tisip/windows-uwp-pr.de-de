@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 250ed555e6fcf7dc40d31d89a40fa7a96295aacf
-ms.sourcegitcommit: 6cc275f2151f78db40c11ace381ee2d35f0155f9
+ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "5542417"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "5695243"
 ---
 # <a name="landmarks-and-headings"></a><span data-ttu-id="6b1b8-103">Orientierungspunkte und Überschriften</span><span class="sxs-lookup"><span data-stu-id="6b1b8-103">Landmarks and Headings</span></span>
 
