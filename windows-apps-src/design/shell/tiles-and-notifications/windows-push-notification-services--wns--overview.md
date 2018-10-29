@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 2b7d9adfd9e058d4364470b07ef3e9129ade88b3
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5704359"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5751792"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a><span data-ttu-id="24f7c-103">Übersicht über Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS)</span><span class="sxs-lookup"><span data-stu-id="24f7c-103">Windows Push Notification Services (WNS) overview</span></span>
  
