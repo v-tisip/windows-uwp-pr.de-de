@@ -3,16 +3,16 @@ author: stevewhims
 description: Antworten auf Fragen zur Erstellung und Nutzung von Windows-Runtime-APIs mit C++/WinRT.
 title: Häufig gestellte Fragen zu C++/WinRT
 ms.author: stwhi
-ms.date: 05/07/2018
+ms.date: 10/26/2018
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projektion, häufig, gestellte, fragen, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: 2a2ea3dddc592379199017408652cab0a2a68fbb
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.openlocfilehash: 612eb6ced57fb2a8ca5d855ef9c156b0b9ae4440
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5696475"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5742523"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>Häufig gestellte Fragen zu C++/WinRT
 Antworten auf Fragen, die Sie wahrscheinlich zur Erstellung und Nutzung von Windows-Runtime-APIs mit werden [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
@@ -51,7 +51,7 @@ Wenn das nicht aufgelöste Symbol eine freie Windows-Runtime-Funktion, z. B. [Ro
 #pragma comment(lib, "windowsapp")
 ```
 
-Wir empfehlen, dass Sie alle Linkerfehler, die Sie auflösen über die Verknüpfung **"windowsapp.lib"** können. Aber wenn Sie nicht, Ihre Anwendung benötigen auf der [Windows-Zertifizierungskit](../debug-test-perf/windows-app-certification-kit.md) Tests von Visual Studio und vom Microsoft Store verwendet, um Übermittlungen (d. h., die es daher möglich, dass die Anwendung erfolgreich sein nicht überprüfen aufgenommen im Microsoft Store), und klicken Sie dann Sie stattdessen eine alternative Static Link Bibliothek verknüpfen können. Beispielsweise bezieht sich Ihre Linkerfehler auf **CoIncrementMTAUsage** (oder **WINRT_CoIncrementMTAUsage**), können Sie auflösen, die durch Ole32.lib verknüpfen, wenn es unbedingt erforderlich (z. B., wenn Ihre Version von **"windowsapp.lib"** nicht Exportieren Sie die Funktion).
+Es ist wichtig, dass Sie alle Linkerfehler, die über die Verknüpfung **"windowsapp.lib"** anstelle einer alternativen Static Link-Bibliothek Sie können beheben, andernfalls wird nicht die Anwendung übergeben die [Zertifizierungskits](../debug-test-perf/windows-app-certification-kit.md) Tests von Visual Studio und verwendet die Microsoft Store Übermittlungen (d. h., die es daher möglich, dass die Anwendung erfolgreich in den Microsoft Store aufgenommen werden nicht mehr) überprüfen.
 
 ## <a name="should-i-implement-windowsfoundationiclosableuwpapiwindowsfoundationiclosable-and-if-so-how"></a>Sollte ich [**Windows::Foundation::IClosable**](/uwp/api/windows.foundation.iclosable) implementieren und wenn ja, wie?
 Wenn Sie eine Laufzeitklasse haben, die Ressourcen in ihrem Destruktor freigibt, und diese Laufzeitklasse dafür ausgelegt ist außerhalb ihrer implementierenden Kompiliereinheit genutzt zu werden (eine Komponente für Windows-Runtime, die für die allgemeinen Nutzung durch Windows-Runtime-Clientanwendungen bestimmt ist), dann empfehlen wir Ihnen,** IClosable** zu implementieren, um die Nutzung Ihrer Laufzeitklasse durch Sprachen ohne deterministische Finalisierung zu unterstützen. Stellen Sie sicher, dass Ihre Ressourcen freigegeben werden – egal ob der Destruktor, [**IClosable::Close**](/uwp/api/windows.foundation.iclosable.Close) oder beide aufgerufen werden. **IClosable::Close** kann beliebig oft aufgerufen werden.

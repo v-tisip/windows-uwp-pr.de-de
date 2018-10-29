@@ -1,6 +1,6 @@
 ---
 author: c-don
-title: Bereitstellen einer app über registrieren loser Dateien
+title: Bereitstellen einer App über Registrieren loser Dateien
 description: Diese Anleitung zeigt, wie Sie das Layout loser Datei zum Überprüfen und Freigeben von Windows 10-apps ohne Verpackung verwenden.
 ms.author: cdon
 ms.date: 6/1/2018
@@ -8,13 +8,13 @@ ms.topic: article
 keywords: Windows 10, Uwp, geräteportal, apps-Manager, Bereitstellung, sdk
 ms.localizationpriority: medium
 ms.openlocfilehash: 16dc7c3d8182e249134be941d466574cddc36157
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5705730"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5743037"
 ---
-# <a name="deploy-an-app-through-loose-file-registration"></a>Bereitstellen einer app über registrieren loser Dateien 
+# <a name="deploy-an-app-through-loose-file-registration"></a>Bereitstellen einer App über Registrieren loser Dateien 
 
 Diese Anleitung zeigt, wie Sie das Layout loser Datei zum Überprüfen und Freigeben von Windows 10-apps ohne Verpackung verwenden. Registrieren loser Dateilayouts kann Entwickler schnell ihre apps ohne die Notwendigkeit zum Packen und installieren Sie die apps überprüfen. 
 
