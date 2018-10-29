@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 842f1bf1642e79d4bd2651560fdf7208cfb1877d
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5694018"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5739841"
 ---
 # <a name="templatebinding-markup-extension"></a><span data-ttu-id="be3d3-105">{TemplateBinding}-Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="be3d3-105">{TemplateBinding} markup extension</span></span>
 
