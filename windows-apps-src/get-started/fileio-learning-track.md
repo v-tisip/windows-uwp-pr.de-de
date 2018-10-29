@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Erste Schritte, UWP, Windows10, Lernpfad, Dateien, Datei-E/A, Datei lesen, Datei schreiben, Datei erstellen, Text schreiben, Text lesen
 ms.localizationpriority: medium
 ms.openlocfilehash: 02ac4d3f157343182097e67dc8825dde940302c3
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5697506"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5744088"
 ---
 # <a name="work-with-files"></a><span data-ttu-id="726fd-104">Arbeiten mit Dateien</span><span class="sxs-lookup"><span data-stu-id="726fd-104">Work with files</span></span>
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 4822a436225bea92fdf1e981ad33378996adefe4
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5702188"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5745503"
 ---
 # <a name="getting-started-animation"></a><span data-ttu-id="abcee-104">Erste Schritte: Animationen</span><span class="sxs-lookup"><span data-stu-id="abcee-104">Getting started: Animation</span></span>
 

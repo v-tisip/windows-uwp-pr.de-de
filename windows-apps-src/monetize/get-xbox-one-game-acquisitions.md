@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Xbox One Spielekäufe
 ms.localizationpriority: medium
 ms.openlocfilehash: 86ca46903e581922cc571a854d9fa110fa261ece
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5699923"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5742060"
 ---
 # <a name="get-xbox-one-game-acquisitions"></a><span data-ttu-id="64304-104">Abrufen von Xbox One Spielekäufen</span><span class="sxs-lookup"><span data-stu-id="64304-104">Get Xbox One game acquisitions</span></span>
 
