@@ -8,13 +8,13 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, portieren, migrieren, C++/CX
 ms.localizationpriority: medium
 ms.openlocfilehash: 35fe84747624c9a855df5520322546b83772379b
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5693629"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5754360"
 ---
-# <a name="move-to-cwinrt-from-ccx"></a>Wechsel zu C++/WinRT von C++/CX
+# <a name="move-to-cwinrt-from-ccx"></a>C++/CX zu C++/WinRT wechseln
 
 Dieses Thema zeigt, wie Sie den Code in Portieren einer [C++ / CX](/cpp/cppcx/visual-c-language-reference-c-cx) Projekt zum entsprechenden Äquivalent in [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
 

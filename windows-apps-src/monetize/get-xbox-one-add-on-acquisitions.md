@@ -1,20 +1,20 @@
 ---
 author: Xansky
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um aggregierte Add-on-Kaufdaten abzurufen.
-title: Abrufen von Xbox One-Add-On-Käufen
+title: Xbox One-Add-On-Käufe abrufen
 ms.author: mhopkins
 ms.date: 10/18/2018
 ms.topic: article
 keywords: Windows 10, Uwp, Store-Dienste, Microsoft Store-Analyse-API, Xbox One Add-on-Käufe
 ms.localizationpriority: medium
 ms.openlocfilehash: e703c0c07e981ebf21ad3388ad178eabdd5c068d
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5702800"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5755668"
 ---
-# <a name="get-xbox-one-add-on-acquisitions"></a>Abrufen von Xbox One-Add-On-Käufen
+# <a name="get-xbox-one-add-on-acquisitions"></a>Xbox One-Add-On-Käufe abrufen
 
 Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, die aggregierte Add-on-Kaufdaten im JSON-Format für einen Xbox One Spiel abzurufen, die das über das Xbox-Portal (XDP) und im XDP Analytics Partner Center-Dashboard verfügbar ist.
 

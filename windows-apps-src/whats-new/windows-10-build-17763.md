@@ -7,12 +7,12 @@ ms.author: quradic
 ms.date: 10/03/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e979428191151f680f51d8d4cf2f37f70b0b369d
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.openlocfilehash: 1503b6816a1ebd687ddd320c550c4476a4c5a038
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5684248"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5752995"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>Was ist neu in Windows 10 für Entwickler, Build 17763
 
@@ -94,7 +94,7 @@ Folgende Videos wurden seit dem Fall Creators Update veröffentlicht. Diese hebe
 
 ### <a name="cwinrt"></a>C++/WinRT
 
-C++ / WinRT ist eine neue Art der Erstellung und Nutzung von Windows-Runtime-APIs. Es verfügt über alleinige in Headerdateien implementiert und bietet Ihnen einen erstklassigen Zugriff auf moderne app-Features. [Das Video ansehen](https://www.youtube.com/watch?v=TLSul1XxppA&feature=youtu.be) , um zu erfahren, wie es funktioniert, dann [Lesen Sie die Entwicklerdokumentation](../cpp-and-winrt-apis/index.md) für Weitere Informationen.
+C++ / WinRT ist eine neue Art der Erstellung und Nutzung von Windows-Runtime-APIs. Es wurde ausschließlich in Headerdateien implementiert und bietet Ihnen einen erstklassigen Zugriff auf moderne app-Features. [Das Video ansehen](https://www.youtube.com/watch?v=TLSul1XxppA&feature=youtu.be) , um zu erfahren, wie es funktioniert, dann [Lesen Sie die Entwicklerdokumentation](../cpp-and-winrt-apis/index.md) für Weitere Informationen.
 
 ### <a name="get-started-for-devs-create-and-customize-a-form-on-windows-10"></a>Erste Schritte für Entwickler: Erstellen und Anpassen eines Formulars unter Windows 10
 

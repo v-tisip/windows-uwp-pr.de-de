@@ -3,16 +3,16 @@ author: stevewhims
 description: Dieses Thema zeigt, wie Sie asynchrone Windows-Runtime-Objekte mit C++/WinRT erstellen und nutzen können.
 title: Parallelität und asynchrone Vorgänge mit C++/WinRT
 ms.author: stwhi
-ms.date: 10/21/2018
+ms.date: 10/27/2018
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projektion, parallelität, async, asynchron, asynchronität
 ms.localizationpriority: medium
-ms.openlocfilehash: b1a45ba0bd362c07c27516ef18c11c326d747b1f
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.openlocfilehash: d7807b71f1c775493e525284e61c093081eb2c2b
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5702224"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5754843"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>Parallelität und asynchrone Vorgänge mit C++/WinRT
 
@@ -460,7 +460,57 @@ Anschließend sieht anstelle der Suche nach der drei **Await_xxx** -Funktionen, 
 
 ## <a name="canceling-an-asychronous-operation-and-cancellation-callbacks"></a>Abbrechen eines Vorgangs asychrone und Abbruch Rückrufe
 
-Die Windows-Runtime-Features für die asynchrone Programmierung können Sie ein Flight asynchrone Aktion oder einen Vorgang abbrechen. Beginnen wir mit einem einfachen Beispiel.
+Die Windows-Runtime-Features für die asynchrone Programmierung können Sie ein Flight asynchrone Aktion oder einen Vorgang abbrechen. Hier ist ein Beispiel, das aufruft, [**StorageFolder::GetFilesAsync**](/uwp/api/windows.storage.storagefolder.getfilesasync) um eine große Sammlung von Dateien abgerufen werden sollen, und die resultierende Objekten für asynchrone Vorgänge in einem Datenmember gespeichert. Der Benutzer hat die Möglichkeit, den Vorgang abzubrechen.
+
+```cppwinrt
+// MainPage.xaml
+...
+<Button x:Name="workButton" Click="OnWork">Work</Button>
+<Button x:Name="cancelButton" Click="OnCancel">Cancel</Button>
+...
+
+// MainPage.h
+...
+#include <winrt/Windows.Storage.Search.h>
+...
+struct MainPage : MainPageT<MainPage>
+{
+    MainPage()
+    {
+        InitializeComponent();
+    }
+
+    IAsyncAction OnWork(IInspectable const& /* sender */, RoutedEventArgs const& /* args */)
+    {
+        workButton().Content(winrt::box_value(L"Working..."));
+
+        // Enable the Pictures Library capability in the app manifest file.
+        StorageFolder picturesLibrary{ KnownFolders::PicturesLibrary() };
+
+        m_async = picturesLibrary.GetFilesAsync(CommonFileQuery::OrderByDate, 0, 1000);
+
+        IVectorView<StorageFile> filesInFolder{ co_await m_async };
+
+        workButton().Content(box_value(L"Done!"));
+
+        // Process the files in some way.
+    }
+
+    void OnCancel(IInspectable const& /* sender */, RoutedEventArgs const& /* args */)
+    {
+        if (m_async.Status() != AsyncStatus::Completed)
+        {
+            m_async.Cancel();
+            workButton().Content(winrt::box_value(L"Canceled"));
+        }
+    }
+
+private:
+    IAsyncOperation<::IVectorView<StorageFile>> m_async;
+};
+```
+
+Für die Implementierung Seite des Abbruchs beginnen wir mit einem einfachen Beispiel.
 
 ```cppwinrt
 // pch.h
