@@ -1,25 +1,25 @@
 ---
 author: JnHs
-Description: Learn how to send notifications from Windows Dev Center to your app to encourage groups of customers to take an action, such as rating an app or buying an add-on.
+Description: Learn how to send notifications from Partner Center to your app to encourage groups of customers to take an action, such as rating an app or buying an add-on.
 title: Senden benutzerorientierter Pushbenachrichtigungen an die Kunden Ihrer App
 ms.author: wdg-dev-content
-ms.date: 08/07/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, zielgruppenorientierte Benachrichtigungen, Push-Benachrichtigungen, Popups, Kachel
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: medium
-ms.openlocfilehash: 51da748b1f28a658886543fbf0eaab01e3f74394
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 7c2cf6c9cbd4aa0b25afea47a2fe82774c3c87a7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5748201"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5813454"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>Senden von Benachrichtigungen an die Kunden Ihrer App
 
 Ihr Erfolg als App-Entwickler hängt davon ab, Ihre Sie Ihre Kunden zum richtigen Zeitpunkt und mit der richtigen Nachricht erreichen. Mit Benachrichtigungen können Sie Ihre Kunden zu einer Aktion animieren, z.B. eine App bewerten, ein Add-On kaufen, ein neues Feature ausprobieren oder eine andere App herunterladen (beispielsweise kostenlos mit einem von Ihnen bereitgestellten [Werbecode](generate-promotional-codes.md)).
 
-Windows Dev Center bietet eine datengestützte Kundenbindungsplattform, über die Sie allen App-Kunden oder nur einer bestimmten Gruppe von Windows10-App-Kunden, die den von Ihnen für ein [Kundensegment](create-customer-segments.md) definierten Kriterien entsprechen, Benachrichtigungen senden können. <!-- You can also send a single notification to all of the customers for multiple apps. -->
+[Partner Center](https://partner.microsoft.com/dashboard) bietet eine datengesteuerte Customer Engagement Plattform Sie zum Senden von Benachrichtigungen an alle Kunden Ihrer app verwenden können, oder nur eine Teilmenge der Windows 10-Kunden Ihrer app, die die Kriterien erfüllen [Kunden definierten Segment](create-customer-segments.md). Sie können auch eine Benachrichtigung an die Kunden von mehr als eine Ihrer apps gesendet werden erstellen.
 
 > [!IMPORTANT]
 > Diese Benachrichtigungen können nur mit UWP-Apps verwendet werden.
@@ -37,19 +37,19 @@ Beachten Sie beim Inhalt der Benachrichtigungen Folgendes:
 
 Sie müssen drei übergeordnete Schritte durchführen, um Ihre Kunden mithilfe von Benachrichtigungen zu erreichen.
 
-1. **Registrieren Sie Ihre App für den Empfang von Pushbenachrichtigungen.** Fügen Sie hierzu Ihrer App einen Verweis auf das Microsoft Store Services SDK hinzu, und ergänzen Sie anschließend einige wenige Codezeilen, mit denen ein Benachrichtigungskanal zwischen dem Dev Center und Ihrer App registriert wird. Über diesen Kanal übermitteln wir Ihre Benachrichtigungen an Ihre Kunden. Details finden Sie unter [Konfigurieren Ihrer App für benutzerorientierte Pushbenachrichtigungen](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
+1. **Registrieren Sie Ihre App für den Empfang von Pushbenachrichtigungen.** Hierzu einen Verweis auf das Microsoft Store Services SDK in Ihrer app hinzufügen und ergänzen Sie anschließend einige wenige Codezeilen, die ein Benachrichtigungskanal zwischen Partner Center und Ihrer app registriert wird. Über diesen Kanal übermitteln wir Ihre Benachrichtigungen an Ihre Kunden. Details finden Sie unter [Konfigurieren Ihrer App für benutzerorientierte Pushbenachrichtigungen](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 2. **Entscheiden Sie, welche Kunden Ihre Zielgruppe ist.** Sie können Ihre Benachrichtigung an alle Kunden Ihrer App senden, oder (für Benachrichtigungen für eine einzelne App) an eine Gruppe von Kunden, die ein *Segment* genannt werden und diese basierend auf demografischen oder Umsatz-Kriterien definieren. Weitere Informationen finden Sie unter [Erstellen von Kundensegmenten](create-customer-segments.md).
 3. **Erstellen Sie den Inhalt der Benachrichtigung und versenden sie diesen. **Sie möchten möglicherweise eine Benachrichtigung erstellen, die Ihre Kunden dazu auffordert, Ihre App zu bewerten oder eine Benachrichtigung mit einem Sonderangebot für den Kauf eines Add-On senden.
 
 
 ## <a name="to-create-and-send-a-notification"></a>So erstellen und senden Sie eine Benachrichtigung
 
-Befolgen Sie diese Schritte, um eine Benachrichtigung im Dashboard zu erstellen und an ein bestimmtes Kundensegment zu senden.
+Befolgen Sie diese Schritte, um eine Benachrichtigung im Partner Center erstellen und an ein bestimmtes Kundensegment zu senden.
 
 > [!NOTE]
-> Bevor die App von Dev Center Benachrichtigungen empfangen kann, müssen Sie zuerst die Methode [RegisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) in Ihrer App aufrufen, um Ihre App für den Empfang von Benachrichtigungen zu registrieren. Diese Methode ist im [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) verfügbar. Weitere Informationen zum Aufrufen dieser Methode, einschließlich eines Codebeispiels, finden Sie unter [Konfigurieren Ihrer App für benutzerorientierte Pushbenachrichtigungen](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
+> Bevor eine app aus dem Partner Center Benachrichtigungen empfangen kann, müssen Sie zuerst die Methode [RegisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) in Ihrer app zum Registrieren Ihrer app zum Empfangen von Benachrichtigungen aufrufen. Diese Methode ist im [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) verfügbar. Weitere Informationen zum Aufrufen dieser Methode, einschließlich eines Codebeispiels, finden Sie unter [Konfigurieren Ihrer App für benutzerorientierte Pushbenachrichtigungen](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 
-1. Erweitern Sie im [Windows Dev Center-Dashboard](https://partner.microsoft.com/dashboard/) den Abschnitt **Bewerten** und wählen Sie dann **Benachrichtigungen** aus.
+1. Im [Partner Center](https://partner.microsoft.com/dashboard)erweitern Sie den Abschnitt **einbeziehen** , und wählen Sie dann **Benachrichtigungen**.
 2. Wählen Sie auf der Seite **Benachrichtigungen** die Option **Neue Benachrichtigung** aus.
 3. Wählen Sie im Abschnitt **Wählen Sie eine Vorlage** die [Art der Benachrichtigung](#notification-template-types) zu senden, und klicken Sie dann auf **OK**.
 4. Verwenden Sie auf der nächsten Seite das Dropdownmenü, um entweder **Einzelne App** oder **Mehrere Apps** auszuwählen, für die Sie eine Benachrichtigung generieren möchten. Sie können nur apps auswählen, die [den Empfang von Benachrichtigungen mithilfe des Microsoft Store Services SDK konfiguriert](../monetize/configure-your-app-to-receive-dev-center-notifications.md)wurden.
@@ -111,20 +111,20 @@ Sie können ermitteln, wie gut Sie mit den einzelnen Benachrichtigungen Ihre Kun
 ### <a name="to-measure-notification-performance"></a>So messen Sie die Benachrichtigungsleistung
 
 1.  Aktivieren Sie beim Erstellen einer Benachrichtigung im Abschnitt **Benachrichtigungsinhalt** das Kontrollkästchen **Track app launch rate**.
-2.  Rufen Sie in Ihrer App die [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch)-Methode auf, um Dev Center mitzuteilen, dass Ihre App als Reaktion auf eine benutzerorientierte Benachrichtigung gestartet wurde. Diese Methode wird vom Microsoft Store Services SDK bereitgestellt. Weitere Informationen zum Aufrufen dieser Methode finden Sie unter [Konfigurieren Ihrer App zum Empfangen von Dev Center-Benachrichtigungen](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
+2.  Rufen Sie in Ihrer app die [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) -Methode zum Partner Center zu benachrichtigen, dass Ihre app in Reaktion auf eine benutzerorientierte Benachrichtigung gestartet wurde. Diese Methode wird vom Microsoft Store Services SDK bereitgestellt. Weitere Informationen zum Aufrufen dieser Methode finden Sie unter [Konfigurieren Ihrer app Partner Center Benachrichtigungen empfangen](../monetize/configure-your-app-to-receive-dev-center-notifications.md).
 
 
 ### <a name="to-view-notification-performance"></a>So zeigen Sie die Benachrichtigungsleistung an
 
-Wenn Sie die Benachrichtigung und Ihre App wie oben beschrieben für das Messen der Benachrichtigungsleistung konfiguriert haben, können Sie auf dem Dashboard anzeigen, wie gut Ihre Benachrichtigungen ihren Zweck erfüllen.
+Wenn Sie die Benachrichtigung und Ihre app Messen der benachrichtigungsleistung wie oben beschrieben konfiguriert haben, können Sie sehen, wie gut Ihre Benachrichtigungen Ihren Zweck erfüllen.
 
 Um detaillierte Daten für jede Benachrichtigung zu überprüfen:
 
-1.  Erweitern Sie im Windows Dev Center-Dashboard den Abschnitt **Bewerten** und wählen Sie dann **Benachrichtigungen** aus.
+1.  Im Partner Center erweitern Sie den Abschnitt **einbeziehen** , und wählen Sie **Benachrichtigungen**.
 2.  Wählen Sie in der Tabelle der vorhandenen Benachrichtigungen **In Bearbeitung** oder **abgeschlossen**, und betrachten Sie dann in die allgemeine Leistung der einzelnen Benachrichtigungen finden Sie unter der Spalte **Übermittlungsrate** bzw. **App starten Rate** .
 3.  Um detailliertere Leistungsdetails anzuzeigen, wählen Sie einen Benachrichtigungsnamen aus. Im Abschnitt **Lieferstatistik** sehen Sie Daten zu **Anzahl** und **Prozentsatz** für die folgenden **Status**-Typen der Benachrichtigung angezeigt:
     * **Fehlgeschlagen**: Die Benachrichtigung wurde aus einem bestimmten Grund nicht übermittelt. Dies kann z.B. bei einem Problem im Windows-Benachrichtigungsdienst der Fall sein.
-    * **Channel expiration failure**: Die Benachrichtigung konnte nicht übermittelt werden, da der Kanal zwischen der App und Dev Center abgelaufen ist. Dies kann beispielsweise vorkommen, wenn der Kunde Ihre App seit längerem nicht mehr geöffnet hat.
+    * **Channel Expiration Failure**: die Benachrichtigung konnte nicht übermittelt werden, da der Kanal zwischen der app und Partner Center abgelaufen ist. Dies kann beispielsweise vorkommen, wenn der Kunde Ihre App seit längerem nicht mehr geöffnet hat.
     * **Senden**: Die Benachrichtigung befindet sich in der Warteschlange für das Senden.
     * **Gesendet**: Die Benachrichtigung wurde gesendet.
     * **Startet**: Die Benachrichtigung wurde gesendet, der Kunde hat darauf geklickt, und Ihre App wurde daher geöffnet. Beachten Sie, dass hiermit nur das Starten der Apps nachverfolgt wird. Benachrichtigungen, die den Kunden zu weiteren Aktionen wie z.B. dem Öffnen des Store zum Hinterlassen einer Bewertung auffordern, sind nicht Teil dieses Status.
@@ -132,7 +132,7 @@ Um detaillierte Daten für jede Benachrichtigung zu überprüfen:
 
 So analysieren Sie die Aktivität Benutzerdaten für alle Ihre Benachrichtigungen:
 
-1.  Erweitern Sie im Windows Dev Center-Dashboard den Abschnitt **Bewerten** und wählen Sie dann **Benachrichtigungen** aus.
+1.  Im Partner Center erweitern Sie den Abschnitt **einbeziehen** , und wählen Sie **Benachrichtigungen**.
 2.  Klicken Sie auf der Seite " **Notifications** " auf der Registerkarte " **Analysieren** ". Diese Registerkarte zeigt die folgenden Daten:
     * Graph-Ansichten von den verschiedenen Benutzerzuständen Aktion für Ihre Popups und Info-Center-Benachrichtigungen.
     * Welt von Kartenansichten der Click-über-Sätze für Ihre Popups und Aktion zentrieren Benachrichtigungen.
@@ -140,7 +140,7 @@ So analysieren Sie die Aktivität Benutzerdaten für alle Ihre Benachrichtigunge
 
 ## <a name="translate-your-notifications"></a>Übersetzen Ihrer Benachrichtigungen
 
-Um die Wirkung von Benachrichtigungen zu maximieren, sollten Sie sie in die von den Kunden bevorzugten Sprachen übersetzen. Dev Center erleichtert Ihnen die Übersetzung Ihrer Benachrichtigungen, denn dies erfolgt mithilfe des Diensts [Microsoft Translator](https://www.microsoft.com/translator/home.aspx) automatisch.
+Um die Wirkung von Benachrichtigungen zu maximieren, sollten Sie sie in die von den Kunden bevorzugten Sprachen übersetzen. Partner Center erleichtert es Ihnen, Ihre Benachrichtigungen durch Nutzung der [Microsoft Translator](https://www.microsoft.com/translator/home.aspx) -Dienst automatisch zu übersetzen.
 
 1.  Nachdem Sie die Benachrichtigung in der Standardsprache geschrieben haben, wählen Sie **Sprachen hinzufügen** aus (unterhalb des Menüs **Sprachen** im Abschnitt **Benachrichtigungsinhalt**).
 2.  Wählen Sie im Fenster **Sprachen hinzufügen** die weiteren Sprachen aus, in denen Ihre Benachrichtigungen angezeigt werden sollen, und wählen Sie anschließend **Aktualisieren** aus.

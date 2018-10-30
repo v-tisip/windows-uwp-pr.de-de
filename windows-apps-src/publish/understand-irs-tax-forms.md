@@ -3,17 +3,17 @@ author: jnHs
 Description: Learn about the tax forms issued by Microsoft, including who will receive them and when they are made available.
 title: Kennenlernen der von Microsoft ausgestellten IRS-Steuerformulare
 ms.author: wdg-dev-content
-ms.date: 10/25/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Steuern, IRS, Bundessteuerbehörde der USA (IRS), Steuern, Einkommensteuer, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
-ms.openlocfilehash: e16333b061c3f50d4c0d66b0704bf0977570595e
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 326de9b3160f492566306b18252bbc3bacf58531
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5742150"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5836068"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Kennenlernen der von Microsoft ausgestellten IRS-Steuerformulare
 
@@ -25,8 +25,8 @@ Nachfolgend erläutern wir diese Formulare eingehender, etwa, wer sie erhält un
 
 | IRS-Steuerformular | Beschreibung | Verfügbarkeit |
 |--------------|-------------|--------------|
-|1099-MISC, 1099-K | Im Zusammenhang mit Verkaufsaktivitäten und/oder Zahlungen an Sie für die Teilnahme am Microsoft Marketplace | Gedruckte Formulare werden mit elektronischen Siegeln mit spätestens dem **31.Januar** versehen, und die PDF-Kopien werden zur gleichen Zeit im Dev Center zur Verfügung stehen (**Dashboard > Kontoeinstellungen > Steuerprofil**) |
-|1042-S | Im Zusammenhang mit den Zahlungen an Sie, die der Quellensteuer der USA unterliegen | Gedruckte Formulare werden mit elektronischen Siegeln mit spätestens dem **15.März** versehen, und die PDF-Kopien werden zur gleichen Zeit im Dev Center zur Verfügung stehen (**Dashboard > Kontoeinstellungen > Steuerprofil**) |
+|1099-MISC, 1099-K | Im Zusammenhang mit Verkaufsaktivitäten und/oder Zahlungen an Sie für die Teilnahme am Microsoft Marketplace | Gedruckte Formulare werden werden Siegeln vor **dem 31. Januar**und PDF-Kopien werden im [Partner Center](https://partner.microsoft.com/dashboard) verfügbar (in **Kontoeinstellungen > Steuerprofil**) zur gleichen Zeit |
+|1042-S | Im Zusammenhang mit den Zahlungen an Sie, die der Quellensteuer der USA unterliegen | Gedruckte Formulare werden werden Siegeln vor dem **15. März**und PDF-Kopien werden im Partner Center zur Verfügung stehen (in **Kontoeinstellungen > Steuerprofil**) zur gleichen Zeit |
 
 > [!NOTE]
 > Die Adresse, mit denen wir auf IRS-Steuerformularen ergibt sich aus der Adresse in Ihr [Steuerprofil](setting-up-your-payout-account-and-tax-forms.md#tax-forms). Wenn sich Ihre Adresse geändert hat, aktualisieren Sie die Adresse auch in Ihrem **Steuerprofil**.
@@ -106,7 +106,7 @@ Ich habe mindestens 600 US-Dollar an Zahlungen erhalten, die nicht im Zusammenha
     <td valign="top"><b>Warum wurde Steuer auf meine Zahlungen einbehalten, als ich ein Formular W8 ausgefüllt habe?</b></td>
     <td valign="top">Steuern werden in einem der folgenden Fälle einbehalten:<br>
      1. Sie haben den Abschnittzum Steuerabkommen des W8 nicht ordnungsgemäß ausgefüllt oder<br>
-     2. Sie wohnen in einem Land, das über kein Steuerabkommen mit den USA verfügt.<br><br>Besuchen Sie Dev Center zu einem beliebigen Zeitpunkt ein aktualisiertes W8-Formular zu übermitteln.<br><br><b>Hinweis</b>: nicht alle Einnahmen Quellensteuer unterliegt.</td>
+     2. Sie wohnen in einem Land, das über kein Steuerabkommen mit den USA verfügt.<br><br>Besuchen Sie Partner Center zu einem beliebigen Zeitpunkt ein aktualisiertes W8-Formular zu übermitteln.<br><br><b>Hinweis</b>: nicht alle Einnahmen Quellensteuer unterliegt.</td>
   </tr>
   <tr>
     <td valign="top"><b>Ich habe ein aktualisiertes W8-Formular mit gültigen Informationen zum Abkommen übermittelt. Kann Microsoft mir die einbehaltene Steuer zurückerstatten?</b></td>

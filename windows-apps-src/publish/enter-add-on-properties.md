@@ -4,19 +4,18 @@ Description: When submitting an add-on, the options on the Properties page help 
 title: Eingeben von Add-On-Eigenschaften
 ms.assetid: 26D2139F-66FD-479E-940B-7491238ADCAE
 ms.author: wdg-dev-content
-ms.date: 01/12/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Add-Ons, Eigenschaften, Abonnementzeitraum, Produktlebensdauer, Inhaltstyp, IAP, In-App-Kauf, In-App-Produkt
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f616e4da96c1a2c59822d1370b49016dbca1bb7
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: fa0559c79b758373347427c0aa88b351c0fbddf0
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5745556"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5816469"
 ---
 # <a name="enter-add-on-properties"></a>Eingeben von Add-On-Eigenschaften
-
 
 Beim Übermitteln eines Add-Ons sind die Optionen auf der Seite **Eigenschaften** hilfreich, um das Verhalten Ihres Add-Ons festzulegen, wenn es Kunden angeboten wird.
 
@@ -32,7 +31,7 @@ Die Felder, die Sie auf dieser Seite sehen, variieren je nach den Produkttyp Ihr
 
 ## <a name="product-lifetime"></a>Produktlebensdauer
 
-Wenn Sie als Produkttyp **Gebrauchsgut** ausgewählt haben, wird hier die **Produktlebenszeit** angezeigt. Die standardmäßige **Produktlebenszeit** dauerhafter Add-Ons ist **Unbegrenzt**. Das Add-On läuft also niemals ab. Sie können die **Produktlebenszeit** auch festlegen, sodass das Add-On nach einem festgelegten Zeitraum abläuft (mögliche Optionen: 1 bis 365Tage).
+Wenn Sie als Produkttyp **Gebrauchsgut** ausgewählt haben, wird hier die **Produktlebenszeit** angezeigt. Die standardmäßige **Produktlebenszeit** dauerhafter Add-Ons ist **Unbegrenzt**. Das Add-On läuft also niemals ab. Falls gewünscht, können Sie die **Produktlebenszeit** ändern, damit das Add-on nach einer festgelegten Zeitspanne (mit Optionen von 1 bis 365 Tagen) abläuft.
 
 
 ## <a name="quantity"></a>Menge

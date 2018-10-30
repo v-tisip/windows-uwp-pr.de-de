@@ -4,16 +4,16 @@ Description: Common questions about ad campaigns
 title: Häufige Fragen zu Anzeigenkampagnen
 ms.assetid: EAF7CC74-7DE4-4D11-B9A6-29C6EA6E734B
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c73e51cac3823be7c1abcce223c9d7fecfc58ae
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 1d1455dd832a41e2783d6df8b4470ad8a94c5c40
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5745916"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5811924"
 ---
 # <a name="common-questions-about-ad-campaigns"></a>Häufige Fragen zu Anzeigenkampagnen
 
@@ -63,10 +63,3 @@ Wenn Sie nicht warten möchten, bis die Abrechnung erstellt wird, können Sie Ih
 
 Wechseln Sie zu <http://commerce.microsoft.com>, melden Sie sich mit den Anmeldeinformationen Ihres Microsoft-Konto an, und stellen Sie die erforderlichen Änderungen vor.
 
-### <a name="related-topics"></a>Verwandte Themen
-
-* [Erstellen einer Anzeigenkampagne für Ihre App](create-an-ad-campaign-for-your-app.md)
-* [Verwalten Ihrer Anzeigenkampagne](managing-your-ad-campaign.md)
-* [Über Eigenwerbung](about-house-ads.md)
-* [Informationen zu Community-Anzeigen](about-community-ads.md)
-* [Bericht „Anzeigen für die App-Installation“](app-install-ads-reports.md)

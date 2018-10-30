@@ -1,26 +1,26 @@
 ---
 author: jnHs
-Description: The Acquisitions report in the Windows Dev Center dashboard lets you see who has acquired and installed your app, along with demographic and platform details.
+Description: The Acquisitions report in Partner Center lets you see who has acquired and installed your app, along with demographic and platform details.
 title: Bericht „Käufe“
 ms.assetid: 21126362-F3CD-4006-AD3F-82FC88E3B862
 ms.author: wdg-dev-content
-ms.date: 09/14/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Käufe, App-Verkäufe, App-Downloads, Installationen, Trichter, Käufe, Konvertierungen, Kanal, App-Seitenaufrufe
 ms.localizationpriority: medium
-ms.openlocfilehash: c2ccb3088d0ef241f950a5f5fcf3f40969bc0531
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: bbd84b32a4e94687ff50f553137a86885094a7d6
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5769226"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5813307"
 ---
 # <a name="acquisitions-report"></a>Bericht „Käufe“
 
 
-Der Bericht " **Käufe** " im Windows Dev Center-Dashboard können Sie sehen, wer hat erworben und installiert Ihrer app, und Sie können demografische und plattformspezifische Details einsehen und zeigt Informationen dazu, wie Kunden unter Windows 10 (einschließlich Xbox) zu Ihrer app gelangt sind Eintrag. Sie können auch in der Nähe in Echtzeit Kaufdaten für den letzten oder 70-zwei Stunden-Zeitraum anzeigen. 
+Der Bericht " **Käufe** " im [Partner Center](https://partner.microsoft.com/dashboard) können Sie sehen, wer hat erworben und installiert Ihrer app, und Sie können demografische und plattformspezifische Details einsehen und zeigt Informationen dazu, wie Kunden unter Windows 10 (einschließlich Xbox) zum Eintrag Ihrer app gelangt sind. Sie können auch in der Nähe in Echtzeit Kaufdaten für den letzten oder 70-zwei Stunden-Zeitraum anzeigen. 
 
-Sie können diese Daten in Ihrem Dashboard anzeigen oder den [Bericht herunterladen](download-analytic-reports.md), um ihn offline anzuzeigen. Sie können diese Daten aber auch programmgesteuert mit unseren [REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
+Sie können diese Daten im Partner Center oder [den Bericht herunterladen](download-analytic-reports.md) offline anzeigen anzeigen. Sie können diese Daten aber auch programmgesteuert mit unseren [REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
 In diesem Bericht steht **Kauf** für einen neuen Kunden, der eine Lizenz Ihrer App erworben hat (entweder für eine kostenpflichtige oder eine kostenlose App). **Installieren** bezieht sich auf die App, die auf einem Windows10-Gerät installiert wird.
 

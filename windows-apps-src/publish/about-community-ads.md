@@ -4,16 +4,16 @@ Description: You can cross-promote your app with apps published by other develop
 title: Informationen zu Community-Anzeigen
 ms.assetid: F55CE478-99AF-4B70-90D1-D16419562136
 ms.author: wdg-dev-content
-ms.date: 10/04/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 20f0f06d0927d61c062a0514d84bef993da6e932
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 745be156d36e1fb15594d839b0b06d87425ae914
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5748476"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5819337"
 ---
 # <a name="about-community-ads"></a>Informationen zu Community-Anzeigen
 
@@ -30,19 +30,15 @@ Das funktioniert wie folgt:
 
 ### <a name="opt-in-to-community-ads"></a>Melden Sie sich für Community-Anzeigen an
 
-Bevor Sie eine Community-Anzeigenkampagne für eine Ihrer apps erstellen können, Sie müssen entscheiden Sie sich auf die **Monetarisierung** &gt; **In-app-Werbung** Seite im Windows Dev Center-Dashboard.
+Bevor Sie eine Community-Anzeigenkampagne für eine Ihrer apps erstellen können, Sie müssen entscheiden Sie sich auf die **Monetarisierung** &gt; Seite im [Partner Center](https://partner.microsoft.com/dashboard) **-app-anzeigen** .
 
 Melden Sie sich für Community-anzeigen für eine UWP-app an:
 
-1. Wählen Sie im Abschnitt **vermittlungseinstellungen** auf der Seite " **In-app-anzeigen** " eine anzeigeneinheit, die Sie in der app verwenden.
-2. Wenn die Option **ermöglichen Microsoft auswählen die besten anzeigenvermittlungseinstellungen für Ihre app** aktiviert ist, werden automatisch die Community-anzeigen für Ihre anzeigeneinheit aktiviert. Andernfalls wählen Sie die Basiskonfiguration oder eine marktspezifische Konfiguration in der **Ziel** -Dropdown-Liste, und klicken Sie dann das Kontrollkästchen Sie **Microsoft Community-anzeigen** in der Liste **Weitere anzeigennetzwerke** .
+1. Wählen Sie eine anzeigeneinheit, die Sie in der app und scrollen Sie nach unten zu **vermittlungseinstellungen**arbeiten.
+2. Wenn **Microsoft lassen optimieren Meine Einstellungen** aktiviert ist, werden automatisch die Community-anzeigen für Ihre anzeigeneinheit aktiviert. Andernfalls wählen Sie die Basiskonfiguration oder eine marktspezifische Konfiguration in der **Ziel** -Dropdown-Liste, und klicken Sie dann das Kontrollkästchen Sie **Microsoft Community-anzeigen** in der Liste **Weitere anzeigennetzwerke** .
 
     > [!NOTE]
     > Die Felder, die **Gewichtung** können Sie das Verhältnis der anzeigen angeben, die von kostenpflichtigen Netzwerken und anderen Anzeigennetzwerken, einschließlich der Community-anzeigen angezeigt werden sollen.
-
-Um an Community-anzeigen für eine Windows beteiligen 8.x oder Windows Phone 8.x-app
-
-1. Überprüfen Sie auf der Seite **In-app-Werbung** das **Community-anzeigen in meiner app anzeigen** .
 
 Sie müssen Ihre App nicht noch einmal veröffentlichen, nachdem Sie Ihre Auswahl getroffen haben. Wenn Sie sich angemeldet haben, werden Sie feststellen, dass Sie **Community-Anzeige (kostenlos)** als Kampagnentyp angeben können, wenn Sie eine [Anzeigenkampagne erstellen](create-an-ad-campaign-for-your-app.md).
 

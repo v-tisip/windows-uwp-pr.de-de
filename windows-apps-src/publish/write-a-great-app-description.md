@@ -4,22 +4,21 @@ Description: A great description can make your app stand out in the Microsoft St
 title: Erstellen einer interessanten App-Beschreibung
 ms.assetid: E477E98E-090A-4ACE-832F-A98D273EFCA0
 ms.author: wdg-dev-content
-ms.date: 05/15/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Beschreibung, beschreiben, Store-Eintrag, Marketing
 ms.localizationpriority: medium
-ms.openlocfilehash: 87ad41dc2f78f37485d1b8de3101348363b5ba28
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 382bfe760165b4dee3fbdbb63166648c2e475325
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5744857"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5816166"
 ---
 # <a name="write-a-great-app-description"></a>Erstellen einer interessanten App-Beschreibung
 
 
 Eine aussagekräftige Beschreibung hebt Ihre App von anderen im Microsoft Store ab und animiert Kunden zum Download. [Die Beschreibung, die Sie beim Übermitteln der App eingeben](create-app-store-listings.md#description), wird im Store-Eintrag Ihrer App angezeigt. Die ersten Zeilen dieses Texts können auch in Suchergebnissen und Algorithmuslisten im Store angezeigt werden.
-
 
 Hier einige Tipps für eine optimale App-Beschreibung.
 
@@ -28,14 +27,14 @@ Hier einige Tipps für eine optimale App-Beschreibung.
 -   **Verwenden Sie Listen und kurze Absätze.** Potenzielle Kunden werfen u.U. nur einen kurzen Blick auf die Beschreibung Ihrer App. Erleichtern Sie das Überfliegen, indem Sie den Inhalt in kurzen Absätzen und Listen zusammenfassen.
 
     > [!NOTE]
-    > Das Hinzufügen einer Liste der [App-Features](create-app-store-listings.md#app-features) ist ebenfalls eine großartige Methode, um Funktion und Zweck Ihrer App schnell erkennbar zu machen. Diese Liste wird direkt unter der App-Beschreibung angezeigt.
+    > Hinzufügen einer Liste der [Produktfeatures](create-app-store-listings.md#product-features) hilft auch schnell anzeigen Verwendungszweck der app. Diese Liste wird direkt unter der App-Beschreibung angezeigt.
 
 -   **Vermeiden Sie trockene Formulierungen.** Verwenden Sie bei der Beschreibung lebendige Sprache. Achten Sie darauf, dass der Zweck Ihrer App eindeutig beschrieben ist, die Beschreibung jedoch nicht langweilig klingt. Für viele Apps eignet sich ein ungezwungener, freundlicher Tonfall.
 -   **Verwenden Sie die richtige Länge.** Eine gute Beschreibung lässt sich schnell lesen und enthält genügend Infos, um das Interesse des Lesers zu wecken und den Zweck der App zu erläutern. Eine komplexe App erfordert eine etwas längere Beschreibung; bei einer einfachen App reichen u.U. wenige Sätze aus. In den meisten Fällen beträgt die ideale Länge über 200, jedoch weit unter 3000Wörtern.
 -   **Stellen Sie eindeutige Informationen zu kostenlosen Testversionen und Add-Ons bereit.** Wenn Sie eine kostenlose Testversion Ihrer App anbieten, müssen Sie die Funktionsweise der Testversion erklären, damit die Kunden erfahren, welche Funktionen eingeschränkt sind. Sie sollten auch angeben, welche Arten von Add-Ons-Produkten verfügbar sind, insbesondere dann, wenn sich diese erheblich auf die Funktionen Ihrer App auswirken.
 -   **Verwenden Sie die standardmäßige Groß- und Kleinschreibung und Standardsatzzeichen.** Beschreibungen, die ausschließlich aus Großbuchstaben bestehen oder ungewöhnliche Satzzeichen enthalten, können schwer lesbar sein.
 -   **Denken Sie daran, eine Rechtschreib- und Grammatikprüfung durchzuführen.** Eine Beschreibung mit zahlreichen Rechtschreibfehlern oder schwer verständlichen Sätzen spricht nicht für die Qualität Ihrer App. Überprüfen Sie Ihre Beschreibung unbedingt auf Fehler (oder lassen Sie jemand anders einen Blick darauf werfen).
--   **Fügen Sie keine Links oder Infos hinzu, die nicht in die Beschreibung gehören.** Auf im Beschreibungsfeld eingegebene URLs kann nicht geklickt werden. Links für Ihre Datenschutzrichtlinien oder Ihre Supportwebsite wären daher fehl am Platz. Fügen Sie sie stattdessen in die dafür vorgesehenen Bereiche der **Store-Eintrag** ein.
+-   **Fügen Sie keine Links oder Infos hinzu, die nicht in die Beschreibung gehören.** Auf im Beschreibungsfeld eingegebene URLs kann nicht geklickt werden. Links für Ihre Datenschutzrichtlinien oder Ihre Supportwebsite wären daher fehl am Platz. Fügen Sie Sie stattdessen in die dafür vorgesehenen Bereiche der Seite " **Eigenschaften** " der Übermittlung.
 -   **Verwenden Sie keine HTML-Tags.** HTML oder anderer Code wird nicht gerendert. Die Beschreibung darf nur Text enthalten.
 -   **Holen Sie sich Anregungen, indem Sie die Beschreibungen ähnlicher Apps im Store lesen.** Informieren Sie sich, wie andere Entwickler ihre Apps beschreiben. Dadurch erfahren Sie auch, welche besonderen Merkmale Ihrer App Sie hervorheben können.
 

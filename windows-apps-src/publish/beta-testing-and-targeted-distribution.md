@@ -1,25 +1,25 @@
 ---
 author: jnHs
-Description: The Windows Dev Center dashboard gives you the option to make your app available only to specified people so that you can have testers try it out before you offer it to the public.
+Description: Partner Center gives you several options to let testers try out your app before you offer it to the public.
 title: Betatests und zielgerichtete Verteilung
 ms.assetid: 38E4ED22-D6C1-40D8-9B16-6B3E51BD962E
 ms.author: wdg-dev-content
-ms.date: 05/10/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Betatests, eingeschränkter Vertrieb, Beta, Betas, testen, Tester
 ms.localizationpriority: medium
-ms.openlocfilehash: e57490e2ad9c3991baf40b6c4d15d35def59f94f
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 49641007f939faf333ea5aca357266225f8484c8
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5746743"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5813868"
 ---
 # <a name="beta-testing-and-targeted-distribution"></a>Betatests und zielgerichtete Verteilung
 
 Wie sorgfältig Sie Ihre App auch testen: Es geht nichts über einen Praxistest, bei dem die App von anderen Benutzern verwendet wird. Die Betatester finden möglicherweise Probleme, die Sie übersehen haben, wie z. B. Rechtschreibfehler, unübersichtliche Benutzerführungen der App und sogar Fehler, die dazu führen können, dass die App abstürzt. Sie haben dann die Möglichkeit, diese Probleme zu beheben, bevor Sie die Übermittlung für die Allgemeinheit verfügbar machen. So erhalten Sie ein hochwertigeres Endprodukt. 
 
-Das Windows Dev Center-Dashboard bietet Ihnen mehrere Optionen, eine App-Übermittlung nur für bestimmte Personen bereitzustellen. Auf diese Weise können Tester die App ausprobieren, bevor Sie sie für die Öffentlichkeit anbieten. 
+Partner Center bietet Ihnen mehrere Optionen Tester Ihre app testen, bevor Sie sie für die Öffentlichkeit anbieten.
 
 Unabhängig von der gewählten Methode, müssen Sie einige Dinge in puncto Betatests für Ihrer App berücksichtigen.
 
@@ -33,7 +33,7 @@ Unabhängig von der gewählten Methode, müssen Sie einige Dinge in puncto Betat
 
 Wenn Tester Ihre App verwenden sollen, bevor diese für andere Benutzer verfügbar ist, und sicher stellen wollen, dass niemand sie sehen kann, verwenden Sie die Option **private Zielgruppe** unter der Option [Sichtbarkeit](choose-visibility-options.md) (auf der Seite **Preise und Verfügbarkeit** der Übermittlung). Dies ist die einzige Methode, mit der Sie Ihre App an Tester verteilen können und verhindert wird, dass andere Personen den App Store-Eintrag sehen können, auch wenn sie den direkten Link eingeben. 
 
-Der **privaten** zielgruppenoptionen können nur dienen, wenn Sie nicht bereits Ihre app für eine öffentliche Zielgruppe veröffentlicht haben. Sie können diese Option verwenden, mit apps für jede Betriebssystemversion, aber Ihre Tester müssen Windows 10, Version 1607 oder höher (einschließlich Xbox One), ausgeführt werden und müssen mit dem Microsoft-Konto zugeordnete e-Mail-Adresse, die Sie bereitstellen angemeldet sein.
+Der **privaten** zielgruppenoptionen kann nur verwendet werden, wenn Sie nicht bereits Ihre app für eine öffentliche Zielgruppe veröffentlicht haben. Sie können diese Option verwenden, mit apps für jede Betriebssystemversion, aber Ihre Tester müssen Windows 10, Version 1607 oder höher (einschließlich Xbox One), ausgeführt werden und müssen mit dem Microsoft-Konto zugeordnete e-Mail-Adresse, die Sie bereitstellen angemeldet sein.
 
 Weitere Informationen finden Sie unter [Private Zielgruppe](choose-visibility-options.md#audience).
 
@@ -71,6 +71,8 @@ So verwenden Sie diese Option:
 - Nachdem Ihr Produkt veröffentlicht wurde, geben Sie den Link (die **URL** auf der [Seite App-Identität](view-app-identity-details.md)) an Ihre Tester, damit sie die App ausprobieren können.
 - Wenn Sie bereit sind, Ihre App für die Allgemeinheit zur Verfügung zu stellen, können Sie eine neue Übermittlung erstellen und die Option **Sichtbarkeit** in **Make this product available and discoverable in the Store** ändern (sowie ggf. andere gewünschte Änderungen vornehmen).
 
+> [!IMPORTANT]
+> Ab dem 31. Oktober 2018 können nicht neu erstellten Produkte enthalten Pakete für Windows Phone 8.x oder früher. Weitere Informationen finden Sie in diesem [Blogbeitrag](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
 
 ## <a name="targeted-distribution-to-windows-phone-customers-with-specified-email-addresses"></a>Zielgerichtete Verteilung an Kunden mit Windows Phone mit angegebenen E-Mail-Adressen
 

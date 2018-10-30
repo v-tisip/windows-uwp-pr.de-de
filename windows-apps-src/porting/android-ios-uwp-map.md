@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows10, UWP
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 ms.localizationpriority: medium
-ms.openlocfilehash: 821a28109c511bb2bd96bf5cbccb190cbe928abc
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: f7e211ebfa28421340e716c0176cab80a9511671
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5741575"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5818454"
 ---
 #<a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Windows-Apps-Konzeptzuordnung für Android- und iOS-Entwickler
 
@@ -300,7 +300,7 @@ Siehe auch die Portierungsinformationen in [Wechsel von iOS zu UWP](ios-to-uwp-r
 <tbody>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>App-Lebenszyklus.</strong> <br><br>Behandeln von Ereignissen beim Starten, Anhalten, Fortsetzen und Schließen der App, mit der Möglichkeit, den Anwendungszustand zu speichern/wiederherzustellen und weitere Aufgaben auszuführen.</td>
-<td align="left">Jede Aktivität verfügt über einen eigenen <strong>Aktivitätslebenszyklus</strong> mit Zuständen, z. B. <strong>resumed</strong>. <strong>Lebenszyklusrückrufe</strong>, z. B. <strong>onResume</strong>, werden in den <strong>Aktivitätsklassen</strong> implementiert.</td>
+<td align="left">Jede Aktivität verfügt über einen eigenen <strong>Aktivitätslebenszyklus</strong> mit Zuständen, z. B. <strong>resumed</strong>. <strong>Lebenszyklusrückrufe</strong> wie z. B. <strong>OnResume</strong> werden in den <strong>Aktivitätsklassen</strong>implementiert.</td>
 <td align="left">Der <strong>Anwendungslebenszyklus</strong> weist Zustände, z. B. <strong>suspended</strong>, auf. Methoden, z. B. <strong>applicationDidEnterBackground:</strong>, werden im <strong>appDelegate</strong>-Objekt implementiert, um bei Zustandsänderungen Code auszuführen.</td>
 <td align="left">Die Anwendung weist die <strong>App-Ausführungszustände</strong> „NotRunning“, „Activated“, „Runningׅ“, „Suspending“, „Suspended“ und „Resuming“ auf.<br/><br/>Sie können die Methoden „OnLaunched“, „OnActivated“, „Suspending“ oder „Resuming“ der <strong><a href="https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.aspx">Application-Klasse</a></strong> implementieren, um Code auszuführen, wenn sich der Zustand ändert.<br/><br/><a href="https://msdn.microsoft.com/library/windows/apps/mt243287.aspx">App-Lebenszyklus</a></td>
 </tr>

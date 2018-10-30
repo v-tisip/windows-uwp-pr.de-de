@@ -4,16 +4,16 @@ Description: Listing your app in the right category and subcategory helps custom
 title: Kategorie- und Unterkategorietabelle
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
 ms.author: wdg-dev-content
-ms.date: 10/26/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Kategorie, Unterkategorie, Genre, Kategorien, Genres
 ms.localizationpriority: medium
-ms.openlocfilehash: a4e85542793fff34609817995fb213eb4f3b7d54
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 2c3ea799d030b64c5b4cc67f75cbdd664a8b83da
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5750421"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5840815"
 ---
 # <a name="category-and-subcategory-table"></a>Kategorie- und Unterkategorietabelle
 
@@ -22,7 +22,7 @@ Das Zuweisen der richtigen Kategorie und Unterkategorie trägt dazu bei, dass Ku
 
 Sie müssen Sie die Kategorie auswählen, die Ihre App am besten beschreibt. Wählen Sie optional, falls verfügbar, eine Unterkategorie aus. Falls Sie sich nicht sicher sind, welche Kategorie oder Unterkategorie Sie verwenden sollen, oder wenn Sie keine finden können, die Ihnen zusagt, suchen Sie die Kategorie aus, in der Kunden Ihrer Meinung nach am ehesten nach einer App wie Ihrer suchen.
 
-Bei der Auswahl von **Spiele** für Ihre Kategorie ist es erforderlich, dass Sie mindestens eine Unterkategorie auswählen (ein sogenannter *Genre* für Spiele). Sie können beliebig viele Genres für Ihr Spiel auswählen. Um ein Spiel für Ihre Kunden auf Xbox zu veröffentlichen, müssen Sie das [Xbox Live Creators-Programm](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) aktivieren oder den Prozess der [Konzeptgenehmigung](../gaming/concept-approval.md) durchlaufen). 
+Wenn Sie **Spiele** für Ihre Kategorie auswählen, müssen Sie mindestens eine Unterkategorie ( *Genre* für Spiele genannt) auswählen. Sie können beliebig viele Genres für Ihr Spiel auswählen. Um ein Spiel für Ihre Kunden auf Xbox zu veröffentlichen, müssen Sie das [Xbox Live Creators-Programm](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) aktivieren oder den Prozess der [Konzeptgenehmigung](../gaming/concept-approval.md) durchlaufen). 
 
 > [!IMPORTANT] 
 > Wenn Sie die App in der Kategorie **Spiele** veröffentlichen, ist es nicht möglich, eine andere Kategorie bei einer neuen Übermittlung auszuwählen. Sie muss weiterhin in der Kategorie **Spiele** veröffentlicht werden (Sie können allerdings die Auswahl des Genres in bei einer neuen Übermittlung ändern). Außerdem können Sie die Kategorie **Spiele** nicht bei einem Update der App auswählen, die Sie zuvor in einer anderen Kategorie veröffentlicht haben.
@@ -149,38 +149,6 @@ Im Microsoft Store werden Apps in folgende Kategorien und Unterkategorien untert
   </tr>
 </tbody>
 </table>
-
-
-<!--
-| Category                    | Subcategory                                       |
-|-----------------------------|---------------------------------------------------|
-| Books + reference           | E-reader <br> Fiction <br> Nonfiction <br> Reference |
-| Business                    | Accounting + finance <br> Collaboration <br> CRM <br> Data + analytics <br> File management <br> Inventory + logistics <br> Legal + HR <br> Project management <br> Remote desktop <br> Sales + marketing <br> Time + expenses |
-| Developer tools             | Database <br> Design tools <br> Development kits <br> Networking <br> Reference + training <br> Servers <br> Utilities <br> Web hosting |
-| Education                   | Books + reference <br> Early learning <br> Instructional tools <br> Language <br> Study aids |
-| Entertainment               | (None)                                            |
-| Food + dining               | (None)                                            |
-| Games                       | Action + adventure <br> Card + board <br> Casino <br> Classics <br> Educational <br> Family + kids <br> Fighting <br> Multi-Player Online Battle Arena <br> Music <br> Other <br> Platformer <br> Puzzle + trivia <br> Racing + flying <br> Role playing <br> Shooter <br> Simulation <br> Sports <br> Strategy <br> Tools <br> Word |
-| Government + politics       | (None)                                            |
-| Health + fitness            | (None)                                            |
-| Kids + family               | Books + reference <br> Entertainment <br> Hobbies + toys <br> Sports + activities <br> Travel |
-| Lifestyle                   | Automotive <br> DIY <br> Home + garden <br> Relationships <br> Special interest <br> Style + fashion |
-| Medical                     | (None)                                            |
-| Multimedia design           | Illustration + graphic design <br> Music production <br> Photo + video production |
-| Music                       | (None)                                            |
-| Navigation + maps           | (None)                                            |
-| News + weather              | News <br> Weather                                 |
-| Personal finance            | Banking + investments <br> Budgeting + taxes      |
-| Personalization             | Ringtones + sounds <br> Themes <br> Wallpaper + lock screens |
-| Photo + video               | (None)                                            |
-| Productivity                | (None)                                            |
-| Security                    | PC protection <br> Personal security              |
-| Shopping                    | (None)                                            |
-| Social                      | (None)                                            |
-| Sports                      | (None)                                            |
-| Travel                      | City guides <br> Hotels                           |
-| Utilities + tools           | Backup + manage <br> File managers                |
--->
 
 > [!NOTE] 
 > Einige der im Store für Kunden von Windows8.x und Windows Phone 8.x und früheren Versionen verwendeten Kategorien und Unterkategorien werden möglicherweise anders als die oben genannten Kategorien angezeigt. 

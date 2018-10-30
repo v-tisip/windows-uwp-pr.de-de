@@ -3,16 +3,16 @@ author: jnHs
 Description: You can set the precise date and time that your app should become available in the Store, giving you greater flexibility and the ability to customize dates for different markets.
 title: Konfigurieren des genauen Veröffentlichungszeitplans
 ms.author: wdg-dev-content
-ms.date: 05/02/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Zeitplan, Veröffentlichung, Datum, starten
 ms.localizationpriority: medium
-ms.openlocfilehash: 910f0aea10e763316bedab7b96b21705c537282c
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 6474fc334922d49489c377a0c29841fc45889e1d
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5749035"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5816924"
 ---
 # <a name="configure-precise-release-scheduling"></a>Konfigurieren des genauen Veröffentlichungszeitplans
 
@@ -30,7 +30,7 @@ Beachten Sie, dass Sie Datumsangaben im Abschnitt **Zeitplan** nicht konfigurier
 > [!IMPORTANT]
 > Das im Abschnitt "Zeitplan" angegebene Datum gilt nur für Kunden unter Windows10.
 >
->Wenn Ihre App frühere Betriebssystemversionen unterstützt, sehen Kunden unter diesen Betriebssystemversionen den Eintrag Ihrer App, sobald sie die Zertifizierung bestanden und den Veröffentlichungsprozess abgeschlossen hat, auch wenn Sie ein späteres Veröffentlichungsdatum ausgewählt haben. Ein für **Stop acquisition** ausgewähltes Datum gilt nicht für diese Kunden. Sie können die App weiterhin erwerben (sofern Sie nicht ein Update mit einer neuen Auswahl im Abschnitt [Sichtbarkeit](choose-visibility-options.md#discoverability) übermitteln, oder wenn Sie **Make app unavailable** auf der Seite **App-Übersicht** auswählen).
+>Wenn Ihre app zuvor veröffentlichten für frühere Betriebssystemversionen Datum **Beenden des Erwerbs** unterstützt, die Sie auswählen, gilt nicht für diese Kunden; Sie werden weiterhin die app mehr erwerben (es sei denn, Sie ein Update mit einer neuen Auswahl im Abschnitt [Sichtbarkeit](choose-visibility-options.md#discoverability) übermitteln, oder wenn Sie **app nicht verfügbar machen,** aus der Seite " **App-Übersicht** " auswählen.) sein.
 
 
 ## <a name="base-schedule"></a>Basiszeitplan
@@ -60,7 +60,7 @@ Im Dropdownmenü **Stop acquisition** können Sie ein Datum und eine Uhrzeit fes
 
 Die Standardeinstellung für **Stop acquisition** ist "Never". Wählen Sie zum Ändern in der Dropdownliste **at** aus, und geben Sie wie oben beschrieben Datum und Uhrzeit ein. Am ausgewählten Datum und zur ausgewählten Uhrzeit können Kunden die App nicht mehr erwerben.
 
-Es ist wichtig zu verstehen, dass diese Option dieselbe Auswirkung hat wie die Auswahl von **Make this app discoverable but not available** im Abschnitt [Sichtbarkeit](choose-visibility-options.md#discoverability) und **Stop acquisition: Any customer with a direct link can see the product’s Store listing, but they can only download it if they owned the product before or have a promotional code and are using a Windows 10 device.** Wenn Sie eine App überhaupt nicht mehr für Kunden anbieten möchten, klicken Sie in der App-Übersicht auf **Make app unavailable**. Weitere Informationen finden Sie unter [Entfernen einer App aus dem Store](guidance-for-app-package-management.md#removing-an-app-from-the-store).
+Es ist wichtig zu verstehen, dass diese Option dieselbe Auswirkung hat, wie im Abschnitt [Sichtbarkeit](choose-visibility-options.md#discoverability) auswählen **dieser app sichtbar, aber nicht verfügbar machen** und Auswählen von **Erwerb beenden: jeder Kunde mit einem direkten Link sehen die Produkt-Store Angebot, aber sie können nur herunterladen, wenn sie das Produkt vor, gehören oder einen werbecode besitzen und ein Windows 10-Gerät verwenden.** Wenn Sie eine App überhaupt nicht mehr für Kunden anbieten möchten, klicken Sie in der App-Übersicht auf **Make app unavailable**. Weitere Informationen finden Sie unter [Entfernen einer App aus dem Store](guidance-for-app-package-management.md#removing-an-app-from-the-store).
 
 > [!TIP]
 > Wenn Sie ein Datum auswählen, um **den Erwerb zu beenden**, und später feststellen, dass Sie die App wieder verfügbar machen möchten, können Sie eine neue Übermittlung erstellen und für **Stop acquisition** wieder **Never** festlegen. Die App wird wieder verfügbar, nachdem Ihre aktualisierte Übermittlung veröffentlicht wurde.

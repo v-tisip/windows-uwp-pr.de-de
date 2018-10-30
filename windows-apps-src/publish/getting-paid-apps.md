@@ -1,25 +1,25 @@
 ---
 author: jnHs
-Description: Here’s some important info you’ll need to ensure that you receive payment for your apps, in-app products (IAPs), and advertising earnings.
+Description: Learn about receiving payments for your apps, add-ons (in-app products), and advertising earnings.
 title: Bezahlung
 ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
 ms.author: wdg-dev-content
-ms.date: 02/05/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Bezahlung, App-Verkäufe, App-Erlöse, Auszahlung, Store-Gebühr, Auszahlungssperre, Prozentsatz
 ms.localizationpriority: medium
-ms.openlocfilehash: e7a5736c48232d3fa080d13fbcbbbdb70bfa9c92
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 96845e81b093b7cddb6d334286e9cfa468a43b28
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5767113"
+ms.locfileid: "5816833"
 ---
 # <a name="getting-paid"></a>Bezahlung
-Im Folgenden finden Sie wichtige Informationen, mit deren Hilfe Sie sicherstellen können, dass Sie für Ihre Apps, Add-Ons und Ihren Advertising-Verdienst bezahlt werden.
+Hier sehen Sie einige wichtige Informationen zu Zahlung für Ihre apps, Add-ons und Advertising-Einnahmen erhalten.
 
 > [!IMPORTANT]
-> Bevor Sie Geld aus App-Verkäufen im MicrosoftStore erhalten können, müssen Sie [Ihr Auszahlungskonto einrichten und die erforderlichen Steuerformulare ausfüllen](setting-up-your-payout-account-and-tax-forms.md).
+> Bevor Sie Geld aus app-Verkäufen im Microsoft Store erhalten können, müssen Sie [Ihr auszahlungskonto einrichten](setting-up-your-payout-account-and-tax-forms.md)und die erforderlichen Steuerformulare ausfüllen.
 
 ## <a name="store-fee"></a>Store-Gebühr
 
@@ -48,7 +48,7 @@ Beachten Sie, dass der von Ihnen ausgewählte Preis u. U. eine Verkaufs- oder Me
 
 ## <a name="payout-reporting"></a>Auszahlungsberichte
 
-Sie haben Zugriff auf ausführliche Auszahlungsinformationen und können die Berichte in die **Auszahlungszusammenfassung** des Windows Dev Center-Dashboards herunterladen. Weitere Informationen zu den aufgeführten Details und zu den Kategorien, in die wir Ihre Erlöse einteilen, finden Sie unter [Auszahlungszusammenfassung](payout-summary.md).
+Sie können Zugriff auf ausführliche auszahlungsinformationen und Berichte in der **Auszahlungszusammenfassung** der [Partner Center](https://partner.microsoft.com/dashboard)herunterladen. Weitere Informationen zu den aufgeführten Details und zu den Kategorien, in die wir Ihre Erlöse einteilen, finden Sie unter [Auszahlungszusammenfassung](payout-summary.md).
 
 
 ## <a name="payout-timeframe"></a>Auszahlungszeitraum
@@ -65,7 +65,7 @@ Um Ihre Zahlungen zu sperren, wechseln Sie zu **Kontoeinstellungen**. Setzen Sie
 Nachdem Sie die Auszahlungssperre auf **Ein** festgelegt haben, werden alle Auszahlungen gesperrt, bis Sie den Schieberegler wieder auf **Aus** setzen. Dann werden Sie im nächsten monatlichen Auszahlungszyklus berücksichtigt (vorausgesetzt, der entsprechende Zahlungsschwellenwert wurde erreicht). Wenn Sie zum Beispiel Ihre Auszahlungen gesperrt haben, aber eine Auszahlung im Juni generieren möchten, sollten Sie die Auszahlungssperre noch vor Ende Mai auf **Aus** setzen.
 
 > [!NOTE]
-> Die festgelegte Option für **Auszahlungssperre** gilt für **alle** Umsatzquellen, die über Windows Dev Center (Microsoft Store, Microsoft Advertising, Azure Marketplace usw.) bezahlt werden. Es ist nicht möglich, für jede Umsatzquelle eine separate Option für die Auszahlungssperre festzulegen.
+> Die **auszahlungssperre** Auswahl gilt für **Alle** Umsatzquellen, die über das Entwicklerprogramm für Windows im Partner Center (Microsoft Store, Microsoft advertising, Azure Marketplace usw.) bezahlt werden. Es ist nicht möglich, für jede Umsatzquelle eine separate Option für die Auszahlungssperre festzulegen.
 
 
  

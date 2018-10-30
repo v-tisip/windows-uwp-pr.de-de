@@ -4,16 +4,16 @@ Description: Learn how your app's packages are made available to your customers,
 title: Leitfaden für die Verwaltung von App-Paketen
 ms.assetid: 55405D0B-5C1E-43C8-91A1-4BFDD336E6AB
 ms.author: wdg-dev-content
-ms.date: 10/02/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: dd775b1fa653df5aca9b4738249757c052c181ed
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: e625522b0e9fd03fda49eb28bbedb20c00c15634
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5764411"
+ms.locfileid: "5840684"
 ---
 # <a name="guidance-for-app-package-management"></a>Leitfaden für die Verwaltung von App-Paketen
 
@@ -30,52 +30,10 @@ Erfahren Sie, wie App-Pakete für Ihre Kunden verfügbar gemacht werden und best
 
 Auf unterschiedlichen Betriebssystemen können unterschiedliche Pakettypen ausgeführt werden. Wenn mindestens zwei Pakete auf dem Gerät eines Kunden ausgeführt werden können, stellt der Microsoft Store die beste verfügbare Übereinstimmung bereit.
 
-Im Allgemeinen können höhere Betriebssystemversionen Pakete ausführen, die auf frühere Betriebssystemversionen für dieselbe Gerätefamilie abzielen. Allerdings erhalten Kunden nur die Pakete, wenn die app kein Paket enthält, die ihre aktuelle Betriebssystemversion abzielt.
+Im Allgemeinen können höhere Betriebssystemversionen Pakete ausführen, die auf frühere Betriebssystemversionen für dieselbe Gerätefamilie abzielen. Windows 10-Geräte können alle zuvor unterstützte Betriebssystemversionen (pro Gerätefamilie) ausführen. Desktopgeräte unter Windows 10 können apps ausgeführt werden, die für Windows8.1 oder Windows8 erstellt wurden. Windows 10 mobile Geräte können apps, die für Windows Phone 8.1, WindowsPhone8 und sogar Windows Phone erstellt wurden ausführen 7.x. Allerdings erhalten Kunden unter Windows 10 nur diese Pakete, wenn die app keine UWP-Pakete für die anwendbaren Gerätefamilie enthält.
 
-Windows 10-Geräte können z. B. alle zuvor unterstützte Betriebssystemversionen (pro Gerätefamilie) ausführen. Desktopgeräte unter Windows 10 können apps ausgeführt werden, die für Windows8.1 oder Windows8 erstellt wurden. Windows 10 mobile Geräte können apps, die für Windows Phone 8.1, WindowsPhone8 und sogar Windows Phone erstellt wurden ausführen 7.x. 
-
-In den folgenden Beispielen werden verschiedene Szenarien für eine App veranschaulicht, die das Abzielen auf unterschiedliche Betriebssystemversionen umfasst (in einigen Fällen führen bestimmte Einschränkungen der Pakete dazu, dass sie möglicherweise nicht auf allen hier aufgelisteten Betriebssystemversionen und Gerätetypen verwenden können. Beispielsweise muss die Architektur des Pakets für den Gerätetyp angemessen sein). 
-
-### <a name="example-app-1"></a>Beispiel-App 1
-
-| Zielbetriebssystem des Pakets | Dieses Paket abrufende Betriebssysteme |
-|-------------------------------------|----------------------------------------------|
-| Windows8.1                         | Windows 10-Desktopgeräte, Windows8.1      |
-| Windows Phone 8.1                   | Windows 10 mobile-Geräte, Windows Phone 8.1 |
-| WindowsPhone8                     | WindowsPhone8                              |
-| Windows Phone7.1                   | Windows Phone7.x                            |
-
-Im Beispiel-app 1 die app noch keine universelle Windows-Plattform (UWP)-Pakete, die speziell für Windows 10-Geräte erstellt wurden, aber Kunden unter Windows 10 können Sie die app weiterhin abrufen. Diese Kunden erhalten je nach Gerätetyp die besten verfügbaren Pakete.
-
-### <a name="example-app-2"></a>Beispiel-App 2
-
-| Zielbetriebssystem des Pakets  | Dieses Paket abrufende Betriebssysteme |
-|--------------------------------------|----------------------------------------------|
-| Windows 10 (universelle Gerätefamilie) | Windows 10 (alle gerätefamilien)             |
-| Windows8.1                          | Windows8.1                                  |
-| WindowsPhone8.1                    | WindowsPhone8.1                            |
-| Windows Phone7.1                    | Windows Phone 7.x, WindowsPhone8           |
-
-Im Beispiel-app 2 ist kein Paket, das auf Windows8 ausgeführt werden kann. Kunden, die eine andere Betriebssystemversion ausführen, können die App abrufen. Alle Kunden mit Windows10 erhalten dasselbe Paket.
-
-### <a name="example-app-3"></a>Beispiel-App 3
-
-| Zielbetriebssystem des Pakets | Dieses Paket abrufende Betriebssysteme                  |
-|-------------------------------------|---------------------------------------------------------------|
-| Windows 10 (desktopgerätefamilie)  | Desktopgeräte unter Windows 10                                    |
-| WindowsPhone8                     | Windows 10 mobile-Geräte WindowsPhone8, Windows Phone 8.1 |
-
-Im Beispiel-app 3 erhalten Kunden unter Windows 10 mobile Geräte da ist kein UWP-Paket, die die mobile Gerätefamilie ausgerichtet ist das Paket WindowsPhone8. Wenn dieser app später ein Paket, die auf die mobilgerätefamilie (oder die universelle Gerätefamilie) abzielt hinzugefügt, wird dieses Paket dann für Kunden unter Windows 10 mobile Geräte anstelle des Pakets WindowsPhone8 verfügbar sein.
-
-Beachten Sie zudem, dass diese Beispiel-App kein Paket enthält, das auf Windows Phone7.x ausgeführt werden kann.
-
-### <a name="example-app-4"></a>Beispiel-App 4
-
-| Zielbetriebssystem des Pakets  | Dieses Paket abrufende Betriebssysteme |
-|--------------------------------------|----------------------------------------------|
-| Windows 10 (universelle Gerätefamilie) | Windows 10 (alle gerätefamilien)             |
-
-Im Beispiel-app 4 können Geräte unter Windows 10 ist die app abrufen, aber es wird nicht für Kunden auf eine frühere Betriebssystemversion verfügbar sein. Da das UWP-Paket die universelle Gerätefamilie abzielt, steht es auf einem Gerät mit Windows 10 (pro [Gerät gerätefamilienverfügbarkeit Auswahl](device-family-availability.md)) zur Verfügung.
+> [!IMPORTANT]
+> Ab dem 31. Oktober 2018 darf keine Produkte neu erstellten Pakete für Windows 8.x/Windows enthalten Phone 8.x oder früher. Weitere Informationen finden Sie in diesem [Blogbeitrag](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/).
 
 
 ## <a name="removing-an-app-from-the-store"></a>Entfernen einer App aus dem Store
@@ -89,7 +47,7 @@ Diese Option hat dieselbe Wirkung, als ob Sie eine Übermittlung erstellt haben 
 
 Beachten Sie, dass Kunden, die die App bereits besitzen, sie weiterhin verwenden und neu herunterladen können (und sogar Updates erhalten können, wenn Sie zu einem späteren Zeitpunkt neue Pakete übermitteln).
 
-Nachdem die Bereitstellung der App aufgehoben wurde, wird sie weiterhin in Ihrem Dashboard angezeigt. Wenn Sie die App Kunden erneut anbieten möchten, klicken Sie in der App-Übersicht auf **Make app available**. Nach dem Bestätigen ist die App für Neukunden innerhalb weniger Stunden verfügbar (es sei denn, es liegen Einschränkungen durch Einstellungen in der letzten Übermittlung vor).
+Nach der Bereitstellung der app aufgehoben wurde, müssen Sie weiterhin im Partner Center anzeigen. Wenn Sie die App Kunden erneut anbieten möchten, klicken Sie in der App-Übersicht auf **Make app available**. Nach dem Bestätigen ist die App für Neukunden innerhalb weniger Stunden verfügbar (es sei denn, es liegen Einschränkungen durch Einstellungen in der letzten Übermittlung vor).
 
 > [!NOTE]
 > Wenn die App verfügbar bleiben, neuen Kunden mit bestimmten Betriebssystemversionen jedoch nicht mehr angeboten werden soll, können Sie eine neue Übermittlung erstellen und alle Pakete für die Betriebssystemversion entfernen, unter der Sie neue Verkäufe verhindern möchten. Wenn Sie bisher Pakete für Windows Phone 8.1 und Windows 10 hatten, und nicht die app auf WindowsPhone8.1 mehr anbieten beibehalten möchten, entfernen Sie alle Pakete WindowsPhone8.1 z. B. aus der Übermittlung. Nach der Veröffentlichung des Updates kann keine neuen Kunden unter WindowsPhone8.1 die app erwerben können Kunden, die bereits haben weiterhin verwenden). Die app wird jedoch weiterhin für neue Kunden unter Windows 10 verfügbar sein.

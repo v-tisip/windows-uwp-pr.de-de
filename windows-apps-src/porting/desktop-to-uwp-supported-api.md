@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows10, UWP
 ms.assetid: 142b9c9b-3f7d-41b6-80da-1505de2810f9
 ms.localizationpriority: medium
-ms.openlocfilehash: 9448e8f4a61241879b739ff10fd000ea8c130d52
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 086025e46e0e5293e44dda61896fa3fd4ae6115b
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5764282"
+ms.locfileid: "5814352"
 ---
 # <a name="uwp-apis-available-to-a-packaged-desktop-app"></a>UWP-APIs verfügbar, um eine verpackte desktop-app
 
@@ -28,7 +28,7 @@ Die meisten UWP-APIs funktionieren problemlos für verpackte Desktop-Apps. Aller
 <tr><td>Hintergrundaufgaben</td><td>Verpackte Apps können zwar Hintergrundaufgaben registrieren, jedoch können nur vollständige UWP-Apps <i>als</i> Hintergrundaufgabe ausgeführt werden. Weitere Informationen finden Sie in <a href="https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/BackgroundTasksSample">Beispiel für eine Hintergrundaufgabe auf GitHub</a>.</td></tr>
 <tr><td>Bluetooth</td><td>Nicht alle APIs werden derzeit für verpackte Apps unterstützt.</td></tr>
 <tr><td>Chat und Anrufe</td><td>Verpackte Apps können nicht auf mobilen Geräten ausgeführt werden, wenn sie nicht vollständig zu UWP portiert wurden.</td></tr>
-<tr><td>Vertragsaktivierung</td><td>Nur vollständige UWP-Apps können vertraglich aktiviert werden.</td></tr>
+<tr><td>Vertragsaktivierung</td><td>Nur vollständige UWP-apps können vertraglich aktiviert werden.</td></tr>
 <tr><td>Kryptografie</td><td>Nicht alle APIs werden derzeit für verpackte Apps unterstützt.</td></tr>
 <tr><td>Geolocation</td><td>Nicht alle APIs werden derzeit für verpackte Apps unterstützt.</td></tr>
 <tr><td>Datei- und Ordnerauswahl</td><td>Verpackte Apps verfügen über vollen Dateisystemzugriff und benötigen keine UWP-Auswahl.</td></tr>

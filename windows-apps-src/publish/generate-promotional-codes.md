@@ -4,21 +4,21 @@ Description: You can generate promotional codes for an app or add-on that you ha
 title: Generieren von Werbecodes
 ms.assetid: 9B632266-64EC-4D62-A4C4-55B6643D8750
 ms.author: wdg-dev-content
-ms.date: 08/24/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Angebotscode, Angebotscodes, Token, Token
 ms.localizationpriority: medium
-ms.openlocfilehash: e3a29b38ebb0e00e2c65b9050868ad1e11cc2ab2
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 2fe89f65ff4f3278b0ba88ef4c5ca9d22bc67817
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5762649"
+ms.locfileid: "5817962"
 ---
 # <a name="generate-promotional-codes"></a>Generieren von Werbecodes
 
 
-Sie können Werbecodes für Apps oder Add-Ons generieren, die Sie im Microsoft Store veröffentlicht haben. Werbecodes sind eine einfache Möglichkeit, einflussreichen Benutzern kostenlosen Zugriff auf Ihre App oder Ihr Add-On zu ermöglichen. Sie könnten auch werbecodes für Adresse Customer Service Szenarien verwenden, durch einen Benutzer kostenlosen Zugriff auf Ihre app oder Add-on oder für [Betatests](beta-testing-and-targeted-distribution.md) , mit Windows 10. 
+[Partner Center](https://partner.microsoft.com/dashboard) können Sie das Generieren von werbecodes für Apps oder Add-Ons, die Sie im Microsoft Store veröffentlicht haben. Werbecodes sind eine einfache Möglichkeit, einflussreichen Benutzern kostenlosen Zugriff auf Ihre App oder Ihr Add-On zu ermöglichen. Sie könnten auch werbecodes für Adresse Customer Service Szenarien verwenden, durch einen Benutzer kostenlosen Zugriff auf Ihre app oder Add-on oder für [Betatests](beta-testing-and-targeted-distribution.md) , mit Windows 10. 
 
 Jeder werbecode hat eine entsprechende eindeutige einlösbare URL, die ein Kunde klicken kann, um den Code einzulösen und Ihre app oder Ihr Add-on aus dem Microsoft Store zu installieren.  Hinweis: Ihre App muss die abschließende Veröffentlichungsphase des [App-Zertifizierungsprozesses](the-app-certification-process.md) bestehen, bevor Kunden einen Werbecode zur Installation einlösen können.
 
@@ -45,7 +45,7 @@ Beachten Sie die folgenden Richtlinien für Werbecodes:
 
 Um bestellen Sie werbecodes für Apps oder Add-Ons:
 
-1.  Erweitern Sie im linken Navigationsmenü des Windows Dev Center-Dashboards **Bewerben** und wählen Sie dann **Angebotscodes** aus.
+1.  Im linken Navigationsmenü der [Partner Center](https://partner.microsoft.com/dashboard)erweitern Sie **bewerben** , und wählen Sie dann **Angebotscodes**.
 
 2.   Klicken Sie auf der Seite **Werbecodes** auf **Codes bestellen**.
 
@@ -64,7 +64,7 @@ Um bestellen Sie werbecodes für Apps oder Add-Ons:
 
 So laden Sie erfüllte Werbecodebestellungen herunter und verteilen die Codes an Kunden:
 
-1.  Erweitern Sie im linken Navigationsmenü des Windows Dev Center-Dashboards **Bewerben** und wählen Sie dann **Angebotscodes** aus.
+1.  Klicken Sie im linken Navigationsmenü der [Partner Center](https://partner.microsoft.com/dashboard), erweitern Sie **bewerben** , und wählen Sie dann **Angebotscodes.**
 2.  Klicken Sie auf den Link zum **Herunterladen** Ihres Angebotscodes, und speichern Sie die Datei auf Ihrem Computer. Diese Datei enthält Informationen zu Ihrer Werbecodebestellung im TSV-Format (.tsv).
 3.  Öffnen Sie die .tsv-Datei im Editor Ihrer Wahl. Öffnen Sie für ein optimales Ergebnis die .tsv-Datei in einer Anwendung, die Daten in tabellarischer Struktur anzeigen kann, z.B. Microsoft Excel. Allerdings können Sie die Datei auch in einem Text-Editor öffnen.
 
@@ -103,7 +103,7 @@ Wenn der Kunde auf **Einlösen** klickt, wird die Übersicht der App im Microsof
 
 ## <a name="review-your-promotional-codes"></a>Überprüfen der Werbecodes
 
-Um eine ausführliche Zusammenfassung der Werbecodebestellungen für Ihre Apps und Add-Ons zu sehen, wechseln Sie zur Seite **Werbecodes** (erweitern Sie im linken Navigationsmenü im Dev Center-Dashboard **Bewerben** und wählen Sie **Angebotscodes** aus). Sie können die folgenden detaillierten Informationen für Ihre aktuellen und inaktiven Werbecodes überprüfen:
+Um eine ausführliche Zusammenfassung der werbecodebestellungen für Ihre apps und Add-ons zu überprüfen, navigieren Sie zu der Seite " **werbecodes** " (im linken Navigationsmenü der Partner Center, erweitern Sie **bewerben** und wählen Sie dann **Angebotscodes**). Sie können die folgenden detaillierten Informationen für Ihre aktuellen und inaktiven Werbecodes überprüfen:
 -   Bestellungsname
 -   App oder Add-On
 -   Startdatum

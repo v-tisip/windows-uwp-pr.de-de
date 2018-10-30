@@ -1,24 +1,24 @@
 ---
 author: jnHs
-Description: If you’re required to provide a VAT ID number during the Dev Center registration process, here’s some info to get you started.
+Description: If you’re required to provide a VAT ID number during the Partner Center registration process, here’s some info to get you started.
 title: Umsatzsteuerinfo
 ms.assetid: 93834A6B-86D6-4647-AC01-CBCA3CB7A578
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 9fe2643aa5acfc666ad2cd714f1b5aa762622206
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 872d3967e48a9c8122e3cc3043a1440950f70e9b
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5759087"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5812434"
 ---
 # <a name="vat-info"></a>Umsatzsteuerinfo
 
 
-Wenn Sie während des Dev Center-Registrierungsprozesses eine Umsatzsteuer-Identifikationsnummer angeben müssen, finden Sie im Folgenden grundlegende Informationen.
+Wenn Sie eine USt-IdNr während des Registrierungsprozesses Partner Center bereitstellen müssen, sehen hier Sie einige Informationen, um Ihnen den Einstieg erleichtern.
 
 ## <a name="understanding-vat-numbers"></a>Grundlagen der Steuernummern
 

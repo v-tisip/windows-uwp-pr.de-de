@@ -3,16 +3,16 @@ author: JnHs
 Description: Target specific segments of your customers with personalized content to increase engagement, retention, and monetization.
 title: Verwenden Sie gezielte Angebote, um Interaktionen und Abschlüsse zu maximieren.
 ms.author: wdg-dev-content
-ms.date: 11/10/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, gezielte Angebote, Angebote, Benachrichtigungen
 ms.localizationpriority: medium
-ms.openlocfilehash: a808f334692d7775a34bc760bcd799cb87d05b6e
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 0f6e1f8119522cd0441157131362d860feff3410
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5769076"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5815055"
 ---
 # <a name="use-targeted-offers-to-maximize-engagement-and-conversions"></a>Verwenden Sie gezielte Angebote, um Interaktionen und Abschlüsse zu maximieren.
 
@@ -25,7 +25,7 @@ Sprechen Sie für bessere Interaktion, Kundenbindung und Monetarisierung bestimm
 
 Allgemein gesagt müssen Sie drei durchführen, um die zielgerichteten Angebote zu verwenden:
 
-1. **Erstellen Sie das Angebot auf Ihrem Dashboard.** Navigieren Sie zur Seite **Bewerben > zielgerichtete Angebote**, um Angebote zu erstellen. Weitere Informationen zu diesem Prozess sind im Folgenden beschrieben.
+1. **Erstellen Sie das Angebot in [Partner Center](https://partner.microsoft.com/dashboard).** Navigieren Sie zur Seite **Bewerben > zielgerichtete Angebote**, um Angebote zu erstellen. Weitere Informationen zu diesem Prozess sind im Folgenden beschrieben.
 2. **Implementieren Sie das In-App-Angebot.** Verwenden Sie die *Microsoft Store für gezielte Angebote API* in Ihrem app Code, um die verfügbaren Angebote für einen bestimmten Benutzer abzurufen. Sie müssen auch die In-App-Umgebung für das gezielte Angebot erstellen. Weitere Informationen finden Sie unter [Verwalten gezielter Angebote mithilfe von Store-Diensten](../monetize/manage-targeted-offers-using-windows-store-services.md).
 3. **Übermitteln Ihrer App an den Store.** Ihre App muss mit dem integrierten In-App-Angebot veröffentlicht werden, damit die Angebote für Kunden verfügbar sind.
 
@@ -34,9 +34,7 @@ Nachdem Sie diese Schritte abgeschlossen haben, werden Kunden, die Ihre App verw
 
 ## <a name="to-create-and-send-a-targeted-offer"></a>So erstellen und senden Sie ein gezieltes Angebot
 
-Führen Sie diese Schritte aus, um ein gezieltes Angebot im Dashboard zu erstellen.
-
-1.  Erweitern Sie im Windows Dev Center-Dashboard **Einbeziehen** im linken Navigationsmenü und wählen Sie dann **zielgerichtete Angebote** aus.
+1.  Im [Partner Center](https://partner.microsoft.com/dashboard)erweitern Sie im linken Navigationsmenü **einbeziehen** , und wählen Sie dann **gezielte Angebote**.
 2.  Überprüfen Sie auf der Seite **zielgerichtete Angebote** die verfügbaren Angebote. Wählen Sie **Create new offer** für ein Angebot, das Sie implementieren möchten.
 
     > [!NOTE]
@@ -46,7 +44,7 @@ Führen Sie diese Schritte aus, um ein gezieltes Angebot im Dashboard zu erstell
 4.  Wiederholen Sie die Schritte2 und 3, wenn Sie weitere Angebote erstellen möchten. Sie können den gleichen Angebotstyp mehrmals in derselben App implementieren, solange Sie für jedes Angebot andere Add-Ons auswählen. Darüber hinaus können Sie das gleiche Add-On mehr als einem Angebotstyp zuordnen.
 5.  Klicken Sie auf **Speichern**, wenn Sie mit dem Erstellen der Angebote fertig sind.
 
-Nachdem Sie Ihr Angebot implementiert haben, können Sie die Gesamtanzahl von Abschlüssen für jedes Angebot auf der Seite **Zielgerichtete Angebote** in Ihrem Dashboard anzeigen.
+Nachdem Sie Ihre Angebote implementiert haben, können Sie auf der Seite **gezielte Angebote** in Partner Center, um die Gesamtanzahl der Konvertierungen für jedes Angebot anzeigen zurückkehren.
 
 Wenn Sie sich entscheiden, kein Angebot zu verwenden (oder wenn Sie es nicht mehr verwenden möchten), klicken Sie auf **Löschen**.
 
