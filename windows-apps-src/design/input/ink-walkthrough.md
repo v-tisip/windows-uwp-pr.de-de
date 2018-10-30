@@ -8,12 +8,12 @@ ms.author: kbridge
 ms.date: 01/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 933c3f1c4c2c57cc0a7a92334223f6c6d4bbb010
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.openlocfilehash: 62c62aacd894163ef2c65b9ddfe6d8299733a2e5
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5707162"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5760464"
 ---
 # <a name="tutorial-support-ink-in-your-uwp-app"></a>Lernprogramm: Unterstützen von Freihandeingaben in Ihrer UWP-App
 
@@ -40,6 +40,7 @@ Mit Windows Ink können Sie Ihren Kunden fast alle erdenklichen schriftlichen Er
 * Einen Computer (oder einen virtuellen Computer) mit der aktuellen Version von Windows10.
 * [Visual Studio2017 und die RS2 SDK](https://developer.microsoft.com/windows/downloads)
 * [Windows 10 SDK (10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
+* Je nach Konfiguration, Sie müssen möglicherweise das [Microsoft.NETCore.UniversalWindowsPlatform](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform/6.1.9) NuGet-Paket installieren und aktivieren **des Entwicklermodus** in den Systemeinstellungen (Einstellungen -> Update und Sicherheit für Entwickler -> -> Verwenden von Entwicklerfeatures).
 * Wenn Sie noch keine Erfahrung mit der App-Entwicklung in der Universellen Windows-Plattform (UWP) mit Visual Studio haben, werfen Sie einen Blick in diese Themen, bevor Sie dieses Lernprogramm starten:  
     * [Vorbereiten](https://docs.microsoft.com/windows/uwp/get-started/get-set-up)
     * [Erstellen der App „Hello, world“ (XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
