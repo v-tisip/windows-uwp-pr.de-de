@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Timer, Threads
 ms.localizationpriority: medium
 ms.openlocfilehash: d65faebfc2be0e9ed254185d00932da9a57f718b
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5704077"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5764806"
 ---
 # <a name="use-a-timer-to-submit-a-work-item"></a><span data-ttu-id="d965e-104">Timergesteuertes Übermitteln einer Arbeitsaufgabe</span><span class="sxs-lookup"><span data-stu-id="d965e-104">Use a timer to submit a work item</span></span>
 

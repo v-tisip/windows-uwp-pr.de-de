@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a796897aa786283499c25b0f405e302feeb5f938
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5707618"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5762136"
 ---
 # <a name="creating-streaming-resources"></a><span data-ttu-id="50aac-104">Erstellen von Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="50aac-104">Creating streaming resources</span></span>
 

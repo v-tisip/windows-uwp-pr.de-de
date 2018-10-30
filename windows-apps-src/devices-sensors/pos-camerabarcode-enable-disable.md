@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 35666f64c88ad56b8f5bd3052ebbee069ccaecfc
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5689503"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5762672"
 ---
 # <a name="enable-or-disable-the-software-decoder-that-ships-with-windows"></a><span data-ttu-id="b46e5-104">Enthält Informationen zum aktivieren oder deaktivieren der Standard-Software-Decoder, der mit im Lieferumfang von Windows enthalten ist</span><span class="sxs-lookup"><span data-stu-id="b46e5-104">Enable or disable the software decoder that ships with Windows</span></span>
 <span data-ttu-id="b46e5-105">In Windows10, Version 1803, ist der Software-Decoder installiert und standardmäßig aktiviert.</span><span class="sxs-lookup"><span data-stu-id="b46e5-105">In Windows 10, version 1803, the software decoder is installed and enabled by default.</span></span>  <span data-ttu-id="b46e5-106">Sie können den im Lieferumfang von Windows enthaltenen Software-Decoder deaktivieren, wenn Sie den Kamera-Strichcodescanner nicht wünschen oder einen Decoder von einem Drittanbieter haben, der mit Windows.Devices.PointOfService.BarcodeScanner-APIs verwendet werden kann und nicht beide verwenden möchten.</span><span class="sxs-lookup"><span data-stu-id="b46e5-106">You can disable the software decoder that ships with Windows if you do not want to use Camera Barcode Scanner or if you have acquired a 3rd party decoder that works with Windows.Devices.PointOfService.BarcodeScanner APIs and do not want to use both.</span></span>

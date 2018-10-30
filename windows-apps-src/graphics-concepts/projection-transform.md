@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 01a410e0e2759dcdfd6adff9c25238447fe4138b
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5693505"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5762249"
 ---
 # <a name="projection-transform"></a><span data-ttu-id="ab95e-105">Projektionstransformation</span><span class="sxs-lookup"><span data-stu-id="ab95e-105">Projection transform</span></span>
 

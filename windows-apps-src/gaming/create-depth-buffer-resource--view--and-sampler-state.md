@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Direct3D, Tiefenpuffer
 ms.localizationpriority: medium
 ms.openlocfilehash: 091ac04b2a41c54fbce7294bcf6651f4ad4aafd2
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5699014"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5760700"
 ---
 # <a name="create-depth-buffer-device-resources"></a><span data-ttu-id="09f23-104">Erstellen von Tiefenpuffer-Geräteressourcen</span><span class="sxs-lookup"><span data-stu-id="09f23-104">Create depth buffer device resources</span></span>
 

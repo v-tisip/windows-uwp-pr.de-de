@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 9babc1f96b83123cef4bf103f4d13696697cc897
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5697238"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5763894"
 ---
 # <a name="interaction-primer"></a><span data-ttu-id="c8b7a-103">Einführung in die Interaktion</span><span class="sxs-lookup"><span data-stu-id="c8b7a-103">Interaction primer</span></span>
 

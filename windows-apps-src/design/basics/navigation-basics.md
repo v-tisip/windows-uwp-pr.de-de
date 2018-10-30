@@ -12,11 +12,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 82623a86548866a78f56385ee0a535bfcb822c46
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5705316"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5759685"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a><span data-ttu-id="3e2b0-103">Navigationsdesigngrundlagen für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="3e2b0-103">Navigation design basics for UWP apps</span></span>
 

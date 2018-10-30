@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, DirectX, Grafiken
 ms.localizationpriority: medium
 ms.openlocfilehash: e9834a83620343f26acaabd0e05b30cc2c1dcfab
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5699318"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5760064"
 ---
 # <a name="basic-3d-graphics-for-directx-games"></a><span data-ttu-id="a94eb-104">Grundlegendes zu 3D-Grafiken für DirectX-Spiele</span><span class="sxs-lookup"><span data-stu-id="a94eb-104">Basic 3D graphics for DirectX games</span></span>
 
