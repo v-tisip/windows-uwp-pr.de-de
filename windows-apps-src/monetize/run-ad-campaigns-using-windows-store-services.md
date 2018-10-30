@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store Werbungs-API, Anzeigenkampagnen
 ms.localizationpriority: medium
 ms.openlocfilehash: 2212a3663e79f4fb068af631cfad7715b5a039ae
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5690956"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5757590"
 ---
 # <a name="run-ad-campaigns-using-store-services"></a><span data-ttu-id="2b214-104">Durchführen von Anzeigenkampagnen mit Store-Diensten</span><span class="sxs-lookup"><span data-stu-id="2b214-104">Run ad campaigns using Store services</span></span>
 
