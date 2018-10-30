@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: b80eda57ff700d732ba2402582ed6402acca4fc6
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5700328"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5756483"
 ---
 # <a name="resource-management-system"></a>Ressourcenverwaltungssystem
 Das Ressourcenverwaltungssystem verfügt sowohl über Buildzeit- als auch über Laufzeitfeatures. Während der Buildzeit erstellt das System einen Index aller verschiedenen Varianten der Ressourcen, die mit Ihrer App gepackt sind. Dieser ebenfalls im App-Paket enthaltene Index ist der Package Resource Index oder kurz PRI. Zur Laufzeit erkennt das System die momentan geltenden Benutzer- und Computereinstellungen, fragt die Informationen im PRI ab und lädt automatisch die Ressourcen, die für diese Einstellungen am besten geeignet sind.
