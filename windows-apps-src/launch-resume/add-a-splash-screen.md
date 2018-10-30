@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 143b96171091406fb91954685143e4f86c036ffb
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "5694465"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5755814"
 ---
 # <a name="add-a-splash-screen"></a><span data-ttu-id="7b03f-104">Hinzufügen eines Begrüßungsbildschirms</span><span class="sxs-lookup"><span data-stu-id="7b03f-104">Add a splash screen</span></span>
 

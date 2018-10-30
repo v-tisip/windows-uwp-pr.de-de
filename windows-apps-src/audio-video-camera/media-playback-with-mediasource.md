@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 73b6a19e2385f1a9b8afa4672df50d17ac16ec97
-ms.sourcegitcommit: 086001cffaf436e6e4324761d59bcc5e598c15ea
+ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "5711227"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "5755017"
 ---
 # <a name="media-items-playlists-and-tracks"></a><span data-ttu-id="d3195-104">Medienelemente, Wiedergabelisten und Titel</span><span class="sxs-lookup"><span data-stu-id="d3195-104">Media items, playlists, and tracks</span></span>
 
