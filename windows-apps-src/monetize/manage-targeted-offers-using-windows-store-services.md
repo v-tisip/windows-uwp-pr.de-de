@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-API für gezielte Angebote, gezielte Angebote
 ms.localizationpriority: medium
 ms.openlocfilehash: 706f48e64fb8e7534686b8fd7e9666b98dffd9b7
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5831664"
+ms.locfileid: "5863387"
 ---
 # <a name="manage-targeted-offers-using-store-services"></a><span data-ttu-id="1b903-104">Verwalten von gezielten Angeboten mithilfe von Store-Diensten</span><span class="sxs-lookup"><span data-stu-id="1b903-104">Manage targeted offers using Store services</span></span>
 

@@ -14,11 +14,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 3b52c801ffcf1cfe916e41cfd102a37397fadfee
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5839080"
+ms.locfileid: "5861499"
 ---
 # <a name="custom-dependency-properties"></a><span data-ttu-id="0243f-104">Benutzerdefinierte Abhängigkeitseigenschaften</span><span class="sxs-lookup"><span data-stu-id="0243f-104">Custom dependency properties</span></span>
 

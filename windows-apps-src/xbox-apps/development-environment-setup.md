@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: 8801c0d9-94a5-41a2-bec3-14f523d230df
 ms.localizationpriority: medium
 ms.openlocfilehash: 2234b7d39f130da03562176f0df878701d524635
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5824550"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5861317"
 ---
 # <a name="set-up-your-uwp-on-xbox-development-environment"></a><span data-ttu-id="6875f-104">Einrichten der UWP-Entwicklungsumgebung auf Xbox</span><span class="sxs-lookup"><span data-stu-id="6875f-104">Set up your UWP on Xbox development environment</span></span>
 

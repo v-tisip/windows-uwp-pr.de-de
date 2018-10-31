@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 736018fbf966b547c3dd41e245149d498c1231e3
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5814206"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5866762"
 ---
 # <a name="launch-the-default-app-for-a-file"></a><span data-ttu-id="77380-104">Starten der Standard-App für eine Datei</span><span class="sxs-lookup"><span data-stu-id="77380-104">Launch the default app for a file</span></span>
 

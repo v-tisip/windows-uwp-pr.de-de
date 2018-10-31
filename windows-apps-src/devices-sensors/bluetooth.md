@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 19f381b7fbd53ee50d4589201edf74ac1f241d40
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5830841"
+ms.locfileid: "5863498"
 ---
 # <a name="bluetooth"></a><span data-ttu-id="59536-104">Bluetooth</span><span class="sxs-lookup"><span data-stu-id="59536-104">Bluetooth</span></span>
 <span data-ttu-id="59536-105">Dieser Abschnitt enthält Artikel zur Bluetooth-Integration in universelle Windows-Plattform (UWP) apps.</span><span class="sxs-lookup"><span data-stu-id="59536-105">This section contains articles on how to integrate Bluetooth into Universal Windows Platform (UWP) apps.</span></span> <span data-ttu-id="59536-106">Es gibt zwei unterschiedliche Bluetooth-Technologien, die Sie auswählen können, um in Ihrer app zu implementieren.</span><span class="sxs-lookup"><span data-stu-id="59536-106">There are two different bluetooth technologies that you can choose to implement in your app.</span></span>

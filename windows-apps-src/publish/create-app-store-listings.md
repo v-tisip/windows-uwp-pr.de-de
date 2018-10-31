@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Eintrag, Beschreibung, Store-Seite, Versionshinweise, Titel
 ms.localizationpriority: medium
 ms.openlocfilehash: ec1867e747f3458e3a9cffabe9a45535d4c27489
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5830000"
+ms.locfileid: "5861055"
 ---
 # <a name="create-app-store-listings"></a><span data-ttu-id="c0cde-103">Erstellen von Store-Einträgen für Apps</span><span class="sxs-lookup"><span data-stu-id="c0cde-103">Create app Store listings</span></span>
 

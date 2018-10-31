@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 31af943ab4a9231f58fb2e3d5489e9ae80d8d565
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5819416"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5862417"
 ---
 # <a name="pointofservice-device-objects"></a><span data-ttu-id="9de55-104">PointOfService-Geräteobjekte</span><span class="sxs-lookup"><span data-stu-id="9de55-104">PointOfService device objects</span></span>
 

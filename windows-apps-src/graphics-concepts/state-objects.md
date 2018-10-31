@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 3b0333d77e635961d51d3d5bb45cdf2def646fb8
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5828431"
+ms.locfileid: "5863772"
 ---
 # <a name="state-objects"></a><span data-ttu-id="74101-106">Statusobjekte</span><span class="sxs-lookup"><span data-stu-id="74101-106">State objects</span></span>
 
