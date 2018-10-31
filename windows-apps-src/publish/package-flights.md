@@ -4,16 +4,16 @@ Description: You can use package flights to distribute packages that are only gi
 title: Flight-Pakete
 ms.assetid: 5B094822-A8DE-4EE3-B55D-3E306C04EE79
 ms.author: wdg-dev-content
-ms.date: 6/14/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, Test-Flighting
 ms.localizationpriority: medium
-ms.openlocfilehash: c34aa5f060671341900e25095ee8dc1d2d45a657
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: a873b6f6c0d1a35667b47109f5cc2205e5a02158
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5757925"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5838911"
 ---
 # <a name="package-flights"></a>Flight-Pakete
 
@@ -21,7 +21,7 @@ Sie können Flight-Pakete verwenden, um bestimmte Pakete an eine begrenzte Grupp
 
 Mit Flight-Pakete unterscheiden nur die Pakete. der Store-Eintrag anzeigen wird für alle Ihre Kunden gleich sein. Alle Personen in Ihrer Flight-Gruppe erhalten die Pakete, die Sie in das Flight-Paket einschließen, während Kunden, die die Flight-Gruppe angehören weiterhin Ihre regulären (ohne Test-Flight) Pakete erhalten.  Wenn Sie später feststellen, dass Sie Pakete aus einem Flight-Paket für alle Ihre Kunden zur Verfügung stellen möchten, können Sie einfach diese dieselben Pakete in einer Übermittlung ohne Test-Flight. Beachten Sie, dass Flight-Pakete ebenso wie alle Übermittlungen den [Zertifizierungsprozess](the-app-certification-process.md)übergeben müssen.
 
-Wenn Sie Flight-Pakete einrichten, können Sie die Personen angeben, die bestimmte Pakete erhalten sollen, indem sie eine **neue Benutzergruppe** (auch als Flight-Gruppe bezeichnet) hinzufügen. Benutzer in einer Test-Flight-Gruppe, die ein Gerät mit einer Windows 10-Version verwenden, die Flight-Pakete unterstützt (Windows.Desktop Build 10586 oder höher; Windows.Mobile Build 10586.63 oder höher; oder Xbox One), erhalten die Pakete aus dem für die jeweilige Gruppe festlegten Test-Flight. (Flight-Pakete umfassen ggf. Pakete, die für eine beliebige Betriebssystemversion erstellt wurden, einschließlich Windows 8.1/Windows Phone 8.1 oder früher.) Benutzer, die zu keiner Test-Flight-Gruppe hinzugefügt wurden oder ein Gerät verwenden, das Flight-Pakete nicht unterstützt, erhalten Pakete aus der Übermittlung ohne Test-Flight.
+Wenn Sie Flight-Pakete einrichten, können Sie die Personen angeben, die bestimmte Pakete erhalten sollen, indem sie eine **neue Benutzergruppe** (auch als Flight-Gruppe bezeichnet) hinzufügen. Benutzer in einer Test-Flight-Gruppe, die ein Gerät mit einer Windows 10-Version verwenden, die Flight-Pakete unterstützt (Windows.Desktop Build 10586 oder höher; Windows.Mobile Build 10586.63 oder höher; oder Xbox One), erhalten die Pakete aus dem für die jeweilige Gruppe festlegten Test-Flight. (Flight-Pakete können Pakete einbeziehen, für jede Betriebssystemversion, einschließlich Windows 8.1 / Windows Phone 8.1 oder früher, falls Ihre app zuvor veröffentlichten bereits unterstützt.) Jeder Benutzer, der nicht zu einem Ihrer Flight-Gruppen hinzugefügt wurde, oder ein Gerät verwenden, die das Flight-Pakete nicht unterstützt erhalten Pakete aus der Übermittlung ohne Test-Flight.
 
 > [!IMPORTANT] 
 > Personen in Ihren Test-Flight-Gruppen erhalten auf Desktops und mobilen Geräten die Pakete in Ihrem Test-Flight jedes Mal automatisch, wenn Sie Updates bereitstellen. **Personen in Ihren Test-Flight-Gruppen, die Xbox-Geräte verwenden, müssen jedoch manuell nach Updates suchen**, um die neuesten Pakete zu erhalten. Dabei müssen sie sicherstellen, dass sie mit ihrem Microsoft-Konto am Gerät angemeldet sind (mit der zugeordneten E-Mail-Adresse, die Sie in Ihre bekannte Anwendergruppe eingefügt haben).
@@ -51,7 +51,7 @@ Sie müssen auf der Paketseite der Flight-Erstellung einen Namen für den Flight
 
 ## <a name="specify-packages-to-include-in-your-package-flight"></a>Festlegen von Paketen zum Einfügen in Ihr Flight-Paket
 
-Nachdem Sie die Details des Flight-Pakets gespeichert haben, wird die Übersicht dazu angezeigt. Klicken Sie auf **Pakete**, um festzulegen, welche Pakete das Test-Flight enthalten soll. Sie können Pakete einbeziehen, die für jede Betriebssystemversion (einschließlich Windows10, Windows8.x und Windows Phone 8.x oder früher) erstellt wurden.
+Nachdem Sie die Details des Flight-Pakets gespeichert haben, wird die Übersicht dazu angezeigt. Klicken Sie auf **Pakete**, um festzulegen, welche Pakete das Test-Flight enthalten soll. Sie können für jede Betriebssystemversion, die Ihre app unterstützt Pakete einbeziehen.
 
 Sie haben die Option, Pakete auszuwählen, die einer vorherigen Übermittlung zugeordnet waren (entweder einer Übermittlung ohne Test-Flight oder einem Ihrer anderen Flight-Pakete, falls Sie mehrere haben). Wenn Sie neue Pakete für dieses Flight-Paket verwenden hochladen müssen, können Sie diese hier Hochladen (mit dem [gleichen Prozess wie bei einer regulären Übermittlung ohne Test-Flight-app-Pakete hochladen](upload-app-packages.md)). Wenn Sie alle Pakete für dieses Flight-Paket angegeben haben, klicken Sie auf **Speichern**.
 
