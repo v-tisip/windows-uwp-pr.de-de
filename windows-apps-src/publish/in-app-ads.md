@@ -1,26 +1,29 @@
 ---
 author: jnHs
-Description: If your app displays ads using the Microsoft Advertising SDK, use the In-app ads page of the Dev Center dashboard to manage your use of ads.
+Description: If your app displays ads using the Microsoft Advertising SDK, use the In-app ads page of Partner Center to manage your use of ads.
 title: In-App-Anzeigen
 ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
 ms.author: wdg-dev-content
-ms.date: 06/28/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 3a99ad15d9157f13dfba9d55ad02202f62011ad9
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: ccff2dce0a57e5f3219f306fa029f84162bf4974
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5759208"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5835769"
 ---
 # <a name="in-app-ads"></a>In-App-Anzeigen
 
-Verwenden Sie die Seite **Monetarisieren** &gt; **In-App-Anzeige** im Dev Center-Dashboard, um Anzeigeneinheiten zu erstellen und verwalten:
+Verwenden Sie die **Monetarisierung** &gt; Seite im [Partner Center](https://partner.microsoft.com/dashboard) zum Erstellen und Verwalten von Anzeigeeinheiten für **In-app-anzeigen** :
 
 * Apps für die universelle Windows-Plattform (UWP), die [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) verwenden.
-* Apps für Windows8.x und Windows Phone8.x, die [Microsoft Advertising-SDK für Windows und Windows Phone 8.x](http://aka.ms/store-8-sdk) verwenden.
+* Zuvor veröffentlichten Windows 8.x und Windows Phone 8.x-apps, mit denen die [Microsoft Advertising SDK für Windows und Windows Phone 8.x](http://aka.ms/store-8-sdk).
+
+> [!IMPORTANT]
+> Ab dem 31. Oktober 2018 darf keine Produkte neu erstellten Pakete für Windows 8.x/Windows enthalten Phone 8.x oder früher. Weitere Informationen finden Sie in diesem [Blogbeitrag](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
 
 Weitere Informationen dazu, wie Sie diese SDKs in Ihren Apps zu Werbezwecken integrieren, finden Sie unter [Anzeigen von Werbung in Ihrer App mit dem Microsoft Advertising-SDK](../monetize/display-ads-in-your-app.md).
 
@@ -30,7 +33,7 @@ Weitere Informationen dazu, wie Sie diese SDKs in Ihren Apps zu Werbezwecken int
 
 So erstellen Sie eine Anzeigeeinheit für eine [Banneranzeige](../monetize/banner-ads.md), [Interstitialwerbung](../monetize/interstitial-ads.md) oder [native Anzeige](../monetize/native-ads.md) in Ihrer App:
 
-1.  Wechseln Sie auf die Seite **Monetarisieren** &gt; **In-App-Anzeige** im Dashboard und klicken Sie auf **Anzeigeneinheit erstellen**.
+1.  Wechseln Sie zu der **gewinnbringende Nutzung** &gt; **In-app-Werbung** im Partner Center Seite, und klicken Sie auf **anzeigeneinheit erstellen**.
 2.  Wählen Sie in der Dropdownliste **App-Name** die App aus, in der die Anzeigeneinheit verwendet werden soll.
 3.  Geben Sie im Feld **Name der Anzeigeneinheit** einen Namen für die Anzeigeneinheit ein. Dies kann eine beliebige beschreibende Zeichenfolge sein, die Sie verwenden, um die Anzeigeneinheit zu Berichterstellungszwecken zu identifizieren.
 4.  Wählen Sie in der Dropdownliste **Art der Anzeigeneinheit** den Anzeigentyp aus.
@@ -69,7 +72,7 @@ Nach dem Erstellung von Anzeigeneinheiten für eine oder mehrere Apps auf Ihrem 
 Um die [Vermittlungseinstellungen](#mediation) für eine UWP-Anzeigeneinheit oder die [COPPA-Compliance](#coppa) für die App, in denen die Anzeigeneinheit verwendet wird, zu bearbeiten, klicken Sie auf den Namen der Anzeigeneinheit.
 
 > [!NOTE]
-> Wenn eine anzeigeneinheit keine Aktivität für die letzten sechs Monate anzeigt, werden wir bezeichnen es als **inaktiv**und schließlich aus Ihrem Dashboard entfernt. Sie können Filter verwenden, um nur **aktive** oder **inaktive** Anzeigeneinheiten anzuzeigen. Wenn Sie Anzeigeneinheiten sehen, für die Sie der Meinung sind, sie seien ungenau als **inaktiv** markiert, [wenden Sie sich an den Support](http://aka.ms/storesupport).
+> Wenn eine anzeigeneinheit keine Aktivität für die letzten sechs Monate anzeigt, werden wir bezeichnen es als **inaktiv**und schließlich aus Partner Center entfernt. Sie können Filter verwenden, um nur **aktive** oder **inaktive** Anzeigeneinheiten anzuzeigen. Wenn Sie Anzeigeneinheiten sehen, für die Sie der Meinung sind, sie seien ungenau als **inaktiv** markiert, [wenden Sie sich an den Support](http://aka.ms/storesupport).
 
 <span id="mediation" />
 
@@ -85,21 +88,21 @@ So konfigurieren Sie die Anzeigenvermittlung für eine UWP-Anzeigeneinheit in Ih
 1. [Eine Anzeigeneinheit erstellen](#create-ad-unit) oder [Eine vorhandene Anzeigeneinheit auswählen](#available-ad-units).
 2. Wechseln Sie zu der **vermittlungseinstellungen** Abschnitt und Konfiguration von Einstellungen, auf der Seite **In-app-anzeigen** .
 
-    * Standardmäßig ist das Kontrollkästchen **Let Microsoft choose the best mediation settings for your app** aktiviert. Es wird empfohlen, diese Option zu verwenden. Diese Option verwendet Machine Learning-Algorithmen, um automatisch die Anzeigenvermittlungseinstellungen für Ihre App auszuwählen, um Ihnen beim Optimieren der Anzeigenumsätze in den verschiedenen Märkten zu helfen, die Ihre App unterstützt. Wenn Sie diese Option verwenden, können Sie auch die anzeigennetzwerke auswählen, die Sie in der Konfiguration verwenden möchten. Deaktivieren Sie die anzeigennetzwerke, die nicht Teil der Konfiguration werden sollen und unser Algorithmus wird sichergestellt, dass Ihre app anzeigen nur von den gewählten Anzeigennetzwerken empfängt.
+    * Standardmäßig ist das Kontrollkästchen **ermöglichen Microsoft optimieren Meine Einstellungen** aktiviert. Es wird empfohlen, diese Option zu verwenden. Diese Option verwendet Machine Learning-Algorithmen, um automatisch die Anzeigenvermittlungseinstellungen für Ihre App auszuwählen, um Ihnen beim Optimieren der Anzeigenumsätze in den verschiedenen Märkten zu helfen, die Ihre App unterstützt. Wenn Sie diese Option verwenden, können Sie auch die anzeigennetzwerke auswählen, die Sie in der Konfiguration verwenden möchten. Deaktivieren Sie die anzeigennetzwerke, die nicht Teil der Konfiguration werden sollen und unser Algorithmus wird sichergestellt, dass Ihre app anzeigen nur von den gewählten Anzeigennetzwerken empfängt.
     * Wenn Sie Ihre eigenen anzeigenvermittlungseinstellungen auswählen möchten, wählen Sie die **Standardeinstellungen ändern**.
 
     > [!NOTE]
     > Die verbleibenden Schritte in diesem Abschnitt sind nur durchzuführen, wenn Sie die **Standardeinstellungen ändern**auswählen.
 
-4. Wählen Sie in der Dropdownliste **Ziel** die Option **Basisplan**, um die Standardkonfiguration für Ihre Anzeigenvermittlungseinstellungen zu konfigurieren. Diese Standardkonfiguration wird auf alle Märkte angewendet, mit Ausnahme von Märkten, für die Sie marktspezifische Konfigurationen definieren.
-6. Geben Sie dann das Verhältnis der Anzeigen an, die Sie auf dem Steuerelement von kostenpflichtigen Netzwerken (die Sie für Aufrufe bezahlen) und anderen Anzeigennetzwerken (die Sie nicht für Aufrufe bezahlen) anzeigen möchten. Geben Sie hierzu einen Wert zwischen 0 und 100 im Feld **Gewichtung** für **Paid ad networks** und **Weitere Anzeigennetzwerke** ein.  
-7. Aktivieren Sie im Abschnitt **Paid ad networks** das Kontrollkästchen in der Spalte **Aktiv** für jedes [kostenpflichtige Netzwerk](#paid-networks), das Sie verwenden möchten, und sortieren Sie die Netzwerke dann mithilfe der Pfeile in der Spalte **Rang** nach Rang. (Dies gibt an,wie oft jedes Netzwerk von Ihrem Steuerelement verwendet werden soll.)
-8. Wenn Sie eine **Banner** oder **Interstitialwerbung**-Anzeigeneinheit ausgewählt haben, sehen Sie außerdem einen Abschnitt namens **Weitere Anzeigennetzwerke **. Mit den Netzwerken in diesem Abschnitt erzielen Sie keine Einnahmen für Anzeigenaufrufe. Stattdessen zeigen diese Netzwerke Werbung aus Quellen wie Werbekampagnen für Apps an.
+3. Wählen Sie in der Dropdownliste **Ziel** die Option **Basisplan**, um die Standardkonfiguration für Ihre Anzeigenvermittlungseinstellungen zu konfigurieren. Diese Standardkonfiguration wird auf alle Märkte angewendet, mit Ausnahme von Märkten, für die Sie marktspezifische Konfigurationen definieren.
+4. Geben Sie dann das Verhältnis der Anzeigen an, die Sie auf dem Steuerelement von kostenpflichtigen Netzwerken (die Sie für Aufrufe bezahlen) und anderen Anzeigennetzwerken (die Sie nicht für Aufrufe bezahlen) anzeigen möchten. Geben Sie hierzu einen Wert zwischen 0 und 100 im Feld **Gewichtung** für **Paid ad networks** und **Weitere Anzeigennetzwerke** ein.  
+5. Aktivieren Sie im Abschnitt **Paid ad networks** das Kontrollkästchen in der Spalte **Aktiv** für jedes [kostenpflichtige Netzwerk](#paid-networks), das Sie verwenden möchten, und sortieren Sie die Netzwerke dann mithilfe der Pfeile in der Spalte **Rang** nach Rang. (Dies gibt an,wie oft jedes Netzwerk von Ihrem Steuerelement verwendet werden soll.)
+6. Wenn Sie eine **Banner** oder **Interstitialwerbung**-Anzeigeneinheit ausgewählt haben, sehen Sie außerdem einen Abschnitt namens **Weitere Anzeigennetzwerke **. Mit den Netzwerken in diesem Abschnitt erzielen Sie keine Einnahmen für Anzeigenaufrufe. Stattdessen zeigen diese Netzwerke Werbung aus Quellen wie Werbekampagnen für Apps an.
 
     Aktivieren Sie im Abschnitt **Weitere Anzeigennetzwerke** das Kontrollkästchen in der Spalte **Aktiv** für jedes [weitere Netzwerk](#other-networks), das Sie verwenden möchten, und sortieren Sie die Netzwerke dann mithilfe der Pfeile in der Spalte **Rang** nach Rang. (Dies gibt an,wie oft jedes Netzwerk von Ihrem Steuerelement verwendet werden soll.) Die folgenden weiteren Netzwerke werden derzeit unterstützt:
 
-9. Für jeden Markt, in dem Sie die Standardvermittlungskonfiguration außer Kraft setzen möchten, wählen Sie den Markt in der Dropdownliste **Ziel**, und aktualisieren Sie die Anzeigennetzwerkauswahl und den Rang.
-10. Klicken Sie auf **Anzeigeneinheit erstellen** (wenn Sie eine neue Anzeigeneinheit erstellen) oder **Speichern** (wenn Sie eine vorhandene Anzeigeneinheit bearbeiten).
+7. Für jeden Markt, in dem Sie die Standardvermittlungskonfiguration außer Kraft setzen möchten, wählen Sie den Markt in der Dropdownliste **Ziel**, und aktualisieren Sie die Anzeigennetzwerkauswahl und den Rang.
+8. Klicken Sie auf **Anzeigeneinheit erstellen** (wenn Sie eine neue Anzeigeneinheit erstellen) oder **Speichern** (wenn Sie eine vorhandene Anzeigeneinheit bearbeiten).
 
 <span id="paid-networks" />
 
@@ -151,7 +154,7 @@ Die verfügbaren Anzeigennetzwerke schalten Anzeigen in allen [unterstützten M�
 
 ## <a name="coppa-compliance"></a>COPPA-Compliance
 
-Wenn Sie [eine Anzeigeneinheit erstellen](#create-ad-unit) oder [eine vorhandenen Anzeigeneinheit auswählen](#available-ad-units), wird der **COPPA-Compliance**-Abschnitt am unteren Rand der Seite "Dashboard" angezeigt, wenn die ausgewählte App für die Anzeigeneinheit mindestens eine Übermittlung besitzt, die den Schritt [im Store](../publish/the-app-certification-process.md#in-the-store) im App-Zertifizierungsprozess erreicht hat.
+Wenn Sie [eine anzeigeneinheit erstellen](#create-ad-unit) oder [eine vorhandene anzeigeneinheit auswählen](#available-ad-units), werden die **COPPA-Compliance** -Abschnitt am unteren Rand der Seite angezeigt, wenn die ausgewählte app für die anzeigeneinheit mindestens eine Übermittlung besitzt, das erreicht hat die [im Store](../publish/the-app-certification-process.md#in-the-store) Schritt in der app Zertifizierungsprozess.
 
 Im Rahmen des Children's Online Privacy Protection Act ("COPPA"), wählen Sie **Diese Anwendung richtet sich an Kinder unter 13 Jahren** in diesem Abschnitt aus, wenn Ihre App an Kinder unter 13Jahren gerichtet ist. Wenn Sie diese Option auswählen, wird Microsoft Maßnahmen ergreifen, um die verhaltensorientierten Werbedienste bei der Übermittlung von Werbung in Ihre App zu deaktivieren.
 

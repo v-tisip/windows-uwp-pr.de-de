@@ -1,23 +1,23 @@
 ---
 author: jnHs
-Description: The Insights report in the Windows Dev Center dashboard
+Description: The Insights report in Partner Center highlights significant changes about your apps.
 title: Bericht über Geschäftsverlauf
 ms.author: wdg-dev-content
-ms.date: 06/01/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, Uwp, Insight, Trend, Anomalien, Anomalie, Daten Änderungen
 ms.localizationpriority: medium
-ms.openlocfilehash: 082f6e133217061d319301ec3f65ed035a3eef23
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 324666095c26eb8d05732ce7e1ad3217b210d406
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5745040"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5837999"
 ---
 # <a name="insights-report"></a>Bericht über Geschäftsverlauf
 
 
-**Der Bericht im Windows Dev Center-Dashboard** hervorgehoben erhebliche Änderungen (Erhöhung oder Verringerung in einer bestimmten Metrik), die wir in den letzten 30 Tagen in Ihrer Käufe, Integrität, und/oder Nutzungsdaten erkannt. Auf diese Weise können Sie einen kurzen Überblick über potenziell wichtige Änderungen bei der erhalten, ohne sich alle Diagramme in jedem dieser Berichte anzeigen.
+**Der Bericht im [Partner Center](https://partner.microsoft.com/dashboard) ** hervorgehoben erhebliche Änderungen (Erhöhung oder Verringerung in einer bestimmten Metrik), die wir in den letzten 30 Tagen in Ihrer Käufe, Integrität, und/oder Nutzungsdaten erkannt. Auf diese Weise können Sie einen kurzen Überblick über potenziell wichtige Änderungen bei der erhalten, ohne sich alle Diagramme in jedem dieser Berichte anzeigen.
 
 > [!NOTE]
 > Daten in diesem Bericht werden die letzten 30 Tage behandelt. Sie können keinen anderen Zeitraum für diesen Bericht auswählen.

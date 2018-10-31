@@ -4,16 +4,16 @@ Description: Review this list to help avoid issues that frequently prevent apps 
 title: Vermeiden allgemeiner Zertifizierungsfehler
 ms.assetid: 9E9E3841-2F9B-42D4-B5F8-4C7C31E42E3D
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 17a3c3cd5d7b75408a368c6b5fbc0b4a8bfe2839
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 7f37412ac88b001f412a1495f2b4efa029cf4d3a
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5762126"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5835250"
 ---
 # <a name="avoid-common-certification-failures"></a>Vermeiden allgemeiner Zertifizierungsfehler
 
@@ -33,7 +33,7 @@ Lesen Sie diese Liste, und vermeiden Sie dadurch Probleme, die häufig die Zerti
 
 -   [Stellen Sie die erforderlichen Infos](notes-for-certification.md) zum Verwenden der App bereit, z.B. Benutzername und Kennwort für ein Testkonto, wenn sich Benutzer bei einem Dienst anmelden müssen, oder geben Sie die erforderlichen Schritte zum Zugreifen auf versteckte oder gesperrte Features an.
 
--   Fügen Sie eine [Datenschutzrichtlinie](create-app-store-listings.md#privacy-policy) hinzu, wenn Ihre App eine benötigt, z.B. wenn die App auf alle Arten von persönlichen Informationen zugreift oder dies anderweitig gesetzlich vorgeschrieben ist. Um zu ermitteln, ob Ihre app eine Datenschutzrichtlinie benötigt, überprüfen Sie die [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) und die [Microsoft Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies).
+-   Fügen Sie eine [URL zur Datenschutzrichtlinie](enter-app-properties.md#privacy-policy-url) , wenn Ihre app eine erfordert; z. B. wenn die app greift auf jeder Art von persönlichen Informationen auf irgendeine Weise oder dies anderweitig gesetzlich vorgeschrieben. Um zu ermitteln, ob Ihre app eine Datenschutzrichtlinie benötigt, überprüfen Sie die [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) und die [Microsoft Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies).
 
 -   Formulieren Sie die Beschreibung der App so, dass sie den Funktionsumfang der App genau darstellt. Unterstützung erhalten Sie in den Richtlinien zum [Verfassen einer ansprechenden App-Beschreibung](write-a-great-app-description.md).
 

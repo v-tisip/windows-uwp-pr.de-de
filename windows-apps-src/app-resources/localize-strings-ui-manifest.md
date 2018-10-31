@@ -10,12 +10,12 @@ ms.date: 11/01/2017
 ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
-ms.openlocfilehash: b1e57d5c8ae4d1586de9f16455dc178c5e154fbf
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: c9789e21bd4d2a598db292721cabfe58d7c12ebe
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5760527"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5836692"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>Lokalisieren von Zeichenfolgen in der Benutzeroberfläche und im App-Paketmanifest
 Weitere Informationen zu einer Werterhöhung Ihrer App durch Lokalisierung finden Sie unter [Globalisierung und Lokalisierung](../design/globalizing/globalizing-portal.md).
@@ -259,7 +259,7 @@ private void RefreshUIText()
 ## <a name="loading-strings-from-a-class-library-or-a-windows-runtime-library"></a>Laden von Zeichenfolgen aus einer Klassenbibliothek oder einer Windows-Runtime-Bibliothek
 Die Zeichenfolgenressourcen einer referenzierten Klassenbibliothek (Universal Windows) oder [Windows-Runtime Library (Universal Windows)](../winrt-components/index.md) stehen in der Regel in einem Unterordner des Pakets. Dort werden sie während des Buildprozesses eingefügt. Der Ressourcenbezeichner solche Zeichenfolgen besitzen in der Regel die Form *Bibliotheksname/Ressourcendateiname/Ressourcenbezeichner*.
 
-Eine Bibliothek kann einen ResourceLoader für ihre eigenen Ressourcen abrufen. Der folgende Code zeigt beispielsweise, wie eine Bibliothek oder eine App durch einen entsprechenden Verweis einen ResourceLoader für die Zeichenfolgenressourcen der Bibliothek abrufen kann.
+Eine Bibliothek kann einen ResourceLoader für ihre eigenen Ressourcen abrufen. Der folgende Code zeigt beispielsweise, wie eine Bibliothek oder eine app, die es verweist auf einen ResourceLoader für Zeichenfolgenressourcen der Bibliothek abrufen kann.
 
 ```csharp
 var resourceLoader = Windows.ApplicationModel.Resources.ResourceLoader.GetForCurrentView("ContosoControl/Resources");

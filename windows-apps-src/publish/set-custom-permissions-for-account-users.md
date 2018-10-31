@@ -4,38 +4,38 @@ Description: Set roles or custom permissions for account users.
 title: Legen Sie Rollen oder benutzerdefinierte Berechtigungen für Kontenbenutzer fest
 ms.assetid: 99f3aa18-98b4-4919-bd7b-d78356b0bf78
 ms.author: wdg-dev-content
-ms.date: 07/11/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Benutzerrollen, Benutzerberechtigung, benutzerdefinierte Rollen, Zugriff für Benutzer, Berechtigungen anpassen, Standardrollen
 ms.localizationpriority: medium
-ms.openlocfilehash: 753b71d409fd660687af77410f7f5796aa3c8a5c
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 2af203ae78ae34a0a6bc9884cbaeaa730ee83e9b
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5748648"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5835703"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Legen Sie Rollen oder benutzerdefinierte Berechtigungen für Kontenbenutzer fest
 
-Wenn Sie [Ihrem Dev Center-Konto Benutzer hinzufügen](add-users-groups-and-azure-ad-applications.md) müssen Sie festlegen, welchen Zugriff Sie ihnen innerhalb des Kontos erlauben. Sie können ihnen [Standardrollen](#roles) zuweisen oder [die Berechtigungen so anpassen](#custom), dass die Benutzer über die entsprechende Zugriffsebene verfügen. Einige dieser benutzerdefinierten Berechtigungen gelten für das gesamte Konto, während andere für alle Produkte erteilt (oder auf bestimmte Produkte beschränkt) werden können.
+Wenn Sie [Ihr Partner Center-Konto Benutzer hinzuzufügen](add-users-groups-and-azure-ad-applications.md), Sie müssen festlegen, welchen Zugriff sie Ihnen innerhalb des Kontos. Sie können ihnen [Standardrollen](#roles) zuweisen oder [die Berechtigungen so anpassen](#custom), dass die Benutzer über die entsprechende Zugriffsebene verfügen. Einige dieser benutzerdefinierten Berechtigungen gelten für das gesamte Konto, während andere für alle Produkte erteilt (oder auf bestimmte Produkte beschränkt) werden können.
 
 > [!NOTE] 
 > Unabhängig davon, ob Sie einen Benutzer, eine Gruppe oder eine Azure AD-Anwendung hinzufügen, können die gleichen Rollen und Berechtigungen übernommen werden.
 
 Beim Ermitteln der Rollen oder Berechtigungen sollten Sie folgendes bedenken: 
--   Benutzer (einschließlich von Gruppen und Azure AD-Anwendungen) können mit den Berechtigungen für ihre jeweils zugewiesene Rolle auf das gesamte Dev Center-Konto zugreifen, es sei denn, Sie möchten die [Berechtigungen anpassen](#custom) und ihnen [Berechtigungen auf Produktebene](#product-level-permissions) erteilen, damit Sie nur mit spezifischen Apps und/oder Add-ons arbeiten können.
+-   Benutzer (einschließlich von Gruppen und Azure AD-Apps) werden auf das gesamte Partner Center-Konto mit den Berechtigungen für ihre zugewiesenen Rollen zugreifen, es sei denn, Sie [Berechtigungen anpassen](#custom) und Zuweisen von [Berechtigungen der Produkt-Stufe](#product-level-permissions) Damit sie nur mit spezifischen apps und/oder Add-ons arbeiten können.
 -   Sie können einem Benutzer, einer Gruppe oder einer Azure AD-Anwendung den Zugriff auf die Funktionen mehrerer Rollen gewähren, indem Sie mehrere Rollen auswählen oder indem Sie mithilfe benutzerdefinierter Berechtigungen den Zugriff gewähren, den Sie ihnen geben möchten.
 -   Ein Benutzer mit einer bestimmten Rolle (oder einer Reihe benutzerdefinierter Berechtigungen) kann auch Teil einer Gruppe mit einer anderen Rolle (oder einem anderen Satz von Berechtigungen) sein. In diesem Fall hat der Benutzer Zugriff auf alle Funktionen, die mit der Gruppe und dem individuellen Konto verbunden sind.
 
 > [!TIP]
-> Dieses Thema gilt nur für das Entwicklerprogramm für Windows-Apps. Weitere Informationen zu Benutzerrollen im Hardware-Entwicklerprogramm finden Sie unter [Verwalten von Benutzerrolleng](https://docs.microsoft.com/windows-hardware/drivers/dashboard/managing-user-roles). Weitere Informationen zu Benutzerrollen im Windows-Desktopanwendungsprogramm finden Sie unter [Windows Desktopanwendungsprogramm](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#add-and-manage-account-users).
+> Dieses Thema gilt speziell für das Entwicklerprogramm für Windows-apps im [Partner Center](https://partner.microsoft.com/dashboard). Weitere Informationen zu Benutzerrollen im Hardware-Entwicklerprogramm finden Sie unter [Verwalten von Benutzerrolleng](https://docs.microsoft.com/windows-hardware/drivers/dashboard/managing-user-roles). Weitere Informationen zu Benutzerrollen im Windows-Desktopanwendungsprogramm finden Sie unter [Windows Desktopanwendungsprogramm](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#add-and-manage-account-users).
 
 
 <span id="roles" />
 
 ## <a name="assign-roles-to-account-users"></a>Kontobenutzern Rollen zuweisen
 
-Standardmäßig wird eine Reihe von standardmäßigen Rollen für die Auswhal angezeigt, wenn Sie Ihrem Dev Center-Konto einen Benutzer, Gruppen oder Azure AD-Anwendungen hinzufügen. Jede Rolle verfügt über spezifische Berechtigungen, mit denen bestimmte Funktionen innerhalb des Kontos ausgeführt werden können. 
+Standardmäßig wird eine Reihe von standardmäßigen Rollen angezeigt, für die Sie zur Auswahl, wenn Sie einen Benutzer, Gruppen oder Azure AD-Anwendung zu Ihrem Partner Center-Konto hinzufügen. Jede Rolle verfügt über spezifische Berechtigungen, mit denen bestimmte Funktionen innerhalb des Kontos ausgeführt werden können. 
 
 Sofern Sie keine [benutzerdefinierten Berechtigungen](#custom) durch die Auswahl **benutzerdefinierten Berechtigungen** verwenden, müssen alle Benutzer, Gruppen oder Azure AD-Anwendungen, die Sie einem Konto hinzufügen, mindestens einer der folgenden Standardrollen zugewiesen sein. 
 
@@ -45,7 +45,7 @@ Sofern Sie keine [benutzerdefinierten Berechtigungen](#custom) durch die Auswahl
 
 | Rolle                 | Beschreibung              |
 |----------------------|--------------------------|
-| Manager              | Verfügt über vollständigen Zugriff auf das Konto, kann jedoch keine Steuer- und Auszahlungseinstellungen ändern. Dies umfasst das Verwalten von Benutzern in Dev Center. Beachten Sie jedoch, dass die Fähigkeit zum Erstellen und Löschen von Benutzern im Azure AD-Mandanten von den Berechtigungen des Kontos in Azure AD abhängig ist. Das heißt, wenn einem Benutzer die Manager-Rolle zugewiesen ist, er jedoch nicht über globale Administratorberechtigungen im Azure AD der Organisation verfügt, kann er keine neuen Benutzer erstellen oder Benutzer aus dem Verzeichnis löschen (er kann jedoch die Dev Center-Rolle eines Benutzers ändern). <p> Hinweis: Wenn das Dev Center-Konto mit mehr als einem Azure AD-Mandanten verknüpft ist, kann der Manager nicht die vollständigen Details für einen Benutzer anzeigen (z.B. Vorname, Nachname, E-Mail-Kennwort-Wiederherstellung, und ob es sich um einen globalen Azure AD-Administrator handelt), es sei denn sie sind in dem gleichen Mandanten als der gleiche Benutzer mit einem Konto angemeldet, das über Berechtigungen als globaler Administrator für die Mandanten verfügt. Allerdings können sie Benutzer in jedem Mandanten hinzufügen und entfernen, die dem Dev Center-Konto zugeordnet sind. |
+| Manager              | Verfügt über vollständigen Zugriff auf das Konto, kann jedoch keine Steuer- und Auszahlungseinstellungen ändern. Dies umfasst das Verwalten von Benutzern im Partner Center, aber beachten Sie, dass die Fähigkeit zum Erstellen und Löschen von Benutzern im Azure AD-Mandanten Berechtigungen des Kontos in Azure AD abhängig ist. Das heißt, wenn ein Benutzer die Manager-Rolle zugewiesen ist, jedoch verfügt nicht über globale Administratorberechtigungen in der Organisation Azure AD, sie kann nicht für neue Benutzer erstellen oder Benutzer aus dem Verzeichnis löschen (obwohl sie Partner Center-Rolle eines Benutzers ändern). <p> Hinweis: Wenn das Partner Center-Konto mehrere Azure AD-Mandanten zugeordnet ist, ein Manager vollständige Details für einen Benutzer angezeigt werden (z. B. Vorname, Nachname, e-Mail-Kennwort-Wiederherstellung, und gibt an, ob sie ein globaler Administrator des Azure AD sind), wenn sie sind im gleichen Mandanten als der jeweilige Benutzer mit einem Konto, das über globale Administratorberechtigungen für den Mandanten verfügt angemeldet. Sie können jedoch hinzufügen und Entfernen von Benutzern in jedem Mandanten, die im Partner Center-Konto zugeordnet ist. |
 | Entwickler            | Kann Pakete hochladen und Apps und Add-Ons einreichen sowie den [Nutzungsbericht](usage-report.md) für Telemetriedetails einsehen. Können [Geräteübergreifende Benutzeroberflächen](https://go.microsoft.com/fwlink/?linkid=874042) -Funktionen zugreifen. Kann keine finanziellen Informationen oder Kontoeinstellungen anzeigen.   |
 | Mitwirkender im Geschäftsbereich | Kann [Integritäts](health-report.md)- und [Nutzungs](usage-report.md)-Berichte anzeigen. Kann keine Produkte erstellen oder übermitteln, Kontoeinstellungen ändern oder finanzielle Informationen anzeigen.   |
 | Mitwirkender im Finanzbereich  | Kann [Auszahlungsberichte](payout-summary.md), finanzielle Informationen und Erwerbsberichte anzeigen. Kann keine Änderungen an Apps, Add-Ons oder Kontoeinstellungen vornehmen.    |
@@ -173,7 +173,6 @@ Beachten Sie, dass einige Berechtigungen nicht für Add-Ons festgelegt werden k�
     <tr><td align="left">    <b>Integrität</b> </td><td>    Kann den <a href="health-report.md">Bericht „Integrität“</a> für das Produkt anzeigen.    </td><td>    Nicht verfügbar     </td><td>    n.a.     </td><td>    Nicht verfügbar         </td></tr>
     <tr><td align="left">    <b>Kundenfeedback</b>    </td><td>    Kann die Berichte <a href="reviews-report.md">Rezensionen</a> und <a href="feedback-report.md">Feedback</a> für das Produkt anzeigen.       </td><td>    Nicht verfügbar (Um auf Feedback oder Rezensionen reagieren zu können, muss die Berechtigung <b>Kunden kontaktieren</b> erteilt werden)   </td><td>    Nicht verfügbar     </td><td>    Nicht verfügbar         </td></tr>
     <tr><td align="left">    <b>Xbox-Analyse</b> </td><td>    Können die [Xbox-Analysebericht](xbox-analytics-report.md) für das Produkt anzeigen.    </td><td>    n.a.   </td><td>    n.a.       </td><td>    Nicht verfügbar          </td></tr>
-    <tr><td align="left">    <b>Echtzeit</b>   </td><td>    Kann den Echtzeit-Bericht für das Produkt anzeigen. (Hinweis: Dieser Bericht ist zur Zeit nur über das <a href="dev-center-insider-program.md">Dev Center-Insider-Programm</a> verfügbar.)      </td><td>    Nicht verfügbar   </td><td>    n.a.     </td><td>    Nicht verfügbar                 </td></tr>
     </tbody>
     </table>
 
