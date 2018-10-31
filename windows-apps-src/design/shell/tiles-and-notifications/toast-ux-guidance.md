@@ -9,12 +9,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: Windows 10, Uwp, Benachrichtigung, Sammlung, gruppieren, Ux, Ux-Richtlinien, Richtlinien, Aktion, Popup, Info-Center, Noninterruptive, effektive Benachrichtigungen, nicht zudringliche Benachrichtigungen, umsetzbare, verwalten, zu organisieren
 ms.localizationpriority: medium
-ms.openlocfilehash: 5ee3431681f3d9fba5c50759e822d78c09826957
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 3c77719bd45c3169ec02a280099d27e10099a25c
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5767921"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5828759"
 ---
 # <a name="toast-notification-ux-guidance"></a>Popup-Benachrichtigung UX-Richtlinien
 Benachrichtigungen sind notwendig, moderne Leben; Sie können Benutzer produktiver und erzwungenen mit apps und Websites sowie bleiben Sie auf dem aktuellen durch Updates werden. Benachrichtigungen können jedoch schnell Aktivieren von hilfreich sein, overbearing und aufdringlich, wenn sie nicht in einer benutzerorientiert Weise ausgelegt sind. Die Benachrichtigungen sind eine mit der rechten Maustaste Weg ausgeschaltet wird, und es ist unwahrscheinlich, sobald sie deaktiviert sind, sie werden aktiviert, erneut.  Stellen Sie daher sicher, dass Ihre Benachrichtigungen respektieren Bildschirmbereich des Benutzers und die Uhrzeit, sind, sodass Sie diesen Kanal Engagement geöffnet bleiben können.
@@ -42,7 +42,7 @@ Im Gegensatz zu wie unser häufig Benachrichtigungen denken ist Echtzeit nicht n
 
 **Unformatierte Benachrichtigungen:** Mithilfe von [unformatierten Benachrichtigungen](raw-notification-overview.md) kann hilfreich sein für viele Gründe, insbesondere bei der Minimierung der Unterbrechung für den Benutzer hergestellt.  Senden von unformatierten Benachrichtigungen wird Ihre app im Hintergrund, reaktivieren damit Sie überprüfen können, ob die Benachrichtigung eine sinnvolle, sofort in Ihrer app-Kontext bereitzustellen. Wenn es etwas Meinung angezeigt werden, wenn der Benutzer sofort ist, können Sie von dort aus einer [lokalen Popupbenachrichtigung](send-local-toast.md) aufklappen.  Wenn es etwas ist der Benutzer muss nicht finden jetzt, können Sie zum Erstellen eines [geplanten Popups](https://blogs.msdn.microsoft.com/tiles_and_toasts/2016/09/30/quickstart-sending-an-alarm-in-windows-10/) , die zu einem späteren Zeitpunkt ausgelöst wird.
 
-**Ghost Popup:** können Sie auch eine Benachrichtigung, der in der unteren rechten Ecke des Bildschirms quot überspringen und stattdessen direkt an Info-Center senden die Benachrichtigung ausgelöst. Dies geschieht durch die [SupressPopup-Eigenschaft](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastnotification.suppresspopup) auf "true" festlegen. Obwohl möglicherweise gibt es einige Skepsis um ein nicht außerhalb Info-Center Benachrichtigungen einzublenden, sehen wir eine 2 – 3 Mal höheren Engagement für Popups, die im Info-Center über live geholt Popup.  Benutzer sind besser reagiert, wenn diese für den Empfang von Notificaitons bereit und steuern können, wann sie unterbrochen werden deshalb Inhalte im Info-Center so viel effektiver noninvasively Benutzer benachrichtigt werden kann.
+**Ghost Popup:** können Sie auch eine Benachrichtigung, der in der unteren rechten Ecke des Bildschirms quot überspringen und stattdessen direkt an Info-Center senden die Benachrichtigung ausgelöst. Dies geschieht durch die [SuppressPopup-Eigenschaft](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastnotification.suppresspopup) auf "true" festlegen. Obwohl möglicherweise gibt es einige Skepsis um ein nicht außerhalb Info-Center Benachrichtigungen einzublenden, sehen wir eine 2 – 3 Mal höheren Engagement für Popups, die im Info-Center über live geholt Popup.  Benutzer sind besser reagiert, wenn diese für den Empfang von Notificaitons bereit und steuern können, wann sie unterbrochen werden deshalb Inhalte im Info-Center so viel effektiver noninvasively Benutzer benachrichtigt werden kann.
 
 ## <a name="3-clear-out-the-clutter"></a>3. löschen Sie die unübersichtliche
 Benachrichtigungen können für längere Zeit (standardmäßig drei Tage) im Info-Center beibehalten wird.  Es ist unbedingt notwendig, dass Sie Sie sicher, dass die Inhalte, die hier befindet sich auf dem neuesten Stand und relevant ist stellen, jedes Mal, wenn der Benutzer Info-Center öffnet. Sie sind vergeuden Bildschirmbereich des Benutzers und belegen Steckplätze, die für etwas mehr auf dem neuesten Stand verwendet werden konnte.  Nehmen wir an der Benutzer Ihre e-Mail-Management-app installiert und empfängt zehn-e-Mails und zehn Benachrichtigungen zusammen mit diesen-e-Mails.  Je nach der gewünschten zu machen sollten Sie diese Benachrichtigungen löschen, wenn der Benutzer lesen Sie die entsprechende e-Mail oder die App als eine Möglichkeit zum Entfernen von alten unübersichtliche Info-Center geöffnet hat.

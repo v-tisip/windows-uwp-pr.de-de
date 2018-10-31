@@ -4,16 +4,16 @@ Description: Get your app noticed! Aside from making your app the best it can be
 title: Einfacheres Bewerben Ihrer App
 ms.assetid: 375A73EB-A010-4319-AEFF-3DC3E3691220
 ms.author: wdg-dev-content
-ms.date: 3/13/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, werben, Werbung, Highlights, Showcase, Store
 ms.localizationpriority: medium
-ms.openlocfilehash: ede4cc948b20ee90b9d2e3866e7c342caa1e2be8
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 43970ce024408032f0e2e9891eaae34efa68e014
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5752491"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5830130"
 ---
 # <a name="make-your-app-easier-to-promote"></a>Einfacheres Bewerben Ihrer App
 
@@ -29,7 +29,7 @@ Im MicrosoftStore werden verschiedene Apps nach Kategorie oder Thema angezeigt. 
 
     Bei der Präsentation von Apps können [App-Screenshots und -Bilder](app-screenshots-and-images.md) im Microsoft Store in verschiedenen Layouts angezeigt werden. Erstellen Sie ansprechende Screenshots, die Ihre App optimal darstellen, und stellen Sie sicher, dass der erste Screenshot besonders aussagekräftig und attraktiv ist. Sie können verschiedene Gruppen von Bildschirmfotos anzeigen, um zu sehen, wie die App für jeden Gerätetyp aussieht, der sie unterstützt.
 
-    Um Ihre Wahrscheinlichkeit zu maximieren, dass Ihre App im Store angezeigt wird, geben Sie alle erforderlichen Bilder in die Abschnitte **Store Logos** und **Zusätzliche Grafikobjekte** Ihres Store-Eintrags ein. Die Bilder für **9:16 Plakate (720 x 1080 oder 1440 x 2160 Pixel)** und **16:9 Besonderes Favoritenbild (1920 x 1080 oder 3840 x 2160 Pixel)** sind besonders wichtig für Windows10 (einschließlich Xbox). Wenn Ihre App die Xbox und/oder Hologramm-Gerätefamilie unterstützt, wird empfohlen, alle erforderlichen Bilder auch für diese Gerätefamilien bereitstellen. Weitere Informationen und Richtlinien finden Sie unter [App-Screenshots, Bilder und Trailer](app-screenshots-and-images.md).
+    Um Ihre Wahrscheinlichkeit zu maximieren, dass Ihre App im Store angezeigt wird, geben Sie alle erforderlichen Bilder in die Abschnitte **Store Logos** und **Zusätzliche Grafikobjekte** Ihres Store-Eintrags ein. Die **9:16 – Plakate (720 x 1080 oder 1440 x 2160 Pixel)** und **16:9 besonderes Favoritenbild (1920 x 1080 oder 3840 x 2160 Pixel)** Bilder sind besonders wichtig. Wenn Ihre App die Xbox und/oder Hologramm-Gerätefamilie unterstützt, wird empfohlen, alle erforderlichen Bilder auch für diese Gerätefamilien bereitstellen. Weitere Informationen und Richtlinien finden Sie unter [App-Screenshots, Bilder und Trailer](app-screenshots-and-images.md).
 
 -   **Erstellen Sie nur eine Version Ihrer App, nicht eine kostenlose Version und eine separate kostenpflichtige Version**
 

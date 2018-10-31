@@ -1,6 +1,6 @@
 ---
 author: jnHs
-Description: The Reviews report in the Windows Dev Center dashboard lets you see the reviews (comments) that customers entered when rating your app in the Store.
+Description: The Reviews report in Partner Center lets you see the reviews (comments) that customers entered when rating your app in the Store.
 title: Bericht „Rezensionen“
 ms.assetid: E50C3A4D-1D8A-4E5B-8182-3FAD049F2A2D
 ms.author: wdg-dev-content
@@ -8,19 +8,19 @@ ms.date: 08/16/2018
 ms.topic: article
 keywords: Windows 10, Uwp, Prüfung, Kommentar, Prüfer
 ms.localizationpriority: medium
-ms.openlocfilehash: b3b246ec0127373dba2385f249640c09940105fa
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 777decb9b060cc411d6150f199cd7a02f9ffc6cb
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5769096"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5831446"
 ---
 # <a name="reviews-report"></a>Bericht „Rezensionen“
 
 
-Der Bericht **"Rezensionen"** im Windows Dev Center-Dashboard gibt Aufschluss über die Rezensionen (Kommentare), die Kunden beim Bewerten Ihrer app im Store eingegeben haben.
+Der Bericht **"Rezensionen"** im [Partner Center](https://partner.microsoft.com/dashboard) gibt Aufschluss über die Rezensionen (Kommentare), die Kunden beim Bewerten Ihrer app im Store eingegeben haben.
 
-Sie können diese Daten in Ihrem Dashboard anzeigen oder den [Bericht herunterladen](download-analytic-reports.md), um ihn offline anzuzeigen. Alternativ können Sie diese Daten mithilfe der [app-Rezensionen get](../monetize/get-app-reviews.md) -Methode in der [Microsoft Store-Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md)programmgesteuert abrufen.
+Sie können diese Daten im Partner Center oder [den Bericht herunterladen](download-analytic-reports.md) offline anzeigen anzeigen. Alternativ können Sie diese Daten mithilfe der [app-Rezensionen get](../monetize/get-app-reviews.md) -Methode in der [Microsoft Store-Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md)programmgesteuert abrufen.
 
 Sie können auch für Kunden Rezensionen [direkt von dieser Seite](respond-to-customer-reviews.md), programmgesteuert [über die Microsoft Store-Rezensionen-API](../monetize/submit-responses-to-app-reviews.md), oder mit dem [Dev Center-app](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws)reagieren.
 
@@ -114,7 +114,7 @@ Wie bereits erwähnt, beim Durchsuchen von Rezensionen nur auf der ursprünglich
 
 ## <a name="responding-to-customer-reviews"></a>Reagieren auf Kundenrezensionen
 
-Sie können Microsoft Store Dev Center-Dashboard, die [Microsoft Store-Rezensionen-API](../monetize/submit-responses-to-app-reviews.md)oder das [Dev Center-app](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) zum Senden von Antworten auf zahlreiche kundenrezensionen verwenden. Weitere Informationen finden Sie unter [Reagieren auf Kundenrezensionen](respond-to-customer-reviews.md).
+[Partner Center](https://partner.microsoft.com/dashboard), der [Microsoft Store-Rezensionen-API](../monetize/submit-responses-to-app-reviews.md)oder das [Dev Center-app](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) können Sie Antworten auf zahlreiche kundenrezensionen senden. Weitere Informationen finden Sie unter [Reagieren auf Kundenrezensionen](respond-to-customer-reviews.md).
 
 Im Folgenden finden Sie einige zusätzliche Aktionen, die Sie basierend auf den angezeigten Bewertungen und Rezensionen in Erwägung ziehen sollten.
 

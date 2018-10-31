@@ -1,26 +1,26 @@
 ---
 author: jnHs
-Description: The Add-on acquisitions report in the Windows Dev Center dashboard lets you see how many add-ons you've sold, along with demographic and platform details.
+Description: The Add-on acquisitions report in Partner Center lets you see how many add-ons you've sold, along with demographic and platform details.
 title: Bericht zu Add-On-Käufen
 ms.assetid: F2DF9188-0A98-4AC3-81C0-3E2C37B15582
 ms.author: wdg-dev-content
-ms.date: 05/24/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Add-On-Verkäufe, Add-On-Käufe, IAP-Verkauf, In-App-Produkte, IAPS, Add-Ons
 ms.localizationpriority: medium
-ms.openlocfilehash: a1b25067104a664cb90ef068749d9e4cd00bcc80
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 63884d9cce24e6b85f3001ac4c6eb1a07141bfd4
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5761860"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5829797"
 ---
 # <a name="add-on-acquisitions-report"></a>Bericht zu Add-On-Käufen
 
 
-Der Bericht " **Add-on-Käufe** " im Windows Dev Center-Dashboard können Sie sehen, wie viele Add-ons Sie, und Sie können demografische verkauft haben und plattformspezifische Details einsehen und zeigt Konvertierungsinformationen für Kunden unter Windows 10 (einschließlich Xbox). Sie können auch in der Nähe in Echtzeit Kaufdaten für den letzten oder 70-zwei Stunden-Zeitraum anzeigen.
+Der Bericht " **Add-on-Käufe** " im [Partner Center](https://partner.microsoft.com/dashboard) können Sie sehen, wie viele Add-ons Sie, und Sie können demografische verkauft haben und plattformspezifische Details einsehen und zeigt Konvertierungsinformationen für Kunden unter Windows 10 (einschließlich Xbox). Sie können auch in der Nähe in Echtzeit Kaufdaten für den letzten oder 70-zwei Stunden-Zeitraum anzeigen.
 
-Sie können diese Daten in Ihrem Dashboard anzeigen oder den [Bericht herunterladen](download-analytic-reports.md), um ihn offline anzuzeigen. Sie können diese Daten auch programmgesteuert mit der Methode [get add-on acquisitions](../monetize/get-in-app-acquisitions.md) der [Microsoft Store-Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
+Sie können diese Daten im Partner Center oder [den Bericht herunterladen](download-analytic-reports.md) offline anzeigen anzeigen. Sie können diese Daten auch programmgesteuert mit der Methode [get add-on acquisitions](../monetize/get-in-app-acquisitions.md) der [Microsoft Store-Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
 In diesem Bericht bedeutet ein „Add-On-Kauf”, dass ein Kunde ein Add-On von Ihnen erworben hat (oder ohne dafür zu bezahlen, wenn Sie es kostenlos angeboten haben). Wenn ein Kunde mehrere Käufe desselben konsumierbaren Add-Ons getätigt hat, werden diese als separate Add-On-Käufe aufgeführt.
 

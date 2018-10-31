@@ -5,15 +5,15 @@ title: App-Übermittlung
 ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4
 keywords: Prüfliste, Windows, UWP, Übermittlung, übermitteln, Spiel, App, übermitteln
 ms.author: wdg-dev-content
-ms.date: 08/07/2018
+ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b3aed7c5fe912155904b3b0da666427e6727d19d
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 55235c78df29513e8d7b28e7643aec5c3a256f1d
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5742320"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5833637"
 ---
 # <a name="app-submissions"></a>App-Übermittlungen
 
@@ -23,12 +23,15 @@ Nachdem Sie Ihre [App durch die Reservierung eines Namens erstellt haben](create
 Sie beginnen mit der Einreichung, sobald Ihre App fertig und bereit für die Veröffentlichung ist. Sie können mit der Eingabe von Infos beginnen, noch bevor Sie eine einzige Codezeile programmiert haben. Updates, die Sie für Ihre Übermittlung vornehmen werden gespeichert, sodass Sie können zurückkehren darauf und darauf zu arbeiten, wenn Sie bereit sind.
 
 > [!NOTE]
-> Benötigen Sie ein [Entwicklerkonto](http://go.microsoft.com/fwlink/p/?LinkId=615100) , um [Windows Dev Center](https://partner.microsoft.com/dashboard) zugreifen und apps im Microsoft Store übermitteln.
+> Sie müssen ein aktives [Entwicklerkonto](http://go.microsoft.com/fwlink/p/?LinkId=615100) im [Partner Center](https://partner.microsoft.com/dashboard) haben, um apps im Microsoft Store übermitteln.
 
-Nach der Veröffentlichung Ihrer App können Sie eine aktualisierte Version veröffentlichen, indem Sie eine weitere Einreichung im Dashboard erstellen. Durch die Erstellung einer neuen Einreichung können Sie alle erforderlichen Änderungen vornehmen und veröffentlichen – z. B. neue Pakete hochladen oder Preisdetails oder App-Kategorie ändern. Um eine neue Übermittlung für eine veröffentlichte App zu erstellen, klicken Sie neben der aktuellen Übermittlung, die auf der App-Übersichtsseite angezeigt wird, auf **Aktualisieren**. Sie können auch [eine app aus dem Speicher zu entfernen](guidance-for-app-package-management.md#removing-an-app-from-the-store) , wenn Sie müssen dazu (und dann zur Verfügung stellen später erneut, wenn Sie möchten).
+Nach der Veröffentlichung Ihrer app können Sie eine aktualisierte Version veröffentlichen, indem Sie eine weitere Einreichung im Partner Center erstellen. Durch die Erstellung einer neuen Einreichung können Sie alle erforderlichen Änderungen vornehmen und veröffentlichen – z. B. neue Pakete hochladen oder Preisdetails oder App-Kategorie ändern. Um eine neue Übermittlung für eine veröffentlichte app zu erstellen, klicken Sie auf **Update** neben der aktuellen Übermittlung auf **der Übersichtsseite** angezeigt. Sie können auch [eine app aus dem Speicher zu entfernen](guidance-for-app-package-management.md#removing-an-app-from-the-store) , wenn Sie müssen dazu (und dann zur Verfügung stellen später erneut, wenn Sie möchten).
 
 > [!NOTE]
-> In diesem Abschnitt der Dokumentation wird das Erstellen einer App-Übermittlung über das Dev Center-Dashboard beschrieben. Alternativ dazu können Sie auch die [Microsoft Store-Übermittlungs-API](../monetize/create-and-manage-submissions-using-windows-store-services.md) verwenden, um App-Übermittlungen zu automatisieren.
+> In diesem Abschnitt der Dokumentation wird beschrieben, wie Sie eine app-Übermittlung im Partner Center erstellen. Alternativ dazu können Sie auch die [Microsoft Store-Übermittlungs-API](../monetize/create-and-manage-submissions-using-windows-store-services.md) verwenden, um App-Übermittlungen zu automatisieren.
+
+> [!IMPORTANT]
+> Ab dem 31. Oktober 2018 darf keine Produkte neu erstellten Pakete für Windows 8.x/Windows enthalten Phone 8.x oder früher. Weitere Informationen finden Sie in diesem [Blogbeitrag](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
 
 ## <a name="app-submission-checklist"></a>Prüfliste für die App-Übermittlung
 
@@ -91,17 +94,20 @@ Sie benötigen alle erforderlichen Informationen für mindestens eine der von Ih
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **Beschreibung**               | Erforderlich                                    | [Erstellen einer interessanten App-Beschreibung](write-a-great-app-description.md) |
 | **Neuigkeiten in dieser Version**   | Optional                                 | [Anmerkungen zu dieser Version](create-app-store-listings.md#whats-new-in-this-version)       |
-| **App-Features**              | Optional                                    | [App-Features](create-app-store-listings.md#app-features)         |
+| **App-Features**              | Optional                                    | [Produktfunktionen](create-app-store-listings.md#product-features)         |
 | **Screenshots**               | Erforderlich (mindestens ein Screenshot; es werden vier oder mehr empfohlen)          | [Screenshots](app-screenshots-and-images.md#screenshots)          |
 | **Store-Logos**               | Empfohlen. Ist für bestimmte Betriebssystemversionen erforderlich | [Store-Logos](app-screenshots-and-images.md#store-logos)             |
-| **Zusätzliche Grafikobjekte**     | Empfohlen (besonders für bestimmte Betriebssystemversionen)         | [Zusätzliche Grafikobjekte](app-screenshots-and-images.md#additional-art-assets) |
 | **Trailer**                  | Optional                                    | [Trailer](app-screenshots-and-images.md#trailers)                | 
-| **Zusätzliche Felder**  | Optional                                    | [Zusätzliche Informationen](create-app-store-listings.md#supplemental-fields) 
+| **Windows10 und Xbox-Bild (16:9 Besonderes Favoritenbild)**     | Empfohlen        | [Windows 10 und Xbox-Bild (16:9 besonderes Favoritenbild)
+] (app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
+| **Xbox-Bilder**     | Erforderlich für die ordnungsgemäße Anzeige, wenn Sie auf Xbox veröffentlichen        | [Xbox-Bilder
+] (app-Screenshots-und-images.md #Xbox-Bilder) |
+| **Zusätzliche Felder**  | Optional                                    | [Zusätzliche Felder](create-app-store-listings.md#supplemental-fields) 
 | **Suchbegriffe**              | Optional                                    | [Suchbegriffe](create-app-store-listings.md#search-terms)         |
 | **Urheberrecht- und Markeninformationen** | Optional                                 | [Urheberrecht- und Markeninformationen](create-app-store-listings.md#copyright-and-trademark-info) |
 | **Zusätzliche Lizenzbedingungen**  | Optional                                    | [Zusätzliche Lizenzbedingungen](create-app-store-listings.md#additional-license-terms) |
 | **Entwickelt von**              | Optional                                    | [Entwickelt von](create-app-store-listings.md#developed-by)                   |
-| **Plattformspezifische Store-Einträge** | Optional                               | [Erstellen plattformspezifischer Store-Einträge](create-platform-specific-store-listings.md)  |
+
 
 <span/>
 

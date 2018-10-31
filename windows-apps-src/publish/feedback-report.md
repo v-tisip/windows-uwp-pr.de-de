@@ -1,23 +1,23 @@
 ---
 author: jnHs
-Description: The Feedback report in the Windows Dev Center dashboard lets you see the problems, suggestions, and upvotes that your Windows 10 customers have submitted through Feedback Hub.
+Description: The Feedback report in Partner Center lets you see the problems, suggestions, and upvotes that your Windows 10 customers have submitted through Feedback Hub.
 title: Feedbackbericht
 ms.assetid: 9EA8B456-CA57-40CE-A55B-7BFDC55CA8A8
 ms.author: wdg-dev-content
-ms.date: 11/3/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: eb8958adaeb78a068ae2baad30b7bc9fa96561a2
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: ab5e5f3fe533568079869c4fbd62530504544bf7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5744052"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5828976"
 ---
 # <a name="feedback-report"></a>Feedbackbericht
 
-Im **Feedback-Bericht** im Windows Dev Center-Dashboard werden die Probleme, Vorschläge und Zustimmungen angezeigt, die Ihre Windows 10-Kunden über den Feedback-Hub übermittelt haben. Sie können diese Informationen in Ihrem Dashboard anzeigen oder die Daten exportieren, um sie offline anzuzeigen.
+Der **Bericht "Feedback"** im Partner Center gibt Aufschluss über die Probleme, Vorschläge und zustimmungen, die Windows 10-Kunden über den Feedback-Hub übermittelt haben. Sie können diese Daten im Partner Center anzeigen oder exportieren Sie die Daten, um ihn offline anzuzeigen.
 
 > [!NOTE]
 > Sie können über diesen Bericht auch [direkt auf Feedback reagieren](respond-to-customer-feedback.md), um Kunden zu signalisieren, dass Sie ihr Feedback ernst nehmen.
@@ -26,7 +26,7 @@ Ermuntern Sie Ihre Kunden, Ihnen Feedback zu Ihrer App zu geben. Dies ist eine h
 
 Verwenden Sie die Feedback-API im [Microsoft Store Services SDK](http://aka.ms/store-em-sdk), um es Ihren Kunden zu ermöglichen, den [Feedback-Hub direkt aus Ihrer App heraus zu starten](../monetize/launch-feedback-hub-from-your-app.md). Bedenken Sie, dass jeder Kunde, der Ihre App auf einem Windows 10-Gerät heruntergeladen hat, das den Feedback-Hub unterstützt, mithilfe der Feedback-Hub-App ein Feedback abgeben kann. Aus diesem Grund können Sie Feedback von Kunden in diesem Bericht angezeigt, auch wenn in Ihrer app nicht explizit um Feedback gebeten haben.
 
-Feedback ist ebenfalls wertvoll, wenn Sie [Flight-Pakete](package-flights.md) verwenden, da im Feedbackbericht das spezifische Paket aufgeführt wird, das auf dem Gerät des jeweiligen Kunden installiert war, als er das Feedback abgegeben hat.
+Feedback kann auch hilfreich sein, wenn Sie [Flight-Paketen](package-flights.md), verwenden, da **die feedbackbericht** das spezifische Paket aufgeführt, das auf ihrem Gerät jeweiligen Kunden installiert war wird, als er das Feedback abgegeben hat.
 
 > [!TIP]
 > Für einen kurzen Überblick über die Rezensionen, Bewertungen und Benutzerfeedback für alle Ihre apps in den letzten 30 Tagen, erweitern Sie im linken Navigationsmenü **einbeziehen** , und wählen Sie **Kritiken und Feedback.** 

@@ -4,23 +4,23 @@ ms.assetid: C2415466-EC59-416E-B6AE-7DA5ED82DCE6
 title: Kontotypen, Standorte und Gebühren
 description: Wir bieten individuelle Konten für Entwickler und Unternehmenskonten für Entwickler in vielen Ländern und Regionen.
 ms.author: wdg-dev-content
-ms.date: 08/14/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Entwicklerkonto, individuell, Unternehmen, geschäftlich
 ms.localizationpriority: medium
-ms.openlocfilehash: 619b245ed6037192fe8b846a20d9fe0fe97baa24
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 7600f8a6bef19ca2d7b301931d0198638f91dc1b
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5741621"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5831575"
 ---
 # <a name="account-types-locations-and-fees"></a>Kontotypen, Standorte und Gebühren
 
-Wir bieten individuelle Konten und Unternehmenskonten für Entwickler in vielen [Ländern und Regionen](#developer-account-and-app-submission-markets). Mit beiden Kontotypen können Sie Apps im Store veröffentlichen und an weiteren Microsoft-Entwicklerprogrammen teilnehmen.
+Die Windows-Programm im [Partner Center](https://partner.microsoft.com/dashboard) bietet sowohl und Unternehmenskonten in vielen [Ländern und Regionen](#developer-account-and-app-submission-markets). Beide Arten von Konto ermöglicht den Zugriff auf apps im Store veröffentlichen und an weiteren Microsoft-Programmen teilnehmen.
 
 > [!NOTE]
-> Stellen Sie beim Registrieren für ein Konto sicher, dass Sie sich mit dem Microsoft-Konto anmelden, das Sie für Ihr Entwicklerkonto verwenden möchten. Sie haben die Möglichkeit, auch später noch [weitere Benutzer zum Konto hinzuzufügen](manage-account-users.md).
+> Wenn Sie Ihr Entwicklerkonto zu öffnen, stellen Sie sicher, in das [Partner Center](https://partner.microsoft.com/dashboard) mit dem Microsoft-Konto anmelden, die Sie für Ihr Entwicklerkonto verwenden möchten. Sie haben die Möglichkeit, auch später noch [weitere Benutzer zum Konto hinzuzufügen](manage-account-users.md).
 
 Zu [Beginn des Registrierungsprozesses](http://go.microsoft.com/fwlink/p/?LinkId=615100) müssen Sie entscheiden, ob Sie ein individuelles Konto oder ein Unternehmenskonto erstellen möchten. Beide Arten von Konten ermöglichen die Übermittlung von Apps, Spielen, Add-Ins und Diensten.
 

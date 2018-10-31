@@ -7,12 +7,12 @@ ms.date: 05/21/2018
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, fehler, behandlung, ausnahme
 ms.localizationpriority: medium
-ms.openlocfilehash: 36f6248452d97d10b6004067b6c0a973973443db
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 15432202e61322191e27e89920f7791878177c8b
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5752643"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5832449"
 ---
 # <a name="error-handling-with-cwinrt"></a>Fehlerbehandlung bei C++/WinRT
 
@@ -77,7 +77,7 @@ winrt::check_bool(::SetEvent(h.get()));
 Wenn der Wert, den Sie an [**winrt::check_bool**](/uwp/cpp-ref-for-winrt/error-handling/check-bool) übergeben, falsch ist, findet die folgende Abfolge von Aktionen statt.
 
 - **winrt::check_bool** ruft die Funktion [**winrt::throw_last_error**](/uwp/cpp-ref-for-winrt/error-handling/throw-last-error) auf.
-- **winrt::throw_last_error** ruft [**GetLastError**](https://msdn.microsoft.com/library/windows/desktop/ms679360) auf, um den letzten Fehlercodewert des aufrufenden Threads abzurufen. Danach ruft es die Funktion [**winrt::throw_hresult**](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult) auf.
+- **WinRT:: throw_last_error** ruft [**GetLastError**](https://msdn.microsoft.com/library/windows/desktop/ms679360) um den aufrufenden Thread letzten Fehlercodewert abzurufen, und ruft dann die [**WinRT:: throw_hresult**](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult) -Funktion.
 - **winrt::throw_hresult** löst eine Ausnahme unter Verwendung eines [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)-Objekts (oder eines Standardobjekts) aus, das diesen Fehlercode darstellt.
 
 Da Windows-APIs Laufzeitfehler mit verschiedenen Rückgabewerttypen melden, stehen zusätzlich zu **winrt::check_bool** einige weitere nützliche Hilfsfunktionen zur Verfügung, um Werte zu überprüfen und Ausnahmen auszulösen.

@@ -3,20 +3,20 @@ author: jnHs
 Description: Drive customer engagement and satisfaction by using features like notifications, targeted offers, responding to reviews and feedback, and more.
 title: Kundenkontakte intensivieren
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 1612f4d2f2a68c1367980cf5a064ac8712b9073b
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: f9f266538c42b83da9135079f51a3f935f459020
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5756020"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5829159"
 ---
 # <a name="engage-with-your-customers"></a>Kundenkontakte intensivieren
 
-Intensivieren Sie die Kundenbindung und fördern Sie die Kundenzufriedenheit mithilfe von Features wie Benachrichtigungen, zielgerichteten Angeboten und Reaktionen auf Kritiken und Feedback usw.
+[Partner Center](https://partner.microsoft.com/dashboard) enthält Features, die Sie Laufwerk Customer Engagement und Zufriedenheit helfen. Enthält Informationen zum Verwenden von Benachrichtigungen, zielgerichteten angeboten und Reaktionen auf Kritiken und Feedback und vieles mehr.
 
 -   [Erstellen von Kundengruppen](create-customer-groups.md)
 -   [Reagieren auf Kundenrezensionen](respond-to-customer-reviews.md)

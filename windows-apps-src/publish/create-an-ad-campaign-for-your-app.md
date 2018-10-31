@@ -1,34 +1,34 @@
 ---
 author: JnHs
-Description: You can create an ad campaign using the Dev Center dashboard to help promote your app and grow your app's user base.
+Description: You can create ad campaigns in Partner Center to help promote your app and grow your app's user base.
 title: Erstellen einer Anzeigenkampagne für Ihre App
 ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
 ms.author: wdg-dev-content
-ms.date: 05/08/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Anzeige, Kampagne, bewerben
 ms.localizationpriority: medium
-ms.openlocfilehash: 33c6388902322357d27918b6e4b95555785288bc
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: c6df022cbd474c9e73a84b86b245511d23293b0e
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5751526"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5833340"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Erstellen einer Anzeigenkampagne für Ihre App
 
-Auf dem DevCenter-Dashboard können Sie eine Anzeigenkampagne erstellen, um Ihre App zu bewerben und ihre Benutzerbasis zu erweitern. Die Zielgruppe für Ihre Anzeigen wählen wir standardmäßig basierend auf den Einstellungen für Ihre App im DevCenter-Dashboard aus. Sie haben jedoch auch die Möglichkeit, selbst eine Zielgruppe zu definieren. Außerdem können Sie einen Standardsatz von Anzeigenvorlagen verwenden oder eigene Anzeigenentwürfe hochladen. Weitere Informationen zur Anzeigenkampagnen finden Sie unter [Allgemeine Fragen zu Anzeigenkampagnen](common-questions.md).
+Sie können Anzeigenkampagnen im [Partner Center](https://partner.microsoft.com/dashboard) , um Ihre app zu bewerben und seine Benutzerbasis zu erstellen. Standardmäßig wählen wir die Zielgruppe für Ihre basierend auf den Einstellungen für Ihre app im Partner Center anzeigen, aber Sie können auch Ihre eigenen Zielgruppe zu definieren. Außerdem können Sie einen Standardsatz von Anzeigenvorlagen verwenden oder eigene Anzeigenentwürfe hochladen. Weitere Informationen zur Anzeigenkampagnen finden Sie unter [Allgemeine Fragen zu Anzeigenkampagnen](common-questions.md).
 
 Sie können Anzeigenkampagnen nur für Apps erstellen, die die letzte Veröffentlichungsphase des [App-Zertifizierungsprozesses](the-app-certification-process.md) durchlaufen haben.
 
 > [!NOTE]
-> In diesem Abschnitt der Dokumentation wird das Erstellen einer Anzeigenkampagne über das Dev Center-Dashboard beschrieben. Sie können auch die [Microsoft Store-Werbungs-API](../monetize/run-ad-campaigns-using-windows-store-services.md) zum programmgesteuerten Erstellen und Verwalten von Anzeigenkampagnen verwenden.
+> In diesem Abschnitt der Dokumentation wird das Erstellen einer Anzeigenkampagne im Partner Center beschrieben. Sie können auch die [Microsoft Store-Werbungs-API](../monetize/run-ad-campaigns-using-windows-store-services.md) zum programmgesteuerten Erstellen und Verwalten von Anzeigenkampagnen verwenden.
 
 ## <a name="instructions"></a>Anweisungen
 
 So erstellen Sie eine Anzeigenkampagne zum Bewerben einer App.
 
-1.  Erweitern Sie im linken Navigationsmenü des Dashboards **Bewerben**, und wählen Sie dann **Anzeigenkampagnen** aus.
+1.  Im linken Navigationsmenü des [Partner Center](https://partner.microsoft.com/dashboard)erweitern Sie **bewerben** und wählen Sie dann **Anzeigenkampagnen**.
 2.  Wählen Sie **Erstellen einer Anzeigenkampagne** (oder wenn Sie bereits Kampagnen erstellt haben, wählen Sie **Neue Kampagne**) aus.
 3.  Wählen Sie auf der nächsten Seite im Abschnitt **Objekttyp** eine der folgenden Optionen aus:
     * **Mehr Installationen für Ihre App**. Wählen Sie diese Option, wenn Ihre Anzeigenkampagne darauf abzielt, dass Kunden Ihre App installieren.
@@ -48,7 +48,7 @@ So erstellen Sie eine Anzeigenkampagne zum Bewerben einer App.
 
         Das monatliche Budget wird für den Monat, in dem die Anzeigenkampagne erstellt wird, anteilig berechnet. Wenn Sie also eine Anzeigenkampagne in der Mitte des Monats erstellen, zahlen Sie für den betreffenden Monat die Hälfte des Monatsbudgets.
 
-    * Legen Sie eine Zahlungsmethode für Ihre Anzeigenkampagne fest, indem Sie auf **Neue Zahlungsmethode hinzufügen** klicken und Ihre Kontodaten eingeben. Wenn Sie bereits ein Zahlungsmittel angegeben haben, können Sie **Eine andere Zahlungsmethode auswählen**, wenn Sie sie aktualisieren müssen. Das Land/die Region der Rechnungsadresse Ihrer Zahlungsmethode muss mit dem Land/der Region übereinstimmen, das bzw. die Ihrem Dev Center-Konto zugeordnet ist.
+    * Legen Sie eine Zahlungsmethode für Ihre Anzeigenkampagne fest, indem Sie auf **Neue Zahlungsmethode hinzufügen** klicken und Ihre Kontodaten eingeben. Wenn Sie bereits ein Zahlungsmittel angegeben haben, können Sie **Eine andere Zahlungsmethode auswählen**, wenn Sie sie aktualisieren müssen. Das Land/die Region der Rechnungsadresse Ihrer Zahlungsmethode muss das Land/Region mit Ihrem Entwicklerkonto verknüpft übereinstimmen.
 
     * Wenn Sie von Microsoft einen Gutschein für eine Anzeigenkampagne erhalten haben, klicken Sie auf **Use a coupon**, geben Sie den Gutscheincode ein, und klicken Sie auf **Übernehmen**, um den Gutschein für die Kampagne zu übernehmen.
 
@@ -103,10 +103,3 @@ So erstellen Sie eine Anzeigenkampagne zum Bewerben einer App.
 Gehen Sie auf die Seite **Anzeigenkampagnen** zurück, um die Leistung Ihrer Kampagnen anzuzeigen. Wählen Sie **Abschnittfilter** aus, um festzulegen, was im Bericht nach **Datum**, **Kampagnenziel**, **App-Name**, **Kampagnentyp** oder **Status** enthalten sein soll. Zusätzlich zum Anzeigen von Informationen zu den **Aufrufen**, **Klicks**, **Konvertierungen** und **Ausgaben** für Ihre Kampagne können Sie den Bericht zum **Anhalten** oder **Fortsetzen** einer Kampagne verwenden. Weitere Informationen finden Sie unter [Bericht „Anzeigenkampagne“](promote-your-app-report.md).
 
 Um eine Kampagne zu bearbeiten, wählen Sie ihren Namen in der Liste aus.
-
-## <a name="related-topics"></a>Verwandte Themen
-
-* [Verwalten Ihrer Anzeigenkampagne](managing-your-ad-campaign.md)
-* [Über Eigenwerbung](about-house-ads.md)
-* [Bewerben Ihres App-Berichts](promote-your-app-report.md)
-* [Häufige Fragen zu Anzeigenkampagnen](common-questions.md)

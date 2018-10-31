@@ -8,12 +8,12 @@ ms.date: 04/10/2018
 ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
-ms.openlocfilehash: c6c71cf98d9720cc5bfea219f565529b3308c49c
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: f5d47bbe87e9319def2e8c6500fd954f2a291e18
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5756786"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5829910"
 ---
 # <a name="makepriexe-command-line-options"></a>Befehlszeilenoptionen für MakePRI.exe
 
@@ -22,9 +22,11 @@ ms.locfileid: "5756786"
 > [!NOTE]
 > MakePri.exe wird installiert, wenn Sie im **Windows SDK für verwalteten UWP-Apps** Option während der Installation von Windows Software Development Kit aktivieren. Es installiert ist, auf den Pfad `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (ebenso wie in den Ordnern für die anderen Architekturen). Beispiel: `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
-## <a name="makepri-commands"></a>MakePri-Befehle
+## <a name="getting-help-from-the-command-line"></a>Hilfe von der Befehlszeile
 
-Führen Sie `MakePri.exe help` aus, um die Befehle anzuzeigen, die Sie mit MakePri.exe verwenden können.
+Sie können ausführen `MakePri.exe help` oder `MakePri.exe /?` um die Befehle anzuzeigen, die Sie mit MakePri.exe verwenden können. Sie können auch ausstellen `MakePri.exe <command> /?` abgewartet Einzelheiten über einen Befehl und in sehr seltenen Fällen sogar `MakePri.exe <command> <option>` um Einzelheiten zu den Optionen finden Sie unter.
+
+## <a name="makepri-commands"></a>MakePri-Befehle
 
 ```
 C:\>makepri help
@@ -424,7 +426,7 @@ Sie verwenden der Option "Optionen" (/ e/a) mit `new`, `resourcepack`, und `vers
 /IndexOptions(io) <OPTIONS>
 ```
 
-**OPTIONS** ist eine eine durch Trennzeichen getrennte Liste besteht aus der folgenden Optionen.
+**Optionen** ist eine durch Trennzeichen getrennte Liste besteht aus der folgenden Optionen.
 
 - +/-HiddenFiles(hf). Index (+) oder ignorieren (-) Dateien und Ordner ausgeblendet.
 - +/-LinkedFiles(lf). Index (+) oder ignorieren (-) verknüpft, Dateien und Ordner.

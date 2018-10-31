@@ -4,16 +4,16 @@ Description: Product declarations help make sure your app is displayed appropria
 title: Produktdeklarationen
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
 ms.author: wdg-dev-content
-ms.date: 12/05/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c1fc444dbd106f4eeb0996903f71701a96a9735
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: de519f37c5eacfa64f23d0f438701d4ae9dbc934
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5747828"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5831159"
 ---
 # <a name="product-declarations"></a>Produktdeklarationen
 
@@ -46,16 +46,14 @@ Weitere Informationen finden Sie unter [Eingabehilfen](../design/accessibility/a
 
 ## <a name="customers-can-install-this-app-to-alternate-drives-or-removable-storage"></a>Kunden können diese App auf alternativen Laufwerken oder Wechselmedien installieren.
 
-Dieses Kontrollkästchen ist standardmäßig aktiviert, damit Kunden Ihre app für externe oder auf Wechseldatenträgern zu installieren, wie etwa einer SD-Karte oder auf einem systemfremden Volumelaufwerk wie einem externen Laufwerk zu steuern. (Für Windows Phone 8.1 wurde dies zuvor über "storemanifest.xml" angegeben.)
+Dieses Kontrollkästchen ist standardmäßig aktiviert, damit Kunden Ihre app für externe oder auf Wechseldatenträgern zu installieren, wie etwa einer SD-Karte oder auf einem systemfremden Volumelaufwerk wie einem externen Laufwerk zu steuern.
 
-Wenn Sie verhindern, dass Ihre app auf alternativen Laufwerken oder Wechselmedien installiert wird, und nur die Installation auf die interne Festplatte auf dem Gerät zulassen möchten, deaktivieren Sie dieses Kontrollkästchen.
-
-Beachten Sie, dass es keine Option zum Einschränken der Installation gibt, damit eine app kann *nur* sein auf Wechselmedien installiert.
+Wenn Sie verhindern, dass Ihre app auf alternativen Laufwerken oder Wechselmedien installiert wird, und nur die Installation auf die interne Festplatte auf dem Gerät zulassen möchten, deaktivieren Sie dieses Kontrollkästchen. (Beachten Sie, dass es keine Option zum Einschränken der Installation gibt, damit eine app kann *nur* werden auf Wechselmedien installiert.)
 
 
 ## <a name="windows-can-include-this-apps-data-in-automatic-backups-to-onedrive"></a>Windows kann die Daten dieser App in automatische Sicherungen auf OneDrive einschließen.
 
-Dieses Kontrollkästchen ist standardmäßig aktiviert, damit die Daten Ihrer App eingeschlossen werden können, wenn ein Kunde automatische OneDrive-Sicherungen von Windows erstellen lässt. (Für Windows Phone 8.1 wurde dies zuvor über "storemanifest.xml" angegeben.)
+Dieses Kontrollkästchen ist standardmäßig aktiviert, damit die Daten Ihrer App eingeschlossen werden können, wenn ein Kunde automatische OneDrive-Sicherungen von Windows erstellen lässt.
 
 Wenn Sie verhindern möchten, dass die App-Daten in automatische Sicherungen eingeschlossen werden, deaktivieren Sie das Kontrollkästchen.
 

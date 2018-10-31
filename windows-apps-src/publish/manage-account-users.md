@@ -1,31 +1,31 @@
 ---
 author: jnHs
-Description: Add users to your Dev Center account and assign them roles with specific permissions.
+Description: Add users to your Partner Center account and assign them roles with specific permissions.
 title: Verwalten von Kontobenutzern
 ms.assetid: 9245F0D0-7D8F-4741-AFB4-FBA5601D0A9B
 ms.author: wdg-dev-content
-ms.date: 07/11/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, Uwp, Kontobenutzer, Verwalten von Benutzern, Azure Ad, Verwalten mehrerer Benutzer, mehrere Benutzer
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b659a12d972612d07f78504d46af396617513b4
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 01517ebd2cc4b86fa1ac440446a5cc59172014b3
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5755741"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5829870"
 ---
 # <a name="manage-account-users"></a>Verwalten von Kontobenutzern
 
-Sie können mit Azure Active Directory Ihrem Dev Center-Konto Benutzer hinzufügen und diese verwalten. Sie können die Rolle oder benutzerdefinierte Berechtigung für jeden Benutzer bestimmen. Sie können eine Rolle auch einer Gruppe von Benutzern oder einer Azure AD-App zuweisen.
+Sie können Azure Active Directory hinzufügen und Verwalten zusätzlicher Benutzer im [Partner Center](https://partner.microsoft.com/dashboard) -Konto verwenden. Sie können die Rolle oder benutzerdefinierte Berechtigung für jeden Benutzer bestimmen. Sie können eine Rolle auch einer Gruppe von Benutzern oder einer Azure AD-App zuweisen.
 
-Zum Hinzufügen und Verwalten von Kontobenutzern müssen Sie zunächst dem Azure Active Directory Ihres Unternehmens Ihr Dev Center-Konto zuordnen. 
+Zum Hinzufügen und Verwalten von Kontobenutzern, müssen Sie zunächst Ihre Organisation Azure Active Directory Ihr Partner Center-Konto zuordnen. 
 
 In diesem Abschnitt werden die folgenden Schritte beschrieben:
 
--   [Zuordnen Ihres Azure Active Directory zum Dev Center-Konto](associate-azure-ad-with-dev-center.md)
--   [Hinzufügen von Benutzern, Gruppen und Azure AD-Anwendungen zu Ihrem Dev Center-Konto](add-users-groups-and-azure-ad-applications.md)
+-   [Zuordnen von Azure Active Directory mit Ihrem Partner Center-Konto](associate-azure-ad-with-dev-center.md)
+-   [Hinzufügen von Benutzern, Gruppen und Azure AD-Apps für Ihr Partner Center-Konto](add-users-groups-and-azure-ad-applications.md)
 -   [Legen Sie Rollen und benutzerdefinierte Berechtigungen für Kontenbenutzer fest](set-custom-permissions-for-account-users.md)
 
 > [!TIP]
-> Dieser Abschnitt gilt speziell für das Entwicklerprogramm für Windows-Apps. Das Zuordnen eines Mandanten und das Verwalten von Benutzern für Konten im Windows-Hardware-Entwicklerprogramm (weitere Informationen finden Sie unter [Dashboard-Verwaltung](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration)) oder im Windows-Desktopanwendungsprogramm verhält sich allerdings ähnlich (Weitere Informationen finden Sie unter [Windows-Desktopanwendungsprogramm](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#add-and-manage-account-users)).
+> Diese Themen sind spezifisch für das Entwicklerprogramm für Windows-apps im Partner Center, aber zuordnen ein Mandanten und Verwalten von Benutzern für Konten im Windows Hardware-Entwicklerprogramm verhält (Weitere Informationen finden Sie im [Dashboard-Verwaltung](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration) ) oder in der Windows-Desktopanwendungsprogramm (Weitere Informationen finden Sie unter [Windows-Desktopanwendungsprogramm](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#add-and-manage-account-users) ).

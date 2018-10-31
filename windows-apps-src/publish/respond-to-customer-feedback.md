@@ -3,17 +3,17 @@ title: Reagieren auf Kundenfeedback
 description: Sie können direkt auf Feedback reagieren, das Ihre Kunden im Feedback-Hub hinterlassen.
 author: JnHs
 ms.author: wdg-dev-content
-ms.date: 06/19/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.assetid: 04983b80-2a18-4ace-93d3-e8c33c04bfb9
 ms.localizationpriority: medium
-ms.openlocfilehash: d75eb60de1af031bbda4e5bdb37cf1fc17fe6ee0
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 5da9e96bace29dc33874d5b8c3e4ac846eddeb63
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5761681"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5829212"
 ---
 # <a name="respond-to-customer-feedback"></a>Reagieren auf Kundenfeedback
 
@@ -24,7 +24,7 @@ Sie können den [Feedbackbericht](feedback-report.md) verwenden, um das Feedback
 
 Um zu einem Feedback eine Antwort zu geben, klicken Sie auf den Link **Feedback beantworten**, der neben dem Feedback in Ihrem **Feedbackbericht** angezeigt wird.
 
-Windows Dev Center unterstützt drei Optionen für Antworten an Kunden, die Feedback zu Ihrer App gegeben haben. Unabhängig davon, welche Option Sie wählen, denken Sie daran, dass maximal 1.000Zeichen für jede Antwort zulässig sind.
+[Partner Center](https://partner.microsoft.com/dashboard) unterstützt drei Optionen für Antworten an Kunden, die Feedback zu Ihrer app. Unabhängig davon, welche Option Sie wählen, denken Sie daran, dass maximal 1.000Zeichen für jede Antwort zulässig sind.
 
 ## <a name="public-comments-in-feedback-hub"></a>Öffentliche Kommentare im Feedback-Hub
 

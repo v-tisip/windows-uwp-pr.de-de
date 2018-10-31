@@ -8,12 +8,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-On-Übermittlungen, In-App-Produkt, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 2bf15f71071355ddf61d820fc33949b10d42cdfa
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: d8e3ab04c2842fc08fb8b0aa298660bfbd0cfd7f
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5741293"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5833194"
 ---
 # <a name="manage-add-on-submissions"></a>Verwalten von Add-On-Übermittlungen
 
@@ -336,7 +336,7 @@ Diese Ressource stellt den Zugriff auf die Zertifizierungsberichtsdaten für ein
 
 | Wert           | Typ    | Beschreibung               |
 |-----------------|---------|------|
-|     date            |    string     |  Das Datum und die Zeit im Format ISO8601, an dem und zu der der Bericht erstellte wurde.    |
+|     date            |    string     |  Datum und Uhrzeit, die der Bericht, im Format ISO 8601 generiert wurde.    |
 |     reportUrl            |    string     |  Die URL, unter der Sie auf den Bericht zugreifen können.    |
 
 ## <a name="enums"></a>Enumerationen

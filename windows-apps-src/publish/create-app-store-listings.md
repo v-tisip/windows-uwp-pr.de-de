@@ -4,28 +4,28 @@ Description: The Store listings section of the app submission process is where y
 title: Erstellen von Store-Einträgen für Apps
 ms.assetid: 50D67219-B6C6-4EF0-B76A-926A5F24997D
 ms.author: wdg-dev-content
-ms.date: 06/18/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Eintrag, Beschreibung, Store-Seite, Versionshinweise, Titel
 ms.localizationpriority: medium
-ms.openlocfilehash: 237642897beb51c9b685068ee714182fa1fe1bb5
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: ec1867e747f3458e3a9cffabe9a45535d4c27489
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5766532"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5830000"
 ---
 # <a name="create-app-store-listings"></a>Erstellen von Store-Einträgen für Apps
 
 
 Im Abschnitt **Store-Einträge** des [App-Übermittlungsprozesses](app-submissions.md) stellen Sie den Text und die [Bilder](app-screenshots-and-images.md) bereit, die den Kunden im Microsoft Store angezeigt werden, wenn diese Ihre App ansehen.
 
-Viele der Felder in einem **Store-Eintrag** sind optional. Es wird jedoch empfohlen, mehrere Bilder und so viele Infos wie möglich bereitzustellen, damit Ihr Eintrag auffällt. Im Schritt **Store-Einträge** sollten Sie mindestens eine Textbeschreibung und mindestens einen [Screenshot](app-screenshots-and-images.md#screenshots) angeben. Für einige Übermittlungen sind die Felder für die [Datenschutzrichtlinie](#privacy-policy) und die [Supportkontaktinfos](#support-contact-info) ebenfalls erforderlich. 
+Viele der Felder in einem **Store-Eintrag** sind optional. Es wird jedoch empfohlen, mehrere Bilder und so viele Infos wie möglich bereitzustellen, damit Ihr Eintrag auffällt. Im Schritt **Store-Einträge** sollten Sie mindestens eine Textbeschreibung und mindestens einen [Screenshot](app-screenshots-and-images.md#screenshots) angeben.
 
 > [!TIP]
-> Sie können optional ebenfalls [Store-Einträge importieren oder exportieren](import-and-export-store-listings.md), wenn Sie lieber Ihre Eintragsinformationen offline in eine CSV-Datei eingeben möchten, anstatt diese Informationen und hochgeladene Dateien direkt im Dashboard anzugeben . Das Verwenden der Option zum Importieren und Exportieren ist besonders dann hilfreich, wenn Sie Einträge in mehreren Sprachen besitzen, da Sie mehrere Updates auf einmal vornehmen können. 
+> Sie können optional [Store-Einträge importieren und Exportieren](import-and-export-store-listings.md) , wenn Sie lieber Ihre Eintragsinformationen offline in eine CSV-Datei, anstatt bereitstellenden Informationen und Hochladen von Dateien direkt im Partner Center eingeben. Das Verwenden der Option zum Importieren und Exportieren ist besonders dann hilfreich, wenn Sie Einträge in mehreren Sprachen besitzen, da Sie mehrere Updates auf einmal vornehmen können. 
 
-Standardmäßig verwenden wir denselben Store-Eintrag (pro Sprache) für alle Ihre Zielbetriebssysteme. Wenn Sie einen benutzerdefinierten Store-Eintrag für ein bestimmtes Betriebssystem, das Ihre Übermittlung unterstützt, verwenden möchten, können Sie [plattformspezifische Store-Einträge erstellen](create-platform-specific-store-listings.md). Ihr Standardeintrag wird für Kunden unter Windows10 immer angezeigt.
+Wenn Ihre app zuvor veröffentlichten Windows unterstützt 8.x und/oder Windows Phone 8.x oder früher, können Sie für diese Kunden anzeigen [plattformspezifischen Store-Einträge erstellen](create-platform-specific-store-listings.md) . 
 
 ## <a name="store-listing-languages"></a>Sprachen für Store-Einträge
 
@@ -38,19 +38,19 @@ Klicken Sie zum Hinzufügen oder Entfernen von Sprachen für Ihre Store-Einträg
 
 Im Abschnitt **Additional Store listing languages** können Sie auf **Manage additional languages** klicken, um Sprachen hinzuzufügen oder zu entfernen, die  *nicht* in Ihren Paketen enthalten sind. Aktivieren Sie die Kontrollkästchen für die Sprachen, die Sie hinzufügen möchten, und klicken Sie dann auf **Aktualisieren**. Die ausgewählten Sprachen werden im Abschnitt **Additional Store listing languages** angezeigt. Klicken Sie zum Entfernen einer oder mehrerer dieser Sprachen auf **Entfernen** (oder klicken Sie auf **Manage additional languages**, und deaktivieren Sie die Kontrollkästchen für die Sprachen, die Sie entfernen möchten).
 
-Wenn Sie Ihre Auswahl getroffen haben, klicken Sie auf **Speichern**, um zur Übermittlungsübersicht zurückzukehren.
+Wenn Sie Ihre Auswahl getroffen haben, klicken Sie auf **Speichern**, um zur Übermittlungsübersicht zurückzukehren. 
 
 ## <a name="add-and-edit-store-listing-info"></a>Hinzufügen und Bearbeiten von Informationen Store-Einträgen
 
-Wählen Sie zum Bearbeiten eines Store-Eintrags den Namen der Sprache in der übermittlungsübersicht.
+Wählen Sie zum Bearbeiten eines Store-Eintrags den Namen der Sprache in der übermittlungsübersicht. Sie müssen jede Sprache separat bearbeiten, es sei denn, Sie festlegen, dass Ihre Store-Einträge exportieren offline arbeiten, und importieren alle Eintrag Daten auf einmal. Weitere Informationen zur Funktionsweise der, die, finden Sie unter [Importieren und Exportieren von Store-Einträge](import-and-export-store-listings.md).
 
-Oben auf der Seite **Store-Eintrag** sehen Sie die Felder, die dem standardmäßigen Store-Eintrag für die ausgewählte Sprache zugeordnet sind. Diese Felder sind für alle Kunden sichtbar, sofern keine Pakete für frühere Betriebssystemversionen (Windows8.x oder früher, Windows Phone8.x oder früher) vorhanden sind und Sie keine plattformspezifischen Store-Einträge mit verschiedenen Screenshots oder Informationen erstellt haben, die Kunden unter den angegebenen Betriebssystemversionen angezeigt werden. Weitere Informationen finden Sie unter [Erstellen plattformspezifischer Store-Einträge](create-platform-specific-store-listings.md).
+Die verfügbaren Felder sind unten beschrieben.
 
 ## <a name="product-name"></a>Produktname
 
 Diese Dropdown-Feld können Sie angeben, welche Namen im Store-Eintrag verwendet werden soll (Wenn Sie mehr als einen Namen für die app reserviert haben).
 
-Wenn Sie Pakete in der gleichen Sprache wie der Store-Eintrag, an denen Sie arbeiten hochgeladen haben, werden der Namen in diese Pakete ausgewählt. Wenn Sie zum [Benennen Sie der app](manage-app-names.md#rename-an-app-that-has-already-been-published) benötigen, nachdem es bereits veröffentlicht wurde, können Sie hier einen anderen reservierten Namen auswählen, wenn Sie eine neue Übermittlung mit Paketen erstellen, die den neuen Namen verwenden.
+Wenn Sie hochgeladen haben Pakete in der gleichen Sprache wie die Store-Eintrag arbeiten an, der Namen in diese Pakete ausgewählt werden. Wenn Sie zum [Benennen Sie der app](manage-app-names.md#rename-an-app-that-has-already-been-published) benötigen, nachdem es bereits veröffentlicht wurde, können Sie hier einen anderen reservierten Namen auswählen, wenn Sie eine neue Übermittlung erstellen, nachdem die Pakete erfolgreich hochgeladen haben, die den neuen Namen verwenden.
 
 Wenn für die Sprache Pakete erfolgreich hochgeladen wurden Sie arbeiten an, und Sie mehr als einen Namen reserviert haben, müssen Sie eines Ihrer reservierten app-Namen auswählen, da es kein verknüpftes Paket in dieser Sprache aus dem der Name abgerufen werden könnte.
 
@@ -67,14 +67,14 @@ Tipps zum Erstellen einer aussagekräftigen Beschreibung finden Sie unter [Erste
 
 ## <a name="whats-new-in-this-version"></a>Neuigkeiten in dieser Version
 
-Wenn Sie Ihre App erstmalig einrichten, lassen Sie dieses Feld leer. Bei Updates einer vorhandenen App teilen Sie dem Kunden hier mit, was sich in der aktuellen Version geändert hat. Dieses Feld ist auf 1.500 Zeichen beschränkt. (Dieses Feld hieß zuvor **Anmerkungen zu dieser Version**).
+Wenn Sie Ihre App erstmalig einrichten, lassen Sie dieses Feld leer. Für eine Aktualisierung einer vorhandenen App ist dies Teilen Sie dem Kunden, was in der aktuellen Version geändert hat. Dieses Feld ist auf 1.500 Zeichen beschränkt. (Dieses Feld hieß zuvor **Anmerkungen zu dieser Version**).
 
-## <a name="app-features"></a>App-Features
+## <a name="product-features"></a>Produktfunktionen
 
 Hierbei handelt es sich um kurze Zusammenfassungen der wichtigsten App-Features. Diese werden dem Kunden neben der **Beschreibung** als Aufzählung im Abschnitt der **Funktionen** im Store-Eintrag Ihrer App angezeigt. Die Beschreibung sollte pro Feature nur wenige Wörter (und nicht mehr als 200Zeichen) enthalten. Sie können bis zu 20Features hinzufügen.
 
 > [!NOTE]
-> Ihre App-Features werden im Store-Eintrag mit Aufzählungszeichen versehen. Fügen Sie daher keine eigenen Aufzählungszeichen hinzu.
+> Diese Features erscheint in Store-Eintrag mit Aufzählungszeichen, daher keine eigenen Aufzählungszeichen hinzu.
 
 ## <a name="screenshots"></a>Screenshots
 
@@ -93,11 +93,11 @@ Store-Logos sind optionale Bilder, die Sie hochladen können, um die Art und Wei
 Weitere Informationen finden Sie unter [Store-Logos](app-screenshots-and-images.md#store-logos).
 
 
-## <a name="additional-art-assets"></a>Zusätzliche Grafikobjekte
+## <a name="trailers-and-additional-assets"></a>Trailer und weitere Ressourcen
 
-Sie können zusätzliche Ressourcen für das Produkt übermitteln, einschließlich Trailer und Werbebilder. Diese sind optional, aber es empfiehlt sich, so viele wie möglich hochzuladen. Diese Bilder können Kunden eine bessere Vorstellung davon bieten, worum es sich bei Ihrem Produkt handelt, und den Eintrag ansprechender gestalten.
+Sie können zusätzliche Ressourcen für das Produkt, einschließlich der video-Trailer und Werbebilder übermitteln. Diese sind optional, aber es empfiehlt sich, so viele wie möglich hochzuladen. Diese Bilder können Kunden eine bessere Vorstellung davon bieten, worum es sich bei Ihrem Produkt handelt, und den Eintrag ansprechender gestalten.
 
-Weitere Informationen finden Sie unter [Zusätzliche Grafikobjekte](app-screenshots-and-images.md#additional-art-assets).
+Weitere Informationen finden Sie unter [Trailer und weitere Ressourcen](app-screenshots-and-images.md#trailers-and-additional-assets).
 
 <a id="supplemental-information" />
 
@@ -149,7 +149,7 @@ Sie können bis zu 11Elemente sowohl für **Mindesthardwareanforderungen** als a
 
 ## <a name="additional-information"></a>Weitere Informationen
 
-Mit den unten beschriebenen Elementen können Kunden Ihr Produkt finden und verstehen. Die hier eingegebenen Informationen gelten für alle Store-Einträge einer bestimmten Sprache, auch wenn Sie [plattformspezifische Store-Einträge erstellen](create-platform-specific-store-listings.md). (Dieser Abschnitt hieß früher **Freigegebene Felder**).
+Mit den unten beschriebenen Elementen können Kunden Ihr Produkt finden und verstehen. (Dieser Abschnitt hieß früher **Freigegebene Felder**).
 
 ### <a name="search-terms"></a>Suchbegriffe
 
