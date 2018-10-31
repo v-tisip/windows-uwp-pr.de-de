@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows10, UWP, Karten, Karten-Stylesheet
 ms.localizationpriority: medium
 ms.openlocfilehash: eace82801b2e3d1423eeec9e9da7cf56db043666
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5744138"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5832012"
 ---
 # <a name="map-style-sheet-reference"></a><span data-ttu-id="38f50-104">Karten-Stylesheet-Referenz</span><span class="sxs-lookup"><span data-stu-id="38f50-104">Map style sheet reference</span></span>
 

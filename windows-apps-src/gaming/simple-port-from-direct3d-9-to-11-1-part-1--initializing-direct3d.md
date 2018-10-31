@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Spiele, Direct3D 11, Initialisierung, portieren, Direct3D 9
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f6aa5bca3ecc242e90b42081a0111358afdfa9b
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5740244"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5835350"
 ---
 # <a name="initialize-direct3d-11"></a><span data-ttu-id="6fdf6-104">Initialisieren von Direct3D11</span><span class="sxs-lookup"><span data-stu-id="6fdf6-104">Initialize Direct3D 11</span></span>
 

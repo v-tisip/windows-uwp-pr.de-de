@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Geocodierung, Karte, Ort, Standort
 ms.localizationpriority: medium
 ms.openlocfilehash: bdd956dece4435ceb8e14121ec2b545095af3a11
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5768850"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5829459"
 ---
 # <a name="perform-geocoding-and-reverse-geocoding"></a><span data-ttu-id="c1bac-104">Durchführen von Geocodierung und umgekehrter Geocodierung</span><span class="sxs-lookup"><span data-stu-id="c1bac-104">Perform geocoding and reverse geocoding</span></span>
 

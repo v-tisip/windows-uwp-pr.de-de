@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ed222b9ebefd0035064717f78fb91518d3164d13
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5765585"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5836812"
 ---
 # <a name="audio-video-and-camera"></a><span data-ttu-id="7eea7-104">Audio, Video und Kamera</span><span class="sxs-lookup"><span data-stu-id="7eea7-104">Audio, video, and camera</span></span>
 

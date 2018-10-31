@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows10, Uwp, Kachel, Kachelbenachrichtigung, Kachelinhalt, Schema, Kachelnutzlast
 ms.localizationpriority: medium
 ms.openlocfilehash: 3cdcf8b609b76283ba680ec9ca4d2502624e2024
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5759596"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5833518"
 ---
 # <a name="tile-content-schema"></a><span data-ttu-id="757c8-103">Kachelinhaltsschema</span><span class="sxs-lookup"><span data-stu-id="757c8-103">Tile content schema</span></span>
 

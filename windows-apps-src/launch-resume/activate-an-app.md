@@ -14,11 +14,11 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: 4d69680df1684da756219c180bbe6d47263801b9
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5742200"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5833729"
 ---
 # <a name="handle-app-activation"></a><span data-ttu-id="e487c-104">Behandeln der App-Aktivierung</span><span class="sxs-lookup"><span data-stu-id="e487c-104">Handle app activation</span></span>
 
