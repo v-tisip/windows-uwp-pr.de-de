@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 41c5e018ee56b6a0d26bf2159f62801aa4ab5c3c
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5763321"
+ms.locfileid: "5820105"
 ---
 # <a name="keyboard-accessibility"></a><span data-ttu-id="279ca-103">Barrierefreiheit der Tastaturnavigation</span><span class="sxs-lookup"><span data-stu-id="279ca-103">Keyboard accessibility</span></span>  
 

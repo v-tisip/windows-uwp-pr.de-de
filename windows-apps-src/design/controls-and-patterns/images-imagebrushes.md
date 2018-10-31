@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 7c0fcd158dac77b3b3322167b82131e51f62390f
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5748000"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5812954"
 ---
 # <a name="images-and-image-brushes"></a><span data-ttu-id="e0ab7-103">Bilder und Bildpinsel</span><span class="sxs-lookup"><span data-stu-id="e0ab7-103">Images and image brushes</span></span>
 

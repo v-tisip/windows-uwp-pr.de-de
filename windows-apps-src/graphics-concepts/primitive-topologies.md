@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d7456cd773196520e066062c664f5e3073941dfe
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5747818"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5817653"
 ---
 # <a name="primitive-topologies"></a><span data-ttu-id="77d26-104">Primitive Topologien</span><span class="sxs-lookup"><span data-stu-id="77d26-104">Primitive topologies</span></span>
 

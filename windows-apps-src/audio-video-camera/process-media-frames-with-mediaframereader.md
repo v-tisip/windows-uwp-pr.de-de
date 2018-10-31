@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 722a411bc6363d3a10b5db0f609b08f5d14b3f8d
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5743394"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5819529"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a><span data-ttu-id="f6ca8-104">Verarbeiten von Medienframes mit „MediaFrameReader“</span><span class="sxs-lookup"><span data-stu-id="f6ca8-104">Process media frames with MediaFrameReader</span></span>
 

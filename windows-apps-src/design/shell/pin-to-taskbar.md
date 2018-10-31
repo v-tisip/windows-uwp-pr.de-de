@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Taskleiste, Taskleiste-Manager an primäre Kachel-Taskleiste anheften
 ms.localizationpriority: medium
 ms.openlocfilehash: 47fcd1f9d090c49ecbd49e05696b33f789973160
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5748092"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5815098"
 ---
 # <a name="pin-your-app-to-the-taskbar"></a><span data-ttu-id="095c1-103">Anheften Ihrer App an die Taskleiste</span><span class="sxs-lookup"><span data-stu-id="095c1-103">Pin your app to the taskbar</span></span>
 

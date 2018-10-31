@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 48e16162a76b1a599c1a43e763243be4348810af
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5743685"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5818638"
 ---
 # <a name="bilinear-texture-filtering"></a><span data-ttu-id="de86f-104">Bilineare Texturfilterung</span><span class="sxs-lookup"><span data-stu-id="de86f-104">Bilinear texture filtering</span></span>
 

@@ -9,11 +9,11 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6c5a5536ef1853a726421bdc75269f0cb5c1a84b
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5748122"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5811618"
 ---
 # <a name="enable-in-app-purchases-of-apps-and-add-ons"></a><span data-ttu-id="e9ad2-104">Aktivieren von In-App-Käufen von Apps und Add-Ons</span><span class="sxs-lookup"><span data-stu-id="e9ad2-104">Enable in-app purchases of apps and add-ons</span></span>
 
