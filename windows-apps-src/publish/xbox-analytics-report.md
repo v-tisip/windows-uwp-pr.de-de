@@ -1,27 +1,27 @@
 ---
 author: jnHs
-Description: The Xbox analytics report in the Windows Dev Center dashboard shows you statistics about how your customers are engaging with the Xbox features in your product.
+Description: The Xbox analytics report in Partner Center shows you statistics about how your customers are engaging with the Xbox features in your product.
 title: Bericht der Xbox Analyse
 ms.author: wdg-dev-content
-ms.date: 06/04/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Xbox Analyse, Xbox Live-Analyse, Xbox-Statistiken
 ms.localizationpriority: medium
-ms.openlocfilehash: e3a5ec3c81b9cddce4c38ad7f764d35bd6f34f86
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: c2c1f54a402fc4ae7184f1d588cc255525f762c2
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5748010"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5827393"
 ---
 # <a name="xbox-analytics-report"></a>Xbox Analysebericht
 
-Der **Xbox Analysebericht** im Windows Dev Center-Dashboard zeigt Ihnen Statistiken darüber an, wie Ihre Kunden die Xbox-Features in Ihrem Spiel nutzen. Es enthält auch Informationen zur Dienstintegrität, um Clientfehler zu beheben.
+Der **Xbox** Analysebericht im [Partner Center](https://partner.microsoft.com/dashboard) zeigt Ihnen Statistiken darüber, wie Ihre Kunden die Xbox-Features in Ihrem Spiel sind. Es enthält auch Informationen zur Dienstintegrität, um Clientfehler zu beheben.
 
 > [!IMPORTANT]
 > Dieser Bericht wird nur angezeigt, wenn Sie ein Spiel für Xbox oder ein Spiel veröffentlichen, das Xbox Live-Dienste verwendet. Zu diesem Zweck Sie [konzeptgenehmigungsprozess](../gaming/concept-approval.md), einschließlich Spiele, die von [Microsoft-Partnern](../xbox-live/developer-program-overview.md#microsoft-partners) veröffentlicht und Spiele über übermittelt durchlaufen müssen die [ ID@Xbox Programm](../xbox-live/developer-program-overview.md#id). Spiele, die über das [Xbox Live Creators-Programm](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) veröffentlicht werden nicht in diesem Bericht derzeit angezeigt.
 
-Zeigen Sie den **Xbox Analyse**-Bericht im linken Navigationsmenü für Ihr Spiel an, indem Sie **Analyse** erweitern und **Xbox Analyse** auswählen.  Sie können diese Daten in Ihrem Dashboard anzeigen oder den [Bericht herunterladen](download-analytic-reports.md), um ihn offline anzuzeigen.
+Sie können den **Xbox** Analysebericht im linken Navigationsmenü für Ihr Spiel anzeigen, indem erweitern **Analysieren** und Auswählen von **Xbox-Analyse**.  Sie können diese Daten im Partner Center oder [den Bericht herunterladen](download-analytic-reports.md) offline anzeigen anzeigen.
 
 
 ## <a name="overview-tab"></a>Registerkarte Übersicht

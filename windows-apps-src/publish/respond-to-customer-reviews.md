@@ -4,26 +4,26 @@ Description: You can respond directly to reviews of your app to let customers kn
 title: Reagieren auf Kundenrezensionen
 ms.assetid: 96AA2108-E793-4DD0-8CDA-0D115423C68D
 ms.author: wdg-dev-content
-ms.date: 7/17/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Überprüfen Sie Windows 10, Uwp, reagiert, Antworten
 ms.localizationpriority: medium
-ms.openlocfilehash: f4bad59e298ef65cc7aaf6561b77cc86eeff832e
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 823ca28618540dbaab1f4e5711ee59d277b0c894
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5748373"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5824126"
 ---
 # <a name="respond-to-customer-reviews"></a>Reagieren auf Kundenrezensionen
 
 
 Sie können auf Rezensionen Ihrer App zu ermöglichen, dass Kunden wissen, dass Sie ihr Feedback ernst reagieren. Wenn Sie auf Kritiken antworten, können Sie Kunden über neue Features oder behobene Schwachstellen informieren, die in Bezug zu ihren Kommentaren stehen, oder Sie erhalten detaillierteres Feedback mit Verbesserungsvorschlägen für Ihre App. Ihre Antworten werden im Microsoft Store für alle Windows 10-Kunden angezeigt. Sie können auch auswählen, um Ihre Antwort per e-Mail an den Kunden senden (sofern er noch nicht Deaktivierung wurde ausgeführt und ein Gerät mit Windows 10, Version 1803 oder höher).
 
-Um die Rezensionen zu Ihrer App anzuzeigen und Antworten bereitzustellen, suchen Sie die App im Windows Dev Center-Dashboard. Erweitern Sie im linken Navigationsmenü **Analysen** und klicken Sie dann auf **Rezensionen**, um den [Bericht „Rezensionen“](reviews-report.md) anzuzeigen. Wählen Sie aus, um Ihre Antwort bereitzustellen, **reagieren, um zu überprüfen** .
+Um Rezensionen Ihrer app anzuzeigen und Antworten bereitzustellen, suchen Sie die app im [Partner Center](https://partner.microsoft.com/dashboard). Klicken Sie im linken Navigationsmenü erweitern Sie **Analysieren** , und klicken Sie dann auf **Rezensionen** , um den [Bericht "Rezensionen"](reviews-report.md)anzuzeigen. Wählen Sie aus, um Ihre Antwort bereitzustellen, **reagieren, um zu überprüfen** .
 
 > [!TIP]
-> Zusätzlich zur Verwendung im Dashboards zum Reagieren auf Rezensionen, können Sie auf Rezensionen [programmgesteuert](../monetize/submit-responses-to-app-reviews.md)oder über die [Dev Center-app](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws)reagieren.
+> Zusätzlich zur Verwendung von Partner Center zum Reagieren auf Rezensionen, können Sie auf Rezensionen [programmgesteuert](../monetize/submit-responses-to-app-reviews.md)oder über die [Dev Center-app](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws)reagieren.
 
 Standardmäßig wird Ihre Antwort im Store direkt unterhalb der ursprünglichen kundenrezension verbucht. Diese Antworten werden allen Kunden den Store auf einem Windows 10-Gerät anzeigen. Wenn der Kunde, der Rezension verwendet, ein Gerät unter Windows 10, Version 1803 oder höher, verwendet und sie noch nicht den Empfang von Antworten e-Mail entschieden, wird eine Kopie der Ihre Antwort auch an diesen Kunden per e-Mail gesendet.  Sie müssen eine gültige e-Mail-Adresse angeben, um Ihre Antwort übermitteln, die wir in der e-Mail an den Kunden enthält. Sie können dann diese e-Mail-Adresse verwenden, Sie direkt kontaktieren.
 

@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: bfec782952ef20dbc496e50d9513febc8dee3248
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 71a5cddcd5ccb5185cda422c3df16797f5765688
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5740403"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5825271"
 ---
 # <a name="web-account-manager"></a>Web Account Manager
 
@@ -337,7 +337,7 @@ Da der Tokenabruf im Hintergrund sehr einfach ist, sollten Sie diese Methode ver
 
 ## <a name="remove-a-stored-account"></a>Entfernen eines gespeicherten Kontos
 
-Wenn Sie ein Webkonto beibehalten, sollten Sie Benutzern die Möglichkeit geben, ihr Konto von Ihrer App zu trennen. Auf diese Weise können sie sich effektiv von der App „abmelden“: Ihre Kontoinformationen werden nach dem Start nicht mehr automatisch geladen. Entfernen Sie dafür zuerst alle gespeicherten Konto- und Anbieterinformationen aus dem Speicher. Rufen Sie dann **[SignOutAsync](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount.SignOutAsync)** auf, um den Cache zu löschen und vorhandene App-Tokens für ungültig zu erklären. 
+Wenn Sie ein Webkonto beibehalten, sollten Sie Benutzern die Möglichkeit geben, ihr Konto von Ihrer App zu trennen. Auf diese Weise sie können effektiv "Abmelden" der app: ihre Kontoinformationen werden nach dem Start nicht mehr automatisch geladen. Entfernen Sie dafür zuerst alle gespeicherten Konto- und Anbieterinformationen aus dem Speicher. Rufen Sie dann **[SignOutAsync](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount.SignOutAsync)** auf, um den Cache zu löschen und vorhandene App-Tokens für ungültig zu erklären. 
 
 ```csharp
 private async Task SignOutAccountAsync(WebAccount account)

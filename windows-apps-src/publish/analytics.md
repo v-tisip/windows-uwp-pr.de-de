@@ -1,25 +1,25 @@
 ---
 author: JnHs
-Description: Get detailed analytics for your Windows apps, in the dashboard or via other methods.
+Description: Get detailed analytics for your Windows apps, in Partner Center or via other methods.
 title: Analysieren der App-Leistung
 ms.assetid: 3A3C6F10-0DB1-416D-B632-CD388EA66759
 ms.author: wdg-dev-content
-ms.date: 07/17/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, Uwp, Analysen, Berichte, Dashboard, apps, Daten, Metriken
 ms.localizationpriority: medium
-ms.openlocfilehash: e31ae50a1895c5878a2183b7f63ce3080623f7e9
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 22d9a4d4b66091148bbb078abfb89237ab14ea87
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5768444"
+ms.locfileid: "5824965"
 ---
 # <a name="analyze-app-performance"></a>Analysieren der App-Leistung
 
-Sie können für Ihre Apps detaillierte Analysen im Windows Dev Center-Dashboard anzeigen. Statistiken und Diagramme geben Aufschluss über den Erfolg Ihrer Apps, z.B. wie viele Kunden Sie erreichen, wie die Kunden Ihre App einsetzen und was die Kunden über die App denken. Außerdem finden Sie dort Metriken zur App-Integrität, zur Anzeigennutzung und mehr.
+Sie können detaillierte Analysen für Ihre apps im [Partner Center](https://partner.microsoft.com/dashboard)anzeigen. Statistiken und Diagramme geben Aufschluss über den Erfolg Ihrer Apps, z.B. wie viele Kunden Sie erreichen, wie die Kunden Ihre App einsetzen und was die Kunden über die App denken. Außerdem finden Sie dort Metriken zur App-Integrität, zur Anzeigennutzung und mehr.
 
-Zeigen Sie die Analyseberichte im Dashboard an, oder [laden Sie die erforderlichen Berichte herunter](download-analytic-reports.md), um Ihre Daten offline zu analysieren. Wir stellen Ihnen auch verschiedene Möglichkeiten für den [Zugriff auf Analysedaten ohne das Dashboard](#no-dashboard) zur Verfügung.
+Sie können Analyseberichte anzeigen rechts im Partner Center oder [die Berichte herunterladen, die Sie benötigen](download-analytic-reports.md) , um Ihre Daten offline zu analysieren. Wir bieten auch verschiedene Möglichkeiten für Sie für [den Zugriff auf Analysedaten außerhalb von Partner Center](#outside).
 
 ## <a name="view-key-analytics-for-all-your-apps"></a>Zeigen Sie die wichtigsten Analysen für Ihre gesamten Apps an
 
@@ -45,11 +45,11 @@ In diesem Abschnitt erhalten Sie Details zu den Informationen, die in den folgen
 > [!NOTE]
 > Abhängig von den spezifischen Features und der Implementierung Ihrer App enthalten einige dieser Berichte möglicherweise keine Daten.
 
-<span id="no-dashboard"/>
+<span id="outside"/>
 
-## <a name="access-analytics-data-without-using-the-dev-center-dashboard"></a>Zugreifen auf Analysedaten ohne das Dev Center-Dashboard
+## <a name="access-analytics-data-outside-of-partner-center"></a>Zugreifen auf Analysedaten außerhalb von Partner Center
 
-Zusätzlich zur Anzeige der Berichte im Dashboard können Sie auf unterschiedliche Arten auf Ihre App-Analyse zugreifen.
+Zusätzlich zur Anzeige der Berichte im Partner Center, können Sie Ihre app-Analyse in einer Reihe von Möglichkeiten zugreifen.
 
 ### <a name="microsoft-store-analytics-api"></a>Microsoft Store-Analyse-API
 
@@ -57,7 +57,7 @@ Verwenden Sie die [Store-Analyse-API](../monetize/access-analytics-data-using-wi
 
 ### <a name="windows-dev-center-content-pack-for-power-bi"></a>Windows Dev Center-Inhaltspaket für Power BI
 
-Nutzen Sie das [Windows Dev Center-Inhaltspaket für Power BI](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/), um mehr über Ihre Dev Center-Analysedaten in Power BI zu erfahren und diese zu überwachen. Power BI ist ein cloudbasierter Geschäftsanalysedienst, der Ihnen Ihre Geschäftsdaten in einer einzelnen Ansicht präsentiert.
+Verwenden Sie das [Windows Dev Center-Inhaltspaket für Power BI](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/) zu erkunden und Ihre Partner Center-Analysedaten in Power BI zu überwachen. Power BI ist ein cloudbasierter Geschäftsanalysedienst, der Ihnen Ihre Geschäftsdaten in einer einzelnen Ansicht präsentiert.
 
 Verwenden Sie die folgenden Ressourcen, um mit Power BI auf Ihre Analysedaten zuzugreifen.
 
@@ -66,7 +66,7 @@ Verwenden Sie die folgenden Ressourcen, um mit Power BI auf Ihre Analysedaten zu
 * [Informationen zum Einsetzen des Windows Dev Center-Inhaltspakets für Power BI, um eine Verbindung zu Ihren Analysedaten herzustellen](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/)
 
 > [!NOTE]
-> Für die Verbindung zum Windows Dev Center-Inhaltspaket für Power BI sollten Sie Anmeldeinformationen aus einem Azure AD-Verzeichnis angeben, das mit Ihrem Dev Center-Konto verknüpft ist. Wenn Sie die Anmeldeinformationen Ihres Microsoft-Kontos verwenden, werden Ihre Analysedaten in Power BI nicht automatisch aktualisiert. Für eine Aktualisierung müssen Sie sich dann in Power BI anmelden. Wenn in Ihrer Organisation bereits mit Office365 oder anderen Unternehmensdiensten von Microsoft gearbeitet wird, verfügen Sie bereits über Azure AD. Andernfalls können Sie es [kostenlos abrufen](http://go.microsoft.com/fwlink/p/?LinkId=703757). Weitere Informationen zur Einrichtung der Zuordnung finden Sie unter [Zuordnen Ihres Azure Active Directory zum Dev Center-Konto](associate-azure-ad-with-dev-center.md).
+> Um mit dem Windows Dev Center-Inhaltspaket für Power BI verbinden, wird empfohlen, dass Sie Anmeldeinformationen aus Azure AD-Verzeichnis angeben, die Ihr Partner Center-Konto zugeordnet ist. Wenn Sie die Anmeldeinformationen Ihres Microsoft-Kontos verwenden, werden Ihre Analysedaten in Power BI nicht automatisch aktualisiert. Für eine Aktualisierung müssen Sie sich dann in Power BI anmelden. Wenn in Ihrer Organisation bereits mit Office365 oder anderen Unternehmensdiensten von Microsoft gearbeitet wird, verfügen Sie bereits über Azure AD. Andernfalls können Sie es [kostenlos abrufen](http://go.microsoft.com/fwlink/p/?LinkId=703757). Weitere Informationen zur Einrichtung der Zuordnung finden Sie unter [Zuordnen Azure Active Directory mit Ihrem Partner Center-Konto](associate-azure-ad-with-dev-center.md).
 
 ### <a name="dev-center-app"></a>DevCenter-App
 

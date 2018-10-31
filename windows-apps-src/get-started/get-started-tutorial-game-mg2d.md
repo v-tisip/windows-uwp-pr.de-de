@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
-ms.openlocfilehash: ed2d84d6892f25dd37ae9a8992238f2fc8fe6a53
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 37d43094ba679ebe5439996373626522590e3fcc
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5767133"
+ms.locfileid: "5826373"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>Erstellen eines UWP-Spiels in MonoGame-2D
 
@@ -68,7 +68,7 @@ Nachdem Sie das Projekt erstellt haben, öffnen Sie die **Game1.cs**-Datei aus d
 
 **protected override void UnloadContent()** – Mit dieser Methode wird Inhalt entfernt, der nicht aus dem Inhalts-Manager stammt. Diese Methode wird hier nicht verwendet.
 
-**protected override void Update(GameTime gameTIme)** – Diese Methode wird einmalig bei jedem Zyklus der Spieleschleife aufgerufen. Hier wird der Status der im Spiel verwendeten Objekte oder Variablen aktualisiert. Dies betrifft auch Position, Geschwindigkeit oder Farbe eines Objekts. Außerdem werden hier Benutzereingaben behandelt. Kurz gesagt, behandelt diese Methode alle Teile der Spiellogik mit Ausnahme des Zeichnens von Objekten auf den Bildschirm.
+**Protected Override void Update (GameTime GameTime)** Diese Methode wird einmal bei jedem Zyklus der spielschleife aufgerufen. Hier wird der Status der im Spiel verwendeten Objekte oder Variablen aktualisiert. Dies betrifft auch Position, Geschwindigkeit oder Farbe eines Objekts. Dies ist auch hier Benutzereingaben behandelt. Kurz gesagt, behandelt diese Methode alle Teile der Spiellogik mit Ausnahme des Zeichnens von Objekten auf den Bildschirm.
 **protected override void Draw(GameTime gameTime)** – Hier werden Objekte auf den Bildschirm gezeichnet. Dabei wird die Position verwendet, die von der Update-Methode angegeben wurde.
 
 ## <a name="draw-a-sprite"></a>Zeichnen eines Sprite
@@ -82,7 +82,7 @@ Für unsere Zwecke soll das erste Sprite äußerst langweilig sein. [Klicken Sie
 - Öffnen Sie den **Projektmappen-Explorer**.
 - Klicken Sie mit der rechten Maustaste im Ordner **Content** auf **Content.mgcb**, und wählen Sie **Öffnen mit** aus. Wählen Sie aus dem Popupmenü **Monogame-Pipeline** aus, und wählen Sie **OK**.
 - Klicken Sie im neuen Fenster mit der rechten Maustaste auf das **Content**-Element, und wählen Sie **Hinzufügen -> Vorhandenes Element** aus.
-- Suchen Sie das grüne Rechteck im Datei-Browser, und wählen Sie es aus.
+- Suchen Sie und wählen Sie das grüne Rechteck im Datei-Browser.
 - Nennen Sie das Element „grass.png“, und wählen Sie **Hinzufügen** aus.
 
 ### <a name="3-add-class-variables"></a>3. Hinzufügen von Klassenvariablen
@@ -325,8 +325,8 @@ broccoli = new SpriteClass(GraphicsDevice, "Content/broccoli.png", ScaleToHighDP
 
 Das Brokkoli-Bild ist viel größer, als es im Spiel angezeigt werden soll. Daher müssen wir es auf das 0,2-Fache seiner ursprünglichen Größe skalieren.
 
-### <a name="5-program-obstacle-behavior"></a>5. Programmierung des Verhaltens des Hindernisses
-Der Brokkoli soll über den Bildschirm hinausreichen und in Richtung des Avatars des Spielers wandern, der dem Hindernis ausweichen muss. Dazu fügen Sie der **Game1.cs**-Klasse diese Methode hinzu:
+### <a name="5-program-obstacle-behaviour"></a>5. Programm Hindernis Verhalten
+Der Brokkoli soll über den Bildschirm hinausreichen und in Richtung des Avatars des Spielers wandern, der dem Hindernis ausweichen muss. Zu diesem Zweck fügen Sie diese Methode in der **Game1.cs** -Klasse:
 
 ```CSharp
 public void SpawnBroccoli()
@@ -381,7 +381,7 @@ public void StartGame()
 ```
 
 ### <a name="7-handle-keyboard-input"></a>7. Behandeln von Tastatureingaben
-Als Nächstes benötigen wir eine neue Methode zum Behandeln von Benutzereingaben über die Tastatur. Fügen Sie diese Methode zu **Game1.cs** hinzu:
+Als Nächstes benötigen wir eine neue Methode zum Behandeln von Benutzereingaben über die Tastatur. Fügen Sie diese Methode, um **Game1.cs**:
 
 ```CSharp
 void KeyboardHandler()
@@ -430,7 +430,7 @@ Die erste beendet das Spiel, wenn die **Escape**-Taste gedrückt wird.
 
 Die zweite startet das Spiel, wenn die **LEERTASTE** gedrückt wird, und das Spiel ist noch nicht gestartet wurde.
 
-Die dritte lässt den Dino-Avatar springen, wenn die **LEERTASTE** gedrückt wird. Dazu wird die **dY**-Eigenschaft geändert. Beachten Sie, dass der Spieler nur springen kann, wenn er auf dem „Boden“ ist (dino.y = screenHeight * SKYRATIO). Außerdem springt er nur, wenn LEERTASTE einmal gedrückt und nicht gehalten wird. Dies verhindert, dass der Dino nach Spielstart sofort springt, weil die LEERTASTE auch zum Starten des Spiels gedrückt wird.
+Die dritte lässt den Dino-Avatar springen, wenn die **LEERTASTE** gedrückt wird. Dazu wird die **dY**-Eigenschaft geändert. Beachten Sie, die der Spieler springen kann, es sei denn, er auf dem "Boden" ist (dino.y = ScreenHeight * SKYRATIO), und wird auch nicht wechseln, wenn die LEERTASTE einmal gedrückt gedrückt ist. Dies verhindert, dass der Dino nach Spielstart sofort springt, weil die LEERTASTE auch zum Starten des Spiels gedrückt wird.
 
 Mit der letzten „Wenn“-Anweisung wird überprüft, ob die Pfeile nach links oder rechts gedrückt werden. Wenn dies der Fall ist, wird die **dX** -Eigenschaft des Dinos entsprechend geändert.
 
@@ -484,9 +484,9 @@ broccoli.Draw(spriteBatch);
 dino.Draw(spriteBatch);
 ```
 
-In MonoGame werden neue Aufrufe von **spriteBatch.Draw** über alle vorherigen Aufrufe gezeichnet. Dies bedeutet, dass das Brokkoli- und das Dino-Sprite über das vorhandene Gras-Sprite gezeichnet werden, sodass sie unabhängig von ihrer Position niemals dahinter verborgen werden können.
+In MonoGame werden neue Aufrufe von **spriteBatch.Draw** über alle vorherigen Aufrufe gezeichnet. Dies bedeutet, dass das brokkoli- und das Dino-Sprite über das vorhandene Gras-Sprite gezeichnet werden, sodass sie niemals dahinter unabhängig von ihrer Position verborgen werden können.
 
-Führen Sie das Spiel nun aus, und bewegen Sie den Dino mit den Pfeiltasten und der LEERTASTE. Wenn Sie die oben beschriebenen Schritteausgeführt haben, sollten Sie Ihren Avatar innerhalb des Spielfensters bewegen können, und der Brokkoli sollte immer schneller werden.
+Führen Sie das Spiel nun aus, und bewegen Sie den Dino mit den Pfeiltasten und der LEERTASTE. Wenn Sie die oben beschriebenen Schritte ausgeführt haben, sollten Sie Ihren Avatar innerhalb des Spielfensters bewegen vornehmen sein, und der brokkoli sollte mit einer Geschwindigkeit wachsende ausgehen.
 
 ![Spieler-Avatar und Hindernis](images/monogame-tutorial-2.png)
 
@@ -602,7 +602,7 @@ public bool RectangleCollision(SpriteClass otherSprite)
 }
 ```
 
-Diese Methode bestimmt, ob zwei rechteckige Objekte kollidiert sind. Mit dem Algorithmus wird getestet, ob eine Lücke zwischen den Seiten des Rechtecks vorhanden ist. Wenn es eine Lücke gibt, ist keine Kollision erfolgt – wenn keine Lücke vorhanden ist, muss eine Kollision vorliegen.
+Diese Methode bestimmt, ob zwei rechteckige Objekte kollidiert sind. Der Algorithmus funktioniert, indem Sie testen, um festzustellen, ob eine Lücke zwischen den Seiten der Rechtecke vorhanden ist. Wenn es eine Lücke gibt, ist keine Kollision erfolgt – wenn keine Lücke vorhanden ist, muss eine Kollision vorliegen.
 
 ### <a name="2-load-new-textures"></a>2. Laden neuer Texturen
 
@@ -650,7 +650,7 @@ if (dino.RectangleCollision(broccoli)) gameOver = true;
 Dadurch wird die **RectangleCollision**-Methode aufgerufen, die wir in **SpriteClass** erstellt haben, und das Spiel als „beendet“ markiert, wenn der Wert „true“ zurückgegeben wird.
 
 ### <a name="4-add-user-input-for-resetting-the-game"></a>4. Hinzufügen von Benutzereingaben für das Zurücksetzen des Spiels
-Fügen Sie der **KeyboardHandler**-Methode diesen Code hinzu, damit die Benutzer das Spiel durch Drücken der EINGABETASTE zurücksetzen können:
+Fügen Sie diesen Code an die Methode **KeyboardHandler** , damit der Benutzer das Spiel Drücken der EINGABETASTE zurücksetzen können:
 
 ```CSharp
 if (gameOver && state.IsKeyDown(Keys.Enter))

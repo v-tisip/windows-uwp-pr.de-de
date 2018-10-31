@@ -2,22 +2,22 @@
 author: jnHs
 ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
 title: Eröffnen eines Entwicklerkontos
-description: Diese Übersicht zur Registrierung eines Entwicklerkontos für Microsoft Store und andere Microsoft-Programme erleichtert Ihnen das Einrichten Ihres Kontos.
+description: Hier ist eine Übersicht zur Registrierung für ein Entwicklerkonto Entwicklungskit für den Microsoft Store und andere Microsoft-Programme im Partner Center erleichtert.
 ms.author: wdg-dev-content
-ms.date: 08/14/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 935e628bb285adea8e515f6192d7f2654c05022e
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: b34bdfae8faf7fee2b2eae373483eb9e4dea1972
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5757630"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5828225"
 ---
 # <a name="opening-a-developer-account"></a>Eröffnen eines Entwicklerkontos
 
-Diese Übersicht zur Registrierung eines Entwicklerkontos für Microsoft Store und andere Microsoft-Programme erleichtert Ihnen das Einrichten Ihres Kontos.
+Hier ist eine Übersicht zur Registrierung für ein Windows-Entwicklerkonto im [Partner Center](https://partner.microsoft.com/dashboard)erleichtert.
 
 > [!NOTE]
 > Wenn Sie sich für ein Entwicklerkonto registrieren, verwenden wir die E-Mail-Adresse in Ihren Kontaktinformationen, um Ihnen E-Mail-Nachrichten im Zusammenhang mit Ihrem Konto zu senden. Manchmal enthalten diese E-Mails Informationen über unsere Programme. Wenn Sie sich dafür entscheiden, diese Informations-E-Mails nicht zu erhalten, indem Sie das [Abonnement kündigen](http://go.microsoft.com/fwlink/p/?LinkId=533280), beachten Sie, dass wir Ihnen weiterhin Transaktions-E-Mails senden (z.B. um Sie zu informieren, dass Ihre App die Zertifizierung bestanden hat oder dass eine Zahlung unterwegs ist.) Diese E-Mails sind für Ihre Konto erforderlich. Sie erhalten solange Transaktions-E-Mails, bis Sie Ihr Konto schließen.
@@ -57,11 +57,11 @@ Nach Abschluss der Registrierung durchläuft Ihr Konto den Überprüfungsprozess
 ## <a name="additional-guidelines-for-company-accounts"></a>Zusätzliche Richtlinien für Unternehmenskonten
 
 > [!IMPORTANT]
-> Um mehrere Benutzer auf Ihr Dev Center-Konto zugreifen können, empfehlen wir die Verwendung von Azure Active Directory zum Zuweisen von Rollen für einzelne Benutzer (anstatt Freigabe Zugriff auf das Microsoft-Konto). Jeder Benutzer kann so auf das Dev Center-Konto zugreifen, indem er sich mit seinen individuellen Azure AD-Anmeldeinformationen anmeldet. Weitere Informationen finden Sie unter [Verwalten von Kontobenutzern](manage-account-users.md).
+> Damit um mehrere Benutzer auf Ihr Entwicklerkonto zugreifen zu können, empfehlen wir die Verwendung von Azure Active Directory zum Zuweisen von Rollen für einzelne Benutzer (anstatt Freigabe Zugriff auf das Microsoft-Konto). Jeder Benutzer kann dann das Entwicklerkonto zugreifen, indem die Anmeldung beim Partner Center mit seinen individuellen Azure AD-Anmeldeinformationen. Weitere Informationen finden Sie unter [Verwalten von Kontobenutzern](manage-account-users.md).
 
-Wenn Sie ein Unternehmenskonto erstellen möchten, können diese Richtlinien hilfreich, wenn mehrere Personen das Konto durch Signieren mit Microsoft-Konto, das das Konto eröffnete (und nicht als einzelne Benutzer auf das Dev Center-Konto hinzugefügt) zugreifen muss.
+Das Unternehmenskonto durch Signieren mit Microsoft-Konto, das es geöffnet (und nicht als einzelne Benutzer, dem Konto hinzugefügt), die folgenden Richtlinien kann hilfreich sein, wenn Sie mehrere Personen zugreifen müssen:
 
--   Erstellen Sie Ihr Microsoft-Konto mit einer E-Mail-Adresse, die nicht bereits Ihnen oder einer anderen Person gehört, z.B. MyCompany_DevCenter@outlook.com. Verwenden Sie eine e-Mail-Adresse nicht zur Domäne Ihrer Firma, insbesondere dann, wenn Ihr Unternehmen bereits Azure AD verwendet. (Wie bereits erwähnt, können Sie weitere Benutzer hinzufügen, aus Ihrem Unternehmen Azure AD weiter unten.)
+-   Erstellen Sie das Microsoft-Konto mit einer e-Mail-Adresse, die bereits Ihnen oder einer anderen Person wie z. B. gehört MyCompany_PartnerCenter@outlook.com. Verwenden Sie eine e-Mail-Adresse nicht zur Domäne Ihrer Firma, insbesondere dann, wenn Ihr Unternehmen bereits Azure AD verwendet. (Wie bereits erwähnt, können Sie weitere Benutzer hinzufügen, aus Ihrem Unternehmen Azure AD weiter unten.)
 -   Beschränken Sie den Zugriff auf dieses Microsoft-Konto auf so wenige Benutzer wie möglich.
 -   Richten Sie eine firmeninterne e-Mail-Verteilerliste, die alle Benutzer enthält, die Zugriff auf das Entwicklerkonto benötigen, und fügen Sie diese e-Mail-Adresse für den [Sicherheitsinformationen mit dem Microsoft-Konto verknüpften [(https://account.microsoft.com/security). Dadurch können alle Mitarbeiter auf die Liste an diesen Aliasnamen gesendet Sicherheitscodes erhalten. Wenn die Einrichtung eine Verteilerliste nicht realisierbar ist, können Sie Ihre Sicherheitsinformationen e-Mail-Adresse eines einzelnen Benutzers hinzufügen, aber der Besitzer der e-Mail-Adresse werden die einzige, wer Zugriff auf und teilen den Sicherheitscode bei entsprechender Aufforderung (z. B. wenn t neue Sicherheitsinformationen hinzugefügt werden kann er für das Konto, oder wenn sie über ein neues Gerät zugegriffen wird).
 -   Fügen Sie eine geschäftliche Telefonnummer des Microsoft-Kontos Sicherheitsinformationen hinzu. Verwenden Sie eine Zahl, die eine Erweiterung ist nicht erforderlich und wird auf wichtige Teammitglieder zugreifen.
@@ -76,7 +76,7 @@ Wir verwenden von Ihnen bereitgestellte Sicherheitsinformationen, um die Sicherh
 
 Es müssen mindestens zwei E-Mail-Adressen und/oder Telefonnummern für das Microsoft-Konto vorhanden sein. Wir empfehlen, so viele wie möglich hinzuzufügen. Beachten Sie bitte, dass einige Sicherheitsinformationen bestätigt werden müssen, ehe sie verwendet werden können. Überprüfen Sie außerdem regelmäßig, ob Ihre Sicherheitsinformationen aktuell sind. Sie können Ihre Sicherheitsinformationen verwalten, indem Sie zu https://account.microsoft.com/security wechseln und sich mit Ihrem Microsoft-Konto anmelden. Weitere Informationen finden Sie unter [Sicherheitsinformationen & Sicherheitscodes](https://support.microsoft.com/help/12428/microsoft-account-security-info-and-security-codes) .
 
-Wenn Sie sich bei Ihrem Windows Dev Center-Dashboard mit Ihrem Microsoft-Konto anmelden, werden das System Nachweis überprüfen Sie Ihre Identität durch das Senden eines Sicherheitscode, den Sie angeben müssen, um die Anmeldung abzuschließen. Es wird empfohlen, verwendete PCs, mit denen Sie häufig als *Vertrauenswürdige Geräte*einzustufen. Wenn Sie über ein vertrauenswürdiges Gerät anmelden, werden nicht Sie in der Regel für einen Code aufgefordert, obwohl Sie möglicherweise gelegentlich in bestimmten Situationen aufgefordert werden, oder wenn Sie auf dem Gerät längere Zeit nicht angemeldet haben. Weitere Informationen finden Sie unter [ein vertrauenswürdiges Gerät für Ihr Microsoft-Konto hinzufügen](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) .
+Wenn Sie sich beim Partner Center melden Sie sich mit Ihrem Microsoft-Konto, kann das System anfordern, Sie Ihre Identität überprüfen durch das Senden eines Sicherheitscode, den Sie angeben müssen, um die Anmeldung abzuschließen. Es wird empfohlen, verwendete PCs, mit denen Sie häufig als *Vertrauenswürdige Geräte*einzustufen. Wenn Sie über ein vertrauenswürdiges Gerät anmelden, werden nicht Sie in der Regel für einen Code aufgefordert, obwohl Sie möglicherweise gelegentlich in bestimmten Situationen aufgefordert werden, oder wenn Sie auf dem Gerät längere Zeit nicht angemeldet haben. Weitere Informationen finden Sie unter [ein vertrauenswürdiges Gerät für Ihr Microsoft-Konto hinzufügen](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) .
 
 
 ## <a name="closing-your-account"></a>Schließen Ihres Kontos

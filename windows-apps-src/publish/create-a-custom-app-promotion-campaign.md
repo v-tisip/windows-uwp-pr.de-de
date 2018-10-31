@@ -4,22 +4,22 @@ description: Neben dem Erstellen einer Anzeigenkampagne für Ihre App, die in Wi
 title: Erstellen einer Werbekampagne für benutzerdefinierte Apps
 ms.assetid: 7C9BF73E-B811-4FC7-B1DD-4A0C2E17E95D
 ms.author: wdg-dev-content
-ms.date: 09/27/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, benutzerdefiniert, App, Werbung, Kampagnen
 ms.localizationpriority: medium
-ms.openlocfilehash: 0349833c012789b55d33575702390f264335aa2f
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 643c6c70b4482e7069c1254e27a5688f81bf7e07
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5747461"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5824842"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a>Erstellen einer Werbekampagne für benutzerdefinierte Apps
 
 Neben dem Erstellen einer [Anzeigenkampagne für Ihre App](create-an-ad-campaign-for-your-app.md), die in Windows-Apps ausgeführt wird, können Sie Ihre App auch über andere Kanäle bewerben. Beispielsweise können Sie Ihre App mit einem Drittanbieter für App-Marketing bewerben oder Links zu Ihrer App in sozialen Netzwerken bereitstellen. Diese Aktivitäten werden als *benutzerdefinierte Kampagnen* bezeichnet.
 
-Wenn Sie benutzerdefinierte Kampagnen für Ihre App ausführen, können Sie die relative Leistung der einzelnen Kampagnen nachverfolgen, indem Sie für jede benutzerdefinierte Kampagne eine andere URL mit jeweils unterschiedlichen *Kampagnen-IDs* erstellen. Wenn ein Kunde unter Windows 10 eine URL, die eine Kampagnen-ID enthält klickt, Microsoft ordnet der Klick der entsprechenden benutzerdefinierten Kampagne und diese Daten für Sie verfügbar gemacht.
+Wenn Sie benutzerdefinierte Kampagnen für Ihre App ausführen, können Sie die relative Leistung der einzelnen Kampagnen nachverfolgen, indem Sie für jede benutzerdefinierte Kampagne eine andere URL mit jeweils unterschiedlichen *Kampagnen-IDs* erstellen. Wenn ein Kunde unter Windows 10 eine URL, die eine Kampagnen-ID enthält klickt, Microsoft ordnet der Klick der entsprechenden benutzerdefinierten Kampagne und diese Daten zur Verfügung stellt Sie im [Partner Center](https://partner.microsoft.com/dashboard).
 
 > [!IMPORTANT]
 > Diese Daten werden nur auf Windows 10 für Kunden nachverfolgt. Kunden, die andere Betriebssysteme verwenden, können trotzdem den Link zu Ihrem App-Eintrag aufrufen, es werden jedoch keine Daten über die Aktivitäten dieser Kunden eingeschlossen.
@@ -28,7 +28,7 @@ Es gibt im Wesentlichen zwei Typen von Daten zu benutzerdefinierten Kampagnen: *
 
 Sie können Leistungsdaten einer benutzerdefinierten Kampagne für Ihre App auf folgende Arten abrufen:
 
-* Sie können Daten über Seitenaufrufe und Konvertierungen für Ihre App oder Ihre Add-Ons über die Diagramme **App-Seitenaufrufe und -Konvertierungen nach Kampagnen-ID** und **Gesamtanzahl der Konvertierungen pro Kampagne** im [Bericht "Käufe"](acquisitions-report.md) im Dev Center-Dashboard anzeigen.
+* Sie können Daten über Seitenaufrufe und Konvertierungen für Ihre app oder Ihr Add-on aus der **App-Seitenaufrufe und Konvertierungen nach Kampagnen-ID** und **Konvertierungen pro Kampagne insgesamt** Diagramme im [Bericht "Käufe"](acquisitions-report.md)anzeigen.
 * Wenn es sich bei Ihrer App um eine App für die universelle Windows-Plattform (UWP) handelt, können Sie mit APIs im Windows SDK programmgesteuert die benutzerdefinierte Kampagnen-ID abrufen, die zu einer Konvertierung geführt hat.
 
 ## <a name="example-custom-campaign-scenario"></a>Beispielszenario für eine benutzerdefinierte Kampagne
@@ -47,9 +47,9 @@ Wenn seine Facebook- und Twitter-Follower auf die URLs klicken, verfolgt Microso
 
 ## <a name="understanding-how-acquisitions-qualify-as-conversions"></a>Wann gelten Erwerbe als Konvertierungen?
 
-Als benutzerdefinierten Kampagnen-*Konvertierung* wird ein App-Erwerb bezeichnet, der daraus resultiert, dass ein Kunde von einer über eine benutzerdefinierte Kampagne beworbenen URL klickt. Es gelten verschiedene Szenarien, damit eine Konvertierung für die Diagramme **App-Seitenaufrufe und -Konvertierungen nach Kampagnen-ID** und **Gesamtanzahl der Konvertierungen pro Kampagne** im [Bericht „Käufe“](acquisitions-report.md) im Dev Center-Dashboard und für [programmgesteuertes Abrufen der Kampagnen-ID](#programmatically) als qualifiziert gilt.
+Als benutzerdefinierten Kampagnen-*Konvertierung* wird ein App-Erwerb bezeichnet, der daraus resultiert, dass ein Kunde von einer über eine benutzerdefinierte Kampagne beworbenen URL klickt. Es gibt verschiedene Szenarien für die Qualifizierung als Konvertierung für die **App-Seitenaufrufe und Konvertierungen nach Kampagnen-ID** und **Konvertierungen pro Kampagne insgesamt** Diagramme im [Bericht "Käufe"](acquisitions-report.md) und für die Qualifizierung als Konvertierung für [ Programmgesteuertes Abrufen der Kampagnen-ID](#programmatically).
 
-### <a name="qualifying-conversions-in-the-dashboard-report"></a>Qualifizieren von Konvertierungen im Dashboardbericht
+### <a name="qualifying-conversions-in-the-acquisitions-report"></a>Qualifizieren von Konvertierungen in der Bericht "Käufe"
 
 Die folgenden Szenarien gelten als Konvertierung für die Diagramme **App-Seitenaufrufe und -Konvertierungen nach Kampagnen-ID** und **Gesamtanzahl der Konvertierungen pro Kampagne** im [Bericht "Käufe"](acquisitions-report.md):
 
@@ -195,4 +195,4 @@ Bevor Sie eine URL für eine benutzerdefinierte Kampagnen bewerben, empfehlen wi
 
 3.  Klicken Sie noch einige weitere Male auf die URL, und schließen Sie nach jedem Besuch der App-Seite die UWP-App oder die Browserseite. Erwerben Sie bei **einem** der Besuche Ihrer App-Seite die App, um eine Konvertierung zu generieren. Zählen Sie, wie oft Sie insgesamt auf die URL geklickt haben.
 
-4. Bestätigen Sie, ob die erwarteten Seitenaufrufe und Konvertierungen im Diagramm **App-Seitenaufrufe und -Konvertierungen nach Kampagnen-ID** und **Gesamtanzahl der Konvertierungen pro Kampagne** im [Bericht "Käufe"](acquisitions-report.md) des Dev Center-Dashboards angezeigt werden, und testen Sie den Code Ihrer App, um zu überprüfen, ob die Kampagnen-ID mit den oben beschriebenen APIs erfolgreich abgerufen werden kann.
+4. Bestätigen Sie, ob die erwarteten Seitenaufrufe und Konvertierungen in der **App-Seitenaufrufe und Konvertierungen nach Kampagnen-ID** und die **Gesamtanzahl der Konvertierungen pro Kampagne** Diagramme im [Bericht "Käufe"](acquisitions-report.md)angezeigt werden, und Ihrer app-Code testen, um zu bestätigen, ob es können abgerufen Sie die Kampagnen-ID, die mit den oben beschriebenen APIs erfolgreich werden.
