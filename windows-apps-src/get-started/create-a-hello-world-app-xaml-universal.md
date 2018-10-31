@@ -8,12 +8,12 @@ ms.date: 03/06/2017
 ms.topic: article
 keywords: Windows10, UWP, erste App, Hallo Welt
 ms.localizationpriority: medium
-ms.openlocfilehash: b28d0237deda78291816a52affd1fa7b4768640b
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: d6fa9fa708df376edc94d34ea14d8dad4aed10df
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5839788"
+ms.locfileid: "5864914"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Erstellen der App „Hello, world“ (XAML)
 
@@ -85,7 +85,7 @@ Doppelklicken Sie zum Anzeigen und Bearbeiten einer Datei im Projekt im **Projek
 -   In „App.xaml“ deklarieren Sie Ressourcen, die in der gesamten App zur Anwendung kommen.
 -   „App.xaml.cs“ ist die CodeBehind-Datei für „App.xaml“. Sie enthält wie alle CodeBehind-Seiten einen Konstruktor, der die `InitializeComponent`-Methode aufruft. Die `InitializeComponent`-Methode wird nicht von Ihnen geschrieben. Sie wird von Visual Studio generiert und dient in erster Linie dazu, die in der XAML-Datei deklarierten Elemente zu initialisieren.
 -   „App.xaml.cs“ ist der Einstiegspunkt für Ihre App.
--   „App.xaml.cs“ enthält außerdem Methoden zum Behandeln der Aktivierung und Unterbrechung der App.
+-   "App.Xaml.cs" enthält außerdem Methoden zum Behandeln der [Aktivierung](../launch-resume/activate-an-app.md) und [Unterbrechung](../launch-resume/suspend-an-app.md) der app.
 
 *MainPage.xaml*
 
@@ -95,12 +95,14 @@ Doppelklicken Sie zum Anzeigen und Bearbeiten einer Datei im Projekt im **Projek
 
 *Package.appxmanifest*
 -   Eine Manifestdatei, die Ihre App beschreibt (Name, Beschreibung, Kachel, Startseite usw.)
--   Umfasst eine Liste der Dateien, die Ihre App enthält.
+-   Enthält eine Liste von Abhängigkeiten, Ressourcen und Dateien, die Ihre app enthält.
 
 *Ein Satz mit Logobildern*
--   „Assets/Square150x150Logo.scale-200.png“ stellt Ihre App im Startmenü dar.
+-   Assets/Square150x150Logo.scale-200.png und Wide310x150Logo.scale 200.png darstellen Ihrer app (entweder "Mittel" oder "Wide-Größe) im Menü" Start ".
+-   Assets/Square44x44Logo.png stellt Ihre app in der app-Liste der Menü "Start", Taskleiste und Task-Manager dar.
 -   „Assets/StoreLogo.png“ stellt Ihre App im Microsoft Store dar.
 -   „Assets/SplashScreen.scale-200.png“ ist der Begrüßungsbildschirm, der beim Start der App angezeigt wird.
+-   Assets/LockScreenLogo.scale-200.png kann verwendet werden, um die app auf dem Sperrbildschirm darzustellen, wenn das System gesperrt ist.
 
 ## <a name="step-2-adding-a-button"></a>Schritt 2: Hinzufügen von Schaltflächen
 

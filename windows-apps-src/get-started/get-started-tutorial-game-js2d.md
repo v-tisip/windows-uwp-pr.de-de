@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: 60060bb3ec7a644d29523483d0d31c0497c543d1
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: 597451826958c355dad9f9380dbdc1264bc87883
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5817633"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5865795"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>Erstellen eines UWP-Spiels in JavaScript
 
@@ -63,7 +63,7 @@ Nachdem die Projektmappe in Visual Studio geladen wurde, sehen Sie mehrere Datei
 
 Jetzt können Sie das Spiel ausführen!
 
-Drücken Sie **F5** zum Ausführen der App. Ein Fenster sollte geöffnet werden, und wir sehen unseren vertrauten Dinosaurier in einer idyllischen (wenn auch kargen) Landschaft. Wir werden jetzt die App untersuchen, einige wichtige Teile erklären und währenddessen den Rest der Features entsperren.
+Drücken Sie **F5** zum Ausführen der App. Ein Fenster geöffnet werden, und unseren vertrauten Dinosaurier in einer idyllischen (wenn mit geringer Datendichte) auch Landschaft sollte angezeigt werden. Wir werden jetzt die App untersuchen, einige wichtige Teile erklären und währenddessen den Rest der Features entsperren.
 
 ![Ein ganz normaler Dinosaurier mit einer Ninja-Katze auf seinem Rücken](images/JS2D_3.png)
 

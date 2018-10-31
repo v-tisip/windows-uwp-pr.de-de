@@ -9,11 +9,11 @@ keywords: Windows10, UWP
 ms.assetid: e57ee4e6-7807-4943-a933-c2b4dc80fc01
 ms.localizationpriority: medium
 ms.openlocfilehash: 9cc6989103442deb364654ec006c0fe4b1455511
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5814216"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5866352"
 ---
 # <a name="how-to-disable-mouse-mode"></a>Deaktivieren des Mausmodus
 Der Mausmodus ist standardmäßig für alle Anwendungen aktiviert. Das bedeutet, dass alle Anwendungen, für die die Option nicht deaktiviert wurde, einen Mauszeiger erhalten (ähnlich dem Zeiger im Edge-Browser auf der Konsole). Es wird nachdrücklich empfohlen, diese Option zu deaktivieren und die direktionale Navigation über den Controller zu optimieren.   

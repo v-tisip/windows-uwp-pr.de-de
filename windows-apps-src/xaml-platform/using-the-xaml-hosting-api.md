@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Windows Forms-, WPF-, win32
 ms.localizationpriority: medium
 ms.openlocfilehash: 2ba64e32a25feaee9245bbfe2b598c756b29df98
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5822255"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5861697"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>Unter Verwendung des UWP-XAML hosting-API in einer desktop-Anwendung
 

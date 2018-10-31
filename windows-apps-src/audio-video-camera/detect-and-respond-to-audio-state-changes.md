@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 53ac8dff5895522c24c1645e4db95c90d575df95
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5827029"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5864560"
 ---
 # <a name="detect-and-respond-to-audio-state-changes"></a>Erkennen und reagieren auf Änderungen der Audiodatenstromebene
 Ab Windows10, Version 1803, erkennt Ihre App, wenn das System die Lautstärke der Audioaufnahme Ihrer App oder des Audiodatenstroms reduziert oder stummschaltet. Sie können Benachrichtigungen für die Erfassung und die Wiedergabe von Datenströmen erhalten, für ein bestimmtes Audio-Gerät und eine Audiokategorie oder für eine [**MediaPlayer**](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Playback.MediaPlayer)-Objekt, das ist Ihrer App für die Medienwiedergabe verwendet. Beispielsweise kann das System die Audiowiedergabe-Ebene reduzieren, wenn ein Alarm klingelt. Das System schaltet Ihre App stumm, wenn sie in den Hintergrund wechselt, falls Ihre App die *BackgroundMediaPlayback*-Funktion im App-Manifest nicht aktiviert hat. 

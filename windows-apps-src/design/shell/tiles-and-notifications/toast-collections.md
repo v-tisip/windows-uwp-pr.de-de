@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows10, UWP, Benachrichtigungen, Sammlungen, Sammlung, Gruppenbenachrichtigungen, Gruppieren von Benachrichtigungen, gruppieren, organisieren, Info-Center, Popup
 ms.localizationpriority: medium
 ms.openlocfilehash: be7c4ec2e9a47eeeb00663ae94f89e44c6751352
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5821824"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5862114"
 ---
 # <a name="grouping-toast-notifications-with-collections"></a>Gruppieren von Popupbenachrichtigungen mit Sammlungen
 Verwenden Sie Sammlungen, um Ihre App-Popups im Info-Center zu organisieren. Mithilfe von Sammlungen können Benutzer Informationen im Info-Center leichter finden und Entwickler können ihre Benachrichtigungen besser verwalten.  Die folgenden APIs ermöglichen das Entfernen, Erstellen und Aktualisieren von Benachrichtigungssammlungen.
