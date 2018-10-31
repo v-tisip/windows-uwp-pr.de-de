@@ -4,16 +4,16 @@ Description: You can help customers discover your app by linking to your app's l
 title: Erstellen eines Links zu Ihrer App
 ms.assetid: 5420B65C-7ECE-4364-8959-D1683684E146
 ms.author: wdg-dev-content
-ms.date: 10/26/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Links, Windows Store-Protokoll, mit einer App verknüpfen, App verknüpfen
 ms.localizationpriority: medium
-ms.openlocfilehash: 5028a3902e62d188db5283ec6186fe5364b53de0
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: d0d0a9fc862734611167e5118392126cb42687f2
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5757272"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5821854"
 ---
 # <a name="link-to-your-app"></a>Erstellen eines Links zu Ihrer App
 

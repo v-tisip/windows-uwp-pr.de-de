@@ -8,17 +8,17 @@ ms.date: 12/14/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: c56bfc65e279a461d33de0e98b1a9ea51bd901cb
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 0f652ae186ced996c103a60aa8f13956a5da59ca
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5740784"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5821957"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Einrichten von Auszahlungskonten und Steuerformularen.
 
 
-Damit Sie Geld aus app-Verkäufen im Microsoft Store zu erhalten, müssen Sie Ihr auszahlungskonto einrichten und die erforderlichen Steuerformulare ausfüllen.
+Damit Sie Geld aus app-Verkäufen im Microsoft Store zu erhalten, müssen Sie Ihr auszahlungskonto einrichten und füllen Sie die erforderlichen Steuerformulare im [Partner Center](https://partner.microsoft.com/dashboard).
 
 Falls Sie ausschließlich kostenlose Apps anbieten möchten (und keine In-App-Einkäufe bereitstellen oder Microsoft Advertising verwenden möchten), brauchen Sie kein Auszahlungskonto einzurichten oder Steuerformulare auszufüllen. Wenn Sie Ihre Meinung später ändern und entscheiden Sie, dass Sie apps (oder -Add-Ons) verkaufen möchten, können Sie Ihr auszahlungskonto einrichten und Ausfüllen der Steuerformulare zu diesem Zeitpunkt. Kostenpflichtige Apps und Add-Ons können erst übermittelt werden, wenn Sie Ihr Auszahlungskonto eingerichtet und Ihr Steuerprofil ausgefüllt haben.
 
@@ -44,7 +44,7 @@ Bei einem Auszahlungskonto handelt es sich um das Bankkonto, auf das wir Ihren V
  
 **So richten Sie ein Auszahlungskonto ein**
 
-1.  Wechseln Sie im Windows Dev Center-Dashboard auf das Symbol **Kontoeinstellungen** in der oberen rechten Ecke.
+1.  Rufen Sie im [Partner Center](https://partner.microsoft.com/dashboard)die **kontoeinstellungen** aus, indem Sie auf das Symbol in der oberen rechten Ecke.
 2.  Klicken Sie im linken Navigationsmenü der Seite **Kontoeinstellungen** auf **Auszahlungskonto**.
 
    > [!NOTE]
@@ -74,7 +74,7 @@ Allgemeine Fragen über PayPal als Zahlungsmethode:
 
 -   **Welche PayPal-Einstellungen ist erforderlich, um Zahlungen zu erhalten?** Sie müssen sicherstellen, dass Ihr PayPal-Konto keine Zahlungen per eCheck blockiert. Diese Einstellung wird über die PayPal-Seite für die bevorzugte Überweisungsmethode verwaltet. Weitere Informationen finden Sie auf der [PayPal-Seite zum Einrichten des Kontos](http://go.microsoft.com/fwlink/p/?linkid=513139).
 -   **Wird mein Land bzw. meine Region unterstützt?** Informieren Sie sich unter [Kontotypen, Standorte und Gebühren](account-types-locations-and-fees.md) darüber, in welchen Gebieten PayPal als Zahlungsmethode unterstützt wird.
--   **Muss mein PayPal-Konto im selben Land bzw. in derselben Region wie mein Dev Center-Konto registriert sein?** Nein. Beim Einrichten eines PayPal-Kontos können Sie die Standardkonfiguration akzeptieren. Normalerweise treten keine Probleme mit anderen Ländern/Regionen und Währungen auf, sofern die Zahlung in einigen Währungen nicht blockiert ist. Diese Einstellung wird über die PayPal-Seite für die bevorzugte Überweisungsmethode verwaltet.
+-   **Muss mein PayPal-Konto in demselben Land/Region wie mein Partner Center-Konto registriert sein?** Nein. Beim Einrichten eines PayPal-Kontos können Sie die Standardkonfiguration akzeptieren. Normalerweise treten keine Probleme mit anderen Ländern/Regionen und Währungen auf, sofern die Zahlung in einigen Währungen nicht blockiert ist. Diese Einstellung wird über die PayPal-Seite für die bevorzugte Überweisungsmethode verwaltet.
 -   **Muss ich PayPal-Zahlungen manuell akzeptieren?** Nein. PayPal-Konten sind dafür ausgelegt, dass Benutzer Zahlungen manuell akzeptieren müssen. Wenn Sie die Zahlung binnen 30 Tagen nicht akzeptieren, wird sie storniert. Sie können diese Einstellung ändern, indem Sie auf der PayPal-Seite mit weiteren Einstellungen die Bestätigungsaufforderung deaktivieren.
 
 
@@ -99,9 +99,9 @@ Wenn Sie Entwickler sind und in Russland leben, müssen Sie möglicherweise Ihre
 
 Berücksichtigen Sie auch folgende Punkte, um sicherzustellen, dass Ihre Auszahlung erfolgreich ist:
 
--   Der für das Auszahlungskonto im Windows Dev Center-Dashboard eingegebene **Name des Kontoinhabers** muss exakt mit dem für Ihr Bankkonto angegebenen Namen übereinstimmen. Wenn Ihr Bankkontoname beispielsweise einen zweiten Vornamen enthält, geben Sie in **Name des Kontoinhabers** einen zweiten Vornamen ein.
+-   Der **Name des Kontoinhabers** für Ihr Konto im Partner Center eingegebene muss exakt übereinstimmenden Namen Ihr Bankkonto zugeordnet sein. Wenn Ihr Bankkontoname beispielsweise einen zweiten Vornamen enthält, geben Sie in **Name des Kontoinhabers** einen zweiten Vornamen ein.
 -   Auszahlungen werden direkt von Microsoft an Ihr Bankkonto in Rubel (RUB) überwiesen.
--   Im Dev Center in lateinischen Zeichen eingegebene Bankverbindungen werden in kyrillische Zeichen übertragen.
+-   Im Partner Center in lateinischen Zeichen eingegebene Bankverbindungen werden in kyrillische Zeichen übertragen.
 -   Auszahlungen müssen auf ein Bankkonto, nicht auf eine Bankkarte erfolgen.
 
 #### <a name="ukraine"></a>Ukraine
@@ -116,9 +116,9 @@ Microsoft stellt alle drei Dokumente beim ersten Auszahlungsversuch zur Verfügu
 
 Berücksichtigen Sie auch folgende Punkte, um sicherzustellen, dass Ihre Auszahlung erfolgreich ist:
 
--   Der für das Auszahlungskonto im Windows Dev Center-Dashboard eingegebene **Name des Kontoinhabers** muss exakt mit dem für Ihr Bankkonto angegebenen Namen übereinstimmen. Wenn Ihr Bankkontoname beispielsweise einen zweiten Vornamen enthält, geben Sie in **Name des Kontoinhabers** einen zweiten Vornamen ein.
+-   Der **Name des Kontoinhabers** für Ihr Konto im Partner Center eingegebene muss exakt übereinstimmenden Namen Ihr Bankkonto zugeordnet sein. Wenn Ihr Bankkontoname beispielsweise einen zweiten Vornamen enthält, geben Sie in **Name des Kontoinhabers** einen zweiten Vornamen ein.
 -   Auszahlungen werden direkt von Microsoft an Ihr Bankkonto in US-Dollar überwiesen.
--   Im Dev Center in lateinischen Zeichen eingegebene Bankverbindungen werden in kyrillische Zeichen übertragen.
+-   Im Partner Center in lateinischen Zeichen eingegebene Bankverbindungen werden in kyrillische Zeichen übertragen.
 
 
 ## <a name="tax-forms"></a>Steuerformulare
@@ -128,7 +128,7 @@ Nachdem Sie [für ein Entwicklerkonto registriert](opening-a-developer-account.m
 -   Angeben des Wohnsitzlandes und der Staatsangehörigkeit
 -   Ausfüllen der entsprechenden Steuerformulare
 
-Sie können die Steuerformulare im Dashboard elektronisch ausfüllen und übermitteln. In den meisten Fällen müssen keine Formulare ausgedruckt und per Post gesendet werden.
+Sie können abzuschließen und Ihrer Steuerformulare elektronisch im Partner Center einreichen. in den meisten Fällen müssen Sie keine Formulare ausgedruckt und drucken.
 
 > [!IMPORTANT]
 > In den verschiedenen Ländern und Regionen gelten unterschiedliche Steuergesetze. Die genaue Höhe der zu zahlenden Steuern hängt von den Ländern und Regionen ab, in denen Sie Ihre Apps verkaufen. In der [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) sehen Sie, in welchen Ländern Microsoft für Sie Verkaufs- und Nutzungssteuern überweist. In anderen Ländern müssen Sie u.U. je nachdem, wo Sie registriert sind, Verkaufs- und Nutzungssteuern direkt an die örtliche Steuerbehörde überweisen. Des Weiteren müssen die Erlöse aus Ihren App-Verkäufen unter Umständen als Einkommen versteuert werden. Wir empfehlen Ihnen, wenden Sie sich an die zuständige Behörde in Ihrem Land oder Region, die am besten helfen Sie den richtigen Steuerinformationen für Ihre Microsoft Store-entwickleraktivitäten zu ermitteln.
@@ -136,7 +136,7 @@ Sie können die Steuerformulare im Dashboard elektronisch ausfüllen und übermi
  
 **So füllen Sie Ihr Steuerprofil aus**
 
-1.  Klicken Sie im Windows Dev Center-Dashboard auf das Symbol **Kontoeinstellungen** in der oberen rechten Ecke.
+1.  Klicken Sie im [Partner Center](https://partner.microsoft.com/dashboard)auf das Symbol " **Konto** " in der oberen rechten Ecke.
 2.  Klicken Sie im linken Navigationsmenü der Seite **Kontoeinstellungen** auf **Steuerprofil**.
 
    > [!NOTE]

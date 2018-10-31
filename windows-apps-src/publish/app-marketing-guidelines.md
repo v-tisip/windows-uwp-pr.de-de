@@ -4,16 +4,16 @@ Description: Learn how to promote your apps and content in the Microsoft Store. 
 title: Microsoft Store marketing-Richtlinien für apps
 ms.assetid: CEB81E9D-5C64-458F-AAF1-C59BBBBB272E
 ms.author: wdg-dev-content
-ms.date: 10/26/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: d065504385a5e7a743bd4936e9240565d3207a36
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 38dfdbc94112caa5e3fff7c1605fecece83b202d
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5745270"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5821094"
 ---
 # <a name="microsoft-store-marketing-guidelines-for-apps"></a>Microsoft Store marketing-Richtlinien für apps
 
@@ -47,9 +47,9 @@ Zur Vermarktung Ihrer App möchten Sie vielleicht zeigen, wie sie aussieht, wenn
 
 -   Ihre app oder andere Inhalte verfügbar im Microsoft Store oder als Teil des [Microsoft-Partnerprogramms](http://go.microsoft.com/fwlink/p/?LinkId=624463).
 
--   Falls Sie bei Dev Center registriert sind, erfüllen Sie die Anforderungen im Abschnitt [„Lizenz für Microsoft Marks“](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement#license_to_mark) der Vereinbarung für App-Entwickler.
+-   Wenn Sie als app-Entwickler im Partner Center registriert sind, entsprechen Sie den Abschnitt ["Lizenz für Microsoft Marks"](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement#license_to_mark) der Vereinbarung für App-Entwickler.
 
--   Wenn Sie nicht mit dem Windows Dev Center registriert sind, gewährt Microsoft Ihnen weltweite nicht exklusive, nicht übertragbare, gebührenfreie Lizenz zur Verwendung von der Badges ausschließlich gemäß den Microsoft Store-Badge-Richtlinien. Diese Richtlinien können von Microsoft geändert werden. In diesem Fall unternimmt Microsoft jedoch angemessene Schritte, um Sie zu neuen URLs weiterzuleiten, unter denen die Spezifikationen bereitgestellt werden. Microsoft behält sich alle hierin nicht ausdrücklich eingeräumten Rechte vor.
+-   Wenn Sie nicht als app-Entwickler im Partner Center registriert sind, gewährt Microsoft Ihnen weltweite nicht exklusive, nicht übertragbare, gebührenfreie Lizenz zur Verwendung von der Badges ausschließlich gemäß den Microsoft Store-Badge-Richtlinien. Diese Richtlinien können von Microsoft geändert werden. In diesem Fall unternimmt Microsoft jedoch angemessene Schritte, um Sie zu neuen URLs weiterzuleiten, unter denen die Spezifikationen bereitgestellt werden. Microsoft behält sich alle hierin nicht ausdrücklich eingeräumten Rechte vor.
 
 -   Führen Sie die logonutzungsbedingungen, die in den [Microsoft Store-Badge-Richtlinien](http://go.microsoft.com/fwlink/p/?LinkId=529769)beschrieben.
 
