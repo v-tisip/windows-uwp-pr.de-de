@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Thread, Threadpool
 ms.localizationpriority: medium
 ms.openlocfilehash: ff607e3b39ea9d9a3731cc1f231fe1eb27b0b155
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5817753"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5860674"
 ---
 # <a name="best-practices-for-using-the-thread-pool"></a><span data-ttu-id="daba2-104">Bewährte Methoden zum Verwenden des Threadpools</span><span class="sxs-lookup"><span data-stu-id="daba2-104">Best practices for using the thread pool</span></span>
 

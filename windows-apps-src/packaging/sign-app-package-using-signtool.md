@@ -9,11 +9,11 @@ keywords: Windows 10, UWP
 ms.assetid: 171f332d-2a54-4c68-8aa0-52975d975fb1
 ms.localizationpriority: medium
 ms.openlocfilehash: adb94257f6a978ba0b5ea56facf3894e2cfae32b
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5824696"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5859677"
 ---
 # <a name="sign-an-app-package-using-signtool"></a><span data-ttu-id="30599-104">Signieren eines App-Pakets mit SignTool</span><span class="sxs-lookup"><span data-stu-id="30599-104">Sign an app package using SignTool</span></span>
 
