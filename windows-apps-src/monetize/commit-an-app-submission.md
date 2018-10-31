@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Übernehmen einer App-Übermittlung
 ms.localizationpriority: medium
 ms.openlocfilehash: 594fb7bdbf1e56243837d2e9e3ebe1aced7eceff
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5832294"
+ms.locfileid: "5888590"
 ---
 # <a name="commit-an-app-submission"></a>Ausführen eines Commit für eine App-Übermittlung
 
