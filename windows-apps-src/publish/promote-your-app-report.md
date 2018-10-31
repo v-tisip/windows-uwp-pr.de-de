@@ -2,22 +2,22 @@
 author: JnHs
 title: Bericht „Anzeigenkampagne“
 ms.assetid: 8C5907A6-8059-4CAF-951F-C97301A5EEDF
-description: Mithilfe des Bericht „Anzeigenkampagne“s im Windows Dev Center-Dashboard können Sie sehen, wie Ihre App-Werbekampagnen funktionieren.
+description: Der Bericht "Anzeigenkampagne Ad" im Partner Center können Sie sehen, wie Ihre app Werbekampagnen sind.
 ms.author: wdg-dev-content
-ms.date: 11/21/2017
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, bewerben, App, Kampagnen, Bericht, Installationen
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e7bb2a4d592ae8201d27e45eb0f05d7fbca76a7
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: d4cbc467ae864ecd5314eedfbf54b2c3de9a3ed8
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5752715"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5819681"
 ---
 # <a name="ad-campaign-report"></a>Bericht „Anzeigenkampagne“
 
-Der Bericht " **Anzeigenkampagne** " im Windows Dev Center-Dashboard können Sie sehen, wie Ihre app Promotion [Anzeigenkampagnen](create-an-ad-campaign-for-your-app.md) durchführen. Um den Bericht anzuzeigen, erweitern Sie im linken Navigationsmenü **bewerben** , und wählen Sie **Anzeigenkampagnen**.
+Der Bericht " **Anzeigenkampagne** " im [Partner Center](https://partner.microsoft.com/dashboard) können Sie sehen, wie Ihre app Promotion [Anzeigenkampagnen](create-an-ad-campaign-for-your-app.md) durchführen. Um den Bericht anzuzeigen, erweitern Sie im linken Navigationsmenü **bewerben** , und wählen Sie **Anzeigenkampagnen**.
 
 ## <a name="definitions"></a>Definitionen
 
@@ -50,7 +50,7 @@ Sie können jeweils Leistungsdaten für bis zu sechs verschiedene Anzeigenkampag
 
 ## <a name="install-tracking"></a>Nachverfolgung von Installationen
 
-Eine Kampagne für App-Installationen in Dev Center bietet dringend benötigte Sichtbarkeit für die Verkaufsförderung Ihrer Apps. Anzeigenaufrufe werden Kunden angezeigt, die ein hohes Interesse an der App haben. Diese Kunden klicken auf die Anzeige und installieren die App aus dem Store. Vorher war es schwierig zu unterscheiden, ob die Installationen das Ergebnis einer Anzeigenkampagne waren oder auf andere Weise zustande gekommen sind.
+Ausführen einer Kampagne über das Partner Center bietet dringend benötigte Verkaufsförderung Ihrer apps. Anzeigenaufrufe werden Kunden angezeigt, die ein hohes Interesse an der App haben. Diese Kunden klicken auf die Anzeige und installieren die App aus dem Store. Vorher war es schwierig zu unterscheiden, ob die Installationen das Ergebnis einer Anzeigenkampagne waren oder auf andere Weise zustande gekommen sind.
 
 Dieser Bericht zeigt, wie viele Installationen Sie mit Ihren Anzeigenkampagnen erzielt haben. Dies umfasst nur Downloads, die das direkte Ergebnis Ihrer Anzeigenkampagnen sind, und schließt alle anderen Downloadquellen aus.
 
@@ -69,7 +69,7 @@ Eine Installation per Handy, Tablet, PC oder andere Windows 10-Geräte wird im S
 2.  Der Kunde hat sich mit einem Microsoft-Konto angemeldet.
 3.  Der Kunde erfüllt die [COPPA](http://go.microsoft.com/fwlink?LinkId=536558)- Anforderungen (Kunden, die die COPPA-Anforderungen nicht erfüllen, können nicht nachverfolgt werden).
 
-Folglich kann es dazu kommen, dass die Nachverfolgung der App-Installationen nicht die exakte Anzahl von Installationen ergibt, die durch eine Anzeigenkampagne generiert werden. Beachten Sie, dass die Gesamtanzahl von Installationen für eine App (über Kampagnen etc.) im Bericht [Käufe](acquisitions-report.md) im Dev Center angezeigt wird.
+Folglich kann es dazu kommen, dass die Nachverfolgung der App-Installationen nicht die exakte Anzahl von Installationen ergibt, die durch eine Anzeigenkampagne generiert werden. Bitte beachten Sie, dass Sie die Gesamtanzahl der Installationen für eine app anzeigen können (über Kampagnen etc.) in der Bericht " [Käufe](acquisitions-report.md) " im Partner Center.
 
 
 ## <a name="account-billing-history"></a>Verlauf der Rechnungsstellung für das Konto
