@@ -3,16 +3,16 @@ author: jnHs
 Description: Select the base price for an app and schedule price changes. You can also customize these options for specific markets.
 title: Festlegen und Planen von App-Preisen
 ms.author: wdg-dev-content
-ms.date: 05/08/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Preise, App-Preise, App-Preis, Apps verkaufen, Preis ändern, benutzerdefinierter Preis, Preis, Preise, Kosten, Grundpreise überschreiben, formfreier Preis, formfrei
 ms.localizationpriority: medium
-ms.openlocfilehash: 99e11e29c5625d528777046075f01a824f1b0b37
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 372abfdb0de5567b7c7d262b298d264b086fe339
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5740539"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5839335"
 ---
 # <a name="set-and-schedule-app-pricing"></a>Festlegen und Planen von App-Preisen
 
@@ -37,23 +37,18 @@ Klicken Sie im Abschnitt **Preise** auf **Umrechnungstabelle anzeigen**, um die 
 Beachten Sie, dass das von Ihnen ausgewählte Preisniveau u. U. eine Verkaufs- oder Mehrwertsteuer enthält, die Kunden bezahlen müssen. Weitere Informationen über Ihre steuerlichen Verpflichtungen in ausgewählten Märkten finden Sie in den [Steuerinformationen zu kostenpflichtigen Apps](tax-details-for-paid-apps.md). Lesen Sie außerdem die [Überlegungen zu Preisen für die einzelnen Märkte](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
 
 > [!NOTE]
-> Wenn Sie die Option **Beenden des Erwerbs** unter **Make this product available but not discoverable in the Store** im Abschnitt [Sichtbarkeit](choose-visibility-options.md#discoverability) wählen), können Sie den Preis für Ihre Übermittlung nicht festlegen (da niemand die App kaufen kann, es sei denn, durch einen Werbecode, um die App umsonst zu erhalten).
+> Wenn Sie die Option **Beenden des Erwerbs** unter **dieses Produkt verfügbar, aber nicht im Store sichtbar machen** Abschnitts " [Sichtbarkeit](choose-visibility-options.md#discoverability) " auswählen), nicht mehr um Preise für Ihre Übermittlung (da niemand die app mehr erwerben wird festgelegt werden es sei denn, sie einen werbecode verwenden, um die app kostenlos zu erhalten).
 
 ## <a name="schedule-price-changes"></a>Planen von Preisänderungen
 
 Sie können optional eine oder mehrere Preisänderungen planen, wenn sich der Grundpreis Ihrer App an einem bestimmten Datum und zu einer bestimmten Uhrzeit ändern soll. 
 
 > [!IMPORTANT]
-> Preisänderungen werden nur für Kunden mit Windows 10-Geräten, (einschließlich Xbox One), angezeigt. Wenn Ihre App frühere Betriebssystemversionen unterstützt, werden die Preisänderungen nicht angewendet. 
->
-> - Für Kunden unter Windows8 wird die App immer zum **Grundpreis** (und nicht zum marktspezifischen Preis) angeboten, auch wenn Sie zusätzliche Preisänderungen planen. 
-> - Für Kunden unter Windows8.1 und Windows Phone8.1 und früheren Versionen wird die App immer zum ersten Preisniveau für den Markt des Kunden angeboten, auch wenn Sie zusätzliche Preisänderungen in diesem Markt planen.
-> 
-> Berücksichtigen Sie dies beim Planen von Preisänderungen. Wenn Sie beispielsweise die App zunächst zu einem geringeren Preisniveau veröffentlichen und dann ein Datum planen, an dem der Preis erhöht werden soll, würden Kunden mit älteren Betriebssystemversionen, die die App kaufen, den niedrigeren (ursprünglichen) Preis bezahlen.
+> Preisänderungen werden nur für Kunden mit Windows 10-Geräten, (einschließlich Xbox One), angezeigt. Wenn Ihre app zuvor veröffentlichten frühere Betriebssystemversionen unterstützt, werden die preisänderungen nicht für diese Kunden angewendet. Für Kunden unter Windows8 wird die App immer zum **Grundpreis** (und nicht zum marktspezifischen Preis) angeboten, auch wenn Sie zusätzliche Preisänderungen planen. Für Kunden unter Windows 8.1, und Windows Phone 8.1 und früheren Versionen wird die app immer zum ersten Preisniveau für den Markt des Kunden angeboten werden.
 
 Klicken Sie auf **Schedule a price change**, um die Optionen für Preisänderungen anzuzeigen. Wählen Sie das Preisniveau aus, das Sie verwenden möchten (oder geben einen formfreien Preis für die Außerkraftsetzungen des Grundpreises für Einzelmärkte an), und wählen Sie anschließend das Datum, die Uhrzeit und die Zeitzone aus.
 
-Sie können auf **Schedule a price change again** klicken, um beliebig viele nachfolgende Änderungen zu planen.
+Klicken Sie erneut **Zeitplan einen Preis ändern** , um beliebig viele nachfolgende Änderungen beliebig planen.
 
 > [!NOTE]
 > Geplante Preisänderungen funktionieren anders als [Sonderpreise](put-apps-and-add-ons-on-sale.md). Wenn Sie eine App als Sonderangebot bereitstellen, wird der Preis durchgestrichen im Store angezeigt, und Kunden sind in der Lage, die App zum Verkaufspreis während des Zeitraums zu kaufen, den Sie ausgewählt haben. Nachdem das Sonderangebot abgelaufen ist, gilt der Verkaufspreises nicht mehr und die App ist erneut zum Grundpreis erhältlich (oder einem anderen Preis, den Sie für diese Markt angegeben haben, falls zutreffend).
@@ -66,7 +61,7 @@ Sie können auf **Schedule a price change again** klicken, um beliebig viele nac
 Die oben ausgewählten Optionen gelten standardmäßig für alle Märkte, in denen Ihre App angeboten wird. Sie können optional den Preis für einen oder mehrere Märkte ändern, entweder durch die Auswahl eines anderen Preisniveaus oder die Angabe eines formfreien Preises in der lokalen Währung des Markts.
 
 > [!IMPORTANT]
-> Kunden mit Windows8 wird die App immer zum **Grundpreis** angezeigt, auch wenn Sie einen anderen Preis für ihren Markt auswählen.
+> Wenn Ihre app zuvor veröffentlichten Windows 8 unterstützt, sehen Kunden stets die app an den **Grundpreis**, selbst wenn Sie einen anderen Preis für ihren Markt auswählen.
 
 Um den Preis für die einzelnen Märkte zu ändern, klicken Sie auf **Select markets for base price override**. Das Popupfenster **Market selection** wird mit allen Märkten angezeigt, in denen Sie Ihre App verfügbar machen möchten. (Wenn Sie Märkte im Abschnitt **Märkte** ausgeschlossen haben, sind diese Märkte nicht verfügbar.) 
 

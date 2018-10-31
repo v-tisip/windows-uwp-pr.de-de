@@ -4,21 +4,20 @@ Description: When submitting an add-on, the options on the Pricing and availabil
 title: Festlegen der Preise und Verfügbarkeit von Add-Ons
 ms.assetid: B3D4B753-716B-460B-A3B1-ED5712ECD694
 ms.author: wdg-dev-content
-ms.date: 05/08/2018
+ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Add-Ons, IAP, Preis
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c9bd463fc15dae55d0e9ee2297f33671e3171b7
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.openlocfilehash: 6dc557306fe2e5e24ce1210e75ac5f29628306ae
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5742360"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5839801"
 ---
 # <a name="set-add-on-pricing-and-availability"></a>Festlegen der Preise und Verfügbarkeit von Add-Ons
 
-
-Beim Übermitteln eines Add-Ons bestimmen die Optionen auf der Seite **Preise und Verfügbarkeit**, zu welchem Preis und wie das Add-On Kunden angeboten werden soll.
+Beim Übermitteln eines Add-Ons im [Partner Center](https://partner.microsoft.com/dashboard), bestimmen die Optionen auf der Seite " **Preise und Verfügbarkeit** " wie viel, Aufladen Kunden für Ihr Add-on und wie Kunden angeboten werden soll.
 
 ## <a name="markets"></a>Märkte
 
@@ -36,8 +35,8 @@ Die Standardoption ist **Can be displayed in the parent product’s Store listin
 
 Wählen Sie für Add-Ons, die Sie nicht allgemein verfügbar machen möchten, **Hidden in the Store** und eine der folgenden Optionen aus:
 
--   **Nur innerhalb des übergeordneten Produkts zum Kauf erhältlich:** Bei Auswahl dieser Option können Kunden das Add-On innerhalb Ihrer App kaufen, es wird aber im Store-Eintrag Ihrer App nicht aufgeführt. Verwenden Sie diese Option nur, wenn das Angebot nicht allgemein verfügbar ist, z.B. im Anfangszeitraum interner Tests.
--   **Beenden des Erwerbs: Alle Kunden mit einem direkten Link können den Produkt-Store-Eintrag sehen, aber sie können ihn nur herunterladen, wenn sie das Produkts vorher erworben haben oder einen Werbecode und ein Windows10-Gerät verwenden. Dieses Add-On wird nicht im übergeordneten Produkteintrag angezeigt**: Wenn Sie diese Option auswählen, wird das Add-On nicht im App Eintrag angezeigt, und neuen Kunden können das Add-On nicht erwerben. Jedoch, **diese Option wird für Kunden mit Windows8.1 oder früher nicht unterstützt**. Wenn Ihre app auf Windows8.1 oder früheren Versionen ist, kann das Add-on weiterhin verfügbar für diesen Kunden erworben werden. Um das Add-on Kunden anbieten auf Windows8.1 oder einer früheren Version, müssen Sie Ihre app, um den Code zu entfernen, der den Add-on-Angebote zu aktualisieren, und klicken Sie dann eine neue Übermittlung für die app veröffentlichen. Dies wird empfohlen, auch wenn Ihre app Windows8.1 als Ziel nicht oder frühere Versionen Es ist besser für Ihre Kunden, wenn Sie noch nie ein Add-on, die Sie sich entschieden haben anbieten, um nicht verfügbar zu machen.
+-   **Zum Kauf von innerhalb des übergeordneten Produkts nur erhältlich**: Auswahl dieser Option können Kunden das Add-on innerhalb Ihrer app kaufen, aber das Add-on kann nicht im Store sichtbar oder in Ihrer app Store-Eintrag angezeigt. Verwenden Sie diese Option nur, wenn das Angebot nicht allgemein verfügbar ist, z.B. im Anfangszeitraum interner Tests.
+-   **Beenden des Erwerbs: Alle Kunden mit einem direkten Link können den Produkt-Store-Eintrag sehen, aber sie können ihn nur herunterladen, wenn sie das Produkts vorher erworben haben oder einen Werbecode und ein Windows10-Gerät verwenden. Dieses Add-On wird nicht im übergeordneten Produkteintrag angezeigt**: Wenn Sie diese Option auswählen, wird das Add-On nicht im App Eintrag angezeigt, und neuen Kunden können das Add-On nicht erwerben. Jedoch, **diese Option wird für Kunden mit Windows8.1 oder früher nicht unterstützt**. Wenn Ihre app zuvor veröffentlichten auf Windows8.1 oder früheren Versionen ist, kann das Add-on weiterhin verfügbar für diesen Kunden erworben werden. Um das Add-on Kunden anbieten auf Windows8.1 oder einer früheren Version, müssen Sie Ihre app, um den Code zu entfernen, der den Add-on-Angebote zu aktualisieren, und klicken Sie dann eine neue Übermittlung für die app veröffentlichen. Dies wird empfohlen, auch wenn Ihre app Windows8.1 als Ziel nicht oder frühere Versionen Es ist besser für Ihre Kunden, wenn Sie noch nie ein Add-on, die Sie sich entschieden haben anbieten, um nicht verfügbar zu machen.
     
  > [!NOTE] 
  > Das Auswählen der Option **Beenden des Erwerbs** und/oder das Übermitteln eines App-Updates, durch das das Add-On aus dem Code der App entfernt wird, wirkt sich nicht auf Kunden aus, die das Add-On bereits erworben haben, und zwar unabhängig von ihrem Betriebssystem.
