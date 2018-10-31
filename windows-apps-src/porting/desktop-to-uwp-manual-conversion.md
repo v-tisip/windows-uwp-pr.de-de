@@ -10,11 +10,11 @@ keywords: windows10, UWP
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
 ms.openlocfilehash: 29fd7faec6f78b5f01469e7bfa6c01a8831f07eb
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5745230"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5823485"
 ---
 # <a name="package-a-desktop-application-manually"></a><span data-ttu-id="60a19-103">Manuelles Verpacken einer desktop-Anwendungs</span><span class="sxs-lookup"><span data-stu-id="60a19-103">Package a desktop application manually</span></span>
 

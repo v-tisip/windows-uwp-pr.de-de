@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: daa40656c72812e19c7f6f5fa71e50c2206670af
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5742600"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5825440"
 ---
 # <a name="specify-the-default-resources-that-your-app-uses"></a><span data-ttu-id="632a1-103">Angeben der von der App verwendeten Standardressourcen</span><span class="sxs-lookup"><span data-stu-id="632a1-103">Specify the default resources that your app uses</span></span>
 

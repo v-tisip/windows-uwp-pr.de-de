@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: dc7d3d70291d29102af614f29fd4531523a961e1
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5750781"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5824812"
 ---
 # <a name="create-edit-and-save-bitmap-images"></a><span data-ttu-id="073d9-104">Erstellen, Bearbeiten und Speichern von Bitmapbildern</span><span class="sxs-lookup"><span data-stu-id="073d9-104">Create, edit, and save bitmap images</span></span>
 

@@ -9,11 +9,11 @@ keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Paketrollout, Flig
 ms.assetid: 397f1b99-2be7-4f65-bcf1-9433a3d496ad
 ms.localizationpriority: medium
 ms.openlocfilehash: 6bba9988f52ee6de4ed8ad8765565faea30b4c82
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "5745480"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "5840845"
 ---
 # <a name="get-rollout-info-for-a-flight-submission"></a><span data-ttu-id="7714c-104">Abrufen von Rolloutinformationen für eine Flight-Paketübermittlung</span><span class="sxs-lookup"><span data-stu-id="7714c-104">Get rollout info for a flight submission</span></span>
 

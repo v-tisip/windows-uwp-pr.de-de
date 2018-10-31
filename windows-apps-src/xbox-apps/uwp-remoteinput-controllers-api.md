@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e0b85293ada8619246c3c23ef2103ead5f40c23
-ms.sourcegitcommit: 753e0a7160a88830d9908b446ef0907cc71c64e7
+ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/30/2018
-ms.locfileid: "5763204"
+ms.locfileid: "5826486"
 ---
 # <a name="controller-api-reference"></a><span data-ttu-id="f4646-104">Controller– API-Referenz</span><span class="sxs-lookup"><span data-stu-id="f4646-104">Controller API reference</span></span>   
 <span data-ttu-id="f4646-105">Mit dieser REST-API können Sie die Anzahl der angeschlossenen physischen Controller abrufen und deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="f4646-105">You can get the number of attached physical controllers and turn them off using this REST API.</span></span>
