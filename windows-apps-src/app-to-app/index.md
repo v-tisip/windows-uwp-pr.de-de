@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 52e8479febb2134365bab6c68486d9e284366535
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5812702"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5876179"
 ---
 # <a name="app-to-app-communication"></a><span data-ttu-id="0e1a0-104">App zu App-Kommunikation</span><span class="sxs-lookup"><span data-stu-id="0e1a0-104">App-to-app communication</span></span>
 

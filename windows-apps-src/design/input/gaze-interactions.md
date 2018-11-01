@@ -13,11 +13,11 @@ dev-contact: Austin Hodges
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: de3c1875063d40daa2ad9cfb490dfb00fd0bddd2
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5813516"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5874083"
 ---
 # <a name="gaze-interactions-and-eye-tracking-in-uwp-apps"></a><span data-ttu-id="339bf-103">Interaktionen via Blick und Eye Tracking in UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="339bf-103">Gaze interactions and eye tracking in UWP apps</span></span>
 

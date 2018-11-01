@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1c77e7a220618273e0fb8fb75cf3de2247534f5b
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5835127"
+ms.locfileid: "5875958"
 ---
 # <a name="touchpad-design-guidelines"></a><span data-ttu-id="b525f-103">Touchpad-Designrichtlinien</span><span class="sxs-lookup"><span data-stu-id="b525f-103">Touchpad design guidelines</span></span>
 

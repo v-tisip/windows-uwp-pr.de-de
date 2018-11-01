@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Codebeispiele, Python
 ms.localizationpriority: medium
 ms.openlocfilehash: 6fdd7dce766e2d1804c5b0973dcf3e51cbae99c0
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5823406"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5875162"
 ---
 # <a name="python-sample-submissions-for-apps-add-ons-and-flights"></a><span data-ttu-id="8c470-104">Python-Beispiel: Übermittlungen für Apps, Add-Ons und Flights</span><span class="sxs-lookup"><span data-stu-id="8c470-104">Python sample: submissions for apps, add-ons, and flights</span></span>
 

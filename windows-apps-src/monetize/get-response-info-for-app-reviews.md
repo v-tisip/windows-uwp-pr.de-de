@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-API für Rezensionen, Antwortinformationen
 ms.localizationpriority: medium
 ms.openlocfilehash: 71497a858060109eaac0f593ce03f2ba3cbf03cc
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5819035"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5876113"
 ---
 # <a name="get-response-info-for-reviews"></a><span data-ttu-id="57e71-104">Antwortinformationen für Rezensionen abrufen</span><span class="sxs-lookup"><span data-stu-id="57e71-104">Get response info for reviews</span></span>
 

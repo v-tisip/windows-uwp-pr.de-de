@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 1c53ae429e4cb912ce0ed2480c8cab814cbfaf96
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5835535"
+ms.locfileid: "5876820"
 ---
 # <a name="manage-your-ad-campaign"></a><span data-ttu-id="6b549-103">Verwalten Ihrer Anzeigenkampagne</span><span class="sxs-lookup"><span data-stu-id="6b549-103">Manage your ad campaign</span></span>
 

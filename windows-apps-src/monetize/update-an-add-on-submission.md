@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-On-Übermittlung, Aktualisieren, In-App-Produkt, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: a8c3faf3b3be554e3cbb5bc4891887559ac14ea2
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5830050"
+ms.locfileid: "5872091"
 ---
 # <a name="update-an-add-on-submission"></a><span data-ttu-id="79354-104">Aktualisieren einer Add-On-Übermittlung</span><span class="sxs-lookup"><span data-stu-id="79354-104">Update an add-on submission</span></span>
 

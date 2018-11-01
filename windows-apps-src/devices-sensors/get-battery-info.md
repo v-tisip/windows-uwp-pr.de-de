@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: c745b99104495b4d0b3c60202c378285dbfdd7b6
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5837032"
+ms.locfileid: "5869919"
 ---
 # <a name="get-battery-information"></a><span data-ttu-id="57ddd-104">Abrufen von Akkuinformationen</span><span class="sxs-lookup"><span data-stu-id="57ddd-104">Get battery information</span></span>
 

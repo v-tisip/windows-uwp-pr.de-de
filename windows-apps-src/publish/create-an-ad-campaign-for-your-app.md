@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Anzeige, Kampagne, bewerben
 ms.localizationpriority: medium
 ms.openlocfilehash: c6df022cbd474c9e73a84b86b245511d23293b0e
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5833340"
+ms.locfileid: "5874747"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a><span data-ttu-id="9e3eb-103">Erstellen einer Anzeigenkampagne für Ihre App</span><span class="sxs-lookup"><span data-stu-id="9e3eb-103">Create an ad campaign for your app</span></span>
 

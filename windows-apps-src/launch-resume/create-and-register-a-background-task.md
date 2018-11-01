@@ -13,11 +13,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 8d32b4559e91cc898944f3767d4b082935359d49
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5820700"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5870799"
 ---
 # <a name="create-and-register-an-out-of-process-background-task"></a><span data-ttu-id="28a46-104">Erstellen und Registrieren einer Out-of-Process-Hintergrundaufgabe</span><span class="sxs-lookup"><span data-stu-id="28a46-104">Create and register an out-of-process background task</span></span>
 

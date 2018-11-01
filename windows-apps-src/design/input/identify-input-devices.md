@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 77d2a914147fb2cd20f8043e0b52a824ddf3710d
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5829390"
+ms.locfileid: "5875370"
 ---
 # <a name="identify-input-devices"></a><span data-ttu-id="04ed3-103">Identifizieren von Eingabegeräten</span><span class="sxs-lookup"><span data-stu-id="04ed3-103">Identify input devices</span></span>
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, Uwp, Store-Diensten, Microsoft Store-Analyse-API, Xbox Live Analyse
 ms.localizationpriority: medium
 ms.openlocfilehash: 8ef566ed473c7d65ceeb290ee76bfa043f4766f5
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5832310"
+ms.locfileid: "5876956"
 ---
 # <a name="get-xbox-live-analytics-data"></a><span data-ttu-id="3152b-104">Abrufen von Xbox Live Analysedaten</span><span class="sxs-lookup"><span data-stu-id="3152b-104">Get Xbox Live analytics data</span></span>
 
