@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP, experimentell,-API
 ms.localizationpriority: medium
 ms.openlocfilehash: fe5fa437c5a1e564be07b7277de0f190d6eab862
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5827653"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5884779"
 ---
 # <a name="experimental-apis"></a>Experimentelle APIs
 

@@ -8,12 +8,12 @@ ms.date: 07/02/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6bb29a50ef4fc8c5a56e410a59802b217c033cbc
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: f17bb6bbefb2fd3266edac20ca1f23af76eb0a3c
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5827873"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5884481"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a>Anwenden von Runtime-Updates auf ein MSIX-Paket mit dem Paket Support-Framework
 
@@ -65,13 +65,13 @@ Die PSF enthält Common Language Runtime-Updates, die Sie jetzt, wie z. B. die D
 
 ### <a name="file-redirection-fixup"></a>Datei Umleitung Korrektur
 
-Die [Datei Umleitung Korrektur](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/develop/FileRedirectionShim) können umleiten initiierten schreiben oder Lesen von Daten in einem Verzeichnis, das von einer Anwendung zugänglich ist, die in einem MSIX-Container ausgeführt wird.
+Die [Datei Umleitung Korrektur](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/fixups/FileRedirectionFixup) können umleiten initiierten schreiben oder Lesen von Daten in einem Verzeichnis, das von einer Anwendung zugänglich ist, die in einem MSIX-Container ausgeführt wird.
 
-Z. B. wenn die Anwendung in eine Protokolldatei, die in demselben Verzeichnis wie die ausführbare Anwendung ist schreibt, können klicken Sie dann die [Datei Umleitung Korrektur](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/develop/FileRedirectionShim) Sie um die Protokolldatei in einen anderen Speicherort, z. B. den lokalen app-Datenspeicher zu erstellen.
+Z. B. wenn die Anwendung in eine Protokolldatei, die in demselben Verzeichnis wie die ausführbare Anwendung ist schreibt, können klicken Sie dann die [Datei Umleitung Korrektur](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/fixups/FileRedirectionFixup) Sie um die Protokolldatei in einen anderen Speicherort, z. B. den lokalen app-Datenspeicher zu erstellen.
 
 ### <a name="runtime-fixes-from-the-community"></a>Runtime-Updates von der community
 
-Achten Sie darauf, dass Sie die Community Beiträge zu unserer [GitHub](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/develop) -Seite zu überprüfen. Es ist möglich, dass andere Entwickler eine ähnliche und Ihrem Problem gelöst haben und ein Laufzeit-Update freigegeben haben.
+Achten Sie darauf, dass Sie die Community Beiträge zu unserer [GitHub](https://github.com/Microsoft/MSIX-PackageSupportFramework) -Seite zu überprüfen. Es ist möglich, dass andere Entwickler eine ähnliche und Ihrem Problem gelöst haben und ein Laufzeit-Update freigegeben haben.
 
 ## <a name="apply-a-runtime-fix"></a>Wenden Sie ein Laufzeit-Update
 
@@ -88,7 +88,7 @@ Lassen Sie uns über jede Aufgabe geleitet werden.
 
 ### <a name="create-the-package-layout-folder"></a>Erstellen Sie den Layout Paketordner
 
-Wenn Sie bereits über eine Datei .msix (oder AppX) verfügen, können Sie den Inhalt in einem Layoutordner entpacken, die als die Staging-Bereich für Ihr Paket dient.  Sie erreichen dies über eine **X64 systemeigene-Eingabeaufforderung für VS 2017**, oder manuell mit dem SDK Bin Pfad im ausführbaren Suchpfad.
+Wenn Sie bereits über eine Datei .msix (oder AppX) verfügen, können Sie den Inhalt in einem Layoutordner entpacken, die als die Staging-Bereich für Ihr Paket dient. Sie erreichen dies über eine Befehlszeile mit Makemsix Tool, abhängig vom Installationspfad des SDK, handelt es sich, wo Sie das Tool makemsix.exe auf Ihrem Windows 10-PC finden: X86: C:\Program Files (x86) \Windows Kits\10\bin\x86\makemsix.exe X64: C:\Program Files () X86) \Windows Kits\10\bin\x64\makemsix.exe
 
 ```
 makemsix unpack /p PSFSamplePackage_1.0.60.0_AnyCPU_Debug.msix /d PackageContents
@@ -103,11 +103,7 @@ Wenn Sie eine Datei .msix (oder AppX) zu besitzen, können Sie die Paketordner u
 
 ### <a name="get-the-package-support-framework-files"></a>Die Paket-Unterstützung Framework-Dateien abrufen
 
-Sie können das PSF Nuget-Paket abrufen, mithilfe von Visual Studio. Mithilfe des eigenständigen Nuget-Befehlszeilentools können sie auch abrufen.
-
-#### <a name="get-the-package-by-using-visual-studio"></a>Rufen Sie das Paket mithilfe von Visual Studio
-
-In Visual Studio mit der rechten Maustaste Ihrer Lösung oder Projektknoten, und wählen Sie einen der Befehle Nuget-Pakete verwalten.  Suchen Sie nach **Microsoft.PackageSupportFramework** oder **PSF** , um das Paket unter "NuGet.org" suchen. Anschließend installieren Sie es.
+Sie erhalten das PSF Nuget-Paket mithilfe des eigenständigen Nuget "MpCmdRun.exe" oder über Visual Studio.
 
 #### <a name="get-the-package-by-using-the-command-line-tool"></a>Rufen Sie das Paket mithilfe des "MpCmdRun.exe"
 
@@ -117,15 +113,20 @@ Installieren des Nuget-Befehlszeilentools von diesem Speicherort: https://www.nu
 nuget install Microsoft.PackageSupportFramework
 ```
 
+#### <a name="get-the-package-by-using-visual-studio"></a>Rufen Sie das Paket mithilfe von Visual Studio
+
+In Visual Studio mit der rechten Maustaste Ihrer Lösung oder Projektknoten, und wählen Sie einen der Befehle Nuget-Pakete verwalten.  Suchen Sie nach **Microsoft.PackageSupportFramework** oder **PSF** , um das Paket unter "NuGet.org" suchen. Anschließend installieren Sie es.
+
+
 ### <a name="add-the-package-support-framework-files-to-your-package"></a>Fügen Sie die Support-Framework-Paket-Dateien zu Ihrem Paket
 
 Hinzufügen der erforderlichen 32-Bit- und 64-Bit-PSF-DLLs und ausführbaren Dateien in das Paketverzeichnis. Orientieren Sie sich an der folgenden Tabelle. Sie sollten auch alle Runtime Fixes enthalten, die Sie benötigen. In unserem Beispiel benötigen wir der Datei Umleitung Runtime beheben.
 
 | Die ausführbare Datei Anwendung ist x64 | Die ausführbare Datei Anwendung ist x86 |
 |-------------------------------|-----------|
-| [PSFLauncher64.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimLauncher/readme.md) |  [PSFLauncher32.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimLauncher/readme.md) |
-| [PSFRuntime64.dll](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRuntime/readme.md) | [PSFRuntime32.dll](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRuntime/readme.md) |
-| [PSFRunDll64.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRunDll/readme.md) | [PSFRunDll32.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/ShimRunDll/readme.md) |
+| [PSFLauncher64.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/PsfLauncher/readme.md) |  [PSFLauncher32.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/PsfLauncher/readme.md) |
+| [PSFRuntime64.dll](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/PsfRuntime/readme.md) | [PSFRuntime32.dll](https://github.com/Microsoft/MSIX-PackageSupportFramework/tree/master/PsfRuntime/readme.md) |
+| [PSFRunDll64.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/PsfRunDll/readme.md) | [PSFRunDll32.exe](https://github.com/Microsoft/MSIX-PackageSupportFramework/blob/master/PsfRunDll/readme.md) |
 
 Ihre Paketinhalt sollte nun etwa wie folgt aussehen.
 
