@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows10, UWP
 ms.assetid: 71a57ca2-ca00-471d-8ad9-52f285f3022e
 ms.localizationpriority: medium
-ms.openlocfilehash: 9abd10a352243e7c7ca7e665b3fb5ee774e0346e
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: 3a0b3a9f5ce7c03b8add9cc459bade684b9daf21
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5840875"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5886685"
 ---
 # <a name="prepare-to-package-a-desktop-application"></a>Vorbereiten des Verpackens eine desktop-Anwendung
 
@@ -103,7 +103,7 @@ Die Abhängigkeiten werden nicht installiert, wenn die Anwendung durch querladen
 
 + __Ihre Anwendung startet ein Hilfsprogramm zum Ausführen von Aufgaben__. Vermeiden Sie das Starten von Befehlshilfsprogrammen wie PowerShell und Cmd.exe. Tatsächlich, wenn Benutzer Ihre Anwendung auf einem System, die Windows 10 S ausgeführt wird installieren, klicken Sie dann Ihre Anwendung können sie alle zu starten nicht. Dies kann Ihre Anwendung aus Übermittlung an den Microsoft Store blockieren, da alle an den Microsoft Store übermittelten apps mit Windows 10 s kompatibel sein müssen.
 
-Das Starten eines Hilfsprogramms kann oft eine bequeme Methode für das Abrufen von Informationen aus dem Betriebssystem, Zugreifen auf die Registrierung oder das Zugreifen auf Systemfunktionen bereitstellen. Sie können jedoch stattdessen UWP-APIs verwenden, um diese Aufgaben auszuführen. Diese APIs sind leistungsstärker, da sie eine separate ausführbare Datei benötigen ausgeführt, aber wichtiger ist, sie die Anwendung halten von außerhalb des Pakets. Das Design der app bleibt im Einklang mit der Netzwerkisolation, Vertrauensstellung und Sicherheit, die mit einer Anwendung, dass Sie Sie verpackt haben und Ihre Anwendung verhält sich erwartungsgemäß auf Systemen mit Windows 10 S.
+Das Starten eines Hilfsprogramms kann oft eine bequeme Methode für das Abrufen von Informationen aus dem Betriebssystem, Zugreifen auf die Registrierung oder das Zugreifen auf Systemfunktionen bereitstellen. Sie können jedoch stattdessen UWP-APIs verwenden, um diese Aufgaben auszuführen. Diese APIs sind leistungsstärker, da sie eine separate ausführbare Datei benötigen ausgeführt, aber wichtiger ist, sie die Anwendung halten von außerhalb des Pakets. Das Design der app bleibt im Einklang mit der Isolation, Vertrauensstellung und Sicherheit, die mit einer Anwendung, die Sie verpackt haben, und Ihre Anwendung verhält sich erwartungsgemäß auf Systemen mit Windows 10 S.
 
 + __Ihre Anwendung Hosts-add-ins, -Plug-ins, oder Erweiterungen__.   In vielen Fällen werden Erweiterungen im COM-Stil wahrscheinlich weiterhin funktionieren, sofern die Erweiterung nicht verpackt wurde und sie als vertrauenswürdig installiert wurde. Ist, dass die Installationsprogramme ihre vertrauenswürdigen Funktionen verwenden können, ändern Sie die Registrierung und Erweiterungsdateien platzieren, Erweiterungsdateien Ihrer Anwendung zu finden.
 
