@@ -9,12 +9,12 @@ ms.date: 06/21/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 42bc7fdb91a8c7642e132d4ac3d93be1f0927df0
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: d2f437db1a1792df22fd084cedee31cb6e590d24
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5840009"
+ms.locfileid: "5873189"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>Navigationsverlauf und Rückwärtsnavigation für UWP-Apps
 
@@ -287,21 +287,6 @@ Die oben aufgeführten Codebeispiele zeigen, wie man mit diesen Eingaben umgeht.
 Bisher nutzten UWP-Apps [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility) für die Rückwärtsnavigation. Die API wird weiterhin unterstützt werden, um Abwärtskompatibilität zu gewährleisten, aber wir empfehlen nicht mehr zu verlassen sich [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility). Stattdessen sollte Ihre App eine eigene Zurück-Schaltfläche in der App darstellen.
 
 Wenn Ihre app weiterhin mithilfe von [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility), klicken Sie dann das System die Benutzeroberfläche gerendert wird, das System zurück-Schaltfläche:
-
-- Wenn Ihre app **nicht mit Registerkarten**ist, wird die Schaltfläche "zurück" in der Titelleiste gerendert. Die visuellen Erfahrung und den Benutzerinteraktionen für die zurück-Schaltfläche bleiben unverändert aus vorherigen Builds.
-
-    ![Schaltfläche "zurück" in der Titelleiste](images/nav-back-pc.png)
-
-- Wenn eine app **mit Registerkarten**ist, wird die Schaltfläche "zurück" in einen neuen System nach hinten gerendert wird angezeigt.
-
-    ![System gezeichnet wieder Schaltflächenleiste](images/back-nav/tabs.png)
-
-### <a name="system-back-bar"></a>Systemeigene Leiste
-
-> [!NOTE]
-> "Systemeigene Leiste" ist nur eine Beschreibung, nicht offizieller Name.
-
-Die systemeigene rückwärtsnavigationsleiste ist ein "Band", die zwischen dem registerkartenband und Inhaltsbereich der app eingefügt wird. Das Band läuft über die Breite der App und enthält die Zurück-Schaltfläche auf der linken Seite. Des Bands ist die vertikale Höhe von 32 Pixel um sicherzustellen, dass ausreichende berührungszielgröße für die Schaltfläche "zurück".
 
 - Wenn Ihre app **nicht mit Registerkarten**ist, wird die Schaltfläche "zurück" in der Titelleiste gerendert. Die visuellen Erfahrung und den Benutzerinteraktionen für die zurück-Schaltfläche bleiben unverändert aus vorherigen Builds.
 

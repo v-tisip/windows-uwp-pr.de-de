@@ -8,17 +8,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 1122ae00f9b84980a7793deef08a30a16711b4be
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: 730d5ae9062fe39533cd615facaf5beaa7d02ffd
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5823686"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5876083"
 ---
 # <a name="composition-brushes"></a>Kompositionspinsel
 Alles, was von einer UWP-Anwendung auf dem Bildschirm sichtbar wird angezeigt, da es mit einem Pinsel gezeichnet wurde. Mithilfe von Pinseln können Sie Benutzer Objekte der Benutzeroberfläche (UI) mit Inhalt, angefangen bei einfachen, einfarbige Farben zu Bildern oder Zeichnungen für komplexe Effekte Kette zeichnen. In diesem Thema werden die Begriffe zum Zeichnen mit CompositionBrush.
 
-Beachten Sie bei der Arbeit mit XAML-UWP-app können Sie sich entschieden, ein UIElement mit einem [XAML-Pinsel](/windows/uwp/design/style/brushes) oder ein [CompositionBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBrush)zu zeichnen. In der Regel ist es einfacher und ratsam, einen XAML-Pinsel auswählen, wenn Ihr Szenario von einem XAML-Pinsel unterstützt wird. Animieren z. B. die Farbe einer Schaltfläche, die Füllung ein Text oder eine Form mit einem Bild ändern. Andererseits, wenn Sie versuchen, eine Aktion ausführen, die nicht von einem XAML-Pinsel wie z. B. Zeichnen mit eine animierte Maske oder eine animierte neun Raster Stretch oder einer effektkette unterstützt wird, können eine CompositionBrush Sie ein UIElement durch die Verwendung von [Zeichnen XamlCompositionBrushBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase).
+Beachten Sie bei der Arbeit mit XAML-UWP-app können Sie sich entschieden, ein UIElement mit einem [XAML-Pinsel](/windows/uwp/design/style/brushes) oder ein [CompositionBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBrush)zu zeichnen. In der Regel ist es einfacher und ratsam, einen XAML-Pinsel auswählen, wenn Ihr Szenario von einem XAML-Pinsel unterstützt wird. Animieren z. B. die Farbe einer Schaltfläche, die Füllung ein Text oder eine Form mit einem Bild ändern. Andererseits, wenn Sie versuchen, eine Aktion ausführen, die nicht von einem XAML-Pinsel wie Zeichnen mit eine animierte Maske oder eine animierte neun Raster Stretch oder einer effektkette unterstützt wird, können eine CompositionBrush Sie ein UIElement durch die Verwendung von [Zeichnen XamlCompositionBrushBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase).
 
 Bei der Arbeit mit der visuellen Ebene muss eine CompositionBrush verwendet werden, um den Bereich einer [SpriteVisual](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.SpriteVisual)zu zeichnen.
 

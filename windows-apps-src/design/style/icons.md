@@ -12,12 +12,12 @@ keywords: Windows10, UWP
 design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d5f1ded66ce9d41c386fb55ba8a4e609450d20d
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.openlocfilehash: 31bc1d33bccbf2d1948a119ea42bfef2599f3336
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5826715"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5874096"
 ---
 # <a name="icons-for-uwp-apps"></a>Symbole für UWP-Apps
 
@@ -137,7 +137,7 @@ Es gibt viele Möglichkeiten, ein Symbol zu erstellen. Sie können eine Symbolsc
 
 ## <a name="make-the-icon-do-something"></a>Festlegen einer Aktion für das Symbol
 
-Sobald Sie ein Symbol haben, besteht der nächste Schritt darin, es Aktion ausführen zu lassen, indem Sie ihm einen Befehl oder eine Navigationsaktion zuordnen. Die beste Möglichkeit hierzu ist das Symbol zu einer Schaltfläche oder Befehlsleiste hinzufügen. 
+Wenn Sie ein Symbol haben, besteht der nächste Schritt vereinfachen eine Aktion ausführen, indem Sie Befehl oder eine Navigationsaktion zuordnen. Die beste Möglichkeit hierzu ist das Symbol zu einer Schaltfläche oder Befehlsleiste hinzufügen. 
 
 ![Befehlsleistenbild](images/icons/app-bar-desktop.svg)
 
