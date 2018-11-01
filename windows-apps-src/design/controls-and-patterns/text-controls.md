@@ -14,11 +14,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: fa990d7e4733c90b7ea46cec881ea502dd6a11b2
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5881657"
+ms.locfileid: "5924086"
 ---
 # <a name="text-controls"></a><span data-ttu-id="acee6-103">Textsteuerelemente</span><span class="sxs-lookup"><span data-stu-id="acee6-103">Text controls</span></span>
 

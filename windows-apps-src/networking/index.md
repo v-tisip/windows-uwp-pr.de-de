@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e01ac3a0dcab0bc82835b97d70477bf585ab4570
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5869408"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5922151"
 ---
 # <a name="networking-and-web-services"></a><span data-ttu-id="9e5bc-104">Netzwerk- und Webdienste</span><span class="sxs-lookup"><span data-stu-id="9e5bc-104">Networking and web services</span></span>
 

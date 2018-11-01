@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung
 ms.localizationpriority: medium
 ms.openlocfilehash: 0975749e07d8bdc625820d694d08a6d8f8e29932
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5882922"
+ms.locfileid: "5924687"
 ---
 # <a name="windows-premium-ads-publishers-program"></a><span data-ttu-id="c5505-105">Programm für Herausgeber von Windows Premium-Anzeigen</span><span class="sxs-lookup"><span data-stu-id="c5505-105">Windows Premium Ads Publishers Program</span></span>
 

@@ -11,11 +11,11 @@ keywords: Windows10, UWP
 ms.assetid: 56afd553-c520-4a28-b63d-2e1b3c1d3606
 ms.localizationpriority: medium
 ms.openlocfilehash: 88e6fb03ccefca0e6067db58b9343ee76fa72ba3
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5880103"
+ms.locfileid: "5941389"
 ---
 # <a name="external-help-pages"></a><span data-ttu-id="8e5fb-103">Externe Hilfeseiten</span><span class="sxs-lookup"><span data-stu-id="8e5fb-103">External help pages</span></span>
 

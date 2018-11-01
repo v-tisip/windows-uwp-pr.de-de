@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiel, DirectX, laden, rastern, Gitter, Bitmap, 2D, 3D
 ms.localizationpriority: medium
 ms.openlocfilehash: 7947f1e0684bc76c95fe8099f5ef123f2a32566e
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5886764"
+ms.locfileid: "5922672"
 ---
 # <a name="fundamentals-of-directx-programming"></a><span data-ttu-id="f2e60-104">Grundlagen der DirectX-Programmierung</span><span class="sxs-lookup"><span data-stu-id="f2e60-104">Fundamentals of DirectX programming</span></span>
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP, Preise, App-Preise, App-Preis, Apps verkaufen, Preis ändern, benutzerdefinierter Preis, Preis, Preise, Kosten, Grundpreise überschreiben, formfreier Preis, formfrei
 ms.localizationpriority: medium
 ms.openlocfilehash: 372abfdb0de5567b7c7d262b298d264b086fe339
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5866815"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5922787"
 ---
 # <a name="set-and-schedule-app-pricing"></a><span data-ttu-id="62fde-103">Festlegen und Planen von App-Preisen</span><span class="sxs-lookup"><span data-stu-id="62fde-103">Set and schedule app pricing</span></span>
 
