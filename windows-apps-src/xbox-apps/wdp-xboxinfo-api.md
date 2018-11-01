@@ -1,27 +1,27 @@
 ---
 author: M-Stahl
-title: Portal Xbox Geräteinformationen-API-Referenz
-description: Enthält Informationen zum Zugriff auf Xbox-Geräteinformationen.
+title: Geräteinformationen Portal Xbox-API-Referenz
+description: Erfahren Sie mehr über das Xbox-Geräteinformationen zuzugreifen.
 ms.author: mstahl
 ms.date: 11/7/2017
 ms.topic: article
-keywords: Windows 10, Uwp, Xbox, Device portal
+keywords: Windows 10 Uwp Xbox, Gerät portal
 ms.localizationpriority: medium
 ms.openlocfilehash: 4b0e2bab0ce7d5525e8032809954ff656a74a61c
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5884045"
+ms.locfileid: "5919893"
 ---
 # <a name="xbox-info-api-reference"></a>Xbox-Info-API-Referenz   
-Sie können die Xbox One Geräteinformationen mithilfe dieser API zugreifen.
+Sie können eine Xbox mit dieser API Informationen zugreifen.
 
-## <a name="get-xbox-one-device-information"></a>Abrufen von Xbox One Geräteinformationen
+## <a name="get-xbox-one-device-information"></a>Erhalten Sie eine Xbox Geräteinformationen.
 
 **Anforderung**
 
-Informationen erhalten zu Ihrer Xbox One.
+Sie erhalten Informationen über Ihre Xbox ein.
 
 Methode      | Anforderungs-URI
 :------     | :-----
@@ -42,14 +42,14 @@ GET | /ext/xbox/info
 **Antwort**   
 Ein JSON-Objekt mit den folgenden Feldern:
 
-* OsVersion - (Zeichenfolge) die Version des Betriebssystems.
-* OsEdition - (Zeichenfolge) die Edition des Betriebssystems, z. B. "März 2017" oder "März 2017 QFE 1".
-* ConsoleId - (Zeichenfolge) die Konsole des-ID.
-* DeviceId - (Zeichenfolge) die Konsole des Xbox Live Gerät Id.
-* Seriennummer - (Zeichenfolge) die Konsole des Seriennummer.
-* DevMode - (Zeichenfolge) die Konsole des aktuellen Entwicklermodus, z. B. "None" oder "Retail".
-* ConsoleType - (Zeichenfolge) die Konsole des Typ, z. B. "Xbox One" oder "Xbox One S".
-* DevkitCertificateExpirationTime – (Number) der UTC-Zeit in Sekunden, wenn die Konsole Developer Kit Zertifikat abläuft.
+* OsVersion - (Zeichenfolge) Version des Betriebssystems.
+* OsEdition - (Zeichenfolge) der Edition des Betriebssystems, wie "März 2017" oder "März 2017 QFE 1".
+* ConsoleId - ID (Zeichenfolge) der Konsole
+* DeviceId - (Zeichenfolge) der Konsole Xbox Live Device ID
+* SerialNumber - Seriennummer (Zeichenfolge) der Konsole.
+* DevMode - (Zeichenfolge) der Konsole des aktuellen Entwicklermodus wie "None" oder "Retail".
+* ConsoleType - Typ (Zeichenfolge) der Konsole "Xbox 1" oder "Die Xbox".
+* DevkitCertificateExpirationTime - (Anzahl) der UTC-Zeit in Sekunden, wenn die Konsole Developer Kit Zertifikat abläuft.
 
 **Statuscode**
 

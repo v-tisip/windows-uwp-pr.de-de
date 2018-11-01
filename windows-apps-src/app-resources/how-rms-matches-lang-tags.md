@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, uwp, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: f64072f2f04b5cd45b3b75ccad908ef6906c00f5
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5879597"
+ms.locfileid: "5942200"
 ---
 # <a name="how-the-resource-management-system-matches-language-tags"></a>Wie das Ressourcenverwaltungssystem Sprachtags zuordnet
 

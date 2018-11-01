@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 8fcbc1566d2b2b5ffc6889a57dd7656a3466d2a9
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5882558"
+ms.locfileid: "5919708"
 ---
 # <a name="xaml-namescopes"></a>XAML-NameScopes
 
@@ -32,7 +32,7 @@ Sie können auch die [**FindName**](https://msdn.microsoft.com/library/windows/a
 
 Technisch gesehen wird für das XAML selbst ein Markupcompilerdurchlauf durchgeführt, während gleichzeitig das XAML und die darin für CodeBehind definierte partielle Klasse gemeinsam kompiliert werden. Jedes Objektelement, für das im Markup ein **Name**- oder [x:Name-Attribut](x-name-attribute.md) definiert wurde, generiert ein internes Feld mit einem Namen, der mit dem XAML-Namen übereinstimmt. Dieses Feld ist anfänglich leer. Die Klasse generiert dann eine **InitializeComponent**-Methode, die erst aufgerufen wird, wenn das gesamte XAML geladen wurde. Anschließend werden durch die **InitializeComponent**-Logik alle internen Felder mit dem [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715)-Rückgabewert für die entsprechende Namenszeichenfolge aufgefüllt. Sie können diese Infrastruktur selbst erkennen, indem Sie sich die Dateien mit der Erweiterung ".g" (generiert) ansehen, die für die einzelnen XAML-Seiten nach der Kompilierung im /obj-Unterordner eines Projekts für eine Windows-Runtime-App erstellt werden. Sie können die Felder und die **InitializeComponent**-Methode auch als Member der erstellten Assemblys anzeigen, wenn Sie eine Reflexion über diese ausführen oder in anderer Weise ihre MSIL-Inhalte untersuchen.
 
-**Hinweis:** speziell für für VisualC++-komponentenerweiterungen (C++ / CX)-apps kein Sicherungsfeld für einen **X: Name** -Verweis nicht für das Stammelement einer XAML-Datei erstellt. Wenn Sie aus CodeBehind für C++/CX auf das Stammobjekt verweisen müssen, verwenden Sie andere APIs oder eine Strukturausnahme. Sie können beispielsweise erst [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) für ein bekanntes benanntes Unterelement und anschließend [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739) aufrufen.
+**Hinweis**für für VisualC++-Komponente Extensions (C++ / CX) apps ein dahinter liegendes Feld ein **X: Name** -Verweis nicht für das Stammelement einer XAML-Datei erstellt. Wenn Sie aus CodeBehind für C++/CX auf das Stammobjekt verweisen müssen, verwenden Sie andere APIs oder eine Strukturausnahme. Sie können beispielsweise erst [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) für ein bekanntes benanntes Unterelement und anschließend [**Parent**](https://msdn.microsoft.com/library/windows/apps/br208739) aufrufen.
 
 ## <a name="creating-objects-at-run-time-with-xamlreaderload"></a>Erstellen von Objekten zur Laufzeit mit XamlReader.Load
 

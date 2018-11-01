@@ -9,20 +9,20 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 19f381b7fbd53ee50d4589201edf74ac1f241d40
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5863498"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5919234"
 ---
 # <a name="bluetooth"></a>Bluetooth
-Dieser Abschnitt enthält Artikel zur Bluetooth-Integration in universelle Windows-Plattform (UWP) apps. Es gibt zwei unterschiedliche Bluetooth-Technologien, die Sie auswählen können, um in Ihrer app zu implementieren.
+Dieser Abschnitt enthält Artikel universelle Windows-Plattform (UWP) apps Bluetooth integrieren. Es gibt zwei verschiedene Bluetooth-Technologie, die Sie in Ihre Anwendung implementieren können.
 
 ## <a name="classic-bluetooth-rfcomm"></a>Klassische Bluetooth (RFCOMM)
-Bevor Sie Bluetooth LE verwendete Geräte häufig dieses Protokoll für die Kommunikation mit Bluetooth. Dieses Protokoll ist einfach und nützlich für die Kommunikation Gerät-zu-Gerät ohne Energieeffizienz. Weitere Informationen über dieses Protokoll, einschließlich Codebeispielen finden Sie im Thema [Bluetooth RFCOMM](send-or-receive-files-with-rfcomm.md) .
+Bluetooth-LE bisher Geräte häufig dieses Protokoll über Bluetooth kommunizieren. Dieses Protokoll ist einfach und Gerät-Kommunikation ohne Energieeffizienz. Weitere Informationen zu diesem Protokoll Codebeispielen finden Sie [Bluetooth RFCOMM](send-or-receive-files-with-rfcomm.md) .
 
-## <a name="bluetooth-low-energy-le"></a>Bluetooth Low-Energy (LE)
-Bluetooth Low Energy (LE) ist eine Spezifikation, die definiert Protokolle zur Ermittlung und die Kommunikation zwischen Geräten, die eine effiziente Nutzung Energiebedarf verfügen. Weitere Informationen einschließlich Codebeispiele finden Sie unter dem Thema [Bluetooth Low Energy](bluetooth-low-energy-overview.md) .
+## <a name="bluetooth-low-energy-le"></a>Bluetooth niedriger Energie (LE)
+Bluetooth Low Energy (LE) ist eine Spezifikation, die Protokolle für die Erkennung und Kommunikation zwischen Geräten, die eine effiziente Nutzung Energiebedarf definiert. Weitere Informationen, einschließlich Codebeispiele finden Sie die [Bluetooth Niedrigenergie](bluetooth-low-energy-overview.md) .
 
 ## <a name="see-also"></a>Siehe auch
 - [Bluetooth-Entwickler – Häufig gestellte Fragen](bluetooth-dev-faq.md)

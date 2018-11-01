@@ -9,54 +9,54 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 730d5ae9062fe39533cd615facaf5beaa7d02ffd
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5876083"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5919787"
 ---
 # <a name="composition-brushes"></a>Kompositionspinsel
-Alles, was von einer UWP-Anwendung auf dem Bildschirm sichtbar wird angezeigt, da es mit einem Pinsel gezeichnet wurde. Mithilfe von Pinseln können Sie Benutzer Objekte der Benutzeroberfläche (UI) mit Inhalt, angefangen bei einfachen, einfarbige Farben zu Bildern oder Zeichnungen für komplexe Effekte Kette zeichnen. In diesem Thema werden die Begriffe zum Zeichnen mit CompositionBrush.
+Alles aus einer Anwendung UWP auf dem Bildschirm sichtbar ist sichtbar, weil es mit einem Pinsel gezeichnet wurde. Pinsel können Sie Benutzer mit einfachen, einfarbige Farben Bilder oder Zeichnungen komplexer Effekte Kette von Benutzeroberflächen-Objekte zeichnen. Dieses Thema stellt die Konzepte mit CompositionBrush.
 
-Beachten Sie bei der Arbeit mit XAML-UWP-app können Sie sich entschieden, ein UIElement mit einem [XAML-Pinsel](/windows/uwp/design/style/brushes) oder ein [CompositionBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBrush)zu zeichnen. In der Regel ist es einfacher und ratsam, einen XAML-Pinsel auswählen, wenn Ihr Szenario von einem XAML-Pinsel unterstützt wird. Animieren z. B. die Farbe einer Schaltfläche, die Füllung ein Text oder eine Form mit einem Bild ändern. Andererseits, wenn Sie versuchen, eine Aktion ausführen, die nicht von einem XAML-Pinsel wie Zeichnen mit eine animierte Maske oder eine animierte neun Raster Stretch oder einer effektkette unterstützt wird, können eine CompositionBrush Sie ein UIElement durch die Verwendung von [Zeichnen XamlCompositionBrushBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase).
+Beachten Sie beim Arbeiten mit XAML UWP app kann sich ein UIElement mit [XAML-Pinsel](/windows/uwp/design/style/brushes) oder [CompositionBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBrush)zu zeichnen. Normalerweise ist es einfacher und ratsam XAML Pinsel wählen, wenn Ihr Szenario eines Pinsels XAML unterstützt. Animieren z. B. die Farbe einer Schaltfläche Ändern der Füllung einen Text oder eine Form mit einem Bild. Andererseits, wenn Sie versuchen, etwas zu tun, die nicht von einem XAML-Pinsel wie zeichnen eine animierte Maske oder eine animierte neun Raster verlängern einer effektkette unterstützt wird, können eine CompositionBrush Sie ein UIElement durch [Zeichnen XamlCompositionBrushBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase).
 
-Bei der Arbeit mit der visuellen Ebene muss eine CompositionBrush verwendet werden, um den Bereich einer [SpriteVisual](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.SpriteVisual)zu zeichnen.
+Beim Arbeiten mit der visuellen Ebene muss ein CompositionBrush Bereich [SpriteVisual](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.SpriteVisual)Zeichnen verwendet werden.
 
 -   [Voraussetzungen](./composition-brushes.md#prerequisites)
--   [Zeichnen mit CompositionBrush](./composition-brushes.md#paint-with-a-compositionbrush)
-    -   [Zeichnen Sie mit einer Volltonfarbe.](./composition-brushes.md#paint-with-a-solid-color)
-    -   [Zeichnen Sie mit einen linearen Farbverlauf](./composition-brushes.md#paint-with-a-linear-gradient)
-    -   [Zeichnen Sie mit einem Bild](./composition-brushes.md#paint-with-an-image)
-    -   [Zeichnen Sie mit einer benutzerdefinierten Zeichnung](./composition-brushes.md#paint-with-a-custom-drawing)
-    -   [Zeichnen Sie mit einem video](./composition-brushes.md#paint-with-a-video)
+-   [Mit CompositionBrush](./composition-brushes.md#paint-with-a-compositionbrush)
+    -   [Zeichnen Sie mit einer Volltonfarbe](./composition-brushes.md#paint-with-a-solid-color)
+    -   [Zeichnen Sie mit einem linearen Farbverlauf](./composition-brushes.md#paint-with-a-linear-gradient)
+    -   [Zeichnen mit einem Bild](./composition-brushes.md#paint-with-an-image)
+    -   [Eine benutzerdefinierte Zeichnung zeichnen](./composition-brushes.md#paint-with-a-custom-drawing)
+    -   [Zeichnen mit einem video](./composition-brushes.md#paint-with-a-video)
     -   [Zeichnen Sie mit einem Filtereffekt](./composition-brushes.md#paint-with-a-filter-effect)
-    -   [Zeichnen Sie mit einem CompositionBrush mit einer Deckkraftmaske](./composition-brushes.md#paint-with-a-compositionbrush-with-opacity-mask-applied)
-    -   [Zeichnen Sie mit einer CompositionBrush mit NineGrid stretch](./composition-brushes.md#paint-with-a-compositionbrush-using-ninegrid-stretch)
-    -   [Zeichnen mit Hintergrund Pixel](./composition-brushes.md#paint-using-background-pixels)
+    -   [Malen Sie mit einem CompositionBrush mit einer Deckkraftmaske](./composition-brushes.md#paint-with-a-compositionbrush-with-opacity-mask-applied)
+    -   [Zeichnen Sie mit einer CompositionBrush mit NineGrid Dehnen](./composition-brushes.md#paint-with-a-compositionbrush-using-ninegrid-stretch)
+    -   [Zeichnen mit Hintergrundpixel](./composition-brushes.md#paint-using-background-pixels)
 -   [Kombinieren von CompositionBrushes](./composition-brushes.md#combining-compositionbrushes)
--   [Verwenden eine XAML-Pinsel im Vergleich zu CompositionBrush](./composition-brushes.md#using-a-xaml-brush-vs-compositionbrush)
+-   [Mithilfe einer XAML-Pinsel und CompositionBrush](./composition-brushes.md#using-a-xaml-brush-vs-compositionbrush)
 -   [Verwandte Themen](./composition-brushes.md#related-topics)
 
 ## <a name="prerequisites"></a>Voraussetzungen
-In dieser Übersicht wird davon ausgegangen, dass Sie mit der Struktur einer einfachen kompositionsanwendung vertraut sind, wie in der [Übersicht über die visuelle Ebene](visual-layer.md)beschrieben.
+In dieser Übersicht wird davon ausgegangen, dass Sie mit einer einfachen Zusammensetzung Anwendung vertraut sind, wie in der [Übersicht über die visuelle Ebene](visual-layer.md).
 
-## <a name="paint-with-a-compositionbrush"></a>Zeichnen mit einem CompositionBrush
+## <a name="paint-with-a-compositionbrush"></a>Mit einem CompositionBrush
 
-Eine [CompositionBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBrush) zeichnet"" einen Bereich mit der zugehörigen Ausgabe. Verschiedene Pinsel haben unterschiedliche Ausgabetypen. Einige Pinsel zeichnen einen Bereich mit einer Volltonfarbe, andere mit einem Farbverlauf, Bild, benutzerdefiniertes Zeichnen oder Effekt. Es gibt auch spezielle Pinsel, die das Verhalten des anderen Pinseln ändern. Z. B. Deckkraftmaske kann verwendet werden, um zu steuern, welche Bereich durch eine CompositionBrush gezeichnet wird, oder ein neun-Raster kann verwendet werden, um steuern, die Stretch auf eine CompositionBrush angewendet wird, wenn Sie einen Bereich zu zeichnen. CompositionBrush kann von einem der folgenden Typen sein:
+[CompositionBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBrush) zeichnet"" einen Bereich mit zugehöriger Ausgabe. Verschiedene Pinsel haben unterschiedliche Ausgabetypen. Einige Pinsel zeichnen einen Bereich mit einer Volltonfarbe, andere mit einem Farbverlauf, Bild, zeichnen oder Effekt. Es gibt auch spezielle Pinsel, die das Verhalten des anderen Pinsel ändern. Z. B. Deckkraftmaske dienen zur Kontrolle von einer CompositionBrush der Bereich gezeichnet wird oder 9-Raster kann zur Steuerung der Strecken auf eine CompositionBrush angewendet, wenn einen Bereich zeichnen. CompositionBrush kann einer der folgenden Typen sein:
 
-|Klasse                                   |Details                                         |Eingeführt In|
+|Klasse                                   |Details                                         |Eingeführt|
 |-------------------------------------|---------------------------------------------------------|--------------------------------------|
-|[CompositionColorBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionColorBrush)         |Zeichnet einen Bereich mit einer Volltonfarbe.                        |Windows 10 November-Update (SDK 10586)|
-|[CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush)       |Zeichnet einen Bereich mit den Inhalt einer [ICompositionSurface](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Composition.ICompositionSurface)|Windows 10 November-Update (SDK 10586)|
-|[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)        |Zeichnet einen Bereich mit den Inhalten eines kompositionseffekts. |Windows 10 November-Update (SDK 10586)|
-|[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)          |Zeichnet ein visuelles Element mit einer CompositionBrush mit einer Deckkraftmaske |Windows 10 Anniversary Update (SDK 14393)
-|[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)      |Zeichnet einen Bereich mit einer CompositionBrush mit einem NineGrid stretch |Windows 10 Anniversary Update SDK (14393)
-|[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)|Zeichnet einen Bereich mit einem linearen Farbverlauf                    |Windows 10 Fall Creators Update (Insider Preview SDK)
-|[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)     |Zeichnet einen Bereich von sampling-Hintergrund Pixel aus der Anwendung oder Pixel direkt hinter das Fenster der Anwendung auf dem Desktop. Als Eingabe für eine andere CompositionBrush wie ein CompositionEffectBrush verwendet | Windows 10 Anniversary Update (SDK 14393)
+|[CompositionColorBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionColorBrush)         |Zeichnet einen Bereich mit einer Volltonfarbe                        |Windows10 November Update (SDK 10586)|
+|[CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush)       |Zeichnet einen Bereich mit einem [ICompositionSurface](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Composition.ICompositionSurface)|Windows10 November Update (SDK 10586)|
+|[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)        |Zeichnet einen Bereich mit dem Inhalt der Komposition Effekt |Windows10 November Update (SDK 10586)|
+|[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)          |Zeichnet ein visuelles mit einem CompositionBrush mit einer Deckkraftmaske |Windows10 Jubiläum Update (SDK 14393)
+|[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)      |Zeichnet einen Bereich mit einer CompositionBrush mit einer NineGrid verlängern |Windows10 Jubiläum Update SDK (14393)
+|[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)|Zeichnet einen Bereich mit einem linearen Farbverlauf                    |Windows 10 liegen Schöpfer Update (Insider Vorschau SDK)
+|[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)     |Zeichnet einen Bereich stichprobenweise Hintergrundpixel aus der Anwendung oder Pixel direkt hinter dem Anwendungsfenster auf Desktop. Verwendet als Eingabe für eine andere CompositionBrush wie ein CompositionEffectBrush | Windows 10 Jahre Update (SDK 14393)
 
-### <a name="paint-with-a-solid-color"></a>Zeichnen Sie mit einer Volltonfarbe.
+### <a name="paint-with-a-solid-color"></a>Zeichnen Sie mit einer Volltonfarbe
 
-Eine [CompositionColorBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionColorBrush) zeichnet einen Bereich mit einer Volltonfarbe. Es gibt eine Vielzahl von Möglichkeiten, um die Farbe eines SolidColorBrush angeben. Sie können z. B. angeben, seine Kanäle Alpha, Rot, Grün und Blau (ARGB) oder verwenden Sie eine der vordefinierten Farben durch die [Farben](https://docs.microsoft.com/uwp/api/windows.ui.colors) -Klasse bereitgestellt.
+[CompositionColorBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionColorBrush) zeichnet einen Bereich mit einer Volltonfarbe. Es gibt verschiedene Arten an die Farbe von SolidColorBrush. Beispielsweise können Sie die Kanäle Alpha, Rot, Blau und Grün (ARGB) angegeben oder verwenden Sie eine der [Farben](https://docs.microsoft.com/uwp/api/windows.ui.colors) -Klasse vordefinierten Farben.
 
 Die Abbildung und der Code zeigen im Folgenden eine kleine visuelle Struktur. Es wird ein Rechteck erstellt, dessen Konturen mit einem schwarzen Pinsel gezeichnet sind und das mit einem Pinsel in Volltonfarbe ausgefüllt ist, die den Farbwert „0x9ACD32“ hat.
 
@@ -86,11 +86,11 @@ _colorVisual2.Offset = new Vector3(3, 3, 0);
 _container.Children.InsertAtBottom(_colorVisual2);
 ```
 
-### <a name="paint-with-a-linear-gradient"></a>Zeichnen Sie mit einen linearen Farbverlauf
+### <a name="paint-with-a-linear-gradient"></a>Zeichnen Sie mit einem linearen Farbverlauf
 
-Eine [CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush) zeichnet einen Bereich mit einem linearen Farbverlauf. Ein linearer Farbverlauf mischt zwei oder mehr Farben entlang einer Linie, der Farbverlaufsachse an. Sie verwenden GradientStop-Objekte, um die Farben in den Farbverlauf und ihre Positionen anzugeben.
+[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush) zeichnet einen Bereich mit einem linearen Farbverlauf. Ein linearer Farbverlauf mischt zwei oder mehr Farben entlang einer Linie, der Farbverlaufsachse. GradientStop-Objekte verwenden Sie Farben im Farbverlauf und ihre Positionen an.
 
-Die folgende Abbildung und der Code zeigt ein SpriteVisual mit LinearGradientBrush 2 hindert, die mit einer roten und gelben Farbe gezeichnet.
+Die folgende Abbildung und Code zeigt ein SpriteVisual mit einem LinearGradientBrush 2 reagiert mit einer roten und gelben Farbe gezeichnet.
 
 ![CompositionLinearGradientBrush](images/composition-compositionlineargradientbrush.png)
 
@@ -109,11 +109,11 @@ _gradientVisual.Brush = _redyellowBrush;
 _gradientVisual.Size = new Vector2(156, 156);
 ```
 
-### <a name="paint-with-an-image"></a>Zeichnen Sie mit einem Bild
+### <a name="paint-with-an-image"></a>Zeichnen mit einem Bild
 
-Eine [CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) zeichnet einen Bereich mit Pixeln auf einer ICompositionSurface gerendert. Z. B. kann eine CompositionSurfaceBrush verwendet werden, um einen Bereich mit einem Bild auf einer ICompositionSurface Oberfläche mit [Loadedimagesource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.loadedimagesurface) API gerendert zu zeichnen.
+[CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) zeichnet einen Bereich mit Pixeln auf einer ICompositionSurface gerendert. Eine CompositionSurfaceBrush kann beispielsweise verwendet werden, zum Zeichnen eines Bereichs mit einem Bild auf einer ICompositionSurface mit [LoadedImageSurface](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.loadedimagesurface) API gerendert.
 
-Die folgende Abbildung und der Code zeigt, mit einer Bitmap einer lakritz gerendert auf eine ICompositionSurface Loadedimagesource mithilfe ein spritevisual-Elements gezeichnet. Die Eigenschaften des CompositionSurfaceBrush können die Bitmap innerhalb der Grenzen des visuellen Elements ausrichten und Strecken verwendet werden.
+Die folgende Abbildung und Code zeigt einen SpriteVisual mit einer Bitmap ein Süßholz dargestellt auf eine ICompositionSurface mit LoadedImageSurface gezeichnet. Die Eigenschaften des CompositionSurfaceBrush dienen und Ausrichten der Bitmaps innerhalb der Grenzen des visuellen.
 
 ![CompositionSurfaceBrush](images/composition-compositionsurfacebrush.png)
 
@@ -135,10 +135,10 @@ _imageVisual.Brush = _imageBrush;
 _imageVisual.Size = new Vector2(156, 156);
 ```
 
-### <a name="paint-with-a-custom-drawing"></a>Zeichnen Sie mit einer benutzerdefinierten Zeichnung
-Ein [CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) kann auch verwendet werden, um einen Bereich mit Pixeln aus einer ICompositionSurface gerendert mithilfe von [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm) (oder D2D) zeichnen.
+### <a name="paint-with-a-custom-drawing"></a>Eine benutzerdefinierte Zeichnung zeichnen
+[CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) kann auch verwendet werden, zum Zeichnen eines Bereichs mit Pixeln aus einem ICompositionSurface mit [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm) (oder D2D) gerendert.
 
-Der folgende Code zeigt, dass ein SpriteVisual mit einem führen Sie auf eine ICompositionSurface gerenderte Text gezeichnet mithilfe von Win2D. Beachten Sie, um Win2D zu verwenden, Sie das [Win2D-NuGet](http://www.nuget.org/packages/Win2D.uwp) -Paket in Ihr Projekt einschließen müssen.
+Der folgende Code zeigt, dass eine SpriteVisual mit Lauftext gerenderten auf ein ICompositionSurface gezeichnet mit Win2D. Hinweis Um Win2D benötigen Sie [Win2D NuGet](http://www.nuget.org/packages/Win2D.uwp) -Paket in das Projekt einschließen.
 
 ```cs
 Compositor _compositor;
@@ -176,12 +176,12 @@ _drawingVisual.Brush = _drawingBrush;
 _drawingVisual.Size = new Vector2(156, 156);
 ```
 
-Auf ähnliche Weise kann die CompositionSurfaceBrush auch zum Zeichnen eines spritevisual-Elements mit einem Win2D Interop verwenden Spielinhalte verwendet werden. [In diesem Beispiel](https://github.com/Microsoft/Win2D-Samples/tree/master/CompositionExample) enthält ein Beispiel zur Verwendung von Win2D zum Zeichnen eines spritevisual-Elements mit einem Spielinhalte.
+Ebenso kann die CompositionSurfaceBrush auch zum Zeichnen einer SpriteVisual mit einer SwapChain mit Win2D-Interop verwendet werden. [Dieses Beispiel](https://github.com/Microsoft/Win2D-Samples/tree/master/CompositionExample) enthält ein Beispiel zur Verwendung Win2D SpriteVisual mit einem Swapchain gezeichnet.
 
-### <a name="paint-with-a-video"></a>Zeichnen Sie mit einem video
-Ein [CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) kann auch verwendet werden, um einen Bereich mit Pixeln aus einer ICompositionSurface mit einem Video über der [MediaPlayer](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Playback.MediaPlayer) -Klasse geladen gerendert zu zeichnen.
+### <a name="paint-with-a-video"></a>Zeichnen mit einem video
+[CompositionSurfaceBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) kann auch verwendet werden, zum Zeichnen eines Bereichs mit Pixeln aus einer ICompositionSurface mit der [MediaPlayer](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Playback.MediaPlayer) -Klasse geladenen Videos gerendert.
 
-Der folgende Code zeigt, dass ein SpriteVisual mit einem Video auf einer ICompositionSurface geladen gezeichnet.
+Der folgende Code zeigt ein SpriteVisual mit einem Video auf einer ICompositionSurface geladen gezeichnet.
 
 ```cs
 Compositor _compositor;
@@ -209,9 +209,9 @@ _videoVisual.Size = new Vector2(156, 156);
 
 ### <a name="paint-with-a-filter-effect"></a>Zeichnen Sie mit einem Filtereffekt
 
-Eine [CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush) zeichnet einen Bereich mit der Ausgabe von einem CompositionEffect. Effekte in der visuellen Ebene können als animierbaren auf eine Auflistung von Quellinhalt z. B. Farben, Farbverläufe, Bilder, Videos, Swapchains, Regionen der Benutzeroberfläche oder Strukturen von visuellen Elementen angewendeten Filtereffekte betrachtet werden. Der Inhalt der Quelle wird in der Regel mit einer anderen CompositionBrush angegeben.
+[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush) zeichnet einen Bereich mit einem CompositionEffect. Effekte in der visuellen Ebene können als animierbar Filtereffekte Sammlung Quellinhalt wie Farben, Verläufe, Bilder, Videos, Swapchains, Bereiche der Benutzeroberfläche oder Strukturen Visuals betrachtet werden. Inhalt der Quelle wird normalerweise mit einer anderen CompositionBrush angegeben.
 
-Die folgende Abbildung und der Code zeigt ein spritevisual-Elements gezeichnet mit einem Bild einer Katze, die Sättigung Filtereffekt angewendet wurde.
+Die folgende Abbildung und Code zeigt einen SpriteVisual mit einem Cat, die Sättigung Filtereffekt gezeichnet.
 
 ![CompositionEffectBrush](images/composition-cat-desaturated.png)
 
@@ -241,13 +241,13 @@ _effectVisual.Brush = _effectBrush;
 _effectVisual.Size = new Vector2(156, 156);
 ```
 
-Weitere Informationen zum Erstellen eines Effekts mit CompositionBrushes finden Sie unter [Effekte in der visuellen Ebene](https://docs.microsoft.com/en-us/windows/uwp/composition/composition-effects)
+Weitere Informationen zum Erstellen eines Effekts mit CompositionBrushes finden Sie unter [Effekte auf visueller Ebene](https://docs.microsoft.com/en-us/windows/uwp/composition/composition-effects)
 
-### <a name="paint-with-a-compositionbrush-with-opacity-mask-applied"></a>Zeichnen Sie mit einem CompositionBrush mit Deckkraftmaske angewendet
+### <a name="paint-with-a-compositionbrush-with-opacity-mask-applied"></a>Malen Sie mit einem CompositionBrush mit Deckkraftmaske angewendet
 
-Eine [CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush) zeichnet einen Bereich mit einem CompositionBrush mit einer Deckkraftmaske angewendet wird. Die Quelle des die Deckkraftmaske kann alle CompositionBrush des Typs CompositionColorBrush, CompositionLinearGradientBrush, CompositionSurfaceBrush, CompositionEffectBrush oder CompositionNineGridBrush sein. Die Deckkraftmaske muss als eine CompositionSurfaceBrush angegeben werden.
+[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush) zeichnet einen Bereich mit einem CompositionBrush mit einer Deckkraftmaske angewendet. Die Quelle der Deckkraftmaske kann alle CompositionBrush des Typs CompositionColorBrush, CompositionLinearGradientBrush, CompositionSurfaceBrush, CompositionEffectBrush oder CompositionNineGridBrush sein. Die Deckkraftmaske muss als ein CompositionSurfaceBrush angegeben werden.
 
-Die folgende Abbildung und der Code zeigt ein Element, das mit einem CompositionMaskBrush SpriteVisual. Die Quelle der Maske ist ein CompositionLinearGradientBrush die maskiert wird, um einen Kreis mit einem Bild Kreises als Maske aussehen.
+Die folgende Abbildung und Code zeigt einen SpriteVisual mit einem CompositionMaskBrush gezeichnet. Die Maske ist ein CompositionLinearGradientBrush, wie einen Kreis mit einem Bild des Kreises als Maske maskiert.
 
 ![CompositionMaskBrush](images/composition-compositionmaskbrush.png)
 
@@ -273,11 +273,11 @@ _maskVisual.Brush = _maskBrush;
 _maskVisual.Size = new Vector2(156, 156);
 ```
 
-### <a name="paint-with-a-compositionbrush-using-ninegrid-stretch"></a>Zeichnen Sie mit einer CompositionBrush mit NineGrid stretch
+### <a name="paint-with-a-compositionbrush-using-ninegrid-stretch"></a>Zeichnen Sie mit einer CompositionBrush mit NineGrid Dehnen
 
-Eine [CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush) zeichnet einen Bereich mit einem CompositionBrush, die mit der neun Raster-gestreckt wird. Die neun Raster-können Sie Rahmen und Ecken von einem "compositionbrush" anders als den Mittelpunkt gestreckt. Die Quelle des der neun Raster Stretch kann, indem Sie alle CompositionBrush des Typs CompositionColorBrush, CompositionSurfaceBrush oder CompositionEffectBrush.
+[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush) zeichnet einen Bereich mit einer CompositionBrush 9-Raster Metapher gestreckt wird. 9-Raster Metapher können Sie Kanten und Ecken einer CompositionBrush anders als Mittelpunkt gestreckt. Die Quelle der neun Raster Strecken kann durch CompositionBrush des Typs CompositionColorBrush, CompositionSurfaceBrush oder CompositionEffectBrush.
 
-Der folgende Code zeigt, dass ein SpriteVisual mit einem CompositionNineGridBrush gezeichnet. Die Quelle der Maske ist ein CompositionSurfaceBrush die gestreckt wird mit einem neun-Raster.
+Der folgende Code zeigt ein SpriteVisual mit einem CompositionNineGridBrush gezeichnet. Die Maske ist ein CompositionSurfaceBrush, mit einem 9-Raster gestreckt wird.
 
 ```cs
 Compositor _compositor;
@@ -306,11 +306,11 @@ _nineGridVisual.Brush = _ninegridBrush;
 _nineGridVisual.Size = new Vector2(100, 75);
 ```
 
-### <a name="paint-using-background-pixels"></a>Zeichnen mit Hintergrund Pixel
+### <a name="paint-using-background-pixels"></a>Zeichnen mit Hintergrundpixel
 
-Eine [CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush) zeichnet einen Bereich mit den Inhalt hinter den Bereich. Eine CompositionBackdropBrush wird nie alleine verwendet, jedoch stattdessen als Eingabe für eine andere CompositionBrush wie ein EffectBrush verwendet wird. Beispielsweise können Sie einen Effekt Milchglas mithilfe einer CompositionBackdropBrush als Eingabe für einen Weichzeichnereffekt zu erzielen.
+[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush) zeichnet einen Bereich mit dem Inhalt hinter dem. Ein CompositionBackdropBrush wird nie verwendet, aber wird als Eingabe für eine andere CompositionBrush wie ein EffectBrush verwendet. Beispielsweise können Sie mithilfe einer CompositionBackdropBrush als Eingabe für einen Weichzeichner eine Milchglas Wirkung erzielen.
 
-Der folgende Code zeigt eine kleine visuelle Struktur ein Bild mit CompositionSurfaceBrush und eine Überlagerung Milchglas über dem Bild erstellt. Die Überlagerung Milchglas wird durch das Platzieren eines spritevisual-Elements mit einem EffectBrush über dem Bild gefüllt erstellt. Die EffectBrush verwendet eine CompositionBackdropBrush als Eingabe für den Weichzeichnereffekt zu.
+Der folgende Code zeigt eine kleine visuelle Struktur zum Erstellen eines Abbildes mit CompositionSurfaceBrush und ein Glas Overlay über dem Bild. Milchglas Overlay wird erstellt, mit einem SpriteVisual mit einem EffectBrush über dem Bild gefüllt. Die EffectBrush verwendet einen CompositionBackdropBrush als Eingabe für den Weichzeichnereffekt.
 
 ```cs
 Compositor _compositor;
@@ -363,7 +363,7 @@ _containerVisual.Children.InsertAtTop(_backdropVisual);
 ```
 
 ## <a name="combining-compositionbrushes"></a>Kombinieren von CompositionBrushes
-Eine Reihe von CompositionBrushes verwenden Sie andere CompositionBrushes als Eingaben. Beispielsweise kann mithilfe der Methode SetSourceParameter verwendet werden zu einem anderen CompositionBrush als Eingabe für eine CompositionEffectBrush festgelegt. Die folgende Tabelle skizziert die unterstützten Kombinationen von CompositionBrushes. Beachten Sie, dass eine nicht unterstützte Kombination eine Ausnahme ausgelöst wird.
+Anzahl der CompositionBrushes verwenden andere CompositionBrushes als Eingabe. Beispielsweise kann mithilfe der SetSourceParameter-Methode verwendet werden zu einem anderen CompositionBrush als Eingabe für eine CompositionEffectBrush festgelegt. In der folgenden Tabelle werden die unterstützten Kombinationen von CompositionBrushes. Beachten Sie, dass eine nicht unterstützte Kombination eine Ausnahme ausgelöst.
 
 <table>
 <tbody>
@@ -427,33 +427,33 @@ Eine Reihe von CompositionBrushes verwenden Sie andere CompositionBrushes als Ei
 </table>
 
 
-## <a name="using-a-xaml-brush-vs-compositionbrush"></a>Verwenden eine XAML-Pinsel im Vergleich zu CompositionBrush
+## <a name="using-a-xaml-brush-vs-compositionbrush"></a>Mithilfe einer XAML-Pinsel und CompositionBrush
 
-Die folgende Tabelle enthält eine Liste mit Szenarien und gibt an, ob XAML oder Komposition Pinsel verwenden beim Zeichnen von UIElement oder eines spritevisual-Elements in Ihrer Anwendung vorgeschrieben ist. 
+Folgende Tabelle enthält eine Liste der Szenarien und beim "UIElement" oder eine SpriteVisual in der Anwendung, ob XAML oder Komposition Pinsel verwenden vorgeschrieben. 
 
 > [!NOTE]
-> Wenn ein CompositionBrush für ein XAML-UIElement vorgeschlagen wird, wird davon ausgegangen, dass die CompositionBrush verpackt ist eine XamlCompositionBrushBase verwenden.
+> Wenn ein CompositionBrush für ein UIElement XAML vorgeschlagen, davon aus, dass der CompositionBrush mit einer XamlCompositionBrushBase gepackt ist.
 
 |Szenario                                                                   | XAML-UIElement                                                                                                |Komposition SpriteVisual
 |---------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|----------------------------------
-|Zeichnen eines Bereichs mit Volltonfarbe.                                             |[SolidColorBrush](https://msdn.microsoft.com/library/windows/apps/BR242962)                                |[CompositionColorBrush](https://msdn.microsoft.com/library/windows/apps/Mt589399)
-|Zeichnen eines Bereichs mit animierten Farbe                                          |[SolidColorBrush](https://msdn.microsoft.com/library/windows/apps/BR242962)                                |[CompositionColorBrush](https://msdn.microsoft.com/library/windows/apps/Mt589399)
+|Zeichnen eines Bereichs mit Volltonfarbe                                             |[SolidColorBrush](https://msdn.microsoft.com/library/windows/apps/BR242962)                                |[CompositionColorBrush](https://msdn.microsoft.com/library/windows/apps/Mt589399)
+|Zeichnen eines Bereichs mit animierten                                          |[SolidColorBrush](https://msdn.microsoft.com/library/windows/apps/BR242962)                                |[CompositionColorBrush](https://msdn.microsoft.com/library/windows/apps/Mt589399)
 |Zeichnen eines Bereichs mit einem statischen Farbverlauf                                       |[LinearGradientBrush](https://msdn.microsoft.com/library/windows/apps/BR210108)                            |[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)
 |Zeichnen eines Bereichs mit animierten Farbverlaufsstopps                                 |[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)                                                                                 |[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)
 |Zeichnen eines Bereichs mit einem Bild                                                |[ImageBrush](https://msdn.microsoft.com/library/windows/apps/BR210101)                                     |[CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415)
 |Zeichnen eines Bereichs mit einer Webseite                                               |[WebViewBrush](https://msdn.microsoft.com/library/windows/apps/BR227703)                                   |n.a.
-|Zeichnen eines Bereichs mit einem Bild mit NineGrid stretch                         |[Image-Steuerelement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image)                   |[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)
-|Zeichnen eines Bereichs mit animierten NineGrid stretch                               |[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)                                                                                       |[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)
-|Zeichnen eines Bereichs mit einem Spielinhalte                                             |[SwapChainPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel)                                                                                                 |[CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415) mit Spielinhalte Interoperabilität
-|Zeichnen eines Bereichs mit einem video                                                 |[MediaElement](https://msdn.microsoft.com/library/windows/apps/mt187272.aspx)                                                                                                  |[CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415) mit Media-Interoperabilität
-|Zeichnen eines Bereichs mit benutzerdefinierten 2D Zeichnung                                       |[CanvasControl](http://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_UI_Xaml_CanvasControl.htm) von Win2D                                                                                                 |[CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415) mit Win2D-Interoperabilität
-|Zeichnen eines Bereichs mit nicht animierte Maske                                       |Verwenden Sie XAML- [Formen](https://docs.microsoft.com/windows/uwp/graphics/drawing-shapes) , um eine Maske definieren   |[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)
+|Zeichnen eines Bereichs mit einem Bild mit NineGrid Dehnen                         |[Bild-Steuerelement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image)                   |[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)
+|Zeichnen eines Bereichs mit animierten NineGrid                               |[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)                                                                                       |[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)
+|Zeichnen eines Bereichs mit einem swapchain                                             |[SwapChainPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel)                                                                                                 |[CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415) mit Swapchain interop
+|Zeichnen eines Bereichs mit einem video                                                 |[MediaElement](https://msdn.microsoft.com/library/windows/apps/mt187272.aspx)                                                                                                  |[CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415) mit Medien interop
+|Zeichnen eines Bereichs mit benutzerdefinierten 2D-Zeichnung                                       |[CanvasControl](http://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_UI_Xaml_CanvasControl.htm) von Win2D                                                                                                 |[CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415) mit Win2D-interop
+|Zeichnen eines Bereichs mit nicht animierte Maske                                       |Verwenden Sie XAML- [Shapes](https://docs.microsoft.com/windows/uwp/graphics/drawing-shapes) , um eine Maske definieren   |[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)
 |Zeichnen eines Bereichs mit eine animierte Maske                                        |[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)                                                                                           |[CompositionMaskBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionMaskBrush)
-|Zeichnen eines Bereichs mit einem Filtereffekt animierte                               |[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)                                                                                         |[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)
-|Zeichnen eines Bereichs mit einem Effekt auf Hintergrund Pixel angewendet        |[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)                                                                                        |[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)
+|Zeichnen eines Bereichs mit einer animierten Filtereffekt                               |[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)                                                                                         |[CompositionEffectBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionEffectBrush)
+|Zeichnen eines Bereichs mit einem Hintergrundpixel angewendetem Effekt        |[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)                                                                                        |[CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBackdropBrush)
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-[Komposition native DirectX und Direct2D-Interoperabilität mit "beginDraw" und "EndDraw"](composition-native-interop.md)
+[Komposition systemeigenen DirectX und Direct2D Interop mit BeginDraw und EndDraw](composition-native-interop.md)
 
-[XAML-Pinsel-Interoperabilität mit XamlCompositionBrushBase](/windows/uwp/design/style/brushes#xamlcompositionbrushbase)
+[XAML-Pinsel Interop mit XamlCompositionBrushBase](/windows/uwp/design/style/brushes#xamlcompositionbrushbase)

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, DirectX, Schattenvolumen, Tiefenpuffer, DirectX 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 269f8423795d7c2515ce555cf8e65f14a8c63431
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5884074"
+ms.locfileid: "5919685"
 ---
 # <a name="walkthrough-implement-shadow-volumes-using-depth-buffers-in-direct3d-11"></a>Exemplarische Vorgehensweise - Implementieren von Schattenvolumen mithilfe von Tiefenpuffern in Direct3D 11
 
@@ -57,7 +57,7 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie Schattenvolumen mi
 ## <a name="shadow-mapping-application-to-direct3d-9-desktop-porting"></a>Schattenabbildung – Portieren von Direct3D9-Desktop-Apps
 
 
-Windows8 den tiefenvergleich hinzugefügt Funktionen auf Featureebene 9\_1 und 9\_3. Jetzt können Sie Renderingcode mit Schattenvolumen zu DirectX11 migrieren. Der Direct3D11-Renderer ist abwärtskompatibel mit Geräten der Featureebene9. In dieser exemplarischen Vorgehensweise zeigen wir, wie herkömmliche Schattenvolumen mit Tiefentests in Direct3D11-Apps oder -Spielen implementiert werden können. Der Code umfasst die folgenden Prozesse:
+Windows8 Adde d Tiefe Vergleichsfunktion auf Ebene 9\_1 und 9\_3. Jetzt können Sie Renderingcode mit Schattenvolumen zu DirectX11 migrieren. Der Direct3D11-Renderer ist abwärtskompatibel mit Geräten der Featureebene9. In dieser exemplarischen Vorgehensweise zeigen wir, wie herkömmliche Schattenvolumen mit Tiefentests in Direct3D11-Apps oder -Spielen implementiert werden können. Der Code umfasst die folgenden Prozesse:
 
 1.  Erstellen von Direct3D-Geräteressourcen für die Schattenabbildung
 2.  Hinzufügen eines Renderingdurchgangs zum Erstellen der Tiefenkarte
@@ -70,7 +70,7 @@ Nach Abschluss dieser exemplarischen Vorgehensweise wissen Sie, wie Sie eine ein
 ## <a name="prerequisites"></a>Voraussetzungen
 
 
-Führen Sie die Schritte unter [Vorbereiten der Entwicklungsumgebung für die Entwicklung von Spielen für die universelle Windows-Plattform (UWP) und DirectX](prepare-your-dev-environment-for-windows-store-directx-game-development.md) aus. Sie benötigen eine Vorlage noch, aber Sie benötigen Microsoft Visual Studio2015 auf das Codebeispiel für diese exemplarische Vorgehensweise erstellen.
+Führen Sie die Schritte unter [Vorbereiten der Entwicklungsumgebung für die Entwicklung von Spielen für die universelle Windows-Plattform (UWP) und DirectX](prepare-your-dev-environment-for-windows-store-directx-game-development.md) aus. Sie brauchen eine Vorlage noch, aber Microsoft Visual Studio2015 zum Beispiel Code für diese exemplarische Vorgehensweise benötigen.
 
 ## <a name="related-topics"></a>Verwandte Themen
 

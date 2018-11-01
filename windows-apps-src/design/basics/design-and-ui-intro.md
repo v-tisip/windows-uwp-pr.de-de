@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 422a6b40c86a84367054a20cabe1a0b0a32cb89d
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5881435"
+ms.locfileid: "5919764"
 ---
 # <a name="introduction-to-uwp-app-design"></a>Einführung in das UWP-App-Design
 
@@ -27,11 +27,11 @@ Diese Einführung bietet einen Überblick über die universellen Designfunktione
 
 ## <a name="effective-pixels-and-scaling"></a>Effektive Pixel und Skalierung
 
-UWP-apps, die aus Ihrem Fernsehgerät, Tablets oder PCs auf allen [Windows 10-Geräten](../devices/index.md)ausgeführt werden. Wie also entwerfen Sie eine Benutzeroberfläche, die auf einer Vielzahl von Geräten und Bildschirmgrößen gut aussieht?
+UWP-apps führen auf allen [Windows 10 Geräte](../devices/index.md)Fernsehsendung zu Ihrem Tablet PC. So gestalten Sie eine Benutzeroberfläche, die auf eine Vielzahl von Geräten und Bildschirmgrößen?
 
 ![Dieselbe App auf verschiedenen Geräten](images/universal-image-1.jpg)
 
-UWP unterstützt, indem Sie UI-Elemente automatisch anpassen, sodass sie lesbar und leicht zu interagieren auf allen Geräten und Bildschirmgrößen stehen.
+UWP kann von Benutzeroberflächenelementen automatisch angepasst, so, dass sie lesbar und einfach auf allen Geräten und Bildschirmgrößen interagieren.
 
 Wenn Ihre App auf einem Gerät ausgeführt wird, verwendet das System einen Algorithmus, um die Art der Anzeige der UI-Elemente auf dem Bildschirm zu normalisieren. Dieser Skalierungsalgorithmus berücksichtigt den Abstand zum Bildschirm und die Bildschirmdichte (Pixel pro Zoll), um die wahrgenommene Größe (anstelle der physischen Größe) zu optimieren. Mit dem Skalierungsalgorithmus wird sichergestellt, dass der Schriftgrad 24 Pixel auf einem 3 Meter entfernten Surface Hub genauso für den Benutzer lesbar ist wie der Schriftgrad 24 Pixel auf einem 5-Zoll-Smartphone, das nur einige Zentimeter entfernt ist.
 

@@ -15,11 +15,11 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 987202969f22a5b1b34efc9089ea7f7f08282d8c
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5868456"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5919108"
 ---
 # <a name="parallax"></a>Parallax
 
@@ -108,8 +108,8 @@ ParallaxView passt die Größe des Bilds automatisch an den entsprechenden Paral
 
 Mithilfe der Eigenschaften VerticalShift und HorizontalShift können Sie das Ausmaß des Parallax-Effekts steuern.
 
-* Die VerticalShift-Eigenschaft gibt an, wie weit der Hintergrund während des gesamten Parallax-Vorgangs vertikal verschoben werden soll. Ein Wert von 0 bedeutet nicht der Hintergrund überhaupt verschoben.
-* Die HorizontalShift-Eigenschaft gibt an, wie weit der Hintergrund während des gesamten Parallax-Vorgangs horizontal verschoben werden soll. Ein Wert von 0 bedeutet nicht der Hintergrund überhaupt verschoben.
+* Die VerticalShift-Eigenschaft gibt an, wie weit der Hintergrund während des gesamten Parallax-Vorgangs vertikal verschoben werden soll. Der Wert 0 bedeutet keine Hintergrund bewegen.
+* Die HorizontalShift-Eigenschaft gibt an, wie weit der Hintergrund während des gesamten Parallax-Vorgangs horizontal verschoben werden soll. Der Wert 0 bedeutet keine Hintergrund bewegen.
 
 Mit höheren Werten lassen sich dramatischere Effekte erzeugen. 
 

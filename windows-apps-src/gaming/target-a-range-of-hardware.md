@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Spiele, Schattenmaps, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: a9c53578fc67c13aafa1c8e39ad1d2910981081d
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5884991"
+ms.locfileid: "5925490"
 ---
 # <a name="support-shadow-maps-on-a-range-of-hardware"></a>Unterstützen von Schattenmaps für unterschiedliche Hardware
 
