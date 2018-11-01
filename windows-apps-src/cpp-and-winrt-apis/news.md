@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Standard, c++, Cpp, Winrt, Projektion, Neuigkeiten, was die neue
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ada059dc2acfa96dd61b6f3460e25736d96ff68
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5836762"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5885668"
 ---
 # <a name="whats-new-in-cwinrt"></a><span data-ttu-id="8ba5b-104">Neuigkeiten in C++ / WinRT</span><span class="sxs-lookup"><span data-stu-id="8ba5b-104">What's new in C++/WinRT</span></span>
 

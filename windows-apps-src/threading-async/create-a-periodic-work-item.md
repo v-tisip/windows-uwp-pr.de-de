@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, regelmäßige Arbeitsaufgabe, Threading, Timer
 ms.localizationpriority: medium
 ms.openlocfilehash: 4afa137b01738c42f8e15c95ef09ec921d1e44ae
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5838516"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5885919"
 ---
 # <a name="create-a-periodic-work-item"></a><span data-ttu-id="4cab2-104">Erstellen einer regelmäßigen Arbeitsaufgabe</span><span class="sxs-lookup"><span data-stu-id="4cab2-104">Create a periodic work item</span></span>
 
