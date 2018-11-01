@@ -15,11 +15,11 @@ dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ee00a9af23be945ad27ab4b39eec127ec397894
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5830272"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5884399"
 ---
 # <a name="list-view-and-grid-view"></a><span data-ttu-id="49dd6-103">Listenansicht und Rasteransicht</span><span class="sxs-lookup"><span data-stu-id="49dd6-103">List view and grid view</span></span>
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: c5c7bfcb06eb673b0516cef7882685ebd19ddb97
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5836922"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5880613"
 ---
 # <a name="using-lights-in-windows-ui"></a><span data-ttu-id="774ba-104">Verwendung von Licht in Windows-Benutzeroberfläche</span><span class="sxs-lookup"><span data-stu-id="774ba-104">Using lights in Windows UI</span></span>
 

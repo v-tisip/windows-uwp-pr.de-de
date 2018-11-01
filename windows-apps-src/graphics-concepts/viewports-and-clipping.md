@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 4dd319c686bebf2a30431017f399f48b08618cb6
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5824265"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5880318"
 ---
 # <a name="viewports-and-clipping"></a><span data-ttu-id="59d16-104">Viewports und Zuschneiden</span><span class="sxs-lookup"><span data-stu-id="59d16-104">Viewports and clipping</span></span>
 

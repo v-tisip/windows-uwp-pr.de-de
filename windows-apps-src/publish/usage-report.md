@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, Uwp, Verwendung, benutzerdefiniertes Ereignis, Bericht, Telemetrie, Benutzersitzungen
 ms.localizationpriority: medium
 ms.openlocfilehash: f07f107a5136ee50cd87032fa3911ab65d33b7c1
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5831057"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5882067"
 ---
 # <a name="usage-report"></a><span data-ttu-id="57886-103">Nutzungsbericht</span><span class="sxs-lookup"><span data-stu-id="57886-103">Usage report</span></span>
 

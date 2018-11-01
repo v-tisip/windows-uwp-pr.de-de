@@ -14,11 +14,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 423634acc2d3806b4652618331fafd68c908e477
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5834337"
+ms.locfileid: "5878198"
 ---
 # <a name="text-block"></a><span data-ttu-id="56049-103">Textblock</span><span class="sxs-lookup"><span data-stu-id="56049-103">Text block</span></span>
 

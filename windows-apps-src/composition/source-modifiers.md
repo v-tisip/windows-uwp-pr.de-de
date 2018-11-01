@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, Uwp, animation
 ms.localizationpriority: medium
 ms.openlocfilehash: 997082d2ed7375d99a7be1543901d1dd854be1a0
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5835047"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5882275"
 ---
 # <a name="pull-to-refresh-with-source-modifiers"></a><span data-ttu-id="2ecf8-104">Pull-to-Refresh mit Source-Modifiern</span><span class="sxs-lookup"><span data-stu-id="2ecf8-104">Pull-to-refresh with source modifiers</span></span>
 

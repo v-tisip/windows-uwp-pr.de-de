@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 422a6b40c86a84367054a20cabe1a0b0a32cb89d
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5823821"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5881435"
 ---
 # <a name="introduction-to-uwp-app-design"></a><span data-ttu-id="742da-103">Einführung in das UWP-App-Design</span><span class="sxs-lookup"><span data-stu-id="742da-103">Introduction to UWP app design</span></span>
 

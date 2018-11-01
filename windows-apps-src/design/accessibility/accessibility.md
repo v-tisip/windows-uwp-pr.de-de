@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 5827bf0c9ddb7f5ebbab3f34e40e08d1620b6e0c
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5834241"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5883792"
 ---
 # <a name="accessibility"></a><span data-ttu-id="4d365-103">Eingabehilfen</span><span class="sxs-lookup"><span data-stu-id="4d365-103">Accessibility</span></span>  
 

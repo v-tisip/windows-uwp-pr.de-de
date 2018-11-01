@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 946e8421cf21c37c929e7a9f9687117c3d7aca92
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 10/31/2018
-ms.locfileid: "5833260"
+ms.locfileid: "5878771"
 ---
 # <a name="store-and-retrieve-windows-ink-stroke-data"></a><span data-ttu-id="aef6c-103">Speichern und Abrufen der Daten zu Windows Ink-Strichen</span><span class="sxs-lookup"><span data-stu-id="aef6c-103">Store and retrieve Windows Ink stroke data</span></span>
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Erstellen einer App-Übermittlung
 ms.localizationpriority: medium
 ms.openlocfilehash: 740e65d79636c9e5451e68fa84ce2eae4e3252c6
-ms.sourcegitcommit: ca96031debe1e76d4501621a7680079244ef1c60
+ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "5822091"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "5879144"
 ---
 # <a name="create-an-app-submission"></a><span data-ttu-id="70187-104">Erstellen einer App-Übermittlung</span><span class="sxs-lookup"><span data-stu-id="70187-104">Create an app submission</span></span>
 
