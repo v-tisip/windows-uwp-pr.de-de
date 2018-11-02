@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 9674aeed846fab53de3ecb057ebcc46dbda560c3
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5862256"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5929660"
 ---
 # <a name="xbind-markup-extension"></a><span data-ttu-id="b4ecf-105">{x:Bind}-Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="b4ecf-105">{x:Bind} markup extension</span></span>
 

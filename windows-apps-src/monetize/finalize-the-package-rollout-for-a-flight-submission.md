@@ -9,11 +9,11 @@ keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Paketrollout, Flig
 ms.assetid: e4a645f6-1f00-4af5-80d6-d2ee179acc8a
 ms.localizationpriority: medium
 ms.openlocfilehash: 896fec01072f23d11bf949626b309be836958beb
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5873313"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5926983"
 ---
 # <a name="finalize-the-rollout-for-a-flight-submission"></a><span data-ttu-id="d6c61-104">Abschließen des Rollouts für eine Flight-Paketübermittlung</span><span class="sxs-lookup"><span data-stu-id="d6c61-104">Finalize the rollout for a flight submission</span></span>
 

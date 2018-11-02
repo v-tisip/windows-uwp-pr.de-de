@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e042a9bbedee3ded0601eda06da8e349c4b788c
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5880800"
+ms.locfileid: "5929555"
 ---
 # <a name="specify-the-speech-recognizer-language"></a><span data-ttu-id="6c8bd-103">Festlegen der Sprache für die Spracherkennung</span><span class="sxs-lookup"><span data-stu-id="6c8bd-103">Specify the speech recognizer language</span></span>
 

@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a8523f4895c541ffb3b92ee00d5b62c57343ae00
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5872124"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5932066"
 ---
 # <a name="hlsl-streaming-resources-exposure"></a><span data-ttu-id="13157-104">Exposition von HLSL-Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="13157-104">HLSL streaming resources exposure</span></span>
 

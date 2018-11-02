@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 726dc4aaa34b9b68aa198e236abcef57b78b21f4
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5879344"
+ms.locfileid: "5927243"
 ---
 # <a name="uwp-components-and-optimizing-interop"></a><span data-ttu-id="88df3-104">UWP-Komponenten und Optimieren der Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="88df3-104">UWP Components and optimizing interop</span></span>
 

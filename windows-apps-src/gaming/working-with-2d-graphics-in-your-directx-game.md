@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Directx, 2D, Grafiken
 ms.localizationpriority: medium
 ms.openlocfilehash: 8628588cdc20179e9505e45694d43788eb1d7cb6
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5874314"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5929035"
 ---
 # <a name="2d-graphics-for-directx-games"></a><span data-ttu-id="d1d2b-104">2D-Grafiken für DirectX-Spiele</span><span class="sxs-lookup"><span data-stu-id="d1d2b-104">2D graphics for DirectX games</span></span>
 

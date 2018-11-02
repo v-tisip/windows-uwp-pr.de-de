@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b39f68d6f5f00f8e33a080b77614b9ba11627989
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5880423"
+ms.locfileid: "5927045"
 ---
 # <a name="mvvm-and-language-performance-tips"></a><span data-ttu-id="0ab24-104">Tipps zu MVVM und Sprachleistung</span><span class="sxs-lookup"><span data-stu-id="0ab24-104">MVVM and language performance tips</span></span>
 

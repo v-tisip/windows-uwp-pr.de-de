@@ -14,11 +14,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 844e5d8e9442192d75f2aac07a7a2f82dd0196f3
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5869339"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5932535"
 ---
 # <a name="access-keys"></a><span data-ttu-id="aec54-103">Zugriffstasten</span><span class="sxs-lookup"><span data-stu-id="aec54-103">Access keys</span></span>
 
