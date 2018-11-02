@@ -8,19 +8,19 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Überprüfen Sie Windows 10, Uwp, reagiert, Antworten
 ms.localizationpriority: medium
-ms.openlocfilehash: 823ca28618540dbaab1f4e5711ee59d277b0c894
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.openlocfilehash: 32ded7cc66cda75fbb6edb9ab9d84c21c2d02cff
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5877164"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5930809"
 ---
 # <a name="respond-to-customer-reviews"></a>Reagieren auf Kundenrezensionen
 
 
 Sie können auf Rezensionen Ihrer App zu ermöglichen, dass Kunden wissen, dass Sie ihr Feedback ernst reagieren. Wenn Sie auf Kritiken antworten, können Sie Kunden über neue Features oder behobene Schwachstellen informieren, die in Bezug zu ihren Kommentaren stehen, oder Sie erhalten detaillierteres Feedback mit Verbesserungsvorschlägen für Ihre App. Ihre Antworten werden im Microsoft Store für alle Windows 10-Kunden angezeigt. Sie können auch auswählen, um Ihre Antwort per e-Mail an den Kunden senden (sofern er noch nicht Deaktivierung wurde ausgeführt und ein Gerät mit Windows 10, Version 1803 oder höher).
 
-Um Rezensionen Ihrer app anzuzeigen und Antworten bereitzustellen, suchen Sie die app im [Partner Center](https://partner.microsoft.com/dashboard). Klicken Sie im linken Navigationsmenü erweitern Sie **Analysieren** , und klicken Sie dann auf **Rezensionen** , um den [Bericht "Rezensionen"](reviews-report.md)anzuzeigen. Wählen Sie aus, um Ihre Antwort bereitzustellen, **reagieren, um zu überprüfen** .
+Um Rezensionen Ihrer app anzuzeigen und Antworten bereitzustellen, suchen Sie die app im [Partner Center](https://partner.microsoft.com/dashboard). Erweitern Sie im linken Navigationsmenü *Analytics**, und klicken Sie dann auf **Rezensionen** , um den [Bericht "Rezensionen"](reviews-report.md)anzuzeigen. Wählen Sie aus, um Ihre Antwort bereitzustellen, **reagieren, um zu überprüfen** .
 
 > [!TIP]
 > Zusätzlich zur Verwendung von Partner Center zum Reagieren auf Rezensionen, können Sie auf Rezensionen [programmgesteuert](../monetize/submit-responses-to-app-reviews.md)oder über die [Dev Center-app](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws)reagieren.
