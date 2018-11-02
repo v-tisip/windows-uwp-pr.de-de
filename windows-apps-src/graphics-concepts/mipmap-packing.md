@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: ec3d091d7cc5aca82aeef9a3e7f29a8d363705a3
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5937123"
+ms.locfileid: "5976519"
 ---
 # <a name="mipmap-packing"></a><span data-ttu-id="8e4b4-104">Mip-Map-Verpackung</span><span class="sxs-lookup"><span data-stu-id="8e4b4-104">Mipmap packing</span></span>
 

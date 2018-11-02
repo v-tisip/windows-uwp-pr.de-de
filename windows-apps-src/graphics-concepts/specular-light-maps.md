@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6bd9db0afa914ef7a56dbd55c938129b86a43743
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5937388"
+ms.locfileid: "5972228"
 ---
 # <a name="specular-light-maps"></a><span data-ttu-id="384f5-104">Glanzlichtzuordnungen</span><span class="sxs-lookup"><span data-stu-id="384f5-104">Specular light maps</span></span>
 

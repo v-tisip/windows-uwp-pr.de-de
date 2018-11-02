@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e91c707b31de859d61ae926518c40812758320e
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5937980"
+ms.locfileid: "5978135"
 ---
 # <a name="anisotropic-texture-filtering"></a><span data-ttu-id="e79ec-105">Anisotropische Texturfilterung</span><span class="sxs-lookup"><span data-stu-id="e79ec-105">Anisotropic texture filtering</span></span>
 
