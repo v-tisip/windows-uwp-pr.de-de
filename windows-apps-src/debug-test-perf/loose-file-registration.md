@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, geräteportal, apps-Manager, Bereitstellung, sdk
 ms.localizationpriority: medium
 ms.openlocfilehash: 16dc7c3d8182e249134be941d466574cddc36157
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5888432"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5944908"
 ---
 # <a name="deploy-an-app-through-loose-file-registration"></a>Bereitstellen einer App über Registrieren loser Dateien 
 

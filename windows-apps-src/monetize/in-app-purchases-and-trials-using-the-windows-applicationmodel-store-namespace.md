@@ -9,11 +9,11 @@ ms.topic: article
 keywords: uwp, in-app-käufe, IAPs, add-ons, testversionen, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 330631afed95c3b0082de69d9369a62aad5a66d5
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5865324"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5945847"
 ---
 # <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>In-App-Käufe und Testversionen mit dem Windows.ApplicationModel.Store-Namespace
 
