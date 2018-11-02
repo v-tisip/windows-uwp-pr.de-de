@@ -10,29 +10,29 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b6e3f8080d33f9aadf22d5d5b1ebdd9a4739e16
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5918897"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5981061"
 ---
-# <a name="address-space-available-for-streaming-resources"></a><span data-ttu-id="35f15-104">Zuordnen des verfügbaren Speicherplatzes für Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="35f15-104">Address space available for streaming resources</span></span>
+# <a name="address-space-available-for-streaming-resources"></a><span data-ttu-id="3d64a-104">Zuordnen des verfügbaren Speicherplatzes für Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="3d64a-104">Address space available for streaming resources</span></span>
 
 
-<span data-ttu-id="35f15-105">In diesem Abschnitt wird der für Streamingressourcen verfügbare virtuelle Adressraum aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="35f15-105">This section specifies the virtual address space that is available for streaming resources.</span></span>
+<span data-ttu-id="3d64a-105">In diesem Abschnitt wird der für Streamingressourcen verfügbare virtuelle Adressraum aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="3d64a-105">This section specifies the virtual address space that is available for streaming resources.</span></span>
 
-<span data-ttu-id="35f15-106">Bei 64-Bit-Betriebssystemen ist mindestens 40Bit virtueller Adressraum (1Terabyte) verfügbar.</span><span class="sxs-lookup"><span data-stu-id="35f15-106">On 64-bit operating systems, at least 40 bits of virtual address space (1 Terabyte) is available.</span></span>
+<span data-ttu-id="3d64a-106">Bei 64-Bit-Betriebssystemen ist mindestens 40Bit virtueller Adressraum (1Terabyte) verfügbar.</span><span class="sxs-lookup"><span data-stu-id="3d64a-106">On 64-bit operating systems, at least 40 bits of virtual address space (1 Terabyte) is available.</span></span>
 
-<span data-ttu-id="35f15-107">Bei 32-Bit-Betriebssystemen beträgt der Adressraum 32Bit (4GB).</span><span class="sxs-lookup"><span data-stu-id="35f15-107">For 32-bit operating systems, the address space is 32 bit (4 GB).</span></span> <span data-ttu-id="35f15-108">Bei 32-Bit-Betriebssystemen kann das Erstellen einzelner Streamingressourcen zu Fehlern führen, wenn die Zuordnung des Adressraums (128MB) mehr als 27Bit beträgt.</span><span class="sxs-lookup"><span data-stu-id="35f15-108">For 32-bit ARM systems, individual streaming resource creation can fail if the allocation would use more than 27 bits of address space (128 MB).</span></span> <span data-ttu-id="35f15-109">Dazu gehören alle ausgeblendeten Abstände im Adressraum, die die Hardware für Mipmaps, Abstände für aneinanderliegende Kacheln und möglicherweise Abstände für Oberflächengrößen mit Potenzen von2 verwendet.</span><span class="sxs-lookup"><span data-stu-id="35f15-109">This includes any hidden padding in the address space the hardware may use for mipmaps, packed tile padding, and possibly padding surface dimensions to powers of 2.</span></span>
+<span data-ttu-id="3d64a-107">Bei 32-Bit-Betriebssystemen beträgt der Adressraum 32Bit (4GB).</span><span class="sxs-lookup"><span data-stu-id="3d64a-107">For 32-bit operating systems, the address space is 32 bit (4 GB).</span></span> <span data-ttu-id="3d64a-108">Bei 32-Bit-Betriebssystemen kann das Erstellen einzelner Streamingressourcen zu Fehlern führen, wenn die Zuordnung des Adressraums (128MB) mehr als 27Bit beträgt.</span><span class="sxs-lookup"><span data-stu-id="3d64a-108">For 32-bit ARM systems, individual streaming resource creation can fail if the allocation would use more than 27 bits of address space (128 MB).</span></span> <span data-ttu-id="3d64a-109">Dazu gehören alle ausgeblendeten Abstände im Adressraum, die die Hardware für Mipmaps, Abstände für aneinanderliegende Kacheln und möglicherweise Abstände für Oberflächengrößen mit Potenzen von2 verwendet.</span><span class="sxs-lookup"><span data-stu-id="3d64a-109">This includes any hidden padding in the address space the hardware may use for mipmaps, packed tile padding, and possibly padding surface dimensions to powers of 2.</span></span>
 
-<span data-ttu-id="35f15-110">Auf Grafiksystemen mit einer separaten Seitentabelle für den Grafikprozessor (GPU) wird der Adressraum hauptsächlich für die von der Anwendung erstellten GPU-Ressourcen verwendet, auch wenn die vom Anzeigetreiber vorgenommene GPU-Zuordnungen genauso viel Platz verwenden.</span><span class="sxs-lookup"><span data-stu-id="35f15-110">On graphics systems with a separate page table for the graphics processing unit (GPU), most of this address space will be available to GPU resources made by the application, though GPU allocations made by the display driver fit in the same space.</span></span>
+<span data-ttu-id="3d64a-110">Auf Grafiksystemen mit einer separaten Seitentabelle für den Grafikprozessor (GPU) wird der Adressraum hauptsächlich für die von der Anwendung erstellten GPU-Ressourcen verwendet, auch wenn die vom Anzeigetreiber vorgenommene GPU-Zuordnungen genauso viel Platz verwenden.</span><span class="sxs-lookup"><span data-stu-id="3d64a-110">On graphics systems with a separate page table for the graphics processing unit (GPU), most of this address space will be available to GPU resources made by the application, though GPU allocations made by the display driver fit in the same space.</span></span>
 
-<span data-ttu-id="35f15-111">Bei zukünftigen Systemen, bei denen die Seitentabelle gemeinsam von CPU und GPU genutzt wird, wird der verfügbare Adressraum gemeinsam von CPU und GPU-Zuordnungen in einem Prozess genutzt.</span><span class="sxs-lookup"><span data-stu-id="35f15-111">On future systems with a page table shared between the CPU and GPU, the available address space is shared between all CPU and GPU allocations in a process.</span></span>
+<span data-ttu-id="3d64a-111">Bei zukünftigen Systemen, bei denen die Seitentabelle gemeinsam von CPU und GPU genutzt wird, wird der verfügbare Adressraum gemeinsam von CPU und GPU-Zuordnungen in einem Prozess genutzt.</span><span class="sxs-lookup"><span data-stu-id="3d64a-111">On future systems with a page table shared between the CPU and GPU, the available address space is shared between all CPU and GPU allocations in a process.</span></span>
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="35f15-112"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="35f15-112"><span id="related-topics"></span>Related topics</span></span>
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="3d64a-112"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="3d64a-112"><span id="related-topics"></span>Related topics</span></span>
 
 
-[<span data-ttu-id="35f15-113">Parameter für das Erstellen von Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="35f15-113">Streaming resource creation parameters</span></span>](streaming-resource-creation-parameters.md)
+[<span data-ttu-id="3d64a-113">Parameter für das Erstellen von Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="3d64a-113">Streaming resource creation parameters</span></span>](streaming-resource-creation-parameters.md)
 
  
 

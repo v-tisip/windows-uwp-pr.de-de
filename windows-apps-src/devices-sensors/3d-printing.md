@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, 3dprinting, 3D-Druck
 ms.localizationpriority: medium
 ms.openlocfilehash: d09ed242b2c5f0186b05279706943c9a65ee7c8a
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5945955"
+ms.locfileid: "5968476"
 ---
 # <a name="3d-printing"></a><span data-ttu-id="c9cb7-104">3D-Druck</span><span class="sxs-lookup"><span data-stu-id="c9cb7-104">3D Printing</span></span>
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d7b08138ab22d4cf2cbf4fb5273759f000a7c94
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5943670"
+ms.locfileid: "5968830"
 ---
 # <a name="template-settings-classes"></a><span data-ttu-id="ba3f9-104">Vorlageneinstellungsklassen</span><span class="sxs-lookup"><span data-stu-id="ba3f9-104">Template settings classes</span></span>
 

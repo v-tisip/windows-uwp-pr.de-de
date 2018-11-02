@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 7a4ec9f9e81010d39af496da156afa676f4b3714
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5935333"
+ms.locfileid: "5968724"
 ---
 # <a name="dynamic-adaptive-streaming-over-http-dash-profile-support"></a><span data-ttu-id="4f6fb-104">Dynamic Adaptive Streaming over HTTP (DASH)-Profilunterstützung</span><span class="sxs-lookup"><span data-stu-id="4f6fb-104">Dynamic Adaptive Streaming over HTTP (DASH) profile support</span></span>
 

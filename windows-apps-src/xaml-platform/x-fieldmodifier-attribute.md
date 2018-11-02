@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: de1d7dedbd2bd3d51bd2e1c1a9652d18f2b78ef0
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5938262"
+ms.locfileid: "5971128"
 ---
 # <a name="xfieldmodifier-attribute"></a><span data-ttu-id="71ba0-104">x:FieldModifier-Attribut</span><span class="sxs-lookup"><span data-stu-id="71ba0-104">x:FieldModifier attribute</span></span>
 

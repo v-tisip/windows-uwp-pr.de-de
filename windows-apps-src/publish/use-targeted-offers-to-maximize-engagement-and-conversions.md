@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, UWP, gezielte Angebote, Angebote, Benachrichtigungen
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f6e1f8119522cd0441157131362d860feff3410
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5940970"
+ms.locfileid: "5968754"
 ---
 # <a name="use-targeted-offers-to-maximize-engagement-and-conversions"></a><span data-ttu-id="39f4b-103">Verwenden Sie gezielte Angebote, um Interaktionen und Abschlüsse zu maximieren.</span><span class="sxs-lookup"><span data-stu-id="39f4b-103">Use targeted offers to maximize engagement and conversions</span></span>
 
