@@ -9,11 +9,11 @@ keywords: Windows10, UWP, Spiele, Maus, Eingabe
 ms.assetid: 08c35e05-2822-4a01-85b8-44edb9b6898f
 ms.localizationpriority: medium
 ms.openlocfilehash: adf3b629095f633521b99133ce1961e5c8408ef5
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5876033"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5934885"
 ---
 # <a name="relative-mouse-movement-and-corewindow"></a><span data-ttu-id="d0aa2-104">Relative Mausbewegung und CoreWindow</span><span class="sxs-lookup"><span data-stu-id="d0aa2-104">Relative mouse movement and CoreWindow</span></span>
 

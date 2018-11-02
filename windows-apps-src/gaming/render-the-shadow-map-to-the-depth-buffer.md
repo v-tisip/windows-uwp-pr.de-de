@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Rendern, Schattenkarte, Tiefenpuffer, Direct3D
 ms.localizationpriority: medium
 ms.openlocfilehash: a73754fef6d87505751460ec134d853c6bca0530
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/01/2018
-ms.locfileid: "5879086"
+ms.locfileid: "5935200"
 ---
 # <a name="render-the-shadow-map-to-the-depth-buffer"></a><span data-ttu-id="022eb-104">Rendern der Schattenmap zum Tiefenpuffer</span><span class="sxs-lookup"><span data-stu-id="022eb-104">Render the shadow map to the depth buffer</span></span>
 

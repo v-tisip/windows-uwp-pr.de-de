@@ -8,11 +8,11 @@ ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 8000d9105481bc177eb2fc64646aec009fd80d36
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5876324"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5934166"
 ---
 # <a name="create-data-bindings"></a><span data-ttu-id="2ac9a-104">Erstellen von Datenbindungen</span><span class="sxs-lookup"><span data-stu-id="2ac9a-104">Create data bindings</span></span>
 

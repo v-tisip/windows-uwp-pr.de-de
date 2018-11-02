@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6bc007ee1725ea3048895ccb9e7340bc0f08e8b8
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5861264"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "5934599"
 ---
 # <a name="background-transfers"></a><span data-ttu-id="a697a-104">Hintergrundübertragungen</span><span class="sxs-lookup"><span data-stu-id="a697a-104">Background transfers</span></span>
 <span data-ttu-id="a697a-105">Verwenden Sie die Hintergrundübertragungs-API zum zuverlässigen Kopieren von Dateien im Netzwerk.</span><span class="sxs-lookup"><span data-stu-id="a697a-105">Use the background transfer API to copy files reliably over the network.</span></span> <span data-ttu-id="a697a-106">Die Hintergrundübertragungs-API bietet erweiterte Upload- und Downloadfeatures, die bei angehaltener App im Hintergrund ausgeführt werden und auch nach Beendigung der App aktiv bleiben.</span><span class="sxs-lookup"><span data-stu-id="a697a-106">The background transfer API provides advanced upload and download features that run in the background during app suspension and persist beyond app termination.</span></span> <span data-ttu-id="a697a-107">Die API überwacht den Netzwerkstatus und kann Übertragungen automatisch anhalten und fortsetzen, wenn die Verbindung unterbrochen wird. Übertragungen sind außerdem akkuabhängig – die Downloadaktivität wird also basierend auf dem aktuellen Verbindungs- und Geräteakkustatus angepasst.</span><span class="sxs-lookup"><span data-stu-id="a697a-107">The API monitors network status and automatically suspends and resumes transfers when connectivity is lost, and transfers are also Data Sense-aware and Battery Sense-aware, meaning that download activity adjusts based on your current connectivity and device battery status.</span></span> <span data-ttu-id="a697a-108">Die API ist ideal für das Hoch- und Herunterladen von großen Dateien über HTTP(S) geeignet.</span><span class="sxs-lookup"><span data-stu-id="a697a-108">The API is ideal for uploading and downloading large files using HTTP(S).</span></span> <span data-ttu-id="a697a-109">FTP wird auch unterstützt, allerdings nur für Downloads.</span><span class="sxs-lookup"><span data-stu-id="a697a-109">FTP is also supported, but only for downloads.</span></span>
