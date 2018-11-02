@@ -10,23 +10,23 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6bd9db0afa914ef7a56dbd55c938129b86a43743
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5887018"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5937388"
 ---
-# <a name="specular-light-maps"></a><span data-ttu-id="83d36-104">Glanzlichtzuordnungen</span><span class="sxs-lookup"><span data-stu-id="83d36-104">Specular light maps</span></span>
+# <a name="specular-light-maps"></a><span data-ttu-id="384f5-104">Glanzlichtzuordnungen</span><span class="sxs-lookup"><span data-stu-id="384f5-104">Specular light maps</span></span>
 
 
-<span data-ttu-id="83d36-105">Glänzende Objekte aus hochreflektieRendern Materialien erhalten durch das Beleuchten mit einer Lichtquelle Glanzlichter.</span><span class="sxs-lookup"><span data-stu-id="83d36-105">When illuminated by a light source, shiny objects that use highly reflective materials receive specular highlights.</span></span> <span data-ttu-id="83d36-106">In einigen Fällen erhalten Sie exaktere Glanzlichter, wenn Sie Glanzlichtzuordnungen auf Grundtypen anwenden, anstatt die vom Beleuchtungsmodul erzeugten Glanzlichter zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="83d36-106">Sometimes you can get more accurate highlights by applying specular light maps to primitives, rather than using the specular highlights produced by the lighting module.</span></span>
+<span data-ttu-id="384f5-105">Glänzende Objekte aus hochreflektieRendern Materialien erhalten durch das Beleuchten mit einer Lichtquelle Glanzlichter.</span><span class="sxs-lookup"><span data-stu-id="384f5-105">When illuminated by a light source, shiny objects that use highly reflective materials receive specular highlights.</span></span> <span data-ttu-id="384f5-106">In einigen Fällen erhalten Sie exaktere Glanzlichter, wenn Sie Glanzlichtzuordnungen auf Grundtypen anwenden, anstatt die vom Beleuchtungsmodul erzeugten Glanzlichter zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="384f5-106">Sometimes you can get more accurate highlights by applying specular light maps to primitives, rather than using the specular highlights produced by the lighting module.</span></span>
 
-<span data-ttu-id="83d36-107">Um die Glanzlichtzuordnung durchzuführen, fügen Sie der Textur des Grundtyps die Glanzlichtzuordnung hinzu und modulieren dann die RGB-Lichtzuordnung (multiplizieren Sie das Ergebnis mit der RGB-Lichtzuordnung).</span><span class="sxs-lookup"><span data-stu-id="83d36-107">To perform specular light mapping, add the specular light map to the primitive's texture, then modulate (multiply the result by) the RGB light map.</span></span>
+<span data-ttu-id="384f5-107">Um die Glanzlichtzuordnung durchzuführen, fügen Sie der Textur des Grundtyps die Glanzlichtzuordnung hinzu und modulieren dann die RGB-Lichtzuordnung (multiplizieren Sie das Ergebnis mit der RGB-Lichtzuordnung).</span><span class="sxs-lookup"><span data-stu-id="384f5-107">To perform specular light mapping, add the specular light map to the primitive's texture, then modulate (multiply the result by) the RGB light map.</span></span>
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="83d36-108"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="83d36-108"><span id="related-topics"></span>Related topics</span></span>
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="384f5-108"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="384f5-108"><span id="related-topics"></span>Related topics</span></span>
 
 
-[<span data-ttu-id="83d36-109">Lichtzuordnung mit Texturen</span><span class="sxs-lookup"><span data-stu-id="83d36-109">Light mapping with textures</span></span>](light-mapping-with-textures.md)
+[<span data-ttu-id="384f5-109">Lichtzuordnung mit Texturen</span><span class="sxs-lookup"><span data-stu-id="384f5-109">Light mapping with textures</span></span>](light-mapping-with-textures.md)
 
  
 

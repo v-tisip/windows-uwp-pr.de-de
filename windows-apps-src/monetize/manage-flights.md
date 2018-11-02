@@ -9,17 +9,17 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Flights
 ms.localizationpriority: medium
 ms.openlocfilehash: 41cf0d224dfca4d11bbd1e3fde7da44c5201a601
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5862335"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5937754"
 ---
-# <a name="manage-package-flights"></a><span data-ttu-id="4e138-104">Verwalten von Flight-Paketen</span><span class="sxs-lookup"><span data-stu-id="4e138-104">Manage package flights</span></span>
+# <a name="manage-package-flights"></a><span data-ttu-id="ea70a-104">Verwalten von Flight-Paketen</span><span class="sxs-lookup"><span data-stu-id="ea70a-104">Manage package flights</span></span>
 
-<span data-ttu-id="4e138-105">Mithilfe der folgenden Methoden in der Microsoft Store-Übermittlungs-API können Sie Flight-Pakete für Ihre Apps verwalten.</span><span class="sxs-lookup"><span data-stu-id="4e138-105">Use the following methods in the Microsoft Store submission API to manage package flights for your apps.</span></span> <span data-ttu-id="4e138-106">Eine Einführung in die Microsoft Store-Übermittlungs-API einschließlich der Voraussetzungen für die Verwendung der API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit MicrosoftStore-Diensten](create-and-manage-submissions-using-windows-store-services.md).</span><span class="sxs-lookup"><span data-stu-id="4e138-106">For an introduction to the Microsoft Store submission API, including prerequisites for using the API, see [Create and manage submissions using Microsoft Store services](create-and-manage-submissions-using-windows-store-services.md).</span></span>
+<span data-ttu-id="ea70a-105">Mithilfe der folgenden Methoden in der Microsoft Store-Übermittlungs-API können Sie Flight-Pakete für Ihre Apps verwalten.</span><span class="sxs-lookup"><span data-stu-id="ea70a-105">Use the following methods in the Microsoft Store submission API to manage package flights for your apps.</span></span> <span data-ttu-id="ea70a-106">Eine Einführung in die Microsoft Store-Übermittlungs-API einschließlich der Voraussetzungen für die Verwendung der API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit MicrosoftStore-Diensten](create-and-manage-submissions-using-windows-store-services.md).</span><span class="sxs-lookup"><span data-stu-id="ea70a-106">For an introduction to the Microsoft Store submission API, including prerequisites for using the API, see [Create and manage submissions using Microsoft Store services](create-and-manage-submissions-using-windows-store-services.md).</span></span>
 
-<span data-ttu-id="4e138-107">Diese Methoden können nur verwendet werden, um Flight-Pakete abzurufen, zu erstellen oder zu löschen.</span><span class="sxs-lookup"><span data-stu-id="4e138-107">These methods can only be used to get, create, or delete package flights.</span></span> <span data-ttu-id="4e138-108">Verwenden Sie zum Erstellen von Übermittlungen für Flight-Pakete die Methoden unter [Verwalten von Flight-Paket-Übermittlungen](manage-flight-submissions.md).</span><span class="sxs-lookup"><span data-stu-id="4e138-108">To create submissions for package flights, see the methods in [Manage package flight submissions](manage-flight-submissions.md).</span></span>
+<span data-ttu-id="ea70a-107">Diese Methoden können nur verwendet werden, um Flight-Pakete abzurufen, zu erstellen oder zu löschen.</span><span class="sxs-lookup"><span data-stu-id="ea70a-107">These methods can only be used to get, create, or delete package flights.</span></span> <span data-ttu-id="ea70a-108">Verwenden Sie zum Erstellen von Übermittlungen für Flight-Pakete die Methoden unter [Verwalten von Flight-Paket-Übermittlungen](manage-flight-submissions.md).</span><span class="sxs-lookup"><span data-stu-id="ea70a-108">To create submissions for package flights, see the methods in [Manage package flight submissions](manage-flight-submissions.md).</span></span>
 
 <table>
 <colgroup>
@@ -29,35 +29,35 @@ ms.locfileid: "5862335"
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><span data-ttu-id="4e138-109">Methode</span><span class="sxs-lookup"><span data-stu-id="4e138-109">Method</span></span></th>
-<th align="left"><span data-ttu-id="4e138-110">URI</span><span class="sxs-lookup"><span data-stu-id="4e138-110">URI</span></span></th>
-<th align="left"><span data-ttu-id="4e138-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4e138-111">Description</span></span></th>
+<th align="left"><span data-ttu-id="ea70a-109">Methode</span><span class="sxs-lookup"><span data-stu-id="ea70a-109">Method</span></span></th>
+<th align="left"><span data-ttu-id="ea70a-110">URI</span><span class="sxs-lookup"><span data-stu-id="ea70a-110">URI</span></span></th>
+<th align="left"><span data-ttu-id="ea70a-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ea70a-111">Description</span></span></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left"><span data-ttu-id="4e138-112">GET</span><span class="sxs-lookup"><span data-stu-id="4e138-112">GET</span></span></td>
+<td align="left"><span data-ttu-id="ea70a-112">GET</span><span class="sxs-lookup"><span data-stu-id="ea70a-112">GET</span></span></td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}</td>
-<td align="left"><a href="get-a-flight.md"><span data-ttu-id="4e138-113">Abrufen eines Flight-Pakets</span><span class="sxs-lookup"><span data-stu-id="4e138-113">Get a package flight</span></span></a></td>
+<td align="left"><a href="get-a-flight.md"><span data-ttu-id="ea70a-113">Abrufen eines Flight-Pakets</span><span class="sxs-lookup"><span data-stu-id="ea70a-113">Get a package flight</span></span></a></td>
 </tr>
 <tr>
-<td align="left"><span data-ttu-id="4e138-114">POST</span><span class="sxs-lookup"><span data-stu-id="4e138-114">POST</span></span></td>
+<td align="left"><span data-ttu-id="ea70a-114">POST</span><span class="sxs-lookup"><span data-stu-id="ea70a-114">POST</span></span></td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights</td>
-<td align="left"><a href="create-a-flight.md"><span data-ttu-id="4e138-115">Erstellen eines Flight-Pakets</span><span class="sxs-lookup"><span data-stu-id="4e138-115">Create a package flight</span></span></a></td>
+<td align="left"><a href="create-a-flight.md"><span data-ttu-id="ea70a-115">Erstellen eines Flight-Pakets</span><span class="sxs-lookup"><span data-stu-id="ea70a-115">Create a package flight</span></span></a></td>
 </tr>
 <tr>
-<td align="left"><span data-ttu-id="4e138-116">DELETE</span><span class="sxs-lookup"><span data-stu-id="4e138-116">DELETE</span></span></td>
+<td align="left"><span data-ttu-id="ea70a-116">DELETE</span><span class="sxs-lookup"><span data-stu-id="ea70a-116">DELETE</span></span></td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}</td>
-<td align="left"><a href="delete-a-flight.md"><span data-ttu-id="4e138-117">Löschen eines Flight-Pakets</span><span class="sxs-lookup"><span data-stu-id="4e138-117">Delete a package flight</span></span></a></td>
+<td align="left"><a href="delete-a-flight.md"><span data-ttu-id="ea70a-117">Löschen eines Flight-Pakets</span><span class="sxs-lookup"><span data-stu-id="ea70a-117">Delete a package flight</span></span></a></td>
 </tr>
 </tbody>
 </table>
 
-## <a name="prerequisites"></a><span data-ttu-id="4e138-118">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="4e138-118">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="ea70a-118">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="ea70a-118">Prerequisites</span></span>
 
-<span data-ttu-id="4e138-119">Falls noch nicht geschehen, sorgen Sie vor der Verwendung dieser Methoden dafür, dass alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Microsoft Store-Übermittlungs-API erfüllt sind.</span><span class="sxs-lookup"><span data-stu-id="4e138-119">If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Microsoft Store submission API before trying to use any of these methods.</span></span>
+<span data-ttu-id="ea70a-119">Falls noch nicht geschehen, sorgen Sie vor der Verwendung dieser Methoden dafür, dass alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Microsoft Store-Übermittlungs-API erfüllt sind.</span><span class="sxs-lookup"><span data-stu-id="ea70a-119">If you have not done so already, complete all the [prerequisites](create-and-manage-submissions-using-windows-store-services.md#prerequisites) for the Microsoft Store submission API before trying to use any of these methods.</span></span>
 
-## <a name="related-topics"></a><span data-ttu-id="4e138-120">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="4e138-120">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="ea70a-120">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="ea70a-120">Related topics</span></span>
 
-* [<span data-ttu-id="4e138-121">Erstellen und Verwalten von Übermittlungen mit Microsoft Store-Diensten</span><span class="sxs-lookup"><span data-stu-id="4e138-121">Create and manage submissions using Microsoft Store services</span></span>](create-and-manage-submissions-using-windows-store-services.md)
-* [<span data-ttu-id="4e138-122">Verwalten von Flight-Paketübermittlungen</span><span class="sxs-lookup"><span data-stu-id="4e138-122">Manage package flight submissions</span></span>](manage-flight-submissions.md)
+* [<span data-ttu-id="ea70a-121">Erstellen und Verwalten von Übermittlungen mit Microsoft Store-Diensten</span><span class="sxs-lookup"><span data-stu-id="ea70a-121">Create and manage submissions using Microsoft Store services</span></span>](create-and-manage-submissions-using-windows-store-services.md)
+* [<span data-ttu-id="ea70a-122">Verwalten von Flight-Paketübermittlungen</span><span class="sxs-lookup"><span data-stu-id="ea70a-122">Manage package flight submissions</span></span>](manage-flight-submissions.md)

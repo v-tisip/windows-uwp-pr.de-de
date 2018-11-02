@@ -9,58 +9,58 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, DirectX, Grafiken
 ms.localizationpriority: medium
 ms.openlocfilehash: e9834a83620343f26acaabd0e05b30cc2c1dcfab
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5863508"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5940339"
 ---
-# <a name="basic-3d-graphics-for-directx-games"></a><span data-ttu-id="a94eb-104">Grundlegendes zu 3D-Grafiken für DirectX-Spiele</span><span class="sxs-lookup"><span data-stu-id="a94eb-104">Basic 3D graphics for DirectX games</span></span>
+# <a name="basic-3d-graphics-for-directx-games"></a><span data-ttu-id="bfdb5-104">Grundlegendes zu 3D-Grafiken für DirectX-Spiele</span><span class="sxs-lookup"><span data-stu-id="bfdb5-104">Basic 3D graphics for DirectX games</span></span>
 
 
 
-<span data-ttu-id="a94eb-105">Im Folgenden zeigen wir Ihnen, wie Sie grundlegende Konzepte von 3D-Grafiken durch die Programmierung mit DirectX umsetzen können.</span><span class="sxs-lookup"><span data-stu-id="a94eb-105">We show how to use DirectX programming to implement the fundamental concepts of 3D graphics.</span></span>
+<span data-ttu-id="bfdb5-105">Im Folgenden zeigen wir Ihnen, wie Sie grundlegende Konzepte von 3D-Grafiken durch die Programmierung mit DirectX umsetzen können.</span><span class="sxs-lookup"><span data-stu-id="bfdb5-105">We show how to use DirectX programming to implement the fundamental concepts of 3D graphics.</span></span>
 
-<span data-ttu-id="a94eb-106">**Ziel:** Lernen Sie, eine 3D-Grafik-App zu programmieren.</span><span class="sxs-lookup"><span data-stu-id="a94eb-106">**Objective:** Learn to program a 3D graphics app.</span></span>
+<span data-ttu-id="bfdb5-106">**Ziel:** Lernen Sie, eine 3D-Grafik-App zu programmieren.</span><span class="sxs-lookup"><span data-stu-id="bfdb5-106">**Objective:** Learn to program a 3D graphics app.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="a94eb-107">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="a94eb-107">Prerequisites</span></span>
-
-
-<span data-ttu-id="a94eb-108">Es wird davon ausgegangen, dass Sie mit C+ vertraut sind.</span><span class="sxs-lookup"><span data-stu-id="a94eb-108">We assume that you are familiar with C++.</span></span> <span data-ttu-id="a94eb-109">Sie müssen außerdem mit den grundlegenden Konzepten der Grafikprogrammierung vertraut sein.</span><span class="sxs-lookup"><span data-stu-id="a94eb-109">You also need basic experience with graphics programming concepts.</span></span>
-
-<span data-ttu-id="a94eb-110">**Gesamter Zeitaufwand:** 30 Minuten</span><span class="sxs-lookup"><span data-stu-id="a94eb-110">**Total time to complete:** 30 minutes.</span></span>
-
-## <a name="where-to-go-from-here"></a><span data-ttu-id="a94eb-111">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="a94eb-111">Where to go from here</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="bfdb5-107">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="bfdb5-107">Prerequisites</span></span>
 
 
-<span data-ttu-id="a94eb-112">Hier geht es um die Entwicklung von 3D-Grafiken mit DirectX und C ++\\Cx.</span><span class="sxs-lookup"><span data-stu-id="a94eb-112">Here, we talk about how to develop 3D graphics with DirectX and C++\\Cx.</span></span> <span data-ttu-id="a94eb-113">In diesem fünfteiligen Lernprogramm werden die [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466)-API sowie die Konzepte und der Code vorgestellt, die auch in zahlreichen anderen DirectX-Beispielen zum Einsatz kommen.</span><span class="sxs-lookup"><span data-stu-id="a94eb-113">This five-part tutorial introduces you to the [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) API and the concepts and code that are also used in many of the other DirectX samples.</span></span> <span data-ttu-id="a94eb-114">Die einzelnen Teile bauen aufeinander auf. Sie behandeln u. a. das Konfigurieren von DirectX für Ihre UWP-App mit C++ sowie Grundtypen mit Texturen und das Hinzufügen von Effekten.</span><span class="sxs-lookup"><span data-stu-id="a94eb-114">These parts build upon each other, from configuring DirectX for your UWP C++ app to texturing primitives and adding effects.</span></span>
+<span data-ttu-id="bfdb5-108">Es wird davon ausgegangen, dass Sie mit C+ vertraut sind.</span><span class="sxs-lookup"><span data-stu-id="bfdb5-108">We assume that you are familiar with C++.</span></span> <span data-ttu-id="bfdb5-109">Sie müssen außerdem mit den grundlegenden Konzepten der Grafikprogrammierung vertraut sein.</span><span class="sxs-lookup"><span data-stu-id="bfdb5-109">You also need basic experience with graphics programming concepts.</span></span>
 
-> <span data-ttu-id="a94eb-115">**Hinweis:** in diesem Lernprogramm wird ein rechtshändiges Koordinatensystem mit Spaltenvektoren verwendet.</span><span class="sxs-lookup"><span data-stu-id="a94eb-115">**Note**This tutorial uses a right-handed coordinate system with column vectors.</span></span> <span data-ttu-id="a94eb-116">Bei vielen DirectX-Beispielen und -Apps wird ein linkshändiges Koordinatensystem mit Zeilenvektoren verwendet.</span><span class="sxs-lookup"><span data-stu-id="a94eb-116">Many DirectX samples and apps use a left-handed coordinate system with row vectors.</span></span> <span data-ttu-id="a94eb-117">Für eine umfangreichere mathematische Grafiklösung, die ein linkshändiges Koordinatensystem mit Zeilenvektoren unterstützt, sollten Sie [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833) verwenden.</span><span class="sxs-lookup"><span data-stu-id="a94eb-117">For a more complete graphics math solution and one that supports a left-handed coordinate system with row vectors, consider using [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833).</span></span> <span data-ttu-id="a94eb-118">Weitere Informationen finden Sie unter [Verwenden von DirectXMath mit Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff729728#Use_DXMath_with_D3D).</span><span class="sxs-lookup"><span data-stu-id="a94eb-118">For more info, see [Using DirectXMath with Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff729728#Use_DXMath_with_D3D).</span></span>
+<span data-ttu-id="bfdb5-110">**Gesamter Zeitaufwand:** 30 Minuten</span><span class="sxs-lookup"><span data-stu-id="bfdb5-110">**Total time to complete:** 30 minutes.</span></span>
 
- 
+## <a name="where-to-go-from-here"></a><span data-ttu-id="bfdb5-111">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="bfdb5-111">Where to go from here</span></span>
 
-<span data-ttu-id="a94eb-119">Folgende Inhalte werden behandelt:</span><span class="sxs-lookup"><span data-stu-id="a94eb-119">We show you how to:</span></span>
 
--   <span data-ttu-id="a94eb-120">Initialisieren von [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466)-Schnittstellen mit der Windows-Runtime</span><span class="sxs-lookup"><span data-stu-id="a94eb-120">Initialize [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) interfaces by using the Windows Runtime</span></span>
--   <span data-ttu-id="a94eb-121">Anwenden von Vertex-Shader-Operationen</span><span class="sxs-lookup"><span data-stu-id="a94eb-121">Apply per-vertex shader operations</span></span>
--   <span data-ttu-id="a94eb-122">Einrichten der Geometrie</span><span class="sxs-lookup"><span data-stu-id="a94eb-122">Set up the geometry</span></span>
--   <span data-ttu-id="a94eb-123">Rastern der Szene (Glätten der 3D-Szene auf eine 2D-Projektion)</span><span class="sxs-lookup"><span data-stu-id="a94eb-123">Rasterize the scene (flattening the 3D scene to a 2D projection)</span></span>
--   <span data-ttu-id="a94eb-124">Culling verborgener Oberflächen</span><span class="sxs-lookup"><span data-stu-id="a94eb-124">Cull the hidden surfaces</span></span>
+<span data-ttu-id="bfdb5-112">Hier geht es um die Entwicklung von 3D-Grafiken mit DirectX und C ++\\Cx.</span><span class="sxs-lookup"><span data-stu-id="bfdb5-112">Here, we talk about how to develop 3D graphics with DirectX and C++\\Cx.</span></span> <span data-ttu-id="bfdb5-113">In diesem fünfteiligen Lernprogramm werden die [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466)-API sowie die Konzepte und der Code vorgestellt, die auch in zahlreichen anderen DirectX-Beispielen zum Einsatz kommen.</span><span class="sxs-lookup"><span data-stu-id="bfdb5-113">This five-part tutorial introduces you to the [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) API and the concepts and code that are also used in many of the other DirectX samples.</span></span> <span data-ttu-id="bfdb5-114">Die einzelnen Teile bauen aufeinander auf. Sie behandeln u. a. das Konfigurieren von DirectX für Ihre UWP-App mit C++ sowie Grundtypen mit Texturen und das Hinzufügen von Effekten.</span><span class="sxs-lookup"><span data-stu-id="bfdb5-114">These parts build upon each other, from configuring DirectX for your UWP C++ app to texturing primitives and adding effects.</span></span>
 
-> **<span data-ttu-id="a94eb-125">Hinweis</span><span class="sxs-lookup"><span data-stu-id="a94eb-125">Note</span></span>**  
+> <span data-ttu-id="bfdb5-115">**Hinweis:** in diesem Lernprogramm wird ein rechtshändiges Koordinatensystem mit Spaltenvektoren verwendet.</span><span class="sxs-lookup"><span data-stu-id="bfdb5-115">**Note**This tutorial uses a right-handed coordinate system with column vectors.</span></span> <span data-ttu-id="bfdb5-116">Bei vielen DirectX-Beispielen und -Apps wird ein linkshändiges Koordinatensystem mit Zeilenvektoren verwendet.</span><span class="sxs-lookup"><span data-stu-id="bfdb5-116">Many DirectX samples and apps use a left-handed coordinate system with row vectors.</span></span> <span data-ttu-id="bfdb5-117">Für eine umfangreichere mathematische Grafiklösung, die ein linkshändiges Koordinatensystem mit Zeilenvektoren unterstützt, sollten Sie [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833) verwenden.</span><span class="sxs-lookup"><span data-stu-id="bfdb5-117">For a more complete graphics math solution and one that supports a left-handed coordinate system with row vectors, consider using [DirectXMath](https://msdn.microsoft.com/library/windows/desktop/hh437833).</span></span> <span data-ttu-id="bfdb5-118">Weitere Informationen finden Sie unter [Verwenden von DirectXMath mit Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff729728#Use_DXMath_with_D3D).</span><span class="sxs-lookup"><span data-stu-id="bfdb5-118">For more info, see [Using DirectXMath with Direct3D](https://msdn.microsoft.com/library/windows/desktop/ff729728#Use_DXMath_with_D3D).</span></span>
 
  
 
-<span data-ttu-id="a94eb-126">Als Nächstes erstellen wir ein Direct3D-Gerät, eine Swapchain sowie eine Renderingzielansicht und stellen das gerenderte Bild auf dem Display dar.</span><span class="sxs-lookup"><span data-stu-id="a94eb-126">Next, we create a Direct3D device, swap chain, and render-target view, and present the rendered image to the display.</span></span>
+<span data-ttu-id="bfdb5-119">Folgende Inhalte werden behandelt:</span><span class="sxs-lookup"><span data-stu-id="bfdb5-119">We show you how to:</span></span>
 
-[<span data-ttu-id="a94eb-127">Schnellstart: Einrichten von DirectX-Ressourcen und Anzeigen eines Bilds</span><span class="sxs-lookup"><span data-stu-id="a94eb-127">Quickstart: setting up DirectX resources and displaying an image</span></span>](setting-up-directx-resources.md)
+-   <span data-ttu-id="bfdb5-120">Initialisieren von [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466)-Schnittstellen mit der Windows-Runtime</span><span class="sxs-lookup"><span data-stu-id="bfdb5-120">Initialize [Direct3D](https://msdn.microsoft.com/library/windows/desktop/hh309466) interfaces by using the Windows Runtime</span></span>
+-   <span data-ttu-id="bfdb5-121">Anwenden von Vertex-Shader-Operationen</span><span class="sxs-lookup"><span data-stu-id="bfdb5-121">Apply per-vertex shader operations</span></span>
+-   <span data-ttu-id="bfdb5-122">Einrichten der Geometrie</span><span class="sxs-lookup"><span data-stu-id="bfdb5-122">Set up the geometry</span></span>
+-   <span data-ttu-id="bfdb5-123">Rastern der Szene (Glätten der 3D-Szene auf eine 2D-Projektion)</span><span class="sxs-lookup"><span data-stu-id="bfdb5-123">Rasterize the scene (flattening the 3D scene to a 2D projection)</span></span>
+-   <span data-ttu-id="bfdb5-124">Culling verborgener Oberflächen</span><span class="sxs-lookup"><span data-stu-id="bfdb5-124">Cull the hidden surfaces</span></span>
 
-## <a name="related-topics"></a><span data-ttu-id="a94eb-128">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="a94eb-128">Related topics</span></span>
+> **<span data-ttu-id="bfdb5-125">Hinweis</span><span class="sxs-lookup"><span data-stu-id="bfdb5-125">Note</span></span>**  
+
+ 
+
+<span data-ttu-id="bfdb5-126">Als Nächstes erstellen wir ein Direct3D-Gerät, eine Swapchain sowie eine Renderingzielansicht und stellen das gerenderte Bild auf dem Display dar.</span><span class="sxs-lookup"><span data-stu-id="bfdb5-126">Next, we create a Direct3D device, swap chain, and render-target view, and present the rendered image to the display.</span></span>
+
+[<span data-ttu-id="bfdb5-127">Schnellstart: Einrichten von DirectX-Ressourcen und Anzeigen eines Bilds</span><span class="sxs-lookup"><span data-stu-id="bfdb5-127">Quickstart: setting up DirectX resources and displaying an image</span></span>](setting-up-directx-resources.md)
+
+## <a name="related-topics"></a><span data-ttu-id="bfdb5-128">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="bfdb5-128">Related topics</span></span>
 
 
-* [<span data-ttu-id="a94eb-129">Direct3D 11-Grafik</span><span class="sxs-lookup"><span data-stu-id="a94eb-129">Direct3D 11 Graphics</span></span>](https://msdn.microsoft.com/library/windows/desktop/ff476080)
-* [<span data-ttu-id="a94eb-130">DXGI</span><span class="sxs-lookup"><span data-stu-id="a94eb-130">DXGI</span></span>](https://msdn.microsoft.com/library/windows/desktop/hh404534)
-* [<span data-ttu-id="a94eb-131">HLSL</span><span class="sxs-lookup"><span data-stu-id="a94eb-131">HLSL</span></span>](https://msdn.microsoft.com/library/windows/desktop/bb509561)
+* [<span data-ttu-id="bfdb5-129">Direct3D 11-Grafik</span><span class="sxs-lookup"><span data-stu-id="bfdb5-129">Direct3D 11 Graphics</span></span>](https://msdn.microsoft.com/library/windows/desktop/ff476080)
+* [<span data-ttu-id="bfdb5-130">DXGI</span><span class="sxs-lookup"><span data-stu-id="bfdb5-130">DXGI</span></span>](https://msdn.microsoft.com/library/windows/desktop/hh404534)
+* [<span data-ttu-id="bfdb5-131">HLSL</span><span class="sxs-lookup"><span data-stu-id="bfdb5-131">HLSL</span></span>](https://msdn.microsoft.com/library/windows/desktop/bb509561)
 
  
 
