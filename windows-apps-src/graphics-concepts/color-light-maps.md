@@ -10,21 +10,21 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 757fbf93aa364e4143af0b5d5f2fc3f63a2f9c0c
-ms.sourcegitcommit: cd00bb829306871e5103db481cf224ea7fb613f0
+ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "5865970"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5947337"
 ---
-# <a name="color-light-maps"></a><span data-ttu-id="8f75c-105">Farblichtzuordnungen</span><span class="sxs-lookup"><span data-stu-id="8f75c-105">Color light maps</span></span>
+# <a name="color-light-maps"></a><span data-ttu-id="3d286-105">Farblichtzuordnungen</span><span class="sxs-lookup"><span data-stu-id="3d286-105">Color light maps</span></span>
 
 
-<span data-ttu-id="8f75c-106">Eine farbige Lichtzuordnung verwendet für die Beleuchtungsinformationen RGB-Daten in der Lichtzuordnung.</span><span class="sxs-lookup"><span data-stu-id="8f75c-106">A colored light map uses the RGB data in the light map for its lighting information.</span></span> <span data-ttu-id="8f75c-107">Bei der Verwendung von Farblichtzuordnungen in Anwendungen werden 3D-Szenen in der Regel realistischer dargestellt.</span><span class="sxs-lookup"><span data-stu-id="8f75c-107">An application usually renders 3D scenes more realistically if it uses colored light maps.</span></span>
+<span data-ttu-id="3d286-106">Eine farbige Lichtzuordnung verwendet für die Beleuchtungsinformationen RGB-Daten in der Lichtzuordnung.</span><span class="sxs-lookup"><span data-stu-id="3d286-106">A colored light map uses the RGB data in the light map for its lighting information.</span></span> <span data-ttu-id="3d286-107">Bei der Verwendung von Farblichtzuordnungen in Anwendungen werden 3D-Szenen in der Regel realistischer dargestellt.</span><span class="sxs-lookup"><span data-stu-id="3d286-107">An application usually renders 3D scenes more realistically if it uses colored light maps.</span></span>
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="8f75c-108"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="8f75c-108"><span id="related-topics"></span>Related topics</span></span>
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="3d286-108"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="3d286-108"><span id="related-topics"></span>Related topics</span></span>
 
 
-[<span data-ttu-id="8f75c-109">Lichtzuordnung mit Texturen</span><span class="sxs-lookup"><span data-stu-id="8f75c-109">Light mapping with textures</span></span>](light-mapping-with-textures.md)
+[<span data-ttu-id="3d286-109">Lichtzuordnung mit Texturen</span><span class="sxs-lookup"><span data-stu-id="3d286-109">Light mapping with textures</span></span>](light-mapping-with-textures.md)
 
  
 
