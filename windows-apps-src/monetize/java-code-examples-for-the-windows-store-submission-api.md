@@ -8,12 +8,12 @@ ms.date: 07/10/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Codebeispiele, Java
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a3280b6b9c0f012f36588d6eb0297b415e07f78
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 4a0df9fe873ab7d7330e06a18bb1816df3157d7a
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5930736"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5970794"
 ---
 # <a name="java-sample-submissions-for-apps-add-ons-and-flights"></a>Java-Beispiel: Übermittlungen für Apps, Add-Ons und Flights
 
@@ -70,13 +70,13 @@ Das folgende Beispiel zeigt, wie Sie EIN Flight-Paket [erstellen](create-a-fligh
 
 ## <a name="create-an-app-submission"></a>Erstellen einer App-Übermittlung
 
-Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Store-Übermittlungs-API verwenden, um eine App-Übermittlung zu erstellen. Hierzu wird von der ```SubmitNewApplicationSubmission```-Methode eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung erstellt. Anschließend wird die geklonte Übermittlung aktualisiert und für Windows Dev Center committet. Genauer gesagt führt die ```SubmitNewApplicationSubmission```-Methode diese Aufgaben aus:
+Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Store-Übermittlungs-API verwenden, um eine App-Übermittlung zu erstellen. Dazu die ```SubmitNewApplicationSubmission``` Methode erstellt eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung und anschließend aktualisiert und sendet die geklonte Übermittlung für das Partner Center. Genauer gesagt führt die ```SubmitNewApplicationSubmission```-Methode diese Aufgaben aus:
 
 1. Zunächst [ruft die Methode Daten für die angegebene App ab](get-an-app.md).
 2. Als Nächstes [löscht sie die ausstehende Übermittlung für die App](delete-an-app-submission.md), wenn vorhanden.
 3. Anschließend [wird eine neue Übermittlung für die App erstellt](create-an-app-submission.md). (Die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung.)
 4. Es werden einige Details für die neue Übermittlung geändert und ein neues Paket für die Übermittlung zu Azure Blob Storage hochgeladen.
-5. Als Nächstes wird die neue Übermittlung [aktualisiert](update-an-app-submission.md) und anschließend an Windows Dev Center [gesendet](commit-an-app-submission.md).
+5. Als Nächstes wird es [Updates](update-an-app-submission.md) und anschließend auf die neue Übermittlung für das Partner Center [committet](commit-an-app-submission.md) .
 6. Schließlich [wird der Status der neuen Übermittlung regelmäßig überprüft](get-status-for-an-app-submission.md), bis die Übermittlung erfolgreich gesendet wurde.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L97-L183)]
@@ -85,13 +85,13 @@ Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Stor
 
 ## <a name="create-an-add-on-submission"></a>Erstellen einer Add-On-Übermittlung
 
-Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Store-Übermittlungs-API verwenden, um eine Add-On-Übermittlung zu erstellen. Hierzu wird von der ```SubmitNewInAppProductSubmission```-Methode eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung erstellt. Anschließend wird die geklonte Übermittlung aktualisiert und für Windows Dev Center committet. Genauer gesagt führt die ```SubmitNewInAppProductSubmission```-Methode diese Aufgaben aus:
+Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Store-Übermittlungs-API verwenden, um eine Add-On-Übermittlung zu erstellen. Dazu die ```SubmitNewInAppProductSubmission``` Methode erstellt eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung, und klicken Sie dann aktualisiert und sendet die geklonte Übermittlung für das Partner Center. Genauer gesagt führt die ```SubmitNewInAppProductSubmission```-Methode diese Aufgaben aus:
 
 1. Zunächst [ruft die Methode Daten für das angegebene Add-On ab](get-an-add-on.md).
 2. Als Nächstes [wird eine ausstehende Übermittlung für das Add-On gelöscht](delete-an-add-on-submission.md), wenn vorhanden.
 3. Anschließend [wird eine neue Übermittlung für das Add-On erstellt](create-an-add-on-submission.md). (Die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung.)
 4. Es wird ein ZIP-Archiv hochgeladen, das Symbole für die Übermittlung an Azure Blob Storage enthält.
-5. Als Nächstes wird die neue Übermittlung [aktualisiert](update-an-add-on-submission.md) und anschließend für Windows Dev Center [committet](commit-an-add-on-submission.md).
+5. Als Nächstes wird es [Updates](update-an-add-on-submission.md) und anschließend auf die neue Übermittlung für das Partner Center [committet](commit-an-add-on-submission.md) .
 6. Schließlich [wird der Status der neuen Übermittlung regelmäßig überprüft](get-status-for-an-add-on-submission.md), bis die Übermittlung erfolgreich gesendet wurde.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L347-L431)]
@@ -100,13 +100,13 @@ Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Stor
 
 ## <a name="create-a-package-flight-submission"></a>Erstellen einer Flight-Paket-Übermittlung
 
-Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Store-Übermittlungs-API verwenden, um eine Flight-Paket-Übermittlung zu erstellen. Hierzu wird von der ```SubmitNewFlightSubmission```-Methode eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung erstellt. Anschließend wird die geklonte Übermittlung aktualisiert und für Windows Dev Center committet. Genauer gesagt führt die ```SubmitNewFlightSubmission```-Methode diese Aufgaben aus:
+Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Store-Übermittlungs-API verwenden, um eine Flight-Paket-Übermittlung zu erstellen. Dazu die ```SubmitNewFlightSubmission``` Methode erstellt eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung, und klicken Sie dann aktualisiert und sendet die geklonte Übermittlung für das Partner Center. Genauer gesagt führt die ```SubmitNewFlightSubmission```-Methode diese Aufgaben aus:
 
 1. Zunächst [ruft die Methode Daten für das angegebene Flight-Paket ab](get-a-flight.md).
 2. Als Nächstes [wird eine ausstehende Übermittlung für das Flight-Paket gelöscht](delete-a-flight-submission.md), wenn vorhanden.
 3. Anschließend [wird eine neue Übermittlung für das Flight-Paket erstellt](create-a-flight-submission.md). (Die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung.)
-4. Es wird ein neues Paket für die Übermittlung auf Azure Blob Storage hochgeladen.
-5. Als Nächstes wird die neue Übermittlung [aktualisiert](update-a-flight-submission.md) und anschließend an Windows Dev Center [gesendet](commit-a-flight-submission.md).
+4. Es wird ein neues Paket für die Übermittlung an Azure Blob Storage hochgeladen.
+5. Als Nächstes wird es [Updates](update-a-flight-submission.md) und [führt ein Commit für](commit-a-flight-submission.md) die neue Übermittlung an PartnerCenter.
 6. Schließlich [wird der Status der neuen Übermittlung regelmäßig überprüft](get-status-for-a-flight-submission.md), bis die Übermittlung erfolgreich committet wurde.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/java/CompleteExample.java#L223-L308)]

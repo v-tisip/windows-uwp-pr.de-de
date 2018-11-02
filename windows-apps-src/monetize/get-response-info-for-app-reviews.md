@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-API für Rezensionen, Antwortinformationen
 ms.localizationpriority: medium
-ms.openlocfilehash: 71497a858060109eaac0f593ce03f2ba3cbf03cc
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 466455a5e8da9364206245f1e0ac10acfed07ee7
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5919537"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5968644"
 ---
 # <a name="get-response-info-for-reviews"></a>Antwortinformationen für Rezensionen abrufen
 
@@ -49,7 +49,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 | Parameter        | Typ   | Beschreibung                                     |  Erforderlich  |
 |---------------|--------|--------------------------------------------------|--------------|
-| applicationId | string | Die Store-ID der App, welche die Rezension enthält, für die Sie bestimmen möchten, ob Sie antworten können. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des DevCenter-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8. |  Ja  |
+| applicationId | string | Die Store-ID der App, welche die Rezension enthält, für die Sie bestimmen möchten, ob Sie antworten können. Die Store-ID ist auf der [Seite App-Identität](../publish/view-app-identity-details.md) im Partner Center verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8. |  Ja  |
 | reviewId | string | Die ID der Rezension, auf die Sie antworten möchten (dies ist eine GUID). Rezensions-IDs finden Sie in den Antwortdaten der Methode [Abrufen von App-Rezensionen](get-app-reviews.md) der Microsoft Store-Analyse-API und unter [Offlinedownload](../publish/download-analytic-reports.md) im Bericht [Rezensionen](../publish/reviews-report.md). <br/>Wenn Sie diesen Parameter nicht angeben, wird im Antworttext für diese Methode stehen, ob Sie über Berechtigungen zum Beantworten von Rezensionen für die angegebene App verfügen. |  Nein  |
 
 
@@ -87,6 +87,6 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Übermitteln von Antworten auf Rezensionen mithilfe der Microsoft Store-Analyse-API](submit-responses-to-app-reviews.md)
-* [Reagieren Sie auf Kundenrezensionen über das Dev Center-Dashboard](../publish/respond-to-customer-reviews.md)
+* [Reagieren Sie auf kundenrezensionen über Partner Center](../publish/respond-to-customer-reviews.md)
 * [Antworten auf Rezensionen mit Microsoft Store-Diensten](respond-to-reviews-using-windows-store-services.md)
 * [Abrufen von App-Rezensionen](get-app-reviews.md)

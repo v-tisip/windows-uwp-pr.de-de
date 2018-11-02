@@ -8,17 +8,17 @@ ms.date: 03/23/2018
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, App-Käufe
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a19ca3c45e0420f51d6f52661935681315929b1
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 0c2e972b46c830dd6c9ea778e525f0abceda3e99
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5942508"
+ms.locfileid: "5970890"
 ---
 # <a name="get-app-acquisitions"></a>Abrufen von App-Käufen
 
 
-Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um die aggregierten Kaufdaten (im JSON-Format) für eine Anwendung während eines bestimmten Zeitraums und andere optionale Filter abzurufen. Diese Informationen sind auch im [Bericht „Käufe“](../publish/acquisitions-report.md) im Windows Dev Center-Dashboard verfügbar.
+Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um die aggregierten Kaufdaten (im JSON-Format) für eine Anwendung während eines bestimmten Zeitraums und andere optionale Filter abzurufen. Diese Informationen sind auch im [Bericht "Käufe"](../publish/acquisitions-report.md) im Partner Center verfügbar.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

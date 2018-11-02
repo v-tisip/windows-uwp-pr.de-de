@@ -8,16 +8,16 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-API für gezielte Angebote, gezielte Angebote
 ms.localizationpriority: medium
-ms.openlocfilehash: 706f48e64fb8e7534686b8fd7e9666b98dffd9b7
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: dbfefefdb7f7b96dbe99b35656b610b393ab3afa
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5942022"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5969156"
 ---
 # <a name="manage-targeted-offers-using-store-services"></a>Verwalten von gezielten Angeboten mithilfe von Store-Diensten
 
-Wenn Sie auf der Seite **Interaktion > Zielgerichtete Angebote** zu Ihrer App im Windows Dev Center-Dashboard ein *gezieltes Angebot* erstellen, verwenden Sie die *Microsoft Store-API für gezielte Angebote* in Ihrem App-Code, um Informationen zu erhalten, die Ihnen bei der Implementierung der In-App-Umgebung für das gezielte Angebot helfen. Weitere Informationen zu gezielten Angeboten und Anleitungen zu deren Erstellung im Dashboard finden Sie unter [Verwenden Sie gezielte Angebote, um Interaktionen und Abschlüsse zu maximieren.](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md).
+Wenn Sie ein *gezieltes Angebot* in Erstellen der **einbeziehen > zielgerichtete Angebote** Seite für Ihre app im Partner Center verwenden der *Microsoft Store für gezielte Angebote API* in Ihrem app Code zum Abrufen von Informationen, die Ihnen bei der Implementierung der in-app-Umgebung für die Gezieltes Angebot. Weitere Informationen zu gezielten Angeboten und Anleitungen zu deren Erstellung im Dashboard finden Sie unter [Verwenden Sie gezielte Angebote, um Interaktionen und Abschlüsse zu maximieren.](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md).
 
 Die Gezielte-Angebote-API ist eine einfache REST-API, mit der Sie gezielte Angebote abrufen können, die für den aktuellen Benutzer verfügbar sind– basierend darauf, ob der Benutzer zum Kundensegment für das gezielte Angebot gehört. Gehen Sie folgendermaßen vor, um diese API in Ihrem App-Code zu verwenden:
 

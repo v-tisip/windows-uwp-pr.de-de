@@ -8,12 +8,12 @@ ms.date: 07/10/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Codebeispiele, Python
 ms.localizationpriority: medium
-ms.openlocfilehash: 6fdd7dce766e2d1804c5b0973dcf3e51cbae99c0
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 34d686b8e20d384da4a3db1ea3805ad082d5f8a8
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5924369"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5968694"
 ---
 # <a name="python-sample-submissions-for-apps-add-ons-and-flights"></a>Python-Beispiel: Übermittlungen für Apps, Add-Ons und Flights
 
@@ -54,13 +54,13 @@ Das folgende Beispiel zeigt, wie Sie EIN Flight-Paket [erstellen](create-a-fligh
 
 ## <a name="create-an-app-submission"></a>Erstellen einer App-Übermittlung
 
-Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Store-Übermittlungs-API verwenden, um eine App-Übermittlung zu erstellen. Hierzu erstellt der Code eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung, aktualisiert anschließend die geklonte Übermittlung und sendet sie dann an Windows Dev Center. Insbesondere werden im Beispiel folgende Aufgaben gezeigt:
+Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Store-Übermittlungs-API verwenden, um eine App-Übermittlung zu erstellen. Zu diesem Zweck der Code erstellt eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung, und aktualisiert anschließend und sendet die geklonte Übermittlung für das Partner Center. Insbesondere werden im Beispiel folgende Aufgaben gezeigt:
 
 1. Zunächst [werden Daten für die angegebene App abgerufen](get-an-app.md).
 2. Als Nächstes [wird eine ausstehende Übermittlung für die App gelöscht](delete-an-app-submission.md), wenn vorhanden.
 3. Anschließend [wird eine neue Übermittlung für die App erstellt](create-an-app-submission.md). (Die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung.)
 4. Es werden einige Details für die neue Übermittlung geändert und ein neues Paket für die Übermittlung zu Azure Blob Storage hochgeladen.
-5. Als Nächstes wird die neue Übermittlung [aktualisiert](update-an-app-submission.md) und anschließend an Windows Dev Center [gesendet](commit-an-app-submission.md).
+5. Als Nächstes wird es [Updates](update-an-app-submission.md) und anschließend auf die neue Übermittlung für das Partner Center [committet](commit-an-app-submission.md) .
 6. Schließlich [wird der Status der neuen Übermittlung regelmäßig überprüft](get-status-for-an-app-submission.md), bis die Übermittlung erfolgreich gesendet wurde.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L93-L166)]
@@ -69,13 +69,13 @@ Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Stor
 
 ## <a name="create-an-add-on-submission"></a>Erstellen einer Add-On-Übermittlung
 
-Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Store-Übermittlungs-API verwenden, um eine Add-On-Übermittlung zu erstellen. Hierzu erstellt der Code eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung, aktualisiert anschließend die geklonte Übermittlung und sendet sie dann an Windows Dev Center. Insbesondere werden im Beispiel folgende Aufgaben gezeigt:
+Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Store-Übermittlungs-API verwenden, um eine Add-On-Übermittlung zu erstellen. Zu diesem Zweck der Code erstellt eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung, und aktualisiert anschließend und sendet die geklonte Übermittlung für das Partner Center. Insbesondere werden im Beispiel folgende Aufgaben gezeigt:
 
 1. Zunächst [werden Daten für das angegebene Add-On abgerufen](get-an-add-on.md).
 2. Als Nächstes [wird eine ausstehende Übermittlung für das Add-On gelöscht](delete-an-add-on-submission.md), wenn vorhanden.
 3. Anschließend [wird eine neue Übermittlung für das Add-On erstellt](create-an-add-on-submission.md). (Die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung.)
 4. Es wird ein ZIP-Archiv hochgeladen, das Symbole für die Übermittlung an Azure Blob Storage enthält. Weitere Informationen finden Sie in den entsprechenden Anweisungen zum Hochladen von ZIP-Archiven zu Azure Blob Storage in [Erstellen einer Add-On-Übermittlung](manage-add-on-submissions.md#create-an-add-on-submission).
-5. Als Nächstes wird die neue Übermittlung [aktualisiert](update-an-add-on-submission.md) und anschließend an Windows Dev Center [gesendet](commit-an-add-on-submission.md).
+5. Als Nächstes wird es [Updates](update-an-add-on-submission.md) und anschließend auf die neue Übermittlung für das Partner Center [committet](commit-an-add-on-submission.md) .
 6. Schließlich [wird der Status der neuen Übermittlung regelmäßig überprüft](get-status-for-an-add-on-submission.md), bis die Übermittlung erfolgreich gesendet wurde.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L172-L245)]
@@ -84,13 +84,13 @@ Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Stor
 
 ## <a name="create-a-package-flight-submission"></a>Erstellen einer Flight-Paket-Übermittlung
 
-Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Store-Übermittlungs-API verwenden, um eine Flight-Paket-Übermittlung zu erstellen. Hierzu erstellt der Code eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung, aktualisiert anschließend die geklonte Übermittlung und sendet sie dann an Windows Dev Center. Insbesondere werden im Beispiel folgende Aufgaben gezeigt:
+Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Store-Übermittlungs-API verwenden, um eine Flight-Paket-Übermittlung zu erstellen. Zu diesem Zweck der Code erstellt eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung, und aktualisiert anschließend und sendet die geklonte Übermittlung für das Partner Center. Insbesondere werden im Beispiel folgende Aufgaben gezeigt:
 
 1. Zunächst [werden Daten für das angegebene Flight-Paket abgerufen](get-a-flight.md).
 2. Als Nächstes [wird eine ausstehende Übermittlung für das Flight-Paket gelöscht](delete-a-flight-submission.md), wenn vorhanden.
 3. Anschließend [wird eine neue Übermittlung für das Flight-Paket erstellt](create-a-flight-submission.md). (Die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung.)
 4. Es wird ein neues Paket für die Übermittlung an Azure Blob Storage hochgeladen. Weitere Informationen finden Sie in den entsprechenden Anweisungen zum Hochladen von ZIP-Archiven zu Azure Blob Storage in [Erstellen einer Flight-Paket-Übermittlung](manage-flight-submissions.md#create-a-package-flight-submission).
-5. Als Nächstes wird die neue Übermittlung [aktualisiert](update-a-flight-submission.md) und anschließend an Windows Dev Center [gesendet](commit-a-flight-submission.md).
+5. Als Nächstes wird es [Updates](update-a-flight-submission.md) und anschließend auf die neue Übermittlung für das Partner Center [committet](commit-a-flight-submission.md) .
 6. Schließlich [wird der Status der neuen Übermittlung regelmäßig überprüft](get-status-for-a-flight-submission.md), bis die Übermittlung erfolgreich gesendet wurde.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L251-L325)]

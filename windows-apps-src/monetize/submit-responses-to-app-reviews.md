@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, Store-Dienste, Microsoft Store-Rezensions-API, Add-On-Käufe
 ms.localizationpriority: medium
-ms.openlocfilehash: 0fdfe811a90eae1e67ef7f626815be1ef78a4c61
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 8a8a336d477e7d66222632821f0fa0855faae6f7
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5928591"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5970114"
 ---
 # <a name="submit-responses-to-reviews"></a>Antworten auf Rezensionen übermitteln
 
@@ -23,7 +23,7 @@ Verwenden Sie diese Methode in der Microsoft Store-Rezensions-API, um Antworten 
 Beim Übermitteln von Rezensionen können Kunden festlegen, dass sie keine Antworten auf ihre Rezension erhalten möchten. Wenn Sie versuchen, auf eine Rezension zu antworten, für die der Kunde ausgewählt hat, keine Antworten zu erhalten, wird im Antworttext dieser Methode angegeben, dass der Antwortversuch fehlgeschlagen ist. Vor dem Aufrufen dieser Methode können Sie mit der Methode [Antwortinformationen für App-Rezensionen abrufen](get-response-info-for-app-reviews.md) ermitteln, ob Sie auf eine bestimmte Rezension antworten dürfen.
 
 > [!NOTE]
-> Zusätzlich zur Verwendung dieser Methode, um programmgesteuert auf Rezensionen zu antworten, können Sie auf Rezensionen auch [im Windows Dev Center-Dashboard](../publish/respond-to-customer-reviews.md) antworten.
+> Zusätzlich zur Verwendung dieser Methode zum programmgesteuerten reagieren auf Rezensionen können Sie alternativ auf Rezensionen [mithilfe von Partner Center](../publish/respond-to-customer-reviews.md)reagieren.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -67,7 +67,7 @@ Jedes Objekt im *Responses*-Array enthält die folgenden Werte:
 
 | Wert        | Typ   | Beschreibung           |  Erforderlich  |
 |---------------|--------|-----------------------------|-----|
-| ApplicationId | String |  Die Store-ID der App, auf deren Rezension Sie antworten möchten. Die Store-ID ist auf der [Seite mit der App-Identität](../publish/view-app-identity-details.md) des DevCenter-Dashboards verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.   |  Ja  |
+| ApplicationId | String |  Die Store-ID der App, auf deren Rezension Sie antworten möchten. Die Store-ID ist auf der [Seite App-Identität](../publish/view-app-identity-details.md) des Partner Center verfügbar. Beispiel für eine Store-ID: 9WZDNCRFJ3Q8.   |  Ja  |
 | ReviewId | String |  Die ID der Rezension, auf die Sie antworten möchten (dies ist eine GUID). Rezensions-IDs finden Sie in den Antwortdaten der Methode [Abrufen von App-Rezensionen](get-app-reviews.md) der Microsoft Store-Analyse-API und unter [Offlinedownload](../publish/download-analytic-reports.md) im Bericht [Rezensionen](../publish/reviews-report.md).   |  Ja  |
 | ResponseText | String | Die Antwort, die Sie senden möchten. Ihre Antwort muss [diesen Richtlinien](../publish/respond-to-customer-reviews.md#guidelines-for-responses) entsprechen.   |  Ja  |
 | SupportEmail | String | Die Support-E-Mail-Adresse Ihrer App, über die der Kunde Sie direkt kontaktieren kann. Dies muss eine gültige E-Mail-Adresse sein.     |  Ja  |
@@ -146,7 +146,7 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Antworten auf Kundenrezensionen mit dem Dev Center-Dashboard](../publish/respond-to-customer-reviews.md)
+* [Reagieren Sie auf kundenrezensionen über Partner Center](../publish/respond-to-customer-reviews.md)
 * [Antworten auf Rezensionen mit Microsoft Store-Diensten](respond-to-reviews-using-windows-store-services.md)
 * [Abrufen von Antwortinformationen für App-Rezensionen](get-response-info-for-app-reviews.md)
 * [Abrufen von App-Rezensionen](get-app-reviews.md)

@@ -7,16 +7,16 @@ ms.date: 08/04/2017
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Kauf, Trichter
 ms.localizationpriority: medium
-ms.openlocfilehash: 20c07425542c207c2289c6b512102e10f64bab66
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 8aaceb9af3eed04039148bdd863ca3e473c7c245
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5924297"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5970207"
 ---
 # <a name="get-app-acquisition-funnel-data"></a>Abrufen von App-Erwerbstrichterdaten
 
-Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um die Erwerbstrichterdaten für eine Anwendung während eines bestimmten Zeitraums und andere optionale Filter abzurufen. Diese Informationen sind auch im [Bericht „Käufe“](../publish/acquisitions-report.md#acquisition-funnel) im Windows Dev Center-Dashboard verfügbar.
+Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um die Erwerbstrichterdaten für eine Anwendung während eines bestimmten Zeitraums und andere optionale Filter abzurufen. Diese Informationen sind auch im [Bericht "Käufe"](../publish/acquisitions-report.md#acquisition-funnel) im Partner Center verfügbar.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

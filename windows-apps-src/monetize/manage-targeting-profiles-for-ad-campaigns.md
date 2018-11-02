@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store Werbungs-API, Anzeigenkampagnen
 ms.localizationpriority: medium
-ms.openlocfilehash: 50960a079e2c38d52d3a15403aef091ea99d7696
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 271d60e6fbc0bd6336aa8aa8ec9edbb2b965c7f4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5925454"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5981001"
 ---
 # <a name="manage-targeting-profiles"></a>Verwalten von Zielgruppenprofilen
 
@@ -145,7 +145,7 @@ Die Anforderungs- und Antworttexte für diese Methoden enthalten die folgenden F
 |--------------|--------|---------------|------|-------------|------------|
 |  ID   |  Ganzzahl   |  Die ID des Zielgruppenprofils.     |   Ja.    |       |   Nein      |       
 |  Name   |  String   |   Der Name des Zielgruppenprofils.    |    Nein.   |      |  Ja.     |       
-|  targetingType   |  String   |  Einer der folgenden Werte: <ul><li>**Automatisch**: Geben Sie diesen Wert an, damit Microsoft das Zielgruppenprofil auf der Grundlage der Einstellungen für Ihre App im Dev Center auswählen kann.</li><li>**Manuell**: Geben Sie diesen Wert an, um Ihr eigenes Zielgruppenprofil zu definieren.</li></ul>     |  Nein.     |  Auto    |   Ja.    |       
+|  targetingType   |  String   |  Einer der folgenden Werte: <ul><li>**Automatische**: Geben Sie diesen Wert, damit Microsoft das Zielgruppenprofil basierend auf den Einstellungen für Ihre app im Partner Center auswählen kann.</li><li>**Manuell**: Geben Sie diesen Wert an, um Ihr eigenes Zielgruppenprofil zu definieren.</li></ul>     |  Nein.     |  Auto    |   Ja.    |       
 |  Alter   |  Array   |   Eine oder mehrere ganze Zahlen, die den Altersbereich der Benutzer in der Zielgruppe angeben. Eine vollständige Liste von ganzen Zahlen finden Sie unter [Alterswerte](#age-values) in diesem Artikel.    |    Nein.    |  Null    |     Nein.    |       
 |  Geschlecht   |  Array   |  Eine oder mehrere Ganzzahlen, die das Geschlecht der Benutzer in der Zielgruppe angeben. Eine vollständige Liste von ganzen Zahlen finden Sie unter [Geschlechtswerte](#gender-values) in diesem Artikel.       |  Nein.    |  Null    |     Nein.    |       
 |  Land   |  Array   |  Eine oder mehrere ganze Zahlen, die die Ländercodes der Benutzer in der Zielgruppe angeben. Eine vollständige Liste von ganzen Zahlen finden Sie unter [Ländercodewerte](#country-code-values) in diesem Artikel.    |  Nein.    |  Null   |      Nein.   |       

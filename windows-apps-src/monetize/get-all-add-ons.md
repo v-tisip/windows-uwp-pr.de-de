@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: 7B6A99C6-AC86-41A1-85D0-3EB39A7211B6
-description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um alle Add-On-Daten für Apps abzurufen, die für Ihr Windows Dev Center-Konto registriert wurden.
+description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um alle Add-on-Daten für alle apps abzurufen, die in Ihrem Partner Center-Konto registriert wurden.
 title: Abrufen aller Add-Ons
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-Ons, In-App-Produkte, IAPs
 ms.localizationpriority: medium
-ms.openlocfilehash: 43875ae33c531e66c288f8b54f74116315715380
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 4d58b29a959ed791665af52018062d0cf0a3a969
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5922480"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5991285"
 ---
 # <a name="get-all-add-ons"></a>Abrufen aller Add-Ons
 
-Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um Daten für alle Add-Ons für Apps abzurufen, die für Ihr Windows Dev Center-Konto registriert wurden.
+Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Abrufen von Daten für alle Add-ons für alle apps, die für Ihr Partner Center-Konto registriert wurden.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -147,7 +147,7 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 | Fehlercode |  Beschreibung   |
 |--------|------------------|
 | 404  | Es wurden keine Add-Ons gefunden. |
-| 409  | Die Apps oder Add-Ons verwenden Dev Center-Dashboard-Funktionen, die [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt werden](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| 409  | Die apps oder Add-ons verwenden Partner Center-Funktionen, die [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt](create-and-manage-submissions-using-windows-store-services.md#not_supported)werden.  |
 
 
 ## <a name="related-topics"></a>Verwandte Themen

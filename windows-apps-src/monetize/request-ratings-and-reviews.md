@@ -7,12 +7,12 @@ ms.date: 06/15/2018
 ms.topic: article
 keywords: Windows10, UWP, Bewertungen, Rezensionen
 ms.localizationpriority: medium
-ms.openlocfilehash: d736fa47251c85491a29b324a3ed59181a5060c8
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: c00e69ed7d5057db4f835f3d91320806067d86e1
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5935094"
+ms.locfileid: "5981189"
 ---
 # <a name="request-ratings-and-reviews-for-your-app"></a>Anfordern von Bewertungen und Prüfungen für Ihre App
 
@@ -20,7 +20,7 @@ Sie können Code zu Ihrer Universellen Windows-Plattform (UWP)-App hinzufügen, 
 * Sie können ein Bewertungs- und Rezensionsdialogfeld direkt im Kontext Ihrer App anzeigen.
 * Sie können programmgesteuert die Bewertungs- und Rezensionsseite für Ihre App im Microsoft Store öffnen.
 
-Wenn Sie Ihre Bewertungs- und Rezensionsdaten analysieren möchten, können Sie die Daten im Windows Dev Center-Dashboard einsehen oder die Microsoft Store-Analyse-API zum programmgesteuerten Abrufen dieser Daten verwenden.
+Wenn Sie Ihre bewertungs- und rezensionsdaten analysieren möchten, können die Daten im Partner Center anzeigen oder der Microsoft Store-Analyse-API zum programmgesteuerten Abrufen dieser Daten verwenden.
 
 > [!IMPORTANT]
 > Wenn Sie eine Bewertung Funktion innerhalb Ihrer app hinzufügen, müssen alle Rezensionen der Benutzer auf den Store Bewertung Mechanismen, unabhängig von der Bewertung ausgewählte Star senden. Wenn Sie Feedback oder Kommentare von Benutzern erfassen, muss es deutlich gemacht werden, dass er bezieht sich nicht auf die app-Bewertung oder Rezensionen im Store jedoch direkt an die app-Entwickler gesendet. Finden Sie unter den Entwickler Verhaltensregeln für Weitere Informationen im Zusammenhang mit [Fraudulent oder unredliche Aktivitäten](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities).
@@ -102,7 +102,7 @@ Weitere Informationen finden Sie unter [Die Microsoft Store App starten](../laun
 ## <a name="analyze-your-ratings-and-reviews-data"></a>Ihre Bewertungs- und Rezensionsdaten analysieren
 
 Sie haben mehrere Optionen, um die Bewertungs- und Rezensionsdaten von Ihren Kunden zu analysieren:
-* Sie können den [Rezensionsbericht](../publish/reviews-report.md) im Windows Dev Center-Dashboard verwenden, um die Bewertungen und Prüfungen von Ihren Kunden zu sehen. Sie können diesen Bericht auch herunterladen, um ihn offline zu sehen.
+* Den Bericht ["Rezensionen"](../publish/reviews-report.md) können im Partner Center Sie die Bewertungen und Prüfungen von Ihren Kunden sehen. Sie können diesen Bericht auch herunterladen, um ihn offline zu sehen.
 * Sie können die [Abrufen von App-Bewertungen](get-app-ratings.md)- und [Abrufen von App-Rezensionen](get-app-reviews.md)-Methoden in der Store-Analyse-API zum programmgesteuerten Abrufen der Bewertungen und Prüfungen von Ihren Kunden im JSON-Format verwenden.
 
 ## <a name="related-topics"></a>Verwandte Themen

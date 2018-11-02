@@ -8,12 +8,12 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: Windows10, UWP, StoreRequestHelper, SendRequestAsync
 ms.localizationpriority: medium
-ms.openlocfilehash: 71247b8e04e63e5f792a872256dd79447c4d36cd
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 6762d31ea7ebaeb966cd60f121591ba1534517a3
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5927963"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5969070"
 ---
 # <a name="send-requests-to-the-microsoft-store"></a>Senden von Anforderungen an den Microsoft Store
 
@@ -79,7 +79,7 @@ Diese Anforderung ruft die Remotevariablen für die Test-Flight-Gruppe mit dem h
 |  *requestKind*                   |  Geben Sie die Ziffer7 ein, um die Test-Flight-Gruppe mit dem höchsten Rang für das Gerät zurückzugeben, oder geben Sie8 ein, um die Test-Flight-Gruppe mit dem höchsten Rang für den aktuellen Benutzer und das aktuelle Gerät zurückzugeben. Wir empfehlen die Verwendung des Werts8 für den *RequestKind*-Parameter, da dieser Wert die Test-Flight-Gruppe mit dem höchsten Rang innerhalb der Mitgliedschaft für den aktuellen Benutzer und das aktuelle Gerät zurückgibt.  |
 |  *parametersAsJson*                   |  Übergeben Sie eine Zeichenfolge im JSON-Format, die die im folgenden Beispiel angezeigten Daten enthält.  |
 
-Das folgende Beispiel zeigt das Format der JSON-Daten, die an den *ParametersAsJson*-Parameter übergeben werden sollen. Das Feld *type* muss der Zeichenfolge *GetRemoteVariables* zugewiesen werden. Weisen Sie das Feld *projectId* der ID des Projekts zu, bei dem Sie die Remotevariablen im Windows Dev Center-Dashboard definiert haben.
+Das folgende Beispiel zeigt das Format der JSON-Daten, die an den *ParametersAsJson*-Parameter übergeben werden sollen. Das Feld *type* muss der Zeichenfolge *GetRemoteVariables* zugewiesen werden. Weisen Sie das Feld *ProjectId* auf die ID des Projekts, in dem Sie die remotevariablen im Partner Center definiert.
 
 ```json
 { 

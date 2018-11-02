@@ -8,12 +8,12 @@ ms.date: 08/01/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Sammlungs-API, Microsoft Store-Einkaufs-API, Produkte anzeigen, Produkte gewähren
 ms.localizationpriority: medium
-ms.openlocfilehash: 41e1437e8b55474d3fcc0c34919e23d14a86ea89
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 21be5f50a78dd1bd1ef7c549add04a3b7c494dd1
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5940927"
+ms.locfileid: "5991616"
 ---
 # <a name="manage-product-entitlements-from-a-service"></a>Verwalten von Produktansprüchen aus einem Dienst
 
@@ -32,7 +32,7 @@ Diese APIs bestehen aus REST-Methoden, die für Entwickler mit Add-on-Katalogen 
 Die folgenden Schrittebeschreiben den vollständigen Vorgang der Verwendung der Microsoft Store-Sammlungs-API und der Einkaufs-API.:
 
 1.  [Eine Anwendung in Azure AD konfigurieren](#step-1).
-2.  [Zuordnen Ihrer Azure AD-Anwendung-ID mit der app im Windows Dev Center-Dashboard](#step-2).
+2.  [Zuordnen Ihrer Azure AD-Anwendung-ID mit der app im Partner Center](#step-2).
 3.  In Ihrem Dienst: [Erstellen Sie Azure AD-Zugriffstokens](#step-3), die Ihre Herausgeberidentität darstellen.
 4.  In der Client Windows-app zurück [Erstellen Sie einen Microsoft Store-ID-Schlüssel](#step-4) , der die Identität des aktuellen Benutzers, und übergeben Sie diesem Schlüssel darstellt, an Ihren Dienst.
 5.  Sobald Sie über das erforderliche AzureAD-Zugriffstoken und den Microsoft Store-ID-Schlüssel verfügen, [rufen Sie die Microsoft Store-Sammlungs-API oder -Einkaufs-API aus Ihrem Dienst auf](#step-5).
@@ -72,14 +72,14 @@ Bevor Sie mit der Microsoft Store-Sammlungs-API oder --API Einkaufs, müssen Sie
 
 <span id="step-2"/>
 
-## <a name="step-2-associate-your-azure-ad-application-id-with-your-client-app-in-windows-dev-center"></a>Schritt 2: Ordnen Sie Ihrer Azure AD-Anwendung-ID mit der Client-app im Windows Dev Center zu
+## <a name="step-2-associate-your-azure-ad-application-id-with-your-client-app-in-partner-center"></a>Schritt 2: Ordnen Sie Ihrer Azure AD-Anwendung-ID mit der Client-app im Partner Center zu
 
-Bevor Sie mit der Microsoft Store-Sammlungs-API oder --API Einkaufs, um die Gesamtbetriebskosten und für Ihre app oder Add-on-Käufe konfigurieren, müssen Sie zuordnen Ihrer Azure AD-Anwendung-ID der app (oder die app, die das Add-on enthält) im Dev Center-Dashboard.
+Bevor Sie mit der Microsoft Store-Sammlungs-API oder --API Einkaufs, um die Gesamtbetriebskosten und für Ihre app oder Add-on-Käufe konfigurieren, müssen Sie zuordnen Ihrer Azure AD-Anwendung-ID der app (oder die app, die das Add-on enthält) im Partner Center.
 
 > [!NOTE]
 > Sie müssen diesen Schritt nur einmal ausführen.
 
-1.  Melden Sie sich beim [DevCenter-Dashboard](https://dev.windows.com/overview) an, und wählen Sie Ihre App aus.
+1.  Melden Sie sich beim [Partner Center](https://partner.microsoft.com/dashboard) , und wählen Sie Ihre app.
 2.  Wechseln Sie zu den **Diensten** &gt; **produktsammlungen und Einkäufe** Seite, und geben Sie Ihre Azure AD-Anwendung-ID in eines der verfügbaren **Client-ID** Felder.
 
 <span id="step-3"/>

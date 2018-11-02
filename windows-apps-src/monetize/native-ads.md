@@ -7,12 +7,12 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, Ad-Steuerelement, native Anzeige
 ms.localizationpriority: medium
-ms.openlocfilehash: 123934c911f342dd57033c8e204e58bc00a5f18f
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 36b96add3aa785ad20ddd1c42cd46e498d0264a6
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5933898"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5969411"
 ---
 # <a name="native-ads"></a>Native Anzeigen
 
@@ -49,7 +49,7 @@ Befolgen Sie diesen Anweisungen, um eine native Anzeige in Ihrer App zu integrie
 
 5.  Deklarieren Sie an einer geeigneten Stelle in Ihrer App (z.B. in ```MainPage``` oder einer anderen Seite) ein [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2)-Objekt und mehrere Zeichenfolgenfelder, die die Anwendungs-ID und Anzeigeneinheits-ID für die native Anzeige darstellen. Im folgenden Codebeispiel werden die Felder `myAppId` und `myAdUnitId` den [Testwerten](set-up-ad-units-in-your-app.md#test-ad-units) für native Anzeigen zugewiesen.
     > [!NOTE]
-    > Jedes **NativeAdsManagerV2**-Objekt verfügt über eine entsprechende *Anzeigeneinheit*, die durch unsere Dienste zum Anzeigen des nativen Anzeigensteuerelements verwendet wird, und jede Anzeigeneinheit besteht aus einer *Anzeigeneinheits-ID* und *Anwendungs-ID*. In den folgenden Schritten weisen Sie dem Steuerelement eine Anzeigeneinheits-ID und Anwendungs-ID zu. Dieser Test Werte können nur in einer Testversion Ihrer App verwendet werden. Bevor Sie Ihre App im Store veröffentlichen, müssen Sie [die Testwerte mit den Live-Werten](#release) aus dem Windows Dev Center ersetzen.
+    > Jedes **NativeAdsManagerV2**-Objekt verfügt über eine entsprechende *Anzeigeneinheit*, die durch unsere Dienste zum Anzeigen des nativen Anzeigensteuerelements verwendet wird, und jede Anzeigeneinheit besteht aus einer *Anzeigeneinheits-ID* und *Anwendungs-ID*. In den folgenden Schritten weisen Sie dem Steuerelement eine Anzeigeneinheits-ID und Anwendungs-ID zu. Dieser Test Werte können nur in einer Testversion Ihrer App verwendet werden. Bevor Sie Ihre app im Store veröffentlichen, müssen Sie [Ersetzen Sie diese durch livewerte testen](#release) aus dem Partner Center.
 
     [!code-cs[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#Variables)]
 
@@ -111,17 +111,17 @@ Nachdem Sie bestätigt, dass der Implementierung der nativen Anzeige erfolgreich
 
 1.  Stellen Sie sicher, dass die Implementierung der nativen Anzeigen den [Richtlinien für native Anzeigen](ui-and-user-experience-guidelines.md#guidelines-for-native-ads) folgt.
 
-2.  Wechseln Sie im Dev Center-Dashboard auf die Seite [In-App-Anzeigen](../publish/in-app-ads.md) und [erstellen Sie eine Anzeigeneinheit](set-up-ad-units-in-your-app.md#live-ad-units). Geben Sie als Einheitentyp **Native** an. Notieren Sie die Anzeigeneinheits-ID und die Anwendungs-ID.
+2.  Im Partner Center wechseln Sie zu der Seite [In-app-anzeigen](../publish/in-app-ads.md) und [eine anzeigeneinheit erstellen](set-up-ad-units-in-your-app.md#live-ad-units). Geben Sie als Einheitentyp **Native** an. Notieren Sie die Anzeigeneinheits-ID und die Anwendungs-ID.
     > [!NOTE]
-    > Die Anwendungs-IDs für Test-Anzeigeneinheiten und Live-UWP-Anzeigeneinheiten besitzen unterschiedliche Formate. Testanwendungs-ID sind GUIDs. Wenn Sie eine Live-UWP-Anzeigeneinheit im Dashboard erstellen, entspricht die Anwendungs-ID für die Anzeigeneinheit immer der Store-ID Ihrer App (ein Beispiel für einen Store-ID-Wert ist 9NBLGGH4R315).
+    > Die Anwendungs-IDs für Test-Anzeigeneinheiten und Live-UWP-Anzeigeneinheiten besitzen unterschiedliche Formate. Testanwendungs-ID sind GUIDs. Wenn Sie eine live-UWP-anzeigeneinheit in Partner Center erstellen, entspricht der Anwendung-ID-Wert für die anzeigeneinheit immer die Store-ID für Ihre app (der ein Beispiel für Store-ID-Wert ist 9nblggh4r315).).
 
 3. Sie können optional die Anzeigenvermittlung für die native Anzeige durch Konfigurieren der Einstellungen im Abschnitt [Vermittlungseinstellungen](../publish/in-app-ads.md#mediation) auf der [In-App-Anzeigen](../publish/in-app-ads.md)-Seite aktivieren. Mit der Anzeigenvermittlung können Sie Ihren Anzeigenumsatz und Funktionalitäten zur App-Bewerbung durch die Darstellung von Anzeigen aus mehreren Anzeigennetzwerken verbessern.
 
-4.  Ersetzen Sie in Ihrem Code die Testwerte der Anzeigeneinheit (Parameter *applicationId* und *adUnitId* des [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2.-ctor)-Konstruktors) mit den Live-Werten, die Sie in Dev Center generiert haben.
+4.  Ersetzen Sie in Ihrem Code die Testwerte der anzeigeneinheit (d. h. die *ApplicationId* und *AdUnitId* Parameter des Konstruktors [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2.-ctor) ) mit den live-Werten, die Sie im Partner Center generiert.
 
-5.  [Übermitteln Sie Ihre App](../publish/app-submissions.md) mithilfe des Dev Center-Dashboards an den Store.
+5.  [Übermitteln Ihrer app](../publish/app-submissions.md) mithilfe der Partner Center an den Store.
 
-6.  Überprüfen Sie die [Anzeigenvermittlungsberichte](../publish/advertising-performance-report.md) im Dev Center-Dashboard.
+6.  Überprüfen Sie Ihre [Berichte zur anzeigenleistung](../publish/advertising-performance-report.md) im Partner Center.
 
 ## <a name="manage-ad-units-for-multiple-native-ads-in-your-app"></a>Verwalten von Anzeigeeinheiten für mehrere native Anzeigen in Ihrer App
 
