@@ -8,12 +8,12 @@ ms.date: 08/03/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Codebeispiele, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 55843f229252b2f68df096442f27544a59ce69cd
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 495bf2e58fafd9e321937bd6fdb3be8c8dea68e2
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5945239"
+ms.locfileid: "5973612"
 ---
 # <a name="c-sample-submissions-for-apps-add-ons-and-flights"></a>C\#-Beispiel: Übermittlungen für Apps, Add-Ons und Flights
 
@@ -38,7 +38,7 @@ Für diese Beispiele werden die folgenden Bibliotheken verwendet:
 Mit dem folgenden Beispiel wird ein Befehlszeilenprogramm implementiert, das die anderen Beispielmethoden in diesem Artikel aufruft, um die verschiedenen Verwendungsmethoden der Microsoft Store-Übermittlungs-API aufzuzeigen. So passen Sie dieses Programm für eigene Zwecke an:
 
 * Weisen Sie die Eigenschaften ```ApplicationId```, ```InAppProductId``` und ```FlightId``` der ID der App, des Add-Ons und des Flight-Pakets zu, die bzw. das Sie verwalten möchten.
-* Weisen Sie die Eigenschaften ```ClientId``` und ```ClientSecret``` der Client-ID und dem Schlüssel für Ihre App zu, und ersetzen Sie die *tenantid*-Zeichenfolge in der ```TokenEndpoint```-URL durch die Mandanten-ID für Ihre App. Weitere Informationen finden Sie unter [Zuordnen einer Azure AD-Anwendung zu Ihrem Windows Dev Center-Konto](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-windows-dev-center-account).
+* Weisen Sie die Eigenschaften ```ClientId``` und ```ClientSecret``` der Client-ID und dem Schlüssel für Ihre App zu, und ersetzen Sie die *tenantid*-Zeichenfolge in der ```TokenEndpoint```-URL durch die Mandanten-ID für Ihre App. Weitere Informationen finden Sie [eine Azure AD-Anwendung mit Ihrem Partner Center-Konto zuordnen](create-and-manage-submissions-using-windows-store-services.md#how-to-associate-an-azure-ad-application-with-your-partner-center-account)
 
 > [!div class="tabbedCodeSnippets"]
 [!code-cs[SubmissionApi](./code/StoreServicesExamples_Submission/cs/Program.cs#Main)]
@@ -56,13 +56,13 @@ Die Beispiel-App verwendet die ```ClientConfiguration```-Hilfsklasse zum Überge
 
 ## <a name="create-an-app-submission"></a>Erstellen einer App-Übermittlung
 
-Das folgende Beispiel implementiert eine Klasse, die mehrere Methoden in der Microsoft Store-Übermittlungs-API verwendet, um eine App-Übermittlung zu aktualisieren. Die ```RunAppSubmissionUpdateSample```-Methode in der Klasse erstellt eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung, aktualisiert sie und sendet die geklonte Übermittlung an Windows Dev Center. Genauer gesagt führt die ```RunAppSubmissionUpdateSample```-Methode diese Aufgaben aus:
+Das folgende Beispiel implementiert eine Klasse, die mehrere Methoden in der Microsoft Store-Übermittlungs-API verwendet, um eine App-Übermittlung zu aktualisieren. Die ```RunAppSubmissionUpdateSample``` Methode in der Klasse erstellt eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung und anschließend aktualisiert und sendet die geklonte Übermittlung für das Partner Center. Genauer gesagt führt die ```RunAppSubmissionUpdateSample```-Methode diese Aufgaben aus:
 
 1. Zunächst [ruft die Methode Daten für die angegebene App ab](get-an-app.md).
 2. Als Nächstes [löscht sie die ausstehende Übermittlung für die App](delete-an-app-submission.md), wenn vorhanden.
 3. Anschließend [wird eine neue Übermittlung für die App erstellt](create-an-app-submission.md). (Die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung.)
 4. Es werden einige Details für die neue Übermittlung geändert und ein neues Paket für die Übermittlung zu Azure Blob Storage hochgeladen.
-5. Als Nächstes wird die neue Übermittlung [aktualisiert](update-an-app-submission.md) und anschließend an Windows Dev Center [gesendet](commit-an-app-submission.md).
+5. Als Nächstes wird es [Updates](update-an-app-submission.md) und anschließend auf die neue Übermittlung für das Partner Center [committet](commit-an-app-submission.md) .
 6. Schließlich [wird der Status der neuen Übermittlung regelmäßig überprüft](get-status-for-an-app-submission.md), bis die Übermittlung erfolgreich gesendet wurde.
 
 > [!div class="tabbedCodeSnippets"]
@@ -77,7 +77,7 @@ Das folgende Beispiel implementiert eine Klasse, die mehrere Methoden in der Mic
 1. Zunächst [erstellt die Methode ein neues Add-On](create-an-add-on.md).
 2. Als Nächstes [erstellt sie eine neue Übermittlung für das Add-On](create-an-add-on-submission.md).
 3. Es wird ein ZIP-Archiv hochgeladen, das Symbole für die Übermittlung in Azure Blob Storage enthält.
-4. Anschließend [wird die neue Übermittlung an Windows Dev Center gesendet](commit-an-add-on-submission.md).
+4. Als Nächstes wird es [wird die neue Übermittlung für das Partner Center gesendet](commit-an-add-on-submission.md).
 5. Schließlich [wird der Status der neuen Übermittlung regelmäßig überprüft](get-status-for-an-add-on-submission.md), bis die Übermittlung erfolgreich gesendet wurde.
 
 > [!div class="tabbedCodeSnippets"]
@@ -87,12 +87,12 @@ Das folgende Beispiel implementiert eine Klasse, die mehrere Methoden in der Mic
 
 ## <a name="update-an-add-on-submission"></a>Aktualisieren einer Add-On-Übermittlung
 
-Das folgende Beispiel implementiert eine Klasse, die mehrere Methoden in der Microsoft Store-Übermittlungs-API verwendet, um eine vorhandene Add-On-Übermittlung zu aktualisieren. Die ```RunInAppProductSubmissionUpdateSample```-Methode in der Klasse erstellt eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung, aktualisiert sie und sendet die geklonte Übermittlung an Windows Dev Center. Genauer gesagt führt die ```RunInAppProductSubmissionUpdateSample```-Methode diese Aufgaben aus:
+Das folgende Beispiel implementiert eine Klasse, die mehrere Methoden in der Microsoft Store-Übermittlungs-API verwendet, um eine vorhandene Add-On-Übermittlung zu aktualisieren. Die ```RunInAppProductSubmissionUpdateSample``` Methode in der Klasse erstellt eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung und anschließend aktualisiert und sendet die geklonte Übermittlung für das Partner Center. Genauer gesagt führt die ```RunInAppProductSubmissionUpdateSample```-Methode diese Aufgaben aus:
 
 1. Zunächst [ruft die Methode Daten für das angegebene Add-On ab](get-an-add-on.md).
 2. Als Nächstes [wird eine ausstehende Übermittlung für das Add-On gelöscht](delete-an-add-on-submission.md), wenn vorhanden.
 3. Anschließend [wird eine neue Übermittlung für das Add-On erstellt](create-an-add-on-submission.md). (Die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung.)
-5. Als Nächstes wird die neue Übermittlung [aktualisiert](update-an-add-on-submission.md) und anschließend an Windows Dev Center [gesendet](commit-an-add-on-submission.md).
+5. Als Nächstes wird es [Updates](update-an-add-on-submission.md) und anschließend auf die neue Übermittlung für das Partner Center [committet](commit-an-add-on-submission.md) .
 6. Schließlich [wird der Status der neuen Übermittlung regelmäßig überprüft](get-status-for-an-add-on-submission.md), bis die Übermittlung erfolgreich gesendet wurde.
 
 > [!div class="tabbedCodeSnippets"]
@@ -102,13 +102,13 @@ Das folgende Beispiel implementiert eine Klasse, die mehrere Methoden in der Mic
 
 ## <a name="create-a-package-flight-submission"></a>Erstellen einer Flight-Paketübermittlung
 
-Das folgende Beispiel implementiert eine Klasse, die mehrere Methoden in der Microsoft Store-Übermittlungs-API verwendet, um eine Flight-Paketübermittlung zu aktualisieren. Die ```RunFlightSubmissionUpdateSample```-Methode in der Klasse erstellt eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung, aktualisiert sie und sendet die geklonte Übermittlung an Windows Dev Center. Genauer gesagt führt die ```RunFlightSubmissionUpdateSample```-Methode diese Aufgaben aus:
+Das folgende Beispiel implementiert eine Klasse, die mehrere Methoden in der Microsoft Store-Übermittlungs-API verwendet, um eine Flight-Paketübermittlung zu aktualisieren. Die ```RunFlightSubmissionUpdateSample``` Methode in der Klasse erstellt eine neue Übermittlung als Klon der letzten veröffentlichten Übermittlung und anschließend aktualisiert und sendet die geklonte Übermittlung für das Partner Center. Genauer gesagt führt die ```RunFlightSubmissionUpdateSample```-Methode diese Aufgaben aus:
 
 1. Zunächst [ruft die Methode Daten für das angegebene Flight-Paket ab](get-a-flight.md).
 2. Als Nächstes [wird eine ausstehende Übermittlung für das Flight-Paket gelöscht](delete-a-flight-submission.md), wenn vorhanden.
 3. Anschließend [wird eine neue Übermittlung für das Flight-Paket erstellt](create-a-flight-submission.md). (Die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung.)
-4. Es wird ein neues Paket für die Übermittlung auf Azure Blob Storage hochgeladen.
-5. Als Nächstes wird die neue Übermittlung [aktualisiert](update-a-flight-submission.md) und anschließend an Windows Dev Center [gesendet](commit-a-flight-submission.md).
+4. Es wird ein neues Paket für die Übermittlung an Azure Blob Storage hochgeladen.
+5. Als Nächstes wird es [Updates](update-a-flight-submission.md) und anschließend auf die neue Übermittlung für das Partner Center [committet](commit-a-flight-submission.md) .
 6. Schließlich [wird der Status der neuen Übermittlung regelmäßig überprüft](get-status-for-a-flight-submission.md), bis die Übermittlung erfolgreich committet wurde.
 
 > [!div class="tabbedCodeSnippets"]

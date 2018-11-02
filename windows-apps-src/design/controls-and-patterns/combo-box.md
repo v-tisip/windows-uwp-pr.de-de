@@ -12,12 +12,12 @@ pm-contact: stmoy
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: f641ec3333ed0eda1fdfa5ff82ef236b5ec186ba
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: cf3a69de36f1292dd6ccabb945a33a893064bd02
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5927104"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5971893"
 ---
 # <a name="combo-box"></a>Kombinationsfeld
 
@@ -169,15 +169,15 @@ Um ein Kombinationsfeld zu erstellen, das "live aktualisiert" während der Benut
 
 #### <a name="selected-item-behavior-change"></a>Änderung des ausgewählten Elements Verhaltens
 
-In RS5 (Windows SDK-Version 10.0.NNNNN.0 (Windows 10, Version jjmm), das Verhalten der ausgewählten Elemente wird aktualisiert, um bearbeitbare Kombinationsfelder unterstützen.
+In Windows 10, Version 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) oder höher ist, wird das Verhalten der ausgewählten Elemente aktualisiert, um bearbeitbare Kombinationsfelder unterstützen.
 
-Vor dem RS5, den Wert der SelectedItem-Eigenschaft (und daher SelectedValue und SelectedIndex) war, in dem Kombinationsfeld Items-Sammlung erforderlich. Mit dem vorherigen Beispiel wird die Einstellung `colorComboBox.SelectedItem = "Pink"` ergibt:
+Vor dem SDK 17763, den Wert der SelectedItem-Eigenschaft (und daher SelectedValue und SelectedIndex) war, in dem Kombinationsfeld Items-Sammlung erforderlich. Mit dem vorherigen Beispiel wird die Einstellung `colorComboBox.SelectedItem = "Pink"` ergibt:
 
 - SelectedItem = Null
 - SelectedValue = Null
 - SelectedIndex =-1
 
-In RS5 und höher wird der Wert der SelectedItem-Eigenschaft (und daher SelectedValue und SelectedIndex) ist nicht erforderlich, in dem Kombinationsfeld Items-Sammlung. Mit dem vorherigen Beispiel wird die Einstellung `colorComboBox.SelectedItem = "Pink"` ergibt:
+Im SDK 17763 und höher, den Wert der SelectedItem-Eigenschaft (und daher SelectedValue und SelectedIndex) ist nicht erforderlich, in dem Kombinationsfeld Items-Sammlung. Mit dem vorherigen Beispiel wird die Einstellung `colorComboBox.SelectedItem = "Pink"` ergibt:
 
 - SelectedItem = rosa
 - SelectedValue = rosa
@@ -192,7 +192,7 @@ Sie können die [IsTextSearchEnabled](/uwp/api/windows.ui.xaml.controls.combobox
 ## <a name="make-a-combo-box-editable"></a>Stellen Sie ein Kombinationsfeld bearbeitet werden
 
 > [!IMPORTANT]
-> Dieses Feature erfordert die [neuesten Windows 10 Insider Preview-Build und SDK](https://insider.windows.com/for-developers/).
+> Dieses Feature erfordert Windows 10, Version 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) oder höher.
 
 Standardmäßig ein Kombinationsfeld ermöglicht es dem Benutzer aus einer vordefinierten Liste von Optionen auswählen. Es gibt jedoch Fälle, in denen die Liste enthält nur eine Teilmenge der gültige Werte, und der Benutzer sollte in der Lage, andere Werte eingeben, die nicht aufgelistet werden. Um dies zu unterstützen, können Sie das Kombinationsfeld bearbeitbar sein.
 

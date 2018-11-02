@@ -8,16 +8,16 @@ ms.date: 10/18/2018
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Xbox One Spielekäufe
 ms.localizationpriority: medium
-ms.openlocfilehash: 86ca46903e581922cc571a854d9fa110fa261ece
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 1bf37fa03209561540d63dd4f63a76878f9d813c
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5941030"
+ms.locfileid: "5976591"
 ---
 # <a name="get-xbox-one-game-acquisitions"></a>Abrufen von Xbox One Spielekäufen
 
-Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um aggregierte Kaufdaten im JSON-Format für ein-Xbox One Spiel abzurufen, das über das Xbox-Entwickler-Portal (XDP) aufgenommen wurde und in XDP-Analyse Dev Center-Dashboard verfügbar ist.
+Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, die aggregierte Kaufdaten im JSON-Format für ein Xbox One Spiel abzurufen, die das über das Xbox-Portal (XDP) und im XDP Analytics-Dashboard verfügbar ist.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

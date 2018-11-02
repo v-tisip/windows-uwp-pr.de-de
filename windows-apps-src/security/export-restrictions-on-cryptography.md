@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: a29c4aeb5a5928e04e0018d68884fdb4a4876332
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5919602"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5971628"
 ---
 # <a name="export-restrictions-on-cryptography"></a>Exportbeschränkungen hinsichtlich Kryptografie
 
@@ -23,7 +23,7 @@ Anhand der Informationen in diesem Abschnitt können Sie ermitteln, ob Ihre App 
 
 Das Bureau of Industry and Security (BIS) im United States Department of Commerce kontrolliert den Export von Technologie, die bestimmte Arten von Verschlüsselung verwendet. Bei allen im Microsoft Store aufgelisteten Apps müssen diese Gesetze und Bestimmungen beachtet werden, da die App-Dateien in den USA gespeichert werden können. Sogar bei Apps, die von App-Entwicklern aus anderen Ländern zur Verteilung außerhalb der USA hochgeladen werden, müssen diese Bestimmungen befolgt werden. Daher müssen alle App-Entwickler beim Übermitteln einer App an den Microsoft Store bestätigen, dass ihre Apps keine Technologien enthalten, die gemäß diesen Bestimmungen eingeschränkt sind.
 
-> **Hinweis**Angaben enthält einige Richtlinien, aber es ist Ihre Aufgabe als Anwendungsentwickler, apps im Microsoft Store veröffentlicht sicherstellen, dass Ihre Anwendung alle Gesetze und Vorschriften entspricht.
+> **Hinweis:** die hier bereitgestellte Informationen bietet einige Anleitungen, aber es liegt in Ihrer Verantwortung als app-Entwickler apps im Microsoft Store veröffentlichen um sicherzustellen, dass Ihre app für die Einhaltung aller geltenden Gesetze und Bestimmungen verantwortlich.
 
  
 
@@ -35,7 +35,7 @@ Informationen zu den Export Administration Regulations (EAR), die den Export von
 
 Ermitteln Sie zunächst, ob Ihre App eine Art von Kryptografie verwendet, die durch die Export Administration Regulations geregelt wird. Die Frage enthält die in der Liste enthaltenen Beispiele. Diese Liste enthält jedoch nicht alle möglichen Anwendungsmöglichkeiten von Kryptografie.
 
-> **Wichtige**sollten Sie nicht nur den Code für Ihre Anwendung aber auch alle Softwarebibliotheken und Dienstprogramme Betriebssystemkomponenten, die Ihre Anwendung einschließt oder links zu geschrieben.
+> **Wichtige**berücksichtigen nicht nur den Code, die Sie für Ihre app aber auch alle Softwarebibliotheken, Hilfsprogramme und Betriebssystemkomponenten, die Ihre app enthält oder links geschrieben haben.
 
 -   Jede Verwendung einer digitalen Signatur, z.B. Authentifizierung oder Integritätsprüfung
 -   Verschlüsselung von Daten oder Dateien, die die App verwendet oder auf die sie zugreift

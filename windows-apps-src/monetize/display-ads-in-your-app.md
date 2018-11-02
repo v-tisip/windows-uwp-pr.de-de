@@ -8,12 +8,12 @@ ms.date: 06/20/2018
 ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, banner, Anzeigensteuerelement,Interstitial
 ms.localizationpriority: medium
-ms.openlocfilehash: 738c643f3c83a4f88f5c52c7337c467366ac8fe5
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 7acf2424a7d2fee322ba799ec670f0576b33a208
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5938092"
+ms.locfileid: "5970669"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Zeigt Werbung mithilfe der Microsoft Advertising-SDK in Ihrer App an
 
@@ -92,7 +92,7 @@ Anweisungen und Codebeispiele finden Sie in [diesem Artikel](native-ads.md).
 
 ## <a name="step-3-create-an-ad-unit-and-configure-mediation"></a>Schritt 3: Erstellen einer Anzeigeneinheit und Konfigurieren der Anzeigenvermittlung
 
-Nachdem Sie Ihre App getestet haben und Sie sie an den Store übermitteln können, erstellen Sie eine Anzeigeneinheit auf der Seite [In-App-Anzeigen](../publish/in-app-ads.md) Seite im Windows Dev Center-Dashboard. Aktualisieren Sie anschließend Ihren App-Code, um diese Anzeigeneinheit zu verwenden, damit Ihre App Live-Anzeigen empfängt. Weitere Informationen finden Sie unter [Einrichten von Anzeigeneinheiten in der App](set-up-ad-units-in-your-app.md#live-ad-units).
+Nachdem Sie Ihre app getestet haben und Sie bereit sind, die sie an den Store übermitteln, erstellen Sie eine anzeigeneinheit auf der Seite [In-app-Werbung](../publish/in-app-ads.md) im Partner Center. Aktualisieren Sie anschließend Ihren App-Code, um diese Anzeigeneinheit zu verwenden, damit Ihre App Live-Anzeigen empfängt. Weitere Informationen finden Sie unter [Einrichten von Anzeigeneinheiten in der App](set-up-ad-units-in-your-app.md#live-ad-units).
 
 Standardmäßig zeigt Ihre App Werbung der Microsoft Netzwerke für kostenpflichtige Werbeanzeigen an. Zur Maximierung Ihres Anzeigenumsatzes können Sie für Ihre Anzeigeneinheit die [Anzeigenvermittlung](ad-mediation-service.md) aktivieren, um kostenpflichtige Anzeigen von weiteren Anzeigennetzwerken anzuzeigen (z. B. Taboola und Smaato). Sie können Ihrer App-Werbung auch steigern, indem Sie Anzeigen aus Microsoft App-Werbekampagnen darstellen.
 
@@ -100,9 +100,9 @@ Zum Starten der Anzeigenvermittlung in Ihrer UWP-App [Konfigurieren Sie die Anze
 
 ## <a name="step-4-submit-your-app-and-review-performance"></a>Schritt 4: Übermitteln der App und Überprüfen der Leistung
 
-Nach Abschluss der Entwicklung Ihrer App mit Werbung können Sie Ihre [aktualisierte App über das Windows Dev Center-Dashboard](https://docs.microsoft.com/windows/uwp/publish/app-submissions) senden, damit sie im Store verfügbar ist. Apps, die Anzeigen darstellen, müssen zusätzlich die Anforderungen erfüllen, die in [Abschnitt 10.10 der Microsoft Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) [Anlage E der Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) angegeben sind.
+Nach Abschluss der Entwicklung Ihrer Apps mit anzeigen, können Sie [die aktualisierte app übermitteln](https://docs.microsoft.com/windows/uwp/publish/app-submissions) , im Partner Center im Store verfügbar machen. Apps, die Anzeigen darstellen, müssen zusätzlich die Anforderungen erfüllen, die in [Abschnitt 10.10 der Microsoft Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) [Anlage E der Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) angegeben sind.
 
-Nach der Veröffentlichung Ihrer App und im Store können Sie Ihre [Werbeleistungsberichte](../publish/advertising-performance-report.md) im Dashboard überprüfen und Änderungen an den für die Anzeigenvermittlung zur Optimierung der Leistung Ihrer Anzeigen vornehmen. Der Umsatz befindet sich in der [Auszahlungszusammenfassung](../publish/payout-summary.md).
+Nachdem Ihre app im Store veröffentlicht und verfügbar ist, können Sie überprüfen Sie Ihre [Berichte zur anzeigenleistung](../publish/advertising-performance-report.md) im Partner Center und weiterhin Änderungen an den für die anzeigenvermittlung zur Optimierung der Leistung Ihrer anzeigen vornehmen. Der Umsatz befindet sich in der [Auszahlungszusammenfassung](../publish/payout-summary.md).
 
 <span id="additional-help" />
 

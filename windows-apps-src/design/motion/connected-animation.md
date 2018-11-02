@@ -4,19 +4,19 @@ description: Mit verbundenen Animationen können Sie eine dynamische und ansprec
 title: Verbundene Animationen
 template: detail.hbs
 ms.author: jimwalk
-ms.date: 10/25/2017
+ms.date: 10/04/2018
 ms.topic: article
 keywords: Windows10, UWP
 pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 77050103bb78788a5c1868a41d315edd6832a5fe
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 51cf9dd0d28590d86bf05cc16634e465e260626c
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5938847"
+ms.locfileid: "5977082"
 ---
 # <a name="connected-animation-for-uwp-apps"></a>Verbundene Animation für UWP-Apps
 
@@ -55,9 +55,9 @@ Verbundene Animationen werden in der Regel bei einem Seitenwechsel verwendet, si
 ## <a name="configure-connected-animation"></a>Konfigurieren von verbundenen animation
 
 > [!IMPORTANT]
-> Dieses Feature erfordert, dass Ihre app-Zielversion RS5 sein (Windows SDK-Version 10.0.NNNNN.0 (Windows 10, Version jjmm) oder höher. Die Konfiguration-Eigenschaft ist nicht verfügbar in frühere SDKs. Sie können eine mindestens erforderliche Version niedriger als RS5 abzielen (Windows SDK-Version 10.0.NNNNN.0 (Windows 10, Version jjmm) verwenden adaptiven Code oder bedingten XAML. Weitere Informationen finden Sie unter [versionsadaptive apps](/debug-test-perf/version-adaptive-apps).
+> Dieses Feature erfordert, dass die Ziel Version Windows 10, Version 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) oder höher. Die Konfiguration-Eigenschaft ist nicht verfügbar in frühere SDKs. Sie können eine Mindestversion kleiner als SDK 17763 Ziel mit adaptivem Code oder bedingten XAML-Code. Weitere Informationen finden Sie unter [versionsadaptive apps](/debug-test-perf/version-adaptive-apps).
 
-Verbundene Animationen weiter Benutzeroberflächenelement RS5 ab, Fluent Design durch die Bereitstellung der Animation Konfigurationen zugeschnitten sind speziell für Vorwärts und rückwärts Navigation zwischen Seiten.
+Ab Windows 10, Version 1809, weiter verbundene Animationen Benutzeroberflächenelement Fluent Design durch die Bereitstellung der Animation Konfigurationen zugeschnitten sind speziell für Vorwärts und rückwärts Navigation zwischen Seiten.
 
 Durch Festlegen der Konfiguration-Eigenschaft auf den ConnectedAnimation Geben Sie eine Animation-Konfiguration. (Wir zeigen Beispiele hierfür im nächsten Abschnitt.)
 
@@ -74,7 +74,7 @@ Wie der Benutzer in der app (A zu B) vorwärts navigiert, wird das verbundene El
 
 | [BasicConnectedAnimationConfiguration]() |
 | - |
-| Dies ist der Standardwert (und nur) Animation im SDK-Versionen vor RS5 verwendet (Windows SDK-Version 10.0.NNNNN.0 (Windows 10, Version jjmm). |
+| Dies ist der Standardwert (und nur) Animation in Versionen vor Windows 10, Version 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) verwendet. |
 
 ### <a name="connectedanimationservice-configuration"></a>ConnectedAnimationService-Konfiguration
 

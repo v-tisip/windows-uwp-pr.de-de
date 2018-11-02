@@ -7,12 +7,12 @@ ms.author: mhopkins
 ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b89cad4c299f7326d0bb7d9ea4b8c6685f70f26c
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 207203805dfee0fd54a9d6d6fd4987b098710f4c
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5933112"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5973705"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>Aktivieren von Abonnements für Add-Ons für Ihre App
 
@@ -35,7 +35,7 @@ Abonnement-Add-Ons für UWP-Apps unterstützen die folgenden Features:
 
 Gehen Sie folgendermaßen vor, um den Kauf von Abonnement-Add-Ons in Ihrer App zu aktivieren.
 
-1. [Erstellen Sie eine Add-On-Übermittlung](../publish/add-on-submissions.md) für Ihr Abonnement im Dev Center-Dashboard und veröffentlichen Sie die Übermittlung. Beachten Sie im Rahmen des Add-On-Übermittlungsprozesses die folgenden Eigenschaften:
+1. [Erstellen einer Add-on-Übermittlung](../publish/add-on-submissions.md) für Ihr Abonnement im Partner Center und die Übermittlung zu veröffentlichen. Beachten Sie im Rahmen des Add-On-Übermittlungsprozesses die folgenden Eigenschaften:
 
     * [Produkttyp](../publish/set-your-add-on-product-id.md#product-type): Stellen Sie sicher, dass Sie **Abonnement** ausgewählt haben.
 
@@ -70,8 +70,8 @@ Die Codebeispiele in diesem Abschnittzeigen, wie Sie die APIs im [**Windows.Serv
 
 Für diese Beispiele gelten die folgenden Voraussetzungen:
 * Ein Visual Studio-Projekt für eine UWP (Universelle Windows-Plattform)-App, die für **Windows 10 Anniversary Edition (10.0; Build 14393)** oder höher, geeignet ist.
-* Sie haben eine [App-Übermittlung](https://docs.microsoft.com/windows/uwp/publish/app-submissions) im Windows Dev Center-Dashboard erstellt. Diese App wird veröffentlicht und ist im Store verfügbar. Sie können Ihre App optional so konfigurieren, dass Sie während der Tests im Store ausgeblendet ist. Weitere Informationen finden Sie unter [Hinweise für Tests](in-app-purchases-and-trials.md#testing).
-* Sie haben [ein Abonnement-Add-On für die App](../publish/add-on-submissions.md) im Dev Center-Dashboard erstellt.
+* Sie haben [eine app-Übermittlung erstellt haben](https://docs.microsoft.com/windows/uwp/publish/app-submissions) , im Partner Center und diese app im Store veröffentlicht wird. Sie können Ihre App optional so konfigurieren, dass Sie während der Tests im Store ausgeblendet ist. Weitere Informationen finden Sie unter [Hinweise für Tests](in-app-purchases-and-trials.md#testing).
+* Sie haben [erstellt ein Abonnement-Add-On für die app](../publish/add-on-submissions.md) im Partner Center.
 
 Der Code in diesen Beispielen geht von Folgendem aus:
 * Die Codedatei enthält **using**-Anweisungen für die Namespaces **Windows.Services.Store** und **System.Threading.Tasks**.

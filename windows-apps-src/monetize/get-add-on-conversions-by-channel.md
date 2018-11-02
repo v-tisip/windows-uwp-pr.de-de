@@ -7,12 +7,12 @@ ms.date: 08/04/2017
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Add-On-Konversionen, Kanäle
 ms.localizationpriority: medium
-ms.openlocfilehash: d64af06acb730160f7f9f7f0e9eda96074b3eac7
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 0cf4e0f2cad0ea497e7d97c9b415ab385703c5c4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5940266"
+ms.locfileid: "5974674"
 ---
 # <a name="get-add-on-conversions-by-channel"></a>Abrufen von Add-On-Konvertierungen nach Kanal
 
@@ -21,7 +21,7 @@ Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um aggregierte K
 * *Konvertierung* bedeutet, dass ein Kunde (der mit einem Microsoft-Konto angemeldet ist) eine Lizenz für Ihr Add-On (entweder für eine kostenpflichtige oder eine kostenlose App) neu erworben hat.
 * Der *Channel* ist die Methode, über die ein Kunde auf der Eintragsseite Ihrer App gelangt ist (z.B. über den Store oder einer [Werbekampagne für benutzerdefinierte Apps](../publish/create-a-custom-app-promotion-campaign.md)).
 
-Diese Informationen sind auch im [Bericht „Add-On-Käufe“](../publish/add-on-acquisitions-report.md#add-on-page-views-and-conversions-by-campaign-id) im Windows Dev Center-Dashboard verfügbar.
+Diese Informationen sind auch im [Bericht zu Add-on-Käufen](../publish/add-on-acquisitions-report.md#add-on-page-views-and-conversions-by-campaign-id) im Partner Center verfügbar.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
