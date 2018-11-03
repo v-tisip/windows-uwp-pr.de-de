@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store Werbungs-API, Anzeigenkampagnen
 ms.localizationpriority: medium
-ms.openlocfilehash: 346383504abd7927cf863afa59bcb574ddd2495d
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: e3d4a09524f1ebc0e944036bd9458b1b32ee04d3
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5939315"
+ms.locfileid: "5980189"
 ---
 # <a name="manage-delivery-lines"></a>Verwalten von Lieferpositionen
 
@@ -21,7 +21,7 @@ Erstellen Sie mit diesen Methoden in Microsoft Store-Angebote API eine oder mehr
 
 Weitere Informationen zu der Beziehung zwischen Lieferpositionen und Anzeigenkampagnen, Zielgruppenprofilen und Werbemitteln finden Sie unter [Anzeigenkampagnen mit Microsoft Store-Diensten ausführen](run-ad-campaigns-using-windows-store-services.md#call-the-windows-store-promotions-api).
 
->**Hinweis**&nbsp;&nbsp;Bevor Sie mithilfe dieser API Lieferpositionen für Anzeigenkampagnen erstellen können, müssen Sie zunächst [eine kostenpflichtige Anzeigenkampagne über die Seite **Bewerben Ihrer App** im Dev Center-Dashboard erstellen](../publish/create-an-ad-campaign-for-your-app.md), und Sie müssen auf dieser Seite mindestens ein Zahlungsmittel hinzufügen. Danach können Sie mithilfe dieser API gebührenpflichtige Lieferpositionen für Anzeigenkampagnen erstellen. Anzeigenkampagnen, die Sie mithilfe der API erstellen, werden automatisch das auf der Seite **Bewerben Ihrer App** im Dashboard gewählte Standard-Zahlungsmittel fakturieren.
+>**Hinweis:**&nbsp;&nbsp;bevor Sie erfolgreich Lieferpositionen für Anzeigenkampagnen mithilfe dieser API erstellen können, Sie zunächst [eine kostenpflichtige Anzeigenkampagne über die Seite **Anzeigenkampagnen** im Partner Center erstellen müssen](../publish/create-an-ad-campaign-for-your-app.md)und müssen Sie mindestens eine Zahlung hinzufügen Instrument auf dieser Seite. Danach können Sie mithilfe dieser API gebührenpflichtige Lieferpositionen für Anzeigenkampagnen erstellen. Anzeigenkampagnen, die Sie mithilfe der API erstellen, werden automatisch die Standard-Zahlungsmittel fakturieren auf der Seite " **Anzeigenkampagnen** " im Partner Center in Rechnung gestellt.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -30,7 +30,7 @@ Zur Verwendung dieser Methoden sind folgende Schritte erforderlich:
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](run-ad-campaigns-using-windows-store-services.md#prerequisites) für die Microsoft Store-Werbungs-API.
 
   > [!NOTE]
-  > Im Rahmen der Voraussetzungen müssen Sie sicherstellen, dass Sie [mindestens eine kostenpflichtige Anzeigenkampagne im Dev Center-Dashboard](../publish/create-an-ad-campaign-for-your-app.md) erstellen, und dass Sie mindestens ein Zahlungsmittel für die Anzeigenkampagne im Dashboard hinzufügen. Lieferpositionen, die Sie mithilfe dieser API erstellen, werden automatisch das auf der Seite **Bewerben Ihrer App** im Dashboard gewählte Standard-Zahlungsmittel fakturieren.
+  > Als Teil der erforderlichen Komponenten hinzufügen sicher sein, Sie [mindestens eine kostenpflichtige Anzeigenkampagne im Partner Center erstellen,](../publish/create-an-ad-campaign-for-your-app.md) und dass Sie mindestens ein Zahlungsmittel für die Anzeigenkampagne im Partner Center. Lieferpositionen, die Sie mithilfe dieser API erstellen, werden automatisch die Standard-Zahlungsmittel fakturieren auf der Seite " **Anzeigenkampagnen** " im Partner Center in Rechnung gestellt.
 
 * [Rufen Sie ein Azure AD-Zugriffstoken ab](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token), das in der Anforderungskopfzeile für diese Methoden verwendet wird. Nach Erhalt eines Zugriffstokens können Sie es 60Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
 

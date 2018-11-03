@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f8699ee06da545e3b34711f496a887fd7aa2c935
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5919718"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5978504"
 ---
 # <a name="file-access-permissions"></a>Berechtigungen für den Dateizugriff
 
@@ -24,9 +24,9 @@ Universelle Windows-Apps (Apps) können standardmäßig auf bestimmte Dateisyste
 Bei Erstellung einer neuen App können Sie standardmäßig auf folgende Dateisystemspeicherorte zugreifen:
 
 ### <a name="application-install-directory"></a>Installationsverzeichnis der Anwendung
-Der Ordner, in dem Ihre Anwendung auf dem System des Benutzers installiert ist.
+Der Ordner, in denen Ihre app auf dem System des Benutzers installiert ist.
 
-Es gibt zwei Hauptmethoden zum Zugriff auf Dateien und Ordner in Ihrer Anwendung Installationsverzeichnis:
+Es gibt zwei primäre Möglichkeiten, greifen Sie auf Dateien und Ordner in Ihrer app Installationsverzeichnis:
 
 1. Sie können auf folgende Weise einen [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) aufrufen, der das Installationsverzeichnis Ihrer App darstellt:
 
@@ -91,10 +91,10 @@ Darüber hinaus können Sie im Gegensatz zu anderen Speicherorten auf das Instal
 
 Das Installationsverzeichnis der Anwendung ist ein schreibgeschützter Speicherort. Sie können nicht über die Dateiauswahl auf das Installationsverzeichnis zugreifen.
 
-### <a name="application-data-locations"></a>Anwendung von Standorten
+### <a name="application-data-locations"></a>Speicherorte von Anwendungsdaten
 Die Ordner, in denen Ihre App Daten speichern kann. Diese Ordner (lokal, servergespeichert und temporär) werden nach Installation Ihrer Anwendung erstellt.
 
-Es gibt zwei Hauptmethoden Zugriff auf Dateien und Ordner aus der Anwendung von Standorten:
+Es gibt zwei wesentlichen Möglichkeiten, auf Dateien und Ordner in den Dateispeicherorten Ihrer app zuzugreifen:
 
 1.  Verwenden Sie die [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587)-Eigenschaften, um einen Dateiordner abzurufen.
 
@@ -161,7 +161,7 @@ Das Präfix „ms-appdata:///local/“ in der URI bezieht sich auf den lokalen O
 
 Darüber hinaus können Sie, im Gegensatz zu anderen Speicherorten, auf Dateien in den App-Datenspeicherorten auch mit [Win32 und COM für UWP-Apps (Universelle Windows-Plattform)](https://msdn.microsoft.com/library/windows/apps/br205757) und einigen Funktionen der C/C++-Standardbibliothek in Microsoft Visual Studio zugreifen.
 
-Sie können nicht die lokale, servergespeicherte und temporäre Ordner über Dateiauswahl zugreifen.
+Sie können nicht über die Dateiauswahl auf die lokale, servergespeicherte oder temporäre Ordner zugreifen.
 
 ### <a name="removable-devices"></a>Wechselmedien
 Darüber hinaus kann Ihre App standardmäßig auf einige der Dateien auf verbundenen Geräten zugreifen. Diese Möglichkeit besteht, wenn Ihre App die [Erweiterung für die automatische Wiedergabe](https://msdn.microsoft.com/library/windows/apps/xaml/hh464906.aspx#autoplay) verwendet, die automatisch gestartet wird, sobald Benutzer ein Gerät, wie eine Kamera oder einen USB-Speicherstick, an Ihr System anschließen. Die Dateien, auf welche Ihre App zugreifen kann, sind auf bestimmte Dateitypen begrenzt, die über Deklarationen von Dateitypzuordnungen in Ihrem App-Manifest festgelegt sind.
@@ -171,8 +171,8 @@ Sie können natürlich auch auf Dateien und Ordner auf einem Wechselmedium mithi
 > [!NOTE]
 > Weitere Informationen zum Zugriff auf eine SD-Karte oder andere Wechselgeräte finden Sie unter [Zugreifen auf die SD-Karte](access-the-sd-card.md).
 
-## <a name="locations-that-uwp-apps-can-access"></a>Speicherorte, die UWP-apps zugreifen können
-### <a name="users-downloads-folder"></a>Downloads-Ordner des Benutzers
+## <a name="locations-that-uwp-apps-can-access"></a>UWP-apps zugängliche Speicherorte
+### <a name="users-downloads-folder"></a>Downloadordner des Benutzers
 
 Der Ordner, in dem heruntergeladene Dateien standardmäßig gespeichert werden.
 
@@ -257,7 +257,7 @@ In der folgenden Tabelle sind weitere Speicherorte aufgeführt, auf die Sie durc
 | Ort | Funktion | Windows.Storage-API |
 |----------|------------|---------------------|
 | Alle Dateien, auf die der Benutzer Zugriff hat. Beispiel: Dokumente, Bilder, Fotos, Downloads, Desktop, OneDrive usw. | broadFileSystemAccess<br><br>Dies ist eine eingeschränkte Funktion. Bei der ersten Verwendung fordert das System den Benutzer auf, den Zugriff zuzulassen. Der Zugriff kann unter Einstellungen > Datenschutz > Dateisystem konfiguriert werden. Wenn Sie eine App an den Store übermitteln, die diese Funktion deklariert, müssen Sie zusätzliche Beschreibungen dazu bereitstellen, warum die App diese Funktion benötigt und wie sie diese verwenden wird.<br>Diese Funktion funktioniert für APIs im [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346)-Namespace. | n.a. |
-| Dokumente | DocumentsLibrary <br><br>Hinweis: Sie müssen Ihrem App-Manifest Dateitypzuordnungen hinzufügen, die bestimmte Dateitypen deklarieren, auf die Ihre App an diesem Speicherort Zugriff hat. <br><br>Verwenden Sie diese Funktion, wenn Ihre App:<br>- Den plattformübergreifenden Offlinezugriff auf bestimmte OneDrive-Inhalte mit gültigen OneDrive-URLs oder Ressourcen-IDs ermöglicht.<br>-Speichert geöffneten Dateien OneDrive automatisch während der Benutzer offline | [KnownFolders.DocumentsLibrary](https://msdn.microsoft.com/library/windows/apps/br227152) |
+| Dokumente | DocumentsLibrary <br><br>Hinweis: Sie müssen Ihrem App-Manifest Dateitypzuordnungen hinzufügen, die bestimmte Dateitypen deklarieren, auf die Ihre App an diesem Speicherort Zugriff hat. <br><br>Verwenden Sie diese Funktion, wenn Ihre App:<br>- Den plattformübergreifenden Offlinezugriff auf bestimmte OneDrive-Inhalte mit gültigen OneDrive-URLs oder Ressourcen-IDs ermöglicht.<br>-Speichert geöffneten Dateien auf OneDrive des Benutzers automatisch während offline | [KnownFolders.DocumentsLibrary](https://msdn.microsoft.com/library/windows/apps/br227152) |
 | Musik     | MusicLibrary <br>Weitere Informationen finden Sie unter [Dateien und Ordner in den Musik-, Bild- und Videobibliotheken](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.MusicLibrary](https://msdn.microsoft.com/library/windows/apps/br227155) |    
 | Bilder  | PicturesLibrary<br> Weitere Informationen finden Sie unter [Dateien und Ordner in den Musik-, Bild- und Videobibliotheken](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.PicturesLibrary](https://msdn.microsoft.com/library/windows/apps/br227156) |  
 | Videos    | VideosLibrary<br>Weitere Informationen finden Sie unter [Dateien und Ordner in den Musik-, Bild- und Videobibliotheken](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.VideosLibrary](https://msdn.microsoft.com/library/windows/apps/br227159) |   

@@ -8,17 +8,17 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, App-Installationen
 ms.localizationpriority: medium
-ms.openlocfilehash: 902ff653d0c573ba5ab094fa81607796b4f01aae
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 72efc20e218cdf718b67c949bd7c71108921bf9c
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5939212"
+ms.locfileid: "5978214"
 ---
 # <a name="get-app-installs"></a>Abrufen von App-Installationen
 
 
-Verwenden Sie diese Methode der Microsoft Store-Analyse-API, um die aggregierten Installationsdaten (im JSON-Format) für eine Anwendung während eines bestimmten Zeitraums und andere optionale Filter abzurufen. Diese Informationen sind auch im [Bericht „Käufe“](../publish/acquisitions-report.md) im Windows Dev Center-Dashboard verfügbar.
+Verwenden Sie diese Methode der Microsoft Store-Analyse-API, um die aggregierten Installationsdaten (im JSON-Format) für eine Anwendung während eines bestimmten Zeitraums und andere optionale Filter abzurufen. Diese Informationen sind auch im [Bericht "Käufe"](../publish/acquisitions-report.md) im Partner Center verfügbar.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

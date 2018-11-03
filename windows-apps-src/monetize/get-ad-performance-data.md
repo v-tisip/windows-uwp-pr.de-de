@@ -8,19 +8,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Anzeigen, Leistung
 ms.localizationpriority: medium
-ms.openlocfilehash: 30f24b2494470f60371e466bb4d1e1878475d963
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 7310eeb04915933adc149165fa6774ed2f413814
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5927584"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5982802"
 ---
 # <a name="get-ad-performance-data"></a>Abrufen von Anzeigenleistungsdaten
 
 
 Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um aggregierte Anzeigenleistungsdaten für Ihre Anwendungen während eines bestimmten Zeitraums und andere optionale Filter abzurufen. Diese Methode gibt die Daten im JSON-Format zurück.
 
-Diese Methode gibt dieselben Daten wie der [Bericht zur Anzeigenleistung](../publish/advertising-performance-report.md) im Windows Dev Center-Dashboard zurück.
+Diese Methode gibt dieselben Daten, die von den [Leistungsbericht Werbung](../publish/advertising-performance-report.md) im Partner Center bereitgestellt werden.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -118,12 +118,12 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | applicationId       | string | Die Store-ID der App, für die Sie Anzeigenleistungsdaten abrufen.     |
 | applicationName     | string | Der Anzeigename der App.                         |
 | adUnitId           | string | Die ID der Anzeigeneinheit.        |
-| adUnitName           | string | Der Name der Anzeigeneinheit, wie er vom Entwickler im Dev Center-Dashboard angegeben wurde.              |
+| adUnitName           | string | Der Name der anzeigeneinheit, wie vom Entwickler im Partner Center angegeben.              |
 | adProvider           |  string  |  Der Name des Anzeigenanbieters.   |
 | deviceType          | string | Der Gerätetyp, auf dem die Anzeigen bereitgestellt wurden. Eine Liste der unterstützten Zeichenfolgen finden Sie oben im Abschnitt [Filterfelder](#filter-fields).                              |
 | market              | string | Der ISO3166-Ländercode des Markts, in dem die Anzeigen platziert wurden.             |
 | accountCurrencyCode     | string | Der Währungscode für das Konto.        |
-| pubCenterAppName       |  string  |   Der Name der pubCenter-App, die der App im Dev Center zugeordnet ist.   |
+| pubCenterAppName       |  string  |   Der Name der PubCenter-app, die die app im Partner Center zugeordnet ist.   |
 | adProviderRequests        | int | Die Anzahl der Anzeigenanforderungen für den angegebenen Anzeigenanbieter.                 |
 | impressions           | int | Die Anzahl der Anzeigenaufrufe.        |
 | clicks            | int | Die Anzahl der Anzeigenklicks.       |

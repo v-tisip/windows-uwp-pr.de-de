@@ -8,12 +8,12 @@ ms.date: 03/16/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Sammlungs-API, Produkte anzeigen
 ms.localizationpriority: medium
-ms.openlocfilehash: 1dded9b66fbae4f65b936335eda406d8773420c4
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 3e5d6376420a1ee4ac166330371cf6e058d3476e
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5920054"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5979105"
 ---
 # <a name="query-for-products"></a>Produktabfrage
 
@@ -134,7 +134,7 @@ Das CollectionItemContractV6-Objekt enthält die folgenden Parameter.
 | devOfferId           | string             | Die Angebots-ID aus einem In-App-Kauf.              | Nein       |
 | endDate              | datetime           | Das Enddatum des Artikels.              | Ja      |
 | fulfillmentData      | string             | Nicht verfügbar         | Nein       |
-| inAppOfferToken      | string             | Die vom Entwickler angegebene Produkt-ID-Zeichenfolge, die dem Element im Windows Dev Center-Dashboard zugewiesen wurde. Beispiel für eine Produkt-ID ist *product123*. | Nein       |
+| inAppOfferToken      | string             | Die vom Entwickler angegebene Produkt-ID-Zeichenfolge, die das Element im Partner Center zugeordnet ist. Eine Beispiel-Produkt-ID ist *product123*. | Nein       |
 | itemId               | string             | Eine ID zur Unterscheidung dieses Sammlungselements von anderen Artikeln des Benutzers. Diese ID ist pro Produkt eindeutig.   | Ja      |
 | localTicketReference | string             | Die ID der zuvor bereitgestellten *localTicketReference* im Anforderungstext.                  | Ja      |
 | modifiedDate         | datetime           | Das Datum, an dem dieser Artikel zuletzt geändert wurde.              | Ja      |

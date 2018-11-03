@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, AdControl, AdMediatorControl, Migrieren
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e57cc24554f851ba79cfc47e917b92b3ad3047e
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 48fc818c1ae7a9a46912ff52c2b00b07f19c366e
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5936523"
+ms.locfileid: "5985663"
 ---
 # <a name="update-your-app-to-the-latest-advertising-libraries-for-banner-ads"></a>Aktualisieren Ihrer App auf die neuesten Advertising-Bibliotheken für Banneranzeigen
 
@@ -29,7 +29,7 @@ Vor der Freigabe dieses SDK wurde die **AdControl**-Klasse in mehreren älteren 
 
 * Wenn **AdControl** in Ihrer App eine neue Anzeige anfordert, wird ein **ErrorOccurred**-Ereignis des Steuerelements ausgegeben, und die **ErrorCode**-Eigenschaft der Ereignisargumente hat den Wert **NoAdAvailable**.
 
-* Alle Anzeigeneinheiten, die Ihrer App zugeordnet sind, werden deaktiviert. Sie können diese deaktivierten Anzeigeeinheiten nicht aus Ihrem Dev Center-Konto entfernen. Wenn Sie Ihre App aktualisieren, damit Sie ein unterstütztes [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) nutzen können, ignorieren Sie diese Anzeigeneinheiten und erstellen Sie neue.
+* Alle Anzeigeneinheiten, die Ihrer App zugeordnet sind, werden deaktiviert. Sie können keine diese deaktivierten Anzeigeeinheiten aus Ihrem DePartnerv Center-Konto entfernen. Wenn Sie Ihre App aktualisieren, damit Sie ein unterstütztes [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) nutzen können, ignorieren Sie diese Anzeigeneinheiten und erstellen Sie neue.
 
 * Banneranzeigen werden nicht mehr für Anzeigeneinheiten bereitgestellt, die in mehreren Apps verwendet werden. Stellen Sie sicher, dass Ihre Anzeigeneinheiten jeweils nur in einer App verwendet werden.
 
@@ -88,4 +88,4 @@ Entfernen Sie alle vorhandenen Verweise auf Microsoft Advertising-Bibliotheken a
 
 Testen Sie Ihre App, um sicherzustellen, dass sie Banneranzeigen korrekt anzeigt.
 
-Wenn die vorherige Version Ihrer App bereits im Store verfügbar ist, erstellen Sie im Dev Center-Dashboard [eine neue Übermittlung](../publish/app-submissions.md) für Ihre aktualisierte App, um diese erneut zu veröffentlichen.
+Wenn die vorherige Version Ihrer App im Store, [Erstellen Sie eine neue Übermittlung](../publish/app-submissions.md) für Ihre aktualisierte app im Partner Center, um die app erneut veröffentlichen bereits verfügbar ist.
