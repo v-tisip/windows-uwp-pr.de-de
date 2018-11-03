@@ -7,12 +7,12 @@ ms.date: 08/04/2017
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, App-Konversionen, Kanäle
 ms.localizationpriority: medium
-ms.openlocfilehash: 60e166b70c6a2aacf20673b30461002f3aa61305
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: ecb5d5dfbfcbabbd3fa3004c84e2a1a5fff9f2d6
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5947651"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5987333"
 ---
 # <a name="get-app-conversions-by-channel"></a>Abrufen von App-Konvertierungen nach Kanal
 
@@ -21,7 +21,7 @@ Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um aggregierte K
 * *Konvertierung* bedeutet, dass ein Kunde (der mit einem Microsoft-Konto angemeldet ist) eine Lizenz für Ihre App (entweder für eine kostenpflichtige oder eine kostenlose App) neu erworben hat.
 * Der *Channel* ist die Methode, über die ein Kunde auf der Eintragsseite Ihrer App gelangt ist (z.B. über den Store oder einer [Werbekampagne für benutzerdefinierte Apps](../publish/create-a-custom-app-promotion-campaign.md)).
 
-Diese Informationen sind auch im [Bericht „Käufe“](../publish/acquisitions-report.md#app-page-views-and-conversions-by-channel) im Windows Dev Center-Dashboard verfügbar.
+Diese Informationen sind auch im [Bericht "Käufe"](../publish/acquisitions-report.md#app-page-views-and-conversions-by-channel) im Partner Center verfügbar.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

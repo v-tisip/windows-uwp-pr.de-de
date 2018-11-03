@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, Feedback-Hub, Starten
 ms.localizationpriority: medium
-ms.openlocfilehash: 16802cd7b181a6381845a4f71efdbdfb2f3eb747
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 8a92f839d122f6dbdf45693c99f984317421961d
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5937027"
+ms.locfileid: "5987472"
 ---
 # <a name="launch-feedback-hub-from-your-app"></a>Starten des Feedback-Hubs über Ihre App
 
-Sie können Ihre Kunden dazu ermutigen, Feedback zu geben, indem Sie ein Steuerelement (wie beispielsweise eine Schaltfläche) zu Ihrer UWP-App (Universelle Windows-Plattform) hinzufügen, durch das der Feedback-Hub gestartet wird. Beim Feedback-Hub handelt es sich um eine vorinstallierte App, in der an einem zentralen Ort Feedback zu Windows und den installierten Apps gesammelt werden kann. Das gesamte über den Feedback-Hub eingereichte Kundenfeedback für Ihre App wird gesammelt und Ihnen im [Feedbackbericht](../publish/feedback-report.md) im Windows Dev Center-Dashboard angezeigt, sodass Sie sich die Probleme, Vorschläge und Upvotes ansehen können, die Ihre Kunden in einem Bericht übermittelt haben.
+Sie können Ihre Kunden dazu ermutigen, Feedback zu geben, indem Sie ein Steuerelement (wie beispielsweise eine Schaltfläche) zu Ihrer UWP-App (Universelle Windows-Plattform) hinzufügen, durch das der Feedback-Hub gestartet wird. Beim Feedback-Hub handelt es sich um eine vorinstallierte App, in der an einem zentralen Ort Feedback zu Windows und den installierten Apps gesammelt werden kann. Alle Feedback von Kunden, die für Ihre app über den Feedback-Hub übermittelt wird erfasst und vorgeschlagen, die Sie im [Bericht "Feedback"](../publish/feedback-report.md) im Partner Center, damit Sie sehen können, die Probleme, Vorschläge und zustimmungen, die Ihre Kunden in einem Bericht übermittelt haben.
 
 Um den Feedback-Hub über Ihre App zu starten, verwenden Sie eine API, die vom [Microsoft Store Services SDK](http://aka.ms/store-em-sdk) bereitgestellt wird. Es wird die Verwendung dieser API zum Starten des Feedback-Hubs über ein Benutzeroberflächenelement in Ihrer App empfohlen, das unseren Designrichtlinien entspricht.
 

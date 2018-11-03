@@ -8,16 +8,16 @@ ms.author: mhopkins
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b078f0573d94e80b590f473f7c9a9b0395115ee
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: d428128430a6d7743ebdf94fb8d9aff8286d8d77
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5930865"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5988214"
 ---
 # <a name="implement-a-trial-version-of-your-app"></a>Implementieren einer Testversion Ihrer App
 
-Wenn Sie Ihre App als [kostenlose Testversion im Windows Dev Center-Dashboard](../publish/set-app-pricing-and-availability.md#free-trial) konfigurieren, damit Kunden über einen Testzeitraum Ihre App kostenlos verwenden können, können Sie einen Anreiz schaffen, auf die Vollversion Ihrer App zu aktualisieren, indem Sie einige Features für den Testzeitraum einschränken oder ausschließen. Bestimmen Sie die einzuschränkenden Features, bevor Sie mit dem Codieren beginnen, und stellen Sie dann sicher, dass diese nur beim Erwerb einer Lizenz für die Vollversion der App verfügbar sind. Außerdem können Sie Features wie Banner oder Wasserzeichen aktivieren, die nur in der Testversion angezeigt werden, bevor ein Kunde Ihre App kauft.
+Wenn Sie [Ihre app als eine kostenlose Testversion im Partner Center zu konfigurieren](../publish/set-app-pricing-and-availability.md#free-trial) , damit Kunden Ihre app kostenlos einen Testzeitraum verwenden können, Sie können Ihre Kunden motivieren, um auf die Vollversion Ihrer App zu aktualisieren, indem Sie einige Features den Testzeitraum einschränken oder ausschließen. Bestimmen Sie die einzuschränkenden Features, bevor Sie mit dem Codieren beginnen, und stellen Sie dann sicher, dass diese nur beim Erwerb einer Lizenz für die Vollversion der App verfügbar sind. Außerdem können Sie Features wie Banner oder Wasserzeichen aktivieren, die nur in der Testversion angezeigt werden, bevor ein Kunde Ihre App kauft.
 
 Dieser Artikel zeigt, wie Mitglieder die [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse im [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace verwenden können, um zu bestimmen, ob Benutzer eine Testversion Ihrer App ausführen, und benachrichtigt zu werden, wenn während der Ausführung der App der Status geändert wird. 
 
@@ -63,7 +63,7 @@ Beschreiben Sie, wie sich Ihre App während und nach dem kostenlosen Testzeitrau
 
 Für dieses Beispiel gelten die folgenden Voraussetzungen:
 * Ein Visual Studio-Projekt für eine UWP (Universelle Windows-Plattform)-App, die für **Windows 10 Anniversary Edition (10.0; Build 14393)** oder höher, geeignet ist.
-* Sie haben eine App im Windows Dev Center-Dashboard erstellt, die als [kostenlose Testversion](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) ohne zeitliche Begrenzung konfiguriert ist, im Store veröffentlicht ist und dort verfügbar ist. Optional können Sie die App so konfigurieren, daher sie während der Tests im Store nicht auffindbar ist. Weitere Informationen finden Sie unter [Hinweise für Tests](in-app-purchases-and-trials.md#testing).
+* Sie haben eine app erstellt, im Partner Center, die als [kostenlose Testversion](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) mit ohne zeitliche Begrenzung konfiguriert ist, und diese app im Store veröffentlicht ist. Optional können Sie die App so konfigurieren, daher sie während der Tests im Store nicht auffindbar ist. Weitere Informationen finden Sie unter [Hinweise für Tests](in-app-purchases-and-trials.md#testing).
 
 Der Code in diesem Beispiel geht von folgenden Voraussetzungen aus:
 * Die Ausführung des Codes erfolgt im Kontext einer [Seite](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx), die einen [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) mit dem Namen ```workingProgressRing``` und einen [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) mit dem Namen ```textBlock``` enthält. Diese Objekte werden verwendet, um anzugeben, dass ein asynchroner Vorgang ausgeführt wird, bzw. um Ausgabemeldungen anzuzeigen.

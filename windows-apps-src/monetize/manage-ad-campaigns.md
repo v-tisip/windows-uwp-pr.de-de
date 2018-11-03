@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store Werbungs-API, Anzeigenkampagnen
 ms.localizationpriority: medium
-ms.openlocfilehash: 36df4e7d8060b9e4420a5fe1a2144ad29520c7f7
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 6c86c0d5d1a10442c7addeed11cdbfc37846f337
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5920900"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5988098"
 ---
 # <a name="manage-ad-campaigns"></a>Verwalten von Anzeigenkampagnen
 
 Verwenden Sie diese Methoden in der [Microsoft Store-Angebots-API-](run-ad-campaigns-using-windows-store-services.md), um werbende Anzeigenkampagnen zu erstellen, zu bearbeiten und abzurufen. Jede Kampagne, die Sie erstellen, mit dieser Methode kann nur eine App zugeordnet werden.
 
->**Hinweis:**&nbsp;&nbsp;Sie können Anzeigenkampagnen auch über das Windows Dev Center-Dashboard erstellen und verwalten, und auf Kampagnen, die Sie programmgesteuert erstellen, können Sie im Dashboard zugreifen. Weitere Informationen zum Verwalten von Anzeigenkampagnen im Dashboard finden Sie unter [Erstellen einer Anzeigenkampagne für Ihre App](../publish/create-an-ad-campaign-for-your-app.md).
+>**Hinweis:**&nbsp;&nbsp;können Sie auch erstellen und Verwalten von Anzeigenkampagnen mit Partner Center und Kampagnen, die Sie programmgesteuert erstellen, können im Partner Center zugreifen. Weitere Informationen zum Verwalten von Anzeigenkampagnen im Partner Center finden Sie unter [Erstellen einer Anzeigenkampagne für Ihre app](../publish/create-an-ad-campaign-for-your-app.md).
 
 Wenn Sie eine Kampagne mit dieser Methode erstellen oder aktualisieren, rufen Sie in der Regel auch eine oder mehrere der folgenden Methoden zum Verwalten der *Lieferpositionen*, *Zielgruppenprofile*, und *Werbemittel* ab, die der Kampagne zugeordnet sind. Weitere Informationen über die Beziehung zwischen Kampagnen, Lieferpositionen, Zielgruppenprofilen und Werbemitteln finden Sie unter [Anzeigenkampagnen mit Microsoft Store-Diensten ausführen](run-ad-campaigns-using-windows-store-services.md#call-the-windows-store-promotions-api).
 
@@ -33,7 +33,7 @@ Zur Verwendung dieser Methoden sind folgende Schritte erforderlich:
 
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](run-ad-campaigns-using-windows-store-services.md#prerequisites) für die Microsoft Store-Werbungs-API.
 
-  >**Hinweis**&nbsp;&nbsp;Als Teil der Voraussetzungen stellen Sie sicher, dass Sie [mindestens eine bezahlte Anzeigekampagne im Dev Center Dashboard](../publish/create-an-ad-campaign-for-your-app.md) erstellen und mindestens ein Zahlungsmittel für die Anzeigekampagne im Dashboard hinzufügen. Lieferpositionen für Anzeigenkampagnen, die Sie mithilfe dieser API erstellen, werden automatisch das auf der Seite **Bewerben Ihrer App** im Dashboard gewählte Standard-Zahlungsmittel fakturieren.
+  >**Hinweis:**&nbsp;&nbsp;als Teil der erforderlichen Komponenten, achten Sie darauf, Sie [mindestens eine kostenpflichtige Anzeigenkampagne im Partner Center erstellen,](../publish/create-an-ad-campaign-for-your-app.md) und dass Sie hinzufügen mindestens ein Zahlungsmittel für die Anzeigenkampagne im Partner Center. Lieferpositionen für Anzeigenkampagnen, die Sie mithilfe dieser API erstellen, werden automatisch die Standard-Zahlungsmittel fakturieren auf der Seite " **Anzeigenkampagnen** " im Partner Center in Rechnung gestellt.
 
 * [Rufen Sie ein Azure AD-Zugriffstoken ab](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token), das in der Anforderungskopfzeile für diese Methoden verwendet wird. Nach Erhalt eines Zugriffstokens können Sie es 60Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
 

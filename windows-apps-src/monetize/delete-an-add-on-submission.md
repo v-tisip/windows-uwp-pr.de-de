@@ -8,12 +8,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-On-Übermittlung, löschen, In-App-Produkt, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c5d9e905f6b3d8acffc53e943d946f6ac7c3c68
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: ca534cfc7c38dba9d77749e17f15dd66766de7ca
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5941623"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5987817"
 ---
 # <a name="delete-an-add-on-submission"></a>Löschen einer Add-On-Übermittlung
 
@@ -46,8 +46,8 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 | Name        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| inAppProductId | String | Erforderlich. Die Store-ID des Add-Ons, das die zu löschende Übermittlung enthält. Die Store-ID ist im Dev Center-Dashboard verfügbar.  |
-| submissionId | String | Erforderlich. Die ID der zu löschenden Übermittlung. Diese ID ist in den Antwortdaten für Anforderungen zum [Erstellen einer Add-On-Übermittlung](create-an-add-on-submission.md) verfügbar. Für eine Übermittlung, die im Dev Center-Dashboard erstellt wurde, ist diese ID auch in der URL für die Übermittlungsseite im Dashboard verfügbar.  |
+| inAppProductId | String | Erforderlich. Die Store-ID des Add-Ons, das die zu löschende Übermittlung enthält. Die Store-ID ist im Partner Center verfügbar.  |
+| submissionId | String | Erforderlich. Die ID der zu löschenden Übermittlung. Diese ID ist in den Antwortdaten für Anforderungen zum [Erstellen einer Add-On-Übermittlung](create-an-add-on-submission.md) verfügbar. Für eine Übermittlung, die im Partner Center erstellt wurde, ist diese ID auch in der URL für die übermittlungsseite im Partner Center verfügbar.  |
 
 
 ### <a name="request-body"></a>Anforderungstext
@@ -76,7 +76,7 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 |--------|------------------|
 | 400  | Die Anforderungsparameter sind ungültig. |
 | 404  | Die angegebene Übermittlung konnte nicht gefunden werden. |
-| 409  | Die angegebene Übermittlung wurde gefunden, konnte jedoch nicht in ihrem aktuellen Zustand gelöscht werden. Oder das Add-On verwendet ein Dev Center-Dashboard-Feature, das [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt wird](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
+| 409  | Die angegebene Übermittlung wurde gefunden, aber es konnte nicht in ihrem aktuellen Zustand gelöscht werden, oder das Add-on verwendet ein Partner Center-Feature, das [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt](create-and-manage-submissions-using-windows-store-services.md#not_supported)wird. |
 
 
 ## <a name="related-topics"></a>Verwandte Themen

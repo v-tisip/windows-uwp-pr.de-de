@@ -8,17 +8,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Rezensionen
 ms.localizationpriority: medium
-ms.openlocfilehash: 61ce463be2ef2d5e3328c132302704f50c336105
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 656f00ec8a7711a43c44790b04ea01dace4c4ee2
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5926658"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5988740"
 ---
 # <a name="get-app-reviews"></a>Abrufen von App-Rezensionen
 
 
-Mit dieser Methode in der Microsoft Store-Analyse-API können Sie Rezensionsdaten im JSON-Format für einen bestimmten Zeitraum sowie weitere optionale Filter abrufen. Diese Informationen sind auch im Bericht [Rezensionen](../publish/reviews-report.md) im Windows Dev Center-Dashboard verfügbar.
+Mit dieser Methode in der Microsoft Store-Analyse-API können Sie Rezensionsdaten im JSON-Format für einen bestimmten Zeitraum sowie weitere optionale Filter abrufen. Diese Informationen sind auch im [Bericht "Rezensionen"](../publish/reviews-report.md) im Partner Center verfügbar.
 
 Nachdem Sie Rezensionen abgerufen haben, können Sie mithilfe der Methoden [Antwortinformationen für App-Rezensionen abrufen](get-response-info-for-app-reviews.md) und [Antworten auf App-Rezensionen übermitteln](submit-responses-to-app-reviews.md) der Microsoft Store-API für Rezensionen programmgesteuert auf Rezensionen reagieren.
 

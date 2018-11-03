@@ -1,24 +1,24 @@
 ---
 author: Xansky
 ms.assetid: 2BCFF687-DC12-49CA-97E4-ACEC72BFCD9B
-description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um Informationen über alle Apps abzurufen, die für Ihr Windows Dev Center-Konto registriert wurden.
+description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Abrufen von Informationen über alle apps, die für Ihr Partner Center-Konto registriert wurden.
 title: Abrufen aller Apps
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Apps
 ms.localizationpriority: medium
-ms.openlocfilehash: b0f7307e424cebcf52f56e17ad3630f6111bee21
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: a689f540cb939cea3549b6660f2daf9a70f9b1f6
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5926993"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5988108"
 ---
 # <a name="get-all-apps"></a>Abrufen aller Apps
 
 
-Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um Daten für Apps abzurufen, die für Ihr Windows Dev Center-Konto registriert wurden.
+Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Abrufen von Daten für alle apps, die für Ihr Partner Center-Konto registriert wurden.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -127,7 +127,7 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 | Fehlercode |  Beschreibung   |
 |--------|------------------|
 | 404  | Es wurden keine Apps gefunden. |
-| 409  | Die Apps verwenden Dev Center-Dashboard-Funktionen, die [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt werden](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| 409  | Die apps verwenden Partner Center-Funktionen, die [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt](create-and-manage-submissions-using-windows-store-services.md#not_supported)werden.  |
 
 
 ## <a name="related-topics"></a>Verwandte Themen

@@ -1,19 +1,19 @@
 ---
 author: Xansky
 ms.assetid: bb105fbe-bbbd-4d78-899b-345af2757720
-description: Erfahren Sie, wie Sie Ihrer App die Anwendungs-ID und die Anzeigeneinheits-ID aus dem Windows Dev Center-Dashboard hinzufügen, bevor Sie die App an den Store übermitteln.
+description: Erfahren Sie, wie-ID und anzeigeneinheits-IDs für Ihre app aus dem Partner Center hinzufügen, bevor Sie Ihre app an den Store übermitteln.
 title: Einrichten von Anzeigeneinheiten in der App
 ms.author: mhopkins
 ms.date: 05/11/2018
 ms.topic: article
 keywords: Windows 10, UWP, Anzeigen, Werbung, Anzeigeeinheiten, Test
 ms.localizationpriority: medium
-ms.openlocfilehash: 4af8dd64a8d096e41febab53b4fea2d38988d08a
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 11c66756d95e041a45fbc075b02eb744bf542871
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5926628"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5988399"
 ---
 # <a name="set-up-ad-units-in-your-app"></a>Einrichten von Anzeigeneinheiten in der App
 
@@ -21,7 +21,7 @@ Jedes Steuerelement für eine universelle Windows Platform (UWP) in Ihrer App ve
 
 Wir bieten [Testanzeigen-Einheitenwerte](#test-ad-units), die Sie während der Testphase verwenden können, um sicherzustellen, dass Ihre App Testanzeigen anzeigt. Diese Testwerte können nur in einer Testversion Ihrer App verwendet werden. Wenn Sie Testwerte in einer veröffentlichten App verwenden, wird die App keine Livewerbung empfangen.
 
-Nachdem Sie Ihre UWP-App getestet und die Übermittlung an Windows Dev Center vorbereitet haben, müssen Sie auf der Seite [In-App-Anzeigen](../publish/in-app-ads.md) im Windows Dev Center-Dashboard eine [Liveanzeigeneinheit erstellen](#live-ad-units) und anschließend Ihren App-Code mit den Werten für die Anwendungs-ID und die Anzeigeneinheits-ID aktualisieren.
+Nachdem Sie Ihre UWP-app getestet haben und Sie bereit sind, die sie in das Partner Center zu übermitteln, müssen über eine Seite [In-app-anzeigen](../publish/in-app-ads.md) in Partner Center [eine liveanzeigeneinheit erstellen](#live-ad-units) und Aktualisieren Ihrer app-Code, um die-ID und anzeigeneinheits-IDs für diese anzeigeneinheit zu verwenden.
 
 Weitere Informationen zum Zuweisen der Anwendungs-ID- und Anzeigeneinheits-ID-Werte in Ihrem App-Code finden Sie in den folgenden Artikeln:
 * [AdControl in XAML und .NET](adcontrol-in-xaml-and--net.md)
@@ -52,15 +52,15 @@ Während Sie Ihre App entwickeln, verwenden Sie die entsprechende Testanwendungs
 
 ## <a name="live-ad-units"></a>Live-Anzeigeneinheiten
 
-So rufen Sie Live-Anzeigeneinheiten vom Dev Center-Dashboard ab und verwenden es in Ihrer App:
+Live-anzeigeneinheiten von Partner Center abgerufen und in Ihrer app verwenden:
 
-1.  [Erstellen Sie eine Anzeigeneinheit](../publish/in-app-ads.md#create-ad-unit) auf der **In-App-Anzeigen**-Seite im Dashboard. Achten Sie darauf, dass Sie den richtigen Typ der Anzeigeneinheit für das Ad-Steuerelement angeben, die Sie in Ihrer App verwenden.
+1.  [Erstellen Sie eine anzeigeneinheit](../publish/in-app-ads.md#create-ad-unit) auf der Seite **In-app-Werbung** im Partner Center. Achten Sie darauf, dass Sie den richtigen Typ der Anzeigeneinheit für das Ad-Steuerelement angeben, die Sie in Ihrer App verwenden.
     > [!NOTE]
     > Sie können optional die Anzeigenvermittlung für Ihre Anzeigeneinheit durch das Konfigurieren der Einstellungen im Abschnitt [Vermittlungseinstellungen](../publish/in-app-ads.md#mediation). Mit der Anzeigenvermittlung können Sie Ihre Anzeigenumsätze maximieren und Werbefunktionen optimal nutzen, indem Sie Anzeigen aus mehreren Anzeigennetzwerken anzeigen, einschließlich Anzeigen aus anderen kostenpflichtigen Anzeigennetzwerken und Anzeigen zu Werbekampagnen für Microsoft-Apps. Wir wählen standardmäßig die Einstellungen der Anzeigenvermittlung für Ihre App mithilfe von Machine Learning Algorithmen aus, um Ihnen beim Optimieren der Anzeigenumsätze in den verschiedenen Märkten zu helfen, die Ihre App unterstützt. Sie können optional die Einstellungen für die Anzeigenvermittlung auch manuell konfigurieren.
 
 2.  Nachdem Sie die neue Anzeigeneinheit erstellen, rufen Sie die **Anwendungs-ID** und **Anzeigeneinheits-ID** für die Anzeigeneinheit in der Tabelle der verfügbaren Anzeigeneinheiten in der **Monetisierung** &gt; **in-App-Anzeigen** Seite ab.
     > [!NOTE]
-    > Die Anwendungs-IDs für Test-Anzeigeneinheiten und Live-UWP-Anzeigeneinheiten besitzen unterschiedliche Formate. Testanwendungs-ID sind GUIDs. Wenn Sie eine Live-UWP-Anzeigeneinheit im Dashboard erstellen, entspricht die Anwendungs-ID für die Anzeigeneinheit immer der Store-ID Ihrer App (ein Beispiel für einen Store-ID-Wert ist 9NBLGGH4R315).
+    > Die Anwendungs-IDs für Test-Anzeigeneinheiten und Live-UWP-Anzeigeneinheiten besitzen unterschiedliche Formate. Testanwendungs-ID sind GUIDs. Wenn Sie eine live-UWP-anzeigeneinheit in Partner Center erstellen, entspricht der Anwendung-ID-Wert für die anzeigeneinheit immer die Store-ID für Ihre app (der ein Beispiel für Store-ID-Wert ist 9nblggh4r315).).
 
 3.  Weisen Sie die Anwendungs-ID- und Anzeigeneinheits-ID-Werte in Ihrem App Code zu. Weitere Informationen finden Sie in den folgenden Artikeln:
     * [AdControl in XAML und .NET](adcontrol-in-xaml-and--net.md)
