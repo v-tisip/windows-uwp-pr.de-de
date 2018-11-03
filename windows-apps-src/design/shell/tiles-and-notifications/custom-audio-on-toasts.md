@@ -10,26 +10,26 @@ ms.topic: article
 keywords: Windows10, UWP, Popup, benutzerdefiniertes Audio, Benachrichtigungen, Audio, Sound
 ms.localizationpriority: medium
 ms.openlocfilehash: 8ef27dfed400715256d1d9cfa51f383a9b72c90d
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5926749"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5994561"
 ---
-# <a name="custom-audio-on-toasts"></a><span data-ttu-id="ac1db-103">Benutzerdefiniertes Audio auf Popups</span><span class="sxs-lookup"><span data-stu-id="ac1db-103">Custom audio on toasts</span></span>
+# <a name="custom-audio-on-toasts"></a><span data-ttu-id="1f5db-103">Benutzerdefiniertes Audio auf Popups</span><span class="sxs-lookup"><span data-stu-id="1f5db-103">Custom audio on toasts</span></span>
 
-<span data-ttu-id="ac1db-104">Popupbenachrichtigungen können benutzerdefiniertes Audio verwenden, wodurch Ihre App Ihrer Marke eindeutige Soundeffekte hinzufügt.</span><span class="sxs-lookup"><span data-stu-id="ac1db-104">Toast notifications can use custom audio, which lets your app express your brand's unique sound effects.</span></span> <span data-ttu-id="ac1db-105">Z.B. kann eine Nachrichten-App ihren eigenen Nachrichten-Sound in deren Popupbenachrichtigungen haben, damit der Benutzer sofort ermitteln kann, dass eine Benachrichtigung von der App erhalten wurde, anstatt die generische Benachrichtigung.</span><span class="sxs-lookup"><span data-stu-id="ac1db-105">For example, a messaging app can use their own messaging sound on their Toast notifications, so that the user can instantly know that they received a notification from the app, rather than hearing the generic notification sound.</span></span>
+<span data-ttu-id="1f5db-104">Popupbenachrichtigungen können benutzerdefiniertes Audio verwenden, wodurch Ihre App Ihrer Marke eindeutige Soundeffekte hinzufügt.</span><span class="sxs-lookup"><span data-stu-id="1f5db-104">Toast notifications can use custom audio, which lets your app express your brand's unique sound effects.</span></span> <span data-ttu-id="1f5db-105">Z.B. kann eine Nachrichten-App ihren eigenen Nachrichten-Sound in deren Popupbenachrichtigungen haben, damit der Benutzer sofort ermitteln kann, dass eine Benachrichtigung von der App erhalten wurde, anstatt die generische Benachrichtigung.</span><span class="sxs-lookup"><span data-stu-id="1f5db-105">For example, a messaging app can use their own messaging sound on their Toast notifications, so that the user can instantly know that they received a notification from the app, rather than hearing the generic notification sound.</span></span>
 
-## <a name="install-uwp-community-toolkit-nuget-package"></a><span data-ttu-id="ac1db-106">Installieren des UWP Community Toolkit NuGet-Pakets</span><span class="sxs-lookup"><span data-stu-id="ac1db-106">Install UWP Community Toolkit NuGet package</span></span>
+## <a name="install-uwp-community-toolkit-nuget-package"></a><span data-ttu-id="1f5db-106">Installieren des UWP Community Toolkit NuGet-Pakets</span><span class="sxs-lookup"><span data-stu-id="1f5db-106">Install UWP Community Toolkit NuGet package</span></span>
 
-<span data-ttu-id="ac1db-107">Um Benachrichtigungen über Code zu erstellen, empfehlen wir die Verwendung der UWP Community Toolkit Benachrichtigungsbibliothek, die ein Objektmodell für die Benachrichtigung von XML-Inhalten bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="ac1db-107">In order to create notifications via code, we strongly recommend using the UWP Community Toolkit Notifications library, which provides an object model for the notification XML content.</span></span> <span data-ttu-id="ac1db-108">Sie können die Benachrichtigungs-XML manuell erstellen, jedoch ist diese fehleranfällig und unübersichtlich.</span><span class="sxs-lookup"><span data-stu-id="ac1db-108">You could manually construct the notification XML, but that is error-prone and messy.</span></span> <span data-ttu-id="ac1db-109">Die Benachrichtigungsbibliothek im UWP Community Toolkit wird vom Team erstellt und verwaltet, das die Benachrichtigungen bei Microsoft besitzt.</span><span class="sxs-lookup"><span data-stu-id="ac1db-109">The Notifications library inside UWP Community Toolkit is built and maintained by the team that owns notifications at Microsoft.</span></span>
+<span data-ttu-id="1f5db-107">Um Benachrichtigungen über Code zu erstellen, empfehlen wir die Verwendung der UWP Community Toolkit Benachrichtigungsbibliothek, die ein Objektmodell für die Benachrichtigung von XML-Inhalten bereitstellt.</span><span class="sxs-lookup"><span data-stu-id="1f5db-107">In order to create notifications via code, we strongly recommend using the UWP Community Toolkit Notifications library, which provides an object model for the notification XML content.</span></span> <span data-ttu-id="1f5db-108">Sie können die Benachrichtigungs-XML manuell erstellen, jedoch ist diese fehleranfällig und unübersichtlich.</span><span class="sxs-lookup"><span data-stu-id="1f5db-108">You could manually construct the notification XML, but that is error-prone and messy.</span></span> <span data-ttu-id="1f5db-109">Die Benachrichtigungsbibliothek im UWP Community Toolkit wird vom Team erstellt und verwaltet, das die Benachrichtigungen bei Microsoft besitzt.</span><span class="sxs-lookup"><span data-stu-id="1f5db-109">The Notifications library inside UWP Community Toolkit is built and maintained by the team that owns notifications at Microsoft.</span></span>
 
-<span data-ttu-id="ac1db-110">Installieren Sie [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) von NuGet (wir verwenden Version 1.0.0 in dieser Dokumentation).</span><span class="sxs-lookup"><span data-stu-id="ac1db-110">Install [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) from NuGet (we're using version 1.0.0 in this documentation).</span></span>
+<span data-ttu-id="1f5db-110">Installieren Sie [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) von NuGet (wir verwenden Version 1.0.0 in dieser Dokumentation).</span><span class="sxs-lookup"><span data-stu-id="1f5db-110">Install [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) from NuGet (we're using version 1.0.0 in this documentation).</span></span>
 
 
-## <a name="add-namespace-declarations"></a><span data-ttu-id="ac1db-111">Hinzufügen von Namespacedeklarationen</span><span class="sxs-lookup"><span data-stu-id="ac1db-111">Add namespace declarations</span></span>
+## <a name="add-namespace-declarations"></a><span data-ttu-id="1f5db-111">Hinzufügen von Namespacedeklarationen</span><span class="sxs-lookup"><span data-stu-id="1f5db-111">Add namespace declarations</span></span>
 
-`Windows.UI.Notifications` <span data-ttu-id="ac1db-112">Enthält die Kachel- und Popup-API.</span><span class="sxs-lookup"><span data-stu-id="ac1db-112">includes the Tile and Toast API's.</span></span> `Microsoft.Toolkit.Uwp.Notifications` <span data-ttu-id="ac1db-113">enthält die Benachrichtigungsbibliothek.</span><span class="sxs-lookup"><span data-stu-id="ac1db-113">includes the Notifications library.</span></span>
+`Windows.UI.Notifications` <span data-ttu-id="1f5db-112">Enthält die Kachel- und Popup-API.</span><span class="sxs-lookup"><span data-stu-id="1f5db-112">includes the Tile and Toast API's.</span></span> `Microsoft.Toolkit.Uwp.Notifications` <span data-ttu-id="1f5db-113">enthält die Benachrichtigungsbibliothek.</span><span class="sxs-lookup"><span data-stu-id="1f5db-113">includes the Notifications library.</span></span>
 
 ```csharp
 using Microsoft.Toolkit.Uwp.Notifications;
@@ -37,9 +37,9 @@ using Windows.UI.Notifications;
 ```
 
 
-## <a name="construct-the-notification"></a><span data-ttu-id="ac1db-114">Erstellen der Benachrichtigung</span><span class="sxs-lookup"><span data-stu-id="ac1db-114">Construct the notification</span></span>
+## <a name="construct-the-notification"></a><span data-ttu-id="1f5db-114">Erstellen der Benachrichtigung</span><span class="sxs-lookup"><span data-stu-id="1f5db-114">Construct the notification</span></span>
 
-<span data-ttu-id="ac1db-115">Der Popupbenachrichtigungsinhalt umfasst Text und Bilder, sowie Schaltflächen und Eingaben.</span><span class="sxs-lookup"><span data-stu-id="ac1db-115">The toast notification content includes text and images, and also buttons and inputs.</span></span> <span data-ttu-id="ac1db-116">Weitere Informationen finden Sie unter [lokale Popupbenachrichtigungen senden](send-local-toast.md), um einen vollständigen Codeausschnitt zu sehen.</span><span class="sxs-lookup"><span data-stu-id="ac1db-116">Please see [send local toast](send-local-toast.md) to see a full code snippet.</span></span>
+<span data-ttu-id="1f5db-115">Der Popupbenachrichtigungsinhalt umfasst Text und Bilder, sowie Schaltflächen und Eingaben.</span><span class="sxs-lookup"><span data-stu-id="1f5db-115">The toast notification content includes text and images, and also buttons and inputs.</span></span> <span data-ttu-id="1f5db-116">Weitere Informationen finden Sie unter [lokale Popupbenachrichtigungen senden](send-local-toast.md), um einen vollständigen Codeausschnitt zu sehen.</span><span class="sxs-lookup"><span data-stu-id="1f5db-116">Please see [send local toast](send-local-toast.md) to see a full code snippet.</span></span>
 
 ```csharp
 ToastContent toastContent = new ToastContent()
@@ -52,11 +52,11 @@ ToastContent toastContent = new ToastContent()
 ```
 
 
-## <a name="add-the-custom-audio"></a><span data-ttu-id="ac1db-117">Hinzufügen von benutzerdefiniertem Audio</span><span class="sxs-lookup"><span data-stu-id="ac1db-117">Add the custom audio</span></span>
+## <a name="add-the-custom-audio"></a><span data-ttu-id="1f5db-117">Hinzufügen von benutzerdefiniertem Audio</span><span class="sxs-lookup"><span data-stu-id="1f5db-117">Add the custom audio</span></span>
 
-<span data-ttu-id="ac1db-118">Windows Mobile unterstützt jederzeit benutzerdefinierte Audio-Popupbenachrichtigungen.</span><span class="sxs-lookup"><span data-stu-id="ac1db-118">Windows Mobile has always supported custom audio in Toast notifications.</span></span> <span data-ttu-id="ac1db-119">Allerdings wurde dem Desktop die Unterstützung für benutzerdefiniertes Audio erst in Version 1511 (Build 10586) hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="ac1db-119">However, Desktop only added support for custom audio in Version 1511 (build 10586).</span></span> <span data-ttu-id="ac1db-120">Wenn Sie eine Popupbenachrichtigung senden, die benutzerdefinierte Audiodaten auf einem Desktopgerät vor der Version 1511 enthält, wird das Popup lautlos ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="ac1db-120">If you send a Toast that contains custom audio to a Desktop device before Version 1511, the toast will be silent.</span></span> <span data-ttu-id="ac1db-121">Aus diesem Grund sollten Sie für Desktop vor der Version 1511 kein benutzerdefiniertes Audio für Ihre Popupbenachrichtigung enthalten, damit die Benachrichtigung mindestens den Standard-Benachrichtigungssound verwenden.</span><span class="sxs-lookup"><span data-stu-id="ac1db-121">Therefore, for Desktop pre-Version 1511, you should NOT include the custom audio in your Toast notification, so that the notification will at least use the default notification sound.</span></span>
+<span data-ttu-id="1f5db-118">Windows Mobile unterstützt jederzeit benutzerdefinierte Audio-Popupbenachrichtigungen.</span><span class="sxs-lookup"><span data-stu-id="1f5db-118">Windows Mobile has always supported custom audio in Toast notifications.</span></span> <span data-ttu-id="1f5db-119">Allerdings wurde dem Desktop die Unterstützung für benutzerdefiniertes Audio erst in Version 1511 (Build 10586) hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="1f5db-119">However, Desktop only added support for custom audio in Version 1511 (build 10586).</span></span> <span data-ttu-id="1f5db-120">Wenn Sie eine Popupbenachrichtigung senden, die benutzerdefinierte Audiodaten auf einem Desktopgerät vor der Version 1511 enthält, wird das Popup lautlos ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="1f5db-120">If you send a Toast that contains custom audio to a Desktop device before Version 1511, the toast will be silent.</span></span> <span data-ttu-id="1f5db-121">Aus diesem Grund sollten Sie für Desktop vor der Version 1511 kein benutzerdefiniertes Audio für Ihre Popupbenachrichtigung enthalten, damit die Benachrichtigung mindestens den Standard-Benachrichtigungssound verwenden.</span><span class="sxs-lookup"><span data-stu-id="1f5db-121">Therefore, for Desktop pre-Version 1511, you should NOT include the custom audio in your Toast notification, so that the notification will at least use the default notification sound.</span></span>
 
-<span data-ttu-id="ac1db-122">**Bekanntes Problem**: Wenn Sie Desktop-Version 1511 verwenden, funktioniert die benutzerdefinierte Audiooptionen nur, wenn Ihre App über den Store installiert ist.</span><span class="sxs-lookup"><span data-stu-id="ac1db-122">**Known Issue**: If you're using Desktop Version 1511, the custom toast audio will only work if your app is installed via the Store.</span></span> <span data-ttu-id="ac1db-123">Dies bedeutet, dass die Ihr benutzerdefiniertes Audio vor der Übermittlung an den Store nicht auf Desktop lokal testen können - die Audiowiedergabe funktioniert allerdings einwandfrei nach der Installation aus dem Store.</span><span class="sxs-lookup"><span data-stu-id="ac1db-123">That means you cannot locally test your custom audio on Desktop before submitting to the Store - but the audio will work fine once installed from the Store.</span></span> <span data-ttu-id="ac1db-124">Wir haben dieses Problem im Anniversary Update behoben, damit benutzerdefiniertes Audio über die lokal bereitgestellte App ordnungsgemäß funktioniert.</span><span class="sxs-lookup"><span data-stu-id="ac1db-124">We fixed this in the Anniversary Update, so that custom audio from your locally deployed app will work correctly.</span></span>
+<span data-ttu-id="1f5db-122">**Bekanntes Problem**: Wenn Sie Desktop-Version 1511 verwenden, funktioniert die benutzerdefinierte Audiooptionen nur, wenn Ihre App über den Store installiert ist.</span><span class="sxs-lookup"><span data-stu-id="1f5db-122">**Known Issue**: If you're using Desktop Version 1511, the custom toast audio will only work if your app is installed via the Store.</span></span> <span data-ttu-id="1f5db-123">Dies bedeutet, dass die Ihr benutzerdefiniertes Audio vor der Übermittlung an den Store nicht auf Desktop lokal testen können - die Audiowiedergabe funktioniert allerdings einwandfrei nach der Installation aus dem Store.</span><span class="sxs-lookup"><span data-stu-id="1f5db-123">That means you cannot locally test your custom audio on Desktop before submitting to the Store - but the audio will work fine once installed from the Store.</span></span> <span data-ttu-id="1f5db-124">Wir haben dieses Problem im Anniversary Update behoben, damit benutzerdefiniertes Audio über die lokal bereitgestellte App ordnungsgemäß funktioniert.</span><span class="sxs-lookup"><span data-stu-id="1f5db-124">We fixed this in the Anniversary Update, so that custom audio from your locally deployed app will work correctly.</span></span>
 
 ```csharp
 ?
@@ -79,19 +79,19 @@ if (supportsCustomAudio)
 }
 ```
 
-<span data-ttu-id="ac1db-125">Dazu gehören folgende Audiodateitypen...</span><span class="sxs-lookup"><span data-stu-id="ac1db-125">Supported audio file types include...</span></span>
+<span data-ttu-id="1f5db-125">Dazu gehören folgende Audiodateitypen...</span><span class="sxs-lookup"><span data-stu-id="1f5db-125">Supported audio file types include...</span></span>
 
-- <span data-ttu-id="ac1db-126">.aac</span><span class="sxs-lookup"><span data-stu-id="ac1db-126">.aac</span></span>
-- <span data-ttu-id="ac1db-127">.flac</span><span class="sxs-lookup"><span data-stu-id="ac1db-127">.flac</span></span>
-- <span data-ttu-id="ac1db-128">.m4a</span><span class="sxs-lookup"><span data-stu-id="ac1db-128">.m4a</span></span>
-- <span data-ttu-id="ac1db-129">.mp3</span><span class="sxs-lookup"><span data-stu-id="ac1db-129">.mp3</span></span>
-- <span data-ttu-id="ac1db-130">.wav</span><span class="sxs-lookup"><span data-stu-id="ac1db-130">.wav</span></span>
-- <span data-ttu-id="ac1db-131">.wma</span><span class="sxs-lookup"><span data-stu-id="ac1db-131">.wma</span></span>
+- <span data-ttu-id="1f5db-126">.aac</span><span class="sxs-lookup"><span data-stu-id="1f5db-126">.aac</span></span>
+- <span data-ttu-id="1f5db-127">.flac</span><span class="sxs-lookup"><span data-stu-id="1f5db-127">.flac</span></span>
+- <span data-ttu-id="1f5db-128">.m4a</span><span class="sxs-lookup"><span data-stu-id="1f5db-128">.m4a</span></span>
+- <span data-ttu-id="1f5db-129">.mp3</span><span class="sxs-lookup"><span data-stu-id="1f5db-129">.mp3</span></span>
+- <span data-ttu-id="1f5db-130">.wav</span><span class="sxs-lookup"><span data-stu-id="1f5db-130">.wav</span></span>
+- <span data-ttu-id="1f5db-131">.wma</span><span class="sxs-lookup"><span data-stu-id="1f5db-131">.wma</span></span>
 
 
-## <a name="send-the-notification"></a><span data-ttu-id="ac1db-132">Senden der Benachrichtigung</span><span class="sxs-lookup"><span data-stu-id="ac1db-132">Send the notification</span></span>
+## <a name="send-the-notification"></a><span data-ttu-id="1f5db-132">Senden der Benachrichtigung</span><span class="sxs-lookup"><span data-stu-id="1f5db-132">Send the notification</span></span>
 
-<span data-ttu-id="ac1db-133">Wenn Ihr Popupinhalt abgeschlossen ist, ist das Senden der Benachrichtigung ganz einfach.</span><span class="sxs-lookup"><span data-stu-id="ac1db-133">Now that your toast content is complete, sending the notification is quite simple.</span></span>
+<span data-ttu-id="1f5db-133">Wenn Ihr Popupinhalt abgeschlossen ist, ist das Senden der Benachrichtigung ganz einfach.</span><span class="sxs-lookup"><span data-stu-id="1f5db-133">Now that your toast content is complete, sending the notification is quite simple.</span></span>
 
 ```csharp
 // Create the toast notification from the previous toast content
@@ -102,8 +102,8 @@ ToastNotificationManager.CreateToastNotifier().Show(notification);
 ```
 
 
-## <a name="related-topics"></a><span data-ttu-id="ac1db-134">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="ac1db-134">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="1f5db-134">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="1f5db-134">Related topics</span></span>
 
-- [<span data-ttu-id="ac1db-135">Vollständiges Codebeispiel auf GitHub</span><span class="sxs-lookup"><span data-stu-id="ac1db-135">Full code sample on GitHub</span></span>](https://github.com/WindowsNotifications/quickstart-toast-with-custom-audio)
-- [<span data-ttu-id="ac1db-136">Lokale Popups senden</span><span class="sxs-lookup"><span data-stu-id="ac1db-136">Send a local toast</span></span>](send-local-toast.md)
-- [<span data-ttu-id="ac1db-137">Dokumentation zu Popupinhalt</span><span class="sxs-lookup"><span data-stu-id="ac1db-137">Toast content documentation</span></span>](adaptive-interactive-toasts.md)
+- [<span data-ttu-id="1f5db-135">Vollständiges Codebeispiel auf GitHub</span><span class="sxs-lookup"><span data-stu-id="1f5db-135">Full code sample on GitHub</span></span>](https://github.com/WindowsNotifications/quickstart-toast-with-custom-audio)
+- [<span data-ttu-id="1f5db-136">Lokale Popups senden</span><span class="sxs-lookup"><span data-stu-id="1f5db-136">Send a local toast</span></span>](send-local-toast.md)
+- [<span data-ttu-id="1f5db-137">Dokumentation zu Popupinhalt</span><span class="sxs-lookup"><span data-stu-id="1f5db-137">Toast content documentation</span></span>](adaptive-interactive-toasts.md)

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 84c27e35e7e9cc3763a4d1d86348da14f3a18910
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5944267"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5991992"
 ---
 # <a name="use-the-gyrometer"></a><span data-ttu-id="d0b98-104">Verwenden des Gyrometers</span><span class="sxs-lookup"><span data-stu-id="d0b98-104">Use the gyrometer</span></span>
 

@@ -15,11 +15,11 @@ dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 6756d8c64f33de8d16d6aa455c3fad694a6306d5
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5939698"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5995991"
 ---
 # <a name="calendar-date-picker"></a><span data-ttu-id="ed205-103">Kalenderdatumsauswahl</span><span class="sxs-lookup"><span data-stu-id="ed205-103">Calendar date picker</span></span>
 

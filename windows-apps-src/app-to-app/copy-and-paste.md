@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f730d01ba019a220658bc94be5f0a18da6b217f5
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5937735"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5992598"
 ---
 # <a name="copy-and-paste"></a><span data-ttu-id="23d9f-104">Kopieren und Einfügen</span><span class="sxs-lookup"><span data-stu-id="23d9f-104">Copy and paste</span></span>
 
