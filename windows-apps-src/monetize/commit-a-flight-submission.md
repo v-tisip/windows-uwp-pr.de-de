@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: F94AF8F6-0742-4A3F-938E-177472F96C00
-description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um eine neue oder aktualisierte Flight-Paketübermittlung in Windows Dev Center zu übernehmen.
+description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um eine neue oder aktualisierte Flight-Paketübermittlung in Partner Center zu übernehmen.
 title: Ausführen eines Commit für eine Flight-Paket-Übermittlung
 ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Übernehmen einer Flight-Übermittlung
 ms.localizationpriority: medium
-ms.openlocfilehash: 7388e18f70cef0000d354536b0c78244f51f756d
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 58293a73589c7d2780360df24bcc24f38335f1e5
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5941679"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5996159"
 ---
 # <a name="commit-a-package-flight-submission"></a>Ausführen eines Commit für eine Flight-Paket-Übermittlung
 
-Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um eine neue oder aktualisierte Flight-Paketübermittlung in Windows Dev Center zu übernehmen. Durch die Übernahmeaktion wird Dev Center darüber benachrichtigt, dass die Übermittlungsdaten (darunter alle zugehörigen Pakete) hochgeladen wurden. Als Reaktion übernimmt Dev Center die Änderungen der Übermittlungsdaten zur Aufnahme und Veröffentlichung. Nachdem der Übernahmevorgang erfolgreich ausgeführt wurde, werden die Änderungen der Übermittlung im Dev Center-Dashboard angezeigt.
+Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um eine neue oder aktualisierte Flight-Paketübermittlung in Partner Center zu übernehmen. Die übernahmeaktion Partner Center, dass die Übermittlungsdaten (darunter alle zugehörigen Pakete) hochgeladen wurden. Als Reaktion übernimmt Partner Center die Änderungen der Übermittlungsdaten zur Aufnahme und Veröffentlichung. Nachdem der Übernahmevorgang erfolgreich ausgeführt wurde, werden die Änderungen an der Übermittlung im Partner Center angezeigt.
 
 Weitere Informationen dazu, wie der Übernahmevorgang in den Prozess zum Erstellen einer Flight-Paketübermittlung mit der Microsoft Store-Übermittlungs-API passt, finden Sie unter [Verwalten von Flight-Paketübermittlungen](manage-flight-submissions.md).
 
@@ -49,9 +49,9 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 | Name        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | String | Erforderlich. Die Store-ID der App, die die Flight-Paketübermittlung enthält, die Sie übernehmen möchten. Die Store-ID für die App ist im Dev Center-Dashboard verfügbar.  |
-| flightId | String | Erforderlich. Die ID des Flight-Pakets, das die zu übernehmende Übermittlung enthält. Diese ID ist in den Antwortdaten für Anforderungen zum [Erstellen eines Flight-Pakets](create-a-flight.md) und zum [Abrufen von Flight-Paketen für eine App](get-flights-for-an-app.md) enthalten. Für einen Flight, der im Dev Center-Dashboard erstellt wurde, ist diese ID auch in der URL für die Flight-Seite im Dashboard verfügbar.  |
-| submissionId | String | Erforderlich. Die ID der zu übernehmenden Übermittlung. Diese ID ist in den Antwortdaten für Anforderungen zum [Erstellen einer Flight-Paket-Übermittlung](create-a-flight-submission.md) verfügbar. Für eine Übermittlung, die im Dev Center-Dashboard erstellt wurde, ist diese ID auch in der URL für die Übermittlungsseite im Dashboard verfügbar.  |
+| applicationId | String | Erforderlich. Die Store-ID der App, die die Flight-Paketübermittlung enthält, die Sie übernehmen möchten. Die Store-ID für die app ist im Partner Center verfügbar.  |
+| flightId | String | Erforderlich. Die ID des Flight-Pakets, das die zu übernehmende Übermittlung enthält. Diese ID ist in den Antwortdaten für Anforderungen zum [Erstellen eines Flight-Pakets](create-a-flight.md) und zum [Abrufen von Flight-Paketen für eine App](get-flights-for-an-app.md) enthalten. Für einen Flight, der im Partner Center erstellt wurde, ist diese ID auch in der URL für die Flight-Seite im Partner Center verfügbar.  |
+| submissionId | String | Erforderlich. Die ID der zu übernehmenden Übermittlung. Diese ID ist in den Antwortdaten für Anforderungen zum [Erstellen einer Flight-Paket-Übermittlung](create-a-flight-submission.md) verfügbar. Für eine Übermittlung, die im Partner Center erstellt wurde, ist diese ID auch in der URL für die übermittlungsseite im Partner Center verfügbar.  |
 
 
 ### <a name="request-body"></a>Anforderungstext
@@ -92,7 +92,7 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 |--------|------------------|
 | 400  | Die Anforderungsparameter sind ungültig. |
 | 404  | Die angegebene Übermittlung konnte nicht gefunden werden. |
-| 409  | Die angegebene Übermittlung wurde gefunden, konnte jedoch nicht in ihrem aktuellen Zustand übernommen werden. Oder die App verwendet ein Dev Center-Dashboard-Feature, das [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt wird](create-and-manage-submissions-using-windows-store-services.md#not_supported). |
+| 409  | Die angegebene Übermittlung wurde gefunden, aber es konnte nicht in ihrem aktuellen Zustand übernommen werden, oder die app verwendet ein Partner Center-Feature, das [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt](create-and-manage-submissions-using-windows-store-services.md#not_supported)wird. |
 
 
 ## <a name="related-topics"></a>Verwandte Themen

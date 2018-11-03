@@ -8,12 +8,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: Windows 10, UWP, Anzeigen, Werbung, Bekannte Probleme, Problembehandlung
 ms.localizationpriority: medium
-ms.openlocfilehash: 3adbc12b0e891461a97bb90575141517b280be76
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: d1b3b1fb68ed246d6a5a8334c5cf4d1c0754b719
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5941814"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5992559"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>Bekannte Probleme und Informationen zur Problembehandlung von Anzeigen in Apps
 
@@ -42,7 +42,7 @@ Wenn Sie vor kurzem (weniger als einem Tag) eine Anzeige erstellt haben, ist die
 
 Es gibt viele Gründe, warum möglicherweise keine Anzeigen angezeigt werden, einschließlich Netzwerkfehlern. Andere Gründe können sein:
 
-* Auswahl einer Anzeigeneinheit im Windows Dev Center mit einer Größe, die größer oder kleiner als die Größe der **AdControl** im Code Ihrer App ist.
+* Auswahl einer anzeigeneinheit im Partner Center mit einer Größe, die größer oder kleiner als die Größe der **AdControl** in Ihrem app Code ist.
 
 * Anzeigen werden nicht angezeigt, wenn Sie einen [Testmoduswert](set-up-ad-units-in-your-app.md#test-ad-units) für Ihre Anzeigeneinheiten-ID verwenden, wenn eine Live-App ausgeführt wird.
 
@@ -60,7 +60,7 @@ Testanzeigen können angezeigt werden, auch wenn Sie Liveanzeigen erwarten. Dies
 
 * Quergeladene Apps oder im Emulator ausgeführte Apps zeigen keine Liveanzeigen an.
 
-Wenn eine Liveanzeigeneinheit Testanzeigen bereitstellt, wird der Status der Anzeigeeinheit im Windows Dev Center als **Aktiv und Testanzeigen bereitstellend** angezeigt. Dies gilt zurzeit nicht für Telefon-Apps.
+Wenn eine liveanzeigeneinheit testanzeigen bereitstellt, wird zeigt Status der Anzeigeeinheit **aktiv und testanzeigen bereitstellend** im Partner Center. Dies gilt zurzeit nicht für Telefon-Apps.
 
 
 <span id="reference_errors"/>

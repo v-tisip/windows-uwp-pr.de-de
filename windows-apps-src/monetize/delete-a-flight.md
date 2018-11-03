@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: AD80F9B3-CED0-40BD-A199-AB81CDAE466C
-description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Löschen eines Flight-Pakets für eine App, die für Ihr Windows Dev Center-Konto registriert ist.
+description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Löschen eines Flight-Pakets für eine app, die für Ihr Partner Center-Konto registriert ist.
 title: Löschen eines Flight-Pakets
 ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Flight löschen
 ms.localizationpriority: medium
-ms.openlocfilehash: 56f7c4fa55620d4c5be8baddc6323a9c7482e02f
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 23e90a322f347375cfdb33eca9315a5ca538fd4c
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5940620"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5995273"
 ---
 # <a name="delete-a-package-flight"></a>Löschen eines Flight-Pakets
 
-Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Löschen eines Flight-Pakets für eine App, die für Ihr Windows Dev Center-Konto registriert ist.
+Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Löschen eines Flight-Pakets für eine app, die für Ihr Partner Center-Konto registriert ist.
 
 
 ## <a name="prerequisites"></a>Voraussetzungen
@@ -47,8 +47,8 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 | Name        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | String | Erforderlich. Die Store-ID der App, das zu löschende Flight-Paket enthält. Die Store-ID für die App ist im Dev Center-Dashboard verfügbar.  |
-| flightId | String | Erforderlich. Die ID des zu löschenden Flight-Pakets. Diese ID ist in den Antwortdaten für Anforderungen zum [Erstellen eines Flight-Pakets](create-a-flight.md) und zum [Abrufen von Flight-Paketen für eine App](get-flights-for-an-app.md) enthalten. Für einen Flight, der im Dev Center-Dashboard erstellt wurde, ist diese ID auch in der URL für die Flight-Seite im Dashboard verfügbar.  |
+| applicationId | String | Erforderlich. Die Store-ID der App, das zu löschende Flight-Paket enthält. Die Store-ID für die app ist im Partner Center verfügbar.  |
+| flightId | String | Erforderlich. Die ID des zu löschenden Flight-Pakets. Diese ID ist in den Antwortdaten für Anforderungen zum [Erstellen eines Flight-Pakets](create-a-flight.md) und zum [Abrufen von Flight-Paketen für eine App](get-flights-for-an-app.md) enthalten. Für einen Flight, der im Partner Center erstellt wurde, ist diese ID auch in der URL für die Flight-Seite im Partner Center verfügbar.  |
 
 
 ### <a name="request-body"></a>Anforderungstext
@@ -77,7 +77,7 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 |--------|------------------|
 | 400  | Die Anforderungsparameter sind ungültig. |
 | 404  | Das angegebene Flight-Paket konnte nicht gefunden werden.  |
-| 409  | Das angegebene Flight-Paket wurde gefunden, konnte jedoch nicht im aktuellen Zustand gelöscht werden. Oder die App verwendet ein Dev Center-Dashboard-Feature, das [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt wird](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | Das angegebene Flight-Paket wurde gefunden, aber es konnte nicht in ihrem aktuellen Zustand gelöscht werden, oder die app verwendet ein Partner Center-Feature, das [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt](create-and-manage-submissions-using-windows-store-services.md#not_supported)wird. |   
 
 
 ## <a name="related-topics"></a>Verwandte Themen

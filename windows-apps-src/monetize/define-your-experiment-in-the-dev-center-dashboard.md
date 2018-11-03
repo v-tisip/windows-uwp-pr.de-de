@@ -1,23 +1,23 @@
 ---
 author: Xansky
-Description: Before you can run an experiment in your Universal Windows Platform (UWP) app with A/B testing, you must define your experiment in the Dev Center dashboard.
-title: Definieren Ihres Experiments im Dashboard
+Description: Before you can run an experiment in your Universal Windows Platform (UWP) app with A/B testing, you must define your experiment in Partner Center.
+title: Definieren Sie Ihres Experiments im Partner Center
 ms.assetid: 675F2ADE-0D4B-41EB-AA4E-56B9C8F32C41
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store Services SDK, A/B-Tests, Experimente
 ms.localizationpriority: medium
-ms.openlocfilehash: 2acbeb0f67985537524a352507910f5e526ae0bd
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 98c1d48524bcc525f57f42e5364d27611602ab52
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5939858"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5995099"
 ---
-# <a name="define-your-experiment-in-the-dashboard"></a>Definieren Ihres Experiments im Dashboard
+# <a name="define-your-experiment-in-partner-center"></a>Definieren Sie Ihres Experiments im Partner Center
 
-Im Anschluss an die Schritte [Erstellen eines Projekts und Festlegen von Remotevariablen im Dev Center-Dashboard](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) und [Codieren der App für das Experiment](code-your-experiment-in-your-app.md) können Sie im Projekt ein Experiment erstellen. Beim Erstellen des Experiments definieren Sie die Ziele und Abweichungen, die Ihre Benutzer erhalten.
+Nachdem Sie [das Erstellen eines Projekts und Festlegen von remotevariablen im Partner Center](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md) und [Ihrer App programmiert haben](code-your-experiment-in-your-app.md)können Sie ein Experiment im Projekt erstellen. Beim Erstellen des Experiments definieren Sie die Ziele und Abweichungen, die Ihre Benutzer erhalten.
 
 Eine exemplarische Vorgehensweise, die den gesamten Erstellungs- und Ausführungsprozess für ein Experiment veranschaulicht, finden Sie unter [Erstellen und Durchführen eines ersten Experiments mit A/B-Tests](create-and-run-your-first-experiment-with-a-b-testing.md).
 
@@ -26,7 +26,7 @@ Eine exemplarische Vorgehensweise, die den gesamten Erstellungs- und Ausführung
 
 ## <a name="create-your-experiment"></a>Erstellen Ihres Experiments
 
-1. Melden Sie sich beim [Dev Center-Dashboard](https://dev.windows.com/overview) an.
+1. Melden Sie sich im [Partner Center](https://partner.microsoft.com/dashboard) an.
 2. Wählen Sie unter **Ihre Apps** die App aus, für die Sie ein Experiment erstellen möchten.
 3. Wählen Sie im Navigationsbereich **Dienste** und dann **Experimentation** aus.
 4. Geben Sie auf der Seite **Experimentation** in der Projekttabelle das Projekt an, dem Sie ein Experiment hinzufügen möchten, und klicken Sie für dieses Projekt auf **Add Experiment**.
@@ -36,7 +36,7 @@ Eine exemplarische Vorgehensweise, die den gesamten Erstellungs- und Ausführung
     > Aktivieren Sie dieses Kontrollkästchen nicht, wenn Sie ein Experiment erstellen, das Sie für Kunden veröffentlichen (d.h. ein Experiment, das einer Projekt-ID zugeordnet ist, die in einer für die Kunden verfügbaren App-Version verwendet wird). Wenn Sie ein aktives Experiment bearbeiten, werden die Ergebnisse des Experiments ungültig.
 
 7. Das aktuelle Projekt wird im Dropdown-Menü **Projektname** automatisch ausgewählt. Wenn Sie das neue Experiment einem anderen Projekt hinzufügen möchten, können Sie das Projekt hier auswählen. Nehmen Sie andernfalls keine Auswahl vor.
-8.   Notieren Sie sich den Wert der [Projekt-ID](run-app-experiments-with-a-b-testing.md#terms). Zum [Codieren der App für das Experiment](code-your-experiment-in-your-app.md) müssen Sie in Ihrem Code auf diese ID verweisen, damit Sie Abweichungsdaten erhalten sowie Anzeige- und Konvertierungsereignisse an das Dev Center melden können.
+8.   Notieren Sie sich den Wert der [Projekt-ID](run-app-experiments-with-a-b-testing.md#terms). Wenn müssen Sie [Ihrer App programmiert haben](code-your-experiment-in-your-app.md), Sie verweisen diese ID in Ihrem Code damit Sie Variantendaten empfangen sowie Anzeige-und umwandlungsereignisse an Partner Center melden können.
 9. Geben Sie im Abschnitt **Anzeigeereignis** den Namen des [Anzeigeereignisses](run-app-experiments-with-a-b-testing.md#terms) für das Experiment im Feld **Ereignisnamen anzeigen** ein.
 10. Definieren Sie im Abschnitt **Ziele und Umwandlungsereignisse** mindestens ein Ziel für Ihr Experiment:
   * Geben Sie im Feld **Name des Ziels** einen beschreibenden Namen für Ihr Ziel ein. Nach dem Ausführen eines Experiments erscheint dieser Name in der Ergebniszusammenfassung des Experiments.
@@ -44,7 +44,7 @@ Eine exemplarische Vorgehensweise, die den gesamten Erstellungs- und Ausführung
   * Wählen Sie im Feld **Ziel** **Maximieren** oder **Minimieren**aus, je nachdem, ob Sie das Vorkommen des Umwandlungsereignisses maximieren oder minimieren möchten. Diese Informationen werden in der Ergebniszusammenfassung des Experiments verwendet.
 
 > [!NOTE]
-> Dev Center meldet nur das erste Umwandlungsereignis für jede Benutzeransicht innerhalb eines Zeitraums von 24Stunden. Wenn ein Benutzer innerhalb von 24 Stunden mehrere Umwandlungsereignisse in Ihrer App auslöst, wird nur das erste Umwandlungsereignis gemeldet. So soll verhindert werden, dass die Experimentergebnisse für eine Stichprobengruppe von Benutzern durch einen einzelnen Benutzer verfälscht werden, wenn das Ziel darin besteht, die Anzahl der Benutzer zu maximieren, die eine Umwandlung durchführen.
+> Partner Center meldet nur das erste umwandlungsereignis für jede Benutzeransicht innerhalb eines Zeitraums von 24 Stunden. Wenn ein Benutzer innerhalb von 24 Stunden mehrere Umwandlungsereignisse in Ihrer App auslöst, wird nur das erste Umwandlungsereignis gemeldet. So soll verhindert werden, dass die Experimentergebnisse für eine Stichprobengruppe von Benutzern durch einen einzelnen Benutzer verfälscht werden, wenn das Ziel darin besteht, die Anzahl der Benutzer zu maximieren, die eine Umwandlung durchführen.
 
 <span id="define-the-variations-and-settings-for-the-experiment" />
 
@@ -66,7 +66,7 @@ Definieren Sie anschließend die [Remotevariablen](run-app-experiments-with-a-b-
 
 Wenn Sie die Eingabe in die erforderlichen Felder für Ihr Experiment abgeschlossen haben, klicken Sie auf **Speichern**, um Ihr Experiment zu speichern.
 
-Wenn Sie mit den Parametern für Ihr Experiment zufrieden sind und Sie bereit sind, es zu aktivieren, damit Sie mit der Datenerfassung von Ihrer App beginnen können, klicken Sie auf **Aktivieren**. Wenn das Experiment aktiv ist, kann Ihre App Abweichungsvariablen abrufen und Anzeige- und Umwandlungsereignisse im Dev Center melden. Weitere Informationen finden Sie unter [Ausführen und Verwalten Ihres Experiments im Dev Center-Dashboard](manage-your-experiment.md).
+Wenn Sie mit den Parametern für Ihr Experiment zufrieden sind und Sie bereit sind, es zu aktivieren, damit Sie mit der Datenerfassung von Ihrer App beginnen können, klicken Sie auf **Aktivieren**. Wenn das Experiment aktiv ist, kann Ihre app abweichungsvariablen abrufen und Anzeige-und umwandlungsereignisse an das Partner Center melden. Weitere Informationen finden Sie unter [Ausführen und Verwalten des Experiments im Partner Center](manage-your-experiment.md).
 
 > [!IMPORTANT]
 > Ein Projekt kann jeweils nur ein aktives Experiment enthalten. Nach dem Aktivieren eines Experiments können Sie die Experimentparameter nicht mehr ändern, wenn beim Erstellen des Experiments das Kontrollkästchen **Editable experiment** nicht aktiviert wurde. Es wird empfohlen, das Experiment vor der Aktivierung in der App zu codieren.
@@ -89,12 +89,12 @@ Führen Sie diese Schritte durch, um Ihr Experiment vor der Freigabe für die Ku
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nachdem Sie Ihr Experiment im DevCenter-Dashboard definiert und in Ihrer App programmiert haben, können Sie das [Experiment im DevCenter-Dashboard ausführen und verwalten](manage-your-experiment.md).
+Nachdem Sie Ihr Experiment im Partner Center definiert und des Experiments in Ihrer app codieren, sind Sie bereit zum [Ausführen und Verwalten des Experiments im Partner Center](manage-your-experiment.md).
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Erstellen eines Projekts und Festlegen von Remotevariablen im Dev Center-Dashboard](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
-* [Codieren Ihrer App für das Experiment](code-your-experiment-in-your-app.md)
-* [Verwalten Ihrer Experimente im Dev Center-Dashboard](manage-your-experiment.md)
+* [Erstellen eines Projekts und Festlegen von remotevariablen im Partner Center](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)
+* [Codieren der App für Tests](code-your-experiment-in-your-app.md)
+* [Verwalten des Experiments im Partner Center](manage-your-experiment.md)
 * [Erstellen und Ausführen eines ersten Experiments mit A/B-Tests](create-and-run-your-first-experiment-with-a-b-testing.md)
 * [Ausführen von App-Experimenten mit A/B-Tests](run-app-experiments-with-a-b-testing.md)

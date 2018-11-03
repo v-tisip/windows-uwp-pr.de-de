@@ -1,19 +1,19 @@
 ---
 author: Xansky
 ms.assetid: CD866083-EB7F-4389-A907-FC43DC2FCB5E
-description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Erstellen einer neuen Flight-Paketübermittlung für eine App, die für Ihr Windows Dev Center-Konto registriert ist.
+description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um eine neue Flight-Paketübermittlung für eine app erstellen, die für Ihr Partner Center-Konto registriert ist.
 title: Erstellen einer Flight-Paket-Übermittlung
 ms.author: mhopkins
 ms.date: 08/03/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Erstellen einer Flight-Übermittlung
 ms.localizationpriority: medium
-ms.openlocfilehash: 1b06f922de1de1dd9943d460672fab218b51a5eb
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 4cdcc0f06820600523be111d67d3cad5e38b6ceb
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5925857"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5989978"
 ---
 # <a name="create-a-package-flight-submission"></a>Erstellen einer Flight-Paket-Übermittlung
 
@@ -30,7 +30,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Microsoft Store-Übermittlungs-API.
 * [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
-* Erstellen Sie ein Flight-Paket für eine App im Dev Center-Konto. Verwenden Sie hierzu das Dev Center-Dashboard oder die Methode zum [Erstellen eines Flight-Pakets](create-a-flight.md).
+* Erstellen Sie ein Flight-Pakets für eine app. Sie erreichen dies im Partner Center, oder Sie können dies tun, indem Sie mithilfe der Methode zum [Erstellen eines Flight-Pakets](create-a-flight.md) .
 
 ## <a name="request"></a>Anforderung
 
@@ -119,7 +119,7 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 | Fehlercode |  Beschreibung   |
 |--------|------------------|
 | 400  | Die Flight-Paketübermittlung konnte nicht erstellt werden, da die Anforderung ungültig ist. |
-| 409  | Die Flight-Paketübermittlung konnte im aktuellen Zustand der App nicht erstellt werden, oder in der App wird ein Dev Center-Dashboard-Feature verwendet, das [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt](create-and-manage-submissions-using-windows-store-services.md#not_supported) wird. |   
+| 409  | Die Flight-Paketübermittlung konnte im aktuellen Zustand der app nicht erstellt werden, oder die app verwendet ein Partner Center-Feature, das [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt](create-and-manage-submissions-using-windows-store-services.md#not_supported)wird. |   
 
 
 ## <a name="related-topics"></a>Verwandte Themen

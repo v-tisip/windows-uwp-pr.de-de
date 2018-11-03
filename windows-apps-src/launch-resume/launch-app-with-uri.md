@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 9126d33c18ede90e9c20339d9a793f3ab2835e76
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5919622"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5995808"
 ---
 # <a name="launch-an-app-with-a-uri"></a>Starten einer App mit einem URI
 
@@ -26,11 +26,11 @@ In diesem Abschnitt wird beschrieben, wie Sie einen Uniform Resource Identifier 
 | [Starten einer App für Ergebnisse](how-to-launch-an-app-for-results.md) | Erfahren Sie, wie Sie eine App über eine andere App starten und Daten zwischen den beiden Apps austauschen. Dieser Vorgang wird als Starten einer App für Ergebnisse bezeichnet. |
 | [Wählen und Speichern von Tönen mithilfe des URI-Schemas „ms-tonepicker“](launch-ringtone-picker.md) | In diesem Thema wird das URI-Schema „ms-tonepicker“ beschrieben und wie Sie dieses verwenden können, um eine Tonauswahl anzuzeigen, Töne auszuwählen und zu speichern sowie den Anzeigenamen für Töne abzurufen. |
 | [Starten der Windows-Einstellungs-App](launch-settings-app.md) | Erfahren Sie, wie Sie die Windows-Einstellungs-App aus Ihrer App starten können. In diesem Thema wird das ms-settings-URI-Schema beschrieben. Verwenden Sie dieses URI-Schema, um die Windows-Einstellungs-App mit bestimmten Einstellungsseiten zu starten. |
-| [Starten Sie die Anwendung UWP](launch-store-app.md) | In diesem Thema wird das URI-Schema „ms-windows-store“ beschrieben. Ihre App kann mit diesem URI-Schema die UWP-App mit bestimmten Seiten des Store starten. |
+| [Starten der UWP-app](launch-store-app.md) | In diesem Thema wird das URI-Schema „ms-windows-store“ beschrieben. Ihre App kann mit diesem URI-Schema die UWP-App mit bestimmten Seiten des Store starten. |
 | [Starten der Windows-Karten-App](launch-maps-app.md) | Erfahren Sie, wie Sie die Windows-Karten-App aus Ihrer App starten können. |
 | [Starten der Kontakte-App](launch-people-apps.md) | In diesem Thema wird das URI-Schema „ms-people“ beschrieben. Ihre App kann dieses URI-Schema verwenden, um die Kontakte-App für bestimmte Aktionen zu starten. |
-| [Ausschnitt & Skizze starten](launch-screen-snipping.md) | Informationen Sie zum URI-Schemas verwenden, öffnen Sie einen neuen Ausschnitt oder Ausschneiden & Skizze app öffnen. |
-| [Aktivieren Sie apps für Websites mit app URI Handler](web-to-app-linking.md) | Laufwerk Benutzer gegenüber Ihrer app Apps für Websites Feature unterstützt. |
+| [Ausschnitt & Skizze starten](launch-screen-snipping.md) | Erfahren Sie, wie Sie die URI-Schemas verwenden, um einen neuen Ausschnitt öffnen oder zum Öffnen der app Ausschnitt & Skizze. |
+| [Aktivieren von apps für Websites mit app-URI-Handlern](web-to-app-linking.md) | Fördern Sie Nutzer an Ihrer app durch die Unterstützung von Apps für Websites Feature. |
 
 ## <a name="related-topics"></a>Verwandte Themen
 * [Starten einer App auf einem Remotegerät](launch-a-remote-app.md)

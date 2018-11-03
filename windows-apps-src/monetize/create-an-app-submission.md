@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: D34447FF-21D2-44D0-92B0-B3FF9B32D6F7
-description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Erstellen einer neuen Übermittlung für eine App, die für Ihr Windows Dev Center-Konto registriert ist.
+description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Erstellen einer neuen Übermittlung für eine app, die für Ihr Partner Center-Konto registriert ist.
 title: Erstellen einer App-Übermittlung
 ms.author: mhopkins
 ms.date: 07/10/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Erstellen einer App-Übermittlung
 ms.localizationpriority: medium
-ms.openlocfilehash: 740e65d79636c9e5451e68fa84ce2eae4e3252c6
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: fd97efca42049fd9f5adc4d051688074d91132fa
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5935693"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5992064"
 ---
 # <a name="create-an-app-submission"></a>Erstellen einer App-Übermittlung
 
-Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Erstellen einer neuen Übermittlung für eine App, die für Ihr Windows Dev Center-Konto registriert ist. Nachdem Sie erfolgreich eine neue Übermittlung mit dieser Methode erstellt haben, [aktualisieren Sie die Übermittlung](update-an-app-submission.md), um erforderliche Änderungen an den Übermittlungsdaten vorzunehmen, und führen Sie ein [Commit für die Übermittlung](commit-an-app-submission.md) zur Aufnahme und Veröffentlichung durch.
+Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Erstellen einer neuen Übermittlung für eine app, die für Ihr Partner Center-Konto registriert ist. Nachdem Sie erfolgreich eine neue Übermittlung mit dieser Methode erstellt haben, [aktualisieren Sie die Übermittlung](update-an-app-submission.md), um erforderliche Änderungen an den Übermittlungsdaten vorzunehmen, und führen Sie ein [Commit für die Übermittlung](commit-an-app-submission.md) zur Aufnahme und Veröffentlichung durch.
 
 Weitere Informationen dazu, wie diese Methode zum Erstellen einer App-Übermittlung mithilfe der Microsoft Store-Übermittlungs-API passt, finden Sie unter [Verwalten von App-Übermittlungen](manage-app-submissions.md).
 
@@ -188,7 +188,7 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 | Fehlercode |  Beschreibung   |
 |--------|------------------|
 | 400  | Die Übermittlung konnte nicht erstellt werden, da die Anforderung ungültig ist. |
-| 409  | Die Übermittlung konnte im aktuellen Zustand der App nicht erstellt werden, oder in der App wird ein Dev Center-Dashboard-Feature verwendet, das [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt](create-and-manage-submissions-using-windows-store-services.md#not_supported) wird. |   
+| 409  | Die Übermittlung konnte im aktuellen Zustand der app nicht erstellt werden, oder die app verwendet ein Partner Center-Feature, das [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt](create-and-manage-submissions-using-windows-store-services.md#not_supported)wird. |   
 
 
 ## <a name="related-topics"></a>Verwandte Themen

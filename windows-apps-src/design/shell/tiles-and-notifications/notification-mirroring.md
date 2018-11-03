@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Popup, Info-Center in der Cloud, Spiegelung der Benachrichtigung, Benachrichtigung, geräteübergreifend
 ms.localizationpriority: medium
 ms.openlocfilehash: c36b5ffcbb016e5b89fa1c960a7493767192296c
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5919662"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5995204"
 ---
 # <a name="notification-mirroring"></a>Spiegelung der Benachrichtigung
 
@@ -27,7 +27,7 @@ Benutzer können mit der Spiegelung Benachrichtigung und Cortana Handy-Benachric
 
 <img alt="Notification mirroring diagram" src="images/toast-mirroring.gif" width="350"/>
 
-Entwickler erhalten zwei Vorteile von Benachrichtigung spiegeln: gespiegelten Benachrichtigungen mehr Benutzer Engagement-Dienst, und sie auch helfen Benutzern desktop Microsoft Store-app entdecken! Ihre Benutzer wissen möglicherweise nicht einmal, was für eine bemerkenswerte UWP-App für ihren Windows10-Desktop verfügbar ist. Wenn Benutzer von ihrem Telefon gespiegelte Benachrichtigung empfangen, können Benutzer Popupbenachrichtigung Microsoft Store ausgeführt, auf dem sie Ihre UWP desktop app installieren klicken.
+Entwickler haben zwei Vorteile von Spiegelung der Benachrichtigung: die gespiegelten Benachrichtigungen führen zu weiterem für Benutzer mit Ihrem Dienst, und darüber hinaus ermöglichen Sie Benutzern, Ihre Microsoft Store-desktop-app zu entdecken! Ihre Benutzer wissen möglicherweise nicht einmal, was für eine bemerkenswerte UWP-App für ihren Windows10-Desktop verfügbar ist. Wenn Benutzer die gespiegelte Benachrichtigung auf dem Handy empfangen, können Benutzer klicken Sie auf die Popupbenachrichtigung an den Microsoft Store weitergeleitet, in denen sie Ihre UWP-desktop-app installieren können.
 
 Die Spiegelung funktioniert mit den Windows Phone und Android. Benutzer müssen bei Cortana und auf ihrem Handy und dem Desktop angemeldet sein, damit die Spiegelung der Benachrichtigung funktioniert.
 

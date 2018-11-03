@@ -8,12 +8,12 @@ ms.date: 12/04/2017
 ms.topic: article
 keywords: Windows10, UWP, Lizenzen, Apps, Add-Ons, In-App-Einkäufe, IAPs, Windows.Services.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: 032f2419f39e50c023e2c301b70778f421f447f8
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 545e052794a8649daa62872cf74b0986cb7bf4b9
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5938305"
+ms.locfileid: "5990082"
 ---
 # <a name="get-license-info-for-apps-and-add-ons"></a>Abrufen von Lizenzinformationen zu Apps und deren Add-Ons
 
@@ -26,8 +26,8 @@ Dieser Artikel veranschaulicht die Verwendung von Methoden der [StoreContext](ht
 
 Für dieses Beispiel gelten die folgenden Voraussetzungen:
 * Ein Visual Studio-Projekt für eine UWP (Universelle Windows-Plattform)-App, die für **Windows 10 Anniversary Edition (10.0; Build 14393)** oder höher, geeignet ist.
-* Sie haben eine [App-Übermittlung](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) im Windows Dev Center-Dashboard erstellt. Diese App wird veröffentlicht und ist im Store verfügbar. Optional können Sie die App so konfigurieren, daher sie während der Tests im Store nicht auffindbar ist. Weitere Informationen finden Sie unter [Hinweise für Tests](in-app-purchases-and-trials.md#testing).
-* Wenn Sie Lizenzinformationen für ein Add-On für die App aktivieren möchten, müssen Sie [das Add-On im Dev Center-Dashboard erstellen](../publish/add-on-submissions.md).
+* Sie haben [eine app-Übermittlung erstellt haben](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) , im Partner Center und diese app im Store veröffentlicht wird. Optional können Sie die App so konfigurieren, daher sie während der Tests im Store nicht auffindbar ist. Weitere Informationen finden Sie unter [Hinweise für Tests](in-app-purchases-and-trials.md#testing).
+* Wenn Sie, Lizenzinformationen für ein Add-on für die app abzurufen möchten, müssen Sie auch [das Add-on im Partner Center erstellen](../publish/add-on-submissions.md).
 
 Der Code in diesem Beispiel geht von folgenden Voraussetzungen aus:
 * Die Ausführung des Codes erfolgt im Kontext einer [Seite](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx), die einen [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) mit dem Namen ```workingProgressRing``` und einen [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) mit dem Namen ```textBlock``` enthält. Diese Objekte werden verwendet, um anzugeben, dass ein asynchroner Vorgang ausgeführt wird, bzw. um Ausgabemeldungen anzuzeigen.

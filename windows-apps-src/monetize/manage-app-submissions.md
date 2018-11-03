@@ -1,36 +1,36 @@
 ---
 author: Xansky
 ms.assetid: C7428551-4B31-4259-93CD-EE229007C4B8
-description: Verwenden Sie diese Methoden in der Microsoft Store-Übermittlungs-API, um Übermittlungen für Apps zu verwalten, die in Ihrem Windows Dev Center-Konto registriert wurden.
+description: Verwenden Sie diese Methoden in der Microsoft Store-Übermittlungs-API, um Übermittlungen für apps zu verwalten, die für Ihr Partner Center-Konto registriert wurden.
 title: Verwalten von App-Übermittlungen
 ms.author: mhopkins
 ms.date: 04/30/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, App-Übermittlungen
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f95e91c1ef9e47ab3371a1481237dc510eddae7
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 76bc7932665e3f9893c6f0aa9644b9edc07a6dcf
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5921078"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5996673"
 ---
 # <a name="manage-app-submissions"></a>Verwalten von App-Übermittlungen
 
 Mithilfe der Methoden der Microsoft Store-Übermittlungs-API können Sie Übermittlungen für Ihre Apps verwalten, einschließlich gradueller Paketrollouts. Eine Einführung in die Microsoft Store-Übermittlungs-API einschließlich der Voraussetzungen für die Verwendung der API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit MicrosoftStore-Diensten](create-and-manage-submissions-using-windows-store-services.md).
 
 > [!IMPORTANT]
-> Wenn Sie die Microsoft Store-Übermittlungs-API zum Erstellen einer App-Übermittlung verwenden, stellen Sie sicher, dass Sie weitere Änderungen an der Übermittlung ausschließlich mithilfe der API und nicht mit dem Dev Center-Dashboard durchführen. Wenn Sie das Dashboard zum Ändern einer Übermittlung verwenden, die ursprünglich mit der API erstellt wurde, können Sie die Übermittlung nicht länger mithilfe der API ändern oder übermitteln. In einigen Fällen kann der Fehlerstatus der Übermittlung belassen werden, mit dem die Übermittlung nicht fortgesetzt werden kann. In diesem Fall müssen Sie die Übermittlung löschen und eine neue Übermittlung erstellen.
+> Wenn Sie die Microsoft Store-Übermittlungs-API zum Erstellen einer Übermittlung für eine app verwenden, achten Sie darauf, dass Sie Sie weitere Änderungen an der Übermittlung ausschließlich mithilfe der API, anstatt Partner Center. Wenn Sie Partner Center verwenden, um eine Übermittlung zu ändern, die Sie ursprünglich mithilfe der API erstellt haben, wird nicht mehr ändern oder übernehmen die Übermittlung mithilfe der API werden. In einigen Fällen kann der Fehlerstatus der Übermittlung belassen werden, mit dem die Übermittlung nicht fortgesetzt werden kann. In diesem Fall müssen Sie die Übermittlung löschen und eine neue Übermittlung erstellen.
 
 > [!IMPORTANT]
-> Sie können mit dieser API weder Übermittlungen für [Volumeneinkäufe über den Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen](../publish/organizational-licensing.md) veröffentlichen noch Übermittlungen für [Branchenanwendungen](../publish/distribute-lob-apps-to-enterprises.md) direkt an Unternehmen. In beiden Fällen müssen Sie das Windows Dev Center-Dashboard verwenden, um die Übermittlung zu veröffentlichen.
+> Sie können mit dieser API weder Übermittlungen für [Volumeneinkäufe über den Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen](../publish/organizational-licensing.md) veröffentlichen noch Übermittlungen für [Branchenanwendungen](../publish/distribute-lob-apps-to-enterprises.md) direkt an Unternehmen. Für beide Szenarien müssen Sie Partner Center verwenden, um die Übermittlung veröffentlichen.
 
 
 <span id="methods-for-app-submissions" />
 
 ## <a name="methods-for-managing-app-submissions"></a>Methoden zum Verwalten von App-Übermittlungen
 
-Verwenden Sie die folgenden Methoden zum Abrufen, Erstellen, Aktualisieren, Committen oder Löschen einer App-Übermittlung. Bevor Sie diese Methoden verwenden können, muss die App bereits in Ihrem Dev Center-Konto vorhanden sein, und Sie müssen zunächst eine Übermittlung für die App im Dashboard erstellen. Weitere Informationen finden Sie unter [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites).
+Verwenden Sie die folgenden Methoden zum Abrufen, Erstellen, Aktualisieren, Committen oder Löschen einer App-Übermittlung. Bevor Sie diese Methoden verwenden können, die app muss im Partner Center-Konto bereits vorhanden sein, und Sie müssen zunächst eine Übermittlung für die app im Partner Center erstellen. Weitere Informationen finden Sie unter [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites).
 
 <table>
 <colgroup>
@@ -127,7 +127,7 @@ Gehen Sie folgendermaßen vor, um eine Übermittlung für eine App zu erstellen.
     await blockBob.UploadFromStreamAsync(stream);
     ```
 
-5. Führen Sie folgende Methode aus, um [die App-Übermittlung zu committen](commit-an-app-submission.md). Hierdurch wird Dev Center darüber benachrichtigt, dass Sie Ihre Übermittlung fertig gestellt haben und die Updates nun auf Ihr Konto jetzt angewendet werden sollen.
+5. Führen Sie folgende Methode aus, um [die App-Übermittlung zu committen](commit-an-app-submission.md). Hierdurch wird Partner Center darüber benachrichtigt, dass Sie Ihre Übermittlung fertig gestellt haben und dass der Updates für Ihr Konto jetzt angewendet werden soll.
 
     ```
     POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit
@@ -141,13 +141,13 @@ Gehen Sie folgendermaßen vor, um eine Übermittlung für eine App zu erstellen.
 
     Um den Status der Übermittlung zu überprüfen, zeigen Sie den Wert *status* im Antworttext an. Dieser Wert sollte von **CommitStarted** entweder in **PreProcessing** geändert worden sein, wenn die Anforderung erfolgreich war, oder in **CommitFailed**, wenn die Anforderung Fehler enthalten hat. Wenn Fehler aufgetreten sind, enthält das Feld *StatusDetails* Feld weitere Details zu den Fehlern.
 
-7. Nachdem das Commit erfolgreich abgeschlossen wurde, wird die Übermittlung zur Aufnahme an den Store gesendet. Sie können den Übermittlungsstatus mithilfe der vorherigen Methode oder mithilfe des Dev Center-Dashboards weiter überwachen.
+7. Nachdem das Commit erfolgreich abgeschlossen wurde, wird die Übermittlung zur Aufnahme an den Store gesendet. Sie können weiterhin die mithilfe der vorherigen Methode oder besuchen Sie Partner Center überwachen.
 
 <span id="manage-gradual-package-rollout">
 
 ## <a name="methods-for-managing-a-gradual-package-rollout"></a>Methoden zum Verwalten eines graduellen Paketrollouts
 
-Sie können die aktualisierten Pakete in einer App-Übermittlung graduell für einen bestimmten Prozentsatz der Kunden Ihrer App unter Windows 10 einführen. So können Sie Feedback und Analysedaten für die jeweiligen Pakete überwachen und vor einem umfassenden Rollout sicherstellen, dass das Update ordnungsgemäß funktioniert. Sie können den Rollout-Prozentwert für eine veröffentlichte Übermittlung ändern (oder die Aktualisierung anhalten), ohne dass Sie eine neue Übermittlung erstellen müssen. Weitere Informationen und Anleitungen zur Aktivierung und Verwaltung eines graduellen Paketrollouts im Dev Center-Dashboard finden Sie in [diesem Artikel](../publish/gradual-package-rollout.md).
+Sie können die aktualisierten Pakete in einer App-Übermittlung graduell für einen bestimmten Prozentsatz der Kunden Ihrer App unter Windows 10 einführen. So können Sie Feedback und Analysedaten für die jeweiligen Pakete überwachen und vor einem umfassenden Rollout sicherstellen, dass das Update ordnungsgemäß funktioniert. Sie können den Rollout-Prozentwert für eine veröffentlichte Übermittlung ändern (oder die Aktualisierung anhalten), ohne dass Sie eine neue Übermittlung erstellen müssen. Weitere Informationen, einschließlich Informationen zum Aktivieren und Verwaltung eines graduellen paketrollouts im Partner Center finden Sie [in diesem Artikel](../publish/gradual-package-rollout.md).
 
 Um ein graduelles Paketrollout für eine App-Übermittlung programmgesteuert zu aktivieren, gehen Sie wie folgt vor, und verwenden Sie dabei Methoden in der Microsoft Store-Übermittlungs-API:
 
@@ -339,7 +339,7 @@ Die Ressource hat die folgenden Werte.
 
 | Wert      | Typ   | Beschreibung      |
 |------------|--------|-------------------|
-| id            | string  | Die ID der Übermittlung. Diese ID ist in den Antwortdaten für Anforderungen verfügbar, um [eine App-Übermittlung zu erstellen](create-an-app-submission.md), [alle Apps abzurufen](get-all-apps.md) und [eine App abzurufen](get-an-app.md). Für eine Übermittlung, die im Dev Center-Dashboard erstellt wurde, ist diese ID auch in der URL für die Übermittlungsseite im Dashboard verfügbar.  |
+| id            | string  | Die ID der Übermittlung. Diese ID ist in den Antwortdaten für Anforderungen verfügbar, um [eine App-Übermittlung zu erstellen](create-an-app-submission.md), [alle Apps abzurufen](get-all-apps.md) und [eine App abzurufen](get-an-app.md). Für eine Übermittlung, die im Partner Center erstellt wurde, ist diese ID auch in der URL für die übermittlungsseite im Partner Center verfügbar.  |
 | applicationCategory           | string  |   Eine Zeichenfolge, die [Kategorie und/oder Unterkategorie](https://msdn.microsoft.com/windows/uwp/publish/category-and-subcategory-table) für Ihre App angibt. Kategorien und Unterkategorien werden mit einem Unterstrich "_" zu einer einzigen Zeichenfolge zusammengefasst, z.B. **BooksAndReference_EReader**.      |  
 | pricing           |  object  | Eine [Preisressource](#pricing-object), die Preisinformationen für die App enthält.        |   
 | visibility           |  string  |  Die Sichtbarkeit der App. Folgende Werte sind möglich: <ul><li>Hidden</li><li>Public</li><li>Private</li><li>NotSet</li></ul>       |   
@@ -362,7 +362,7 @@ Die Ressource hat die folgenden Werte.
 | enterpriseLicensing           |  string  |  Einer der [Werte für Enterprise-Lizenzierung](#enterprise-licensing), die das Verhalten der Enterprise-Lizenzierung für die App angeben.  |    
 | allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies           |  Boolescher Wert   |  Gibt an, ob Microsoft [die App für zukünftige Windows10-Gerätefamilien verfügbar machen](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) darf.    |    
 | allowTargetFutureDeviceFamilies           | object   |  Ein Verzeichnis von Schlüssel-Wert-Paaren, wobei jeder Schlüssel eine [Windows10-Gerätefamilie](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#windows-10-device-families) ist und jeder Wert ein boolescher Wert ist, der angibt, ob Ihre App auf die angegebene Gerätefamilie ausgerichtet werden darf.     |    
-| friendlyName           |   String  |  Der Anzeigename der Übermittlung, wie er im Dev Center-Dashboard erscheint. Dieser Wert wird beim Erstellen der Übermittlung für Sie generiert.       |  
+| friendlyName           |   string  |  Der Anzeigename der Übermittlung, wie er im Partner Center angezeigt. Dieser Wert wird beim Erstellen der Übermittlung für Sie generiert.       |  
 | trailers           |  Array |   Ein Array mit bis zu 15 [Trailer-Ressourcen](#trailer-object), die Videotrailer für den App-Eintrag darstellen.<br/><br/>   |  
 
 
@@ -389,10 +389,10 @@ Diese Ressource enthält die Verkaufsinformationen für eine App.
 
 > [!IMPORTANT]
 > Die **Verkaufsressource** wird nicht mehr unterstützt. Zurzeit können Sie die Verkaufsdaten einer App-Übermittlung nicht mithilfe der Microsoft Store-Übermittlungs-API abrufen oder ändern. Die Microsoft Store-Übermittlungs-API wird in der Zukunft aktualisiert werden, um ein neues Verfahren für den programmgesteuerten Zugriff auf Verkaufsinformationen für App-Übermittlungen einzuführen.
->    * Nach dem Aufrufen der [GET-Methode zum Abrufen einer App-Übermittlung](get-an-app-submission.md) ist der Wert *sales* leer. Sie können weiterhin das Dev Center-Dashboard verwenden, um die Verkaufsdaten für Ihre App-Übermittlung abzurufen.
->    * Beim Aufrufen der [PUT-Methode zum Aktualisieren einer App-Übermittlung](update-an-app-submission.md) werden die Informationen im Wert *sales* ignoriert. Sie können weiterhin das Dev Center-Dashboard verwenden, um die Verkaufsdaten für Ihre App-Übermittlung zu ändern.
+>    * Nach dem Aufrufen der [GET-Methode zum Abrufen einer App-Übermittlung](get-an-app-submission.md) ist der Wert *sales* leer. Sie können weiterhin auf Partner Center verwenden, um die Verkaufsdaten für Ihre app-Übermittlung abzurufen.
+>    * Beim Aufrufen der [PUT-Methode zum Aktualisieren einer App-Übermittlung](update-an-app-submission.md) werden die Informationen im Wert *sales* ignoriert. Sie können weiterhin auf Partner Center verwenden, um die Verkaufsdaten für Ihre app-Übermittlung zu ändern.
 
-Diese Ressource hat die folgenden Werte.
+Die Ressource hat die folgenden Werte.
 
 | Wert           | Typ    | Beschreibung    |
 |-----------------|---------|------|
@@ -425,9 +425,9 @@ Diese Ressource enthält die Basiseintragsinformationen für eine App. Die Resso
 |  copyrightAndTrademarkInfo                |   string      |  Optionale [Copyright- und/oder Markeninformationen](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#copyright-and-trademark-info).  |
 |  keywords                |  array       |  Ein Array von [keyword](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#keywords), um die Anzeige Ihrer App in Suchergebnissen zu unterstützen.    |
 |  licenseTerms                |    string     | Die optionalen [Lizenzbestimmungen](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#additional-license-terms) für Ihre App.     |
-|  privacyPolicy                |   String      |   Dieser Wert ist veraltet. Um die URL zur Datenschutzrichtlinie für Ihre App festzulegen oder zu ändern, müssen Sie dies auf der [Eigenschaften](../publish/enter-app-properties.md#privacy-policy-url)-Seite im Dev Center-Dashboard ausführen. Sie können diesen Wert aus den Aufrufen an die Übermittlungs-API weglassen. Wenn Sie diesen Wert festlegen, wird er ignoriert werden.       |
-|  supportContact                |   string      |  Dieser Wert ist veraltet. Um die URL für den Support-Kontakt oder eine E-Mail-Adresse für Ihre App festzulegen oder zu ändern, müssen Sie dies auf der [Eigenschaften](../publish/enter-app-properties.md#support-contact-info)-Seite im Dev Center-Dashboard ausführen. Sie können diesen Wert aus den Aufrufen an die Übermittlungs-API weglassen. Wenn Sie diesen Wert festlegen, wird er ignoriert werden.        |
-|  websiteUrl                |   string      |  Dieser Wert ist veraltet. Um die URL der Webseite für Ihre App festzulegen oder zu ändern, müssen Sie dies auf der [Eigenschaften](../publish/enter-app-properties.md#website)-Seite im Dev Center-Dashboard ausführen. Sie können diesen Wert aus den Aufrufen an die Übermittlungs-API weglassen. Wenn Sie diesen Wert festlegen, wird er ignoriert werden.      |    
+|  privacyPolicy                |   String      |   Dieser Wert ist veraltet. Um festzulegen, oder die Datenschutzrichtlinien-URL für Ihre app zu ändern, müssen Sie dies auf der Seite " [Eigenschaften](../publish/enter-app-properties.md#privacy-policy-url) " im Partner Center tun. Sie können diesen Wert aus den Aufrufen an die Übermittlungs-API weglassen. Wenn Sie diesen Wert festlegen, wird er ignoriert werden.       |
+|  supportContact                |   string      |  Dieser Wert ist veraltet. Um festzulegen, oder den Support-Kontakt URL oder e-Mail-Adresse für Ihre app zu ändern, müssen Sie dies auf der Seite " [Eigenschaften](../publish/enter-app-properties.md#support-contact-info) " im Partner Center tun. Sie können diesen Wert aus den Aufrufen an die Übermittlungs-API weglassen. Wenn Sie diesen Wert festlegen, wird er ignoriert werden.        |
+|  websiteUrl                |   string      |  Dieser Wert ist veraltet. Um festzulegen, oder ändern Sie die URL der Webseite für Ihre app, müssen Sie dies auf der Seite " [Eigenschaften](../publish/enter-app-properties.md#website) " im Partner Center tun. Sie können diesen Wert aus den Aufrufen an die Übermittlungs-API weglassen. Wenn Sie diesen Wert festlegen, wird er ignoriert werden.      |    
 |  Beschreibung               |    string     |   Die [Beschreibung](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#description) für den App-Eintrag.   |     
 |  features               |    array     |  Ein Array von bis zu 20Zeichenfolgen, die die [Features](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#app-features) für Ihre App auflisten.     |
 |  releaseNotes               |  string       |  Die [Versionshinweise](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#release-notes) für Ihre App.    |
@@ -451,7 +451,7 @@ Diese Ressource enthält Bild- und Symboldaten für einen App-Eintrag. Weitere I
 |-----------------|---------|------|
 |  fileName               |    string     |   Der Name der Bilddatei im ZIP-Archiv, das Sie für die Übermittlung hochgeladen haben.    |     
 |  fileStatus               |   string      |  Der Status der Bilddatei. Folgende Werte sind möglich: <ul><li>None</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>   |
-|  id  |  String  | Die ID für das Bild. Dieser Wert wird von Dev Center bereitgestellt.  |
+|  id  |  String  | Die ID für das Bild. Dieser Wert wird vom Partner Center bereitgestellt.  |
 |  description  |  string  | Die Beschreibung für das Bild.  |
 |  imageType  |  string  | Gibt den Typ des Bildes an. Die folgenden Strings werden derzeit unterstützt. <p/>[Bildschirmfoto-Bilder](../publish/app-screenshots-and-images.md#screenshots): <ul><li>Screenshot (verwenden Sie diesen Wert für den Desktop-Bildschirmfotos)</li><li>MobileScreenshot</li><li>XboxScreenshot</li><li>SurfaceHubScreenshot</li><li>HoloLensScreenshot</li></ul><p/>[Store-Logos](../publish/app-screenshots-and-images.md#store-logos):<ul><li>StoreLogo9x16 </li><li>StoreLogoSquare</li><li>Icon (verwenden Sie diesen Wert für die 1:1 300x300 Pixel-Logos)</li></ul><p/>[Werbebilder](../publish/app-screenshots-and-images.md#promotional-images): <ul><li>PromotionalArt16x9</li><li>PromotionalArtwork2400X1200</li></ul><p/>[Xbox-Bilder](../publish/app-screenshots-and-images.md#xbox-images): <ul><li>XboxBrandedKeyArt</li><li>XboxTitledHeroArt</li><li>XboxFeaturedPromotionalArt</li></ul><p/>[Optionale Werbebilder](../publish/app-screenshots-and-images.md#optional-promotional-images): <ul><li>SquareIcon358X358</li><li>BackgroundImage1000X800</li><li>PromotionalArtwork414X180</li></ul><p/> <!-- The following strings are also recognized for this field, but they correspond to image types that are no longer for listings in the Store.<ul><li>PromotionalArtwork846X468</li><li>PromotionalArtwork558X756</li><li>PromotionalArtwork414X468</li><li>PromotionalArtwork558X558</li><li>WideIcon358X173</li><li>Unknown</li></ul> -->   |
 
@@ -460,7 +460,7 @@ Diese Ressource enthält Bild- und Symboldaten für einen App-Eintrag. Weitere I
 
 ### <a name="gaming-options-resource"></a>Gaming-Optionsressource
 
-Diese Ressource enthält Gaming-Einstellungen für die App. Die Werte in dieser Ressource entsprechen den [Spieleinstellungen](../publish/enter-app-properties.md#game-settings) für Übermittlungen im Dev Center-Dashboard.
+Diese Ressource enthält Gaming-Einstellungen für die App. Die Werte in dieser Ressource entsprechen den [Einstellungen für Spiele](../publish/enter-app-properties.md#game-settings) für Übermittlungen im Partner Center.
 
 ```json
 {
@@ -486,7 +486,7 @@ Diese Ressource enthält Gaming-Einstellungen für die App. Die Werte in dieser 
 }
 ```
 
-Diese Ressource hat die folgenden Werte.
+Die Ressource hat die folgenden Werte.
 
 | Wert           | Typ    | Beschreibung        |
 |-----------------|---------|------|
@@ -567,13 +567,13 @@ Diese Ressource enthält Details zu einem App-Paket für die Übermittlung.
 Diese Ressource hat die folgenden Werte.  
 
 > [!NOTE]
-> Beim Aufruf der Methode für das [Aktualisieren einer App-Übermittlung](update-an-app-submission.md) sind im Anforderungstext nur die Werte *fileName*, *fileStatus*, *minimumDirectXVersion* und *minimumSystemRam* dieses Objekts erforderlich. Die übrigen Werte werden von Dev Center aufgefüllt.
+> Beim Aufruf der Methode für das [Aktualisieren einer App-Übermittlung](update-an-app-submission.md) sind im Anforderungstext nur die Werte *fileName*, *fileStatus*, *minimumDirectXVersion* und *minimumSystemRam* dieses Objekts erforderlich. Die anderen Werte werden von Partner Center aufgefüllt.
 
 | Wert           | Typ    | Beschreibung                   |
 |-----------------|---------|------|
 | fileName   |   string      |  Der Name des Pakets.    |  
 | fileStatus    | string    |  Der Status des Pakets. Folgende Werte sind möglich: <ul><li>None</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
-| id    |  string   |  Eine ID, die das Paket eindeutig identifiziert. Dieser Wert wird von Dev Center bereitgestellt.   |     
+| id    |  string   |  Eine ID, die das Paket eindeutig identifiziert. Dieser Wert wird vom Partner Center bereitgestellt.   |     
 | version    |  string   |  Die Version des App-Pakets. Weitere Informationen finden Sie unter [Paketversionsnummern](https://msdn.microsoft.com/windows/uwp/publish/package-version-numbering).   |   
 | architecture    |  string   |  Die Architektur des Pakets (z.B. ARM).   |     
 | languages    | array    |  Ein Array von Sprachcodes für die Sprachen, die von der App unterstützt werden. Weitere Informationen finden Sie unter [Unterstützte Dateitypen](https://msdn.microsoft.com/windows/uwp/publish/supported-languages).    |     
@@ -639,13 +639,13 @@ Diese Ressource enthält [Einstellungen für graduelle Paketrollouts](#manage-gr
 | fallbackSubmissionId    |  string   |  Die ID der Übermittlung, die die Kunden erhalten, die keine Pakete im Rahmen des graduellen Paketrollouts erhalten.   |          
 
 > [!NOTE]
-> Die Werte *packageRolloutStatus* und *fallbackSubmissionId* werden von Dev Center zugewiesen und sollen nicht vom Entwickler festgelegt werden. Wenn Sie diese Werte in einen Anforderungstext einfügen, werden diese Werte ignoriert.
+> Die Werte *PackageRolloutStatus* und *FallbackSubmissionId* werden von Partner Center zugewiesen und sollen nicht vom Entwickler festgelegt werden. Wenn Sie diese Werte in einen Anforderungstext einfügen, werden diese Werte ignoriert.
 
 <span id="trailer-object" />
 
 ### <a name="trailers-resource"></a>Trailers-Ressource
 
-Diese Ressource stellt ein Video-Trailer für den App-Eintrag dar. Die Werte in dieser Ressource entsprechen den [trailers](../publish/app-screenshots-and-images.md#trailers)-Optionen für Übermittlungen im Dev Center-Dashboard.
+Diese Ressource stellt ein Video-Trailer für den App-Eintrag dar. Die Werte in dieser Ressource entsprechen den [Trailer](../publish/app-screenshots-and-images.md#trailers) -Optionen für Übermittlungen im Partner Center.
 
 Sie können bis zu 15 Trailer Ressourcen zum Hinzufügen zum *Trailer*-Array in eine [App-Übermittlungsressource](#app-submission-object) einbeziehen. Um Videotrailer und Miniaturansichten für eine Übermittlung hochzuladen, fügen Sie diese Dateien zum selben ZIP-Archiv hinzu, das die Pakete und Bilder der Übermittlung enthält, und laden Sie dann das ZIP-Archiv über die SAS-URI (Shared Access Signature) für die Übermittlung hoch. Weitere Informationen zum Hochladen von ZIP-Archiv zu der SAS-URIs finden Sie unter [Erstellen einer App-Übermittlung](#create-an-app-submission).
 
@@ -677,9 +677,9 @@ Diese Ressource hat die folgenden Werte.
 
 | Wert           | Typ    | Beschreibung        |
 |-----------------|---------|------|
-|  id               |    String     |   Die ID für den Trailer. Dieser Wert wird von Dev Center bereitgestellt.   |
+|  id               |    String     |   Die ID für den Trailer. Dieser Wert wird vom Partner Center bereitgestellt.   |
 |  videoFileName               |    String     |    Der Name der Trailer-Videodatei im ZIP-Archiv, das die Dateien für die Übermittlung enthält.    |     
-|  videoFileId               |   String      |  Die ID für die Videodatei. Dieser Wert wird von Dev Center bereitgestellt.   |     
+|  videoFileId               |   String      |  Die ID für die Videodatei. Dieser Wert wird vom Partner Center bereitgestellt.   |     
 |  trailerAssets               |   Objekt      |  Ein Wörterbuch von Schlüssel-Wert-Paaren, wobei ein Schlüssel ein Sprachcode und ein Wert eine [„trailer assets“-Ressource](#trailer-assets-object), die weitere gebietsschemaspezifischen Ressourcen für den Trailer enthält. Weitere Informationen zu den unterstützten Sprachcodes finden Sie unter [Unterstützte Sprachen](https://msdn.microsoft.com/windows/uwp/publish/supported-languages).    |     
 
 > [!NOTE]
@@ -706,7 +706,7 @@ Diese Ressource beschreibt die Miniaturansicht für ein Trailer. Die Ressource h
 | Wert           | Typ    | Beschreibung           |
 |-----------------|---------|------|
 |  fileName               |    String     |   Der Name der Miniaturansicht im ZIP-Archiv, das Sie für die Übermittlung hochgeladen haben.    |     
-|  id  |  String  | Die ID für die Miniaturansicht. Dieser Wert wird von Dev Center bereitgestellt.  |
+|  id  |  String  | Die ID für die Miniaturansicht. Dieser Wert wird vom Partner Center bereitgestellt.  |
 |  description  |  String  | Die Beschreibung für die Miniaturansicht. Dieser Wert wird nur Metadaten verwendet und den Benutzern nicht angezeigt.   |
 
 <span/>
@@ -726,7 +726,7 @@ Die folgenden Werte stellen die verfügbaren Preisstufen in der [Ressource für 
 |  Base               |   Das Preisniveau ist nicht festgelegt. Verwenden Sie den Basispreis für die App.      |     
 |  NotAvailable              |   Die App ist für die angegebene Region nicht verfügbar.    |     
 |  Free              |   Die App ist kostenlos.    |    
-|  Stufe*xxx*               |   Eine Zeichenfolge, die die Preisstufe für die App im Format **Stufe<em>xxxx</em>** angibt. Derzeit werden die folgenden Spannen von Preisstufen unterstützt:<br/><br/><ul><li>Wenn der Wert *IsAdvancedPricingModel* für die [Ressource für Preise](#pricing-object) **true** ist, sind die für Ihr Konto verfügbaren Werte für Preisstufen **Stufe1012** - **Stufe1424**.</li><li>Wenn der Wert *IsAdvancedPricingModel* für die [Ressource für Preise](#pricing-object) **false** ist, sind die für Ihr Konto verfügbaren Werte für Preisstufen **Stufe1012** - **Stufe1424**.</li></ul>Eine vollständige Übersicht an Preisstufen, die für Ihr Entwicklerkonto verfügbar sind, einschließlich der marktspezifische Preise, die jeder Stufe zugeordnet sind, finden Sie auf der Seite **Preise und Verfügbarkeit** Ihrer App-Übermittlungen im Dev Center-Dashboard. Klicken Sie auf den Link **Tabelle anzeigen** im Abschitt **Märkte und benutzerdefinierte Preise** (bei einigen Entwicklerkonten befindet sich dieser Link im Abschnitt **Preise**).    |
+|  Stufe*xxx*               |   Eine Zeichenfolge, die die Preisstufe für die App im Format **Stufe<em>xxxx</em>** angibt. Derzeit werden die folgenden Spannen von Preisstufen unterstützt:<br/><br/><ul><li>Wenn der Wert *IsAdvancedPricingModel* für die [Ressource für Preise](#pricing-object) **true** ist, sind die für Ihr Konto verfügbaren Werte für Preisstufen **Stufe1012** - **Stufe1424**.</li><li>Wenn der Wert *IsAdvancedPricingModel* für die [Ressource für Preise](#pricing-object) **false** ist, sind die für Ihr Konto verfügbaren Werte für Preisstufen **Stufe1012** - **Stufe1424**.</li></ul>Um festzustellen, die vollständige Tabelle der Preis Ebenen, die für Ihr Entwicklerkonto, einschließlich der marktspezifische Preise, die jede Ebene zugeordnet sind verfügbar sind, wechseln Sie zur Seite **Preise und Verfügbarkeit** für alle Ihre app-Übermittlungen im Partner Center und Klicken Sie auf den Link **Anzeigen der Tabelle** im Abschnitt **Märkte und angepasste Preise** (bei einigen entwicklerkonten dieser Link ist im Abschnitt **Preise** ).    |
 
 
 <span id="enterprise-licensing" />
@@ -736,7 +736,7 @@ Die folgenden Werte stellen die verfügbaren Preisstufen in der [Ressource für 
 Die folgenden Werte stellen das Verhalten der App für die Unternehmenslizenzierung dar. Weitere Informationen zu diesen Optionen finden Sie unter [Lizenzierungsoptionen für Unternehmen](https://msdn.microsoft.com/windows/uwp/publish/organizational-licensing).
 
 > [!NOTE]
-> Obwohl Sie die Lizenzierungsoptionen für Unternehmen für eine App-Übermittlung über der Übermittlungs-API konfigurieren können, können Sie diese API nicht verwenden, um Übermittlungen für [Volumenkäufe über den Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen](../publish/organizational-licensing.md) zu veröffentlichen. Um Übermittlungen an den Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen zu veröffentlichen, müssen Sie das Windows Dev Center-Dashboard verwenden.
+> Obwohl Sie die Lizenzierungsoptionen für Unternehmen für eine App-Übermittlung über der Übermittlungs-API konfigurieren können, können Sie diese API nicht verwenden, um Übermittlungen für [Volumenkäufe über den Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen](../publish/organizational-licensing.md) zu veröffentlichen. Um Übermittlungen an den Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen zu veröffentlichen, müssen Sie Partner Center verwenden.
 
 
 | Wert           |  Beschreibung      |
@@ -775,4 +775,4 @@ Die folgenden Werte stellen den Statuscode einer Übermittlung dar.
 
 * [Erstellen und Verwalten von Übermittlungen mit Microsoft Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)
 * [Abrufen von App-Daten mit der Microsoft Store-Übermittlungs-API](get-app-data.md)
-* [App-Übermittlungen im Dev Center-Dashboard](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)
+* [App-Übermittlungen im Partner Center](https://msdn.microsoft.com/windows/uwp/publish/app-submissions)

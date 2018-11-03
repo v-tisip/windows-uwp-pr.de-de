@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: 16D4C3B9-FC9B-46ED-9F87-1517E1B549FA
-description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Löschen eines Add-Ons für eine App, die für Ihr Windows Dev Center-Konto registriert ist.
+description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Löschen eines Add-Ons für eine app, die für Ihr Partner Center-Konto registriert ist.
 title: Löschen eines Add-Ons
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-on, löschen, In-App-Produkt, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: db8c394cac29afabba5229e21712320c82b89364
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: 53c7125b48c32c8e39861f933f80fb88d6d904be
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5935064"
+ms.locfileid: "5989769"
 ---
 # <a name="delete-an-add-on"></a>Löschen eines Add-Ons
 
-Verwenden Sie diese Methode der Microsoft Store-Übermittlungs-API, um ein Add-On (auch als In-App-Produkt oder IAP bezeichnet) für eine App zu löschen, die in Ihrem Windows Dev Center-Konto registriert wurde.
+Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Löschen eines Add-Ons (auch bekannt als in-app-Produkt oder IAP) für eine app, die für Ihr Partner Center-Konto registriert ist.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -46,7 +46,7 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 
 | Name        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| id | String | Erforderlich. Die Store-ID des zu löschenden Add-Ons. Die Store-ID ist im Dev Center-Dashboard verfügbar.  |
+| id | String | Erforderlich. Die Store-ID des zu löschenden Add-Ons. Die Store-ID ist im Partner Center verfügbar.  |
 
 
 ### <a name="request-body"></a>Anforderungstext
@@ -75,7 +75,7 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 |--------|------------------|
 | 400  | Die Anforderung ist ungültig. |
 | 404  | Das angegebene Add-On konnte nicht gefunden werden.  |
-| 409  | Das angegebene Add-On wurde gefunden, konnte jedoch nicht im aktuellen Zustand gelöscht werden. Oder das Add-On verwendet ein Dev Center-Dashboard-Feature, das [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt wird](create-and-manage-submissions-using-windows-store-services.md#not_supported). |   
+| 409  | Das angegebene Add-on wurde gefunden, aber es konnte nicht in ihrem aktuellen Zustand gelöscht werden, oder das Add-on verwendet ein Partner Center-Feature, das [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt](create-and-manage-submissions-using-windows-store-services.md#not_supported)wird. |   
 
 
 ## <a name="related-topics"></a>Verwandte Themen

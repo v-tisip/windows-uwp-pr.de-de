@@ -1,23 +1,23 @@
 ---
 author: Xansky
 ms.assetid: 5BD650D2-AA26-4DE9-8243-374FDB7D932B
-description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Erstellen eines Add-Ons für eine App, die für Ihr Windows Dev Center-Konto registriert ist.
+description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Erstellen eines Add-Ons für eine app, die für Ihr PartnerCenter-Konto registriert ist.
 title: Erstellen eines Add-Ons
 ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Erstellen eines Add-Ons, In-App-Produkt, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 36b6be05d1efc1cbc23f26a509230750c8896c87
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.openlocfilehash: d262a86c4a177095015c3f1391b19f1a7719d0a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5939295"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5992608"
 ---
 # <a name="create-an-add-on"></a>Erstellen eines Add-Ons
 
-Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um ein Add-On (auch als In-App-Produkt oder IAP bezeichnet) für eine App zu erstellen, die für Ihr Windows Dev Center-Konto registriert ist.
+Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Erstellen eines Add-Ons (auch bekannt als in-app-Produkt oder IAP) für eine app, die für Ihr Partner Center-Konto registriert ist.
 
 > [!NOTE]
 > Durch diese Methode wird ein Add-On ohne Übermittlungen erstellt. Verwenden Sie zum Erstellen einer Übermittlung für ein Add-On die Methoden unter [Verwalten von Add-On-Übermittlungen](manage-add-on-submissions.md).
@@ -99,7 +99,7 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 | Fehlercode |  Beschreibung                                                                                                                                                                           |
 |--------|------------------|
 | 400  | Die Anforderung ist ungültig. |
-| 409  | Das Add-On konnte im aktuellen Zustand nicht erstellt werden, oder im Add-On wird ein Dev Center-Dashboard-Feature verwendet, das [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt](create-and-manage-submissions-using-windows-store-services.md#not_supported) wird. |   
+| 409  | Das Add-on konnte im aktuellen Zustand nicht erstellt werden, oder das Add-on verwendet ein Partner Center-Feature, das [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt](create-and-manage-submissions-using-windows-store-services.md#not_supported)wird. |   
 
 
 ## <a name="related-topics"></a>Verwandte Themen

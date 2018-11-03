@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, BasicReaderWriter
 ms.localizationpriority: medium
 ms.openlocfilehash: 7a5d644a2a141a83316575a235805fa56657bf3a
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5921506"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "5990826"
 ---
 # <a name="complete-code-for-basicreaderwriter"></a>Vollständiger Code für "BasicReaderWriter"
 
