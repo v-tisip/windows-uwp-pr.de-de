@@ -10,30 +10,30 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e0a29f66d8d153bc7c558acb804c96fe200864e
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5933563"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5985908"
 ---
-# <a name="tile-pool-creation-parameters"></a><span data-ttu-id="0db8a-104">Parameter zum Erstellen des Kachelpools</span><span class="sxs-lookup"><span data-stu-id="0db8a-104">Tile pool creation parameters</span></span>
+# <a name="tile-pool-creation-parameters"></a><span data-ttu-id="11df2-104">Parameter zum Erstellen des Kachelpools</span><span class="sxs-lookup"><span data-stu-id="11df2-104">Tile pool creation parameters</span></span>
 
 
-<span data-ttu-id="0db8a-105">Verwenden Sie die Parameter in diesem Abschnitt, um die Kachelpools beim Erstellen eines Puffers zu definieren.</span><span class="sxs-lookup"><span data-stu-id="0db8a-105">Use the parameters in this section to define tile pools when creating a buffer.</span></span>
+<span data-ttu-id="11df2-105">Verwenden Sie die Parameter in diesem Abschnitt, um die Kachelpools beim Erstellen eines Puffers zu definieren.</span><span class="sxs-lookup"><span data-stu-id="11df2-105">Use the parameters in this section to define tile pools when creating a buffer.</span></span>
 
-<span data-ttu-id="0db8a-106"><span id="Size"></span><span id="size"></span><span id="SIZE"></span>**Größe**</span><span class="sxs-lookup"><span data-stu-id="0db8a-106"><span id="Size"></span><span id="size"></span><span id="SIZE"></span>**Size**</span></span>  
-<span data-ttu-id="0db8a-107">Größe der Vergabe, als ein Vielfaches von 64KB.</span><span class="sxs-lookup"><span data-stu-id="0db8a-107">Allocation size, as a multiple of 64KB.</span></span> <span data-ttu-id="0db8a-108">0 ist gültig, da Sie den Kachelpool später anpassen können.</span><span class="sxs-lookup"><span data-stu-id="0db8a-108">0 is valid because you can later resize the tile pool.</span></span>
+<span data-ttu-id="11df2-106"><span id="Size"></span><span id="size"></span><span id="SIZE"></span>**Größe**</span><span class="sxs-lookup"><span data-stu-id="11df2-106"><span id="Size"></span><span id="size"></span><span id="SIZE"></span>**Size**</span></span>  
+<span data-ttu-id="11df2-107">Größe der Vergabe, als ein Vielfaches von 64KB.</span><span class="sxs-lookup"><span data-stu-id="11df2-107">Allocation size, as a multiple of 64KB.</span></span> <span data-ttu-id="11df2-108">0 ist gültig, da Sie den Kachelpool später anpassen können.</span><span class="sxs-lookup"><span data-stu-id="11df2-108">0 is valid because you can later resize the tile pool.</span></span>
 
-<span data-ttu-id="0db8a-109"><span id="Supported_Resource_Misc_Flags"></span><span id="supported_resource_misc_flags"></span><span id="SUPPORTED_RESOURCE_MISC_FLAGS"></span>**Sonstige unterstützte Ressourcen-Flags**</span><span class="sxs-lookup"><span data-stu-id="0db8a-109"><span id="Supported_Resource_Misc_Flags"></span><span id="supported_resource_misc_flags"></span><span id="SUPPORTED_RESOURCE_MISC_FLAGS"></span>**Supported Resource Misc Flags**</span></span>  
-<span data-ttu-id="0db8a-110">Kachelpool (identifiziert die Ressource als ein Kachelpool), verschieden freigegebene Ressource, freigegebenes Schlüsselmutex oder freigegebenes NT-Handle.</span><span class="sxs-lookup"><span data-stu-id="0db8a-110">Tile pool (identifies the resource as a tile pool), miscellaneous shared resource, shared keyed mutex, or shared NT handle.</span></span>
+<span data-ttu-id="11df2-109"><span id="Supported_Resource_Misc_Flags"></span><span id="supported_resource_misc_flags"></span><span id="SUPPORTED_RESOURCE_MISC_FLAGS"></span>**Sonstige unterstützte Ressourcen-Flags**</span><span class="sxs-lookup"><span data-stu-id="11df2-109"><span id="Supported_Resource_Misc_Flags"></span><span id="supported_resource_misc_flags"></span><span id="SUPPORTED_RESOURCE_MISC_FLAGS"></span>**Supported Resource Misc Flags**</span></span>  
+<span data-ttu-id="11df2-110">Kachelpool (identifiziert die Ressource als ein Kachelpool), verschieden freigegebene Ressource, freigegebenes Schlüsselmutex oder freigegebenes NT-Handle.</span><span class="sxs-lookup"><span data-stu-id="11df2-110">Tile pool (identifies the resource as a tile pool), miscellaneous shared resource, shared keyed mutex, or shared NT handle.</span></span>
 
-<span data-ttu-id="0db8a-111"><span id="Supported_Resource_Usage"></span><span id="supported_resource_usage"></span><span id="SUPPORTED_RESOURCE_USAGE"></span>**Unterstützte Ressourcenverwendung**</span><span class="sxs-lookup"><span data-stu-id="0db8a-111"><span id="Supported_Resource_Usage"></span><span id="supported_resource_usage"></span><span id="SUPPORTED_RESOURCE_USAGE"></span>**Supported Resource Usage**</span></span>  
-<span data-ttu-id="0db8a-112">Nur standardmäßige Verwendung.</span><span class="sxs-lookup"><span data-stu-id="0db8a-112">Default usage, only.</span></span>
+<span data-ttu-id="11df2-111"><span id="Supported_Resource_Usage"></span><span id="supported_resource_usage"></span><span id="SUPPORTED_RESOURCE_USAGE"></span>**Unterstützte Ressourcenverwendung**</span><span class="sxs-lookup"><span data-stu-id="11df2-111"><span id="Supported_Resource_Usage"></span><span id="supported_resource_usage"></span><span id="SUPPORTED_RESOURCE_USAGE"></span>**Supported Resource Usage**</span></span>  
+<span data-ttu-id="11df2-112">Nur standardmäßige Verwendung.</span><span class="sxs-lookup"><span data-stu-id="11df2-112">Default usage, only.</span></span>
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="0db8a-113"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="0db8a-113"><span id="related-topics"></span>Related topics</span></span>
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="11df2-113"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="11df2-113"><span id="related-topics"></span>Related topics</span></span>
 
 
-[<span data-ttu-id="0db8a-114">Erstellen von Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="0db8a-114">Creating streaming resources</span></span>](creating-streaming-resources.md)
+[<span data-ttu-id="11df2-114">Erstellen von Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="11df2-114">Creating streaming resources</span></span>](creating-streaming-resources.md)
 
  
 

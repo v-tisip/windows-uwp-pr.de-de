@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0066d38aaa3f5802ff5b1d380d405e60d90cad49
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5946290"
+ms.locfileid: "5978085"
 ---
 # <a name="streaming-resources-texture-sampling-features"></a><span data-ttu-id="8b495-104">Textursampling-Features für Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="8b495-104">Streaming resources texture sampling features</span></span>
 

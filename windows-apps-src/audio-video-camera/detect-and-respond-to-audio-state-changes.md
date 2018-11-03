@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 53ac8dff5895522c24c1645e4db95c90d575df95
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5934852"
+ms.locfileid: "5982165"
 ---
 # <a name="detect-and-respond-to-audio-state-changes"></a><span data-ttu-id="a2796-104">Erkennen und reagieren auf Änderungen der Audiodatenstromebene</span><span class="sxs-lookup"><span data-stu-id="a2796-104">Detect and respond to audio state changes</span></span>
 <span data-ttu-id="a2796-105">Ab Windows10, Version 1803, erkennt Ihre App, wenn das System die Lautstärke der Audioaufnahme Ihrer App oder des Audiodatenstroms reduziert oder stummschaltet.</span><span class="sxs-lookup"><span data-stu-id="a2796-105">Starting with Windows 10, version 1803, your app can detect when the system lowers or mutes the audio level of an audio stream your app is using.</span></span> <span data-ttu-id="a2796-106">Sie können Benachrichtigungen für die Erfassung und die Wiedergabe von Datenströmen erhalten, für ein bestimmtes Audio-Gerät und eine Audiokategorie oder für eine [**MediaPlayer**](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Playback.MediaPlayer)-Objekt, das ist Ihrer App für die Medienwiedergabe verwendet.</span><span class="sxs-lookup"><span data-stu-id="a2796-106">You can receive notifications for capture and render streams, for a particular audio device and audio category, or for a [**MediaPlayer**](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Playback.MediaPlayer) object your app is using for media playback.</span></span> <span data-ttu-id="a2796-107">Beispielsweise kann das System die Audiowiedergabe-Ebene reduzieren, wenn ein Alarm klingelt.</span><span class="sxs-lookup"><span data-stu-id="a2796-107">For example, the system may lower, or "duck", the audio playback level when an alarm is ringing.</span></span> <span data-ttu-id="a2796-108">Das System schaltet Ihre App stumm, wenn sie in den Hintergrund wechselt, falls Ihre App die *BackgroundMediaPlayback*-Funktion im App-Manifest nicht aktiviert hat.</span><span class="sxs-lookup"><span data-stu-id="a2796-108">The system will mute your app when it goes into the background if your app has not declared the *backgroundMediaPlayback* capability in the app manifest.</span></span> 

@@ -10,21 +10,21 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: f7d99aadb9f83d2820cd81fa3a4433c6fab8ee82
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5918665"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5979839"
 ---
-# <a name="stream-output-view-sov"></a><span data-ttu-id="45baf-104">Streamausgabeansicht (SOV)</span><span class="sxs-lookup"><span data-stu-id="45baf-104">Stream output view (SOV)</span></span>
+# <a name="stream-output-view-sov"></a><span data-ttu-id="4a274-104">Streamausgabeansicht (SOV)</span><span class="sxs-lookup"><span data-stu-id="4a274-104">Stream output view (SOV)</span></span>
 
 
-<span data-ttu-id="45baf-105">Streamausgabeansichten ermöglichen, dass die Scheitelpunktinformationen von den Scheitelpunkt-, Mosaik- und Geometrie-Shadern zur weiteren Verwendung zurück in die Anwendung gestreamt werden.</span><span class="sxs-lookup"><span data-stu-id="45baf-105">Stream output views enable the vertex information that the vertex, tessellation and geometry shaders have come up with to be streamed back out to the application for further use.</span></span> <span data-ttu-id="45baf-106">Zum Beispiel könnte ein Objekt, das durch diese Shader verzerrt wurde, in die Anwendung zurückgeschrieben werden, um eine genauere Eingabe für eine Physik- oder eine andere Engine bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="45baf-106">For example, an object that has been distorted by these shaders could be written back to the application to provide more accurate input to a physics or other engine.</span></span> <span data-ttu-id="45baf-107">In der Praxis sind aber Streamausgabeansichten ein selten verwendetes Feature der Grafikpipeline.</span><span class="sxs-lookup"><span data-stu-id="45baf-107">In practice though, stream output views are an infrequently used feature of the graphics pipeline.</span></span>
+<span data-ttu-id="4a274-105">Streamausgabeansichten ermöglichen, dass die Scheitelpunktinformationen von den Scheitelpunkt-, Mosaik- und Geometrie-Shadern zur weiteren Verwendung zurück in die Anwendung gestreamt werden.</span><span class="sxs-lookup"><span data-stu-id="4a274-105">Stream output views enable the vertex information that the vertex, tessellation and geometry shaders have come up with to be streamed back out to the application for further use.</span></span> <span data-ttu-id="4a274-106">Zum Beispiel könnte ein Objekt, das durch diese Shader verzerrt wurde, in die Anwendung zurückgeschrieben werden, um eine genauere Eingabe für eine Physik- oder eine andere Engine bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="4a274-106">For example, an object that has been distorted by these shaders could be written back to the application to provide more accurate input to a physics or other engine.</span></span> <span data-ttu-id="4a274-107">In der Praxis sind aber Streamausgabeansichten ein selten verwendetes Feature der Grafikpipeline.</span><span class="sxs-lookup"><span data-stu-id="4a274-107">In practice though, stream output views are an infrequently used feature of the graphics pipeline.</span></span>
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="45baf-108"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="45baf-108"><span id="related-topics"></span>Related topics</span></span>
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="4a274-108"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="4a274-108"><span id="related-topics"></span>Related topics</span></span>
 
 
-[<span data-ttu-id="45baf-109">Ansichten</span><span class="sxs-lookup"><span data-stu-id="45baf-109">Views</span></span>](views.md)
+[<span data-ttu-id="4a274-109">Ansichten</span><span class="sxs-lookup"><span data-stu-id="4a274-109">Views</span></span>](views.md)
 
  
 

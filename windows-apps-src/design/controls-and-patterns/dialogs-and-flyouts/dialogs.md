@@ -15,11 +15,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ba4bfcd38acba2bcd7c8399b8b17184edacc15a
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5947317"
+ms.locfileid: "5984540"
 ---
 ## <a name="dialog-controls"></a><span data-ttu-id="b0a61-103">Dialogfeld-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="b0a61-103">Dialog controls</span></span>
 

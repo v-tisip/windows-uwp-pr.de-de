@@ -9,17 +9,17 @@ ms.topic: article
 ms.assetid: 1aa12606-8a99-4db3-8311-90e02fde9cf1
 ms.localizationpriority: medium
 ms.openlocfilehash: 4dd8717b50460f5353bea67840a337a063f6603a
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "5928538"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "5985235"
 ---
-# <a name="layout"></a><span data-ttu-id="3dfe6-104">Layout</span><span class="sxs-lookup"><span data-stu-id="3dfe6-104">Layout</span></span>
+# <a name="layout"></a><span data-ttu-id="f9997-104">Layout</span><span class="sxs-lookup"><span data-stu-id="f9997-104">Layout</span></span>
 
 ![Favoritenbild](images/header-layout2.jpg)
 
-<span data-ttu-id="3dfe6-106">Diese Artikel unterstützen Sie beim Erstellen einer flexiblen Benutzeroberfläche, die auch bei verschiedenen Bildschirmgrößen, Fenstergrößen, Auflösungen und Ausrichtungen hervorragend aussieht.</span><span class="sxs-lookup"><span data-stu-id="3dfe6-106">These articles help you create a flexible UI that looks great on different screen sizes, window sizes, resolutions, and orientations.</span></span>
+<span data-ttu-id="f9997-106">Diese Artikel unterstützen Sie beim Erstellen einer flexiblen Benutzeroberfläche, die auch bei verschiedenen Bildschirmgrößen, Fenstergrößen, Auflösungen und Ausrichtungen hervorragend aussieht.</span><span class="sxs-lookup"><span data-stu-id="f9997-106">These articles help you create a flexible UI that looks great on different screen sizes, window sizes, resolutions, and orientations.</span></span>
 
 :::row:::
     :::column:::

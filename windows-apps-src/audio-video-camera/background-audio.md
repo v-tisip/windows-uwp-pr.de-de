@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f2eb12092d27c0033563ebf8cebbe96f949eadf8
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5938870"
+ms.locfileid: "5982476"
 ---
 # <a name="play-media-in-the-background"></a><span data-ttu-id="8c36d-104">Wiedergeben von Medien im Hintergrund</span><span class="sxs-lookup"><span data-stu-id="8c36d-104">Play media in the background</span></span>
 <span data-ttu-id="8c36d-105">In diesem Artikel wird beschrieben, wie Sie Ihre App so konfigurieren, dass die Medienwiedergabe fortgesetzt wird, wenn die App vom Vordergrund in den Hintergrund wechselt.</span><span class="sxs-lookup"><span data-stu-id="8c36d-105">This article shows you how to configure your app so that media continues to play when your app moves from the foreground to the background.</span></span> <span data-ttu-id="8c36d-106">Dies bedeutet, dass die App weiterhin Audio wiedergeben kann, auch nachdem der Benutzer die App minimiert hat, zur Startseite zurückgekehrt ist oder die App auf andere Weise verlassen hat.</span><span class="sxs-lookup"><span data-stu-id="8c36d-106">This means that even after the user has minimized your app, returned to the home screen, or has navigated away from your app in some other way, your app can continue to play audio.</span></span> 
