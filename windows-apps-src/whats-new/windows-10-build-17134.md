@@ -8,11 +8,11 @@ ms.date: 4/10/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b25df0a8445322ceb422fd6485f7d08c1c49a25
-ms.sourcegitcommit: 70ab58b88d248de2332096b20dbd6a4643d137a4
+ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/02/2018
-ms.locfileid: "5945837"
+ms.locfileid: "5989279"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a><span data-ttu-id="13254-104">Neuigkeiten für Entwickler in Windows10, Build 17134</span><span class="sxs-lookup"><span data-stu-id="13254-104">What's New in Windows 10 for developers, build 17134</span></span>
 
