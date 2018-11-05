@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store Werbungs-API, Anzeigenkampagnen
 ms.localizationpriority: medium
 ms.openlocfilehash: 271d60e6fbc0bd6336aa8aa8ec9edbb2b965c7f4
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5981001"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6025539"
 ---
 # <a name="manage-targeting-profiles"></a><span data-ttu-id="29485-104">Verwalten von Zielgruppenprofilen</span><span class="sxs-lookup"><span data-stu-id="29485-104">Manage targeting profiles</span></span>
 

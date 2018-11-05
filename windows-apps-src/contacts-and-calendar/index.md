@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Kontakte, Kalender, Termine, E-Mail-Nachrichten
 ms.localizationpriority: medium
 ms.openlocfilehash: c020a871863df6fac3dabc3ffab4bafc57227b50
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5997218"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6052195"
 ---
 # <a name="contacts-my-people-and-calendar"></a><span data-ttu-id="110e4-104">Kontakte, Meine Kontakte und Kalender</span><span class="sxs-lookup"><span data-stu-id="110e4-104">Contacts, My People, and calendar</span></span>
 

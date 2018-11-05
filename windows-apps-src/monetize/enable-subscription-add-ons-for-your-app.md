@@ -8,11 +8,11 @@ ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 207203805dfee0fd54a9d6d6fd4987b098710f4c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5973705"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6024834"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a><span data-ttu-id="0bee4-104">Aktivieren von Abonnements für Add-Ons für Ihre App</span><span class="sxs-lookup"><span data-stu-id="0bee4-104">Enable subscription add-ons for your app</span></span>
 

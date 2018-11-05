@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, App-Übermittlungen
 ms.localizationpriority: medium
 ms.openlocfilehash: 76bc7932665e3f9893c6f0aa9644b9edc07a6dcf
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5996673"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6026735"
 ---
 # <a name="manage-app-submissions"></a><span data-ttu-id="40808-104">Verwalten von App-Übermittlungen</span><span class="sxs-lookup"><span data-stu-id="40808-104">Manage app submissions</span></span>
 

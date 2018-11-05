@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 13468ce3b74992c026d94223b5e67aea99d79991
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5987936"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6044080"
 ---
 # <a name="install-apps-with-the-winappdeploycmdexe-tool"></a><span data-ttu-id="16c9b-104">Installieren von Apps mit dem Tool „WinAppDeployCmd.exe“</span><span class="sxs-lookup"><span data-stu-id="16c9b-104">Install apps with the WinAppDeployCmd.exe tool</span></span>
 

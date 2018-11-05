@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 12b8a6462f6cc39ba85cddfaa7a92212955a79f5
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5969345"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6025884"
 ---
 # <a name="track-recently-used-files-and-folders"></a><span data-ttu-id="3d31f-104">Nachverfolgen kürzlich verwendeter Dateien und Ordner</span><span class="sxs-lookup"><span data-stu-id="3d31f-104">Track recently used files and folders</span></span>
 

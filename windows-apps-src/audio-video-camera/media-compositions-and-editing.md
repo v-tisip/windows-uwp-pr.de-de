@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f32d63bf03a469d8282262c358153140587d9033
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5971559"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6025762"
 ---
 # <a name="media-compositions-and-editing"></a><span data-ttu-id="8cad1-104">Medienkompositionen und -bearbeitung</span><span class="sxs-lookup"><span data-stu-id="8cad1-104">Media compositions and editing</span></span>
 

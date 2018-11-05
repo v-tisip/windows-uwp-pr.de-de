@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e62e724cceb458ba922143e61058dffa8d16a0b8
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5978303"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6023783"
 ---
 # <a name="planning-for-performance"></a><span data-ttu-id="e1cf6-104">Planen der Leistung</span><span class="sxs-lookup"><span data-stu-id="e1cf6-104">Planning for performance</span></span>
 
