@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 990af773c600c2c87cfe6bc477ed1d6799379fb2
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5988547"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6029412"
 ---
 # <a name="accessibility-in-the-store"></a>Barrierefreiheit im Store  
 
