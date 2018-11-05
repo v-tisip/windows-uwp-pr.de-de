@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d427a532e9821b81b6f23d08babecd692c8c95e1
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5993980"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6029478"
 ---
 # <a name="effects-for-video-capture"></a><span data-ttu-id="7ba5a-104">Effekte für die Videoaufnahme</span><span class="sxs-lookup"><span data-stu-id="7ba5a-104">Effects for video capture</span></span>
 

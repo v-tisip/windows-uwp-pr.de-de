@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Bewertungen
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b118abe32fe350277e02ed1f1f1d721e4c1690e
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5983704"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6027866"
 ---
 # <a name="get-app-ratings"></a><span data-ttu-id="7d67f-104">Abrufen von App-Bewertungen</span><span class="sxs-lookup"><span data-stu-id="7d67f-104">Get app ratings</span></span>
 

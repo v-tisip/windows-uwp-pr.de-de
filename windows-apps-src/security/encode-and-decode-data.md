@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: 76c43f5b72b47c9ce88a0ee12223ff099127ff8f
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5985054"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6030607"
 ---
 # <a name="encode-and-decode-data"></a><span data-ttu-id="e50db-104">Codieren und Decodieren von Daten</span><span class="sxs-lookup"><span data-stu-id="e50db-104">Encode and decode data</span></span>
 

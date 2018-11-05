@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ca78338b501b8c24549b1348c051a02ea62a501
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5989150"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6030424"
 ---
 # <a name="devices-sensors-and-power"></a><span data-ttu-id="93180-104">Geräte, Sensoren und Leistung</span><span class="sxs-lookup"><span data-stu-id="93180-104">Devices, sensors, and power</span></span>
 

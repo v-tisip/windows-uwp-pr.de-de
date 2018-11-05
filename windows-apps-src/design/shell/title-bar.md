@@ -10,11 +10,11 @@ keywords: Windows10, UWP, Titelleiste
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 2ebe590f98afef031ab183589fc7dcfc29cd9493
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5976090"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6028315"
 ---
 # <a name="title-bar-customization"></a><span data-ttu-id="bbabe-104">Anpassen der Titelleiste</span><span class="sxs-lookup"><span data-stu-id="bbabe-104">Title bar customization</span></span>
 

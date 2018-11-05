@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, IAP, In-App-Kauf, In-App-Produkt, IAP-Übermittlung
 ms.localizationpriority: medium
 ms.openlocfilehash: 28fd2e104de12cc297ce5d28ddd18b0ce550a5d0
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5982453"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6028941"
 ---
 # <a name="add-on-submissions"></a><span data-ttu-id="0f035-103">Add-On-Übermittlungen</span><span class="sxs-lookup"><span data-stu-id="0f035-103">Add-on submissions</span></span>
 

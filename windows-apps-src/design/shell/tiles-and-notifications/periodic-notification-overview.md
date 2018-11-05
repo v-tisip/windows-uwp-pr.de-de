@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d02bfb8b8bd112a969895d4f2bd5d324fce9d6b8
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5988750"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6027936"
 ---
 # <a name="periodic-notification-overview"></a><span data-ttu-id="98bfc-103">Übersicht über regelmäßige Benachrichtigungen</span><span class="sxs-lookup"><span data-stu-id="98bfc-103">Periodic notification overview</span></span>
  
