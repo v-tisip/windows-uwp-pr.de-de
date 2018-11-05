@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, anhalten, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: 204d61430f59c820e9ef9ef36832cd1c24ee7f9c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5987830"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6034120"
 ---
 # <a name="how-to-suspend-an-app-directx-and-c"></a><span data-ttu-id="db790-104">So wird's gemacht: Anhalten einer App (DirectX und C++)</span><span class="sxs-lookup"><span data-stu-id="db790-104">How to suspend an app (DirectX and C++)</span></span>
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, DDSTextureLoader
 ms.localizationpriority: medium
 ms.openlocfilehash: 8ba0de548cb1c4222783ae4245e1aacba4ab09e2
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5989799"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6034216"
 ---
 # <a name="complete-code-for-ddstextureloader"></a><span data-ttu-id="2081a-104">Vollständiger Code für DDSTextureLoader</span><span class="sxs-lookup"><span data-stu-id="2081a-104">Complete code for DDSTextureLoader</span></span>
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Standort, Ort, Karte, Geolocation
 ms.localizationpriority: medium
 ms.openlocfilehash: d0101124febc52da379d2e829e86bdbba7583851
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5969902"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6039044"
 ---
 # <a name="guidelines-for-location-aware-apps"></a><span data-ttu-id="c9cfa-103">Richtlinien für Apps mit Standortbestimmung</span><span class="sxs-lookup"><span data-stu-id="c9cfa-103">Guidelines for location-aware apps</span></span>
 

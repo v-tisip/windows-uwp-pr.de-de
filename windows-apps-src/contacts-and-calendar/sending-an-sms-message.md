@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 06d84646685c6944ab0e816b42cf6fb2125f8a57
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5983100"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6036460"
 ---
 # <a name="send-an-sms-message"></a><span data-ttu-id="3d585-106">Senden einer SMS</span><span class="sxs-lookup"><span data-stu-id="3d585-106">Send an SMS message</span></span>
 

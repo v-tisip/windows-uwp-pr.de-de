@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store Services SDK, A/B-Tests, Experimente
 ms.localizationpriority: medium
 ms.openlocfilehash: 98c1d48524bcc525f57f42e5364d27611602ab52
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5995099"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6033150"
 ---
 # <a name="define-your-experiment-in-partner-center"></a><span data-ttu-id="b4e6d-103">Definieren Sie Ihres Experiments im Partner Center</span><span class="sxs-lookup"><span data-stu-id="b4e6d-103">Define your experiment in Partner Center</span></span>
 

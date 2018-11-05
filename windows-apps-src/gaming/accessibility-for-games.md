@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Bedienungshilfen, Spiele
 ms.localizationpriority: medium
 ms.openlocfilehash: 79426a302be59af73536081cd13e14cad4facbe3
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5990280"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6034659"
 ---
 #  <a name="making-games-accessible"></a><span data-ttu-id="c7131-105">Erstellen barrierefreier Spiele</span><span class="sxs-lookup"><span data-stu-id="c7131-105">Making games accessible</span></span>
 

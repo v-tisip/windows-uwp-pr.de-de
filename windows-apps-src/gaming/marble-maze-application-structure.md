@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, Uwp, Spiele, Beispiel, Directx, Struktur
 ms.localizationpriority: medium
 ms.openlocfilehash: 1272200bf128443c82807aec9df5559f207819e1
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5979734"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6035466"
 ---
 # <a name="marble-maze-application-structure"></a><span data-ttu-id="5b655-104">Anwendungsstruktur von Marble Maze</span><span class="sxs-lookup"><span data-stu-id="5b655-104">Marble Maze application structure</span></span>
 

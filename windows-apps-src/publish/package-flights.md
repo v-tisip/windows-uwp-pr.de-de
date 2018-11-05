@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Test-Flighting
 ms.localizationpriority: medium
 ms.openlocfilehash: a873b6f6c0d1a35667b47109f5cc2205e5a02158
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5987840"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6039444"
 ---
 # <a name="package-flights"></a><span data-ttu-id="2b9d6-103">Flight-Pakete</span><span class="sxs-lookup"><span data-stu-id="2b9d6-103">Package flights</span></span>
 
