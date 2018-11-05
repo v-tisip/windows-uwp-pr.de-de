@@ -10,12 +10,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: b79edc5499343498801081dd00554128c3b57eae
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: 3ec0f99f069950776ab934c82bd3197bdd6c9dd6
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5970167"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6032924"
 ---
 # <a name="mouse-interactions"></a>Mausinteraktionen
 
@@ -98,14 +98,14 @@ Reagieren Sie in Ihren Apps auf Mauseingaben, indem Sie die gleichen einfachen Z
 
 Verwenden Sie [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)-Ereignisse, um grundlegende Eingabefunktionen zu implementieren, ohne separaten Code für jedes Zeigereingabegerät schreiben zu müssen. Sie können aber trotzdem die speziellen Funktionen jedes Geräts nutzen (z. B. die Ereignisse des Mausrads), indem Sie die Zeiger-, Gestik- und Manipulationsereignisse dieses Objekts verwenden.
 
-**Beispiele:** Diese Funktionalität in Aktion zu sehen in unserer [Beispiele](http://go.microsoft.com/fwlink/p/?LinkID=264996)wird angezeigt.
+**Beispiele:** Diese Funktionalität in Aktion zu sehen in unserer [Beispiele](https://go.microsoft.com/fwlink/p/?LinkID=264996)wird angezeigt.
 
 
-- [Eingabe: Beispiel für Gerätefunktionen](http://go.microsoft.com/fwlink/p/?linkid=231530)
+- [Eingabe: Beispiel für Gerätefunktionen](https://go.microsoft.com/fwlink/p/?linkid=231530)
 
-- [Eingabebeispiel](http://go.microsoft.com/fwlink/p/?linkid=226855)
+- [Eingabebeispiel](https://go.microsoft.com/fwlink/p/?linkid=226855)
 
-- [Eingabe: Gesten und Manipulationen mit GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
+- [Eingabe: Gesten und Manipulationen mit GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkID=231605)
 
 ## <a name="guidelines-for-visual-feedback"></a>Richtlinien für visuelles Feedback
 
@@ -141,16 +141,16 @@ Beachten Sie beim Anpassen des Mauszeigers Folgendes:
 * [Identifizieren von Eingabegeräten](identify-input-devices.md)
 
 **Beispiele**
-* [Einfaches Eingabebeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Beispiel für Eingabe mit niedriger Latenz](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Beispiel für den Benutzerinteraktionsmodus](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Beispiel für visuelle Fokuselemente](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Einfaches Eingabebeispiel](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Beispiel für Eingabe mit niedriger Latenz](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Beispiel für den Benutzerinteraktionsmodus](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Beispiel für visuelle Fokuselemente](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Archivbeispiele**
-* [Eingabe: Beispiel für Gerätefunktionen](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Eingabe: Beispiel für XAML-Benutzereingabeereignisse](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoom](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Eingabe: Gesten und Manipulationen mit GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [Eingabe: Beispiel für Gerätefunktionen](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Eingabe: Beispiel für XAML-Benutzereingabeereignisse](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoom](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Eingabe: Gesten und Manipulationen mit GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkID=231605)
  
  
 

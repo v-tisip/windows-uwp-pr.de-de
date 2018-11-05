@@ -1,6 +1,6 @@
 ---
 author: manoskow
-Description: Learn how to create effective and user-focused notifications that make your users prductive and happy.
+Description: Learn how to create effective and user-focused notifications that make your users productive and happy.
 title: Popup-UX-Richtlinien
 label: Toast UX Guidance
 template: detail.hbs
@@ -9,12 +9,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: Windows 10, Uwp, Benachrichtigung, Sammlung, gruppieren, Ux, Ux-Richtlinien, Richtlinien, Aktion, Popup, Info-Center, Noninterruptive, effektive Benachrichtigungen, nicht zudringliche Benachrichtigungen, umsetzbare, verwalten, zu organisieren
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c77719bd45c3169ec02a280099d27e10099a25c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: 4ac7eab73f2bcfa57ac37ea6da99e1da6b235159
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5974717"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6032701"
 ---
 # <a name="toast-notification-ux-guidance"></a>Popup-Benachrichtigung UX-Richtlinien
 Benachrichtigungen sind notwendig, moderne Leben; Sie können Benutzer produktiver und erzwungenen mit apps und Websites sowie bleiben Sie auf dem aktuellen durch Updates werden. Benachrichtigungen können jedoch schnell Aktivieren von hilfreich sein, overbearing und aufdringlich, wenn sie nicht in einer benutzerorientiert Weise ausgelegt sind. Die Benachrichtigungen sind eine mit der rechten Maustaste Weg ausgeschaltet wird, und es ist unwahrscheinlich, sobald sie deaktiviert sind, sie werden aktiviert, erneut.  Stellen Sie daher sicher, dass Ihre Benachrichtigungen respektieren Bildschirmbereich des Benutzers und die Uhrzeit, sind, sodass Sie diesen Kanal Engagement geöffnet bleiben können.
@@ -57,7 +57,7 @@ Wie bereits erwähnt, der Inhalt im Info-Center für drei Tage beibehalten.  Org
 Beide dieser Group Benachrichtigungen in einer Weise, sodass relevante Inhalte zusammen bleibt (d. h. getrennt werden verschiedene Sport Ligen in eine Sport-app oder Sortieren von Nachrichten nach Gruppenchat denken). Sammlungen sind eine deutlicher Möglichkeit, Gruppe Notificaitons, während die Header sind subtilere, aber beide ermöglichen Selektierung und schneller, Benachrichtigungen auswählen. 
 
 ## <a name="other-resources"></a>Weitere Ressourcen
-Diese vier oben genannten Punkte sind Richtlinien, dass wir über unsere eigene Analyse der Telemetrie und über erste und Drittanbieter-Experimente Efffective gefunden haben. Denken Sie daran, jedoch, die diese Richtlinien sind: Richtlinien.  Wir sind davon überzeugt diese Regeln hilft Interaktion und Produktivität von Benachrichtigungen, aber nichts kann Benutzer-orientierte denken, und lernen Sie von Ihren eigenen Daten ersetzen.  
+Diese vier oben genannten Punkte sind Richtlinien, die wir effektive über unseren eigenen Analyse der Telemetrie und über erste und Drittanbieter-Experimente gefunden haben. Denken Sie daran, jedoch, die diese Richtlinien sind: Richtlinien.  Wir sind davon überzeugt diese Regeln hilft Interaktion und Produktivität von Benachrichtigungen, aber nichts kann Benutzer-orientierte denken, und lernen Sie von Ihren eigenen Daten ersetzen.  
 
 Wenn Sie noch heute Benachrichtigungen an Ihre UWP-app senden, können Sie Analytics anzeigen, auf was Ihre Benachrichtigungen im [Dev Center](https://developer.microsoft.com/en-us/windows)wurde aus! Diese Daten stammen frei, bei der Verwendung des [Store Services SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK) oder die [WNS-APIs](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview). Dieser Metriken erhalten Sie einen besseren Einblick in was, um Ihre Benachrichtigungen auf der Windows-Plattform geschieht ebenso wie Benutzer mit Benachrichtigungen interagiert werden. Auf diese Dashboard zugreifen, indem Sie auf das Menü auf der linken Seite einbeziehen > Benachrichtigungen, klicken Sie auf der Registerkarte "Analyse" innerhalb der Seite "Notifications".  Dies befindet am gleichen Ort, den Sie zum Senden von Benachrichtigungen aus dem Dev Center-Portal wechseln möchten.
 
