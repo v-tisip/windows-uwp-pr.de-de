@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, GLSL, Portieren
 ms.localizationpriority: medium
 ms.openlocfilehash: 47fa601a7e0ff307108713a0a6fcd7a5468b0468
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5980482"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6048816"
 ---
 # <a name="port-the-glsl"></a>Portieren der GLSL
 

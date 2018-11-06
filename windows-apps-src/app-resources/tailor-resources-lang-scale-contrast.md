@@ -8,12 +8,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
-ms.openlocfilehash: 563807798cefe083fa1de85dc1f7e4c3ae679211
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: 018740b9ceaa10425ec71f6a2775d547b7c30e82
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5992516"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6048479"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung, hohen Kontrast und anderen Qualifizierern
 
@@ -39,7 +39,7 @@ Für hohen Kontrast ist der Satz von Qualifizierern `contrast-standard`, `contra
 
 Hier ist ein Beispiel für die Verwendung von Qualifizierer zum Benennen von Ordnern, die Ressourcendateien enthalten. Verwenden Sie Qualifizierer in Ordnernamen, wenn Sie mehrere Ressourcendateien pro Qualifizierer haben. Auf diese Weise legen Sie den Qualifizierer einmal auf Ordnerebene fest und der Qualifizierer gilt für alle Elemente im Ordner.
 
-```
+```console
 \Assets\Images\contrast-standard\<logo.png, and other image files>
 \Assets\Images\contrast-high\<logo.png, and other image files>
 \Assets\Images\contrast-black\<logo.png, and other image files>
@@ -52,7 +52,7 @@ Wenn Sie Ihre Ordner wie im obigen Beispiel benennen, verwendet Ihre App den hoh
 
 Anstatt Ordner zu erstellen und zu benennen können Sie einen Qualifizierer verwenden, um die Ressourcendateien selbst zu benennen. Möglicherweise möchten dies tun, wenn Sie nur eine Ressourcendatei pro Qualifizierer haben. Hier ist ein Beispiel.
 
-```
+```console
 \Assets\Images\logo.contrast-standard.png
 \Assets\Images\logo.contrast-high.png
 \Assets\Images\logo.contrast-black.png
@@ -68,7 +68,7 @@ Weitere Informationen finden Sie unter [Referenzieren eines Bezeichners für Zei
 ## <a name="actual-and-neutral-qualifier-matches"></a>Aktuelle und neutrale Qualifizierertreffer
 Sie müssen nicht für *jeden* Qualifiziererwert eine Ressourcendatei erstellen. Wenn Sie z.B. feststellen, dass Sie nur eine visuelle Ressource für hohen Kontrast und eine für den standardmäßigen Kontrast benötigen, benennen Sie diese Ressourcen wie folgt.
 
-```
+```console
 \Assets\Images\logo.contrast-high.png
 \Assets\Images\logo.png
 ```
@@ -81,7 +81,7 @@ Wenn Sie den Namen von `logo.png` auf `logo.contrast-standard.png` ändern würd
 
 Wenn Sie nur einen Satz von Ressourcen für hohen Kontrast brauchen und einen Satz für Standard-Kontrast festgelegt ist, können Sie Ordnernamen anstelle von Dateinamen verwenden. In diesem Fall führt ein Weglassen des Ordnernamens zu einer neutralen Übereinstimmung.
 
-```
+```console
 \Assets\Images\contrast-high\<logo.png, and other images to load when high contrast theme is not None>
 \Assets\Images\<logo.png, and other images to load when high contrast theme is None>
 ```
@@ -92,7 +92,7 @@ Weitere Informationen zur Funktionsweise der Übereinstimmung für Qualifizierer
 
 Sie können Qualifizierer in Ordner- und Dateinamen kombinieren. Wenn z.B. Ihre App Bildressourcen bei aktiviertem Modus für hohen Kontrast lädt *und* der Skalierungsfaktor für die Anzeige ist 400. Eine Möglichkeit hierfür sind geschachtelte Ordner.
 
-```
+```console
 \Assets\Images\contrast-high\scale-400\<logo.png, and other image files>
 ```
 
@@ -100,7 +100,7 @@ Damit `logo.png` und anderen Dateien geladen werden, müssen die Einstellungen m
 
 Eine weitere Möglichkeit ist, mehrere Qualifizierer in einem Ordnernamen zu kombinieren.
 
-```
+```console
 \Assets\Images\contrast-high_scale-400\<logo.png, and other image files>
 ```
 
@@ -108,7 +108,7 @@ Kombinieren Sie in einem Ordnernamen mehrere Qualifizierer und trennen Sie diese
 
 Sie können mehrere Qualifizierer in einem Dateinamen im selben Format kombinieren.
 
-```
+```console
 \Assets\Images\logo.contrast-high_scale-400.png
 ```
 
@@ -160,14 +160,14 @@ Es ist unwahrscheinlich, dass Sie den `devicefamily` Qualifizierernamen benötig
 
 Als letztes Mittel ist es jedoch möglich, Gerätefamilien-Qualifizierer zum Benennen von Ordnern zu verwenden, die Ihre XAML-Ansichten enthalten (eine XAML-Ansicht ist eine XAML-Datei, die UI-Layout und Steuerelemente enthält).
 
-```
+```console
 \devicefamily-desktop\<MainPage.xaml, and other markup files to load when running on a desktop computer>
 \devicefamily-mobile\<MainPage.xaml, and other markup files to load when running on a phone>
 ```
 
 Oder Sie können Dateien benennen.
 
-```
+```console
 \MainPage.devicefamily-desktop.xaml
 \MainPage.devicefamily-mobile.xaml
 ```
@@ -203,21 +203,21 @@ Wenn Ihre App unterschiedliche Sprachen unterstützten soll und Sie Zeichenfolge
 
 Verwenden Sie in der Regel einen `language`-Qualifizierer, um die Ordner zu benennen, die die Ressourcen-Dateien enthalten (`.resw`).
 
-```
+```console
 \Strings\language-en\Resources.resw
 \Strings\language-ja\Resources.resw
 ```
 
 Lassen Sie den `language-`-Teil des `language`-Qualifizierers aus (d.h. den Qualifizierernamen). Sie können dies nicht mit anderen Arten von Qualifizierern durchführen. Sie können dies nur in einem Ordnernamen tun.
 
-```
+```console
 \Strings\en\Resources.resw
 \Strings\ja\Resources.resw
 ```
 
 Anstatt Ordner zu benennen können Sie einen `language` -Qualifizierer verwenden, um die Ressourcendateien selbst zu benennen.
 
-```
+```console
 \Strings\Resources.language-en.resw
 \Strings\Resources.language-ja.resw
 ```
@@ -234,7 +234,7 @@ Windows wählt automatisch einen Skalierungsfaktor für jede Anzeige aus, basier
 
 Hier ist ein Beispiel, wie Sie den Qualifizierer auf Ordnerebene festlegen.
 
-```
+```console
 \Assets\Images\scale-100\<logo.png, and other image files>
 \Assets\Images\scale-200\<logo.png, and other image files>
 \Assets\Images\scale-400\<logo.png, and other image files>
@@ -242,7 +242,7 @@ Hier ist ein Beispiel, wie Sie den Qualifizierer auf Ordnerebene festlegen.
 
 Und in diesem Beispiel wird er auf Dateiebene festgelegt.
 
-```
+```console
 \Assets\Images\logo.scale-100.png
 \Assets\Images\logo.scale-200.png
 \Assets\Images\logo.scale-400.png

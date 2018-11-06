@@ -10,12 +10,12 @@ ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d04ea3506fc909b115ba9aab397ded9e4464479
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: a9a9dd4347cc682f384c2d408d30820acf76ce34
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5982135"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6047505"
 ---
 # <a name="pen-interactions-and-windows-ink-in-uwp-apps"></a>Stiftinteraktionen und Windows Ink in UWP-Apps
 
@@ -52,7 +52,7 @@ Richtlinien für die Benutzeroberfläche von WindowsInk finden Sie unter [Inking
 | [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) | Ein XAMLUI Plattform-Steuerelement, das in der Standardeinstellung empfängt und zeigt alle Eingaben von einem Stift als letzten Strich oder ausradierten Strich.<br/>Weitere Informationen zur Verwendung von InkCanvas finden Sie unter [Erkennen von Windows Ink-Strichen als Text](convert-ink-to-text.md) und [Speichern und Abrufen der Daten von Windows Ink-Strichen](save-and-load-ink.md). |
 | [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) | Ein CodeBehind-Objekt, das zusammen mit einem [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement instanziiert wird (über die [**InkCanvas.InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Eigenschaft verfügbar gemacht). Dieses Objekt stellt alle Standardfreihandfunktionen bereit, die vom **InkCanvas**-Steuerelement zur Verfügung gestellt werden, sowie einen umfassenden Satz von APIs für zusätzliche Anpassung und Personalisierung.<br/>Weitere Informationen zur Verwendung von InkPresenter finden Sie unter [Erkennen von Windows Ink-Strichen als Text](convert-ink-to-text.md) und [Speichern und Abrufen der Daten von Windows Ink-Strichen](save-and-load-ink.md). |
 | [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | Ein XAMLUI-plattformsteuerelement, enthält eine anpassbare und erweiterbare Sammlung von Schaltflächen, die Freihand-Features in einem verknüpften [**InkCanvas-Steuerelement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)aktivieren.<br/>Weitere Informationen zur Verwendung von InkToolbar finden Sie unter [Add an InkToolbar to a Universal Windows Platform (UWP) inking app](ink-toolbar.md). |
-| [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) | Ermöglicht das Rendern von Freihandstrichen im angegebenen Direct2D-Gerätekontext einer universellen Windows-App statt im standardmäßigen [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement. Dies ermöglicht die umfassende Anpassung der Freihandfunktionen.<br/>Weitere Informationen finden Sie in diesem [komplexen Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620314). |
+| [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) | Ermöglicht das Rendern von Freihandstrichen im angegebenen Direct2D-Gerätekontext einer universellen Windows-App statt im standardmäßigen [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement. Dies ermöglicht die umfassende Anpassung der Freihandfunktionen.<br/>Weitere Informationen finden Sie in diesem [komplexen Freihandbeispiel](https://go.microsoft.com/fwlink/p/?LinkID=620314). |
 
 ## <a name="basic-inking-with-inkcanvas"></a>Einfaches Freihandzeichnen mit „InkCanvas“
 
@@ -456,7 +456,7 @@ Sowohl [**SurfaceImageSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xa
 
 Sie können Freihandeingaben auch an ein [SwapChainPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.swapchainpanel) benutzerdefiniert trocknen, aber die Synchronisierung mit dem UI-Thread kann nicht garantiert werden, und es kommt möglicherweise zu einer Verzögerung zwischen dem Rendern der Freihandeingabe in Ihrem SwapChainPanel und dem Entfernen der Freihandeingabe aus InkCanvas.
 
-Ein vollständiges Beispiel für diese Funktion finden Sie unter [Komplexes Freihandbeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620314).
+Ein vollständiges Beispiel für diese Funktion finden Sie unter [Komplexes Freihandbeispiel](https://go.microsoft.com/fwlink/p/?LinkID=620314).
 
 > [!NOTE]
 > Benutzerdefiniertes Trocknen und die [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx)  
@@ -484,18 +484,18 @@ Ein vollständiges Beispiel für diese Funktion finden Sie unter [Komplexes Frei
 
 **Beispiele**
 * [Lernprogramm „Erste Schritte:” Unterstützen von Freihandeingaben in Ihrer UWP-App](https://aka.ms/appsample-ink)
-* [Einfaches Freihandbeispiel (C#/C++)](http://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [Komplexes Freihandbeispiel (C++)](http://go.microsoft.com/fwlink/p/?LinkID=620314)
-* [Freihandbeispiel (JavaScript)](http://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [Einfaches Freihandbeispiel (C#/C++)](https://go.microsoft.com/fwlink/p/?LinkID=620312)
+* [Komplexes Freihandbeispiel (C++)](https://go.microsoft.com/fwlink/p/?LinkID=620314)
+* [Freihandbeispiel (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
 * [Malbuchbeispiel](https://aka.ms/cpubsample-coloringbook)
 * [Familiennotizbeispiel](https://aka.ms/cpubsample-familynotessample)
-* [Einfaches Eingabebeispiel](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [Beispiel für Eingabe mit niedriger Latenz](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [Beispiel für den Benutzerinteraktionsmodus](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [Beispiel für visuelle Fokuselemente](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Einfaches Eingabebeispiel](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [Beispiel für Eingabe mit niedriger Latenz](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [Beispiel für den Benutzerinteraktionsmodus](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Beispiel für visuelle Fokuselemente](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **Archivbeispiele**
-* [Eingabe: Beispiel für Gerätefunktionen](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [Eingabe: Beispiel für XAML-Benutzereingabeereignisse](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoom](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Eingabe: Gesten und Manipulationen mit GestureRecognizer](http://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [Eingabe: Beispiel für Gerätefunktionen](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [Eingabe: Beispiel für XAML-Benutzereingabeereignisse](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoom](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [Eingabe: Gesten und Manipulationen mit GestureRecognizer](https://go.microsoft.com/fwlink/p/?LinkID=231605)
