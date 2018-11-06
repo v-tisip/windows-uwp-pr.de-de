@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, BasicReaderWriter
 ms.localizationpriority: medium
 ms.openlocfilehash: 7a5d644a2a141a83316575a235805fa56657bf3a
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5990826"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6047425"
 ---
 # <a name="complete-code-for-basicreaderwriter"></a><span data-ttu-id="2e088-104">Vollständiger Code für "BasicReaderWriter"</span><span class="sxs-lookup"><span data-stu-id="2e088-104">Complete code for BasicReaderWriter</span></span>
 

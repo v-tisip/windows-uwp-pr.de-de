@@ -15,11 +15,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 7d29b85c7ec3ec9ec0114a3a49dff834f859511e
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5979135"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6051676"
 ---
 # <a name="boxpanel-an-example-custom-panel"></a><span data-ttu-id="7e8b5-103">BoxPanel, ein Beispiel für benutzerdefinierte Panels</span><span class="sxs-lookup"><span data-stu-id="7e8b5-103">BoxPanel, an example custom panel</span></span>
 

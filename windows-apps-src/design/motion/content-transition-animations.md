@@ -13,11 +13,11 @@ design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 14d5120632833e91e82ed7dd717ba04a9abb0efb
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5981153"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6047738"
 ---
 # <a name="content-transition-animations"></a><span data-ttu-id="f9c89-103">Inhaltsübergangsanimationen</span><span class="sxs-lookup"><span data-stu-id="f9c89-103">Content transition animations</span></span>
 

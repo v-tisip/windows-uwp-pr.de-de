@@ -8,12 +8,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
-ms.openlocfilehash: 563807798cefe083fa1de85dc1f7e4c3ae679211
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: 018740b9ceaa10425ec71f6a2775d547b7c30e82
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5992516"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6048479"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a><span data-ttu-id="08514-103">Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung, hohen Kontrast und anderen Qualifizierern</span><span class="sxs-lookup"><span data-stu-id="08514-103">Tailor your resources for language, scale, high contrast, and other qualifiers</span></span>
 
@@ -39,7 +39,7 @@ ms.locfileid: "5992516"
 
 <span data-ttu-id="08514-126">Hier ist ein Beispiel für die Verwendung von Qualifizierer zum Benennen von Ordnern, die Ressourcendateien enthalten.</span><span class="sxs-lookup"><span data-stu-id="08514-126">Here is an example of using qualifiers to name folders that contain asset files.</span></span> <span data-ttu-id="08514-127">Verwenden Sie Qualifizierer in Ordnernamen, wenn Sie mehrere Ressourcendateien pro Qualifizierer haben.</span><span class="sxs-lookup"><span data-stu-id="08514-127">Use qualifiers in folder names if you have several asset files per qualifier.</span></span> <span data-ttu-id="08514-128">Auf diese Weise legen Sie den Qualifizierer einmal auf Ordnerebene fest und der Qualifizierer gilt für alle Elemente im Ordner.</span><span class="sxs-lookup"><span data-stu-id="08514-128">That way, you set the qualifier once at the folder level, and the qualifier applies to everything inside the folder.</span></span>
 
-```
+```console
 \Assets\Images\contrast-standard\<logo.png, and other image files>
 \Assets\Images\contrast-high\<logo.png, and other image files>
 \Assets\Images\contrast-black\<logo.png, and other image files>
@@ -52,7 +52,7 @@ ms.locfileid: "5992516"
 
 <span data-ttu-id="08514-133">Anstatt Ordner zu erstellen und zu benennen können Sie einen Qualifizierer verwenden, um die Ressourcendateien selbst zu benennen.</span><span class="sxs-lookup"><span data-stu-id="08514-133">Instead of creating and naming folders, you can use a qualifier to name the resource files themselves.</span></span> <span data-ttu-id="08514-134">Möglicherweise möchten dies tun, wenn Sie nur eine Ressourcendatei pro Qualifizierer haben.</span><span class="sxs-lookup"><span data-stu-id="08514-134">You might prefer to do this if you only have one resource file per qualifier.</span></span> <span data-ttu-id="08514-135">Hier ist ein Beispiel.</span><span class="sxs-lookup"><span data-stu-id="08514-135">Here’s an example.</span></span>
 
-```
+```console
 \Assets\Images\logo.contrast-standard.png
 \Assets\Images\logo.contrast-high.png
 \Assets\Images\logo.contrast-black.png
@@ -68,7 +68,7 @@ ms.locfileid: "5992516"
 ## <a name="actual-and-neutral-qualifier-matches"></a><span data-ttu-id="08514-140">Aktuelle und neutrale Qualifizierertreffer</span><span class="sxs-lookup"><span data-stu-id="08514-140">Actual and neutral qualifier matches</span></span>
 <span data-ttu-id="08514-141">Sie müssen nicht für *jeden* Qualifiziererwert eine Ressourcendatei erstellen.</span><span class="sxs-lookup"><span data-stu-id="08514-141">You don’t need to provide a resource file for *every* qualifier value.</span></span> <span data-ttu-id="08514-142">Wenn Sie z.B. feststellen, dass Sie nur eine visuelle Ressource für hohen Kontrast und eine für den standardmäßigen Kontrast benötigen, benennen Sie diese Ressourcen wie folgt.</span><span class="sxs-lookup"><span data-stu-id="08514-142">For example, if you find that you only need one visual asset for high contrast and one for standard contrast, then you can name those assets like this.</span></span>
 
-```
+```console
 \Assets\Images\logo.contrast-high.png
 \Assets\Images\logo.png
 ```
@@ -81,7 +81,7 @@ ms.locfileid: "5992516"
 
 <span data-ttu-id="08514-156">Wenn Sie nur einen Satz von Ressourcen für hohen Kontrast brauchen und einen Satz für Standard-Kontrast festgelegt ist, können Sie Ordnernamen anstelle von Dateinamen verwenden.</span><span class="sxs-lookup"><span data-stu-id="08514-156">If you only need one set of assets for high contrast and one set for standard contrast, then you can use folder names instead of file names.</span></span> <span data-ttu-id="08514-157">In diesem Fall führt ein Weglassen des Ordnernamens zu einer neutralen Übereinstimmung.</span><span class="sxs-lookup"><span data-stu-id="08514-157">In this case, omitting the folder name entirely gives you the neutral match.</span></span>
 
-```
+```console
 \Assets\Images\contrast-high\<logo.png, and other images to load when high contrast theme is not None>
 \Assets\Images\<logo.png, and other images to load when high contrast theme is None>
 ```
@@ -92,7 +92,7 @@ ms.locfileid: "5992516"
 
 <span data-ttu-id="08514-160">Sie können Qualifizierer in Ordner- und Dateinamen kombinieren.</span><span class="sxs-lookup"><span data-stu-id="08514-160">You can combine qualifiers in folder and file names.</span></span> <span data-ttu-id="08514-161">Wenn z.B. Ihre App Bildressourcen bei aktiviertem Modus für hohen Kontrast lädt *und* der Skalierungsfaktor für die Anzeige ist 400.</span><span class="sxs-lookup"><span data-stu-id="08514-161">For example, you may want your app to load image assets when high contrast mode is on *and* the display scale factor is 400.</span></span> <span data-ttu-id="08514-162">Eine Möglichkeit hierfür sind geschachtelte Ordner.</span><span class="sxs-lookup"><span data-stu-id="08514-162">One way to do this is with nested folders.</span></span>
 
-```
+```console
 \Assets\Images\contrast-high\scale-400\<logo.png, and other image files>
 ```
 
@@ -100,7 +100,7 @@ ms.locfileid: "5992516"
 
 <span data-ttu-id="08514-164">Eine weitere Möglichkeit ist, mehrere Qualifizierer in einem Ordnernamen zu kombinieren.</span><span class="sxs-lookup"><span data-stu-id="08514-164">Another option is to combine multiple qualifiers in one folder name.</span></span>
 
-```
+```console
 \Assets\Images\contrast-high_scale-400\<logo.png, and other image files>
 ```
 
@@ -108,7 +108,7 @@ ms.locfileid: "5992516"
 
 <span data-ttu-id="08514-167">Sie können mehrere Qualifizierer in einem Dateinamen im selben Format kombinieren.</span><span class="sxs-lookup"><span data-stu-id="08514-167">You can combine multiple qualifiers in a file name in the same format.</span></span>
 
-```
+```console
 \Assets\Images\logo.contrast-high_scale-400.png
 ```
 
@@ -160,14 +160,14 @@ public void SetLicenseLevel(BrandID brand)
 
 <span data-ttu-id="08514-190">Als letztes Mittel ist es jedoch möglich, Gerätefamilien-Qualifizierer zum Benennen von Ordnern zu verwenden, die Ihre XAML-Ansichten enthalten (eine XAML-Ansicht ist eine XAML-Datei, die UI-Layout und Steuerelemente enthält).</span><span class="sxs-lookup"><span data-stu-id="08514-190">But as a last resort it is possible to use devicefamily qualifiers to name folders that contain your XAML views (a XAML view is a XAML file that contains UI layout and controls).</span></span>
 
-```
+```console
 \devicefamily-desktop\<MainPage.xaml, and other markup files to load when running on a desktop computer>
 \devicefamily-mobile\<MainPage.xaml, and other markup files to load when running on a phone>
 ```
 
 <span data-ttu-id="08514-191">Oder Sie können Dateien benennen.</span><span class="sxs-lookup"><span data-stu-id="08514-191">Or you can name files.</span></span>
 
-```
+```console
 \MainPage.devicefamily-desktop.xaml
 \MainPage.devicefamily-mobile.xaml
 ```
@@ -203,21 +203,21 @@ public void SetLicenseLevel(BrandID brand)
 
 <span data-ttu-id="08514-212">Verwenden Sie in der Regel einen `language`-Qualifizierer, um die Ordner zu benennen, die die Ressourcen-Dateien enthalten (`.resw`).</span><span class="sxs-lookup"><span data-stu-id="08514-212">You typically use a `language` qualifier to name the folders that contain your Resources Files (`.resw`).</span></span>
 
-```
+```console
 \Strings\language-en\Resources.resw
 \Strings\language-ja\Resources.resw
 ```
 
 <span data-ttu-id="08514-213">Lassen Sie den `language-`-Teil des `language`-Qualifizierers aus (d.h. den Qualifizierernamen).</span><span class="sxs-lookup"><span data-stu-id="08514-213">You can omit the `language-` part of a `language` qualifier (that is, the qualifier name).</span></span> <span data-ttu-id="08514-214">Sie können dies nicht mit anderen Arten von Qualifizierern durchführen. Sie können dies nur in einem Ordnernamen tun.</span><span class="sxs-lookup"><span data-stu-id="08514-214">You can’t do this with the other kinds of qualifiers; and you can only do it in a folder name.</span></span>
 
-```
+```console
 \Strings\en\Resources.resw
 \Strings\ja\Resources.resw
 ```
 
 <span data-ttu-id="08514-215">Anstatt Ordner zu benennen können Sie einen `language` -Qualifizierer verwenden, um die Ressourcendateien selbst zu benennen.</span><span class="sxs-lookup"><span data-stu-id="08514-215">Instead of naming folders, you can use `language` qualifiers to name the Resources Files themselves.</span></span>
 
-```
+```console
 \Strings\Resources.language-en.resw
 \Strings\Resources.language-ja.resw
 ```
@@ -234,7 +234,7 @@ public void SetLicenseLevel(BrandID brand)
 
 <span data-ttu-id="08514-228">Hier ist ein Beispiel, wie Sie den Qualifizierer auf Ordnerebene festlegen.</span><span class="sxs-lookup"><span data-stu-id="08514-228">Here’s an example of setting the qualifier at the folder level.</span></span>
 
-```
+```console
 \Assets\Images\scale-100\<logo.png, and other image files>
 \Assets\Images\scale-200\<logo.png, and other image files>
 \Assets\Images\scale-400\<logo.png, and other image files>
@@ -242,7 +242,7 @@ public void SetLicenseLevel(BrandID brand)
 
 <span data-ttu-id="08514-229">Und in diesem Beispiel wird er auf Dateiebene festgelegt.</span><span class="sxs-lookup"><span data-stu-id="08514-229">And this example sets it at the file level.</span></span>
 
-```
+```console
 \Assets\Images\logo.scale-100.png
 \Assets\Images\logo.scale-200.png
 \Assets\Images\logo.scale-400.png

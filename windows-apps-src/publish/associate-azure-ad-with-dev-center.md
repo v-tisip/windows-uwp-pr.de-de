@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP, Azure Ad, Azure-Mandant, AAD-Mandant, Azure AD-Mandant, Mandantenverwaltung, Mandanten
 ms.localizationpriority: medium
 ms.openlocfilehash: a76021f53417d30b91db282a194f6dc6ca268c1f
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5971019"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6049405"
 ---
 # <a name="associate-azure-active-directory-with-your-partner-center-account"></a><span data-ttu-id="06ee3-103">Zuordnen von Azure Active Directory mit Ihrem Partner Center-Konto</span><span class="sxs-lookup"><span data-stu-id="06ee3-103">Associate Azure Active Directory with your Partner Center account</span></span>
 

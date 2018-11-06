@@ -9,11 +9,11 @@ ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 55235c78df29513e8d7b28e7643aec5c3a256f1d
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5990018"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6051421"
 ---
 # <a name="app-submissions"></a><span data-ttu-id="7e65d-103">App-Übermittlungen</span><span class="sxs-lookup"><span data-stu-id="7e65d-103">App submissions</span></span>
 
