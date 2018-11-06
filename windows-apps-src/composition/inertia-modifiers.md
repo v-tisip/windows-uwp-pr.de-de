@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, Uwp, animation
 ms.localizationpriority: medium
 ms.openlocfilehash: 20c10b1cc621da834a8a7c411e75eb92b1944b5a
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5977811"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6040485"
 ---
 # <a name="create-snap-points-with-inertia-modifiers"></a><span data-ttu-id="99d7e-104">Erstellen von Einrastpunkten mit Inertia-Modifiern</span><span class="sxs-lookup"><span data-stu-id="99d7e-104">Create snap points with inertia modifiers</span></span>
 

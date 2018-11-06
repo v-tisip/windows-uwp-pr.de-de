@@ -11,11 +11,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f2a28d2a401ae132772c3948b3c4299184d4f858
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5992852"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6043180"
 ---
 # <a name="designing-inclusive-software-for-windows-10"></a><span data-ttu-id="019bb-103">Entwerfen inklusiver Software für Windows 10</span><span class="sxs-lookup"><span data-stu-id="019bb-103">Designing inclusive software for Windows 10</span></span>  
 

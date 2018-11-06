@@ -14,11 +14,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 09b75eccdfcdd1d046618b92565fa3453a8b300e
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5968840"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6043117"
 ---
 # <a name="rich-edit-box"></a><span data-ttu-id="5ae35-103">Rich-Edit-Feld</span><span class="sxs-lookup"><span data-stu-id="5ae35-103">Rich edit box</span></span>
 

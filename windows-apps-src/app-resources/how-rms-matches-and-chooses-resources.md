@@ -8,12 +8,12 @@ ms.date: 10/23/2017
 ms.topic: article
 keywords: Windows10, uwp, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
-ms.openlocfilehash: d31c9fd3a6f8f57f3e78d88d3ad754d4848a9cad
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: c7576f98045bce3bcfcee093aa8d61059354d45a
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5996855"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6045277"
 ---
 # <a name="how-the-resource-management-system-matches-and-chooses-resources"></a><span data-ttu-id="36830-103">Wie das Ressourcenverwaltungssystem Ressourcen zuordnet und auswählt</span><span class="sxs-lookup"><span data-stu-id="36830-103">How the Resource Management System matches and chooses resources</span></span>
 <span data-ttu-id="36830-104">Wenn eine Ressource angefordert wird, kann es mehrere Kandidaten geben, für die sich in einem gewissen Maße eine Übereinstimmung mit dem aktuellen Ressourcenkontext ergibt.</span><span class="sxs-lookup"><span data-stu-id="36830-104">When a resource is requested, there may be several candidates that match the current resource context to some degree.</span></span> <span data-ttu-id="36830-105">Vom Ressourcenverwaltungssystem werden alle Kandidaten analysiert, und der beste Kandidat für die Rückgabe wird ermittelt.</span><span class="sxs-lookup"><span data-stu-id="36830-105">The Resource Management System will analyze all of the candidates and determine the best candidate to return.</span></span> <span data-ttu-id="36830-106">Dazu werden alle Qualifizierer einbezogen, um eine Einstufung aller Kandidaten zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="36830-106">This is done by taking all qualifiers into consideration to rank all of the candidates.</span></span>
@@ -41,7 +41,7 @@ ms.locfileid: "5996855"
 ## <a name="example-of-choosing-a-resource-candidate"></a><span data-ttu-id="36830-133">Beispiel für das Auswählen eines Ressourcenkandidaten</span><span class="sxs-lookup"><span data-stu-id="36830-133">Example of choosing a resource candidate</span></span>
 <span data-ttu-id="36830-134">Berücksichtigen Sie diese Dateien.</span><span class="sxs-lookup"><span data-stu-id="36830-134">Consider these files.</span></span>
 
-```
+```console
 en/images/logo.scale-400.jpg
 en/images/logo.scale-200.jpg
 en/images/logo.scale-100.jpg  
@@ -53,7 +53,7 @@ de/images/logo.jpg
 
 <span data-ttu-id="36830-135">Und gehen Sie davon aus, das dies die Einstellungen im aktuellen Kontext sind.</span><span class="sxs-lookup"><span data-stu-id="36830-135">And suppose that these are the settings in the current context.</span></span>
 
-```
+```console
 Application language: en-US; fr-FR;
 Scale: 400
 Contrast: Standard
@@ -61,7 +61,7 @@ Contrast: Standard
 
 <span data-ttu-id="36830-136">Drei Dateien werden vom Ressourcenverwaltungssystem aussortiert. Der Grund hierfür ist, dass der hohe Kontrast und die Sprache Deutsch nicht mit dem in den Einstellungen festgelegten Kontext übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="36830-136">The Resource Management System eliminates three of the files, because high contrast and the German language do not match the context defined by the settings.</span></span> <span data-ttu-id="36830-137">Diese Kandidaten verbleiben.</span><span class="sxs-lookup"><span data-stu-id="36830-137">That leaves these candidates.</span></span>
 
-```
+```console
 en/images/logo.scale-400.jpg
 en/images/logo.scale-200.jpg
 en/images/logo.scale-100.jpg  
@@ -70,7 +70,7 @@ fr/images/logo.scale-100.jpg
 
 <span data-ttu-id="36830-138">Für die verbleibenden Kandidaten verwendet das Ressourcenverwaltungssystem den Kontextqualifizierer mit der höchsten Priorität: Sprache.</span><span class="sxs-lookup"><span data-stu-id="36830-138">For those remaining candidates, the Resource Management System uses the highest-priority context qualifier, which is language.</span></span> <span data-ttu-id="36830-139">Die englischen Ressourcen stimmen besser überein als die französischen, da Englisch in den Einstellungen vor Französisch aufgeführt ist.</span><span class="sxs-lookup"><span data-stu-id="36830-139">The English resources are a closer match than the French ones because English is listed before French in the settings.</span></span>
 
-```
+```console
 en/images/logo.scale-400.jpg
 en/images/logo.scale-200.jpg
 en/images/logo.scale-100.jpg  
@@ -78,13 +78,13 @@ en/images/logo.scale-100.jpg
 
 <span data-ttu-id="36830-140">Als Nächstes wird vom Ressourcenverwaltungssystem der Kontextqualifizierer mit der zweithöchsten Priorität verwendet: Skalierung.</span><span class="sxs-lookup"><span data-stu-id="36830-140">Next, the Resource Management System uses the next-highest priority context qualifier, scale.</span></span> <span data-ttu-id="36830-141">Das ist diese also die zurückgegebene Ressource.</span><span class="sxs-lookup"><span data-stu-id="36830-141">So this is the resource returned.</span></span>
 
-```
+```console
 en/images/logo.scale-400.jpg
 ```
 
 <span data-ttu-id="36830-142">Mit der erweiterten Methode [**NamedResource.ResolveAll**](/uwp/api/windows.applicationmodel.resources.core.namedresource.resolveall?branch=live) können Sie alle Kandidaten in der Reihenfolge abrufen, in der sie mit den Kontexteinstellungen übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="36830-142">You can use the advanced [**NamedResource.ResolveAll**](/uwp/api/windows.applicationmodel.resources.core.namedresource.resolveall?branch=live) method to retrieve all of the candidates in the order that they match the context settings.</span></span> <span data-ttu-id="36830-143">Für das Beispiel, das wir gerade erläutert haben, gibt **ResolveAll** Kandidaten in dieser Reihenfolge zurück.</span><span class="sxs-lookup"><span data-stu-id="36830-143">For the example we just walked through, **ResolveAll** returns candidates in this order.</span></span>
 
-```
+```console
 en/images/logo.scale-400.jpg
 en/images/logo.scale-200.jpg
 en/images/logo.scale-100.jpg  
@@ -94,7 +94,7 @@ fr/images/logo.scale-100.jpg
 ## <a name="example-of-producing-a-fallback-choice"></a><span data-ttu-id="36830-144">Beispiel für das Erzeugen einer Fallbackauswahl</span><span class="sxs-lookup"><span data-stu-id="36830-144">Example of producing a fallback choice</span></span>
 <span data-ttu-id="36830-145">Gehen Sie von diesen Dateien aus.</span><span class="sxs-lookup"><span data-stu-id="36830-145">Consider these files.</span></span>
 
-```
+```console
 en/images/logo.scale-400.jpg
 en/images/logo.scale-200.jpg
 en/images/logo.scale-100.jpg  
@@ -105,7 +105,7 @@ de/images/contrast-standard/logo.jpg
 
 <span data-ttu-id="36830-146">Und gehen Sie davon aus, das dies die Einstellungen im aktuellen Kontext sind.</span><span class="sxs-lookup"><span data-stu-id="36830-146">And suppose that these are the settings in the current context.</span></span>
 
-```
+```console
 User language: de-DE;
 Scale: 400
 Contrast: High
@@ -113,7 +113,7 @@ Contrast: High
 
 <span data-ttu-id="36830-147">Alle Dateien werden gelöscht, da sie nicht mit dem Kontext übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="36830-147">All the files are eliminated because they do not match the context.</span></span> <span data-ttu-id="36830-148">Nun wird ein Standarddurchlauf durchgeführt. Beim Erstellen der PRI-Datei wurde folgende Standardeinstellung (siehe [Manuelles Kompilieren von Ressourcen mit MakePRI.exe](compile-resources-manually-with-makepri.md)) verwendet:</span><span class="sxs-lookup"><span data-stu-id="36830-148">So we enter a default pass, where the default (see [Compile resources manually with MakePri.exe](compile-resources-manually-with-makepri.md)) during creation of the PRI file was this.</span></span>
 
-```
+```console
 Language: fr-FR;
 Scale: 400
 Contrast: Standard
@@ -121,7 +121,7 @@ Contrast: Standard
 
 <span data-ttu-id="36830-149">Übrig bleiben alle Ressourcen, die entweder mit dem aktuellen Benutzer oder mit der Standardeinstellung übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="36830-149">This leaves all the resources that match either the current user or the default.</span></span>
 
-```
+```console
 fr/images/contrast-standard/logo.scale-400.jpg
 fr/images/contrast-standard/logo.scale-100.jpg
 de/images/contrast-standard/logo.jpg
@@ -129,7 +129,7 @@ de/images/contrast-standard/logo.jpg
 
 <span data-ttu-id="36830-150">Das Ressourcenverwaltungssystem verwendet den Kontextqualifizierer mit der höchsten Priorität (Sprache), um die benannte Ressource mit dem höchsten Wert zurückzugeben.</span><span class="sxs-lookup"><span data-stu-id="36830-150">The Resource Management System uses the highest-priority context qualifier, language, to return the named resource with the highest score.</span></span>
 
-```
+```console
 de/images/contrast-standard/logo.jpg
 ```
 

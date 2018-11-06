@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, Interstitialwerbung, JavaScript, Beispielcode
 ms.localizationpriority: medium
 ms.openlocfilehash: 1921725e5b598a2e5e79ed90c607414e4efe574e
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5968545"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6044853"
 ---
 # <a name="interstitial-ad-sample-code-in-javascript"></a><span data-ttu-id="2007c-104">Beispielcode für Interstitialwerbung in JavaScript</span><span class="sxs-lookup"><span data-stu-id="2007c-104">Interstitial ad sample code in JavaScript</span></span>
 

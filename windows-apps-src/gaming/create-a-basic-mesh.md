@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Gitter, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: e3ae6416217efa16d70b65b8ff55e36654a11557
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5994385"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6045450"
 ---
 # <a name="create-and-display-a-basic-mesh"></a><span data-ttu-id="d5c7d-104">Erstellen und Anzeigen einfacher Gitter</span><span class="sxs-lookup"><span data-stu-id="d5c7d-104">Create and display a basic mesh</span></span>
 

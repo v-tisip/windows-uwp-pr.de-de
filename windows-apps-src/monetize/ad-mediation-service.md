@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Anzeigen, Werbung, Anzeigenvermittlung
 ms.localizationpriority: medium
 ms.openlocfilehash: 9adae5b000277b774536c8b307cc1bc055ce3bc4
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5971246"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6046185"
 ---
 # <a name="microsoft-ad-mediation-service"></a><span data-ttu-id="85fd2-104">Microsoft-Anzeigenvermittlungsdienst</span><span class="sxs-lookup"><span data-stu-id="85fd2-104">Microsoft ad mediation service</span></span>
 

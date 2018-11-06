@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Grafiken, Diagnose, Tools, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: aa1c14d15a966f23b86753cf8e5e62e067d10310
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5984008"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6040616"
 ---
 # <a name="graphics-diagnostics-tools"></a><span data-ttu-id="84c96-104">Tools für die Grafikdiagnose</span><span class="sxs-lookup"><span data-stu-id="84c96-104">Graphics diagnostics tools</span></span>
 

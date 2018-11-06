@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 177332515db26eca7cef7a7be75c5752a239a8f1
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5983376"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6040590"
 ---
 # <a name="guidelines-for-globalization"></a><span data-ttu-id="0baba-103">Richtlinien für Globalisierung</span><span class="sxs-lookup"><span data-stu-id="0baba-103">Guidelines for globalization</span></span>
 

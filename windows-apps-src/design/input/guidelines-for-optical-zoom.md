@@ -10,12 +10,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f1643638eaf7eb625defe1f25b44cae20faf0a5c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: 2087debd758a24b50ac1885cb68d4b97ea2898fd
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5990359"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6040238"
 ---
 # <a name="optical-zoom-and-resizing"></a><span data-ttu-id="eb8a7-103">Optischer Zoom und Größenänderung</span><span class="sxs-lookup"><span data-stu-id="eb8a7-103">Optical zoom and resizing</span></span>
 
@@ -75,20 +75,20 @@ ms.locfileid: "5990359"
 
 
 **<span data-ttu-id="eb8a7-145">Beispiele</span><span class="sxs-lookup"><span data-stu-id="eb8a7-145">Samples</span></span>**
-* [<span data-ttu-id="eb8a7-146">Einfaches Eingabebeispiel</span><span class="sxs-lookup"><span data-stu-id="eb8a7-146">Basic input sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [<span data-ttu-id="eb8a7-147">Beispiel für Eingabe mit niedriger Latenz</span><span class="sxs-lookup"><span data-stu-id="eb8a7-147">Low latency input sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [<span data-ttu-id="eb8a7-148">Beispiel für den Benutzerinteraktionsmodus</span><span class="sxs-lookup"><span data-stu-id="eb8a7-148">User interaction mode sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [<span data-ttu-id="eb8a7-149">Beispiel für visuelle Fokuselemente</span><span class="sxs-lookup"><span data-stu-id="eb8a7-149">Focus visuals sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [<span data-ttu-id="eb8a7-146">Einfaches Eingabebeispiel</span><span class="sxs-lookup"><span data-stu-id="eb8a7-146">Basic input sample</span></span>](https://go.microsoft.com/fwlink/p/?LinkID=620302)
+* [<span data-ttu-id="eb8a7-147">Beispiel für Eingabe mit niedriger Latenz</span><span class="sxs-lookup"><span data-stu-id="eb8a7-147">Low latency input sample</span></span>](https://go.microsoft.com/fwlink/p/?LinkID=620304)
+* [<span data-ttu-id="eb8a7-148">Beispiel für den Benutzerinteraktionsmodus</span><span class="sxs-lookup"><span data-stu-id="eb8a7-148">User interaction mode sample</span></span>](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [<span data-ttu-id="eb8a7-149">Beispiel für visuelle Fokuselemente</span><span class="sxs-lookup"><span data-stu-id="eb8a7-149">Focus visuals sample</span></span>](https://go.microsoft.com/fwlink/p/?LinkID=619895)
 
 **<span data-ttu-id="eb8a7-150">Archivbeispiele</span><span class="sxs-lookup"><span data-stu-id="eb8a7-150">Archive samples</span></span>**
-* [<span data-ttu-id="eb8a7-151">Eingabe: Beispiel für XAML-Benutzereingabeereignisse</span><span class="sxs-lookup"><span data-stu-id="eb8a7-151">Input: XAML user input events sample</span></span>](http://go.microsoft.com/fwlink/p/?linkid=226855)
-* [<span data-ttu-id="eb8a7-152">Eingabe: Beispiel für Gerätefunktionen</span><span class="sxs-lookup"><span data-stu-id="eb8a7-152">Input: Device capabilities sample</span></span>](http://go.microsoft.com/fwlink/p/?linkid=231530)
-* [<span data-ttu-id="eb8a7-153">Eingabe: Beispiel für Fingereingabe-Treffertests</span><span class="sxs-lookup"><span data-stu-id="eb8a7-153">Input: Touch hit testing sample</span></span>](http://go.microsoft.com/fwlink/p/?linkid=231590)
-* [<span data-ttu-id="eb8a7-154">Beispiel für XAML-Bildlauf, -Verschiebung und -Zoom</span><span class="sxs-lookup"><span data-stu-id="eb8a7-154">XAML scrolling, panning, and zooming sample</span></span>](http://go.microsoft.com/fwlink/p/?linkid=251717)
-* [<span data-ttu-id="eb8a7-155">Eingabe: vereinfachtes Freihandbeispiel</span><span class="sxs-lookup"><span data-stu-id="eb8a7-155">Input: Simplified ink sample</span></span>](http://go.microsoft.com/fwlink/p/?linkid=246570)
-* [<span data-ttu-id="eb8a7-156">Eingabe: Beispiel für Windows8-Bewegungen</span><span class="sxs-lookup"><span data-stu-id="eb8a7-156">Input: Windows 8 gestures sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [<span data-ttu-id="eb8a7-157">Eingabe: Beispiel für Manipulationen und Gesten (C++)</span><span class="sxs-lookup"><span data-stu-id="eb8a7-157">Input: Manipulations and gestures (C++) sample</span></span>](http://go.microsoft.com/fwlink/p/?linkid=231605)
-* [<span data-ttu-id="eb8a7-158">Beispiel für die DirectX-Fingereingabe</span><span class="sxs-lookup"><span data-stu-id="eb8a7-158">DirectX touch input sample</span></span>](http://go.microsoft.com/fwlink/p/?LinkID=231627)
+* [<span data-ttu-id="eb8a7-151">Eingabe: Beispiel für XAML-Benutzereingabeereignisse</span><span class="sxs-lookup"><span data-stu-id="eb8a7-151">Input: XAML user input events sample</span></span>](https://go.microsoft.com/fwlink/p/?linkid=226855)
+* [<span data-ttu-id="eb8a7-152">Eingabe: Beispiel für Gerätefunktionen</span><span class="sxs-lookup"><span data-stu-id="eb8a7-152">Input: Device capabilities sample</span></span>](https://go.microsoft.com/fwlink/p/?linkid=231530)
+* [<span data-ttu-id="eb8a7-153">Eingabe: Beispiel für Fingereingabe-Treffertests</span><span class="sxs-lookup"><span data-stu-id="eb8a7-153">Input: Touch hit testing sample</span></span>](https://go.microsoft.com/fwlink/p/?linkid=231590)
+* [<span data-ttu-id="eb8a7-154">Beispiel für XAML-Bildlauf, -Verschiebung und -Zoom</span><span class="sxs-lookup"><span data-stu-id="eb8a7-154">XAML scrolling, panning, and zooming sample</span></span>](https://go.microsoft.com/fwlink/p/?linkid=251717)
+* [<span data-ttu-id="eb8a7-155">Eingabe: vereinfachtes Freihandbeispiel</span><span class="sxs-lookup"><span data-stu-id="eb8a7-155">Input: Simplified ink sample</span></span>](https://go.microsoft.com/fwlink/p/?linkid=246570)
+* [<span data-ttu-id="eb8a7-156">Eingabe: Beispiel für Windows8-Bewegungen</span><span class="sxs-lookup"><span data-stu-id="eb8a7-156">Input: Windows 8 gestures sample</span></span>](https://go.microsoft.com/fwlink/p/?LinkId=264995)
+* [<span data-ttu-id="eb8a7-157">Eingabe: Beispiel für Manipulationen und Gesten (C++)</span><span class="sxs-lookup"><span data-stu-id="eb8a7-157">Input: Manipulations and gestures (C++) sample</span></span>](https://go.microsoft.com/fwlink/p/?linkid=231605)
+* [<span data-ttu-id="eb8a7-158">Beispiel für die DirectX-Fingereingabe</span><span class="sxs-lookup"><span data-stu-id="eb8a7-158">DirectX touch input sample</span></span>](https://go.microsoft.com/fwlink/p/?LinkID=231627)
  
 
  

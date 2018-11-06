@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: ce3b1ebfc2f18a06ff4fa960c91749f61f5011d9
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5988688"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6041610"
 ---
 # <a name="coordinate-systems-and-geometry"></a><span data-ttu-id="5aa0a-105">Koordinatensysteme und Geometrie</span><span class="sxs-lookup"><span data-stu-id="5aa0a-105">Coordinate systems and geometry</span></span>
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Opencv, softwarebitmap
 ms.localizationpriority: medium
 ms.openlocfilehash: b9f1f2050590267d0a98779eba11bbe0b363da0c
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5993662"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6040419"
 ---
 # <a name="process-bitmaps-with-opencv"></a><span data-ttu-id="dd29d-104">Prozess-Bitmaps mit OpenCV</span><span class="sxs-lookup"><span data-stu-id="dd29d-104">Process bitmaps with OpenCV</span></span>
 

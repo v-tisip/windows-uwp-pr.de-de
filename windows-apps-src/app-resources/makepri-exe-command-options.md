@@ -8,12 +8,12 @@ ms.date: 04/10/2018
 ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
-ms.openlocfilehash: f5d47bbe87e9319def2e8c6500fd954f2a291e18
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: c777996dceeb443c25fcf526e3a029fca00047c1
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5996337"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6043483"
 ---
 # <a name="makepriexe-command-line-options"></a><span data-ttu-id="8bb75-103">Befehlszeilenoptionen für MakePRI.exe</span><span class="sxs-lookup"><span data-stu-id="8bb75-103">MakePri.exe command-line options</span></span>
 
@@ -28,7 +28,7 @@ ms.locfileid: "5996337"
 
 ## <a name="makepri-commands"></a><span data-ttu-id="8bb75-112">MakePri-Befehle</span><span class="sxs-lookup"><span data-stu-id="8bb75-112">MakePri commands</span></span>
 
-```
+```console
 C:\>makepri help
 
 Usage:
@@ -67,7 +67,7 @@ Help:
 
 <span data-ttu-id="8bb75-114">Der Befehl `createconfig` erstellt eine neue, initialisierte PRI-Konfigurationsdatei, in der die Standardwerte für die von Ihnen angegebenen Qualifizierer enthalten sind.</span><span class="sxs-lookup"><span data-stu-id="8bb75-114">The `createconfig` command creates a new, initialized PRI config file defining the qualifier defaults that you specify.</span></span> <span data-ttu-id="8bb75-115">Führen Sie `MakePri.exe createconfig /?` aus, um detaillierte Hilfe für diesen Befehl anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="8bb75-115">Run `MakePri.exe createconfig /?` to see detailed help for this command.</span></span>
 
-```
+```console
 C:\>makepri createconfig /?
 
 Usage:
@@ -119,7 +119,7 @@ Help:
 > [!NOTE]
 > <span data-ttu-id="8bb75-119">Ein schemafreies Ressourcenpaket ist ein Ressourcenpaket, das mit dem Schalter *omitSchemaFromResourcePacks* in der PRI-Konfigurationsdatei erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="8bb75-119">A schema-free resource pack is one that was created with the *omitSchemaFromResourcePacks* switch in the PRI config file.</span></span> <span data-ttu-id="8bb75-120">Um ein schemafreies Ressourcenpaket zu sichern, verwenden Sie den Schalter `/es <main_package_PRI_file>`.</span><span class="sxs-lookup"><span data-stu-id="8bb75-120">To dump a schema-free resource pack, use the switch `/es <main_package_PRI_file>`.</span></span> <span data-ttu-id="8bb75-121">Wenn Sie die Hauptdatei nicht angeben, wird eine Fehlermeldung angezeigt, die in etwa wie folgt lautet: „*Die resources.pri im Paket wurde beschädigt, sodass die Verschlüsselung fehlgeschlagen ist (Fehler PRI222: 0xdef0000f - Unbestimmter Fehler aufgetreten)*“.</span><span class="sxs-lookup"><span data-stu-id="8bb75-121">If you don't specify the main file then you'll see the error message "*The resources.pri in the package was corrupted so encryption failed (error PRI222: 0xdef0000f - Unspecified error occurred)*".</span></span>
 
-```
+```console
 C:\>makepri dump /?
 
 Usage:
@@ -168,7 +168,7 @@ Help:
 
 <span data-ttu-id="8bb75-123">Der Befehl `new` erstellt eine neue PRI-Datei, indem er die Dateien in Ihrem Projekt gemäß Ihrer Konfigurationsdatei indiziert.</span><span class="sxs-lookup"><span data-stu-id="8bb75-123">The `new` command creates a new PRI file by indexing the files in your project as directed by your configuration file.</span></span> <span data-ttu-id="8bb75-124">Führen Sie `MakePri.exe new /?` aus, um detaillierte Hilfe für diesen Befehl anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="8bb75-124">Run `MakePri.exe new /?` to see detailed help for this command.</span></span>
 
-```
+```console
 C:\>makepri new /?
 
 Usage:
@@ -240,7 +240,7 @@ Help:
 
 <span data-ttu-id="8bb75-126">Der Befehl `resourcepack` erstellt eine neue PRI-Datei, indem er die Dateien in Ihrem Projekt gemäß Ihrer Konfigurationsdatei indiziert.</span><span class="sxs-lookup"><span data-stu-id="8bb75-126">The `resourcepack` command creates a new PRI file by indexing the files in your project as directed by your configuration file.</span></span> <span data-ttu-id="8bb75-127">Eine Ressourcenpaket-PRI-Datei enthält nur zusätzliche Varianten von Ressourcen, die bereits in einer vorhandenen PRI-Datei angegeben sind.</span><span class="sxs-lookup"><span data-stu-id="8bb75-127">A resource pack PRI file contains only additional variants of resources already specified in an existing PRI file.</span></span> <span data-ttu-id="8bb75-128">Führen Sie `MakePri.exe resourcepack /?` aus, um detaillierte Hilfe für diesen Befehl anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="8bb75-128">Run `MakePri.exe resourcepack /?` to see detailed help for this command.</span></span>
 
-```
+```console
 C:\>makepri resourcepack /?
 
 Usage:
@@ -307,7 +307,7 @@ Help:
 
 <span data-ttu-id="8bb75-130">Der Befehl `versioned` erstellt eine neue versionsverwaltete PRI-Datei, indem er die Dateien in Ihrem Projekt gemäß Ihrer Konfigurationsdatei indiziert.</span><span class="sxs-lookup"><span data-stu-id="8bb75-130">The `versioned` command creates a versioned PRI file by indexing the files in your project as directed by your configuration file.</span></span> <span data-ttu-id="8bb75-131">Führen Sie `MakePri.exe versioned /?` aus, um detaillierte Hilfe für diesen Befehl anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="8bb75-131">Run `MakePri.exe versioned /?` to see detailed help for this command.</span></span>
 
-```
+```console
 C:\>makepri versioned /?
 
 Usage:
@@ -412,7 +412,7 @@ Help:
 
 <span data-ttu-id="8bb75-139">Für `resourcepack` und `versioned` können Sie eine Schemadatei bereitstellen, statt eine PRI-Datei als Eingabeparameter für /IndexFile(if) anzugeben.</span><span class="sxs-lookup"><span data-stu-id="8bb75-139">For `resourcepack` and `versioned`, instead of providing a PRI file as the input parameter for /IndexFile(if), you can instead provide a schema file.</span></span>
 
-```
+```console
 /IndexFile(if) <FILEPATH>
 ```
 
@@ -422,7 +422,7 @@ Help:
 
 <span data-ttu-id="8bb75-142">Sie verwenden der Option "Optionen" (/ e/a) mit `new`, `resourcepack`, und `versioned` Optionen angeben, die detaillierte Kontrolle über das Verhalten der Ressource Indexer bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="8bb75-142">You use the index options option (/io) with `new`, `resourcepack`, and `versioned` to specify options that provide detailed control over the behavior of resource indexers.</span></span> <span data-ttu-id="8bb75-143">Index-Optionen sind standardmäßig deaktiviert.</span><span class="sxs-lookup"><span data-stu-id="8bb75-143">Index options are disabled by default.</span></span>
 
-```
+```console
 /IndexOptions(io) <OPTIONS>
 ```
 
@@ -435,25 +435,25 @@ Help:
 
 <span data-ttu-id="8bb75-150">Verwenden Sie die Zuordnungsoption (/mf) mit `new`, `resourcepack` und `versioned`, um eine Zuordnungsdatei zu generieren.</span><span class="sxs-lookup"><span data-stu-id="8bb75-150">You use the mapping file option (/mf) with `new`, `resourcepack`, and `versioned` to generate a mapping file.</span></span> <span data-ttu-id="8bb75-151">[MakeAppx.exe](../packaging/create-app-package-with-makeappx-tool.md) verwendet die Zuordnungsdatei zum Erzeugen von App-Paketen.</span><span class="sxs-lookup"><span data-stu-id="8bb75-151">[MakeAppx.exe](../packaging/create-app-package-with-makeappx-tool.md) uses the mapping file to generate app packages.</span></span>
 
-```
+```console
 /MappingFile(mf) <MAPPINGFILETYPE>
 ```
 
 <span data-ttu-id="8bb75-152">**MAPPINGFILETYPE** ist ein Token, mit dem das Format der Zuordnungsdatei angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="8bb75-152">**MAPPINGFILETYPE** is a token that specifies the format of the mapping file.</span></span> <span data-ttu-id="8bb75-153">Es wird nur das Format `appx` unterstützt.</span><span class="sxs-lookup"><span data-stu-id="8bb75-153">The only valid supported format is `appx`.</span></span>
 
-```
+```console
 /mf appx
 ```
 
 <span data-ttu-id="8bb75-154">Hier ein Beispiel für Inhalte einer Hauptzuordnungsdatei:</span><span class="sxs-lookup"><span data-stu-id="8bb75-154">This is an example contents of a main mapping file.</span></span>
 
-```
+```console
 "ResourceDimensions"                   "language-de-de"
 ```
 
 <span data-ttu-id="8bb75-155">Und hier ein Beispiel für Inhalte einer Zuordnungsdatei für ein Ressourcenpaket:</span><span class="sxs-lookup"><span data-stu-id="8bb75-155">And this is an example contents of a resource pack mapping file.</span></span>
 
-```
+```console
 "ResourceId"                           "Resources184.la5decaf08"
 "ResourceDimensions"                   "language-de-de"
 ```
@@ -462,7 +462,7 @@ Help:
 
 <span data-ttu-id="8bb75-157">Wenn Ressourcenpakete erstellt werden, ist die Ausgabezusammenfassung von MakePRI.exe ausführlicher.</span><span class="sxs-lookup"><span data-stu-id="8bb75-157">If resource packs are created, the output summary from MakePRI.exe is of more verbose form.</span></span> <span data-ttu-id="8bb75-158">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="8bb75-158">Here's an example.</span></span>
 
-```
+```console
 Index Pass Completed: ResourcePackTests\TestApp_ResourcePack
 Language Qualifiers: fr-FR, de-DE
 
@@ -489,7 +489,7 @@ Successfully Completed
 
 <span data-ttu-id="8bb75-160">Wenn die Option zum Überschreiben (/o) fehlt und die angegebenen Ausgabedateien bereits vorhanden sind, benötigt MakePri.exe zum Überschreiben eine Bestätigung.</span><span class="sxs-lookup"><span data-stu-id="8bb75-160">If the over-write option (/o) is not provided, and the specified output file(s) already exist(s), then MakePri.exe requires a confirmation before overwriting.</span></span>
 
-```
+```console
 Following file(s) already exist at output location:
 <file(s)>
 Overwrite these file(s)? [Y]es (any other key to cancel):
@@ -515,7 +515,7 @@ Overwrite these file(s)? [Y]es (any other key to cancel):
 
 <span data-ttu-id="8bb75-174">Für `resourcepack` und `versioned` können Sie eine Schemadatei bereitstellen, statt eine PRI-Datei als Eingabeparameter für /IndexFile(if) anzugeben.</span><span class="sxs-lookup"><span data-stu-id="8bb75-174">For `resourcepack` and `versioned`, instead of providing a PRI file as the input parameter for /IndexFile(if), you can instead provide a schema file.</span></span>
 
-```
+```console
 /SchemaFile(sf) <FILEPATH>
 ```
 
@@ -545,7 +545,7 @@ Overwrite these file(s)? [Y]es (any other key to cancel):
 
 <span data-ttu-id="8bb75-178">Die Option für die Hauptversion (/vma) (für den Befehl `new`) ist veraltet, und bei der Verwendung der Option wird folgende Warnmeldung angezeigt:</span><span class="sxs-lookup"><span data-stu-id="8bb75-178">The major version (/vma) option (for the `new` command) is deprecated, and using it results in this warning message.</span></span>
 
-```
+```console
 'VersionMajor (vma)' input parameter has been deprecated. Please specify major version in the configuration file using 'majorVersion' attribute on 'resources' node.
 ```
 
