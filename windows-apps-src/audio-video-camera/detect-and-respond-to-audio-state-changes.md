@@ -8,17 +8,17 @@ ms.date: 04/03/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 53ac8dff5895522c24c1645e4db95c90d575df95
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: f7b4addf2a7bdc2d93cbcf64f13a640a4ef5b12a
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "5982165"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6046622"
 ---
 # <a name="detect-and-respond-to-audio-state-changes"></a>Erkennen und reagieren auf Änderungen der Audiodatenstromebene
 Ab Windows10, Version 1803, erkennt Ihre App, wenn das System die Lautstärke der Audioaufnahme Ihrer App oder des Audiodatenstroms reduziert oder stummschaltet. Sie können Benachrichtigungen für die Erfassung und die Wiedergabe von Datenströmen erhalten, für ein bestimmtes Audio-Gerät und eine Audiokategorie oder für eine [**MediaPlayer**](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.Playback.MediaPlayer)-Objekt, das ist Ihrer App für die Medienwiedergabe verwendet. Beispielsweise kann das System die Audiowiedergabe-Ebene reduzieren, wenn ein Alarm klingelt. Das System schaltet Ihre App stumm, wenn sie in den Hintergrund wechselt, falls Ihre App die *BackgroundMediaPlayback*-Funktion im App-Manifest nicht aktiviert hat. 
 
-Das Muster für die Behandlung von Audio-Zustandsänderungen ist für alle unterstützten Audiostreams identisch. Erstellen Sie zuerst eine Instanz der [**AudioStateMonitor**](https://docs.microsoft.comuwp/api/windows.media.audio.audiostatemonitor)-Klasse. Im folgenden Beispiel verwendet die App die [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture)-Klasse zum Aufnehmen von Audio für Spiele-Chats. Es wird eine Factorymethode aufgerufen, um den Audiostatus-Monitor für den Spiel-Chat-Auidioaufnahmedatenstrom des standardmäßigen Kommunikationsgeräts zugeordnet zu erhalten.  Danach wird ein Handler für das [**SoundLevelChanged**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor.soundlevelchanged)-Ereignis registriert, das ausgelöst wird, wenn die Audiowiedergabe für die entsprechende Streamkategorie vom System geändert wird.
+Das Muster für die Behandlung von Audio-Zustandsänderungen ist für alle unterstützten Audiostreams identisch. Erstellen Sie zuerst eine Instanz der [**AudioStateMonitor**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor)-Klasse. Im folgenden Beispiel verwendet die App die [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.MediaCapture)-Klasse zum Aufnehmen von Audio für Spiele-Chats. Es wird eine Factorymethode aufgerufen, um den Audiostatus-Monitor für den Spiel-Chat-Auidioaufnahmedatenstrom des standardmäßigen Kommunikationsgeräts zugeordnet zu erhalten.  Danach wird ein Handler für das [**SoundLevelChanged**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiostatemonitor.soundlevelchanged)-Ereignis registriert, das ausgelöst wird, wenn die Audiowiedergabe für die entsprechende Streamkategorie vom System geändert wird.
 
 [!code-cs[DeviceIdCategoryVars](./code/SimpleCameraPreview_Win10/cs/MainPage.xaml.cs#SnippetDeviceIdCategoryVars)]
 

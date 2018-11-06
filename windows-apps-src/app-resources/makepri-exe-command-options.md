@@ -8,12 +8,12 @@ ms.date: 04/10/2018
 ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
-ms.openlocfilehash: f5d47bbe87e9319def2e8c6500fd954f2a291e18
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: c777996dceeb443c25fcf526e3a029fca00047c1
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5996337"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6043483"
 ---
 # <a name="makepriexe-command-line-options"></a>Befehlszeilenoptionen für MakePRI.exe
 
@@ -28,7 +28,7 @@ Sie können ausführen `MakePri.exe help` oder `MakePri.exe /?` um die Befehle a
 
 ## <a name="makepri-commands"></a>MakePri-Befehle
 
-```
+```console
 C:\>makepri help
 
 Usage:
@@ -67,7 +67,7 @@ Help:
 
 Der Befehl `createconfig` erstellt eine neue, initialisierte PRI-Konfigurationsdatei, in der die Standardwerte für die von Ihnen angegebenen Qualifizierer enthalten sind. Führen Sie `MakePri.exe createconfig /?` aus, um detaillierte Hilfe für diesen Befehl anzuzeigen.
 
-```
+```console
 C:\>makepri createconfig /?
 
 Usage:
@@ -119,7 +119,7 @@ Der Befehl `dump` gibt den Dump einer XML-Datei aus, die eine Liste aller Ressou
 > [!NOTE]
 > Ein schemafreies Ressourcenpaket ist ein Ressourcenpaket, das mit dem Schalter *omitSchemaFromResourcePacks* in der PRI-Konfigurationsdatei erstellt wurde. Um ein schemafreies Ressourcenpaket zu sichern, verwenden Sie den Schalter `/es <main_package_PRI_file>`. Wenn Sie die Hauptdatei nicht angeben, wird eine Fehlermeldung angezeigt, die in etwa wie folgt lautet: „*Die resources.pri im Paket wurde beschädigt, sodass die Verschlüsselung fehlgeschlagen ist (Fehler PRI222: 0xdef0000f - Unbestimmter Fehler aufgetreten)*“.
 
-```
+```console
 C:\>makepri dump /?
 
 Usage:
@@ -168,7 +168,7 @@ Help:
 
 Der Befehl `new` erstellt eine neue PRI-Datei, indem er die Dateien in Ihrem Projekt gemäß Ihrer Konfigurationsdatei indiziert. Führen Sie `MakePri.exe new /?` aus, um detaillierte Hilfe für diesen Befehl anzuzeigen.
 
-```
+```console
 C:\>makepri new /?
 
 Usage:
@@ -240,7 +240,7 @@ Help:
 
 Der Befehl `resourcepack` erstellt eine neue PRI-Datei, indem er die Dateien in Ihrem Projekt gemäß Ihrer Konfigurationsdatei indiziert. Eine Ressourcenpaket-PRI-Datei enthält nur zusätzliche Varianten von Ressourcen, die bereits in einer vorhandenen PRI-Datei angegeben sind. Führen Sie `MakePri.exe resourcepack /?` aus, um detaillierte Hilfe für diesen Befehl anzuzeigen.
 
-```
+```console
 C:\>makepri resourcepack /?
 
 Usage:
@@ -307,7 +307,7 @@ Help:
 
 Der Befehl `versioned` erstellt eine neue versionsverwaltete PRI-Datei, indem er die Dateien in Ihrem Projekt gemäß Ihrer Konfigurationsdatei indiziert. Führen Sie `MakePri.exe versioned /?` aus, um detaillierte Hilfe für diesen Befehl anzuzeigen.
 
-```
+```console
 C:\>makepri versioned /?
 
 Usage:
@@ -412,7 +412,7 @@ Verwenden Sie die Indexdateioption (/if) mit `dump`, `resourcepack` und `version
 
 Für `resourcepack` und `versioned` können Sie eine Schemadatei bereitstellen, statt eine PRI-Datei als Eingabeparameter für /IndexFile(if) anzugeben.
 
-```
+```console
 /IndexFile(if) <FILEPATH>
 ```
 
@@ -422,7 +422,7 @@ Für `resourcepack` und `versioned` können Sie eine Schemadatei bereitstellen, 
 
 Sie verwenden der Option "Optionen" (/ e/a) mit `new`, `resourcepack`, und `versioned` Optionen angeben, die detaillierte Kontrolle über das Verhalten der Ressource Indexer bereitstellen. Index-Optionen sind standardmäßig deaktiviert.
 
-```
+```console
 /IndexOptions(io) <OPTIONS>
 ```
 
@@ -435,25 +435,25 @@ Sie verwenden der Option "Optionen" (/ e/a) mit `new`, `resourcepack`, und `vers
 
 Verwenden Sie die Zuordnungsoption (/mf) mit `new`, `resourcepack` und `versioned`, um eine Zuordnungsdatei zu generieren. [MakeAppx.exe](../packaging/create-app-package-with-makeappx-tool.md) verwendet die Zuordnungsdatei zum Erzeugen von App-Paketen.
 
-```
+```console
 /MappingFile(mf) <MAPPINGFILETYPE>
 ```
 
 **MAPPINGFILETYPE** ist ein Token, mit dem das Format der Zuordnungsdatei angegeben wird. Es wird nur das Format `appx` unterstützt.
 
-```
+```console
 /mf appx
 ```
 
 Hier ein Beispiel für Inhalte einer Hauptzuordnungsdatei:
 
-```
+```console
 "ResourceDimensions"                   "language-de-de"
 ```
 
 Und hier ein Beispiel für Inhalte einer Zuordnungsdatei für ein Ressourcenpaket:
 
-```
+```console
 "ResourceId"                           "Resources184.la5decaf08"
 "ResourceDimensions"                   "language-de-de"
 ```
@@ -462,7 +462,7 @@ Und hier ein Beispiel für Inhalte einer Zuordnungsdatei für ein Ressourcenpake
 
 Wenn Ressourcenpakete erstellt werden, ist die Ausgabezusammenfassung von MakePRI.exe ausführlicher. Beispiel:
 
-```
+```console
 Index Pass Completed: ResourcePackTests\TestApp_ResourcePack
 Language Qualifiers: fr-FR, de-DE
 
@@ -489,7 +489,7 @@ Successfully Completed
 
 Wenn die Option zum Überschreiben (/o) fehlt und die angegebenen Ausgabedateien bereits vorhanden sind, benötigt MakePri.exe zum Überschreiben eine Bestätigung.
 
-```
+```console
 Following file(s) already exist at output location:
 <file(s)>
 Overwrite these file(s)? [Y]es (any other key to cancel):
@@ -515,7 +515,7 @@ Verwenden Sie die Schemadateioption (/sf) mit `new`, `resourcepack` und `version
 
 Für `resourcepack` und `versioned` können Sie eine Schemadatei bereitstellen, statt eine PRI-Datei als Eingabeparameter für /IndexFile(if) anzugeben.
 
-```
+```console
 /SchemaFile(sf) <FILEPATH>
 ```
 
@@ -545,7 +545,7 @@ Hier ein Beispiel für eine Datendatei:
 
 Die Option für die Hauptversion (/vma) (für den Befehl `new`) ist veraltet, und bei der Verwendung der Option wird folgende Warnmeldung angezeigt:
 
-```
+```console
 'VersionMajor (vma)' input parameter has been deprecated. Please specify major version in the configuration file using 'majorVersion' attribute on 'resources' node.
 ```
 

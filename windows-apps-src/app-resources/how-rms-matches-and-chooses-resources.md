@@ -8,12 +8,12 @@ ms.date: 10/23/2017
 ms.topic: article
 keywords: Windows10, uwp, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
-ms.openlocfilehash: d31c9fd3a6f8f57f3e78d88d3ad754d4848a9cad
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.openlocfilehash: c7576f98045bce3bcfcee093aa8d61059354d45a
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5996855"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "6045277"
 ---
 # <a name="how-the-resource-management-system-matches-and-chooses-resources"></a>Wie das Ressourcenverwaltungssystem Ressourcen zuordnet und auswählt
 Wenn eine Ressource angefordert wird, kann es mehrere Kandidaten geben, für die sich in einem gewissen Maße eine Übereinstimmung mit dem aktuellen Ressourcenkontext ergibt. Vom Ressourcenverwaltungssystem werden alle Kandidaten analysiert, und der beste Kandidat für die Rückgabe wird ermittelt. Dazu werden alle Qualifizierer einbezogen, um eine Einstufung aller Kandidaten zu erhalten.
@@ -41,7 +41,7 @@ Bei gleichrangigen Ressourcen wird der Wert für den Kontextqualifizierer mit de
 ## <a name="example-of-choosing-a-resource-candidate"></a>Beispiel für das Auswählen eines Ressourcenkandidaten
 Berücksichtigen Sie diese Dateien.
 
-```
+```console
 en/images/logo.scale-400.jpg
 en/images/logo.scale-200.jpg
 en/images/logo.scale-100.jpg  
@@ -53,7 +53,7 @@ de/images/logo.jpg
 
 Und gehen Sie davon aus, das dies die Einstellungen im aktuellen Kontext sind.
 
-```
+```console
 Application language: en-US; fr-FR;
 Scale: 400
 Contrast: Standard
@@ -61,7 +61,7 @@ Contrast: Standard
 
 Drei Dateien werden vom Ressourcenverwaltungssystem aussortiert. Der Grund hierfür ist, dass der hohe Kontrast und die Sprache Deutsch nicht mit dem in den Einstellungen festgelegten Kontext übereinstimmen. Diese Kandidaten verbleiben.
 
-```
+```console
 en/images/logo.scale-400.jpg
 en/images/logo.scale-200.jpg
 en/images/logo.scale-100.jpg  
@@ -70,7 +70,7 @@ fr/images/logo.scale-100.jpg
 
 Für die verbleibenden Kandidaten verwendet das Ressourcenverwaltungssystem den Kontextqualifizierer mit der höchsten Priorität: Sprache. Die englischen Ressourcen stimmen besser überein als die französischen, da Englisch in den Einstellungen vor Französisch aufgeführt ist.
 
-```
+```console
 en/images/logo.scale-400.jpg
 en/images/logo.scale-200.jpg
 en/images/logo.scale-100.jpg  
@@ -78,13 +78,13 @@ en/images/logo.scale-100.jpg
 
 Als Nächstes wird vom Ressourcenverwaltungssystem der Kontextqualifizierer mit der zweithöchsten Priorität verwendet: Skalierung. Das ist diese also die zurückgegebene Ressource.
 
-```
+```console
 en/images/logo.scale-400.jpg
 ```
 
 Mit der erweiterten Methode [**NamedResource.ResolveAll**](/uwp/api/windows.applicationmodel.resources.core.namedresource.resolveall?branch=live) können Sie alle Kandidaten in der Reihenfolge abrufen, in der sie mit den Kontexteinstellungen übereinstimmen. Für das Beispiel, das wir gerade erläutert haben, gibt **ResolveAll** Kandidaten in dieser Reihenfolge zurück.
 
-```
+```console
 en/images/logo.scale-400.jpg
 en/images/logo.scale-200.jpg
 en/images/logo.scale-100.jpg  
@@ -94,7 +94,7 @@ fr/images/logo.scale-100.jpg
 ## <a name="example-of-producing-a-fallback-choice"></a>Beispiel für das Erzeugen einer Fallbackauswahl
 Gehen Sie von diesen Dateien aus.
 
-```
+```console
 en/images/logo.scale-400.jpg
 en/images/logo.scale-200.jpg
 en/images/logo.scale-100.jpg  
@@ -105,7 +105,7 @@ de/images/contrast-standard/logo.jpg
 
 Und gehen Sie davon aus, das dies die Einstellungen im aktuellen Kontext sind.
 
-```
+```console
 User language: de-DE;
 Scale: 400
 Contrast: High
@@ -113,7 +113,7 @@ Contrast: High
 
 Alle Dateien werden gelöscht, da sie nicht mit dem Kontext übereinstimmen. Nun wird ein Standarddurchlauf durchgeführt. Beim Erstellen der PRI-Datei wurde folgende Standardeinstellung (siehe [Manuelles Kompilieren von Ressourcen mit MakePRI.exe](compile-resources-manually-with-makepri.md)) verwendet:
 
-```
+```console
 Language: fr-FR;
 Scale: 400
 Contrast: Standard
@@ -121,7 +121,7 @@ Contrast: Standard
 
 Übrig bleiben alle Ressourcen, die entweder mit dem aktuellen Benutzer oder mit der Standardeinstellung übereinstimmen.
 
-```
+```console
 fr/images/contrast-standard/logo.scale-400.jpg
 fr/images/contrast-standard/logo.scale-100.jpg
 de/images/contrast-standard/logo.jpg
@@ -129,7 +129,7 @@ de/images/contrast-standard/logo.jpg
 
 Das Ressourcenverwaltungssystem verwendet den Kontextqualifizierer mit der höchsten Priorität (Sprache), um die benannte Ressource mit dem höchsten Wert zurückzugeben.
 
-```
+```console
 de/images/contrast-standard/logo.jpg
 ```
 
