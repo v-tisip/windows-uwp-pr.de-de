@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, uwp, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: 4db96cea273348b4e1bc7059446f7528ba30a645
-ms.sourcegitcommit: 144f5f127fc4fbd852f2f6780ef26054192d68fc
+ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "5994936"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "6048773"
 ---
 # <a name="load-images-and-assets-tailored-for-scale-theme-high-contrast-and-others"></a>Laden von Bilder und Ressourcen mit Anpassung an Skalierung, Design, hohen Kontrast und anders
 Ihre App kann Bild-Ressourcendateien mit Bildern (und andere Ressourcendateien) laden, die speziell auf den [Skalierungsfaktor für die Anzeige](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md), das Design, den hohen Kontrast und anderen Laufzeitkontexte angepasst wurden Auf diese Bilder kann im imperativen Code oder im XAML-Markup verwiesen werden, z.B. als **Quellen**-Eigenschaft eines **Bildes**. Sie können auch in Ihrer App-Paketmanifest-Quelldatei erscheinen (in der Datei `Package.appxmanifest`), z.B. als Wert für das App-Symbol auf der Registerkarte „Visuelle Anlagen” des Manifest-Designers von Visual Studio, oder auf Ihren Kacheln und Popups. Indem Sie Qualifizierer in den Dateinamen Ihrer Bilder verwenden und die Bilder optional mit Hilfe eines [**ResourceContext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live) dynamisch laden, können Sie die am besten passende Bilddatei laden, die den Runtime-Einstellungen des Benutzers für Bildschirmskalierung, Design, hohen Kontrast, Sprache und andere Kontexte am besten entspricht.
