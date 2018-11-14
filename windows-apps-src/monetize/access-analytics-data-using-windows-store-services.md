@@ -8,12 +8,12 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste Microsoft Store-Analyse-API
 ms.localizationpriority: medium
-ms.openlocfilehash: 80ca7d66489f936e8097e9466f74032fbfb78eaf
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.openlocfilehash: a5d2689f5041035ba78cd9aef1f0610f0e1619dd
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6257979"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6458674"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Zugreifen auf Analysedaten mit Store-Diensten
 
@@ -116,6 +116,7 @@ Die folgenden zusätzlichen Methoden sind verfügbar, für die Verwendung durch 
 | Szenario       | Methoden      |
 |---------------|--------------------|
 | Käufe |  <ul><li>[Xbox One-Spielkäufe abrufen](get-xbox-one-game-acquisitions.md)</li><li>[Xbox One-Add-On-Käufe abrufen](get-xbox-one-add-on-acquisitions.md)</li></ul> |
+| Fehler |  <ul><li>[Abrufen von Fehlerberichtsdaten für Ihre Xbox One Spiel](get-error-reporting-data-for-your-xbox-one-game.md)</li><li>[Abrufen von Details zu einem Fehler in Ihrer Xbox One-Spiele](get-details-for-an-error-in-your-xbox-one-game.md)</li><li>[Abrufen der stapelüberwachung für einen Fehler in Ihrer Xbox One-Spiele](get-the-stack-trace-for-an-error-in-your-xbox-one-game.md)</li><li>[Herunterladen der CAB-Datei für einen Fehler in Ihrer Xbox One Spiel](download-the-cab-file-for-an-error-in-your-xbox-one-game.md)</li></ul> |
 
 ### <a name="methods-for-hardware-and-drivers"></a>Methoden für Hardware und Treiber
 
