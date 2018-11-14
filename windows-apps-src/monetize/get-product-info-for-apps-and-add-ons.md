@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, In-App-Einkäufe, IAPs, Add-Ons, Windows.Services.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: f1544ee3404e77ec7565c626a6ca96e439832c90
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6045347"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6137411"
 ---
 # <a name="get-product-info-for-apps-and-add-ons"></a><span data-ttu-id="7f947-104">Abrufen von Produktinformationen zu Apps und deren Add-Ons</span><span class="sxs-lookup"><span data-stu-id="7f947-104">Get product info for apps and add-ons</span></span>
 

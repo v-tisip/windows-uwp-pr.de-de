@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: c62624e83d1e8334cce711869088817e2f9dc5e0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6039493"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6145092"
 ---
 # <a name="selecting-an-approach-to-ios-and-uwp-app-development"></a><span data-ttu-id="9b78b-104">Auswählen eines Ansatzes für die Entwicklung von iOS- und UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="9b78b-104">Selecting an approach to iOS and UWP app development</span></span>
 

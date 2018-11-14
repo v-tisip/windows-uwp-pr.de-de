@@ -14,38 +14,38 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: 9bc19460fe1b9b9c6b637606a737e1157d98feef
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6029986"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6146669"
 ---
-# <a name="create-write-and-read-a-file"></a><span data-ttu-id="e2c08-104">Erstellen, Schreiben und Lesen einer Datei</span><span class="sxs-lookup"><span data-stu-id="e2c08-104">Create, write, and read a file</span></span>
+# <a name="create-write-and-read-a-file"></a><span data-ttu-id="52aa3-104">Erstellen, Schreiben und Lesen einer Datei</span><span class="sxs-lookup"><span data-stu-id="52aa3-104">Create, write, and read a file</span></span>
 
-**<span data-ttu-id="e2c08-105">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="e2c08-105">Important APIs</span></span>**
+**<span data-ttu-id="52aa3-105">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="52aa3-105">Important APIs</span></span>**
 
--   [**<span data-ttu-id="e2c08-106">StorageFolder-Klasse</span><span class="sxs-lookup"><span data-stu-id="e2c08-106">StorageFolder class</span></span>**](/uwp/api/windows.storage.storagefolder)
--   [**<span data-ttu-id="e2c08-107">StorageFile-Klasse</span><span class="sxs-lookup"><span data-stu-id="e2c08-107">StorageFile class</span></span>**](/uwp/api/windows.storage.storagefile)
--   [**<span data-ttu-id="e2c08-108">FileIO-Klasse</span><span class="sxs-lookup"><span data-stu-id="e2c08-108">FileIO class</span></span>**](/uwp/api/windows.storage.fileio)
+-   [**<span data-ttu-id="52aa3-106">StorageFolder-Klasse</span><span class="sxs-lookup"><span data-stu-id="52aa3-106">StorageFolder class</span></span>**](/uwp/api/windows.storage.storagefolder)
+-   [**<span data-ttu-id="52aa3-107">StorageFile-Klasse</span><span class="sxs-lookup"><span data-stu-id="52aa3-107">StorageFile class</span></span>**](/uwp/api/windows.storage.storagefile)
+-   [**<span data-ttu-id="52aa3-108">FileIO-Klasse</span><span class="sxs-lookup"><span data-stu-id="52aa3-108">FileIO class</span></span>**](/uwp/api/windows.storage.fileio)
 
-<span data-ttu-id="e2c08-109">Lesen und Schreiben Sie eine Datei mithilfe eines [**StorageFile**](/uwp/api/windows.storage.storagefile)-Objekts.</span><span class="sxs-lookup"><span data-stu-id="e2c08-109">Read and write a file using a [**StorageFile**](/uwp/api/windows.storage.storagefile) object.</span></span>
+<span data-ttu-id="52aa3-109">Lesen und Schreiben Sie eine Datei mithilfe eines [**StorageFile**](/uwp/api/windows.storage.storagefile)-Objekts.</span><span class="sxs-lookup"><span data-stu-id="52aa3-109">Read and write a file using a [**StorageFile**](/uwp/api/windows.storage.storagefile) object.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="e2c08-110">Siehe auch das [Dateizugriff-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=619995).</span><span class="sxs-lookup"><span data-stu-id="e2c08-110">Also see the [File access sample](http://go.microsoft.com/fwlink/p/?linkid=619995).</span></span>
+> <span data-ttu-id="52aa3-110">Siehe auch das [Dateizugriff-Beispiel](http://go.microsoft.com/fwlink/p/?linkid=619995).</span><span class="sxs-lookup"><span data-stu-id="52aa3-110">Also see the [File access sample](http://go.microsoft.com/fwlink/p/?linkid=619995).</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="e2c08-111">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="e2c08-111">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="52aa3-111">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="52aa3-111">Prerequisites</span></span>
 
--   **<span data-ttu-id="e2c08-112">Verstehen der asynchronen Programmierung für UWP-Apps (Universelle Windows-Plattform)</span><span class="sxs-lookup"><span data-stu-id="e2c08-112">Understand async programming for Universal Windows Platform (UWP) apps</span></span>**
+-   **<span data-ttu-id="52aa3-112">Verstehen der asynchronen Programmierung für UWP-Apps (Universelle Windows-Plattform)</span><span class="sxs-lookup"><span data-stu-id="52aa3-112">Understand async programming for Universal Windows Platform (UWP) apps</span></span>**
 
-    <span data-ttu-id="e2c08-113">Informationen zum Schreiben von asynchronen Apps in C# oder Visual Basic finden Sie unter [Aufrufen asynchroner APIs in C# oder Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="e2c08-113">You can learn how to write asynchronous apps in C# or Visual Basic, see [Call asynchronous APIs in C# or Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic).</span></span> <span data-ttu-id="e2c08-114">Informationen zum Schreiben von asynchronen apps in C++ / WinRT, finden Sie unter [Parallelität und asynchrone Vorgänge mit C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency).</span><span class="sxs-lookup"><span data-stu-id="e2c08-114">To learn how to write asynchronous apps in C++/WinRT, see [Concurrency and asynchronous operations with C++/WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency).</span></span> <span data-ttu-id="e2c08-115">Informationen zum Schreiben von asynchronen apps in C++ / CX finden Sie unter [asynchrone Programmierung in C++ / CX](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).</span><span class="sxs-lookup"><span data-stu-id="e2c08-115">To learn how to write asynchronous apps in C++/CX, see [Asynchronous programming in C++/CX](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).</span></span>
+    <span data-ttu-id="52aa3-113">Informationen zum Schreiben von asynchronen Apps in C# oder Visual Basic finden Sie unter [Aufrufen asynchroner APIs in C# oder Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="52aa3-113">You can learn how to write asynchronous apps in C# or Visual Basic, see [Call asynchronous APIs in C# or Visual Basic](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic).</span></span> <span data-ttu-id="52aa3-114">Informationen zum Schreiben von asynchronen apps in C++ / WinRT, finden Sie unter [Parallelität und asynchrone Vorgänge mit C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency).</span><span class="sxs-lookup"><span data-stu-id="52aa3-114">To learn how to write asynchronous apps in C++/WinRT, see [Concurrency and asynchronous operations with C++/WinRT](/windows/uwp/cpp-and-winrt-apis/concurrency).</span></span> <span data-ttu-id="52aa3-115">Informationen zum Schreiben von asynchronen apps in C++ / CX finden Sie unter [asynchrone Programmierung in C++ / CX](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).</span><span class="sxs-lookup"><span data-stu-id="52aa3-115">To learn how to write asynchronous apps in C++/CX, see [Asynchronous programming in C++/CX](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps).</span></span>
 
--   **<span data-ttu-id="e2c08-116">Kenntnis, wie die Datei abgerufen wird, aus der Sie lesen und/oder in die Sie schreiben möchten</span><span class="sxs-lookup"><span data-stu-id="e2c08-116">Know how to get the file that you want to read from, write to, or both</span></span>**
+-   **<span data-ttu-id="52aa3-116">Kenntnis, wie die Datei abgerufen wird, aus der Sie lesen und/oder in die Sie schreiben möchten</span><span class="sxs-lookup"><span data-stu-id="52aa3-116">Know how to get the file that you want to read from, write to, or both</span></span>**
 
-    <span data-ttu-id="e2c08-117">Unter [Öffnen von Dateien und Ordnern mit einer Auswahl](quickstart-using-file-and-folder-pickers.md) erfahren Sie, wie Sie eine Datei mit einer Dateiauswahl abrufen können.</span><span class="sxs-lookup"><span data-stu-id="e2c08-117">You can learn how to get a file by using a file picker in [Open files and folders with a picker](quickstart-using-file-and-folder-pickers.md).</span></span>
+    <span data-ttu-id="52aa3-117">Unter [Öffnen von Dateien und Ordnern mit einer Auswahl](quickstart-using-file-and-folder-pickers.md) erfahren Sie, wie Sie eine Datei mit einer Dateiauswahl abrufen können.</span><span class="sxs-lookup"><span data-stu-id="52aa3-117">You can learn how to get a file by using a file picker in [Open files and folders with a picker](quickstart-using-file-and-folder-pickers.md).</span></span>
 
-## <a name="creating-a-file"></a><span data-ttu-id="e2c08-118">Erstellen einer Datei</span><span class="sxs-lookup"><span data-stu-id="e2c08-118">Creating a file</span></span>
+## <a name="creating-a-file"></a><span data-ttu-id="52aa3-118">Erstellen einer Datei</span><span class="sxs-lookup"><span data-stu-id="52aa3-118">Creating a file</span></span>
 
-<span data-ttu-id="e2c08-119">Nachfolgend finden Sie Informationen zum Erstellen einer Datei im lokalen Ordner der App.</span><span class="sxs-lookup"><span data-stu-id="e2c08-119">Here's how to create a file in the app's local folder.</span></span> <span data-ttu-id="e2c08-120">Wenn sie bereits vorhanden ist, ersetzen Sie sie.</span><span class="sxs-lookup"><span data-stu-id="e2c08-120">If it already exists, we replace it.</span></span>
+<span data-ttu-id="52aa3-119">Nachfolgend finden Sie Informationen zum Erstellen einer Datei im lokalen Ordner der App.</span><span class="sxs-lookup"><span data-stu-id="52aa3-119">Here's how to create a file in the app's local folder.</span></span> <span data-ttu-id="52aa3-120">Wenn sie bereits vorhanden ist, ersetzen Sie sie.</span><span class="sxs-lookup"><span data-stu-id="52aa3-120">If it already exists, we replace it.</span></span>
 
 ```csharp
 // Create sample file; replace if exists.
@@ -80,9 +80,9 @@ Dim storageFolder As StorageFolder = Windows.Storage.ApplicationData.Current.Loc
 Dim sampleFile As StorageFile = Await storageFolder.CreateFileAsync("sample.txt", CreationCollisionOption.ReplaceExisting)
 ```
 
-## <a name="writing-to-a-file"></a><span data-ttu-id="e2c08-121">Schreiben in eine Datei</span><span class="sxs-lookup"><span data-stu-id="e2c08-121">Writing to a file</span></span>
+## <a name="writing-to-a-file"></a><span data-ttu-id="52aa3-121">Schreiben in eine Datei</span><span class="sxs-lookup"><span data-stu-id="52aa3-121">Writing to a file</span></span>
 
-<span data-ttu-id="e2c08-122">Im Folgenden finden Sie Informationen zum Schreiben in eine beschreibbare Datei auf dem Datenträger mithilfe der [**StorageFile**](/uwp/api/windows.storage.storagefile)-Klasse.</span><span class="sxs-lookup"><span data-stu-id="e2c08-122">Here's how to write to a writable file on disk using the [**StorageFile**](/uwp/api/windows.storage.storagefile) class.</span></span> <span data-ttu-id="e2c08-123">Der allgemein erste Schritt für die verschiedenen Methoden zum Schreiben in eine Datei ist das Abrufen der Datei mit [**StorageFolder.GetFileAsync**](/uwp/api/windows.storage.storagefolder.getfileasync). (Es sei denn, Sie schreiben sofort nach dem Erstellen in die Datei.)</span><span class="sxs-lookup"><span data-stu-id="e2c08-123">The common first step for each of the ways of writing to a file (unless you're writing to the file immediately after creating it) is to get the file with [**StorageFolder.GetFileAsync**](/uwp/api/windows.storage.storagefolder.getfileasync).</span></span>
+<span data-ttu-id="52aa3-122">Im Folgenden finden Sie Informationen zum Schreiben in eine beschreibbare Datei auf dem Datenträger mithilfe der [**StorageFile**](/uwp/api/windows.storage.storagefile)-Klasse.</span><span class="sxs-lookup"><span data-stu-id="52aa3-122">Here's how to write to a writable file on disk using the [**StorageFile**](/uwp/api/windows.storage.storagefile) class.</span></span> <span data-ttu-id="52aa3-123">Der allgemein erste Schritt für die verschiedenen Methoden zum Schreiben in eine Datei ist das Abrufen der Datei mit [**StorageFolder.GetFileAsync**](/uwp/api/windows.storage.storagefolder.getfileasync). (Es sei denn, Sie schreiben sofort nach dem Erstellen in die Datei.)</span><span class="sxs-lookup"><span data-stu-id="52aa3-123">The common first step for each of the ways of writing to a file (unless you're writing to the file immediately after creating it) is to get the file with [**StorageFolder.GetFileAsync**](/uwp/api/windows.storage.storagefolder.getfileasync).</span></span>
 
 ```csharp
 Windows.Storage.StorageFolder storageFolder =
@@ -116,9 +116,9 @@ Dim storageFolder As StorageFolder = Windows.Storage.ApplicationData.Current.Loc
 Dim sampleFile As StorageFile = Await storageFolder.GetFileAsync("sample.txt")
 ```
 
-**<span data-ttu-id="e2c08-124">Schreiben von Text in eine Datei</span><span class="sxs-lookup"><span data-stu-id="e2c08-124">Writing text to a file</span></span>**
+**<span data-ttu-id="52aa3-124">Schreiben von Text in eine Datei</span><span class="sxs-lookup"><span data-stu-id="52aa3-124">Writing text to a file</span></span>**
 
-<span data-ttu-id="e2c08-125">Schreiben von Text in der Datei durch Aufrufen der Methode [**FileIO.WriteTextAsync**](/uwp/api/windows.storage.fileio.writetextasync) .</span><span class="sxs-lookup"><span data-stu-id="e2c08-125">Write text to your file by calling the [**FileIO.WriteTextAsync**](/uwp/api/windows.storage.fileio.writetextasync) method.</span></span>
+<span data-ttu-id="52aa3-125">Schreiben von Text in der Datei durch Aufrufen der [**FileIO.WriteTextAsync**](/uwp/api/windows.storage.fileio.writetextasync) -Methode.</span><span class="sxs-lookup"><span data-stu-id="52aa3-125">Write text to your file by calling the [**FileIO.WriteTextAsync**](/uwp/api/windows.storage.fileio.writetextasync) method.</span></span>
 
 ```csharp
 await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow");
@@ -150,9 +150,9 @@ create_task(storageFolder->GetFileAsync("sample.txt")).then([](StorageFile^ samp
 Await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow")
 ```
 
-**<span data-ttu-id="e2c08-126">Schreiben von Bytes in eine Datei mithilfe eines Puffers (2 Schritte)</span><span class="sxs-lookup"><span data-stu-id="e2c08-126">Writing bytes to a file by using a buffer (2 steps)</span></span>**
+**<span data-ttu-id="52aa3-126">Schreiben von Bytes in eine Datei mithilfe eines Puffers (2 Schritte)</span><span class="sxs-lookup"><span data-stu-id="52aa3-126">Writing bytes to a file by using a buffer (2 steps)</span></span>**
 
-1.  <span data-ttu-id="e2c08-127">Rufen Sie zuerst [**CryptographicBuffer.ConvertStringToBinary**](/uwp/api/windows.security.cryptography.cryptographicbuffer.convertstringtobinary) einen Puffer von Bytes (basierend auf einer Zeichenfolge) abrufen, die Sie in Ihrer Datei schreiben möchten.</span><span class="sxs-lookup"><span data-stu-id="e2c08-127">First, call [**CryptographicBuffer.ConvertStringToBinary**](/uwp/api/windows.security.cryptography.cryptographicbuffer.convertstringtobinary) to get a buffer of the bytes (based on a string) that you want to write to your file.</span></span>
+1.  <span data-ttu-id="52aa3-127">Rufen Sie zuerst [**CryptographicBuffer.ConvertStringToBinary**](/uwp/api/windows.security.cryptography.cryptographicbuffer.convertstringtobinary) einen Puffer von Bytes (basierend auf einer Zeichenfolge) abrufen, die Sie in Ihrer Datei schreiben möchten.</span><span class="sxs-lookup"><span data-stu-id="52aa3-127">First, call [**CryptographicBuffer.ConvertStringToBinary**](/uwp/api/windows.security.cryptography.cryptographicbuffer.convertstringtobinary) to get a buffer of the bytes (based on a string) that you want to write to your file.</span></span>
 
 ```csharp
 var buffer = Windows.Security.Cryptography.CryptographicBuffer.ConvertStringToBinary(
@@ -193,7 +193,7 @@ Dim buffer = Windows.Security.Cryptography.CryptographicBuffer.ConvertStringToBi
     Windows.Security.Cryptography.BinaryStringEncoding.Utf8)
 ```
 
-2.  <span data-ttu-id="e2c08-128">Schreiben Sie dann die Bytes aus dem Puffer in die Datei durch Aufrufen der Methode [**FileIO.WriteBufferAsync**](/uwp/api/windows.storage.fileio.writebufferasync) .</span><span class="sxs-lookup"><span data-stu-id="e2c08-128">Then write the bytes from your buffer to your file by calling the [**FileIO.WriteBufferAsync**](/uwp/api/windows.storage.fileio.writebufferasync) method.</span></span>
+2.  <span data-ttu-id="52aa3-128">Schreiben Sie dann die Bytes aus dem Puffer in die Datei durch Aufrufen der [**FileIO.WriteBufferAsync**](/uwp/api/windows.storage.fileio.writebufferasync) -Methode.</span><span class="sxs-lookup"><span data-stu-id="52aa3-128">Then write the bytes from your buffer to your file by calling the [**FileIO.WriteBufferAsync**](/uwp/api/windows.storage.fileio.writebufferasync) method.</span></span>
 
 ```csharp
 await Windows.Storage.FileIO.WriteBufferAsync(sampleFile, buffer);
@@ -219,9 +219,9 @@ create_task(storageFolder->GetFileAsync("sample.txt")).then([](StorageFile^ samp
 Await Windows.Storage.FileIO.WriteBufferAsync(sampleFile, buffer)
 ```
 
-**<span data-ttu-id="e2c08-129">Schreiben von Text in eine Datei mithilfe eines Datenstroms (4 Schritte)</span><span class="sxs-lookup"><span data-stu-id="e2c08-129">Writing text to a file by using a stream (4 steps)</span></span>**
+**<span data-ttu-id="52aa3-129">Schreiben von Text in eine Datei mithilfe eines Datenstroms (4 Schritte)</span><span class="sxs-lookup"><span data-stu-id="52aa3-129">Writing text to a file by using a stream (4 steps)</span></span>**
 
-1.  <span data-ttu-id="e2c08-130">Öffnen Sie zunächst die Datei durch Aufrufen der [**StorageFile.OpenAsync**](/uwp/api/windows.storage.storagefile.openasync)-Methode.</span><span class="sxs-lookup"><span data-stu-id="e2c08-130">First, open the file by calling the [**StorageFile.OpenAsync**](/uwp/api/windows.storage.storagefile.openasync) method.</span></span> <span data-ttu-id="e2c08-131">Wenn der Vorgang zum Öffnen abgeschlossen ist, wird ein Datenstrom des Dateiinhalts zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="e2c08-131">It returns a stream of the file's content when the open operation completes.</span></span>
+1.  <span data-ttu-id="52aa3-130">Öffnen Sie zunächst die Datei durch Aufrufen der [**StorageFile.OpenAsync**](/uwp/api/windows.storage.storagefile.openasync)-Methode.</span><span class="sxs-lookup"><span data-stu-id="52aa3-130">First, open the file by calling the [**StorageFile.OpenAsync**](/uwp/api/windows.storage.storagefile.openasync) method.</span></span> <span data-ttu-id="52aa3-131">Wenn der Vorgang zum Öffnen abgeschlossen ist, wird ein Datenstrom des Dateiinhalts zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="52aa3-131">It returns a stream of the file's content when the open operation completes.</span></span>
 
 ```csharp
 var stream = await sampleFile.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite);
@@ -256,7 +256,7 @@ create_task(storageFolder->GetFileAsync("sample.txt")).then([](StorageFile^ samp
 Dim stream = Await sampleFile.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite)
 ```
 
-2.  <span data-ttu-id="e2c08-132">Als Nächstes rufen Sie einen Ausgabedatenstrom durch Aufrufen der Methode [**IRandomAccessStream.GetOutputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) aus der `stream`.</span><span class="sxs-lookup"><span data-stu-id="e2c08-132">Next, get an output stream by calling the [**IRandomAccessStream.GetOutputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) method from the `stream`.</span></span> <span data-ttu-id="e2c08-133">Wenn Sie c# verwenden, setzen Sie dies in einer **using** -Anweisung, um den Ausgabestream Lebensdauer zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="e2c08-133">If you're using C#, then enclose this in a **using** statement to manage the output stream's lifetime.</span></span> <span data-ttu-id="e2c08-134">Wenn Sie verwenden [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), dann Sie seine Lebensdauer steuern können, indem es in einem Block einzuschließen, oder auf `nullptr` Wenn Sie damit fertig sind.</span><span class="sxs-lookup"><span data-stu-id="e2c08-134">If you're using [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), then you can control its lifetime by enclosing it in a block, or setting it to `nullptr` when you're done with it.</span></span>
+2.  <span data-ttu-id="52aa3-132">Als Nächstes rufen Sie einen Ausgabedatenstrom durch Aufrufen der Methode [**IRandomAccessStream.GetOutputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) aus der `stream`.</span><span class="sxs-lookup"><span data-stu-id="52aa3-132">Next, get an output stream by calling the [**IRandomAccessStream.GetOutputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) method from the `stream`.</span></span> <span data-ttu-id="52aa3-133">Wenn Sie c# verwenden, setzen Sie dies in einer **using** -Anweisung, um den Ausgabestream Lebensdauer zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="52aa3-133">If you're using C#, then enclose this in a **using** statement to manage the output stream's lifetime.</span></span> <span data-ttu-id="52aa3-134">Wenn Sie verwenden [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), können Sie ihrer gesamten Lebensdauer steuern, indem Sie es in einem Block einzuschließen, oder auf `nullptr` Wenn Sie damit fertig sind.</span><span class="sxs-lookup"><span data-stu-id="52aa3-134">If you're using [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), then you can control its lifetime by enclosing it in a block, or setting it to `nullptr` when you're done with it.</span></span>
 
 ```csharp
 using (var outputStream = stream.GetOutputStreamAt(0))
@@ -282,7 +282,7 @@ Using outputStream = stream.GetOutputStreamAt(0)
 End Using
 ```
 
-3.  <span data-ttu-id="e2c08-135">Fügen Sie dies jetzt code (Wenn Sie c#, innerhalb der vorhandenen **using** -Anweisung verwenden), um in den Ausgabedatenstrom zu schreiben, indem Sie ein neues [**DataWriter**](/uwp/api/windows.storage.streams.datawriter) -Objekt erstellt und die [**DataWriter.WriteString**](/uwp/api/windows.storage.streams.datawriter.writestring) -Methode aufrufen.</span><span class="sxs-lookup"><span data-stu-id="e2c08-135">Now add this code (if you're using C#, within the existing **using** statement) to write to the output stream by creating a new [**DataWriter**](/uwp/api/windows.storage.streams.datawriter) object and calling the [**DataWriter.WriteString**](/uwp/api/windows.storage.streams.datawriter.writestring) method.</span></span>
+3.  <span data-ttu-id="52aa3-135">Jetzt fügen Sie code (Wenn Sie c#, innerhalb der vorhandenen **using** -Anweisung verwenden), um in den Ausgabedatenstrom zu schreiben, indem Sie ein neues [**DataWriter**](/uwp/api/windows.storage.streams.datawriter) -Objekt erstellt und die [**DataWriter.WriteString**](/uwp/api/windows.storage.streams.datawriter.writestring) -Methode aufrufen.</span><span class="sxs-lookup"><span data-stu-id="52aa3-135">Now add this code (if you're using C#, within the existing **using** statement) to write to the output stream by creating a new [**DataWriter**](/uwp/api/windows.storage.streams.datawriter) object and calling the [**DataWriter.WriteString**](/uwp/api/windows.storage.streams.datawriter.writestring) method.</span></span>
 
 ```csharp
 using (var dataWriter = new Windows.Storage.Streams.DataWriter(outputStream))
@@ -308,7 +308,7 @@ Dim dataWriter As New DataWriter(outputStream)
 dataWriter.WriteString("DataWriter has methods to write to various types, such as DataTimeOffset.")
 ```
 
-4.  <span data-ttu-id="e2c08-136">Abschließend fügen Sie code (Wenn Sie c#, innerhalb der inneren **mithilfe von** -Anweisung verwenden), um den Text in die Datei mit [**DataWriter.StoreAsync**](/uwp/api/windows.storage.streams.datawriter.storeasync) speichern und schließen Sie den Datenstrom mit [**IOutputStream.FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.flushasync).</span><span class="sxs-lookup"><span data-stu-id="e2c08-136">Lastly, add this code (if you're using C#, within the inner **using** statement) to save the text to your file with [**DataWriter.StoreAsync**](/uwp/api/windows.storage.streams.datawriter.storeasync) and close the stream with [**IOutputStream.FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.flushasync).</span></span>
+4.  <span data-ttu-id="52aa3-136">Abschließend fügen Sie code (Wenn Sie c#, innerhalb der inneren **mithilfe von** -Anweisung verwenden), um den Text in die Datei mit [**DataWriter.StoreAsync**](/uwp/api/windows.storage.streams.datawriter.storeasync) speichern und schließen den Datenstrom mit [**IOutputStream.FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.flushasync).</span><span class="sxs-lookup"><span data-stu-id="52aa3-136">Lastly, add this code (if you're using C#, within the inner **using** statement) to save the text to your file with [**DataWriter.StoreAsync**](/uwp/api/windows.storage.streams.datawriter.storeasync) and close the stream with [**IOutputStream.FlushAsync**](/uwp/api/windows.storage.streams.ioutputstream.flushasync).</span></span>
 
 ```csharp
 await dataWriter.StoreAsync();
@@ -331,9 +331,9 @@ Await dataWriter.StoreAsync()
 Await outputStream.FlushAsync()
 ```
 
-## <a name="reading-from-a-file"></a><span data-ttu-id="e2c08-137">Lesen aus einer Datei</span><span class="sxs-lookup"><span data-stu-id="e2c08-137">Reading from a file</span></span>
+## <a name="reading-from-a-file"></a><span data-ttu-id="52aa3-137">Lesen aus einer Datei</span><span class="sxs-lookup"><span data-stu-id="52aa3-137">Reading from a file</span></span>
 
-<span data-ttu-id="e2c08-138">Nachfolgend finden Sie Informationen zum Lesen aus einer Datei auf dem Datenträger mithilfe der [**StorageFile**](/uwp/api/Windows.Storage.StorageFile)-Klasse.</span><span class="sxs-lookup"><span data-stu-id="e2c08-138">Here's how to read from a file on disk using the [**StorageFile**](/uwp/api/Windows.Storage.StorageFile) class.</span></span> <span data-ttu-id="e2c08-139">Der allgemein erste Schritt für die einzelnen Methoden zum Lesen von Daten aus einer Datei ist das Abrufen der Datei mit [**StorageFolder.GetFileAsync**](/uwp/api/windows.storage.storagefolder.getfileasync).</span><span class="sxs-lookup"><span data-stu-id="e2c08-139">The common first step for each of the ways of reading from a file is to get the file with [**StorageFolder.GetFileAsync**](/uwp/api/windows.storage.storagefolder.getfileasync).</span></span>
+<span data-ttu-id="52aa3-138">Nachfolgend finden Sie Informationen zum Lesen aus einer Datei auf dem Datenträger mithilfe der [**StorageFile**](/uwp/api/Windows.Storage.StorageFile)-Klasse.</span><span class="sxs-lookup"><span data-stu-id="52aa3-138">Here's how to read from a file on disk using the [**StorageFile**](/uwp/api/Windows.Storage.StorageFile) class.</span></span> <span data-ttu-id="52aa3-139">Der allgemein erste Schritt für die einzelnen Methoden zum Lesen von Daten aus einer Datei ist das Abrufen der Datei mit [**StorageFolder.GetFileAsync**](/uwp/api/windows.storage.storagefolder.getfileasync).</span><span class="sxs-lookup"><span data-stu-id="52aa3-139">The common first step for each of the ways of reading from a file is to get the file with [**StorageFolder.GetFileAsync**](/uwp/api/windows.storage.storagefolder.getfileasync).</span></span>
 
 ```csharp
 Windows.Storage.StorageFolder storageFolder =
@@ -361,9 +361,9 @@ Dim storageFolder As StorageFolder = Windows.Storage.ApplicationData.Current.Loc
 Dim sampleFile As StorageFile = Await storageFolder.GetFileAsync("sample.txt")
 ```
 
-**<span data-ttu-id="e2c08-140">Lesen von Text aus einer Datei</span><span class="sxs-lookup"><span data-stu-id="e2c08-140">Reading text from a file</span></span>**
+**<span data-ttu-id="52aa3-140">Lesen von Text aus einer Datei</span><span class="sxs-lookup"><span data-stu-id="52aa3-140">Reading text from a file</span></span>**
 
-<span data-ttu-id="e2c08-141">Lesen von Text aus einer Datei durch Aufrufen der Methode [**FileIO.ReadTextAsync**](/uwp/api/windows.storage.fileio.readtextasync) .</span><span class="sxs-lookup"><span data-stu-id="e2c08-141">Read text from your file by calling the [**FileIO.ReadTextAsync**](/uwp/api/windows.storage.fileio.readtextasync) method.</span></span>
+<span data-ttu-id="52aa3-141">Lesen von Text aus einer Datei durch Aufrufen der [**FileIO.ReadTextAsync**](/uwp/api/windows.storage.fileio.readtextasync) -Methode.</span><span class="sxs-lookup"><span data-stu-id="52aa3-141">Read text from your file by calling the [**FileIO.ReadTextAsync**](/uwp/api/windows.storage.fileio.readtextasync) method.</span></span>
 
 ```csharp
 string text = await Windows.Storage.FileIO.ReadTextAsync(sampleFile);
@@ -390,9 +390,9 @@ create_task(storageFolder->GetFileAsync("sample.txt")).then([](StorageFile^ samp
 Dim text As String = Await Windows.Storage.FileIO.ReadTextAsync(sampleFile)
 ```
 
-**<span data-ttu-id="e2c08-142">Lesen von Text aus einer Datei mithilfe eines Puffers (2 Schritte)</span><span class="sxs-lookup"><span data-stu-id="e2c08-142">Reading text from a file by using a buffer (2 steps)</span></span>**
+**<span data-ttu-id="52aa3-142">Lesen von Text aus einer Datei mithilfe eines Puffers (2 Schritte)</span><span class="sxs-lookup"><span data-stu-id="52aa3-142">Reading text from a file by using a buffer (2 steps)</span></span>**
 
-1.  <span data-ttu-id="e2c08-143">Rufen Sie zuerst die Methode [**FileIO.ReadBufferAsync**](/uwp/api/windows.storage.fileio.readbufferasync) .</span><span class="sxs-lookup"><span data-stu-id="e2c08-143">First, call the [**FileIO.ReadBufferAsync**](/uwp/api/windows.storage.fileio.readbufferasync) method.</span></span>
+1.  <span data-ttu-id="52aa3-143">Rufen Sie zuerst die Methode [**FileIO.ReadBufferAsync**](/uwp/api/windows.storage.fileio.readbufferasync) .</span><span class="sxs-lookup"><span data-stu-id="52aa3-143">First, call the [**FileIO.ReadBufferAsync**](/uwp/api/windows.storage.fileio.readbufferasync) method.</span></span>
 
 ```csharp
 var buffer = await Windows.Storage.FileIO.ReadBufferAsync(sampleFile);
@@ -421,7 +421,7 @@ create_task(storageFolder->GetFileAsync("sample.txt")).then([](StorageFile^ samp
 Dim buffer = Await Windows.Storage.FileIO.ReadBufferAsync(sampleFile)
 ```
 
-2.  <span data-ttu-id="e2c08-144">Verwenden Sie dann ein [**DataReader**](/uwp/api/windows.storage.streams.datareader)-Objekt, um zunächst die Länge des Puffers und dann dessen Inhalt zu lesen.</span><span class="sxs-lookup"><span data-stu-id="e2c08-144">Then use a [**DataReader**](/uwp/api/windows.storage.streams.datareader) object to read first the length of the buffer and then its contents.</span></span>
+2.  <span data-ttu-id="52aa3-144">Verwenden Sie dann ein [**DataReader**](/uwp/api/windows.storage.streams.datareader)-Objekt, um zunächst die Länge des Puffers und dann dessen Inhalt zu lesen.</span><span class="sxs-lookup"><span data-stu-id="52aa3-144">Then use a [**DataReader**](/uwp/api/windows.storage.streams.datareader) object to read first the length of the buffer and then its contents.</span></span>
 
 ```csharp
 using (var dataReader = Windows.Storage.Streams.DataReader.FromBuffer(buffer))
@@ -446,9 +446,9 @@ Dim dataReader As DataReader = Windows.Storage.Streams.DataReader.FromBuffer(buf
 Dim text As String = dataReader.ReadString(buffer.Length)
 ```
 
-**<span data-ttu-id="e2c08-145">Lesen von Text aus einer Datei mithilfe eines Datenstroms (4 Schritte)</span><span class="sxs-lookup"><span data-stu-id="e2c08-145">Reading text from a file by using a stream (4 steps)</span></span>**
+**<span data-ttu-id="52aa3-145">Lesen von Text aus einer Datei mithilfe eines Datenstroms (4 Schritte)</span><span class="sxs-lookup"><span data-stu-id="52aa3-145">Reading text from a file by using a stream (4 steps)</span></span>**
 
-1.  <span data-ttu-id="e2c08-146">Öffnen Sie einen Datenstrom für die Datei, indem Sie die [**StorageFile.OpenAsync**](/uwp/api/windows.storage.storagefile.openasync)-Methode aufrufen.</span><span class="sxs-lookup"><span data-stu-id="e2c08-146">Open a stream for your file by calling the [**StorageFile.OpenAsync**](/uwp/api/windows.storage.storagefile.openasync) method.</span></span> <span data-ttu-id="e2c08-147">Wenn der Vorgang abgeschlossen ist, wird ein Datenstrom des Dateiinhalts zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="e2c08-147">It returns a stream of the file's content when the operation completes.</span></span>
+1.  <span data-ttu-id="52aa3-146">Öffnen Sie einen Datenstrom für die Datei, indem Sie die [**StorageFile.OpenAsync**](/uwp/api/windows.storage.storagefile.openasync)-Methode aufrufen.</span><span class="sxs-lookup"><span data-stu-id="52aa3-146">Open a stream for your file by calling the [**StorageFile.OpenAsync**](/uwp/api/windows.storage.storagefile.openasync) method.</span></span> <span data-ttu-id="52aa3-147">Wenn der Vorgang abgeschlossen ist, wird ein Datenstrom des Dateiinhalts zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="52aa3-147">It returns a stream of the file's content when the operation completes.</span></span>
 
 ```csharp
 var stream = await sampleFile.OpenAsync(Windows.Storage.FileAccessMode.Read);
@@ -476,7 +476,7 @@ create_task(storageFolder->GetFileAsync("sample.txt")).then([](StorageFile^ samp
 Dim stream = Await sampleFile.OpenAsync(Windows.Storage.FileAccessMode.Read)
 ```
 
-2.  <span data-ttu-id="e2c08-148">Rufen Sie die Größe des Datenstroms zur späteren Verwendung ab.</span><span class="sxs-lookup"><span data-stu-id="e2c08-148">Get the size of the stream to use later.</span></span>
+2.  <span data-ttu-id="52aa3-148">Rufen Sie die Größe des Datenstroms zur späteren Verwendung ab.</span><span class="sxs-lookup"><span data-stu-id="52aa3-148">Get the size of the stream to use later.</span></span>
 
 ```csharp
 ulong size = stream.Size;
@@ -496,7 +496,7 @@ UINT64 size = stream->Size;
 Dim size = stream.Size
 ```
 
-3.  <span data-ttu-id="e2c08-149">Rufen Sie einen Eingabedatenstrom durch Aufrufen der Methode [**IRandomAccessStream.GetInputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getinputstreamat) .</span><span class="sxs-lookup"><span data-stu-id="e2c08-149">Get an input stream by calling the [**IRandomAccessStream.GetInputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getinputstreamat) method.</span></span> <span data-ttu-id="e2c08-150">Fügen Sie ihn in eine **using**-Anweisung ein, um die Lebensdauer des Eingabedatenstroms zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="e2c08-150">Put this in a **using** statement to manage the stream's lifetime.</span></span> <span data-ttu-id="e2c08-151">Geben Sie beim Aufrufen von **GetInputStreamAt** 0 an, um die Position auf den Anfang des Datenstroms festzulegen.</span><span class="sxs-lookup"><span data-stu-id="e2c08-151">Specify 0 when you call **GetInputStreamAt** to set the position to the beginning of the stream.</span></span>
+3.  <span data-ttu-id="52aa3-149">Rufen Sie einen Eingabedatenstrom durch Aufrufen der [**IRandomAccessStream.GetInputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getinputstreamat) -Methode.</span><span class="sxs-lookup"><span data-stu-id="52aa3-149">Get an input stream by calling the [**IRandomAccessStream.GetInputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getinputstreamat) method.</span></span> <span data-ttu-id="52aa3-150">Fügen Sie ihn in eine **using**-Anweisung ein, um die Lebensdauer des Eingabedatenstroms zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="52aa3-150">Put this in a **using** statement to manage the stream's lifetime.</span></span> <span data-ttu-id="52aa3-151">Geben Sie beim Aufrufen von **GetInputStreamAt** 0 an, um die Position auf den Anfang des Datenstroms festzulegen.</span><span class="sxs-lookup"><span data-stu-id="52aa3-151">Specify 0 when you call **GetInputStreamAt** to set the position to the beginning of the stream.</span></span>
 
 ```csharp
 using (var inputStream = stream.GetInputStreamAt(0))
@@ -523,7 +523,7 @@ Using inputStream = stream.GetInputStreamAt(0)
 End Using
 ```
 
-4.  <span data-ttu-id="e2c08-152">Abschließend fügen Sie diesen Code in die vorhandene **using**-Anweisung zum Abrufen eines [**DataReader**](/uwp/api/windows.storage.streams.datareader)-Objekts im Datenstrom ein. Lesen Sie dann den Text durch den Aufruf von [**DataReader.LoadAsync**](/uwp/api/windows.storage.streams.datareader.loadasync) und [**DataReader.ReadString**](/uwp/api/windows.storage.streams.datareader.readstring).</span><span class="sxs-lookup"><span data-stu-id="e2c08-152">Lastly, add this code within the existing **using** statement to get a [**DataReader**](/uwp/api/windows.storage.streams.datareader) object on the stream then read the text by calling [**DataReader.LoadAsync**](/uwp/api/windows.storage.streams.datareader.loadasync) and [**DataReader.ReadString**](/uwp/api/windows.storage.streams.datareader.readstring).</span></span>
+4.  <span data-ttu-id="52aa3-152">Abschließend fügen Sie diesen Code in die vorhandene **using**-Anweisung zum Abrufen eines [**DataReader**](/uwp/api/windows.storage.streams.datareader)-Objekts im Datenstrom ein. Lesen Sie dann den Text durch den Aufruf von [**DataReader.LoadAsync**](/uwp/api/windows.storage.streams.datareader.loadasync) und [**DataReader.ReadString**](/uwp/api/windows.storage.streams.datareader.readstring).</span><span class="sxs-lookup"><span data-stu-id="52aa3-152">Lastly, add this code within the existing **using** statement to get a [**DataReader**](/uwp/api/windows.storage.streams.datareader) object on the stream then read the text by calling [**DataReader.LoadAsync**](/uwp/api/windows.storage.streams.datareader.loadasync) and [**DataReader.ReadString**](/uwp/api/windows.storage.streams.datareader.readstring).</span></span>
 
 ```csharp
 using (var dataReader = new Windows.Storage.Streams.DataReader(inputStream))

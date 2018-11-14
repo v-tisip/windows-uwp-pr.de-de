@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Erste Schritte, Windows 10, UWP, XAML, c#
 ms.localizationpriority: medium
 ms.openlocfilehash: 0193209c1a603bb253b07b084dd62d29c91009a3
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6051905"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6140903"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Erste Schritte mit Windows 10-Apps 
  

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung, rtl, ltr
 ms.localizationpriority: medium
 ms.openlocfilehash: 24e4c5dfce4aa3e773ab8c334ca732ac5ed53030
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023406"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6140494"
 ---
 # <a name="design-your-app-for-bidirectional-text"></a><span data-ttu-id="6a8ec-103">Entwerfen der App für bidirektionalen Text</span><span class="sxs-lookup"><span data-stu-id="6a8ec-103">Design your app for bidirectional text</span></span>
 

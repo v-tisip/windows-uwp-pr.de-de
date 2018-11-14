@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 77ac16c55bb4292ea7c5362d007ff9569812954f
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6031442"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6164616"
 ---
 # <a name="views"></a><span data-ttu-id="66a72-106">Ansichten</span><span class="sxs-lookup"><span data-stu-id="66a72-106">Views</span></span>
 

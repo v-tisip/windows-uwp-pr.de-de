@@ -12,11 +12,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
 ms.openlocfilehash: b437055704c307dc3e3fa506a9885ff892585503
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6038959"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6181911"
 ---
 # <a name="globalization-and-localization"></a><span data-ttu-id="3c31f-103">Globalisierung und Lokalisierung</span><span class="sxs-lookup"><span data-stu-id="3c31f-103">Globalization and localization</span></span>
 
