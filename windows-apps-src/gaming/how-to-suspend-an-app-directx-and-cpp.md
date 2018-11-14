@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, anhalten, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: 204d61430f59c820e9ef9ef36832cd1c24ee7f9c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6034120"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6149702"
 ---
 # <a name="how-to-suspend-an-app-directx-and-c"></a>So wird's gemacht: Anhalten einer App (DirectX und C++)
 
@@ -99,7 +99,7 @@ void App::Run()
 ## <a name="call-trim"></a>Aufrufen von „Trim()“
 
 
-Windows8.1 ab, müssen alle DirectX-UWP-apps [**Idxgidevice3**](https://msdn.microsoft.com/library/windows/desktop/dn280346) aufrufen, wenn "Suspending". Dieser Aufruf weist den Grafiktreiber an, alle für die App zugeordneten temporären Puffer freizugeben. Dadurch wird die Wahrscheinlichkeit verringert, dass die angehaltene App beendet wird, um Arbeitsspeicherressourcen freizugeben. Dies ist eine zertifizierungsanforderung für Windows8.1.
+Ab Windows8.1, müssen alle DirectX-UWP-apps [**Idxgidevice3**](https://msdn.microsoft.com/library/windows/desktop/dn280346) aufrufen, wenn angehalten. Dieser Aufruf weist den Grafiktreiber an, alle für die App zugeordneten temporären Puffer freizugeben. Dadurch wird die Wahrscheinlichkeit verringert, dass die angehaltene App beendet wird, um Arbeitsspeicherressourcen freizugeben. Dies ist eine zertifizierungsanforderung für Windows8.1.
 
 ```cpp
 void App::OnSuspending(Platform::Object^ sender, SuspendingEventArgs^ args)

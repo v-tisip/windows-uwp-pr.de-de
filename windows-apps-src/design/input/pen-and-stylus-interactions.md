@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a9a9dd4347cc682f384c2d408d30820acf76ce34
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6047505"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6188606"
 ---
 # <a name="pen-interactions-and-windows-ink-in-uwp-apps"></a>Stiftinteraktionen und Windows Ink in UWP-Apps
 
@@ -49,9 +49,9 @@ Richtlinien für die Benutzeroberfläche von WindowsInk finden Sie unter [Inking
 
 | Komponente | Beschreibung |
 | --- | --- |
-| [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) | Ein XAMLUI Plattform-Steuerelement, das in der Standardeinstellung empfängt und zeigt alle Eingaben von einem Stift als letzten Strich oder ausradierten Strich.<br/>Weitere Informationen zur Verwendung von InkCanvas finden Sie unter [Erkennen von Windows Ink-Strichen als Text](convert-ink-to-text.md) und [Speichern und Abrufen der Daten von Windows Ink-Strichen](save-and-load-ink.md). |
+| [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535) | Ein XAMLUI-Plattform-Steuerelement, das in der Standardeinstellung empfängt und anzeigt alle Eingaben von einem Stift als letzten Strich oder ausradierten Strich.<br/>Weitere Informationen zur Verwendung von InkCanvas finden Sie unter [Erkennen von Windows Ink-Strichen als Text](convert-ink-to-text.md) und [Speichern und Abrufen der Daten von Windows Ink-Strichen](save-and-load-ink.md). |
 | [**InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn922011) | Ein CodeBehind-Objekt, das zusammen mit einem [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement instanziiert wird (über die [**InkCanvas.InkPresenter**](https://msdn.microsoft.com/library/windows/apps/dn899081)-Eigenschaft verfügbar gemacht). Dieses Objekt stellt alle Standardfreihandfunktionen bereit, die vom **InkCanvas**-Steuerelement zur Verfügung gestellt werden, sowie einen umfassenden Satz von APIs für zusätzliche Anpassung und Personalisierung.<br/>Weitere Informationen zur Verwendung von InkPresenter finden Sie unter [Erkennen von Windows Ink-Strichen als Text](convert-ink-to-text.md) und [Speichern und Abrufen der Daten von Windows Ink-Strichen](save-and-load-ink.md). |
-| [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | Ein XAMLUI-plattformsteuerelement, enthält eine anpassbare und erweiterbare Sammlung von Schaltflächen, die Freihand-Features in einem verknüpften [**InkCanvas-Steuerelement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)aktivieren.<br/>Weitere Informationen zur Verwendung von InkToolbar finden Sie unter [Add an InkToolbar to a Universal Windows Platform (UWP) inking app](ink-toolbar.md). |
+| [**InkToolbar**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.inktoolbar.aspx) | Ein XAMLUI-Steuerelement, enthält eine anpassbare und erweiterbare Sammlung von Schaltflächen, die Freihand-Features in einem verknüpften [**InkCanvas-Steuerelement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)aktivieren.<br/>Weitere Informationen zur Verwendung von InkToolbar finden Sie unter [Add an InkToolbar to a Universal Windows Platform (UWP) inking app](ink-toolbar.md). |
 | [**IInkD2DRenderer**](https://msdn.microsoft.com/library/mt147263) | Ermöglicht das Rendern von Freihandstrichen im angegebenen Direct2D-Gerätekontext einer universellen Windows-App statt im standardmäßigen [**InkCanvas**](https://msdn.microsoft.com/library/windows/apps/dn858535)-Steuerelement. Dies ermöglicht die umfassende Anpassung der Freihandfunktionen.<br/>Weitere Informationen finden Sie in diesem [komplexen Freihandbeispiel](https://go.microsoft.com/fwlink/p/?LinkID=620314). |
 
 ## <a name="basic-inking-with-inkcanvas"></a>Einfaches Freihandzeichnen mit „InkCanvas“

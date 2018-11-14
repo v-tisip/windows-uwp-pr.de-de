@@ -9,11 +9,11 @@ keywords: Windows10, UWP, Segment, Segmente, Zielgruppe, Kunden
 ms.assetid: 58185f6c-d61f-478b-ab24-753d8986cd5a
 ms.localizationpriority: medium
 ms.openlocfilehash: 8aa61056a25fca4193cf325c8573813bf1f6a560
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6052125"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6149940"
 ---
 # <a name="create-customer-segments"></a>Erstellen von Kundensegmenten
 
@@ -35,7 +35,7 @@ Wichtige Punkte zu Kundensegmenten:
 
 ## <a name="to-create-a-customer-segment"></a>So erstellen Sie ein Kundensegment
 
-1.  Erweitern Sie im linken Navigationsmenü **einbeziehen** , und wählen Sie **Kundengruppen**, im [Partner Center](https://partner.microsoft.com/dashboard).
+1.  Erweitern Sie im linken Navigationsmenü **einbeziehen** , und wählen Sie dann **Kundengruppen**, im [Partner Center](https://partner.microsoft.com/dashboard).
 2.  Führen Sie auf der Seite **Kundengruppen** eine der folgenden Aktionen aus:
  - Wählen Sie im Abschnitt **Meine Kundengruppen** die Option **Neue Gruppe erstellen**, um ein neues Segment zu definieren. Wählen Sie auf der nächsten Seite das Optionsfeld **Segment**.
  - Wählen Sie im Abschnitt **Segmentvorlagen** die Option **Kopieren** neben dem vordefinierten Segment aus (um ein vordefiniertes Segment unverändert zu verwenden oder an Ihre Anforderungen anzupassen).

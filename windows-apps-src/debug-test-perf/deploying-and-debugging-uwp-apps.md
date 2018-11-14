@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, uwp, debuggen, testen, leistung
 ms.localizationpriority: medium
 ms.openlocfilehash: 9a398b621ff309af8c6f8252613d3ea106d96485
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6048624"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6150185"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>Bereitstellen und Debuggen von UWP-Apps
 
@@ -32,7 +32,7 @@ Zur Auswahl eines Ziels navigieren Sie zur Dropdownliste mit Debugzielen neben d
 -   Mit **Lokaler Computer** wird die App auf dem aktuellen Entwicklungscomputer bereitgestellt. Diese Option ist nur verfügbar, wenn die **Mindestversion der Zielplattform** Ihrer App niedriger oder gleich der Betriebssystemversion auf Ihrem Entwicklungscomputer ist.
 -   Über **Remotecomputer** können Sie ein Remoteziel angeben, auf dem die App bereitgestellt werden soll. Weitere Informationen zur Bereitstellung auf einem Remotecomputer finden Sie unter [Angeben eines Remotegeräts](#specifying-a-remote-device).
 -   Mit **Gerät** wird die App auf einem über USB verbundenen Gerät bereitgestellt. Das Gerät muss für Entwickler entsperrt sein und über einen entsperrten Bildschirm verfügen.
--   Bei einem **Emulator**-Ziel wird die App in einem Emulator gestartet und bereitgestellt, wobei die Konfiguration im Namen angegeben ist. Emulatoren sind nur auf Hyper-V-fähigen Computern ausführen Windows8.1 verfügbar oder.
+-   Bei einem **Emulator**-Ziel wird die App in einem Emulator gestartet und bereitgestellt, wobei die Konfiguration im Namen angegeben ist. Emulatoren sind nur verfügbar auf Hyper-V-Computer Windows8.1 aktiviert oder.
 
 
 ## <a name="debugging-deployed-apps"></a>Debuggen von bereitgestellten Apps
@@ -67,7 +67,7 @@ Wenn Sie einen Remotecomputer für C#- oder Microsoft Visual Basic-Apps angeben 
 
 ![Dialogfeld „Remoteverbindungen“](images/debug-remote-connections.png)
 
-Um zu diesem Dialogfeld zurückzukehren, können Sie Projekteigenschaften öffnen und wechseln Sie zur Registerkarte " **Debuggen** ". Wählen Sie dort neben **Suchen** **Remotecomputer:**
+Um zu diesem Dialogfeld zurückzukehren, können Sie die Projekteigenschaften öffnen und wechseln Sie zur Registerkarte " **Debuggen** ". Wählen Sie dort neben **Suchen** **Remotecomputer:**
 
 ![Registerkarte „Debuggen“](images/debug-remote-machine-config.png)
 
@@ -75,7 +75,7 @@ Wenn Sie eine App auf einem Remote-PC bereitstellen möchten, der noch nicht das
 
 ### <a name="c-and-javascript"></a>C++ und JavaScript
 
-Ein Remotecomputer-Ziel für eine app C++ oder JavaScriptUWP angeben:
+So geben Sie einen Remotecomputer-Ziel für eine C++- oder JavaScriptUWP-app:
 
 1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und klicken Sie dann auf **Eigenschaften**.
 2. Navigieren Sie zu den Einstellungen für **Debuggen**, und wählen Sie unter **Zu startender Debugger** die Option **Remotecomputer** aus.
@@ -134,7 +134,7 @@ Zu den neuen Eigenschaften zählen:
 
 ### <a name="requirements"></a>Anforderungen
 Um die erweiterten Remotebereitstellungsoptionen verwenden zu können, müssen folgende Anforderungen erfüllt sein:
-* Visual Studio 2015 Update 3 oder einigen neueren Visual Studio Version installiert mit Windows 10 Tools 1.4.1 oder höher (einschließlich Windows 10 Anniversary Update SDK) haben wir empfehlen, dass Sie die neueste Version von Visual Studio mit Updates verwenden, um sicherzustellen, dass Sie alle erhalten die neueste Features für Entwicklung und Sicherheit.
+* Visual Studio 2015 Update 3 oder einigen neueren Visual Studio Version installiert mit Windows 10 Tools 1.4.1 oder höher (einschließlich Windows 10 Anniversary Update SDK) haben wir empfehlen, dass Sie die neueste Version von Visual Studio mit Updates verwenden, um sicherzustellen, dass Sie alle erhalten die neueste Funktionen für Entwicklung und Sicherheit.
 * Ziel ist ein Xbox-Remotegerät mit Windows10 Anniversary Update oder ein PC mit Windows10 Creators Update. 
 * Der universelle Authentifizierungsmodus muss verwendet werden.
 
@@ -179,12 +179,12 @@ Beim Registrieren des Geräts über das Netzwerk können Sie **Alle Dateien auf 
 > [!NOTE]
 > **Registrieren des Layouts über das Netzwerk** wird derzeit für Xbox mit Windows10 Anniversary Update und PCs mit Windows 10 Creators Update unterstützt.
 
-Auf dem Remotegerät wird das Layout je nach Gerätefamilie am folgenden Standardspeicherort registriert: `Xbox: \\MY-DEVKIT\DevelopmentFiles\XrfsFiles` – bei dieser eine symbolische Verknüpfung mit der **paketregistrierungspfad** PC verwendet keine symbolischen Link und stattdessen das Paket **direkt registriert ist Registrierung Pfad**
+Auf dem Remotegerät, das Layout je nach Gerätefamilie am folgenden Standardspeicherort registriert: `Xbox: \\MY-DEVKIT\DevelopmentFiles\XrfsFiles` – bei dieser ist eine symbolische Verknüpfung mit der **paketregistrierungspfad** PC verwendet keine symbolischen Link und stattdessen das Paket **direkt registriert Registrierung Pfad**
 
 
 ## <a name="debugging-options"></a>Debugoptionen
 
-Unter Windows 10 die startleistung von UWP-apps verbessern, indem proaktiv starten und dann eine Technik namens [Vorabstart](https://msdn.microsoft.com/library/windows/apps/Mt593297)anhalten apps. Viele Apps sind in diesem Modus sofort funktionsfähig, das Verhalten einiger Apps muss jedoch möglicherweise angepasst werden. Um das Debuggen von Problemen in diesen Codepfaden zu erleichtern, können Sie das Debuggen der App von Visual Studio im Vorabstartmodus starten.
+Unter Windows 10 die startleistung von UWP-apps verbessern, indem Sie proaktiv starten und dann eine Technik [Vorabstart](https://msdn.microsoft.com/library/windows/apps/Mt593297)apps anhalten. Viele Apps sind in diesem Modus sofort funktionsfähig, das Verhalten einiger Apps muss jedoch möglicherweise angepasst werden. Um das Debuggen von Problemen in diesen Codepfaden zu erleichtern, können Sie das Debuggen der App von Visual Studio im Vorabstartmodus starten.
 
 Das Debuggen wird sowohl von einem Visual Studio-Projekt (**Debuggen** -&gt; **Andere Debugziele** -&gt; **Vorabstart der universellen Windows-App debuggen**) als auch für bereits auf dem Computer installierte Apps (**Debuggen** -&gt; **Andere Debugziele** -&gt; **Installiertes App-Paket debuggen** mit aktiviertem Kontrollkästchen **App mit Vorabstart aktivieren**) unterstützt. Weitere Informationen finden Sie unter [Debuggen des UWP-Vorabstarts](http://go.microsoft.com/fwlink/p/?LinkId=717245).
 
@@ -192,18 +192,18 @@ Sie können die folgenden Bereitstellungsoptionen auf der Eigenschaftenseite **D
 
 - **Lokales Netzwerkloopback zulassen**
 
-  Aus Sicherheitsgründen darf eine UWP-App, die mit der Standardmethode installiert wurde, keine Netzwerkaufrufe an das Gerät senden, auf dem sie installiert ist. Für die bereitgestellte App erstellt die Visual Studio-Bereitstellung standardmäßig eine Ausnahme von dieser Regel. Diese Ausnahme macht es möglich, Kommunikationsverfahren auf einem einzelnen Computer zu testen. Bevor Sie Ihre app an den Microsoft Store übermitteln, sollten Sie Ihre app ohne die Ausnahme testen.
+  Aus Sicherheitsgründen darf eine UWP-App, die mit der Standardmethode installiert wurde, keine Netzwerkaufrufe an das Gerät senden, auf dem sie installiert ist. Für die bereitgestellte App erstellt die Visual Studio-Bereitstellung standardmäßig eine Ausnahme von dieser Regel. Diese Ausnahme macht es möglich, Kommunikationsverfahren auf einem einzelnen Computer zu testen. Bevor Sie Ihre app im Microsoft Store übermitteln, sollten Sie Ihre app ohne die Ausnahme testen.
 
   So entfernen Sie die Netzwerkloopback-Ausnahme aus der App
 
-  -   Deaktivieren Sie auf der Eigenschaftenseite c# und Visual Basic**Debuggen** das Kontrollkästchen **Lokales netzwerkloopback zulassen** .
+  -   Deaktivieren Sie das Kontrollkästchen **Lokales netzwerkloopback zulassen** , auf der Eigenschaftenseite c# und Visual Basic**Debuggen** .
   -   Legen Sie den Wert **Lokales Netzwerkloopback zulassen** auf der Eigenschaftenseite **Debuggen** für JavaScript und C++ auf **Nein** fest.
 
 - **Eigenen Code zunächst nicht starten, sondern debuggen/Anwendung starten**
 
   So konfigurieren Sie die Bereitstellung für das automatische Starten einer Debugsitzung beim Starten der App
 
-  -   Aktivieren Sie auf der Eigenschaftenseite c# und Visual Basic**Debuggen** das Kontrollkästchen **nicht starten, sondern Debuggen mein Code beim Starten** .
+  -   Aktivieren Sie auf der Eigenschaftenseite c# und Visual Basic**Debuggen** das Kontrollkästchen **nicht starten, sondern Debuggen Sie eigenen Code beim Starten** .
   -   Legen Sie den Wert **Anwendung starten** auf der Eigenschaftenseite **Debuggen** für JavaSCript und C++ auf **Ja** fest.
 
 ## <a name="symbols"></a>Symbole
