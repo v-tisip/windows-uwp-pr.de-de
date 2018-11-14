@@ -1,50 +1,50 @@
 ---
-author: normesta
+author: hickeys
 Description: You can use extensions to integrate your packaged desktop app with Windows 10 in predefined ways.
 Search.Product: eADQiWindows 10XVcnh
 title: Integrieren Ihrer App in Windows10 (Desktop-Brücke)
-ms.author: normesta
+ms.author: hickeys
 ms.date: 04/18/2018
 ms.topic: article
 keywords: windows10, UWP
 ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.localizationpriority: medium
-ms.openlocfilehash: 252b1309f1218a872ea49dcce7048b890a6139b4
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 6761ec38b470b798740cbabc72a648f51557edbc
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6041580"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6196396"
 ---
-# <a name="integrate-your-packaged-desktop-application-with-windows-10"></a><span data-ttu-id="ae49b-103">Integrieren Sie Ihre verpackte desktop-Anwendung mit Windows 10</span><span class="sxs-lookup"><span data-stu-id="ae49b-103">Integrate your packaged desktop application with Windows 10</span></span>
+# <a name="integrate-your-packaged-desktop-application-with-windows-10"></a><span data-ttu-id="471b8-103">Integrieren Sie Ihre verpackte desktop-Anwendung mit Windows 10</span><span class="sxs-lookup"><span data-stu-id="471b8-103">Integrate your packaged desktop application with Windows 10</span></span>
 
-<span data-ttu-id="ae49b-104">Verwenden Sie Erweiterungen, um Ihre verpackte desktop-Anwendung mit Windows 10 auf vordefinierter Weise zu integrieren.</span><span class="sxs-lookup"><span data-stu-id="ae49b-104">Use extensions to integrate your packaged desktop application with Windows 10 in predefined ways.</span></span>
+<span data-ttu-id="471b8-104">Verwenden Sie Erweiterungen, um Ihre verpackte desktop-Anwendung in Windows 10 auf vordefinierter Weise zu integrieren.</span><span class="sxs-lookup"><span data-stu-id="471b8-104">Use extensions to integrate your packaged desktop application with Windows 10 in predefined ways.</span></span>
 
-<span data-ttu-id="ae49b-105">Verwenden Sie z. B. eine Erweiterung, um eine Firewallausnahme festzulegen, machen Ihre Anwendung die standardanwendung für einen Dateityp oder verweisen Sie mit startkacheln auf die verpackte Version Ihrer App.</span><span class="sxs-lookup"><span data-stu-id="ae49b-105">For example, use an extension to create a firewall exception, make your application the default application for a file type, or point start tiles to the packaged version of your app.</span></span> <span data-ttu-id="ae49b-106">Um eine Erweiterung zu verwenden, fügen Sie einfach XML-Codes zur Paketmanifestdatei Ihrer App hinzu.</span><span class="sxs-lookup"><span data-stu-id="ae49b-106">To use an extension, just add some XML to your app's package manifest file.</span></span> <span data-ttu-id="ae49b-107">Es ist kein Code erforderlich.</span><span class="sxs-lookup"><span data-stu-id="ae49b-107">No code is required.</span></span>
+<span data-ttu-id="471b8-105">Verwenden Sie z. B. eine Erweiterung, um eine Firewallausnahme festzulegen, machen Ihre Anwendung die standardanwendung für einen Dateityp oder verweisen Sie mit startkacheln auf die verpackte Version Ihrer App.</span><span class="sxs-lookup"><span data-stu-id="471b8-105">For example, use an extension to create a firewall exception, make your application the default application for a file type, or point start tiles to the packaged version of your app.</span></span> <span data-ttu-id="471b8-106">Um eine Erweiterung zu verwenden, fügen Sie einfach XML-Codes zur Paketmanifestdatei Ihrer App hinzu.</span><span class="sxs-lookup"><span data-stu-id="471b8-106">To use an extension, just add some XML to your app's package manifest file.</span></span> <span data-ttu-id="471b8-107">Es ist kein Code erforderlich.</span><span class="sxs-lookup"><span data-stu-id="471b8-107">No code is required.</span></span>
 
-<span data-ttu-id="ae49b-108">In diesem Thema werden diese Erweiterungen und die Aufgaben beschrieben, die Sie anhand dieser Erweiterungen ausführen können.</span><span class="sxs-lookup"><span data-stu-id="ae49b-108">This topic describes these extensions and the tasks that you can perform by using them.</span></span>
+<span data-ttu-id="471b8-108">In diesem Thema werden diese Erweiterungen und die Aufgaben beschrieben, die Sie anhand dieser Erweiterungen ausführen können.</span><span class="sxs-lookup"><span data-stu-id="471b8-108">This topic describes these extensions and the tasks that you can perform by using them.</span></span>
 
-## <a name="transition-users-to-your-app"></a><span data-ttu-id="ae49b-109">Den Übergang Ihrer Benutzer auf Ihre App bereitstellen</span><span class="sxs-lookup"><span data-stu-id="ae49b-109">Transition users to your app</span></span>
+## <a name="transition-users-to-your-app"></a><span data-ttu-id="471b8-109">Den Übergang Ihrer Benutzer auf Ihre App bereitstellen</span><span class="sxs-lookup"><span data-stu-id="471b8-109">Transition users to your app</span></span>
 
-<span data-ttu-id="ae49b-110">Helfen Sie Ihren Benutzern, auf Ihre verpackte App umzustellen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-110">Help users transition to your packaged app.</span></span>
+<span data-ttu-id="471b8-110">Helfen Sie Ihren Benutzern, auf Ihre verpackte App umzustellen.</span><span class="sxs-lookup"><span data-stu-id="471b8-110">Help users transition to your packaged app.</span></span>
 
-* [<span data-ttu-id="ae49b-111">Verweisen Sie mit vorhandenen Startkacheln Taskleistenschaltflächen auf die verpackte App.</span><span class="sxs-lookup"><span data-stu-id="ae49b-111">Point existing Start tiles and taskbar buttons to your packaged app</span></span>](#point)
-* [<span data-ttu-id="ae49b-112">Stellen Sie die verpackte Anwendung und nicht Ihre desktop-app Dateien öffnet</span><span class="sxs-lookup"><span data-stu-id="ae49b-112">Make your packaged application open files instead of your desktop app</span></span>](#make)
-* [<span data-ttu-id="ae49b-113">Eine Gruppe von Dateitypen ordnen Sie Ihres Anwendungspakets zu</span><span class="sxs-lookup"><span data-stu-id="ae49b-113">Associate your packaged application with a set of file types</span></span>](#associate)
-* [<span data-ttu-id="ae49b-114">Fügen Sie den Kontextmenüs der Dateien, die einen bestimmten Dateityp haben, Optionen hinzu.</span><span class="sxs-lookup"><span data-stu-id="ae49b-114">Add options to the context menus of files that have a certain file type</span></span>](#add)
-* [<span data-ttu-id="ae49b-115">Öffnen Sie bestimmte Dateitypen direkt anhand einer URL</span><span class="sxs-lookup"><span data-stu-id="ae49b-115">Open certain types of files directly by using a URL</span></span>](#open)
+* [<span data-ttu-id="471b8-111">Verweisen Sie mit vorhandenen Startkacheln Taskleistenschaltflächen auf die verpackte App.</span><span class="sxs-lookup"><span data-stu-id="471b8-111">Point existing Start tiles and taskbar buttons to your packaged app</span></span>](#point)
+* [<span data-ttu-id="471b8-112">Stellen Sie die verpackte Anwendung Öffnen von Dateien anstelle der desktop-app</span><span class="sxs-lookup"><span data-stu-id="471b8-112">Make your packaged application open files instead of your desktop app</span></span>](#make)
+* [<span data-ttu-id="471b8-113">Eine Gruppe von Dateitypen ordnen Sie Ihres Anwendungspakets zu</span><span class="sxs-lookup"><span data-stu-id="471b8-113">Associate your packaged application with a set of file types</span></span>](#associate)
+* [<span data-ttu-id="471b8-114">Fügen Sie den Kontextmenüs der Dateien, die einen bestimmten Dateityp haben, Optionen hinzu.</span><span class="sxs-lookup"><span data-stu-id="471b8-114">Add options to the context menus of files that have a certain file type</span></span>](#add)
+* [<span data-ttu-id="471b8-115">Öffnen Sie bestimmte Dateitypen direkt anhand einer URL</span><span class="sxs-lookup"><span data-stu-id="471b8-115">Open certain types of files directly by using a URL</span></span>](#open)
 
 <a id="point" />
 
-### <a name="point-existing-start-tiles-and-taskbar-buttons-to-your-packaged-app"></a><span data-ttu-id="ae49b-116">Verweisen Sie mit vorhandenen Startkacheln Taskleistenschaltflächen auf die verpackte App.</span><span class="sxs-lookup"><span data-stu-id="ae49b-116">Point existing Start tiles and taskbar buttons to your packaged app</span></span>
+### <a name="point-existing-start-tiles-and-taskbar-buttons-to-your-packaged-app"></a><span data-ttu-id="471b8-116">Verweisen Sie mit vorhandenen Startkacheln Taskleistenschaltflächen auf die verpackte App.</span><span class="sxs-lookup"><span data-stu-id="471b8-116">Point existing Start tiles and taskbar buttons to your packaged app</span></span>
 
-<span data-ttu-id="ae49b-117">Ihre Benutzer haben möglicherweise Ihre Desktop-Anwendung an die Taskleiste oder das Startmenü angeheftet.</span><span class="sxs-lookup"><span data-stu-id="ae49b-117">Your users might have pinned your desktop application to the taskbar or the Start menu.</span></span> <span data-ttu-id="ae49b-118">Sie mit diesen Verknüpfungen auf Ihre neu verpackte App verweisen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-118">You can point those shortcuts to your new packaged app.</span></span>
+<span data-ttu-id="471b8-117">Ihre Benutzer haben möglicherweise Ihre Desktop-Anwendung an die Taskleiste oder das Startmenü angeheftet.</span><span class="sxs-lookup"><span data-stu-id="471b8-117">Your users might have pinned your desktop application to the taskbar or the Start menu.</span></span> <span data-ttu-id="471b8-118">Sie mit diesen Verknüpfungen auf Ihre neu verpackte App verweisen.</span><span class="sxs-lookup"><span data-stu-id="471b8-118">You can point those shortcuts to your new packaged app.</span></span>
 
-#### <a name="xml-namespace"></a><span data-ttu-id="ae49b-119">XML-Namespace</span><span class="sxs-lookup"><span data-stu-id="ae49b-119">XML namespace</span></span>
+#### <a name="xml-namespace"></a><span data-ttu-id="471b8-119">XML-Namespace</span><span class="sxs-lookup"><span data-stu-id="471b8-119">XML namespace</span></span>
 
 http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3
 
-#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="ae49b-120">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="ae49b-120">Elements and attributes of this extension</span></span>
+#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="471b8-120">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="471b8-120">Elements and attributes of this extension</span></span>
 
 ```XML
 <Extension Category="windows.desktopAppMigration">
@@ -56,15 +56,15 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 
 ```
 
-<span data-ttu-id="ae49b-121">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-rescap3-desktopappmigration).</span><span class="sxs-lookup"><span data-stu-id="ae49b-121">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-rescap3-desktopappmigration).</span></span>
+<span data-ttu-id="471b8-121">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-rescap3-desktopappmigration).</span><span class="sxs-lookup"><span data-stu-id="471b8-121">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-rescap3-desktopappmigration).</span></span>
 
-|<span data-ttu-id="ae49b-122">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-122">Name</span></span> | <span data-ttu-id="ae49b-123">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ae49b-123">Description</span></span> |
+|<span data-ttu-id="471b8-122">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-122">Name</span></span> | <span data-ttu-id="471b8-123">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="471b8-123">Description</span></span> |
 |-------|-------------|
-|<span data-ttu-id="ae49b-124">Kategorie</span><span class="sxs-lookup"><span data-stu-id="ae49b-124">Category</span></span> |<span data-ttu-id="ae49b-125">Immer ``windows.desktopAppMigration``.</span><span class="sxs-lookup"><span data-stu-id="ae49b-125">Always ``windows.desktopAppMigration``.</span></span>
-|<span data-ttu-id="ae49b-126">AumID</span><span class="sxs-lookup"><span data-stu-id="ae49b-126">AumID</span></span> |<span data-ttu-id="ae49b-127">Die Anwendungsbenutzermodell-ID der verpackten App.</span><span class="sxs-lookup"><span data-stu-id="ae49b-127">The Application User Model ID of your packaged app.</span></span> |
-|<span data-ttu-id="ae49b-128">Verknüpfungspfad</span><span class="sxs-lookup"><span data-stu-id="ae49b-128">ShortcutPath</span></span> |<span data-ttu-id="ae49b-129">Der Pfad zu den Ink-Dateien, die die Desktop-Version Ihrer App starten.</span><span class="sxs-lookup"><span data-stu-id="ae49b-129">The path to .lnk files that start the desktop version of your app.</span></span> |
+|<span data-ttu-id="471b8-124">Kategorie</span><span class="sxs-lookup"><span data-stu-id="471b8-124">Category</span></span> |<span data-ttu-id="471b8-125">Immer ``windows.desktopAppMigration``.</span><span class="sxs-lookup"><span data-stu-id="471b8-125">Always ``windows.desktopAppMigration``.</span></span>
+|<span data-ttu-id="471b8-126">AumID</span><span class="sxs-lookup"><span data-stu-id="471b8-126">AumID</span></span> |<span data-ttu-id="471b8-127">Die Anwendungsbenutzermodell-ID der verpackten App.</span><span class="sxs-lookup"><span data-stu-id="471b8-127">The Application User Model ID of your packaged app.</span></span> |
+|<span data-ttu-id="471b8-128">Verknüpfungspfad</span><span class="sxs-lookup"><span data-stu-id="471b8-128">ShortcutPath</span></span> |<span data-ttu-id="471b8-129">Der Pfad zu den Ink-Dateien, die die Desktop-Version Ihrer App starten.</span><span class="sxs-lookup"><span data-stu-id="471b8-129">The path to .lnk files that start the desktop version of your app.</span></span> |
 
-#### <a name="example"></a><span data-ttu-id="ae49b-130">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ae49b-130">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="471b8-130">Beispiel</span><span class="sxs-lookup"><span data-stu-id="471b8-130">Example</span></span>
 
 ```XML
 <Package
@@ -86,24 +86,25 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
   </Applications>
 </Package>
 ```
-#### <a name="related-sample"></a><span data-ttu-id="ae49b-131">Verwandte Beispiele</span><span class="sxs-lookup"><span data-stu-id="ae49b-131">Related sample</span></span>
 
-[<span data-ttu-id="ae49b-132">WPF-Bildanzeige mit Übergang/Migration/Deinstallation</span><span class="sxs-lookup"><span data-stu-id="ae49b-132">WPF picture viewer with transition/migration/uninstallation</span></span>](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
+#### <a name="related-sample"></a><span data-ttu-id="471b8-131">Verwandte Beispiele</span><span class="sxs-lookup"><span data-stu-id="471b8-131">Related sample</span></span>
+
+[<span data-ttu-id="471b8-132">WPF-Bildanzeige mit Übergang/Migration/Deinstallation</span><span class="sxs-lookup"><span data-stu-id="471b8-132">WPF picture viewer with transition/migration/uninstallation</span></span>](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
 
 <a id="make" />
 
-### <a name="make-your-packaged-application-open-files-instead-of-your-desktop-app"></a><span data-ttu-id="ae49b-133">Stellen Sie die verpackte Anwendung und nicht Ihre desktop-app Dateien öffnet</span><span class="sxs-lookup"><span data-stu-id="ae49b-133">Make your packaged application open files instead of your desktop app</span></span>
+### <a name="make-your-packaged-application-open-files-instead-of-your-desktop-app"></a><span data-ttu-id="471b8-133">Stellen Sie die verpackte Anwendung Öffnen von Dateien anstelle der desktop-app</span><span class="sxs-lookup"><span data-stu-id="471b8-133">Make your packaged application open files instead of your desktop app</span></span>
 
-<span data-ttu-id="ae49b-134">Sie können sicherstellen, dass Benutzer Ihre neue verpackte Anwendung standardmäßig für bestimmte Arten von Dateien, statt die desktop-Version Ihrer App öffnen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-134">You can make sure that users open your new packaged application by default for specific types of files instead of opening the desktop version of your app.</span></span>
+<span data-ttu-id="471b8-134">Sie können sicherstellen, dass Benutzer Ihre neue verpackte Anwendung standardmäßig für bestimmte Arten von Dateien, statt die desktop-Version Ihrer App öffnen.</span><span class="sxs-lookup"><span data-stu-id="471b8-134">You can make sure that users open your new packaged application by default for specific types of files instead of opening the desktop version of your app.</span></span>
 
-<span data-ttu-id="ae49b-135">Dazu müssen Sie den [programmgesteuerten Bezeichner (Programm-ID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) jeder Anwendung angeben, aus der Sie Dateizuordnungen übernehmen möchten.</span><span class="sxs-lookup"><span data-stu-id="ae49b-135">To do that, you'll specify the [programmatic identifier (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) of each application from which you want to inherit file associations.</span></span>
+<span data-ttu-id="471b8-135">Dazu müssen Sie den [programmgesteuerten Bezeichner (Programm-ID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) jeder Anwendung angeben, aus der Sie Dateizuordnungen übernehmen möchten.</span><span class="sxs-lookup"><span data-stu-id="471b8-135">To do that, you'll specify the [programmatic identifier (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) of each application from which you want to inherit file associations.</span></span>
 
-#### <a name="xml-namespaces"></a><span data-ttu-id="ae49b-136">XML-Namespaces</span><span class="sxs-lookup"><span data-stu-id="ae49b-136">XML namespaces</span></span>
+#### <a name="xml-namespaces"></a><span data-ttu-id="471b8-136">XML-Namespaces</span><span class="sxs-lookup"><span data-stu-id="471b8-136">XML namespaces</span></span>
 
 * http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 * http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3
 
-#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="ae49b-137">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="ae49b-137">Elements and attributes of this extension</span></span>
+#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="471b8-137">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="471b8-137">Elements and attributes of this extension</span></span>
 
 ```XML
 <Extension Category="windows.fileTypeAssociation">
@@ -115,15 +116,15 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 </Extension>
 ```
 
-<span data-ttu-id="ae49b-138">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span><span class="sxs-lookup"><span data-stu-id="ae49b-138">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span></span>
+<span data-ttu-id="471b8-138">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span><span class="sxs-lookup"><span data-stu-id="471b8-138">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span></span>
 
-|<span data-ttu-id="ae49b-139">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-139">Name</span></span> |<span data-ttu-id="ae49b-140">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ae49b-140">Description</span></span> |
+|<span data-ttu-id="471b8-139">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-139">Name</span></span> |<span data-ttu-id="471b8-140">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="471b8-140">Description</span></span> |
 |-------|-------------|
-|<span data-ttu-id="ae49b-141">Kategorie</span><span class="sxs-lookup"><span data-stu-id="ae49b-141">Category</span></span> |<span data-ttu-id="ae49b-142">Immer ``windows.fileTypeAssociation``.</span><span class="sxs-lookup"><span data-stu-id="ae49b-142">Always ``windows.fileTypeAssociation``.</span></span>
-|<span data-ttu-id="ae49b-143">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-143">Name</span></span> |<span data-ttu-id="ae49b-144">Eine eindeutige ID für Ihre App.</span><span class="sxs-lookup"><span data-stu-id="ae49b-144">A unique Id for your app.</span></span> <span data-ttu-id="ae49b-145">Diese ID wird intern verwendet, um einen [programmgesteuerte Bezeichner (Programm-ID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) mit Hash zu generieren, die mit Ihrer Dateitypzuordnung verknüpft ist.</span><span class="sxs-lookup"><span data-stu-id="ae49b-145">This Id is used internally to generate a hashed [programmatic identifier (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) associated with your file type association.</span></span> <span data-ttu-id="ae49b-146">Mithilfe dieser ID können Sie Änderungen in zukünftigen Versionen Ihrer App verwalten.</span><span class="sxs-lookup"><span data-stu-id="ae49b-146">You can use this Id to manage changes in future versions of your app.</span></span> |
-|<span data-ttu-id="ae49b-147">MigrationProgId</span><span class="sxs-lookup"><span data-stu-id="ae49b-147">MigrationProgId</span></span> |<span data-ttu-id="ae49b-148">Der [programmgesteuerte Bezeichner (Programm-ID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) wird beschrieben, die die Anwendung, die Komponente und die Version der Desktopanwendung, aus der Sie dateizuordnungen übernehmen möchten.</span><span class="sxs-lookup"><span data-stu-id="ae49b-148">The [programmatic identifier (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) that describes the application, component, and version of the desktop application from which you want to inherit file associations.</span></span>|
+|<span data-ttu-id="471b8-141">Kategorie</span><span class="sxs-lookup"><span data-stu-id="471b8-141">Category</span></span> |<span data-ttu-id="471b8-142">Immer ``windows.fileTypeAssociation``.</span><span class="sxs-lookup"><span data-stu-id="471b8-142">Always ``windows.fileTypeAssociation``.</span></span>
+|<span data-ttu-id="471b8-143">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-143">Name</span></span> |<span data-ttu-id="471b8-144">Eine eindeutige ID für Ihre App.</span><span class="sxs-lookup"><span data-stu-id="471b8-144">A unique Id for your app.</span></span> <span data-ttu-id="471b8-145">Diese ID wird intern verwendet, um einen [programmgesteuerte Bezeichner (Programm-ID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) mit Hash zu generieren, die mit Ihrer Dateitypzuordnung verknüpft ist.</span><span class="sxs-lookup"><span data-stu-id="471b8-145">This Id is used internally to generate a hashed [programmatic identifier (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) associated with your file type association.</span></span> <span data-ttu-id="471b8-146">Mithilfe dieser ID können Sie Änderungen in zukünftigen Versionen Ihrer App verwalten.</span><span class="sxs-lookup"><span data-stu-id="471b8-146">You can use this Id to manage changes in future versions of your app.</span></span> |
+|<span data-ttu-id="471b8-147">MigrationProgId</span><span class="sxs-lookup"><span data-stu-id="471b8-147">MigrationProgId</span></span> |<span data-ttu-id="471b8-148">Der [programmgesteuerte Bezeichner (Programm-ID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) wird beschrieben, die die Anwendung, die Komponente und die Version der desktop-Anwendung aus der Sie dateizuordnungen übernehmen möchten.</span><span class="sxs-lookup"><span data-stu-id="471b8-148">The [programmatic identifier (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) that describes the application, component, and version of the desktop application from which you want to inherit file associations.</span></span>|
 
-#### <a name="example"></a><span data-ttu-id="ae49b-149">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ae49b-149">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="471b8-149">Beispiel</span><span class="sxs-lookup"><span data-stu-id="471b8-149">Example</span></span>
 
 ```XML
 <Package
@@ -146,22 +147,23 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
   </Applications>
 </Package>
 ```
-#### <a name="related-sample"></a><span data-ttu-id="ae49b-150">Verwandte Beispiele</span><span class="sxs-lookup"><span data-stu-id="ae49b-150">Related sample</span></span>
 
-[<span data-ttu-id="ae49b-151">WPF-Bildanzeige mit Übergang/Migration/Deinstallation</span><span class="sxs-lookup"><span data-stu-id="ae49b-151">WPF picture viewer with transition/migration/uninstallation</span></span>](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
+#### <a name="related-sample"></a><span data-ttu-id="471b8-150">Verwandte Beispiele</span><span class="sxs-lookup"><span data-stu-id="471b8-150">Related sample</span></span>
+
+[<span data-ttu-id="471b8-151">WPF-Bildanzeige mit Übergang/Migration/Deinstallation</span><span class="sxs-lookup"><span data-stu-id="471b8-151">WPF picture viewer with transition/migration/uninstallation</span></span>](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
 
 <a id="associate" />
 
-### <a name="associate-your-packaged-application-with-a-set-of-file-types"></a><span data-ttu-id="ae49b-152">Eine Gruppe von Dateitypen ordnen Sie Ihres Anwendungspakets zu</span><span class="sxs-lookup"><span data-stu-id="ae49b-152">Associate your packaged application with a set of file types</span></span>
+### <a name="associate-your-packaged-application-with-a-set-of-file-types"></a><span data-ttu-id="471b8-152">Eine Gruppe von Dateitypen ordnen Sie Ihres Anwendungspakets zu</span><span class="sxs-lookup"><span data-stu-id="471b8-152">Associate your packaged application with a set of file types</span></span>
 
-<span data-ttu-id="ae49b-153">Sie können die verpackte Anwendung mit dateityperweiterungen verknüpft.</span><span class="sxs-lookup"><span data-stu-id="ae49b-153">You can associated your packaged application with file type extensions.</span></span> <span data-ttu-id="ae49b-154">Wenn ein Benutzer eine Datei klickt und die Option " **Öffnen mit** " auswählt, wird die Anwendung in der Liste der Vorschläge angezeigt.</span><span class="sxs-lookup"><span data-stu-id="ae49b-154">If a user right-clicks a file and then selects the **Open with** option, your application appears in the list of suggestions.</span></span>
+<span data-ttu-id="471b8-153">Sie können die verpackte Anwendung mit dateityperweiterungen verknüpft.</span><span class="sxs-lookup"><span data-stu-id="471b8-153">You can associated your packaged application with file type extensions.</span></span> <span data-ttu-id="471b8-154">Wenn ein Benutzer eine Datei klickt und die Option " **Öffnen mit** " auswählt, wird die Anwendung in der Liste der Vorschläge angezeigt.</span><span class="sxs-lookup"><span data-stu-id="471b8-154">If a user right-clicks a file and then selects the **Open with** option, your application appears in the list of suggestions.</span></span>
 
-#### <a name="xml-namespace"></a><span data-ttu-id="ae49b-155">XML-Namespace</span><span class="sxs-lookup"><span data-stu-id="ae49b-155">XML namespace</span></span>
+#### <a name="xml-namespace"></a><span data-ttu-id="471b8-155">XML-Namespace</span><span class="sxs-lookup"><span data-stu-id="471b8-155">XML namespace</span></span>
 
 * http://schemas.microsoft.com/appx/manifest/uap/windows10
 * http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 
-#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="ae49b-156">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="ae49b-156">Elements and attributes of this extension</span></span>
+#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="471b8-156">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="471b8-156">Elements and attributes of this extension</span></span>
 
 ```XML
 <Extension Category="windows.fileTypeAssociation">
@@ -173,15 +175,15 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 </Extension>
 ```
 
-<span data-ttu-id="ae49b-157">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span><span class="sxs-lookup"><span data-stu-id="ae49b-157">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span></span>
+<span data-ttu-id="471b8-157">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span><span class="sxs-lookup"><span data-stu-id="471b8-157">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span></span>
 
-|<span data-ttu-id="ae49b-158">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-158">Name</span></span> |<span data-ttu-id="ae49b-159">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ae49b-159">Description</span></span> |
+|<span data-ttu-id="471b8-158">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-158">Name</span></span> |<span data-ttu-id="471b8-159">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="471b8-159">Description</span></span> |
 |-------|-------------|
-|<span data-ttu-id="ae49b-160">Kategorie</span><span class="sxs-lookup"><span data-stu-id="ae49b-160">Category</span></span> |<span data-ttu-id="ae49b-161">Immer ``windows.fileTypeAssociation``.</span><span class="sxs-lookup"><span data-stu-id="ae49b-161">Always ``windows.fileTypeAssociation``.</span></span>
-|<span data-ttu-id="ae49b-162">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-162">Name</span></span> |<span data-ttu-id="ae49b-163">Eine eindeutige ID für Ihre App.</span><span class="sxs-lookup"><span data-stu-id="ae49b-163">A unique Id for your app.</span></span> <span data-ttu-id="ae49b-164">Diese ID wird intern verwendet, um einen [programmgesteuerte Bezeichner (Programm-ID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) mit Hash zu generieren, die mit Ihrer Dateitypzuordnung verknüpft ist.</span><span class="sxs-lookup"><span data-stu-id="ae49b-164">This Id is used internally to generate a hashed [programmatic identifier (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) associated with your file type association.</span></span> <span data-ttu-id="ae49b-165">Mithilfe dieser ID können Sie Änderungen in zukünftigen Versionen Ihrer App verwalten.</span><span class="sxs-lookup"><span data-stu-id="ae49b-165">You can use this Id to manage changes in future versions of your app.</span></span>   |
-|<span data-ttu-id="ae49b-166">FileType</span><span class="sxs-lookup"><span data-stu-id="ae49b-166">FileType</span></span> |<span data-ttu-id="ae49b-167">Die Erweiterung, die von Ihrer App unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="ae49b-167">The file extension supported by your app.</span></span> |
+|<span data-ttu-id="471b8-160">Kategorie</span><span class="sxs-lookup"><span data-stu-id="471b8-160">Category</span></span> |<span data-ttu-id="471b8-161">Immer ``windows.fileTypeAssociation``.</span><span class="sxs-lookup"><span data-stu-id="471b8-161">Always ``windows.fileTypeAssociation``.</span></span>
+|<span data-ttu-id="471b8-162">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-162">Name</span></span> |<span data-ttu-id="471b8-163">Eine eindeutige ID für Ihre App.</span><span class="sxs-lookup"><span data-stu-id="471b8-163">A unique Id for your app.</span></span> <span data-ttu-id="471b8-164">Diese ID wird intern verwendet, um einen [programmgesteuerte Bezeichner (Programm-ID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) mit Hash zu generieren, die mit Ihrer Dateitypzuordnung verknüpft ist.</span><span class="sxs-lookup"><span data-stu-id="471b8-164">This Id is used internally to generate a hashed [programmatic identifier (ProgID)](https://msdn.microsoft.com/library/windows/desktop/cc144152.aspx) associated with your file type association.</span></span> <span data-ttu-id="471b8-165">Mithilfe dieser ID können Sie Änderungen in zukünftigen Versionen Ihrer App verwalten.</span><span class="sxs-lookup"><span data-stu-id="471b8-165">You can use this Id to manage changes in future versions of your app.</span></span>   |
+|<span data-ttu-id="471b8-166">FileType</span><span class="sxs-lookup"><span data-stu-id="471b8-166">FileType</span></span> |<span data-ttu-id="471b8-167">Die Erweiterung, die von Ihrer App unterstützt wird.</span><span class="sxs-lookup"><span data-stu-id="471b8-167">The file extension supported by your app.</span></span> |
 
-#### <a name="example"></a><span data-ttu-id="ae49b-168">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ae49b-168">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="471b8-168">Beispiel</span><span class="sxs-lookup"><span data-stu-id="471b8-168">Example</span></span>
 
 ```XML
 <Package
@@ -194,8 +196,8 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
         <uap:Extension Category="windows.fileTypeAssociation">
           <uap3:FileTypeAssociation Name="Contoso">
             <uap:SupportedFileTypes>
-              <uap:FileType>.txt</uap:FileType>
-              <uap:FileType>.avi</uap:FileType>
+            <uap:FileType>.txt</uap:FileType>
+            <uap:FileType>.avi</uap:FileType>
             </uap:SupportedFileTypes>
           </uap3:FileTypeAssociation>
         </uap:Extension>
@@ -205,49 +207,48 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 </Package>
 ```
 
-#### <a name="related-sample"></a><span data-ttu-id="ae49b-169">Verwandte Beispiele</span><span class="sxs-lookup"><span data-stu-id="ae49b-169">Related sample</span></span>
+#### <a name="related-sample"></a><span data-ttu-id="471b8-169">Verwandte Beispiele</span><span class="sxs-lookup"><span data-stu-id="471b8-169">Related sample</span></span>
 
-[<span data-ttu-id="ae49b-170">WPF-Bildanzeige mit Übergang/Migration/Deinstallation</span><span class="sxs-lookup"><span data-stu-id="ae49b-170">WPF picture viewer with transition/migration/uninstallation</span></span>](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
+[<span data-ttu-id="471b8-170">WPF-Bildanzeige mit Übergang/Migration/Deinstallation</span><span class="sxs-lookup"><span data-stu-id="471b8-170">WPF picture viewer with transition/migration/uninstallation</span></span>](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
 
 <a id="add" />
 
-### <a name="add-options-to-the-context-menus-of-files-that-have-a-certain-file-type"></a><span data-ttu-id="ae49b-171">Fügen Sie den Kontextmenüs der Dateien, die einen bestimmten Dateityp haben, Optionen hinzu.</span><span class="sxs-lookup"><span data-stu-id="ae49b-171">Add options to the context menus of files that have a certain file type</span></span>
+### <a name="add-options-to-the-context-menus-of-files-that-have-a-certain-file-type"></a><span data-ttu-id="471b8-171">Fügen Sie den Kontextmenüs der Dateien, die einen bestimmten Dateityp haben, Optionen hinzu.</span><span class="sxs-lookup"><span data-stu-id="471b8-171">Add options to the context menus of files that have a certain file type</span></span>
 
-<span data-ttu-id="ae49b-172">In den meisten Fällen klicken Benutzer doppelt auf Dateien, um sie zu öffnen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-172">In most cases, users double-click files to open them.</span></span> <span data-ttu-id="ae49b-173">Wenn Benutzer mit der rechten Maustaste auf eine Datei klicken, werden verschiedene Optionen angezeigt.</span><span class="sxs-lookup"><span data-stu-id="ae49b-173">If users, right click a file, various options appear.</span></span>
+<span data-ttu-id="471b8-172">In den meisten Fällen klicken Benutzer doppelt auf Dateien, um sie zu öffnen.</span><span class="sxs-lookup"><span data-stu-id="471b8-172">In most cases, users double-click files to open them.</span></span> <span data-ttu-id="471b8-173">Wenn Benutzer mit der rechten Maustaste auf eine Datei klicken, werden verschiedene Optionen angezeigt.</span><span class="sxs-lookup"><span data-stu-id="471b8-173">If users, right click a file, various options appear.</span></span>
 
-<span data-ttu-id="ae49b-174">Sie können diesem Menü Optionen hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-174">You can add options to that menu.</span></span> <span data-ttu-id="ae49b-175">Diese Optionen geben Benutzern weitere Möglichkeiten zur Interaktion mit der Datei, wie etwa Drucken, Bearbeiten oder das Anzeigen einer Vorschau.</span><span class="sxs-lookup"><span data-stu-id="ae49b-175">These options give users other ways to interact with your file such as print, edit, or preview the file.</span></span>
+<span data-ttu-id="471b8-174">Sie können diesem Menü Optionen hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="471b8-174">You can add options to that menu.</span></span> <span data-ttu-id="471b8-175">Diese Optionen geben Benutzern weitere Möglichkeiten zur Interaktion mit der Datei, wie etwa Drucken, Bearbeiten oder das Anzeigen einer Vorschau.</span><span class="sxs-lookup"><span data-stu-id="471b8-175">These options give users other ways to interact with your file such as print, edit, or preview the file.</span></span>
 
-#### <a name="xml-namespaces"></a><span data-ttu-id="ae49b-176">XML-Namespaces</span><span class="sxs-lookup"><span data-stu-id="ae49b-176">XML namespaces</span></span>
+#### <a name="xml-namespaces"></a><span data-ttu-id="471b8-176">XML-Namespaces</span><span class="sxs-lookup"><span data-stu-id="471b8-176">XML namespaces</span></span>
 
 * http://schemas.microsoft.com/appx/manifest/uap/windows10
 * http://schemas.microsoft.com/appx/manifest/uap/windows10/2
 * http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 
-
-#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="ae49b-177">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="ae49b-177">Elements and attributes of this extension</span></span>
+#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="471b8-177">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="471b8-177">Elements and attributes of this extension</span></span>
 
 ```XML
 <Extension Category="windows.fileTypeAssociation">
     <FileTypeAssociation Name="[AppID]">
         <SupportedVerbs>
-              <Verb Id="[ID]" Extended="[Extended]" Parameters="[parameters]">"[verb label]"</Verb>
+           <Verb Id="[ID]" Extended="[Extended]" Parameters="[parameters]">"[verb label]"</Verb>
         </SupportedVerbs>
     </FileTypeAssociation>
 </Extension>
 ```
 
-<span data-ttu-id="ae49b-178">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span><span class="sxs-lookup"><span data-stu-id="ae49b-178">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span></span>
+<span data-ttu-id="471b8-178">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span><span class="sxs-lookup"><span data-stu-id="471b8-178">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span></span>
 
-|<span data-ttu-id="ae49b-179">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-179">Name</span></span> |<span data-ttu-id="ae49b-180">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ae49b-180">Description</span></span> |
+|<span data-ttu-id="471b8-179">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-179">Name</span></span> |<span data-ttu-id="471b8-180">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="471b8-180">Description</span></span> |
 |-------|-------------|
-|<span data-ttu-id="ae49b-181">Kategorie</span><span class="sxs-lookup"><span data-stu-id="ae49b-181">Category</span></span> | <span data-ttu-id="ae49b-182">Immer ``windows.fileTypeAssociation``.</span><span class="sxs-lookup"><span data-stu-id="ae49b-182">Always ``windows.fileTypeAssociation``.</span></span>
-|<span data-ttu-id="ae49b-183">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-183">Name</span></span> |<span data-ttu-id="ae49b-184">Eine eindeutige ID für Ihre App.</span><span class="sxs-lookup"><span data-stu-id="ae49b-184">A unique Id for your app.</span></span> |
-|<span data-ttu-id="ae49b-185">Verb</span><span class="sxs-lookup"><span data-stu-id="ae49b-185">Verb</span></span> |<span data-ttu-id="ae49b-186">Der Name, der im Kontextmenü des Datei-Explorers angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="ae49b-186">The name that appears in the File Explorer context menu.</span></span> <span data-ttu-id="ae49b-187">Diese Zeichenfolge kann mithilfe von ```ms-resource``` lokalisiert werden.</span><span class="sxs-lookup"><span data-stu-id="ae49b-187">This string is localizable that uses ```ms-resource```.</span></span>|
-|<span data-ttu-id="ae49b-188">ID</span><span class="sxs-lookup"><span data-stu-id="ae49b-188">Id</span></span> |<span data-ttu-id="ae49b-189">Die eindeutige ID des Verbs.</span><span class="sxs-lookup"><span data-stu-id="ae49b-189">The unique Id of the verb.</span></span> <span data-ttu-id="ae49b-190">Wenn Ihre Anwendung eine UWP-app ist, wird übergeben, um Ihre app im Rahmen der aktivierungsereignisargumente der Auswahl des Benutzers angemessen behandelt werden kann.</span><span class="sxs-lookup"><span data-stu-id="ae49b-190">If your application is a UWP app, this is passed to your app as part of its activation event args so it can handle the user’s selection appropriately.</span></span> <span data-ttu-id="ae49b-191">Wenn Ihre Anwendung eine vertrauenswürdig verpackte app ist, empfängt er Parameter stattdessen (siehe nächsten Aufzählungspunkt).</span><span class="sxs-lookup"><span data-stu-id="ae49b-191">If your application is a full-trust packaged app, it receives parameters instead (see the next bullet).</span></span> |
-|<span data-ttu-id="ae49b-192">Parameter</span><span class="sxs-lookup"><span data-stu-id="ae49b-192">Parameters</span></span> |<span data-ttu-id="ae49b-193">Die Liste mit Argumentparametern und -werten für das Verb.</span><span class="sxs-lookup"><span data-stu-id="ae49b-193">The list of argument parameters and values associated with the verb.</span></span> <span data-ttu-id="ae49b-194">Wenn Ihre Anwendung eine vertrauenswürdig verpackte app ist, werden diese Parameter an die Anwendung als Ereignisargumente übergeben, wenn die Anwendung aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="ae49b-194">If your application is a full-trust packaged app, these parameters are passed to the application as event args when the application is activated.</span></span> <span data-ttu-id="ae49b-195">Sie können das Verhalten von Ihrer Anwendung auf Grundlage anderer aktivierungsverben anpassen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-195">You can customize the behavior of your application based on different activation verbs.</span></span> <span data-ttu-id="ae49b-196">Wenn eine Variable einen Dateipfad enthalten kann, schließen Sie den Parameterwert in Anführungszeichen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-196">If a variable can contain a file path, wrap the parameter value in quotes.</span></span> <span data-ttu-id="ae49b-197">Dadurch werden jegliche Probleme vermieden, die in Fällen auftreten, bei denen der Pfad Leerzeichen enthält.</span><span class="sxs-lookup"><span data-stu-id="ae49b-197">That will avoid any issues that happen in cases where the path includes spaces.</span></span> <span data-ttu-id="ae49b-198">Wenn Ihre Anwendung eine UWP-app ist, können Sie keine Parameter übergeben.</span><span class="sxs-lookup"><span data-stu-id="ae49b-198">If your application is a UWP app, you can’t pass parameters.</span></span> <span data-ttu-id="ae49b-199">Die App empfängt stattdessen die ID (siehe das vorherige Aufzählungszeichen).</span><span class="sxs-lookup"><span data-stu-id="ae49b-199">The app receives the Id instead (see the previous bullet).</span></span>|
-|<span data-ttu-id="ae49b-200">Erweitert</span><span class="sxs-lookup"><span data-stu-id="ae49b-200">Extended</span></span> |<span data-ttu-id="ae49b-201">Gibt an, dass das Verb nur angezeigt werden soll, wenn der Benutzer zum Anzeigen des Kontextmenüs **UMSCHALT** gedrückt hält, bevor er mit der rechten Maustaste auf die Datei klickt.</span><span class="sxs-lookup"><span data-stu-id="ae49b-201">Specifies that the verb appears only if the user shows the context menu by holding the **Shift** key before right-clicking the file.</span></span> <span data-ttu-id="ae49b-202">Dieses Attribut ist optional und standardmäßig auf den Wert von **False** (Verb soll immer angezeigt werden) festgelegt.</span><span class="sxs-lookup"><span data-stu-id="ae49b-202">This attribute is optional and defaults to a value of **False** (e.g., always show the verb) if not listed.</span></span> <span data-ttu-id="ae49b-203">Dieses Verhalten muss für jedes Verb einzeln angegeben werden – mit Ausnahme von „Öffnen“: Bei diesem Verb ist der Wert immer **False**.</span><span class="sxs-lookup"><span data-stu-id="ae49b-203">You specify this behavior individually for each verb (except for "Open," which is always **False**).</span></span>|
+|<span data-ttu-id="471b8-181">Kategorie</span><span class="sxs-lookup"><span data-stu-id="471b8-181">Category</span></span> | <span data-ttu-id="471b8-182">Immer ``windows.fileTypeAssociation``.</span><span class="sxs-lookup"><span data-stu-id="471b8-182">Always ``windows.fileTypeAssociation``.</span></span>
+|<span data-ttu-id="471b8-183">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-183">Name</span></span> |<span data-ttu-id="471b8-184">Eine eindeutige ID für Ihre App.</span><span class="sxs-lookup"><span data-stu-id="471b8-184">A unique Id for your app.</span></span> |
+|<span data-ttu-id="471b8-185">Verb</span><span class="sxs-lookup"><span data-stu-id="471b8-185">Verb</span></span> |<span data-ttu-id="471b8-186">Der Name, der im Kontextmenü des Datei-Explorers angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="471b8-186">The name that appears in the File Explorer context menu.</span></span> <span data-ttu-id="471b8-187">Diese Zeichenfolge kann mithilfe von ```ms-resource``` lokalisiert werden.</span><span class="sxs-lookup"><span data-stu-id="471b8-187">This string is localizable that uses ```ms-resource```.</span></span>|
+|<span data-ttu-id="471b8-188">ID</span><span class="sxs-lookup"><span data-stu-id="471b8-188">Id</span></span> |<span data-ttu-id="471b8-189">Die eindeutige ID des Verbs.</span><span class="sxs-lookup"><span data-stu-id="471b8-189">The unique Id of the verb.</span></span> <span data-ttu-id="471b8-190">Wenn Ihre Anwendung eine UWP-app ist, wird übergeben, um Ihre app im Rahmen der aktivierungsereignisargumente der Auswahl des Benutzers angemessen behandelt werden kann.</span><span class="sxs-lookup"><span data-stu-id="471b8-190">If your application is a UWP app, this is passed to your app as part of its activation event args so it can handle the user’s selection appropriately.</span></span> <span data-ttu-id="471b8-191">Wenn Ihre Anwendung eine vertrauenswürdig verpackte app ist, empfängt er Parameter stattdessen (siehe nächsten Aufzählungspunkt).</span><span class="sxs-lookup"><span data-stu-id="471b8-191">If your application is a full-trust packaged app, it receives parameters instead (see the next bullet).</span></span> |
+|<span data-ttu-id="471b8-192">Parameter</span><span class="sxs-lookup"><span data-stu-id="471b8-192">Parameters</span></span> |<span data-ttu-id="471b8-193">Die Liste mit Argumentparametern und -werten für das Verb.</span><span class="sxs-lookup"><span data-stu-id="471b8-193">The list of argument parameters and values associated with the verb.</span></span> <span data-ttu-id="471b8-194">Wenn Ihre Anwendung eine vertrauenswürdig verpackte app ist, werden diese Parameter an die Anwendung als Ereignisargumente übergeben, wenn die Anwendung aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="471b8-194">If your application is a full-trust packaged app, these parameters are passed to the application as event args when the application is activated.</span></span> <span data-ttu-id="471b8-195">Sie können das Verhalten der Anwendung Grundlage anderer aktivierungsverben anpassen.</span><span class="sxs-lookup"><span data-stu-id="471b8-195">You can customize the behavior of your application based on different activation verbs.</span></span> <span data-ttu-id="471b8-196">Wenn eine Variable einen Dateipfad enthalten kann, schließen Sie den Parameterwert in Anführungszeichen.</span><span class="sxs-lookup"><span data-stu-id="471b8-196">If a variable can contain a file path, wrap the parameter value in quotes.</span></span> <span data-ttu-id="471b8-197">Dadurch werden jegliche Probleme vermieden, die in Fällen auftreten, bei denen der Pfad Leerzeichen enthält.</span><span class="sxs-lookup"><span data-stu-id="471b8-197">That will avoid any issues that happen in cases where the path includes spaces.</span></span> <span data-ttu-id="471b8-198">Wenn Ihre Anwendung eine UWP-app ist, können Sie keine Parameter übergeben.</span><span class="sxs-lookup"><span data-stu-id="471b8-198">If your application is a UWP app, you can’t pass parameters.</span></span> <span data-ttu-id="471b8-199">Die App empfängt stattdessen die ID (siehe das vorherige Aufzählungszeichen).</span><span class="sxs-lookup"><span data-stu-id="471b8-199">The app receives the Id instead (see the previous bullet).</span></span>|
+|<span data-ttu-id="471b8-200">Erweitert</span><span class="sxs-lookup"><span data-stu-id="471b8-200">Extended</span></span> |<span data-ttu-id="471b8-201">Gibt an, dass das Verb nur angezeigt werden soll, wenn der Benutzer zum Anzeigen des Kontextmenüs **UMSCHALT** gedrückt hält, bevor er mit der rechten Maustaste auf die Datei klickt.</span><span class="sxs-lookup"><span data-stu-id="471b8-201">Specifies that the verb appears only if the user shows the context menu by holding the **Shift** key before right-clicking the file.</span></span> <span data-ttu-id="471b8-202">Dieses Attribut ist optional und standardmäßig auf den Wert von **False** (Verb soll immer angezeigt werden) festgelegt.</span><span class="sxs-lookup"><span data-stu-id="471b8-202">This attribute is optional and defaults to a value of **False** (e.g., always show the verb) if not listed.</span></span> <span data-ttu-id="471b8-203">Dieses Verhalten muss für jedes Verb einzeln angegeben werden – mit Ausnahme von „Öffnen“: Bei diesem Verb ist der Wert immer **False**.</span><span class="sxs-lookup"><span data-stu-id="471b8-203">You specify this behavior individually for each verb (except for "Open," which is always **False**).</span></span>|
 
-#### <a name="example"></a><span data-ttu-id="ae49b-204">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ae49b-204">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="471b8-204">Beispiel</span><span class="sxs-lookup"><span data-stu-id="471b8-204">Example</span></span>
 
 ```XML
 <Package
@@ -272,44 +273,45 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
   </Applications>
 </Package>
 ```
-#### <a name="related-sample"></a><span data-ttu-id="ae49b-205">Verwandte Beispiele</span><span class="sxs-lookup"><span data-stu-id="ae49b-205">Related sample</span></span>
 
-[<span data-ttu-id="ae49b-206">WPF-Bildanzeige mit Übergang/Migration/Deinstallation</span><span class="sxs-lookup"><span data-stu-id="ae49b-206">WPF picture viewer with transition/migration/uninstallation</span></span>](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
+#### <a name="related-sample"></a><span data-ttu-id="471b8-205">Verwandte Beispiele</span><span class="sxs-lookup"><span data-stu-id="471b8-205">Related sample</span></span>
+
+[<span data-ttu-id="471b8-206">WPF-Bildanzeige mit Übergang/Migration/Deinstallation</span><span class="sxs-lookup"><span data-stu-id="471b8-206">WPF picture viewer with transition/migration/uninstallation</span></span>](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
 
 <a id="open" />
 
-### <a name="open-certain-types-of-files-directly-by-using-a-url"></a><span data-ttu-id="ae49b-207">Öffnen Sie bestimmte Dateitypen direkt anhand einer URL</span><span class="sxs-lookup"><span data-stu-id="ae49b-207">Open certain types of files directly by using a URL</span></span>
+### <a name="open-certain-types-of-files-directly-by-using-a-url"></a><span data-ttu-id="471b8-207">Öffnen Sie bestimmte Dateitypen direkt anhand einer URL</span><span class="sxs-lookup"><span data-stu-id="471b8-207">Open certain types of files directly by using a URL</span></span>
 
-<span data-ttu-id="ae49b-208">Sie können sicherstellen, dass Benutzer Ihre neue verpackte Anwendung standardmäßig für bestimmte Arten von Dateien, statt die desktop-Version Ihrer App öffnen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-208">You can make sure that users open your new packaged application by default for specific types of files instead of opening the desktop version of your app.</span></span>
+<span data-ttu-id="471b8-208">Sie können sicherstellen, dass Benutzer Ihre neue verpackte Anwendung standardmäßig für bestimmte Arten von Dateien, statt die desktop-Version Ihrer App öffnen.</span><span class="sxs-lookup"><span data-stu-id="471b8-208">You can make sure that users open your new packaged application by default for specific types of files instead of opening the desktop version of your app.</span></span>
 
-#### <a name="xml-namespaces"></a><span data-ttu-id="ae49b-209">XML-Namespaces</span><span class="sxs-lookup"><span data-stu-id="ae49b-209">XML namespaces</span></span>
+#### <a name="xml-namespaces"></a><span data-ttu-id="471b8-209">XML-Namespaces</span><span class="sxs-lookup"><span data-stu-id="471b8-209">XML namespaces</span></span>
 
 * http://schemas.microsoft.com/appx/manifest/uap/windows10
-* <span data-ttu-id="ae49b-210">http://schemas.microsoft.com/appx/manifest/uap/windows10/3"</span><span class="sxs-lookup"><span data-stu-id="ae49b-210">http://schemas.microsoft.com/appx/manifest/uap/windows10/3"</span></span>
+* <span data-ttu-id="471b8-210">http://schemas.microsoft.com/appx/manifest/uap/windows10/3"</span><span class="sxs-lookup"><span data-stu-id="471b8-210">http://schemas.microsoft.com/appx/manifest/uap/windows10/3"</span></span>
 
-#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="ae49b-211">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="ae49b-211">Elements and attributes of this extension</span></span>
+#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="471b8-211">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="471b8-211">Elements and attributes of this extension</span></span>
 
 ```XML
 <Extension Category="windows.fileTypeAssociation">
     <FileTypeAssociation Name="[AppID]" UseUrl="true" Parameters="%1">
         <SupportedFileTypes>
             <FileType>"[FileExtension]"</FileType>
-        </SupportedFileTypes> 
+        </SupportedFileTypes>
     </FileTypeAssociation>
 </Extension>
 ```
 
-<span data-ttu-id="ae49b-212">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span><span class="sxs-lookup"><span data-stu-id="ae49b-212">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span></span>
+<span data-ttu-id="471b8-212">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span><span class="sxs-lookup"><span data-stu-id="471b8-212">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span></span>
 
-|<span data-ttu-id="ae49b-213">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-213">Name</span></span> |<span data-ttu-id="ae49b-214">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ae49b-214">Description</span></span> |
+|<span data-ttu-id="471b8-213">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-213">Name</span></span> |<span data-ttu-id="471b8-214">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="471b8-214">Description</span></span> |
 |-------|-------------|
-|<span data-ttu-id="ae49b-215">Kategorie</span><span class="sxs-lookup"><span data-stu-id="ae49b-215">Category</span></span> |<span data-ttu-id="ae49b-216">Immer ``windows.fileTypeAssociation``.</span><span class="sxs-lookup"><span data-stu-id="ae49b-216">Always ``windows.fileTypeAssociation``.</span></span>
-|<span data-ttu-id="ae49b-217">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-217">Name</span></span> |<span data-ttu-id="ae49b-218">Eine eindeutige ID für Ihre App.</span><span class="sxs-lookup"><span data-stu-id="ae49b-218">A unique Id for your app.</span></span> |
-|<span data-ttu-id="ae49b-219">UseUrl</span><span class="sxs-lookup"><span data-stu-id="ae49b-219">UseUrl</span></span> |<span data-ttu-id="ae49b-220">Gibt an, ob Dateien direkt über eine URL-Ziel geöffnet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-220">Indicates whether to open files directly from a URL target.</span></span> <span data-ttu-id="ae49b-221">Wenn Sie diesen Wert nicht festlegen, versucht Ihre Anwendung zum Öffnen einer Datei über einer URL zu das System zum ersten Download die Datei lokal.</span><span class="sxs-lookup"><span data-stu-id="ae49b-221">If you do not set this value, attempts by your application to open a file by using a URL cause the system to first download the file locally.</span></span> |
-|<span data-ttu-id="ae49b-222">Parameter</span><span class="sxs-lookup"><span data-stu-id="ae49b-222">Parameters</span></span> |<span data-ttu-id="ae49b-223">Optionale Parameter.</span><span class="sxs-lookup"><span data-stu-id="ae49b-223">optional parameters.</span></span> |
-|<span data-ttu-id="ae49b-224">FileType</span><span class="sxs-lookup"><span data-stu-id="ae49b-224">FileType</span></span> |<span data-ttu-id="ae49b-225">Die relevanten Dateierweiterungen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-225">The relevant file extensions.</span></span> |
+|<span data-ttu-id="471b8-215">Kategorie</span><span class="sxs-lookup"><span data-stu-id="471b8-215">Category</span></span> |<span data-ttu-id="471b8-216">Immer ``windows.fileTypeAssociation``.</span><span class="sxs-lookup"><span data-stu-id="471b8-216">Always ``windows.fileTypeAssociation``.</span></span>
+|<span data-ttu-id="471b8-217">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-217">Name</span></span> |<span data-ttu-id="471b8-218">Eine eindeutige ID für Ihre App.</span><span class="sxs-lookup"><span data-stu-id="471b8-218">A unique Id for your app.</span></span> |
+|<span data-ttu-id="471b8-219">UseUrl</span><span class="sxs-lookup"><span data-stu-id="471b8-219">UseUrl</span></span> |<span data-ttu-id="471b8-220">Gibt an, ob Dateien direkt über eine URL-Ziel geöffnet werden sollen.</span><span class="sxs-lookup"><span data-stu-id="471b8-220">Indicates whether to open files directly from a URL target.</span></span> <span data-ttu-id="471b8-221">Wenn Sie diesen Wert nicht festlegen, versucht Ihre Anwendung zum Öffnen einer Datei durch einer URL zu dem System zum ersten Download der Datei lokal.</span><span class="sxs-lookup"><span data-stu-id="471b8-221">If you do not set this value, attempts by your application to open a file by using a URL cause the system to first download the file locally.</span></span> |
+|<span data-ttu-id="471b8-222">Parameter</span><span class="sxs-lookup"><span data-stu-id="471b8-222">Parameters</span></span> |<span data-ttu-id="471b8-223">Optionale Parameter.</span><span class="sxs-lookup"><span data-stu-id="471b8-223">optional parameters.</span></span> |
+|<span data-ttu-id="471b8-224">FileType</span><span class="sxs-lookup"><span data-stu-id="471b8-224">FileType</span></span> |<span data-ttu-id="471b8-225">Die relevanten Dateierweiterungen.</span><span class="sxs-lookup"><span data-stu-id="471b8-225">The relevant file extensions.</span></span> |
 
-#### <a name="example"></a><span data-ttu-id="ae49b-226">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ae49b-226">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="471b8-226">Beispiel</span><span class="sxs-lookup"><span data-stu-id="471b8-226">Example</span></span>
 
 ```XML
 <Package
@@ -324,7 +326,7 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
               <uap:SupportedFileTypes>
                 <uap:FileType>.txt</uap:FileType>
                 <uap:FileType>.doc</uap:FileType>
-              </uap:SupportedFileTypes> 
+              </uap:SupportedFileTypes>
             </uap3:FileTypeAssociation>
           </uap:Extension>
         </Extensions>
@@ -333,26 +335,26 @@ http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabi
 </Package>
 ```
 
-## <a name="perform-setup-tasks"></a><span data-ttu-id="ae49b-227">Setup-Aufgaben ausführen</span><span class="sxs-lookup"><span data-stu-id="ae49b-227">Perform setup tasks</span></span>
+## <a name="perform-setup-tasks"></a><span data-ttu-id="471b8-227">Setup-Aufgaben ausführen</span><span class="sxs-lookup"><span data-stu-id="471b8-227">Perform setup tasks</span></span>
 
-* [<span data-ttu-id="ae49b-228">Erstellen von Firewallausnahmen für Ihre App</span><span class="sxs-lookup"><span data-stu-id="ae49b-228">Create firewall exception for your app</span></span>](#rules)
-* [<span data-ttu-id="ae49b-229">Speichern Sie die DLL-Dateien in einem beliebigen Ordner des Pakets</span><span class="sxs-lookup"><span data-stu-id="ae49b-229">Place your DLL files into any folder of the package</span></span>](#load-paths)
+* [<span data-ttu-id="471b8-228">Erstellen von Firewallausnahmen für Ihre App</span><span class="sxs-lookup"><span data-stu-id="471b8-228">Create firewall exception for your app</span></span>](#rules)
+* [<span data-ttu-id="471b8-229">Speichern Sie die DLL-Dateien in einem beliebigen Ordner des Pakets</span><span class="sxs-lookup"><span data-stu-id="471b8-229">Place your DLL files into any folder of the package</span></span>](#load-paths)
 
 <a id="rules" />
 
-### <a name="create-firewall-exception-for-your-app"></a><span data-ttu-id="ae49b-230">Erstellen von Firewallausnahmen für Ihre App</span><span class="sxs-lookup"><span data-stu-id="ae49b-230">Create firewall exception for your app</span></span>
+### <a name="create-firewall-exception-for-your-app"></a><span data-ttu-id="471b8-230">Erstellen von Firewallausnahmen für Ihre App</span><span class="sxs-lookup"><span data-stu-id="471b8-230">Create firewall exception for your app</span></span>
 
-<span data-ttu-id="ae49b-231">Wenn Ihre Anwendung die Kommunikation über einen Anschluss erforderlich ist, können Sie Ihre Anwendung zur Liste der Firewallausnahmen hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-231">If your application requires communication through a port, you can add your application to the list of firewall exceptions.</span></span>
+<span data-ttu-id="471b8-231">Wenn Ihre Anwendung die Kommunikation über einen Anschluss erforderlich ist, können Sie Ihre Anwendung zur Liste der Firewallausnahmen hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="471b8-231">If your application requires communication through a port, you can add your application to the list of firewall exceptions.</span></span>
 
-#### <a name="xml-namespace"></a><span data-ttu-id="ae49b-232">XML-Namespace</span><span class="sxs-lookup"><span data-stu-id="ae49b-232">XML namespace</span></span>
+#### <a name="xml-namespace"></a><span data-ttu-id="471b8-232">XML-Namespace</span><span class="sxs-lookup"><span data-stu-id="471b8-232">XML namespace</span></span>
 
 http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 
-#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="ae49b-233">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="ae49b-233">Elements and attributes of this extension</span></span>
+#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="471b8-233">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="471b8-233">Elements and attributes of this extension</span></span>
 
 ```XML
-<Extension Category="windows.firewallRules">  
-  <FirewallRules Executable="[executable file name]">  
+<Extension Category="windows.firewallRules">
+  <FirewallRules Executable="[executable file name]">
     <Rule
       Direction="[Direction]"
       IPProtocol="[Protocol]"
@@ -360,42 +362,41 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
       LocalPortMax="LocalPortMax"
       RemotePortMin="RemotePortMin"
       RemotePortMax="RemotePortMax"
-      Profile="[Profile]"/>  
-  </FirewallRules>  
+      Profile="[Profile]"/>
+  </FirewallRules>
 </Extension>
 ```
-<span data-ttu-id="ae49b-234">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop2-firewallrules).</span><span class="sxs-lookup"><span data-stu-id="ae49b-234">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop2-firewallrules).</span></span>
 
-|<span data-ttu-id="ae49b-235">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-235">Name</span></span> |<span data-ttu-id="ae49b-236">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ae49b-236">Description</span></span> |
+<span data-ttu-id="471b8-234">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop2-firewallrules).</span><span class="sxs-lookup"><span data-stu-id="471b8-234">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop2-firewallrules).</span></span>
+
+|<span data-ttu-id="471b8-235">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-235">Name</span></span> |<span data-ttu-id="471b8-236">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="471b8-236">Description</span></span> |
 |-------|-------------|
-|<span data-ttu-id="ae49b-237">Category</span><span class="sxs-lookup"><span data-stu-id="ae49b-237">Category</span></span> |<span data-ttu-id="ae49b-238">Immer</span><span class="sxs-lookup"><span data-stu-id="ae49b-238">Always</span></span> ``windows.firewallRules``|
-|<span data-ttu-id="ae49b-239">Ausführbare Datei</span><span class="sxs-lookup"><span data-stu-id="ae49b-239">Executable</span></span> |<span data-ttu-id="ae49b-240">Der Name der ausführbaren Datei, die Sie der Liste der Firewallausnahmen hinzufügen möchten.</span><span class="sxs-lookup"><span data-stu-id="ae49b-240">The name of the executable file that you want to add to the list of firewall exceptions</span></span> |
-|<span data-ttu-id="ae49b-241">Richtung</span><span class="sxs-lookup"><span data-stu-id="ae49b-241">Direction</span></span> |<span data-ttu-id="ae49b-242">Gibt an, ob die Regel eine ein- oder ausgehende Regel ist.</span><span class="sxs-lookup"><span data-stu-id="ae49b-242">Indicates whether the rule is an inbound or outbound rule</span></span> |
-|<span data-ttu-id="ae49b-243">IPProtocol</span><span class="sxs-lookup"><span data-stu-id="ae49b-243">IPProtocol</span></span> |<span data-ttu-id="ae49b-244">Das Kommunikationsprotokoll</span><span class="sxs-lookup"><span data-stu-id="ae49b-244">The communication protocol</span></span> |
-|<span data-ttu-id="ae49b-245">LocalPortMin</span><span class="sxs-lookup"><span data-stu-id="ae49b-245">LocalPortMin</span></span> |<span data-ttu-id="ae49b-246">Die untere Portnummer in einer Auswahl von lokalen Portnummern.</span><span class="sxs-lookup"><span data-stu-id="ae49b-246">The lower port number in a range of local port numbers.</span></span> |
-|<span data-ttu-id="ae49b-247">LocalPortMax</span><span class="sxs-lookup"><span data-stu-id="ae49b-247">LocalPortMax</span></span> |<span data-ttu-id="ae49b-248">Die höchste Portnummer in einer Auswahl von lokalen Portnummern.</span><span class="sxs-lookup"><span data-stu-id="ae49b-248">The highest port number of a range of local port numbers.</span></span> |
-|<span data-ttu-id="ae49b-249">RemotePortMax</span><span class="sxs-lookup"><span data-stu-id="ae49b-249">RemotePortMax</span></span> |<span data-ttu-id="ae49b-250">Die niedrigere Portnummer in einer Auswahl von Remoteportnummern.</span><span class="sxs-lookup"><span data-stu-id="ae49b-250">The lower port number in a range of remote port numbers.</span></span> |
-|<span data-ttu-id="ae49b-251">RemotePortMax</span><span class="sxs-lookup"><span data-stu-id="ae49b-251">RemotePortMax</span></span> |<span data-ttu-id="ae49b-252">Die höchste Portnummer in einer Auswahl Remoteportnummern.</span><span class="sxs-lookup"><span data-stu-id="ae49b-252">The highest port number of a range of remote port numbers.</span></span> |
-|<span data-ttu-id="ae49b-253">Profil</span><span class="sxs-lookup"><span data-stu-id="ae49b-253">Profile</span></span> |<span data-ttu-id="ae49b-254">Der Netzwerktyp</span><span class="sxs-lookup"><span data-stu-id="ae49b-254">The network type</span></span> |
+|<span data-ttu-id="471b8-237">Category</span><span class="sxs-lookup"><span data-stu-id="471b8-237">Category</span></span> |<span data-ttu-id="471b8-238">Immer</span><span class="sxs-lookup"><span data-stu-id="471b8-238">Always</span></span> ``windows.firewallRules``|
+|<span data-ttu-id="471b8-239">Ausführbare Datei</span><span class="sxs-lookup"><span data-stu-id="471b8-239">Executable</span></span> |<span data-ttu-id="471b8-240">Der Name der ausführbaren Datei, die Sie der Liste der Firewallausnahmen hinzufügen möchten.</span><span class="sxs-lookup"><span data-stu-id="471b8-240">The name of the executable file that you want to add to the list of firewall exceptions</span></span> |
+|<span data-ttu-id="471b8-241">Richtung</span><span class="sxs-lookup"><span data-stu-id="471b8-241">Direction</span></span> |<span data-ttu-id="471b8-242">Gibt an, ob die Regel eine ein- oder ausgehende Regel ist.</span><span class="sxs-lookup"><span data-stu-id="471b8-242">Indicates whether the rule is an inbound or outbound rule</span></span> |
+|<span data-ttu-id="471b8-243">IPProtocol</span><span class="sxs-lookup"><span data-stu-id="471b8-243">IPProtocol</span></span> |<span data-ttu-id="471b8-244">Das Kommunikationsprotokoll</span><span class="sxs-lookup"><span data-stu-id="471b8-244">The communication protocol</span></span> |
+|<span data-ttu-id="471b8-245">LocalPortMin</span><span class="sxs-lookup"><span data-stu-id="471b8-245">LocalPortMin</span></span> |<span data-ttu-id="471b8-246">Die untere Portnummer in einer Auswahl von lokalen Portnummern.</span><span class="sxs-lookup"><span data-stu-id="471b8-246">The lower port number in a range of local port numbers.</span></span> |
+|<span data-ttu-id="471b8-247">LocalPortMax</span><span class="sxs-lookup"><span data-stu-id="471b8-247">LocalPortMax</span></span> |<span data-ttu-id="471b8-248">Die höchste Portnummer in einer Auswahl von lokalen Portnummern.</span><span class="sxs-lookup"><span data-stu-id="471b8-248">The highest port number of a range of local port numbers.</span></span> |
+|<span data-ttu-id="471b8-249">RemotePortMax</span><span class="sxs-lookup"><span data-stu-id="471b8-249">RemotePortMax</span></span> |<span data-ttu-id="471b8-250">Die niedrigere Portnummer in einer Auswahl von Remoteportnummern.</span><span class="sxs-lookup"><span data-stu-id="471b8-250">The lower port number in a range of remote port numbers.</span></span> |
+|<span data-ttu-id="471b8-251">RemotePortMax</span><span class="sxs-lookup"><span data-stu-id="471b8-251">RemotePortMax</span></span> |<span data-ttu-id="471b8-252">Die höchste Portnummer in einer Auswahl Remoteportnummern.</span><span class="sxs-lookup"><span data-stu-id="471b8-252">The highest port number of a range of remote port numbers.</span></span> |
+|<span data-ttu-id="471b8-253">Profil</span><span class="sxs-lookup"><span data-stu-id="471b8-253">Profile</span></span> |<span data-ttu-id="471b8-254">Der Netzwerktyp</span><span class="sxs-lookup"><span data-stu-id="471b8-254">The network type</span></span> |
 
-
-
-#### <a name="example"></a><span data-ttu-id="ae49b-255">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ae49b-255">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="471b8-255">Beispiel</span><span class="sxs-lookup"><span data-stu-id="471b8-255">Example</span></span>
 
 ```XML
 <Package
   xmlns:desktop2="http://schemas.microsoft.com/appx/manifest/desktop/windows10/2"
   IgnorableNamespaces="desktop2">
   <Extensions>
-    <desktop2:Extension Category="windows.firewallRules">  
-      <desktop2:FirewallRules Executable="Contoso.exe">  
-          <desktop2:Rule Direction="in" IPProtocol="TCP" Profile="all"/>  
-          <desktop2:Rule Direction="in" IPProtocol="UDP" LocalPortMin="1337" LocalPortMax="1338" Profile="domain"/>  
-          <desktop2:Rule Direction="in" IPProtocol="UDP" LocalPortMin="1337" LocalPortMax="1338" Profile="public"/>  
+    <desktop2:Extension Category="windows.firewallRules">
+      <desktop2:FirewallRules Executable="Contoso.exe">
+          <desktop2:Rule Direction="in" IPProtocol="TCP" Profile="all"/>
+          <desktop2:Rule Direction="in" IPProtocol="UDP" LocalPortMin="1337" LocalPortMax="1338" Profile="domain"/>
+          <desktop2:Rule Direction="in" IPProtocol="UDP" LocalPortMin="1337" LocalPortMax="1338" Profile="public"/>
           <desktop2:Rule Direction="out" IPProtocol="UDP" LocalPortMin="1339" LocalPortMax="1340" RemotePortMin="15"
-                         RemotePortMax="19" Profile="domainAndPrivate"/>  
-          <desktop2:Rule Direction="out" IPProtocol="GRE" Profile="private"/>  
-      </desktop2:FirewallRules>  
+                         RemotePortMax="19" Profile="domainAndPrivate"/>
+          <desktop2:Rule Direction="out" IPProtocol="GRE" Profile="private"/>
+      </desktop2:FirewallRules>
   </desktop2:Extension>
 </Extensions>
 </Package>
@@ -403,20 +404,21 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 
 <a id="load-paths" />
 
-### <a name="place-your-dll-files-into-any-folder-of-the-package"></a><span data-ttu-id="ae49b-256">Speichern Sie die DLL-Dateien in einem beliebigen Ordner des Pakets</span><span class="sxs-lookup"><span data-stu-id="ae49b-256">Place your DLL files into any folder of the package</span></span>
+### <a name="place-your-dll-files-into-any-folder-of-the-package"></a><span data-ttu-id="471b8-256">Speichern Sie die DLL-Dateien in einem beliebigen Ordner des Pakets</span><span class="sxs-lookup"><span data-stu-id="471b8-256">Place your DLL files into any folder of the package</span></span>
 
-<span data-ttu-id="ae49b-257">Verwenden Sie eine Erweiterung, um diese Ordner zu identifizieren.</span><span class="sxs-lookup"><span data-stu-id="ae49b-257">Use an extension to identify those folders.</span></span> <span data-ttu-id="ae49b-258">Auf diese Weise kann das System die Dateien finden und laden, die Sie darin abgelegt haben.</span><span class="sxs-lookup"><span data-stu-id="ae49b-258">That way, the system can find and load the files that you place in them.</span></span> <span data-ttu-id="ae49b-259">Stellen Sie sich diese Erweiterung als Ersatz für die Umgebungsvariable _%PATH%_ vor.</span><span class="sxs-lookup"><span data-stu-id="ae49b-259">Think of this extension as a replacement of the _%PATH%_ environment variable.</span></span>
+<span data-ttu-id="471b8-257">Verwenden Sie eine Erweiterung, um diese Ordner zu identifizieren.</span><span class="sxs-lookup"><span data-stu-id="471b8-257">Use an extension to identify those folders.</span></span> <span data-ttu-id="471b8-258">Auf diese Weise kann das System die Dateien finden und laden, die Sie darin abgelegt haben.</span><span class="sxs-lookup"><span data-stu-id="471b8-258">That way, the system can find and load the files that you place in them.</span></span> <span data-ttu-id="471b8-259">Stellen Sie sich diese Erweiterung als Ersatz für die Umgebungsvariable _%PATH%_ vor.</span><span class="sxs-lookup"><span data-stu-id="471b8-259">Think of this extension as a replacement of the _%PATH%_ environment variable.</span></span>
 
-<span data-ttu-id="ae49b-260">Wenn Sie diese Erweiterung nicht verwenden, durchsucht das System das Paketabhängigkeitsdiagramm des Prozesses, den Paketstammordner und anschließend das Systemverzeichnis (_%SystemRoot%\system32_) in dieser Reihenfolge.</span><span class="sxs-lookup"><span data-stu-id="ae49b-260">If you don't use this extension, the system searches the package dependency graph of the process, the package root folder, and then the system directory (_%SystemRoot%\system32_) in that order.</span></span> <span data-ttu-id="ae49b-261">Weitere Informationen hierzu finden Sie unter [Suchreihenfolge von Windows-Apps](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx#_search_order_for_windows_store_apps).</span><span class="sxs-lookup"><span data-stu-id="ae49b-261">To learn more, see [Search order of Windows apps](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx#_search_order_for_windows_store_apps).</span></span>
+<span data-ttu-id="471b8-260">Wenn Sie diese Erweiterung nicht verwenden, durchsucht das System das Paketabhängigkeitsdiagramm des Prozesses, den Paketstammordner und anschließend das Systemverzeichnis (_%SystemRoot%\system32_) in dieser Reihenfolge.</span><span class="sxs-lookup"><span data-stu-id="471b8-260">If you don't use this extension, the system searches the package dependency graph of the process, the package root folder, and then the system directory (_%SystemRoot%\system32_) in that order.</span></span> <span data-ttu-id="471b8-261">Weitere Informationen hierzu finden Sie unter [Suchreihenfolge von Windows-Apps](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx#_search_order_for_windows_store_apps).</span><span class="sxs-lookup"><span data-stu-id="471b8-261">To learn more, see [Search order of Windows apps](https://msdn.microsoft.com/library/windows/desktop/ms682586.aspx#_search_order_for_windows_store_apps).</span></span>
 
-<span data-ttu-id="ae49b-262">Jedes Paket kann nur eine dieser Erweiterungen enthalten.</span><span class="sxs-lookup"><span data-stu-id="ae49b-262">Each package can contain only one of these extensions.</span></span> <span data-ttu-id="ae49b-263">Das bedeutet, Sie können Ihrem Hauptpaket, und dann jedem Ihrer [optionalen Pakete und zugehörigen Sets](https://docs.microsoft.com/windows/uwp/packaging/optional-packages) eine hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-263">That means that you can add one of them to your main package, and then add one to each of your [optional packages, and related sets](https://docs.microsoft.com/windows/uwp/packaging/optional-packages).</span></span>
+<span data-ttu-id="471b8-262">Jedes Paket kann nur eine dieser Erweiterungen enthalten.</span><span class="sxs-lookup"><span data-stu-id="471b8-262">Each package can contain only one of these extensions.</span></span> <span data-ttu-id="471b8-263">Das bedeutet, Sie können Ihrem Hauptpaket, und dann jedem Ihrer [optionalen Pakete und zugehörigen Sets](https://docs.microsoft.com/windows/uwp/packaging/optional-packages) eine hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="471b8-263">That means that you can add one of them to your main package, and then add one to each of your [optional packages, and related sets](https://docs.microsoft.com/windows/uwp/packaging/optional-packages).</span></span>
 
-#### <a name="xml-namespace"></a><span data-ttu-id="ae49b-264">XML-Namespace</span><span class="sxs-lookup"><span data-stu-id="ae49b-264">XML namespace</span></span>
+#### <a name="xml-namespace"></a><span data-ttu-id="471b8-264">XML-Namespace</span><span class="sxs-lookup"><span data-stu-id="471b8-264">XML namespace</span></span>
 
 http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
-#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="ae49b-265">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="ae49b-265">Elements and attributes of this extension</span></span>
-<span data-ttu-id="ae49b-266">Deklarieren Sie diese Erweiterung auf der Paketebene des App-Manifests.</span><span class="sxs-lookup"><span data-stu-id="ae49b-266">Declare this extension at the package-level of your app manifest.</span></span>
+#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="471b8-265">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="471b8-265">Elements and attributes of this extension</span></span>
+
+<span data-ttu-id="471b8-266">Deklarieren Sie diese Erweiterung auf der Paketebene des App-Manifests.</span><span class="sxs-lookup"><span data-stu-id="471b8-266">Declare this extension at the package-level of your app manifest.</span></span>
 
 ```XML
 <Extension Category="windows.loaderSearchPathOverride">
@@ -427,12 +429,12 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 ```
 
-|<span data-ttu-id="ae49b-267">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-267">Name</span></span> | <span data-ttu-id="ae49b-268">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ae49b-268">Description</span></span> |
+|<span data-ttu-id="471b8-267">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-267">Name</span></span> | <span data-ttu-id="471b8-268">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="471b8-268">Description</span></span> |
 |-------|-------------|
-|<span data-ttu-id="ae49b-269">Kategorie</span><span class="sxs-lookup"><span data-stu-id="ae49b-269">Category</span></span> |<span data-ttu-id="ae49b-270">Immer ``windows.loaderSearchPathOverride``.</span><span class="sxs-lookup"><span data-stu-id="ae49b-270">Always ``windows.loaderSearchPathOverride``.</span></span>
-|<span data-ttu-id="ae49b-271">FolderPath</span><span class="sxs-lookup"><span data-stu-id="ae49b-271">FolderPath</span></span> | <span data-ttu-id="ae49b-272">Der Pfad des Ordners, der die DLL-Dateien enthält.</span><span class="sxs-lookup"><span data-stu-id="ae49b-272">The path of the folder that contains your dll files.</span></span> <span data-ttu-id="ae49b-273">Geben Sie einen Pfad relativ zum Stammordner des Pakets an.</span><span class="sxs-lookup"><span data-stu-id="ae49b-273">Specify a path that is relative to the root folder of the package.</span></span> <span data-ttu-id="ae49b-274">Sie können bis zu fünf Pfade in einer Erweiterung angeben.</span><span class="sxs-lookup"><span data-stu-id="ae49b-274">You can specify up to five paths in one extension.</span></span> <span data-ttu-id="ae49b-275">Wenn das System nach Dateien im Stammordner des Pakets suchen soll, verwenden Sie eine leere Zeichenfolge für einen dieser Pfade.</span><span class="sxs-lookup"><span data-stu-id="ae49b-275">If you want the system to search for files in the root folder of the package, use an empty string for one of these paths.</span></span> <span data-ttu-id="ae49b-276">Fügen Sie keine doppelten Pfade ein und stellen Sie sicher, dass die Pfade keine voran- bzw. nachgestellten Schrägstriche oder umgekehrten Schrägstriche enthalten.</span><span class="sxs-lookup"><span data-stu-id="ae49b-276">Don't included duplicate paths and make sure that your paths don't contain leading and trailing slashes or backslashes.</span></span> <br><br> <span data-ttu-id="ae49b-277">Das System durchsucht keine Unterordner. Stellen Sie daher sicher, dass Sie jeden Ordner mit DLL-Dateien, die das System laden soll, explizit auflisten.</span><span class="sxs-lookup"><span data-stu-id="ae49b-277">The system won't search subfolders, so make sure to explicitly list each folder that contains DLL files that you want the system to load.</span></span>|
+|<span data-ttu-id="471b8-269">Kategorie</span><span class="sxs-lookup"><span data-stu-id="471b8-269">Category</span></span> |<span data-ttu-id="471b8-270">Immer ``windows.loaderSearchPathOverride``.</span><span class="sxs-lookup"><span data-stu-id="471b8-270">Always ``windows.loaderSearchPathOverride``.</span></span>
+|<span data-ttu-id="471b8-271">FolderPath</span><span class="sxs-lookup"><span data-stu-id="471b8-271">FolderPath</span></span> | <span data-ttu-id="471b8-272">Der Pfad des Ordners, der die DLL-Dateien enthält.</span><span class="sxs-lookup"><span data-stu-id="471b8-272">The path of the folder that contains your dll files.</span></span> <span data-ttu-id="471b8-273">Geben Sie einen Pfad relativ zum Stammordner des Pakets an.</span><span class="sxs-lookup"><span data-stu-id="471b8-273">Specify a path that is relative to the root folder of the package.</span></span> <span data-ttu-id="471b8-274">Sie können bis zu fünf Pfade in einer Erweiterung angeben.</span><span class="sxs-lookup"><span data-stu-id="471b8-274">You can specify up to five paths in one extension.</span></span> <span data-ttu-id="471b8-275">Wenn das System nach Dateien im Stammordner des Pakets suchen soll, verwenden Sie eine leere Zeichenfolge für einen dieser Pfade.</span><span class="sxs-lookup"><span data-stu-id="471b8-275">If you want the system to search for files in the root folder of the package, use an empty string for one of these paths.</span></span> <span data-ttu-id="471b8-276">Fügen Sie keine doppelten Pfade ein und stellen Sie sicher, dass die Pfade keine voran- bzw. nachgestellten Schrägstriche oder umgekehrten Schrägstriche enthalten.</span><span class="sxs-lookup"><span data-stu-id="471b8-276">Don't included duplicate paths and make sure that your paths don't contain leading and trailing slashes or backslashes.</span></span> <br><br> <span data-ttu-id="471b8-277">Das System durchsucht keine Unterordner. Stellen Sie daher sicher, dass Sie jeden Ordner mit DLL-Dateien, die das System laden soll, explizit auflisten.</span><span class="sxs-lookup"><span data-stu-id="471b8-277">The system won't search subfolders, so make sure to explicitly list each folder that contains DLL files that you want the system to load.</span></span>|
 
-#### <a name="example"></a><span data-ttu-id="ae49b-278">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ae49b-278">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="471b8-278">Beispiel</span><span class="sxs-lookup"><span data-stu-id="471b8-278">Example</span></span>
 
 ```XML
 <Package
@@ -452,30 +454,30 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 </Package>
 ```
 
-## <a name="integrate-with-file-explorer"></a><span data-ttu-id="ae49b-279">Integration mit dem Datei-Explorer</span><span class="sxs-lookup"><span data-stu-id="ae49b-279">Integrate with File Explorer</span></span>
+## <a name="integrate-with-file-explorer"></a><span data-ttu-id="471b8-279">Integration mit dem Datei-Explorer</span><span class="sxs-lookup"><span data-stu-id="471b8-279">Integrate with File Explorer</span></span>
 
-<span data-ttu-id="ae49b-280">Helfen Sie Benutzern beim Organisieren von Dateien und interagieren Sie mit Ihnen auf vertrauter Weise.</span><span class="sxs-lookup"><span data-stu-id="ae49b-280">Help users organize your files and interact with them in familiar ways.</span></span>
+<span data-ttu-id="471b8-280">Helfen Sie Benutzern beim Organisieren von Dateien und interagieren Sie mit Ihnen auf vertrauter Weise.</span><span class="sxs-lookup"><span data-stu-id="471b8-280">Help users organize your files and interact with them in familiar ways.</span></span>
 
-* [<span data-ttu-id="ae49b-281">Definieren Sie, wie Ihre Anwendung verhält, wenn Benutzer auswählen und öffnen mehrere Dateien gleichzeitig</span><span class="sxs-lookup"><span data-stu-id="ae49b-281">Define how your application behaves when users select and open multiple files at the same time</span></span>](#define)
-* [<span data-ttu-id="ae49b-282">Zeigen Sie Dateiinhalte in einem Miniaturbild im Datei-Explorer an.</span><span class="sxs-lookup"><span data-stu-id="ae49b-282">Show file contents in a thumbnail image within File Explorer</span></span>](#show)
-* [<span data-ttu-id="ae49b-283">Zeigen Sie Dateiinhalte in einer Vorschau des Datei-Explorers an.</span><span class="sxs-lookup"><span data-stu-id="ae49b-283">Show file contents in a Preview pane of File Explorer</span></span>](#preview)
-* [<span data-ttu-id="ae49b-284">Ermöglichen Sie es Benutzern, Dateien mithilfe der Spalte „Art” im Datei-Explorer zu gruppieren.</span><span class="sxs-lookup"><span data-stu-id="ae49b-284">Enable users to group files by using the Kind column in File Explorer</span></span>](#enable)
-* [<span data-ttu-id="ae49b-285">Stellen Sie den Bereichen Suchen, Index, Eigenschaftendialogfelder und Details Dateieigenschaften zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="ae49b-285">Make file properties available to search, index, property dialogs, and the details pane</span></span>](#make-file-properties)
-* [<span data-ttu-id="ae49b-286">Zeigen Sie Dateien von Ihrem Clouddienst im Datei-Explorer an</span><span class="sxs-lookup"><span data-stu-id="ae49b-286">Make files from your cloud service appear in File Explorer</span></span>](#cloud-files)
+* [<span data-ttu-id="471b8-281">Definieren Sie, wie Ihre Anwendung verhält, wenn Benutzer auswählen und öffnen mehrere Dateien gleichzeitig</span><span class="sxs-lookup"><span data-stu-id="471b8-281">Define how your application behaves when users select and open multiple files at the same time</span></span>](#define)
+* [<span data-ttu-id="471b8-282">Zeigen Sie Dateiinhalte in einem Miniaturbild im Datei-Explorer an.</span><span class="sxs-lookup"><span data-stu-id="471b8-282">Show file contents in a thumbnail image within File Explorer</span></span>](#show)
+* [<span data-ttu-id="471b8-283">Zeigen Sie Dateiinhalte in einer Vorschau des Datei-Explorers an.</span><span class="sxs-lookup"><span data-stu-id="471b8-283">Show file contents in a Preview pane of File Explorer</span></span>](#preview)
+* [<span data-ttu-id="471b8-284">Ermöglichen Sie es Benutzern, Dateien mithilfe der Spalte „Art” im Datei-Explorer zu gruppieren.</span><span class="sxs-lookup"><span data-stu-id="471b8-284">Enable users to group files by using the Kind column in File Explorer</span></span>](#enable)
+* [<span data-ttu-id="471b8-285">Stellen Sie den Bereichen Suchen, Index, Eigenschaftendialogfelder und Details Dateieigenschaften zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="471b8-285">Make file properties available to search, index, property dialogs, and the details pane</span></span>](#make-file-properties)
+* [<span data-ttu-id="471b8-286">Zeigen Sie Dateien von Ihrem Clouddienst im Datei-Explorer an</span><span class="sxs-lookup"><span data-stu-id="471b8-286">Make files from your cloud service appear in File Explorer</span></span>](#cloud-files)
 
 <a id="define" />
 
-### <a name="define-how-your-application-behaves-when-users-select-and-open-multiple-files-at-the-same-time"></a><span data-ttu-id="ae49b-287">Definieren Sie, wie Ihre Anwendung verhält, wenn Benutzer auswählen und öffnen mehrere Dateien gleichzeitig</span><span class="sxs-lookup"><span data-stu-id="ae49b-287">Define how your application behaves when users select and open multiple files at the same time</span></span>
+### <a name="define-how-your-application-behaves-when-users-select-and-open-multiple-files-at-the-same-time"></a><span data-ttu-id="471b8-287">Definieren Sie, wie Ihre Anwendung verhält, wenn Benutzer auswählen und öffnen mehrere Dateien gleichzeitig</span><span class="sxs-lookup"><span data-stu-id="471b8-287">Define how your application behaves when users select and open multiple files at the same time</span></span>
 
-<span data-ttu-id="ae49b-288">Geben Sie an, wie Ihre Anwendung verhält, wenn ein Benutzer mehrere Dateien gleichzeitig öffnet.</span><span class="sxs-lookup"><span data-stu-id="ae49b-288">Specify how your application behaves when a user opens multiple files simultaneously.</span></span>
+<span data-ttu-id="471b8-288">Geben Sie an, wie Ihre Anwendung verhält, wenn ein Benutzer mehrere Dateien gleichzeitig öffnet.</span><span class="sxs-lookup"><span data-stu-id="471b8-288">Specify how your application behaves when a user opens multiple files simultaneously.</span></span>
 
-#### <a name="xml-namespaces"></a><span data-ttu-id="ae49b-289">XML-Namespaces</span><span class="sxs-lookup"><span data-stu-id="ae49b-289">XML namespaces</span></span>
+#### <a name="xml-namespaces"></a><span data-ttu-id="471b8-289">XML-Namespaces</span><span class="sxs-lookup"><span data-stu-id="471b8-289">XML namespaces</span></span>
 
 * http://schemas.microsoft.com/appx/manifest/uap/windows10
 * http://schemas.microsoft.com/appx/manifest/uap/windows10/2
 * http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 
-#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="ae49b-290">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="ae49b-290">Elements and attributes of this extension</span></span>
+#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="471b8-290">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="471b8-290">Elements and attributes of this extension</span></span>
 
 ```XML
 <Extension Category="windows.fileTypeAssociation">
@@ -483,31 +485,32 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
         <SupportedVerbs>
             <Verb Id="Edit" MultiSelectModel="[SelectionModel]">Edit</Verb>
         </SupportedVerbs>
-          <SupportedFileTypes>
-                <FileType>"[FileExtension]"</FileType>
+        <SupportedFileTypes>
+            <FileType>"[FileExtension]"</FileType>
         </SupportedFileTypes>
 </Extension>
 ```
-<span data-ttu-id="ae49b-291">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span><span class="sxs-lookup"><span data-stu-id="ae49b-291">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span></span>
 
-|<span data-ttu-id="ae49b-292">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-292">Name</span></span> |<span data-ttu-id="ae49b-293">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ae49b-293">Description</span></span> |
+<span data-ttu-id="471b8-291">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span><span class="sxs-lookup"><span data-stu-id="471b8-291">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span></span>
+
+|<span data-ttu-id="471b8-292">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-292">Name</span></span> |<span data-ttu-id="471b8-293">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="471b8-293">Description</span></span> |
 |-------|-------------|
-|<span data-ttu-id="ae49b-294">Kategorie</span><span class="sxs-lookup"><span data-stu-id="ae49b-294">Category</span></span> |<span data-ttu-id="ae49b-295">Immer ``windows.fileTypeAssociation``.</span><span class="sxs-lookup"><span data-stu-id="ae49b-295">Always ``windows.fileTypeAssociation``.</span></span>
-|<span data-ttu-id="ae49b-296">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-296">Name</span></span> |<span data-ttu-id="ae49b-297">Eine eindeutige ID für Ihre App.</span><span class="sxs-lookup"><span data-stu-id="ae49b-297">A unique Id for your app.</span></span> |
-|<span data-ttu-id="ae49b-298">MultiSelectModel</span><span class="sxs-lookup"><span data-stu-id="ae49b-298">MultiSelectModel</span></span> |<span data-ttu-id="ae49b-299">Weitere Informationen finden Sie unter unten.</span><span class="sxs-lookup"><span data-stu-id="ae49b-299">See below</span></span> |
-|<span data-ttu-id="ae49b-300">FileType</span><span class="sxs-lookup"><span data-stu-id="ae49b-300">FileType</span></span> |<span data-ttu-id="ae49b-301">Die relevanten Dateierweiterungen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-301">The relevant file extensions.</span></span> |
+|<span data-ttu-id="471b8-294">Kategorie</span><span class="sxs-lookup"><span data-stu-id="471b8-294">Category</span></span> |<span data-ttu-id="471b8-295">Immer ``windows.fileTypeAssociation``.</span><span class="sxs-lookup"><span data-stu-id="471b8-295">Always ``windows.fileTypeAssociation``.</span></span>
+|<span data-ttu-id="471b8-296">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-296">Name</span></span> |<span data-ttu-id="471b8-297">Eine eindeutige ID für Ihre App.</span><span class="sxs-lookup"><span data-stu-id="471b8-297">A unique Id for your app.</span></span> |
+|<span data-ttu-id="471b8-298">MultiSelectModel</span><span class="sxs-lookup"><span data-stu-id="471b8-298">MultiSelectModel</span></span> |<span data-ttu-id="471b8-299">Weitere Informationen finden Sie unter unten.</span><span class="sxs-lookup"><span data-stu-id="471b8-299">See below</span></span> |
+|<span data-ttu-id="471b8-300">FileType</span><span class="sxs-lookup"><span data-stu-id="471b8-300">FileType</span></span> |<span data-ttu-id="471b8-301">Die relevanten Dateierweiterungen.</span><span class="sxs-lookup"><span data-stu-id="471b8-301">The relevant file extensions.</span></span> |
 
-**<span data-ttu-id="ae49b-302">MultSelectModel</span><span class="sxs-lookup"><span data-stu-id="ae49b-302">MultSelectModel</span></span>**
+**<span data-ttu-id="471b8-302">MultSelectModel</span><span class="sxs-lookup"><span data-stu-id="471b8-302">MultSelectModel</span></span>**
 
-<span data-ttu-id="ae49b-303">Bei verpackten Desktop-Apps stehen die gleichen drei Optionen zur Verfügung wie bei regulären Desktop-Apps.</span><span class="sxs-lookup"><span data-stu-id="ae49b-303">packaged desktop apps have the same three options as regular desktop apps.</span></span>
+<span data-ttu-id="471b8-303">Bei verpackten Desktop-Apps stehen die gleichen drei Optionen zur Verfügung wie bei regulären Desktop-Apps.</span><span class="sxs-lookup"><span data-stu-id="471b8-303">packaged desktop apps have the same three options as regular desktop apps.</span></span>
 
- * ``Player``<span data-ttu-id="ae49b-304">: Ihre Anwendung wird einmal aktiviert.</span><span class="sxs-lookup"><span data-stu-id="ae49b-304">: Your application is activated one time.</span></span> <span data-ttu-id="ae49b-305">Alle der ausgewählten Dateien werden für Ihre Anwendung als Argument-Parameter übergeben.</span><span class="sxs-lookup"><span data-stu-id="ae49b-305">All of the selected files are passed to your application as argument parameters.</span></span>
- * ``Single``<span data-ttu-id="ae49b-306">: Ihre Anwendung wird einmal für die erste markierte Datei aktiviert.</span><span class="sxs-lookup"><span data-stu-id="ae49b-306">: Your application is activated one time for the first selected file.</span></span> <span data-ttu-id="ae49b-307">Andere Dateien werden ignoriert.</span><span class="sxs-lookup"><span data-stu-id="ae49b-307">Other files are ignored.</span></span>
- * ``Document``<span data-ttu-id="ae49b-308">: Eine neue (eigene) Instanz Ihrer Anwendung wird für jede markierte Datei aktiviert.</span><span class="sxs-lookup"><span data-stu-id="ae49b-308">: A new, separate instance of your application is activated for each selected file.</span></span>
+* ``Player``<span data-ttu-id="471b8-304">: Ihre Anwendung wird einmal aktiviert.</span><span class="sxs-lookup"><span data-stu-id="471b8-304">: Your application is activated one time.</span></span> <span data-ttu-id="471b8-305">Alle der ausgewählten Dateien werden an die Anwendung als Argument-Parameter übergeben.</span><span class="sxs-lookup"><span data-stu-id="471b8-305">All of the selected files are passed to your application as argument parameters.</span></span>
+* ``Single``<span data-ttu-id="471b8-306">: Ihre Anwendung wird einmal für die erste markierte Datei aktiviert.</span><span class="sxs-lookup"><span data-stu-id="471b8-306">: Your application is activated one time for the first selected file.</span></span> <span data-ttu-id="471b8-307">Andere Dateien werden ignoriert.</span><span class="sxs-lookup"><span data-stu-id="471b8-307">Other files are ignored.</span></span>
+* ``Document``<span data-ttu-id="471b8-308">: Eine neue (eigene) Instanz Ihrer Anwendung wird für jede markierte Datei aktiviert.</span><span class="sxs-lookup"><span data-stu-id="471b8-308">: A new, separate instance of your application is activated for each selected file.</span></span>
 
- <span data-ttu-id="ae49b-309">Für unterschiedliche Dateitypen und Aktionen können unterschiedliche Einstellungen festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="ae49b-309">You can set different preferences for different file types and actions.</span></span> <span data-ttu-id="ae49b-310">So können beispielsweise *Dokumente* im Modus *Document* und *Bilder* im Modus *Player* geöffnet werden.</span><span class="sxs-lookup"><span data-stu-id="ae49b-310">For example, you may wish to open *Documents* in *Document* mode and *Images* in *Player* mode.</span></span>
+ <span data-ttu-id="471b8-309">Für unterschiedliche Dateitypen und Aktionen können unterschiedliche Einstellungen festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="471b8-309">You can set different preferences for different file types and actions.</span></span> <span data-ttu-id="471b8-310">So können beispielsweise *Dokumente* im Modus *Document* und *Bilder* im Modus *Player* geöffnet werden.</span><span class="sxs-lookup"><span data-stu-id="471b8-310">For example, you may wish to open *Documents* in *Document* mode and *Images* in *Player* mode.</span></span>
 
-#### <a name="example"></a><span data-ttu-id="ae49b-311">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ae49b-311">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="471b8-311">Beispiel</span><span class="sxs-lookup"><span data-stu-id="471b8-311">Example</span></span>
 
 ```XML
 <Package
@@ -525,7 +528,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
               <uap3:Verb Id="Preview" MultiSelectModel="Document">Preview</uap3:Verb>
             </uap2:SupportedVerbs>
             <uap:SupportedFileTypes>
-                <uap:FileType>.txt</uap:FileType>
+              <uap:FileType>.txt</uap:FileType>
             </uap:SupportedFileTypes>
         </uap:Extension>
       </Extensions>
@@ -534,22 +537,22 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 </Package>
 ```
 
-<span data-ttu-id="ae49b-312">Wenn der Benutzer 15 oder weniger Dateien öffnet, ist die Standardauswahl des **MultiSelectModel**-Attributs *Player*.</span><span class="sxs-lookup"><span data-stu-id="ae49b-312">If the user opens 15 or fewer files, the default choice for the **MultiSelectModel** attribute is *Player*.</span></span> <span data-ttu-id="ae49b-313">Andernfalls ist die Standardauswahl *Document*.</span><span class="sxs-lookup"><span data-stu-id="ae49b-313">Otherwise, the default is *Document*.</span></span> <span data-ttu-id="ae49b-314">UWP-Apps werden immer als *Player* gestartet.</span><span class="sxs-lookup"><span data-stu-id="ae49b-314">UWP apps are always started as *Player*.</span></span>
+<span data-ttu-id="471b8-312">Wenn der Benutzer 15 oder weniger Dateien öffnet, ist die Standardauswahl des **MultiSelectModel**-Attributs *Player*.</span><span class="sxs-lookup"><span data-stu-id="471b8-312">If the user opens 15 or fewer files, the default choice for the **MultiSelectModel** attribute is *Player*.</span></span> <span data-ttu-id="471b8-313">Andernfalls ist die Standardauswahl *Document*.</span><span class="sxs-lookup"><span data-stu-id="471b8-313">Otherwise, the default is *Document*.</span></span> <span data-ttu-id="471b8-314">UWP-Apps werden immer als *Player* gestartet.</span><span class="sxs-lookup"><span data-stu-id="471b8-314">UWP apps are always started as *Player*.</span></span>
 
 <a id="show" />
 
-### <a name="show-file-contents-in-a-thumbnail-image-within-file-explorer"></a><span data-ttu-id="ae49b-315">Zeigen Sie Dateiinhalte in einem Miniaturbild im Datei-Explorer an.</span><span class="sxs-lookup"><span data-stu-id="ae49b-315">Show file contents in a thumbnail image within File Explorer</span></span>
+### <a name="show-file-contents-in-a-thumbnail-image-within-file-explorer"></a><span data-ttu-id="471b8-315">Zeigen Sie Dateiinhalte in einem Miniaturbild im Datei-Explorer an.</span><span class="sxs-lookup"><span data-stu-id="471b8-315">Show file contents in a thumbnail image within File Explorer</span></span>
 
-<span data-ttu-id="ae49b-316">Ermöglichen Sie es Benutzern, eine Miniaturansicht des Dateiinhalts anzuzeigen, wenn das Symbol der Datei in den Größen Mittel, Groß, oder extra Groß angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="ae49b-316">Enable users to view a thumbnail image of the file's contents when the icon of the file appears in the medium, large, or extra large size.</span></span>
+<span data-ttu-id="471b8-316">Ermöglichen Sie es Benutzern, eine Miniaturansicht des Dateiinhalts anzuzeigen, wenn das Symbol der Datei in den Größen Mittel, Groß, oder extra Groß angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="471b8-316">Enable users to view a thumbnail image of the file's contents when the icon of the file appears in the medium, large, or extra large size.</span></span>
 
-#### <a name="xml-namespace"></a><span data-ttu-id="ae49b-317">XML-Namespace</span><span class="sxs-lookup"><span data-stu-id="ae49b-317">XML namespace</span></span>
+#### <a name="xml-namespace"></a><span data-ttu-id="471b8-317">XML-Namespace</span><span class="sxs-lookup"><span data-stu-id="471b8-317">XML namespace</span></span>
 
 * http://schemas.microsoft.com/appx/manifest/uap/windows10
 * http://schemas.microsoft.com/appx/manifest/uap/windows10/2
 * http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 * http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 
-#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="ae49b-318">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="ae49b-318">Elements and attributes of this extension</span></span>
+#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="471b8-318">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="471b8-318">Elements and attributes of this extension</span></span>
 
 ```XML
 <Extension Category="windows.fileTypeAssociation">
@@ -563,16 +566,16 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 </Extension>
 ```
 
-<span data-ttu-id="ae49b-319">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span><span class="sxs-lookup"><span data-stu-id="ae49b-319">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span></span>
+<span data-ttu-id="471b8-319">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span><span class="sxs-lookup"><span data-stu-id="471b8-319">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span></span>
 
-|<span data-ttu-id="ae49b-320">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-320">Name</span></span> |<span data-ttu-id="ae49b-321">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ae49b-321">Description</span></span> |
+|<span data-ttu-id="471b8-320">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-320">Name</span></span> |<span data-ttu-id="471b8-321">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="471b8-321">Description</span></span> |
 |-------|-------------|
-|<span data-ttu-id="ae49b-322">Kategorie</span><span class="sxs-lookup"><span data-stu-id="ae49b-322">Category</span></span> |<span data-ttu-id="ae49b-323">Immer ``windows.fileTypeAssociation``.</span><span class="sxs-lookup"><span data-stu-id="ae49b-323">Always ``windows.fileTypeAssociation``.</span></span>
-|<span data-ttu-id="ae49b-324">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-324">Name</span></span> |<span data-ttu-id="ae49b-325">Eine eindeutige ID für Ihre App.</span><span class="sxs-lookup"><span data-stu-id="ae49b-325">A unique Id for your app.</span></span> |
-|<span data-ttu-id="ae49b-326">FileType</span><span class="sxs-lookup"><span data-stu-id="ae49b-326">FileType</span></span> |<span data-ttu-id="ae49b-327">Die relevanten Dateierweiterungen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-327">The relevant file extensions.</span></span> |
-|<span data-ttu-id="ae49b-328">Clsid</span><span class="sxs-lookup"><span data-stu-id="ae49b-328">Clsid</span></span>   |<span data-ttu-id="ae49b-329">Die Klassen-ID Ihrer App.</span><span class="sxs-lookup"><span data-stu-id="ae49b-329">The class ID of your app.</span></span> |
+|<span data-ttu-id="471b8-322">Kategorie</span><span class="sxs-lookup"><span data-stu-id="471b8-322">Category</span></span> |<span data-ttu-id="471b8-323">Immer ``windows.fileTypeAssociation``.</span><span class="sxs-lookup"><span data-stu-id="471b8-323">Always ``windows.fileTypeAssociation``.</span></span>
+|<span data-ttu-id="471b8-324">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-324">Name</span></span> |<span data-ttu-id="471b8-325">Eine eindeutige ID für Ihre App.</span><span class="sxs-lookup"><span data-stu-id="471b8-325">A unique Id for your app.</span></span> |
+|<span data-ttu-id="471b8-326">FileType</span><span class="sxs-lookup"><span data-stu-id="471b8-326">FileType</span></span> |<span data-ttu-id="471b8-327">Die relevanten Dateierweiterungen.</span><span class="sxs-lookup"><span data-stu-id="471b8-327">The relevant file extensions.</span></span> |
+|<span data-ttu-id="471b8-328">Clsid</span><span class="sxs-lookup"><span data-stu-id="471b8-328">Clsid</span></span>   |<span data-ttu-id="471b8-329">Die Klassen-ID Ihrer App.</span><span class="sxs-lookup"><span data-stu-id="471b8-329">The class ID of your app.</span></span> |
 
-#### <a name="example"></a><span data-ttu-id="ae49b-330">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ae49b-330">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="471b8-330">Beispiel</span><span class="sxs-lookup"><span data-stu-id="471b8-330">Example</span></span>
 
 ```XML
 <Package
@@ -601,18 +604,18 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 <a id="preview" />
 
-### <a name="show-file-contents-in-the-preview-pane-of-file-explorer"></a><span data-ttu-id="ae49b-331">Zeigen Sie Dateiinhalte in der Vorschau des Datei-Explorers an.</span><span class="sxs-lookup"><span data-stu-id="ae49b-331">Show file contents in the Preview pane of File Explorer</span></span>
+### <a name="show-file-contents-in-the-preview-pane-of-file-explorer"></a><span data-ttu-id="471b8-331">Zeigen Sie Dateiinhalte in der Vorschau des Datei-Explorers an.</span><span class="sxs-lookup"><span data-stu-id="471b8-331">Show file contents in the Preview pane of File Explorer</span></span>
 
-<span data-ttu-id="ae49b-332">Ermöglichen Sie es Benutzern, den Inhalt einer Datei in Vorschaubereich des Datei-Explorers anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-332">Enable users to preview a file's contents in the Preview pane of File Explorer.</span></span>
+<span data-ttu-id="471b8-332">Ermöglichen Sie es Benutzern, den Inhalt einer Datei in Vorschaubereich des Datei-Explorers anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="471b8-332">Enable users to preview a file's contents in the Preview pane of File Explorer.</span></span>
 
-#### <a name="xml-namespace"></a><span data-ttu-id="ae49b-333">XML-Namespace</span><span class="sxs-lookup"><span data-stu-id="ae49b-333">XML namespace</span></span>
+#### <a name="xml-namespace"></a><span data-ttu-id="471b8-333">XML-Namespace</span><span class="sxs-lookup"><span data-stu-id="471b8-333">XML namespace</span></span>
 
 * http://schemas.microsoft.com/appx/manifest/uap/windows10
 * http://schemas.microsoft.com/appx/manifest/uap/windows10/2
 * http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 * http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 
-#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="ae49b-334">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="ae49b-334">Elements and attributes of this extension</span></span>
+#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="471b8-334">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="471b8-334">Elements and attributes of this extension</span></span>
 
 ```XML
 <Extension Category="windows.fileTypeAssociation">
@@ -625,16 +628,16 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 </Extension>
 ```
 
-<span data-ttu-id="ae49b-335">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span><span class="sxs-lookup"><span data-stu-id="ae49b-335">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span></span>
+<span data-ttu-id="471b8-335">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span><span class="sxs-lookup"><span data-stu-id="471b8-335">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span></span>
 
-|<span data-ttu-id="ae49b-336">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-336">Name</span></span> |<span data-ttu-id="ae49b-337">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ae49b-337">Description</span></span> |
+|<span data-ttu-id="471b8-336">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-336">Name</span></span> |<span data-ttu-id="471b8-337">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="471b8-337">Description</span></span> |
 |-------|-------------|
-|<span data-ttu-id="ae49b-338">Kategorie</span><span class="sxs-lookup"><span data-stu-id="ae49b-338">Category</span></span> |<span data-ttu-id="ae49b-339">Immer ``windows.fileTypeAssociation``.</span><span class="sxs-lookup"><span data-stu-id="ae49b-339">Always ``windows.fileTypeAssociation``.</span></span>
-|<span data-ttu-id="ae49b-340">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-340">Name</span></span> |<span data-ttu-id="ae49b-341">Eine eindeutige ID für Ihre App.</span><span class="sxs-lookup"><span data-stu-id="ae49b-341">A unique Id for your app.</span></span> |
-|<span data-ttu-id="ae49b-342">FileType</span><span class="sxs-lookup"><span data-stu-id="ae49b-342">FileType</span></span> |<span data-ttu-id="ae49b-343">Die relevanten Dateierweiterungen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-343">The relevant file extensions.</span></span> |
-|<span data-ttu-id="ae49b-344">Clsid</span><span class="sxs-lookup"><span data-stu-id="ae49b-344">Clsid</span></span>   |<span data-ttu-id="ae49b-345">Die Klassen-ID Ihrer App.</span><span class="sxs-lookup"><span data-stu-id="ae49b-345">The class ID of your app.</span></span> |
+|<span data-ttu-id="471b8-338">Kategorie</span><span class="sxs-lookup"><span data-stu-id="471b8-338">Category</span></span> |<span data-ttu-id="471b8-339">Immer ``windows.fileTypeAssociation``.</span><span class="sxs-lookup"><span data-stu-id="471b8-339">Always ``windows.fileTypeAssociation``.</span></span>
+|<span data-ttu-id="471b8-340">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-340">Name</span></span> |<span data-ttu-id="471b8-341">Eine eindeutige ID für Ihre App.</span><span class="sxs-lookup"><span data-stu-id="471b8-341">A unique Id for your app.</span></span> |
+|<span data-ttu-id="471b8-342">FileType</span><span class="sxs-lookup"><span data-stu-id="471b8-342">FileType</span></span> |<span data-ttu-id="471b8-343">Die relevanten Dateierweiterungen.</span><span class="sxs-lookup"><span data-stu-id="471b8-343">The relevant file extensions.</span></span> |
+|<span data-ttu-id="471b8-344">Clsid</span><span class="sxs-lookup"><span data-stu-id="471b8-344">Clsid</span></span>   |<span data-ttu-id="471b8-345">Die Klassen-ID Ihrer App.</span><span class="sxs-lookup"><span data-stu-id="471b8-345">The class ID of your app.</span></span> |
 
-#### <a name="example"></a><span data-ttu-id="ae49b-346">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ae49b-346">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="471b8-346">Beispiel</span><span class="sxs-lookup"><span data-stu-id="471b8-346">Example</span></span>
 
 ```XML
 <Package
@@ -662,20 +665,20 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 <a id="enable" />
 
-### <a name="enable-users-to-group-files-by-using-the-kind-column-in-file-explorer"></a><span data-ttu-id="ae49b-347">Ermöglichen Sie es Benutzern, Dateien mithilfe der Spalte „Art” im Datei-Explorer zu gruppieren.</span><span class="sxs-lookup"><span data-stu-id="ae49b-347">Enable users to group files by using the Kind column in File Explorer</span></span>
+### <a name="enable-users-to-group-files-by-using-the-kind-column-in-file-explorer"></a><span data-ttu-id="471b8-347">Ermöglichen Sie es Benutzern, Dateien mithilfe der Spalte „Art” im Datei-Explorer zu gruppieren.</span><span class="sxs-lookup"><span data-stu-id="471b8-347">Enable users to group files by using the Kind column in File Explorer</span></span>
 
-<span data-ttu-id="ae49b-348">Sie können einen oder mehrere vordefinierte Werte für die Dateitypen mit dem **Art**-Feld zuordnen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-348">You can associate one or more predefined values for your file types with the **Kind** field.</span></span>
+<span data-ttu-id="471b8-348">Sie können einen oder mehrere vordefinierte Werte für die Dateitypen mit dem **Art**-Feld zuordnen.</span><span class="sxs-lookup"><span data-stu-id="471b8-348">You can associate one or more predefined values for your file types with the **Kind** field.</span></span>
 
-<span data-ttu-id="ae49b-349">Im Datei-Explorer können Benutzer diese Dateien mithilfe dieses Felds gruppieren.</span><span class="sxs-lookup"><span data-stu-id="ae49b-349">In File Explorer, users can group those files by using that field.</span></span> <span data-ttu-id="ae49b-350">Systemkomponenten verwenden auch dieses Feld für verschiedene Zwecke, wie etwa für die Indizierung.</span><span class="sxs-lookup"><span data-stu-id="ae49b-350">System components also use this field for various purposes such as indexing.</span></span>
+<span data-ttu-id="471b8-349">Im Datei-Explorer können Benutzer diese Dateien mithilfe dieses Felds gruppieren.</span><span class="sxs-lookup"><span data-stu-id="471b8-349">In File Explorer, users can group those files by using that field.</span></span> <span data-ttu-id="471b8-350">Systemkomponenten verwenden auch dieses Feld für verschiedene Zwecke, wie etwa für die Indizierung.</span><span class="sxs-lookup"><span data-stu-id="471b8-350">System components also use this field for various purposes such as indexing.</span></span>
 
-<span data-ttu-id="ae49b-351">Für weitere Informationen zum **Art**-Feld und die Werte, die Sie für dieses Feld verwenden können, finden Sie unter [Art Namen verwenden](https://msdn.microsoft.com/library/windows/desktop/cc144136.aspx).</span><span class="sxs-lookup"><span data-stu-id="ae49b-351">For more information about the **Kind** field and the values that you can use for this field, see [Using Kind Names](https://msdn.microsoft.com/library/windows/desktop/cc144136.aspx).</span></span>
+<span data-ttu-id="471b8-351">Für weitere Informationen zum **Art**-Feld und die Werte, die Sie für dieses Feld verwenden können, finden Sie unter [Art Namen verwenden](https://msdn.microsoft.com/library/windows/desktop/cc144136.aspx).</span><span class="sxs-lookup"><span data-stu-id="471b8-351">For more information about the **Kind** field and the values that you can use for this field, see [Using Kind Names](https://msdn.microsoft.com/library/windows/desktop/cc144136.aspx).</span></span>
 
-#### <a name="xml-namespaces"></a><span data-ttu-id="ae49b-352">XML-Namespaces</span><span class="sxs-lookup"><span data-stu-id="ae49b-352">XML namespaces</span></span>
+#### <a name="xml-namespaces"></a><span data-ttu-id="471b8-352">XML-Namespaces</span><span class="sxs-lookup"><span data-stu-id="471b8-352">XML namespaces</span></span>
 
 * http://schemas.microsoft.com/appx/manifest/uap/windows10
 * http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3
 
-#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="ae49b-353">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="ae49b-353">Elements and attributes of this extension</span></span>
+#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="471b8-353">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="471b8-353">Elements and attributes of this extension</span></span>
 
 ```XML
 <Extension Category="windows.fileTypeAssociation">
@@ -689,16 +692,17 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
     </FileTypeAssociation>
 </Extension>
 ```
-<span data-ttu-id="ae49b-354">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span><span class="sxs-lookup"><span data-stu-id="ae49b-354">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span></span>
 
-|<span data-ttu-id="ae49b-355">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-355">Name</span></span> |<span data-ttu-id="ae49b-356">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ae49b-356">Description</span></span> |
+<span data-ttu-id="471b8-354">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span><span class="sxs-lookup"><span data-stu-id="471b8-354">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span></span>
+
+|<span data-ttu-id="471b8-355">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-355">Name</span></span> |<span data-ttu-id="471b8-356">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="471b8-356">Description</span></span> |
 |-------|-------------|
-|<span data-ttu-id="ae49b-357">Kategorie</span><span class="sxs-lookup"><span data-stu-id="ae49b-357">Category</span></span> |<span data-ttu-id="ae49b-358">Immer ``windows.fileTypeAssociation``.</span><span class="sxs-lookup"><span data-stu-id="ae49b-358">Always ``windows.fileTypeAssociation``.</span></span>
-|<span data-ttu-id="ae49b-359">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-359">Name</span></span> |<span data-ttu-id="ae49b-360">Eine eindeutige ID für Ihre App.</span><span class="sxs-lookup"><span data-stu-id="ae49b-360">A unique Id for your app.</span></span> |
-|<span data-ttu-id="ae49b-361">FileType</span><span class="sxs-lookup"><span data-stu-id="ae49b-361">FileType</span></span> |<span data-ttu-id="ae49b-362">Die relevanten Dateierweiterungen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-362">The relevant file extensions.</span></span> |
-|<span data-ttu-id="ae49b-363">Wert</span><span class="sxs-lookup"><span data-stu-id="ae49b-363">value</span></span> |<span data-ttu-id="ae49b-364">Ein gültiger [Art-Wert](https://msdn.microsoft.com/en-us/library/windows/desktop/cc144136.aspx#kind_hierarchy)</span><span class="sxs-lookup"><span data-stu-id="ae49b-364">A valid [Kind value](https://msdn.microsoft.com/en-us/library/windows/desktop/cc144136.aspx#kind_hierarchy)</span></span> |
+|<span data-ttu-id="471b8-357">Kategorie</span><span class="sxs-lookup"><span data-stu-id="471b8-357">Category</span></span> |<span data-ttu-id="471b8-358">Immer ``windows.fileTypeAssociation``.</span><span class="sxs-lookup"><span data-stu-id="471b8-358">Always ``windows.fileTypeAssociation``.</span></span>
+|<span data-ttu-id="471b8-359">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-359">Name</span></span> |<span data-ttu-id="471b8-360">Eine eindeutige ID für Ihre App.</span><span class="sxs-lookup"><span data-stu-id="471b8-360">A unique Id for your app.</span></span> |
+|<span data-ttu-id="471b8-361">FileType</span><span class="sxs-lookup"><span data-stu-id="471b8-361">FileType</span></span> |<span data-ttu-id="471b8-362">Die relevanten Dateierweiterungen.</span><span class="sxs-lookup"><span data-stu-id="471b8-362">The relevant file extensions.</span></span> |
+|<span data-ttu-id="471b8-363">Wert</span><span class="sxs-lookup"><span data-stu-id="471b8-363">value</span></span> |<span data-ttu-id="471b8-364">Ein gültiger [Art-Wert](https://msdn.microsoft.com/en-us/library/windows/desktop/cc144136.aspx#kind_hierarchy)</span><span class="sxs-lookup"><span data-stu-id="471b8-364">A valid [Kind value](https://msdn.microsoft.com/en-us/library/windows/desktop/cc144136.aspx#kind_hierarchy)</span></span> |
 
-#### <a name="example"></a><span data-ttu-id="ae49b-365">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ae49b-365">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="471b8-365">Beispiel</span><span class="sxs-lookup"><span data-stu-id="471b8-365">Example</span></span>
 
 ```XML
 <Package
@@ -726,17 +730,18 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
   </Applications>
 </Package>
 ```
+
 <a id="make-file-properties" />
 
-### <a name="make-file-properties-available-to-search-index-property-dialogs-and-the-details-pane"></a><span data-ttu-id="ae49b-366">Stellen Sie den Bereichen Suchen, Index, Eigenschaftendialogfelder und Details Dateieigenschaften zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="ae49b-366">Make file properties available to search, index, property dialogs, and the details pane</span></span>
+### <a name="make-file-properties-available-to-search-index-property-dialogs-and-the-details-pane"></a><span data-ttu-id="471b8-366">Stellen Sie den Bereichen Suchen, Index, Eigenschaftendialogfelder und Details Dateieigenschaften zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="471b8-366">Make file properties available to search, index, property dialogs, and the details pane</span></span>
 
-#### <a name="xml-namespace"></a><span data-ttu-id="ae49b-367">XML-Namespace</span><span class="sxs-lookup"><span data-stu-id="ae49b-367">XML namespace</span></span>
+#### <a name="xml-namespace"></a><span data-ttu-id="471b8-367">XML-Namespace</span><span class="sxs-lookup"><span data-stu-id="471b8-367">XML namespace</span></span>
 
 * http://schemas.microsoft.com/appx/manifest/uap/windows10
 * http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 * http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 
-#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="ae49b-368">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="ae49b-368">Elements and attributes of this extension</span></span>
+#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="471b8-368">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="471b8-368">Elements and attributes of this extension</span></span>
 
 ```XML
 <uap:Extension Category="windows.fileTypeAssociation">
@@ -748,16 +753,17 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
     </uap:FileTypeAssociation>
 </uap:Extension>
 ```
-<span data-ttu-id="ae49b-369">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span><span class="sxs-lookup"><span data-stu-id="ae49b-369">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span></span>
 
-|<span data-ttu-id="ae49b-370">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-370">Name</span></span> |<span data-ttu-id="ae49b-371">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ae49b-371">Description</span></span> |
+<span data-ttu-id="471b8-369">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span><span class="sxs-lookup"><span data-stu-id="471b8-369">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span></span>
+
+|<span data-ttu-id="471b8-370">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-370">Name</span></span> |<span data-ttu-id="471b8-371">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="471b8-371">Description</span></span> |
 |-------|-------------|
-|<span data-ttu-id="ae49b-372">Kategorie</span><span class="sxs-lookup"><span data-stu-id="ae49b-372">Category</span></span> |<span data-ttu-id="ae49b-373">Immer ``windows.fileTypeAssociation``.</span><span class="sxs-lookup"><span data-stu-id="ae49b-373">Always ``windows.fileTypeAssociation``.</span></span>
-|<span data-ttu-id="ae49b-374">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-374">Name</span></span> |<span data-ttu-id="ae49b-375">Eine eindeutige ID für Ihre App.</span><span class="sxs-lookup"><span data-stu-id="ae49b-375">A unique Id for your app.</span></span> |
-|<span data-ttu-id="ae49b-376">FileType</span><span class="sxs-lookup"><span data-stu-id="ae49b-376">FileType</span></span> |<span data-ttu-id="ae49b-377">Die relevanten Dateierweiterungen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-377">The relevant file extensions.</span></span> |
-|<span data-ttu-id="ae49b-378">Clsid</span><span class="sxs-lookup"><span data-stu-id="ae49b-378">Clsid</span></span>  |<span data-ttu-id="ae49b-379">Die Klassen-ID Ihrer App.</span><span class="sxs-lookup"><span data-stu-id="ae49b-379">The class ID of your app.</span></span> |
+|<span data-ttu-id="471b8-372">Kategorie</span><span class="sxs-lookup"><span data-stu-id="471b8-372">Category</span></span> |<span data-ttu-id="471b8-373">Immer ``windows.fileTypeAssociation``.</span><span class="sxs-lookup"><span data-stu-id="471b8-373">Always ``windows.fileTypeAssociation``.</span></span>
+|<span data-ttu-id="471b8-374">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-374">Name</span></span> |<span data-ttu-id="471b8-375">Eine eindeutige ID für Ihre App.</span><span class="sxs-lookup"><span data-stu-id="471b8-375">A unique Id for your app.</span></span> |
+|<span data-ttu-id="471b8-376">FileType</span><span class="sxs-lookup"><span data-stu-id="471b8-376">FileType</span></span> |<span data-ttu-id="471b8-377">Die relevanten Dateierweiterungen.</span><span class="sxs-lookup"><span data-stu-id="471b8-377">The relevant file extensions.</span></span> |
+|<span data-ttu-id="471b8-378">Clsid</span><span class="sxs-lookup"><span data-stu-id="471b8-378">Clsid</span></span>  |<span data-ttu-id="471b8-379">Die Klassen-ID Ihrer App.</span><span class="sxs-lookup"><span data-stu-id="471b8-379">The class ID of your app.</span></span> |
 
-#### <a name="example"></a><span data-ttu-id="ae49b-380">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ae49b-380">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="471b8-380">Beispiel</span><span class="sxs-lookup"><span data-stu-id="471b8-380">Example</span></span>
 
 ```XML
 <Package
@@ -784,15 +790,15 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 <a id="cloud-files" />
 
-### <a name="make-files-from-your-cloud-service-appear-in-file-explorer"></a><span data-ttu-id="ae49b-381">Zeigen Sie Dateien von Ihrem Clouddienst im Datei-Explorer an</span><span class="sxs-lookup"><span data-stu-id="ae49b-381">Make files from your cloud service appear in File Explorer</span></span>
+### <a name="make-files-from-your-cloud-service-appear-in-file-explorer"></a><span data-ttu-id="471b8-381">Zeigen Sie Dateien von Ihrem Clouddienst im Datei-Explorer an</span><span class="sxs-lookup"><span data-stu-id="471b8-381">Make files from your cloud service appear in File Explorer</span></span>
 
-<span data-ttu-id="ae49b-382">Registrieren Sie die Handler, die Sie in Ihrer Anwendung implementieren.</span><span class="sxs-lookup"><span data-stu-id="ae49b-382">Register the handlers that you implement in your application.</span></span> <span data-ttu-id="ae49b-383">Sie können auch Kontextmenüoptionen hinzufügen, die angezeigt werden, wenn Ihre Benutzer im Datei-Explorer mit der rechten Maustaste auf die cloudbasierten Dateien klicken.</span><span class="sxs-lookup"><span data-stu-id="ae49b-383">You can also add context menu options that appear when you users right-click your cloud-based files in File Explorer.</span></span>
+<span data-ttu-id="471b8-382">Registrieren Sie die Handler, die Sie in Ihrer Anwendung implementieren.</span><span class="sxs-lookup"><span data-stu-id="471b8-382">Register the handlers that you implement in your application.</span></span> <span data-ttu-id="471b8-383">Sie können auch Kontextmenüoptionen hinzufügen, die angezeigt werden, wenn Ihre Benutzer im Datei-Explorer mit der rechten Maustaste auf die cloudbasierten Dateien klicken.</span><span class="sxs-lookup"><span data-stu-id="471b8-383">You can also add context menu options that appear when you users right-click your cloud-based files in File Explorer.</span></span>
 
-#### <a name="xml-namespace"></a><span data-ttu-id="ae49b-384">XML-Namespace</span><span class="sxs-lookup"><span data-stu-id="ae49b-384">XML namespace</span></span>
+#### <a name="xml-namespace"></a><span data-ttu-id="471b8-384">XML-Namespace</span><span class="sxs-lookup"><span data-stu-id="471b8-384">XML namespace</span></span>
 
 * http://schemas.microsoft.com/appx/manifest/desktop/windows10
 
-#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="ae49b-385">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="ae49b-385">Elements and attributes of this extension</span></span>
+#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="471b8-385">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="471b8-385">Elements and attributes of this extension</span></span>
 
 ```XML
 <Extension Category="windows.cloudfiles" >
@@ -808,17 +814,17 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 ```
 
-|<span data-ttu-id="ae49b-386">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-386">Name</span></span> |<span data-ttu-id="ae49b-387">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ae49b-387">Description</span></span> |
+|<span data-ttu-id="471b8-386">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-386">Name</span></span> |<span data-ttu-id="471b8-387">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="471b8-387">Description</span></span> |
 |-------|-------------|
-|<span data-ttu-id="ae49b-388">Kategorie</span><span class="sxs-lookup"><span data-stu-id="ae49b-388">Category</span></span> |<span data-ttu-id="ae49b-389">Immer ``windows.cloudfiles``.</span><span class="sxs-lookup"><span data-stu-id="ae49b-389">Always ``windows.cloudfiles``.</span></span>
-|<span data-ttu-id="ae49b-390">iconResource</span><span class="sxs-lookup"><span data-stu-id="ae49b-390">iconResource</span></span> |<span data-ttu-id="ae49b-391">Das Symbol, das den Dienst Ihres Cloud-Datei-Anbieters darstellt.</span><span class="sxs-lookup"><span data-stu-id="ae49b-391">The icon that represents your cloud file provider service.</span></span> <span data-ttu-id="ae49b-392">Dieses Symbol wird im Navigationsbereich des Datei-Explorers angezeigt.</span><span class="sxs-lookup"><span data-stu-id="ae49b-392">This icon appears in the Navigation pane of File Explorer.</span></span>  <span data-ttu-id="ae49b-393">Benutzer wählen dieses Symbol, um Dateien von Ihrem Clouddienst anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-393">Users choose this icon to show files from your cloud service.</span></span> |
-|<span data-ttu-id="ae49b-394">CustomStateHandler Clsid</span><span class="sxs-lookup"><span data-stu-id="ae49b-394">CustomStateHandler Clsid</span></span> |<span data-ttu-id="ae49b-395">Die Klassen-ID der Anwendung, die die CustomStateHandler implementiert.</span><span class="sxs-lookup"><span data-stu-id="ae49b-395">The class ID of the application that implements the CustomStateHandler.</span></span> <span data-ttu-id="ae49b-396">Das System verwendet diese Klassen-ID, um benutzerdefinierte Zustände und Spalten für Cloud-Dateien anzufordern.</span><span class="sxs-lookup"><span data-stu-id="ae49b-396">The system uses this Class ID to request custom states and columns for cloud files.</span></span> |
-|<span data-ttu-id="ae49b-397">ThumbnailProviderHandler Clsid</span><span class="sxs-lookup"><span data-stu-id="ae49b-397">ThumbnailProviderHandler Clsid</span></span> |<span data-ttu-id="ae49b-398">Die Klassen-ID der Anwendung, die den ThumbnailProviderHandler implementiert.</span><span class="sxs-lookup"><span data-stu-id="ae49b-398">The class ID of the application that implements the ThumbnailProviderHandler.</span></span> <span data-ttu-id="ae49b-399">Das System verwendet diese Klassen-ID, um Miniaturansichten für Cloud-Dateien anzufordern.</span><span class="sxs-lookup"><span data-stu-id="ae49b-399">The system uses this Class ID to request thumbnail images for cloud files.</span></span> |
-|<span data-ttu-id="ae49b-400">ExtendedPropertyHandler Clsid</span><span class="sxs-lookup"><span data-stu-id="ae49b-400">ExtendedPropertyHandler Clsid</span></span> |<span data-ttu-id="ae49b-401">Die Klassen-ID der Anwendung, die den ExtendedPropertyHandler implementiert.</span><span class="sxs-lookup"><span data-stu-id="ae49b-401">The class ID of the application that implements the ExtendedPropertyHandler.</span></span>  <span data-ttu-id="ae49b-402">Das System verwendet diese Klassen-ID, um erweiterte Eigenschaften für eine Cloud-Datei anzufordern.</span><span class="sxs-lookup"><span data-stu-id="ae49b-402">The system uses this Class ID to request extended properties for a cloud file.</span></span> |
-|<span data-ttu-id="ae49b-403">Verb</span><span class="sxs-lookup"><span data-stu-id="ae49b-403">Verb</span></span> |<span data-ttu-id="ae49b-404">Der Name, der im Kontextmenü des Datei-Explorers für Dateien angezeigt wird, die von Ihrem Clouddienst bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="ae49b-404">The name that appears in the File Explorer context menu for files provided by your cloud service.</span></span> |
-|<span data-ttu-id="ae49b-405">ID</span><span class="sxs-lookup"><span data-stu-id="ae49b-405">Id</span></span> |<span data-ttu-id="ae49b-406">Die eindeutige ID des Verbs.</span><span class="sxs-lookup"><span data-stu-id="ae49b-406">The unique ID of the verb.</span></span> |
+|<span data-ttu-id="471b8-388">Kategorie</span><span class="sxs-lookup"><span data-stu-id="471b8-388">Category</span></span> |<span data-ttu-id="471b8-389">Immer ``windows.cloudfiles``.</span><span class="sxs-lookup"><span data-stu-id="471b8-389">Always ``windows.cloudfiles``.</span></span>
+|<span data-ttu-id="471b8-390">iconResource</span><span class="sxs-lookup"><span data-stu-id="471b8-390">iconResource</span></span> |<span data-ttu-id="471b8-391">Das Symbol, das den Dienst Ihres Cloud-Datei-Anbieters darstellt.</span><span class="sxs-lookup"><span data-stu-id="471b8-391">The icon that represents your cloud file provider service.</span></span> <span data-ttu-id="471b8-392">Dieses Symbol wird im Navigationsbereich des Datei-Explorers angezeigt.</span><span class="sxs-lookup"><span data-stu-id="471b8-392">This icon appears in the Navigation pane of File Explorer.</span></span>  <span data-ttu-id="471b8-393">Benutzer wählen dieses Symbol, um Dateien von Ihrem Clouddienst anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="471b8-393">Users choose this icon to show files from your cloud service.</span></span> |
+|<span data-ttu-id="471b8-394">CustomStateHandler Clsid</span><span class="sxs-lookup"><span data-stu-id="471b8-394">CustomStateHandler Clsid</span></span> |<span data-ttu-id="471b8-395">Die Klassen-ID der Anwendung, die die CustomStateHandler implementiert.</span><span class="sxs-lookup"><span data-stu-id="471b8-395">The class ID of the application that implements the CustomStateHandler.</span></span> <span data-ttu-id="471b8-396">Das System verwendet diese Klassen-ID, um benutzerdefinierte Zustände und Spalten für Cloud-Dateien anzufordern.</span><span class="sxs-lookup"><span data-stu-id="471b8-396">The system uses this Class ID to request custom states and columns for cloud files.</span></span> |
+|<span data-ttu-id="471b8-397">ThumbnailProviderHandler Clsid</span><span class="sxs-lookup"><span data-stu-id="471b8-397">ThumbnailProviderHandler Clsid</span></span> |<span data-ttu-id="471b8-398">Die Klassen-ID der Anwendung, die den ThumbnailProviderHandler implementiert.</span><span class="sxs-lookup"><span data-stu-id="471b8-398">The class ID of the application that implements the ThumbnailProviderHandler.</span></span> <span data-ttu-id="471b8-399">Das System verwendet diese Klassen-ID, um Miniaturansichten für Cloud-Dateien anzufordern.</span><span class="sxs-lookup"><span data-stu-id="471b8-399">The system uses this Class ID to request thumbnail images for cloud files.</span></span> |
+|<span data-ttu-id="471b8-400">ExtendedPropertyHandler Clsid</span><span class="sxs-lookup"><span data-stu-id="471b8-400">ExtendedPropertyHandler Clsid</span></span> |<span data-ttu-id="471b8-401">Die Klassen-ID der Anwendung, die den ExtendedPropertyHandler implementiert.</span><span class="sxs-lookup"><span data-stu-id="471b8-401">The class ID of the application that implements the ExtendedPropertyHandler.</span></span>  <span data-ttu-id="471b8-402">Das System verwendet diese Klassen-ID, um erweiterte Eigenschaften für eine Cloud-Datei anzufordern.</span><span class="sxs-lookup"><span data-stu-id="471b8-402">The system uses this Class ID to request extended properties for a cloud file.</span></span> |
+|<span data-ttu-id="471b8-403">Verb</span><span class="sxs-lookup"><span data-stu-id="471b8-403">Verb</span></span> |<span data-ttu-id="471b8-404">Der Name, der im Kontextmenü des Datei-Explorers für Dateien angezeigt wird, die von Ihrem Clouddienst bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="471b8-404">The name that appears in the File Explorer context menu for files provided by your cloud service.</span></span> |
+|<span data-ttu-id="471b8-405">ID</span><span class="sxs-lookup"><span data-stu-id="471b8-405">Id</span></span> |<span data-ttu-id="471b8-406">Die eindeutige ID des Verbs.</span><span class="sxs-lookup"><span data-stu-id="471b8-406">The unique ID of the verb.</span></span> |
 
-#### <a name="example"></a><span data-ttu-id="ae49b-407">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ae49b-407">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="471b8-407">Beispiel</span><span class="sxs-lookup"><span data-stu-id="471b8-407">Example</span></span>
 
 ```XML
 <Package
@@ -833,7 +839,7 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
                 <ThumbnailProviderHandler Clsid ="20000000-0000-0000-0000-000000000001"/>
                 <ExtendedPropertyhandler Clsid ="20000000-0000-0000-0000-000000000001"/>
                 <desktop:CloudFilesContextMenus>
-                    <desktop:Verb Id ="keep" Clsid=     
+                    <desktop:Verb Id ="keep" Clsid=
                        "20000000-0000-0000-0000-000000000001">
                        Always keep on this device</desktop:Verb>
                 </desktop:CloudFilesContextMenus>
@@ -847,45 +853,44 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/6
 
 <a id="start" />
 
-## <a name="start-your-application-in-different-ways"></a><span data-ttu-id="ae49b-408">Starten Sie die Anwendung auf unterschiedliche Weise</span><span class="sxs-lookup"><span data-stu-id="ae49b-408">Start your application in different ways</span></span>
+## <a name="start-your-application-in-different-ways"></a><span data-ttu-id="471b8-408">Starten Sie die Anwendung auf unterschiedliche Weise</span><span class="sxs-lookup"><span data-stu-id="471b8-408">Start your application in different ways</span></span>
 
-* [<span data-ttu-id="ae49b-409">Starten Sie die Anwendung über ein Protokoll</span><span class="sxs-lookup"><span data-stu-id="ae49b-409">Start your application by using a protocol</span></span>](#protocol)
-* [<span data-ttu-id="ae49b-410">Starten Sie die Anwendung mithilfe eines alias</span><span class="sxs-lookup"><span data-stu-id="ae49b-410">Start your application by using an alias</span></span>](#alias)
-* [<span data-ttu-id="ae49b-411">Starten Sie eine ausführbare Datei, wenn Benutzer sich bei Windows anmelden.</span><span class="sxs-lookup"><span data-stu-id="ae49b-411">Start an executable file when users log into Windows</span></span>](#executable)
-* [<span data-ttu-id="ae49b-412">Ermöglichen Sie es Benutzern, Ihre Anwendung zu starten, wenn sie ein Gerät an seinen PC anschließen</span><span class="sxs-lookup"><span data-stu-id="ae49b-412">Enable users to start your application when they connect a device to their PC</span></span>](#autoplay)
-* [<span data-ttu-id="ae49b-413">Starten Sie nach Erhalt eines Updates vom Microsoft Store automatisch neu</span><span class="sxs-lookup"><span data-stu-id="ae49b-413">Restart automatically after receiving an update from the Microsoft Store</span></span>](#updates)
+* [<span data-ttu-id="471b8-409">Starten Sie die Anwendung über ein Protokoll</span><span class="sxs-lookup"><span data-stu-id="471b8-409">Start your application by using a protocol</span></span>](#protocol)
+* [<span data-ttu-id="471b8-410">Starten Sie die Anwendung mithilfe eines Alias.</span><span class="sxs-lookup"><span data-stu-id="471b8-410">Start your application by using an alias</span></span>](#alias)
+* [<span data-ttu-id="471b8-411">Starten Sie eine ausführbare Datei, wenn Benutzer sich bei Windows anmelden.</span><span class="sxs-lookup"><span data-stu-id="471b8-411">Start an executable file when users log into Windows</span></span>](#executable)
+* [<span data-ttu-id="471b8-412">Ermöglichen Sie es Benutzern, Ihre Anwendung zu starten, wenn sie ein Gerät an seinen PC anschließen</span><span class="sxs-lookup"><span data-stu-id="471b8-412">Enable users to start your application when they connect a device to their PC</span></span>](#autoplay)
+* [<span data-ttu-id="471b8-413">Starten Sie nach Erhalt eines Updates vom Microsoft Store automatisch neu</span><span class="sxs-lookup"><span data-stu-id="471b8-413">Restart automatically after receiving an update from the Microsoft Store</span></span>](#updates)
 
 <a id="protocol" />
 
-### <a name="start-your-application-by-using-a-protocol"></a><span data-ttu-id="ae49b-414">Starten Sie die Anwendung über ein Protokoll</span><span class="sxs-lookup"><span data-stu-id="ae49b-414">Start your application by using a protocol</span></span>
+### <a name="start-your-application-by-using-a-protocol"></a><span data-ttu-id="471b8-414">Starten Sie die Anwendung über ein Protokoll</span><span class="sxs-lookup"><span data-stu-id="471b8-414">Start your application by using a protocol</span></span>
 
-<span data-ttu-id="ae49b-415">Protokollzuordnungen ermöglichen es anderen Programmen und Systemkomponenten, mit Ihrer verpackten App zu interagieren.</span><span class="sxs-lookup"><span data-stu-id="ae49b-415">Protocol associations can enable other programs and system components to interoperate with your packaged app.</span></span> <span data-ttu-id="ae49b-416">Wenn die verpackte Anwendung anhand eines Protokolls gestartet wird, können Sie bestimmte Parameter angeben, an die aktivierungsereignisargumente übergeben, werden entsprechend Verhalten zu erreichen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-416">When your packaged application is started by using a protocol, you can specify specific parameters to pass to its activation event arguments so it can behave accordingly.</span></span> <span data-ttu-id="ae49b-417">Parameter werden nur für verpackte, vertrauenswürdige Apps unterstützt.</span><span class="sxs-lookup"><span data-stu-id="ae49b-417">Parameters are supported only for packaged, full-trust apps.</span></span> <span data-ttu-id="ae49b-418">UWP-Apps können die Parameter nicht verwenden.</span><span class="sxs-lookup"><span data-stu-id="ae49b-418">UWP apps can't use parameters.</span></span>  
+<span data-ttu-id="471b8-415">Protokollzuordnungen ermöglichen es anderen Programmen und Systemkomponenten, mit Ihrer verpackten App zu interagieren.</span><span class="sxs-lookup"><span data-stu-id="471b8-415">Protocol associations can enable other programs and system components to interoperate with your packaged app.</span></span> <span data-ttu-id="471b8-416">Wenn die verpackte Anwendung anhand eines Protokolls gestartet wird, können Sie bestimmte Parameter angeben, an die aktivierungsereignisargumente übergeben werden sollen, werden entsprechend Verhalten zu erreichen.</span><span class="sxs-lookup"><span data-stu-id="471b8-416">When your packaged application is started by using a protocol, you can specify specific parameters to pass to its activation event arguments so it can behave accordingly.</span></span> <span data-ttu-id="471b8-417">Parameter werden nur für verpackte, vertrauenswürdige Apps unterstützt.</span><span class="sxs-lookup"><span data-stu-id="471b8-417">Parameters are supported only for packaged, full-trust apps.</span></span> <span data-ttu-id="471b8-418">UWP-Apps können die Parameter nicht verwenden.</span><span class="sxs-lookup"><span data-stu-id="471b8-418">UWP apps can't use parameters.</span></span>
 
-#### <a name="xml-namespace"></a><span data-ttu-id="ae49b-419">XML-Namespace</span><span class="sxs-lookup"><span data-stu-id="ae49b-419">XML namespace</span></span>
+#### <a name="xml-namespace"></a><span data-ttu-id="471b8-419">XML-Namespace</span><span class="sxs-lookup"><span data-stu-id="471b8-419">XML namespace</span></span>
 
 http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 
-
-#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="ae49b-420">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="ae49b-420">Elements and attributes of this extension</span></span>
+#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="471b8-420">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="471b8-420">Elements and attributes of this extension</span></span>
 
 ```XML
 <Extension
     Category="windows.protocol">
-    <Protocol
+  <Protocol
       Name="[Protocol name]"
       Parameters="[Parameters]" />
 </Extension>
 ```
 
-<span data-ttu-id="ae49b-421">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-protocol).</span><span class="sxs-lookup"><span data-stu-id="ae49b-421">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-protocol).</span></span>
+<span data-ttu-id="471b8-421">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-protocol).</span><span class="sxs-lookup"><span data-stu-id="471b8-421">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-protocol).</span></span>
 
-|<span data-ttu-id="ae49b-422">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-422">Name</span></span> |<span data-ttu-id="ae49b-423">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ae49b-423">Description</span></span> |
+|<span data-ttu-id="471b8-422">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-422">Name</span></span> |<span data-ttu-id="471b8-423">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="471b8-423">Description</span></span> |
 |-------|-------------|
-|<span data-ttu-id="ae49b-424">Kategorie</span><span class="sxs-lookup"><span data-stu-id="ae49b-424">Category</span></span> |<span data-ttu-id="ae49b-425">Immer ``windows.protocol``.</span><span class="sxs-lookup"><span data-stu-id="ae49b-425">Always ``windows.protocol``.</span></span>
-|<span data-ttu-id="ae49b-426">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-426">Name</span></span> |<span data-ttu-id="ae49b-427">Der Name des Protokolls.</span><span class="sxs-lookup"><span data-stu-id="ae49b-427">The name of the protocol.</span></span> |
-|<span data-ttu-id="ae49b-428">Parameter</span><span class="sxs-lookup"><span data-stu-id="ae49b-428">Parameters</span></span> |<span data-ttu-id="ae49b-429">Die Liste der Parameter und Werte für Ihre Anwendung als Ereignisargumente übergeben, wenn die Anwendung aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="ae49b-429">The list of parameters and values to pass to your application as event arguments when the application is activated.</span></span> <span data-ttu-id="ae49b-430">Wenn eine Variable einen Dateipfad enthalten kann, schließen Sie den Parameterwert in Anführungszeichen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-430">If a variable can contain a file path, wrap the parameter value in quotes.</span></span> <span data-ttu-id="ae49b-431">Dadurch werden jegliche Probleme vermieden, die in Fällen auftreten, bei denen der Pfad Leerzeichen enthält.</span><span class="sxs-lookup"><span data-stu-id="ae49b-431">That will avoid any issues that happen in cases where the path includes spaces.</span></span> |
+|<span data-ttu-id="471b8-424">Kategorie</span><span class="sxs-lookup"><span data-stu-id="471b8-424">Category</span></span> |<span data-ttu-id="471b8-425">Immer ``windows.protocol``.</span><span class="sxs-lookup"><span data-stu-id="471b8-425">Always ``windows.protocol``.</span></span>
+|<span data-ttu-id="471b8-426">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-426">Name</span></span> |<span data-ttu-id="471b8-427">Der Name des Protokolls.</span><span class="sxs-lookup"><span data-stu-id="471b8-427">The name of the protocol.</span></span> |
+|<span data-ttu-id="471b8-428">Parameter</span><span class="sxs-lookup"><span data-stu-id="471b8-428">Parameters</span></span> |<span data-ttu-id="471b8-429">Die Liste der Parameter und Werte für Ihre Anwendung als Ereignisargumente übergeben, wenn die Anwendung aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="471b8-429">The list of parameters and values to pass to your application as event arguments when the application is activated.</span></span> <span data-ttu-id="471b8-430">Wenn eine Variable einen Dateipfad enthalten kann, schließen Sie den Parameterwert in Anführungszeichen.</span><span class="sxs-lookup"><span data-stu-id="471b8-430">If a variable can contain a file path, wrap the parameter value in quotes.</span></span> <span data-ttu-id="471b8-431">Dadurch werden jegliche Probleme vermieden, die in Fällen auftreten, bei denen der Pfad Leerzeichen enthält.</span><span class="sxs-lookup"><span data-stu-id="471b8-431">That will avoid any issues that happen in cases where the path includes spaces.</span></span> |
 
-### <a name="example"></a><span data-ttu-id="ae49b-432">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ae49b-432">Example</span></span>
+### <a name="example"></a><span data-ttu-id="471b8-432">Beispiel</span><span class="sxs-lookup"><span data-stu-id="471b8-432">Example</span></span>
 
 ```XML
 <Package
@@ -896,28 +901,28 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/3
       <Extensions>
         <uap3:Extension
           Category="windows.protocol">
-        <uap3:Protocol
-          Name="myapp-cmd"
-          Parameters="/p &quot;%1&quot;" />
+          <uap3:Protocol
+            Name="myapp-cmd"
+            Parameters="/p &quot;%1&quot;" />
         </uap3:Extension>
       </Extensions>
     </Application>
   </Applications>
 </Package>
 ```
+
 <a id="alias" />
 
-### <a name="start-your-application-by-using-an-alias"></a><span data-ttu-id="ae49b-433">Starten Sie die Anwendung mithilfe eines alias</span><span class="sxs-lookup"><span data-stu-id="ae49b-433">Start your application by using an alias</span></span>
+### <a name="start-your-application-by-using-an-alias"></a><span data-ttu-id="471b8-433">Starten Sie die Anwendung mithilfe eines Alias.</span><span class="sxs-lookup"><span data-stu-id="471b8-433">Start your application by using an alias</span></span>
 
-<span data-ttu-id="ae49b-434">Benutzer und andere Prozesse können einen Alias verwenden, um die Anwendung zu starten, ohne den vollständigen Pfad zu Ihrer app angeben zu müssen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-434">Users and other processes can use an alias to start your application without having to specify the full path to your app.</span></span> <span data-ttu-id="ae49b-435">Sie können diesen Aliasnamen angeben.</span><span class="sxs-lookup"><span data-stu-id="ae49b-435">You can specify that alias name.</span></span>
+<span data-ttu-id="471b8-434">Benutzer und andere Prozesse können einen Alias verwenden, um die Anwendung zu starten, ohne den vollständigen Pfad zu Ihrer app angeben zu müssen.</span><span class="sxs-lookup"><span data-stu-id="471b8-434">Users and other processes can use an alias to start your application without having to specify the full path to your app.</span></span> <span data-ttu-id="471b8-435">Sie können diesen Aliasnamen angeben.</span><span class="sxs-lookup"><span data-stu-id="471b8-435">You can specify that alias name.</span></span>
 
-#### <a name="xml-namespaces"></a><span data-ttu-id="ae49b-436">XML-Namespaces</span><span class="sxs-lookup"><span data-stu-id="ae49b-436">XML namespaces</span></span>
+#### <a name="xml-namespaces"></a><span data-ttu-id="471b8-436">XML-Namespaces</span><span class="sxs-lookup"><span data-stu-id="471b8-436">XML namespaces</span></span>
 
 * http://schemas.microsoft.com/appx/manifest/uap/windows10/3
 * http://schemas.microsoft.com/appx/manifest/desktop/windows10
 
-
-#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="ae49b-437">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="ae49b-437">Elements and attributes of this extension</span></span>
+#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="471b8-437">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="471b8-437">Elements and attributes of this extension</span></span>
 
 ```XML
 <Extension
@@ -925,19 +930,19 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/3
     Executable="[ExecutableName]"
     EntryPoint="Windows.FullTrustApplication">
     <AppExecutionAlias>
-            <desktop:ExecutionAlias Alias="[AliasName]" />
-      </AppExecutionAlias>
+        <desktop:ExecutionAlias Alias="[AliasName]" />
+    </AppExecutionAlias>
 </Extension>
 ```
 
-|<span data-ttu-id="ae49b-438">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-438">Name</span></span> |<span data-ttu-id="ae49b-439">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ae49b-439">Description</span></span> |
+|<span data-ttu-id="471b8-438">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-438">Name</span></span> |<span data-ttu-id="471b8-439">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="471b8-439">Description</span></span> |
 |-------|-------------|
-|<span data-ttu-id="ae49b-440">Kategorie</span><span class="sxs-lookup"><span data-stu-id="ae49b-440">Category</span></span> |<span data-ttu-id="ae49b-441">Immer ``windows.appExecutionAlias``.</span><span class="sxs-lookup"><span data-stu-id="ae49b-441">Always ``windows.appExecutionAlias``.</span></span>
-|<span data-ttu-id="ae49b-442">Ausführbare Datei</span><span class="sxs-lookup"><span data-stu-id="ae49b-442">Executable</span></span> |<span data-ttu-id="ae49b-443">Der relative Pfad zur ausführbaren Datei, die beim Aufrufen des Alias gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="ae49b-443">The relative path to the executable to start when the alias is invoked.</span></span> |
-|<span data-ttu-id="ae49b-444">Alias</span><span class="sxs-lookup"><span data-stu-id="ae49b-444">Alias</span></span> |<span data-ttu-id="ae49b-445">Der kurze Name für Ihre App.</span><span class="sxs-lookup"><span data-stu-id="ae49b-445">The short name for your app.</span></span> <span data-ttu-id="ae49b-446">Er muss immer mit der Erweiterung „.exe“ enden.</span><span class="sxs-lookup"><span data-stu-id="ae49b-446">It must always end with the ".exe" extension.</span></span> <span data-ttu-id="ae49b-447">Für die einzelnen Anwendungen im Paket kann immer nur einzelner App-Ausführungsalias angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="ae49b-447">You can only specify a single app execution alias for each application in the package.</span></span> <span data-ttu-id="ae49b-448">Wenn sich mehrere Apps mit dem gleichen Alias registrieren, ruft das System die zuletzt registrierte App auf. Wählen Sie daher einen eindeutigen Alias, um die Wahrscheinlichkeit einer Überschreibung durch andere Apps möglichst gering zu halten.</span><span class="sxs-lookup"><span data-stu-id="ae49b-448">If multiple apps register for the same alias, the system will invoke the last one that was registered, so make sure to choose a unique alias other apps are unlikely to override.</span></span>
+|<span data-ttu-id="471b8-440">Kategorie</span><span class="sxs-lookup"><span data-stu-id="471b8-440">Category</span></span> |<span data-ttu-id="471b8-441">Immer ``windows.appExecutionAlias``.</span><span class="sxs-lookup"><span data-stu-id="471b8-441">Always ``windows.appExecutionAlias``.</span></span>
+|<span data-ttu-id="471b8-442">Ausführbare Datei</span><span class="sxs-lookup"><span data-stu-id="471b8-442">Executable</span></span> |<span data-ttu-id="471b8-443">Der relative Pfad zur ausführbaren Datei, die beim Aufrufen des Alias gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="471b8-443">The relative path to the executable to start when the alias is invoked.</span></span> |
+|<span data-ttu-id="471b8-444">Alias</span><span class="sxs-lookup"><span data-stu-id="471b8-444">Alias</span></span> |<span data-ttu-id="471b8-445">Der kurze Name für Ihre App.</span><span class="sxs-lookup"><span data-stu-id="471b8-445">The short name for your app.</span></span> <span data-ttu-id="471b8-446">Er muss immer mit der Erweiterung „.exe“ enden.</span><span class="sxs-lookup"><span data-stu-id="471b8-446">It must always end with the ".exe" extension.</span></span> <span data-ttu-id="471b8-447">Für die einzelnen Anwendungen im Paket kann immer nur einzelner App-Ausführungsalias angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="471b8-447">You can only specify a single app execution alias for each application in the package.</span></span> <span data-ttu-id="471b8-448">Wenn sich mehrere Apps mit dem gleichen Alias registrieren, ruft das System die zuletzt registrierte App auf. Wählen Sie daher einen eindeutigen Alias, um die Wahrscheinlichkeit einer Überschreibung durch andere Apps möglichst gering zu halten.</span><span class="sxs-lookup"><span data-stu-id="471b8-448">If multiple apps register for the same alias, the system will invoke the last one that was registered, so make sure to choose a unique alias other apps are unlikely to override.</span></span>
 |
 
-#### <a name="example"></a><span data-ttu-id="ae49b-449">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ae49b-449">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="471b8-449">Beispiel</span><span class="sxs-lookup"><span data-stu-id="471b8-449">Example</span></span>
 
 ```XML
 <Package
@@ -949,56 +954,56 @@ http://schemas.microsoft.com/appx/manifest/uap/windows10/3
         Category="windows.appExecutionAlias"
         Executable="exes\launcher.exe"
         EntryPoint="Windows.FullTrustApplication">
-        <uap3:AppExecutionAlias>
-            <desktop:ExecutionAlias Alias="Contoso.exe" />
-        </uap3:AppExecutionAlias>
+      <uap3:AppExecutionAlias>
+        <desktop:ExecutionAlias Alias="Contoso.exe" />
+      </uap3:AppExecutionAlias>
   </uap3:Extension>
 ...
 </Package>
 ```
 
-<span data-ttu-id="ae49b-450">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span><span class="sxs-lookup"><span data-stu-id="ae49b-450">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span></span>
+<span data-ttu-id="471b8-450">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span><span class="sxs-lookup"><span data-stu-id="471b8-450">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation).</span></span>
 
 <a id="executable" />
 
-### <a name="start-an-executable-file-when-users-log-into-windows"></a><span data-ttu-id="ae49b-451">Starten Sie eine ausführbare Datei, wenn Benutzer sich bei Windows anmelden.</span><span class="sxs-lookup"><span data-stu-id="ae49b-451">Start an executable file when users log into Windows</span></span>
+### <a name="start-an-executable-file-when-users-log-into-windows"></a><span data-ttu-id="471b8-451">Starten Sie eine ausführbare Datei, wenn Benutzer sich bei Windows anmelden.</span><span class="sxs-lookup"><span data-stu-id="471b8-451">Start an executable file when users log into Windows</span></span>
 
-<span data-ttu-id="ae49b-452">Startaufgaben können eine Anwendung auf eine ausführbare Datei automatisch ausgeführt, wenn sich ein Benutzer anmeldet.</span><span class="sxs-lookup"><span data-stu-id="ae49b-452">Startup tasks allow your application to run an executable automatically whenever a user logs on.</span></span>
+<span data-ttu-id="471b8-452">Startaufgaben können es sich um eine Anwendung auf eine ausführbare Datei automatisch ausgeführt werden, wenn sich ein Benutzer anmeldet.</span><span class="sxs-lookup"><span data-stu-id="471b8-452">Startup tasks allow your application to run an executable automatically whenever a user logs on.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="ae49b-453">Der Benutzer hat Ihre Anwendung mindestens ein Mal starten, um diese Startaufgabe registrieren.</span><span class="sxs-lookup"><span data-stu-id="ae49b-453">The user has to start your application at least one time to register this startup task.</span></span>
+> <span data-ttu-id="471b8-453">Der Benutzer muss die Anwendung mindestens ein Mal starten, um diese Startaufgabe registrieren.</span><span class="sxs-lookup"><span data-stu-id="471b8-453">The user has to start your application at least one time to register this startup task.</span></span>
 
-<span data-ttu-id="ae49b-454">Ihre Anwendung kann mehrere Startaufgaben deklarieren.</span><span class="sxs-lookup"><span data-stu-id="ae49b-454">Your application can declare multiple startup tasks.</span></span> <span data-ttu-id="ae49b-455">Die Aufgaben beginnen unabhängig voneinander.</span><span class="sxs-lookup"><span data-stu-id="ae49b-455">Each task starts independently.</span></span> <span data-ttu-id="ae49b-456">Alle Startaufgaben werden im Task-Manager auf der Registerkarte **Autostart** mit dem Namen aus Ihrem App-Manifest und dem Symbol Ihrer App angezeigt.</span><span class="sxs-lookup"><span data-stu-id="ae49b-456">All startup tasks will appear in Task Manager under the **Startup** tab with the name that you specify in your app's manifest and your app's icon.</span></span> <span data-ttu-id="ae49b-457">Der Task-Manager analysiert automatisch die Startauswirkungen Ihrer Aufgaben.</span><span class="sxs-lookup"><span data-stu-id="ae49b-457">Task Manager will automatically analyze the startup impact of your tasks.</span></span>
+<span data-ttu-id="471b8-454">Ihre Anwendung kann mehrere Startaufgaben deklarieren.</span><span class="sxs-lookup"><span data-stu-id="471b8-454">Your application can declare multiple startup tasks.</span></span> <span data-ttu-id="471b8-455">Die Aufgaben beginnen unabhängig voneinander.</span><span class="sxs-lookup"><span data-stu-id="471b8-455">Each task starts independently.</span></span> <span data-ttu-id="471b8-456">Alle Startaufgaben werden im Task-Manager auf der Registerkarte **Autostart** mit dem Namen aus Ihrem App-Manifest und dem Symbol Ihrer App angezeigt.</span><span class="sxs-lookup"><span data-stu-id="471b8-456">All startup tasks will appear in Task Manager under the **Startup** tab with the name that you specify in your app's manifest and your app's icon.</span></span> <span data-ttu-id="471b8-457">Der Task-Manager analysiert automatisch die Startauswirkungen Ihrer Aufgaben.</span><span class="sxs-lookup"><span data-stu-id="471b8-457">Task Manager will automatically analyze the startup impact of your tasks.</span></span>
 
-<span data-ttu-id="ae49b-458">Benutzer können die Startaufgabe Ihrer App manuell mithilfe des Task-Managers deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="ae49b-458">Users can manually disable your app's startup task by using Task Manager.</span></span> <span data-ttu-id="ae49b-459">Wenn ein Benutzer eine Aufgabe deaktiviert, können Sie sie nicht erneut programmgesteuert aktivieren.</span><span class="sxs-lookup"><span data-stu-id="ae49b-459">If a user disables a task, you can't programmatically re-enable it.</span></span>
+<span data-ttu-id="471b8-458">Benutzer können die Startaufgabe Ihrer App manuell mithilfe des Task-Managers deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="471b8-458">Users can manually disable your app's startup task by using Task Manager.</span></span> <span data-ttu-id="471b8-459">Wenn ein Benutzer eine Aufgabe deaktiviert, können Sie sie nicht erneut programmgesteuert aktivieren.</span><span class="sxs-lookup"><span data-stu-id="471b8-459">If a user disables a task, you can't programmatically re-enable it.</span></span>
 
-#### <a name="xml-namespace"></a><span data-ttu-id="ae49b-460">XML-Namespace</span><span class="sxs-lookup"><span data-stu-id="ae49b-460">XML namespace</span></span>
+#### <a name="xml-namespace"></a><span data-ttu-id="471b8-460">XML-Namespace</span><span class="sxs-lookup"><span data-stu-id="471b8-460">XML namespace</span></span>
 
 http://schemas.microsoft.com/appx/manifest/desktop/windows10
 
-#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="ae49b-461">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="ae49b-461">Elements and attributes of this extension</span></span>
+#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="471b8-461">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="471b8-461">Elements and attributes of this extension</span></span>
 
 ```XML
 <Extension
     Category="windows.startupTask"
     Executable="[ExecutableName]"
     EntryPoint="Windows.FullTrustApplication">
-    <StartupTask
+  <StartupTask
       TaskId="[TaskID]"
       Enabled="true"
       DisplayName="[DisplayName]" />
 </Extension>
 ```
 
-|<span data-ttu-id="ae49b-462">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-462">Name</span></span> |<span data-ttu-id="ae49b-463">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ae49b-463">Description</span></span> |
+|<span data-ttu-id="471b8-462">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-462">Name</span></span> |<span data-ttu-id="471b8-463">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="471b8-463">Description</span></span> |
 |-------|-------------|
-|<span data-ttu-id="ae49b-464">Kategorie</span><span class="sxs-lookup"><span data-stu-id="ae49b-464">Category</span></span> |<span data-ttu-id="ae49b-465">Immer ``windows.startupTask``.</span><span class="sxs-lookup"><span data-stu-id="ae49b-465">Always ``windows.startupTask``.</span></span>|
-|<span data-ttu-id="ae49b-466">Ausführbare Datei</span><span class="sxs-lookup"><span data-stu-id="ae49b-466">Executable</span></span> |<span data-ttu-id="ae49b-467">Der relative Pfad der ausführbaren Datei, die gestartet werden soll.</span><span class="sxs-lookup"><span data-stu-id="ae49b-467">The relative path to the executable file to start.</span></span> |
-|<span data-ttu-id="ae49b-468">TaskId</span><span class="sxs-lookup"><span data-stu-id="ae49b-468">TaskId</span></span> |<span data-ttu-id="ae49b-469">Ein eindeutiger Bezeichner Ihrer Aufgabe.</span><span class="sxs-lookup"><span data-stu-id="ae49b-469">A unique identifier for your task.</span></span> <span data-ttu-id="ae49b-470">Mit diesem Bezeichner kann Ihre Anwendung die APIs aufrufen in der [Windows.ApplicationModel.StartupTask](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.StartupTask) -Klasse, um programmgesteuert zu aktivieren oder deaktivieren Sie eine Startaufgabe.</span><span class="sxs-lookup"><span data-stu-id="ae49b-470">Using this identifier, your application can call the APIs in the [Windows.ApplicationModel.StartupTask](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.StartupTask) class to programmatically enable or disable a startup task.</span></span> |
-|<span data-ttu-id="ae49b-471">Enabled</span><span class="sxs-lookup"><span data-stu-id="ae49b-471">Enabled</span></span> |<span data-ttu-id="ae49b-472">Gibt an, ob die Aufgabe erst aktiviert oder deaktiviert gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="ae49b-472">Indicates whether the task first starts enabled or disabled.</span></span> <span data-ttu-id="ae49b-473">Aktivierte Aufgaben werden bei der nächsten Anmeldung des Benutzers ausgeführt (es sei denn, der Benutzer deaktiviert sie).</span><span class="sxs-lookup"><span data-stu-id="ae49b-473">Enabled tasks will run the next time the user logs on (unless the user disables it).</span></span> |
-|<span data-ttu-id="ae49b-474">DisplayName</span><span class="sxs-lookup"><span data-stu-id="ae49b-474">DisplayName</span></span> |<span data-ttu-id="ae49b-475">Der Name der Aufgabe, die im Task-Manager angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="ae49b-475">The name of the task that appears in Task Manager.</span></span> <span data-ttu-id="ae49b-476">Sie können diese Zeichenfolge mit ```ms-resource``` lokalisieren.</span><span class="sxs-lookup"><span data-stu-id="ae49b-476">You can localize this string by using ```ms-resource```.</span></span> |
+|<span data-ttu-id="471b8-464">Kategorie</span><span class="sxs-lookup"><span data-stu-id="471b8-464">Category</span></span> |<span data-ttu-id="471b8-465">Immer ``windows.startupTask``.</span><span class="sxs-lookup"><span data-stu-id="471b8-465">Always ``windows.startupTask``.</span></span>|
+|<span data-ttu-id="471b8-466">Ausführbare Datei</span><span class="sxs-lookup"><span data-stu-id="471b8-466">Executable</span></span> |<span data-ttu-id="471b8-467">Der relative Pfad der ausführbaren Datei, die gestartet werden soll.</span><span class="sxs-lookup"><span data-stu-id="471b8-467">The relative path to the executable file to start.</span></span> |
+|<span data-ttu-id="471b8-468">TaskId</span><span class="sxs-lookup"><span data-stu-id="471b8-468">TaskId</span></span> |<span data-ttu-id="471b8-469">Ein eindeutiger Bezeichner Ihrer Aufgabe.</span><span class="sxs-lookup"><span data-stu-id="471b8-469">A unique identifier for your task.</span></span> <span data-ttu-id="471b8-470">Mit diesem Bezeichner kann Ihre Anwendung die APIs aufrufen in der [Windows.ApplicationModel.StartupTask](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.StartupTask) -Klasse, um programmgesteuert zu aktivieren oder deaktivieren eine Startaufgabe.</span><span class="sxs-lookup"><span data-stu-id="471b8-470">Using this identifier, your application can call the APIs in the [Windows.ApplicationModel.StartupTask](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.StartupTask) class to programmatically enable or disable a startup task.</span></span> |
+|<span data-ttu-id="471b8-471">Enabled</span><span class="sxs-lookup"><span data-stu-id="471b8-471">Enabled</span></span> |<span data-ttu-id="471b8-472">Gibt an, ob die Aufgabe erst aktiviert oder deaktiviert gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="471b8-472">Indicates whether the task first starts enabled or disabled.</span></span> <span data-ttu-id="471b8-473">Aktivierte Aufgaben werden bei der nächsten Anmeldung des Benutzers ausgeführt (es sei denn, der Benutzer deaktiviert sie).</span><span class="sxs-lookup"><span data-stu-id="471b8-473">Enabled tasks will run the next time the user logs on (unless the user disables it).</span></span> |
+|<span data-ttu-id="471b8-474">DisplayName</span><span class="sxs-lookup"><span data-stu-id="471b8-474">DisplayName</span></span> |<span data-ttu-id="471b8-475">Der Name der Aufgabe, die im Task-Manager angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="471b8-475">The name of the task that appears in Task Manager.</span></span> <span data-ttu-id="471b8-476">Sie können diese Zeichenfolge mit ```ms-resource``` lokalisieren.</span><span class="sxs-lookup"><span data-stu-id="471b8-476">You can localize this string by using ```ms-resource```.</span></span> |
 
-#### <a name="example"></a><span data-ttu-id="ae49b-477">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ae49b-477">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="471b8-477">Beispiel</span><span class="sxs-lookup"><span data-stu-id="471b8-477">Example</span></span>
 
 ```XML
 <Package
@@ -1011,7 +1016,7 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
           Category="windows.startupTask"
           Executable="bin\MyStartupTask.exe"
           EntryPoint="Windows.FullTrustApplication">
-          <desktop:StartupTask
+        <desktop:StartupTask
           TaskId="MyStartupTask"
           Enabled="true"
           DisplayName="My App Service" />
@@ -1021,18 +1026,18 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
   </Applications>
  </Package>
 ```
+
 <a id="autoplay" />
 
-### <a name="enable-users-to-start-your-application-when-they-connect-a-device-to-their-pc"></a><span data-ttu-id="ae49b-478">Ermöglichen Sie es Benutzern, Ihre Anwendung zu starten, wenn sie ein Gerät an seinen PC anschließen</span><span class="sxs-lookup"><span data-stu-id="ae49b-478">Enable users to start your application when they connect a device to their PC</span></span>
+### <a name="enable-users-to-start-your-application-when-they-connect-a-device-to-their-pc"></a><span data-ttu-id="471b8-478">Ermöglichen Sie es Benutzern, Ihre Anwendung zu starten, wenn sie ein Gerät an seinen PC anschließen</span><span class="sxs-lookup"><span data-stu-id="471b8-478">Enable users to start your application when they connect a device to their PC</span></span>
 
-<span data-ttu-id="ae49b-479">Automatische Wiedergabe kann Ihre Anwendung als Option darstellen, wenn ein Benutzer ein Gerät an seinen PC anschließt.</span><span class="sxs-lookup"><span data-stu-id="ae49b-479">AutoPlay can present your application as an option when a user connects a device to their PC.</span></span>
+<span data-ttu-id="471b8-479">Automatische Wiedergabe kann Ihre Anwendung als Option darstellen, wenn ein Benutzer ein Gerät an seinen PC anschließt.</span><span class="sxs-lookup"><span data-stu-id="471b8-479">AutoPlay can present your application as an option when a user connects a device to their PC.</span></span>
 
-#### <a name="xml-namespace"></a><span data-ttu-id="ae49b-480">XML-Namespace</span><span class="sxs-lookup"><span data-stu-id="ae49b-480">XML namespace</span></span>
+#### <a name="xml-namespace"></a><span data-ttu-id="471b8-480">XML-Namespace</span><span class="sxs-lookup"><span data-stu-id="471b8-480">XML namespace</span></span>
 
 http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
 
-
-#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="ae49b-481">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="ae49b-481">Elements and attributes of this extension</span></span>
+#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="471b8-481">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="471b8-481">Elements and attributes of this extension</span></span>
 
 ```XML
 <Extension Category="windows.autoPlayHandler">
@@ -1045,20 +1050,20 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
   </AutoPlayHandler>
 ```
 
-|<span data-ttu-id="ae49b-482">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-482">Name</span></span> |<span data-ttu-id="ae49b-483">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ae49b-483">Description</span></span> |
+|<span data-ttu-id="471b8-482">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-482">Name</span></span> |<span data-ttu-id="471b8-483">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="471b8-483">Description</span></span> |
 |-------|-------------|
-|<span data-ttu-id="ae49b-484">Kategorie</span><span class="sxs-lookup"><span data-stu-id="ae49b-484">Category</span></span> |<span data-ttu-id="ae49b-485">Immer ``windows.autoPlayHandler``.</span><span class="sxs-lookup"><span data-stu-id="ae49b-485">Always ``windows.autoPlayHandler``.</span></span>
-|<span data-ttu-id="ae49b-486">ActionDisplayName</span><span class="sxs-lookup"><span data-stu-id="ae49b-486">ActionDisplayName</span></span> |<span data-ttu-id="ae49b-487">Eine Zeichenfolge, die die Aktion darstellt, die Benutzer mit einem Gerät ausführen können, das sie an einen PC anschließen (z.B.: „Dateien importieren” oder „Video wiedergeben”).</span><span class="sxs-lookup"><span data-stu-id="ae49b-487">A string that represents the action that users can take with a device that they connect to a PC (For example: "Import files", or "Play video").</span></span> |
-|<span data-ttu-id="ae49b-488">ProviderDisplayName</span><span class="sxs-lookup"><span data-stu-id="ae49b-488">ProviderDisplayName</span></span> | <span data-ttu-id="ae49b-489">Eine Zeichenfolge, die Ihre Anwendung oder Ihren Dienst darstellt (z. B.: "Contoso-video-Player").</span><span class="sxs-lookup"><span data-stu-id="ae49b-489">A string that represents your application or service (For example: "Contoso video player").</span></span> |
-|<span data-ttu-id="ae49b-490">ContentEvent</span><span class="sxs-lookup"><span data-stu-id="ae49b-490">ContentEvent</span></span> |<span data-ttu-id="ae49b-491">Der Name eines Inhaltsereignisses, bei dem Benutzer mit Ihrem ``ActionDisplayName`` und ``ProviderDisplayName`` aufgefordert werden.</span><span class="sxs-lookup"><span data-stu-id="ae49b-491">The name of a content event that causes users to be prompted with your ``ActionDisplayName`` and ``ProviderDisplayName``.</span></span> <span data-ttu-id="ae49b-492">Ein Inhaltsereignis wird ausgelöst, wenn ein Volumegerät wie etwa die Speicherkarte einer Kamera, eine DVD oder ein USB-Stick in den PC eingelegt bzw. daran angeschlossen wird.</span><span class="sxs-lookup"><span data-stu-id="ae49b-492">A content event is raised when a volume device such as a camera memory card, thumb drive, or DVD is inserted into the PC.</span></span> <span data-ttu-id="ae49b-493">Sie finden die vollständige Liste dieser Ereignisse [hier](https://docs.microsoft.com/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference).</span><span class="sxs-lookup"><span data-stu-id="ae49b-493">You can find the full list of those events [here](https://docs.microsoft.com/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference).</span></span>  |
-|<span data-ttu-id="ae49b-494">Verb</span><span class="sxs-lookup"><span data-stu-id="ae49b-494">Verb</span></span> |<span data-ttu-id="ae49b-495">Die Einstellung Verb angeben eines Werts, das für Ihre Anwendung für die ausgewählte Option übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="ae49b-495">The Verb setting identifies a value that is passed to your application for the selected option.</span></span> <span data-ttu-id="ae49b-496">Sie können mehrere Startaktionen für Ereignisse der automatischen Wiedergabe angeben und mit der Einstellung Verb ermitteln, welche Option ein Benutzer für Ihre App ausgewählt hat.</span><span class="sxs-lookup"><span data-stu-id="ae49b-496">You can specify multiple launch actions for an AutoPlay event and use the Verb setting to determine which option a user has selected for your app.</span></span> <span data-ttu-id="ae49b-497">Für welche Option sich der Benutzer entschieden hat, erfahren Sie durch Überprüfen der verb-Eigenschaft der an die App übergebenen Startereignisargumente.</span><span class="sxs-lookup"><span data-stu-id="ae49b-497">You can tell which option the user selected by checking the verb property of the startup event arguments passed to your app.</span></span> <span data-ttu-id="ae49b-498">Für die Einstellung Verb können Sie einen beliebigen Wert verwenden. Einzige Ausnahme ist open: Dieser Wert ist reserviert.</span><span class="sxs-lookup"><span data-stu-id="ae49b-498">You can use any value for the Verb setting except, open, which is reserved.</span></span> |
-|<span data-ttu-id="ae49b-499">DropTargetHandler</span><span class="sxs-lookup"><span data-stu-id="ae49b-499">DropTargetHandler</span></span> |<span data-ttu-id="ae49b-500">Die Klassen-ID der Anwendung, die die [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) -Schnittstelle implementiert.</span><span class="sxs-lookup"><span data-stu-id="ae49b-500">The class ID of the application that implements the [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) interface.</span></span> <span data-ttu-id="ae49b-501">Dateien aus Wechselmedien werden an die [Drop](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget.drop?view=visualstudiosdk-2017#Microsoft_VisualStudio_OLE_Interop_IDropTarget_Drop_Microsoft_VisualStudio_OLE_Interop_IDataObject_System_UInt32_Microsoft_VisualStudio_OLE_Interop_POINTL_System_UInt32__)-Methode Ihrer [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017)-Implementierung übergeben.</span><span class="sxs-lookup"><span data-stu-id="ae49b-501">Files from the removable media are passed to the [Drop](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget.drop?view=visualstudiosdk-2017#Microsoft_VisualStudio_OLE_Interop_IDropTarget_Drop_Microsoft_VisualStudio_OLE_Interop_IDataObject_System_UInt32_Microsoft_VisualStudio_OLE_Interop_POINTL_System_UInt32__) method of your [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) implementation.</span></span>  |
-|<span data-ttu-id="ae49b-502">Parameter</span><span class="sxs-lookup"><span data-stu-id="ae49b-502">Parameters</span></span> |<span data-ttu-id="ae49b-503">Sie müssen die [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017)-Schnittstelle nicht für alle Inhaltsereignisse implementieren.</span><span class="sxs-lookup"><span data-stu-id="ae49b-503">You don't have to implement the [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) interface for all content events.</span></span> <span data-ttu-id="ae49b-504">Für jedes der Inhaltsereignisse können Sie Befehlszeilenparameter bereitstellen, anstatt die [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017)-Schnittstelle zu implementieren.</span><span class="sxs-lookup"><span data-stu-id="ae49b-504">For any of the content events, you could provide command line parameters instead of implementing the [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) interface.</span></span> <span data-ttu-id="ae49b-505">Bei diesen Ereignissen wird automatische Wiedergabe mit diese Befehlszeilenparameter, um Ihrer Anwendung starten.</span><span class="sxs-lookup"><span data-stu-id="ae49b-505">For those events, AutoPlay will start your application by using those command line parameters.</span></span> <span data-ttu-id="ae49b-506">Sie können diese Parameter im Initialisierungscode Ihrer App analysieren, um festzustellen, ob sie von der automatischen Wiedergabe gestartet wurde, und dann Ihre benutzerdefinierte Implementierung bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-506">You can parse those parameters in your app's initialization code to determine if it was started by AutoPlay and then provide your custom implementation.</span></span> |
-|<span data-ttu-id="ae49b-507">DeviceEvent</span><span class="sxs-lookup"><span data-stu-id="ae49b-507">DeviceEvent</span></span> |<span data-ttu-id="ae49b-508">Der Name eines Geräteereignisses, bei dem Benutzer mit Ihrem ``ActionDisplayName`` und ``ProviderDisplayName`` aufgefordert werden.</span><span class="sxs-lookup"><span data-stu-id="ae49b-508">The name of a device event that causes users to be prompted with your ``ActionDisplayName`` and ``ProviderDisplayName``.</span></span> <span data-ttu-id="ae49b-509">Ein Geräteereignis wird ausgelöst, wenn ein Gerät an den PC angeschlossen wird.</span><span class="sxs-lookup"><span data-stu-id="ae49b-509">A device event is raised when a device is connected to the PC.</span></span> <span data-ttu-id="ae49b-510">Geräteereignisse beginnen mit der Zeichenfolge ``WPD`` und sind [hier](https://docs.microsoft.com/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference) aufgelistet.</span><span class="sxs-lookup"><span data-stu-id="ae49b-510">Device events begin with the string ``WPD`` and you can find them listed [here](https://docs.microsoft.com/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference).</span></span> |
-|<span data-ttu-id="ae49b-511">HWEventHandler</span><span class="sxs-lookup"><span data-stu-id="ae49b-511">HWEventHandler</span></span> |<span data-ttu-id="ae49b-512">Die Klassen-ID der Anwendung, die die [IHWEventHandler](https://msdn.microsoft.com/library/windows/desktop/bb775492.aspx) -Schnittstelle implementiert.</span><span class="sxs-lookup"><span data-stu-id="ae49b-512">The Class ID of the application that implements the [IHWEventHandler](https://msdn.microsoft.com/library/windows/desktop/bb775492.aspx) interface.</span></span> |
-|<span data-ttu-id="ae49b-513">InitCmdLine</span><span class="sxs-lookup"><span data-stu-id="ae49b-513">InitCmdLine</span></span> |<span data-ttu-id="ae49b-514">Der Zeichenfolgeparameter, der an die [Initialize](https://msdn.microsoft.com/en-us/library/windows/desktop/bb775495.aspx)-Methode der [IHWEventHandler](https://msdn.microsoft.com/library/windows/desktop/bb775492.aspx)-Schnittstelle übergeben werden soll.</span><span class="sxs-lookup"><span data-stu-id="ae49b-514">The string parameter that you want to pass into the [Initialize](https://msdn.microsoft.com/en-us/library/windows/desktop/bb775495.aspx) method of the [IHWEventHandler](https://msdn.microsoft.com/library/windows/desktop/bb775492.aspx) interface.</span></span> |
+|<span data-ttu-id="471b8-484">Kategorie</span><span class="sxs-lookup"><span data-stu-id="471b8-484">Category</span></span> |<span data-ttu-id="471b8-485">Immer ``windows.autoPlayHandler``.</span><span class="sxs-lookup"><span data-stu-id="471b8-485">Always ``windows.autoPlayHandler``.</span></span>
+|<span data-ttu-id="471b8-486">ActionDisplayName</span><span class="sxs-lookup"><span data-stu-id="471b8-486">ActionDisplayName</span></span> |<span data-ttu-id="471b8-487">Eine Zeichenfolge, die die Aktion darstellt, die Benutzer mit einem Gerät ausführen können, das sie an einen PC anschließen (z.B.: „Dateien importieren” oder „Video wiedergeben”).</span><span class="sxs-lookup"><span data-stu-id="471b8-487">A string that represents the action that users can take with a device that they connect to a PC (For example: "Import files", or "Play video").</span></span> |
+|<span data-ttu-id="471b8-488">ProviderDisplayName</span><span class="sxs-lookup"><span data-stu-id="471b8-488">ProviderDisplayName</span></span> | <span data-ttu-id="471b8-489">Eine Zeichenfolge, die Ihre Anwendung oder Ihren Dienst darstellt (z. B.: "Contoso-video-Player").</span><span class="sxs-lookup"><span data-stu-id="471b8-489">A string that represents your application or service (For example: "Contoso video player").</span></span> |
+|<span data-ttu-id="471b8-490">ContentEvent</span><span class="sxs-lookup"><span data-stu-id="471b8-490">ContentEvent</span></span> |<span data-ttu-id="471b8-491">Der Name eines Inhaltsereignisses, bei dem Benutzer mit Ihrem ``ActionDisplayName`` und ``ProviderDisplayName`` aufgefordert werden.</span><span class="sxs-lookup"><span data-stu-id="471b8-491">The name of a content event that causes users to be prompted with your ``ActionDisplayName`` and ``ProviderDisplayName``.</span></span> <span data-ttu-id="471b8-492">Ein Inhaltsereignis wird ausgelöst, wenn ein Volumegerät wie etwa die Speicherkarte einer Kamera, eine DVD oder ein USB-Stick in den PC eingelegt bzw. daran angeschlossen wird.</span><span class="sxs-lookup"><span data-stu-id="471b8-492">A content event is raised when a volume device such as a camera memory card, thumb drive, or DVD is inserted into the PC.</span></span> <span data-ttu-id="471b8-493">Sie finden die vollständige Liste dieser Ereignisse [hier](https://docs.microsoft.com/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference).</span><span class="sxs-lookup"><span data-stu-id="471b8-493">You can find the full list of those events [here](https://docs.microsoft.com/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference).</span></span>  |
+|<span data-ttu-id="471b8-494">Verb</span><span class="sxs-lookup"><span data-stu-id="471b8-494">Verb</span></span> |<span data-ttu-id="471b8-495">Die Einstellung Verb identifiziert einen Wert, der für Ihre Anwendung für die ausgewählte Option übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="471b8-495">The Verb setting identifies a value that is passed to your application for the selected option.</span></span> <span data-ttu-id="471b8-496">Sie können mehrere Startaktionen für Ereignisse der automatischen Wiedergabe angeben und mit der Einstellung Verb ermitteln, welche Option ein Benutzer für Ihre App ausgewählt hat.</span><span class="sxs-lookup"><span data-stu-id="471b8-496">You can specify multiple launch actions for an AutoPlay event and use the Verb setting to determine which option a user has selected for your app.</span></span> <span data-ttu-id="471b8-497">Für welche Option sich der Benutzer entschieden hat, erfahren Sie durch Überprüfen der verb-Eigenschaft der an die App übergebenen Startereignisargumente.</span><span class="sxs-lookup"><span data-stu-id="471b8-497">You can tell which option the user selected by checking the verb property of the startup event arguments passed to your app.</span></span> <span data-ttu-id="471b8-498">Für die Einstellung Verb können Sie einen beliebigen Wert verwenden. Einzige Ausnahme ist open: Dieser Wert ist reserviert.</span><span class="sxs-lookup"><span data-stu-id="471b8-498">You can use any value for the Verb setting except, open, which is reserved.</span></span> |
+|<span data-ttu-id="471b8-499">DropTargetHandler</span><span class="sxs-lookup"><span data-stu-id="471b8-499">DropTargetHandler</span></span> |<span data-ttu-id="471b8-500">Die Klassen-ID der Anwendung, die die [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) -Schnittstelle implementiert.</span><span class="sxs-lookup"><span data-stu-id="471b8-500">The class ID of the application that implements the [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) interface.</span></span> <span data-ttu-id="471b8-501">Dateien aus Wechselmedien werden an die [Drop](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget.drop?view=visualstudiosdk-2017#Microsoft_VisualStudio_OLE_Interop_IDropTarget_Drop_Microsoft_VisualStudio_OLE_Interop_IDataObject_System_UInt32_Microsoft_VisualStudio_OLE_Interop_POINTL_System_UInt32__)-Methode Ihrer [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017)-Implementierung übergeben.</span><span class="sxs-lookup"><span data-stu-id="471b8-501">Files from the removable media are passed to the [Drop](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget.drop?view=visualstudiosdk-2017#Microsoft_VisualStudio_OLE_Interop_IDropTarget_Drop_Microsoft_VisualStudio_OLE_Interop_IDataObject_System_UInt32_Microsoft_VisualStudio_OLE_Interop_POINTL_System_UInt32__) method of your [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) implementation.</span></span>  |
+|<span data-ttu-id="471b8-502">Parameter</span><span class="sxs-lookup"><span data-stu-id="471b8-502">Parameters</span></span> |<span data-ttu-id="471b8-503">Sie müssen die [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017)-Schnittstelle nicht für alle Inhaltsereignisse implementieren.</span><span class="sxs-lookup"><span data-stu-id="471b8-503">You don't have to implement the [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) interface for all content events.</span></span> <span data-ttu-id="471b8-504">Für jedes der Inhaltsereignisse können Sie Befehlszeilenparameter bereitstellen, anstatt die [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017)-Schnittstelle zu implementieren.</span><span class="sxs-lookup"><span data-stu-id="471b8-504">For any of the content events, you could provide command line parameters instead of implementing the [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) interface.</span></span> <span data-ttu-id="471b8-505">Bei diesen Ereignissen wird automatische Wiedergabe diese Befehlszeilenparameter mit, um die Anwendung starten.</span><span class="sxs-lookup"><span data-stu-id="471b8-505">For those events, AutoPlay will start your application by using those command line parameters.</span></span> <span data-ttu-id="471b8-506">Sie können diese Parameter im Initialisierungscode Ihrer App analysieren, um festzustellen, ob sie von der automatischen Wiedergabe gestartet wurde, und dann Ihre benutzerdefinierte Implementierung bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="471b8-506">You can parse those parameters in your app's initialization code to determine if it was started by AutoPlay and then provide your custom implementation.</span></span> |
+|<span data-ttu-id="471b8-507">DeviceEvent</span><span class="sxs-lookup"><span data-stu-id="471b8-507">DeviceEvent</span></span> |<span data-ttu-id="471b8-508">Der Name eines Geräteereignisses, bei dem Benutzer mit Ihrem ``ActionDisplayName`` und ``ProviderDisplayName`` aufgefordert werden.</span><span class="sxs-lookup"><span data-stu-id="471b8-508">The name of a device event that causes users to be prompted with your ``ActionDisplayName`` and ``ProviderDisplayName``.</span></span> <span data-ttu-id="471b8-509">Ein Geräteereignis wird ausgelöst, wenn ein Gerät an den PC angeschlossen wird.</span><span class="sxs-lookup"><span data-stu-id="471b8-509">A device event is raised when a device is connected to the PC.</span></span> <span data-ttu-id="471b8-510">Geräteereignisse beginnen mit der Zeichenfolge ``WPD`` und sind [hier](https://docs.microsoft.com/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference) aufgelistet.</span><span class="sxs-lookup"><span data-stu-id="471b8-510">Device events begin with the string ``WPD`` and you can find them listed [here](https://docs.microsoft.com/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference).</span></span> |
+|<span data-ttu-id="471b8-511">HWEventHandler</span><span class="sxs-lookup"><span data-stu-id="471b8-511">HWEventHandler</span></span> |<span data-ttu-id="471b8-512">Die Klassen-ID der Anwendung, die die [IHWEventHandler](https://msdn.microsoft.com/library/windows/desktop/bb775492.aspx) -Schnittstelle implementiert.</span><span class="sxs-lookup"><span data-stu-id="471b8-512">The Class ID of the application that implements the [IHWEventHandler](https://msdn.microsoft.com/library/windows/desktop/bb775492.aspx) interface.</span></span> |
+|<span data-ttu-id="471b8-513">InitCmdLine</span><span class="sxs-lookup"><span data-stu-id="471b8-513">InitCmdLine</span></span> |<span data-ttu-id="471b8-514">Der Zeichenfolgeparameter, der an die [Initialize](https://msdn.microsoft.com/en-us/library/windows/desktop/bb775495.aspx)-Methode der [IHWEventHandler](https://msdn.microsoft.com/library/windows/desktop/bb775492.aspx)-Schnittstelle übergeben werden soll.</span><span class="sxs-lookup"><span data-stu-id="471b8-514">The string parameter that you want to pass into the [Initialize](https://msdn.microsoft.com/en-us/library/windows/desktop/bb775495.aspx) method of the [IHWEventHandler](https://msdn.microsoft.com/library/windows/desktop/bb775492.aspx) interface.</span></span> |
 
-### <a name="example"></a><span data-ttu-id="ae49b-515">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ae49b-515">Example</span></span>
+### <a name="example"></a><span data-ttu-id="471b8-515">Beispiel</span><span class="sxs-lookup"><span data-stu-id="471b8-515">Example</span></span>
 
 ```XML
 <Package
@@ -1080,46 +1085,47 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/3
   </Applications>
 </Package>
 ```
+
 <a id="updates" />
 
-### <a name="restart-automatically-after-receiving-an-update-from-the-microsoft-store"></a><span data-ttu-id="ae49b-516">Starten Sie nach Erhalt eines Updates vom Microsoft Store automatisch neu</span><span class="sxs-lookup"><span data-stu-id="ae49b-516">Restart automatically after receiving an update from the Microsoft Store</span></span>
+### <a name="restart-automatically-after-receiving-an-update-from-the-microsoft-store"></a><span data-ttu-id="471b8-516">Starten Sie nach Erhalt eines Updates vom Microsoft Store automatisch neu</span><span class="sxs-lookup"><span data-stu-id="471b8-516">Restart automatically after receiving an update from the Microsoft Store</span></span>
 
-<span data-ttu-id="ae49b-517">Wenn Ihre Anwendung geöffnet ist, wenn Benutzer ein Update installieren, wird die Anwendung geschlossen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-517">If your application is open when users install an update to it, the application closes.</span></span>
+<span data-ttu-id="471b8-517">Wenn Ihre Anwendung geöffnet ist, wenn Benutzer ein Update installieren, wird die Anwendung geschlossen.</span><span class="sxs-lookup"><span data-stu-id="471b8-517">If your application is open when users install an update to it, the application closes.</span></span>
 
-<span data-ttu-id="ae49b-518">Wenn Sie möchten diese Anwendung neu starten, nachdem das Update abgeschlossen ist, rufen Sie die Funktion [RegisterApplicationRestart ist](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) in jeder Prozess, der Sie neu starten möchten.</span><span class="sxs-lookup"><span data-stu-id="ae49b-518">If you want that application to restart after the update completes, call the  [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) function in every process that you want to restart.</span></span>
+<span data-ttu-id="471b8-518">Wenn Sie möchten diese Anwendung neu starten, nachdem das Update abgeschlossen ist, rufen Sie die Funktion [RegisterApplicationRestart ist](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) in jeder Prozess, der neu gestartet werden soll.</span><span class="sxs-lookup"><span data-stu-id="471b8-518">If you want that application to restart after the update completes, call the  [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) function in every process that you want to restart.</span></span>
 
-<span data-ttu-id="ae49b-519">Jedes aktiven Fenster in Ihrer Anwendung erhält eine [WM_QUERYENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376890.aspx) Nachricht.</span><span class="sxs-lookup"><span data-stu-id="ae49b-519">Each active window in your application receives a [WM_QUERYENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376890.aspx) message.</span></span> <span data-ttu-id="ae49b-520">An diesem Punkt kann Ihre Anwendung die [RegisterApplicationRestart ist](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) Funktion erneut aus, um die Befehlszeile bei Bedarf aktualisieren aufrufen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-520">At this point, your application can call the [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) function again to update the command line if necessary.</span></span>
+<span data-ttu-id="471b8-519">Jedes aktiven Fenster in Ihrer Anwendung erhält eine [WM_QUERYENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376890.aspx) -Nachricht.</span><span class="sxs-lookup"><span data-stu-id="471b8-519">Each active window in your application receives a [WM_QUERYENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376890.aspx) message.</span></span> <span data-ttu-id="471b8-520">An diesem Punkt kann Ihre Anwendung die [RegisterApplicationRestart ist](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) -Funktion erneut aus, um die Befehlszeile bei Bedarf aktualisieren aufrufen.</span><span class="sxs-lookup"><span data-stu-id="471b8-520">At this point, your application can call the [RegisterApplicationRestart](https://msdn.microsoft.com/library/windows/desktop/aa373347.aspx) function again to update the command line if necessary.</span></span>
 
-<span data-ttu-id="ae49b-521">Wenn jedes aktiven Fenster in Ihrer Anwendung die [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) Nachricht empfängt, sollte Ihre Anwendung Daten speichern und Herunterfahren.</span><span class="sxs-lookup"><span data-stu-id="ae49b-521">When each active window in your application receives the [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) message, your application should save data and shut down.</span></span>
+<span data-ttu-id="471b8-521">Wenn jedes aktiven Fenster in Ihre Anwendung die [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) -Nachricht empfängt, sollte Ihre Anwendung Daten speichern und Herunterfahren.</span><span class="sxs-lookup"><span data-stu-id="471b8-521">When each active window in your application receives the [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) message, your application should save data and shut down.</span></span>
 
 >[!NOTE]
-<span data-ttu-id="ae49b-522">Die aktiven Fenster auch Meldung die [WM_CLOSE](https://msdn.microsoft.com/library/windows/desktop/ms632617.aspx) für den Fall, dass die Anwendung die [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) Nachricht nicht behandelt.</span><span class="sxs-lookup"><span data-stu-id="ae49b-522">Your active windows also receive the [WM_CLOSE](https://msdn.microsoft.com/library/windows/desktop/ms632617.aspx) message in case the application doesn't handle the [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) message.</span></span>
+<span data-ttu-id="471b8-522">Die aktiven Fenster auch Meldung die [WM_CLOSE](https://msdn.microsoft.com/library/windows/desktop/ms632617.aspx) für den Fall, dass die Anwendung die [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) -Nachricht nicht behandelt.</span><span class="sxs-lookup"><span data-stu-id="471b8-522">Your active windows also receive the [WM_CLOSE](https://msdn.microsoft.com/library/windows/desktop/ms632617.aspx) message in case the application doesn't handle the [WM_ENDSESSION](https://msdn.microsoft.com/library/windows/desktop/aa376889.aspx) message.</span></span>
 
-<span data-ttu-id="ae49b-523">Zu diesem Zeitpunkt die Anwendung weist 30 Sekunden, um einen eigenen Prozesse zu schließen, oder die Plattform beendet diese erzwingen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-523">At this point, your application has 30 seconds to close it's own processes or the platform terminates them forcefully.</span></span>
+<span data-ttu-id="471b8-523">Zu diesem Zeitpunkt hat Ihre Anwendung 30 Sekunden, um einen eigenen Prozesse zu schließen, oder die Plattform beendet diese zwingend.</span><span class="sxs-lookup"><span data-stu-id="471b8-523">At this point, your application has 30 seconds to close it's own processes or the platform terminates them forcefully.</span></span>
 
-<span data-ttu-id="ae49b-524">Nachdem das Update abgeschlossen ist, startet die Anwendung neu.</span><span class="sxs-lookup"><span data-stu-id="ae49b-524">After the update is complete, your application restarts.</span></span>
+<span data-ttu-id="471b8-524">Nachdem das Update abgeschlossen ist, startet die Anwendung neu.</span><span class="sxs-lookup"><span data-stu-id="471b8-524">After the update is complete, your application restarts.</span></span>
 
-## <a name="work-with-other-applications"></a><span data-ttu-id="ae49b-525">Zusammenarbeit mit anderen Anwendungen</span><span class="sxs-lookup"><span data-stu-id="ae49b-525">Work with other applications</span></span>
+## <a name="work-with-other-applications"></a><span data-ttu-id="471b8-525">Zusammenarbeit mit anderen Anwendungen</span><span class="sxs-lookup"><span data-stu-id="471b8-525">Work with other applications</span></span>
 
-<span data-ttu-id="ae49b-526">Mit anderen Apps integrieren, andere Prozesse starten oder Informationen freigeben.</span><span class="sxs-lookup"><span data-stu-id="ae49b-526">Integrate with other apps, start other processes or share information.</span></span>
+<span data-ttu-id="471b8-526">Mit anderen Apps integrieren, andere Prozesse starten oder Informationen freigeben.</span><span class="sxs-lookup"><span data-stu-id="471b8-526">Integrate with other apps, start other processes or share information.</span></span>
 
-* [<span data-ttu-id="ae49b-527">Stellen Sie Ihre Anwendung als Druckerziel in Anwendungen, die unterstützen Drucken angezeigt werden</span><span class="sxs-lookup"><span data-stu-id="ae49b-527">Make your application appear as the print target in applications that support printing</span></span>](#printing)
-* [<span data-ttu-id="ae49b-528">Freigeben von Schriftarten für andere Windows-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="ae49b-528">Share fonts with other Windows applications</span></span>](#fonts)
-* [<span data-ttu-id="ae49b-529">Starten Sie einen Win32-Prozess aus einer Universellen Windows-Plattform-App (UWP-App).</span><span class="sxs-lookup"><span data-stu-id="ae49b-529">Start a Win32 process from a Universal Windows Platform (UWP) app</span></span>](#win32-process)
+* [<span data-ttu-id="471b8-527">Stellen Sie Ihre Anwendung als Druckerziel in Anwendungen, die Unterstützung von Druck angezeigt werden</span><span class="sxs-lookup"><span data-stu-id="471b8-527">Make your application appear as the print target in applications that support printing</span></span>](#printing)
+* [<span data-ttu-id="471b8-528">Freigeben von Schriftarten für andere Windows-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="471b8-528">Share fonts with other Windows applications</span></span>](#fonts)
+* [<span data-ttu-id="471b8-529">Starten Sie einen Win32-Prozess aus einer Universellen Windows-Plattform-App (UWP-App).</span><span class="sxs-lookup"><span data-stu-id="471b8-529">Start a Win32 process from a Universal Windows Platform (UWP) app</span></span>](#win32-process)
 
 <a id="printing" />
 
-### <a name="make-your-application-appear-as-the-print-target-in-applications-that-support-printing"></a><span data-ttu-id="ae49b-530">Stellen Sie Ihre Anwendung als Druckerziel in Anwendungen, die unterstützen Drucken angezeigt werden</span><span class="sxs-lookup"><span data-stu-id="ae49b-530">Make your application appear as the print target in applications that support printing</span></span>
+### <a name="make-your-application-appear-as-the-print-target-in-applications-that-support-printing"></a><span data-ttu-id="471b8-530">Stellen Sie Ihre Anwendung als Druckerziel in Anwendungen, die Unterstützung von Druck angezeigt werden</span><span class="sxs-lookup"><span data-stu-id="471b8-530">Make your application appear as the print target in applications that support printing</span></span>
 
-<span data-ttu-id="ae49b-531">Wenn Benutzer Daten aus einer anderen Anwendung wie z. B. Editor drucken möchten, können Sie Ihre Anwendung als Druckerziel in der app Liste der verfügbaren Druckerziele angezeigt werden lassen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-531">When users want to print data from another application such as Notepad, you can make your application appear as a print target in the app's list of available print targets.</span></span>
+<span data-ttu-id="471b8-531">Wenn Benutzer Daten aus einer anderen Anwendung wie z. B. Editor drucken möchten, können Sie Ihre Anwendung als Druckerziel in der app Liste der verfügbaren Druckerziele angezeigt vornehmen.</span><span class="sxs-lookup"><span data-stu-id="471b8-531">When users want to print data from another application such as Notepad, you can make your application appear as a print target in the app's list of available print targets.</span></span>
 
-<span data-ttu-id="ae49b-532">Sie müssen Ihre Anwendung ändern, sodass sie Daten im XML Paper Specification (XPS) Format empfängt.</span><span class="sxs-lookup"><span data-stu-id="ae49b-532">You'll have to modify your application so that it receives print data in XML Paper Specification (XPS) format.</span></span>
+<span data-ttu-id="471b8-532">Sie müssen Ihre Anwendung ändern, sodass sie Daten im XML Paper Specification (XPS)-Format empfängt.</span><span class="sxs-lookup"><span data-stu-id="471b8-532">You'll have to modify your application so that it receives print data in XML Paper Specification (XPS) format.</span></span>
 
-#### <a name="xml-namespaces"></a><span data-ttu-id="ae49b-533">XML-Namespaces</span><span class="sxs-lookup"><span data-stu-id="ae49b-533">XML namespaces</span></span>
+#### <a name="xml-namespaces"></a><span data-ttu-id="471b8-533">XML-Namespaces</span><span class="sxs-lookup"><span data-stu-id="471b8-533">XML namespaces</span></span>
 
 http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 
-#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="ae49b-534">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="ae49b-534">Elements and attributes of this extension</span></span>
+#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="471b8-534">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="471b8-534">Elements and attributes of this extension</span></span>
 
 ```XML
 <Extension Category="windows.appPrinter">
@@ -1129,15 +1135,15 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 </Extension>
 ```
 
-<span data-ttu-id="ae49b-535">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop2-appprinter).</span><span class="sxs-lookup"><span data-stu-id="ae49b-535">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop2-appprinter).</span></span>
+<span data-ttu-id="471b8-535">Die vollständige Schemareferenz finden Sie [hier](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop2-appprinter).</span><span class="sxs-lookup"><span data-stu-id="471b8-535">Find the complete schema reference [here](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop2-appprinter).</span></span>
 
-|<span data-ttu-id="ae49b-536">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-536">Name</span></span> |<span data-ttu-id="ae49b-537">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ae49b-537">Description</span></span> |
+|<span data-ttu-id="471b8-536">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-536">Name</span></span> |<span data-ttu-id="471b8-537">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="471b8-537">Description</span></span> |
 |-------|-------------|
-|<span data-ttu-id="ae49b-538">Kategorie</span><span class="sxs-lookup"><span data-stu-id="ae49b-538">Category</span></span> |<span data-ttu-id="ae49b-539">Immer ``windows.appPrinter``.</span><span class="sxs-lookup"><span data-stu-id="ae49b-539">Always ``windows.appPrinter``.</span></span>
-|<span data-ttu-id="ae49b-540">DisplayName</span><span class="sxs-lookup"><span data-stu-id="ae49b-540">DisplayName</span></span> |<span data-ttu-id="ae49b-541">Der Name, der in der Liste der Druckerziele für eine App angezeigt werden soll.</span><span class="sxs-lookup"><span data-stu-id="ae49b-541">The name that you want to appear in the list of print targets for an app.</span></span> |
-|<span data-ttu-id="ae49b-542">Parameter</span><span class="sxs-lookup"><span data-stu-id="ae49b-542">Parameters</span></span> |<span data-ttu-id="ae49b-543">Parameter, die Ihre Anwendung erfordert, um die Anforderung ordnungsgemäß zu behandeln.</span><span class="sxs-lookup"><span data-stu-id="ae49b-543">Any parameters that your application requires to properly handle the request.</span></span> |
+|<span data-ttu-id="471b8-538">Kategorie</span><span class="sxs-lookup"><span data-stu-id="471b8-538">Category</span></span> |<span data-ttu-id="471b8-539">Immer ``windows.appPrinter``.</span><span class="sxs-lookup"><span data-stu-id="471b8-539">Always ``windows.appPrinter``.</span></span>
+|<span data-ttu-id="471b8-540">DisplayName</span><span class="sxs-lookup"><span data-stu-id="471b8-540">DisplayName</span></span> |<span data-ttu-id="471b8-541">Der Name, der in der Liste der Druckerziele für eine App angezeigt werden soll.</span><span class="sxs-lookup"><span data-stu-id="471b8-541">The name that you want to appear in the list of print targets for an app.</span></span> |
+|<span data-ttu-id="471b8-542">Parameter</span><span class="sxs-lookup"><span data-stu-id="471b8-542">Parameters</span></span> |<span data-ttu-id="471b8-543">Parameter, die Ihre Anwendung erfordert, um die Anforderung ordnungsgemäß zu behandeln.</span><span class="sxs-lookup"><span data-stu-id="471b8-543">Any parameters that your application requires to properly handle the request.</span></span> |
 
-#### <a name="example"></a><span data-ttu-id="ae49b-544">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ae49b-544">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="471b8-544">Beispiel</span><span class="sxs-lookup"><span data-stu-id="471b8-544">Example</span></span>
 
 ```XML
 <Package
@@ -1156,19 +1162,20 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 </Applications>
 </Package>
 ```
-<span data-ttu-id="ae49b-545">Suchen Sie [hier](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/PrintToPDF) ein Beispiel, in dem diese Erweiterung verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="ae49b-545">Find a sample that uses this extension [Here](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/PrintToPDF)</span></span>
+
+<span data-ttu-id="471b8-545">Suchen Sie [hier](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/PrintToPDF) ein Beispiel, in dem diese Erweiterung verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="471b8-545">Find a sample that uses this extension [Here](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/PrintToPDF)</span></span>
 
 <a id="fonts" />
 
-### <a name="share-fonts-with-other-windows-applications"></a><span data-ttu-id="ae49b-546">Freigeben von Schriftarten für andere Windows-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="ae49b-546">Share fonts with other Windows applications</span></span>
+### <a name="share-fonts-with-other-windows-applications"></a><span data-ttu-id="471b8-546">Freigeben von Schriftarten für andere Windows-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="471b8-546">Share fonts with other Windows applications</span></span>
 
-<span data-ttu-id="ae49b-547">Teilen Sie Ihre benutzerdefinierten Schriftarten mit einer anderen Windows-Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-547">Share your custom fonts with other Windows applications.</span></span>
+<span data-ttu-id="471b8-547">Teilen Sie Ihre benutzerdefinierten Schriftarten mit einer anderen Windows-Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="471b8-547">Share your custom fonts with other Windows applications.</span></span>
 
-#### <a name="xml-namespaces"></a><span data-ttu-id="ae49b-548">XML-Namespaces</span><span class="sxs-lookup"><span data-stu-id="ae49b-548">XML namespaces</span></span>
+#### <a name="xml-namespaces"></a><span data-ttu-id="471b8-548">XML-Namespaces</span><span class="sxs-lookup"><span data-stu-id="471b8-548">XML namespaces</span></span>
 
 http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
 
-#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="ae49b-549">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="ae49b-549">Elements and attributes of this extension</span></span>
+#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="471b8-549">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="471b8-549">Elements and attributes of this extension</span></span>
 
 ```XML
 <Extension Category="windows.sharedFonts">
@@ -1178,15 +1185,14 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
   </Extension>
 ```
 
-<span data-ttu-id="ae49b-550">Die vollständige Schemareferenz finden Sie [hier](https://review.docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-sharedfonts).</span><span class="sxs-lookup"><span data-stu-id="ae49b-550">Find the complete schema reference [here](https://review.docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-sharedfonts).</span></span>
+<span data-ttu-id="471b8-550">Die vollständige Schemareferenz finden Sie [hier](https://review.docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-sharedfonts).</span><span class="sxs-lookup"><span data-stu-id="471b8-550">Find the complete schema reference [here](https://review.docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-sharedfonts).</span></span>
 
-
-|<span data-ttu-id="ae49b-551">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-551">Name</span></span> |<span data-ttu-id="ae49b-552">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ae49b-552">Description</span></span> |
+|<span data-ttu-id="471b8-551">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-551">Name</span></span> |<span data-ttu-id="471b8-552">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="471b8-552">Description</span></span> |
 |-------|-------------|
-|<span data-ttu-id="ae49b-553">Kategorie</span><span class="sxs-lookup"><span data-stu-id="ae49b-553">Category</span></span> |<span data-ttu-id="ae49b-554">Immer ``windows.sharedFonts``.</span><span class="sxs-lookup"><span data-stu-id="ae49b-554">Always ``windows.sharedFonts``.</span></span>
-|<span data-ttu-id="ae49b-555">Datei</span><span class="sxs-lookup"><span data-stu-id="ae49b-555">File</span></span> |<span data-ttu-id="ae49b-556">Die Datei mit der Schriftart, die Sie teilen möchten.</span><span class="sxs-lookup"><span data-stu-id="ae49b-556">The file that contains the fonts that you want to share.</span></span> |
+|<span data-ttu-id="471b8-553">Kategorie</span><span class="sxs-lookup"><span data-stu-id="471b8-553">Category</span></span> |<span data-ttu-id="471b8-554">Immer ``windows.sharedFonts``.</span><span class="sxs-lookup"><span data-stu-id="471b8-554">Always ``windows.sharedFonts``.</span></span>
+|<span data-ttu-id="471b8-555">Datei</span><span class="sxs-lookup"><span data-stu-id="471b8-555">File</span></span> |<span data-ttu-id="471b8-556">Die Datei mit der Schriftart, die Sie teilen möchten.</span><span class="sxs-lookup"><span data-stu-id="471b8-556">The file that contains the fonts that you want to share.</span></span> |
 
-#### <a name="example"></a><span data-ttu-id="ae49b-557">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ae49b-557">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="471b8-557">Beispiel</span><span class="sxs-lookup"><span data-stu-id="471b8-557">Example</span></span>
 
 ```XML
 <Package
@@ -1206,17 +1212,18 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10/2
   </Applications>
 </Package>
 ```
+
 <a id="win32-process" />
 
-### <a name="start-a-win32-process-from-a-universal-windows-platform-uwp-app"></a><span data-ttu-id="ae49b-558">Starten Sie einen Win32-Prozess aus einer Universellen Windows-Plattform-App (UWP-App).</span><span class="sxs-lookup"><span data-stu-id="ae49b-558">Start a Win32 process from a Universal Windows Platform (UWP) app</span></span>
+### <a name="start-a-win32-process-from-a-universal-windows-platform-uwp-app"></a><span data-ttu-id="471b8-558">Starten Sie einen Win32-Prozess aus einer Universellen Windows-Plattform-App (UWP-App).</span><span class="sxs-lookup"><span data-stu-id="471b8-558">Start a Win32 process from a Universal Windows Platform (UWP) app</span></span>
 
-<span data-ttu-id="ae49b-559">Starten Sie einen vertrauenswürdigen Win32-Prozess.</span><span class="sxs-lookup"><span data-stu-id="ae49b-559">Start a Win32 process that runs in full-trust.</span></span>
+<span data-ttu-id="471b8-559">Starten Sie einen vertrauenswürdigen Win32-Prozess.</span><span class="sxs-lookup"><span data-stu-id="471b8-559">Start a Win32 process that runs in full-trust.</span></span>
 
-#### <a name="xml-namespaces"></a><span data-ttu-id="ae49b-560">XML-Namespaces</span><span class="sxs-lookup"><span data-stu-id="ae49b-560">XML namespaces</span></span>
+#### <a name="xml-namespaces"></a><span data-ttu-id="471b8-560">XML-Namespaces</span><span class="sxs-lookup"><span data-stu-id="471b8-560">XML namespaces</span></span>
 
 http://schemas.microsoft.com/appx/manifest/desktop/windows10
 
-#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="ae49b-561">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="ae49b-561">Elements and attributes of this extension</span></span>
+#### <a name="elements-and-attributes-of-this-extension"></a><span data-ttu-id="471b8-561">Elemente und Attribute dieser Erweiterung</span><span class="sxs-lookup"><span data-stu-id="471b8-561">Elements and attributes of this extension</span></span>
 
 ```XML
 <Extension Category="windows.fullTrustProcess" Executable="[executable file]">
@@ -1226,13 +1233,13 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
 </Extension>
 ```
 
-|<span data-ttu-id="ae49b-562">Name</span><span class="sxs-lookup"><span data-stu-id="ae49b-562">Name</span></span> |<span data-ttu-id="ae49b-563">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ae49b-563">Description</span></span> |
+|<span data-ttu-id="471b8-562">Name</span><span class="sxs-lookup"><span data-stu-id="471b8-562">Name</span></span> |<span data-ttu-id="471b8-563">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="471b8-563">Description</span></span> |
 |-------|-------------|
-|<span data-ttu-id="ae49b-564">Kategorie</span><span class="sxs-lookup"><span data-stu-id="ae49b-564">Category</span></span> |<span data-ttu-id="ae49b-565">Immer ``windows.fullTrustProcess``.</span><span class="sxs-lookup"><span data-stu-id="ae49b-565">Always ``windows.fullTrustProcess``.</span></span>
-|<span data-ttu-id="ae49b-566">Gruppen-ID</span><span class="sxs-lookup"><span data-stu-id="ae49b-566">GroupID</span></span> |<span data-ttu-id="ae49b-567">Eine Zeichenfolge, die eine Reihe von Parametern identifiziert, die an die ausführbare Datei übergeben werden sollen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-567">A string that identifies a set of parameters that you want to pass to the executable.</span></span> |
-|<span data-ttu-id="ae49b-568">Parameter</span><span class="sxs-lookup"><span data-stu-id="ae49b-568">Parameters</span></span> |<span data-ttu-id="ae49b-569">Parameter, die an die ausführbare Datei übergeben werden sollen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-569">Parameters that you want to pass to the executable.</span></span> |
+|<span data-ttu-id="471b8-564">Kategorie</span><span class="sxs-lookup"><span data-stu-id="471b8-564">Category</span></span> |<span data-ttu-id="471b8-565">Immer ``windows.fullTrustProcess``.</span><span class="sxs-lookup"><span data-stu-id="471b8-565">Always ``windows.fullTrustProcess``.</span></span>
+|<span data-ttu-id="471b8-566">Gruppen-ID</span><span class="sxs-lookup"><span data-stu-id="471b8-566">GroupID</span></span> |<span data-ttu-id="471b8-567">Eine Zeichenfolge, die eine Reihe von Parametern identifiziert, die an die ausführbare Datei übergeben werden sollen.</span><span class="sxs-lookup"><span data-stu-id="471b8-567">A string that identifies a set of parameters that you want to pass to the executable.</span></span> |
+|<span data-ttu-id="471b8-568">Parameter</span><span class="sxs-lookup"><span data-stu-id="471b8-568">Parameters</span></span> |<span data-ttu-id="471b8-569">Parameter, die an die ausführbare Datei übergeben werden sollen.</span><span class="sxs-lookup"><span data-stu-id="471b8-569">Parameters that you want to pass to the executable.</span></span> |
 
-#### <a name="example"></a><span data-ttu-id="ae49b-570">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ae49b-570">Example</span></span>
+#### <a name="example"></a><span data-ttu-id="471b8-570">Beispiel</span><span class="sxs-lookup"><span data-stu-id="471b8-570">Example</span></span>
 
 ```XML
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
@@ -1258,16 +1265,17 @@ http://schemas.microsoft.com/appx/manifest/desktop/windows10
   </Applications>
 </Package>
 ```
-<span data-ttu-id="ae49b-571">Diese Erweiterung ist möglicherweise hilfreich, wenn eine universelle Windows-Plattform-Benutzeroberfläche zu erstellen, die auf allen Geräten ausgeführt werden soll, aber Komponenten der Win32-Anwendung weiterhin in voller Vertrauenswürdigkeit ausgeführt werden soll.</span><span class="sxs-lookup"><span data-stu-id="ae49b-571">This extension might be useful if you want to create a Universal Windows Platform User interface that runs on all devices, but you want components of your Win32 application to continue running in full-trust.</span></span>
 
-<span data-ttu-id="ae49b-572">Erstellen Sie einfach ein Windows-app-Paket für Ihre Win32-app.</span><span class="sxs-lookup"><span data-stu-id="ae49b-572">Just create a Windows app package for your Win32 app.</span></span> <span data-ttu-id="ae49b-573">Fügen Sie dann der Paketdatei Ihrer UWP-App diese Erweiterung hinzu.</span><span class="sxs-lookup"><span data-stu-id="ae49b-573">Then, add this extension to the package file of your UWP app.</span></span> <span data-ttu-id="ae49b-574">Diese Erweiterungen gibt an, dass Sie eine ausführbare Datei im Windows-app-Paket starten möchten.</span><span class="sxs-lookup"><span data-stu-id="ae49b-574">This extensions indicates that you want to start an executable file in the Windows app package.</span></span>  <span data-ttu-id="ae49b-575">Wenn Sie zwischen Ihrer UWP-App und Ihrer Win32-App kommunizieren möchten, können Sie einen oder mehrere [App-Dienste](../launch-resume/app-services.md) dafür festlegen.</span><span class="sxs-lookup"><span data-stu-id="ae49b-575">If you want to communicate between your UWP app and your Win32 app, you can set up one or more [app services](../launch-resume/app-services.md) to do that.</span></span> <span data-ttu-id="ae49b-576">Weitere Informationen zu diesem Szenario finden Sie [hier](https://blogs.msdn.microsoft.com/appconsult/2016/12/19/desktop-bridge-the-migrate-phase-invoking-a-win32-process-from-a-uwp-app/).</span><span class="sxs-lookup"><span data-stu-id="ae49b-576">You can read more about this scenario [here](https://blogs.msdn.microsoft.com/appconsult/2016/12/19/desktop-bridge-the-migrate-phase-invoking-a-win32-process-from-a-uwp-app/).</span></span>
+<span data-ttu-id="471b8-571">Diese Erweiterung kann hilfreich sein, wenn eine universelle Windows-Plattform-Benutzeroberfläche zu erstellen, die auf allen Geräten ausgeführt werden soll, aber Komponenten der Win32-Anwendung weiterhin in voller Vertrauenswürdigkeit ausgeführt werden soll.</span><span class="sxs-lookup"><span data-stu-id="471b8-571">This extension might be useful if you want to create a Universal Windows Platform User interface that runs on all devices, but you want components of your Win32 application to continue running in full-trust.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="ae49b-577">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="ae49b-577">Next steps</span></span>
+<span data-ttu-id="471b8-572">Erstellen Sie einfach ein Windows-app-Paket für Ihre Win32-app.</span><span class="sxs-lookup"><span data-stu-id="471b8-572">Just create a Windows app package for your Win32 app.</span></span> <span data-ttu-id="471b8-573">Fügen Sie dann der Paketdatei Ihrer UWP-App diese Erweiterung hinzu.</span><span class="sxs-lookup"><span data-stu-id="471b8-573">Then, add this extension to the package file of your UWP app.</span></span> <span data-ttu-id="471b8-574">Diese Erweiterungen gibt an, dass Sie eine ausführbare Datei in der Windows-app-Paket starten möchten.</span><span class="sxs-lookup"><span data-stu-id="471b8-574">This extensions indicates that you want to start an executable file in the Windows app package.</span></span>  <span data-ttu-id="471b8-575">Wenn Sie zwischen Ihrer UWP-App und Ihrer Win32-App kommunizieren möchten, können Sie einen oder mehrere [App-Dienste](../launch-resume/app-services.md) dafür festlegen.</span><span class="sxs-lookup"><span data-stu-id="471b8-575">If you want to communicate between your UWP app and your Win32 app, you can set up one or more [app services](../launch-resume/app-services.md) to do that.</span></span> <span data-ttu-id="471b8-576">Weitere Informationen zu diesem Szenario finden Sie [hier](https://blogs.msdn.microsoft.com/appconsult/2016/12/19/desktop-bridge-the-migrate-phase-invoking-a-win32-process-from-a-uwp-app/).</span><span class="sxs-lookup"><span data-stu-id="471b8-576">You can read more about this scenario [here](https://blogs.msdn.microsoft.com/appconsult/2016/12/19/desktop-bridge-the-migrate-phase-invoking-a-win32-process-from-a-uwp-app/).</span></span>
 
-**<span data-ttu-id="ae49b-578">Finden Sie Antworten auf Ihre Fragen</span><span class="sxs-lookup"><span data-stu-id="ae49b-578">Find answers to your questions</span></span>**
+## <a name="next-steps"></a><span data-ttu-id="471b8-577">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="471b8-577">Next steps</span></span>
 
-<span data-ttu-id="ae49b-579">Haben Sie Fragen?</span><span class="sxs-lookup"><span data-stu-id="ae49b-579">Have questions?</span></span> <span data-ttu-id="ae49b-580">Fragen Sie uns auf Stack Overflow.</span><span class="sxs-lookup"><span data-stu-id="ae49b-580">Ask us on Stack Overflow.</span></span> <span data-ttu-id="ae49b-581">Unser Team überwacht diese [Tags](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).</span><span class="sxs-lookup"><span data-stu-id="ae49b-581">Our team monitors these [tags](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).</span></span> <span data-ttu-id="ae49b-582">Fragen Sie uns [hier](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).</span><span class="sxs-lookup"><span data-stu-id="ae49b-582">You can also ask us [here](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).</span></span>
+**<span data-ttu-id="471b8-578">Finden Sie Antworten auf Ihre Fragen</span><span class="sxs-lookup"><span data-stu-id="471b8-578">Find answers to your questions</span></span>**
 
-**<span data-ttu-id="ae49b-583">Geben Sie Feedback oder Verbesserungsvorschläge</span><span class="sxs-lookup"><span data-stu-id="ae49b-583">Give feedback or make feature suggestions</span></span>**
+<span data-ttu-id="471b8-579">Haben Sie Fragen?</span><span class="sxs-lookup"><span data-stu-id="471b8-579">Have questions?</span></span> <span data-ttu-id="471b8-580">Fragen Sie uns auf Stack Overflow.</span><span class="sxs-lookup"><span data-stu-id="471b8-580">Ask us on Stack Overflow.</span></span> <span data-ttu-id="471b8-581">Unser Team überwacht diese [Tags](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).</span><span class="sxs-lookup"><span data-stu-id="471b8-581">Our team monitors these [tags](http://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge).</span></span> <span data-ttu-id="471b8-582">Fragen Sie uns [hier](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).</span><span class="sxs-lookup"><span data-stu-id="471b8-582">You can also ask us [here](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D).</span></span>
 
-<span data-ttu-id="ae49b-584">Weitere Informationen finden Sie unter [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).</span><span class="sxs-lookup"><span data-stu-id="ae49b-584">See [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).</span></span>
+**<span data-ttu-id="471b8-583">Geben Sie Feedback oder Verbesserungsvorschläge</span><span class="sxs-lookup"><span data-stu-id="471b8-583">Give feedback or make feature suggestions</span></span>**
+
+<span data-ttu-id="471b8-584">Weitere Informationen finden Sie unter [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).</span><span class="sxs-lookup"><span data-stu-id="471b8-584">See [UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial).</span></span>

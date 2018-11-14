@@ -11,11 +11,11 @@ ms.topic: article
 ms.assetid: e7deb1d6-feeb-471e-9a83-26386d1aaf37
 ms.localizationpriority: medium
 ms.openlocfilehash: 0a360bf936843450f5646c0e4e03ad9c3bac34d2
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6046115"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6149195"
 ---
 # <a name="surface-dial-interactions"></a><span data-ttu-id="6eb28-103">Surface Dial-Interaktionen</span><span class="sxs-lookup"><span data-stu-id="6eb28-103">Surface Dial interactions</span></span>
 
