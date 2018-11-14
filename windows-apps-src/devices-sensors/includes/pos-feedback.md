@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Point of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 6decdd4325a1c3cf854e340799b9d2f4a3272e6c
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6211907"
+ms.locfileid: "6283317"
 ---
 ## <a name="support-and-feedback"></a><span data-ttu-id="cd335-104">Support und Feedback</span><span class="sxs-lookup"><span data-stu-id="cd335-104">Support and feedback</span></span>
 

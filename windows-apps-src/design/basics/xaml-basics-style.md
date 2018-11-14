@@ -8,11 +8,11 @@ ms.date: 08/31/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 11f279de206a84e61144789ba43a268f2b896fee
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6453251"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6646025"
 ---
 # <a name="tutorial-create-custom-styles"></a><span data-ttu-id="eaccb-104">Erstellen eigener Stile – Tutorial</span><span class="sxs-lookup"><span data-stu-id="eaccb-104">Tutorial: Create custom styles</span></span>
 

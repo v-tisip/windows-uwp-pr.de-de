@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 811c2c978d04e7636bb5f52a2ebf7587193c4786
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6190404"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6659357"
 ---
 # <a name="create-add-on-store-listings"></a><span data-ttu-id="b0a6b-103">Erstellen von Store-Einträgen für Add-Ons</span><span class="sxs-lookup"><span data-stu-id="b0a6b-103">Create add-on Store listings</span></span>
 

@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 04a0288d0b28c12eb68cf56225747224e8df9777
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6185970"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6277167"
 ---
 # <a name="use-templates-and-patterns-to-format-dates-and-times"></a><span data-ttu-id="70f4d-103">Verwenden von Mustern zum Formatieren von Datums- und Uhrzeitwerten</span><span class="sxs-lookup"><span data-stu-id="70f4d-103">Use templates and patterns to format dates and times</span></span>
 

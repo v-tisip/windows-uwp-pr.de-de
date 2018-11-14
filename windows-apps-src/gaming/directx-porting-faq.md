@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, uwp, spiele, directx 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 06a4c9b434afedabc17a48e9929da8dc4460fe03
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6259366"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6663295"
 ---
 # <a name="directx-11-porting-faq"></a><span data-ttu-id="ab823-104">DirectX11 – Häufig gestellte Fragen zur Portierung</span><span class="sxs-lookup"><span data-stu-id="ab823-104">DirectX 11 porting FAQ</span></span>
 
