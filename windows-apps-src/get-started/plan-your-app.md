@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ce5e0d272e14b9c69f660c8c7de6a838fa7956ac
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6257508"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6652283"
 ---
 #  <a name="building-a-complex-universal-windows-platform-uwp-app"></a><span data-ttu-id="b72a8-105">Erstellen einer komplexen app für die universelle Windows-Plattform (UWP)</span><span class="sxs-lookup"><span data-stu-id="b72a8-105">Building a complex Universal Windows Platform (UWP) app</span></span>
 

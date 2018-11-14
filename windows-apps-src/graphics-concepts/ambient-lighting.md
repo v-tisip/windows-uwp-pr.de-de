@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 87b5c72ef99e3802a348ddfd28951bc2865891e5
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6190185"
+ms.locfileid: "6283143"
 ---
 # <a name="ambient-lighting"></a><span data-ttu-id="dd9fc-104">Umgebungslicht</span><span class="sxs-lookup"><span data-stu-id="dd9fc-104">Ambient lighting</span></span>
 

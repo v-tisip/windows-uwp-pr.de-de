@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 560f820ec2ecc7f28145ec29c31a60c1e4573d7e
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6188018"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6272476"
 ---
 # <a name="xaml-and-whitespace"></a><span data-ttu-id="231eb-104">XAML und Leerzeichen</span><span class="sxs-lookup"><span data-stu-id="231eb-104">XAML and whitespace</span></span>
 

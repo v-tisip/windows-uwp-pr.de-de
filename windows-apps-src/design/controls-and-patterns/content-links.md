@@ -13,11 +13,11 @@ design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 3939995aa2f29f4590c8c71a877b69f0cb81d2ec
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6263384"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6460559"
 ---
 # <a name="content-links-in-text-controls"></a><span data-ttu-id="1de77-103">Links zu Inhalten in Textsteuerelementen</span><span class="sxs-lookup"><span data-stu-id="1de77-103">Content links in text controls</span></span>
 

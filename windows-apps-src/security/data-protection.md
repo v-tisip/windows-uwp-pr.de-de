@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: edcce656f5be681a11e79b4714e96c2dcde621d5
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6196864"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6271856"
 ---
 # <a name="data-protection"></a><span data-ttu-id="f5da3-104">Datenschutz</span><span class="sxs-lookup"><span data-stu-id="f5da3-104">Data protection</span></span>
 

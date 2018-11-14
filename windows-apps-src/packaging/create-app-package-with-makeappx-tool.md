@@ -9,11 +9,11 @@ keywords: windows10, uwp, verpackung
 ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
 ms.localizationpriority: medium
 ms.openlocfilehash: 86472e4b3f9c7390eb7e6236de088ba2649901d1
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6268458"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6672129"
 ---
 # <a name="create-an-app-package-with-the-makeappxexe-tool"></a><span data-ttu-id="b6584-104">Erstellen eines App-Pakets mit dem Tool „MakeAppx.exe“</span><span class="sxs-lookup"><span data-stu-id="b6584-104">Create an app package with the MakeAppx.exe tool</span></span>
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP, Anhalten der Veröffentlichung, Veröffentlichungsdatum, Genehmigungsprozess für eingeschränkte Funktionen
 ms.localizationpriority: medium
 ms.openlocfilehash: 8f7d58989035db1a14aba685c8951d23d2f94b52
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6282301"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6455244"
 ---
 # <a name="manage-submission-options"></a><span data-ttu-id="5b08c-103">Verwalten der Übermittlungsoptionen</span><span class="sxs-lookup"><span data-stu-id="5b08c-103">Manage submission options</span></span>
 

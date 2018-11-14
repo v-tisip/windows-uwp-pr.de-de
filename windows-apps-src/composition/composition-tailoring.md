@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 2efea81f3520e6fb1a797394656587d2a29201aa
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6271936"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6459148"
 ---
 # <a name="tailoring-effects--experiences-using-windows-ui"></a><span data-ttu-id="bd0a6-104">Anpassen, Effekte und Funktionen, die über Windows-Benutzeroberfläche</span><span class="sxs-lookup"><span data-stu-id="bd0a6-104">Tailoring effects & experiences using Windows UI</span></span>
 

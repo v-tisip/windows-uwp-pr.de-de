@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API
 ms.localizationpriority: medium
 ms.openlocfilehash: c91c7b42642df9a03aab1324f074799b63157e62
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6197695"
+ms.locfileid: "6283060"
 ---
 # <a name="create-and-manage-submissions"></a><span data-ttu-id="73880-104">Erstellen und Verwalten von Übermittlungen</span><span class="sxs-lookup"><span data-stu-id="73880-104">Create and manage submissions</span></span>
 

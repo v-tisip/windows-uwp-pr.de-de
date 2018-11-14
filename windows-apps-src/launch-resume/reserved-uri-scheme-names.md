@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 91732a6c4abc082283dc397fb87ad38d9de452b8
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6186441"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6452351"
 ---
 # <a name="reserved-file-and-uri-scheme-names"></a><span data-ttu-id="20e65-104">Reservierte Datei- und URI-Schemanamen</span><span class="sxs-lookup"><span data-stu-id="20e65-104">Reserved file and URI scheme names</span></span>
 
