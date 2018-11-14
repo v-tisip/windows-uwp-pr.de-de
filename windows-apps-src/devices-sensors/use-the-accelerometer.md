@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 482092e43acd6999361640e598a44391ac3f11a5
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023113"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6271329"
 ---
 # <a name="use-the-accelerometer"></a>Verwenden des Beschleunigungsmessers
 
@@ -33,7 +33,7 @@ Eine einfache Spiele-App verwendet als Eingabegerät einen einzigen Sensor: den 
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Sie sollten mit Extensible Application Markup Language (XAML), Microsoft für VisualC++ c# und Ereignissen vertraut sein.
+Sie sollten mit Extensible Application Markup Language (XAML), Microsoft für VisualC++- und Ereignissen vertraut sein.
 
 Das verwendete Gerät oder der Emulator muss einen Beschleunigungsmesser unterstützen.
 

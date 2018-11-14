@@ -11,11 +11,11 @@ ms.date: 10/25/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b9148b2d57c55bdff09be9a9d6bb8a6b65d93f12
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6027710"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6161309"
 ---
 # <a name="speech-recognition"></a>Spracherkennung
 
@@ -28,17 +28,17 @@ Die Spracherkennung besteht aus einer Sprachlaufzeit, Erkennungs-APIs zum Progra
 
 ## <a name="configure-speech-recognition"></a>Konfigurieren Sie die Spracherkennung
 
-Um Spracherkennung mit Ihrer app zu unterstützen, muss der Benutzer eine Verbindung herstellen und ein Mikrofon auf ihrem Gerät aktivieren und akzeptieren Sie die Microsoft-Datenschutzrichtlinie Berechtigung für Ihre app um es zu verwenden.
+Um die Spracherkennung mit Ihrer app zu unterstützen, muss der Benutzer verbinden und ein Mikrofon auf ihrem Gerät aktivieren, und akzeptieren Sie die Microsoft-Datenschutzrichtlinie gewähren der Berechtigung für Ihre app zum verwenden.
 
-Den Benutzer automatisch aufgefordert, mit ein systemdialogfeld anfordern und Zugriffsberechtigung für das Mikrofon verwenden des Audio feed (Beispiel von der [Spracherkennung und Speech Synthesis Beispiel](http://go.microsoft.com/fwlink/p/?LinkID=619897) unten dargestellt), der gerade Satz das **Mikrofon** [Gerät Funktion](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-devicecapability) in der [App-Paket-manifest](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest). Weitere Details finden Sie unter [Deklaration der App](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
+Den Benutzer automatisch aufgefordert, mit einem systemdialogfeld anfordern und Zugriffsberechtigung für das Mikrofon verwenden des Audio feed nur Satz (beispielsweise von der [Spracherkennung und Speech Synthesis Beispiel](http://go.microsoft.com/fwlink/p/?LinkID=619897) unten dargestellt) das **Mikrofon** [Gerät Funktion](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-devicecapability) in der [App-Paket-manifest](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest). Weitere Details finden Sie in der [Deklaration der App](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
 
 ![Datenschutzrichtlinie für den Zugriff auf das Mikrofon](images/speech/privacy.png)
 
-Wenn der Benutzer klickt auf "Ja", um Zugriff auf das Mikrofon gewähren Ihrer app wird hinzugefügt, der Liste der zugelassenen Anwendungen auf die Einstellungen -> Datenschutz -> Mikrofon Seite. Allerdings wie der Benutzer auswählen kann, um diese Einstellung zu einem beliebigen Zeitpunkt deaktivieren, sollten Sie sicherstellen, dass Ihre app den Zugriff auf das Mikrofon verfügt, bevor Sie versuchen, sie zu verwenden.
+Wenn der Benutzer klickt auf "Ja", um Zugriff auf das Mikrofon gewähren Ihrer app wird hinzugefügt, um die Liste der zugelassenen Anwendungen auf die Einstellungen -> Datenschutz -> Mikrofon Seite. Allerdings wie der Benutzer auswählen kann, um diese Einstellung zu einem beliebigen Zeitpunkt deaktivieren, sollten Sie sicherstellen, dass Ihre app Zugriff auf das Mikrofon hat, bevor Sie versuchen, sie zu verwenden.
 
-Wenn Sie auch diktieren, Cortana, unterstützen möchten oder andere Spracherkennung-(z. B. eine [vordefinierte Grammatik](#predefined-grammars) in eine Einschränkung zu einem Thema definiert Dienste), Sie müssen sich vergewissern, dass **Online Spracherkennung** (Einstellungen -> Datenschutz -> Speech) ist aktiviert.
+Wenn Sie auch diktieren, Cortana, unterstützen möchten oder andere Spracherkennung-(z. B. eine [vordefinierte Grammatik](#predefined-grammars) in eine Einschränkung zu einem Thema definiert Dienste), Sie müssen sich vergewissern, dass **Online Spracherkennung** (Einstellungen -> Datenschutz -> Spracherkennung) ist aktiviert.
 
-Dieser Codeausschnitt zeigt, wie Ihre app überprüfen kann, wenn ein Mikrofon vorhanden ist und verfügt über die Berechtigung zum verwenden.
+Dieser Codeausschnitt zeigt, wie Ihre app überprüfen kann, wenn ein Mikrofon vorhanden ist, und hat die Berechtigung zum verwenden.
 
 ```csharp
 public class AudioCapturePermissions

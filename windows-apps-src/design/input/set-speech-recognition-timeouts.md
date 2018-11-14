@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 00923b4448d96943cf00eade46c39c42e87c4f96
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023014"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6164556"
 ---
 # <a name="set-speech-recognition-timeouts"></a>Festlegen von Timeouts für die Spracherkennung
 
@@ -33,7 +33,7 @@ Hier geben wir verschiedene [**Timeouts**](https://msdn.microsoft.com/library/wi
 -   BabbleTimeout – Die Zeitspanne, für die ein Spracherkennungsmodul weiterhin auf erkennbare Geräusche (Störgeräusche) wartet, bevor davon ausgegangen wird, dass die Spracheingabe beendet ist, und der Erkennungsvorgangs beendet wird.
 -   EndSilenceTimeout – Die Zeitspanne, für die das Spracherkennungsmodul Stille erkennt (nach Generierung von Erkennungsergebnissen) und davon ausgeht, dass die Spracheingabe beendet ist.
 
-**Hinweis:** Timeouts für eine pro Erkennungsmodul festgelegt werden kann.
+**Hinweis:** Timeouts können auf einer pro Erkennungsmodul festgelegt werden.
 
  
 

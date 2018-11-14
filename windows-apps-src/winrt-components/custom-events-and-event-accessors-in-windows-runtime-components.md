@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 99e215f382bbfe409ac72d021540a471294634ca
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6050439"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6163904"
 ---
 # <a name="custom-events-and-event-accessors-in-windows-runtime-components"></a>Benutzerdefinierte Ereignisse und Ereignisaccessoren in Komponenten für Windows-Runtime
 
@@ -33,7 +33,7 @@ Glücklicherweise vereinfachen die Visual Basic- und C#-Compiler diesen Prozess:
 
 Der folgende Code für das Ereignis „NumberChanged” zeigt das grundlegende Muster für UWP-Ereignisse. In diesem Beispiel übernimmt der Konstruktor für das Ereignisargumentobjekt „NumberChangedEventArgs” einen einzelnen ganzzahligen Parameter, der den geänderten numerischen Wert darstellt.
 
-> **Hinweis:** Dies ist das gleiche Muster die Compiler für gewöhnliche Ereignisse verwenden, die Sie in einer Windows-Runtime-Komponente deklarieren.
+> **Hinweis:** Hierbei handelt es sich um das gleiche Muster die Compiler für gewöhnliche Ereignisse verwenden, die Sie in einer Windows-Runtime-Komponente deklarieren.
 
  
 > [!div class="tabbedCodeSnippets"]
@@ -101,7 +101,7 @@ Der folgende Code für das Ereignis „NumberChanged” zeigt das grundlegende M
 
 Die statische („Shared” in Visual Basic) Methode „GetOrCreateEventRegistrationTokenTable” erstellt die Instanz des Ereignisses des EventRegistrationTokenTable&lt;T&gt;-Objekts verzögert. Übergeben Sie das Feld auf Klassenebene, das die Tokentabelleninstanz enthalten soll, an diese Methode. Wenn das Feld leer ist, erstellt die Methode die Tabelle, speichert einen Verweis auf die Tabelle in dem Feld und gibt einen Verweis auf die Tabelle zurück. Wenn das Feld bereits einen Verweis auf die Tokentabelle enthält, gibt die Methode einfach diesen Verweis zurück.
 
-> **Wichtige**Threadsicherheit Feld sichergestellt werden, die Instanz des Ereignisses des EventRegistrationTokenTable enthält&lt;T&gt; muss ein Feld auf Klassenebene sein. Wenn dies ein Feld auf Klassenebene ist, stellt die Methode „GetOrCreateEventRegistrationTokenTable” sicher, dass alle Threads dieselbe Instanz der Tabelle abrufen, wenn mehrere Threads versuchen, die Tokentabelle zu erstellen. Für ein bestimmtes Ereignis müssen alle Aufrufe der Methode „GetOrCreateEventRegistrationTokenTable” dasselbe Feld auf Klassenebene verwenden.
+> **Wichtige**um sicherzustellen, dass Threadsicherheit, das Feld, das das Ereignis Instanz des EventRegistrationTokenTable enthält&lt;T&gt; muss ein Feld auf Klassenebene sein. Wenn dies ein Feld auf Klassenebene ist, stellt die Methode „GetOrCreateEventRegistrationTokenTable” sicher, dass alle Threads dieselbe Instanz der Tabelle abrufen, wenn mehrere Threads versuchen, die Tokentabelle zu erstellen. Für ein bestimmtes Ereignis müssen alle Aufrufe der Methode „GetOrCreateEventRegistrationTokenTable” dasselbe Feld auf Klassenebene verwenden.
 
 Durch Aufrufen der Methode „GetOrCreateEventRegistrationTokenTable” im Remove-Accessor und in der Methode [RaiseEvent](https://msdn.microsoft.com/library/fwd3bwed.aspx) („OnRaiseEvent”-Methode in C#) wird sichergestellt, dass keine Ausnahmen ausgelöst werden, wenn diese Methoden aufgerufen werden, bevor Ereignishandlerdelegaten hinzugefügt wurden.
 
@@ -110,11 +110,11 @@ Zu den anderen Membern der EventRegistrationTokenTable&lt;T&gt;-Klasse, die im U
 -   Die [AddEventHandler](https://msdn.microsoft.com/library/hh138458.aspx)-Methode generiert ein Token für den Ereignishandlerdelegaten, speichert den Delegaten in der Tabelle, fügt ihn der Aufrufliste hinzu und gibt das Token zurück.
 -   Die [RemoveEventHandler(EventRegistrationToken)](https://msdn.microsoft.com/library/hh138425.aspx)-Methodenüberladung entfernt den Delegaten aus der Tabelle und der Aufrufliste.
 
-    >**Hinweis:** die Methoden "AddEventHandler" und RemoveEventHandler(EventRegistrationToken) Methoden sperren die Tabelle, um Threadsicherheit zu gewährleisten.
+    >**Hinweis:** Methoden die Methoden "AddEventHandler" und RemoveEventHandler(EventRegistrationToken) sperren die Tabelle, um Threadsicherheit zu gewährleisten.
 
 -   Die [InvocationList](https://msdn.microsoft.com/library/hh138465.aspx)-Eigenschaft gibt einen Delegaten zurück, der alle Ereignishandler enthält, die derzeit zum Behandeln des Ereignisses registriert sind. Verwenden Sie diesen Delegaten zum Auslösen des Ereignisses, oder verwenden Sie die Methoden der Delegate-Klasse, um die Handler einzeln aufzurufen.
 
-    >**Hinweis:** es wird empfohlen, dass Sie in dem Beispiel oben in diesem Artikel gezeigte Muster folgen und den Delegaten in eine temporäre Variable kopieren, bevor Sie ihn aufrufen. Dadurch wird eine Racebedingung verhindert, in der ein Thread den letzten Ereignishandler entfernt, indem der Delegat auf null festlegt wird, kurz bevor ein anderer Thread versucht, den Delegaten aufzurufen. Delegaten sind unveränderlich, sodass die Kopie weiterhin gültig ist.
+    >**Hinweis:** es wird empfohlen, dass Sie dem Muster angezeigt, in dem Beispiel oben in diesem Artikel folgen und den Delegaten in eine temporäre Variable kopieren, bevor Sie ihn aufrufen. Dadurch wird eine Racebedingung verhindert, in der ein Thread den letzten Ereignishandler entfernt, indem der Delegat auf null festlegt wird, kurz bevor ein anderer Thread versucht, den Delegaten aufzurufen. Delegaten sind unveränderlich, sodass die Kopie weiterhin gültig ist.
 
 Nehmen Sie eigenen Code nach Bedarf in die Accessoren auf. Wenn Threadsicherheit wichtig ist, müssen Sie eigene Sperren für Ihren Code vorsehen.
 
@@ -126,6 +126,6 @@ Visual Basic-Benutzer: Im .NET Framework ist ein Ereignis einfach ein Multicastd
 
 * [Ereignisse (Visual Basic)](https://msdn.microsoft.com/library/ms172877.aspx)
 * [Ereignisse (C#-Programmierhandbuch)](https://msdn.microsoft.com/library/awbftdfh.aspx)
-* [.NET für UWP-apps (Übersicht)](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
+* [.NET für UWP-apps-Übersicht](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
 * [.NET für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
 * [Exemplarische Vorgehensweise: Erstellen einer einfachen Komponente für Windows-Runtime und Aufrufen der Komponente über JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)

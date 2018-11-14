@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 1cc2e48239fd2f0e3d9299417a0d96d33acdc122
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023678"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6207487"
 ---
 # <a name="rotation"></a>Drehung
 
@@ -90,7 +90,7 @@ Windows8 unterstützt drei drehungsarten: frei, eingeschränkt und kombiniert.
 <td align="left">Kombinierte Drehung</td>
 <td align="left"><p>Die kombinierte Drehung unterstützt freie Drehung mit Zonen (ähnlich wie Führungsschienen unter <a href="guidelines-for-panning.md">Richtlinien für Verschiebung</a>) an jedem der 90-Grad-Andockpunkte, die durch die eingeschränkte Drehung erzwungen werden. Wenn das Objekt außerhalb einer der 90-Grad-Zonen losgelassen wird, bleibt das Objekt in dieser Position. Anderenfalls wird das Objekt automatisch zu einem Andockpunkt gedreht.</p>
 <div class="alert">
-<strong>Hinweis:</strong>eine Benutzeroberflächen-Führungsschiene ist ein Feature, in denen ein Bereich um ein Ziel beschränkt die Bewegung zu einem bestimmten Wert oder Speicherort für die Auswahl zu beeinflussen.
+<strong>Hinweis:</strong>eine Benutzeroberflächen-Führungsschiene ist ein Feature, in denen ein Bereich um ein Ziel Bewegung zu einem bestimmten Wert oder Standort schränkt, um die Auswahl zu beeinflussen.
 </div>
 <div>
  

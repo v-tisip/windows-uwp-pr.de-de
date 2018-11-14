@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, Richtlinien, bewährte Methoden
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d502c721f98269c1256510a6f91f8c6dc8cd0fb
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6028255"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6188782"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>Richtlinien für die Benutzeroberfläche und Benutzerumgebung für Anzeigen
 
@@ -73,7 +73,7 @@ Dieser Abschnitt enthält Beispiele für Szenarien mit Banneranzeigen, die einen
 
 * Beliebig geartetes Umgehen des integrierten minimalen Zeitgebers für die Aktualisierung der Banneranzeigen, einschließlich (aber nicht beschränkt auf) Austauschen von [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol)-Objekten oder Erzwingen einer Seitenaktualisierung ohne Eingreifen des Benutzers.
 
-* Mithilfe von live-anzeigeneinheiten (d. h. anzeigeneinheiten, die Sie aus dem Partner Center erhalten) während der Entwicklungs- und Testphase oder in einem Emulator.
+* Verwenden live-anzeigeneinheiten (d. h. anzeigeneinheiten, die Sie aus dem Partner Center erhalten) während der Entwicklungs- und Testphase oder in einem Emulator.
 
 * Schreiben oder Verteilen von Code, der Anzeigendienste auf andere Weise aufruft als die Microsoft Advertising-Bibliotheken, die im Zusammenhang mit Ihrer App ausgeführt werden.
 
@@ -157,7 +157,7 @@ Dieser Abschnitt enthält Beispiele für Szenarien mit Interstitialanzeigen, die
 
 * Das Anfordern von Interstitialanzeigen, nur um eine Sicherungsanzeige für eine Wasserfallfolge von Anzeigen zu erhalten. Wenn Sie eine Interstitialanzeige anfordern und anschließend das [InterstitialAd.AdReady](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.adready)-Ereignis erhalten, muss die nächste Interstitialanzeige in Ihrer App die Anzeige sein, die für die Anzeige über die Methode [InterstitialAd.Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show) bereit ist.
 
-* Mithilfe von live-anzeigeneinheiten (d. h. anzeigeneinheiten, die Sie aus dem Partner Center erhalten) während der Entwicklungs- und Testphase oder in einem Emulator.
+* Verwenden live-anzeigeneinheiten (d. h. anzeigeneinheiten, die Sie aus dem Partner Center erhalten) während der Entwicklungs- und Testphase oder in einem Emulator.
 
 * Schreiben oder Verteilen von Code, der Anzeigendienste auf andere Weise aufruft als die Microsoft Advertising-Bibliotheken, die im Zusammenhang mit Ihrer App ausgeführt werden.
 

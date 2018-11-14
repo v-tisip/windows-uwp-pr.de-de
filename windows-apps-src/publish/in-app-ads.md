@@ -9,21 +9,21 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ccff2dce0a57e5f3219f306fa029f84162bf4974
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6037765"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6162984"
 ---
 # <a name="in-app-ads"></a>In-App-Anzeigen
 
-Verwenden Sie die **Monetarisierung** &gt; Seite im [Partner Center](https://partner.microsoft.com/dashboard) zum Erstellen und Verwalten von Anzeigeeinheiten für **In-app-anzeigen** :
+Verwenden Sie die **Monetarisierung** &gt; **In-app-Werbung** Seite im [Partner Center](https://partner.microsoft.com/dashboard) zum Erstellen und Verwalten von Anzeigeeinheiten für:
 
 * Apps für die universelle Windows-Plattform (UWP), die [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) verwenden.
 * Zuvor veröffentlichten Windows 8.x und Windows Phone 8.x-apps, mit denen die [Microsoft Advertising SDK für Windows und Windows Phone 8.x](http://aka.ms/store-8-sdk).
 
 > [!IMPORTANT]
-> Ab dem 31. Oktober 2018 darf keine Produkte neu erstellten Pakete für Windows 8.x/Windows enthalten Phone 8.x oder früher. Weitere Informationen finden Sie in diesem [Blogbeitrag](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
+> Ab dem 31. Oktober 2018 darf keine Produkte neu erstellten Pakete für Windows-8.x/Windows enthalten Phone 8.x oder früher. Weitere Informationen finden Sie in diesem [Blogbeitrag](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
 
 Weitere Informationen dazu, wie Sie diese SDKs in Ihren Apps zu Werbezwecken integrieren, finden Sie unter [Anzeigen von Werbung in Ihrer App mit dem Microsoft Advertising-SDK](../monetize/display-ads-in-your-app.md).
 
@@ -39,7 +39,7 @@ So erstellen Sie eine Anzeigeeinheit für eine [Banneranzeige](../monetize/banne
 4.  Wählen Sie in der Dropdownliste **Art der Anzeigeneinheit** den Anzeigentyp aus.
 
     * Wenn Sie eine Banneranzeige in Ihrer app angezeigt werden, wählen Sie **Banner**.
-    * Wenn Sie eine videointerstitialanzeige oder Banner-interstitialwerbung in Ihrer app angezeigt werden, wählen Sie **Video-interstitial** oder **Banner-interstitialwerbung** (Achten Sie darauf, die entsprechende Option für die Art der interstitialwerbung auszuwählen, die Sie anzeigen möchten).
+    * Wenn Sie eine videointerstitialanzeige oder Banner-interstitialwerbung in Ihrer app angezeigt werden, wählen Sie die **Video-interstitial** oder **Banner-interstitialwerbung** (Achten Sie auf die entsprechende Option für die Art der interstitialwerbung auswählen, die Sie anzeigen möchten).
     * Wenn Sie eine native Anzeige in Ihrer app angezeigt werden, klicken Sie auf **Systemeigen**.
 
 5. Wählen Sie in der Dropdownliste **Gerätefamilie** die Gerätefamilie aus, auf die Ihre App ausgerichtet ist, in der die Anzeigeneinheit verwendet werden. Folgende Optionen sind verfügbar: **UWP (Windows 10)**, **PC/Tablet (Windows 8.1)** oder **Mobile (Windows Phone 8.x)**.
@@ -78,7 +78,7 @@ Um die [Vermittlungseinstellungen](#mediation) für eine UWP-Anzeigeneinheit ode
 
 ## <a name="mediation-settings"></a>Einstellungen der Anzeigenvermittlung
 
-Wenn Sie [eine neue UWP-anzeigeneinheit erstellen](#create-ad-unit) oder [eine vorhandene UWP-anzeigeneinheit bearbeiten](#available-ad-units), verwenden Sie die Optionen in diesem Abschnitt zum Konfigurieren der [anzeigenvermittlung](../monetize/ad-mediation-service.md) für die anzeigeneinheit. Mit der Anzeigenvermittlung können Sie Ihre Anzeigenumsätze maximieren und Werbefunktionen optimal nutzen, indem Sie Anzeigen aus mehreren Anzeigennetzwerken anzeigen, einschließlich Anzeigen aus anderen kostenpflichtigen Anzeigennetzwerken und Anzeigen ohne Umsatzgenerierung zu Werbekampagnen für Microsoft-Apps. Wir kümmern uns um die Vermittlung von Banneranzeigenanforderungen von den gewählten Anzeigennetzwerken. Wenn Sie eine UWP-Anzeigeneinheit haben, die bereits mit einer Banner-, Interstitial oder nativen Anzeige in Ihrer App verbunden ist, erfordert das Aktivieren der Anzeigenvermittlung keine Codeänderungen in Ihrer App.
+Wenn Sie [eine neue UWP-anzeigeneinheit erstellen](#create-ad-unit) oder [Bearbeiten Sie eine vorhandene UWP-anzeigeneinheit](#available-ad-units), verwenden Sie die Optionen in diesem Abschnitt zum Konfigurieren der [anzeigenvermittlung](../monetize/ad-mediation-service.md) für die anzeigeneinheit. Mit der Anzeigenvermittlung können Sie Ihre Anzeigenumsätze maximieren und Werbefunktionen optimal nutzen, indem Sie Anzeigen aus mehreren Anzeigennetzwerken anzeigen, einschließlich Anzeigen aus anderen kostenpflichtigen Anzeigennetzwerken und Anzeigen ohne Umsatzgenerierung zu Werbekampagnen für Microsoft-Apps. Wir kümmern uns um die Vermittlung von Banneranzeigenanforderungen von den gewählten Anzeigennetzwerken. Wenn Sie eine UWP-Anzeigeneinheit haben, die bereits mit einer Banner-, Interstitial oder nativen Anzeige in Ihrer App verbunden ist, erfordert das Aktivieren der Anzeigenvermittlung keine Codeänderungen in Ihrer App.
 
 > [!NOTE]
 > Wenn Sie die Anzeigenvermittlung für eine UWP-Anzeigeneinheit aktivieren, müssen Sie keine Anzeigeneinheit von Drittanbieter-Anzeigennetzwerken erhalten. Unser Anzeigenvermittlungsdienst erstellt automatisch alle erforderlichen Drittanbieter-Anzeigeneinheiten.
@@ -86,13 +86,13 @@ Wenn Sie [eine neue UWP-anzeigeneinheit erstellen](#create-ad-unit) oder [eine v
 So konfigurieren Sie die Anzeigenvermittlung für eine UWP-Anzeigeneinheit in Ihrer App:
 
 1. [Eine Anzeigeneinheit erstellen](#create-ad-unit) oder [Eine vorhandene Anzeigeneinheit auswählen](#available-ad-units).
-2. Wechseln Sie zu der **vermittlungseinstellungen** Abschnitt und Konfiguration von Einstellungen, auf der Seite **In-app-anzeigen** .
+2. Wechseln Sie zu der **vermittlungseinstellungen** Abschnitt und die Konfiguration Ihrer Einstellungen, auf der Seite **In-app-anzeigen** .
 
-    * Standardmäßig ist das Kontrollkästchen **ermöglichen Microsoft optimieren Meine Einstellungen** aktiviert. Es wird empfohlen, diese Option zu verwenden. Diese Option verwendet Machine Learning-Algorithmen, um automatisch die Anzeigenvermittlungseinstellungen für Ihre App auszuwählen, um Ihnen beim Optimieren der Anzeigenumsätze in den verschiedenen Märkten zu helfen, die Ihre App unterstützt. Wenn Sie diese Option verwenden, können Sie auch die anzeigennetzwerke auswählen, die Sie in der Konfiguration verwenden möchten. Deaktivieren Sie die anzeigennetzwerke, die nicht Teil der Konfiguration werden sollen und unser Algorithmus wird sichergestellt, dass Ihre app anzeigen nur von den gewählten Anzeigennetzwerken empfängt.
+    * Standardmäßig ist das Kontrollkästchen **ermöglichen Microsoft optimieren Meine Einstellungen** aktiviert. Es wird empfohlen, diese Option zu verwenden. Diese Option verwendet Machine Learning-Algorithmen, um automatisch die Anzeigenvermittlungseinstellungen für Ihre App auszuwählen, um Ihnen beim Optimieren der Anzeigenumsätze in den verschiedenen Märkten zu helfen, die Ihre App unterstützt. Wenn Sie diese Option verwenden, können Sie auch die anzeigennetzwerke auswählen, die Sie in der Konfiguration verwenden möchten. Deaktivieren Sie die anzeigennetzwerke, die nicht Teil der Konfiguration werden sollen und unser Algorithmus wird sichergestellt, dass Ihre app nur anzeigen aus der ausgewählten Anzeigennetzwerken empfängt.
     * Wenn Sie Ihre eigenen anzeigenvermittlungseinstellungen auswählen möchten, wählen Sie die **Standardeinstellungen ändern**.
 
     > [!NOTE]
-    > Die verbleibenden Schritte in diesem Abschnitt sind nur durchzuführen, wenn Sie die **Standardeinstellungen ändern**auswählen.
+    > Die verbleibenden Schritte in diesem Abschnitt sind nur durchzuführen, wenn Sie auswählen, dass **Standardeinstellungen ändern**.
 
 3. Wählen Sie in der Dropdownliste **Ziel** die Option **Basisplan**, um die Standardkonfiguration für Ihre Anzeigenvermittlungseinstellungen zu konfigurieren. Diese Standardkonfiguration wird auf alle Märkte angewendet, mit Ausnahme von Märkten, für die Sie marktspezifische Konfigurationen definieren.
 4. Geben Sie dann das Verhältnis der Anzeigen an, die Sie auf dem Steuerelement von kostenpflichtigen Netzwerken (die Sie für Aufrufe bezahlen) und anderen Anzeigennetzwerken (die Sie nicht für Aufrufe bezahlen) anzeigen möchten. Geben Sie hierzu einen Wert zwischen 0 und 100 im Feld **Gewichtung** für **Paid ad networks** und **Weitere Anzeigennetzwerke** ein.  
@@ -112,10 +112,10 @@ Die folgende Tabelle enthält die kostenpflichtigen Netzwerke, die wir derzeit f
 
 |  Anzeigennetzwerk  |  Beschreibung  |  Unterstützte Anzeigentypen  |
 |--------------|---------------|---------------------|
-| Oath und AppNexus |  Dies ist ein von Microsoft verwaltetes Anzeigennetzwerk, das Anzeigen über unsere Partnernetzwerke Oath und AppNexus bereitstellt.<p/>**Hinweis**: Oath und AppNexus stets den Rang in der Liste **Paid Ad Networks** für Banner-anzeigeneinheiten, und es kann nicht geändert werden, um eine niedrigere Rangfolge für diese Art von anzeigen. | Banneranzeigen, Video-Interstitialanzeigen |
+| Oath und AppNexus |  Dies ist ein von Microsoft verwaltetes Anzeigennetzwerk, das Anzeigen über unsere Partnernetzwerke Oath und AppNexus bereitstellt.<p/>**Hinweis**: Oath und AppNexus stets den Rang in der Liste der **Netzwerke für kostenpflichtige Anzeige** für Banner-anzeigeneinheiten und es kann nicht geändert werden, um eine niedrigere Rangfolge für diese Art von anzeigen. | Banneranzeigen, Video-Interstitialanzeigen |
 | AppNexus (direkt) | Wählen Sie diese Option zum Anzeigen von [AppNexus](https://www.appnexus.com). | Video-Interstitialanzeigen, native Anzeigen  |
 | Microsoft-Anzeigen für die App-Installation | Wählen Sie diese Option, um Anzeigen für die App-Installation oder das Wiedereinschalten von Anzeigen in Apps anzuzeigen, die von anderen Entwicklern im Windows-Ökosystem erstellt wurden, die [Werbeanzeigenkampagnen für ihre Apps erstellen](create-an-ad-campaign-for-your-app.md).  |  Banneranzeigen, Banner-Interstitialwerbung, native Anzeigen  |
-| Content MSN-Empfehlungen |  Wählen Sie diese Option zum Anzeigen von Content MSN-Empfehlungen. |  Banneranzeigen, Banner-Interstitialwerbung  |
+| MSN-Content-Empfehlungen |  Wählen Sie diese Option zum Anzeigen von Inhalten MSN-Empfehlungen. |  Banneranzeigen, Banner-Interstitialwerbung  |
 | Outbrain |  Wählen Sie diese Option zum Bereitstellen von Anzeigen von [Outbrain](https://www.outbrain.com/). |  Banneranzeigen, Banner-Interstitialwerbung  |
 | Revcontent |  Wählen Sie diese Option zum Bereitstellen von Anzeigen von [Revcontent](http://www.revcontent.com/). |  Banner, nativ  |
 | Smaato |  Wählen Sie diese Option zum Bereitstellen von Anzeigen von [Smaato](https://www.smaato.com/). |  Banner  |

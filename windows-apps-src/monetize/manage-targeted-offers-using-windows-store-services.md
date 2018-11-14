@@ -9,15 +9,15 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-API für gezielte Angebote, gezielte Angebote
 ms.localizationpriority: medium
 ms.openlocfilehash: dbfefefdb7f7b96dbe99b35656b610b393ab3afa
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044027"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6204069"
 ---
 # <a name="manage-targeted-offers-using-store-services"></a>Verwalten von gezielten Angeboten mithilfe von Store-Diensten
 
-Wenn Sie ein *gezieltes Angebot* in Erstellen der **einbeziehen > zielgerichtete Angebote** Seite für Ihre app im Partner Center verwenden der *Microsoft Store für gezielte Angebote API* in Ihrem app Code zum Abrufen von Informationen, die Ihnen bei der Implementierung der in-app-Umgebung für die Gezieltes Angebot. Weitere Informationen zu gezielten Angeboten und Anleitungen zu deren Erstellung im Dashboard finden Sie unter [Verwenden Sie gezielte Angebote, um Interaktionen und Abschlüsse zu maximieren.](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md).
+Wenn Sie ein *gezieltes Angebot* in Erstellen der **einbeziehen > zielgerichtete Angebote** Seite für Ihre app im Partner Center verwenden, die der *Microsoft Store für gezielte Angebote API* in Ihrem app Code zum Abrufen von Informationen, die Ihnen bei der Implementierung der in-app-Umgebung für die Gezieltes Angebot. Weitere Informationen zu gezielten Angeboten und Anleitungen zu deren Erstellung im Dashboard finden Sie unter [Verwenden Sie gezielte Angebote, um Interaktionen und Abschlüsse zu maximieren.](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md).
 
 Die Gezielte-Angebote-API ist eine einfache REST-API, mit der Sie gezielte Angebote abrufen können, die für den aktuellen Benutzer verfügbar sind– basierend darauf, ob der Benutzer zum Kundensegment für das gezielte Angebot gehört. Gehen Sie folgendermaßen vor, um diese API in Ihrem App-Code zu verwenden:
 

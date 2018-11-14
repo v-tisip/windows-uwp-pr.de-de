@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 1fe2460dfc5ab11a9168f1d1d87207d2b9490026
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035336"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6164463"
 ---
 # <a name="xaml-syntax-guide"></a>Anleitung zur XAML-Syntax
 
@@ -240,7 +240,7 @@ Zunächst gibt das Vorhandensein des Objektelements an, dass ein neues *objectNa
 
 Eine weitere XAML-Regel ist, dass es möglich sein muss, Attribute eines Elements in beliebiger Reihenfolge festzulegen. Zwischen `<Rectangle Height="50" Width="100" />` und `<Rectangle Width="100"  Height="50" />` besteht z. B. kein Unterschied. Welche Reihenfolge Sie verwenden, ist eine Frage des Programmierstils.
 
-**Hinweis:** XAML-Designer oft Schreibreihenfolge Konventionen bewerben, wenn Sie andere Entwurfsoberflächen als den XML-Editor verwenden, aber Sie dieses XAML später frei bearbeiten können, um die Attribute neu anordnen oder neue einzuführen.
+**Hinweis:** XAML-Designer oft Schreibreihenfolge Konventionen bewerben, wenn Sie andere Entwurfsoberflächen als den XML-Editor verwenden, aber Sie dieses XAML später frei bearbeiten können, um die Attribute neu anordnen oder neue einführen.
 
 ## <a name="attached-properties"></a>Angefügte Eigenschaften
 
@@ -269,7 +269,7 @@ Weitere Informationen finden Sie unter [Übersicht über angefügte Eigenschafte
 
 Da die öffnende geschweifte Klammer „\{“ der Anfang der Markuperweiterungssequenz ist, können Sie mithilfe einer Escapesequenz einen Literalzeichenfolgenwert angeben, der mit „\{“ beginnt. Die Escapesequenz ist „\{\}“. Geben Sie beispielsweise zum Angeben eines Zeichenfolgenwerts, der eine einzelne öffnende geschweifte Klammer ist, den Attributwert als „\{\}\{“ an. Sie können auch die alternativen Anführungszeichen (z.B. **'** innerhalb eines durch **""** getrennten Attributwerts) verwenden, um einen „\{“-Wert als Zeichenfolge anzugeben.
 
-**Hinweis:**"\}" funktioniert auch, wenn sie sich in einem Attribut in Anführungszeichen befindet.
+**Hinweis:**"\}" funktioniert auch, wenn es in einem Attribut in Anführungszeichen ist.
  
 ## <a name="enumeration-values"></a>Enumerationswerte
 
@@ -288,7 +288,7 @@ In seltenen Fällen liegt eine XAML-Syntax vor, in der der Typ einer Eigenschaft
 
 ## <a name="xaml-placeholder-conventions-in-windows-runtime-reference"></a>XAML-Platzhalterkonventionen in der Windows-Runtime-Referenz
 
-Wenn Sie den Abschnitt **Syntax** der Referenzthemen für Windows-Runtime-APIs überprüft haben, die XAML verwenden können, ist Ihnen wahrscheinlich aufgefallen, dass die Syntax mehrere Platzhalter enthält. XAML-Syntax unterscheidet sich von der Verwendung von c#, Microsoft Visual Basic oder für VisualC++-komponentenerweiterungen (C++ / CX) Syntax, da die XAML-Syntax eine Verwendungssyntax handelt. Sie gibt einen Hinweis auf die spätere Verwendung in Ihren XAML-Dateien, gibt jedoch nicht zu genau vor, welche Werte verwendet werden können. Die Verwendung beschreibt also in der Regel einen Grammatiktyp, bei dem Literale und Platzhalter gemischt werden, und definiert einige der Platzhalter im Abschnitt **XAML-Werte**.
+Wenn Sie den Abschnitt **Syntax** der Referenzthemen für Windows-Runtime-APIs überprüft haben, die XAML verwenden können, ist Ihnen wahrscheinlich aufgefallen, dass die Syntax mehrere Platzhalter enthält. XAML-Syntax unterscheidet sich von der C#-, Microsoft Visual Basic oder für VisualC++-komponentenerweiterungen (C++ / CX) Syntax, da die XAML-Syntax eine Verwendungssyntax handelt. Sie gibt einen Hinweis auf die spätere Verwendung in Ihren XAML-Dateien, gibt jedoch nicht zu genau vor, welche Werte verwendet werden können. Die Verwendung beschreibt also in der Regel einen Grammatiktyp, bei dem Literale und Platzhalter gemischt werden, und definiert einige der Platzhalter im Abschnitt **XAML-Werte**.
 
 Wenn in einer XAML-Syntax für eine Eigenschaft Typ-/Elementnamen angezeigt werden, steht der angezeigte Name für den Typ, der die Eigenschaft ursprünglich definiert. Windows-Runtime-XAML unterstützt jedoch ein Klassenvererbungsmodell für die [**DependencyObject**](https://msdn.microsoft.com/library/windows/apps/br242356)-basierten Klassen. Sie können also häufig ein Attribut für eine Klasse verwenden, bei der es sich nicht direkt um die definierende Klasse handelt, sondern die von einer Klasse abgeleitet ist, mit der die Eigenschaft bzw. das Attribut zuerst definiert wurde. Sie können beispielsweise unter Verwendung einer tiefen Vererbung [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992) als Attribut für eine beliebige abgeleitete [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)-Kasse festlegen. Beispiel: `<Button Visibility="Visible" />`. Nehmen Sie den in einer XAML-Verwendungssyntax angezeigten Elementnamen also nicht zu wörtlich. Die Syntax ist ggf. für Elemente, die die Klasse darstellen, sowie für Elemente geeignet, die eine abgeleitete Klasse darstellen. Wenn der als das definierende Element angezeigte Typ selten oder gar nicht in einer realen Verwendung eingesetzt werden kann, wird dieser Typname in der Syntax absichtlich in Kleinbuchstaben angegeben. Die für **UIElement.Visibility** angezeigte Syntax lautet beispielsweise folgendermaßen:
 

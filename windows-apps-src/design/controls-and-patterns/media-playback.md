@@ -12,11 +12,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 113acbe1f4e9bb3814b2f9b61beb79488995d3e3
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6049045"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6203589"
 ---
 # <a name="media-player"></a>Media Player
 
@@ -99,7 +99,7 @@ Das [MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/windows
 ### <a name="set-the-media-source"></a>Festlegen der Medienquelle
 Um Dateien im Netzwerk oder in die App eingebettete Dateien wiederzugeben, legen Sie die [Source](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx)-Eigenschaft auf eine [MediaSource](https://msdn.microsoft.com/library/windows/apps/windows.media.core.mediasource.aspx) mit dem Pfad der Datei fest.
 
-**Tipp:** zum Öffnen von Dateien aus dem Internet müssen Sie die Funktion **Internet (Client)** in Ihrem app Manifest (Package.appxmanifest) deklarieren. Weitere Informationen zum Deklarieren von Funktionen finden Sie unter [Deklarieren von App-Funktionen](https://msdn.microsoft.com/library/windows/apps/mt270968).
+**Tipp:** zum Öffnen von Dateien aus dem Internet müssen Sie die Funktion **Internet (Client)** in Ihrer app Manifest (Package.appxmanifest) deklarieren. Weitere Informationen zum Deklarieren von Funktionen finden Sie unter [Deklarieren von App-Funktionen](https://msdn.microsoft.com/library/windows/apps/mt270968).
 
  
 

@@ -12,11 +12,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 82623a86548866a78f56385ee0a535bfcb822c46
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044249"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6270815"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Navigationsdesigngrundlagen für UWP-Apps
 
@@ -56,7 +56,7 @@ Beginnen wir mit den Grundprinzipien eines guten Navigationsdesigns:
 
 ### <a name="consistency"></a>Konsistenz
 
-Die Navigation sollte den Erwartungen der Benutzer entsprechen. [Standardsteuerelemente](#use-the-right-controls) sind Benutzer mit vertraut sind und der folgenden Standardkonventionen für Symbole verwenden, nehmen Position und Formatierung Navigation vorhersehbar und intuitiv für Benutzer.
+Die Navigation sollte den Erwartungen der Benutzer entsprechen. [Standard-Steuerelementen](#use-the-right-controls) , die Benutzer mit vertraut sind und folgende Standardkonventionen für Symbole verwenden, nehmen Position und Formatierung Navigation vorhersehbar und intuitiv für Benutzer.
 
 ![Bild mit Seitenkomponenten](images/nav/page-components.svg)
 
@@ -189,7 +189,7 @@ Sobald Sie sich für eine Seitenstruktur entschieden haben, müssen Sie entschei
         - Sie möchten mehr Platz für den Inhalt Ihrer app.
         - Symbole können nicht Ihre Navigationskategorien deutlich beschreiben.
         
-        Verwendung Registerkarten Gründe:
+        Verwendung Registerkarten bei:
 
         - Verlauf und Seite Navigationszustand beibehalten werden soll.
         - Sie erwarten, dass Benutzer zwischen Registerkarten häufig zu wechseln.

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 866fedf35aa6f1f585825195b18cdd1fed4bad11
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6034411"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6193281"
 ---
 # <a name="process-media-files-in-the-background"></a>Verarbeiten von Mediendateien im Hintergrund
 
@@ -126,13 +126,13 @@ Registrieren Sie die Hintergrundaufgabe durch Aufrufen von [**Register**](https:
 
 [!code-cs[RegisterBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetRegisterBackgroundTask)]
 
-Eine typische app wird ihre Hintergrundaufgabe registriert, wenn die app anfänglich gestartete, z. B. des **OnNavigatedTo** -Ereignisses wird.
+Eine typische app wird ihre Hintergrundaufgabe registrieren, wenn die app anfänglich gestartete, z. B. das **OnNavigatedTo** -Ereignis wird.
 
 Starten Sie die Hintergrundaufgabe durch Aufrufen der [**RequestAsync**](https://msdn.microsoft.com/library/windows/apps/dn765071)-Methode des **MediaProcessingTrigger**-Objekts. Das von dieser Methode zurückgegebene [**MediaProcessingTriggerResult**](https://msdn.microsoft.com/library/windows/apps/dn806007)-Objekt informiert Sie darüber, ob die Hintergrundaufgabe erfolgreich gestartet wurde. Zudem teilt es Ihnen bei einem Fehler mit, warum die Hintergrundaufgabe nicht gestartet wurde. 
 
 [!code-cs[LaunchBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetLaunchBackgroundTask)]
 
-Eine typische app startet die Hintergrundaufgabe in Reaktion auf Benutzerinteraktionen, z. B. im Ereignis **Klicken Sie auf** ein UI-Steuerelement.
+Eine typische app startet die Hintergrundaufgabe in Reaktion auf Benutzerinteraktionen, z. B. in das Ereignis **Klicken Sie auf** ein UI-Steuerelement.
 
 Der **OnProgress**-Ereignishandler wird aufgerufen, wenn die Hintergrundaufgabe den Vorgangsstatus aktualisiert. Sie können diese Möglichkeit nutzen, um die Benutzeroberfläche mit Statusinformationen zu aktualisieren.
 
