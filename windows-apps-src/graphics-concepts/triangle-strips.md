@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: f60f0f65868d4dec67bf77a329d4b952c20ec44a
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6032688"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6198041"
 ---
 # <a name="triangle-strips"></a><span data-ttu-id="61985-105">Dreieckstreifen</span><span class="sxs-lookup"><span data-stu-id="61985-105">Triangle strips</span></span>
 

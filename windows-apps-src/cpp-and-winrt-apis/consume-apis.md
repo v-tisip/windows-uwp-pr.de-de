@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projiziert, projektion, implementierung, laufzeitklasse, aktivierung
 ms.localizationpriority: medium
 ms.openlocfilehash: cffda0c15e8234f57486995308c335842ce058c8
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6145903"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6196576"
 ---
 # <a name="consume-apis-with-cwinrt"></a><span data-ttu-id="137d6-104">Verwenden von APIs mit C++/WinRT</span><span class="sxs-lookup"><span data-stu-id="137d6-104">Consume APIs with C++/WinRT</span></span>
 

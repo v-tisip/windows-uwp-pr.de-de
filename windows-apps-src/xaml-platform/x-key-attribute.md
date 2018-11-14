@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 8d48ccb93a411e92b57059192de38366f27353a3
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6158983"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6191573"
 ---
 # <a name="xkey-attribute"></a><span data-ttu-id="6b5a0-104">x:Key-Attribut</span><span class="sxs-lookup"><span data-stu-id="6b5a0-104">x:Key attribute</span></span>
 

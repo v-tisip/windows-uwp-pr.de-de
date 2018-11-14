@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows10, verpackung, paketlayout, bestandspaket
 ms.localizationpriority: medium
 ms.openlocfilehash: 9342b4ce35cb50037813ed2210e2d7246411ad92
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6254320"
+ms.locfileid: "6184800"
 ---
 # <a name="package-creation-with-the-packaging-layout"></a><span data-ttu-id="51a31-105">Paketerstellung mit dem Verpackungslayout</span><span class="sxs-lookup"><span data-stu-id="51a31-105">Package creation with the packaging layout</span></span>  
 
