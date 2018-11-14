@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Tiefe, Effekte, Grundtypen; directx
 ms.localizationpriority: medium
 ms.openlocfilehash: f81c441910cd0d0205641a119c243cb22d0b695e
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6041590"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6151100"
 ---
 # <a name="use-depth-and-effects-on-primitives"></a><span data-ttu-id="acde0-104">Verwenden von Tiefen und Effekten in Grundtypen</span><span class="sxs-lookup"><span data-stu-id="acde0-104">Use depth and effects on primitives</span></span>
 

@@ -14,11 +14,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 717c819aaa732cf8d29e0a701a1fec81485f48ac
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6051461"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6202462"
 ---
 # <a name="handle-app-resume"></a><span data-ttu-id="2f27e-104">Behandeln der App-Fortsetzung</span><span class="sxs-lookup"><span data-stu-id="2f27e-104">Handle app resume</span></span>
 

@@ -11,11 +11,11 @@ ms.topic: article
 ms.assetid: d888f75f-c2a0-4134-81db-907b5e24fcc5
 ms.localizationpriority: medium
 ms.openlocfilehash: b6896a4c149084dd5609f2ac6737c803a18d14ac
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6183795"
+ms.locfileid: "6265388"
 ---
 # <a name="add-an-inktoolbar-to-a-universal-windows-platform-uwp-app"></a><span data-ttu-id="2aa7c-103">Hinzufügen von InkToolbar zu einer App für die universelle Windows-Plattform (UWP)</span><span class="sxs-lookup"><span data-stu-id="2aa7c-103">Add an InkToolbar to a Universal Windows Platform (UWP) app</span></span>
 

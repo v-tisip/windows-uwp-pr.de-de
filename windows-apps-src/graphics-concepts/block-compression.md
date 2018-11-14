@@ -4,20 +4,19 @@ description: Blockkomprimierung ist ein verlustbehaftetes Texturkomprimierungsve
 ms.assetid: 2FAD6BE8-C6E4-4112-AF97-419CD27F7C73
 keywords:
 - Blockkomprimierung
-author: michaelfromredmond
-ms.author: mithom
+author: hickeys
+ms.author: hickeys
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c959ced5ada9145ca494dd023c9aa802d7dccc2
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 8ff4c88a46c1e89df96b48d82da333432790e461
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024328"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6205871"
 ---
 # <a name="block-compression"></a><span data-ttu-id="20c61-105">Blockkomprimierung</span><span class="sxs-lookup"><span data-stu-id="20c61-105">Block compression</span></span>
-
 
 <span data-ttu-id="20c61-106">Blockkomprimierung ist ein verlustbehaftetes Texturkomprimierungsverfahren zum Reduzieren der Texturgröße und des Speicherbedarfs und zur Steigerung der Leistung.</span><span class="sxs-lookup"><span data-stu-id="20c61-106">Block compression is a lossy texture-compression technique for reducing texture size and memory footprint, giving a performance increase.</span></span> <span data-ttu-id="20c61-107">Eine blockkomprimierte Textur kann kleiner als eine Textur mit 32Bit pro Farbe sein.</span><span class="sxs-lookup"><span data-stu-id="20c61-107">A block-compressed texture can be smaller than a texture with 32-bits per color.</span></span>
 
@@ -29,13 +28,12 @@ ms.locfileid: "6024328"
 
 ## <a name="span-idbasicsspanspan-idbasicsspanspan-idbasicsspanhow-block-compression-works"></a><span data-ttu-id="20c61-114"><span id="Basics"></span><span id="basics"></span><span id="BASICS"></span>So funktioniert die Blockkomprimierung</span><span class="sxs-lookup"><span data-stu-id="20c61-114"><span id="Basics"></span><span id="basics"></span><span id="BASICS"></span>How block compression works</span></span>
 
-
 <span data-ttu-id="20c61-115">Die Blockkomprimierung ist eine Methode zum Verringern des zum Speichern von Farbdaten benötigten Arbeitsspeicherbedarfs.</span><span class="sxs-lookup"><span data-stu-id="20c61-115">Block compression is a technique for reducing the amount of memory required to store color data.</span></span> <span data-ttu-id="20c61-116">Durch das Speichern von Farben in deren ursprünglichen Größe und von Farben mit einem Codierungsschema, können Sie den zum Speichern des Bildes benötigten Arbeitsspeicherbedarf erheblich reduzieren.</span><span class="sxs-lookup"><span data-stu-id="20c61-116">By storing some colors in their original size, and other colors using an encoding scheme, you can dramatically reduce the amount of memory required to store the image.</span></span> <span data-ttu-id="20c61-117">Da die Hardware automatisch komprimierte Daten entschlüsselt, besteht keine Leistungseinbuße für die Verwendung komprimierter Texturen.</span><span class="sxs-lookup"><span data-stu-id="20c61-117">Since the hardware automatically decodes compressed data, there is no performance penalty for using compressed textures.</span></span>
 
 <span data-ttu-id="20c61-118">Betrachten Sie die folgenden zwei Beispiele, um zu sehen, wie die Komprimierung funktioniert.</span><span class="sxs-lookup"><span data-stu-id="20c61-118">To see how compression works, look at the following two examples.</span></span> <span data-ttu-id="20c61-119">Das erste Beispiel zeigt den erforderlichen Speicherbedarf beim Speichern von nicht komprimierten Daten. Das zweite Beispiel zeigt den erforderlichen Speicherbedarf beim Speichern von komprimierten Daten.</span><span class="sxs-lookup"><span data-stu-id="20c61-119">The first example describes the amount of memory used when storing uncompressed data; the second example describes the amount of memory used when storing compressed data.</span></span>
 
--   [<span data-ttu-id="20c61-120">Speichern von nicht komprimierten Daten</span><span class="sxs-lookup"><span data-stu-id="20c61-120">Storing uncompressed data</span></span>](#storing-uncompressed-data)
--   [<span data-ttu-id="20c61-121">Speichern von komprimierten Daten</span><span class="sxs-lookup"><span data-stu-id="20c61-121">Storing compressed data</span></span>](#storing-compressed-data)
+- [<span data-ttu-id="20c61-120">Speichern von nicht komprimierten Daten</span><span class="sxs-lookup"><span data-stu-id="20c61-120">Storing uncompressed data</span></span>](#storing-uncompressed-data)
+- [<span data-ttu-id="20c61-121">Speichern von komprimierten Daten</span><span class="sxs-lookup"><span data-stu-id="20c61-121">Storing compressed data</span></span>](#storing-compressed-data)
 
 ### <a name="span-idstoringuncompresseddataspanspan-idstoringuncompresseddataspanspan-idstoringuncompresseddataspanspan-idstoring-uncompressed-dataspanstoring-uncompressed-data"></a><span data-ttu-id="20c61-122"><span id="Storing_Uncompressed_Data"></span><span id="storing_uncompressed_data"></span><span id="STORING_UNCOMPRESSED_DATA"></span><span id="storing-uncompressed-data"></span>Speichern von nicht komprimierten Daten</span><span class="sxs-lookup"><span data-stu-id="20c61-122"><span id="Storing_Uncompressed_Data"></span><span id="storing_uncompressed_data"></span><span id="STORING_UNCOMPRESSED_DATA"></span><span id="storing-uncompressed-data"></span>Storing uncompressed data</span></span>
 
@@ -61,14 +59,13 @@ ms.locfileid: "6024328"
 
 ## <a name="span-idusingblockcompressionspanspan-idusingblockcompressionspanspan-idusingblockcompressionspanusing-block-compression"></a><span data-ttu-id="20c61-137"><span id="Using_Block_Compression"></span><span id="using_block_compression"></span><span id="USING_BLOCK_COMPRESSION"></span>Verwenden der Blockkomprimierung</span><span class="sxs-lookup"><span data-stu-id="20c61-137"><span id="Using_Block_Compression"></span><span id="using_block_compression"></span><span id="USING_BLOCK_COMPRESSION"></span>Using block compression</span></span>
 
-
 <span data-ttu-id="20c61-138">Eine blockkomprimierte Textur kann genau wie eine nicht komprimierte Textur erstellt werden, außer dass Sie dabei ein blockkomprimiertes Format angeben.</span><span class="sxs-lookup"><span data-stu-id="20c61-138">Create a block-compressed texture just like an uncompressed texture except that you specify a block-compressed format.</span></span>
 
 <span data-ttu-id="20c61-139">Erstellen Sie dann eine Ansicht, um die Textur an die Pipeline zu binden. Da eine blockkomprimierte Textur nur als Eingabe für eine Shaderphase verwendet werden kann, müssen Sie eine Shaderressourcenansicht erstellen.</span><span class="sxs-lookup"><span data-stu-id="20c61-139">Next, create a view to bind the texture to the pipeline Since a block-compressed texture can be used only as an input to a shader-stage, you want to create a shader-resource view.</span></span>
 
 <span data-ttu-id="20c61-140">Verwenden Sie eine blockkomprimierte Textur genau wie eine nicht komprimierte Textur.</span><span class="sxs-lookup"><span data-stu-id="20c61-140">Use a block compressed texture the same way you would use an uncompressed texture.</span></span> <span data-ttu-id="20c61-141">Wenn Ihre Anwendung einen Speicherzeiger für blockkomprimierte Daten erhält, müssen Sie den Speicherabstand in einer Mipmap berücksichtigen, durch die sich die deklarierte Größe von der tatsächlichen Größe unterscheidet.</span><span class="sxs-lookup"><span data-stu-id="20c61-141">If your application will get a memory pointer to block-compressed data, you need to account for the memory padding in a mipmap that causes the declared size to differ from the actual size.</span></span>
 
--   [<span data-ttu-id="20c61-142">Virtuelle Größe im Vergleich zur physischen Größe</span><span class="sxs-lookup"><span data-stu-id="20c61-142">Virtual size versus physical size</span></span>](#virtual-size-versus-physical-size)
+- [<span data-ttu-id="20c61-142">Virtuelle Größe im Vergleich zur physischen Größe</span><span class="sxs-lookup"><span data-stu-id="20c61-142">Virtual size versus physical size</span></span>](#virtual-size-versus-physical-size)
 
 ### <a name="span-idvirtualsizespanspan-idvirtualsizespanspan-idvirtualsizespanspan-idvirtual-size-versus-physical-sizespanvirtual-size-versus-physical-size"></a><span data-ttu-id="20c61-143"><span id="Virtual_Size"></span><span id="virtual_size"></span><span id="VIRTUAL_SIZE"></span><span id="virtual-size-versus-physical-size"></span>Virtuelle Größe im Vergleich zur physischen Größe</span><span class="sxs-lookup"><span data-stu-id="20c61-143"><span id="Virtual_Size"></span><span id="virtual_size"></span><span id="VIRTUAL_SIZE"></span><span id="virtual-size-versus-physical-size"></span>Virtual size versus physical size</span></span>
 
@@ -86,7 +83,6 @@ ms.locfileid: "6024328"
 
 ## <a name="span-idcompressionalgorithmsspanspan-idcompressionalgorithmsspanspan-idcompressionalgorithmsspancompression-algorithms"></a><span data-ttu-id="20c61-161"><span id="Compression_Algorithms"></span><span id="compression_algorithms"></span><span id="COMPRESSION_ALGORITHMS"></span>Komprimierungsalgorithmus</span><span class="sxs-lookup"><span data-stu-id="20c61-161"><span id="Compression_Algorithms"></span><span id="compression_algorithms"></span><span id="COMPRESSION_ALGORITHMS"></span>Compression algorithms</span></span>
 
-
 <span data-ttu-id="20c61-162">Blockkomprimierungstechniken in Direct3D teilen nicht komprimierte Texturdaten in 4×4 Blöcke auf, komprimieren jeden Block und speichern anschließend die Daten.</span><span class="sxs-lookup"><span data-stu-id="20c61-162">Block compression techniques in Direct3D break up uncompressed texture data into 4×4 blocks, compress each block, and then store the data.</span></span> <span data-ttu-id="20c61-163">Aus diesem Grund müssen Texturen, die komprimiert werden, Texturdimensionen aufweisen, die eine Potenz von4 sind.</span><span class="sxs-lookup"><span data-stu-id="20c61-163">For this reason, textures are expected to be compressed must have texture dimensions that are multiples of 4.</span></span>
 
 ![Blockkomprimierung](images/d3d10-compression-1.png)
@@ -103,13 +99,11 @@ ms.locfileid: "6024328"
 | <span data-ttu-id="20c61-181">Farbe mit einer Komponente</span><span class="sxs-lookup"><span data-stu-id="20c61-181">One-component color</span></span>             | <span data-ttu-id="20c61-182">Eine Komponente (8)</span><span class="sxs-lookup"><span data-stu-id="20c61-182">One component (8)</span></span>                     | [<span data-ttu-id="20c61-183">BC4</span><span class="sxs-lookup"><span data-stu-id="20c61-183">BC4</span></span>](#bc4)                    |
 | <span data-ttu-id="20c61-184">Farbe mit zwei Komponenten</span><span class="sxs-lookup"><span data-stu-id="20c61-184">Two-component color</span></span>             | <span data-ttu-id="20c61-185">Zwei Komponenten (8:8)</span><span class="sxs-lookup"><span data-stu-id="20c61-185">Two components (8:8)</span></span>                  | [<span data-ttu-id="20c61-186">BC5</span><span class="sxs-lookup"><span data-stu-id="20c61-186">BC5</span></span>](#bc5)                    |
 
- 
-
--   [<span data-ttu-id="20c61-187">BC1</span><span class="sxs-lookup"><span data-stu-id="20c61-187">BC1</span></span>](#bc1)
--   [<span data-ttu-id="20c61-188">BC2</span><span class="sxs-lookup"><span data-stu-id="20c61-188">BC2</span></span>](#bc2)
--   [<span data-ttu-id="20c61-189">BC3</span><span class="sxs-lookup"><span data-stu-id="20c61-189">BC3</span></span>](#bc3)
--   [<span data-ttu-id="20c61-190">BC4</span><span class="sxs-lookup"><span data-stu-id="20c61-190">BC4</span></span>](#bc4)
--   [<span data-ttu-id="20c61-191">BC5</span><span class="sxs-lookup"><span data-stu-id="20c61-191">BC5</span></span>](#bc5)
+- [<span data-ttu-id="20c61-187">BC1</span><span class="sxs-lookup"><span data-stu-id="20c61-187">BC1</span></span>](#bc1)
+- [<span data-ttu-id="20c61-188">BC2</span><span class="sxs-lookup"><span data-stu-id="20c61-188">BC2</span></span>](#bc2)
+- [<span data-ttu-id="20c61-189">BC3</span><span class="sxs-lookup"><span data-stu-id="20c61-189">BC3</span></span>](#bc3)
+- [<span data-ttu-id="20c61-190">BC4</span><span class="sxs-lookup"><span data-stu-id="20c61-190">BC4</span></span>](#bc4)
+- [<span data-ttu-id="20c61-191">BC5</span><span class="sxs-lookup"><span data-stu-id="20c61-191">BC5</span></span>](#bc5)
 
 ### <a name="span-idbc1spanspan-idbc1spanbc1"></a><span data-ttu-id="20c61-192"><span id="BC1"></span><span id="bc1"></span>BC1</span><span class="sxs-lookup"><span data-stu-id="20c61-192"><span id="BC1"></span><span id="bc1"></span>BC1</span></span>
 
@@ -121,14 +115,14 @@ ms.locfileid: "6024328"
 
 <span data-ttu-id="20c61-199">Die Farbindizes (a-p) werden verwendet, um die ursprünglichen Farben aus einer Farbtabelle anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="20c61-199">The color indices (a–p) are used to look up the original colors from a color table.</span></span> <span data-ttu-id="20c61-200">Die Farbtabelle enthält 4 Farben.</span><span class="sxs-lookup"><span data-stu-id="20c61-200">The color table contains 4 colors.</span></span> <span data-ttu-id="20c61-201">Die ersten beiden Farben – color\_0 und color\_1 – sind die minimalen und maximalen Farben.</span><span class="sxs-lookup"><span data-stu-id="20c61-201">The first two colors—color\_0 and color\_1—are the minimum and maximum colors.</span></span> <span data-ttu-id="20c61-202">Die anderen zwei Farben, color\_2 und color\_3, sind Zwischenfarben, die durch lineare Interpolation berechnet wurden.</span><span class="sxs-lookup"><span data-stu-id="20c61-202">The other two colors, color\_2 and color\_3, are intermediate colors calculated with linear interpolation.</span></span>
 
-```
+```cpp
 color_2 = 2/3*color_0 + 1/3*color_1
 color_3 = 1/3*color_0 + 2/3*color_1
 ```
 
 <span data-ttu-id="20c61-203">Den vier Farben werden 2-Bit-Indexwerte zugewiesen, die in den Blöcke a-p gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="20c61-203">The four colors are assigned 2-bit index values that will be saved in blocks a–p.</span></span>
 
-```
+```cpp
 color_0 = 00
 color_1 = 01
 color_2 = 10
@@ -139,7 +133,7 @@ color_3 = 11
 
 <span data-ttu-id="20c61-205">Dieser Algorithmus eignet sich für ebenfalls für Daten, die 1Bit Alpha enthalten.</span><span class="sxs-lookup"><span data-stu-id="20c61-205">This algorithm lends itself to data that contains 1-bit alpha also.</span></span> <span data-ttu-id="20c61-206">Der einzige Unterschied ist, dass color\_3 auf 0 (eine transparente Farbe) festgelegt ist und color\_2 eine lineare Mischung aus color\_0 und color\_1 ist.</span><span class="sxs-lookup"><span data-stu-id="20c61-206">The only difference is that color\_3 is set to 0 (which represents a transparent color) and color\_2 is a linear blend of color\_0 and color\_1.</span></span>
 
-```
+```cpp
 color_2 = 1/2*color_0 + 1/2*color_1;
 color_3 = 0;
 ```
@@ -166,7 +160,7 @@ color_3 = 0;
 
 <span data-ttu-id="20c61-224">Der Algorithmus bestimmt die Anzahl der interpolierten Alphawerte anhand von zwei Alpha-Referenzen.</span><span class="sxs-lookup"><span data-stu-id="20c61-224">The algorithm determines the number of interpolated alpha values by examining the two reference alpha values.</span></span> <span data-ttu-id="20c61-225">Wenn alpha\_0 größer als alpha\_1 ist, interpoliert BC3 6 Alphawerte; andernfalls interpoliert es 4.</span><span class="sxs-lookup"><span data-stu-id="20c61-225">If alpha\_0 is greater than alpha\_1, then BC3 interpolates 6 alpha values; otherwise, it interpolates 4.</span></span> <span data-ttu-id="20c61-226">Wenn BC3 nur 4 Alphawerte interpoliert, werden zwei zusätzliche Alphawerte festgelegt (0 für vollständig transparent und 255 für vollständig undurchsichtig).</span><span class="sxs-lookup"><span data-stu-id="20c61-226">When BC3 interpolates only 4 alpha values, it sets two additional alpha values (0 for fully transparent and 255 for fully opaque).</span></span> <span data-ttu-id="20c61-227">BC3 komprimiert die Alphawerte in 4×4-Texel-Bereiche, indem der Bit-Code gespeichert wird, der dem interpolierten Alpha-Wert entspricht, der dem ursprünglichen Alpha-Wert für ein bestimmtes Texel am ehesten entspricht.</span><span class="sxs-lookup"><span data-stu-id="20c61-227">BC3 compresses the alpha values in the 4×4 texel area by storing the bit code corresponding to the interpolated alpha values which most closely matches the original alpha for a given texel.</span></span>
 
-```
+```cpp
 if( alpha_0 > alpha_1 )
 {
   // 6 interpolated alpha values.
@@ -201,14 +195,14 @@ else
 
 <span data-ttu-id="20c61-238">Der Algorithmus bestimmt die Anzahl der interpolierten Farbwerte anhand von zwei Referenzwerten.</span><span class="sxs-lookup"><span data-stu-id="20c61-238">The algorithm determines the number of interpolated color values by examining the two reference values.</span></span> <span data-ttu-id="20c61-239">Wenn rot\_0 größer als red\_1 ist, interpoliert BC4 6 Farbwerte; andernfalls werden nur 4 interpoliert.</span><span class="sxs-lookup"><span data-stu-id="20c61-239">If red\_0 is greater than red\_1, then BC4 interpolates 6 color values; otherwise, it interpolates 4.</span></span> <span data-ttu-id="20c61-240">Wenn BC4 nur 4 Farbwerte interpoliert, werden zwei zusätzliche Farbwerte festgelegt (0,0f ist vollständig transparent und 1,0f ist vollständig undurchsichtig).</span><span class="sxs-lookup"><span data-stu-id="20c61-240">When BC4 interpolates only 4 color values, it sets two additional color values (0.0f for fully transparent and 1.0f for fully opaque).</span></span> <span data-ttu-id="20c61-241">BC4 komprimiert die Alphawerte in 4×4-Texel-Bereiche, indem der Bit-Code gespeichert wird, der dem interpolierten Alpha-Wert entspricht, der mit dem ursprünglichen Alpha-Wert für ein bestimmtes Texel am ehesten übereinstimmt.</span><span class="sxs-lookup"><span data-stu-id="20c61-241">BC4 compresses the alpha values in the 4×4 texel area by storing the bit code corresponding to the interpolated alpha values that most closely matches the original alpha for a given texel.</span></span>
 
--   [<span data-ttu-id="20c61-242">BC4\_UNORM</span><span class="sxs-lookup"><span data-stu-id="20c61-242">BC4\_UNORM</span></span>](#bc4-unorm)
--   [<span data-ttu-id="20c61-243">BC4\_SNORM</span><span class="sxs-lookup"><span data-stu-id="20c61-243">BC4\_SNORM</span></span>](#bc4-snorm)
+- [<span data-ttu-id="20c61-242">BC4\_UNORM</span><span class="sxs-lookup"><span data-stu-id="20c61-242">BC4\_UNORM</span></span>](#bc4-unorm)
+- [<span data-ttu-id="20c61-243">BC4\_SNORM</span><span class="sxs-lookup"><span data-stu-id="20c61-243">BC4\_SNORM</span></span>](#bc4-snorm)
 
 ### <a name="span-idbc4unormspanspan-idbc4unormspanspan-idbc4-unormspanbc4unorm"></a><span data-ttu-id="20c61-244"><span id="BC4_UNORM"></span><span id="bc4_unorm"></span><span id="bc4-unorm"></span>BC4\_UNORM</span><span class="sxs-lookup"><span data-stu-id="20c61-244"><span id="BC4_UNORM"></span><span id="bc4_unorm"></span><span id="bc4-unorm"></span>BC4\_UNORM</span></span>
 
 <span data-ttu-id="20c61-245">Die Interpolation bei Daten mit einer einzelnen Komponente erfolgt wie im folgenden Codebeispiel dargestellt.</span><span class="sxs-lookup"><span data-stu-id="20c61-245">The interpolation of the single-component data is done as in the following code sample.</span></span>
 
-```
+```cpp
 unsigned word red_0, red_1;
 
 if( red_0 > red_1 )
@@ -239,7 +233,7 @@ else
 
 <span data-ttu-id="20c61-248">DXGI\_FORMAT\_BC4\_SNORM ist identisch, mit Ausnahme der Codierung der Daten im Bereich SNORM und wenn 4 Farbwerte interpoliert werden.</span><span class="sxs-lookup"><span data-stu-id="20c61-248">The DXGI\_FORMAT\_BC4\_SNORM is exactly the same, except that the data is encoded in SNORM range and when 4 color values are interpolated.</span></span> <span data-ttu-id="20c61-249">Die Interpolation bei Daten mit einer einzelnen Komponente erfolgt wie im folgenden Codebeispiel dargestellt.</span><span class="sxs-lookup"><span data-stu-id="20c61-249">The interpolation of the single-component data is done as in the following code sample.</span></span>
 
-```
+```cpp
 signed word red_0, red_1;
 
 if( red_0 > red_1 )
@@ -259,8 +253,8 @@ else
   red_3 = (3*red_0 + 2*red_1)/5.0f; // bit code 011
   red_4 = (2*red_0 + 3*red_1)/5.0f; // bit code 100
   red_5 = (1*red_0 + 4*red_1)/5.0f; // bit code 101
-  red_6 = -1.0f;                     // bit code 110
-  red_7 =  1.0f;                     // bit code 111
+  red_6 = -1.0f;                    // bit code 110
+  red_7 =  1.0f;                    // bit code 111
 }
 ```
 
@@ -270,8 +264,8 @@ else
 
 <span data-ttu-id="20c61-252">Verwenden Sie das BC5-Format, um Zweikomponent-Farbdaten mit 8Bit pro Farbe zu speichern.</span><span class="sxs-lookup"><span data-stu-id="20c61-252">Use the BC5 format to store two-component color data using 8 bits for each color.</span></span> <span data-ttu-id="20c61-253">Aufgrund der höheren Genauigkeit (im Vergleich zu [BC1](#bc1)), eignet sich BC5 perfekt zum Speichern von Gleitkommadaten im Bereich von \[0 bis 1\] mithilfe des DXGI\_FORMAT\_BC5\_UNORM-Formats und von \[-1 bis +1\] mithilfe des DXGI\_FORMAT\_BC5\_SNORM-Formats.</span><span class="sxs-lookup"><span data-stu-id="20c61-253">As a result of the increased accuracy (compared to [BC1](#bc1)), BC5 is ideal for storing floating-point data in the range of \[0 to 1\] using the DXGI\_FORMAT\_BC5\_UNORM format and \[-1 to +1\] using the DXGI\_FORMAT\_BC5\_SNORM format.</span></span> <span data-ttu-id="20c61-254">Bei einer 4×4-Textur mit dem größtmöglichen Datenformat reduziert diese Komprimierungstechnik den erforderlichen Speicherplatz von 32Byte (16Farben × 2-Komponenten/Farben × 1Byte/Komponente) auf 16Byte.</span><span class="sxs-lookup"><span data-stu-id="20c61-254">Assuming a 4×4 texture using the largest data format possible, this compression technique reduces the memory required from 32 bytes (16 colors × 2 components/color × 1 byte/component) to 16 bytes.</span></span>
 
--   [<span data-ttu-id="20c61-255">BC5\_UNORM</span><span class="sxs-lookup"><span data-stu-id="20c61-255">BC5\_UNORM</span></span>](#bc5-unorm)
--   [<span data-ttu-id="20c61-256">BC5\_SNORM</span><span class="sxs-lookup"><span data-stu-id="20c61-256">BC5\_SNORM</span></span>](#bc5-snorm)
+- [<span data-ttu-id="20c61-255">BC5\_UNORM</span><span class="sxs-lookup"><span data-stu-id="20c61-255">BC5\_UNORM</span></span>](#bc5-unorm)
+- [<span data-ttu-id="20c61-256">BC5\_SNORM</span><span class="sxs-lookup"><span data-stu-id="20c61-256">BC5\_SNORM</span></span>](#bc5-snorm)
 
 <span data-ttu-id="20c61-257">Der Algorithmus funktioniert auf 4×4-Texelblöcken.</span><span class="sxs-lookup"><span data-stu-id="20c61-257">The algorithm works on 4×4 blocks of texels.</span></span> <span data-ttu-id="20c61-258">Anstatt 16 Farben für die beiden Komponenten zu speichern, speichert der Algorithmus 2 Referenzfarben für jede Komponente (rot\_0, rot\_1, grün\_0 und grün\_1) und 16 3-Bit-Farbindizes für jede Komponente (Rot „a” bis „p” und Grün „a” bis Grün „p”), wie im folgenden Diagramm dargestellt.</span><span class="sxs-lookup"><span data-stu-id="20c61-258">Instead of storing 16 colors for both components, the algorithm stores 2 reference colors for each component (red\_0, red\_1, green\_0, and green\_1) and 16 3-bit color indices for each component (red a through red p and green a through green p), as shown in the following diagram.</span></span>
 
@@ -285,7 +279,7 @@ else
 
 <span data-ttu-id="20c61-267">Die Interpolation bei Daten mit einer einzelnen Komponente erfolgt wie im folgenden Codebeispiel dargestellt.</span><span class="sxs-lookup"><span data-stu-id="20c61-267">The interpolation of the single-component data is done as in the following code sample.</span></span> <span data-ttu-id="20c61-268">Die Berechnungen für die grünen Komponenten sind ähnlich.</span><span class="sxs-lookup"><span data-stu-id="20c61-268">The calculations for the green components are similar.</span></span>
 
-```
+```cpp
 unsigned word red_0, red_1;
 
 if( red_0 > red_1 )
@@ -316,7 +310,7 @@ else
 
 <span data-ttu-id="20c61-271">Das DXGI\_FORMAT\_BC4\_SNORM ist identisch, mit Ausnahme der Codierung der Daten im Bereich SNORM. Wenn 4 Farbwerte interpoliert werden, sind die zwei zusätzlichen Werte -1,0f and 1,0f.</span><span class="sxs-lookup"><span data-stu-id="20c61-271">The DXGI\_FORMAT\_BC5\_SNORM is exactly the same, except that the data is encoded in SNORM range and when 4 data values are interpolated, the two additional values are -1.0f and 1.0f.</span></span> <span data-ttu-id="20c61-272">Die Interpolation bei Daten mit einer einzelnen Komponente erfolgt wie im folgenden Codebeispiel dargestellt.</span><span class="sxs-lookup"><span data-stu-id="20c61-272">The interpolation of the single-component data is done as in the following code sample.</span></span> <span data-ttu-id="20c61-273">Die Berechnungen für die grünen Komponenten sind ähnlich.</span><span class="sxs-lookup"><span data-stu-id="20c61-273">The calculations for the green components are similar.</span></span>
 
-```
+```cpp
 signed word red_0, red_1;
 
 if( red_0 > red_1 )
@@ -345,19 +339,18 @@ else
 
 ## <a name="span-iddifferencesspanspan-iddifferencesspanspan-iddifferencesspanformat-conversion"></a><span data-ttu-id="20c61-275"><span id="Differences"></span><span id="differences"></span><span id="DIFFERENCES"></span>Konvertieren des Formats</span><span class="sxs-lookup"><span data-stu-id="20c61-275"><span id="Differences"></span><span id="differences"></span><span id="DIFFERENCES"></span>Format conversion</span></span>
 
-
 <span data-ttu-id="20c61-276">Direct3D ermöglicht Kopien zwischen vorstrukturierten, typisierten Texturen und blockkomprimierten Texturen für die gleiche Bit-Breite.</span><span class="sxs-lookup"><span data-stu-id="20c61-276">Direct3D enables copies between prestructured-typed textures and block-compressed textures of the same bit widths.</span></span>
 
 <span data-ttu-id="20c61-277">Sie können Ressourcen zwischen verschiedenen Formattypen kopieren.</span><span class="sxs-lookup"><span data-stu-id="20c61-277">You can copy resources between a few format types.</span></span> <span data-ttu-id="20c61-278">Diese Art von Kopiervorgang führt eine Formatkonvertierung durch, die Ressourcendaten als einen neuen Formattyp neu interpretiert.</span><span class="sxs-lookup"><span data-stu-id="20c61-278">This type of copy operation performs a type of format conversion that reinterprets resource data as a different format type.</span></span> <span data-ttu-id="20c61-279">Betrachten Sie in diesem Beispiel den Unterschied zwischen neu interpretierten Daten mit der Funktionsweise einer typischen Art der Konvertierung:</span><span class="sxs-lookup"><span data-stu-id="20c61-279">Consider this example that shows the difference between reinterpreting data with the way a more typical type of conversion behaves:</span></span>
 
-```
+```cpp
 FLOAT32 f = 1.0f;
 UINT32 u;
 ```
 
 <span data-ttu-id="20c61-280">Um „f” als Typ „u” neu zu interpretieren, verwenden Sie [memcpy](http://msdn.microsoft.com/library/dswaw1wk.aspx):</span><span class="sxs-lookup"><span data-stu-id="20c61-280">To reinterpret 'f' as the type of 'u', use [memcpy](http://msdn.microsoft.com/library/dswaw1wk.aspx):</span></span>
 
-```
+```cpp
 memcpy( &u, &f, sizeof( f ) ); // 'u' becomes equal to 0x3F800000.
 ```
 
@@ -365,7 +358,7 @@ memcpy( &u, &f, sizeof( f ) ); // 'u' becomes equal to 0x3F800000.
 
 <span data-ttu-id="20c61-282">Verwenden Sie zum Ausführen der typischen Art der Konvertierung foglende Zuweisung:</span><span class="sxs-lookup"><span data-stu-id="20c61-282">To perform the more typical type of conversion, use assignment:</span></span>
 
-```
+```cpp
 u = f; // 'u' becomes 1.
 ```
 
@@ -415,9 +408,6 @@ u = f; // 'u' becomes 1.
 </tbody>
 </table>
 
- 
-
 ## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="20c61-308"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="20c61-308"><span id="related-topics"></span>Related topics</span></span>
-
 
 [<span data-ttu-id="20c61-309">Komprimierte Texturressourcen</span><span class="sxs-lookup"><span data-stu-id="20c61-309">Compressed texture resources</span></span>](compressed-texture-resources.md)

@@ -12,11 +12,11 @@ f1_keywords:
 - vs.storeassociationwizard
 ms.localizationpriority: medium
 ms.openlocfilehash: ba0ed6cb2fe2b932dcb3011ff7cf9cf7ce197182
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6157586"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6197065"
 ---
 # <a name="package-a-uwp-app-with-visual-studio"></a><span data-ttu-id="6423a-104">Verpacken einer UWP-App mit Visual Studio</span><span class="sxs-lookup"><span data-stu-id="6423a-104">Package a UWP app with Visual Studio</span></span>
 
