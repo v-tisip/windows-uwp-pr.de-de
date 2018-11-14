@@ -8,11 +8,11 @@ ms.date: 10/05/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c4c326dbafa719273c4535a42d58184c7ce360fe
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6146751"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6209891"
 ---
 # <a name="create-and-host-an-app-extension"></a><span data-ttu-id="4a79b-104">Erstellen und Hosten einer App-Erweiterung</span><span class="sxs-lookup"><span data-stu-id="4a79b-104">Create and host an app extension</span></span>
 
