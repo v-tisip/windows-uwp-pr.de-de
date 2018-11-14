@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 7475910adffd24e4484b539f65633dfb8fc054a8
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6199501"
+ms.locfileid: "6251013"
 ---
 # <a name="manual-camera-controls-for-photo-and-video-capture"></a><span data-ttu-id="b497c-104">Manuelle Kamerasteuerelemente für Foto- und Videoaufnahmen</span><span class="sxs-lookup"><span data-stu-id="b497c-104">Manual camera controls for photo and video capture</span></span>
 

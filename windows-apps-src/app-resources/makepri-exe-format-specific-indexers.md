@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: 439a69da400caaa9ae509a121f2aa7336853d2ca
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6160901"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6190490"
 ---
 # <a name="makepriexe-format-specific-indexers"></a><span data-ttu-id="f0485-103">Formatspezifische Indexer für MakePri.exe</span><span class="sxs-lookup"><span data-stu-id="f0485-103">MakePri.exe format-specific indexers</span></span>
 

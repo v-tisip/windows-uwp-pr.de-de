@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, OpenGL, Direct3D 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 14259fb6949eaa100d51fbdbda6f96bd07a4fa80
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6042438"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6202910"
 ---
 # <a name="opengl-es-20-to-direct3d-11-reference"></a><span data-ttu-id="30451-104">OpenGLES2.0 zu Direct3D11 – Referenz</span><span class="sxs-lookup"><span data-stu-id="30451-104">OpenGL ES 2.0 to Direct3D 11 reference</span></span>
 
