@@ -8,12 +8,12 @@ ms.date: 09/30/2018
 ms.topic: article
 keywords: Windows 10, Uwp, optionale Pakete, zusammengehörig, Paket-Erweiterung, visual studio
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a782ba90fbf350d9a18098d342c05c75dca6ceb
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.openlocfilehash: c21b84467151493836186d1d55ab5e4e542899ec
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6192201"
+ms.locfileid: "6259122"
 ---
 # <a name="optional-packages-and-related-set-authoring"></a>Optionale Pakete und die Erstellung zugehöriger Sets
 Optionale Pakete enthalten Inhalte, die in ein Hauptpaket integriert werden können. Diese sind nützlich für herunterladbare Inhalte (DLC), da große Apps so im Hinblick auf größenbeschränkungen, oder auch zusätzliche Inhalte getrennt von der ursprünglichen app.
@@ -29,7 +29,7 @@ Verwandte Gruppen sind eine Erweiterung der optionalen Pakete – sie können st
 Alle von der aktuellen Entwicklungstools finden Sie [Downloads und Tools für Windows 10](https://developer.microsoft.com/windows/downloads).
 
 > [!NOTE]
-> Um eine app übermitteln, die an den Microsoft Store optionale Pakete und/oder zugehörige Gruppen verwendet, benötigen Sie eine Berechtigung. Optionale Pakete und zugehörige Gruppen können ohne Dev Center-Berechtigung für branchenspezifische oder Unternehmens-Apps verwendet werden, wenn sie nicht an den Store übermittelt werden. Informationen zum Erhalt einer Berechtigung, eine App zu übermitteln, die optionale Pakete und zugehörige Gruppen verwendet, finden Sie unter [Windows-Support für Entwickler](https://developer.microsoft.com/windows/support).
+> Um eine app übermitteln, die an den Microsoft Store optionale Pakete und/oder zugehörige Gruppen verwendet, benötigen Sie eine Berechtigung. Optionale Pakete und zugehörige Gruppen können für Zeile des Business (LOB) oder Unternehmens-apps ohne Partner Center-Berechtigung verwendet werden, wenn sie nicht an den Store übermittelt werden. Informationen zum Erhalt einer Berechtigung, eine App zu übermitteln, die optionale Pakete und zugehörige Gruppen verwendet, finden Sie unter [Windows-Support für Entwickler](https://developer.microsoft.com/windows/support).
 
 ### <a name="code-sample"></a>Codebeispiel
 Während Sie in diesem Artikel lesen, empfiehlt es sich, dass Sie folgen Sie das [optionale Paket-Codebeispiel](https://github.com/AppInstaller/OptionalPackageSample) auf GitHub eine praktische zu verstehen und wie optionalen Paketen und Gruppen Arbeit in Visual Studio verwandten.
