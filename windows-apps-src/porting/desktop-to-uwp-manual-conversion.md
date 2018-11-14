@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows10, UWP
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b063bf5997bbb1fc082c8d9fefcf0f435262bf1
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: b309064c0110084d5445e8680d65f9935a3f69fe
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6445179"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6654404"
 ---
 # <a name="package-a-desktop-application-manually"></a>Manuelles Verpacken einer desktop-Anwendungs
 
@@ -85,7 +85,7 @@ Hier ist ein Beispiel für ein **Identitäts**-Element mit Platzhaltertext für 
                 ProcessorArchitecture="x64">
 ```
 > [!NOTE]
-> Wenn Sie den Anwendungsnamen Ihrer im Windows Store reserviert haben, können Sie den Namen und Herausgeber abrufen, mit dem Windows Dev Center-Dashboard. Wenn Sie Ihre Anwendung auf andere Systeme querladen möchten, können Sie für diese Ihre eigenen Namen bereitstellen, solange der Name des Herausgebers, die Sie auswählen, mit dem Namen des Zertifikats übereinstimmt, die Sie zum Signieren Ihrer app verwenden.
+> Wenn Sie den Anwendungsnamen Ihrer im Microsoft Store reserviert haben, können Sie mithilfe von [Partner Center](https://partner.microsoft.com/dashboard)den Namen und Herausgeber abrufen. Wenn Sie Ihre Anwendung auf andere Systeme querladen möchten, können Sie für diese Ihre eigenen Namen bereitstellen, solange der Name des Herausgebers, die Sie auswählen, mit dem Namen des Zertifikats übereinstimmt, die Sie zum Signieren Ihrer app verwenden.
 
 ### <a name="properties"></a>Eigenschaften
 

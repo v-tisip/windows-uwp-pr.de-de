@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiel, DirectX, XAML, automatische Ausrichtung, Eingabe
 ms.localizationpriority: medium
 ms.openlocfilehash: be3f8e57a592512335a826c142876d1ff3c53e5b
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6192141"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6453706"
 ---
 # <a name="add-features-to-directx-games"></a>Hinzufügen von Features zu DirectX-Spielen
 

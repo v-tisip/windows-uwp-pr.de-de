@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 1367c880bd6dde573ab4fc30733ed9d1fefa6b0b
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6454165"
+ms.locfileid: "6660938"
 ---
 # <a name="handle-device-orientation-with-mediacapture"></a>Handhaben der Geräte- und Bildschirmausrichtung mit „MediaCapture“
 Wenn Ihre App ein Foto oder Video aufnimmt, das außerhalb der App angezeigt werden soll, z.B. in eine Datei auf dem Gerät des Benutzers gespeichert oder online freigegeben werden soll, ist es wichtig, dass das Bild mit den richtigen Ausrichtungsmetadaten codiert wird. Dadurch wird bei der Anzeige durch eine andere App oder ein anderes Gerät das Bild korrekt ausgerichtet. Die Bestimmung der korrekten Ausrichtungsdaten für eine Mediendatei kann eine komplexe Aufgabe sein, da verschiedene Variablen berücksichtigt werden müssen. Dazu zählen die Ausrichtung des Geräte-Chassis, die Ausrichtung der Anzeige und die Platzierung der Kamera (nach vorne oder nach hinten gerichtete Kamera). 

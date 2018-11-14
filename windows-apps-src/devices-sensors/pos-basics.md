@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 46dd1f615e42f6e89ee9a92cb980299e9a0e5205
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6040208"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6275743"
 ---
 # <a name="getting-started-with-point-of-service"></a>Erste Schritte mit Point Of Service-Geräten
 
@@ -25,9 +25,9 @@ Dieser Abschnitt enthält Themen, die für alle Point of Service-Gerätekategori
 | [Funktionsdeklaration](pos-basics-capability.md)      | Erfahren Sie, wie Sie die Funktion **pointOfService** zu Ihrem Anwendungsmanifest hinzufügen.  Diese Funktion wird für die Verwendung des Windows.Devices.PointOfService-Namespace benötigt.  |
 | [Enumerieren von Geräten](pos-basics-enumerating.md)        | Erfahren Sie, wie Sie eine Geräteauswahl definieren, die verwendet wird, um die im System verfügbaren Geräte abzufragen, und verwenden diese Auswahl, um Point of Service-Geräte aufzulisten.  |
 | [Erstellen eines Geräteobjekts](pos-basics-deviceobject.md)  | Erfahren Sie, wie Sie ein PointOfService-Geräteobjekt erstellen, das Ihnen den Zugriff auf schreibgeschützte Eigenschaften des Peripheriegeräts und die Beanspruchung der exklusiven Nutzung des Peripheriegeräts ermöglicht. |
-| [Anspruch und aktivieren ](pos-basics-claim.md)  | Weitere Informationen zum Reservieren eines PointOfService-Peripheriegeräts für die exklusive Nutzung und für e/a-Vorgänge zu aktivieren.  |
-| [Freigeben von Peripheriegeräten für andere Personen](pos-basics-sharing.md) | Erfahren Sie mehr über das Netzwerk oder verbundenen Bluetooth-Peripheriegeräte mit anderen Computern in einer Umgebung freigeben, in denen mehrere PCs auf Peripheriegeräte anstatt dedizierten auf jeden Computer angeschlossenen Peripheriegeräte angewiesen sind.
-| [PointOfService-End-to-end](pos-get-started.md)  | Dies ist ein End-to-End-Beispiel zum PointOfService-Peripheriegeräte mit den obigen Beispielen interagieren. |
+| [Anspruch und aktivieren ](pos-basics-claim.md)  | Informationen Sie zum Reservieren eines PointOfService-Peripheriegeräts für die exklusive Nutzung und für e/a-Vorgänge zu aktivieren.  |
+| [Freigeben von Peripheriegeräten für andere Personen](pos-basics-sharing.md) | Erfahren Sie mehr über das Netzwerk oder verbundenen Bluetooth-Peripheriegeräte mit anderen Computern in einer Umgebung Teilen, in denen mehrere PCs auf Peripheriegeräte anstatt dedizierten auf jeden Computer angeschlossenen Peripheriegeräte angewiesen sind.
+| [PointOfService-End-to-end](pos-get-started.md)  | Dies ist ein End-to-End-Beispiel zum PointOfService-Peripheriegeräte unter Verwendung der obigen Beispielen interagieren. |
 |
 
 ## <a name="see-also"></a>Weitere Informationen:
@@ -35,10 +35,10 @@ Dieser Abschnitt enthält Themen, die für alle Point of Service-Gerätekategori
 | Thema   | Beschreibung |
 |:--------|:------------|
 | [Anwendung Verteilung](../publish/distribute-lob-apps-to-enterprises.md) | Informationen Sie zu den Optionen für Ihre app an Unternehmenskunden verteilen. |
-| [App-Lebenszyklus](../launch-resume/app-lifecycle.md) | Erfahren Sie mehr über den Lebenszyklus einer UWP-Anwendung und was passiert, wenn Windows gestartet wird, hält und Ihrer app fortgesetzt. |
-| [Anwendungsressourcen](../app-resources/index.md) | Enthält Informationen zum Erstellen, Paket, und nutzen Ihre app Zeichenfolge, Bild- und Dateiressourcen. |
-| [Datenbindung](../data-binding/index.md) | Erfahren Sie, wie Sie die Datenbindung zum Anzeigen von Daten in der Benutzeroberfläche Ihrer app verwenden. |
-| [Geräteenumeration](enumerate-devices.md) | Hier erfahren Sie erweiterte Enumeration Techniken eingesetzt, um Ihre Peripheriegeräte suchen.|
+| [App-Lebenszyklus](../launch-resume/app-lifecycle.md) | Erfahren Sie mehr über den Lebenszyklus einer UWP-Anwendung und was geschieht, wenn Windows startet, anhält und Ihrer app fortgesetzt. |
+| [Anwendungsressourcen](../app-resources/index.md) | Enthält Informationen zum Erstellen, Paket, und nutzen, String, Bild- und Dateiressourcen Ihrer app. |
+| [Datenbindung](../data-binding/index.md) | Erfahren Sie, wie Sie die Datenbindung verwenden, um Daten in der Benutzeroberfläche Ihrer app anzeigen. |
+| [Geräteenumeration](enumerate-devices.md) | Hier erfahren Sie verwenden erweiterter Enumeration Techniken, um Peripheriegeräte zu suchen.|
 | [Adaptive Applications Version](../debug-test-perf/version-adaptive-apps.md) | Erläutert, wie Ihre app so entwerfen, dass sie auf mehrere Versionen von Windows 10 ausgeführt wird.|
 |
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, Uwp, Datei, Eigenschaften
 ms.localizationpriority: medium
 ms.openlocfilehash: e2f63e848820361a64a2a96348a8e1cc2419f233
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6264540"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6664566"
 ---
 # <a name="fast-access-to-file-properties-in-uwp"></a>Schneller Zugriff auf Dateieigenschaften in UWP 
 

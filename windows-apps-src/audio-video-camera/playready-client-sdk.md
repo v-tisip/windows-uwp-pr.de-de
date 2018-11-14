@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 773216dc392f7bb234e232f3dd3e7c2190a22de1
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.openlocfilehash: 79c1cd5b83c013bdf601022aa7fec9e661b80857
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6190752"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6660477"
 ---
 # <a name="playready-drm"></a>PlayReady DRM
 
@@ -520,10 +520,10 @@ Eine Beispielimplementierung für das sichere Beenden finden Sie in der Datei �
 
 ## <a name="use-playready-drm-on-xbox-one"></a>Verwenden von PlayReady DRM auf Xbox One
 
-Um PlayReady-DRM in einer UWP-App auf Xbox One zu verwenden, müssen Sie zunächst das Dev Center-Konto, das Sie zum Veröffentlichen der App verwenden, für die Autorisierung zur PlayReady-Verwendung registrieren. Hierzu stehen Ihnen zwei Möglichkeiten zur Verfügung.
+Um PlayReady-DRM in einer UWP-app auf Xbox One zu verwenden, müssen Sie zunächst Ihr [Partner Center](https://partner.microsoft.com/dashboard) -Konto, das Sie zum Veröffentlichen der app für die Autorisierung zur PlayReady-Verwendung registrieren. Hierzu stehen Ihnen zwei Möglichkeiten zur Verfügung.
 
 * Ihr Microsoft-Kontakt kann die Berechtigung anfordern.
-* Fordern Sie die Autorisierung an, indem Sie Ihr Dev Center-Konto und den Unternehmensnamen an [pronxbox@microsoft.com](mailto:pronxbox@microsoft.com) senden.
+* Wenden Sie durch das Senden von Ihr Partner Center-Konto und den Unternehmensnamen Name für die Autorisierung [pronxbox@microsoft.com](mailto:pronxbox@microsoft.com).
 
 Wenn Sie die Autorisierung erhalten haben, müssen Sie dem App-Manifest eine zusätzliche `<DeviceCapability>` hinzufügen. Sie müssen diese manuell hinzufügen, da derzeit im App Manifest Designer keine Einstellung verfügbar ist. Führen Sie folgende Schritte durch, um dies zu konfigurieren:
 
