@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 38f9d0daf230007d1d32a7d2187d54baa90986e5
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6188257"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6271236"
 ---
 # <a name="composition-animations"></a><span data-ttu-id="df72b-104">Kompositionsanimationen</span><span class="sxs-lookup"><span data-stu-id="df72b-104">Composition animations</span></span>
 

@@ -9,11 +9,11 @@ keywords: Windows 10, UWP
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
 ms.localizationpriority: medium
 ms.openlocfilehash: 0a62d08d540479daf77d532afa1b97ae128d2c1f
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6272535"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6464932"
 ---
 # <a name="payment-thresholds-methods-and-timeframes"></a><span data-ttu-id="5092c-103">Zahlungsschwellenwerte, Methoden und Zeiträume</span><span class="sxs-lookup"><span data-stu-id="5092c-103">Payment thresholds, methods, and timeframes</span></span>
 

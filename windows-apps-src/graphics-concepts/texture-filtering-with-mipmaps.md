@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d32d5a77fe9bc840ea676c7156c1b59e498d07e1
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6200799"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6670832"
 ---
 # <a name="texture-filtering-with-mipmaps"></a><span data-ttu-id="bc455-105">Texturfilterung mit Mipmaps</span><span class="sxs-lookup"><span data-stu-id="bc455-105">Texture filtering with mipmaps</span></span>
 

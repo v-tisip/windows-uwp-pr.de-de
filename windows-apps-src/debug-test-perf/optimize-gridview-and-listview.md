@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 25eeea58e1e03eedfca3aaafda1cee13cac1f3c4
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6257892"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6667535"
 ---
 # <a name="listview-and-gridview-ui-optimization"></a><span data-ttu-id="e36b1-104">Optimieren der ListView- und GridView-Benutzeroberfläche</span><span class="sxs-lookup"><span data-stu-id="e36b1-104">ListView and GridView UI optimization</span></span>
 
