@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 5bb9d241569afdbbc9df95fa11cd2261e78c077a
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023528"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6183214"
 ---
 # <a name="relativesource-markup-extension"></a>{RelativeSource}-Markuperweiterung
 
@@ -62,7 +62,7 @@ Im Folgenden finden Sie ein Beispiel hierfür. Dieses [**Rechteck**](/uwp/api/Wi
 
 Darüber hinaus kann `RelativeSource={RelativeSource Self}` auch verwendet werden, um den [**DataContext**](https://msdn.microsoft.com/library/windows/apps/br208713) eines Objekts auf sich selbst festzulegen.  Dieses Verfahren kommt etwa in einigen der SDK-Beispiele zum Einsatz, bei denen die [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503)-Klasse mit einer benutzerdefinierten Eigenschaft erweitert wurde, die bereits ein verwendungsbereites Modell für die eigene Datenbindung bereitstellt. Beispiel: `<common:LayoutAwarePage ... DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}">`
 
-**Hinweis:** die Verwendung von **RelativeSource** zeigt nur die Verwendung, für die es bestimmt ist: Festlegen eines Werts für [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) in XAML als Teil eines Bindungsausdrucks. Theoretisch sind andere Verwendungen möglich, wenn Sie eine Eigenschaft mit einem [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913)-Wert festlegen.
+**Hinweis:** die Verwendung von **RelativeSource** zeigt nur die Verwendung, die für die es bestimmt ist: Festlegen eines Werts für [**Binding.RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) in XAML als Teil eines Bindungsausdrucks. Theoretisch sind andere Verwendungen möglich, wenn Sie eine Eigenschaft mit einem [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209913)-Wert festlegen.
 
 ## <a name="related-topics"></a>Verwandte Themen
 

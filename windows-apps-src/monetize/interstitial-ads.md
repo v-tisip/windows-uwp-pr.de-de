@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, Anzeigensteuerelement, Interstitial
 ms.localizationpriority: medium
 ms.openlocfilehash: 27ef8173db2976d58f9ccd0422a1217e2bd91d13
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6050842"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6451767"
 ---
 # <a name="interstitial-ads"></a>Interstitialwerbung
 
@@ -73,7 +73,7 @@ Dieser Abschnitt enthält Beispiele für C#. Visual Basic und C++ werden jedoch 
 4.  Deklarieren Sie an einer geeigneten Stelle in Ihrer App (z.B. in ```MainPage``` oder einer anderen Seite) ein [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad)-Objekt und mehrere Zeichenfolgenfelder, die die Anwendungs-ID und Anzeigeneinheits-ID für die Interstitialwerbung darstellen. Im folgenden Codebeispiel werden die Felder `myAppId` und `myAdUnitId` den [Testwerten](set-up-ad-units-in-your-app.md#test-ad-units) für Interstitialwerbung zugewiesen.
 
     > [!NOTE]
-    > Jedes **InterstitialAd** verfügt über ein entsprechendes *Anzeigeneinheit*, die von unseren Diensten verwendet wird, um Werbung auf das Steuerelement zu übertragen, und jede Anzeigeneinheit besteht aus einer *Anzeigeneinheits-ID* und *Anwendungs-ID*. In den folgenden Schrittenweisen Sie eine Test Anzeigeneinheits-ID und Anwendungs-ID für Ihr Steuerelement zu. Dieser Test Werte können nur in einer Testversion Ihrer App verwendet werden. Bevor Sie Ihre app im Store veröffentlichen, müssen Sie [Ersetzen Sie diese durch livewerte testen](#release) aus dem Partner Center.
+    > Jedes **InterstitialAd** verfügt über ein entsprechendes *Anzeigeneinheit*, die von unseren Diensten verwendet wird, um Werbung auf das Steuerelement zu übertragen, und jede Anzeigeneinheit besteht aus einer *Anzeigeneinheits-ID* und *Anwendungs-ID*. In den folgenden Schrittenweisen Sie eine Test Anzeigeneinheits-ID und Anwendungs-ID für Ihr Steuerelement zu. Dieser Test Werte können nur in einer Testversion Ihrer App verwendet werden. Bevor Sie Ihre app im Store veröffentlichen, müssen Sie [Ersetzen Testwerte mit den live-Werten](#release) aus dem Partner Center.
 
     [!code-cs[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet2)]
 
@@ -126,7 +126,7 @@ Bei den folgenden Anweisungen wird davon ausgegangen, dass Sie ein universelles 
 4.  Deklarieren Sie in einer JS-Datei in Ihrem Projekt ein [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad)-Objekt und mehrere Felder, die die Anwendungs-ID und Anzeigeneinheits-ID für die Interstitialwerbung enthalten. Im folgenden Codebeispiel werden die Felder `applicationId` und `adUnitId` den [Testwerten](set-up-ad-units-in-your-app.md#test-ad-units) für Interstitialwerbung zugewiesen.
 
     > [!NOTE]
-    > Jedes **InterstitialAd** verfügt über ein entsprechendes *Anzeigeneinheit*, die von unseren Diensten verwendet wird, um Werbung auf das Steuerelement zu übertragen, und jede Anzeigeneinheit besteht aus einer *Anzeigeneinheits-ID* und *Anwendungs-ID*. In den folgenden Schrittenweisen Sie eine Test Anzeigeneinheits-ID und Anwendungs-ID für Ihr Steuerelement zu. Dieser Test Werte können nur in einer Testversion Ihrer App verwendet werden. Bevor Sie Ihre app im Store veröffentlichen, müssen Sie [Ersetzen Sie diese durch livewerte testen](#release) aus dem Partner Center.
+    > Jedes **InterstitialAd** verfügt über ein entsprechendes *Anzeigeneinheit*, die von unseren Diensten verwendet wird, um Werbung auf das Steuerelement zu übertragen, und jede Anzeigeneinheit besteht aus einer *Anzeigeneinheits-ID* und *Anwendungs-ID*. In den folgenden Schrittenweisen Sie eine Test Anzeigeneinheits-ID und Anwendungs-ID für Ihr Steuerelement zu. Dieser Test Werte können nur in einer Testversion Ihrer App verwendet werden. Bevor Sie Ihre app im Store veröffentlichen, müssen Sie [Ersetzen Testwerte mit den live-Werten](#release) aus dem Partner Center.
 
     [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/script.js#Snippet1)]
 
@@ -177,7 +177,7 @@ In diesem Beispiel wird angenommen, dass Sie ein C++-Projekt **DirectX- und XAML
 3.  Deklarieren Sie in derselben Headerdatei mehrere Zeichenfolgenfelder, die die Anwendungs-ID und Anzeigeneinheits-ID für die Interstitialwerbung darstellen. Im folgenden Codebeispiel werden die Felder `myAppId` und `myAdUnitId` den [Testwerten](set-up-ad-units-in-your-app.md#test-ad-units) für Interstitialwerbung zugewiesen.
 
     > [!NOTE]
-    > Jedes **InterstitialAd** verfügt über ein entsprechendes *Anzeigeneinheit*, die von unseren Diensten verwendet wird, um Werbung auf das Steuerelement zu übertragen, und jede Anzeigeneinheit besteht aus einer *Anzeigeneinheits-ID* und *Anwendungs-ID*. In den folgenden Schrittenweisen Sie eine Test Anzeigeneinheits-ID und Anwendungs-ID für Ihr Steuerelement zu. Dieser Test Werte können nur in einer Testversion Ihrer App verwendet werden. Bevor Sie Ihre app im Store veröffentlichen, müssen Sie [Ersetzen Sie diese durch livewerte testen](#release) aus dem Partner Center.
+    > Jedes **InterstitialAd** verfügt über ein entsprechendes *Anzeigeneinheit*, die von unseren Diensten verwendet wird, um Werbung auf das Steuerelement zu übertragen, und jede Anzeigeneinheit besteht aus einer *Anzeigeneinheits-ID* und *Anwendungs-ID*. In den folgenden Schrittenweisen Sie eine Test Anzeigeneinheits-ID und Anwendungs-ID für Ihr Steuerelement zu. Dieser Test Werte können nur in einer Testversion Ihrer App verwendet werden. Bevor Sie Ihre app im Store veröffentlichen, müssen Sie [Ersetzen Testwerte mit den live-Werten](#release) aus dem Partner Center.
 
     [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.h#Snippet2)]
 
@@ -217,7 +217,7 @@ In diesem Beispiel wird angenommen, dass Sie ein C++-Projekt **DirectX- und XAML
 
 2.  Im Partner Center wechseln Sie zu der Seite [In-app-anzeigen](../publish/in-app-ads.md) und [eine anzeigeneinheit erstellen](set-up-ad-units-in-your-app.md#live-ad-units). Wählen Sie für den Anzeigeneinheitstyp **Video-Interstitialwerbung** oder **Banner-Interstitialwerbung** aus, je nachdem, welche Art von Interstitialwerbung Sie anzeigen. Notieren Sie die Anzeigeneinheits-ID und die Anwendungs-ID.
     > [!NOTE]
-    > Die Anwendungs-IDs für Test-Anzeigeneinheiten und Live-UWP-Anzeigeneinheiten besitzen unterschiedliche Formate. Testanwendungs-ID sind GUIDs. Wenn Sie eine live-UWP-anzeigeneinheit in Partner Center erstellen, entspricht der Anwendung-ID-Wert für die anzeigeneinheit immer die Store-ID für Ihre app (der ein Beispiel für Store-ID-Wert ist 9nblggh4r315).).
+    > Die Anwendungs-IDs für Test-Anzeigeneinheiten und Live-UWP-Anzeigeneinheiten besitzen unterschiedliche Formate. Testanwendungs-ID sind GUIDs. Wenn Sie eine live-UWP-anzeigeneinheit im Partner Center erstellen, entspricht die Anwendungs-ID-Wert für die anzeigeneinheit immer der Store-ID für Ihre app (der ein Beispiel für Store-ID-Wert ist 9nblggh4r315).).
 
 3. Sie können optional die Anzeigenvermittlung für die **Interstitialwerbung** durch das Konfigurieren der Einstellungen in der [Vermittlungsverwaltung](../publish/in-app-ads.md#mediation) auf der Seite [in-app ads](../publish/in-app-ads.md) aktivieren. Mit der Anzeigenvermittlung können Sie Ihre Anzeigenumsätze maximieren und Werbefunktionen optimal nutzen, indem Sie Anzeigen aus mehreren Anzeigennetzwerken anzeigen, einschließlich Anzeigen aus anderen kostenpflichtigen Anzeigennetzwerken wie Taboola und Smaato sowie Anzeigen zu Werbekampagnen für Microsoft-Apps.
 

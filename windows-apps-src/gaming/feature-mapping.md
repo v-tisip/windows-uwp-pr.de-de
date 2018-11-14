@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, DirectX 9, DirectX 11, Portierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 8dcf1749f1e7db4d514466d6a753d6f8cace5713
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6048101"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6453192"
 ---
 # <a name="map-directx-9-features-to-directx-11-apis"></a>Zuordnung von DirectX9-Funktionen zu DirectX11-APIs
 
@@ -428,7 +428,7 @@ Ziehen Sie beim Konvertieren von Direct3D9-Formaten in DXGI-Formate die folgende
 <td align="left"><p>D3DFMT_DXT2</p></td>
 <td align="left"><p>DXGI_FORMAT_BC1_UNORM & DXGI_FORMAT_BC1_UNORM_SRGB</p>
 <div class="alert">
-<strong>Hinweis:</strong>  DXT1 und DXT2 sind identisch aus Sicht der API-Hardware. Der einzige Unterschied besteht darin, ob prämultipliziertes Alpha verwendet wird, was von einer App nachverfolgt werden kann und kein separates Format erfordert.
+<strong>Hinweis:</strong>  DXT1 und DXT2 sind gleich aus Sicht der API-Hardware. Der einzige Unterschied besteht darin, ob prämultipliziertes Alpha verwendet wird, was von einer App nachverfolgt werden kann und kein separates Format erfordert.
 </div>
 <div>
  
@@ -442,7 +442,7 @@ Ziehen Sie beim Konvertieren von Direct3D9-Formaten in DXGI-Formate die folgende
 <td align="left"><p>D3DFMT_DXT4</p></td>
 <td align="left"><p>DXGI_FORMAT_BC2_UNORM & DXGI_FORMAT_BC2_UNORM_SRGB</p>
 <div class="alert">
-<strong>Hinweis:</strong>  DXT3 und DXT4 sind identisch aus Sicht der API-Hardware. Der einzige Unterschied besteht darin, ob prämultipliziertes Alpha verwendet wird, was von einer App nachverfolgt werden kann und kein separates Format erfordert.
+<strong>Hinweis:</strong>  DXT3 und DXT4 sind gleich aus Sicht der API-Hardware. Der einzige Unterschied besteht darin, ob prämultipliziertes Alpha verwendet wird, was von einer App nachverfolgt werden kann und kein separates Format erfordert.
 </div>
 <div>
  
@@ -508,7 +508,7 @@ Ziehen Sie beim Konvertieren von Direct3D9-Formaten in DXGI-Formate die folgende
 <td align="left"><p>D3DFMT_L16</p></td>
 <td align="left"><p>DXGI_FORMAT_R16_UNORM</p>
 <div class="alert">
-<strong>Hinweis:</strong>  verwenden .r Swizzle im Shader, um Rot für andere Komponenten zu D3D9-Verhaltens den swizzle duplizieren.
+<strong>Hinweis:</strong>  verwenden .r Swizzle im Shader, um Rot für andere Komponenten zu D3D9-Verhaltens duplizieren.
 </div>
 <div>
  

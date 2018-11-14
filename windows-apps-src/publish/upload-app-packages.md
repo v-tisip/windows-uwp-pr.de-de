@@ -6,35 +6,35 @@ ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
 ms.author: wdg-dev-content
 ms.date: 10/02/2018
 ms.topic: article
-keywords: Windows 10, Uwp, Pakete, hochladen, Paket upload
+keywords: Windows 10, Uwp, Pakete, hochladen, Paket-upload
 ms.localizationpriority: medium
 ms.openlocfilehash: f02ca7c43443289ef9d2d0562be25f277068685b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6031052"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6274255"
 ---
 # <a name="upload-app-packages"></a>Hochladen von App-Paketen
 
-Die Seite " **Pakete** " werden alle Paketdateien (.msix, .msixupload, .msixbundle, AppX, appxupload und/oder appxbundle) für die app hochgeladen, die Sie übermitteln. Sie können alle Ihre Pakete für dieselbe app auf dieser Seite hochladen und wenn ein Kunde Ihre app herunterlädt, bieten im Store automatisch jeder Kunde mit dem Paket, das für ihr Gerät am besten geeignet ist. Nachdem Sie Ihre Pakete hochgeladen haben, sehen Sie eine Tabelle, in der angegeben wird, [welche Pakete für bestimmte Windows10-Gerätefamilien angeboten werden](#device-family-availability) (und ggf. für frühere Betriebssystemversionen).
+Die Seite " **Pakete** " werden alle Paketdateien (.msix, .msixupload, .msixbundle, AppX, appxupload und/oder appxbundle) für die app hochgeladen, die Sie übermitteln. Sie können alle Ihre Pakete für dieselbe app auf dieser Seite hochladen und wenn ein Kunde Ihre app herunterlädt, bieten im Store automatisch jeder Kunde mit dem Paket, das für ihr Gerät am besten geeignet. Nachdem Sie Ihre Pakete hochgeladen haben, sehen Sie eine Tabelle, in der angegeben wird, [welche Pakete für bestimmte Windows10-Gerätefamilien angeboten werden](#device-family-availability) (und ggf. für frühere Betriebssystemversionen).
 
 > [!IMPORTANT]
-> Ab dem 31. Oktober 2018 darf keine Produkte neu erstellten Pakete für Windows 8.x/Windows enthalten Phone 8.x oder früher. Weitere Informationen finden Sie in diesem [Blogbeitrag](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
+> Ab dem 31. Oktober 2018 darf keine Produkte neu erstellten Pakete für Windows-8.x/Windows enthalten Phone 8.x oder früher. Weitere Informationen finden Sie in diesem [Blogbeitrag](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
 
-Ausführliche Informationen zu Inhalt und Struktur der Pakete finden Sie unter [App-Paketanforderungen](app-package-requirements.md). Sie sollten außerdem erfahren Sie, [wie Versionsnummern Auswirkungen auf, welche Pakete bestimmten Kunden bereitgestellt werden](package-version-numbering.md) und [wie Sie Pakete für verschiedene Szenarien verwalten](guidance-for-app-package-management.md).
+Ausführliche Informationen zu Inhalt und Struktur der Pakete finden Sie unter [App-Paketanforderungen](app-package-requirements.md). Sie sollten außerdem erfahren Sie, [wie Versionsnummern Auswirkungen auf, welche Pakete bestimmten Kunden bereitgestellt werden](package-version-numbering.md) und [wie Sie Pakete für verschiedene Szenarien zu verwalten](guidance-for-app-package-management.md).
 
 
 ## <a name="uploading-packages-to-your-submission"></a>Hochladen von Paketen für Ihre Übermittlung
 
-Um Pakete hochzuladen, ziehen Sie sie in das Uploadfeld oder klicken Sie, um Ihre Dateien zu durchsuchen. Die Seite " **Pakete** " informiert Sie .msix, .msixupload, .msixbundle, AppX, appxupload und/oder appxbundle-Dateien hochladen.
+Um Pakete hochzuladen, ziehen Sie sie in das Uploadfeld oder klicken Sie, um Ihre Dateien zu durchsuchen. Die Seite " **Pakete** " können Sie die .msix, .msixupload, .msixbundle, AppX, appxupload und/oder appxbundle-Dateien hochladen.
 
 > [!IMPORTANT]
-> Es wird empfohlen, für Windows 10 die hier .msixupload oder appxupload-Datei anstatt .msix, AppX, .msixbundle oder .appxbundle hochzuladen.  Weitere Informationen zum Verpacken von UWP-Apps für den Store finden Sie untere [Verpacken von UWP-App mit Visual Studio](../packaging/packaging-uwp-apps.md).
+> Es wird empfohlen, für Windows 10 die .msixupload oder appxupload-Datei anstatt .msix, AppX, .msixbundle oder .appxbundle hochzuladen.  Weitere Informationen zum Verpacken von UWP-Apps für den Store finden Sie untere [Verpacken von UWP-App mit Visual Studio](../packaging/packaging-uwp-apps.md).
 
 Falls Sie [Flight-Pakete](package-flights.md) für Ihre App erstellt haben, wird eine Dropdownliste mit der Option zum Kopieren von Paketen aus einem Ihrer Flight-Pakete angezeigt. Wählen Sie das Flight-Paket mit den Paketen aus, die Sie übertragen möchten. Anschließend können Sie einige oder alle der Pakete auswählen, um sie in diese Übermittlung aufzunehmen.
 
-Wenn beim Überprüfen sie Fehler mit einem Paket erkannt, zeigen wir eine Nachricht, damit Sie wissen, was falsch ist. Sie müssen das Paket entfernen, das Problem beheben und dann versuchen, es erneut hochzuladen. In anderen Fällen werden Warnungen zu Fehlern angezeigt, die Probleme verursachen können, Sie jedoch nicht daran hindern, Ihre Übermittlung fortzusetzen.
+Wenn beim Überprüfen sie Fehler mit einem Paket erkannt, zeigen wir eine Nachricht, damit Sie wissen, was falsch ist. Sie müssen das Paket entfernen, das Problem beheben und dann versuchen Sie es erneut hochladen. In anderen Fällen werden Warnungen zu Fehlern angezeigt, die Probleme verursachen können, Sie jedoch nicht daran hindern, Ihre Übermittlung fortzusetzen.
 
 
 ## <a name="device-family-availability"></a>Verfügbarkeit von Gerätefamilien

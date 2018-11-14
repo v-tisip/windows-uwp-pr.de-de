@@ -8,17 +8,17 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, portieren, migrieren, interoperabilität, C++/CX
 ms.localizationpriority: medium
 ms.openlocfilehash: ca3cc69065ef2898aebafc832da1639985231d60
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6038793"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6203996"
 ---
 # <a name="interop-between-cwinrt-and-ccx"></a>Interoperabilität zwischen C++/WinRT und C++/CX
 
 Strategien für die schrittweise Portieren des Codes in Ihrer [C++ / CX](/cpp/cppcx/visual-c-language-reference-c-cx) -Projekts in [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) finden Sie im Abschnitt [Wechsel zu C++ / WinRT von C++ / CX](move-to-winrt-from-cx.md).
 
-In diesem Thema werden zwei Hilfsfunktionen gezeigt, die Sie verwenden können, für die Konvertierung zwischen C++ / CX- und C++ / WinRT-Objekten im selben Projekt. Sie können diese verwenden, um Interoperabilität zwischen Code, der die beiden sprachprojektionen verwendet, oder Sie können die Funktionen verwenden, wie Sie Ihren Code von C++ Portieren / CX nach C++ / WinRT.
+Dieses Thema zeigt zwei Hilfsfunktionen, die Sie verwenden können, für die Konvertierung zwischen C++ / CX- und C++ / WinRT-Objekten im selben Projekt. Sie können sie für Interoperabilität zwischen Code, der die beiden sprachprojektionen verwendet, oder Sie können die Funktionen verwenden, wie Sie Ihren Code von C++ Portieren / CX nach C++ / WinRT.
 
 ## <a name="fromcx-and-tocx-functions"></a>Funktionen from_cx und to_cx
 Die folgende Hilfsfunktion konvertiert ein C++/CX-Objekt in ein äquivalentes C++/WinRT-Objekt. Die Funktion bildet ein C++/CX-Objekt auf den zugrundeliegenden [**IUnknown**](https://msdn.microsoft.com/library/windows/desktop/ms680509) Schnittstellenzeiger ab. Sie ruft dann [**QueryInterface**](https://msdn.microsoft.com/library/windows/desktop/ms682521) auf diesem Zeiger auf, um de Standardschnittstelle des C++/WinRT-Objekts abzurufen. **QueryInterface** ist das Windows-Runtime Application Binary Interface (ABI) Äquivalent zur safe_cast-Erweiterung von C++/CX. Und die Funktion [**winrt::put_abi**](/uwp/cpp-ref-for-winrt/put-abi) ermittelt die Adresse des zugrundeliegenden **IUnknown**-Schnittstellenzeiger eines C++/WinRT-Objekts, sodass er auf einen anderen Wert gesetzt werden kann.
@@ -47,13 +47,13 @@ T^ to_cx(winrt::Windows::Foundation::IUnknown const& from)
 }
 ```
 
-## <a name="example-project-showing-the-two-helper-functions-in-use"></a>Beispielprojekt die beiden verwendeten Hilfsfunktionen verwendeter anzeigen
+## <a name="example-project-showing-the-two-helper-functions-in-use"></a>Beispielprojekt mit zwei Hilfsfunktionen verwendet
 
-Reproduziert werden, auf einfache Weise das Szenario für das schrittweise Portieren des Codes in einer C++ / CX-Projekts zu C++ / WinRT können Sie damit beginnen durch Erstellen eines neuen Projekts in Visual Studio mit einer der C++ / WinRT-Projektvorlagen (finden Sie unter [Visual Studio-Unterstützung für C++ / WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)).
+Reproduziert werden, auf einfache Weise das Szenario für das schrittweise Portieren des Codes in C++ / CX-Projekts zu C++ / WinRT können Sie damit beginnen durch Erstellen eines neuen Projekts in Visual Studio mit einer der C++ / WinRT-Projektvorlagen (finden Sie unter [Visual Studio-Unterstützung für C++ / WinRT und VSIX](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-and-the-vsix)).
 
-Dieses Beispielprojekt auch zeigt, wie Sie Namespace-Aliase für die verschiedenen Inseln des Codes verwenden können, um Umgang mit sonstigen potenziellen Namespacekonflikten zwischen der C++ / WinRT-Projektion und der C++ / CX-Projektion.
+Dieses Beispielprojekt auch zeigt, wie Sie Namespace-Aliase für die verschiedenen Inseln des Codes verwenden können, um den Umgang mit sonstigen potenziellen Namespacekonflikten zwischen der C++ / WinRT-Projektion und der C++ / CX-Projektion.
 
-- Erstellen Sie eine **Visual C++** \> **Universelle Windows-** > **Core App (C++ / WinRT)** Projekt.
+- Erstellen Sie ein **Visual C++** \> **Universelle Windows-** > **Core App (C++ / WinRT)** Projekt.
 - In den Projekteigenschaften, **C/C++-** \> **Allgemeine** \> **Windows-Runtime-Erweiterung** \> **Ja (/ Zw)**. Dies aktiviert die Projekt-Unterstützung für C++ / CX.
 - Ersetzen Sie den Inhalt des `App.cpp` mit der untenstehenden codeauflistung.
 

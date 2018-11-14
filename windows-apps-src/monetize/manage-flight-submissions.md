@@ -1,7 +1,7 @@
 ---
 author: Xansky
 ms.assetid: 2A454057-FF14-40D2-8ED2-CEB5F27E0226
-description: Verwenden Sie diese Methoden in der Microsoft Store-Übermittlungs-API, Flight-Paket-Übermittlungen für apps zu verwalten, die für Ihr Partner Center-Konto registriert wurden.
+description: Verwenden Sie diese Methoden in der Microsoft Store-Übermittlungs-API, Flight-Paket-Übermittlungen für apps zu verwalten, die für Ihr Partner Center-Konto registriert sind.
 title: Verwalten von Flight-Paket-Übermittlungen
 ms.author: mhopkins
 ms.date: 04/16/2018
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Flight-Übermittlungen
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f2a643aa80a59dd64ec1e7b829c02470aaed8bd
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6049280"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6191688"
 ---
 # <a name="manage-package-flight-submissions"></a>Verwalten von Flight-Paket-Übermittlungen
 
@@ -26,7 +26,7 @@ Mithilfe der Methoden der Microsoft Store-Übermittlungs-API können Sie Flight-
 
 ## <a name="methods-for-managing-package-flight-submissions"></a>Methoden zum Verwalten von Flight-Paket-Übermittlungen
 
-Verwenden Sie die folgenden Methoden zum Abrufen, Erstellen, Aktualisieren, Übernehmen oder Löschen einer Flight-Paket-Übermittlung. Bevor Sie diese Methoden verwenden können, muss das Flight-Paket bereits im Partner Center vorhanden sein. Sie können ein Paket erstellen flight [im Partner Center](https://msdn.microsoft.com/windows/uwp/publish/package-flights) oder mithilfe der Methoden der Microsoft Store-Übermittlungs-API in [Verwalten von Flight-Pakete](manage-flights.md)beschrieben.
+Verwenden Sie die folgenden Methoden zum Abrufen, Erstellen, Aktualisieren, Übernehmen oder Löschen einer Flight-Paket-Übermittlung. Bevor Sie diese Methoden verwenden können, muss das Flight-Paket bereits im Partner Center vorhanden sein. Sie können ein Paket erstellen flight [im Partner Center](https://msdn.microsoft.com/windows/uwp/publish/package-flights) oder mithilfe der Methoden der Microsoft Store-Übermittlungs-API, die in [Verwalten von Flight-Pakete](manage-flights.md)beschrieben.
 
 <table>
 <colgroup>
@@ -121,7 +121,7 @@ Gehen Sie folgendermaßen vor, um eine Übermittlung für ein Flight-Paket zu er
     await blockBob.UploadFromStreamAsync(stream);
     ```
 
-5. Führen Sie folgende Methode aus, um [die Flight-Paket-Übermittlung zu committen](commit-a-flight-submission.md). Hierdurch wird Partner Center darüber benachrichtigt, dass Sie Ihre Übermittlung fertig gestellt haben und dass der Updates für Ihr Konto jetzt angewendet werden soll.
+5. Führen Sie folgende Methode aus, um [die Flight-Paket-Übermittlung zu committen](commit-a-flight-submission.md). Dies wird Partner Center Warnung an, dass Sie Ihre Übermittlung fertig gestellt haben und die Updates für Ihr Konto jetzt angewendet werden sollen.
 
     ```
     POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit
@@ -135,7 +135,7 @@ Gehen Sie folgendermaßen vor, um eine Übermittlung für ein Flight-Paket zu er
 
     Um den Status der Übermittlung zu überprüfen, zeigen Sie den Wert *status* im Antworttext an. Dieser Wert sollte von **CommitStarted** entweder in **PreProcessing** geändert worden sein, wenn die Anforderung erfolgreich war, oder in **CommitFailed**, wenn die Anforderung Fehler enthalten hat. Wenn Fehler aufgetreten sind, enthält das Feld *StatusDetails* Feld weitere Details zu den Fehlern.
 
-7. Nachdem das Commit erfolgreich abgeschlossen wurde, wird die Übermittlung zur Aufnahme an den Store gesendet. Sie können weiterhin die mithilfe der vorherigen Methode oder besuchen Sie Partner Center überwachen.
+7. Nachdem das Commit erfolgreich abgeschlossen wurde, wird die Übermittlung zur Aufnahme an den Store gesendet. Sie können weiterhin die mithilfe der vorherigen Methode, oder besuchen Partner Center überwachen.
 
 <span/>
 
@@ -391,7 +391,7 @@ Diese Ressource enthält [Einstellungen für graduelle Paketrollouts](#manage-gr
 | fallbackSubmissionId    |  string   |  Die ID der Übermittlung, die die Kunden erhalten, die keine Pakete im Rahmen des graduellen Paketrollouts erhalten.   |          
 
 > [!NOTE]
-> Die Werte *PackageRolloutStatus* und *FallbackSubmissionId* werden von Partner Center zugewiesen und sollen nicht vom Entwickler festgelegt werden. Wenn Sie diese Werte in einen Anforderungstext einfügen, werden diese Werte ignoriert.
+> Die Werte *PackageRolloutStatus* und *FallbackSubmissionId* werden durch Partner Center zugewiesen und sollen nicht vom Entwickler festgelegt werden. Wenn Sie diese Werte in einen Anforderungstext einfügen, werden diese Werte ignoriert.
 
 <span/>
 

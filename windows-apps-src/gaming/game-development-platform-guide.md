@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Technologie, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: c6896bda0498483efb4d77e1fa2a6ef82e0f8789
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6034639"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6181566"
 ---
 # <a name="game-technologies-for-uwp-apps"></a>Spieletechnologien für UWP-Apps
 
@@ -24,7 +24,7 @@ Dieses Handbuch enthält Informationen über verfügbare Technologien zur Entwic
 ##  <a name="benefits-of-windows10-for-game-development"></a>Vorteile von Windows 10 für die Spieleentwicklung
 
 
-Mit der Einführung von UWP in Windows 10 werden Ihre Windows 10-Titel auf allen Microsoft-Plattformen ausgeführt werden. Dank der kostenlosen Migration von früheren Versionen von Windows besteht Zahl von Windows 10-Clients ständig zunehmende. Die Kombination dieser beiden Umstände bedeutet, dass Ihre Windows 10-Titel eine große Zahl von Kunden über den Microsoft Store erreichen werden.
+Mit der Einführung von UWP in Windows 10 werden Ihre Windows 10-Titel kann auf allen Microsoft-Plattformen ausgeführt. Dank der kostenlosen Migration von früheren Versionen von Windows gibt es eine zunehmende Anzahl von Windows 10-Clients. Die Kombination dieser beiden Umstände bedeutet, dass Ihre Windows 10-Titel eine große Zahl von Kunden über den Microsoft Store zu erreichen.
 
 Darüber hinaus bietet Windows 10 zahlreiche neue Features, die besonders für Spiele nützlich sind:
 
@@ -39,7 +39,7 @@ Echtzeitspiele, die hohe Leistung erfordern, sollten DirectX-APIs verwenden. Dir
 ## <a name="development-environment"></a>Entwicklungsumgebung
 
 
-Um Spiele für UWP zu erstellen, müssen Sie Ihre Entwicklungsumgebung einrichten, indem Sie Visual Studio 2015 oder höher installieren. Wir empfehlen, dass Sie die neueste Version von Visual Studio installieren gewähren Ihnen Zugriff auf die neuesten Updates Entwicklung und Sicherheit. Visual Studio können Sie UWP-apps erstellen und stellt Tools für die Spielentwicklung bereit:
+Um Spiele für UWP zu erstellen, müssen Sie Ihre Entwicklungsumgebung einrichten, indem Sie Visual Studio 2015 oder höher installieren. Es wird empfohlen, dass Sie die neueste Version von Visual Studio installieren gewähren Ihnen Zugriff auf die neuesten Updates Entwicklung und Sicherheit. Visual Studio können Sie UWP-apps zu erstellen und stellt Tools für die Spielentwicklung bereit:
 
 -   Visual Studio-Tools für die DX-Spielprogrammierung – Visual Studio stellt Tools zum Erstellen, Bearbeiten, Anzeigen einer Vorschau und Exportieren von Bild-, Modell- und Shaderressourcen bereit. Außerdem sind Tools verfügbar, mit denen Sie Ressourcen zur Erstellungszeit konvertieren und DirectX-Grafikcode debuggen können. Weitere Informationen finden Sie unter [Visual Studio-Tools für die Spieleprogrammierung](set-up-visual-studio-for-game-development.md).
 -   Visual Studio-Grafikdiagnosefeatures – Grafikdiagnosetools stehen nun als optionales Feature in Windows zur Verfügung. Mit den Diagnosetools können Sie Grafiken debuggen, Grafikframeanalysen ausführen und die GPU-Nutzung in Echtzeit überwachen. Weitere Informationen finden Sie unter [Tools für die Grafikdiagnose](use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.md).

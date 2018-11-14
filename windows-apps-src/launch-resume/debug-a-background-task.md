@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Hintergrundaufgabe, für die
 ms.localizationpriority: medium
 ms.openlocfilehash: 03b1e6a5fce559e9e6bf900bae3e3f83921567e6
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035019"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6450543"
 ---
 # <a name="debug-a-background-task"></a>Debuggen einer Hintergrundaufgabe
 
@@ -103,7 +103,7 @@ Wenn eine App mit Hintergrundaufgaben mit Visual Studio bereitgestellt wird und 
 -   Wenn für die Hintergrundaufgabe der Zugriff auf den Sperrbildschirm erforderlich ist, müssen Sie dafür sorgen, dass die App auf dem Sperrbildschirm platziert wird, bevor Sie versuchen, die Hintergrundaufgabe zu debuggen. Weitere Informationen zum Angeben von Manifestoptionen für sperrbildschirmfähige Apps finden Sie unter [Deklarieren von Hintergrundaufgaben im Anwendungsmanifest](declare-background-tasks-in-the-application-manifest.md).
 -   Parameter für die Registrierung von Hintergrundaufgaben werden zum Zeitpunkt der Registrierung überprüft. Bei ungültigen Registrierungsparametern wird ein Fehler zurückgegeben. Stellen Sie sicher, dass Ihre App problemlos mit Szenarien ohne erfolgreiche Registrierung von Hintergrundaufgaben zurechtkommt. Andernfalls stürzt die App unter Umständen ab, wenn sie so konzipiert ist, dass nach dem Versuch, eine Aufgabe zu registrieren, ein gültiges Registrierungsobjekt vorhanden sein muss.
 
-Weitere Informationen zum Debuggen einer Hintergrundaufgabe mit VS finden Sie [Anleitungen zum Auslösen anhalten, fortsetzen und hintergrundereignissen in UWP-apps](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx).
+Weitere Informationen zum Debuggen einer Hintergrundaufgabe mit VS finden Sie [So lösen Sie anhalten, fortsetzen und hintergrundereignissen in UWP-apps](https://msdn.microsoft.com/library/windows/apps/xaml/hh974425.aspx).
 
 ## <a name="related-topics"></a>Verwandte Themen
 

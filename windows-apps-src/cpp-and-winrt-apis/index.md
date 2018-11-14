@@ -8,15 +8,15 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f711ebc8d0d2e8dda87355a7894c9d311c6bbc2
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6049718"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6453601"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
-[C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) ist eine vollständig standardisierte moderne C ++ 17-Programmiersprache für Windows-Runtime (WinRT)-APIs als Header-Datei-basierten Bibliothek implementiert, und darauf ausgelegt, Ihnen einen erstklassigen Zugriff auf die moderne Windows API bietet. Mit C++/WinRT können Sie Windows-Runtime-APIs mit jedem standardkonformen C++17-Compiler erstellen und verwenden. Das in Version 10.0.17134.0 (Windows 10, Version 1803) eingeführte Windows SDK enthält C++/WinRT.
+[C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) ist eine vollständig standardisierte moderne C ++ 17-Programmiersprache für Windows-Runtime (WinRT)-APIs als Header-Datei-basierten Bibliothek implementiert, und bietet Ihnen einen erstklassigen Zugriff auf die moderne Windows-API. Mit C++/WinRT können Sie Windows-Runtime-APIs mit jedem standardkonformen C++17-Compiler erstellen und verwenden. Das in Version 10.0.17134.0 (Windows 10, Version 1803) eingeführte Windows SDK enthält C++/WinRT.
 
 C++/WinRT ist für jeden Entwickler gedacht, der daran interessiert ist, schönen und schnellen Code für Windows zu schreiben. Dies sind die Gründe.
 
@@ -58,12 +58,12 @@ C++/WinRT arbeitet besser und erzeugt kleinere Binärdateien als jede andere Spr
 | [XAML-Items-Steuerelemente; Binden an eine C++/WinRT-Collection](binding-collection.md) | Eine Collection, die effektiv an ein XAML-Items-Steuerelement gebunden werden kann, wird als *Observable*-Collection bezeichnet. Dieses Thema zeigt, wie man eine Observable-Collection implementiert und nutzt und wie man ein XAML-Items-Steuerelement daran bindet. |
 | [Benutzerdefinierte (vorlagenbasierte) XAML-Steuerelemente mit C++ / WinRT](xaml-cust-ctrl.md) | Dieses Thema führt Sie durch die Schritte zum Erstellen eines einfachen benutzerdefinierten Steuerelements mit C++ / WinRT. Sie können auf den Informationen zum Erstellen Ihrer eigenen funktionsreiche und anpassbare UI-Steuerelemente erstellen. |
 | [Verwenden von COM-Komponenten mit C++ / WinRT](consume-com.md) | In diesem Thema verwendet ein vollständiges Beispiel für die Direct2D-Code um zu veranschaulichen, wie c++ / WinRT-COM-Klassen und Schnittstellen aufnehmen. |
-| [Erstellen von COM-Komponenten mit C++ / WinRT](author-coclasses.md) | C++ / WinRT helfen Ihnen zum Erstellen von klassischer COM-Komponenten, wie Sie Windows-Runtime-Klassen man erleichtert. |
+| [Erstellen von COM-Komponenten mit C++ / WinRT](author-coclasses.md) | C++ / WinRT hilft Ihnen beim Erstellen von klassischer COM-Komponenten, genauso, wie Sie Windows-Runtime-Klassen man erleichtert. |
 | [Wechsel zu C++/WinRT von C++/CX](move-to-winrt-from-cx.md) | In diesem Thema wird gezeigt, wie Sie C++/CX-Code zum entsprechenden Äquivalent in C++/WinRT portieren. |
 | [Interoperabilität zwischen C++/WinRT und C++/CX](interop-winrt-cx.md) | In diesem Thema werden zwei Hilfsfunktionen gezeigt, die verwendet werden können, um zwischen [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx?branch=live)- und C++/WinRT-Objekten zu konvertieren. |
 | [Wechsel zu C++/WinRT von WRL](move-to-winrt-from-wrl.md) | In diesem Thema wird gezeigt, wie Sie [C++-Vorlagenbibliothek für Windows-Runtime (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl)-Code zum entsprechenden Äquivalent in C++/WinRT portieren. |
 | [Interoperabilität zwischen C++/WinRT und der ABI](interop-winrt-abi.md) | Dieses Thema zeigt, wie man zwischen Application Binary Interface (ABI) und C++/WinRT-Objekten konvertiert. |
-| [Starke und schwache Referenzen in C++ / WinRT](weak-references.md) | Windows-Runtime ist ein System Verweis gezählt. und in einem solchen System es ist wichtig, dass Sie über die Bedeutung von und den Unterschied zwischen, wissen starke und schwache Referenzen. |
+| [Starke und schwache Referenzen in C++ / WinRT](weak-references.md) | Windows-Runtime ist ein System Verweis gezählt. und in einem solchen System es ist wichtig, dass Sie über die Bedeutung und die Unterscheidung zwischen, wissen starke und schwache Referenzen. |
 | [Agile Objekte](agile-objects.md) | Ein agiles Objekt ist ein Objekt, auf das von jedem Thread aus zugegriffen werden kann. Ihre C++/WinRT-Typen sind standardmäßig agil, aber Sie können diese Option deaktivieren. |
 
 ### <a name="topics-about-the-c-language"></a>Themen für die C++-Sprache

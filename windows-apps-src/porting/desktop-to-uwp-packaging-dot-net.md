@@ -2,32 +2,32 @@
 author: normesta
 Description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop application.
 Search.Product: eADQiWindows 10XVcnh
-title: Verpacken Sie eine desktop-Anwendung mithilfe von Visual Studio
+title: Verpacken Sie eine desktop-Anwendung mit Visual Studio
 ms.author: normesta
 ms.date: 08/30/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
-ms.openlocfilehash: 1fb6a552686e35f319d9624ba4c4663dad966f23
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 5f87b17ff4452417a06817ee5128d66af4b0e53b
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6029739"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6195106"
 ---
-# <a name="package-a-desktop-application-by-using-visual-studio"></a>Verpacken Sie eine desktop-Anwendung mithilfe von Visual Studio
+# <a name="package-a-desktop-application-by-using-visual-studio"></a>Verpacken Sie eine desktop-Anwendung mit Visual Studio
 
 Sie können Visual Studio verwenden, um ein Paket für Ihre Desktop-App zu generieren. Anschließend können Sie das Paket im Windows Store veröffentlichen oder es auf einem oder mehreren PCs querladen.
 
 Die aktuelle Version von Visual Studio bietet ein neue Version des Paketprojekts, um manuelle Schritte zu eliminieren, die beim Verpacken Ihrer App erforderlich sind. Sie müssen nur Ihr Paketprojekt hinzufügen, auf das Desktopprojekt verweisen und F5 drücken, um Ihre App zu debuggen. Es sind keine manuellen Optimierungsmethoden mehr erforderlich. Das neue optimierte Design ist eine enorme Verbesserung über die Benutzeroberfläche, die in der vorherigen Version von Visual Studio verfügbar war.
 
 >[!IMPORTANT]
->Die Fähigkeit zum Erstellen eines Windows-app-Pakets für Ihre desktop-Anwendung (andernfalls wird auch als der Desktop-Brücke wurde in Windows 10, Version 1607, eingeführt und kann nur in Projekten für die Windows 10 Anniversary Update (10.0; verwendet werden Build 14393) oder einer neueren Version in Visual Studio.
+>Die Fähigkeit zum Erstellen eines Windows-app-Pakets für Ihre desktop-Anwendung (auch bekannt als der Desktop-Brücke) wurde in Windows 10, Version 1607, eingeführt und kann nur in Projekten für die Windows 10 Anniversary Update (10.0; verwendet werden Build 14393) oder einer neueren Version in Visual Studio.
 
 ## <a name="first-prepare-your-application"></a>Vorbereiten Ihrer Anwendung
 
-Dieses Handbuch lesen, bevor Sie mit der paketerstellung für Ihre Anwendung beginnen: [Vorbereiten eine desktop-Anwendung zu verpacken](desktop-to-uwp-prepare.md).
+Lesen Sie dieses Handbuch, bevor Sie mit der paketerstellung für Ihre Anwendung beginnen: [Vorbereiten eine desktop-Anwendung zu verpacken](desktop-to-uwp-prepare.md).
 
 <a id="new-packaging-project"/>
 
@@ -60,7 +60,7 @@ Dieses Handbuch lesen, bevor Sie mit der paketerstellung für Ihre Anwendung beg
 
    ![Als Einstiegspunkt festlegen](images/desktop-to-uwp/entry-point-set.png)
 
-6. Erstellen Sie das Paketprojekt, um sicherzustellen, dass keine Fehler angezeigt werden.  Wenn Fehler angezeigt werden, öffnen Sie den **Konfigurations-Manager** und sicherzustellen Sie, dass Ihre Projekte derselben Plattform Ziel.
+6. Erstellen Sie das Paketprojekt, um sicherzustellen, dass keine Fehler angezeigt werden.  Wenn Sie Fehler zu erhalten, öffnen Sie den **Konfigurations-Manager** , und stellen, dass sicher Plattform Ihre Projekte dieselbe.
 
    ![Konfigurations-manager](images/desktop-to-uwp/config-manager.png)
 

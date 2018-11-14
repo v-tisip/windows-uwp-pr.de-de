@@ -1,6 +1,6 @@
 ---
 author: stevewhims
-description: Sie beginnen den portierungsprozess durch Erstellen eines neuen Windows 10-Projekts in Visual Studio und Ihre Dateien in diese kopiert.
+description: Sie beginnen den portierungsprozess durch Erstellen eines neuen Windows 10-Projekts in Visual Studio, und kopieren die Dateien hinein.
 title: Portieren von WindowsPhone Silverlight-Projekten zu UWP-Projekten
 ms.assetid: d86c99c5-eb13-4e37-b000-6a657543d8f4
 ms.author: stwhi
@@ -9,24 +9,24 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d1224c1707d3e86c9ddd309ecf06bd0c0767fb83
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6028729"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6443237"
 ---
 # <a name="porting-windowsphone-silverlight-projects-to-uwp-projects"></a>Portieren von WindowsPhone Silverlight-Projekten zu UWP-Projekten
 
 
 Das vorherige Thema war [Namespace- und Klassenzuordnungen](wpsl-to-uwp-namespace-and-class-mappings.md).
 
-Sie beginnen den portierungsprozess durch Erstellen eines neuen Windows 10-Projekts in Visual Studio und Ihre Dateien in diese kopiert.
+Sie beginnen den portierungsprozess durch Erstellen eines neuen Windows 10-Projekts in Visual Studio, und kopieren die Dateien hinein.
 
 ## <a name="create-the-project-and-copy-files-to-it"></a>Erstellen des Projekts und Kopieren der Dateien
 
-1.  Starten Sie Microsoft Visual Studio2015 und Erstellen eines neuen Projekts leere Anwendung (Windows Universal). Weitere Informationen finden Sie unter [Schnelleinstieg in die Entwicklung einer Windows-Runtime 8.x-app mithilfe von Vorlagen (c#, C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232). Für das neue Projekt wird ein App-Paket (APPX-Datei) erstellt, das auf allen Gerätefamilien ausgeführt werden kann.
-2.  Identifizieren Sie in Ihrem WindowsPhone Silverlight-app-Projekt alle Quellcodedateien und visuellen Ressourcendateien an, die Sie wiederverwenden möchten. Kopieren Sie mithilfe des Explorers die Datenmodelle, Ansichtsmodelle, visuellen Ressourcen, Ressourcenverzeichnisse sowie die Ordnerstruktur und alles andere, was Sie wiederverwenden möchten, in das neue Projekt. Kopieren oder erstellen Sie bei Bedarf Unterordner auf dem Datenträger.
-3.  Kopieren Sie auch Ansichten (z.B. „MainPage.xaml“ und „MainPage.xaml.cs“) in den neuen Projektknoten. Erstellen Sie bei Bedarf auch hier neue Unterordner, und entfernen Sie die vorhandenen Ansichten aus dem Projekt. Erstellen Sie vor dem Überschreiben oder Entfernen einer von Visual Studio generierten Ansicht jedoch eine Kopie, um später darauf zurückgreifen zu können. Die erste Phase für das Portieren einer WindowsPhone Silverlight-app konzentriert sich auf aussieht gute und arbeiten auf einer Gerätefamilie gut abrufen. Später können Sie sich dann auf eine einwandfreie Anpassung der Ansichten an alle Formfaktoren konzentrieren und bei Bedarf adaptiven Code für die optimale Nutzung einer bestimmten Gerätefamilie hinzufügen.
+1.  Starten Sie Microsoft Visual Studio2015 und erstellen Sie ein neues Projekt leere Anwendung (Windows Universal). Weitere Informationen finden Sie unter [Schnelleinstieg in die Entwicklung einer Windows-Runtime 8.x-app mithilfe von Vorlagen (c#, C++, Visual Basic)](https://msdn.microsoft.com/library/windows/apps/hh768232). Für das neue Projekt wird ein App-Paket (APPX-Datei) erstellt, das auf allen Gerätefamilien ausgeführt werden kann.
+2.  Identifizieren Sie in Ihrem WindowsPhone Silverlight-app-Projekt alle Quellcodedateien und visuellen Ressourcendateien, die Sie wiederverwenden möchten. Kopieren Sie mithilfe des Explorers die Datenmodelle, Ansichtsmodelle, visuellen Ressourcen, Ressourcenverzeichnisse sowie die Ordnerstruktur und alles andere, was Sie wiederverwenden möchten, in das neue Projekt. Kopieren oder erstellen Sie bei Bedarf Unterordner auf dem Datenträger.
+3.  Kopieren Sie auch Ansichten (z.B. „MainPage.xaml“ und „MainPage.xaml.cs“) in den neuen Projektknoten. Erstellen Sie bei Bedarf auch hier neue Unterordner, und entfernen Sie die vorhandenen Ansichten aus dem Projekt. Erstellen Sie vor dem Überschreiben oder Entfernen einer von Visual Studio generierten Ansicht jedoch eine Kopie, um später darauf zurückgreifen zu können. Die erste Phase für das Portieren einer WindowsPhone Silverlight-app konzentriert sich auf aussieht gut auf einer Gerätefamilie gut und arbeiten abrufen. Später können Sie sich dann auf eine einwandfreie Anpassung der Ansichten an alle Formfaktoren konzentrieren und bei Bedarf adaptiven Code für die optimale Nutzung einer bestimmten Gerätefamilie hinzufügen.
 4.  Vergewissern Sie sich im **Projektmappen-Explorer**, dass **Alle Dateien anzeigen** aktiviert ist. Wählen Sie die kopierten Dateien aus, klicken Sie mit der rechten Maustaste darauf, und klicken Sie dann auf **Zu Projekt hinzufügen**. Dadurch werden die zugehörigen Ordner automatisch hinzugefügt. Sie können **Alle Dateien anzeigen** jetzt ggf. deaktivieren. Eine alternative Vorgehensweise ist die Verwendung des Befehls **Vorhandenes Element hinzufügen**, wenn Sie alle erforderlichen Unterordner im **Projektmappen-Explorer** von Visual Studio erstellt haben. Stellen Sie sicher, dass für Ihre visuellen Ressourcen **Buildvorgang** auf **Inhalt** und **In Ausgabeverzeichnis kopieren** auf **Nicht kopieren** festgelegt ist.
 5.  In dieser Phase werden wegen der Unterschiede bei den Namespace- und Klassennamen viele Buildfehler generiert. Wenn Sie die von Visual Studio generierten Ansichten öffnen, sehen Sie beispielsweise, dass sie vom Typ [**Page**](https://msdn.microsoft.com/library/windows/apps/br227503) sind und nicht **PhoneApplicationPage**. Es gibt viele Unterschiede beim XAML-Markup und imperativen Code, die in den folgenden Themen dieses Handbuchs für das Portieren detailliert beschrieben werden. Wenn Sie die folgenden allgemeinen Schritte befolgen, werden Sie jedoch schnell Fortschritte machen: Ändern Sie in Ihren Namespacepräfixdeklarationen im XAML-Markup „clr-namespace“ in „using“. Nehmen Sie entsprechend den Angaben im Thema [Namespace- und Klassenzuordnungen](wpsl-to-uwp-namespace-and-class-mappings.md) mit dem Visual Studio-Befehl **Suchen und ersetzen** Massenänderungen an Ihrem Quellcode vor (ersetzen Sie z.B. „System.Windows“ durch „Windows.UI.Xaml“). Verwenden Sie im Editor für imperativen Code von Visual Studio die Befehle **Auflösen** und **using-Direktiven organisieren** im Kontextmenü, um gezieltere Änderungen vorzunehmen.
 
@@ -64,12 +64,12 @@ Sie werden feststellen, dass Sie durch kleinere Umgestaltungsmaßnahmen und/oder
 -   Ihre App kann die Gerätefamilie erkennen, mit der sie ausgeführt wird, und eine Ansicht verwenden, die speziell für diese Gerätefamilie gestaltet wurde. Weitere Informationen finden Sie unter [Erkennen der Plattform, auf der Ihre App ausgeführt wird](wpsl-to-uwp-input-and-sensors.md).
 -   Steht keine Alternative zur Verfügung, ist unter Umständen folgende ähnliche Methode hilfreich: Versehen Sie eine Markupdatei oder eine **ResourceDictionary**-Datei (oder den Ordner, der die Datei enthält) mit einem speziellen Namen, sodass sie automatisch zur Laufzeit nur geladen wird, wenn Ihre App mit einer bestimmten Gerätefamilie ausgeführt wird. Diese Methode wird in der Fallstudie [Bookstore1](wpsl-to-uwp-case-study-bookstore1.md) veranschaulicht.
 -   Für Features, die nicht bei allen Gerätefamilien zur Verfügung stehen (wie etwa Drucker, Scanner oder die Kamerataste), können Sie adaptiven Code schreiben. Weitere Informationen finden Sie im dritten Beispiel dieses Themas unter [Bedingte Kompilierung und adaptiver Code](#conditional-compilation-and-adaptive-code).
--   Wenn Sie WindowsPhone Silverlight und Windows 10 unterstützen möchten, klicken Sie Quellcodedateien projektübergreifend freigeben möglicherweise. Klicken Sie dazu in VisualStudio im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, wählen Sie **Vorhandenes Element hinzufügen** und dann die freizugebenden Dateien aus, und klicken Sie auf **Als Link hinzufügen**. Speichern Sie die Quellcodedateien in einem gemeinsamen Ordner im Dateisystem, in dem sie für verknüpfte Projekte sichtbar sind, und vergessen Sie nicht, sie der Quellcodeverwaltung hinzuzufügen. Wenn Sie Ihren imperativen Quellcode so unterteilen können, dass der Großteil einer Datei oder die ganze Datei auf beiden Plattformen funktioniert, benötigen Sie nicht zwei Kopien. Sie können plattformspezifische Logik in der Datei bei Bedarf mit bedingten Kompilierungsdirektiven oder Laufzeitbedingungen umschließen. Weitere Informationen finden Sie im nächsten Abschnitt [C#-Präprozessordirektiven](http://msdn.microsoft.com/library/ed8yd1ha.aspx).
--   Für die Wiederverwendung auf der binären Ebene, anstatt der Quellcodeebene gibt es portierbare Klassenbibliotheken, die die Teilmenge der .NET-APIs, die in WindowsPhone Silverlight verfügbar sind, und die Teilmenge für Windows 10-apps (.NET Core) unterstützen. Portable Klassenbibliothekassemblys sind mit allen diesen .NET-Plattformen sowie weiteren Plattformen binärkompatibel. Erstellen Sie mit Visual Studio ein Projekt für eine portable Klassenbibliothek. Weitere Informationen finden Sie unter [Plattformübergreifende Entwicklung mit der portablen Klassenbibliothek](http://msdn.microsoft.com/library/gg597391.aspx).
+-   Wenn Sie sowohl WindowsPhone Silverlight als auch Windows 10 unterstützen möchten, können dann Sie Quellcodedateien projektübergreifend freigeben können. Klicken Sie dazu in VisualStudio im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, wählen Sie **Vorhandenes Element hinzufügen** und dann die freizugebenden Dateien aus, und klicken Sie auf **Als Link hinzufügen**. Speichern Sie die Quellcodedateien in einem gemeinsamen Ordner im Dateisystem, in dem sie für verknüpfte Projekte sichtbar sind, und vergessen Sie nicht, sie der Quellcodeverwaltung hinzuzufügen. Wenn Sie Ihren imperativen Quellcode so unterteilen können, dass der Großteil einer Datei oder die ganze Datei auf beiden Plattformen funktioniert, benötigen Sie nicht zwei Kopien. Sie können plattformspezifische Logik in der Datei bei Bedarf mit bedingten Kompilierungsdirektiven oder Laufzeitbedingungen umschließen. Weitere Informationen finden Sie im nächsten Abschnitt [C#-Präprozessordirektiven](http://msdn.microsoft.com/library/ed8yd1ha.aspx).
+-   Für die Wiederverwendung auf der binären Ebene, anstatt der Quellcodeebene stehen Portable Klassenbibliotheken, die die Teilmenge der .NET-APIs, die in WindowsPhone Silverlight verfügbar sind, und die Teilmenge für Windows 10-apps (.NET Core) zu unterstützen. Portable Klassenbibliothekassemblys sind mit allen diesen .NET-Plattformen sowie weiteren Plattformen binärkompatibel. Erstellen Sie mit Visual Studio ein Projekt für eine portable Klassenbibliothek. Weitere Informationen finden Sie unter [Plattformübergreifende Entwicklung mit der portablen Klassenbibliothek](http://msdn.microsoft.com/library/gg597391.aspx).
 
 ## <a name="conditional-compilation-and-adaptive-code"></a>Bedingte Kompilierung und adaptiver Code
 
-Wenn Sie WindowsPhone Silverlight und Windows 10 in einer einzelnen Codedatei unterstützen möchten können Sie dies tun. Wenn Sie in Ihrem Windows 10-Projekt auf die Projekt-Eigenschaftenseiten betrachten, sehen Sie, dass das Projekt "windows\_uap" als Symbol für die bedingte Kompilierung definiert. Im Allgemeinen können Sie zum Durchführen der bedingten Kompilierung die folgende Logik verwenden.
+Wenn Sie sowohl WindowsPhone Silverlight als auch Windows 10 in einer einzelnen Codedatei unterstützen möchten können Sie dies tun. Wenn Sie in Ihrem Windows 10-Projekt auf die Projekt-Eigenschaftenseiten betrachten, sehen Sie sich, dass das Projekt "windows\_uap" als Symbol für die bedingte Kompilierung definiert. Im Allgemeinen können Sie zum Durchführen der bedingten Kompilierung die folgende Logik verwenden.
 
 ```csharp
 #if WINDOWS_UAP
@@ -79,7 +79,7 @@ Wenn Sie WindowsPhone Silverlight und Windows 10 in einer einzelnen Codedatei un
 #endif // WINDOWS_UAP
 ```
 
-Wenn Sie über Code, die Sie eine WindowsPhone Silverlight-app und einer Windows-Runtime 8.x-app gemeinsam nutzen verfügen, haben, möglicherweise Sie bereits Quellcode mit Logik wie folgt aus:
+Wenn Sie über Code, die Sie eine WindowsPhone-Silverlight-app und einer Windows-Runtime 8.x-app gemeinsam nutzen verfügen, haben, möglicherweise Sie bereits Quellcode mit Logik wie folgt aus:
 
 ```csharp
 #if NETFX_CORE
@@ -147,7 +147,7 @@ Mit den Einstellungen in Ihrem Projekt (einschließlich der Verweise auf Erweite
 
 Kenntnisse in der Bearbeitung des App-Paketmanifests sind von Vorteil, da es in den folgenden Themen um seine Verwendung für verschiedene Deklarationen, Funktionen und andere Einstellungen geht, die für einige Features erforderlich sind. Sie können das Manifest mit dem App-Paketmanifest-Editor von Visual Studio bearbeiten. Falls der **Projektmappen-Explorer** nicht angezeigt wird, wählen Sie ihn im Menü **Ansicht** aus. Doppelklicken Sie auf **Package.appxmanifest**. Dadurch wird das Fenster des Manifest-Editors geöffnet. Wählen Sie die geeignete Registerkarte aus, nehmen Sie Änderungen vor, und speichern Sie sie. Es empfiehlt sich sicherzustellen, dass das **pm:PhoneIdentity**-Element im portierten App-Manifest dem Element im Manifest der App entspricht, die Sie portieren (ausführliche Informationen finden Sie im Thema [**pm:PhoneIdentity**](https://msdn.microsoft.com/library/windows/apps/dn934763)).
 
-[Paket-manifest-Schemaverweis für Windows 10](https://msdn.microsoft.com/library/windows/apps/dn934820)angezeigt.
+Finden Sie unter [Package manifest Schemareferenz für Windows 10](https://msdn.microsoft.com/library/windows/apps/dn934820).
 
 Das nächste Thema ist [Problembehandlung](wpsl-to-uwp-troubleshooting.md).
 

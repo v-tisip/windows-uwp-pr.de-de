@@ -9,22 +9,22 @@ ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: c777996dceeb443c25fcf526e3a029fca00047c1
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6043483"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6160682"
 ---
 # <a name="makepriexe-command-line-options"></a>Befehlszeilenoptionen für MakePRI.exe
 
 [MakePri.exe](compile-resources-manually-with-makepri.md) akzeptiert die Befehle `createconfig`, `dump`, `new`, `resourcepack` und `versioned`. In diesem Thema werden die Befehlszeilenoptionen für diese Befehle erläutert.
 
 > [!NOTE]
-> MakePri.exe wird installiert, wenn Sie im **Windows SDK für verwalteten UWP-Apps** Option während der Installation von Windows Software Development Kit aktivieren. Es installiert ist, auf den Pfad `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (ebenso wie in den Ordnern für die anderen Architekturen). Beispiel: `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
+> MakePri.exe wird installiert, wenn Sie im **Windows SDK für UWP-Apps verwaltet** Option während der Installation im Windows Software Development Kit aktivieren. Es installiert ist, um den Pfad `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (ebenso wie in den Ordnern für die anderen Architekturen). Beispiel: `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
 ## <a name="getting-help-from-the-command-line"></a>Hilfe von der Befehlszeile
 
-Sie können ausführen `MakePri.exe help` oder `MakePri.exe /?` um die Befehle anzuzeigen, die Sie mit MakePri.exe verwenden können. Sie können auch ausstellen `MakePri.exe <command> /?` abgewartet Einzelheiten über einen Befehl und in sehr seltenen Fällen sogar `MakePri.exe <command> <option>` um Einzelheiten zu den Optionen finden Sie unter.
+Sie können ausführen `MakePri.exe help` oder `MakePri.exe /?` um die Befehle anzuzeigen, die Sie mit MakePri.exe verwenden können. Sie können auch ausstellen `MakePri.exe <command> /?` finden Einzelheiten über einen Befehl und in sehr seltenen Fällen sogar `MakePri.exe <command> <option>` um Einzelheiten zu den Optionen finden Sie unter.
 
 ## <a name="makepri-commands"></a>MakePri-Befehle
 

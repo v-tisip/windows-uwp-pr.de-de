@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Store-Dienste, Microsoft Store-Rezensions-API, Add-On-Käufe
 ms.localizationpriority: medium
 ms.openlocfilehash: 8a8a336d477e7d66222632821f0fa0855faae6f7
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6040000"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6275358"
 ---
 # <a name="submit-responses-to-reviews"></a>Antworten auf Rezensionen übermitteln
 
@@ -71,7 +71,7 @@ Jedes Objekt im *Responses*-Array enthält die folgenden Werte:
 | ReviewId | String |  Die ID der Rezension, auf die Sie antworten möchten (dies ist eine GUID). Rezensions-IDs finden Sie in den Antwortdaten der Methode [Abrufen von App-Rezensionen](get-app-reviews.md) der Microsoft Store-Analyse-API und unter [Offlinedownload](../publish/download-analytic-reports.md) im Bericht [Rezensionen](../publish/reviews-report.md).   |  Ja  |
 | ResponseText | String | Die Antwort, die Sie senden möchten. Ihre Antwort muss [diesen Richtlinien](../publish/respond-to-customer-reviews.md#guidelines-for-responses) entsprechen.   |  Ja  |
 | SupportEmail | String | Die Support-E-Mail-Adresse Ihrer App, über die der Kunde Sie direkt kontaktieren kann. Dies muss eine gültige E-Mail-Adresse sein.     |  Ja  |
-| IsPublic | Boolean |  Wenn Sie **"true"** angeben, wird Ihre Antwort im Store-Eintrag, direkt unter der Rezension des Kunden, Ihre app angezeigt wird und für alle Kunden sichtbar. Wenn Sie **"false",** und der Benutzer den Empfang von Antworten e-Mail entschieden noch nicht angeben, Ihre Antwort wird an den Kunden per e-Mail gesendet werden, und es wird nicht für andere Kunden im Store-Eintrag Ihrer app sichtbar sein. Wenn Sie angeben, **"false",** und der Benutzer den Empfang von Antworten e-Mail entschieden hat, wird ein Fehler zurückgegeben.   |  Ja  |
+| IsPublic | Boolean |  Wenn Sie auf **"true"** angeben, wird Ihre Antwort im Store-Eintrag, direkt unter der Rezension des Kunden, Ihre app angezeigt wird und für alle Kunden sichtbar. Bei Angabe von **"false",** und der Benutzer noch nicht den Empfang von e-Mail-Antworten zugelassen wird Ihre Antwort an den Kunden per e-Mail gesendet werden, und es wird nicht für andere Kunden im Store-Eintrag Ihrer app sichtbar sein. Wenn Sie angeben, **"false",** und der Benutzer den Empfang von Antworten e-Mail entschieden hat, wird ein Fehler zurückgegeben.   |  Ja  |
 
 
 ### <a name="request-example"></a>Anforderungsbeispiel

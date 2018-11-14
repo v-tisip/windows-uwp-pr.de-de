@@ -9,15 +9,15 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Analyse-API, CAB herunterladen
 ms.localizationpriority: medium
 ms.openlocfilehash: 047340d180e3de9f963dc76c85edaa6abea67327
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6037447"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6457527"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-app"></a>Herunterladen der CAB-Datei bei einem Fehler in Ihrer App
 
-Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um die CAB-Datei herunterzuladen, die einem bestimmten Fehler in Ihrer app zugeordnet ist, die in das Partner Center gemeldet wurde. Diese Methode kann nur die CAB-Datei für einen App-Fehler herunterladen, die in den letzten 30Tagen aufgetreten ist. Downloads von CAB-Dateien sind auch im Abschnitt **Fehler** im [Bericht "Integrität"](../publish/health-report.md) im Partner Center verfügbar.
+Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um die CAB-Datei herunterzuladen, die mit einem bestimmten Fehler in Ihrer app verknüpft ist, die in das Partner Center gemeldet wurde. Diese Methode kann nur die CAB-Datei für einen App-Fehler herunterladen, die in den letzten 30Tagen aufgetreten ist. Downloads von CAB-Dateien sind auch im Abschnitt **Fehler** im [Bericht "Integrität"](../publish/health-report.md) im Partner Center verfügbar.
 
 Bevor Sie diese Methode verwenden können, müssen Sie zuerst anhand der Methode zum [Abrufen von Informationen zu einem Fehler in der App](get-details-for-an-error-in-your-app.md) die ID der CAB-Datei abrufen, die Sie herunterladen möchten.
 

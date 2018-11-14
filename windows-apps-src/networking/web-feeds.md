@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 309dd2aedb2195362652da93c13648d07e5ea9f8
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6046105"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6452871"
 ---
 # <a name="rssatom-feeds"></a>RSS-/Atom-Feeds
 
@@ -46,7 +46,7 @@ Mit der Netzwerkisolation kann ein Entwickler für jede App den Umfang des erfor
 
 Die Netzwerkisolation wirkt sich auf alle Klassenelemente in den [**Windows.Web.Syndication**](https://msdn.microsoft.com/library/windows/apps/br243632)-Namespace und im [**Windows.Web.AtomPub**](https://msdn.microsoft.com/library/windows/apps/br210609)-Namespace aus, die versuchen, auf das Netzwerk zuzugreifen. Die Netzwerkisolation wird unter Windows aktiv erzwungen. Ein Aufruf eines Klassenelements im **Windows.Web.Syndication**-Namespace oder **Windows.Web.AtomPub**-Namespace, der zu einem Netzwerkzugriff führt, kann aufgrund der Netzwerkisolation einen Fehler verursachen, falls die geeignete Netzwerkfunktion nicht aktiviert wurde.
 
-Die Netzwerkfunktionen für eine App werden beim Erstellen der App im App-Manifest konfiguriert. Netzwerkfunktionen werden normalerweise mithilfe von Microsoft Visual Studio2015, bei der Entwicklung der app hinzugefügt. Sie können aber auch manuell mit einem Texteditor in der App-Manifestdatei festgelegt werden.
+Die Netzwerkfunktionen für eine App werden beim Erstellen der App im App-Manifest konfiguriert. Netzwerkfunktionen werden normalerweise hinzugefügt mithilfe von Microsoft Visual Studio2015 bei der Entwicklung der app. Sie können aber auch manuell mit einem Texteditor in der App-Manifestdatei festgelegt werden.
 
 Ausführlichere Informationen zu Netzwerkisolation und Netzwerkfunktionen finden Sie im Abschnitt „Funktionen“ des Themas [Grundlagen zum Netzwerk](networking-basics.md).
 

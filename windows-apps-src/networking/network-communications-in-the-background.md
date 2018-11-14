@@ -9,15 +9,15 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 34fad804bb36ad1b4ce92a56772c33318e10faa8
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6032263"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6281699"
 ---
 # <a name="network-communications-in-the-background"></a>Netzwerkkommunikation im Hintergrund
 Um die Netzwerkkommunikation fortzusetzen, während Sie sich nicht im Vordergrund befindet, kann Ihre app Hintergrundaufgaben und eine der folgenden zwei Optionen verwenden.
-- Socketbroker. Wenn Ihre app Sockets für dauerhafte Verbindungen verwendet, wenn sie den Vordergrund verlässt, kann er den Besitz eines Sockets an einen System-socketbroker delegieren. Der Broker dann: Ihre app aktiviert, wenn Datenverkehr, für den Socket eingeht; überträgt den Besitz zurück an Ihre app; und Ihre app verarbeitet dann den eingehenden Datenverkehr.
+- Socketbroker. Wenn Ihre app Sockets für dauerhafte Verbindungen verwendet, wenn sie den Vordergrund verlässt, können sie den Besitz eines Sockets an einen System-socketbroker delegieren. Der Broker dann: Ihre app aktiviert, wenn Datenverkehr, auf dem Socket eingeht; überträgt den Besitz zurück an Ihre app; und die app dann verarbeitet den eingehenden Datenverkehr.
 - Steuerkanaltrigger. 
 
 ## <a name="performing-network-operations-in-background-tasks"></a>Netzwerkvorgänge in Hintergrundaufgaben

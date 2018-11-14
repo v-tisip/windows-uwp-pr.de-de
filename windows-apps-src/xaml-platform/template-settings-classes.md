@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d7b08138ab22d4cf2cbf4fb5273759f000a7c94
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6052225"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6183881"
 ---
 # <a name="template-settings-classes"></a>Vorlageneinstellungsklassen
 
@@ -97,7 +97,7 @@ Hier sehen Sie ein weiteres Beispiel für die Verwendung von standardmäßigen X
 
 Da auch diese Vorlage viel XAML-Code enthält, zeigen wir wieder nur einen Auszug. Dies ist nur ein Beispiel für die Zustände und Designanimationen, die dieselben [**ComboBoxTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227752)-Eigenschaften verwenden. Für [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348) erzwingt die Verwendung der **ComboBoxTemplateSettings**-Werte durch Bindungen, dass verwandte Animationen in der Vorlage beendet werden und an Positionen beginnen, die auf gemeinsamen Werten basieren. Dadurch ist der Übergang nahtlos.
 
-**Hinweis:**  Wenn Sie **TemplateSettings** Werte als Teil Ihrer Steuerelementvorlage verwenden, stellen Sie sicher, Sie sind Festlegen von Eigenschaften, die den Typ des Werts entsprechen. Andernfalls müssen Sie u.U. einen Wertkonverter für die Bindung erstellen, damit der Zieltyp der Bindung von einem anderen Quelltyp des **TemplateSettings**-Werts konvertiert werden kann. Weitere Informationen finden Sie unter [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903).
+**Hinweis:**  Wenn Sie **TemplateSettings** Werte als Teil Ihrer Steuerelementvorlage verwenden, achten Sie sind Eigenschaften festzulegen, die den Typ des Werts entsprechen. Andernfalls müssen Sie u.U. einen Wertkonverter für die Bindung erstellen, damit der Zieltyp der Bindung von einem anderen Quelltyp des **TemplateSettings**-Werts konvertiert werden kann. Weitere Informationen finden Sie unter [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903).
 
 ## <a name="related-topics"></a>Verwandte Themen
 

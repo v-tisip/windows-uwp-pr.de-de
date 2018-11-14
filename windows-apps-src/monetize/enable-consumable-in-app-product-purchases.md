@@ -9,18 +9,18 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c41801362a03bb8d1d5e06b3ada876014237b1f7
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6048018"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6190781"
 ---
 # <a name="enable-consumable-in-app-product-purchases"></a>Unterstützen von Käufen konsumierbarer In-App-Produkte
 
 Sie können In-App-Käufe von konsumierbaren Produkten – Artikel, die gekauft, verwendet und wieder gekauft werden können – über die Store-Handelsplattform anbieten, um den Kunden beim Kauf Stabilität und Zuverlässigkeit zu bieten. Dies ist besonders nützlich für Dinge wie spielinterne Währungen (Gold, Münzen usw.), die gekauft und dann zum Erwerben bestimmter Power-Ups verwendet werden können.
 
 > [!IMPORTANT]
-> Dieser Artikel beschreibt, wie Sie Mitglieder des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace verwenden, um konsumierbare In-App-Produktkäufe zu ermöglichen. Dieser Namespace wird nicht mehr mit neuen Funktionen aktualisiert, daher wird empfohlen, dass Sie stattdessen den [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) Namespace verwenden. Der **Windows.Services.Store** -Namespace unterstützt die neuesten Add-on-Typen, wie Store verwaltete konsumierbare Add-ons und Abonnements, und wurde entwickelt, um die Kompatibilität mit künftigen Arten von Produkten und Features von Partner Center und dem Store unterstützt werden. Der **Windows.Services.Store**-Namespace wurde in Windows10, Version 1607, eingeführt und kann nur in Projekten für die **Windows10 Anniversary Edition (10.0; Build 14393)** oder einer neueren Version in Visual Studio verwendet werden. Weitere Informationen zu konsumierbaren In-App-Produkten mithilfe des **Windows.Services.Store**-Namespace finden Sie in [diesem Artikel](enable-consumable-add-on-purchases.md).
+> Dieser Artikel beschreibt, wie Sie Mitglieder des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace verwenden, um konsumierbare In-App-Produktkäufe zu ermöglichen. Dieser Namespace wird nicht mehr mit neuen Funktionen aktualisiert, daher wird empfohlen, dass Sie stattdessen den [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) Namespace verwenden. Der **Windows.Services.Store** -Namespace unterstützt die neuesten Add-on-Typen, z. B. Store verwalteten Endverbraucher-Add-Ons und Abonnements, und wurde entwickelt, um die Kompatibilität mit künftigen Arten von Produkten und Features von Partner Center und dem Store unterstützt werden. Der **Windows.Services.Store**-Namespace wurde in Windows10, Version 1607, eingeführt und kann nur in Projekten für die **Windows10 Anniversary Edition (10.0; Build 14393)** oder einer neueren Version in Visual Studio verwendet werden. Weitere Informationen zu konsumierbaren In-App-Produkten mithilfe des **Windows.Services.Store**-Namespace finden Sie in [diesem Artikel](enable-consumable-add-on-purchases.md).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

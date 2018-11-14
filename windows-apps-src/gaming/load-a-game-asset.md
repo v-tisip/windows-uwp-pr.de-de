@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, DirectX, Laden von Ressourcen
 ms.localizationpriority: medium
 ms.openlocfilehash: 1bea3f515ba8ff810fc6dfd6281f0488c4f3e235
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6032286"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6188709"
 ---
 # <a name="load-resources-in-your-directx-game"></a>Laden von Ressourcen im DirectX-Spiel
 
@@ -214,7 +214,7 @@ Als Nächstes werden die Bytedaten aus der Datei des Gitters abgerufen. Im Beisp
 -   Die nachfolgenden Bits (numVertices \* sizeof(**BasicVertex**)) enthalten die Vertexdaten.
 -   Die letzten Bits (numIndices \* 16) enthalten die Indexdaten, dargestellt als Abfolge von uint16-Werten.
 
-Entscheidend ist: Sie sollten das Bitebenenlayout der geladenen Gitterdaten kennen. Stellen Sie außerdem sicher, dass für Endian-Konsistenz gesorgt ist. Alle Windows8 Plattformen sind little Endian.
+Entscheidend ist: Sie sollten das Bitebenenlayout der geladenen Gitterdaten kennen. Stellen Sie außerdem sicher, dass für Endian-Konsistenz gesorgt ist. Alle Windows8-Plattformen sind little Endian.
 
 Im Beispiel wird die „CreateMesh“-Methode aus der **LoadMeshAsync**-Methode aufgerufen, um diese Interpretation auf Bitebene durchzuführen.
 

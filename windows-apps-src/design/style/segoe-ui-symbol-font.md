@@ -12,11 +12,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d24f40c32cfcf3d0efe8597c4d955ae4146cf9e8
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035778"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6183646"
 ---
 # <a name="segoe-mdl2-icons"></a>Segoe MDL2-Symbole
 
@@ -45,7 +45,7 @@ Alle Glyphen in **Segoe MDL2 Assets** haben dieselbe feste Breite mit einer kons
 Viele der Symbole verfügen zudem über gespiegelte Formen, die in Sprachen verwendet werden können, in denen die Rechts-nach-Links-Ausrichtung verwendet wird, beispielsweise Arabisch, Farsi und Hebräisch.
 
 ## <a name="using-the-icons"></a>Verwenden der Symbole
-Wenn Sie eine app in c#/VB/C++ und XAML entwickeln, können Sie bestimmte Glyphen Segoe MDL2 Assets mit der [Symbol-Enumeration](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol). 
+Wenn Sie eine app in c#/VB/C++- und XAML entwickeln, können Sie bestimmte Glyphen Segoe MDL2 Assets mit der [Symbol-Enumeration](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol). 
 
 ```xaml
 <SymbolIcon Symbol="GlobalNavigationButton"/>
@@ -57,14 +57,14 @@ Wenn Sie ein Glyphen der Schriftart **Segoe MDL2 Assets** verwenden möchten, da
 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;"/>
 ```
 
-Sie können auch die statische Ressource `SymbolThemeFontFamily` **Segoe MDL2 Assets**, anstatt die Schriftart anhand des Namens Zugriff auf:
+Sie können auch die statische Ressource `SymbolThemeFontFamily` **Segoe MDL2 Assets**, statt die Schriftart anhand des Namens Zugriff auf:
 ```xaml
 <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE700;"/>
 ```
 
 
 ## <a name="how-do-i-get-this-font"></a>Wie erhalte ich diese Schriftart?
-* Klicken Sie auf Windows 10: Vorhanden ist, Sie müssen, nichts weiter, die Schriftart im Lieferumfang von Windows.
+* Unter Windows 10: Vorhanden ist, Sie müssen, nichts weiter, die Schriftart im Lieferumfang von Windows.
 * Auf einem Mac, müssen Sie zum Herunterladen und installieren Sie die Schriftart: <a href="https://aka.ms/SegoeFonts">erhalten Sie die Segoe UI und MDL2 Symbolschriftarten</a>
 
 ## <a name="icon-list"></a>Liste der Symbole
@@ -3976,7 +3976,7 @@ Beachten Sie zudem, dass die Schriftart **Segoe MDL2-Ressourcen** viel mehr Symb
  </tr>
 <tr><td><img src="images/segoe-mdl/EF3B.png" width="32" height="32" alt="Replay" /></td>
   <td>EF3B</td>
-  <td>Wiedergabe</td>
+  <td>Replay</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EF3C.png" width="32" height="32" alt="Eyedropper" /></td>
   <td>EF3C</td>

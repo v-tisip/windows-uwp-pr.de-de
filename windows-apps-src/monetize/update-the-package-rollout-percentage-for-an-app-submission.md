@@ -9,11 +9,11 @@ keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Paket-Rollout, App
 ms.assetid: 4c82d837-7a25-4f3a-997e-b7be33b521cc
 ms.localizationpriority: medium
 ms.openlocfilehash: ee7657a1ebd08e70e6b5dac8a9a723637539066e
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6183297"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6451780"
 ---
 # <a name="update-the-rollout-percentage-for-an-app-submission"></a>Aktualisieren des Prozentsatzes eines Rollouts einer App-Übermittlung
 
