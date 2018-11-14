@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, anpassen, Eintrag, Beschreibung, früher
 ms.localizationpriority: medium
 ms.openlocfilehash: c2bc58540f49afb8b24eaa58150132fea1d27f84
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6261704"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6159485"
 ---
 # <a name="create-platform-specific-store-listings"></a><span data-ttu-id="aef71-103">Erstellen plattformspezifischer Store-Einträge</span><span class="sxs-lookup"><span data-stu-id="aef71-103">Create platform-specific Store listings</span></span>
 

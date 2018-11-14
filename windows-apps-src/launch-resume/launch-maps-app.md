@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6fd7377294e0d460720f6a16e71981ab0924ac9a
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6142177"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6203865"
 ---
 # <a name="launch-the-windows-maps-app"></a><span data-ttu-id="60498-104">Starten der Windows-Karten-App</span><span class="sxs-lookup"><span data-stu-id="60498-104">Launch the Windows Maps app</span></span>
 
