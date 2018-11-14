@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a13ec942080d7fe517a10b837bea9ae8fae27750
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6033934"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6144016"
 ---
 # <a name="handle-app-prelaunch"></a>Behandeln des Vorabstarts von Apps
 
@@ -21,7 +21,7 @@ Erfahren Sie, wie Sie den Vorabstart von Apps durch außer Kraft setzen der [**O
 
 ## <a name="introduction"></a>Einführung
 
-Wenn verfügbaren Systemressourcen zulassen, die startleistung von UWP-apps auf Desktopgerät Gerätefamilie Geräte verbessern, indem Sie proaktiv Starten des Benutzers am häufigsten verwendeten apps im Hintergrund. Eine vorab gestartete App wird kurz nach dem Start in den angehaltenen Zustand versetzt. Wenn der Benutzer die App dann aufruft, wird sie fortgesetzt, indem sie vom angehaltenen Zustand in den ausgeführten Zustand versetzt wird. Dies ist schneller als ein Kaltstart der App. Der Benutzer gewinnt den Eindruck, dass die App sehr schnell startet.
+Wenn verfügbaren Systemressourcen ermöglichen, die startleistung von UWP-apps auf Desktopgerät Gerätefamilie Geräte verbessern, indem Sie proaktiv Starten des Benutzers am häufigsten verwendeten apps im Hintergrund. Eine vorab gestartete App wird kurz nach dem Start in den angehaltenen Zustand versetzt. Wenn der Benutzer die App dann aufruft, wird sie fortgesetzt, indem sie vom angehaltenen Zustand in den ausgeführten Zustand versetzt wird. Dies ist schneller als ein Kaltstart der App. Der Benutzer gewinnt den Eindruck, dass die App sehr schnell startet.
 
 Vor Windows10 waren die Vorteile des Vorabstarts nicht automatisch für Apps verfügbar. In Windows 10 Version 1511, alle universellen Windows-Plattform (UWP) apps Kandidaten für den Vorabstart eingerichtet wurden. In Windows 10, Version 1607, müssen Sie den Vorabstart aktivieren, in dem Sie [CoreApplication.EnablePrelaunch(true)](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx) aufrufen. Ein empfohlener Bereich für diesen Aufruf ist `OnLaunched()` in der Nähe der `if (e.PrelaunchActivated == false)`-Überprüfung.
 
@@ -112,7 +112,7 @@ private void TryEnablePrelaunch()
 }
 ```
 
-Hinweis: die `TryEnablePrelaunch()` funktionieren, oben beschrieben. Der Grund der Aufruf zu `CoreApplication.EnablePrelaunch()` wird umgerechnet Out in diese Funktion ist, da, wenn eine Methode aufgerufen wird, das JIT (Just-in-Time-Kompilierung) versucht, die gesamte Methode zu kompilieren. Wenn Ihre app auf einer Version von Windows 10 ausgeführt wird, die nicht unterstützt `CoreApplication.EnablePrelaunch()`, und klicken Sie dann das JIT schlägt fehl. Durch den Aufruf in eine Methode, die nur aufgerufen wird, wenn die app ermittelt, dass die Plattform unterstützt Zerlegung `CoreApplication.EnablePrelaunch()`, wir dieses Problem zu vermeiden.
+Hinweis: die `TryEnablePrelaunch()` funktionieren, oben beschrieben. Der Grund der Aufruf zu `CoreApplication.EnablePrelaunch()` ist Ressourcenauswahl Out in diese Funktion ist, da, wenn eine Methode aufgerufen wird, die JIT (Just-in-Time-Kompilierung) versucht, die gesamte Methode zu kompilieren. Wenn Ihre app auf einer Version von Windows 10 ausgeführt wird, die nicht unterstützt `CoreApplication.EnablePrelaunch()`, und klicken Sie dann die JIT schlägt fehl. Durch den Aufruf in eine Methode, die nur aufgerufen wird, wenn die app ermittelt, dass die Plattform unterstützt Zerlegung `CoreApplication.EnablePrelaunch()`, wir dieses Problem zu vermeiden.
 
 Es gibt auch im obigen Beispiel code, dass Sie kommentieren können, wenn Ihre app Vorabstart Teilnahme während der Ausführung unter Windows 10, Version 1511 muss. In Version 1511, automatisch alle UWP-apps zugelassen wurden in Vorabstart, die möglicherweise nicht für Ihre app geeignet.
 
@@ -205,7 +205,7 @@ Wenn Ihre WinJS-App für eine frühere Version von Windows10 geeignet ist, könn
     -   Hier ein Beispiel für eine Leistungsbeeinträchtigung: Um die aktuelle Wetterlage abzurufen, sollte gewartet werden, bis der Benutzer zur App wechselt. Die Infos sollten nicht beim Vorabstart der App geladen werden, weil sie erneut geladen werden müssen, wenn die App sichtbar wird, um sicherzustellen, dass die Informationen aktuell sind.
 -   Wenn die Live-Kachel Ihrer App beim Start gelöscht wird, stellen Sie diese Aktion bis zum VisibilityChanged-Ereignis zurück.
 -   Die Telemetrie für Ihre App sollte zwischen normalen Kachelaktivierungen und Vorabstartaktivierungen unterscheiden, damit eventuell auftretende Probleme leichter zu identifizieren sind.
--   Wenn Sie Microsoft Visual Studio2015 Update 1 und Windows 10, Version 1511, haben Sie können simulieren Vorabstart Ihrer App in Visual Studio2015 mit der Option **Debuggen** &gt; **Andere Debugziele** &gt; **universelle Windows-App Debuggen Vorabstart**.
+-   Wenn Sie Microsoft Visual Studio2015 Update 1 und Windows 10, Version 1511, haben Sie können Vorabstart simulieren Ihrer App in Visual Studio2015 mit der Option **Debuggen** &gt; **Andere Debugziele** &gt; **universelle Windows-App Debuggen Vorabstart**.
 
 ## <a name="related-topics"></a>Verwandte Themen
 

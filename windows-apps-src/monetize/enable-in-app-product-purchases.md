@@ -9,18 +9,18 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 89e9fff8f041c4beb2a897c7be75b2f6e009f809
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6034841"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6185229"
 ---
 # <a name="enable-in-app-product-purchases"></a>Unterstützen von In-App-Produktkäufen
 
 Sie können unabhängig davon, ob Ihre App kostenlos oder kostenpflichtig ist, Inhalte, andere Apps oder neue App-Funktionen (wie das Freischalten des nächsten Levels eines Spiels) direkt in der App verkaufen. Hier zeigen wir Ihnen, wie Sie diese Produkte in Ihrer App aktivieren können.
 
 > [!IMPORTANT]
-> Dieser Artikel beschreibt, wie Sie Mitglieder des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace verwenden, um In-App-Produktkäufe zu ermöglichen. Dieser Namespace wird nicht mehr mit neuen Funktionen aktualisiert, daher wird empfohlen, dass Sie stattdessen den [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) Namespace verwenden. Der **Windows.Services.Store** -Namespace unterstützt die neuesten Add-on-Typen, wie Store verwaltete konsumierbare Add-ons und Abonnements, und wurde entwickelt, um die Kompatibilität mit künftigen Arten von Produkten und Features von Partner Center und dem Store unterstützt werden. Der **Windows.Services.Store**-Namespace wurde in Windows10, Version 1607, eingeführt und kann nur in Projekten für die **Windows10 Anniversary Edition (10.0; Build 14393)** oder einer neueren Version in Visual Studio verwendet werden. Weitere Informationen zum Aktivieren von in-app-Produktkäufe mit dem **Windows.Services.Store** -Namespace finden Sie [in diesem Artikel](enable-in-app-purchases-of-apps-and-add-ons.md).
+> Dieser Artikel beschreibt, wie Sie Mitglieder des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace verwenden, um In-App-Produktkäufe zu ermöglichen. Dieser Namespace wird nicht mehr mit neuen Funktionen aktualisiert, daher wird empfohlen, dass Sie stattdessen den [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) Namespace verwenden. Der **Windows.Services.Store** -Namespace unterstützt die neuesten Add-on-Typen, z. B. Store verwalteten Endverbraucher-Add-Ons und Abonnements, und wurde entwickelt, um die Kompatibilität mit künftigen Arten von Produkten und Features von Partner Center und dem Store unterstützt werden. Der **Windows.Services.Store**-Namespace wurde in Windows10, Version 1607, eingeführt und kann nur in Projekten für die **Windows10 Anniversary Edition (10.0; Build 14393)** oder einer neueren Version in Visual Studio verwendet werden. Weitere Informationen zum Aktivieren von in-app-Produktkäufe mit dem **Windows.Services.Store** -Namespace finden Sie [in diesem Artikel](enable-in-app-purchases-of-apps-and-add-ons.md).
 
 > [!NOTE]
 > In-App-Produkte können nicht in einer Testversion einer App angeboten werden. Kunden, die eine Testversion Ihrer App verwenden, können nur dann In-App-Produkte kaufen, wenn sie eine Vollversion der App kaufen.
@@ -54,7 +54,7 @@ Erstellen Sie für jedes Feature, das über ein In-App-Produkt zur Verfügung st
     * „RainbowThemePack“
 
   > [!NOTE]
-  > Das in-app-angebotstoken, das Sie in Ihrem Code verwenden übereinstimmen muss den [Produkt-ID](../publish/set-your-add-on-product-id.md#product-id) -Wert Sie, wenn angeben Sie [das entsprechende Add-on für Ihre app im Partner Center zu definieren](../publish/add-on-submissions.md).
+  > Das in-app-angebotstoken, das Sie in Ihrem Code verwenden muss entsprechen den [Produkt-ID](../publish/set-your-add-on-product-id.md#product-id) -Wert, die Sie, wenn angeben Sie [das entsprechende Add-on für Ihre app im Partner Center zu definieren](../publish/add-on-submissions.md).
 
 2.  **Schreiben Sie den Code für das Feature in einem Bedingungsblock.**
 
@@ -83,7 +83,7 @@ Dies ist ein einfacher Schritt: Ändern Sie im Code Ihrer App alle Verweise auf 
 Navigieren Sie im Partner Center zu Ihrer app und [ein Add-on zu erstellen](../publish/add-on-submissions.md) , die Ihrem in-app-Produktangebot entspricht. Definieren Sie Produkt-ID, Typ, Preis und andere Eigenschaften für das Add-On. Die Konfiguration muss genau mit der Konfiguration in der Datei WindowsStoreProxy.xml übereinstimmen, die Sie beim Testen festlegen.
 
   > [!NOTE]
-  > Das in-app-angebotstoken, das Sie in Ihrem Code verwenden, muss den [Produkt-ID](../publish/set-your-add-on-product-id.md#product-id) -Wert übereinstimmen, die, den Sie für das entsprechende Add-on im Partner Center angeben.
+  > Das in-app-angebotstoken, das Sie in Ihrem Code verwenden, muss die [Produkt-ID](../publish/set-your-add-on-product-id.md#product-id) -Wert übereinstimmen, die, den Sie für das entsprechende Add-on im Partner Center angeben.
 
 ## <a name="remarks"></a>Hinweise
 

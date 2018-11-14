@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 3ec0f99f069950776ab934c82bd3197bdd6c9dd6
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6032924"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6139624"
 ---
 # <a name="mouse-interactions"></a>Mausinteraktionen
 
@@ -98,7 +98,7 @@ Reagieren Sie in Ihren Apps auf Mauseingaben, indem Sie die gleichen einfachen Z
 
 Verwenden Sie [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)-Ereignisse, um grundlegende Eingabefunktionen zu implementieren, ohne separaten Code für jedes Zeigereingabegerät schreiben zu müssen. Sie können aber trotzdem die speziellen Funktionen jedes Geräts nutzen (z. B. die Ereignisse des Mausrads), indem Sie die Zeiger-, Gestik- und Manipulationsereignisse dieses Objekts verwenden.
 
-**Beispiele:** Diese Funktionalität in Aktion zu sehen in unserer [Beispiele](https://go.microsoft.com/fwlink/p/?LinkID=264996)wird angezeigt.
+**Beispiele:** Diese Funktionalität in Aktion in unserer [Beispiele](https://go.microsoft.com/fwlink/p/?LinkID=264996)wird angezeigt.
 
 
 - [Eingabe: Beispiel für Gerätefunktionen](https://go.microsoft.com/fwlink/p/?linkid=231530)

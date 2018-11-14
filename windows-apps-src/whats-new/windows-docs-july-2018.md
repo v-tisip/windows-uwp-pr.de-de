@@ -8,15 +8,15 @@ ms.date: 7/11/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b9c2ff7e809c635eb97e818c91e5d6647a963560
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6047285"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6139518"
 ---
-# <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>Was ist neu in der Windows-Entwicklerdokumentation im Juli 2018
+# <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>Neuigkeiten in der Windows-Entwicklerdokumentation im Juli 2018
 
-Die Entwicklerdokumentation für die Windows-Plattform wird ständig mit Informationen über neue Features für Entwickler aktualisiert. Die folgenden Featureübersichten, entwicklerleitfäden, Videos und Beispiele wurden in den Monat Juli zur Verfügung gestellt.
+Die Entwicklerdokumentation für die Windows-Plattform wird ständig mit Informationen über neue Features für Entwickler aktualisiert. Die folgenden Featureübersichten, entwicklerleitfäden, Videos und Beispiele wurden im Juli zur Verfügung gestellt.
 
 Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/create-uwp-apps.md) oder sich mit der Verwendung von [vorhandenem App-Code unter Windows](../porting/index.md) vertraut machen.
 
@@ -24,7 +24,7 @@ Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?L
 
 ### <a name="progressive-web-apps-on-windows"></a>Progressive Web-Apps unter Windows
 
-[Progressive Web-Apps (PWAs)](https://developer.microsoft.com/windows/pwa) sind einfach Web-apps, die durch systemeigene app-ähnliche Features zur Unterstützung von Plattformen und Browser-Engines, z. B. das Starten von Startseite Installation, offlinesupport und Push [progressives enhanced](https://wikipedia.org/wiki/Progressive_enhancement) sind Benachrichtigungen. Genießen Sie den zusätzlichen Vorteil Ausführung unter Windows 10 mit der Microsoft Edge (EdgeHTML)-Engine, PWAs [unabhängig vom Browserfenster als UWP-apps.](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)
+[Progressive Web-Apps (PWAs)](https://developer.microsoft.com/windows/pwa) sind einfach Web-apps, die mit systemeigene app-ähnliche Features zur Unterstützung von Plattformen und Browser-Engines, z. B. das Starten von Startseite Installation, offlinesupport und Push [progressives erweitert](https://wikipedia.org/wiki/Progressive_enhancement) werden Benachrichtigungen. Genießen Sie den zusätzlichen Vorteil der Ausführung unter Windows 10 mit der Microsoft Edge (EdgeHTML)-Engine, PWAs [unabhängig vom Browserfenster als UWP-apps.](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)
 
 ![Ein Image des PWAs in Aktion zu sehen](images/progressive-web-apps.jpg)
 
@@ -42,15 +42,15 @@ In Windows 10 Insider Preview Build 17713, [Editor wurde aktualisiert und bietet
 
 ### <a name="design-landing-page"></a>Design-Startseite
 
-Sehen Sie sich das [Design Angebotsseite aktualisiert](https://developer.microsoft.com/windows/apps/design) für eine auf einen Blick Übersicht über UWP Design Bereiche und Informationen über die neusten Fluent Design.
+Sehen Sie sich das [Design Angebotsseite aktualisiert](https://developer.microsoft.com/windows/apps/design) für einen auf einen Blick Überblick über UWP Design Bereiche und Informationen über die neusten Fluent Design.
 
 ### <a name="design-toolkits"></a>Design-Toolkits
 
-Adobe XD und Adobe Illustrator-Toolkits wurden mit neuen Funktionen aktualisiert. Diese Design-Toolkits bieten Steuerelemente und Layoutvorlagen für das Entwerfen von UWP-apps. [Überprüfen sie hier.](../design/downloads/index.md)
+Adobe XD und Adobe Illustrator-Toolkits wurden mit neuen Funktionen aktualisiert. Diese Design-Toolkits bieten Steuerelemente und Layoutvorlagen für das Entwerfen von UWP-apps. [Checken sie hier.](../design/downloads/index.md)
 
 ### <a name="webvr"></a>WebVR
 
-Wir haben mehrere neue Themen in der [Dokumentation zu WebVR](https://docs.microsoft.com/microsoft-edge/webvr/
+Wir haben mehrere neue Themen in der [Dokumentation WebVR](https://docs.microsoft.com/microsoft-edge/webvr/
 )hinzugefügt:
 
 * [Was ist WebVR?](https://docs.microsoft.com/microsoft-edge/webvr/what-is-webvr
@@ -66,7 +66,7 @@ Darüber hinaus haben wir einige Updates zu bestehenden Seiten vorgenommen:
 
 * Das Inhaltsverzeichnis ist jetzt besser in vier unterschiedliche auf oberster Ebene Buckets organisiert: **Grundlagen**, **Entwicklung**, **Ressourcen**und **Demos**.
 
-* [WebVR-Entwicklerhandbuch (Angebotsseite)](https://docs.microsoft.com/microsoft-edge/webvr/): aktualisiert Aussehen und Verhalten mit größeren Bildern und Symbolen und neue Demo.
+* [WebVR Entwicklerhandbuch (Angebotsseite)](https://docs.microsoft.com/microsoft-edge/webvr/): aktualisiert Aussehen und Verhalten mit größeren Bildern und Symbolen und neue Demo.
 
 * [Mithilfe von WebVR mit Microsoft Edge](https://docs.microsoft.com/microsoft-edge/webvr/webvr-with-edge): aktualisiert, um Informationen über die Windows 10 April 2018 Update.
 
@@ -74,15 +74,15 @@ Darüber hinaus haben wir einige Updates zu bestehenden Seiten vorgenommen:
 
 ### <a name="get-started-for-devs-create-and-customize-a-form-on-windows-10"></a>Erste Schritte für Entwickler: Erstellen und Anpassen eines Formulars unter Windows 10
 
-Unsere [Erste Schritte-Dokumentation](../get-started/index.md) für Windows-Entwickler jetzt bereitstellen praktische Erfahrung mit grundlegenden app-Entwicklungsaufgabe. In diesem Video führt Sie durch eine diese Themen, und es werden die Grundlagen der Erstellung eines Formulars Benutzeroberfläche in Ihrer app. [Das Video ansehen](https://www.youtube.com/watch?v=AgngKzq4hKI&feature=youtu.be) , um den Code in Aktion zu sehen, klicken Sie dann anzuzeigen [finden Sie im Thema selbst.](http://aka.ms/CreateForms)
+Unsere [Erste Schritte-Dokumentation](../get-started/index.md) für Windows-Entwickler jetzt bereitstellen praktische Erfahrung mit grundlegenden app-Entwicklungsaufgabe. In diesem Video führt Sie durch eine der diese Themen, und es werden die Grundlagen der beim Erstellen einer Benutzeroberfläche in Ihrer app. [Das Video ansehen](https://www.youtube.com/watch?v=AgngKzq4hKI&feature=youtu.be) , um den Code in Aktion zu sehen, klicken Sie dann anzuzeigen [finden Sie im Thema selbst.](http://aka.ms/CreateForms)
 
 ### <a name="enhance-your-bot-with-project-personality-chat"></a>Verbessern Sie Ihre Bot mit Projekt Persönlichkeit chat
 
-Projekt Persönlichkeit Chat können Sie Ihre Chat-Bots eine anpassbare Rolle hinzufügen. Durch die Integration mit Microsoft Bot Framework SDK, können Sie kleine sprechen Funktionen für eine mehr umgangssprachliche englische Möglichkeit zur Interaktion mit den Kunden hinzufügen. Erfahren Sie, wie Sie es, und dann [die interaktive Demo ausprobieren](http://aka.ms/PersonalityChat) für eine praktische Erfahrung implementieren [das Video ansehen](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) .
+Projekt Persönlichkeit Chat können Sie Ihre Chat-Bots eine anpassbare Rolle hinzufügen. Durch die Integration mit Microsoft Bot Framework SDK, können Sie kleine sprechen Funktionen für eine weitere gesprochener Möglichkeit Interaktion mit den Kunden hinzufügen. [Das Video ansehen](https://www.youtube.com/watch?v=5C_uD8g2QKg&feature=youtu.be) , erfahren Sie, wie Sie es, und dann [die interaktive Demo testen](http://aka.ms/PersonalityChat) für eine praktische Erfahrung zu implementieren.
 
 ### <a name="one-dev-question"></a>One Dev Frage
 
-In der One Dev Frage Videoserie behandelt seit Microsoft-Entwicklern eine Reihe von Fragen zur Windows-Entwicklung, Teamkultur und Verlauf. Hier ist die neueste Fragen, die wir beantwortet haben!
+In der eine Dev Frage Videoserie behandelt seit Microsoft-Entwicklern eine Reihe von Fragen zur Windows-Entwicklung, Teamkultur, und zum Verlauf. Hier ist die neueste Fragen, die wir beantwortet haben!
 
 Raymond Chen:
 

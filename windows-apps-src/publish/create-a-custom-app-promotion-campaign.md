@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, benutzerdefiniert, App, Werbung, Kampagnen
 ms.localizationpriority: medium
 ms.openlocfilehash: 643c6c70b4482e7069c1254e27a5688f81bf7e07
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6037836"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6157230"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a>Erstellen einer Werbekampagne für benutzerdefinierte Apps
 
@@ -28,7 +28,7 @@ Es gibt im Wesentlichen zwei Typen von Daten zu benutzerdefinierten Kampagnen: *
 
 Sie können Leistungsdaten einer benutzerdefinierten Kampagne für Ihre App auf folgende Arten abrufen:
 
-* Sie können Daten über Seitenaufrufe und Konvertierungen für Ihre app oder Ihr Add-on aus der **App-Seitenaufrufe und Konvertierungen nach Kampagnen-ID** und **Konvertierungen pro Kampagne insgesamt** Diagramme im [Bericht "Käufe"](acquisitions-report.md)anzeigen.
+* Sie können Daten über Seitenaufrufe und Konvertierungen für Ihre Apps oder Add-Ons über die **App-Seitenaufrufe und Konvertierungen nach Kampagnen-ID** und **Konvertierungen pro Kampagne insgesamt** Diagramme im [Bericht "Käufe"](acquisitions-report.md)anzeigen.
 * Wenn es sich bei Ihrer App um eine App für die universelle Windows-Plattform (UWP) handelt, können Sie mit APIs im Windows SDK programmgesteuert die benutzerdefinierte Kampagnen-ID abrufen, die zu einer Konvertierung geführt hat.
 
 ## <a name="example-custom-campaign-scenario"></a>Beispielszenario für eine benutzerdefinierte Kampagne
@@ -49,7 +49,7 @@ Wenn seine Facebook- und Twitter-Follower auf die URLs klicken, verfolgt Microso
 
 Als benutzerdefinierten Kampagnen-*Konvertierung* wird ein App-Erwerb bezeichnet, der daraus resultiert, dass ein Kunde von einer über eine benutzerdefinierte Kampagne beworbenen URL klickt. Es gibt verschiedene Szenarien für die Qualifizierung als Konvertierung für die **App-Seitenaufrufe und Konvertierungen nach Kampagnen-ID** und **Konvertierungen pro Kampagne insgesamt** Diagramme im [Bericht "Käufe"](acquisitions-report.md) und für die Qualifizierung als Konvertierung für [ Programmgesteuertes Abrufen der Kampagnen-ID](#programmatically).
 
-### <a name="qualifying-conversions-in-the-acquisitions-report"></a>Qualifizieren von Konvertierungen in der Bericht "Käufe"
+### <a name="qualifying-conversions-in-the-acquisitions-report"></a>Qualifizieren von Konvertierungen im Bericht Käufe
 
 Die folgenden Szenarien gelten als Konvertierung für die Diagramme **App-Seitenaufrufe und -Konvertierungen nach Kampagnen-ID** und **Gesamtanzahl der Konvertierungen pro Kampagne** im [Bericht "Käufe"](acquisitions-report.md):
 
@@ -195,4 +195,4 @@ Bevor Sie eine URL für eine benutzerdefinierte Kampagnen bewerben, empfehlen wi
 
 3.  Klicken Sie noch einige weitere Male auf die URL, und schließen Sie nach jedem Besuch der App-Seite die UWP-App oder die Browserseite. Erwerben Sie bei **einem** der Besuche Ihrer App-Seite die App, um eine Konvertierung zu generieren. Zählen Sie, wie oft Sie insgesamt auf die URL geklickt haben.
 
-4. Bestätigen Sie, ob die erwarteten Seitenaufrufe und Konvertierungen in der **App-Seitenaufrufe und Konvertierungen nach Kampagnen-ID** und die **Gesamtanzahl der Konvertierungen pro Kampagne** Diagramme im [Bericht "Käufe"](acquisitions-report.md)angezeigt werden, und Ihrer app-Code testen, um zu bestätigen, ob es können abgerufen Sie die Kampagnen-ID, die mit den oben beschriebenen APIs erfolgreich werden.
+4. Bestätigen Sie, ob die erwarteten Seitenaufrufe und Konvertierungen in der **App-Seitenaufrufe und Konvertierungen nach Kampagnen-ID** und die **Gesamtanzahl der Konvertierungen pro Kampagne** Diagramme im [Bericht "Käufe"](acquisitions-report.md)angezeigt werden, und Ihrer app-Code zum Überprüfen testen, ob es können abgerufen Sie die Kampagnen-ID, die mit den oben beschriebenen APIs erfolgreich.

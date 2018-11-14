@@ -9,25 +9,25 @@ ms.topic: article
 keywords: Windows10, UWP, Geocodierung, Karte, Ort, Standort
 ms.localizationpriority: medium
 ms.openlocfilehash: bdd956dece4435ceb8e14121ec2b545095af3a11
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6043413"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6142886"
 ---
 # <a name="perform-geocoding-and-reverse-geocoding"></a>Durchführen von Geocodierung und umgekehrter Geocodierung
 
 Dieses Handbuch beschreibt, wie Sie konvertieren Adressen in geografische Standorte (geocodierung) und geografische Standorte in Adressen (umgekehrte geocodierung) durch Aufrufen der Methoden der [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) -Klasse in der [**Windows.Services.Maps **](https://msdn.microsoft.com/library/windows/apps/dn636979)Namespace.
 
 > [!TIP]
-> Um mehr über die Verwendung von Karten in Ihrer app zu erfahren, laden Sie das Beispiel [MapControl](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl) aus dem [Windows-universal-Samples-Repository](hhttps://github.com/Microsoft/Windows-universal-samples) auf GitHub.
+> Um mehr über die Verwendung von Karten in Ihrer app zu erfahren, laden Sie das [MapControl](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl) -Beispiel aus dem [Windows-universal-Samples-Repository](hhttps://github.com/Microsoft/Windows-universal-samples) auf GitHub.
 
 Die Klassen geocodierung und umgekehrte geocodierung beteiligt sind wie folgt aufgebaut.
 
--   [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) -Klasse enthält Methoden, die zum Behandeln geocodierung ([**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925)) und umgekehrten geocodierung ([**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928)).
+-   [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) -Klasse enthält Methoden für die Verarbeitung von geocodierung ([**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925)) und umgekehrten geocodierung ([**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928)).
 -   Diese Methoden geben eine [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) -Instanz zurück.
 -   Die [**Speicherorte**](https://msdn.microsoft.com/library/windows/apps/dn627552) -Eigenschaft der [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) enthält eine Auflistung der [**Kartenregion**](https://msdn.microsoft.com/library/windows/apps/dn627549) Objekte. 
--   [**Kartenregion**](https://msdn.microsoft.com/library/windows/apps/dn627549) Objekte enthalten eine [**Adresse**](https://msdn.microsoft.com/library/windows/apps/dn636929) -Eigenschaft, die ein [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) -Objekt, eine Straße darstellen verfügbar macht, und ein [**Punkt**](https://docs.microsoft.com/uwp/api/windows.services.maps.maplocation.point) -Eigenschaft, die ein [**Geopoint**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint) -Objekt zurück, einen geografischen Standort verfügbar macht.
+-   [**Kartenregion**](https://msdn.microsoft.com/library/windows/apps/dn627549) Objekte enthalten eine [**Adresse**](https://msdn.microsoft.com/library/windows/apps/dn636929) -Eigenschaft, die ein [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) -Objekt, das eine Straße darstellen verfügbar macht, sowohl eine [**Punkt**](https://docs.microsoft.com/uwp/api/windows.services.maps.maplocation.point) -Eigenschaft, die ein [**Geopoint**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint) -Objekt zurück, einen geografischen Standort verfügbar macht.
 
 > [!IMPORTANT]
 > Sie müssen einen Kartenauthentifizierungsschlüssel angeben, bevor Sie Kartendienste verwenden können. Weitere Informationen finden Sie unter [Anfordern eines Kartenauthentifizierungsschlüssels](authentication-key.md).
@@ -38,7 +38,7 @@ In diesem Abschnitt zeigt, wie eine Adresse oder einen Ortsnamen in einen geogra
 
 1.  Rufen Sie eine Überladung der Methode [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925) der [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550) -Klasse mit einem Ortsnamen oder Straße.
 2.  Die [**FindLocationsAsync**](https://msdn.microsoft.com/library/windows/apps/dn636925) -Methode gibt ein [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) -Objekt.
-3.  Verwenden Sie die [**Speicherorte**](https://msdn.microsoft.com/library/windows/apps/dn627552) -Eigenschaft der [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) , um eine Sammlung [**Kartenregion**](https://msdn.microsoft.com/library/windows/apps/dn627549) Objekte verfügbar zu machen. Da das System mehreren Standorten finden kann, die der Eingabe entsprechen, möglicherweise mehrere [**Kartenregion**](https://msdn.microsoft.com/library/windows/apps/dn627549) Objekte vor.
+3.  Verwenden Sie die [**Speicherorte**](https://msdn.microsoft.com/library/windows/apps/dn627552) -Eigenschaft der [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) , um eine Sammlung [**Kartenregion**](https://msdn.microsoft.com/library/windows/apps/dn627549) -Objekte verfügbar zu machen. Da das System mehreren Standorten finden kann, die der Eingabe entsprechen, möglicherweise mehrere [**Kartenregion**](https://msdn.microsoft.com/library/windows/apps/dn627549) Objekte vor.
 
 ```csharp
 using Windows.Services.Maps;
@@ -86,7 +86,7 @@ In diesem Abschnitt zeigt, wie einen geografischen Standort in eine Adresse (umg
 
 1.  Rufen Sie die [**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928)-Methode der [**MapLocationFinder**](https://msdn.microsoft.com/library/windows/apps/dn627550)-Klasse auf.
 2.  Die [**FindLocationsAtAsync**](https://msdn.microsoft.com/library/windows/apps/dn636928)-Methode gibt ein [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551)-Objekt zurück, das eine Sammlung übereinstimmender [**MapLocation**](https://msdn.microsoft.com/library/windows/apps/dn627549)-Objekte enthält.
-3.  Verwenden Sie die [**Speicherorte**](https://msdn.microsoft.com/library/windows/apps/dn627552) -Eigenschaft der [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) , um eine Sammlung [**Kartenregion**](https://msdn.microsoft.com/library/windows/apps/dn627549) Objekte verfügbar zu machen. Da das System mehreren Standorten finden kann, die der Eingabe entsprechen, möglicherweise mehrere [**Kartenregion**](https://msdn.microsoft.com/library/windows/apps/dn627549) Objekte vor.
+3.  Verwenden Sie die [**Speicherorte**](https://msdn.microsoft.com/library/windows/apps/dn627552) -Eigenschaft der [**MapLocationFinderResult**](https://msdn.microsoft.com/library/windows/apps/dn627551) , um eine Sammlung [**Kartenregion**](https://msdn.microsoft.com/library/windows/apps/dn627549) -Objekte verfügbar zu machen. Da das System mehreren Standorten finden kann, die der Eingabe entsprechen, möglicherweise mehrere [**Kartenregion**](https://msdn.microsoft.com/library/windows/apps/dn627549) Objekte vor.
 4.  Greifen Sie über die [**Adresse**](https://msdn.microsoft.com/library/windows/apps/dn636929) -Eigenschaft jedes [**Kartenregion**](https://msdn.microsoft.com/library/windows/apps/dn627549) [**MapAddress**](https://msdn.microsoft.com/library/windows/apps/dn627533) Objekte auf.
 
 ```csharp
@@ -126,7 +126,7 @@ town = Redmond
 * [Beispiel für UWP-Karte](http://go.microsoft.com/fwlink/p/?LinkId=619977)
 * [Beispiel für eine UWP-App mit Verkehrsinformationen](http://go.microsoft.com/fwlink/p/?LinkId=619982)
 * [Entwurfsrichtlinien für Karten](https://msdn.microsoft.com/library/windows/apps/dn596102)
-* [Video: Nutzen von Karten und Speicherort über Telefon, Tablet und PC in Ihren Windows-Apps](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [Video: Nutzen von Karten und Position über Telefon, Tablet und PC in Ihren Windows-Apps](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [Bing Maps Developer Center](https://www.bingmapsportal.com/)
 * [**MapLocationFinder** Klasse](https://msdn.microsoft.com/library/windows/apps/dn627550)
 * [**FindLocationsAsync** -Methode](https://msdn.microsoft.com/library/windows/apps/dn636925)

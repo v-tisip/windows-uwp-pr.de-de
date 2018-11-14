@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Beispiel, DirectX, Grafiken
 ms.localizationpriority: medium
 ms.openlocfilehash: 5171578b844829ec590b654194639ed6c8ebbfe1
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6027690"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6146180"
 ---
 # <a name="adding-visual-content-to-the-marble-maze-sample"></a>Hinzufügen von visuellem Inhalt zum Marble Maze-Beispiel
 
@@ -25,14 +25,14 @@ In diesem Dokument wird beschrieben, wie das Spiel Marble Maze Direct3D und Dire
 Bei der Entwicklung der visuellen Aspekte von Marble Maze haben wir die folgenden grundlegenden Schritte ausgeführt:
 
 1.  Erstellen eines Basisframeworks zur Initialisierung der Direct3D- und Direct2D-Umgebungen.
-2.  Verwenden von Bild-Bildbearbeitungsprogrammen zum Entwerfen der 2D- und 3D-Grafiken Objekte, die im Spiel angezeigt werden.
+2.  Verwenden von Bild-Bildbearbeitungsprogrammen zum Entwerfen der 2D- und 3D-Grafiken-Objekte, die im Spiel angezeigt werden.
 3.  Stellen Sie sicher, dass 2D- und 3D-Grafiken Objekte ordnungsgemäß geladen und im Spiel angezeigt werden.
 4.  Integrieren von Vertex- und Pixelshadern zur Verbesserung der visuellen Qualität der Spielobjekte.
 5.  Integrieren der Spiellogik, beispielsweise Animationen und Benutzereingabe.
 
 Wir ferner auf 3D-Ressourcen hinzufügen und anschließend auf 2D-Ressourcen. Beispielsweise haben wir den Schwerpunkt zunächst auf die grundlegende Spiellogik gelegt, bevor wir das Menüsystem und den Timer hinzugefügt haben.
 
-Darüber hinaus mussten wir einige dieser Schritte während des Entwicklungsprozesses mehrmals durchlaufen. Wie wir den Gitter- und labyrinthmodellen geändert, mussten wir beispielsweise auch einen Teil des shadercodes ändern, der diese Modelle unterstützt.
+Darüber hinaus mussten wir einige dieser Schritte während des Entwicklungsprozesses mehrmals durchlaufen. Angenommen, mussten wir den Gitter- und labyrinthmodellen geändert, wir auch ein Teil des shadercodes ändern, der diese Modelle unterstützt.
 
 > [!NOTE]
 > Den Beispielcode für dieses Dokument finden Sie im [DirectX-Beispielspiel Marble Maze](http://go.microsoft.com/fwlink/?LinkId=624011).
@@ -46,17 +46,17 @@ Es folgen einige wichtige Punkte, die in diesem Dokument erläutert werden und d
 -   Die Erstellung der Direct3D- und Direct2D-Geräte in einer UWP-App ähnelt weitestgehend der Vorgehensweise für eine klassische Windows-Desktop-App. Ein wichtiger Unterschied besteht in der Art und Weise der Zuordnung der Swapchain zum Ausgabefenster.
 -   Stellen Sie beim Entwickeln des Spiels sicher, dass das von Ihnen ausgewählte Gitterformat die wichtigen Szenarien unterstützt. Wenn für Ihr Spiel beispielsweise eine Kollision erforderlich ist, stellen Sie sicher, dass Sie Kollisionsdaten aus Ihren Gittern abrufen.
 -   Separieren Sie die Spiellogik von der Renderlogik, indem Sie zunächst alle Szenenobjekte aktualisieren, bevor Sie sie rendern.
--   Zeichnen Sie in der Regel Ihre 3D-Szene-Objekte, und klicken Sie dann alle 2D-Objekten, die vor der Szene angezeigt werden.
+-   Zeichnen Sie in der Regel Ihre 3D-Szene-Objekten, und dann alle 2D-Objekten, die vor der Szene angezeigt werden.
 -   Synchronisieren Sie die Zeichnung mit der vertikalen Austastung, um sicherzustellen, dass das Spiel keine Zeit für das Zeichen von Frames verwendet, die letztendlich nie auf dem Bildschirm angezeigt werden. Eine *vertikale austastung* ist die Zeit zwischen den Abschluss eines Frames Zeichnen auf dem Monitor und der nächste Frame beginnt.
 
 ## <a name="getting-started-with-directx-graphics"></a>Erste Schritte mit DirectX-Grafiken
 
 
-Wenn wir das Spiel Marble Maze universelle Windows Plattform (UWP) geplant, haben wir uns C++ und Direct3D 11.1 entschieden, da er sind eine ausgezeichnete Wahl für die Erstellung von 3D-Spielen, die maximale Kontrolle über das Rendern und hohe Leistung erfordern. DirectX 11.1 unterstützt Hardware von DirectX 9 bis DirectX 11 und kann Sie daher dabei unterstützen, mehr Kunden auf effizientere Art und Weise zu erreichen, da Sie so den Code für frühere DirectX-Versionen nicht neu schreiben müssen.
+Wenn wir das Spiel Marble Maze universelle Windows-Plattform (UWP) geplant, haben wir uns C++ und Direct3D 11.1 entschieden, da sie sind eine ausgezeichnete Wahl für die Erstellung von 3D-Spielen, die maximale Kontrolle über das Rendern und hohe Leistung erfordern. DirectX 11.1 unterstützt Hardware von DirectX 9 bis DirectX 11 und kann Sie daher dabei unterstützen, mehr Kunden auf effizientere Art und Weise zu erreichen, da Sie so den Code für frühere DirectX-Versionen nicht neu schreiben müssen.
 
-Marble Maze verwendet Direct3D 11.1 zum Rendern der 3D Spielobjekte, nämlich die Kugel und das Labyrinth. Marble Maze verwendet außerdem Direct2D, DirectWrite und (Windows Imaging Component, WIC) zum Zeichnen der 2D Spielobjekte, beispielsweise der Menüs und des Timers.
+Marble Maze verwendet Direct3D 11.1 zum Rendern der 3D Spielobjekte, nämlich die Kugel und das Labyrinth. Marble Maze auch Direct2D, DirectWrite und Windows-Bilderstellungskomponente (Windows Imaging Component, WIC) zum Zeichnen der 2D Spielobjekte, beispielsweise der Menüs und des Timers.
 
-Die Entwicklung eines Spiels erfordert Planung. Wenn Sie DirectX-Grafik nicht vertraut sind, empfehlen wir, dass Sie lesen [DirectX: Erste Schritte](directx-getting-started.md) mit den grundlegenden Konzepten der Entwicklung eines UWP-DirectX-Spiels vertraut. Beim Durchlesen dieses Dokuments und der Marble Maze-Quellcodes durchgehen, finden Sie in den folgenden Ressourcen für ausführliche Informationen zu DirectX-Grafiken:
+Die Entwicklung eines Spiels erfordert Planung. Wenn Sie DirectX-Grafik nicht vertraut sind, empfehlen wir, Sie lesen [DirectX: Erste Schritte](directx-getting-started.md) mit den grundlegenden Konzepten der Erstellung eines UWP-DirectX-Spiels vertraut. Wie Sie dieses Dokuments durchlesen und der Marble Maze-Quellcodes durchgehen, finden Sie in den folgenden Ressourcen für ausführliche Informationen zu DirectX-Grafiken:
 
 -   [Direct3D 11-Grafiken](https://msdn.microsoft.com/library/windows/desktop/ff476080): Beschreibt Direct3D 11, eine leistungsstarken, hardwarebeschleunigte 3D-Grafiken API zum Rendern von 3D-Geometrie auf der Windows-Plattform.
 -   [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990): Beschreibt Direct2D, eine hardwarebeschleunigte, 2D Grafik-API, die bietet hohe Leistung und Rendern mit hoher Qualität für 2D-Geometrie, Bitmaps und Text.
@@ -65,16 +65,16 @@ Die Entwicklung eines Spiels erfordert Planung. Wenn Sie DirectX-Grafik nicht ve
 
 ### <a name="feature-levels"></a>Featureebenen
 
-Direct3D 11 führt ein Paradigma mit der Bezeichnung *"featureebenen" trägt*. Eine Featureebene ist ein klar definierter Satz mit GPU-Funktionen. Mithilfe von Featureebenen können Sie Ihr Spiel für die Ausführung mit früheren Versionen von Direct3D-Hardware vorsehen. Marble Maze unterstützt die Featureebene 9.1, da keine erweiterten Features von den höheren Ebenen erforderlich sind. Es wird empfohlen, einen möglichst großen Hardwarebereich zu unterstützen und den Spielinhalt zu skalieren, sodass all Ihre Kunden von einem großartigen Spielerlebnis profitieren können – ganz gleich, ob Sie einen normalen Computer oder Highend-Computer besitzen. Weitere Informationen zu Featureebenen finden Sie unter [Direct3D11 unter kompatibler Hardware](https://msdn.microsoft.com/library/windows/desktop/ff476872).
+Direct3D 11 führt ein Paradigma mit dem Namen *"featureebenen" trägt*. Eine Featureebene ist ein klar definierter Satz mit GPU-Funktionen. Mithilfe von Featureebenen können Sie Ihr Spiel für die Ausführung mit früheren Versionen von Direct3D-Hardware vorsehen. Marble Maze unterstützt die Featureebene 9.1, da keine erweiterten Features von den höheren Ebenen erforderlich sind. Es wird empfohlen, einen möglichst großen Hardwarebereich zu unterstützen und den Spielinhalt zu skalieren, sodass all Ihre Kunden von einem großartigen Spielerlebnis profitieren können – ganz gleich, ob Sie einen normalen Computer oder Highend-Computer besitzen. Weitere Informationen zu Featureebenen finden Sie unter [Direct3D11 unter kompatibler Hardware](https://msdn.microsoft.com/library/windows/desktop/ff476872).
 
 ## <a name="initializing-direct3d-and-direct2d"></a>Initialisieren von Direct3D und Direct2D
 
 
 Ein Gerät repräsentiert die Grafikkarte. Die Erstellung der Direct3D- und Direct2D-Geräte in einer UWP-App ähnelt weitestgehend der Vorgehensweise für eine klassische Windows-Desktop-App. Der wesentliche Unterschied besteht in der Art und Weise, wie Sie die Direct3D-Swapchain mit dem Windowing-System verbinden.
 
-Die **DeviceResources**-Klasse ist eine Grundlage für die Verwaltung von Direct3D und Direct2D. Diese Klasse verarbeitet die allgemeine Infrastruktur, keine spielspezifischen Objekte. Marble Maze definiert die Klasse **MarbleMazeMain** Handle spielspezifische Ressourcen, die verfügt über einen Verweis auf ein **DeviceResources** -Objekt, um den Zugriff auf Direct3D und Direct2D zu ermöglichen.
+Die **DeviceResources**-Klasse ist eine Grundlage für die Verwaltung von Direct3D und Direct2D. Diese Klasse verarbeitet die allgemeine Infrastruktur, keine spielspezifischen Objekte. Marble Maze definiert die Klasse **MarbleMazeMain** Handle spielspezifische Ressourcen, das einen Verweis auf ein **DeviceResources** -Objekt, um den Zugriff auf Direct3D und Direct2D zu ermöglichen.
 
-Während der Initialisierung erstellt der **DeviceResources** -Konstruktor geräteabhängige Ressourcen und die Direct3D und Direct2D-Geräte.
+Während der Initialisierung erstellt die **DeviceResources** -Konstruktor geräteabhängige Ressourcen und die Direct3D und Direct2D-Geräte.
 
 ```cpp
 // Initialize the Direct3D resources required to run. 
@@ -146,7 +146,7 @@ void DX::DeviceResources::CreateDeviceIndependentResources()
 
 ###  <a name="creating-the-direct3d-and-direct2d-devices"></a>Erstellen der Direct3D- und Direct2D-Geräte
 
-Die **DeviceResources::CreateDeviceResources**-Methode ruft [D3D11CreateDevice](https://msdn.microsoft.com/library/windows/desktop/ff476082) auf, um das Geräteobjekt zu erstellen, das die Direct3D-Grafikkarte repräsentiert. Da Marble Maze Featureebene 9.1 und höher unterstützt, gibt die Methode **deviceresources:: Createdeviceresources** Ebenen 9.1 bis 11.1 im Array **FeatureLevels** an. Direct3D geht die Liste der Reihe nach durch und stellt die erste verfügbare Featureebene für die App bereit. Aus diesem Grund sind die **D3D\_FEATURE\_LEVEL** Arrayeinträge aufgelistet vom höchsten zum niedrigsten Wert, damit die app die höchste Featureebene erhält. Die **DeviceResources::CreateDeviceResources**-Methode erhält das Direct3D 11.1-Gerät durch Abfragen des Direct3D 11-Geräts, das von **D3D11CreateDevice** zurückgegeben wird.
+Die **DeviceResources::CreateDeviceResources**-Methode ruft [D3D11CreateDevice](https://msdn.microsoft.com/library/windows/desktop/ff476082) auf, um das Geräteobjekt zu erstellen, das die Direct3D-Grafikkarte repräsentiert. Da Marble Maze die Featureebene 9.1 und höher unterstützt, gibt die Methode **deviceresources:: Createdeviceresources** Ebenen 9.1 bis 11.1 im Array **FeatureLevels** an. Direct3D geht die Liste der Reihe nach durch und stellt die erste verfügbare Featureebene für die App bereit. Aus diesem Grund sind die **D3D\_FEATURE\_LEVEL** Arrayeinträge aufgelistet vom höchsten zum niedrigsten Wert, damit die app die höchste Featureebene erhält. Die **DeviceResources::CreateDeviceResources**-Methode erhält das Direct3D 11.1-Gerät durch Abfragen des Direct3D 11-Geräts, das von **D3D11CreateDevice** zurückgegeben wird.
 
 ```cpp
 // This flag adds support for surfaces with a different color channel ordering
@@ -250,7 +250,7 @@ Weitere Informationen zu DXGI und zur Interoperabilität zwischen Direct2D und D
 
 ### <a name="associating-direct3d-with-the-view"></a>Zuordnen von Direct3D zur Ansicht
 
-Die **DeviceResources::CreateWindowSizeDependentResources**-Methode erstellt die Grafikressourcen, die von einer bestimmten Fenstergröße abhängig sind, beispielsweise von der Swapchain und den Direct3D- und Direct2D-Renderzielen. Ein wichtiger Aspekt, in dem sich eine DirectX-UWP-App von einer Desktop-App unterscheidet, ist die Art und Weise, wie die Swapchain dem Ausgabefenster zugeordnet wird. Eine Swapchain dient der Anzeige des Puffers, in dem das Gerät rendert, auf dem Monitor. [Marble Maze-Anwendungsstruktur](marble-maze-application-structure.md) wird beschrieben, wie sich das Windowing-System für eine UWP-app von einer desktop-app unterscheidet. Da eine UWP-app mit [HWND](https://msdn.microsoft.com/library/windows/desktop/aa383751) Objekten nicht funktioniert, muss Marble Maze die [idxgifactory2:: Createswapchainforcorewindow](https://msdn.microsoft.com/library/windows/desktop/hh404559) -Methode zum Zuordnen der geräteausgabe zur Ansicht verwenden. Im folgenden Beispiel wird der Teil der **DeviceResources::CreateWindowSizeDependentResources**-Methode gezeigt, mit dem die Swapchain erstellt wird.
+Die **DeviceResources::CreateWindowSizeDependentResources**-Methode erstellt die Grafikressourcen, die von einer bestimmten Fenstergröße abhängig sind, beispielsweise von der Swapchain und den Direct3D- und Direct2D-Renderzielen. Ein wichtiger Aspekt, in dem sich eine DirectX-UWP-App von einer Desktop-App unterscheidet, ist die Art und Weise, wie die Swapchain dem Ausgabefenster zugeordnet wird. Eine Swapchain dient der Anzeige des Puffers, in dem das Gerät rendert, auf dem Monitor. [Marble Maze-Anwendungsstruktur](marble-maze-application-structure.md) wird beschrieben, wie sich das Windowing-System für eine UWP-app von einer desktop-app unterscheidet. Da eine UWP-app mit [HWND](https://msdn.microsoft.com/library/windows/desktop/aa383751) -Objekten nicht funktioniert, muss Marble Maze die [idxgifactory2:: Createswapchainforcorewindow](https://msdn.microsoft.com/library/windows/desktop/hh404559) -Methode zum Zuordnen der geräteausgabe zur Ansicht verwenden. Im folgenden Beispiel wird der Teil der **DeviceResources::CreateWindowSizeDependentResources**-Methode gezeigt, mit dem die Swapchain erstellt wird.
 
 ```cpp
 // Obtain the final swap chain for this window from the DXGI factory.
@@ -265,7 +265,7 @@ DX::ThrowIfFailed(
     );
 ```
 
-Zur Minimierung des Stromverbrauchs, was vor allem für batteriebetriebene Geräte wie Laptops und Tablets wichtig ist, ruft die **DeviceResources::CreateWindowSizeDependentResources**-Methode die [IDXGIDevice1::SetMaximumFrameLatency](https://msdn.microsoft.com/library/windows/desktop/ff471334)-Methode auf, um sicherzustellen, dass das Spiel erst nach der vertikalen Austastung gerendert wird. Synchronisierung mit der vertikalen austastung wird im Abschnitt [darstellen der Szene](#presenting-the-scene) in diesem Dokument ausführlicher beschrieben.
+Zur Minimierung des Stromverbrauchs, was vor allem für batteriebetriebene Geräte wie Laptops und Tablets wichtig ist, ruft die **DeviceResources::CreateWindowSizeDependentResources**-Methode die [IDXGIDevice1::SetMaximumFrameLatency](https://msdn.microsoft.com/library/windows/desktop/ff471334)-Methode auf, um sicherzustellen, dass das Spiel erst nach der vertikalen Austastung gerendert wird. Die Synchronisierung mit der vertikalen austastung wird im Abschnitt [darstellen der Szene](#presenting-the-scene) in diesem Dokument detaillierter beschrieben.
 
 ```cpp
 // Ensure that DXGI does not queue more than one frame at a time. This both 
@@ -288,13 +288,13 @@ Die **DeviceResources::CreateWindowSizeDependentResources**-Methode initialisier
 ## <a name="loading-scene-resources"></a>Laden von Szenenressourcen
 
 
-Marble Maze verwendet die **BasicLoader** -Klasse, die in **BasicLoader.h**deklariert wird, zum Laden von Texturen und Shader. Marble Maze verwendet die **SDKMesh** -Klasse, um die 3D Gitter für das Labyrinth und das Labyrinth laden.
+Marble Maze verwendet die **BasicLoader** -Klasse, die in **BasicLoader.h**deklariert wird, zum Laden von Texturen und Shader. Marble Maze verwendet die **SDKMesh** -Klasse, um die 3D Gitter für die Murmel und das Labyrinth zu laden.
 
 Um eine reagierende App zu gewährleisten, lädt Marble Maze die Szenenressourcen asynchron oder im Hintergrund. Während die Objekte im Hintergrund geladen werden, kann das Spiel auf Fensterereignisse reagieren. Dieser Prozess wird in diesem Handbuch unter [Laden von Spielobjekten im Hintergrund](marble-maze-application-structure.md#loading-game-assets-in-the-background) detaillierter erklärt.
 
 ###  <a name="loading-the-2d-overlay-and-user-interface"></a>Laden die 2D Overlay und die Benutzeroberfläche
 
-In Marble Maze ist die Überlagerung das Bild, das am oberen Rand des Bildschirms angezeigt wird. Die Überlagerung wird immer vor der Szene angezeigt. In Marble Maze enthält die Überlagerung das Windows-Logo und die Textzeichenfolge **Beispielspiel Marble Maze DirectX**. Die Verwaltung der Überlagerung erfolgt durch die **SampleOverlay** -Klasse, die unter **SampleOverlay.h**definiert ist. Obwohl wir die Überlagerung als Teil der Direct3D-Beispiele verwenden, können Sie diesen Code anpassen, um beliebige Bilder anzuzeigen, die vor Ihrer Szene erscheinen.
+In Marble Maze ist die Überlagerung das Bild, das am oberen Rand des Bildschirms angezeigt wird. Die Überlagerung wird immer vor der Szene angezeigt. In Marble Maze enthält die Überlagerung das Windows-Logo und die Textzeichenfolge **DirectX Marble Maze Spielbeispiel**. Die Verwaltung der Überlagerung erfolgt durch die **SampleOverlay** -Klasse, die unter **SampleOverlay.h**definiert ist. Obwohl wir die Überlagerung als Teil der Direct3D-Beispiele verwenden, können Sie diesen Code anpassen, um beliebige Bilder anzuzeigen, die vor Ihrer Szene erscheinen.
 
 Ein wichtiger Aspekt der Überlagerung ist, dass die **SampleOverlay**-Klasse, da sich ihre Inhalte nicht ändern, die zugehörigen Inhalte bei der Initialisierung in einem [ID2D1Bitmap1](https://msdn.microsoft.com/library/windows/desktop/hh404349)-Objekt zeichnet bzw. dort speichert. Beim Zeichnen muss die **SampleOverlay**-Klasse lediglich die Bitmap auf dem Bildschirm zeichnen. Auf diese Art und Weise müssen nicht für jeden Frame teure Routinen wie Textzeichnungen ausgeführt werden.
 
@@ -520,7 +520,7 @@ DX::ThrowIfFailed(
     );
 ```
 
-Die **marblemazemain:: Update** -Methode aktualisiert später **ConstantBuffer** Objekte, eine für das Labyrinth und eine für das Labyrinth. Die **marblemazemain:: Render** -Methode bindet jedes **ConstantBuffer** Objekt dann an den Konstantenpuffer, vor der einzelnen Objekte gerendert werden. Das folgende Beispiel zeigt die **ConstantBuffer** -Struktur, die im **MarbleMazeMain.h**befindet.
+Die **marblemazemain:: Update** -Methode aktualisiert später **ConstantBuffer** Objekte, eine für das Labyrinth und eine für das Labyrinth. Die **marblemazemain:: Render** -Methode bindet jedes Objekt **ConstantBuffer** dann an den Konstantenpuffer, bevor der einzelnen Objekte gerendert werden. Das folgende Beispiel zeigt die **ConstantBuffer** -Struktur, die im **MarbleMazeMain.h**befindet.
 
 ```cpp
 // Describes the constant buffer that draws the meshes.
@@ -558,7 +558,7 @@ Weitere Informationen zu Konstantenpuffern finden Sie unter [Einführung in Puff
 
 Marble Maze verwendet SDK-Mesh als Laufzeitformat, da dieses Format eine grundlegende Methode zum Laden von Gitterdaten für Beispielanwendungen bereitstellt. Für die Produktionsverwendung sollten Sie ein Gitterformat nutzen, das die spezifischen Anforderungen Ihres Spiels erfüllt.
 
-Die Methode **marblemazemain:: Loaddeferredresources** lädt die Gitterdaten nach dem Laden der Vertex- und Pixel-Shader. Bei einem Gitter handelt es sich um eine Sammlung von Vertex-Daten, die oftmals Informationen wie Positionen, Normale, Farben, Materialien und Texturkoordinaten enthält. Gitter werden in der Regel in 3D authoring-Software erstellt und in Dateien, die vom Anwendungscode separiert sind verwaltet. Die Kugel und das Labyrinth sind zwei Beispiele für Gitter, die im Spiel verwendet werden.
+Die Methode **marblemazemain:: Loaddeferredresources** lädt die Gitterdaten nach dem Laden der Vertex- und Pixel-Shader. Bei einem Gitter handelt es sich um eine Sammlung von Vertex-Daten, die oftmals Informationen wie Positionen, Normale, Farben, Materialien und Texturkoordinaten enthält. Gitter werden normalerweise in 3D authoring-Software in erstellt und verwaltet Dateien, die vom Anwendungscode separiert sind. Die Kugel und das Labyrinth sind zwei Beispiele für Gitter, die im Spiel verwendet werden.
 
 Marble Maze verwendet die **SDKMesh**-Klasse zum Verwalten von Gittern. Diese Klasse wird in **"sdkmesh.h"** deklariert. **SDKMesh** stellt Methoden zum Laden, Rendern und Löschen von Gitterdaten bereit.
 
@@ -623,7 +623,7 @@ float radius = m_marbleMesh.GetMeshBoundingBoxExtents(0).x / 2;
 m_physics.SetRadius(radius);
 ```
 
-Die Möglichkeit, dass Sie kollisionsdaten größtenteils laden richtet sich nach der laufzeitformat, die Sie verwenden. Weitere Informationen dazu, wie Marble Maze die kollisionsgeometrie aus einer SDK-Mesh-Datei lädt finden Sie unter der **MarbleMazeMain::ExtractTrianglesFromMesh** -Methode im Quellcode.
+Die Möglichkeit, dass Sie kollisionsdaten größtenteils laden, hängt von der Laufzeit-Format, das Sie verwenden. Weitere Informationen dazu, wie Marble Maze die kollisionsgeometrie aus einer SDK-Mesh-Datei lädt finden Sie unter der **MarbleMazeMain::ExtractTrianglesFromMesh** -Methode im Quellcode.
 
 ## <a name="updating-game-state"></a>Aktualisieren des Spielzustands
 
@@ -674,7 +674,7 @@ void StopwatchTimer::Update(float timeTotal, float timeDelta)
 
 ###  <a name="updating-the-scene"></a>Aktualisieren der Szene
 
-Die **marblemazemain:: Update** -Methode aktualisiert das Spiel basierend auf den aktuellen Zustand des Computers Zustand (die **GameState**, in **M_gameState**gespeichert). Wenn das Spiel im aktiven Zustand (**GameState::InGameActive**) befindet, wird Marble Maze die Kamera, um die Kugel zu verfolgen, aktualisiert der ansichtsmatrixteil der Konstantenpuffer und die physikalische Simulation aktualisiert.
+Die **marblemazemain:: Update** -Methode aktualisiert das Spiel basierend auf den aktuellen Zustand des Computers Zustand (die **GameState**, in **M_gameState**gespeichert). Wenn das Spiel im aktiven Zustand (**GameState::InGameActive**) befindet, Marble Maze die Kamera, um die Kugel zu verfolgen, updates der ansichtsmatrixteil der Konstantenpuffer, und die physikalische Simulation aktualisiert.
 
 Das folgende Beispiel zeigt, wie die **marblemazemain:: Update** -Methode die Position der Kamera aktualisiert. Marble Maze verwendet die **m\_resetCamera**-Variable für die Kennzeichnung, dass die Kamera für die Anordnung direkt über der Kugel zurückgesetzt werden muss. Die Kamera wird zurückgesetzt, wenn das Spiel startet oder die Kugel durch das Labyrinth fällt. Wenn das Hauptmenü oder die Highscoreanzeige aktiv ist, wird die Kamera auf eine konstante Position festgelegt. Andernfalls verwendet Marble Maze den *timeDelta*-Parameter zum Interpolieren der Kameraposition zwischen den Ist- und Zielpositionen. Die Zielposition befindet sich leicht über und vor der Kugel. Die Verwendung der abgelaufenen Framezeit ermöglicht der Kamera das schrittweise Folgen oder Verfolgen der Kugel.
 
@@ -766,7 +766,7 @@ Die **marblemazemain:: Render** -Methode bindet das Renderziel und tiefenschablo
 
 Vor dem Rendern der Szene müssen Sie den Tiefenschablonenpuffer für das aktuelle Renderziel festlegen. Wenn nicht feststeht, dass die Szene über alle Bildschirmpixel gezeichnet wird, löschen Sie auch die Render- und Schablonenansichten. Marble Maze löscht die Render- und Schablonenansichten in jedem Frame, um sicherzustellen, dass keine sichtbaren Artefakte aus dem vorherigen Frame vorhanden sind.
 
-Das folgende Beispiel zeigt, wie die **marblemazemain:: Render** -Methode die [id3d11devicecontext:: omsetrendertargets](https://msdn.microsoft.com/library/windows/desktop/ff476464) -Methode, um das Renderingziel und die Tiefe/Schablone-Puffer als der aktuellen Nachrichten festlegen aufruft.
+Das folgende Beispiel zeigt, wie die **marblemazemain:: Render** -Methode die [id3d11devicecontext:: omsetrendertargets](https://msdn.microsoft.com/library/windows/desktop/ff476464) -Methode, um das Renderingziel und die Tiefe/Schablone-Puffer festlegen, wie die aktuelle aufruft.
 
 ```cpp
 auto context = m_deviceResources->GetD3DDeviceContext();
@@ -814,7 +814,7 @@ Im Abschnitt [Laden von Shadern](#loading-shaders) in diesem Dokument wird besch
 m_deviceResources->GetD3DDeviceContext()->IASetInputLayout(m_inputLayout.Get());
 ```
 
-Das folgende Beispiel zeigt, wie die **marblemazemain:: Render** -Methode die [id3d11devicecontext:: vssetshader](https://msdn.microsoft.com/library/windows/desktop/ff476493) und [id3d11devicecontext:: pssetshader](https://msdn.microsoft.com/library/windows/desktop/ff476472) -Methode verwendet, um die Vertex- und Pixel-Shader als aktuelle Shader festzulegen, bzw..
+Das folgende Beispiel zeigt, wie die **marblemazemain:: Render** -Methode der [id3d11devicecontext:: vssetshader](https://msdn.microsoft.com/library/windows/desktop/ff476493) und [id3d11devicecontext:: pssetshader](https://msdn.microsoft.com/library/windows/desktop/ff476472) -Methode verwendet, um die Vertex- und Pixel-Shader als aktuelle Shader festzulegen, bzw..
 
 ```cpp
 // Set the vertex shader stage state.
@@ -834,7 +834,7 @@ m_deviceResources->GetD3DDeviceContext()->PSSetSamplers(
     m_sampler.GetAddressOf());  // to use this sampler
 ```
 
-Nachdem **marblemazemain:: Render** die Shader und das zugehörige eingabelayout festlegt, verwendet es die [id3d11devicecontext:: updatesubresource](https://msdn.microsoft.com/library/windows/desktop/ff476486) -Methode zum Aktualisieren des Konstantenpuffers mit den Modell-, Ansichts- und projektionsmatrizen für das Labyrinth. Die **UpdateSubresource**-Methode kopiert die Matrixdaten aus dem CPU-Speicher in den GPU-Speicher. Denken Sie daran, dass die Modell- und ansichtskomponenten der **ConstantBuffer** -Struktur in der Methode **marblemazemain:: Update** aktualisiert werden. Anschließend ruft die **marblemazemain:: Render** -Methode die [id3d11devicecontext:: vssetconstantbuffers](https://msdn.microsoft.com/library/windows/desktop/ff476491) und [id3d11devicecontext:: pssetconstantbuffers](https://msdn.microsoft.com/library/windows/desktop/ff476470) -Methoden, um diesen Konstantenpuffer als aktuellen Puffer festzulegen.
+Nach **marblemazemain:: Render** die Shader und das zugehörige eingabelayout festlegt, verwendet es die [id3d11devicecontext:: updatesubresource](https://msdn.microsoft.com/library/windows/desktop/ff476486) -Methode, um den Konstantenpuffer mit den Modell-, Ansichts- und projektionsmatrizen für das Labyrinth zu aktualisieren. Die **UpdateSubresource**-Methode kopiert die Matrixdaten aus dem CPU-Speicher in den GPU-Speicher. Denken Sie daran, dass die Modell- und ansichtskomponenten der **ConstantBuffer** -Struktur in der Methode **marblemazemain:: Update** aktualisiert werden. Anschließend ruft die **marblemazemain:: Render** -Methode die [id3d11devicecontext:: vssetconstantbuffers](https://msdn.microsoft.com/library/windows/desktop/ff476491) und [id3d11devicecontext:: pssetconstantbuffers](https://msdn.microsoft.com/library/windows/desktop/ff476470) -Methoden, um diesen Konstantenpuffer als aktuellen Puffer festzulegen.
 
 ```cpp
 // Update the constant buffer with the new data.
@@ -925,7 +925,7 @@ Die **SampleOverlay::Render**-Methode verwendet eine ähnliche Technik zum Zeich
 
 Nach dem Zeichnen aller 2D- und 3D-Grafiken szenenobjekte stellt Marble Maze das gerenderte Bild auf dem Monitor dar. Das Spiel synchronisiert die Zeichnung mit der vertikalen Austastung, um sicherzustellen, dass keine Zeit für das Zeichnen von Frames verwendet wird, die letztendlich nie auf dem Bildschirm angezeigt werden. Marble Maze verarbeitet beim Darstellen der Szene auch Geräteänderungen.
 
-Nachdem die **marblemazemain:: Render** -Methode zurückgegeben wird, ruft die spielschleife die **dx** -Methode zum Senden des gerenderten Bilds auf dem Monitor oder anzeigen. Die **dx** -Methode ruft [idxgiswapchain:: Present](https://msdn.microsoft.com/library/windows/desktop/bb174576) um den aktuellen Vorgang auszuführen, wie im folgenden Beispiel dargestellt:
+Nachdem die **marblemazemain:: Render** -Methode zurückgegeben wird, ruft die spielschleife die **dx** -Methode, um das gerenderte Bild auf dem Monitor senden oder anzeigen. Die **dx** -Methode ruft [idxgiswapchain:: Present](https://msdn.microsoft.com/library/windows/desktop/bb174576) , um den aktuellen Vorgang auszuführen, wie im folgenden Beispiel dargestellt:
 
 ```cpp
 // The first argument instructs DXGI to block until VSync, putting the application
@@ -956,7 +956,7 @@ else
 ## <a name="next-steps"></a>Nächste Schritte
 
 
-Lesen Sie den Abschnitt [Hinzufügen von Eingaben und Interaktivität zum Marble Maze-Beispiel](adding-input-and-interactivity-to-the-marble-maze-sample.md), um Informationen zu einigen wichtigen Verfahren zu erhalten, die Sie beim Arbeiten mit Eingabegeräten beachten sollten. In diesem Dokument wird beschrieben, wie Marble Maze Touch, Beschleunigungsmesser, Xbox-Controller und Mauseingaben unterstützt.
+Lesen Sie den Abschnitt [Hinzufügen von Eingaben und Interaktivität zum Marble Maze-Beispiel](adding-input-and-interactivity-to-the-marble-maze-sample.md), um Informationen zu einigen wichtigen Verfahren zu erhalten, die Sie beim Arbeiten mit Eingabegeräten beachten sollten. In diesem Dokument wird beschrieben, wie Marble Maze Touch, Beschleunigungsmesser, Xbox-Controller und Mauseingabe unterstützt.
 
 ## <a name="related-topics"></a>Verwandte Themen
 

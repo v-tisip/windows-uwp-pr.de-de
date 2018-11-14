@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, DirectX, App-Objekt
 ms.localizationpriority: medium
 ms.openlocfilehash: 7e29a19410915836be3c54c0dc04a6d7dc29ceeb
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6027610"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6162300"
 ---
 # <a name="the-app-object-and-directx"></a>Das App-Objekt und DirectX
 
@@ -34,7 +34,7 @@ Zunächst sind die Windows-Runtime-Namespaces zu erwähnen, die Sie (mit **using
 -   [**Windows.System**](https://msdn.microsoft.com/library/windows/apps/br241814)
 -   [**Windows.Foundation**](https://msdn.microsoft.com/library/windows/apps/br226021)
 
-> **Hinweis:**  Wenn Sie nicht über eine UWP-app entwickeln, verwenden die Komponenten der Benutzeroberfläche in den JavaScript - XAML-spezifische Bibliotheken und Namespaces anstelle der Typen in diesen Namespaces bereitgestellten bereitgestellt.
+> **Hinweis:**  , wenn Sie nicht über eine UWP-app entwickeln, verwenden Sie die Komponenten der Benutzeroberfläche in den JavaScript-XAML-spezifisch oder Bibliotheken und Namespaces anstelle der Typen in diesen Namespaces bereitgestellten bereitgestellt.
 
  
 

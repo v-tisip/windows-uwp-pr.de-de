@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 36d37f2507f3e4c96c3462fd075dbe945117dd82
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6050083"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6163580"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore2"></a>Windows Runtime 8.x zu UWP – Fallstudie: Bookstore2
 
@@ -51,9 +51,9 @@ Bookstore2\_81 unter Windows Phone, verkleinerte Ansicht
 
 ##  <a name="porting-to-a-windows10-project"></a>Portieren auf ein Windows 10-Projekt
 
-Die Bookstore2\_81-Projektmappe ist ein universelles 8.1-App-Projekt. Das bookstore2\_81-Projekt erstellt das app-Paket für Windows8.1 und das bookstore2\_81-Projekt erstellt das app-Paket für Windows Phone 8.1. Bookstore2\_81.Shared ist das Projekt, das den Quellcode, die Markupdateien sowie andere Assets und Ressourcen enthält, die von den beiden anderen Projekten verwendet werden.
+Die Bookstore2\_81-Projektmappe ist ein universelles 8.1-App-Projekt. Die bookstore2\_81-Projekt erstellt das app-Paket für Windows8.1 und das bookstore2\_81-Projekt erstellt das app-Paket für Windows Phone 8.1. Bookstore2\_81.Shared ist das Projekt, das den Quellcode, die Markupdateien sowie andere Assets und Ressourcen enthält, die von den beiden anderen Projekten verwendet werden.
 
-Genau wie die vorherige – Fallstudie, die Option, mit denen wir sehen (of diejenigen in [bei einer universellen 8.1-app](w8x-to-uwp-root.md)beschrieben) Portieren ist-Projekts den Inhalt der Shared in einer Windows 10, abzielt die universellen Gerätefamilie.
+Genau wie die vorherige – Fallstudie, die Option, die wir ergreifen müssen (der in [bei einer universellen 8.1-app](w8x-to-uwp-root.md)beschrieben) Portieren ist-Projekts den Inhalt der freigegebenen in ein Windows 10, das auf die universelle Gerätefamilie.
 
 Erstellen Sie zunächst ein neues Projekt vom Typ „Leere Anwendung“ (Windows Universal). Geben Sie ihm den Namen „Bookstore2Universal\_10“. Dies sind die Dateien, die von Bookstore2\_81 in Bookstore2Universal\_10 kopiert werden sollen.
 
@@ -70,7 +70,7 @@ Erstellen Sie zunächst ein neues Projekt vom Typ „Leere Anwendung“ (Windows
 
 Bearbeiten Sie den Quellcode und die Markupdateien, die Sie gerade kopiert haben, und ändern Sie alle Verweise auf den Namespace „Bookstore2\_81“ in „Bookstore2Universal\_10“. Eine schnelle Möglichkeit dafür ist die Verwendung des Features **In Dateien ersetzen**. Weder im Ansichtsmodell, noch in einem anderen imperativen Code sind Codeänderungen erforderlich. Um leichter erkennen zu können, welche App-Version ausgeführt wird, sollten Sie den von der **Bookstore2Universal\_10.BookstoreViewModel.AppName**-Eigenschaft zurückgegebenen Wert von „Bookstore2\_81“ in „BOOKSTORE2UNIVERSAL\_10“ ändern.
 
-Jetzt können Sie mit der Erstellung und Ausführung beginnen. Hier sehen Sie, wie unsere neue UWP-app aussieht, nahezu ohne Arbeit und Mühe zu Windows 10 portiert.
+Jetzt können Sie mit der Erstellung und Ausführung beginnen. Hier sehen Sie, wie unsere neuen UWP-app aussieht, nahezu ohne Arbeit und Mühe zu Windows 10 portiert.
 
 ![Die Windows10-App mit Änderungen am ursprünglichen Quellcode auf einem Desktopgerät, vergrößerte Ansicht](images/w8x-to-uwp-case-studies/c02-05-desk10-zi-initial-source-code-changes.png)
 
@@ -80,11 +80,11 @@ Die Windows 10-app mit Änderungen am ursprünglichen Quellcode auf einem Deskto
 
 Die Windows 10-app mit Änderungen am ursprünglichen Quellcode auf einem Desktopgerät, verkleinerte Ansicht
 
-Das Ansichtsmodell und die vergrößerten sowie verkleinerten Ansichten arbeiten ordnungsgemäß zusammen, auch wenn man dies nicht auf Anhieb sieht. Ein Problem besteht darin, dass der [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) keinen Bildlauf durchführt. Dies liegt daran, in Windows 10, der Standardstil des [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) bewirkt, dass es vertikal angeordnet werden (und die Windows 10-Entwurfsrichtlinien wird empfohlen, dass wir es auf diese Weise in neuen und portierten Apps zu verwenden). Horizontalen Bildlauf Einstellungen in der benutzerdefinierten ItemsPanel-Vorlage, die wir vom Bookstore2\_81-Projekt kopiert (für die 8.1 entwickelt wurde app) infolge vertikalen Bildlauf Einstellungen in der Windows 10-Standardstil, die folglich angewendet wird Wir müssen in eine app für Windows 10 portiert werden. Das zweite Problem besteht darin, dass sich die Benutzeroberfläche der App noch nicht anpasst, um eine bestmögliche Anzeige in verschieden großen Fenstern und auf kleinen Geräten zu ermöglichen. Drittens werden noch nicht die richtigen Stile und Pinsel verwendet, wodurch ein Großteil des Texts nicht sichtbar ist (einschließlich der Gruppenköpfe, auf die Sie zum Verkleinern klicken können). In den nächsten drei Abschnitten ([Designänderungen an semantischem Zoom und GridView](#semanticzoom-and-gridview-design-changes), [Adaptive UI](#adaptive-ui) und [Universelle Formatierung](#universal-styling)) werden wir diese drei Probleme beheben.
+Das Ansichtsmodell und die vergrößerten sowie verkleinerten Ansichten arbeiten ordnungsgemäß zusammen, auch wenn man dies nicht auf Anhieb sieht. Ein Problem besteht darin, dass der [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) keinen Bildlauf durchführt. Dies liegt daran, in Windows 10, der Standardstil des ein [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) bewirkt, dass es vertikal angeordnet werden (und die Windows 10-Entwurfsrichtlinien wird empfohlen, dass wir es auf diese Weise in neuen und portierten Apps zu verwenden). Horizontalen Bildlauf Einstellungen in der benutzerdefinierten ItemsPanel-Vorlage, die wir aus dem Bookstore2\_81-Projekt kopiert (für die 8.1 entwickelt wurde app) infolge der vertikalen Bildlauf Einstellungen in der Windows 10-Standardstil, der daher angewendet wird Wir müssen in eine app für Windows 10 portiert werden. Das zweite Problem besteht darin, dass sich die Benutzeroberfläche der App noch nicht anpasst, um eine bestmögliche Anzeige in verschieden großen Fenstern und auf kleinen Geräten zu ermöglichen. Drittens werden noch nicht die richtigen Stile und Pinsel verwendet, wodurch ein Großteil des Texts nicht sichtbar ist (einschließlich der Gruppenköpfe, auf die Sie zum Verkleinern klicken können). In den nächsten drei Abschnitten ([Designänderungen an semantischem Zoom und GridView](#semanticzoom-and-gridview-design-changes), [Adaptive UI](#adaptive-ui) und [Universelle Formatierung](#universal-styling)) werden wir diese drei Probleme beheben.
 
 ## <a name="semanticzoom-and-gridview-design-changes"></a>Designänderungen an SemanticZoom und GridView
 
-Die Designänderungen in Windows 10 auf das Steuerelement [**"semanticzoom"**](https://msdn.microsoft.com/library/windows/apps/hh702601) werden im Abschnitt ["semanticzoom" Änderungen](w8x-to-uwp-porting-xaml-and-ui.md)beschrieben. In diesem Abschnitt sind keine Überarbeitungen aufgrund der Änderungen erforderlich.
+Die Designänderungen in Windows 10 mit [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) -Steuerelements werden im Abschnitt ["semanticzoom" Änderungen](w8x-to-uwp-porting-xaml-and-ui.md)beschrieben. In diesem Abschnitt sind keine Überarbeitungen aufgrund der Änderungen erforderlich.
 
 Die Änderungen an [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) werden im Abschnitt [Änderungen an „GridView/ListView”](w8x-to-uwp-porting-xaml-and-ui.md) beschrieben. Diese Änderungen erfordern einige geringfügige Anpassungen, die nachfolgend beschrieben werden.
 
@@ -103,7 +103,7 @@ Eine minimale Fensterbreite von 548Epx eignet sich in diesem Anwendungsfall, da 
 
 Welche Eigenschaften müssen wir also festlegen – und ändern – um diese beiden unterschiedlichen Layouts zu erreichen? Es gibt zwei Alternativen, für die jeweils ein anderer Ansatz erforderlich ist.
 
-1.  Wir können zwei [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)-Steuerelemente in unserem Markup platzieren. Eine wäre eine Kopie des Markups, das wir wurden in der Windows-Runtime 8.x-app (mit darin enthaltenen [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) -Steuerelemente) verwenden, und das standardmäßig ausgeblendet. Die andere Variante ist eine Kopie des Markups, das wir in der Windows Phone Store-App verwenden (mit [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)-Steuerelementen), und das standardmäßig eingeblendet sind. Der visuelle Zustand würde die Sichtbarkeitseigenschaften der beiden **SemanticZoom**-Steuerelemente verändern. Dies wäre keine schwierige Aufgabe, die Technik ist im Allgemeinen jedoch nicht besonders effizient. Wenn Sie sie verwenden, sollten Sie ein Profil Ihrer App erstellen und sicherstellen, dass sie Ihre Leistungsvorgaben noch erfüllt.
+1.  Wir können zwei [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601)-Steuerelemente in unserem Markup platzieren. Eine wäre eine Kopie des Markups, die wir wurden in der Windows-Runtime 8.x-app (mit darin enthaltenen [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) -Steuerelemente), und das standardmäßig ausgeblendet. Die andere Variante ist eine Kopie des Markups, das wir in der Windows Phone Store-App verwenden (mit [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)-Steuerelementen), und das standardmäßig eingeblendet sind. Der visuelle Zustand würde die Sichtbarkeitseigenschaften der beiden **SemanticZoom**-Steuerelemente verändern. Dies wäre keine schwierige Aufgabe, die Technik ist im Allgemeinen jedoch nicht besonders effizient. Wenn Sie sie verwenden, sollten Sie ein Profil Ihrer App erstellen und sicherstellen, dass sie Ihre Leistungsvorgaben noch erfüllt.
 2.  Wir können einen einzelnen [**SemanticZoom**](https://msdn.microsoft.com/library/windows/apps/hh702601) mit [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878)-Steuerelementen verwenden. Zur Umsetzung unserer beiden Layouts würden wir im breiten visuellen Zustand die Eigenschaften der **ListView**-Steuerelemente ändern, einschließlich der darauf angewendeten Vorlagen, damit sie ebenso wie die [**GridView**](https://msdn.microsoft.com/library/windows/apps/br242705) angeordnet werden. Das kann die Leistung verbessern, aber es gibt so viele feine Unterschiede zwischen den verschiedenen Stilen und Vorlagen der **GridView** und **ListView** und ihren verschiedenen Elementtypen, dass diese Lösung schwieriger umzusetzen ist. Diese Lösung ist zu diesem Zeitpunkt eng mit der Zuweisungsart der Standardstile und -vorlagen gekoppelt und daher für künftige Änderungen der Standards anfällig.
 
 In dieser Fallstudie werden wir die erste Alternative untersuchen. Wenn Sie möchten, können Sie aber auch die zweite Variante testen und prüfen, ob diese besser für Sie geeignet ist. Führen Sie die folgenden Schritte aus, um die erste Alternative zu implementieren.

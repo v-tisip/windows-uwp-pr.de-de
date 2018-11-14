@@ -9,15 +9,15 @@ ms.topic: article
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f6438b8d1d7b8a8ce47ed4e5baddcb59285e660
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6034966"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6185272"
 ---
 # <a name="enable-apps-for-websites-using-app-uri-handlers"></a>Aktivieren von apps für Websites mit app-URI-Handlern
 
-Apps für Websites ordnet Ihrer app mit einer Website, sodass Ihre app, wenn ein Benutzer einen Link zu Ihrer Website öffnet, statt des Browsers gestartet werden wird. Wenn Ihre app nicht installiert ist, öffnet Ihre Website wie gewohnt im Browser. Benutzer können dieser Erfahrung vertrauen, da nur Urheber verifizierten Contents registrieren können. Benutzer kann auf alle ihre registrierten Web-zu-app Hyperlinks überprüfen, indem Sie zu Einstellungen > Apps > Apps für Websites.
+Apps für Websites ordnet Ihrer app mit einer Website, sodass Ihre app, wenn ein Benutzer einen Link zu Ihrer Website öffnet, statt des Browsers gestartet werden wird. Wenn Ihre app nicht installiert ist, öffnet Ihre Website wie gewohnt im Browser. Benutzer können dieser Erfahrung vertrauen, da nur Urheber verifizierten Contents registrieren können. Benutzer kann auf alle ihre registrierten Web-zu-app-Hyperlinks überprüfen, indem Sie zu Einstellungen > Apps > Apps für Websites.
 
 Um Web-zu-app Verlinkung zu aktivieren müssen:
 - Identifizieren Sie die URIs, die Ihrer App in der Manifestdatei behandeln wird.
@@ -25,7 +25,7 @@ Um Web-zu-app Verlinkung zu aktivieren müssen:
 - Behandeln Sie die Aktivierung in der App
 
 > [!Note]
-> Ab Windows 10 Creators Update, wird unterstützten Links in Microsoft Edge geklickt die entsprechende app gestartet. Unterstützte Links geklickt in anderen Browsern (z. B. Internet Explorer, usw.), wird Sie in das Browsen erhalten bleiben.
+> Ab Windows 10 Creators Update, wird unterstützten Links in Microsoft Edge geklickt die entsprechende app gestartet. Unterstützte geklickt hat, in anderen Browsern (z. B. Internet Explorer usw.), Links, die Sie in das Browsen beibehalten wird.
 
 ## <a name="register-to-handle-http-and-https-links-in-the-app-manifest"></a>Registrieren Sie sich, um HTTP- und Https-Links im App-Manifest zu behandeln.
 
@@ -166,7 +166,7 @@ Testen Sie die Konfiguration Ihrer App und, indem Sie dieses Werkzeug mit folgen
 -   Paketfamiliennamen (PFN): Ihre App-PFN
 -   Dateipfad: die JSON-Datei für die lokale Überprüfung (z. B. C:\\SomeFolder\\windows-App-Web-link)
 
-Wenn das Tool keine nichts zurückgibt, funktioniert Überprüfung für diese Datei beim Hochladen. Wenn ein Fehlercode vorhanden ist, wird es nicht funktionieren.
+Wenn das Tool keine nichts zurückgibt, funktioniert die Überprüfung für diese Datei beim Hochladen. Wenn ein Fehlercode vorhanden ist, wird es nicht funktionieren.
 
 Sie können den folgenden Registrierungsschlüssel Pfad Abgleich für quergeladene apps als Teil des lokalen Überprüfung erzwingen aktivieren:
 

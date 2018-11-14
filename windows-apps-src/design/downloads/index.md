@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.openlocfilehash: 42f223b858861cf0f965c5b7ea8778426a8340af
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6038288"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6153362"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>Design-Toolkits und Beispiele für UWP-Apps
  
@@ -98,7 +98,7 @@ Diese Toolkits bieten Steuerelemente und Layout-Vorlagen für das Design von UWP
         <a href="http://go.microsoft.com/fwlink/p/?LinkId=760394"><img src="images/tile-icon-generator.png" alt="Download the tile and icon generator"/></a>
     :::column-end:::
     :::column span="2":::
-      **Kachel- und Symbolgenerator für Adobe Photoshop** Dieser Satz von Aktionen für Adobe Photoshop werden die 68 empfohlenen Kacheln und Symbole aus nur 7 Dateien. <br/><a href="http://go.microsoft.com/fwlink/p/?LinkId=760394">Kachel- und Symbolgenerator herunterladen</a></p>
+      **Kachel- und Symbolgenerator für Adobe Photoshop** Dieser Satz von Aktionen für Adobe Photoshop werden die 68 empfohlenen Kacheln und Symbole aus nur 7-Dateien. <br/><a href="http://go.microsoft.com/fwlink/p/?LinkId=760394">Kachel- und Symbolgenerator herunterladen</a></p>
     :::column-end:::
 :::row-end:::
 
@@ -107,15 +107,15 @@ Diese Toolkits bieten Steuerelemente und Layout-Vorlagen für das Design von UWP
 
 ![Fluent Design-Editor für XAML-Image](images/XamlThemeEditor_screenshot.png)
 **Fluent XAML-Design-Editor**<br>
-Fluent Design XAML-Editor ist ein Tool zur Veranschaulichung der Flexibilität der Fluent Design-Systems sowie app-Entwicklungsprozess durch Generieren von XAML-Markup für unsere ResourceDictionary-Framework verwendet, in die universelle Windows-Plattform-Apps unterstützt (Bei UWPs).
+Fluent Design XAML-Editor ist ein Tool, das hilft zu demonstrieren, die Flexibilität der Fluent Design-Systems sowie app-Entwicklungsprozess durch Generieren von XAML-Markup für unsere ResourceDictionary-Framework verwendet, in die universelle Windows-Plattform-Apps unterstützt (Bei UWPs).
 <a href="https://github.com/Microsoft/fluent-xaml-theme-editor/archive/master.zip">Laden Sie das Tool-Beispiel</a> <br><a href="https://github.com/Microsoft/fluent-xaml-theme-editor">Sehen Sie sich das Tool auf GitHub</a>
 
-![VanArsdel Bild](images/VanArsdel_Screenshot.png)
+![Bild VanArsdel](images/VanArsdel_Screenshot.png)
 **VanArsdel**<br>
-Die Van Arsdel, Ltd. End-to-End-UWP-Beispiel-app wurde basiert auf der nächsten Generation Microsoft Fluent Design-Systems. Es wird ausgiebig Gebrauch von der verbesserten Dichte und neue Steuerelemente in der <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Windows-UI-Bibliothek</a> sowie leistungsstarke zugrunde liegenden Features der Ux-Framework und Komposition. Das Beispiel zeigt, wie Sie eine umfassende und produktive Erfahrung für die Verwaltung und den Erwerb IoT-Geräte (in diesem Fall Leuchten) erstellen können.<br>
+Die Van Arsdel, Ltd. End-to-End-UWP-Beispiel-app wurde basiert auf der nächsten Generation Microsoft Fluent Design-Systems. Es wird ausgiebig Gebrauch von der verbesserten Dichte und neue Steuerelemente in der <a herf="https://docs.microsoft.com/uwp/toolkits/winui/">Windows-UI-Bibliothek</a> sowie die leistungsstarke zugrunde liegenden Features der Ux-Framework und Komposition. Das Beispiel zeigt, wie Sie eine umfassende und produktive Erfahrung für die Verwaltung und den Erwerb IoT-Geräte (in diesem Fall Leuchten) erstellen können.<br>
 <a href="https://github.com/Microsoft/VanArsdel/archive/master.zip">Laden Sie das VanArsdel-Beispiel</a> <br><a href="https://github.com/microsoft/vanarsdel">Sehen Sie sich das VanArsdel-Beispiel auf GitHub</a>
 
-![Cast Image Erstellen](images/buildcast.png)
+![Wandeln Image Erstellen](images/buildcast.png)
 **BuildCast**<br>
 BuildCast ist ein End-to-End-Beispiel und basiert auf dem Fluent Design-Systems und UWP. Die App ermöglicht, Video-Podcasts wie Channel 9 und andere beliebte Feeds für Windows-Fans zu durchsuchen. Videos können ausgewählt, heruntergeladen und wiedergegeben werden. Es bietet außerdem Ink-Notizen, Lesezeichen und die Remote-Wiedergabe. Dieses Beispiel wurde anfänglich auf der Build-Konferenz 2017 während der Präsentation <a href="https://channel9.msdn.com/Events/Build/2017/B8034">Erstellen beeindruckender Apps mit Fluent Design</a> vorgestellt. <br>
 <a href="https://github.com/Microsoft/BuildCast/archive/master.zip">Beispiel-App BuildCast herunterladen</a> <br><a href="https://github.com/Microsoft/BuildCast">Beispiel-App BuildCast auf GitHub anzeigen</a>

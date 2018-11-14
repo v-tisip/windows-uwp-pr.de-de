@@ -1,7 +1,7 @@
 ---
 author: Xansky
 ms.assetid: 7B6A99C6-AC86-41A1-85D0-3EB39A7211B6
-description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um alle Add-on-Daten für alle apps abzurufen, die in Ihrem Partner Center-Konto registriert wurden.
+description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um alle Add-on-Daten für alle apps abzurufen, die für Ihr Partner Center-Konto registriert sind.
 title: Abrufen aller Add-Ons
 ms.author: mhopkins
 ms.date: 02/08/2017
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-Ons, In-App-Produkte, IAPs
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d58b29a959ed791665af52018062d0cf0a3a969
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6029719"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6136254"
 ---
 # <a name="get-all-add-ons"></a>Abrufen aller Add-Ons
 
@@ -147,7 +147,7 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 | Fehlercode |  Beschreibung   |
 |--------|------------------|
 | 404  | Es wurden keine Add-Ons gefunden. |
-| 409  | Die apps oder Add-ons verwenden Partner Center-Funktionen, die [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt](create-and-manage-submissions-using-windows-store-services.md#not_supported)werden.  |
+| 409  | Die apps oder Add-ons verwenden Partner Center-Funktionen, die [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt wird](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
 
 
 ## <a name="related-topics"></a>Verwandte Themen

@@ -9,24 +9,24 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 485dc6f93cb0fd83601b3202ef9965e625b2a0b4
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6050746"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6135897"
 ---
 # <a name="getting-started-with-uwp-for-ios-developers"></a>Erste Schritte mit UWP für iOS-Entwickler
 
 
-Wenn Sie sind in Betracht ziehen entwickeln für Windows 10 iOS-Entwickler sind diese Dokumente einen sehr guten Einstieg. Sie müssen eine Einführung in einige Konzepte, die Sie benötigen, zu wissen, wie Sie Schreiben von apps beginnen, und sie werden behandelt, wie Sie Ihre Arbeit im Microsoft Store veröffentlichen können.
+Wenn Sie sind in Betracht ziehen entwickeln für Windows 10 iOS-Entwickler diese Dokumente sind ein guter Ausgangspunkt, starten. Sie müssen eine Einführung in einige Konzepte, die Sie benötigen, zu wissen, wie Sie Schreiben von apps beginnen, und sie werden behandelt, wie Sie Ihre Arbeit im Microsoft Store veröffentlichen können.
 
 In diesem Abschnitt erfahren Sie schrittweise, wie Sie mit Microsoft Visual Studio und der Programmiersprache C# eine einfache App erstellen und wie sich der Prozess vielleicht von Ihren derzeit verwendeten Tools unterscheidet. (Kein Fan von C#? Andere verfügbare Programmiersprachen und -Tools werden unter [Erste Schritte: Auswählen einer Programmiersprache](getting-started-choosing-a-programming-language.md) behandelt.)
 
-Windows 10 führt eine neue Plattform zum Erstellen ansprechender apps auf Desktop, Laptop, Tablet, Phone-Geräten und vieles mehr. Da UWP-Apps viele einzigartige Funktionen bieten, führt die einfache Portierung einer iOS-App dazu, dass die Vorteile dieser Features nicht genutzt werden können. Es empfiehlt sich deshalb, die neuen Steuerelemente und Funktionen auszuprobieren. Sie werden sehen, dass sie die Entwicklungsarbeit erleichtern und die Gestaltung neuer Apps ermöglichen.
+Windows 10 führt eine neue Plattform zum Erstellen ansprechender apps auf Desktop, Laptop, Tablet, Smartphone-Geräten und vieles mehr. Da UWP-Apps viele einzigartige Funktionen bieten, führt die einfache Portierung einer iOS-App dazu, dass die Vorteile dieser Features nicht genutzt werden können. Es empfiehlt sich deshalb, die neuen Steuerelemente und Funktionen auszuprobieren. Sie werden sehen, dass sie die Entwicklungsarbeit erleichtern und die Gestaltung neuer Apps ermöglichen.
 
 Fazit: Portieren Sie Ihre App nicht einfach nur, sondern **wandeln Sie sie um**, und profitieren Sie von den neuen Funktionen und neuen Geräten. Zielen Sie nicht den kleinsten gemeinsamen Nenner, aber erstellen Sie funktionsreiche Umgebungen, die einzigartigen Features von Windows 10, z. B. live-Kacheln, Benachrichtigungen und Interaktion mit Cortana verwenden.
 
-Erste Schritte mit diesen exemplarischen Vorgehensweisen, benötigen Sie einen Computer mit Windows 10 und Microsoft Visual Studio installiert sind. Sie können diese von den [downloads für Entwickler für die Programmierung von UWP-apps](https://developer.microsoft.com/en-us/windows/downloads)herunterladen. Sie haben keinen PC? Kein Problem: Sie können einen Mac verwenden. Informationen hierzu finden Sie unter [Installieren von Windows und der Entwicklertools auf dem Mac](setting-up-your-mac-with-windows-10.md).
+Mit diesen exemplarischen Vorgehensweisen zunächst benötigen Sie einen Computer mit Windows 10 und Microsoft Visual Studio installiert sind. Sie können diese von den [downloads für Entwickler für die Programmierung von UWP-apps](https://developer.microsoft.com/en-us/windows/downloads)herunterladen. Sie haben keinen PC? Kein Problem: Sie können einen Mac verwenden. Informationen hierzu finden Sie unter [Installieren von Windows und der Entwicklertools auf dem Mac](setting-up-your-mac-with-windows-10.md).
 
 | Thema | Beschreibung |
 |-------|-------------|

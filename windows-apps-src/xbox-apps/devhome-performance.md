@@ -10,16 +10,16 @@ keywords: Windows10, UWP
 permalink: en-us/docs/xdk/devhome-performance.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 6035463473eb6ddb1a3ec7fa554f9a12b8f764fc
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6037080"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6146464"
 ---
 # <a name="performance-page-dev-home"></a>Seite "Performance" (Dev Home)
    
   
-Die Seite " **Performance** " des Dev Home simuliert verschiedene Festplatten-Aktivität und CPU-Auslastung Bedingungen für die Problembehandlung.   
+Die Seite " **Performance** " des Dev Home simuliert verschiedene Festplatten-Aktivität und CPU-Nutzung Bedingungen für die Problembehandlung.   
  ![Seite "Performance" des Dev Home](images/devhome_performance.png)   
   
 Die Seite " **Performance** " enthält die folgenden Bereichen:   
@@ -35,7 +35,7 @@ Die Seite " **Performance** " enthält die folgenden Bereichen:
 ## <a name="disk-simulation"></a>Datenträger-simulation  
    
   
-Der Bereich **Datenträger Simulation** simuliert Festplatten-Aktivität vom System oder anderen apps.   
+Der **Datenträger Simulation** Bereich simuliert Datenträgeraktivität vom System oder anderen apps.   
   
 <a id="ID4EOB"></a>
 
@@ -44,7 +44,7 @@ Der Bereich **Datenträger Simulation** simuliert Festplatten-Aktivität vom Sys
 ## <a name="cpu-simulation"></a>CPU-Simulation  
    
   
-Der Bereich **CPU-Simulation** simuliert Aktivität auf CPU6 (dem freigegebenen Kern).   
+Der Bereich **CPU-Simulation** simuliert Aktivität auf CPU6 (die freigegebenen Core).   
   
 <a id="ID4EYB"></a>
 

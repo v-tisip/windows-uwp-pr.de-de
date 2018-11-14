@@ -2,31 +2,31 @@
 author: jnHs
 ms.assetid: DA495F9D-49B8-45A6-BBE0-27F0C804D240
 title: Verwalten Ihrer Kontoeinstellungen und Profilinformationen
-description: Sie können anzeigen und aktualisieren Sie Ihre entwicklerkontoeinstellungen und Profilinformationen im Abschnitt mit Kontoeinstellungen des Partner Center.
+description: Sie können anzeigen und aktualisieren Ihre entwicklerkontoeinstellungen und Profilinformationen im Abschnitt Kontoeinstellungen des Partner Center.
 ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Dev Center, Kontoeinstellungen, Profil, Konto-Profil, Entwicklerkonto, Entwicklerkontoeinstellungen
 ms.localizationpriority: medium
 ms.openlocfilehash: 90bf81f23bcffe05278d12bab7abb2425f7eb773
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6028540"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6137401"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>Verwalten Ihrer Kontoeinstellungen und Profilinformationen
 
-Sie können anzeigen und aktualisieren Sie Ihre entwicklerkontoeinstellungen und Profilinformationen im Abschnitt **kontoeinstellungen** des [Partner Center](https://partner.microsoft.com/dashboard). 
+Sie können anzeigen und aktualisieren Ihre entwicklerkontoeinstellungen und Profilinformationen im Abschnitt **kontoeinstellungen** im [Partner Center](https://partner.microsoft.com/dashboard). 
 
 > [!NOTE]
-> Benachrichtigungseinstellungen (z. B. welche Benachrichtigungen Sie empfangen und erhalten) können im **Message Center** verwaltet werden (die Sie zugreifen können, indem Sie auf das Nachrichtensymbol im oberen Bereich der Partner Center).
+> Benachrichtigungseinstellungen (z. B. welche Benachrichtigungen Sie empfangen und erhalten) können im **Message Center** verwaltet werden (die Sie zugreifen können, durch die Auswahl der Nachrichtensymbol im oberen Bereich der Partner Center).
 
 ## <a name="account-settings"></a>Kontoeinstellungen
 
 Wenn Ihr kontoeinstellungen anzeigen möchten, klicken Sie auf das Zahnradsymbol in der oberen rechten Ecke des Partner Center, und wählen Sie dann **entwicklereinstellungen**. Hier finden Sie Informationen zu Ihrem Konto sowie Links zu anderen Seiten, in denen Sie Informationen anzeigen und verschiedene Konto bezogene Aufgaben ausführen können.
 
-Der Abschnitt **Kontodetails** gibt Aufschluss über Status und Art des Kontos. Sie können auch Ihre Verkäufer-ID und der Informationen für andere Herausgeber-ID hier anzeigen. Diese Werte werden von Microsoft zur eindeutigen Identifizierung Ihres Entwicklerkontos zugewiesen und können nicht bearbeitet werden.
+Der Abschnitt **Kontodetails** gibt Aufschluss über Status und Art des Kontos. Sie können auch Ihre Verkäufer-ID und der Informationen für andere Herausgeber-ID hier angezeigt. Diese Werte werden von Microsoft zur eindeutigen Identifizierung Ihres Entwicklerkontos zugewiesen und können nicht bearbeitet werden.
 
 > [!NOTE]
 > Identitätsdetails für Apps finden Sie auf der [App-Identitätsseite](view-app-identity-details.md) der jeweiligen App.
@@ -50,7 +50,7 @@ Hier sind einige andere Elemente, die Sie im Abschnitt **Kontoeinstellungen** fi
 - **Dev Center-Insider-Programm**: Sie können ablehnen, in die oder aus dem [Dev Center-Insider-Programms](dev-center-insider-program.md) aus der primären **Konto** -Einstellungsseite.
 - **Auszahlungskonto** und **Steuerprofil**: Hier wird das [Einrichten Ihres Auszahlungskontos und Ihrer Steuerformulare](setting-up-your-payout-account-and-tax-forms.md) vorgenommen. Dieser Schritt muss ausgeführt werden, bevor Sie Zahlungen für Apps oder Add-Ons verlangen können.
 - **Enterprise-Zuordnungen**: Nehmen Sie Einladungen von Unternehmen an, die möchten, dass Sie Apps für die exklusive Nutzung veröffentlichen. Weitere Informationen dazu finden Sie unter [Verteilen von branchenspezifischen Apps an Unternehmen](distribute-lob-apps-to-enterprises.md).
-- **Benutzer**: Hinzufügen von Benutzern zu Ihrem Konto und weisen Sie diesen Rollen und Berechtigungen. Weitere Informationen finden Sie unter [Verwalten von Kontobenutzern](manage-account-users.md).
+- **Benutzer**: Hinzufügen von Benutzern zu Ihrem Konto und diesen Rollen und Berechtigungen zuweisen. Weitere Informationen finden Sie unter [Verwalten von Kontobenutzern](manage-account-users.md).
 - **Mandanten**: Verwalten Sie Ihre Azure AD-mandantenzuordnungen. Weitere Informationen finden Sie unter [Zuordnen von Azure AD mit Ihrem Partner Center-Konto](associate-azure-ad-with-dev-center.md).
 - **Programme**: Zeigen Sie Detail zu den Programmen an, an denen Sie teilnehmen und erfahren Sie mehr über andere Programme, die von Interesse sein könnten.
 - **Verträge**: Zeigen Sie die Verträge an, die Ihr Konto angenommen hat.

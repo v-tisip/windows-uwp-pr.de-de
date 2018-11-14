@@ -9,20 +9,20 @@ keywords: Windows 10, UWP
 ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e0faf3a0b6a4f13c0fce24aa093cf94a1e7ee7e
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6047222"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6183171"
 ---
 # <a name="fiddler-settings-api-reference"></a>Fiddler-Einstellungen – API-Referenz   
 Sie können die Fiddler-Netzwerkablaufverfolgung für Ihr Dev Kit mittels dieser REST-API aktivieren und deaktivieren.
 
-## <a name="determine-if-fiddler-tracing-is-enabled"></a>Ermitteln Sie, ob Fiddler-Ablaufverfolgung aktiviert ist.
+## <a name="determine-if-fiddler-tracing-is-enabled"></a>Ermitteln Sie, ob der Fiddler-Ablaufverfolgung aktiviert ist.
 
 **Anforderung**
 
-Sie können überprüfen, um festzustellen, ob Fiddler-Ablaufverfolgung mithilfe der folgenden Anforderung für das Gerät aktiviert ist.
+Sie können überprüfen, um festzustellen, ob der Fiddler-Ablaufverfolgung mithilfe der folgenden Anforderung für das Gerät aktiviert ist.
 
 Methode      | Anforderungs-URI
 :------     | :-----

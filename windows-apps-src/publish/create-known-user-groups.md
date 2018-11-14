@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP, Zielgruppe, Kunden, Flight-Gruppe, Benutzergruppen, bekannte Benutzer
 ms.localizationpriority: medium
 ms.openlocfilehash: 44f0ea17d1034ae617b4b8c96cf61cc4829a6704
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6051799"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6135410"
 ---
 # <a name="create-known-user-groups"></a>Erstellen bekannter Benutzergruppen
 
@@ -22,7 +22,7 @@ Um als Mitglied der Gruppe gezählt zu werden, muss jede Person mit dem Store mi
 
 ## <a name="to-create-a-known-user-group"></a>So erstellen Sie eine bekannte Benutzergruppe
 
-1. Erweitern Sie im linken Navigationsmenü **einbeziehen** , und wählen Sie **Kundengruppen**, im [Partner Center](https://partner.microsoft.com/dashboard). 
+1. Erweitern Sie im linken Navigationsmenü **einbeziehen** , und wählen Sie dann **Kundengruppen**, im [Partner Center](https://partner.microsoft.com/dashboard). 
 2. Wählen Sie im Abschnitt **Meine Kundengruppen** die Option **Neue Gruppe erstellen**.
 3. Geben Sie auf der nächsten Seite im Feld **Gruppennamen** einen Namen für die bekannte Benutzergruppe ein.
 4. Stellen Sie sicher, dass das Optionsfeld **Neue Benutzergruppe** ausgewählt ist.
@@ -38,7 +38,7 @@ Sie können auch eine bekannte Benutzergruppe erstellen, indem Sie **Flight-Grup
 
 ## <a name="to-edit-a-known-user-group"></a>So bearbeiten Sie eine bekannte Benutzergruppe
 
-Sie können keine bekannte Benutzergruppe aus dem Partner Center entfernen (oder den Namen ändern), nachdem sie erstellt wurde, aber Sie können die Mitgliedschaft zu jedem beliebigen Zeitpunkt bearbeiten.
+Sie können keine bekannte Benutzergruppe aus Partner Center entfernen (oder den Namen ändern), nachdem sie erstellt wurde, aber Sie können die Mitgliedschaft zu jedem beliebigen Zeitpunkt bearbeiten.
 
 Um Ihre bekannten Benutzergruppen zu überprüfen und zu bearbeiten, erweitern Sie das Menü **Einbeziehen** im linken Navigationsmenü und wählen Sie **Kundengruppen** aus. Wählen Sie unter **Meine Kundengruppen** den Namen der Gruppe aus, die Sie bearbeiten möchten. Sie können ebenfalls eine bekannte Benutzergruppe in der Erstellungsseite für Flight-Pakete bearbeiten, indem Sie **Vorhandene Gruppen anzeigen und verwalten** beim Erstellen eines neuen Test-Flights auswählen oder den Namen der Test-Flight-Gruppe in der Übersicht eines Flight-Pakets auswählen. 
 

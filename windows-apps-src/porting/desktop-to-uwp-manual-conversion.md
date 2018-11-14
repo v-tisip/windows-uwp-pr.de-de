@@ -9,29 +9,29 @@ ms.topic: article
 keywords: windows10, UWP
 ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
-ms.openlocfilehash: 29fd7faec6f78b5f01469e7bfa6c01a8831f07eb
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 6b063bf5997bbb1fc082c8d9fefcf0f435262bf1
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023004"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6143654"
 ---
 # <a name="package-a-desktop-application-manually"></a>Manuelles Verpacken einer desktop-Anwendungs
 
-Dieses Thema zeigt, wie Sie Ihre Anwendung ohne mithilfe von Tools wie Visual Studio oder den Desktop App Converter (DAC) verpacken.
+Dieses Thema zeigt, wie Sie Ihre Anwendung ohne Tools wie Visual Studio oder den Desktop App Converter (DAC) verpacken.
 
 Um Ihre App manuell zu verpacken, erstellen Sie eine Paketmanifestdatei, und führen Sie dann ein Befehlszeilentool aus, um ein Windows-App-Paket zu generieren.
 
-Berücksichtigen Sie die manuelle Verpackung, wenn Sie Ihre Anwendung mithilfe der Befehls "Xcopy" installieren, oder Sie mit den an das System Ihre app-Installer vorgenommenen Änderungen vertraut sind und eine genauere Kontrolle über den Prozess werden soll.
+Berücksichtigen Sie die manuelle Verpackung, wenn Sie die Anwendung mithilfe des Befehls Xcopy installieren, oder Sie mit den auf dem System Ihren app Installer vorgenommenen Änderungen vertraut sind und genauere Kontrolle über den Prozess.
 
 Wenn Sie sich nicht darüber sicher sind, welche Änderungen an das System durch Ihren Installer vorgenommen werden oder wenn Sie lieber automatisierte Tools für das Generieren Ihres Paketmanifestes verwenden möchten, sollten Sie eine [dieser](desktop-to-uwp-root.md#convert) Optionen erwägen.
 
 >[!IMPORTANT]
->Die Fähigkeit zum Erstellen eines Windows-app-Pakets für Ihre desktop-Anwendung (andernfalls wird auch als der Desktop-Brücke wurde in Windows 10, Version 1607, eingeführt und kann nur in Projekten für die Windows 10 Anniversary Update (10.0; verwendet werden Build 14393) oder einer neueren Version in Visual Studio.
+>Die Fähigkeit zum Erstellen eines Windows-app-Pakets für Ihre desktop-Anwendung (auch bekannt als der Desktop-Brücke) wurde in Windows 10, Version 1607, eingeführt und kann nur in Projekten für die Windows 10 Anniversary Update (10.0; verwendet werden Build 14393) oder einer neueren Version in Visual Studio.
 
 ## <a name="first-prepare-your-application"></a>Vorbereiten Ihrer Anwendung
 
-Dieses Handbuch lesen, bevor Sie mit der paketerstellung für Ihre Anwendung beginnen: [Vorbereiten eine desktop-Anwendung zu verpacken](desktop-to-uwp-prepare.md).
+Lesen Sie dieses Handbuch, bevor Sie mit der paketerstellung für Ihre Anwendung beginnen: [Vorbereiten eine desktop-Anwendung zu verpacken](desktop-to-uwp-prepare.md).
 
 ## <a name="create-a-package-manifest"></a>Erstellen eines Paketmanifests
 
@@ -119,7 +119,7 @@ Für desktop-apps, die Sie ein Paket erstellen, legen Sie immer die ``Name`` -At
 ```
 
 ### <a name="capabilities"></a>Funktionen
-Für desktop-apps, die Sie ein Paket erstellen, für die Sie hinzugefügt haben die ``runFullTrust`` Funktion.
+Für desktop-apps, die Sie ein Paket erstellen, für, müssen Sie das Hinzufügen der ``runFullTrust`` Funktion.
 
 ```XML
 <Capabilities>
@@ -132,7 +132,7 @@ Geben Sie in diese Vorlage Informationen ein, die Ihre App beschreiben.
 
 ### <a name="application-element"></a>Anwendungselemente
 
-Für desktop-apps, die Sie ein Paket erstellen, das ``EntryPoint`` -Attribut des Application-Elements ist immer ``Windows.FullTrustApplication``.
+Für desktop-apps, die Sie erstellen Sie ein Paket, das ``EntryPoint`` -Attribut des Application-Elements ist immer ``Windows.FullTrustApplication``.
 
 ```XML
 <Applications>
@@ -185,7 +185,7 @@ Wenn Sie zielbasierte Ressourcen erstellen, wie im vorherigen Abschnitt beschrie
 
 5.  Erstellen Sie die resources.pri-Dateien mit dem Befehl ``makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml``.
 
-    Der Befehl für Ihre Anwendung könnte beispielsweise wie folgt aussehen: ``makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml``.
+    Der Befehl für Ihre Anwendung könnte z. B. wie folgt aussehen: ``makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml``.
 
 6.  Verpacken Sie Ihre Windows-App-Datei mithilfe der Anweisungen im nächsten Schritt.
 
@@ -199,14 +199,14 @@ Weitere Informationen finden Sie in [Erstellen eines App-Pakets mit dem Tool „
 
 ## <a name="run-the-packaged-app"></a>Ausführung der verpackten App
 
-Sie können Ihre Anwendung zu testen, lokal, ohne dass ein Zertifikat benötigen und signieren Sie es ausführen. Führen Sie einfach dieses PowerShell-Cmdlet aus:
+Sie können Ihre Anwendung zu testen, lokal ohne Erwerb eines Zertifikats und signieren Sie es ausführen. Führen Sie einfach dieses PowerShell-Cmdlet aus:
 
 ```Add-AppxPackage –Register AppxManifest.xml```
 
 Ersetzen Sie zum Aktualisieren der EXE- oder DLL-Dateien Ihrer App die vorhandenen Dateien in Ihrem Paket durch die neuen, vergrößern Sie die Versionsnummer in der Datei „AppxManifest.xml“, und führen Sie den oben genannten Befehl erneut aus.
 
 > [!NOTE]
-> Ein Anwendungspaket immer als interaktiver Benutzer ausgeführt wird, und jedes Laufwerk durch die Installation Ihres Anwendungspakets unter NTFS-Format formatiert werden muss.
+> Ein Anwendungspaket immer als interaktiver Benutzer ausgeführt wird, und jedes Laufwerk durch die Installation Ihres Anwendungspakets unter muss NTFS-Format formatiert werden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

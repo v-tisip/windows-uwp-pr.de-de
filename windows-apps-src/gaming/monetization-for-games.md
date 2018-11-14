@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Monetisierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 82dd225f25162035b1bb65677c3bd4a7f7503b14
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6046993"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6137744"
 ---
 #  <a name="monetization-for-games"></a>Monetisierung für Spiele
 
@@ -55,7 +55,7 @@ Bei In-Game-Käufen handelt es sich um Produkte, die in einem Spiel gekauft werd
 
 Sie können zwei Arten von Add-Ons im Store erstellen: _Gebrauchsgüter_ oder _Verbrauchsartikel_. Gebrauchsgüter sind Elemente, die bis zu ihrem Ablauf für einen angegebenen Zeitraum erhalten bleiben und nur einmal erworben werden können. Verbrauchsartikel sind Elemente, die gekauft und immer wieder verwendet werden können.
 
-Beim Erstellen von Verbrauchsartikeln entscheiden Sie, wie Sie sie nachverfolgen möchten, d.h. ob sie _vom Entwickler verwaltet_ oder _vom Store verwaltet_ werden. (Dieses Feature ist ab Windows10, Version 1607, verfügbar). Mit einem Entwickler verwalteten Verbrauchsartikel sind Sie verantwortlich für das Element Guthabens für den Spielern; Bei einem Store verwalteter Verbrauchsartikel verfolgt der Microsoft Store das Element Guthaben für Sie. Weitere Informationen finden Sie unter [Übersicht über Endverbraucher-Add-Ons](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons).
+Beim Erstellen von Verbrauchsartikeln entscheiden Sie, wie Sie sie nachverfolgen möchten, d.h. ob sie _vom Entwickler verwaltet_ oder _vom Store verwaltet_ werden. (Dieses Feature ist ab Windows10, Version 1607, verfügbar). Mit einem Entwickler verwalteten Verbrauchsartikel sind Sie verantwortlich für das Element Guthabens für den Spieler. Bei einem Store verwalteten Verbrauchsartikel verfolgt der Microsoft Store des Elements Guthaben für Sie. Weitere Informationen finden Sie unter [Übersicht über Endverbraucher-Add-Ons](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons).
 
 ### <a name="create-in-game-purchases"></a>Erstellen von In-Game-Käufen
 
@@ -92,7 +92,7 @@ So erstellen Sie ein Paket, das in den Store hochgeladen werden kann:
 
 1. Öffnen Sie Ihre Spielelösung in Visual Studio.
 2. Navigieren Sie in Visual Studio zu __Projekt__ > __Store__ > __App-Pakete erstellen...__.
-3. Für die __möchten Sie Pakete zum Hochladen in den Microsoft Store erstellen?__ option, wählen Sie __Ja__.
+3. Für die __möchten Sie Pakete zum Hochladen in den Microsoft Store erstellen?__ option, __Ja__wählen.
 4. Melden Sie sich bei Ihrem Dev Center-Entwicklerkonto an. Oder [registrieren](https://developer.microsoft.com/store/register) Sie sich für ein Entwicklerkonto, falls Sie keins besitzen.
 5. Wählen Sie eine App aus, für die das Uploadpaket erstellt werden soll. Falls Sie noch keine App-Übermittlung erstellt haben, geben Sie einen neuen App-Namen ein, um eine neue Übermittlung zu erstellen. Weitere Informationen finden Sie unter [Erstellen einer App durch Reservieren eines Namens](https://msdn.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name).
 6. Nachdem das Paket erfolgreich erstellt wurde, klicken Sie auf __Zertifizierungskit für Windows-Apps starten__, um den Testprozess zu starten.
@@ -104,7 +104,7 @@ So erstellen Sie ein Paket, das in den Store hochgeladen werden kann:
 2. Klicken Sie in der __Dashboardübersicht__ oder auf der Seite __Alle Apps__ auf die App, die Sie verwenden möchten. Falls Sie noch keine App-Übermittlung erstellt haben, klicken Sie auf __Neue App erstellen__, und reservieren Sie einen Namen.
 3. Klicken Sie auf der Seite __App-Übersicht__ auf __Übermittlung starten__.
 4. Konfigurieren Sie diese neue Übermittlung. Auf der Übermittlungsseite:
-    * Klicken Sie auf __Preise und Verfügbarkeit__. Wählen Sie im Abschnitt __Sichtbarkeit__ "__diese app ausblenden und den Verkauf stoppen...__" um sicherzustellen, dass Ihr Entwicklerteam Zugriff auf das Spiel hat. Weitere Informationen finden Sie unter [Verteilung und Sichtbarkeit](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#distribution-and-visibility).
+    * Klicken Sie auf __Preise und Verfügbarkeit__. Wählen Sie im Abschnitt " __Sichtbarkeit__ " "__diese app ausblenden und den Verkauf stoppen...__" um sicherzustellen, dass Ihr Entwicklerteam Zugriff auf das Spiel hat. Weitere Informationen finden Sie unter [Verteilung und Sichtbarkeit](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#distribution-and-visibility).
     * Klicken Sie auf __Eigenschaften__. Wählen Sie im Abschnitt __Kategorie und Unterkategorie__ die Option __Spiele__ und anschließend eine geeignete Unterkategorie für Ihr Spiel aus.
     * Klicken Sie auf __Altersfreigaben__. Füllen Sie den Fragebogen ordnungsgemäß aus.
     * Klicken Sie auf __Pakete__. Laden Sie das zuvor erstellte Spielpaket hoch.

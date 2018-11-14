@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 2087debd758a24b50ac1885cb68d4b97ea2898fd
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6040238"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6161911"
 ---
 # <a name="optical-zoom-and-resizing"></a>Optischer Zoom und Größenänderung
 
@@ -67,7 +67,7 @@ Beachten Sie die folgenden Richtlinien für Apps, die entweder Größenänderung
     -   Zeichnungsprogramme, in denen in der Größe anpassbare Elemente in einem Zeichenbereich oder auf einer Zeichenfläche, dessen bzw. deren Größe geändert werden kann, angezeigt werden können
     -   Webseiten mit einem eingebetteten Objekt, z.B. einer Karte
 
-    **Hinweis:**  In allen Fällen wird der Inhaltsbereich angepasst, es sei denn, alle Berührungspunkte innerhalb der Größe anpassbaren Objekt sind.
+    **Hinweis:**  In allen Fällen wird der Inhaltsbereich geändert, es sei denn, alle Berührungspunkte innerhalb der Größe anpassbaren Objekt sind.
 
      
 

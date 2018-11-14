@@ -9,17 +9,17 @@ keywords: Windows 10, Uwp, Microsoft Store Services SDK, benutzerorientierte Pus
 ms.assetid: 30c832b7-5fbe-4852-957f-7941df8eb85a
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d1281436ce0fe8c7b04429cea897eedc58b15d9
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025950"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6181823"
 ---
 # <a name="configure-your-app-for-targeted-push-notifications"></a>Konfigurieren der App für benutzerorientierte Pushbenachrichtigungen
 
-Sie können die Seite " **Pushbenachrichtigungen** " im Partner Center direkt Kundenkontakt durch das Senden von benutzerorientierten Pushbenachrichtigungen an die Geräte auf denen Ihre app (universelle Windows Plattform) installiert ist. So können Sie beispielsweise Ihre Kunden mithilfe von benutzerorientierten Pushbenachrichtigungen auffordern, aktiv zu werden, etwa Ihre App zu bewerten oder ein neues Feature auszuprobieren. Sie können verschiedene Arten von Pushbenachrichtigungen verwenden, darunter Popupbenachrichtigungen, Kachelbenachrichtigungen und reine XML-Benachrichtigungen. Sie können auch die Rate der App-Starts nachverfolgen, die durch Ihre Pushbenachrichtigungen ausgelöst wurden. Weitere Informationen zu diesem Feature finden Sie unter [Senden von Pushbenachrichtigungen an den Kunden Ihrer App](../publish/send-push-notifications-to-your-apps-customers.md).
+Sie können **Pushbenachrichtigungen** Seite im Partner Center direkt Kundenkontakt durch das Senden von benutzerorientierten Pushbenachrichtigungen an die Geräte, auf denen Ihre app (universelle Windows Plattform) installiert ist. So können Sie beispielsweise Ihre Kunden mithilfe von benutzerorientierten Pushbenachrichtigungen auffordern, aktiv zu werden, etwa Ihre App zu bewerten oder ein neues Feature auszuprobieren. Sie können verschiedene Arten von Pushbenachrichtigungen verwenden, darunter Popupbenachrichtigungen, Kachelbenachrichtigungen und reine XML-Benachrichtigungen. Sie können auch die Rate der App-Starts nachverfolgen, die durch Ihre Pushbenachrichtigungen ausgelöst wurden. Weitere Informationen zu diesem Feature finden Sie unter [Senden von Pushbenachrichtigungen an den Kunden Ihrer App](../publish/send-push-notifications-to-your-apps-customers.md).
 
-Bevor Sie benutzerorientierte Pushbenachrichtigungen an Ihre Kunden aus dem Partner Center senden können, müssen Sie eine Methode der Klasse [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) im Microsoft Store Services SDK verwenden, um Ihre app zum Empfangen von Benachrichtigungen registrieren. Sie können weitere Methoden dieser Klasse verwenden, um das Partner Center zu benachrichtigen, dass Ihre app in Reaktion auf eine benutzerorientierte Pushbenachrichtigung gestartet wurde (Wenn Sie die Rate der app-Starts Ihrer Benachrichtigungen aufgrund nachverfolgen möchten) und den Erhalt von Benachrichtigungen.
+Bevor Sie benutzerorientierte Pushbenachrichtigungen an Ihre Kunden aus dem Partner Center senden können, müssen Sie eine Methode der Klasse [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) im Microsoft Store Services SDK verwenden, um Ihre app zum Empfangen von Benachrichtigungen zu registrieren. Sie können weitere Methoden dieser Klasse verwenden, um das Partner Center zu benachrichtigen, dass Ihre app in Reaktion auf eine benutzerorientierte Pushbenachrichtigung gestartet wurde (Wenn Sie die Rate der app-Starts Ihrer Benachrichtigungen aufgrund nachverfolgen möchten) und den Erhalt von Benachrichtigungen.
 
 ## <a name="configure-your-project"></a>Konfigurieren des Projekts
 
@@ -73,11 +73,11 @@ Nachdem Ihre app zum Empfangen von Benachrichtigungen und [Senden Sie eine Pushb
 
 So können Sie beispielsweise die Benutzer Ihrer App, die kostenpflichtige Add-Ons gekauft haben, mit einem kostenlosen Add-On belohnen. In diesem Fall können Sie eine Pushbenachrichtigung an ein [Kundensegment](../publish/create-customer-segments.md) senden, die auf diese Benutzer ausgerichtet ist. Dann können Sie in einem der oben aufgeführten Einstiegspunkte Code hinzufügen, um diesen Kunden einen kostenlosen [In-App-Kauf](in-app-purchases-and-trials.md) zu gewähren.
 
-## <a name="notify-partner-center-of-your-app-launch"></a>Benachrichtigen des Partner Centers über den Start Ihrer app
+## <a name="notify-partner-center-of-your-app-launch"></a>Partner Center über den Start Ihrer app benachrichtigen
 
-Wenn Sie die Option **Track app Launch Rate** für Ihre benutzerorientierte Pushbenachrichtigung im Partner Center auswählen, rufen Sie die Methode [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) aus dem entsprechenden Einstiegspunkt in Ihrer app zum Partner Center zu benachrichtigen, die Ihre app wurde in Reaktion auf eine Pushbenachrichtigung gestartet.
+Wenn Sie die Option **Track app-startrate** für Ihre benutzerorientierte Pushbenachrichtigung im Partner Center auswählen, rufen Sie die [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) -Methode aus dem entsprechenden Einstiegspunkt in Ihrer app zum Partner Center zu benachrichtigen, die Ihre app wurde in Reaktion auf eine Pushbenachrichtigung gestartet.
 
-Diese Methode gibt auch die ursprünglichen Startargumente für Ihre App zurück. Wenn Sie die app-startrate für Ihre Pushbenachrichtigung entscheiden, eine nicht transparente Tracking-ID hinzugefügt wird den startargumenten verfolgen, die app im Partner Center. Sie müssen die Startargumente für Ihre app an die [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) -Methode übergeben, und diese Methode sendet die Tracking-ID für das Partner Center, entfernt die Tracking-ID aus den startargumenten und gibt die ursprünglichen Startargumente für Ihre Code.
+Diese Methode gibt auch die ursprünglichen Startargumente für Ihre App zurück. Wenn Sie die app-startrate für Ihre Pushbenachrichtigung möchten, eine nicht transparente nachverfolgungs, die ID hinzugefügt wird den startargumenten verfolgen, die app im Partner Center. Sie müssen die Startargumente für Ihre app an die [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) -Methode übergeben, und diese Methode sendet die Tracking-ID für das Partner Center, entfernt die Tracking-ID aus den startargumenten und gibt die ursprünglichen Startargumente für Ihre Code.
 
 Die Art und Weise des Aufrufs der Methode hängt von dem Aktivierungstyp der Pushbenachrichtigung ab.
 

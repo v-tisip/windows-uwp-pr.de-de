@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Erste Schritte, UWP, Windows10, Lernpfad, Layout, Formular
 ms.localizationpriority: medium
 ms.openlocfilehash: 2d1018857d727d1cc96ded813390a397c6d94e44
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6027257"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6136311"
 ---
 # <a name="create-and-customize-a-form"></a>Erstellen und Anpassen eines Formulars
 
@@ -46,7 +46,7 @@ Lesen Sie [diese Dokumentation zu Layoutpanels](../design/layout/layout-panels.m
 
 ## <a name="what-goes-in-a-form"></a>Was gehört in ein Formular?
 
-Sie müssen Ihr Formular mit verschiedenen [XAML-Steuerelementen](../design/controls-and-patterns/controls-and-events-intro.md) füllen. Wahrscheinlich sind Sie mit diesen vertraut, lesen Sie jedoch gerne weiter, wenn Sie eine Auffrischung benötigen. Sie benötigen insbesondere Steuerelemente, mit denen Benutzer Text eingeben oder Optionen aus einer Liste von Werten auswählen können. Dies ist eine einfache Liste von Optionen, die Sie hinzufügen können – Sie müssen nicht alles darüber, lesen nur so viel, dass Sie verstehen, wie sie Aussehen und funktionieren.
+Sie müssen Ihr Formular mit verschiedenen [XAML-Steuerelementen](../design/controls-and-patterns/controls-and-events-intro.md) füllen. Wahrscheinlich sind Sie mit diesen vertraut, lesen Sie jedoch gerne weiter, wenn Sie eine Auffrischung benötigen. Sie benötigen insbesondere Steuerelemente, mit denen Benutzer Text eingeben oder Optionen aus einer Liste von Werten auswählen können. Dies ist eine einfache Liste der Optionen, die Sie hinzufügen können – Sie müssen nicht alles darüber, lesen nur so viel, dass Sie verstehen, wie sie Aussehen und funktionieren.
 
 * [TextBox](../design/controls-and-patterns/text-box.md) können einen Benutzer eingegebenen Text in Ihrer app.
 * Mit [ToggleSwitch](../design/controls-and-patterns/toggles.md) kann ein Benutzer zwischen zwei Optionen auswählen.
@@ -134,7 +134,7 @@ Wenn Sie komplexere Layouts mit mehr visuellen Elementen erstellen, finden Sie w
 
 ## <a name="going-further"></a>Vertiefung
 
-Auch wenn Sie hier ein Formular erstellt haben, gelten die Konzepte von Layouts und Steuerelementen für alle XAML-Benutzeroberflächen, die Sie möglicherweise erstellen. Passen Sie die Dokumente durcharbeiten, wir haben Sie verknüpft und experimentieren Sie mit dem Formular haben Sie neue Benutzeroberflächenfeatures hinzufügen und die Benutzeroberfläche eingrenzen. Wenn Sie die schrittweise Anleitung zu detaillierteren Layoutfeatures möchten, finden Sie unsere [Lernprogramm zu adaptiven Layouts](../design/basics/xaml-basics-adaptive-layout.md)
+Auch wenn Sie hier ein Formular erstellt haben, gelten die Konzepte von Layouts und Steuerelementen für alle XAML-Benutzeroberflächen, die Sie möglicherweise erstellen. Passen Sie die Dokumente durcharbeiten, wir haben Sie verknüpft und mit dem Formular, die, das Sie neue Benutzeroberflächenfeatures hinzufügen und die Benutzeroberfläche eingrenzen haben, das experimentieren. Wenn Sie die schrittweise Anleitung zu detaillierteren Layoutfeatures möchten, finden Sie unsere [Lernprogramm zu adaptiven Layouts](../design/basics/xaml-basics-adaptive-layout.md)
 
 Formulare existieren außerdem nicht in einem Vakuum – Sie können einen Schritt weiter gehen und Ihres in ein [Master-/Detailmuster](../design/controls-and-patterns/master-details.md) oder [Pivot-Steuerelement](../design/controls-and-patterns/tabs-pivot.md) einbetten. Oder wenn Sie an dem CodeBehind für Ihr Formular arbeiten möchten, finden Sie die ersten Schritte in unserer [Übersicht über Ereignisse](../xaml-platform/events-and-routed-events-overview.md).
 

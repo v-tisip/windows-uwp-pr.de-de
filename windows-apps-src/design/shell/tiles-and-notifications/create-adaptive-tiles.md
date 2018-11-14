@@ -11,17 +11,17 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f0af7dc153f75826444a517d4958bfeba53b103d
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6045144"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6150720"
 ---
 # <a name="create-adaptive-tiles"></a>Erstellen adaptiver Kacheln
 
 Vorlagen für Adaptive Kacheln sind ein neues Feature in Windows 10, sodass Sie Entwurf eigener Inhalte für kachelbenachrichtigungen mithilfe einer einfachen, flexiblen Markupsprache, die sich an unterschiedliche bildschirmdichten anpasst. Dieser Artikel beschreibt, wie Sie adaptive Live-Kacheln für Ihre UWP-App (Universelle Windows-Plattform) erstellen. Die vollständige Liste adaptiver Elemente und Attribute finden Sie unter [Adaptives Kachelschema](../tiles-and-notifications/tile-schema.md).
 
-(Wenn Sie möchten, können Sie weiterhin die voreingestellten Vorlagen aus der [Windows8 Kachel Katalogs für einstellungsvorlagen](https://msdn.microsoft.com/library/windows/apps/hh761491) verwenden beim Entwerfen von Benachrichtigungen für Windows 10.)
+(Wenn Sie möchten, können Sie weiterhin die voreingestellten Vorlagen aus der [Windows8 Kachel Vorlage Katalog](https://msdn.microsoft.com/library/windows/apps/hh761491) verwenden beim Entwerfen von Benachrichtigungen für Windows 10.)
 
 
 ## <a name="getting-started"></a>Erste Schritte
@@ -282,7 +282,7 @@ TileContent content = new TileContent()
 
 Wenn Sie in der Benachrichtigungsnutzlast kein Branding angeben, wird das Branding durch die Eigenschaften der Basiskachel bestimmt. Wenn auf der Basiskachel der Anzeigename dargestellt ist, wird für das Branding standardmäßig „name“ verwendet. Wenn kein Anzeigename vorhanden ist, wird für das Branding standardmäßig „none“ verwendet.
 
-**Hinweis:**  Dies ist eine Änderung gegenüber Windows8.x, in denen das standardbranding "Logo" lautete.
+**Hinweis:**  Dies unterscheidet sich von Windows8.x, in denen das standardbranding "Logo" lautete.
 
  
 
@@ -681,7 +681,7 @@ Wenn Ihre erste Spalte 20% und die zweite Spalte 80% der gesamten Breite einnehm
 
 ![Untergruppen mit einer Gesamtgewichtung von 100](images/adaptive-tiles-subgroups03.png)
 
-**Hinweis:** zwischen Spalten wird automatisch ein Rand von 8 Pixeln eingefügt.
+**Hinweis:** zwischen Spalten wird automatisch ein Rand von 8 Pixel hinzugefügt.
 
  
 

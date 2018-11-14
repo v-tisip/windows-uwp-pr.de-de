@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 9babc1f96b83123cef4bf103f4d13696697cc897
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6032954"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6154106"
 ---
 # <a name="interaction-primer"></a>Einführung in die Interaktion
 
@@ -66,7 +66,7 @@ Der Formfaktor von Surface Dial entspricht einer Drehaktion (oder -geste). Surfa
 
 ## <a name="cortana"></a>Cortana
 
-In Windows 10 können Sie **die Cortana** -Erweiterbarkeit Sprachbefehle von einem Benutzer behandeln und das Starten der Anwendungs, um eine einzelne Aktion auszuführen.
+In Windows 10 können Sie **die Cortana** -Erweiterbarkeit Sprachbefehle von einem Benutzer behandeln und Ihre Anwendung zum Ausführen einer einzelnen Aktion starten.
 
 ### <a name="device-support"></a>Unterstützung von Geräten
 
@@ -236,7 +236,7 @@ Sie müssen mausspezifische Benutzeroberflächenbefehle (oder Angebote) zur Unte
 
 Eine Tastatur ist das Haupteingabegerät für Text und häufig unentbehrlich für Personen mit bestimmten körperlichen Beeinträchtigungen oder für Benutzer, die die Tastatur als schnellere und effizientere Interaktionsmethode betrachten.
 
-Mit [Continuum für Smartphones](http://go.microsoft.com/fwlink/p/?LinkID=699431), einer neuen Funktion für kompatible Windows 10 mobile Geräte, können Benutzer ihre Smartphones mit einer Maus und Tastatur, damit ihr Gerät wie einen Laptop verbinden.
+Mit [Continuum für Smartphones](http://go.microsoft.com/fwlink/p/?LinkID=699431), einer neuen Funktion für kompatible Windows 10 mobile Geräte, können Benutzer ihre Smartphones mit einer Maus und Tastatur, damit ihr Gerät wie einen Laptop eine Verbindung herstellen.
 
 ### <a name="device-support"></a>Unterstützung von Geräten
 

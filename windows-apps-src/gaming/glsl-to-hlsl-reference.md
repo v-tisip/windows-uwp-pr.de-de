@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, glsl, hlsl, opengl, directx, Shader
 ms.localizationpriority: medium
 ms.openlocfilehash: 30c925f9ebb07d578147dfba373fdeb3baa364fe
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6033997"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6140059"
 ---
 # <a name="glsl-to-hlsl-reference"></a>GLSL-zu-HLSL-Referenz
 
@@ -96,7 +96,7 @@ Folgende allgemeine Unterschiede bestehen zwischen GLSL und HLSL:
 <td align="left">Zeilenmatrizen (Standard)</td>
 <td align="left">Spaltenmatrizen (Standard)
 <div class="alert">
-<strong>Hinweis:</strong>  <strong>Row_major</strong> -Typmodifizierer verwenden, um das Layout für eine Variable zu ändern. Weitere Informationen finden Sie unter <a href="https://msdn.microsoft.com/library/windows/desktop/bb509706">Variablensyntax</a>. Sie können auch ein Compilerkennzeichen oder ein Pragma angeben, um den globalen Standardwert zu ändern.
+<strong>Hinweis:</strong>  verwenden Sie den <strong>Row_major</strong> -Typmodifizierer, um das Layout für eine Variable zu ändern. Weitere Informationen finden Sie unter <a href="https://msdn.microsoft.com/library/windows/desktop/bb509706">Variablensyntax</a>. Sie können auch ein Compilerkennzeichen oder ein Pragma angeben, um den globalen Standardwert zu ändern.
 </div>
 <div>
  

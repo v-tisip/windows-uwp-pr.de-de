@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10 UWP, Auszahlungszusammenfassung, Anweisung, Zahlungen, Einnahmen, Auszahlung, Einnahmen
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f6369247f0e287ec2698213b7f0b7be7e1f21d4
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6030787"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6144212"
 ---
 # <a name="payout-summary"></a>Auszahlungsübersicht
 
@@ -29,7 +29,7 @@ Wenn Sie Produkte im Azure Marketplace verkaufen, werden Ihnen in der **Auszahlu
 >
 > Zahlungen erfolgen monatlich (vorausgesetzt, der entsprechenden Zahlungsschwellenwert wird erreicht). In der Regel senden wir Zahlungen, die in einem bestimmten Monat fällig sind, bis zum 15. Tag dieses Monats. Beachten Sie, dass Zahlungen in der Regel zwischen drei und zehn zusätzliche Werktage benötigen, um Ihr Konto zu erreichen. Weitere Informationen finden Sie unter [Auszahlungsschwellenwerte, Methoden und Zeiträume](payment-thresholds-methods-and-timeframes.md).
 
-Um die **Auszahlungsübersicht**anzuzeigen, klicken Sie auf das Symbol " **Auszahlungskonto** ", das in der Nähe der oberen rechten Ecke im Partner Center angezeigt wird, und wählen Sie dann **Auszahlungszusammenfassung**.
+Um die **Auszahlungsübersicht**anzuzeigen, klicken Sie auf die **Auszahlung** -Symbol, das in der Nähe der oberen rechten Ecke im Partner Center angezeigt wird, und wählen Sie dann **Auszahlungszusammenfassung**.
 
 ## <a name="current-proceeds-and-payments"></a>Aktuelle Erlöse und Auszahlungen
 

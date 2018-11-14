@@ -14,11 +14,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: b2576c11e50092b5d8e70189e0e8a88cfab716f9
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026891"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6184461"
 ---
 # <a name="xaml-overview"></a>Übersicht über XAML
 
@@ -90,7 +90,7 @@ Das Präfix definiert das Markuptoken, das zur Referenzierung dieses XAML-Namesp
 
 Die Attributsyntax zum Zuordnen des Präfix `myTypes` zum Namespace `myCompany.myTypes` lautet z.B. wie folgt: `    xmlns:myTypes="using:myCompany.myTypes"`. Ein Beispiel für eine Elementdarstellung lautet: `<myTypes:CustomButton/>`
 
-Weitere Informationen zur Zuordnung von XAML-Namespaces für benutzerdefinierte Typen einschließlich einiger besonderer Punkte zu für VisualC++-komponentenerweiterungen (C++ / CX), finden Sie in [XAML-Namespaces und Namespacezuordnung](xaml-namespaces-and-namespace-mapping.md).
+Weitere Informationen zur Zuordnung von XAML-Namespaces für benutzerdefinierte Typen einschließlich einiger besonderer Punkte zu für VisualC++-komponentenerweiterungen (C++ / CX), [XAML-Namespaces und Namespacezuordnung](xaml-namespaces-and-namespace-mapping.md)angezeigt.
 
 ## <a name="other-xaml-namespaces"></a>Andere XAML-Namespaces
 
@@ -200,7 +200,7 @@ namespace App1
 
 Innerhalb eines Projekts wird XAML als XAML-Datei geschrieben, und Sie können mit Ihrer bevorzugten Programmiersprache (C#, Visual Basic, C++/CX) eine CodeBehind-Datei schreiben. Wenn für eine XAML-Datei als Teil einer Buildaktion für das Projekt Markup kompiliert wird, wird die Position der XAML-CodeBehind-Datei für jede XAML-Seite durch Angabe eines Namespaces und einer Klasse als [x:Class](x-class-attribute.md)-Attribut des Stammelements der XAML-Seite bestimmt. Weitere Informationen zur Funktionsweise dieser Mechanismen in XAML und ihrer Beziehung zu den Programmierungs- und Anwendungsmodellen finden Sie unter [Übersicht über Ereignisse und Routingereignisse](events-and-routed-events-overview.md).
 
-**Hinweis:** für c++ / CX gibt es zwei CodeBehind-Dateien sind: eine für einen Header (. xaml.h) und das andere ist die Implementierung (. xaml.cpp). Die Implementierung verweist auf den Header, und aus technischer Sicht ist es der Header, der den Einstiegspunkt für die CodeBehind-Verbindung darstellt.
+**Hinweis:** für c++ / CX gibt es zwei CodeBehind-Dateien sind: eine für einen Header (. xaml.h) und das andere Implementierung (. xaml.cpp). Die Implementierung verweist auf den Header, und aus technischer Sicht ist es der Header, der den Einstiegspunkt für die CodeBehind-Verbindung darstellt.
 
 ## <a name="resource-dictionaries"></a>Ressourcenwörterbücher
 

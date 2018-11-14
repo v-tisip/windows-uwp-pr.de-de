@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP, Anhalten der Veröffentlichung, Veröffentlichungsdatum, Genehmigungsprozess für eingeschränkte Funktionen
 ms.localizationpriority: medium
 ms.openlocfilehash: 8f7d58989035db1a14aba685c8951d23d2f94b52
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6028500"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6159393"
 ---
 # <a name="manage-submission-options"></a>Verwalten der Übermittlungsoptionen
 
@@ -33,7 +33,7 @@ Für die meisten Übermittlungen empfehlen wir den Abschnitt **Optionen zum Anha
 
 ### <a name="publish-your-submission-manually"></a>Übermittlung manuell veröffentlichen
 
-Wenn Sie noch kein Veröffentlichungsdatum festlegen möchten und Ihre Übermittlung unveröffentlicht bleiben soll, bis Sie manuell mit dem Veröffentlichungsprozess beginnen möchten, können Sie **Don't publish this submission until I select Publish now** auswählen. Die Auswahl dieser Option bedeutet, dass Ihre Übermittlung erst veröffentlicht wird, wenn Sie es angeben. Nachdem Ihre Übermittlung übergibt Zertifizierung können Sie es durch die Auswahl **Veröffentlichen jetzt** auf der Seite mit dem Zertifizierungsstatus oder auf die gleiche Weise wie nachfolgend beschrieben ein bestimmtes Datum auswählen veröffentlichen.
+Wenn Sie noch kein Veröffentlichungsdatum festlegen möchten und Ihre Übermittlung unveröffentlicht bleiben soll, bis Sie manuell mit dem Veröffentlichungsprozess beginnen möchten, können Sie **Don't publish this submission until I select Publish now** auswählen. Die Auswahl dieser Option bedeutet, dass Ihre Übermittlung erst veröffentlicht wird, wenn Sie es angeben. Nachdem Ihre Übermittlung übergibt Zertifizierung können Sie es durch Auswahl **Veröffentlichen jetzt** auf der Seite mit dem Zertifizierungsstatus oder auf die gleiche Weise wie nachfolgend beschrieben ein bestimmtes Datum auswählen veröffentlichen.
 
 
 ### <a name="start-publishing-your-submission-on-a-certain-date"></a>Starten Sie die Veröffentlichung der Übermittlung an einem bestimmten Datum

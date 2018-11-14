@@ -9,15 +9,15 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store Werbungs-API, Anzeigenkampagnen
 ms.localizationpriority: medium
 ms.openlocfilehash: 81e77fb01347c2a6ec2630e08f3a00ee6cf47de7
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6046015"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6152533"
 ---
 # <a name="run-ad-campaigns-using-store-services"></a>Durchführen von Anzeigenkampagnen mit Store-Diensten
 
-Verwenden Sie die *Microsoft Store-werbungs-API* , um verwalten Sie programmgesteuert werbeanzeigenkampagnen für apps, die für Ihre oder das Ihrer Organisation Partner Center-Konto registriert sind. Mit dieser API können Sie Ihre Kampagnen und andere zugehörige Ressourcen, z.B. Zielgruppen und Werbemittel, erstellen, aktualisieren und überwachen. Diese API ist besonders nützlich für Entwickler, die umfangreiche Kampagnen erstellen und ohne Verwendung von Partner Center tun möchten. Diese API verwendet Azure Active Directory (AzureAD), um die Aufrufe von Ihrer App oder Ihrem Dienst zu authentifizieren.
+Verwenden Sie die *Microsoft Store-werbungs-API* , verwalten Sie programmgesteuert werbeanzeigenkampagnen für apps, die für Ihre oder das Ihrer Organisation Partner Center-Konto registriert sind. Mit dieser API können Sie Ihre Kampagnen und andere zugehörige Ressourcen, z.B. Zielgruppen und Werbemittel, erstellen, aktualisieren und überwachen. Diese API ist besonders nützlich für Entwickler, die umfangreiche Kampagnen erstellen und ohne Verwendung von Partner Center tun möchten. Diese API verwendet Azure Active Directory (AzureAD), um die Aufrufe von Ihrer App oder Ihrem Dienst zu authentifizieren.
 
 Dazu müssen folgende Schritte ausgeführt werden:
 
@@ -25,7 +25,7 @@ Dazu müssen folgende Schritte ausgeführt werden:
 2.  Vor dem Aufrufen einer Methode in der Microsoft Store-Werbungs-API müssen Sie [ein AzureAD-Zugriffstoken anfordern](#obtain-an-azure-ad-access-token). Nach dem Abruf eines Zugriffstokens können Sie es für einen Zeitraum von 60Minuten in Aufrufen der Microsoft Store-Werbungs-API verwenden, bevor es abläuft. Nach dem Ablauf des Tokens können Sie ein neues Token generieren.
 3.  [Aufrufen der Microsoft Store-Werbungs-API](#call-the-windows-store-promotions-api).
 
-Alternativ können Sie erstellen und Verwalten von Anzeigenkampagnen mit Partner Center und alle Anzeigenkampagnen, die Sie programmgesteuert über die Microsoft Store-werbungs erstellen, die API auch im Partner Center zugegriffen werden kann. Weitere Informationen zum Verwalten von Anzeigenkampagnen im Partner Center finden Sie unter [Erstellen einer Anzeigenkampagne für Ihre app](../publish/create-an-ad-campaign-for-your-app.md).
+Sie können alternativ erstellen und Verwalten von Anzeigenkampagnen mit Partner Center und alle Anzeigenkampagnen, die Sie programmgesteuert über die Microsoft Store-werbungs erstellen, die API auch im Partner Center zugegriffen werden kann. Weitere Informationen zur Verwaltung von Anzeigenkampagnen im Partner Center finden Sie unter [Erstellen einer Anzeigenkampagne für Ihre app](../publish/create-an-ad-campaign-for-your-app.md).
 
 > [!NOTE]
 > Alle Entwickler mit einem Partner Center-Konto können die Microsoft Store-werbungs-API verwenden, um Anzeigenkampagnen für ihre apps verwalten. Medienagenturen können auch den Zugriff auf diese API anfordern, um Anzeigenkampagnen für ihre Werbekunden durchzuführen. Wenn Sie einer Medienagentur angehören und weitere Informationen zu dieser API wünschen oder den Zugriff darauf anfordern möchten, senden Sie Ihre Anfrage an storepromotionsapi@microsoft.com.
@@ -36,19 +36,19 @@ Alternativ können Sie erstellen und Verwalten von Anzeigenkampagnen mit Partner
 
 Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllt haben, bevor Sie mit dem Schreiben von Code zum Aufrufen der Microsoft Store-Werbungs-API beginnen.
 
-* Bevor Sie erfolgreich erstellen und starten Sie eine Anzeigenkampagne mit dieser API können, müssen Sie zunächst [eine kostenpflichtige Anzeigenkampagne über die Seite **Anzeigenkampagnen** im Partner Center erstellen](../publish/create-an-ad-campaign-for-your-app.md), und Sie müssen auf dieser Seite mindestens ein Zahlungsmittel hinzufügen. Danach können Sie mithilfe dieser API gebührenpflichtige Lieferpositionen für Anzeigenkampagnen erstellen. Lieferpositionen für Anzeigenkampagnen, die Sie mithilfe dieser API erstellen, werden automatisch die Standard-Zahlungsmittel fakturieren auf der Seite " **Anzeigenkampagnen** " im Partner Center in Rechnung gestellt.
+* Bevor Sie erfolgreich erstellen und starten Sie eine Anzeigenkampagne mit dieser API können, müssen Sie zunächst [eine kostenpflichtige Anzeigenkampagne über die Seite **Anzeigenkampagnen** im Partner Center erstellen](../publish/create-an-ad-campaign-for-your-app.md), und Sie müssen auf dieser Seite mindestens ein Zahlungsmittel hinzufügen. Danach können Sie mithilfe dieser API gebührenpflichtige Lieferpositionen für Anzeigenkampagnen erstellen. Lieferpositionen für Anzeigenkampagnen, die Sie mithilfe dieser API erstellen, werden automatisch die Standard-Zahlungsmittel ausgewählt, auf der Seite **Anzeigenkampagnen** im Partner Center in Rechnung stellen.
 
-* Sie (bzw. Ihre Organisation) müssen über ein Azure AD-Verzeichnis und die Berechtigung [Globaler Administrator](http://go.microsoft.com/fwlink/?LinkId=746654) für das Verzeichnis verfügen. Wenn Sie bereits mit Office 365oder anderen Unternehmensdiensten von Microsoft arbeiten, verfügen Sie schon über ein Azure AD-Verzeichnis. Andernfalls können Sie für ohne zusätzliche Kosten [ein neues Azure AD im Partner Center erstellen](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) .
+* Sie (bzw. Ihre Organisation) müssen über ein Azure AD-Verzeichnis und die Berechtigung [Globaler Administrator](http://go.microsoft.com/fwlink/?LinkId=746654) für das Verzeichnis verfügen. Wenn Sie bereits mit Office 365oder anderen Unternehmensdiensten von Microsoft arbeiten, verfügen Sie schon über ein Azure AD-Verzeichnis. Andernfalls können Sie [ein neues Azure AD im Partner Center erstellen](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) , für die ohne zusätzliche Kosten.
 
 * Sie müssen Ihr Partner Center-Konto eine Azure AD-Anwendung zuordnen, die Mandanten-ID und die Client-ID für die Anwendung abrufen und einen Schlüssel generieren. Die AzureAD-Anwendung stellt die App oder den Dienst dar, aus denen Sie die Microsoft Store-Werbungs-API aufrufen möchten. Sie benötigen die Mandanten-ID, die Client-ID und den Schlüssel zum Abrufen eines AzureAD-Zugriffstokens, das Sie an die API übergeben.
     > [!NOTE]
     > Sie müssen diesen Schritt nur einmal ausführen. Wenn Sie im Besitz der Mandanten-ID, der Client-ID und des Schlüssel sind, können Sie diese Daten jederzeit wiederverwenden, um ein neues Azure AD-Zugriffstoken zu erstellen.
 
-So ordnen Sie Ihr Partner Center-Konto eine Azure AD-Anwendung und die erforderlichen Werte abzurufen:
+Ihr Partner Center-Konto eine Azure AD-Anwendung zuordnen, und die erforderlichen Werte abzurufen:
 
-1.  Im Partner Center, [Partner Center-Konto Ihrer Organisation mit Azure AD-Verzeichnis Ihrer Organisation zuzuordnen](../publish/associate-azure-ad-with-dev-center.md).
+1.  Im Partner Center, [Partner Center-Konto Ihrer Organisation mit Azure AD-Verzeichnis Ihrer Organisation zuordnen](../publish/associate-azure-ad-with-dev-center.md).
 
-2.  Als Nächstes aus der Seite " **Benutzer** " im Abschnitt **kontoeinstellungen** des Partner Center, [die Azure AD-Anwendung hinzufügen](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) , die die app darstellt oder Dienst, mit denen Sie Werbekampagnen für Ihr Partner Center-Konto verwalten. Weisen Sie dieser Anwendung anschließend die Rolle **Verwalter** zu. Wenn die Anwendung nicht vorhanden ist, noch in Azure AD-Verzeichnis, Sie können [Erstellen Sie ein neues Azure AD-Anwendung im Partner Center](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account). 
+2.  Als Nächstes auf der Seite für den **Benutzer** im Abschnitt **kontoeinstellungen** des Partner Center, [die Azure AD-Anwendung hinzufügen](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) , die die app darstellt oder Dienst, mit denen Sie Werbekampagnen für Ihr Partner Center-Konto verwalten. Weisen Sie dieser Anwendung anschließend die Rolle **Verwalter** zu. Wenn die Anwendung nicht vorhanden ist, noch in Azure AD-Verzeichnis, Sie können [Erstellen Sie ein neues Azure AD-Anwendung im Partner Center](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account). 
 
 3.  Wechseln Sie zurück zur Seite **Benutzer**, klicken Sie auf den Namen der Azure AD-Anwendung, um die Anwendungseinstellungen aufzurufen, und kopieren Sie die Werte unter **Mandanten-ID** und **Client-ID**.
 
@@ -73,7 +73,7 @@ grant_type=client_credentials
 &resource=https://manage.devcenter.microsoft.com
 ```
 
-Geben Sie für *Tenant\_id* Wert im POST-URI und die Parameter *Client\_id* und *Client\_secret* die Mandanten-ID, Client-ID und den Schlüssel für Ihre Anwendung, die Sie aus dem Partner Center im vorherigen Abschnitt abgerufen haben. Für den Parameter *resource* müssen Sie ```https://manage.devcenter.microsoft.com``` angeben.
+Geben Sie für *Tenant\_id* Wert im POST-URI und die Parameter *Client\_id* und *Client\_secret* die Mandanten-ID, Client-ID und den Schlüssel für Ihre Anwendung, die Sie aus dem Partner Center im vorherigen Abschnitt abgerufen. Für den Parameter *resource* müssen Sie ```https://manage.devcenter.microsoft.com``` angeben.
 
 Nachdem das Zugriffstoken abgelaufen ist, können Sie es aktualisieren, indem Sie [diese Anleitung](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens) befolgen.
 

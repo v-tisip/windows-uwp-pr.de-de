@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Opengl, Direct3D 11, Portieren
 ms.localizationpriority: medium
 ms.openlocfilehash: e7541a8f54f64197c17acea5f1737e36b0e6f670
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6037286"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6161951"
 ---
 # <a name="port-a-simple-opengl-es-20-renderer-to-direct3d-11"></a>Portieren eines einfachen OpenGL ES 2.0-Renderers zu Direct3D 11
 
@@ -82,7 +82,7 @@ typedef struct
 
 Diese Struktur verfügt über eine Instanz und enthält alle erforderlichen Komponenten zum Rendern eines sehr einfach aufgebauten Gitters mit Vertexschattierung.
 
-> **Hinweis:** Any OpenGL ES 2.0-Code in diesem Thema basiert auf der von der Khronos Group bereitgestellten Windows-API-Implementierung und Programmiersyntax Windows C verwendet.
+> **Hinweis:** Any OpenGL ES 2.0-Code in diesem Thema basiert auf der Windows-API-Implementierung von der Khronos Group und Programmiersyntax Windows C verwendet.
 
  
 

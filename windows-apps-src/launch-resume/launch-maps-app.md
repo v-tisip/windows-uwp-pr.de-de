@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6fd7377294e0d460720f6a16e71981ab0924ac9a
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6042385"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6142177"
 ---
 # <a name="launch-the-windows-maps-app"></a>Starten der Windows-Karten-App
 
@@ -249,7 +249,7 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 </ul>
 <p>Unter Windows 10 sind die Stile der Luftansicht und der 3D-Ansicht identisch.</p>
 <div class="alert">
-**Hinweis:** der **Sty** Parameter ausgelassen erzeugt dieselben Ergebnisse wie bei Sty = R.
+**Hinweis:** der **Sty** -Parameter ausgelassen erzeugt dieselben Ergebnisse wie bei Sty = R.
 </div>
 <div>
  

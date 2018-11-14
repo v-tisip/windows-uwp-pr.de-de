@@ -2,25 +2,25 @@
 author: PatrickFarley
 ms.assetid: 2f76c520-84a3-4066-8eb3-ecc0ecd198a7
 title: Tests für Windows Desktop-Brücke-Apps
-description: Verwenden der Desktop-Brücke integrierte Tests sicherstellen, dass Ihre desktop-app für die Konvertierung in eine UWP-app optimiert ist.
+description: Verwenden Sie integrierte Tests der Desktop-Brücke, um sicherzustellen, dass Ihre desktop-app für die Konvertierung in eine UWP-app optimiert ist.
 ms.author: pafarley
 ms.date: 12/18/2017
 ms.topic: article
 keywords: Windows 10, Uwp, app-Zertifizierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 8363bc3085e9d6ec4e1a86751b691266b12b365c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6029548"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6135978"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Tests für Windows Desktop Bridge-Apps
 
-[Desktop-Brücke-Apps](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root) sind Windows-desktopanwendungen für universelle Windows-Plattform (UWP)-apps mit der [Desktop-Brücke](https://developer.microsoft.com/en-us/windows/bridges/desktop)konvertiert. Nach der Konvertierung wird die Windows-Desktopanwendung gepackt, gewartet und als UWP-App-Paket (eine APPX- oder APPXBUNDLE-Datei) für Windows10 Desktop bereitgestellt.
+[Desktop-Brücke-Apps](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root) sind Windows-desktop-Apps für universelle Windows-Plattform (UWP)-apps, die mit der [Desktop-Brücke](https://developer.microsoft.com/en-us/windows/bridges/desktop)konvertiert. Nach der Konvertierung wird die Windows-Desktopanwendung gepackt, gewartet und als UWP-App-Paket (eine APPX- oder APPXBUNDLE-Datei) für Windows10 Desktop bereitgestellt.
 
 ## <a name="required-versus-optional-tests"></a>Obligatorische im Vergleich zu optionalen Tests
-Optionalen Tests für Windows-Desktop-Brücke-apps nur zu Informationszwecken dienen und nicht zur Auswertung Ihrer app während der Integration von Microsoft Store verwendet werden. Wir empfehlen untersuchen dieser Testergebnisse um bessere Qualität apps zu erzeugen. Die gesamten Kriterien für die Aufnahme in den Windows Store werden von den obligatorischen Tests und nicht von den optionalen Tests bestimmt.
+Optionalen Tests für Windows-Desktop-Brücke-apps nur zu Informationszwecken dienen und nicht zur Auswertung Ihrer app während der Integration von Microsoft Store verwendet werden. Wir empfehlen untersuchen dieser Testergebnisse um bessere Qualität apps zu erstellen. Die gesamten Kriterien für die Aufnahme in den Windows Store werden von den obligatorischen Tests und nicht von den optionalen Tests bestimmt.
 
 ## <a name="current-optional-tests"></a>Aktuelle optionale Tests
 
@@ -212,17 +212,17 @@ Desktop-Brücke-Apps können zusammen mit modernen APIs (UWP-Komponenten) einige
  
 **Testdetails**  
 Dieser Test überprüft die UWP-Komponenten in der App:
-* Stellt sicher, dass verwaltete Binärdatei des app-Pakets keine Abhängigkeit von einer Win32-API aufweist, die nicht für die Entwicklung von UWP-Apps unterstützt wird, indem Sie die Importadressentabelle der Binärdatei.
+* Stellt sicher, dass verwaltete Binärdatei des app-Pakets keine Abhängigkeit von einer Win32-API aufweist, die für die Entwicklung von UWP-Apps nicht unterstützt wird, indem Sie die Importadressentabelle der Binärdatei.
 * Stellt sicher, dass eine verwaltete Binärdatei des App-Pakets keine Abhängigkeit von einer Funktion außerhalb des genehmigten Profils aufweist. 
 
 **Maßnahmen**  
 Dies kann korrigiert werden, indem sichergestellt wird, dass die App als Releasebuild und nicht als ein Debugbuild kompiliert wurde. 
 
 > [!NOTE]
-> Das Debugbuild einer App wird bei diesem Test fehl, selbst wenn die app nur [APIs für UWP-apps](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)verwendet. Überprüfen Sie die Fehlermeldungen, um die API vorhanden zu identifizieren, die nicht für UWP-apps zulässige API ist. 
+> Das Debugbuild einer App tritt bei diesem Test, auch wenn die app nur die [APIs für UWP-apps](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)verwendet. Überprüfen Sie die Fehlermeldungen, um die API vorhanden zu identifizieren, die nicht für UWP-apps zulässige API ist. 
 
 > [!NOTE]
-> C++-apps, die unter einer Debugkonfiguration erstellt wurden werden bei diesem Test fehl, selbst wenn die Konfiguration nur APIs aus dem Windows SDK für UWP-apps verwendet. Weitere Informationen finden Sie unter [alternativen zu Windows-APIs in UWP-apps](https://msdn.microsoft.com/library/windows/apps/hh464945.aspx) .
+> C++-apps, die unter einer Debugkonfiguration erstellt wurden tritt bei diesem Test, auch wenn die Konfiguration nur APIs aus dem Windows SDK für UWP-apps verwendet. Weitere Informationen finden Sie unter [alternativen zu Windows-APIs in UWP-apps](https://msdn.microsoft.com/library/windows/apps/hh464945.aspx) .
 
 ### <a name="6-user-account-control-uac-test"></a>6. Benutzerkontensteuerung (User Account Control; UAC).  
 

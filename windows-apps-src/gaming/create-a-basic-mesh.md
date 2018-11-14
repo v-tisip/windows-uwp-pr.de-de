@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Gitter, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: e3ae6416217efa16d70b65b8ff55e36654a11557
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6045450"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6184567"
 ---
 # <a name="create-and-display-a-basic-mesh"></a>Erstellen und Anzeigen einfacher Gitter
 
@@ -21,7 +21,7 @@ ms.locfileid: "6045450"
 
 In 3D-Spielen für die universelle Windows-Plattform (UWP) werden Spielobjekte und Oberflächen in der Regel durch Polygone dargestellt. Die Liste der Vertizes, die die Struktur dieser polygonalen Objekte und Oberflächen darstellen, werden als Gitter bezeichnet. Hier erstellen wir ein einfaches Gitter für ein Würfelobjekt und stellen es zum Rendern und Anzeigen für die Shader-Pipeline bereit.
 
-> **Wichtige**  der enthaltene Beispielcode verwendet hier Typen (z. B. DirectX:: Xmfloat3 "und" DirectX:: Xmfloat4x4 ") und Inlinemethoden in DirectXMath.h deklariert. Wenn Sie diesen Code ausschneiden und einfügen, nehmen Sie auch &lt;DirectXMath.h&gt; in Ihr Projekt auf.
+> **Wichtige**  die enthaltene Beispielcode hier verwendet Typen (z. B. DirectX:: Xmfloat3 "und" DirectX:: Xmfloat4x4 ") und Inlinemethoden, die in DirectXMath.h deklariert. Wenn Sie diesen Code ausschneiden und einfügen, nehmen Sie auch &lt;DirectXMath.h&gt; in Ihr Projekt auf.
 
  
 
@@ -259,7 +259,7 @@ m_constantBufferData.view = DirectX::XMFLOAT4X4(
              0.00000000f, 0.00000000f,  0.00000000f,  1.00000000f);
 ```
 
-> **Hinweis:** Sie in der Regel deklarieren die Projektionsmatrix beim Einrichten Gerätespezifischer Ressourcen, da die Ergebnisse der multiplikationsergebnisse mit die aktuellen 2D Viewport Größenparametern übereinstimmen müssen (die häufig der Pixelhöhe und-Breite der entsprechen den Zeigen Sie). Ändern sich diese, müssen Sie die Werte für die X- und die Y-Koordinate entsprechend skalieren.
+> **Hinweis:** Sie in der Regel deklarieren die Projektionsmatrix beim Einrichten Gerätespezifischer Ressourcen, da die Ergebnisse der multiplikationsergebnisse mit die aktuellen 2-D-Viewport Größenparametern übereinstimmen müssen (die häufig der Pixelhöhe und-Breite der entsprechen den Zeigen Sie). Ändern sich diese, müssen Sie die Werte für die X- und die Y-Koordinate entsprechend skalieren.
 
  
 

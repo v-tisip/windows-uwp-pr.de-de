@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 32d8e7d858ff28a6ef6a9af517e0a584c6106cd5
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6039054"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6145006"
 ---
 # <a name="selecting-text-and-images"></a>Auswählen von Text und Bildern
 
@@ -49,13 +49,13 @@ Für die Auswahl und Manipulation von Text ergeben sich durch Fingereingabeinter
 
 **Überlegungen und Empfehlungen**
 
-Verwenden Sie die integrierten Steuerelemente der sprachframeworks in Windowsto Build apps, die die vollständige Plattform Benutzerinteraktion-Erfahrung, einschließlich Auswahl- und manipulationsverhalten – zu bieten. Die Interaktionsfunktionen der integrierten Steuerelemente sollten daher für die meisten UWP-Apps ausreichen.
+Verwenden Sie die integrierten Steuerelemente der sprachframeworks in Windowsto-Build-apps, die die vollständige Plattform interaktionsmöglichkeiten für Benutzer, einschließlich Auswahl- und manipulationsverhalten – zu bieten. Die Interaktionsfunktionen der integrierten Steuerelemente sollten daher für die meisten UWP-Apps ausreichen.
 
 Bei Verwendung der standardmäßigen UWP-Textsteuerelemente können die in diesem Thema beschriebenen Auswahlverhalten und visuellen Elemente nicht angepasst werden.
 
 **Textauswahl**
 
-Wenn Ihre app eine benutzerdefinierte Benutzeroberfläche, die die Textauswahl unterstützt erfordert, empfehlen wir, dass Sie die Windowsselection hier beschriebenen Auswahlverhalten.
+Wenn Ihre app eine benutzerdefinierte Benutzeroberfläche, die die Textauswahl unterstützt erfordert, wird empfohlen, dass die Windowsselection hier beschriebenen Auswahlverhalten.
 
 **Bearbeitbare und nicht bearbeitbare Inhalte**
 
@@ -80,7 +80,7 @@ Im folgenden Bild wird veranschaulicht, wie Sie das Kontextmenü aufrufen, indem
 
 ![Tippen (oder drücken und halten) Sie in die Auswahl oder auf ein Ziehelement, um das Kontextmenü aufzurufen.](images/textselection-show-context.png)
 
-**Hinweis:** weichen diese Interaktionen etwas im Falle eines falsch geschriebenen Worts. Wenn Sie auf ein Wort tippen, das als falsch geschrieben gekennzeichnet ist, wird das gesamte Wort hervorgehoben. Außerdem wird das Kontextmenü mit der vorgeschlagenen Schreibweise aufgerufen.
+**Hinweis:** weichen diese Interaktionen etwas im Falle einer falsch geschriebenen Wort. Wenn Sie auf ein Wort tippen, das als falsch geschrieben gekennzeichnet ist, wird das gesamte Wort hervorgehoben. Außerdem wird das Kontextmenü mit der vorgeschlagenen Schreibweise aufgerufen.
 
  
 

@@ -8,17 +8,17 @@ ms.date: 10/02/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e51a7fb64dae42307960aa90f85463d11aecadc
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6049875"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6151528"
 ---
 # <a name="new-apis-in-windows-10-build-17763"></a>Neue APIs in Windows 10 build 17763
 
 Neue und aktualisierte API-Namespaces wurden vorgenommen verfügbar, die Entwicklern in Windows 10, Build 17763 (auch bekannt als die Oktober 2018 Update oder Version 1809). Unten finden Sie eine vollständige Liste der Dokumentation, die für in dieser Version hinzugefügten oder geänderten Namespaces veröffentlicht wurde.
 
-Informationen zu den APIs in der vorherigen Veröffentlichung hinzugefügt finden Sie [Neue APIs in Windows 10 April Update](windows-10-build-17134-api-diff.md).
+Informationen zu den APIs, die in der vorherigen Veröffentlichung hinzugefügt finden Sie [Neue APIs in Windows 10 April Update](windows-10-build-17134-api-diff.md).
 
 ## <a name="windowsai"></a>Windows.AI
 

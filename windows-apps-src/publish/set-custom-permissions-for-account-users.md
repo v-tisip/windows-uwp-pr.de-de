@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Benutzerrollen, Benutzerberechtigung, benutzerdefinierte Rollen, Zugriff für Benutzer, Berechtigungen anpassen, Standardrollen
 ms.localizationpriority: medium
 ms.openlocfilehash: 2af203ae78ae34a0a6bc9884cbaeaa730ee83e9b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6037365"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6135380"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>Legen Sie Rollen oder benutzerdefinierte Berechtigungen für Kontenbenutzer fest
 
@@ -23,7 +23,7 @@ Wenn Sie [Ihr Partner Center-Konto Benutzer hinzuzufügen](add-users-groups-and-
 > Unabhängig davon, ob Sie einen Benutzer, eine Gruppe oder eine Azure AD-Anwendung hinzufügen, können die gleichen Rollen und Berechtigungen übernommen werden.
 
 Beim Ermitteln der Rollen oder Berechtigungen sollten Sie folgendes bedenken: 
--   Benutzer (einschließlich von Gruppen und Azure AD-Apps) werden auf das gesamte Partner Center-Konto mit den Berechtigungen für ihre zugewiesenen Rollen zugreifen, es sei denn, Sie [Berechtigungen anpassen](#custom) und Zuweisen von [Berechtigungen der Produkt-Stufe](#product-level-permissions) Damit sie nur mit spezifischen apps und/oder Add-ons arbeiten können.
+-   Benutzer (einschließlich von Gruppen und Azure AD-Apps) werden auf das gesamte Partner Center-Konto mit den Berechtigungen für ihre zugewiesenen Rollen, zugreifen, es sei denn, Sie [Berechtigungen anpassen](#custom) und Zuweisen von [Berechtigungen auf Produkt](#product-level-permissions) Damit sie nur mit spezifischen apps und/oder Add-ons arbeiten können.
 -   Sie können einem Benutzer, einer Gruppe oder einer Azure AD-Anwendung den Zugriff auf die Funktionen mehrerer Rollen gewähren, indem Sie mehrere Rollen auswählen oder indem Sie mithilfe benutzerdefinierter Berechtigungen den Zugriff gewähren, den Sie ihnen geben möchten.
 -   Ein Benutzer mit einer bestimmten Rolle (oder einer Reihe benutzerdefinierter Berechtigungen) kann auch Teil einer Gruppe mit einer anderen Rolle (oder einem anderen Satz von Berechtigungen) sein. In diesem Fall hat der Benutzer Zugriff auf alle Funktionen, die mit der Gruppe und dem individuellen Konto verbunden sind.
 
@@ -35,7 +35,7 @@ Beim Ermitteln der Rollen oder Berechtigungen sollten Sie folgendes bedenken:
 
 ## <a name="assign-roles-to-account-users"></a>Kontobenutzern Rollen zuweisen
 
-Standardmäßig wird eine Reihe von standardmäßigen Rollen angezeigt, für die Sie zur Auswahl, wenn Sie einen Benutzer, Gruppen oder Azure AD-Anwendung zu Ihrem Partner Center-Konto hinzufügen. Jede Rolle verfügt über spezifische Berechtigungen, mit denen bestimmte Funktionen innerhalb des Kontos ausgeführt werden können. 
+Standardmäßig wird eine Reihe von standardmäßigen Rollen angezeigt, für die Sie zur Auswahl, wenn Sie einen Benutzer, Gruppen oder Azure AD-Anwendung für Ihr Partner Center-Konto hinzufügen. Jede Rolle verfügt über spezifische Berechtigungen, mit denen bestimmte Funktionen innerhalb des Kontos ausgeführt werden können. 
 
 Sofern Sie keine [benutzerdefinierten Berechtigungen](#custom) durch die Auswahl **benutzerdefinierten Berechtigungen** verwenden, müssen alle Benutzer, Gruppen oder Azure AD-Anwendungen, die Sie einem Konto hinzufügen, mindestens einer der folgenden Standardrollen zugewiesen sein. 
 
@@ -45,7 +45,7 @@ Sofern Sie keine [benutzerdefinierten Berechtigungen](#custom) durch die Auswahl
 
 | Rolle                 | Beschreibung              |
 |----------------------|--------------------------|
-| Manager              | Verfügt über vollständigen Zugriff auf das Konto, kann jedoch keine Steuer- und Auszahlungseinstellungen ändern. Dies umfasst das Verwalten von Benutzern im Partner Center, aber beachten Sie, dass die Fähigkeit zum Erstellen und Löschen von Benutzern im Azure AD-Mandanten Berechtigungen des Kontos in Azure AD abhängig ist. Das heißt, wenn ein Benutzer die Manager-Rolle zugewiesen ist, jedoch verfügt nicht über globale Administratorberechtigungen in der Organisation Azure AD, sie kann nicht für neue Benutzer erstellen oder Benutzer aus dem Verzeichnis löschen (obwohl sie Partner Center-Rolle eines Benutzers ändern). <p> Hinweis: Wenn das Partner Center-Konto mehrere Azure AD-Mandanten zugeordnet ist, ein Manager vollständige Details für einen Benutzer angezeigt werden (z. B. Vorname, Nachname, e-Mail-Kennwort-Wiederherstellung, und gibt an, ob sie ein globaler Administrator des Azure AD sind), wenn sie sind im gleichen Mandanten als der jeweilige Benutzer mit einem Konto, das über globale Administratorberechtigungen für den Mandanten verfügt angemeldet. Sie können jedoch hinzufügen und Entfernen von Benutzern in jedem Mandanten, die im Partner Center-Konto zugeordnet ist. |
+| Manager              | Verfügt über vollständigen Zugriff auf das Konto, kann jedoch keine Steuer- und Auszahlungseinstellungen ändern. Dies umfasst das Verwalten von Benutzern im Partner Center, beachten Sie jedoch, dass die Fähigkeit zum Erstellen und Löschen von Benutzern im Azure AD-Mandanten den Berechtigungen des Kontos in Azure AD abhängig ist. Das heißt, wenn ein Benutzer die Manager-Rolle zugewiesen ist, jedoch verfügt nicht über globale Administratorberechtigungen in der Organisation Azure AD, sie kann nicht für neue Benutzer erstellen oder Löschen von Benutzern aus dem Verzeichnis (obwohl sie Partner Center-Rolle eines Benutzers ändern). <p> Hinweis: Wenn das Partner Center-Konto mehrere Azure AD-Mandanten zugeordnet ist, ein Manager vollständige Details für einen Benutzer angezeigt werden (z. B. Vorname, Nachname, e-Mail-Kennwort-Wiederherstellung, und gibt an, ob sie ein globaler Administrator des Azure AD sind), wenn sie sind im gleichen Mandanten als der jeweilige Benutzer mit einem Konto mit globale Administratorberechtigungen für den Mandanten angemeldet. Sie können jedoch hinzufügen und Entfernen von Benutzern in jedem Mandanten, die im Partner Center-Konto zugeordnet ist. |
 | Entwickler            | Kann Pakete hochladen und Apps und Add-Ons einreichen sowie den [Nutzungsbericht](usage-report.md) für Telemetriedetails einsehen. Können [Geräteübergreifende Benutzeroberflächen](https://go.microsoft.com/fwlink/?linkid=874042) -Funktionen zugreifen. Kann keine finanziellen Informationen oder Kontoeinstellungen anzeigen.   |
 | Mitwirkender im Geschäftsbereich | Kann [Integritäts](health-report.md)- und [Nutzungs](usage-report.md)-Berichte anzeigen. Kann keine Produkte erstellen oder übermitteln, Kontoeinstellungen ändern oder finanzielle Informationen anzeigen.   |
 | Mitwirkender im Finanzbereich  | Kann [Auszahlungsberichte](payout-summary.md), finanzielle Informationen und Erwerbsberichte anzeigen. Kann keine Änderungen an Apps, Add-Ons oder Kontoeinstellungen vornehmen.    |
@@ -168,7 +168,7 @@ Beachten Sie, dass einige Berechtigungen nicht für Add-Ons festgelegt werden k�
     </tr>
     </thead>
     <tbody>
-    <tr><td align="left">    <b>Käufe</b>     </td><td>    Kann die Berichte <a href="acquisitions-report.md">Käufe</a> und <a href="add-on-acquisitions-report.md">Add-On-Käufe</a> für das Produkt anzeigen.        </td><td>    Nicht verfügbar    </td><td>    N/v (Einstellungen für das übergeordnete Produkt umfassen den Bericht " **Add-On-Käufe** ")        </td><td>    Nicht verfügbar                         </td></tr>
+    <tr><td align="left">    <b>Käufe</b>     </td><td>    Kann die Berichte <a href="acquisitions-report.md">Käufe</a> und <a href="add-on-acquisitions-report.md">Add-On-Käufe</a> für das Produkt anzeigen.        </td><td>    Nicht verfügbar    </td><td>    N/v (Einstellungen für das übergeordnete Produkt umfassen den Bericht **Add-on-Käufe** )        </td><td>    Nicht verfügbar                         </td></tr>
     <tr><td align="left">    <b>Nutzung</b> </td><td>    Kann den <a href="usage-report.md">Bericht „Nutzung“</a> für das Produkt anzeigen.     </td><td>    Nicht verfügbar       </td><td>    n.a.     </td><td>    Nicht verfügbar         </td></tr>
     <tr><td align="left">    <b>Integrität</b> </td><td>    Kann den <a href="health-report.md">Bericht „Integrität“</a> für das Produkt anzeigen.    </td><td>    Nicht verfügbar     </td><td>    n.a.     </td><td>    Nicht verfügbar         </td></tr>
     <tr><td align="left">    <b>Kundenfeedback</b>    </td><td>    Kann die Berichte <a href="reviews-report.md">Rezensionen</a> und <a href="feedback-report.md">Feedback</a> für das Produkt anzeigen.       </td><td>    Nicht verfügbar (Um auf Feedback oder Rezensionen reagieren zu können, muss die Berechtigung <b>Kunden kontaktieren</b> erteilt werden)   </td><td>    Nicht verfügbar     </td><td>    Nicht verfügbar         </td></tr>

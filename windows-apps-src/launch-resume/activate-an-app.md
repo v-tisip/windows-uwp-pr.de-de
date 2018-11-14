@@ -14,11 +14,11 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: 4d69680df1684da756219c180bbe6d47263801b9
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6028971"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6142946"
 ---
 # <a name="handle-app-activation"></a>Behandeln der App-Aktivierung
 
@@ -42,7 +42,7 @@ Definieren Sie die Klasse für Ihre Anwendung.
 Überschreiben Sie die [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)-Methode. Diese Methode wird immer dann aufgerufen, wenn der Benutzer die App startet. Der [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731)-Parameter enthält den vorherigen Status der App sowie die Aktivierungsargumente.
 
 > [!NOTE]
-> Unter Windows Aufrufen nicht starten einer angehaltenen app über die startkachel oder app-Liste diese Methode.
+> Unter Windows nicht das Starten einer angehaltenen app über die startkachel oder app-Liste diese Methode aufrufen.
 
 ```csharp
 using System;
@@ -266,7 +266,7 @@ Wenn der Wert von [**PreviousExecutionState**](https://msdn.microsoft.com/librar
 ## <a name="remarks"></a>Anmerkungen
 
 > [!NOTE]
-> Apps können die Initialisierung überspringen, wenn für das aktuelle Fenster bereits Inhalte festgelegt wurden. Sie können die [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) -Eigenschaft, um zu bestimmen, ob die app über eine primäre oder eine sekundäre Kachel gestartet wurde und, basierend auf dieser Information entscheiden, ob Sie ein neuer präsentieren oder Fortsetzen der app-Erfahrung überprüfen.
+> Apps können die Initialisierung überspringen, wenn für das aktuelle Fenster bereits Inhalte festgelegt wurden. Sie können überprüfen, dass die [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) -Eigenschaft, um zu ermitteln, ob die app über eine primäre oder sekundäre Kachel gestartet wurde und, basierend auf dieser Information, entscheiden, ob ein neuer darstellen oder Fortsetzen der app-Erfahrung werden soll.
 
 ## <a name="important-apis"></a>Wichtige APIs
 * [Windows.ApplicationModel.Activation](https://msdn.microsoft.com/library/windows/apps/br224766)

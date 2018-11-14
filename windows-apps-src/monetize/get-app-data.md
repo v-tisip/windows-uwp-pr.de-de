@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, App-Daten
 ms.localizationpriority: medium
 ms.openlocfilehash: ecda61bff6fac407dbde175f584a09d6b871d989
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044299"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6135948"
 ---
 # <a name="get-app-data"></a>Abrufen von App-Daten
 
@@ -102,7 +102,7 @@ Diese Ressource hat die folgenden Werte.
 | primaryName   | String  | Der Primärname der App.      |
 | packageFamilyName | string  | Der Paketfamilienname der App.      |
 | packageIdentityName          | string  | Die Paketidentität der App.                       |
-| publisherName       | string  | Die Windows-Herausgeber-ID, die mit der App verknüpft ist. Dies entspricht dem **Package/Identity/Publisher** -Wert, der auf der Seite " [App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) " für die app im Partner Center angezeigt wird.       |
+| publisherName       | string  | Die Windows-Herausgeber-ID, die mit der App verknüpft ist. Dies entspricht dem **Package/Identity/Publisher** -Wert, der auf der Seite [App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details) für die app im Partner Center angezeigt wird.       |
 | firstPublishedDate      | string  | Das Datum, an dem die App erstmals im Format ISO 8601 veröffentlicht wurde.   |
 | lastPublishedApplicationSubmission       | object | Eine [Übermittlungsressource](#submission_object) mit Informationen über die letzte veröffentlichte Übermittlung für die App.    |
 | pendingApplicationSubmission        | object  |  Eine [Übermittlungsressource](#submission_object) mit Informationen über die aktuelle ausstehende Übermittlung für die App.   |   

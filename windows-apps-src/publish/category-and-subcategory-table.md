@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Kategorie, Unterkategorie, Genre, Kategorien, Genres
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c3ea799d030b64c5b4cc67f75cbdd664a8b83da
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6049819"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6154602"
 ---
 # <a name="category-and-subcategory-table"></a>Kategorie- und Unterkategorietabelle
 
@@ -22,7 +22,7 @@ Das Zuweisen der richtigen Kategorie und Unterkategorie trägt dazu bei, dass Ku
 
 Sie müssen Sie die Kategorie auswählen, die Ihre App am besten beschreibt. Wählen Sie optional, falls verfügbar, eine Unterkategorie aus. Falls Sie sich nicht sicher sind, welche Kategorie oder Unterkategorie Sie verwenden sollen, oder wenn Sie keine finden können, die Ihnen zusagt, suchen Sie die Kategorie aus, in der Kunden Ihrer Meinung nach am ehesten nach einer App wie Ihrer suchen.
 
-Wenn Sie **Spiele** für Ihre Kategorie auswählen, müssen Sie mindestens eine Unterkategorie ( *Genre* für Spiele genannt) auswählen. Sie können beliebig viele Genres für Ihr Spiel auswählen. Um ein Spiel für Ihre Kunden auf Xbox zu veröffentlichen, müssen Sie das [Xbox Live Creators-Programm](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) aktivieren oder den Prozess der [Konzeptgenehmigung](../gaming/concept-approval.md) durchlaufen). 
+Wenn Sie **Spiele** für Ihre Kategorie auswählen, müssen Sie mindestens eine Unterkategorie ( *Genre* für Spiele aufgerufen) auswählen. Sie können beliebig viele Genres für Ihr Spiel auswählen. Um ein Spiel für Ihre Kunden auf Xbox zu veröffentlichen, müssen Sie das [Xbox Live Creators-Programm](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) aktivieren oder den Prozess der [Konzeptgenehmigung](../gaming/concept-approval.md) durchlaufen). 
 
 > [!IMPORTANT] 
 > Wenn Sie die App in der Kategorie **Spiele** veröffentlichen, ist es nicht möglich, eine andere Kategorie bei einer neuen Übermittlung auszuwählen. Sie muss weiterhin in der Kategorie **Spiele** veröffentlicht werden (Sie können allerdings die Auswahl des Genres in bei einer neuen Übermittlung ändern). Außerdem können Sie die Kategorie **Spiele** nicht bei einem Update der App auswählen, die Sie zuvor in einer anderen Kategorie veröffentlicht haben.

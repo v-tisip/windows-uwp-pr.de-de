@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Multisampling, Direct3D
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b967ae1709849bbe5bc944b00d9e30f22052aeb
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6034946"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6147354"
 ---
 # <a name="span-iddevgamingmultisamplingmulti-sampleantialiasinginwindowsstoreappsspan-multisampling-in-universal-windows-platform-uwp-apps"></a><span id="dev_gaming.multisampling__multi-sample_anti_aliasing__in_windows_store_apps"></span> Multisampling in UWP-Apps (Apps für die Universelle Windows-Plattform)
 
@@ -32,7 +32,7 @@ Direct3D-Featureebenen stellen die Unterstützung für spezielle Mindestfunktion
 
 1.  Ermitteln Sie per Aufruf von [**ID3D11Device::CheckFeatureSupport**](https://msdn.microsoft.com/library/windows/desktop/ff476497), welche DXGI-Formate in Verbindung mit dem Multisampling verwendet werden können. Geben Sie die Renderzielformate an, die vom Spiel verwendet werden können. Sowohl für das Renderziel als auch das Auflösungsziel muss das gleiche Format genutzt werden. Prüfen Sie daher sowohl [**D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RENDERTARGET**](https://msdn.microsoft.com/library/windows/desktop/ff476134) als auch **D3D11\_FORMAT\_SUPPORT\_MULTISAMPLE\_RESOLVE**.
 
-    **Featureebene 9:** Auch wenn Featureebene 9 Geräte [Unterstützung für renderzielformate](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget), wird Unterstützung für auflösungsziele nicht garantiert. Diese Überprüfung ist also erforderlich, bevor versucht wird, das in diesem Thema beschriebene Multisampling-Verfahren anzuwenden.
+    **Featureebene 9:** Auch wenn Featureebene 9 Geräte [Unterstützung für renderzielformate](https://msdn.microsoft.com/library/windows/desktop/ff471324#MultiSample_RenderTarget), wird die Unterstützung für auflösungsziele nicht garantiert. Diese Überprüfung ist also erforderlich, bevor versucht wird, das in diesem Thema beschriebene Multisampling-Verfahren anzuwenden.
 
     Mit dem folgenden Code wird die Multisampling-Unterstützung für alle DXGI\_FORMAT-Werte überprüft:
 

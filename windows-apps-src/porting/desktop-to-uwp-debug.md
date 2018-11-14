@@ -10,21 +10,21 @@ keywords: windows10, UWP
 ms.assetid: f45d8b14-02d1-42e1-98df-6c03ce397fd3
 ms.localizationpriority: medium
 ms.openlocfilehash: 041bf37072b595c0889bd1493857e508e27c510c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6043589"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6149760"
 ---
 # <a name="run-debug-and-test-a-packaged-desktop-application"></a>Führen Sie aus, Debuggen Sie und Testen Sie eine verpackte desktop-Anwendung
 
-Führen Sie die verpackte Anwendung und sehen Sie, wie sie aussieht, ohne zu signieren. Legen Sie anschließend Haltepunkte fest und lassen Sie den Code schrittweise durchlaufen. Wenn Sie bereit sind, Ihre Anwendung in einer produktiven Umgebung testen, Signieren Sie Ihre Anwendung, und installieren Sie es dann. In diesem Thema erfahren Sie, wie Sie diese einzelnen Schritte ausführen.
+Führen Sie die verpackte Anwendung, und sehen Sie, wie sie aussieht, ohne zu signieren. Legen Sie anschließend Haltepunkte fest und lassen Sie den Code schrittweise durchlaufen. Wenn Sie bereit sind, Ihre Anwendung in einer produktiven Umgebung testen, Signieren Sie Ihre Anwendung, und installieren Sie es dann. In diesem Thema erfahren Sie, wie Sie diese einzelnen Schritte ausführen.
 
 <a id="run-app" />
 
 ## <a name="run-your-application"></a>Führen Sie Ihre Anwendung
 
-Sie können Ihre Anwendung zu testen, lokal, ohne dass ein Zertifikat benötigen und signieren Sie es ausführen. Wie Sie die Anwendung ausführen, hängt tool verwendet, um das Paket zu erstellen.
+Sie können Ihre Anwendung zu testen, lokal ohne Erwerb eines Zertifikats und signieren Sie es ausführen. Wie Sie die Anwendung ausführen, hängt tool verwendet, um das Paket zu erstellen.
 
 ### <a name="you-created-the-package-by-using-visual-studio"></a>Erstellen des Pakets mit Visual Studio
 
@@ -39,10 +39,10 @@ Add-AppxPackage –Register AppxManifest.xml
 ```
 Finden Sie Ihre App im Windows-Startmenü, um sie auszuführen.
 
-![Verpackte Anwendung im Menü "Start"](images/desktop-to-uwp/converted-app-installed.png)
+![Anwendungspakets im Startmenü.](images/desktop-to-uwp/converted-app-installed.png)
 
 > [!NOTE]
-> Ein Anwendungspaket immer als interaktiver Benutzer ausgeführt wird, und jedes Laufwerk durch die Installation Ihres Anwendungspakets unter NTFS-Format formatiert werden muss.
+> Ein Anwendungspaket immer als interaktiver Benutzer ausgeführt wird, und jedes Laufwerk durch die Installation Ihres Anwendungspakets unter muss NTFS-Format formatiert werden.
 
 ## <a name="debug-your-app"></a>Debuggen Sie Ihre App
 
@@ -66,13 +66,13 @@ Wenn Sie Ihr Paket mit einem anderen Tool erstellt haben, gehen Sie folgenderma�
 
 #### <a name="modify-your-application-in-between-debug-sessions"></a>Ändern Sie Ihre Anwendung zwischen Debugsitzungen
 
-Wenn Sie Ihre Änderungen an Ihrer Anwendung zum Beheben von Fehlern vornehmen, wechseln Sie sie mithilfe des MakeAppx-Tools. Informationen hierzu finden Sie unter [Ausführen des MakeAppx-Tools](desktop-to-uwp-manual-conversion.md#make-appx).
+Wenn Sie Ihre Änderungen an Ihrer Anwendung um Fehlern zu beheben, wechseln Sie sie mithilfe des MakeAppx-Tools. Informationen hierzu finden Sie unter [Ausführen des MakeAppx-Tools](desktop-to-uwp-manual-conversion.md#make-appx).
 
 ### <a name="debug-the-entire-application-lifecycle"></a>Debuggen des gesamten Anwendungslebenszyklus
 
 In einigen Fällen sollten Sie eine differenziertere Steuerung des debugging-Vorgangs, einschließlich der Möglichkeit zum Debuggen Ihrer Anwendung, bevor er beginnt.
 
-[PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) können Sie die vollständige Kontrolle über den Anwendungslebenszyklus einschließlich anhalten, fortsetzen und beenden erhalten.
+[PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) können Sie die vollständige Kontrolle über den Anwendungslebenszyklus, einschließlich anhalten, fortsetzen und beenden erhalten.
 
 [PLMDebug](https://msdn.microsoft.com/library/windows/hardware/jj680085(v=vs.85).aspx) ist im Windows SDK enthalten.
 
@@ -80,9 +80,9 @@ In einigen Fällen sollten Sie eine differenziertere Steuerung des debugging-Vor
 
 Zum Testen Ihrer Anwendung in einer realistischen, wie Sie für die Verteilung vorbereiten, empfiehlt es sich, Signieren Sie Ihre Anwendung, und installieren Sie es.
 
-### <a name="test-an-application-that-you-packaged-by-using-visual-studio"></a>Testen Sie eine Anwendung, die Sie mithilfe von Visual Studio verpackt
+### <a name="test-an-application-that-you-packaged-by-using-visual-studio"></a>Testen Sie eine Anwendung, die Sie mit Visual Studio verpackt
 
-Visual Studio signiert Ihre Anwendung mit einem Testzertifikat. Sie finden dieses Zertifikat im Ausgabeordner, den der Assistent **App-Pakete erstellen** generiert. Die Zertifikatsdatei hat die *CER* -Erweiterung, und Sie müssen das Zertifikat im Speicher **Vertrauenswürdige Stammzertifizierungsstellen** auf dem PC installieren, die Sie Ihre Anwendung auf testen möchten. Weitere Informationen finden Sie unter [Querladen des App-Pakets](../packaging/packaging-uwp-apps.md#sideload-your-app-package).
+Visual Studio signiert Ihre Anwendung mit einem Testzertifikat. Sie finden dieses Zertifikat im Ausgabeordner, den der Assistent **App-Pakete erstellen** generiert. Die Zertifikatsdatei hat die *CER* -Erweiterung, und Sie müssen das Zertifikat in den Speicher " **Vertrauenswürdige Stammzertifizierungsstellen** " auf dem PC zu installieren, die Sie auf Ihre Anwendung testen möchten. Weitere Informationen finden Sie unter [Querladen des App-Pakets](../packaging/packaging-uwp-apps.md#sideload-your-app-package).
 
 ### <a name="test-an-application-that-you-packaged-by-using-the-desktop-app-converter-dac"></a>Testen Sie eine Anwendung, die Sie mithilfe der Desktop App Converter (DAC) verpackt
 
@@ -91,13 +91,13 @@ Wenn Sie Ihre Anwendung mithilfe der Desktop App Converter Verpacken, können Si
 
 ### <a name="manually-sign-apps-optional"></a>Manuelles signieren von Apps (Optional)
 
-Sie können Ihre Anwendung auch manuell signieren. So geht’s
+Sie können die Anwendung auch manuell signieren. So geht’s
 
 1. Erstellen eines Zertifikats. Weitere Informationen finden Sie unter [Erstellen eines Zertifikats](../packaging/create-certificate-package-signing.md).
 
 2. Installieren Sie das Zertifikat im Zertifikatsspeicher **Vertrauenswürdiger Stamm** oder **Vertrauenswürdige Personen** auf Ihrem System.
 
-3. Signieren Sie Ihre Anwendung mithilfe dieses Zertifikat, finden Sie unter [Signieren eines app-Pakets mit SignTool](../packaging/sign-app-package-using-signtool.md).
+3. Signieren Sie Ihre Anwendung anhand des Zertifikats, finden Sie unter [Signieren eines app-Pakets mithilfe von SignTool](../packaging/sign-app-package-using-signtool.md).
 
   > [!IMPORTANT]
   > Stellen Sie sicher, dass der Name des Herausgebers auf dem Zertifikat dem Namen des Herausgebers Ihrer App entspricht.
@@ -109,9 +109,9 @@ Sie können Ihre Anwendung auch manuell signieren. So geht’s
 
 ### <a name="test-your-application-for-windows-10-s"></a>Testen Sie Ihre Anwendung für Windows 10 S
 
-Bevor Sie Ihre app veröffentlichen, stellen Sie sicher, dass sie korrekt auf Geräten, auf denen Windows 10 s ausgeführt. In der Tat, wenn Sie Ihre Anwendung an den Microsoft Store veröffentlichen möchten, müssen Sie dies tun, da es eine Anforderung des Stores ist. Apps, die auf Geräten unter Windows10 S nicht ordnungsgemäß funktionieren, werden nicht zertifiziert.
+Bevor Sie Ihre app veröffentlichen, stellen Sie sicher, dass sie korrekt auf Geräten, auf denen Windows 10 s ausgeführt. Tatsächlich, wenn Sie Ihre Anwendung an den Microsoft Store veröffentlichen möchten, müssen Sie dies tun, da es eine Anforderung des Stores ist. Apps, die auf Geräten unter Windows10 S nicht ordnungsgemäß funktionieren, werden nicht zertifiziert.
 
-[Test der Windows-Anwendung für Windows 10 S](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-test-windows-s)angezeigt.
+[Test der Windows-Anwendung für Windows 10 S](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-test-windows-s)wird angezeigt.
 
 ### <a name="run-another-process-inside-the-full-trust-container"></a>Ausführen eines anderen Prozesses im vollständig vertrauenswürdigen Container
 

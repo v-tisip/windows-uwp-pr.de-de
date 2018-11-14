@@ -9,20 +9,20 @@ ms.topic: article
 keywords: Windows 10, UWP, Daten, Datenbank, relational, Tabellen, sqlite
 ms.localizationpriority: medium
 ms.openlocfilehash: beca20d358430ecd82cd1bc57459a6f6af36be77
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6048218"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6146679"
 ---
 # <a name="data-access"></a>Datenzugriff
 
-Sie können Daten mithilfe einer SQLite-Datenbank auf dem Gerät des Benutzers speichern. Sie können Ihre app auch direkt mit einer SQL Server-Datenbank verbinden, ohne jegliche Art von Dienstebene verwenden zu müssen.
+Sie können Daten auf dem Gerät des Benutzers speichern, mit einer SQLite-Datenbank. Sie können Ihre app auch direkt mit einer SQL Server-Datenbank verbinden, ohne jegliche Art von Dienstebene verwenden zu müssen.
 
 | Thema | Beschreibung|
 |-------|------------|
 | [Verwenden einer SQLite-Datenbank in einer UWP-App](sqlite-databases.md) | Zeigt, wie Sie SQLite verwenden, um Daten in einer Lightweight-Datenbank auf dem Gerät des Benutzers speichern und abrufen. SQLite ist ein eingebettetes Datenbankmodul ohne Server. |
-| [Verwenden einer SQL Server-Datenbank in einer UWP-app](sql-server-databases.md) | Beschreibt, wie Sie sich direkt mit einer SQL Server-Datenbank verbinden und dann speichern und Abrufen von Daten mithilfe der Klassen im [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) -Namespace. Es ist keine Dienstebene erforderlich. |
+| [Verwenden einer SQL Server-Datenbank in einer UWP-app](sql-server-databases.md) | Sie zeigt, wie Sie direkt mit einer SQL Server-Datenbank verbinden und dann speichern und Abrufen von Daten mithilfe der Klassen im [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) -Namespace. Es ist keine Dienstebene erforderlich. |
 
 ## <a name="related-topics"></a>Verwandte Themen
 

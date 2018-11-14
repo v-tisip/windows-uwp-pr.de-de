@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 090dcab3b46b031a16be35973e1183220d5b1da0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6028819"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6141245"
 ---
 # <a name="stencil-buffers"></a>Schablonenpuffer
 
@@ -46,7 +46,7 @@ Die oben aufgeführten Schritte sind in der folgenden Codezeile dargestellt:
 -   StencilBufferValue ist der Inhalt des Schablonenpuffers für das aktuelle Pixel.
 -   Das kaufmännische Und-Zeichen (&) stellt die bitweise AND-Operation dar.
 
-Wenn der Schablonentest erfolgreich ist, wird das aktuelle Pixel auf die Zieloberfläche geschrieben, und andernfalls ignoriert. Das Standardverhalten des Vergleichs ist, die Pixel, unabhängig davon, wie jede bitweise Operation herausstellt zu schreiben. Sie können dieses Verhalten ändern, indem Sie ändern den Wert eines Aufzählungstyps auf die gewünschte Vergleichsfunktion zu ermitteln.
+Wenn der Schablonentest erfolgreich ist, wird das aktuelle Pixel auf die Zieloberfläche geschrieben, und andernfalls ignoriert. Das Standardverhalten des Vergleichs ist das Pixel unabhängig davon, wie Vorgänge bitweise herausstellt schreiben. Sie können dieses Verhalten ändern, indem Sie den Wert eines Aufzählungstyps auf die gewünschte Vergleichsfunktion zu ermitteln.
 
 Sie können in Ihrer Anwendung die Funktionsweise des Schablonenpuffers anpassen. In der Anwendung kann die Vergleichsfunktion, die Schablonenmaske und der Schablonenreferenzwert festgelegt werden. Es kann auch die Aktion gesteuert werden, die Direct3D im Falle eines erfolgreichen oder eines misslungenen Schablonentests ausführt.
 
@@ -99,7 +99,7 @@ Wenn die Schablonenmaske die gleiche Größe und Form wie der Grundtyp hat, den 
 
 Zum Zeichnen von Schatten mit dem Schablonenpuffer werden Schattenvolumen verwendet. Die Anwendung berechnet die Schattenvolumenumwandlung durch verdeckende Geometrie, indem die Ränder der Silhouette berechnet und aus dem Licht in eine Gruppe von 3D-Volumen extrudiert werden. Diese Volumen werden dann zweimal in den Schablonenpuffer gerendert.
 
-Beim ersten Rendern werden die nach vorne gerichteten Polygone gezeichnet und die Werte im Schablonenpuffer erhöht. Beim zweiten Rendern werden die nach hinten gerichteten Polygone des Schattenvolumens gezeichnet und die Werte im Schablonenpuffer verringert. In der Regel heben sich alle verringerten Werte gegenseitig. Allerdings wurde die Szene bereits mit normaler Geometrie verursacht einige Pixel den Z-Puffer-Test Rendern des schattenvolumens nicht erfolgreich gerendert. Werte, die im Schablonenpuffer verblieben sind, entsprechen den Pixeln, die sich im Schatten befinden. Dieser verbliebene Inhalt des Schablonenpuffers wird als Maske verwendet, um ein großes, allumfassendes schwarzes Viereck in der Szene per Alpha-Überblendung zu überlagern. Das Ergebnis der Verwendung des Schablonenpuffers als Maske besteht darin, dass Pixel, die im Schatten liegen, dunkler werden.
+Beim ersten Rendern werden die nach vorne gerichteten Polygone gezeichnet und die Werte im Schablonenpuffer erhöht. Beim zweiten Rendern werden die nach hinten gerichteten Polygone des Schattenvolumens gezeichnet und die Werte im Schablonenpuffer verringert. In der Regel heben sich alle verringerten Werte gegenseitig. Allerdings wurde die Szene bereits mit normaler Geometrie, die für einige Pixel den Z-Puffer-Test fehlschlägt, wie das Volume Schatten gerendert wird beim gerendert. Werte, die im Schablonenpuffer verblieben sind, entsprechen den Pixeln, die sich im Schatten befinden. Dieser verbliebene Inhalt des Schablonenpuffers wird als Maske verwendet, um ein großes, allumfassendes schwarzes Viereck in der Szene per Alpha-Überblendung zu überlagern. Das Ergebnis der Verwendung des Schablonenpuffers als Maske besteht darin, dass Pixel, die im Schatten liegen, dunkler werden.
 
 Dies bedeutet, dass die Schattengeometrie zweimal pro Lichtquelle gezeichnet wird, und somit der Vertexdurchsatz der GPU stark belastet wird. Das Feature „zweiseitige Schablone” wurde entwickelt, um diese Situation abzuschwächen. In diesen Ansatz gibt es zwei Gruppen von Schablonenzuständen, einen für die nach vorne gerichteten Dreiecke und den anderen für die nach hinten gerichteten Dreiecke. Auf diese Weise wird nur ein einziger Durchlauf pro Schattenvolumen und pro Licht gezeichnet.
 
