@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 7d1e60270b43a8c14067df70ff3e8489f4af2887
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 55d90ffb50d6db71e135cbecf56487b96ba3377c
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6451581"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6668320"
 ---
 # <a name="beta-testing"></a>Betatests
 
@@ -42,9 +42,9 @@ Idealerweise führen Sie Betatests in der letzten Testphase durch, bevor Sie Ihr
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Im einheitlichen Windows Dev Center-Dashboard können Sie die Verteilung Ihrer Apps auf Ihre Tester beschränken, unabhängig davon, auf welche Betriebssysteme Ihrer App ausgerichtet ist. Es ist nicht erforderlich, eine separate Version der App mit separatem Namen und separater Paketidentität zu erstellen. Sie können Ihre Tests durchführen, dann eine neue Einreichung erstellen, wenn Sie dazu bereit sind, die App für alle Benutzer zur Verfügung zu stellen. (Selbstverständlich können Sie bei Bedarf zum Testen eine separate App erstellen. Stellen Sie in diesem Fall sicher, dass Sie ihr einen anderen als den endgültigen öffentlichen App-Namen zuzuweisen.)
+Im [Partner Center](https://partner.microsoft.com/dashboard)können Sie die Verteilung Ihrer Apps auf Ihre Tester, unabhängig davon, welche Betriebssysteme Ihre app ausgerichtet ist beschränken. Es ist nicht erforderlich, eine separate Version der App mit separatem Namen und separater Paketidentität zu erstellen. Sie können Ihre Tests durchführen, dann eine neue Einreichung erstellen, wenn Sie dazu bereit sind, die App für alle Benutzer zur Verfügung zu stellen. (Selbstverständlich können Sie bei Bedarf zum Testen eine separate App erstellen. Stellen Sie in diesem Fall sicher, dass Sie ihr einen anderen als den endgültigen öffentlichen App-Namen zuzuweisen.)
 
-Informationen zum Übermitteln Ihrer App an den Store für Betatests finden Sie unter [Betatests und zielgerichtete Verteilung](https://msdn.microsoft.com/library/windows/apps/Mt185377).
+Informationen zum Übermitteln Ihrer App an den Store für Betatests finden Sie unter [Betatests und zielgerichtete Verteilung](../publish/beta-testing-and-targeted-distribution.md).
 
  
 
