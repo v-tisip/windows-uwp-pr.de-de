@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Rezensionen-API, Reagieren auf Rezensionen
 ms.localizationpriority: medium
 ms.openlocfilehash: 063c228a9a2fcfde9350af4872aabba44f9bb8a5
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6181300"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6451429"
 ---
 # <a name="respond-to-reviews-using-store-services"></a><span data-ttu-id="3d0ab-104">Antworten auf Rezensionen mit Store-Diensten</span><span class="sxs-lookup"><span data-stu-id="3d0ab-104">Respond to reviews using Store services</span></span>
 

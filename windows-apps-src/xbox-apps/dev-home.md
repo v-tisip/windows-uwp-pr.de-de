@@ -10,11 +10,11 @@ keywords: Windows10, UWP
 permalink: en-us/docs/xdk/dev-home.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 232770ab4b746663a105982605d1cedcb92adbe3
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6271998"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6453391"
 ---
 # <a name="developer-home-on-the-console-dev-home"></a><span data-ttu-id="35cde-104">Entwickler-Startbildschirm auf der Konsole (Dev Home)</span><span class="sxs-lookup"><span data-stu-id="35cde-104">Developer Home on the Console (Dev Home)</span></span>
    

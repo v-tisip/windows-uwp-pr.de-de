@@ -13,11 +13,11 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 9983c62804dad4f0202fc83e3f9b5f23714352d2
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6183420"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6466389"
 ---
 # <a name="timing-and-easing"></a><span data-ttu-id="bb6b6-103">Timing und Geschwindigkeitsverlauf</span><span class="sxs-lookup"><span data-stu-id="bb6b6-103">Timing and easing</span></span>
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 932dd3c89933eab9baefe6ff2c45359db6efbb14
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6027069"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6269562"
 ---
 # <a name="optimize-background-activity"></a><span data-ttu-id="a927d-104">Optimieren von Hintergrundaktivitäten</span><span class="sxs-lookup"><span data-stu-id="a927d-104">Optimize background activity</span></span>
 

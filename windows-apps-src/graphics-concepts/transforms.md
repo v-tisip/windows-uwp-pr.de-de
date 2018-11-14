@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9eb129609b2fa8564b04d128c3cb06251b044360
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6034504"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6465749"
 ---
 # <a name="transforms"></a><span data-ttu-id="5d13b-104">Transformationen</span><span class="sxs-lookup"><span data-stu-id="5d13b-104">Transforms</span></span>
 

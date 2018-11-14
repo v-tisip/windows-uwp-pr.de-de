@@ -12,11 +12,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 1f894cbc4c5c024d1b51660c48eb749479457b81
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6153718"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6204532"
 ---
 # <a name="content-design-basics-for-uwp-apps"></a><span data-ttu-id="6c4bb-103">Grundlagen des Inhaltsdesigns für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="6c4bb-103">Content design basics for UWP apps</span></span>
 

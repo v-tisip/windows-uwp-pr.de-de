@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, Richtlinien, bewährte Methoden
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d502c721f98269c1256510a6f91f8c6dc8cd0fb
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6188782"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6264628"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a><span data-ttu-id="cc792-104">Richtlinien für die Benutzeroberfläche und Benutzerumgebung für Anzeigen</span><span class="sxs-lookup"><span data-stu-id="cc792-104">UI and user experience guidelines for ads</span></span>
 

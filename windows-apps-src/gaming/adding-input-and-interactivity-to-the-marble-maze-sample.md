@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Eingabe, Beispiel
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b7e9a3f655b8be1b93334ed8decf9fe6fa8bbf2
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6202018"
+ms.locfileid: "6249855"
 ---
 # <a name="adding-input-and-interactivity-to-the-marble-maze-sample"></a><span data-ttu-id="cef42-104">Hinzufügen von Eingaben und Interaktivität zum Marble Maze-Beispiel</span><span class="sxs-lookup"><span data-stu-id="cef42-104">Adding input and interactivity to the Marble Maze sample</span></span>
 

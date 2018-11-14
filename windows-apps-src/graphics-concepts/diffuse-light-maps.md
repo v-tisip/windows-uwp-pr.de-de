@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: e4486cc1d9c7f037b79fc6183f88216c88ef1884
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6193004"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6447884"
 ---
 # <a name="diffuse-light-maps"></a><span data-ttu-id="66918-104">Diffuse Lichtzuordnungen</span><span class="sxs-lookup"><span data-stu-id="66918-104">Diffuse light maps</span></span>
 

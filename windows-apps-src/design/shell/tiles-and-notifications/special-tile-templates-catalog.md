@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 74b915e4d698503a13c5066348f4e46ebd3125c8
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6202412"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6651745"
 ---
 # <a name="special-tile-templates"></a><span data-ttu-id="eb763-103">Spezielle Kachelvorlagen</span><span class="sxs-lookup"><span data-stu-id="eb763-103">Special tile templates</span></span>
  

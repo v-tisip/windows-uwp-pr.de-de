@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, benutzerdefiniert, App, Werbung, Kampagnen
 ms.localizationpriority: medium
 ms.openlocfilehash: 643c6c70b4482e7069c1254e27a5688f81bf7e07
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6190051"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6451912"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a><span data-ttu-id="aa95c-104">Erstellen einer Werbekampagne für benutzerdefinierte Apps</span><span class="sxs-lookup"><span data-stu-id="aa95c-104">Create a custom app promotion campaign</span></span>
 

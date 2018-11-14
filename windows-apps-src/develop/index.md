@@ -1,19 +1,19 @@
 ---
-description: Hier erfahren Sie, wie Sie eine UWP-app entwickeln.
+description: Erfahren Sie, wie Sie eine UWP-app entwickeln.
 title: Entwickeln von UWP-Apps
 author: mijacobs
 layout: LandingPage
-keywords: Uwp-app-Entwicklung threading Async Plattform Übersicht Portal entwickeln Entwickler
+keywords: Uwp-app-Entwicklung threading Async Plattform Übersicht Portal zu entwickeln Entwickler
 ms.author: mijacobs
 ms.date: 3/29/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: d4b775901fbb5140b63a76676705f2d2f2ba5f68
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6049511"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6654414"
 ---
 <div> 
 <h1>Entwickeln von UWP-Apps</h1>
@@ -118,7 +118,7 @@ ms.locfileid: "6049511"
                 <div style="display:block" class="card">
                     <div style="display:block" class="cardText">
                         <h3>App-UI </h3>
-                        <p><a href="https://developer.microsoft.com/windows/apps/design">Finden Sie für Steuerelemente, Layout, Typografie, Animation, benutzerfreundlichkeit und UI-Design im Abschnitt Design und UI.</a></p>
+                        <p><a href="https://developer.microsoft.com/windows/apps/design">Steuerelemente, Layout, Typografie, Animation, benutzerfreundlichkeit und UI-Design finden Sie im Abschnitt Design und UI.</a></p>
                     </div>
                 </div>
             </div>
@@ -271,7 +271,7 @@ ms.locfileid: "6049511"
                     </div>
                     <div class="cardText">
                         <h3>Beispiele</h3>
-                        <p> Erfahren Sie, wie Sie großartige apps für Windows zu entwerfen, indem Sie mit diesen Beispielen experimentieren. Diese Beispiele zeigen Ihnen, wie Features funktionieren und Sie Schnelleinstieg in die Entwicklung eigener UWP-apps unterstützen.</p>
+                        <p> Erfahren Sie, wie Sie großartige apps für Windows zu entwerfen, indem Sie mit diesen Beispielen experimentieren. Diese Beispiele zeigen Ihnen, wie Features funktionieren, und Sie Schnelleinstieg in die Entwicklung eigener UWP-apps unterstützen.</p>
                     </div>
                 </div>
             </div>
@@ -290,7 +290,7 @@ ms.locfileid: "6049511"
                     </div>                
                     <div class="cardText">
                         <h3>Entwicklungstools</h3>
-                        <p>Abrufen von Visual Studio 2017, Windows 10-SDKS und andere Entwicklungstools.</p>
+                        <p>Abrufen von Visual Studio 2017, Windows 10 SDK und andere Entwicklungstools.</p>
                     </div>
                 </div>
             </div>

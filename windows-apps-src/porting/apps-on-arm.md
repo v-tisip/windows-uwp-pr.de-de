@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows10 s, always connected, ARM, ARM64, x86-emulation
 ms.localizationpriority: medium
 ms.openlocfilehash: 8f62a873e84f200a019bde23038ae10b21150072
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6257737"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6466419"
 ---
 # <a name="windows-10-on-arm"></a><span data-ttu-id="490f0-104">Windows10 auf ARM</span><span class="sxs-lookup"><span data-stu-id="490f0-104">Windows 10 on ARM</span></span>
 <span data-ttu-id="490f0-105">Ursprünglich konnte Windows 10 (im Unterschied zu Windows 10 Mobile) nur auf PCs ausgeführt werden, die über x86- und x64-Prozessoren verfügen.</span><span class="sxs-lookup"><span data-stu-id="490f0-105">Originally Windows 10 (as distinguished from Windows 10 Mobile) could run only on PCs that were powered by x86 and x64 processors.</span></span> <span data-ttu-id="490f0-106">Windows10 Desktop (Pro und S-Editionen) kann jetzt auf Computern ausgeführt werden, die über ARM64 Prozessoren mit dem Fall Creators Update verfügen.</span><span class="sxs-lookup"><span data-stu-id="490f0-106">Now, Windows 10 desktop (Pro and S editions) can run on machines that are powered by ARM64 processors with the Fall Creators Update.</span></span> <span data-ttu-id="490f0-107">Dank der stromsparenden Architektur der ARM-CPU weisen diese PCs eine Akkulaufzeit über einen ganzen Tag auf und erhalten Unterstützung für mobile Datennetzwerke.</span><span class="sxs-lookup"><span data-stu-id="490f0-107">The power-saving nature of the ARM CPU architecture allows these PCs to have all-day battery life and support for mobile data networks.</span></span> <span data-ttu-id="490f0-108">Diese PCs bieten eine hervorragende Anwendungskompatibilität und ermöglichen Ihnen, Ihre bestehenden x86 win32-Anwendungen unverändert auszuführen.</span><span class="sxs-lookup"><span data-stu-id="490f0-108">These PCs will provide great application compatibility and allow you to run your existing x86 win32 applications unmodified.</span></span> <span data-ttu-id="490f0-109">z.B.</span><span class="sxs-lookup"><span data-stu-id="490f0-109">E.g.</span></span> <span data-ttu-id="490f0-110">Adobe Reader.</span><span class="sxs-lookup"><span data-stu-id="490f0-110">Adobe reader.</span></span> <span data-ttu-id="490f0-111">Für weitere Informationen oder Demos sehen Sie sich das [Channel 9-Video für den Always Connected-PC](https://channel9.msdn.com/Events/Build/2017/P4171) an.</span><span class="sxs-lookup"><span data-stu-id="490f0-111">For more information or demo, look at the [Channel 9 video for the Always Connected PC](https://channel9.msdn.com/Events/Build/2017/P4171).</span></span> 

@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a4e2bbac12ddd3b60b2e4dd78f37b8934a8afea8
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6149579"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6274195"
 ---
 # <a name="output-merger-om-stage"></a><span data-ttu-id="380a6-104">Ausgabezusammenführungsphase (OM)</span><span class="sxs-lookup"><span data-stu-id="380a6-104">Output Merger (OM) stage</span></span>
 
