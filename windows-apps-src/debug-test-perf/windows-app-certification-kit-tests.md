@@ -9,16 +9,16 @@ ms.topic: article
 keywords: Windows 10, Uwp, app-Zertifizierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 65afbaa4440a5bce43ca6d48126e6cc2b8316466
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023668"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6194490"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Tests im Zertifizierungskit für Windows-Apps
 
 
-Das [Zertifizierungskit für Windows-Apps](windows-app-certification-kit.md) enthält eine Reihe von Tests, mit deren Hilfe, stellen Sie sicher, dass Ihre app an den Microsoft Store veröffentlicht werden kann. Die Tests sind unten aufgeführt, mit ihren Suchkriterien, Details, und empfohlene Maßnahmen bei einem Fehler.
+Das [Zertifizierungskit für Windows-Apps](windows-app-certification-kit.md) enthält eine Reihe von Tests, mit denen sicherstellen, dass Ihre app an den Microsoft Store veröffentlicht werden kann. Die Tests sind unten aufgeführt, mit ihren Suchkriterien, Informationen und empfohlene Maßnahmen bei einem Fehler.
 
 ## <a name="deployment-and-launch-tests"></a>Bereitstellungs- und Starttests
 
@@ -246,7 +246,7 @@ Der AppContainerCheck-Test prüft, ob das **appcontainer**-Bit im PE-Header eine
 
 Wenn der Test für eine systemeigene ausführbare Datei nicht erfolgreich ist, stellen Sie sicher, dass Sie zum Erstellen der Datei den aktuellen Compiler und Linker und für den Linker das Kennzeichen */appcontainer* verwenden.
 
-Wenn eine verwaltete ausführbare Datei der Test fehlschlägt, stellen Sie sicher, dass Sie den aktuellen Compiler und Linker wie beispielsweise Microsoft Visual Studio verwendet, um die UWP-app erstellen.
+Wenn eine verwaltete ausführbare Datei der Test fehlschlägt, stellen Sie sicher, dass Sie den aktuellen Compiler und Linker wie beispielsweise Microsoft Visual Studio verwendet, um die UWP-app zu erstellen.
 
 **Anmerkungen**
 
@@ -310,18 +310,18 @@ Apps müssen die APIs für UWP-apps (Windows-Runtime- oder unterstützte Win32-A
 
 ### <a name="test-details"></a>Testdetails
 
--   Stellt sicher, dass jeder Binärdatei innerhalb des app-Pakets keine Abhängigkeit von einer Win32-API aufweist, die nicht für die Entwicklung von UWP-Apps unterstützt wird, indem Sie die Importadressentabelle der Binärdatei.
+-   Stellt sicher, dass jeder Binärdatei innerhalb des app-Pakets keine Abhängigkeit von einer Win32-API aufweist, die für die Entwicklung von UWP-Apps nicht unterstützt wird, indem Sie die Importadressentabelle der Binärdatei.
 -   Stellt sicher, dass eine verwaltete Binärdatei des App-Pakets keine Abhängigkeit von einer Funktion außerhalb des genehmigten Profils aufweist.
 
 ### <a name="corrective-actions"></a>Maßnahmen
 
 Stellen Sie sicher, dass die App als Releasebuild und nicht als Debugbuild kompiliert wurde.
 
-> **Hinweis:** das Debugbuild einer App diesen Test nicht, auch wenn die app nur [APIs für UWP-apps](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)verwendet.
+> **Hinweis:** das Debugbuild einer App diesen Test nicht, auch wenn die app nur die [APIs für UWP-apps](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)verwendet.
 
 Überprüfen Sie die Fehlermeldungen, um der API zu identifizieren, die app verwendet, die eine [API für UWP-apps](https://msdn.microsoft.com/library/windows/apps/xaml/bg124285.aspx)nicht ist.
 
-> **Hinweis:** C++-apps, die unter einer Debugkonfiguration erstellt wurden, auch wenn die Konfiguration nur APIs aus dem Windows SDK für UWP-apps verwendet diesen Test nicht. Siehe [alternativen zu Windows-APIs in UWP-apps](http://go.microsoft.com/fwlink/p/?LinkID=244022) für Weitere Informationen.
+> **Hinweis:** C++-apps, die unter einer Debugkonfiguration erstellt wurden, auch wenn die Konfiguration nur APIs aus dem Windows SDK für UWP-apps verwendet diesen Test nicht. Finden Sie unter, [alternativen zu Windows-APIs in UWP-apps](http://go.microsoft.com/fwlink/p/?LinkID=244022) für Weitere Informationen.
 
 ## <a name="performance-tests"></a>Leistungstests
 
@@ -535,7 +535,7 @@ Testet MicrosoftDirect3D-Apps, um sicherzustellen, dass sie auf Geräten mit äl
 
 ### <a name="background"></a>Hintergrund
 
-Microsoft Store müssen alle Anwendungen mit Direct3D richtig gerendert bzw. ordnungsgemäß Feature Grafikkarten der Featureebene 9\-1-Karten.
+Microsoft Store erfordert alle Anwendungen mit Direct3D richtig gerendert bzw. ordnungsgemäß Feature Grafikkarten der Featureebene 9\-1-Karten.
 
 Da die Benutzer die Grafikhardware ihrer Geräte nach der Installation der App ändern können, muss Ihre App für den Fall, dass Sie eine Featureebene höher als 9\-1 verwenden, beim Start erkennen, ob die aktuelle Hardware die Mindestanforderungen erfüllt. Wenn die Mindestanforderungen nicht erfüllt sind, muss Ihre App dem Benutzer eine Meldung mit den Direct3D-Anforderungen anzeigen. Wird zudem eine App auf ein Gerät heruntergeladen, mit dem sie nicht kompatibel ist, sollte sie dies beim Start erkennen und dem Kunden eine Meldung bezüglich der erforderlichen Voraussetzungen anzeigen.
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Add-Ons, IAP, dauerhaft, konsumbierbar, Abonnement, Produkt, Typ, Produkt-ID, In-App-Kauf, In-App-Produkt
 ms.localizationpriority: medium
 ms.openlocfilehash: 14d0cd40e0a7a170a835b000dc66ec683c2fb59c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6051329"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6198219"
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a>Festlegen von Produkt-ID und Produkttyp für das Add-On
 
@@ -56,7 +56,7 @@ Sie müssen das übergeordnete Produkt übermitteln, bevor Sie abonnierte Add-on
 
 ## <a name="product-id"></a>Produkt-ID
 
-Unabhängig vom Produkt, das Sie auswählen, müssen Sie eine eindeutige Produkt-ID für Ihr Add-On angeben. Dieser Name wird verwendet, um das Add-on im Partner Center zu identifizieren, und Sie können diese ID verwenden, [finden Sie in das Add-on in Ihrem Code](../monetize/in-app-purchases-and-trials.md#how-to-use-product-ids-for-add-ons-in-your-code)verwenden.
+Unabhängig vom Produkt, das Sie auswählen, müssen Sie eine eindeutige Produkt-ID für Ihr Add-On angeben. Dieser Name wird verwendet, um das Add-on im Partner Center zu identifizieren, und Sie können diese ID verwenden, [verweisen Sie auf das Add-on in Ihrem Code](../monetize/in-app-purchases-and-trials.md#how-to-use-product-ids-for-add-ons-in-your-code)verwenden.
 
 Folgende Dinge sollten bei der Wahl einer Produkt-ID beachtet werden:
 

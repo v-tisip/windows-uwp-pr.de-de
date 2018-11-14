@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Monetisierung, Kundenbindung, Werben, Store-Dienste
 ms.localizationpriority: medium
 ms.openlocfilehash: 9eca34975217bace912ee06b967e028f30155452
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6039100"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6199890"
 ---
 # <a name="monetization-engagement-and-store-services"></a>Monetarisierung, Kundenbindung und Store-Dienste
 
@@ -30,7 +30,7 @@ Ausführliche Informationen zu den vom MicrosoftStore erhobenen Gebühren und zu
 | [Kundengewinnung mit Microsoft Store Services SDK](microsoft-store-services-sdk.md)      | Das Microsoft Store Services SDK bietet Bibliotheken und Tools, mit denen Sie Ihren Apps Features hinzufügen können, um ihre Kunden besser zu erreichen. Diese Funktionen umfassen gezielte Benachrichtigungen, A / B-Tests und das Starten des Feedback-Hubs über Ihre app. |
 | [Ausführen von Experimenten mit A/B-Tests](run-app-experiments-with-a-b-testing.md)      |   Führen Sie A/B-Tests in Ihren Apps für universelle Windows-Plattform (UWP)-Apps aus, um die Effektivität der Features für einige Kunden zu messen, bevor Sie die Features für alle Benutzer freigeben. Dieses Feature erfordert das Microsoft Store Services SDK.  |
 | [Starten des Feedback-Hubs über Ihre App](launch-feedback-hub-from-your-app.md)      |   Fügen Sie Ihren UWP-Apps Code hinzu, um Ihre Windows10-Kunden auf den Feedback-Hub zu verweisen. Dort können Kunden ihre Probleme und Vorschläge übermitteln und Feedback anderer Benutzer lesen und bewerten. Verwalten Sie anschließend dieses Feedback im [Feedback-Bericht](../publish/feedback-report.md) in Partner Center. Dieses Feature erfordert das Microsoft Store Services SDK.   |
-| [Konfigurieren Sie Ihre app zum Empfangen von Partner Center-Pushbenachrichtigungen](configure-your-app-to-receive-dev-center-notifications.md)  |  Registrieren Sie einen Benachrichtigungskanal für Ihre UWP-app, sodass [Partner Center-Pushbenachrichtigungen](../publish/send-push-notifications-to-your-apps-customers.md)zu empfangen, und verfolgen Sie die Zahl der app-Starts der Pushbenachrichtigungen aufgrund. Dieses Feature erfordert das Microsoft Store Services SDK.  |
+| [Konfigurieren Sie Ihre app zum Empfangen von Pushbenachrichtigungen für Partner Center](configure-your-app-to-receive-dev-center-notifications.md)  |  Registrieren Sie einen Benachrichtigungskanal für Ihre UWP-app, sodass [Partner Center-Pushbenachrichtigungen](../publish/send-push-notifications-to-your-apps-customers.md)zu empfangen, und verfolgen Sie die Zahl der app-Starts der Pushbenachrichtigungen aufgrund. Dieses Feature erfordert das Microsoft Store Services SDK.  |
 | [Protokollieren Sie benutzerdefinierter Ereignisse für Partner Center](log-custom-events-for-dev-center.md)  | Protokollieren Sie benutzerdefinierte Ereignisse von Ihrer UWP-app, und überprüfen Sie die Ereignisse im [Bericht "Nutzung"](../publish/usage-report.md) im Partner Center. Dieses Feature erfordert das Microsoft Store Services SDK. |
 | [Anfordern von Bewertungen und Prüfungen](request-ratings-and-reviews.md) |  Fordern Sie Ihre Kunden auf, Ihre App zu bewerten oder zu rezensieren, indem Sie programmgesteuert eine Bewertungs- und Rezensions-UI anzeigen.  |
 | [Microsoft Store Dienste](using-windows-store-services.md)    |  Erfahren Sie, wie Sie mit RESTful-APIs Übermittlungen an den Store automatisieren, auf Analysedaten für Ihre Apps zugreifen und andere Aufgaben im Zusammenhang mit dem Store automatisieren.    |

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: 88210182f46fa8149e4b2d0278d7df89033e62b6
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6031162"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6210261"
 ---
 # <a name="web-authentication-broker"></a>Webauthentifizierungsbroker
 
@@ -89,7 +89,7 @@ catch (Exception ex)
 ```
 
 >[!WARNING]
->Zusätzlich zu [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) enthält der [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044)-Namespace eine [**AuthenticateAndContinue**](https://msdn.microsoft.com/library/windows/apps/dn632425)-Methode. Rufen Sie diese Methode nicht auf. Es ist für Windows Phone 8.1 ausgerichtet apps vorgesehen und ab Windows 10 veraltet.
+>Zusätzlich zu [**AuthenticateAsync**](https://msdn.microsoft.com/library/windows/apps/br212066) enthält der [**Windows.Security.Authentication.Web**](https://msdn.microsoft.com/library/windows/apps/br227044)-Namespace eine [**AuthenticateAndContinue**](https://msdn.microsoft.com/library/windows/apps/dn632425)-Methode. Rufen Sie diese Methode nicht auf. Es ist für apps, die Windows Phone 8.1 ausgerichtet vorgesehen und ab Windows 10 veraltet.
 
 ## <a name="connecting-with-single-sign-on-sso"></a>Herstellen einer Verbindung mit einmaligen Anmelden (Single Sign-On, SSO).
 

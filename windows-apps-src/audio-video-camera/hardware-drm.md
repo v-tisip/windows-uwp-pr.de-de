@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e898e342cb26ab86a74c30b5ced3dd3a9b68165
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023505"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6257390"
 ---
 # <a name="hardware-drm"></a>Hardwarebasiertes DRM
 
@@ -81,7 +81,7 @@ Wenn Sie das Hardware-DRM wieder verwenden möchten, legen Sie den **SoftwareOve
 mediaProtectionManager.properties["Windows.Media.Protection.UseSoftwareProtectionLayer"] = true;
 ```
 
-Die beste Möglichkeit, festzustellen, ob Sie befinden sich im Hardware-DRM oder Software-DRM wird C:\\Users\\ betrachten&lt;Benutzername&gt;\\AppData\\Local\\Packages\\&lt;Anwendungsnamen&gt;\\LocalCache\\PlayReady\\\*
+Die beste Möglichkeit, festzustellen, ob die Hardware-DRM oder Software-DRM wird C:\\Users\\ betrachten&lt;Benutzername&gt;\\AppData\\Local\\Packages\\&lt;Anwendungsname&gt;\\LocalCache\\PlayReady\\\*
 
 -   Wenn dort die Datei „mspr.hds“ vorhanden ist, verwenden Sie ein softwarebasiertes DRM.
 -   Ist eine weitere Datei mit der Erweiterung „\*.hds“ vorhanden, ist Hardware-DRM aktiv.

@@ -9,17 +9,17 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 42dfecd7d1bc2c298a70fec2bdebfc4c4f9dd66c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6030492"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6200839"
 ---
 # <a name="launch-the-microsoft-store-app"></a>Starten der Microsoft Store-App
 
 
 
-In diesem Thema wird das **ms-windows-store:**-URI-Schema beschrieben. Ihre app kann zum Starten der Microsoft Store-app mit bestimmten Seiten im Store mithilfe der Methode [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) dieses URI-Schema verwenden.
+In diesem Thema wird das **ms-windows-store:**-URI-Schema beschrieben. Ihre app kann dieses URI-Schema verwenden, um die Microsoft Store-app mit bestimmten Seiten im Speicher zu starten, mithilfe der [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) -Methode.
 
 Dieses Beispiel zeigt, wie Sie den Speicher auf der Seite "Spiele" zu öffnen:
 

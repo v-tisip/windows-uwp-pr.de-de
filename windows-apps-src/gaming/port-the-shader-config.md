@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Portieren, Shader, Direct3D, OpenGL
 ms.localizationpriority: medium
 ms.openlocfilehash: bbf7e05a93ccce4188d62f9800a5f225be713cc6
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6042111"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6201850"
 ---
 # <a name="port-the-shader-objects"></a>Portieren der Shaderobjekte
 
@@ -80,7 +80,7 @@ GLuint __cdecl CompileShader (GLenum shaderType, const char *shaderSrcStr)
 
 In Direct3D werden Shader nicht während der Laufzeit kompiliert. Sie werden immer in CSO-Dateien kompiliert, wenn auch die restlichen Daten des Programms kompiliert werden. Wenn Sie die App mit Microsoft Visual Studio kompilieren, werden die HLSL-Dateien in CSO-Dateien (.cso) kompiliert, die von der App geladen werden müssen. Achten Sie darauf, diese CSO-Dateien der App beim Verpacken hinzuzufügen!
 
-> **Hinweis:**  im folgenden Beispiel wird das Laden und Kompilieren des Shaders asynchron mit Syntax für die **Automatische** Schlüsselwort und Lambda-Funktion. ReadDataAsync() ist eine für die Vorlage implementierte Methode, mit der eine CSO-Datei als Array mit Bytedaten (fileData) eingelesen wird.
+> **Hinweis:**  im folgenden Beispiel wird das Laden und Kompilieren des Shaders mit asynchron die Syntax für die **Automatische** Schlüsselwort und Lambda-Funktion. ReadDataAsync() ist eine für die Vorlage implementierte Methode, mit der eine CSO-Datei als Array mit Bytedaten (fileData) eingelesen wird.
 
  
 

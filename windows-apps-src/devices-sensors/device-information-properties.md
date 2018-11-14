@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2ad87bdfa468c98a2e10d57f81b8e8d187bfbcef
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6036930"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6210151"
 ---
 # <a name="device-information-properties"></a>Geräteinformationseigenschaften
 
@@ -33,7 +33,7 @@ Ein [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR22
 
 Ein [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)-Objekt verfügt über einige grundlegende Eigenschaften, z. B. [**Id**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.id) und [**Kind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.kind.aspx), aber die meisten Eigenschaften werden in einer Eigenschaftensammlung unter [**Properties**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.properties.aspx) gespeichert. Aus diesem Grund enthält die Eigenschaftensammlung die Eigenschaften, mit denen die Eigenschaften aus der Eigenschaftensammlung bezogen werden. Verwenden Sie z. B. [System.ItemNameDisplay](https://msdn.microsoft.com/library/windows/desktop/Bb760770), um die [**Name**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformation.name)-Eigenschaft zu beziehen. Dabei handelt es sich um eine gängige und bekannte Eigenschaft mit einem benutzerfreundlichen Namen. Windows stellt mehrere dieser benutzerfreundlichen Namen bereit, um die Abfrage von Eigenschaften zu erleichtern.
 
-Beim Anfordern von Eigenschaften sind Sie nicht auf allgemeine Eigenschaften mit benutzerfreundlichen Namen beschränkt. Sie können die zugrunde liegende GUID und Eigenschafts-ID (Property ID, PID) angeben, um eine beliebige verfügbare Eigenschaft anzufordern – auch benutzerdefinierte Eigenschaften, die von einem bestimmten Gerät oder Treiber bereitgestellt werden. Das Format für die Angabe einer benutzerdefinierten Eigenschaft lautet „`{GUID} PID`“. Zum Beispiel: "`{744e3bed-3684-4e16-9f8a-07953a8bf2ab} 7`". 
+Beim Anfordern von Eigenschaften sind Sie nicht auf allgemeine Eigenschaften mit benutzerfreundlichen Namen beschränkt. Sie können die zugrunde liegende GUID und Eigenschafts-ID (Property ID, PID) angeben, um eine beliebige verfügbare Eigenschaft anzufordern – auch benutzerdefinierte Eigenschaften, die von einem bestimmten Gerät oder Treiber bereitgestellt werden. Das Format für die Angabe einer benutzerdefinierten Eigenschaft lautet „`{GUID} PID`“. Beispiel: "`{744e3bed-3684-4e16-9f8a-07953a8bf2ab} 7`". 
 
 > [!Note]
 > Die Liste der Eigenschaft GUIDs finden Sie in der Eigenschaft schlüsselkopf Datei des Gerätetreibers.

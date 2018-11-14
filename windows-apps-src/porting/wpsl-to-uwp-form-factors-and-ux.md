@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 809cf2691a2bc7b7c72d4ba031fa4c6b45335dde
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6045639"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6202114"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-form-factor-and-ux"></a>Portieren von WindowsPhone Silverlight zu UWP für Formfaktor und Benutzerfreundlichkeit
 
@@ -32,7 +32,7 @@ Kurz gesagt, ist das subjektiv. Das hängt nicht nur von der objektiven Anzeigeg
 
 Objektiv gesehen wird ein Bildschirm in der Einheit Zoll und physischen Pixeln („raw pixel“) gemessen. Mit diesen beiden Werten können Sie ermitteln, wie viele Pixel in ein Zoll passen. Dies ist die Pixeldichte, auch bekannt als DPI-Wert (dots per inch, Punkte pro Zoll), auch bekannt als PPI (pixels per inch, Pixel pro Zoll). Und der Kehrwert des DPI-Werts ist die physische Größe der Pixel als Bruchteil eines Zolls. Pixeldichte ist auch als *Auflösung* bekannt, obwohl mit diesem Begriff häufig die Pixelanzahl gemeint ist.
 
-Bei zunehmendem Abstand *erscheinen* all diese objektiven Metriken kleiner und werden in der *effektiven Größe* und der entsprechenden *effektiven Auflösung* des Bildschirms angezeigt. Mit dem geringsten Abstand zu Ihrem Auge betrachten Sie in der Regel Ihr Smartphone, gefolgt von Ihrem Tablet und dem PC-Bildschirm. Bei [Surface Hub](http://www.microsoft.com/microsoft-surface-hub)-Geräten und Fernsehern ist der Abstand am größten. Um dies auszugleichen, werden Geräte mit zunehmendem Abstand vom Bildschirm objektiv größer. Wenn Sie Größe für Ihre UI-Elemente festlegen, verwenden Sie dabei die Einheit der so genannten „effektiven Pixel“ (Epx). Und Windows 10 dauert DPI-Wert, und der normale betrachtungsabstand von einem Gerät, um die beste Größe für UI-Elemente in physischen Pixeln die bestmögliche Anzeige zu berechnen. Weitere Informationen finden Sie unter [Anzeigepixel/Effektive Pixel, Abstand zum Bildschirm und Skalierungsfaktoren](wpsl-to-uwp-porting-xaml-and-ui.md).
+Bei zunehmendem Abstand *erscheinen* all diese objektiven Metriken kleiner und werden in der *effektiven Größe* und der entsprechenden *effektiven Auflösung* des Bildschirms angezeigt. Mit dem geringsten Abstand zu Ihrem Auge betrachten Sie in der Regel Ihr Smartphone, gefolgt von Ihrem Tablet und dem PC-Bildschirm. Bei [Surface Hub](http://www.microsoft.com/microsoft-surface-hub)-Geräten und Fernsehern ist der Abstand am größten. Um dies auszugleichen, werden Geräte mit zunehmendem Abstand vom Bildschirm objektiv größer. Wenn Sie Größe für Ihre UI-Elemente festlegen, verwenden Sie dabei die Einheit der so genannten „effektiven Pixel“ (Epx). Und Windows 10 DPI-Wert, und der normale betrachtungsabstand von einem Gerät, um die beste Größe für UI-Elemente in physischen Pixeln die bestmögliche Anzeige zu berechnen. Weitere Informationen finden Sie unter [Anzeigepixel/Effektive Pixel, Abstand zum Bildschirm und Skalierungsfaktoren](wpsl-to-uwp-porting-xaml-and-ui.md).
 
 Trotzdem ist es ratsam, Ihre App mit vielen verschiedenen Geräten zu testen, damit Sie die Benutzerfreundlichkeit jeweils selbst überprüfen können.
 
@@ -54,11 +54,11 @@ Durch das optische Zoomen der App wirkt diese wie die Mobilgeräteversion, nur g
 
 Zusätzlich zu den neuen Steuerelementen, z. B. Listen- und Rasteransicht verfügen die meisten etablierten Layouttypen aus WindowsPhone Silverlight über Entsprechungen in die universelle Windows-Plattform (UWP). Beispiele: [**Canvas**](https://msdn.microsoft.com/library/windows/apps/br209267), [**Grid**](https://msdn.microsoft.com/library/windows/apps/br242704) und [**StackPanel**](https://msdn.microsoft.com/library/windows/apps/br209635). Das Portieren des Großteils der Benutzeroberfläche, die diese Typen verwendet, sollte unkompliziert ablaufen. Suchen Sie jedoch immer nach Möglichkeiten, die dynamischen Layoutfunktionen dieser Layoutpanel zu nutzen und diese auf Geräten mit verschiedenen Größen automatisch anzupassen und neu zu gestalten.
 
-Das dynamische Layout in Systemsteuerelemente und Layoutpanel integriert hinausgehen, können wir ein neues Windows 10-Feature namens [Adaptiver Visual State-Manager](wpsl-to-uwp-porting-xaml-and-ui.md)verwenden.
+Über das dynamische Layout hinaus in Systemsteuerelemente und Layoutpanel integriert werden, können wir ein neues Windows 10-Feature, das [Adaptive Visual State-Manager](wpsl-to-uwp-porting-xaml-and-ui.md)aufgerufen.
 
 ## <a name="input-modalities"></a>Eingabemodalitäten
 
-Eine WindowsPhone Silverlight-Oberfläche ist Toucheingabe konzipiert. Die Benutzeroberflächen Ihrer portierten Apps sollten natürlich auch die Toucheingabe unterstützen, Sie können jedoch auch andere Eingabemodalitäten wie Maus und Tastatur zulassen. In der UWP sind Maus-, Stift- und Toucheingabe als *Zeigereingaben* zusammengefasst. Weitere Informationen finden Sie unter [Behandeln von Zeigereingaben](https://msdn.microsoft.com/library/windows/apps/mt404610) und [Tastaturinteraktionen](https://msdn.microsoft.com/library/windows/apps/mt185607).
+Eine WindowsPhone Silverlight-Schnittstelle ist die Toucheingabe konzipiert. Die Benutzeroberflächen Ihrer portierten Apps sollten natürlich auch die Toucheingabe unterstützen, Sie können jedoch auch andere Eingabemodalitäten wie Maus und Tastatur zulassen. In der UWP sind Maus-, Stift- und Toucheingabe als *Zeigereingaben* zusammengefasst. Weitere Informationen finden Sie unter [Behandeln von Zeigereingaben](https://msdn.microsoft.com/library/windows/apps/mt404610) und [Tastaturinteraktionen](https://msdn.microsoft.com/library/windows/apps/mt185607).
 
 ## <a name="maximizing-markup-and-code-re-use"></a>Maximieren der Wiederverwendung von Markup und Code
 

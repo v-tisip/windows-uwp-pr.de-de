@@ -9,17 +9,17 @@ ms.topic: article
 keywords: Windows10, UWP, Bezahlung, App-Verkäufe, App-Erlöse, Auszahlung, Store-Gebühr, Auszahlungssperre, Prozentsatz
 ms.localizationpriority: medium
 ms.openlocfilehash: 96845e81b093b7cddb6d334286e9cfa468a43b28
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026921"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6202545"
 ---
 # <a name="getting-paid"></a>Bezahlung
 Hier sehen Sie einige wichtige Informationen zu Zahlung für Ihre apps, Add-ons und Advertising-Einnahmen erhalten.
 
 > [!IMPORTANT]
-> Bevor Sie Geld aus app-Verkäufen im Microsoft Store erhalten können, müssen Sie [Ihr auszahlungskonto einrichten](setting-up-your-payout-account-and-tax-forms.md)und die erforderlichen Steuerformulare ausfüllen.
+> Bevor Sie Geld aus app-Verkäufen im Microsoft Store erhalten können, müssen Sie [Ihr auszahlungskonto einrichten und die erforderlichen Steuerformulare ausfüllen](setting-up-your-payout-account-and-tax-forms.md).
 
 ## <a name="store-fee"></a>Store-Gebühr
 
@@ -65,7 +65,7 @@ Um Ihre Zahlungen zu sperren, wechseln Sie zu **Kontoeinstellungen**. Setzen Sie
 Nachdem Sie die Auszahlungssperre auf **Ein** festgelegt haben, werden alle Auszahlungen gesperrt, bis Sie den Schieberegler wieder auf **Aus** setzen. Dann werden Sie im nächsten monatlichen Auszahlungszyklus berücksichtigt (vorausgesetzt, der entsprechende Zahlungsschwellenwert wurde erreicht). Wenn Sie zum Beispiel Ihre Auszahlungen gesperrt haben, aber eine Auszahlung im Juni generieren möchten, sollten Sie die Auszahlungssperre noch vor Ende Mai auf **Aus** setzen.
 
 > [!NOTE]
-> Die **auszahlungssperre** Auswahl gilt für **Alle** Umsatzquellen, die über das Entwicklerprogramm für Windows im Partner Center (Microsoft Store, Microsoft advertising, Azure Marketplace usw.) bezahlt werden. Es ist nicht möglich, für jede Umsatzquelle eine separate Option für die Auszahlungssperre festzulegen.
+> Die **auszahlungssperre** Auswahl gilt für **Alle** Umsatzquellen, die über das Windows-Entwickler-Programm im Partner Center (Microsoft Store, Microsoft advertising, Azure Marketplace usw.) bezahlt werden. Es ist nicht möglich, für jede Umsatzquelle eine separate Option für die Auszahlungssperre festzulegen.
 
 
  

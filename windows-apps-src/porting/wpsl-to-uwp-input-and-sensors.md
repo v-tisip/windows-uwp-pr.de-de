@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a0041fd154a4ce32930e10e21175706e8e7ad988
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025795"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6202631"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-io-device-and-app-model"></a>Portieren von WindowsPhone Silverlight zu UWP für e/a, Gerät und app-Modell
 
@@ -24,7 +24,7 @@ Code, der in das Gerät selbst integriert und auf dessen Sensoren abgestimmt ist
 
 ## <a name="application-lifecycle-process-lifetime-management"></a>App-Lebenszyklus (Prozesslebensdauer-Verwaltung)
 
-Ihre WindowsPhone Silverlight-app enthält Code zum Speichern und Wiederherstellen des App-Zustands und Anzeigemodus, um die Markierung als veraltet und anschließende erneute Aktivierung zu unterstützen. App-Lebenszyklus von apps (universelle Windows Plattform) weist starke parallelen mit der WindowsPhone Silverlight-apps, da beide mit dem gleichen Ziel zur Maximierung der verfügbaren Ressourcen entworfen werden unabhängig vom gewählten App der Benutzer ausgewählt hat, dass in der Vordergrund zu jedem Zeitpunkt. Sie werden feststellen, dass Ihr Code sich dem neuen System recht problemlos anpasst.
+Ihre WindowsPhone Silverlight-app enthält Code zum Speichern und Wiederherstellen des App-Zustands und Anzeigemodus, um die Markierung als veraltet und anschließende erneute Aktivierung zu unterstützen. App-Lebenszyklus von apps (universelle Windows Plattform) weist starke parallelen zu, die von WindowsPhone Silverlight-apps, da beide mit dem gleichen Ziel zur Maximierung der verfügbaren Ressourcen entworfen werden unabhängig vom gewählten App der Benutzer ausgewählt hat, im dem Vordergrund jederzeit unterbrechen. Sie werden feststellen, dass Ihr Code sich dem neuen System recht problemlos anpasst.
 
 **Hinweis:**  eine WindowsPhone Silverlight-app durch Drücken der **zurück** -Hardwaretaste automatisch beendet. Eine UWP-App wird durch Drücken der Hardwaretaste **Zurück** auf einem Mobilgerät dagegen *nicht* automatisch beendet. Stattdessen wird sie erst angehalten und dann ggf. beendet. Diese Details sind für eine App, die entsprechend auf App-Lebenszyklusereignisse reagiert, jedoch transparent.
 
@@ -34,15 +34,15 @@ Weitere Informationen finden Sie unter [App-Lebenszyklus](https://msdn.microsoft
 
 ## <a name="camera"></a>Kamera
 
-Code WindowsPhone Silverlight-kameraaufnahme mithilfe der Klassen **Microsoft.Devices.Camera**, **Microsoft.Devices.PhotoCamera**oder **Microsoft.Phone.Tasks.CameraCaptureTask** . Zum Portieren dieses Codes zur universellen Windows-Plattform (UWP) können Sie die [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124)-Klasse verwenden. Ein Codebeispiel finden Sie im Thema [**CapturePhotoToStorageFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh700836). Diese Methode ermöglicht es Ihnen, ein Foto in einer Speicherdatei aufnehmen und erfordert das **Mikrofon** und **Webcam**[**Gerätefunktionen**](https://msdn.microsoft.com/library/windows/apps/dn934747) in der app-Paketmanifest festgelegt werden.
+Code WindowsPhone Silverlight-kameraaufnahme verwendet die **Microsoft.Devices.Camera**, **Microsoft.Devices.PhotoCamera**oder **Microsoft.Phone.Tasks.CameraCaptureTask** -Klassen. Zum Portieren dieses Codes zur universellen Windows-Plattform (UWP) können Sie die [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/br241124)-Klasse verwenden. Ein Codebeispiel finden Sie im Thema [**CapturePhotoToStorageFileAsync**](https://msdn.microsoft.com/library/windows/apps/hh700836). Diese Methode können Sie ein Foto in einer Speicherdatei aufnehmen und erfordert das **Mikrofon** und **Webcam**[**Gerätefunktionen**](https://msdn.microsoft.com/library/windows/apps/dn934747) in der app-Paketmanifest festgelegt werden.
 
-Eine weitere Möglichkeit ist die [**"cameracaptureui"**](https://msdn.microsoft.com/library/windows/apps/br241030) -Klasse, die auch die **Mikrofon** und **Webcam**[**Gerätefunktionen**](https://msdn.microsoft.com/library/windows/apps/dn934747)erforderlich ist.
+Eine weitere Möglichkeit ist die [**"cameracaptureui"**](https://msdn.microsoft.com/library/windows/apps/br241030) -Klasse, die auch die **Mikrofon** und **Webcam**[**Gerätefunktionen**](https://msdn.microsoft.com/library/windows/apps/dn934747)erfordert.
 
 Foto-Apps werden für UWP-Apps nicht unterstützt.
 
 ## <a name="detecting-the-platform-your-app-is-running-on"></a>Erkennen der Plattform, auf der Ihre App ausgeführt wird
 
-Die Möglichkeit für die Herangehensweise Änderungen mit Windows 10-ausgerichtet. Das neue konzeptionelle Modell besteht darin, dass eine App auf die Universelle Windows-Plattform (UWP) ausgerichtet ist und auf allen Windows-Geräten ausgeführt wird. Dann besteht die Möglichkeit, Funktionen hervorzuheben, die exklusiv für bestimmte Gerätefamilien angeboten werden. Bei Bedarf besteht auch die Möglichkeit, die App auf eine oder mehrere bestimmte Gerätefamilien zu beschränken. Weitere Informationen zu Gerätefamilien – und wie Sie entscheiden, auf welche Sie eine App ausrichten sollten – finden Sie unter [Anleitung für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn894631).
+Die Möglichkeit für die Herangehensweise Ausrichtung von Apps ändert sich mit Windows 10. Das neue konzeptionelle Modell besteht darin, dass eine App auf die Universelle Windows-Plattform (UWP) ausgerichtet ist und auf allen Windows-Geräten ausgeführt wird. Dann besteht die Möglichkeit, Funktionen hervorzuheben, die exklusiv für bestimmte Gerätefamilien angeboten werden. Bei Bedarf besteht auch die Möglichkeit, die App auf eine oder mehrere bestimmte Gerätefamilien zu beschränken. Weitere Informationen zu Gerätefamilien – und wie Sie entscheiden, auf welche Sie eine App ausrichten sollten – finden Sie unter [Anleitung für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
 **Hinweis:**  empfohlen, dass Sie nicht Betriebssystem oder die Gerätefamilie zum Ermitteln des Vorhandenseins von Features zu. Das Identifizieren des aktuellen Betriebssystems oder der Gerätefamilie ist in der Regel nicht die beste Möglichkeit, um festzustellen, ob ein bestimmtes Feature für das Betriebssystem oder die Gerätefamilie vorhanden ist. Anstatt das Betriebssystem oder die Gerätefamilie (und Versionsnummer) zu ermitteln, sollten Sie das Vorhandensein des Features selbst überprüfen (siehe [Bedingte Kompilierung und adaptiver Code](wpsl-to-uwp-porting-to-a-uwp-project.md)). Wenn ein bestimmtes Betriebssystem oder eine bestimmte Gerätefamilie erforderlich ist, sollten Sie darauf achten, es bzw. sie als unterstützte Mindestversion zu verwenden, anstatt den Test nur für diese Version zu entwerfen.
 
@@ -69,7 +69,7 @@ Siehe auch [Bedingte Kompilierung und adaptiver Code](wpsl-to-uwp-porting-to-a-u
 
 ## <a name="device-status"></a>Gerätestatus
 
-Eine WindowsPhone Silverlight-app können die **Microsoft.Phone.Info.DeviceStatus** -Klasse zum Abrufen von Informationen über das Gerät auf dem die app ausgeführt wird. Es gibt kein direktes UWP-Äquivalent für den **Microsoft.Phone.Info**-Namespace. Sie finden hier aber einige Eigenschaften und Ereignisse, die Sie in einer UWP-App verwenden können, anstatt die Member der **DeviceStatus-Klasse** aufzurufen.
+Eine WindowsPhone-Silverlight-app können die **Microsoft.Phone.Info.DeviceStatus** -Klasse zum Abrufen von Informationen über das Gerät, auf dem die app ausgeführt wird. Es gibt kein direktes UWP-Äquivalent für den **Microsoft.Phone.Info**-Namespace. Sie finden hier aber einige Eigenschaften und Ereignisse, die Sie in einer UWP-App verwenden können, anstatt die Member der **DeviceStatus-Klasse** aufzurufen.
 
 | Windows Phone Silverlight                                                               | UWP                                                                                                                                                                                                                                                                                                                                |
 |-----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

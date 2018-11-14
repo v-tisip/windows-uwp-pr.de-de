@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 49b9fe0833151155b11b7d7b796e395bb6a2ca7f
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024847"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6195845"
 ---
 # <a name="walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript"></a>Exemplarische Vorgehensweise: Erstellen einer einfachen Komponente für Windows-Runtime und Aufrufen der Komponente über JavaScript
 
@@ -270,7 +270,7 @@ Fügen Sie im SampleComponent-Projekt eine neue **public sealed**-Klasse (**Publ
 > End Class
 > ```
 
-Der Ereignishandler folgt das vertraute .NET Framework-Ereignismuster mit der Ausnahme, dass der Absender des Ereignisses (in diesem Fall das PropertySet-Objekt) in der IObservableMap umgewandelt wird&lt;Zeichenfolge, Objekt&gt; Schnittstelle (IObservableMap (Of String, Object) in Visual Basic), wird eine Instanziierung der Windows-Runtime-Schnittstelle [IObservableMap&lt;K, V&gt;](https://msdn.microsoft.com/library/windows/apps/br226050.aspx). (Sie können den Absender zu deren Typ ggf. umwandeln.) Darüber hinaus werden die Ereignisargumente als Schnittstelle und nicht als Objekt dargestellt.
+Der Ereignishandler folgt das vertraute .NET Framework-Ereignismuster, mit der Ausnahme, dass der Absender des Ereignisses (in diesem Fall das PropertySet-Objekt) in das IObservableMap umgewandelt wird&lt;Zeichenfolge, Objekt&gt; Schnittstelle (IObservableMap (Of String, Object) in Visual Basic), wird eine Instanziierung der Windows-Runtime-Schnittstelle [IObservableMap&lt;K, V&gt;](https://msdn.microsoft.com/library/windows/apps/br226050.aspx). (Sie können den Absender zu deren Typ ggf. umwandeln.) Darüber hinaus werden die Ereignisargumente als Schnittstelle und nicht als Objekt dargestellt.
 
 Fügen Sie in der Datei „default.js“ die Runtime1-Funktion wie gezeigt hinzu: Dieser Code erstellt ein PropertySetStats-Objekt, ruft die PropertySet-Auflistung ab und fügt einen eigenen Ereignishandler, die OnMapChanged-Funktion, für die Behandlung des MapChanged-Ereignisses hinzu. Nach dem Ändern der Auflistung ruft „runtime1“ die DisplayStats-Methode auf, um eine Zusammenfassung der Änderungstypen anzuzeigen.
 
@@ -674,7 +674,7 @@ In diesem Abschnitt wird ein abbrechbarer asynchroner Vorgang veranschaulicht, d
     -   Das [WinJS.Promise](https://msdn.microsoft.com/library/windows/apps/br211867.aspx)-Objekt stellt Funktionen zum Verarbeiten der zurückgegebenen Ergebnisse, zum Reagieren auf einen Abbruch und zum Behandeln von Statusberichten bereit.
     -   Die AsyncInfo.Run-Methode erstellt eine Abbruchquelle und ein Objekt, das die IProgress&lt;T&gt;-Schnittstelle implementiert. Sie übergibt ein [CancellationToken](https://msdn.microsoft.com/library/system.threading.cancellationtoken.aspx)-Token aus der Abbruchquelle und die [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx)-Schnittstelle an den Delegaten.
 
-        > **Hinweis:**, wenn das Promise-Objekt keine Funktion auf einen Abbruch reagieren auf angeben, "asyncinfo.Run" dennoch ein abbrechbarer Token übergibt und Abbruch weiterhin möglich. Wenn das Promise-Objekt keine Funktion zum Behandeln von Statusaktualisierungen bereitstellt, stellt „AsyncInfo.Run“ dennoch ein Objekt bereit, das „ IProgress&lt;T&gt;“ implementiert, aber seine Berichte werden ignoriert.
+        > **Hinweis:** Wenn das Promise-Objekt keine Funktion auf einen Abbruch reagieren auf angeben, "asyncinfo.Run" dennoch ein abbrechbarer Token übergibt und Abbruch weiterhin möglich. Wenn das Promise-Objekt keine Funktion zum Behandeln von Statusaktualisierungen bereitstellt, stellt „AsyncInfo.Run“ dennoch ein Objekt bereit, das „ IProgress&lt;T&gt;“ implementiert, aber seine Berichte werden ignoriert.
 
     -   Der Delegat verwendet die Methode [Task.Run&lt;TResult&gt;(Func&lt;TResult&gt;, CancellationToken](https://msdn.microsoft.com/library/hh160376.aspx)), um eine gestartete Aufgabe zu erstellen, die das Token und die Statusschnittstelle verwendet. Der Delegat für die gestartete Aufgabe wird durch eine Lambdafunktion bereitgestellt, die das gewünschte Ergebnis berechnet. Mehr dazu später.
     -   Die AsyncInfo.Run-Methode erstellt ein Objekt, das die Schnittstelle [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](https://msdn.microsoft.com/library/windows/apps/br206594.aspx) implementiert, den Windows-Runtime-Abbruchmechanismus mit der Tokenquelle verbindet und die Statusberichtsfunktion des Promise-Objekts mit der IProgress&lt;T&gt;-Schnittstelle verbindet.
@@ -737,6 +737,6 @@ Drücken Sie zum Ausführen der App die F5-TASTE. Wählen Sie zum Starten des as
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [.NET für UWP-apps (Übersicht)](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
+* [.NET für UWP-apps-Übersicht](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
 * [.NET für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
 * [Exemplarische Vorgehensweise: Erstellen einer einfachen Komponente für Windows-Runtime und Aufrufen der Komponente über JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)
