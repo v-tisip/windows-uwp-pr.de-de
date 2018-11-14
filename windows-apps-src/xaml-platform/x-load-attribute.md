@@ -1,26 +1,26 @@
 ---
 author: jwmsft
 title: xLoad-Attribut
-description: xLoad ermöglicht die dynamische Erstellung und Zerstörung eines Elements und seiner untergeordneten Elemente verzögert und damit Startzeit Nutzung von Zeit und Arbeitsspeicher. 
+description: xLoad ermöglicht die dynamische Erstellung und Zerstörung eines Elements und seiner untergeordneten Elemente, verkürzt die Startzeit Zeit und Speicherverwendung. 
 ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d9659d183c020c579aa0a21fe179a69c1d9997c5
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6051915"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6272951"
 ---
 # <a name="xload-attribute"></a>x:Load-Attribut
 
-**X: Load** können Sie um die Startzeit, visuelle Struktur Erstellung und Speicherverwendung für Ihre XAML-app zu optimieren. Verwendung von **X: Load** wirkt sich visual aus, **Sichtbarkeit**, mit der Ausnahme, dass, wenn das Element nicht geladen wird, der Speicher freigegeben wird ein kleiner Platzhalter wird intern verwendet, um seine Position in der visuellen Struktur markieren.
+**X: Load** können Sie um die Startzeit, visuelle Struktur Erstellung und Speicherverwendung Ihrer XAML-App zu optimieren. Verwendung von **X: Load** wirkt sich visual aus, **Sichtbarkeit**, mit der Ausnahme, dass, wenn das Element nicht geladen wird, der Speicher freigegeben wird ein kleiner Platzhalter wird intern verwendet, um seine Position in der visuellen Struktur markieren.
 
-Das UI-Element mit X: Load attributierte möglich geladen und entladen über Code oder mithilfe eines [X: Bind](x-bind-markup-extension.md) -Ausdrucks. Dies ist zur Reduzierung der Kosten für Elemente nützlich, die selten oder nur bedingt angezeigt werden. Wenn Sie X: Load auf einem Container wie Raster oder StackPanel verwenden, der Container und alle untergeordneten Elemente geladen oder als Gruppe entladen.
+Das UI-Element mit X: Load attributierte möglich geladen und entladen über Code oder mithilfe eines [X: Bind](x-bind-markup-extension.md) -Ausdrucks. Dies ist zur Reduzierung der Kosten für Elemente nützlich, die selten oder nur bedingt angezeigt werden. Wenn Sie X: Load auf einem Container wie Raster oder StackPanel verwenden, werden die Container und alle untergeordneten geladen oder als Gruppe entladen.
 
-Die Verfolgung von verzögerten Elementen durch das XAML-Framework fügt ca. 600 Bytes zur Speicherverwendung für jedes Element attributierten mit X: Load, um den Platzhalter zu berücksichtigen. Aus diesem Grund ist es möglich, dieses Attribut durch eine übermäßige Verwendung, in dem Maße, tatsächlich die Leistung beeinträchtigt wird. Es wird empfohlen, mit denen Sie nur für Elemente, die ausgeblendet werden müssen. Wenn Sie X: Load auf einem Container verwenden, wird der Aufwand nur für das Element mit dem das Attribut X: Load abgewickelt.
+Die Verfolgung von verzögerten Elementen durch das XAML-Framework fügt ca. 600 Bytes zur Speicherverwendung für jedes Element attributierten mit X: Load, um den Platzhalter zu berücksichtigen. Aus diesem Grund ist es möglich, dieses Attribut durch eine übermäßige Verwendung, dass tatsächlich die Leistung beeinträchtigt wird. Es wird empfohlen, mit denen Sie nur für Elemente, die ausgeblendet werden müssen. Wenn Sie X: Load auf einem Container verwenden, wird der Aufwand nur für das Element mit dem X: Load-Attribut gezahlt.
 
 > [!IMPORTANT]
 > Das Attribut X: Load ist ab Windows 10, Version 1703 (Creators Update) verfügbar. Die Mindestversion, auf die Ihr Visual Studio-Projekt abzielt, muss *Windows 10 Creators Update (10.0, Build 15063)* sein, damit x:Load verwendet werden kann.
@@ -37,11 +37,11 @@ Die Verfolgung von verzögerten Elementen durch das XAML-Framework fügt ca. 600
 
 Es gibt mehrere Möglichkeiten zum Laden der Elemente:
 
-- Verwenden eines [X: Bind](x-bind-markup-extension.md) -Ausdrucks angeben des Zustands laden. Der Ausdruck sollte **"true"** zum Laden und **"false",** um das Element zu entladen zurückgeben.
+- Verwenden Sie ein [X: Bind](x-bind-markup-extension.md) -Ausdrucks, um den Zustand Load anzugeben. Der Ausdruck sollte **"true"** zum Laden und **"false",** um das Element zu entladen zurückgeben.
 - Rufen Sie [**FindName**](https://msdn.microsoft.com/library/windows/apps/br208715) mit dem Namen auf, der für das Element definiert wurde.
 - Rufen Sie [**GetTemplateChild**](https://msdn.microsoft.com/library/windows/apps/br209416) mit dem Namen auf, der für das Element definiert wurde.
 - Verwenden Sie in einer [**VisualState**](https://msdn.microsoft.com/library/windows/apps/br209007)eine [**Setter**](https://msdn.microsoft.com/library/windows/apps/br208817) oder das **Storyboard** -Animation, die das X: Load-Element ausgerichtet ist.
-- Das entladene Element in jeder **Storyboard**als Ziel.
+- Ziel das Entladen Element in jeder **Storyboard**.
 
 > HINWEIS: Nach Start der Instanziierung eines Elements wird es im Benutzeroberflächen-Thread erstellt. Dies kann ggf. bewirken, dass die Oberfläche ruckelt, wenn zu viele auf einmal erstellt werden.
 
@@ -56,8 +56,8 @@ Wenn ein verzögertes Element mit einer der oben aufgeführten Methoden erstellt
 
 Um ein Element zu entladen:
 
-- Verwenden eines X: Bind-Ausdrucks angeben des Zustands laden. Der Ausdruck sollte **"true"** zum Laden und **"false",** um das Element zu entladen zurückgeben.
-- Rufen Sie in eine Seiten- oder "UserControl" **UnloadObject auf** , und übergeben Sie den Objektverweis
+- Verwenden Sie ein X: Bind-Ausdrucks, um den Zustand Load anzugeben. Der Ausdruck sollte **"true"** zum Laden und **"false",** um das Element zu entladen zurückgeben.
+- Rufen Sie in eine Seiten- oder UserControl **UnloadObject auf** , und übergeben Sie den Objektverweis
 - Rufen Sie **Windows.UI.Xaml.Markup.XamlMarkupHelper.UnloadObject** und übergeben Sie den Objektverweis
 
 Wenn ein Objekt entladen wird, wird es mit einem Platzhalter in der Struktur ersetzt. Die Objektinstanz verbleibt im Arbeitsspeicher, bis alle Verweise freigegeben wurden. UnloadObject API auf einer Seite "/" UserControl "wurde entwickelt, die Verweise frei, Codegen für X: Name und X: Bind freizugeben. Wenn Sie zusätzliche Verweise in app-Code enthalten, müssen sie auch freigegeben werden.
@@ -69,7 +69,7 @@ Wenn ein Element entladen wird, alle Zustände, die dem Element zugeordnete werd
 Die Einschränkungen für die Verwendung von **X: Load** sind:
 
 - Definieren Sie ein [X: Name](x-name-attribute.md)für das Element, da dieses muss das Element später gefunden werden.
-- Sie können nur X: Load für Typen verwenden, die von [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) oder [**FlyoutBase**](https://msdn.microsoft.com/library/windows/apps/dn279249)abgeleitet werden.
+- Sie können nur X: Load auf Typen verwenden, die von [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911) oder [**FlyoutBase**](https://msdn.microsoft.com/library/windows/apps/dn279249)abgeleitet werden.
 - Sie können keine X: Load auf Stammelemente in einer [**Seite**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page)oder ein [**"UserControl"**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.usercontrol), einem [**DataTemplate**](https://msdn.microsoft.com/library/windows/apps/br242348)verwenden.
 - Sie können nicht auf Elemente in einem [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)X: Load verwenden.
 - X: Load können keine losen XAML mit [**XamlReader.Load**](https://msdn.microsoft.com/library/windows/apps/br228048)geladen.
@@ -77,13 +77,13 @@ Die Einschränkungen für die Verwendung von **X: Load** sind:
 
 ## <a name="remarks"></a>Hinweise
 
-Sie können X: Load auf geschachtelte Elemente verwenden, jedoch müssen Sie vom äußersten Element im erkannt werden. Wenn Sie versuchen, ein untergeordnetes Element zu erkennen, bevor das übergeordnete Element erkannt wurde, wird eine Ausnahme ausgelöst.
+X: Load können auf geschachtelte Elemente jedoch müssen Sie vom äußersten Element im erkannt werden. Wenn Sie versuchen, ein untergeordnetes Element zu erkennen, bevor das übergeordnete Element erkannt wurde, wird eine Ausnahme ausgelöst.
 
 In der Regel wird empfohlen, dass Sie Elemente zurückstellen, die nicht im ersten Frame angezeigt werden.Bei der Suche nach zu verzögernden Kandidaten empfiehlt es sich, nach Elementen zu suchen, die mit reduzierter [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992) erstellt werden. Eine Benutzeroberfläche, die durch eine Benutzerinteraktion ausgelöst wird, ist außerdem ein guter Ort zum Suchen nach Elementen, die zurückgestellt werden können.
 
 Seien Sie vorsichtig beim Verzögern von Elementen in einem [**ListView**](https://msdn.microsoft.com/library/windows/apps/br242878), da so die Startzeit verringert, aber auch die Leistung beim Verschieben reduziert werden kann – je nachdem, was Sie erstellen. Wenn Sie die Leistung beim Verschieben erhöhen möchten, finden Sie in den Dokumentationen [{x:Bind}-Markuperweiterung](x-bind-markup-extension.md) und [x:Phase-Attribut](x-phase-attribute.md) weitere Informationen.
 
-Wenn das [X: Phase-Attribut](x-phase-attribute.md) in Verbindung mit **X: Load** dann verwendet wird, wenn ein Element oder eine Elementstruktur realisiert wird, werden die Bindungen bis zu und einschließlich zur aktuellen Phase angewendet. Die Phase für **X: Phase** angegeben beeinflussen oder steuern den Zustand beim Laden des Elements. Wenn ein Listenelement als Teil der Verschiebung wiederverwendet wird, realisierte Elemente verhält sich auf die gleiche Weise wie andere Elemente, und kompilierte Bindungen (**{X: Bind}** Bindungen) werden unter Verwendung der gleichen Regeln einschließlich phasing verarbeitet.
+Wenn das [X: Phase-Attribut](x-phase-attribute.md) in Verbindung mit **X: Load** dann verwendet wird, wenn ein Element oder eine Elementstruktur realisiert wird, werden die Bindungen bis hin zur aktuellen Phase angewendet. Die Phase für **X: Phase** angegeben auswirken oder steuern den Zustand beim Laden des Elements. Wenn ein Listenelement beim wiederverwendet als Teil der Verschiebung, realisierte Elemente verhält sich auf die gleiche Weise wie andere Elemente, und kompilierte Bindungen (**{X: Bind}** Bindungen) werden unter Verwendung der gleichen Regeln einschließlich phasing verarbeitet.
 
 Eine allgemeine Richtlinie besteht darin, die Leistung Ihrer App vorher und nachher zu messen, um sicherzustellen, das Sie die gewünschte Leistung erhalten.
 

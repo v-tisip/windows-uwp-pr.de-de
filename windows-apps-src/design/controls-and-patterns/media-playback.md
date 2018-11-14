@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 113acbe1f4e9bb3814b2f9b61beb79488995d3e3
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.openlocfilehash: 6df7d7dc7d35ed46f3f741bd1783b5af2755f0a2
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6256526"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6656688"
 ---
 # <a name="media-player"></a>Media Player
 
@@ -304,7 +304,7 @@ private DisplayRequest appDisplayRequest = null;
 Das [MediaPlayerElement](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.aspx) bietet zahlreiche Eigenschaften, Methoden und Ereignisse zur Steuerung der Audio- und Videowiedergabe über die Eigenschaft [MediaPlayerElement.MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.mediaplayer.aspx). Eine vollständige Liste der Eigenschaften, Methoden und Ereignisse finden Sie auf der Referenzseite zum [MediaPlayer](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplayer.aspx) .
 
 ### <a name="advanced-media-playback-scenarios"></a>Erweiterte Medienwiedergabeszenarien
-Für komplexere Medienwiedergabeszenarien, z.B. die Wiedergabe einer Playlist, Umschalten zwischen Audiosprachen oder Erstellen benutzerdefinierter Metadatentracks, legen Sie [MediaPlayerElement.Source](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) auf eine [MediaPlaybackItem](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybackitem.aspx) oder eine [MediaPlaybackList](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacklist.aspx) fest. Weitere Informationen zur Aktivierung zahlreicher erweiterter Medienfunktionen finden Sie auf der Seite [Medienwiedergabe](https://msdn.microsoft.com/windows/uwp/audio-video-camera/media-playback-with-mediasource) im Dev Center.
+Für komplexere Medienwiedergabeszenarien, z.B. die Wiedergabe einer Playlist, Umschalten zwischen Audiosprachen oder Erstellen benutzerdefinierter Metadatentracks, legen Sie [MediaPlayerElement.Source](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.mediaplayerelement.source.aspx) auf eine [MediaPlaybackItem](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybackitem.aspx) oder eine [MediaPlaybackList](https://msdn.microsoft.com/library/windows/apps/windows.media.playback.mediaplaybacklist.aspx) fest. So aktivieren Sie verschiedene erweiterte Medienfunktionen finden Sie auf der [Medienwiedergabe](https://msdn.microsoft.com/windows/uwp/audio-video-camera/media-playback-with-mediasource) Seite Weitere Informationen.
 
 ### <a name="enable-full-window-video-rendering"></a>Aktivieren des Videorenderings im Vollbildmodus
 
