@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 59a2e93f7c09266b0e33d58bf6a2571e60c7a607
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6254578"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6652994"
 ---
 # <a name="notifications-visualizer"></a>Notifications Visualizer
 

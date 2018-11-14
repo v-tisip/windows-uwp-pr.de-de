@@ -7,12 +7,12 @@ ms.author: quradic
 ms.date: 5/7/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 74fc017453472b515e597b73ee8bb582376f6b12
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 2dc2f8e65ec9ed4e05b6b62e9fc28bbc75f28075
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6464371"
+ms.locfileid: "6650550"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>Neuigkeiten in der Windows-Entwicklerdokumentation im Mai 2018
 
@@ -114,11 +114,11 @@ Wir haben unsere Get revitalized Inhalte mit neuen Lernpfade gestartet. Diese ne
 
 ### <a name="advertising-performance-report"></a>Bericht zur Anzeigenleistung
 
-[Bericht zur Advertising Performance](../publish/advertising-performance-report.md) in Dev Center-Dashboard bietet jetzt Metriken. Wir haben auch den [Optimieren der Sichtbarkeit von anzeigeneinheiten](../monetize/optimize-ad-unit-viewability.md) -Artikel, um Empfehlungen für das Optimieren der anzeigbarkeit Ihrer anzeigen bereitstellen hinzugefügt.
+Der [Bericht zur anzeigen Leistung](../publish/advertising-performance-report.md) im Partner Center bietet jetzt Metriken. Wir haben auch den [Optimieren der Sichtbarkeit von anzeigeneinheiten](../monetize/optimize-ad-unit-viewability.md) -Artikel, um Empfehlungen für das Optimieren der anzeigbarkeit Ihrer anzeigen bereitstellen hinzugefügt.
 
 ### <a name="targeted-push-notifications"></a>Benutzerorientierte Pushbenachrichtigungen
 
-Die Seite " [Notifications](../publish/send-push-notifications-to-your-apps-customers.md) " in Dev Center-Dashboard bietet jetzt zusätzliche Analysedaten für alle Ihre Benachrichtigungen in Diagramm- und weltkartenform Kartenansichten.
+Die Seite " [Notifications](../publish/send-push-notifications-to-your-apps-customers.md) " im Partner Center bietet jetzt zusätzliche Analysedaten für alle Ihre Benachrichtigungen in Diagramm- und weltkartenform Kartenansichten.
 
 ## <a name="videos"></a>Videos
 

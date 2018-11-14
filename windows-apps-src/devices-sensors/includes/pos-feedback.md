@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Point of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 6decdd4325a1c3cf854e340799b9d2f4a3272e6c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6052325"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6211907"
 ---
 ## <a name="support-and-feedback"></a>Support und Feedback
 
@@ -24,5 +24,5 @@ Helfen Sie uns, Ihre Fragen zu suchen:
 - Fügen Sie das [Pointofservice](https://aka.ms/pos-stackoverflow) -Tag auf Ihre Frage auf Stack Overflow. 
 - Fügen Sie den Begriff ["Pointofservice"](https://aka.ms/pos-msdn-uwpforum) in Ihren Beitrag auf MSDN-UWP-Forum
 
-### <a name="make-feature-suggestions-or-give-feedback"></a>Verbesserungsvorschläge oder geben Sie feedback
-[Entwickler Feedback UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform?category_id=202594)angezeigt.
+### <a name="make-feature-suggestions-or-give-feedback"></a>Vorschläge für Features, oder geben Sie feedback
+[Entwickler Feedback UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform?category_id=202594)wird angezeigt.

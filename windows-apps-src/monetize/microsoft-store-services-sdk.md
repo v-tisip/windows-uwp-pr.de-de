@@ -9,15 +9,15 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store Services SDK
 ms.localizationpriority: medium
 ms.openlocfilehash: b5f29062e00701f578b63f79935d17b1203afc0f
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6037100"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6209134"
 ---
 # <a name="engage-customers-with-the-microsoft-store-services-sdk"></a>Kundengewinnung mit Microsoft Store Services SDK
 
-Im Microsoft Store Services SDK bietet Features, mit denen Sie Kundenkontakt in Ihren apps (universelle Windows Plattform), z. B. benutzerorientierte Benachrichtigungen an Ihre apps senden und Ausführen von A / B-Experimente in Ihren apps durchführen. Dieses SDK ist eine Erweiterung für Visual Studio2015 und neuere Versionen von Visual Studio.
+Im Microsoft Store Services SDK bietet Features, mit denen Sie Kundenkontakt in Ihre universelle Windows-Plattform (UWP)-apps, z. B. benutzerorientierte Benachrichtigungen an Ihre apps senden und Ausführen von A / B-Experimente in Ihren apps durchführen. Dieses SDK ist eine Erweiterung für Visual Studio2015 und neuere Versionen von Visual Studio.
 
 > [!NOTE]
 > Verwenden Sie zum Anzeigen von Werbung in Ihren UWP-Apps das [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) anstelle des Microsoft Store Services SDK. Die Advertising-Bibliotheken wurden von Microsoft Store Services SDK auf Microsoft Advertising-SDK verschoben. Weitere Informationen finden Sie unter [Anzeigen von Werbung in Ihrer App](display-ads-in-your-app.md).
@@ -30,10 +30,10 @@ Das Microsoft Store Services SDK unterstützt derzeit die folgenden Szenarien f�
 
 |  Szenario  |  Beschreibung   |
 |------------|----------------|
-|  [Durchführen von Experimenten mit A/B-Tests in Ihrer UWP-App](run-app-experiments-with-a-b-testing.md)    |  Führen Sie A/B-Tests in Ihrer App für die universelle Windows-Plattform (UWP) aus, um die Effektivität der Features für einige Kunden zu messen, bevor Sie die Features für alle Benutzer freigeben. Nachdem Sie ein Experiment im Partner Center definiert haben, verwenden Sie die [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) Klasse Varianten für Ihr Experiment in Ihrer app abzurufen, verwenden Sie diese Daten zum Ändern des Verhaltens des Features, die Sie testen möchten und verwenden Sie dann die [LogForVariation ](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation)-Methode zum Senden des anzeigeereignisses und der umwandlungsereignisse in das Partner Center. Verwenden Sie schließlich Partner Center, um die Ergebnisse anzeigen und Verwalten des Experiments.  |
+|  [Durchführen von Experimenten mit A/B-Tests in Ihrer UWP-App](run-app-experiments-with-a-b-testing.md)    |  Führen Sie A/B-Tests in Ihrer App für die universelle Windows-Plattform (UWP) aus, um die Effektivität der Features für einige Kunden zu messen, bevor Sie die Features für alle Benutzer freigeben. Nachdem Sie ein Experiment im Partner Center definiert haben, verwenden Sie die [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) -Klasse zum Abrufen von Varianten für Ihr Experiment in Ihrer app, diese Daten verwenden, um das Verhalten des Features zu ändern, die Sie testen möchten, und verwenden Sie dann die [LogForVariation ](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation)-Methode zum Senden des anzeigeereignisses und der umwandlungsereignisse in das Partner Center. Verwenden Sie zum Schluss Partner Center, um die Ergebnisse anzeigen und Verwalten des Experiments.  |
 |  [Starten des Feedback-Hubs über Ihre UWP-App](launch-feedback-hub-from-your-app.md)    |  Verwenden Sie die [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher)-Klasse in Ihrer UWP-App, um Ihre Windows10-Kunden auf den Feedback-Hub zu verweisen. Dort können Kunden ihre Probleme und Vorschläge übermitteln und das Feedback anderer Benutzer lesen und bewerten. Verwalten Sie anschließend dieses Feedback im [Feedback-Bericht](../publish/feedback-report.md) in Partner Center. |
-|  [Konfigurieren Sie Ihre UWP-app zum Empfangen von Partner Center-Pushbenachrichtigungen](configure-your-app-to-receive-dev-center-notifications.md)    |  Verwenden Sie die [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) -Klasse in Ihrer UWP-app, registrieren Sie Ihre app für benutzerorientierte Pushbenachrichtigungen empfangen, die Sie für Ihre Kunden mithilfe von Partner Center zu senden.  |
-|   [Protokollieren Sie benutzerdefinierter Ereignisse in Ihrer UWP-app für den Bericht "Nutzung" im Partner Center](log-custom-events-for-dev-center.md)   |  Verwenden Sie die [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) -Klasse in Ihrer UWP-app, um benutzerdefinierte Ereignisse zu protokollieren, die Ihre app im Partner Center zugeordnet sind. Überprüfen Sie dann alle Instanzen für Ihre benutzerdefinierten Ereignisse im Abschnitt **benutzerdefinierte Ereignisse** im [Bericht "Nutzung"](https://msdn.microsoft.com/windows/uwp/publish/usage-report) im Partner Center.  |
+|  [Konfigurieren Sie Ihre UWP-app zum Empfangen von Pushbenachrichtigungen für Partner Center](configure-your-app-to-receive-dev-center-notifications.md)    |  Verwenden Sie die [StoreServicesEngagementManager](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) -Klasse in Ihrer UWP-app, registrieren Sie Ihre app für benutzerorientierte Pushbenachrichtigungen zu empfangen, die Sie für Ihre Kunden mithilfe von Partner Center zu senden.  |
+|   [Protokollieren Sie benutzerdefinierter Ereignisse in Ihrer UWP-app für den Nutzungsbericht im Partner Center](log-custom-events-for-dev-center.md)   |  Verwenden Sie die [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) -Klasse in Ihrer UWP-app, um benutzerdefinierte Ereignisse zu protokollieren, die Ihre app im Partner Center zugeordnet sind. Überprüfen Sie dann alle Instanzen für Ihre benutzerdefinierten Ereignisse im Abschnitt **benutzerdefinierte Ereignisse** im [Bericht "Nutzung"](https://msdn.microsoft.com/windows/uwp/publish/usage-report) im Partner Center.  |
 
 <span id="prerequisites" />
 
@@ -143,5 +143,5 @@ Wenn wir eine neue Version des SDKs veröffentlichen, in der neue APIs oder Feat
 * [Microsoft Store Services SDK-API-Referenz](https://docs.microsoft.com/uwp/api/overview/engagement)
 * [Ausführen von Experimenten mit A/B-Tests](run-app-experiments-with-a-b-testing.md)
 * [Starten des Feedback-Hubs über Ihre App](launch-feedback-hub-from-your-app.md)
-* [Konfigurieren Sie Ihre app zum Empfangen von Partner Center-Pushbenachrichtigungen](configure-your-app-to-receive-dev-center-notifications.md)
+* [Konfigurieren Sie Ihre app zum Empfangen von Pushbenachrichtigungen für Partner Center](configure-your-app-to-receive-dev-center-notifications.md)
 * [Protokollieren Sie benutzerdefinierter Ereignisse für Partner Center](log-custom-events-for-dev-center.md)

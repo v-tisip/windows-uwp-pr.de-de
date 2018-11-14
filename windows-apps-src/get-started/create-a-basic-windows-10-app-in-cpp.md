@@ -1,26 +1,26 @@
 ---
 author: GrantMeStrength
 ms.assetid: DC235C16-8DAF-4078-9365-6612A10F3EC3
-title: Erstellen Sie ein Hello World "app" in C++ / CX (Windows 10)
-description: Mit Microsoft Visual Studio2017, können Sie verwenden C++ / CX eine app entwickeln, die auf Windows 10, sowie auf Smartphones mit Windows 10 ausgeführt wird. Die Benutzeroberfläche dieser Apps ist in XAML (Extensible Application Markup Language) definiert.
+title: Erstellen Sie ein Hello World-app in C++ / CX (Windows 10)
+description: Mit Microsoft Visual Studio2017, können Sie C++ / CX eine app entwickeln, die auf Windows 10, sowie auf Smartphones mit Windows 10 ausgeführt wird. Die Benutzeroberfläche dieser Apps ist in XAML (Extensible Application Markup Language) definiert.
 ms.author: jken
 ms.date: 06/11/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: bc2258557c492956130424069e6e0c4b73f28056
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6045759"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6265332"
 ---
 # <a name="create-a-hello-world-app-in-ccx"></a>Erstellen Sie eine app "Hello World" in C++ / CX
 
 > [!IMPORTANT]
-> In diesem Lernprogramm verwendet C++ / CX. Microsoft stellt C++ / WinRT: eine vollständig standardisierte moderne C ++ 17-Programmiersprache für Windows-Runtime-APIs (WinRT). Weitere Informationen zu dieser Sprache, finden Sie unter [C++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/). 
+> In diesem Lernprogramm verwendet C++ / CX. Microsoft stellt C++ / WinRT: eine vollständig standardisierte moderne C ++ 17-Programmiersprache für Windows-Runtime-APIs (WinRT). Weitere Informationen zu dieser Sprache, finden Sie in [C++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/). 
 
-Mit Microsoft Visual Studio2017, können Sie verwenden C++ / CX eine app entwickeln, die auf Windows 10 mit einer Benutzeroberfläche ausgeführt wird, die in Extensible Application Markup Language (XAML) definiert ist.
+Mit Microsoft Visual Studio2017, können Sie C++ / CX eine app entwickeln, die auf Windows 10 mit einer Benutzeroberfläche ausgeführt wird, die in Extensible Application Markup Language (XAML) definiert ist.
 
 > [!NOTE]
 > In diesem Lernprogramm wird Visual Studio Community 2017 verwendet. Wenn Sie eine andere Version von Visual Studio verwenden, kann das Programm für Sie etwas anders aussehen.
@@ -45,7 +45,7 @@ Wenn Sie bereits Windows-Desktop-Apps mit C++ programmiert haben, werden Ihnen e
 
 -   Sie verwenden weiterhin Debugger, Profiler und andere Entwicklungstools von Visual Studio.
 
--   Sie erstellen weiterhin Apps, die mit dem Visual C++-Compiler in systemeigenem Computercode kompiliert werden. UWP-apps in C++ / CX in einer verwalteten Laufzeitumgebung nicht ausgeführt werden.
+-   Sie erstellen weiterhin Apps, die mit dem Visual C++-Compiler in systemeigenem Computercode kompiliert werden. UWP-apps in C++ / CX in einer verwalteten Laufzeitumgebung nicht ausgeführt werden kann.
 
 ### <a name="whats-new"></a>Das ist neu:
 
@@ -61,9 +61,9 @@ Wenn Sie bereits Windows-Desktop-Apps mit C++ programmiert haben, werden Ihnen e
 
 -   Im Microsoft Store und dem WindowsPhone Store wird die Sicherheit Ihrer App anhand eines Zertifizierungsprozesses geprüft, und die App kann von Millionen potenzieller Kunden entdeckt werden.
 
-## <a name="hello-world-store-app-in-ccx"></a>Hello World Store-app in C++ / CX
+## <a name="hello-world-store-app-in-ccx"></a>Hello World-Store-app in C++ / CX
 
-Unsere erste App ist „Hello World“. Sie veranschaulicht einige grundlegende Interaktivitätsfunktionen, Layouts und Stile. Wir erstellen eine App auf der Grundlage der Projektvorlage für universelleWindows-Apps. Wenn Sie apps für Windows8.1 und Windows Phone 8.1 vor entwickelt haben, können Sie bedenken, dass mussten Sie drei Projekte in Visual Studio, eins für die Windows-app, eins für die Phone-app und ein weiteres mit gemeinsam genutztem Code vorhanden sind. Die Windows 10 Universal Windows Platform (UWP) ermöglicht es, haben nur ein Projekt, das auf allen Geräten, einschließlich Desktop- und Laptop-Computern Windows 10, Geräten wie Tablets, Smartphones, VR-Geräte und so weiter ausgeführt werden kann.
+Unsere erste App ist „Hello World“. Sie veranschaulicht einige grundlegende Interaktivitätsfunktionen, Layouts und Stile. Wir erstellen eine App auf der Grundlage der Projektvorlage für universelleWindows-Apps. Wenn Sie apps für Windows8.1 und Windows Phone 8.1 vor entwickelt haben, können Sie bedenken, dass mussten Sie drei Projekte in Visual Studio, eins für die Windows-app, eins für die Phone-app und ein weiteres mit gemeinsam genutztem Code vorhanden sind. Die Windows 10 universelle Windows-Plattform (UWP) ist es möglich sein, nur ein Projekt, das auf allen Geräten, einschließlich Desktop- und Laptop-Computern Windows 10, Geräten wie Tablets, Smartphones, VR-Geräte und so weiter ausgeführt werden kann.
 
 Wir beginnen mit den Grundlagen:
 
@@ -71,7 +71,7 @@ Wir beginnen mit den Grundlagen:
 
 -   Kennenlernen der erstellten Projekte und Dateien
 
--   Kennenlernen die Erweiterungen in für VisualC++-komponentenerweiterungen (C++ / CX), und deren Verwendung.
+-   Kennenlernen der Erweiterungen in für VisualC++-komponentenerweiterungen (C++ / CX), und deren Verwendung.
 
 **Erstellen einer Lösung in Visual Studio**
 
@@ -119,7 +119,7 @@ Wenn Sie den Code in den Dateien „App.Xaml.h“ und „App.Xaml.cpp“ im frei
 
 **Referenzklassen**
 
-Nahezu alle Windows-Runtime-Klassen, zu denen alle Typen in der Windows-API zählen (XAML-Steuerelemente, die Seiten in Ihrer App, die App-Klasse selbst, alle Geräte- und Netzwerkobjekte sowie alle Containertypen), werden als **ref class** deklariert. (Einige Windows-Typen werden als **value class** oder **value struct** deklariert.) Eine Referenzklasse (ref class) kann von beliebigen Programmiersprachen verwendet werden. In C++ / CX unterliegt die Lebensdauer dieser Typen durch automatische verweiszählung einführt (nicht der Garbagecollection), damit Sie diese Objekte nie explizit löschen. Sie können auch Ihre eigenen Referenzklassen erstellen.
+Nahezu alle Windows-Runtime-Klassen, zu denen alle Typen in der Windows-API zählen (XAML-Steuerelemente, die Seiten in Ihrer App, die App-Klasse selbst, alle Geräte- und Netzwerkobjekte sowie alle Containertypen), werden als **ref class** deklariert. (Einige Windows-Typen werden als **value class** oder **value struct** deklariert.) Eine Referenzklasse (ref class) kann von beliebigen Programmiersprachen verwendet werden. In C++ / CX die Lebensdauer dieser Typen unterliegt automatische verweiszählung einführt (nicht der Garbagecollection), sodass Sie diese Objekte nie explizit löschen. Sie können auch Ihre eigenen Referenzklassen erstellen.
 
 ```cpp
 namespace HelloWorld
@@ -309,7 +309,7 @@ Das Erscheinungsbild Ihrer App lässt sich ganz einfach anpassen. Standardmäßi
 
 Welches Design sollten Sie verwenden? Das bleibt ganz Ihnen überlassen. Bei Apps, die hauptsächlich Bilder oder Videos anzeigen, sollten Sie das dunkle Design verwenden, während sich bei Apps mit viel Text die Verwendung des hellen Designs empfiehlt. Falls Sie ein benutzerdefiniertes Farbschema verwenden, wählen Sie das Design, das am besten zum Erscheinungsbild Ihrer App passt. Im verbleibenden Teil dieses Lernprogramms verwenden wir in Screenshots das helle Design.
 
-**Hinweis:** das Design wird angewendet, wenn die app gestartet und kann nicht geändert werden, während die app ausgeführt wird.
+**Hinweis:** das Design wird angewendet, wenn die app gestartet wird, und kann nicht geändert werden, während die app ausgeführt wird.
 
 ### <a name="using-system-styles"></a>Verwenden von Systemstilen
 
@@ -336,7 +336,7 @@ Momentan ist der Text in der Windows-App ziemlich klein und nur schwer lesbar. L
 
 7.  Wiederholen Sie den Vorgang, um den Schriftgrad festzulegen und **BaseTextBlockStyle** dem [**TextBlock**](https://msdn.microsoft.com/library/windows/apps/BR209652)-Element `greetingOutput` zuzuweisen.
 
-    **Tipp:** es gibt, zwar keinen Text in diesem [**TextBlock-Element**](https://msdn.microsoft.com/library/windows/apps/BR209652), wenn Sie den Mauszeiger über die XAML-Entwurfsoberfläche bewegen eine blaue Umrandung seine Position zeigt, in denen es ist, damit Sie ihn auswählen können.  
+    **Tipp:** es gibt, zwar kein Text in diesem [**TextBlock-Element**](https://msdn.microsoft.com/library/windows/apps/BR209652), wenn Sie den Mauszeiger über die XAML-Entwurfsoberfläche bewegen eine blaue Umrandung seine Position zeigt, auf denen es, damit Sie ihn auswählen können.  
 
     Ihr XAML-Code sieht nun so aus:
 

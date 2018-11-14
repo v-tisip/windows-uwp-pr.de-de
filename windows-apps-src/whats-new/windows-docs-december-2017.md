@@ -7,12 +7,12 @@ ms.author: quradic
 ms.date: 12/14/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 112e9f60e38bc5a665d9011f35b9e92189f15f80
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 394dbdb5ae9065aa9424a470ad2e9295ddd63c8d
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6460903"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6671966"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a>Neuigkeiten in der Windows-Entwicklerdokumentation im Dezember 2017
 
@@ -48,7 +48,7 @@ Fügen Sie auf Geräten, die Interaktionen per Fingereingabe unterstützen, die 
 
 Das „Microsoft Collaborate”-Portal bietet Tools und Dienste, um die Zusammenarbeit der Entwickler im Microsoft-Ökosystem durch die Freigabe von Engineering Systems-Arbeitsaufgaben (Fehler, Features usw.) und die Verteilung von Inhalten (Builds, Dokumente, Spezifikationen). [Weitere Informationen](https://docs.microsoft.com/en-us/collaborate).
 
-![„Microsoft Collaborate” im Dev Center-Dashboard](images/microsoft_collaborate_screenshot.PNG)
+![Microsoft im Partner Center zusammenarbeiten](images/microsoft_collaborate_screenshot.PNG)
 
 ### <a name="package-desktop-applications-with-uwp-projects"></a>Paket-Desktopanwendungen mit UWP-Projekten
 

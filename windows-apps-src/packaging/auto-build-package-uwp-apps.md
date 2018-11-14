@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 78cb7240fd11cee77556078f10500ca1a2087f0e
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.openlocfilehash: 775e780be823b6e7b80eda9f488d69fe4fc29edf
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/09/2018
-ms.locfileid: "6194844"
+ms.locfileid: "6258183"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Einrichten automatisierter Builds für UWP-Apps
 
@@ -292,7 +292,7 @@ Um Pakete für die Übermittlung an den Store zu generieren, verknüpfen Sie die
 
 Der Assistenten für die Store-Verknüpfung generiert eine Datei mit dem Namen „Package.StoreAssociation.xml“, die die Informationen zur Store-Verknüpfung enthält. Wenn Sie den Quellcode in einem öffentlichen Repository wie GitHub speichern, enthält diese Datei alle reservierten Namen der App für dieses Konto. Sie können diese Datei vor der Veröffentlichung ausschließen oder löschen.
 
-Wenn Sie keinen Zugriff auf das Dev Center-Konto haben, mit dem die App veröffentlicht wurde, können Sie die Anweisungen in diesem Dokument befolgen: [Eine App für einen Drittanbieter erstellen? So verpacken Sie Ihre Store-App](https://blogs.windows.com/buildingapps/2015/12/15/building-an-app-for-a-3rd-party-how-to-package-their-store-app/#e35YzR5aRG6uaBqK.97).
+Wenn Sie keinen Zugriff auf das Partner Center-Konto haben, die zum Veröffentlichen der app verwendet wurde, können Sie die Anweisungen in diesem Dokument befolgen: [Erstellen einer app für eine 3rd Party? Wie Sie ihre Store-app zu verpacken](https://blogs.windows.com/buildingapps/2015/12/15/building-an-app-for-a-3rd-party-how-to-package-their-store-app/#e35YzR5aRG6uaBqK.97).
 
 Anschließend müssen Sie sicherstellen, dass der Buildschritt den folgenden Parameter enthält:
 
@@ -306,11 +306,11 @@ Dadurch wird eine Upload-Datei generiert, die an den Store übermittelt werden k
 
 Verwenden Sie für die Integration in die Store-API die Visual Studio Team Services-Erweiterung für den Microsoft Store, und senden Sie das App-Paket an den Store.
 
-Sie müssen Ihr Dev Center-Konto mit Azure Active Directory (AD) verbinden und dann eine App in AD erstellen, um die Anforderungen zu authentifizieren. Befolgen Sie dazu die Anweisungen auf der Seite der Erweiterung.
+Sie müssen Ihr Partner Center-Konto mit Azure Active Directory (AD) verbinden, und erstellen Sie eine app in die Anzeige der Anforderungen zu authentifizieren. Befolgen Sie dazu die Anweisungen auf der Seite der Erweiterung.
 
 Nachdem Sie die Erweiterung konfiguriert haben, können Sie die Buildaufgabe hinzufügen und mit der app-ID und den Speicherort der Uploaddatei konfigurieren.
 
-![Konfigurieren im Dev Center](images/building-screen17.png)
+![Konfigurieren Sie das Partnercenter](images/building-screen17.png)
 
 Der Wert des `Package File`-Parameters lautet dabei:
 

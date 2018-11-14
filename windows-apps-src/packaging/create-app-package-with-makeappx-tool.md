@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows10, uwp, verpackung
 ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d5cc0d73975b591d7584b1ac606aa3323cd6da3
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.openlocfilehash: 86472e4b3f9c7390eb7e6236de088ba2649901d1
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6206925"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6268458"
 ---
 # <a name="create-an-app-package-with-the-makeappxexe-tool"></a>Erstellen eines App-Pakets mit dem Tool „MakeAppx.exe“
 
@@ -23,7 +23,7 @@ ms.locfileid: "6206925"
 > [!IMPORTANT] 
 > Wenn Sie Visual Studio zum Entwickeln der App verwendet haben, wird empfohlen, dass Sie den Visual Studio-Assistenten zum Erstellen des App-Pakets verwenden. Weitere Informationen finden Sie unter [Verpacken einer UWP-App mit Visual Studio](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
 
-Beachten Sie, dass **MakeAppx.exe** keine APPXUPLOAD-Datei erstellt. Die appxupload-Datei wird als Teil des Visual Studio-verpackungsvorgangs erstellt und enthält zwei weitere Dateien: .msix oder AppX- und appxsym. Die APPXSYM-Datei ist eine komprimierte PDB-Datei und enthält öffentliche Symbole Ihrer App, die für [Absturzanalysen](https://blogs.windows.com/buildingapps/2015/07/13/crash-analysis-in-the-unified-dev-center/) im Windows Dev Center verwendet wird. Eine reguläre APPX-Datei kann ebenfalls übermittelt werden. In diesem Fall sind jedoch keine Absturzanalysen oder Informationen zum Debuggen verfügbar. Weitere Informationen zum Übermitteln von Paketen an den Store finden Sie unter [Hochladen von App-Paketen](https://msdn.microsoft.com/windows/uwp/publish/upload-app-packages). 
+Beachten Sie, dass **MakeAppx.exe** keine APPXUPLOAD-Datei erstellt. Die appxupload-Datei wird als Teil des Visual Studio-verpackungsvorgangs erstellt und enthält zwei weitere Dateien: .msix oder AppX- und appxsym. Die appxsym-Datei ist eine komprimierte PDB-Datei enthält öffentliche Symbole Ihrer App für den [Absturz Analytics](../publish/health-report.md) im Partner Center verwendet. Eine reguläre APPX-Datei kann ebenfalls übermittelt werden. In diesem Fall sind jedoch keine Absturzanalysen oder Informationen zum Debuggen verfügbar. Weitere Informationen zum Übermitteln von Paketen an den Store finden Sie unter [Hochladen von App-Paketen](../publish/upload-app-packages.md). 
 
  Updates für das Tool in der neuesten Version von Windows 10 haben keinen Einfluss auf die Nutzung der AppX-Paket. Sie können auch weiterhin mit diesem Tool mit AppX-Paketen oder verwenden Sie das Tool mit Unterstützung für .msix Pakete wie unten beschrieben.
 

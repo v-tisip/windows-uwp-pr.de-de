@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows10, verpackung, paketlayout, bestandspaket
 ms.localizationpriority: medium
 ms.openlocfilehash: efdf560158e2b57ae9e05ecc31d49c7cf981d8c0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025552"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6254366"
 ---
 # <a name="developing-with-asset-packages-and-package-folding"></a>Entwickeln mit Bestandspaketen und Paketfaltung 
 
@@ -27,7 +27,7 @@ Wenn Sie die Verwendung von Bestandspaketen für Ihre App in Erwägung ziehen od
 
 Um zu verstehen, warum die Paketfaltung Ihren Entwicklungsprozesses nicht beeinflusst, müssen wir zunächst etwas weiter ausholen, um zu verstehen, was geschieht, wenn Sie Ihre App in mehrere Pakete (entweder mit Bestandspaketen oder Ressourcenpaketen) aufteilen. 
 
-Wenn Sie einige Dateien Ihrer App in andere Pakete (die keine Architekturpakete sind) aufteilen, können Sie nicht direkt von dem Speicherort auf diese Dateien zugreifen, wo Ihr Code ausgeführt wird. Der Grund hierfür ist, dass diese Pakete alle in verschiedenen Verzeichnissen als das Architekturpaket installiert sind. Z. B. wenn ein Spiel haben, und wird in Ihrem Spiel lokalisiert Französisch und Deutsch und Sie für x X86- und X64 Maschinen erstellt, dann sollten Sie diese app-Paketdateien innerhalb der app-Bündel Ihres Spiels haben:
+Wenn Sie einige Dateien Ihrer App in andere Pakete (die keine Architekturpakete sind) aufteilen, können Sie nicht direkt von dem Speicherort auf diese Dateien zugreifen, wo Ihr Code ausgeführt wird. Der Grund hierfür ist, dass diese Pakete alle in verschiedenen Verzeichnissen als das Architekturpaket installiert sind. Z. B. wenn ein Spiel haben, und das Spiel wird in lokalisiert Französisch und Deutsch und Sie für x X86- und X64 Maschinen erstellt, dann sollten Sie diese app-Paketdateien innerhalb der app-Bündel Ihres Spiels haben:
 
 -   MyGame_1.0_x86.appx
 -   MyGame_1.0_x64.appx
@@ -45,9 +45,9 @@ C:\Program Files\WindowsApps\
 `-- …(other apps)
 ```
 
-Beachten Sie, dass das app-Paket-Dateien, die nicht für den Benutzer anwendbar sind nicht als (die X86- und deutschen Pakete) installiert. 
+Beachten Sie, dass die app-Paket-Dateien, die nicht für den Benutzer anwendbar sind nicht als (die X86- und deutschen Pakete) installiert. 
 
-Für diesen Benutzer befindet sich die ausführbare Hauptdatei Ihres Spiels innerhalb des **MyGame_1.0_x64**-Ordners und wird von dort aus ausgeführt. In der Regel hat diese Datei nur Zugriff auf die Dateien in diesem Ordner. Für den Zugriff auf die Dateien im **MyGame_1.0_language-fr**-Ordner müssen Sie entweder die MRT-APIs oder die PackageManager-APIs verwenden. Die MRT-APIs automatisch die am besten geeignete Datei aus den installierten Sprachen auswählen können, finden Sie weitere Informationen zu MRT-APIs unter [Windows.ApplicationModel.Resources.Core](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core). Alternativ finden Sie den Installationsort des französischen Sprachpakets mithilfe der [PackageManager-Klasse](https://docs.microsoft.com/uwp/api/Windows.Management.Deployment.PackageManager). Sie sollten niemals den Installationsort der Pakete Ihrer App annehmen, da sich dies ändern und zwischen Benutzern variieren kann. 
+Für diesen Benutzer befindet sich die ausführbare Hauptdatei Ihres Spiels innerhalb des **MyGame_1.0_x64**-Ordners und wird von dort aus ausgeführt. In der Regel hat diese Datei nur Zugriff auf die Dateien in diesem Ordner. Für den Zugriff auf die Dateien im **MyGame_1.0_language-fr**-Ordner müssen Sie entweder die MRT-APIs oder die PackageManager-APIs verwenden. Die MRT-APIs automatisch die am besten geeignete Datei aus den installierten Sprachen auswählen können, finden Sie weitere Informationen zu MRT-APIs zur [Windows.ApplicationModel.Resources.Core](https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core). Alternativ finden Sie den Installationsort des französischen Sprachpakets mithilfe der [PackageManager-Klasse](https://docs.microsoft.com/uwp/api/Windows.Management.Deployment.PackageManager). Sie sollten niemals den Installationsort der Pakete Ihrer App annehmen, da sich dies ändern und zwischen Benutzern variieren kann. 
 
 ## <a name="asset-package-folding"></a>Bestandspaketfaltung
 

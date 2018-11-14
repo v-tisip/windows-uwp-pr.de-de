@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projektion, erstellen, ereignis
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c4d36fa22953bc4745b631303aae62985a5aa05
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6444597"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6671614"
 ---
 # <a name="author-events-in-cwinrt"></a>Erstellen von Ereignissen mit C++/WinRT
 
@@ -148,7 +148,7 @@ Jedes Mal, wenn Sie auf das Fenster klicken, ziehen Sie 1 vom Kontostand ab. Um 
 
 ## <a name="parameterized-delegates-and-simple-signals-across-an-abi"></a>Parametrisierten Delegaten und einfache Signale, über eine ABI
 
-Wenn das Ereignis in einer binären Anwendungsschnittstelle (ABI) verfügbar sein muss&mdash;z. B. zwischen einer Komponente und bindend verwendenden&mdash;und dann das Ereignis einen Windows-Runtime-Delegattyp verwenden muss. Im obigen Beispiel verwendet die [**Windows::Foundation::EventHandler\ < T\ >**](/uwp/api/windows.foundation.eventhandler) Windows-Runtime-Delegattyp. [**TypedEventHandler\ < TSender, TResult\ >**](/uwp/api/windows.foundation.eventhandler) ist ein weiteres Beispiel für ein Windows-Runtime-Delegattyp.
+Wenn das Ereignis in einer binären Anwendungsschnittstelle (ABI) verfügbar sein muss&mdash;z. B. zwischen einer Komponente und bindend verwendenden&mdash;und dann das Ereignis einen Windows-Runtime-Delegattyp verwenden muss. Das obige Beispiel verwendet die [**Windows::Foundation::EventHandler\<T\ >**](/uwp/api/windows.foundation.eventhandler) Windows-Runtime-Delegattyp. [**TypedEventHandler\<TSender, TResult\ >**](/uwp/api/windows.foundation.eventhandler) ist ein weiteres Beispiel für ein Windows-Runtime-Delegattyp.
 
 Die Typparameter für diese zwei Delegattypen müssen die ABI überschreiten, damit die Typparameter zu Windows-Runtime-Typen sein müssen. Erst- und Drittanbieter-Laufzeitklassen sowie primitive Typen wie z. B. Zahlen und Zeichenfolgen enthält. Der Compiler hilft Ihnen mit dem Fehler "*WinRT-Typ*", wenn Sie diese Einschränkung vergessen.
 

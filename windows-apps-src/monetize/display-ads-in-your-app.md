@@ -9,15 +9,15 @@ ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, banner, Anzeigensteuerelement,Interstitial
 ms.localizationpriority: medium
 ms.openlocfilehash: 7acf2424a7d2fee322ba799ec670f0576b33a208
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044713"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6673485"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Zeigt Werbung mithilfe der Microsoft Advertising-SDK in Ihrer App an
 
-Erhöhen Sie Ihre Umsatzchancen, indem Sie mithilfe des Microsoft Advertising-SDKs Anzeigen in Ihre universelle Windows-Plattform-App für Windows 10 einfügen. Unsere anzeigen-monetarisierungsplattform bietet eine Vielzahl von Ad-Formate, die sich nahtlos in Ihre apps und unterstützt die anzeigenvermittlung mit unterschiedlichen beliebten Anzeigennetzwerken integriert werden kann. Unsere Plattform ist kompatibel mit der OpenRTB, große 2.x, MRAID 2 und 3 VPAID Standards und ist kompatibel mit MOAT und IAS. 
+Erhöhen Sie Ihre Umsatzchancen, indem Sie mithilfe des Microsoft Advertising-SDKs Anzeigen in Ihre universelle Windows-Plattform-App für Windows 10 einfügen. Unsere anzeigen-monetarisierungsplattform bietet eine Vielzahl von Ad-Formate, die problemlos in Ihre apps und unterstützt die anzeigenvermittlung mit unterschiedlichen beliebten Anzeigennetzwerken integriert werden kann. Unsere Plattform ist kompatibel mit der OpenRTB, große 2.x, MRAID 2 und 3 VPAID Standards und ist kompatibel mit MOAT und IAS. 
 
 <br/>
 
@@ -92,7 +92,7 @@ Anweisungen und Codebeispiele finden Sie in [diesem Artikel](native-ads.md).
 
 ## <a name="step-3-create-an-ad-unit-and-configure-mediation"></a>Schritt 3: Erstellen einer Anzeigeneinheit und Konfigurieren der Anzeigenvermittlung
 
-Nachdem Sie Ihre app getestet haben und Sie bereit sind, die sie an den Store übermitteln, erstellen Sie eine anzeigeneinheit auf der Seite [In-app-Werbung](../publish/in-app-ads.md) im Partner Center. Aktualisieren Sie anschließend Ihren App-Code, um diese Anzeigeneinheit zu verwenden, damit Ihre App Live-Anzeigen empfängt. Weitere Informationen finden Sie unter [Einrichten von Anzeigeneinheiten in der App](set-up-ad-units-in-your-app.md#live-ad-units).
+Nachdem Sie Ihre app getestet und Sie sie an den Store übermitteln, erstellen Sie eine anzeigeneinheit auf der Seite [In-app-Werbung](../publish/in-app-ads.md) im Partner Center. Aktualisieren Sie anschließend Ihren App-Code, um diese Anzeigeneinheit zu verwenden, damit Ihre App Live-Anzeigen empfängt. Weitere Informationen finden Sie unter [Einrichten von Anzeigeneinheiten in der App](set-up-ad-units-in-your-app.md#live-ad-units).
 
 Standardmäßig zeigt Ihre App Werbung der Microsoft Netzwerke für kostenpflichtige Werbeanzeigen an. Zur Maximierung Ihres Anzeigenumsatzes können Sie für Ihre Anzeigeneinheit die [Anzeigenvermittlung](ad-mediation-service.md) aktivieren, um kostenpflichtige Anzeigen von weiteren Anzeigennetzwerken anzuzeigen (z. B. Taboola und Smaato). Sie können Ihrer App-Werbung auch steigern, indem Sie Anzeigen aus Microsoft App-Werbekampagnen darstellen.
 

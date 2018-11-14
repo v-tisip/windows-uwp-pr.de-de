@@ -9,19 +9,19 @@ ms.topic: article
 keywords: Windows10, UWP, IAP, In-App-Kauf, In-App-Produkt, IAP-Übermittlung
 ms.localizationpriority: medium
 ms.openlocfilehash: 28fd2e104de12cc297ce5d28ddd18b0ce550a5d0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6028941"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6203526"
 ---
 # <a name="add-on-submissions"></a>Add-On-Übermittlungen
 
-Add-Ons (auch als In-App-Produkte bezeichnet) sind ergänzende Elemente für Ihre App, die von Kunden erworben werden können. Ein Add-on kann ein lustiges sein, die neue Funktion, eine neue gamelevel oder etwas anderes vorstellen Benutzer Spaß daran haben. Add-Ons sind nicht nur eine gute Möglichkeit, um Geld zu verdienen, sondern fördern zudem die Kundeninteraktion und -bindung.
+Add-Ons (auch als In-App-Produkte bezeichnet) sind ergänzende Elemente für Ihre App, die von Kunden erworben werden können. Ein Add-on kann ein lustiges sein, die neues Feature, ein neues gamelevel oder etwas anderes vorstellen Benutzer Spaß daran haben. Add-Ons sind nicht nur eine gute Möglichkeit, um Geld zu verdienen, sondern fördern zudem die Kundeninteraktion und -bindung.
 
-Add-Ons werden über das [Partner Center](https://partner.microsoft.com/dashboard)veröffentlicht und müssen Sie ein aktives [Entwicklerkonto](http://go.microsoft.com/fwlink/p/?LinkId=615100)verfügen. Sie müssen die [Add-Ons außerdem im Code Ihrer App aktivieren](../monetize/in-app-purchases-and-trials.md).
+Add-Ons werden über das [Partner Center](https://partner.microsoft.com/dashboard)veröffentlicht und erfordern ein aktives [Entwicklerkonto](http://go.microsoft.com/fwlink/p/?LinkId=615100)verfügen. Sie müssen die [Add-Ons außerdem im Code Ihrer App aktivieren](../monetize/in-app-purchases-and-trials.md).
 
-Der erste Schritt bei der Add-on-Übermittlungsprozesses ist die Erstellung des Add-Ons im Partner Center durch [dessen Produkttyp und Produkt-ID definieren](set-your-add-on-product-id.md). Danach müssen Sie eine Übermittlung erstellen, damit Ihr Add-on über den Microsoft Store erworben werden kann. Sie können ein Add-On gleichzeitig mit [Ihrer App einreichen](app-submissions.md) oder unabhängig vorgehen. Außerdem können Sie [Updates](#updating-an-add-on-after-publication) für Add-Ons ausführen, nachdem die App im Store eingetragen wurde, ohne dass die App erneut übermittelt werden muss.
+Der erste Schritt bei der Add-on-Übermittlung ist für das Add-on im Partner Center durch [dessen Produkttyp und Produkt-ID](set-your-add-on-product-id.md)zu erstellen. Danach müssen Sie eine Übermittlung erstellen, damit Ihr Add-on über den Microsoft Store erworben werden kann. Sie können ein Add-On gleichzeitig mit [Ihrer App einreichen](app-submissions.md) oder unabhängig vorgehen. Außerdem können Sie [Updates](#updating-an-add-on-after-publication) für Add-Ons ausführen, nachdem die App im Store eingetragen wurde, ohne dass die App erneut übermittelt werden muss.
 
 > [!NOTE]
 > In diesem Abschnitt der Dokumentation wird beschrieben, wie Add-ons im Partner Center zu übermitteln. Alternativ dazu können Sie auch die [Microsoft Store-Übermittlungs-API](../monetize/create-and-manage-submissions-using-windows-store-services.md) verwenden, um Add-On-Übermittlungen zu automatisieren.
@@ -83,11 +83,11 @@ Nachdem Sie diese Informationen eingegeben haben, klicken Sie auf **An Store ein
 
 ## <a name="updating-an-add-on-after-publication"></a>Aktualisieren eines Add-Ons nach der Veröffentlichung
 
-Sie können ein veröffentlichtes Add-On jederzeit ändern. Add-On-Änderungen werden eingereicht und unabhängig von Ihrer app veröffentlicht werden, sodass Sie in der Regel nicht die gesamte app aktualisieren, um ein Add-on z. B. zum Aktualisieren des Preises oder der Beschreibung ändern müssen.
+Sie können ein veröffentlichtes Add-On jederzeit ändern. Add-On-Änderungen werden eingereicht und veröffentlicht unabhängig von Ihrer app daher in der Regel Sie nicht die gesamte app aktualisieren, um ein Add-on wie z. B. das Aktualisieren des Preises oder die Beschreibung ändern müssen.
 
-Übermitteln von Updates, wechseln Sie auf die Add-on Seite im Partner Center und auf **Aktualisieren**. Dadurch entsteht eine neue Übermittlung für das Add-on, wobei die Informationen aus der vorherigen Übermittlung als Ausgangspunkt. Ändern Sie wie folgt, und klicken Sie dann auf **an den Store übermitteln**.
+Übermitteln von Updates, wechseln zu dem Hinzufügen zur Seite des im Partner Center, und klicken Sie auf **Aktualisieren**. Dadurch entsteht eine neue Übermittlung für das Add-on, wobei die Informationen aus der vorherigen Übermittlung als Ausgangspunkt. Ändern Sie wie, und klicken Sie dann auf **an den Store übermitteln**.
 
-Wenn Sie ein zuvor angebotenes Add-On entfernen möchten, können Sie dies tun, indem Sie eine neue Übermittlung erstellen und die Option [Verteilung und Sichtbarkeit](set-add-on-pricing-and-availability.md) unter **Im Store ausgeblendet** in **Beenden des Erwerbs**. Achten Sie darauf, dass Sie den Code Ihrer app zu aktualisieren, sobald benötigt, um auch Verweise auf das Add-on zu entfernen (insbesondere dann, wenn Ihre app zuvor veröffentlichten frühere Versionen von Windows 8.1 unterstützt diese sichtbarkeitseinstellung gilt nicht für diese Kunden).
+Wenn Sie ein zuvor angebotenes Add-On entfernen möchten, können Sie dies tun, indem Sie eine neue Übermittlung erstellen und die Option [Verteilung und Sichtbarkeit](set-add-on-pricing-and-availability.md) unter **Im Store ausgeblendet** in **Beenden des Erwerbs**. Achten Sie darauf, um im Code Ihrer app zu aktualisieren, um auch Verweise auf das Add-on zu entfernen (insbesondere dann, wenn Ihre app zuvor veröffentlichten frühere Versionen von Windows 8.1 unterstützt diese sichtbarkeitseinstellung gilt nicht für diese Kunden).
 
 > [!IMPORTANT]
-> Ist Ihre app zuvor veröffentlichten verfügbar für Kunden unter Windows 8.x, müssen zum Erstellen und veröffentlichen eine neue app-Übermittlung, um die Add-on-Updates für diese Kunden sichtbar zu machen. Auch wenn Sie neue Add-Ons einer App für Windows 8.x hinzufügen, nachdem die App veröffentlicht wurde, müssen Sie den App-Code aktualisieren, um auf diese Add-Ons zu verweisen, und die App dann erneut übermitteln. Andernfalls sind die neuen Add-Ons nicht für Kunden unter Windows 8.x sichtbar.
+> Ist Ihre app zuvor veröffentlichten verfügbar für Kunden unter Windows 8.x, Sie müssen zum Erstellen und veröffentlichen eine neue app-Übermittlung, um die Add-on-Updates für diese Kunden sichtbar zu machen. Auch wenn Sie neue Add-Ons einer App für Windows 8.x hinzufügen, nachdem die App veröffentlicht wurde, müssen Sie den App-Code aktualisieren, um auf diese Add-Ons zu verweisen, und die App dann erneut übermitteln. Andernfalls sind die neuen Add-Ons nicht für Kunden unter Windows 8.x sichtbar.

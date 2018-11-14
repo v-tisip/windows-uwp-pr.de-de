@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.assetid: fb4249b2-f93c-4993-9e4d-57a62c04be66
 ms.localizationpriority: medium
 ms.openlocfilehash: 0183e19135758f73dfea9b63535437ff9b66011a
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6036440"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6209921"
 ---
 # <a name="creating-a-3d-javascript-game-using-threejs"></a>Erstellen eines 3D-JavaScript-Spiels mit three.js
 
@@ -30,7 +30,7 @@ Möchten Sie einen Blick auf die App werfen, die wir erstellen werden, bevor Sie
 </iframe>
 
 > [!NOTE] 
-> Dies ist kein vollständiges Spiel; Dieses Skript dient zu zeigen, wie mit JavaScript und einer Drittanbieterbibliothek um eine app im Microsoft Store veröffentlichen möchten bereit zu machen.
+> Dies ist kein vollständiges Spiel; Dieses Skript dient veranschaulichen die Verwendung von JavaScript und einer Drittanbieterbibliothek eine app im Microsoft Store veröffentlicht werden kann.
 
 
 ## <a name="requirements"></a>Anforderungen
@@ -642,7 +642,7 @@ Am Ende werden die aktualisierten `x`- und `y`-Werte als Übersetzungen auf die 
 
 Herzlichen Glückwunsch! Sie haben nun eine vom Spieler gesteuerte bewegbare Kamera, mit der sich der Spieler umsehen kann. Wir können immer noch direkt durch die Wände laufen, darum kümmern wir uns jedoch etwas später. Als Nächstes fügen wir unseren Dinosaurier hinzu.
 
-<iframe height='300' scrolling='no' title='Bewegen' src='//codepen.io/MicrosoftEdgeDocumentation/embed/qrbKZg/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Finden Sie unter den Stift <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qrbKZg/'>bewegen</a> von Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) auf <a href='https://codepen.io'>CodePen</a>.
+<iframe height='300' scrolling='no' title='Verschieben' src='//codepen.io/MicrosoftEdgeDocumentation/embed/qrbKZg/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>Finden Sie unter den Stift <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qrbKZg/'>bewegen</a> von Microsoft Edge Docs (<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>) auf <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 > [!NOTE]
