@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: adc74410a5012dbc59cc995e80ee5fa729f0176f
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6036800"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6464457"
 ---
 # <a name="intro-to-secure-windows-app-development"></a>Einführung in die Entwicklung sicherer Windows-Apps
 
@@ -288,7 +288,7 @@ Daten die von einem Gerät empfangen werden, bezeichnen wir als „At-Rest-Daten
 
 Bisher war in Windows keine App-Definition vorgesehen. Meist wurde sie als ausführbare Datei (.exe) bezeichnet und umfasste niemals Faktoren wie Installation, Zustandsspeicherung, Ausführungslänge, Versionsverwaltung, Betriebssystemintegration oder App-zu-App-Kommunikation. Das UWP-Modell verfügt über eine App-Modelldefinition, in der Installation, Laufzeitumgebung, Ressourcenverwaltung, Updates, Datenmodell und Deinstallation berücksichtigt werden.
 
-Windows 10-apps in einem Container, was bedeutet, dass sie standardmäßig eingeschränkte Berechtigungen haben (zusätzliche Berechtigungen können angefordert und vom Benutzer genehmigt) ausgeführt. Möchte eine App beispielsweise auf Dateien auf dem System zugreifen, muss eine Dateiauswahl aus dem Namespace [**Windows.Storage.Pickers**](https://msdn.microsoft.com/library/windows/apps/br207928) verwendet werden, damit der Benutzer eine Datei auswählen kann. (Es ist kein direkter Zugriff auf Dateien möglich.) Ein weiteres Beispiel: Wenn eine App auf Positionsdaten des Benutzers zugreifen möchte, müssen die Standortdienste des Geräts aktiviert werden. Der Benutzer wird beim Download informiert, dass diese App Zugriff auf die Position des Benutzers benötigt. Wenn die App erstmals auf den Standort des Benutzers zugreifen möchte, wird abermals die Zustimmung des Benutzers zum Zugriff auf diese Daten angefordert.
+Windows 10-apps, die in einem Container, was bedeutet, dass sie standardmäßig eingeschränkte Berechtigungen haben (zusätzliche Berechtigungen können angefordert und vom Benutzer genehmigt) ausgeführt werden. Möchte eine App beispielsweise auf Dateien auf dem System zugreifen, muss eine Dateiauswahl aus dem Namespace [**Windows.Storage.Pickers**](https://msdn.microsoft.com/library/windows/apps/br207928) verwendet werden, damit der Benutzer eine Datei auswählen kann. (Es ist kein direkter Zugriff auf Dateien möglich.) Ein weiteres Beispiel: Wenn eine App auf Positionsdaten des Benutzers zugreifen möchte, müssen die Standortdienste des Geräts aktiviert werden. Der Benutzer wird beim Download informiert, dass diese App Zugriff auf die Position des Benutzers benötigt. Wenn die App erstmals auf den Standort des Benutzers zugreifen möchte, wird abermals die Zustimmung des Benutzers zum Zugriff auf diese Daten angefordert.
 
 Beachten Sie, dass dieses App-Modell als „Gefängnis“ für Apps fungiert, diese also über keine Reichweite verfügen. Jedoch ist es keine „Burg“, die nicht von außen erreicht werden kann (Anwendungen mit Administratorrechten können die Apps noch erreichen). Mit Device Guard in Windows10 können Unternehmen/IT festlegen, welche (Win32-) Apps ausgeführt werden dürfen und diesen Zugriff weiter einschränken.
 

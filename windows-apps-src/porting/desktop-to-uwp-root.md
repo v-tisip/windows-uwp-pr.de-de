@@ -9,12 +9,12 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.assetid: 74373c24-f948-43bb-aa85-01e2e8e87162
 ms.localizationpriority: medium
-ms.openlocfilehash: 184cd246019bacc6419580cd47d2904374606031
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: b5ebbb628add9474412441ff507e7429f3bfd3ab
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6451694"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6661177"
 ---
 # <a name="package-desktop-applications-desktop-bridge"></a>Paket-desktopanwendungen (Desktop-Brücke)
 
@@ -90,7 +90,7 @@ Visual Studio erleichtert das Erstellen des Pakets ganz erheblich. Sie müssen n
 
 :heavy_check_mark: Ihr Paket mithilfe eines Assistenten generieren.
 
-: Heavy_check_mark: einfach eine Identität für Ihre Anwendung aus einem Namen, die Sie bereits im Windows Dev Center-Dashboard reserviert haben zuweisen.
+: Heavy_check_mark: einfach eine Identität für Ihre Anwendung aus einem, die Sie bereits im [Partner Center](https://partner.microsoft.com/dashboard)reservierten Namen zuweisen.
 
 Finden Sie unter [Package eine desktop-Anwendung mit Visual Studio](desktop-to-uwp-packaging-dot-net.md)
 

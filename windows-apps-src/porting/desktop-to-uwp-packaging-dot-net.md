@@ -9,16 +9,16 @@ ms.topic: article
 keywords: windows10, UWP
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f87b17ff4452417a06817ee5128d66af4b0e53b
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.openlocfilehash: cc71a58594c8794369bedd7f415518100892ff67
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6195106"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6667295"
 ---
 # <a name="package-a-desktop-application-by-using-visual-studio"></a>Verpacken Sie eine desktop-Anwendung mit Visual Studio
 
-Sie können Visual Studio verwenden, um ein Paket für Ihre Desktop-App zu generieren. Anschließend können Sie das Paket im Windows Store veröffentlichen oder es auf einem oder mehreren PCs querladen.
+Sie können Visual Studio verwenden, um ein Paket für Ihre Desktop-App zu generieren. Anschließend können Sie veröffentlichen, die auf den Microsoft Store oder querladen es auf einem oder mehreren PCs verpacken.
 
 Die aktuelle Version von Visual Studio bietet ein neue Version des Paketprojekts, um manuelle Schritte zu eliminieren, die beim Verpacken Ihrer App erforderlich sind. Sie müssen nur Ihr Paketprojekt hinzufügen, auf das Desktopprojekt verweisen und F5 drücken, um Ihre App zu debuggen. Es sind keine manuellen Optimierungsmethoden mehr erforderlich. Das neue optimierte Design ist eine enorme Verbesserung über die Benutzeroberfläche, die in der vorherigen Version von Visual Studio verfügbar war.
 
@@ -66,7 +66,7 @@ Lesen Sie dieses Handbuch, bevor Sie mit der paketerstellung für Ihre Anwendung
 
 7. Verwenden Sie den Assistenten [App-Pakete erstellen](../packaging/packaging-uwp-apps.md), um eine appxupload-Datei zu erstellen.
 
-   Sie können diese Datei direkt in den Store hochladen.
+   Sie können diese Datei direkt an den Store hochladen.
 
 **Video**
 

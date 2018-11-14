@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows10, UWP
 ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 ms.localizationpriority: medium
-ms.openlocfilehash: f964c8ac4a579fe4c360967c6bc9e613659a668b
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 7fc8c8e68e4b20498f84b4d20d84eca0dbfa7237
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6469793"
+ms.locfileid: "6650898"
 ---
 # <a name="package-a-desktop-application-using-the-desktop-app-converter"></a>Verpacken Sie eine desktop-Anwendung mit dem Desktop App Converter
 
@@ -122,7 +122,7 @@ Um Ihre App zu verpacken, führen Sie den ``DesktopAppConverter.exe``-Befehl im 
 Sie müssen den Paketnamen, Herausgeber und Version die Versionsnummer der Anwendung mithilfe von Parameter angeben.
 
 > [!NOTE]
-> Wenn Sie den Namen Ihrer App im Windows Store reserviert haben, können Sie die Namen des Pakets und des Herausgebers mit dem Windows Dev Center-Dashboard abrufen. Wenn Sie Ihre App auf andere Systeme querladen möchten, können Sie für diese Ihre eigenen Namen bereitstellen, sofern der von Ihnen gewählte Name des Herausgebers mit dem Namen des Zertifikats übereinstimmt, das Sie zum Signieren Ihrer App verwenden.
+> Wenn Sie den Namen Ihrer app im Microsoft Store reserviert haben, können Sie den Namen des Pakets und Herausgeber abrufen, mit [Partner Center](https://partner.microsoft.com/dashboard). Wenn Sie Ihre App auf andere Systeme querladen möchten, können Sie für diese Ihre eigenen Namen bereitstellen, sofern der von Ihnen gewählte Name des Herausgebers mit dem Namen des Zertifikats übereinstimmt, das Sie zum Signieren Ihrer App verwenden.
 
 ### <a name="a-quick-look-at-command-parameters"></a>Ein kurzer Überblick der Befehlsparameter
 
@@ -145,7 +145,7 @@ Nachfolgend finden Sie einige gängige Methoden zum Verpacken Ihrer App.
 * [Verpacken einer Anwendungs mit einer (.msi) Installer-Datei](#installer-conversion)
 * [Packen einer Anwendung, die eine ausführbare Setup-Datei hat](#setup-conversion)
 * [Packen einer Anwendung, die kein Installationsprogramm besitzt](#no-installer-conversion)
-* [Verpacken einer App, Signieren der App, und Vorbereiten der App für die Übermittlung an den Store.](#optional-parameters)
+* [Verpacken einer app, Signieren Sie die app und die Store-Übermittlungs-Vorbereitung](#optional-parameters)
 
 <a id="installer-conversion" />
 
@@ -158,7 +158,7 @@ DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.msi -Destination C:\O
 ```
 
 > [!IMPORTANT]
-> Hierbei sind zwei wichtige Dinge zu beachten. Stellen Sie zunächst sicher, dass sich das Installationsprogramm in einem unabhängigen Ordner befindet und nur mit dem Installer verbundene Dateien im selben Ordner sind. Der Konverter kopiert den Inhalt dieses Ordners in die isolierte Windows-Umgebung. <br> Stellen Sie als Zweites sicher, dass Sie auch den Parameter <i>-AppId</i> übergeben und nur das Zeichenfolgensuffix (nach dem Punkt-Trennzeichen) als Wert dieses Parameters verwenden, wenn das Dev Center Ihrem Paket eine Identität zuweist, die mit einer Zahl beginnt.  
+> Hierbei sind zwei wichtige Dinge zu beachten. Stellen Sie zunächst sicher, dass sich das Installationsprogramm in einem unabhängigen Ordner befindet und nur mit dem Installer verbundene Dateien im selben Ordner sind. Der Konverter kopiert den Inhalt dieses Ordners in die isolierte Windows-Umgebung. <br> Zweitens stellen Sie Partner Center eine Identität des Pakets zuweist, die mit einer Zahl beginnt, sicher, dass Sie auch im <i>- AppId</i> -Parameter übergeben und nur das zeichenfolgensuffix (nach dem Punkt-Trennzeichen) als Wert dieses Parameters verwenden.  
 
 **Video**
 
@@ -176,7 +176,7 @@ Weisen Sie auf die ausführbare Setup-Datei mithilfe der ``Installer``-Parameter
 DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.exe -InstallerArguments "/S" -Destination C:\Output\MyApp -PackageName "MyApp" -Publisher "CN=MyPublisher" -Version 0.0.0.1
 ```
 >[!IMPORTANT]
->Stellen Sie sicher, dass Sie auch den Parameter <i>-AppId</i> übergeben und nur das Zeichenfolgensuffix (nach dem Punkt-Trennzeichen) als Wert dieses Parameters verwenden, wenn das Dev Center Ihrem Paket eine Identität zuweist, die mit einer Zahl beginnt.
+>Wenn Partner Center eine Identität des Pakets, die mit einer Zahl beginnt zuweist, stellen Sie sicher, dass Sie auch im <i>- AppId</i> -Parameter übergeben und nur das zeichenfolgensuffix (nach dem Punkt-Trennzeichen) als Wert dieses Parameters verwenden.
 
 Die ``InstallerArguments``-Parameter ist optional. Da der Desktop-App-Konverter im unbeaufsichtigten Modus ausführen des Installers benötigt, müssen Sie jedoch verwendet werden, wenn Ihre Anwendung automatische Flags im Hintergrund ausführen benötigt werden. Die ``/S``-Flag ist eine sehr häufig verwendetes automatisches Kennzeichen. Das von Ihnen verwendete Kennzeichen unterscheidet sich jedoch möglicherweise je nach welcher Installer-Technologie Sie beim Erstellen der Setup-Datei verwendet haben.
 
@@ -197,7 +197,7 @@ DesktopAppConverter.exe -Installer C:\Installer\MyApp\ -AppExecutable MyApp.exe 
 ```
 
 >[!IMPORTANT]
->Stellen Sie sicher, dass Sie auch den Parameter <i>-AppId</i> übergeben und nur das Zeichenfolgensuffix (nach dem Punkt-Trennzeichen) als Wert dieses Parameters verwenden, wenn das Dev Center Ihrem Paket eine Identität zuweist, die mit einer Zahl beginnt.
+>Wenn Partner Center eine Identität des Pakets, die mit einer Zahl beginnt zuweist, stellen Sie sicher, dass Sie auch im <i>- AppId</i> -Parameter übergeben und nur das zeichenfolgensuffix (nach dem Punkt-Trennzeichen) als Wert dieses Parameters verwenden.
 
 **Video**
 
@@ -213,7 +213,7 @@ Dieses Beispiel ähnelt ersten es zeigt, wie Sie Ihre Anwendung für das lokale 
 DesktopAppConverter.exe -Installer C:\Installer\MyAppSetup.exe -InstallerArguments "/S" -Destination C:\Output\MyApp -PackageName "MyApp" -Publisher "CN=MyPublisher" -Version 0.0.0.1 -MakeAppx -Sign -Verbose -Verify
 ```
 >[!IMPORTANT]
->Stellen Sie sicher, dass Sie auch den Parameter <i>-AppId</i> übergeben und nur das Zeichenfolgensuffix (nach dem Punkt-Trennzeichen) als Wert dieses Parameters verwenden, wenn das Dev Center Ihrem Paket eine Identität zuweist, die mit einer Zahl beginnt.
+>Wenn Partner Center eine Identität des Pakets, die mit einer Zahl beginnt zuweist, stellen Sie sicher, dass Sie auch im <i>- AppId</i> -Parameter übergeben und nur das zeichenfolgensuffix (nach dem Punkt-Trennzeichen) als Wert dieses Parameters verwenden.
 
 Die ``Sign`` -Parameter generiert ein Zertifikat und dann Ihre Anwendung mit es signiert. Sie müssen das erstellte Zertifikat installieren, um Ihre App ausführen zu können. Weitere Informationen hierzu finden Sie unter dem Abschnitt [Ausführung der verpackten App](#run-app) dieses Handbuchs.
 
@@ -271,13 +271,13 @@ Sie können auch die gesamte Liste anzeigen, indem Sie den ``Get-Help``-Befehl i
 |-MakeAppx [&lt;SwitchParameter&gt;]  |Optional |Ein Switch, mit dem, falls vorhanden, dieses Skript zum Aufrufen von MakeAppx für die Ausgabe angewiesen wird. |
 |-MakeMSIX [&lt;SwitchParameter&gt;]  |Optional |Ein Switch, der wenn vorhanden, dieses Skript die Ausgabe als MSIX-Paket verpacken angewiesen. |
 |<a id="identity-params" /><strong>Paket-Identitätsparameter</strong>||
-|-PackageName &lt;String&gt; |Erforderlich |Der Name des Universellen Windows-App-Pakets. Stellen Sie sicher, dass Sie auch den Parameter <i>-AppId</i> übergeben und nur das Zeichenfolgensuffix (nach dem Punkt-Trennzeichen) als Wert dieses Parameters verwenden, wenn das Dev Center Ihrem Paket eine Identität zuweist, die mit einer Zahl beginnt. |
+|-PackageName &lt;String&gt; |Erforderlich |Der Name des Universellen Windows-App-Pakets. Wenn Partner Center eine Identität des Pakets, die mit einer Zahl beginnt zuweist, stellen Sie sicher, dass Sie auch im <i>- AppId</i> -Parameter übergeben und nur das zeichenfolgensuffix (nach dem Punkt-Trennzeichen) als Wert dieses Parameters verwenden. |
 |-Publisher &lt;String&gt; |Erforderlich |Der Herausgeber des Universellen Windows-App-Pakets |
 |-Version &lt;Version&gt; |Erforderlich |Die Versionsnummer für das Universelles Windows-App-Paket |
 |<a id="manifest-params" /><strong>Paketmanifest-Parameter</strong>||
 |-AppExecutable &lt;String&gt; |Optional |Der Name der ausführbaren Hauptdatei Ihrer Anwendung (z.B. „MyApp.exe“). Dieser Parameter ist bei der Konvertierung ohne Installationsprogramm erforderlich. |
 |-AppFileTypes &lt;String&gt;|Optional |Eine durch Trennzeichen getrennte Liste von Dateitypen, denen die Anwendung zugeordnet wird. Beispiel: -AppFileTypes „'.md', '.markdown'“.|
-|-AppId &lt;String&gt; |Optional |Legt einen Wert fest, auf den die Anwendungs-ID im Windows-App-Paket-Manifest festgelegt wird. Wird kein Wert angegeben, wird diese auf den für *PackageName* übergebenen Wert festgelegt. In vielen Fällen ist der *PackageName* ausreichend. Stellen Sie jedoch sicher, dass Sie auch den Parameter <i>-AppId</i> übergeben und nur das Zeichenfolgensuffix (nach dem Punkt-Trennzeichen) als Wert dieses Parameters verwenden, wenn das Dev Center Ihrem Paket eine Identität zuweist, die mit einer Zahl beginnt. |
+|-AppId &lt;String&gt; |Optional |Legt einen Wert fest, auf den die Anwendungs-ID im Windows-App-Paket-Manifest festgelegt wird. Wird kein Wert angegeben, wird diese auf den für *PackageName* übergebenen Wert festgelegt. In vielen Fällen ist der *PackageName* ausreichend. Wenn Partner Center eine Identität des Pakets, die mit einer Zahl beginnt zuweist, stellen Sie jedoch sicher, dass Sie auch im <i>- AppId</i> -Parameter übergeben und nur das zeichenfolgensuffix (nach dem Punkt-Trennzeichen) als Wert dieses Parameters verwenden. |
 |-AppDisplayName &lt;String&gt;  |Optional |Legt einen Wert fest, auf den der Anzeigename der Anwendung im Windows-App-Paket-Manifest festgelegt wird. Wird kein Wert angegeben, wird diese auf den für *PackageName* übergebenen Wert festgelegt. |
 |-AppDescription &lt;String&gt; |Optional |Legt einen Wert fest, auf den die Anwendungsbeschreibung im Windows-App-Paket-Manifest festgelegt wird. Wird kein Wert angegeben, wird diese auf den für *PackageName* übergebenen Wert festgelegt.|
 |-PackageDisplayName &lt;String&gt; |Optional |Legt einen Wert fest, auf den der Anzeigename des Pakets im Windows-App-Paket-Manifest festgelegt wird. Wird kein Wert angegeben, wird diese auf den für *PackageName* übergebenen Wert festgelegt. |
