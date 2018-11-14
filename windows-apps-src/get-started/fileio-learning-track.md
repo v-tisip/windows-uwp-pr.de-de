@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Erste Schritte, UWP, Windows10, Lernpfad, Dateien, Datei-E/A, Datei lesen, Datei schreiben, Datei erstellen, Text schreiben, Text lesen
 ms.localizationpriority: medium
 ms.openlocfilehash: 02ac4d3f157343182097e67dc8825dde940302c3
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6031252"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6253868"
 ---
 # <a name="work-with-files"></a>Arbeiten mit Dateien
 
@@ -62,7 +62,7 @@ Die **FileIO**-Klasse bietet eine bequeme Möglichkeit, um Text in die Datei zu 
 
 ## <a name="read-text-from-a-file"></a>Lesen von Text aus einer Datei
 
-Wie beim Schreiben einer Datei beginnt das Lesen einer Datei durch die Angabe, wo sich die Datei befindet. Wir verwenden den gleichen Speicherort wie im obigen Beispiel. Anschließend verwenden wir **FileIO** -Klasse, um den Inhalt zu lesen.
+Wie beim Schreiben einer Datei beginnt das Lesen einer Datei durch die Angabe, wo sich die Datei befindet. Wir verwenden den gleichen Speicherort wie im obigen Beispiel. Anschließend verwenden wir die **FileIO** -Klasse, um den Inhalt zu lesen.
 
 ```csharp
 Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;

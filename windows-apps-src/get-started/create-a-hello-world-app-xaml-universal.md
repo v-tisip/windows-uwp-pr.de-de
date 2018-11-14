@@ -2,22 +2,22 @@
 author: GrantMeStrength
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: Hier erfahren Sie, wie Sie eine „Hallo Welt“-App (XAML) erstellen
-description: Verwenden Sie Extensible Application Markup Language (XAML) mit c# eine einfache Hello, World-app erstellen, das auf die universelle Windows-Plattform (UWP) auf Windows 10.
+description: Verwenden Sie Extensible Application Markup Language (XAML) mit c#, um eine einfache Hello, World-app für die universelle Windows-Plattform (UWP) auf Windows 10 erstellen.
 ms.author: jken
 ms.date: 03/06/2017
 ms.topic: article
 keywords: Windows10, UWP, erste App, Hallo Welt
 ms.localizationpriority: medium
 ms.openlocfilehash: d6fa9fa708df376edc94d34ea14d8dad4aed10df
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6039242"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6192321"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Erstellen der App „Hello, world“ (XAML)
 
-Dieses Lernprogramm zeigt Ihnen, wie Sie XAML und c# zum Erstellen einer einfachen "Hello, World" app für die universelle Windows Plattform (UWP) auf Windows 10. Mit einem einzigen Projekt in Microsoft Visual Studio können Sie eine app erstellen, die auf jedem Windows 10-Gerät ausgeführt wird.
+In diesem Lernprogramm erfahren Sie, wie Sie XAML und c# zum Erstellen einer einfachen "Hello, World" app für die universelle Windows-Plattform (UWP) auf Windows 10. Mit einem einzigen Projekt in Microsoft Visual Studio können Sie eine app erstellen, die auf jedem Windows 10-Gerät ausgeführt wird.
 
 Hier erfahren Sie Folgendes:
 
@@ -48,7 +48,7 @@ Hier erfahren Sie Folgendes:
 
 2.  Wählen Sie aus dem Menü " **Datei** " **Neu > Projekt** um das Dialogfeld " *Neues Projekt* " zu öffnen.
 
-3.  Wählen Sie aus der Liste der Vorlagen auf der linken Seite, **installiert > Visual c# > Windows Universal** um eine Liste der UWP-Projektvorlagen anzuzeigen.
+3.  Wählen Sie aus der Liste der Vorlagen auf der linken Seite, **installiert > Visual C#-> Windows Universal** um eine Liste der UWP-Projektvorlagen anzuzeigen.
 
     (Wenn keine universellen Vorlagen angezeigt werden, fehlen möglicherweise die Komponenten zum Erstellen von UWP-Apps. Sie können die Installation wiederholen und UWP-Unterstützung hinzufügen, indem Sie im Dialogfeld *Neues Projekt* auf **Visual Studio-Installer öffnen** klicken. Siehe [Vorbereiten](get-set-up.md).)
 
@@ -98,8 +98,8 @@ Doppelklicken Sie zum Anzeigen und Bearbeiten einer Datei im Projekt im **Projek
 -   Enthält eine Liste von Abhängigkeiten, Ressourcen und Dateien, die Ihre app enthält.
 
 *Ein Satz mit Logobildern*
--   Assets/Square150x150Logo.scale-200.png und Wide310x150Logo.scale 200.png darstellen Ihrer app (entweder "Mittel" oder "Wide-Größe) im Menü" Start ".
--   Assets/Square44x44Logo.png stellt Ihre app in der app-Liste der Menü "Start", Taskleiste und Task-Manager dar.
+-   Assets/Square150x150Logo.scale-200.png und Wide310x150Logo.scale-200.png stellen Sie Ihre app (entweder "Mittel" oder "Wide-Größe) im Startmenü dar.
+-   Assets/Square44x44Logo.png stellt Ihre app in der app-Liste der Startmenü, Taskleiste und Task-Manager dar.
 -   „Assets/StoreLogo.png“ stellt Ihre App im Microsoft Store dar.
 -   „Assets/SplashScreen.scale-200.png“ ist der Begrüßungsbildschirm, der beim Start der App angezeigt wird.
 -   Assets/LockScreenLogo.scale-200.png kann verwendet werden, um die app auf dem Sperrbildschirm darzustellen, wenn das System gesperrt ist.

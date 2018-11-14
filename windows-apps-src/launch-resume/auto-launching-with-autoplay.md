@@ -9,17 +9,17 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 98c537ef3b2a5d002644cc554eae72b89a1799b0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6046863"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6194731"
 ---
 # <a name="span-iddevlaunchresumeauto-launchingwithautoplayspanauto-launching-with-autoplay"></a><span id="dev_launch_resume.auto-launching_with_autoplay"></span>Automatisches Starten mit automatischer Wiedergabe
 
 Sie können die **automatische Wiedergabe** verwenden, um Ihre App als Option bereitzustellen, wenn ein Benutzer ein Gerät an seinen PC anschließt. Hierzu zählen Nicht-Volumegeräte wie Kameras oder Media Player und Volumegeräte wie USB-Sticks, SD-Karten oder DVDs. Die **automatische Wiedergabe** bietet Ihnen auch die Möglichkeit, Ihre App als Option anzubieten, wenn Benutzer mithilfe von Näherung (Kopplung) Dateien zwischen zwei PCs freigeben.
 
-> **Hinweis:** Wenn Sie ein Gerätehersteller sind und Sie Ihre [Microsoft Store-Geräte-app](http://go.microsoft.com/fwlink/p/?LinkID=301381) als Handler für das Gerät **automatisch wiedergeben** zuordnen möchten, können Sie diese app in den Gerätemetadaten identifizieren. Weitere Informationen finden Sie im Thema [Automatische Wiedergabe für MicrosoftStore-Geräte-Apps](http://go.microsoft.com/fwlink/p/?LinkId=306684).
+> **Hinweis:** Wenn Sie ein Gerätehersteller sind und der [Microsoft Store-Geräte-app](http://go.microsoft.com/fwlink/p/?LinkID=301381) als Handler für das Gerät **automatisch wiedergeben** zuordnen möchten, können Sie diese app in den Gerätemetadaten identifiziert. Weitere Informationen finden Sie im Thema [Automatische Wiedergabe für MicrosoftStore-Geräte-Apps](http://go.microsoft.com/fwlink/p/?LinkId=306684).
 
 ## <a name="register-for-autoplay-content"></a>Registrieren für Inhalt für die automatische Wiedergabe
 
@@ -220,7 +220,7 @@ async internal void CopyImage(Windows.Storage.IStorageItem file,
 
 1.  Drücken SieF5, um die App zu erstellen und bereitzustellen (im Debugmodus).
 2.  Legen Sie eine Kameraspeicherkarte oder ein anderes Speichergerät einer Kamera in Ihren PC ein, um die App auszuführen. Wählen Sie dann in der Liste mit den Optionen für die automatische Wiedergabe eine der Inhaltsereignisoptionen aus, die Sie in der Datei „package.appxmanifest“ angegeben haben. Dieser Beispielcode blendet Bilder im DCIM-Ordner auf der Speicherkarte einer Kamera nur ein oder kopiert diese. Wenn die Speicherkarte Ihrer Kamera Bilder in „AVCHD“ oder „PRIVATE\\ACHD“ speichert, müssen Sie den Code entsprechend ändern.
-    **Hinweis:** Wenn Sie keine Kameraspeicherkarte haben, können Sie einen USB-Stick verwenden, wenn er verfügt über einen Ordner mit dem Namen **DCIM** im Stammverzeichnis und der Ordner "DCIM" einen Unterordner hat, die Bilder enthält.
+    **Hinweis:** Wenn Sie eine Kameraspeicherkarte haben, können Sie ein Flashlaufwerk verwenden, wenn er verfügt über einen Ordner mit dem Namen **DCIM** im Stammverzeichnis und der Ordner "DCIM" einen Unterordner hat, das Bilder.
 
 ## <a name="register-for-an-autoplay-device"></a>Registrieren für ein Gerät mit automatischer Wiedergabe
 
@@ -229,7 +229,7 @@ Sie können Apps als Optionen für Geräteereignisse der **automatischen Wiederg
 
 Hier wird gezeigt, wie Sie eine App als Option für die **automatische Wiedergabe** identifizieren, wenn eine Kamera an einen PC angeschlossen wird. Die App wird als Handler für das **WPD\\ImageSourceAutoPlay**-Ereignis registriert. Dabei handelt es sich um ein häufiges Ereignis, das vom WPD-System (Windows Portable Device) ausgelöst wird, wenn es von Kameras und anderen Bildverarbeitungsgeräten benachrichtigt wird, dass es sich dabei um eine ImageSource mit MTP handelt. Weitere Informationen finden Sie unter [Tragbare Windows-Geräte](https://msdn.microsoft.com/library/windows/hardware/ff597729).
 
-**Wichtige**die [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) -APIs sind Teil der [Familie der Desktopgeräte](https://msdn.microsoft.com/library/windows/apps/dn894631). Apps können diese APIs nur auf Windows 10-Geräten in der Familie der Desktopgeräte, z. B. PCs verwenden.
+**Wichtige**die [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) -APIs sind Teil der [desktop-Gerätefamilie](https://msdn.microsoft.com/library/windows/apps/dn894631). Apps können diese APIs nur auf Windows 10-Geräten in der Familie der Desktopgeräte, z. B. PCs verwenden.
 
  
 
@@ -409,7 +409,7 @@ async private System.Threading.Tasks.Task<Image> GetThumbnail(Windows.Storage.St
 
 1.  Drücken SieF5, um die App zu erstellen und bereitzustellen (im Debugmodus).
 2.  Führen Sie Ihre App aus, indem Sie eine Kamera an Ihren Computer anschließen. Wählen Sie die App anschließend in der Liste mit Optionen für die automatische Wiedergabe aus.
-    **Hinweis:** nicht alle Kameras für die **WPD\\ImageSource** Wiedergabe Gerät ankündigen.
+    **Hinweis:** nicht alle Kameras ankündigen, für die **WPD\\ImageSource** Wiedergabe Gerät.
 
 ## <a name="configure-removable-storage"></a>Konfigurieren von Wechselmedien
 
@@ -434,7 +434,7 @@ CustomEvent=AutoPlayCustomEventQuickstart
 2.  Öffnen Sie die Datei "Package.appxmanifest", und wählen Sie die Registerkarte **Funktionen** aus. Wählen Sie dann die Funktion **Wechselmedien** aus. Damit erhält Ihre App Zugriff auf die Dateien und Ordner auf dem Wechselmediengerät.
 3.  Wählen Sie in der Manifestdatei die Registerkarte **Deklarationen** und dann in der Dropdownliste **Verfügbare Deklarationen** die Option **Inhalt automatisch wiedergeben** aus, und klicken Sie dann auf **Hinzufügen**. Wählen Sie das neue Element vom Typ **Inhalt automatisch wiedergeben** aus, das der Liste **Unterstützte Deklarationen** hinzugefügt wurde.
 
-    **Hinweis:** Sie können alternativ auch auswählen, eine **Gerät automatisch wiedergeben** Deklaration für Ihr benutzerdefiniertes Ereignis für die automatische Wiedergabe hinzufügen.  
+    **Hinweis:** Sie können alternativ auch auswählen, eine **Gerät automatisch wiedergeben** -Deklaration für Ihr benutzerdefiniertes Ereignis für die automatische Wiedergabe hinzufügen.  
 4.  Geben Sie im Abschnitt **Startaktionen** der Ereignisdeklaration **Inhalt automatisch Wiedergeben** für die Aktion beim ersten Start die Werte in der folgenden Tabelle ein.
 5.  Wählen Sie in der Dropdownliste **Verfügbare Deklarationen** die Option **Dateitypzuordnungen** aus, und klicken Sie anschließend auf **Hinzufügen**. Setzen Sie in den Eigenschaften der neuen Deklaration vom Typ **Dateitypzuordnungen** das Feld **Anzeigename** auf **Show .ms Files** und das Feld **Name** auf **ms\_association**. Klicken Sie im Abschnitt **Unterstützte Dateitypen** auf **Neu hinzufügen**. Legen Sie im Feld **Dateityp** die Option **.ms** fest. Für Inhaltsereignisse filtert die automatische Wiedergabe alle Dateitypen heraus, die nicht explizit Ihrer App zugeordnet sind.
 6.  Speichern und schließen Sie die Manifestdatei.

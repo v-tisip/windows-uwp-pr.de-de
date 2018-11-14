@@ -9,25 +9,25 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0628dcfc5ece046ca728763876e8e00c9a2d5904
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6037110"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6189773"
 ---
 # <a name="supported-languages"></a>Unterstützte Sprachen
 
 
 Sie können apps an den Microsoft Store in mehr als 100 Sprachen übermitteln.
 
-Weitere Informationen zum Konfigurieren von Sprachen in Ihren apps, [Globalisierung und Lokalisierung](../design/globalizing/globalizing-portal.md) und [verstehen benutzerprofilsprachen und app-manifest-Sprachen](../design/globalizing/manage-language-and-region.md)angezeigt. Wir bieten auch ein [Multilingual App Toolkit](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat), mit dessen Hilfe Sie Apps programmieren können, die mehrere Sprachen unterstützen.
+Finden Sie weitere Informationen zum Konfigurieren von Sprachen in Ihren apps, [Globalisierung und Lokalisierung](../design/globalizing/globalizing-portal.md) und [verstehen benutzerprofilsprachen und app-manifest-Sprachen](../design/globalizing/manage-language-and-region.md)aus. Wir bieten auch ein [Multilingual App Toolkit](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat), mit dessen Hilfe Sie Apps programmieren können, die mehrere Sprachen unterstützen.
 
 ## <a name="supported-languages"></a>Unterstützte Sprachen
 
 
 Hierbei handelt es sich um die Sprachen, die im Microsoft Store unterstützt. Ihre app muss mindestens eine dieser Sprachen unterstützen. 
 
-Sprachcodes, die hier nicht aufgeführt sind, werden nicht vom Store unterstützt. Es wird empfohlen, dass Sie keinen abzielen Sprachcodes als denjenigen unten aufgeführten enthalten; solche Pakete nicht an Kunden verteilt werden, und können Verzögerungen oder Fehlern Zertifizierung verursachen.
+Sprachcodes, die hier nicht aufgeführt sind, werden nicht vom Store unterstützt. Es wird empfohlen, Sie keinen abzielen Sprachcodes als denjenigen unten aufgeführten enthalten; solche Pakete nicht an Kunden verteilt werden, und verursachen Verzögerungen oder Fehler in Zertifizierung.
 
 | Name der Sprache         | Unterstützte Sprachcodes                                                                                                                                                                              |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

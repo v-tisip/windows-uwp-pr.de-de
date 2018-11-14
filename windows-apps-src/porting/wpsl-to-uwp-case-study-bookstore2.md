@@ -1,7 +1,7 @@
 ---
 author: stevewhims
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
-description: Diese Fallstudie baut auf den Informationen aus Bookstore, beginnt mit einer WindowsPhone Silverlight-app, die gruppierte Daten in einem LongListSelector.
+description: Diese Fallstudie baut auf den Informationen aus Bookstore, beginnt mit einer WindowsPhone-Silverlight-app, die gruppierte Daten in einem LongListSelector.
 title: WindowsPhone Silverlight zu UWP – Fallstudie, Bookstore2
 ms.author: stwhi
 ms.date: 02/08/2017
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e518439ddd4e131c2d045f4467670b42a392fca
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6040189"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6199533"
 ---
 # <a name="windowsphone-silverlight-to-uwp-case-study-bookstore2"></a>WindowsPhone Silverlight zu UWP – Fallstudie: Bookstore2
 
@@ -24,13 +24,13 @@ Diese Fallstudie – baut auf den Informationen in [Bookstore1](wpsl-to-uwp-case
 
 ## <a name="downloads"></a>Downloads
 
-[Download der Bookstore2WPSL8 WindowsPhone Silverlight-app](http://go.microsoft.com/fwlink/p/?linkid=522601).
+[Download der Bookstore2WPSL8 WindowsPhone-Silverlight-app](http://go.microsoft.com/fwlink/p/?linkid=522601).
 
 [Laden der Bookstore2Universal\_10 Windows 10-app](http://go.microsoft.com/fwlink/?linkid=532952).
 
-##  <a name="the-windowsphone-silverlight-app"></a>Die WindowsPhone Silverlight-app
+##  <a name="the-windowsphone-silverlight-app"></a>Die WindowsPhone-Silverlight-app
 
-Die folgende Abbildung zeigt, wie die zu portierende App namens Bookstore2WPSL8 aussieht. Es handelt sich um einen vertikal scrollbaren **LongListSelector** mit Buchtiteln, die nach Autor gruppiert sind. Sie können die Liste auf die Sprungliste verkleinern und von dort aus wieder zurück zu einer beliebigen Gruppe navigieren. Die App besteht aus zwei Hauptteilen: dem Ansichtsmodell, das die gruppierte Datenquelle bereitstellt, und der Benutzeroberfläche, die an dieses Ansichtsmodell gebunden ist. Wir werden feststellen, beide Teile portieren lassen problemlos von WindowsPhone Silverlight-Technologie für die universelle Windows Plattform (UWP).
+Die folgende Abbildung zeigt, wie die zu portierende App namens Bookstore2WPSL8 aussieht. Es handelt sich um einen vertikal scrollbaren **LongListSelector** mit Buchtiteln, die nach Autor gruppiert sind. Sie können die Liste auf die Sprungliste verkleinern und von dort aus wieder zurück zu einer beliebigen Gruppe navigieren. Die App besteht aus zwei Hauptteilen: dem Ansichtsmodell, das die gruppierte Datenquelle bereitstellt, und der Benutzeroberfläche, die an dieses Ansichtsmodell gebunden ist. Wir werden feststellen, beide Teile portieren lassen problemlos von WindowsPhone Silverlight-Technologie für die universelle Windows-Plattform (UWP).
 
 ![Erscheinungsbild von „bookstore2wpsl8“](images/wpsl-to-uwp-case-studies/c02-01-wpsl-how-the-app-looks.png)
 
@@ -122,7 +122,7 @@ Sie können die App jetzt erstellen und ausführen. Im Mobile-Emulator sieht sie
 
 ![UWP-App auf dem Mobilgerät mit Änderungen am ursprünglichen Quellcode](images/wpsl-to-uwp-case-studies/c02-02-mob10-initial-source-code-changes.png)
 
-Das Ansichtsmodell und die vergrößerten sowie verkleinerten Ansichten arbeiten korrekt zusammen. Ein Problem ist aber, dass der Aufwand in Bezug auf die Formatierungen und Vorlagen etwas erhöht ist. Beispielsweise werden die richtigen Stile und Pinsel nicht noch nicht verwendet wird, damit der Text für die Gruppenköpfe nicht sichtbar ist, die Sie zum Verkleinern klicken können. Wenn Sie die app auf einem Desktopgerät ausführen, klicken Sie dann sehen ein weiteres Problem, Sie also, dass die app noch nicht, die Benutzeroberfläche anpasst, um die beste Erfahrung und Verwendung von Speicherplatz auf größere Geräte, in denen Windows potenziell sehr viel größer als der Bildschirm eines mobilen Geräts sein kann, zu verleihen. In den nächsten Abschnitten ([Anfängliches Erstellen von Formatierungen und Vorlagen](#initial-styling-and-templating), [Adaptive UI](#adaptive-ui) und [Abschließende Formatierung](#final-styling)) beheben wir diese Probleme.
+Das Ansichtsmodell und die vergrößerten sowie verkleinerten Ansichten arbeiten korrekt zusammen. Ein Problem ist aber, dass der Aufwand in Bezug auf die Formatierungen und Vorlagen etwas erhöht ist. Beispielsweise werden die richtigen Stile und Pinsel nicht noch nicht verwendet wird, damit der Text für die Gruppenköpfe nicht sichtbar ist, die Sie zum Verkleinern klicken können. Wenn Sie die app auf einem Desktopgerät ausführen, dann sehen ein weiteres Problem, Sie also, dass die app noch nicht anpasst, seine-Benutzeroberfläche bieten die beste Erfahrung und Verwendung von Speicherplatz für größere Geräte, in denen Windows potenziell sehr viel größer als der Bildschirm eines mobilen Geräts sein kann. In den nächsten Abschnitten ([Anfängliches Erstellen von Formatierungen und Vorlagen](#initial-styling-and-templating), [Adaptive UI](#adaptive-ui) und [Abschließende Formatierung](#final-styling)) beheben wir diese Probleme.
 
 ## <a name="initial-styling-and-templating"></a>Anfängliches Erstellen von Formatierungen und Vorlagen
 
@@ -270,7 +270,7 @@ Die portierte Windows 10-app auf einem mobilen Gerät, verkleinerte Ansicht
 
 ## <a name="making-the-view-model-more-flexible"></a>Entwickeln eines flexibleren Ansichtsmodells
 
-In diesem Abschnitt wird demonstriert, welche Möglichkeiten sich durch das Verschieben unserer App und die Verwendung der UWP ergeben. Hier erläutern wir optionale Schritte, mit denen Sie Ihr Ansichtsmodell flexibler gestalten können, wenn über **CollectionViewSource** darauf zugegriffen wird. Das Ansichtsmodell (die Quelldatei ist in ViewModel\\BookstoreViewModel.cs), das wir aus dem WindowsPhone Silverlight-app Bookstore2WPSL8 portiert haben, enthält eine Klasse namens "author" abgeleitet von **Liste&lt;T&gt;**, wobei **T** BookSku ist. Dies bedeutet, dass die Author-Klasse einer Gruppe von BookSku-Objekten *entspricht*.
+In diesem Abschnitt wird demonstriert, welche Möglichkeiten sich durch das Verschieben unserer App und die Verwendung der UWP ergeben. Hier erläutern wir optionale Schritte, mit denen Sie Ihr Ansichtsmodell flexibler gestalten können, wenn über **CollectionViewSource** darauf zugegriffen wird. Das Ansichtsmodell (die Quelldatei in ViewModel\\BookstoreViewModel.cs), das wir aus dem WindowsPhone-Silverlight-app Bookstore2WPSL8 portiert haben, enthält eine Klasse namens "author" abgeleitet von **Liste&lt;T&gt;**, wobei **T** BookSku ist. Dies bedeutet, dass die Author-Klasse einer Gruppe von BookSku-Objekten *entspricht*.
 
 Wenn wir **CollectionViewSource.Source** an „Authors“ binden, zeigen wir dadurch lediglich an, dass jeder Autor in „Authors“ eine Gruppe von *etwas* ist. Wir überlassen es **CollectionViewSource** zu bestimmen, dass „Author“ in diesem Fall eine BookSku-Gruppe ist. Diese Lösung funktioniert zwar, ist jedoch nicht sehr flexibel. Was wäre, wenn „Author“ *beides* sein soll, eine Gruppe von BookSku-Objekten *und* eine Gruppe der Adressen, unter denen der Autor gewohnt hat? „Author“ kann *nicht* beide dieser Gruppen darstellen. „Author“ *kann* jedoch eine beliebige Anzahl von Gruppen enthalten. Unsere Lösung sieht also wie folgt aus: Verwenden Sie das *has-a-group*-Muster anstelle oder zusätzlich zum aktuell verwendeten *is-a-group*-Muster. Gehen Sie wie folgt vor:
 
@@ -303,4 +303,4 @@ Jetzt können wir `ItemsPath="BookSkus"` entfernen, ohne dass sich das Verhalten
 
 ## <a name="conclusion"></a>Fazit
 
-In dieser Fallstudie haben wir es mit einer aufwändigeren Benutzeroberfläche als im vorherigen Beispiel zu tun. Alle Funktionen und Konzepte für die WindowsPhone Silverlight **LongListSelector**– und vieles mehr – für eine UWP-app in Form von **"semanticzoom"**, **ListView**, **GridView**und **CollectionViewSource**verfügbar sein gefunden wurden. Sie haben erfahren, wie Sie sowohl imperativen Code als auch Markup in einer UWP-App wiederverwenden oder kopieren und bearbeiten, um Funktionen, Benutzeroberflächenelemente und Interaktionen speziell für die schmalsten und breitesten Formfaktoren von Windows-Geräten und alle Größen dazwischen umzusetzen.
+In dieser Fallstudie haben wir es mit einer aufwändigeren Benutzeroberfläche als im vorherigen Beispiel zu tun. Alle Funktionen und Konzepte für die WindowsPhone Silverlight **LongListSelector**– und vieles mehr – für eine UWP-app in Form von **SemanticZoom**, **ListView**, **GridView**und **CollectionViewSource**verfügbar sein gefunden wurden. Sie haben erfahren, wie Sie sowohl imperativen Code als auch Markup in einer UWP-App wiederverwenden oder kopieren und bearbeiten, um Funktionen, Benutzeroberflächenelemente und Interaktionen speziell für die schmalsten und breitesten Formfaktoren von Windows-Geräten und alle Größen dazwischen umzusetzen.

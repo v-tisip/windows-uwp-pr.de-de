@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP, Pakete, hochladen, Verfügbarkeit von Gerätefamilien
 ms.localizationpriority: medium
 ms.openlocfilehash: 543b5c519e7514ccef397c2bb78eadcc5e3692f5
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6049365"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6190467"
 ---
 # <a name="device-family-availability"></a>Verfügbarkeit von Gerätefamilien
 
@@ -55,16 +55,16 @@ Wenn Ihre Übermittlung für eine bereits veröffentlichte app Pakete enthält, 
 > [!IMPORTANT]
 > Um vollständig eine bestimmte Windows 10-Gerätefamilie verhindern können, dass Ihre Übermittlung, aktualisieren Sie das [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) -Element in Ihrem Manifest nur die Gerätefamilie ausgerichtet, die Sie unterstützen möchten (d. h. Windows.Mobile oder Windows.Desktop), anstatt als verlassen es als den Windows.Universal-Wert (für die universelle Gerätefamilie), die Microsoft Visual Studio im Manifest ist standardmäßig enthalten.
 
-Beachten Sie außerdem, dass die unter **Verfügbarkeit von Gerätefamilien** getroffene Auswahl nur für neue Verkäufe gilt. Kunden, die Ihre App bereits verwenden, können dies weiterhin tun und erhalten alle zur Verfügung gestellten Updates, selbst wenn Sie diese Gerätefamilie an dieser Stelle entfernen. Dies gilt auch für Kunden, die Ihre App vor dem Upgrade auf Windows 10 erworben haben. Beispielsweise werden Wenn Sie eine veröffentlichte app mit Windows Phone 8.1-Pakete haben, und Sie fügen Sie ein Windows 10 (UWP)-Paket auf die Gerätefamilie Windows.Universal abzielen, mobile Windows 10-Kunden, die Ihre Windows Phone 8.1-Paket verwendet haben ein Update auf diese Windows angeboten 10 (UWP) Verpacken, auch wenn Sie haben deaktiviert das Kontrollkästchen für **Windows 10 Mobile**.
+Beachten Sie außerdem, dass die unter **Verfügbarkeit von Gerätefamilien** getroffene Auswahl nur für neue Verkäufe gilt. Kunden, die Ihre App bereits verwenden, können dies weiterhin tun und erhalten alle zur Verfügung gestellten Updates, selbst wenn Sie diese Gerätefamilie an dieser Stelle entfernen. Dies gilt auch für Kunden, die Ihre App vor dem Upgrade auf Windows 10 erworben haben. Beispielsweise werden, wenn Sie eine veröffentlichte app mit Windows Phone 8.1-Pakete haben, und ein Windows 10 (UWP)-Paket auf die Gerätefamilie Windows.Universal hinzufügen, mobile Windows 10-Kunden, die Ihre Windows Phone 8.1-Paket verwendet ein Update auf diese Windows angeboten 10 (UWP) Verpacken, auch wenn Sie haben deaktiviert das Kontrollkästchen für **Windows 10 Mobile**.
 
 Weitere Informationen über die Gerätefamilien finden Sie unter [**Übersicht über die Gerätefamilien**](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview).
 
 
 ## <a name="understanding-ranking"></a>Grundlegendes zur Bewertung
 
-Abgesehen von wie Sie angeben, welche Windows 10-gerätefamilien Ihre Übermittlung herunterladen können, zeigt der **Verfügbarkeit von gerätefamilien** Abschnitt die spezifischen Pakete, die an unterschiedliche gerätefamilien verfügbar gemacht werden. Wenn mehrere Ihrer Pakete auf einer bestimmten Gerätefamilie ausgeführt werden können, wird in der Tabelle die Reihenfolge angegeben, in der Pakete basierend auf der Versionsnummer angeboten werden. Weitere Informationen dazu, wie der Store Pakete auf Grundlage der Versionsnummern bewertet, finden Sie unter [Paketversionsnummern](package-version-numbering.md). 
+Abgesehen von wie Sie angeben, welche Windows 10-gerätefamilien Ihre Übermittlung herunterladen können, zeigt die **Verfügbarkeit von gerätefamilien** Abschnitt die spezifischen Pakete, die an unterschiedliche gerätefamilien verfügbar gemacht werden. Wenn mehrere Ihrer Pakete auf einer bestimmten Gerätefamilie ausgeführt werden können, wird in der Tabelle die Reihenfolge angegeben, in der Pakete basierend auf der Versionsnummer angeboten werden. Weitere Informationen dazu, wie der Store Pakete auf Grundlage der Versionsnummern bewertet, finden Sie unter [Paketversionsnummern](package-version-numbering.md). 
 
-Angenommen, Sie haben die beiden Pakete Package_A.appxupload und Package_B.appxupload. Wenn für eine bestimmte Gerätefamilie, Package_A.appxupload den Rang 1 und Package_B.appxupload den Rang 2 hat, bedeutet dies, das der Store an einen Kunden mit diesem Gerätetyp, der Ihre App erwirbt, zunächst Package_A.appxupload ausliefert. Wenn Package_A.appxupload auf den Gerät des Kunden nicht ausgeführt werden kann, bietet der Store Package_B.appxupload an. Wenn dem Gerät des Kunden eines der Pakete für diese Gerätefamilie nicht ausgeführt werden kann (z. B. wenn die **MinVersion** Ihrer app unterstützt ist höher als die Version auf dem Gerät des Kunden) und dann der Kunden die app auf diesem Gerät herunterladen werden kann.
+Angenommen, Sie haben die beiden Pakete Package_A.appxupload und Package_B.appxupload. Wenn für eine bestimmte Gerätefamilie, Package_A.appxupload den Rang 1 und Package_B.appxupload den Rang 2 hat, bedeutet dies, das der Store an einen Kunden mit diesem Gerätetyp, der Ihre App erwirbt, zunächst Package_A.appxupload ausliefert. Wenn Package_A.appxupload auf den Gerät des Kunden nicht ausgeführt werden kann, bietet der Store Package_B.appxupload an. Wenn es sich bei dem Gerät des Kunden die Pakete für diese Gerätefamilie nicht ausgeführt werden kann (z. B. wenn die **MinVersion** Ihrer app unterstützt ist höher als die Version auf dem Gerät des Kunden) und dann der Kunden zum Herunterladen der app auf dem Gerät nicht kann.
 
 > [!NOTE]
 > Die Versionsnummern in XAP-Pakete (für bereits veröffentlichte apps) werden nicht berücksichtigt, beim Ermitteln der für einen gegebenen Kunden bereitzustellenden Pakete ignoriert. Daher wird bei mehreren gleichrangigen XAP-Paketen keine Nummer, sondern ein Sternchen angezeigt, und die Kunden können jedes der Pakete erhalten. Wenn ein XAP-Paket für einen Kunden auf ein neueres aktualisiert werden soll, stellen Sie sicher, dass die älteren XAP-Dateien aus der neuen Übermittlung entfernt werden.
