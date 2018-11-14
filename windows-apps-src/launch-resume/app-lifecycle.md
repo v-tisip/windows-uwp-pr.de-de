@@ -9,11 +9,11 @@ ms.date: 01/23/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: cf8496393c5b500ab30d08608e90a0e156422ce3
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035642"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6198683"
 ---
 # <a name="windows-10-universal-windows-platform-uwp-app-lifecycle"></a>Lebenszyklus von Windows 10-UWP-Apps (Universelle Windows-Plattform)
 
@@ -85,7 +85,7 @@ Die [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows
 
 Die Ereignisdaten für diese Methoden enthalten dieselbe [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729)-Eigenschaft wie oben, an der Sie erkennen, in welchem Zustand sich die App vor der Aktivierung befunden hat. Um den Zustand zu interpretieren und die auszuführende Aktion zu ermitteln, gehen Sie auf dieselbe Weise vor, wie oben im Abschnitt [Starten einer App](#app-launch) beschrieben.
 
-**Hinweis:** Wenn Sie mit dem Computer Administratorkonto anmelden, können Sie keine UWP-apps aktivieren.
+**Hinweis:**, wenn Sie mit dem Computer Administratorkonto anmelden, können Sie keine UWP-apps aktivieren.
 
 ## <a name="running-in-the-background"></a>Ausführung im Hintergrund ##
 
@@ -185,7 +185,7 @@ Im Allgemeinen müssen Benutzer Apps nicht schließen, sondern können die Verwa
 
 Es gibt kein Ereignis zum Angeben, dass der Benutzer die App geschlossen hat. Wenn eine App durch den Benutzer geschlossen wird, wird sie zuerst angehalten, damit Sie ihren Zustand speichern können. In Windows8.1 und höher, nachdem eine app vom Benutzer geschlossen wurde, die app wird vom Bildschirm entfernt und switch-Liste aber nicht explizit beendet.
 
-**Geschlossen-Verhalten:** Wenn Ihre app benötigt etwas anderes tun, wenn es vom Benutzer als beim Schließen von Windows geschlossen wird, können Sie des aktivierungsereignishandlers verwenden, um festzustellen, ob die app durch den Benutzer oder durch Windows beendet wurde. Beschreibungen zu den Status **ClosedByUser** und **Terminated** finden Sie in der Referenz für die [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694)-Enumeration.
+**Geschlossen-Verhalten:** Wenn Ihre app muss etwas anderes tun, wenn es vom Benutzer als beim Schließen von Windows geschlossen wird, können Sie des aktivierungsereignishandlers verwenden, um zu ermitteln, ob die app durch den Benutzer oder durch Windows beendet wurde. Beschreibungen zu den Status **ClosedByUser** und **Terminated** finden Sie in der Referenz für die [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694)-Enumeration.
 
 Wir raten dazu, dass Apps sich selbst nur dann programmgesteuert schließen sollten, wenn dies absolut erforderlich ist. Wenn eine App beispielsweise einen Arbeitsspeicherverlust erkennt, kann sie sich selbst schließen, um die Sicherheit der persönlichen Daten des Benutzers zu wahren.
 

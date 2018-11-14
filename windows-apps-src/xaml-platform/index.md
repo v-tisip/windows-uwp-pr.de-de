@@ -9,16 +9,16 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: fe9bad5afabca3ef0b9c782446e581aea61fe4dc
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6031212"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6196546"
 ---
 # <a name="xaml-platform"></a>XAML-Plattform
 
 
-Dieser Abschnitt enthält Themen, in denen Programmierkonzepte erläutert, die generell für alle Apps, die Sie schreiben werden, sind, bei Verwendung von c#, Microsoft Visual Basic oder für VisualC++-komponentenerweiterungen (C++ / CX) als Programmiersprache und XAML-Code für die Benutzeroberfläche Definition. Dazu gehören auch grundlegende Begriffe der Programmierung, z.B. die Verwendung von Eigenschaften und Ereignissen, und deren Anwendbarkeit für die Programmierung von UWP-Apps (Universelle Windows-Plattform). Mit der universellen Windows-Plattform (UWP) werden C#-, Visual Basic- oder C++/CX-Konzepte von Eigenschaften und ihren Werten erweitert, indem das Abhängigkeitseigenschaftensystem hinzugefügt wird. In den Themen dieses Abschnitts wird auch die Verwendung der XAML-Sprache durch die UWP dokumentiert. Außerdem werden grundlegende Szenarien und erweiterte Themen behandelt, um zu erläutern, wie Sie XAML zum Definieren der Benutzeroberfläche für Ihre UWP-App verwenden.
+Dieser Abschnitt enthält Themen, in denen Programmierkonzepte werden, in der Regel gilt für alle Apps, die Sie schreiben erläutert, wenn Sie c#, Microsoft Visual Basic oder für VisualC++-komponentenerweiterungen (C++ / CX) als Programmiersprache und XAML-Code für die Benutzeroberfläche Definition. Dazu gehören auch grundlegende Begriffe der Programmierung, z.B. die Verwendung von Eigenschaften und Ereignissen, und deren Anwendbarkeit für die Programmierung von UWP-Apps (Universelle Windows-Plattform). Mit der universellen Windows-Plattform (UWP) werden C#-, Visual Basic- oder C++/CX-Konzepte von Eigenschaften und ihren Werten erweitert, indem das Abhängigkeitseigenschaftensystem hinzugefügt wird. In den Themen dieses Abschnitts wird auch die Verwendung der XAML-Sprache durch die UWP dokumentiert. Außerdem werden grundlegende Szenarien und erweiterte Themen behandelt, um zu erläutern, wie Sie XAML zum Definieren der Benutzeroberfläche für Ihre UWP-App verwenden.
 
 | Thema | Beschreibung |
 |-------|-------------|

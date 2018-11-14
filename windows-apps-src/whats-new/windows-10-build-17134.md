@@ -8,11 +8,11 @@ ms.date: 4/10/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b25df0a8445322ceb422fd6485f7d08c1c49a25
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6030006"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6200035"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>Neuigkeiten für Entwickler in Windows10, Build 17134
 
@@ -36,7 +36,7 @@ Aktualisierung durch Ziehen | Dank des Steuerelements [Aktualisieren durch Ziehe
 Navigationsansicht | Das [Navigationsansicht](../design/controls-and-patterns/navigationview.md)-Steuerelement bietet über ein reduzierbares Navigationsmenü ein allgemeines vertikales Layout für App-Bereiche auf oberster Ebene. Dieses Steuerelement dient der Implementierung des Navigationsbereichsmusters oder Hamburger-Menü-Musters, wobei die Anordnung automatisch an verschiedene Fenstergrößen des Bereichs angepasst wird.
 Einblendungen mit Fokus | Die neuen [Einblendungen mit Fokus](../design/style/reveal-focus.md)-Effekte bieten Lichtelemente für Erfahrungen wie z.B. Xbox One- und Fernsehbildschirme. Sie animieren den Rahmen des fokussierbaren Elementes wie beispielsweise Schaltflächen, wenn der Benutzer den Fokus des Gamepad oder der Tastatur darauf lenken.
 Sound | XAML unterstützt jetzt 3D Audio mit der Eigenschaft **SpatialAudioMode**. Weitere Informationen zur Konfiguration finden Sie unter [Sound](../design/style/sound.md).
-Kacheln | [Verfolgbare Kachelbenachrichtigungen](../design/shell/tiles-and-notifications/chaseable-tile-notifications.md) werden jetzt in JavaScript-basierten UWP-Apps unterstützt.<br><br>Sekundäre Kacheln und Badge Benachrichtigungen sind [jetzt von Desktop-Brücke-apps unterstützt](../design/shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md#send-tile-notifications).
+Kacheln | [Verfolgbare Kachelbenachrichtigungen](../design/shell/tiles-and-notifications/chaseable-tile-notifications.md) werden jetzt in JavaScript-basierten UWP-Apps unterstützt.<br><br>Sekundäre Benachrichtigungen für Kachel- und signalbenachrichtigungen werden [jetzt Desktop-Brücke-Apps unterstützt](../design/shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md#send-tile-notifications).
 Strukturansicht | Das Steuerelement [Strukturansicht](../design/controls-and-patterns/tree-view.md) ermöglicht eine Hierarchieauflistung mit Knoten, die das Aus- und Einblenden von geschachtelten Elementen erlauben. Es kann verwendet werden, um eine Ordnerstruktur oder geschachtelte Beziehungen zwischen Elementen in der Benutzeroberfläche zu veranschaulichen.
 Schreibstil | Wir haben unseren Artikel über Ausdrucksweise und Tonfall aktualisiert und erweitert und diesen in eine [Schreibstilanleitung](../design/style/writing-style.md) umgewandelt. Diese neue Information enthält Prinzipien zur Erstellung von effektivem Text in Ihrer App sowie bewährte Methoden für das Schreiben von Steuerelementen wie z.B. Fehlermeldungen oder Dialogfelder.
 

@@ -8,15 +8,15 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f9f266538c42b83da9135079f51a3f935f459020
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6045217"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6160291"
 ---
 # <a name="engage-with-your-customers"></a>Kundenkontakte intensivieren
 
-[Partner Center](https://partner.microsoft.com/dashboard) enthält Features, die Sie Laufwerk Customer Engagement und Zufriedenheit helfen. Enthält Informationen zum Verwenden von Benachrichtigungen, zielgerichteten angeboten und Reaktionen auf Kritiken und Feedback und vieles mehr.
+[Partner Center](https://partner.microsoft.com/dashboard) enthält Features, die Sie Laufwerk Customer Engagement und Zufriedenheit unterstützen. Hier erfahren Sie, wie Sie Benachrichtigungen, zielgerichteten angeboten und Reaktionen auf Kritiken und Feedback, verwenden.
 
 -   [Erstellen von Kundengruppen](create-customer-groups.md)
 -   [Reagieren auf Kundenrezensionen](respond-to-customer-reviews.md)

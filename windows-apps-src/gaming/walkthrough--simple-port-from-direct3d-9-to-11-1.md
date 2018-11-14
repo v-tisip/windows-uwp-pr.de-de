@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Directx, Port, direct3d 9, direct3d 11
 ms.localizationpriority: medium
 ms.openlocfilehash: bd0a8c07be58d670e60aa3a23504d3f5119e6b50
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6037120"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6207635"
 ---
 # <a name="walkthrough-port-a-simple-direct3d-9-app-to-directx-11-and-universal-windows-platform-uwp"></a>Exemplarische Vorgehensweise Portieren einer einfachen Direct3D 9-App zu DirectX 11 und zur universellen Windows-Plattform (UWP)
 
@@ -70,7 +70,7 @@ Beachten Sie, dass in dieser exemplarischen Vorgehensweise der Einfachheit halbe
 ## <a name="prerequisites"></a>Voraussetzungen
 
 
-Führen Sie die Schritte unter [Vorbereiten der Entwicklungsumgebung für die Entwicklung von UWP-DirectX-Spielen](prepare-your-dev-environment-for-windows-store-directx-game-development.md) aus. Sie benötigen eine Vorlage noch, aber Sie benötigen Microsoft Visual Studio2015 um die Codebeispiele für diese exemplarische Vorgehensweise zu laden.
+Führen Sie die Schritte unter [Vorbereiten der Entwicklungsumgebung für die Entwicklung von UWP-DirectX-Spielen](prepare-your-dev-environment-for-windows-store-directx-game-development.md) aus. Sie benötigen keine Vorlage noch nicht, aber Sie benötigen Microsoft Visual Studio2015 die Codebeispiele für diese exemplarische Vorgehensweise zu laden.
 
 Lesen Sie sich die Informationen unter [Konzepte und Aspekte der Portierung](porting-considerations.md) durch, um ein besseres Verständnis der in dieser exemplarischen Vorgehensweise verwendeten Programmierkonzepte für DirectX11 und UWP zu entwickeln.
 

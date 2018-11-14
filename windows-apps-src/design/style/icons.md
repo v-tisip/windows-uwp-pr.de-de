@@ -13,11 +13,11 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 31bc1d33bccbf2d1948a119ea42bfef2599f3336
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6032197"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6258012"
 ---
 # <a name="icons-for-uwp-apps"></a>Symbole für UWP-Apps
 
@@ -137,7 +137,7 @@ Es gibt viele Möglichkeiten, ein Symbol zu erstellen. Sie können eine Symbolsc
 
 ## <a name="make-the-icon-do-something"></a>Festlegen einer Aktion für das Symbol
 
-Wenn Sie ein Symbol haben, besteht der nächste Schritt vereinfachen eine Aktion ausführen, indem Sie Befehl oder eine Navigationsaktion zuordnen. Die beste Möglichkeit hierzu ist das Symbol zu einer Schaltfläche oder Befehlsleiste hinzufügen. 
+Wenn Sie ein Symbol haben, besteht der nächste Schritt wird eine Aktion ausführen, indem Sie Befehl oder eine Navigationsaktion zuordnen. Die beste Möglichkeit dazu ist das Symbol für eine Schaltfläche oder Befehlsleiste hinzufügen. 
 
 ![Befehlsleistenbild](images/icons/app-bar-desktop.svg)
 

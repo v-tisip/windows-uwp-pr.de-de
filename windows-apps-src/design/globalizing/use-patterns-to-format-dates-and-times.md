@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 04a0288d0b28c12eb68cf56225747224e8df9777
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024719"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6185970"
 ---
 # <a name="use-templates-and-patterns-to-format-dates-and-times"></a>Verwenden von Mustern zum Formatieren von Datums- und Uhrzeitwerten
 
@@ -115,7 +115,7 @@ var time = timeFormatter.Format(dateToFormat);
 string output = string.Format(resourceLoader.GetString("CustomDateTimeFormatString"), date, time);
 ```
 
-`CustomDateTimeFormatString` ist ein Ressourcenbezeichner, der auf eine lokalisierbare Ressource in einer Ressourcendatei (.resw) verweist. Für die Standardsprache Englisch (USA), dieser würde festgelegt werden, auf einen Wert von "{0} | {1}"zusammen mit einem Kommentar gibt an, dass"{0}"ist das Datum und"{1}"ist die Zeit. Somit können Übersetzer die Formatelemente wie gewünscht anpassen. Sie können beispielsweise die Reihenfolge der Komponenten ändern, falls in bestimmten Sprachen oder Regionen die Uhrzeit vor dem Datum stehen soll. Oder Sie können „|“ durch ein anderes Trennzeichen ersetzen.
+`CustomDateTimeFormatString` ist ein Ressourcenbezeichner, der auf eine lokalisierbare Ressource in einer Ressourcendatei (.resw) verweist. Für die Standardsprache Englisch (USA), dieser würde festgelegt werden, auf einen Wert von "{0} | {1}"zusammen mit einem Kommentar, der angibt, dass"{0}"ist das Datum und"{1}"ist die Zeit. Somit können Übersetzer die Formatelemente wie gewünscht anpassen. Sie können beispielsweise die Reihenfolge der Komponenten ändern, falls in bestimmten Sprachen oder Regionen die Uhrzeit vor dem Datum stehen soll. Oder Sie können „|“ durch ein anderes Trennzeichen ersetzen.
 
 Eine andere Möglichkeit zum Implementieren dieses Beispiels besteht darin, die beiden Formatierer nach ihren Formatmustern abzufragen, diese miteinander zu verketten und dann aus dem resultierenden Formatmuster einen dritten Formatierer zu erstellen.
 

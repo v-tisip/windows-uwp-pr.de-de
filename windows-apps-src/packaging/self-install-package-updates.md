@@ -2,22 +2,22 @@
 author: mcleanbyron
 ms.assetid: 414ACC73-2A72-465C-BD15-1B51CB2334F2
 title: Herunterladen und Installieren von Paketupdates aus dem Store
-description: Erfahren Sie, wie Sie Pakete im Dev Center-Dashboard als obligatorisch kennzeichnen und Code in Ihrer App zum Herunterladen und Installieren von Paketupdates schreiben.
+description: Erfahren Sie, wie Pakete als obligatorisch im Partner Center kennzeichnen und Code in Ihrer app zum Herunterladen und Installieren von paketupdates schreiben.
 ms.author: mcleans
 ms.date: 04/04/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: d5a6cc57a7af63d9aee3685d5bfc3e3fd72fac0a
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: a2bc0cfbdd722a4842758be0f3b794aafe808bc3
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6052065"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6255330"
 ---
 # <a name="download-and-install-package-updates-from-the-store"></a>Herunterladen und Installieren von Paketupdates aus dem Store
 
-Ab Windows10 (Version 1607) können Sie Methoden der [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext)-Klasse im [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store)-Namespace verwenden, um programmgesteuert nach Paketupdates für die aktuelle App im Microsoft Store zu suchen und diese herunterzuladen und zu installieren. Sie können auch Abfragen für Pakete ausführen, die im Windows Dev Center-Dashboard als obligatorisch gekennzeichnet wurden, und Funktionen in Ihrer App deaktivieren, bis das erforderliche Update installiert wurde.
+Ab Windows10 (Version 1607) können Sie Methoden der [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext)-Klasse im [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store)-Namespace verwenden, um programmgesteuert nach Paketupdates für die aktuelle App im Microsoft Store zu suchen und diese herunterzuladen und zu installieren. Sie können auch für Pakete, die Abfragen, die im Partner Center als obligatorisch gekennzeichnet wurden, und Funktionen in Ihrer app deaktivieren, bis das erforderliche Update installiert ist.
 
 Mithilfe von zusätzlichen [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext)-Methoden, die in Version 1803 von Windows10 eingeführt wurden, können Sie Paketupdates im Hintergrund herunterladen und installieren (ohne dem Benutzer eine Benachrichtigung anzuzeigen), ein [optionales Paket](optional-packages.md) deinstallieren und Informationen zu Paketen im Download und zur Installationswarteschlange für Ihre App erhalten.
 
@@ -195,14 +195,14 @@ private async Task InstallUpdate(IReadOnlyList<StorePackageUpdate> storePackageU
 
 ## <a name="mandatory-package-updates"></a>Obligatorische Paketupdates
 
-Wenn Sie eine Paketübermittlung für eine App für Windows10 (Version 1607 oder höher) erstellen, können Sie das [Paket als obligatorisch kennzeichnen](../publish/upload-app-packages.md#mandatory-update) und das Datum und die Uhrzeit angeben, wann es obligatorisch wird. Wenn diese Eigenschaft festgelegt wurde und Ihre App erkennt, dass das Paketupdate verfügbar ist, kann die App ermitteln, ob das Updatepaket obligatorisch ist, und ihr Verhalten ändern, bis das Update installiert ist (z.B. kann Ihre App Features deaktivieren).
+Wenn Sie eine Paket-Übermittlung im Partner Center für eine app erstellen, Windows 10, Version 1607 oder höher, können Sie [das Paket als obligatorisch kennzeichnen](../publish/upload-app-packages.md#mandatory-update) und das Datum und die Uhrzeit aus, es obligatorisch wann. Wenn diese Eigenschaft festgelegt wurde und Ihre App erkennt, dass das Paketupdate verfügbar ist, kann die App ermitteln, ob das Updatepaket obligatorisch ist, und ihr Verhalten ändern, bis das Update installiert ist (z.B. kann Ihre App Features deaktivieren).
 
 > [!NOTE]
 > Der obligatorische Status eines Pakets wird von Microsoft nicht erzwungen, und das Betriebssystem verfügt über keine Benutzeroberfläche, die den Benutzer darauf hinweist, dass ein erforderliches App-Update installiert werden muss. Entwickler sollten die Einstellung „Obligatorisch” verwenden, um erforderliche App-Updates in ihrem eigenen Code zu erzwingen.  
 
 So kennzeichnen Sie eine Paketübermittlung als obligatorisch:
 
-1. Melden Sie sich beim [Dev Center-Dashboard](https://dev.windows.com/overview) an, und navigieren Sie zur Übersichtsseite für Ihre App.
+1. Melden Sie sich beim [Partner Center](https://partner.microsoft.com/dashboard) , und navigieren Sie auf der Übersichtsseite für Ihre app.
 2. Klicken Sie auf den Namen der Übermittlung, die das Paketupdate enthält, das Sie erforderlich machen möchten.
 3. Navigieren Sie zu der **Pakete**-Seite für die Übermittlung. Wählen Sie im unteren Bereich der Seite **Dieses Update als obligatorisch kennzeichnen** aus, und wählen Sie dann den Tag und die Uhrzeit aus, wann das Paketupdate obligatorisch wird. Diese Option gilt für alle UWP-Pakete in der Übermittlung.
 

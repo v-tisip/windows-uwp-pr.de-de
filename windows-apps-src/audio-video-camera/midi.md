@@ -9,17 +9,17 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 36d1e4afd620b871d4273699aea5c02cc9faec80
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6029372"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6158880"
 ---
 # <a name="midi"></a>MIDI
 
 
 
-In diesem Artikel wird beschrieben, wie Sie MIDI-Geräte (Musical Instrument Digital Interface) aufzählen und MIDI-Nachrichten in einer universellen Windows-App senden und empfangen. Windows 10 unterstützt MIDI über USB (Klasse-kompatibel und die meisten proprietäre Treiber), MIDI über Bluetooth LE (Windows 10 Anniversary Edition und höher), und über frei verfügbare Drittanbieter-Produkte, MIDI-Ethernet- und routed MIDI.
+In diesem Artikel wird beschrieben, wie Sie MIDI-Geräte (Musical Instrument Digital Interface) aufzählen und MIDI-Nachrichten in einer universellen Windows-App senden und empfangen. Windows 10 unterstützt MIDI über USB (Klasse-kompatibel und die meisten vertraulich Treiber) MIDI über Bluetooth LE (Windows 10 Anniversary Edition und höher), und über frei verfügbare Drittanbieter-Produkte, MIDI über Ethernet und Routingereignisse MIDI.
 
 ## <a name="enumerate-midi-devices"></a>Aufzählen von MIDI-Geräten
 

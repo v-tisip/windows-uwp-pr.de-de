@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Lizenzen, Apps, Add-Ons, In-App-Einkäufe, IAPs, Windows.Services.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 545e052794a8649daa62872cf74b0986cb7bf4b9
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6043293"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6209981"
 ---
 # <a name="get-license-info-for-apps-and-add-ons"></a>Abrufen von Lizenzinformationen zu Apps und deren Add-Ons
 
@@ -27,7 +27,7 @@ Dieser Artikel veranschaulicht die Verwendung von Methoden der [StoreContext](ht
 Für dieses Beispiel gelten die folgenden Voraussetzungen:
 * Ein Visual Studio-Projekt für eine UWP (Universelle Windows-Plattform)-App, die für **Windows 10 Anniversary Edition (10.0; Build 14393)** oder höher, geeignet ist.
 * Sie haben [eine app-Übermittlung erstellt haben](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) , im Partner Center und diese app im Store veröffentlicht wird. Optional können Sie die App so konfigurieren, daher sie während der Tests im Store nicht auffindbar ist. Weitere Informationen finden Sie unter [Hinweise für Tests](in-app-purchases-and-trials.md#testing).
-* Wenn Sie, Lizenzinformationen für ein Add-on für die app abzurufen möchten, müssen Sie auch [das Add-on im Partner Center erstellen](../publish/add-on-submissions.md).
+* Wenn Sie die Lizenzinformationen für ein Add-on für die app abrufen möchten, müssen Sie auch [das Add-on im Partner Center erstellen](../publish/add-on-submissions.md).
 
 Der Code in diesem Beispiel geht von folgenden Voraussetzungen aus:
 * Die Ausführung des Codes erfolgt im Kontext einer [Seite](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx), die einen [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) mit dem Namen ```workingProgressRing``` und einen [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) mit dem Namen ```textBlock``` enthält. Diese Objekte werden verwendet, um anzugeben, dass ein asynchroner Vorgang ausgeführt wird, bzw. um Ausgabemeldungen anzuzeigen.

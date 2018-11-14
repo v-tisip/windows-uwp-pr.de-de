@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Karte, Standort, Positionsfunktion
 ms.localizationpriority: medium
 ms.openlocfilehash: 2187bafa9fd2b4fdce049f3ef11d4e6766613de3
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6050987"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6249338"
 ---
 # <a name="get-the-users-location"></a>Abrufen der Position eines Benutzers
 
@@ -58,7 +58,7 @@ var accessStatus = await Geolocator.RequestAccessAsync();
 
 Die [**RequestAccessAsync**](https://msdn.microsoft.com/library/windows/apps/dn859152)-Methode fordert den Benutzer auf, den Zugriff auf seinen Standort zu genehmigen. Der Benutzer wird nur einmal (pro App) aufgefordert. Nachdem die Berechtigung erstmalig gewährt oder verweigert wurde, fordert die Methode keine Berechtigung mehr vom Benutzer an. Um das Ändern von Standortberechtigungen nach der Aufforderung für den Benutzer zu vereinfachen, sollten Sie einen Link zu den Standorteinstellungen bereitstellen wie weiter unten in diesem Thema beschrieben.
 
->Hinweis: Das Feature grob Speicherort kann Ihre app eine absichtlich verborgene (ungenaue) Position ohne Abrufen explizite Zustimmung des Benutzers (der systemweite Switch muss weiterhin **auf**, jedoch werden). Um zu erfahren, wie Sie grob Stelle in Ihrer app nutzen, finden Sie unter der [**AllowFallbackToConsentlessPositions**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Geolocation.Geolocator.AllowFallbackToConsentlessPositions) -Methode in der [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geolocator.aspx) -Klasse.
+>Hinweis: Das Feature grob Speicherort kann Ihre app eine absichtlich verborgene (ungenaue) Position ohne Abrufen explizite Zustimmung des Benutzers (die systemweite Switch muss weiterhin **auf**, jedoch werden). So nutzen Sie grob Stelle in Ihrer app finden Sie unter der [**AllowFallbackToConsentlessPositions**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Geolocation.Geolocator.AllowFallbackToConsentlessPositions) -Methode in der [**Geolocator**](https://msdn.microsoft.com/library/windows/apps/windows.devices.geolocation.geolocator.aspx) -Klasse.
 
 ### <a name="step-2-get-the-users-location-and-register-for-changes-in-location-permissions"></a>Schritt2: Abrufen des Benutzerstandorts und Registrieren für Änderungen von Standortberechtigungen
 

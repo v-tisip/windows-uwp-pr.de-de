@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spieleinstellungen, Anzeigemodus, Systemanforderungen, Hardwareanforderungen, Mindestanforderungen an die Hardware, empfohlene Hardware, Datenschutzrichtlinie, Kontaktinformationen für den Support, App-Website, Supportinformationen
 ms.localizationpriority: medium
 ms.openlocfilehash: 9356c536946508c4531170cde8982e7b79c6e4f6
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6032841"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6263154"
 ---
 # <a name="enter-app-properties"></a>Eingeben von App-Eigenschaften
 
@@ -60,7 +60,7 @@ Geben Sie die URL der Webseite ein, auf der Ihre Kunden Support für die App erh
 
 ## <a name="game-settings"></a>Einstellungen für Spiele
 
-Dieser Abschnittwird nur angezeigt, wenn Sie als Kategorie des Produkts **Spiele** ausgewählt haben. Hier können Sie angeben, welche Features von Ihrem Spiel unterstützt werden. Die Informationen, die Sie in diesem Abschnitt angeben wird angezeigt werden, auf das Produkt-Store-Eintrag.
+Dieser Abschnittwird nur angezeigt, wenn Sie als Kategorie des Produkts **Spiele** ausgewählt haben. Hier können Sie angeben, welche Features von Ihrem Spiel unterstützt werden. Die Informationen, die Sie in diesem Abschnitt bieten erscheint die Produkt-Store-Eintrag.
 
 Wenn Ihr Spiel eine Multiplayer-Option unterstützt, müssen Sie die minimale und maximale Anzahl der Spieler für eine Sitzung angeben. Sie können nicht mehr als 1.000 minimale oder maximale Spieler eingeben.
 

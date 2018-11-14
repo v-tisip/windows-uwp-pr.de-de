@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f8699ee06da545e3b34711f496a887fd7aa2c935
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6046833"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6209435"
 ---
 # <a name="file-access-permissions"></a>Berechtigungen für den Dateizugriff
 
@@ -94,7 +94,7 @@ Das Installationsverzeichnis der Anwendung ist ein schreibgeschützter Speichero
 ### <a name="application-data-locations"></a>Speicherorte von Anwendungsdaten
 Die Ordner, in denen Ihre App Daten speichern kann. Diese Ordner (lokal, servergespeichert und temporär) werden nach Installation Ihrer Anwendung erstellt.
 
-Es gibt zwei wesentlichen Möglichkeiten, auf Dateien und Ordner in den Dateispeicherorten Ihrer app zuzugreifen:
+Es gibt zwei grundlegende Verfahren Zugriff auf Dateien und Ordner in den Dateispeicherorten Ihrer app:
 
 1.  Verwenden Sie die [**ApplicationData**](https://msdn.microsoft.com/library/windows/apps/br241587)-Eigenschaften, um einen Dateiordner abzurufen.
 
@@ -257,7 +257,7 @@ In der folgenden Tabelle sind weitere Speicherorte aufgeführt, auf die Sie durc
 | Ort | Funktion | Windows.Storage-API |
 |----------|------------|---------------------|
 | Alle Dateien, auf die der Benutzer Zugriff hat. Beispiel: Dokumente, Bilder, Fotos, Downloads, Desktop, OneDrive usw. | broadFileSystemAccess<br><br>Dies ist eine eingeschränkte Funktion. Bei der ersten Verwendung fordert das System den Benutzer auf, den Zugriff zuzulassen. Der Zugriff kann unter Einstellungen > Datenschutz > Dateisystem konfiguriert werden. Wenn Sie eine App an den Store übermitteln, die diese Funktion deklariert, müssen Sie zusätzliche Beschreibungen dazu bereitstellen, warum die App diese Funktion benötigt und wie sie diese verwenden wird.<br>Diese Funktion funktioniert für APIs im [**Windows.Storage**](https://msdn.microsoft.com/library/windows/apps/BR227346)-Namespace. | n.a. |
-| Dokumente | DocumentsLibrary <br><br>Hinweis: Sie müssen Ihrem App-Manifest Dateitypzuordnungen hinzufügen, die bestimmte Dateitypen deklarieren, auf die Ihre App an diesem Speicherort Zugriff hat. <br><br>Verwenden Sie diese Funktion, wenn Ihre App:<br>- Den plattformübergreifenden Offlinezugriff auf bestimmte OneDrive-Inhalte mit gültigen OneDrive-URLs oder Ressourcen-IDs ermöglicht.<br>-Speichert geöffneten Dateien auf OneDrive des Benutzers automatisch während offline | [KnownFolders.DocumentsLibrary](https://msdn.microsoft.com/library/windows/apps/br227152) |
+| Dokumente | DocumentsLibrary <br><br>Hinweis: Sie müssen Ihrem App-Manifest Dateitypzuordnungen hinzufügen, die bestimmte Dateitypen deklarieren, auf die Ihre App an diesem Speicherort Zugriff hat. <br><br>Verwenden Sie diese Funktion, wenn Ihre App:<br>- Den plattformübergreifenden Offlinezugriff auf bestimmte OneDrive-Inhalte mit gültigen OneDrive-URLs oder Ressourcen-IDs ermöglicht.<br>-Speichert geöffneten Dateien des Benutzers automatisch im OneDrive offline | [KnownFolders.DocumentsLibrary](https://msdn.microsoft.com/library/windows/apps/br227152) |
 | Musik     | MusicLibrary <br>Weitere Informationen finden Sie unter [Dateien und Ordner in den Musik-, Bild- und Videobibliotheken](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.MusicLibrary](https://msdn.microsoft.com/library/windows/apps/br227155) |    
 | Bilder  | PicturesLibrary<br> Weitere Informationen finden Sie unter [Dateien und Ordner in den Musik-, Bild- und Videobibliotheken](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.PicturesLibrary](https://msdn.microsoft.com/library/windows/apps/br227156) |  
 | Videos    | VideosLibrary<br>Weitere Informationen finden Sie unter [Dateien und Ordner in den Musik-, Bild- und Videobibliotheken](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md). | [KnownFolders.VideosLibrary](https://msdn.microsoft.com/library/windows/apps/br227159) |   

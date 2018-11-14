@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f37412ac88b001f412a1495f2b4efa029cf4d3a
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6047345"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6252345"
 ---
 # <a name="avoid-common-certification-failures"></a>Vermeiden allgemeiner Zertifizierungsfehler
 
@@ -21,7 +21,7 @@ ms.locfileid: "6047345"
 Lesen Sie diese Liste, und vermeiden Sie dadurch Probleme, die häufig die Zertifizierung von Apps verhindern oder nach der Veröffentlichung der App bei einer Stichprobenkontrolle auftreten können.
 
 > [!NOTE]
-> Werden Sie überprüfen Sie die [Microsoft Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies) , um sicherzustellen, dass Ihre app alle darin aufgeführten Anforderungen erfüllt.
+> Achten Sie darauf, überprüfen Sie die [Microsoft Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies) , um sicherzustellen, dass Ihre app alle darin aufgeführten Anforderungen erfüllt.
 
 -   Reichen Sie die App erst ein, wenn sie fertig ist. Sie können die Beschreibung Ihrer App gern nutzen, um auf geplante Features hinzuweisen. Achten Sie jedoch darauf, dass Ihre App keine unvollständigen Abschnitte, Links zu unfertigen Webseiten oder andere Elemente enthält, die Kunden darauf schließen lassen, dass sich die App in einem unvollständigen Zustand befindet.
 
@@ -33,7 +33,7 @@ Lesen Sie diese Liste, und vermeiden Sie dadurch Probleme, die häufig die Zerti
 
 -   [Stellen Sie die erforderlichen Infos](notes-for-certification.md) zum Verwenden der App bereit, z.B. Benutzername und Kennwort für ein Testkonto, wenn sich Benutzer bei einem Dienst anmelden müssen, oder geben Sie die erforderlichen Schritte zum Zugreifen auf versteckte oder gesperrte Features an.
 
--   Fügen Sie eine [URL zur Datenschutzrichtlinie](enter-app-properties.md#privacy-policy-url) , wenn Ihre app eine erfordert; z. B. wenn die app greift auf jeder Art von persönlichen Informationen auf irgendeine Weise oder dies anderweitig gesetzlich vorgeschrieben. Um zu ermitteln, ob Ihre app eine Datenschutzrichtlinie benötigt, überprüfen Sie die [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) und die [Microsoft Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies).
+-   Fügen Sie eine [URL zur Datenschutzrichtlinie](enter-app-properties.md#privacy-policy-url) , wenn Ihre app eine benötigt; z. B. wenn die app greift auf jeder Art von persönlichen Informationen auf irgendeine Weise oder dies anderweitig gesetzlich vorgeschrieben. Um zu ermitteln, ob Ihre app eine Datenschutzrichtlinie benötigt, überprüfen Sie die [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) und die [Microsoft Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies).
 
 -   Formulieren Sie die Beschreibung der App so, dass sie den Funktionsumfang der App genau darstellt. Unterstützung erhalten Sie in den Richtlinien zum [Verfassen einer ansprechenden App-Beschreibung](write-a-great-app-description.md).
 

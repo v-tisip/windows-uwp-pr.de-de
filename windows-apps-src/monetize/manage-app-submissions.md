@@ -9,18 +9,18 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, App-Übermittlungen
 ms.localizationpriority: medium
 ms.openlocfilehash: 76bc7932665e3f9893c6f0aa9644b9edc07a6dcf
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026735"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6152150"
 ---
 # <a name="manage-app-submissions"></a>Verwalten von App-Übermittlungen
 
 Mithilfe der Methoden der Microsoft Store-Übermittlungs-API können Sie Übermittlungen für Ihre Apps verwalten, einschließlich gradueller Paketrollouts. Eine Einführung in die Microsoft Store-Übermittlungs-API einschließlich der Voraussetzungen für die Verwendung der API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit MicrosoftStore-Diensten](create-and-manage-submissions-using-windows-store-services.md).
 
 > [!IMPORTANT]
-> Wenn Sie die Microsoft Store-Übermittlungs-API zum Erstellen einer Übermittlung für eine app verwenden, achten Sie darauf, dass Sie Sie weitere Änderungen an der Übermittlung ausschließlich mithilfe der API, anstatt Partner Center. Wenn Sie Partner Center verwenden, um eine Übermittlung zu ändern, die Sie ursprünglich mithilfe der API erstellt haben, wird nicht mehr ändern oder übernehmen die Übermittlung mithilfe der API werden. In einigen Fällen kann der Fehlerstatus der Übermittlung belassen werden, mit dem die Übermittlung nicht fortgesetzt werden kann. In diesem Fall müssen Sie die Übermittlung löschen und eine neue Übermittlung erstellen.
+> Wenn Sie die Microsoft Store-Übermittlungs-API zum Erstellen einer Übermittlung für eine app verwenden, achten Sie darauf, dass Sie Sie weitere Änderungen an der Übermittlung ausschließlich mithilfe der API, anstatt Partner Center. Wenn Sie Partner Center verwenden, um eine Übermittlung zu ändern, die Sie ursprünglich mithilfe der API erstellt haben, werden Sie nicht mehr in der Lage zu ändern oder übernehmen die Übermittlung mithilfe der API. In einigen Fällen kann der Fehlerstatus der Übermittlung belassen werden, mit dem die Übermittlung nicht fortgesetzt werden kann. In diesem Fall müssen Sie die Übermittlung löschen und eine neue Übermittlung erstellen.
 
 > [!IMPORTANT]
 > Sie können mit dieser API weder Übermittlungen für [Volumeneinkäufe über den Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen](../publish/organizational-licensing.md) veröffentlichen noch Übermittlungen für [Branchenanwendungen](../publish/distribute-lob-apps-to-enterprises.md) direkt an Unternehmen. Für beide Szenarien müssen Sie Partner Center verwenden, um die Übermittlung veröffentlichen.
@@ -127,7 +127,7 @@ Gehen Sie folgendermaßen vor, um eine Übermittlung für eine App zu erstellen.
     await blockBob.UploadFromStreamAsync(stream);
     ```
 
-5. Führen Sie folgende Methode aus, um [die App-Übermittlung zu committen](commit-an-app-submission.md). Hierdurch wird Partner Center darüber benachrichtigt, dass Sie Ihre Übermittlung fertig gestellt haben und dass der Updates für Ihr Konto jetzt angewendet werden soll.
+5. Führen Sie folgende Methode aus, um [die App-Übermittlung zu committen](commit-an-app-submission.md). Dies wird Partner Center Warnung an, dass Sie Ihre Übermittlung fertig gestellt haben und die Updates für Ihr Konto jetzt angewendet werden sollen.
 
     ```
     POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit
@@ -141,7 +141,7 @@ Gehen Sie folgendermaßen vor, um eine Übermittlung für eine App zu erstellen.
 
     Um den Status der Übermittlung zu überprüfen, zeigen Sie den Wert *status* im Antworttext an. Dieser Wert sollte von **CommitStarted** entweder in **PreProcessing** geändert worden sein, wenn die Anforderung erfolgreich war, oder in **CommitFailed**, wenn die Anforderung Fehler enthalten hat. Wenn Fehler aufgetreten sind, enthält das Feld *StatusDetails* Feld weitere Details zu den Fehlern.
 
-7. Nachdem das Commit erfolgreich abgeschlossen wurde, wird die Übermittlung zur Aufnahme an den Store gesendet. Sie können weiterhin die mithilfe der vorherigen Methode oder besuchen Sie Partner Center überwachen.
+7. Nachdem das Commit erfolgreich abgeschlossen wurde, wird die Übermittlung zur Aufnahme an den Store gesendet. Sie können weiterhin die mithilfe der vorherigen Methode, oder besuchen Partner Center überwachen.
 
 <span id="manage-gradual-package-rollout">
 
@@ -426,8 +426,8 @@ Diese Ressource enthält die Basiseintragsinformationen für eine App. Die Resso
 |  keywords                |  array       |  Ein Array von [keyword](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#keywords), um die Anzeige Ihrer App in Suchergebnissen zu unterstützen.    |
 |  licenseTerms                |    string     | Die optionalen [Lizenzbestimmungen](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#additional-license-terms) für Ihre App.     |
 |  privacyPolicy                |   String      |   Dieser Wert ist veraltet. Um festzulegen, oder die Datenschutzrichtlinien-URL für Ihre app zu ändern, müssen Sie dies auf der Seite " [Eigenschaften](../publish/enter-app-properties.md#privacy-policy-url) " im Partner Center tun. Sie können diesen Wert aus den Aufrufen an die Übermittlungs-API weglassen. Wenn Sie diesen Wert festlegen, wird er ignoriert werden.       |
-|  supportContact                |   string      |  Dieser Wert ist veraltet. Um festzulegen, oder den Support-Kontakt URL oder e-Mail-Adresse für Ihre app zu ändern, müssen Sie dies auf der Seite " [Eigenschaften](../publish/enter-app-properties.md#support-contact-info) " im Partner Center tun. Sie können diesen Wert aus den Aufrufen an die Übermittlungs-API weglassen. Wenn Sie diesen Wert festlegen, wird er ignoriert werden.        |
-|  websiteUrl                |   string      |  Dieser Wert ist veraltet. Um festzulegen, oder ändern Sie die URL der Webseite für Ihre app, müssen Sie dies auf der Seite " [Eigenschaften](../publish/enter-app-properties.md#website) " im Partner Center tun. Sie können diesen Wert aus den Aufrufen an die Übermittlungs-API weglassen. Wenn Sie diesen Wert festlegen, wird er ignoriert werden.      |    
+|  supportContact                |   string      |  Dieser Wert ist veraltet. Um festzulegen, oder die Support-Kontakt-URL oder e-Mail-Adresse für Ihre app zu ändern, müssen Sie dies auf der Seite " [Eigenschaften](../publish/enter-app-properties.md#support-contact-info) " im Partner Center tun. Sie können diesen Wert aus den Aufrufen an die Übermittlungs-API weglassen. Wenn Sie diesen Wert festlegen, wird er ignoriert werden.        |
+|  websiteUrl                |   string      |  Dieser Wert ist veraltet. Um festzulegen, oder die URL der Webseite für Ihre app zu ändern, müssen Sie dies auf der Seite " [Eigenschaften](../publish/enter-app-properties.md#website) " im Partner Center tun. Sie können diesen Wert aus den Aufrufen an die Übermittlungs-API weglassen. Wenn Sie diesen Wert festlegen, wird er ignoriert werden.      |    
 |  Beschreibung               |    string     |   Die [Beschreibung](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#description) für den App-Eintrag.   |     
 |  features               |    array     |  Ein Array von bis zu 20Zeichenfolgen, die die [Features](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#app-features) für Ihre App auflisten.     |
 |  releaseNotes               |  string       |  Die [Versionshinweise](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#release-notes) für Ihre App.    |
@@ -639,7 +639,7 @@ Diese Ressource enthält [Einstellungen für graduelle Paketrollouts](#manage-gr
 | fallbackSubmissionId    |  string   |  Die ID der Übermittlung, die die Kunden erhalten, die keine Pakete im Rahmen des graduellen Paketrollouts erhalten.   |          
 
 > [!NOTE]
-> Die Werte *PackageRolloutStatus* und *FallbackSubmissionId* werden von Partner Center zugewiesen und sollen nicht vom Entwickler festgelegt werden. Wenn Sie diese Werte in einen Anforderungstext einfügen, werden diese Werte ignoriert.
+> Die Werte *PackageRolloutStatus* und *FallbackSubmissionId* werden durch Partner Center zugewiesen und sollen nicht vom Entwickler festgelegt werden. Wenn Sie diese Werte in einen Anforderungstext einfügen, werden diese Werte ignoriert.
 
 <span id="trailer-object" />
 
@@ -736,7 +736,7 @@ Die folgenden Werte stellen die verfügbaren Preisstufen in der [Ressource für 
 Die folgenden Werte stellen das Verhalten der App für die Unternehmenslizenzierung dar. Weitere Informationen zu diesen Optionen finden Sie unter [Lizenzierungsoptionen für Unternehmen](https://msdn.microsoft.com/windows/uwp/publish/organizational-licensing).
 
 > [!NOTE]
-> Obwohl Sie die Lizenzierungsoptionen für Unternehmen für eine App-Übermittlung über der Übermittlungs-API konfigurieren können, können Sie diese API nicht verwenden, um Übermittlungen für [Volumenkäufe über den Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen](../publish/organizational-licensing.md) zu veröffentlichen. Um Übermittlungen an den Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen zu veröffentlichen, müssen Sie Partner Center verwenden.
+> Obwohl Sie die Lizenzierungsoptionen für Unternehmen für eine App-Übermittlung über der Übermittlungs-API konfigurieren können, können Sie diese API nicht verwenden, um Übermittlungen für [Volumenkäufe über den Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen](../publish/organizational-licensing.md) zu veröffentlichen. Um Übermittlungen an den Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen zu veröffentlichen, müssen Sie die Partner Center verwenden.
 
 
 | Wert           |  Beschreibung      |

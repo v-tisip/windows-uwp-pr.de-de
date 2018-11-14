@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 02c856fd697bef958eb45a0f0f133e06f63a7f51
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6039110"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6256681"
 ---
 # <a name="binding-markup-extension"></a>{Binding}-Markuperweiterung
 
@@ -22,7 +22,7 @@ ms.locfileid: "6039110"
 
 **Hinweis:** allgemeine Informationen zur Verwendung von Daten Bindung in Ihrer app mit **{Binding}** (und die für einen vollständigen Vergleich zwischen **{X: Bind}** und **{Binding}**), finden Sie unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
-Die Markuperweiterung **{Binding}** wird auf Eigenschaften von Steuerelementen zu Werte aus einer Datenquelle wie z. B. Code verwendet. description: Die **{Binding}**-Markuperweiterung wird beim Laden von XAML in eine Instanz der [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)-Klasse konvertiert. Dieses Bindungsobjekt erhält einen Wert von der Eigenschaft einer Datenquelle und leitet ihn an die Eigenschaft des Steuerelements weiter. Das Bindungsobjekt kann optional konfiguriert werden, um Änderungen am Wert der Datenquelleneigenschaft zu beobachten und sich basierend auf diesen Änderungen zu aktualisieren. Es kann optional auch so konfiguriert werden, dass Änderungen am Wert des Steuerelements per Push zurück an die Quelleigenschaft gesendet werden. Die als Ziel einer Datenbindung verwendete Eigenschaft muss eine Abhängigkeitseigenschaft sein. Weitere Informationen finden Sie unter [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md).
+Die Markuperweiterung **{Binding}** wird auf Eigenschaften von Steuerelementen, um Werte aus einer Datenquelle, z. B. Code verwendet. description: Die **{Binding}**-Markuperweiterung wird beim Laden von XAML in eine Instanz der [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)-Klasse konvertiert. Dieses Bindungsobjekt erhält einen Wert von der Eigenschaft einer Datenquelle und leitet ihn an die Eigenschaft des Steuerelements weiter. Das Bindungsobjekt kann optional konfiguriert werden, um Änderungen am Wert der Datenquelleneigenschaft zu beobachten und sich basierend auf diesen Änderungen zu aktualisieren. Es kann optional auch so konfiguriert werden, dass Änderungen am Wert des Steuerelements per Push zurück an die Quelleigenschaft gesendet werden. Die als Ziel einer Datenbindung verwendete Eigenschaft muss eine Abhängigkeitseigenschaft sein. Weitere Informationen finden Sie unter [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md).
 
 **{Binding}** weist die gleiche Rangfolge für Abhängigkeitseigenschaften wie ein lokaler Wert auf. So wird beim Festlegen eines lokalen Werts im imperativen Code der Effekt aller im Markup festgelegten **{Binding}**-Objekte entfernt.
 
@@ -81,7 +81,7 @@ Weitere Informationen zur Zeichenfolgensyntax für einen Eigenschaftspfad, zu Ei
 | [**TargetNullValue**](https://msdn.microsoft.com/library/windows/apps/dn279347) | Gibt einen Wert an, der angezeigt wird, wenn der Quellwert aufgelöst werden kann, aber explizit **null** ist. |
 | [**UpdateSourceTrigger**](https://msdn.microsoft.com/library/windows/apps/dn279350) | Gibt den Zeitpunkt für Aktualisierungen von Bindungsquellen an. Wenn keine Angabe erfolgt, lautet der Standardwert **Default**. |
 
-**Hinweis:** Wenn Sie Markup von **{X: Bind}** auf **{Binding}** Konvertierung, beachten Sie Werte die Unterschiede im Standardmodus für die **Mode** -Eigenschaft.
+**Hinweis:** Wenn sind Markup **{X: Bind}** zu konvertieren **{Binding}** Sie beachten Sie die Unterschiede im Werte, die für die Eigenschaft **Modus** .
 
 [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) und **ConverterLanguage** hängen mit der Konvertierung eines Werts oder Typs aus der Bindungsquelle in einen mit der Bindungszieleigenschaft kompatiblen Typ oder Wert zusammen. Weitere Informationen und Beispiele finden Sie im Abschnitt „Datenkonvertierungen“ unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
 

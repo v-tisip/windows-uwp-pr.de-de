@@ -9,18 +9,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 269d51ec6005bcd61ac01a66d72c34bdb2901add
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035356"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6259089"
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>Beispieldaten für die Entwurfsoberfläche und Prototyperstellung
 =============================================================================================
 
 
 
-**Hinweis:** den Grad, zu dem Sie Beispieldaten – und wie viel es Ihnen helfen – abhängig, ob die Bindungen [{Binding} Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782) oder der [{X: Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783)verwenden. Die in diesem Thema beschriebenen Verfahren basieren auf der Verwendung eines [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) und eignen sich deshalb nur für **{Binding}**. Wenn Sie jedoch **{x:Bind}** verwenden, zeigen die Bindungen zumindest Platzhalterwerte auf der Entwurfsoberfläche an (selbst für Elementsteuerelemente). Deshalb besteht ein geringerer Bedarf an Beispieldaten.
+**Hinweis:** der Grad, zu dem Sie Beispieldaten – und wie viel wird – hängen davon ab, ob die Bindungen [{Binding} Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204782) oder der [{X: Bind}-Markuperweiterung](https://msdn.microsoft.com/library/windows/apps/Mt204783). Die in diesem Thema beschriebenen Verfahren basieren auf der Verwendung eines [**DataContext**](https://msdn.microsoft.com/library/windows/apps/BR208713) und eignen sich deshalb nur für **{Binding}**. Wenn Sie jedoch **{x:Bind}** verwenden, zeigen die Bindungen zumindest Platzhalterwerte auf der Entwurfsoberfläche an (selbst für Elementsteuerelemente). Deshalb besteht ein geringerer Bedarf an Beispieldaten.
 
 Möglicherweise ist es nicht möglich oder nicht erwünscht (z.B. aus Gründen des Datenschutzes oder der Leistung), dass Ihre App Livedaten auf der Entwurfsoberfläche von Microsoft Visual Studio oder Blend für Visual Studio anzeigt. Es gibt mehrere Möglichkeiten, Entwurfszeit-Beispieldaten zu verwenden, damit die Steuerelemente mit Daten aufgefüllt werden (sodass Sie das Layout, die Vorlagen und andere visuelle Eigenschaften der App bearbeiten können). Beispieldaten können auch hilfreich sein und Zeit sparen, wenn Sie eine App als Skizze (oder Prototyp) erstellen. Sie können zur Laufzeit Beispieldaten in der Skizze oder im Prototyp verwenden, um Ihre Ideen zu veranschaulichen, ohne echte Livedaten nutzen zu müssen.
 

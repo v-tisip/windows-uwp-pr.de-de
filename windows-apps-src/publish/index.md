@@ -10,15 +10,15 @@ keywords: Windows10, UWP, Veröffentlichung, veröffentlichen, Verkauf, verkaufe
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
 ms.localizationpriority: medium
 ms.openlocfilehash: 229e1eab05e392a4091c9eee5bc9af948c678d96
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6049451"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6200607"
 ---
 # <a name="publish-windows-apps-and-games"></a>Veröffentlichen von Windows-Apps und -Spielen  
  
-[Partner Center](https://partner.microsoft.com/dashboard) können Sie Ihre apps und Spiele im Microsoft Store veröffentlichen. <a href="//developer.microsoft.com/store/register">Registrieren Sie sich noch heute.</a>
+Sie können [Partner Center](https://partner.microsoft.com/dashboard) verwenden, um Ihre apps und Spiele im Microsoft Store zu veröffentlichen. <a href="//developer.microsoft.com/store/register">Registrieren Sie sich noch heute.</a>
 <br>
 <ul id="cardtypes-K" class="cardsK panelContent">
     <li>

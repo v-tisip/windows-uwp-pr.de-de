@@ -9,24 +9,24 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store Services SDK, A/B-Tests, Experimente
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d1cdb80a2278850f18cecc631fef0b5dff0fefc
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6029049"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6203785"
 ---
 # <a name="manage-your-experiment-in-partner-center"></a>Verwalten des Experiments im Partner Center
 
-Nachdem Sie [das Experiment im Partner Center zu definieren](define-your-experiment-in-the-dev-center-dashboard.md) und [Ihrer App programmiert haben](code-your-experiment-in-your-app.md)sind Sie bereit zum Aktivieren des Experiments und Partner Center zum Prüfen der Ergebnisse Ihres Experiments verwenden. Nach Abrufen aller benötigten Daten können Sie das Experiment beenden und festlegen, ob die Variablenwerte in der Steuerungsvariation für alle Apps weiter verwendet werden sollen oder die Variablenwerte einer anderen Variation verwendet werden sollen.
+Nachdem Sie [Ihr Experiment im Partner Center definiert](define-your-experiment-in-the-dev-center-dashboard.md) und [Ihrer App programmiert haben](code-your-experiment-in-your-app.md)sind Sie bereit zum Aktivieren des Experiments und Partner Center zum Prüfen der Ergebnisse Ihres Experiments verwenden. Nach Abrufen aller benötigten Daten können Sie das Experiment beenden und festlegen, ob die Variablenwerte in der Steuerungsvariation für alle Apps weiter verwendet werden sollen oder die Variablenwerte einer anderen Variation verwendet werden sollen.
 
 > [!NOTE]
-> Wenn Sie ein Experiment aktivieren, beginnt Partner Center umgehend mit der Erfassung von Daten aus allen apps, die zum Protokollieren von Daten für Ihr Experiment instrumentiert sind. Es kann jedoch mehrere Stunden experimentdaten im Partner Center dauern.
+> Wenn Sie ein Experiment aktivieren, beginnt Partner Center umgehend mit der Erfassung von Daten aus allen apps, die zum Protokollieren von Daten für Ihr Experiment instrumentiert sind. Es kann jedoch experimentdaten im Partner Center mehrere Stunden dauern.
 
 Eine exemplarische Vorgehensweise, die den gesamten Erstellungs- und Ausführungsprozess für ein Experiment veranschaulicht, finden Sie unter [Erstellen und Durchführen eines ersten Experiments mit A/B-Tests](create-and-run-your-first-experiment-with-a-b-testing.md).
 
 ## <a name="activate-your-experiment"></a>Aktivieren Ihres Experiments
 
-Wenn Sie mit den Parametern für Ihr Experiment im Partner Center zufrieden sind und Ihr app-Code aktualisiert haben, können Sie Ihr Experiment aktivieren, damit Sie Datenerfassung von Ihrer app gestartet werden können. Wenn das Experiment aktiv ist, kann Ihre app variationswerte abrufen und Anzeige-und umwandlungsereignisse an das Partner Center melden.
+Wenn Sie mit den Parametern für Ihr Experiment im Partner Center zufrieden sind und Ihr app-Code aktualisiert haben, können Sie Ihr Experiment aktivieren, damit Sie mit der Datenerfassung von Ihrer app beginnen können. Wenn das Experiment aktiv ist, kann Ihre app variationswerte abrufen und Anzeige-und umwandlungsereignisse an das Partner Center melden.
 
 1. Melden Sie sich im [Partner Center](https://partner.microsoft.com/dashboard) an.
 2. Wählen Sie unter **Ihre Apps** die App mit dem Experiment, das Sie aktivieren möchten.
@@ -52,7 +52,7 @@ Wenn Sie mit den Parametern für Ihr Experiment im Partner Center zufrieden sind
 
 ## <a name="complete-your-experiment"></a>Beenden Ihres Experiments
 
-1. Im Partner Center zur experimentseite zurück. Einzelheiten dazu finden Sie im vorherigen Abschnitt.
+1. Geben Sie im Partner Center zur experimentseite zurück. Einzelheiten dazu finden Sie im vorherigen Abschnitt.
 2. Führen Sie im Abschnitt **Ergebniszusammenfassung** eine der folgenden Aktionen durch:
   * Klicken Sie zum Beenden des Experiments und zum weiteren Verwenden der Variablenwerte der Steuerungsvariation für Ihre App auf **Beibehalten**.
   * Klicken Sie zum Beenden des Experiments und zum Verwenden der Variablenwerte einer anderen Variation für Ihre App unter der Variation, zu der Sie wechseln möchten, auf **Wechseln**.

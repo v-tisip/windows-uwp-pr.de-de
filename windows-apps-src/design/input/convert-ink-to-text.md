@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 83142b0a3b24e25f8e7a922d800262f505cd8cc2
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6027916"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6151960"
 ---
 # <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a>Erkennen von Windows Ink-Strichen als Text und Formen
 
@@ -475,7 +475,7 @@ Im Abschnitt der Eigenschaften [**InkRecognizer.Name**](https://msdn.microsoft.c
 
 Ihre App kann den Satz der installierten Schrifterkennungsmodule abfragen und eines davon verwenden, oder der Benutzer wählt die bevorzugte Sprache aus.
 
-**Hinweis:**  Benutzer können eine Liste der installierten Sprachen anzeigen, indem Sie zum wechseln **Einstellungen –&gt; Zeit & Sprache**. Die installierten Sprachen werden unter **Sprachen** aufgeführt.
+**Hinweis:**  Benutzer können eine Liste der installierten Sprachen anzeigen, indem Sie auf **Einstellungen –&gt; Zeit & Sprache**. Die installierten Sprachen werden unter **Sprachen** aufgeführt.
 
 So installieren Sie ein neues Sprachpaket und aktivieren die Schrifterkennung für die Sprache
 

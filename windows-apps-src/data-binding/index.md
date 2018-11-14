@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 37193d28bbb060bc7e315a15dd83fc0084a6b861
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6049737"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6197408"
 ---
 # <a name="data-binding"></a>Datenbindung
 
@@ -25,4 +25,4 @@ Die Datenbindung ist eine Methode, mit der die Benutzeroberfläche Ihrer App Dat
 | [Datenbindung im Detail](data-binding-in-depth.md) | In diesem Thema werden die Datenbindungsfeatures ausführlich beschrieben. |
 | [Beispieldaten für die Entwurfsoberfläche und Prototyperstellung](displaying-data-in-the-designer.md) | Es gibt mehrere Möglichkeiten, Entwurfszeit-Beispieldaten zu verwenden, damit Steuerelemente im Visual Studio-Designer mit Daten aufgefüllt werden (sodass Sie das Layout, die Vorlagen und andere visuelle Eigenschaften der App bearbeiten können). Beispieldaten können auch hilfreich sein und Zeit sparen, wenn Sie eine App als Skizze (oder Prototyp) erstellen. Sie können zur Laufzeit Beispieldaten in der Skizze oder im Prototyp verwenden, um Ihre Ideen zu veranschaulichen, ohne echte Livedaten nutzen zu müssen. |
 | [Binden von hierarchischen Daten und Erstellen einer Master/Details-Ansicht](how-to-bind-to-hierarchical-data-and-create-a-master-details-view.md) | Sie können eine Master/Details-Ansicht mit mehreren Ebenen (auch bekannt als Listen-Details-Ansicht) von hierarchischen Daten erstellen, indem Sie Elementsteuerelemente an [<strong>CollectionViewSource</strong>](https://msdn.microsoft.com/library/windows/apps/BR209833)-Instanzen binden, die in einer Kette verbunden sind. |
-| [Datenbindungen und MVVM](data-binding-and-mvvm.md) | Dieses Thema beschreibt das Architektur Entwurfsmuster Model-View-ViewModel (MVVM)-Benutzeroberfläche. Binden von Daten ist das Herzstück des MVVM und ermöglicht die Kopplung zwischen UI und nicht-UI-Code. |
+| [Datenbindungen und MVVM](data-binding-and-mvvm.md) | In diesem Thema wird das Model-View-ViewModel (MVVM)-UI-Architektur-Muster. Die Datenbindung ist das Herzstück des MVVM und ermöglicht die Kopplung zwischen UI und nicht-UI-Code. |

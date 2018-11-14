@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Videos, GDC, build
 ms.localizationpriority: medium
 ms.openlocfilehash: 83865ca17801d51fdd611e6ad0187da98a4bec9e
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6041438"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6206511"
 ---
 # <a name="game-development-videos"></a>Videos zur Spieleentwicklung
 
@@ -25,10 +25,10 @@ Dies ist eine Liste von Videos zur Spieleentwicklung von wichtigen Konferenzen w
 
 Was ist LiveOps? Hier erfahren Sie, warum Entwickler live-Spiele erstellen: [Ihr Spiel für alle Benutzer mit PlayFab (Interview)](https://channel9.msdn.com/Shows/Level-Up/Your-Game-For-Everyone-with-PlayFab) - James Gwertzman, David Holladay
 
-* [Kleine Fee Lean Ansatz für die Entwicklung von Spielen - wie eine von Indie Studio Treffer Spiel nach nur 8 Wochen vergrößert wurde](https://channel9.msdn.com/Shows/Level-Up/Fluffy-Fairys-Lean-Approach-to-Game-Development-How-an-Indie-Studio-Grew-a-Hit-Game-After-Only-8-W) - Oliver Löffler aus kleine Fee
+* [Kleine Fee Lean Ansatz für die Entwicklung von Spielen - wie eine von Indie Studio Treffer Spiel nach nur 8 Wochen vergrößert wurde](https://channel9.msdn.com/Shows/Level-Up/Fluffy-Fairys-Lean-Approach-to-Game-Development-How-an-Indie-Studio-Grew-a-Hit-Game-After-Only-8-W) - Oliver Löffler von kleine Fee
 * [Tag 1: Ihr Spiel überall](https://channel9.msdn.com/Shows/Level-Up/Your-game-everywhere-PlayFab) -Brendan Vanous
 * [Tag 2: Ihr Spiel für alle Benutzer mit PlayFab (Präsentation)](https://channel9.msdn.com/Shows/Level-Up/Your-Game-For-Everyone-With-PlayFab-Theater-Presentation) -Brendan Vanous
-* [Tag 3: Ihr Spiel jeder Hinsicht es wird wiedergegeben](https://channel9.msdn.com/Shows/Level-Up/Your-game-every-way-its-played-PlayFab-Theater-Presentation) -Brendan Vanous
+* [Tag 3: Ihr Spiel jeder Hinsicht, es wird wiedergegeben](https://channel9.msdn.com/Shows/Level-Up/Your-game-every-way-its-played-PlayFab-Theater-Presentation) -Brendan Vanous
 
 ### <a name="azure-cloud-services"></a>Azure-Cloud-Dienste
 
@@ -48,11 +48,11 @@ Was ist LiveOps? Hier erfahren Sie, warum Entwickler live-Spiele erstellen: [Ihr
 
 ### <a name="visual-studio-team-services-vsts-and-app-center"></a>Visual Studio Team Services (VSTS) und App-Center
 
-Was ist VSTS? Hier erfahren Sie, wie in der Buildprozess DevOps implementiert: [Einführung in Visual Studio Team Services](https://channel9.msdn.com/Shows/Level-Up/Introduction-to-Visual-Studio-Team-Services) - Dmitry Lyalin, James Montemagno
+Was ist VSTS? Hier erfahren Sie, wie DevOps im Buildprozess implementiert: [Einführung in Visual Studio Team Services](https://channel9.msdn.com/Shows/Level-Up/Introduction-to-Visual-Studio-Team-Services) - Dmitry Lyalin, James Montemagno
 
-* [Planung und die Erstellung von Spielen mit leistungsfähige VSTS: agil, CI & CD-End-to-End-Demo](https://channel9.msdn.com/Shows/Level-Up/Planning-and-building-games-using-the-full-power-of-VSTS-Agile-CI--CD-end-to-end-demo) -Rogan Ferguson
-* [Erstellen Sie Ihrem nächste Spiel von Visual Studio Team Services und Unity-Teams Cloud-Build unterstützt](https://channel9.msdn.com/Shows/Level-Up/Build-your-next-game-powered-by-Visual-Studio-Team-Services-and-Unity-Teams-cloud-build-Theater) - Dmitry Lyalin
-* [Kontinuierlich testen, verteilen und überwachen Sie Ihr Spiel mit dem App-Sicherheitscenter](https://channel9.msdn.com/Shows/Level-Up/Continuously-Test-distribute-and-monitor-your-game-with-App-Center-Theater-Presentation) - Whitepaper James
+* [Planung und Erstellen von Spielen mit leistungsfähige VSTS: agil, CI & CD-End-to-End-Demo](https://channel9.msdn.com/Shows/Level-Up/Planning-and-building-games-using-the-full-power-of-VSTS-Agile-CI--CD-end-to-end-demo) -Rogan Ferguson
+* [Erstellen von Ihrem nächsten Spiel von Visual Studio Team Services und Unity-Teams Cloud-Build unterstützt](https://channel9.msdn.com/Shows/Level-Up/Build-your-next-game-powered-by-Visual-Studio-Team-Services-and-Unity-Teams-cloud-build-Theater) - Dmitry Lyalin
+* [Kontinuierlich testen, verteilen und überwachen Sie Ihr Spiel mit App-Center](https://channel9.msdn.com/Shows/Level-Up/Continuously-Test-distribute-and-monitor-your-game-with-App-Center-Theater-Presentation) - James Whitepaper
 * [Der CI-CD-pipeline für Node.js, Python, .NET, Go, Ruby, oder Java - in Minuten Setup](https://channel9.msdn.com/Shows/Level-Up/Setup-your-CICD-pipeline-for-Nodejs-Python-NET-Go-Ruby-or-Java-in-Minutes) - Abel Wang
 * [Agile Tools Satz mit VSTS](https://channel9.msdn.com/Shows/Level-Up/Agile-tooling-set-with-VSTS) - Rogan Ferguson, James Montemagno
 
@@ -69,33 +69,33 @@ Neu bei Verwaltungssysteme Version? Einführung in Git und Git virtuellen Dateis
 
 ### <a name="game-development-experiences"></a>Entwicklung von Spielen Umgebungen
 
-* [Photogrammetry und Scannen in Forza Motorsport 7 Laser](https://channel9.msdn.com/Shows/Level-Up/Photogrammetry-and-Laser-Scanning-in-Forza-Motorsport-7-Theater-Presentation-1) - Travis Gosnell
+* [Photogrammetry und Überprüfung in Forza Motorsport 7 Laser](https://channel9.msdn.com/Shows/Level-Up/Photogrammetry-and-Laser-Scanning-in-Forza-Motorsport-7-Theater-Presentation-1) - Travis Gosnell
 * [Gebäude Astroneer: neue Diagramm und schwierige Kurse](https://channel9.msdn.com/Shows/Level-Up/Building-Astroneer-Charting-new-and-challenging-courses) -Brendan Wilson
 
 ### <a name="microsoft-store"></a>Microsoft Store
 
-* [Microsoft Store: wie Sie die Xbox One und Windows 10-Benutzer erreichen können](https://channel9.msdn.com/Shows/Level-Up/Microsoft-Store-How-You-Can-Reach-Xbox-One-and-Windows-10-users) -anderem Zamora
-* [Warum Candy Crush unter Windows 10 und im Microsoft Store](https://channel9.msdn.com/Shows/Level-Up/Why-Candy-Crush-on-Windows-10-and-in-Microsoft-Store) - Alex von Roth von King
+* [Microsoft Store: wie Xbox One und Windows 10-Benutzer erreichen](https://channel9.msdn.com/Shows/Level-Up/Microsoft-Store-How-You-Can-Reach-Xbox-One-and-Windows-10-users) -anderem Zamora
+* [Warum Candy Crush, unter Windows 10 und im Microsoft Store](https://channel9.msdn.com/Shows/Level-Up/Why-Candy-Crush-on-Windows-10-and-in-Microsoft-Store) - Alex von Roth von King
 
 ### <a name="mixed-reality"></a>Mixed Reality
 
-* [Erstellen von Windows MR-Apps mit Unity](https://channel9.msdn.com/Shows/Level-Up/Building-Windows-MR-Apps-with-Unity) - Jaime Lino
-* [Die AR Cloud: Warum die Zukunft von MR kein Gerät ist, ist es alle](https://channel9.msdn.com/Shows/Level-Up/The-AR-Cloud-Why-the-future-of-MR-is-not-a-device-itsall-of-them) -Jesse McCulloch
+* [Erstellen von Windows-MR-Apps mit Unity](https://channel9.msdn.com/Shows/Level-Up/Building-Windows-MR-Apps-with-Unity) - Jaime Lino
+* [Die AR-Cloud: Warum die Zukunft von MR kein Gerät ist, ist es alle](https://channel9.msdn.com/Shows/Level-Up/The-AR-Cloud-Why-the-future-of-MR-is-not-a-device-itsall-of-them) -Jesse McCulloch
 
 ## <a name="game-accessibility-conference-2018"></a>Barrierefreiheit von Spielen Konferenz 2018
 
-* [Suchen hell. 2017 des Spiels Eingabehilfen setzt](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Looking-Bright-2017s-Game-Accessibility-Advances) - Ian Hamilton, Eingabehilfen Industry Experte
-* [Die CVAA und welche Bedeutung für Spiele Zugriff](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-The-CVAA-and-What-it-Means-for-Gaming-Access) -Karen Petlz Strauss aus der Federal Communications Commission
+* [Setzt den suchen hell. 2017 des Spiels Eingabehilfen](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Looking-Bright-2017s-Game-Accessibility-Advances) - Ian Hamilton, Eingabehilfen Industry Experte
+* [Die CVAA und welche Bedeutung für Gaming-Zugriff](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-The-CVAA-and-What-it-Means-for-Gaming-Access) -Karen Petlz Strauss aus der Federal Communications Commission
 * [Ich habe mein Spiel Blind zugegriffen werden – Sie kann nicht glauben, was als Nächstes passiert ist …](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-I-Made-My-Game-Blind-Accessible--You-Wont-Believe-What-Happened-Next) -Michelle Martin von MetalPop spielen
 * [Kognitive Eingabehilfen Designmöglichkeiten und Musik Bildungseinrichtungen für Autism](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Cognitive-Accessibility-Design-Choices-and-Music-Education-for-Autism) - Lori Landay aus der Berklee Ausbildung von Musik
 * [Ramping Eingabehilfen](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Ramping-Up-Accessibility) - Karen Stevens von EA Sport
-* Eingabehilfen für die modernen spielen [. Ändern Unterstützung zur Projektmappe](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Modern-Game-Accessibility-Changing-Sympathy-to-Solution) -Kevin Keeker aus Playstation und Sam Thompson von Sony World Wide Studios
+* [Moderne Barrierefreiheit von Spielen. Ändern Unterstützung Projektmappe](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Modern-Game-Accessibility-Changing-Sympathy-to-Solution) -Kevin Keeker von Playstation und Sam Thompson von Sony World Wide Studios
 * [Wiedergabe Mainstream Videospiele ohne erster](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Playing-Mainstream-Video-Games-Without-Sight) - SightlessKombat, Eingabehilfen tun
 * [Wie verbessert Community Zusammenarbeit Development](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-How-Community-Collaboration-Improves-Development) - Jason Canam von Haushalten spielen
-* [Wie Live Streaming sorgt dafür, nächste Ebene Aufnahme dass](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Beyond-Gaming-How-Live-Streaming-Brings-Next-Level-Inclusion) -Tara Voelker aus Mixer
+* [Wie Live-Streaming sorgt dafür, weiter Ebene Aufnahme dass](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Beyond-Gaming-How-Live-Streaming-Brings-Next-Level-Inclusion) -Tara Voelker von Mixer
 * [Alle Gehörlose Spieler möchten haben einige Spaß macht](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-All-Deaf-Gamers-Wanna-Do-is-Have-Some-Fun) - Panel Lautsprecher: Chris Robinson und Kristen Piersa, Eingabehilfen ist. Michael Anthony von Microsoft
 * [Ein starken Liebe Buchstaben der Branche Spiele](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-A-Fraught-Love-Letter-to-the-Games-Industry) - Kirsche Thompson Eingabehilfen tun
-* [Verlauf der barrierefreie Spiele](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Accessible-Gaming-History) - Barrie Ellis von OneSwitch und Special Effect
+* [Verlauf für barrierefreie Spiele](https://channel9.msdn.com/Shows/Level-Up/GAConf-2018-Accessible-Gaming-History) - Barrie Ellis von OneSwitch und Special Effect
 
 ## <a name="build-2017-videos"></a>Build 2017 videos
 
@@ -108,8 +108,8 @@ Neu bei Verwaltungssysteme Version? Einführung in Git und Git virtuellen Dateis
 * [D3D12-Leistung Leistungsoptimierung und-Debuggen mit PIX und GPUValidation](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-003) – Shawn Hargreaves, Max McMullen
 * [Spielmodus und die Weiterentwicklung der plattformübergreifenden UWP GameDevelopment](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-004) – Erik Walston
 * [Xbox Live für AllGame](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-005) – Brian Tyler
-* [Erfüllen der zusammengeführten Microsoft Store für Windows-AndXbox](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-006) - Krupa Poobala-Chandran
-* [Windows Holographic Rendering: One SDK to Target VR and AREcosystems](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-008) - Alex Pfaffe, Alex Turner
+* [Erfüllen Sie die zusammengeführten Microsoft Store für Windows-AndXbox](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-006) - Krupa Poobala-Chandran
+* [Hologrammen: ein SDK für VR- und AREcosystems](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-008) – Alex Pfaffe, Alex Tuner
 * [Erreichen mehr Spielern über Xbox-Eingabehilfen auf Xbox One AndPC](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-009) – Evelyn Thomas
 
 ## <a name="gdc-2015-game-dev-session-videos"></a>Videos zu GDC2015-Spieleentwicklersitzungen

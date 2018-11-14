@@ -9,15 +9,15 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store Services SDK, A/B-Tests, Experimente
 ms.localizationpriority: medium
 ms.openlocfilehash: 19a59110fa094aeae3d40dca1372fde9889c108e
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6047801"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6190165"
 ---
 # <a name="create-an-experiment-project-in-partner-center"></a>Erstellen eines experimentprojekts im Partner Center
 
-Erste Schritte mit experimentieren, erstellen Sie ein Experiment- [Projekt](run-app-experiments-with-a-b-testing.md#terms) für Ihre app im Partner Center und definieren Sie die remotevariablen, die Ihre app zugreifen kann.
+Experimente einsteigen, erstellen Sie ein Experiment- [Projekt](run-app-experiments-with-a-b-testing.md#terms) für Ihre app im Partner Center, und definieren Sie die remotevariablen, die Ihre app zugreifen kann.
 
 Die folgenden Anweisungen beschreiben die wichtigsten Schritte für die Erstellung eines Projekts. Eine ausführliche Erläuterung, die den gesamten Erstellungs- und Ausführungsprozess für ein Projekt und die Durchführung eines Experiments veranschaulicht, finden Sie unter [Erstellen und Durchführen eines ersten Experiments mit A/B-Tests](create-and-run-your-first-experiment-with-a-b-testing.md).
 
@@ -32,7 +32,7 @@ Die folgenden Anweisungen beschreiben die wichtigsten Schritte für die Erstellu
   1. Falls der Abschnitt **Remotevariablen** reduziert ist, klicken Sie in der Abschnittsüberschrift auf **Anzeigen**.
   2. Klicken Sie auf **Variable hinzufügen**, um jede neue Variable zu erstellen, die für jedes Experiment in diesem Projekt verfügbar sein soll, und geben Sie den Variablennamen und den Standardwert der Variablen ein.
   3. Wenn Sie das Hinzufügen von Variablen beendet haben, klicken Sie auf **Speichern**.
-3. Notieren Sie im Abschnitt **SDK-Integration** den Wert der [Projekt-ID](run-app-experiments-with-a-b-testing.md#terms). Wenn müssen Sie [Ihrer App programmiert haben](code-your-experiment-in-your-app.md), Sie verweisen diese Projekt-ID in Ihrem Code damit Sie Variantendaten empfangen sowie Anzeige-und umwandlungsereignisse an Partner Center melden können.
+3. Notieren Sie im Abschnitt **SDK-Integration** den Wert der [Projekt-ID](run-app-experiments-with-a-b-testing.md#terms). Wenn müssen Sie [Ihrer App programmiert haben](code-your-experiment-in-your-app.md), Sie verweisen diese Projekt-ID in Ihrem Code Variantendaten empfangen und Anzeige-und umwandlungsereignisse an das Partner Center melden können.
 
 > [!NOTE]
 > Sie können keine Remotevariablen bearbeiten, hinzufügen oder entfernen, während ein Experiment im Projekt aktiv ist. Diese Einschränkung hilft, die Integrität der Daten der Steuerelementgruppe für das aktive Experiment zu schützen.

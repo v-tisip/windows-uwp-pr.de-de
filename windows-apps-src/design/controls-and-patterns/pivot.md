@@ -13,17 +13,17 @@ dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 386fba3cec00de6c443daa60409fe3bb74621fa1
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024068"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6186521"
 ---
 # <a name="pivot"></a>Pivot
 
 Das [Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) -Steuerelement kann zwischen einer kleinen Gruppe Inhaltsabschnitte Touch Wischen.
 
-> **Wichtige APIs**: [Pivot-Klasse](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [NavigationView-Klasse](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
+> **Wichtige APIs**: [Pivot-Klasse](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), die [NavigationView-Klasse](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
 
 ## <a name="examples"></a>Beispiele
 
@@ -51,10 +51,10 @@ Um allgemeine oberen Navigationsleiste und Registerkarten Muster zu erreichen, e
 
 Jedoch, wenn die Navigation Touch-Wischen erforderlich ist, empfehlen wir die Verwendung Pivot.
 
-Die wichtigsten Unterschiede zwischen den Steuerelementen NavigationView und Pivot gibt das Standardverhalten Überlauf und die Navigation API:
+Die wichtigsten Unterschiede zwischen den Steuerelementen NavigationView und Pivot gibt das Standardverhalten für Überlauf und die Navigation API:
 
 - Pivot-Karussells Überlauf, die Elemente, während NavigationView eine Dropdown-Menü Liste verwendet overflow, damit Benutzer alle Elemente sehen können.
-- Pivot steuert die Navigation zwischen Inhaltsabschnitte, während NavigationView mehr Kontrolle über Navigationsverhalten ermöglicht.
+- Pivot-Navigation zwischen Inhaltsabschnitte, während NavigationView mehr Kontrolle über das Verhalten ermöglicht behandelt.
 
 ## <a name="use-navigationview-instead-of-pivot"></a>Pivot anstelle von NavigationView
 
@@ -85,7 +85,7 @@ Dieser XAML-Code erstellt ein NavigationView mit 3 Inhaltsbereichen, wie im Beis
 </Page>
 ```
 
-NavigationView bietet mehr Kontrolle über die Anpassung der Navigation und entsprechende Code-Behind erfordert. Um die oben genannten XAML begleiten, verwenden Sie die folgende Code-Behind-Datei:
+NavigationView bietet mehr Kontrolle über die Anpassung der Navigation und entsprechende Code-Behind erfordert. Um die oben genannten XAML begleiten, verwenden Sie den folgenden Code-Behind:
 
 ```csharp
 private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
@@ -114,7 +114,7 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 }
 ```
 
-Dieser Code wird das Pivot-Steuerelement integrierte Navigationsfunktionalität, abzüglich der Touch-Wischen Erfahrung zwischen Inhaltsabschnitte imitiert. Wie Sie sehen können, könnten Sie einige Punkte, einschließlich der animierten Übergang, Navigation Parameter und Stapel Funktionen auch anpassen.
+Dieser Code wird das Pivot-Steuerelement integrierte Navigationsfunktionalität, abzüglich der Touch-Wischen Erfahrung zwischen Inhaltsabschnitte imitiert. Wie Sie sehen können, könnten Sie mehrere Punkte, einschließlich der animierten Übergang, Navigation Parameter und Stapel Funktionen auch anpassen.
 
 ## <a name="create-a-pivot-control"></a>Erstellen eines Pivot-Steuerelements
 

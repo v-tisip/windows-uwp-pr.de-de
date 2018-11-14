@@ -9,15 +9,15 @@ ms.topic: article
 keywords: Windows10, UWP, bewerben, App, Kampagnen, Bericht, Installationen
 ms.localizationpriority: medium
 ms.openlocfilehash: d4cbc467ae864ecd5314eedfbf54b2c3de9a3ed8
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025691"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6210031"
 ---
 # <a name="ad-campaign-report"></a>Bericht „Anzeigenkampagne“
 
-Der Bericht " **Anzeigenkampagne** " im [Partner Center](https://partner.microsoft.com/dashboard) können Sie sehen, wie Ihre app Promotion [Anzeigenkampagnen](create-an-ad-campaign-for-your-app.md) durchführen. Um den Bericht anzuzeigen, erweitern Sie im linken Navigationsmenü **bewerben** , und wählen Sie **Anzeigenkampagnen**.
+Der Bericht " **Anzeigenkampagne** " im [Partner Center](https://partner.microsoft.com/dashboard) können Sie sehen, app Promotion Leistung Ihrer [Anzeigenkampagnen](create-an-ad-campaign-for-your-app.md) sind. Um den Bericht anzuzeigen, erweitern Sie im linken Navigationsmenü **bewerben** , und wählen Sie **Anzeigenkampagnen**.
 
 ## <a name="definitions"></a>Definitionen
 
@@ -50,7 +50,7 @@ Sie können jeweils Leistungsdaten für bis zu sechs verschiedene Anzeigenkampag
 
 ## <a name="install-tracking"></a>Nachverfolgung von Installationen
 
-Ausführen einer Kampagne über das Partner Center bietet dringend benötigte Verkaufsförderung Ihrer apps. Anzeigenaufrufe werden Kunden angezeigt, die ein hohes Interesse an der App haben. Diese Kunden klicken auf die Anzeige und installieren die App aus dem Store. Vorher war es schwierig zu unterscheiden, ob die Installationen das Ergebnis einer Anzeigenkampagne waren oder auf andere Weise zustande gekommen sind.
+Eine Kampagne bietet über das Partner Center dringend benötigte Verkaufsförderung Ihrer apps. Anzeigenaufrufe werden Kunden angezeigt, die ein hohes Interesse an der App haben. Diese Kunden klicken auf die Anzeige und installieren die App aus dem Store. Vorher war es schwierig zu unterscheiden, ob die Installationen das Ergebnis einer Anzeigenkampagne waren oder auf andere Weise zustande gekommen sind.
 
 Dieser Bericht zeigt, wie viele Installationen Sie mit Ihren Anzeigenkampagnen erzielt haben. Dies umfasst nur Downloads, die das direkte Ergebnis Ihrer Anzeigenkampagnen sind, und schließt alle anderen Downloadquellen aus.
 
@@ -69,7 +69,7 @@ Eine Installation per Handy, Tablet, PC oder andere Windows 10-Geräte wird im S
 2.  Der Kunde hat sich mit einem Microsoft-Konto angemeldet.
 3.  Der Kunde erfüllt die [COPPA](http://go.microsoft.com/fwlink?LinkId=536558)- Anforderungen (Kunden, die die COPPA-Anforderungen nicht erfüllen, können nicht nachverfolgt werden).
 
-Folglich kann es dazu kommen, dass die Nachverfolgung der App-Installationen nicht die exakte Anzahl von Installationen ergibt, die durch eine Anzeigenkampagne generiert werden. Bitte beachten Sie, dass Sie die Gesamtanzahl der Installationen für eine app anzeigen können (über Kampagnen etc.) in der Bericht " [Käufe](acquisitions-report.md) " im Partner Center.
+Folglich kann es dazu kommen, dass die Nachverfolgung der App-Installationen nicht die exakte Anzahl von Installationen ergibt, die durch eine Anzeigenkampagne generiert werden. Beachten Sie, dass Sie die Gesamtanzahl der Installationen für eine app anzeigen können (über Kampagnen etc.) in der Bericht " [Käufe](acquisitions-report.md) " im Partner Center.
 
 
 ## <a name="account-billing-history"></a>Verlauf der Rechnungsstellung für das Konto

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Spiele, Eingabe
 ms.localizationpriority: medium
 ms.openlocfilehash: bb7d70c20aeb2b91d8a6db863e165e017810e924
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6041799"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6249449"
 ---
 # <a name="input-for-games"></a>Eingaben für Spiele
 
@@ -45,7 +45,7 @@ Informationen zur Verwendung von Rennlenkrädern in Ihrem UWP-Spiel finden Sie u
 
 ### <a name="flight-sticks"></a>Steuerknüppel
 
-Steuerknüppel sind Eingabegeräte für Spiele, die das Gefühl eines Steuerknüppels reproduzieren reproduzieren, die in Flugzeugen oder raumschiffen des befinden würde. Sie sind das perfekte Eingabegerät für die schnelle und genaue Steuerung von Fluggeräten.
+Steuerknüppel sind Eingabegeräte für Spiele, die das Verhalten der Steuerknüppel reproduzieren, die in Flugzeugen oder raumschiffen des befinden würde. Sie sind das perfekte Eingabegerät für die schnelle und genaue Steuerung von Fluggeräten.
 
 Weitere Informationen zur Verwendung von Steuerknüppel in Ihrem UWP-Spiel finden Sie unter [Steuerknüppel](flight-stick.md).
 
@@ -53,7 +53,7 @@ Weitere Informationen zur Verwendung von Steuerknüppel in Ihrem UWP-Spiel finde
 
 Ein unformatierter Gamecontroller bietet eine generische Darstellung mit den typischen allgemeinen Eingaben eines Gamecontrollers. Diese Eingaben sind als einfache Arrays von unbenannten Schaltflächen, Hebeln und Knöpfen dargestellt. Mit einem unformatierten Gamecontroller kann ein Kunde benutzerdefinierte Eingabe-Zuordnungen erstellen, unabhängig von seinem verwendeten Controllertyp.
 
-Weitere Informationen zur Verwendung von unformatierte Gamecontrollern in Ihrem UWP-Spiel finden Sie unter [unformatierten Gamecontrollers](raw-game-controller.md).
+Weitere Informationen zur Verwendung von unformatierten Gamecontrollern in Ihrem UWP-Spiel finden Sie unter [unformatierten Gamecontrollers](raw-game-controller.md).
 
 ### <a name="ui-navigation-controllers"></a>Benutzeroberflächen-navigationscontroller
 

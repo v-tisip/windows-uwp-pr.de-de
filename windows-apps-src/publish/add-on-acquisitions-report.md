@@ -9,16 +9,16 @@ ms.topic: article
 keywords: Windows10, UWP, Add-On-Verkäufe, Add-On-Käufe, IAP-Verkauf, In-App-Produkte, IAPS, Add-Ons
 ms.localizationpriority: medium
 ms.openlocfilehash: 63884d9cce24e6b85f3001ac4c6eb1a07141bfd4
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026865"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6198094"
 ---
 # <a name="add-on-acquisitions-report"></a>Bericht zu Add-On-Käufen
 
 
-Der Bericht " **Add-on-Käufe** " im [Partner Center](https://partner.microsoft.com/dashboard) können Sie sehen, wie viele Add-ons Sie, und Sie können demografische verkauft haben und plattformspezifische Details einsehen und zeigt Konvertierungsinformationen für Kunden unter Windows 10 (einschließlich Xbox). Sie können auch in der Nähe in Echtzeit Kaufdaten für den letzten oder 70-zwei Stunden-Zeitraum anzeigen.
+Der Bericht " **Add-on-Käufe** ", im [Partner Center](https://partner.microsoft.com/dashboard) können Sie sehen, wie viele Add-ons Sie, und Sie können demografische verkauft haben und plattformspezifische Details einsehen und zeigt Konvertierungsinformationen für Kunden auf Windows 10 (einschließlich Xbox). Sie können auch in der Nähe in Echtzeit Kaufdaten für den letzten oder 70-zwei Stunden-Zeitraum anzeigen.
 
 Sie können diese Daten im Partner Center oder [den Bericht herunterladen](download-analytic-reports.md) offline anzeigen anzeigen. Sie können diese Daten auch programmgesteuert mit der Methode [get add-on acquisitions](../monetize/get-in-app-acquisitions.md) der [Microsoft Store-Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
@@ -30,7 +30,7 @@ In diesem Bericht bedeutet ein „Add-On-Kauf”, dass ein Kunde ein Add-On von 
 
 ## <a name="apply-filters"></a>Anwenden von Filtern
 
-Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist **30D** (30Tage), aber Sie können Daten für 3, 6 oder 12Monate anzeigen, oder für einen benutzerdefinierten Zeitraum, den Sie angeben. Sie können auch **1 H** oder **72 Stunden** Kaufdaten für eine Stunde oder 70-zwei Stunden nahezu in Echtzeit anzeigen auswählen. Diese Zeiträume gelten nur auf der Registerkarte " **Add-on täglich** " des Diagramms **Add-on-Käufe** und auf der Registerkarte " **Käufe** " des Diagramms **Märkte** . 
+Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist **30D** (30Tage), aber Sie können Daten für 3, 6 oder 12Monate anzeigen, oder für einen benutzerdefinierten Zeitraum, den Sie angeben. Sie können auch **1 H** oder **72 Stunden** Kaufdaten für eine Stunde oder 70-zwei Stunden nahezu in Echtzeit anzeigen auswählen. Diese Zeiträume gelten nur zur Registerkarte **Add-on täglich** des Diagramms **Add-on-Käufe** und auf der Registerkarte " **Käufe** " des Diagramms **Märkte** . 
 
 Sie können ebenfalls **Filter** erweitern, um alle Daten auf dieser Seite nach bestimmten Add-Ons, Markt und/oder Gerätetyp zu filtern.
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store Werbungs-API, Anzeigenkampagnen
 ms.localizationpriority: medium
 ms.openlocfilehash: 271d60e6fbc0bd6336aa8aa8ec9edbb2b965c7f4
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025539"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6255790"
 ---
 # <a name="manage-targeting-profiles"></a>Verwalten von Zielgruppenprofilen
 
@@ -441,7 +441,7 @@ Das Feld *country* in dem Objekt [TargetingProfile](#targeting-profile) enthält
 |     124      |            KW                  |
 |     125      |            KG                  |
 |     126      |            LA                  |
-|     127 Zeichen lang sein      |            LB                  |
+|     127      |            LB                  |
 |     133      |            MK                  |
 |     135      |            MW                  |
 |     138      |            MT                  |

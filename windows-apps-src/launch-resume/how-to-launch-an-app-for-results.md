@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0fbbe1978cc59afcc7d681331dadc9a06e3eb2d0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024318"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6200647"
 ---
 # <a name="launch-an-app-for-results"></a>Starten einer App für Ergebnisse
 
@@ -27,7 +27,7 @@ ms.locfileid: "6024318"
 
 Hier erfahren Sie, wie Sie eine App aus einer anderen App heraus starten und Daten zwischen den beiden Apps austauschen. Dieser Vorgang wird als *Starten einer App für Ergebnisse* bezeichnet. Dieses Beispiel veranschaulicht die Verwendung von [**LaunchUriForResultsAsync**](https://msdn.microsoft.com/library/windows/apps/dn956686) zum Starten einer App für Ergebnisse.
 
-Neuen APIs in Windows 10-app-zu-app-Kommunikation ermöglichen es für Windows-apps (und Windows-Web-apps) zum Starten einer app und Exchange-Daten und Dateien. Dies ermöglicht Ihnen das Erstellen kombinierter Lösungen aus mehreren Apps. Dank dieser neuen APIs können komplexe Aufgaben, für die Benutzer bisher mehrere Apps nutzen mussten, jetzt nahtlos durchgeführt werden. Ihrer App kann z.B. eine App für ein soziales Netzwerk starten, um einen Kontakt auszuwählen, oder eine Kassen-App, um einen Bezahlvorgang durchzuführen.
+Neuen APIs in Windows 10-app-zu-app-Kommunikation ermöglichen für Windows-apps (und Windows-Web-apps) zum Starten einer app und Exchange-Daten und Dateien. Dies ermöglicht Ihnen das Erstellen kombinierter Lösungen aus mehreren Apps. Dank dieser neuen APIs können komplexe Aufgaben, für die Benutzer bisher mehrere Apps nutzen mussten, jetzt nahtlos durchgeführt werden. Ihrer App kann z.B. eine App für ein soziales Netzwerk starten, um einen Kontakt auszuwählen, oder eine Kassen-App, um einen Bezahlvorgang durchzuführen.
 
 Die App, die für Ergebnisse geöffnet wird, wird als gestartete App bezeichnet. Die App, die die App startet, wird als aufrufende App bezeichnet. In diesem Beispiel schreiben Sie die aufrufende App und die gestartete App.
 

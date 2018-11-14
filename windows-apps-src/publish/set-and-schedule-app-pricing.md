@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP, Preise, App-Preise, App-Preis, Apps verkaufen, Preis ändern, benutzerdefinierter Preis, Preis, Preise, Kosten, Grundpreise überschreiben, formfreier Preis, formfrei
 ms.localizationpriority: medium
 ms.openlocfilehash: 372abfdb0de5567b7c7d262b298d264b086fe339
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026449"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6154642"
 ---
 # <a name="set-and-schedule-app-pricing"></a>Festlegen und Planen von App-Preisen
 
@@ -37,7 +37,7 @@ Klicken Sie im Abschnitt **Preise** auf **Umrechnungstabelle anzeigen**, um die 
 Beachten Sie, dass das von Ihnen ausgewählte Preisniveau u. U. eine Verkaufs- oder Mehrwertsteuer enthält, die Kunden bezahlen müssen. Weitere Informationen über Ihre steuerlichen Verpflichtungen in ausgewählten Märkten finden Sie in den [Steuerinformationen zu kostenpflichtigen Apps](tax-details-for-paid-apps.md). Lesen Sie außerdem die [Überlegungen zu Preisen für die einzelnen Märkte](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
 
 > [!NOTE]
-> Wenn Sie die Option **Beenden des Erwerbs** unter **dieses Produkt verfügbar, aber nicht im Store sichtbar machen** Abschnitts " [Sichtbarkeit](choose-visibility-options.md#discoverability) " auswählen), nicht mehr um Preise für Ihre Übermittlung (da niemand die app mehr erwerben wird festgelegt werden es sei denn, sie einen werbecode verwenden, um die app kostenlos zu erhalten).
+> Wenn Sie die Option **Beenden des Erwerbs** unter **dieses Produkt verfügbar, aber nicht im Store sichtbar machen** [Sichtbarkeit](choose-visibility-options.md#discoverability) wählen Sie im Abschnitt), nicht mehr auf Preise für Ihre Übermittlung (da niemand die app mehr erwerben wird festgelegt werden es sei denn, sie einen werbecode verwenden, um die app kostenlos zu erhalten).
 
 ## <a name="schedule-price-changes"></a>Planen von Preisänderungen
 
@@ -61,7 +61,7 @@ Klicken Sie erneut **Zeitplan einen Preis ändern** , um beliebig viele nachfolg
 Die oben ausgewählten Optionen gelten standardmäßig für alle Märkte, in denen Ihre App angeboten wird. Sie können optional den Preis für einen oder mehrere Märkte ändern, entweder durch die Auswahl eines anderen Preisniveaus oder die Angabe eines formfreien Preises in der lokalen Währung des Markts.
 
 > [!IMPORTANT]
-> Wenn Ihre app zuvor veröffentlichten Windows 8 unterstützt, sehen Kunden stets die app an den **Grundpreis**, selbst wenn Sie einen anderen Preis für ihren Markt auswählen.
+> Wenn Ihre app zuvor veröffentlichten Windows 8 unterstützt, sehen Kunden stets die app bei der **Grundpreis**, auch wenn Sie einen anderen Preis für ihren Markt auswählen.
 
 Um den Preis für die einzelnen Märkte zu ändern, klicken Sie auf **Select markets for base price override**. Das Popupfenster **Market selection** wird mit allen Märkten angezeigt, in denen Sie Ihre App verfügbar machen möchten. (Wenn Sie Märkte im Abschnitt **Märkte** ausgeschlossen haben, sind diese Märkte nicht verfügbar.) 
 

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 48244889dd927f41d0998214cf1120377c4bb251
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6031991"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6194741"
 ---
 # <a name="make-your-app-localizable"></a>App lokalisierbar machen
 
@@ -54,7 +54,7 @@ Kurz gesagt, gliedern Sie die Zeichenfolgen in Teile, die in allen Kontexten ver
 
 Berücksichtigen Sie die folgende Zeichenfolge: "die {0} konnte nicht synchronisiert werden."
 
-Kann durch zahlreiche Wörter ersetzt {0}, z. B. "Termin", "Aufgabe" oder "Dokument". Dieses Beispiel funktioniert zwar in der englischen Sprache, aber nicht in jedem Fall im entsprechenden deutschen Satz (beispielsweise). Sie sehen, dass in den folgenden deutschen Sätzen einige der Wörter in der Vorlagenzeichenfolge („Der“, „Die“, „Das“) zum parametrisierten Wort passen müssen:
+Konnte durch zahlreiche Wörter ersetzt {0}, z. B. "Termin", "Aufgabe" oder "Dokument". Dieses Beispiel funktioniert zwar in der englischen Sprache, aber nicht in jedem Fall im entsprechenden deutschen Satz (beispielsweise). Sie sehen, dass in den folgenden deutschen Sätzen einige der Wörter in der Vorlagenzeichenfolge („Der“, „Die“, „Das“) zum parametrisierten Wort passen müssen:
 
 | Englisch                                    | Deutsch                                           |
 |:------------------------------------------ |:------------------------------------------------ |
@@ -98,7 +98,7 @@ Gehen Sie nicht davon aus, dass Parameter in allen Sprachen in der gleichen Reih
     string.Format("Every {0} {1}", monthName, dayNumber); // For example, "Every April 1".
 ```
 
-Die Formatzeichenfolge in diesem Beispiel ist für Englisch (USA) richtig. Sie ist jedoch nicht für Deutsch (Deutschland) geeignet, da in dieser Sprache Tag und Monat in umgekehrter Reihenfolge angezeigt werden. Stellen Sie sicher, dass der Übersetzer die Bedeutung der einzelnen Parameter kennt, damit sie die Reihenfolge der Formatelemente in einer Formatzeichenfolge stornieren können (z. B. "{1} {0}") entsprechend der Zielsprache.
+Die Formatzeichenfolge in diesem Beispiel ist für Englisch (USA) richtig. Sie ist jedoch nicht für Deutsch (Deutschland) geeignet, da in dieser Sprache Tag und Monat in umgekehrter Reihenfolge angezeigt werden. Stellen Sie sicher, dass der Übersetzer die Bedeutung der einzelnen Parameter kennt, so, dass sie die Reihenfolge der Formatelemente in einer Formatzeichenfolge stornieren können (z. B. "{1} {0}") entsprechend der Zielsprache.
 
 ## <a name="dont-over-localize"></a>Vermeiden Sie eine zu starke Lokalisierung.
 

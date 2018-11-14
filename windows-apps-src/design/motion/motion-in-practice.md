@@ -13,11 +13,11 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: 36081c14cfb75a1cedb103ba17eff4a05f5e4e83
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023287"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6202817"
 ---
 # <a name="bringing-it-together"></a>Alles zusammenführen
 
@@ -97,7 +97,7 @@ Sie können implizit animieren, Änderungen an die folgenden Eigenschaften:
 - [Rahmen](/uwp/api/windows.ui.xaml.controls.border), [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter)oder [Panel](/uwp/api/windows.ui.xaml.controls.panel)
   - **Hintergrund**
 
-Jede Eigenschaft, die Änderungen implizit animiert haben können hat eine entsprechende _Übergang_ -Eigenschaft. Um die Eigenschaft zu animieren, weisen Sie ein anderes Übergang auf die entsprechende _Übergang_ -Eigenschaft. Diese Tabelle zeigt den _Übergang_ Eigenschaften und den Übergangstyp für jeden Typ verwenden.
+Jede Eigenschaft, die Änderungen, die implizit animiert haben, können verfügt über eine entsprechende _Übergang_ -Eigenschaft. Um die Eigenschaft zu animieren, weisen Sie einen Übergangstyp auf die entsprechende Eigenschaft für den _Übergang_ . Diese Tabelle zeigt den _Übergang_ Eigenschaften und den Übergangstyp für jeden Typ verwenden.
 
 | Animierten Eigenschaft | Übergang-Eigenschaft | Implizite Übergangstyp |
 | -- | -- | -- |
@@ -109,7 +109,7 @@ Jede Eigenschaft, die Änderungen implizit animiert haben können hat eine entsp
 | [ContentPresenter.Background](/uwp/api/windows.ui.xaml.controls.contentpresenter.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.contentpresenter.backgroundtransition) | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
 | [Panel.Background](/uwp/api/windows.ui.xaml.controls.panel.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.panel.backgroundtransition)  | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
 
-In diesem Beispiel wird veranschaulicht, wie Sie die Opacity-Eigenschaft und Übergang zum Stellen einer Schaltfläche eingeblendet, wenn das Steuerelement aktiviert ist und ausblendungsanimationen, wenn es deaktiviert ist.
+In diesem Beispiel wird veranschaulicht, wie Sie die Opacity-Eigenschaft und den Übergang zum Stellen einer Schaltfläche eingeblendet, wenn das Steuerelement aktiviert ist und ausblendungsanimationen, wenn es deaktiviert ist.
 
 ```xaml
 <Button x:Name="SubmitButton"

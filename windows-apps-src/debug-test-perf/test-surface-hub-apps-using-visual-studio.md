@@ -9,21 +9,21 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 63214ce47bffc5a0b13f421e5185d06cd810ea34
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023073"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6154086"
 ---
 # <a name="test-surface-hub-apps-using-visual-studio"></a>Testen von Surface Hub-Apps mit Visual Studio
-Der Visual Studio-Simulator bietet eine Umgebung, in der Sie Universelle Windows-Plattform (UWP)-Apps entwerfen, entwickeln, debuggen und testen können, einschließlich Apps, die Sie für Microsoft Surface Hub entwickelt haben. Der Simulator verwendet nicht dieselbe Benutzeroberfläche wie ein Surface Hub, aber es empfiehlt sich Ihre app aussieht und verhält sich mit dem Surface Hub Bildschirmgröße und-Auflösung zu testen.
+Der Visual Studio-Simulator bietet eine Umgebung, in der Sie Universelle Windows-Plattform (UWP)-Apps entwerfen, entwickeln, debuggen und testen können, einschließlich Apps, die Sie für Microsoft Surface Hub entwickelt haben. Der Simulator verwendet nicht dieselbe Benutzeroberfläche wie ein Surface Hub, aber sie ist nützlich für das Testen, wie Ihre app aussieht, und mit den Surface Hub Bildschirmgröße und-Auflösung verhält.
 
-Weitere Informationen über das Tool Simulator im Allgemeinen finden Sie unter [Ausführen von UWP-apps im Simulator](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-in-the-simulator).
+Weitere Informationen zu den Simulator-Tool im Allgemeinen finden Sie unter [Ausführen von UWP-apps im Simulator](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-in-the-simulator).
 
 ## <a name="add-surface-hub-resolutions-to-the-simulator"></a>Hinzufügen von Surface Hub-Auflösungen zum Simulator
 So fügen Sie Surface Hub-Auflösungen zum Simulator hinzu:
 
-1. Erstellen Sie eine Konfiguration für 55" Surface Hub, indem Sie den folgenden XML-Code in eine Datei mit dem Namen *HardwareConfigurations-SurfaceHub55.xml*speichern.  
+1. Erstellen Sie eine Konfiguration für die 55" Surface Hub, indem Sie den folgenden XML-Code in eine Datei mit dem Namen *HardwareConfigurations-SurfaceHub55.xml*speichern.  
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -42,7 +42,7 @@ So fügen Sie Surface Hub-Auflösungen zum Simulator hinzu:
     </ArrayOfHardwareConfiguration>
     ```
 
-2. Erstellen Sie eine Konfiguration für 84" Surface Hub, indem Sie den folgenden XML-Code in eine Datei mit dem Namen *HardwareConfigurations-SurfaceHub84.xml*speichern.
+2. Erstellen Sie eine Konfiguration für die 84" Surface Hub, indem Sie den folgenden XML-Code in eine Datei mit dem Namen *HardwareConfigurations-SurfaceHub84.xml*speichern.
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -71,7 +71,7 @@ So fügen Sie Surface Hub-Auflösungen zum Simulator hinzu:
     ![Auflösungen des Visual Studio-Simulators](images/vs-simulator-resolutions.png)
 
    > [!TIP]
-   > [Tablet-Modus aktivieren](http://windows.microsoft.com/windows-10/getstarted-like-a-tablet) , um eine bessere simulieren, die einen Surface Hub-Erfahrung.
+   > Simulieren [Tablet-Modus aktivieren](http://windows.microsoft.com/windows-10/getstarted-like-a-tablet) , können Sie sich die Erfahrung von Surface Hub.
 
 ## <a name="deploy-apps-to-a-surface-hub-device-from-visual-studio"></a>Bereitstellen von apps auf einem Surface Hub-Gerät aus Visual Studio
 Manuelle Bereitstellen einer app auf einem Surface Hub ist ein einfacher Vorgang.
@@ -80,7 +80,7 @@ Manuelle Bereitstellen einer app auf einem Surface Hub ist ein einfacher Vorgang
 Standardmäßig installiert Surface Hub nur apps aus dem Microsoft Store. Um Apps, die von einer anderen Quelle signiert wurden, zu installieren, müssen Sie den Entwicklermodus aktivieren.
 
 > [!NOTE]
-> Nachdem der Entwicklermodus aktiviert wurde, müssen Sie die Surface Hub zurücksetzen, wenn Sie wieder zu deaktivieren möchten. Durch das Zurücksetzen des Geräts werden alle lokalen Benutzerdateien und die Konfiguration gelöscht, und anschließend wird Windows neu installiert.
+> Nachdem der Entwicklermodus aktiviert wurde, müssen Sie den Surface Hub zurücksetzen, wenn Sie wieder zu deaktivieren möchten. Durch das Zurücksetzen des Geräts werden alle lokalen Benutzerdateien und die Konfiguration gelöscht, und anschließend wird Windows neu installiert.
 
 1. Öffnen Sie im **Startmenü** des Surface Hub die Einstellungs-App.
 
@@ -92,7 +92,7 @@ Standardmäßig installiert Surface Hub nur apps aus dem Microsoft Store. Um App
 3. Wählen Sie **Entwicklermodus** aus, und akzeptieren Sie die Warnung.
 
 ### <a name="deploy-your-app-from-visual-studio"></a>Bereitstellen Ihrer App aus Visual Studio
-Weitere Informationen zu den Bereitstellungsprozess finden Sie in der Regel [Bereitstellen und Debuggen von UWP-apps](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).
+Weitere Informationen zu den Bereitstellungsprozess im Allgemeinen finden Sie unter [Bereitstellen und Debuggen von UWP-apps](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).
 
    > [!NOTE]
    > Dieses Feature erfordert Visual Studio 2015 Update 1 oder höher, aber es wird empfohlen, dass Sie die neueste aktuelle Version von Visual Studio verwenden. Eine auf dem neuesten Stand Visual Studio-Instanz wird Sie alle neuesten Entwicklungen und Sicherheitsupdates gibe.
@@ -108,7 +108,7 @@ Weitere Informationen zu den Bereitstellungsprozess finden Sie in der Regel [Ber
    > [!TIP] 
    > Nachdem Sie den Entwicklermodus aktiviert haben, finden Sie den Surface Hub IP-Adresse auf der Willkommensseite angezeigt.
 
-3. Wählen Sie zum Bereitstellen und Debuggen Sie Ihre app auf dem Surface Hub **Debugging starten (F5)** , oder drücken Sie STRG + F5, um nur die Bereitstellung Ihrer app auszuführen.
+3. Wählen Sie zum Bereitstellen und Debuggen Sie Ihre app auf dem Surface Hub **Debugging starten (F5)** , oder drücken Sie STRG + F5, um nur die app bereitzustellen.
 
    > [!TIP]
-   > Wenn das Surface Hub die Willkommensseite angezeigt wird, können schließen Sie diesen durch Drücken einer beliebigen Schaltfläche.
+   > Wenn Surface Hub auf die Willkommensseite angezeigt wird, können schließen Sie diesen durch Drücken einer beliebigen Schaltfläche.

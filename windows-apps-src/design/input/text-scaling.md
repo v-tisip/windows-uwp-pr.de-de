@@ -4,34 +4,34 @@ Description: Build UWP apps and custom/templated controls that support platform 
 title: Textskalierung
 label: Text scaling
 template: detail.hbs
-keywords: UWP, Text, Skalierung, Eingabehilfen, "erleichterte Bedienung" anzeigen "Stellen Text größer", Benutzerinteraktion, Eingabe
+keywords: UWP, Text, Skalierung, Eingabehilfen, "erleichterte Bedienung", "Stellen Text größer", Benutzerinteraktion, Eingabe anzeigen
 ms.author: kbridge
 ms.date: 08/02/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: ce3ec15a45f812162c7aab0cb9683183d7196ae3
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6051640"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6162230"
 ---
 # <a name="text-scaling"></a>Textskalierung
 
-![Beispiel für Text einer Skalierung von 100 % bis 225 %](images/coretext/text-scaling-news-hero-small.png)  
-*Beispiel für Text Skalierung in Windows 10 (100 % bis 225 %)*
+![Beispiel für Text, die Skalierung von 100 % auf 225 %](images/coretext/text-scaling-news-hero-small.png)  
+*Beispiel für Text, die Skalierung in Windows 10 (100 % bis 225 %)*
 
 ## <a name="overview"></a>Übersicht
 
-Lesen von Text auf einem Computerbildschirm (von mobilen Gerät, Laptop, desktop-Monitor auf den riesigen Bildschirm von Surface Hub) kann für viele Benutzer schwierig sein. Im Gegensatz dazu finden Sie einige Benutzer die Schriftgrade in apps und Websites größer als erforderlich sein.
+Lesen von Text auf einem Computerbildschirm (von mobilen Gerät, Laptop, desktop-Monitor auf den riesigen Bildschirm von Surface Hub) kann für viele Benutzer schwierig sein. Im Gegensatz dazu finden Sie einige Benutzer die Schriftgrade in apps und Websites verwendet, um größer als erforderlich sein.
 
-Um sicherzustellen, dass Text lesbar ist wie die größtmögliche Anzahl von Benutzern möglich ist, bietet Windows die Möglichkeit für Benutzer über das Betriebssystem und die einzelnen Programmen relativen Schriftgrad ändern. Anstatt mithilfe einer Bildschirmlupe-app (was in der Regel nur alles in einem Bereich des Bildschirms vergrößert und führt eine eigene Probleme hinsichtlich der Verwendbarkeit), das Ändern der Auflösung oder hierauf basieren DPI-Skalierung (die alles basierend auf der Anzeige und normale Anzeige ändert Abstand), Benutzer können schnell zugreifen, eine Einstellung, um nur Text, angefangen bei 100 % (die Standardgröße) Größe bis zu 225 %.
+Um sicherzustellen, dass Text lesbar ist wie die größtmögliche Anzahl von Benutzern möglich ist, bietet Windows die Möglichkeit für Benutzer, die relative Schriftgröße für das Betriebssystem und die einzelnen Anwendungen zu ändern. Anstatt mithilfe einer Bildschirmlupe-app (was in der Regel nur alles in einem Bereich des Bildschirms vergrößert und führt eine eigene Probleme hinsichtlich der Verwendbarkeit), das Ändern der Auflösung oder verlassen sich DPI-Skalierung (die alles basierend auf der Anzeige und typische Anzeige Größe Abstand), Benutzer können schnell zugreifen, eine Einstellung, um nur-Text, angefangen bei 100 % (die Standardgröße) Größe bis zu 225 %.
 
 ## <a name="support"></a>Unterstützung
 
 Universelle Windows-Anwendungen (sowohl Standard und PWA), Text standardmäßig Skalierung zu unterstützen.
 
-Wenn Ihre UWP-Anwendung benutzerdefinierte Steuerelemente, benutzerdefinierter Text, der Flächen, hartcodierten Steuerelement Höhen, älteren Frameworks oder 3rd Party-Frameworks enthält, müssen Sie wahrscheinlich einige Updates für eine konsistente und nützliche Erfahrung für Ihre Benutzer sicherzustellen.  
+Wenn Ihre UWP-Anwendung benutzerdefinierte Steuerelemente, benutzerdefinierter Text Flächen, hartcodierten Steuerelement Höhen, älteren Frameworks oder 3rd Party-Frameworks enthält, müssen Sie wahrscheinlich einige Updates für eine konsistente und nützlich Erfahrung für Ihre Benutzer sicherzustellen.  
 
 DirectWrite, GDI und XAML-SwapChainPanels unterstützen nativ Text zu skalieren, keine während Win32-Unterstützung auf Menüs, Symbole und Symbolleisten begrenzt ist.  
 
@@ -39,20 +39,20 @@ DirectWrite, GDI und XAML-SwapChainPanels unterstützen nativ Text zu skalieren,
 
 ## <a name="user-experience"></a>Benutzerfreundlichkeit
 
-Benutzer können Textanzeige anpassen mit dem stellen Text größer Schieberegler in den Einstellungen -> -> erleichterte Bedienung Bildschirm Vision/anzeigen.
+Benutzer können Textanzeige anpassen mit dem stellen Text größer Schieberegler in den Einstellungen -> -> erleichterte Bedienung Vision/Bildschirm.
 
-![Beispiel für Text einer Skalierung von 100 % bis 225 %](images/coretext/text-scaling-settings-100-small.png)  
-*Textanzeige Einstellung aus den Einstellungen -> erleichterte Bedienung Vision/Bildschirm ->*
+![Beispiel für Text, die Skalierung von 100 % auf 225 %](images/coretext/text-scaling-settings-100-small.png)  
+*Textanzeige von Einstellungen -> erleichterte Bedienung Vision/Bildschirm ->*
 
 ## <a name="ux-guidance"></a>Erläuterungen zur Benutzeroberfläche
 
-Wie Text geändert wird, Steuerelemente und Container müssen auch die Größe und umbrechen, um den Text und das neue Layout aufzunehmen. Wie bereits erwähnt abhängig von der app, Frameworks und -Plattform ist der Großteil der Arbeit für Sie erledigt. Die folgende UX-Richtlinien werden diese Fälle, in denen es nicht behandelt.
+Wie Text geändert wird, Steuerelemente und Container müssen auch die Größe und umbrechen, um den Text und das neue Layout aufzunehmen. Wie bereits erwähnt abhängig von der app-Frameworks und -Plattform ist der Großteil der Arbeit für Sie erledigt. Die folgenden UX-Richtlinien werden diese Fälle, in denen es nicht behandelt.
 
 ### <a name="use-the-platform-controls"></a>Verwenden Sie die Plattformsteuerelemente
 
-Sagten wir dies bereits? Dabei ist zu wiederholen: Verwenden Sie die integrierten Steuerelemente mit den verschiedenen Windows-app-Frameworks bereitgestellten nach Möglichkeit immer die umfassendste Benutzeroberfläche für wenig Aufwand wie möglich abgerufen.
+Sagten wir dies bereits? Dabei ist zu wiederholen: Wenn möglich, müssen Sie die integrierten Steuerelemente mit den verschiedenen Windows-app-Frameworks bereitgestellten immer verwenden, um die umfassendste Benutzeroberfläche für wenig Aufwand wie möglich erhalten.
 
-Alle UWP-Textsteuerelemente z. B. den vollständigen Text Skalierung Erfahrung ohne Anpassung oder Templating unterstützen.
+Alle UWP-Textsteuerelemente z. B. den vollständigen Text Skalierung Umgebung ohne Anpassung oder Templating unterstützen.
 
 Hier ist ein Codeausschnitt aus einer einfachen UWP-app, die eine Reihe von standard-Text-Steuerelemente enthält:
 
@@ -94,14 +94,14 @@ Hier ist ein Codeausschnitt aus einer einfachen UWP-app, die eine Reihe von stan
 </Grid>
 ```
 
-![Skalierung von 100 % bis 225 % animierter text](images/coretext/text-scaling.gif)  
+![Skalierung von 100 % auf 225 % animierter text](images/coretext/text-scaling.gif)  
 *Animierte Text skalieren*
 
-### <a name="use-auto-sizing"></a>Verwenden Sie die automatische größenanpassung
+### <a name="use-auto-sizing"></a>Verwenden von Auto-Größe
 
-Geben Sie keine absolute Größen für Ihre Steuerelemente. Wann immer möglich, können Sie die Plattform Ihre Steuerelemente automatisch basierend auf Benutzer- und geräteeinstellungen zu ändern.  
+Geben Sie keine absolute Größen für Ihre Steuerelemente. Wann immer möglich, können Sie die Plattform, die Ihre Steuerelemente automatisch basierend auf Benutzer- und geräteeinstellungen zu ändern.  
 
-In diesem Codeausschnitt aus dem vorherigen Beispiel verwenden wir die `Auto` und `*` Breitenwerte für eine Gruppe von Spalten des Rasters und ermöglichen Sie die Plattform passen Sie das app-Layout basierend auf der Größe der Elemente innerhalb des Rasters.
+In diesem Codeausschnitt aus dem vorherigen Beispiel verwenden wir die `Auto` und `*` Breitenwerte für eine Gruppe von Grid Spalten und ermöglichen die Plattform passen Sie das app-Layout basierend auf der Größe der Elemente innerhalb des Rasters.
 
 ``` xaml
 <Grid.ColumnDefinitions>
@@ -115,7 +115,7 @@ In diesem Codeausschnitt aus dem vorherigen Beispiel verwenden wir die `Auto` un
 
 Um sicherzustellen, dass das Layout Ihrer App als flexibel und anpassbar wie möglich ist, aktivieren Sie den Textumbruch in jedes Steuerelement, das Text enthält (viele Steuerelemente Textumbruch standardmäßig unterstützen keine).
 
-Wenn Sie den Textumbruch nicht angeben, verwendet die Plattform andere Methoden zum Anpassen des Layouts, einschließlich Clipping (siehe vorherigen Beispiel).
+Wenn Sie den Textumbruch nicht angeben, verwendet die Plattform andere Methoden zum Anpassen des Layouts, einschließlich Zuschneiden (siehe vorherigen Beispiel).
 
 Hier verwenden wir die `AcceptsReturn` und `TextWrapping` TextBox-Eigenschaften, um sicherzustellen, dass unsere Layout flexibel wie möglich ist.
 
@@ -124,17 +124,17 @@ Hier verwenden wir die `AcceptsReturn` und `TextWrapping` TextBox-Eigenschaften,
           AcceptsReturn="True" TextWrapping="Wrap" />
 ```
 
-![Animierter Text einer Skalierung von 100 % bis 225 % mit Textumbruch](images/coretext/text-scaling-textwrap.gif)  
+![Animierter Text, die Skalierung von 100 % auf 225 % mit Textumbruch](images/coretext/text-scaling-textwrap.gif)  
 *Animierte Text Skalieren mit Textumbruch*
 
-### <a name="specify-text-trimming-behavior"></a>Geben Sie Text Zuschneiden Verhalten
+### <a name="specify-text-trimming-behavior"></a>Geben Sie Text Kürzung Verhalten
 
-Wenn Textumbruch nicht das gewünschte Verhalten ist, können die meisten Textsteuerelemente entweder Ihr Text Zuschneiden oder Ellipsen für den Text Zuschneiden Verhalten angeben. Zuschneiden wird für Ellipsen bevorzugt, wie Ellipsen selbst Speicherplatz belegen.
+Wenn Textumbruch nicht Verhalten erwünscht ist, können die meisten Textsteuerelemente entweder Ihr Text zuschneiden, oder geben Sie Ellipsen für das Verhalten der Text Kürzung. Zuschneiden wird bevorzugt, Ellipsen, als Ellipsen selbst Speicherplatz belegen.
 
 > [!NOTE]
-> Wenn Sie Sie den Text zu beschneiden müssen, clip am Ende der Zeichenfolge, die nicht am Anfang.
+> Wenn Sie Sie den Text zu beschneiden müssen, abgeschnitten Sie, das Ende der Zeichenfolge, die nicht am Anfang.
 
-In diesem Beispiel zeigen wir, wie Sie Text in einem TextBlock beschneiden mithilfe der [TextTrimming](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.texttrimming) -Eigenschaft.
+In diesem Beispiel zeigen wir, wie Sie Text in einem TextBlock zu beschneiden mithilfe der [TextTrimming](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.texttrimming) -Eigenschaft.
 
 ``` xaml
 <TextBlock TextTrimming="Clip">
@@ -142,7 +142,7 @@ In diesem Beispiel zeigen wir, wie Sie Text in einem TextBlock beschneiden mithi
 </TextBlock>
 ```
 
-![Skalierung von 100 % bis 225 % mit Text Zuschneiden Text](images/coretext/text-scaling-clipping-small.png)  
+![Skalierung von 100 % auf 225 % mit Text Zuschneiden Text](images/coretext/text-scaling-clipping-small.png)  
 *Text skalieren mit Text Zuschneiden*
 
 ### <a name="use-a-tooltip"></a>Verwenden Sie eine QuickInfo
@@ -162,17 +162,17 @@ Hier fügen wir eine QuickInfo in einem TextBlock-Element, die den Textumbruch n
 
 ### <a name="dont-scale-font-based-icons-or-symbols"></a>Keine Schriftart-basierte Symbole oder Symbole skalieren
 
-Wenn Sie Symbole Schriftart-basierte zur Betonung oder als Ergänzung zu verwenden, deaktivieren Sie auf diese Zeichen Skalierung.
+Wenn Sie Symbole Schriftart-basierte zur Betonung oder als Ergänzung zu verwenden, deaktivieren Sie die Skalierung auf diese Zeichen.
 
 Legen Sie die Eigenschaft [IsTextScaleFactorEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.istextscalefactorenabled) auf `false` für die meisten XAML-Steuerelemente.
 
 ### <a name="support-text-scaling-natively"></a>Unterstützung für Text nativ Skalierung
 
-Behandeln Sie das [TextScaleFactorChanged](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged) UISettings Systemereignis in Ihren benutzerdefinierten Framework Steuerelemente. Dieses Ereignis wird jedes Mal ausgelöst, wenn der Benutzer den Skalierungsfaktor Text auf seinem System festlegt.
+Behandeln Sie das [TextScaleFactorChanged](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged) UISettings System-Ereignis in Ihren benutzerdefinierten Framework Steuerelemente. Dieses Ereignis wird jedes Mal ausgelöst, wenn der Benutzer den Skalierungsfaktor Text auf seinem System festlegt.
 
 ## <a name="summary"></a>Zusammenfassung
 
-Dieses Thema enthält eine Übersicht über Text-Unterstützung in Windows-Skalierung und enthält (UX) und Entwickler Richtlinien zum Anpassen der Benutzeroberfläche.
+Dieses Thema enthält eine Übersicht über Text-Unterstützung in Windows Skalierung und enthält (UX) und Entwickler Richtlinien zum Anpassen der Benutzeroberfläche.
 
 ## <a name="related-articles"></a>Verwandte Artikel
 

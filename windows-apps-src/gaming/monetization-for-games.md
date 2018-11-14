@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Monetisierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 82dd225f25162035b1bb65677c3bd4a7f7503b14
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.openlocfilehash: 6d31aac20454536c6c25d0a8e2dc2f768ea9aabc
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6137744"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6189114"
 ---
 #  <a name="monetization-for-games"></a>Monetisierung für Spiele
 
@@ -29,7 +29,7 @@ Sie können ein UWP-Spiel folgendermaßen bewerben und monetisieren:
 
 ## <a name="worldwide-distribution-channel"></a>Weltweiter Vertriebskanal
 
-Im Microsoft Store kann Ihr Spiel für den Download in mehr als 200 Ländern und Regionen weltweit, mit Unterstützung für die Abrechnung über verschiedene Zahlungsmethoden einschließlich Visa, Mastercard und PayPal zur Verfügung. Eine vollständige Liste der Länder und Regionen finden Sie unter [Märkte und angepasste Preise](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices).
+Im Microsoft Store kann Ihr Spiel für den Download in mehr als 200 Ländern und Regionen weltweit, mit Unterstützung für die Abrechnung über verschiedene Zahlungsmethoden einschließlich Visa, Mastercard und PayPal zur Verfügung. Eine vollständige Liste der Länder und Regionen finden Sie unter [Festlegen der marktauswahl](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection).
 
 ## <a name="set-a-price-for-your-game"></a>Festlegen eines Preises für Ihr Spiel
 
@@ -39,8 +39,8 @@ Hier sind einige wichtige Konzepte bezüglich der Preise für Ihr Spiel im Store
 
 ### <a name="base-price"></a>Grundpreis
 
-Der Grundpreis für das Spiel bestimmt, ob Ihr Spiel als _bezahlt_ oder _kostenlos_ eingestuft wird. Sie können den Grundpreis basierend auf Land und Region mithilfe des [Dev Center-Dashboards](https://developer.microsoft.com/windows) konfigurieren.
-Beim Festlegen des Preises müssen unter Umständen [Steuerpflichten beim Verkauf in anderen Ländern](https://msdn.microsoft.com/windows/uwp/publish/tax-details-for-paid-apps) und [Kostenüberlegungen für bestimmte Märkte](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#price-considerations-for-specific-markets) in Betracht gezogen werden. Sie können auch [angepasste Preise für spezifische Märkte](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#markets-and-custom-prices) festlegen. Weitere Informationen erhalten Sie unter [Festlegen des Preises und Auswählen der Märkte](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection).
+Der Grundpreis für das Spiel bestimmt, ob Ihr Spiel als _bezahlt_ oder _kostenlos_ eingestuft wird. Sie können [Partner Center](https://partner.microsoft.com/dashboard) verwenden, konfigurieren Sie den Grundpreis basierend auf Land und Region.
+Beim Festlegen des Preises müssen unter Umständen [Steuerpflichten beim Verkauf in anderen Ländern](https://msdn.microsoft.com/windows/uwp/publish/tax-details-for-paid-apps) und [Kostenüberlegungen für bestimmte Märkte](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#price-considerations-for-specific-markets) in Betracht gezogen werden. Sie können auch [angepasste Preise für spezifische Märkte](../publish/set-and-schedule-app-pricing.md#override-base-price-for-specific-markets) festlegen.
 
 ### <a name="sale-price"></a>Angebotspreis
 
@@ -49,7 +49,7 @@ Sie können Angebotskampagnen im Voraus planen, indem Sie Start- und Enddatum de
 
 ## <a name="in-game-purchases"></a>In-Game-Käufe
 
-Bei In-Game-Käufen handelt es sich um Produkte, die in einem Spiel gekauft werden. Sie werden allgemein auch als _In-App-Käufe_ bezeichnet. Im Microsoft Store heißen diese Produkte _-Add-Ons_. [Add-Ons werden über das Windows Dev Center-Dashboard veröffentlicht](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions). Sie müssen die Add-Ons außerdem im Code Ihres Spiels aktivieren.
+Bei In-Game-Käufen handelt es sich um Produkte, die in einem Spiel gekauft werden. Sie werden allgemein auch als _In-App-Käufe_ bezeichnet. Im Microsoft Store heißen diese Produkte _-Add-Ons_. [Add-ons werden veröffentlicht](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions) , über das Partner Center. Sie müssen die Add-Ons außerdem im Code Ihres Spiels aktivieren.
 
 ### <a name="types-of-add-ons"></a>Arten von Add-Ons
 
@@ -60,7 +60,7 @@ Beim Erstellen von Verbrauchsartikeln entscheiden Sie, wie Sie sie nachverfolgen
 ### <a name="create-in-game-purchases"></a>Erstellen von In-Game-Käufen
 
 Die aktuellen APIs für In-App-Käufe und Lizenzinformationen sind Teil des [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace im Windows SDK (ab Windows10, Version 1607). Bei der Entwicklung eines neuen Spiels für 1607 oder eine höhere Version wird empfohlen, den __Windows.Services.Store__-Namespace zu verwenden, da er die aktuellen Add-On-Typen unterstützt und eine bessere Leistung bietet.
-Darüber hinaus wurde er für die Kompatibilität mit künftigen Arten von Produkten und Features entwickelt, die von Windows Dev Center und vom Store unterstützt werden. Verwenden Sie bei der Entwicklung für vorherige Windows10-Versionen stattdessen den [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace.
+Es wurde auch entwickelt, um die Kompatibilität mit künftigen Arten von Produkten und Features, die von dem Partner Center und dem Store unterstützt werden. Verwenden Sie bei der Entwicklung für vorherige Windows10-Versionen stattdessen den [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace.
 
 Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen](https://msdn.microsoft.com/windows/uwp/monetize/in-app-purchases-and-trials).
 
@@ -93,14 +93,14 @@ So erstellen Sie ein Paket, das in den Store hochgeladen werden kann:
 1. Öffnen Sie Ihre Spielelösung in Visual Studio.
 2. Navigieren Sie in Visual Studio zu __Projekt__ > __Store__ > __App-Pakete erstellen...__.
 3. Für die __möchten Sie Pakete zum Hochladen in den Microsoft Store erstellen?__ option, __Ja__wählen.
-4. Melden Sie sich bei Ihrem Dev Center-Entwicklerkonto an. Oder [registrieren](https://developer.microsoft.com/store/register) Sie sich für ein Entwicklerkonto, falls Sie keins besitzen.
+4. Melden Sie sich bei Ihrem [Partner Center](https://partner.microsoft.com/dashboard) -Entwicklerkonto an. Oder [registrieren](https://developer.microsoft.com/store/register) Sie sich für ein Entwicklerkonto, falls Sie keins besitzen.
 5. Wählen Sie eine App aus, für die das Uploadpaket erstellt werden soll. Falls Sie noch keine App-Übermittlung erstellt haben, geben Sie einen neuen App-Namen ein, um eine neue Übermittlung zu erstellen. Weitere Informationen finden Sie unter [Erstellen einer App durch Reservieren eines Namens](https://msdn.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name).
 6. Nachdem das Paket erfolgreich erstellt wurde, klicken Sie auf __Zertifizierungskit für Windows-Apps starten__, um den Testprozess zu starten.
 7. Beheben Sie mögliche Fehler, um ein Spielpaket zu erstellen.
 
 #### <a name="publish-the-game-as-hidden"></a>Veröffentlichen des Spiels als ausgeblendet
 
-1. Wechseln Sie zu [Dev Center](https://developer.microsoft.com/store), und melden Sie sich an.
+1. Wechseln Sie zum [Partner Center](https://partner.microsoft.com/dashboard) , und melden Sie sich bei.
 2. Klicken Sie in der __Dashboardübersicht__ oder auf der Seite __Alle Apps__ auf die App, die Sie verwenden möchten. Falls Sie noch keine App-Übermittlung erstellt haben, klicken Sie auf __Neue App erstellen__, und reservieren Sie einen Namen.
 3. Klicken Sie auf der Seite __App-Übersicht__ auf __Übermittlung starten__.
 4. Konfigurieren Sie diese neue Übermittlung. Auf der Übermittlungsseite:
@@ -120,7 +120,7 @@ Nachdem das Spiel an den Store übermittelt wurde, beginnt der [App-Zertifizieru
 Bei in Visual Studio geöffneter Spielelösung:
 
 1. Navigieren Sie zu __Projekt__ > __Store__ > __App mit Store verknüpfen...__.
-2. Melden Sie sich bei Ihrem Dev Center-Entwicklerkonto an, und wählen Sie den App-Namen, dem diese Lösung zugeordnet werden soll.
+2. Melden Sie sich bei Ihrem Partner Center-Entwicklerkonto an, und wählen Sie den app-Namen für diese Lösung zugeordnet werden soll.
 3. Doppelklicken Sie auf die Datei __Package.appxmanifest.xml__, und wechseln Sie zur Registerkarte __Verpacken__, um zu überprüfen, ob das Spiel richtig zugeordnet wurde.
 
 Wenn Sie die Lösung einem veröffentlichten Spiel zugeordnet haben, das im Store aufgeführt ist, verfügt Ihre Lösung über eine aktive Lizenz und Sie sind dem Erstellen von Add-Ons für Ihr Spiel einen Schritt näher. Weitere Informationen finden Sie unter [Verpacken von Apps](https://msdn.microsoft.com/windows/uwp/packaging/index).
@@ -129,7 +129,7 @@ Wenn Sie die Lösung einem veröffentlichten Spiel zugeordnet haben, das im Stor
 
 Stellen Sie beim Erstellen von Add-Ons sicher, dass Sie sie der richtigen Spieleübermittlung zuordnen. Ausführliche Informationen zum Konfigurieren aller Informationen für ein Add-On finden Sie unter [Add-On-Übermittlungen](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions).
 
-1. Rufen Sie [Dev Center](https://developer.microsoft.com/store) auf, und melden Sie sich an.
+1. Wechseln Sie zum [Partner Center](https://partner.microsoft.com/dashboard) , und melden Sie sich bei.
 2. Klicken Sie in der __Dashboardübersicht__ oder auf der Seite __Alle Apps__ auf die App, für die Sie das Add-On erstellen möchten.
 3. Wählen Sie auf der Seite __App-Übersicht__ im Abschnitt __Add-Ons__ die Option __Neues Add-On erstellen__.
 4. Wählen Sie den Produkttyp für das Add-On aus: __von Entwicklern verwaltete Verbrauchsartikel__, __vom Store verwalteter Verbrauchsartikel__ oder __Gebrauchsgut__.

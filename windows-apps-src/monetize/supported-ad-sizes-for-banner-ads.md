@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Anzeigen, Werbung, Größen, Banner
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f23be9a58a138a82cc4510039a1c0899ef092a2
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6030647"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6258409"
 ---
 # <a name="supported-banner-ad-sizes"></a>Unterstützte Größen für Banneranzeigen
 
@@ -28,7 +28,7 @@ Die folgenden Größen für Banneranzeigen sind für universelle Windows-Plattfo
 * 728 x 90
 
 > [!NOTE]
-> Für eine optimale empfehlen wir die Verwendung der folgenden Größen auf Windows 10 Mobile-Geräten: 300 x 50, 320 x 50 und 640 x 100.
+> Für eine optimale, empfehlen wir die Verwendung der folgenden Größen auf Windows 10 Mobile-Geräten: 300 x 50, 320 x 50 und 640 x 100.
 
 Die folgende Tabelle enthält Beispiele, in denen jeder Anzeigengröße Banner zu veranschaulichen.
 

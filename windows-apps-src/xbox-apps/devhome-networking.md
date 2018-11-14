@@ -2,7 +2,7 @@
 author: v-angraf
 ms.assetid: 5aeb009c-1f2f-7c04-4477-cbe92c473174
 title: Netzwerkseite (Dev Home)
-description: Enthält Informationen zu der Netzwerkseite der Dev Home-app für Xbox One.
+description: Enthält Informationen über die Netzwerk-Seite die Dev Home-App für Xbox One.
 ms.author: v-angraf@microsoft.com
 ms.date: 08/09/2017
 ms.topic: article
@@ -10,16 +10,16 @@ keywords: Windows10, UWP
 permalink: en-us/docs/xdk/devhome-networking.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 5968a2dad76343a1aa589caadf62ec3cd823aed0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025107"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6252976"
 ---
 # <a name="networking-page-dev-home"></a>Netzwerkseite (Dev Home)
    
   
-Der Seite " **Netzwerk** " der Dev Home simuliert verschiedene Netzwerke Ursachen für die Problembehandlung. Außerdem können Sie einen Netzwerk-Paket-Trace initiieren.   
+Die Seite **Networking** mit Dev Home simuliert verschiedene Netzwerke Bedingungen für die Problembehandlung. Außerdem können Sie einen Netzwerk-Paket-Trace zu initiieren.   
  ![Netzwerkseite von Dev Home](images/devhome_networking.png)   
   
 Die Seite " **Netzwerk** " enthält die folgenden Bereichen:   

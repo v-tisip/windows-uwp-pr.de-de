@@ -9,15 +9,15 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e76d3d517be73417777eb31dfc3994f92186522
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6044667"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6191393"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Verbessern Sie Ihre Desktopanwendung für Windows10
 
-Sie können Windows-Runtime-APIs verwenden, moderne Funktionen hinzufügen, die für Windows 10-Benutzer.
+Sie können Windows-Runtime-APIs verwenden, um moderner Funktionen hinzuzufügen, die für Windows 10-Benutzer.
 
 Richten Sie zuerst Ihr Projekt ein. Dann fügen Sie Windows10-Funktionen hinzu. Sie können separate Builds für Windows10-Benutzer erstellen oder die gleichen Binärdateien für alle Benutzer verteilen – unabhängig davon, welche Version von Windows sie ausführen.
 
@@ -46,11 +46,11 @@ Legen Sie im Dialogfeld **Eigenschaften** die **lokale Kopie** jeder *winmd*-Dat
 
 ![„Lokal kopieren“-Feld](images/desktop-to-uwp/copy-local-field.png)
 
-### <a name="modify-a-c-project-to-use-windows-runtime-apis"></a>Ändern eines C++ Projekts für Windows-Runtime-APIs verwenden
+### <a name="modify-a-c-project-to-use-windows-runtime-apis"></a>Ändern eines C++-Projekts für Windows-Runtime-APIs verwenden
 
 Verwendung [C++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/) Windows-Runtime-APIs nutzen. C++/WinRT ist eine vollständig standardisierte, moderne C++17-Sprachprojektion für Windows-Runtime-(WinRT)-APIs, die als headerdateibasierte Bibliothek implementiert ist und Ihnen einen erstklassigen Zugriff auf die moderne Windows-API bietet.
 
-Zum Konfigurieren des Projekts für C++ / WinRT, siehe [Ändern Sie ein Projekt Windows-Desktop-Anwendung zum Hinzufügen von C++ / WinRT-Unterstützung](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
+Zum Konfigurieren des Projekts für C++ / WinRT, finden Sie unter [Ändern Sie ein Projekt der Windows-Desktop-Anwendung zum Hinzufügen von C++ / WinRT-Unterstützung](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
 
 ## <a name="add-windows-10-experiences"></a>Windows10-Funktionen hinzufügen
 
@@ -58,7 +58,7 @@ Jetzt können Sie moderner Funktionen für Benutzer der Anwendung unter Windows1
 
 :white_check_mark: **Entscheiden Sie zunächst, welche Funktionen Sie hinzufügen möchten**
 
-Es gibt viele zur Auswahl. Beispielsweise können Sie Ihre Purchase Reihenfolge Fluss mithilfe von monetisierungs-APIs oder mehr Aufmerksamkeit für Ihre Anwendung beim stehen Ihnen interessante, z. B. ein neues Bild mit Teilen kaufablauf vereinfachen.
+Es gibt viele zur Auswahl. Beispielsweise können Sie Ihre Purchase Reihenfolge Fluss mithilfe von monetisierungs-APIs oder mehr Aufmerksamkeit für Ihre Anwendung bei interessanten, z. B. ein neues Bild freizugeben, der kaufablauf vereinfachen.
 
 ![Popup](images/desktop-to-uwp/toast.png)
 

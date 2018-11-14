@@ -1,7 +1,7 @@
 ---
 author: Xansky
 ms.assetid: 37F2C162-4910-4336-BEED-8536C88DCA65
-description: Verwenden Sie diese Methoden in der Microsoft Store-Übermittlungs-API, Flight-Pakete für apps zu verwalten, die für Ihr Partner Center-Konto registriert wurden.
+description: Verwenden Sie diese Methoden in der Microsoft Store-Übermittlungs-API, Flight-Pakete für apps zu verwalten, die für Ihr Partner Center-Konto registriert sind.
 title: Verwalten von Flight-Paketen
 ms.author: mhopkins
 ms.date: 02/08/2017
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Flights
 ms.localizationpriority: medium
 ms.openlocfilehash: 1f1300151d8b50a0a9e192c2090e9a3d72afa86e
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024696"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6250863"
 ---
 # <a name="manage-package-flights"></a>Verwalten von Flight-Paketen
 

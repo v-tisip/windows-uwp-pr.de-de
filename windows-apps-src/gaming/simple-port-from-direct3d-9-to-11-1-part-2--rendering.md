@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Spiele, Renderingframeworks, konvertieren, Direct3D 9, Direct3D 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 044a0dc7bf264a82b849623a53d00268d7b30fd9
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6034926"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6207824"
 ---
 # <a name="convert-the-rendering-framework"></a>Konvertieren des Renderingframeworks
 
@@ -238,7 +238,7 @@ m_d3dDevice->CreateVertexShader(
 
 Fügen Sie zum Einbinden von Shader-Bytecode in das kompilierte App-Paket dem Visual Studio-Projekt einfach die HLSL-Datei hinzu. In Visual Studio wird das [Effektcompiler-Tool](https://msdn.microsoft.com/library/windows/desktop/bb232919) (FXC) verwendet, um HLSL-Dateien in kompilierte Shaderobjekte (CSO-Dateien) zu kompilieren und in das App-Paket einzubinden.
 
-> **Hinweis:**  müssen Sie die richtige zielfeatureebene für den HLSL-Compiler festlegen: mit der rechten Maustaste der HLSL-Quelldatei in Visual Studio, klicken Sie auf Eigenschaften und ändern Sie die **Shader Model** -Einstellung unter **HLSL-Compiler -&gt; allgemeine**. In Direct3D wird diese Eigenschaft anhand der Hardwarefunktionen überprüft, wenn von der App die Direct3D-Shaderressource erstellt wird.
+> **Hinweis:**  Achten Sie darauf, dass Sie die richtige zielfeatureebene für den HLSL-Compiler festlegen: mit der rechten Maustaste der HLSL-Quelldatei in Visual Studio, klicken Sie auf Eigenschaften und ändern Sie die **Shader Model** -Einstellung unter **HLSL-Compiler -&gt; allgemeine**. In Direct3D wird diese Eigenschaft anhand der Hardwarefunktionen überprüft, wenn von der App die Direct3D-Shaderressource erstellt wird.
 
  
 
@@ -248,7 +248,7 @@ Dies ist ein guter Ort zum Erstellen des Eingabelayouts, welches der Deklaration
 
 Daten pro Vertex müssen im Systemspeicher in Form von kompatiblen Typen gespeichert werden. Hierbei können DirectXMath-Datentypen hilfreich sein. DXGI\_FORMAT\_R32G32B32\_FLOAT entspricht beispielsweise [**XMFLOAT3**](https://msdn.microsoft.com/library/windows/desktop/ee419475).
 
-> **Hinweis:**  Konstantenpuffer verwendet eine feste festes eingabelayout mit für vier Gleitkommazahlen gleichzeitig verwenden. [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608) (und die Ableitungen) wird für die Daten von Konstantenpuffern empfohlen.
+> **Hinweis:**  Konstantenpuffer eine feste festes eingabelayout mit für vier Gleitkommazahlen gleichzeitig verwenden. [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608) (und die Ableitungen) wird für die Daten von Konstantenpuffern empfohlen.
 
  
 

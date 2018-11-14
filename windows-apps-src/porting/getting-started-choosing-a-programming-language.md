@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 24b374a007bf562b2a1c8ba0afe42e75e04bc63e
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6045609"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6207995"
 ---
 # <a name="getting-started-choosing-a-programming-language"></a>Erste Schritte: Auswählen einer Programmiersprache
 
@@ -30,7 +30,7 @@ Obwohl wir uns in diesem Artikel auf C# konzentrieren, bieten die restlichen Spr
 -   [Erstellen Sie Ihrer ersten UWP-app mit c# oder Visual Basic](../get-started/create-a-hello-world-app-xaml-universal.md)
 -   [Erstellen Sie Ihrer ersten UWP-app mit JavaScript](../get-started/create-a-hello-world-app-js-uwp.md)
 
-**Hinweis:** für apps, die 3D-Grafiken verwenden, die Standards OpenGL und OpenGL ES sind nicht nativ für UWP-apps verfügbar. Wenn Sie Ihren OpenGL ES-Code in Microsoft DirectX nicht neu schreiben möchten, könnte **Angle** von Interesse für Sie sein. Angle ist ein laufendes Projekt, das zum Konvertieren von OpenGL in DirectX entwickelt wurde, indem OpenGL-API-Aufrufe in DirectX-API-Aufrufe übersetzt werden. Weitere Informationen hierzu finden Sie unter den folgenden Themen:
+**Hinweis:** für apps mit 3D-Grafiken die Standards OpenGL und OpenGL ES sind nicht nativ für UWP-apps verfügbar. Wenn Sie Ihren OpenGL ES-Code in Microsoft DirectX nicht neu schreiben möchten, könnte **Angle** von Interesse für Sie sein. Angle ist ein laufendes Projekt, das zum Konvertieren von OpenGL in DirectX entwickelt wurde, indem OpenGL-API-Aufrufe in DirectX-API-Aufrufe übersetzt werden. Weitere Informationen hierzu finden Sie unter den folgenden Themen:
 -   [Angle](https://code.google.com/p/angleproject/)
 -   [Erstellen Sie Ihrer ersten UWP-app mit DirectX](https://msdn.microsoft.com/library/windows/apps/br229580)
 -   [Beispiele für UWP-Apps, die DirectX nutzen](http://go.microsoft.com/fwlink/p/?LinkId=263603)

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP, Sichtbarkeit, private Zielgruppe, verfügbar, sichtbar
 ms.localizationpriority: medium
 ms.openlocfilehash: ec6bc85c15ccf9926939c3bc2e208289c8dc4bcc
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6032914"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6190061"
 ---
 # <a name="choose-visibility-options"></a>Sichtbarkeitsoptionen auswählen
 
@@ -60,7 +60,7 @@ Hier sind einige wichtige Aspekte, die Sie beachten sollten, wenn Ihre App an ei
 - Ihre App ist unabhängig von den Lizenzierungseinstellungen Ihrer Organisation nicht über den Microsoft Store für Unternehmen und/oder über den Microsoft Store für Bildungseinrichtungen verfügbar, auch nicht für Personen in Ihrer privaten Zielgruppe.
 - Während der Store garantiert, dass Ihre App nur für Personen mit einem Microsoft-Konto sichtbar ist, die Sie Ihrer privaten Zielgruppe hinzugefügt haben, kann nicht verhindert werden, dass diese Benutzer Informationen oder Screenshots außerhalb Ihrer privaten Zielgruppe freigeben. Wenn Ihnen Vertraulichkeit wichtig ist, achten Sie darauf, dass Ihre private Zielgruppe nur Personen enthält, denen Sie vertrauen können, dass Sie keine Details zu Ihrer App mit anderen teilen.
 - Stellen Sie sicher, dass Ihre Tester wissen, wie Sie Ihnen Feedback erteilen können. Sie möchten wahrscheinlich nicht, dass Feedback im Feedback-Hub gegeben wird, da jeder andere Kunde ihr Feedback sehen kann. Erwägen Sie einen Link für Feedback via E-Mail oder auf andere Weise.
-- Alle Rezensionen von Personen in Ihrer privaten Zielgruppe stehen zur Anzeige zur Verfügung. Allerdings sind diese Rezensionen nicht im App Store-Eintrag sichtbar, auch nachdem Ihre Übermittlung als **öffentliche Zielgruppe** festgelegt wird. Sie können Rezensionen von Ihrer privaten Zielgruppe durch Anzeigen der [Bericht "Rezensionen"](reviews-report.md)lesen, aber Sie nicht diese Daten herunterladen oder verwenden Sie die [Microsoft Store-Analyse-API](../monetize/access-analytics-data-using-windows-store-services.md) , um programmgesteuert auf diese Berichte zuzugreifen.
+- Alle Rezensionen von Personen in Ihrer privaten Zielgruppe stehen zur Anzeige zur Verfügung. Allerdings sind diese Rezensionen nicht im App Store-Eintrag sichtbar, auch nachdem Ihre Übermittlung als **öffentliche Zielgruppe** festgelegt wird. Sie können von Ihrer privaten Zielgruppe geschrieben werden, indem Sie den [Bericht "Rezensionen"](reviews-report.md)anzeigen Rezensionen lesen, aber Sie nicht diese Daten herunterladen oder verwenden Sie die [Microsoft Store-Analyse-API](../monetize/access-analytics-data-using-windows-store-services.md) , um programmgesteuert auf diese Berichte zuzugreifen.
 - Wenn Sie die App von **Private Zielgruppe** auf **Öffentliche Zielgruppe** ändern, ist das angezeigte **Veröffentlichungsdatum** im Store-Eintrag das Datum der ersten Veröffentlichung an die öffentliche Zielgruppe.
 
 ## <a name="discoverability"></a>Erkennbarkeit
@@ -73,7 +73,7 @@ Die Auswahl im Abschnitt **Auffindbarkeit** gibt an, wie Kunden Ihre App finden 
 
 ### <a name="make-this-product-available-and-discoverable-in-the-store"></a>Dieses Produkt im Store verfügbar und sichtbar machen
 
-Dies ist die Standardoption. Lassen Sie diese Option aktiviert, wenn Ihre app im Store für Kunden über die app direkten Link und/oder mit anderen Methoden, z. B. suchen, Browsen oder Einträgen in zusammengestellten Listen gefunden aufgelistet werden soll. 
+Dies ist die Standardoption. Lassen Sie diese Option aktiviert, wenn Ihre app im Store für Kunden, die über die app direkten Link und/oder mit anderen Methoden, z. B. suchen, Browsen oder Einträgen in zusammengestellten Listen gefunden aufgelistet werden soll. 
 
 ### <a name="make-this-product-available-but-not-discoverable-in-the-store"></a>Dieses Produkt im Store verfügbar aber nicht sichtbar machen
 

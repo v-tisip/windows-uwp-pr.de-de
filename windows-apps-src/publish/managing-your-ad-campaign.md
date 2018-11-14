@@ -9,16 +9,16 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 1c53ae429e4cb912ce0ed2480c8cab814cbfaf96
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6028903"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6153565"
 ---
 # <a name="manage-your-ad-campaign"></a>Verwalten Ihrer Anzeigenkampagne
 
 
-Um Anzeigenkampagnen für Ihre app im [Partner Center](https://partner.microsoft.com/dashboard)verwalten, erweitern Sie im linken Navigationsmenü **bewerben** , und wählen Sie dann **Anzeigenkampagnen**. Sie sehen aller Ihrer App zugeordneten Anzeigenkampagnen und für jede Anzeigenkampagne die Aufrufe, Klicks und Installationen. Weitere Informationen zu Aufrufen, Klicks und Installationen finden Sie unter den Definitionen dieser Begriffe im [Bericht „Anzeigenkampagne“](promote-your-app-report.md).
+Um Anzeigenkampagnen für Ihre app im [Partner Center](https://partner.microsoft.com/dashboard)zu verwalten, erweitern Sie im linken Navigationsmenü **bewerben** , und wählen Sie dann **Anzeigenkampagnen**. Sie sehen aller Ihrer App zugeordneten Anzeigenkampagnen und für jede Anzeigenkampagne die Aufrufe, Klicks und Installationen. Weitere Informationen zu Aufrufen, Klicks und Installationen finden Sie unter den Definitionen dieser Begriffe im [Bericht „Anzeigenkampagne“](promote-your-app-report.md).
 
 Zum Filtern der Anzeigenkampagnenliste klicken Sie auf die Dropdownliste **Abschnittsfilter** und treffen eine Auswahl aus den folgenden Filtern:
 

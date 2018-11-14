@@ -8,12 +8,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: Windows10, Uwp, Spiele, Entwickeln von Spielen
 ms.localizationpriority: medium
-ms.openlocfilehash: d29e647b2932e1d89247da5b91d8f836d11260d6
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: f695e281c754eaa81f9851ab814520f57fc249ab
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6031559"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6186581"
 ---
 # <a name="windows-10-game-development-guide"></a>Handbuch zur Entwicklung von Spielen unter Windows10
 
@@ -104,26 +104,16 @@ In diesem Handbuch finden Sie immer wieder direkte Links zu relevanten Dokumenta
     </tr>        
 </table>
 
-### <a name="windows-dev-center"></a>Windows Dev Center
+### <a name="partner-center"></a>Partner Center
 
-Der Prozess für die Veröffentlichung Ihres Windows-Spiels beginnt mit der Registrierung eines Entwicklerkontos bei Windows Dev Center. Mit einem Entwicklerkonto können Sie den Namen Ihres Spiels reservieren und kostenlose oder kostenpflichtige Spiele für alle Windows-Geräte an den Microsoft Store übermitteln. Sie können Ihr Spiel und Ihre spielinternen Produkte verwalten, ausführliche Analysen abrufen und Dienste aktivieren, die Spieler auf der ganzen Welt begeistern. 
+[Registrieren Sie ein Entwicklerkonto im Partner Center](https://developer.microsoft.com/store/register) ist der erste Schritt beim Veröffentlichen Ihres Windows-Spiels. Mit einem Entwicklerkonto können Sie den Namen Ihres Spiels reservieren und kostenlose oder kostenpflichtige Spiele für alle Windows-Geräte an den Microsoft Store übermitteln. Sie können Ihr Spiel und Ihre spielinternen Produkte verwalten, ausführliche Analysen abrufen und Dienste aktivieren, die Spieler auf der ganzen Welt begeistern. 
 
-Microsoft bietet ebenfalls mehrere Entwicklerprogramme an, die Sie bei der Entwicklung und Veröffentlichung von Windows-Spielen unterstützen. Wir empfehlen, vor dem Registrieren für ein Dev Center-Konto zu überprüfen, ob diese für Sie geeignet sind. Weitere Informationen finden Sie unter [Entwicklerprogramme](#developer-programs)
+Microsoft bietet ebenfalls mehrere Entwicklerprogramme an, die Sie bei der Entwicklung und Veröffentlichung von Windows-Spielen unterstützen. Wir empfehlen angezeigt wird, wenn diese vor der Registrierung für ein Partner Center-Konto für Sie geeignet sind. Weitere Informationen finden Sie unter [Entwicklerprogramme](#developer-programs)
 
-<table>
-    <colgroup>
-    <col width="50%" />
-    <col width="50%" />
-    </colgroup>
-    <tr>
-        <td>Entwicklerkonto registrieren</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/bg124287">Bereit für die Registrierung?</a></td>
-    </tr> 
-</table>
 
 ### <a name="developer-programs"></a>Entwicklerprogramme
 
-Microsoft bietet mehrere Entwicklerprogramme an, die Sie bei der Entwicklung und Veröffentlichung von Windows-Spielen unterstützen. Erwägen Sie, an einem Entwicklerprogramm teilzunehmen, wenn Sie Spiele für Xbox One entwickeln möchten und Xbox Live-Features in Ihrem Spiel integrieren möchten. Wenn Sie ein Spiel im Microsoft Store veröffentlichen möchten, benötigen Sie ebenfalls ein Entwicklerkonto in Windows Dev Center.
+Microsoft bietet mehrere Entwicklerprogramme an, die Sie bei der Entwicklung und Veröffentlichung von Windows-Spielen unterstützen. Erwägen Sie, an einem Entwicklerprogramm teilzunehmen, wenn Sie Spiele für Xbox One entwickeln möchten und Xbox Live-Features in Ihrem Spiel integrieren möchten. Wenn ein Spiel im Microsoft Store veröffentlichen möchten, müssen Sie auch ein Entwicklerkonto im [Partner Center](https://partner.microsoft.com/dashboard) erstellen.
 
 #### <a name="xbox-live-creators-program"></a>Xbox Live Creators-Programm
 
@@ -146,7 +136,7 @@ Treten Sie dem [ID@Xbox](http://www.xbox.com/Developers/id) bei, wenn Sie Zugrif
 
 #### <a name="idxbox"></a>ID@Xbox
 
-Das ID@Xbox-Programm unterstützt qualifizierte Spieleentwickler bei der eigenständigen Veröffentlichung für Windows und Xbox One. Wenn Sie für Xbox One entwickeln oder Ihr Windows10-Spiel mit XboxLive-Features wie Gamerscore, Erfolgen und Ranglisten versehen möchten, registrieren Sie sich bei ID@Xbox. Als ID@Xbox-Entwickler erhalten Sie Zugriff auf Tools und Supportleistungen, mit denen Sie Ihrer Kreativität freien Lauf lassen und Ihren Erfolg maximieren können. Es wird empfohlen, die Sie sich zuerst an ID@Xbox wenden, bevor Sie ein Entwicklerkonto im Windows Dev Center registrieren.
+Das ID@Xbox-Programm unterstützt qualifizierte Spieleentwickler bei der eigenständigen Veröffentlichung für Windows und Xbox One. Wenn Sie für Xbox One entwickeln oder Ihr Windows10-Spiel mit XboxLive-Features wie Gamerscore, Erfolgen und Ranglisten versehen möchten, registrieren Sie sich bei ID@Xbox. Als ID@Xbox-Entwickler erhalten Sie Zugriff auf Tools und Supportleistungen, mit denen Sie Ihrer Kreativität freien Lauf lassen und Ihren Erfolg maximieren können. Es wird empfohlen, dass Sie auf Anwenden ID@Xbox ersten vor dem Registrieren für ein Entwicklerkonto im Partner Center.
 
 <table>
     <colgroup>
@@ -990,7 +980,7 @@ Wenn Sie noch keine Erfahrungen mit der UWP-Programmierung haben und die Verwend
     </tr>
     <tr>
         <td>Ankündigung der Windows10-Neueinsteigerserie mit XAML (Blogbeitrag)</td>
-        <td><a href="http://blogs.windows.com/buildingapps/2015/09/30/windows-10-development-for-absolute-beginners/">Windows 10-Entwicklung für Neueinsteiger</a></td>
+        <td><a href="http://blogs.windows.com/buildingapps/2015/09/30/windows-10-development-for-absolute-beginners/">Windows10-Entwicklung für Neueinsteiger</a></td>
     </tr>
 </table>
 
@@ -1019,7 +1009,7 @@ Wenn Sie noch keine Erfahrungen mit der UWP-Programmierung haben und die Verwend
     </tr>
 </table>
 
-### <a name="windows-desktop-apisto-uwp"></a>Windows Desktop APIsto UWP
+### <a name="windows-desktop-apisto-uwp"></a>Windows-Desktop APIsto UWP
 
 Hier finden Sie einige Links, die Sie beim Wechsel von Windows-Desktop-Spielen zu UWP-Spielen unterstützen.
 
@@ -1368,9 +1358,9 @@ Ihr Spiel wird im Menü „Start“ durch eine Kachel dargestellt. Über Kacheln
 </table>
  
 
-### <a name="enable-in-app-product-iap-purchases"></a>Unterstützen von In-App-Produktkäufen (IAP-Käufen)
+### <a name="enable-in-app-product-add-on-purchases"></a>Aktivieren von in-app-Produktkäufen (Add-on)
 
-Bei einem IAP (In-App-Produkt) handelt es sich um einen zusätzlichen Artikel, den Spieler innerhalb des Spiels erwerben können. Beispiele für IAPs sind Add-Ons, Spielelevels, Gegenstände und alles andere, was für die Spieler interessant sein könnte. Bei richtiger Anwendung können IAPs Umsätze generieren und gleichzeitig das Spielerlebnis verbessern. Die IAPs Ihres Spiels werden über das WindowsDevCenter-Dashboard definiert und veröffentlicht. Die Aktivierung von In-App-Käufen erfolgt über den Code Ihres Spiels.
+Ein Add-on (in-app-Produkt) ist einen zusätzlichen Artikel, dass Spieler im Spiel erwerben können. Add-Ons sind spiellevels, Elemente oder alles andere, die Ihre Spieler interessant sein könnte. Entsprechend verwendet, können Add-ons Umsätze generieren und gleichzeitig das Spielerlebnis verbessern. Sie definieren und Veröffentlichen Ihres Spiels Add-ons über das Partner Center und in-app-Käufen im Code Ihres Spiels.
 
 <table>
     <colgroup>
@@ -1378,20 +1368,20 @@ Bei einem IAP (In-App-Produkt) handelt es sich um einen zusätzlichen Artikel, d
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Langlebige In-App-Produkte</td>
+        <td>Dauerhafte add-ons</td>
         <td><a href="https://msdn.microsoft.com/library/windows/apps/mt219684">Unterstützen von Käufen von In-App-Produkten</a></td>
     </tr>
     <tr>
-        <td>In-App-Verbrauchsprodukte</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt219683">Käufe von konsumierbaren In-App-Produkten aktivieren</a></td>
+        <td>Konsumierbaren add-ons</td>
+        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt219683">Aktivieren von Käufen von konsumierbaren In-App-Produkten</a></td>
     </tr>
     <tr>
-        <td>Details zu und Einreichung von In-App-Produkten</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148551">IAP-Übermittlungen</a></td>
+        <td>Add-On-Details zu und Einreichung</td>
+        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148551">Add-On-Übermittlungen</a></td>
     </tr>
     <tr>
-        <td>Überwachen von IAP-Verkauf und Demografie für Ihr Spiel</td>
-        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148538">Bericht zu IAP-Käufen</a></td>
+        <td>Überwachen von Add-on-Verkauf und Demografie für Ihr Spiel</td>
+        <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148538">Bericht zu Add-On-Käufen</a></td>
     </tr>
 </table>
  
@@ -1548,7 +1538,7 @@ Die folgenden Handbücher und Informationen sorgen für eine möglichst reibungs
 
 ### <a name="publishing"></a>Publishing
 
-Spielpakete werden über das neue einheitliche Windows Dev Center-Dashboard veröffentlicht und verwaltet.
+Verwenden Sie [Partner Center](https://partner.microsoft.com/dashboard) zum Veröffentlichen und Verwalten von spielpakete.
 
 <table>
     <colgroup>
@@ -1556,15 +1546,15 @@ Spielpakete werden über das neue einheitliche Windows Dev Center-Dashboard ver�
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>App-Veröffentlichung mit Windows Dev Center</td>
+        <td>Partner Center-app-Veröffentlichung</td>
         <td><a href="https://dev.windows.com/publish">Veröffentlichen von Windows-Apps</a></td>
     </tr>
     <tr>
-        <td>Erweiterte Veröffentlichung (GDN) über das Windows Dev Center</td>
-        <td><a href="https://developer.xboxlive.com/en-us/windows/documentation/Pages/home.aspx">Handbuch zur erweiterten Veröffentlichung über das Windows Dev Center-Dashboard</a></td>
+        <td>Partner Center erweiterte Veröffentlichung (GDN)</td>
+        <td><a href="https://developer.xboxlive.com/en-us/windows/documentation/Pages/home.aspx">Partner Center publishing-Handbuch</a></td>
     </tr>
     <tr>
-        <td>Sie können mit Azure Active Directory (AAD) Ihrem Dev Center-Konto Benutzer hinzufügen.</td>
+        <td>Verwenden von Azure Active Directory (AAD) Ihrem Partner Center-Konto Benutzer hinzufügen</td>
         <td><a href="https://docs.microsoft.com/windows/uwp/publish/manage-account-users">Verwalten von Kontobenutzern</a></td>
     </tr>   
     <tr>
@@ -1582,7 +1572,7 @@ Spielpakete werden über das neue einheitliche Windows Dev Center-Dashboard ver�
     </colgroup>
     <tr>
         <td>Informationen zur Verwendung der Streaming-Installation und optionale Pakete (Video)</td>
-        <td><a href="https://channel9.msdn.com/Events/Build/2017/B8093">Nextgen UWP-app-Verteilung: Erstellen erweiterbare, Stream-fähig Componentizedapps</a></td>
+        <td><a href="https://channel9.msdn.com/Events/Build/2017/B8093">Nextgen UWP-app-Verteilung: Erstellen erweiterbare, Stream können, Componentizedapps</a></td>
     </tr>
     <tr>
         <td>Unterteilen und Gruppieren zum Aktivieren von Inhalten für die Streaming-Installation</td>
@@ -1664,7 +1654,7 @@ Das Store-Manifest („StoreManifest.xml“) ist eine optionale Konfigurationsda
 
 Wer glaubt, sich nach dem Abschluss der Entwicklung und der Auslieferung eines Spiels entspannt zurücklehnen zu können, irrt: Die Entwicklung von Version1 mag zwar abgeschlossen sein, die Marktphase Ihres Spiels hat jedoch gerade erst begonnen. Sie sollten Verwendung und Fehlerberichte überwachen, auf Benutzerfeedback reagieren und Updates für Ihr Spiel veröffentlichen.
 
-### <a name="windows-dev-center-analytics-and-promotion"></a>Windows Dev Center-Analysen und Werbung
+### <a name="partner-center-analytics-and-promotion"></a>Partner Center-Analysen und Werbung
 
 <table>
     <colgroup>
@@ -1673,10 +1663,10 @@ Wer glaubt, sich nach dem Abschluss der Entwicklung und der Auslieferung eines S
     </colgroup>
     <tr>
         <td>DevCenter-App</td>
-        <td><a href="https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws">Dev Center-App unter Windows10 zum Anzeigen Ihrer veröffentlichten Apps</a></td>
+        <td><a href="https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws">Rufen Sie die app zum Anzeigen Ihrer veröffentlichten Apps ab</a></td>
     </tr>  
     <tr>
-        <td>Windows Dev Center-Analysen</td>
+        <td>Partner Center analytics</td>
         <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148522">Analysieren der App-Leistung</a></td>
     </tr>
     <tr>

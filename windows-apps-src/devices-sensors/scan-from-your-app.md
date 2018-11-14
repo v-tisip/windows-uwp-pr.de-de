@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f9128056cbb3b9218d164b243948d9dd16af0786
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6045560"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6256473"
 ---
 # <a name="scan-from-your-app"></a>Scannen aus Ihrer App
 
@@ -111,7 +111,7 @@ Zum Scan mit den Standardeinstellungen ist Ihre App bei der Auswahl eines Scanne
 
 Ihre App kann den [automatisch konfigurierten Scan](https://msdn.microsoft.com/library/windows/hardware/Ff539393) des Geräts mit den optimalen Scaneinstellungen verwenden. Bei dieser Option kann das Gerät selbst die besten Scaneinstellungen, wie Farbmodus und Scanauflösung, basierend auf dem zu scannenden Inhalt bestimmen. Das Gerät wählt die Scaneinstellungen zur Laufzeit für jeden neuen Scanauftrag.
 
-**Hinweis:** nicht von allen Scannern unterstützt diese Funktion muss die app prüfen, ob der Scanner dieses Feature unterstützt, bevor Sie diese Einstellung verwenden.
+**Hinweis:** dieses Feature wird von nicht von allen Scannern unterstützt, daher die app prüfen muss, ob der Scanner dieses Feature unterstützt, bevor Sie diese Einstellung verwenden.
 
 In diesem Beispiel prüft die App zunächst, ob der Scanner die automatische Konfiguration unterstützt, und startet dann den Scanvorgang. Um einen Flachbett- oder Einzugsscanner anzugeben, ersetzen Sie einfach **AutoConfigured** durch **Flatbed** oder **Feeder**.
 

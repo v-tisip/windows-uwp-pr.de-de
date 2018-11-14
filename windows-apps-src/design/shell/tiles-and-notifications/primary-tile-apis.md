@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows10, UWP, StartScreenManager, primäre Kachel anheften, primäre Kachel-APIs, überprüfen, ob die Kachel angeheftet ist, Live-Kachel
 ms.localizationpriority: medium
 ms.openlocfilehash: 8d5c65881552199fce6f90bbf15e4bb2bac950ce
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6033675"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6156923"
 ---
 # <a name="primary-tile-apis"></a>Primärkachel-APIs
  
@@ -86,7 +86,7 @@ bool isPinned = await StartScreenManager.GetDefault().ContainsAppListEntryAsync(
 Wenn die primäre Kachel aktuell nicht angeheftet ist und die Kachel von der Startseite unterstützt wird, sollten Sie Benutzern den Tipp anzeigen, dass die primäre Kachel angeheftet werden kann.
 
 > [!NOTE]
-> Sie müssen diese API über einen UI-Thread aufrufen, während Ihre app im Vordergrund befindet, und rufen Sie nur diese Benutzer absichtlich die primäre Kachel Bepinned (z. B. nachdem der Benutzer in Ihrem Tipp zum Anheften der Kachel Ja geklickt) angefordert hat APIafterthe.
+> Sie müssen diese API über einen UI-Thread aufrufen, während Ihre app im Vordergrund, und rufen Sie nur diese APIafterthe Benutzer absichtlich die primäre Kachel Bepinned (z. B. nachdem der Benutzer, die in Ihrem Tipp zum Anheften der Kachel Ja geklickt) angefordert hat.
 
 Klickt der Benutzer auf Ihre Schaltfläche, um die primäre Kachel anzuheften, würden Sie dann die Methode [RequestAddAppListEntryAsync](https://docs.microsoft.com/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_RequestAddAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_) aufrufen, um anzufordern, dass die Kachel an die Startseite angeheftet wird. Dadurch wird ein Dialogfeld angezeigt, das den Benutzer auffordert zu bestätigen, dass Ihre Kachel an die Startseite angeheftet werden soll.
 

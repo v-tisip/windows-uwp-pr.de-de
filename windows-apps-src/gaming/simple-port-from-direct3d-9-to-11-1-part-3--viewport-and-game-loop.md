@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Spiele, portieren, Spielschleife, Direct3D9, DirectX11
 ms.localizationpriority: medium
 ms.openlocfilehash: 4db2ed74144ead22643ece17a7496b6267f7e6b8
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6050885"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6265533"
 ---
 # <a name="port-the-game-loop"></a>Portieren der Spielschleife
 
@@ -35,7 +35,7 @@ Zum Einrichten eines Desktopfensters mit einem Direct3D 9-Viewport musste das he
 
 Dagegen verfügt die UWP-Umgebung über ein deutlich einfacheres System. Anstatt ein herkömmliches Fenster einzurichten, wird von einem Microsoft Store-Spiel, für das DirectX verwendet wird, das [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)-Element implementiert. Diese Schnittstelle ist für DirectX-Apps und -Spiele vorhanden, um die direkte Ausführung in einem [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) innerhalb des App-Containers zu ermöglichen.
 
-> **Hinweis:**  Windows werden verwaltete Zeiger auf Ressourcen wie das Quellobjekt für die Anwendung und die [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)quellanwendungsobjekt. Finden Sie unter [**Handle to Object Operator (^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
+> **Hinweis:**  Windows ist eine verwaltete Zeiger auf Ressourcen wie das Quellobjekt für die Anwendung und das [**corewindow-Element**](https://msdn.microsoft.com/library/windows/apps/br208225). Finden Sie unter [**Handle to Object Operator (^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
 
  
 

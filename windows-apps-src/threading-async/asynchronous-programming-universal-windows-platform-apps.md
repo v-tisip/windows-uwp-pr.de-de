@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, asynchron
 ms.localizationpriority: medium
 ms.openlocfilehash: 04d91fc7166812f53e8b2238b1a47c8aeb9c425f
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6049835"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6252055"
 ---
 # <a name="asynchronous-programming"></a>Asynchrone Programmierung
 Dieses Thema beschreibt die asynchrone Programmierung in die universelle Windows-Plattform (UWP) und ihre Darstellung in c#, Microsoft Visual Basic, C++ und JavaScript.
@@ -23,7 +23,7 @@ Mit asynchroner Programmierung können Sie die Reaktionsfähigkeit Ihrer App bei
 Für Methoden, deren Aufruf möglicherweise recht lange dauert, ist die asynchrone Programmierung in der Universellen Windows-Plattform das Standardverfahren. JavaScript, c#, Visual Basic und C++ jedes bieten sprachunterstützung für asynchrone Methoden.
 
 ## <a name="asynchronous-programming-in-the-uwp"></a>Asynchrone Programmierung auf der UWP
-Viele UWP-Features, z. B. [**"mediacapture"**](https://msdn.microsoft.com/library/windows/apps/BR241124) -APIs und [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) -APIs werden als asynchrone APIs verfügbar gemacht. Die Namen asynchroner APIs enden üblicherweise mit "Async", um anzugeben, dass ein Teil der Ausführung ist wahrscheinlich durchgeführt werden, nachdem die Steuerung an den Aufrufer zurückgegeben hat.
+Viele UWP-Features, z. B. die [**MediaCapture**](https://msdn.microsoft.com/library/windows/apps/BR241124) -APIs und [**StorageFile**](https://msdn.microsoft.com/library/windows/apps/BR227171) -APIs, werden als asynchrone APIs verfügbar gemacht. Die Namen asynchroner APIs enden üblicherweise mit "Async", um anzugeben, dass ein Teil der Ausführung ist wahrscheinlich durchgeführt werden, nachdem die Steuerung an den Aufrufer zurückgegeben wurde.
 
 Bei der Verwendung asynchroner APIs in einer UWP-App (Universelle Windows-Plattform) führt der Code einheitlich nicht blockierende Aufrufe aus. Bei Implementierung dieser asynchronen Muster in Ihren API-Definitionen können Aufrufer den Code auf vorhersagbare Weise nachvollziehen und verwenden.
 
@@ -62,7 +62,7 @@ Mit C++ / WinRT Coroutinen und dem Operator **Co_await** Sie verwenden. Weitere 
 ## <a name="asynchronous-patterns-in-uwp-with-ccx"></a>Asynchrone Muster in UWP mit C++ / CX
 In C++/CX basiert die asynchrone Programmierung auf der [**task-Klasse**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750113.aspx) und deren [**then-Methode**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750044.aspx). Die Syntax ist ähnlich aufgebaut wie eine JavaScript-Zusage. Die **task-Klasse** und die zugehörigen Typen erlauben es außerdem, den Threadkontext abzubrechen und zu verwalten. Weitere Informationen finden Sie unter [asynchrone Programmierung in C++ / CX](asynchronous-programming-in-cpp-universal-windows-platform-apps.md).
 
-Die [**create\_async function**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750102.aspx) unterstützt die Erstellung asynchroner APIs, die über JavaScript oder eine andere Sprache mit Unterstützung für UWP verwendet werden können. Weitere Informationen finden Sie unter [Erstellen von asynchronen Vorgängen in C++ / CX](https://msdn.microsoft.com/library/windows/apps/xaml/hh750082.aspx).
+Die [**create\_async function**](https://msdn.microsoft.com/library/windows/apps/xaml/hh750102.aspx) unterstützt die Erstellung asynchroner APIs, die über JavaScript oder eine andere Sprache mit Unterstützung für UWP verwendet werden können. Weitere Informationen finden Sie unter [Erstellen asynchroner Vorgänge in C++ / CX](https://msdn.microsoft.com/library/windows/apps/xaml/hh750082.aspx).
 
 ## <a name="asynchronous-patterns-in-uwp-using-javascript"></a>Asynchrone Muster in UWP mit JavaScript
 In JavaScript basiert die asynchrone Programmierung auf dem vorgeschlagenen [Common JS Promises/A](http://wiki.commonjs.org/wiki/Promises/A)-Standard. Dabei werden von asynchronen Methoden zugesagte Objekte zurückgegeben. Zusagen werden sowohl auf der UWP als auch in der Windows-Bibliothek für JavaScript verwendet.

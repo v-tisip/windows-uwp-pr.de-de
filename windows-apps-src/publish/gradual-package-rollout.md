@@ -9,15 +9,15 @@ keywords: Windows10, UWP
 ms.assetid: 65d578a6-4e26-484c-90af-b2cd916f3634
 ms.localizationpriority: medium
 ms.openlocfilehash: ab2db3d34ed223b318d65ec497cc0feb7cb16342
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6039696"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6153455"
 ---
 # <a name="gradual-package-rollout"></a>Schrittweiser Paketrollout
 
-Wenn Sie ein Update für eine Übermittlung veröffentlichen, können Sie auswählen, schrittweise an die aktualisierten Pakete für einen bestimmten Prozentsatz der Kunden Ihrer app unter Windows 10 (einschließlich Xbox) bereitstellen. So können Sie Feedback und Analysedaten für die jeweiligen Pakete überwachen und vor einem umfassenden Rollout sicherstellen, dass das Update ordnungemäß funktioniert. Sie können den Prozentsatz jederzeit erhöhen (oder das Update stoppen), ohne eine neue Übermittlung zu erstellen. 
+Wenn Sie ein Update für eine Übermittlung veröffentlichen, können Sie auswählen, schrittweise an die aktualisierten Pakete auf einen Prozentsatz der Kunden Ihrer app unter Windows 10 (einschließlich Xbox) bereitstellen. So können Sie Feedback und Analysedaten für die jeweiligen Pakete überwachen und vor einem umfassenden Rollout sicherstellen, dass das Update ordnungemäß funktioniert. Sie können den Prozentsatz jederzeit erhöhen (oder das Update stoppen), ohne eine neue Übermittlung zu erstellen. 
 
 > [!IMPORTANT]
 > Ihre Rolloutauswahl gilt für alle Pakete, wird jedoch nur bei Kunden mit Betriebssystemversionen mit Unterstützung für Flight-Pakete (Windows.Desktop Build 10586 oder höher, Windows.Mobile Build 10586.63 oder höher und Xbox) übernommen, einschließlich bei Kunden, die Ihre App über [Vom Store verwaltete (Online-)Lizenzierung](organizational-licensing.md) aus dem [Microsoft Store for Business](https://businessstore.microsoft.com/store) oder [Microsoft Store für Bildungseinrichtungen](https://educationstore.microsoft.com/store) beziehen. Beim schrittweisen Paketrollout erhalten Kunden mit älteren Betriebssystemversionen keine Pakete aus der aktuellen Übermittlung, bis Sie das Paketrollout wie nachfolgend beschrieben abschließen.

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Flight-Übermittlung
 ms.localizationpriority: medium
 ms.openlocfilehash: f9f40219503c0a57f76fcee81858acf51f59b1df
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6043729"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6190933"
 ---
 # <a name="get-a-package-flight-submission"></a>Abrufen einer Flight-Paket-Übermittlung
 
@@ -25,7 +25,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Microsoft Store-Übermittlungs-API.
 * [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
-* Erstellen Sie eine Flight-Paketübermittlung für eine app im Partner Center. Sie erreichen dies im Partner Center, oder Sie können dies tun, indem Sie mit der Methode [Erstellen Sie eine Flight-Paketübermittlung](create-a-flight-submission.md) .
+* Erstellen Sie eine Flight-Paketübermittlung für eine app im Partner Center. Sie können dies im Partner Center oder hierzu können Sie mithilfe der Methode [Erstellen Sie eine Flight-Paketübermittlung](create-a-flight-submission.md) .
 
 ## <a name="request"></a>Anforderung
 

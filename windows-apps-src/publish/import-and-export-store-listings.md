@@ -8,22 +8,22 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Einträge importieren, Store-Einträge exportieren, Export importieren, Store-Einträge CSV
 ms.localizationpriority: medium
 ms.openlocfilehash: 9df66baa1b5771055894b2e3accc0c8a9dff8a60
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6047638"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6206435"
 ---
 # <a name="import-and-export-store-listings"></a>Importieren und Exportieren von Store-Einträgen
 
 Anstelle der [Eingabe von Informationen für Ihre Store-Einträge direkt im Partner Center](create-app-store-listings.md)haben Sie die Option zum Hinzufügen oder aktualisieren Sie Ihre Einträge in eine CSV-Datei exportieren, und Ihre Info und Ressourcen und dann die aktualisierte Datei importieren. Sie können diese Methode verwenden, um Einträge von Grund auf neu zu erstellen oder Angebote zu aktualisieren, die Sie bereits erstellt haben.
 
-Diese Option ist besonders nützlich, wenn Sie Store-Einträge für Ihr Produkt in mehreren Sprachen erstellen oder aktualisieren möchten, da Sie die Informationen in mehrere Felder kopieren/einfügen und problemlos alle Änderungen vornehmen können, die für bestimmte Sprachen gelten sollen. Allerdings können Sie mithilfe dieser Methode [plattformspezifischen Store-Einträge](create-platform-specific-store-listings.md) für zuvor veröffentlichten apps, die Unterstützung von älteren Betriebssystemversionen erstellen oder aktualisieren. 
+Diese Option ist besonders nützlich, wenn Sie Store-Einträge für Ihr Produkt in mehreren Sprachen erstellen oder aktualisieren möchten, da Sie die Informationen in mehrere Felder kopieren/einfügen und problemlos alle Änderungen vornehmen können, die für bestimmte Sprachen gelten sollen. Allerdings können Sie diese Methode [plattformspezifischen Store-Einträge](create-platform-specific-store-listings.md) für zuvor veröffentlichten apps, die Unterstützung von älteren Betriebssystemversionen erstellen oder aktualisieren. 
 
 > [!TIP]
 > Sie können dieses Feature auch zum Importieren und Exportieren von Details für einen Store-Eintrag für ein Add-On anzeigen. Für Add-Ons ist der Prozess identisch, mit Ausnahme davon, dass [nur die Felder, die relevant für Add-Ons sind](#add-ons) enthalten sind.
 
-Denken Sie daran, dass Sie immer erstellen oder aktualisieren Einträge direkt im Partner Center, (auch wenn Sie zuvor die Import/Export-Methode verwendet haben) können. Das direkte aktualisieren im Partner Center kann einfacher sein, wenn Sie nur eine einfache Änderung vornehmen, aber Sie können beide Methoden zu einem beliebigen Zeitpunkt verwenden.
+Bedenken Sie, dass Sie immer erstellen oder aktualisieren Einträge direkt im Partner Center, (auch wenn Sie zuvor die Import/Export-Methode verwendet haben) können. Das direkte aktualisieren im Partner Center kann einfacher sein, wenn Sie nur eine einfache Änderung vornehmen, aber Sie beide Methoden, zu einem beliebigen Zeitpunkt verwenden können.
 
 ## <a name="export-listings"></a>Exportieren von Einträgen
 
@@ -37,8 +37,8 @@ Wenn Sie bereits Einträge erstellt haben (oder Pakete hochgeladen haben), sehen
      
 Nachfolgend finden Sie ein Überblick darüber, was in jeder der Spalten in der exportierten CSV-Datei enthalten ist:
 - Die Spalte **Feld** enthält einen Namen, der mit jedem Teil eines Store-Eintrags verknüpft ist. Diese entsprechen den gleichen Elementen, die Sie beim Erstellen von Store-Einträge im Partner Center bereitstellen können, obwohl einige Namen geringfügig sind. Für Elemente, für die Sie mehr als eine Antwort für den gleichen Typ eingeben können, sehen Sie mehrere Zeilen, bis zur maximalen Anzahl, die Sie angeben können. Für **App-Features** sehen Sie **Feature1**, **Feature2**usw., bis zu **Feature20** (da Sie nur bis zu 20 Features der App angeben können).
-- Die **ID-** Spalte enthält eine Zahl, die Partner Center einzelnen Feldern zuordnet. 
-- Der Spalte " **Art** " enthält allgemeine Hinweise dazu, welche Art von Informationen für dieses Feld, z. B. **Text** oder **relativer Pfad (oder URL für die Datei im Partner Center)**. 
+- Die **ID** -Spalte enthält eine Zahl, die Partner Center einzelnen Feldern zuordnet. 
+- Der Spalte " **Art** " enthält allgemeine Hinweise dazu, welche Art von Informationen für dieses Feld, z. B. **Text** oder **relativer Pfad (oder URL-Datei im Partner Center)**. 
 - Die Spalte **Standard** (und alle Spalten, die mit Gebietsschemacodes gekennzeichnet sind) stellen den Text oder Objekte dar, die mit jedem Teil der Store-Eintrag verknüpft sind. Sie können die Felder in diesen Spalten aktualisieren, um Ihre Store-Einträge zu bearbeiten.
 
 >[!IMPORTANT]
@@ -63,11 +63,11 @@ Nehmen wir folgendes Beispiel:
 
 Wenn Sie auf keinem bestimmten Feld Änderungen vornehmen möchten, können Sie die gesamte Zeile aus dem Arbeitsblatt löschen **mit Ausnahme der Zeilen für Trailer und ihren zugehörigen Miniaturansichten und Titeln**. Das Löschen einer Zeile hat außer für diese Elemente keine Auswirkung auf die zugehörigen Daten für das Feld des Eintrags. So können Sie jegliche Zeilen entfernen, die Sie nicht bearbeiten möchten, damit Sie sich auf die Felder konzentrieren können, in denen Sie Änderungen vornehmen möchten.
 
-Das Löschen der Informationen aus einem Feld für eine Sprache, ohne dabei die ganze Zeile zu entfernen, funktioniert unterschiedlich, je nach dem Feld. Für die Felder, deren **Typ** **Text** ist, löscht die Informationen aus einem Feld den gesamten Eintrag aus der Liste in dieser Sprache.  Allerdings wird das Löschen der Informationen in einem Feld für ein Bild, z. B. ein Bildschirmfoto oder ein Logo, keine Auswirkung haben; die vorherige Abbildung wird weiterhin verwendet werden, es sei denn, Sie entfernen diese, indem Sie direkt im Partner Center bearbeiten. Das Löschen der Informationen für ein Feld "Trailer" wird entfernt den Trailer aus dem Partner Center, daher werden Sie sicher, dass Sie eine Kopie aller erforderlichen Dateien verfügen, bevor Sie dies tun.
+Das Löschen der Informationen aus einem Feld für eine Sprache, ohne dabei die ganze Zeile zu entfernen, funktioniert unterschiedlich, je nach dem Feld. Für die Felder, deren **Typ** **Text** ist, löscht die Informationen aus einem Feld den gesamten Eintrag aus der Liste in dieser Sprache.  Allerdings wird das Löschen der Informationen in einem Feld für ein Bild, z. B. ein Bildschirmfoto oder ein Logo, keine Auswirkung haben; die vorherige Abbildung wird weiterhin verwendet werden, es sei denn, Sie entfernen diese, indem Sie direkt im Partner Center bearbeiten. Das Löschen der Informationen für ein Trailer-Feld wird entfernt den Trailer aus dem Partner Center, daher sicher sein, dass Sie eine Kopie aller erforderlichen Dateien verfügen, bevor Sie dies tun.
 
 Viele der Felder in den exportierten Einträgen erfordern eine Texteingabe, wie im obigen Beispiel **Beschreibung** und **Versionshinweise** gezeigt. Geben Sie für diese Arten Felder einfach den entsprechenden Text in das Feld für jede Sprache ein. Folgen Sie unbedingt der Länge und anderen Anforderungen für die einzelnen Felder. Weitere Informationen zu diesen Anforderungen finden Sie unter [App Store-Einträge erstellen](create-app-store-listings.md).
 
-Das Bereitstellen von Informationen für Felder, die Ressourcen entsprechen, wie z.B. Bilder und Trailer, sind etwas komplizierter. Anstatt **Text**ist der **Typ** für diese Ressourcen **relativer Pfad (oder URL für die Datei im Partner Center)**. 
+Das Bereitstellen von Informationen für Felder, die Ressourcen entsprechen, wie z.B. Bilder und Trailer, sind etwas komplizierter. Anstatt **Text**ist der **Typ** für diese Ressourcen **relativer Pfad (oder URL-Datei im Partner Center)**. 
      
 Wenn Sie bereits Ressourcen für Ihre Store-Einträge hochgeladen haben, werden diese Ressourcen von der URL dargestellt. Diese URLs können in mehreren Beschreibungen für ein Produkt oder sogar über verschiedene Produkte im gleichen Entwicklerkonto wiederverwendet werden, damit Sie diese URLs kopieren und sie in einem anderen Feld wiederverwenden, wenn Sie dies wünschen.
 
@@ -79,10 +79,10 @@ Wenn Sie eine neue Ressource verwenden, die Sie zuvor in das Partner Center hinz
 > [!TIP]
 > Achten Sie für optimale Ergebnisse darauf, wenn Sie Ihren Eintrag als Ordner importieren, dass Sie die neueste Version von Microsoft Edge, Chrome oder Firefox verwenden.
 
-Wenn der Stammordner beispielsweise **My_folder** heißt und Sie ein Bild verwenden möchten, dass **screenshot1.png** für **DesktopScreenshot1** heißt, können Sie screenshot1.png dem Stammverzeichnis dieses Ordners hinzufügen, und dann **my_folder/screenshot1.png** in das Feld **DesktopScreenshot1** eingeben. Wenn Sie einen Ordner für Images im Stammordner erstellt haben und dann screenshot1.jpg dort abgelegt wurde, geben Sie **my_folder/images/screenshot1.png** an. Beachten Sie, dass nach dem Importieren der Einträge aus einem Ordner, Pfade zu Ihren Bilddateien als URLs zu den Dateien im Partner Center das nächste Mal konvertiert werden, das Sie Ihre Einträge exportieren. Sie können diese URLs kopieren und sie erneut einfügen (z.B. um die gleichen Ressourcen in mehreren Sprachen des Eintrags zu verwenden). 
+Wenn der Stammordner beispielsweise **My_folder** heißt und Sie ein Bild verwenden möchten, dass **screenshot1.png** für **DesktopScreenshot1** heißt, können Sie screenshot1.png dem Stammverzeichnis dieses Ordners hinzufügen, und dann **my_folder/screenshot1.png** in das Feld **DesktopScreenshot1** eingeben. Wenn Sie einen Ordner für Images im Stammordner erstellt haben und dann screenshot1.jpg dort abgelegt wurde, geben Sie **my_folder/images/screenshot1.png** an. Beachten Sie, dass nach dem Importieren der Einträge aus einen Ordner, Pfade zu Ihren Bilddateien als URLs zu den Dateien im Partner Center das nächste Mal konvertiert werden, das Sie Ihre Einträge exportieren. Sie können diese URLs kopieren und sie erneut einfügen (z.B. um die gleichen Ressourcen in mehreren Sprachen des Eintrags zu verwenden). 
 
 > [!IMPORTANT]
-> Wenn der exportierte Eintrag Trailer enthält, beachten Sie, dass das Löschen der URL zum Trailer oder die Miniaturansicht aus Ihrer CSV-Datei vollständig die gelöschte Datei aus dem Partner Center entfernt, und Sie werden nicht mehr darauf zugreifen können (es sei denn, sie auch im Ano verwendet wird können Eintrag, in denen es nicht gelöscht wurde). 
+> Wenn der exportierte Eintrag Trailer enthält, beachten Sie, dass das Löschen der URL zum Trailer oder die Miniaturansicht aus Ihrer CSV-Datei vollständig die gelöschte Datei aus dem Partner Center entfernt, und Sie werden nicht mehr darauf zugreifen können (es sei denn, sie auch im Ano verwendet wird können die Eintrag, in denen es nicht gelöscht wurde). 
 
 ## <a name="import-listings"></a>Importieren von Einträgen
 
@@ -99,11 +99,11 @@ Wenn Probleme erkannt werden, sehen Sie einen Hinweis, der angibt, dass Sie erfo
 
 Keine der Informationen aus Ihrer CSV-Datei wird im Partner Center gespeichert werden, bis alle Fehler in der Datei, auch für Felder ohne Fehler behoben wurden. Nachdem Sie eine CSV-Datei, die keine Fehler aufweist importiert haben, wird die von die Ihnen bereitgestellten Eintragsinformationen im Partner Center gespeichert werden, und für die Übermittlung verwendet werden.
 
-Sie können weiterhin Updates für Ihre Einträge entweder durch eine andere aktualisierte CSV-Datei importieren oder die Änderungen direkt im Partner Center vornehmen.
+Sie können weiterhin Updates für Ihre Einträge entweder durch eine andere aktualisierte CSV-Datei importieren oder Änderungen direkt im Partner Center vornehmen.
 
 ## <a name="add-ons"></a>Add-Ons
 
-Für Add-ons, importieren und Exportieren von Store-Einträge verwendet das gleiche Verfahren weiter oben beschriebenen mit der Ausnahme, dass Sie nur die drei relevante Felder für [Add-On-Store-Einträge](create-add-on-store-listings.md)sehen: **Beschreibung**, **Titel**und **StoreLogo300x300** () bezeichnet als **Symbol** in der Store-Eintragsseite im Partner Center). Das Feld **Titel** ist erforderlich, und die beiden anderen Felder sind optional.
+Für Add-ons, importieren und Exportieren von Store-Einträge verwendet den oben beschriebenen Vorgang mit der Ausnahme, dass Sie nur die drei relevante Felder für [Add-on-Store-Einträge](create-add-on-store-listings.md)sehen: **Beschreibung**, **Titel**und **StoreLogo300x300** () bezeichnet als **Symbol** in der Store-Eintragsseite im Partner Center). Das Feld **Titel** ist erforderlich, und die beiden anderen Felder sind optional.
 
 Beachten Sie, dass Sie Store-Einträge separat für jedes Add-On in Ihrer App importieren und exportieren müssen, indem Sie zu der Übermittlungsübersicht für das Add-On navigieren.
 

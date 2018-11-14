@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows10, verpackung, paketlayout, bestandspaket
 ms.localizationpriority: medium
 ms.openlocfilehash: 9342b4ce35cb50037813ed2210e2d7246411ad92
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6032984"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6154212"
 ---
 # <a name="package-creation-with-the-packaging-layout"></a>Paketerstellung mit dem Verpackungslayout  
 
@@ -145,7 +145,7 @@ Ressourcenpakete können mit dem **ResourcePackage**-Element angegeben werden. I
 
 Optionale Pakete besitzen jeweils ihre eigenen, eindeutigen Paketfamiliennamen und müssen mit **PackageFamily**-Elementen definiert werden, wenn das **Optional**-Attribut als **true** angegeben wird. Das **RelatedSet**-Attribut wird verwendet, um anzugeben, ob sich das optionale Paket innerhalb des zugehörigen Sets befindet (standardmäßig ist dieser Wert „true”), und ob das optionale Paket mit dem primären Paket aktualisiert werden soll.
 
-Das Element **PrebuiltPackage** wird verwendet, um Pakete hinzufügen, die nicht im verpackungslayout enthalten oder in die app Bundle zu erstellenden Datei(en) verwiesen werden definiert sind. In diesem Fall wird ein anderes optionales DLC-Paket hier enthalten sein, damit die primäre app-Bundle-Datei kann darauf verweisen und es Teil des zugehörigen Sets werden kann.
+Das Element **PrebuiltPackage** wird verwendet, um Pakete hinzufügen, die nicht im verpackungslayout enthalten oder in den app-Bundle-Dateien zu erstellenden verwiesen werden definiert sind. In diesem Fall wird ein anderes optionales DLC-Paket hier enthalten sein, damit die primäre app-Bundle-Datei kann darauf verweisen und es Teil des zugehörigen Sets werden kann.
 
 
 ## <a name="build-app-packages-with-a-packaging-layout-and-makeappxexe"></a>Erstellen von App-Paketen mit einem Verpackungslayout und MakeAppx.exe

@@ -9,18 +9,18 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 2cc47e934ca75eb581808483f7875fea901943b3
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6038674"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6199694"
 ---
 # <a name="advertising-performance-report"></a>Bericht zur Anzeigenleistung
 
 
-Der **Leistungsbericht Werbung** im [Partner Center](https://partner.microsoft.com/dashboard) zeigt, wie Ihre [anzeigeneinheiten](in-app-ads.md) durchführen, einschließlich der Community-anzeigen. Dieser Bericht enthält Daten mehrerer Anzeigenanbieter in UWP-Apps, die die [Anzeigenvermittlung](in-app-ads.md#mediation) verwenden.
+Der **Advertising Leistungsbericht** im [Partner Center](https://partner.microsoft.com/dashboard) zeigt, wie Ihre [anzeigeneinheiten](in-app-ads.md) durchführen, einschließlich der Community-anzeigen. Dieser Bericht enthält Daten mehrerer Anzeigenanbieter in UWP-Apps, die die [Anzeigenvermittlung](in-app-ads.md#mediation) verwenden.
 
-Erweitern Sie zum Anzeigen dieses Berichts im linken Navigationsmenü **Analysieren** und wählen Sie dann **Anzeigenleistung** aus. Sie können diese Daten im Partner Center anzeigen oder die Berichtsdaten offline anzeigen, indem Sie auf die Pfeilsymbole auf der Seite "herunterladen. Sie können diese Daten alternativ auch programmgesteuert mit der Methode [Abrufen von Anzeigenleistungsdaten](../monetize/get-ad-performance-data.md) unserer [Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
+Erweitern Sie zum Anzeigen dieses Berichts im linken Navigationsmenü **Analysieren** und wählen Sie dann **Anzeigenleistung** aus. Sie können diese Daten im Partner Center anzeigen oder die Berichtsdaten offline anzeigen, indem Sie auf die Pfeilsymbole auf der Seite herunterladen. Sie können diese Daten alternativ auch programmgesteuert mit der Methode [Abrufen von Anzeigenleistungsdaten](../monetize/get-ad-performance-data.md) unserer [Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
 Wenn Sie die Anzeigenvermittlungsberichte ansehen, ist es wichtig zu beachten, dass sich die Berichtsdaten für die letzten drei Tage sich unter Umständen ändern, wenn wir neue Daten aus verschiedenen Quellen erhalten und verarbeiten. Datenanpassungen können außerdem rückwirkend für bis zu 90Tage vorgenommen werden.
 
