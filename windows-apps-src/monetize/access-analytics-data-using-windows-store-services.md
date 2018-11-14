@@ -8,16 +8,16 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste Microsoft Store-Analyse-API
 ms.localizationpriority: medium
-ms.openlocfilehash: 8656270b81e0aae46c5d4f3a7b651135c163f76d
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 80ca7d66489f936e8097e9466f74032fbfb78eaf
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6051554"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6257979"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Zugreifen auf Analysedaten mit Store-Diensten
 
-Verwenden Sie die *Microsoft Store-Analyse-API* zum programmgesteuerten Abrufen von Analysedaten für apps, die für Ihre oder das Ihrer Organisation Windows Partner Center-Konto registriert wurden. Mit dieser API können Sie Daten zum Kauf von Apps und Add-Ons (auch als In-App-Produkte (IAPs) bezeichnet), Fehler, App-Bewertungen und App-Rezensionen abrufen. Diese API verwendet Azure Active Directory (Azure AD), um die Aufrufe von Ihrer App oder Ihrem Dienst zu authentifizieren.
+Verwenden Sie die *Microsoft Store-Analyse-API* zum programmgesteuerten Abrufen von Analysedaten für apps, die für Ihre oder das Ihrer Organisation Windows Partner Center-Konto registriert sind. Mit dieser API können Sie Daten zum Kauf von Apps und Add-Ons (auch als In-App-Produkte (IAPs) bezeichnet), Fehler, App-Bewertungen und App-Rezensionen abrufen. Diese API verwendet Azure Active Directory (Azure AD), um die Aufrufe von Ihrer App oder Ihrem Dienst zu authentifizieren.
 
 Dazu müssen folgende Schritte ausgeführt werden:
 
@@ -31,17 +31,17 @@ Dazu müssen folgende Schritte ausgeführt werden:
 
 Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllt haben, bevor Sie mit dem Schreiben von Code zum Aufrufen der Microsoft Store-Analyse-API beginnen:
 
-* Sie (bzw. Ihre Organisation) müssen über ein Azure AD-Verzeichnis und die Berechtigung [Globaler Administrator](http://go.microsoft.com/fwlink/?LinkId=746654) für das Verzeichnis verfügen. Wenn Sie bereits mit Office 365oder anderen Unternehmensdiensten von Microsoft arbeiten, verfügen Sie schon über ein Azure AD-Verzeichnis. Andernfalls können Sie für ohne zusätzliche Kosten [ein neues Azure AD im Partner Center erstellen](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) .
+* Sie (bzw. Ihre Organisation) müssen über ein Azure AD-Verzeichnis und die Berechtigung [Globaler Administrator](http://go.microsoft.com/fwlink/?LinkId=746654) für das Verzeichnis verfügen. Wenn Sie bereits mit Office 365oder anderen Unternehmensdiensten von Microsoft arbeiten, verfügen Sie schon über ein Azure AD-Verzeichnis. Andernfalls können Sie [ein neues Azure AD im Partner Center erstellen](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) , für die ohne zusätzliche Kosten.
 
 * Sie müssen Ihr Partner Center-Konto eine Azure AD-Anwendung zuordnen, die Mandanten-ID und die Client-ID für die Anwendung abrufen und einen Schlüssel generieren. Die Azure AD-Anwendung stellt die App oder den Dienst dar, aus denen Sie die Microsoft Store-Analyse-API aufrufen möchten. Sie benötigen die Mandanten-ID, die Client-ID und den Schlüssel zum Abrufen eines Azure AD-Zugriffstokens, das Sie an die API übergeben.
     > [!NOTE]
     > Sie müssen diesen Schritt nur einmal ausführen. Wenn Sie im Besitz der Mandanten-ID, der Client-ID und des Schlüssel sind, können Sie diese Daten jederzeit wiederverwenden, um ein neues Azure AD-Zugriffstoken zu erstellen.
 
-So ordnen Sie Ihr Partner Center-Konto eine Azure AD-Anwendung und die erforderlichen Werte abzurufen:
+Ihr Partner Center-Konto eine Azure AD-Anwendung zuordnen, und die erforderlichen Werte abzurufen:
 
-1.  Im Partner Center, [Partner Center-Konto Ihrer Organisation mit Azure AD-Verzeichnis Ihrer Organisation zuzuordnen](../publish/associate-azure-ad-with-dev-center.md).
+1.  Im Partner Center, [Partner Center-Konto Ihrer Organisation mit Azure AD-Verzeichnis Ihrer Organisation zuordnen](../publish/associate-azure-ad-with-dev-center.md).
 
-2.  Als Nächstes aus der Seite " **Benutzer** " im Abschnitt **kontoeinstellungen** des Partner Center, [die Azure AD-Anwendung hinzufügen](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) , die die app darstellt oder Dienst, mit denen Sie Analysedaten für Ihr Partner Center-Konto zugreifen. Weisen Sie dieser Anwendung die Rolle **Verwalter** zu. Wenn die Anwendung nicht vorhanden ist, noch in Azure AD-Verzeichnis, Sie können [Erstellen Sie ein neues Azure AD-Anwendung im Partner Center](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account).
+2.  Als Nächstes auf der Seite für den **Benutzer** im Abschnitt **kontoeinstellungen** des Partner Center, [die Azure AD-Anwendung hinzufügen](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) , die die app darstellt oder Dienst, mit denen Sie Analysedaten für Ihr Partner Center-Konto zugreifen. Weisen Sie dieser Anwendung die Rolle **Verwalter** zu. Wenn die Anwendung nicht vorhanden ist, noch in Azure AD-Verzeichnis, Sie können [Erstellen Sie ein neues Azure AD-Anwendung im Partner Center](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account).
 
 3.  Wechseln Sie zurück zur Seite **Benutzer**, klicken Sie auf den Namen der Azure AD-Anwendung, um die Anwendungseinstellungen aufzurufen, und kopieren Sie die Werte unter **Mandanten-ID** und **Client-ID**.
 
@@ -66,7 +66,7 @@ grant_type=client_credentials
 &resource=https://manage.devcenter.microsoft.com
 ```
 
-Geben Sie für *Tenant\_id* Wert im POST-URI und die Parameter *Client\_id* und *Client\_secret* die Mandanten-ID, Client-ID und den Schlüssel für Ihre Anwendung, die Sie aus dem Partner Center im vorherigen Abschnitt abgerufen haben. Für den Parameter *resource* müssen Sie ```https://manage.devcenter.microsoft.com``` angeben.
+Geben Sie für *Tenant\_id* Wert im POST-URI und die Parameter *Client\_id* und *Client\_secret* die Mandanten-ID, Client-ID und den Schlüssel für Ihre Anwendung, die Sie aus dem Partner Center im vorherigen Abschnitt abgerufen. Für den Parameter *resource* müssen Sie ```https://manage.devcenter.microsoft.com``` angeben.
 
 Nachdem das Zugriffstoken abgelaufen ist, können Sie es aktualisieren, indem Sie [diese Anleitung](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens) befolgen.
 
@@ -78,7 +78,7 @@ Nachdem Sie ein AzureAD-Zugriffstoken abgerufen haben, können Sie die Microsoft
 
 ### <a name="methods-for-uwp-apps"></a>Methoden für UWP-Apps
 
-Die folgenden Analysemethoden sind für UWP-apps in Partner Center verfügbar.
+Die folgenden Analysemethoden sind für UWP-apps im Partner Center verfügbar.
 
 | Szenario       | Methoden      |
 |---------------|--------------------|
@@ -115,11 +115,11 @@ Die folgenden zusätzlichen Methoden sind verfügbar, für die Verwendung durch 
 
 | Szenario       | Methoden      |
 |---------------|--------------------|
-| Käufe |  <ul><li>[Abrufen von Xbox One Spielekäufen](get-xbox-one-game-acquisitions.md)</li></ul> |
+| Käufe |  <ul><li>[Xbox One-Spielkäufe abrufen](get-xbox-one-game-acquisitions.md)</li><li>[Xbox One-Add-On-Käufe abrufen](get-xbox-one-add-on-acquisitions.md)</li></ul> |
 
 ### <a name="methods-for-hardware-and-drivers"></a>Methoden für Hardware und Treiber
 
-Konten für Entwickler, die an das [Windows Hardware Dev Center-Programm](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) gehören haben Zugriff auf eine Reihe von Methoden zum Abrufen von Analysedaten für Hardware und Treiber. Weitere Informationen finden Sie unter [Hardware-Dashboard-API](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api).
+Konten für Entwickler, die das [Windows Hardware Dev Center-Programm](https://msdn.microsoft.com/windows/hardware/drivers/dashboard/get-started-with-the-hardware-dashboard) gehört haben Zugriff auf eine Reihe von Methoden zum Abrufen von Analysedaten für Hardware und Treiber. Weitere Informationen finden Sie in der [Hardware-Dashboard-API](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-api).
 
 ## <a name="code-example"></a>Codebeispiel
 
