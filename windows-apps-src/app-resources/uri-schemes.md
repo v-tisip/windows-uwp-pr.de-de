@@ -8,12 +8,12 @@ ms.date: 10/16/2017
 ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
-ms.openlocfilehash: 59cd664e268e9e62786728aeb122ec52acd721c0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 75ba42674ca1ea460698fcce6e67bb3528589797
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6031352"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6251609"
 ---
 # <a name="uri-schemes"></a>URI-Schemen
 
@@ -253,9 +253,9 @@ Der Pfad gibt den hierarchischen Ort der [ResourceMap](/uwp/api/Windows.Applicat
 
 Beispiele und weitere Informationen finden Sie unter [Lokalisieren der Zeichenfolge im Paketmanifest der Benutzeroberfläche und der App](localize-strings-ui-manifest.md) und [Unterstützte Kachel- und Popupbenachrichtigungen für Sprache, Skalierungsfaktor und hohen Kontrast](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md).
 
-Bei der Pfadkomponente von `ms-resource` muss wie bei generischen URIs die Groß-/Kleinschreibung beachtet werden. Wenn der zugrunde liegende Abruf eine [CompareStringOrdinal](https://msdn.microsoft.com/library/windows/apps/br224628) mit *IgnoreCase* ist, wird `true` festgelegt.
+Bei der Pfadkomponente von `ms-resource` muss wie bei generischen URIs die Groß-/Kleinschreibung beachtet werden. Der zugrunde liegende Abruf wird jedoch ein [CompareStringOrdinal](https://msdn.microsoft.com/library/windows/apps/br224628) und *IgnoreCase* auf festgelegt `true`.
 
-Bei der normalisierten Form des URI bleibt die Groß-/Kleinschreibung erhalten, und von nicht reservierten RFC 3986-Zeichen werden die Prozentzeichen entfernt. Die Zeichen "?", "#", "/", "*" und '”' (doppelte Anführungszeichen) müssen in einem Pfad mit einem Prozentzeichen versehen werden, um Daten wie Datei- oder Ordnernamen anzugeben. Alle mit Prozentzeichen versehenen Zeichen werden vor dem Abrufen decodiert. Verwenden Sie daher zum Abrufen einer Zeichenfolgenressource aus einer Ressourcendatei mit dem Namen Hello#World.resw diesen URI.
+Bei der normalisierten Form des URI bleibt die Groß-/Kleinschreibung erhalten, und von nicht reservierten RFC 3986-Zeichen werden die Prozentzeichen entfernt. Die Zeichen "?", "#", "/", "*" und '”' (doppelte Anführungszeichen) müssen in einem Pfad mit einem Prozentzeichen versehen werden, um Daten wie Datei- oder Ordnernamen anzugeben. Alle mit Prozentzeichen versehenen Zeichen werden vor dem Abrufen decodiert. Daher zum Abrufen einer Zeichenfolgenressource aus einer Ressourcendatei mit dem Namen `Hello#World.resw`, verwenden Sie diese URI.
 
 ```xml
 ms-resource:///Hello%23World/String1

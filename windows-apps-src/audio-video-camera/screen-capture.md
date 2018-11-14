@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Bildschirmaufnahme
 ms.localizationpriority: medium
 ms.openlocfilehash: d28ed1fce79a815155180ab8a3c708e2c8bf8916
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6029588"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6207903"
 ---
 # <a name="screen-capture"></a>Bildschirmaufnahme
 
@@ -22,7 +22,7 @@ Ab Windows 10,Version 1803, enthält der [Windows.Graphics.Capture](https://docs
 Mit der Bildschirmaufnahme können Entwickler sichere System-UIs für Endbenutzer aufrufen, um das Fenster für die Anzeige oder die Anwendung für die Aufzeichnung auszuwählen. Es wird ein gelber Rahmen mit einer Benachrichtigung vom System um das aktiv erfasste Element herum gezeichnet. Im Fall von mehreren gleichzeitigen Aufnahmesitzungen wird ein gelber Rahmen um jedes erfasste Element gezeichnet.
 
 > [!NOTE]
-> Die Bildschirmaufnahme APIs werden nur für Desktop- und immersives Windows Mixed Reality-Headsets unterstützt.
+> Die Bildschirmaufnahme-APIs werden nur für Desktop- und immersives Windows Mixed Reality-Headsets unterstützt.
 
 ## <a name="add-the-screen-capture-capability"></a>Hinzufügen der Bildschirmaufnahmefunktion
 
@@ -30,7 +30,7 @@ Die APIs finden Sie in der **Windows.Graphics.Capture** -Namespace erfordern ein
     
 1. Öffnen Sie **"Package.appxmanifest"** im **Projektmappen-Explorer**.
 2. Wählen Sie die Registerkarte **Funktionen** aus.
-3. Überprüfen Sie **Grafiken zu erfassen**.
+3. Überprüfen Sie die **Grafiken zu erfassen**.
 
 ![Grafik-Erfassung](images/screen-capture-1.png)
 
@@ -70,7 +70,7 @@ public async Task StartCaptureAsync()
 }
 ```
 
-Da dies Benutzeroberflächencode ist, muss sie für den UI-Thread aufgerufen werden. Wenn Sie es aus CodeBehind für eine Seite Ihrer Anwendung (z. B. **"MainPage.Xaml.cs"**) aufrufen sind für Sie erfolgt dies automatisch, aber wenn nicht, Sie können sie für die Ausführung der UI-Thread mit dem folgenden Code erzwingen:
+Da dies Benutzeroberflächencode ist, muss sie für den UI-Thread aufgerufen werden. Wenn Sie es aus dem CodeBehind für eine Seite Ihrer Anwendung (z. B. **"MainPage.Xaml.cs"**) aufrufen für Sie erfolgt dies automatisch, aber wenn nicht, Sie können sie für die Ausführung der UI-Thread mit dem folgenden Code erzwingen:
 
 ```cs
 CoreWindow window = CoreApplication.MainView.CoreWindow;
@@ -168,7 +168,7 @@ Wenn **Recreate** aufgerufen wird, werden alle vorhandenen Frames verworfen. Dad
 Der folgende Codeausschnitt ist ein End-to-End-Beispiel für die Implementierung einer Bildschirmaufnahme in einer UWP-Anwendung. In diesem Beispiel haben wir eine Schaltfläche in der Front-End-, die beim Klicken auf, ruft die **Button_ClickAsync** -Methode.
 
 > [!NOTE]
-> Dieser Codeausschnitt wird [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm), eine Bibliothek für 2D-Grafikrendering verwendet. Finden Sie in ihrer Dokumentation Informationen dazu, wie Sie es für Ihr Projekt einrichten.
+> Dieser Codeausschnitt wird die [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm), eine Bibliothek für 2D-Grafikrendering verwendet. Finden Sie in ihrer Dokumentation Informationen dazu, wie Sie es für Ihr Projekt festgelegt.
 
 ```cs
 using Microsoft.Graphics.Canvas;

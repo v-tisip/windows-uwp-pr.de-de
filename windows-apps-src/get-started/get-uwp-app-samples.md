@@ -9,11 +9,11 @@ keywords: Windows10, UWP, Beispielcode, Codebeispiele
 ms.assetid: 393c5a81-ee14-45e7-acd7-495e5d916909
 ms.localizationpriority: medium
 ms.openlocfilehash: ef8f99ade3fa5e4d9f12b8670bf22242e7c4e585
-ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "6160122"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6257521"
 ---
 # <a name="get-uwp-app-samples"></a>Beispiele für UWP-Apps abrufen
 

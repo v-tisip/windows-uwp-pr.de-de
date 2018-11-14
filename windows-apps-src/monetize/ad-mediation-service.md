@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Anzeigen, Werbung, Anzeigenvermittlung
 ms.localizationpriority: medium
 ms.openlocfilehash: 9adae5b000277b774536c8b307cc1bc055ce3bc4
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6046185"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6202088"
 ---
 # <a name="microsoft-ad-mediation-service"></a>Microsoft-Anzeigenvermittlungsdienst
 
@@ -49,7 +49,7 @@ Der Anzeigenvermittlungsdienst ist darauf ausgelegt, die höchste Rentabilität 
 
 Neue Anzeigennetzwerke werden automatisch eingefügt und über ein lernendes Budget auf ihre Leistung bewertet. Innerhalb kurzer Zeit finden sie Ihren Platz im Wasserfall. Damit werden die Anzeigennetzwerke wettbewerbsfähiger, und es trägt außerdem dazu bei, dass der Entwickler die Monetarisierung durch Apps optimal nutzt.
 
-Es wird dringend empfohlen, unsere [empfohlenen Vermittlungseinstellungen](../publish/in-app-ads.md#mediation-settings) zu verwenden, um den Umsatz durch Anzeigen in Ihren Apps zu maximieren. Dadurch können unsere Algorithmen,die beste Rentabilität für Ihre App ermöglichen. Sie haben jedoch auch die Freiheit, wählen Ihre eigenen anzeigenvermittlungseinstellungen im Partner Center, um mehr Kontrolle über die anzeigennetzwerke verfügen, die anzeigen und die Reihenfolge, in der dies, dienen.
+Es wird dringend empfohlen, unsere [empfohlenen Vermittlungseinstellungen](../publish/in-app-ads.md#mediation-settings) zu verwenden, um den Umsatz durch Anzeigen in Ihren Apps zu maximieren. Dadurch können unsere Algorithmen,die beste Rentabilität für Ihre App ermöglichen. Sie haben jedoch auch die Freiheit, wählen Sie Ihre eigenen anzeigenvermittlungseinstellungen im Partner Center, um mehr Kontrolle über die anzeigennetzwerke verfügen, die anzeigen und die Reihenfolge, in der dies, dienen.
 
 ## <a name="rich-data-and-signals"></a>Umfangreiche Daten und Signale
 

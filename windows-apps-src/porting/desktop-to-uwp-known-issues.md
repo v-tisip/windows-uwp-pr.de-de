@@ -10,11 +10,11 @@ keywords: windows10, UWP
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
 ms.openlocfilehash: 61803e3a4a18dee260b78468c7970a875d8aff73
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6045307"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6255267"
 ---
 # <a name="known-issues-with-packaged-desktop-applications"></a>Bekannte Probleme mit verpackten desktop-Apps
 
@@ -52,9 +52,9 @@ Dies ist eine bekannte Einschränkung, und derzeit sind keine Umgehungen vorhand
 
 ### <a name="error-found-in-xml-the-executable-attribute-is-invalid---the-value-myappexe-is-invalid-according-to-its-datatype"></a>Fehler in XML gefunden. Das Attribut „Ausführbare Datei” ist ungültig. – Der Wert MyApp.EXE ist gemäß dem Datentyp ungültig.
 
-Dies kann vorkommen, wenn die ausführbaren Dateien in Ihrer Anwendung die Erweiterung **. EXE** in Großbuchstaben aufweisen. Obwohl die Groß-/Kleinschreibung dieser Erweiterung keine Auswirkungen auf haben, ob die Anwendung ausgeführt wird, kann den DAC diesen Fehler generiert verursachen.
+Dies kann vorkommen, wenn die ausführbaren Dateien in Ihrer Anwendung die Erweiterung **. EXE** in Großbuchstaben aufweisen. Obwohl die Groß-/Kleinschreibung dieser Erweiterung keine Auswirkungen auf haben, ob die Anwendung ausgeführt wird, kann dies den DAC diesen Fehler generiert führen.
 
-Um dieses Problem zu beheben, versuchen Sie, das **-AppExecutable**-Kennzeichen beim Verpacken festzulegen, und verwenden Sie als Erweiterung Ihrer wichtigsten ausführbaren Datei „.exe” in Kleinbuchstaben (z.B.: MYAPP.exe).    Alternativ können Sie die Groß-/Kleinschreibung für alle ausführbaren Dateien in Ihrer Anwendung aus Kleinbuchstaben in Großbuchstaben ändern (z. B.: aus. EXE .exe).
+Um dieses Problem zu beheben, versuchen Sie, das **-AppExecutable**-Kennzeichen beim Verpacken festzulegen, und verwenden Sie als Erweiterung Ihrer wichtigsten ausführbaren Datei „.exe” in Kleinbuchstaben (z.B.: MYAPP.exe).    Alternativ können Sie die Groß-/Kleinschreibung für alle ausführbaren Dateien in Ihrer Anwendung aus Kleinbuchstaben in Großbuchstaben ändern (z. B.: aus. EXE-Datei in .exe).
 
 ### <a name="corrupted-or-malformed-authenticode-signatures"></a>Beschädigte oder falsch formatierte Authenticode-Signaturen
 
@@ -93,7 +93,7 @@ Am 27.10.2016 wurde ein [Windows-Update (Version 14393.351 - KB3197954)](https:/
 
 Falls das Problem durch das Update nicht behoben werden kann oder Sie nicht sicher sind, wie Sie die Wiederherstellung für den PC ausführen, wenden Sie sich an den [Microsoft-Support](https://support.microsoft.com/contactus/).
 
-Wenn Sie Entwickler sind, möchten Sie die Installation Ihres Anwendungspakets unter Versionen von Windows vielleicht verhindern, die dieses Update nicht enthalten. Beachten Sie, dass Ihre Anwendung dadurch nicht für Benutzer verfügbar ist, die das Update noch nicht installiert haben. Um die Verfügbarkeit der Anwendung, um Benutzer zu beschränken, die dieses Update installiert haben, ändern Sie die Datei "appxmanifest.xml" wie folgt:
+Wenn Sie Entwickler sind, möchten Sie die Installation Ihres Anwendungspakets unter Versionen von Windows vielleicht verhindern, die dieses Update nicht enthalten. Beachten Sie, dass Ihre Anwendung dadurch nicht für Benutzer verfügbar ist, die das Update noch nicht installiert haben. Um die Verfügbarkeit Ihrer Anwendung für Benutzer zu beschränken, die dieses Update installiert haben, ändern Sie die Datei "appxmanifest.xml" wie folgt:
 
 ```<TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.14393.351" MaxVersionTested="10.0.14393.351"/>```
 
@@ -121,7 +121,7 @@ Doppelklicken Sie im Datei-Explorer auf das Zertifikat, wählen Sie die Register
 
 **Option3: CertUtil**
 
-Führen Sie **Certutil** auf die PFX-Datei über die Befehlszeile aus, und kopieren Sie das Feld *Betreff* der Ausgabe.
+Führen Sie **Certutil** über die Befehlszeile aus, für die PFX-Datei, und kopieren Sie das Feld *Betreff* der Ausgabe.
 
 ```cmd
 certutil -dump <cert_file.pfx>
@@ -131,29 +131,29 @@ certutil -dump <cert_file.pfx>
 
 ### <a name="bad-pe-certificate-0x800700c1"></a>Ungültiges PE-Zertifikat (0x800700C1)
 
-Dies kann passieren, wenn Ihr Paket eine Binärdatei mit ein beschädigtes Zertifikat enthalten ist. Hier sehen Sie einige Gründe, warum dies geschieht:
+Dies kann passieren, wenn das Paket eine Binärdatei mit ein beschädigten Zertifikat enthalten ist. Hier sehen Sie einige Gründe, warum dies geschieht:
 
 * Beginn des Zertifikats ist nicht am Ende eines Bilds.  
 
 * Die Größe des Zertifikats ist nicht positiv.
 
-* Der Zertifikat Start wird nicht nach der `IMAGE_NT_HEADERS32` Struktur für eine 32-Bit-ausführbare Datei oder nach dem die `IMAGE_NT_HEADERS64` Struktur für eine 64-Bit-ausführbare Datei.
+* Der Zertifikat-Start wird nicht nach der `IMAGE_NT_HEADERS32` Struktur für eine 32-Bit-ausführbare Datei oder nach der `IMAGE_NT_HEADERS64` Struktur für eine 64-Bit-ausführbare Datei.
 
 * Der Zertifikat-Zeiger ist nicht ordnungsgemäß für eine Struktur WIN_CERTIFICATE ausgerichtet.
 
-Zum Auffinden von Dateien, die eine ungültige PE-Zertifikat enthalten, öffnen Sie ein **Eingabeaufforderungsfenster**, und legen Sie die Umgebungsvariable `APPXSIP_LOG` auf einen Wert von 1.
+Zum Auffinden von Dateien, die einem fehlerhaften PE-Zertifikat enthalten, öffnen Sie ein **Eingabeaufforderungsfenster**, und legen Sie die Umgebungsvariable `APPXSIP_LOG` auf dem Wert 1.
 
 ```
 set APPXSIP_LOG=1
 ```
 
-Signieren Sie dann über die **Befehlszeile**, Ihre Anwendung erneut aus. Beispiel:
+Signieren Sie über die **Befehlszeile**dann die Anwendung erneut. Beispiel:
 
 ```
 signtool.exe sign /a /v /fd SHA256 /f APPX_TEST_0.pfx C:\Users\Contoso\Desktop\pe\VLC.appx
 ```
 
-Informationen zu Dateien, die eine ungültige PE-Zertifikat enthalten, werden im **Konsolenfenster**angezeigt. Beispiel:
+Informationen zu Dateien, die einem fehlerhaften PE-Zertifikat enthalten, werden im **Konsolenfenster**angezeigt. Beispiel:
 
 ```
 ...
