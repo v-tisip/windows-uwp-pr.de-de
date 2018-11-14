@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 98bb74f2c37e91d5b7d9b02a5733b42877769c54
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6205977"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6665487"
 ---
 # <a name="troubleshooting-porting-windows-runtime-8x-to-uwp"></a><span data-ttu-id="df62d-104">Behandeln von Problemen beim Portieren von Windows-Runtime 8.x zu UWP</span><span class="sxs-lookup"><span data-stu-id="df62d-104">Troubleshooting porting Windows Runtime 8.x to UWP</span></span>
 

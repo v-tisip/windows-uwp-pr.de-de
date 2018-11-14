@@ -14,11 +14,11 @@ design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: f9bb6daeb01e264cf9cdb0fa9ee9c66738fec972
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6282061"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6461118"
 ---
 # <a name="nested-ui-in-list-items"></a><span data-ttu-id="29d6d-103">Geschachtelte UI bei Listenelementen</span><span class="sxs-lookup"><span data-stu-id="29d6d-103">Nested UI in list items</span></span>
 

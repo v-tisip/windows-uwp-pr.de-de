@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: cc81fdc03096dd8cac5e844a496b38da78eb6136
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6251126"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6649719"
 ---
 # <a name="high-dynamic-range-hdr-and-low-light-photo-capture"></a><span data-ttu-id="9ed29-104">HDR-Fotoaufnahmen (High Dynamic Range) und Fotoaufnahmen bei schlechten Lichtverhältnissen</span><span class="sxs-lookup"><span data-stu-id="9ed29-104">High dynamic range (HDR) and low-light photo capture</span></span>
 

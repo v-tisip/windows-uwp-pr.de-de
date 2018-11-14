@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Einkaufs-API, Abonnements
 ms.localizationpriority: medium
 ms.openlocfilehash: b8fe6262ca6ef52ca94ade2c56b18f5e71951f07
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6468172"
+ms.locfileid: "6651229"
 ---
 # <a name="get-subscriptions-for-a-user"></a><span data-ttu-id="ddd46-104">Abrufen von Abonnements für einen Benutzer</span><span class="sxs-lookup"><span data-stu-id="ddd46-104">Get subscriptions for a user</span></span>
 

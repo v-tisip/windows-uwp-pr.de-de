@@ -15,11 +15,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 4a9abc16a4992dedead598f96061811c82c5a5c5
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6261986"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6452636"
 ---
 # <a name="keyboard-events"></a><span data-ttu-id="6ac70-103">Tastaturereignisse</span><span class="sxs-lookup"><span data-stu-id="6ac70-103">Keyboard events</span></span>
 

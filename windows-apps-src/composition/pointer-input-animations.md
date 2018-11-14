@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, Uwp, animation
 ms.localizationpriority: medium
 ms.openlocfilehash: b69899761e1c4a139fd2b15d6810440df5192487
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6447741"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6647449"
 ---
 # <a name="pointer-based-animations"></a><span data-ttu-id="d9b15-104">Zeigerbasierte Animationen</span><span class="sxs-lookup"><span data-stu-id="d9b15-104">Pointer-based animations</span></span>
 

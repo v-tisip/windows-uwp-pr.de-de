@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: cfd9692620273952483ec7da65a69b643cb5bf4f
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6270313"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6657402"
 ---
 # <a name="deploy-barcode-scanner-profiles-with-mdm"></a><span data-ttu-id="850f0-104">Bereitstellen von Strichcodescanner-Profilen mit MDM</span><span class="sxs-lookup"><span data-stu-id="850f0-104">Deploy barcode scanner profiles with MDM</span></span>
 
