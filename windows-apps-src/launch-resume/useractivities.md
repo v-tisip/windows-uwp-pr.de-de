@@ -7,12 +7,12 @@ ms.author: twhitney
 ms.date: 04/27/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 37b7ed35edecb95deb4b3ba568227f4cd8e32d9a
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 8e99796decfa5ed434fddee3be4340380e2376a2
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6455352"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6654050"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>Benutzeraktivitäten geräteübergreifend fortsetzen
 
@@ -157,7 +157,7 @@ Nachdem Ihre App oder Ihr Dienst mit einem Microsoft-Konto authentifiziert wurde
 ## <a name="summary"></a>Zusammenfassung
 
 Sie können die [UserActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)-API verwenden, um Ihre App in der Zeitachse und Cortana anzeigen zu lassen.
-* Weitere Informationen zur **UserActivity**-API finden Sie im [Windows Dev Center](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
+* Erfahren Sie mehr über die [ **UserActivity** API](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities)
 * Sehen Sie sich den [Beispielcode](https://github.com/Microsoft/project-rome) an.
 * Hier finden Sie [weitere ausgeklügelte adaptive Karten](http://adaptivecards.io/).
 * Veröffentlichen Sie eine **UserActivity** von iOS, Android oder Ihrem Webdienst über [Microsoft Graph](https://developer.microsoft.com/graph/).

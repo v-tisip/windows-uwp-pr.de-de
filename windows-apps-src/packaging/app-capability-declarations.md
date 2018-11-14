@@ -8,12 +8,12 @@ ms.date: 09/20/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 4be90230407c3d539c55dc05d1272fbaaa2ae10e
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.openlocfilehash: f0270ca3f1fac959f2ccc49352739e9ccd0f41cb
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6190071"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6658261"
 ---
 # <a name="app-capability-declarations"></a>Deklarationen von App-Funktionen
 
@@ -108,7 +108,7 @@ Um eine eingeschränkte Funktion deklarieren, ändern Sie die Quelldatei des [ap
 
 ### <a name="restricted-capability-approval-process"></a>Genehmigungsprozess für eingeschränkte Funktionen
 
-Bisher mussten Sie den Support kontaktieren, um die Genehmigung zur Verwendung einer Funktion zu erhalten. Nun können Sie diese Informationen als Teil des [Übermittlungsprozesses](../publish/app-submissions.md) in Ihrem Dev Center-Dashboard bereitstellen.
+Bisher mussten Sie den Support kontaktieren, um die Genehmigung zur Verwendung einer Funktion zu erhalten. Jetzt können wir Sie diese Informationen im [Partner Center](https://partner.microsoft.com/dashboard/) im Rahmen der [Übermittlung](../publish/app-submissions.md)bereitstellen.
 
 Wenn Sie für Ihre Übermittlung Pakete hochladen, ermitteln wir, ob alle eingeschränkten Funktionen deklariert werden. In diesem Fall müssen Sie auf der [Übermittlungsoptionen](../publish/manage-submission-options.md#restricted-capabilities)-Seite Informationen darüber bereitstellen, wie Ihr Produkt die einzelnen Funktionen verwendet. Stellen Sie so viele Informationen wie möglich bereit, die uns helfen zu verstehen, warum Ihr Produkt die Funktion deklarieren muss. Beachten Sie, dass Sie dadurch möglicherweise etwas mehr Zeit für die Übermittlung benötigen, um den Zertifizierungsprozess abzuschließen.
 
@@ -117,7 +117,7 @@ Während des Zertifizierungsprozesses überprüfen unsere Tester die von Ihnen b
 Wenn wir die Verwendung der Funktion nicht genehmigen, Ihre Übermittlung nicht zertifiziert, und wir geben ein Feedback im Zertifizierungsbericht. Sie haben dann die Möglichkeit, eine neue Übermittlung zu erstellen und Pakete hochzuladen, die die Funktion nicht deklarieren oder gegebenenfalls alle Probleme im Zusammenhang mit der Verwendung der Funktion zu beheben und die Genehmigung in einer neuen Übermittlung anzufordern.
 
 > [!NOTE]
-> Wenn Ihre Übermittlung eine Sandbox für die Entwicklung im Dev Center verwendet (dies ist z.B. der Fall für alle Spiele, die mit Xbox Live integriert sind), müssen Sie die Genehmigung im Voraus anfordern, anstatt Informationen auf der **Übermittlungsoptionen**-Seite bereitzustellen. Navigieren Sie hierzu zur [Windows Developer-Supportseite](https://developer.microsoft.com/windows/support). Wählen Sie Entwickler Supportthema **Dashboard Problem**Problemart **App-Übermittlungen**und Unterkategorie **andere**. Beschreiben Sie anschließend, wie Sie die Funktion verwenden und warum sie für Ihr Produkt erforderlich ist. Wenn Sie nicht alle erforderlichen Informationen angeben, wird die Anforderung abgelehnt. Unter Umständen werden Sie auch aufgefordert, weitere Informationen anzugeben. Beachten Sie, dass dieser Vorgang in der Regel fünf Werktage oder länger dauert. Übermitteln Sie Ihre Anforderung daher bitte rechtzeitig.
+> Wenn Ihre Übermittlung eine Sandbox-Entwicklung im Partner Center verwendet (z. B. ist dies der Fall für alle Spiele, die mit Xbox Live integriert sind), müssen Sie die Genehmigung im voraus, anstatt Informationen auf der Seite **Übermittlungsoptionen** anfordern. Navigieren Sie hierzu zur [Windows Developer-Supportseite](https://developer.microsoft.com/windows/support). Wählen Sie Entwickler Supportthema **Dashboard Problem**Problemart **App-Übermittlungen**und Unterkategorie **andere**. Beschreiben Sie anschließend, wie Sie die Funktion verwenden und warum sie für Ihr Produkt erforderlich ist. Wenn Sie nicht alle erforderlichen Informationen angeben, wird die Anforderung abgelehnt. Unter Umständen werden Sie auch aufgefordert, weitere Informationen anzugeben. Beachten Sie, dass dieser Vorgang in der Regel fünf Werktage oder länger dauert. Übermitteln Sie Ihre Anforderung daher bitte rechtzeitig.
 >
 > Sie können auch diese Methode der Genehmigung anfordern (anstatt diese Informationen während der Übermittlungs), ob Sie verwenden eine Sandbox-Entwicklung, wenn Sie es vorziehen, stellen Sie sicher, dass Sie genehmigt werden, um eine eingeschränkte Funktion zu verwenden, bevor Sie beginnen Ihre Übermittlung.
 
