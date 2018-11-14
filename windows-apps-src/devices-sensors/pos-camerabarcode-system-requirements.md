@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: d63dc1af00716b8e60532341826a698f97ec9d32
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6032145"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6203699"
 ---
 # <a name="camera-barcode-scanner-system-requirements"></a><span data-ttu-id="c369a-104">Kamera-Strichcodescanner-Systemanforderungen</span><span class="sxs-lookup"><span data-stu-id="c369a-104">Camera barcode scanner system requirements</span></span>
 <span data-ttu-id="c369a-105">Ab Windows10, Version 1803, können Sie Strichcodescanner über ein Standard-Kameraobjektiv von einer universellen Windows-Anwendung lesen.</span><span class="sxs-lookup"><span data-stu-id="c369a-105">Starting with Windows 10, version 1803, you can read barcodes through a standard camera lens from a Universal Windows Application.</span></span>

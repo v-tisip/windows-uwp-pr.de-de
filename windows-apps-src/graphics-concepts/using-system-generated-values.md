@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f187495568892f5b489f6e109669811f4c45ab1
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6182530"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6270052"
 ---
 # <a name="span-iddirect3dconceptsusingsystem-generatedvaluesspanusing-system-generated-values"></a><span data-ttu-id="e65b0-104"><span id="direct3dconcepts.using_system-generated_values"></span>Verwenden von systemgenerierten Werten</span><span class="sxs-lookup"><span data-stu-id="e65b0-104"><span id="direct3dconcepts.using_system-generated_values"></span>Using system-generated values</span></span>
 

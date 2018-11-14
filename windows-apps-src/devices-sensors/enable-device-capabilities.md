@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a7250c41795373b089f7a4c76b603c169b1e4dc3
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6194223"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6456250"
 ---
 # <a name="enable-device-capabilities"></a><span data-ttu-id="d44ee-105">Aktivieren von Gerätefunktionen</span><span class="sxs-lookup"><span data-stu-id="d44ee-105">Enable device capabilities</span></span>
 

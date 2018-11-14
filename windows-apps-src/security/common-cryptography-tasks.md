@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: 4bca6496498c9d7a9caaf958fdc7e74dc16ccc98
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026132"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6275381"
 ---
 # <a name="common-cryptography-tasks"></a><span data-ttu-id="8d6fc-104">Allgemeine Kryptografieaufgaben</span><span class="sxs-lookup"><span data-stu-id="8d6fc-104">Common cryptography tasks</span></span>
 
