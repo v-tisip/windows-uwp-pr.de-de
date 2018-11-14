@@ -9,11 +9,11 @@ keywords: Windows10, UWP
 ms.assetid: f384ca56-f2b2-4793-b251-f7f5735376bb
 ms.localizationpriority: medium
 ms.openlocfilehash: 536679068d66a279e158790bf0fcc0f8757709cc
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6029352"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6205676"
 ---
 # <a name="application-development-for-windows-as-a-service"></a>Anwendungsentwicklung für Windows as a Service
 
@@ -22,7 +22,7 @@ ms.locfileid: "6029352"
 -   Windows 10 Mobile
 -   Windows 10 IoT Core 
 
-Heute basieren die Erwartungen von Benutzern häufig auf geräteorientierten Umgebungen, und vollständige Produktzyklen dürfen daher höchstens in Monaten und nicht in Jahren gemessen werden. Darüber hinaus müssen neue Versionen auf kontinuierlicher Basis verfügbar gemacht und mit minimalen Auswirkungen auf die Benutzer bereitgestellt werden können. Microsoft hat Windows 10, um diese Anforderungen erfüllt werden ein neues Konzept Innovation, Entwicklung und Bereitstellung [Windows als Dienst (WaaS)](https://docs.microsoft.com/windows/deployment/update/waas-overview)bezeichnet entwickelt. Der Schlüssel zu deutlich kürzeren Produktzyklen bei gleichzeitiger Gewährleistung der hohen Qualitätsniveaus ist ein innovatives Community-orientiertes Testkonzept, das Microsoft für Windows 10 implementiert hat. Die Community, die „Windows-Insider“, besteht aus Millionen von Benutzern auf der ganzen Welt. Wenn sich Windows-Insider an der Community beteiligen, testen sie im Laufe eines Produktzyklus viele Builds und geben Microsoft ihr Feedback im Rahmen eines iterativen Prozesses, der als Test-Flighting bezeichnet wird.
+Heute basieren die Erwartungen von Benutzern häufig auf geräteorientierten Umgebungen, und vollständige Produktzyklen dürfen daher höchstens in Monaten und nicht in Jahren gemessen werden. Darüber hinaus müssen neue Versionen auf kontinuierlicher Basis verfügbar gemacht und mit minimalen Auswirkungen auf die Benutzer bereitgestellt werden können. Microsoft hat Windows 10, um diese Anforderungen erfüllt, indem Sie ein neues Konzept Innovation, Entwicklung und Bereitstellung [Windows als Dienst (WaaS)](https://docs.microsoft.com/windows/deployment/update/waas-overview)bezeichnet entwickelt. Der Schlüssel zu deutlich kürzeren Produktzyklen bei gleichzeitiger Gewährleistung der hohen Qualitätsniveaus ist ein innovatives Community-orientiertes Testkonzept, das Microsoft für Windows 10 implementiert hat. Die Community, die „Windows-Insider“, besteht aus Millionen von Benutzern auf der ganzen Welt. Wenn sich Windows-Insider an der Community beteiligen, testen sie im Laufe eines Produktzyklus viele Builds und geben Microsoft ihr Feedback im Rahmen eines iterativen Prozesses, der als Test-Flighting bezeichnet wird.
 
 Als so genannte Test-Flights verteilte Builds versorgen das Windows-Technikteam mit wichtigen Daten dazu, wie gut die Builds im tatsächlichen Einsatz wirklich funktionieren. Windows-Insider-Programme für Windows-Insider ermöglichen Microsoft auch das Testen von Builds auf mehr Hardwareprodukten, in mehr Anwendungen und in mehr Netzwerkumgebungen, als dies früher möglich war, um potenzielle Probleme schneller zu erkennen. Microsoft ist daher überzeugt, dass das community-orientierte Test-Flighting sowohl die schnellere Bereitstellung von Innovationen, als auch eine höhere Qualität bei öffentlichen Freigaben als je zuvor ermöglichen wird.
 
@@ -30,11 +30,11 @@ Als so genannte Test-Flights verteilte Builds versorgen das Windows-Technikteam 
 
 Obwohl Microsoft Test-Flight-Builds für Windows-Insider veröffentlicht, werden kontinuierlich zwei Arten von Windows10-Versionen für die allgemeine Öffentlichkeit eingeführt:
 
-**Feature-Updates** installieren die neuesten Features, Umgebungen und Funktionen auf Geräten, auf denen bereits Windows 10 ausgeführt werden. Da Funktionsupdates eine vollständige Version von Windows enthalten, sind sie auch, was Kunden verwenden, um Windows 10 auf vorhandenen Geräten mit Windows7 oder Windows8.1 und auf neuen Geräten installieren, in denen kein Betriebssystem installiert ist. Microsoft geht davon aus, halb annually Updates veröffentlicht. 
+**Feature-Updates** installieren die neuesten Features, Umgebungen und Funktionen auf Geräten, auf denen bereits Windows 10 ausgeführt werden. Da Funktionsupdates eine vollständige Version von Windows enthalten, sind sie auch, was Kunden verwenden, um Windows 10 auf vorhandenen Geräten mit Windows7 oder Windows8.1 und auf neuen Geräten installieren, in denen kein Betriebssystem installiert ist. Microsoft geht davon aus, auf die Updates, die halb annually veröffentlicht. 
 
 **Qualitätsupdates** bieten Lösungen für Sicherheitsprobleme und andere wichtige Programmfehlerbehebungen. Qualitätsupdates werden mindestens einmal monatlich zur Optimierung der derzeit unterstützten Features bereitgestellt. Microsoft wird weiterhin Qualitätsupdates am „Update-Dienstag“ (oder „Patch-Dienstag“) veröffentlichen. Darüber hinaus kann Microsoft zusätzliche qualitätsupdates für Windows 10 außerhalb der Rhythmus bei Bedarf auf die Anforderungen von Kunden veröffentlichen.
 
-Während der Entwicklung von Windows 10 hat Microsoft den Windows-produktengineering- und-Freigabezyklus optimiert, sodass wir die Features, Umgebungen bieten und Funktionen, die Kunden, schneller als je zuvor wünschen. Außerdem bieten wir neue Möglichkeiten für die Bereitstellung und Installation von Funktions- und Qualitätsupdates, die die Implementierung und laufende Verwaltung vereinfachen, die Zahl der Mitarbeiter erhöhen, die auf die neuesten Windows-Funktionen und -Umgebungen zugreifen können, und die Gesamtbetriebskosten verringern. Daher haben wir neue Wartungsoptionen – Semi-Annual Channel und Long-term Servicing Channel (LTSC) – genannt implementiert, die praktische Lösungen, um weitere Geräte in unternehmensumgebungen, als dies bisher möglich war mehr aktuell zu halten bereitstellen.
+Während der Entwicklung von Windows 10 hat Microsoft den Windows-produktengineering- und-Freigabezyklus optimiert, sodass wir die Features, Umgebungen bieten und Funktionen, die Kunden, schneller als je zuvor wünschen. Außerdem bieten wir neue Möglichkeiten für die Bereitstellung und Installation von Funktions- und Qualitätsupdates, die die Implementierung und laufende Verwaltung vereinfachen, die Zahl der Mitarbeiter erhöhen, die auf die neuesten Windows-Funktionen und -Umgebungen zugreifen können, und die Gesamtbetriebskosten verringern. Daher haben wir neue Wartungsoptionen – Semi-Annual Channel und Long-term Servicing Channel (LTSC) – genannt implementiert, die praktische Lösungen, um weitere Geräte mehr in unternehmensumgebungen, als dies bisher möglich war auf dem Laufenden halten bereitstellen.
 
 Die folgende Tabelle zeigt werden die verschiedenen servicing Channels und ihre wichtigsten Attribute beschrieben.
 
@@ -66,7 +66,7 @@ In den folgenden Abschnitten finden Sie weitere Informationen dazu, wie Microsof
 
 Kompatibilität hat für Entwickler einen hohen Stellenwert. ISVs und Entwickler möchten sicherstellen, dass ihre Apps unter allen unterstützten Versionen des Windows-Betriebssystems erwartungsgemäß ausgeführt werden. Verbraucher und Unternehmen haben ebenfalls ein Interesse daran, dass die von ihnen erworbenen Apps weiterhin funktionieren. Wir wissen, dass Kompatibilität das Hauptkriterium für die Kaufentscheidung ist. Zuverlässige Apps, die unter Berücksichtigung bewährter Methoden programmiert wurden, verursachen bei der Veröffentlichung einer neuen Windows-Version wesentlich weniger Codeänderungen und verringern die Fragmentierung. Solche Apps reduzieren nicht nur den technischen Wartungsaufwand, sondern sind auch schneller marktreif.
 
-Ging Windows7 war Kompatibilität sehr viel proaktiv. In Windows8 wir begannen betrachten dies unterschiedlich, arbeiten im Nachhinein für Kompatibilität von Windows war, indem Sie erst im Nachhinein, anstatt Design. Windows 10 ist die am häufigsten kompatiblen entwurfsbedingt Version des Betriebssystems auf Datum. Hier einige wichtige Aspekte, die uns bei der Umsetzung geholfen haben:
+Ging Windows7 war Kompatibilität sehr viel proaktiv. In Windows8 Wir betrachten diese unterschiedlich zu machen, arbeiten im Nachhinein für Kompatibilität von Windows war, indem Sie erst im Nachhinein, anstatt Design. Windows 10 ist die am häufigsten kompatiblen entwurfsbedingt-Version des Betriebssystems auf Datum. Hier einige wichtige Aspekte, die uns bei der Umsetzung geholfen haben:
 -   **App-Telemetrie**: Telemetriedaten informieren uns über die Bedeutung der App im Windows-Ökosystem und helfen bei Kompatibilitätstests.
 -   **ISV-Partnerschaften**: Externe Partner erhalten durch die direkte Zusammenarbeit Informationen, die zur Behebung der von Endbenutzern gemeldeten Probleme beitragen.
 -   **Entwurfsprüfung, vorgeschaltete Erkennungsmechanismen**: Die Zusammenarbeit mit Featureteams reduziert die Anzahl bedeutender Änderungen in Windows. Kompatibilitätsprüfungen sind für jedes Featureteam ein Muss.
@@ -75,9 +75,9 @@ Ging Windows7 war Kompatibilität sehr viel proaktiv. In Windows8 wir begannen b
 
 ## <a name="best-practices-for-app-compatibility"></a>Bewährte Methoden für die App-Kompatibilität
 
-Microsoft verwendet Diagnose- und Nutzungsdaten, mit deren Hilfe Probleme identifiziert und behoben, Produkte und Dienste verbessert und Benutzern personalisierte Funktionen zur Verfügung gestellt werden können. Die gesammelten Nutzungsdaten erstrecken sich auch auf Apps, die auf den PCs im Windows-Ökosystem ausgeführt werden. Wir ermitteln die von unseren Kunden genutzten Features und testen neue Versionen des Windows-Betriebssystems unter Verwendung der entsprechenden Apps, Geräte und Treiber. Windows 10 wurde die kompatibelste Version von Windows bis dato, mit über 90-prozentigen Kompatibilität Tausenden beliebter Apps. Falls Probleme gefunden werden, wendet sich das Windows-Kompatibilitätsteam in der Regel mit Feedback an unsere ISV-Partner, um gemeinsam Lösungen zu erarbeiten. Wir möchten unseren gemeinsamen Kunden eine reibungslose Updateerfahrung bieten und dafür sorgen, dass die gesamte Funktionalität sowohl des Windows-Betriebssystems als auch ihrer Produktivitäts- oder Unterhaltungs-Apps erhalten bleibt.
+Microsoft verwendet Diagnose- und Nutzungsdaten, mit deren Hilfe Probleme identifiziert und behoben, Produkte und Dienste verbessert und Benutzern personalisierte Funktionen zur Verfügung gestellt werden können. Die gesammelten Nutzungsdaten erstrecken sich auch auf Apps, die auf den PCs im Windows-Ökosystem ausgeführt werden. Wir ermitteln die von unseren Kunden genutzten Features und testen neue Versionen des Windows-Betriebssystems unter Verwendung der entsprechenden Apps, Geräte und Treiber. Windows 10 wurde die kompatibelste Version von Windows bis dato, mit der über 90-prozentigen Kompatibilität Tausenden beliebter Apps. Falls Probleme gefunden werden, wendet sich das Windows-Kompatibilitätsteam in der Regel mit Feedback an unsere ISV-Partner, um gemeinsam Lösungen zu erarbeiten. Wir möchten unseren gemeinsamen Kunden eine reibungslose Updateerfahrung bieten und dafür sorgen, dass die gesamte Funktionalität sowohl des Windows-Betriebssystems als auch ihrer Produktivitäts- oder Unterhaltungs-Apps erhalten bleibt.
 
-Die folgenden Abschnitte enthalten einige bewährten Methoden, die Microsoft, empfiehlt damit Sie sicherstellen können, dass Ihre apps mit Windows 10 kompatibel sind.
+Die folgenden Abschnitte enthalten einige bewährten Methoden, die Microsoft empfiehlt, sodass Sie sicherstellen können, dass Ihre apps mit Windows 10 kompatibel sind.
 
 ### <a name="windows-version-check"></a>Prüfung der Windows-Version
 
@@ -92,7 +92,7 @@ Einige Apps überprüfen die Version und geben einfach eine Warnung an den Benut
 -   Wenn die App von bestimmten API-Funktionen abhängig ist, stellen Sie sicher, dass sie auf die richtige API-Version ausgerichtet ist.
 -   Die Änderung muss über APISet oder eine andere öffentliche API erkannt werden. Die Version darf nicht stellvertretend für ein Feature oder einen Fix verwendet werden. Wenn für bedeutende Änderungen keine ordnungsgemäße Prüfung verfügbar gemacht wird, liegt ein Fehler vor.
 -   Achten Sie darauf, dass die App KEINE ungewöhnliche Versionsprüfung vornimmt, z. B. über die Registrierung, Dateiversionen, Offsets, den Kernelmodus, Treiber oder auf andere Weise. Wenn eine Versionsprüfung für die App unverzichtbar ist, verwenden Sie die GetVersion-APIs, die die Hauptversion, Nebenversion und Buildnummer zurückgeben sollten.
--   Wenn Sie die [GetVersion](http://go.microsoft.com/fwlink/?LinkID=780555) API verwenden, Bedenken Sie, dass das Verhalten dieser API seit Windows8.1 geändert hat.
+-   Wenn Sie die [GetVersion](http://go.microsoft.com/fwlink/?LinkID=780555) API verwenden, denken Sie daran, dass das Verhalten dieser API seit Windows8.1 geändert hat.
 
 Als Entwickler von Antischadsoftware- oder Firewall-Apps sollten Sie sich über Ihre üblichen Feedbackkanäle und über das Windows-Insider-Programm informieren.
 
@@ -102,7 +102,7 @@ Ihre Apps sollten keine nicht dokumentierten Windows-APIs aufrufen oder von best
 
 ### <a name="develop-universal-windows-platform-uwp-and-centennial-apps"></a>Entwickeln von UWP (Universelle Windows-Plattform)- und Centennial-Apps
 
-Wir empfehlen allen ISVs von Win32-Apps, zukünftig [UWP (Universelle Windows-Plattform)-Apps](http://go.microsoft.com/fwlink/?LinkID=780560) und insbesondere [Centennial](http://go.microsoft.com/fwlink/?LinkID=780562)-Apps zu entwickeln. Die Entwicklung dieser App-Pakete birgt deutliche Vorteile gegenüber der Verwendung herkömmlicher Win32-Installationsprogramme. UWP-apps werden ebenfalls im [Microsoft Store](http://go.microsoft.com/fwlink/?LinkID=780563)unterstützt daher es für Sie einfacher ist, Ihre Benutzer automatisch, um eine konsistente Version zu aktualisieren Ihre Supportkosten zu senken.
+Wir empfehlen allen ISVs von Win32-Apps, zukünftig [UWP (Universelle Windows-Plattform)-Apps](http://go.microsoft.com/fwlink/?LinkID=780560) und insbesondere [Centennial](http://go.microsoft.com/fwlink/?LinkID=780562)-Apps zu entwickeln. Die Entwicklung dieser App-Pakete birgt deutliche Vorteile gegenüber der Verwendung herkömmlicher Win32-Installationsprogramme. UWP-apps sind auch im [Microsoft Store](http://go.microsoft.com/fwlink/?LinkID=780563)unterstützt daher es für Sie einfacher ist, Ihre Benutzer automatisch, um eine konsistente Version zu aktualisieren Ihre Supportkosten zu senken.
 
 Wenn das Centennial-Modell von Ihren Win32-App-Typen nicht unterstützt wird, sollten Sie unbedingt das richtige Installationsprogramm verwenden und sicherstellen, dass es eingehend getestet wurde. Das Installationsprogramm ist der erste Berührungspunkt Ihrer Benutzer oder Kunden mit der App und sollte einwandfrei funktionieren. Dies ist häufig nicht der Fall, u. a. auch, weil das Programm nicht für alle Szenarien getestet wurde. Mit dem [Zertifizierungskit für Windows-Apps](http://go.microsoft.com/fwlink/?LinkID=780565) können Sie die Installation und Deinstallation Ihrer Win32-App testen, ermitteln, ob nicht dokumentierte APIs verwendet werden, und andere allgemeine Leistungsprobleme aufdecken, die nicht den bewährten Methoden entsprechen, bevor dies Ihre Benutzer tun.
 
@@ -159,7 +159,7 @@ Nach dem Update auf einen Test-Flight-Build sollen Ihnen die folgenden Beispielt
 Lassen Sie uns wissen, wie Ihre App mit Test-Flight-Builds funktioniert. Wenn die App während der Tests Fehler verursacht, sollten Sie diese über das Partnerportal melden (sofern Sie Zugriff haben) oder Kontakt zu Microsoft aufnehmen. Ihr Feedback ist uns wichtig, da es hilft, gemeinsam mit unseren Partnern eine optimale Benutzererfahrung zu schaffen.
 
 ### <a name="step-4-register-on-ready-for-windows"></a>Schritt4: Registrieren bei Ready for Windows
-Auf der Website [Ready for Windows](http://go.microsoft.com/fwlink/?LinkID=780580) finden Sie ein Verzeichnis der Softwarelösungen, die Windows10 unterstützen. Sie richtet sich an IT-Administratoren in Unternehmen und Organisationen weltweit, die die Bereitstellung von Windows10 auf ihren Systemen in Betracht ziehen. IT-Administratoren können anhand die Website feststellen, ob Software in bereitgestellte ihrem Unternehmen in Windows 10 unterstützt wird.
+Auf der Website [Ready for Windows](http://go.microsoft.com/fwlink/?LinkID=780580) finden Sie ein Verzeichnis der Softwarelösungen, die Windows10 unterstützen. Sie richtet sich an IT-Administratoren in Unternehmen und Organisationen weltweit, die die Bereitstellung von Windows10 auf ihren Systemen in Betracht ziehen. IT-Administratoren können anhand die Website feststellen, ob die bereitgestellte Software in ihrem Unternehmen in Windows 10 unterstützt wird.
 
 ## <a name="related-topics"></a>Verwandte Themen
 [Windows10-Wartungsoptionen für Updates und Upgrades](https://technet.microsoft.com/itpro/windows/manage/introduction-to-windows-10-servicing)

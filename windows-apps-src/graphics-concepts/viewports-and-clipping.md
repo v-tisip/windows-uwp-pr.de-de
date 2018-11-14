@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 4dd319c686bebf2a30431017f399f48b08618cb6
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6030069"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6259102"
 ---
 # <a name="viewports-and-clipping"></a>Viewports und Zuschneiden
 
@@ -47,7 +47,7 @@ Die Werte, die Sie für die Mitglieder X, Y, Breite und Höhe angeben, sind Bild
 
 Direct3D nimmt an, dass das Viewport-Zuschneidungsvolumen von -1,0 bis 1,0 in X und von 1,0 bis -1,0 in Y reicht. Dies sind die Einstellungen die in der Vergangenheit am häufigsten von Anwendungen verwendet wurden. Sie können das Viewport-Seitenverhältnis vor dem Zuschneiden mit der [Projektionstransformation](projection-transform.md) anpassen.
 
-**Hinweis:**  MinZ und MaxZ geben die Tiefenbereiche, in dem die Szene gerendert werden, und sind nicht zum Zuschneiden verwendet. Die meisten Anwendungen setzen diese Werte zwischen 0,0 und 1,0, damit das System das Rendering für den gesamten Bereich der Tiefenwerte im Tiefenpuffer durchführen kann. In manchen Fällen können Sie durch die Verwendung anderer Tiefenbereiche besondere Effekte erzielen. So können Sie beispielsweise zum Rendern einer Heads-up-Ansicht in einem Spiel beide Werte auf 0,0 setzen, damit das System Objekte in einer Szene im Vordergrund rendert; oder Sie setzen beide Werte auf 1,0, um ein Objekt zu rendern, das sich immer im Hintergrund befinden soll.
+**Hinweis:**  MinZ und MaxZ geben die Tiefenbereiche, in dem die Szene gerendert wird, und nicht zum Zuschneiden verwendet werden. Die meisten Anwendungen setzen diese Werte zwischen 0,0 und 1,0, damit das System das Rendering für den gesamten Bereich der Tiefenwerte im Tiefenpuffer durchführen kann. In manchen Fällen können Sie durch die Verwendung anderer Tiefenbereiche besondere Effekte erzielen. So können Sie beispielsweise zum Rendern einer Heads-up-Ansicht in einem Spiel beide Werte auf 0,0 setzen, damit das System Objekte in einer Szene im Vordergrund rendert; oder Sie setzen beide Werte auf 1,0, um ein Objekt zu rendern, das sich immer im Hintergrund befinden soll.
 
  
 

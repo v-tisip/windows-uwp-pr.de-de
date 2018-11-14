@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, C#, Visual Basic, asynchron
 ms.localizationpriority: medium
 ms.openlocfilehash: 2d9bd5265d72a7a478de8c094cd900072e46a143
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6052155"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6464100"
 ---
 # <a name="call-asynchronous-apis-in-c-or-visual-basic"></a>Aufrufen asynchroner APIs in C# oder Visual Basic
 
@@ -81,7 +81,7 @@ Wenn Sie Ihre Ergebnisse mit dem **await**-Operator aus einer asynchronen Method
 
 Werden asynchrone Methoden von anderen asynchronen Methoden aufgerufen, wird jede Methode, die zu einer Ausnahme führt, an die äußeren Methoden weitergegeben. Folglich können Sie die äußerste Methode mit einem **try/catch**-Block versehen, um Fehler für die geschachtelten asynchronen Methoden abzufangen. Auch hier werden Ausnahmen ähnlich wie bei synchronen Methoden erfasst. **await** kann aber nicht im **catch**-Block verwendet werden.
 
-**Tipp:** beginnend mit c# in Microsoft Visual Studio2005, können **await** im **catch** -Block.
+**Tipp:** ab c# in Microsoft Visual Studio2005, können **await** im **catch** -Block.
 
 ## <a name="summary-and-next-steps"></a>Zusammenfassung und nächste Schritte
 

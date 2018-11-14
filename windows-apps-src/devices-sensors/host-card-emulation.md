@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: bf8d5f1587cc27082944cf0fc63edc274cb2bc7d
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6028759"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6261076"
 ---
 # <a name="create-an-nfc-smart-card-app"></a>Erstellen einer NFC-Smartcard-App
 
@@ -48,7 +48,7 @@ Das folgende Diagramm zeigt die Architektur für die Unterstützung der HCE- und
 
 ## <a name="app-selection-and-aid-routing"></a>App-Auswahl und AID-Routing
 
-Bei der Entwicklung eine HCE-app müssen Sie wissen, wie Windows 10 Mobile-Geräten AIDs an eine bestimmte app funktioniert, da Benutzer mehrere unterschiedliche HCE-apps installieren können. Jede App kann mehrere HCE- und SIM-basierte Karten registrieren. Älteren Windows Phone 8.1-apps, die SIM-basierte sind weiterhin unter Windows 10 Mobile funktionieren, solange der Benutzer im Menü mit den NFC-Einstellungen die Option "SIM-Karte" als standardmäßige Zahlungskarte auswählt. Diese Standardeinstellung wird festgelegt, wenn das Gerät zum ersten Mal eingeschaltet wird.
+Um eine HCE-app zu entwickeln, müssen Sie wissen, wie Windows 10 Mobile-Geräten AIDs an eine bestimmte app funktioniert, da Benutzer mehrere unterschiedliche HCE-apps installieren können. Jede App kann mehrere HCE- und SIM-basierte Karten registrieren. Älteren Windows Phone 8.1-apps, die SIM-basierte werden weiterhin für Windows 10 Mobile werden, solange der Benutzer im Menü mit den NFC-Einstellungen die Option "SIM-Karte" als standardmäßige Zahlungskarte auswählt. Diese Standardeinstellung wird festgelegt, wenn das Gerät zum ersten Mal eingeschaltet wird.
 
 Wenn Benutzer mit ihrem Windows 10 Mobile-Gerät ein Terminal berühren, werden die Daten automatisch an die richtige auf dem Gerät installierte app weitergeleitet. Diese Weiterleitung basiert auf den Applet-IDs (AIDs), bei denen es sich um Bezeichner mit 5-16Byte handelt. Während dieses Vorgangs überträgt das externe Terminal eine SELECT-Befehl-APDU, um die AID anzugeben, an die alle nachfolgenden APDU-Befehle geleitet werden sollen. Mit den nachfolgenden SELECT-Befehlen wird die Weiterleitung wieder geändert. Basierend auf den von Apps registrierten AIDs und den Benutzereinstellungen wird der APDU-Datenverkehr an eine bestimmte App geleitet, die dann eine APDU als Antwort sendet. Beachten Sie hierbei, dass ein Terminal während eines Vorgangs unter Umständen versucht, mit mehreren unterschiedlichen Apps zu kommunizieren. Sie müssen also sicherstellen, dass die Hintergrundaufgabe Ihrer App nach der Deaktivierung so schnell wie möglich beendet wird, damit die Hintergrundaufgabe einer anderen App auf die APDU antworten kann. Hintergrundaufgaben werden später in diesem Thema beschrieben.
 
@@ -82,7 +82,7 @@ In Windows 10 Mobile richtet das System die NFC-Controller Routingtabelle, die d
 
 Wenn eine externe Leseeinheit den Befehl „SELECT AID” sendet, überprüft der NFC-Controller zuerst die AID-Routen in der Routingtabelle auf eine Übereinstimmung. Falls keine Übereinstimmung vorhanden ist, wird die protokollbasierte Route als Standardroute für ISO-DEP (14443-4-A)-Datenverkehr verwendet. Für anderen Datenverkehr, der nicht auf ISO-DEP basiert, wird das technologiebasierte Routing verwendet.
 
-Windows 10 Mobile bietet eine Menüoption "SIM-Karte" in der Seite "NFC-Einstellungen" weiterhin verwenden älteren Windows Phone 8.1 SIM-basierte apps, die ihre AIDs nicht im System registriert werden. Wenn Benutzer „SIM-Karte“ als Standardkarte für Zahlungen auswählen, wird die ISO-DEP-Route auf „UICC“ festgelegt. Für alle anderen Auswahlmöglichkeiten im Dropdownmenü verläuft die ISO-DEP-Route zum Host.
+Windows 10 Mobile bietet eine Menüoption "SIM-Karte" in der NFC-Einstellungsseite weiterhin mit älteren Windows Phone 8.1 SIM-basierte apps, die ihre AIDs nicht im System registriert werden. Wenn Benutzer „SIM-Karte“ als Standardkarte für Zahlungen auswählen, wird die ISO-DEP-Route auf „UICC“ festgelegt. Für alle anderen Auswahlmöglichkeiten im Dropdownmenü verläuft die ISO-DEP-Route zum Host.
 
 Die ISO-DEP-Route wird auf "SIM-Karte" für Geräte festgelegt, die eine SE SIM-Karte aktiviert sein, wenn das Gerät zum ersten Mal mit Windows 10 Mobile gestartet wird. Wenn der Benutzer eine HCE-fähige App installiert und diese App HCE-AID-Gruppenregistrierungen aktiviert, zeigt die ISO-DEP-Route auf den Host. Für neue SIM-basierte Anwendungen müssen die AIDs auf der SIM-Karte registriert werden, damit die jeweiligen AID-Routen in die Routingtabelle des Controllers eingefügt werden können.
 
@@ -314,7 +314,7 @@ reg.RequestActivationPolicyChangeAsync(AppletIdGroupActivationPolicy.ForegroundO
 
 Ihre App sollte überprüfen, ob ein Gerät über NFC-Hardware verfügt und die Kartenemulationsfunktion und die Hostkartenemulation unterstützt, bevor diese Features dem Benutzer angeboten werden.
 
-Die NFC-Smartcard-Emulationsfunktion wird nur unter Windows 10 Mobile, also versuchen, verwenden Sie den Smartcard-Emulator-APIs in anderen Versionen von Windows 10 aktiviert, Fehler verursacht. Sie können die Smartcard-API-Unterstützung im folgenden Codeausschnitt überprüfen.
+Die NFC-Smartcard-Emulationsfunktion wird nur unter Windows 10 Mobile, also versuchen, verwenden Sie die Smartcard-Emulator-APIs in anderen Versionen von Windows 10 aktiviert, Fehler verursacht. Sie können die Smartcard-API-Unterstützung im folgenden Codeausschnitt überprüfen.
 
 ```csharp
 Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Devices.SmartCards.SmartCardEmulator");
@@ -334,7 +334,7 @@ Smartcardemulator.IsHostCardEmulationSupported();
 
 ## <a name="lock-screen-and-screen-off-behavior"></a>Verhalten des Sperrbildschirms und bei „Bildschirm aus“
 
-Windows 10 Mobile enthält auf Geräteebene emulationseinstellungen, die vom Mobilfunknetzbetreiber oder Hersteller des Geräts festgelegt werden können. Das Umschalten der Option „Zum Bezahlen berühren“ ist standardmäßig deaktiviert, und die „Aktivierungsrichtlinie auf Geräteebene“ ist auf „Immer“ festgelegt, es sei denn, der Netzbetreiber oder Hersteller überschreibt diese Werte.
+Windows 10 Mobile hat die emulationseinstellungen auf Geräteebene, die vom Mobilfunkanbieter oder Hersteller des Geräts festgelegt werden kann. Das Umschalten der Option „Zum Bezahlen berühren“ ist standardmäßig deaktiviert, und die „Aktivierungsrichtlinie auf Geräteebene“ ist auf „Immer“ festgelegt, es sei denn, der Netzbetreiber oder Hersteller überschreibt diese Werte.
 
 Ihre Anwendung kann den Wert von [**EnablementPolicy**](https://msdn.microsoft.com/library/windows/apps/Dn608006) auf Geräteebene abfragen und abhängig vom gewünschten Verhalten Ihrer App in den einzelnen Zuständen jeweils Maßnahmen ergreifen.
 
@@ -384,4 +384,4 @@ var appletIdGroup = new SmartCardAppletIdGroup(
                                 SmartCardEmulationType.Uicc);
 ```
 
-** Wichtige ** die ältere binäre SMS-abfangverfahrens in Windows Phone 8.1 wurde entfernt und durch neue, umfassendere SMS Unterstützung in Windows 10 Mobile ersetzt, aber alle älteren Windows Phone 8.1-apps, die hierauf basieren, müssen aktualisieren, um die neue Windows 10 Mobile-SMS verwenden APIs.
+** Wichtige ** die ältere binäre SMS-abfangverfahrens in Windows Phone 8.1 wurde entfernt und durch neue umfassendere SMS-Unterstützung in Windows 10 Mobile ersetzt, aber alle älteren Windows Phone 8.1-apps, die hierauf basieren, müssen aktualisieren, um die neue Windows 10 Mobile-SMS verwenden APIs.

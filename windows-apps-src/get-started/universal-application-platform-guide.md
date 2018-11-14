@@ -8,16 +8,16 @@ ms.date: 5/7/2018
 ms.topic: article
 keywords: Windows 10, UWP, universal
 ms.localizationpriority: medium
-ms.openlocfilehash: a506eec99aabaddac6251eb6548a671ecd283d0b
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.openlocfilehash: a687aa7ed1115692f765e516dc8c8b15504b709e
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6281117"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6648202"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>Was ist eine Universelle Windows-Plattform (UWP)-App?
 
-![Apps für die Universelle Windows-Plattform können auf einer Vielzahl von Geräten ausgeführt werden, unterstützen adaptive Benutzeroberflächen, natürliche Benutzereingaben, einen Store, ein Dev Center und Clouddienste.](images/universalapps-overview.png)
+![Universelle Windows-Plattform-apps auf einer Vielzahl von Geräten ausführen, unterstützen adaptive Benutzeroberflächen, natürliche Benutzereingaben, einen Store, Partnercenter und Clouddienste.](images/universalapps-overview.png)
 
 Eine UWP-App ist:
 
@@ -132,9 +132,9 @@ Zusätzlich zur Interaktion auf verschiedenen Geräten sollten Sie [Ihre App pla
 - Finden Sie heraus, wie Sie [Cortana zu Ihrer App hinzufügen können](https://mva.microsoft.com/training-courses/integrating-cortana-in-your-apps-8487?l=20D3s5Xz_5904984382), damit sie auf Sprachbefehle reagiert.
 - Beziehen Sie [Push-Benachrichtigungen](https://msdn.microsoft.com/library/windows/apps/mt187203) und [In-App-Einkäufe](https://msdn.microsoft.com/library/windows/apps/mt219684) in Ihre Planung mit ein. Diese Features sollten auf allen Geräten funktionieren.
 
-### <a name="submit-your-app-to-the-store"></a>Übermitteln Ihrer App an den Store.
+### <a name="submit-your-app-to-the-store"></a>Übermitteln Sie Ihre app an den Store
 
-Im neuen einheitlichen WindowsDevCenter-Dashboard können Sie all Ihre Apps für Windows-Geräte zentral verwalten und einreichen. Unter [Verwenden des einheitlichen Windows Dev Center-Dashboards](../publish/using-the-windows-dev-center-dashboard.md) erfahren Sie, wie Sie Ihre Apps zur Veröffentlichung im MicrosoftStore übermitteln.
+[Partner Center](https://partner.microsoft.com/dashboard) können Sie all Ihre Apps für Windows-Geräte zentral verwalten und einreichen. Siehe [Veröffentlichen von Windows-apps und Spiele](../publish/index.md) erfahren, wie Sie Ihre apps für die Veröffentlichung im Microsoft Store übermitteln.
 
 Neue Features vereinfachen Prozesse und geben Ihnen mehr Kontrolle. Sie finden dort auch detaillierte [Analyseberichte](https://msdn.microsoft.com/library/windows/apps/mt148522) in Kombination mit [Auszahlungsdetails](https://msdn.microsoft.com/library/windows/apps/dn986925), Möglichkeiten, [Ihre App zu bewerben und Kunden zu erreichen](https://msdn.microsoft.com/library/windows/apps/mt148526) und vieles mehr.
 

@@ -14,11 +14,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b5d2a55610b6cec2f9026a5834b00ad7015a9c6
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6032362"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6266813"
 ---
 # <a name="resourcedictionary-and-xaml-resource-references"></a>ResourceDictionary- und XAML-Ressourcenreferenzen
 
@@ -204,7 +204,7 @@ sealed partial class App : Application
 
 [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/br208706) ist eine Basisklasse zum Steuern der Vererbung, und sie verfügt über eine [Resources](https://msdn.microsoft.com/library/windows/apps/br208740)-Eigenschaft. Sie können also jedem **FrameworkElement**-Element ein lokales Ressourcenverzeichnis hinzufügen.
 
-Hier verfügen sowohl das [Page](https://msdn.microsoft.com/library/windows/apps/br227503)-Element als auch das [Border](https://msdn.microsoft.com/library/windows/apps/br209250)-Element über Ressourcenwörterbücher, und beide Elemente weisen eine Ressource mit dem Namen „greeting“ auf. Der [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) mit dem Namen 'textBlock2' ist innerhalb des **Rahmens**, also die Ressourcensuche zuerst den **Rahmen**Ressourcen, Ressourcen der **Seite**und dann [den Anwendungsressourcen](https://msdn.microsoft.com/library/windows/apps/br242324) nach. Das **TextBlock**-Element enthält „Hola mundo“.
+Hier verfügen sowohl das [Page](https://msdn.microsoft.com/library/windows/apps/br227503)-Element als auch das [Border](https://msdn.microsoft.com/library/windows/apps/br209250)-Element über Ressourcenwörterbücher, und beide Elemente weisen eine Ressource mit dem Namen „greeting“ auf. [TextBlock-Element](https://msdn.microsoft.com/library/windows/apps/br209652) mit dem Namen 'textBlock2' ist innerhalb des **Rahmens**, damit die Ressourcensuche zuerst den **Rahmen**Ressourcen, Ressourcen der **Seite**und dann [den Anwendungsressourcen](https://msdn.microsoft.com/library/windows/apps/br242324) aussieht. Das **TextBlock**-Element enthält „Hola mundo“.
 
 Verwenden Sie die Resources-Eigenschaft dieses Elements, um über den Code auf die [Ressourcen](https://msdn.microsoft.com/library/windows/apps/br208740) dieses Elements zuzugreifen. Beim Zugreifen auf die Ressourcen eines [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/br208706)-Elements im Code, anstatt per XAML, wird nur im entsprechenden Verzeichnis gesucht, nicht in den Verzeichnissen des übergeordneten Elements.
 

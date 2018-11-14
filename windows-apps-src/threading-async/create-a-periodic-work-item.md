@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, regelmäßige Arbeitsaufgabe, Threading, Timer
 ms.localizationpriority: medium
 ms.openlocfilehash: 4afa137b01738c42f8e15c95ef09ec921d1e44ae
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6052235"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6448163"
 ---
 # <a name="create-a-periodic-work-item"></a>Erstellen einer regelmäßigen Arbeitsaufgabe
 
@@ -31,7 +31,7 @@ Verwenden Sie die [**CreatePeriodicTimer**](https://msdn.microsoft.com/library/w
 
 [**CreateTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.createtimer.aspx) gibt ein [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/BR230587)-Objekt zurück. Speichern Sie das Objekt für den Fall, dass der Timer abgebrochen werden muss.
 
-> **Hinweis:** vermeiden Sie den Wert 0 (null) angeben (oder ein Wert kleiner als eine Millisekunde) für das Intervall. Andernfalls verhält sich der regelmäßige Timer wie ein einmaliger Timer.
+> **Hinweis:** vermeiden Sie es, den Wert NULL (oder ein Wert kleiner als eine Millisekunde) für das Intervall. Andernfalls verhält sich der regelmäßige Timer wie ein einmaliger Timer.
 
 > **Hinweis:** können Sie [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) verwenden, um auf die Benutzeroberfläche zuzugreifen und den Fortschritt der Arbeitsaufgabe anzuzeigen.
 

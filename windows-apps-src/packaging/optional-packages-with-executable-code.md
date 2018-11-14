@@ -7,12 +7,12 @@ ms.date: 9/30/2018
 ms.topic: article
 keywords: Windows10, UWP, App-Installer, AppInstaller, querladen, zugehörige Gruppe, optionale Pakete
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f454c7e7386ba829cf6c99edc0b5b8f2d831f00
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: f38604ea7fc25038bdd4b07b952e4dbab151bf56
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025190"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6268835"
 ---
 # <a name="optional-packages-with-executable-code"></a>Optionale Pakete mit ausführbarem Code
  
@@ -26,7 +26,7 @@ Optionale Pakete mit ausführbarem Code eignen sich zum Teilen einer großen ode
 Informationen zum Abrufen der aktuellen Entwicklungstools finden Sie unter [Downloads und Tools für Windows10](https://developer.microsoft.com/windows/downloads). 
 
 > [!NOTE]
-> Um eine App an den Store zu übermitteln, die optionale Pakete und/oder zugehörige Gruppen verwendet, benötigen Sie eine Berechtigung. Optionale Pakete und zugehörige Gruppen können ohne Dev Center-Berechtigung für branchenspezifische oder Unternehmens-Apps verwendet werden, wenn sie nicht an den Store übermittelt werden. Informationen zum Erhalt einer Berechtigung, eine App zu übermitteln, die optionale Pakete und zugehörige Gruppen verwendet, finden Sie unter [Windows-Support für Entwickler](https://developer.microsoft.com/windows/support).
+> Um eine App an den Store zu übermitteln, die optionale Pakete und/oder zugehörige Gruppen verwendet, benötigen Sie eine Berechtigung. Optionale Pakete und zugehörige Gruppen können für Zeile des Business (LOB) oder Unternehmens-apps ohne Partner Center-Berechtigung verwendet werden, wenn sie nicht an den Store übermittelt werden. Informationen zum Erhalt einer Berechtigung, eine App zu übermitteln, die optionale Pakete und zugehörige Gruppen verwendet, finden Sie unter [Windows-Support für Entwickler](https://developer.microsoft.com/windows/support).
 
 ## <a name="c-optional-packages-with-executable-code"></a>Optionale C++-Pakete mit ausführbarem Code
 

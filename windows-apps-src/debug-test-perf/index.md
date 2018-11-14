@@ -2,23 +2,23 @@
 author: PatrickFarley
 ms.assetid: 16976d00-1564-49fe-81ad-2568e25e9e41
 title: Debugging, Tests und Leistung
-description: Verwenden Sie Microsoft Visual Studio und andere Tools zum Debuggen und Testen Sie Ihre app, und bereiten sie für den Microsoft Store-Zertifizierungsprozess.
+description: Verwenden Sie Microsoft Visual Studio und andere Tools zum Debuggen und Testen Sie Ihre app aus, und bereiten sie für den Microsoft Store-Zertifizierungsprozess.
 ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a6651c6d1117648522f95c7e7c85aad11ceed42f
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6040327"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6249928"
 ---
 # <a name="debugging-testing-and-performance"></a>Debuggen, Testen und Leistung
 
 
-Dieser Abschnitt erfahren Sie, wie Sie Microsoft Visual Studio zum Debuggen, testen und Optimieren Sie Ihre app. Es enthält außerdem Tools wie das Windows Device Portal (für Geräte überwachen und Konfiguration) und das Zertifizierungskit für Windows-Apps (zum Vorbereiten Ihrer app für den Microsoft Store).
+In diesem Abschnitt wird gezeigt, wie mit Microsoft Visual Studio debuggen, testen und Optimieren Sie Ihre app. Darüber hinaus enthält Tools wie das Windows Device Portal (für die Überwachung von Gerät, und klicken Sie mit der Konfiguration) und des Zertifizierungskits für Windows-App (Vorbereiten Ihrer app für den Microsoft Store).
 
 | Thema | Beschreibung |
 |-------|-------------|

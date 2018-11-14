@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Route, Karte, Standort, Wegbeschreibungen
 ms.localizationpriority: medium
 ms.openlocfilehash: 69283f6b53f3a8483376e3b8fe77a4491d4b01b1
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6207665"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6458644"
 ---
 # <a name="display-routes-and-directions-on-a-map"></a>Anzeigen von Routen und Wegbeschreibungen auf einer Karte
 

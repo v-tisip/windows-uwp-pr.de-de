@@ -16,11 +16,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 91a1ca0ee99833280aaa41ca4d9c94d043a78e0a
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6034709"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6195971"
 ---
 # <a name="implement-navigation-between-two-pages"></a>Implementieren der Navigation zwischen zwei Seiten
 
@@ -332,7 +332,7 @@ Hier werden eine [**TextBlock**](https://msdn.microsoft.com/library/windows/apps
 </StackPanel>
 ```
 
-In der `HyperlinkButton_Click` -Ereignishandler der CodeBehind-Datei "Page1.xaml" Hinzufügen einer Parameter einen Verweis auf die `Text` -Eigenschaft des der `name` **TextBox** auf die `Navigate` Methode.
+In der `HyperlinkButton_Click` -Ereignishandler der CodeBehind-Datei "Page1.xaml" Hinzufügen einer Parameter einen Verweis auf die `Text` Eigenschaft der `name` **TextBox** , die `Navigate` Methode.
 
 ```csharp
 private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
