@@ -9,17 +9,17 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Directx, Paket
 ms.localizationpriority: medium
 ms.openlocfilehash: 252f67a3cb307f10b1a973a17144f211c9c676b0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6030215"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6189895"
 ---
 #  <a name="package-your-universal-windows-platform-uwp-directx-game"></a>Packen Ihres UWP-DirectX-Spiels (DirectX-Spiels für die Universelle Windows-Plattform)
 
 Umfangreichere UWP-Spiele (Universelle Windows-Plattform) können leicht relativ groß werden. Dies gilt besonders für Spiele, bei denen mehrere Sprachen mit regionsspezifischen Ressourcen unterstützt werden oder die über optionale HD-Ressourcen verfügen. In diesem Thema erfahren Sie, wie Sie App-Pakete und App-Bündel zum Anpassen der App verwenden, damit Kunden nur die wirklich benötigten Ressourcen erhalten.
 
-Neben der app-Paketmodell unterstützt Windows 10 app-Bündel die zwei Arten von Paketen zu gruppieren:
+Zusätzlich zum app-Paket unterstützt Windows 10 app-Bündel die zwei Arten von Paketen zu gruppieren:
 
 -   App-Pakete enthalten plattformspezifische ausführbare Dateien und Bibliotheken. Häufig verfügen UWP-Spiele über bis zu drei App-Pakete, und zwar jeweils ein Paket für die x86-, x64- und ARM-CPU-Architekturen. Der Code und die Daten für die entsprechende Hardwareplattform müssen im dazugehörigen App-Paket enthalten sein. Ein App-Paket sollte außerdem alle wichtigen Ressourcen für das Spiel enthalten, damit die Voraussetzungen für eine Ausführung in guter Qualität und mit guter Leistung gegeben sind.
 -   Ressourcenpakete enthalten optionale oder erweiterte plattformagnostische Daten, z.B. Spielressourcen (Texturen, Gitter, Sound, Text). Ein UWP-Spiel kann über ein oder mehrere Ressourcenpakete verfügen, z. B. Ressourcenpakete für HD-Ressourcen oder -Texturen, Ressourcen der DirectX-Featureebene 11+ oder sprachspezifische Ressourcen.
@@ -53,7 +53,7 @@ Es gibt zwei grundlegende Möglichkeiten, Ressourcen für das Verpacken anzugebe
 
 -   Objektdateien weisen den gleichen Dateinamen auf, und die einzelnen Ressourcenpaketversionen werden in Verzeichnisse mit bestimmten Namen eingefügt. Diese Verzeichnisnamen werden vom System reserviert. Zum Beispiel; \\en-us, \\scale-140, \\dxfl-dx11.
 -   Objektdateien werden in Ordnern mit beliebigen Namen gespeichert. Die Dateien werden jedoch mit einer gemeinsamen Bezeichnung benannt, die mit Zeichenfolgen angehängt wird, die das System zum Angeben von Sprach- und anderen Qualifizierern reserviert. Diese Qualifiziererzeichenfolgen werden nach einem Unterstrich („\_“) an den generalisierten Dateinamen angehängt. Beispielsweise: \\assets\\menu\_option1\_lang-en-us.png, \\assets\\menu\_option1\_scale-140.png, \\assets\\coolsign\_dxfl-dx11.dds. Sie können diese Zeichenfolgen auch kombinieren. Beispielsweise: \\assets\\menu\_option1\_scale-140\_lang-en-us.png.
-    > **Hinweis:**  Wenn in einem Dateinamen statt nur in einem Verzeichnisnamen verwendet, muss ein sprachqualifizierer haben die Form "lang-<tag>", z. B. "Lang-En-us" gemäß [Anpassen von Ressourcen für Sprache, Skalierung und anderen Qualifizierern an](../app-resources/tailor-resources-lang-scale-contrast.md).
+    > **Hinweis:**  Wenn in einem Dateinamen statt nur in einem Verzeichnisnamen verwendet, muss ein sprachqualifizierer weisen die Form "lang-<tag>", z. B. "Lang-En-us" gemäß [Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung und andere](../app-resources/tailor-resources-lang-scale-contrast.md).
 
      
 
@@ -91,14 +91,14 @@ Gehen Sie beim Konfigurieren der App für die Unterstützung lokalisierter Resso
 ## <a name="defining-scaling-factor-resource-packs"></a>Definieren von Ressourcenpaketen für den Skalierungsfaktor
 
 
-Windows 10 bietet drei Skalierungsfaktoren für Benutzeroberflächen: 1.0 x 1.4 x und 1, 8 X. Die Skalierungswerte für jede Anzeige werden während der Installation basierend auf verschiedenen kombinierten Faktoren festgelegt: Größe des Bildschirms, Auflösung des Bildschirms und angenommener durchschnittlicher Abstand der Benutzer vom Bildschirm. Der Benutzer kann Skalierungsfaktoren auch anpassen, um die Lesbarkeit zu verbessern. Um die besten Ergebnisse zu erzielen, sollte das Spiel sowohl mit DPI-Werten kompatibel sein als auch den Skalierungsfaktor beachten können. Dies bedeutet, dass Sie Versionen wichtiger Grafikressourcen für alle drei Skalierungsfaktoren erstellen sollten. Dies betrifft auch die Zeigerinteraktion und Treffererkennung!
+Windows 10 bietet drei Skalierungsfaktoren für Benutzeroberflächen: 1.0 x, 1.4 x und 1, 8 X. Die Skalierungswerte für jede Anzeige werden während der Installation basierend auf verschiedenen kombinierten Faktoren festgelegt: Größe des Bildschirms, Auflösung des Bildschirms und angenommener durchschnittlicher Abstand der Benutzer vom Bildschirm. Der Benutzer kann Skalierungsfaktoren auch anpassen, um die Lesbarkeit zu verbessern. Um die besten Ergebnisse zu erzielen, sollte das Spiel sowohl mit DPI-Werten kompatibel sein als auch den Skalierungsfaktor beachten können. Dies bedeutet, dass Sie Versionen wichtiger Grafikressourcen für alle drei Skalierungsfaktoren erstellen sollten. Dies betrifft auch die Zeigerinteraktion und Treffererkennung!
 
 Konfigurieren Sie eine App, für die Ressourcenpakete für unterschiedliche Skalierungsfaktoren von UWP-Apps unterstützt werden sollen, wie folgt:
 
 -   Erstellen Sie ein Unterverzeichnis (bzw. eine Dateiversion) für jeden zu unterstützenden Skalierungsfaktor (scale-100, scale-140 und scale-180).
 -   Fügen Sie während der Entwicklung auf den Skalierungsfaktor zugeschnittene Kopien ALLER Ressourcen in jedes Skalierungsfaktor-Ressourcenverzeichnis ein, auch wenn sich diese für die einzelnen Skalierungsfaktoren nicht unterscheiden.
 -   Achten Sie darauf, dass die Ressourcen in jedem Verzeichnis gleich benannt sind. Die Datei „menu\_option1.png“ sollte beispielsweise in den Verzeichnissen „\\scale-100“ und „\\scale-180“ denselben Namen haben, auch wenn der Inhalt unterschiedlich ist. Die Dateien sind werden in diesem Fall als „\\scale-100\\menu\_option1.pngֆ“ und „\\scale-140\\menu\_option1.png“ angezeigt.
-    > **Hinweis:**  erneut, Sie können optional das skalierungsfaktorsuffix an den Dateinamen und speichern Sie sie im gleichen Verzeichnis verwendet; z. B. \\assets\\menu\_option1\_scale-100.png, \\assets\\menu\_option1\_scale-140.png.
+    > **Hinweis:**  erneut, Sie können optional das skalierungsfaktorsuffix an den Dateinamen und speichern Sie sie im gleichen Verzeichnis verwendet; \\assets\\menu\_option1\_scale-100.png und \\assets\\menu\_option1\_scale-140.png.
 
      
 

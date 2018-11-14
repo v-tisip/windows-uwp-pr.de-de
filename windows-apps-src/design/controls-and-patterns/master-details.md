@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b30835e31e86c0c98d0c134ed28adca4413650c9
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6034150"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6146494"
 ---
 # <a name="masterdetails-pattern"></a>Master/Details-Muster
 

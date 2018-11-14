@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 283ea63d118f9a61fe745dd3eb60b68594c32279
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6023891"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6198537"
 ---
 # <a name="specular-lighting"></a>Spiegelbeleuchtung
 
@@ -57,7 +57,7 @@ Cₛ ist einer der folgenden Werte:
 -   Vertexfarbe2, wenn die Glanzmaterialquelle die Glanzvertexfarbe ist und die zweite Vertexfarbe in der Vertexdeklaration angegeben ist
 -   Materialglanzfarbe
 
-**Hinweis:**  Wenn Option glanzmaterialquelle verwendet wird und die Vertexfarbe nicht angegeben, wird die materialglanzfarbe verwendet wird.
+**Hinweis:**  Wenn Option glanzmaterialquelle verwendet wird und die Vertexfarbe nicht angegeben, wird die materialglanzfarbe verwendet.
 
  
 

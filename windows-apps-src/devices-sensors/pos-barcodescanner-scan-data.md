@@ -1,22 +1,22 @@
 ---
 author: eliotcowley
 title: Abrufen und Verstehen von Strichcode-Daten
-description: Erfahren Sie, wie zum Erhalt und der Interpretation der Strichcode-Daten, die Sie scannen.
+description: Erfahren Sie, wie Sie erhalten und Interpretation der Strichcode-Daten, die Sie scannen.
 ms.author: elcowle
 ms.date: 08/29/2018
 ms.topic: article
 keywords: Windows 10, UWP, Point of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: caeda47e51c74976bd76708c60938d2dfc745d54
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6047016"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6151172"
 ---
 # <a name="obtain-and-understand-barcode-data"></a>Abrufen und Verstehen von Strichcode-Daten
 
-Nachdem Sie Ihr Strichcodescanner eingerichtet haben, benötigen Sie natürlich eine Möglichkeit, Verständnis der Daten, die Sie scannen. Wenn Sie einen Strichcode scannen, wird das [DataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.datareceived) -Ereignis ausgelöst. Die [ClaimedBarcodeScanner](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner) sollte dieses Ereignis abonnieren. Das **DataReceived** Ereignis übergibt ein [BarcodeScannerDataReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerdatareceivedeventargs) -Objekt, das Sie Zugriff auf die Strichcode-Daten verwenden können.
+Nachdem Sie Ihr Strichcodescanner eingerichtet haben, benötigen Sie natürlich eine Möglichkeit, Verständnis der Daten, die Sie scannen. Wenn Sie einen Strichcode scannen, wird das [DataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.datareceived) -Ereignis ausgelöst. Die [ClaimedBarcodeScanner](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner) sollte dieses Ereignis abonnieren. Das **DataReceived** -Ereignis übergibt ein [BarcodeScannerDataReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerdatareceivedeventargs) -Objekt, das Sie verwenden können, auf die Strichcode-Daten zugreifen.
 
 ## <a name="subscribe-to-the-datareceived-event"></a>Abonnieren Sie das DataReceived-Ereignis
 
@@ -26,7 +26,7 @@ Wenn Sie eine **ClaimedBarcodeScanner**haben, haben sie das **DataReceived** Ere
 claimedBarcodeScanner.DataReceived += ClaimedBarcodeScanner_DataReceived;
 ```
 
-Der Ereignishandler wird die **ClaimedBarcodeScanner** und ein **BarcodeScannerDataReceivedEventArgs** -Objekt übergeben. Sie können die Barcode-Daten über dieses Objekt [Bericht](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerdatareceivedeventargs.report#Windows_Devices_PointOfService_BarcodeScannerDataReceivedEventArgs_Report) -Eigenschaft Typ [BarcodeScannerReport vom](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport)zugreifen.
+Der Ereignishandler wird die **ClaimedBarcodeScanner** und ein **BarcodeScannerDataReceivedEventArgs** -Objekt übergeben werden. Sie können die Strichcode-Daten über dieses Objekts [Bericht](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerdatareceivedeventargs.report#Windows_Devices_PointOfService_BarcodeScannerDataReceivedEventArgs_Report) -Eigenschaft zugreifen, die vom Typ [BarcodeScannerReport](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport).
 
 ```cs
 private async void ClaimedBarcodeScanner_DataReceived(ClaimedBarcodeScanner sender, BarcodeScannerDataReceivedEventArgs args)
@@ -37,13 +37,13 @@ private async void ClaimedBarcodeScanner_DataReceived(ClaimedBarcodeScanner send
 
 ## <a name="get-the-data"></a>Abrufen der Daten
 
-Wenn Sie die **BarcodeScannerReport**haben, können Sie Zugriff auf und die Barcode-Daten zu analysieren. **BarcodeScannerReport** verfügt über drei Eigenschaften:
+Wenn Sie die **BarcodeScannerReport**haben, können Sie Zugriff auf und Analysieren der Strichcode-Daten. **BarcodeScannerReport** verfügt über drei Eigenschaften:
 
 * [ScanData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandata): die vollständige, unformatierten Strichcode-Daten.
-* [ScanDataLabel](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandatalabel): die decodierten Barcode-Bezeichnung, die nicht in der Kopfzeile, Prüfsumme und sonstige Informationen enthalten ist.
-* [ScanDataType](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandatatype): der decodierten Barcode Label-Typ. Mögliche Werte sind in der [BarcodeSymbologies](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies) -Klasse definiert.
+* [ScanDataLabel](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandatalabel): die decodierten Barcode-Bezeichnung, die nicht in den Header, Prüfsumme und sonstige Informationen enthalten ist.
+* [ScanDataType](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandatatype): der decodierten Barcode-Bezeichnung-Typ. Mögliche Werte sind in der [BarcodeSymbologies](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies) -Klasse definiert.
 
-Wenn Sie **ScanDataLabel** oder **ScanDataType**zugreifen möchten, müssen Sie zuerst [IsDecodeDataEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isdecodedataenabled#Windows_Devices_PointOfService_ClaimedBarcodeScanner_IsDecodeDataEnabled) auf **"true"** festlegen.
+Wenn Sie entweder **ScanDataLabel** oder **ScanDataType**zugreifen möchten, müssen Sie zuerst [IsDecodeDataEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isdecodedataenabled#Windows_Devices_PointOfService_ClaimedBarcodeScanner_IsDecodeDataEnabled) auf **"true"** festlegen.
 
 ```cs
 claimedBarcodeScanner.IsDecodeDataEnabled = true;
@@ -51,7 +51,7 @@ claimedBarcodeScanner.IsDecodeDataEnabled = true;
 
 ### <a name="get-the-scan-data-type"></a>Rufen Sie den Scan-Datentyp ab
 
-Abrufen des decodierten Barcode Label-Typs ist ganz einfach&mdash;rufen wir einfach [GetName](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies.getname) auf **ScanDataType**.
+Abrufen des decodierten Barcode-Bezeichnung-Typs ist ganz einfach&mdash;rufen wir einfach [GetName](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies.getname) auf **ScanDataType**.
 
 ```cs
 private string GetSymbology(BarcodeScannerDataReceivedEventArgs args)
@@ -62,7 +62,7 @@ private string GetSymbology(BarcodeScannerDataReceivedEventArgs args)
 
 ### <a name="get-the-scan-data-label"></a>Rufen Sie die Beschriftung scan
 
-Um die decodierten Barcode-Bezeichnung zu erhalten, gibt es einige Dinge zu beachten. Nur bestimmte Datentypen enthalten codierten Text, damit Sie zunächst überprüfen sollte, ob die Symbologie in eine Zeichenfolge konvertiert werden kann, und konvertieren Sie anschließend den Puffer, die wir aus **ScanDataLabel** auf eine codierte UTF-8-Zeichenfolge zu erhalten.
+Um die decodierten Barcode-Bezeichnung zu erhalten, gibt es einige Dinge zu beachten haben. Nur bestimmte Datentypen enthalten codierten Text, damit Sie zunächst suchen soll, wenn die Symbologie in eine Zeichenfolge konvertiert werden kann, und konvertieren Sie anschließend den Puffer, die wir aus **ScanDataLabel** auf eine codierte UTF-8-Zeichenfolge zu erhalten.
 
 ```cs
 private string GetDataLabel(BarcodeScannerDataReceivedEventArgs args)
@@ -102,7 +102,7 @@ private string GetDataLabel(BarcodeScannerDataReceivedEventArgs args)
 
 ### <a name="get-the-raw-scan-data"></a>Abrufen der unformatierten Scan-Daten
 
-Um die vollständige zu erhalten, konvertieren unformatierte Daten aus der Strichcode wir einfach den Puffer, die, den wir aus **ScanData** in eine Zeichenfolge zu erhalten.
+Um die vollständige zu erhalten, konvertieren Sie unformatierte Daten aus der Strichcode wir einfach den Puffer, die, den wir aus **ScanData** in eine Zeichenfolge zu erhalten.
 
 ```cs
 private string GetRawData(BarcodeScannerDataReceivedEventArgs args)
@@ -121,17 +121,17 @@ private string GetRawData(BarcodeScannerDataReceivedEventArgs args)
 }
 ```
 
-Diese Daten sind in der Regel im Format wie vom Scanner geliefert. Nachricht Header und Trailer-Informationen werden entfernt, jedoch, da diese enthalten keine nützliche Informationen für eine Anwendung und Stichwörtern Scanner für die jeweilige.
+Diese Daten sind in der Regel im Format wie vom Scanner übermittelt. Nachricht Header und Trailer-Informationen werden entfernt, jedoch, da diese enthalten keine nützliche Informationen für eine Anwendung und Stichwörtern Scanner für die jeweilige.
 
-Allgemeine Headerinformationen ist ein Präfixzeichen (z. B. ein STX Zeichen). Allgemeine Trailer-Informationen sind ein Abschluss-Zeichen (z. B. ein ETX oder CR Zeichen) und ein Block Kontrollkästchen Zeichen, wenn eine von der Scanner generiert wird.
+Allgemeine Headerinformationen ist ein Präfixzeichen (z. B. ein STX Zeichen). Allgemeine Trailer-Informationen sind ein Abschluss-Zeichen (z. B. ein ETX oder CR-Zeichen) und ein Block Kontrollkästchen Zeichen, wenn eine von der Scanner generiert wird.
 
-Diese Eigenschaft sollte eine Symbologie Zeichen enthalten, wenn eine der Scanner zurückgegeben wird (z. B. ein **A** für UPC A). Es sollte auch Kontrollkästchen Ziffern enthalten, wenn sie in der Beschriftung vorhanden sind und von der Scanner zurückgegeben. (Beachten Sie, dass sowohl Symbologie Zeichen Kontrollkästchen Ziffern und können möglicherweise nicht vorhanden, je nach Konfiguration Scanner. Der Scanner wird zurücksenden, wenn vorhanden, wird jedoch nicht zu generieren oder berechnen lassen, wenn diese nicht vorhanden sind.)
+Diese Eigenschaft sollte eine Symbologie Zeichen enthalten, wenn eine der Scanner zurückgegeben wird (z. B. ein **A** für UPC-A). Es sollte auch Kontrollkästchen Ziffern enthalten, wenn sie in der Beschriftung vorhanden sind und von der Scanner zurückgegeben. (Beachten Sie, dass sowohl Symbologie Zeichen Kontrollkästchen Ziffern und können möglicherweise nicht vorhanden, je nach Konfiguration Scanner. Der Scanner wird zurücksenden, wenn vorhanden, wird jedoch nicht zu generieren oder berechnen lassen, wenn sie nicht vorhanden sind.)
 
-Einige Waren kann mit einem ergänzende Strichcode gekennzeichnet werden. Dieser Strichcode wird in der Regel auf der rechten Seite des wichtigsten Barcodes platziert und besteht aus einer zusätzlichen 2 oder 5 Zeichen von Informationen. Lautet der Scanner waren, die Haupt- und ergänzende Barcodes enthält, die zusätzlichen Zeichen werden an den hauptpersonen angehängt und das Ergebnis der Anwendung als eine Beschriftung übermittelt wird. (Beachten Sie, dass ein Scanner möglicherweise eine Konfiguration unterstützen, die aktiviert oder deaktiviert das Lesen von ergänzende Codes.)
+Einige Waren kann mit einem ergänzende Strichcode gekennzeichnet werden. Dieser Strichcode wird in der Regel auf der rechten Seite des wichtigsten Barcodes platziert und besteht aus einer zusätzlichen 2 oder 5 Zeichen von Informationen. Wenn der Scanner waren liest, die wichtigsten und ergänzende Barcodes enthält, die ergänzenden Zeichen werden an den hauptpersonen angehängt und das Ergebnis der Anwendung als eine Beschriftung übermittelt wird. (Beachten Sie, dass ein Scanner eine Konfiguration unterstützen kann, die aktiviert oder deaktiviert das Lesen von ergänzende Codes.)
 
-Einige waren möglicherweise mit mehreren Beschriftungen, auch *mit mehreren Symbolen Beschriftungen* oder *mehrstufigen Beschriftungen*genannt gekennzeichnet werden. Diese Barcodes werden in der Regel vertikal angeordnet, und von den gleichen oder unterschiedliche Symbologie sein. Wenn der Scanner waren, die mehrere Beschriftungen enthält liest, wird jede Barcode an die Anwendung als separate Bezeichnung übermittelt. Dies ist aufgrund der aktuellen Mangel an Standardisierung dieser Typen für Barcode erforderlich. Eine kann nicht für alle Varianten basierend auf den einzelnen Barcode-Daten zu ermitteln. Aus diesem Grund müssen die Anwendung zu bestimmen, wann ein mehrere Bezeichnung Strichcode basierend auf der zurückgegebenen Daten gelesen wurde. (Beachten Sie, dass ein Scanner kann oder möglicherweise nicht lesen von mehreren Beschriftungen unterstützen.)
+Einige waren möglicherweise mit mehreren Beschriftungen, auch *mit mehreren Symbolen Beschriftungen* oder *mehrstufigen Beschriftungen*genannt gekennzeichnet werden. Diese Barcodes werden in der Regel vertikal angeordnet, und von den gleichen oder unterschiedliche Symbologie sein. Wenn der Scanner waren, die mehrere Beschriftungen enthält liest, wird jede Barcode an die Anwendung als separate Bezeichnung übermittelt. Dies ist notwendig, aufgrund der aktuellen Mangel an Standardisierung dieser Barcode-Typen. Eine kann nicht für alle Varianten basierend auf den einzelnen Barcode-Daten zu ermitteln. Aus diesem Grund müssen die Anwendung zu bestimmen, wann ein mehrere Bezeichnung Strichcode basierend auf der zurückgegebenen Daten gelesen wurde. (Beachten Sie, dass ein Scanner unterstützt möglicherweise nicht lesen von mehreren Beschriftungen.)
 
-Dieser Wert wird vor einer **DataReceived** -Ereignis ausgelöst werden, um die Anwendung festgelegt.
+Dieser Wert wird vor einem **DataReceived** -Ereignis ausgelöst werden, um die Anwendung festgelegt.
 
 [!INCLUDE [feedback](./includes/pos-feedback.md)]
 

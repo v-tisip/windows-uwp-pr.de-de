@@ -9,14 +9,14 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e3b9ed2d256fb9ea8d38690a703baf7fbd3e7f0
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6031857"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6191507"
 ---
 # <a name="creating-windows-runtime-components-in-c-and-visual-basic"></a>Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic
-Ab .NET Framework4.5 können Sie mit verwaltetem Code eigene Windows-Runtime-Typen erstellen, die in einer Komponente für Windows-Runtime gepackt sind. Diese Komponente können Sie in UWP-Apps (Universelle Windows-Plattform) mit C++, JavaScript, Visual Basic oder C# verwenden. In diesem Thema wird beschrieben, die Regeln zum Erstellen einer Komponente, und einige Aspekte der .NET Framework-Unterstützung für Windows-Runtime erläutert. Im Allgemeinen ist diese Unterstützung allen .NET Framework-Programmierern klar. Wenn Sie aber eine Komponente erstellen, die mit JavaScript oder C++ verwendet werden soll, müssen Sie auf die Unterschiede bei der Unterstützung der Windows-Runtime durch diese Sprachen achten.
+Ab .NET Framework4.5 können Sie mit verwaltetem Code eigene Windows-Runtime-Typen erstellen, die in einer Komponente für Windows-Runtime gepackt sind. Diese Komponente können Sie in UWP-Apps (Universelle Windows-Plattform) mit C++, JavaScript, Visual Basic oder C# verwenden. In diesem Thema wird beschrieben, die Regeln zum Erstellen einer Komponente, und beschreibt einige Aspekte der .NET Framework-Unterstützung für die Windows-Runtime. Im Allgemeinen ist diese Unterstützung allen .NET Framework-Programmierern klar. Wenn Sie aber eine Komponente erstellen, die mit JavaScript oder C++ verwendet werden soll, müssen Sie auf die Unterschiede bei der Unterstützung der Windows-Runtime durch diese Sprachen achten.
 
 Wenn Sie eine Komponente nur für die Verwendung in UWP-Apps mit Visual Basic oder C# erstellen und die Komponente keine UWP-Steuerelemente enthält, sollten Sie die Verwendung der Vorlage **Klassenbibliothek** anstelle der Vorlage **Komponente für Windows-Runtime** in Betracht ziehen. Eine einfache Klassenbibliothek weist weniger Einschränkungen auf.
 
@@ -36,7 +36,7 @@ Intern können die Windows-Runtime-Typen in Ihrer Komponente alle .NET Framework
     -   von Typen abgeleitet sein, die nicht in der Windows-Runtime vorkommen, wie System.Exception und System.EventArgs.
 -   Alle öffentliche Typen müssen über einen Stammnamespace verfügen, der mit dem Assemblynamen übereinstimmt, und der Assemblyname darf nicht mit „Windows” beginnen.
 
-    > **Tipp:** Visual Studio-Projekte haben standardmäßig Namespacenamen, die Namen der Assembly übereinstimmen. In Visual Basic wird die Namespace-Anweisung für diesen Standardnamespace nicht im Code angezeigt.
+    > **Tipp:** standardmäßig Visual Studio-Projekte verfügen Namespacenamen, die Namen der Assembly übereinstimmen. In Visual Basic wird die Namespace-Anweisung für diesen Standardnamespace nicht im Code angezeigt.
 
 -   Öffentliche Strukturen können nur öffentliche Felder als Member enthalten, und diese Felder müssen Werttypen oder Zeichenfolgen sein.
 -   Öffentliche Klassen müssen **versiegelt** (**NotInheritable** in Visual Basic) sein. Wenn das Programmiermodell Polymorphie erfordert, können Sie eine öffentliche Schnittstelle erstellen und diese in den Klassen implementieren, die polymorph sein müssen.
@@ -266,6 +266,6 @@ Nachdem Sie eine Komponente für Windows-Runtime für eigene Zwecke erstellt hab
 Weitere Informationen zu Visual Basic- und C#-Sprachfunktionen und zur .NET Framework-Unterstützung für die Windows-Runtime finden Sie unter [Visual Basic- und C#-Programmiersprachenreferenz](https://msdn.microsoft.com/library/windows/apps/xaml/br212458.aspx).
 
 ## <a name="related-topics"></a>Verwandte Themen
-* [.NET für UWP-apps (Übersicht)](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
+* [.NET für UWP-apps-Übersicht](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
 * [.NET für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
 * [Exemplarische Vorgehensweise: Erstellen einer einfachen Komponente für Windows-Runtime und Aufrufen der Komponente über JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)

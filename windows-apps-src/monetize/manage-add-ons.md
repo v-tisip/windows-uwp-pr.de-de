@@ -1,7 +1,7 @@
 ---
 author: Xansky
 ms.assetid: 4F9657E5-1AF8-45E0-9617-45AF64E144FC
-description: Verwenden Sie diese Methoden in der Microsoft Store-Übermittlungs-API zur Verwaltung von Add-ons für apps, die für Ihr Partner Center-Konto registriert wurden.
+description: Verwenden Sie diese Methoden in der Microsoft Store-Übermittlungs-API, um Add-ons für apps zu verwalten, die für Ihr Partner Center-Konto registriert wurden.
 title: Verwalten von Add-Ons
 ms.author: mhopkins
 ms.date: 02/08/2017
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-Ons, In-App-Produkt, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: c3861d5a135e0ee7a688a93a57cce801a05cf9a5
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "6051736"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6151432"
 ---
 # <a name="manage-add-ons"></a>Verwalten von Add-Ons
 

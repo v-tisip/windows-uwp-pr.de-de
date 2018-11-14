@@ -14,11 +14,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: e68f8f48ca9ba67a29c8a52a5d59767a080f642b
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026076"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6196190"
 ---
 # <a name="flyouts"></a>Flyouts
 
@@ -32,7 +32,7 @@ Ein Flyout ist ein einfach ausblendbarer Container, der beliebige UI als Inhalt 
 
 * Verwenden Sie Flyouts nicht anstelle von [QuickInfos](../tooltips.md) oder [Kontextmenüs](../menus.md). Verwenden Sie QuickInfos, um kurze Beschreibungen anzuzeigen, die nach einer festgelegten Zeit ausgeblendet werden. Verwenden Sie ein Kontextmenü für kontextbezogene Aktionen im Zusammenhang mit UI-Elementen (beispielsweise Kopieren und Einfügen).
 
-Empfehlungen dazu, wann Sie verwenden ein Flyout im Vergleich zu einem Dialogfeld (ein ähnliches Steuerelement), verwenden finden Sie unter [Dialogfelder und Flyouts](index.md). 
+Empfehlungen dazu, wann Sie ein Flyout verwendet werden und wann ein Dialogfeld (ein ähnliches Steuerelement), finden Sie unter [Dialogfelder und Flyouts](index.md). 
 
 ## <a name="examples"></a>Beispiele
 

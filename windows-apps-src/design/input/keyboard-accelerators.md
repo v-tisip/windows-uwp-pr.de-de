@@ -13,11 +13,11 @@ design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: dcbb27a87b48a124fe4463578bc32d908f399ccb
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6026205"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6191148"
 ---
 # <a name="keyboard-accelerators"></a>Zugriffstasten
 
@@ -359,7 +359,7 @@ Da Zugriffstasten in der Regel nicht direkt in der Benutzeroberfläche Ihrer UWP
 
 **Windows 10, Version 1803 (April 2018 Update) und höher**
 
-In der Standardeinstellung wenn Zugriffstasten deklariert sind, stellen Sie alle Steuerelemente (außer [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem) und [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) die entsprechenden Tastenkombination in einer QuickInfo.
+Standardmäßig wenn Zugriffstasten deklariert sind, stellen Sie alle Steuerelemente (außer [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem) und [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) die entsprechenden Tastenkombination in einer QuickInfo.
 
 > [!NOTE] 
 > Wenn ein Steuerelement mehrere Zugriffstasten definiert sind, wird nur die erste angezeigt.
@@ -402,7 +402,7 @@ Für die [Schaltfläche](https://docs.microsoft.com/uwp/api/windows.ui.xaml.cont
 
 ![QuickInfo für Zugriffstasten](images/accelerators/accelerators-button-small.png)
 
-*Auf der Schaltfläche "Standard-Tooltip angefügte Zugriffstastenkombination*
+*Schaltfläche standardmäßig QuickInfo angefügte Zugriffstastenkombination*
 
 ```xaml
 <AppBarButton Icon="Save" Label="Save">

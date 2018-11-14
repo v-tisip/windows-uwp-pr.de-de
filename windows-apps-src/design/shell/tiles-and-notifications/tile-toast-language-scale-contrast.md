@@ -9,15 +9,15 @@ ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: 89a97342139449b6c333055ec66e8939234a9507
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: bdc40b08cbcd46fc379feeda3c63204290e055af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6046694"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "6152100"
 ---
 # <a name="tile-and-toast-notification-support-for-language-scale-and-high-contrast"></a>Kachel- und Toast-Mitteilungsunterstützung für Sprache, Skalierung und hohen Kontrast
 
-Ihre Kacheln und Popups können Zeichenfolgen und Bilder laden, die speziell auf die Sprache, den [Skalierungsfaktor für die Anzeige](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md), das Design, den hohen Kontrast und anderen Laufzeitkontexte angepasst wurden. Hintergrundinformationen zur Verwendung von Qualifizierern in den Namen der Ressourcendateien finden Sie unter [Anpassen von Ressourcen für Sprache, Skalierung und anderen Qualifizierern](../../../app-resources/tailor-resources-lang-scale-contrast.md) und [App-Symbole und Logos](/windows/uwp/design/style/app-icons-and-logos).
+Ihre Kacheln und Popups können Zeichenfolgen und Bilder laden, die speziell auf die Sprache, den [Skalierungsfaktor für die Anzeige](../../layout/screen-sizes-and-breakpoints-for-responsive-design.md), das Design, den hohen Kontrast und anderen Laufzeitkontexte angepasst wurden. Hintergrundinformationen zur Verwendung von Qualifizierern in den Namen der Ressourcendateien finden Sie unter [Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung und anderen](../../../app-resources/tailor-resources-lang-scale-contrast.md) und [App-Symbole und Logos](/windows/uwp/design/style/app-icons-and-logos).
 
 Weitere Informationen zu einer Werterhöhung Ihrer App durch Lokalisierung finden Sie unter [Globalisierung und Lokalisierung](../../globalizing/globalizing-portal.md).
 

@@ -1,6 +1,6 @@
 ---
 author: jwmsft
-description: Die xBind-Markuperweiterung ist eine hohe Leistung Alternative zur Bindung. xBind - führt neu für Windows 10 – in kürzerer Zeit und mit weniger Arbeitsspeicher als Bindung und unterstützt eine bessere Debuggen.
+description: Die xBind-Markuperweiterung ist eine hohe Leistung Alternative zur Bindung. xBind - führt neue für Windows 10 - in kürzerer Zeit und mit weniger Arbeitsspeicher als Bindung und unterstützt eine bessere Debuggen.
 title: xBind-Markuperweiterung
 ms.assetid: 529FBEB5-E589-486F-A204-B310ACDC5C06
 ms.author: jimwalk
@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 9674aeed846fab53de3ecb057ebcc46dbda560c3
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6034607"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6191800"
 ---
 # <a name="xbind-markup-extension"></a>{x:Bind}-Markuperweiterung
 
@@ -113,7 +113,7 @@ _Hinweis: Die C#-Umwandlungssyntax ist flexibler als die Syntax der angefügten 
 
 ## <a name="functions-in-binding-paths"></a>Funktionen in Bindungspfaden
 
-Ab Windows10, Version 1607, unterstützt **{x: Bind}** die Verwendung einer Funktion als blattbildenden Schrittdes Bindungspfades. Dies ist ein leistungsfähiges Feature für Databinding, die mehrere Szenarien im Markup ermöglicht. Finden Sie unter [Funktion Bindungen](../data-binding/function-bindings.md) für Details.
+Ab Windows10, Version 1607, unterstützt **{x: Bind}** die Verwendung einer Funktion als blattbildenden Schrittdes Bindungspfades. Dies ist ein leistungsfähiges Feature für Databinding, die verschiedene Szenarien im Markup ermöglicht. Finden Sie unter [Funktion Bindungen](../data-binding/function-bindings.md) für Details.
 
 ## <a name="event-binding"></a>Ereignisbindung
 
@@ -169,7 +169,7 @@ Bei Seiten und Benutzersteuerelementen, die kompilierte Bindungen umfassen, befi
 > [!NOTE]
 > Ab Windows10, Version1607, wird über das XAML-Framework ein integrierter Konverter für die Konvertierung eines booleschen Operanden in einen Sichtbarkeitszustand bereitgestellt. Der Konverter verknüpft **true** mit dem Enumerationswert **Visible** und **false** mit dem Wert **Collapsed**, sodass Sie eine Visibility-Eigenschaft an einen booleschen Wert binden können, ohne einen Konverter zu erstellen. Beachten Sie, dass dies keine Funktionsbindung ist, sondern nur eine Eigenschaftsbindung. Für die Verwendung des integrierten Konverters muss die SDK-Zielversion der App mindestens 14393 lauten. Die Verwendung ist nicht möglich, wenn Ihre App für frühere Versionen von Windows10 bestimmt ist. Weitere Informationen zu Zielversionen finden Sie unter [Versionsadaptiver Code](https://msdn.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code).
 
-**Tipp:**  Wenn Sie eine einzelne geschweifte Klammer für einen Wert angeben müssen, z. B. in [**Pfad**](https://msdn.microsoft.com/library/windows/apps/br209830) oder [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), stellen Sie ihr einen umgekehrten Schrägstrich voran: `\{`. Setzen Sie alternativ die gesamte Zeichenfolge mit den geschweiften Klammern, für die Escapezeichen verwendet werden müssen, in weitere Anführungszeichen, z.B. `ConverterParameter='{Mix}'`.
+**Tipp:**  , wenn Sie eine einzelne geschweifte Klammer für einen Wert angeben müssen, z. B. in [**Pfad**](https://msdn.microsoft.com/library/windows/apps/br209830) oder [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), stellen sie einen umgekehrten Schrägstrich voran: `\{`. Setzen Sie alternativ die gesamte Zeichenfolge mit den geschweiften Klammern, für die Escapezeichen verwendet werden müssen, in weitere Anführungszeichen, z.B. `ConverterParameter='{Mix}'`.
 
 [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) und **ConverterLanguage** hängen mit der Konvertierung eines Werts oder Typs aus der Bindungsquelle in einen mit der Bindungszieleigenschaft kompatiblen Typ oder Wert zusammen. Weitere Informationen und Beispiele finden Sie im Abschnitt „Datenkonvertierungen“ unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
 

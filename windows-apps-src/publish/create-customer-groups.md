@@ -9,17 +9,17 @@ keywords: Windows10, UWP, Kundengruppen, Segment, Flight-Gruppe, bekannte Benutz
 ms.assetid: ad1a5a02-71aa-47d9-8d03-2d85f4941442
 ms.localizationpriority: medium
 ms.openlocfilehash: 381953c51bfeb04625b452bd278ea09a4c9a8368
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6028388"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6191619"
 ---
 # <a name="create-customer-groups"></a>Erstellen von Kundengruppen
 
 Sie können *Kundengruppen* , die eine Teilmenge der Kunden Ihrer app enthalten erstellen. Diese Gruppen können an Zielkunden für Werbeaktionen, Tests und andere Zwecke verwendet werden.
 
-Zum Anzeigen und Erstellen von Kundengruppen, erweitern Sie im linken Navigationsmenü des [Partner Centers](https://partner.microsoft.com/dashboard) **einbeziehen** , und wählen Sie dann **Kundengruppen**.
+Um anzuzeigen, und Erstellen von Kundengruppen, erweitern Sie im linken Navigationsmenü der [Partner Center](https://partner.microsoft.com/dashboard) **einbeziehen** , und wählen Sie dann **Kundengruppen**.
 
 Derzeit werden zwei Arten von Kundengruppen unterstützt:
 

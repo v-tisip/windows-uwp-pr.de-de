@@ -13,26 +13,26 @@ design-contact: minah.kim
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: aa235086f2410fb97ea60e35fb03c586824928a2
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6025084"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6194174"
 ---
 # <a name="text-input-with-the-handwriting-view"></a>Texteingabe mit der Handschrift-Ansicht
 
 ![Textfeld wird erweitert, wenn mit einem Stift darauf getippt wird](images/handwritingview/handwritingview2.gif)
 
-Anpassen der integrierten Handschrift Ansicht für Freihandeingaben für Texteingabe von UWP-Textsteuerelemente wie z. B. [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox), [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox)unterstützt und Steuerelemente von diese z. B. die [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox)abgeleitet.
+Anpassen der integrierten Handschrift Ansicht für Freihandeingaben für Texteingabe, die von UWP-Textsteuerelemente wie z. B. [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox), [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox)unterstützt, und Steuerelemente von diese z. B. die [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox)abgeleitet.
 
 ## <a name="overview"></a>Übersicht
 
 XAML-Texteingabefelder über eine integrierte Unterstützung für Stifteingaben mit [Windows Ink](../input/pen-and-stylus-interactions.md). Wenn ein Benutzer in ein Texteingabefeld mit einem Windows-Stift tippt, transformiert das Textfeld in einer Oberfläche Handschrift, anstatt einen separaten Eingabebereich öffnen.
 
-Text wird erkannt, während der Benutzer an einer beliebigen Stelle in das Textfeld ein, und ein Kandidat schreibt, dass Fenster die Erkennungsergebnisse anzeigt. Der Benutzer kann auf ein Ergebnis tippen, um es auszuwählen, oder er kann den Schreibvorgang fortsetzen, um das vorgeschlagene Wort zu akzeptieren. Die literalen Erkennungsergebnisse (buchstabenweise) sind im Kandidatenfenster enthalten, somit ist die Erkennung nicht auf Wörter in einem Wörterbuch beschränkt. Während der Benutzer schreibt, wird die akzeptierte Texteingabe in ein Schriftzeichen konvertiert, das das Verhalten der natürlichen Schreibweise beibehält.
+Text wird erkannt, während der Benutzer an einer beliebigen Stelle in das Textfeld ein, und ein Kandidat schreibt, dass die Erkennungsergebnisse zeigt. Der Benutzer kann auf ein Ergebnis tippen, um es auszuwählen, oder er kann den Schreibvorgang fortsetzen, um das vorgeschlagene Wort zu akzeptieren. Die literalen Erkennungsergebnisse (buchstabenweise) sind im Kandidatenfenster enthalten, somit ist die Erkennung nicht auf Wörter in einem Wörterbuch beschränkt. Während der Benutzer schreibt, wird die akzeptierte Texteingabe in ein Schriftzeichen konvertiert, das das Verhalten der natürlichen Schreibweise beibehält.
 
 > [!NOTE]
-> Die Handschrift Ansicht ist standardmäßig aktiviert, aber Sie können pro Steuerelement zu deaktivieren und stattdessen auf den Eingabebereich Text zurücksetzen.
+> Die Handschrift-Ansicht ist standardmäßig aktiviert, aber Sie können pro Steuerelement zu deaktivieren und stattdessen die zu den Text Texteingabebereich zurückkehren.
 
 ![Textfeld mit Freihandeingabe und Vorschläge](images/handwritingview/handwritingview-inksuggestion1.gif)
 
@@ -45,13 +45,13 @@ Ein Benutzer kann seinen Text mithilfe der folgenden Standardgesten und -aktione
 
 ![Textfeld mit Freihandeingabe Korrektur](images/handwritingview/handwritingview-inkcorrection1.gif)
 
-## <a name="disable-the-handwriting-view"></a>Deaktivieren Sie die Ansicht Handschrift
+## <a name="disable-the-handwriting-view"></a>Deaktivieren der Handschrift-Ansicht
 
-Die integrierten Handschrift Ansicht ist standardmäßig aktiviert.
+Die integrierte Handschrift-Ansicht ist standardmäßig aktiviert.
 
-Sie sollten die Handschrift Ansicht deaktivieren, wenn Sie bereits entsprechende Ink-zu-Text-Funktionalität in Ihrer Anwendung oder der Eingabe Text-Erfahrung auf irgendeine Art von Formatierung oder Sonderzeichen Zeichen (z. B. eine Registerkarte) über Handschrift nicht verfügbar basiert.
+Sie sollten die Handschrift-Ansicht zu deaktivieren, wenn Sie bereits entsprechende Ink-zu-Text-Funktionalität in Ihrer Anwendung oder der Text-Eingabe-Erfahrung auf irgendeine Art von Formatierung oder Sonderzeichen Zeichen (z. B. eine Registerkarte) über Handschrift nicht verfügbar basiert.
 
-In diesem Beispiel deaktivieren wir die Handschrift Ansicht, indem Sie die [IsHandwritingViewEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.ishandwritingviewenabled) -Eigenschaft des [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox) -Steuerelements auf "false" festlegen. Alle Textsteuerelemente, die Unterstützung der Handschrift Ansicht unterstützen eine ähnliche Eigenschaft.
+In diesem Beispiel deaktivieren wir die Handschrift-Ansicht, indem Sie die Eigenschaft [IsHandwritingViewEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.ishandwritingviewenabled) das [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox) -Steuerelement auf "false". Alle Textsteuerelemente, die Unterstützung der Handschrift Ansicht unterstützen eine ähnliche Eigenschaft.
 
 ```xaml
 <TextBox Name="SampleTextBox"
@@ -62,13 +62,13 @@ In diesem Beispiel deaktivieren wir die Handschrift Ansicht, indem Sie die [IsHa
 </TextBox>
 ```
 
-## <a name="specify-the-alignment-of-the-handwriting-view"></a>Geben Sie die Ausrichtung der Handschrift Ansicht an
+## <a name="specify-the-alignment-of-the-handwriting-view"></a>Geben Sie die Ausrichtung der Ansicht Handschrift
 
-Die Handschrift Ansicht über das zugrunde liegende Textsteuerelement befindet, und angepasst, um den Einstellungen des Benutzers Handschrift aufzunehmen (finden Sie unter **-Einstellungen, die Geräte -> -> Stift & Windows Ink-Handschrift > -> Schriftgrad, wenn Sie direkt in das Textfeld schreiben **). Die Ansicht wird automatisch auch relativ zum Textfeld-Steuerelement und seine Position innerhalb der app ausgerichtet.
+Die Handschrift Ansicht befindet sich über das zugrunde liegende Textsteuerelement und angepasst, um den Einstellungen des Benutzers Handschrift aufzunehmen (finden Sie unter **-Einstellungen, die Geräte -> -> Stift & Windows Ink-Handschrift > -> Schriftgrad, wenn Sie direkt in das Textfeld schreiben **). Die Ansicht wird auch automatisch relativ zu den Text-Steuerelement und seine Position innerhalb der app ausgerichtet.
 
-Der Benutzeroberfläche die Anwendung wird nicht umgebrochen, um die größeren Steuerelements Rechnung zu tragen, damit das System die Ansicht verdeckt wichtige Elemente der UI beeinträchtigen kann.
+Der Benutzeroberfläche die Anwendung wird nicht umgebrochen, um das Steuerelement größere Rechnung zu tragen, damit das System die Ansicht verdeckt wichtige Elemente der UI beeinträchtigen kann.
 
-Hier zeigen wir, wie Sie die Eigenschaft [PlacementAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.placementalignment) ein [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox) [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) angeben, welche Ankerpunkt für das zugrunde liegende Textsteuerelement verwendet wird, um die Ansicht Handschrift ausrichten.
+Hier zeigen wir so verwenden Sie die Eigenschaft [PlacementAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.placementalignment) ein [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox) [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) angeben, welche Ankerpunkt für das zugrunde liegende Textsteuerelement verwendet wird, um die Ansicht Handschrift ausrichten.
 
 ```xaml
 <TextBox Name="SampleTextBox"
@@ -83,9 +83,9 @@ Hier zeigen wir, wie Sie die Eigenschaft [PlacementAlignment](https://docs.micro
 
 ## <a name="disable-auto-completion-candidates"></a>Deaktivieren der automatischen Vervollständigung Kandidaten
 
-Das Text Vorschlag Popup ist standardmäßig aktiviert, um eine Liste der wichtigsten Ink Erkennung Kandidaten bereitzustellen aus denen der Benutzer auswählen kann, für den Fall, dass der obere Kandidat nicht korrekt ist.
+Der Text Vorschlag Popup ist standardmäßig aktiviert, um eine Liste der wichtigsten Ink Erkennung Kandidaten bereitzustellen, aus denen der Benutzer auswählen kann, für den Fall, dass der obere Kandidat falsch ist.
 
-Wenn die Anwendung bereits stabile bereitstellt, benutzerdefinierten Erkennung Funktionen, die [AreCandidatesEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.arecandidatesenabled) -Eigenschaft können Sie so deaktivieren Sie die integrierte Vorschläge, wie im folgenden Beispiel gezeigt.
+Wenn die Anwendung bereits stabile bereitstellt, benutzerdefinierten Erkennung-Funktionen, die [AreCandidatesEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.arecandidatesenabled) -Eigenschaft können Sie so deaktivieren Sie die integrierte Vorschläge, wie im folgenden Beispiel gezeigt.
 
 ```xaml
 <TextBox Name="SampleTextBox"
@@ -100,15 +100,15 @@ Wenn die Anwendung bereits stabile bereitstellt, benutzerdefinierten Erkennung F
 
 ## <a name="use-handwriting-font-preferences"></a>Verwenden Sie Voreinstellungen für Handschrift Schriften
 
-Benutzer kann aus einer vordefinierten Auflistung von Handschrift-basierten Schriftarten zu verwenden, wenn Rendern von Text basierend auf Ink Erkennung auswählen (finden Sie unter **Einstellungen -> Geräte -> Stift & Windows Ink -> Handschrift Schriftart bei Verwendung von Handschrift ->**).
+Benutzer kann aus einer vordefinierten Auflistung von Handschrift-basierten Schriftarten zu verwenden, wenn Rendern von Text basierend auf Ink-Erkennung auswählen (finden Sie unter **Einstellungen -> Geräte -> Stift & Windows Ink-Handschrift > -> Schriftart bei Verwendung von Handschrift**).
 
 > [!NOTE]
 > Benutzer können sogar eine Schriftart basierend auf ihren eigenen Handschrift erstellen.
 > [!VIDEO https://www.youtube.com/embed/YRR4qd4HCw8]
 
-Ihre app kann Zugriff auf diese Einstellung und verwenden Sie die ausgewählte Schriftart für den erkannten Text im Textfeld-Steuerelement.
+Die app kann Zugriff auf diese Einstellung und die ausgewählte Schriftart für den erkannten Text im Textfeld-Steuerelement verwenden.
 
-In diesem Beispiel haben wir Lauschen auf das [TextChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanged) -Ereignis ein [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox) und des Benutzers ausgewählte Schriftart anwenden, wenn die Änderung der Text aus der HandwritingView (oder einer Standardschriftart, falls nicht) stammt.
+In diesem Beispiel haben wir Lauschen auf das [TextChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanged) -Ereignis ein [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox) und ausgewählte Schriftart des Benutzers gelten, wenn die Änderung der Text aus der HandwritingView (oder einer Standardschriftart, falls nicht) stammt.
 
 ```csharp
 private void SampleTextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -124,7 +124,7 @@ private void SampleTextBox_TextChanged(object sender, TextChangedEventArgs e)
 
 Zusammengesetzte Steuerelemente, die auch, die [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox) oder [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox) -Steuerelemente, z. B. [AutoSuggestBox verwenden](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox) unterstützen eine [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview).
 
-Verwenden Sie zum Zugreifen auf die [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) in eines zusammengesetzten Steuerelements [VisualTreeHelper](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.visualtreehelper) API.
+Verwenden Sie die [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) in einem zusammengesetzten Steuerelement für den Zugriff auf die [VisualTreeHelper](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.visualtreehelper) API.
 
 Der folgende XAML-Codeausschnitt zeigt ein [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox) -Steuerelement.
 
@@ -139,7 +139,7 @@ Der folgende XAML-Codeausschnitt zeigt ein [AutoSuggestBox](https://docs.microso
 
 In der entsprechende Code-Behind zeigen wir, wie die [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) auf die [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox)deaktivieren.
 
-1. Erstens behandeln wir die Anwendung Loaded-Ereignis aufgerufen wird, in denen eine FindInnerTextBox-Funktion zum Durchlaufen der visuellen Struktur starten.
+1. Zunächst behandeln wir die Anwendung Loaded-Ereignis aufgerufen wird, in denen eine FindInnerTextBox-Funktion zum Durchlaufen der visuellen Struktur zu starten.
 
     ```csharp
     private void SampleAutoSuggestBox_Loaded(object sender, RoutedEventArgs e)
@@ -149,7 +149,7 @@ In der entsprechende Code-Behind zeigen wir, wie die [HandwritingView](https://d
     }
     ```
 
-2. Wir beginnen dann mit der visuellen Struktur (beginnend mit ein autosuggestbox-Element) in der Funktion FindInnerTextBox mit einem Aufruf von FindVisualChildByName durchlaufen.
+2. Wir beginnen dann mit der visuellen Struktur (beginnend mit ein autosuggestbox-Element) in der FindInnerTextBox-Funktion mit einem Aufruf von FindVisualChildByName durchlaufen.
 
     ```csharp
     private bool FindInnerTextBox(AutoSuggestBox autoSuggestBox)
@@ -164,7 +164,7 @@ In der entsprechende Code-Behind zeigen wir, wie die [HandwritingView](https://d
     }
     ```
 
-3. Schließlich werden diese Funktion Durchlaufen der visuellen Struktur, bis das TextBox-Element abgerufen wird.
+3. Diese Funktion durchläuft schließlich der visuellen Struktur bis das TextBox-Element abgerufen wird.
 
     ```csharp
     private FrameworkElement FindVisualChildByName<T>(DependencyObject obj)
@@ -193,15 +193,15 @@ In der entsprechende Code-Behind zeigen wir, wie die [HandwritingView](https://d
 
 In einigen Fällen müssen Sie sicherstellen, dass die [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) UI-Elemente abdeckt, die es andernfalls nicht kann.
 
-Hier erstellen wir ein "TextBox", das Diktieren (durch ein "TextBox" und eine Schaltfläche zum Diktieren in einem StackPanel platzieren implementiert) unterstützt.
+Hier erstellen wir ein TextBox-Element, das Diktieren (durch platzieren ein Textfeld und eine Schaltfläche zum Diktieren in einem StackPanel implementiert) unterstützt.
 
 ![TextBox mit diktieren](images/handwritingview/textbox-with-dictation.png)
 
-Wie StackPanel jetzt größer als das TextBox-Element ist, kann der [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) aller zusammengesetzte Cotnrol nicht verdecken.
+Wie StackPanel jetzt größer als das TextBox-Element ist, kann die [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) aller der zusammengesetzten Cotnrol nicht verdeckt.
 
 ![TextBox mit diktieren](images/handwritingview/textbox-with-dictation-handwritingview.png)
 
-Dieses Problem umgehen, setzen Sie die Eigenschaft PlacementTarget der [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) auf das UI-Element, an dem es ausgerichtet werden soll.
+Dieses Problem umgehen, legen Sie die Eigenschaft PlacementTarget der [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) auf das UI-Element, an dem es ausgerichtet werden soll.
 
 ```xaml
 <StackPanel Name="DictationBox" 
@@ -228,17 +228,17 @@ Dieses Problem umgehen, setzen Sie die Eigenschaft PlacementTarget der [Handwrit
 
 ## <a name="resize-the-handwritingview"></a>Ändern der Größe der HandwritingView
 
-Sie können auch festlegen die Größe der [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview), die beim müssen Sie sicherstellen, dass die Ansicht wichtige Elemente der UI verdecken nicht hilfreich sein können.
+Sie können auch Festlegen der Größe der [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview), die beim müssen Sie sicherstellen, dass die Ansicht wichtig UI verdecken nicht hilfreich sein können.
 
-Wie im vorherigen Beispiel erstellen wir ein "TextBox", das Diktieren (durch ein "TextBox" und eine Schaltfläche zum Diktieren in einem StackPanel platzieren implementiert) unterstützt.
+Wie im vorherigen Beispiel erstellen wir ein TextBox-Element, das Diktieren (durch platzieren ein Textfeld und eine Schaltfläche zum Diktieren in einem StackPanel implementiert) unterstützt.
 
 ![TextBox mit diktieren](images/handwritingview/textbox-with-dictation.png)
 
-In diesem Fall möchten wir sicherstellen, dass die Schaltfläche "Diktat" immer sichtbar ist.
+In diesem Fall möchten wir sicherstellen, dass die Schaltfläche Diktat immer sichtbar ist.
 
 ![TextBox mit diktieren](images/handwritingview/textbox-with-dictation-handwritingview-resize.png)
 
-Zu diesem Zweck binden wir die Eigenschaft "MaxWidth" die [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) an die Breite des UI-Element, das es verdecken sollten.
+Zu diesem Zweck binden wir die MaxWidth-Eigenschaft der [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) an die Breite des UI-Element, das es verdeckt sollten.
 
 ```xaml
 <StackPanel Name="DictationBox" 
@@ -270,11 +270,11 @@ Zu diesem Zweck binden wir die Eigenschaft "MaxWidth" die [HandwritingView](http
 </StackPanel>
 ```
 
-## <a name="reposition-custom-ui"></a>Ändern der Position benutzerdefinierte Benutzeroberfläche
+## <a name="reposition-custom-ui"></a>Positionieren Sie benutzerdefinierte Benutzeroberfläche
 
 Wenn Sie benutzerdefinierte Benutzeroberfläche verfügen, die in Reaktion auf die Texteingabe, z. B. eine Informations-Popup angezeigt wird, müssen Sie die Benutzeroberfläche neu zu positionieren, damit sie die Ansicht Handschrift verdecken nicht.
 
-![TextBox mit benutzerdefinierten Benutzeroberfläche](images/handwritingview/textbox-with-customui.png)
+![TextBox mit benutzerdefinierte Benutzeroberfläche](images/handwritingview/textbox-with-customui.png)
 
 Das folgende Beispiel zeigt, wie die [Opened](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.opened) [geschlossen](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.closed
 )und [SizeChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.sizechanged) der [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) zum Festlegen der Position eines ein [Popup](https://docs.microsoft.com/uwp/api/windows.ui.popups)-Ereignisse überwacht.
@@ -315,7 +315,7 @@ private double GetPopupVerticalOffset()
 
 ## <a name="retemplate-the-handwritingview-control"></a>Das Steuerelement HandwritingView Vorlage
 
-Wie bei allen XAML-Framework-Steuerelementen können Sie die visuelle Struktur und das visuelle Verhalten eines eine [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) für Ihre spezifischen Anforderungen anpassen.
+Wie bei allen XAML-Framework-Steuerelemente, können Sie die visuelle Struktur und das visuelle Verhalten eines eine [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview) für Ihre spezifischen Anforderungen anpassen.
 
 Um ein vollständiges Beispiel für das Erstellen eines benutzerdefinierten Vorlage Auschecken die Vorgehensweise zum [Erstellen benutzerdefinierter Transportsteuerelemente](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/custom-transport-controls) oder das [Beispiel für ein benutzerdefiniertes Bearbeitungssteuerelement](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl)anzuzeigen.
 

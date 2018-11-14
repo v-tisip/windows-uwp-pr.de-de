@@ -7,12 +7,12 @@ ms.author: mhopkins
 ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 207203805dfee0fd54a9d6d6fd4987b098710f4c
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: 971e828f4642a0a9c47994b1c7c0bfdbc5f01ad3
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6024834"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6183577"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>Aktivieren von Abonnements für Add-Ons für Ihre App
 
@@ -126,7 +126,7 @@ Wir gewähren keine Karenzzeit für die Abonnementabrechnung. Wenn wir die Kredi
 Die folgenden Szenarien werden für die Abonnement-Add-Ons derzeit nicht unterstützt.
 
 * Das Verkaufen von Abonnements direkt an Kunden über den Store wird zu diesem Zeitpunkt nicht unterstützt. Abonnements sind nur für In-App-Käufe von digitalen Produkten verfügbar.
-* Kunden können die Abonnementperioden nicht über die Seite [http://account.microsoft.com/services](http://account.microsoft.com/services) ihres Microsoft-Kontos ändern. Um zu einem anderen Abonnementszeitraum zu wechseln, müssen die Kunden das aktuelle Abonnement kündigen und ein Abonnement mit einem anderen Abonnementzeitraum in Ihrer App erwerben.
+* Kunden können die Abonnementperioden nicht über die Seite [http://account.microsoft.com/services](http://account.microsoft.com/services) ihres Microsoft-Kontos ändern. Um zu einem anderen abonnementszeitraum zu wechseln, müssen Kunden das aktuelle Abonnement kündigen und dann ein Abonnement mit einer anderen Abonnementzeitraum in Ihrer app erwerben.
 * Das Wechseln von Ebenen wird aktuell nicht für Abonnement-Add-Ons unterstützt (z.B., wenn ein Kunde aus einem einfachen Abonnement in ein Premium-Abonnement mit mehr Features wechseln will).
 * [Verkäufe](../publish/put-apps-and-add-ons-on-sale.md) und [Werbecodes](../publish/generate-promotional-codes.md) für die Abonnement-Add-Ons werden derzeit nicht unterstützt.
 

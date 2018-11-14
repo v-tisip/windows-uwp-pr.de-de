@@ -8,12 +8,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Steuerelemente, Eingabe
 ms.localizationpriority: medium
-ms.openlocfilehash: 4aaacee011b3732b8d1456935239d7a4a5405a4d
-ms.sourcegitcommit: e814a13978f33654d8e995584f4b047cb53e0aef
+ms.openlocfilehash: bc5873486bdd9c4adf4ea74b10a240617143ad23
+ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "6035167"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6193614"
 ---
 # <a name="add-controls"></a>Hinzufügen von Steuerelementen
 
@@ -97,7 +97,7 @@ Status | Beschreibung
 Das Spiel wechselt in den **WaitForInput**-Zustand, wenn das Spiel angehalten wurde. Dies passiert, wenn der Spieler den Zeiger aus dem Hauptfenster des Spiels bewegt oder die Pause-Taste drückt (P-TASTE oder **Start**-Taste auf dem Gamepad), drückt. Die **MoveLookController-Instanz** registriert die Tastenbetätigung und informiert die Spielschleife, wenn sie die [**IsPauseRequested**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L107-L127)-Methode aufruft. Wenn **IsPauseRequested** jetzt **true** zurückgibt, ruft die Spielschleife **WaitForPress** für die **MoveLookController**-Instanz auf, um den Controller in den Zustand **WaitForInput** zu versetzen. 
 
 
-Im **WaitForInput**-Zustand beendet das Spiel die Verarbeitung von fast allen Eingabeereignissen, bis der Controller wieder in den **Active**-Zustand übergeht. Eine Ausnahme ist die Pause-Taste, da durch Drücken der Taste das Spiel zum aktiven Zustand zurückkehret. Außer der Pause-Taste muss in der Reihenfolge für das Spiel zum **aktiven** Zustand zurückkehren der Spieler ein Menüelement auszuwählen. 
+Im **WaitForInput**-Zustand beendet das Spiel die Verarbeitung von fast allen Eingabeereignissen, bis der Controller wieder in den **Active**-Zustand übergeht. Eine Ausnahme ist die Pause-Taste, da durch Drücken der Taste das Spiel zum aktiven Zustand zurückkehret. Außer der Pause-Taste muss in der Reihenfolge für das Spiel zum **aktiven** Zustand zurückkehren, der Spieler ein Menüelement auszuwählen. 
 
 
 
@@ -401,7 +401,7 @@ Sehen Sie den vollständigen Code für die **MoveLookController::OnPointerPresse
 
 
 
-Hier weist **MoveLookController** die Zeiger-ID für den Zeiger zu, der das Ereignis für eine bestimmte Variable ausgelöst hat, die dem Blickbereich entspricht. Bei einem Touchereignis im Blickwinkelbereich wird z.B. die **m\_lookPointerID**-Variable auf die Zeiger-ID festgelegt, von der das Ereignis ausgelöst wurde. Außerdem wird die boolesche Verwendungsvariable **m\_lookInUse** festgelegt, um anzugeben, dass die Steuerung noch nicht freigegeben wurde.
+Hier weist **MoveLookController** die Zeiger-ID für den Zeiger zu, der das Ereignis für eine bestimmte Variable ausgelöst hat, die dem Blickbereich entspricht. Im Falle eine Fingereingabe, die im blickwinkelbereich auftreten wird die Variable **M\_lookPointerID** auf die Zeiger-ID festgelegt, die das Ereignis ausgelöst wurde. Außerdem wird die boolesche Verwendungsvariable **m\_lookInUse** festgelegt, um anzugeben, dass die Steuerung noch nicht freigegeben wurde.
 
 Im nächsten Schritt erfahren Sie, wie das Beispielspiel das [**PointerMoved**](https://msdn.microsoft.com/library/windows/apps/br208276)-Touchscreenereignis behandelt.
 
@@ -577,7 +577,7 @@ Ein-/Aus-Menütaste | Anhalten oder Fortsetzen des Spiels
 
 
 
-In der [**InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L68-L103)-Methode fügen wir zwei neue Ereignisse hinzu, um festzustellen, ob ein Gamepad [hinzugefügt](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1100-L1105) oder [entfernt](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1109-L1114) wurde. Diese Ereignisse aktualisieren die **m_gamepadsChanged**-Eigenschaft. In der **UpdatePollingDevices** -Methode wird verwendet, um zu überprüfen, ob die Liste der bekannten Gamepads geändert wurde. 
+In der [**InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L68-L103)-Methode fügen wir zwei neue Ereignisse hinzu, um festzustellen, ob ein Gamepad [hinzugefügt](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1100-L1105) oder [entfernt](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L1109-L1114) wurde. Diese Ereignisse aktualisieren die **m_gamepadsChanged**-Eigenschaft. In der **UpdatePollingDevices** -Methode wird verwendet, um zu überprüfen, ob die Liste der bekannten Gamepads geändert hat. 
 
 ```cpp
     // Detect gamepad connection and disconnection events.
