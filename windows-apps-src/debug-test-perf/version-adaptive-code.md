@@ -9,11 +9,11 @@ keywords: Windows10, UWP
 ms.assetid: 3293e91e-6888-4cc3-bad3-61e5a7a7ab4e
 ms.localizationpriority: medium
 ms.openlocfilehash: e25a3bd447519ce344a95a1c335451f731552487
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6260401"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6469467"
 ---
 # <a name="version-adaptive-code"></a><span data-ttu-id="5e37a-104">Versionsadaptiver Code</span><span class="sxs-lookup"><span data-stu-id="5e37a-104">Version adaptive code</span></span>
 

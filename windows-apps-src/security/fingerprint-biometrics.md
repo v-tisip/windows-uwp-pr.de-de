@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ccd2efee17c7f1205bcac6f05b016af7e6c6dae
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6182649"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6645615"
 ---
 # <a name="fingerprint-biometrics"></a><span data-ttu-id="065d8-104">Biometrischer Fingerabdruck</span><span class="sxs-lookup"><span data-stu-id="065d8-104">Fingerprint biometrics</span></span>
 

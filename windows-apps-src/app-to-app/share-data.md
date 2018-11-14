@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 63e07e56acc8767e4acbad3688c13d75527e9c6f
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6657508"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "6253457"
 ---
 # <a name="share-data"></a><span data-ttu-id="d695e-104">Freigeben von Daten</span><span class="sxs-lookup"><span data-stu-id="d695e-104">Share data</span></span>
 

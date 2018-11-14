@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, In-App-Einkäufe, IAPs, Belege, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: ed79a3ac50fb3a6cbe735e0ea713256845d39441
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6255730"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6653779"
 ---
 # <a name="use-receipts-to-verify-product-purchases"></a><span data-ttu-id="5fe09-104">Überprüfen von Produktkäufen anhand von Belegen</span><span class="sxs-lookup"><span data-stu-id="5fe09-104">Use receipts to verify product purchases</span></span>
 

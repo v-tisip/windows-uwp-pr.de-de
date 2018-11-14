@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Anzeigen, Werbung, Größen, Banner
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f23be9a58a138a82cc4510039a1c0899ef092a2
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6258409"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6464767"
 ---
 # <a name="supported-banner-ad-sizes"></a><span data-ttu-id="fe685-104">Unterstützte Größen für Banneranzeigen</span><span class="sxs-lookup"><span data-stu-id="fe685-104">Supported banner ad sizes</span></span>
 

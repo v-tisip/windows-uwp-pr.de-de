@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, App-Übermittlung
 ms.localizationpriority: medium
 ms.openlocfilehash: 66c220e76cd032f4cf36f0d4ae88c01485f31163
-ms.sourcegitcommit: 38f06f1714334273d865935d9afb80efffe97a17
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6190084"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "6455277"
 ---
 # <a name="get-an-app-submission"></a><span data-ttu-id="e444d-104">Abrufen einer App-Übermittlung</span><span class="sxs-lookup"><span data-stu-id="e444d-104">Get an app submission</span></span>
 

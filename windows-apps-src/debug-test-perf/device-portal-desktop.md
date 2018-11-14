@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, geräteportal
 ms.localizationpriority: medium
 ms.openlocfilehash: 353afaa511eb382ba2d5772b9b88d3e6b5335ea6
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6263588"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6470858"
 ---
 # <a name="device-portal-for-windows-desktop"></a><span data-ttu-id="db4c1-104">Geräteportal für Windows-Desktop</span><span class="sxs-lookup"><span data-stu-id="db4c1-104">Device Portal for Windows Desktop</span></span>
 

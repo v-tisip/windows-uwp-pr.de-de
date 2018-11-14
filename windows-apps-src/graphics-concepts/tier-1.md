@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9aab54e23d59b21901e3aa4700581d2d7eeeee8e
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6658365"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "6275266"
 ---
 # <a name="tier-1"></a><span data-ttu-id="df711-104">Ebene1</span><span class="sxs-lookup"><span data-stu-id="df711-104">Tier 1</span></span>
 
