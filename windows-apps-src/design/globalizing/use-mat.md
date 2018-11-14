@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 55272df2c4ddec411e9e17a67d0a8128a8334db3
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6250076"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6661538"
 ---
 # <a name="use-the-multilingual-app-toolkit-40"></a><span data-ttu-id="5aef3-103">Verwenden des Multilingual App Toolkit 4.0</span><span class="sxs-lookup"><span data-stu-id="5aef3-103">Use the Multilingual App Toolkit 4.0</span></span>
 

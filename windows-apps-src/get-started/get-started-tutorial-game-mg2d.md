@@ -9,11 +9,11 @@ keywords: Windows10, UWP
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
 ms.openlocfilehash: 37d43094ba679ebe5439996373626522590e3fcc
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6471061"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6671149"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a><span data-ttu-id="52e0b-104">Erstellen eines UWP-Spiels in MonoGame-2D</span><span class="sxs-lookup"><span data-stu-id="52e0b-104">Create a UWP game in MonoGame 2D</span></span>
 
