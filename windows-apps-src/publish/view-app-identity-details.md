@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 3efbbd09cc066a7455ef8d60556345a2ed5b459c
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6463827"
+ms.locfileid: "6661007"
 ---
 # <a name="view-app-identity-details"></a><span data-ttu-id="c98eb-103">Anzeigen von Details zur App-Identität</span><span class="sxs-lookup"><span data-stu-id="c98eb-103">View app identity details</span></span>
 
