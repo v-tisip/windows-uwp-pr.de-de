@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 92b81c79eb1be9e21aa7c306ef31b0b3bb62e7d1
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "6254284"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6655093"
 ---
 # <a name="listview-and-gridview-data-virtualization"></a><span data-ttu-id="a0f7d-104">ListView- und GridView-Datenvirtualisierung</span><span class="sxs-lookup"><span data-stu-id="a0f7d-104">ListView and GridView data virtualization</span></span>
 

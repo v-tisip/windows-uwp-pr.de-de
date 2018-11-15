@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, AdControl, Anzeigensteuerelement, XAML, .NET, exemplarische Vorgehensweise
 ms.localizationpriority: medium
 ms.openlocfilehash: b2346fceaae3996de8aa54640c206b5fcd8c4a87
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/14/2018
-ms.locfileid: "6669659"
+ms.locfileid: "6861013"
 ---
 # <a name="adcontrol-in-xaml-and-net"></a><span data-ttu-id="5e9a0-104">„AdControl“ in XAML und .NET</span><span class="sxs-lookup"><span data-stu-id="5e9a0-104">AdControl in XAML and .NET</span></span>
 

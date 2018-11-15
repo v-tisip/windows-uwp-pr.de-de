@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: cbf7d984226984391da340c74791dad4a6c0d8fb
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6459022"
+ms.locfileid: "6658628"
 ---
 # <a name="device-types"></a><span data-ttu-id="06eb4-104">Gerätetypen</span><span class="sxs-lookup"><span data-stu-id="06eb4-104">Device types</span></span>
 

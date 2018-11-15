@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows10, UWP, Benachrichtigungen, Sammlungen, Sammlung, Gruppenbenachrichtigungen, Gruppieren von Benachrichtigungen, gruppieren, organisieren, Info-Center, Popup
 ms.localizationpriority: medium
 ms.openlocfilehash: be7c4ec2e9a47eeeb00663ae94f89e44c6751352
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6462521"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6661951"
 ---
 # <a name="grouping-toast-notifications-with-collections"></a><span data-ttu-id="70979-103">Gruppieren von Popupbenachrichtigungen mit Sammlungen</span><span class="sxs-lookup"><span data-stu-id="70979-103">Grouping toast notifications with collections</span></span>
 <span data-ttu-id="70979-104">Verwenden Sie Sammlungen, um Ihre App-Popups im Info-Center zu organisieren.</span><span class="sxs-lookup"><span data-stu-id="70979-104">Use collections to organize your app's toasts in Action Center.</span></span> <span data-ttu-id="70979-105">Mithilfe von Sammlungen können Benutzer Informationen im Info-Center leichter finden und Entwickler können ihre Benachrichtigungen besser verwalten.</span><span class="sxs-lookup"><span data-stu-id="70979-105">Collections help users locate information within Action Center more easily and allow for developers to better manage their notifications.</span></span>  <span data-ttu-id="70979-106">Die folgenden APIs ermöglichen das Entfernen, Erstellen und Aktualisieren von Benachrichtigungssammlungen.</span><span class="sxs-lookup"><span data-stu-id="70979-106">The APIs below allow for removing, creating, and updating notification collections.</span></span>

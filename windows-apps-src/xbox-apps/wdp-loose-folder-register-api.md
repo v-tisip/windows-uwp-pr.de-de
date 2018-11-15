@@ -9,11 +9,11 @@ keywords: Windows 10, UWP
 ms.assetid: efdf4214-9738-4df6-bf1f-ed7141696ef6
 ms.localizationpriority: medium
 ms.openlocfilehash: cb80e2dbd7ebdfbb05bd642b9875a9cd7cc356f3
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6647888"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6832359"
 ---
 # <a name="register-an-app-in-a-loose-folder"></a><span data-ttu-id="3606f-104">Registrieren einer App in einem losen Ordner</span><span class="sxs-lookup"><span data-stu-id="3606f-104">Register an app in a loose folder</span></span>  
 
