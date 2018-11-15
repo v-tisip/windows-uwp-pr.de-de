@@ -9,12 +9,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: Windows 10, Uwp, Benachrichtigung, Sammlung, gruppieren, Ux, Ux-Richtlinien, Richtlinien, Aktion, Popup, Info-Center, Noninterruptive, effektive Benachrichtigungen, nicht zudringliche Benachrichtigungen, umsetzbare, verwalten, Organisieren
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ac7eab73f2bcfa57ac37ea6da99e1da6b235159
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 849c8ffc66661546a088a3d89747e6690a763e71
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6463480"
+ms.locfileid: "6666583"
 ---
 # <a name="toast-notification-ux-guidance"></a>Popup-Benachrichtigung-UX-Richtlinien
 Benachrichtigungen sind notwendig, des modernen Lebenszyklus; Sie helfen Sie Benutzern produktiver und erzwungenen mit apps und Websites sowie bleiben Sie auf dem aktuellen mit Updates werden. Benachrichtigungen können jedoch schnell Aktivieren von hilfreich sein, overbearing und aufdringlich, wenn sie nicht in einer benutzerorientiert Weise ausgelegt sind. Die Benachrichtigungen sind eine Maustaste Weg wird deaktiviert, und es ist unwahrscheinlich, sobald sie deaktiviert sind, sie werden aktiviert, erneut.  Stellen Sie daher sicher, dass Ihre Benachrichtigungen respektieren Bildschirmbereich des Benutzers und die Uhrzeit, sind, sodass Sie diesen Kanal Engagement geöffnet bleiben können.
@@ -59,7 +59,7 @@ Beide dieser Group Benachrichtigungen in einer Weise, sodass relevante Inhalte z
 ## <a name="other-resources"></a>Weitere Ressourcen
 Diese vier oben genannten Punkte sind Richtlinien, die wir effektive über unseren eigenen Analyse der Telemetrie und über erste und Drittanbieter-Experimente gefunden haben. Bedenken Sie, jedoch, dass diese Richtlinien sind genau das: Richtlinien.  Wir sind davon überzeugt diese Regeln hilft Interaktion und Produktivität von Benachrichtigungen, jedoch kann nichts benutzerorientiert denken, und lernen Sie von Ihren eigenen Daten ersetzen.  
 
-Wenn Sie noch heute Benachrichtigungen zu Ihrer UWP-app senden, können Sie Analytics anzeigen, auf was Ihre Benachrichtigungen im [Dev Center](https://developer.microsoft.com/en-us/windows)wurde aus! Diese Daten stammt frei, wenn der [Store-Services-SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK) oder die [WNS-APIs](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview)verwenden. Diese Metriken erhalten Sie einen besseren Einblick in was, um Ihre Benachrichtigungen auf der Windows-Plattform geschieht sowie wie Benutzer mit Benachrichtigungen interagiert werden. Auf diese Dashboard zugreifen, indem Sie auf das Menü auf der linken Seite einbeziehen > Benachrichtigungen, klicken Sie dann auf der Registerkarte "Analyse" innerhalb der Seite "Notifications" auf.  Dies befindet am gleichen Ort, den Sie zum Senden von Benachrichtigungen aus dem Dev Center-Portal wechseln möchten.
+Wenn Sie noch heute Benachrichtigungen zu Ihrer UWP-app senden, können Sie Analytics anzeigen, auf wo sich Ihre Benachrichtigungen im [Partner Center befindet](https://partner.microsoft.com/dashboard)! Diese Daten stammt frei, wenn der [Store-Services-SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK) oder die [WNS-APIs](https://docs.microsoft.com/en-us/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview)verwenden. Diese Metriken erhalten Sie einen besseren Einblick in was, um Ihre Benachrichtigungen auf der Windows-Plattform geschieht sowie wie Benutzer mit Benachrichtigungen interagiert werden. Diese Daten zugreifen, indem Sie auf das Menü auf der linken Seite einbeziehen > Benachrichtigungen, klicken Sie dann auf der Registerkarte "Analyse" innerhalb der Seite "Notifications" auf.  Dies befindet am gleichen Ort, den Sie zum Senden von Benachrichtigungen aus dem Partner Center wechseln möchten.
 
 ## <a name="related-topics"></a>Verwandte Themen
 

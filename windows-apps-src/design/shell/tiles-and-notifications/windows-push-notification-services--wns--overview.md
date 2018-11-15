@@ -9,12 +9,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b7d9adfd9e058d4364470b07ef3e9129ade88b3
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 633fd26a7dfc799f9b9c9058f88ba6b1fa40ac57
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6458545"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6672469"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>Übersicht über Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS)
  
@@ -38,7 +38,7 @@ Das folgende Diagramm gibt Aufschluss über den vollständigen Datenfluss beim S
 ## <a name="registering-your-app-and-receiving-the-credentials-for-your-cloud-service"></a>Registrieren Ihrer App und Empfangen der Anmeldeinformationen für Ihren Clouddienst
 
 
-Um Benachrichtigungen mithilfe von WNS senden zu können, muss Ihre App zunächst beim Dashboard des Store registriert werden. Dadurch erhalten Sie die Anmeldeinformationen für Ihre App, mit denen sich Ihr Clouddienst gegenüber WNS authentifizieren kann. Diese Anmeldeinformationen bestehen aus einer Paket-Sicherheits-ID (Security Identifier, SID) und einem geheimen Schlüssel. Rufen Sie zum Ausführen dieser Registrierung das [Windows Dev Center](http://go.microsoft.com/fwlink/p/?linkid=511146) auf, und wählen Sie **Dashboard** aus. Nachdem Sie Ihre App erstellt haben, können Sie die Anmeldeinformationen abrufen, gemäß den Anweisungen auf der Seite **App-Verwaltung – WNS/MPNS**. Wenn Sie die Live Services-Lösung verwenden möchten, folgen Sie dem Link **Live Services-Website** auf dieser Seite.
+Um Benachrichtigungen mithilfe von WNS senden zu können, muss Ihre App zunächst beim Dashboard des Store registriert werden. Dadurch erhalten Sie die Anmeldeinformationen für Ihre App, mit denen sich Ihr Clouddienst gegenüber WNS authentifizieren kann. Diese Anmeldeinformationen bestehen aus einer Paket-Sicherheits-ID (Security Identifier, SID) und einem geheimen Schlüssel. Um diese Registrierung durchzuführen, melden Sie sich beim [Partner Center](https://partner.microsoft.com/dashboard). Nachdem Sie Ihre App erstellt haben, können Sie die Anmeldeinformationen abrufen, gemäß den Anweisungen auf der Seite **App-Verwaltung – WNS/MPNS**. Wenn Sie die Live Services-Lösung verwenden möchten, folgen Sie dem Link **Live Services-Website** auf dieser Seite.
 
 Jede App verfügt über einen eigenen Satz von Anmeldeinformationen für den zugehörigen Clouddienst. Mit diesen Anmeldeinformationen können keine Benachrichtigungen an andere Apps gesendet werden.
 

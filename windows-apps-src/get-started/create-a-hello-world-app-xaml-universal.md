@@ -8,12 +8,12 @@ ms.date: 03/06/2017
 ms.topic: article
 keywords: Windows10, UWP, erste App, Hallo Welt
 ms.localizationpriority: medium
-ms.openlocfilehash: d6fa9fa708df376edc94d34ea14d8dad4aed10df
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: 28b30a592951017fb4a0b3803261cb0258be6ae3
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/13/2018
-ms.locfileid: "6466461"
+ms.locfileid: "6652108"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Erstellen der App „Hello, world“ (XAML)
 
@@ -204,7 +204,7 @@ Viel zu bieten hat die App zwar noch nicht, aber trotzdem: Herzlichen Glückwuns
 
 3.  Bearbeiten Sie den Ereignishandlercode in *MainPage.xaml.cs*, der CodeBehind-Seite. An dieser Stelle wird die Sache interessant. Der Standard-Ereignishandler sieht wie folgt aus:
 
-```C#
+```cs
 private void Button_Click(object sender, RoutedEventArgs e)
 {
 
@@ -213,18 +213,18 @@ private void Button_Click(object sender, RoutedEventArgs e)
 
   Wir ändern ihn, damit er wie folgt aussieht:
 
-```C#
+```cs
 private async void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MediaElement mediaElement = new MediaElement();
-            var synth = new Windows.Media.SpeechSynthesis.SpeechSynthesizer();
-            Windows.Media.SpeechSynthesis.SpeechSynthesisStream stream = await synth.SynthesizeTextToStreamAsync("Hello, World!");
-            mediaElement.SetSource(stream, stream.ContentType);
-            mediaElement.Play();
-        }
+{
+    MediaElement mediaElement = new MediaElement();
+    var synth = new Windows.Media.SpeechSynthesis.SpeechSynthesizer();
+    Windows.Media.SpeechSynthesis.SpeechSynthesisStream stream = await synth.SynthesizeTextToStreamAsync("Hello, World!");
+    mediaElement.SetSource(stream, stream.ContentType);
+    mediaElement.Play();
+}
 ```
 
-Geben Sie unbedingt auch das **async**-Schlüsselwort an, oder Sie erhalten beim Versuch, die App auszuführen, einen Fehler.
+Stellen Sie sicher, dass die Methodensignatur enthält nun u. a. die **Async** -Schlüsselwort, oder Sie erhalten einen Fehler auf, wenn Sie versuchen, die app ausgeführt werden.
 
 ### <a name="what-did-we-just-do"></a>Was haben wir gerade gemacht?
 

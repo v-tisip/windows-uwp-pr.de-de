@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e43d5697a8fe4536e3574d93bda5836133ec8a8
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6280735"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6654483"
 ---
 # <a name="composition-visual"></a>Visuelle Komposition
 

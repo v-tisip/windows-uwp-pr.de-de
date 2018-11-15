@@ -15,11 +15,11 @@ dev-contact: tpaine
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: c5efe23955d1064eae639bf6e9ddd0a3a83dc315
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/14/2018
-ms.locfileid: "6673216"
+ms.locfileid: "6832189"
 ---
 # <a name="split-view-control"></a>Steuerelement für geteilte Ansicht
 

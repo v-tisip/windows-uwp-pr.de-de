@@ -7,12 +7,12 @@ ms.author: quradic
 ms.date: 11/02/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: be084091f041d574445080cd7976318a35fedcea
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.openlocfilehash: 458a5999c1f56a3bc9f445f260d1d294c395b850
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6269509"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6674371"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-16299"></a>Neuigkeiten für Entwickler in Windows10, Build 16299
 
@@ -80,7 +80,7 @@ Die Funktionen in diesem Abschnitt wurden seit der Veröffentlichung der vorheri
 
 Feature | Beschreibung
  :------ | :------
-Kontoverwaltung | Wir bieten jetzt mehr Flexibilität beim [Zuordnen von Azure AD-Mandanten zu Ihrem Dev Center-Konto](../publish/associate-azure-ad-with-dev-center.md),um mehrere Kontobenutzer hinzuzufügen. Sie können einem einzelnen Dev Center-Konto mehrere Azure AD-Mandanten zuordnen oder einen einzelnen Azure AD-Mandanten mehr als einem Dev Center-Konto zuordnen.
+Kontoverwaltung | Wir bieten jetzt mehr Flexibilität beim [Zuordnen von Azure AD-Mandanten mit Ihrem Partner Center-Konto](../publish/associate-azure-ad-with-dev-center.md) , um mehrere Kontobenutzer hinzuzufügen. Sie können ein einzelnes Partner Center-Konto mehrere Azure AD-Mandanten zuordnen oder ordnen Sie eine einzelne Azure AD-Mandanten mit mehr als ein Partner Center-Konto.
 Werbung | Das Microsoft Advertising-SDK ermöglicht nun die Darstellung [nativer Anzeigen](../monetize/native-ads.md) in Ihren Apps. Eine native Anzeige ist ein komponentengestütztes Anzeigenformat, bei dem jedes Element der Anzeige (Titel, Bild, Beschreibung und Handlungsaufforderungstext) eigenständig an Ihre App übermittelt wird. Native Anzeigen sind zurzeit nur für Entwickler in einem Pilotprogramm verfügbar, aber wir beabsichtigen, dieses Feature bald allen Entwicklern zur Verfügung zu stellen.
 Preise und Verfügbarkeit |  Mit neuen Optionen für Preisgestaltung und Verfügbarkeit können Sie [Preisänderungen planen](../publish/set-and-schedule-app-pricing.md) und [genaue Freigabetermine festlegen](../publish/configure-precise-release-scheduling.md).
 Store-Analyse-API | Die [Microsoft Store-Analyse-API](../monetize/access-analytics-data-using-windows-store-services.md) verfügt nun über eine Methode, um die [CAB-Datei für einen App-Fehler herunterzuladen](../monetize/download-the-cab-file-for-an-error-in-your-app.md).
