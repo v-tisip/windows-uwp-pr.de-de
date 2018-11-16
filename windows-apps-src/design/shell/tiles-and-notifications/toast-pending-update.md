@@ -10,46 +10,46 @@ ms.topic: article
 keywords: Windows10, UWP, Popup, ausstehende Updates, ausstehendes Update, Interaktivität aus mehreren Schritten, Interaktivitäten aus mehreren Schritten
 ms.localizationpriority: medium
 ms.openlocfilehash: 4d21c96676eec1b8b1a1f4397880af937dd8f4b6
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6979260"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7119480"
 ---
-# <a name="toast-with-pending-update-activation"></a><span data-ttu-id="2c36d-103">Popups mit ausstehenden Updates in Aktion</span><span class="sxs-lookup"><span data-stu-id="2c36d-103">Toast with pending update activation</span></span>
+# <a name="toast-with-pending-update-activation"></a><span data-ttu-id="cbb1b-103">Popups mit ausstehenden Updates in Aktion</span><span class="sxs-lookup"><span data-stu-id="cbb1b-103">Toast with pending update activation</span></span>
 
-<span data-ttu-id="2c36d-104">Verwenden Sie das **PendingUpdate** zum Erstellen der Interaktivität aus mehreren Schritten innerhalb Ihrer Popups.</span><span class="sxs-lookup"><span data-stu-id="2c36d-104">You can use **PendingUpdate** to create multi-step interactions in your toast notifications.</span></span> <span data-ttu-id="2c36d-105">Beispielsweise können Sie, wie unten dargestellt, eine Reihe von Popups erstellen, deren Antworten von den vorherigen Popups der nachfolgenden Popupbenachrichtigungen abhängt.</span><span class="sxs-lookup"><span data-stu-id="2c36d-105">For example, as seen below, you can create a series of toasts where the subsequent toasts depend on responses from the previous toasts.</span></span>
+<span data-ttu-id="cbb1b-104">Verwenden Sie das **PendingUpdate** zum Erstellen der Interaktivität aus mehreren Schritten innerhalb Ihrer Popups.</span><span class="sxs-lookup"><span data-stu-id="cbb1b-104">You can use **PendingUpdate** to create multi-step interactions in your toast notifications.</span></span> <span data-ttu-id="cbb1b-105">Beispielsweise können Sie, wie unten dargestellt, eine Reihe von Popups erstellen, deren Antworten von den vorherigen Popups der nachfolgenden Popupbenachrichtigungen abhängt.</span><span class="sxs-lookup"><span data-stu-id="cbb1b-105">For example, as seen below, you can create a series of toasts where the subsequent toasts depend on responses from the previous toasts.</span></span>
 
 ![Popup mit ausstehendem Update](images/toast-pendingupdate.gif)
 
 > [!IMPORTANT]
-> <span data-ttu-id="2c36d-107">**Erfordert Desktop Creators Update und 2.0.0 der Benachrichtigungsbibliothek**: Sie müssen Desktop Build 16299 oder höher ausführen, um ausstehende Updates zu sehen.</span><span class="sxs-lookup"><span data-stu-id="2c36d-107">**Requires Desktop Fall Creators Update and 2.0.0 of Notifications library**: You must be running Desktop build 16299 or higher to see pending update work.</span></span> <span data-ttu-id="2c36d-108">Sie müssen Version 2.0.0 oder höher der [UWP Community Toolkit Benachrichtigungen NuGet-Bibliothek](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) verwenden, um **PendingUpdate** auf Ihre Schaltflächen anzuwenden.</span><span class="sxs-lookup"><span data-stu-id="2c36d-108">You must use version 2.0.0 or higher of the [UWP Community Toolkit Notifications NuGet library](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) to assign **PendingUpdate** on your buttons.</span></span> <span data-ttu-id="2c36d-109">**PendingUpdate** wird nur auf Desktop unterstützt und auf anderen Geräten ignoriert.</span><span class="sxs-lookup"><span data-stu-id="2c36d-109">**PendingUpdate** is only supported on Desktop and will be ignored on other devices.</span></span>
+> <span data-ttu-id="cbb1b-107">**Erfordert Desktop Creators Update und 2.0.0 der Benachrichtigungsbibliothek**: Sie müssen Desktop Build 16299 oder höher ausführen, um ausstehende Updates zu sehen.</span><span class="sxs-lookup"><span data-stu-id="cbb1b-107">**Requires Desktop Fall Creators Update and 2.0.0 of Notifications library**: You must be running Desktop build 16299 or higher to see pending update work.</span></span> <span data-ttu-id="cbb1b-108">Sie müssen Version 2.0.0 oder höher der [UWP Community Toolkit Benachrichtigungen NuGet-Bibliothek](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) verwenden, um **PendingUpdate** auf Ihre Schaltflächen anzuwenden.</span><span class="sxs-lookup"><span data-stu-id="cbb1b-108">You must use version 2.0.0 or higher of the [UWP Community Toolkit Notifications NuGet library](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) to assign **PendingUpdate** on your buttons.</span></span> <span data-ttu-id="cbb1b-109">**PendingUpdate** wird nur auf Desktop unterstützt und auf anderen Geräten ignoriert.</span><span class="sxs-lookup"><span data-stu-id="cbb1b-109">**PendingUpdate** is only supported on Desktop and will be ignored on other devices.</span></span>
 
 
-## <a name="prerequisites"></a><span data-ttu-id="2c36d-110">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="2c36d-110">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="cbb1b-110">Voraussetzungen</span><span class="sxs-lookup"><span data-stu-id="cbb1b-110">Prerequisites</span></span>
 
-<span data-ttu-id="2c36d-111">Dieser Artikel erfordert Grundkenntnisse in...</span><span class="sxs-lookup"><span data-stu-id="2c36d-111">This article assumes a working knowledge of...</span></span>
+<span data-ttu-id="cbb1b-111">Dieser Artikel erfordert Grundkenntnisse in...</span><span class="sxs-lookup"><span data-stu-id="cbb1b-111">This article assumes a working knowledge of...</span></span>
 
-- [<span data-ttu-id="2c36d-112">Erstellen von Popupinhalt</span><span class="sxs-lookup"><span data-stu-id="2c36d-112">Constructing toast content</span></span>](adaptive-interactive-toasts.md)
-- [<span data-ttu-id="2c36d-113">Senden von Popups und behandeln der Hintergrundaktivierung</span><span class="sxs-lookup"><span data-stu-id="2c36d-113">Sending a toast and handling background activation</span></span>](send-local-toast.md)
-
-
-## <a name="overview"></a><span data-ttu-id="2c36d-114">Übersicht</span><span class="sxs-lookup"><span data-stu-id="2c36d-114">Overview</span></span>
-
-<span data-ttu-id="2c36d-115">Um ein Popup zu implementieren, das „ausstehende Updates” als Verhalten nach der Aktivierung verwendet...</span><span class="sxs-lookup"><span data-stu-id="2c36d-115">To implement a toast that uses pending update as its after activation behavior...</span></span>
-
-1. <span data-ttu-id="2c36d-116">Geben Sie auf den Schaltflächen für die Hintergrundaktivierung ein **AfterActivationBehavior** des **PendingUpdate** an</span><span class="sxs-lookup"><span data-stu-id="2c36d-116">On your toast background activation buttons, specify an **AfterActivationBehavior** of **PendingUpdate**</span></span>
-
-2. <span data-ttu-id="2c36d-117">Weisen Sie beim Senden Ihrer Popups einen **Tag** (und optional eine **Gruppe**) hinzu</span><span class="sxs-lookup"><span data-stu-id="2c36d-117">Assign a **Tag** (and optionally **Group**) when sending your toast</span></span>
-
-3. <span data-ttu-id="2c36d-118">Wenn der Benutzer die Schaltfläche anklickt, wird die Hintergrundaufgabe aktiviert und das Popup auf dem Bildschirm in einem Zustand des ausstehenden Updates beibehalten</span><span class="sxs-lookup"><span data-stu-id="2c36d-118">When the user clicks your button, your background task will be activated, and the toast will be kept on-screen in a pending update state</span></span>
-
-4. <span data-ttu-id="2c36d-119">Senden Sie in Ihrer Hintergrundaufgabe eine neue Popupbenachrichtigung mit dem neuen Inhalt, mit dem gleichen **Tag** und der **Gruppe**</span><span class="sxs-lookup"><span data-stu-id="2c36d-119">In your background task, send a new toast with your new content, using the same **Tag** and **Group**</span></span>
+- [<span data-ttu-id="cbb1b-112">Erstellen von Popupinhalt</span><span class="sxs-lookup"><span data-stu-id="cbb1b-112">Constructing toast content</span></span>](adaptive-interactive-toasts.md)
+- [<span data-ttu-id="cbb1b-113">Senden von Popups und behandeln der Hintergrundaktivierung</span><span class="sxs-lookup"><span data-stu-id="cbb1b-113">Sending a toast and handling background activation</span></span>](send-local-toast.md)
 
 
-## <a name="assign-pendingupdate"></a><span data-ttu-id="2c36d-120">Zuweisen von PendingUpdate</span><span class="sxs-lookup"><span data-stu-id="2c36d-120">Assign PendingUpdate</span></span>
+## <a name="overview"></a><span data-ttu-id="cbb1b-114">Übersicht</span><span class="sxs-lookup"><span data-stu-id="cbb1b-114">Overview</span></span>
 
-<span data-ttu-id="2c36d-121">Setzen Sie auf den Schaltflächen für die Hintergrundaktivierung das **AfterActivationBehavior** auf **PendingUpdate**.</span><span class="sxs-lookup"><span data-stu-id="2c36d-121">On your background activation buttons, set the **AfterActivationBehavior** to **PendingUpdate**.</span></span> <span data-ttu-id="2c36d-122">Beachten Sie, dass dies nur für Schaltflächen funktioniert, die einen **ActivationType** im **Hintergrund** habe.</span><span class="sxs-lookup"><span data-stu-id="2c36d-122">Note that this only works for buttons that have an **ActivationType** of **Background**.</span></span>
+<span data-ttu-id="cbb1b-115">Um ein Popup zu implementieren, das „ausstehende Updates” als Verhalten nach der Aktivierung verwendet...</span><span class="sxs-lookup"><span data-stu-id="cbb1b-115">To implement a toast that uses pending update as its after activation behavior...</span></span>
+
+1. <span data-ttu-id="cbb1b-116">Geben Sie auf den Schaltflächen für die Hintergrundaktivierung ein **AfterActivationBehavior** des **PendingUpdate** an</span><span class="sxs-lookup"><span data-stu-id="cbb1b-116">On your toast background activation buttons, specify an **AfterActivationBehavior** of **PendingUpdate**</span></span>
+
+2. <span data-ttu-id="cbb1b-117">Weisen Sie beim Senden Ihrer Popups einen **Tag** (und optional eine **Gruppe**) hinzu</span><span class="sxs-lookup"><span data-stu-id="cbb1b-117">Assign a **Tag** (and optionally **Group**) when sending your toast</span></span>
+
+3. <span data-ttu-id="cbb1b-118">Wenn der Benutzer die Schaltfläche anklickt, wird die Hintergrundaufgabe aktiviert und das Popup auf dem Bildschirm in einem Zustand des ausstehenden Updates beibehalten</span><span class="sxs-lookup"><span data-stu-id="cbb1b-118">When the user clicks your button, your background task will be activated, and the toast will be kept on-screen in a pending update state</span></span>
+
+4. <span data-ttu-id="cbb1b-119">Senden Sie in Ihrer Hintergrundaufgabe eine neue Popupbenachrichtigung mit dem neuen Inhalt, mit dem gleichen **Tag** und der **Gruppe**</span><span class="sxs-lookup"><span data-stu-id="cbb1b-119">In your background task, send a new toast with your new content, using the same **Tag** and **Group**</span></span>
+
+
+## <a name="assign-pendingupdate"></a><span data-ttu-id="cbb1b-120">Zuweisen von PendingUpdate</span><span class="sxs-lookup"><span data-stu-id="cbb1b-120">Assign PendingUpdate</span></span>
+
+<span data-ttu-id="cbb1b-121">Setzen Sie auf den Schaltflächen für die Hintergrundaktivierung das **AfterActivationBehavior** auf **PendingUpdate**.</span><span class="sxs-lookup"><span data-stu-id="cbb1b-121">On your background activation buttons, set the **AfterActivationBehavior** to **PendingUpdate**.</span></span> <span data-ttu-id="cbb1b-122">Beachten Sie, dass dies nur für Schaltflächen funktioniert, die einen **ActivationType** im **Hintergrund** habe.</span><span class="sxs-lookup"><span data-stu-id="cbb1b-122">Note that this only works for buttons that have an **ActivationType** of **Background**.</span></span>
 
 ```csharp
 new ToastButton("Yes", "action=orderLunch")
@@ -72,9 +72,9 @@ new ToastButton("Yes", "action=orderLunch")
 ```
 
 
-## <a name="use-a-tag-on-the-notification"></a><span data-ttu-id="2c36d-123">Verwenden Sie ein Tag auf der Benachrichtigung</span><span class="sxs-lookup"><span data-stu-id="2c36d-123">Use a Tag on the notification</span></span>
+## <a name="use-a-tag-on-the-notification"></a><span data-ttu-id="cbb1b-123">Verwenden Sie ein Tag auf der Benachrichtigung</span><span class="sxs-lookup"><span data-stu-id="cbb1b-123">Use a Tag on the notification</span></span>
 
-<span data-ttu-id="2c36d-124">Um die Benachrichtigung später zu ersetzen, müssen wir den **Tag** (und optional die **Gruppe**) auf die Benachrichtigung zuweisen.</span><span class="sxs-lookup"><span data-stu-id="2c36d-124">In order to later replace the notification, we have to assign the **Tag** (and optionally the **Group**) on the notification.</span></span>
+<span data-ttu-id="cbb1b-124">Um die Benachrichtigung später zu ersetzen, müssen wir den **Tag** (und optional die **Gruppe**) auf die Benachrichtigung zuweisen.</span><span class="sxs-lookup"><span data-stu-id="cbb1b-124">In order to later replace the notification, we have to assign the **Tag** (and optionally the **Group**) on the notification.</span></span>
 
 ```csharp
 // Create the notification
@@ -88,11 +88,11 @@ ToastNotificationManager.CreateToastNotifier().Show(notif);
 ```
 
 
-## <a name="replace-the-toast-with-new-content"></a><span data-ttu-id="2c36d-125">Ersetzen Sie das Popup mit neuem Inhalt</span><span class="sxs-lookup"><span data-stu-id="2c36d-125">Replace the toast with new content</span></span>
+## <a name="replace-the-toast-with-new-content"></a><span data-ttu-id="cbb1b-125">Ersetzen Sie das Popup mit neuem Inhalt</span><span class="sxs-lookup"><span data-stu-id="cbb1b-125">Replace the toast with new content</span></span>
 
-<span data-ttu-id="2c36d-126">Wenn der Benutzer auf die Schaltfläche klickt, wird die Hintergrundaufgabe ausgelöst, und das Popup muss durch neuen Inhalt ersetzt werden.</span><span class="sxs-lookup"><span data-stu-id="2c36d-126">In response to the user clicking your button, your background task gets triggered and you need to replace the toast with new content.</span></span> <span data-ttu-id="2c36d-127">Ersetzen Sie das Popup durch Senden einer neuen Popupbenachrichtigung mit den gleichen **Tag** und der gleichen **Gruppe**.</span><span class="sxs-lookup"><span data-stu-id="2c36d-127">You replace the toast by simply sending a new toast with the same **Tag** and **Group**.</span></span>
+<span data-ttu-id="cbb1b-126">Wenn der Benutzer auf die Schaltfläche klickt, wird die Hintergrundaufgabe ausgelöst, und das Popup muss durch neuen Inhalt ersetzt werden.</span><span class="sxs-lookup"><span data-stu-id="cbb1b-126">In response to the user clicking your button, your background task gets triggered and you need to replace the toast with new content.</span></span> <span data-ttu-id="cbb1b-127">Ersetzen Sie das Popup durch Senden einer neuen Popupbenachrichtigung mit den gleichen **Tag** und der gleichen **Gruppe**.</span><span class="sxs-lookup"><span data-stu-id="cbb1b-127">You replace the toast by simply sending a new toast with the same **Tag** and **Group**.</span></span>
 
-<span data-ttu-id="2c36d-128">Es wird dringend empfohlen, als Antwort auf eine angeklickte Schaltfläche die **Audiowiedergabe auf lautlos festzulegen**, da der Benutzer bereits mit Ihrem Popup interagiert.</span><span class="sxs-lookup"><span data-stu-id="2c36d-128">We strongly recommend **setting the audio to silent** on replacements in response to a button click, since the user is already interacting with your toast.</span></span>
+<span data-ttu-id="cbb1b-128">Es wird dringend empfohlen, als Antwort auf eine angeklickte Schaltfläche die **Audiowiedergabe auf lautlos festzulegen**, da der Benutzer bereits mit Ihrem Popup interagiert.</span><span class="sxs-lookup"><span data-stu-id="cbb1b-128">We strongly recommend **setting the audio to silent** on replacements in response to a button click, since the user is already interacting with your toast.</span></span>
 
 ```csharp
 // Generate new content
@@ -116,9 +116,9 @@ ToastNotificationManager.CreateToastNotifier().Show(notif);
 ```
 
 
-## <a name="related-topics"></a><span data-ttu-id="2c36d-129">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="2c36d-129">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="cbb1b-129">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="cbb1b-129">Related topics</span></span>
 
-- [<span data-ttu-id="2c36d-130">Vollständiges Codebeispiel auf GitHub</span><span class="sxs-lookup"><span data-stu-id="2c36d-130">Full code sample on GitHub</span></span>](https://github.com/WindowsNotifications/quickstart-toast-pending-update)
-- [<span data-ttu-id="2c36d-131">Senden einer lokalen Popupbenachrichtigung und Behandeln der Aktivierung</span><span class="sxs-lookup"><span data-stu-id="2c36d-131">Send a local toast and handle activation</span></span>](send-local-toast.md)
-- [<span data-ttu-id="2c36d-132">Dokumentation zu Popupinhalt</span><span class="sxs-lookup"><span data-stu-id="2c36d-132">Toast content documentation</span></span>](adaptive-interactive-toasts.md)
-- [<span data-ttu-id="2c36d-133">Popup-Statusanzeige</span><span class="sxs-lookup"><span data-stu-id="2c36d-133">Toast progress bar</span></span>](toast-progress-bar.md)
+- [<span data-ttu-id="cbb1b-130">Vollständiges Codebeispiel auf GitHub</span><span class="sxs-lookup"><span data-stu-id="cbb1b-130">Full code sample on GitHub</span></span>](https://github.com/WindowsNotifications/quickstart-toast-pending-update)
+- [<span data-ttu-id="cbb1b-131">Senden einer lokalen Popupbenachrichtigung und Behandeln der Aktivierung</span><span class="sxs-lookup"><span data-stu-id="cbb1b-131">Send a local toast and handle activation</span></span>](send-local-toast.md)
+- [<span data-ttu-id="cbb1b-132">Dokumentation zu Popupinhalt</span><span class="sxs-lookup"><span data-stu-id="cbb1b-132">Toast content documentation</span></span>](adaptive-interactive-toasts.md)
+- [<span data-ttu-id="cbb1b-133">Popup-Statusanzeige</span><span class="sxs-lookup"><span data-stu-id="cbb1b-133">Toast progress bar</span></span>](toast-progress-bar.md)
