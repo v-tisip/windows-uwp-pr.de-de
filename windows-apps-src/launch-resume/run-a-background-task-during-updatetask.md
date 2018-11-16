@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Update, Hintergrundaufgabe, Updatetask, Hintergrundaufgabe
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ef6351bcf2ef57a1900c429ddcb65e5a2a4e67b
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6858458"
+ms.locfileid: "6977501"
 ---
 # <a name="run-a-background-task-when-your-uwp-app-is-updated"></a><span data-ttu-id="43901-104">Ausführen einer Hintergrundaufgabe beim Aktualisieren der UWP-App</span><span class="sxs-lookup"><span data-stu-id="43901-104">Run a background task when your UWP app is updated</span></span>
 

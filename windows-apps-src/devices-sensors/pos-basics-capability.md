@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: dbed55af1a9fa3df14f0a7e3e7c6d1f599b40fd3
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6834388"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "6989367"
 ---
 # <a name="pointofservice-device-capability"></a><span data-ttu-id="19ce4-104">PointOfService-Gerätefunktion</span><span class="sxs-lookup"><span data-stu-id="19ce4-104">PointOfService device capability</span></span>
 <span data-ttu-id="19ce4-105">Sie fordern Zugriff auf die PointOfService-APIs an, indem Sie die Funktion in Ihrem Anwendungspaketmanifest deklarieren. Sie können die meisten Funktionen mithilfe des Manifest-Designers in Microsoft Visual Studio deklarieren, oder Sie können sie manuell hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="19ce4-105">You request access to the PointOfService APIs by declaring the capability in your application package manifest]  You can declare most capabilities by using the Manifest Designer, in Microsoft Visual Studio, or you can add them manually.</span></span>  

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Karte, Standort, Positionsfunktion
 ms.localizationpriority: medium
 ms.openlocfilehash: 2187bafa9fd2b4fdce049f3ef11d4e6766613de3
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6834481"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "6993151"
 ---
 # <a name="get-the-users-location"></a><span data-ttu-id="2e93d-106">Abrufen der Position eines Benutzers</span><span class="sxs-lookup"><span data-stu-id="2e93d-106">Get the user's location</span></span>
 

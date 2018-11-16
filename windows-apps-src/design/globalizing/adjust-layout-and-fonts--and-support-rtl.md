@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Lokalisierbarkeit, Lokalisierung, rtl, ltr
 ms.localizationpriority: medium
 ms.openlocfilehash: ac69701eca128d327dfd80cfddc7fad41c50c50e
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6834398"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "6990369"
 ---
 # <a name="adjust-layout-and-fonts-and-support-rtl"></a><span data-ttu-id="1b1eb-103">Layout und Schriften anpassen und RTL unterstützen</span><span class="sxs-lookup"><span data-stu-id="1b1eb-103">Adjust layout and fonts, and support RTL</span></span>
 <span data-ttu-id="1b1eb-104">Entwerfen Sie Ihre App so, dass die Layouts und Schriften mehrerer Sprachen unterstützen – beispielsweise auch den Textfluss von rechts nach links (right-to-left, RTL).</span><span class="sxs-lookup"><span data-stu-id="1b1eb-104">Design your app to support the layouts and fonts of multiple languages, including RTL (right-to-left) flow direction.</span></span> <span data-ttu-id="1b1eb-105">Die Textflussrichtung ist die Richtung, in der ein Text geschrieben und angezeigt wird, und die UI-Elemente auf der Seite werden entsprechend gelesen.</span><span class="sxs-lookup"><span data-stu-id="1b1eb-105">Flow direction is the direction in which script is written and displayed, and the UI elements on the page are scanned by the eye.</span></span>

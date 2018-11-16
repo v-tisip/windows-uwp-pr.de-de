@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0fbbe1978cc59afcc7d681331dadc9a06e3eb2d0
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6651394"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6859525"
 ---
 # <a name="launch-an-app-for-results"></a><span data-ttu-id="1ddc9-105">Starten einer App für Ergebnisse</span><span class="sxs-lookup"><span data-stu-id="1ddc9-105">Launch an app for results</span></span>
 

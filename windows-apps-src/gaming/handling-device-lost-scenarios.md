@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, DirectX 11, Gerät verloren gegangen
 ms.localizationpriority: medium
 ms.openlocfilehash: 888b3ec7ab667a8a92ae638a9d5c456c3180df0d
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6453719"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6857913"
 ---
 # <a name="span-iddevgaminghandlingdevice-lostscenariosspanhandle-device-removed-scenarios-in-direct3d-11"></a><span data-ttu-id="16432-104"><span id="dev_gaming.handling_device-lost_scenarios"></span>Behandeln von Szenarien mit entfernten Geräten in Direct3D 11</span><span class="sxs-lookup"><span data-stu-id="16432-104"><span id="dev_gaming.handling_device-lost_scenarios"></span>Handle device removed scenarios in Direct3D 11</span></span>
 

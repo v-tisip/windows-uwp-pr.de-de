@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a6ceb1e779f8622d3e358bc131b21f6ec66ac2f8
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6659882"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6854995"
 ---
 # <a name="data-type-conversion"></a><span data-ttu-id="32574-104">Konvertieren von Datentypen</span><span class="sxs-lookup"><span data-stu-id="32574-104">Data type conversion</span></span>
 

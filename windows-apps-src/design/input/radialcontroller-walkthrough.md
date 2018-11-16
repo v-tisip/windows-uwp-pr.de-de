@@ -9,11 +9,11 @@ ms.date: 01/25/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 3df0f37fda62a7b673e28a6198758365886b6783
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6658819"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6987167"
 ---
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-uwp-app"></a><span data-ttu-id="5b429-104">Lernprogramm: Unterstützen von Surface Dial (und anderen Radgeräten) in Ihrer UWP-App</span><span class="sxs-lookup"><span data-stu-id="5b429-104">Tutorial: Support the Surface Dial (and other wheel devices) in your UWP app</span></span>
 

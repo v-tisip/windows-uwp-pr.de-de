@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f5e6c96c67052f1933bf4fb69988ae1eae27ee0
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6672278"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6984275"
 ---
 #  <a name="device-primer-for-universal-windows-platform-uwp-apps"></a><span data-ttu-id="dc085-103">Einführung der Geräte für UWP-Apps (Universelle Windows-Plattform)</span><span class="sxs-lookup"><span data-stu-id="dc085-103">Device primer for Universal Windows Platform (UWP) apps</span></span>
 

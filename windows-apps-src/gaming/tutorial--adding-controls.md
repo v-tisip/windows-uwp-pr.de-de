@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Steuerelemente, Eingabe
 ms.localizationpriority: medium
 ms.openlocfilehash: bc5873486bdd9c4adf4ea74b10a240617143ad23
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6842942"
+ms.locfileid: "6973188"
 ---
 # <a name="add-controls"></a><span data-ttu-id="f7360-104">Hinzufügen von Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="f7360-104">Add controls</span></span>
 

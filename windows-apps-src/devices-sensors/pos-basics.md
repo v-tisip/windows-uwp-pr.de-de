@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 46dd1f615e42f6e89ee9a92cb980299e9a0e5205
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6858283"
+ms.locfileid: "6976263"
 ---
 # <a name="getting-started-with-point-of-service"></a><span data-ttu-id="76c23-104">Erste Schritte mit Point Of Service-Geräten</span><span class="sxs-lookup"><span data-stu-id="76c23-104">Getting started with Point of Service</span></span>
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6b83be1dee4e23fa6974e39fbfb0f9ce26529274
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6841354"
+ms.locfileid: "6974035"
 ---
 # <a name="play-audio-and-video-with-mediaplayer"></a><span data-ttu-id="5de02-104">Wiedergeben von Audio- und Videoinhalten mit „MediaPlayer“</span><span class="sxs-lookup"><span data-stu-id="5de02-104">Play audio and video with MediaPlayer</span></span>
 

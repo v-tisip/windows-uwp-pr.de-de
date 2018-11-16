@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Fehler, Details
 ms.localizationpriority: medium
 ms.openlocfilehash: e947314da1309c3f31af292bc70addbad8b0d4d9
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6662654"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6860090"
 ---
 # <a name="get-details-for-an-error-in-your-app"></a><span data-ttu-id="42c22-104">Abrufen von Details zu einem Fehler in Ihrer App</span><span class="sxs-lookup"><span data-stu-id="42c22-104">Get details for an error in your app</span></span>
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, Uwp, Microsoft Store-Übermittlungs-API, Codebeispiele, Spieloptionen, Trailer, erweiterte Angebote, C#
 ms.localizationpriority: medium
 ms.openlocfilehash: 61d2a919d6bebcb1807d8084dda39a2e6d660ca5
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6663181"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6860557"
 ---
 # <a name="c-sample-app-submission-with-game-options-and-trailers"></a><span data-ttu-id="8b798-104">C\#-Beispiel: App-Übermittlung mit Spieloptionen und Trailer</span><span class="sxs-lookup"><span data-stu-id="8b798-104">C\# sample: app submission with game options and trailers</span></span>
 

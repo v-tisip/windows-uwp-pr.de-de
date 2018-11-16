@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ba07f897111e27dc895aa187172841cac4b44f73
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6837863"
+ms.locfileid: "6982402"
 ---
 # <a name="set-format-resolution-and-frame-rate-for-mediacapture"></a><span data-ttu-id="09791-104">Festlegen von Format, Auflösung und Bildfrequenz für „MediaCapture“</span><span class="sxs-lookup"><span data-stu-id="09791-104">Set format, resolution, and frame rate for MediaCapture</span></span>
 

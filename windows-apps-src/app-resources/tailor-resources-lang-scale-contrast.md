@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: 018740b9ceaa10425ec71f6a2775d547b7c30e82
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6859426"
+ms.locfileid: "6974251"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a><span data-ttu-id="08514-103">Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung, hohen Kontrast und anderen Qualifizierern</span><span class="sxs-lookup"><span data-stu-id="08514-103">Tailor your resources for language, scale, high contrast, and other qualifiers</span></span>
 

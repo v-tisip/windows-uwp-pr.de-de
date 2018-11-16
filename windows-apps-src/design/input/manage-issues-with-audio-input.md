@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 094acdbcb5c5b3bf45bad757344be5187ae37cbc
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6838997"
+ms.locfileid: "6975468"
 ---
 # <a name="manage-issues-with-audio-input"></a><span data-ttu-id="5a42e-103">Verwalten von Problemen bei der Audioeingabe</span><span class="sxs-lookup"><span data-stu-id="5a42e-103">Manage issues with audio input</span></span>
 

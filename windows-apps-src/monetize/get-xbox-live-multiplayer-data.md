@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, Uwp, Store-Diensten, Microsoft Store-Analyse-API, Xbox Live-Analyse, Multiplayer
 ms.localizationpriority: medium
 ms.openlocfilehash: 6074f3774d099c63f6c39ac4ef0e95a7b6745912
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6650452"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6849574"
 ---
 # <a name="get-xbox-live-multiplayer-data"></a><span data-ttu-id="4399e-104">Abrufen von Xbox Live Multiplayerdaten</span><span class="sxs-lookup"><span data-stu-id="4399e-104">Get Xbox Live multiplayer data</span></span>
 

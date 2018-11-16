@@ -9,11 +9,11 @@ keywords: Windows 10, UWP
 ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e0faf3a0b6a4f13c0fce24aa093cf94a1e7ee7e
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6855051"
+ms.locfileid: "6975210"
 ---
 # <a name="fiddler-settings-api-reference"></a><span data-ttu-id="ae8c3-104">Fiddler-Einstellungen – API-Referenz</span><span class="sxs-lookup"><span data-stu-id="ae8c3-104">Fiddler settings API reference</span></span>   
 <span data-ttu-id="ae8c3-105">Sie können die Fiddler-Netzwerkablaufverfolgung für Ihr Dev Kit mittels dieser REST-API aktivieren und deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="ae8c3-105">You can enable and disable Fiddler network tracing on your devkit using this REST API.</span></span>

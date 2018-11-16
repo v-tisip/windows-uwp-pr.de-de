@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP, App-Installer, AppInstaller, querladen, zugehörige Gruppe, optionale Pakete
 ms.localizationpriority: medium
 ms.openlocfilehash: f38604ea7fc25038bdd4b07b952e4dbab151bf56
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6842882"
+ms.locfileid: "6979145"
 ---
 # <a name="optional-packages-with-executable-code"></a><span data-ttu-id="3c070-104">Optionale Pakete mit ausführbarem Code</span><span class="sxs-lookup"><span data-stu-id="3c070-104">Optional packages with executable code</span></span>
  

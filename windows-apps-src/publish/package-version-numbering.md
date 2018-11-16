@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 5bd34c285a74c0fbe7e51f1f3fa53cdde33733dd
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6652757"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6852217"
 ---
 # <a name="package-version-numbering"></a><span data-ttu-id="e94df-103">Paketversionsnummern</span><span class="sxs-lookup"><span data-stu-id="e94df-103">Package version numbering</span></span>
 

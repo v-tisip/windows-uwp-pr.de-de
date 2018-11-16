@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, Video, Planer, JavaScript
 ms.localizationpriority: medium
 ms.openlocfilehash: 158817aa0abea1ddb1247188ec69389a7682e899
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6853239"
+ms.locfileid: "6973228"
 ---
 # <a name="show-ads-in-video-content"></a><span data-ttu-id="57a36-104">Anzeigen von Werbung in Videoinhalten</span><span class="sxs-lookup"><span data-stu-id="57a36-104">Show ads in video content</span></span>
 
