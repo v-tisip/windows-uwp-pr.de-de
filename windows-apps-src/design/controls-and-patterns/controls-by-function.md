@@ -10,18 +10,18 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 50d2d5d6dd53ffcb14ed6223e2fd0f85324a8438
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: 933ca3f6d683d5a58e10f87059527038e7b696d1
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6665711"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6833758"
 ---
 # <a name="controls-by-function"></a>Steuerelemente nach Funktion
 
 Das XAML-Benutzeroberflächenframework für Windows bietet eine umfangreiche Bibliothek von Steuerelementen, welche die Entwicklung von Benutzeroberflächen unterstützen. Einige dieser Steuerelemente weisen eine visuelle Darstellung auf. Andere fungieren als Container für andere Steuerelemente oder Inhalte (z.B. Bilder und Medien). 
 
-Laden Sie das [Beispiel für XAML-UI-Grundlagen](http://go.microsoft.com/fwlink/p/?LinkId=619992) herunter, um sich zahlreiche Windows-UI-Steuerelemente in Aktion anzusehen.
+Laden Sie das [Beispiel für XAML-UI-Grundlagen](https://go.microsoft.com/fwlink/p/?LinkId=619992) herunter, um sich zahlreiche Windows-UI-Steuerelemente in Aktion anzusehen.
 
 <table>
 <th align="left">XAML-Steuerelementekatalog<th>
@@ -56,21 +56,21 @@ Referenz: [AppBarButton](https://msdn.microsoft.com/library/windows/apps/xaml/wi
 
 Design und Vorgehensweise: [App-Leiste und Befehlsleiste](app-bars.md) 
 
-Beispielcode: [Beispiel für XAML-Befehle](http://go.microsoft.com/fwlink/p/?LinkId=620019)
+Beispielcode: [Beispiel für XAML-Befehle](https://go.microsoft.com/fwlink/p/?LinkId=620019)
 
 ### <a name="app-bar-separator"></a>Trennzeichen der App-Leiste
 Trennt Befehlsgruppen in einer Befehlsleiste grafisch.
 
 Referenz: [AppBarSeparator](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbarseparator.aspx) 
 
-Beispielcode: [Beispiel für XAML-Befehle](http://go.microsoft.com/fwlink/p/?LinkId=620019)
+Beispielcode: [Beispiel für XAML-Befehle](https://go.microsoft.com/fwlink/p/?LinkId=620019)
 
 ### <a name="app-bar-toggle-button"></a>Umschaltfläche der App-Leiste
 Eine Schaltfläche zum Wechseln zwischen den Befehlen in einer Befehlsleiste.
 
 Referenz: [AppBarToggleButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.appbartogglebutton.aspx) 
 
-Beispielcode: [Beispiel für XAML-Befehle](http://go.microsoft.com/fwlink/p/?LinkId=620019)
+Beispielcode: [Beispiel für XAML-Befehle](https://go.microsoft.com/fwlink/p/?LinkId=620019)
 
 ### <a name="command-bar"></a>Befehlsleiste
 Eine spezielle App-Leiste zum Ändern der Größe von Schaltflächenelementen auf der App-Leiste.
@@ -88,7 +88,7 @@ Referenz: [CommandBar](https://msdn.microsoft.com/library/windows/apps/xaml/wind
 
 Design und Vorgehensweise: [App-Leiste und Befehlsleiste](app-bars.md)
 
-Beispielcode: [Beispiel für XAML-Befehle](http://go.microsoft.com/fwlink/p/?LinkId=620019)
+Beispielcode: [Beispiel für XAML-Befehle](https://go.microsoft.com/fwlink/p/?LinkId=620019)
 
 ## <a name="buttons"></a>Schaltflächen
 
@@ -116,7 +116,7 @@ Eine Schaltfläche, die als markierter Text dargestellt wird und den angegebenen
 
 ```xaml
 <HyperlinkButton Content="www.microsoft.com" 
-                 NavigateUri="http://www.microsoft.com"/>
+                 NavigateUri="https://www.microsoft.com"/>
 ```
 
 Referenz: [HyperlinkButton](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.hyperlinkbutton.aspx) 
@@ -168,7 +168,7 @@ Referenz: [GridView](https://msdn.microsoft.com/library/windows/apps/xaml/window
 
 Design und Vorgehensweise: [Listen](lists.md) 
 
-Beispielcode: [ListView-Beispiel](http://go.microsoft.com/fwlink/p/?LinkId=619900)
+Beispielcode: [ListView-Beispiel](https://go.microsoft.com/fwlink/p/?LinkId=619900)
 
 ### <a name="items-control"></a>Elementsteuerelement
 Ein Steuerelement, das eine Sammlung von Elementen auf einer Benutzeroberfläche darstellt, die durch eine Datenvorlage angegeben wird. 
@@ -193,7 +193,7 @@ Referenz: [ListView](https://msdn.microsoft.com/library/windows/apps/xaml/window
 
 Design und Vorgehensweise: [Listen](lists.md) 
 
-Beispielcode: [ListView-Beispiel](http://go.microsoft.com/fwlink/p/?LinkId=619900)
+Beispielcode: [ListView-Beispiel](https://go.microsoft.com/fwlink/p/?LinkId=619900)
 
 ## <a name="date-and-time-controls"></a>Datums- und Uhrzeitsteuerelemente
 
@@ -290,7 +290,7 @@ Referenz: [MenuFlyout](https://msdn.microsoft.com/library/windows/apps/xaml/wind
 
 Design und Vorgehensweise: [Menüs und Kontextmenüs](menus.md) 
 
-Beispielcode: [Beispiel für XAML-Kontextmenü](http://go.microsoft.com/fwlink/p/?LinkId=620021)
+Beispielcode: [Beispiel für XAML-Kontextmenü](https://go.microsoft.com/fwlink/p/?LinkId=620021)
 
 ### <a name="popup-menu"></a>Popupmenü
 Ein benutzerdefiniertes Menü mit von Ihnen angegebenen Befehlen.
@@ -326,7 +326,7 @@ Referenz: [Image](https://msdn.microsoft.com/library/windows/apps/xaml/windows.u
 
 Design und Vorgehensweise: [Image und ImageBrush](images-imagebrushes.md) 
 
-Beispielcode: [Beispiel für XAML-Bilder](http://go.microsoft.com/fwlink/p/?linkid=226867)
+Beispielcode: [Beispiel für XAML-Bilder](https://go.microsoft.com/fwlink/p/?linkid=226867)
 
 ## <a name="graphics-and-ink"></a>Grafiken und Freihandstriche
 
@@ -355,7 +355,7 @@ Referenz: [Shapes](https://msdn.microsoft.com/library/windows/apps/xaml/windows.
 
 So wird's gemacht: [Zeichnen von Formen](../../graphics/drawing-shapes.md) 
 
-Beispielcode: [Beispiel für vektorbasierte XAML-Zeichnung](http://go.microsoft.com/fwlink/p/?linkid=226866)
+Beispielcode: [Beispiel für vektorbasierte XAML-Zeichnung](https://go.microsoft.com/fwlink/p/?linkid=226866)
 
 ## <a name="layout-controls"></a>Layoutsteuerelemente
 
@@ -455,7 +455,7 @@ Referenz: [ScrollViewer](https://msdn.microsoft.com/library/windows/apps/xaml/wi
 
 Design und Vorgehensweise: [Bildlaufleisten](scroll-controls.md) 
 
-Beispielcode: [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoom](http://go.microsoft.com/fwlink/p/?linkid=238577)
+Beispielcode: [Beispiel für XAML-Bildlauf, -Verschiebung und -Zoom](https://go.microsoft.com/fwlink/p/?linkid=238577)
 
 ### <a name="stack-panel"></a>StackPanel
 Ein Layoutpanel, das untergeordnete Elemente in einer einzelnen Zeile anordnet. Die Zeile kann horizontal oder vertikal ausgerichtet werden.
@@ -544,7 +544,7 @@ Referenz: [MediaTransportControls](https://msdn.microsoft.com/library/windows/ap
 
 Design und Vorgehensweise: [Richtlinien für Mediaplayer](media-playback.md) 
 
-Beispielcode: [Beispiel für die Steuerelemente für den Medientransport](http://go.microsoft.com/fwlink/p/?LinkId=620023)
+Beispielcode: [Beispiel für die Steuerelemente für den Medientransport](https://go.microsoft.com/fwlink/p/?LinkId=620023)
 
 ### <a name="video"></a>Video
 Siehe „Medienelement“.
@@ -585,7 +585,7 @@ Design und Vorgehensweise: [Richtlinien für das Steuerelement für die geteilte
 Ein Containersteuerelement, das Webinhalt hostet.
 
 ```xaml
-<WebView x:Name="webView1" Source="http://dev.windows.com" 
+<WebView x:Name="webView1" Source="https://developer.microsoft.com" 
          Height="400" Width="800"/>
 ```
 
@@ -593,7 +593,7 @@ Referenz: [WebView](https://msdn.microsoft.com/library/windows/apps/xaml/windows
 
 Design und Vorgehensweise: Richtlinien für Webansichten 
 
-Beispielcode: [Beispiel für XAML-WebView-Steuerelement](http://go.microsoft.com/fwlink/p/?linkid=238582)
+Beispielcode: [Beispiel für XAML-WebView-Steuerelement](https://go.microsoft.com/fwlink/p/?linkid=238582)
 
 ### <a name="semantic-zoom"></a>Semantischer Zoom
 
@@ -614,7 +614,7 @@ Referenz: [SemanticZoom](https://msdn.microsoft.com/library/windows/apps/xaml/wi
 
 Design und Vorgehensweise: [Richtlinien für den semantischen Zoom](semantic-zoom.md)
 
-Beispielcode: [Beispiel für XAML-GridView-Gruppierung und -SemanticZoom](http://go.microsoft.com/fwlink/p/?linkid=226564)
+Beispielcode: [Beispiel für XAML-GridView-Gruppierung und -SemanticZoom](https://go.microsoft.com/fwlink/p/?linkid=226564)
 
 ## <a name="progress-controls"></a>Statussteuerelemente
 
@@ -665,7 +665,7 @@ Referenz: [AutoSuggestBox](https://msdn.microsoft.com/library/windows/apps/xaml/
 
 Design und Vorgehensweise: [Textsteuerelemente](text-controls.md), [Richtlinien für Feldsteuerelement mit automatischen Vorschlägen](auto-suggest-box.md)
 
-Beispielcode: [Beispiel für AutoSuggestBox-Migration](http://go.microsoft.com/fwlink/p/?LinkId=619996)
+Beispielcode: [Beispiel für AutoSuggestBox-Migration](https://go.microsoft.com/fwlink/p/?LinkId=619996)
 
 ### <a name="multi-line-text-box"></a>Mehrzeiliges Textfeld
 Siehe „Textfeld“.
@@ -684,7 +684,7 @@ Referenz: [PasswordBox](https://msdn.microsoft.com/library/windows/apps/xaml/win
 
 Design und Vorgehensweise: [Textsteuerelemente](text-controls.md), [Richtlinien für Kennwortfelder](password-box.md) 
 
-Beispielcode: [Beispiel für die XAML-Textanzeige](http://go.microsoft.com/fwlink/p/?linkid=238579), [Beispiel für die XAML-Textbearbeitung](http://go.microsoft.com/fwlink/p/?linkid=251417)
+Beispielcode: [Beispiel für die XAML-Textanzeige](https://go.microsoft.com/fwlink/p/?linkid=238579), [Beispiel für die XAML-Textbearbeitung](https://go.microsoft.com/fwlink/p/?linkid=251417)
 
 ### <a name="rich-edit-box"></a>Rich-Edit-Feld
 Ein Steuerelement, mit dem der Benutzer Rich-Text-Dokumente mit Inhalten wie formatiertem Text, Links und Bildern bearbeiten kann.
@@ -697,7 +697,7 @@ Referenz: [RichEditBox](https://msdn.microsoft.com/library/windows/apps/xaml/win
 
 Design und Vorgehensweise: [Textsteuerelemente](text-controls.md), [Richtlinien für RichEditBox-Steuerelement](rich-edit-box.md)
 
-Beispielcode: [Beispiel für XAML-Text](http://go.microsoft.com/fwlink/p/?linkid=238578)
+Beispielcode: [Beispiel für XAML-Text](https://go.microsoft.com/fwlink/p/?linkid=238578)
 
 ### <a name="search-box"></a>Suchfeld
 Siehe „Feld mit automatischen Vorschlägen“.
@@ -721,7 +721,7 @@ Referenz: [TextBlock](https://msdn.microsoft.com/library/windows/apps/xaml/windo
 
 Design und Vorgehensweise: [Textsteuerelemente](text-controls.md), [TextBlock](text-block.md), [Richtlinie für Rich-Text-Blocksteuerelemente](rich-text-block.md)
 
-Beispielcode: [Beispiel für XAML-Text](http://go.microsoft.com/fwlink/p/?linkid=238578)
+Beispielcode: [Beispiel für XAML-Text](https://go.microsoft.com/fwlink/p/?linkid=238578)
 
 ### <a name="text-box"></a>Textfeld
 Ein einzeiliges oder mehrzeiliges Nur-Text-Feld.
@@ -737,7 +737,7 @@ Referenz: [TextBox](https://msdn.microsoft.com/library/windows/apps/xaml/windows
 
 Design und Vorgehensweise: [Textsteuerelemente](text-controls.md), [TextBox](text-box.md) 
 
-Beispielcode: [Beispiel für XAML-Text](http://go.microsoft.com/fwlink/p/?linkid=238578)
+Beispielcode: [Beispiel für XAML-Text](https://go.microsoft.com/fwlink/p/?linkid=238578)
 
 ## <a name="selection-controls"></a>Auswahlsteuerelemente
 

@@ -170,7 +170,6 @@
 ### [Kachel, Popup-Benachrichtigungsunterstützung für Sprache, Skalierung und Kontrast](shell/tiles-and-notifications/tile-toast-language-scale-contrast.md)
 ## [Anheften einer App an die Taskleiste](shell/pin-to-taskbar.md)
 ## [Anpassen der Titelleiste](shell/title-bar.md)
-## [Entwerfen für Sets](shell/design-for-sets.md)
 
 ## Benachrichtigungen
 ### Popupbenachrichtigungen

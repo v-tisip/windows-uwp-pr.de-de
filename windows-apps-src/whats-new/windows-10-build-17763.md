@@ -8,11 +8,11 @@ ms.date: 10/03/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1503b6816a1ebd687ddd320c550c4476a4c5a038
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6672400"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6848380"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>Neuigkeiten in Windows 10 für Entwickler, Build 17763
 

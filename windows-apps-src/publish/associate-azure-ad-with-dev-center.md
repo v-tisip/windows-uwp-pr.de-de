@@ -7,12 +7,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Azure Ad, Azure-Mandant, AAD-Mandant, Azure AD-Mandant, Mandantenverwaltung, Mandanten
 ms.localizationpriority: medium
-ms.openlocfilehash: a76021f53417d30b91db282a194f6dc6ca268c1f
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: 9f44d5bc0e07ab40a396c103d2a8ba6db5427ae8
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6648265"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6853635"
 ---
 # <a name="associate-azure-active-directory-with-your-partner-center-account"></a>Zuordnen von Azure Active Directory mit Ihrem Partner Center-Konto
 
@@ -47,7 +47,7 @@ Gehen folgendermaßen Sie vor, um Ihr Partner Center-Konto verknüpfen, wenn Ihr
 
 Wenn Sie ein neues Azure AD mit Ihrem Partner Center-Konto verknüpfen einrichten müssen, gehen Sie wie folgt vor.
 
-1.  Im [Partner Center](https://partner.microsoft.com/dashboard)wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards), und wählen Sie dann **entwicklereinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Mandanten**.
+1.  [Partner Center](https://partner.microsoft.com/dashboard)wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards), und wählen Sie dann **entwicklereinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Mandanten**.
 2.  Wählen Sie **Neues Azure AD erstellen**.
 3.  Geben Sie die Verzeichnisinformationen für das neue Azure AD ein:
     - **Domänenname**: Der eindeutige Name, der für Ihre Azure AD-Domäne verwendet wird, zusammen mit „.onmicrosoft.com“. Wenn Sie beispielsweise „beispiel“ eingegeben haben, wäre Ihre Azure AD-Domäne „beispiel.onmicrosoft.com“.
