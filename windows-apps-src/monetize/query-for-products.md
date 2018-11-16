@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Sammlungs-API, Produkte anzeigen
 ms.localizationpriority: medium
 ms.openlocfilehash: 3e5d6376420a1ee4ac166330371cf6e058d3476e
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6648127"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6833550"
 ---
 # <a name="query-for-products"></a><span data-ttu-id="397a5-105">Produktabfrage</span><span class="sxs-lookup"><span data-stu-id="397a5-105">Query for products</span></span>
 

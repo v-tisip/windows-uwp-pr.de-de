@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Point of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 03fbed5a0145a093b1e7a2535012077644aaf2e2
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/14/2018
-ms.locfileid: "6674180"
+ms.locfileid: "6836772"
 ---
 # <a name="use-a-software-trigger"></a><span data-ttu-id="1811a-104">Verwenden eines Software-Triggers</span><span class="sxs-lookup"><span data-stu-id="1811a-104">Use a software trigger</span></span>
 

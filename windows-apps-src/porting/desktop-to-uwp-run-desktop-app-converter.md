@@ -10,11 +10,11 @@ keywords: windows10, UWP
 ms.assetid: 74c84eb6-4714-4e12-a658-09cb92b576e3
 ms.localizationpriority: medium
 ms.openlocfilehash: 7fc8c8e68e4b20498f84b4d20d84eca0dbfa7237
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6650898"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6834953"
 ---
 # <a name="package-a-desktop-application-using-the-desktop-app-converter"></a><span data-ttu-id="befa6-103">Verpacken Sie eine desktop-Anwendung mit dem Desktop App Converter</span><span class="sxs-lookup"><span data-stu-id="befa6-103">Package a desktop application using the Desktop App Converter</span></span>
 

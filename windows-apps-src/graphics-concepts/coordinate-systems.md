@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1b8faed0719419d4be8ac1e5d493610ec2660598
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6861303"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "6666052"
 ---
 # <a name="coordinate-systems"></a><span data-ttu-id="92ea8-105">Koordinatensysteme</span><span class="sxs-lookup"><span data-stu-id="92ea8-105">Coordinate systems</span></span>
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Dienst, Microsoft Store-Analyse-API, Fehler
 ms.localizationpriority: medium
 ms.openlocfilehash: 070cb8929ac7a3b0f5041abc0383afb71182223d
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/14/2018
-ms.locfileid: "6673053"
+ms.locfileid: "6837942"
 ---
 # <a name="get-error-reporting-data-for-your-xbox-one-game"></a><span data-ttu-id="ba497-104">Abrufen von Fehlerberichtsdaten für Ihre Xbox One Spiel</span><span class="sxs-lookup"><span data-stu-id="ba497-104">Get error reporting data for your Xbox One game</span></span>
 

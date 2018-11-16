@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: bcfdb8f6258547ff210d80136a6113e04092aad2
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6662566"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6838108"
 ---
 # <a name="span-iddirect3dconceptsfloating-pointrulesspanfloating-point-rules"></a><span data-ttu-id="e058a-105"><span id="direct3dconcepts.floating-point_rules"></span>Regeln für Gleitkommazahlen</span><span class="sxs-lookup"><span data-stu-id="e058a-105"><span id="direct3dconcepts.floating-point_rules"></span>Floating-point rules</span></span>
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spieleinstellungen, Anzeigemodus, Systemanforderungen, Hardwareanforderungen, Mindestanforderungen an die Hardware, empfohlene Hardware, Datenschutzrichtlinie, Kontaktinformationen für den Support, App-Website, Supportinformationen
 ms.localizationpriority: medium
 ms.openlocfilehash: 9356c536946508c4531170cde8982e7b79c6e4f6
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6648212"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6843802"
 ---
 # <a name="enter-app-properties"></a><span data-ttu-id="2fe87-103">Eingeben von App-Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="2fe87-103">Enter app properties</span></span>
 

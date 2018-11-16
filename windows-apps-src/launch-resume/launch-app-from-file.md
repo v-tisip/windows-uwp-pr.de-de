@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: c883de1e05b827b6f1c37ad1f911f930b7019ad6
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6662506"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6856498"
 ---
 # <a name="launch-an-app-through-file-activation"></a><span data-ttu-id="cf2c6-104">Starten einer App über Dateiaktivierung</span><span class="sxs-lookup"><span data-stu-id="cf2c6-104">Launch an app through file activation</span></span>
 

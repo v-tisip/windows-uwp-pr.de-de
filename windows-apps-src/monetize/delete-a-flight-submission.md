@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Flight-Übermittlungen, löschen, Flight-Paket
 ms.localizationpriority: medium
 ms.openlocfilehash: 2196a6b7023a062905ae721ebdb536e2c8044057
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6674298"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6833791"
 ---
 # <a name="delete-a-package-flight-submission"></a><span data-ttu-id="91612-104">Löschen einer Flight-Paketübermittlung</span><span class="sxs-lookup"><span data-stu-id="91612-104">Delete a package flight submission</span></span>
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 833dd0a6447e9d0bb49c21a18d17bd7b0dc3455d
-ms.sourcegitcommit: f2c9a050a9137a473f28b613968d5782866142c6
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "6274414"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6840108"
 ---
 # <a name="diagnosing-windows-runtime-component-error-conditions"></a><span data-ttu-id="b1d1c-104">Diagnostizieren von Fehlerbedingungen für Komponenten für Windows-Runtime</span><span class="sxs-lookup"><span data-stu-id="b1d1c-104">Diagnosing Windows Runtime Component error conditions</span></span>
 

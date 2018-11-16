@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: e98b9942dfc14604c061a036cd3c9803abaf3915
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6451932"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6836238"
 ---
 # <a name="shader-resource-view-srv-and-unordered-access-view-uav"></a><span data-ttu-id="c45f1-105">Shaderressourcenansicht (SRV) und Unsortierte Zugriffsansicht (UAV)</span><span class="sxs-lookup"><span data-stu-id="c45f1-105">Shader resource view (SRV) and Unordered Access view (UAV)</span></span>
 

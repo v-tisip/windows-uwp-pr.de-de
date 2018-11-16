@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d77049cbaa289fe8621e8cf91883952e6edda9b2
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6661585"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6836997"
 ---
 # <a name="move-and-draw-commands-syntax"></a><span data-ttu-id="66767-104">Syntax für die Verschieben- und Zeichnen-Befehle</span><span class="sxs-lookup"><span data-stu-id="66767-104">Move and draw commands syntax</span></span>
 
