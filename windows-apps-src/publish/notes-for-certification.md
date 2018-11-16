@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Hinweise für Tester
 ms.localizationpriority: medium
 ms.openlocfilehash: ab3ba2eb08c01bac3b9c0536ce11b8e2bea96054
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6836593"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "6996277"
 ---
 # <a name="notes-for-certification"></a><span data-ttu-id="b6b24-103">Hinweise für Zertifizierung</span><span class="sxs-lookup"><span data-stu-id="b6b24-103">Notes for certification</span></span>
 

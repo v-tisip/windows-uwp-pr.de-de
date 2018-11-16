@@ -9,11 +9,11 @@ keywords: windows10, UWP
 ms.assetid: ed84f232-ddb5-4ba1-bf1c-578e8df47602
 ms.localizationpriority: medium
 ms.openlocfilehash: 0054b71276eec33f87ff1ae51dff0d58c0efcfce
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6856650"
+ms.locfileid: "6972857"
 ---
 # <a name="xbox-dev-mode-companion"></a><span data-ttu-id="425d8-104">Begleitung für den Xbox-Entwicklermodus</span><span class="sxs-lookup"><span data-stu-id="425d8-104">Xbox Dev Mode Companion</span></span>
 

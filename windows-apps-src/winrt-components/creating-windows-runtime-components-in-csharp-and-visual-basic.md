@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e3b9ed2d256fb9ea8d38690a703baf7fbd3e7f0
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6836329"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "6992145"
 ---
 # <a name="creating-windows-runtime-components-in-c-and-visual-basic"></a><span data-ttu-id="3cb17-104">Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3cb17-104">Creating Windows Runtime Components in C# and Visual Basic</span></span>
 <span data-ttu-id="3cb17-105">Ab .NET Framework4.5 können Sie mit verwaltetem Code eigene Windows-Runtime-Typen erstellen, die in einer Komponente für Windows-Runtime gepackt sind.</span><span class="sxs-lookup"><span data-stu-id="3cb17-105">Starting with the .NET Framework 4.5, you can use managed code to create your own Windows Runtime types, packaged in a Windows Runtime component.</span></span> <span data-ttu-id="3cb17-106">Diese Komponente können Sie in UWP-Apps (Universelle Windows-Plattform) mit C++, JavaScript, Visual Basic oder C# verwenden.</span><span class="sxs-lookup"><span data-stu-id="3cb17-106">You can use your component in Universal Windows Platform (UWP) apps with C++, JavaScript, Visual Basic, or C#.</span></span> <span data-ttu-id="3cb17-107">In diesem Thema wird beschrieben, die Regeln zum Erstellen einer Komponente, und beschreibt einige Aspekte der .NET Framework-Unterstützung für die Windows-Runtime.</span><span class="sxs-lookup"><span data-stu-id="3cb17-107">This topic outlines the rules for creating a component, and discusses some aspects of .NET Framework support for the Windows Runtime.</span></span> <span data-ttu-id="3cb17-108">Im Allgemeinen ist diese Unterstützung allen .NET Framework-Programmierern klar.</span><span class="sxs-lookup"><span data-stu-id="3cb17-108">In general, that support is designed to be transparent to the .NET Framework programmer.</span></span> <span data-ttu-id="3cb17-109">Wenn Sie aber eine Komponente erstellen, die mit JavaScript oder C++ verwendet werden soll, müssen Sie auf die Unterschiede bei der Unterstützung der Windows-Runtime durch diese Sprachen achten.</span><span class="sxs-lookup"><span data-stu-id="3cb17-109">However, when you create a component to use with JavaScript or C++, you need to be aware of differences in the way those languages support the Windows Runtime.</span></span>
