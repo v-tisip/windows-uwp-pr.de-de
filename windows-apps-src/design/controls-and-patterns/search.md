@@ -14,11 +14,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: b506b439ff98da873823bd586bb5388fe360b2ba
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6673617"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6839141"
 ---
 # <a name="search-and-find-in-page"></a><span data-ttu-id="3787f-103">Suche und „Auf Seite suchen“</span><span class="sxs-lookup"><span data-stu-id="3787f-103">Search and find-in-page</span></span>
 

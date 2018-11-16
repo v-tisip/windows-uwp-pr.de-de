@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Verpacken
 ms.localizationpriority: medium
 ms.openlocfilehash: 0268e858ecbcaaee95796fa590d4a9994dcfb505
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6658274"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6838805"
 ---
 # <a name="manual-app-packaging"></a><span data-ttu-id="7f4a8-104">Manuelles Verpacken von Apps</span><span class="sxs-lookup"><span data-stu-id="7f4a8-104">Manual app packaging</span></span>
 

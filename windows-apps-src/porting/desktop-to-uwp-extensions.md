@@ -10,11 +10,11 @@ keywords: windows10, UWP
 ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.localizationpriority: medium
 ms.openlocfilehash: 6761ec38b470b798740cbabc72a648f51557edbc
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6672761"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6836782"
 ---
 # <a name="integrate-your-packaged-desktop-application-with-windows-10"></a><span data-ttu-id="471b8-103">Integrieren Sie Ihre verpackte desktop-Anwendung mit Windows 10</span><span class="sxs-lookup"><span data-stu-id="471b8-103">Integrate your packaged desktop application with Windows 10</span></span>
 

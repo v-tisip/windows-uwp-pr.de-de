@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Eingabe, Registrierung, benutzerdefiniert
 ms.localizationpriority: medium
 ms.openlocfilehash: 4bbd4074c52514b9cb66fd6f2dd189421f61d5ee
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/14/2018
-ms.locfileid: "6673928"
+ms.locfileid: "6836060"
 ---
 # <a name="registry-data-for-game-controllers"></a><span data-ttu-id="ad0c3-104">Registrierungsdaten für Spielecontroller</span><span class="sxs-lookup"><span data-stu-id="ad0c3-104">Registry data for game controllers</span></span>
 

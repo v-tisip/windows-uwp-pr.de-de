@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 69aae85f4e0bb01833114ae5b2cbfab45e9dd84d
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6673412"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6839779"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-quizgame-sample-app"></a><span data-ttu-id="33f02-104">Windows-Runtime 8.x zu UWP – Fallstudie: QuizGame-Beispiel-app</span><span class="sxs-lookup"><span data-stu-id="33f02-104">Windows Runtime 8.x to UWP case study: QuizGame sample app</span></span>
 

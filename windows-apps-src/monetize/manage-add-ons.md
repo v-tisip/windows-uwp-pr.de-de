@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-Ons, In-App-Produkt, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: c3861d5a135e0ee7a688a93a57cce801a05cf9a5
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6668442"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6837176"
 ---
 # <a name="manage-add-ons"></a><span data-ttu-id="1b119-104">Verwalten von Add-Ons</span><span class="sxs-lookup"><span data-stu-id="1b119-104">Manage add-ons</span></span>
 
