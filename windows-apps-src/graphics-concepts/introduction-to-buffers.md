@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 14e78aec9afa361b2627d62d92f0ee7d7ab0565b
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6844827"
+ms.locfileid: "6968989"
 ---
 # <a name="introduction-to-buffers"></a><span data-ttu-id="ba60a-104">Einführung zu Puffern</span><span class="sxs-lookup"><span data-stu-id="ba60a-104">Introduction to buffers</span></span>
 

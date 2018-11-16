@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 913faf70531509a604cde52bb71886c128edae46
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6854308"
+ms.locfileid: "6988671"
 ---
 # <a name="camera-independent-flashlight"></a><span data-ttu-id="5abed-105">Kameraunabhängige Taschenlampe</span><span class="sxs-lookup"><span data-stu-id="5abed-105">Camera-independent Flashlight</span></span>
 

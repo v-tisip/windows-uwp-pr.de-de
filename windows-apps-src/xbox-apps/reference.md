@@ -9,11 +9,11 @@ keywords: Windows10, UWP
 ms.assetid: 5ae8e953-0465-487b-81dd-54a85c904daf
 ms.localizationpriority: medium
 ms.openlocfilehash: 894bc6f657f4a65072056a14171bf86b92cced38
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6841711"
+ms.locfileid: "6982121"
 ---
 # <a name="xbox-device-portal-rest-api"></a><span data-ttu-id="37bd9-104">Geräteportal für Xbox– REST-API</span><span class="sxs-lookup"><span data-stu-id="37bd9-104">Xbox Device Portal REST API</span></span>
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d9659d183c020c579aa0a21fe179a69c1d9997c5
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6836044"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "6991721"
 ---
 # <a name="xload-attribute"></a><span data-ttu-id="c4580-104">x:Load-Attribut</span><span class="sxs-lookup"><span data-stu-id="c4580-104">x:Load attribute</span></span>
 

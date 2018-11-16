@@ -9,11 +9,11 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c41801362a03bb8d1d5e06b3ada876014237b1f7
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6852068"
+ms.locfileid: "6973258"
 ---
 # <a name="enable-consumable-in-app-product-purchases"></a><span data-ttu-id="e7c71-103">Unterstützen von Käufen konsumierbarer In-App-Produkte</span><span class="sxs-lookup"><span data-stu-id="e7c71-103">Enable consumable in-app product purchases</span></span>
 

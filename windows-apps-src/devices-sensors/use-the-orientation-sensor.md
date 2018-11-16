@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 49199a91f6713b3f18928eaafb6875a49deaf451
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6833702"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "6995150"
 ---
 # <a name="use-the-orientation-sensor"></a><span data-ttu-id="2386c-104">Verwenden des Ausrichtungssensors</span><span class="sxs-lookup"><span data-stu-id="2386c-104">Use the orientation sensor</span></span>
 

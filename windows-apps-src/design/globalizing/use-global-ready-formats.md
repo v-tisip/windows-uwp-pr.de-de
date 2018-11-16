@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 173198c2c61530704dad02e2e92e6a7e47aae420
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6674331"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6855555"
 ---
 # <a name="globalize-your-datetimenumber-formats"></a><span data-ttu-id="78f39-103">Globalisieren von Datum, Uhrzeit und Zahlenformaten</span><span class="sxs-lookup"><span data-stu-id="78f39-103">Globalize your date/time/number formats</span></span>
 

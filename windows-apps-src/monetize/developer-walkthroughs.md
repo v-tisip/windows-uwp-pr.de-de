@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, exemplarische Vorgehensweisen
 ms.localizationpriority: medium
 ms.openlocfilehash: eed52167655e16b3245bdb5f918244f95b378676
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6849492"
+ms.locfileid: "6967848"
 ---
 # <a name="implement-ads-in-your-app"></a><span data-ttu-id="012b9-104">Implementieren von Werbung in Ihrer App</span><span class="sxs-lookup"><span data-stu-id="012b9-104">Implement ads in your app</span></span>
 

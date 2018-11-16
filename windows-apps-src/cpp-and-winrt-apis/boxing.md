@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, XAML, steuerelement, boxing, einzelwert
 ms.localizationpriority: medium
 ms.openlocfilehash: f4b99f587fbd517b677d85b50abb26fdf072b359
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6671986"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6859238"
 ---
 # <a name="boxing-and-unboxing-scalar-values-to-iinspectable-with-cwinrt"></a><span data-ttu-id="ec9c0-105">Boxing und Unboxing von Einzelwerten für IInspectable mit C++/WinRT</span><span class="sxs-lookup"><span data-stu-id="ec9c0-105">Boxing and unboxing scalar values to IInspectable with C++/WinRT</span></span>
  

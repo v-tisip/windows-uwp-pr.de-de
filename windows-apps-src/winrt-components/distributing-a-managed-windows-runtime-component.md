@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6461b6889f110bde8929e1f370f9197caa33e5f3
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6838400"
+ms.locfileid: "6968540"
 ---
 # <a name="distributing-a-managed-windows-runtime-component"></a><span data-ttu-id="d3f9f-104">Verteilen einer verwalteten Komponente für Windows-Runtime</span><span class="sxs-lookup"><span data-stu-id="d3f9f-104">Distributing a managed Windows Runtime Component</span></span>
 

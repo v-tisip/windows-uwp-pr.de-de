@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiel, planen, Barrierefreiheit, Cloud, Monetarisierung, Paket, Technologie, Konzept, Genehmigung
 ms.localizationpriority: medium
 ms.openlocfilehash: 6d350077e3199bdc875d4ad89559cb88ae8950c9
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6845602"
+ms.locfileid: "6988882"
 ---
 # <a name="planning-for-uwp-games"></a><span data-ttu-id="a5446-104">Planen von UWP-Spielen</span><span class="sxs-lookup"><span data-stu-id="a5446-104">Planning for UWP games</span></span>
 

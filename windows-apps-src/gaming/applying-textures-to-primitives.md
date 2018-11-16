@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Texturen, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: 252613bbea7f4cdb720758d3435cf0920dd93efa
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6852817"
+ms.locfileid: "6971387"
 ---
 # <a name="apply-textures-to-primitives"></a><span data-ttu-id="f4f31-104">Anwenden von Texturen auf Grundtypen</span><span class="sxs-lookup"><span data-stu-id="f4f31-104">Apply textures to primitives</span></span>
 

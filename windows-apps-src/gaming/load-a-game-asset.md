@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, DirectX, Laden von Ressourcen
 ms.localizationpriority: medium
 ms.openlocfilehash: 1bea3f515ba8ff810fc6dfd6281f0488c4f3e235
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6844426"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "6989855"
 ---
 # <a name="load-resources-in-your-directx-game"></a><span data-ttu-id="a3821-104">Laden von Ressourcen im DirectX-Spiel</span><span class="sxs-lookup"><span data-stu-id="a3821-104">Load resources in your DirectX game</span></span>
 

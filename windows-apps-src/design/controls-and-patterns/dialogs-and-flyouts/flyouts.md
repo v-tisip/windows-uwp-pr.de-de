@@ -14,11 +14,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: e68f8f48ca9ba67a29c8a52a5d59767a080f642b
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6663745"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6978860"
 ---
 # <a name="flyouts"></a><span data-ttu-id="b4dbf-103">Flyouts</span><span class="sxs-lookup"><span data-stu-id="b4dbf-103">Flyouts</span></span>
 

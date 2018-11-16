@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 40335c70-46cc-40fd-9fe0-3cc8e6200482
 ms.localizationpriority: medium
 ms.openlocfilehash: 58c6ea939e96a2172c9f008d2238d5a84c228afe
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6853776"
+ms.locfileid: "6983189"
 ---
 # <a name="new-apis-in-windows-10-build-14393"></a><span data-ttu-id="1a958-104">Neue APIs in Windows10, Build 14393</span><span class="sxs-lookup"><span data-stu-id="1a958-104">New APIs in Windows 10 build 14393</span></span>
 
