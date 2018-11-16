@@ -15,11 +15,11 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 577e4ca0716427298344ac2eec5155c786d5530c
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6646265"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6836474"
 ---
 # <a name="radio-buttons"></a><span data-ttu-id="10f55-103">Optionsfelder</span><span class="sxs-lookup"><span data-stu-id="10f55-103">Radio buttons</span></span>
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 12aabff66fc116f510dced78aa56f3df5f84c850
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6453693"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6833959"
 ---
 # <a name="getting-started-with-a-camera-barcode-scanner"></a><span data-ttu-id="f185b-104">Erste Schrittemit dem Kamera-Strichcodescanner</span><span class="sxs-lookup"><span data-stu-id="f185b-104">Getting started with a camera barcode scanner</span></span>
 ## <a name="step-1-add-capability-declarations-to-your-app-manifest"></a><span data-ttu-id="f185b-105">Schritt 1: Hinzufügen von Funktionsdeklarationen zum App-Manifest</span><span class="sxs-lookup"><span data-stu-id="f185b-105">Step 1: Add capability declarations to your app manifest</span></span>

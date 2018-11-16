@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 3ec0f99f069950776ab934c82bd3197bdd6c9dd6
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6651355"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "6834195"
 ---
 # <a name="mouse-interactions"></a><span data-ttu-id="4e392-103">Mausinteraktionen</span><span class="sxs-lookup"><span data-stu-id="4e392-103">Mouse interactions</span></span>
 
