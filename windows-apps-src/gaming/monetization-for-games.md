@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Monetisierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 6d31aac20454536c6c25d0a8e2dc2f768ea9aabc
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6851897"
+ms.locfileid: "6984797"
 ---
 #  <a name="monetization-for-games"></a><span data-ttu-id="f1c6c-104">Monetisierung für Spiele</span><span class="sxs-lookup"><span data-stu-id="f1c6c-104">Monetization for games</span></span>
 

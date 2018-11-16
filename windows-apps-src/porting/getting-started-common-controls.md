@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: db2b4a74b5b40060779dd82764dcf2ed2799b285
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6833524"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "6989519"
 ---
 # <a name="getting-started-common-controls"></a><span data-ttu-id="1fe91-104">Erste Schritte: Allgemeine Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="1fe91-104">Getting started: Common Controls</span></span>
 
