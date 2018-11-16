@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, optionale Pakete, zusammengehörig, Paket-Erweiterung, visual studio
 ms.localizationpriority: medium
 ms.openlocfilehash: c21b84467151493836186d1d55ab5e4e542899ec
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6645365"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6847716"
 ---
 # <a name="optional-packages-and-related-set-authoring"></a><span data-ttu-id="9610a-105">Optionale Pakete und die Erstellung zugehöriger Sets</span><span class="sxs-lookup"><span data-stu-id="9610a-105">Optional packages and related set authoring</span></span>
 <span data-ttu-id="9610a-106">Optionale Pakete enthalten Inhalte, die in ein Hauptpaket integriert werden können.</span><span class="sxs-lookup"><span data-stu-id="9610a-106">Optional packages contain content that can be integrated with a main package.</span></span> <span data-ttu-id="9610a-107">Diese sind nützlich für herunterladbare Inhalte (DLC), da große Apps so im Hinblick auf größenbeschränkungen, oder auch zusätzliche Inhalte getrennt von der ursprünglichen app.</span><span class="sxs-lookup"><span data-stu-id="9610a-107">These are useful for downloadable content (DLC), dividing a large app for size restraints, or for shipping any additional content separate from your original app.</span></span>

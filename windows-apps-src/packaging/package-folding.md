@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows10, verpackung, paketlayout, bestandspaket
 ms.localizationpriority: medium
 ms.openlocfilehash: efdf560158e2b57ae9e05ecc31d49c7cf981d8c0
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6669191"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6852421"
 ---
 # <a name="developing-with-asset-packages-and-package-folding"></a><span data-ttu-id="30917-104">Entwickeln mit Bestandspaketen und Paketfaltung</span><span class="sxs-lookup"><span data-stu-id="30917-104">Developing with asset packages and package folding</span></span> 
 

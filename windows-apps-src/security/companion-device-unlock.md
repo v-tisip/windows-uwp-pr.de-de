@@ -9,11 +9,11 @@ keywords: Windows 10, Uwp, Sicherheit
 ms.assetid: 89f3d331-20cd-457b-83e8-1a22aaab2658
 ms.localizationpriority: medium
 ms.openlocfilehash: 1bf1ae02a1c1937c02b6c750872dc784d28cd8e0
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6661931"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6843857"
 ---
 # <a name="windows-unlock-with-windows-hello-companion-iot-devices"></a><span data-ttu-id="406ce-105">Entsperren von Windows mit Windows Hello-Begleitgeräten (IoT)</span><span class="sxs-lookup"><span data-stu-id="406ce-105">Windows Unlock with Windows Hello companion (IoT) devices</span></span>
 

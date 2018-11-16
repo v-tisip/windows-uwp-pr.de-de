@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 92dc9437dc2417b8f3da99df7cd6d6eb0c8edd1b
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6645681"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6851481"
 ---
 # <a name="lost-devices"></a><span data-ttu-id="f9e59-104">Nicht mehr auffindbare Geräte</span><span class="sxs-lookup"><span data-stu-id="f9e59-104">Lost devices</span></span>
 

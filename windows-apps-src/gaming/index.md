@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Spiele, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: 1642251ac7019d8bdf0216487eb7085d616863cf
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6666397"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6845990"
 ---
 # <a name="game-programming"></a><span data-ttu-id="9caa1-105">Programmierung von Spielen</span><span class="sxs-lookup"><span data-stu-id="9caa1-105">Game programming</span></span>
 

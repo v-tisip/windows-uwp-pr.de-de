@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 5846edda167823b7ae161d332fbde450ccf20d72
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6657742"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6848713"
 ---
 # <a name="diffuse-lighting"></a><span data-ttu-id="1e36d-104">Diffuse Beleuchtung</span><span class="sxs-lookup"><span data-stu-id="1e36d-104">Diffuse lighting</span></span>
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Beispiel, DirectX, Grafiken
 ms.localizationpriority: medium
 ms.openlocfilehash: 5171578b844829ec590b654194639ed6c8ebbfe1
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6667334"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6848190"
 ---
 # <a name="adding-visual-content-to-the-marble-maze-sample"></a><span data-ttu-id="bd5a4-104">Hinzufügen von visuellem Inhalt zum Marble Maze-Beispiel</span><span class="sxs-lookup"><span data-stu-id="bd5a4-104">Adding visual content to the Marble Maze sample</span></span>
 

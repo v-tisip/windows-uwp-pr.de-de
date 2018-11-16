@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Directx, Vorlagen
 ms.localizationpriority: medium
 ms.openlocfilehash: d27e4bb0d643b859958f887133a128572ca31225
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6667199"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6844579"
 ---
 # <a name="directx-game-project-templates"></a><span data-ttu-id="b55a6-104">DirectX-Spielprojektvorlagen</span><span class="sxs-lookup"><span data-stu-id="b55a6-104">DirectX game project templates</span></span>
 

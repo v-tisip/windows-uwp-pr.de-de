@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b5a3425c49a30ddb96fcb7a8a2c8b83fbb6dff3
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6673272"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6843984"
 ---
 # <a name="porting-windows-runtime-8x-xaml-and-ui-to-uwp"></a><span data-ttu-id="094f4-104">Portieren von Windows-Runtime 8.x-XAML und -UI zu UWP</span><span class="sxs-lookup"><span data-stu-id="094f4-104">Porting Windows Runtime 8.x XAML and UI to UWP</span></span>
 

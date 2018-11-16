@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, AdControl, Anzeigen-Steuerelement, HTML, Javascript
 ms.localizationpriority: medium
 ms.openlocfilehash: df5623b8c73dc6c96c2869156d22da64f6a6b58d
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6849633"
+ms.locfileid: "6982774"
 ---
 # <a name="adcontrol-in-html-5-and-javascript"></a><span data-ttu-id="b3ae0-104">„AdControl“ in HTML 5 und JavaScript</span><span class="sxs-lookup"><span data-stu-id="b3ae0-104">AdControl in HTML 5 and JavaScript</span></span>
 

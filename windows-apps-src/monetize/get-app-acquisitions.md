@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, App-Käufe
 ms.localizationpriority: medium
 ms.openlocfilehash: 0c2e972b46c830dd6c9ea778e525f0abceda3e99
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6672953"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6847127"
 ---
 # <a name="get-app-acquisitions"></a><span data-ttu-id="11b63-104">Abrufen von App-Käufen</span><span class="sxs-lookup"><span data-stu-id="11b63-104">Get app acquisitions</span></span>
 

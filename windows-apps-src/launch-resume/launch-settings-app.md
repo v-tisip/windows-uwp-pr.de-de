@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b86298ca671282dea201e3088bc60845231fe007
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6664254"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6860359"
 ---
 # <a name="launch-the-windows-settings-app"></a><span data-ttu-id="e2027-106">Starten der Windows-Einstellungs-App</span><span class="sxs-lookup"><span data-stu-id="e2027-106">Launch the Windows Settings app</span></span>
 

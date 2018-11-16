@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0880105fccca297204c27e80099f0cfc6d016a27
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6645595"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6853660"
 ---
 # <a name="attract-customers-and-promote-your-apps"></a><span data-ttu-id="6792c-103">Kunden gewinnen und Bewerben von Apps</span><span class="sxs-lookup"><span data-stu-id="6792c-103">Attract customers and promote your apps</span></span>
 

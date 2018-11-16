@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, das Drucken
 ms.localizationpriority: medium
 ms.openlocfilehash: b35d11e9dcf1e79296e0eeaff85c975c24d65920
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6665770"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6848875"
 ---
 # <a name="print-from-your-app"></a><span data-ttu-id="6ce17-105">Drucken in Apps</span><span class="sxs-lookup"><span data-stu-id="6ce17-105">Print from your app</span></span>
 

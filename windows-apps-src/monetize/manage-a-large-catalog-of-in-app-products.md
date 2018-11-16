@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, In-App-Käufe, IAPs, Add-Ons, Katalog, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: f57adf62939c28794e3ecdf6e59f2c4763de9c21
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6649067"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6980911"
 ---
 # <a name="manage-a-large-catalog-of-in-app-products"></a><span data-ttu-id="6f914-104">Verwalten eines großen Katalogs von In-App-Produkten</span><span class="sxs-lookup"><span data-stu-id="6f914-104">Manage a large catalog of in-app products</span></span>
 
