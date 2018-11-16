@@ -8,12 +8,12 @@ ms.date: 12/14/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f652ae186ced996c103a60aa8f13956a5da59ca
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: 767ea7ca6a5f226fda75d97c3497ae77a5819626
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6665922"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6845651"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Einrichten von Auszahlungskonten und Steuerformularen.
 
@@ -44,8 +44,8 @@ Bei einem Auszahlungskonto handelt es sich um das Bankkonto, auf das wir Ihren V
  
 **So richten Sie ein Auszahlungskonto ein**
 
-1.  Rufen Sie im [Partner Center](https://partner.microsoft.com/dashboard)die **kontoeinstellungen** aus, indem Sie auf das Symbol in der oberen rechten Ecke.
-2.  Klicken Sie im linken Navigationsmenü der Seite **Kontoeinstellungen** auf **Auszahlungskonto**.
+1.  Wählen Sie im [Partner Center](https://partner.microsoft.com/dashboard)das Symbol " **kontoeinstellungen** " in der oberen rechten Ecke, und wählen Sie dann **entwicklereinstellungen**.
+2.  Wählen Sie im linken Navigationsmenü **auszahlungskonto**.
 
    > [!NOTE]
    > Da es sich um vertrauliche Informationen handelt, können Sie aufgefordert werden, sich erneut anzumelden.
@@ -136,8 +136,8 @@ Sie können abgeschlossen und Ihrer Steuerformulare elektronisch im Partner Cent
  
 **So füllen Sie Ihr Steuerprofil aus**
 
-1.  Klicken Sie im [Partner Center](https://partner.microsoft.com/dashboard)auf das Symbol " **Konto** " in der oberen rechten Ecke.
-2.  Klicken Sie im linken Navigationsmenü der Seite **Kontoeinstellungen** auf **Steuerprofil**.
+1.  Wählen Sie im [Partner Center](https://partner.microsoft.com/dashboard)das Symbol " **kontoeinstellungen** " in der oberen rechten Ecke, und wählen Sie dann **entwicklereinstellungen**.
+2.  Wählen Sie im linken Navigationsmenü **Steuerprofil**.
 
    > [!NOTE]
    > Da es sich um vertrauliche Informationen handelt, können Sie aufgefordert werden, sich erneut anzumelden.
