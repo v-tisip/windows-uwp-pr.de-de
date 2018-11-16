@@ -12,12 +12,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f9d56090e8fc1de83eeb4e8a68ca1830692c5b2f
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.openlocfilehash: c116a6131889e1d87642165f4e1d9883d78add33
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6854940"
+ms.locfileid: "6981156"
 ---
 # <a name="acrylic-material"></a>Acryl-Material
 
@@ -85,7 +85,6 @@ Berücksichtigen Sie die folgenden Verwendungsmuster zu entscheiden, wie Acryl i
 
 Wenn Ihre app nicht NavigationView nutzen kann, und Sie Acryl selbst hinzufügen möchten, empfehlen wir die Verwendung von relativ durchsichtige Acryl mit 60 % Farbton-Deckkraft.
  - Wenn der Bereich als Überlagerung über anderen Inhalten der App geöffnet wird, sollte dies [60% In-App-Acryl](#acrylic-theme-resources) sein.
- - Wenn der Bereich parallel mit dem Hauptinhalt der App geöffnet wird, sollte dies [60% Hintergrund-Acryl](#acrylic-theme-resources)sein.
 
 ![Karten-app mit in-app horizontalen Befehle](images/Maps_In_App_Acrylic_1.png)
 
@@ -93,7 +92,7 @@ Darüber hinaus erhält müssen Ihre Inhalte erweitern oder Bildlauf unter der A
 
 ### <a name="vertical-panes"></a>Vertikalen Bereichen
 
-Für vertikalen Bereichen oder Oberflächen, die im Abschnitt Inhalt Ihrer App zu helfen, empfehlen wir, dass Sie einen nicht transparenten Hintergrund anstelle von Acryl verwenden. Wenn Ihre vertikalen Bereichen basieren auf Inhalte öffnen, vorgeschlagener wie in NavigationView **Collapsed** oder **minimale** Modi: wir Sie in-app-Acryl verwenden, um die Seite Kontext zu behalten, wenn der Benutzer in diesem Bereich zu öffnen.
+Für vertikalen Bereichen oder Oberflächen, die im Abschnitt Inhalt Ihrer App zu helfen, empfehlen wir, dass Sie einen nicht transparenten Hintergrund anstelle von Acryl verwenden. Wenn Ihre vertikalen Bereichen basieren auf Inhalte öffnen, mit Vorschlägen wie im NavigationView **Compact** oder **minimierten** Modus, wir, dass Sie in-app-Acryl verwenden, um die Seite Kontext zu behalten, wenn der Benutzer in diesem Bereich zu öffnen.
 
 ### <a name="transient-surfaces"></a>Vorübergehende Oberflächen
 
