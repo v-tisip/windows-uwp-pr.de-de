@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, geräteportal, apps-Manager, Bereitstellung, sdk
 ms.localizationpriority: medium
 ms.openlocfilehash: 16dc7c3d8182e249134be941d466574cddc36157
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6841137"
+ms.locfileid: "6970472"
 ---
 # <a name="deploy-an-app-through-loose-file-registration"></a>Bereitstellen einer App über Registrieren loser Dateien 
 
@@ -79,7 +79,7 @@ Um das Layout loser Datei zu registrieren, starten Sie PowerShell, und geben Sie
 Add-AppxPackage -Register <path to manifest file>
 ```
 
-## <a name="troubleshooting"></a>Fehlerbehebung
+## <a name="troubleshooting"></a>Problembehandlung
 
 ### <a name="mapped-network-drives"></a>Zugeordnete Netzwerklaufwerke
 Zugeordnete Netzwerklaufwerke werden derzeit für lose Datei Registrierungen nicht unterstützt. Verweisen Sie auf das zugeordnete Laufwerk mit vollständigem den Netzwerk-Freigabepfad.

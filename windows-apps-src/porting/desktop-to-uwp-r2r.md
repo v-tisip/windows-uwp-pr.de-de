@@ -8,19 +8,19 @@ ms.date: 06/11/2018
 ms.topic: article
 keywords: Windows 10, systemeigenen Images Compiler
 ms.localizationpriority: medium
-ms.openlocfilehash: 231d5aa895cb4cf63ade01660df61e32424e67c7
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.openlocfilehash: b7965c42a5d8ff99fc0dc9e28213d92bdcf715b2
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "6444724"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6849052"
 ---
 # <a name="optimize-your-net-desktop-apps-with-native-images"></a>Optimieren Sie Ihre .NET Desktop-apps für systemeigene Abbilder
 
 > [!NOTE]
 > Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.
 
-Sie können die Startzeit Ihrer .NET Framework-Anwendung verbessern, indem Sie Ihre Binärdateien vorab kompilieren. Sie können diese Technologie auf große Anwendungen verwenden, die Sie verpacken und verteilen Sie über den Windows Store. In einigen Fällen haben wir eine 20 % Leistungssteigerung beobachtet. Erfahren Sie mehr über diese Technologie in die [Technische Übersicht](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/readytorun-overview.md).
+Sie können die Startzeit Ihrer .NET Framework-Anwendung verbessern, indem Sie Ihre Binärdateien vorab kompilieren. Sie können diese Technologie auf große Anwendungen verwenden, die Sie verpacken und verteilen Sie über den Microsoft Store. In einigen Fällen haben wir eine 20 % Leistungssteigerung beobachtet. Erfahren Sie mehr über diese Technologie in die [Technische Übersicht](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/readytorun-overview.md).
 
 Wir haben eine Vorschauversion von der Compiler systemeigenes Bild als [NuGet-Paket](https://www.nuget.org/packages/Microsoft.DotNet.Framework.NativeImageCompiler)veröffentlicht. Sie können dieses Paket auf jede .NET Framework-Anwendung, die das .NET Framework-Version 4.6.2 zielt auf Anwenden oder höher. Dieses Paket Fügt einen Post-Buildschritt, der eine systemeigene Nutzlast für alle Binärdateien, die von der Anwendung verwendeten enthält. -Nutzlast dieser optimierten wird geladen werden, wenn die Anwendung in .NET 4.7.2 und höher ausführt, während frühere Versionen weiterhin die MSIL-Code geladen werden.
 
@@ -59,7 +59,7 @@ So konfigurieren Sie Ihr Projekt:
 
 1. Mit der rechten Maustaste in der Projektmappe, und wählen Sie dann die **Configuration Manager**.
 
-2. Wählen Sie **< neu. >** im Dropdownmenü **Plattform** neben dem Namen des Projekts, das die ausführbare Datei erstellt.
+2. Wählen Sie **<New... >** im Dropdownmenü **Plattform** neben dem Namen des Projekts, das die ausführbare Datei erstellt.
 
 3. Das Dialogfeld **Neues Projektplattform** stellen Sie sicher, dass die **Copy-Einstellungen aus** Dropdown-Liste **Any CPU**festgelegt ist.
 

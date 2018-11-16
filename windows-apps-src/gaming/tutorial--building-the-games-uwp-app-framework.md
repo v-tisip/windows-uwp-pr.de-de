@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Spiele, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 3444c71b4e4c610be0b7d92ac6d761340c5dd5c2
-ms.sourcegitcommit: 4d88adfaf544a3dab05f4660e2f59bbe60311c00
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6459075"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6853339"
 ---
 #  <a name="define-the-uwp-app-framework"></a>Definieren des UWP-App-Frameworks
 

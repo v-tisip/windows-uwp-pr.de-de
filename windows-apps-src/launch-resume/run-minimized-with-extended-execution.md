@@ -9,11 +9,11 @@ keywords: windows10, UWP, erweiterte Ausführung, minimiert, ExtendedExecutionSe
 ms.assetid: e6a6a433-5550-4a19-83be-bbc6168fe03a
 ms.localizationpriority: medium
 ms.openlocfilehash: 30e05259306a222a3cb18268aeb58a8380f6d4d2
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6861063"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6972135"
 ---
 # <a name="postpone-app-suspension-with-extended-execution"></a>Verschieben der angehaltenen App mithilfe der erweiterten Ausführung
 

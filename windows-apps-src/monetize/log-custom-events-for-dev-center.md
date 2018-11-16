@@ -1,7 +1,7 @@
 ---
 author: Xansky
 Description: You can log custom events from your UWP app and review those events in the Usage report in Partner Center.
-title: Protokollieren Sie benutzerdefinierter Ereignisse für Partner Center
+title: Protokollieren benutzerdefinierter Ereignisse im Partner Center
 ms.author: mhopkins
 ms.date: 06/01/2018
 ms.topic: article
@@ -9,13 +9,13 @@ keywords: Windows10, UWP, Microsoft Store-Services-SDK, Ereignisse protokolliere
 ms.assetid: 4aa591e0-c22a-4c90-b316-0b5d0410af19
 ms.localizationpriority: medium
 ms.openlocfilehash: 47c1eb02434dc71cb7da949d58ec38cf3b4cf65a
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6861133"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6978369"
 ---
-# <a name="log-custom-events-for-partner-center"></a>Protokollieren Sie benutzerdefinierter Ereignisse für Partner Center
+# <a name="log-custom-events-for-partner-center"></a>Protokollieren benutzerdefinierter Ereignisse im Partner Center
 
 Der [Bericht "Nutzung"](https://msdn.microsoft.com/windows/uwp/publish/usage-report) im Partner Center können Sie Informationen zu benutzerdefinierten Ereignissen, die Sie in Ihrer app (universelle Windows Plattform) definiert haben. Ein benutzerdefiniertes Ereignis ist eine beliebige Zeichenfolge, die ein Ereignis oder eine Aktivität in Ihrer App repräsentiert. Beispielsweise kann ein Spiel benutzerdefinierte Ereignisse mit den Bezeichnungen *FirstLevelPassed*, *SecondLevelPassed*usw. definieren, die protokolliert werden, wenn der Benutzer die einzelnen Levels des Spiels durchläuft.
 
