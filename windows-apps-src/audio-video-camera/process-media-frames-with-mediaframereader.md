@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: c733fe0f4e8ee955c68ff4ec30bd9f9f2675899d
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: 6d4c752438af3425fffc69ecf71ff0dc8abe5963
+ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6649774"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6851574"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>Verarbeiten von Medienframes mit „MediaFrameReader“
 
@@ -50,7 +50,7 @@ Viele Apps, die Medienframes verarbeiten, müssen Frames aus mehreren Quellen gl
 
 [!code-cs[FindAllAsync](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFindAllAsync)]
 
-Sie können auch einen [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceWatcher) erstellen, indem Sie mit [**DeviceInformation.CreateWatcher**](https://msdn.microsoft.com/library/windows/apps/br225427) und dem vom [**MediaFrameSourceGroup.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.GetDeviceSelector) zurückgegebenen Wert Benachrichtigungen empfangen, wenn sich die verfügbaren Framequellgruppen für das Gerät ändern, z.B. bei Anschließen einer externen Kamera. Weitere Informationen finden Sie unter [**Auflisten von Geräten**](https://msdn.microsoft.com/windows/uwp/devices-sensors/enumerate-devices).
+Sie können auch eine [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/Windows.Devices.Enumeration.DeviceWatcher) mit [**DeviceInformation.CreateWatcher**](https://msdn.microsoft.com/library/windows/apps/br225427) und den von [**MediaFrameSourceGroup.GetDeviceSelector**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup.GetDeviceSelector) zurückgegebenen Wert Benachrichtigungen empfangen, wenn die verfügbaren auf dem Gerät framequellgruppen erstellen ändern, z. B. bei eine externe Kamera angeschlossen ist. Weitere Informationen finden Sie unter [**Auflisten von Geräten**](https://msdn.microsoft.com/windows/uwp/devices-sensors/enumerate-devices).
 
 Eine [**MediaFrameSourceGroup**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceGroup) verfügt über eine Sammlung von [**MediaFrameSourceInfo**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.Frames.MediaFrameSourceInfo)-Objekten, die in der Gruppe enthaltene Framequellen beschreiben. Nach dem Abrufen der auf dem Gerät verfügbaren Framequellgruppen können Sie die Gruppe auswählen, die die für Sie relevanten Framequellen verfügbar macht.
 

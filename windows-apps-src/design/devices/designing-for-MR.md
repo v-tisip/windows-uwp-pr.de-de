@@ -15,12 +15,12 @@ design-contact: jeffarn
 dev-contact: ''
 doc-status: ''
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f392d1d6c8eaa309e1774e8a98671a7743fdc9d
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.openlocfilehash: e6bba6c22b7f0055a93bfd1826bc3a2acc0f2164
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6665020"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6968384"
 ---
 # <a name="designing-for-mixed-reality"></a>Design für Mixed Reality
 
@@ -86,7 +86,7 @@ Mehrere neuartige Eingabemethoden wurden speziell für den Einsatz mit Mixed Rea
 * [Klick-Gerät](https://developer.microsoft.com/windows/mixed-reality/hardware_accessories) (nur HoloLens)
 * [Motion-Controller](https://developer.microsoft.com/windows/mixed-reality/motion_controllers) (nur Mixed Reality-Geräte, siehe oben)
 
-Diese Controller lassen die Interaktion mit virtuellen Objekten natürlich und präzise erscheinen. Einige der Interaktionen erhalten Sie kostenlos. Zum Beispiel generiert die Wählen-Geste von HoloLens oder das Klicken auf die Windows-Taste oder Drücken auf die Trigger des Motion Controllers die Eingabe Antwort, die Sie erwarten würden (erneut ohne zusätzliche Programmierung).
+Diese Controller lassen die Interaktion mit virtuellen Objekten natürlich und präzise erscheinen. Einige der Interaktionen erhalten Sie kostenlos. Beispielsweise wählen-Geste von HoloLens, oder klicken Sie auf die Motion-Controller-Windows-Taste oder der Trigger wird die Eingabe Antwort, die Sie, erneut erwarten würden und ohne Programmierung ihrerseits generiert.
 
 Manchmal werden Sie trotzdem Code hinzufügen wollen, um die Vorteile der zusätzlichen Informationen und Eingaben zu nutzen. Mit den Motion Controllern können z. B. Objekte präzise manipuliert werden, wenn Sie Code schreiben, der deren Position und Tastendruck berücksichtigt.
 
