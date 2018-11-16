@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, Uwp, animation
 ms.localizationpriority: medium
 ms.openlocfilehash: 2b28653fc7746075c57f862b0c885beac6d4934f
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6849403"
+ms.locfileid: "6978505"
 ---
 # <a name="spring-animations"></a><span data-ttu-id="bc7dc-104">Feder-Animationen</span><span class="sxs-lookup"><span data-stu-id="bc7dc-104">Spring animations</span></span>
 

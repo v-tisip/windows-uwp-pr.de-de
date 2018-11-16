@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 2696cb46591757421795b15083ea7fdab54943c5
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/15/2018
-ms.locfileid: "6851664"
+ms.locfileid: "6976991"
 ---
 # <a name="xdefaultbindmode-attribute"></a><span data-ttu-id="59058-104">x:DefaultBindMode-Attribut</span><span class="sxs-lookup"><span data-stu-id="59058-104">x:DefaultBindMode attribute</span></span>
 

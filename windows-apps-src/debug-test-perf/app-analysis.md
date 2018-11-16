@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 346e6790c6578bf861ba1dda937eae6d4d50f00f
-ms.sourcegitcommit: e38b334edb82bf2b1474ba686990f4299b8f59c7
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6843303"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "6996134"
 ---
 # <a name="app-analysis-overview"></a><span data-ttu-id="9970a-104">App-Analyse – Übersicht</span><span class="sxs-lookup"><span data-stu-id="9970a-104">App Analysis overview</span></span>
 

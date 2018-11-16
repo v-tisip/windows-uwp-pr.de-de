@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, uwp, spiele, directx, grafiken
 ms.localizationpriority: medium
 ms.openlocfilehash: 0050b854b6c8c02cd6eda5e4903fe07ee25d521d
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "6672891"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "6993101"
 ---
 # <a name="draw-to-the-screen"></a><span data-ttu-id="40615-104">Zeichnen auf dem Bildschirm</span><span class="sxs-lookup"><span data-stu-id="40615-104">Draw to the screen</span></span>
 

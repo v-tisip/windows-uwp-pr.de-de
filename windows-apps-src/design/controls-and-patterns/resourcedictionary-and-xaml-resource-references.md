@@ -14,11 +14,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b5d2a55610b6cec2f9026a5834b00ad7015a9c6
-ms.sourcegitcommit: 71e8eae5c077a7740e5606298951bb78fc42b22c
+ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "6648894"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "6987891"
 ---
 # <a name="resourcedictionary-and-xaml-resource-references"></a><span data-ttu-id="ba9f5-103">ResourceDictionary- und XAML-Ressourcenreferenzen</span><span class="sxs-lookup"><span data-stu-id="ba9f5-103">ResourceDictionary and XAML resource references</span></span>
 
