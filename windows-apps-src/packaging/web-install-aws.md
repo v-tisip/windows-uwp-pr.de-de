@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, Windows 10, UWP, app-Installer, AppInstaller, querladen, im Zusammenhang mit festgelegten optionale Pakete, AWS
 ms.localizationpriority: medium
 ms.openlocfilehash: f24abac93e2444a3c9f454c8883902e5db4d31be
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6967898"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7157612"
 ---
 # <a name="hosting-uwp-app-packages-on-aws-for-web-install"></a>Hosten von UWP-App-Paketen auf AWS für die Webinstallation
 
@@ -96,7 +96,7 @@ Nachdem der Webseite in Ihre Amazon S3 Buckets hochgeladen wurde, rufen Sie den 
 
 Verwenden Sie den Link, um die Webseite zu öffnen. Da wir Berechtigungen gewähren öffentlichen Zugriff auf die app-Paket und die Webseite festgelegt, kann alle Personen mit einem Link zu der Webseite darauf zugreifen, und installieren Ihre UWP-app-Pakete mithilfe von App-Installer. Beachten Sie, dass App-Installer Teil von Windows 10-Plattform ist. Als Entwickler müssen Sie keine Features oder zusätzlichen Code zu Ihrer app für die Verwendung der App-Installer ermöglichen hinzufügen. 
 
-## <a name="troubleshooting"></a>Fehlerbehebung
+## <a name="troubleshooting"></a>Problembehandlung
 
 ### <a name="app-installer-fails-to-install"></a>App-Installer Fehler bei der Installation 
 

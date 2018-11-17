@@ -7,16 +7,16 @@ ms.date: 11/06/2018
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Fehler, Details
 ms.localizationpriority: medium
-ms.openlocfilehash: 33733af7f323817bc82d49800c2dc17c5f7b9887
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.openlocfilehash: 6f665b99b7f64e41597a5767d58b86ac8e85c6bd
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6978349"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7155536"
 ---
 # <a name="get-details-for-an-error-in-your-xbox-one-game"></a>Abrufen von Details zu einem Fehler in Ihrer Xbox One-Spiele
 
-Verwenden Sie diese Methode in der Microsoft Store-Analyse-API um detaillierte Daten zu einem spezifischen Fehler für Ihre Xbox One Spiel abzurufen, die das über das Xbox-Portal (XDP) und im XDP Analytics Dev Center-Dashboard verfügbar ist. Diese Methode kann nur Details zu Fehlern abrufen, die in den letzten 30Tagen aufgetreten sind.
+Verwenden Sie diese Methode in der Microsoft Store-Analyse-API um detaillierte Daten zu einem spezifischen Fehler für Ihre Xbox One Spiel abzurufen, die das über das Xbox-Portal (XDP) und im XDP Analytics Partner Center-Dashboard verfügbar ist. Diese Methode kann nur Details zu Fehlern abrufen, die in den letzten 30Tagen aufgetreten sind.
 
 Bevor Sie diese Methode verwenden können, müssen Sie zuerst die Methode zum [Abrufen von Fehlerberichtsdaten für Ihre Xbox One Spiel](get-error-reporting-data-for-your-xbox-one-game.md) verwenden, um die ID des Fehlers abzurufen, zu dem Sie detaillierte Informationen erhalten möchten.
 
@@ -50,7 +50,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 | Parameter        | Typ   |  Beschreibung      |  Erforderlich  
 |---------------|--------|---------------|------|
-| applicationId | string | Die Produkt-ID des Xbox One Spiels, für die Fehlerdetails abgerufen werden. Um die Produkt-ID Ihres Spiels zu erhalten, wechseln Sie zu Ihrem Spiel in der Xbox-Entwickler-Portal (XDP) und rufen Sie die Produkt-ID von der URL ab. Alternativ können ist Sie Ihre integritätsdaten vom Windows Dev Center-Analysebericht herunterladen, die Produkt-ID in der TSV-Datei enthalten. |  Ja  |
+| applicationId | string | Die Produkt-ID des Xbox One Spiels, für die Fehlerdetails abgerufen werden. Um die Produkt-ID Ihres Spiels zu erhalten, wechseln Sie zu Ihrem Spiel in der Xbox-Entwickler-Portal (XDP) und rufen Sie die Produkt-ID von der URL ab. Alternativ können ist Sie Ihre integritätsdaten vom Windows Partner Center-Analysebericht herunterladen, die Produkt-ID in der TSV-Datei enthalten. |  Ja  |
 | failureHash | string | Die eindeutige ID des Fehlers, zu dem Sie detaillierte Informationen erhalten möchten. Um diesen Wert für den Fehler zu erhalten, die Sie interessiert sind, verwenden Sie die Methode zum [Abrufen von Fehlerberichtsdaten für Ihre Xbox One Spiel](get-error-reporting-data-for-your-xbox-one-game.md) , und verwenden Sie den Wert **FailureHash** im Antworttext dieser Methode. |  Ja  |
 | startDate | date | Das Startdatum im Datumsbereich der detaillierten Fehlerdaten, die abgerufen werden sollen. Der Standardwert ist 30Tage vor dem aktuellen Datum. |  Nein  |
 | endDate | date | Das Enddatum im Datumsbereich der detaillierten Fehlerdaten, die abgerufen werden sollen. Der Standardwert ist das aktuelle Datum. |  Nein  |
