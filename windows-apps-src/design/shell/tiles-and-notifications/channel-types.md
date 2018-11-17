@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: db2cf1c732669a2ae45b8a5eb427e8864446c800
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7102184"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7161605"
 ---
 # <a name="choosing-the-right-push-notification-channel-type"></a><span data-ttu-id="8c7e2-103">Auswählen des richtigen Kanaltypen für die Pushbenachrichtigungen</span><span class="sxs-lookup"><span data-stu-id="8c7e2-103">Choosing the right push notification channel type</span></span>
 

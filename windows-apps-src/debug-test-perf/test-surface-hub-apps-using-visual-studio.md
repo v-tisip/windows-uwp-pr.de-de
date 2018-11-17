@@ -9,21 +9,21 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 63214ce47bffc5a0b13f421e5185d06cd810ea34
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6977371"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7161319"
 ---
-# <a name="test-surface-hub-apps-using-visual-studio"></a><span data-ttu-id="8f598-104">Testen von Surface Hub-Apps mit Visual Studio</span><span class="sxs-lookup"><span data-stu-id="8f598-104">Test Surface Hub apps using Visual Studio</span></span>
-<span data-ttu-id="8f598-105">Der Visual Studio-Simulator bietet eine Umgebung, in der Sie Universelle Windows-Plattform (UWP)-Apps entwerfen, entwickeln, debuggen und testen können, einschließlich Apps, die Sie für Microsoft Surface Hub entwickelt haben.</span><span class="sxs-lookup"><span data-stu-id="8f598-105">The Visual Studio simulator provides an environment where you can design, develop, debug, and test Universal Windows Platform (UWP) apps, including apps that you have built for Microsoft Surface Hub.</span></span> <span data-ttu-id="8f598-106">Der Simulator verwendet nicht dieselbe Benutzeroberfläche wie ein Surface Hub, aber sie ist nützlich für das Testen, wie Ihre app aussieht, und mit den Surface Hub Bildschirmgröße und-Auflösung verhält.</span><span class="sxs-lookup"><span data-stu-id="8f598-106">The simulator does not use the same user interface as Surface Hub, but it is useful for testing how your app looks and behaves with the Surface Hub's screen size and resolution.</span></span>
+# <a name="test-surface-hub-apps-using-visual-studio"></a><span data-ttu-id="4c135-104">Testen von Surface Hub-Apps mit Visual Studio</span><span class="sxs-lookup"><span data-stu-id="4c135-104">Test Surface Hub apps using Visual Studio</span></span>
+<span data-ttu-id="4c135-105">Der Visual Studio-Simulator bietet eine Umgebung, in der Sie Universelle Windows-Plattform (UWP)-Apps entwerfen, entwickeln, debuggen und testen können, einschließlich Apps, die Sie für Microsoft Surface Hub entwickelt haben.</span><span class="sxs-lookup"><span data-stu-id="4c135-105">The Visual Studio simulator provides an environment where you can design, develop, debug, and test Universal Windows Platform (UWP) apps, including apps that you have built for Microsoft Surface Hub.</span></span> <span data-ttu-id="4c135-106">Der Simulator verwendet nicht dieselbe Benutzeroberfläche wie ein Surface Hub, aber sie ist nützlich für das Testen, wie Ihre app aussieht, und mit den Surface Hub Bildschirmgröße und-Auflösung verhält.</span><span class="sxs-lookup"><span data-stu-id="4c135-106">The simulator does not use the same user interface as Surface Hub, but it is useful for testing how your app looks and behaves with the Surface Hub's screen size and resolution.</span></span>
 
-<span data-ttu-id="8f598-107">Weitere Informationen zu den Simulator-Tool im Allgemeinen finden Sie unter [Ausführen von UWP-apps im Simulator](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-in-the-simulator).</span><span class="sxs-lookup"><span data-stu-id="8f598-107">For more information on the simulator tool in general, see [Run UWP apps in the simulator](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-in-the-simulator).</span></span>
+<span data-ttu-id="4c135-107">Weitere Informationen zu den Simulator-Tool im Allgemeinen finden Sie unter [Ausführen von UWP-apps im Simulator](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-in-the-simulator).</span><span class="sxs-lookup"><span data-stu-id="4c135-107">For more information on the simulator tool in general, see [Run UWP apps in the simulator](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-in-the-simulator).</span></span>
 
-## <a name="add-surface-hub-resolutions-to-the-simulator"></a><span data-ttu-id="8f598-108">Hinzufügen von Surface Hub-Auflösungen zum Simulator</span><span class="sxs-lookup"><span data-stu-id="8f598-108">Add Surface Hub resolutions to the simulator</span></span>
-<span data-ttu-id="8f598-109">So fügen Sie Surface Hub-Auflösungen zum Simulator hinzu:</span><span class="sxs-lookup"><span data-stu-id="8f598-109">To add Surface Hub resolutions to the simulator:</span></span>
+## <a name="add-surface-hub-resolutions-to-the-simulator"></a><span data-ttu-id="4c135-108">Hinzufügen von Surface Hub-Auflösungen zum Simulator</span><span class="sxs-lookup"><span data-stu-id="4c135-108">Add Surface Hub resolutions to the simulator</span></span>
+<span data-ttu-id="4c135-109">So fügen Sie Surface Hub-Auflösungen zum Simulator hinzu:</span><span class="sxs-lookup"><span data-stu-id="4c135-109">To add Surface Hub resolutions to the simulator:</span></span>
 
-1. <span data-ttu-id="8f598-110">Erstellen Sie eine Konfiguration für die 55" Surface Hub, indem Sie den folgenden XML-Code in eine Datei mit dem Namen *HardwareConfigurations-SurfaceHub55.xml*speichern.</span><span class="sxs-lookup"><span data-stu-id="8f598-110">Create a configuration for the 55" Surface Hub by saving the following XML code into a file named *HardwareConfigurations-SurfaceHub55.xml*.</span></span>  
+1. <span data-ttu-id="4c135-110">Erstellen Sie eine Konfiguration für die 55" Surface Hub, indem Sie den folgenden XML-Code in eine Datei mit dem Namen *HardwareConfigurations-SurfaceHub55.xml*speichern.</span><span class="sxs-lookup"><span data-stu-id="4c135-110">Create a configuration for the 55" Surface Hub by saving the following XML code into a file named *HardwareConfigurations-SurfaceHub55.xml*.</span></span>  
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -42,7 +42,7 @@ ms.locfileid: "6977371"
     </ArrayOfHardwareConfiguration>
     ```
 
-2. <span data-ttu-id="8f598-111">Erstellen Sie eine Konfiguration für die 84" Surface Hub, indem Sie den folgenden XML-Code in eine Datei mit dem Namen *HardwareConfigurations-SurfaceHub84.xml*speichern.</span><span class="sxs-lookup"><span data-stu-id="8f598-111">Create a configuration for the 84" Surface Hub by saving the following XML code into a file named  *HardwareConfigurations-SurfaceHub84.xml*.</span></span>
+2. <span data-ttu-id="4c135-111">Erstellen Sie eine Konfiguration für die 84" Surface Hub, indem Sie den folgenden XML-Code in eine Datei mit dem Namen *HardwareConfigurations-SurfaceHub84.xml*speichern.</span><span class="sxs-lookup"><span data-stu-id="4c135-111">Create a configuration for the 84" Surface Hub by saving the following XML code into a file named  *HardwareConfigurations-SurfaceHub84.xml*.</span></span>
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -61,54 +61,54 @@ ms.locfileid: "6977371"
     </ArrayOfHardwareConfiguration>
     ```
 
-3. <span data-ttu-id="8f598-112">Kopieren Sie die zwei XML-Dateien in *C:\Programme (x86)\Gemeinsame Dateien\Microsoft Shared\Windows Simulator\\&lt;Versionsnummer&gt;\HardwareConfigurations*.</span><span class="sxs-lookup"><span data-stu-id="8f598-112">Copy the two XML files into *C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Simulator\\&lt;version number&gt;\HardwareConfigurations*.</span></span>
+3. <span data-ttu-id="4c135-112">Kopieren Sie die zwei XML-Dateien in *C:\Programme (x86)\Gemeinsame Dateien\Microsoft Shared\Windows Simulator\\&lt;Versionsnummer&gt;\HardwareConfigurations*.</span><span class="sxs-lookup"><span data-stu-id="4c135-112">Copy the two XML files into *C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Simulator\\&lt;version number&gt;\HardwareConfigurations*.</span></span>
 
    > [!NOTE]
-   > <span data-ttu-id="8f598-113">Zum Speichern der Dateien in diesem Ordner werden Administratorrechte benötigt.</span><span class="sxs-lookup"><span data-stu-id="8f598-113">Administrative privileges are required to save files into this folder.</span></span>
+   > <span data-ttu-id="4c135-113">Zum Speichern der Dateien in diesem Ordner werden Administratorrechte benötigt.</span><span class="sxs-lookup"><span data-stu-id="4c135-113">Administrative privileges are required to save files into this folder.</span></span>
 
-4. <span data-ttu-id="8f598-114">Führen Sie Ihre App im Visual Studio-Simulator aus.</span><span class="sxs-lookup"><span data-stu-id="8f598-114">Run your app in the Visual Studio simulator.</span></span> <span data-ttu-id="8f598-115">Klicken Sie in der Palette auf die Schaltfläche **Change Resolution**, und wählen Sie in der Liste eine Surface Hub-Konfiguration aus.</span><span class="sxs-lookup"><span data-stu-id="8f598-115">Click the **Change Resolution** button on the palette and select a Surface Hub configuration from the list.</span></span>
+4. <span data-ttu-id="4c135-114">Führen Sie Ihre App im Visual Studio-Simulator aus.</span><span class="sxs-lookup"><span data-stu-id="4c135-114">Run your app in the Visual Studio simulator.</span></span> <span data-ttu-id="4c135-115">Klicken Sie in der Palette auf die Schaltfläche **Change Resolution**, und wählen Sie in der Liste eine Surface Hub-Konfiguration aus.</span><span class="sxs-lookup"><span data-stu-id="4c135-115">Click the **Change Resolution** button on the palette and select a Surface Hub configuration from the list.</span></span>
 
     ![Auflösungen des Visual Studio-Simulators](images/vs-simulator-resolutions.png)
 
    > [!TIP]
-   > <span data-ttu-id="8f598-117">Simulieren [Tablet-Modus aktivieren](http://windows.microsoft.com/windows-10/getstarted-like-a-tablet) , können Sie sich die Erfahrung von Surface Hub.</span><span class="sxs-lookup"><span data-stu-id="8f598-117">[Turn on Tablet mode](http://windows.microsoft.com/windows-10/getstarted-like-a-tablet) to better simulate the experience of a Surface Hub.</span></span>
+   > <span data-ttu-id="4c135-117">Simulieren [Tablet-Modus aktivieren](http://windows.microsoft.com/windows-10/getstarted-like-a-tablet) , können Sie sich die Erfahrung von Surface Hub.</span><span class="sxs-lookup"><span data-stu-id="4c135-117">[Turn on Tablet mode](http://windows.microsoft.com/windows-10/getstarted-like-a-tablet) to better simulate the experience of a Surface Hub.</span></span>
 
-## <a name="deploy-apps-to-a-surface-hub-device-from-visual-studio"></a><span data-ttu-id="8f598-118">Bereitstellen von apps auf einem Surface Hub-Gerät aus Visual Studio</span><span class="sxs-lookup"><span data-stu-id="8f598-118">Deploy apps to a Surface Hub device from Visual Studio</span></span>
-<span data-ttu-id="8f598-119">Manuelle Bereitstellen einer app auf einem Surface Hub ist ein einfacher Vorgang.</span><span class="sxs-lookup"><span data-stu-id="8f598-119">Manually deploying an app to a Surface Hub is a simple process.</span></span>
+## <a name="deploy-apps-to-a-surface-hub-device-from-visual-studio"></a><span data-ttu-id="4c135-118">Bereitstellen von apps auf einem Surface Hub-Gerät aus Visual Studio</span><span class="sxs-lookup"><span data-stu-id="4c135-118">Deploy apps to a Surface Hub device from Visual Studio</span></span>
+<span data-ttu-id="4c135-119">Manuelle Bereitstellen einer app auf einem Surface Hub ist ein einfacher Vorgang.</span><span class="sxs-lookup"><span data-stu-id="4c135-119">Manually deploying an app to a Surface Hub is a simple process.</span></span>
 
-### <a name="enable-developer-mode"></a><span data-ttu-id="8f598-120">Aktivieren des Entwicklermodus</span><span class="sxs-lookup"><span data-stu-id="8f598-120">Enable developer mode</span></span>
-<span data-ttu-id="8f598-121">Standardmäßig installiert Surface Hub nur apps aus dem Microsoft Store.</span><span class="sxs-lookup"><span data-stu-id="8f598-121">By default, Surface Hub only installs apps from the Microsoft Store.</span></span> <span data-ttu-id="8f598-122">Um Apps, die von einer anderen Quelle signiert wurden, zu installieren, müssen Sie den Entwicklermodus aktivieren.</span><span class="sxs-lookup"><span data-stu-id="8f598-122">To install apps signed by other sources, you must enable developer mode.</span></span>
+### <a name="enable-developer-mode"></a><span data-ttu-id="4c135-120">Aktivieren des Entwicklermodus</span><span class="sxs-lookup"><span data-stu-id="4c135-120">Enable developer mode</span></span>
+<span data-ttu-id="4c135-121">Standardmäßig installiert Surface Hub nur apps aus dem Microsoft Store.</span><span class="sxs-lookup"><span data-stu-id="4c135-121">By default, Surface Hub only installs apps from the Microsoft Store.</span></span> <span data-ttu-id="4c135-122">Um Apps, die von einer anderen Quelle signiert wurden, zu installieren, müssen Sie den Entwicklermodus aktivieren.</span><span class="sxs-lookup"><span data-stu-id="4c135-122">To install apps signed by other sources, you must enable developer mode.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="8f598-123">Nachdem der Entwicklermodus aktiviert wurde, müssen Sie den Surface Hub zurücksetzen, wenn Sie wieder zu deaktivieren möchten.</span><span class="sxs-lookup"><span data-stu-id="8f598-123">After developer mode has been enabled, you will need to reset the Surface Hub if you wish to disable it again.</span></span> <span data-ttu-id="8f598-124">Durch das Zurücksetzen des Geräts werden alle lokalen Benutzerdateien und die Konfiguration gelöscht, und anschließend wird Windows neu installiert.</span><span class="sxs-lookup"><span data-stu-id="8f598-124">Resetting the device removes all local user files and configurations and then reinstalls Windows.</span></span>
+> <span data-ttu-id="4c135-123">Nachdem der Entwicklermodus aktiviert wurde, müssen Sie den Surface Hub zurücksetzen, wenn Sie wieder zu deaktivieren möchten.</span><span class="sxs-lookup"><span data-stu-id="4c135-123">After developer mode has been enabled, you will need to reset the Surface Hub if you wish to disable it again.</span></span> <span data-ttu-id="4c135-124">Durch das Zurücksetzen des Geräts werden alle lokalen Benutzerdateien und die Konfiguration gelöscht, und anschließend wird Windows neu installiert.</span><span class="sxs-lookup"><span data-stu-id="4c135-124">Resetting the device removes all local user files and configurations and then reinstalls Windows.</span></span>
 
-1. <span data-ttu-id="8f598-125">Öffnen Sie im **Startmenü** des Surface Hub die Einstellungs-App.</span><span class="sxs-lookup"><span data-stu-id="8f598-125">From the Surface Hub's **Start** menu, open the Settings app.</span></span>
-
-   > [!NOTE]
-   > <span data-ttu-id="8f598-126">Greifen Sie auf die Einstellungs-app auf Surface Hub sind Administratorrechte erforderlich.</span><span class="sxs-lookup"><span data-stu-id="8f598-126">Administrative privileges are required to access the Settings app on Surface Hub.</span></span>
-
-2. <span data-ttu-id="8f598-127">Navigieren Sie zu **Update und Sicherheit \ > für Entwickler**.</span><span class="sxs-lookup"><span data-stu-id="8f598-127">Navigate to **Update & security \> For developers**.</span></span>
-
-3. <span data-ttu-id="8f598-128">Wählen Sie **Entwicklermodus** aus, und akzeptieren Sie die Warnung.</span><span class="sxs-lookup"><span data-stu-id="8f598-128">Choose **Developer mode** and accept the warning prompt.</span></span>
-
-### <a name="deploy-your-app-from-visual-studio"></a><span data-ttu-id="8f598-129">Bereitstellen Ihrer App aus Visual Studio</span><span class="sxs-lookup"><span data-stu-id="8f598-129">Deploy your app from Visual Studio</span></span>
-<span data-ttu-id="8f598-130">Weitere Informationen zu den Bereitstellungsprozess im Allgemeinen finden Sie unter [Bereitstellen und Debuggen von UWP-apps](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).</span><span class="sxs-lookup"><span data-stu-id="8f598-130">For more information on the deployment process in general, see [Deploying and debugging UWP apps](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).</span></span>
+1. <span data-ttu-id="4c135-125">Öffnen Sie im **Startmenü** des Surface Hub die Einstellungs-App.</span><span class="sxs-lookup"><span data-stu-id="4c135-125">From the Surface Hub's **Start** menu, open the Settings app.</span></span>
 
    > [!NOTE]
-   > <span data-ttu-id="8f598-131">Dieses Feature erfordert Visual Studio 2015 Update 1 oder höher, aber es wird empfohlen, dass Sie die neueste aktuelle Version von Visual Studio verwenden.</span><span class="sxs-lookup"><span data-stu-id="8f598-131">This feature requires Visual Studio 2015 Update 1 or later, however we recommend that you use the latest most up to date version of Visual Studio.</span></span> <span data-ttu-id="8f598-132">Eine auf dem neuesten Stand Visual Studio-Instanz wird Sie alle neuesten Entwicklungen und Sicherheitsupdates gibe.</span><span class="sxs-lookup"><span data-stu-id="8f598-132">An up to date Visual Studio instance will gibe you all the latest development and security updates.</span></span>
+   > <span data-ttu-id="4c135-126">Greifen Sie auf die Einstellungs-app auf Surface Hub sind Administratorrechte erforderlich.</span><span class="sxs-lookup"><span data-stu-id="4c135-126">Administrative privileges are required to access the Settings app on Surface Hub.</span></span>
 
-1. <span data-ttu-id="8f598-133">Zur Auswahl eines Ziels navigieren Sie zur Dropdownliste mit Debugzielen neben der Schaltfläche **Debugging starten** und wählen **Remotecomputer** aus.</span><span class="sxs-lookup"><span data-stu-id="8f598-133">Navigate to the debug target dropdown next to the **Start Debugging** button and select **Remote Machine**.</span></span>
+2. <span data-ttu-id="4c135-127">Navigieren Sie zu **Update und Sicherheit \ > für Entwickler**.</span><span class="sxs-lookup"><span data-stu-id="4c135-127">Navigate to **Update & security \> For developers**.</span></span>
+
+3. <span data-ttu-id="4c135-128">Wählen Sie **Entwicklermodus** aus, und akzeptieren Sie die Warnung.</span><span class="sxs-lookup"><span data-stu-id="4c135-128">Choose **Developer mode** and accept the warning prompt.</span></span>
+
+### <a name="deploy-your-app-from-visual-studio"></a><span data-ttu-id="4c135-129">Bereitstellen Ihrer App aus Visual Studio</span><span class="sxs-lookup"><span data-stu-id="4c135-129">Deploy your app from Visual Studio</span></span>
+<span data-ttu-id="4c135-130">Weitere Informationen zu den Bereitstellungsprozess im Allgemeinen finden Sie unter [Bereitstellen und Debuggen von UWP-apps](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).</span><span class="sxs-lookup"><span data-stu-id="4c135-130">For more information on the deployment process in general, see [Deploying and debugging UWP apps](https://msdn.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps).</span></span>
+
+   > [!NOTE]
+   > <span data-ttu-id="4c135-131">Dieses Feature erfordert Visual Studio 2015 Update 1 oder höher, aber es wird empfohlen, dass Sie die neueste aktuelle Version von Visual Studio verwenden.</span><span class="sxs-lookup"><span data-stu-id="4c135-131">This feature requires Visual Studio 2015 Update 1 or later, however we recommend that you use the latest most up to date version of Visual Studio.</span></span> <span data-ttu-id="4c135-132">Eine auf dem neuesten Stand Visual Studio-Instanz wird Sie alle neuesten Entwicklungen und Sicherheitsupdates gibe.</span><span class="sxs-lookup"><span data-stu-id="4c135-132">An up to date Visual Studio instance will gibe you all the latest development and security updates.</span></span>
+
+1. <span data-ttu-id="4c135-133">Zur Auswahl eines Ziels navigieren Sie zur Dropdownliste mit Debugzielen neben der Schaltfläche **Debugging starten** und wählen **Remotecomputer** aus.</span><span class="sxs-lookup"><span data-stu-id="4c135-133">Navigate to the debug target dropdown next to the **Start Debugging** button and select **Remote Machine**.</span></span>
 
     <!--lcap: in your screenshot, you have local machine selected-->
 
    ![Dropdownliste der Debugziele in Visual Studio](images/vs-debug-target.png)
 
-2. <span data-ttu-id="8f598-135">Geben Sie die IP-Adresse des Surface Hub ein.</span><span class="sxs-lookup"><span data-stu-id="8f598-135">Enter the Surface Hub's IP address.</span></span> <span data-ttu-id="8f598-136">Stellen Sie sicher, dass der Authentifizierungsmodus **Universell** ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="8f598-136">Ensure that the **Universal** authentication mode is selected.</span></span>
+2. <span data-ttu-id="4c135-135">Geben Sie die IP-Adresse des Surface Hub ein.</span><span class="sxs-lookup"><span data-stu-id="4c135-135">Enter the Surface Hub's IP address.</span></span> <span data-ttu-id="4c135-136">Stellen Sie sicher, dass der Authentifizierungsmodus **Universell** ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="4c135-136">Ensure that the **Universal** authentication mode is selected.</span></span>
 
    > [!TIP] 
-   > <span data-ttu-id="8f598-137">Nachdem Sie den Entwicklermodus aktiviert haben, finden Sie den Surface Hub IP-Adresse auf der Willkommensseite angezeigt.</span><span class="sxs-lookup"><span data-stu-id="8f598-137">After you have enabled developer mode, you can find the Surface Hub's IP address on the welcome screen.</span></span>
+   > <span data-ttu-id="4c135-137">Nachdem Sie den Entwicklermodus aktiviert haben, finden Sie den Surface Hub IP-Adresse auf der Willkommensseite angezeigt.</span><span class="sxs-lookup"><span data-stu-id="4c135-137">After you have enabled developer mode, you can find the Surface Hub's IP address on the welcome screen.</span></span>
 
-3. <span data-ttu-id="8f598-138">Wählen Sie zum Bereitstellen und Debuggen Sie Ihre app auf dem Surface Hub **Debugging starten (F5)** , oder drücken Sie STRG + F5, um nur die app bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="8f598-138">Select **Start Debugging (F5)** to deploy and debug your app on the Surface Hub, or press Ctrl+F5 to just deploy your app.</span></span>
+3. <span data-ttu-id="4c135-138">Wählen Sie zum Bereitstellen und Debuggen Sie Ihre app auf dem Surface Hub **Debugging starten (F5)** , oder drücken Sie STRG + F5, um nur die app bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="4c135-138">Select **Start Debugging (F5)** to deploy and debug your app on the Surface Hub, or press Ctrl+F5 to just deploy your app.</span></span>
 
    > [!TIP]
-   > <span data-ttu-id="8f598-139">Wenn Surface Hub auf die Willkommensseite angezeigt wird, können schließen Sie diesen durch Drücken einer beliebigen Schaltfläche.</span><span class="sxs-lookup"><span data-stu-id="8f598-139">If the Surface Hub is displaying the welcome screen, dismiss it by choosing any button.</span></span>
+   > <span data-ttu-id="4c135-139">Wenn Surface Hub auf die Willkommensseite angezeigt wird, können schließen Sie diesen durch Drücken einer beliebigen Schaltfläche.</span><span class="sxs-lookup"><span data-stu-id="4c135-139">If the Surface Hub is displaying the welcome screen, dismiss it by choosing any button.</span></span>

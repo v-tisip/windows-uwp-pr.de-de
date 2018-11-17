@@ -10,25 +10,25 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: cca90c705c7bb4dd1c7e283a9c3ed267cd282b56
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6977604"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7160040"
 ---
-# <a name="constant-buffer-view-cbv"></a><span data-ttu-id="fe369-105">Konstantenpufferansicht (CBV)</span><span class="sxs-lookup"><span data-stu-id="fe369-105">Constant buffer view (CBV)</span></span>
+# <a name="constant-buffer-view-cbv"></a><span data-ttu-id="8df56-105">Konstantenpufferansicht (CBV)</span><span class="sxs-lookup"><span data-stu-id="8df56-105">Constant buffer view (CBV)</span></span>
 
 
-<span data-ttu-id="fe369-106">Konstantenpuffer enthalten Konstantendaten für Shader.</span><span class="sxs-lookup"><span data-stu-id="fe369-106">Constant buffers contain shader constant data.</span></span> <span data-ttu-id="fe369-107">Der Nutzen ist, dass die Daten erhalten bleiben und jeder GPU-Shader darauf zugreifen kann, bis eine Änderung der Daten erforderlich wird.</span><span class="sxs-lookup"><span data-stu-id="fe369-107">The value of them is that the data persists, and can be accessed by any GPU shader, until it is necessary to change the data.</span></span>
+<span data-ttu-id="8df56-106">Konstantenpuffer enthalten Konstantendaten für Shader.</span><span class="sxs-lookup"><span data-stu-id="8df56-106">Constant buffers contain shader constant data.</span></span> <span data-ttu-id="8df56-107">Der Nutzen ist, dass die Daten erhalten bleiben und jeder GPU-Shader darauf zugreifen kann, bis eine Änderung der Daten erforderlich wird.</span><span class="sxs-lookup"><span data-stu-id="8df56-107">The value of them is that the data persists, and can be accessed by any GPU shader, until it is necessary to change the data.</span></span>
 
-<span data-ttu-id="fe369-108">Typische Daten für einen Konstantenpuffer sind globale, Ansichts- und Projektionsmatrizen, die während des Zeichnens eines Frames konstant bleiben.</span><span class="sxs-lookup"><span data-stu-id="fe369-108">Typical data for a constant buffer would be world, projection and view matrices, which remain constant throughout the drawing of one frame.</span></span>
+<span data-ttu-id="8df56-108">Typische Daten für einen Konstantenpuffer sind globale, Ansichts- und Projektionsmatrizen, die während des Zeichnens eines Frames konstant bleiben.</span><span class="sxs-lookup"><span data-stu-id="8df56-108">Typical data for a constant buffer would be world, projection and view matrices, which remain constant throughout the drawing of one frame.</span></span>
 
-<span data-ttu-id="fe369-109">Das Konstantenpuffer-Layout sollte mit dem HLSL-Layout übereinstimmen (weitere Informationen finden Sie unter [Regeln für das Packen von Konstantenvariablen](https://msdn.microsoft.com/library/windows/desktop/bb509632.aspx)).</span><span class="sxs-lookup"><span data-stu-id="fe369-109">Constant buffer layout should match the HLSL layout (refer to [Packing Rules for Constant Variables](https://msdn.microsoft.com/library/windows/desktop/bb509632.aspx)).</span></span>
+<span data-ttu-id="8df56-109">Das Konstantenpuffer-Layout sollte mit dem HLSL-Layout übereinstimmen (weitere Informationen finden Sie unter [Regeln für das Packen von Konstantenvariablen](https://msdn.microsoft.com/library/windows/desktop/bb509632.aspx)).</span><span class="sxs-lookup"><span data-stu-id="8df56-109">Constant buffer layout should match the HLSL layout (refer to [Packing Rules for Constant Variables](https://msdn.microsoft.com/library/windows/desktop/bb509632.aspx)).</span></span>
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="fe369-110"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="fe369-110"><span id="related-topics"></span>Related topics</span></span>
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="8df56-110"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="8df56-110"><span id="related-topics"></span>Related topics</span></span>
 
 
-[<span data-ttu-id="fe369-111">Ansichten</span><span class="sxs-lookup"><span data-stu-id="fe369-111">Views</span></span>](views.md)
+[<span data-ttu-id="8df56-111">Ansichten</span><span class="sxs-lookup"><span data-stu-id="8df56-111">Views</span></span>](views.md)
 
  
 
