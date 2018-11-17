@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2ad87bdfa468c98a2e10d57f81b8e8d187bfbcef
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7104262"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7165642"
 ---
 # <a name="device-information-properties"></a><span data-ttu-id="9fa11-104">Geräteinformationseigenschaften</span><span class="sxs-lookup"><span data-stu-id="9fa11-104">Device information properties</span></span>
 

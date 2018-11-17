@@ -10,20 +10,20 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a2f9bc985b69b71bedfd8d198f2a313f073b81a7
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6987360"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7168236"
 ---
-# <a name="span-iddirect3dconceptsstreaming-resource-cross-process-and-device-sharingspanstreaming-resource-cross-process-and-device-sharing"></a><span data-ttu-id="efbbe-105"><span id="direct3dconcepts.streaming-resource-cross-process-and-device-sharing"></span>Geräte- und prozessübergreifende Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="efbbe-105"><span id="direct3dconcepts.streaming-resource-cross-process-and-device-sharing"></span>Streaming resource cross-process and device sharing</span></span>
+# <a name="span-iddirect3dconceptsstreaming-resource-cross-process-and-device-sharingspanstreaming-resource-cross-process-and-device-sharing"></a><span data-ttu-id="78024-105"><span id="direct3dconcepts.streaming-resource-cross-process-and-device-sharing"></span>Geräte- und prozessübergreifende Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="78024-105"><span id="direct3dconcepts.streaming-resource-cross-process-and-device-sharing"></span>Streaming resource cross-process and device sharing</span></span>
 
 
-<span data-ttu-id="efbbe-106">Kachelpools können mit anderen Prozessen wie herkömmliche Ressourcen geteilt werden.</span><span class="sxs-lookup"><span data-stu-id="efbbe-106">Tile pools can be shared with other processes just like traditional resources.</span></span> <span data-ttu-id="efbbe-107">Streamingressourcen, die auf Kachelpools verweisen, können nicht geräte- und prozessübergreifend geteilt werden.</span><span class="sxs-lookup"><span data-stu-id="efbbe-107">Streaming resources that reference tile pools can't be shared across devices and processes.</span></span> <span data-ttu-id="efbbe-108">Separate Prozesse können aber eigene Streamingressourcen erstellen, die den für diese Streamingressourcen freigegebenen Kachelpools zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="efbbe-108">But separate processes can create their own streaming resources that map to tile pools that are shared between those streaming resources.</span></span>
+<span data-ttu-id="78024-106">Kachelpools können mit anderen Prozessen wie herkömmliche Ressourcen geteilt werden.</span><span class="sxs-lookup"><span data-stu-id="78024-106">Tile pools can be shared with other processes just like traditional resources.</span></span> <span data-ttu-id="78024-107">Streamingressourcen, die auf Kachelpools verweisen, können nicht geräte- und prozessübergreifend geteilt werden.</span><span class="sxs-lookup"><span data-stu-id="78024-107">Streaming resources that reference tile pools can't be shared across devices and processes.</span></span> <span data-ttu-id="78024-108">Separate Prozesse können aber eigene Streamingressourcen erstellen, die den für diese Streamingressourcen freigegebenen Kachelpools zugeordnet werden.</span><span class="sxs-lookup"><span data-stu-id="78024-108">But separate processes can create their own streaming resources that map to tile pools that are shared between those streaming resources.</span></span>
 
-<span data-ttu-id="efbbe-109">Die Größe freigegebener Kachelpools kann nicht geändert werden.</span><span class="sxs-lookup"><span data-stu-id="efbbe-109">Shared tile pools can't be resized.</span></span>
+<span data-ttu-id="78024-109">Die Größe freigegebener Kachelpools kann nicht geändert werden.</span><span class="sxs-lookup"><span data-stu-id="78024-109">Shared tile pools can't be resized.</span></span>
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span data-ttu-id="efbbe-110"><span id="in-this-section"></span>Inhalt dieses Abschnitts</span><span class="sxs-lookup"><span data-stu-id="efbbe-110"><span id="in-this-section"></span>In this section</span></span>
+## <a name="span-idin-this-sectionspanin-this-section"></a><span data-ttu-id="78024-110"><span id="in-this-section"></span>Inhalt dieses Abschnitts</span><span class="sxs-lookup"><span data-stu-id="78024-110"><span id="in-this-section"></span>In this section</span></span>
 
 
 <table>
@@ -33,24 +33,24 @@ ms.locfileid: "6987360"
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><span data-ttu-id="efbbe-111">Thema</span><span class="sxs-lookup"><span data-stu-id="efbbe-111">Topic</span></span></th>
-<th align="left"><span data-ttu-id="efbbe-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="efbbe-112">Description</span></span></th>
+<th align="left"><span data-ttu-id="78024-111">Thema</span><span class="sxs-lookup"><span data-stu-id="78024-111">Topic</span></span></th>
+<th align="left"><span data-ttu-id="78024-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="78024-112">Description</span></span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="stencil-formats-not-supported-with-streaming-resources.md"><span data-ttu-id="efbbe-113">Von den Streamingressourcen nicht unterstützte Schablonenformate</span><span class="sxs-lookup"><span data-stu-id="efbbe-113">Stencil formats not supported with streaming resources</span></span></a></p></td>
-<td align="left"><p><span data-ttu-id="efbbe-114">Formate, die Schablonen enthalten, werden von Streamingressourcen nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="efbbe-114">Formats that contain stencil aren't supported with streaming resources.</span></span></p></td>
+<td align="left"><p><a href="stencil-formats-not-supported-with-streaming-resources.md"><span data-ttu-id="78024-113">Von den Streamingressourcen nicht unterstützte Schablonenformate</span><span class="sxs-lookup"><span data-stu-id="78024-113">Stencil formats not supported with streaming resources</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="78024-114">Formate, die Schablonen enthalten, werden von Streamingressourcen nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="78024-114">Formats that contain stencil aren't supported with streaming resources.</span></span></p></td>
 </tr>
 </tbody>
 </table>
 
  
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="efbbe-115"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="efbbe-115"><span id="related-topics"></span>Related topics</span></span>
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="78024-115"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="78024-115"><span id="related-topics"></span>Related topics</span></span>
 
 
-[<span data-ttu-id="efbbe-116">Erstellen von Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="efbbe-116">Creating streaming resources</span></span>](creating-streaming-resources.md)
+[<span data-ttu-id="78024-116">Erstellen von Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="78024-116">Creating streaming resources</span></span>](creating-streaming-resources.md)
 
  
 

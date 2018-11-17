@@ -8,20 +8,20 @@ ms.topic: article
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 1adaf2b7df04a6e60d5d2ea37167cd4d5c55c42c
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "6990817"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7172736"
 ---
-# <a name="posprinter"></a><span data-ttu-id="adf06-104">POSPrinter</span><span class="sxs-lookup"><span data-stu-id="adf06-104">POSPrinter</span></span>
+# <a name="posprinter"></a><span data-ttu-id="c168d-104">POSPrinter</span><span class="sxs-lookup"><span data-stu-id="c168d-104">POSPrinter</span></span>
 
-<span data-ttu-id="adf06-105">Dieser Abschnittenthält Anleitungen zur Erstellung von universellen Windows-Plattform (UWP)-Apps, die einen POSPrinter verwenden.</span><span class="sxs-lookup"><span data-stu-id="adf06-105">This section provides guidance for creating Universal Windows Platform (UWP) apps that use a POSPrinter.</span></span>
+<span data-ttu-id="c168d-105">Dieser Abschnittenthält Anleitungen zur Erstellung von universellen Windows-Plattform (UWP)-Apps, die einen POSPrinter verwenden.</span><span class="sxs-lookup"><span data-stu-id="c168d-105">This section provides guidance for creating Universal Windows Platform (UWP) apps that use a POSPrinter.</span></span>
 
-## <a name="in-this-section"></a><span data-ttu-id="adf06-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="adf06-106">In this section</span></span>
-|<span data-ttu-id="adf06-107">Thema</span><span class="sxs-lookup"><span data-stu-id="adf06-107">Topic</span></span> |<span data-ttu-id="adf06-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="adf06-108">Description</span></span> |
+## <a name="in-this-section"></a><span data-ttu-id="c168d-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="c168d-106">In this section</span></span>
+|<span data-ttu-id="c168d-107">Thema</span><span class="sxs-lookup"><span data-stu-id="c168d-107">Topic</span></span> |<span data-ttu-id="c168d-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c168d-108">Description</span></span> |
 |------|------------|
-| [<span data-ttu-id="adf06-109">Epson ESC/POS mit Formatierung</span><span class="sxs-lookup"><span data-stu-id="adf06-109">Epson ESC/POS with formatting</span></span>](epson-esc-pos-with-formatting.md) | <span data-ttu-id="adf06-110">Erfahren Sie, wie Sie die ESC/POS-Befehlssprache zum Formatieren von Text, z. B. in Fett und mit doppelter Größe, für Ihren Point of Service-Drucker verwenden.</span><span class="sxs-lookup"><span data-stu-id="adf06-110">Learn how to use the ESC/POS command language to format text, such as bold and double size characters, for your Point of Service printer.</span></span> |
+| [<span data-ttu-id="c168d-109">Epson ESC/POS mit Formatierung</span><span class="sxs-lookup"><span data-stu-id="c168d-109">Epson ESC/POS with formatting</span></span>](epson-esc-pos-with-formatting.md) | <span data-ttu-id="c168d-110">Erfahren Sie, wie Sie die ESC/POS-Befehlssprache zum Formatieren von Text, z. B. in Fett und mit doppelter Größe, für Ihren Point of Service-Drucker verwenden.</span><span class="sxs-lookup"><span data-stu-id="c168d-110">Learn how to use the ESC/POS command language to format text, such as bold and double size characters, for your Point of Service printer.</span></span> |
 |
 
 <!-- Future topics to be added

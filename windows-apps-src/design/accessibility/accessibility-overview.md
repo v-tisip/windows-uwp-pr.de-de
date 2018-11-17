@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e627cc4ad9918afeabfc61544872169425bd98a3
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7105335"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7169369"
 ---
 # <a name="accessibility-overview"></a><span data-ttu-id="b6df9-103">Übersicht über die Barrierefreiheit</span><span class="sxs-lookup"><span data-stu-id="b6df9-103">Accessibility overview</span></span>  
 

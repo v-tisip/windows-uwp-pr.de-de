@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Anmelden, Entwicklerkonto
 ms.localizationpriority: medium
 ms.openlocfilehash: dc7f887018dc550ff28101acc6187c9b06235f1f
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7118958"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7165274"
 ---
 # <a name="create-a-developer-account"></a><span data-ttu-id="a1222-104">Erstellen eines Entwicklerkontos</span><span class="sxs-lookup"><span data-stu-id="a1222-104">Create a developer account</span></span>
 
