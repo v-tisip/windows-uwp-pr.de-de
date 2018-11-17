@@ -12,11 +12,11 @@ keywords: Windows10, UWP
 ms.assetid: 40a6bd32-a756-400f-ba34-2c5f507262c0
 ms.localizationpriority: medium
 ms.openlocfilehash: 08d861355a235c9217f51ce6f925224a27a562ef
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/16/2018
-ms.locfileid: "7101521"
+ms.locfileid: "7146174"
 ---
 # <a name="custom-video-effects"></a><span data-ttu-id="80c1e-103">Benutzerdefinierte Videoeffekte</span><span class="sxs-lookup"><span data-stu-id="80c1e-103">Custom video effects</span></span>
 

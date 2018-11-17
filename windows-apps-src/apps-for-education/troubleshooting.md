@@ -9,21 +9,21 @@ ms.topic: article
 keywords: Windows 10, Uwp, education
 ms.localizationpriority: medium
 ms.openlocfilehash: eaf4c8e2641359e6d9a92444f66a1b6d4e5e5881
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6973820"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7149097"
 ---
-# <a name="troubleshoot-microsoft-take-a-test-with-the-event-viewer"></a><span data-ttu-id="70e59-103">Problembehandlung bei Microsoft Prüfung mithilfe der Ereignisanzeige.</span><span class="sxs-lookup"><span data-stu-id="70e59-103">Troubleshoot Microsoft Take a Test with the event viewer</span></span>
+# <a name="troubleshoot-microsoft-take-a-test-with-the-event-viewer"></a><span data-ttu-id="511c5-103">Problembehandlung bei Microsoft Prüfung mithilfe der Ereignisanzeige.</span><span class="sxs-lookup"><span data-stu-id="511c5-103">Troubleshoot Microsoft Take a Test with the event viewer</span></span>
 
-<span data-ttu-id="70e59-104">Sie können die Ereignisanzeige nutzen um sich Ereignisse und Fehler der Prüfung anzeigen zu lassen.</span><span class="sxs-lookup"><span data-stu-id="70e59-104">You can use the Event Viewer to view Take a Test events and errors.</span></span> <span data-ttu-id="70e59-105">Prüfung protokolliert Ereignisse, wenn eine Sperrmodus-Anforderung empfangen wurde, wenn eine Geräteregistrierung erfolgreich war, die Sperrmodusrichtlinien erfolgreich angewendet wurden und vieles mehr.</span><span class="sxs-lookup"><span data-stu-id="70e59-105">Take a Test logs events when a lockdown request has been received, device enrollment has succeeded, lockdown policies were successfully applied, and more.</span></span>
+<span data-ttu-id="511c5-104">Sie können die Ereignisanzeige nutzen um sich Ereignisse und Fehler der Prüfung anzeigen zu lassen.</span><span class="sxs-lookup"><span data-stu-id="511c5-104">You can use the Event Viewer to view Take a Test events and errors.</span></span> <span data-ttu-id="511c5-105">Prüfung protokolliert Ereignisse, wenn eine Sperrmodus-Anforderung empfangen wurde, wenn eine Geräteregistrierung erfolgreich war, die Sperrmodusrichtlinien erfolgreich angewendet wurden und vieles mehr.</span><span class="sxs-lookup"><span data-stu-id="511c5-105">Take a Test logs events when a lockdown request has been received, device enrollment has succeeded, lockdown policies were successfully applied, and more.</span></span>
 
-<span data-ttu-id="70e59-106">So aktivieren Sie Ereignisse in der Ereignisanzeige</span><span class="sxs-lookup"><span data-stu-id="70e59-106">To enable viewing events in the Event Viewer:</span></span>
-1. <span data-ttu-id="70e59-107">Öffnen Sie</span><span class="sxs-lookup"><span data-stu-id="70e59-107">Open the</span></span> `Event Viewer`
-2. <span data-ttu-id="70e59-108">Navigieren Sie zu</span><span class="sxs-lookup"><span data-stu-id="70e59-108">Navigate to</span></span> `Applications and Services Logs > Microsoft > Windows > Management-SecureAssessment`
-3. <span data-ttu-id="70e59-109">Klicken Sie mit der rechten Maustaste auf `Operational` und wählen Sie</span><span class="sxs-lookup"><span data-stu-id="70e59-109">Right-click `Operational` and select</span></span> `Enable Log`
+<span data-ttu-id="511c5-106">So aktivieren Sie Ereignisse in der Ereignisanzeige</span><span class="sxs-lookup"><span data-stu-id="511c5-106">To enable viewing events in the Event Viewer:</span></span>
+1. <span data-ttu-id="511c5-107">Öffnen Sie</span><span class="sxs-lookup"><span data-stu-id="511c5-107">Open the</span></span> `Event Viewer`
+2. <span data-ttu-id="511c5-108">Navigieren Sie zu</span><span class="sxs-lookup"><span data-stu-id="511c5-108">Navigate to</span></span> `Applications and Services Logs > Microsoft > Windows > Management-SecureAssessment`
+3. <span data-ttu-id="511c5-109">Klicken Sie mit der rechten Maustaste auf `Operational` und wählen Sie</span><span class="sxs-lookup"><span data-stu-id="511c5-109">Right-click `Operational` and select</span></span> `Enable Log`
 
-<span data-ttu-id="70e59-110">So speichern Sie die Ereignisprotokolle</span><span class="sxs-lookup"><span data-stu-id="70e59-110">To save the event logs:</span></span>
-1. <span data-ttu-id="70e59-111">Rechtsklick</span><span class="sxs-lookup"><span data-stu-id="70e59-111">Right-click</span></span> `Operational`
-2. <span data-ttu-id="70e59-112">Klick</span><span class="sxs-lookup"><span data-stu-id="70e59-112">Click</span></span> `Save All Events As…`
+<span data-ttu-id="511c5-110">So speichern Sie die Ereignisprotokolle</span><span class="sxs-lookup"><span data-stu-id="511c5-110">To save the event logs:</span></span>
+1. <span data-ttu-id="511c5-111">Rechtsklick</span><span class="sxs-lookup"><span data-stu-id="511c5-111">Right-click</span></span> `Operational`
+2. <span data-ttu-id="511c5-112">Klick</span><span class="sxs-lookup"><span data-stu-id="511c5-112">Click</span></span> `Save All Events As…`

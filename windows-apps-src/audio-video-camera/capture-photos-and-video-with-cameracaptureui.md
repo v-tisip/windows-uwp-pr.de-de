@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: fd9a347904b83db4bb927a36e466153a9e24d8de
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7111576"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7149272"
 ---
 # <a name="capture-photos-and-video-with-windows-built-in-camera-ui"></a><span data-ttu-id="79cda-104">Aufnehmen von Fotos und Videos mit der in Windows integrierten Kamera-UI</span><span class="sxs-lookup"><span data-stu-id="79cda-104">Capture photos and video with Windows built-in camera UI</span></span>
 

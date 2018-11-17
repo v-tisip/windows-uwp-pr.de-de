@@ -9,17 +9,17 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, OpenGL, Direct3D 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 14259fb6949eaa100d51fbdbda6f96bd07a4fa80
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/16/2018
-ms.locfileid: "6992115"
+ms.locfileid: "7146869"
 ---
-# <a name="opengl-es-20-to-direct3d-11-reference"></a><span data-ttu-id="30451-104">OpenGLES2.0 zu Direct3D11 – Referenz</span><span class="sxs-lookup"><span data-stu-id="30451-104">OpenGL ES 2.0 to Direct3D 11 reference</span></span>
+# <a name="opengl-es-20-to-direct3d-11-reference"></a><span data-ttu-id="c0093-104">OpenGLES2.0 zu Direct3D11 – Referenz</span><span class="sxs-lookup"><span data-stu-id="c0093-104">OpenGL ES 2.0 to Direct3D 11 reference</span></span>
 
 
 
-<span data-ttu-id="30451-105">Verwenden Sie diese Referenzthemen zum Suchen nach der API-Zuordnung und kurzen Codebeispielen, wenn Sie die Portierung von OpenGL ES 2.0 zu Direct3D 11 durchführen.</span><span class="sxs-lookup"><span data-stu-id="30451-105">Use these reference topics to look up API mapping and short code samples when porting from OpenGL ES 2.0 to Direct3D 11.</span></span>
+<span data-ttu-id="c0093-105">Verwenden Sie diese Referenzthemen zum Suchen nach der API-Zuordnung und kurzen Codebeispielen, wenn Sie die Portierung von OpenGL ES 2.0 zu Direct3D 11 durchführen.</span><span class="sxs-lookup"><span data-stu-id="c0093-105">Use these reference topics to look up API mapping and short code samples when porting from OpenGL ES 2.0 to Direct3D 11.</span></span>
 ## 
 <table>
 <colgroup>
@@ -28,14 +28,14 @@ ms.locfileid: "6992115"
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><span data-ttu-id="30451-106">Thema</span><span class="sxs-lookup"><span data-stu-id="30451-106">Topic</span></span></th>
-<th align="left"><span data-ttu-id="30451-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="30451-107">Description</span></span></th>
+<th align="left"><span data-ttu-id="c0093-106">Thema</span><span class="sxs-lookup"><span data-stu-id="c0093-106">Topic</span></span></th>
+<th align="left"><span data-ttu-id="c0093-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c0093-107">Description</span></span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="glsl-to-hlsl-reference.md"><span data-ttu-id="30451-108">GLSL-zu-HLSL-Referenz</span><span class="sxs-lookup"><span data-stu-id="30451-108">GLSL-to-HLSL reference</span></span></a></p></td>
-<td align="left"><p><span data-ttu-id="30451-109">Sie portieren Ihren OpenGL Shader Language (GLSL)-Code zu Microsoft High Level Shader Language (HLSL)-Code, wenn Sie Ihre <a href="port-from-opengl-es-2-0-to-directx-11-1.md">Grafikarchitektur von OpenGLES2.0 zu Direct3D11 portieren</a>, um ein Spiel für die universelle Windows-Plattform (UWP) zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="30451-109">You port your OpenGL Shader Language (GLSL) code to Microsoft High Level Shader Language (HLSL) code when you <a href="port-from-opengl-es-2-0-to-directx-11-1.md">port your graphics architecture from OpenGL ES 2.0 to Direct3D 11</a> to create a game for Universal Windows Platform (UWP).</span></span></p></td>
+<td align="left"><p><a href="glsl-to-hlsl-reference.md"><span data-ttu-id="c0093-108">GLSL-zu-HLSL-Referenz</span><span class="sxs-lookup"><span data-stu-id="c0093-108">GLSL-to-HLSL reference</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="c0093-109">Sie portieren Ihren OpenGL Shader Language (GLSL)-Code zu Microsoft High Level Shader Language (HLSL)-Code, wenn Sie Ihre <a href="port-from-opengl-es-2-0-to-directx-11-1.md">Grafikarchitektur von OpenGLES2.0 zu Direct3D11 portieren</a>, um ein Spiel für die universelle Windows-Plattform (UWP) zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="c0093-109">You port your OpenGL Shader Language (GLSL) code to Microsoft High Level Shader Language (HLSL) code when you <a href="port-from-opengl-es-2-0-to-directx-11-1.md">port your graphics architecture from OpenGL ES 2.0 to Direct3D 11</a> to create a game for Universal Windows Platform (UWP).</span></span></p></td>
 </tr>
 </tbody>
 </table>

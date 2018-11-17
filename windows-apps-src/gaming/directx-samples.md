@@ -9,15 +9,15 @@ ms.topic: article
 keywords: Windows10, UWP, Spiel, DirectX, Beispiele, 3D
 ms.localizationpriority: medium
 ms.openlocfilehash: f5929a0256c7f9808079f902a258b3fd094f241c
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6972573"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7145676"
 ---
-# <a name="directx-samples"></a><span data-ttu-id="fccc0-104">DirectX-Beispiele</span><span class="sxs-lookup"><span data-stu-id="fccc0-104">DirectX Samples</span></span>
+# <a name="directx-samples"></a><span data-ttu-id="0602c-104">DirectX-Beispiele</span><span class="sxs-lookup"><span data-stu-id="0602c-104">DirectX Samples</span></span>
 
-<span data-ttu-id="fccc0-105">Es gibt einige Spielbeispiele, die mit DirectX entwickelt wurden.</span><span class="sxs-lookup"><span data-stu-id="fccc0-105">These are some game samples developed with DirectX.</span></span>
+<span data-ttu-id="0602c-105">Es gibt einige Spielbeispiele, die mit DirectX entwickelt wurden.</span><span class="sxs-lookup"><span data-stu-id="0602c-105">These are some game samples developed with DirectX.</span></span>
 
 <table>
 <colgroup>
@@ -26,18 +26,18 @@ ms.locfileid: "6972573"
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><span data-ttu-id="fccc0-106">Thema</span><span class="sxs-lookup"><span data-stu-id="fccc0-106">Topic</span></span></th>
-<th align="left"><span data-ttu-id="fccc0-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fccc0-107">Description</span></span></th>
+<th align="left"><span data-ttu-id="0602c-106">Thema</span><span class="sxs-lookup"><span data-stu-id="0602c-106">Topic</span></span></th>
+<th align="left"><span data-ttu-id="0602c-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0602c-107">Description</span></span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="tutorial--create-your-first-uwp-directx-game.md"><span data-ttu-id="fccc0-108">Erstellen eines einfachen UWP-Spiels mit DirectX</span><span class="sxs-lookup"><span data-stu-id="fccc0-108">Create a simple UWP game with DirectX</span></span></a></p></td>
-<td align="left"><p><span data-ttu-id="fccc0-109">Erstellen Sie ein einfaches Spiel für die universelle Windows-Plattform (UWP) mit DirectX und C++.</span><span class="sxs-lookup"><span data-stu-id="fccc0-109">Create a basic Universal Windows Platform (UWP) game with DirectX and C++.</span></span> <span data-ttu-id="fccc0-110">Diese Tutorials konzentrieren sich auf wichtige Techniken und Überlegungen zur Entwicklung von UWP-DirectX-Spielen.</span><span class="sxs-lookup"><span data-stu-id="fccc0-110">This set of tutorials focus on key UWP DirectX game development techniques and considerations.</span></span></p></td>
+<td align="left"><p><a href="tutorial--create-your-first-uwp-directx-game.md"><span data-ttu-id="0602c-108">Erstellen eines einfachen UWP-Spiels mit DirectX</span><span class="sxs-lookup"><span data-stu-id="0602c-108">Create a simple UWP game with DirectX</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="0602c-109">Erstellen Sie ein einfaches Spiel für die universelle Windows-Plattform (UWP) mit DirectX und C++.</span><span class="sxs-lookup"><span data-stu-id="0602c-109">Create a basic Universal Windows Platform (UWP) game with DirectX and C++.</span></span> <span data-ttu-id="0602c-110">Diese Tutorials konzentrieren sich auf wichtige Techniken und Überlegungen zur Entwicklung von UWP-DirectX-Spielen.</span><span class="sxs-lookup"><span data-stu-id="0602c-110">This set of tutorials focus on key UWP DirectX game development techniques and considerations.</span></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md"><span data-ttu-id="fccc0-111">Entwickeln von Marble Maze, einem Spiel für die universelle Windows-Plattform in C++ und DirectX</span><span class="sxs-lookup"><span data-stu-id="fccc0-111">Developing Marble Maze, a Universal Windows Platform game in C++ and DirectX</span></span></a></p></td>
-<td align="left"><p><span data-ttu-id="fccc0-112">Erstellen Sie ein 3D-Spiel, das auf verschiedenen Gerätetypen funktioniert, z.B. auf Tablets, Desktop-PCs und Laptops.</span><span class="sxs-lookup"><span data-stu-id="fccc0-112">Create a 3D game that works on various types of devices like tablets, desktop PCs, and laptops.</span></span></p></td>
+<td align="left"><p><a href="developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md"><span data-ttu-id="0602c-111">Entwickeln von Marble Maze, einem Spiel für die universelle Windows-Plattform in C++ und DirectX</span><span class="sxs-lookup"><span data-stu-id="0602c-111">Developing Marble Maze, a Universal Windows Platform game in C++ and DirectX</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="0602c-112">Erstellen Sie ein 3D-Spiel, das auf verschiedenen Gerätetypen funktioniert, z.B. auf Tablets, Desktop-PCs und Laptops.</span><span class="sxs-lookup"><span data-stu-id="0602c-112">Create a 3D game that works on various types of devices like tablets, desktop PCs, and laptops.</span></span></p></td>
 </tr>
 </tbody>
 </table>

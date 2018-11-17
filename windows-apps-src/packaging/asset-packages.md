@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows10, verpackung, paketlayout, bestandspaket
 ms.localizationpriority: medium
 ms.openlocfilehash: 98980e67d24eb96aa55af7fefe10b5e4c2cdfa67
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/16/2018
-ms.locfileid: "7101294"
+ms.locfileid: "7146656"
 ---
 # <a name="introduction-to-asset-packages"></a><span data-ttu-id="3dc98-104">Einführung zu Bestandspaketen</span><span class="sxs-lookup"><span data-stu-id="3dc98-104">Introduction to asset packages</span></span>
 
