@@ -7,16 +7,16 @@ ms.date: 11/06/2018
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Stapelüberwachung, Fehler
 ms.localizationpriority: medium
-ms.openlocfilehash: df3af90bda9d972a891dce67730f8f320b7607c1
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.openlocfilehash: 78e65ad78079762ea5aabb95ddcaf4ce508b89bc
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6976821"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7173543"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-xbox-one-game"></a>Abrufen der stapelüberwachung für einen Fehler in Ihrer Xbox One-Spiele
 
-Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, die stapelüberwachung für einen Fehler in Ihrer Xbox One Spiel abzurufen, die das über das Xbox-Portal (XDP) und im XDP Analytics Dev Center-Dashboard verfügbar ist. Diese Methode kann nur die Stapelüberwachung für einen Fehler herunterladen, die in den letzten 30Tagen aufgetreten ist.
+Verwenden Sie diese Methode in der Microsoft Store-Analyse-API für die stapelüberwachung für einen Fehler in Ihrer Xbox One Spiel abzurufen, die das über das Xbox-Portal (XDP) und im XDP Analytics Partner Center-Dashboard verfügbar ist. Diese Methode kann nur die Stapelüberwachung für einen Fehler herunterladen, die in den letzten 30Tagen aufgetreten ist.
 
 Bevor Sie diese Methode verwenden können, müssen Sie zuerst die Methode zum [Abrufen von Details zu einem Fehler in Ihrer Xbox One Spiel](get-details-for-an-error-in-your-xbox-one-game.md) verwenden, um die ID der CAB-Datei abzurufen, die mit dem Fehler verknüpft ist, für die Sie die stapelüberwachung abrufen möchten.
 
@@ -50,7 +50,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 | Parameter        | Typ   |  Beschreibung      |  Erforderlich  |
 |---------------|--------|---------------|------|
-| applicationId | string | Die Produkt-ID des Xbox One Spiels, für die Sie eine stapelüberwachung abrufen möchten. Um die Produkt-ID Ihres Spiels zu erhalten, wechseln Sie zu Ihrem Spiel in der Xbox-Entwickler-Portal (XDP) und rufen Sie die Produkt-ID von der URL ab. Alternativ können ist Sie Ihre integritätsdaten vom Windows Dev Center-Analysebericht herunterladen, die Produkt-ID in der TSV-Datei enthalten. |  Ja  |
+| applicationId | string | Die Produkt-ID des Xbox One Spiels, für die Sie eine stapelüberwachung abrufen möchten. Um die Produkt-ID Ihres Spiels zu erhalten, wechseln Sie zu Ihrem Spiel in der Xbox-Entwickler-Portal (XDP) und rufen Sie die Produkt-ID von der URL ab. Alternativ können ist Sie Ihre integritätsdaten vom Windows Partner Center-Analysebericht herunterladen, die Produkt-ID in der TSV-Datei enthalten. |  Ja  |
 | cabId | string | Die eindeutige ID der CAB-Datei, die mit dem Fehler verknüpft ist, für den Sie die Stapelüberwachung abrufen möchten. Um diese ID zu erhalten, verwenden Sie die [Details zu einem Fehler in Ihrer Xbox One Spiel abzurufen](get-details-for-an-error-in-your-xbox-one-game.md) Methode zum Abrufen von Details zu einem bestimmten Fehler in Ihrer app, und verwenden Sie den Wert **CabId** im Antworttext dieser Methode. |  Ja  |
 
  

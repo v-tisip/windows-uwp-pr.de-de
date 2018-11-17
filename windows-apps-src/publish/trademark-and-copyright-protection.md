@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 68ef1a9372523ea489677620acc039642bfc64ae
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/16/2018
-ms.locfileid: "6994611"
+ms.locfileid: "7144347"
 ---
 # <a name="trademark-and-copyright-protection"></a>Schutz von Marken und Urheberrechten
 

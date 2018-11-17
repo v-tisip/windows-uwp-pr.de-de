@@ -7,17 +7,19 @@ ms.date: 09/21/2018
 ms.topic: article
 keywords: Windows 10, Uwp, Windows Forms-, WPF-, win32
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ba64e32a25feaee9245bbfe2b598c756b29df98
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.openlocfilehash: 69eb9f72d6b4cf01185f7e4886a7ed5c30a669df
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6972428"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7145340"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-desktop-application"></a>Unter Verwendung des UWP-XAML hosting-API in einer desktop-Anwendung
 
 > [!NOTE]
-> Die UWP-XAML hosting-API ist zurzeit als Entwicklervorschau verfügbar. Obwohl wir Sie diese API in Ihrem eigenen Code Prototyp jetzt testen dazu ermutigen, wird nicht empfohlen, mit denen Sie in Produktionscode zu diesem Zeitpunkt. Diese API weiterhin breiter und Stabilisierung in zukünftigen Windows-Versionen. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.
+> Die UWP-XAML-hosting-API und XAML-Inseln sind als Entwicklervorschau derzeit verfügbar ist. Obwohl wir Sie Sie diese in Ihrem eigenen Code Prototyp jetzt testen empfiehlt, empfohlen es nicht, dass Sie in Produktionscode zu diesem Zeitpunkt verwendet werden. Diese Features werden weiterhin breiter und Stabilisierung in zukünftigen Windows-Versionen. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.
+>
+> Wenn Sie Feedback über das XAML-API und XAML-Inseln hosten, senden Sie Ihr Feedback an XamlIslandsFeedback@microsoft.com. Ihre Einblicke und Szenarien sind uns sehr wichtig.
 
 Windows 10 Insider Preview SDK ab build 17709, nicht-UWP-desktop-Apps (einschließlich WPF, Windows Forms und C++ Win32-Anwendungen) können Sie das *UWP-XAML hosting-API* zum Hosten von UWP-Steuerelementen in alle UI-Element, das ein Fenster-Handle (zugeordnet ist HWND). Mit dieser API können nicht-UWP-desktopanwendungen mit den neuesten Windows 10-UI-Features, die nur über UWP-Steuerelemente verfügbar sind. Beispielsweise können nicht-UWP-desktop-Apps diese API zum Hosten von UWP-Steuerelementen, die das [Fluent Design-Systems](../design/fluent-design-system/index.md) und [Windows Ink](../design/input/pen-and-stylus-interactions.md)unterstützen.
 

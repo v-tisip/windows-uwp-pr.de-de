@@ -15,11 +15,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d9856d564ffd36226a841c38eba65df0b62ee306
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6987736"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7106433"
 ---
 # <a name="xaml-custom-panels-overview"></a>Übersicht über benutzerdefinierte XAML-Panels
 

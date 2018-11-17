@@ -9,11 +9,11 @@ keywords: Windows 10, UWP
 ms.assetid: 72c7459c-420a-4da9-8afa-191a846185a5
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f1729f07734b181dc5e0e8c97d702d8592302c2
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6984235"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7105272"
 ---
 # <a name="xbox-live-sandbox-api-reference"></a>Referenz zur API für den Xbox Live-Sandkasten   
 Mit dieser REST-API können Sie den Xbox Live-Sandkasten abrufen und festlegen.
