@@ -10,23 +10,23 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0a64af02bc62a5e7d605f752504027c66f5dc7f7
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6976276"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7151192"
 ---
-# <a name="depth-stencil-view-dsv"></a><span data-ttu-id="b9734-104">Tiefenschablonenansicht (Depth Stencil View, DSV)</span><span class="sxs-lookup"><span data-stu-id="b9734-104">Depth stencil view (DSV)</span></span>
+# <a name="depth-stencil-view-dsv"></a><span data-ttu-id="a3593-104">Tiefenschablonenansicht (Depth Stencil View, DSV)</span><span class="sxs-lookup"><span data-stu-id="a3593-104">Depth stencil view (DSV)</span></span>
 
 
-<span data-ttu-id="b9734-105">Eine Tiefenschablonenansicht stellt das Format und den Puffer zur Speicherung von Tiefen- und Schabloneninformationen bereit.</span><span class="sxs-lookup"><span data-stu-id="b9734-105">A depth stencil view provides the format and buffer for holding depth and stencil information.</span></span> <span data-ttu-id="b9734-106">Der Tiefenpuffer dient dazu, das Zeichnen von Pixeln zu vermeiden, die von einem näher liegenden Objekt verdeckt werden und so für den Betrachter nicht sichtbar wären.</span><span class="sxs-lookup"><span data-stu-id="b9734-106">The depth buffer is used to cull the drawing of pixels that would be invisible to the viewer as they are occluded from view by a closer object.</span></span> <span data-ttu-id="b9734-107">Der Schablonenpuffer kann zur Aussortierung (Culling) aller Zeichnungsaktivitäten außerhalb einer definierten Form genutzt werden.</span><span class="sxs-lookup"><span data-stu-id="b9734-107">The stencil buffer can be used to cull all drawing outside of a defined shape.</span></span>
+<span data-ttu-id="a3593-105">Eine Tiefenschablonenansicht stellt das Format und den Puffer zur Speicherung von Tiefen- und Schabloneninformationen bereit.</span><span class="sxs-lookup"><span data-stu-id="a3593-105">A depth stencil view provides the format and buffer for holding depth and stencil information.</span></span> <span data-ttu-id="a3593-106">Der Tiefenpuffer dient dazu, das Zeichnen von Pixeln zu vermeiden, die von einem näher liegenden Objekt verdeckt werden und so für den Betrachter nicht sichtbar wären.</span><span class="sxs-lookup"><span data-stu-id="a3593-106">The depth buffer is used to cull the drawing of pixels that would be invisible to the viewer as they are occluded from view by a closer object.</span></span> <span data-ttu-id="a3593-107">Der Schablonenpuffer kann zur Aussortierung (Culling) aller Zeichnungsaktivitäten außerhalb einer definierten Form genutzt werden.</span><span class="sxs-lookup"><span data-stu-id="a3593-107">The stencil buffer can be used to cull all drawing outside of a defined shape.</span></span>
 
-<span data-ttu-id="b9734-108">Abgesehen von der Definition eines bestimmten Renderingbereiches gibt es noch eine Reihe erweiterter Einsatzmöglichkeiten für Schablonenpuffer.</span><span class="sxs-lookup"><span data-stu-id="b9734-108">There are a number of more advanced uses of stencil buffers beyond defining a rendering area.</span></span> <span data-ttu-id="b9734-109">Schablonenpufferwerte können so verändert werden, dass Effekte wie Ausblenden, Silhouetten, Decaling, Auflösen, Umrisse, Schattenvolumen, usw. möglich werden.</span><span class="sxs-lookup"><span data-stu-id="b9734-109">Stencil buffer values can be manipulated to give such effects as fades, silhouettes, decaling, dissolves, outlining, shadow volumes, and so on.</span></span>
+<span data-ttu-id="a3593-108">Abgesehen von der Definition eines bestimmten Renderingbereiches gibt es noch eine Reihe erweiterter Einsatzmöglichkeiten für Schablonenpuffer.</span><span class="sxs-lookup"><span data-stu-id="a3593-108">There are a number of more advanced uses of stencil buffers beyond defining a rendering area.</span></span> <span data-ttu-id="a3593-109">Schablonenpufferwerte können so verändert werden, dass Effekte wie Ausblenden, Silhouetten, Decaling, Auflösen, Umrisse, Schattenvolumen, usw. möglich werden.</span><span class="sxs-lookup"><span data-stu-id="a3593-109">Stencil buffer values can be manipulated to give such effects as fades, silhouettes, decaling, dissolves, outlining, shadow volumes, and so on.</span></span>
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="b9734-110"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="b9734-110"><span id="related-topics"></span>Related topics</span></span>
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="a3593-110"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="a3593-110"><span id="related-topics"></span>Related topics</span></span>
 
 
-[<span data-ttu-id="b9734-111">Ansichten</span><span class="sxs-lookup"><span data-stu-id="b9734-111">Views</span></span>](views.md)
+[<span data-ttu-id="a3593-111">Ansichten</span><span class="sxs-lookup"><span data-stu-id="a3593-111">Views</span></span>](views.md)
 
  
 
