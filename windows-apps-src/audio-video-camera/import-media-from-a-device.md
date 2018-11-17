@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 36f8956e2ca167d98bb8e6ecf35ce3d131d7b032
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7101324"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7158020"
 ---
 # <a name="import-media-from-a-device"></a><span data-ttu-id="f2a7e-104">Importieren von Medien von einem Gerät</span><span class="sxs-lookup"><span data-stu-id="f2a7e-104">Import media from a device</span></span>
 
