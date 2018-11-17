@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Hintergrundaufgabe, für die
 ms.localizationpriority: medium
 ms.openlocfilehash: 1666d64c26c8ccfecda142e50f2e672d0f4c8864
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "6992351"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "7158909"
 ---
 # <a name="access-sensors-and-devices-from-a-background-task"></a>Zugreifen auf Sensoren und Geräte mittels einer Hintergrundaufgabe
 
