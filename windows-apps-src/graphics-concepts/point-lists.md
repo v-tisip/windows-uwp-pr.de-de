@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b4c2e0f6e99099df4bdda9452521acf3b0cd2b8f
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/16/2018
-ms.locfileid: "7101234"
+ms.locfileid: "7144134"
 ---
 # <a name="point-lists"></a><span data-ttu-id="f5ee0-105">Punktelisten</span><span class="sxs-lookup"><span data-stu-id="f5ee0-105">Point lists</span></span>
 

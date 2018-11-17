@@ -8,18 +8,19 @@ ms.date: 08/10/2017
 ms.topic: article
 ms.assetid: 4df395d2-f10e-4e0e-9bf2-660f82b8a9fa
 ms.localizationpriority: medium
-ms.openlocfilehash: 378841414f97abb313584e6bcd033914440713a6
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.custom: RS5
+ms.openlocfilehash: 851c566c046a07d2368937cfe9e8b67945f615a9
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6986528"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7154635"
 ---
-# <a name="style-for-uwp-apps"></a><span data-ttu-id="d4d47-104">Stile für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="d4d47-104">Style for UWP apps</span></span>
+# <a name="style-for-uwp-apps"></a><span data-ttu-id="fa3cd-104">Stile für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="fa3cd-104">Style for UWP apps</span></span>
 
 ![Favoritenbild](images/header-style.svg)
 
-<span data-ttu-id="d4d47-106">Durch einen besonderen Stil können Sie Ihre App auszeichnen. Die Gestaltungsrichtlinien in diesem Abschnitt unterstützen Sie beim Erstellen eines Fluent Design durch Farbe, Typografie und neue Funktionen wie Acrylmaterial und Glanzlicht.</span><span class="sxs-lookup"><span data-stu-id="d4d47-106">Style is what makes your app stand out. The style guidelines in this section help you create a Fluent Design through color, typography, and new features such as acrylic material and reveal highlight.</span></span>
+<span data-ttu-id="fa3cd-106">Durch einen besonderen Stil können Sie Ihre App auszeichnen. Die Gestaltungsrichtlinien in diesem Abschnitt unterstützen Sie beim Erstellen eines Fluent Design durch Farbe, Typografie und neue Funktionen wie Acrylmaterial und Glanzlicht.</span><span class="sxs-lookup"><span data-stu-id="fa3cd-106">Style is what makes your app stand out. The style guidelines in this section help you create a Fluent Design through color, typography, and new features such as acrylic material and reveal highlight.</span></span>
 
 :::row:::
     :::column:::
@@ -30,7 +31,7 @@ ms.locfileid: "6986528"
     :::column:::
         ![hero image](images/header-typography.svg)
         ### [Typography](typography.md)
-       <span data-ttu-id="d4d47-107">Typografie muss übersichtlich sein, da sie zur visuellen Darstellung von Sprache dient.</span><span class="sxs-lookup"><span data-stu-id="d4d47-107">As the visual representation of language, typography’s main task is to be clear.</span></span> <span data-ttu-id="d4d47-108">Ihr Stil darf diesem Ziel nie im Wege stehen.</span><span class="sxs-lookup"><span data-stu-id="d4d47-108">Its style should never get in the way of that goal.</span></span> <span data-ttu-id="d4d47-109">Die folgenden Richtlinien konzentrieren, wie Sie die Typografie verwenden, um Benutzern Inhalte leicht verständlich zu erleichtern.</span><span class="sxs-lookup"><span data-stu-id="d4d47-109">The following guidelines focus on how to use typography to help users understand content easily.</span></span> 
+       <span data-ttu-id="fa3cd-107">Typografie muss übersichtlich sein, da sie zur visuellen Darstellung von Sprache dient.</span><span class="sxs-lookup"><span data-stu-id="fa3cd-107">As the visual representation of language, typography’s main task is to be clear.</span></span> <span data-ttu-id="fa3cd-108">Ihr Stil darf diesem Ziel nie im Wege stehen.</span><span class="sxs-lookup"><span data-stu-id="fa3cd-108">Its style should never get in the way of that goal.</span></span> <span data-ttu-id="fa3cd-109">Die folgenden Richtlinien konzentrieren, wie Sie die Typografie verwenden, um Benutzern Inhalte leicht verständlich zu erleichtern.</span><span class="sxs-lookup"><span data-stu-id="fa3cd-109">The following guidelines focus on how to use typography to help users understand content easily.</span></span> 
     :::column-end:::
 :::row-end:::
 

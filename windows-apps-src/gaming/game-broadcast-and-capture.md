@@ -9,24 +9,24 @@ ms.topic: article
 keywords: Windows 10, UWP, Spiele, Eingabe
 ms.localizationpriority: medium
 ms.openlocfilehash: ad42b62d627dd4a506fc4ff451f6365d4133fd70
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6980667"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7144284"
 ---
-# <a name="game-broadcast-and-capture"></a><span data-ttu-id="49490-104">Übertragen und Aufzeichnen von Spielen</span><span class="sxs-lookup"><span data-stu-id="49490-104">Game broadcast and capture</span></span>
+# <a name="game-broadcast-and-capture"></a><span data-ttu-id="1bb34-104">Übertragen und Aufzeichnen von Spielen</span><span class="sxs-lookup"><span data-stu-id="1bb34-104">Game broadcast and capture</span></span>
 
-<span data-ttu-id="49490-105">Dieser Abschnitt enthält Informationen darüber, wie Sie einer UWP-App Funktionen zum Übertragen und Aufzeichnen von Spielen hinzufügen können.</span><span class="sxs-lookup"><span data-stu-id="49490-105">This section provides information for adding game capture and broadcast capabilities to a UWP app.</span></span>
+<span data-ttu-id="1bb34-105">Dieser Abschnitt enthält Informationen darüber, wie Sie einer UWP-App Funktionen zum Übertragen und Aufzeichnen von Spielen hinzufügen können.</span><span class="sxs-lookup"><span data-stu-id="1bb34-105">This section provides information for adding game capture and broadcast capabilities to a UWP app.</span></span>
 
-## <a name="game-broadcasting"></a><span data-ttu-id="49490-106">Übertragen von Spielen</span><span class="sxs-lookup"><span data-stu-id="49490-106">Game broadcasting</span></span>
-<span data-ttu-id="49490-107">Derzeit müssen Benutzer die Übertragung von Spielen über die Systembenutzeroberfläche initiieren, die in Windows integriert ist. Aber ab Version 1709 von Windows 10 können Apps die Übertragungsoberfläche des Systems starten und Benachrichtigungen empfangen, wenn die Übertragung gestartet oder gestoppt wird.</span><span class="sxs-lookup"><span data-stu-id="49490-107">Currently, users must initiate game broadcasting using the system UI that is built into Windows, but starting with Windows 10, version 1709, apps can launch the system broadcasting UI and can receive notifications when broadcasting starts and stops.</span></span> <span data-ttu-id="49490-108">Weitere Informationen finden Sie unter [Verwalten der Spielübertragung](manage-game-broadcasting.md).</span><span class="sxs-lookup"><span data-stu-id="49490-108">For more information, see [Manage game broadcasting](manage-game-broadcasting.md).</span></span>
+## <a name="game-broadcasting"></a><span data-ttu-id="1bb34-106">Übertragen von Spielen</span><span class="sxs-lookup"><span data-stu-id="1bb34-106">Game broadcasting</span></span>
+<span data-ttu-id="1bb34-107">Derzeit müssen Benutzer die Übertragung von Spielen über die Systembenutzeroberfläche initiieren, die in Windows integriert ist. Aber ab Version 1709 von Windows 10 können Apps die Übertragungsoberfläche des Systems starten und Benachrichtigungen empfangen, wenn die Übertragung gestartet oder gestoppt wird.</span><span class="sxs-lookup"><span data-stu-id="1bb34-107">Currently, users must initiate game broadcasting using the system UI that is built into Windows, but starting with Windows 10, version 1709, apps can launch the system broadcasting UI and can receive notifications when broadcasting starts and stops.</span></span> <span data-ttu-id="1bb34-108">Weitere Informationen finden Sie unter [Verwalten der Spielübertragung](manage-game-broadcasting.md).</span><span class="sxs-lookup"><span data-stu-id="1bb34-108">For more information, see [Manage game broadcasting](manage-game-broadcasting.md).</span></span>
 
-## <a name="game-capture"></a><span data-ttu-id="49490-109">Aufzeichnen von Spielen</span><span class="sxs-lookup"><span data-stu-id="49490-109">Game capture</span></span>
-<span data-ttu-id="49490-110">Ab Version 1709 von Windows 10 sind UWP-Apps in der Lage, Audio- und Videosequenzen des Spielverlaufs aufzuzeichnen, Screenshots aufzunehmen und Metadaten von Spielen zu übermitteln, die in aufgezeichnete und zu übertragene Videostreams eingebettet werden. So kann Ihre App dynamische Erfahrungen erstellen, die mit Spielereignissen synchronisiert sind.</span><span class="sxs-lookup"><span data-stu-id="49490-110">Starting with Windows 10, version 1709, UWP apps can record audio and video captures of gameplay, capture screenshots, and submit gameplay metadata to be embedded in captured and broadcast video streams, allowing your app and others to create dynamic experiences that are synchronized to gameplay events.</span></span> <span data-ttu-id="49490-111">Weitere Informationen finden Sie unter [Aufzeichnen von Audio- und Videosequenzen, Screenshots und Metadaten](capture-game-audio-video-screenshots-and-metadata.md).</span><span class="sxs-lookup"><span data-stu-id="49490-111">For more information, see [Capture game audio, video, screenshots, and metadata](capture-game-audio-video-screenshots-and-metadata.md).</span></span>
+## <a name="game-capture"></a><span data-ttu-id="1bb34-109">Aufzeichnen von Spielen</span><span class="sxs-lookup"><span data-stu-id="1bb34-109">Game capture</span></span>
+<span data-ttu-id="1bb34-110">Ab Version 1709 von Windows 10 sind UWP-Apps in der Lage, Audio- und Videosequenzen des Spielverlaufs aufzuzeichnen, Screenshots aufzunehmen und Metadaten von Spielen zu übermitteln, die in aufgezeichnete und zu übertragene Videostreams eingebettet werden. So kann Ihre App dynamische Erfahrungen erstellen, die mit Spielereignissen synchronisiert sind.</span><span class="sxs-lookup"><span data-stu-id="1bb34-110">Starting with Windows 10, version 1709, UWP apps can record audio and video captures of gameplay, capture screenshots, and submit gameplay metadata to be embedded in captured and broadcast video streams, allowing your app and others to create dynamic experiences that are synchronized to gameplay events.</span></span> <span data-ttu-id="1bb34-111">Weitere Informationen finden Sie unter [Aufzeichnen von Audio- und Videosequenzen, Screenshots und Metadaten](capture-game-audio-video-screenshots-and-metadata.md).</span><span class="sxs-lookup"><span data-stu-id="1bb34-111">For more information, see [Capture game audio, video, screenshots, and metadata](capture-game-audio-video-screenshots-and-metadata.md).</span></span>
 
 
 
-## <a name="see-also"></a><span data-ttu-id="49490-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="49490-112">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1bb34-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1bb34-112">See Also</span></span>
 
-* [<span data-ttu-id="49490-113">Gaming</span><span class="sxs-lookup"><span data-stu-id="49490-113">Gaming</span></span>](index.md)
+* [<span data-ttu-id="1bb34-113">Gaming</span><span class="sxs-lookup"><span data-stu-id="1bb34-113">Gaming</span></span>](index.md)

@@ -9,39 +9,39 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Kopfhörer
 ms.localizationpriority: medium
 ms.openlocfilehash: f5097af13d0714f30eefd7771f798036d069cdea
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6975150"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7173487"
 ---
-# <a name="headset"></a><span data-ttu-id="f15e8-104">Headset</span><span class="sxs-lookup"><span data-stu-id="f15e8-104">Headset</span></span>
+# <a name="headset"></a><span data-ttu-id="b8f5f-104">Headset</span><span class="sxs-lookup"><span data-stu-id="b8f5f-104">Headset</span></span>
 
-<span data-ttu-id="f15e8-105">In diesem Dokument wird die grundlegende Programmierung für Headsets unter Verwendung von [Windows.Gaming.Input.Headset][Headset] und zugehöriger APIs für die universelle Windows-Plattform (UWP) beschrieben.</span><span class="sxs-lookup"><span data-stu-id="f15e8-105">This page describes the basics of programming for headsets using [Windows.Gaming.Input.Headset][headset] and related APIs for the Universal Windows Platform (UWP).</span></span>
+<span data-ttu-id="b8f5f-105">In diesem Dokument wird die grundlegende Programmierung für Headsets unter Verwendung von [Windows.Gaming.Input.Headset][Headset] und zugehöriger APIs für die universelle Windows-Plattform (UWP) beschrieben.</span><span class="sxs-lookup"><span data-stu-id="b8f5f-105">This page describes the basics of programming for headsets using [Windows.Gaming.Input.Headset][headset] and related APIs for the Universal Windows Platform (UWP).</span></span>
 
-<span data-ttu-id="f15e8-106">Auf dieser Seite erhalten Sie Informationen zu folgenden Vorgängen:</span><span class="sxs-lookup"><span data-stu-id="f15e8-106">By reading this page, you'll learn:</span></span>
-* <span data-ttu-id="f15e8-107">Zugreifen auf ein Headset, das mit einem Eingabe- oder Navigationsgerät verbunden ist</span><span class="sxs-lookup"><span data-stu-id="f15e8-107">How to access a headset that's connected to an input or navigation device</span></span>
-* <span data-ttu-id="f15e8-108">Ermitteln, ob ein Headset verbunden oder getrennt wurde</span><span class="sxs-lookup"><span data-stu-id="f15e8-108">How to detect that a headset has been connected or disconnected</span></span>
-
-
-## <a name="headset-overview"></a><span data-ttu-id="f15e8-109">Übersicht über Headsets</span><span class="sxs-lookup"><span data-stu-id="f15e8-109">Headset overview</span></span>
-
-<span data-ttu-id="f15e8-110">Headsets sind Geräte für die Audioaufnahme und -wiedergabe und werden am häufigsten zur Kommunikation mit anderen Spielern in Onlinespielen verwendet, können aber auch im Spiel oder für andere kreative Aufgaben verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="f15e8-110">Headsets are audio capture and playback devices most often used to communicate with other players in online games but can also be used in gameplay or for other creative uses.</span></span> <span data-ttu-id="f15e8-111">Headsets werden in Windows10 und UWP-Apps für Xbox durch den [Windows.Gaming.Input][]-Namespace unterstützt.</span><span class="sxs-lookup"><span data-stu-id="f15e8-111">Headsets are supported in Windows 10 and Xbox UWP apps by the [Windows.Gaming.Input][] namespace.</span></span>
+<span data-ttu-id="b8f5f-106">Auf dieser Seite erhalten Sie Informationen zu folgenden Vorgängen:</span><span class="sxs-lookup"><span data-stu-id="b8f5f-106">By reading this page, you'll learn:</span></span>
+* <span data-ttu-id="b8f5f-107">Zugreifen auf ein Headset, das mit einem Eingabe- oder Navigationsgerät verbunden ist</span><span class="sxs-lookup"><span data-stu-id="b8f5f-107">How to access a headset that's connected to an input or navigation device</span></span>
+* <span data-ttu-id="b8f5f-108">Ermitteln, ob ein Headset verbunden oder getrennt wurde</span><span class="sxs-lookup"><span data-stu-id="b8f5f-108">How to detect that a headset has been connected or disconnected</span></span>
 
 
-## <a name="detect-and-track-headsets"></a><span data-ttu-id="f15e8-112">Erkennen und Nachverfolgen von Headsets</span><span class="sxs-lookup"><span data-stu-id="f15e8-112">Detect and track headsets</span></span>
+## <a name="headset-overview"></a><span data-ttu-id="b8f5f-109">Übersicht über Headsets</span><span class="sxs-lookup"><span data-stu-id="b8f5f-109">Headset overview</span></span>
 
-<span data-ttu-id="f15e8-113">Headsets werden vom System verwaltet. Daher müssen Sie diese nicht erstellen oder initialisieren.</span><span class="sxs-lookup"><span data-stu-id="f15e8-113">Headsets are managed by the system, therefore you don't have to create or initialize them.</span></span> <span data-ttu-id="f15e8-114">Das System ermöglicht den Zugriff auf ein Headset über das Eingabegerät, mit dem es verbunden ist. Außerdem stellt es Ereignisse bereit, durch die Sie benachrichtigt werden, wenn ein Headset verbunden oder getrennt wird.</span><span class="sxs-lookup"><span data-stu-id="f15e8-114">The system provides access to a headset through the input device its connected to and events to notify you when a headset is connected or disconnected.</span></span>
+<span data-ttu-id="b8f5f-110">Headsets sind Geräte für die Audioaufnahme und -wiedergabe und werden am häufigsten zur Kommunikation mit anderen Spielern in Onlinespielen verwendet, können aber auch im Spiel oder für andere kreative Aufgaben verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="b8f5f-110">Headsets are audio capture and playback devices most often used to communicate with other players in online games but can also be used in gameplay or for other creative uses.</span></span> <span data-ttu-id="b8f5f-111">Headsets werden in Windows10 und UWP-Apps für Xbox durch den [Windows.Gaming.Input][]-Namespace unterstützt.</span><span class="sxs-lookup"><span data-stu-id="b8f5f-111">Headsets are supported in Windows 10 and Xbox UWP apps by the [Windows.Gaming.Input][] namespace.</span></span>
 
-### <a name="igamecontrollerheadset"></a><span data-ttu-id="f15e8-115">IGameController.Headset</span><span class="sxs-lookup"><span data-stu-id="f15e8-115">IGameController.Headset</span></span>
 
-<span data-ttu-id="f15e8-116">Alle Eingabegeräte im [Windows.Gaming.Input][]-Namespace implementieren die [IGameController][]-Schnittstelle. Diese sieht vor, dass die [Headset][igamecontroller.headset]-Eigenschaft dem aktuell mit dem Gerät verbundenen Headset entspricht.</span><span class="sxs-lookup"><span data-stu-id="f15e8-116">All input devices in the [Windows.Gaming.Input][] namespace implement the [IGameController][] interface which defines the [Headset][igamecontroller.headset] property to be the headset currently connected to the device.</span></span>
+## <a name="detect-and-track-headsets"></a><span data-ttu-id="b8f5f-112">Erkennen und Nachverfolgen von Headsets</span><span class="sxs-lookup"><span data-stu-id="b8f5f-112">Detect and track headsets</span></span>
 
-### <a name="connecting-and-disconnecting-headsets"></a><span data-ttu-id="f15e8-117">Verbinden und Trennen von Headsets</span><span class="sxs-lookup"><span data-stu-id="f15e8-117">Connecting and disconnecting headsets.</span></span>
+<span data-ttu-id="b8f5f-113">Headsets werden vom System verwaltet. Daher müssen Sie diese nicht erstellen oder initialisieren.</span><span class="sxs-lookup"><span data-stu-id="b8f5f-113">Headsets are managed by the system, therefore you don't have to create or initialize them.</span></span> <span data-ttu-id="b8f5f-114">Das System ermöglicht den Zugriff auf ein Headset über das Eingabegerät, mit dem es verbunden ist. Außerdem stellt es Ereignisse bereit, durch die Sie benachrichtigt werden, wenn ein Headset verbunden oder getrennt wird.</span><span class="sxs-lookup"><span data-stu-id="b8f5f-114">The system provides access to a headset through the input device its connected to and events to notify you when a headset is connected or disconnected.</span></span>
 
-<span data-ttu-id="f15e8-118">Das [HeadsetConnected][igamecontroller.headsetconnected]-Ereignis bzw. das [HeadsetDisconnected][igamecontroller.headsetdisconnected]-Ereignis wird ausgelöst, wenn ein Headset verbunden bzw. getrennt wird.</span><span class="sxs-lookup"><span data-stu-id="f15e8-118">When a headset is connected or disconnected, the [HeadsetConnected][igamecontroller.headsetconnected] and [HeadsetDisconnected][igamecontroller.headsetdisconnected] events are raised.</span></span> <span data-ttu-id="f15e8-119">Sie können Handler für diese Ereignisse registrieren, um nachzuverfolgen, ob derzeit ein Headset an ein Eingabegerät angeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="f15e8-119">You can register handlers for these events to keep track of whether an input device currently has a headset connected to it.</span></span>
+### <a name="igamecontrollerheadset"></a><span data-ttu-id="b8f5f-115">IGameController.Headset</span><span class="sxs-lookup"><span data-stu-id="b8f5f-115">IGameController.Headset</span></span>
 
-<span data-ttu-id="f15e8-120">Das folgende Beispiel zeigt, wie ein Handler für das `HeadsetConnected`-Ereignis registriert wird.</span><span class="sxs-lookup"><span data-stu-id="f15e8-120">The following example shows how to register a handler for the `HeadsetConnected` event.</span></span>
+<span data-ttu-id="b8f5f-116">Alle Eingabegeräte im [Windows.Gaming.Input][]-Namespace implementieren die [IGameController][]-Schnittstelle. Diese sieht vor, dass die [Headset][igamecontroller.headset]-Eigenschaft dem aktuell mit dem Gerät verbundenen Headset entspricht.</span><span class="sxs-lookup"><span data-stu-id="b8f5f-116">All input devices in the [Windows.Gaming.Input][] namespace implement the [IGameController][] interface which defines the [Headset][igamecontroller.headset] property to be the headset currently connected to the device.</span></span>
+
+### <a name="connecting-and-disconnecting-headsets"></a><span data-ttu-id="b8f5f-117">Verbinden und Trennen von Headsets</span><span class="sxs-lookup"><span data-stu-id="b8f5f-117">Connecting and disconnecting headsets.</span></span>
+
+<span data-ttu-id="b8f5f-118">Das [HeadsetConnected][igamecontroller.headsetconnected]-Ereignis bzw. das [HeadsetDisconnected][igamecontroller.headsetdisconnected]-Ereignis wird ausgelöst, wenn ein Headset verbunden bzw. getrennt wird.</span><span class="sxs-lookup"><span data-stu-id="b8f5f-118">When a headset is connected or disconnected, the [HeadsetConnected][igamecontroller.headsetconnected] and [HeadsetDisconnected][igamecontroller.headsetdisconnected] events are raised.</span></span> <span data-ttu-id="b8f5f-119">Sie können Handler für diese Ereignisse registrieren, um nachzuverfolgen, ob derzeit ein Headset an ein Eingabegerät angeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="b8f5f-119">You can register handlers for these events to keep track of whether an input device currently has a headset connected to it.</span></span>
+
+<span data-ttu-id="b8f5f-120">Das folgende Beispiel zeigt, wie ein Handler für das `HeadsetConnected`-Ereignis registriert wird.</span><span class="sxs-lookup"><span data-stu-id="b8f5f-120">The following example shows how to register a handler for the `HeadsetConnected` event.</span></span>
 
 ```cpp
 auto inputDevice = myGamepads[0]; // or arcade stick, racing wheel
@@ -52,7 +52,7 @@ inputDevice.HeadsetConnected += ref new TypedEventHandler<IGameController^, Head
 }
 ```
 
-<span data-ttu-id="f15e8-121">Das folgende Beispiel zeigt, wie ein Handler für das `HeadsetDisconnected`-Ereignis registriert wird.</span><span class="sxs-lookup"><span data-stu-id="f15e8-121">The following example shows how to register a handler for the `HeadsetDisconnected` event.</span></span>
+<span data-ttu-id="b8f5f-121">Das folgende Beispiel zeigt, wie ein Handler für das `HeadsetDisconnected`-Ereignis registriert wird.</span><span class="sxs-lookup"><span data-stu-id="b8f5f-121">The following example shows how to register a handler for the `HeadsetDisconnected` event.</span></span>
 
 ```cpp
 auto inputDevice = myGamepads[0]; // or arcade stick, racing wheel
@@ -63,16 +63,16 @@ inputDevice.HeadsetDisconnected += ref new TypedEventHandler<IGameController^, H
 }
 ```
 
-## <a name="using-the-headset"></a><span data-ttu-id="f15e8-122">Verwenden des Headsets</span><span class="sxs-lookup"><span data-stu-id="f15e8-122">Using the headset</span></span>
+## <a name="using-the-headset"></a><span data-ttu-id="b8f5f-122">Verwenden des Headsets</span><span class="sxs-lookup"><span data-stu-id="b8f5f-122">Using the headset</span></span>
 
-<span data-ttu-id="f15e8-123">Die [Headset][]-Klasse besteht aus zwei Zeichenfolgen, die XAudio-Endpunkt-IDs darstellen – eine für Audioaufnahmen (über das Headsetmikrofon) und eine für das Audiorendering (über das Ohrstück des Headsets).</span><span class="sxs-lookup"><span data-stu-id="f15e8-123">The [Headset][] class is made up of two strings that represent XAudio endpoint IDs--one for audio capture (recording from the headset microphone) and one for audio rendering (playback through the headset earpiece).</span></span>
+<span data-ttu-id="b8f5f-123">Die [Headset][]-Klasse besteht aus zwei Zeichenfolgen, die XAudio-Endpunkt-IDs darstellen – eine für Audioaufnahmen (über das Headsetmikrofon) und eine für das Audiorendering (über das Ohrstück des Headsets).</span><span class="sxs-lookup"><span data-stu-id="b8f5f-123">The [Headset][] class is made up of two strings that represent XAudio endpoint IDs--one for audio capture (recording from the headset microphone) and one for audio rendering (playback through the headset earpiece).</span></span>
 
-<span data-ttu-id="f15e8-124">Hier wird nicht ausführlich auf XAudio eingegangen. Weitere Informationen finden Sie in der [XAudio2-Programmieranleitung](https://msdn.microsoft.com/library/windows/desktop/ee415737.aspx) und in der [Referenz zur XAudio2-API](https://msdn.microsoft.com/library/windows/desktop/ee415899.aspx).</span><span class="sxs-lookup"><span data-stu-id="f15e8-124">The details of working with XAudio are not discussed here, for more information see the [XAudio2 programming guide](https://msdn.microsoft.com/library/windows/desktop/ee415737.aspx) and [XAudio2 API reference](https://msdn.microsoft.com/library/windows/desktop/ee415899.aspx).</span></span>
+<span data-ttu-id="b8f5f-124">Hier wird nicht ausführlich auf XAudio eingegangen. Weitere Informationen finden Sie in der [XAudio2-Programmieranleitung](https://msdn.microsoft.com/library/windows/desktop/ee415737.aspx) und in der [Referenz zur XAudio2-API](https://msdn.microsoft.com/library/windows/desktop/ee415899.aspx).</span><span class="sxs-lookup"><span data-stu-id="b8f5f-124">The details of working with XAudio are not discussed here, for more information see the [XAudio2 programming guide](https://msdn.microsoft.com/library/windows/desktop/ee415737.aspx) and [XAudio2 API reference](https://msdn.microsoft.com/library/windows/desktop/ee415899.aspx).</span></span>
 
 
-[<span data-ttu-id="f15e8-125">Windows.Gaming.Input</span><span class="sxs-lookup"><span data-stu-id="f15e8-125">Windows.Gaming.Input</span></span>]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx
-[<span data-ttu-id="f15e8-126">igamecontroller</span><span class="sxs-lookup"><span data-stu-id="f15e8-126">igamecontroller</span></span>]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.aspx
+[<span data-ttu-id="b8f5f-125">Windows.Gaming.Input</span><span class="sxs-lookup"><span data-stu-id="b8f5f-125">Windows.Gaming.Input</span></span>]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx
+[<span data-ttu-id="b8f5f-126">igamecontroller</span><span class="sxs-lookup"><span data-stu-id="b8f5f-126">igamecontroller</span></span>]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.aspx
 [igamecontroller.headset]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.headset.aspx
 [igamecontroller.headsetconnected]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.headsetconnected.aspx
 [igamecontroller.headsetdisconnected]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.headsetdisconnected.aspx
-[<span data-ttu-id="f15e8-127">headset</span><span class="sxs-lookup"><span data-stu-id="f15e8-127">headset</span></span>]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.headset.aspx
+[<span data-ttu-id="b8f5f-127">headset</span><span class="sxs-lookup"><span data-stu-id="b8f5f-127">headset</span></span>]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.headset.aspx

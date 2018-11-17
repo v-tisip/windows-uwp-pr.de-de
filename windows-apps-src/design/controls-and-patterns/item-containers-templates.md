@@ -15,11 +15,11 @@ dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: f5a9756a8afc267c9ec8763af49ba02714c2b4f0
-ms.sourcegitcommit: 9f8010fe67bb3372db1840de9f0be36097ed6258
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/16/2018
-ms.locfileid: "7101966"
+ms.locfileid: "7173553"
 ---
 # <a name="item-containers-and-templates"></a><span data-ttu-id="f5e4d-103">Elementcontainer und Vorlagen</span><span class="sxs-lookup"><span data-stu-id="f5e4d-103">Item containers and templates</span></span>
 

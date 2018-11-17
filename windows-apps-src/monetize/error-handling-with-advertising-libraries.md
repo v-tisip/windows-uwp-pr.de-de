@@ -9,34 +9,34 @@ ms.topic: article
 keywords: Windows10, UWP, Anzeige, Werbung, Fehlerbehandlung, Javascript, XAML, C#
 ms.localizationpriority: medium
 ms.openlocfilehash: a9fa05ed2ee946fcec9ffb5ff21abd9011db0f2a
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6981541"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7171779"
 ---
-# <a name="handle-ad-errors"></a><span data-ttu-id="96c88-104">Behandeln von Fehlern bei Anzeigen</span><span class="sxs-lookup"><span data-stu-id="96c88-104">Handle ad errors</span></span>
+# <a name="handle-ad-errors"></a><span data-ttu-id="01add-104">Behandeln von Fehlern bei Anzeigen</span><span class="sxs-lookup"><span data-stu-id="01add-104">Handle ad errors</span></span>
 
-<span data-ttu-id="96c88-105">Die einzelnen Klassen [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol), [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) und [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2) verfügen über ein **ErrorOccurred**-Ereignis, das ausgelöst wird, wenn ein Fehler im Zusammenhang mit Anzeigen auftritt.</span><span class="sxs-lookup"><span data-stu-id="96c88-105">The [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol),  [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad), and [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2) classes each have an **ErrorOccurred** event that is raised if an ad-related error occurs.</span></span> <span data-ttu-id="96c88-106">Der App-Code kann dieses Ereignis behandeln und die Eigenschaften von [ErrorCode](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs.errorcode) und [ErrorMessage](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs.errormessage) des Ereignisarguments untersuchen, um die Ursache des Fehlers zu bestimmen.</span><span class="sxs-lookup"><span data-stu-id="96c88-106">Your app code can handle this event and examine the [ErrorCode](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs.errorcode) and [ErrorMessage](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs.errormessage) properties of the event args object to help determine the cause of the error.</span></span>
+<span data-ttu-id="01add-105">Die einzelnen Klassen [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol), [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) und [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2) verfügen über ein **ErrorOccurred**-Ereignis, das ausgelöst wird, wenn ein Fehler im Zusammenhang mit Anzeigen auftritt.</span><span class="sxs-lookup"><span data-stu-id="01add-105">The [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol),  [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad), and [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2) classes each have an **ErrorOccurred** event that is raised if an ad-related error occurs.</span></span> <span data-ttu-id="01add-106">Der App-Code kann dieses Ereignis behandeln und die Eigenschaften von [ErrorCode](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs.errorcode) und [ErrorMessage](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs.errormessage) des Ereignisarguments untersuchen, um die Ursache des Fehlers zu bestimmen.</span><span class="sxs-lookup"><span data-stu-id="01add-106">Your app code can handle this event and examine the [ErrorCode](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs.errorcode) and [ErrorMessage](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs.errormessage) properties of the event args object to help determine the cause of the error.</span></span>
 
 <span id="bkmk-dotnet"/>
 
-## <a name="xaml-apps"></a><span data-ttu-id="96c88-107">XAML-Apps</span><span class="sxs-lookup"><span data-stu-id="96c88-107">XAML apps</span></span>
+## <a name="xaml-apps"></a><span data-ttu-id="01add-107">XAML-Apps</span><span class="sxs-lookup"><span data-stu-id="01add-107">XAML apps</span></span>
 
-<span data-ttu-id="96c88-108">So behandeln Sie Anzeigen-bezogene Fehler in einer XAML-App:</span><span class="sxs-lookup"><span data-stu-id="96c88-108">To handle ad-related errors in a XAML app:</span></span>
+<span data-ttu-id="01add-108">So behandeln Sie Anzeigen-bezogene Fehler in einer XAML-App:</span><span class="sxs-lookup"><span data-stu-id="01add-108">To handle ad-related errors in a XAML app:</span></span>
 
-1. <span data-ttu-id="96c88-109">Weisen Sie das **ErrorOccurred**-Ereignis des Objekts **AdControl**, **InterstitialAd** oder **NativeAdsManagerV2** dem Namen eines Ereignishandlerdelegaten zu.</span><span class="sxs-lookup"><span data-stu-id="96c88-109">Assign the **ErrorOccurred** event of your **AdControl**, **InterstitialAd**, or **NativeAdsManagerV2** object to the name of an event handler delegate.</span></span>
+1. <span data-ttu-id="01add-109">Weisen Sie das **ErrorOccurred**-Ereignis des Objekts **AdControl**, **InterstitialAd** oder **NativeAdsManagerV2** dem Namen eines Ereignishandlerdelegaten zu.</span><span class="sxs-lookup"><span data-stu-id="01add-109">Assign the **ErrorOccurred** event of your **AdControl**, **InterstitialAd**, or **NativeAdsManagerV2** object to the name of an event handler delegate.</span></span>
 
-2. <span data-ttu-id="96c88-110">Codieren Sie den Ereignishandlerdelegaten so, dass er zwei Parameter verwendet: ein **Objekt** für den Absender und ein [AdErrorEventArgs](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs)-Objekt.</span><span class="sxs-lookup"><span data-stu-id="96c88-110">Code the error event handling delegate so that it takes two parameters: an **Object** for the sender and an [AdErrorEventArgs](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs) object.</span></span>
+2. <span data-ttu-id="01add-110">Codieren Sie den Ereignishandlerdelegaten so, dass er zwei Parameter verwendet: ein **Objekt** für den Absender und ein [AdErrorEventArgs](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs)-Objekt.</span><span class="sxs-lookup"><span data-stu-id="01add-110">Code the error event handling delegate so that it takes two parameters: an **Object** for the sender and an [AdErrorEventArgs](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs) object.</span></span>
 
-<span data-ttu-id="96c88-111">Hier ist ein Beispiel, das einen Delegaten mit dem Namen **OnAdError**dem Ereignis **ErrorOccurred** des **AdControl**-Objekts mit Namen *myBannerAdControl* zuweist.</span><span class="sxs-lookup"><span data-stu-id="96c88-111">Here is an example that assigns a delegate named **OnAdError** to the **ErrorOccurred** event of an **AdControl** object named *myBannerAdControl*.</span></span>
+<span data-ttu-id="01add-111">Hier ist ein Beispiel, das einen Delegaten mit dem Namen **OnAdError**dem Ereignis **ErrorOccurred** des **AdControl**-Objekts mit Namen *myBannerAdControl* zuweist.</span><span class="sxs-lookup"><span data-stu-id="01add-111">Here is an example that assigns a delegate named **OnAdError** to the **ErrorOccurred** event of an **AdControl** object named *myBannerAdControl*.</span></span>
 
 > [!div class="tabbedCodeSnippets"]
 ``` csharp
 myBannerAdControl.ErrorOccurred = OnAdError;
 ```
 
-<span data-ttu-id="96c88-112">Hier ist eine Beispieldefinition des **OnAdError**-Delegaten, die Fehlerinformationen in das Ausgabefenster in Visual Studio schreibt.</span><span class="sxs-lookup"><span data-stu-id="96c88-112">Here is an example definition of the **OnAdError** delegate that writes error information to the output window in Visual Studio.</span></span>
+<span data-ttu-id="01add-112">Hier ist eine Beispieldefinition des **OnAdError**-Delegaten, die Fehlerinformationen in das Ausgabefenster in Visual Studio schreibt.</span><span class="sxs-lookup"><span data-stu-id="01add-112">Here is an example definition of the **OnAdError** delegate that writes error information to the output window in Visual Studio.</span></span>
 
 > [!div class="tabbedCodeSnippets"]
 ``` csharp
@@ -47,19 +47,19 @@ private void OnAdError(object sender, AdErrorEventArgs e)
 }
 ```
 
-<span data-ttu-id="96c88-113">Unter [Exemplarische Vorgehensweise zur Fehlerbehandlung in XAML/C#](error-handling-in-xamlc-walkthrough.md) finden Sie eine exemplarische Vorgehensweise zur Veranschaulichung der **AdControl**-Fehlerbehandlung in XAML und C#.</span><span class="sxs-lookup"><span data-stu-id="96c88-113">See [Error handling in XAML/C# walkthrough](error-handling-in-xamlc-walkthrough.md) for a walkthrough that demonstrates **AdControl** error handling in XAML and C#.</span></span>
+<span data-ttu-id="01add-113">Unter [Exemplarische Vorgehensweise zur Fehlerbehandlung in XAML/C#](error-handling-in-xamlc-walkthrough.md) finden Sie eine exemplarische Vorgehensweise zur Veranschaulichung der **AdControl**-Fehlerbehandlung in XAML und C#.</span><span class="sxs-lookup"><span data-stu-id="01add-113">See [Error handling in XAML/C# walkthrough](error-handling-in-xamlc-walkthrough.md) for a walkthrough that demonstrates **AdControl** error handling in XAML and C#.</span></span>
 
 <span id="bkmk-javascript"/>
 
-## <a name="javascripthtml-apps"></a><span data-ttu-id="96c88-114">JavaScript/HTML-Apps</span><span class="sxs-lookup"><span data-stu-id="96c88-114">JavaScript/HTML apps</span></span>
+## <a name="javascripthtml-apps"></a><span data-ttu-id="01add-114">JavaScript/HTML-Apps</span><span class="sxs-lookup"><span data-stu-id="01add-114">JavaScript/HTML apps</span></span>
 
-<span data-ttu-id="96c88-115">So behandeln Sie **ErrorOccur** Fehler in einer JavaScript-App:</span><span class="sxs-lookup"><span data-stu-id="96c88-115">To handle **ErrorOccur** errors in a JavaScript app:</span></span>
+<span data-ttu-id="01add-115">So behandeln Sie **ErrorOccur** Fehler in einer JavaScript-App:</span><span class="sxs-lookup"><span data-stu-id="01add-115">To handle **ErrorOccur** errors in a JavaScript app:</span></span>
 
-1.  <span data-ttu-id="96c88-116">Weisen Sie das **OnErrorOccurred**-Ereignis einem Ereignishandler zu.</span><span class="sxs-lookup"><span data-stu-id="96c88-116">Assign the **onErrorOccurred** event to an event handler.</span></span>
+1.  <span data-ttu-id="01add-116">Weisen Sie das **OnErrorOccurred**-Ereignis einem Ereignishandler zu.</span><span class="sxs-lookup"><span data-stu-id="01add-116">Assign the **onErrorOccurred** event to an event handler.</span></span>
 
-2.  <span data-ttu-id="96c88-117">Codieren Sie den Ereignishandler.</span><span class="sxs-lookup"><span data-stu-id="96c88-117">Code the event handler.</span></span>
+2.  <span data-ttu-id="01add-117">Codieren Sie den Ereignishandler.</span><span class="sxs-lookup"><span data-stu-id="01add-117">Code the event handler.</span></span>
 
-<span data-ttu-id="96c88-118">Hier ist ein Beispiel, das einen Ereignishandler mit dem Namen **errorLogger** dem Ereignis **ErrorOccurred** des **AdControl**-Objekts zuweist.</span><span class="sxs-lookup"><span data-stu-id="96c88-118">Here is an example that assigns an event handler named **errorLogger** to the **ErrorOccurred** event of an **AdControl** object.</span></span>
+<span data-ttu-id="01add-118">Hier ist ein Beispiel, das einen Ereignishandler mit dem Namen **errorLogger** dem Ereignis **ErrorOccurred** des **AdControl**-Objekts zuweist.</span><span class="sxs-lookup"><span data-stu-id="01add-118">Here is an example that assigns an event handler named **errorLogger** to the **ErrorOccurred** event of an **AdControl** object.</span></span>
 
 > [!div class="tabbedCodeSnippets"]
 ``` html
@@ -69,11 +69,11 @@ private void OnAdError(object sender, AdErrorEventArgs e)
 </div>
 ```
 
-<span data-ttu-id="96c88-119">Die Fehlerbehandlungsfunktion ist deklarativ und muss in die Funktion [MarkSupportedForProcessing](http://msdn.microsoft.com/library/windows/apps/Hh967819.aspx) eingeschlossen werden.</span><span class="sxs-lookup"><span data-stu-id="96c88-119">The error handling function is declarative and must be enclosed in the [markSupportedForProcessing](http://msdn.microsoft.com/library/windows/apps/Hh967819.aspx) function.</span></span>
+<span data-ttu-id="01add-119">Die Fehlerbehandlungsfunktion ist deklarativ und muss in die Funktion [MarkSupportedForProcessing](http://msdn.microsoft.com/library/windows/apps/Hh967819.aspx) eingeschlossen werden.</span><span class="sxs-lookup"><span data-stu-id="01add-119">The error handling function is declarative and must be enclosed in the [markSupportedForProcessing](http://msdn.microsoft.com/library/windows/apps/Hh967819.aspx) function.</span></span>
 
-<span data-ttu-id="96c88-120">Der Fehlerhandler fängt das JavaScript-Fehlerobjekt auf, wenn ein Fehler auftritt.</span><span class="sxs-lookup"><span data-stu-id="96c88-120">The error handler catches the JavaScript error object when an error occurs.</span></span> <span data-ttu-id="96c88-121">Das Fehlerobjekt liefert dem Fehlerhandler zwei Argumente.</span><span class="sxs-lookup"><span data-stu-id="96c88-121">The error object provides two arguments to the error handler.</span></span> <span data-ttu-id="96c88-122">Weitere Informationen finden Sie unter [Eigenschaften spezieller Fehler von asynchronen Methoden von Windows-Runtime](http://msdn.microsoft.com/library/windows/apps/hh994690.aspx).</span><span class="sxs-lookup"><span data-stu-id="96c88-122">For more information, see [Special Error Properties from Asynchronous Windows Runtime Methods](http://msdn.microsoft.com/library/windows/apps/hh994690.aspx).</span></span>
+<span data-ttu-id="01add-120">Der Fehlerhandler fängt das JavaScript-Fehlerobjekt auf, wenn ein Fehler auftritt.</span><span class="sxs-lookup"><span data-stu-id="01add-120">The error handler catches the JavaScript error object when an error occurs.</span></span> <span data-ttu-id="01add-121">Das Fehlerobjekt liefert dem Fehlerhandler zwei Argumente.</span><span class="sxs-lookup"><span data-stu-id="01add-121">The error object provides two arguments to the error handler.</span></span> <span data-ttu-id="01add-122">Weitere Informationen finden Sie unter [Eigenschaften spezieller Fehler von asynchronen Methoden von Windows-Runtime](http://msdn.microsoft.com/library/windows/apps/hh994690.aspx).</span><span class="sxs-lookup"><span data-stu-id="01add-122">For more information, see [Special Error Properties from Asynchronous Windows Runtime Methods](http://msdn.microsoft.com/library/windows/apps/hh994690.aspx).</span></span>
 
-<span data-ttu-id="96c88-123">Hier ist ein Beispiel für eine Fehlerbehandlungsfunktion mit dem Namen **ErrorLogger**, die das Ereignis **OnErrorOccurred** behandelt.</span><span class="sxs-lookup"><span data-stu-id="96c88-123">Here is an example of an error handling function named **errorLogger** that handles the **onErrorOccurred** event.</span></span>
+<span data-ttu-id="01add-123">Hier ist ein Beispiel für eine Fehlerbehandlungsfunktion mit dem Namen **ErrorLogger**, die das Ereignis **OnErrorOccurred** behandelt.</span><span class="sxs-lookup"><span data-stu-id="01add-123">Here is an example of an error handling function named **errorLogger** that handles the **onErrorOccurred** event.</span></span>
 
 > [!div class="tabbedCodeSnippets"]
 ``` javascript
@@ -84,4 +84,4 @@ window.errorLogger = function (sender, evt) {
 });
 ```
 
-<span data-ttu-id="96c88-124">Unter [Exemplarische Vorgehensweise zur Fehlerbehandlung in JavaScript](error-handling-in-javascript-walkthrough.md) finden Sie eine exemplarische Vorgehensweise zur Veranschaulichung der **AdControl**-Fehlerbehandlung in JavaScript.</span><span class="sxs-lookup"><span data-stu-id="96c88-124">See [Error Handling in JavaScript walkthrough](error-handling-in-javascript-walkthrough.md) for a walkthrough that demonstrates **AdControl** error handling in JavaScript.</span></span>
+<span data-ttu-id="01add-124">Unter [Exemplarische Vorgehensweise zur Fehlerbehandlung in JavaScript](error-handling-in-javascript-walkthrough.md) finden Sie eine exemplarische Vorgehensweise zur Veranschaulichung der **AdControl**-Fehlerbehandlung in JavaScript.</span><span class="sxs-lookup"><span data-stu-id="01add-124">See [Error Handling in JavaScript walkthrough](error-handling-in-javascript-walkthrough.md) for a walkthrough that demonstrates **AdControl** error handling in JavaScript.</span></span>

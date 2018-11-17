@@ -9,23 +9,23 @@ ms.topic: article
 keywords: Windows 10, UWP, Spiele, DirectX, Starten, Reaktivieren
 ms.localizationpriority: medium
 ms.openlocfilehash: ebcec430c4fc916e77ebdf25ee53deb23b02185d
-ms.sourcegitcommit: e2fca6c79f31e521ba76f7ecf343cf8f278e6a15
+ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "6971640"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "7144753"
 ---
-# <a name="launching-and-resuming-apps-directx-and-c"></a><span data-ttu-id="01c11-104">Starten und Reaktivieren von Apps (DirectX und C++)</span><span class="sxs-lookup"><span data-stu-id="01c11-104">Launching and resuming apps (DirectX and C++)</span></span>
+# <a name="launching-and-resuming-apps-directx-and-c"></a><span data-ttu-id="b492f-104">Starten und Reaktivieren von Apps (DirectX und C++)</span><span class="sxs-lookup"><span data-stu-id="b492f-104">Launching and resuming apps (DirectX and C++)</span></span>
 
 
 
-<span data-ttu-id="01c11-105">Hier erfahren Sie, wie Sie Ihre DirectX-App für die universelle Windows-Plattform (UWP) starten, anhalten und reaktivieren.</span><span class="sxs-lookup"><span data-stu-id="01c11-105">Learn how to launch, suspend, and resume your Universal Windows Platform (UWP) DirectX app.</span></span>
+<span data-ttu-id="b492f-105">Hier erfahren Sie, wie Sie Ihre DirectX-App für die universelle Windows-Plattform (UWP) starten, anhalten und reaktivieren.</span><span class="sxs-lookup"><span data-stu-id="b492f-105">Learn how to launch, suspend, and resume your Universal Windows Platform (UWP) DirectX app.</span></span>
 
-| <span data-ttu-id="01c11-106">Thema</span><span class="sxs-lookup"><span data-stu-id="01c11-106">Topic</span></span> | <span data-ttu-id="01c11-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="01c11-107">Description</span></span> |
+| <span data-ttu-id="b492f-106">Thema</span><span class="sxs-lookup"><span data-stu-id="b492f-106">Topic</span></span> | <span data-ttu-id="b492f-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b492f-107">Description</span></span> |
 |---------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| [<span data-ttu-id="01c11-108">So wird's gemacht: Aktivieren einer App</span><span class="sxs-lookup"><span data-stu-id="01c11-108">How to activate an app</span></span>](how-to-activate-an-app-directx-and-cpp.md) | <span data-ttu-id="01c11-109">In diesem Thema erfahren Sie, wie Sie die Aktivierungsbenutzeroberfläche für eine DirectX-App für die universelle Windows-Plattform (UWP) definieren.</span><span class="sxs-lookup"><span data-stu-id="01c11-109">This topic shows how to define the activation experience for a UWP DirectX app.</span></span> |
-| [<span data-ttu-id="01c11-110">So wird's gemacht: Anhalten einer App</span><span class="sxs-lookup"><span data-stu-id="01c11-110">How to suspend an app</span></span>](how-to-suspend-an-app-directx-and-cpp.md) | <span data-ttu-id="01c11-111">In diesem Thema wird gezeigt, wie wichtige Systemzustände und App-Daten gespeichert werden, wenn das System Ihre DirectX-App für die universelle Windows-Plattform (UWP) anhält.</span><span class="sxs-lookup"><span data-stu-id="01c11-111">This topic shows how to save important system state and app data when the system suspends your UWP DirectX app.</span></span> |
-| [<span data-ttu-id="01c11-112">So wird's gemacht: Fortsetzen einer App</span><span class="sxs-lookup"><span data-stu-id="01c11-112">How to resume an app</span></span>](how-to-resume-an-app-directx-and-cpp.md) | <span data-ttu-id="01c11-113">In diesem Thema erfahren Sie, wie wichtige Anwendungsdaten wiederhergestellt werden, wenn das System Ihre DirectX-App für die universelle Windows-Plattform (UWP) fortsetzt.</span><span class="sxs-lookup"><span data-stu-id="01c11-113">This topic shows how to restore important application data when the system resumes your UWP DirectX app.</span></span> |
+| [<span data-ttu-id="b492f-108">So wird's gemacht: Aktivieren einer App</span><span class="sxs-lookup"><span data-stu-id="b492f-108">How to activate an app</span></span>](how-to-activate-an-app-directx-and-cpp.md) | <span data-ttu-id="b492f-109">In diesem Thema erfahren Sie, wie Sie die Aktivierungsbenutzeroberfläche für eine DirectX-App für die universelle Windows-Plattform (UWP) definieren.</span><span class="sxs-lookup"><span data-stu-id="b492f-109">This topic shows how to define the activation experience for a UWP DirectX app.</span></span> |
+| [<span data-ttu-id="b492f-110">So wird's gemacht: Anhalten einer App</span><span class="sxs-lookup"><span data-stu-id="b492f-110">How to suspend an app</span></span>](how-to-suspend-an-app-directx-and-cpp.md) | <span data-ttu-id="b492f-111">In diesem Thema wird gezeigt, wie wichtige Systemzustände und App-Daten gespeichert werden, wenn das System Ihre DirectX-App für die universelle Windows-Plattform (UWP) anhält.</span><span class="sxs-lookup"><span data-stu-id="b492f-111">This topic shows how to save important system state and app data when the system suspends your UWP DirectX app.</span></span> |
+| [<span data-ttu-id="b492f-112">So wird's gemacht: Fortsetzen einer App</span><span class="sxs-lookup"><span data-stu-id="b492f-112">How to resume an app</span></span>](how-to-resume-an-app-directx-and-cpp.md) | <span data-ttu-id="b492f-113">In diesem Thema erfahren Sie, wie wichtige Anwendungsdaten wiederhergestellt werden, wenn das System Ihre DirectX-App für die universelle Windows-Plattform (UWP) fortsetzt.</span><span class="sxs-lookup"><span data-stu-id="b492f-113">This topic shows how to restore important application data when the system resumes your UWP DirectX app.</span></span> |
  
 
  
