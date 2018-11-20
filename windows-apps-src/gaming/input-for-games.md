@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Spiele, Eingabe
 ms.localizationpriority: medium
 ms.openlocfilehash: bb7d70c20aeb2b91d8a6db863e165e017810e924
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7153412"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7282664"
 ---
 # <a name="input-for-games"></a><span data-ttu-id="de482-104">Eingaben für Spiele</span><span class="sxs-lookup"><span data-stu-id="de482-104">Input for games</span></span>
 

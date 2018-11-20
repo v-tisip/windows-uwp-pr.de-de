@@ -9,11 +9,11 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: ff1f4327b82e2b81cc1ec3d64b352e4e85e7bb12
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7170392"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7279344"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a><span data-ttu-id="89885-104">Neuigkeiten in Windows 10 für Entwickler, Build 17763</span><span class="sxs-lookup"><span data-stu-id="89885-104">What's New in Windows 10 for developers, build 17763</span></span>
 

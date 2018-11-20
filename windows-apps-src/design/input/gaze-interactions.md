@@ -14,11 +14,11 @@ doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 758678a7fb65e32d4d3d411956aadfdab515df43
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7166289"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7285201"
 ---
 # <a name="gaze-interactions-and-eye-tracking-in-uwp-apps"></a><span data-ttu-id="fda4f-103">Interaktionen via Blick und Eye Tracking in UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="fda4f-103">Gaze interactions and eye tracking in UWP apps</span></span>
 

@@ -14,11 +14,11 @@ design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 3d73ff59b03f288227b1435b0b931d11860259ec
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7170948"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7290023"
 ---
 # <a name="hub-controlpattern"></a><span data-ttu-id="f98c6-103">Hub-Steuerelement/-Muster</span><span class="sxs-lookup"><span data-stu-id="f98c6-103">Hub control/pattern</span></span>
 

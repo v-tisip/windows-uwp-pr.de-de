@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Microsoft Store-Übermittlungs-API, App-Übermittlung, löschen
 ms.localizationpriority: medium
 ms.openlocfilehash: da2533eb8b6e45e4426a1d25931638466547e01b
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7154130"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7283970"
 ---
 # <a name="delete-an-app-submission"></a><span data-ttu-id="ad7b1-104">Löschen einer App-Übermittlung</span><span class="sxs-lookup"><span data-stu-id="ad7b1-104">Delete an app submission</span></span>
 

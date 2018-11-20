@@ -9,11 +9,11 @@ keywords: Windows 10, UWP
 ms.assetid: 0c17e4fb-7241-4da9-b457-d6d3a7aefccb
 ms.localizationpriority: medium
 ms.openlocfilehash: 61967f0aa81c49cb4e81b11bedac84c318be1840
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7162145"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7307380"
 ---
 # <a name="choose-and-save-tones-using-the-ms-tonepicker-uri-scheme"></a><span data-ttu-id="e0b21-104">Wählen und Speichern von Tönen mithilfe des URI-Schemas „ms-tonepicker“</span><span class="sxs-lookup"><span data-stu-id="e0b21-104">Choose and save tones using the ms-tonepicker URI scheme</span></span>
 

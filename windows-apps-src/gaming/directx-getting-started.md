@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: 66cbc3d281fef68937fd8af2e41a7f04d92d8977
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7171789"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7283574"
 ---
 # <a name="directx-getting-started"></a><span data-ttu-id="ae6b0-104">DirectX: Erste Schritte</span><span class="sxs-lookup"><span data-stu-id="ae6b0-104">DirectX: Getting started</span></span>
 

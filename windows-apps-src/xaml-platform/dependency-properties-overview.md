@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5fbf6e7ee8a224a6957428fddd11a2922adbecf4
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7161246"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7289773"
 ---
 # <a name="dependency-properties-overview"></a><span data-ttu-id="f6d2e-104">Übersicht über Abhängigkeitseigenschaften</span><span class="sxs-lookup"><span data-stu-id="f6d2e-104">Dependency properties overview</span></span>
 

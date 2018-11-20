@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a3e2f10174412b49ce60f3da6a4bb73b2efc4411
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7164490"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7288973"
 ---
 # <a name="image-metadata"></a><span data-ttu-id="496a3-104">Bildmetadaten</span><span class="sxs-lookup"><span data-stu-id="496a3-104">Image Metadata</span></span>
 

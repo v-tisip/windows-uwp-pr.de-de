@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 1a304df30986c904f19cc2401c9a1fb468514f6f
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7168459"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7287254"
 ---
 # <a name="pop-up-ui-animations"></a><span data-ttu-id="12851-103">Animationen für Popupbenutzeroberflächen</span><span class="sxs-lookup"><span data-stu-id="12851-103">Pop-up UI animations</span></span>
 
