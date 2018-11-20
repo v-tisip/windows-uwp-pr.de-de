@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 4006cdedffdbc601b498ce64caddfdefcbf4877a
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7145086"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7280427"
 ---
 # <a name="speech-interactions"></a><span data-ttu-id="288db-103">Spracherkennungsinteraktionen</span><span class="sxs-lookup"><span data-stu-id="288db-103">Speech interactions</span></span>
 

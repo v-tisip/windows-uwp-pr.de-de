@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Programmierung
 ms.localizationpriority: medium
 ms.openlocfilehash: d201caefedca0d810f78d893ea779bd6b814f007
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7161585"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7280921"
 ---
 # <a name="game-programming-resources"></a><span data-ttu-id="e9ce8-104">Ressourcen für die Spieleprogrammierung</span><span class="sxs-lookup"><span data-stu-id="e9ce8-104">Game programming resources</span></span>
 

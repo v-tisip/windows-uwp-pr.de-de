@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, verbundenen Geräten, remote-Systemen, "ROME" Projekt "ROME"
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e6d3d4a549c5e815464ef696a938b44dbe6128c
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7166362"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7278795"
 ---
 # <a name="discover-remote-devices"></a><span data-ttu-id="7d606-104">Ermitteln von Remotegeräten</span><span class="sxs-lookup"><span data-stu-id="7d606-104">Discover remote devices</span></span>
 <span data-ttu-id="7d606-105">Ihre App kann die WLAN-, Bluetooth- und Cloud-Verbindung nutzen, um Windows-Geräte zu ermitteln, die mit demselben Microsoft-Konto wie das ermittelnde Gerät angemeldet sind.</span><span class="sxs-lookup"><span data-stu-id="7d606-105">Your app can use the wireless network, Bluetooth, and cloud connection to discover Windows devices that are signed on with the same Microsoft account as the discovering device.</span></span> <span data-ttu-id="7d606-106">Auf den Remotegeräten muss keine spezielle Software installiert sein, damit sie erkennbar sind.</span><span class="sxs-lookup"><span data-stu-id="7d606-106">The remote devices do not need to have any special software installed in order to be discoverable.</span></span>
