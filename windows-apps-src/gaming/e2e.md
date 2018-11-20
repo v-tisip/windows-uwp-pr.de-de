@@ -8,12 +8,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: Windows10, Uwp, Spiele, Entwickeln von Spielen
 ms.localizationpriority: medium
-ms.openlocfilehash: f695e281c754eaa81f9851ab814520f57fc249ab
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.openlocfilehash: 7481c1d0f64ccb25168200cdf5e6ccc068f769b9
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7155398"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7291634"
 ---
 # <a name="windows-10-game-development-guide"></a>Handbuch zur Entwicklung von Spielen unter Windows10
 
@@ -247,8 +247,8 @@ In Entwicklerforen können Entwickler Fragen zur Spieleentwicklung stellen und b
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Windows-Apps-Entwicklerforen</td>
-        <td><a href="https://social.msdn.microsoft.com/Forums/en-us/home?category=windowsapps">Foren für Windows Store und Apps</a></td>
+        <td>Veröffentlichung apps und Spiele-Entwicklerforen</td>
+        <td><a href="https://social.msdn.microsoft.com/Forums/en-us/home?category=windowsapps">Veröffentlichen und anzeigen in apps</a></td>
     </tr>
     <tr>
         <td>Entwicklerforum für UWP-Apps</td>
@@ -1661,10 +1661,6 @@ Wer glaubt, sich nach dem Abschluss der Entwicklung und der Auslieferung eines S
     <col width="50%" />
     <col width="50%" />
     </colgroup>
-    <tr>
-        <td>DevCenter-App</td>
-        <td><a href="https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws">Rufen Sie die app zum Anzeigen Ihrer veröffentlichten Apps ab</a></td>
-    </tr>  
     <tr>
         <td>Partner Center analytics</td>
         <td><a href="https://msdn.microsoft.com/library/windows/apps/mt148522">Analysieren der App-Leistung</a></td>

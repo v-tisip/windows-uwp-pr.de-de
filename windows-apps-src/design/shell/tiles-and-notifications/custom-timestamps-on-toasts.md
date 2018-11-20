@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows10, UWP, Popup, benutzerdefinierte Zeitstempel, Zeitstempel, Benachrichtigungen, Info-Center
 ms.localizationpriority: medium
 ms.openlocfilehash: 290825fa079052b79fb2feaec8af928f8da93f95
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7156966"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7291436"
 ---
 # <a name="custom-timestamps-on-toasts"></a>Popup mit benutzerdefiniertem Zeitstempel
 
