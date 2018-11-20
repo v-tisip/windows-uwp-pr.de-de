@@ -13,11 +13,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: f65751e894d45bab5b39382c7bec43d5f06f18b2
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7149650"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7297061"
 ---
 # <a name="respond-to-system-events-with-background-tasks"></a><span data-ttu-id="52c8d-104">Reagieren auf Systemereignisse mit Hintergrundaufgaben</span><span class="sxs-lookup"><span data-stu-id="52c8d-104">Respond to system events with background tasks</span></span>
 

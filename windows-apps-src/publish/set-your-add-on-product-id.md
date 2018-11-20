@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Add-Ons, IAP, dauerhaft, konsumbierbar, Abonnement, Produkt, Typ, Produkt-ID, In-App-Kauf, In-App-Produkt
 ms.localizationpriority: medium
 ms.openlocfilehash: 14d0cd40e0a7a170a835b000dc66ec683c2fb59c
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7147664"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7296142"
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a><span data-ttu-id="10939-103">Festlegen von Produkt-ID und Produkttyp für das Add-On</span><span class="sxs-lookup"><span data-stu-id="10939-103">Set your add-on product type and product ID</span></span>
 

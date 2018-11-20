@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, Uwp, Metadaten, Marker, Spracherkennung, Kapitel
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e97c913764db24c68ce7becdba0fc283e1a3b73
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7149179"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7295155"
 ---
 # <a name="system-supported-timed-metadata-cues"></a><span data-ttu-id="ec758-104">Vom System unterstützte, zeitbasierte Metadaten-Marker</span><span class="sxs-lookup"><span data-stu-id="ec758-104">System-supported timed metadata cues</span></span>
 <span data-ttu-id="ec758-105">Dieser Artikel beschreibt, wie verschiedene Formate zeitbasierter Metadaten genutzt werden, die in Mediendateien oder -streams eingebettet sein können.</span><span class="sxs-lookup"><span data-stu-id="ec758-105">This article describes how to take advantage of several formats of timed metadata that may be embedded in media files or streams.</span></span> <span data-ttu-id="ec758-106">UWP-Apps können Ereignisse registrieren, die von der Medienpipeline während der Wiedergabe ausgelöst werden, wenn diese Metadaten-Marker erkannt werden.</span><span class="sxs-lookup"><span data-stu-id="ec758-106">UWP apps can register for events that are raised by the media pipeline during playback whenever these metadata cues are encountered.</span></span> <span data-ttu-id="ec758-107">Mithilfe der [**DataCue**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.DataCue)-Klasse können Apps eigene, benutzerdefinierte Metadaten-Marker implementieren; dieser Artikel behandelt mehrere Metadatenstandards, die von der Medienpipeline automatisch erkannt werden, z. B.:</span><span class="sxs-lookup"><span data-stu-id="ec758-107">Using the [**DataCue**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.DataCue) class, apps can implement their own custom metadata cues, but this article focuses on several metadata standards that are automatically detected by the media pipeline, including:</span></span>

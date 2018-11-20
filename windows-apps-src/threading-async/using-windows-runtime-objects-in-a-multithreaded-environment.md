@@ -9,11 +9,11 @@ ms.author: normesta
 keywords: Windows10, UWP, Timer, Threads
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f4b8249a81cb7d71ba1f4775fd858ae87779c85
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7163454"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7292965"
 ---
 # <a name="using-windows-runtime-objects-in-a-multithreaded-environment"></a><span data-ttu-id="8cdca-104">Verwenden von Windows-Runtime-Objekten in einer Multithread-Umgebung</span><span class="sxs-lookup"><span data-stu-id="8cdca-104">Using Windows Runtime objects in a multithreaded environment</span></span>
 <span data-ttu-id="8cdca-105">In diesem Artikel wird beschrieben, wie das .NET Framework Aufrufe von C#- und Visual Basic-Code auf Objekte verarbeitet, die von der Windows-Runtime oder von Komponenten für Windows-Runtime bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="8cdca-105">This article discusses the way the .NET Framework handles calls from C# and Visual Basic code to objects that are provided by the Windows Runtime or by Windows Runtime Components.</span></span>

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Hintergrundaufgabe, für die
 ms.localizationpriority: medium
 ms.openlocfilehash: faed3f762594ae46b617831615df2448391e1c7d
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7147279"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7298064"
 ---
 # <a name="register-a-background-task"></a><span data-ttu-id="f600d-104">Registrieren einer Hintergrundaufgabe</span><span class="sxs-lookup"><span data-stu-id="f600d-104">Register a background task</span></span>
 

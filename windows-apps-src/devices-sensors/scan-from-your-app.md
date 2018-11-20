@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f9128056cbb3b9218d164b243948d9dd16af0786
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7151804"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7300755"
 ---
 # <a name="scan-from-your-app"></a><span data-ttu-id="e282b-104">Scannen aus Ihrer App</span><span class="sxs-lookup"><span data-stu-id="e282b-104">Scan from your app</span></span>
 

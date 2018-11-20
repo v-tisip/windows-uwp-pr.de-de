@@ -8,11 +8,11 @@ ms.date: 04/27/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e99796decfa5ed434fddee3be4340380e2376a2
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7172211"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7299418"
 ---
 # <a name="continue-user-activity-even-across-devices"></a><span data-ttu-id="c0b89-104">Benutzeraktivitäten geräteübergreifend fortsetzen</span><span class="sxs-lookup"><span data-stu-id="c0b89-104">Continue user activity, even across devices</span></span>
 

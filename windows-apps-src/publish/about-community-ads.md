@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 745be156d36e1fb15594d839b0b06d87425ae914
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7157498"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7296735"
 ---
 # <a name="about-community-ads"></a><span data-ttu-id="e3b41-103">Informationen zu Community-Anzeigen</span><span class="sxs-lookup"><span data-stu-id="e3b41-103">About community ads</span></span>
 
