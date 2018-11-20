@@ -16,11 +16,11 @@ doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: b03a1a7f8670029a12cf2a9537516d4f23a3c64f
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7152299"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7303626"
 ---
 # <a name="menus-and-context-menus"></a><span data-ttu-id="3d45b-103">Menüs und Kontextmenüs</span><span class="sxs-lookup"><span data-stu-id="3d45b-103">Menus and context menus</span></span>
 

@@ -9,11 +9,11 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 500eb490083dfa631f9ff84195ec3ae86027e3ab
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7168834"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7300168"
 ---
 # <a name="writing-style"></a><span data-ttu-id="5126c-104">Schreibstil</span><span class="sxs-lookup"><span data-stu-id="5126c-104">Writing style</span></span>
 

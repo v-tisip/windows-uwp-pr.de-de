@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: be88f06cd5893f2f67697a54754826440bdf7d18
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7165137"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7304451"
 ---
 # <a name="bc6h-format"></a><span data-ttu-id="ef5a7-104">BC6H-Format</span><span class="sxs-lookup"><span data-stu-id="ef5a7-104">BC6H format</span></span>
 

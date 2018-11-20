@@ -9,11 +9,11 @@ ms.topic: article
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f6438b8d1d7b8a8ce47ed4e5baddcb59285e660
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7167825"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7301682"
 ---
 # <a name="enable-apps-for-websites-using-app-uri-handlers"></a><span data-ttu-id="b03bc-104">Aktivieren von apps für Websites mit app-URI-Handlern</span><span class="sxs-lookup"><span data-stu-id="b03bc-104">Enable apps for websites using app URI handlers</span></span>
 

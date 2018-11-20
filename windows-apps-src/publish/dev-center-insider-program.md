@@ -9,11 +9,11 @@ keywords: Windows10, UWP, Insider, Dev Center-Insider, Vorschaufeatures
 ms.assetid: 6fa470dd-e46e-4af1-b278-54bb501a69b0
 ms.localizationpriority: medium
 ms.openlocfilehash: 950c80967851c858212fecc6999c93b55dd439de
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7170472"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7304431"
 ---
 # <a name="dev-center-insider-program"></a><span data-ttu-id="6cfa0-104">Dev Center-Insider-Programm</span><span class="sxs-lookup"><span data-stu-id="6cfa0-104">Dev Center Insider Program</span></span>
 

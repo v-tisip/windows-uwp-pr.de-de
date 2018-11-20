@@ -12,11 +12,11 @@ dev-contact: tbd
 doc-status: not-published
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b20ac0692aef0e4809bb879747551e049a26df7
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7159648"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7301070"
 ---
 # <a name="contact-card"></a><span data-ttu-id="51bb1-103">Visitenkarte</span><span class="sxs-lookup"><span data-stu-id="51bb1-103">Contact card</span></span>
 
