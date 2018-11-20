@@ -11,11 +11,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: ea7c0b92c5900e468023dd5b972942a89c2833c3
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7299511"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7419854"
 ---
 # <a name="continuous-dictation"></a><span data-ttu-id="54347-103">Kontinuierliches Diktieren</span><span class="sxs-lookup"><span data-stu-id="54347-103">Continuous dictation</span></span>
 

@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: e676b28750375a353bb41ce8e14ec1d4c3371c4c
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7307300"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7421919"
 ---
 # <a name="tile-pool-resizing"></a><span data-ttu-id="cdc03-104">Ändern der Größe des Kachelpools</span><span class="sxs-lookup"><span data-stu-id="cdc03-104">Tile pool resizing</span></span>
 

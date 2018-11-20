@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: bc7d04a826bd8be0947e8d84ab8dbff6f67e8027
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7287791"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7441360"
 ---
 # <a name="streaming-resources-features-tiers"></a><span data-ttu-id="612dd-104">Ebenen der Features von Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="612dd-104">Streaming resources features tiers</span></span>
 

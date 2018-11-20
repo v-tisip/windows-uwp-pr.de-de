@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, Uwp, Spiele, Entwickeln von Spielen
 ms.localizationpriority: medium
 ms.openlocfilehash: 7481c1d0f64ccb25168200cdf5e6ccc068f769b9
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7291634"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7418489"
 ---
 # <a name="windows-10-game-development-guide"></a><span data-ttu-id="b780e-104">Handbuch zur Entwicklung von Spielen unter Windows10</span><span class="sxs-lookup"><span data-stu-id="b780e-104">Windows 10 game development guide</span></span>
 

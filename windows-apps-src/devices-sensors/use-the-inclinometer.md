@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: dd335d56fb2a01ed1b9255f974bcaacd47f623f5
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7279648"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7423056"
 ---
 # <a name="use-the-inclinometer"></a><span data-ttu-id="8a7ee-104">Verwenden des Neigungsmessers</span><span class="sxs-lookup"><span data-stu-id="8a7ee-104">Use the inclinometer</span></span>
 

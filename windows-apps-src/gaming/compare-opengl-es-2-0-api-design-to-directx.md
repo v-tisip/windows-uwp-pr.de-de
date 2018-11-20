@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, OpenGL, direct3d
 ms.localizationpriority: medium
 ms.openlocfilehash: 2308c0b931b58209d1233205c355ac09680803dd
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7297894"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7424846"
 ---
 # <a name="plan-your-port-from-opengl-es-20-to-direct3d"></a><span data-ttu-id="c823a-104">Planen der Portierung von OpenGLES2.0 zu Direct3D</span><span class="sxs-lookup"><span data-stu-id="c823a-104">Plan your port from OpenGL ES 2.0 to Direct3D</span></span>
 

@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ce2082479261cd96fb1c5bafd5f2df06bf6f239
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7307310"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7421012"
 ---
 # <a name="emissive-lighting"></a><span data-ttu-id="7d857-104">Emissive-Lighting</span><span class="sxs-lookup"><span data-stu-id="7d857-104">Emissive lighting</span></span>
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 33e567db01916367c8ea30d98e59f421581ac7aa
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7301156"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7422015"
 ---
 # <a name="adding-my-people-support-to-an-application"></a><span data-ttu-id="f9369-104">Support für Meine Kontakte zu einer Anwendung hinzufügen</span><span class="sxs-lookup"><span data-stu-id="f9369-104">Adding My People support to an application</span></span>
 
