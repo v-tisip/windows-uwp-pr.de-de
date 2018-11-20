@@ -8,12 +8,12 @@ ms.date: 03/16/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Sammlungs-API, Produkte anzeigen
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e5d6376420a1ee4ac166330371cf6e058d3476e
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.openlocfilehash: 2ed5e4b34f3ad46daaaac8310b6eced8639bde27
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7306773"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7441679"
 ---
 # <a name="query-for-products"></a>Produktabfrage
 
@@ -61,7 +61,7 @@ Weitere Informationen finden Sie unter [Verwalten von Produktansprüchen aus ein
 | modifiedAfter     | datetime     | Falls angegeben, gibt der Dienst nur Produkte zurück, die nach diesem Datum geändert wurden.        | Nein       |
 | parentProductId   | string       | Falls angegeben, gibt der Dienst nur Add-Ons zurück, die der angegebenen App entsprechen.      | Nein       |
 | productSkuIds     | list&lt;ProductSkuId&gt; | Falls angegeben, gibt der Dienst nur Produkte für die angegebenen Produkt-SKU-Paare zurück. Weitere Informationen finden Sie in der folgenden Tabelle.      | Nein       |
-| productTypes      | string       | Falls angegeben, gibt der Dienst nur Produkte zurück, die den angegebenen Produkttypen entsprechen. Unterstützte Produkttypen sind **Application**, **Durable** und **UnmanagedConsumable**.     | Nein       |
+| productTypes      | Liste&lt;Zeichenfolge&gt;       | Gibt an, welche Produkte, die in die Abfrageergebnisse zurückgegeben. Unterstützte Produkttypen sind **Application**, **Durable** und **UnmanagedConsumable**.     | Ja       |
 | validityType      | string       | Bei Festlegung auf **Alle** werden alle Produkte für einen Benutzer, einschließlich abgelaufener Elemente, zurückgegeben. Bei Festlegung auf **Valid** werden nur Produkte zurückgegeben, die zum aktuellen Zeitpunkt gültig sind (aktiver Status, Startdatum &lt; Istdatum und Enddatum &gt; Istdatum). | Nein       |
 
 
