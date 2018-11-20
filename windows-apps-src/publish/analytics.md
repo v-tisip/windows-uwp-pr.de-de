@@ -8,12 +8,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, Uwp, Analysen, Berichte, Dashboard, apps, Daten, Metriken
 ms.localizationpriority: medium
-ms.openlocfilehash: 22d9a4d4b66091148bbb078abfb89237ab14ea87
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.openlocfilehash: 8d7998366d484c95b90b765eb9227a7c3df41b6f
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7167316"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7289864"
 ---
 # <a name="analyze-app-performance"></a>Analysieren der App-Leistung
 
@@ -49,7 +49,7 @@ In diesem Abschnitt erhalten Sie Details zu den Informationen, die in den folgen
 
 ## <a name="access-analytics-data-outside-of-partner-center"></a>Zugreifen auf Analysedaten außerhalb von Partner Center
 
-Zusätzlich zur Anzeige der Berichte im Partner Center, können Sie Ihre app-Analyse in einer Reihe von Möglichkeiten zugreifen.
+Zusätzlich zur Anzeige der Berichte im Partner Center, können Sie app-Analyse auf andere Weise zugreifen.
 
 ### <a name="microsoft-store-analytics-api"></a>Microsoft Store-Analyse-API
 
@@ -67,8 +67,3 @@ Verwenden Sie die folgenden Ressourcen, um mit Power BI auf Ihre Analysedaten zu
 
 > [!NOTE]
 > Um das Windows Dev Center-Inhaltspaket für Power BI zu verbinden, wird empfohlen, dass Sie Anmeldeinformationen aus Azure AD-Verzeichnis angeben, die Ihr Partner Center-Konto zugeordnet ist. Wenn Sie die Anmeldeinformationen Ihres Microsoft-Kontos verwenden, werden Ihre Analysedaten in Power BI nicht automatisch aktualisiert. Für eine Aktualisierung müssen Sie sich dann in Power BI anmelden. Wenn in Ihrer Organisation bereits mit Office365 oder anderen Unternehmensdiensten von Microsoft gearbeitet wird, verfügen Sie bereits über Azure AD. Andernfalls können Sie es [kostenlos abrufen](http://go.microsoft.com/fwlink/p/?LinkId=703757). Weitere Informationen zur Einrichtung der Zuordnung finden Sie unter [Zuordnen Azure Active Directory mit Ihrem Partner Center-Konto](associate-azure-ad-with-dev-center.md).
-
-### <a name="dev-center-app"></a>DevCenter-App
-
-Installieren Sie die [Dev Center](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws)-App, um schnell Details über den Zustand und die Leistung Ihrer Apps auf Windows 10-Geräten anzuzeigen.
-

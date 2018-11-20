@@ -8,12 +8,12 @@ ms.date: 08/16/2018
 ms.topic: article
 keywords: Windows 10, Uwp, überprüfen, Kommentar, Prüfer
 ms.localizationpriority: medium
-ms.openlocfilehash: 777decb9b060cc411d6150f199cd7a02f9ffc6cb
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.openlocfilehash: e5deef6d5e67c1236fb88f93269fcf91bb50243c
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7158251"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7281782"
 ---
 # <a name="reviews-report"></a>Bericht „Rezensionen“
 
@@ -22,7 +22,7 @@ Der Bericht **"Rezensionen"** im [Partner Center](https://partner.microsoft.com/
 
 Sie können diese Daten im Partner Center oder [den Bericht herunterladen](download-analytic-reports.md) offline anzeigen anzeigen. Alternativ können Sie diese Daten mithilfe der [app-Rezensionen get](../monetize/get-app-reviews.md) -Methode in der [Microsoft Store-Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md)programmgesteuert abrufen.
 
-Sie können auch für Kunden Rezensionen [direkt von dieser Seite](respond-to-customer-reviews.md), programmgesteuert [über die Microsoft Store-Rezensionen-API](../monetize/submit-responses-to-app-reviews.md), oder mit dem [Dev Center-app](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws)reagieren.
+Sie können auch auf Kunden Rezensionen [direkt von dieser Seite](respond-to-customer-reviews.md) oder programmgesteuert [über den Microsoft Store-Rezensionen-API](../monetize/submit-responses-to-app-reviews.md)reagieren.
 
 > [!TIP]
 > Um Rezensionen, Bewertungen und Benutzerfeedback für alle Ihre Apps in den letzten 30Tagen anzusehen, erweitern Sie **Einbeziehen** im linken Navigationsmenü und wählen Sie **Kritiken und Feedback** aus. 
@@ -114,7 +114,7 @@ Wie bereits erwähnt, beim Durchsuchen von Rezensionen nur auf der ursprünglich
 
 ## <a name="responding-to-customer-reviews"></a>Reagieren auf Kundenrezensionen
 
-Sie können [Partner Center](https://partner.microsoft.com/dashboard), der [Microsoft Store-Rezensionen-API](../monetize/submit-responses-to-app-reviews.md)oder das [Dev Center-app](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws) verwenden, um Antworten auf zahlreiche kundenrezensionen zu senden. Weitere Informationen finden Sie unter [Reagieren auf Kundenrezensionen](respond-to-customer-reviews.md).
+Sie können [Partner Center](https://partner.microsoft.com/dashboard) oder den [Microsoft Store-Rezensionen-API](../monetize/submit-responses-to-app-reviews.md) verwenden, um Antworten auf zahlreiche kundenrezensionen zu senden. Weitere Informationen finden Sie unter [Reagieren auf Kundenrezensionen](respond-to-customer-reviews.md).
 
 Im Folgenden finden Sie einige zusätzliche Aktionen, die Sie basierend auf den angezeigten Bewertungen und Rezensionen in Erwägung ziehen sollten.
 
