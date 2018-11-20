@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Hintergrundaufgabe, für die
 ms.localizationpriority: medium
 ms.openlocfilehash: a72d13689b278c1048cab6b1fcb4fd788658602c
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7172086"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7289983"
 ---
 # <a name="support-your-app-with-background-tasks"></a><span data-ttu-id="dc24b-104">Unterstützen Ihrer App mit Hintergrundaufgaben</span><span class="sxs-lookup"><span data-stu-id="dc24b-104">Support your app with background tasks</span></span>
 

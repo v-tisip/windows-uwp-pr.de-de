@@ -14,11 +14,11 @@ doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: dd0031affaf5ae48553479660d91ae610e7f1acb
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7169776"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7291279"
 ---
 # <a name="text-input-with-the-handwriting-view"></a><span data-ttu-id="964e5-103">Texteingabe mit der Handschrift-Ansicht</span><span class="sxs-lookup"><span data-stu-id="964e5-103">Text input with the handwriting view</span></span>
 

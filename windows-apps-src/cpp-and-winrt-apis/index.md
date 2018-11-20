@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f711ebc8d0d2e8dda87355a7894c9d311c6bbc2
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "7148156"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7307530"
 ---
 # <a name="cwinrt"></a><span data-ttu-id="2bcf4-104">C++/WinRT</span><span class="sxs-lookup"><span data-stu-id="2bcf4-104">C++/WinRT</span></span>
 
