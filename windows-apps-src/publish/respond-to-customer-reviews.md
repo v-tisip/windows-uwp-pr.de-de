@@ -8,12 +8,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Überprüfen Sie Windows 10, Uwp, reagieren, Antworten
 ms.localizationpriority: medium
-ms.openlocfilehash: 32ded7cc66cda75fbb6edb9ab9d84c21c2d02cff
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.openlocfilehash: 9552e9dede62d4d89b71f031cd2ff2c76964d0cb
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7158557"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7305031"
 ---
 # <a name="respond-to-customer-reviews"></a>Reagieren auf Kundenrezensionen
 
@@ -23,7 +23,7 @@ Sie können auf Rezensionen Ihrer App zu ermöglichen, dass Kunden wissen, dass 
 Um Rezensionen zu Ihrer app anzuzeigen und Antworten bereitzustellen, suchen Sie die app im [Partner Center](https://partner.microsoft.com/dashboard). Erweitern Sie im linken Navigationsmenü, *Analyse**, und klicken Sie dann auf **Rezensionen** , um den [Bericht "Rezensionen"](reviews-report.md)anzuzeigen. Wählen Sie aus, um Ihre Antwort bereitzustellen, **reagieren, um zu überprüfen** .
 
 > [!TIP]
-> Zusätzlich zur Verwendung von Partner Center zum Reagieren auf Rezensionen, können Sie auf Rezensionen [programmgesteuert](../monetize/submit-responses-to-app-reviews.md)oder über die [Dev Center-app](https://www.microsoft.com/store/apps/dev-center/9nblggh4r5ws)reagieren.
+> Zusätzlich zur Verwendung von Partner Center zum Reagieren auf Rezensionen, können Sie auf Rezensionen [programmgesteuert](../monetize/submit-responses-to-app-reviews.md)reagieren.
 
 Standardmäßig wird Ihre Antwort im Store direkt unterhalb der ursprünglichen kundenrezension verbucht. Diese Antworten werden allen Kunden, die den Store auf einem Windows 10-Gerät anzeigen. Wenn der Kunde, der Rezension verwendet, wird ein Gerät unter Windows 10, Version 1803 oder höher, und sie noch nicht den Empfang von Antworten e-Mail entschieden, wird eine Kopie der Ihre Antwort auch für diesen Kunden per e-Mail gesendet.  Sie müssen eine gültige e-Mail-Adresse angeben, um Ihre Antwort übermitteln, die wir in der e-Mail an den Kunden enthält. Sie können dann diese e-Mail-Adresse verwenden, Sie direkt kontaktieren.
 
