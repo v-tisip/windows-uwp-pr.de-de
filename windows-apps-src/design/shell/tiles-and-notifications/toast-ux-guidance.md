@@ -9,19 +9,19 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: Windows 10, Uwp, Benachrichtigung, Sammlung, gruppieren, Ux, Ux-Richtlinien, Richtlinien, Aktion, Popup, Info-Center, Noninterruptive, effektive Benachrichtigungen, nicht zudringliche Benachrichtigungen, umsetzbare, verwalten, Organisieren
 ms.localizationpriority: medium
-ms.openlocfilehash: 849c8ffc66661546a088a3d89747e6690a763e71
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.openlocfilehash: 4d9c33a4fa4b9c408927292b7def38f42d53b816
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7158547"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7294400"
 ---
 # <a name="toast-notification-ux-guidance"></a>Popup-Benachrichtigung-UX-Richtlinien
 Benachrichtigungen sind notwendig, des modernen Lebenszyklus; Sie helfen Sie Benutzern produktiver und erzwungenen mit apps und Websites sowie bleiben Sie auf dem aktuellen mit Updates werden. Benachrichtigungen können jedoch schnell Aktivieren von hilfreich sein, overbearing und aufdringlich, wenn sie nicht in einer benutzerorientiert Weise ausgelegt sind. Die Benachrichtigungen sind eine Maustaste Weg wird deaktiviert, und es ist unwahrscheinlich, sobald sie deaktiviert sind, sie werden aktiviert, erneut.  Stellen Sie daher sicher, dass Ihre Benachrichtigungen respektieren Bildschirmbereich des Benutzers und die Uhrzeit, sind, sodass Sie diesen Kanal Engagement geöffnet bleiben können.
 
 > **Wichtige APIs**: [Windows Community Toolkit Benachrichtigungen Nuget-Paket](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 
-Wir haben unser Windows-Telemetrie, als auch andere erste und Drittanbieter-Fallstudien, um mit vier Regeln um eine hervorragende Benachrichtigung Story woraus zusammengestellt analysiert.  Wir sind davon überzeugt diese Regeln gelten universell, unabhängig von der Plattform und hilft Ihrer Notificaitons sich positiv auf die Benutzer auswirken.
+Wir haben unser Windows-Telemetrie, als auch andere erste und Drittanbieter-Fallstudien, um mit vier Regeln um eine hervorragende Benachrichtigung Story woraus zusammengestellt analysiert.  Wir sind davon überzeugt diese Regeln gelten universell, unabhängig von der Plattform und hilft Ihrer Benachrichtigungen, die sich positiv auf die Benutzer auswirken.
 
 ## <a name="1-actionable-notifications"></a>1. interaktiven Benachrichtigungen
 Interaktiven Benachrichtigungen ermöglichen Ihren Benutzern produktiv sein, ohne Öffnen der app.  Während es startet app haben, ist dies nicht der einzige Maß Erfolg und ermöglicht, dass Benutzer zum Erreichen kleine auszeichnet, können Aufgaben ohne in Ihre app ein sehr leistungsfähiges Tool in Ihren Benutzern delighting sein.
@@ -42,7 +42,7 @@ Im Gegensatz zu, unser häufig Benachrichtigungen denken empfiehlt sich Echtzeit
 
 **Unformatierte Benachrichtigungen:** Mithilfe von [unformatierten Benachrichtigungen](raw-notification-overview.md) kann hilfreich sein für viele Gründe, insbesondere bei der Minimierung der Unterbrechung für den Benutzer hergestellt.  Senden von unformatierten Benachrichtigungen wird Ihre app im Hintergrund, reaktivieren damit Sie überprüfen können, ob die Benachrichtigung, die eine sinnvolle, sofort in Ihrer app-Kontext bereitzustellen. Wenn es etwas Meinung angezeigt werden, wenn der Benutzer sofort ist, können Sie aufklappen von einer [lokalen Popupbenachrichtigung](send-local-toast.md) von dort aus.  Wenn es etwas ist der Benutzer muss nicht finden jetzt, können Sie einem [geplanten Popups](https://blogs.msdn.microsoft.com/tiles_and_toasts/2016/09/30/quickstart-sending-an-alarm-in-windows-10/) zu erstellen, die zu einem späteren Zeitpunkt ausgelöst werden.
 
-**Ghost Popup:** können Sie auch eine Benachrichtigung, der in der unteren rechten Ecke des Bildschirms quot überspringen und stattdessen direkt an Info-Center senden die Benachrichtigung ausgelöst. Dies wird erreicht, indem Sie die [SuppressPopup-Eigenschaft](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastnotification.suppresspopup) auf "true". Obwohl es möglicherweise einige Skepsis um ein nicht außerhalb der Info-Center Benachrichtigungen einzublenden, wir finden Sie in einem 2-3 Mal höheren Engagement für Popups, die im Info-Center über live geholt Popup.  Benutzer sind besser reagiert, wenn diese für den Empfang von Notificaitons bereit und steuern können, wann sie unterbrochen werden deshalb Inhalte im Info-Center weitaus effektiver noninvasively Benutzer benachrichtigt werden kann.
+**Ghost Popup:** können Sie auch eine Benachrichtigung, der in der unteren rechten Ecke des Bildschirms quot überspringen und stattdessen direkt an Info-Center senden die Benachrichtigung ausgelöst. Dies wird erreicht, indem Sie die [SuppressPopup-Eigenschaft](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastnotification.suppresspopup) auf "true". Obwohl es möglicherweise einige Skepsis um ein nicht außerhalb der Info-Center Benachrichtigungen einzublenden, wir finden Sie in einem 2-3 Mal höheren Engagement für Popups, die im Info-Center über live geholt Popup.  Benutzer sind besser reagiert, wenn diese für den Empfang von Benachrichtigungen bereit und steuern können, wann sie unterbrochen werden deshalb Inhalte im Info-Center weitaus effektiver noninvasively Benutzer benachrichtigt werden kann.
 
 ## <a name="3-clear-out-the-clutter"></a>3. löschen Sie die unübersichtliche
 Benachrichtigungen können im Info-Center relativ lange Zeit (standardmäßig drei Tage) beibehalten.  Es ist unbedingt notwendig, dass Sie, dass der Inhalte, die hier Implementierungscode aktuell und relevant ist sicherstellen, jedes Mal, wenn der Benutzer Info-Center öffnet. Sie sind vergeuden Bildschirmbereich des Benutzers und belegen Steckplätze, die für etwas mehr auf dem neuesten Stand verwendet werden können.  Nehmen wir an, die Benutzer Ihre e-Mail-Management-app installiert und zehn-e-Mails und zehn Benachrichtigungen zusammen mit der Zeit zu Zeit e-Mails empfängt.  Je nach Ihrer gewünschten zu machen sollten Sie diese Benachrichtigungen löschen, wenn der Benutzer lesen die entsprechende e-Mail oder die App als eine Möglichkeit zum Entfernen von alten unübersichtliche Info-Center geöffnet hat.
@@ -54,7 +54,7 @@ Wie bereits erwähnt, der Inhalt im Info-Center für drei Tage beibehalten.  Org
 
 ![Popup-Beispiele mit Header mit der Bezeichnung "Camping!!"](images/toast-headers-action-center.png)
 
-Beide dieser Group Benachrichtigungen in einer Weise, sodass relevante Inhalte zusammen bleibt (d. h. getrennt werden verschiedene Sport Ligen in eine Sport-app oder Sortieren von Nachrichten nach Gruppenchat denken). Sammlungen sind eine deutlicher Möglichkeit, Gruppenrichtlinien-Notificaitons, während Header subtilere sind, aber beide ermöglichen auswählen, und wählen Sie Benachrichtigungen schneller. 
+Beide dieser Group Benachrichtigungen in einer Weise, sodass relevante Inhalte zusammen bleibt (d. h. getrennt werden verschiedene Sport Ligen in eine Sport-app oder Sortieren von Nachrichten nach Gruppenchat denken). Sammlungen sind eine deutlicher Möglichkeit, gruppenbenachrichtigungen, während Header subtilere sind, aber beide ermöglichen auswählen, und wählen Sie Benachrichtigungen schneller. 
 
 ## <a name="other-resources"></a>Weitere Ressourcen
 Diese vier oben genannten Punkte sind Richtlinien, die wir effektive über unseren eigenen Analyse der Telemetrie und über erste und Drittanbieter-Experimente gefunden haben. Bedenken Sie, jedoch, dass diese Richtlinien sind genau das: Richtlinien.  Wir sind davon überzeugt diese Regeln hilft Interaktion und Produktivität von Benachrichtigungen, jedoch kann nichts benutzerorientiert denken, und lernen Sie von Ihren eigenen Daten ersetzen.  

@@ -8,12 +8,12 @@ ms.date: 09/20/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f0270ca3f1fac959f2ccc49352739e9ccd0f41cb
-ms.sourcegitcommit: 3257416aebb5a7b1515e107866806f8bd57845a8
+ms.openlocfilehash: bb692aaada7296f230e1243a3ce515b471f1ba98
+ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "7152678"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "7296965"
 ---
 # <a name="app-capability-declarations"></a>Deklarationen von App-Funktionen
 
@@ -208,7 +208,7 @@ Die folgende Tabelle enthält die eingeschränkten Funktionen. Sie können eine 
 | **Systemfirmware und BIOS** | Die **smbios**-Funktion ermöglicht Apps den Zugriff auf BIOS-Daten und Systemfirmware-Daten. |
 | **Vertrauenswürdige Berechtigungsstufe** | Die Funktion **RunFullTrust** eingeschränkt ermöglicht es, apps auf der vollständigen Berechtigung Vertrauensebene auf dem Computer des Benutzers ausgeführt wird. Diese Funktion ist erforderlich, um die [FullTrustProcessLauncher](https://docs.microsoft.com/uwp/api/windows.applicationmodel.fulltrustprocesslauncher) API.<br /><br />Diese Funktion ist auch erforderlich, für alle desktop-Anwendung, die als Appx oder Msix-Paket übermittelt werden (wie bei der [Desktop-Brücke](https://developer.microsoft.com/windows/bridges/desktop)), und es werden automatisch in Ihrem Manifest angezeigt, wenn diese apps mithilfe der Desktop App Converter (DAC) Verpacken oder Visual Studio. |
 | **Erhöhte Rechte** | Die **AllowElevation** eingeschränkte Funktion ermöglicht apps, die Microsoft-Partner und Unternehmen, um die vorhandene desktop-Funktionalität zu erhalten, die automatische heraufstufung beim Starten oder während der Lebensdauer einer app erfordert erstellt werden.<br/><br/>Es wird nicht empfohlen, diese Funktion in Apps zu deklarieren, die Sie an den Microsoft Store übermitteln. In den meisten Fällen wird nicht die Verwendung dieser Funktion genehmigt werden. Es wird nur für Branchen-apps, die vom Unternehmen dem privaten Store über den Microsoft Store für Unternehmen bereitgestellt genehmigt werden.  |
-| **Windows-Team-Gerät-Anmeldeinformationen** | Die **TeamEditionDeviceCredentials** eingeschränkte Funktion ermöglicht apps den Zugriff auf APIs, die die Gerätekonto-Anmeldeinformationen auf einem Surface Hub-Gerät mit Windows 10, Version 1703 oder höher anfordern.<br/><br/>Es wird nicht empfohlen, diese Funktion in Apps zu deklarieren, die Sie an den Microsoft Store übermitteln. In den meisten Fällen wird nicht die Verwendung dieser Funktion genehmigt werden. |
+| **Windows-Team-Gerät-Anmeldeinformationen** | Die **TeamEditionDeviceCredential** eingeschränkte Funktion ermöglicht apps den Zugriff auf APIs, die die Gerätekonto-Anmeldeinformationen auf einem Surface Hub-Gerät mit Windows 10, Version 1703 oder höher anfordern.<br/><br/>Es wird nicht empfohlen, diese Funktion in Apps zu deklarieren, die Sie an den Microsoft Store übermitteln. In den meisten Fällen wird nicht die Verwendung dieser Funktion genehmigt werden. |
 | **Windows-Team Anwendung anzeigen** | Die **TeamEditionView** eingeschränkte Funktion ermöglicht apps den Zugriff auf APIs für das Hosten von einer Anwendung Ansicht auf einem Surface Hub-Gerät mit Windows 10, Version 1703 oder höher.<br/><br/>Es wird nicht empfohlen, diese Funktion in Apps zu deklarieren, die Sie an den Microsoft Store übermitteln. In den meisten Fällen wird nicht die Verwendung dieser Funktion genehmigt werden. |
 | **Kamera-Verarbeitung-Erweiterung** | Die **CameraProcessingExtension** eingeschränkte Funktion ermöglicht apps Bilder, die von der Kamera ohne direkte Kamera Steuerelement erfasst zu verarbeiten.<br /><br />Diese Funktion ist erforderlich, APIs im Namespace [Windows.Devices.PointOfService.Provider](/uwp/api/windows.devices.pointofservice.provider) aufrufen.<br /><br />Jeder kann den Zugriff auf diese Funktion für die Übermittlung an den Store anfordern. |
 | **Datennutzung Management*** | Die **NetworkDataUsageManagement** eingeschränkte Funktion ermöglicht apps Nutzung von Netzwerkinformationen-Daten zu sammeln.<br /><br />Diese Funktion ist erforderlich, um [GetAttributedNetworkUsageAsync](/uwp/api/windows.networking.connectivity.connectionprofile.getattributednetworkusageasync)aufzurufen.<br /><br />Jeder kann den Zugriff auf diese Funktion für die Übermittlung an den Store anfordern. |
