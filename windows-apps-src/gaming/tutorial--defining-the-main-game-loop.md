@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Hauptobjekt
 ms.localizationpriority: medium
 ms.openlocfilehash: b94d7139f35b3a18edd66af9959a0958d0bdcbc1
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7279083"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7433520"
 ---
 # <a name="define-the-main-game-object"></a><span data-ttu-id="9c57a-104">Definieren des Hauptobjekts für das Spiel</span><span class="sxs-lookup"><span data-stu-id="9c57a-104">Define the main game object</span></span>
 

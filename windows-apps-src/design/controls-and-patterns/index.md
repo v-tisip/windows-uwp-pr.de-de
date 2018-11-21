@@ -11,11 +11,11 @@ ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
 ms.openlocfilehash: e28d557280ab253a09d5697f369c694e490d3c7d
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7284365"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7430919"
 ---
 # <a name="controls-and-patterns-for-uwp-apps"></a><span data-ttu-id="43a0e-105">Steuerelemente und Muster für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="43a0e-105">Controls and patterns for UWP apps</span></span>
  

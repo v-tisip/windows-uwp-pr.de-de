@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ec2986594b043fa088450609e655f4b56b95e25
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7280252"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7433256"
 ---
 # <a name="events-and-routed-events-overview"></a><span data-ttu-id="ede07-104">Übersicht über Ereignisse und Routingereignisse</span><span class="sxs-lookup"><span data-stu-id="ede07-104">Events and routed events overview</span></span>
 
