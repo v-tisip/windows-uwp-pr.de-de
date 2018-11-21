@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP, App-Installer, AppInstaller, querladen, zusammengehörig, optionale Pakete, Azure-Webserver
 ms.localizationpriority: medium
 ms.openlocfilehash: b7ea002686199b992af45af775f53c96fd108a13
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7426181"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7567980"
 ---
 # <a name="install-a-uwp-app-from-an-azure-web-app"></a><span data-ttu-id="ceba9-104">Installieren einer UWP-App aus einer Azure-Web-App</span><span class="sxs-lookup"><span data-stu-id="ceba9-104">Install a UWP app from an Azure Web App</span></span>
 

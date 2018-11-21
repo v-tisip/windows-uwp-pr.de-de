@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Stapelüberwachung, Fehler
 ms.localizationpriority: medium
 ms.openlocfilehash: 78e65ad78079762ea5aabb95ddcaf4ce508b89bc
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7436123"
+ms.locfileid: "7557971"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-xbox-one-game"></a><span data-ttu-id="980a1-104">Abrufen der stapelüberwachung für einen Fehler in Ihrer Xbox One-Spiele</span><span class="sxs-lookup"><span data-stu-id="980a1-104">Get the stack trace for an error in your Xbox One game</span></span>
 

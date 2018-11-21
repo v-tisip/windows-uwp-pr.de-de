@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f3205bfa2da1b83fe2c341b1c810f155e796b804
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7428023"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7554124"
 ---
 # <a name="sensor-orientation"></a><span data-ttu-id="dd355-105">Sensorausrichtung</span><span class="sxs-lookup"><span data-stu-id="dd355-105">Sensor orientation</span></span>
 

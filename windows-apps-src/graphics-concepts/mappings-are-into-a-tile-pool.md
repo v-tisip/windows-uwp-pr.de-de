@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 24c8787efd108acb2353f6705dbb65a34d358ef2
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7427136"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7553986"
 ---
 # <a name="mappings-are-into-a-tile-pool"></a><span data-ttu-id="cddc6-105">Zuordnungen erfolgen in einen Kachelpool</span><span class="sxs-lookup"><span data-stu-id="cddc6-105">Mappings are into a tile pool</span></span>
 

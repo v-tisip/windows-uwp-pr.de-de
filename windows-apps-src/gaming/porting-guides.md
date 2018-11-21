@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Portieren, Direct3D 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 47892bac1a19018201187cbc901e4b680480268b
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7430135"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7559269"
 ---
 # <a name="game-porting-guides"></a><span data-ttu-id="457bb-104">Handbücher zum Portieren von Spielen</span><span class="sxs-lookup"><span data-stu-id="457bb-104">Game porting guides</span></span>
 

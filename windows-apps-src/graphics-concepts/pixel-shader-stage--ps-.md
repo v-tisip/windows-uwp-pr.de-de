@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 84178a4e5cf993574e7553da44beecf13622bd65
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7422128"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7557640"
 ---
 # <a name="pixel-shader-ps-stage"></a><span data-ttu-id="31b55-104">Pixelshaderphase (PS)</span><span class="sxs-lookup"><span data-stu-id="31b55-104">Pixel Shader (PS) stage</span></span>
 

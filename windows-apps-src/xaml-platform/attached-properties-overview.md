@@ -13,11 +13,11 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: a0950bfc9d90ba893be8ca52cc295b38b142798e
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7433606"
+ms.locfileid: "7555576"
 ---
 # <a name="attached-properties-overview"></a><span data-ttu-id="3f17d-104">Übersicht über angefügte Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="3f17d-104">Attached properties overview</span></span>
 
