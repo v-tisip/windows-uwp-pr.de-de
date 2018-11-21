@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 25ddcc6c9ceaecd858733a0222c22c18682041b8
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7285359"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7423277"
 ---
 # <a name="best-practices-for-your-apps-startup-performance"></a><span data-ttu-id="83fc4-104">Bewährte Methoden für die Leistung Ihrer App beim Starten</span><span class="sxs-lookup"><span data-stu-id="83fc4-104">Best practices for your app's startup performance</span></span>
 

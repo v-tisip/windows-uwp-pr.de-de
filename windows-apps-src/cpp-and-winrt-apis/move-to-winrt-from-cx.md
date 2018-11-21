@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, portieren, migrieren, C++/CX
 ms.localizationpriority: medium
 ms.openlocfilehash: 35fe84747624c9a855df5520322546b83772379b
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7294780"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7423340"
 ---
 # <a name="move-to-cwinrt-from-ccx"></a><span data-ttu-id="dc150-104">C++/CX zu C++/WinRT wechseln</span><span class="sxs-lookup"><span data-stu-id="dc150-104">Move to C++/WinRT from C++/CX</span></span>
 

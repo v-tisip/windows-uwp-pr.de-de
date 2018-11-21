@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-On-Übermittlungen, In-App-Produkt, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0ae0e07b588415094281683ff762c02ed5242654
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7279148"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7427246"
 ---
 # <a name="manage-add-on-submissions"></a><span data-ttu-id="d8179-104">Verwalten von Add-On-Übermittlungen</span><span class="sxs-lookup"><span data-stu-id="d8179-104">Manage add-on submissions</span></span>
 

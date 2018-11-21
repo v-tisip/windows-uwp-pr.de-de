@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: c335f607eb1897f79035850cd6a5af9e7a7a56dc
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7279219"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7423487"
 ---
 # <a name="windowsphone-silverlight-to-uwp-case-study-bookstore1"></a><span data-ttu-id="8a1d4-104">WindowsPhone Silverlight zu UWP – Fallstudie: Bookstore1</span><span class="sxs-lookup"><span data-stu-id="8a1d4-104">WindowsPhone Silverlight to UWP case study: Bookstore1</span></span>
 

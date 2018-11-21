@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 4cbaa56f9c25c0e4ea1f10c79b4f7d1100748532
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7293980"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7429650"
 ---
 # <a name="optimize-suspendresume"></a><span data-ttu-id="f76e9-104">Optimieren von Anhalten/Fortsetzen</span><span class="sxs-lookup"><span data-stu-id="f76e9-104">Optimize suspend/resume</span></span>
 

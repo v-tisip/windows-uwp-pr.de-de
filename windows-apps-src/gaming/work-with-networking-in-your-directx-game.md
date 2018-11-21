@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Netzwerke, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: cc30a66db3fb01edebf4705ecb2e85ea4dbb94d6
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7303470"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7430234"
 ---
 # <a name="networking-for-games"></a><span data-ttu-id="f3b82-104">Netzwerkfunktionen für Spiele</span><span class="sxs-lookup"><span data-stu-id="f3b82-104">Networking for games</span></span>
 
