@@ -9,11 +9,11 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 48fb632d0491d333f8c4a7c5e775041ec31aeee3
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7434720"
+ms.locfileid: "7560422"
 ---
 # <a name="exclude-or-limit-features-in-a-trial-version"></a><span data-ttu-id="ae869-103">Ausschließen oder Beschränken von Features in einer Testversion</span><span class="sxs-lookup"><span data-stu-id="ae869-103">Exclude or limit features in a trial version</span></span>
 

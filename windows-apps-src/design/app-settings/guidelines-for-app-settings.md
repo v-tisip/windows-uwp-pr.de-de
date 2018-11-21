@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 56a952950fa9f2d9d57d5beaed397dd72f64ea54
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7434965"
+ms.locfileid: "7560342"
 ---
 # <a name="guidelines-for-app-settings"></a><span data-ttu-id="ecac0-103">Richtlinien für App-Einstellungen</span><span class="sxs-lookup"><span data-stu-id="ecac0-103">Guidelines for app settings</span></span>
 
