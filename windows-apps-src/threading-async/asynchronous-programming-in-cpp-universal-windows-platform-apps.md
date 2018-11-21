@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Threads, asynchron, C++
 ms.localizationpriority: medium
 ms.openlocfilehash: 33b110e713608260cd5c19544292e9211904a730
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7424118"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7582120"
 ---
 # <a name="asynchronous-programming-in-ccx"></a><span data-ttu-id="c586c-104">Asynchrone Programmierung in C++/CX</span><span class="sxs-lookup"><span data-stu-id="c586c-104">Asynchronous programming in C++/CX</span></span>
 > [!NOTE]

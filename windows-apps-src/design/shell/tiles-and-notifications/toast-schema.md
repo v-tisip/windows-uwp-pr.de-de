@@ -11,11 +11,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 121302b93d5f786c332831bcf963c5e161e30f86
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7437730"
+ms.locfileid: "7577432"
 ---
 # <a name="toast-content-schema"></a><span data-ttu-id="600c5-103">Popupinhaltsschema</span><span class="sxs-lookup"><span data-stu-id="600c5-103">Toast content schema</span></span>
 

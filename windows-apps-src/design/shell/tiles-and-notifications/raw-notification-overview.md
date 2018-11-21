@@ -10,11 +10,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 3e1a015d5d51ad0c15f20755afcb0d324acd1f36
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7440117"
+ms.locfileid: "7560734"
 ---
 # <a name="raw-notification-overview"></a><span data-ttu-id="445e7-103">Übersicht über unformatierte Benachrichtigungen</span><span class="sxs-lookup"><span data-stu-id="445e7-103">Raw notification overview</span></span>
 

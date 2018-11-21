@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, banner, Anzeigensteuerelement,Interstitial
 ms.localizationpriority: medium
 ms.openlocfilehash: 7acf2424a7d2fee322ba799ec670f0576b33a208
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7420436"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7582013"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a><span data-ttu-id="f33bc-104">Zeigt Werbung mithilfe der Microsoft Advertising-SDK in Ihrer App an</span><span class="sxs-lookup"><span data-stu-id="f33bc-104">Display ads in your app with the Microsoft Advertising SDK</span></span>
 

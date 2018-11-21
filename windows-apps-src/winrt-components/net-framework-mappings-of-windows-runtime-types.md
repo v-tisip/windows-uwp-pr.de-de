@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f1869038ad98b8b4103b9706534a2d456f17e734
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7432745"
+ms.locfileid: "7559388"
 ---
 # <a name="net-framework-mappings-of-windows-runtime-types"></a><span data-ttu-id="bbe92-104">.NET Framework-Zuordnungen von Windows-Runtime-Typen</span><span class="sxs-lookup"><span data-stu-id="bbe92-104">.NET Framework mappings of Windows Runtime types</span></span>
 

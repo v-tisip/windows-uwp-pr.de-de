@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 17ee99553b5713acb1917ccb697abb2387d00da2
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7426485"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7567721"
 ---
 # <a name="xphase-attribute"></a><span data-ttu-id="42647-104">x:Phase-Attribut</span><span class="sxs-lookup"><span data-stu-id="42647-104">x:Phase attribute</span></span>
 

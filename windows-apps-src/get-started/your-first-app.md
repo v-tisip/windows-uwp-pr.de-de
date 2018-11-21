@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, erste App, C#, c++, JavaScript
 ms.localizationpriority: medium
 ms.openlocfilehash: 64da4418e25f77f49854c054d9cb468f0d89f16c
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7442815"
+ms.locfileid: "7577550"
 ---
 # <a name="create-your-first-app"></a><span data-ttu-id="7ec86-104">Erstellen Ihrer ersten App</span><span class="sxs-lookup"><span data-stu-id="7ec86-104">Create your first app</span></span>
 
