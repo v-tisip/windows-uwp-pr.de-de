@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, App-Installationen
 ms.localizationpriority: medium
 ms.openlocfilehash: 72efc20e218cdf718b67c949bd7c71108921bf9c
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7292117"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "7428476"
 ---
 # <a name="get-app-installs"></a><span data-ttu-id="2acc7-104">Abrufen von App-Installationen</span><span class="sxs-lookup"><span data-stu-id="2acc7-104">Get app installs</span></span>
 
