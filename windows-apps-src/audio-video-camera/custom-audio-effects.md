@@ -9,11 +9,11 @@ keywords: Windows10, UWP
 ms.assetid: 360faf3f-7e73-4db4-8324-3391f801d827
 ms.localizationpriority: medium
 ms.openlocfilehash: a9c62dac489be07a08acc4ad17ecb79bcc54f57a
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7291754"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7445261"
 ---
 # <a name="custom-audio-effects"></a><span data-ttu-id="02cc0-103">Benutzerdefinierte Audioeffekte</span><span class="sxs-lookup"><span data-stu-id="02cc0-103">Custom audio effects</span></span>
 

@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 72be66c3bf7b0e58092ae3a7e1baf82c9e686f0c
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7307231"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7442759"
 ---
 # <a name="rasterization-rules"></a><span data-ttu-id="8a0f2-104">Regeln für die Rasterung</span><span class="sxs-lookup"><span data-stu-id="8a0f2-104">Rasterization rules</span></span>
 

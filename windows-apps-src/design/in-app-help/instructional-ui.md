@@ -11,11 +11,11 @@ keywords: Windows 10, UWP
 ms.assetid: c87e2f06-339d-4413-b585-172752964f56
 ms.localizationpriority: medium
 ms.openlocfilehash: 9c97b6b5eca82d309a4b65a914041adeb1e782db
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7305659"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7445215"
 ---
 # <a name="instructional-ui-guidelines"></a><span data-ttu-id="43481-103">Richtlinien für Benutzeroberflächen mit Anleitungen</span><span class="sxs-lookup"><span data-stu-id="43481-103">Instructional UI guidelines</span></span>
 

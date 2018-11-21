@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows10 s, always connected, problembehandlung für die programmkompatibilität, windows auf ARM
 ms.localizationpriority: medium
 ms.openlocfilehash: 4765ad324e90167c7279c9245bccd840bce1163d
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7282167"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7443375"
 ---
 # <a name="program-compatibility-troubleshooter-on-arm"></a><span data-ttu-id="2add8-104">Problembehandlung für die Programmkompatibilität auf ARM</span><span class="sxs-lookup"><span data-stu-id="2add8-104">Program Compatibility Troubleshooter on ARM</span></span>
 <span data-ttu-id="2add8-105">Emulation zur Unterstützung von x86-Anwendungen ist ein neues Feature, das für Windows 10 auf ARM64 erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="2add8-105">Emulation to support x86 apps is a new feature created for Windows 10 on ARM64.</span></span> <span data-ttu-id="2add8-106">Manchmal führt die Emulation Optimierungen durch, die nicht zu den besten Ergebnissen führen.</span><span class="sxs-lookup"><span data-stu-id="2add8-106">Sometimes the emulation performs optimizations that don't result in the best experience.</span></span> <span data-ttu-id="2add8-107">Sie können die Problembehandlung für die Programmkompatibilität verwenden, um die Emulationseinstellungen für Ihre x86-App umzuschalten, wodurch die Standardoptimierungen reduziert und die Kompatibilität möglicherweise erhöht wird.</span><span class="sxs-lookup"><span data-stu-id="2add8-107">You can use the Program Compatibility Troubleshooter to toggle emulation settings for your x86 app, reducing the default optimizations and potentially increasing compatibility.</span></span>
