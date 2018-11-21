@@ -9,11 +9,11 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: c61eb71a82234a1339295536140121d80f83a033
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7297808"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7438569"
 ---
 # <a name="the-fluent-design-system-for-windows-app-creators"></a><span data-ttu-id="7b896-104">Das Fluent Design System für Windows-app-creators</span><span class="sxs-lookup"><span data-stu-id="7b896-104">The Fluent Design System for Windows app creators</span></span>
 

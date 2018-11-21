@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Apps
 ms.localizationpriority: medium
 ms.openlocfilehash: a689f540cb939cea3549b6660f2daf9a70f9b1f6
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7300458"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7438957"
 ---
 # <a name="get-all-apps"></a><span data-ttu-id="8746e-104">Abrufen aller Apps</span><span class="sxs-lookup"><span data-stu-id="8746e-104">Get all apps</span></span>
 

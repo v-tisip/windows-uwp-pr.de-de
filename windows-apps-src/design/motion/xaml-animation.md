@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d7c3c4a9e46ce38298d7dcdd50477c4de0e9960c
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7291495"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7436470"
 ---
 # <a name="animations-in-xaml"></a><span data-ttu-id="602af-104">Animationen in XAML</span><span class="sxs-lookup"><span data-stu-id="602af-104">Animations in XAML</span></span>
 

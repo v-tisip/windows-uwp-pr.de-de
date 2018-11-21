@@ -15,11 +15,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: efb6c8a9324419ea099041f34c341152351575f6
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7301037"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7434837"
 ---
 # <a name="auto-suggest-box"></a><span data-ttu-id="821eb-103">Feld mit automatischen Vorschlägen</span><span class="sxs-lookup"><span data-stu-id="821eb-103">Auto-suggest box</span></span>
 

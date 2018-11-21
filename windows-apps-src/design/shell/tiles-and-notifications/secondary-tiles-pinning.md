@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows10, UWP, sekundäre Kacheln, Anheften, anheften, Schnellstart, Codebeispiel, Beispiel, Sekundärkachel
 ms.localizationpriority: medium
 ms.openlocfilehash: 7fcea65a43ec3ca3d7e29056bec129e0f03d4229
-ms.sourcegitcommit: ed0304b8a214c03b8aab74b8ef12c9f82b8e3c5f
+ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "7300924"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7440750"
 ---
 # <a name="pin-secondary-tiles"></a><span data-ttu-id="932fa-103">Sekundäre Kacheln anheften</span><span class="sxs-lookup"><span data-stu-id="932fa-103">Pin secondary tiles</span></span>
 
