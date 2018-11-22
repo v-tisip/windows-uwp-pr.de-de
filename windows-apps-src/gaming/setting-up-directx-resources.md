@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Spiele, DirectX, Ressourcen, Bilder
 ms.localizationpriority: medium
 ms.openlocfilehash: 24fd038bdd447491da43e5d5803445d00147ba2d
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7445448"
+ms.locfileid: "7564486"
 ---
 # <a name="set-up-directx-resources-and-display-an-image"></a><span data-ttu-id="74a23-104">Einrichten von DirectX-Ressourcen und Darstellen eines Bilds</span><span class="sxs-lookup"><span data-stu-id="74a23-104">Set up DirectX resources and display an image</span></span>
 

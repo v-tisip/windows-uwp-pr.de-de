@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 8a70603c26c7123af50fc920d327ccef332b7ed6
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7441118"
+ms.locfileid: "7564636"
 ---
 # <a name="data-binding-and-mvvm"></a><span data-ttu-id="17073-104">Datenbindungen und MVVM</span><span class="sxs-lookup"><span data-stu-id="17073-104">Data binding and MVVM</span></span>
 

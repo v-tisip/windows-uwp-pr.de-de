@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 3b10d615146c8989231c4fe36ad9588716c59c34
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7422259"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7566337"
 ---
 # <a name="getting-started-creating-a-project"></a><span data-ttu-id="5435c-105">Erste Schritte: Erstellen eines Projekts</span><span class="sxs-lookup"><span data-stu-id="5435c-105">Getting started: Creating a project</span></span>
 

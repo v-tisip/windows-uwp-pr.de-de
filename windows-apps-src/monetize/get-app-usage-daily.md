@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Store-Dienste, Microsoft Store-Analyse-API, Nutzung
 ms.localizationpriority: medium
 ms.openlocfilehash: 24542f165c0caa2c07db1866c96603916c6ac750
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7420074"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7563647"
 ---
 # <a name="get-daily-app-usage"></a><span data-ttu-id="6f005-104">Abrufen der täglichen App-Nutzung</span><span class="sxs-lookup"><span data-stu-id="6f005-104">Get daily app usage</span></span>
 

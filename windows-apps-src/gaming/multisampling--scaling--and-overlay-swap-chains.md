@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Swapketten-Skalierung, Einblendungen, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d159a78412bea528c1a12428288daebe31d1fe1
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7437183"
+ms.locfileid: "7564554"
 ---
 # <a name="swap-chain-scaling-and-overlays"></a><span data-ttu-id="fa8c3-104">Swapchainskalierung und Überlagerungen</span><span class="sxs-lookup"><span data-stu-id="fa8c3-104">Swap chain scaling and overlays</span></span>
 
