@@ -16,11 +16,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: d3c8aad90e028ece42128e86f5e255be7fd29177
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7437595"
+ms.locfileid: "7568771"
 ---
 # <a name="command-bar"></a><span data-ttu-id="47631-103">Befehlsleiste</span><span class="sxs-lookup"><span data-stu-id="47631-103">Command bar</span></span>
 

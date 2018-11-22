@@ -8,11 +8,11 @@ ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 140f28949bea6b4f67730bd7f6afaed4bcfb9935
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7419698"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7571880"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a><span data-ttu-id="12027-104">Erstellen einer Web-App mit einer einzelnen Seite mit REST API-Backend</span><span class="sxs-lookup"><span data-stu-id="12027-104">Create a single-page web app with REST API backend</span></span>
 

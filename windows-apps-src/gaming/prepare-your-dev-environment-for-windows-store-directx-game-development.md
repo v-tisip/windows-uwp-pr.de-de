@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Vorlagen, Tools, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: ac33b242e2351c21ea22aa9bbb6bf74693e8d4ef
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7432198"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7571522"
 ---
 # <a name="project-templates-and-tools-for-games"></a><span data-ttu-id="cd25d-104">Projektvorlagen und Tools für Spiele</span><span class="sxs-lookup"><span data-stu-id="cd25d-104">Project templates and tools for games</span></span>
 

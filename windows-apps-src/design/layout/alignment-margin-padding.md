@@ -9,11 +9,11 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: ea8a02835a90235bc17efe60ee6e4fd214ffffa7
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7430586"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7574423"
 ---
 # <a name="alignment-margin-padding"></a><span data-ttu-id="6f0e1-103">Ausrichtung, Rand, Abstand</span><span class="sxs-lookup"><span data-stu-id="6f0e1-103">Alignment, margin, padding</span></span>
 

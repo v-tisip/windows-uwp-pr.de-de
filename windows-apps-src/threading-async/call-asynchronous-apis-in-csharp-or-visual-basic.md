@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, C#, Visual Basic, asynchron
 ms.localizationpriority: medium
 ms.openlocfilehash: 2d9bd5265d72a7a478de8c094cd900072e46a143
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7445969"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7571638"
 ---
 # <a name="call-asynchronous-apis-in-c-or-visual-basic"></a><span data-ttu-id="569b8-104">Aufrufen asynchroner APIs in C# oder Visual Basic</span><span class="sxs-lookup"><span data-stu-id="569b8-104">Call asynchronous APIs in C# or Visual Basic</span></span>
 

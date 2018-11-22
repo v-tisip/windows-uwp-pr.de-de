@@ -8,11 +8,11 @@ ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 5d54df07cd5f2ccc32098b17fd7c656900cba978
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7427940"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7571625"
 ---
 # <a name="tutorial-create-a-user-interface"></a><span data-ttu-id="62ccf-104">Erstellen einer einfachen Benutzeroberfläche – Tutorial</span><span class="sxs-lookup"><span data-stu-id="62ccf-104">Tutorial: Create a user interface</span></span>
 

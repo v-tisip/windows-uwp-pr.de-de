@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Portieren, Shader, Direct3D, OpenGL
 ms.localizationpriority: medium
 ms.openlocfilehash: bbf7e05a93ccce4188d62f9800a5f225be713cc6
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7443018"
+ms.locfileid: "7571835"
 ---
 # <a name="port-the-shader-objects"></a><span data-ttu-id="68fdc-104">Portieren der Shaderobjekte</span><span class="sxs-lookup"><span data-stu-id="68fdc-104">Port the shader objects</span></span>
 

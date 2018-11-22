@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Directx, Port, direct3d 9, direct3d 11
 ms.localizationpriority: medium
 ms.openlocfilehash: bd0a8c07be58d670e60aa3a23504d3f5119e6b50
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/21/2018
-ms.locfileid: "7439102"
+ms.locfileid: "7572582"
 ---
 # <a name="walkthrough-port-a-simple-direct3d-9-app-to-directx-11-and-universal-windows-platform-uwp"></a><span data-ttu-id="a9645-104">Exemplarische Vorgehensweise Portieren einer einfachen Direct3D 9-App zu DirectX 11 und zur universellen Windows-Plattform (UWP)</span><span class="sxs-lookup"><span data-stu-id="a9645-104">Walkthrough: Port a simple Direct3D 9 app to DirectX 11 and Universal Windows Platform (UWP)</span></span>
 
