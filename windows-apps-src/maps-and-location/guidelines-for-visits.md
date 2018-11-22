@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Karte, Standort, Geovisit, geovisits
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a78b2689a10dff50696e5e65cc44f79a6f1ea7d
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7426986"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7575490"
 ---
 # <a name="guidelines-for-using-visits-tracking"></a><span data-ttu-id="3e89a-103">Richtlinien für die Verwendung von Visits Tracking</span><span class="sxs-lookup"><span data-stu-id="3e89a-103">Guidelines for using Visits tracking</span></span>
 

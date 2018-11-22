@@ -9,14 +9,14 @@ ms.topic: article
 keywords: windows10, UWP
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 ms.localizationpriority: medium
-ms.openlocfilehash: f7e211ebfa28421340e716c0176cab80a9511671
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.openlocfilehash: 7d73c89602db877b35d357d15393e089db9ae027
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7419317"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7576384"
 ---
-#<a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a><span data-ttu-id="9f396-103">Windows-Apps-Konzeptzuordnung für Android- und iOS-Entwickler</span><span class="sxs-lookup"><span data-stu-id="9f396-103">Windows apps concept mapping for Android and iOS developers</span></span>
+# <a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a><span data-ttu-id="9f396-103">Windows-Apps-Konzeptzuordnung für Android- und iOS-Entwickler</span><span class="sxs-lookup"><span data-stu-id="9f396-103">Windows apps concept mapping for Android and iOS developers</span></span>
 
 <span data-ttu-id="9f396-104">Wenn Sie Entwickler mit Android- oder iOS-Kenntnissen sind und/oder über den entsprechenden Code verfügen und zu Windows 10 und zur universellen Windows-Plattform (UWP) wechseln möchten, bietet Ihnen dieser Artikel alle Informationen, die Sie für die Zuordnung der Plattformfeatures –und Ihrer Kenntnisse –zwischen den drei Plattformen benötigen.</span><span class="sxs-lookup"><span data-stu-id="9f396-104">If you're a developer with Android or iOS skills and/or code, and you want to make the move to Windows 10 and the Universal Windows Platform (UWP), then this resource has all you need to map platform features—and your knowledge—between the three platforms.</span></span>
 

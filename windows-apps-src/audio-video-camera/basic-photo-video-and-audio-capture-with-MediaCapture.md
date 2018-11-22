@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 7204c01cc80c50dacb2009b2138a7c046974dc62
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7444882"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7574771"
 ---
 # <a name="basic-photo-video-and-audio-capture-with-mediacapture"></a><span data-ttu-id="99f7d-104">Allgemeine Foto-, Video- und Audioaufnahme mit „MediaCapture“</span><span class="sxs-lookup"><span data-stu-id="99f7d-104">Basic photo, video, and audio capture with MediaCapture</span></span>
 

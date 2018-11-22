@@ -9,11 +9,11 @@ keywords: Windows10, UWP
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
 ms.openlocfilehash: 597451826958c355dad9f9380dbdc1264bc87883
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7420689"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7574170"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a><span data-ttu-id="27ec9-104">Erstellen eines UWP-Spiels in JavaScript</span><span class="sxs-lookup"><span data-stu-id="27ec9-104">Create a UWP game in JavaScript</span></span>
 

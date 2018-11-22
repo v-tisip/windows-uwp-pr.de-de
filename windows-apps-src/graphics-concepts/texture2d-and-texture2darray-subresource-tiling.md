@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 245581e4eb2a8526b242feadb5877590283e24f9
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7445706"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7580763"
 ---
 # <a name="texture2d-and-texture2darray-subresource-tiling"></a><span data-ttu-id="40a62-104">Unterteilung von Texture2D- und Texture2DArray-Unterressourcen</span><span class="sxs-lookup"><span data-stu-id="40a62-104">Texture2D and Texture2DArray subresource tiling</span></span>
 
