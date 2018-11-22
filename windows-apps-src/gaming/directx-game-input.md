@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiel, Directx, Eingabe, Maus, Touch, Steuerelement
 ms.localizationpriority: medium
 ms.openlocfilehash: 8787400cc1d77afb32df51ba943ae72a99c2b470
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7440147"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7581548"
 ---
 # <a name="game-input-for-directx-games"></a>Eingaben für DirectX-Spiele
 
