@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, spiel, aufzeichnen, audio, video, metadaten
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c1641cb4c50b86d7f678bf18fa85ad0215b4b15
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.openlocfilehash: 906422e8bcca90c35821ecac95c02279c65fa400
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7423026"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7569866"
 ---
 # <a name="capture-game-audio-video-screenshots-and-metadata"></a>Aufzeichnen von Screenshots sowie von Audio-, Video- und Metadaten eines Spiels
 In diesem Artikel wird beschrieben, wie Audio- und Videosequenzen sowie Screenshots aufgezeichnet und Metadaten von Spielen übermittelt werden, die das System in aufgezeichnete und übertragene Videostreams einbettet. So kann Ihre App dynamische Erfahrungen erstellen, die mit Spielereignissen synchronisiert sind. 
@@ -59,7 +59,7 @@ Die Klasse **[AppRecordingManager](https://docs.microsoft.com/uwp/api/windows.me
 [!code-cpp[GetAppRecordingManager](./code/AppRecordingExample/cpp/AppRecordingExample/App.cpp#SnippetGetAppRecordingManager)]
 
 ## <a name="determine-if-your-app-can-currently-record"></a>Ermitteln, ob die App momentan aufzeichnen kann
-Es gibt verschiedene Gründe dafür, dass Ihre App momentan möglicherweise keine Audio- oder Videoaufzeichnungen erstellen kann. Beispielsweise könnte das aktuelle Gerät nicht den Hardwareanforderungen für Aufnahmen entsprechen oder eine andere App gerade Daten übertragen. Vor dem Initiieren einer Aufzeichnung können Sie überprüfen, ob Ihre App momentan aufzeichnen kann. Rufen Sie die Methode **[GetStatus](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingmanager.GetStatus)** des Objekts **AppRecordingManager** auf, und überprüfen Sie dann die Eigenschaft **[CanRecord](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus.CanRecord)** des zurückgegebenen Objekts **[AppRecordingStatus](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus)**. Wenn **CanRecord** den Wert **false** liefert, was bedeutet, dass Ihre App momentan nicht aufzeichnen kann, können Sie die Eigenschaft **[Details](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus.Details)** überprüfen, um die Ursache festzustellen. Je nach Ursache sollten Sie dem Benutzer den Status oder Anweisungen zum Aktivieren der App-Aufzeichnung anzeigen.
+Es gibt verschiedene Gründe dafür, dass Ihre App momentan möglicherweise keine Audio- oder Videoaufzeichnungen erstellen kann. Beispielsweise könnte das aktuelle Gerät nicht den Hardwareanforderungen für Aufnahmen entsprechen oder eine andere App gerade Daten übertragen. Vor dem Initiieren einer Aufzeichnung können Sie überprüfen, ob Ihre App momentan aufzeichnen kann. Rufen Sie die Methode **[GetStatus](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingmanager.GetStatus)** des Objekts **AppRecordingManager** auf, und überprüfen Sie dann die Eigenschaft **[CanRecord](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus.CanRecord)** des zurückgegebenen Objekts **[AppRecordingStatus](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus)**. Wenn **CanRecord** **"false"** gibt, was bedeutet, dass die app momentan aufzeichnen kann nicht, können Sie die **[Details](https://docs.microsoft.com/uwp/api/windows.media.apprecording.apprecordingstatus.Details)** -Eigenschaft, um die Ursache festzustellen überprüfen. Je nach Ursache sollten Sie dem Benutzer den Status oder Anweisungen zum Aktivieren der App-Aufzeichnung anzeigen.
 
 
 
@@ -145,7 +145,7 @@ Durch Aufrufen von **[StopAllStates](https://docs.microsoft.com/uwp/api/windows.
 [!code-cpp[RaceComplete](./code/AppRecordingExample/cpp/AppRecordingExample/App.cpp#SnippetRaceComplete)]
 
 ### <a name="manage-metadata-cache-storage-limit"></a>Verwalten des Limits für den Metadaten-Zwischenspeicher
-Die Metadaten, die Sie mit **AppCaptureMetadataWriter** schreiben, werden vom System zwischengespeichert, bis sie in den zugehörigen Datenstrom geschrieben werden. Das System definiert ein Limit für die Größe des Metadaten-Zwischenspeichers jeder App. Sobald diese Limit erreicht ist, beginnt das System mit dem Löschen von zwischengespeicherten Metadaten. Das System löscht zunächst Metadaten, die mit dem Prioritätswert **[AppCaptureMetadataPriority.Informational](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatapriority)** geschrieben wurden, bevor es Metadaten mit der Priorität **[AppCaptureMetadataPriority.Important](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatapriority)** löscht.
+Die Metadaten, die Sie mit **AppCaptureMetadataWriter** schreiben, werden vom System zwischengespeichert, bis sie in den zugehörigen Datenstrom geschrieben werden. Das System definiert ein Limit für die Größe des Metadaten-Zwischenspeichers jeder App. Sobald diese Limit erreicht ist, beginnt das System mit dem Löschen von zwischengespeicherten Metadaten. Das System löscht Metadaten, die vor dem Löschen von Metadaten mit der Priorität **[AppCaptureMetadataPriority.Important](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatapriority)** mit **[AppCaptureMetadataPriority.Informational](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatapriority)** Prioritätswert geschrieben wurde.
 
 Zu jedem Zeitpunkt können Sie durch Aufruf von **[RemainingStorageBytesAvailable](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturemetadatawriter.RemainingStorageBytesAvailable)** die Anzahl der verfügbaren Bytes Metadaten-Zwischenspeicher der App ermitteln. Sie können auch selbst einen Schwellenwert für die App festlegen, um nach dessen Erreichen die Menge der Metadaten zu reduzieren, die Sie in den Zwischenspeicher schreiben. Das folgende Beispiel zeigt eine einfache Implementierung dieses Musters.
 
