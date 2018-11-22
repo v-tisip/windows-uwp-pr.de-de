@@ -10,11 +10,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0b6e3f8080d33f9aadf22d5d5b1ebdd9a4739e16
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7417086"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7576058"
 ---
 # <a name="address-space-available-for-streaming-resources"></a><span data-ttu-id="af589-104">Zuordnen des verfügbaren Speicherplatzes für Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="af589-104">Address space available for streaming resources</span></span>
 

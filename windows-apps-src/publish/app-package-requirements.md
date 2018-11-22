@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Paketanforderungen, Pakete, Paketformat, unterstützte Version, übermitteln
 ms.localizationpriority: medium
 ms.openlocfilehash: 1c76cb26d91ecd1f72b71f90b9ef464cdf52ba55
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7442055"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "7580690"
 ---
 # <a name="app-package-requirements"></a><span data-ttu-id="b9d40-103">App-Paketanforderungen</span><span class="sxs-lookup"><span data-stu-id="b9d40-103">App package requirements</span></span>
 
