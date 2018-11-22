@@ -9,11 +9,11 @@ keywords: Windows 10, UWP
 ms.assetid: 1f0eb76e-fe3e-4674-a27e-229beec7e63d
 ms.localizationpriority: medium
 ms.openlocfilehash: 2a337fe722d73a08c1c75a84478fc31e5bdf6b03
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7419012"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7562429"
 ---
 # <a name="developer-folder-api-reference"></a>Referenz zur API für den Entwicklerordner   
 Für den Zugriff auf Dateien auf Ihrer Xbox One, die sich auf die Entwicklung beziehen, können Sie einen standardmäßigen Datei-Explorer verwenden. Dadurch können Sie problemlos Dateien von Ihrem PC anzeigen und auf der Konsole ersetzen.

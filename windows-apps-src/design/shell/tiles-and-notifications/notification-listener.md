@@ -10,12 +10,12 @@ ms.date: 06/13/2017
 ms.topic: article
 keywords: Windows10, Uwp, notification listener, Usernotificationlistener, Dokumentation, Zugriff auf Benachrichtigungen
 ms.localizationpriority: medium
-ms.openlocfilehash: 635ee4cbdd0139ec9e431726ea5b040713abe97d
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.openlocfilehash: c67f3531d248ef46a162b992850d0240c37ba21a
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7416826"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7568093"
 ---
 # <a name="notification-listener-access-all-notifications"></a>Notification-Listener: Zugriff auf alle Benachrichtigungen
 
@@ -259,7 +259,7 @@ foreach (UserNotification userNotification in userNotifications)
         toBeRemoved.Remove(userNotification.Id);
     }
  
-    // Othwerise it's a new notification
+    // Otherwise it's a new notification
     else
     {
         // Display it on the Wearable
@@ -296,4 +296,4 @@ private void Listener_NotificationChanged(UserNotificationListener sender, UserN
 
 ## <a name="howto-fixdelays-in-the-background-task"></a>So wird's gemacht-Fixdelays in der Hintergrundaufgabe
 
-Beim Testen Ihrer Anwendung werden Sie möglicherweise feststellen, dass die Hintergrundaufgabe manchmal verzögert ist und mehrere Minuten lang nicht ausgelöst wird. Um dieses Problem zu beheben, sollten Sie fordern Sie den Benutzer Togo auf den Systemeinstellungen -> System -> Akku -> Akkunutzung nach app, Ihre app in der Liste finden, auszuwählen, und ändern sie auf "Immer im Hintergrund zugelassen".Danach sollte die Hintergrundaufgabe immer innerhalb einer Sekunde der Benachrichtigung angestoßen werden.
+Wenn Sie Ihre app zu testen, werden Sie möglicherweise feststellen, dass die Hintergrundaufgabe manchmal verzögert und mehrere Minuten lang nicht ausgelöst. Um die Verzögerung zu beheben, an den Benutzer Togo auf den Systemeinstellungen -> System -> Akku -> Akkunutzung nach app, Ihre app in der Liste finden, auszuwählen, und legen Sie sie auf "immer im Hintergrund zugelassen."Danach sollte die Hintergrundaufgabe immer innerhalb einer Sekunde der Benachrichtigung angestoßen werden.

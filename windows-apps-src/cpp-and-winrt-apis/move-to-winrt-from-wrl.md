@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, portieren, migrieren, WRL
 ms.localizationpriority: medium
 ms.openlocfilehash: c0fd9be96b0709651ee31f58b0d87227cd5115e0
-ms.sourcegitcommit: cbe7cf620622a5e4df7414f9e38dfecec1cfca99
+ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "7426643"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "7565485"
 ---
 # <a name="move-to-cwinrt-from-wrl"></a>Von WRL zu C++/WinRT wechseln
 Dieses Thema zeigt, wie Sie zum entsprechenden Äquivalent in [C++ für Windows-Runtime-Bibliothek (WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) portiert [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
