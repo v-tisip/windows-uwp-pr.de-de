@@ -1,19 +1,17 @@
 ---
 title: Bereitstellen von Strichcodescanner-Profilen mit MDM
-author: PatrickFarley
 description: Strichcodescanner-Profile können mit einem MDM-Server bereitgestellt werden.
 ms.assetid: 99ED3BD8-022C-40C2-9C65-F599186548FE
-ms.author: pafarley
 ms.date: 09/26/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: cfd9692620273952483ec7da65a69b643cb5bf4f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: dbcaa683e2c7a2bb18d88fcba03e10fa951d4459
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568020"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719095"
 ---
 # <a name="deploy-barcode-scanner-profiles-with-mdm"></a>Bereitstellen von Strichcodescanner-Profilen mit MDM
 

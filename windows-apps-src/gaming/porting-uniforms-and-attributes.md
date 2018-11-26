@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Portieren von OpenGLES2.0-Puffern, -uniform-Elementen und -Scheitelpunkten zu Direct3D
 description: Während des Portierens zu Direct3D 11 aus OpenGL ES 2.0 müssen Sie die Syntax und das API-Verhalten zum Übergeben von Daten zwischen der App und den Shaderprogrammen ändern.
 ms.assetid: 9b215874-6549-80c5-cc70-c97b571c74fe
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, OpenGL, Direct3D, Puffer, uniform-Variablen, Vertexattribute
 ms.localizationpriority: medium
-ms.openlocfilehash: bc0192eb4b89ef91bc895a96e46cd39524f24c44
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9a1db1890e47257412a7e2ee8e08c40164d0d927
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566481"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691521"
 ---
 # <a name="compare-opengl-es-20-buffers-uniforms-and-vertex-attributes-to-direct3d"></a>Vergleichen von OpenGLES2.0-Puffern, uniform-Variablen und Vertexattributen mit Direct3D
 

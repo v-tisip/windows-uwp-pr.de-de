@@ -2,18 +2,16 @@
 title: Erstellen einer Windows Hello-Anmelde-App
 description: Dies ist der erste Teil einer umfassenden Schritt-für-Schritt-Lösung zum Erstellen einer Windows 10-App für die Universelle Windows-Plattform (UWP), die Windows Hello als Alternative zu herkömmlichen Authentifizierungssystemen mit Benutzername und Kennwort verwendet.
 ms.assetid: A9E11694-A7F5-4E27-95EC-889307E0C0EF
-author: PatrickFarley
-ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
-ms.openlocfilehash: caa0063c0aa919e094abedd96b6205e83467e0e5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8319d4a0975e209edea7cb70b22910e8124f16c1
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565028"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694067"
 ---
 # <a name="create-a-windows-hello-login-app"></a>Erstellen einer Windows Hello-Anmelde-App
 

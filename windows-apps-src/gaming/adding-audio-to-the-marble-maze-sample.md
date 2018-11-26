@@ -1,19 +1,17 @@
 ---
-author: eliotcowley
 title: Hinzufügen von Audio zum Marble Maze-Beispiel
 description: In diesem Dokument werden die wichtigsten Methoden beschrieben, die Sie berücksichtigen sollten, wenn Sie mit Audio arbeiten. Außerdem erfahren Sie, wie diese Methoden in Marble Maze angewendet werden.
 ms.assetid: 77c23d0a-af6d-17b5-d69e-51d9885b0d44
-ms.author: elcowle
 ms.date: 10/18/2017
 ms.topic: article
 keywords: Windows10, UWP, Audio, Spiele, Beispiel
 ms.localizationpriority: medium
-ms.openlocfilehash: 89612e3fbc4ef2ccb855f7709820f9445d0fd77c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 666ea75f1d4f18121b7ae9fa3def3b455ae3e7a3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573134"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712799"
 ---
 # <a name="adding-audio-to-the-marble-maze-sample"></a>Hinzufügen von Audiodaten zum Marble Maze-Beispiel
 

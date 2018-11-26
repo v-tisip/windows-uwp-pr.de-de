@@ -1,19 +1,17 @@
 ---
-author: Xansky
 description: Verwenden Sie diese Methode der Microsoft Store-Übermittlungs-API, um das Paketrollout für eine App-Übermittlung anzuhalten.
 title: Anhalten des Rollouts einer App-Übermittlung
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Paketrollout, App-Übermittlung, anhalten
 ms.assetid: 4ce79fe3-deda-4d31-b938-d672c3869051
 ms.localizationpriority: medium
-ms.openlocfilehash: df6db5ee434aabaaa56b309e02aa9197d72f4469
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 08450b7aa9608e610a31d114059dd49e3ef3e10c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572512"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720106"
 ---
 # <a name="halt-the-rollout-for-an-app-submission"></a>Anhalten des Rollouts einer App-Übermittlung
 

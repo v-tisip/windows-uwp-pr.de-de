@@ -1,19 +1,17 @@
 ---
-author: PatrickFarley
 ms.assetid: 67a46812-881c-404b-9f3b-c6786f39e72b
 title: Anpassen des Druck-Workflows
 description: Erstellen Sie angepasste Druck-Workflows entsprechend den Anforderungen Ihrer Organisation.
-ms.author: pafarley
 ms.date: 08/10/2017
 ms.topic: article
 keywords: Windows 10, Uwp, das Drucken
 ms.localizationpriority: medium
-ms.openlocfilehash: f58c0c8397831595c237b7bd9fe4eafb25594ab3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 96e308793e60c0367c712fb93a5d25a056397568
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561190"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698739"
 ---
 # <a name="customize-the-print-workflow"></a>Anpassen des Druck-Workflows
 

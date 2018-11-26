@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 title: Auswählen einer Programmiersprache
 ms.assetid: 6CA46432-BF03-4B20-9187-565B3503B497
 description: Auswählen einer Programmiersprache
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 24b374a007bf562b2a1c8ba0afe42e75e04bc63e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a9544c1eecc4c1a86552d053694872743a17142c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563533"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693912"
 ---
 # <a name="getting-started-choosing-a-programming-language"></a>Erste Schritte: Auswählen einer Programmiersprache
 

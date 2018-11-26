@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
 description: Diese Fallstudie baut auf den Informationen aus Bookstore, beginnt mit einer WindowsPhone-Silverlight-app, die gruppierte Daten in einem LongListSelector.
 title: WindowsPhone Silverlight zu UWP – Fallstudie, Bookstore2
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e518439ddd4e131c2d045f4467670b42a392fca
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5b75da7d50135ee8d40f8ed44f0239edb54dcf65
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577491"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719542"
 ---
 # <a name="windowsphone-silverlight-to-uwp-case-study-bookstore2"></a>WindowsPhone Silverlight zu UWP – Fallstudie: Bookstore2
 
@@ -275,8 +273,8 @@ In diesem Abschnitt wird demonstriert, welche Möglichkeiten sich durch das Vers
 Wenn wir **CollectionViewSource.Source** an „Authors“ binden, zeigen wir dadurch lediglich an, dass jeder Autor in „Authors“ eine Gruppe von *etwas* ist. Wir überlassen es **CollectionViewSource** zu bestimmen, dass „Author“ in diesem Fall eine BookSku-Gruppe ist. Diese Lösung funktioniert zwar, ist jedoch nicht sehr flexibel. Was wäre, wenn „Author“ *beides* sein soll, eine Gruppe von BookSku-Objekten *und* eine Gruppe der Adressen, unter denen der Autor gewohnt hat? „Author“ kann *nicht* beide dieser Gruppen darstellen. „Author“ *kann* jedoch eine beliebige Anzahl von Gruppen enthalten. Unsere Lösung sieht also wie folgt aus: Verwenden Sie das *has-a-group*-Muster anstelle oder zusätzlich zum aktuell verwendeten *is-a-group*-Muster. Gehen Sie wie folgt vor:
 
 -   Ändern Sie „Author“, sodass das Element nicht mehr von **List&lt;T&gt;** abgeleitet wird.
--   Fügen Sie „Author“ das folgende Feld hinzu: `private ObservableCollection<BookSku> bookSkus = new ObservableCollection<BookSku>();`.
--   Fügen Sie „Author“ die folgende Eigenschaft hinzu: `public ObservableCollection<BookSku> BookSkus { get { return this.bookSkus; } }`.
+-   Fügen Sie dieses Feld, um 
+-   Fügen Sie diese Eigenschaft hinzu 
 -   Selbstverständlich können wir die beiden vorangehenden Schritte auch wiederholen, um „Author“ so viele Gruppen wie nötig hinzuzufügen.
 -   Ändern Sie die Implementierung der AddBookSku-Methode in `this.BookSkus.Add(bookSku);`.
 -   Nachdem „Author“ jetzt über mindestens eine Gruppe *verfügt*, müssen wir **CollectionViewSource** mitteilen, welche dieser Gruppen verwendet werden soll. Fügen Sie diese Eigenschaft hierzu **CollectionViewSource** hinzu: `ItemsPath="BookSkus"`

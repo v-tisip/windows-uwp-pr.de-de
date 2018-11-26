@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Verwenden Sie die C#-Codebeispiele in diesem Abschnitt, um mehr über das Einreichen von Spieloptionen und Trailern über die Verwendung der Microsoft Store-Übermittlungs-API zu erfahren.
 title: C#-Beispiel – App-Übermittlung mit Spieloptionen und Trailer
-ms.author: mhopkins
 ms.date: 07/10/2017
 ms.topic: article
 keywords: Windows10, Uwp, Microsoft Store-Übermittlungs-API, Codebeispiele, Spieloptionen, Trailer, erweiterte Angebote, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 61d2a919d6bebcb1807d8084dda39a2e6d660ca5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 041f07fd6b24af3658bc9cfffe07117e4b353831
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567054"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720096"
 ---
 # <a name="c-sample-app-submission-with-game-options-and-trailers"></a>C\#-Beispiel: App-Übermittlung mit Spieloptionen und Trailer
 

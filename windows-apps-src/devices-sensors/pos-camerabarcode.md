@@ -1,18 +1,16 @@
 ---
-author: TerryWarwick
 title: Kamera-Strichcodescanner
 description: In diesem Artikel werden die für UWP-Apps verfügbaren Kamera-Strichcodescanner aufgeführt, sowie die Links zu den Anleitungen für ihre Verwendung.
-ms.author: jken
 ms.date: 05/1/2018
 ms.topic: article
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
-ms.openlocfilehash: c647846aaaf8f7a5cef96e267ad979dc68ee004a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c946d9f72107dd787efec34b12272402fc660cbf
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7556540"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694507"
 ---
 # <a name="camera-barcode-scanner"></a>Kamera-Strichcodescanner
 Ein Kamera-Strichcodescanner wird dynamisch erstellt, wenn Windows die Kamera(s) koppelt, die mit einen Software-Decoder an den Computer angeschlossen sind.  Jede Kamera – gekoppelter Decoder ist ein voll funktionsfähiger Strichcodescanner.   

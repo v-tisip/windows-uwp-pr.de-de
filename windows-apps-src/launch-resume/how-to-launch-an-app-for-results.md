@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: Starten einer App für Ergebnisse
 description: Erfahren Sie, wie Sie eine App über eine andere App starten und Daten zwischen den beiden Apps austauschen. Dieser Vorgang wird als Starten einer App für Ergebnisse bezeichnet.
 ms.assetid: AFC53D75-B3DD-4FF6-9FC0-9335242EE327
-ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0fbbe1978cc59afcc7d681331dadc9a06e3eb2d0
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f627cf2a897de32aea0e35faf66f5ea70695efd5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557703"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694999"
 ---
 # <a name="launch-an-app-for-results"></a>Starten einer App für Ergebnisse
 

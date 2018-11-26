@@ -1,19 +1,17 @@
 ---
-author: Xansky
 description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um den Paketrollout-Prozentsatz für eine Flight-Paket-Übermittlung zu aktualisieren.
 title: Aktualisieren des Prozentsatzes eines Rollouts für eine Flight-Paketübermittlung
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Paket-Rollout, Test-Flight-Übermittlung, Aktualisieren, Prozentsatz
 ms.assetid: ee9aa223-e945-4c11-b430-1f4b1e559743
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b65f4071fb9a05754ef68d98b8e2da1435c0153
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 025db5cb0beb36a5b4a3ca1b765b5da3434c9d7a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559299"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692461"
 ---
 # <a name="update-the-rollout-percentage-for-a-flight-submission"></a>Aktualisieren des Prozentsatzes eines Rollouts für eine Flight-Paketübermittlung
 

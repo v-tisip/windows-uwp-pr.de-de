@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 24C5F796-5FB8-4B5D-B428-C3154B3098BD
 description: Verwenden Sie diese Methode aus der Microsoft Store-Übermittlungs-API zur Aktualisierung einer vorhandenen Flight-Paketübermittlung.
 title: Aktualisieren einer Flight-Paketübermittlung
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Flight-Übermittlung, Aktualisieren
 ms.localizationpriority: medium
-ms.openlocfilehash: 670522e9842ca5e048777a1168caa1efbca6ce94
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: fe1e88383d6562526d77aea8c75891216cd75ade
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560866"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712700"
 ---
 # <a name="update-a-package-flight-submission"></a>Aktualisieren einer Flight-Paketübermittlung
 

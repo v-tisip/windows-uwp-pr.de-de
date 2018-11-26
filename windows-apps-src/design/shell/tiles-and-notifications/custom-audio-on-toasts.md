@@ -1,20 +1,18 @@
 ---
-author: andrewleader
 Description: Learn how to use custom audio on your toast notifications.
 title: Benutzerdefiniertes Audio auf Popups
 label: Custom audio on toasts
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 12/15/2017
 ms.topic: article
 keywords: Windows10, UWP, Popup, benutzerdefiniertes Audio, Benachrichtigungen, Audio, Sound
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ef27dfed400715256d1d9cfa51f383a9b72c90d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 982340901d13f17945c1e7ffa11099f52732f619
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7556629"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693571"
 ---
 # <a name="custom-audio-on-toasts"></a>Benutzerdefiniertes Audio auf Popups
 

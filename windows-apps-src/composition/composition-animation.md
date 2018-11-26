@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: 386faf59-8f22-2e7c-abc9-d04216e78894
 title: Kompositionsanimationen
 description: Viele Eigenschaften von Kompositionsobjekten und Effekten können mit Keyframeanimationen und Ausdrucksanimationen animiert werden. Dadurch können sich Eigenschaften eines UI-Elements im Laufe der Zeit oder auf der Grundlage einer Berechnung verändern.
-ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 38f9d0daf230007d1d32a7d2187d54baa90986e5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b94f14b32c5dd74e0aefb9b9a99f64bbd905a05d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566076"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712759"
 ---
 # <a name="composition-animations"></a>Kompositionsanimationen
 

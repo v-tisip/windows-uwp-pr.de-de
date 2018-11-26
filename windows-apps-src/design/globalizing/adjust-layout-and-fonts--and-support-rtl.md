@@ -1,21 +1,19 @@
 ---
-author: stevewhims
 Description: Design your app to support the layouts and fonts of multiple languages, including RTL (right-to-left) flow direction.
 title: Layout und Schriften anpassen und RTL unterstützen
 ms.assetid: F2522B07-017D-40F1-B3C8-C4D0DFD03AC3
 label: Adjust layout and fonts, and support RTL
 template: detail.hbs
-ms.author: stwhi
 ms.date: 05/11/2018
 ms.topic: article
 keywords: Windows 10, UWP, Lokalisierbarkeit, Lokalisierung, rtl, ltr
 ms.localizationpriority: medium
-ms.openlocfilehash: ac69701eca128d327dfd80cfddc7fad41c50c50e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e428dd068337ecd79992e8e27cd193bed112d9c2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568951"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694671"
 ---
 # <a name="adjust-layout-and-fonts-and-support-rtl"></a>Layout und Schriften anpassen und RTL unterstützen
 Entwerfen Sie Ihre App so, dass die Layouts und Schriften mehrerer Sprachen unterstützen – beispielsweise auch den Textfluss von rechts nach links (right-to-left, RTL). Die Textflussrichtung ist die Richtung, in der ein Text geschrieben und angezeigt wird, und die UI-Elemente auf der Seite werden entsprechend gelesen.

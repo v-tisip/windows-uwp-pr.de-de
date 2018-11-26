@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: c92c0ea8-f742-4fc1-a3d7-e90aac11953e
 description: Verwenden Sie die Microsoft Store-Rezensionen-API, um programmgesteuert Antworten auf Rezensionen Ihrer App im Store zu übermitteln.
 title: Antworten auf Rezensionen mit Store-Diensten
-ms.author: mhopkins
 ms.date: 06/04/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Rezensionen-API, Reagieren auf Rezensionen
 ms.localizationpriority: medium
-ms.openlocfilehash: 063c228a9a2fcfde9350af4872aabba44f9bb8a5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2547daa3de7b4a3825060550b7ddc00c10df3e90
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553727"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712624"
 ---
 # <a name="respond-to-reviews-using-store-services"></a>Antworten auf Rezensionen mit Store-Diensten
 

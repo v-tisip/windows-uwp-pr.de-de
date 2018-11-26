@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: 66a9cfe2-b212-4c73-8a36-963c33270099
 description: In diesem Artikel finden Sie eine Liste der für UWP-Apps unterstützten Tags für das HLS-Protokoll (HTTP Live Streaming).
 title: Unterstützung von HLS-Tags (HTTP Live Streaming)
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d8e90f98dd79150cf19727fe31e51278a88a198
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7c6664d13e76a5774172094d632de9db25109fdc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572975"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696152"
 ---
 # <a name="http-live-streaming-hls-tag-support"></a>Unterstützung von HLS-Tags (HTTP Live Streaming)
 In der folgenden Tabelle sind die HLS-Tags aufgeführt, die für UWP-Apps unterstützt werden.

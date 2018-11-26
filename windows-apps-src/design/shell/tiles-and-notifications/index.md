@@ -1,21 +1,19 @@
 ---
-author: mijacobs
 Description: Learn how to use tiles, badges, toasts, and notifications to provide entry points into your app and keep users up-to-date.
 title: Kacheln, Signale und Benachrichtigungen
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: eaca23a72ff794a85ffd8ac13c3f522cabf32aa7
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4ea005dd33bbb5461921fa17eded8430d7648c87
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565667"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7718965"
 ---
 # <a name="tiles-badges-and-notifications-for-uwp-apps"></a>Kacheln, Signale und Benachrichtigungen für UWP-Apps
  

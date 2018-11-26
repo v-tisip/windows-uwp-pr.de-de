@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 ms.assetid: beac6333-655a-4bcf-9caf-bba15f715ea5
 title: Threading und asynchrone Programmierung
 description: Mithilfe von Threading und der asynchronen Programmierung kann Ihre App Aufgaben asynchron in parallelen Threads ausführen.
-ms.author: twhitney
 ms.date: 05/14/2018
 ms.topic: article
 keywords: Windows 10, UWP, asynchron, Threads, Threading
 ms.localizationpriority: medium
-ms.openlocfilehash: f01142695b676ebadea2f227cf5f8beb65ba6f9c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 22c151b90be30b39da7decd9a0ce3109e29b7fb7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7576454"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707008"
 ---
 # <a name="threading-and-async-programming"></a>Threading und asynchrone Programmierung
 Mithilfe von Threading und der asynchronen Programmierung kann Ihre App Aufgaben asynchron in parallelen Threads ausführen.

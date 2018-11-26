@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Verwenden von Tiefen und Effekten in Primitiven
 description: Hier zeigen wir Ihnen die Verwendung von Tiefen, Perspektiven, Farben und anderen Effekten in Grundtypen.
 ms.assetid: 71ef34c5-b4a3-adae-5266-f86ba257482a
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Tiefe, Effekte, Grundtypen; directx
 ms.localizationpriority: medium
-ms.openlocfilehash: f81c441910cd0d0205641a119c243cb22d0b695e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 02911338da858e3718235736cee7969a7bdebae2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7558319"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691501"
 ---
 # <a name="use-depth-and-effects-on-primitives"></a>Verwenden von Tiefen und Effekten in Grundtypen
 
@@ -34,7 +32,6 @@ Des Weiteren gehen wir davon aus, dass Sie die Themen [Schnellstart: Einrichten 
 
 <a name="instructions"></a>Anweisungen
 ------------
-
 ### <a name="1-defining-cube-variables"></a>1. Definieren von Würfelvariablen
 
 Zunächst müssen wir die **SimpleCubeVertex**-Struktur und die **ConstantBuffer**-Struktur für den Würfel definieren. In diesen Strukturen werden die Vertexpositionen und -farben für den Würfel sowie die Darstellung des Würfels angegeben. Wir deklarieren [**ID3D11DepthStencilView**](https://msdn.microsoft.com/library/windows/desktop/ff476377) und [**ID3D11Buffer**](https://msdn.microsoft.com/library/windows/desktop/ff476351) mit [**ComPtr**](https://msdn.microsoft.com/library/windows/apps/br244983.aspx) und eine Instanz von **ConstantBuffer**.

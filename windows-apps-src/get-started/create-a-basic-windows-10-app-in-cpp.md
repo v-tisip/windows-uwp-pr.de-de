@@ -1,19 +1,17 @@
 ---
-author: GrantMeStrength
 ms.assetid: DC235C16-8DAF-4078-9365-6612A10F3EC3
 title: Erstellen Sie ein Hello World-app in C++ / CX (Windows 10)
 description: Mit Microsoft Visual Studio2017, können Sie C++ / CX eine app entwickeln, die auf Windows 10, sowie auf Smartphones mit Windows 10 ausgeführt wird. Die Benutzeroberfläche dieser Apps ist in XAML (Extensible Application Markup Language) definiert.
-ms.author: jken
 ms.date: 06/11/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bc2258557c492956130424069e6e0c4b73f28056
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6954f935440f75a728c3f3601ade884bbee7b6bc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7574300"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712385"
 ---
 # <a name="create-a-hello-world-app-in-ccx"></a>Erstellen Sie eine app "Hello World" in C++ / CX
 

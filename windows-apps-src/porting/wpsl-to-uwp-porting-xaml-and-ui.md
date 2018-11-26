@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 description: Die Vorgehensweise zum Definieren einer Benutzeroberfläche in Form von deklarativem XAML-Markup lässt sich sehr gut von WindowsPhone Silverlight für universelle Windows-Plattform (UWP) apps.
 title: Portieren von WindowsPhone Silverlight-XAML und UI zu UWP
 ms.assetid: 49aade74-5dc6-46a5-89ef-316dbeabbebe
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: d219a09ccca74c9fc513b7510c40ce0b90ad9f52
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 153d73a75b48d61cb490a903c6657c42638c6674
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553807"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707141"
 ---
 #  <a name="porting-windowsphone-silverlight-xaml-and-ui-to-uwp"></a>Portieren von WindowsPhone Silverlight-XAML und UI zu UWP
 

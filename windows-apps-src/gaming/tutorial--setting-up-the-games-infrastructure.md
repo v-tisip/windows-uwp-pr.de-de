@@ -1,19 +1,17 @@
 ---
-author: joannaleecy
 title: Einrichten des Spieleprojekts
 description: Im ersten Schritt für die Erstellung Ihres Spiels richten Sie ein Projekt in Microsoft Visual Studio so ein, dass Sie möglichst wenig Aufwand mit der Bearbeitung der Codeinfrastruktur haben.
 ms.assetid: 9fde90b3-bf79-bcb3-03b6-d38ab85803f2
-ms.author: joanlee
 ms.date: 10/24/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Einrichtung, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 9100e80e0b4ac436ae872698e94fe29e5c8cab46
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 252d7ccb8e50e773a19282afaf19bb18d4c5d5a6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560830"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696464"
 ---
 # <a name="set-up-the-game-project"></a>Einrichten des Spieleprojekts
 

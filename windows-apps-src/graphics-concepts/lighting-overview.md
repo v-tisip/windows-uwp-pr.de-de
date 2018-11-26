@@ -2,18 +2,16 @@
 title: Beleuchtung– Übersicht
 description: Wenn Sie Direct3D-Beleuchtung verwenden, erlauben Sie es Direct3D, die Details der Beleuchtung für Sie zu übernehmen. Fortgeschrittene Benutzer können die Beleuchtung bei Bedarf selbst ausführen.
 ms.assetid: FCBF6A92-4EAC-4CCC-A76C-79985AF348AE
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6eca73beae6634d1809c0e9e779d80a43b495a65
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e90e460cf5f5bda7d90447440d76cf6898a83747
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563063"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694989"
 ---
 # <a name="lighting-overview"></a>Beleuchtung– Übersicht
 

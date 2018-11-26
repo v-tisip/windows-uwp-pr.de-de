@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Verwenden Sie die Java-Codebeispiele in diesem Abschnitt, um mehr über das Einreichen von Spieloptionen und Trailern über die Verwendung der Microsoft Store-Übermittlungs-API zu erfahren.
 title: 'Java-Beispiel: App-Übermittlung mit Spieloptionen und Trailer'
-ms.author: mhopkins
 ms.date: 07/10/2017
 ms.topic: article
 keywords: Windows10, Uwp, Microsoft Store-Übermittlungs-API, Codebeispiele, Spieloptionen, Trailer, erweiterte Angebote, Java
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e8c9c18840b15efa3aeea7e04ea0546c623fd37
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 974bbc4c864edb9450f9ba677c60349b5e1f8ece
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561473"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712637"
 ---
 # <a name="java-sample-app-submission-with-game-options-and-trailers"></a>Java-Beispiel: App-Übermittlung mit Spieloptionen und Trailer
 

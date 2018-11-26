@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 8AC56AAF-8D8C-4193-A6B3-BB5D0669D994
 description: Verwenden Sie die Python-Codebeispiele in diesem Abschnitt, um mehr über die Verwendung der Microsoft Store-Übermittlungs-API zu erfahren.
 title: 'Python-Beispiel: Übermittlungen für Apps, Add-Ons und Flights'
-ms.author: mhopkins
 ms.date: 07/10/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Codebeispiele, Python
 ms.localizationpriority: medium
-ms.openlocfilehash: 34d686b8e20d384da4a3db1ea3805ad082d5f8a8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 157c11484de150d363157e5b6e5de00a35bafd5f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573224"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692631"
 ---
 # <a name="python-sample-submissions-for-apps-add-ons-and-flights"></a>Python-Beispiel: Übermittlungen für Apps, Add-Ons und Flights
 

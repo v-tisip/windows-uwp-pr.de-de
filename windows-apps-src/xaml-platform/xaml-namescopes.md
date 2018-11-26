@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: Ein XAML-NameScope speichert Beziehungen zwischen den definierten XAML-Namen von Objekten und ihren entsprechenden Instanzen. Dies ist vergleichbar mit der weiteren Bedeutung des Begriffs NameScope in anderen Programmiersprachen und Technologien.
 title: XAML-NameScopes
 ms.assetid: EB060CBD-A589-475E-B83D-B24068B54C21
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 8fcbc1566d2b2b5ffc6889a57dd7656a3466d2a9
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ffe6119e9cac162486d23472f5d5876924b7ef9e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579996"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694288"
 ---
 # <a name="xaml-namescopes"></a>XAML-NameScopes
 

@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Zuordnen von OpenGLES2.0 zu Direct3D11
 description: Machen Sie sich zu Beginn des Prozesses zur ersten Portierung Ihrer Grafikarchitektur von OpenGL ES 2.0 zu Direct3D mit den Hauptunterschieden zwischen den APIs vertraut.
 ms.assetid: 7f9b136c-aa22-04b3-d385-6e9e1f38b948
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, OpenGL, Direct3D, Portieren
 ms.localizationpriority: medium
-ms.openlocfilehash: 532c2a0a9779ae3eaedb2217175dc0805514f792
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e09dcb1830e62d17983f564771b4808d132179a0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581630"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712279"
 ---
 # <a name="map-opengl-es-20-to-direct3d-11"></a>Zuordnen von OpenGLES2.0 zu Direct3D11
 

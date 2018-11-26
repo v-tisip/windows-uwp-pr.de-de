@@ -4,17 +4,15 @@ description: Für das Programmieren von Direct3D-Anwendungen muss der Anwender m
 ms.assetid: E82EB0A9-0678-496B-96B3-8993BA580099
 keywords:
 - Koordinatensysteme und Geometrie
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ce3b1ebfc2f18a06ff4fa960c91749f61f5011d9
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 962002d635c3e6edbf1f9581a4cbc57fbd5b1d96
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553161"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696726"
 ---
 # <a name="coordinate-systems-and-geometry"></a>Koordinatensysteme und Geometrie
 

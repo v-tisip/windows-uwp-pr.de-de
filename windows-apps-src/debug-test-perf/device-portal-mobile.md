@@ -1,19 +1,17 @@
 ---
-author: PatrickFarley
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: Geräteportal für mobile Geräte
 description: Hier erfahren Sie, wie Sie mit dem Windows Device Portal Ihr mobiles Gerät per Fernzugriff konfigurieren und verwalten können.
-ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, Uwp, geräteportal
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f267fbcaecfdf9f1888e47d8dbe35d9cc469f4c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 879f4b9fd8806565eedeabda95f0c24c5b7931d7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555526"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720396"
 ---
 # <a name="device-portal-for-mobile"></a>Device Portal für Mobilgeräte
 

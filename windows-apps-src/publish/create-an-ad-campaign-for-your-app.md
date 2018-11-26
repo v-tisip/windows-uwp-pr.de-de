@@ -1,19 +1,17 @@
 ---
-author: JnHs
 Description: You can create ad campaigns in Partner Center to help promote your app and grow your app's user base.
 title: Erstellen einer Anzeigenkampagne für Ihre App
 ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Anzeige, Kampagne, bewerben
 ms.localizationpriority: medium
-ms.openlocfilehash: c6df022cbd474c9e73a84b86b245511d23293b0e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8ece97d2e2cf96d2905902fd563f1de9027aa64a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553079"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693581"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>Erstellen einer Anzeigenkampagne für Ihre App
 

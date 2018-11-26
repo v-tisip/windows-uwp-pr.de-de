@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 7B6A99C6-AC86-41A1-85D0-3EB39A7211B6
 description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um alle Add-on-Daten für alle apps abzurufen, die für Ihr Partner Center-Konto registriert sind.
 title: Abrufen aller Add-Ons
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-Ons, In-App-Produkte, IAPs
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d58b29a959ed791665af52018062d0cf0a3a969
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 50733bc0617d56b7e6b8596b661aff8056961f18
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578629"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692378"
 ---
 # <a name="get-all-add-ons"></a>Abrufen aller Add-Ons
 

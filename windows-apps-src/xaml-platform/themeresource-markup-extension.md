@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: Stellt einen Wert für ein beliebiges XAML-Attribut bereit, indem ein Verweis auf eine Ressource ausgewertet wird. Dabei wird zusätzliche Systemlogik genutzt, mit der unterschiedliche Ressourcen je nach derzeit aktivem Design abgerufen werden.
 title: ThemeResource-Markuperweiterung
 ms.assetid: 8A1C79D2-9566-44AA-B8E1-CC7ADAD1BCC5
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 024e48380941c0d79eef65780396ec9b89edc3c7
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9466ec598fad090e31768d680b64ffea52688844
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568438"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691295"
 ---
 # <a name="themeresource-markup-extension"></a>{ThemeResource}-Markuperweiterung
 

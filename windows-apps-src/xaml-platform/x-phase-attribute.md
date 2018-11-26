@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 title: xPhase-Attribut
 description: Verwenden Sie xPhase mit der xBind-Markuperweiterung zum inkrementellen Rendern von ListView- und GridView-Elementen und zur Verbesserung des Verschiebens.
 ms.assetid: BD17780E-6A34-4A38-8D11-9703107E247E
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 17ee99553b5713acb1917ccb697abb2387d00da2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6def088b3e7f6410f12d1b2e411bcb547c90a09a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567721"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7718984"
 ---
 # <a name="xphase-attribute"></a>x:Phase-Attribut
 

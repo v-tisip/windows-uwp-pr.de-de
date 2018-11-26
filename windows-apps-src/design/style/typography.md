@@ -1,19 +1,17 @@
 ---
-author: mijacobs
 description: Erfahren Sie, wie Sie die Typografie in Ihrer App verwenden, um Benutzern Inhalte leicht verständlich zu machen.
 title: Typografie in UWP-Apps
-ms.author: mijacobs
 ms.date: 04/06/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 3763581c06ef9dc416fde41599e8b041b3c32096
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0943273dab239669be75b30070222d698246aa41
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557326"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698669"
 ---
 # <a name="typography"></a>Typografie
 

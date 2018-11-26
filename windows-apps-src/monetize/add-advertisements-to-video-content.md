@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: cc24ba75-a185-4488-b70c-fd4078bc4206
 description: Hier erfahren Sie, wie Sie die AdScheduler-Klasse verwenden, um Anzeigen in Videoinhalten anzuzeigen.
 title: Anzeigen von Werbung in Videoinhalten
-ms.author: mhopkins
 ms.date: 03/22/2018
 ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, Video, Planer, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: 158817aa0abea1ddb1247188ec69389a7682e899
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 29e2c46636445adac496d0f2149e956c5703c20d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562842"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691358"
 ---
 # <a name="show-ads-in-video-content"></a>Anzeigen von Werbung in Videoinhalten
 
