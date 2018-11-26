@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: dd2a1e01-c284-4d62-963e-f59f58dca61a
 description: In diesem Artikel wird beschrieben, wie Medien von einem Gerät importiert werden, darunter die Suche nach verfügbaren Medienquellen, das Importieren von Dateien wie Fotos und Sidecardateien und das Löschen der importierten Dateien vom Quellgerät.
 title: Importieren von Medien
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 36f8956e2ca167d98bb8e6ecf35ce3d131d7b032
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c08612e48eec7989f3b56fba41a17e1c149b2058
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557397"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696053"
 ---
 # <a name="import-media-from-a-device"></a><span data-ttu-id="f2a7e-104">Importieren von Medien von einem Gerät</span><span class="sxs-lookup"><span data-stu-id="f2a7e-104">Import media from a device</span></span>
 

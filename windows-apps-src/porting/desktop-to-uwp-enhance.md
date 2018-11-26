@@ -1,19 +1,17 @@
 ---
-author: normesta
 Description: Enhance your desktop application for Windows 10 users by using Universal Windows Platform (UWP) APIs.
 Search.Product: eADQiWindows 10XVcnh
 title: Verbessern Ihrer Desktopanwendung für Windows10
-ms.author: normesta
 ms.date: 10/15/2018
 ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: ff1a6d5913316596e4a002e9f69a0ffdc85f1803
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 42229212a0f54e307eaa841849c1a279c4354d2a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571900"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696181"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a><span data-ttu-id="fe5c5-103">Verbessern Sie Ihre Desktopanwendung für Windows10</span><span class="sxs-lookup"><span data-stu-id="fe5c5-103">Enhance your desktop application for Windows 10</span></span>
 

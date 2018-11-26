@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: 05E418B4-5A62-42BD-BF66-A0762216D033
 description: In diesem Thema wird das Abrufen eines einzelnen Vorschauframes aus dem Vorschaustream der Medienaufnahme beschrieben.
 title: Abrufen eines Vorschauframes
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 211bd4ce660726030f8b90d29c4ea4d8a14564de
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7faa018dad336b6e22dd236e57585cade38f8a94
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573018"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706746"
 ---
 # <a name="get-a-preview-frame"></a><span data-ttu-id="9322c-104">Abrufen eines Vorschauframes</span><span class="sxs-lookup"><span data-stu-id="9322c-104">Get a preview frame</span></span>
 

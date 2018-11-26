@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Behandeln von Szenarien mit entfernten Geräten in Direct3D11
 description: In diesem Thema wird erläutert, wie Sie die Geräteschnittstellenkette für Direct3D und DXGI neu erstellen, wenn die Grafikkarte entfernt oder neu initialisiert wird.
 ms.assetid: 8f905acd-08f3-ff6f-85a5-aaa99acb389a
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, DirectX 11, Gerät verloren gegangen
 ms.localizationpriority: medium
-ms.openlocfilehash: 888b3ec7ab667a8a92ae638a9d5c456c3180df0d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c11bbf7657644fbf616590f50d75d93f62ed993e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562812"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691301"
 ---
 # <a name="span-iddevgaminghandlingdevice-lostscenariosspanhandle-device-removed-scenarios-in-direct3d-11"></a><span data-ttu-id="fe85a-104"><span id="dev_gaming.handling_device-lost_scenarios"></span>Behandeln von Szenarien mit entfernten Geräten in Direct3D 11</span><span class="sxs-lookup"><span data-stu-id="fe85a-104"><span id="dev_gaming.handling_device-lost_scenarios"></span>Handle device removed scenarios in Direct3D 11</span></span>
 

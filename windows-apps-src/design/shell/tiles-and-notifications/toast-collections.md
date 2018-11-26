@@ -1,20 +1,18 @@
 ---
-author: manoskow
 Description: Learn how to group notifications in Action Center using collections.
 title: Popupsammlungen
 label: Toast Collections
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 05/16/2018
 ms.topic: article
 keywords: Windows10, UWP, Benachrichtigungen, Sammlungen, Sammlung, Gruppenbenachrichtigungen, Gruppieren von Benachrichtigungen, gruppieren, organisieren, Info-Center, Popup
 ms.localizationpriority: medium
-ms.openlocfilehash: be7c4ec2e9a47eeeb00663ae94f89e44c6751352
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9b6818f876c094298a0a6636faa00efa9a192545
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579399"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698369"
 ---
 # <a name="grouping-toast-notifications-with-collections"></a><span data-ttu-id="ff79a-103">Gruppieren von Popupbenachrichtigungen mit Sammlungen</span><span class="sxs-lookup"><span data-stu-id="ff79a-103">Grouping toast notifications with collections</span></span>
 <span data-ttu-id="ff79a-104">Verwenden Sie Sammlungen, um Ihre App-Popups im Info-Center zu organisieren.</span><span class="sxs-lookup"><span data-stu-id="ff79a-104">Use collections to organize your app's toasts in Action Center.</span></span> <span data-ttu-id="ff79a-105">Mithilfe von Sammlungen können Benutzer Informationen im Info-Center leichter finden und Entwickler können ihre Benachrichtigungen besser verwalten.</span><span class="sxs-lookup"><span data-stu-id="ff79a-105">Collections help users locate information within Action Center more easily and allow for developers to better manage their notifications.</span></span>  <span data-ttu-id="ff79a-106">Die folgenden APIs ermöglichen das Entfernen, Erstellen und Aktualisieren von Benachrichtigungssammlungen.</span><span class="sxs-lookup"><span data-stu-id="ff79a-106">The APIs below allow for removing, creating, and updating notification collections.</span></span>

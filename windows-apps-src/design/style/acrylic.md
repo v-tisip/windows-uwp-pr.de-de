@@ -1,9 +1,7 @@
 ---
-author: mijacobs
 description: Eine Art von Pinsel, der eine durchsichtige Textur erzeugt.
 title: Acryl-Material
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 08/9/2017
 ms.topic: article
 keywords: Windows10, UWP
@@ -12,12 +10,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: c116a6131889e1d87642165f4e1d9883d78add33
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 336e4e64cc0b1819081a7e42b6e3e2d099355248
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568229"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698649"
 ---
 # <a name="acrylic-material"></a><span data-ttu-id="e3460-104">Acryl-Material</span><span class="sxs-lookup"><span data-stu-id="e3460-104">Acrylic material</span></span>
 

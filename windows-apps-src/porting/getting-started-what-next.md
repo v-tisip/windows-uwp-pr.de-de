@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 title: Erste Schritte - Was kommt als Nächstes?
 ms.assetid: 903046E7-581F-4845-AB80-1A57C42B1B02
 description: Mithilfe dieser grundlegenden Informationen können Sie nun interessantere Apps für die Universelle Windows-Plattform (UWP) schreiben.
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f8a6165df7bf839154ede4db3fda8a5e1662880
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ab12f79670428fa2b6affa91240787f75bc51bc2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557600"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698409"
 ---
 # <a name="getting-started-what-next"></a><span data-ttu-id="248a7-104">Erste Schritte – Was kommt als Nächstes?</span><span class="sxs-lookup"><span data-stu-id="248a7-104">Getting started: What next?</span></span>
 

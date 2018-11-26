@@ -1,18 +1,16 @@
 ---
 title: Meine Kontakte – Benachrichtigungen
 description: Erläutert das Erstellen und Verwenden von Benachrichtigungen für Meine Kontakte, eine neue Art Popups.
-author: muhsinking
-ms.author: mukin
 ms.date: 10/25/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 943d236699ccab6d61e5394426077a32d7249592
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: db25954b7fc6541ac5f5900236e61cb8da488be6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554327"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695312"
 ---
 # <a name="my-people-notifications"></a><span data-ttu-id="4f085-104">Meine Kontakte – Benachrichtigungen</span><span class="sxs-lookup"><span data-stu-id="4f085-104">My People notifications</span></span>
 

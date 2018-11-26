@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 Description: At build time, the Resource Management System creates an index of all the different variants of the resources that are packaged up with your app. At run-time, the system detects the user and machine settings that are in effect and loads the resources that are the best match for those settings.
 title: Ressourcenverwaltungssystem
 template: detail.hbs
-ms.author: stwhi
 ms.date: 10/20/2017
 ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
-ms.openlocfilehash: b80eda57ff700d732ba2402582ed6402acca4fc6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: bedbad9e4de22ee098863d013a1e4ad16d86543e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563690"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695718"
 ---
 # <a name="resource-management-system"></a><span data-ttu-id="1c235-103">Ressourcenverwaltungssystem</span><span class="sxs-lookup"><span data-stu-id="1c235-103">Resource Management System</span></span>
 <span data-ttu-id="1c235-104">Das Ressourcenverwaltungssystem verfügt sowohl über Buildzeit- als auch über Laufzeitfeatures.</span><span class="sxs-lookup"><span data-stu-id="1c235-104">The Resource Management System has both build-time and run-time features.</span></span> <span data-ttu-id="1c235-105">Während der Buildzeit erstellt das System einen Index aller verschiedenen Varianten der Ressourcen, die mit Ihrer App gepackt sind.</span><span class="sxs-lookup"><span data-stu-id="1c235-105">At build time, the system creates an index of all the different variants of the resources that are packaged up with your app.</span></span> <span data-ttu-id="1c235-106">Dieser ebenfalls im App-Paket enthaltene Index ist der Package Resource Index oder kurz PRI.</span><span class="sxs-lookup"><span data-stu-id="1c235-106">This index is the Package Resource Index, or PRI, and it's also included in your app's package.</span></span> <span data-ttu-id="1c235-107">Zur Laufzeit erkennt das System die momentan geltenden Benutzer- und Computereinstellungen, fragt die Informationen im PRI ab und lädt automatisch die Ressourcen, die für diese Einstellungen am besten geeignet sind.</span><span class="sxs-lookup"><span data-stu-id="1c235-107">At run-time, the system detects the user and machine settings that are in effect, consults the information in the PRI, and automatically loads the resources that are the best match for those settings.</span></span>

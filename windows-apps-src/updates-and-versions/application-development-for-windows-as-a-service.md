@@ -1,19 +1,17 @@
 ---
 title: App-Entwicklung für Windows as a Service (WaaS)
 description: Entkoppeln Sie die App-Freigabe und -Unterstützung von bestimmten Windows-Builds.
-author: GrantMeStrength
-ms.author: jken
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.assetid: f384ca56-f2b2-4793-b251-f7f5735376bb
 ms.localizationpriority: medium
-ms.openlocfilehash: 536679068d66a279e158790bf0fcc0f8757709cc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e0a0bef4496e9b6aa327a8da404e88bcbd791e70
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579359"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694691"
 ---
 # <a name="application-development-for-windows-as-a-service"></a><span data-ttu-id="54619-104">Anwendungsentwicklung für Windows as a Service</span><span class="sxs-lookup"><span data-stu-id="54619-104">Application development for Windows as a service</span></span>
 

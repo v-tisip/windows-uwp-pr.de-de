@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: bb105fbe-bbbd-4d78-899b-345af2757720
 description: Erfahren Sie, wie-ID und anzeigeneinheits-IDs für Ihre app aus dem Partner Center hinzufügen, bevor Sie Ihre app an den Store übermitteln.
 title: Einrichten von Anzeigeneinheiten in der App
-ms.author: mhopkins
 ms.date: 05/11/2018
 ms.topic: article
 keywords: Windows 10, UWP, Anzeigen, Werbung, Anzeigeeinheiten, Test
 ms.localizationpriority: medium
-ms.openlocfilehash: 11c66756d95e041a45fbc075b02eb744bf542871
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b2d01434e508d4a5067ffd66bdf86b3083b43016
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575252"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692431"
 ---
 # <a name="set-up-ad-units-in-your-app"></a><span data-ttu-id="cf69a-104">Einrichten von Anzeigeneinheiten in der App</span><span class="sxs-lookup"><span data-stu-id="cf69a-104">Set up ad units in your app</span></span>
 

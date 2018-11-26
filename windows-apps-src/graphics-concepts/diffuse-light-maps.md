@@ -4,17 +4,15 @@ description: Matte Oberflächen haben diffuse Reflektionen.
 ms.assetid: D02E76DB-1DA8-4B51-86EF-4DDB07C02541
 keywords:
 - Diffuse Lichtzuordnungen
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e4486cc1d9c7f037b79fc6183f88216c88ef1884
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0605de5313b59689c19b9560d10e088d26d29b52
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567218"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720356"
 ---
 # <a name="diffuse-light-maps"></a><span data-ttu-id="03c7f-104">Diffuse Lichtzuordnungen</span><span class="sxs-lookup"><span data-stu-id="03c7f-104">Diffuse light maps</span></span>
 

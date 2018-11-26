@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: C5623861-6280-4352-8F22-80EB009D662C
 description: In diesem Artikel wird erläutert, wie Sie die MediaSource-Klasse verwenden, die allgemein zum Verweisen auf Medien aus verschiedenen Quellen (etwa lokale Dateien oder Remotedateien) sowie zum Wiedergeben dieser Medien verwendet wird und ein gemeinsames Modell für den Mediendatenzugriff verfügbar macht – unabhängig vom zugrunde liegenden Medienformat.
 title: Medienelemente, Wiedergabelisten und Titel
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 73b6a19e2385f1a9b8afa4672df50d17ac16ec97
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3c3929c2b3765bd90dbe0be687834e94b4f222fc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557462"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695953"
 ---
 # <a name="media-items-playlists-and-tracks"></a><span data-ttu-id="a65fd-104">Medienelemente, Wiedergabelisten und Titel</span><span class="sxs-lookup"><span data-stu-id="a65fd-104">Media items, playlists, and tracks</span></span>
 

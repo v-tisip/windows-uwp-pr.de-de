@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: A4C6098B-6CB9-4FAF-B2EA-50B03D027FF1
 description: Verwenden Sie diese Methode in der Microsoft Store-API für gezielte Angebote, um die gezielten Angebote abzurufen, die für den aktuellen Benutzer im Zusammenhang mit der aktuellen App verfügbar sind.
 title: Abrufen gezielter Angebote
-ms.author: mhopkins
 ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-API für gezielte Angebote, gezielte Angebote abrufen
 ms.localizationpriority: medium
-ms.openlocfilehash: 87d59a4b5dabbc76c231e84034d701fccfe36fcf
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 71cd6ce3b9736b812f8ccdf4d21d35357928c63c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557240"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695238"
 ---
 # <a name="get-targeted-offers"></a><span data-ttu-id="a5042-104">Abrufen gezielter Angebote</span><span class="sxs-lookup"><span data-stu-id="a5042-104">Get targeted offers</span></span>
 

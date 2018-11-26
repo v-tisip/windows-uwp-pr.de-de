@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 Description: This topic provides answers to frequently-asked questions and issues related to the Multilingual App Toolkit (MAT) 4.0.
 title: Multilingual App Toolkit – Fragen und Antworten sowie Problembehandlung
 template: detail.hbs
-ms.author: stwhi
 ms.date: 11/13/2017
 ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 320445022fa836e05d04e93b85d333ef1ad40a53
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a39d2b3133714ab784309e131a71219beae4e3c0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553627"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694889"
 ---
 # <a name="multilingual-app-toolkit-40-faq--troubleshooting"></a><span data-ttu-id="25390-103">Multilingual App Toolkit 4.0 – Fragen und Antworten sowie Problembehandlung</span><span class="sxs-lookup"><span data-stu-id="25390-103">Multilingual App Toolkit 4.0 FAQ & troubleshooting</span></span>
 

@@ -1,19 +1,17 @@
 ---
-author: msatranjr
 title: Bluetooth-Entwickler – Häufig gestellte Fragen
 description: Dieser Artikel bietet Antworten auf häufig gestellte Fragen zu den UWP-Bluetooth-APIs.
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.assetid: e7dee32d-3756-430d-a026-32c1ee288a85
 ms.localizationpriority: medium
-ms.openlocfilehash: 03ee8074a64b210d33498c8de135a76900d968f0
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 03b72b5722a3ece0165fc63e7ce4abc1238bc135
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553308"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7718860"
 ---
 # <a name="bluetooth-developer-faq"></a><span data-ttu-id="b56fb-104">Bluetooth-Entwickler – Häufig gestellte Fragen</span><span class="sxs-lookup"><span data-stu-id="b56fb-104">Bluetooth Developer FAQ</span></span>
 

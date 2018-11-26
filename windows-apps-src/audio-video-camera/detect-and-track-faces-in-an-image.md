@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: 84729E44-10E9-4D7D-8575-6A9D97467ECD
 description: In diesem Thema erfahren Sie, wie mit dem FaceDetector Gesichter in einem Bild erkannt werden. Der FaceTracker ist für die Verfolgung von Gesichtern im zeitlichen Verlauf einer Sequenz von Videoframes optimiert.
 title: Erkennen von Gesichtern in Bildern oder Videos
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: be2cfb94c68ed3431199428c87aef4bf038ccbb9
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 970fbcef984f28e779ea7c133de95f7f7f99be8d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560508"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695485"
 ---
 # <a name="detect-faces-in-images-or-videos"></a><span data-ttu-id="b72eb-105">Erkennen von Gesichtern in Bildern oder Videos</span><span class="sxs-lookup"><span data-stu-id="b72eb-105">Detect faces in images or videos</span></span>
 

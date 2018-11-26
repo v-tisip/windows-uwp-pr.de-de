@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um die Erwerbstrichterdaten für eine Anwendung während eines bestimmten Zeitraums und andere optionale Filter abzurufen.
 title: Abrufen von App-Erwerbstrichterdaten
-ms.author: mhopkins
 ms.date: 08/04/2017
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Kauf, Trichter
 ms.localizationpriority: medium
-ms.openlocfilehash: 8aaceb9af3eed04039148bdd863ca3e473c7c245
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d9ccbb081ef6f39ad795105ee2449de4d8442ab3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569523"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692278"
 ---
 # <a name="get-app-acquisition-funnel-data"></a><span data-ttu-id="fd1a2-104">Abrufen von App-Erwerbstrichterdaten</span><span class="sxs-lookup"><span data-stu-id="fd1a2-104">Get app acquisition funnel data</span></span>
 

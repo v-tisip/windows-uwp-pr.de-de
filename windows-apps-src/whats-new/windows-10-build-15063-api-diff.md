@@ -1,19 +1,17 @@
 ---
-author: QuinnRadich
 title: Windows10 Creators Update – API-Änderungen
 description: Entwickler können die folgende Liste nutzen, um neue oder geänderte Namespaces in Windows 10, Build 15063, zu identifizieren.
 keywords: Neuigkeiten, was ist neu, Updates, Windows10, 1703, Creators, 15063
-ms.author: quradic
 ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: d1f6739d-eaea-4c5d-b79a-9f7214e42727
 ms.localizationpriority: medium
-ms.openlocfilehash: e82c05acb80cee443db983d4f6d7f911d01748b8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: fb258c23e38fb2aee5f6f5194371bb72940e51b5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566810"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694809"
 ---
 # <a name="new-apis-in-windows-10-build-15063"></a><span data-ttu-id="be41a-104">Neue APIs in Windows10, Build 15063</span><span class="sxs-lookup"><span data-stu-id="be41a-104">New APIs in Windows 10 build 15063</span></span>
 

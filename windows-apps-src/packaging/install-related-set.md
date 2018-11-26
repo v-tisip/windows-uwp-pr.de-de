@@ -1,18 +1,16 @@
 ---
-author: laurenhughes
 title: Installieren einer verwandten Gruppe mithilfe einer App-Installer-Datei
 description: In diesem Abschnitt überprüfen wir die erforderlichen Schritte, damit die Installation von verwandten Gruppen über den App-Installer möglich ist. Wir durchlaufen ebenfalls die notwendigen Schritte zum Erstellen einer *.appinstaller-Datei, die Ihre verwandten Gruppen definieren.
-ms.author: lahugh
 ms.date: 1/4/2018
 ms.topic: article
 keywords: Windows10, UWP, App-Installer, AppInstaller, querladen, verwandte Gruppe, optionale Pakete
 ms.localizationpriority: medium
-ms.openlocfilehash: 4caf4333bb3d442779aedac2028b0996cbd17645
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c90fffeee7003159f58cf2e108286f4fe7732fd6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7576464"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692591"
 ---
 # <a name="install-a-related-set-using-an-app-installer-file"></a><span data-ttu-id="4aa79-105">Installieren einer verwandten Gruppe mithilfe einer App-Installer-Datei</span><span class="sxs-lookup"><span data-stu-id="4aa79-105">Install a related set using an App Installer file</span></span>
 

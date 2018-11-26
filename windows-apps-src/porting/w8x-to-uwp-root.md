@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 description: Wenn Sie eine universelle 8.1-app & \#8212;whether hat es als Ziel Windows8.1, Windows Phone 8.1 oder beides & \#8212;then werden Sie feststellen, dass der Quellcode und Ihre Kenntnisse sich reibungslos zu Windows 10 portieren lassen.
 title: Wechsel von Windows-Runtime 8.x zu UWP
 ms.assetid: ac163b57-dee0-43fa-bab9-8c37fbee3913
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: eebd0467696b78458835425f7feac903ba435f42
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c94b2a9a1ad13db4051d276aaff9a082f95f33fb
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573094"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693748"
 ---
 # <a name="move-from-windows-runtime-8x-to-uwp"></a><span data-ttu-id="7ad96-104">Wechsel von Windows-Runtime 8.x zu UWP</span><span class="sxs-lookup"><span data-stu-id="7ad96-104">Move from Windows Runtime 8.x to UWP</span></span>
 

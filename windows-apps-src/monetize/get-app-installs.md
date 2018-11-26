@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: FAD033C7-F887-4217-A385-089F09242827
 description: Verwenden Sie diese Methode der Microsoft Store-Analyse-API, um die aggregierten Installationsdaten für eine Anwendung während eines bestimmten Zeitraums und andere optionale Filter abzurufen.
 title: Abrufen von App-Installationen
-ms.author: mhopkins
 ms.date: 06/04/2018
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, App-Installationen
 ms.localizationpriority: medium
-ms.openlocfilehash: 72efc20e218cdf718b67c949bd7c71108921bf9c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e2dc604e15180296e84d6177aa3d9b71a0bf82dc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574150"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692761"
 ---
 # <a name="get-app-installs"></a><span data-ttu-id="2acc7-104">Abrufen von App-Installationen</span><span class="sxs-lookup"><span data-stu-id="2acc7-104">Get app installs</span></span>
 

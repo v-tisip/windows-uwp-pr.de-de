@@ -1,18 +1,16 @@
 ---
-author: jwmsft
 title: xLoad-Attribut
-description: xLoad ermöglicht die dynamische Erstellung und Zerstörung eines Elements und seiner untergeordneten Elemente, verkürzt die Startzeit Zeit und Speicherverwendung. 
-ms.author: jimwalk
+description: xLoad ermöglicht die dynamische Erstellung und Zerstörung eines Elements und seiner untergeordneten Elemente, verkürzt die Startzeit Zeit und Speicherverwendung.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: d9659d183c020c579aa0a21fe179a69c1d9997c5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1fa0f12779ad56d57c92f667443644851dc3d5e5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7577823"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693161"
 ---
 # <a name="xload-attribute"></a><span data-ttu-id="e3ea6-104">x:Load-Attribut</span><span class="sxs-lookup"><span data-stu-id="e3ea6-104">x:Load attribute</span></span>
 

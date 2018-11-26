@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 ms.assetid: 333f67f5-f012-4981-917f-c6fd271267c6
 description: Diese Fallstudie baut auf den Informationen in Bookstore1 auf, beginnend mit einer universellen8.1-App, die gruppierte Daten in einem SemanticZoom-Steuerelement anzeigt.
 title: Windows Runtime 8.x zu UWP – Fallstudie Bookstore2
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 36d37f2507f3e4c96c3462fd075dbe945117dd82
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 156f780e5637852d554488adfeeb9d688fa4a4d7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564070"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693686"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore2"></a><span data-ttu-id="3d255-104">Windows Runtime 8.x zu UWP – Fallstudie: Bookstore2</span><span class="sxs-lookup"><span data-stu-id="3d255-104">Windows Runtime 8.x to UWP case study: Bookstore2</span></span>
 

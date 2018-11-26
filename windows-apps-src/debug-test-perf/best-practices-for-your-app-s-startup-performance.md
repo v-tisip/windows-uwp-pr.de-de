@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: 00ECF6C7-0970-4D5F-8055-47EA49F92C12
 title: Bewährte Methoden für die Leistung Ihrer App beim Starten
 description: Erstellen Sie UWP-Apps (Universelle Windows-Plattform) mit optimalen Startzeiten, indem Sie die Vorgehensweise bei Start und Aktivierung optimieren.
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 25ddcc6c9ceaecd858733a0222c22c18682041b8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e9d0fdee4ba9f44f15c461e5a53dad28700023a4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7575938"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720146"
 ---
 # <a name="best-practices-for-your-apps-startup-performance"></a><span data-ttu-id="83fc4-104">Bewährte Methoden für die Leistung Ihrer App beim Starten</span><span class="sxs-lookup"><span data-stu-id="83fc4-104">Best practices for your app's startup performance</span></span>
 

@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: A7E0DA1E-535A-459E-9A35-68A4150EE9F5
 description: Dieses Thema enthält eine Übersicht über das Hinzufügen der hardwarebasierten Verwaltung digitaler Rechte (Digital Rights Management, DRM) mit PlayReady zu Ihrer App für die Universelle Windows-Plattform (UWP).
 title: Hardwarebasiertes DRM
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 6e898e342cb26ab86a74c30b5ced3dd3a9b68165
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5f0a53d0f725c134bbb7adecaa956000a53235b0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575582"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719010"
 ---
 # <a name="hardware-drm"></a><span data-ttu-id="5d71e-104">Hardwarebasiertes DRM</span><span class="sxs-lookup"><span data-stu-id="5d71e-104">Hardware DRM</span></span>
 

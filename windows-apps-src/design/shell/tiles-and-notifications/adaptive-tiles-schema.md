@@ -1,21 +1,19 @@
 ---
-author: andrewleader
 Description: Here are the elements and attributes you use to create adaptive tiles.
 title: Adaptive Kacheln – Schema und Vorlagen
 ms.assetid: 858FB05E-87A2-49CF-BE48-570980AD36C8
 label: Adaptive tile schema and templates
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ed938ec247f308559566ad299bec8eb8ea75674
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ed9124b0b66239c10b277f070ac2c9594c336fdd
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7576484"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719082"
 ---
 # <a name="adaptive-tile-templates-schema-and-guidance"></a><span data-ttu-id="72edb-103">Vorlagen für adaptive Kacheln: Schema und Richtlinien</span><span class="sxs-lookup"><span data-stu-id="72edb-103">Adaptive tile templates: schema and guidance</span></span>
 

@@ -1,19 +1,17 @@
 ---
-author: eliotcowley
 title: Arcade-Joystick
 description: Verwenden Sie die Windows.Gaming.Input-Arcade-Joystick-APIs zum Erkennen und Lesen von Arcade-Joysticks.
 ms.assetid: 2E52232F-3014-4C8C-B39D-FAC478BA3E01
-ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Arcade-Joysticks, Eingabe
 ms.localizationpriority: medium
-ms.openlocfilehash: 13bc03559fb32156f5ff8bb29ed96f8a1e4ac84f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6f9e3ff29dfb17b6e2a07df52153013b5266206e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575192"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692801"
 ---
 # <a name="arcade-stick"></a><span data-ttu-id="be6b2-104">Arcade-Joystick</span><span class="sxs-lookup"><span data-stu-id="be6b2-104">Arcade stick</span></span>
 

@@ -1,18 +1,16 @@
 ---
-author: WilliamsJason
 title: Geräteportal-Controller– API-Referenz
 description: Hier erfahren Sie, wie Sie die Anzahl der angeschlossenen physischen Controller abrufen und sie programmgesteuert deaktivieren.
-ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e0b85293ada8619246c3c23ef2103ead5f40c23
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8b5061f9193d78d4ff23f5fa707b0bea67a10f98
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561964"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707047"
 ---
 # <a name="controller-api-reference"></a><span data-ttu-id="c68ab-104">Controller– API-Referenz</span><span class="sxs-lookup"><span data-stu-id="c68ab-104">Controller API reference</span></span>   
 <span data-ttu-id="c68ab-105">Mit dieser REST-API können Sie die Anzahl der angeschlossenen physischen Controller abrufen und deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="c68ab-105">You can get the number of attached physical controllers and turn them off using this REST API.</span></span>

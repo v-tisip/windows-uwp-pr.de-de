@@ -1,19 +1,17 @@
 ---
-author: PatrickFarley
 ms.assetid: 7234DD5F-8E86-424E-99A0-93D01F1311F2
 title: Testen mit dem Emulator für Microsoft Windows10Mobile
 description: Mit den Tools des Emulators für Microsoft Windows10Mobile können Sie die Interaktion mit einem Gerät praxisnah simulieren und die Features Ihrer App testen.
-ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: b3b4da17c8e616640205e5b8b9892a41bc2ea647
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3ee38abfb28aad8d6a3ce073a947580b3df29593
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555625"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720116"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a><span data-ttu-id="b0f85-104">Tests mit dem Emulator für Microsoft Windows10Mobile</span><span class="sxs-lookup"><span data-stu-id="b0f85-104">Test with the Microsoft Emulator for Windows 10 Mobile</span></span>
 

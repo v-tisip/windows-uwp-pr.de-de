@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: Add users to your Partner Center account and assign them roles with specific permissions.
 title: Verwalten von Kontobenutzern
 ms.assetid: 9245F0D0-7D8F-4741-AFB4-FBA5601D0A9B
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, Uwp, Kontobenutzer, Verwalten von Benutzern, Azure Ad, Verwalten mehrerer Benutzer, mehrere Benutzer
 ms.localizationpriority: medium
-ms.openlocfilehash: 01517ebd2cc4b86fa1ac440446a5cc59172014b3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 282b1eb087fa081b621437206f338ed4b6d3569b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555292"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696219"
 ---
 # <a name="manage-account-users"></a><span data-ttu-id="68919-103">Verwalten von Kontobenutzern</span><span class="sxs-lookup"><span data-stu-id="68919-103">Manage account users</span></span>
 

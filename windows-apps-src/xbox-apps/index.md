@@ -1,19 +1,17 @@
 ---
-author: Mtoepke
 title: UWP auf XboxOne
 description: Informationen zum Erstellen von Apps für die Universelle Windows-Plattform (UWP) auf Xbox One.
-ms.author: mstahl
 ms.date: 10/25/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.assetid: 2d935f53-84db-4108-86dc-cb6a0749782f
 ms.localizationpriority: medium
-ms.openlocfilehash: e7c14c51c0b5b09b96859a8aba97172485a14c85
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 776eae9bbfa31d840964ca4622258eff0a2acfdc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569054"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691119"
 ---
 # <a name="uwp-on-xbox-one"></a><span data-ttu-id="dc3a6-104">UWP auf Xbox One</span><span class="sxs-lookup"><span data-stu-id="dc3a6-104">UWP on Xbox One</span></span>
 

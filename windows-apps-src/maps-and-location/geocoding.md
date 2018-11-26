@@ -1,19 +1,17 @@
 ---
-author: PatrickFarley
 title: Durchführen der Geocodierung und umgekehrten Geocodierung
 description: Dieses Handbuch erfahren Sie, wie Sie konvertieren Adressen in geografische Standorte (geocodierung) und geografische Standorte in Adressen (umgekehrte geocodierung) durch Aufrufen der Methoden der MapLocationFinder-Klasse im Windows.Services.Maps-Namespace.
 ms.assetid: B912BE80-3E1D-43BB-918F-7A43327597D2
-ms.author: pafarley
 ms.date: 07/02/2018
 ms.topic: article
 keywords: Windows10, UWP, Geocodierung, Karte, Ort, Standort
 ms.localizationpriority: medium
-ms.openlocfilehash: bdd956dece4435ceb8e14121ec2b545095af3a11
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e8b0efe39578974090844a4224055821c29f8ced
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578233"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706897"
 ---
 # <a name="perform-geocoding-and-reverse-geocoding"></a><span data-ttu-id="0096b-104">Durchführen von Geocodierung und umgekehrter Geocodierung</span><span class="sxs-lookup"><span data-stu-id="0096b-104">Perform geocoding and reverse geocoding</span></span>
 

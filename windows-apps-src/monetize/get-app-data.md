@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 8D4AE532-22EF-4743-9555-A828B24B8F16
 description: Verwenden Sie diese Methoden in der Microsoft Store-Übermittlungs-API zum Abrufen von Daten für apps, die für Ihr Partner Center-Konto registriert wurden.
 title: Abrufen von App-Daten
-ms.author: mhopkins
 ms.date: 02/28/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, App-Daten
 ms.localizationpriority: medium
-ms.openlocfilehash: ecda61bff6fac407dbde175f584a09d6b871d989
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 312729c25d5d9f34471c7154a84273bcbf844da4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571352"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7720226"
 ---
 # <a name="get-app-data"></a><span data-ttu-id="d7680-104">Abrufen von App-Daten</span><span class="sxs-lookup"><span data-stu-id="d7680-104">Get app data</span></span>
 

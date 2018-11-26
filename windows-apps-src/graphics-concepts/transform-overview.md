@@ -2,18 +2,16 @@
 title: Übersicht über Transformationen
 description: Matrix-Transformationen kümmern sich um einen Großteil der einfachen Mathematik von 3D-Grafiken.
 ms.assetid: B5220EE8-2533-4B55-BF58-A3F9F612B977
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 32f55b0a387221b792e37072f129edddf285195b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1b6be8ee8aa67196581907087d99e0324d741a00
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573715"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693031"
 ---
 # <a name="transform-overview"></a><span data-ttu-id="4c1a9-104">Übersicht über Transformationen</span><span class="sxs-lookup"><span data-stu-id="4c1a9-104">Transform overview</span></span>
 

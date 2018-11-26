@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Rendern der Schattenmap zum Tiefenpuffer
 description: Führen Sie das Rendern aus dem Blickwinkel durch, aus dem das Licht kommt, um eine zweidimensionale Tiefenkarte zu erstellen, mit der das Schattenvolumen dargestellt wird.
 ms.assetid: 7f3d0208-c379-8871-cc48-027047c6c2d0
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Rendern, Schattenkarte, Tiefenpuffer, Direct3D
 ms.localizationpriority: medium
-ms.openlocfilehash: a73754fef6d87505751460ec134d853c6bca0530
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 27cd535dc51a330937c345acf352677a42c652eb
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559249"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692268"
 ---
 # <a name="render-the-shadow-map-to-the-depth-buffer"></a><span data-ttu-id="a809f-104">Rendern der Schattenmap zum Tiefenpuffer</span><span class="sxs-lookup"><span data-stu-id="a809f-104">Render the shadow map to the depth buffer</span></span>
 

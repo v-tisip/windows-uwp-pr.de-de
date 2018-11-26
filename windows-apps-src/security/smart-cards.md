@@ -2,18 +2,16 @@
 title: Smartcards
 description: In diesem Thema wird erläutert, wie UWP-Apps Smartcards verwenden können, um Benutzer mit sicheren Netzwerkdiensten zu verbinden, einschließlich Informationen für den Zugriff auf physische Smartcardleser, zum Erstellen virtueller Smartcards, zum Kommunizieren mit Smartcards, Authentifizieren von Benutzern, zum Zurücksetzen von Benutzer-PINs und zum Entfernen oder Trennen von Smartcards.
 ms.assetid: 86524267-50A0-4567-AE17-35C4B6D24745
-author: PatrickFarley
-ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
-ms.openlocfilehash: 14f5c416fff63ba5a14480f804b9382c27f7e53a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 47a4ceef2603d7b0178431c93fb6c271b24c506a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555725"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696093"
 ---
 # <a name="smart-cards"></a><span data-ttu-id="f0c7f-104">Smartcards</span><span class="sxs-lookup"><span data-stu-id="f0c7f-104">Smart cards</span></span>
 

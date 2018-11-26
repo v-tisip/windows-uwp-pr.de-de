@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 252C44DF-A2B8-4F4F-9D47-33E423F48584
 description: Mittels dieser Methode in der Microsoft Store-Analyse-API können Sie gesammelte Fehlerberichtsdaten für einen bestimmten Zeitraum und andere optionale Filter abrufen.
 title: Abrufen von Fehlerberichtsdaten für Ihre App
-ms.author: mhopkins
 ms.date: 09/04/2018
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienst, Microsoft Store-Analyse-API, Fehler
 ms.localizationpriority: medium
-ms.openlocfilehash: fd463bf98fb751efa011ba5fc3e1e7b9eb7b41eb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 69504fd8d670158a35e5afd5dcd035acd296f084
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7558000"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692080"
 ---
 # <a name="get-error-reporting-data-for-your-app"></a><span data-ttu-id="3b41f-104">Abrufen von Fehlerberichtsdaten für Ihre App</span><span class="sxs-lookup"><span data-stu-id="3b41f-104">Get error reporting data for your app</span></span>
 

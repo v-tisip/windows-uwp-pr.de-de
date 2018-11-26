@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: 708170E1-777A-4E4A-9F77-5AB28B88B107
 description: In diesem Artikel wird beschrieben, wie Sie manuelle Gerätesteuerelemente verwenden, um erweiterte Videoaufnahmeszenarien, z.B. HDR-Video und Belichtungspriorität, zu ermöglichen.
 title: Manuelle Kamerasteuerelemente für die Videoaufnahme
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 91f9d21f6df09bf8f3cad3e5a43f3ed94049338e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f144ef398fc55e79d2f0190c61214cdf1aa93b68
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7576078"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696073"
 ---
 # <a name="manual-camera-controls-for-video-capture"></a><span data-ttu-id="ebadb-104">Manuelle Kamerasteuerelemente für die Videoaufnahme</span><span class="sxs-lookup"><span data-stu-id="ebadb-104">Manual camera controls for video capture</span></span>
 

@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: Stellt eine Methode bereit, um die Quelle einer Bindung als relative Beziehung im Laufzeitobjektdiagramm anzugeben.
 title: RelativeSource-Markuperweiterung
 ms.assetid: B87DEF36-BE1F-4C16-B32E-7A896BD09272
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 5bb9d241569afdbbc9df95fa11cd2261e78c077a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 26cde97f82e6962d530721f1e0230138e5917016
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557336"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694939"
 ---
 # <a name="relativesource-markup-extension"></a><span data-ttu-id="8c4c6-104">{RelativeSource}-Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="8c4c6-104">{RelativeSource} markup extension</span></span>
 

@@ -1,19 +1,17 @@
 ---
-author: Jwmsft
 ms.assetid: F46D5E18-10A3-4F7B-AD67-76437C77E4BC
 title: Transformationen – Übersicht
 description: Hier erfahren Sie, wie Sie Transformationen in der Windows-Runtime-API verwenden, indem Sie die relativen Koordinatensysteme der Elemente in der UI ändern.
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 2cfc7c34363bc05e13e618deccc44fada6dec96f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f978c7b76f01be23badcf38a56023963882af9d2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563126"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7693221"
 ---
 # <a name="transforms-overview"></a><span data-ttu-id="103a4-104">Transformationen – Übersicht</span><span class="sxs-lookup"><span data-stu-id="103a4-104">Transforms overview</span></span>
 

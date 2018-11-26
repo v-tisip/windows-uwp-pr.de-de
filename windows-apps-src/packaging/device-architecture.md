@@ -1,18 +1,16 @@
 ---
-author: laurenhughes
 title: App-Paketarchitektur
 description: Hier erfahren Sie mehr über die Prozessorarchitekturen, die beim Erstellen des UWP-App-Pakets verwendet werden sollten.
-ms.author: lahugh
 ms.date: 7/13/2017
 ms.topic: article
 keywords: Windows10, Uwp, Verpacken, Architektur, Paket-Konfiguration
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e265df32a8c4168cddced905e7b0712e4601264
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 15b1b8531390cf1b83c15e0aec1d371266417a87
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573294"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712690"
 ---
 # <a name="app-package-architectures"></a><span data-ttu-id="3d1ef-104">App-Paketarchitektur</span><span class="sxs-lookup"><span data-stu-id="3d1ef-104">App package architectures</span></span>
 

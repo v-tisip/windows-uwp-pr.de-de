@@ -1,18 +1,16 @@
 ---
-author: TerryWarwick
 title: Erste Schritte mit Point Of Service-Geräten
 description: Dieser Artikel enthält Informationen für die ersten Schritte mit PointOfService-UWP-Apps.
-ms.author: jken
 ms.date: 06/13/2018
 ms.topic: article
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
-ms.openlocfilehash: 46dd1f615e42f6e89ee9a92cb980299e9a0e5205
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1b4ff9443c40cf44e171bf898b627de3e2819034
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580670"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692358"
 ---
 # <a name="getting-started-with-point-of-service"></a><span data-ttu-id="785dd-104">Erste Schritte mit Point Of Service-Geräten</span><span class="sxs-lookup"><span data-stu-id="785dd-104">Getting started with Point of Service</span></span>
 

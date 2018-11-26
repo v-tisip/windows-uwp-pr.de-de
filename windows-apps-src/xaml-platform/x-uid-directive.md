@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: Stellt einen eindeutigen Bezeichner für Markupelemente bereit. Bei UWP-XAML (Universelle Windows-Plattform) wird dieser eindeutige Bezeichner für XAML-Lokalisierungsprozesse und -tools verwendet, z.B. beim Verwenden von Ressourcen aus einer RESW-Ressourcendatei.
 title: xUid-Direktive
 ms.assetid: 9FD6B62E-D345-44C6-B739-17ED1A187D69
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 4bec4bd5d35fc2bb3013b37c1386520a769ddeb6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 03cf647fdb243fd18212ca894f7682e913378907
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577346"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694275"
 ---
 # <a name="xuid-directive"></a><span data-ttu-id="e1b09-105">x:Uid-Direktive</span><span class="sxs-lookup"><span data-stu-id="e1b09-105">x:Uid directive</span></span>
 

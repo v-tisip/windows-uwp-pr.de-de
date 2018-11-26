@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: Listet Unterstützung auf Sprachebene in XAML für die Windows-Runtime für bestimmte Datentypen in der Common Language Runtime (CLR) und in anderen Programmiersprachen wie C++ auf.
 title: Systeminterne XAML-Datentypen
 ms.assetid: D50E6127-395D-4E27-BAA2-2FE627F4B711
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 18cf7a63dea7a1913293e5cd174b8f6c69b5baf6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 26f4153b59c618a4559549ba7fa9ca0f99c4ab64
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7556899"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7694226"
 ---
 # <a name="xaml-intrinsic-data-types"></a><span data-ttu-id="d1e05-104">Systeminterne XAML-Datentypen</span><span class="sxs-lookup"><span data-stu-id="d1e05-104">XAML intrinsic data types</span></span>
 

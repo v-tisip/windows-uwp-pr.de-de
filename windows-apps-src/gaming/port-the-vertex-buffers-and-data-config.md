@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Portieren der Vertexpuffer und -daten
 description: In diesem Schritt definieren Sie die Vertexpuffer für die Gitter und die Indexpuffer, mit deren Hilfe die Shader die Scheitelpunkte (Vertices) in einer angegebenen Reihenfolge durchlaufen können.
 ms.assetid: 9a8138a5-0797-8532-6c00-58b907197a25
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Portieren, Vertexpuffer, Daten, Direct3D
 ms.localizationpriority: medium
-ms.openlocfilehash: b32747a4e11d258f71d4e55e41b7f54bb5e99246
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4c961a8852fb1e03e4e86209f62bda821b980f8c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7558590"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712267"
 ---
 # <a name="port-the-vertex-buffers-and-data"></a><span data-ttu-id="5beba-104">Portieren der Vertexpuffer und -Daten</span><span class="sxs-lookup"><span data-stu-id="5beba-104">Port the vertex buffers and data</span></span>
 

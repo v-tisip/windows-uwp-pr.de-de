@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 ms.assetid: 2b63a4c8-b1c0-4c77-95ab-0b9549ba3c0e
 description: Dieses Thema enthält eine Fallstudie für das Portieren einer sehr einfachen WindowsPhone Silverlight-app zu einer app für Windows 10 universelle Windows-Plattform (UWP).
 title: WindowsPhone Silverlight zu UWP – Fallstudie, Bookstore1
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: c335f607eb1897f79035850cd6a5af9e7a7a56dc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 19045e84f1ca3396321dd4f8c4e76da24dc9a588
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579551"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691411"
 ---
 # <a name="windowsphone-silverlight-to-uwp-case-study-bookstore1"></a><span data-ttu-id="8a1d4-104">WindowsPhone Silverlight zu UWP – Fallstudie: Bookstore1</span><span class="sxs-lookup"><span data-stu-id="8a1d4-104">WindowsPhone Silverlight to UWP case study: Bookstore1</span></span>
 

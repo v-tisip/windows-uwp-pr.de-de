@@ -1,18 +1,16 @@
 ---
-author: jnHs
 Description: You can create Store listings for your apps without using Partner Center by exporting your listings in a .csv file, entering your info and assets, and then importing the updated file.
 title: Importieren und Exportieren von Store-Einträgen
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Store-Einträge importieren, Store-Einträge exportieren, Export importieren, Store-Einträge CSV
 ms.localizationpriority: medium
-ms.openlocfilehash: 9df66baa1b5771055894b2e3accc0c8a9dff8a60
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5630a9019aa11b87f06744e03ae74ec38c792d41
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571651"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7719455"
 ---
 # <a name="import-and-export-store-listings"></a><span data-ttu-id="3f722-103">Importieren und Exportieren von Store-Einträgen</span><span class="sxs-lookup"><span data-stu-id="3f722-103">Import and export Store listings</span></span>
 

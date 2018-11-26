@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 78278741-09A4-4406-A112-9AF3C73F5C16
 description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Abrufen von Informationen über ein Add-on für eine app, die für Ihr Partner Center-Konto registriert ist.
 title: Abrufen eines Add-Ons
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-On-Übermittlung, In-App-Produkt, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 9620b0b7cf4d1ecb583215b2ab0fafe0e82712bf
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: cc02cd5ae94b51b274c0e3ce1245020222e101f1
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7577978"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691541"
 ---
 # <a name="get-an-add-on"></a><span data-ttu-id="ec9f0-104">Abrufen eines Add-Ons</span><span class="sxs-lookup"><span data-stu-id="ec9f0-104">Get an add-on</span></span>
 

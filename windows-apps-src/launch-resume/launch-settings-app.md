@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: Starten der Einstellungs-App von Windows
 description: Erfahren Sie, wie Sie die Windows-Einstellungs-App aus Ihrer App starten können. In diesem Thema wird das ms-settings-URI-Schema beschrieben. Verwenden Sie dieses URI-Schema, um die Windows-Einstellungs-App mit bestimmten Einstellungsseiten zu starten.
 ms.assetid: C84D4BEE-1FEE-4648-AD7D-8321EAC70290
-ms.author: twhitney
 ms.date: 03/20/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: b86298ca671282dea201e3088bc60845231fe007
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ff9510b65bd635b5b10e0cbea551c12b29ef8f37
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570895"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691581"
 ---
 # <a name="launch-the-windows-settings-app"></a><span data-ttu-id="2e118-106">Starten der Windows-Einstellungs-App</span><span class="sxs-lookup"><span data-stu-id="2e118-106">Launch the Windows Settings app</span></span>
 

@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um die CAB-Datei für einen Fehler in Ihrer Xbox One Spiel herunterzuladen.
 title: Herunterladen der CAB-Datei für einen Fehler in Ihrer Xbox One Spiel
-ms.author: mhopkins
 ms.date: 11/06/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Analyse-API, CAB herunterladen
 ms.localizationpriority: medium
-ms.openlocfilehash: ad1e3339fe50087c3a3d8cdcf3a99f27c1c868df
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 736219533a254e6380c10600e97f707f15e37de6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561147"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7712504"
 ---
 # <a name="download-the-cab-file-for-an-error-in-your-xbox-one-game"></a><span data-ttu-id="7aa73-104">Herunterladen der CAB-Datei für einen Fehler in Ihrer Xbox One Spiel</span><span class="sxs-lookup"><span data-stu-id="7aa73-104">Download the CAB file for an error in your Xbox One game</span></span>
 

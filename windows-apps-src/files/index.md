@@ -1,19 +1,17 @@
 ---
-author: laurenhughes
 ms.assetid: 1901c4c2-5161-435d-bc7b-f40c69cdb138
 title: Dateien, Ordner und Bibliotheken
 description: Erhalten Sie Informationen zum Lesen und Schreiben von App-Einstellungen, zur Datei- und Ordnerauswahl und zu speziellen Speicherorten im Sandkasten, z.B. die Video-/Musikbibliothek.
-ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 80c6292c12568d7f1017ca67707689ce9539c804
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 241ee0de885dd1b2e40b6ce51c21312dbcb9f655
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566744"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7692139"
 ---
  # <a name="files-folders-and-libraries"></a><span data-ttu-id="c5385-104">Dateien, Ordner und Bibliotheken</span><span class="sxs-lookup"><span data-stu-id="c5385-104">Files, folders, and libraries</span></span>
 

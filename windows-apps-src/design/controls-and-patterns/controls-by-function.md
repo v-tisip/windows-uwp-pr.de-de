@@ -1,21 +1,19 @@
 ---
-author: Jwmsft
 Description: Provides a list by function of some of the controls that you can use in your apps.
 title: Steuerelemente nach Funktion
 ms.assetid: 8DB4347B-91D6-4659-91F2-80ECF7BBB596
 label: Controls by function
 template: detail.hbs
-ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 933ca3f6d683d5a58e10f87059527038e7b696d1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8e38803c8cbe8b9bdee9a9365127d5f7e7866f7d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580225"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695049"
 ---
 # <a name="controls-by-function"></a><span data-ttu-id="48c5d-103">Steuerelemente nach Funktion</span><span class="sxs-lookup"><span data-stu-id="48c5d-103">Controls by function</span></span>
 

@@ -1,19 +1,17 @@
 ---
-author: laurenhughes
 ms.assetid: BF929A68-9C82-4866-BC13-A32B3A550005
 title: Nachverfolgen kürzlich verwendeter Dateien und Ordner
 description: Sie können Dateien nachverfolgen, auf die häufig zugegriffen wird, indem Sie diese der Liste mit den zuletzt verwendeten Elementen (MRU) der App hinzufügen.
-ms.author: lahugh
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 12b8a6462f6cc39ba85cddfaa7a92212955a79f5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4a810c097b4f162395106e74b68d5e9cdb2f8538
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559656"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7691771"
 ---
 # <a name="track-recently-used-files-and-folders"></a><span data-ttu-id="f09c3-104">Nachverfolgen kürzlich verwendeter Dateien und Ordner</span><span class="sxs-lookup"><span data-stu-id="f09c3-104">Track recently used files and folders</span></span>
 

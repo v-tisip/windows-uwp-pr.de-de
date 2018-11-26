@@ -4,17 +4,15 @@ description: Die Pixelshaderphase (PS) empfängt interpolierte Daten für einen 
 ms.assetid: 0AEBFDFB-0AD8-4633-AE4E-A44004B57745
 keywords:
 - Pixelshaderphase (PS)
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 84178a4e5cf993574e7553da44beecf13622bd65
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e1f7e787f2ee80a3168d38a9afd9a249dc0e6de0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557640"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698759"
 ---
 # <a name="pixel-shader-ps-stage"></a><span data-ttu-id="31b55-104">Pixelshaderphase (PS)</span><span class="sxs-lookup"><span data-stu-id="31b55-104">Pixel Shader (PS) stage</span></span>
 

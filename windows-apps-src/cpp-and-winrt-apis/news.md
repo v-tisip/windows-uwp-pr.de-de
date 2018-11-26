@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 description: Neuigkeiten und Änderungen zu C++ / WinRT.
 title: Neuigkeiten in C++ / WinRT
-ms.author: stwhi
 ms.date: 10/03/2018
 ms.topic: article
 keywords: Windows 10, Uwp, Standard, c++, Cpp, Winrt, Projektion, Neuigkeiten, was die, neue
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1a10c9445f5909242675df6b3f2eaefab1aedcb3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 87ab438de08ed5d6165343e7b9c4a559f37b351e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7577856"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7695424"
 ---
 # <a name="whats-new-in-cwinrt"></a><span data-ttu-id="d61bc-104">Neuigkeiten in C++ / WinRT</span><span class="sxs-lookup"><span data-stu-id="d61bc-104">What's new in C++/WinRT</span></span>
 
