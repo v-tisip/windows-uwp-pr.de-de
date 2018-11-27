@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: A37ADD4A-2187-4767-9C7D-EDE8A90AA215
 title: Planen der Leistung
 description: Benutzer erwarten, dass ihre Apps zuverlässig und reibungslos funktionieren und den Akku nicht übermäßig beanspruchen.
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: e62e724cceb458ba922143e61058dffa8d16a0b8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6388158a7b1c4fd3fa3e0ab17dcc86b7ef2d7c0e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563507"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704962"
 ---
 # <a name="planning-for-performance"></a>Planen der Leistung
 
@@ -173,7 +171,7 @@ Verwenden Sie diese Verfahren und Tools zum Testen, wie Ihre App gegenüber den 
     -   Führen Sie die App mehrmals aus, um zufällige Testvariablen so gut es geht auszuschließen und dadurch konsistente Messungen zu ermöglichen.
 -   Führen Sie Tests zur verringerten Leistungsverfügbarkeit durch. Das Gerät der Benutzer weist möglicherweise eine deutlich geringere Leistung als das Entwicklungssystem auf. Windows wurde unter Berücksichtigung von Geräten mit niedrigem Stromverbrauch, z.B. mobile Geräte, konzipiert. Apps, die auf der Plattform ausgeführt werden, sollten sicherstellen, dass sie auch auf diesen Geräten ordnungsgemäß ausgeführt werden können. Sie können davon ausgehen, dass ein energiesparendes Gerät ungefähr viermal langsamer ist als ein Desktop-PC. Legen Sie Ihre Ziele entsprechend fest.
 -   Verwenden Sie eine Kombination von Tools wie Microsoft Visual Studio und Windows Performance Analyzer, um die App-Leistung zu messen. Visual Studio stellt eine Analyse bereit, die auf die App ausgerichtet ist, beispielsweise die Quellcodeverknüpfung. Windows Performance Analyzer bietet dagegen eine systemorientierte Analyse, beispielsweise die Bereitstellung von Systeminfos, Infos zu Touchmanipulationsereignissen sowie Infos zur Datenträger-E/A und Grafikprozessorauslastung (GPU). Beide Tools können Ablaufverfolgungsdateien sammeln und exportieren und freigegebene sowie Post-Mortem-Traces erneut öffnen.
--   Bevor Sie Ihre app zur Zertifizierung an den Store übermitteln, müssen Sie die leistungsbezogenen Testfälle in Ihre Testpläne integrieren, wie im Abschnitt "Leistungstests" des [Zertifizierungskits für Windows-App-Tests](windows-app-certification-kit-tests.md) und im Abschnitt der "Leistung und Stabilität"im Abschnitt [Testfälle für UWP-app](https://msdn.microsoft.com/library/windows/apps/Dn275879).
+-   Bevor Sie Ihre app zur Zertifizierung an den Store übermitteln, müssen Sie die leistungsbezogenen Testfälle in Ihre Testpläne integrieren, wie beschrieben im Abschnitt "Leistungstests" des [Zertifizierungskits für Windows-App-Tests](windows-app-certification-kit-tests.md) und in der "Leistung und Stabilität"im Abschnitt [Testfälle für UWP-app](https://msdn.microsoft.com/library/windows/apps/Dn275879).
 
 Weitere Informationen finden Sie unter diesen Ressourcen und Tools zur Profilerstellung.
 

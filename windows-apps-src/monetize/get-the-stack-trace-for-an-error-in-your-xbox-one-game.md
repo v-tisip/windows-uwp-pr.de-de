@@ -1,24 +1,22 @@
 ---
-author: Xansky
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um die stapelüberwachung für einen Fehler in Ihrer Xbox One Spiel abzurufen.
 title: Abrufen der stapelüberwachung für einen Fehler in Ihrer Xbox One-Spiele
-ms.author: mhopkins
 ms.date: 11/06/2018
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Stapelüberwachung, Fehler
 ms.localizationpriority: medium
-ms.openlocfilehash: 78e65ad78079762ea5aabb95ddcaf4ce508b89bc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: fd43305c54245c3281a0e840d3df4c5c87ff7ad8
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557971"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705329"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-xbox-one-game"></a>Abrufen der stapelüberwachung für einen Fehler in Ihrer Xbox One-Spiele
 
 Verwenden Sie diese Methode in der Microsoft Store-Analyse-API für die stapelüberwachung für einen Fehler in Ihrer Xbox One Spiel abzurufen, die das über das Xbox-Portal (XDP) und im XDP Analytics Partner Center-Dashboard verfügbar ist. Diese Methode kann nur die Stapelüberwachung für einen Fehler herunterladen, die in den letzten 30Tagen aufgetreten ist.
 
-Bevor Sie diese Methode verwenden können, müssen Sie zuerst die Methode zum [Abrufen von Details zu einem Fehler in Ihrer Xbox One Spiel](get-details-for-an-error-in-your-xbox-one-game.md) verwenden, um die ID der CAB-Datei abzurufen, die mit dem Fehler verknüpft ist, für die Sie die stapelüberwachung abrufen möchten.
+Bevor Sie diese Methode verwenden können, müssen Sie zuerst die [Details zu einem Fehler in Ihrer Xbox One Spiel get](get-details-for-an-error-in-your-xbox-one-game.md) -Methode verwenden, um die ID der CAB-Datei abzurufen, die mit dem Fehler verknüpft ist, für die Sie die stapelüberwachung abrufen möchten.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -27,7 +25,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](access-analytics-data-using-windows-store-services.md#prerequisites) für die Microsoft Store-Analyse-API.
 * [Rufen Sie ein Azure AD-Zugriffstoken ab](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
-* Rufen Sie die ID der CAB-Datei an, die mit dem Fehler verknüpft ist, für den Sie die Stapelüberwachung abrufen möchten. Um diese ID zu erhalten, verwenden Sie die [Details zu einem Fehler in Ihrer Xbox One Spiel abzurufen](get-details-for-an-error-in-your-xbox-one-game.md) Methode zum Abrufen von Details zu einem bestimmten Fehler in Ihrer app, und verwenden Sie den Wert **CabId** im Antworttext dieser Methode.
+* Rufen Sie die ID der CAB-Datei an, die mit dem Fehler verknüpft ist, für den Sie die Stapelüberwachung abrufen möchten. Um diese ID zu erhalten, verwenden Sie die [Details zu einem Fehler in Ihrer Xbox One Spiel abzurufen](get-details-for-an-error-in-your-xbox-one-game.md) -Methode, um Details zu einem bestimmten Fehler in Ihrer app abzurufen, und verwenden Sie den Wert **CabId** im Antworttext dieser Methode.
 
 ## <a name="request"></a>Anforderung
 
@@ -50,8 +48,8 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 | Parameter        | Typ   |  Beschreibung      |  Erforderlich  |
 |---------------|--------|---------------|------|
-| applicationId | string | Die Produkt-ID des Xbox One Spiels, für die Sie eine stapelüberwachung abrufen möchten. Um die Produkt-ID Ihres Spiels zu erhalten, wechseln Sie zu Ihrem Spiel in der Xbox-Entwickler-Portal (XDP) und rufen Sie die Produkt-ID von der URL ab. Alternativ können ist Sie Ihre integritätsdaten vom Windows Partner Center-Analysebericht herunterladen, die Produkt-ID in der TSV-Datei enthalten. |  Ja  |
-| cabId | string | Die eindeutige ID der CAB-Datei, die mit dem Fehler verknüpft ist, für den Sie die Stapelüberwachung abrufen möchten. Um diese ID zu erhalten, verwenden Sie die [Details zu einem Fehler in Ihrer Xbox One Spiel abzurufen](get-details-for-an-error-in-your-xbox-one-game.md) Methode zum Abrufen von Details zu einem bestimmten Fehler in Ihrer app, und verwenden Sie den Wert **CabId** im Antworttext dieser Methode. |  Ja  |
+| applicationId | string | Die Produkt-ID des Xbox One Spiels, für die Sie eine stapelüberwachung abrufen möchten. Um die Produkt-ID Ihres Spiels zu erhalten, wechseln Sie zu Ihrem Spiel in der Xbox-Entwickler-Portal (XDP) und rufen Sie die Produkt-ID von der URL ab. Wenn Sie Ihre integritätsdaten aus dem Windows Partner Center Analytics-Bericht herunterladen, ist die Produkt-ID auch in der TSV-Datei enthalten. |  Ja  |
+| cabId | string | Die eindeutige ID der CAB-Datei, die mit dem Fehler verknüpft ist, für den Sie die Stapelüberwachung abrufen möchten. Um diese ID zu erhalten, verwenden Sie die [Details zu einem Fehler in Ihrer Xbox One Spiel abzurufen](get-details-for-an-error-in-your-xbox-one-game.md) -Methode, um Details zu einem bestimmten Fehler in Ihrer app abzurufen, und verwenden Sie den Wert **CabId** im Antworttext dieser Methode. |  Ja  |
 
  
 ### <a name="request-example"></a>Anforderungsbeispiel
@@ -83,7 +81,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 |-----------------|---------|----------------|
 | level            | string  |  Die Framenummer, die dieses Element im Aufrufstapel darstellt.  |
 | image   | string  |   Den Namen der ausführbaren Datei oder des Bibliothekbilds, die/das die Funktion enthält, die in diesem Stapelframe aufgerufen wird.           |
-| function | string  |  Der Name der Funktion, die in diesem Stapelframe aufgerufen wird. Dies ist nur verfügbar, wenn Ihr Spiel Symbole für die ausführbare Datei oder Bibliothek enthält.              |
+| function | string  |  Der Name der Funktion, die in diesem Stapelframe aufgerufen wird. Dies ist nur verfügbar, wenn Ihr Spiel Symbole für die ausführbare Datei oder die Bibliothek enthält.              |
 | offset     | string  |  Der Byte-Offset der aktuellen Anweisung relativ zum Start der Funktion.      |
 
 

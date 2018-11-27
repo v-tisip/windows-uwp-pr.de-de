@@ -2,18 +2,16 @@
 title: Einführung in die Entwicklung sicherer Windows-Apps
 description: In diesem einführenden Artikel erhalten app Architekten und Entwickler besser zu den verschiedenen Windows 10-Plattformfunktionen, die universelle Windows-Plattform (UWP) apps beschleunigen.
 ms.assetid: 6AFF9D09-77C2-4811-BB1A-BBF4A6FF511E
-author: msatranjr
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
-ms.openlocfilehash: adc74410a5012dbc59cc995e80ee5fa729f0176f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 38318e7f97c8eba7d0137a865f5025fb9a77fa55
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564232"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704747"
 ---
 # <a name="intro-to-secure-windows-app-development"></a>Einführung in die Entwicklung sicherer Windows-Apps
 

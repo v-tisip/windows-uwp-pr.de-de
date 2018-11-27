@@ -1,26 +1,24 @@
 ---
-author: Xansky
 ms.assetid: 14C23FE6-3EAF-445E-85C1-DF188A7822CA
 description: Verwenden Sie die Codebeispiele in diesem Abschnitt erfahren Sie mehr über die Verwendung der Microsoft Store-Übermittlungs-API.
 title: Codebeispiele für die Übermittlungs-API
-ms.author: mhopkins
 ms.date: 07/10/2017
 ms.topic: article
 keywords: Windows 10, Uwp, Microsoft Store-Übermittlungs-API, Codebeispiele
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b9c2acbdd6c45c00ba96bdc11a8273a66a67116
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f60668ba81bbaefe2c190f7212618684797366bf
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7558172"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707931"
 ---
 # <a name="code-examples-for-the-submission-api"></a>Codebeispiele für die Übermittlungs-API
 
 Dieser Abschnitt enthält Codebeispiele für die Verwendung der [Microsoft Store-Übermittlungs-API](create-and-manage-submissions-using-windows-store-services.md) in verschiedenen Programmiersprachen.
 
 > [!NOTE]
-> Zusätzlich zu den unten aufgeführten Codebeispielen bieten wir auch ein Open-Source-PowerShell-Modul, das neben der Microsoft Store-Übermittlungs-API eine Befehlszeilenschnittstelle. Dieses Modul heißt [StoreBroker](https://aka.ms/storebroker). Sie können dieses Modul verwenden, um Ihre App-, Flight- und Add-On-Übermittlungen über die Befehlszeile anstatt über die Microsoft Store-Übermittlungs-API direkt zu verwalten. Sie können auch ganz einfach die Quelle durchsuchen, um weitere Beispiele für das Aufrufen dieser API zu erhalten. Das StoreBroker-Modul wird innerhalb von Microsoft aktiv als primäre Methode verwendet, durch die viele Erstanbieter-Apps an den Store übermittelt werden. Weitere Informationen finden Sie in auf der [StoreBroker-Seite auf GitHub](https://aka.ms/storebroker).
+> Zusätzlich zu den unten aufgeführten Codebeispielen bieten wir auch ein Open-Source-PowerShell-Modul, das eine Befehlszeilenschnittstelle über der Microsoft Store-Übermittlungs-API implementiert. Dieses Modul heißt [StoreBroker](https://aka.ms/storebroker). Sie können dieses Modul verwenden, um Ihre App-, Flight- und Add-On-Übermittlungen über die Befehlszeile anstatt über die Microsoft Store-Übermittlungs-API direkt zu verwalten. Sie können auch ganz einfach die Quelle durchsuchen, um weitere Beispiele für das Aufrufen dieser API zu erhalten. Das StoreBroker-Modul wird innerhalb von Microsoft aktiv als primäre Methode verwendet, durch die viele Erstanbieter-Apps an den Store übermittelt werden. Weitere Informationen finden Sie in auf der [StoreBroker-Seite auf GitHub](https://aka.ms/storebroker).
 
 ## <a name="app-submissions-add-on-submissions-and-package-flight-submissions"></a>App-Übermittlungen, Add-On-Übermittlungen und Flight-Paket-Übermittlungen
 

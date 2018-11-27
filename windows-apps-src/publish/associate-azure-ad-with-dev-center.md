@@ -1,27 +1,25 @@
 ---
-author: jnHs
 Description: In order to add and manage account users, you must first associate your Partner Center account with your organization's Azure Active Directory.
 title: Zuordnen von Azure Active Directory mit Ihrem Partner Center-Konto
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Azure Ad, Azure-Mandant, AAD-Mandant, Azure AD-Mandant, Mandantenverwaltung, Mandanten
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f44d5bc0e07ab40a396c103d2a8ba6db5427ae8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9f807799740d7e832da2f6a6fa3ea63e00deaee4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578546"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704401"
 ---
 # <a name="associate-azure-active-directory-with-your-partner-center-account"></a>Zuordnen von Azure Active Directory mit Ihrem Partner Center-Konto
 
-In der Reihenfolge [Hinzufügen](add-users-groups-and-azure-ad-applications.md)und Verwalten von Kontobenutzern müssen Sie zunächst Ihr Partner Center-Konto mit Ihrer Organisation Azure Active Directory zuordnen. 
+Damit [Hinzufügen und Verwalten von Kontobenutzern](add-users-groups-and-azure-ad-applications.md)müssen Sie zunächst Ihre Organisation Azure Active Directory Ihr Partner Center-Konto zuordnen. 
 
-[Partner Center](https://partner.microsoft.com/dashboard) nutzt Azure AD für Mehrbenutzer-Kontozugriff und Verwaltung. Wenn in Ihrer Organisation bereits mit Office365 oder anderen Unternehmensdiensten von Microsoft gearbeitet wird, verfügen Sie bereits über Azure AD. Andernfalls können Sie ein neues erstellen Azure AD-Mandanten aus im Partner Center ohne zusätzliche Kosten.
+[Partner Center](https://partner.microsoft.com/dashboard) nutzt Azure AD zum Verwalten mehrerer Benutzer Konto und zum Zugriff auf. Wenn in Ihrer Organisation bereits mit Office365 oder anderen Unternehmensdiensten von Microsoft gearbeitet wird, verfügen Sie bereits über Azure AD. Andernfalls können erstellen Sie ein neues Azure AD-Mandanten aus im Partner Center ohne zusätzliche Kosten.
 
 > [!TIP]
-> Dieses Thema gilt speziell für das Entwicklerprogramm für Windows-apps im [Partner Center](https://partner.microsoft.com/dashboard)zuordnen ein Mandanten und Verwalten von Benutzern verhält sich allerdings ähnlich für Konten in der Windows-Desktopanwendungsprogramm (siehe [Windows-Desktopanwendungsprogramm](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#add-and-manage-account-users) für Weitere Informationen) und im Windows-Hardware-Entwicklerprogramm (wobei Verweise auf die **Manager** -Rolle gelten auch für Hardware-Konten mit der Rolle " **Administrator** "; finden Sie weitere Informationen unter [Dashboard-Verwaltung](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration) ).
+> Dieses Thema gilt speziell für das Entwicklerprogramm für Windows-apps im [Partner Center](https://partner.microsoft.com/dashboard), aber zuordnen ein Mandanten und Verwalten von Benutzern für Konten im Windows-Desktopanwendungsprogramm verhält (finden Sie unter [Windows-Desktopanwendungsprogramm](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#add-and-manage-account-users) für Weitere Informationen) und im Windows-Hardware-Entwicklerprogramm (wobei Verweise auf die **Manager** -Rolle gelten auch für Hardware-Konten mit der Rolle " **Administrator** "; finden Sie weitere Informationen unter [Dashboard-Verwaltung](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration) ).
 
 Eine einzelne Azure AD-Mandanten kann mehrere Partner Center-Konten zugeordnet werden. Sie müssen nur ein Azure AD-Mandanten mit Ihrem Partner Center-Konto verknüpft ist, um mehrere Kontobenutzer hinzuzufügen, aber Sie haben auch die Möglichkeit, ein einzelnes Partner Center-Konto mehrere Azure AD-Mandanten hinzu. Jeder Benutzer mit der Rolle **Manager** in das Partner Center-Konto wird die Option zum Hinzufügen und Entfernen von Azure AD-Mandanten von diesem Konto verfügen.
 
@@ -40,12 +38,12 @@ Gehen folgendermaßen Sie vor, um Ihr Partner Center-Konto verknüpfen, wenn Ihr
 5.  Wenn die Zuordnung erfolgreich ist, dann werden Sie zum Hinzufügen und Verwalten von Kontobenutzern im Abschnitt " **Benutzer** " im Partner Center bereit.
 
 > [!IMPORTANT]
-> Um neue Benutzer zu erstellen oder andere Änderungen an Ihrem Azure AD vorzunehmen, müssen Sie sich mit einem Konto beim Azure AD-Mandanten anmelden, das über [über globale Administratorberechtigungen](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) für den Mandanten verfügt. Sie benötigen keinen globale Administratorberechtigungen um Mandanten zuzuordnen oder bereits vorhandene Benutzer im Mandanten für Ihr Partner Center-Konto hinzufügen.
+> Um neue Benutzer zu erstellen oder andere Änderungen an Ihrem Azure AD vorzunehmen, müssen Sie sich mit einem Konto beim Azure AD-Mandanten anmelden, das über [über globale Administratorberechtigungen](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) für den Mandanten verfügt. Sie benötigen keinen globale Administratorberechtigungen um Mandanten zuzuordnen oder bereits vorhandene Benutzer im Mandanten zu Ihrem Partner Center-Konto hinzufügen.
 
 
 ## <a name="create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account"></a>Erstellen eines völlig neues Azure AD mit Ihrem Partner Center-Konto zuordnen
 
-Wenn Sie ein neues Azure AD mit Ihrem Partner Center-Konto verknüpfen einrichten müssen, gehen Sie wie folgt vor.
+Wenn Sie ein neues Azure AD einrichten, um mit Ihrem Partner Center-Konto verknüpfen möchten, gehen Sie wie folgt vor.
 
 1.  [Partner Center](https://partner.microsoft.com/dashboard)wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Dashboards), und wählen Sie dann **entwicklereinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Mandanten**.
 2.  Wählen Sie **Neues Azure AD erstellen**.
@@ -74,7 +72,7 @@ Wählen Sie zum Zuordnen eines neuen Mandanten **Associate another Azure AD tena
 Jeder Benutzer die **Manager** -Rolle für ein Partner Center-Konto kann Azure AD-Mandanten von diesem Konto entfernen.
 
 > [!IMPORTANT]
-> Wenn Sie einen Mandanten zu entfernen, werden alle Benutzer, die das Partner Center-Konto über diesen Mandanten hinzugefügt wurden, nicht mehr auf das Konto anmelden können. 
+> Wenn Sie einen Mandanten zu entfernen, werden alle Benutzer, die das Partner Center-Konto über diesen Mandanten hinzugefügt wurden, nicht mehr auf das Konto anmelden. 
 
 Um einen Mandanten zu entfernen, suchen Sie den Namen auf der Seite " **Mandanten** " (in den **kontoeinstellungen**), und wählen Sie dann **Entfernen**. Sie werden aufgefordert, zu bestätigen, dass Sie den Mandanten entfernen möchten. Nachdem Sie dies tun, keine Benutzer im Mandanten werden in der Lage, sich im Partner Center-Konto anmelden und alle Berechtigungen, die Sie für diesen Benutzer konfiguriert haben, werden entfernt.
 

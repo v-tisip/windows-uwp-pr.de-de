@@ -1,18 +1,16 @@
 ---
-author: laurenhughes
 title: Installieren von UWP-Apps von einer Webseite
 description: In diesem Abschnitt überprüfen wir die erforderlichen Schritte, damit Benutzer Ihre Apps direkt von der Webseite installieren können.
-ms.author: lahugh
 ms.date: 11/16/2017
 ms.topic: article
 keywords: Windows10, UWP, App-Installer, AppInstaller, querladen, zusammengehörig, optionale Pakete
 ms.localizationpriority: medium
-ms.openlocfilehash: 98a761bf04b56d13745f2505b8d0806fc4fdf3e1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 515beebd55049ecb4d0c6747fa7d37e76577ef7f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582200"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708120"
 ---
 # <a name="installing-uwp-apps-from-a-web-page"></a>Installieren von UWP-Apps von einer Webseite
 
@@ -32,8 +30,8 @@ Bei diesem Mechanismus wird der App-Installer mit dem Betriebssystem für ein Pr
 
 1. Webserver benötigen Unterstützung für die Anforderungen des Byte-Bereichs (HTTP/1.1)
     - Server, die HTTP/1.1-Protokoll unterstützen sollten Unterstützung für die Anforderungen des Byte-Bereichs verfügen. 
-2. Web-Server werden über die Windows 10-app-Paket-Inhaltstypen wissen müssen
-    - Hier wird beschrieben, wie der neuen Inhaltstypen als Teil des [Web-Konfigurationsdatei](web-install-IIS.md#step-7---configure-the-web-app-for-app-package-mime-types) deklarieren
+2. Web-Server müssen über die Windows 10-app-Paket-Inhaltstypen wissen
+    - Hier wird beschrieben, wie die neuen Inhaltstypen als Teil des [Web-Konfigurationsdatei](web-install-IIS.md#step-7---configure-the-web-app-for-app-package-mime-types) deklarieren
 
 ### <a name="how-to-enable-this-on-a-webpage"></a>So aktiviere ich dies auf einer Webseite 
 App-Entwickler, die App-Pakete auf Ihren Websites hosten möchten, müssen folgenden Schritt durchführen:

@@ -1,9 +1,7 @@
 ---
-author: TylerMSFT
 title: Behandeln der App-Aktivierung
 description: Erfahren Sie, wie Sie die App-Aktivierung durch Überschreiben der OnLaunched-Methode behandeln.
 ms.assetid: DA9A6A43-F09D-4512-A2AB-9B6132431007
-ms.author: twhitney
 ms.date: 07/02/2018
 ms.topic: article
 keywords: Windows10, UWP
@@ -13,12 +11,12 @@ dev_langs:
 - cppwinrt
 - cpp
 - vb
-ms.openlocfilehash: 4d69680df1684da756219c180bbe6d47263801b9
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a75136f26aa6cfa330e4118e6709b0b4d4be4054
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559772"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705293"
 ---
 # <a name="handle-app-activation"></a>Behandeln der App-Aktivierung
 
@@ -42,7 +40,7 @@ Definieren Sie die Klasse für Ihre Anwendung.
 Überschreiben Sie die [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)-Methode. Diese Methode wird immer dann aufgerufen, wenn der Benutzer die App startet. Der [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731)-Parameter enthält den vorherigen Status der App sowie die Aktivierungsargumente.
 
 > [!NOTE]
-> Unter Windows nicht das Starten einer angehaltenen app über die startkachel oder app-Liste diese Methode aufrufen.
+> Unter Windows Starten einer angehaltenen app über die startkachel oder app-Liste diese Methode nicht aufgerufen.
 
 ```csharp
 using System;

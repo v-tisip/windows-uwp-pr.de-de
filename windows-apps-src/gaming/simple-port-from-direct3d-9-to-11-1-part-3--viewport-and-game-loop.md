@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Portieren der Spielschleife
 description: In diesem Thema wird veranschaulicht, wie Sie ein Fenster für ein UWP-Spiel (Universelle Windows-Plattform) implementieren und die Spielschleife portieren. Außerdem wird die Erstellung eines IFrameworkView-Elements zum Steuern eines CoreWindow-Vollbilds erläutert.
 ms.assetid: 070dd802-cb27-4672-12ba-a7f036ff495c
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, Spiele, portieren, Spielschleife, Direct3D9, DirectX11
 ms.localizationpriority: medium
-ms.openlocfilehash: 4db2ed74144ead22643ece17a7496b6267f7e6b8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8b0cf6352d400371b54a54d71176c4d8e1dc457d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563733"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707614"
 ---
 # <a name="port-the-game-loop"></a>Portieren der Spielschleife
 
@@ -35,7 +33,7 @@ Zum Einrichten eines Desktopfensters mit einem Direct3D 9-Viewport musste das he
 
 Dagegen verfügt die UWP-Umgebung über ein deutlich einfacheres System. Anstatt ein herkömmliches Fenster einzurichten, wird von einem Microsoft Store-Spiel, für das DirectX verwendet wird, das [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)-Element implementiert. Diese Schnittstelle ist für DirectX-Apps und -Spiele vorhanden, um die direkte Ausführung in einem [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) innerhalb des App-Containers zu ermöglichen.
 
-> **Hinweis:**  Windows ist eine verwaltete Zeiger auf Ressourcen wie das Quellobjekt für die Anwendung und das [**corewindow-Element**](https://msdn.microsoft.com/library/windows/apps/br208225). Finden Sie unter [**Handle to Object Operator (^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
+> **Hinweis:**  Windows werden verwaltete Zeiger auf Ressourcen wie das Quellobjekt für die Anwendung und die [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)quellanwendungsobjekt. Finden Sie unter [**Handle to Object Operator (^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
 
  
 

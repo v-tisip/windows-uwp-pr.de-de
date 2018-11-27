@@ -1,21 +1,19 @@
 ---
-author: Jwmsft
 Description: Learn how to integrate images into your app, including how to use the APIs of the two main XAML classes, Image and ImageBrush.
 title: Bilder und Bildpinsel
 ms.assetid: CEA8780C-71A3-4168-A6E8-6361CDFB2FAF
 label: Images and image brushes
 template: detail.hbs
-ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c0fcd158dac77b3b3322167b82131e51f62390f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: af6dff9c0cf8aad1f9d7df7f94cc2af099a2ca1e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568305"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705982"
 ---
 # <a name="images-and-image-brushes"></a>Bilder und Bildpinsel
 
@@ -58,7 +56,7 @@ Hier ist das gerenderte Image-Objekt.
 
 ![Beispiel für ein Image-Element](images/Image_Licorice.jpg)
 
-Die [Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx)-Eigenschaft in diesem Beispiel gibt den Speicherort des Bildes an, das Sie anzeigen möchten. Sie können die Quelle festlegen, indem Sie eine absolute URL (z. B. http://contoso.com/myPicture.jpg) oder eine URL relativ zu Ihrer app-Verpackungsstruktur angeben. In unserem Beispiel legen wir die Bilddatei „licorice.jpg“ im Stammverzeichnis unseres Projekts ab und deklarieren Projekteinstellungen, die die Bilddatei als Inhalt einbeziehen.
+Die [Source](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.image.source.aspx)-Eigenschaft in diesem Beispiel gibt den Speicherort des Bildes an, das Sie anzeigen möchten. Sie können die Quelle festlegen, indem Sie die absolute URL (z. B. http://contoso.com/myPicture.jpg) oder indem Sie eine URL relativ zu Ihrem app-Verpackungsstruktur angeben. In unserem Beispiel legen wir die Bilddatei „licorice.jpg“ im Stammverzeichnis unseres Projekts ab und deklarieren Projekteinstellungen, die die Bilddatei als Inhalt einbeziehen.
 
 ### <a name="imagebrush"></a>ImageBrush
 

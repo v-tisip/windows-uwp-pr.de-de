@@ -1,30 +1,28 @@
 ---
-author: jnHs
 Description: The first step in creating a new app in Partner Center is reserving an app name. See how to reserve app names and find suggestions for choosing a great name for your app.
 title: Erstellen einer App durch Reservieren eines Namens
 keywords: Windows10, UWP, Namen reservieren, App-Name, App-Namen, Namen, Produktname, benennen, reservierter Name, Titel, Namen, Titel
 ms.assetid: 6DC58A9A-DF47-4652-8D13-0AC9289F5950
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a94a07eb80e0b181e49a74beba7690d8a57bfaa6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b00ace982bb39b99816013a8491b5b75be765833
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7573314"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704636"
 ---
 # <a name="create-your-app-by-reserving-a-name"></a>Erstellen einer App durch Reservieren eines Namens
 
 Der erste Schritt beim Erstellen einer neuen app in Ihrem [Partner Center](https://partner.microsoft.com/dashboard) ist einen app-Namen zu reservieren. Jeder reservierte Name (wird auch als App *Titel* bezeichnet) muss im Microsoft Store eindeutig sein.
 
-Die Reservierung eines Namens für Ihre App ist möglich, auch wenn Sie noch nicht mit der App-Erstellung begonnen haben. Wir empfehlen auf diese Weise so bald wie möglich, damit jemand den Namen verwenden kann. Beachten Sie, dass Sie die App innerhalb von drei Monaten übermitteln müssen, damit der Namen für Ihre Verwendung reserviert bleibt.
+Die Reservierung eines Namens für Ihre App ist möglich, auch wenn Sie noch nicht mit der App-Erstellung begonnen haben. Wir empfehlen dies so schnell wie möglich so, dass niemand den Namen verwenden kann. Beachten Sie, dass Sie die App innerhalb von drei Monaten übermitteln müssen, damit der Namen für Ihre Verwendung reserviert bleibt.
 
 Wenn Sie Ihre [App-Pakete hochladen](upload-app-packages.md), muss der [**Package/Properties/DisplayName**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-displayname) -Wert dem Namen entsprechen, den Sie für Ihre App reserviert haben. Wenn Sie das App-Paket mit MicrosoftVisual Studio erstellen, wird dieses Attribut für Sie ausgefüllt.
 
 > [!IMPORTANT]
-> Sie können zusätzliche Namen für eine app reservieren, und Sie auch eine der in der veröffentlichten Version Ihrer App anstelle der verwenden, die Sie reservieren, wenn Sie zunächst Ihre app im Partner Center erstellen. Beachten Sie jedoch, dass zuerst den hier eingegebenen in einigen der app [Identitätsdetails](view-app-identity-details.md), z. B. den **Paketfamiliennamen (PFN)** verwendet werden. Diese Werte kann für einige Benutzer sichtbar sein, und nicht geändert, um sicherzustellen, dass die Namen reservieren für diese Verwendung geeignet ist.
+> Sie können zusätzliche Namen für eine app reservieren, und Sie können diese in der veröffentlichten Version Ihrer App anstelle der verwenden, die Sie reservieren, wenn Sie zunächst Ihre app im Partner Center erstellen. Beachten Sie jedoch, dass zuerst den hier eingegebenen in einigen der app [Identitätsdetails](view-app-identity-details.md), z. B. den **Paketfamiliennamen (PFN)** verwendet werden. Diese Werte möglicherweise für einige Benutzer sichtbar sein, und kann nicht geändert, um sicherzustellen, dass der Namen reservieren für diese Verwendung geeignet ist.
 
 
 ## <a name="create-your-app-by-reserving-a-new-name"></a>App-Erstellung durch Reservierung eines neuen Namens
@@ -58,7 +56,7 @@ Es ist sehr wichtig, für Ihre App den richtigen Namen auszuwählen. Wählen Sie
 
 ## <a name="manage-additional-app-names"></a>Verwalten zusätzlicher App-Namen
 
-Sie können hinzufügen und verwalten zusätzliche Namen auf der Seite **Verwalten von app-Namen** im Abschnitt **App-Verwaltung** für Ihre apps im Partner Center.
+Sie können hinzufügen und verwalten zusätzliche Namen auf der Seite **Verwalten von app-Namen** im Abschnitt zur **App-Verwaltung** für Ihre Apps im Partner Center.
 
 In einigen Fällen möchten Sie u. U. mehrere Namen reservieren, die für dieselbe App verwendet werden sollen; beispielsweise wenn Sie Ihre App unter verschiedenen Namen für jede Sprache anbieten möchten. Sie müssen einen zusätzlichen Namen reservieren, wenn Sie den Namen einer App vollständig ändern möchten.
 

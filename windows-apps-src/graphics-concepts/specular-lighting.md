@@ -4,17 +4,15 @@ description: Spiegelbeleuchtung bezeichnet die glänzenden spiegelnden hellsten 
 ms.assetid: 71F87137-B00F-48CE-8E6A-F98A139A742A
 keywords:
 - Spiegelbeleuchtung
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 283ea63d118f9a61fe745dd3eb60b68594c32279
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7f28f1f46cfd34ee1aab614c57dc99019dbd6111
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570646"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708017"
 ---
 # <a name="specular-lighting"></a>Spiegelbeleuchtung
 
@@ -57,7 +55,7 @@ Cₛ ist einer der folgenden Werte:
 -   Vertexfarbe2, wenn die Glanzmaterialquelle die Glanzvertexfarbe ist und die zweite Vertexfarbe in der Vertexdeklaration angegeben ist
 -   Materialglanzfarbe
 
-**Hinweis:**  Wenn Option glanzmaterialquelle verwendet wird und die Vertexfarbe nicht angegeben, wird die materialglanzfarbe verwendet.
+**Hinweis:**  Wenn Option glanzmaterialquelle verwendet wird und die Vertexfarbe nicht angegeben, wird die materialglanzfarbe verwendet wird.
 
  
 

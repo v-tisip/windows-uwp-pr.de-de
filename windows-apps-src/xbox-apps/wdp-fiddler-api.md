@@ -1,24 +1,22 @@
 ---
-author: WilliamsJason
 title: Geräteportal – API-Referenz für Fiddler
 description: Erfahren Sie, wie Sie die Fiddler-Ablaufverfolgung programmgesteuert aktivieren/deaktivieren.
-ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.assetid: e7d4225e-ac2c-41dc-aca7-9b1a95ec590b
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e0faf3a0b6a4f13c0fce24aa093cf94a1e7ee7e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f60f3fc8678208f694a9ffabde06fa60de759a45
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570596"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705152"
 ---
 # <a name="fiddler-settings-api-reference"></a>Fiddler-Einstellungen – API-Referenz   
 Sie können die Fiddler-Netzwerkablaufverfolgung für Ihr Dev Kit mittels dieser REST-API aktivieren und deaktivieren.
 
-## <a name="determine-if-fiddler-tracing-is-enabled"></a>Ermitteln Sie, ob der Fiddler-Ablaufverfolgung aktiviert ist.
+## <a name="determine-if-fiddler-tracing-is-enabled"></a>Ermitteln Sie, ob Fiddler-Ablaufverfolgung aktiviert ist.
 
 **Anforderung**
 

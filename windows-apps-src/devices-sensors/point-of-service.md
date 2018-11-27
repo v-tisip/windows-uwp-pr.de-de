@@ -1,18 +1,16 @@
 ---
-author: TerryWarwick
 title: Point of Service
 description: Dieser Abschnittenthält Artikel zur Verwendung verschiedener Features des Point-of-Service-Namespace.
-ms.author: jken
 ms.date: 10/04/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 9450a5980ee83c41c60e630c616ba620e0ac4930
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a0c55f1b739ef88ec65b7fd44655406415bc0468
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567960"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708730"
 ---
 # <a name="point-of-service"></a>Point of Service
 Dieser Abschnitt enthält Artikel zur Verwendung von [Windows.Devices.PointOfService](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice), um mit Peripheriegeräten über Universelle Windows-Anwendungen in Einzelhandel- und Gastronomie-Umgebungen zu interagieren.

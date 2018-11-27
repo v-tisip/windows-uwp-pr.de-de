@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 Description: When a resource is requested, there may be several candidates that match the current resource context to some degree. The Resource Management System will analyze all of the candidates and determine the best candidate to return. This topic describes that process in detail and gives examples.
 title: Wie das Ressourcenverwaltungssystem Ressourcen zuordnet und auswählt
 template: detail.hbs
-ms.author: stwhi
 ms.date: 10/23/2017
 ms.topic: article
 keywords: Windows10, uwp, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
-ms.openlocfilehash: c7576f98045bce3bcfcee093aa8d61059354d45a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: de34411d9c7d226857214472e691dd6b41f10a18
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569467"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706380"
 ---
 # <a name="how-the-resource-management-system-matches-and-chooses-resources"></a>Wie das Ressourcenverwaltungssystem Ressourcen zuordnet und auswählt
 Wenn eine Ressource angefordert wird, kann es mehrere Kandidaten geben, für die sich in einem gewissen Maße eine Übereinstimmung mit dem aktuellen Ressourcenkontext ergibt. Vom Ressourcenverwaltungssystem werden alle Kandidaten analysiert, und der beste Kandidat für die Rückgabe wird ermittelt. Dazu werden alle Qualifizierer einbezogen, um eine Einstufung aller Kandidaten zu erhalten.
@@ -22,7 +20,7 @@ Bei diesem Einstufungsvorgang werden den unterschiedlichen Qualifizierern unters
 
 Bestimmte Informationen zur Funktionsweise des Vergleichs von Sprachtags finden Sie unter [Wie das Ressourcenverwaltungssystem Sprachtags zuordnet](how-rms-matches-lang-tags.md).
 
-Für einige Qualifizierer, wie Skalierung und Kontrast, ergibt sich immer ein Mindestgrad an Übereinstimmung. Beispielsweise weist ein Kandidat für "Scale-100"entspricht einen Kontext von "Scale-400" teilweise kleine jedoch nicht so gut wie eine Qualifizierung für"Scale-200"oder (für eine perfekte Übereinstimmung)"Scale-400".
+Für einige Qualifizierer, wie Skalierung und Kontrast, ergibt sich immer ein Mindestgrad an Übereinstimmung. Beispielsweise weist ein Kandidat für "Scale-100"entspricht einen Kontext von "Scale-400", ergibt sich, wenn auch nicht so gut wie eine Qualifizierung für"Scale-200"oder (für ein identisches)"Scale-400".
 
 Für andere Qualifizierer, wie die Sprache oder den Wohnort, ist ein Vergleich ohne Übereinstimmung möglich (und auch mit Übereinstimmungsgrad). Beispielsweise ergibt sich für einen Kandidaten, der für die Sprache als „en-US” qualifiziert wurde, zumindest bis zu einem gewissen Grad eine Übereinstimmung mit dem Kontext „en-GB”, während sich für einen als „fr” qualifizierten Kandidaten keinerlei Übereinstimmung ergibt. Ebenso weist ein Kandidat, der für den Wohnort über die Qualifizierung „155” (Westeuropa) verfügt, eine recht gute Übereinstimmung mit einem Kontext für einen Benutzer mit der Wohnorteinstellung „FR” auf, während sich für einen Kandidaten mit der Qualifizierung „US” keinerlei Übereinstimmung ergibt.
 

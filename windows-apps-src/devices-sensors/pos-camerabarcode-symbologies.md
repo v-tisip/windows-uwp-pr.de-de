@@ -1,18 +1,16 @@
 ---
-author: TerryWarwick
 title: Kamera-Strichcodescanner-Symbologien
 description: Unterstützte Kamera-Strichcodescanner-Symbologien
-ms.author: jken
 ms.date: 05/1/2018
 ms.topic: article
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
-ms.openlocfilehash: c74e72c826687c2b21284c169c345e145505e104
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ecb40528ee0104a2e25b5e95499c4404057eba1f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7576770"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708100"
 ---
 # <a name="symbologies"></a>Symbologien
 Dieses Thema enthält Beispiel-Barcodes für jede Symbologie, die vom Software-Strichcode-Decoder unterstützt wird, die mit im Lieferumfang von Windows10 enthalten sind, einschließlich: UPC/EAN, Code 39, Code 128, Interleaved 2 of 5, Databar Omnidirectional, Databar Stacked, QR Code und GS1DWCode.

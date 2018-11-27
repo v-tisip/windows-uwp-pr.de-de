@@ -1,19 +1,17 @@
 ---
-author: JnHs
 description: Neben dem Erstellen einer Anzeigenkampagne für Ihre App, die in Windows-Apps ausgeführt wird, können Sie Ihre App über andere Kanäle bewerben.
 title: Erstellen einer Werbekampagne für benutzerdefinierte Apps
 ms.assetid: 7C9BF73E-B811-4FC7-B1DD-4A0C2E17E95D
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, benutzerdefiniert, App, Werbung, Kampagnen
 ms.localizationpriority: medium
-ms.openlocfilehash: 643c6c70b4482e7069c1254e27a5688f81bf7e07
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 407a34294155e688e672db392c262e1607c01a39
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578815"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704617"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a>Erstellen einer Werbekampagne für benutzerdefinierte Apps
 
@@ -47,9 +45,9 @@ Wenn seine Facebook- und Twitter-Follower auf die URLs klicken, verfolgt Microso
 
 ## <a name="understanding-how-acquisitions-qualify-as-conversions"></a>Wann gelten Erwerbe als Konvertierungen?
 
-Als benutzerdefinierten Kampagnen-*Konvertierung* wird ein App-Erwerb bezeichnet, der daraus resultiert, dass ein Kunde von einer über eine benutzerdefinierte Kampagne beworbenen URL klickt. Es gibt verschiedene Szenarien für die Qualifizierung als Konvertierung für die **App-Seitenaufrufe und Konvertierungen nach Kampagnen-ID** und **Konvertierungen pro Kampagne insgesamt** Diagramme im [Bericht "Käufe"](acquisitions-report.md) und für die Qualifizierung als Konvertierung für [ Programmgesteuertes Abrufen der Kampagnen-ID](#programmatically).
+Als benutzerdefinierten Kampagnen-*Konvertierung* wird ein App-Erwerb bezeichnet, der daraus resultiert, dass ein Kunde von einer über eine benutzerdefinierte Kampagne beworbenen URL klickt. Es gibt verschiedene Szenarien für die Qualifizierung als Konvertierung für die **App-Seitenaufrufe und-Konvertierungen nach Kampagnen-ID** und **Konvertierungen pro Kampagne insgesamt** Diagramme im [Bericht "Käufe"](acquisitions-report.md) und für die Qualifizierung als Konvertierung für [ Programmgesteuertes Abrufen der Kampagnen-ID](#programmatically).
 
-### <a name="qualifying-conversions-in-the-acquisitions-report"></a>Qualifizieren von Konvertierungen im Bericht Käufe
+### <a name="qualifying-conversions-in-the-acquisitions-report"></a>Qualifizieren von Konvertierungen in der Bericht "Käufe"
 
 Die folgenden Szenarien gelten als Konvertierung für die Diagramme **App-Seitenaufrufe und -Konvertierungen nach Kampagnen-ID** und **Gesamtanzahl der Konvertierungen pro Kampagne** im [Bericht "Käufe"](acquisitions-report.md):
 
@@ -195,4 +193,4 @@ Bevor Sie eine URL für eine benutzerdefinierte Kampagnen bewerben, empfehlen wi
 
 3.  Klicken Sie noch einige weitere Male auf die URL, und schließen Sie nach jedem Besuch der App-Seite die UWP-App oder die Browserseite. Erwerben Sie bei **einem** der Besuche Ihrer App-Seite die App, um eine Konvertierung zu generieren. Zählen Sie, wie oft Sie insgesamt auf die URL geklickt haben.
 
-4. Bestätigen Sie, ob die erwarteten Seitenaufrufe und Konvertierungen in der **App-Seitenaufrufe und Konvertierungen nach Kampagnen-ID** und die **Gesamtanzahl der Konvertierungen pro Kampagne** Diagramme im [Bericht "Käufe"](acquisitions-report.md)angezeigt werden, und Ihrer app-Code zum Überprüfen testen, ob es können abgerufen Sie die Kampagnen-ID, die mit den oben beschriebenen APIs erfolgreich.
+4. Bestätigen Sie, ob die erwarteten Seitenaufrufe und Konvertierungen in der **App-Seitenaufrufe und-Konvertierungen nach Kampagnen-ID** und die **Gesamtanzahl der Konvertierungen pro Kampagne** im [Bericht "Käufe"](acquisitions-report.md)angezeigt werden, und Ihrer app-Code testen, um zu überprüfen, ob es können abgerufen Sie die Kampagnen-ID, die mit den oben beschriebenen APIs erfolgreich.
