@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, app-installer, AppInstaller, querladen
 ms.localizationpriority: medium
 ms.openlocfilehash: 5c7055748eb8905341d9f90c47e6141c9c9c599e
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7697773"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7830294"
 ---
 # <a name="create-an-app-installer-file-with-visual-studio"></a>Erstellen einer App-Installer-Datei mit Visual Studio
 
@@ -30,7 +30,7 @@ Sie können die `TargetPlatformMinVersion`-Eigenschaft entweder beim Erstellen d
 
 ### <a name="create-packages"></a>Erstellen von Paketen
 
-Um eine app über querladen zu verteilen, müssen Sie app-Paket (.appx/.msix) oder app-Bündel (.appxbundle/.msixbundle) zu erstellen und es an einem freigegebenen Speicherort veröffentlichen.
+Um eine app über querladen zu verteilen, müssen Sie Erstellen einer app-Paket (.appx/.msix) oder app-Bündel (.appxbundle/.msixbundle) und in einem freigegebenen Speicherort veröffentlichen.
 
 Verwenden Sie dazu den Assistenten **App-Pakete erstellen** in Visual Studio mit den folgenden Schritten.
 

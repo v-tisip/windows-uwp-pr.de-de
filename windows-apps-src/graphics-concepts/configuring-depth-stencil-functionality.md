@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 98cb6c62248fbf273a9d7ca1ef0d1d82293122eb
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7694969"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7829849"
 ---
 # <a name="span-iddirect3dconceptsconfiguringdepth-stencilfunctionalityspanconfiguring-depth-stencil-functionality"></a><span id="direct3dconcepts.configuring_depth-stencil_functionality"></span>Konfigurieren der Tiefenschablonenfunktionalität
 
@@ -83,7 +83,7 @@ Schattenvolumen dienen zum Zeichnen von Schatten mithilfe des Schablonenpuffers.
 
 Beim ersten Rendern werden die nach vorne gerichteten Polygone gezeichnet und die Werte im Schablonenpuffer erhöht. Beim zweiten Rendern werden die nach hinten gerichteten Polygone des Schattenvolumens gezeichnet und die Werte im Schablonenpuffer verringert.
 
-In der Regel heben sich alle verringerten Werte gegenseitig. Allerdings wurde die Szene bereits mit normaler Geometrie, die für einige Pixel den Z-Puffer-Test fehlschlägt, wie das Volume Schatten gerendert wird beim gerendert. Werte, die im Schablonenpuffer verblieben sind, entsprechen den Pixeln, die sich im Schatten befinden. Dieser verbliebene Inhalt des Schablonenpuffers wird als Maske verwendet, um ein großes, allumfassendes schwarzes Viereck in der Szene per Alpha-Überblendung zu überlagern. Das Ergebnis der Verwendung des Schablonenpuffers als Maske besteht darin, dass Pixel, die im Schatten liegen, dunkler werden.
+In der Regel heben sich alle verringerten Werte gegenseitig. Allerdings wurde die Szene bereits mit normaler Geometrie, die für einige Pixel den Z-Puffer-Test Rendern des schattenvolumens nicht erfolgreich beim gerendert. Werte, die im Schablonenpuffer verblieben sind, entsprechen den Pixeln, die sich im Schatten befinden. Dieser verbliebene Inhalt des Schablonenpuffers wird als Maske verwendet, um ein großes, allumfassendes schwarzes Viereck in der Szene per Alpha-Überblendung zu überlagern. Das Ergebnis der Verwendung des Schablonenpuffers als Maske besteht darin, dass Pixel, die im Schatten liegen, dunkler werden.
 
 Dies bedeutet, dass die Schattengeometrie zweimal pro Lichtquelle gezeichnet wird, und somit der Vertexdurchsatz der GPU stark belastet wird. Das Feature „zweiseitige Schablone” wurde entwickelt, um diese Situation abzuschwächen. In diesen Ansatz gibt es zwei Gruppen von Schablonenzuständen, einen für die nach vorne gerichteten Dreiecke und den anderen für die nach hinten gerichteten Dreiecke. Auf diese Weise wird nur ein einziger Durchlauf pro Schattenvolumen pro Lichtquelle gezeichnet.
 

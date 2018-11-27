@@ -7,11 +7,11 @@ keywords: Windows10, UWP
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
 ms.openlocfilehash: ae8daa6141eadaac699fc49b8ec4796f1dde5c91
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7696514"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7828166"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>Erstellen eines UWP-Spiels in JavaScript
 
@@ -24,13 +24,13 @@ ms.locfileid: "7696514"
 ## <a name="introduction"></a>Einführung
 
 
-Veröffentlichen einer app auf der Microsoft Store bedeutet, dass Sie können Teilen (oder verkaufen!) mit Millionen von Menschen auf vielen verschiedenen Geräten.  
+Veröffentlichen einer app auf der Microsoft Store bedeutet, dass Sie können freigeben (oder verkaufen!) mit Millionen von Menschen auf vielen verschiedenen Geräten.  
 
-Um Ihre app im Microsoft Store veröffentlichen müssen sie als UWP (universelle Windows-Plattform)-app geschrieben werden. UWP ist jedoch extrem flexibel und unterstützt eine Vielzahl von Sprachen und Frameworks. Dieses Beispiel ist ein einfaches Spiel, das in JavaScript geschrieben ist und mehrere CreateJS-Bibliotheken nutzt. Es veranschaulicht, wie Sprites gezeichnet werden, eine Spielschleife erstellt wird, Tastatur und Maus unterstützt werden und die Anpassung an verschiedene Bildschirmgrößen erfolgt.
+Um Ihre app an den Microsoft Store veröffentlichen müssen sie als UWP (universelle Windows-Plattform)-app geschrieben werden. UWP ist jedoch extrem flexibel und unterstützt eine Vielzahl von Sprachen und Frameworks. Dieses Beispiel ist ein einfaches Spiel, das in JavaScript geschrieben ist und mehrere CreateJS-Bibliotheken nutzt. Es veranschaulicht, wie Sprites gezeichnet werden, eine Spielschleife erstellt wird, Tastatur und Maus unterstützt werden und die Anpassung an verschiedene Bildschirmgrößen erfolgt.
 
 Dieses Projekt wurde mit JavaScript unter Verwendung von Visual Studio erstellt. Mit einigen geringfügigen Änderungen kann es auch auf einer Website gehostet oder an andere Plattformen angepasst werden. 
 
-**Hinweis:** Dies ist kein vollständiges (oder gutes!) Spiel; Dieses Skript dient zu zeigen, wie mit JavaScript und eine dritte Partei Bibliothek stellen eine app im Microsoft Store veröffentlichen.
+**Hinweis:** Dies ist kein vollständiges (oder gutes!) Spiel; Dieses Skript dient zu zeigen, wie mit JavaScript und das dritte Partei Bibliothek stellen eine app im Microsoft Store veröffentlichen.
 
 
 ## <a name="requirements"></a>Anforderungen
@@ -69,7 +69,7 @@ Drücken Sie **F5** zum Ausführen der App. Ein Fenster geöffnet, und unseren v
 
 ## <a name="walkthough"></a>Exemplarische Vorgehensweise
 
-Wenn Sie das Spiel mit F5 gestartet haben, wundern Sie sich vielleicht, was gerade passiert. Und die Antwort lautet "nicht viel", da ein Großteil des Codes derzeit auskommentiert ist. Bisher alles, was Sie sehen was, ist der Dinosaurier und eine unwirksame, die LEERTASTE zu drücken. 
+Wenn Sie das Spiel mit F5 gestartet haben, wundern Sie sich vielleicht, was gerade passiert. Und die Antwort lautet "nicht viel", da ein Großteil des Codes derzeit auskommentiert ist. Bisher alles, was Sie sehen, ist der Dinosaurier und unwirksame darauf, die LEERTASTE zu drücken. 
 
 ### <a name="1-setting-the-stage"></a>1. Festlegen der Phase
 
@@ -265,7 +265,7 @@ Dazu müssen Sie einige Schritte durchführen.
 2. Verwenden Sie die [Prüfliste für App-Übermittlung](https://msdn.microsoft.com/windows/uwp/publish/app-submissions).
 3. Die App muss zur [Zertifizierung](https://msdn.microsoft.com/windows/uwp/publish/the-app-certification-process) eingereicht werden.
 
-Weitere Informationen finden Sie unter [Veröffentlichen Ihrer UWP-app](https://developer.microsoft.com/en-us/store/publish-apps).
+Weitere Informationen finden Sie in der [Veröffentlichung Ihrer UWP-app](https://developer.microsoft.com/en-us/store/publish-apps).
 
 ## <a name="suggestions-for-other-features"></a>Vorschläge für andere Features.
 

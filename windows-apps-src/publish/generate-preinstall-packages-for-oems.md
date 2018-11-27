@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ab17adc80a643c04ac7793945486c3ff975fde5
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7704677"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7826436"
 ---
 # <a name="generate-preinstall-packages-for-oems"></a>Generieren von Vorinstallationspaketen für OEMs
 
@@ -20,7 +20,7 @@ Wenn Ihrem Entwicklerkonto die entsprechenden Berechtigungen gewährt wurden, k�
 
 ## <a name="important-preinstall-policy--limitations"></a>Wichtige Vorinstallationsrichtlinien und -beschränkungen
 
-Vorinstallations-apps müssen zertifiziert sein, über das [Partner Center](https://partner.microsoft.com/dashboard) die aktuelle Store-Lizenz verfügen, damit es ist nicht möglich, eine Verbindung herstellen, an den Store und app-Updates zu erhalten.
+Vorinstallations-apps müssen zertifiziert werden über das [Partner Center](https://partner.microsoft.com/dashboard) die aktuelle Store-Lizenz verfügen, damit es ist nicht möglich, eine Verbindung herstellen, an den Store und app-Updates zu erhalten.
 
 Jede vorinstallierte App muss zum aktuellen Zeitpunkt und in Zukunft auf allen Märkten kostenlos angeboten werden.
 

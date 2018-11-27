@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 3ee38abfb28aad8d6a3ce073a947580b3df29593
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7720116"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7830101"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Tests mit dem Emulator für Microsoft Windows10Mobile
 
@@ -45,11 +45,11 @@ Informationen zum Überprüfen der BIOS-Anforderungen finden Sie unter [So wird'
 
 Wählen Sie zum Überprüfen der RAM- und Betriebssystemanforderungen in der Systemsteuerung **System und Sicherheit** und anschließend **System**.
 
-Microsoft-Emulator für Windows 10 Mobile erfordert Visual Studio 2015 oder höher; Es ist nicht kompatibel mit früheren Versionen von Visual Studio.
+Microsoft-Emulator für Windows 10 Mobile erfordert Visual Studio 2015 oder höher. Es ist nicht kompatibel mit früheren Versionen von Visual Studio.
 
 Der Microsoft-Emulator für Windows10Mobile kann keine Apps laden, die für eine WindowsPhone-Betriebssystemversion vor Windows Phone OS7.1 konzipiert sind.
 
-## <a name="installing-uninstalling-and-running-the-emulator"></a>Installation, Deinstallation und Ausführen des Emulators
+## <a name="installing-uninstalling-and-running-the-emulator"></a>Installieren, deinstallieren und Ausführen des Emulators
 
 ### <a name="installing"></a>Installation
 Der Microsoft-Emulator für Windows10Mobile ist im Windows10-SDK enthalten. Das Windows10-SDK und der Emulator können zusammen mit Visual Studioinstalliert werden. Weitere Informationen finden Sie auf der [Downloadseite für Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=534785).
@@ -177,7 +177,7 @@ In allen Modi bietet das Emulatorfenster drei interessante Bereiche.
 -   Rechts oben befinden sich die Protokolle. Wenn Sie ein Gerätepaar aneinander oder ein Gerät an das POS-Terminal halten, wird dieses Ereignis protokolliert. Gleiches gilt, wenn die Geräte wieder voneinander getrennt werden. In diesem Abschnitt wird auch erfasst, ob Ihre App vor dem Verbindungsabbruch reagiert hat, und alle Aktionen, die Sie auf der Benutzeroberfläche des Emulators ausgeführt haben, werden mit Zeitstempel dokumentiert. Die Protokolle bleiben beim Moduswechsel erhalten und können mithilfe der Löschschaltfläche**** über dem Protokollbildschirm**** jederzeit gelöscht werden.
 -   Die untere Bildschirmhälfte fungiert als Meldungsprotokoll und zeigt abhängig vom ausgewählten Modus die Aufzeichnung aller Meldungen, die über die derzeit ausgewählte Verbindung gesendet oder empfangen werden.
 
-> **Wichtige**beim ersten des Tapper-Tools starten erhalten Sie eine Windows-Firewall auffordern. Aktivieren Sie unbedingt alle drei Kontrollkästchen, und lassen Sie das Tool durch die Firewall, da es ansonsten nicht funktioniert.
+> **Wichtige**beim erstmaligen des Tapper-Tools starten erhalten Sie eine Windows-Firewall auffordern. Aktivieren Sie unbedingt alle drei Kontrollkästchen, und lassen Sie das Tool durch die Firewall, da es ansonsten nicht funktioniert.
 
 Halten Sie sich nach dem Starten des Schnellstart-Installationsprogramms an die obige Anweisung, und aktivieren Sie in der Eingabeaufforderung der Firewall alle drei Kontrollkästchen. Das Tapper-Tool muss außerdem auf dem gleichen physischen Hostcomputer installiert und verwendet werden wie der Microsoft-Emulator.
 
@@ -452,7 +452,7 @@ Die Registerkarte **SD-Karte** simuliert mithilfe eines Ordner auf dem Entwicklu
         -   Wenn Sie während des Synchronisierungsvorgangs auf **Synchronisierung abbrechen** klicken, wird die Karte ausgeworfen, und die Ergebnisse des Synchronisierungsvorgangs sind unvollständig.
     -   Die Schaltfläche **Eject SD card** wird wieder zu **Insert SD card**.
 
-> **Hinweis:** da SD-Karte vom Smartphone verwendete mit dem FAT32-Dateisystem formatiert ist, beträgt die maximale Dateigröße 32GB.
+> **Hinweis:** da SD-Karte, die vom Smartphone verwendete mit dem FAT32-Dateisystem formatiert ist, beträgt die maximale Dateigröße 32GB.
 
 Die Geschwindigkeit von Lese- und Schreibvorgängen wird für die simulierte SD-Karte realistisch gedrosselt. Der Zugriff auf eine SD-Karte dauert länger als der Zugriff auf die Festplatte des Computers.
 
@@ -621,7 +621,7 @@ Im Folgenden werden bekannte Probleme mit dem Emulator sowie Möglichkeiten besc
 
 ### <a name="error-message-failed-while-removing-virtual-ethernet-switch"></a>Fehlermeldung: „Fehler beim Entfernen des virtuellen Ethernet-Switchs.“
 
-In bestimmten Situationen, etwa beim Aktualisieren, um ein neues Windows 10-Flight, können Sie dem Emulator zugeordneter virtueller Netzwerkswitch in einen Zustand abrufen, in denen es nicht über die Benutzeroberfläche gelöscht werden kann.
+In bestimmten Situationen, etwa beim Aktualisieren, um einen neuen Windows 10-Flight, können Sie dem Emulator zugeordneter virtueller Netzwerkswitch in einen Zustand abrufen, in denen es nicht über die Benutzeroberfläche gelöscht werden kann.
 
 Führen Sie zum Beheben dieses Problems an einer Eingabeaufforderung mit Administratorrechten den Befehl „Netcfg -d“ aus: `C:\Program Files (x86)\Microsoft XDE\<version>\XdeCleanup.exe`. Starten Sie den Computer nach Ausführung des Befehls neu, um den Wiederherstellungsvorgang abzuschließen.
 

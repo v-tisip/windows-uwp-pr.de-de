@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0548ae9f9b3b33808cd7420eb542bcbac6a1a431
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7704790"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7828855"
 ---
 # <a name="guidance-for-app-package-management"></a>Leitfaden für die Verwaltung von App-Paketen
 
@@ -28,7 +28,7 @@ Erfahren Sie, wie App-Pakete für Ihre Kunden verfügbar gemacht werden und best
 
 Auf unterschiedlichen Betriebssystemen können unterschiedliche Pakettypen ausgeführt werden. Wenn mindestens zwei Pakete auf dem Gerät eines Kunden ausgeführt werden können, stellt der Microsoft Store die beste verfügbare Übereinstimmung bereit.
 
-Im Allgemeinen können höhere Betriebssystemversionen Pakete ausführen, die auf frühere Betriebssystemversionen für dieselbe Gerätefamilie abzielen. Windows 10-Geräte können alle zuvor unterstützte Betriebssystemversionen (pro Gerätefamilie) ausführen. Desktopgeräte unter Windows 10 können apps ausgeführt werden, die für Windows8.1 oder Windows8 erstellt wurden. Windows 10 mobile-Geräte können apps, die für Windows Phone 8.1, WindowsPhone8 und sogar Windows Phone erstellt wurden ausführen 7.x. Allerdings erhalten Kunden unter Windows 10 nur diese Pakete, wenn die app keine UWP-Pakete, die auf die entsprechenden Gerätefamilie enthält.
+Im Allgemeinen können höhere Betriebssystemversionen Pakete ausführen, die auf frühere Betriebssystemversionen für dieselbe Gerätefamilie abzielen. Windows 10-Geräte können alle zuvor unterstützte Betriebssystemversionen (pro Gerätefamilie) ausführen. Windows 10-Desktopgeräte können apps ausführen, die für Windows8.1 oder Windows8 erstellt wurden. Windows 10 mobile-Geräte können apps, die für Windows Phone 8.1, WindowsPhone8 und sogar Windows Phone erstellt wurden ausführen 7.x. Allerdings erhalten Kunden unter Windows 10 nur diese Pakete, wenn die app auf die entsprechenden Gerätefamilie UWP-Pakete enthält.
 
 > [!IMPORTANT]
 > Ab dem 31. Oktober 2018 darf keine Produkte neu erstellten Pakete für Windows-8.x/Windows enthalten Phone 8.x oder früher. Weitere Informationen finden Sie in diesem [Blogbeitrag](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/).

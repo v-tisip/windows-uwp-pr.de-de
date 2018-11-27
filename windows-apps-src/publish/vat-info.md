@@ -7,16 +7,16 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 90447f63cf28660eaffc0dff4e28524f8ef4372a
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7691169"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7828759"
 ---
 # <a name="vat-info"></a>Umsatzsteuerinfo
 
 
-Wenn Sie das eine USt-IdNr während des Registrierungsprozesses Partner Center bereitstellen müssen, sehen hier Sie einige Informationen, um Ihnen den Einstieg erleichtern.
+Wenn Sie eine USt-IdNr während des Registrierungsprozesses Partner Center bereitstellen müssen, sehen hier Sie einige Informationen zu Ihnen den Einstieg erleichtern.
 
 ## <a name="understanding-vat-numbers"></a>Grundlagen der Steuernummern
 

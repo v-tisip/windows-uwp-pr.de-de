@@ -12,11 +12,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 8ce3222ed13cf82a9f235a592b5830ab96384664
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7704604"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7855348"
 ---
 # <a name="flyouts"></a>Flyouts
 
@@ -30,7 +30,7 @@ Ein Flyout ist ein einfach ausblendbarer Container, der beliebige UI als Inhalt 
 
 * Verwenden Sie Flyouts nicht anstelle von [QuickInfos](../tooltips.md) oder [Kontextmenüs](../menus.md). Verwenden Sie QuickInfos, um kurze Beschreibungen anzuzeigen, die nach einer festgelegten Zeit ausgeblendet werden. Verwenden Sie ein Kontextmenü für kontextbezogene Aktionen im Zusammenhang mit UI-Elementen (beispielsweise Kopieren und Einfügen).
 
-Empfehlungen dazu, wann Sie ein Flyout verwendet werden und wann ein Dialogfeld (ein ähnliches Steuerelement), finden Sie unter [Dialogfelder und Flyouts](index.md). 
+Empfehlungen zur Verwendung von einem Flyout im Vergleich zu einem Dialogfeld (ein ähnliches Steuerelement), verwenden finden Sie unter [Dialogfelder und Flyouts](index.md). 
 
 ## <a name="examples"></a>Beispiele
 
@@ -145,7 +145,7 @@ Um ein Flyout zu formatieren, ändern Sie den [FlyoutPresenterStyle](https://doc
 </Flyout>
 ````
 
-## <a name="styling-flyouts-for-10-foot-experiences"></a>Formatieren von Flyouts für 10 Fuß-Umgebungen
+## <a name="styling-flyouts-for-10-foot-experiences"></a>Formatieren von Flyouts für 10-Fuß-Umgebungen
 
 Einfach ausblendbare Steuerelemente wie Flyouts erhalten den Tastatur- bzw. Gamepad-Fokus, bis sie nicht mehr angezeigt werden. Um dieses Verhalten optisch zu kennzeichnen, werden diese einfach ausblendbaren Steuerelemente auf der Xbox als Überlagerung gezeichnet, wobei der Kontrast und die Helligkeit bzw. Sichtbarkeit der umgebenden Benutzeroberfläche reduziert wird. Dieses Verhalten kann mit der Eigenschaft [`LightDismissOverlayMode`](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutBase.LightDismissOverlayMode) geändert werden. Standardmäßig erhalten Flyouts auf der Xbox (jedoch nicht auf anderen Gerätefamilien) die einfach ausblendbare Überlagerung. Apps können jedoch durchsetzen, dass die Überlagerung stets **An** oder stets **Aus** ist.
 

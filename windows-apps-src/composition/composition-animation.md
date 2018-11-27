@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b94f14b32c5dd74e0aefb9b9a99f64bbd905a05d
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7712759"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7846750"
 ---
 # <a name="composition-animations"></a>Kompositionsanimationen
 
@@ -19,9 +19,9 @@ Mit der Windows.UI.Composition API können Sie Kompositorobjekte in einer einhei
 
 ## <a name="motion-in-windows"></a>Animationin Windows
 
-Stellen Sie sich Motion-Design wie einen Film vor. Nahtlose Übergänge halten Sie auf die Geschichte konzentriert und erwecken Erlebnisse zum Leben. Wir können dieses Gefühl in unsere Entwürfe einladen führende Kontakte aus einer Aufgabe zur nächsten führen. Bewegung ist häufig der ausschlaggebende Faktor zwischen einer Benutzeroberfläche und eine Benutzeroberfläche.
+Stellen Sie sich Motion-Design wie einen Film vor. Nahtlose Übergänge halten Sie auf die Geschichte konzentriert und erwecken Erlebnisse zum Leben. Wir können dieses Gefühl in unsere Entwürfe einladen führende Personen aus einer Aufgabe zur nächsten führen. Bewegung ist häufig der ausschlaggebende Faktor zwischen einer Benutzeroberfläche und eine Benutzeroberfläche.
 
-Als grundlegender Baustein der Windows-Plattform-UI bieten CompositionAnimations eine leistungsstarke und effiziente Möglichkeit, bewegungserlebnisse in der Benutzeroberfläche Ihrer Anwendung zu erstellen. Die Animationsmodul wurde von Grund auf neu entwickelt, um sicherzustellen, dass die Bewegung mit 60 FPS, unabhängig vom UI-Thread ausgeführt wird. Diese Animationen dienen dazu, bieten die Flexibilität, um basierend auf der Zeit, Eingabe und andere Eigenschaften innovative bewegungserlebnisse zu erstellen.
+Als ein grundlegender Baustein der der Windows-UI-Plattform bieten CompositionAnimations eine leistungsstarke und effiziente Möglichkeit zum Erstellen von bewegungserlebnisse in der Benutzeroberfläche Ihrer Anwendung. Die animationsengine wurde von Grund auf neu entwickelt, um sicherzustellen, dass die Bewegung mit 60 FPS, unabhängig vom UI-Thread ausgeführt wird. Diese Animationen sollen die Flexibilität, um basierend auf Zeit, Eingabe und andere Eigenschaften innovative bewegungserlebnisse zu erstellen.
 
 ### <a name="examples-of-motion"></a>Beispiele für Bewegung
 
@@ -39,22 +39,22 @@ Hier werden bei einem Bildlauf oder Schwenken der UI verschiedene Objekte mithil
 
 Um Bewegung in der Benutzeroberfläche zu generieren, können Entwickler Animationen in XAML (Link zu Storyboards hier) oder der visuellen Ebene zugreifen. Animationen in der visuellen Ebene bieten Entwicklern eine Reihe von Vorteilen:
 
-- Leistung – anstelle der herkömmlichen UI-Thread-gebunden-Animation, Animationen auf der Benutzeroberfläche von Windows-Plattform ausgeführt werden in einem unabhängigen Thread mit 60 FPS glatte bewegungserlebnisse zu aktivieren.
+- Leistung – anstelle der herkömmlichen UI-Thread-gebunden-Animation, Animationen auf der Benutzeroberfläche von Windows-Plattform arbeiten mit einem unabhängigen Thread mit 60 FPS, glatte bewegungserlebnisse zu aktivieren.
 - Templating-Modell – Animationen in der Windows-UI-Ebene sind Vorlagen, Bedeutung kann eine einzelne Animation auf mehreren Objekten und Optimierungseigenschaften Eigenschaften oder Parameter, ohne sich Gedanken machen durchzuführen vorherigen verwendet.
-- Anpassung – Windows-UI-Ebene nicht nur erleichtert schöne UI vornehmen, aber mit einer Vielzahl von Animationstypen, Funktionen zum Erstellen von neuen und beeindruckende möglich mit einem Farbverlauf von Anpassungen
+- Anpassung – Windows-UI-Ebene nicht nur erleichtert schöne UI vornehmen, aber mit einer Vielzahl von Animationstypen, möglich zum Erstellen von neuen und beeindruckende Erfahrungen mit einem Farbverlauf von Anpassungen
 
-Als Entwickler Funktionen der Windows-UI-Ebene erstellen haben Sie Zugriff auf eine Vielzahl von Animationskonzepten Sie Ihre Entwürfe zum Leben zu erwecken. Sie können eines der folgenden Konzepte verwenden, Animieren einer Eigenschaft oder für subchannel Komponente (falls zutreffend) für alle compositionobjects.
-
-> [!NOTE]
-> Nicht alle Eigenschaften eines compositionobjects sind animiert. Finden Sie in der Dokumentation der einzelnen compositionobjects, um festzustellen, ob eine Eigenschaft animiert werden kann.
+Als Entwickler Funktionen der Windows-UI-Ebene erstellen haben Sie Zugriff auf eine Vielzahl von Animationskonzepten Sie Ihre Entwürfe zum Leben zu erwecken. Sie können diese Konzepte verwenden, eine Eigenschaft animieren oder für subchannel Komponente (falls zutreffend) für alle compositionobjects.
 
 > [!NOTE]
-> Der Begriff _unterkanal_ bezieht sich auf ein Formular des Komponenten einer Eigenschaft. Z. B. die X oder XY einer Vector3-Offset-Eigenschaft für subchannel.
+> Nicht alle Eigenschaften eines compositionobjects sind animiert. Finden Sie in der Dokumentation der einzelnen compositionobjects um festzustellen, ob eine Eigenschaft animiert werden kann.
+
+> [!NOTE]
+> Der Begriff _unterkanal_ bezieht sich auf ein Formular Komponente einer Eigenschaft. Z. B. die X oder XY einer Vector3-Offset-Eigenschaft für subchannel.
 
 | Animation Konzept | Beschreibung |
 | ----------------- | ----------- |
-| [Zeitbasierte Bewegung mit KeyFrameAnimations](time-animations.md)  | KeyFrameAnimations werden verwendet, um den gesamten ein bewegungserlebnis über einen Zeitraum direkt zu steuern. Entwickler, die beschreiben, einer Bewegung Anfang, Ende, Interpolation in zwischen, und Dauer herkömmliche Keyframe unterteilt. |
-| [Relative Bewegung mit ExpressionAnimations](relation-animations.md)  | ExpressionAnimations werden verwendet, um beschreiben, wie eine Bewegung der Eigenschaft eines Objekts relativ zu einem anderen Objekt-Eigenschaft gesteuert werden soll. Entwickler definieren eine mathematische Formel, die die Referenz-basierte Beziehung definiert. |
-| ImplicitAnimations | Diese Animationen sind Trigger-basierte und werden separat von der zentralen app-Logik definiert. ImplicitAnimations dienen zum Beschreiben, wie und wann Animationen als Reaktion auf direkte eigenschaftsänderungen auftreten. |
-| [Eingabegesteuerte bewegungserlebnisse mit Eingaben Animationen](input-driven-animations.md)  | Eingabeanimationen umfasst eine Reihe von Szenarien, mit denen Entwickler Manipulation-basierte Bewegung per Toucheingabe oder andere eingabemodalitäten zu beschreiben. Diese Animationen werden basierend auf aktive Benutzereingaben oder Gesten gesteuert. |
-| [Strategiespiele Bewegung mit NaturalMotionAnimations](natural-animations.md)  | NaturalMotionAnimations werden verwendet, um gewohnte Bewegung, dass erzwingen, basierte auf der realen Welt Umgebungen gesteuerte Bewegung zu beschreiben. Anstatt der Zeit definieren, definieren Entwickler Merkmale der Bewegung (z. B. damping Ratio für Federanimationen) |
+| [Zeitbasierte Bewegung mit KeyFrameAnimations](time-animations.md)  | KeyFrameAnimations werden verwendet, um den gesamten ein bewegungserlebnis über einen Zeitraum direkt zu steuern. Entwickler, die einer Bewegung Anfang, Ende, Interpolation zwischen und Dauer in einer herkömmlichen Keyframe beschreiben. |
+| [Relative Bewegung mit ExpressionAnimations](relation-animations.md)  | ExpressionAnimations werden zum Beschreiben, wie eine Bewegung der Eigenschaft eines Objekts relativ zu einem anderen Objekt-Eigenschaft gesteuert werden soll. Entwickler definieren eine mathematische Formel, die die Beziehung anhand von Verweisen definiert. |
+| ImplicitAnimations | Diese Animationen basieren auf Trigger und separat von der zentralen app-Logik definiert sind. ImplicitAnimations dienen zum Beschreiben, wie und wann Animationen als Reaktion auf Änderungen der direkte Eigenschaft auftreten. |
+| [Eingabegesteuerte bewegungserlebnisse mit Eingaben Animationen](input-driven-animations.md)  | Eingabeanimationen umfasst eine Reihe von Szenarien, die Entwickler beschreiben, Manipulation-basierte Bewegung per Toucheingabe oder anderen eingabemodalitäten zu ermöglichen. Diese Animationen werden basierend auf aktive Benutzereingaben oder Gesten gesteuert. |
+| [Strategiespiele Bewegung mit NaturalMotionAnimations](natural-animations.md)  | NaturalMotionAnimations dienen zum Beschreiben gewohnte Motion-Umgebungen, die basierend auf der realen Welt gesteuerte Bewegung erzwingen. Anstatt Zeit definieren, definieren Entwickler Merkmale der Bewegung (z. B. damping Ratio für Federanimationen) |

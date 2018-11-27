@@ -1,21 +1,21 @@
 ---
 ms.assetid: 414ACC73-2A72-465C-BD15-1B51CB2334F2
 title: Herunterladen und Installieren von Paketupdates aus dem Store
-description: Erfahren Sie, wie Pakete als obligatorisch im Partner Center kennzeichnen und Code in Ihrer app zum Herunterladen und Installieren von paketupdates schreiben.
+description: Erfahren Sie, wie Sie Pakete im Partner Center als obligatorisch kennzeichnen und Code in Ihrer app zum Herunterladen und Installieren von paketupdates schreiben.
 ms.date: 04/04/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e73452cdcb02798d4ebd225b48272ab77c40fef9
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7720176"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7826356"
 ---
 # <a name="download-and-install-package-updates-from-the-store"></a>Herunterladen und Installieren von Paketupdates aus dem Store
 
-Ab Windows10 (Version 1607) können Sie Methoden der [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext)-Klasse im [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store)-Namespace verwenden, um programmgesteuert nach Paketupdates für die aktuelle App im Microsoft Store zu suchen und diese herunterzuladen und zu installieren. Sie können auch für Pakete, die Abfragen, die im Partner Center als obligatorisch gekennzeichnet wurden, und Funktionen in Ihrer app deaktivieren, bis das erforderliche Update installiert ist.
+Ab Windows10 (Version 1607) können Sie Methoden der [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext)-Klasse im [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store)-Namespace verwenden, um programmgesteuert nach Paketupdates für die aktuelle App im Microsoft Store zu suchen und diese herunterzuladen und zu installieren. Sie können auch für Pakete, die Abfragen, dass Sie als obligatorisch, im Partner Center gekennzeichnet wurden und Funktionen in Ihrer app deaktivieren, bis das erforderliche Update installiert ist.
 
 Mithilfe von zusätzlichen [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext)-Methoden, die in Version 1803 von Windows10 eingeführt wurden, können Sie Paketupdates im Hintergrund herunterladen und installieren (ohne dem Benutzer eine Benachrichtigung anzuzeigen), ein [optionales Paket](optional-packages.md) deinstallieren und Informationen zu Paketen im Download und zur Installationswarteschlange für Ihre App erhalten.
 
@@ -193,7 +193,7 @@ private async Task InstallUpdate(IReadOnlyList<StorePackageUpdate> storePackageU
 
 ## <a name="mandatory-package-updates"></a>Obligatorische Paketupdates
 
-Wenn Sie eine Paket-Übermittlung im Partner Center für eine app erstellen, Windows 10, Version 1607 oder höher, können Sie [das Paket als obligatorisch kennzeichnen](../publish/upload-app-packages.md#mandatory-update) und das Datum und die Uhrzeit aus, es obligatorisch wann. Wenn diese Eigenschaft festgelegt wurde und Ihre App erkennt, dass das Paketupdate verfügbar ist, kann die App ermitteln, ob das Updatepaket obligatorisch ist, und ihr Verhalten ändern, bis das Update installiert ist (z.B. kann Ihre App Features deaktivieren).
+Wenn Sie eine Paketübermittlung im Partner Center für eine app erstellen, die Windows 10, Version 1607 oder höher, ausgerichtet ist können Sie [das Paket als obligatorisch kennzeichnen](../publish/upload-app-packages.md#mandatory-update) und das Datum und die Uhrzeit aus, es obligatorisch wann. Wenn diese Eigenschaft festgelegt wurde und Ihre App erkennt, dass das Paketupdate verfügbar ist, kann die App ermitteln, ob das Updatepaket obligatorisch ist, und ihr Verhalten ändern, bis das Update installiert ist (z.B. kann Ihre App Features deaktivieren).
 
 > [!NOTE]
 > Der obligatorische Status eines Pakets wird von Microsoft nicht erzwungen, und das Betriebssystem verfügt über keine Benutzeroberfläche, die den Benutzer darauf hinweist, dass ein erforderliches App-Update installiert werden muss. Entwickler sollten die Einstellung „Obligatorisch” verwenden, um erforderliche App-Updates in ihrem eigenen Code zu erzwingen.  

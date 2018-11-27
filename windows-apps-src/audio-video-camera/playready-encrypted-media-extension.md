@@ -1,29 +1,29 @@
 ---
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
-description: In diesem Abschnitt wird beschrieben, wie zum Ändern Ihrer PlayReady-Web-app, um die Änderungen, die aus der vorherigen Version Windows8.1 in die Windows 10-Version zu unterstützen.
+description: In diesem Abschnitt wird beschrieben, wie zum Ändern Ihrer PlayReady-Web-app, um die Änderungen, die aus der vorherigen Windows8.1-Version in der Windows 10-Version unterstützt wird.
 title: Verschlüsselte Medienerweiterung von PlayReady
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b324cbca6d5e36193c057a6d1473ff1aad7be095
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7701439"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7840257"
 ---
 # <a name="playready-encrypted-media-extension"></a>Verschlüsselte Medienerweiterung von PlayReady
 
 
 
-In diesem Abschnitt wird beschrieben, wie zum Ändern Ihrer PlayReady-Web-app, um die Änderungen, die aus der vorherigen Version Windows8.1 in die Windows 10-Version zu unterstützen.
+In diesem Abschnitt wird beschrieben, wie zum Ändern Ihrer PlayReady-Web-app, um die Änderungen, die aus der vorherigen Windows8.1-Version in der Windows 10-Version unterstützt wird.
 
 Die Verwendung von PlayReady-Medienelementen in Internet Explorer ermöglicht Entwicklern das Erstellen von Web-Apps, die PlayReady-geschützte Inhalte für den Benutzer bereitstellen und gleichzeitig vom Inhaltsanbieter definierte Regeln erzwingen können. In diesem Abschnitt wird beschrieben, wie Sie Ihren vorhandenen Web-Apps PlayReady-Medienelemente hinzufügen, indem Sie nur HTML5 und JavaScript verwenden.
 
 ## <a name="whats-new-in-playready-encrypted-media-extension"></a>Neuigkeiten in der verschlüsselten Medienerweiterung von PlayReady
 
-Dieser Abschnitt enthält eine Liste der Änderungen, die PlayReady verschlüsselten Extension (EME) um PlayReady-Inhaltsschutz unter Windows 10 zu aktivieren.
+Dieser Abschnitt enthält eine Liste der Änderungen, die PlayReady verschlüsselt Medienerweiterung (EME) an PlayReady-Inhaltsschutz unter Windows 10 bereitzustellen.
 
 Die folgende Liste beschreibt die neuen Features und Änderungen an verschlüsselten Medienerweiterung von PlayReady für Windows 10:
 
@@ -34,7 +34,7 @@ Die folgende Liste beschreibt die neuen Features und Änderungen an verschlüsse
 -   Unterstützt das proaktive Abrufen nicht persistenter Lizenzen.
 -   Unterstützt das Abrufen mehrerer Lizenzen in einer Nachricht.
 
-    Sie können entweder ein PlayReady-Objekt mit mehreren schlüsselkennungen (KeyIDs) wie Windows8.1 verwenden oder [Inhalte Entschlüsselung Modell-Daten (CDMData)](https://go.microsoft.com/fwlink/p/?LinkID=626819) mit mehreren KeyIDs verwenden.
+    Sie können entweder ein PlayReady-Objekt mit mehreren schlüsselkennungen (KeyIDs) wie Windows8.1 verwenden oder [Inhalten Entschlüsselung Modell-Daten (CDMData)](https://go.microsoft.com/fwlink/p/?LinkID=626819) mit mehreren KeyIDs verwenden.
 
     > [!NOTE]
     > In Windows 10, werden mehrere schlüsselkennungen unter unterstützt &lt;KeyID&gt; in CDMData.

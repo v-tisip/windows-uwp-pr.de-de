@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Daten, Datenbank, relational, Tabellen, sqlite
 ms.localizationpriority: medium
 ms.openlocfilehash: eb5adbdd3ae12d039d934e8d0cbe468ae5c1187c
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7695119"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7846387"
 ---
 # <a name="data-access"></a>Datenzugriff
 
@@ -20,7 +20,7 @@ Sie können Daten auf dem Gerät des Benutzers speichern, mit einer SQLite-Daten
 | Thema | Beschreibung|
 |-------|------------|
 | [Verwenden einer SQLite-Datenbank in einer UWP-App](sqlite-databases.md) | Zeigt, wie Sie SQLite verwenden, um Daten in einer Lightweight-Datenbank auf dem Gerät des Benutzers speichern und abrufen. SQLite ist ein eingebettetes Datenbankmodul ohne Server. |
-| [Verwenden einer SQL Server-Datenbank in einer UWP-app](sql-server-databases.md) | Sie zeigt, wie Sie direkt mit einer SQL Server-Datenbank verbinden und dann speichern und Abrufen von Daten mithilfe der Klassen im [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) -Namespace. Es ist keine Dienstebene erforderlich. |
+| [Verwenden einer SQL Server-Datenbank in einer UWP-app](sql-server-databases.md) | Beschreibt, wie Sie sich direkt mit einer SQL Server-Datenbank verbinden und dann speichern und Abrufen von Daten mithilfe der Klassen im [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) -Namespace. Es ist keine Dienstebene erforderlich. |
 
 ## <a name="related-topics"></a>Verwandte Themen
 

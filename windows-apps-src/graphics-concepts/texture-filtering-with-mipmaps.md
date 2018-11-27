@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 474f97f32439c389be8283bb10e0c0ed716b3f69
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7691681"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7854901"
 ---
 # <a name="texture-filtering-with-mipmaps"></a>Texturfilterung mit Mipmaps
 
@@ -47,7 +47,7 @@ Anschließend muss Ihre Anwendung das Filterungsverfahren einrichten, das Direct
 
 Mipmap-Texturen werden in 3D-Szenen verwendet, um den Zeitaufwand für das Rendern einer Szene zu verringern. Dazu kommt, dass sie den Realismus einer Szene verbessern. Andererseits erfordern sie jedoch viel Speicherplatz.
 
-**Hinweis:**  jede Oberfläche in einer Mipmap-Kette hat Abmessungen halb die vorherige Oberfläche in der Kette. Wenn der Mipmap der obersten Ebene die Abmessungen 256 x 128 hat, hat der Mipmap der zweiten Ebene 128 x 64, der der dritten Ebene 64 x 32 und so weiter bis 1 x 1. Sie können keine Anzahl von Mipmap-Ebenen anfordern, die dazu führen würde, dass die breite oder die Höhe eines der Mipmaps in der Kette kleiner als 1 wäre. Im einem einfachen Fall einer 4 x 2-Mipmap-Oberfläche auf der obersten Ebene ist der maximal zulässige Wert für Ebenen drei. Die Abmessungen der obersten Ebene sind 4 x 2, die der zweiten Ebene 2 x 1, und die der dritten Ebene sind 1 x 1. Ein Wert von mehr als drei Ebenen führt zu einem Bruchwert der Höhe des Mipmaps der zweiten Ebene und ist daher nicht zulässig.
+**Hinweis:**  jede Oberfläche in einer Mipmap-Kette hat Abmessungen halb, die die vorherige Oberfläche in der Kette. Wenn der Mipmap der obersten Ebene die Abmessungen 256 x 128 hat, hat der Mipmap der zweiten Ebene 128 x 64, der der dritten Ebene 64 x 32 und so weiter bis 1 x 1. Sie können keine Anzahl von Mipmap-Ebenen anfordern, die dazu führen würde, dass die breite oder die Höhe eines der Mipmaps in der Kette kleiner als 1 wäre. Im einem einfachen Fall einer 4 x 2-Mipmap-Oberfläche auf der obersten Ebene ist der maximal zulässige Wert für Ebenen drei. Die Abmessungen der obersten Ebene sind 4 x 2, die der zweiten Ebene 2 x 1, und die der dritten Ebene sind 1 x 1. Ein Wert von mehr als drei Ebenen führt zu einem Bruchwert der Höhe des Mipmaps der zweiten Ebene und ist daher nicht zulässig.
 
  
 

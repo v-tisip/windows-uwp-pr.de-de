@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 3212128a5fda9f6c5c811b2725b97f64655588b1
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7703514"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7829105"
 ---
 # <a name="getting-started-with-uwp-for-ios-developers"></a>Erste Schritte mit UWP für iOS-Entwickler
 
@@ -20,7 +20,7 @@ Wenn Sie sind in Betracht ziehen entwickeln für Windows 10 iOS-Entwickler diese
 
 In diesem Abschnitt erfahren Sie schrittweise, wie Sie mit Microsoft Visual Studio und der Programmiersprache C# eine einfache App erstellen und wie sich der Prozess vielleicht von Ihren derzeit verwendeten Tools unterscheidet. (Kein Fan von C#? Andere verfügbare Programmiersprachen und -Tools werden unter [Erste Schritte: Auswählen einer Programmiersprache](getting-started-choosing-a-programming-language.md) behandelt.)
 
-Windows 10 führt eine neue Plattform zum Erstellen ansprechender apps auf Desktop, Laptop, Tablet, Smartphone-Geräten und vieles mehr. Da UWP-Apps viele einzigartige Funktionen bieten, führt die einfache Portierung einer iOS-App dazu, dass die Vorteile dieser Features nicht genutzt werden können. Es empfiehlt sich deshalb, die neuen Steuerelemente und Funktionen auszuprobieren. Sie werden sehen, dass sie die Entwicklungsarbeit erleichtern und die Gestaltung neuer Apps ermöglichen.
+Windows 10 führt eine neue Plattform zum Erstellen ansprechender apps auf Desktop, Laptop, Tablet, Phone-Geräten und vieles mehr. Da UWP-Apps viele einzigartige Funktionen bieten, führt die einfache Portierung einer iOS-App dazu, dass die Vorteile dieser Features nicht genutzt werden können. Es empfiehlt sich deshalb, die neuen Steuerelemente und Funktionen auszuprobieren. Sie werden sehen, dass sie die Entwicklungsarbeit erleichtern und die Gestaltung neuer Apps ermöglichen.
 
 Fazit: Portieren Sie Ihre App nicht einfach nur, sondern **wandeln Sie sie um**, und profitieren Sie von den neuen Funktionen und neuen Geräten. Zielen Sie nicht den kleinsten gemeinsamen Nenner, aber erstellen Sie funktionsreiche Umgebungen, die einzigartigen Features von Windows 10, z. B. live-Kacheln, Benachrichtigungen und Interaktion mit Cortana verwenden.
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a24e038dc2645b0aea7b1e7e516886af9a9e6f09
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7701733"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7834417"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>Einrichten von Auszahlungskonten und Steuerformularen.
 
@@ -42,7 +42,7 @@ Bei einem Auszahlungskonto handelt es sich um das Bankkonto, auf das wir Ihren V
  
 **So richten Sie ein Auszahlungskonto ein**
 
-1.  Wählen Sie im [Partner Center](https://partner.microsoft.com/dashboard)das Symbol " **kontoeinstellungen** " in der oberen rechten Ecke, und wählen Sie dann **entwicklereinstellungen**.
+1.  Wählen Sie im [Partner Center](https://partner.microsoft.com/dashboard)das **kontoeinstellungen** -Symbol in der oberen rechten Ecke, und wählen Sie dann **entwicklereinstellungen**.
 2.  Wählen Sie im linken Navigationsmenü **auszahlungskonto**.
 
    > [!NOTE]
@@ -72,7 +72,7 @@ Allgemeine Fragen über PayPal als Zahlungsmethode:
 
 -   **Welche PayPal-Einstellungen ist erforderlich, um Zahlungen zu erhalten?** Sie müssen sicherstellen, dass Ihr PayPal-Konto keine Zahlungen per eCheck blockiert. Diese Einstellung wird über die PayPal-Seite für die bevorzugte Überweisungsmethode verwaltet. Weitere Informationen finden Sie auf der [PayPal-Seite zum Einrichten des Kontos](http://go.microsoft.com/fwlink/p/?linkid=513139).
 -   **Wird mein Land bzw. meine Region unterstützt?** Informieren Sie sich unter [Kontotypen, Standorte und Gebühren](account-types-locations-and-fees.md) darüber, in welchen Gebieten PayPal als Zahlungsmethode unterstützt wird.
--   **Muss mein PayPal-Konto im gleichen Land/Region wie mein Partner Center-Konto registriert sein?** Nein. Beim Einrichten eines PayPal-Kontos können Sie die Standardkonfiguration akzeptieren. Normalerweise treten keine Probleme mit anderen Ländern/Regionen und Währungen auf, sofern die Zahlung in einigen Währungen nicht blockiert ist. Diese Einstellung wird über die PayPal-Seite für die bevorzugte Überweisungsmethode verwaltet.
+-   **Muss mein PayPal-Konto in demselben Land/Region wie mein Partner Center-Konto registriert sein?** Nein. Beim Einrichten eines PayPal-Kontos können Sie die Standardkonfiguration akzeptieren. Normalerweise treten keine Probleme mit anderen Ländern/Regionen und Währungen auf, sofern die Zahlung in einigen Währungen nicht blockiert ist. Diese Einstellung wird über die PayPal-Seite für die bevorzugte Überweisungsmethode verwaltet.
 -   **Muss ich PayPal-Zahlungen manuell akzeptieren?** Nein. PayPal-Konten sind dafür ausgelegt, dass Benutzer Zahlungen manuell akzeptieren müssen. Wenn Sie die Zahlung binnen 30 Tagen nicht akzeptieren, wird sie storniert. Sie können diese Einstellung ändern, indem Sie auf der PayPal-Seite mit weiteren Einstellungen die Bestätigungsaufforderung deaktivieren.
 
 
@@ -97,7 +97,7 @@ Wenn Sie Entwickler sind und in Russland leben, müssen Sie möglicherweise Ihre
 
 Berücksichtigen Sie auch folgende Punkte, um sicherzustellen, dass Ihre Auszahlung erfolgreich ist:
 
--   Der **Name des Kontoinhabers** eingegebene für Ihr Konto im Partner Center muss exakt übereinstimmenden Namen Ihr Bankkonto zugeordnet sein. Wenn Ihr Bankkontoname beispielsweise einen zweiten Vornamen enthält, geben Sie in **Name des Kontoinhabers** einen zweiten Vornamen ein.
+-   Der **Name des Kontoinhabers** eingegebene für Ihr Konto im Partner Center muss exakt übereinstimmenden Namen Ihr Bankkonto zugeordnet werden. Wenn Ihr Bankkontoname beispielsweise einen zweiten Vornamen enthält, geben Sie in **Name des Kontoinhabers** einen zweiten Vornamen ein.
 -   Auszahlungen werden direkt von Microsoft an Ihr Bankkonto in Rubel (RUB) überwiesen.
 -   Im Partner Center in lateinischen Zeichen eingegebene Bankverbindungen werden in kyrillische Zeichen übertragen.
 -   Auszahlungen müssen auf ein Bankkonto, nicht auf eine Bankkarte erfolgen.
@@ -114,7 +114,7 @@ Microsoft stellt alle drei Dokumente beim ersten Auszahlungsversuch zur Verfügu
 
 Berücksichtigen Sie auch folgende Punkte, um sicherzustellen, dass Ihre Auszahlung erfolgreich ist:
 
--   Der **Name des Kontoinhabers** eingegebene für Ihr Konto im Partner Center muss exakt übereinstimmenden Namen Ihr Bankkonto zugeordnet sein. Wenn Ihr Bankkontoname beispielsweise einen zweiten Vornamen enthält, geben Sie in **Name des Kontoinhabers** einen zweiten Vornamen ein.
+-   Der **Name des Kontoinhabers** eingegebene für Ihr Konto im Partner Center muss exakt übereinstimmenden Namen Ihr Bankkonto zugeordnet werden. Wenn Ihr Bankkontoname beispielsweise einen zweiten Vornamen enthält, geben Sie in **Name des Kontoinhabers** einen zweiten Vornamen ein.
 -   Auszahlungen werden direkt von Microsoft an Ihr Bankkonto in US-Dollar überwiesen.
 -   Im Partner Center in lateinischen Zeichen eingegebene Bankverbindungen werden in kyrillische Zeichen übertragen.
 
@@ -126,15 +126,15 @@ Nachdem Sie [für ein Entwicklerkonto registriert](opening-a-developer-account.m
 -   Angeben des Wohnsitzlandes und der Staatsangehörigkeit
 -   Ausfüllen der entsprechenden Steuerformulare
 
-Sie können abgeschlossen und Ihrer Steuerformulare elektronisch im Partner Center zu übermitteln; in den meisten Fällen müssen Sie keine Formulare ausgedruckt und drucken.
+Sie können abgeschlossen und Ihre Steuerformulare elektronisch im Partner Center zu übermitteln. in den meisten Fällen müssen Sie keine Formulare ausgedruckt und drucken.
 
 > [!IMPORTANT]
-> In den verschiedenen Ländern und Regionen gelten unterschiedliche Steuergesetze. Die genaue Höhe der zu zahlenden Steuern hängt von den Ländern und Regionen ab, in denen Sie Ihre Apps verkaufen. In der [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) sehen Sie, in welchen Ländern Microsoft für Sie Verkaufs- und Nutzungssteuern überweist. In anderen Ländern müssen Sie u.U. je nachdem, wo Sie registriert sind, Verkaufs- und Nutzungssteuern direkt an die örtliche Steuerbehörde überweisen. Des Weiteren müssen die Erlöse aus Ihren App-Verkäufen unter Umständen als Einkommen versteuert werden. Wir empfehlen Ihnen nachdrücklich, wenden Sie sich an die zuständige Behörde in Ihrem Land oder Region, mit denen am besten Sie die richtigen Steuerinformationen für Ihre Microsoft Store-entwickleraktivitäten zu ermitteln kann.
+> In den verschiedenen Ländern und Regionen gelten unterschiedliche Steuergesetze. Die genaue Höhe der zu zahlenden Steuern hängt von den Ländern und Regionen ab, in denen Sie Ihre Apps verkaufen. In der [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) sehen Sie, in welchen Ländern Microsoft für Sie Verkaufs- und Nutzungssteuern überweist. In anderen Ländern müssen Sie u.U. je nachdem, wo Sie registriert sind, Verkaufs- und Nutzungssteuern direkt an die örtliche Steuerbehörde überweisen. Des Weiteren müssen die Erlöse aus Ihren App-Verkäufen unter Umständen als Einkommen versteuert werden. Wir empfehlen Ihnen, wenden Sie sich an die zuständige Behörde in Ihrem Land oder Region, mit denen am besten Sie die richtigen Steuerinformationen für Ihre Microsoft Store-entwickleraktivitäten zu ermitteln kann.
 
  
 **So füllen Sie Ihr Steuerprofil aus**
 
-1.  Wählen Sie im [Partner Center](https://partner.microsoft.com/dashboard)das Symbol " **kontoeinstellungen** " in der oberen rechten Ecke, und wählen Sie dann **entwicklereinstellungen**.
+1.  Wählen Sie im [Partner Center](https://partner.microsoft.com/dashboard)das **kontoeinstellungen** -Symbol in der oberen rechten Ecke, und wählen Sie dann **entwicklereinstellungen**.
 2.  Wählen Sie im linken Navigationsmenü **Steuerprofil**.
 
    > [!NOTE]
@@ -154,7 +154,7 @@ Die von Ihnen in den Steuerformularen übermittelten Informationen sind ausschla
 
 ### <a name="tax-treaty-benefits"></a>Vorteile des Steuerabkommens
 
-Wenn Sie nicht in den USA ansässig sind, können Sie unter Umständen von den Vorteilen des Steuerabkommens profitieren. Diese Vorteile variieren von Land zu Land, und möglicherweise können Sie die, die im Microsoft Store einbehaltenen steuern reduzieren. Sie müssen TeilII des W-8BEN-Formulars ausfüllen, um die Vorteile eines Steuerabkommens in Anspruch nehmen zu können. Wir empfehlen Ihnen, sich bei den zuständigen Stellen in Ihrem Land oder Ihrer Region zu erkundigen, ob diese Vorteile auf Sie zutreffen.
+Wenn Sie nicht in den USA ansässig sind, können Sie unter Umständen von den Vorteilen des Steuerabkommens profitieren. Diese Vorteile variieren von Land zu Land, und können Sie die, die den Microsoft Store einbehaltenen steuern reduzieren. Sie müssen TeilII des W-8BEN-Formulars ausfüllen, um die Vorteile eines Steuerabkommens in Anspruch nehmen zu können. Wir empfehlen Ihnen, sich bei den zuständigen Stellen in Ihrem Land oder Ihrer Region zu erkundigen, ob diese Vorteile auf Sie zutreffen.
 
  
 

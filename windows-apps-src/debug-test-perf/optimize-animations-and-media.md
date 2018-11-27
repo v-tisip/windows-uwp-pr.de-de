@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 14b26274dd005813fe5c8ced2d90f6380e4d7f21
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7696248"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7827398"
 ---
 # <a name="optimize-animations-media-and-images"></a>Optimieren von Animationen, Medien und Bildern
 
@@ -219,7 +219,7 @@ myImage.Source = bitmapImage;
 bitmapImage.UriSource = new URI("ms-appx:///Assets/cool-image.png", UriKind.RelativeOrAbsolute);
 ```
 
-Beispiel 2 – CodeBehind (schlecht) – Festlegen der UriSource von BitmapImage, bevor es mit der Struktur verbunden.
+Beispiel 2 – CodeBehind (schlecht): Festlegen der UriSource von BitmapImage, bevor es mit der Struktur verbunden.
 
 ```csharp
 var bitmapImage = new BitmapImage();

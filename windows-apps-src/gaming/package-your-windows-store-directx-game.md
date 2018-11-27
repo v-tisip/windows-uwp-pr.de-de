@@ -7,17 +7,17 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Directx, Paket
 ms.localizationpriority: medium
 ms.openlocfilehash: 631ba2c278c72f406a0fdd8a6d6d8d8a14c9eb05
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7692169"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7827168"
 ---
 #  <a name="package-your-universal-windows-platform-uwp-directx-game"></a>Packen Ihres UWP-DirectX-Spiels (DirectX-Spiels für die Universelle Windows-Plattform)
 
 Umfangreichere UWP-Spiele (Universelle Windows-Plattform) können leicht relativ groß werden. Dies gilt besonders für Spiele, bei denen mehrere Sprachen mit regionsspezifischen Ressourcen unterstützt werden oder die über optionale HD-Ressourcen verfügen. In diesem Thema erfahren Sie, wie Sie App-Pakete und App-Bündel zum Anpassen der App verwenden, damit Kunden nur die wirklich benötigten Ressourcen erhalten.
 
-Zusätzlich zum app-Paket unterstützt Windows 10 app-Bündel die zwei Arten von Paketen zu gruppieren:
+Zusätzlich zum app-Paket unterstützt Windows 10 app-Bündel die zwei Arten von Paketen gruppiert:
 
 -   App-Pakete enthalten plattformspezifische ausführbare Dateien und Bibliotheken. Häufig verfügen UWP-Spiele über bis zu drei App-Pakete, und zwar jeweils ein Paket für die x86-, x64- und ARM-CPU-Architekturen. Der Code und die Daten für die entsprechende Hardwareplattform müssen im dazugehörigen App-Paket enthalten sein. Ein App-Paket sollte außerdem alle wichtigen Ressourcen für das Spiel enthalten, damit die Voraussetzungen für eine Ausführung in guter Qualität und mit guter Leistung gegeben sind.
 -   Ressourcenpakete enthalten optionale oder erweiterte plattformagnostische Daten, z.B. Spielressourcen (Texturen, Gitter, Sound, Text). Ein UWP-Spiel kann über ein oder mehrere Ressourcenpakete verfügen, z. B. Ressourcenpakete für HD-Ressourcen oder -Texturen, Ressourcen der DirectX-Featureebene 11+ oder sprachspezifische Ressourcen.
@@ -51,7 +51,7 @@ Es gibt zwei grundlegende Möglichkeiten, Ressourcen für das Verpacken anzugebe
 
 -   Objektdateien weisen den gleichen Dateinamen auf, und die einzelnen Ressourcenpaketversionen werden in Verzeichnisse mit bestimmten Namen eingefügt. Diese Verzeichnisnamen werden vom System reserviert. Zum Beispiel; \\en-us, \\scale-140, \\dxfl-dx11.
 -   Objektdateien werden in Ordnern mit beliebigen Namen gespeichert. Die Dateien werden jedoch mit einer gemeinsamen Bezeichnung benannt, die mit Zeichenfolgen angehängt wird, die das System zum Angeben von Sprach- und anderen Qualifizierern reserviert. Diese Qualifiziererzeichenfolgen werden nach einem Unterstrich („\_“) an den generalisierten Dateinamen angehängt. Beispielsweise: \\assets\\menu\_option1\_lang-en-us.png, \\assets\\menu\_option1\_scale-140.png, \\assets\\coolsign\_dxfl-dx11.dds. Sie können diese Zeichenfolgen auch kombinieren. Beispielsweise: \\assets\\menu\_option1\_scale-140\_lang-en-us.png.
-    > **Hinweis:**  Wenn in einem Dateinamen statt nur in einem Verzeichnisnamen verwendet, muss ein sprachqualifizierer weisen die Form "lang-<tag>", z. B. "Lang-En-us" gemäß [Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung und andere](../app-resources/tailor-resources-lang-scale-contrast.md).
+    > **Hinweis:**  Wenn in einem Dateinamen statt nur in einem Verzeichnisnamen verwendet, muss ein sprachqualifizierer haben die Form "lang-<tag>", z. B. "Lang-En-us" gemäß [Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung und andere](../app-resources/tailor-resources-lang-scale-contrast.md).
 
      
 
@@ -89,14 +89,14 @@ Gehen Sie beim Konfigurieren der App für die Unterstützung lokalisierter Resso
 ## <a name="defining-scaling-factor-resource-packs"></a>Definieren von Ressourcenpaketen für den Skalierungsfaktor
 
 
-Windows 10 bietet drei Skalierungsfaktoren für Benutzeroberflächen: 1.0 x, 1.4 x und 1, 8 X. Die Skalierungswerte für jede Anzeige werden während der Installation basierend auf verschiedenen kombinierten Faktoren festgelegt: Größe des Bildschirms, Auflösung des Bildschirms und angenommener durchschnittlicher Abstand der Benutzer vom Bildschirm. Der Benutzer kann Skalierungsfaktoren auch anpassen, um die Lesbarkeit zu verbessern. Um die besten Ergebnisse zu erzielen, sollte das Spiel sowohl mit DPI-Werten kompatibel sein als auch den Skalierungsfaktor beachten können. Dies bedeutet, dass Sie Versionen wichtiger Grafikressourcen für alle drei Skalierungsfaktoren erstellen sollten. Dies betrifft auch die Zeigerinteraktion und Treffererkennung!
+Windows 10 bietet drei Skalierungsfaktoren für Benutzeroberflächen: 1.0 x 1.4 x und 1, 8 X. Die Skalierungswerte für jede Anzeige werden während der Installation basierend auf verschiedenen kombinierten Faktoren festgelegt: Größe des Bildschirms, Auflösung des Bildschirms und angenommener durchschnittlicher Abstand der Benutzer vom Bildschirm. Der Benutzer kann Skalierungsfaktoren auch anpassen, um die Lesbarkeit zu verbessern. Um die besten Ergebnisse zu erzielen, sollte das Spiel sowohl mit DPI-Werten kompatibel sein als auch den Skalierungsfaktor beachten können. Dies bedeutet, dass Sie Versionen wichtiger Grafikressourcen für alle drei Skalierungsfaktoren erstellen sollten. Dies betrifft auch die Zeigerinteraktion und Treffererkennung!
 
 Konfigurieren Sie eine App, für die Ressourcenpakete für unterschiedliche Skalierungsfaktoren von UWP-Apps unterstützt werden sollen, wie folgt:
 
 -   Erstellen Sie ein Unterverzeichnis (bzw. eine Dateiversion) für jeden zu unterstützenden Skalierungsfaktor (scale-100, scale-140 und scale-180).
 -   Fügen Sie während der Entwicklung auf den Skalierungsfaktor zugeschnittene Kopien ALLER Ressourcen in jedes Skalierungsfaktor-Ressourcenverzeichnis ein, auch wenn sich diese für die einzelnen Skalierungsfaktoren nicht unterscheiden.
 -   Achten Sie darauf, dass die Ressourcen in jedem Verzeichnis gleich benannt sind. Die Datei „menu\_option1.png“ sollte beispielsweise in den Verzeichnissen „\\scale-100“ und „\\scale-180“ denselben Namen haben, auch wenn der Inhalt unterschiedlich ist. Die Dateien sind werden in diesem Fall als „\\scale-100\\menu\_option1.pngֆ“ und „\\scale-140\\menu\_option1.png“ angezeigt.
-    > **Hinweis:**  erneut, Sie können optional das skalierungsfaktorsuffix an den Dateinamen und speichern Sie sie im gleichen Verzeichnis verwendet; \\assets\\menu\_option1\_scale-100.png und \\assets\\menu\_option1\_scale-140.png.
+    > **Hinweis:**  erneut, Sie können optional die skalierungsfaktorsuffix an den Dateinamen und speichern Sie sie im gleichen Verzeichnis verwendet; \\assets\\menu\_option1\_scale-100.png und \\assets\\menu\_option1\_scale-140.png.
 
      
 
@@ -129,7 +129,7 @@ Gehen Sie wie folgt vor, wenn Sie eine App konfigurieren, für die Ressourcenpak
 -   Erstellen Sie ein Unterverzeichnis (bzw. eine Dateiversion) für jede zu unterstützende DirectX-Featureebene (dxfl-dx9, dxfl-dx10 und dxfl-dx11).
 -   Fügen Sie für die Featureebene spezifische Ressourcen während der Entwicklung in jedes Ressourcenverzeichnis für Featureebenen ein. Im Gegensatz zu Gebietsschemas und Skalierungsfaktoren können Sie im Spiel für jede Featureebene unterschiedliche Rendercodeverzweigungen verwenden. Falls Sie über Texturen, kompilierte Shader oder andere Ressourcen verfügen, die nur für eine Featureebene oder eine Teilmenge aller unterstützten Featureebenen verwendet werden, fügen Sie die entsprechenden Ressourcen nur in die Verzeichnisse für die Featureebenen ein, von denen sie genutzt werden. Beachten Sie für Ressourcen, die über alle Featureebenen hinweg geladen werden, dass für jedes Featureebenen-Ressourcenverzeichnis davon eine Version gleichen Namens vorhanden ist. Fügen Sie für eine von der Featureebene unabhängige Textur mit dem Namen „coolsign.dds“ beispielsweise die BC3-komprimierte Version in das Verzeichnis „\\dxfl-dx9“ und die BC7-komprimierte Version in das Verzeichnis „\\dxfl-dx11“ ein.
 -   Stellen Sie sicher, dass alle Ressourcen (falls sie für mehrere Featureebenen verfügbar sind) in jedem Verzeichnis denselben Namen haben. Die Datei „coolsign.dds“ sollte beispielsweise in den Verzeichnissen „\\dxfl-dx9“ und „\\dxfl-dx11“ denselben Namen haben, auch wenn der Inhalt unterschiedlich ist. Die Dateien werden in diesem Fall als „\\dxfl-dx9\\coolsign.dds“ und „\\dxfl-dx11\\coolsign.dds“ angezeigt.
-    > **Hinweis:**  erneut, Sie können optional featureebenensuffix der an den Dateinamen und speichern Sie sie im gleichen Verzeichnis verwendet; \\textures\\coolsign\_dxfl-dx9.dds und \\textures\\coolsign\_dxfl-dx11.dds.
+    > **Hinweis:**  erneut, Sie können optional featureebenensuffix der an den Dateinamen und speichern sie im gleichen Verzeichnis verwendet; \\textures\\coolsign\_dxfl-dx9.dds und \\textures\\coolsign\_dxfl-dx11.dds.
 
      
 

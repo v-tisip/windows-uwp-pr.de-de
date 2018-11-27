@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, asynchrone Programmierung, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: 8551a49512d4b17ab1bab704596d9e5389de3eb6
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7712928"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7827794"
 ---
 # <a name="asynchronous-programming-directx-and-c"></a>Asynchrone Programmierung (DirectX und C++)
 
@@ -36,7 +36,7 @@ Wenn Ihr Spiel ausreichend komplex ist oder Sie die Leistung verbessern möchten
 
 Ihre App kann diese Komponenten in mehreren gleichzeitigen Threads verwalten. Das asynchrone Laden wirkt sich positiv auf die Datei-E/A aus, insbesondere auf das Laden von Objekten, da Ihr Spiel oder Ihre App sich in einem interaktiven Zustand befinden kann, während mehrere (oder mehrere Hundert) Megabytes von Objekten geladen oder gestreamt werden. Es ist am einfachsten, diese Threads mit der [Parallel Patterns Library (PPL)](https://msdn.microsoft.com/library/dd492418.aspx) und dem **task**-Muster zu erstellen und zu verwalten, die in dem in der Datei „PPLTasks.h“ definierten **concurrency**-Namespace enthalten sind. Wenn Sie die [Parallel Patterns Library](https://msdn.microsoft.com/library/dd492418.aspx) verwenden, können Sie direkt von den Hyperthreading-CPUs mit mehreren Kernen profitieren und verschiedene Verbesserungen erzielen, z. B. durch verkürzte Ladezeiten oder weniger Störungen und Verzögerungen bei umfassenden CPU-Berechnungen oder Netzwerkverarbeitung.
 
-> **Hinweis:**  In eine universelle Windows-Plattform (UWP)-app, die Benutzeroberfläche, die vollständig in einem Singlethread-Apartment (STA) ausgeführt wird. Wenn Sie eine UI für Ihr DirectX-Spiel mit [XAML-Interoperabilität](directx-and-xaml-interop.md) erstellen, können Sie nur mithilfe von STA auf die Steuerelemente zugreifen.
+> **Hinweis:**  In einer universellen Windows-Plattform (UWP)-app, die Benutzeroberfläche ausgeführt wird, vollständig in einem Singlethread Apartment (STA). Wenn Sie eine UI für Ihr DirectX-Spiel mit [XAML-Interoperabilität](directx-and-xaml-interop.md) erstellen, können Sie nur mithilfe von STA auf die Steuerelemente zugreifen.
 
  
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d9b2a894746cc9f26a0ebb3df90c967a73914c3c
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7694395"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7827712"
 ---
 # <a name="interaction-primer"></a>Einführung in die Interaktion
 
@@ -64,7 +64,7 @@ Der Formfaktor von Surface Dial entspricht einer Drehaktion (oder -geste). Surfa
 
 ## <a name="cortana"></a>Cortana
 
-In Windows 10 können Sie **die Cortana** -Erweiterbarkeit Sprachbefehle von einem Benutzer behandeln und Ihre Anwendung zum Ausführen einer einzelnen Aktion starten.
+In Windows 10 können Sie **die Cortana** -Erweiterbarkeit Sprachbefehle von einem Benutzer behandeln und die Anwendung auf eine einzelne Aktion auszuführen.
 
 ### <a name="device-support"></a>Unterstützung von Geräten
 
@@ -234,7 +234,7 @@ Sie müssen mausspezifische Benutzeroberflächenbefehle (oder Angebote) zur Unte
 
 Eine Tastatur ist das Haupteingabegerät für Text und häufig unentbehrlich für Personen mit bestimmten körperlichen Beeinträchtigungen oder für Benutzer, die die Tastatur als schnellere und effizientere Interaktionsmethode betrachten.
 
-Mit [Continuum für Smartphones](http://go.microsoft.com/fwlink/p/?LinkID=699431), einer neuen Funktion für kompatible Windows 10 mobile Geräte, können Benutzer ihre Smartphones mit einer Maus und Tastatur, damit ihr Gerät wie einen Laptop eine Verbindung herstellen.
+Mit [Continuum für Smartphones](http://go.microsoft.com/fwlink/p/?LinkID=699431), einer neuen Funktion für kompatible Windows 10-Mobilgeräte, können Benutzer ihre Smartphones mit einer Maus und Tastatur, damit ihr Gerät wie einen Laptop verbinden.
 
 ### <a name="device-support"></a>Unterstützung von Geräten
 
@@ -256,7 +256,7 @@ Bei der Bildschirmtastatur handelt es sich um eine visuelle Softwaretastatur, di
 
 Bei der Bildschirmtastatur handelt es sich um eine visuelle Softwaretastatur für die Texteingabe per Touchscreen. Die Touchtastatur ist kein Ersatz für die Bildschirmtastatur. Sie wird nur für die Texteingabe (ohne Emulierung der Hardwaretastatur) verwendet und nur angezeigt, wenn der Fokus auf einem Textfeld oder einem anderen bearbeitbaren Textsteuerelement liegt. Die Bildschirmtastatur unterstützt keine App- oder Systembefehle.
 
-**Hinweis:** die Bildschirmtastatur hat Priorität gegenüber der Touch-Tastatur, die nicht angezeigt, wenn die Bildschirmtastatur vorhanden ist.
+**Hinweis:** die Bildschirmtastatur hat Priorität gegenüber der Touch-Bildschirmtastatur, die nicht angezeigt, wenn die Bildschirmtastatur vorhanden ist.
 
 Im Allgemeinen weist eine Tastatur folgende Merkmale auf:
 

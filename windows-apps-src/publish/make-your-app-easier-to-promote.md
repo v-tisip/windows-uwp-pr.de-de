@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, werben, Werbung, Highlights, Showcase, Store
 ms.localizationpriority: medium
 ms.openlocfilehash: ea7c7d8a132d1c2996d023f1413523f806d0b5bf
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7712246"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7855588"
 ---
 # <a name="make-your-app-easier-to-promote"></a>Einfacheres Bewerben Ihrer App
 
@@ -27,7 +27,7 @@ Im MicrosoftStore werden verschiedene Apps nach Kategorie oder Thema angezeigt. 
 
     Bei der Präsentation von Apps können [App-Screenshots und -Bilder](app-screenshots-and-images.md) im Microsoft Store in verschiedenen Layouts angezeigt werden. Erstellen Sie ansprechende Screenshots, die Ihre App optimal darstellen, und stellen Sie sicher, dass der erste Screenshot besonders aussagekräftig und attraktiv ist. Sie können verschiedene Gruppen von Bildschirmfotos anzeigen, um zu sehen, wie die App für jeden Gerätetyp aussieht, der sie unterstützt.
 
-    Um Ihre Wahrscheinlichkeit zu maximieren, dass Ihre App im Store angezeigt wird, geben Sie alle erforderlichen Bilder in die Abschnitte **Store Logos** und **Zusätzliche Grafikobjekte** Ihres Store-Eintrags ein. Die **9:16 Plakate (720 x 1080 oder 1440 x 2160 Pixel)** und **16:9 besonderes Favoritenbild (1920 x 1080 oder 3840 x 2160 Pixel)** Bilder sind besonders wichtig. Wenn Ihre App die Xbox und/oder Hologramm-Gerätefamilie unterstützt, wird empfohlen, alle erforderlichen Bilder auch für diese Gerätefamilien bereitstellen. Weitere Informationen und Richtlinien finden Sie unter [App-Screenshots, Bilder und Trailer](app-screenshots-and-images.md).
+    Um Ihre Wahrscheinlichkeit zu maximieren, dass Ihre App im Store angezeigt wird, geben Sie alle erforderlichen Bilder in die Abschnitte **Store Logos** und **Zusätzliche Grafikobjekte** Ihres Store-Eintrags ein. Die **9:16 – Plakate (720 x 1080 oder 1440 x 2160 Pixel)** und **16:9 besonderes Favoritenbild (1920 x 1080 oder 3840 x 2160 Pixel)** Bilder sind besonders wichtig. Wenn Ihre App die Xbox und/oder Hologramm-Gerätefamilie unterstützt, wird empfohlen, alle erforderlichen Bilder auch für diese Gerätefamilien bereitstellen. Weitere Informationen und Richtlinien finden Sie unter [App-Screenshots, Bilder und Trailer](app-screenshots-and-images.md).
 
 -   **Erstellen Sie nur eine Version Ihrer App, nicht eine kostenlose Version und eine separate kostenpflichtige Version**
 

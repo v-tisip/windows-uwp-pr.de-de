@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 61918f8f81137dad4db9bf627b7c87e0c05ace8d
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7719532"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7855498"
 ---
 # <a name="setting-up-your-mac-with-windows-10"></a>Einrichten von Windows 10 auf Ihrem Mac
 
@@ -26,7 +26,7 @@ Sie sind bereit zum Entwickeln universeller Windows-Apps, haben aber keinen PC z
 
 Wenn Sie Windows ausgeführt haben, dann installieren die neueste Version von Visual Studio aus [entwicklerdownloads für Windows 10](https://developer.microsoft.com/en-us/windows/downloads) und dem Schreiben von apps beginnen!
 
-**Hinweis:** Wenn Sie die Visual Studio-Geräteemulatoren verwenden möchten, **müssen** Sie eine 64-Bit (x 64) Version von Windows 10 Pro oder höher installieren. Leider unterstützen einige ältere Macs 64-Bit-Versionen von Windows nicht. Auf dieser[Supportseite von Apple](http://go.microsoft.com/fwlink/p/?LinkID=397959)können Sie nachsehen, ob Ihre Hardware kompatibel ist.
+**Hinweis:** Wenn Sie die Visual Studio-Geräteemulatoren verwenden möchten, **müssen** Sie eine 64-Bit (x 64)-Version von Windows 10 Pro oder höher installieren. Leider unterstützen einige ältere Macs 64-Bit-Versionen von Windows nicht. Auf dieser[Supportseite von Apple](http://go.microsoft.com/fwlink/p/?LinkID=397959)können Sie nachsehen, ob Ihre Hardware kompatibel ist.
 
 ## <a name="apple-boot-camp"></a>Apple Boot Camp
 

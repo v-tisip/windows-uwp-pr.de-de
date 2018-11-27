@@ -7,11 +7,11 @@ keywords: Windows10, UWP
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
 ms.openlocfilehash: 4208fd56b16d5130f218492428eb459364b8ada9
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7693071"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7827451"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Einrichten automatisierter Builds für UWP-Apps
 
@@ -82,7 +82,7 @@ Mit dieser Aufgabe werden die in Ihrem Projekt definierten NuGet-Pakete wiederhe
 
 #### <a name="configure-the-build-solution-build-task"></a>Konfigurieren der Buildaufgabe „Projektmappe erstellen“
 
-Mit dieser Aufgabe wird jede Lösung, die im Arbeitsordner auf Binärdateien und erzeugt die Ausgabedatei für app-Paket kompiliert.
+Mit dieser Aufgabe wird jede Lösung, die in den Arbeitsordner zu den Binärdateien und erzeugt die Ausgabedatei für app-Paket kompiliert.
 In dieser Aufgabe werden MSBuild-Argumente verwendet.  Sie müssen den Wert dieser Argumente angeben. Orientieren Sie sich an der folgenden Tabelle.
 
 |**MSBuild-Argument**|**Wert**|**Beschreibung**|
@@ -224,7 +224,7 @@ Entfernen Sie dann das MSBuild-Argument `AppxBundle` aus dem Buildschritt.
 
 ## <a name="set-up-a-continuous-deployment-build-for-sideloading"></a>Einrichten eines Continuous Deployment-Builds zum Querladen
 
-Wenn dieser Buildtyp abgeschlossen ist, können Benutzer die app-Bundle-Datei aus dem artefaktabschnitt der Seite mit den Buildergebnissen herunterladen.
+Wenn diese Art von Build abgeschlossen ist, können Benutzer die app-Bundle-Datei aus dem artefaktabschnitt der Seite mit den Buildergebnissen herunterladen.
 Wenn Sie Betatests für die App durchführen möchten, indem Sie eine komplexere Verteilung erstellen, können Sie den HockeyApp-Dienst verwenden. Dieser Dienst bietet erweiterte Funktionen für Betatests, Benutzeranalysen und Absturzdiagnosen.
 
 ### <a name="applying-version-numbers-to-your-builds"></a>Anwenden von Versionsnummern auf Builds
@@ -298,13 +298,13 @@ Anschließend müssen Sie sicherstellen, dass der Buildschritt den folgenden Par
 /p:UapAppxPackageBuildMode=StoreUpload
 ```
 
-Dadurch wird eine Upload-Datei generiert, die an den Store übermittelt werden kann.
+Dadurch wird eine Uploaddatei generiert, die an den Store übermittelt werden kann.
 
 #### <a name="configure-automatic-store-submission"></a>Konfigurieren der automatischen Übermittlung an den Store
 
 Verwenden Sie für die Integration in die Store-API die Visual Studio Team Services-Erweiterung für den Microsoft Store, und senden Sie das App-Paket an den Store.
 
-Sie müssen Ihr Partner Center-Konto mit Azure Active Directory (AD) verbinden, und erstellen Sie eine app in die Anzeige der Anforderungen zu authentifizieren. Befolgen Sie dazu die Anweisungen auf der Seite der Erweiterung.
+Sie müssen Ihr Partner Center-Konto mit Azure Active Directory (AD) verbinden, und erstellen Sie eine app in Ihrer AD, um die Anforderungen zu authentifizieren. Befolgen Sie dazu die Anweisungen auf der Seite der Erweiterung.
 
 Nachdem Sie die Erweiterung konfiguriert haben, können Sie die Buildaufgabe hinzufügen und mit der app-ID und den Speicherort der Uploaddatei konfigurieren.
 
@@ -331,7 +331,7 @@ Verwenden Sie zum Installieren von Apps das PowerShell-Skript `Add-AppDevPackage
 
 #### <a name="sideloading-your-app-with-the-windows-10-anniversary-update"></a>Querladen einer App mit dem Windows10 Anniversary Update
 
-In der Windows 10 Anniversary Update können Sie doppelklicken Sie auf die app-Paketdatei und Ihre app installieren, indem Sie die Schaltfläche "installieren" in einem Dialogfeld auswählen.
+In Windows 10 Anniversary Update können Sie doppelklicken Sie auf der app-Paketdatei und Ihre app durch Auswählen der Schaltfläche "installieren" in einem Dialogfeld installieren.
 
 ![Querladen in rs1](images/building-screen18.png)
 

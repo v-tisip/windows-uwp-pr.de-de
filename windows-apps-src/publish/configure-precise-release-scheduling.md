@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows10, UWP, Zeitplan, Veröffentlichung, Datum, starten
 ms.localizationpriority: medium
 ms.openlocfilehash: a1477a426a9cdf240e694efb19bd7521fcd734cb
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7693758"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7829121"
 ---
 # <a name="configure-precise-release-scheduling"></a>Konfigurieren des genauen Veröffentlichungszeitplans
 
@@ -28,7 +28,7 @@ Beachten Sie, dass Sie Datumsangaben im Abschnitt **Zeitplan** nicht konfigurier
 > [!IMPORTANT]
 > Das im Abschnitt "Zeitplan" angegebene Datum gilt nur für Kunden unter Windows10.
 >
->Wenn Ihre app zuvor veröffentlichten für frühere Betriebssystemversionen beliebiges Datum **Beenden des Erwerbs** unterstützt, die Sie auswählen, gilt nicht für diese Kunden; er werden die app mehr erwerben (es sei denn, Sie ein Update mit einer neuen Auswahl im Abschnitt [Sichtbarkeit](choose-visibility-options.md#discoverability) übermitteln oder wenn Sie **app nicht verfügbar machen,** in der **App-Übersicht** auswählen).
+>Wenn Ihre app zuvor veröffentlichten für frühere Betriebssystemversionen Datum **Beenden des Erwerbs** unterstützt, die Sie auswählen, gilt nicht für diese Kunden; Sie werden die app mehr erwerben (es sei denn, Sie ein Update mit einer neuen Auswahl im Abschnitt [Sichtbarkeit](choose-visibility-options.md#discoverability) übermitteln oder bei Auswahl von **app nicht verfügbar machen,** in der **App-Übersicht** ).
 
 
 ## <a name="base-schedule"></a>Basiszeitplan
@@ -58,7 +58,7 @@ Im Dropdownmenü **Stop acquisition** können Sie ein Datum und eine Uhrzeit fes
 
 Die Standardeinstellung für **Stop acquisition** ist "Never". Wählen Sie zum Ändern in der Dropdownliste **at** aus, und geben Sie wie oben beschrieben Datum und Uhrzeit ein. Am ausgewählten Datum und zur ausgewählten Uhrzeit können Kunden die App nicht mehr erwerben.
 
-Es ist wichtig zu verstehen, dass diese Option dieselbe Auswirkung hat, wie im Abschnitt [Sichtbarkeit](choose-visibility-options.md#discoverability) auswählen **dieser app sichtbar, aber nicht verfügbar machen** und Auswählen von **Erwerb beenden: jeder Kunde mit einem direkten Link sehen die Produkt-Store Angebot, aber sie können nur herunterladen, wenn sie das Produkt vor, gehören oder einen werbecode besitzen und ein Windows 10-Gerät.** Wenn Sie eine App überhaupt nicht mehr für Kunden anbieten möchten, klicken Sie in der App-Übersicht auf **Make app unavailable**. Weitere Informationen finden Sie unter [Entfernen einer App aus dem Store](guidance-for-app-package-management.md#removing-an-app-from-the-store).
+Es ist wichtig zu verstehen, dass diese Option dieselbe Auswirkung hat, wie im Abschnitt [Sichtbarkeit](choose-visibility-options.md#discoverability) wählen **diese app sichtbar, aber nicht verfügbar machen** und wählen **Erwerb beenden: alle Kunden mit einem direkten Link sehen die Produkt-Store Angebot, aber sie können nur herunterladen, wenn sie das Produkt vor, gehören oder einen werbecode besitzen und ein Windows 10-Gerät.** Wenn Sie eine App überhaupt nicht mehr für Kunden anbieten möchten, klicken Sie in der App-Übersicht auf **Make app unavailable**. Weitere Informationen finden Sie unter [Entfernen einer App aus dem Store](guidance-for-app-package-management.md#removing-an-app-from-the-store).
 
 > [!TIP]
 > Wenn Sie ein Datum auswählen, um **den Erwerb zu beenden**, und später feststellen, dass Sie die App wieder verfügbar machen möchten, können Sie eine neue Übermittlung erstellen und für **Stop acquisition** wieder **Never** festlegen. Die App wird wieder verfügbar, nachdem Ihre aktualisierte Übermittlung veröffentlicht wurde.

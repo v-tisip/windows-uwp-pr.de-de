@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows10, uwp, spiele, directx 11
 ms.localizationpriority: medium
 ms.openlocfilehash: 31c165d47beea8ee0e31a3213bdd0dbf0c2bc3d7
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7692641"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7826871"
 ---
 # <a name="directx-11-porting-faq"></a>DirectX11 – Häufig gestellte Fragen zur Portierung
 
@@ -44,7 +44,7 @@ Spiele, die noch immer die RDTSC-Anweisung verwenden, müssen aktualisiert werde
 
 Das Communityprojekt [DirectX-Toolkit (DirectXTK)](http://go.microsoft.com/fwlink/p/?LinkID=248929) bietet Hilfsklassen zur Verwendung mit Direct3D11.
 
-##  <a name="how-do-i-maintain-code-paths-for-the-desktop-and-the-microsoft-store"></a>Verwalten ich wie Codepfade für den Desktop und Microsoft Store?
+##  <a name="how-do-i-maintain-code-paths-for-the-desktop-and-the-microsoft-store"></a>Wie behalten ich Codepfade für den Desktop und Microsoft Store?
 
 
 Chuck Walbourns Artikelserie [Dual-Use Coding Techniques for Games](http://go.microsoft.com/fwlink/p/?LinkID=286210) bietet Informationen zum Freigeben von Code zwischen Desktop und Microsoft Store-Codepfaden.

@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 30be8d13c7e549f8ed75060f614de5bbcdb6284f
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7699937"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7855578"
 ---
 # <a name="tools-for-profiling-and-performance"></a>Tools für Profilerstellung und Leistung
 
 
 Microsoft bietet verschiedene Tools zur Verbesserung der Leistung Ihrer App für die universelle Windows-Plattform (UWP). Unter den folgenden Links finden Sie weitere Informationen zur Verwendung dieser Tools.
 
-**XAML-UI-Reaktionsfähigkeit Tools in Visual Studio**. Eines der besten Tools zum Messen der Auswirkung auf die Leistung innerhalb Ihrer app ist das XAML-UI-Reaktionsfähigkeit Tool. Dies wurde [aktualisiert](http://blogs.msdn.com/b/wpf/archive/2015/01/14/new-ui-performance-analysis-tool-for-wpf-applications.aspx) , um noch mehr Szenarien zu unterstützen.
+**Tool "XAML-UI-Reaktionsfähigkeit" in Visual Studio**. Eines der besten Tools zum Messen der Auswirkung auf die Leistung in Ihrer app ist die Tool "XAML-UI-Reaktionsfähigkeit". Dies wurde [aktualisiert](http://blogs.msdn.com/b/wpf/archive/2015/01/14/new-ui-performance-analysis-tool-for-wpf-applications.aspx) , um noch mehr Szenarien zu unterstützen.
 
 Siehe auch:
 

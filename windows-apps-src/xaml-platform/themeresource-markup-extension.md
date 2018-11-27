@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9466ec598fad090e31768d680b64ffea52688844
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7691295"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7847194"
 ---
 # <a name="themeresource-markup-extension"></a>{ThemeResource}-Markuperweiterung
 
@@ -136,9 +136,9 @@ In allen anderen Designverzeichnissen sind diese Pinsel ebenfalls definiert, z.B
 
 Hier ist der [**Color**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) -Wert ein weiterer **ThemeResource**-Verweis auf eine Systemressource. Wenn Sie auf eine Systemressource verweisen und diese als Reaktion auf eine Designänderung ändern möchten, sollten Sie zum Erstellen des Verweises das **ThemeResource**-Element verwenden.
 
-## <a name="windows8-behavior"></a>Windows8-Verhalten
+## <a name="windows8-behavior"></a>Windows8 Verhalten
 
-Windows8 hat die **ThemeResource** -Markuperweiterung nicht unterstützt, es steht Windows8.1 ab. Darüber hinaus wurde Windows8 nicht unterstützt dynamische Umschalten zwischen den designbezogenen Ressourcen für eine Windows-Runtime-app. Die App musste neu gestartet werden, damit die Designänderung für die XAML-Vorlagen und -Formate wirksam wurde. Dies ist eine gute benutzererfahrung gewährleistet, apps dringend empfohlen, kompilieren Sie neu und Ziel Windows8.1 sind, damit sie Formate verwenden können, mit **ThemeResource** Verwendungen können dynamisch zwischen Designs bei Benutzeraktionen. Apps, die für Windows8 jedoch auf Windows8.1 weiterhin die Windows8 Verhalten kompiliert wurden.
+Windows8 hat die **ThemeResource** -Markuperweiterung nicht unterstützt, ist es ab Windows8.1 verfügbar. Darüber hinaus wurde Windows8 nicht unterstützt dynamische Umschalten zwischen die designbezogenen Ressourcen für eine Windows-Runtime-app. Die App musste neu gestartet werden, damit die Designänderung für die XAML-Vorlagen und -Formate wirksam wurde. Dies ist eine gute benutzererfahrung gewährleistet, apps, damit diese Formate, mit **ThemeResource** Verwendungen verwenden können und dynamisch Designs zwischen können bei Benutzeraktionen dringend empfohlen, kompilieren Sie neu und Ziel Windows8.1 sind. Apps, die für Windows8 jedoch auf Windows8.1 weiterhin das Windows8 Verhalten kompiliert wurden.
 
 ## <a name="design-time-tools-support-for-the-themeresource-markup-extension"></a>Unterstützung von Entwurfszeittools für die **{ThemeResource}**-Markuperweiterung
 

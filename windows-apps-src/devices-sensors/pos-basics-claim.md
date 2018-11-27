@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 7169848084b587793ba1537ea3d6ad78d31892d5
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7698964"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7826639"
 ---
 # <a name="point-of-service-device-claim-and-enable-model"></a>POS-Gerät beanspruchen und aktivieren Sie Modell
 
@@ -19,7 +19,7 @@ ms.locfileid: "7698964"
 Nachdem Sie erfolgreich ein PointOfService-Geräteobjekt erfolgreich erstellt haben, müssen Sie es mithilfe der entsprechenden Beanspruchungsmethode für den Gerätetyp beanspruchen, bevor Sie das Gerät für die Ein- und Ausgabe verwenden können.  Die Beanspruchung gewährt der Anwendung einen exklusiven Zugriff auf viele Funktionen des Geräts, um sicherzustellen, dass eine Anwendung die Verwendung des Geräts durch eine andere Anwendung nicht beeinträchtigt.  Es kann jeweils nur eine Anwendung die exklusive Verwendung eines PointOfService-Geräts beanspruchen. 
 
 > [!Note]
-> Die Aktion Anspruch legt eine exklusive Sperre auf einem Gerät, aber nicht in den betriebsbereiten Zustand versetzt.  Weitere Informationen finden Sie in der [Gerät für die e/a-Vorgänge zu aktivieren](#Enable-device-for-I/O-operations) .
+> Die Aktion Anspruch stellt eine exklusive Sperre auf einem Gerät her, jedoch nicht in den betriebsbereiten Zustand versetzt.  Weitere Informationen finden Sie in der [Aktivieren Geräts für die e/a-Vorgänge](#Enable-device-for-I/O-operations) .
 
 ### <a name="apis-used-to-claim--release"></a>APIs verwendet, um beanspruchen / release
 
@@ -34,7 +34,7 @@ Nachdem Sie erfolgreich ein PointOfService-Geräteobjekt erfolgreich erstellt ha
 
 ## <a name="enable-device-for-io-operations"></a>Aktivieren des Geräts für die e/a-Vorgänge
 
-Die Aktion Anspruch einfach stellt einen exklusiven Zugriff auf das Gerät, aber nicht in den betriebsbereiten Zustand versetzt.  Um Ereignisse empfangen oder keine Ausgabevorgänge ausführen, müssen Sie das Gerät die **EnableAsync**aktivieren.  Im Gegensatz dazu können Sie **DisableAsync** zum Überwachen von Ereignissen über das verwendete Gerät oder eine Ausgabe beenden aufrufen.  Sie können auch **IsEnabled** verwenden, um den Zustand des Geräts zu ermitteln.
+Die Aktion Anspruch einfach stellt einen exklusiven Zugriff auf das Gerät, aber nicht in den betriebsbereiten Zustand versetzt.  Um Ereignisse empfangen oder keine Ausgabevorgänge ausführen, müssen Sie das Gerät mithilfe der **EnableAsync**aktivieren.  Im Gegensatz dazu können Sie **DisableAsync** auf Ereignisse vom Gerät oder eine Ausgabe Überwachung beendet aufrufen.  Sie können auch **IsEnabled** verwenden, um den Zustand des Geräts zu ermitteln.
 
 ### <a name="apis-used-enable--disable"></a>Verwendete APIs aktivieren / deaktivieren
 
@@ -47,9 +47,9 @@ Die Aktion Anspruch einfach stellt einen exklusiven Zugriff auf das Gerät, aber
 |ClaimedPosPrinter | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.disableasyc) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedposprinter.isenabled) |
 |
 
-¹ Zeilenanzeige erfordert keine explizit aktivieren, das Gerät für die e/a-Vorgänge.  Aktivieren von wird automatisch durch die PointOfService-LineDisplay-APIs die e/a ausführen ausgeführt.
+¹ Zeilenanzeige erfordert keine explizit aktivieren, das Gerät für die e/a-Vorgänge.  Aktivieren der erfolgt automatisch durch die PointOfService-LineDisplay-APIs die e/a ausführen.
 
-## <a name="code-sample-claim-and-enable"></a>Codebeispiel: beanspruchen und aktivieren
+## <a name="code-sample-claim-and-enable"></a>Beispielcode: beanspruchen und aktivieren
 
 Im folgenden Beispiel ist gezeigt, wie Sie ein Strichcodescanner-Gerät beanspruchen, nachdem Sie erfolgreich ein Strichcodescanner-Objekt erstellt haben.
 
@@ -107,7 +107,7 @@ Der erste Schritt ist einen Ereignishandler erstellen, die auf das Ereignis **Re
     }
 ```
 
-Klicken Sie dann registrieren Sie den Ereignishandler im Zusammenhang mit Ihrer beanspruchtes Gerät
+Klicken Sie dann registrieren Sie den Ereignishandler im Zusammenhang mit Ihrem beanspruchtes Gerät
 
 ```Csharp
     BarcodeScanner barcodeScanner = await BarcodeScanner.FromIdAsync(DeviceId);
