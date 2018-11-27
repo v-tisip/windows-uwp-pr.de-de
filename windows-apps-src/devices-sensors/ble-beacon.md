@@ -1,19 +1,17 @@
 ---
-author: msatranjr
 title: Bluetooth-Werbung
 description: Dieser Abschnitt enthält Artikel zur Integration von Bluetooth Low Energy (LE)-Ankündigungen in Apps für die Universelle Windows-Plattform (UWP) mithilfe der AdvertisementWatcher- and AdvertisementPublisher-APIs.
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.assetid: ff10bbc0-03a7-492c-b5fe-c5b9ce8ca32e
 ms.localizationpriority: medium
-ms.openlocfilehash: 38f850cfb811260758377d5404e01c8e540e7ec2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e9eafde0596ad3156f52a7a2f0a1566444a9836a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571671"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708480"
 ---
 # <a name="bluetooth-le-advertisements"></a>Bluetooth LE-Ankündigungen
 
@@ -45,7 +43,7 @@ Um Bluetooth LE-Grundfunktionalität in einer App für die Universelle Windows-P
 
 Bluetooth LE-Ankündigungen ermöglichen Ihrem Gerät, konstant eine spezifische Nutzlast („Ankündigung“ genannt) zu signalisieren. Diese Ankündigung kann von jedem Bluetooth LE-kompatiblen Gerät in der Nähe erkannt werden, wenn es für den Empfang dieser spezifischen Ankündigung eingerichtet wurde.
 
-> **Hinweis**: für Datenschutz für Benutzer, ist die Lebensdauer der der Ankündigung an diejenige der app gebunden. Sie können einen BluetoothLEAdvertisementPublisher erstellen und in einer Hintergrundaufgabe „Start“ aufrufen, um die Ankündigung im Hintergrund auszuführen. Weitere Informationen zu Hintergrundaufgaben finden Sie unter [Starten, Fortsetzen und Hintergrundaufgaben](https://msdn.microsoft.com/windows/uwp/launch-resume/index).
+> **Hinweis**: für Datenschutz für Benutzer, die Lebensdauer von der Ankündigung an diejenige Ihrer App gebunden. Sie können einen BluetoothLEAdvertisementPublisher erstellen und in einer Hintergrundaufgabe „Start“ aufrufen, um die Ankündigung im Hintergrund auszuführen. Weitere Informationen zu Hintergrundaufgaben finden Sie unter [Starten, Fortsetzen und Hintergrundaufgaben](https://msdn.microsoft.com/windows/uwp/launch-resume/index).
 
 ### <a name="basic-publishing"></a>Grundlegende Veröffentlichung
 

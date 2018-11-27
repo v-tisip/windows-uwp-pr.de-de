@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Portieren von OpenGLES2.0 zu Direct3D11
 description: Enthält Artikel, Übersichten und exemplarische Vorgehensweisen zum Portieren einer OpenGL ES 2.0-Grafikpipeline zu Direct3D 11 und zur Windows-Runtime.
 ms.assetid: 1e1cf668-a15f-0c7b-8daf-3260d27c6d9c
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Opengl, Direct3D 11, Portieren, Grafiken
 ms.localizationpriority: medium
-ms.openlocfilehash: 6421f5a5a71828d5234a11bab9e442a5accecda5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9af5e42a27e21b8a4300edc4b8171f7abc64bac7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581035"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696871"
 ---
 # <a name="port-from-opengl-es-20-to-direct3d-11"></a>Portieren von OpenGL ES 2.0 zu Direct3D 11
 

@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: When you create a new add-on in Partner Center, you need to specify a product type and assign it a product ID.
 title: Festlegen von Produkt-ID und Produkttyp für das Add-On
 ms.assetid: 59497B0F-82F0-4CEE-B628-040EF9ED8D3D
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Add-Ons, IAP, dauerhaft, konsumbierbar, Abonnement, Produkt, Typ, Produkt-ID, In-App-Kauf, In-App-Produkt
 ms.localizationpriority: medium
-ms.openlocfilehash: 14d0cd40e0a7a170a835b000dc66ec683c2fb59c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 51807b96d80245b8dc5b22f1f376f603285d518a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7573566"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705827"
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a>Festlegen von Produkt-ID und Produkttyp für das Add-On
 
@@ -42,7 +40,7 @@ Wenn das Add-On erworben werden kann, verwendet (verbraucht) und dann erneut gek
 
 Es gibt zwei Arten konsumierbarer Add-Ons:
 - **Von Entwicklern verwaltetes Endverbraucher-Add-On**: Saldo und Erfüllung müssen in der App verwaltet werden. Wird auf allen Betriebssystemen unterstützt.
-- **Vom Store verwaltetes Endverbraucher-Add-On:** Der Saldo wird von Microsoft für alle Geräte des Kunden verfolgt, auf denen Windows10 (Version 1607 oder höher) ausgeführt wird; nicht unterstützt unter früheren Betriebssystemversionen. Um diese Option zu verwenden, muss das übergeordnete Produkt mit Windows10 SDK Version14393 oder höher kompiliert werden. Beachten Sie außerdem, dass Sie ein Store-verwaltete konsumierbare Add-on an den Store übermitteln können, bis das übergeordnete Produkt veröffentlicht wurde (obwohl Sie können die Übermittlung in Partner Center erstellen und bereits zu arbeiten sie zu einem beliebigen Zeitpunkt damit). Sie müssen die Menge für Ihr vom Store verwaltetes Endverbraucher-Add-on im Schritt **Eigenschaften** der Übermittlung eingeben.
+- **Vom Store verwaltetes Endverbraucher-Add-On:** Der Saldo wird von Microsoft für alle Geräte des Kunden verfolgt, auf denen Windows10 (Version 1607 oder höher) ausgeführt wird; nicht unterstützt unter früheren Betriebssystemversionen. Um diese Option zu verwenden, muss das übergeordnete Produkt mit Windows10 SDK Version14393 oder höher kompiliert werden. Beachten Sie außerdem, dass Sie eine Store-verwaltete Endverbraucher-Add-Add-On an den Store übermitteln können, bis das übergeordnete Produkt veröffentlicht wurde (obwohl Sie können die Übermittlung in Partner Center erstellen und bereits zu arbeiten sie zu einem beliebigen Zeitpunkt damit). Sie müssen die Menge für Ihr vom Store verwaltetes Endverbraucher-Add-on im Schritt **Eigenschaften** der Übermittlung eingeben.
 
 ### <a name="subscription"></a>Abonnement
 
@@ -56,7 +54,7 @@ Sie müssen das übergeordnete Produkt übermitteln, bevor Sie abonnierte Add-on
 
 ## <a name="product-id"></a>Produkt-ID
 
-Unabhängig vom Produkt, das Sie auswählen, müssen Sie eine eindeutige Produkt-ID für Ihr Add-On angeben. Dieser Name wird verwendet, um das Add-on im Partner Center zu identifizieren, und Sie können diese ID verwenden, [verweisen Sie auf das Add-on in Ihrem Code](../monetize/in-app-purchases-and-trials.md#how-to-use-product-ids-for-add-ons-in-your-code)verwenden.
+Unabhängig vom Produkt, das Sie auswählen, müssen Sie eine eindeutige Produkt-ID für Ihr Add-On angeben. Dieser Name wird verwendet, um das Add-on im Partner Center zu identifizieren, und Sie können diese ID verwenden, [finden Sie in das Add-on in Ihrem Code](../monetize/in-app-purchases-and-trials.md#how-to-use-product-ids-for-add-ons-in-your-code)verwenden.
 
 Folgende Dinge sollten bei der Wahl einer Produkt-ID beachtet werden:
 
@@ -65,6 +63,6 @@ Folgende Dinge sollten bei der Wahl einer Produkt-ID beachtet werden:
 -   Eine Produkt-ID darf maximal 100 Zeichen umfassen.
 -   Folgende Zeichen dürfen nicht in der Produkt-ID enthalten sein: **&lt; &gt; \* % & : \\ ? + ,**
 -   Die Produkt-ID für Kunden nicht sichtbar (Sie können später [einen Titel und eine Beschreibung](create-add-on-descriptions.md) eingeben, die für Kunden sichtbar sind.)
--   Wenn Ihre app zuvor veröffentlichten Windows Phone 8.1 unterstützt oder früher, Sie nur alphanumerische Zeichen, Punkte und/oder Unterstriche in Ihr Produkt-ID. verwenden müssen Bei Verwendung anderer Zeichen kann das Add-On von Kunden mit Windows Phone8.1 oder früheren Versionen nicht erworben werden.
+-   Wenn Ihre app zuvor veröffentlichten Windows Phone 8.1 unterstützt oder früher, Sie nur alphanumerische Zeichen, Punkte und/oder Unterstriche in die Produkt-ID verwenden müssen Bei Verwendung anderer Zeichen kann das Add-On von Kunden mit Windows Phone8.1 oder früheren Versionen nicht erworben werden.
 
  

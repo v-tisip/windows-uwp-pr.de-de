@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: f0c0325e-ad61-4238-a096-c37802db3d3b
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um detaillierte Daten zu einem spezifischen Fehler für Ihre App zu erhalten.
 title: Abrufen von Details zu einem Fehler in Ihrer App
-ms.author: mhopkins
 ms.date: 06/05/2018
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Fehler, Details
 ms.localizationpriority: medium
-ms.openlocfilehash: e947314da1309c3f31af292bc70addbad8b0d4d9
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5176e123d57b8bcc5d4981acc91b22329ad4c643
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566040"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702954"
 ---
 # <a name="get-details-for-an-error-in-your-app"></a>Abrufen von Details zu einem Fehler in Ihrer App
 

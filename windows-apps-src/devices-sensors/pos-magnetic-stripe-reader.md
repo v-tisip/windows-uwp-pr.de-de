@@ -1,18 +1,16 @@
 ---
-author: eliotcowley
 title: Magnetstreifenleser
 description: Indexthema für die Magnetstreifenleser UWP-Dokumentation.
-ms.author: elcowle
 ms.date: 10/04/2018
 ms.topic: article
 keywords: Windows 10, Uwp, zeigen Sie Service, pos, Magnetstreifenleser
 ms.localizationpriority: medium
-ms.openlocfilehash: 11653c10310726c79de9deef17a570207045ec4a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ed1fb5b393f96a793ff90ec0df354e04de270ccf
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577203"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704381"
 ---
 # <a name="magnetic-stripe-reader"></a>Magnetstreifenleser
 

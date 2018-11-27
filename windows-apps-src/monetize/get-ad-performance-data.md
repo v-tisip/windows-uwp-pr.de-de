@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 235EBA39-8F64-4499-9833-4CCA9C737477
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um aggregierte Anzeigenleistungsdaten für eine Anwendung während eines bestimmten Zeitraums und andere optionale Filter abzurufen.
 title: Abrufen von Anzeigenleistungsdaten
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Anzeigen, Leistung
 ms.localizationpriority: medium
-ms.openlocfilehash: 7310eeb04915933adc149165fa6774ed2f413814
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c6bec86929284e49e4e882597422d316276c0a33
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561575"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697503"
 ---
 # <a name="get-ad-performance-data"></a>Abrufen von Anzeigenleistungsdaten
 

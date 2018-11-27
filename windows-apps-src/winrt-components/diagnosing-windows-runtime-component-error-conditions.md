@@ -1,19 +1,17 @@
 ---
-author: msatranjr
 title: Diagnostizieren von Fehlerbedingungen für Komponenten für Windows-Runtime
 description: Dieser Artikel enthält zusätzliche Informationen zu Einschränkungen bei Komponenten für Windows-Runtime, die mit verwaltetem Code geschrieben wurden.
 ms.assetid: CD0D0E11-E68A-411D-B92E-E9DECFDC9599
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 833dd0a6447e9d0bb49c21a18d17bd7b0dc3455d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4733edba06b7042c436918e882556f86dfa00071
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570516"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699911"
 ---
 # <a name="diagnosing-windows-runtime-component-error-conditions"></a>Diagnostizieren von Fehlerbedingungen für Komponenten für Windows-Runtime
 

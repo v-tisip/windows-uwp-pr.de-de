@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Initialisieren von Direct3D11
 description: Hier wird veranschaulicht, wie Sie Direct3D 9-Initialisierungscode in Direct3D 11 konvertieren, und Sie erfahren, wie Sie Handles zum Direct3D-Gerät und zum Gerätekontext abrufen und DXGI zum Einrichten einer Swapchain verwenden.
 ms.assetid: 1bd5e8b7-fd9d-065c-9ff3-1a9b1c90da29
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, Spiele, Direct3D 11, Initialisierung, portieren, Direct3D 9
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f6aa5bca3ecc242e90b42081a0111358afdfa9b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 2aaf6dcc001a09e33588ac18898767b9cf92819c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580424"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707575"
 ---
 # <a name="initialize-direct3d-11"></a>Initialisieren von Direct3D11
 
@@ -75,7 +73,7 @@ Zuerst wird das Gerät erstellt. Dazu rufen wir eine Liste der Featureebenen ab,
 
 Nach dem Erstellen des Direct3D11-Geräts und -Kontexts kann die COM-Zeigerfunktion zum Abrufen der jeweils aktuellen Version der Schnittstellen verwendet werden, die über zusätzliche Funktionen verfügt. Dies ist stets zu empfehlen.
 
-> **Hinweis:**  D3D\_FEATURE\_LEVEL\_9\_1 (entspricht Shadermodell 2.0) ist die mindestens notwendige Stufe, die Ihr Microsoft Store-Spiel erforderlich ist, um zu unterstützen. (Die ARM-Pakete des Spiels erhalten keine Zertifizierung, wenn 9\_1 nicht unterstützt wird.) Wenn das Spiel auch einen Renderpfad für die Features von Shadermodell3 enthält, sollten Sie D3D_FEATURE\_LEVEL\_9\_3 in das Array einbeziehen.
+> **Hinweis:**  D3D\_FEATURE\_LEVEL\_9\_1 (entspricht Shadermodell 2.0) ist die mindestens notwendige Stufe, die Ihr Microsoft Store-Spiel erforderlich ist, um unterstützen. (Die ARM-Pakete des Spiels erhalten keine Zertifizierung, wenn 9\_1 nicht unterstützt wird.) Wenn das Spiel auch einen Renderpfad für die Features von Shadermodell3 enthält, sollten Sie D3D_FEATURE\_LEVEL\_9\_3 in das Array einbeziehen.
 
  
 
@@ -151,7 +149,7 @@ dxgiAdapter->GetParent(
 
 Da die DXGI-Factory jetzt vorhanden ist, können wir sie zum Erstellen der Swapchain verwenden. Als Nächstes werden die Parameter der Swapchain definiert. Das Oberflächenformat muss angegeben werden, und wir wählen [**DXGI\_FORMAT\_B8G8R8A8\_UNORM**](https://msdn.microsoft.com/library/windows/desktop/bb173059), weil es mit Direct2D kompatibel ist. Die Anzeigeskalierung, Multisampling und das Stereorendering werden deaktiviert, weil diese Funktionen in diesem Beispiel nicht verwendet werden. Da die Ausführung direkt in einem CoreWindow-Objekt erfolgt, können wir die Breite und Höhe auf der Einstellung 0 belassen und automatisch Vollbildwerte erhalten.
 
-> **Hinweis:**  immer den *SDKVersion* -Parameter für UWP-apps auf D3D11\_SDK\_VERSION festgelegt.
+> **Hinweis:**  immer legen den *SDKVersion* -Parameter auf D3D11\_SDK\_VERSION für UWP-apps.
 
  
 

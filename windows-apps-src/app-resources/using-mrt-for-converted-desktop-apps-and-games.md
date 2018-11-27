@@ -1,18 +1,16 @@
 ---
-author: ptorr-msft
 title: Verwenden von MRT für konvertierte Desktop-Apps und -Spiele
 description: Indem Sie Ihre .NET- oder Win32-App oder Ihr Spiel als AppX-Paket verpacken, können Sie das Ressourcenverwaltungssystem nutzen, um App-Ressourcen zu laden, die auf den Laufzeitkontext zugeschnitten sind. In diesem Thema werden die erforderlichen Techniken detailliert beschrieben.
-ms.author: ptorr
 ms.date: 10/25/2017
 ms.topic: article
 keywords: Windows10, UWP, mrt, pri. Ressourcen, Spiele, Centennial, Desktop App Converter, mui, Satellitenassembly
 ms.localizationpriority: medium
-ms.openlocfilehash: 927e0c5438ea11b751fba40cb76210d0bce112d4
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 620efc73502c741e415d210170ea53deefd4e974
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7576809"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706165"
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>Verwenden des Ressourcenverwaltungssystem für Windows 10 in älteren Apps oder Spielen
 
@@ -305,7 +303,7 @@ Nachdem die PRI-Datei jetzt erstellt wurde, können Sie das Paket erstellen und 
  * `/f` legt die zu verwendende Zuordnungsdatei fest (die im vorherigen Schritt erstellt wurde) 
  * `/p` legt den Namen des Ausgabepakets fest
  * `/o` legt ein Überschreiben der Ausgabedatei fest, wenn vorhanden
-0. Wenn das Paket erstellt wurde, muss es signiert werden. Die einfachste Methode zum Abrufen eines Signaturzertifikats wird durch ein leeres universelles Windows-Projekt in Visual Studio erstellen und Kopieren der `.pfx` -Datei erstellt, aber Sie können eine mithilfe von manuell erstellen der `MakeCert` und `Pvk2Pfx` Dienstprogramme gemäß [der **So erstellen ein app-Paket, das Signaturzertifikat** Thema auf MSDN] (https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx). 
+0. Wenn das Paket erstellt wurde, muss es signiert werden. Die einfachste Methode zum Abrufen eines Signaturzertifikats wird durch ein leeres universelles Windows-Projekt in Visual Studio erstellen und Kopieren der `.pfx` -Datei erstellt, aber Sie können manuell mit Erstellen der `MakeCert` und `Pvk2Pfx` Dienstprogramme gemäß [der **So erstellen Sie ein app-Paket, das Signaturzertifikat** Thema auf MSDN] (https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx). 
  * **Wichtig:** Wenn Sie ein Signaturzertifikat manuell erstellen, stellen Sie sicher, dass Sie die Dateien in einem anderen Verzeichnis als Ihr Quellprojekt oder die Paketquelle ablegen, andernfalls wird es möglicherweise in das Paket eingefügt, einschließlich des privaten Schlüssels!
 0. Verwenden Sie zum Signieren des Pakets den folgenden Befehl. Beachten Sie, dass der im Element `Identity` der Datei `AppxManifest.xml` angegebene `Publisher` mit dem `Subject` des Zertifikats übereinstimmen muss (hierbei handelt es sich **nicht** um das Element `<PublisherDisplayName>`; dieses ist der lokalisierte Anzeigename, der den Benutzern angezeigt wird). Ersetzen Sie wie gewohnt die `contoso_demo...`-Dateinamen mit den Namen für Ihr Projekt, und (**sehr wichtig**) stellen Sie sicher, dass die `.pfx`-Datei sich nicht im aktuellen Verzeichnis befindet (andernfalls wäre sie als Teil Ihres Pakets erstellt worden, einschließlich des privaten Signaturschlüssels!):
 

@@ -1,14 +1,13 @@
 ---
 title: Automatisieren des Starts für Apps der universellen Windows Plattform (UWP) in Windows10
 description: Mit der Protokoll- und Startaktivierung können Entwickler ihre UWP-Apps oder Spiele für automatisierte Tests automatisch starten.
-author: listurm
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e26c181d0cde9ff3e5b2952a8cf1f614d02cb35
-ms.sourcegitcommit: 4b522af988273946414a04fbbd1d7fde40f8ba5e
-ms.translationtype: HT
+ms.openlocfilehash: 123e2dfff909265673a711f480f5fe636590afa4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
-ms.locfileid: "1494187"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698449"
 ---
 # <a name="automate-launching-windows-10-uwp-apps"></a>Automatisieren des Starts von UWP-Apps unter Windows 10
 
@@ -210,5 +209,5 @@ void OnActivated(IActivatedEventArgs^ args)
 Zusammenfassend lässt sich sagen, dass für den Start der UWP-App verschiedene Methoden zur Verfügung stehen. Je nach Anforderungen und Anwendungsfällen können manche Methoden besser geeignet sein als andere. 
 
 ## <a name="see-also"></a>Weitere Informationen
-- [UWP auf XboxOne](index.md)
+- [UWP auf Xbox One](index.md)
 

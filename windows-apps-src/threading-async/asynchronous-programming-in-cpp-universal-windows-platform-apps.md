@@ -1,19 +1,17 @@
 ---
-author: normesta
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
 description: Dieser Artikel beschreibt die empfohlene Vorgehensweise zur Verwendung asynchroner Methoden in für VisualC++-komponentenerweiterungen (C++ / CX) mithilfe der Task-Klasse, die im Concurrency Namespace in "ppltasks.h" definiert.
 title: Asynchrone Programmierung in C++
-ms.author: normesta
 ms.date: 05/14/2018
 ms.topic: article
 keywords: Windows10, UWP, Threads, asynchron, C++
 ms.localizationpriority: medium
-ms.openlocfilehash: 33b110e713608260cd5c19544292e9211904a730
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 84f0da2f0b9642a817f4efb5b6d30a968c0803ff
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582120"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699871"
 ---
 # <a name="asynchronous-programming-in-ccx"></a>Asynchrone Programmierung in C++/CX
 > [!NOTE]

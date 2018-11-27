@@ -1,20 +1,18 @@
 ---
-author: Jwmsft
 description: Hier erfahren Sie, wie Sie Akzentfarben und Designs in Ihren UWP-Apps verwenden.
 title: Farbe in UWP-Apps
-ms.author: jimwalk
 ms.date: 4/7/2018
 ms.topic: article
 keywords: Windows10, UWP
 design-contact: karenmui
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: aebfb7dc55ef6f633e0afce5b1d0f562ded6663e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 55e93cdbeec5aad487d7c03c1877095dc13955b1
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578729"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708410"
 ---
 # <a name="color"></a>Farben
 
@@ -257,14 +255,14 @@ Weitere Informationen über die Verwendung der Pinsel finden Sie unter [XAML-Pin
 
 ## <a name="scoping-system-colors"></a>Begrenzen von Systemfarben
 
-Zusätzlich zur Definition von Ihre eigenen Farben in Ihrer app, können Sie auch unsere systematized Farben, die gewünschten Regionen in der gesamten app einen Bereich unter Verwendung des **ColorSchemeResources** -Tags. Mithilfe dieser API können Sie nicht nur einfärben und Design große Steuerelementgruppen gleichzeitig, indem Sie einige Eigenschaften, sondern auch bietet Sie viele andere System Vorteile, die Sie festlegen würde nicht normal mit definieren Ihre eigenen benutzerdefinierten Farben manuell erhalten:
+Zusätzlich zur Definition von Ihre eigenen Farben in Ihrer app, können Sie auch unsere systematized Farben, die gewünschten Regionen in der gesamten app einen Bereich unter Verwendung des **ColorSchemeResources** -Tags. Mithilfe dieser API können Sie nicht nur einfärben und Design große Gruppen von Steuerelementen gleichzeitig durch Festlegen von einige Eigenschaften, sondern auch Sie viele andere System, dass Sie die Vorteile bietet würde nicht in der Regel mit definieren Ihre eigenen benutzerdefinierten Farben manuell erhalten:
 
 - Eine beliebige Farbe mit **ColorSchemeResources** festgelegt werden mit hohem Kontrast.
-  * D. h. Ihrer app kann an weitere Personen ohne zusätzliche Design oder Dev Kosten zugegriffen werden
+  * D. h. Ihre app kann an mehrere Personen ohne zusätzliche Design oder Dev Kosten zugegriffen werden
 - Können Farben hellen, dunklen oder testanforderungen über beide Designs einfach durch das Festlegen einer Eigenschaft in der API
-- Farben festlegen auf **ColorSchemeResources** Kaskadieren sich zu alle ähnliche Steuerelemente, die ebenfalls dieses Systemfarbe verwenden
+- Farben festlegen auf **ColorSchemeResources** Kaskadieren sich zu alle ähnliche Steuerelemente, die auch Systemfarbe
   * Dadurch wird sichergestellt, dass Sie eine einheitliche Farbe Story in der gesamten app hat und gleichzeitig das Erscheinungsbild Ihrer Marke
-- Alle visuellen Zustände, Animationen und Deckkraft Varianten Effekte ohne stilistisch
+- Alle visuellen Zustände, Animationen und Deckkraft Variationen Effekte ohne stilistisch
 
 ### <a name="how-to-use-colorschemeresources"></a>So verwenden Sie ColorSchemeResources
 
@@ -276,13 +274,13 @@ ColorSchemeResources ist eine API, die mitteilt, dass das System, welche Ressour
 - Dark
   * Die Farbe Änderungen werden nur im [dunklen Design](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme) angezeigt werden.
 
-Festlegen dieser X: Key wird sichergestellt, dass Ihre Farben entsprechend auf das System- oder app-Design ändern, sollten Sie eine andere benutzerdefinierte Darstellung beim im Design möchten.
+Festlegen, X: Key wird sichergestellt, dass Ihre Farben entsprechend auf das System- oder app-Design ändern, sollten Sie eine andere benutzerdefinierte Darstellung in beiden Designs möchten.
 
 ### <a name="how-to-apply-scoped-colors"></a>So wenden Sie Bereichsbezogene Farben
 
-Begrenzen der Ressourcen über das **ColorSchemeResources** API in XAML können Sie nehmen alle Systemfarbe oder ein Pinsel, die in unserer Bibliothek [Designressourcen](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-theme-resources) und definieren sie innerhalb des Bereichs von einer Seite oder im Container.
+Begrenzen der Ressourcen über das **ColorSchemeResources** API in XAML können Sie alle Systemfarbe oder Pinsel, die in unserer Bibliothek [Designressourcen](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-theme-resources) und definieren sie innerhalb des Bereichs von einer Seite oder im Container.
 
-Beispielsweise, wenn Sie definiert zwei Systemfarben - **SystemBaseLowColor** und **SystemBaseMediumLowColor** in einem Raster, und klicken Sie dann zwei Schaltflächen auf der Seite platziert: eine innerhalb dieses Raster und eine außen:
+Beispielsweise, wenn Sie definiert zwei Systemfarben - **SystemBaseLowColor** und **SystemBaseMediumLowColor** in einem Raster, und klicken Sie dann zwei Schaltflächen auf der Seite eingefügt: innerhalb dieses Raster, und eine außen:
 
 ```xaml
 <Grid x:Name="Grid_A">
@@ -297,11 +295,11 @@ Beispielsweise, wenn Sie definiert zwei Systemfarben - **SystemBaseLowColor** un
 <Buton Content="Button_B"/>
 ```
 
-Erhalten Sie **Button_A** mit den angewendeten neuen Farben und **Button_B** gestalteten wie unser System Standardschaltfläche bleiben würde:
+Erhalten Sie **Button_A** mit den angewendeten neuen Farben und **Button_B** bleiben würde, wie unsere Standardschaltfläche System suchen:
 
 ![Bereichsbezogene Systemfarben auf-Taste](images/color/scopedcolors_cyan_button.png)
 
-Da alle unsere Systemfarben zu an andere Steuerelemente und Kaskadieren wirkt Festlegen von **SystemBaseLowColor** und **SystemBaseMediumLowColor** mehr als nur Schaltflächen sich jedoch. In diesem Fall-Steuerelemente wie **ToggleButton**, **RadioButton** und **Slider** auch diese Farbe ändert, erfolgt nach wird diesen Steuerelementen oberhalb des Rasters Exampl Bereich versetzt werden soll.
+Da alle unsere Systemfarben zu an andere Steuerelemente und Kaskadieren wirkt Festlegen von **SystemBaseLowColor** und **SystemBaseMediumLowColor** mehr als nur Schaltflächen sich jedoch. In diesem Fall steuert wie **ToggleButton**, **RadioButton** und **Slider** auch diese Farbe ändert, erfolgt nach wird diese Steuerelemente vorgesehen ist, oberhalb des Rasters Exampl Bereich ist.
 Wenn Sie ein System Farbe ändern *, nur eine einzelne Steuerelemente* einschränken möchten, können Sie dies tun, durch die Definition von **ColorSchemeResources** innerhalb des Steuerelements Ressourcen:
 
 ```xaml
@@ -316,11 +314,11 @@ Wenn Sie ein System Farbe ändern *, nur eine einzelne Steuerelemente* einschrä
 </Grid>
 <Button Content="Button_B"/>
 ```
-Sie müssen im Wesentlichen genaue das gleiche wie vor, aber nun von anderen Steuerelementen hinzugefügt und das Raster werden nicht erlernbare ändert sich die Farbe. Dies ist, da diese Systemfarben nur auf **Button_A** beschränkt sind.
+Sie müssen im Wesentlichen genaue das gleiche wie vor, aber nun von anderen Steuerelementen hinzugefügt und das Raster werden nicht erlernbare ändert sich die Farbe. Dies ist, da diese Systemfarben nur auf **Button_A** beschränkt werden.
 
 ### <a name="nesting-scoped-resources"></a>Schachtelung beschränkt Ressourcen
 
-Die Schachtelung von Systemfarben ist auch möglich, und erfolgt dies durch das Platzieren von **ColorSchemeResources** in der geschachtelten Elemente Ressourcen innerhalb des Markups von Ihrer app-Layout:
+Schachtelung von Systemfarben ist auch möglich, und erfolgt dies durch das Platzieren von **ColorSchemeResources** in der geschachtelten Elemente innerhalb des Markups von Ihrer app-Layout Ressourcen:
 
 ```xaml
 <Grid x:Name="Grid_A">
@@ -343,17 +341,17 @@ Die Schachtelung von Systemfarben ist auch möglich, und erfolgt dies durch das 
 </Grid>
 ```
 
-In diesem Beispiel **Button_A** erbt Farben in **Grid_A**Ressourcen definieren und **Schaltfläche geschachtelt** ist Farben von **Grid_B**Ressourcen erben. Das bedeutet, dass, die alle anderen Steuerelemente in **Grid_B** platziert wird durch die Erweiterung überprüfen oder **Grid_B**Ressourcen zunächst anwenden, bevor überprüfen oder **Grid_A**Ressourcen anwenden und schließlich unsere Standardfarben anwenden, wenn nichts auf definiert die Seiten- oder app-Ebene.
+In diesem Beispiel **Button_A** erbt Farben in **Grid_A**Ressourcen definieren und **Schaltfläche geschachtelt** ist Farben **Grid_B**Ressourcen erben. Dies bedeutet, die alle anderen Steuerelemente in **Grid_B** platziert wird durch die Erweiterung überprüfen oder **Grid_B**Ressourcen zunächst anwenden, bevor überprüfen oder anwenden **Grid_A**Ressourcen, und schließlich unsere Standardfarben anwenden, wenn nichts auf definiert die Seiten- oder app-Ebene.
 
 Dies eignet sich für eine beliebige Anzahl von geschachtelten Elementen, dessen Ressourcen Farbe Definitionen verfügen.
 
-### <a name="scoping-with-a-resourcedictionary"></a>Mit einem ResourceDictionary begrenzen
+### <a name="scoping-with-a-resourcedictionary"></a>Bereiche mit einem ResourceDictionary
 
-Sie sind nicht auf einem Container oder Ressourcen der Seite beschränkt und können auch diese Systemfarben in einem ResourceDictionary, die dann zusammengeführt werden kann in jedem Gültigkeitsbereich die Möglichkeit, die Sie in der Regel ein Wörterbuch zusammenführen möchten definieren.
+Sie sind nicht auf einem Container oder den Ressourcen Seite beschränkt und können auch diese Systemfarben in einem ResourceDictionary, die dann zusammengeführt werden kann auf einem beliebigen Bereich die Möglichkeit, die Sie in der Regel ein Wörterbuch zusammenführen möchten.
 
 #### <a name="mycustomthemexaml"></a>MyCustomTheme.xaml
 
-Erstellen Sie zunächst ein ResourceDictionary. Dann platzieren Sie die **ColorSchemeResources** innerhalb der ThemeDictionaries und überschreiben Sie die gewünschte Systemfarben:
+Erstellen Sie zunächst ein ResourceDictionary. Platzieren Sie die **ColorSchemeResources** innerhalb der ThemeDictionaries und überschreiben Sie die gewünschten Systemfarben:
 
 ```xaml
 <ResourceDictionary
@@ -373,7 +371,7 @@ Erstellen Sie zunächst ein ResourceDictionary. Dann platzieren Sie die **ColorS
 
 #### <a name="mainpagexaml"></a>MainPage.xaml
 
-Auf der Seite, die Layout enthält führen Sie einfach zusammen Sie diese Wörterbuch im an den gewünschten Bereich:
+Auf der Seite, das Layout enthält führen Sie einfach zusammen Sie diese Wörterbuch im an den gewünschten Bereich:
 
 ```xaml
 <Grid x:Name="Grid_A">
@@ -389,11 +387,11 @@ Auf der Seite, die Layout enthält führen Sie einfach zusammen Sie diese Wörte
 </Grid>
 ```
 
-Nun können alle Ressourcen, Designs und benutzerdefinierte Farben in einem einzigen **MyCustomTheme** Ressourcenverzeichnis platziert und sein beschränkt, in denen ohne zusätzliche unübersichtliche in Ihrem Layout-Markup kümmern erforderlich.
+Nun können alle Ressourcen, Designs und benutzerdefinierte Farben in einem einzigen **MyCustomTheme** Ressourcenverzeichnis platziert und sein beschränkt, bei Bedarf ohne zusätzliche unübersichtliche in Ihrem Layout-Markup kümmern.
 
 ### <a name="other-ways-to-define-color-resources"></a>Andere Methoden, um die Farbressourcen definieren
 
-ColorSchemeResources ermöglicht es auch für Systemfarben platziert werden und als Wrapper, anstatt in Zeile direkt darin definieren:
+ColorSchemeResources kann auch Systemfarben platziert werden und als Wrapper, anstatt in Zeile direkt darin definieren:
 
 ``` xaml
 <ColorSchemeResources x:Key="Dark">

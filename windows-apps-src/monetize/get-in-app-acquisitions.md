@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 1599605B-4243-4081-8D14-40F6F7734E25
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um die aggregierten Kaufdaten für ein Add-On während eines bestimmten Zeitraums und andere optionale Filter abzurufen.
 title: Abrufen von Add-On-Käufen
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Add-On-Käufe
 ms.localizationpriority: medium
-ms.openlocfilehash: 4adb202df2806caeb0dc88469521b0f373886c43
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: cd7e907994943dbce83d195e80a15770833f7e4b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559009"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703334"
 ---
 # <a name="get-add-on-acquisitions"></a>Abrufen von Add-On-Käufen
 

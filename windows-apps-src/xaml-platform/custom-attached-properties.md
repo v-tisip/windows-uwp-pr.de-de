@@ -1,9 +1,7 @@
 ---
-author: jwmsft
 description: Erläutert, wie eine angefügte XAML-Eigenschaft als Abhängigkeitseigenschaft implementiert und die Accessorkonvention definiert wird, die erforderlich ist, damit die angefügte Eigenschaft in XAML verwendet werden kann.
 title: Benutzerdefinierte angefügte Eigenschaften
 ms.assetid: E9C0C57E-6098-4875-AA3E-9D7B36E160E0
-ms.author: jimwalk
 ms.date: 07/18/2017
 ms.topic: article
 keywords: Windows10, UWP
@@ -13,12 +11,12 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: de2d319f536b2c9d25d53e0b1ec2886831c66e12
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a92e1ad1c5bfb3960950b976da46ca16490d097e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573204"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702724"
 ---
 # <a name="custom-attached-properties"></a>Benutzerdefinierte angefügte Eigenschaften
 

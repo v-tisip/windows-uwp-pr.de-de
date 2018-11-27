@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: Arbeiten mit Dateien
 description: Hier erfahren Sie, wie Sie in der Universellen Windows-Plattform mit Dateien arbeiten.
-ms.author: twhitney
 ms.date: 05/01/2018
 ms.topic: article
 keywords: Erste Schritte, UWP, Windows10, Lernpfad, Dateien, Datei-E/A, Datei lesen, Datei schreiben, Datei erstellen, Text schreiben, Text lesen
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 68240e5b3d2fb476b731853e6a7d020ecd9e2887
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9350228585ec8108c41bd15de6179de0294140dc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7556952"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707871"
 ---
 # <a name="work-with-files"></a>Arbeiten mit Dateien
 
@@ -63,7 +61,7 @@ Die **FileIO**-Klasse bietet eine bequeme Möglichkeit, um Text in die Datei zu 
 
 ## <a name="read-text-from-a-file"></a>Lesen von Text aus einer Datei
 
-Wie beim Schreiben einer Datei beginnt das Lesen einer Datei durch die Angabe, wo sich die Datei befindet. Wir verwenden den gleichen Speicherort wie im obigen Beispiel. Anschließend verwenden wir die **FileIO** -Klasse, um den Inhalt zu lesen.
+Wie beim Schreiben einer Datei beginnt das Lesen einer Datei durch die Angabe, wo sich die Datei befindet. Wir verwenden den gleichen Speicherort wie im obigen Beispiel. Anschließend verwenden wir **FileIO** -Klasse, um den Inhalt zu lesen.
 
 ```csharp
 Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;

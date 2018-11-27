@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: The Health report in Partner Center lets you get data related to the performance and quality of your app, including crashes and unresponsive events.
 title: Integritätsbericht
 ms.assetid: 4F671543-1E91-4E59-88A3-638E3E64539A
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Integrität, Abstürze, reagiert nicht, App-Integrität, Integritätsdaten, Stapelüberwachung, CAB-Datei, Fehler, Fehler, Pdb, Symbole
 ms.localizationpriority: medium
-ms.openlocfilehash: 06cf6a7050f7598e86582393a92b92d1bdd877d1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c547cc933247e69fd208e8d3c297572815a5f2ea
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554784"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704717"
 ---
 # <a name="health-report"></a>Integritätsbericht
 
@@ -24,7 +22,7 @@ Sie können die Daten in diesem Bericht aber auch programmgesteuert mit der [Mic
 
 ## <a name="apply-filters"></a>Anwenden von Filtern
 
-Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist **72 H** (72 Stunden), Sie können stattdessen aber auch **30D** auswählen, um die Daten der letzten 30Tage anzuzeigen. Beachten Sie, dass Daten in Ihre lokale Zeitzone für die Ansicht **72 Stunden** und in UTC für die **30d** -Ansicht angezeigt werden.
+Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist **72 H** (72 Stunden), Sie können stattdessen aber auch **30D** auswählen, um die Daten der letzten 30Tage anzuzeigen. Beachten Sie, dass Daten in Ihre lokale Zeitzone für die Ansicht **72 H** und in UTC für die **30d** -Ansicht angezeigt werden.
 
 Sie können ebenfalls **Filter** erweitern, um alle Daten auf dieser Seite nach Paketversion, Markt und/oder Gerätetyp zu filtern.
 
@@ -77,13 +75,13 @@ Wählen Sie zum Anzeigen der **Fehlerdetails** für einen bestimmten Fehler den 
 Auf der Seite **Fehlerdetails** Sie sehen außerdem das **Stapel Verbreitung** -Diagramm, der angezeigt wird, die oben gestapelt, beigetragen hat, auf den Fehler, sortiert nach dem Prozentsatz, und das Diagramm **Gerätekonfiguration (30 D)** , die Details zu den Konfiguration von Geräten, die der Fehler aufgetreten ist. 
 
 
-## <a name="crash-free-sessions-and-devices-30d"></a>Absturz-freie Sitzungen und Geräte (30D)
+## <a name="crash-free-sessions-and-devices-30d"></a>Absturz-freie Sitzungen und Geräte (30d)
 
-Das **Sitzungen Absturz frei und Geräte** -Diagramm zeigt Prozent des Geräte oder benutzersitzungen, die nicht in den letzten 30 Tagen abgestürzt ist. Diese Informationen können Sie die zu verstehen, wie Allgemein Ihrer Abstürze Benutzer auswirken. Beispielsweise könnte eine app 10.000 Abstürze in einem Tag verfügen. Wenn 90 % der Geräte betroffen sind, dann können Sie wahrscheinlich, die als kritische klassifizieren und fungieren, um es sofort zu beheben. Wenn, die nur 5 % der Geräte, die Ihre App darstellt, möglicherweise die Priorität jedoch niedriger sein.
+Das **Sitzungen Absturz frei und Geräte** Diagramm zeigt den Prozentsatz der Geräte oder benutzersitzungen, die nicht in den letzten 30 Tagen abgestürzt ist. Diese Informationen können Sie die zu verstehen, wie Allgemein Ihrer Abstürze Ihre Benutzer auswirken. Beispielsweise könnte eine app 10.000 Abstürze in einem Tag verfügen. Wenn 90 % der Geräte betroffen sind, dann können Sie wahrscheinlich, die als wichtige klassifizieren und sofort Lösung fungieren. Wenn, die nur 5 % der Geräte, die Ihre App darstellt, möglicherweise die Priorität jedoch niedriger sein.
 
 Dieses Diagramm enthält zwei Registerkarten:
 - **Absturz-freie Geräte**: Zeigt den Prozentsatz der eindeutigen Geräte, die jedoch auf jeden Tag (während der vergangenen 30 Tage) tritt kein Fehler auf.
-- **Absturz-freie Sitzungen**: Zeigt den Prozentsatz von benutzersitzungen, die jedoch auf jeden Tag (während der vergangenen 30 Tage) tritt kein Fehler auf.
+- **Absturz-freie Sitzungen**: Zeigt den Prozentsatz der benutzersitzungen, die jedoch auf jeden Tag (in den letzten 30 Tagen) tritt kein Fehler auf.
 
 
  

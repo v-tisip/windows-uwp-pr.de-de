@@ -1,20 +1,18 @@
 ---
-author: Xansky
 ms.assetid: 4BF9EF21-E9F0-49DB-81E4-062D6E68C8B1
 description: Verwenden der Microsoft Store-Analyse-API zum programmgesteuerten Abrufen von Analysedaten für apps, die für Ihre oder das Ihrer Organisation registriert sind '' s Windows Partner Center-Konto.
 title: Zugreifen auf Analysedaten mit Store-Diensten
-ms.author: mhopkins
 ms.date: 06/04/2018
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste Microsoft Store-Analyse-API
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: aaf1675d102a714b32d2e59483f6c10ad704284f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c6bd559a630c1299c28ff135692ee15e9443180c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561365"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701714"
 ---
 # <a name="access-analytics-data-using-store-services"></a>Zugreifen auf Analysedaten mit Store-Diensten
 

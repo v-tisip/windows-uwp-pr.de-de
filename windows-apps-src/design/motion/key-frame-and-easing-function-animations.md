@@ -1,19 +1,17 @@
 ---
-author: Jwmsft
 title: Keyframeanimationen und Animationen für Beschleunigungsfunktionen
 ms.assetid: D8AF24CD-F4C2-4562-AFD7-25010955D677
 description: Lineare Keyframe-Animationen, Keyframe-Animationen mit einem „KeySpline“-Wert und Beschleunigungsfunktionen sind drei verschiedene Techniken für etwa das gleiche Szenario.
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 2076866cc31f50bd7ccfc6730bca5be96ffdc7c3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 145912f08075678c98dfb34ac491e123577c69e3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571219"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703979"
 ---
 # <a name="key-frame-animations-and-easing-function-animations"></a>Keyframe-Animationen und Animationen für Beschleunigungsfunktionen
 

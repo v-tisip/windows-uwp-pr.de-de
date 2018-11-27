@@ -1,10 +1,8 @@
 ---
-author: Jwmsft
 description: Sie können eine erweiterbare Strukturansicht erstellen, indem Sie die ItemsSource an eine hierarchische Datenquelle zu binden, oder Sie erstellen und TreeViewNode-Objekte selbst verwalten können.
 title: Strukturansicht
 label: Tree view
 template: detail.hbs
-ms.author: jimwalk
 ms.date: 10/02/2018
 ms.localizationpriority: medium
 pm-contact: predavid
@@ -15,12 +13,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: RS5
-ms.openlocfilehash: 1a7dfa2605607c3b2440a9ebc46a0b3eb6010287
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 753d0cd808daef96aa16c34c3962201ca73e5be9
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553341"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702168"
 ---
 # <a name="treeview"></a>TreeView
 

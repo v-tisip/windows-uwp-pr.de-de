@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Beschreibt das erweiterte JSON-Datenschema für Store-Produkte im Windows.Services.Store-Namespace.
 title: Datenschemata für Store-Produkte
-ms.author: mhopkins
 ms.date: 09/26/2017
 ms.topic: article
 keywords: Windows 10, UWP, ExtendedJsonData, Store-Produkte, Schema
 ms.localizationpriority: medium
-ms.openlocfilehash: 980fde1a222b5fb7ba2d4524469a9b6673cbabd3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8f51f0fffae3fa8e9a54214f78aa93fe39eab080
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565511"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7700136"
 ---
 # <a name="data-schemas-for-store-products"></a>Datenschemata für Store-Produkte
 

@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um Xbox Live Spielehubdaten abzurufen.
 title: Abrufen von Xbox Live Spielehubdaten
-ms.author: mhopkins
 ms.date: 06/04/2018
 ms.topic: article
 keywords: Windows10, Uwp, Store-Diensten, Microsoft Store-Analyse-API, Xbox Live Analyse, Spielehubs
 ms.localizationpriority: medium
-ms.openlocfilehash: f565f0fc3799ebf2d23f9dd7b9320323588f4caa
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 09c2a2c69e32d151c393c5a0652c1d9de7b4360e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555715"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697863"
 ---
 # <a name="get-xbox-live-game-hub-data"></a>Abrufen von Xbox Live Spielehubdaten
 

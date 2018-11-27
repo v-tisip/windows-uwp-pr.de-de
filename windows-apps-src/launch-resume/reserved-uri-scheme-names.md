@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: Reservierte Datei- und URI-Schemanamen
 description: Dieses Thema listet die reservierten Datei- und URI-Schemanamen auf, die für Ihre App nicht verfügbar sind.
 ms.assetid: 7428C4A2-1380-4EBB-9C2A-7DF7B5C468AE
-ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 91732a6c4abc082283dc397fb87ad38d9de452b8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 81bd9f699e899f895d55b2b2132681824ed40b7b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554651"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704571"
 ---
 # <a name="reserved-file-and-uri-scheme-names"></a>Reservierte Datei- und URI-Schemanamen
 

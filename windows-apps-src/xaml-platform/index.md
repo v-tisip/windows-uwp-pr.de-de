@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: b632a6cc-3503-4ab8-bfd1-dde731bd89ab
 description: Dieser Abschnitt enthält Themen, in denen das XAML-Framework für Universelle Windows-Plattform (UWP)-Apps erläutert wird.
 title: XAML-Plattform
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: fe9bad5afabca3ef0b9c782446e581aea61fe4dc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b725a823f31309c2419bcdc5095a78994d1929c0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567556"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696811"
 ---
 # <a name="xaml-platform"></a>XAML-Plattform
 

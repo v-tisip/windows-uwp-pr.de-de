@@ -1,19 +1,17 @@
 ---
-author: GrantMeStrength
 ms.assetid: 03A74239-D4B6-4E41-B2FA-6C04F225B844
 title: Hier erfahren Sie, wie Sie eine „Hallo Welt“-App (XAML) erstellen
 description: Verwenden Sie Extensible Application Markup Language (XAML) mit c#, um eine einfache Hello, World-app für die universelle Windows-Plattform (UWP) auf Windows 10 erstellen.
-ms.author: jken
 ms.date: 03/06/2017
 ms.topic: article
 keywords: Windows10, UWP, erste App, Hallo Welt
 ms.localizationpriority: medium
-ms.openlocfilehash: 28b30a592951017fb4a0b3803261cb0258be6ae3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 433536673efb9d2f17d822599051030b219ed02f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563337"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7700478"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Erstellen der App „Hello, world“ (XAML)
 

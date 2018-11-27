@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: You can publish line-of-business (LOB) apps directly to enterprises for volume acquisition via the Microsoft Store for Business or Microsoft Store for Education, without making the apps broadly available in the Store.
 title: Verteilen von branchenspezifischen Apps an Unternehmen
 ms.assetid: 2050126E-CE49-4DE3-AC2B-A572AC895158
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, LOB, Branche, Unternehmens-Apps, Store für Unternehmen, Store für Bildungseinrichtungen, Enterprise
 ms.localizationpriority: medium
-ms.openlocfilehash: d90a3b3b0eb216dbc07bbc331d7d461ed0f825c4
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: eecd7a3ff86de5db9693bf6ce597e2b1e00bb4ad
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554572"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705002"
 ---
 # <a name="distribute-lob-apps-to-enterprises"></a>Verteilen von branchenspezifischen Apps an Unternehmen
 
@@ -94,7 +92,7 @@ Nachdem die Übermittlung den Zertifizierungsprozess durchlaufen hat, kann die A
 
 Wenn Apps über den Microsoft Store für Unternehmen oder den Microsoft Store für Bildungswesen für ein Unternehmen verfügbar gemacht werden, wird sichergestellt, dass die App vom Store signiert wurde und den Standardrichtlinien des Stores entspricht.
 
-In einigen Fällen möchten Unternehmen möglicherweise nicht dass ihre BRANCHENSPEZIFISCHEN apps über das Partner Center (z. B. aus Compliance-Gründen oder für apps, die weitere Funktionen benötigt) übermittelt werden. In diesem Fall kann das Unternehmen Apps durch Querladen direkt auf Computern bereitstellen und müssen nicht den Microsoft Store für Unternehmen oder den Microsoft Store für Bildungseinrichtungen verwenden.
+In einigen Fällen möchten Unternehmen möglicherweise nicht dass ihre BRANCHENSPEZIFISCHEN apps über das Partner-Center (z. B. aus Compliance-Gründen oder für apps, die weitere Funktionen benötigt) übermittelt werden. In diesem Fall kann das Unternehmen Apps durch Querladen direkt auf Computern bereitstellen und müssen nicht den Microsoft Store für Unternehmen oder den Microsoft Store für Bildungseinrichtungen verwenden.
 
 Weitere Informationen finden Sie unter [Querladen von Branchen-Apps in Windows10](http://go.microsoft.com/fwlink/p/?LinkId=623433).
 

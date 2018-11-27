@@ -1,20 +1,18 @@
 ---
-author: v-angraf
 ms.assetid: 5aeb009c-1f2f-7c04-4477-cbe92c473174
 title: Netzwerkseite (Dev Home)
 description: Enthält Informationen über die Netzwerk-Seite die Dev Home-App für Xbox One.
-ms.author: v-angraf@microsoft.com
 ms.date: 08/09/2017
 ms.topic: article
 keywords: Windows10, UWP
 permalink: en-us/docs/xdk/devhome-networking.html
 ms.localizationpriority: medium
-ms.openlocfilehash: 5968a2dad76343a1aa589caadf62ec3cd823aed0
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 06d82b350cccfd90509f3b9f031de2785e91e0dc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580899"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702288"
 ---
 # <a name="networking-page-dev-home"></a>Netzwerkseite (Dev Home)
    

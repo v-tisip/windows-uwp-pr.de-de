@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: Learn how your app's packages are made available to your customers, and how to manage specific package scenarios.
 title: Leitfaden für die Verwaltung von App-Paketen
 ms.assetid: 55405D0B-5C1E-43C8-91A1-4BFDD336E6AB
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: e625522b0e9fd03fda49eb28bbedb20c00c15634
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0548ae9f9b3b33808cd7420eb542bcbac6a1a431
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573675"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704790"
 ---
 # <a name="guidance-for-app-package-management"></a>Leitfaden für die Verwaltung von App-Paketen
 
@@ -47,10 +45,10 @@ Diese Option hat dieselbe Wirkung, als ob Sie eine Übermittlung erstellt haben 
 
 Beachten Sie, dass Kunden, die die App bereits besitzen, sie weiterhin verwenden und neu herunterladen können (und sogar Updates erhalten können, wenn Sie zu einem späteren Zeitpunkt neue Pakete übermitteln).
 
-Nach der Bereitstellung der app aufgehoben wurde, müssen Sie weiterhin im Partner Center anzeigen. Wenn Sie die App Kunden erneut anbieten möchten, klicken Sie in der App-Übersicht auf **Make app available**. Nach dem Bestätigen ist die App für Neukunden innerhalb weniger Stunden verfügbar (es sei denn, es liegen Einschränkungen durch Einstellungen in der letzten Übermittlung vor).
+Nach der Bereitstellung der app aufgehoben wurde, werden Sie weiterhin im Partner Center anzeigen. Wenn Sie die App Kunden erneut anbieten möchten, klicken Sie in der App-Übersicht auf **Make app available**. Nach dem Bestätigen ist die App für Neukunden innerhalb weniger Stunden verfügbar (es sei denn, es liegen Einschränkungen durch Einstellungen in der letzten Übermittlung vor).
 
 > [!NOTE]
-> Wenn die App verfügbar bleiben, neuen Kunden mit bestimmten Betriebssystemversionen jedoch nicht mehr angeboten werden soll, können Sie eine neue Übermittlung erstellen und alle Pakete für die Betriebssystemversion entfernen, unter der Sie neue Verkäufe verhindern möchten. Wenn Sie bisher Pakete für Windows Phone 8.1 und Windows 10 hatten, und nicht die app auf WindowsPhone8.1 mehr anbieten beibehalten möchten, entfernen Sie alle Pakete WindowsPhone8.1 z. B. aus der Übermittlung. Nach der Veröffentlichung des Updates kann keine neuen Kunden unter WindowsPhone8.1 die app erwerben, Kunden, die bereits haben, können jedoch weiterhin verwenden). Allerdings wird die app weiterhin für neue Kunden unter Windows 10 verfügbar.
+> Wenn die App verfügbar bleiben, neuen Kunden mit bestimmten Betriebssystemversionen jedoch nicht mehr angeboten werden soll, können Sie eine neue Übermittlung erstellen und alle Pakete für die Betriebssystemversion entfernen, unter der Sie neue Verkäufe verhindern möchten. Wenn Sie bisher Pakete für Windows Phone 8.1 und Windows 10 hatten, und nicht die app auf WindowsPhone8.1 mehr anbieten beibehalten möchten, entfernen Sie alle Pakete WindowsPhone8.1 z. B. aus der Übermittlung. Nachdem das Update veröffentlicht wurde, werden keine neuen Kunden unter WindowsPhone8.1 können, die app erwerben, Kunden, die bereits haben, können jedoch weiterhin verwenden). Allerdings wird die app weiterhin für neue Kunden unter Windows 10 verfügbar.
 
 
 ## <a name="removing-packages-for-a-previously-supported-device-family"></a>Entfernen von Paketen für eine zuvor unterstützte Gerätefamilie
