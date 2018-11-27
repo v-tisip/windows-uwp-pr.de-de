@@ -1,23 +1,21 @@
 ---
-author: stevewhims
-description: Windows-Runtime ist ein System Verweis gezählt. und in einem solchen System es ist wichtig, dass Sie über die Bedeutung und die Unterscheidung zwischen, wissen starke und schwache Referenzen.
+description: Windows-Runtime ist ein System Verweis gezählt. und in einem solchen System es ist wichtig, dass Sie über die Bedeutung von und den Unterschied zwischen, wissen starke und schwache Referenzen.
 title: Schwache Referenzen in C++/WinRT
-ms.author: stwhi
 ms.date: 10/03/2018
 ms.topic: article
 keywords: Windows 10, Uwp, standard, c++, Cpp, Winrt, Projektion, eine sichere, schwache, Referenz
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: a27f0e6868826e88069e3ffd1fbdcd87242ec216
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 507b3cee71819df1d0163380a494e6a15936109f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579617"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710921"
 ---
 # <a name="strong-and-weak-references-in-cwinrt"></a>Starke und schwache Referenzen in C++ / WinRT
 
-Windows-Runtime ist ein System Verweis gezählt. und in einem solchen System ist es wichtig strong über die Bedeutung und die Unterscheidung zwischen, wissen Sie, und schwache Referenzen (und Verweise, die keiner, z. B. den impliziten *diesem* Zeiger sind). Sie in diesem Thema feststellen, kann zu wissen, wie Sie diese Verweise korrekt verwalten bedeuten den Unterschied zwischen ein zuverlässiges System, das problemlos ausgeführt werden kann, und, die möglicherweise nicht ordnungsgemäß stürzt ab. Durch die Bereitstellung von Hilfsfunktionen, die umfassende Unterstützung in der Programmiersprache verfügen [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Sie in der Mitte bei Ihrer Arbeit Erstellen komplexer Systeme einfach und ordnungsgemäß erfüllt.
+Windows-Runtime ist ein System Verweis gezählt. und bei einem solchen System ist es wichtig für starke über die Bedeutung der und die Unterscheidung zwischen, wissen Sie, und schwache Referenzen (und Verweise, die keiner, z. B. den impliziten *diesem* Zeiger sind). Sie in diesem Thema feststellen, kann zu wissen, wie Sie diese Verweise korrekt verwalten den Unterschied zwischen bedienbaren ein zuverlässiges System, das problemlos ausgeführt werden kann, und, die möglicherweise nicht ordnungsgemäß stürzt ab. Durch die Bereitstellung Hilfsfunktionen, die eine umfassende Unterstützung in der Programmiersprache verfügen [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Sie in der Mitte bei Ihrer Arbeit der Erstellung komplexer Systeme einfach und korrekt erfüllt.
 
 ## <a name="safely-accessing-the-this-pointer-in-a-class-member-coroutine"></a>Problemlos den Zugriff auf das *diesem* Zeiger in einer Coroutine Klassenmember
 
@@ -59,18 +57,18 @@ int main()
 }
 ```
 
-**MyClass::RetrieveValueAsync** funktioniert eine Weile, und schließlich liefert dann eine Kopie von der `MyClass::m_value` Datenmember. **RetrieveValueAsync** aufrufen bewirkt, dass eine asynchrone Objekt erstellt wird, und das Objekt hat einen impliziten *diesem* Zeiger (über die schließlich `m_value` zugegriffen wird).
+**MyClass::RetrieveValueAsync** funktioniert für eine Weile, und schließlich liefert dann eine Kopie der der `MyClass::m_value` Datenmember. **RetrieveValueAsync** aufrufen bewirkt, dass eine asynchrone Objekt erstellt wird, und das Objekt verfügt über eine impliziten *diesem* Zeiger (über die schließlich `m_value` zugegriffen wird).
 
 Hier ist die vollständige Abfolge von Ereignissen.
 
 1. Im **Hauptmenü**, wird eine Instanz von **MyClass** erstellt (`myclass_instance`).
 2. Die `async` Objekt wird erstellt, zeigen (über seine *dieser*) `myclass_instance`.
-3. Die Funktion **Winrt::Windows::Foundation::IAsyncAction::get** ein paar Sekunden blockiert und dann das Ergebnis der **RetrieveValueAsync**zurückgegeben.
+3. Die **Winrt::Windows::Foundation::IAsyncAction::get** -Funktion ein paar Sekunden lang blockiert und dann das Ergebnis der **RetrieveValueAsync**zurückgegeben.
 4. **RetrieveValueAsync** gibt den Wert der `this->m_value`.
 
-Schritt 4 ist sicher, solange *diese* gültig ist.
+Schritt 4 ist sicherer, solange *diese* gültig ist.
 
-Aber was geschieht, wenn die Klasseninstanz zerstört wird, bevor der asynchrone Vorgang abgeschlossen ist? Es gibt alle Arten von Möglichkeiten, die die Klasseninstanz Gültigkeitsbereich verlässt konnte, bevor die asynchrone Methode abgeschlossen wurde. Aber wir können sie durch Festlegen der Klasseninstanz zu simulieren `nullptr`.
+Aber was geschieht, wenn die Instanz zerstört wird, bevor der asynchrone Vorgang abgeschlossen ist? Es gibt alle Arten von Möglichkeiten, die die Instanz der umgebenden auftreten kann, bevor die asynchrone Methode abgeschlossen wurde. Aber wir können es simulieren, indem Sie die Instanz auf `nullptr`.
 
 ```cppwinrt
 int main()
@@ -86,11 +84,11 @@ int main()
 }
 ```
 
-Nach dem Punkt, in dem wir die Klasseninstanz löschen, sieht es wie wir direkt darauf erneut verweisen nicht aus. Aber natürlich das asynchrone-Objekt verfügt über einen *dieser* Zeiger darauf und versucht, die zum Kopieren von innerhalb der Klasseninstanz gespeicherten Wert zu verwenden. Die Coroutine ist eine Member-Funktion, und es geht davon aus, die *diesen* Zeiger mit verhüten verwenden können.
+Nach dem Punkt, in dem wir die Klasseninstanz zerstören, sieht sie wie wir direkt darauf erneut verweisen nicht. Aber natürlich das asynchrone-Objekt verfügt über einen *dieser* Zeiger darauf und versucht, die verwenden, um den Wert in der Klasseninstanz gespeicherte kopieren. Die Coroutine ist eine Member-Funktion, und es geht davon aus, die *diesen* Zeiger mit verhüten verwenden können.
 
-Aufgrund dieser Änderung auf den Code ausgeführt werden wir auf ein Problem in Schritt 4, da die Klasseninstanz zerstört wurde und *diese* ist nicht mehr gültig. Sobald das asynchrone Objekt versucht, auf die Variable innerhalb der Klasseninstanz zugreifen, wird es Absturz (oder eine Aktion nicht vollständig definiert).
+Aufgrund dieser Änderung an den Code ausgeführt werden wir auf ein Problem in Schritt 4, da die Klasseninstanz zerstört wurde und *diese* ist nicht mehr gültig. Sobald das asynchrone Objekt versucht, auf die Variable in der Klasseninstanz zuzugreifen, wird es stürzt ab (oder eine Aktion nicht vollständig definiert).
 
-Die Lösung besteht darin, geben Sie den asynchronen Vorgang&mdash;die Coroutine&mdash;eigene starken Verweis auf die Klasseninstanz. Im derzeitigen Zustand enthält die Coroutine effektiv einen unformatierten *diesem* Zeiger auf die Klasseninstanz; aber das ist nicht ausreicht, um eine Instanz der beibehalten werden soll.
+Die Lösung besteht darin, geben Sie den asynchronen Vorgang&mdash;die Coroutine&mdash;eigene starken Verweis auf die Klasseninstanz. Im derzeitigen Zustand enthält die Coroutine effektiv einen raw *dieser* Zeiger auf die Klasseninstanz; aber das ist nicht ausreicht, um eine Instanz der beibehalten werden soll.
 
 Um die Klasseninstanz beizubehalten, ändern Sie die Implementierung der **RetrieveValueAsync** siehe unten.
 
@@ -103,11 +101,11 @@ IAsyncOperation<winrt::hstring> RetrieveValueAsync()
 }
 ```
 
-Da C++ / WinRT-Objekt direkt oder indirekt abgeleitet aus der Vorlage [**WinRT:: Implements**](/uwp/cpp-ref-for-winrt/implements) , C++ / WinRT-Objekt rufen seine [**get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function) geschützt-Memberfunktion auf, um einen starken Verweis auf die *diesem* Zeiger abgerufen werden sollen. Beachten Sie, dass keine Notwendigkeit besteht für die eigentliche Verwendung der `strong_this` Variable; den Aufruf von **Get_strong** Ihre Verweiszähler erhöht und führt die impliziten *diesem* Zeiger gültig.
+Da C++ / WinRT-Objekt direkt oder indirekt abgeleitet aus der Vorlage [**WinRT:: Implements**](/uwp/cpp-ref-for-winrt/implements) , C++ / WinRT-Objekt rufen die [**get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function) geschützt-Memberfunktion auf, um einen starken Verweis auf *die Zeiger* abgerufen werden sollen. Beachten Sie, dass keine Notwendigkeit besteht für die eigentliche Verwendung der `strong_this` Variable; nur aufrufen **Get_strong** Ihre Verweiszähler erhöht und führt den impliziten *diesem* Zeiger gültig.
 
-Dies behebt das Problem, das wir hatten, wenn wir mit Schritt 4 erhalten haben. Auch wenn alle anderen Verweise auf die Klasseninstanz ausgeblendet werden, hat die Coroutine übernommen, die Vorsichtsmaßnahme garantieren, dass dessen Abhängigkeiten stabil sind.
+Dies behebt das Problem, das wir zuvor gehabt haben wir mit Schritt 4. Auch wenn alle anderen Verweise auf die Klasseninstanz ausgeblendet werden, hat die Coroutine übernommen, die Vorsichtsmaßnahme sichergestellt wird, dass dessen Abhängigkeiten stabil sind.
 
-Wenn eine starke Referenz nicht geeignet ist, können Sie stattdessen [**Implements:: get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function) rufen Sie einen schwachen Verweis auf *diese*aufrufen. Bestätigen Sie, dass Sie einen starken Verweis abrufen können, bevor Sie auf *diese*zugreifen.
+Wenn eine starke Referenz nicht geeignet ist, können Sie stattdessen [**Implements:: get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function) rufen Sie einen schwachen Verweis auf *diese*aufrufen. Bestätigen Sie, dass Sie einen starken Verweis vor dem Zugriff auf *diese*abrufen können.
 
 ```cppwinrt
 IAsyncOperation<winrt::hstring> RetrieveValueAsync()
@@ -127,7 +125,7 @@ IAsyncOperation<winrt::hstring> RetrieveValueAsync()
 }
 ```
 
-Im obigen Beispiel halten nicht der schwache Verweis Sie die Klasseninstanz aus gelöscht wird, wenn keine starken Verweise bleiben. Aber es ist eine Möglichkeit zur Überprüfung, ob eine starke Referenz vor dem Zugriff auf die Membervariable erworben werden kann.
+Im obigen Beispiel halten nicht der schwache Verweis Sie die Klasseninstanz aus gelöscht wird, wenn keine starken Verweise verbleiben. Aber es ist eine Möglichkeit prüfen, ob eine starke Referenz vor dem Zugriff auf die Membervariable erworben werden kann.
 
 ## <a name="safely-accessing-the-this-pointer-with-an-event-handling-delegate"></a>Problemlos den Zugriff auf die *dieser* Zeiger mit einem Delegaten für die Ereignisbehandlung
 
@@ -135,7 +133,7 @@ Im obigen Beispiel halten nicht der schwache Verweis Sie die Klasseninstanz aus 
 
 Allgemeine Informationen zur Ereignisbehandlung finden Sie unter [Verarbeiten von Ereignissen über Delegaten in C++ / WinRT](handle-events.md).
 
-Im vorherige Abschnitt hervorgehoben potenzielle Probleme mit der Objektlebensdauer in den Bereichen Coroutinen und Parallelität. Wenn Sie ein Ereignis mit Mitgliedsfunktion eines Objekts oder innerhalb verarbeiten müssen eine Lambda-Funktion innerhalb der Mitgliedsfunktion eines Objekts, können Sie über die relative Lebensdauer des Ereignisempfängers (das Objekt, das das Ereignis behandelt) und die Ereignisquelle (das Objekt vorstellen jedoch das Ereignis auslöst). Betrachten wir einige Codebeispiele.
+Im vorherige Abschnitt hervorgehoben potenzielle Probleme mit der Lebensdauer in den Bereichen Coroutinen und Parallelität. Aber wenn Sie ein Ereignis mit Mitgliedsfunktion eines Objekts oder verarbeiten eine Lambda-Funktion innerhalb der Mitgliedsfunktion eines Objekts, und Sie müssen Sie über die relative Lebensdauer des Ereignisempfängers (das Objekt, das das Ereignis behandelt) und die Ereignisquelle (das Objekt das Ereignis auslöst). Betrachten wir einige Codebeispiele.
 
 Im Codebeispiel unten definiert zuerst eine einfache **Ereignisquelle** -Klasse, die generische Ereignis auslöst, das indem Sie alle Delegaten behandelt wird, die sie hinzugefügt wurden. Dieses Beispiel-Ereignis tritt auf den Delegattyp [**Windows::Foundation::EventHandler**](/uwp/api/windows.foundation.eventhandler) verwenden, aber die Probleme und Problembehandlungen hier gelten für alle Delegattypen.
 
@@ -192,16 +190,16 @@ int main()
 }
 ```
 
-Das Muster besteht darin, dass Ereignisempfängers einen Lambda-Ereignishandler mit Abhängigkeiten für die *diesen* Zeiger. Bei jedem Ereignisempfängers die Ereignisquelle überlebt, überlebt es diese Abhängigkeiten. Und in diesen Fällen, die häufig verwendet werden, wird das Muster gut funktioniert. Einige dieser Fälle sind offensichtlich, z. B. wenn eine UI-Seite ein Ereignis verarbeitet, das von einem Steuerelement ausgelöst wird, das sich auf der Seite befindet. Die Seite die Schaltfläche überlebt&mdash;also Handler auch die Schaltfläche überlebt. Dies gilt immer dann, wenn der Empfänger die Quelle besitzt (z. B. als Datenelement), oder wenn der Empfänger und die Quelle gleichgeordnet sind und sich direkt im Besitz eines anderen Objekts befinden. Wenn Sie sicher sind, dass Sie einen Fall haben, in dem der Handler das *this*-Objekt nicht überleben wird, können Sie *this*normal verwenden, ohne Rücksicht auf eine starke oder schwache Lebensdauer zu nehmen.
+Das Muster besteht darin, dass der Empfänger Ereignis einen Ereignishandler Lambda-Funktion mit Abhängigkeiten für seine *diesen* Zeiger. Wenn der Ereignis-Empfänger die Ereignisquelle überlebt, überlebt es diese Abhängigkeiten. Und in diesen Fällen, die häufig verwendet werden, das Muster eignet sich gut. Einige dieser Fälle sind offensichtlich, z. B. wenn eine UI-Seite ein Ereignis verarbeitet, das von einem Steuerelement ausgelöst wird, das sich auf der Seite befindet. Die Seite die Schaltfläche überlebt&mdash;also der Handler auch die Schaltfläche überlebt. Dies gilt immer dann, wenn der Empfänger die Quelle besitzt (z. B. als Datenelement), oder wenn der Empfänger und die Quelle gleichgeordnet sind und sich direkt im Besitz eines anderen Objekts befinden. Wenn Sie sicher sind, dass Sie einen Fall haben, in dem der Handler das *this*-Objekt nicht überleben wird, können Sie *this*normal verwenden, ohne Rücksicht auf eine starke oder schwache Lebensdauer zu nehmen.
 
-Aber es gibt immer noch Fälle, in denen *diese* seine Verwendung nicht überlebt in einem Handler (einschließlich Handlern für Completion- und Progress-Ereignisse, die durch asynchrone Aktionen und Vorgänge ausgelöst werden), und es ist wichtig zu wissen, wie diese behandelt.
+Aber es gibt immer noch Fälle, in denen *diese* nicht überlebt seine Verwendung in einem Handler (einschließlich Handlern für Completion- und Progress-Ereignisse, die durch asynchrone Aktionen und Vorgänge ausgelöst werden), und es ist wichtig zu wissen, wie diese behandelt.
 
 - Wenn Sie eine Coroutine erstellen, um eine asynchrone Methode zu implementieren, dann ist dies möglich.
 - In seltenen Fällen mit bestimmten XAML-UI-Framework-Objekten (z. B. [**SwapChainPanel**](/uwp/api/windows.ui.xaml.controls.swapchainpanel)) ist dies möglich wenn der Empfänger finalisiert wird, ohne die Registrierung für die Ereignisquelle aufzuheben.
 
 ### <a name="the-issue"></a>Das Problem
 
-Diese nächste Version der **main** -Funktion simuliert, was geschieht, wenn der Empfänger Ereignis zerstört wird (z. B. es den gültigen Bereich verlässt) während die Ereignisquelle noch Auslösen von Ereignissen ist.
+Dieses nächste Version der **main** -Funktion simuliert, was geschieht, wenn der Empfänger Ereignis zerstört wird (z. B. es den gültigen Bereich verlässt) während die Ereignisquelle noch Auslösen von Ereignissen ist.
 
 ```cppwinrt
 int main()
@@ -216,12 +214,12 @@ int main()
 }
 ```
 
-Ereignisempfängers zerstört, aber der Lambda-Ereignishandler enthaltenen ist weiterhin für **das Ereignis** abonniert. Wenn das Ereignis ausgelöst wird, versucht der Lambda-Ausdruck, den *diesem* Zeiger zu dereferenzieren, der an diesem Punkt ungültig ist. Dies führt eine zugriffsverletzung durch Code im Handler (oder in der Fortsetzung einer Coroutine) versucht, es zu verwenden.
+Ereignisempfängers wird gelöscht, aber der Lambda-Ereignishandler darin ist weiterhin für **das Ereignis** abonniert. Wenn das Ereignis ausgelöst wird, versucht der Lambda-Ausdruck, den *diesem* Zeiger, dereferenzieren, der an diesem Punkt ungültig ist. Dies führt eine zugriffsverletzung durch Code im Ereignishandler (oder in der Fortsetzung einer Coroutine) versucht, es zu verwenden.
 
 > [!IMPORTANT]
-> Wenn Sie eine solchen Situation auftreten, müssen Sie über die Lebensdauer des *dieses* Objekts vorstellen; und davon, ob die aufgenommenen *dieses* Objekt die Aufnahme überlebt. Wenn dies nicht der Fall, dann verwenden Sie es mit einer starken oder eine schwache Referenz, wie weiter unten unten erläutert.
+> Wenn Sie eine solchen Situation auftreten, müssen Sie über die Lebensdauer der *dieses* Objekts vorstellen. und davon, ob das aufgenommenen *dieses* Objekt die Aufnahme überlebt. Wenn dies nicht der Fall, dann verwenden Sie es mit einer starken oder einen schwachen Verweis wie weiter unten unten erläutert.
 >
-> Oder&mdash;Wenn es für Ihr Szenario sinnvoll ist, und wenn threading-Überlegungen ermöglichen es auch&mdash;und dann eine andere Möglichkeit besteht darin, den Handler zu widerrufen, nachdem der Empfänger mit dem Ereignis oder im Destruktor des Empfängers fertig ist. Sehen Sie [einen registrierten Delegaten widerrufen](handle-events.md#revoke-a-registered-delegate).
+> Oder&mdash;Wenn es für Ihr Szenario sinnvoll ist, und wenn threading-Überlegungen ermöglichen auch&mdash;und dann eine andere Möglichkeit besteht darin, den Handler zu widerrufen, nachdem der Empfänger mit dem Ereignis oder im Destruktor des Empfängers fertig ist. Finden Sie in [einen registrierten Delegaten widerrufen](handle-events.md#revoke-a-registered-delegate).
 
 Dies ist, wie wir den Ereignishandler registriert werden.
 
@@ -232,7 +230,7 @@ event_source.Event([&](auto&& ...)
 });
 ```
 
-Die Lambda-Funktion wird automatisch alle lokalen Variablen als Verweis erfasst. Daher in diesem Beispiel konnten wir vorigen dies geschrieben haben.
+Der Lambda-Ausdruck erfasst automatisch alle lokalen Variablen durch einen Verweis auf. Daher in diesem Beispiel konnten wir vorigen dies geschrieben haben.
 
 ```cppwinrt
 event_source.Event([this](auto&& ...)
@@ -241,11 +239,11 @@ event_source.Event([this](auto&& ...)
 });
 ```
 
-In beiden Fällen sind wir einfach die unformatierte *diesem* Zeiger aufnehmen. Und die keine Auswirkung auf die Referenzzähler, sodass nichts verhindert das aktuelle Objekt zerstört wird.
+In beiden Fällen sind wir einfach den unformatierte *diesem* Zeiger erfassen. Und die keine Auswirkung auf die Referenzzähler, so dass nichts das aktuelle Objekt zerstört wird verhindert.
 
 ### <a name="the-solution"></a>Die Lösung
 
-Die Lösung besteht darin, eine starke Referenz zu erfassen. Eine starke Referenz *wird* der Verweiszähler und wird *unterstützt* , lassen Sie das aktuelle Objekt alive erhöht. Sie deklarieren Sie eine Variable Aufnahme (namens `strong_this` in diesem Beispiel), und initialisieren Sie es mit einem Aufruf von [**get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function), die einen starken Verweis auf unser *diesen* Zeiger abruft.
+Die Lösung besteht darin, eine starke Referenz zu erfassen. Eine starke Referenz *ist* erhöht die Referenzzähler, und es *ist* , lassen Sie das aktuelle Objekt aktiv. Sie deklarieren Sie eine Variable Aufnahme (aufgerufen `strong_this` in diesem Beispiel), und initialisieren Sie es mit einem Aufruf von [**get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function), die einen starken Verweis auf unser *diesen* Zeiger abruft.
 
 ```cppwinrt
 event_source.Event([this, strong_this { get_strong()}](auto&& ...)
@@ -254,7 +252,7 @@ event_source.Event([this, strong_this { get_strong()}](auto&& ...)
 });
 ```
 
-Sie können auch weglassen, die automatische Aufnahme des aktuellen Objekts und Zugriff auf das Datenelement über die Aufnahme-Variable anstelle von über den impliziten *dieses*.
+Sie können auch auslassen die automatische Erfassung des aktuellen Objekts und greifen Sie auf das Datenelement über die Aufnahme-Variable anstelle von über den impliziten *diese*.
 
 ```cppwinrt
 event_source.Event([strong_this { get_strong()}](auto&& ...)
@@ -263,7 +261,7 @@ event_source.Event([strong_this { get_strong()}](auto&& ...)
 });
 ```
 
-Wenn eine starke Referenz nicht geeignet ist, können Sie stattdessen [**Implements:: get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function) rufen Sie einen schwachen Verweis auf *diese*aufrufen. Bestätigen Sie, dass Sie einen starken Verweis weiterhin daraus abrufen können, bevor Zugriff auf Member.
+Wenn eine starke Referenz nicht geeignet ist, können Sie stattdessen [**Implements:: get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function) rufen Sie einen schwachen Verweis auf *diese*aufrufen. Bestätigen Sie, dass Sie einen starken Verweis weiterhin daraus abrufen können, bevor Sie den Zugriff auf Member.
 
 ```cppwinrt
 event_source.Event([weak_this{ get_weak() }](auto&& ...)
@@ -277,7 +275,7 @@ event_source.Event([weak_this{ get_weak() }](auto&& ...)
 
 ### <a name="if-you-use-a-member-function-as-a-delegate"></a>Wenn Sie eine Member-Funktion als Delegaten verwenden
 
-Als auch Lambda-Funktionen, diese Prinzipien gelten auch für die Verwendung einer Memberfunktion als den Delegaten. Die Syntax unterscheidet, also sehen wir uns etwas Code. Hier wird zunächst potenziell unsichere Member-Funktion Ereignishandler mithilfe eines unformatierten *dieses* Zeigers.
+Als auch Lambda-Funktionen, diese Grundsätze gelten auch für eine Member-Funktion als den Delegaten verwenden. Die Syntax unterscheidet, daher sehen wir uns etwas Code. Hier wird zunächst potenziell unsichere Member-Funktion Ereignishandler mithilfe eines unformatierten *dieses* Zeigers.
 
 ```cppwinrt
 struct EventRecipient : winrt::implements<EventRecipient, IInspectable>
@@ -296,15 +294,15 @@ struct EventRecipient : winrt::implements<EventRecipient, IInspectable>
 };
 ```
 
-Dies ist der standard, herkömmlichen Möglichkeit zum Verweisen auf ein Objekt und dessen Member-Funktion. Damit sicher angezeigt wird, können Sie&mdash;ab Version 10.0.17763.0 (Windows 10, Version 1809) des Windows SDK&mdash;herstellen, eine starke oder schwache Referenz auf den Punkt, wo der Handler registriert ist. An dieser Stelle wird bekanntermaßen Empfänger Event-Objekts immer noch verwendet werden.
+Dies ist der standard, herkömmlichen Möglichkeit zum Verweisen auf ein Objekt und dessen Member-Funktion. Um dies zu sicherer machen, können Sie&mdash;ab Version 10.0.17763.0 (Windows 10, Version 1809) des Windows SDK&mdash;herstellen, eine starke oder schwache Referenz auf den Punkt, in dem der Handler registriert ist. An dieser Stelle wird bekanntermaßen Empfänger Event-Objekts immer noch verwendet werden.
 
-Rufen Sie einfach eine starke Referenz [**Get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function) anstelle der unformatierten *diesem* Zeiger. C++ / WinRT stellt sicher, dass der resultierende Delegat einen starken Verweis auf das aktuelle Objekt enthält.
+Rufen Sie einfach [**Get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsgetstrong-function) anstelle der unformatierten *diesem* Zeiger, für eine starke Referenz. C++ / WinRT stellt sicher, dass der resultierende Delegat einen starken Verweis auf das aktuelle Objekt enthält.
 
 ```cppwinrt
 event_source.Event({ get_strong(), &EventRecipient::OnEvent });
 ```
 
-Rufen Sie für einen schwachen Verweis [**Get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function). C++ / WinRT stellt sicher, dass der resultierende Delegat einen schwachen Verweis enthält. In letzter Minute, im Hintergrund der Delegat versucht, den schwachen Verweis auf eine starke aufzulösen und nur die Memberfunktion aufruft, wenn dies erfolgreich ist.
+Rufen Sie für einen schwachen Verweis [**Get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsgetweak-function). C++ / WinRT stellt sicher, dass der resultierende Delegat eine schwache Referenz enthält. In letzter Minute, im Hintergrund der Delegat versucht, den schwachen Verweis auf eine starke aufzulösen und nur die Memberfunktion aufruft, wenn dies erfolgreich ist.
 
 ```cppwinrt
 event_source.Event({ get_weak(), &EventRecipient::OnEvent });
@@ -312,7 +310,7 @@ event_source.Event({ get_weak(), &EventRecipient::OnEvent });
 
 ### <a name="a-weak-reference-example-using-swapchainpanelcompositionscalechanged"></a>Eine schwache Referenz-Beispiel mit **SwapChainPanel::CompositionScaleChanged**
 
-In diesem Beispiel verwenden wir das Ereignis [**SwapChainPanel::CompositionScaleChanged**](/uwp/api/windows.ui.xaml.controls.swapchainpanel.compositionscalechanged) über eine andere Darstellung schwache Referenzen. Der Code registriert einen Ereignishandler mit einer Lambda einen schwachen Verweis auf den Empfänger.
+In diesem Beispiel verwenden wir das Ereignis [**SwapChainPanel::CompositionScaleChanged**](/uwp/api/windows.ui.xaml.controls.swapchainpanel.compositionscalechanged) über einem anderen Illustration schwache Referenzen. Der Code registriert einen Ereignishandler mit einer Lambda einen schwachen Verweis auf den Empfänger.
 
 ```cppwinrt
 winrt::Windows::UI::Xaml::Controls::SwapChainPanel m_swapChainPanel;
@@ -342,7 +340,7 @@ In der Lamba-Bedingung wird eine temporäre Variable erzeugt, die eine schwache 
 
 ## <a name="weak-references-in-cwinrt"></a>Schwache Referenzen in C++/WinRT
 
-Oben haben wir gesehen, schwache Verweise verwendet wird. Im Allgemeinen sind, ist dies eignet sich gut für zyklische Referenzen zu unterbrechen. Z. B. für die systemeigene Implementierung des XAML-basierte Benutzeroberflächen-Frameworks&mdash;aufgrund des historischen Designs des Frameworks&mdash;der schwache verweisen in C++ / WinRT ist erforderlich, um zyklische Referenzen zu verarbeiten. Außerhalb von XAML jedoch wahrscheinlich müssen Sie nicht schwache Referenzen verwenden (nicht, dass es nichts gibt grundsätzlich XAML-spezifischen über diese). Anstatt Sie sollten mehr häufig als nicht in der Lage, Entwerfen Sie Ihre eigenen C++ / WinRT-APIs so, dass zyklische Referenzen und schwache Referenzen vermieden. 
+Es wurden oben schwache Verweise verwendet wird. Im Allgemeinen sind, ist dies eignet sich gut für zyklische Referenzen zu unterbrechen. Z. B. für die systemeigene Implementierung des XAML-basierte Benutzeroberflächen-Frameworks&mdash;aufgrund des historischen Designs des Frameworks&mdash;der schwache verweisen in C++ / WinRT ist erforderlich, um zyklische Referenzen zu verarbeiten. Außerhalb von XAML jedoch wahrscheinlich müssen Sie nicht schwache Referenzen verwenden (nicht, dass es etwas ist grundsätzlich XAML-spezifischen über diese). Anstatt Sie sollten mehr häufig als nicht in der Lage, Entwerfen Sie Ihre eigenen C++ / WinRT-APIs so, dass zyklische Referenzen und schwache Referenzen vermieden. 
 
 Bei einem von Ihnen deklarierten Typ ist es für C++/WinRT nicht sofort ersichtlich, ob oder wann schwache Referenzen benötigt werden. Daher bietet C++/WinRT für die Strukturvorlage [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements) automatisch eine Unterstützung von schwache Referenzen. Von dieser werden Ihre eigenen C++/WinRT-Typen direkt oder indirekt abgeleitet. Dies kostet Sie nichts, es sei denn, Ihr Objekt wird tatsächlich auf [**IWeakReferenceSource**](/windows/desktop/api/weakreference/nn-weakreference-iweakreferencesource) abgefragt. Und Sie können sich explizit [gegen diese Unterstützung](#opting-out-of-weak-reference-support) entscheiden.
 

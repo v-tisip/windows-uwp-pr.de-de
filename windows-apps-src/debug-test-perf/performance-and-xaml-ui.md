@@ -1,26 +1,24 @@
 ---
-author: jwmsft
 ms.assetid: 64F7FC51-E8AC-4098-9C5F-0172E4724B5C
 title: Leistung
 description: Benutzer erwarten, dass ihre Apps zuverlässig und reibungslos funktionieren und den Akku nicht übermäßig beanspruchen.
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 3dfc4e5d3d2741cf36a1a9aae8c0c22feed5305e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b65a62c2a6182e3b120f8ae8cb6b5fe3a0bf45aa
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580142"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710582"
 ---
 # <a name="performance"></a>Leistung
 
 
 Benutzer erwarten, dass ihre Apps zuverlässig und reibungslos funktionieren und den Akku nicht übermäßig beanspruchen. Technisch gesehen ist die Leistung keine funktionale Anforderung. Wenn Sie die Leistung aber als Feature behandeln, hilft es Ihnen dabei, die Erwartungen der Benutzer zu erfüllen. Das Festlegen von Zielen und deren Messung sind wichtige Faktoren. Ermitteln Sie die für Sie leistungskritischen Szenarien, und legen Sie fest, was unter guter Leistung zu verstehen ist. Messen Sie die Ziele dann während des gesamten Lebenszyklus Ihres Projekts frühzeitig und häufig, um sicherzustellen, dass Sie Ihre Ziele erreichen. In diesem Abschnitt erfahren Sie, wie Sie Ihren Leistungsworkflow strukturieren, Animationsfehler und Probleme mit der Bildfrequenz beheben und Startzeit, Seitennavigationszeit und Speicherverwendung optimieren.
 
-Wenn Sie dies noch einem Schritt, die noch nicht erfolgt haben wir gesehen, erhebliche Leistungssteigerungen nur Ihre app in Windows 10 als Ziel die Portierung ist. Verschiedene XAML-Optimierungen (z. B. " [{X: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)") sind nur in Windows 10-apps verfügbar. [Portieren von apps für Windows 10](https://msdn.microsoft.com/library/windows/apps/Mt238321) und die Sitzung //build/ [Wechsel zu universellen Windows-Plattform](http://channel9.msdn.com/Events/Build/2015/3-741)angezeigt.
+Wenn Sie dies noch einem Schritt, die noch nicht erfolgt haben wir gesehen erhebliche Leistungssteigerungen nur Ihre app in Windows 10 als Ziel die Portierung ist. Verschiedene XAML-Optimierungen (z. B. " [{X: Bind}](https://msdn.microsoft.com/library/windows/apps/Mt204783)") sind nur in Windows 10-apps verfügbar. [Portieren von apps für Windows 10](https://msdn.microsoft.com/library/windows/apps/Mt238321) und die Sitzung //build/ [Wechsel zu universellen Windows-Plattform](http://channel9.msdn.com/Events/Build/2015/3-741)angezeigt.
 
 | Thema | Beschreibung |
 |-------|-------------|

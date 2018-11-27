@@ -1,19 +1,17 @@
 ---
-author: mithom
 title: Eingaben für Spiele
 description: In diesem Abschnitt wird die Arbeit mit Gamepads und anderen Eingabegeräten für Spiele für die Universelle Windows-Plattform (UWP) veranschaulicht.
 ms.assetid: 2DD0B384-8776-4599-9E52-4FC0AA682735
-ms.author: wdg-dev-content
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, Spiele, Eingabe
 ms.localizationpriority: medium
-ms.openlocfilehash: bb7d70c20aeb2b91d8a6db863e165e017810e924
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1f1daac8bc94d49c501307728c1e966ba89435f9
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579277"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707505"
 ---
 # <a name="input-for-games"></a>Eingaben für Spiele
 
@@ -45,7 +43,7 @@ Informationen zur Verwendung von Rennlenkrädern in Ihrem UWP-Spiel finden Sie u
 
 ### <a name="flight-sticks"></a>Steuerknüppel
 
-Steuerknüppel sind Eingabegeräte für Spiele, die das Verhalten der Steuerknüppel reproduzieren, die in Flugzeugen oder raumschiffen des befinden würde. Sie sind das perfekte Eingabegerät für die schnelle und genaue Steuerung von Fluggeräten.
+Steuerknüppel sind Eingabegeräte für Spiele, die das Gefühl eines Steuerknüppels reproduzieren reproduzieren, die in Flugzeugen oder raumschiffen des befinden würde. Sie sind das perfekte Eingabegerät für die schnelle und genaue Steuerung von Fluggeräten.
 
 Weitere Informationen zur Verwendung von Steuerknüppel in Ihrem UWP-Spiel finden Sie unter [Steuerknüppel](flight-stick.md).
 
@@ -53,7 +51,7 @@ Weitere Informationen zur Verwendung von Steuerknüppel in Ihrem UWP-Spiel finde
 
 Ein unformatierter Gamecontroller bietet eine generische Darstellung mit den typischen allgemeinen Eingaben eines Gamecontrollers. Diese Eingaben sind als einfache Arrays von unbenannten Schaltflächen, Hebeln und Knöpfen dargestellt. Mit einem unformatierten Gamecontroller kann ein Kunde benutzerdefinierte Eingabe-Zuordnungen erstellen, unabhängig von seinem verwendeten Controllertyp.
 
-Weitere Informationen zur Verwendung von unformatierten Gamecontrollern in Ihrem UWP-Spiel finden Sie unter [unformatierten Gamecontrollers](raw-game-controller.md).
+Weitere Informationen zur Verwendung von unformatierten Gamecontroller in Ihrem UWP-Spiel finden Sie unter [unformatierten Gamecontrollers](raw-game-controller.md).
 
 ### <a name="ui-navigation-controllers"></a>Benutzeroberflächen-navigationscontroller
 

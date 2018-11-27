@@ -1,19 +1,17 @@
 ---
-author: PatrickFarley
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
 title: Geräteportal für Xbox
 description: Hier erfahren Sie, wie Sie das Device Portal für Xbox One aktivieren.
-ms.author: pafarley
 ms.date: 02/12/2017
 ms.topic: article
 keywords: Windows 10, Uwp, geräteportal
 ms.localizationpriority: medium
-ms.openlocfilehash: 7182f67a7bffc303b9c3067d8b746f1b4f27b809
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0930e970af943329cac60d02a4bfe5986c21757a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554454"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710120"
 ---
 # <a name="device-portal-for-xbox"></a>Device Portal für Xbox
 
@@ -197,7 +195,7 @@ Dies ist ein leerer Arbeitsbereich, den Sie nach Belieben anpassen können. Sie 
 
 ### <a name="game-event-data"></a>Spiel Ereignisdaten
 
-Auf der Seite **Spiel Ereignisdaten** können Sie eine Echtzeit-Diagramm dieses Streams in die Anzahl der derzeit auf Ihrer Xbox One aufgezeichnete Ereignisse der Event Tracing for Windows (ETW)-Spiel anzeigen. Wenn game-Ereignisse auf dem System vorhanden sind, können Sie auch Details (Ereignisnamen, Ereignis vorkommen und den Titel des Spiels) anzeigen, jedes Ereignis in einer Datentabelle unter der Diagramm-Daten beschreibt. In der Tabelle ist nur verfügbar, wenn aufgezeichnete Ereignisse vorhanden sind.
+Auf der Seite **Spiel Ereignisdaten** können Sie eine Echtzeit-Diagramm, Streams in die Anzahl der Event Tracing for Windows (ETW)-Spiel der derzeit auf Ihrer Xbox One aufgezeichnete Ereignisse anzeigen. Wenn game-Ereignisse auf dem System vorhanden sind, können Sie auch Details (Ereignisnamen, Ereignis vorkommen und den Titel des Spiels) anzeigen, die beschreiben jedes Ereignis in einer Tabelle unter der Diagramm-Daten. In der Tabelle ist nur verfügbar, wenn Ereignisse aufgezeichnet vorhanden sind.
 
 ![Spiel Ereignisdaten](images/device-portal-xbox-22.PNG)
 

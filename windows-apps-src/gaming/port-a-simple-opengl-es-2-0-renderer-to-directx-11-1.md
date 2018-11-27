@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Portieren eines einfachen OpenGL ES 2.0-Renderers zu Direct3D 11
 description: Bei der ersten Portierungsübung beginnen wir mit den Grundlagen - Umstellen eines einfachen Renderers für einen sich drehenden Würfel mit Vertexschattierungen von OpenGLES2.0 auf Direct3D, damit er der Vorlage DirectX 11-App (Universelle Windows-App) aus Visual Studio2015 entspricht.
 ms.assetid: e7f6fa41-ab05-8a1e-a154-704834e72e6d
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Opengl, Direct3D 11, Portieren
 ms.localizationpriority: medium
-ms.openlocfilehash: e7541a8f54f64197c17acea5f1737e36b0e6f670
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 78bcf3c2cae53fba4e67ecd4b3bcc44adddde1bf
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559192"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707706"
 ---
 # <a name="port-a-simple-opengl-es-20-renderer-to-direct3d-11"></a>Portieren eines einfachen OpenGL ES 2.0-Renderers zu Direct3D 11
 
@@ -82,7 +80,7 @@ typedef struct
 
 Diese Struktur verfügt über eine Instanz und enthält alle erforderlichen Komponenten zum Rendern eines sehr einfach aufgebauten Gitters mit Vertexschattierung.
 
-> **Hinweis:** Any OpenGL ES 2.0-Code in diesem Thema basiert auf der Windows-API-Implementierung von der Khronos Group und Programmiersyntax Windows C verwendet.
+> **Hinweis:** Any OpenGL ES 2.0-Code in diesem Thema basiert auf der Windows-API-Implementierung von der Khronos Group, und Programmiersyntax Windows C verwendet.
 
  
 

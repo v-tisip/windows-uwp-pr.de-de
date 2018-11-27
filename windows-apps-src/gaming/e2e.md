@@ -1,19 +1,17 @@
 ---
-author: joannaleecy
 title: Handbuch zur Entwicklung von Spielen unter Windows10
 description: Ein umfassender Leitfaden mit Ressourcen und Informationen zur Entwicklung von Spielen für die universelle Windows-Plattform (UWP).
 ms.assetid: 6061F498-96A8-44EF-9711-68AE5A1218C9
-ms.author: joanlee
 ms.date: 04/16/2018
 ms.topic: article
 keywords: Windows10, Uwp, Spiele, Entwickeln von Spielen
 ms.localizationpriority: medium
-ms.openlocfilehash: 7481c1d0f64ccb25168200cdf5e6ccc068f769b9
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 58044fba24450c397ee58b1034429f2af8d23ed6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582039"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707627"
 ---
 # <a name="windows-10-game-development-guide"></a>Handbuch zur Entwicklung von Spielen unter Windows10
 
@@ -106,7 +104,7 @@ In diesem Handbuch finden Sie immer wieder direkte Links zu relevanten Dokumenta
 
 ### <a name="partner-center"></a>Partner Center
 
-[Registrieren Sie ein Entwicklerkonto im Partner Center](https://developer.microsoft.com/store/register) ist der erste Schritt beim Veröffentlichen Ihres Windows-Spiels. Mit einem Entwicklerkonto können Sie den Namen Ihres Spiels reservieren und kostenlose oder kostenpflichtige Spiele für alle Windows-Geräte an den Microsoft Store übermitteln. Sie können Ihr Spiel und Ihre spielinternen Produkte verwalten, ausführliche Analysen abrufen und Dienste aktivieren, die Spieler auf der ganzen Welt begeistern. 
+[Registrieren Sie ein Entwicklerkonto im Partner Center](https://developer.microsoft.com/store/register) ist der erste Schritt beim Veröffentlichen Ihres Spiels Windows. Mit einem Entwicklerkonto können Sie den Namen Ihres Spiels reservieren und kostenlose oder kostenpflichtige Spiele für alle Windows-Geräte an den Microsoft Store übermitteln. Sie können Ihr Spiel und Ihre spielinternen Produkte verwalten, ausführliche Analysen abrufen und Dienste aktivieren, die Spieler auf der ganzen Welt begeistern. 
 
 Microsoft bietet ebenfalls mehrere Entwicklerprogramme an, die Sie bei der Entwicklung und Veröffentlichung von Windows-Spielen unterstützen. Wir empfehlen angezeigt wird, wenn diese vor der Registrierung für ein Partner Center-Konto für Sie geeignet sind. Weitere Informationen finden Sie unter [Entwicklerprogramme](#developer-programs)
 
@@ -136,7 +134,7 @@ Treten Sie dem [ID@Xbox](http://www.xbox.com/Developers/id) bei, wenn Sie Zugrif
 
 #### <a name="idxbox"></a>ID@Xbox
 
-Das ID@Xbox-Programm unterstützt qualifizierte Spieleentwickler bei der eigenständigen Veröffentlichung für Windows und Xbox One. Wenn Sie für Xbox One entwickeln oder Ihr Windows10-Spiel mit XboxLive-Features wie Gamerscore, Erfolgen und Ranglisten versehen möchten, registrieren Sie sich bei ID@Xbox. Als ID@Xbox-Entwickler erhalten Sie Zugriff auf Tools und Supportleistungen, mit denen Sie Ihrer Kreativität freien Lauf lassen und Ihren Erfolg maximieren können. Es wird empfohlen, dass Sie auf Anwenden ID@Xbox ersten vor dem Registrieren für ein Entwicklerkonto im Partner Center.
+Das ID@Xbox-Programm unterstützt qualifizierte Spieleentwickler bei der eigenständigen Veröffentlichung für Windows und Xbox One. Wenn Sie für Xbox One entwickeln oder Ihr Windows10-Spiel mit XboxLive-Features wie Gamerscore, Erfolgen und Ranglisten versehen möchten, registrieren Sie sich bei ID@Xbox. Als ID@Xbox-Entwickler erhalten Sie Zugriff auf Tools und Supportleistungen, mit denen Sie Ihrer Kreativität freien Lauf lassen und Ihren Erfolg maximieren können. Es wird empfohlen, dass Sie zuweisen ID@Xbox vor dem Registrieren für ein Entwicklerkonto im Partner Center.
 
 <table>
     <colgroup>
@@ -1009,7 +1007,7 @@ Wenn Sie noch keine Erfahrungen mit der UWP-Programmierung haben und die Verwend
     </tr>
 </table>
 
-### <a name="windows-desktop-apisto-uwp"></a>Windows-Desktop APIsto UWP
+### <a name="windows-desktop-apisto-uwp"></a>Windows Desktop APIsto UWP
 
 Hier finden Sie einige Links, die Sie beim Wechsel von Windows-Desktop-Spielen zu UWP-Spielen unterstützen.
 
@@ -1167,7 +1165,7 @@ Anleitungen und Referenzen für die Implementierung von Audio in Spielen mit XAu
     </tr>
     <tr>
         <td>Hier erfahren Sie, wie Sie Windows Sonic in Ihre Spiele (Video) integrieren</td>
-        <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-002">Einführung in die räumliche Audiowiedergabe Funktionen für Xbox oder Windows</a></td>
+        <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-002">Einführung in die räumliche Audiowiedergabe Funktionen für Xbox und</a></td>
     </tr>
 </table>
 
@@ -1360,7 +1358,7 @@ Ihr Spiel wird im Menü „Start“ durch eine Kachel dargestellt. Über Kacheln
 
 ### <a name="enable-in-app-product-add-on-purchases"></a>Aktivieren von in-app-Produktkäufen (Add-on)
 
-Ein Add-on (in-app-Produkt) ist einen zusätzlichen Artikel, dass Spieler im Spiel erwerben können. Add-Ons sind spiellevels, Elemente oder alles andere, die Ihre Spieler interessant sein könnte. Entsprechend verwendet, können Add-ons Umsätze generieren und gleichzeitig das Spielerlebnis verbessern. Sie definieren und Veröffentlichen Ihres Spiels Add-ons über das Partner Center und in-app-Käufen im Code Ihres Spiels.
+Ein Add-on (in-app-Produkt) ist einen zusätzlichen Artikel, dass Spieler im Spiel erwerben können. Add-Ons sind spiellevels, Elemente und alles andere, die Ihre Spieler interessant sein könnte. Entsprechend verwendet, können Add-ons Umsätze generieren und gleichzeitig das Spielerlebnis verbessern. Sie definieren und Veröffentlichen Ihres Spiels Add-ons über das Partner Center und unterstützen von in-app-Käufen im Code Ihres Spiels.
 
 <table>
     <colgroup>
@@ -1572,7 +1570,7 @@ Verwenden Sie [Partner Center](https://partner.microsoft.com/dashboard) zum Ver�
     </colgroup>
     <tr>
         <td>Informationen zur Verwendung der Streaming-Installation und optionale Pakete (Video)</td>
-        <td><a href="https://channel9.msdn.com/Events/Build/2017/B8093">Nextgen UWP-app-Verteilung: Erstellen erweiterbare, Stream können, Componentizedapps</a></td>
+        <td><a href="https://channel9.msdn.com/Events/Build/2017/B8093">Nextgen UWP-app-Verteilung: Erstellen erweiterbare, Stream-fähig Componentizedapps</a></td>
     </tr>
     <tr>
         <td>Unterteilen und Gruppieren zum Aktivieren von Inhalten für die Streaming-Installation</td>

@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Zuordnung von DirectX9-Funktionen zu DirectX11-APIs
 description: Erfahren Sie, wie Sie die Features Ihres Direct3D9-Spiels mit Direct3D11 und der Universellen Windows-Plattform (UWP) verwenden können.
 ms.assetid: 3aa8a114-4e47-ae0a-9447-88ba324377b8
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, DirectX 9, DirectX 11, Portierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 8dcf1749f1e7db4d514466d6a753d6f8cace5713
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 56bb86706795e773d21e45263f640f9fc0aa596a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567834"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708330"
 ---
 # <a name="map-directx-9-features-to-directx-11-apis"></a>Zuordnung von DirectX9-Funktionen zu DirectX11-APIs
 
@@ -400,7 +398,7 @@ Ziehen Sie beim Konvertieren von Direct3D9-Formaten in DXGI-Formate die folgende
 <td align="left"><p>D3DFMT_R8G8_B8G8</p></td>
 <td align="left"><p>DXGI_FORMAT_G8R8_G8B8_UNORM</p>
 <div class="alert">
-<strong>Hinweis:</strong>  In Direct3D 9 wurden die Daten vom 255.0f vergrößert wurde, aber dies kann im Shader behandelt werden.
+<strong>Hinweis:</strong>  In Direct3D 9 wurden die Daten von 255.0f vergrößert wurde, aber dies kann im Shader behandelt werden.
 </div>
 <div>
  
@@ -414,7 +412,7 @@ Ziehen Sie beim Konvertieren von Direct3D9-Formaten in DXGI-Formate die folgende
 <td align="left"><p>D3DFMT_G8R8_G8B8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8_B8G8_UNORM</p>
 <div class="alert">
-<strong>Hinweis:</strong>  In Direct3D 9 wurden die Daten vom 255.0f vergrößert wurde, aber dies kann im Shader behandelt werden.
+<strong>Hinweis:</strong>  In Direct3D 9 wurden die Daten von 255.0f vergrößert wurde, aber dies kann im Shader behandelt werden.
 </div>
 <div>
  
@@ -428,7 +426,7 @@ Ziehen Sie beim Konvertieren von Direct3D9-Formaten in DXGI-Formate die folgende
 <td align="left"><p>D3DFMT_DXT2</p></td>
 <td align="left"><p>DXGI_FORMAT_BC1_UNORM & DXGI_FORMAT_BC1_UNORM_SRGB</p>
 <div class="alert">
-<strong>Hinweis:</strong>  DXT1 und DXT2 sind gleich aus Sicht der API-Hardware. Der einzige Unterschied besteht darin, ob prämultipliziertes Alpha verwendet wird, was von einer App nachverfolgt werden kann und kein separates Format erfordert.
+<strong>Hinweis:</strong>  DXT1 und DXT2 sind aus Sicht der API-Hardware identisch. Der einzige Unterschied besteht darin, ob prämultipliziertes Alpha verwendet wird, was von einer App nachverfolgt werden kann und kein separates Format erfordert.
 </div>
 <div>
  
@@ -442,7 +440,7 @@ Ziehen Sie beim Konvertieren von Direct3D9-Formaten in DXGI-Formate die folgende
 <td align="left"><p>D3DFMT_DXT4</p></td>
 <td align="left"><p>DXGI_FORMAT_BC2_UNORM & DXGI_FORMAT_BC2_UNORM_SRGB</p>
 <div class="alert">
-<strong>Hinweis:</strong>  DXT3 und DXT4 sind gleich aus Sicht der API-Hardware. Der einzige Unterschied besteht darin, ob prämultipliziertes Alpha verwendet wird, was von einer App nachverfolgt werden kann und kein separates Format erfordert.
+<strong>Hinweis:</strong>  DXT3 und DXT4 sind aus Sicht der API-Hardware identisch. Der einzige Unterschied besteht darin, ob prämultipliziertes Alpha verwendet wird, was von einer App nachverfolgt werden kann und kein separates Format erfordert.
 </div>
 <div>
  
@@ -508,7 +506,7 @@ Ziehen Sie beim Konvertieren von Direct3D9-Formaten in DXGI-Formate die folgende
 <td align="left"><p>D3DFMT_L16</p></td>
 <td align="left"><p>DXGI_FORMAT_R16_UNORM</p>
 <div class="alert">
-<strong>Hinweis:</strong>  verwenden .r Swizzle im Shader, um Rot für andere Komponenten zu D3D9-Verhaltens duplizieren.
+<strong>Hinweis:</strong>  verwenden .r Swizzle im Shader, um Rot für andere Komponenten zu D3D9-Verhaltens den swizzle duplizieren.
 </div>
 <div>
  
@@ -592,7 +590,7 @@ Ziehen Sie beim Konvertieren von Direct3D9-Formaten in DXGI-Formate die folgende
 <td align="left"><p>D3DDECLTYPE_SHORT2</p></td>
 <td align="left"><p>DXGI_FORMAT_R16G16_SINT</p>
 <div class="alert">
-<strong>Hinweis:</strong>  der Shader ruft SINT-Werte ab, aber wenn ganzzahlige Direct3D 9-Gleitkommawerte benötigt werden, St. gerade konvertiert werden kann einfach in float32 im Shader.
+<strong>Hinweis:</strong>  der Shader ruft SINT-Werte ab, wenn ganzzahlige Direct3D 9-Gleitkommawerte benötigt werden, kann SINT jedoch nur werden konvertiert einfach in float32 im Shader.
 </div>
 <div>
  
@@ -602,7 +600,7 @@ Ziehen Sie beim Konvertieren von Direct3D9-Formaten in DXGI-Formate die folgende
 <td align="left"><p>D3DDECLTYPE_SHORT4</p></td>
 <td align="left"><p>DXGI_FORMAT_R16G16B16A16_SINT</p>
 <div class="alert">
-<strong>Hinweis:</strong>  der Shader ruft SINT-Werte ab, aber wenn ganzzahlige Direct3D 9-Gleitkommawerte benötigt werden, St. gerade konvertiert werden kann einfach in float32 im Shader.
+<strong>Hinweis:</strong>  der Shader ruft SINT-Werte ab, wenn ganzzahlige Direct3D 9-Gleitkommawerte benötigt werden, kann SINT jedoch nur werden konvertiert einfach in float32 im Shader.
 </div>
 <div>
  

@@ -1,21 +1,19 @@
 ---
 description: Hier finden Sie einen Designleitfaden und Codierungsanweisungen für das Hinzufügen von Steuerelementen und Mustern zu Ihrer UWP-App. Sie finden mehr als 45leistungsstarke Steuerelemente für die Verwendung mit Ihrer App.
 title: UWP-Steuerelemente und -Muster – Entwicklung von Windows-Apps
-author: mijacobs
 keywords: UWP-Steuerelemente, Benutzeroberfläche, App-Steuerelemente
 label: Controls & patterns
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 11/16/2017
 ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
-ms.openlocfilehash: e28d557280ab253a09d5697f369c694e490d3c7d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c2f1a2b5ae514222ed6ef06cc7099a0261747dbc
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564574"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7709839"
 ---
 # <a name="controls-and-patterns-for-uwp-apps"></a>Steuerelemente und Muster für UWP-Apps
  
@@ -42,7 +40,7 @@ Das XAML-Framework bietet zahlreiche Anpassungsmöglichkeiten für die App-Darst
 :::row-end:::
 
 ## <a name="get-the-windows-ui-library"></a>Abrufen der Windows-UI-Bibliothek
-Einige Steuerelemente sind nur verfügbar, in der Windows-UI-Bibliothek. Um es zu erhalten, finden Sie in der [Windows-UI-Bibliothek Übersicht und Installation Anweisungen](/uwp/toolkits/winui/).
+Einige Steuerelemente sind nur verfügbar, in der Windows-UI-Bibliothek. Um es zu erhalten, finden Sie in der [UI-Bibliothek für Windows-Übersicht und Installation Anweisungen](/uwp/toolkits/winui/).
 
 ## <a name="alphabetical-index"></a>Alphabetischer Index 
 

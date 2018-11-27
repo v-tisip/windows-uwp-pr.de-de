@@ -1,19 +1,17 @@
 ---
-author: eliotcowley
 title: Einführung in Xbox One-Tools
 description: Xbox One-spezifisches Tool Dev Home (unter Verwendung des Windows Device Portal).
-ms.author: elcowle
 ms.date: 10/04/2017
 ms.topic: article
 keywords: Windows 10, UWP, Xbox One, Tools
 ms.assetid: 6eaf376f-0d7c-49de-ad78-38e689b43658
 ms.localizationpriority: medium
-ms.openlocfilehash: 71fd9f3ad1c3fcf02420502692518310b896f52a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ed106095d83ed0c6e055d22a1a0cf229380cff71
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580889"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7709091"
 ---
 # <a name="introduction-to-xbox-one-tools"></a>Einführung in Xbox One-Tools
 

@@ -1,11 +1,9 @@
 ---
-author: mijacobs
 description: Hier wird beschrieben, wie Sie mithilfe von Kontextbefehlen derartige Aktionen so implementieren können, dass bei allen Eingabearten die jeweils bestmögliche Benutzererfahrung gewährleistet ist.
 title: Kontextbefehle
 ms.assetid: ''
 label: Contextual commanding in collections
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 10/25/2017
 ms.topic: article
 keywords: Windows 10, UWP
@@ -14,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f06d7015fcb208b55fe0cb57b96eaecbc99317cc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1d520f811c9929721bfcb9d1c83fbff6a4891091
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568811"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711160"
 ---
 # <a name="contextual-commanding-for-collections-and-lists"></a>Kontextbefehle für Sammlungen und Listen
 

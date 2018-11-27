@@ -1,22 +1,20 @@
 ---
-author: msatranjr
 title: Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic
 description: Ab .NET Framework4.5 können Sie mit verwaltetem Code eigene Windows-Runtime-Typen erstellen, die in einer Komponente für Windows-Runtime gepackt sind.
 ms.assetid: A5672966-74DF-40AB-B01E-01E3FCD0AD7A
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e3b9ed2d256fb9ea8d38690a703baf7fbd3e7f0
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 52745a4fcd6b5a6b33982595f8c7c65c0bee3c32
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569041"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7709753"
 ---
 # <a name="creating-windows-runtime-components-in-c-and-visual-basic"></a>Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic
-Ab .NET Framework4.5 können Sie mit verwaltetem Code eigene Windows-Runtime-Typen erstellen, die in einer Komponente für Windows-Runtime gepackt sind. Diese Komponente können Sie in UWP-Apps (Universelle Windows-Plattform) mit C++, JavaScript, Visual Basic oder C# verwenden. In diesem Thema wird beschrieben, die Regeln zum Erstellen einer Komponente, und beschreibt einige Aspekte der .NET Framework-Unterstützung für die Windows-Runtime. Im Allgemeinen ist diese Unterstützung allen .NET Framework-Programmierern klar. Wenn Sie aber eine Komponente erstellen, die mit JavaScript oder C++ verwendet werden soll, müssen Sie auf die Unterschiede bei der Unterstützung der Windows-Runtime durch diese Sprachen achten.
+Ab .NET Framework4.5 können Sie mit verwaltetem Code eigene Windows-Runtime-Typen erstellen, die in einer Komponente für Windows-Runtime gepackt sind. Diese Komponente können Sie in UWP-Apps (Universelle Windows-Plattform) mit C++, JavaScript, Visual Basic oder C# verwenden. In diesem Thema wird beschrieben, die Regeln zum Erstellen einer Komponente, und einige Aspekte der .NET Framework-Unterstützung für die Windows-Runtime erläutert. Im Allgemeinen ist diese Unterstützung allen .NET Framework-Programmierern klar. Wenn Sie aber eine Komponente erstellen, die mit JavaScript oder C++ verwendet werden soll, müssen Sie auf die Unterschiede bei der Unterstützung der Windows-Runtime durch diese Sprachen achten.
 
 Wenn Sie eine Komponente nur für die Verwendung in UWP-Apps mit Visual Basic oder C# erstellen und die Komponente keine UWP-Steuerelemente enthält, sollten Sie die Verwendung der Vorlage **Klassenbibliothek** anstelle der Vorlage **Komponente für Windows-Runtime** in Betracht ziehen. Eine einfache Klassenbibliothek weist weniger Einschränkungen auf.
 
@@ -36,7 +34,7 @@ Intern können die Windows-Runtime-Typen in Ihrer Komponente alle .NET Framework
     -   von Typen abgeleitet sein, die nicht in der Windows-Runtime vorkommen, wie System.Exception und System.EventArgs.
 -   Alle öffentliche Typen müssen über einen Stammnamespace verfügen, der mit dem Assemblynamen übereinstimmt, und der Assemblyname darf nicht mit „Windows” beginnen.
 
-    > **Tipp:** standardmäßig Visual Studio-Projekte verfügen Namespacenamen, die Namen der Assembly übereinstimmen. In Visual Basic wird die Namespace-Anweisung für diesen Standardnamespace nicht im Code angezeigt.
+    > **Tipp:** standardmäßig verfügen Visual Studio-Projekten den Assemblynamen entsprechen. In Visual Basic wird die Namespace-Anweisung für diesen Standardnamespace nicht im Code angezeigt.
 
 -   Öffentliche Strukturen können nur öffentliche Felder als Member enthalten, und diese Felder müssen Werttypen oder Zeichenfolgen sein.
 -   Öffentliche Klassen müssen **versiegelt** (**NotInheritable** in Visual Basic) sein. Wenn das Programmiermodell Polymorphie erfordert, können Sie eine öffentliche Schnittstelle erstellen und diese in den Klassen implementieren, die polymorph sein müssen.
@@ -96,7 +94,7 @@ Wenn ein Typ mehrere Schnittstellen implementiert, können Sie jede Schnittstell
 
 In der Windows-Runtime werden IMap&lt;K, V&gt; und IMapView&lt;K, V&gt; mit IKeyValuePair durchlaufen. Wenn Sie diese Schnittstellen an verwalteten Code übergeben, werden sie als IDictionary&lt;TKey, TValue&gt; und IReadOnlyDictionary&lt;TKey, TValue&gt; angezeigt. Daher können Sie sie mit System.Collections.Generic.KeyValuePair&lt;TKey, TValue&gt; auflisten.
 
-Die Darstellungsweise von Schnittstellen in verwaltetem Code wirkt sich auf die Darstellungsweise der Typen aus, die diese Schnittstellen implementieren. Die PropertySet-Klasse implementiert z.B. den Typ IMap&lt;K, V&gt;, der in verwaltetem Code als IDictionary&lt;TKey, TValue&gt; erscheint. PropertySet wird angezeigt, als ob es IDictionary&lt;TKey, TValue&gt; anstelle von IMap&lt;K, V&gt; implementiert. In verwaltetem Code ist scheinbar eine Add-Methode vorhanden, die sich wie eine Add-Methode in .NET Framework-Wörterbüchern verhält. Eine Insert-Methode ist scheinbar nicht vorhanden. Sie finden dieses Beispiel im Thema [Exemplarische Vorgehensweise: Erstellen einer einfachen Komponente in c# oder Visual Basic und Aufrufen der Komponente über JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md).
+Die Darstellungsweise von Schnittstellen in verwaltetem Code wirkt sich auf die Darstellungsweise der Typen aus, die diese Schnittstellen implementieren. Die PropertySet-Klasse implementiert z.B. den Typ IMap&lt;K, V&gt;, der in verwaltetem Code als IDictionary&lt;TKey, TValue&gt; erscheint. PropertySet wird angezeigt, als ob es IDictionary&lt;TKey, TValue&gt; anstelle von IMap&lt;K, V&gt; implementiert. In verwaltetem Code ist scheinbar eine Add-Methode vorhanden, die sich wie eine Add-Methode in .NET Framework-Wörterbüchern verhält. Eine Insert-Methode ist scheinbar nicht vorhanden. Sie finden dieses Beispiel unter dem Thema [Exemplarische Vorgehensweise: Erstellen einer einfachen Komponente in c# oder Visual Basic und Aufrufen der Komponente über JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md).
 
 ## <a name="passing-managed-types-to-the-windows-runtime"></a>Übergeben von verwalteten Typen an die Windows-Runtime
 Wie bereits im vorherigen Abschnitt erwähnt, können einige Windows-Runtime-Typen als .NET Framework-Typen in den Signaturen von Komponentenmembern oder in den Signaturen von Windows-Runtime-Membern erscheinen, wenn Sie sie in der IDE verwenden. Wenn Sie .NET Framework-Typen an diese Member übergeben oder als Rückgabewerte von Komponentenmembern verwenden, werden sie dem Code auf der anderen Seite als der entsprechende Windows-Runtime-Typ dargestellt. Sie finden einige Beispiele für die Auswirkungen beim Aufruf Ihrer Komponente in JavaScript im Abschnitt „Zurückgeben verwalteter Typen aus der Komponente” unter [Exemplarische Vorgehensweise: Erstellen einer einfachen Komponente in C# oder Visual Basic und Aufrufen dieser Komponente über JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md).
@@ -210,7 +208,7 @@ function asyncExample(id) {
 
 Verwenden Sie für asynchrone Aktionen und Vorgänge, die die Abbruch- oder die Fortschrittsberichterstattung unterstützen, die [AsyncInfo](https://msdn.microsoft.com/library/system.runtime.interopservices.windowsruntime.asyncinfo.aspx)-Klasse, um eine gestartete Aufgabe zu generieren und die Abbruch- und Fortschrittsberichterstattungsfunktionen der Aufgabe mit den Abbruch- und Fortschrittsberichterstattungsfunktionen der entsprechenden Windows-Runtime-Schnittstelle zu verknüpfen. Ein Beispiel, das sowohl die Abbruch- als auch die Fortschrittsberichterstattung unterstützt, finden Sie unter [Exemplarische Vorgehensweise: Erstellen einer einfachen Komponente in C# oder Visual Basic und Aufrufen dieser Komponente über JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md).
 
-Sie können die Methoden der AsyncInfo-Klasse auch verwenden, wenn Ihre asynchrone Methode die Abbruch- oder Fortschrittsberichterstattung nicht unterstützt. Geben Sie keine Parameter für das Token und die [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx)-Schnittstelle an, wenn Sie eine Visual Basic-Lambda-Funktion oder eine anonyme C#-Methode verwenden. Wenn Sie eine C#-Lambda-Funktion verwenden, geben Sie einen Tokenparameter an, aber ignorieren Sie ihn. Das vorherige Beispiel, in dem die asasyncoperation&lt;TResult&gt; Methode sieht wie folgt aus, bei der Verwendung der [AsyncInfo.Run&lt;TResult&gt;(Func&lt;CancellationToken, Task&lt;TResult&gt;](https://msdn.microsoft.com/library/hh779740.aspx))-Methode stattdessen die Überladung:
+Sie können die Methoden der AsyncInfo-Klasse auch verwenden, wenn Ihre asynchrone Methode die Abbruch- oder Fortschrittsberichterstattung nicht unterstützt. Geben Sie keine Parameter für das Token und die [IProgress&lt;T&gt;](https://msdn.microsoft.com/library/hh138298.aspx)-Schnittstelle an, wenn Sie eine Visual Basic-Lambda-Funktion oder eine anonyme C#-Methode verwenden. Wenn Sie eine C#-Lambda-Funktion verwenden, geben Sie einen Tokenparameter an, aber ignorieren Sie ihn. Das vorherige Beispiel, in dem die asasyncoperation&lt;TResult&gt; -Methode, sieht wie folgt aus, bei der Verwendung der [AsyncInfo.Run&lt;TResult&gt;(Func&lt;CancellationToken, Task&lt;TResult&gt;](https://msdn.microsoft.com/library/hh779740.aspx))-Methode stattdessen die Überladung:
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -266,6 +264,6 @@ Nachdem Sie eine Komponente für Windows-Runtime für eigene Zwecke erstellt hab
 Weitere Informationen zu Visual Basic- und C#-Sprachfunktionen und zur .NET Framework-Unterstützung für die Windows-Runtime finden Sie unter [Visual Basic- und C#-Programmiersprachenreferenz](https://msdn.microsoft.com/library/windows/apps/xaml/br212458.aspx).
 
 ## <a name="related-topics"></a>Verwandte Themen
-* [.NET für UWP-apps-Übersicht](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
+* [.NET für UWP-apps (Übersicht)](https://msdn.microsoft.com/library/windows/apps/xaml/br230302.aspx)
 * [.NET für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/xaml/mt185501.aspx)
 * [Exemplarische Vorgehensweise: Erstellen einer einfachen Komponente für Windows-Runtime und Aufrufen der Komponente über JavaScript](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)

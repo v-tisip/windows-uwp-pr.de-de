@@ -1,24 +1,22 @@
 ---
-author: PatrickFarley
 ms.assetid: 16976d00-1564-49fe-81ad-2568e25e9e41
 title: Debugging, Tests und Leistung
 description: Verwenden Sie Microsoft Visual Studio und andere Tools zum Debuggen und Testen Sie Ihre app aus, und bereiten sie für den Microsoft Store-Zertifizierungsprozess.
-ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: a6651c6d1117648522f95c7e7c85aad11ceed42f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 757de9201d1cb7f753419024271f2be5c1aa67f4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555847"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710645"
 ---
 # <a name="debugging-testing-and-performance"></a>Debuggen, Testen und Leistung
 
 
-In diesem Abschnitt wird gezeigt, wie mit Microsoft Visual Studio debuggen, testen und Optimieren Sie Ihre app. Darüber hinaus enthält Tools wie das Windows Device Portal (für die Überwachung von Gerät, und klicken Sie mit der Konfiguration) und des Zertifizierungskits für Windows-App (Vorbereiten Ihrer app für den Microsoft Store).
+In diesem Abschnitt wird veranschaulicht, wie mit Microsoft Visual Studio debuggen, testen und Optimieren Sie Ihre app. Es enthält außerdem Tools wie das Windows Device Portal (für die Überwachung von Gerät, und klicken Sie mit der Konfiguration) und das Zertifizierungskit für Windows-Apps (Ihre app für den Microsoft Store vorbereiten).
 
 | Thema | Beschreibung |
 |-------|-------------|
@@ -26,7 +24,7 @@ In diesem Abschnitt wird gezeigt, wie mit Microsoft Visual Studio debuggen, test
 | [Testen und Debuggen von Tools für die Prozesslebensdauer-Verwaltung (Process Lifetime Management, PLM)](testing-debugging-plm.md) | Tools und Verfahren zum Debuggen und Testen der Kompatibilität Ihrer App mit der Prozesslebensdauer-Verwaltung. |
 | [Tests mit dem Emulator für Microsoft Windows10Mobile](test-with-the-emulator.md) | Mit den Tools des Emulators für Microsoft Windows10Mobile können Sie die praktische Interaktion mit einem Gerät simulieren und die Features Ihrer App testen. Der Emulator ist eine Desktopanwendung zur Emulierung eines mobilen Geräts unter Windows10. Die Anwendung stellt eine virtualisierte Umgebung bereit, in der Sie Windows-Apps ohne physisches Gerät debuggen und testen können. Außerdem steht Ihnen eine isolierte Umgebung für Ihre Anwendungsprototypen zur Verfügung. |
 | [Testen von Surface Hub-Apps mit Visual Studio](test-surface-hub-apps-using-visual-studio.md) | Der Visual Studio-Simulator bietet eine Umgebung, in der Sie Universelle Windows-Plattform (UWP)-Apps entwerfen, entwickeln, debuggen und testen können, einschließlich Apps, die Sie für Microsoft Surface Hub entwickelt haben. Der Simulator verwendet nicht dieselbe Benutzeroberfläche wie ein Surface Hub, ist jedoch hilfreich, um das Erscheinungsbild und Verhalten Ihrer App bei der Bildschirmgröße und -auflösung von Surface Hubs zu testen. |
-| [Bereitstellen einer App über Registrieren loser Dateien](loose-file-registration.md) | Diese Anleitung zeigt, wie Sie das Layout loser Datei zum Überprüfen und Freigeben von Windows 10-apps ohne Verpackung verwenden. |
+| [Bereitstellen einer App über Registrieren loser Dateien](loose-file-registration.md) | Diese Anleitung zeigt, wie Sie das Layout registrieren loser Dateien zum Überprüfen und Freigeben von Windows 10-apps ohne Verpackung verwenden. |
 | [Betatests](beta-testing.md) | **Betatests** bieten Ihnen die Möglichkeit zum Verbessern Ihrer App anhand des Feedbacks von Personen außerhalb Ihres App-Entwicklungsteams, die die noch nicht freigegebene App auf ihren eigenen Geräten testen. |
 | [Windows Device Portal](device-portal.md) | Mit dem Windows Device Portal können Sie Ihr Gerät remote über ein Netzwerk oder eine USB-Verbindung konfigurieren und verwalten. |
 | [Zertifizierungskit für Windows-Apps](windows-app-certification-kit.md) | Damit Ihre app die beste Chance auf der Microsoft Store oder Chancen Windows-Zertifizierung veröffentlicht wird, überprüfen Sie und Testen sie lokal, bevor Sie sie zur Zertifizierung übermitteln. In diesem Thema wird erläutert, wie Sie das Zertifizierungskit für Windows-Apps installieren und ausführen. |

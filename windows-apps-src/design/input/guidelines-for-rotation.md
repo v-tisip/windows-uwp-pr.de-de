@@ -1,21 +1,19 @@
 ---
-author: Karl-Bridge-Microsoft
 Description: This topic describes the new Windows UI for rotation and provides user experience guidelines that should be considered when using this new interaction mechanism in your UWP app.
 title: Drehung
 ms.assetid: f098bc05-35b3-46b2-9e9b-9ff292d067ca
 label: Rotation
 template: detail.hbs
-ms.author: kbridge
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 1cc2e48239fd2f0e3d9299417a0d96d33acdc122
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f631f3178b4af4fe1c1d2d8b27e8ae6ac25c6ad1
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578699"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711020"
 ---
 # <a name="rotation"></a>Drehung
 
@@ -90,7 +88,7 @@ Windows8 unterstützt drei drehungsarten: frei, eingeschränkt und kombiniert.
 <td align="left">Kombinierte Drehung</td>
 <td align="left"><p>Die kombinierte Drehung unterstützt freie Drehung mit Zonen (ähnlich wie Führungsschienen unter <a href="guidelines-for-panning.md">Richtlinien für Verschiebung</a>) an jedem der 90-Grad-Andockpunkte, die durch die eingeschränkte Drehung erzwungen werden. Wenn das Objekt außerhalb einer der 90-Grad-Zonen losgelassen wird, bleibt das Objekt in dieser Position. Anderenfalls wird das Objekt automatisch zu einem Andockpunkt gedreht.</p>
 <div class="alert">
-<strong>Hinweis:</strong>eine Benutzeroberflächen-Führungsschiene ist ein Feature, in denen ein Bereich um ein Ziel Bewegung zu einem bestimmten Wert oder Standort schränkt, um die Auswahl zu beeinflussen.
+<strong>Hinweis:</strong>eine Benutzeroberflächen-Führungsschiene ist ein Feature, in dem ein Bereich um ein Ziel beschränkt die Bewegung zu einem bestimmten Wert oder Speicherort für die Auswahl zu beeinflussen.
 </div>
 <div>
  

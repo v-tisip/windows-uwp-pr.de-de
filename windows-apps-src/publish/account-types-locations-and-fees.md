@@ -1,26 +1,24 @@
 ---
-author: jnHs
 ms.assetid: C2415466-EC59-416E-B6AE-7DA5ED82DCE6
 title: Kontotypen, Standorte und Gebühren
 description: Wir bieten individuelle Konten für Entwickler und Unternehmenskonten für Entwickler in vielen Ländern und Regionen.
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Entwicklerkonto, individuell, Unternehmen, geschäftlich
 ms.localizationpriority: medium
-ms.openlocfilehash: 7600f8a6bef19ca2d7b301931d0198638f91dc1b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3163b4c89cc1d0bf3e4adfdea39222dfcb5a3ee1
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581706"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7709298"
 ---
 # <a name="account-types-locations-and-fees"></a>Kontotypen, Standorte und Gebühren
 
-Die Windows-Programm im [Partner Center](https://partner.microsoft.com/dashboard) -Angebote beide Person und Unternehmenskonten in vielen [Ländern und Regionen](#developer-account-and-app-submission-markets). Beide Arten von Konto ermöglicht den Zugriff auf apps im Store veröffentlichen und an weiteren Microsoft-Programmen teilnehmen.
+Die Windows-Programm im [Partner Center](https://partner.microsoft.com/dashboard) bietet sowohl und Unternehmenskonten in vielen [Ländern und Regionen](#developer-account-and-app-submission-markets). Beide Arten von Konto ermöglicht den Zugriff auf apps im Store veröffentlichen und an weiteren Microsoft-Entwicklerprogrammen teilnehmen.
 
 > [!NOTE]
-> Wenn Sie Ihr Entwicklerkonto zu öffnen, achten Sie darauf, dass Sie in das [Partner Center](https://partner.microsoft.com/dashboard) mit Microsoft-Konto anmelden, die Sie für Ihr Entwicklerkonto verwenden möchten. Sie haben die Möglichkeit, auch später noch [weitere Benutzer zum Konto hinzuzufügen](manage-account-users.md).
+> Wenn Sie Ihr Entwicklerkonto zu öffnen, achten Sie darauf, dass Sie in das [Partner Center](https://partner.microsoft.com/dashboard) mit dem Microsoft-Konto anmelden, die Sie für Ihr Entwicklerkonto verwenden möchten. Sie haben die Möglichkeit, auch später noch [weitere Benutzer zum Konto hinzuzufügen](manage-account-users.md).
 
 Zu [Beginn des Registrierungsprozesses](http://go.microsoft.com/fwlink/p/?LinkId=615100) müssen Sie entscheiden, ob Sie ein individuelles Konto oder ein Unternehmenskonto erstellen möchten. Beide Arten von Konten ermöglichen die Übermittlung von Apps, Spielen, Add-Ins und Diensten.
 
@@ -35,11 +33,11 @@ Im Folgenden sind die grundlegenden Unterschiede zwischen den beiden Kontotypen 
 |--------------------|-----------------|
 | <ul><li>Kostet ca. 19 US-Dollar (einmalige Registrierungsgebühr; der exakte Betrag variiert je nach Land bzw. Region)</li><li>Kürzerer Kontoüberprüfungsprozess</li></ul> | <ul><li>Kostet ca. 99 US-Dollar (einmalige Registrierungsgebühr; der exakte Betrag variiert je nach Land bzw. Region)</li><li>Erfordert eine bessere Überprüfung des Kontos</li><li>Erfordert, dass Ihr Unternehmen als solches im Land oder in der Region seiner Niederlassung anerkannt ist</li><li>Übermitteln von Apps mit eingeschränkter Funktionalität (wie in den [Microsoft Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type) beschrieben)</li></ul> |
 
-Unternehmenskonten sind etwas teurer. Das liegt hauptsächlich daran, dass wir durch einige zusätzliche Schritte sicherstellen, dass Sie von Ihrem Unternehmen autorisiert wurden und zum Einrichten des Kontos berechtigt sind. Pro die [Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type), apps mit bestimmten Funktionen, z. B. diejenigen, die auf Finanzinformationen zugreifen anfordern oder Authentifizierung auf primäre Funktionen zugreifen (ohne einen sicheren dedizierten Drittanbieter-Authentifizierungsanbieter), kann nur von Unternehmenskonten veröffentlicht werden.
+Unternehmenskonten sind etwas teurer. Das liegt hauptsächlich daran, dass wir durch einige zusätzliche Schritte sicherstellen, dass Sie von Ihrem Unternehmen autorisiert wurden und zum Einrichten des Kontos berechtigt sind. Pro die [Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies#1014-account-type), apps mit bestimmten Funktionen erfordern wie z. B. diejenigen, die auf Finanzinformationen zugreifen oder Authentifizierung, um Zugriff auf primäre Funktionen (ohne einen sicheren dedizierten Drittanbieter-Authentifizierungsanbieter), kann nur von Unternehmenskonten veröffentlicht werden.
 
 ## <a name="account-verification"></a>Kontobenachrichtigung
 
-Nach Abschluss der Registrierung durchläuft Ihr Konto den Überprüfungsprozess. Bei individuellen Konten wird sichergestellt, dass der Anzeigename für den Herausgeber nicht bereits von einem anderen Unternehmen verwendet wird. Bei Unternehmenskonten bestätigen unsere Partner Dun & Bradstreet, dass Sie zum Erstellen eines Kontos für Ihr Unternehmen autorisiert sind. Dieser Vorgang kann zwischen wenigen Tagen und mehreren Wochen dauern. Häufig erhält Ihr Unternehmen im Rahmen dieses Prozesses einen Telefonanruf. Stellen Sie daher sicher, dass alle Ihre Kontaktinformationen in den Registrierungsformularen aktuell sind. Sie können keine Übermitteln von apps über ein Unternehmenskonto erst überprüft wurde, während Sie warten, Sie können aber [app-Namen reservieren](create-your-app-by-reserving-a-name.md) weiterhin erstellen und Testen von apps und Vorbereiten der Übermittlungen vorgehen.
+Nach Abschluss der Registrierung durchläuft Ihr Konto den Überprüfungsprozess. Bei individuellen Konten wird sichergestellt, dass der Anzeigename für den Herausgeber nicht bereits von einem anderen Unternehmen verwendet wird. Bei Unternehmenskonten bestätigen unsere Partner Dun & Bradstreet, dass Sie zum Erstellen eines Kontos für Ihr Unternehmen autorisiert sind. Dieser Vorgang kann zwischen wenigen Tagen und mehreren Wochen dauern. Häufig erhält Ihr Unternehmen im Rahmen dieses Prozesses einen Telefonanruf. Stellen Sie daher sicher, dass alle Ihre Kontaktinformationen in den Registrierungsformularen aktuell sind. Sie können nicht übermitteln von apps über ein Unternehmenskonto erst überprüft wurde, während Sie warten, können Sie die [app-Namen reservieren](create-your-app-by-reserving-a-name.md) weiterhin erstellen und Testen von apps und arbeiten Sie zum Abrufen der Übermittlungen bereit.
 
 Sie können den Überprüfungsstatus auf der Seite **Kontoeinstellungen** überprüfen. 
 

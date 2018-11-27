@@ -1,10 +1,8 @@
 ---
-author: mijacobs
 Description: Dialogs and flyouts display transient UI elements that appear when the user requests them or when something happens that requires notification or approval.
 title: Dialogfeld-Steuerelemente
 label: Dialogs
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -14,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ba4bfcd38acba2bcd7c8399b8b17184edacc15a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 520f4bdd72c51cd1508c9e655107ae909f6e4243
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573626"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7709868"
 ---
 ## <a name="dialog-controls"></a>Dialogfeld-Steuerelemente
 
@@ -34,7 +32,7 @@ Dialogfelder sind modale benutzeroberflächenüberlagerungen, die kontextbezogen
 
 Verwenden Sie Dialogfelder und Flyouts, um Benutzern wichtige Informationen mitzuteilen oder deren Bestätigung bzw. zusätzliche Informationen anzufordern, bevor eine Aktion abgeschlossen werden kann.
 
-Empfehlungen zur Verwendung ein Dialogfelds und wann ein Flyout (ein ähnliches Steuerelement), finden Sie unter [Dialogfelder und Flyouts](index.md). 
+Empfehlungen zur Verwendung von einem Dialogfeld im Vergleich zu, wenn ein Flyout (ein ähnliches Steuerelement) verwenden, finden Sie unter [Dialogfelder und Flyouts](index.md). 
 
 ## <a name="examples"></a>Beispiele
 

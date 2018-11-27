@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: Behandeln des Vorabstarts von Apps
 description: Erfahren Sie, wie Sie den Vorabstart von Apps durch Überschreiben der OnLaunched-Methode und Aufrufen von CoreApplication.EnablePrelaunch(true) behandeln.
 ms.assetid: A4838AC2-22D7-46BA-9EB2-F3C248E22F52
-ms.author: twhitney
 ms.date: 07/05/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: a13ec942080d7fe517a10b837bea9ae8fae27750
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 11f68d9dd912c92ff7de8b861f576e8f0c4b4dde
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554006"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710745"
 ---
 # <a name="handle-app-prelaunch"></a>Behandeln des Vorabstarts von Apps
 
@@ -21,9 +19,9 @@ Erfahren Sie, wie Sie den Vorabstart von Apps durch außer Kraft setzen der [**O
 
 ## <a name="introduction"></a>Einführung
 
-Wenn verfügbaren Systemressourcen ermöglichen, die startleistung von UWP-apps auf Desktopgerät Gerätefamilie Geräte verbessern, indem Sie proaktiv Starten des Benutzers am häufigsten verwendeten apps im Hintergrund. Eine vorab gestartete App wird kurz nach dem Start in den angehaltenen Zustand versetzt. Wenn der Benutzer die App dann aufruft, wird sie fortgesetzt, indem sie vom angehaltenen Zustand in den ausgeführten Zustand versetzt wird. Dies ist schneller als ein Kaltstart der App. Der Benutzer gewinnt den Eindruck, dass die App sehr schnell startet.
+Wenn verfügbaren Systemressourcen zulassen, die startleistung von UWP-apps auf Desktopgerät Gerätefamilie Geräte verbessern, indem Sie proaktiv Starten des Benutzers am häufigsten verwendeten apps im Hintergrund. Eine vorab gestartete App wird kurz nach dem Start in den angehaltenen Zustand versetzt. Wenn der Benutzer die App dann aufruft, wird sie fortgesetzt, indem sie vom angehaltenen Zustand in den ausgeführten Zustand versetzt wird. Dies ist schneller als ein Kaltstart der App. Der Benutzer gewinnt den Eindruck, dass die App sehr schnell startet.
 
-Vor Windows10 waren die Vorteile des Vorabstarts nicht automatisch für Apps verfügbar. In Windows 10 Version 1511, alle universellen Windows-Plattform (UWP) apps Kandidaten für den Vorabstart eingerichtet wurden. In Windows 10, Version 1607, müssen Sie den Vorabstart aktivieren, in dem Sie [CoreApplication.EnablePrelaunch(true)](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx) aufrufen. Ein empfohlener Bereich für diesen Aufruf ist `OnLaunched()` in der Nähe der `if (e.PrelaunchActivated == false)`-Überprüfung.
+Vor Windows10 waren die Vorteile des Vorabstarts nicht automatisch für Apps verfügbar. In Windows 10 Version 1511, alle universellen Windows-Plattform (UWP) apps wurden für den Vorabstart eingerichtet. In Windows 10, Version 1607, müssen Sie den Vorabstart aktivieren, in dem Sie [CoreApplication.EnablePrelaunch(true)](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.coreapplication.enableprelaunch.aspx) aufrufen. Ein empfohlener Bereich für diesen Aufruf ist `OnLaunched()` in der Nähe der `if (e.PrelaunchActivated == false)`-Überprüfung.
 
 Ob eine App vorab gestartet wird, ist von den Systemressourcen abhängig. Wenn die Systemressourcen ausgelastet sind, werden Apps nicht vorab gestartet.
 
@@ -112,9 +110,9 @@ private void TryEnablePrelaunch()
 }
 ```
 
-Hinweis: die `TryEnablePrelaunch()` funktionieren, oben beschrieben. Der Grund der Aufruf zu `CoreApplication.EnablePrelaunch()` ist Ressourcenauswahl Out in diese Funktion ist, da, wenn eine Methode aufgerufen wird, die JIT (Just-in-Time-Kompilierung) versucht, die gesamte Methode zu kompilieren. Wenn Ihre app auf einer Version von Windows 10 ausgeführt wird, die nicht unterstützt `CoreApplication.EnablePrelaunch()`, und klicken Sie dann die JIT schlägt fehl. Durch den Aufruf in eine Methode, die nur aufgerufen wird, wenn die app ermittelt, dass die Plattform unterstützt Zerlegung `CoreApplication.EnablePrelaunch()`, wir dieses Problem zu vermeiden.
+Hinweis: die `TryEnablePrelaunch()` funktionieren, oben beschrieben. Der Grund der Aufruf zu `CoreApplication.EnablePrelaunch()` wird umgerechnet Out in diese Funktion ist, da, wenn eine Methode aufgerufen wird, das JIT (Just-in-Time-Kompilierung) versucht, die gesamte Methode zu kompilieren. Wenn Ihre app auf eine Version von Windows 10 ausgeführt wird, die nicht unterstützt `CoreApplication.EnablePrelaunch()`, und klicken Sie dann das JIT fehl. Durch den Aufruf in eine Methode, die nur aufgerufen wird, wenn die app ermittelt, dass die Plattform unterstützt Zerlegung `CoreApplication.EnablePrelaunch()`, wir dieses Problem zu vermeiden.
 
-Es gibt auch im obigen Beispiel code, dass Sie kommentieren können, wenn Ihre app Vorabstart Teilnahme während der Ausführung unter Windows 10, Version 1511 muss. In Version 1511, automatisch alle UWP-apps zugelassen wurden in Vorabstart, die möglicherweise nicht für Ihre app geeignet.
+Es gibt auch im obigen Beispiel code, dass Sie kommentieren können, wenn Ihre app der Vorabstart Teilnahme während der Ausführung unter Windows 10, Version 1511 muss. In Version 1511, automatisch alle UWP-apps zugelassen wurden in Vorabstart, die möglicherweise nicht für Ihre app geeignet.
 
 ## <a name="use-the-visibilitychanged-event"></a>Verwenden des VisibilityChanged-Ereignisses
 

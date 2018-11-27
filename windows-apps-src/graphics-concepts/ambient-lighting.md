@@ -4,17 +4,15 @@ description: Das Umgebungslicht bietet konstante Beleuchtung für eine Szene.
 ms.assetid: C34FA65A-3634-4A4B-B183-4CDA89F4DC95
 keywords:
 - Umgebungslicht
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 87b5c72ef99e3802a348ddfd28951bc2865891e5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 558d7e655a54b22f1fc74591a718a7180d90366f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579737"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707395"
 ---
 # <a name="ambient-lighting"></a>Umgebungslicht
 
@@ -46,7 +44,7 @@ Der Wert für Cₐ ist entweder:
 -   Vertexfarbe2, wenn AMBIENTMATERIALSOURCE = D3DMCS\_FARBE2 und die zweite Vertexfarbe in der Vertex-Deklaration angegeben wird.
 -   Materielle Umgebungsfarbe.
 
-**Hinweis:**  Wenn Option AMBIENTMATERIALSOURCE verwendet wird, und die Vertexfarbe nicht angegeben, wird die materielle Umgebungsfarbe verwendet.
+**Hinweis:**  wenn beiden AMBIENTMATERIALSOURCE-Optionen verwendet wird, und die Vertexfarbe nicht angegeben, wird die materielle Umgebungsfarbe verwendet.
 
  
 

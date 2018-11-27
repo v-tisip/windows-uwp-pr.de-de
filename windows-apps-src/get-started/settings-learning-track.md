@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: Speichern und Laden von Einstellungen in einer UWP-App
 description: Erfahren Sie, wie Sie App-Einstellungen in Apps für die Universelle Windows-Plattform speichern und laden.
-ms.author: twhitney
 ms.date: 05/07/2018
 ms.topic: article
 keywords: Erste Schritte, UWP, Windows10, Lernpfad, Einstellungen, Einstellungen speichern, Einstellungen laden
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 63af8aa4ab4d12a3a4aa69bd7d870106e21844f5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4aa56bf24d2dfa1fd4ae1947a5b0edf7f312ea2f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562020"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710212"
 ---
 # <a name="save-and-load-settings-in-a-uwp-app"></a>Speichern und Laden von Einstellungen in einer UWP-App
 

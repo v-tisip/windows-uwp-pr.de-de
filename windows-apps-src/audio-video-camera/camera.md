@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: 370f2c14-4f1e-47b3-9197-24205ab255a3
 description: In diesem Artikel werden die für UWP-Apps verfügbaren Kamera-Features aufgeführt, sowie die Links zu den Anleitungen für ihre Verwendung.
 title: Kamera
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: d330a762844e4889d0da9ae5457acc8d9f0c2b91
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e28a4a7abaacd8b2de60c6163055bd9d667ba412
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554853"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711371"
 ---
 # <a name="camera"></a>Kamera
 

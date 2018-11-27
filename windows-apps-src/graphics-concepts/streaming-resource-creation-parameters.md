@@ -4,17 +4,15 @@ description: Es gibt einige Einschränkungen für den Typ der Direct3D-Ressource
 ms.assetid: 6FC5AD93-6F47-479E-947C-895C99B427BC
 keywords:
 - Parameter für das Erstellen von Streamingressourcen
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0129b44b6f1c6c8b18555e3e0e0b350a695cabe1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1ddb150e570e25af7162a50309b9b0fc30cedf60
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7576284"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711180"
 ---
 # <a name="streaming-resource-creation-parameters"></a>Parameter für das Erstellen von Streamingressourcen
 
@@ -39,7 +37,7 @@ Unterteilt; d.h. Streaming (gemäß Definition), Texturwürfel, indirekte Argume
 <span id="Supported-Bind-Flags"></span><span id="supported-bind-flags"></span><span id="SUPPORTED-BIND-FLAGS"></span>**Unterstützte Bindungsflags**  
 Als Shaderressource binden, Renderziel, Tiefenschablone oder unsortierter Zugriff.
 
-**Nicht unterstützt:** Als Konstanten Puffer, Vertexpuffer (Binden eines geteilten Puffers als SRV/UAV/RTV wird unterstützt), Indexpuffer binden Puffer, Streamausgabe, Decoder oder video-Encoder.
+**Nicht unterstützt:** Als Konstantenpuffer, Vertexpuffer (Binden eines geteilten Puffers als SRV/UAV/RTV wird unterstützt), Indexpuffer binden Puffer, Streamausgabe, Decoder oder video-Encoder.
 
 <span id="Supported-Formats"></span><span id="supported-formats"></span><span id="SUPPORTED-FORMATS"></span>**Unterstützte Formate**  
 Alle Formate, die für die gegebene Konfiguration verfügbar sind, unabhängig davon, ob sie eine geteilte Anordnung verwenden, mit einigen Ausnahmen.
