@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: ''
 description: Dieser Artikel zeigt Ihnen, wie Sie Videos aus mehreren Quellen gleichzeitig in eine einzige Datei mit mehreren eingebetteten Videospuren aufnehmen können.
 title: Erfassen von mehreren Quellen mit MediaFrameSourceGroup
-ms.author: drewbat
 ms.date: 09/12/2017
 ms.topic: article
 keywords: Windows10, Uwp, Aufnahme, Video
 ms.localizationpriority: medium
-ms.openlocfilehash: ae52026d5fb1ab3c140edfdcd1f92f7d3d0fd143
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a654739490043b9f821e7906fa8cf9e3e7259fed
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554677"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706420"
 ---
 # <a name="capture-from-multiple-sources-using-mediaframesourcegroup"></a><span data-ttu-id="b2635-104">Erfassen von mehreren Quellen mit MediaFrameSourceGroup</span><span class="sxs-lookup"><span data-stu-id="b2635-104">Capture from multiple sources using MediaFrameSourceGroup</span></span>
 

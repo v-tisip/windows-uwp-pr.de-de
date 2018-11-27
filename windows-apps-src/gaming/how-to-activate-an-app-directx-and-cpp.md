@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: So wird's gemacht - Aktivieren einer App (DirectX und C++)
 description: In diesem Thema erfahren Sie, wie Sie die Aktivierungsbenutzeroberfläche für eine DirectX-App für die Universelle Windows-Plattform (UWP) definieren.
 ms.assetid: b07c7da1-8a5e-5b57-6f77-6439bf653a53
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, DirectX, Aktivierung
 ms.localizationpriority: medium
-ms.openlocfilehash: b7f700ab97566ad9ec03d0595c55721dd9a9be98
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 51c2435c8edeac2431198b7b5f3d9b1a307b5b78
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579022"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708230"
 ---
 # <a name="how-to-activate-an-app-directx-and-c"></a><span data-ttu-id="85952-104">So wird's gemacht - Aktivieren einer App (DirectX und C++)</span><span class="sxs-lookup"><span data-stu-id="85952-104">How to activate an app (DirectX and C++)</span></span>
 

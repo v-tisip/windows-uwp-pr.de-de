@@ -1,10 +1,8 @@
 ---
-author: Karl-Bridge-Microsoft
 Description: Learn how to programmatically manage focus navigation with keyboard, gamepad, and accessibility tools in a UWP app.
 title: Programmgesteuerte Fokusnavigation mit Tastatur, Gamepad und Bedienungshilfen
 label: Programmatic focus navigation
 keywords: Tastatur, Gamecontroller, Fernbedienung, Navigation, Navigationsstrategie, Eingabe, Benutzerinteraktion, Bedienungshilfen, Verwendbarkeit
-ms.author: kbridge
 ms.date: 03/19/2018
 ms.topic: article
 pm-contact: miguelrb
@@ -12,12 +10,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d2317b419a2679d13e846690bbaca0eb212a245e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 64a15526b32be52b0fc667dc6f8b549d6faae8f1
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562822"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708490"
 ---
 # <a name="programmatic-focus-navigation"></a><span data-ttu-id="62b44-103">Programmgesteuerte Fokusnavigation</span><span class="sxs-lookup"><span data-stu-id="62b44-103">Programmatic focus navigation</span></span>
 

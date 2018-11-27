@@ -1,21 +1,19 @@
 ---
-author: mijacobs
 Description: This article covers the four notification options&\#8212;local, scheduled, periodic, and push&\#8212;that deliver tile and badge updates and toast notification content.
 title: Auswählen einer Methode für die Übermittlung von Benachrichtigungen
 ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
 label: Choose a notification delivery method
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: c01b96f70bd39c43f321935aa47393ada0400319
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 503f7baad0d91f4e7c29010145ecb162f98bc81c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569329"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708530"
 ---
 # <a name="choose-a-notification-delivery-method"></a><span data-ttu-id="3e228-103">Auswählen einer Methode für die Übermittlung von Benachrichtigungen</span><span class="sxs-lookup"><span data-stu-id="3e228-103">Choose a notification delivery method</span></span>
 

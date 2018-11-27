@@ -1,18 +1,16 @@
 ---
-author: JnHs
 Description: Learn how to create known user groups to use for package flighting and more.
 title: Erstellen bekannter Benutzergruppen
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Zielgruppe, Kunden, Flight-Gruppe, Benutzergruppen, bekannte Benutzer
 ms.localizationpriority: medium
-ms.openlocfilehash: 44f0ea17d1034ae617b4b8c96cf61cc4829a6704
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1fcb111121511553bba22cef55f94125d47e9f21
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574111"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7709548"
 ---
 # <a name="create-known-user-groups"></a><span data-ttu-id="7ac4e-103">Erstellen bekannter Benutzergruppen</span><span class="sxs-lookup"><span data-stu-id="7ac4e-103">Create known user groups</span></span>
 

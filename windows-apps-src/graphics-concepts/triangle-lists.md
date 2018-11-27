@@ -4,17 +4,15 @@ description: Eine Dreiecksliste ist eine Liste isolierter Dreiecke. Die isoliert
 ms.assetid: BC50D532-9E9C-4AAE-B466-9E8C4AD1862A
 keywords:
 - Dreieckslisten
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f5c8c7354ef0f7e9bd4878e4d78aa045ab7fbd0
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: aae797db890c6bee141c3b4a79a6a85a55a6b512
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569004"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7709328"
 ---
 # <a name="triangle-lists"></a><span data-ttu-id="00430-106">Dreieckslisten</span><span class="sxs-lookup"><span data-stu-id="00430-106">Triangle lists</span></span>
 

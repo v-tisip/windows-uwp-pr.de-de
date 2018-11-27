@@ -1,52 +1,50 @@
 ---
-author: Xansky
 ms.assetid: 646977ed-1705-4ea7-a3db-a6b9aac70703
 description: Erfahren Sie, wie Sie Interstitialwerbung mithilfe von JavaScript/HTML veröffentlichen.
 title: Beispielcode für Interstitialwerbung in JavaScript
-ms.author: mhopkins
 ms.date: 03/22/2018
 ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, Interstitialwerbung, JavaScript, Beispielcode
 ms.localizationpriority: medium
-ms.openlocfilehash: 1921725e5b598a2e5e79ed90c607414e4efe574e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 98ba09b88c96b0f0afb4ba5a786d31442fd9da05
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7575809"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707805"
 ---
-# <a name="interstitial-ad-sample-code-in-javascript"></a><span data-ttu-id="498bc-104">Beispielcode für Interstitialwerbung in JavaScript</span><span class="sxs-lookup"><span data-stu-id="498bc-104">Interstitial ad sample code in JavaScript</span></span>
+# <a name="interstitial-ad-sample-code-in-javascript"></a><span data-ttu-id="d8444-104">Beispielcode für Interstitialwerbung in JavaScript</span><span class="sxs-lookup"><span data-stu-id="d8444-104">Interstitial ad sample code in JavaScript</span></span>
 
-<span data-ttu-id="498bc-105">Dieses Thema enthält den vollständigen Beispielcode für eine grundlegende JavaScript- und HTML-App für die universelle Windows-Plattform (UWP), in der Interstitialwerbung angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="498bc-105">This topic provides the complete sample code for a basic JavaScript and HTML Universal Windows Platform (UWP) app that shows an interstitial ad.</span></span> <span data-ttu-id="498bc-106">Eine schrittweise Anleitung dazu, wie Sie Ihr Projekt zur Verwendung dieses Codes konfigurieren, finden Sie unter [Interstitialwerbung](interstitial-ads.md).</span><span class="sxs-lookup"><span data-stu-id="498bc-106">For step-by-step instructions that show how to configure your project to use this code, see [Interstitial ads](interstitial-ads.md).</span></span> <span data-ttu-id="498bc-107">Ein vollständiges Beispielprojekt finden Sie unter den [Anzeigenbeispielen auf GitHub](http://aka.ms/githubads).</span><span class="sxs-lookup"><span data-stu-id="498bc-107">For a complete sample project, see the [advertising samples on GitHub](http://aka.ms/githubads).</span></span>
+<span data-ttu-id="d8444-105">Dieses Thema enthält den vollständigen Beispielcode für eine grundlegende JavaScript- und HTML-App für die universelle Windows-Plattform (UWP), in der Interstitialwerbung angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="d8444-105">This topic provides the complete sample code for a basic JavaScript and HTML Universal Windows Platform (UWP) app that shows an interstitial ad.</span></span> <span data-ttu-id="d8444-106">Eine schrittweise Anleitung dazu, wie Sie Ihr Projekt zur Verwendung dieses Codes konfigurieren, finden Sie unter [Interstitialwerbung](interstitial-ads.md).</span><span class="sxs-lookup"><span data-stu-id="d8444-106">For step-by-step instructions that show how to configure your project to use this code, see [Interstitial ads](interstitial-ads.md).</span></span> <span data-ttu-id="d8444-107">Ein vollständiges Beispielprojekt finden Sie unter den [Anzeigenbeispielen auf GitHub](http://aka.ms/githubads).</span><span class="sxs-lookup"><span data-stu-id="d8444-107">For a complete sample project, see the [advertising samples on GitHub](http://aka.ms/githubads).</span></span>
 
-## <a name="code-example"></a><span data-ttu-id="498bc-108">Codebeispiel</span><span class="sxs-lookup"><span data-stu-id="498bc-108">Code example</span></span>
+## <a name="code-example"></a><span data-ttu-id="d8444-108">Codebeispiel</span><span class="sxs-lookup"><span data-stu-id="d8444-108">Code example</span></span>
 
-<span data-ttu-id="498bc-109">In diesem Abschnitt wird der Inhalt der HTML- und JavaScript-Dateien in einer einfachen App veranschaulicht, in der eine Interstitialwerbung angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="498bc-109">This section shows the contents of the HTML and JavaScript files in a basic app that shows an interstitial ad.</span></span> <span data-ttu-id="498bc-110">Um die Beispiele zu verwenden, kopieren Sie diesen Code in ein JavaScript-Projekt **WinJS-App (universelles Windows)** in Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="498bc-110">To use these examples, copy this code into a JavaScript **WinJS App (Universal Windows)** project in Visual Studio.</span></span>
+<span data-ttu-id="d8444-109">In diesem Abschnitt wird der Inhalt der HTML- und JavaScript-Dateien in einer einfachen App veranschaulicht, in der eine Interstitialwerbung angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="d8444-109">This section shows the contents of the HTML and JavaScript files in a basic app that shows an interstitial ad.</span></span> <span data-ttu-id="d8444-110">Um die Beispiele zu verwenden, kopieren Sie diesen Code in ein JavaScript-Projekt **WinJS-App (universelles Windows)** in Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="d8444-110">To use these examples, copy this code into a JavaScript **WinJS App (Universal Windows)** project in Visual Studio.</span></span>
 
-<span data-ttu-id="498bc-111">Diese Beispiel-App verwendet zwei Schaltflächen, um eine Interstitialwerbung anzufordern und dann zu starten.</span><span class="sxs-lookup"><span data-stu-id="498bc-111">This sample app uses two buttons to request and then launch an interstitial ad.</span></span> <span data-ttu-id="498bc-112">Die von Visual Studio generierten Dateien „main.js“ und „index.html“ wurden geändert und sind unten zu sehen.</span><span class="sxs-lookup"><span data-stu-id="498bc-112">The main.js and index.html files generated by Visual Studio have been modified and are shown below.</span></span> <span data-ttu-id="498bc-113">Die unten dargestellte Datei „script.js“ enthält den größten Teil des Beispielcodes. Diese Datei muss dem Ordner **js** in Ihrem Projekt hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="498bc-113">The script.js file shown below contains most of the code in the sample, and you should add this file to the **js** folder in your project.</span></span>
+<span data-ttu-id="d8444-111">Diese Beispiel-App verwendet zwei Schaltflächen, um eine Interstitialwerbung anzufordern und dann zu starten.</span><span class="sxs-lookup"><span data-stu-id="d8444-111">This sample app uses two buttons to request and then launch an interstitial ad.</span></span> <span data-ttu-id="d8444-112">Die von Visual Studio generierten Dateien „main.js“ und „index.html“ wurden geändert und sind unten zu sehen.</span><span class="sxs-lookup"><span data-stu-id="d8444-112">The main.js and index.html files generated by Visual Studio have been modified and are shown below.</span></span> <span data-ttu-id="d8444-113">Die unten dargestellte Datei „script.js“ enthält den größten Teil des Beispielcodes. Diese Datei muss dem Ordner **js** in Ihrem Projekt hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="d8444-113">The script.js file shown below contains most of the code in the sample, and you should add this file to the **js** folder in your project.</span></span>
 
-<span data-ttu-id="498bc-114">Ersetzen Sie die Werte für die ```applicationId``` und ```adUnitId``` Variablen durch livewerte aus dem Partner Center, bevor Sie Ihre app an den Store übermitteln.</span><span class="sxs-lookup"><span data-stu-id="498bc-114">Replace the values of the ```applicationId``` and ```adUnitId``` variables with live values from Partner Center before submitting your app to the Store.</span></span> <span data-ttu-id="498bc-115">Weitere Informationen finden Sie unter [Einrichten von Anzeigeneinheiten in Ihrer App](set-up-ad-units-in-your-app.md#live-ad-units).</span><span class="sxs-lookup"><span data-stu-id="498bc-115">For more information, see [Set up ad units in your app](set-up-ad-units-in-your-app.md#live-ad-units).</span></span>
+<span data-ttu-id="d8444-114">Ersetzen Sie die Werte von der ```applicationId``` und ```adUnitId``` Variablen durch livewerte aus dem Partner Center, bevor Sie Ihre app an den Store übermitteln.</span><span class="sxs-lookup"><span data-stu-id="d8444-114">Replace the values of the ```applicationId``` and ```adUnitId``` variables with live values from Partner Center before submitting your app to the Store.</span></span> <span data-ttu-id="d8444-115">Weitere Informationen finden Sie unter [Einrichten von Anzeigeneinheiten in Ihrer App](set-up-ad-units-in-your-app.md#live-ad-units).</span><span class="sxs-lookup"><span data-stu-id="d8444-115">For more information, see [Set up ad units in your app](set-up-ad-units-in-your-app.md#live-ad-units).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="498bc-116">Wenn Sie dieses Beispiel ändern möchten, um eine Interstitialwerbung mit Bannern anstelle einer Videointerstitialanzeige anzuzeigen, übergeben Sie den Wert **InterstitialAdType.display** an den ersten Parameter der [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad)-Methode anstelle von **InterstitialAdType.video**.</span><span class="sxs-lookup"><span data-stu-id="498bc-116">To alter this example to show an interstitial banner ad instead of an interstitial video ad, pass the value **InterstitialAdType.display** to the first parameter of the [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) method instead of **InterstitialAdType.video**.</span></span> <span data-ttu-id="498bc-117">Weitere Informationen finden Sie unter [Interstitialanzeigen](interstitial-ads.md).</span><span class="sxs-lookup"><span data-stu-id="498bc-117">For more information, see [Interstitial ads](interstitial-ads.md).</span></span>
+> <span data-ttu-id="d8444-116">Wenn Sie dieses Beispiel ändern möchten, um eine Interstitialwerbung mit Bannern anstelle einer Videointerstitialanzeige anzuzeigen, übergeben Sie den Wert **InterstitialAdType.display** an den ersten Parameter der [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad)-Methode anstelle von **InterstitialAdType.video**.</span><span class="sxs-lookup"><span data-stu-id="d8444-116">To alter this example to show an interstitial banner ad instead of an interstitial video ad, pass the value **InterstitialAdType.display** to the first parameter of the [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) method instead of **InterstitialAdType.video**.</span></span> <span data-ttu-id="d8444-117">Weitere Informationen finden Sie unter [Interstitialanzeigen](interstitial-ads.md).</span><span class="sxs-lookup"><span data-stu-id="d8444-117">For more information, see [Interstitial ads](interstitial-ads.md).</span></span>
 
-### <a name="indexhtml"></a><span data-ttu-id="498bc-118">index.html</span><span class="sxs-lookup"><span data-stu-id="498bc-118">index.html</span></span>
+### <a name="indexhtml"></a><span data-ttu-id="d8444-118">index.html</span><span class="sxs-lookup"><span data-stu-id="d8444-118">index.html</span></span>
 
 > [!div class="tabbedCodeSnippets"]
 [!code-html[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/index.html#L1-L21)]
 
-### <a name="scriptjs"></a><span data-ttu-id="498bc-119">script.js</span><span class="sxs-lookup"><span data-stu-id="498bc-119">script.js</span></span>
+### <a name="scriptjs"></a><span data-ttu-id="d8444-119">script.js</span><span class="sxs-lookup"><span data-stu-id="d8444-119">script.js</span></span>
 
 > [!div class="tabbedCodeSnippets"]
 [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/script.js#script)]
 
-### <a name="mainjs"></a><span data-ttu-id="498bc-120">main.js</span><span class="sxs-lookup"><span data-stu-id="498bc-120">main.js</span></span>
+### <a name="mainjs"></a><span data-ttu-id="d8444-120">main.js</span><span class="sxs-lookup"><span data-stu-id="d8444-120">main.js</span></span>
 
 > [!div class="tabbedCodeSnippets"]
 [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/main.js#main)]
 
-## <a name="related-topics"></a><span data-ttu-id="498bc-121">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="498bc-121">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="d8444-121">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="d8444-121">Related topics</span></span>
 
-* [<span data-ttu-id="498bc-122">Anzeigenbeispiele bei GitHub</span><span class="sxs-lookup"><span data-stu-id="498bc-122">Advertising samples on GitHub</span></span>](http://aka.ms/githubads)
+* [<span data-ttu-id="d8444-122">Anzeigenbeispiele bei GitHub</span><span class="sxs-lookup"><span data-stu-id="d8444-122">Advertising samples on GitHub</span></span>](http://aka.ms/githubads)
 
  

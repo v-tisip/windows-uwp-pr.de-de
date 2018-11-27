@@ -1,18 +1,16 @@
 ---
-author: normesta
 title: Verwenden einer SQL Server-Datenbank in einer UWP-App
 description: Verwenden Sie eine SQL Server-Datenbank in einer UWP-App.
-ms.author: normesta
 ms.date: 11/13/2017
 ms.topic: article
 keywords: windows 10, uwp, SQL Server, datenbank
 ms.localizationpriority: medium
-ms.openlocfilehash: 8396fb7685a774568b6cd63acb11f78133584f46
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5cb4b16cea3368660ffcb1bc4b252391a73ab13e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7573154"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7710088"
 ---
 # <a name="use-a-sql-server-database-in-a-uwp-app"></a><span data-ttu-id="d12a1-104">Verwenden einer SQL Server-Datenbank in einer UWP-App</span><span class="sxs-lookup"><span data-stu-id="d12a1-104">Use a SQL Server database in a UWP app</span></span>
 <span data-ttu-id="d12a1-105">Ihre App kann sich direkt mit einer SQL Server-Datenbank verbinden und dann Daten über Klassen im Namespace [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) speichern und abrufen.</span><span class="sxs-lookup"><span data-stu-id="d12a1-105">Your app can connect directly to a SQL Server database and then store and retrieve data by using classes in the [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx) namespace.</span></span>
