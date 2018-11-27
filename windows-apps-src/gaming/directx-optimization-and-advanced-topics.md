@@ -1,19 +1,17 @@
 ---
-author: joannaleecy
 title: Optimierung und fortgeschrittene Themen für DirectX-Spiele
 description: Optimierung und fortgeschrittene Themen für die Programmierung von DirectX-Spielen.
 ms.assetid: b5f29fb2-3bcf-43b2-9a68-f8819473bf62
-ms.author: joanlee
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiel, DirectX, optimieren, Multisampling, Swapchains
 ms.localizationpriority: medium
-ms.openlocfilehash: e1a9b16dcf8c40c2b1db4af172d97009563e677a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e9618a35ecd8f9d1a37b627494c0f00a5ed84806
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567456"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717537"
 ---
 # <a name="optimization-and-advanced-topics-for-directx-games"></a><span data-ttu-id="c3008-104">Optimierung und fortgeschrittene Themen für DirectX-Spiele</span><span class="sxs-lookup"><span data-stu-id="c3008-104">Optimization and advanced topics for DirectX games</span></span>
 

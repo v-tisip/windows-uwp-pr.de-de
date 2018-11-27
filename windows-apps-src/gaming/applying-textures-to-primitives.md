@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Anwenden von Texturen auf Grundtypen
 description: Wir laden an dieser Stelle unformatierte Texturdaten und wenden diese auf einen 3D-Grundtyp an. Dazu verwenden wir den Würfel, den wir in „Verwenden von Tiefe und Effekten für Grundtypen“ erstellt haben.
 ms.assetid: aeed09e3-c47a-4dd9-d0e8-d1b8bdd7e9b4
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Texturen, DirectX
 ms.localizationpriority: medium
-ms.openlocfilehash: 252613bbea7f4cdb720758d3435cf0920dd93efa
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 437c861e6d3017d83b520732dd0e279d882835c5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7577744"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717653"
 ---
 # <a name="apply-textures-to-primitives"></a><span data-ttu-id="666b4-104">Anwenden von Texturen auf Grundtypen</span><span class="sxs-lookup"><span data-stu-id="666b4-104">Apply textures to primitives</span></span>
 
@@ -34,7 +32,6 @@ ms.locfileid: "7577744"
 
 <a name="instructions"></a><span data-ttu-id="666b4-113">Anweisungen</span><span class="sxs-lookup"><span data-stu-id="666b4-113">Instructions</span></span>
 ------------
-
 ### <a name="1-defining-variables-for-a-textured-cube"></a><span data-ttu-id="666b4-114">1. Definieren von Variablen für einen Würfel mit Texturen</span><span class="sxs-lookup"><span data-stu-id="666b4-114">1. Defining variables for a textured cube</span></span>
 
 <span data-ttu-id="666b4-115">Zunächst müssen wir die **BasicVertex**-Struktur und die **ConstantBuffer**-Struktur für den Würfel mit Texturen definieren.</span><span class="sxs-lookup"><span data-stu-id="666b4-115">First, we need to define the **BasicVertex** and **ConstantBuffer** structures for the textured cube.</span></span> <span data-ttu-id="666b4-116">Diese Strukturen bestimmen die Vertexpositionen, die Ausrichtungen und die Texturen für den Würfel. Außerdem haben sie Einfluss darauf, wie der Würfel angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="666b4-116">These structures specify the vertex positions, orientations, and textures for the cube and how the cube will be viewed.</span></span> <span data-ttu-id="666b4-117">Weiterhin deklarieren wir Variablen analog zum vorangehenden Lernprogramm [Verwenden von Tiefe und Effekten für Grundtypen](using-depth-and-effects-on-primitives.md).</span><span class="sxs-lookup"><span data-stu-id="666b4-117">Otherwise, we declare variables similarly to the previous tutorial, [Using depth and effects on primitives](using-depth-and-effects-on-primitives.md).</span></span>

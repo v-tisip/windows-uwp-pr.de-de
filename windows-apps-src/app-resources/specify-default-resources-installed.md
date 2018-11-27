@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 Description: If your app doesn't have resources that match the particular settings of a customer device, then the app's default resources are used. This topic explains how to specify what those default resources are.
 title: Angeben der von der App verwendeten Standardressourcen
 template: detail.hbs
-ms.author: stwhi
 ms.date: 11/14/2017
 ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
-ms.openlocfilehash: daa40656c72812e19c7f6f5fa71e50c2206670af
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f18a1db19c3a8c6632a8cbc3104dc1328f97fdb4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554812"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717056"
 ---
 # <a name="specify-the-default-resources-that-your-app-uses"></a><span data-ttu-id="83402-103">Angeben der von der App verwendeten Standardressourcen</span><span class="sxs-lookup"><span data-stu-id="83402-103">Specify the default resources that your app uses</span></span>
 

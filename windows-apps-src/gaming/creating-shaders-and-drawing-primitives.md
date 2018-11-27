@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Erstellen von Shadern und Zeichnen von Grundtypen
 description: Im Folgenden wird das Kompilieren und Erstellen von Shadern mit HLSL-Quelldateien veranschaulicht, die zum Zeichnen von Grundtypen auf dem Bildschirm verwendet werden.
 ms.assetid: 91113bbe-96c9-4ef9-6482-39f1ff1a70f4
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Shader, Grundtypen, DirectX
 ms.localizationpriority: medium
-ms.openlocfilehash: 475a69837796b0b64be27c96f10b42d5b61390c1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5173adc26e0730ccb80f93fe0c12af286b0c1a49
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7558428"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717683"
 ---
 # <a name="create-shaders-and-drawing-primitives"></a><span data-ttu-id="f7d18-104">Erstellen von Shadern und Zeichnen von Grundtypen</span><span class="sxs-lookup"><span data-stu-id="f7d18-104">Create shaders and drawing primitives</span></span>
 

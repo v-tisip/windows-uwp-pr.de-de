@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um die aggregierten Kaufdaten für eine Anwendung während eines bestimmten Zeitraums und andere optionale Filter abzurufen.
 title: Abrufen von App-Käufen
-ms.author: mhopkins
 ms.date: 03/23/2018
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, App-Käufe
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c2e972b46c830dd6c9ea778e525f0abceda3e99
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4ef5c9cedcb828f6c7df8a294fc4aad87e9f74ae
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562589"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7718315"
 ---
 # <a name="get-app-acquisitions"></a><span data-ttu-id="590dc-104">Abrufen von App-Käufen</span><span class="sxs-lookup"><span data-stu-id="590dc-104">Get app acquisitions</span></span>
 

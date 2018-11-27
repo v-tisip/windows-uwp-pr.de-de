@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: The Age ratings page of the app submission process lets you provide information about your app so it can receive the appropriate age ratings from the International Age Ratings Coalition (IARC).
 title: Altersfreigaben
 ms.assetid: B501A773-517B-4158-8364-C1BE630DC512
-ms.author: wdg-dev-content
 ms.date: 05/08/2018
 ms.topic: article
 keywords: Windows10, UWP, Altersfreigabe, Spielfreigabe, IARC, Bewertung, Fragebogen, Bewertungsgremium, Inhaltsbewertung
 ms.localizationpriority: medium
-ms.openlocfilehash: 53692f7d3f5ae9d4a5e6bdcc1d5909467987d264
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f8268e4f3fa6517da480c2ab220863de9523e845
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7576161"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716820"
 ---
 # <a name="age-ratings"></a><span data-ttu-id="42151-103">Altersfreigaben</span><span class="sxs-lookup"><span data-stu-id="42151-103">Age ratings</span></span>
 
