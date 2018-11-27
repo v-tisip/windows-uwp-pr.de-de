@@ -1,18 +1,16 @@
 ---
-author: KarlErickson
 title: Erstellen von Datenbindungen
 description: In diesem Artikel werden die Grundlagen der Datenbindung in XAML behandelt
 keywords: XAML, UWP, Erste Schritte
-ms.author: karler
 ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8000d9105481bc177eb2fc64646aec009fd80d36
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 21a053934d7391d12f7cd987026524b9ff4c279d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557693"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705574"
 ---
 # <a name="create-data-bindings"></a><span data-ttu-id="321c9-104">Erstellen von Datenbindungen</span><span class="sxs-lookup"><span data-stu-id="321c9-104">Create data bindings</span></span>
 

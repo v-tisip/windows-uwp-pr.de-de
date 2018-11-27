@@ -1,19 +1,17 @@
 ---
-author: PatrickFarley
 ms.assetid: 95481C7E-E905-4477-955B-90D292634E2E
 title: Drucken und Scannen
 description: In diesem Abschnitt wird das Drucken und Scannen aus Ihrer Universellen Windows-App beschrieben.
-ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, Uwp, gedruckt wird, 3dprinting, 3D-Druck
 ms.localizationpriority: medium
-ms.openlocfilehash: 51afa49dac094bdd203e080c682e681f752d15e4
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5cfc91ae6f74117c6c3414691137b334cfd0dc4f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580288"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704531"
 ---
 # <a name="printing-and-scanning"></a><span data-ttu-id="00ffb-104">Drucken und Scannen</span><span class="sxs-lookup"><span data-stu-id="00ffb-104">Printing and scanning</span></span>
 

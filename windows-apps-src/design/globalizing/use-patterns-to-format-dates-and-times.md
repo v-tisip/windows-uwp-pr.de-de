@@ -1,21 +1,19 @@
 ---
-author: stevewhims
 Description: Use the Windows.Globalization.DateTimeFormatting API with custom templates and patterns to display dates and times in exactly the format you wish.
 title: Verwenden von Mustern zum Formatieren von Datums- und Uhrzeitwerten
 ms.assetid: 012028B3-9DA2-4E72-8C0E-3E06BEC3B3FE
 label: Use patterns to format dates and times
 template: detail.hbs
-ms.author: stwhi
 ms.date: 11/09/2017
 ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 04a0288d0b28c12eb68cf56225747224e8df9777
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9a86d0b29b39ecb4d2793e641c8c53f6c2a4e3c0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577527"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705175"
 ---
 # <a name="use-templates-and-patterns-to-format-dates-and-times"></a><span data-ttu-id="c5855-103">Verwenden von Mustern zum Formatieren von Datums- und Uhrzeitwerten</span><span class="sxs-lookup"><span data-stu-id="c5855-103">Use templates and patterns to format dates and times</span></span>
 

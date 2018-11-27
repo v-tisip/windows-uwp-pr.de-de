@@ -4,17 +4,15 @@ description: Während des Renderns interpoliert die Pipeline Scheitelpunktdaten 
 ms.assetid: 1A76DD78-CED7-42BE-BA81-B9050CD3AF9B
 keywords:
 - Dreiecksinterpolation
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 56ce3520248a0fca25230d7ee2a822d827d842a3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e8017cd75ed3dfd4129d6c15d668648792cc8d0a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561249"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704308"
 ---
 # <a name="triangle-interpolation"></a><span data-ttu-id="56a1e-104">Dreiecksinterpolation</span><span class="sxs-lookup"><span data-stu-id="56a1e-104">Triangle interpolation</span></span>
 

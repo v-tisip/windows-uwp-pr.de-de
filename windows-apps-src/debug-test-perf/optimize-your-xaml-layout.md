@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: 79CF3927-25DE-43DD-B41A-87E6768D5C35
 title: Optimieren des XAML-Layouts
 description: Das Layout kann einen aufwendigen Teil einer XAML-App darstellen, sowohl hinsichtlich der CPU-Nutzung als auch der Beanspruchung des Arbeitsspeichers. Hier sind einige einfache Schritte, mit denen Sie die Layoutleistung Ihrer XAML-App verbessern können.
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: b0dcb3e49bb35902a17f829c0222c570265be8b5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ab894a9ba9c51b091e593503be2db57ba3b1a913
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7576914"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708750"
 ---
 # <a name="optimize-your-xaml-layout"></a><span data-ttu-id="fd0b6-105">Optimieren des XAML-Layouts</span><span class="sxs-lookup"><span data-stu-id="fd0b6-105">Optimize your XAML layout</span></span>
 

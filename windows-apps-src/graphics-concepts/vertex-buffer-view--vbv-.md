@@ -4,17 +4,15 @@ description: Ein Scheitelpunktpuffer enthält Daten für eine Liste von Scheitel
 ms.assetid: 695115D2-9DA0-41F2-9416-33BFAB698129
 keywords:
 - Scheitelpunktpufferansicht (VBV)
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7956c7a03256da04e98a5b8f9a33951d7e0216d3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: cfb92c4f876d85388ce325f151408fe7b9e8d8b4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7577886"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704208"
 ---
 # <a name="vertex-buffer-view-vbv-and-index-buffer-view-ibv"></a><span data-ttu-id="3feaa-104">Scheitelpunktpuffer- (VBV) und Indexpufferansicht (IBV)</span><span class="sxs-lookup"><span data-stu-id="3feaa-104">Vertex buffer view (VBV) and Index buffer view (IBV)</span></span>
 

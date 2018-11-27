@@ -1,19 +1,17 @@
 ---
-author: eliotcowley
 title: Eingabemethoden für Spiele
 description: Erfahren Sie mehr über Muster und Verfahren zur effizienten Verwendung von Eingabegeräten.
 ms.assetid: CBAD3345-3333-4924-B6D8-705279F52676
-ms.author: elcowle
 ms.date: 11/20/2017
 ms.topic: article
 keywords: Windows 10, UWP, Spiele, Eingabe
 ms.localizationpriority: medium
-ms.openlocfilehash: ed0d611c761315e42decb89e1a5a5ad84f4b067a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 73e0ba3e563b57c2e392809097567b7e6739c90d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563746"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707693"
 ---
 # <a name="input-practices-for-games"></a><span data-ttu-id="d85ee-104">Eingabemethoden für Spiele</span><span class="sxs-lookup"><span data-stu-id="d85ee-104">Input practices for games</span></span>
 

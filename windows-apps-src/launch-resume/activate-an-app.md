@@ -1,9 +1,7 @@
 ---
-author: TylerMSFT
 title: Behandeln der App-Aktivierung
 description: Erfahren Sie, wie Sie die App-Aktivierung durch Überschreiben der OnLaunched-Methode behandeln.
 ms.assetid: DA9A6A43-F09D-4512-A2AB-9B6132431007
-ms.author: twhitney
 ms.date: 07/02/2018
 ms.topic: article
 keywords: Windows10, UWP
@@ -13,24 +11,24 @@ dev_langs:
 - cppwinrt
 - cpp
 - vb
-ms.openlocfilehash: 4d69680df1684da756219c180bbe6d47263801b9
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a75136f26aa6cfa330e4118e6709b0b4d4be4054
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559772"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705293"
 ---
-# <a name="handle-app-activation"></a><span data-ttu-id="00f7f-104">Behandeln der App-Aktivierung</span><span class="sxs-lookup"><span data-stu-id="00f7f-104">Handle app activation</span></span>
+# <a name="handle-app-activation"></a><span data-ttu-id="57e59-104">Behandeln der App-Aktivierung</span><span class="sxs-lookup"><span data-stu-id="57e59-104">Handle app activation</span></span>
 
-<span data-ttu-id="00f7f-105">Hier erfahren Sie, wie Sie app-Aktivierung durch Überschreiben der [**Application.OnLaunched**](/uwp/api/windows.ui.xaml.application.onlaunched) -Methode behandeln.</span><span class="sxs-lookup"><span data-stu-id="00f7f-105">Learn how to handle app activation by overriding the [**Application.OnLaunched**](/uwp/api/windows.ui.xaml.application.onlaunched) method.</span></span>
+<span data-ttu-id="57e59-105">Hier erfahren Sie, wie Sie app-Aktivierung durch Überschreiben der [**Application.OnLaunched**](/uwp/api/windows.ui.xaml.application.onlaunched) -Methode behandeln.</span><span class="sxs-lookup"><span data-stu-id="57e59-105">Learn how to handle app activation by overriding the [**Application.OnLaunched**](/uwp/api/windows.ui.xaml.application.onlaunched) method.</span></span>
 
-## <a name="override-the-launch-handler"></a><span data-ttu-id="00f7f-106">Überschreiben des Starthandlers</span><span class="sxs-lookup"><span data-stu-id="00f7f-106">Override the launch handler</span></span>
+## <a name="override-the-launch-handler"></a><span data-ttu-id="57e59-106">Überschreiben des Starthandlers</span><span class="sxs-lookup"><span data-stu-id="57e59-106">Override the launch handler</span></span>
 
-<span data-ttu-id="00f7f-107">Wenn eine app, aus irgendeinem Grund aktiviert wird, sendet das System das [**CoreApplicationView.Activated**](/uwp/api/windows.applicationmodel.core.coreapplicationview.activated) -Ereignis.</span><span class="sxs-lookup"><span data-stu-id="00f7f-107">When an app is activated, for any reason, the system sends the [**CoreApplicationView.Activated**](/uwp/api/windows.applicationmodel.core.coreapplicationview.activated) event.</span></span> <span data-ttu-id="00f7f-108">Eine Liste der Aktivierungstypen finden Sie in der [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693)-Enumeration.</span><span class="sxs-lookup"><span data-stu-id="00f7f-108">For a list of activation types, see the [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693) enumeration.</span></span>
+<span data-ttu-id="57e59-107">Wenn eine app, aus irgendeinem Grund aktiviert wird, sendet das System das [**CoreApplicationView.Activated**](/uwp/api/windows.applicationmodel.core.coreapplicationview.activated) -Ereignis.</span><span class="sxs-lookup"><span data-stu-id="57e59-107">When an app is activated, for any reason, the system sends the [**CoreApplicationView.Activated**](/uwp/api/windows.applicationmodel.core.coreapplicationview.activated) event.</span></span> <span data-ttu-id="57e59-108">Eine Liste der Aktivierungstypen finden Sie in der [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693)-Enumeration.</span><span class="sxs-lookup"><span data-stu-id="57e59-108">For a list of activation types, see the [**ActivationKind**](https://msdn.microsoft.com/library/windows/apps/br224693) enumeration.</span></span>
 
-<span data-ttu-id="00f7f-109">Die [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324)-Klasse definiert Methoden, die außer Kraft gesetzt werden können, um die verschiedenen Aktivierungstypen zu behandeln.</span><span class="sxs-lookup"><span data-stu-id="00f7f-109">The [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324) class defines methods you can override to handle the various activation types.</span></span> <span data-ttu-id="00f7f-110">Verschiedene Aktivierungstypen verfügen über eine spezifische Methode, die außer Kraft gesetzt werden kann.</span><span class="sxs-lookup"><span data-stu-id="00f7f-110">Several of the activation types have a specific method that you can override.</span></span> <span data-ttu-id="00f7f-111">Setzen Sie für die übrigen Aktivierungstypen die [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)-Methode außer Kraft.</span><span class="sxs-lookup"><span data-stu-id="00f7f-111">For the other activation types, override the [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) method.</span></span>
+<span data-ttu-id="57e59-109">Die [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324)-Klasse definiert Methoden, die außer Kraft gesetzt werden können, um die verschiedenen Aktivierungstypen zu behandeln.</span><span class="sxs-lookup"><span data-stu-id="57e59-109">The [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows/apps/br242324) class defines methods you can override to handle the various activation types.</span></span> <span data-ttu-id="57e59-110">Verschiedene Aktivierungstypen verfügen über eine spezifische Methode, die außer Kraft gesetzt werden kann.</span><span class="sxs-lookup"><span data-stu-id="57e59-110">Several of the activation types have a specific method that you can override.</span></span> <span data-ttu-id="57e59-111">Setzen Sie für die übrigen Aktivierungstypen die [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330)-Methode außer Kraft.</span><span class="sxs-lookup"><span data-stu-id="57e59-111">For the other activation types, override the [**OnActivated**](https://msdn.microsoft.com/library/windows/apps/br242330) method.</span></span>
 
-<span data-ttu-id="00f7f-112">Definieren Sie die Klasse für Ihre Anwendung.</span><span class="sxs-lookup"><span data-stu-id="00f7f-112">Define the class for your application.</span></span>
+<span data-ttu-id="57e59-112">Definieren Sie die Klasse für Ihre Anwendung.</span><span class="sxs-lookup"><span data-stu-id="57e59-112">Define the class for your application.</span></span>
 
 ```xml
 <Application
@@ -39,10 +37,10 @@ ms.locfileid: "7559772"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 ```
 
-<span data-ttu-id="00f7f-113">Überschreiben Sie die [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)-Methode.</span><span class="sxs-lookup"><span data-stu-id="00f7f-113">Override the [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) method.</span></span> <span data-ttu-id="00f7f-114">Diese Methode wird immer dann aufgerufen, wenn der Benutzer die App startet.</span><span class="sxs-lookup"><span data-stu-id="00f7f-114">This method is called whenever the user launches the app.</span></span> <span data-ttu-id="00f7f-115">Der [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731)-Parameter enthält den vorherigen Status der App sowie die Aktivierungsargumente.</span><span class="sxs-lookup"><span data-stu-id="00f7f-115">The [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731) parameter contains the previous state of your app and the activation arguments.</span></span>
+<span data-ttu-id="57e59-113">Überschreiben Sie die [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)-Methode.</span><span class="sxs-lookup"><span data-stu-id="57e59-113">Override the [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335) method.</span></span> <span data-ttu-id="57e59-114">Diese Methode wird immer dann aufgerufen, wenn der Benutzer die App startet.</span><span class="sxs-lookup"><span data-stu-id="57e59-114">This method is called whenever the user launches the app.</span></span> <span data-ttu-id="57e59-115">Der [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731)-Parameter enthält den vorherigen Status der App sowie die Aktivierungsargumente.</span><span class="sxs-lookup"><span data-stu-id="57e59-115">The [**LaunchActivatedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224731) parameter contains the previous state of your app and the activation arguments.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="00f7f-116">Unter Windows nicht das Starten einer angehaltenen app über die startkachel oder app-Liste diese Methode aufrufen.</span><span class="sxs-lookup"><span data-stu-id="00f7f-116">On Windows, launching a suspended app from Start tile or app list doesn't call this method.</span></span>
+> <span data-ttu-id="57e59-116">Unter Windows Starten einer angehaltenen app über die startkachel oder app-Liste diese Methode nicht aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="57e59-116">On Windows, launching a suspended app from Start tile or app list doesn't call this method.</span></span>
 
 ```csharp
 using System;
@@ -187,9 +185,9 @@ void App::EnsurePageCreatedAndActivate()
 }
 ```
 
-## <a name="restore-application-data-if-app-was-suspended-then-terminated"></a><span data-ttu-id="00f7f-117">Wiederherstellen von App-Daten, wenn die App angehalten und dann beendet wurde</span><span class="sxs-lookup"><span data-stu-id="00f7f-117">Restore application data if app was suspended then terminated</span></span>
+## <a name="restore-application-data-if-app-was-suspended-then-terminated"></a><span data-ttu-id="57e59-117">Wiederherstellen von App-Daten, wenn die App angehalten und dann beendet wurde</span><span class="sxs-lookup"><span data-stu-id="57e59-117">Restore application data if app was suspended then terminated</span></span>
 
-<span data-ttu-id="00f7f-118">Wenn der Benutzer zur beendeten App wechselt, sendet das System das [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018)-Ereignis, wobei [**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) auf **Launch** und [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) auf **Terminated** oder **ClosedByUser** festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="00f7f-118">When the user switches to your terminated app, the system sends the [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018) event, with [**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) set to **Launch** and [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) set to **Terminated** or **ClosedByUser**.</span></span> <span data-ttu-id="00f7f-119">Von der App werden die gespeicherten Anwendungsdaten geladen, und der angezeigte Inhalt wird aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="00f7f-119">The app should load its saved application data and refresh its displayed content.</span></span>
+<span data-ttu-id="57e59-118">Wenn der Benutzer zur beendeten App wechselt, sendet das System das [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018)-Ereignis, wobei [**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) auf **Launch** und [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) auf **Terminated** oder **ClosedByUser** festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="57e59-118">When the user switches to your terminated app, the system sends the [**Activated**](https://msdn.microsoft.com/library/windows/apps/br225018) event, with [**Kind**](https://msdn.microsoft.com/library/windows/apps/br224728) set to **Launch** and [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) set to **Terminated** or **ClosedByUser**.</span></span> <span data-ttu-id="57e59-119">Von der App werden die gespeicherten Anwendungsdaten geladen, und der angezeigte Inhalt wird aktualisiert.</span><span class="sxs-lookup"><span data-stu-id="57e59-119">The app should load its saved application data and refresh its displayed content.</span></span>
 
 ```csharp
 async protected override void OnLaunched(LaunchActivatedEventArgs args)
@@ -261,19 +259,19 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 }
 ```
 
-<span data-ttu-id="00f7f-120">Wenn der Wert von [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) gleich **NotRunning** ist, konnten die Anwendungsdaten von der App nicht erfolgreich gespeichert werden. Die App muss in diesem Fall neu gestartet werden, als ob sie erstmalig gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="00f7f-120">If the value of [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) is **NotRunning**, the app failed to save its application data successfully and the app should start over as if it were being initially launched.</span></span>
+<span data-ttu-id="57e59-120">Wenn der Wert von [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) gleich **NotRunning** ist, konnten die Anwendungsdaten von der App nicht erfolgreich gespeichert werden. Die App muss in diesem Fall neu gestartet werden, als ob sie erstmalig gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="57e59-120">If the value of [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729) is **NotRunning**, the app failed to save its application data successfully and the app should start over as if it were being initially launched.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="00f7f-121">Anmerkungen</span><span class="sxs-lookup"><span data-stu-id="00f7f-121">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="57e59-121">Anmerkungen</span><span class="sxs-lookup"><span data-stu-id="57e59-121">Remarks</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="00f7f-122">Apps können die Initialisierung überspringen, wenn für das aktuelle Fenster bereits Inhalte festgelegt wurden.</span><span class="sxs-lookup"><span data-stu-id="00f7f-122">Apps can skip initialization if there is already content set on the current window.</span></span> <span data-ttu-id="00f7f-123">Sie können überprüfen, dass die [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) -Eigenschaft, um zu ermitteln, ob die app über eine primäre oder sekundäre Kachel gestartet wurde und, basierend auf dieser Information, entscheiden, ob ein neuer darstellen oder Fortsetzen der app-Erfahrung werden soll.</span><span class="sxs-lookup"><span data-stu-id="00f7f-123">You can check the [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) property to determine whether the app was launched from a primary or a secondary tile and, based on that information, decide whether you should present a fresh or resume app experience.</span></span>
+> <span data-ttu-id="57e59-122">Apps können die Initialisierung überspringen, wenn für das aktuelle Fenster bereits Inhalte festgelegt wurden.</span><span class="sxs-lookup"><span data-stu-id="57e59-122">Apps can skip initialization if there is already content set on the current window.</span></span> <span data-ttu-id="57e59-123">Sie können überprüfen, dass die [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) -Eigenschaft, um zu ermitteln, ob die app über eine primäre oder sekundäre Kachel gestartet wurde und, basierend auf dieser Information, entscheiden, ob ein neuer darstellen oder Fortsetzen der app-Erfahrung werden soll.</span><span class="sxs-lookup"><span data-stu-id="57e59-123">You can check the [**LaunchActivatedEventArgs.TileId**](https://msdn.microsoft.com/library/windows/apps/br224736) property to determine whether the app was launched from a primary or a secondary tile and, based on that information, decide whether you should present a fresh or resume app experience.</span></span>
 
-## <a name="important-apis"></a><span data-ttu-id="00f7f-124">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="00f7f-124">Important APIs</span></span>
-* [<span data-ttu-id="00f7f-125">Windows.ApplicationModel.Activation</span><span class="sxs-lookup"><span data-stu-id="00f7f-125">Windows.ApplicationModel.Activation</span></span>](https://msdn.microsoft.com/library/windows/apps/br224766)
-* [<span data-ttu-id="00f7f-126">Windows.UI.Xaml.Application</span><span class="sxs-lookup"><span data-stu-id="00f7f-126">Windows.UI.Xaml.Application</span></span>](https://msdn.microsoft.com/library/windows/apps/br242324)
+## <a name="important-apis"></a><span data-ttu-id="57e59-124">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="57e59-124">Important APIs</span></span>
+* [<span data-ttu-id="57e59-125">Windows.ApplicationModel.Activation</span><span class="sxs-lookup"><span data-stu-id="57e59-125">Windows.ApplicationModel.Activation</span></span>](https://msdn.microsoft.com/library/windows/apps/br224766)
+* [<span data-ttu-id="57e59-126">Windows.UI.Xaml.Application</span><span class="sxs-lookup"><span data-stu-id="57e59-126">Windows.UI.Xaml.Application</span></span>](https://msdn.microsoft.com/library/windows/apps/br242324)
 
-## <a name="related-topics"></a><span data-ttu-id="00f7f-127">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="00f7f-127">Related topics</span></span>
-* [<span data-ttu-id="00f7f-128">Behandeln des Anhaltens von Apps</span><span class="sxs-lookup"><span data-stu-id="00f7f-128">Handle app suspend</span></span>](suspend-an-app.md)
-* [<span data-ttu-id="00f7f-129">Behandeln der App-Fortsetzung</span><span class="sxs-lookup"><span data-stu-id="00f7f-129">Handle app resume</span></span>](resume-an-app.md)
-* [<span data-ttu-id="00f7f-130">Richtlinien für das Anhalten und Fortsetzen von Apps</span><span class="sxs-lookup"><span data-stu-id="00f7f-130">Guidelines for app suspend and resume</span></span>](https://msdn.microsoft.com/library/windows/apps/hh465088)
-* [<span data-ttu-id="00f7f-131">App-Lebenszyklus</span><span class="sxs-lookup"><span data-stu-id="00f7f-131">App lifecycle</span></span>](app-lifecycle.md)
+## <a name="related-topics"></a><span data-ttu-id="57e59-127">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="57e59-127">Related topics</span></span>
+* [<span data-ttu-id="57e59-128">Behandeln des Anhaltens von Apps</span><span class="sxs-lookup"><span data-stu-id="57e59-128">Handle app suspend</span></span>](suspend-an-app.md)
+* [<span data-ttu-id="57e59-129">Behandeln der App-Fortsetzung</span><span class="sxs-lookup"><span data-stu-id="57e59-129">Handle app resume</span></span>](resume-an-app.md)
+* [<span data-ttu-id="57e59-130">Richtlinien für das Anhalten und Fortsetzen von Apps</span><span class="sxs-lookup"><span data-stu-id="57e59-130">Guidelines for app suspend and resume</span></span>](https://msdn.microsoft.com/library/windows/apps/hh465088)
+* [<span data-ttu-id="57e59-131">App-Lebenszyklus</span><span class="sxs-lookup"><span data-stu-id="57e59-131">App lifecycle</span></span>](app-lifecycle.md)

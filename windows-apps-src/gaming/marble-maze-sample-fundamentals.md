@@ -1,19 +1,17 @@
 ---
-author: eliotcowley
 title: Grundlagen am Beispiel von Marble Maze
 description: Dieses Dokument beschreibt die fundamentalen Eigenschaften des Marble Maze-Projekt; beispielsweise wie Visual C++ in der Windows-Runtime-Umgebung verwendet wird, wie es erstellt und strukturiert ist und wie es aufgebaut ist.
 ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
-ms.author: elcowle
 ms.date: 08/22/2017
 ms.topic: article
 keywords: Windows10, Uwp, Spiele, Beispiel, Directx, Grundlagen
 ms.localizationpriority: medium
-ms.openlocfilehash: f595c8f429c93a13d6342c281a90f3b0f5741621
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 94dd22a6f6b1ace5589104574a695b236c1ebd39
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577021"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704129"
 ---
 # <a name="marble-maze-sample-fundamentals"></a><span data-ttu-id="0c8fd-104">Grundlagen am Beispiel von Marble Maze</span><span class="sxs-lookup"><span data-stu-id="0c8fd-104">Marble Maze sample fundamentals</span></span>
 
