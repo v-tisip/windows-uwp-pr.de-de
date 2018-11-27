@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e04170fb8952ecd5802b6190816d44012f56d8a
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7692298"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7855528"
 ---
 # <a name="files-and-folders-in-the-music-pictures-and-videos-libraries"></a><span data-ttu-id="85814-105">Dateien und Ordner in den Musik-, Bild- und Videobibliotheken</span><span class="sxs-lookup"><span data-stu-id="85814-105">Files and folders in the Music, Pictures, and Videos libraries</span></span>
 

@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: de3f0b1377d4f4209dc012ff56adb2de9c68625f
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7694651"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7829160"
 ---
 # <a name="simulate-user-input-through-input-injection"></a><span data-ttu-id="2436f-103">Simulieren der Benutzereingabe über die Eingabeeinfügung</span><span class="sxs-lookup"><span data-stu-id="2436f-103">Simulate user input through input injection</span></span>
 

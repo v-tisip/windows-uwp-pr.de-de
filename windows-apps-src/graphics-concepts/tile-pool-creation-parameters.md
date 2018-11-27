@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 88b854ae3fcccc65b111cee873ef3aee528d6a82
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7708931"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7846530"
 ---
 # <a name="tile-pool-creation-parameters"></a><span data-ttu-id="a6a86-104">Parameter zum Erstellen des Kachelpools</span><span class="sxs-lookup"><span data-stu-id="a6a86-104">Tile pool creation parameters</span></span>
 

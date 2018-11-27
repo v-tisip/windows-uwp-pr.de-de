@@ -11,11 +11,11 @@ keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 7ef7927af7acc8f437a323f374ae7dbf8a36d452
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7715320"
+ms.locfileid: "7840785"
 ---
 # <a name="command-design-basics-for-uwp-apps"></a><span data-ttu-id="204b4-103">Befehlsdesigngrundlagen für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="204b4-103">Command design basics for UWP apps</span></span>
 

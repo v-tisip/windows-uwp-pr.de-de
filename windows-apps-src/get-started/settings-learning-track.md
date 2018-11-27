@@ -7,11 +7,11 @@ keywords: Erste Schritte, UWP, Windows10, Lernpfad, Einstellungen, Einstellungen
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 4aa56bf24d2dfa1fd4ae1947a5b0edf7f312ea2f
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7710212"
+ms.locfileid: "7826745"
 ---
 # <a name="save-and-load-settings-in-a-uwp-app"></a><span data-ttu-id="29b41-104">Speichern und Laden von Einstellungen in einer UWP-App</span><span class="sxs-lookup"><span data-stu-id="29b41-104">Save and load settings in a UWP app</span></span>
 

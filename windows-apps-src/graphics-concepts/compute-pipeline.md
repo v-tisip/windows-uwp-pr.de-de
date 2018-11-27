@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 911546f1c2973a79aea4b597a47352149a4e4210
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7720316"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7826735"
 ---
 # <a name="compute-pipeline"></a><span data-ttu-id="3de9d-104">Compute-Pipeline</span><span class="sxs-lookup"><span data-stu-id="3de9d-104">Compute pipeline</span></span>
 

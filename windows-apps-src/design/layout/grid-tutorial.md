@@ -8,11 +8,11 @@ keywords: windows10, UWP
 ms.assetid: 9794a04d-e67f-472c-8ba8-8ebe442f6ef2
 ms.localizationpriority: medium
 ms.openlocfilehash: 5b221220d417df5b70927984ac65eff93fae54a4
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7707034"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7847274"
 ---
 # <a name="tutorial-use-grid-and-stackpanel-to-create-a-simple-weather-app"></a><span data-ttu-id="be7f8-103">Tutorial: Verwenden Sie Grid und StackPanel, um eine einfache Wetter-App zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="be7f8-103">Tutorial: Use Grid and StackPanel to create a simple weather app</span></span>
 

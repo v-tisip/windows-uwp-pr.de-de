@@ -11,11 +11,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 87df67c480c18ef2c75a9c63d538f0107908ca10
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7698994"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7840627"
 ---
 # <a name="use-a-maintenance-trigger"></a><span data-ttu-id="4f047-104">Verwenden eines Wartungsauslösers</span><span class="sxs-lookup"><span data-stu-id="4f047-104">Use a maintenance trigger</span></span>
 

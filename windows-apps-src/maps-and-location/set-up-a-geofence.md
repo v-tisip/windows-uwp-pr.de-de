@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Karten, Standort, Geofence, Benachrichtigungen
 ms.localizationpriority: medium
 ms.openlocfilehash: adcce5716a2982cf2c08e98ee337dbad20bddf28
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7691318"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7827474"
 ---
 # <a name="set-up-a-geofence"></a><span data-ttu-id="27566-104">Einrichten eines Geofence</span><span class="sxs-lookup"><span data-stu-id="27566-104">Set up a geofence</span></span>
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Termine, Kalender
 ms.localizationpriority: medium
 ms.openlocfilehash: 805383d243008f839b04c98906edd3beb52d581a
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7706145"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7828285"
 ---
 # <a name="manage-appointments"></a><span data-ttu-id="028f1-104">Verwalten von Terminen</span><span class="sxs-lookup"><span data-stu-id="028f1-104">Manage appointments</span></span>
 

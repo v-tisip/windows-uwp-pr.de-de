@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1b35fb71e51044ee6be6ed90001e3b5614c8cb45
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7710384"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7847063"
 ---
 # <a name="camera-space-transformations"></a><span data-ttu-id="c0841-104">Kameraraumtransformationen</span><span class="sxs-lookup"><span data-stu-id="c0841-104">Camera space transformations</span></span>
 

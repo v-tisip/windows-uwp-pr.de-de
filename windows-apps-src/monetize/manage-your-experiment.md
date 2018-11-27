@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store Services SDK, A/B-Tests, Experimente
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e5c0d0ca1b1d771df2b224cc41ec5a37e267bc9
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7713547"
+ms.locfileid: "7854036"
 ---
 # <a name="manage-your-experiment-in-partner-center"></a><span data-ttu-id="f3e27-103">Verwalten eines Experiments im Partner Center</span><span class="sxs-lookup"><span data-stu-id="f3e27-103">Manage your experiment in Partner Center</span></span>
 

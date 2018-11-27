@@ -7,11 +7,11 @@ keywords: Windows10, UWP
 ms.assetid: 7bc2006f-fc5a-4ff6-b573-60933882caf8
 ms.localizationpriority: medium
 ms.openlocfilehash: 963c73bb7667ced5bbe9e33fef0cac561fe1183a
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7692621"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7840726"
 ---
 # <a name="create-a-certificate-for-package-signing"></a><span data-ttu-id="8fb05-104">Erstellen eines Paketsignaturzertifikats</span><span class="sxs-lookup"><span data-stu-id="8fb05-104">Create a certificate for package signing</span></span>
 

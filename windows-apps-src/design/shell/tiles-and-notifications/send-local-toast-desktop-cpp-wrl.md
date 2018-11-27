@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP, win32, Desktop, Popupbenachrichtigungen, Popup senden, lokale Popupbenachrichtigungen senden, Desktop Bridge, C++, cpp, cplusplus, WRL
 ms.localizationpriority: medium
 ms.openlocfilehash: 8508ed18e216270b901a5462d80238fae0763982
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7713836"
+ms.locfileid: "7827135"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a><span data-ttu-id="2e20d-103">Senden von Popupbenachrichtigungen über C++ WRL-Apps</span><span class="sxs-lookup"><span data-stu-id="2e20d-103">Send a local toast notification from desktop C++ WRL apps</span></span>
 

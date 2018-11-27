@@ -7,11 +7,11 @@ keywords: Windows10, UWP, Anzeigen, Werbung, AdControl, AdMediatorControl, Migri
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
 ms.localizationpriority: medium
 ms.openlocfilehash: adac5cfdb1b4a10674fb7173e5b84a86b509f130
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7708270"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7846576"
 ---
 # <a name="update-your-app-to-the-latest-advertising-libraries-for-banner-ads"></a><span data-ttu-id="24535-104">Aktualisieren Ihrer App auf die neuesten Advertising-Bibliotheken für Banneranzeigen</span><span class="sxs-lookup"><span data-stu-id="24535-104">Update your app to the latest advertising libraries for banner ads</span></span>
 

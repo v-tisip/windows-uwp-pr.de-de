@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6727c22631a9536a0ed8d04e7c88602bba890284
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7703494"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7830134"
 ---
 # <a name="share-code-between-a-desktop-application-and-a-uwp-app"></a><span data-ttu-id="12f61-103">Teilen von Code zwischen einer desktop-Anwendung und eine UWP-app</span><span class="sxs-lookup"><span data-stu-id="12f61-103">Share code between a desktop application and a UWP app</span></span>
 
