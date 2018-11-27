@@ -1,21 +1,19 @@
 ---
-author: Karl-Bridge-Microsoft
 Description: Use speech recognition to provide input, specify an action or command, and accomplish tasks.
 title: Spracherkennung
 ms.assetid: 553C0FB7-35BC-4894-9EF1-906139E17552
 label: Speech recognition
 template: detail.hbs
 keywords: Sprache, Stimme, Spracherkennung, natürliche Sprache, diktieren, Eingabe, Benutzerinteraktion
-ms.author: kbridge
 ms.date: 10/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b9148b2d57c55bdff09be9a9d6bb8a6b65d93f12
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8b6e0c6a751116ad03c4e8d69cb02e7147938097
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557147"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718571"
 ---
 # <a name="speech-recognition"></a>Spracherkennung
 
@@ -28,17 +26,17 @@ Die Spracherkennung besteht aus einer Sprachlaufzeit, Erkennungs-APIs zum Progra
 
 ## <a name="configure-speech-recognition"></a>Konfigurieren Sie die Spracherkennung
 
-Um die Spracherkennung mit Ihrer app zu unterstützen, muss der Benutzer verbinden und ein Mikrofon auf ihrem Gerät aktivieren, und akzeptieren Sie die Microsoft-Datenschutzrichtlinie gewähren der Berechtigung für Ihre app zum verwenden.
+Um Spracherkennung mit Ihrer app zu unterstützen, muss der Benutzer verbinden und ein Mikrofon auf ihrem Gerät aktivieren und akzeptieren Sie die Microsoft-Datenschutzrichtlinie Berechtigung für Ihre app um sie zu verwenden.
 
-Den Benutzer automatisch aufgefordert, mit einem systemdialogfeld anfordern und Zugriffsberechtigung für das Mikrofon verwenden des Audio feed nur Satz (beispielsweise von der [Spracherkennung und Speech Synthesis Beispiel](http://go.microsoft.com/fwlink/p/?LinkID=619897) unten dargestellt) das **Mikrofon** [Gerät Funktion](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-devicecapability) in der [App-Paket-manifest](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest). Weitere Details finden Sie in der [Deklaration der App](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
+Den Benutzer automatisch aufgefordert, mit der ein systemdialogfeld anfordern und Zugriffsberechtigung für das Mikrofon verwenden des Audio feed nur Satz (beispielsweise von der [Spracherkennung und Speech Synthesis Beispiel](http://go.microsoft.com/fwlink/p/?LinkID=619897) unten) das **Mikrofon** [Gerät Funktion](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-devicecapability) in der [App-Paket-manifest](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest). Weitere Informationen finden Sie unter [Deklaration der App](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations).
 
 ![Datenschutzrichtlinie für den Zugriff auf das Mikrofon](images/speech/privacy.png)
 
-Wenn der Benutzer klickt auf "Ja", um Zugriff auf das Mikrofon gewähren Ihrer app wird hinzugefügt, um die Liste der zugelassenen Anwendungen auf die Einstellungen -> Datenschutz -> Mikrofon Seite. Allerdings wie der Benutzer auswählen kann, um diese Einstellung zu einem beliebigen Zeitpunkt deaktivieren, sollten Sie sicherstellen, dass Ihre app Zugriff auf das Mikrofon hat, bevor Sie versuchen, sie zu verwenden.
+Wenn der Benutzer klickt auf "Ja", um Zugriff auf das Mikrofon gewähren Ihrer app wird hinzugefügt, um die Liste der zugelassenen Anwendungen auf die Einstellungen -> Datenschutz -> Mikrofon Seite. Jedoch, wie der Benutzer auswählen kann, um diese Einstellung zu einem beliebigen Zeitpunkt zu deaktivieren, sollten Sie sicherstellen, dass Ihre app Zugriff auf das Mikrofon verfügt, bevor Sie versuchen, sie zu verwenden.
 
-Wenn Sie auch diktieren, Cortana, unterstützen möchten oder andere Spracherkennung-(z. B. eine [vordefinierte Grammatik](#predefined-grammars) in eine Einschränkung zu einem Thema definiert Dienste), Sie müssen sich vergewissern, dass **Online Spracherkennung** (Einstellungen -> Datenschutz -> Spracherkennung) ist aktiviert.
+Wenn auch diktieren, Cortana, unterstützt werden sollen, oder andere Spracherkennung-(z. B. eine [vordefinierte Grammatik](#predefined-grammars) in eine Einschränkung zu einem Thema definiert Dienste), Sie müssen sich vergewissern, dass **Online Spracherkennung** (Einstellungen -> Datenschutz -> Spracherkennung) ist aktiviert.
 
-Dieser Codeausschnitt zeigt, wie Ihre app überprüfen kann, wenn ein Mikrofon vorhanden ist, und hat die Berechtigung zum verwenden.
+Dieser Codeausschnitt zeigt, wie Ihre app überprüfen kann, wenn ein Mikrofon vorhanden ist und verfügt über die Berechtigung zum verwenden.
 
 ```csharp
 public class AudioCapturePermissions
@@ -281,7 +279,7 @@ Verwenden Sie eine Voice Command Definition-(VCD-)XML-Datei, um die Befehle zu d
 
 Finden Sie unter [ **SpeechRecognitionVoiceCommandDefinitionConstraint**](https://msdn.microsoft.com/library/windows/apps/dn653220)/
 
-**Hinweis:** die Art der Einschränkung, den Sie verwenden, hängt von der Komplexität der Erkennungsfunktion, die Sie erstellen möchten. Für eine bestimmte Erkennungsaufgabe kann jeweils einer der Ansätze am besten geeignet sein, und vielleicht haben Sie in Ihrer App sogar für alle Einschränkungsarten Verwendung.
+**Hinweis:** die Einschränkung, den Sie verwenden richtet sich nach der Komplexität der Erkennungsfunktion, die Sie erstellen möchten. Für eine bestimmte Erkennungsaufgabe kann jeweils einer der Ansätze am besten geeignet sein, und vielleicht haben Sie in Ihrer App sogar für alle Einschränkungsarten Verwendung.
 Informationen zu den ersten Schritten mit Einschränkungen finden Sie unter [Definieren von benutzerdefinierten Erkennungseinschränkungen](define-custom-recognition-constraints.md).
 
 Die vordefinierte Diktiergrammatik von universellen Windows-Apps erkennt die meisten Wörter und kurzen Wortgruppen einer Sprache. Sie wird standardmäßig aktiviert, wenn ein Spracherkennungsobjekt ohne benutzerdefinierte Einschränkungen instanziiert wird.

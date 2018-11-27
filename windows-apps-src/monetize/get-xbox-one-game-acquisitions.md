@@ -1,23 +1,21 @@
 ---
-author: Xansky
 ms.assetid: C1E42E8B-B97D-4B09-9326-25E968680A0F
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um die aggregierten Kaufdaten für ein Xbox One Spiel während eines bestimmten Zeitraums und mit anderen optionalen Filtern abzurufen.
 title: Abrufen von Xbox One Spielekäufen
-ms.author: mhopkins
 ms.date: 10/18/2018
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Xbox One Spielekäufe
 ms.localizationpriority: medium
-ms.openlocfilehash: 200f18e443e8a130a7e5c673b03c146b73c9083b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 348430f7ceee66a9c4e82f258a70e57d8f344943
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559510"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717895"
 ---
 # <a name="get-xbox-one-game-acquisitions"></a>Abrufen von Xbox One Spielekäufen
 
-Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, die aggregierte Kaufdaten im JSON-Format für ein Xbox One Spiel abzurufen, die das über das Xbox-Portal (XDP) und im XDP Analytics-Dashboard verfügbar ist.
+Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, die aggregierte Kaufdaten im JSON-Format für einen Xbox One Spiel abzurufen, die das über das Xbox-Portal (XDP) und im XDP Analytics-Dashboard verfügbar ist.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -47,7 +45,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 | Parameter        | Typ   |  Beschreibung      |  Erforderlich  
 |---------------|--------|---------------|------|
-| applicationId | String | Die Produkt-ID des Xbox One Spiels, für das Sie Kaufdaten abrufen. Um die Produkt-ID Ihres Spiels zu erhalten, navigieren Sie zu Ihrem Spiel im XDP Analytics-Programm, und rufen Sie die Produkt-ID aus der URL. Alternativ können ist Sie Ihre Kaufdaten vom Partner Center-Analysebericht herunterladen, die Produkt-ID in der TSV-Datei enthalten.  |  Ja  |
+| applicationId | String | Die Produkt-ID des Xbox One Spiels, für das Sie Kaufdaten abrufen. Um die Produkt-ID Ihres Spiels zu erhalten, navigieren Sie zu Ihrem Spiel im XDP Analytics-Programm, und rufen Sie die Produkt-ID aus der URL. Wenn Sie Ihre Kaufdaten vom Partner Center-Analysebericht herunterladen, ist die Produkt-ID auch in der TSV-Datei enthalten.  |  Ja  |
 | startDate | date | Das Startdatum im Datumsbereich der Kaufdaten, die abgerufen werden sollen. Der Standardwert ist das aktuelle Datum. |  Nein  |
 | endDate | date | Das Enddatum im Datumsbereich der Kaufdaten, die abgerufen werden sollen. Der Standardwert ist das aktuelle Datum. |  Nein  |
 | top | Int | Die Anzahl der Datenzeilen, die zurückgegeben werden sollen. Der Maximal- und Standardwert ist 10.000, wenn nicht anders angegeben. Wenn die Abfrage keine weiteren Zeilen enthält, entält der Antworttext den Link „Weiter“, den Sie verwenden können, um die nächste Seite mit Daten anzufordern. |  Nein  |
@@ -60,7 +58,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 ### <a name="request-example"></a>Anforderungsbeispiel
 
-Das folgende Beispiel zeigt verschiedene Anforderungen für den Abruf von Spielekaufdaten für Xbox One. Ersetzen Sie den Wert *ApplicationId* durch die Produkt-ID für Ihr Spiel.
+Das folgende Beispiel zeigt verschiedene Anforderungen für den Abruf von Spielekaufdaten für Xbox One. Ersetzen Sie den *ApplicationId* -Wert durch die Produkt-ID für Ihr Spiel an.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/xbox/acquisitions?applicationId=BRRT4NJ9B3D1&startDate=1/1/2017&endDate=2/1/2017&top=10&skip=0 HTTP/1.1

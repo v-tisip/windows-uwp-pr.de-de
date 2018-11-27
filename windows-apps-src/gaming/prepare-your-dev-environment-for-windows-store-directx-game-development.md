@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Projektvorlagen und Tools für Spiele
 description: Hier erfahren Sie, was erforderlich ist, um mit dem Programmieren von DirectX-Spielen für die Universelle Windows-Plattform (UWP) beginnen zu können.
 ms.assetid: d5afd5d3-ad01-0f16-3ddf-2c4eb86b68a7
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Vorlagen, Tools, DirectX
 ms.localizationpriority: medium
-ms.openlocfilehash: ac33b242e2351c21ea22aa9bbb6bf74693e8d4ef
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a272c579fb3ead676fe76f16c33b70f557de4ed8
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571522"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717376"
 ---
 # <a name="project-templates-and-tools-for-games"></a>Projektvorlagen und Tools für Spiele
 
