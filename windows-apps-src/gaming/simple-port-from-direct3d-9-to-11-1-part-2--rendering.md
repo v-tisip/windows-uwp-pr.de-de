@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Konvertieren des Renderingframeworks
 description: Hier wird veranschaulicht, wie Sie ein einfaches Renderingframework von Direct3D9 in Direct3D11 konvertieren. Sie erfahren, wie Sie Geometriepuffer portieren, HLSL-Shaderprogramme kompilieren und laden und die Renderkette in Direct3D11 implementieren.
 ms.assetid: f6ca1147-9bb8-719a-9a2c-b7ee3e34bd18
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, Spiele, Renderingframeworks, konvertieren, Direct3D 9, Direct3D 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 044a0dc7bf264a82b849623a53d00268d7b30fd9
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: aba723a5ee2443664d6d640adc124b991ff0da7e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575621"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713813"
 ---
 # <a name="convert-the-rendering-framework"></a>Konvertieren des Renderingframeworks
 
@@ -238,7 +236,7 @@ m_d3dDevice->CreateVertexShader(
 
 Fügen Sie zum Einbinden von Shader-Bytecode in das kompilierte App-Paket dem Visual Studio-Projekt einfach die HLSL-Datei hinzu. In Visual Studio wird das [Effektcompiler-Tool](https://msdn.microsoft.com/library/windows/desktop/bb232919) (FXC) verwendet, um HLSL-Dateien in kompilierte Shaderobjekte (CSO-Dateien) zu kompilieren und in das App-Paket einzubinden.
 
-> **Hinweis:**  Achten Sie darauf, dass Sie die richtige zielfeatureebene für den HLSL-Compiler festlegen: mit der rechten Maustaste der HLSL-Quelldatei in Visual Studio, klicken Sie auf Eigenschaften und ändern Sie die **Shader Model** -Einstellung unter **HLSL-Compiler -&gt; allgemeine**. In Direct3D wird diese Eigenschaft anhand der Hardwarefunktionen überprüft, wenn von der App die Direct3D-Shaderressource erstellt wird.
+> **Hinweis:**  müssen Sie die richtige zielfeatureebene für den HLSL-Compiler festlegen: mit der rechten Maustaste der HLSL-Quelldatei in Visual Studio, klicken Sie auf Eigenschaften und ändern Sie die **Shader Model** -Einstellung unter **HLSL-Compiler -&gt; allgemeine**. In Direct3D wird diese Eigenschaft anhand der Hardwarefunktionen überprüft, wenn von der App die Direct3D-Shaderressource erstellt wird.
 
  
 
@@ -248,7 +246,7 @@ Dies ist ein guter Ort zum Erstellen des Eingabelayouts, welches der Deklaration
 
 Daten pro Vertex müssen im Systemspeicher in Form von kompatiblen Typen gespeichert werden. Hierbei können DirectXMath-Datentypen hilfreich sein. DXGI\_FORMAT\_R32G32B32\_FLOAT entspricht beispielsweise [**XMFLOAT3**](https://msdn.microsoft.com/library/windows/desktop/ee419475).
 
-> **Hinweis:**  Konstantenpuffer eine feste festes eingabelayout mit für vier Gleitkommazahlen gleichzeitig verwenden. [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608) (und die Ableitungen) wird für die Daten von Konstantenpuffern empfohlen.
+> **Hinweis:**  Konstantenpuffer verwendet eine feste festes eingabelayout mit für vier Gleitkommazahlen gleichzeitig verwenden. [**XMFLOAT4**](https://msdn.microsoft.com/library/windows/desktop/ee419608) (und die Ableitungen) wird für die Daten von Konstantenpuffern empfohlen.
 
  
 

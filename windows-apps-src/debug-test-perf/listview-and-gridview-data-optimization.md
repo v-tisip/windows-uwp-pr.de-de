@@ -1,24 +1,22 @@
 ---
-author: jwmsft
 ms.assetid: 3A477380-EAC5-44E7-8E0F-18346CC0C92F
 title: Virtualisierung von ListView- und GridView-Daten
 description: Verbessern Sie die Leistung und Startzeit von ListView und GridView durch Datenvirtualisierung.
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 92b81c79eb1be9e21aa7c306ef31b0b3bb62e7d1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 411d19ba26dca1edff91fb7e5b432aa4da3bd120
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577422"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715518"
 ---
 # <a name="listview-and-gridview-data-virtualization"></a>ListView- und GridView-Datenvirtualisierung
 
 
-**Hinweis:** Weitere Einzelheiten finden Sie in der Sitzung //build/ [Erhebliches Erhöhen der Leistung bei der Interaktion von Benutzern mit großen Mengen von Daten in GridView und ListView](https://channel9.msdn.com/Events/Build/2013/3-158).
+**Hinweis:** Weitere Informationen finden Sie unter der Sitzung //build/ [Erhebliches Erhöhen der Leistung bei der Interaktion von Benutzern mit großen Mengen von Daten in GridView und ListView](https://channel9.msdn.com/Events/Build/2013/3-158).
 
 Verbessern Sie die Leistung und Startzeit von [**ListView**](https://msdn.microsoft.com/library/windows/apps/BR242878) und [**GridView**](https://msdn.microsoft.com/library/windows/apps/BR242705) durch Datenvirtualisierung. Informationen zu UI-Virtualisierung, Elementreduzierung und die progressive Aktualisierung von Elementen finden Sie unter [Optimieren der ListView- und GridView-Benutzeroberfläche](optimize-gridview-and-listview.md).
 

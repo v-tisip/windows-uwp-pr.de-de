@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: a2751e22-6842-073a-daec-425fb981bafe
 title: Visuelle Ebene
 description: Die Windows.UI.Composition-API ermöglicht den Zugriff auf die Kompositionsebene zwischen der Frameworkebene (XAML) und der Grafikebene (DirectX).
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 2dd8c53dad735cf1094410bf97a81f6b0247bdc7
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 599c2625bffff40a30f26bfb40f7cce9c97acdd1
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571389"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716128"
 ---
 # <a name="visual-layer"></a>Visuelle Ebene
 
@@ -40,7 +38,7 @@ Die wichtigsten Funktionen der visuellen Ebene sind:
 
 ### <a name="content"></a>Inhalt
 
-Inhalt wird vom Animations- und Effektsystem mit visuellen Elementen für die Verwendung gehostet, transformiert und zur Verfügung gestellt. An der Basis der Klassenhierarchie befindet sich die [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)-Klasse, ein leichter Thread-Agile-Proxy im App-Prozess zum visuellen Zustand im Kompositor. Unterklassen der Visual [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) zulassen für Kinder erstellen Strukturen von visuellen Elementen und [**spritevisual-Element**](https://msdn.microsoft.com/library/windows/apps/Mt589433) , das enthält Inhalte enthalten und können mit Volltonfarben, benutzerdefinierten gezeichneten Inhalten oder visuellen Effekten gezeichnet werden. Zusammen bilden diese Visual-Typen die visuelle Struktur für die 2D-UI und stützen die meisten sichtbaren XAML-FrameworkElements.
+Inhalt wird vom Animations- und Effektsystem mit visuellen Elementen für die Verwendung gehostet, transformiert und zur Verfügung gestellt. An der Basis der Klassenhierarchie befindet sich die [**Visual**](https://msdn.microsoft.com/library/windows/apps/Dn706858)-Klasse, ein leichter Thread-Agile-Proxy im App-Prozess zum visuellen Zustand im Kompositor. Unterklassen der Visual [**ContainerVisual**](https://msdn.microsoft.com/library/windows/apps/Dn706810) für untergeordnete Elemente erstellen Strukturen von visuellen Elementen und [**spritevisual-Element**](https://msdn.microsoft.com/library/windows/apps/Mt589433) , das enthält Inhalte enthalten und können mit Volltonfarben, benutzerdefinierten gezeichneten Inhalten oder visuellen Effekten gezeichnet werden. Zusammen bilden diese Visual-Typen die visuelle Struktur für die 2D-UI und stützen die meisten sichtbaren XAML-FrameworkElements.
 
 Weitere Informationen finden Sie in der Übersicht [Visuelle Kompositionseffekte](composition-visual-tree.md).
 

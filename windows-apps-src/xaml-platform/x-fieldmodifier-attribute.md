@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: Ändert das XAML-Kompilierungsverhalten, sodass Felder für Verweise auf benannte Objekte mit öffentlichem Zugriff definiert werden und nicht das private Standardverhalten aufweisen.
 title: xFieldModifier-Attribut
 ms.assetid: 6FBCC00B-848D-4454-8B1F-287CA8406DDF
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: de1d7dedbd2bd3d51bd2e1c1a9652d18f2b78ef0
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 751cda36fc58d0e6add9204327a74ec947c9fc53
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565773"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714467"
 ---
 # <a name="xfieldmodifier-attribute"></a>x:FieldModifier-Attribut
 

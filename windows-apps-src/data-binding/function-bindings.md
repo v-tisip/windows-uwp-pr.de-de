@@ -1,22 +1,20 @@
 ---
-author: jwmsft
 description: Die xBind-Markuperweiterung mit der Funktionen im Markup verwendet werden.
 title: Funktionen in x:Bind
-ms.author: jimwalk
 ms.date: 04/26/2018
 ms.topic: article
 keywords: Windows 10, Uwp, xBind
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e00762f389791fb3972b6f224759d35bf547e38
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 371b64a6161911242acd5b9abf97cfa7d2f05358
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560006"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7715476"
 ---
 # <a name="functions-in-xbind"></a>Funktionen in x:Bind
 
-**Hinweis:** allgemeine Informationen zur Verwendung von Daten Bindung in Ihrer app mit **{X: Bind}** (und für einen vollständigen Vergleich zwischen **{X: Bind}** und **{Binding}**) finden Sie unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
+**Hinweis:** allgemeine Informationen zur Verwendung von Daten Bindung in Ihrer app mit **{X: Bind}** (und die für einen vollständigen Vergleich zwischen **{X: Bind}** und **{Binding}**), finden Sie unter [der Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 Ab Windows10, Version 1607, unterstützt **{x: Bind}** die Verwendung einer Funktion als blattbildenden Schrittdes Bindungspfades. Dadurch wird Folgendes ermöglicht:
 
@@ -106,7 +104,7 @@ Für die zu bindende Funktion müssen folgende Voraussetzungen gelten:
 - Die Argumenttypen müssen den übergebenen Daten entsprechen. Es werden keine einschränkenden Konvertierungen durchgeführt
 - Der Rückgabetyp der Funktion muss mit dem Typ der Eigenschaft übereinstimmen, für die die Bindung verwendet wird
 
-Beginnen mit dem nächsten wichtigen Update für Windows 10, wird das Bindungsmodul Benachrichtigungen über eigenschaftsänderungen ausgelöst, mit dem Funktionsnamen reagieren und Bindungen nach Bedarf neu ausgewertet. Beispiel: 
+Beginnen mit dem nächsten wichtigen Update für Windows 10, wird das Bindungsmodul Benachrichtigungen über eigenschaftsänderungen mit den Namen der Funktion ausgelöst reagieren und Bindungen nach Bedarf neu ausgewertet. Beispiel: 
 
 ```XAML
 <DataTemplate x:DataType="local:Person">
@@ -161,7 +159,7 @@ public class Person:INotifyPropertyChanged
 ```
 
 > [!TIP]
-> Sie können Funktionen in X: Bind verwenden, erreichen Sie die gleichen Szenarien wie was über Konverter und MultiBinding in WPF unterstützt wurde.
+> Sie können Funktionen in X: Bind um zu erreichen die gleichen Szenarien wie was über Konverter und MultiBinding in WPF unterstützt wurde.
 
 ## <a name="function-arguments"></a>Funktionsargumente
 
@@ -175,7 +173,7 @@ Mehrere Argumente können durch Komma (,) voneinander getrennt angegeben werden
 
 ### <a name="two-way-function-bindings"></a>Bidirektionale Funktionsbindung
 
-In einem Szenario mit bidirektionaler Bindung muss eine zweite Funktion für die umgekehrte Bindungsrichtung angegeben werden. Dies erfolgt mithilfe der **BindBack** Binding-Eigenschaft. In dem folgenden Beispiel wird die Funktion zu ergreifende Maßnahme ein Argument, das dem Wert entspricht, die das Modell übernommen werden muss.
+In einem Szenario mit bidirektionaler Bindung muss eine zweite Funktion für die umgekehrte Bindungsrichtung angegeben werden. Dies erfolgt mithilfe der **BindBack** Bindung-Eigenschaft. In dem Beispiel unten haben die Funktion zu ergreifende Maßnahme ein Argument der der Wert ist, die das Modell übernommen werden muss.
 ```xaml
 <TextBlock Text="{x:Bind a.MyFunc(b), BindBack=a.MyFunc2, Mode=TwoWay}" />
 ```

@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: Informationen zu von XAML verwendeten Regeln für die Leerzeichenverarbeitung.
 title: XAML und Leerzeichen
 ms.assetid: 025F4A8E-9479-4668-8AFD-E20E7262DC24
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 560f820ec2ecc7f28145ec29c31a60c1e4573d7e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 521e794680df6449ebc49745319c4aeec74405d1
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568971"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714395"
 ---
 # <a name="xaml-and-whitespace"></a>XAML und Leerzeichen
 
@@ -22,7 +20,7 @@ Informationen zu von XAML verwendeten Regeln für die Leerzeichenverarbeitung.
 
 ## <a name="whitespace-processing"></a>Leerzeichenverarbeitung
 
-In XML, sind Leerzeichen in XAML Leerzeichen, Zeilenvorschub und Tabulator. Diese entsprechen den Unicode-Werten 0020, 000A bzw. 0009. Standardmäßig wird diese Leerzeichennormalisierung angewendet, wenn ein XAML-Verarbeiter auf internen Text zwischen Elementen in einer XAML-Datei stößt:
+Mit XML sind Leerzeichen in XAML Leerzeichen, Zeilenvorschub und Tabulator. Diese entsprechen den Unicode-Werten "0020" 000A und 0009. Standardmäßig wird diese Leerzeichennormalisierung angewendet, wenn ein XAML-Verarbeiter auf internen Text zwischen Elementen in einer XAML-Datei stößt:
 
 -   Zeilenvorschubzeichen zwischen ostasiatischen Zeichen werden entfernt.
 -   Alle Leerzeichen (Leerstelle, Zeilenvorschub, Tabulator) werden in Leerstellen umgewandelt.

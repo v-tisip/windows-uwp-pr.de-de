@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Portieren des GLSL-Codes
 description: Nachdem Sie sich um den Code gekümmert haben, mit dem die Puffer und Shaderobjekte erstellt und konfiguriert werden, muss der in diesen Shadern enthaltene Code von der GL Shader Language (GLSL) von OpenGL ES 2.0 in die High-Level Shader Language (HLSL) von Direct3D 11 portiert werden.
 ms.assetid: 0de06c51-8a34-dc68-6768-ea9f75dc57ee
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, GLSL, Portieren
 ms.localizationpriority: medium
-ms.openlocfilehash: 47fa601a7e0ff307108713a0a6fcd7a5468b0468
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 809440f9e77af19c01f4a050eee3b6f8d1c709b7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554029"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713081"
 ---
 # <a name="port-the-glsl"></a>Portieren der GLSL
 
@@ -60,7 +58,6 @@ Hier wird vom Konstantenpuffer das Register „b0“ für den gepackten Puffer v
 
 <a name="instructions"></a>Anweisungen
 ------------
-
 ### <a name="step-1-port-the-vertex-shader"></a>Schritt 1: Portieren des Vertex-Shaders
 
 In diesem einfachen OpenGL ES 2.0-Beispiel verfügt der Vertex-Shader über drei Eingaben: eine konstante Modell-Ansicht-Projektion-4x4-Matrix und zwei Vektoren mit vier Koordinaten. Diese beiden Vektoren enthalten die Vertexposition und ihre Farbe. Der Shader wandelt den Positionsvektor in Perspektivenkoordinaten um und weist ihn der systeminternen gl\_Position-Funktion zur Rasterung zu. Außerdem wird die Vertexfarbe zur Interpolation während der Rasterung in eine abweichende Variable kopiert.
@@ -160,10 +157,8 @@ Die Farbe für das Pixel an der Position wird in das Renderziel geschrieben. Das
 
 [Portieren der Vertexpuffer und -daten](port-the-vertex-buffers-and-data-config.md) Nächster Schritt
 ---------
-
 [Zeichnen auf den Bildschirm](draw-to-the-screen.md) Anmerkungen
 -------
-
 Wenn Sie mit der HLSL-Semantik und dem Packen von Konstantenpuffern vertraut sind, können Sie einigen Debugaufwand vermeiden und Möglichkeiten zur Optimierung schaffen. Lesen Sie sich nach Möglichkeit die Themen [Variablensyntax (HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509706), [Einführung in Puffer in Direct3D11](https://msdn.microsoft.com/library/windows/desktop/ff476898) und [Erstellen eines Konstantenpuffers](https://msdn.microsoft.com/library/windows/desktop/ff476896) durch. Hier sind als Anfang schon einmal einige Tipps aufgeführt, die in Verbindung mit der Semantik und Konstantenpuffern zu beachten sind:
 
 -   Überprüfen Sie stets den Direct3D-Konfigurationscode des Renderers, um sicherzustellen, dass die Strukturen für die Konstantenpuffer mit den cbuffer-Strukturdeklarationen der HLSL übereinstimmen und dass die Komponentenskalartypen für beide Deklarationen übereinstimmen.

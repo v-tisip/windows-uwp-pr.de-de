@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 66400066-24BF-4AF2-B52A-577F5C3CA474
 description: Verwenden Sie diese Methoden in der Microsoft Store-Übermittlungs-API, Add-on-Übermittlungen für apps zu verwalten, die für Ihr Partner Center-Konto registriert sind.
 title: Verwalten von Add-On-Übermittlungen
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-On-Übermittlungen, In-App-Produkt, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ae0e07b588415094281683ff762c02ed5242654
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 45fc2274ac22eee4a4c249397f25c1b0405cb856
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7576757"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713181"
 ---
 # <a name="manage-add-on-submissions"></a>Verwalten von Add-On-Übermittlungen
 
@@ -121,7 +119,7 @@ Gehen Sie folgendermaßen vor, um eine Übermittlung für ein Add-On zu erstelle
     await blockBob.UploadFromStreamAsync(stream);
     ```
 
-5. Führen Sie die folgende Methode aus, um die Übermittlung zu committen. Dies wird Partner Center Warnung an, dass Sie Ihre Übermittlung fertig gestellt haben und die Updates für Ihr Konto jetzt angewendet werden sollen. Weitere Informationen finden Sie unter [Ausführen eines Commits einer Add-On-Übermittlung](commit-an-add-on-submission.md).
+5. Führen Sie die folgende Methode aus, um die Übermittlung zu committen. Hierdurch wird Partner Center darüber benachrichtigt, dass Sie Ihre Übermittlung fertig gestellt haben und die Updates auf Ihr Konto jetzt angewendet werden soll. Weitere Informationen finden Sie unter [Ausführen eines Commits einer Add-On-Übermittlung](commit-an-add-on-submission.md).
 
     ```
     POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/commit
@@ -135,7 +133,7 @@ Gehen Sie folgendermaßen vor, um eine Übermittlung für ein Add-On zu erstelle
 
     Um den Status der Übermittlung zu überprüfen, zeigen Sie den Wert *status* im Antworttext an. Dieser Wert sollte von **CommitStarted** entweder in **PreProcessing** geändert worden sein, wenn die Anforderung erfolgreich war, oder in **CommitFailed**, wenn die Anforderung Fehler enthalten hat. Wenn Fehler aufgetreten sind, enthält das Feld *StatusDetails* Feld weitere Details zu den Fehlern.
 
-7. Nachdem das Commit erfolgreich abgeschlossen wurde, wird die Übermittlung zur Aufnahme an den Store gesendet. Sie können weiterhin die mithilfe der vorherigen Methode, oder besuchen Partner Center überwachen.
+7. Nachdem das Commit erfolgreich abgeschlossen wurde, wird die Übermittlung zur Aufnahme an den Store gesendet. Sie können weiterhin die mithilfe der vorherigen Methode oder besuchen Sie Partner Center überwachen.
 
 <span/>
 
@@ -354,7 +352,7 @@ Die folgenden Werte stellen die verfügbaren Preisstufen in der [Ressource für 
 |  Base               |   Das Preisniveau ist nicht festgelegt. Verwenden Sie den Basispreis für das Add-On.      |     
 |  NotAvailable              |   Das Add-On ist für die angegebene Region nicht verfügbar.    |     
 |  Free              |   Das Add-On ist kostenlos.    |    
-|  Stufe*xxxx*               |   Eine Zeichenfolge, die die Preisstufe für das Add-On im Format **Stufe<em>xxxx</em>** angibt. Derzeit werden die folgenden Spannen von Preisstufen unterstützt:<br/><br/><ul><li>Wenn der Wert *IsAdvancedPricingModel* für die [Ressource für Preise](#pricing-object) **true** ist, sind die für Ihr Konto verfügbaren Werte für Preisstufen **Stufe1012** - **Stufe1424**.</li><li>Wenn der Wert *IsAdvancedPricingModel* für die [Ressource für Preise](#pricing-object) **false** ist, sind die für Ihr Konto verfügbaren Werte für Preisstufen **Stufe1012** - **Stufe1424**.</li></ul>Um festzustellen, die vollständige Tabelle der Preis Ebenen, die für Ihr Entwicklerkonto, einschließlich der marktspezifische Preise, die jede Ebene zugeordnet sind verfügbar sind, wechseln Sie zur Seite **Preise und Verfügbarkeit** für alle Ihre app-Übermittlungen im Partner Center und Klicken Sie auf den Link **Anzeigen der Tabelle** im Abschnitt **Märkte und angepasste Preise** (bei einigen entwicklerkonten dieser Link ist im Abschnitt **Preise** ).     |
+|  Stufe*xxxx*               |   Eine Zeichenfolge, die die Preisstufe für das Add-On im Format **Stufe<em>xxxx</em>** angibt. Derzeit werden die folgenden Spannen von Preisstufen unterstützt:<br/><br/><ul><li>Wenn der Wert *IsAdvancedPricingModel* für die [Ressource für Preise](#pricing-object) **true** ist, sind die für Ihr Konto verfügbaren Werte für Preisstufen **Stufe1012** - **Stufe1424**.</li><li>Wenn der Wert *IsAdvancedPricingModel* für die [Ressource für Preise](#pricing-object) **false** ist, sind die für Ihr Konto verfügbaren Werte für Preisstufen **Stufe1012** - **Stufe1424**.</li></ul>Die vollständige Tabelle der Preis Ebenen, die für Ihr Entwicklerkonto, einschließlich der marktspezifische Preise, jede Ebene zugeordnet sind, finden Sie auf der Seite **Preise und Verfügbarkeit** für eines Ihrer app-Übermittlungen im Partner Center und Klicken Sie auf den Link **Anzeigen der Tabelle** im Abschnitt **Märkte und angepasste Preise** (bei einigen entwicklerkonten dieser Link ist im Abschnitt **Preise** ).     |
 
 <span id="submission-status-code" />
 

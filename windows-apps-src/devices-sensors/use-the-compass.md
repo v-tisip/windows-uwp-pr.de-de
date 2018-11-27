@@ -1,19 +1,17 @@
 ---
-author: muhsinking
 ms.assetid: 5B30E32F-27E0-4656-A834-391A559AC8BC
 title: Verwenden des Kompasses
 description: Hier erfahren Sie, wie Sie mithilfe des Kompasses die aktuelle Richtung ermitteln.
-ms.author: mukin
 ms.date: 06/06/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 4af6b0fb339ba1fde3ea94f456eac98be8a1db9b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f8c1cc6e17d95f55cc97af7695c12b374edcaaa8
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571542"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714026"
 ---
 # <a name="use-the-compass"></a>Verwenden des Kompasses
 
@@ -33,7 +31,7 @@ Apps können die aktuelle Richtung anhand des magnetischen oder geografischen No
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Sie sollten mit Extensible Application Markup Language (XAML), Microsoft für VisualC++- und Ereignissen vertraut sein.
+Sie sollten mit Extensible Application Markup Language (XAML), Microsoft für VisualC++ c# und Ereignissen vertraut sein.
 
 Das verwendete Gerät oder der Emulator muss einen Kompass unterstützen.
 

@@ -1,19 +1,17 @@
 ---
-author: Mtoepke
 title: Häufig gestellte Fragen
 description: Häufig gestellte Fragen zu UWP auf Xbox
-ms.author: mstahl
 ms.date: 03/29/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.assetid: 265fe827-bd4a-48d4-b362-8793b9b25705
 ms.localizationpriority: medium
-ms.openlocfilehash: a5ac814dfb86259791de2632587a1cfd0d456a37
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 036c3c1832bbb3e27a93671f399a9a97c7afaba3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564466"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714156"
 ---
 # <a name="frequently-asked-questions"></a>Häufig gestellte Fragen
 
@@ -63,7 +61,7 @@ Weitere Informationen dazu, wie Sie das Entwicklerprogramm verlassen, finden Sie
 
 Wenn Sie nicht mehr Zugriff auf Ihre Xbox One haben, können Sie es in Windows Partner Center deaktivieren. Weitere Informationen finden Sie im Abschnitt **Deaktivieren der Konsole mit Partner Center** im Thema [Developer Mode Deaktivierung des Xbox One](devkit-deactivation.md#deactivate-your-console-using-partner-center) . 
 
-### <a name="i-left-the-developer-program-using-partner-center-but-im-in-still-developer-mode-what-do-i-do"></a>Ich habe das Entwicklerprogramm mithilfe von Partner Center, aber dennoch Entwicklermodus verlassen. Wie gehe ich vor?
+### <a name="i-left-the-developer-program-using-partner-center-but-im-in-still-developer-mode-what-do-i-do"></a>Ich habe das Entwicklerprogramm mithilfe von Partner Center, aber weiterhin Entwicklermodus verlassen. Wie gehe ich vor?
 
 Starten Sie Dev Home, und wählen Sie die Schaltfläche **Leave developer mode** aus. Dadurch wird die Konsole im Einzelhandelsmodus neu gestartet. 
 

@@ -1,25 +1,23 @@
 ---
-author: TylerMSFT
 title: Starten der Microsoft Store-App
-description: In diesem Thema wird das URI-Schema „ms-windows-store“ beschrieben. Ihre app kann dieses URI-Schema verwenden, um die Microsoft Store-app mit bestimmten Seiten im Speicher zu starten.
+description: In diesem Thema wird das URI-Schema „ms-windows-store“ beschrieben. Ihre app kann dieses URI-Schema verwenden, um die Microsoft Store-app mit bestimmten Seiten des Store starten.
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
-ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: ecb99c16d413e5e9869215f2d048ad6d9d52206f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f64a290443ed5e45a5379b13f70dcc1ea2f57fa9
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578446"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714812"
 ---
 # <a name="launch-the-microsoft-store-app"></a>Starten der Microsoft Store-App
 
 
 
-In diesem Thema wird das **ms-windows-store:**-URI-Schema beschrieben. Ihre app kann dieses URI-Schema verwenden, um die Microsoft Store-app mit bestimmten Seiten im Speicher zu starten, mithilfe der [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) -Methode.
+In diesem Thema wird das **ms-windows-store:**-URI-Schema beschrieben. Ihre app kann dieses URI-Schema verwenden, zum Starten der Microsoft Store-app mit bestimmten Seiten im Store mithilfe der Methode [**LaunchUriAsync**](https://msdn.microsoft.com/library/windows/apps/hh701476) .
 
 Dieses Beispiel zeigt, wie Sie den Speicher auf der Seite "Spiele" zu öffnen:
 

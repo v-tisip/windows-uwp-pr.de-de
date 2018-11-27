@@ -1,12 +1,10 @@
 ---
-author: Jwmsft
 Description: Learn how to enable peer-to-peer navigation between two basic pages in an Universal Windows Platform (UWP) app.
 title: Peer-zu-Peer-Navigation zwischen zwei Seiten
 ms.assetid: 0A364C8B-715F-4407-9426-92267E8FB525
 label: Peer-to-peer navigation between two pages
 template: detail.hbs
 op-migration-status: ready
-ms.author: jimwalk
 ms.date: 07/13/2018
 ms.topic: article
 keywords: Windows10, UWP
@@ -15,12 +13,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 91a1ca0ee99833280aaa41ca4d9c94d043a78e0a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e72dc726143d17f605283fa801f8e286c2c58878
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581331"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717109"
 ---
 # <a name="implement-navigation-between-two-pages"></a>Implementieren der Navigation zwischen zwei Seiten
 
@@ -332,7 +330,7 @@ Hier werden eine [**TextBlock**](https://msdn.microsoft.com/library/windows/apps
 </StackPanel>
 ```
 
-In der `HyperlinkButton_Click` -Ereignishandler der CodeBehind-Datei "Page1.xaml" Hinzufügen einer Parameter einen Verweis auf die `Text` Eigenschaft der `name` **TextBox** , die `Navigate` Methode.
+In der `HyperlinkButton_Click` -Ereignishandler der CodeBehind-Datei "Page1.xaml" Hinzufügen einer Parameter einen Verweis auf die `Text` -Eigenschaft des der `name` **TextBox** auf die `Navigate` Methode.
 
 ```csharp
 private void HyperlinkButton_Click(object sender, RoutedEventArgs e)

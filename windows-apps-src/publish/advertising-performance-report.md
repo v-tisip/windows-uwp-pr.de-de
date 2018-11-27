@@ -1,26 +1,24 @@
 ---
-author: jnHs
 Description: To view performance data for the ad units in your apps, use the advertising performance report in Partner Center.
 title: Bericht zur Anzeigenleistung
 ms.assetid: 32E555C3-C34D-4503-82BB-4C3F5CAE4500
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 2cc47e934ca75eb581808483f7875fea901943b3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a96f6f6593a8ccc6714f67b6f825a6416750b432
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555516"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714885"
 ---
 # <a name="advertising-performance-report"></a>Bericht zur Anzeigenleistung
 
 
-Der **Advertising Leistungsbericht** im [Partner Center](https://partner.microsoft.com/dashboard) zeigt, wie Ihre [anzeigeneinheiten](in-app-ads.md) durchführen, einschließlich der Community-anzeigen. Dieser Bericht enthält Daten mehrerer Anzeigenanbieter in UWP-Apps, die die [Anzeigenvermittlung](in-app-ads.md#mediation) verwenden.
+Der **Bericht zur anzeigen Leistung** im [Partner Center](https://partner.microsoft.com/dashboard) zeigt, wie Ihre [anzeigeneinheiten](in-app-ads.md) durchführen, einschließlich der Community-anzeigen. Dieser Bericht enthält Daten mehrerer Anzeigenanbieter in UWP-Apps, die die [Anzeigenvermittlung](in-app-ads.md#mediation) verwenden.
 
-Erweitern Sie zum Anzeigen dieses Berichts im linken Navigationsmenü **Analysieren** und wählen Sie dann **Anzeigenleistung** aus. Sie können diese Daten im Partner Center anzeigen oder die Berichtsdaten offline anzeigen, indem Sie auf die Pfeilsymbole auf der Seite herunterladen. Sie können diese Daten alternativ auch programmgesteuert mit der Methode [Abrufen von Anzeigenleistungsdaten](../monetize/get-ad-performance-data.md) unserer [Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
+Erweitern Sie zum Anzeigen dieses Berichts im linken Navigationsmenü **Analysieren** und wählen Sie dann **Anzeigenleistung** aus. Sie können diese Daten im Partner Center anzeigen oder die Berichtsdaten offline anzeigen, indem Sie auf die Pfeilsymbole auf der Seite. Sie können diese Daten alternativ auch programmgesteuert mit der Methode [Abrufen von Anzeigenleistungsdaten](../monetize/get-ad-performance-data.md) unserer [Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
 Wenn Sie die Anzeigenvermittlungsberichte ansehen, ist es wichtig zu beachten, dass sich die Berichtsdaten für die letzten drei Tage sich unter Umständen ändern, wenn wir neue Daten aus verschiedenen Quellen erhalten und verarbeiten. Datenanpassungen können außerdem rückwirkend für bis zu 90Tage vorgenommen werden.
 

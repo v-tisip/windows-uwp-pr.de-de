@@ -2,18 +2,16 @@
 title: Kryptografie
 description: Der Artikel enthält eine Übersicht über die für universelle Windows-Plattform (UWP)-Apps verfügbaren Kryptografiefeatures. Ausführliche Informationen zu bestimmten Aufgaben finden Sie in der Tabelle am Ende dieses Artikels.
 ms.assetid: 9C213036-47FD-4AA4-99E0-84006BE63F47
-author: msatranjr
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
-ms.openlocfilehash: 0caa3f63d8a92c75bdce10cdb277967dca21fafb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 156c4cc62e1997f5d647c06c87e226fe519de168
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568358"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715340"
 ---
 # <a name="cryptography"></a>Kryptografie
 

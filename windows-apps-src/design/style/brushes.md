@@ -1,19 +1,17 @@
 ---
-author: Jwmsft
 ms.assetid: 02141F86-355E-4046-86EA-2A89D615B7DB
 title: Verwenden von Pinseln
 description: Mit Brush-Objekten werden Innenbereiche oder Ränder von Formen, Text und Teilen von Steuerelementen gezeichnet, damit das gezeichnete Objekt auf einer Benutzeroberfläche sichtbar ist.
-ms.author: jimwalk
 ms.date: 07/13/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: e96604daa9f8736601f52c917b556369ec620e96
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9e46ef0e459ede5fd1185d78186968735d886e63
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580444"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713936"
 ---
 # <a name="using-brushes-to-paint-backgrounds-foregrounds-and-outlines"></a>Verwenden von Pinseln zum Zeichnen von Vor- und Hintergründen und Skizzen
 
@@ -39,7 +37,7 @@ Ein [**SolidColorBrush**](https://msdn.microsoft.com/library/windows/apps/BR2429
 
 ### <a name="predefined-color-names"></a>Vordefinierte Farbnamen
 
-Sie können einen vordefinierten Farbnamen wie [**Yellow**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.yellow.aspx) oder [**Magenta**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.magenta.aspx) verwenden. Es stehen 256benannte Farben zur Verfügung. Der XAML-Parser wandelt den Farbnamen in eine [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723)-Struktur mit den richtigen Farbkanälen um. Die 256 benannten Farben basieren auf die *X11* Farbnamen Cascading Style Sheets, Level3 (CSS3)-Spezifikation, sodass Sie möglicherweise bereits kennen Sie diese Liste benannte Farben, wenn Sie über Vorkenntnisse in Webentwicklung oder-Design verfügen.
+Sie können einen vordefinierten Farbnamen wie [**Yellow**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.yellow.aspx) oder [**Magenta**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.magenta.aspx) verwenden. Es stehen 256benannte Farben zur Verfügung. Der XAML-Parser wandelt den Farbnamen in eine [**Color**](https://msdn.microsoft.com/library/windows/apps/Hh673723)-Struktur mit den richtigen Farbkanälen um. Die 256 benannten Farben basieren auf die *X11* Farbnamen Cascading Style Sheets, Level3 (CSS3)-Spezifikation, sodass Sie bereits vertraut, können diese Liste benannter Farben sein, wenn Sie über Vorkenntnisse in Webentwicklung oder-Design verfügen.
 
 In diesem Beispiel wird die [**Fill**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.shapes.shape.fill.aspx)-Eigenschaft eines [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) auf die vordefinierte Farbe [**Red**](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.colors.red.aspx) festgelegt.
 

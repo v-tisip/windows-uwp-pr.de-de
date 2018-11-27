@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Vergleichen des EGL-Codes mit DXGI und Direct3D
 description: Die DirectX-Grafikschnittstelle (DXGI) und verschiedene Direct3D-APIs erfüllen die gleiche Rolle wie EGL. In diesem Thema werden die DXGI und Direct3D11 aus Sicht von EGL erläutert.
 ms.assetid: 90f5ecf1-dd5d-fea3-bed8-57a228898d2a
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, EGL, DXGI und Direct3D
 ms.localizationpriority: medium
-ms.openlocfilehash: 64f237fd26a2ed7328e2c2264da17d3a5d7ba588
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1279d5100aa00e1b94d7d56b472a0574d22c3416
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565339"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713031"
 ---
 # <a name="compare-egl-code-to-dxgi-and-direct3d"></a>Vergleichen des EGL-Codes mit DXGI und Direct3D
 
@@ -30,7 +28,7 @@ Die DirectX-Grafikschnittstelle (DXGI) und verschiedene Direct3D-APIs erfüllen 
 
 Mit der DXGI und Direct3D werden, wie bei EGL, Methoden zum Konfigurieren von Grafikressourcen, Beschaffen eines Renderkontexts, in den von den Shadern gezeichnet werden kann, und Anzeigen der Ergebnisse in einem Fenster bereitgestellt. Für die DXGI und Direct3D sind jedoch deutlich mehr Optionen vorhanden. Zudem ist beim Portieren aus EGL das richtige Einrichten mit mehr Aufwand verbunden.
 
-> **Hinweis:**  diese Anleitung basiert auf offenen Spezifikation von der Khronos Group für EGL 1.4 unter: [Khronos Native Platform Graphics Interface (EGL Version 1.4 - April 6, 2011) \[PDF\]](http://www.khronos.org/registry/egl/specs/eglspec.1.4.20110406.pdf). In dieser Anleitung wird nicht auf Unterschiede eingegangen, die sich auf die spezielle Syntax für andere Plattformen und Entwicklungssprachen beziehen.
+> **Hinweis:**  diese Anleitung basiert offenen Spezifikation von der Khronos Group für EGL 1.4 unter: [Khronos Native Platform Graphics Interface (EGL Version 1.4 - April 6, 2011) \[PDF\]](http://www.khronos.org/registry/egl/specs/eglspec.1.4.20110406.pdf). In dieser Anleitung wird nicht auf Unterschiede eingegangen, die sich auf die spezielle Syntax für andere Plattformen und Entwicklungssprachen beziehen.
 
  
 
@@ -49,7 +47,7 @@ Wie EGL auch, verfügen DXGI und Direct3D über APIs für das folgende Verhalten
 -   Rendern in bestimmte Renderziele (z.B. Texturen)
 -   Aktualisieren der Anzeigefläche des Fensters mit den Ergebnissen des Rendervorgangs mit den Grafikressourcen
 
-Um die grundlegenden Direct3D-Prozess für die Konfiguration der Grafikpipeline angezeigt wird, sehen Sie sich die Vorlage für DirectX 11-App (Universal Windows) in Microsoft Visual Studio2015. Die darin enthaltene Renderklasse stellt eine gute Grundlage für die Einrichtung der Direct3D 11-Grafikinfrastruktur und die Konfiguration der dazugehörigen grundlegenden Ressourcen dar. Außerdem werden UWP-App-Features (Universelle Windows-Plattform) wie die Bildschirmdrehung unterstützt.
+Um die grundlegenden Direct3D-Prozess für die Konfiguration der Grafikpipeline angezeigt wird, sehen Sie sich die Vorlage DirectX 11-App (Universal Windows) in Microsoft Visual Studio2015. Die darin enthaltene Renderklasse stellt eine gute Grundlage für die Einrichtung der Direct3D 11-Grafikinfrastruktur und die Konfiguration der dazugehörigen grundlegenden Ressourcen dar. Außerdem werden UWP-App-Features (Universelle Windows-Plattform) wie die Bildschirmdrehung unterstützt.
 
 Im Vergleich zu Direct3D11 verfügt EGL über sehr wenige APIs. Die Navigation in Direct3D11 kann sich als schwierig erweisen, wenn Sie mit den Benennungen und der "Sprache" der jeweiligen Plattform nicht vertraut sind. Unten ist als Hilfe eine einfache Übersicht angegeben.
 

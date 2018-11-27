@@ -2,18 +2,16 @@
 title: Exportbeschränkungen hinsichtlich Kryptografie
 description: Anhand der Informationen in diesem Abschnitt können Sie ermitteln, ob Ihre App Kryptografiefunktionen in einer Weise verwendet, die unter Umständen dazu führt, dass sie im Microsoft Store nicht angezeigt wird.
 ms.assetid: 204C7D1D-6F08-4AEE-A333-434D715E7617
-author: msatranjr
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
-ms.openlocfilehash: a29c4aeb5a5928e04e0018d68884fdb4a4876332
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e0e57e28fe36ae506d29e2b51a31c756513fdd08
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566757"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715310"
 ---
 # <a name="export-restrictions-on-cryptography"></a>Exportbeschränkungen hinsichtlich Kryptografie
 
@@ -23,7 +21,7 @@ Anhand der Informationen in diesem Abschnitt können Sie ermitteln, ob Ihre App 
 
 Das Bureau of Industry and Security (BIS) im United States Department of Commerce kontrolliert den Export von Technologie, die bestimmte Arten von Verschlüsselung verwendet. Bei allen im Microsoft Store aufgelisteten Apps müssen diese Gesetze und Bestimmungen beachtet werden, da die App-Dateien in den USA gespeichert werden können. Sogar bei Apps, die von App-Entwicklern aus anderen Ländern zur Verteilung außerhalb der USA hochgeladen werden, müssen diese Bestimmungen befolgt werden. Daher müssen alle App-Entwickler beim Übermitteln einer App an den Microsoft Store bestätigen, dass ihre Apps keine Technologien enthalten, die gemäß diesen Bestimmungen eingeschränkt sind.
 
-> **Hinweis:** die hier bereitgestellte Informationen bietet einige Anleitungen, aber sie sind dafür verantwortlich, wie die app-Entwickler apps im Microsoft Store um sicherzustellen, dass Ihre app für die Einhaltung aller geltenden Gesetze und Bestimmungen verantwortlich.
+> **Hinweis:** die hier bereitgestellte Informationen bietet einige Anleitungen, aber sie sind dafür verantwortlich, wie die app-Entwickler apps im Microsoft Store, um sicherzustellen, dass Ihre app für die Einhaltung aller geltenden Gesetze und Bestimmungen verantwortlich.
 
  
 
@@ -35,7 +33,7 @@ Informationen zu den Export Administration Regulations (EAR), die den Export von
 
 Ermitteln Sie zunächst, ob Ihre App eine Art von Kryptografie verwendet, die durch die Export Administration Regulations geregelt wird. Die Frage enthält die in der Liste enthaltenen Beispiele. Diese Liste enthält jedoch nicht alle möglichen Anwendungsmöglichkeiten von Kryptografie.
 
-> **Wichtige**berücksichtigen nicht nur der Code, die Sie für Ihre app aber auch alle Softwarebibliotheken, Hilfsprogramme und Betriebssystemkomponenten, die Ihre app enthält oder links geschrieben haben.
+> **Wichtige**berücksichtigen nicht nur den Code, die Sie für Ihre app jedoch auch alle Softwarebibliotheken, Hilfsprogramme und Betriebssystemkomponenten, die Ihre app enthält oder links geschrieben haben.
 
 -   Jede Verwendung einer digitalen Signatur, z.B. Authentifizierung oder Integritätsprüfung
 -   Verschlüsselung von Daten oder Dateien, die die App verwendet oder auf die sie zugreift

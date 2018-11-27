@@ -2,18 +2,16 @@
 title: Allgemeine Kryptografieaufgaben
 description: Diese Artikel enthalten Beispielcode für allgemeine Kryptografieaufgaben der Universellen Windows-Plattform (UWP). Hierzu zählt das Erstellen zufälliger Zahlen, das Vergleichen von Puffern, das Konvertieren zwischen Zeichenfolgen und binären Daten, das Kopieren in und aus Bytearrays sowie das Codieren und Decodieren von Daten.
 ms.assetid: 2DE094F4-28E2-4C5D-BF8C-617BD90AB119
-author: msatranjr
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
-ms.openlocfilehash: 4bca6496498c9d7a9caaf958fdc7e74dc16ccc98
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d52943ab28ba9cb7544db827528985746585e361
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7570190"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7715251"
 ---
 # <a name="common-cryptography-tasks"></a>Allgemeine Kryptografieaufgaben
 

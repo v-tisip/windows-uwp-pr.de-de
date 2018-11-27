@@ -1,19 +1,17 @@
 ---
-author: muhsinking
 ms.assetid: 15BAB25C-DA8C-4F13-9B8F-EA9E4270BCE9
 title: Verwenden des Lichtsensors
 description: Hier erfahren Sie, wie Sie mithilfe des Umgebungslichtsensors veränderte Lichtverhältnisse erkennen.
-ms.author: mukin
 ms.date: 06/06/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: e6f7f838e5640f873593ac2e08c6a9b30f5258e5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 47092c128fe3a3855d7e32706451545b357c39c4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561901"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7713926"
 ---
 # <a name="use-the-light-sensor"></a>Verwenden des Lichtsensors
 
@@ -33,7 +31,7 @@ Der Umgebungslichtsensor ist einer von vielen Sensoren, mit denen Apps auf Verä
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Sie sollten mit Extensible Application Markup Language (XAML), Microsoft für VisualC++- und Ereignissen vertraut sein.
+Sie sollten mit Extensible Application Markup Language (XAML), Microsoft für VisualC++ c# und Ereignissen vertraut sein.
 
 Das verwendete Gerät oder der Emulator muss einen Umgebungslichtsensor unterstützen.
 

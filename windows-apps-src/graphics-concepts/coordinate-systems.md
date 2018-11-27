@@ -4,17 +4,15 @@ description: 'Normalerweise verwenden 3D-Grafikanwendungen einen von zwei Typen 
 ms.assetid: 138D9B81-146F-4E9F-B742-1EDED8FBF2AE
 keywords:
 - Koordinatensysteme
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1b8faed0719419d4be8ac1e5d493610ec2660598
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f85bf490bd1dd68e2d0ba31335f2fc0f89fe27b0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562629"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715574"
 ---
 # <a name="coordinate-systems"></a>Koordinatensysteme
 

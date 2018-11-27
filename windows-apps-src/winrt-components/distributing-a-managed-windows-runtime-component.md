@@ -1,19 +1,17 @@
 ---
-author: msatranjr
 title: Verteilen einer verwalteten Komponente für Windows-Runtime
 description: Sie können Ihre Komponente für Windows-Runtime durch Kopieren der Dateien verteilen.
 ms.assetid: 80262992-89FC-42FC-8298-5AABF58F8212
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6461b6889f110bde8929e1f370f9197caa33e5f3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ef51e2235d8ac5c46af6093809d241d5c137d57d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581182"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7711546"
 ---
 # <a name="distributing-a-managed-windows-runtime-component"></a>Verteilen einer verwalteten Komponente für Windows-Runtime
 
@@ -47,7 +45,7 @@ Ein Erweiterungs-SDK ist besonders nützlich, wenn mindestens einer der oben gen
 
 Wenn Ihre Komponente aus einer einzigen WINMD-Datei oder einer WINMD-Datei und einer Ressourcenindexdatei (PRI) besteht, können Sie einfach die WINMD-Datei so bereitstellen, dass Benutzer sie kopieren können. Benutzer können die Datei an einer beliebige Position in ein Projekt einfügen, im Dialogfeld **Vorhandenes Element hinzufügen** die WINMD-Datei dem Projekt hinzufügen und dann mit dem Dialogfeld „Verweis-Manager” einen Verweis erstellen. Wenn Sie eine PRI-Datei oder eine XML-Datei einbeziehen, sollten Sie die Benutzer anweisen, diese Dateien in dasselbe Verzeichnis wie die WINMD-Datei zu kopieren.
 
-> **Hinweis:** Visual Studio erzeugt stets eine PRI-Datei bei der Erstellung Ihrer Komponente für Windows-Runtime, auch wenn Ihr Projekt keine Ressourcen enthält. Wenn Sie über eine Test-App für Ihre Komponente verfügen, können Sie feststellen, ob die PRI-Datei verwendet wird, indem Sie den Inhalt des App-Pakets im Ordner bin\\debug\\AppX" überprüfen. Wenn die PRI-Datei Ihrer Komponente dort nicht angezeigt wird, müssen Sie sie nicht verteilen. Sie können auch mit dem Tool [MakePRI.exe](https://msdn.microsoft.com/library/windows/apps/jj552945.aspx) die Ressourcendatei aus Ihrem Komponentenprojekt für Windows-Runtime ausgeben. Geben Sie z.B. im Eingabeaufforderungsfenster von Visual Studio Folgendes ein: makepri dump /if MyComponent.pri /of MyComponent.pri.xml. Weitere Informationen zu PRI-Dateien finden Sie unter [Ressourcenverwaltungssystem (Windows)](https://msdn.microsoft.com/library/windows/apps/jj552947.aspx).
+> **Hinweis:** Visual Studio erzeugt stets eine PRI-Datei bei der Erstellung Ihrer Windows-Runtime-Komponente, auch wenn Ihr Projekt keine Ressourcen enthält. Wenn Sie über eine Test-App für Ihre Komponente verfügen, können Sie feststellen, ob die PRI-Datei verwendet wird, indem Sie den Inhalt des App-Pakets im Ordner bin\\debug\\AppX" überprüfen. Wenn die PRI-Datei Ihrer Komponente dort nicht angezeigt wird, müssen Sie sie nicht verteilen. Sie können auch mit dem Tool [MakePRI.exe](https://msdn.microsoft.com/library/windows/apps/jj552945.aspx) die Ressourcendatei aus Ihrem Komponentenprojekt für Windows-Runtime ausgeben. Geben Sie z.B. im Eingabeaufforderungsfenster von Visual Studio Folgendes ein: makepri dump /if MyComponent.pri /of MyComponent.pri.xml. Weitere Informationen zu PRI-Dateien finden Sie unter [Ressourcenverwaltungssystem (Windows)](https://msdn.microsoft.com/library/windows/apps/jj552947.aspx).
 
 ## <a name="distribution-by-extension-sdk"></a>Verteilung durch Erweiterungs-SDK
 

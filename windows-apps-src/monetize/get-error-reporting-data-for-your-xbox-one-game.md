@@ -1,24 +1,22 @@
 ---
-author: Xansky
 description: Mittels dieser Methode in der Microsoft Store-Analyse-API können Sie gesammelte Fehlerberichtsdaten für einen bestimmten Zeitraum und andere optionale Filter abrufen.
 title: Abrufen von Fehlerberichtsdaten für Ihre Xbox One Spiel
-ms.author: mhopkins
 ms.date: 11/06/2018
 ms.topic: article
 keywords: Windows10, UWP, Store-Dienst, Microsoft Store-Analyse-API, Fehler
 ms.localizationpriority: medium
-ms.openlocfilehash: 45e494b3e93e2dd6ac23ef1562c32485bf2e7ddb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f9ae7c75fb332e910aa1b63712cf0d230172afd3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560316"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713474"
 ---
 # <a name="get-error-reporting-data-for-your-xbox-one-game"></a>Abrufen von Fehlerberichtsdaten für Ihre Xbox One Spiel
 
-Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, die gesammelte Fehlerberichtsdaten für Ihre Xbox One Spiel abzurufen, das über das Xbox-Portal (XDP) und im XDP Analytics Partner Center-Dashboard verfügbar ist.
+Verwenden Sie diese Methode in der Microsoft Store-Analyse-API um gesammelte Fehlerberichtsdaten für Ihre Xbox One Spiel abzurufen, das über das Xbox-Portal (XDP) und im XDP Analytics Partner Center-Dashboard verfügbar ist.
 
-Sie können zusätzliche Fehlerinformationen abrufen, mithilfe der Methoden zum [Abrufen von Details zu einem Fehler in Ihrer Xbox One Spiel](get-details-for-an-error-in-your-xbox-one-game.md)und [Abrufen der stapelüberwachung für einen Fehler in Ihrer Xbox One Spiel](get-the-stack-trace-for-an-error-in-your-xbox-one-game.md) [Herunterladen der CAB-Datei für einen Fehler in Ihrer Xbox One Spiel](download-the-cab-file-for-an-error-in-your-xbox-one-game.md) .
+Sie können zusätzliche Fehlerinformationen abrufen, mithilfe der Methoden zum [Abrufen von Details zu einem Fehler in Ihrer Xbox One Spiel](get-details-for-an-error-in-your-xbox-one-game.md), [Abrufen der stapelüberwachung für einen Fehler in Ihrer Xbox One Spiel](get-the-stack-trace-for-an-error-in-your-xbox-one-game.md)und [Herunterladen die CAB-Datei für einen Fehler in Ihrer Xbox One Spiel](download-the-cab-file-for-an-error-in-your-xbox-one-game.md) .
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -49,7 +47,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 | Parameter        | Typ   |  Beschreibung      |  Erforderlich  
 |---------------|--------|---------------|------|
-| applicationId | string | Die Produkt-ID des Xbox One Spiels, für die Fehlerberichtsdaten abgerufen werden. Um die Produkt-ID Ihres Spiels zu erhalten, wechseln Sie zu Ihrem Spiel in der Xbox-Entwickler-Portal (XDP) und rufen Sie die Produkt-ID von der URL ab. Alternativ können ist Sie Ihre integritätsdaten vom Windows Partner Center-Analysebericht herunterladen, die Produkt-ID in der TSV-Datei enthalten. |  Ja  |
+| applicationId | string | Die Produkt-ID des Xbox One Spiels, für die Fehlerberichtsdaten abgerufen werden. Um die Produkt-ID Ihres Spiels zu erhalten, wechseln Sie zu Ihrem Spiel in der Xbox-Entwickler-Portal (XDP) und rufen Sie die Produkt-ID von der URL ab. Wenn Sie Ihre integritätsdaten aus dem Windows Partner Center Analytics-Bericht herunterladen, ist die Produkt-ID auch in der TSV-Datei enthalten. |  Ja  |
 | startDate | date | Das Startdatum im Datumsbereich der Fehlerberichtsdaten, die abgerufen werden sollen. Der Standardwert ist das aktuelle Datum. Wenn *aggregationLevel* **day**, **week** oder **month** ist, sollte dieser Parameter ein Datum im Format ```mm/dd/yyyy``` angeben. Wenn *aggregationLevel* **hour** ist, kann dieser Parameter ein Datum im Format ```mm/dd/yyyy``` oder ein Datum und Uhrzeit im Format ```yyyy-mm-dd hh:mm:ss``` angeben.  |  Nein  |
 | endDate | date | Das Enddatum im Datumsbereich der Fehlerberichtsdaten, die abgerufen werden sollen. Der Standardwert ist das aktuelle Datum. Wenn *aggregationLevel* **day**, **week** oder **month** ist, sollte dieser Parameter ein Datum im Format ```mm/dd/yyyy``` angeben. Wenn *aggregationLevel* **hour** ist, kann dieser Parameter ein Datum im Format ```mm/dd/yyyy``` oder ein Datum und Uhrzeit im Format ```yyyy-mm-dd hh:mm:ss``` angeben. |  Nein  |
 | top | int | Die Anzahl der Datenzeilen, die in der Anforderung zurückgegeben werden sollen. Der Maximal- und Standardwert ist 10.000, wenn nicht anders angegeben. Wenn die Abfrage keine weiteren Zeilen enthält, entält der Antworttext den Link „Weiter“, den Sie verwenden können, um die nächste Seite mit Daten anzufordern. |  Nein  |
@@ -62,7 +60,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 ### <a name="request-example"></a>Anforderungsbeispiel
 
-Die folgenden Beispiele zeigen verschiedene Anforderungen für das Abrufen von Xbox One Spiel Fehlerberichtsdaten. Ersetzen Sie den Wert *ApplicationId* durch die Produkt-ID für Ihr Spiel.
+Die folgenden Beispiele zeigen verschiedene Anforderungen für das Abrufen von Xbox One Spiel Fehlerberichtsdaten. Ersetzen Sie den *ApplicationId* -Wert durch die Produkt-ID für Ihr Spiel an.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/xbox/failurehits?applicationId=BRRT4NJ9B3D1&startDate=1/1/2015&endDate=2/1/2015&top=10&skip=0 HTTP/1.1
@@ -90,19 +88,19 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 
 | Wert           | Typ    | Beschreibung        |
 |-----------------|---------|---------------------|
-| date            | string  | Das erste Datum im Datumsbereich für die Fehlerdaten im Format ```yyyy-mm-dd```. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung einen längeren Datumsbereich angibt, ist dieser Wert das erste Datum in diesem Datumsbereich. Für Anforderungen, die einen Wert *AggregationLevel* **Stunde**angeben, enthält dieser Wert auch einen Zeitwert im Format ```hh:mm:ss``` in der lokalen Zeitzone in der der Fehler aufgetreten ist.  |
+| date            | string  | Das erste Datum im Datumsbereich für die Fehlerdaten im Format ```yyyy-mm-dd```. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung einen längeren Datumsbereich angibt, ist dieser Wert das erste Datum in diesem Datumsbereich. Für Anforderungen, die einen Wert *AggregationLevel* **Stunde**angeben, enthält dieser Wert auch einen Zeitwert im Format ```hh:mm:ss``` in der lokalen Zeitzone in dem der Fehler aufgetreten ist.  |
 | applicationId   | string  | Die Produkt-ID des Xbox One Spiels, für die Fehlerdaten abgerufen werden soll.   |
 | applicationName | String  | Der Anzeigename des Spiels.   |
 | failureName     | string  | Der Name des Fehlers, der aus vier Teilen besteht: eine oder mehrere Problemklassen, ein Ausnahme/Fehlerprüfcode, der Name des Image, in dem der Fehler aufgetreten ist, und der zugehörige Funktionsname.  |
 | failureHash     | string  | Der eindeutige Bezeichner des Fehlers.   |
 | symbol          | string  | Das diesem Fehler zugewiesene Symbol. |
 | osVersion       | string  | Die Version des Betriebssystems, auf dem der Fehler aufgetreten ist. Dies ist immer den Wert **Windows 10**.  |
-| osRelease       | string  |  Einer der folgenden Zeichenfolgen, die die Windows 10-Betriebssystemversion oder verteilungsring (als ein Subpopulation innerhalb der Betriebssystemversion) angibt, auf dem der Fehler aufgetreten ist.<p/><ul><li><strong>Version1507</strong></li><li><strong>Version1511</strong></li><li><strong>Version1607</strong></li><li><strong>Version1703</strong></li><li><strong>Version1709</strong></li><li><strong>Version1803</strong></li><li><strong>Release Preview</strong></li><li><strong>Insider Fast</strong></li><li><strong>Insider Slow</strong></li></ul><p>Wenn die Betriebssystemversion oder Verteilungsring unbekannt ist, hat dieses Feld den Wert <strong>Unknown</strong>.</p>    |
+| osRelease       | string  |  Eine der folgenden Zeichenfolgen, die die Windows 10-Betriebssystemversion oder verteilungsring (als ein Subpopulation innerhalb der Betriebssystemversion) angibt, auf dem der Fehler aufgetreten ist.<p/><ul><li><strong>Version1507</strong></li><li><strong>Version1511</strong></li><li><strong>Version1607</strong></li><li><strong>Version1703</strong></li><li><strong>Version1709</strong></li><li><strong>Version1803</strong></li><li><strong>Release Preview</strong></li><li><strong>Insider Fast</strong></li><li><strong>Insider Slow</strong></li></ul><p>Wenn die Betriebssystemversion oder Verteilungsring unbekannt ist, hat dieses Feld den Wert <strong>Unknown</strong>.</p>    |
 | eventType       | string  | Eine der folgenden Zeichenfolgen:<ul><li>**crash**</li><li>**hang**</li><li>**Fehler beim Speicher**</li></ul>      |
 | market          | string  | Der ISO3166-Ländercode des Gerätemarkts.   |
 | deviceType      | string  | Der Typ des Geräts, auf dem der Fehler aufgetreten ist. Dies ist immer den Wert **Konsole**.    |
 | packageName     | string  | Der eindeutige Name des Spiels-Paket, das mit diesem Fehler verknüpft ist.      |
-| packageVersion  | string  | Die Version des Spiels Pakets, das mit diesem Fehler verknüpft ist.   |
+| packageVersion  | string  | Die Version des Spiels, das mit diesem Fehler verknüpft ist.   |
 | deviceCount     | Ganzzahl | Die Anzahl der eindeutigen Geräte, die diesem Fehler für die angegebene Aggregationsebene entsprechen.  |
 | eventCount      | Ganzzahl | Die Anzahl der Ereignisse, die diesem Fehler für die angegebene Aggregationsebene zugeordnet werden.      |
 

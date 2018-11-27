@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: If you encounter errors after submitting your app to the Store, you must resolve them in order to continue the certification process.
 title: Beheben von Übermittlungsfehlern
 ms.assetid: 68199E09-0C66-4EB4-BFE8-D2EEB139C4F3
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ba47bdf964cab66182aadc6dafb0ae6d34c3ea7
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9911323010f691d1fa59c35306a7173cd08a0faa
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557263"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716052"
 ---
 # <a name="resolve-submission-errors"></a>Beheben von Übermittlungsfehlern
 
@@ -21,13 +19,13 @@ Wenn nach der Übermittlung Ihrer App an den Store Fehler auftreten, müssen Sie
 
 ## <a name="uwp-apps"></a>UWP-Apps
 
-Wenn Sie eine UWP-app einreichen, sehen Sie einen Fehler während der vorverarbeitung, wenn die Paketdatei keine von Visual Studio für den Store generierte .msixupload oder appxupload-Datei ist. Achten Sie darauf, dass Sie die Schritte im [Paket eine UWP-app mit Visual Studio](../packaging/packaging-uwp-apps.md) beim Erstellen der Datei der app-Paket, und nur der .msixupload oder appxupload-Datei auf der Seite " [Pakete](upload-app-packages.md) ", der Übermittlung, nicht auf einen .msix/Appx oder .msixbundle/Appxbundle hochladen .
+Wenn Sie eine UWP-app einreichen, sehen Sie einen Fehler während der vorverarbeitung, wenn die Paketdatei keine von Visual Studio für den Store generierte .msixupload oder appxupload-Datei ist. Achten Sie darauf, dass Sie die Schritte im [Paket eine UWP-app mit Visual Studio](../packaging/packaging-uwp-apps.md) beim Erstellen der app Paket-Datei, und nur der .msixupload oder appxupload-Datei auf der Seite " [Pakete](upload-app-packages.md) ", der Übermittlung, nicht auf einen .msix/vom Appx oder .msixbundle/Appxbundle hochladen .
 
 Wenn ein Kompilierungsfehler angezeigt wird, stellen Sie sicher, dass Sie die Anwendung erfolgreich im Releasemodus erstellen können. Weitere Informationen finden Sie unter [Systemeigene .NET-Compilerfehler](http://go.microsoft.com/fwlink/p/?LinkID=613098).
 
 ## <a name="desktop-application"></a>Desktop-Anwendung
 
-Wenn Sie beabsichtigen, ein Paket zu übermitteln, die sowohl Win32- und UWP-Binärdateien enthält, stellen Sie sicher, dass Sie dieses Paket erstellen, mit dem Windows Verpacken-Projekt, das in Visual Studio 2017 Update 4 verfügbar ist. Wenn Sie das Paket mit einem UWP-Projektvorlage erstellen, können Sie möglicherweise nicht übermitteln, dass, die auf den Store oder querladen es auf anderen PCs verpacken. Auch wenn das Paket erfolgreich veröffentlicht werden, kann es auf dem PC des Benutzers unerwartetem Verhalten. Weitere Informationen finden Sie unter [Package eine app mit Visual Studio (Desktop-Brücke)]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
+Wenn Sie beabsichtigen, ein Paket zu übermitteln, die Win32- und UWP-Binärdateien enthält, stellen Sie sicher, dass Sie dieses Paket erstellen, indem Sie mithilfe des Windows-Verpackung-Projekts, das in Visual Studio 2017 Update 4 verfügbar ist. Wenn Sie das Paket mithilfe einer UWP-Projekt-Vorlage erstellen, können Sie möglicherweise nicht übermitteln, die auf den Store oder das querladen es auf anderen PCs verpacken. Auch wenn das Paket erfolgreich veröffentlicht werden, kann es auf dem PC des Benutzers unerwartetem Verhalten. Weitere Informationen finden Sie unter [Paket eine app mit Visual Studio (Desktop-Brücke)]( https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
 ## <a name="windows-phone-8x-and-earlier"></a>Windows Phone 8.x und früheren Versionen
 
@@ -54,7 +52,7 @@ Möglicherweise wird Ihnen der folgende Fehler angezeigt: **Der Name des Pakets 
 - Wenn Ihre App bereits über eine Identität verfügt, müssen Sie möglicherweise dennoch den Namen reservieren, den Sie in Ihrem Paket verwenden möchten. Klicken Sie unter **App-Verwaltung** auf [App-Namen verwalten](manage-app-names.md). Geben Sie den Namen ein, den Sie reservieren möchten, und klicken Sie auf **App-Namen reservieren**.
 
 > [!IMPORTANT]
->  Wenn der Name, den Sie verwenden möchten, nicht verfügbar ist, eine andere app möglicherweise bereits den Namen reserviert haben. Wenn Ihre app bereits unter diesem Namen veröffentlicht wurde, oder wenn Sie sich vorstellen, Sie sind berechtigt, [kontaktieren Sie den Support](https://go.microsoft.com/fwlink/p/?LinkId=331509)verwenden.  
+>  Wenn der Name, den Sie verwenden möchten, nicht verfügbar ist, eine andere app möglicherweise bereits den Namen reserviert haben. Wenn Ihre app bereits unter diesem Namen veröffentlicht wurde, oder wenn Sie denken Sie sind berechtigt, [kontaktieren Sie den Support](https://go.microsoft.com/fwlink/p/?LinkId=331509)verwenden.  
 
  
 

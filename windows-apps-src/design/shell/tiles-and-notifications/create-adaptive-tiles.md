@@ -1,27 +1,25 @@
 ---
-author: andrewleader
 Description: Adaptive tile templates are a new feature in Windows 10, allowing you to design your own tile notification content using a simple and flexible markup language that adapts to different screen densities.
 title: Erstellen adaptiver Kacheln
 ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
 label: Create adaptive tiles
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f0af7dc153f75826444a517d4958bfeba53b103d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 524cc15dbb7a3264d8476210f727508ea41ace87
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581255"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713733"
 ---
 # <a name="create-adaptive-tiles"></a>Erstellen adaptiver Kacheln
 
 Vorlagen für Adaptive Kacheln sind ein neues Feature in Windows 10, sodass Sie Entwurf eigener Inhalte für kachelbenachrichtigungen mithilfe einer einfachen, flexiblen Markupsprache, die sich an unterschiedliche bildschirmdichten anpasst. Dieser Artikel beschreibt, wie Sie adaptive Live-Kacheln für Ihre UWP-App (Universelle Windows-Plattform) erstellen. Die vollständige Liste adaptiver Elemente und Attribute finden Sie unter [Adaptives Kachelschema](../tiles-and-notifications/tile-schema.md).
 
-(Wenn Sie möchten, können Sie weiterhin die voreingestellten Vorlagen aus der [Windows8 Kachel Vorlage Katalog](https://msdn.microsoft.com/library/windows/apps/hh761491) verwenden beim Entwerfen von Benachrichtigungen für Windows 10.)
+(Wenn Sie möchten, können Sie weiterhin die voreingestellten Vorlagen aus der [Windows8 Kachel Katalogs für einstellungsvorlagen](https://msdn.microsoft.com/library/windows/apps/hh761491) verwenden beim Entwerfen von Benachrichtigungen für Windows 10.)
 
 
 ## <a name="getting-started"></a>Erste Schritte
@@ -681,7 +679,7 @@ Wenn Ihre erste Spalte 20% und die zweite Spalte 80% der gesamten Breite einnehm
 
 ![Untergruppen mit einer Gesamtgewichtung von 100](images/adaptive-tiles-subgroups03.png)
 
-**Hinweis:** zwischen Spalten wird automatisch ein Rand von 8 Pixel hinzugefügt.
+**Hinweis:** zwischen Spalten wird automatisch ein Rand von 8 Pixeln eingefügt.
 
  
 
