@@ -1,18 +1,16 @@
 ---
-author: normesta
 title: Verwenden einer SQLite-Datenbank in einer UWP-App
 description: Verwenden Sie eine SQLite-Datenbank in einer UWP-App.
-ms.author: normesta
 ms.date: 06/08/2018
 ms.topic: article
 keywords: Windows 10, UWP, SQLite, Datenbank
 ms.localizationpriority: medium
-ms.openlocfilehash: 77911b101f488bb7bfef82b9cc480679ce15b1f3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1588dfbfb1c33b246caba0816c584135f2094f35
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563383"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7700616"
 ---
 # <a name="use-a-sqlite-database-in-a-uwp-app"></a><span data-ttu-id="810d3-104">Verwenden einer SQLite-Datenbank in einer UWP-App</span><span class="sxs-lookup"><span data-stu-id="810d3-104">Use a SQLite database in a UWP app</span></span>
 <span data-ttu-id="810d3-105">Sie können SQLite verwenden, um Daten in einer einfachen Datenbank auf dem Gerät des Benutzers zu speichern und abzurufen.</span><span class="sxs-lookup"><span data-stu-id="810d3-105">You can use SQLite to store and retrieve data in a light-weight database on the users device.</span></span> <span data-ttu-id="810d3-106">Dieser Leitfaden zeigt Ihnen wie.</span><span class="sxs-lookup"><span data-stu-id="810d3-106">This guide shows you how.</span></span>

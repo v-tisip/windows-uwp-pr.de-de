@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 description: C++ / WinRT stellt Funktionen und Basisklassen, die Sie speichern und viel Zeit und Mühe beim Implementieren und/oder Sammlungen übergeben werden soll.
 title: Sammlungen mit C++ / WinRT
-ms.author: stwhi
 ms.date: 10/03/2018
 ms.topic: article
 keywords: Windows 10, Uwp, standard, c++, Cpp, Winrt, Projektion, Sammlung
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 9c5cbf5c7709c70d2eb47c57009bbd264a6d2c20
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a50ab5f70faa0c8f8b73eada38444bcafd444d8b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567383"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7700418"
 ---
 # <a name="collections-with-cwinrt"></a><span data-ttu-id="13f3d-104">Sammlungen mit C++ / WinRT</span><span class="sxs-lookup"><span data-stu-id="13f3d-104">Collections with C++/WinRT</span></span>
 

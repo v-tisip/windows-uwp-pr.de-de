@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: E1943DCE-833F-48AE-8402-CD48765B24FC
 title: Optimieren von Anhalten/Fortsetzen
 description: Erstellen Sie Apps für die Universelle Windows-Plattform (UWP), die die Verwendung des Prozesslebensdauer-Systems optimieren und nach dem Anhalten oder Beenden effizient fortgesetzt werden.
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 4cbaa56f9c25c0e4ea1f10c79b4f7d1100748532
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 06af6241bdd75efdd3ff71e02f74252d60540669
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565707"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7700508"
 ---
 # <a name="optimize-suspendresume"></a><span data-ttu-id="f76e9-104">Optimieren von Anhalten/Fortsetzen</span><span class="sxs-lookup"><span data-stu-id="f76e9-104">Optimize suspend/resume</span></span>
 

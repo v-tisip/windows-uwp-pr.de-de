@@ -1,19 +1,17 @@
 ---
-author: Xansky
 Description: Before you can run an experiment in your Universal Windows Platform (UWP) app with A/B testing, you must create a project and define your remote variables in Partner Center.
 title: Erstellen eines Experimentprojekts im Partner Center
 ms.assetid: C3809FF1-0A6A-4715-B989-BE9D0E8C9013
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store Services SDK, A/B-Tests, Experimente
 ms.localizationpriority: medium
-ms.openlocfilehash: 19a59110fa094aeae3d40dca1372fde9889c108e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: acfd654f02cb7fb727d35271175e59966e2abdc4
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565498"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699976"
 ---
 # <a name="create-an-experiment-project-in-partner-center"></a><span data-ttu-id="23f23-103">Erstellen eines Experimentprojekts im Partner Center</span><span class="sxs-lookup"><span data-stu-id="23f23-103">Create an experiment project in Partner Center</span></span>
 

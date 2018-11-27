@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Einrichten von DirectX-Ressourcen und Darstellen eines Bilds
 description: Hier zeigen wir Ihnen das Erstellen eines Direct3D-Geräts, einer Swapchain und einer Renderzielansicht sowie die Darstellung des gerenderten Bilds auf dem Bildschirm.
 ms.assetid: d54d96fe-3522-4acb-35f4-bb11c3a5b064
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, Spiele, DirectX, Ressourcen, Bilder
 ms.localizationpriority: medium
-ms.openlocfilehash: 24fd038bdd447491da43e5d5803445d00147ba2d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b650f77627e02427b2861a2e6d0df7d1fc86831a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564486"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697623"
 ---
 # <a name="set-up-directx-resources-and-display-an-image"></a><span data-ttu-id="74a23-104">Einrichten von DirectX-Ressourcen und Darstellen eines Bilds</span><span class="sxs-lookup"><span data-stu-id="74a23-104">Set up DirectX resources and display an image</span></span>
 

@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Grundlegendes zu 3D-Grafiken für DirectX-Spiele
 description: Im Folgenden wird gezeigt, wie Sie grundlegende Konzepte von 3D-Grafiken durch die Programmierung mit DirectX umsetzen können.
 ms.assetid: 2989c91f-7b45-7377-4e83-9daa0325e92e
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, DirectX, Grafiken
 ms.localizationpriority: medium
-ms.openlocfilehash: e9834a83620343f26acaabd0e05b30cc2c1dcfab
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 5dbdf6072f57d12d424f0787cfa2e8993a1624af
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575272"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707653"
 ---
 # <a name="basic-3d-graphics-for-directx-games"></a><span data-ttu-id="b3f38-104">Grundlegendes zu 3D-Grafiken für DirectX-Spiele</span><span class="sxs-lookup"><span data-stu-id="b3f38-104">Basic 3D graphics for DirectX games</span></span>
 

@@ -1,21 +1,19 @@
 ---
-author: andrewleader
 Description: Learn how to send a local toast notification and handle the user clicking the toast.
 title: Senden einer lokalen Popupbenachrichtigung
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
 label: Send a local toast notification
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows10, UWP, Senden von Popupbenachrichtigungen, Benachrichtigungen, Benachrichtigungen senden, Popupbenachrichtigungen, Vorgehensweise, Schnellstart, erste Schritte, Codebeispiel, exemplarische Vorgehensweise
 ms.localizationpriority: medium
-ms.openlocfilehash: 95f72180038b6ccbed5f399c2cd58081915baf2c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: dd7dfb621d84a3ce1d934c358ab60683caee9238
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565298"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703014"
 ---
 # <a name="send-a-local-toast-notification"></a><span data-ttu-id="9e2a5-103">Senden einer lokalen Popupbenachrichtigung</span><span class="sxs-lookup"><span data-stu-id="9e2a5-103">Send a local toast notification</span></span>
 

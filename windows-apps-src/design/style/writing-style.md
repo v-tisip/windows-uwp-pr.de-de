@@ -1,19 +1,17 @@
 ---
-author: QuinnRadich
 title: Schreibstil
 description: Die Verwendung der richtigen Sprache und Tonfall ist entscheidend dafür, dass der Text Ihrer App als natürlicher Teil des Designs erscheint.
 keywords: UWP, Windows10, Text, schreiben, Sprache, Tonfall, Design, Benutzeroberfläche, UX
-ms.author: quradic
 ms.date: 5/7/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 500eb490083dfa631f9ff84195ec3ae86027e3ab
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b09265164ccd922ab310c06e6c2bd14b6d7a841c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7576098"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697060"
 ---
 # <a name="writing-style"></a><span data-ttu-id="5126c-104">Schreibstil</span><span class="sxs-lookup"><span data-stu-id="5126c-104">Writing style</span></span>
 

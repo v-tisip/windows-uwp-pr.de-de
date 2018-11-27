@@ -1,18 +1,16 @@
 ---
-author: TerryWarwick
 title: Konfigurieren eines Strichcodescanners
 description: Erfahren Sie, wie Sie einen Strichcodescanner für die Anwendung zu konfigurieren.
-ms.author: jken
 ms.date: 08/29/2018
 ms.topic: article
 keywords: Windows 10, UWP, Point of Service, POS
 ms.localizationpriority: medium
-ms.openlocfilehash: 07198b382be911f30016f2106949d2dea751afa5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8f88b376dca80043f88260700bb7ef4168b3a445
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571861"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703760"
 ---
 # <a name="configure-a-barcode-scanner"></a><span data-ttu-id="4edea-104">Konfigurieren eines Strichcodescanners</span><span class="sxs-lookup"><span data-stu-id="4edea-104">Configure a barcode scanner</span></span>
 

@@ -4,17 +4,15 @@ description: Regeln für die Rasterung definieren, wie Vektordaten Rasterdaten z
 ms.assetid: B604725F-96A5-4DB6-B597-9EC57FBBC024
 keywords:
 - Regeln für die Rasterung
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 72be66c3bf7b0e58092ae3a7e1baf82c9e686f0c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c622c037f878d1ad34cdadf897dde10683532832
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565084"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704471"
 ---
 # <a name="rasterization-rules"></a><span data-ttu-id="8a0f2-104">Regeln für die Rasterung</span><span class="sxs-lookup"><span data-stu-id="8a0f2-104">Rasterization rules</span></span>
 

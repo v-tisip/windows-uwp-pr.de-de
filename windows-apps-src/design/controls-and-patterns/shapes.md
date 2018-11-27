@@ -1,19 +1,17 @@
 ---
-author: Jwmsft
 ms.assetid: 54CC0BD4-1961-44D7-AB40-6E8B58E42D65
 title: Zeichnen von Formen
 description: Erfahren Sie, wie Sie Formen wie Ellipsen, Rechtecke, Polygone und Pfade zeichnen. Mithilfe der Klasse Path visualisieren Sie eine ziemlich komplexe vektorbasierte Zeichnungssprache in einer XAML-Benutzeroberfläche. Beispielsweise können Sie auf diese Weise Bézierkurven zeichnen.
-ms.author: jimwalk
 ms.date: 11/16/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 984653ad20fc40035528ab7e32b904e64d6ff8c5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a576add7a080874fb0f042748bef7472e04ac817
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562902"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7706031"
 ---
 # <a name="draw-shapes"></a><span data-ttu-id="7f7a5-105">Zeichnen von Formen</span><span class="sxs-lookup"><span data-stu-id="7f7a5-105">Draw shapes</span></span>
 

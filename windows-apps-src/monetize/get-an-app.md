@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: DAF92881-6AF6-44C7-B466-215F5226AE04
 description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um Informationen über eine bestimmte app abzurufen, die für Ihr Partner Center-Konto registriert ist.
 title: Abrufen einer App
-ms.author: mhopkins
 ms.date: 02/28/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, App
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c43a946234c738198e7ab929171051e4bafff63
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ccb5473f85cba08c170af2334b0894a11e27a15a
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569738"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7707911"
 ---
 # <a name="get-an-app"></a><span data-ttu-id="a8855-104">Abrufen einer App</span><span class="sxs-lookup"><span data-stu-id="a8855-104">Get an app</span></span>
 

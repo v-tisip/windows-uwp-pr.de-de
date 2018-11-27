@@ -1,19 +1,17 @@
 ---
-author: stevewhims
 ms.assetid: E2B73380-D673-48C6-9026-96976D745017
 description: Erste Schritte mit allgemeinen Steuerelementen
 title: Erste Schritte mit allgemeinen Steuerelementen
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: db2b4a74b5b40060779dd82764dcf2ed2799b285
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 05cf78d7dec260b990d2ce71662e3db6eb07d07f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578861"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703933"
 ---
 # <a name="getting-started-common-controls"></a><span data-ttu-id="b5613-104">Erste Schritte: Allgemeine Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="b5613-104">Getting started: Common Controls</span></span>
 

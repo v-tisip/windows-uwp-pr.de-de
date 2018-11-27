@@ -1,18 +1,16 @@
 ---
-author: jwmsft
 title: Angepasste Manipulation mit InteractionTracker
 description: In diesem Artikel zeigen wir Ihnen, wie Sie mit InteractionTracker benutzerdefinierte Manipulationserlebnisse erstellen können.
-ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows10, Uwp, animation
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a991d692b4ba4c7a221932218a7d25e48fe16ca
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9d2c965bcfbf81efe73ce8aff93cdb8b31163fbd
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567625"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697050"
 ---
 # <a name="custom-manipulation-experiences-with-interactiontracker"></a><span data-ttu-id="892a1-104">Angepasste Manipulation mit InteractionTracker</span><span class="sxs-lookup"><span data-stu-id="892a1-104">Custom manipulation experiences with InteractionTracker</span></span>
 

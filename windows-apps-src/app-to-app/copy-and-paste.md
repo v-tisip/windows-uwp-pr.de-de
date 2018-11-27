@@ -2,18 +2,16 @@
 description: In diesem Artikel wird erläutert, wie in Apps für die universelle Windows-Plattform (UWP) das Kopieren und Einfügen über die Zwischenablage unterstützt wird.
 title: Kopieren und Einfügen
 ms.assetid: E882DC15-E12D-4420-B49D-F495BB484BEE
-author: msatranjr
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: f730d01ba019a220658bc94be5f0a18da6b217f5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ba498a9bc6541f45f01e74b1ea90f4f9a1bfde90
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569777"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701236"
 ---
 # <a name="copy-and-paste"></a><span data-ttu-id="8bef2-104">Kopieren und Einfügen</span><span class="sxs-lookup"><span data-stu-id="8bef2-104">Copy and paste</span></span>
 

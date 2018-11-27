@@ -1,19 +1,17 @@
 ---
-author: msatranjr
 title: Erstellen von Komponenten für Windows-Runtime in C++
 description: Dieses Thema zeigt, wie Sie C++ / CX auf eine Windows-Runtime-Komponente erstellen, also eine Komponente, die aus einer universellen Windows-app mit c#, Visual Basic, C++ oder Javascript erstellt aufgerufen werden kann.
 ms.assetid: F7E06AA2-DCEC-427E-BD5D-9CA2A0ED2612
-ms.author: misatran
 ms.date: 05/14/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: e6a7e7a29d766cc226b3e4afd4376a6c5c9ec42a
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4dacca1cff943001c03f9f432404b6dab2fb5b94
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553960"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701619"
 ---
 # <a name="creating-windows-runtime-components-in-ccx"></a><span data-ttu-id="fa429-104">Erstellen von Komponenten für Windows-Runtime in C++/CX</span><span class="sxs-lookup"><span data-stu-id="fa429-104">Creating Windows Runtime Components in C++/CX</span></span>
 > [!NOTE]

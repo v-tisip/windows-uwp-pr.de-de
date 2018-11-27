@@ -1,18 +1,16 @@
 ---
-author: stevewhims
 description: Dieses Thema zeigt, wie man selbst implementierte oder von Windows oder von Drittanbietern implementierte C++/WinRT-APIs verwendet.
 title: Verwenden von APIs mit C++/WinRT
-ms.author: stwhi
 ms.date: 05/08/2018
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projiziert, projektion, implementierung, laufzeitklasse, aktivierung
 ms.localizationpriority: medium
-ms.openlocfilehash: cffda0c15e8234f57486995308c335842ce058c8
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 59b056e160a1d7782e054ad4dbf1b63e91be42e9
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563324"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7700199"
 ---
 # <a name="consume-apis-with-cwinrt"></a><span data-ttu-id="8b89c-104">Verwenden von APIs mit C++/WinRT</span><span class="sxs-lookup"><span data-stu-id="8b89c-104">Consume APIs with C++/WinRT</span></span>
 

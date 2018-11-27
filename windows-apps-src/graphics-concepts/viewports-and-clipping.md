@@ -4,17 +4,15 @@ description: Ein Viewport ist ein zweidimensionales (2D) Rechteck, auf das eine 
 ms.assetid: D0DD646E-13AE-452A-AD22-8C35000D0BA9
 keywords:
 - Viewports und Zuschneiden
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4dd319c686bebf2a30431017f399f48b08618cb6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7d2a8953d202cc22729f99a096b5fb62cf1131d9
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562479"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698875"
 ---
 # <a name="viewports-and-clipping"></a><span data-ttu-id="f8b5e-104">Viewports und Zuschneiden</span><span class="sxs-lookup"><span data-stu-id="f8b5e-104">Viewports and clipping</span></span>
 

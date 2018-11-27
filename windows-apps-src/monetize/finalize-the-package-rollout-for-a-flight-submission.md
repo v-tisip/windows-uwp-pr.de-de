@@ -1,19 +1,17 @@
 ---
-author: Xansky
 description: Verwenden Sie diese Methode der Microsoft Store-Übermittlungs-API zur Fertigstellung des Paketrollouts für eine Flight-Paket-Übermittlung.
 title: Abschließen des Rollouts für eine Flight-Paketübermittlung
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Paketrollout, Flight Übermittlung, fertigstellen
 ms.assetid: e4a645f6-1f00-4af5-80d6-d2ee179acc8a
 ms.localizationpriority: medium
-ms.openlocfilehash: 560576dd60c42f48c625b8c4c55a2b0c85ce511c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 29ac212e0549e754c0865aab5d497fa6d51f075f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578986"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702924"
 ---
 # <a name="finalize-the-rollout-for-a-flight-submission"></a><span data-ttu-id="ac8d6-104">Abschließen des Rollouts für eine Flight-Paketübermittlung</span><span class="sxs-lookup"><span data-stu-id="ac8d6-104">Finalize the rollout for a flight submission</span></span>
 

@@ -4,17 +4,15 @@ description: Ein Tiefenpuffer speichert Tiefeninformationen. Diese steuern, welc
 ms.assetid: 98B9D73A-04A7-4758-AC27-33CD4CB24216
 keywords:
 - Tiefen- und Schablonenpuffer
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e292e0c992edb26da2a92885e1f949d254d75da6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0336054b99e5aae6739e22afd29ee344aad3d42c
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7577067"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702528"
 ---
 # <a name="depth-and-stencil-buffers"></a><span data-ttu-id="6d41d-104">Tiefen- und Schablonenpuffer</span><span class="sxs-lookup"><span data-stu-id="6d41d-104">Depth and stencil buffers</span></span>
 

@@ -1,18 +1,16 @@
 ---
-author: jwmsft
 title: Feder-Animationen
 description: Lernen Sie, wie natürliche Spring-Bewegungsanimationen verwenden.
-ms.author: jimwalk
 ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows10, Uwp, animation
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b28653fc7746075c57f862b0c885beac6d4934f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9e00aa383bcce17b7cd6b67514647c2f6137cc32
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563314"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703637"
 ---
 # <a name="spring-animations"></a><span data-ttu-id="65c6d-104">Feder-Animationen</span><span class="sxs-lookup"><span data-stu-id="65c6d-104">Spring animations</span></span>
 

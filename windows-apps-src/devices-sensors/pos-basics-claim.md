@@ -1,18 +1,16 @@
 ---
-author: TerryWarwick
 title: PointOfService-Geräts beanspruchen und aktivieren Sie Modell
 description: Erfahren Sie mehr über PointOfService Anspruch und Modell aktivieren
-ms.author: jken
 ms.date: 06/19/2018
 ms.topic: article
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
-ms.openlocfilehash: df9c4764b8f7d752a132d6759054660f481cce55
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 7169848084b587793ba1537ea3d6ad78d31892d5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7582310"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698964"
 ---
 # <a name="point-of-service-device-claim-and-enable-model"></a><span data-ttu-id="5f3e0-104">POS-Gerät beanspruchen und aktivieren Sie Modell</span><span class="sxs-lookup"><span data-stu-id="5f3e0-104">Point of Service device claim and enable model</span></span>
 

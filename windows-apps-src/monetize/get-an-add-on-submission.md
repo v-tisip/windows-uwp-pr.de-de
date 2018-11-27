@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: E3DF5D11-8791-4CFC-8131-4F59B928A228
 description: Verwenden Sie diese Methode aus der Microsoft Store-Übermittlungs-API zum Abrufen von Daten für eine vorhandene Add-On-Übermittlung.
 title: Abrufen einer Add-On-Übermittlung
-ms.author: mhopkins
 ms.date: 04/17/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-On-Übermittlung, In-App-Produkt, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: ad6381562b37b1a759a575e070edd6b1bf63402d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a87f0e694434774db215f3f5323588f94ec0465b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565836"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697573"
 ---
 # <a name="get-an-add-on-submission"></a><span data-ttu-id="20318-104">Abrufen einer Add-On-Übermittlung</span><span class="sxs-lookup"><span data-stu-id="20318-104">Get an add-on submission</span></span>
 

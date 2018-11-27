@@ -1,20 +1,18 @@
 ---
-author: andrewleader
 Description: Learn how to use headers to visually group your toast notifications in Action Center.
 title: Popup-Header
 label: Toast headers
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 12/7/2017
 ms.topic: article
 keywords: Windows10, UWP, Popup, Header, Popup-Header, Benachrichtigungen, Gruppen-Popups, Info-Center
 ms.localizationpriority: medium
-ms.openlocfilehash: fcc515b811a11be045ce80ed816708d230720a29
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 361b161b8cf323596a3b07665819300c78f1dcc5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560551"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703587"
 ---
 # <a name="toast-headers"></a><span data-ttu-id="11d1c-103">Popup-Header</span><span class="sxs-lookup"><span data-stu-id="11d1c-103">Toast headers</span></span>
 

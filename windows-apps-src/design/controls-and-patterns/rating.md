@@ -1,9 +1,7 @@
 ---
-author: QuinnRadich
 description: Ermöglicht Benutzern das Anzeigen und Festlegen von Bewertungen, die Zufriedenheit mit Inhalten und Diensten widerspiegeln.
 title: Bewertungssteuerelement
 template: detail.hbs
-ms.author: quradic
 ms.date: 10/25/2017
 ms.topic: article
 keywords: Windows10, UWP
@@ -12,12 +10,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 45cea3986f149714b1f0f14743bdecd83f8b6782
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c1da476f55d1b57048eae8a0027a91c4e6ab8b57
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7575552"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705712"
 ---
 # <a name="rating-control"></a><span data-ttu-id="a0783-104">Bewertungssteuerelement</span><span class="sxs-lookup"><span data-stu-id="a0783-104">Rating control</span></span>
 

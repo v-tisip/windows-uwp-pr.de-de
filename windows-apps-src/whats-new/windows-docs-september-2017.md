@@ -1,18 +1,16 @@
 ---
-author: QuinnRadich
 title: Neuigkeiten in der Windows-Dokumentation im September 2017 – Entwicklung von UWP-Apps
 description: Neue Features, Videos und Entwicklerleitfäden in der Entwicklerdokumentation für Windows10 im September2017
 keywords: Neuigkeiten, Update, Features, Anleitungen für Entwickler, Windows10, 1709
-ms.author: quradic
 ms.date: 09/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 436b610be942b33849b6da31cf5f9353a505a700
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c3fe097be63fef790b9dcc4cedd6ee457e3c79f5
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565207"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708450"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2017"></a><span data-ttu-id="3adcf-104">Neuigkeiten in der Windows-Entwicklerdokumentation im September 2017</span><span class="sxs-lookup"><span data-stu-id="3adcf-104">What's New in the Windows Developer Docs in September 2017</span></span>
 

@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 7a61c328-77be-4614-b117-a32a592c9efe
 description: Erfahren Sie mehr über Lösungen für allgemeine Entwicklungsprobleme mit den Microsoft Advertising-Bibliotheken in JavaScript/HTML-Apps.
 title: Anleitung zur Problembehandlung für HTML und JavaScript
-ms.author: mhopkins
 ms.date: 08/23/2017
 ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, AdControl, Problembehandlung, HTML, Javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 38f0b36769d13d119965e7d15c5812b9ba1d6ecd
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 01e2781b64629e24cba9b4ac02629a79ee4d998b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554101"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702834"
 ---
 # <a name="html-and-javascript-troubleshooting-guide"></a><span data-ttu-id="98a7b-104">Anleitung zur Problembehandlung für HTML und JavaScript</span><span class="sxs-lookup"><span data-stu-id="98a7b-104">HTML and JavaScript troubleshooting guide</span></span>
 

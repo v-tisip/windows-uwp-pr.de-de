@@ -1,24 +1,22 @@
 ---
-author: Karl-Bridge-Microsoft
 title: Fokusnavigation für Tastatur, Gamepad, Fernbedienung und Bedienungshilfen
 Description: ''
 label: ''
 template: detail.hbs
 keywords: Tastatur, Gamecontroller, Fernbedienung, Navigation, direktionale interne Navigation, direktionaler Bereich, Navigationsstrategie, Eingabe, Benutzerinteraktion, Bedienungshilfen, Verwendbarkeit
 ms.date: 03/02/2018
-ms.author: kbridge
 ms.topic: article
 pm-contact: miguelrb
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f4c86847e02c4ba987f8b1dcc42016145b175193
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 4c76e62a4fcccec91fc6b3a083671ff68af2202e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7580600"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7705062"
 ---
 # <a name="focus-navigation-for-keyboard-gamepad-remote-control-and-accessibility-tools"></a><span data-ttu-id="6ea29-103">Fokusnavigation für Tastatur, Gamepad, Fernbedienung und Bedienungshilfen</span><span class="sxs-lookup"><span data-stu-id="6ea29-103">Focus navigation for keyboard, gamepad, remote control, and accessibility tools</span></span>
 

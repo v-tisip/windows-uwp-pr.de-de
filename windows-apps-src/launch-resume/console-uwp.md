@@ -1,18 +1,16 @@
 ---
-author: TylerMSFT
 title: Erstellen einer universellen Windows-Plattform-Konsolen-App
 description: In diesem Thema erfahren Sie, wie Sie eine UWP-App erstellen, die in einem Konsolenfenster ausgeführt wird.
 keywords: console uwp
-ms.author: twhitney
 ms.date: 08/02/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e5923176f5f9fff1a6e4f30a7ba2419e99c074b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 111ef4d5e8830485a5de3b44d69826df256d1c4d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564050"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699189"
 ---
 # <a name="create-a-universal-windows-platform-console-app"></a><span data-ttu-id="d3dc8-104">Erstellen einer universellen Windows-Plattform-Konsolen-App</span><span class="sxs-lookup"><span data-stu-id="d3dc8-104">Create a Universal Windows Platform console app</span></span>
 

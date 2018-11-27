@@ -1,19 +1,17 @@
 ---
-author: PatrickFarley
 title: Verbundene Apps und Geräte (Project Rome)
 description: In diesem Abschnitt wird beschrieben, wie Sie mithilfe der Remote Systems-Plattform Remotegeräte entdecken, eine App auf einem Remotegerät starten und mit einem App-Dienst auf einem Remotegerät kommunizieren.
-ms.author: pafarley
 ms.date: 06/08/2018
 ms.topic: article
 keywords: Windows 10, Uwp, verbundenen Geräten, remote-Systemen, "ROME" Projekt "ROME"
 ms.assetid: 7f39d080-1fff-478c-8c51-526472c1326a
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c462bb28de23db735b957870cf456d3649282ae
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 79decdcb420e7d1b5cb732a354ccddb1ce5b7404
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574230"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699166"
 ---
 # <a name="connected-apps-and-devices-project-rome"></a><span data-ttu-id="c7dc5-104">Verbundene Apps und Geräte (Project Rome)</span><span class="sxs-lookup"><span data-stu-id="c7dc5-104">Connected apps and devices (Project Rome)</span></span>
 

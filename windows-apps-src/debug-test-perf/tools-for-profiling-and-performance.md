@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 ms.assetid: EAC34672-5C12-402D-920B-6F2835EA5ACE
 title: Tools für Profilerstellung und Leistung
 description: Microsoft bietet verschiedene Tools zur Verbesserung der Leistung Ihrer App für die Universelle Windows-Plattform (UWP).
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 21b51e50415e85f8cb1ddca6c358c8d27aa5f0fe
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 30be8d13c7e549f8ed75060f614de5bbcdb6284f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560561"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699937"
 ---
 # <a name="tools-for-profiling-and-performance"></a><span data-ttu-id="b386d-104">Tools für Profilerstellung und Leistung</span><span class="sxs-lookup"><span data-stu-id="b386d-104">Tools for profiling and performance</span></span>
 

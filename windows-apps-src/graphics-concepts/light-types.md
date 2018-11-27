@@ -4,17 +4,15 @@ description: 'Die Lichttyp-Eigenschaft bestimmt, welche Art von Lichtquelle Sie 
 ms.assetid: 57748CAF-6F08-4D1D-9ED6-8FAA8C5FE314
 keywords:
 - Lichttypen
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9898a050131813b7b2431f8fc11397eee7c7942c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 1815f0956fbc175fec5ca892dbeeec92b2f939ab
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562762"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697843"
 ---
 # <a name="light-types"></a><span data-ttu-id="3fcc4-105">Lichttypen</span><span class="sxs-lookup"><span data-stu-id="3fcc4-105">Light types</span></span>
 

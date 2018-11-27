@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: "So wird's gemacht: Anhalten einer App (DirectX und C++)"
 description: In diesem Thema wird gezeigt, wie wichtige Systemzustände und App-Daten gespeichert werden, wenn das System Ihre DirectX-App für die Universelle Windows-Plattform (UWP) anhält.
 ms.assetid: 5dd435e5-ec7e-9445-fed4-9c0d872a239e
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, anhalten, DirectX
 ms.localizationpriority: medium
-ms.openlocfilehash: 204d61430f59c820e9ef9ef36832cd1c24ee7f9c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 0b588d6bf6e7cbf43651d94a7fd46e9a767c6f09
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567080"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697883"
 ---
 # <a name="how-to-suspend-an-app-directx-and-c"></a><span data-ttu-id="41d6c-104">So wird's gemacht: Anhalten einer App (DirectX und C++)</span><span class="sxs-lookup"><span data-stu-id="41d6c-104">How to suspend an app (DirectX and C++)</span></span>
 

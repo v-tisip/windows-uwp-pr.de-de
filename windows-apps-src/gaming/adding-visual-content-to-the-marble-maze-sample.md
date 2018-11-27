@@ -1,19 +1,17 @@
 ---
-author: eliotcowley
 title: Hinzufügen von visuellem Inhalt zum Marble Maze-Beispiel
 description: In diesem Dokument wird beschrieben, wie das Spiel Marble Maze Direct3D und Direct2D in der App-Umgebung der universellen Windows Plattform verwendet wird, sodass Sie die Muster erlernen und anpassen können, wenn Sie mit Ihrem eigenen Spielinhalt arbeiten.
 ms.assetid: 6e43422e-e1a1-b79e-2c4b-7d5b4fa88647
-ms.author: elcowle
 ms.date: 09/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Beispiel, DirectX, Grafiken
 ms.localizationpriority: medium
-ms.openlocfilehash: 5171578b844829ec590b654194639ed6c8ebbfe1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 60dd12c3e18b82118053d72d0983e13008dd8a0e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7558827"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7696781"
 ---
 # <a name="adding-visual-content-to-the-marble-maze-sample"></a><span data-ttu-id="39708-104">Hinzufügen von visuellem Inhalt zum Marble Maze-Beispiel</span><span class="sxs-lookup"><span data-stu-id="39708-104">Adding visual content to the Marble Maze sample</span></span>
 

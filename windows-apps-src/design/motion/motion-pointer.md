@@ -1,19 +1,17 @@
 ---
-author: mijacobs
 Description: Use pointer animations to provide users with visual feedback when the user taps on an item.
 title: Animationen für Zeigerklicks in UWP-Apps
 ms.assetid: EEB10A2C-629A-4705-8468-4D019D74DDFF
-ms.author: jimwalk
 ms.date: 08/9/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c54218582b3ef31df07a5969ad5e83be7af2952
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8cedab3f589f41b791a6c387ec776dc4c8ee23a6
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7557200"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703534"
 ---
 # <a name="pointer-click-animations"></a><span data-ttu-id="fc229-103">Animationen für Zeigerklicks</span><span class="sxs-lookup"><span data-stu-id="fc229-103">Pointer click animations</span></span>
 

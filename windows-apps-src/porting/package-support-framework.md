@@ -1,19 +1,17 @@
 ---
-author: hickeys
 Description: Fix issues that prevent your desktop application from running in an MSIX container
 Search.Product: eADQiWindows 10XVcnh
 title: Beheben von Problemen, die verhindern, Ihre desktop-Anwendung dass ausgeführt wird, in einem MSIX-container
-ms.author: hickeys
 ms.date: 07/02/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: fe869cee0d59eb099e3cb828dfee4eccd27a56ae
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 674f5977a69855ff51cbc579ca66085aa133eb5b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578014"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7697693"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a><span data-ttu-id="2899a-103">Anwenden von Runtime-Updates auf ein MSIX-Paket mit dem Paket Support-Framework</span><span class="sxs-lookup"><span data-stu-id="2899a-103">Apply runtime fixes to an MSIX package by using the Package Support Framework</span></span>
 

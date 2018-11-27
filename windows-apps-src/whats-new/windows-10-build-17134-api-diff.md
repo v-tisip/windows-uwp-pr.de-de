@@ -1,18 +1,16 @@
 ---
-author: QuinnRadich
 title: API-Änderungen in Windows10 Build 17134
 description: Entwickler können die folgende Liste nutzen, um neue oder geänderte Namespaces in Windows 10, Build 17134, zu identifizieren.
 keywords: Neuigkeiten, was ist neu, Updates, Windows10, neueste, APIs, 17134
-ms.author: quradic
 ms.date: 4/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 40a5621dbd5729d31e2b288b912b10c638ca4f36
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ed4682b6deac68d74d40576d0eb9cbafc6bfdd1d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572356"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7698789"
 ---
 # <a name="new-apis-in-windows-10-build-17134"></a><span data-ttu-id="c99cd-104">Neue APIs in Windows10, Build 17134</span><span class="sxs-lookup"><span data-stu-id="c99cd-104">New APIs in Windows 10 build 17134</span></span>
 

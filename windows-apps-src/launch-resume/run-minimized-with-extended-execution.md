@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 description: Erfahren Sie, wie Sie die erweiterte Ausführung verwenden, damit Ihre App auch bei Minimierung weiter ausgeführt wird.
 title: Verschieben der angehaltenen App mithilfe der erweiterten Ausführung
-ms.author: twhitney
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows10, UWP, erweiterte Ausführung, minimiert, ExtendedExecutionSession, Hintergrundaufgabe, Anwendungslebenszyklus, Sperrbildschirm
 ms.assetid: e6a6a433-5550-4a19-83be-bbc6168fe03a
 ms.localizationpriority: medium
-ms.openlocfilehash: 30e05259306a222a3cb18268aeb58a8380f6d4d2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 8cc67a7593a340ada8f807fc0fb0c1b846c6f05b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566415"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7699351"
 ---
 # <a name="postpone-app-suspension-with-extended-execution"></a><span data-ttu-id="8a377-104">Verschieben der angehaltenen App mithilfe der erweiterten Ausführung</span><span class="sxs-lookup"><span data-stu-id="8a377-104">Postpone app suspension with extended execution</span></span>
 

@@ -4,17 +4,15 @@ description: Ebene3 fügt zusätzlich zu den Funktionen der Ebene2 die Unterstü
 ms.assetid: 86E2F311-A221-4C87-BA89-642FF388FAEB
 keywords:
 - Ebene3
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 02eb9179cbc4a5fed5d1f6dc37622491859a7552
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 019899df18831167f0744d5274aa120cc7dd2096
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7561292"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7708590"
 ---
 # <a name="tier-3"></a><span data-ttu-id="c7407-104">Ebene3</span><span class="sxs-lookup"><span data-stu-id="c7407-104">Tier 3</span></span>
 

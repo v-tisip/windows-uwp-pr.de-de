@@ -1,18 +1,16 @@
 ---
-author: jnHs
 Description: Attract customers and promote your apps
 title: Kunden gewinnen und Bewerben von Apps
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0880105fccca297204c27e80099f0cfc6d016a27
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9941c18936291b3dad6de9b47ef1299d986bef68
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578589"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7704152"
 ---
 # <a name="attract-customers-and-promote-your-apps"></a><span data-ttu-id="69629-103">Kunden gewinnen und Bewerben von Apps</span><span class="sxs-lookup"><span data-stu-id="69629-103">Attract customers and promote your apps</span></span>
 

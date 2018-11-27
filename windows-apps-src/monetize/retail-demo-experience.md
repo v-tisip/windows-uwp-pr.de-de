@@ -1,19 +1,17 @@
 ---
-author: joannaleecy
 title: Einzelhandel (RDX) Demo Features Ihrer app hinzufügen
 description: Bereiten Sie Ihre app für den Einzelhandel Demo-Modus, der versehentlichen präsentieren Ihrer app auf die Einzelhandels-Vertriebsabteilung.
 ms.assetid: f83f950f-7fdd-4f18-8127-b92a8f400061
-ms.author: joanlee
 ms.date: 10/02/2018
 ms.topic: article
 keywords: Windows 10, UWP, Demo-App für den Einzelhandel
 ms.localizationpriority: medium
-ms.openlocfilehash: ee0344d521b4c31449a2291517b20a09280818fc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9d6baaff5ca2af781e72c9b4643fa1ea0624e0eb
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564314"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702864"
 ---
 # <a name="add-retail-demo-rdx-features-to-your-app"></a><span data-ttu-id="e619e-104">Einzelhandel (RDX) Demo Features Ihrer app hinzufügen</span><span class="sxs-lookup"><span data-stu-id="e619e-104">Add retail demo (RDX) features to your app</span></span>
 

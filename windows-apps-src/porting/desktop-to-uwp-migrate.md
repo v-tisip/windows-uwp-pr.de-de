@@ -1,19 +1,17 @@
 ---
-author: normesta
 Description: Share code between a desktop application and a UWP app
 Search.Product: eADQiWindows 10XVcnh
 title: Teilen von Code zwischen einer desktop-Anwendung und eine UWP-app
-ms.author: normesta
 ms.date: 10/03/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a4eda15a18a441da2e06db17aaf7bea3d1842d1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6727c22631a9536a0ed8d04e7c88602bba890284
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559802"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703494"
 ---
 # <a name="share-code-between-a-desktop-application-and-a-uwp-app"></a><span data-ttu-id="12f61-103">Teilen von Code zwischen einer desktop-Anwendung und eine UWP-app</span><span class="sxs-lookup"><span data-stu-id="12f61-103">Share code between a desktop application and a UWP app</span></span>
 

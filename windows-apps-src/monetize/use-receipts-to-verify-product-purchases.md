@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: E322DFFE-8EEC-499D-87BC-EDA5CFC27551
 description: Jede Microsoft Store-Transaktion, die zu einem erfolgreichen Produktkauf führt, kann optional einen Transaktionsbeleg zurückgeben.
 title: Überprüfen von Produktkäufen anhand von Belegen
-ms.author: mhopkins
 ms.date: 04/16/2018
 ms.topic: article
 keywords: Windows10, UWP, In-App-Einkäufe, IAPs, Belege, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
-ms.openlocfilehash: ed79a3ac50fb3a6cbe735e0ea713256845d39441
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: b71d55d71a63060a66265051fafc8bdf7313e77b
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7563156"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7702744"
 ---
 # <a name="use-receipts-to-verify-product-purchases"></a><span data-ttu-id="fdc4b-104">Überprüfen von Produktkäufen anhand von Belegen</span><span class="sxs-lookup"><span data-stu-id="fdc4b-104">Use receipts to verify product purchases</span></span>
 

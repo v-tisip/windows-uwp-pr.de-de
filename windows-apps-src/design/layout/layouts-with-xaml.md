@@ -1,18 +1,16 @@
 ---
-author: muhsinking
 Description: XAML gives you a flexible layout system to create a responsive UI.
 title: Dynamische Layouts mit XAML
-ms.author: mukin
 ms.date: 05/19/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c75687cdc745468deec41a686d0d8b9d2f0ba9c
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 82a528b3ec98f56e1079e11ec1123d86de15d50f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565319"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7701645"
 ---
 # <a name="responsive-layouts-with-xaml"></a><span data-ttu-id="f03f4-103">Dynamische Layouts mit XAML</span><span class="sxs-lookup"><span data-stu-id="f03f4-103">Responsive layouts with XAML</span></span>
 

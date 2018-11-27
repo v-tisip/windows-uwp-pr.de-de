@@ -1,18 +1,16 @@
 ---
-author: msatranjr
 title: Bluetooth GATT-Client
 description: Dieser Artikel enthält eine Übersicht über Bluetooth Generic Attribute Profile (GATT)-Client für universelle Windows-Plattform (UWP) apps, zusammen mit Beispielcode für allgemeine Anwendungsfälle.
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 345e6f82ddf97c2595dad0029ca432f075a6190b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 3ae656b473a4dd5999588057b0ec970645703eec
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7572703"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7703597"
 ---
 # <a name="bluetooth-gatt-client"></a><span data-ttu-id="1cb70-104">Bluetooth GATT-Client</span><span class="sxs-lookup"><span data-stu-id="1cb70-104">Bluetooth GATT Client</span></span>
 
