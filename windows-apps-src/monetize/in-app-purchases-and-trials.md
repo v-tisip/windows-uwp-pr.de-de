@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: F45E6F35-BC18-45C8-A8A5-193D528E2A4E
 description: Erfahren Sie, wie Sie In-App-Käufe und Testversionen in UWP-Apps aktivieren.
 title: In-App-Käufe und Testversionen
-ms.author: mhopkins
 ms.date: 05/09/2018
 ms.topic: article
 keywords: windows10, uwp, In-app-käufe, IAPs-add-ons, Testversionen, verbrauchbar, dauerhaft, abonnement
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c1c4ea1923ff81754b9c8ed8328ba6ec670a3f1
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9891205d4fdc8110cb727fb5caabbff6c5f4f948
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566204"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718325"
 ---
 # <a name="in-app-purchases-and-trials"></a>In-App-Käufe und Testversionen
 
@@ -31,12 +29,12 @@ Dieser Artikel enthält eine Übersicht darüber, wie In-App-Käufe und Testvers
 
 Je nachdem, für welche Version von Windows10 Ihre App ausgelegt ist, können Sie mithilfe zweier verschiedener Namespaces Ihren UWP-Apps In-App-Käufe und Testversionen hinzufügen. Obwohl die APIs in diesen Namespaces den gleichen Ziele dienen, sind sie unterschiedlich gestaltet, und der Code ist zwischen den beiden APIs nicht kompatibel.
 
-* **[Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)**&nbsp;&nbsp;Ab Windows10 Version1607 können mithilfe der API in diesem Namespace In-App-Käufe und Testversionen in den Apps implementiert werden. Es wird empfohlen, die Member in diesem Namespace zu verwenden, wenn Ihr App-Projekt auf **Windows 10 Anniversary Edition (10.0; Build 14393)** oder höher in Visual Studio ausgerichtet ist. Dieser Namespace unterstützt die neuesten Add-on-Typen, wie Store verwaltete konsumierbare Add-ons, und wurde entwickelt, um die Kompatibilität mit künftigen Arten von Produkten und Features von Partner Center und dem Store unterstützt werden. Weitere Informationen zu diesem Namespace finden Sie in diesem Artikel im Abschnitt [In-App-Käufe und Testversionen mit dem Windows.Services.Store-Namespace](#api_intro).
+* **[Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)**&nbsp;&nbsp;Ab Windows10 Version1607 können mithilfe der API in diesem Namespace In-App-Käufe und Testversionen in den Apps implementiert werden. Es wird empfohlen, die Member in diesem Namespace zu verwenden, wenn Ihr App-Projekt auf **Windows 10 Anniversary Edition (10.0; Build 14393)** oder höher in Visual Studio ausgerichtet ist. Dieser Namespace unterstützt die neuesten Add-on-Typen, z. B. Store verwalteten Endverbraucher-Add-Ons und wurde entwickelt, um die Kompatibilität mit künftigen Arten von Produkten und Features von Partner Center und dem Store unterstützt werden. Weitere Informationen zu diesem Namespace finden Sie in diesem Artikel im Abschnitt [In-App-Käufe und Testversionen mit dem Windows.Services.Store-Namespace](#api_intro).
 
 * **[Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)**&nbsp;&nbsp;Alle Versionen von Windows10 unterstützen in diesem Namespace zudem eine ältere API für In-App-Käufe und Testversionen. Informationen zum **Windows.ApplicationModel.Store**-Namespace finden Sie unter [In-App-Käufe und Testversionen mit dem Windows.ApplicationModel.Store-Namespace](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md).
 
 > [!IMPORTANT]
-> Der The **Windows.ApplicationModel.Store**-Namespace wird nicht mehr mit neuen Funktionen aktualisiert, daher wird empfohlen, dass Sie stattdessen den **Windows.Services.Store**-Namespace falls möglich für Ihre App verwenden. Der **Windows.ApplicationModel.Store** -Namespace wird nicht unterstützt, in der Windows-desktopanwendungen, die die [Desktop-Brücke](https://developer.microsoft.com/windows/bridges/desktop) verwenden oder in apps oder Spiele, die eine Sandbox-Entwicklung im Partner Center verwenden (z. B. Dies ist der Fall für alle, die von Spielen integriert mit Xbox Live).
+> Der The **Windows.ApplicationModel.Store**-Namespace wird nicht mehr mit neuen Funktionen aktualisiert, daher wird empfohlen, dass Sie stattdessen den **Windows.Services.Store**-Namespace falls möglich für Ihre App verwenden. Der **Windows.ApplicationModel.Store** -Namespace wird nicht unterstützt, in der Windows-desktopanwendungen, die die [Desktop-Brücke](https://developer.microsoft.com/windows/bridges/desktop) verwenden oder in apps oder Spiele, die eine Sandbox-Entwicklung in Partner Center verwenden (z. B. Dies ist der Fall für alle, die von Spielen Integration mit Xbox Live).
 
 <span id="concepts" />
 
@@ -160,7 +158,7 @@ So schränken Sie mit dem **Windows.Services.Store**-Namespace Features in einer
 
 Wenn Ihre App APIs im **Windows.Services.Store**-Namespace zum Implementieren von In-App-Käufe und Testfunktionen verwendet, müssen Sie Ihre App im Store veröffentlichen und die App auf Ihrem Entwicklungsgerät herunterladen, um seine Lizenz für Tests zu verwenden. Gehen Sie folgendermaßen vor, um Ihren Code zu testen:
 
-1. Wenn Ihre app noch nicht veröffentlicht und im Store ist, stellen Sie sicher, dass Ihre app im Partner Center [Übermitteln Ihrer app](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) [Zertifizierungskits](https://developer.microsoft.com/windows/develop/app-certification-kit) Mindestanforderungen erfüllt, und stellen Sie sicher, dass Ihre app den Zertifizierungsprozess bestanden hat. Optional können Sie [die App so konfigurieren, daher sie während der Tests im Store nicht auffindbar](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) ist. Beachten Sie die ordnungsgemäße Konfiguration des [Flight-Pakete](../publish/package-flights.md)an. Falsch konfigurierte Paket, die Pakete sind möglicherweise nicht heruntergeladen werden.
+1. Wenn Ihre app noch nicht veröffentlicht und im Store ist, stellen Sie sicher, dass Ihre app im Partner Center, [übermitteln Sie Ihre app](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) [Zertifizierungskit für Windows-Apps](https://developer.microsoft.com/windows/develop/app-certification-kit) Mindestanforderungen erfüllt, und stellen Sie sicher, dass Ihre app den Zertifizierungsprozess bestanden hat. Optional können Sie [die App so konfigurieren, daher sie während der Tests im Store nicht auffindbar](https://msdn.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) ist. Beachten Sie die ordnungsgemäße Konfiguration des [Flight-Pakete](../publish/package-flights.md)an. Falsch konfigurierte Paket, die Pakete sind möglicherweise nicht heruntergeladen werden.
 
 2. Stellen Sie anschließend sicher, dass die folgenden Schritte durchgeführt wurden:
 
@@ -168,7 +166,7 @@ Wenn Ihre App APIs im **Windows.Services.Store**-Namespace zum Implementieren vo
     * Wenn Ihre app ein Add-on, das Kunden kaufen können, [Erstellen Sie eine Add-on-Übermittlung für Ihre app im Partner Center](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions)bietet.
     * Wenn Sie einige Features in einer Testversion Ihrer App, [Konfigurieren Sie Ihre app als eine kostenlose Testversion im Partner Center](../publish/set-app-pricing-and-availability.md#free-trial)einschränken oder ausschließen möchten.
 
-3. Öffnen Sie Ihr Projekt in Visual Studio, klicken Sie auf das **Menü „Projekt“**, zeigen Sie auf **Store**, und klicken Sie dann auf **App mit Store verknüpfen**. Führen Sie die Schritte im Assistenten, um das app-Projekt mit der app im Partner Center-Konto zu verknüpfen, die Sie zum Testen verwenden möchten.
+3. Öffnen Sie Ihr Projekt in Visual Studio, klicken Sie auf das **Menü „Projekt“**, zeigen Sie auf **Store**, und klicken Sie dann auf **App mit Store verknüpfen**. Führen Sie die Anweisungen im Assistenten, um das app-Projekt mit der app im Partner Center-Konto verknüpfen, die Sie zum Testen verwenden möchten.
     > [!NOTE]
     > Wenn Sie das Projekt nicht mit einer App im Store verknüpfen, legen die [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Methoden die **ExtendedError**-Eigenschaften ihrer Rückgabewerte auf den Fehlercodewert 0x803F6107 fest. Dieser Wert gibt an, dass die App im Store nicht bekannt ist.
 4. Falls noch nicht geschehen, installieren Sie die App aus dem im vorherigen Schritt angegebenen Store, führen Sie die App einmal aus, und schließen Sie dann diese App. Damit wird sichergestellt, dass auf dem Gerät für die Entwicklung eine gültige Lizenz für die App installiert wird.

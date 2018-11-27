@@ -1,19 +1,17 @@
 ---
-description: Erfahren Sie, wie Sie eine UWP-app entwickeln.
+description: Hier erfahren Sie, wie Sie eine UWP-app entwickeln.
 title: Entwickeln von UWP-Apps
-author: mijacobs
 layout: LandingPage
 keywords: Uwp-app-Entwicklung threading Async Plattform Übersicht Portal zu entwickeln Entwickler
-ms.author: mijacobs
 ms.date: 3/29/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: d4b775901fbb5140b63a76676705f2d2f2ba5f68
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 615a5a0762cfa55d7b8be7ce392e02ee1802ded2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7558976"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718641"
 ---
 <div> 
 <h1>Entwickeln von UWP-Apps</h1>
@@ -52,7 +50,7 @@ ms.locfileid: "7558976"
                     </div>                
                     <div class="cardText">
                         <h3>Portierungsleitfaden</h3>
-                        <p>Bringen Sie Ihre vorhandenen Windows Forms-, WPF-, Android oder iOS-app zu UWP. </p>
+                        <p>Schalten Sie Ihre vorhandenen Windows Forms-, WPF-, Android oder iOS-app zu UWP. </p>
                     </div>
                 </div>
             </div>
@@ -118,7 +116,7 @@ ms.locfileid: "7558976"
                 <div style="display:block" class="card">
                     <div style="display:block" class="cardText">
                         <h3>App-UI </h3>
-                        <p><a href="https://developer.microsoft.com/windows/apps/design">Steuerelemente, Layout, Typografie, Animation, benutzerfreundlichkeit und UI-Design finden Sie im Abschnitt Design und UI.</a></p>
+                        <p><a href="https://developer.microsoft.com/windows/apps/design">Finden Sie für Steuerelemente, Layout, Typografie, Animation, benutzerfreundlichkeit und UI-Design im Abschnitt Design und UI.</a></p>
                     </div>
                 </div>
             </div>
@@ -212,7 +210,7 @@ ms.locfileid: "7558976"
                         <p style="display:block"><a href="/windows/uwp/devices-sensors/point-of-service">Point of Service</a></p>
                         <p style="display:block"><a href="/windows/uwp/devices-sensors/sensors">Sensoren</a></p>
                         <p style="display:block"><a href="/windows/uwp/devices-sensors/printing-and-scanning">Printing</a></p>
-                        <p style="display:block"><a href="/windows/uwp/devices-sensors/3d-printing">3-d das Drucken</a></p>
+                        <p style="display:block"><a href="/windows/uwp/devices-sensors/3d-printing">3-d drucken</a></p>
                         <p style="display:block"><a href="/windows/uwp/devices-sensors/nfc">NFC</a></p>
                         <p style="display:block"><a href="/windows/uwp/devices-sensors/get-battery-info">Akku-Informationen</a></p>
                     </div>
@@ -290,7 +288,7 @@ ms.locfileid: "7558976"
                     </div>                
                     <div class="cardText">
                         <h3>Entwicklungstools</h3>
-                        <p>Abrufen von Visual Studio 2017, Windows 10 SDK und andere Entwicklungstools.</p>
+                        <p>Abrufen von Visual Studio 2017, Windows 10-SDKS und andere Entwicklungstools.</p>
                     </div>
                 </div>
             </div>

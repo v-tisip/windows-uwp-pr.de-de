@@ -1,34 +1,32 @@
 ---
-author: stevewhims
 ms.assetid: 88e16ec8-deff-4a60-bda6-97c5dabc30b8
-description: Dieses Thema enthält eine Fallstudie zum Portieren eines funktionierenden Peer-zu-Peer-Quiz spielen WinRT 8.1 Beispielapp zu einer app für Windows 10 universelle Windows-Plattform (UWP).
+description: Dieses Thema enthält eine Fallstudie zum Portieren eines funktionierenden Peer-to-Peer-Quiz spielen WinRT 8.1-Beispielapp zu einer app für Windows 10 universelle Windows-Plattform (UWP).
 title: Windows-Runtime 8.x zu universeller Windows-Plattform (UWP) – Fallstudie, QuizGame-Beispiel-App (Peer-zu-Peer)
-ms.author: stwhi
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 69aae85f4e0bb01833114ae5b2cbfab45e9dd84d
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9ce39e87f3c5c9e11f3e9ddb1424d606356ee3c8
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7568000"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717474"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-quizgame-sample-app"></a>Windows-Runtime 8.x zu UWP – Fallstudie: QuizGame-Beispiel-app
 
 
 
 
-Dieses Thema enthält eine Fallstudie zum Portieren eines funktionierenden Peer-zu-Peer-Quiz spielen WinRT 8.1-Beispielapp zu einer app Windows10Universal Windows-Plattform (UWP).
+Dieses Thema enthält eine Fallstudie zum Portieren eines funktionierenden Peer-to-Peer-Quiz spielen WinRT 8.1-Beispielapp zu einer app Windows10Universal Windows-Plattform (UWP).
 
-Eine universelle 8.1-app werden zwei Versionen derselben App erstellt: eine app-Paket für Windows8.1 und ein anderes app-Paket für Windows Phone 8.1. Für die WinRT8.1-Version von QuizGame wird eine Anordnung mit einem Projekt für eine universelle Windows-App verwendet. Dabei wird aber ein anderer Ansatz gewählt und für die beiden Plattformen jeweils eine App mit unterschiedlicher Funktionalität erstellt. Windows8.1-app-Paket dient als Host für eine Sitzung des quizspiels, während das Windows Phone 8.1-app-Paket die Rolle des Clients an dem Host übernimmt. Die beiden Hälften der Quizspielsitzung kommunizieren per Peer-zu-Peer-Netzwerkverbindung.
+Eine universelle 8.1-app werden zwei Versionen derselben App erstellt: ein app-Paket für Windows8.1 und ein anderes app-Paket für Windows Phone 8.1. Für die WinRT8.1-Version von QuizGame wird eine Anordnung mit einem Projekt für eine universelle Windows-App verwendet. Dabei wird aber ein anderer Ansatz gewählt und für die beiden Plattformen jeweils eine App mit unterschiedlicher Funktionalität erstellt. Windows8.1-app-Paket dient als Host für eine Sitzung des quizspiels, während das Windows Phone 8.1-app-Paket die Rolle des Clients an dem Host übernimmt. Die beiden Hälften der Quizspielsitzung kommunizieren per Peer-zu-Peer-Netzwerkverbindung.
 
-Die individuelle Anpassung der beiden Hälften für PC bzw. Telefone ist sinnvoll. Aber wäre es nicht sogar noch besser, wenn Sie sowohl den Host als auch den Client auf nahezu jedem beliebigen Gerät ausführen könnten? In diesem Fall müssen Fallstudie werden wir beide apps zu Windows 10 portieren, in denen sie jeweils ein einzelnes app-Paket erstellt, das Benutzer auf einer Vielzahl von Geräten installieren können.
+Die individuelle Anpassung der beiden Hälften für PC bzw. Telefone ist sinnvoll. Aber wäre es nicht sogar noch besser, wenn Sie sowohl den Host als auch den Client auf nahezu jedem beliebigen Gerät ausführen könnten? In diesem Fall werden Fallstudie werden wir beide apps zu Windows 10 portieren, in denen sie jeweils ein einzelnes app-Paket erstellt, das Benutzer auf einer Vielzahl von Geräten installieren können.
 
 Für die App werden Muster verwendet, bei denen Ansichten und Ansichtsmodelle genutzt werden. Sie werden sehen, dass der Portiervorgang für diese App aufgrund dieser klaren Trennung sehr einfach ist.
 
-**Hinweis:** in diesem Beispiel wird davon ausgegangen, Ihr Netzwerk konfiguriert ist, zum Senden und Empfangen von benutzerdefinierten UDP gruppieren multicast-Pakete (die meisten Heimnetzwerken sind, obwohl das Netzwerk möglicherweise nicht). Im Beispiel werden auch TCP-Pakete gesendet und empfangen.
+**Hinweis:** in diesem Beispiel wird davon ausgegangen, Ihr Netzwerk konfiguriert ist, zum Senden und Empfangen von benutzerdefinierten UDP gruppieren multicast-Pakete (die meisten Heimnetzwerken sind, auch wenn das Netzwerk möglicherweise nicht). Im Beispiel werden auch TCP-Pakete gesendet und empfangen.
 
  
 
@@ -88,7 +86,7 @@ QuizGame verfügt über die folgenden Bestandteile:
 
 Für diese Fallstudie verwenden wir die üblichen Optionen, die unter [Bei einer Universal8.1-App](w8x-to-uwp-root.md) in Bezug auf die zu unterstützenden Geräte beschrieben sind.
 
-Basierend auf diesen Optionen, müssen wir "quizgame.Windows" portieren, um ein neues Windows 10 mit dem Namen "quizgamehost" ist. Und wir Portieren "quizgame.windowsphone" zu ein neues Windows 10 mit dem Namen "quizgameclient". Diese Projekte sind für die universelle Gerätefamilie bestimmt, damit sie auf jedem Gerät ausgeführt werden können. Wir belassen die QuizGame.Shared-Quelldateien usw. in ihrem eigenen Ordner und verknüpfen diese freigegebenen Dateien mit den beiden neuen Projekten. Wir verwenden wieder eine einzelne Projektmappe und nennen sie QuizGame10.
+Basierend auf diesen Optionen, müssen wir "quizgame.Windows" zu einem neuen Namen "quizgamehost" Windows 10-Projekt portieren. Und wir Portieren "quizgame.windowsphone" zu ein neues Windows 10 mit dem Namen "quizgameclient". Diese Projekte sind für die universelle Gerätefamilie bestimmt, damit sie auf jedem Gerät ausgeführt werden können. Wir belassen die QuizGame.Shared-Quelldateien usw. in ihrem eigenen Ordner und verknüpfen diese freigegebenen Dateien mit den beiden neuen Projekten. Wir verwenden wieder eine einzelne Projektmappe und nennen sie QuizGame10.
 
 **QuizGame10-Projektmappe**
 

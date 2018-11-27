@@ -1,18 +1,16 @@
 ---
-author: QuinnRadich
 title: Neuigkeiten in der Windows-Dokumentation im Juli 2017 – Entwicklung von UWP-Apps
 description: Neue Features, Beispiele und Entwicklerleitfäden in der Entwicklerdokumentation für Windows10 im Juli2017
 keywords: Neuigkeiten, Update, Features, Anleitungen für Entwickler, Windows10
-ms.author: quradic
 ms.date: 07/05/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 62afbef1cc1f47bbc88c45a166572deca28d47a4
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: dd00d1aba0e6a58cd2128c90b2c7f714d3f8f802
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579538"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717350"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2017"></a>Neuigkeiten in der Windows-Entwicklerdokumentation im Juli 2017
 

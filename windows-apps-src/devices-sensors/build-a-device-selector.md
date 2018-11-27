@@ -1,19 +1,17 @@
 ---
-author: muhsinking
 ms.assetid: D06AA3F5-CED6-446E-94E8-713D98B13CAA
 title: Erstellen einer Geräteauswahl
 description: Durch das Erstellen einer Geräteauswahl können Sie die Geräte begrenzen, die Sie beim Auflisten von Geräten durchsuchen.
-ms.author: mukin
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 036ea8b7d9797112dca9b6594e9bc1e33e923588
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 01a4bfc2ec4c1d442058dbb6009065541f93cc7f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7571332"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7718804"
 ---
 # <a name="build-a-device-selector"></a>Erstellen einer Geräteauswahl
 
@@ -38,7 +36,7 @@ Bei Verwendung der [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/
 
 Die [**Windows.Devices.Enumeration**](https://msdn.microsoft.com/library/windows/apps/BR225459)-APIs enthalten eine Canonical AQS-Syntax, die jedoch nicht alle Operatoren unterstützt. Eine Liste der beim Erstellen der Filterzeichenfolge verfügbaren Eigenschaften finden Sie unter [Geräteinformationseigenschaften](device-information-properties.md).
 
-**Achtung**benutzerdefinierte Eigenschaften, die definiert werden mithilfe der `{GUID} PID` Format nicht verwendet werden, wenn der AQS-Filterzeichenfolge. Dies liegt daran, dass der Eigenschaftstyp vom bekannten Eigenschaftennamen abgeleitet wird.
+**Achtung**benutzerdefinierte Eigenschaften, die definiert werden mit der `{GUID} PID` Format nicht verwendet werden, wenn der AQS-Filterzeichenfolge. Dies liegt daran, dass der Eigenschaftstyp vom bekannten Eigenschaftennamen abgeleitet wird.
 
  
 

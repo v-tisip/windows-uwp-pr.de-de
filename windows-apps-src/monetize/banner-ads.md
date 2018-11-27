@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Enthält Informationen zum Anzeigen von Werbebannern in Ihrer UWP-app verwenden.
 title: Banneranzeigen
-ms.author: mhopkins
 ms.date: 08/23/2017
 ms.topic: article
 keywords: Windows 10, Uwp, anzeigen, Werbung, AdControl, Banneranzeigen
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a8a08f81328be5dcf28a3f73a592e88e1edd135
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e8754790fac07e6e1babdb44888cfd1ff138c230
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564436"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716804"
 ---
 # <a name="banner-ads"></a>Banneranzeigen
 

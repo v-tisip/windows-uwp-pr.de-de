@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: dc632a4c-ce48-400b-8e6e-1dddbd13afff
 description: Verwenden Sie diese Methode in der Microsoft Store-Werbungs-API, um Lieferpositionen für Werbeanzeigenkampagnen zu verwalten.
 title: Verwalten von Lieferpositionen
-ms.author: mhopkins
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store Werbungs-API, Anzeigenkampagnen
 ms.localizationpriority: medium
-ms.openlocfilehash: e3d4a09524f1ebc0e944036bd9458b1b32ee04d3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 363f7034d7e353d9ee110637971e7b848dbca1bb
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7555243"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7718252"
 ---
 # <a name="manage-delivery-lines"></a>Verwalten von Lieferpositionen
 
@@ -21,7 +19,7 @@ Erstellen Sie mit diesen Methoden in Microsoft Store-Angebote API eine oder mehr
 
 Weitere Informationen zu der Beziehung zwischen Lieferpositionen und Anzeigenkampagnen, Zielgruppenprofilen und Werbemitteln finden Sie unter [Anzeigenkampagnen mit Microsoft Store-Diensten ausführen](run-ad-campaigns-using-windows-store-services.md#call-the-windows-store-promotions-api).
 
->**Hinweis:**&nbsp;&nbsp;bevor Sie erfolgreich Lieferpositionen für Anzeigenkampagnen, die mit dieser API erstellen können, Sie zunächst [eine kostenpflichtige Anzeigenkampagne über die Seite **Anzeigenkampagnen** im Partner Center erstellen müssen](../publish/create-an-ad-campaign-for-your-app.md)und müssen Sie mindestens eine Zahlung hinzufügen Instrument auf dieser Seite. Danach können Sie mithilfe dieser API gebührenpflichtige Lieferpositionen für Anzeigenkampagnen erstellen. Anzeigenkampagnen, die Sie mithilfe der API erstellen, werden automatisch die Standard-Zahlungsmittel ausgewählt, auf der Seite **Anzeigenkampagnen** im Partner Center in Rechnung stellen.
+>**Hinweis:**&nbsp;&nbsp;bevor Sie erfolgreich Lieferpositionen für Anzeigenkampagnen, die mit dieser API erstellen können, Sie zunächst [eine kostenpflichtige Anzeigenkampagne über die Seite **Anzeigenkampagnen** im Partner Center erstellen müssen](../publish/create-an-ad-campaign-for-your-app.md)und Sie müssen mindestens eine Zahlung hinzufügen Instrument auf dieser Seite. Danach können Sie mithilfe dieser API gebührenpflichtige Lieferpositionen für Anzeigenkampagnen erstellen. Anzeigenkampagnen, die Sie mithilfe der API erstellen werden automatisch die Standard-Zahlungsmittel ausgewählt, auf der Seite **Anzeigenkampagnen** im Partner Center in Rechnung gestellt.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -30,7 +28,7 @@ Zur Verwendung dieser Methoden sind folgende Schritte erforderlich:
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](run-ad-campaigns-using-windows-store-services.md#prerequisites) für die Microsoft Store-Werbungs-API.
 
   > [!NOTE]
-  > Als Teil der erforderlichen Komponenten hinzufügen sicher sein, Sie [mindestens eine kostenpflichtige Anzeigenkampagne im Partner Center erstellen](../publish/create-an-ad-campaign-for-your-app.md) , und dass Sie mindestens ein Zahlungsmittel für die Anzeigenkampagne im Partner Center. Lieferpositionen, die Sie mithilfe dieser API erstellen, werden automatisch die Standard-Zahlungsmittel ausgewählt, auf der Seite **Anzeigenkampagnen** im Partner Center in Rechnung stellen.
+  > Als Teil der erforderlichen Komponenten hinzufügen sicher sein, Sie [mindestens eine kostenpflichtige Anzeigenkampagne im Partner Center erstellen,](../publish/create-an-ad-campaign-for-your-app.md) und dass Sie mindestens ein Zahlungsmittel für die Anzeigenkampagne im Partner Center. Lieferpositionen, die Sie mithilfe dieser API erstellen, werden automatisch die Standard-Zahlungsmittel ausgewählt, auf der Seite **Anzeigenkampagnen** im Partner Center in Rechnung gestellt.
 
 * [Rufen Sie ein Azure AD-Zugriffstoken ab](run-ad-campaigns-using-windows-store-services.md#obtain-an-azure-ad-access-token), das in der Anforderungskopfzeile für diese Methoden verwendet wird. Nach Erhalt eines Zugriffstokens können Sie es 60Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
 

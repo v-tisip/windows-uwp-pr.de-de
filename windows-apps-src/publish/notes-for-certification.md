@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: As you submit your app, you have the option to use the Notes for certification page to provide additional info to the certification testers. This info can help ensure that your app is tested correctly.
 title: Hinweise für Zertifizierung
 ms.assetid: 4A740A5F-F39F-4FE2-9391-EE00DB46B25A
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Hinweise für Tester
 ms.localizationpriority: medium
-ms.openlocfilehash: ab3ba2eb08c01bac3b9c0536ce11b8e2bea96054
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d47933ac3482f610fb8fe28b7fb52238ac7ca294
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554421"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717786"
 ---
 # <a name="notes-for-certification"></a>Hinweise für Zertifizierung
 
@@ -26,13 +24,13 @@ Achten Sie darauf, folgende Informationen anzugeben (falls sie für Ihre App rel
 
 -   **Schritte zum Zugreifen auf versteckte oder gesperrte Features**: Beschreiben Sie kurz, wie die Tester zugreifen können, alle Funktionen, Kompatibilitätsmodi oder Inhalte, die möglicherweise nicht offensichtlich. Apps, die scheinbar unvollständig sind, werden möglicherweise nicht zertifiziert.
 
--   **Schritte zur Überprüfung der Nutzung von Audiodateien im Hintergrund**: Wenn Ihre app im Hintergrund ausführen von Audiodateien zulässt, benötigen Tester u. u. eine Anleitung zur dieses Feature zuzugreifen, damit sie die ordnungsgemäße Funktionsweise sicherstellen können.
+-   **Schritte zur Überprüfung der Nutzung von Audiodateien im Hintergrund**: Wenn Ihre app von Audiodateien im Hintergrund ausgeführt werden kann, benötigen Tester u. u. eine Anleitung zur diese Funktion zugreifen, damit sie die ordnungsgemäße Funktionsweise sicherstellen können.
 
--  **Erwartete Unterschiede im Verhalten je nach Region oder andere Kunden-Einstellungen**: Z. B. Wenn Kunden in verschiedenen Regionen unterschiedliche Inhalte sehen, stellen Sie sicher, dies angeben, damit Tester die Unterschiede kennen und entsprechend überprüfen.
+-  **Erwartete Unterschiede im Verhalten je nach Region oder andere Kunden-Einstellungen**: Z. B. Wenn Kunden in verschiedenen Regionen unterschiedliche Inhalte sehen, müssen Sie dies angeben, damit Tester die Unterschiede kennen und diese unterschiedlich bewerten.
 
--   **Informationen zu Änderungen in einem app-Update**: Updates für zuvor veröffentlichten apps, möchten Sie möglicherweise informieren Sie Tester was sich geändert hat, insbesondere dann, wenn Ihre Pakete identisch sind, und Sie nur Änderungen am app-Eintrag (z. B. mehr hinzufügen Screenshots, Ihre app Kategorie ändern oder die Beschreibung bearbeiten).
+-   **Informationen zu Änderungen in einem app-Update**: für Updates an zuvor veröffentlichten apps, möchten Sie möglicherweise informieren Sie Tester was sich geändert hat, insbesondere dann, wenn Ihre Pakete identisch sind, und Sie nur Änderungen am app-Eintrag (z. B. Weitere hinzufügen Screenshots, Ihre app Kategorie ändern oder die Beschreibung bearbeiten).
 
--   **Das Datum, das Sie die Hinweise eingeben**: Dies ist besonders wichtig, wenn Sie eine Sandbox-Entwicklung im Partner Center verwenden (z. B. ist dies der Fall für alle Spiele, die mit Xbox Live integriert sind), da die Hinweise, die Sie beim Eingeben der Veröffentlichung einer Sandbox wird bleiben Sie, wenn Sie die Zertifizierung anfordern. Das angegebene Datum hilft Testern, alle temporären Probleme zu bewerten, die nicht mehr gelten.
+-   **Das Datum, das Sie die Hinweise eingeben**: Dies ist besonders wichtig, wenn Sie eine Sandbox-Entwicklung im Partner Center verwenden (z. B. ist dies der Fall für alle Spiele, die mit Xbox Live integriert sind), da die Hinweise Sie bei Veröffentlichung einer Sandbox wird bleiben Sie, wenn Sie die Zertifizierung anfordern. Das angegebene Datum hilft Testern, alle temporären Probleme zu bewerten, die nicht mehr gelten.
 
 -  **Informationen, die Tester über Ihre Übermittlung wissen sollten**
 

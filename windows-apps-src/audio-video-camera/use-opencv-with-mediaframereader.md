@@ -1,19 +1,17 @@
 ---
-author: drewbatgit
 ms.assetid: ''
 description: In diesem Artikel wird erläutert, wie Sie die Open Source Computer Vision-Bibliothek (OpenCV) mit der MediaFrameReader-Klasse verwenden.
 title: Verwenden von OpenCV mit MediaFrameReader
-ms.author: drewbat
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, openCV
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b139d0b8747931f7cac9885d441122af97f7dad
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a603899776879cb7c8dc2439c3c22906db0b8038
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554906"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "7716548"
 ---
 # <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a>Verwenden Sie die Open Source Computer Vision-Bibliothek (OpenCV) mit MediaFrameReader
 
@@ -30,7 +28,7 @@ Dieser Artikel baut auf dem Inhalt von zwei anderen Artikeln auf:
 
 Wenn Sie zusätzlich zu diesem Artikel ein vollständiges, funtionsfähiges End-to-End-Beispiel des in diesem Artikel beschriebenen Szenarios anzeigen und herunterladen möchten, finden Sie dies unter [Kamera-Frames + OpenCV – Beispiel](https://go.microsoft.com/fwlink/?linkid=854003) im GitHub-Repository für Beispiele für die Universelle Windows-Plattform.
 
-Zunächst schnell entwickeln, können Sie die OpenCV-Bibliothek in einer UWP-app-Projekt einfügen, mithilfe von NuGet-Pakete, aber diese Pakete möglicherweise nicht den Prozess der app-Certficication übergeben, wenn Sie Ihre app an den Store übermitteln, daher wird empfohlen, dass Sie die OpenCV herunterladen Bibliothek Quellcode und die Binärdateien vor dem Übermitteln Ihrer app erstellen. Informationen zum Entwickeln mit OpenCV finden Sie unter [http://opencv.org](http://opencv.org)
+Zunächst schnell entwickeln, können Sie die OpenCV-Bibliothek in einer UWP-app-Projekt mithilfe von NuGet-Pakete enthalten diese Pakete können nicht den app Certficication Prozess übergeben, wenn Sie Ihre app an den Store übermitteln, daher wird empfohlen, dass Sie die OpenCV herunterladen Bibliothek Quellcode und die Binärdateien vor dem Übermitteln Ihrer app erstellen. Informationen zum Entwickeln mit OpenCV finden Sie unter [http://opencv.org](http://opencv.org)
 
 
 ## <a name="implement-the-opencvhelper-native-windows-runtime-component"></a>Implementieren der systemeigenem OpenCVHelper-Komponente für Windows-Runtime

@@ -1,19 +1,17 @@
 ---
-author: Xansky
 ms.assetid: 4e8cc0c0-b14c-472c-9e1c-4601d10289d2
 description: Das Windows SDK, Microsoft Advertising-SDK, Microsoft Store Services SDK und der Microsoft Store bieten zahlreiche Features, durch die Sie mit Ihren Apps mehr Geld verdienen und Kunden durch Förderung der Kundenbindung gewinnen können.
 title: Monetarisierung, Kundenbindung und Store-Dienste
-ms.author: mhopkins
 ms.date: 11/29/2017
 ms.topic: article
 keywords: Windows 10, UWP, Monetisierung, Kundenbindung, Werben, Store-Dienste
 ms.localizationpriority: medium
-ms.openlocfilehash: 9eca34975217bace912ee06b967e028f30155452
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 747dbf7951a9db20bb8a1063757b88320fcc3f43
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566767"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718674"
 ---
 # <a name="monetization-engagement-and-store-services"></a>Monetarisierung, Kundenbindung und Store-Dienste
 
@@ -30,11 +28,11 @@ Ausführliche Informationen zu den vom MicrosoftStore erhobenen Gebühren und zu
 | [Kundengewinnung mit Microsoft Store Services SDK](microsoft-store-services-sdk.md)      | Das Microsoft Store Services SDK bietet Bibliotheken und Tools, mit denen Sie Ihren Apps Features hinzufügen können, um ihre Kunden besser zu erreichen. Diese Funktionen umfassen gezielte Benachrichtigungen, A / B-Tests und das Starten des Feedback-Hubs über Ihre app. |
 | [Ausführen von Experimenten mit A/B-Tests](run-app-experiments-with-a-b-testing.md)      |   Führen Sie A/B-Tests in Ihren Apps für universelle Windows-Plattform (UWP)-Apps aus, um die Effektivität der Features für einige Kunden zu messen, bevor Sie die Features für alle Benutzer freigeben. Dieses Feature erfordert das Microsoft Store Services SDK.  |
 | [Starten des Feedback-Hubs über Ihre App](launch-feedback-hub-from-your-app.md)      |   Fügen Sie Ihren UWP-Apps Code hinzu, um Ihre Windows10-Kunden auf den Feedback-Hub zu verweisen. Dort können Kunden ihre Probleme und Vorschläge übermitteln und Feedback anderer Benutzer lesen und bewerten. Verwalten Sie anschließend dieses Feedback im [Feedback-Bericht](../publish/feedback-report.md) in Partner Center. Dieses Feature erfordert das Microsoft Store Services SDK.   |
-| [Konfigurieren Sie Ihre app zum Empfangen von Pushbenachrichtigungen für Partner Center](configure-your-app-to-receive-dev-center-notifications.md)  |  Registrieren Sie einen Benachrichtigungskanal für Ihre UWP-app, sodass [Partner Center-Pushbenachrichtigungen](../publish/send-push-notifications-to-your-apps-customers.md)zu empfangen, und verfolgen Sie die Zahl der app-Starts der Pushbenachrichtigungen aufgrund. Dieses Feature erfordert das Microsoft Store Services SDK.  |
+| [Konfigurieren Sie Ihre app zum Empfangen von Partner Center-Pushbenachrichtigungen](configure-your-app-to-receive-dev-center-notifications.md)  |  Registrieren Sie einen Benachrichtigungskanal für Ihre UWP-app, damit sie [Partner Center-Pushbenachrichtigungen](../publish/send-push-notifications-to-your-apps-customers.md)empfangen kann, und verfolgen Sie die Zahl der app-Starts der Pushbenachrichtigungen aufgrund. Dieses Feature erfordert das Microsoft Store Services SDK.  |
 | [Protokollieren benutzerdefinierter Ereignisse im Partner Center](log-custom-events-for-dev-center.md)  | Protokollieren Sie benutzerdefinierte Ereignisse von Ihrer UWP-app, und überprüfen Sie die Ereignisse im [Bericht "Nutzung"](../publish/usage-report.md) im Partner Center. Dieses Feature erfordert das Microsoft Store Services SDK. |
 | [Anfordern von Bewertungen und Prüfungen](request-ratings-and-reviews.md) |  Fordern Sie Ihre Kunden auf, Ihre App zu bewerten oder zu rezensieren, indem Sie programmgesteuert eine Bewertungs- und Rezensions-UI anzeigen.  |
 | [Microsoft Store Dienste](using-windows-store-services.md)    |  Erfahren Sie, wie Sie mit RESTful-APIs Übermittlungen an den Store automatisieren, auf Analysedaten für Ihre Apps zugreifen und andere Aufgaben im Zusammenhang mit dem Store automatisieren.    |
-| [Einzelhandel (RDX) Demo Features Ihrer app hinzufügen](retail-demo-experience.md)        |  Fügen Sie einen Retail Demo-Modus in Ihrer Windows-app, damit Kunden, die PCs und Geräte auf die Vertriebsabteilung testen sofort beginnen können.  |
+| [Einzelhandel (RDX-App) Demo Features Ihrer app hinzufügen](retail-demo-experience.md)        |  Fügen Sie einen Retail Demo-Modus in Ihrer Windows-app, damit Kunden, die PCs und Geräte auf die Vertriebsabteilung testen sofort beginnen können.  |
 
 ## <a name="related-topics"></a>Verwandte Themen
 

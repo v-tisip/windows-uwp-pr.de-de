@@ -1,19 +1,17 @@
 ---
-author: jwmsft
 description: Sie können die PropertyPath-Klasse und die Zeichenfolgensyntax verwenden, um einen PropertyPath-Wert entweder in XAML oder in Code zu instanziieren.
 title: Eigenschaftspfadsyntax
 ms.assetid: FF3ECF47-D81F-46E3-BE01-C839E0398025
-ms.author: jimwalk
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: a94782165027c2194f677dfdbb9f2dec11541080
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f0f49792a92010f97c8388540fd63c38eed5f75e
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574091"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717713"
 ---
 # <a name="property-path-syntax"></a>Eigenschaftspfadsyntax
 
@@ -56,7 +54,7 @@ Ein Eigenschaftspfad für Datenbindungen kann Verweise auf indizierte Eigenschaf
 
 Nehmen wir zum Beispiel ein Geschäftsobjekt, bei dem es eine Liste von „Teams“ gibt (geordnete Liste), von denen jedes ein Wörterbuch von „Players“ aufweist, wobei als Schlüssel für jeden Spieler der Nachname verwendet wird. Ein Beispiel eines Eigenschaftspfads zu einem bestimmen Spieler im zweiten Team lautet: „Teams\[1\].Players\[Smith\]“. (Sie verwenden 1, um das zweite Element in „Teams“ anzugeben, da die Liste nullindiziert ist.)
 
-**Hinweis:** Unterstützung der Indizierung für C++-Datenquellen ist beschränkt; finden Sie unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
+**Hinweis:** Unterstützung der Indizierung für C++-Datenquellen ist beschränkt; finden Sie unter [der Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
 ### <a name="attached-properties"></a>Angefügte Eigenschaften
 

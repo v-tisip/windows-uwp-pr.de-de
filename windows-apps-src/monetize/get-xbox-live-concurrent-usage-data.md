@@ -1,23 +1,21 @@
 ---
-author: Xansky
 description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um Xbox Live gleichzeitige Nutzungsdaten abzurufen.
 title: Abrufen von Xbox Live gleichzeitigen Nutzungsdaten
-ms.author: mhopkins
 ms.date: 06/04/2018
 ms.topic: article
 keywords: Windows10, Uwp, Store-Diensten, Microsoft Store-Analyse-API, Xbox Live-Analyse, gleichzeitige Nutzung
 ms.localizationpriority: medium
-ms.openlocfilehash: 4506176dcd62a4699c57343c50dfc1b0e7a40b14
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 40d35b45065566db22aef791a94faa1cc0fa5c62
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7564004"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7718120"
 ---
 # <a name="get-xbox-live-concurrent-usage-data"></a>Abrufen von Xbox Live gleichzeitigen Nutzungsdaten
 
 
-Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um fast in Echtzeit die Nutzungsdaten (mit 5-15-Minuten-Latenz) über die durchschnittliche Anzahl der Kunden abzurufen, die Ihr [Xbox Live-fähiges Spiel](../xbox-live/index.md) jede Minute, Stunde oder Tag während eines angegebenen Zeitraums spielen. Diese Informationen sind auch im [Xbox Analysebericht](../publish/xbox-analytics-report.md) im Partner Center verfügbar.
+Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um fast in Echtzeit die Nutzungsdaten (mit 5-15-Minuten-Latenz) über die durchschnittliche Anzahl der Kunden abzurufen, die Ihr [Xbox Live-fähiges Spiel](../xbox-live/index.md) jede Minute, Stunde oder Tag während eines angegebenen Zeitraums spielen. Diese Informationen sind auch in der [Xbox Analysebericht](../publish/xbox-analytics-report.md) im Partner Center verfügbar.
 
 > [!IMPORTANT]
 > Diese Methode unterstützt nur Spiele für Xbox oder Spiele, die Xbox Live-Dienste verwenden. Diese Spiele müssen den [Konzeptgenehmigungsprozess](../gaming/concept-approval.md) durchlaufen, der Spiele umfasst, die von [Microsoft-Partnern](../xbox-live/developer-program-overview.md#microsoft-partners) veröffentlicht wurden, sowie Spiele, die über das [ID@Xbox-Programm](../xbox-live/developer-program-overview.md#id) übermittelt wurden. Diese Methode unterstützt derzeit keine Spiele, die über das [Xbox Live Creators-Programm](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) eingereicht wurden.

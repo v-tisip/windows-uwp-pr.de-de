@@ -1,19 +1,17 @@
 ---
-author: normesta
 Description: This article provides a deeper dive on how the Desktop Bridge works under the covers.
 title: Hintergrundinformationen zur Desktop-Brücke
-ms.author: normesta
 ms.date: 05/25/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.assetid: a399fae9-122c-46c4-a1dc-a1a241e5547a
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ff5cd40cad43a73a8ba51a25710e2f2cbaf2a7b
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f5320d4d6a4f43ee8d94a55e46333821656adb20
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578386"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7717119"
 ---
 # <a name="behind-the-scenes-of-your-packaged-desktop-application"></a>Hinter den Kulissen der Ihre verpackte desktop-Anwendung
 
@@ -31,9 +29,9 @@ Nach der Bereitstellung werden Paketdateien als schreibgeschützt markiert und v
 
 ## <a name="file-system"></a>Dateisystem
 
-Die Anwendung "appdata" vorgenommenen Änderungen werden erfasst, um app-Zustands. Alle Schreibvorgänge in den AppData-Ordner des Benutzers (z.B. *C:\Benutzer\Benutzername\AppData*), einschließlich Erstellungs-, Lösch- und Aktualisierungsvorgänge, werden direkt an einen privaten Speicherort pro Benutzer und App kopiert. Dadurch entsteht den Eindruck, dass die verpackte Anwendung die tatsächliche AppData bearbeitet eigentlich eine private Kopie geändert wird. Durch eine derartige Umleitung von Schreibvorgängen kann das System alle von der App vorgenommenen Dateiänderungen nachverfolgen. Dadurch kann das System diese Dateien bereinigen, wenn die Anwendung deinstalliert wird, daher System "Running" reduzieren und eine bessere Anwendung deinstallationsmöglichkeiten bereitstellen für den Benutzer.
+Die Anwendung "appdata" vorgenommenen Änderungen werden erfasst, um app-Zustands. Alle Schreibvorgänge in den AppData-Ordner des Benutzers (z.B. *C:\Benutzer\Benutzername\AppData*), einschließlich Erstellungs-, Lösch- und Aktualisierungsvorgänge, werden direkt an einen privaten Speicherort pro Benutzer und App kopiert. Dadurch entsteht den Eindruck, dass die Anwendung die tatsächliche AppData bearbeitet eigentlich eine private Kopie geändert wird. Durch eine derartige Umleitung von Schreibvorgängen kann das System alle von der App vorgenommenen Dateiänderungen nachverfolgen. Dadurch kann das System diese Dateien bereinigen, wenn die Anwendung deinstalliert wird, daher System "Running" reduzieren und eine bessere Anwendung deinstallationsmöglichkeiten bereitstellen für den Benutzer.
 
-Zusätzlich zur Umleitung von "appdata", werden bekannte Windows-Ordner ("System32", Programmdateien (x86) usw.) dynamisch mit den entsprechenden Verzeichnissen im app-Paket zusammengeführt. Jedes verpackte Paket enthält im Stammverzeichnis einen Ordner mit dem Namen „VFS“. Alle Lesevorgänge für Verzeichnisse oder Dateien im VFS-Verzeichnis werden zur Laufzeit mit den jeweiligen nativen Entsprechungen zusammengeführt. Z. B. eine Anwendung könnte *C:\Program Files\WindowsApps\package_name\VFS\SystemX86\vc10.dll* als Teil des app-Pakets enthalten, aber die Datei sähe *C:\Windows\System32\vc10.dll*installiert werden.  Dies gewährleistet die Kompatibilität mit Desktopanwendungen, die davon ausgehen, dass sich Dateien an Speicherorten ohne Pakete befinden.
+Zusätzlich zur Umleitung von "appdata", werden die Windows bekannten Ordner ("System32", Programmdateien (x86) usw.) dynamisch mit den entsprechenden Verzeichnissen im app-Paket zusammengeführt. Jedes verpackte Paket enthält im Stammverzeichnis einen Ordner mit dem Namen „VFS“. Alle Lesevorgänge für Verzeichnisse oder Dateien im VFS-Verzeichnis werden zur Laufzeit mit den jeweiligen nativen Entsprechungen zusammengeführt. Z. B. eine Anwendung könnte *C:\Program Files\WindowsApps\package_name\VFS\SystemX86\vc10.dll* als Teil des app-Pakets enthalten, aber die Datei sähe auf *C:\Windows\System32\vc10.dll*installiert werden.  Dies gewährleistet die Kompatibilität mit Desktopanwendungen, die davon ausgehen, dass sich Dateien an Speicherorten ohne Pakete befinden.
 
 Schreibvorgänge in Dateien/Ordner im verpackten App-Paket sind nicht zulässig. Schreibvorgänge in Dateien und Ordner, die nicht Teil des Pakets sind, werden von der Brücke ignoriert und sind nur zulässig, wenn der Benutzer über entsprechende Berechtigungen verfügt.
 
@@ -50,7 +48,7 @@ Schreibvorgänge außerhalb des Pakets | Zulässig, wenn der Benutzer über ents
 
 ### <a name="packaged-vfs-locations"></a>Gepackte VFS-Speicherorte
 
-Der folgenden Tabelle können Sie entnehmen, wo Dateien, die zu Ihrem Paket gehören, für die App im System überlagert sind. Ihre Anwendung wird, dass sich diese Dateien in den aufgeführten Speicherorten befinden, wenn sie tatsächlich an den umgeleiteten Speicherorten in *C:\Program Files\WindowsApps\package_name\VFS*sind. Die FOLDERID-Speicherorte stammen von der [**KNOWNFOLDERID**](https://msdn.microsoft.com/library/windows/desktop/dd378457.aspx)-Konstante.
+Der folgenden Tabelle können Sie entnehmen, wo Dateien, die zu Ihrem Paket gehören, für die App im System überlagert sind. Ihre Anwendung wird, dass sich diese Dateien an den aufgeführten werden, wenn sie tatsächlich an den umgeleiteten Speicherorten in *C:\Program Files\WindowsApps\package_name\VFS*sind. Die FOLDERID-Speicherorte stammen von der [**KNOWNFOLDERID**](https://msdn.microsoft.com/library/windows/desktop/dd378457.aspx)-Konstante.
 
 Systemspeicherort | Umgeleiteter Speicherort (unter [Paketstammverzeichnis]\VFS\) | Gültig für Architekturen
  :--- | :--- | :---
@@ -77,7 +75,7 @@ Nur Schlüssel unter *HKLM\Software* sind Teil des Pakets. Schlüssel unter *HKC
 
 Alle Schreibvorgänge unter „HKCU“ entsprechen Kopie bei Schreibvorgang an einem privaten Speicherort pro Benutzer und App. In der Regel können Deinstallationsprogramme *HKEY_CURRENT_USER* nicht bereinigen, da die Bereitstellung von Registrierungsdaten für abgemeldete Benutzer aufgehoben wird und die Daten daher nicht verfügbar sind.
 
-Alle Schreibvorgänge werden während der Aktualisierung des Pakets beibehalten und nur gelöscht, wenn die Anwendung vollständig entfernt wird.
+Alle Schreibvorgänge werden während des Upgrades Paket gehalten und nur gelöscht, wenn die Anwendung vollständig entfernt wird.
 
 ### <a name="common-operations"></a>Allgemeine Vorgänge
 
@@ -92,7 +90,7 @@ Schreibvorgänge außerhalb des Pakets | Von der Brücke ignoriert. Zulässig, w
 
 ## <a name="uninstallation"></a>Deinstallation
 
-Wenn ein Paket vom Benutzer deinstalliert wird, werden alle Dateien und Ordner unter *C:\Programme Files\WindowsApps\package_name* sowie alle umgeleiteten Schreibvorgänge für "appdata" oder die Registrierung entfernt, die während der Verpackung erfasst wurden.
+Wenn ein Paket vom Benutzer deinstalliert wird, werden alle Dateien und Ordner unter *C:\Programme Files\WindowsApps\package_name* , sowie alle umgeleiteten Schreibvorgänge für "appdata" oder die Registrierung entfernt, die während der Verpackung erfasst wurden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
