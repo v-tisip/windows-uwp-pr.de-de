@@ -1,19 +1,17 @@
 ---
-author: laurenhughes
 ms.assetid: CAC6A7C7-3348-4EC4-8327-D47EB6E0C238
 title: Zugreifen auf die SD-Karte
 description: Sie können nicht unbedingt erforderliche Daten auf einer optionalen microSD-Karte speichern und auf diese zugreifen. Dies gilt besonders für kostengünstige Geräte, die nur über einen begrenzten internen Speicher verfügen.
-ms.author: lahugh
 ms.date: 03/08/2017
 ms.topic: article
 keywords: Windows10, UWP, SD-Karte, Speicher
 ms.localizationpriority: medium
-ms.openlocfilehash: 498b43dc82100102c90fc7a920bed1538a164afc
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9ef97ed489f2dc35aece83821633a583dfba77e2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7578506"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713071"
 ---
 # <a name="access-the-sd-card"></a><span data-ttu-id="ffa59-104">Zugreifen auf die SD-Karte</span><span class="sxs-lookup"><span data-stu-id="ffa59-104">Access the SD card</span></span>
 

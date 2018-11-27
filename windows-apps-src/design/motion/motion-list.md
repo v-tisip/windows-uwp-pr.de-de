@@ -1,21 +1,19 @@
 ---
-author: mijacobs
 Description: List animations let you insert or remove single or multiple items from a collection, such as a photo album or a list of search results.
 title: Hinzufügen und Löschen von Animationen in UWP-Apps
 ms.assetid: A85006AE-4992-457a-B514-500B8BEF5DC8
 label: Motion--add and delete animations
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f1c2fa6a30047cb447b597213692085f4656bd2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: c7ca332b73aba067c2ae003d458e8d0d97c7a7e3
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7569586"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713514"
 ---
 # <a name="add-and-delete-animations"></a><span data-ttu-id="e1fe1-103">Hinzufügen und Löschen von Animationen</span><span class="sxs-lookup"><span data-stu-id="e1fe1-103">Add and delete animations</span></span>
 

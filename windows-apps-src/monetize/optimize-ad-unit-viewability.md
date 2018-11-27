@@ -1,18 +1,16 @@
 ---
-author: Xansky
 description: Erfahren Sie, wie Sie die Sichtbarkeit Ihrer Anzeigeneinheiten verbessern können.
 title: Optimieren der Sichtbarkeit von Anzeigeneinheiten
-ms.author: mhopkins
 ms.date: 05/07/2018
 ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, Richtlinien, Sichtbarkeit
 ms.localizationpriority: medium
-ms.openlocfilehash: ef815dab027f86e5d73f24ae0355f7f41612fae5
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 87e21f4e98c58f79f397c369891212eccb196c18
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7558847"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713224"
 ---
 # <a name="optimize-the-viewability-of-your-ad-units"></a><span data-ttu-id="c866a-104">Optimieren der Sichtbarkeit von Anzeigeneinheiten</span><span class="sxs-lookup"><span data-stu-id="c866a-104">Optimize the viewability of your ad units</span></span>
 

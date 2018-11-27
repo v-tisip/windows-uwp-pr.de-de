@@ -2,18 +2,16 @@
 title: Windows Hello
 description: In diesem Artikel wird die neue Windows-Hello-Technologie beschrieben, die im Lieferumfang des Windows10-Betriebssystems enthalten ist. Zudem wird erörtert, wie Entwickler diese Technologie implementieren können, um ihre UWP (Universelle Windows-Plattform)-Apps und Back-End-Dienste zu schützen. Der Artikel hebt die spezifischen Funktionen dieser Technologien hervor, die dabei helfen, aus der Verwendung herkömmlicher Anmeldeinformationen erwachsende Bedrohungen zu mindern. Darüber hinaus bietet er eine Anleitung dazu, wie diese Technologien als Bestandteil Ihrer Windows10-Einführung entworfen und bereitgestellt werden.
 ms.assetid: 0B907160-B344-4237-AF82-F9D47BCEE646
-author: PatrickFarley
-ms.author: pafarley
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b2ee216059163e7232d65eb515645d9e7db56b3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ccffc523dd1196c208c2fe0abdb7297c19892279
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581970"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716013"
 ---
 # <a name="windows-hello"></a><span data-ttu-id="677fd-105">Windows Hello</span><span class="sxs-lookup"><span data-stu-id="677fd-105">Windows Hello</span></span>
 

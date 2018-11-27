@@ -2,20 +2,18 @@
 description: Erfahren Sie, wie Sie Ihre App inklusiv entwickeln und für Personen auf der ganzen Welt zugänglich machen.
 keywords: Eingabehilfen für UWP-Apps, Globalisierung, Apps mit inklusivem Design, Anforderungen für App-Eingabehilfen
 title: Benutzerfreundlichkeit in UWP-Apps – Entwicklung von Windows-Apps
-author: mijacobs
 layout: LandingPage
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 10/18/2017
 ms.topic: landing-page
 ms.assetid: e6bb3464-dd8e-402c-9c56-dd9e51002a49
 ms.localizationpriority: medium
-ms.openlocfilehash: 80f57ba29d31da0b4d49b620e916e39d4ef69842
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f218df3b4118508049023218b64e6c7321fbbda9
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7559897"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713673"
 ---
 # <a name="usability-for-uwp-apps"></a>Benutzerfreundlichkeit in UWP-Apps
 

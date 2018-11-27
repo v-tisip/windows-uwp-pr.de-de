@@ -1,19 +1,17 @@
 ---
-author: eliotcowley
 title: Hinzufügen von Eingaben und Interaktivität zum Marble Maze-Beispiel
 description: Lernen Sie mehr über bewährte Methoden, die bei der Arbeit mit Eingabegeräten beachtet werden sollten.
 ms.assetid: b946bf62-c0ca-f9ec-1a87-8195b89a5ab4
-ms.author: elcowle
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Eingabe, Beispiel
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b7e9a3f655b8be1b93334ed8decf9fe6fa8bbf2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: aee239f76c3d4431426f0bc9fe519a59f8f48838
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565233"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714046"
 ---
 # <a name="adding-input-and-interactivity-to-the-marble-maze-sample"></a><span data-ttu-id="8ee09-104">Hinzufügen von Eingaben und Interaktivität zum Marble Maze-Beispiel</span><span class="sxs-lookup"><span data-stu-id="8ee09-104">Adding input and interactivity to the Marble Maze sample</span></span>
 

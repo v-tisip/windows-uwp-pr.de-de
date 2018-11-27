@@ -1,19 +1,17 @@
 ---
-author: Karl-Bridge-Microsoft
 ms.assetid: ''
 title: Unterstützen von Surface Dial (und anderen Radgeräten) in Ihrer UWP-App
 description: Eine ausführliche Anleitung zum Hinzufügen der Unterstützung für das Surface Dial (und anderen Radgeräten) zu Ihrer UWP-App.
 keywords: Drehsteuerung, radial, Lernprogramm
-ms.author: kbridge
 ms.date: 01/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 3df0f37fda62a7b673e28a6198758365886b6783
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: d8729826c2f372b3d3b5607ce828aaf515e47f3d
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7579425"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713633"
 ---
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-uwp-app"></a><span data-ttu-id="aa387-104">Lernprogramm: Unterstützen von Surface Dial (und anderen Radgeräten) in Ihrer UWP-App</span><span class="sxs-lookup"><span data-stu-id="aa387-104">Tutorial: Support the Surface Dial (and other wheel devices) in your UWP app</span></span>
 

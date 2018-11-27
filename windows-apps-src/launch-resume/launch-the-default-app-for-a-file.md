@@ -1,19 +1,17 @@
 ---
-author: TylerMSFT
 title: Starten der Standard-App für eine Datei
 description: Erfahren Sie, wie Sie die Standard-App für eine Datei starten.
 ms.assetid: BB45FCAF-DF93-4C99-A8B5-59B799C7BD98
-ms.author: twhitney
 ms.date: 07/05/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 736018fbf966b547c3dd41e245149d498c1231e3
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f8e59ae5fb20ce8e1a900f7c1415a699715215e0
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7566152"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7712014"
 ---
 # <a name="launch-the-default-app-for-a-file"></a><span data-ttu-id="bc9e4-104">Starten der Standard-App für eine Datei</span><span class="sxs-lookup"><span data-stu-id="bc9e4-104">Launch the default app for a file</span></span>
 

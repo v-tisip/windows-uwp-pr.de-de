@@ -4,17 +4,15 @@ description: Beim Erstellen einer Ressource als Streaming-Ressource stammen die 
 ms.assetid: 58B8DBD5-62F5-4B94-8DD1-C7D57A812185
 keywords:
 - Zuordnungen erfolgen in einen Kachelpool
-author: michaelfromredmond
-ms.author: mithom
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 24c8787efd108acb2353f6705dbb65a34d358ef2
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: a0474345e21161e76fbfeebe0086e5d433b2d219
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7553986"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713454"
 ---
 # <a name="mappings-are-into-a-tile-pool"></a><span data-ttu-id="cddc6-105">Zuordnungen erfolgen in einen Kachelpool</span><span class="sxs-lookup"><span data-stu-id="cddc6-105">Mappings are into a tile pool</span></span>
 

@@ -2,18 +2,16 @@
 title: Umwandlung zwischen Zeichenfolgen und binären Daten
 description: Dieser Beispielcode zeigt, wie Sie zwischen Zeichenfolgen und binären Daten in einer UWP-App (Universelle Windows-Plattform) konvertieren können.
 ms.assetid: AED4C74F-E63B-4980-BB4D-28ACCC1AB58B
-author: msatranjr
-ms.author: misatran
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
-ms.openlocfilehash: 030fe81685fbc6caea0b9847b366384476f6298f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ae2de8f009da1873c9aebf4f60ef315b36c7d744
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565051"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7715057"
 ---
 # <a name="convert-between-strings-and-binary-data"></a><span data-ttu-id="5be5f-104">Umwandlung zwischen Zeichenfolgen und binären Daten</span><span class="sxs-lookup"><span data-stu-id="5be5f-104">Convert between strings and binary data</span></span>
 

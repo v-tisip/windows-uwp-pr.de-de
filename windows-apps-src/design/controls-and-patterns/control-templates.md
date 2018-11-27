@@ -1,5 +1,4 @@
 ---
-author: Jwmsft
 Description: You can customize a control's visual structure and visual behavior by creating a control template in the XAML framework.
 MS-HAID: dev\_ctrl\_layout\_txt.control\_templates
 MSHAttr: PreferredLib:/library/windows/apps
@@ -8,17 +7,16 @@ title: Steuerelementvorlagen
 ms.assetid: 6E642626-A1D6-482F-9F7E-DBBA7A071DAD
 label: Control templates
 template: detail.hbs
-ms.author: jimwalk
 ms.date: 05/19/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ce72c40d3b97942612fc2979d026c965727512e
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 9ad66d8797234d01673518256d6f5376ce93245f
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7576118"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714609"
 ---
 # <a name="control-templates"></a><span data-ttu-id="3005a-103">Steuerelementvorlagen</span><span class="sxs-lookup"><span data-stu-id="3005a-103">Control templates</span></span>
 

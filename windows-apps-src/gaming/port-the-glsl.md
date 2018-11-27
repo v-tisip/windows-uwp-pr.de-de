@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Portieren des GLSL-Codes
 description: Nachdem Sie sich um den Code gekümmert haben, mit dem die Puffer und Shaderobjekte erstellt und konfiguriert werden, muss der in diesen Shadern enthaltene Code von der GL Shader Language (GLSL) von OpenGL ES 2.0 in die High-Level Shader Language (HLSL) von Direct3D 11 portiert werden.
 ms.assetid: 0de06c51-8a34-dc68-6768-ea9f75dc57ee
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, GLSL, Portieren
 ms.localizationpriority: medium
-ms.openlocfilehash: 47fa601a7e0ff307108713a0a6fcd7a5468b0468
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 809440f9e77af19c01f4a050eee3b6f8d1c709b7
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7554029"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713081"
 ---
 # <a name="port-the-glsl"></a><span data-ttu-id="d1065-104">Portieren der GLSL</span><span class="sxs-lookup"><span data-stu-id="d1065-104">Port the GLSL</span></span>
 
@@ -60,7 +58,6 @@ cbuffer ModelViewProjectionConstantBuffer : register(b0)
 
 <a name="instructions"></a><span data-ttu-id="d1065-131">Anweisungen</span><span class="sxs-lookup"><span data-stu-id="d1065-131">Instructions</span></span>
 ------------
-
 ### <a name="step-1-port-the-vertex-shader"></a><span data-ttu-id="d1065-132">Schritt 1: Portieren des Vertex-Shaders</span><span class="sxs-lookup"><span data-stu-id="d1065-132">Step 1: Port the vertex shader</span></span>
 
 <span data-ttu-id="d1065-133">In diesem einfachen OpenGL ES 2.0-Beispiel verfügt der Vertex-Shader über drei Eingaben: eine konstante Modell-Ansicht-Projektion-4x4-Matrix und zwei Vektoren mit vier Koordinaten.</span><span class="sxs-lookup"><span data-stu-id="d1065-133">In our simple OpenGL ES 2.0 example, the vertex shader has three inputs: a constant model-view-projection 4x4 matrix, and two 4-coordinate vectors.</span></span> <span data-ttu-id="d1065-134">Diese beiden Vektoren enthalten die Vertexposition und ihre Farbe.</span><span class="sxs-lookup"><span data-stu-id="d1065-134">These two vectors contain the vertex position and its color.</span></span> <span data-ttu-id="d1065-135">Der Shader wandelt den Positionsvektor in Perspektivenkoordinaten um und weist ihn der systeminternen gl\_Position-Funktion zur Rasterung zu.</span><span class="sxs-lookup"><span data-stu-id="d1065-135">The shader transforms the position vector to perspective coordinates and assigns it to the gl\_Position intrinsic for rasterization.</span></span> <span data-ttu-id="d1065-136">Außerdem wird die Vertexfarbe zur Interpolation während der Rasterung in eine abweichende Variable kopiert.</span><span class="sxs-lookup"><span data-stu-id="d1065-136">The vertex color is copied to a varying variable for interpolation during rasterization, as well.</span></span>
@@ -160,10 +157,8 @@ float4 main(PixelShaderInput input) : SV_TARGET
 
 <span data-ttu-id="d1065-154">[Portieren der Vertexpuffer und -daten](port-the-vertex-buffers-and-data-config.md) Nächster Schritt</span><span class="sxs-lookup"><span data-stu-id="d1065-154">[Port the vertex buffers and data](port-the-vertex-buffers-and-data-config.md) Next step</span></span>
 ---------
-
 <span data-ttu-id="d1065-155">[Zeichnen auf den Bildschirm](draw-to-the-screen.md) Anmerkungen</span><span class="sxs-lookup"><span data-stu-id="d1065-155">[Draw to the screen](draw-to-the-screen.md) Remarks</span></span>
 -------
-
 <span data-ttu-id="d1065-156">Wenn Sie mit der HLSL-Semantik und dem Packen von Konstantenpuffern vertraut sind, können Sie einigen Debugaufwand vermeiden und Möglichkeiten zur Optimierung schaffen.</span><span class="sxs-lookup"><span data-stu-id="d1065-156">Understanding HLSL semantics and the packing of constant buffers can save you a bit of a debugging headache, as well as provide optimization opportunities.</span></span> <span data-ttu-id="d1065-157">Lesen Sie sich nach Möglichkeit die Themen [Variablensyntax (HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509706), [Einführung in Puffer in Direct3D11](https://msdn.microsoft.com/library/windows/desktop/ff476898) und [Erstellen eines Konstantenpuffers](https://msdn.microsoft.com/library/windows/desktop/ff476896) durch.</span><span class="sxs-lookup"><span data-stu-id="d1065-157">If you get a chance, read through [Variable Syntax (HLSL)](https://msdn.microsoft.com/library/windows/desktop/bb509706), [Introduction to Buffers in Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476898), and [How to: Create a Constant Buffer](https://msdn.microsoft.com/library/windows/desktop/ff476896).</span></span> <span data-ttu-id="d1065-158">Hier sind als Anfang schon einmal einige Tipps aufgeführt, die in Verbindung mit der Semantik und Konstantenpuffern zu beachten sind:</span><span class="sxs-lookup"><span data-stu-id="d1065-158">If not, though, here's a few starting tips to keep in mind about semantics and constant buffers:</span></span>
 
 -   <span data-ttu-id="d1065-159">Überprüfen Sie stets den Direct3D-Konfigurationscode des Renderers, um sicherzustellen, dass die Strukturen für die Konstantenpuffer mit den cbuffer-Strukturdeklarationen der HLSL übereinstimmen und dass die Komponentenskalartypen für beide Deklarationen übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="d1065-159">Always double check your renderer's Direct3D configuration code to make sure that the structures for your constant buffers match the cbuffer struct declarations in your HLSL, and that the component scalar types match across both declarations.</span></span>

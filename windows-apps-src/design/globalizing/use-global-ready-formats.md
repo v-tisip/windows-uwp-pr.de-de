@@ -1,20 +1,18 @@
 ---
-author: stevewhims
 Description: Design your app to be global-ready by appropriately formatting dates, times, numbers, phone numbers, and currencies. You'll then be able later to adapt your app for additional cultures, regions, and languages in the global market.
 title: Globalisieren von Datum, Uhrzeit und Zahlenformaten
 ms.assetid: 6ECE8BA4-9A7D-49A6-81EE-AB2BE7F0254F
 template: detail.hbs
-ms.author: stwhi
 ms.date: 11/07/2017
 ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 173198c2c61530704dad02e2e92e6a7e47aae420
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e8a2b0125944a8a4db66b41d26fcd4a0aa35b5b2
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7565359"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7714977"
 ---
 # <a name="globalize-your-datetimenumber-formats"></a><span data-ttu-id="4d59e-103">Globalisieren von Datum, Uhrzeit und Zahlenformaten</span><span class="sxs-lookup"><span data-stu-id="4d59e-103">Globalize your date/time/number formats</span></span>
 

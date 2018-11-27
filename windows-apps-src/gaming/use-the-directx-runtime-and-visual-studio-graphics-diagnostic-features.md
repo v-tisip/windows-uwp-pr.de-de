@@ -1,19 +1,17 @@
 ---
-author: mtoepke
 title: Tools für die Grafikdiagnose
 description: Hier erfahren Sie, wie Sie in Visual Studio die Grafikdiagnosefeatures, einschließlich Grafikdebugging, Analyse von Grafikframes und GPU-Verwendung, abrufen und verwenden.
 ms.assetid: 629ea462-18ed-a333-07e9-cc87ea2dcd93
-ms.author: mtoepke
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Spiele, Grafiken, Diagnose, Tools, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: aa1c14d15a966f23b86753cf8e5e62e067d10310
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f9fc1f6fa28fa36c876517eb0653693c670282ff
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "7581299"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7716648"
 ---
 # <a name="graphics-diagnostics-tools"></a><span data-ttu-id="73f61-104">Tools für die Grafikdiagnose</span><span class="sxs-lookup"><span data-stu-id="73f61-104">Graphics diagnostics tools</span></span>
 

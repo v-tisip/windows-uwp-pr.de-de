@@ -1,18 +1,16 @@
 ---
-author: laurenhughes
 description: In diesem Artikel wird erläutert, wie Sie die LowLightFusion-Klasse zum Verarbeiten von Bitmaps nutzen.
 title: Verarbeitung von Bitmaps mit der Low Light Fusion-API
-ms.author: lahugh
 ms.date: 03/22/2018
 ms.topic: article
 keywords: Windows10, Uwp, low light Fusion, Bitmaps, bildbearbeitung
 ms.localizationpriority: medium
-ms.openlocfilehash: aa1fa0ae298bf9f0403a3a565f44010b022ba1f6
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: e0677d2e4ce5e412c158b8a00da3a6338bae6c46
+ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7562915"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7713374"
 ---
 # <a name="process-bitmaps-with-the-lowlightfusion-api"></a><span data-ttu-id="7e200-104">Verarbeitung von Bitmaps mit der LowLightFusion-API</span><span class="sxs-lookup"><span data-stu-id="7e200-104">Process bitmaps with the LowLightFusion API</span></span>
 
