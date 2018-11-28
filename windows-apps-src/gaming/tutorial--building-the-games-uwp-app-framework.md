@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Spiele, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 16af4bcabbc21c60a5dc0006da51f5bd23eef791
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7697303"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7839125"
 ---
 #  <a name="define-the-uwp-app-framework"></a>Definieren des UWP-App-Frameworks
 
@@ -384,7 +384,7 @@ void GameMain::Run()
 
 Wenn der Benutzer letztendlich die Sitzung beendet, müssen wir sie bereinigen. An dieser Stelle kommt die **Uninitialize**-Eigenschaft ins Spiel.
 
-In Windows 10 beim Schließen des app-Fensters nicht die Beendigung des app Prozesses, aber stattdessen wird des Zustands des app-Singleton in den Speicher. Sollte eine besondere Aktion wie eine spezielle Bereinigung von Ressourcen erforderlich sein, wenn das System diesen Speicher freigeben muss, platzieren Sie den Code für diese Bereinigung in dieser Methode.
+In Windows 10 beim Schließen des app-Fensters nicht die Beendigung des app Prozesses, erzwungen. stattdessen wird des Zustands des app-Singleton in den Arbeitsspeicher. Sollte eine besondere Aktion wie eine spezielle Bereinigung von Ressourcen erforderlich sein, wenn das System diesen Speicher freigeben muss, platzieren Sie den Code für diese Bereinigung in dieser Methode.
 
 ### <a name="app-uninitialize"></a>App:: Uninitialize
 

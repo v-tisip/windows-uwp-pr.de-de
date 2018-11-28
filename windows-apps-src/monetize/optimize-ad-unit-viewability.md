@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, Richtlinien, Sichtbarkeit
 ms.localizationpriority: medium
 ms.openlocfilehash: 87e21f4e98c58f79f397c369891212eccb196c18
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7713224"
+ms.locfileid: "7846204"
 ---
 # <a name="optimize-the-viewability-of-your-ad-units"></a>Optimieren der Sichtbarkeit von Anzeigeneinheiten
 

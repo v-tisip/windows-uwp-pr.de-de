@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Threads, Threadpool
 ms.localizationpriority: medium
 ms.openlocfilehash: 4c1df6a4b72b7c73cac41e66ef1074975db0d979
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7705355"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7839678"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Übermitteln einer Arbeitsaufgabe an den Threadpool
 
@@ -350,7 +350,7 @@ Beachten Sie, dass vom Vervollständigungshandler überprüft wird, ob die Arbei
 
 ## <a name="summary-and-next-steps"></a>Zusammenfassung und nächste Schritte
 
-Weitere Informationen finden Sie durch das Herunterladen des Codes in dieser schnellstartanleitung unter dem [Erstellen einer ThreadPool Element Beispiel funktioniert](http://go.microsoft.com/fwlink/p/?LinkID=328569) für Windows8.1, geschrieben und den Quellcode in einer Win\_unap Windows 10-app wiederverwenden.
+Weitere Informationen finden Sie durch das Herunterladen des Codes in dieser schnellstartanleitung unter [Erstellen einer ThreadPool Element Beispiel funktioniert](http://go.microsoft.com/fwlink/p/?LinkID=328569) für Windows8.1, geschrieben und den Quellcode in einer Win\_unap Windows 10-app wiederverwenden.
 
 ## <a name="related-topics"></a>Verwandte Themen
 

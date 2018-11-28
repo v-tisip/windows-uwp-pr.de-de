@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 42229212a0f54e307eaa841849c1a279c4354d2a
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7696181"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7837134"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Verbessern Sie Ihre Desktopanwendung für Windows10
 
@@ -43,11 +43,11 @@ Legen Sie im Dialogfeld **Eigenschaften** die **lokale Kopie** jeder *winmd*-Dat
 
 ![„Lokal kopieren“-Feld](images/desktop-to-uwp/copy-local-field.png)
 
-### <a name="modify-a-c-project-to-use-windows-runtime-apis"></a>Ändern eines C++-Projekts für Windows-Runtime-APIs verwenden
+### <a name="modify-a-c-project-to-use-windows-runtime-apis"></a>Ändern eines C++ Projekts für Windows-Runtime-APIs verwenden
 
 Verwendung [C++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/) Windows-Runtime-APIs nutzen. C++/WinRT ist eine vollständig standardisierte, moderne C++17-Sprachprojektion für Windows-Runtime-(WinRT)-APIs, die als headerdateibasierte Bibliothek implementiert ist und Ihnen einen erstklassigen Zugriff auf die moderne Windows-API bietet.
 
-Zum Konfigurieren des Projekts für C++ / WinRT, finden Sie unter [Ändern Sie ein Projekt der Windows-Desktop-Anwendung zum Hinzufügen von C++ / WinRT-Unterstützung](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
+Zum Konfigurieren des Projekts für C++ / WinRT, siehe [Ändern Sie ein Projekt Windows-Desktop-Anwendung zum Hinzufügen von C++ / WinRT-Unterstützung](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
 
 ## <a name="add-windows-10-experiences"></a>Windows10-Funktionen hinzufügen
 
@@ -55,7 +55,7 @@ Jetzt können Sie moderner Funktionen für Benutzer der Anwendung unter Windows1
 
 :white_check_mark: **Entscheiden Sie zunächst, welche Funktionen Sie hinzufügen möchten**
 
-Es gibt viele zur Auswahl. Beispielsweise können Sie Ihre Purchase Reihenfolge Fluss mithilfe von monetisierungs-APIs oder mehr Aufmerksamkeit für Ihre Anwendung bei interessanten, z. B. ein neues Bild freizugeben, der kaufablauf vereinfachen.
+Es gibt viele zur Auswahl. Beispielsweise können Sie Ihre Purchase Reihenfolge Fluss mithilfe von monetisierungs-APIs oder mehr Aufmerksamkeit für Ihre Anwendung bei interessante, z. B. ein neues Bild freizugeben, der kaufablauf vereinfachen.
 
 ![Popup](images/desktop-to-uwp/toast.png)
 
@@ -203,7 +203,7 @@ Der Compiler erstellt den Code nur dann, wenn die Konstante in der aktiven Build
 
 Sie können einen Satz von Binärdateien für alle Windows-Benutzer kompilieren, unabhängig davon, welche Version von Windows sie ausführen. Ihre Anwendung ruft Windows-Runtime-APIs nur dann, wenn der Benutzer ausgeführt wird die Anwendung als verpackten Anwendung unter Windows 10.
 
-Die einfachste Möglichkeit zum Hinzufügen von laufzeitprüfungen zum Code ist zum Installieren von Nuget-Pakets: [Desktop Bridge Helpers](https://www.nuget.org/packages/DesktopBridge.Helpers/) und verwenden Sie dann die ``IsRunningAsUWP()`` -Methode auf, um alle Code, der Windows-Runtime-APIs aufruft abzugrenzen. Weitere Detail finden Sie in diesem Blogbeitrag: [Desktop-Brücke - Identifizieren des Anwendungskontexts](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
+Die einfachste Möglichkeit zum Hinzufügen von laufzeitprüfungen zum Code ist dieses Nuget-Paket installieren: [Desktop Bridge Helpers](https://www.nuget.org/packages/DesktopBridge.Helpers/) und verwenden Sie dann die ``IsRunningAsUWP()`` Methode, um alle Code, der Windows-Runtime-APIs aufruft abzugrenzen. Weitere Detail finden Sie in diesem Blogbeitrag: [Desktop-Brücke - Identifizieren des Anwendungskontexts](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
 
 ## <a name="related-video"></a>Verwandte Videos
 

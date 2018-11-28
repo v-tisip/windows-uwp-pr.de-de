@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e2bb5a450aebdf38f3d4f1a710f3537544dcddd6
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7691311"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7835991"
 ---
 # <a name="notifications-visualizer"></a>Notifications Visualizer
 
@@ -34,7 +34,7 @@ Dieser Screenshot der App zeigt die XML-Nutzlast und die Art und Weise, wie Kach
 
 Mit Notifications Visualizer können Sie adaptive Kachel-oder Popupnutzlasten erstellen und testen, ohne Ihre App selbst bearbeiten und bereitstellen zu müssen. Nachdem Sie eine Nutzlast mit idealen visuellen Ergebnisse erstellt haben, können Sie sie in Ihre App integrieren. Informationen finden Sie unter [Senden einer lokalen Kachelbenachrichtigung](sending-a-local-tile-notification.md) und [Senden einer lokalen Popupbenachrichtigung](send-local-toast.md).
 
-**Hinweis:**  Simulation des Windows-Startmenüs und der Popupbenachrichtigung Notifications Visualizer ist nicht immer hundertprozentig genau, und bestimmte erweiterte nutzlasteigenschaften werden nicht unterstützt. Wenn Sie das gewünschte Kachel- oder Popupdesign fertig haben, testen Sie es, indem Sie die Kachel oder Popupbenachrichtigung an das tatsächliche Startmenü anheften, um sicherzustellen, dass es wie gewünscht angezeigt wird.
+**Hinweis:**  Notifications Visualizer Simulation des Windows-Startmenüs und der Popupbenachrichtigung mit Notifications ist nicht immer hundertprozentig genau, und bestimmte erweiterte nutzlasteigenschaften werden nicht unterstützt. Wenn Sie das gewünschte Kachel- oder Popupdesign fertig haben, testen Sie es, indem Sie die Kachel oder Popupbenachrichtigung an das tatsächliche Startmenü anheften, um sicherzustellen, dass es wie gewünscht angezeigt wird.
 
  
 

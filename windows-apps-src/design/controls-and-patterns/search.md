@@ -12,11 +12,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: caf0e8e63716f6ba140ef9346257687f0e7293bb
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7699450"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7831270"
 ---
 # <a name="search-and-find-in-page"></a>Suche und „Auf Seite suchen“
 
@@ -31,7 +31,7 @@ Die Suche ist eine der besten Möglichkeiten, um Inhalte in Ihrer App zu finden.
 
 **Eingabe.** Text ist der am häufigsten verwendete Suchmodus und steht daher bei diesem Leitfaden im Mittelpunkt. Andere gängige Eingabemodi sind Spracheingabe und Kamera. Für diese sind jedoch in der Regel eine Verknüpfung mit der Gerätehardware sowie ggf. zusätzliche Steuerelemente oder benutzerdefinierte UI-Elemente in der App erforderlich.
 
-**Eingabe NULL.** Nachdem der Benutzer das Eingabefeld aktiviert hat, jedoch bevor der Benutzer Text eingegeben hat, können Sie anzeigen, die sogenannten "Nulleingabe-Canvas." Die Nulleingabe-Canvas wird häufig in der App-Canvas angezeigt, sodass der Inhalt durch [einen automatischen Vorschlag](auto-suggest-box.md) ersetzt wird, wenn der Benutzer mit der Eingabe der Abfrage beginnt. Für den Nulleingabezustand eignen sich beispielsweise der aktuelle Suchverlauf, populäre Suchabfragen, kontextbezogene Suchvorschläge sowie Hinweise und Tipps.
+**0 (null) Eingabe.** Nachdem der Benutzer das Eingabefeld aktiviert hat, jedoch bevor der Benutzer Text eingegeben hat, können Sie anzeigen, die sogenannten "Nulleingabe-Canvas." Die Nulleingabe-Canvas wird häufig in der App-Canvas angezeigt, sodass der Inhalt durch [einen automatischen Vorschlag](auto-suggest-box.md) ersetzt wird, wenn der Benutzer mit der Eingabe der Abfrage beginnt. Für den Nulleingabezustand eignen sich beispielsweise der aktuelle Suchverlauf, populäre Suchabfragen, kontextbezogene Suchvorschläge sowie Hinweise und Tipps.
 
 ![Beispiel für Cortana mit Nulleingabe-Canvas](images/search-cortana-example.png)
 

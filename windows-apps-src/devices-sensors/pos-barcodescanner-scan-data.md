@@ -7,11 +7,11 @@ keywords: Windows 10, UWP, Point of Service, POS
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: ece246ffd369ee21c089598f07b2566424757f55
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7714106"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7851091"
 ---
 # <a name="obtain-and-understand-barcode-data"></a>Abrufen und Verstehen von Strichcode-Daten
 

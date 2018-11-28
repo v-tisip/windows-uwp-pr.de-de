@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Monetisierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 91545116b0d7eae107021cc52ee05d299257518c
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7697120"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7831306"
 ---
 #  <a name="monetization-for-games"></a>Monetisierung für Spiele
 
@@ -27,7 +27,7 @@ Sie können ein UWP-Spiel folgendermaßen bewerben und monetisieren:
 
 ## <a name="worldwide-distribution-channel"></a>Weltweiter Vertriebskanal
 
-Im Microsoft Store kann Ihr Spiel für den Download in mehr als 200 Ländern und Regionen weltweit, mit Unterstützung für die Abrechnung über verschiedene Zahlungsmethoden einschließlich Visa, Mastercard und PayPal zur Verfügung. Eine vollständige Liste der Länder und Regionen finden Sie unter [Festlegen der marktauswahl](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection).
+Im Microsoft Store kann Ihr Spiel zum Download in mehr als 200 Ländern und Regionen weltweit, mit Unterstützung für die Abrechnung über verschiedene Zahlungsmethoden einschließlich Visa, Mastercard und PayPal zur Verfügung. Eine vollständige Liste der Länder und Regionen finden Sie unter [Festlegen der marktauswahl](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection).
 
 ## <a name="set-a-price-for-your-game"></a>Festlegen eines Preises für Ihr Spiel
 
@@ -37,7 +37,7 @@ Hier sind einige wichtige Konzepte bezüglich der Preise für Ihr Spiel im Store
 
 ### <a name="base-price"></a>Grundpreis
 
-Der Grundpreis für das Spiel bestimmt, ob Ihr Spiel als _bezahlt_ oder _kostenlos_ eingestuft wird. Sie können [Partner Center](https://partner.microsoft.com/dashboard) verwenden, konfigurieren Sie den Grundpreis basierend auf Land und Region.
+Der Grundpreis für das Spiel bestimmt, ob Ihr Spiel als _bezahlt_ oder _kostenlos_ eingestuft wird. [Partner Center](https://partner.microsoft.com/dashboard) können Sie um den Grundpreis basierend auf Land und Region zu konfigurieren.
 Beim Festlegen des Preises müssen unter Umständen [Steuerpflichten beim Verkauf in anderen Ländern](https://msdn.microsoft.com/windows/uwp/publish/tax-details-for-paid-apps) und [Kostenüberlegungen für bestimmte Märkte](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection#price-considerations-for-specific-markets) in Betracht gezogen werden. Sie können auch [angepasste Preise für spezifische Märkte](../publish/set-and-schedule-app-pricing.md#override-base-price-for-specific-markets) festlegen.
 
 ### <a name="sale-price"></a>Angebotspreis
@@ -47,13 +47,13 @@ Sie können Angebotskampagnen im Voraus planen, indem Sie Start- und Enddatum de
 
 ## <a name="in-game-purchases"></a>In-Game-Käufe
 
-Bei In-Game-Käufen handelt es sich um Produkte, die in einem Spiel gekauft werden. Sie werden allgemein auch als _In-App-Käufe_ bezeichnet. Im Microsoft Store heißen diese Produkte _-Add-Ons_. [Add-ons werden veröffentlicht](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions) , über das Partner Center. Sie müssen die Add-Ons außerdem im Code Ihres Spiels aktivieren.
+Bei In-Game-Käufen handelt es sich um Produkte, die in einem Spiel gekauft werden. Sie werden allgemein auch als _In-App-Käufe_ bezeichnet. Im Microsoft Store heißen diese Produkte _-Add-Ons_. Durch Partner Center [-Add-Ons veröffentlicht werden](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions) . Sie müssen die Add-Ons außerdem im Code Ihres Spiels aktivieren.
 
 ### <a name="types-of-add-ons"></a>Arten von Add-Ons
 
 Sie können zwei Arten von Add-Ons im Store erstellen: _Gebrauchsgüter_ oder _Verbrauchsartikel_. Gebrauchsgüter sind Elemente, die bis zu ihrem Ablauf für einen angegebenen Zeitraum erhalten bleiben und nur einmal erworben werden können. Verbrauchsartikel sind Elemente, die gekauft und immer wieder verwendet werden können.
 
-Beim Erstellen von Verbrauchsartikeln entscheiden Sie, wie Sie sie nachverfolgen möchten, d.h. ob sie _vom Entwickler verwaltet_ oder _vom Store verwaltet_ werden. (Dieses Feature ist ab Windows10, Version 1607, verfügbar). Mit einem Entwickler verwalteten Verbrauchsartikel sind Sie verantwortlich für das Element Guthabens für den Spieler. Bei einem Store verwalteten Verbrauchsartikel verfolgt der Microsoft Store des Elements Guthaben für Sie. Weitere Informationen finden Sie unter [Übersicht über Endverbraucher-Add-Ons](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons).
+Beim Erstellen von Verbrauchsartikeln entscheiden Sie, wie Sie sie nachverfolgen möchten, d.h. ob sie _vom Entwickler verwaltet_ oder _vom Store verwaltet_ werden. (Dieses Feature ist ab Windows10, Version 1607, verfügbar). Mit einem Entwickler verwalteten Verbrauchsartikel sind Sie verantwortlich für das Element Guthabens für den Spieler; mit einem vom Store verwalteten Verbrauchsartikel verfolgt der Microsoft Store das Element Guthaben für Sie. Weitere Informationen finden Sie unter [Übersicht über Endverbraucher-Add-Ons](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons).
 
 ### <a name="create-in-game-purchases"></a>Erstellen von In-Game-Käufen
 
@@ -90,7 +90,7 @@ So erstellen Sie ein Paket, das in den Store hochgeladen werden kann:
 
 1. Öffnen Sie Ihre Spielelösung in Visual Studio.
 2. Navigieren Sie in Visual Studio zu __Projekt__ > __Store__ > __App-Pakete erstellen...__.
-3. Für die __möchten Sie Pakete zum Hochladen in den Microsoft Store erstellen?__ option, __Ja__wählen.
+3. Für die __möchten Sie Pakete zum Hochladen in den Microsoft Store erstellen?__ option, wählen Sie __Ja__.
 4. Melden Sie sich bei Ihrem [Partner Center](https://partner.microsoft.com/dashboard) -Entwicklerkonto an. Oder [registrieren](https://developer.microsoft.com/store/register) Sie sich für ein Entwicklerkonto, falls Sie keins besitzen.
 5. Wählen Sie eine App aus, für die das Uploadpaket erstellt werden soll. Falls Sie noch keine App-Übermittlung erstellt haben, geben Sie einen neuen App-Namen ein, um eine neue Übermittlung zu erstellen. Weitere Informationen finden Sie unter [Erstellen einer App durch Reservieren eines Namens](https://msdn.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name).
 6. Nachdem das Paket erfolgreich erstellt wurde, klicken Sie auf __Zertifizierungskit für Windows-Apps starten__, um den Testprozess zu starten.

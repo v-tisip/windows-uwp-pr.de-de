@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, Desktop-Brücke, sekundäre Kacheln, anheften, Anheften, Schnellstart, Codebeispiel, Beispiel, Sekundärkachel, Desktopanwendung, Win32, Winforms, WPF
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e713f37cd5e5fbf4b2771e76fb7e132b5976629
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7703730"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7838140"
 ---
 # <a name="pin-secondary-tiles-from-desktop-application"></a>Sekundäre Kacheln von der Desktopanwendung anheften
 

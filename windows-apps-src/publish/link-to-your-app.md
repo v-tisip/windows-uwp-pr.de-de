@@ -7,16 +7,16 @@ ms.topic: article
 keywords: Windows10, UWP, Links, Windows Store-Protokoll, mit einer App verknüpfen, App verknüpfen
 ms.localizationpriority: medium
 ms.openlocfilehash: 59df207adf44cea04505e41a3323da1743170c46
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7712325"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7832962"
 ---
 # <a name="link-to-your-app"></a>Erstellen eines Links zu Ihrer App
 
 
-Sie können Kunden, die Ihre app zu entdecken, indem Sie mit dem Eintrag Ihrer app im Microsoft Store verknüpfen helfen.
+Sie können Kunden Ihre app zu entdecken, indem Sie mit dem Eintrag Ihrer app im Microsoft Store verknüpfen.
 
 ## <a name="getting-the-link-to-your-apps-store-listing"></a>Abrufen des Links zum Store-Eintrag Ihrer App
 
@@ -25,7 +25,7 @@ Um die URL für den Store-Eintrag Ihrer App zu erhalten, wechseln Sie zur Seite 
 Wenn ein Kunde auf diesen Link klickt, wird die webbasierte Eintragsseite für Ihre App geöffnet. Auf Windows-Geräten wird die Store-App auch ebenfalls Ihren App-Eintrag starten und anzeigen.
 
 
-## <a name="linking-to-your-apps-store-listing-with-the-microsoft-store-badge"></a>Verknüpfung mit Store-Eintrag Ihrer app mit dem Microsoft Store-badge
+## <a name="linking-to-your-apps-store-listing-with-the-microsoft-store-badge"></a>Verknüpfen mit Store-Eintrag Ihrer app mit dem Microsoft Store-badge
 
 Sie können direkt mit dem Eintrag Ihrer app mit einem benutzerdefinierten Badge können Kunden wissen, dass Ihre app im Microsoft Store ist verknüpfen.
 

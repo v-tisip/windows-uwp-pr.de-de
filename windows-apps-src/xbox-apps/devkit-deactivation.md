@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 244124dd-d80a-4a72-91db-1c9c2fbc7c3c
 ms.localizationpriority: medium
 ms.openlocfilehash: 5606a8fa6db5b439aa71f5d72b34c0f519d7eea9
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7698924"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7835895"
 ---
 # <a name="xbox-one-developer-mode-deactivation"></a>Deaktivierung des Xbox One-Entwicklermodus
 
@@ -72,9 +72,9 @@ Führen Sie zum Zurücksetzen der Konsole die folgenden Schritte aus:
 
 ## <a name="deactivate-your-console-using-partner-center"></a>Deaktivieren der Konsole mit Partner Center
 
-Wenn Sie nicht auf die Konsole aus irgendeinem Grund zugreifen können, können Sie mithilfe der Partner Center auch den Entwicklermodus auf der Konsole deaktivieren.
+Wenn Sie nicht auf die Konsole aus irgendeinem Grund zugreifen können, können Sie den Entwicklermodus auch auf der Konsole deaktivieren, mithilfe von Partner Center.
 
-1. Navigieren Sie zu der Seite " [Verwalten von Xbox One-Konsolen](https://partner.microsoft.com/xboxdevices) " im Partner Center. Sie können zum Anmelden aufgefordert.
+1. Navigieren Sie zu der Seite " [Verwalten von Xbox One-Konsolen](https://partner.microsoft.com/xboxdevices) " im Partner Center. Sie können zur Anmeldung aufgefordert werden.
 
 2. Suchen Sie in der Liste der Konsolen die Konsole, die Sie deaktivieren möchten, anhand der Seriennummer, Konsolen-ID oder Geräte-ID.  
 

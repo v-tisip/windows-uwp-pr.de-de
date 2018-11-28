@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ad00090fdfc3ce7be34ef6271d16e76541b584bb
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7703567"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7844359"
 ---
 # <a name="raw-notification-overview"></a>Übersicht über unformatierte Benachrichtigungen
 
@@ -113,7 +113,7 @@ Für jede App kann jeweils nur eine Hintergrundaufgabe ausgeführt werden. Wird 
 ## <a name="other-resources"></a>Weitere Ressourcen
 
 
-Erfahren Sie mehr, indem Sie das [Beispiel für unformatierte Benachrichtigungen](http://go.microsoft.com/fwlink/p/?linkid=241553) für Windows8.1 und die [Pushbenachrichtigungen und regelmäßige Benachrichtigungen-Beispiel](http://go.microsoft.com/fwlink/p/?LinkId=231476) für Windows8.1 herunterladen und ihren Quellcode in Ihrer Windows 10-app wiederverwenden.
+Erfahren Sie mehr, indem Sie das [Beispiel für unformatierte Benachrichtigungen](http://go.microsoft.com/fwlink/p/?linkid=241553) für Windows8.1 und [Pushbenachrichtigungen und regelmäßige benachrichtigungsbeispiel](http://go.microsoft.com/fwlink/p/?LinkId=231476) für Windows8.1 herunterladen und ihren Quellcode in Ihrer Windows 10-app wiederverwenden.
 
 ## <a name="related-topics"></a>Verwandte Themen
 

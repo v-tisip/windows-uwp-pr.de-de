@@ -1,23 +1,21 @@
 ---
-author: Karl-Bridge-Microsoft
 Description: Learn how accelerator keys can improve the usability and accessibility of UWP apps.
 title: Zugriffstasten
 label: Keyboard accelerators
 template: detail.hbs
 keywords: Tastatur, Zugriffstaste, Zugriffstasten, Tastenkombinationen, Barrierefreiheit, Navigation, Fokus, Text, Eingabe, Benutzerinteraktionen, Gamepad, Fernbedienung
-ms.author: kbridge
 ms.date: 10/10/2017
 ms.topic: article
 pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: dcbb27a87b48a124fe4463578bc32d908f399ccb
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: 6f764d15c1bf5a52a6a48a45856daf9031bbd346
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7567130"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7831625"
 ---
 # <a name="keyboard-accelerators"></a>Zugriffstasten
 
@@ -50,7 +48,7 @@ Es wird empfohlen, dass Sie Zugriffstasten überall in Ihrer UI angegeben, wo di
 
   Eine gut durchdachte Tastatur-UI ist ein wichtiger Aspekt für die Barrierefreiheit von Software. Sie ermöglicht es Benutzern mit einer Sehbeeinträchtigung oder mit bestimmten motorischen Einschränkungen, in einer App zu navigieren und mit deren Features zu interagieren. Diese Benutzer können u.U. keine Maus bedienen und sind auf verschiedene Hilfstechnologien wie etwa Tastaturerweiterungstools, Bildschirmtastaturen, Bildschirmlupen, Bildschirmleseprogramme oder die Möglichkeit der Spracheingabe angewiesen. Für diese Benutzer ist eine vollständige Befehlsabdeckung entscheidend.
 
-- Zugriffstasten machen Ihre app mehr Usablefor erfahrene Benutzer, die über die Tastatur interagieren möchten.
+- Zugriffstasten machen Ihre app mehrere Usablefor erfahrene Benutzer, die über die Tastatur interagieren möchten.
 
   Erfahrene Benutzer haben oftmals eine starke Vorliebe für die Verwendung der Tastatur, da tastaturbasierte Befehle viel schneller eingegeben werden können. Zudem ist es dafür nicht erforderlich, die Hände von der Tastatur wegzubewegen. Für diese Benutzer sind Effizienz und Konsistenz entscheidend. Die Vollständigkeit hingegen ist nur für am häufigsten verwendeten Befehle wichtig.
 
@@ -362,13 +360,13 @@ Da Zugriffstasten in der Regel nicht direkt in der Benutzeroberfläche Ihrer UWP
 Standardmäßig wenn Zugriffstasten deklariert sind, stellen Sie alle Steuerelemente (außer [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem) und [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) die entsprechenden Tastenkombination in einer QuickInfo.
 
 > [!NOTE] 
-> Wenn ein Steuerelement mehrere Zugriffstasten definiert sind, wird nur die erste angezeigt.
+> Wenn ein Steuerelement mehrere Zugriffstasten definiert ist, wird nur die erste angezeigt.
 
 ![QuickInfo für Zugriffstasten](images/accelerators/accelerators_tooltip_savebutton_small.png)
 
 *Zugriffstastenkombination in QuickInfo*
 
-Für die [Schaltfläche](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)und [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) -Objekte die Zugriffstaste des Steuerelements Standard-Tooltip angefügt. Für [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) und [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) Objekte, die Zugriffstaste wird mit den Flyout-Text angezeigt.
+Für die [Schaltfläche](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)und [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) -Objekte wird die Zugriffstaste des Steuerelements Standard-Tooltip angefügt. Für [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) und [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) Objekte, die Zugriffstaste wird mit den Flyout-Text angezeigt.
 
 > [!NOTE]
 > Die Angabe einer QuickInfos setzt (Siehe Button1 im folgenden Beispiel) dieses Verhalten.
@@ -402,7 +400,7 @@ Für die [Schaltfläche](https://docs.microsoft.com/uwp/api/windows.ui.xaml.cont
 
 ![QuickInfo für Zugriffstasten](images/accelerators/accelerators-button-small.png)
 
-*Schaltfläche standardmäßig QuickInfo angefügte Zugriffstastenkombination*
+*Auf der Schaltfläche standardmäßig QuickInfo angefügte Zugriffstastenkombination*
 
 ```xaml
 <AppBarButton Icon="Save" Label="Save">

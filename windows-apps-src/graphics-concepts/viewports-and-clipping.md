@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7d2a8953d202cc22729f99a096b5fb62cf1131d9
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7698875"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7833071"
 ---
 # <a name="viewports-and-clipping"></a>Viewports und Zuschneiden
 
@@ -45,7 +45,7 @@ Die Werte, die Sie für die Mitglieder X, Y, Breite und Höhe angeben, sind Bild
 
 Direct3D nimmt an, dass das Viewport-Zuschneidungsvolumen von -1,0 bis 1,0 in X und von 1,0 bis -1,0 in Y reicht. Dies sind die Einstellungen die in der Vergangenheit am häufigsten von Anwendungen verwendet wurden. Sie können das Viewport-Seitenverhältnis vor dem Zuschneiden mit der [Projektionstransformation](projection-transform.md) anpassen.
 
-**Hinweis:**  MinZ und MaxZ geben die Tiefenbereiche, in dem die Szene gerendert wird, und nicht zum Zuschneiden verwendet werden. Die meisten Anwendungen setzen diese Werte zwischen 0,0 und 1,0, damit das System das Rendering für den gesamten Bereich der Tiefenwerte im Tiefenpuffer durchführen kann. In manchen Fällen können Sie durch die Verwendung anderer Tiefenbereiche besondere Effekte erzielen. So können Sie beispielsweise zum Rendern einer Heads-up-Ansicht in einem Spiel beide Werte auf 0,0 setzen, damit das System Objekte in einer Szene im Vordergrund rendert; oder Sie setzen beide Werte auf 1,0, um ein Objekt zu rendern, das sich immer im Hintergrund befinden soll.
+**Hinweis:**  MinZ und MaxZ geben die Tiefenbereiche, in dem die Szene gerendert werden, und sind nicht zum Zuschneiden verwendet. Die meisten Anwendungen setzen diese Werte zwischen 0,0 und 1,0, damit das System das Rendering für den gesamten Bereich der Tiefenwerte im Tiefenpuffer durchführen kann. In manchen Fällen können Sie durch die Verwendung anderer Tiefenbereiche besondere Effekte erzielen. So können Sie beispielsweise zum Rendern einer Heads-up-Ansicht in einem Spiel beide Werte auf 0,0 setzen, damit das System Objekte in einer Szene im Vordergrund rendert; oder Sie setzen beide Werte auf 1,0, um ein Objekt zu rendern, das sich immer im Hintergrund befinden soll.
 
  
 
@@ -57,7 +57,7 @@ Direct3D verwendet Position und Abmessungen des Viewports zur Skalierung der Sch
 
 Diese Matrix skaliert Scheitelpunkte gemäß den Viewport-Abmessungen und dem gewünschten Tiefenbereich und übersetzt sie zum jeweiligen Ort auf der Renderzieloberfläche. Die Matrix wechselt auch die y-Koordinate zur Reflexion eines Bildschirmursprungs in der linken oberen Ecke mit abwärts zunehmenden y-Werten. Nach der Anwendung der Matrix sind die Scheitelpunkte weiterhin homogen – das heißt, sie sind \[x,y,z,w\]-Scheitelpunkte – und müssen zu nicht-homogenen Koordinaten konvertiert werden, bevor sie an den Rasterizer gesendet werden.
 
-**Hinweis:**  Anwendungen in der Regel setzen MinZ und MaxZ auf 0,0 und 1,0, damit das System für den gesamten Tiefenbereich verursachen. Sie können aber auch andere Werte verwenden, um besondere Effekte zu erzielen. So können Sie etwa beide Werte auf 0,0 setzen, um alle Objekte in den Vordergrund zu zwingen, oder auf 1,0, um alle Objekte im Hintergrund zu rendern.
+**Hinweis:**  Anwendungen in der Regel setzen MinZ und MaxZ 0,0 und 1,0, damit das System für den gesamten Tiefenbereich. Sie können aber auch andere Werte verwenden, um besondere Effekte zu erzielen. So können Sie etwa beide Werte auf 0,0 setzen, um alle Objekte in den Vordergrund zu zwingen, oder auf 1,0, um alle Objekte im Hintergrund zu rendern.
 
  
 

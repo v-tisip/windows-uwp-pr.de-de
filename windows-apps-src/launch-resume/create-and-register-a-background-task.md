@@ -11,11 +11,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: eb6cde0c3c31f0116c65e5d5dc4a0d8ae4a1b540
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7704541"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7832230"
 ---
 # <a name="create-and-register-an-out-of-process-background-task"></a>Erstellen und Registrieren einer Out-of-Process-Hintergrundaufgabe
 
@@ -41,7 +41,7 @@ Die folgenden Schritte zeigen, wie Sie eine neue Klasse zum Implementieren der [
 3.  Fügen Sie auf das hintergrundaufgabenprojekt eine neue Klasse, die [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) -Schnittstelle implementiert. Die [**IBackgroundTask.Run**](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) -Methode ist ein erforderlicher Einstiegspunkt und, die aufgerufen wird, wenn das angegebene Ereignis ausgelöst wird. Diese Methode ist in jeder Hintergrundaufgabe erforderlich.
 
 > [!NOTE]
-> Die hintergrundaufgabenklasse selbst&mdash;und alle anderen Klassen im hintergrundaufgabenprojekt&mdash;müssen **Öffentliche** Klassen, die **versiegelt** (oder **letzte**) sind.
+> Die hintergrundaufgabenklasse selbst&mdash;und alle anderen Klassen im hintergrundaufgabenprojekt&mdash;müssen **Öffentliche** Klassen, die **versiegelt** (oder **endgültigen**) sind.
 
 Der folgende Beispielcode zeigt einen sehr einfachen Startpunkt für eine hintergrundaufgabenklasse.
 
@@ -140,11 +140,11 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 }
 ```
 
-4.  Wenn asynchroner Code in der Hintergrundaufgabe ausgeführt wird, muss in der Hintergrundaufgabe eine Verzögerung verwendet werden. Wenn Sie keine Verzögerung verwenden, können dann die Hintergrund unerwartet beendet werden, wenn die **Run** -Methode zurückgegeben wird, bevor alle asynchronen Vorgänge bis zum Abschluss ausgeführt wurde.
+4.  Wenn asynchroner Code in der Hintergrundaufgabe ausgeführt wird, muss in der Hintergrundaufgabe eine Verzögerung verwendet werden. Wenn Sie keine Verzögerung verwenden, können Sie dann die Hintergrund unerwartet beendet werden, wenn die **Run** -Methode zurückgegeben wird, bevor alle asynchronen Vorgänge bis zum Abschluss ausgeführt wurde.
 
 Fordern Sie die Verzögerung in der **Run** -Methode vor Aufruf der asynchronen Methode. Speichern Sie die Verzögerung auf einen Daten Klassenmember, damit es von der asynchronen Methode zugegriffen werden kann. Deklarieren Sie das Objekt so, dass die Verzögerung nach Abschluss des asynchronen Codes abgeschlossen wird.
 
-Der folgende Beispielcode ruft die Verzögerung, speichert sie und gibt sie nach Abschluss des asynchronen Codes frei.
+Der folgende Beispielcode ruft die Verzögerung ab, speichert sie und gibt sie nach Abschluss des asynchronen Codes frei.
 
 ```csharp
 BackgroundTaskDeferral _deferral; // Note: defined at class scope so that we can mark it complete inside the OnCancel() callback if we choose to support cancellation
@@ -207,7 +207,7 @@ Weitere Informationen zu asynchronen Mustern finden Sie unter [Asynchrone Progra
 Die folgenden Schritte werden in einer Ihrer App-Klassen durchgeführt (beispielsweise in "MainPage.xaml.cs").
 
 > [!NOTE]
-> Sie können auch eine Funktion für die Registrierung von Hintergrundaufgaben dedicated erstellen&mdash;finden Sie unter [Registrieren einer Hintergrundaufgabe](register-a-background-task.md). In diesem Fall anstelle der nächsten drei Schritte können einfach den Auslöser konstruieren und der Registrierungsfunktion zusammen mit dem Aufgabennamen, Einstiegspunkt und (optional) eine Bedingung zur Verfügung stellen.
+> Sie können auch eine Funktion für die Registrierung von Hintergrundaufgaben dedizierte erstellen&mdash;finden Sie unter [Registrieren einer Hintergrundaufgabe](register-a-background-task.md). In diesem Fall anstelle der nächsten drei Schritte können einfach den Auslöser konstruieren und der Registrierungsfunktion zusammen mit den Tasknamen, Einstiegspunkt und (optional) eine Bedingung zur Verfügung stellen.
 
 ## <a name="register-the-background-task-to-run"></a>Registrieren der auszuführenden Hintergrundaufgabe
 
@@ -272,7 +272,7 @@ while (hascur)
 
 Der Hintergrundaufgabenauslöser bestimmt, ob die Hintergrundaufgabe ausgeführt wird. Eine Liste mit möglichen Auslösern erhalten Sie unter [**SystemTrigger**](https://msdn.microsoft.com/library/windows/apps/br224839).
 
-Beispielsweise wird dieser Code erstellt eine neue Hintergrundaufgabe und wird ausgeführt, wenn der Trigger **TimeZoneChanged** tritt auf:
+Beispielsweise wird dieser Code erstellt eine neue Hintergrundaufgabe und wird ausgeführt, wenn die **TimeZoneChanged** Auslösers:
 
 ```csharp
 var builder = new BackgroundTaskBuilder();
@@ -413,7 +413,7 @@ task->Completed += ref new BackgroundTaskCompletedEventHandler(this, &MainPage::
 
 ## <a name="declare-in-the-app-manifest-that-your-app-uses-background-tasks"></a>Deklarieren Sie in der app-Manifest, dass Ihre app Hintergrundaufgaben verwendet
 
-Bevor Ihre App Hintergrundaufgaben ausführen kann, müssen Sie alle Hintergrundaufgaben im App-Manifest deklarieren. Wenn Ihre app versucht, eine Hintergrundaufgabe mit einem Trigger zu registrieren, die nicht im Manifest aufgeführt ist, wird die Registrierung der Hintergrundaufgabe mit dem Fehler "Runtime-Klasse nicht registriert" fehl.
+Bevor Ihre App Hintergrundaufgaben ausführen kann, müssen Sie alle Hintergrundaufgaben im App-Manifest deklarieren. Wenn Ihre app versucht, eine Hintergrundaufgabe mit einem Trigger zu registrieren, der im Manifest aufgeführt ist, wird die Registrierung der Hintergrundaufgabe mit dem Fehler "Common Language Runtime-Klasse nicht registriert" fehl.
 
 1.  Öffnen Sie den Paketmanifest-Designer durch Öffnen der Datei namens „Package.appxmanifest“.
 2.  Öffnen Sie die Registerkarte **Deklarationen**.

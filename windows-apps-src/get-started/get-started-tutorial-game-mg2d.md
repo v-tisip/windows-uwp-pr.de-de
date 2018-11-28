@@ -7,11 +7,11 @@ keywords: Windows10, UWP
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
 ms.openlocfilehash: 95fa9e8ef9c508846443e04e23184c03e38ce9a2
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7702664"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7832256"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>Erstellen eines UWP-Spiels in MonoGame-2D
 
@@ -26,7 +26,7 @@ MonoGame ist ein einfaches Framework für die Spieleentwicklung. In diesem Lernp
 
 ## <a name="prerequisites"></a>Voraussetzungen
 +   Windows10 und Microsoft Visual Studio2017  [Klicken Sie hier, um zu erfahren, wie Sie Visual Studio einrichten](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
-+ Das .NET Framework-desktop-Entwicklung. Wenn Sie dies installiert noch nicht, erhalten sie Sie durch das Visual Studio-Installationsprogramm erneut ausführen, und ändern die Installation von Visual Studio 2017.
++ Das .NET Framework-desktop-Entwicklung. Wenn Sie bereits mit Dies installiert haben, können Sie es abrufen erneut ausführen des Visual Studio-Installationsprogramms und ändern die Installation von Visual Studio 2017.
 +   Sie sollten über Grundkenntnisse in C# oder einer ähnlichen objektorientierten Programmiersprache verfügen. [Klicken Sie hier, um Informationen zum Einstieg in C# zu erhalten](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 +   Kenntnisse über die grundlegenden Konzepte der Informatik, wie Klassen, Methoden und Variablen, sind ebenfalls von Vorteil.
 
@@ -66,7 +66,7 @@ Nachdem Sie das Projekt erstellt haben, öffnen Sie die **Game1.cs**-Datei aus d
 
 **protected override void UnloadContent()** – Mit dieser Methode wird Inhalt entfernt, der nicht aus dem Inhalts-Manager stammt. Diese Methode wird hier nicht verwendet.
 
-**Protected Override void Update (GameTime GameTime)** Diese Methode wird einmal für jeden Zyklus der spielschleife aufgerufen. Hier wird der Status der im Spiel verwendeten Objekte oder Variablen aktualisiert. Dies betrifft auch Position, Geschwindigkeit oder Farbe eines Objekts. Dies ist auch hier Benutzereingaben behandelt. Kurz gesagt, behandelt diese Methode alle Teile der Spiellogik mit Ausnahme des Zeichnens von Objekten auf den Bildschirm.
+**Protected Override void Update (GameTime GameTime)** Diese Methode wird einmal bei jedem Zyklus der spielschleife aufgerufen. Hier wird der Status der im Spiel verwendeten Objekte oder Variablen aktualisiert. Dies betrifft auch Position, Geschwindigkeit oder Farbe eines Objekts. Dies ist auch hier Benutzereingaben behandelt. Kurz gesagt, behandelt diese Methode alle Teile der Spiellogik mit Ausnahme des Zeichnens von Objekten auf den Bildschirm.
 **protected override void Draw(GameTime gameTime)** – Hier werden Objekte auf den Bildschirm gezeichnet. Dabei wird die Position verwendet, die von der Update-Methode angegeben wurde.
 
 ## <a name="draw-a-sprite"></a>Zeichnen eines Sprite
@@ -324,7 +324,7 @@ broccoli = new SpriteClass(GraphicsDevice, "Content/broccoli.png", ScaleToHighDP
 Das Brokkoli-Bild ist viel größer, als es im Spiel angezeigt werden soll. Daher müssen wir es auf das 0,2-Fache seiner ursprünglichen Größe skalieren.
 
 ### <a name="5-program-obstacle-behaviour"></a>5. Hindernis Verhalten
-Der Brokkoli soll über den Bildschirm hinausreichen und in Richtung des Avatars des Spielers wandern, der dem Hindernis ausweichen muss. Zu diesem Zweck fügen Sie diese Methode in der **Game1.cs** -Klasse:
+Der Brokkoli soll über den Bildschirm hinausreichen und in Richtung des Avatars des Spielers wandern, der dem Hindernis ausweichen muss. Zu diesem Zweck fügen Sie diese Methode der Klasse **Game1.cs** :
 
 ```CSharp
 public void SpawnBroccoli()
@@ -379,7 +379,7 @@ public void StartGame()
 ```
 
 ### <a name="7-handle-keyboard-input"></a>7. Behandeln von Tastatureingaben
-Als Nächstes benötigen wir eine neue Methode zum Behandeln von Benutzereingaben über die Tastatur. Fügen Sie diese Methode, um **Game1.cs**:
+Als Nächstes benötigen wir eine neue Methode auf Benutzereingaben über die Tastatur zu behandeln. Fügen Sie diese Methode, um **Game1.cs**:
 
 ```CSharp
 void KeyboardHandler()
@@ -428,7 +428,7 @@ Die erste beendet das Spiel, wenn die **Escape**-Taste gedrückt wird.
 
 Die zweite startet das Spiel, wenn die **LEERTASTE** gedrückt wird, und das Spiel ist noch nicht gestartet wurde.
 
-Die dritte lässt den Dino-Avatar springen, wenn die **LEERTASTE** gedrückt wird. Dazu wird die **dY**-Eigenschaft geändert. Beachten Sie, die der Spieler springen kann, es sei denn, sie auf dem "Boden" ist (dino.y = ScreenHeight * SKYRATIO), und auch nicht, wenn die LEERTASTE einmal gedrückt gedrückt ist. Dies verhindert, dass der Dino nach Spielstart sofort springt, weil die LEERTASTE auch zum Starten des Spiels gedrückt wird.
+Die dritte lässt den Dino-Avatar springen, wenn die **LEERTASTE** gedrückt wird. Dazu wird die **dY**-Eigenschaft geändert. Beachten Sie, die der Spieler springen kann, es sei denn, sie auf dem "Boden" ist (dino.y = ScreenHeight * SKYRATIO), und wird auch nicht wechseln, wenn die LEERTASTE einmal gedrückt gedrückt ist. Dies verhindert, dass der Dino nach Spielstart sofort springt, weil die LEERTASTE auch zum Starten des Spiels gedrückt wird.
 
 Mit der letzten „Wenn“-Anweisung wird überprüft, ob die Pfeile nach links oder rechts gedrückt werden. Wenn dies der Fall ist, wird die **dX** -Eigenschaft des Dinos entsprechend geändert.
 
@@ -484,7 +484,7 @@ dino.Draw(spriteBatch);
 
 In MonoGame werden neue Aufrufe von **spriteBatch.Draw** über alle vorherigen Aufrufe gezeichnet. Dies bedeutet, dass das brokkoli- und das Dino-Sprite über das vorhandene Gras-Sprite gezeichnet werden, sodass sie niemals dahinter unabhängig von ihrer Position verborgen werden können.
 
-Führen Sie das Spiel nun aus, und bewegen Sie den Dino mit den Pfeiltasten und der LEERTASTE. Wenn Sie die oben beschriebenen Schritte ausgeführt haben, Sie sollten in der Lage, stellen Sie Ihren Avatar innerhalb des Spielfensters bewegen, und der brokkoli sollte mit einer Geschwindigkeit werdende ausgehen.
+Führen Sie das Spiel nun aus, und bewegen Sie den Dino mit den Pfeiltasten und der LEERTASTE. Wenn Sie die oben beschriebenen Schritte ausgeführt haben, sollte Sie Ihren Avatar innerhalb des Spielfensters bewegen vornehmen, und der brokkoli sollte Geschwindigkeit wachsende erzeugen.
 
 ![Spieler-Avatar und Hindernis](images/monogame-tutorial-2.png)
 
@@ -648,7 +648,7 @@ if (dino.RectangleCollision(broccoli)) gameOver = true;
 Dadurch wird die **RectangleCollision**-Methode aufgerufen, die wir in **SpriteClass** erstellt haben, und das Spiel als „beendet“ markiert, wenn der Wert „true“ zurückgegeben wird.
 
 ### <a name="4-add-user-input-for-resetting-the-game"></a>4. Hinzufügen von Benutzereingaben für das Zurücksetzen des Spiels
-Fügen Sie diesen Code für die Methode **KeyboardHandler** , damit der Benutzer das Spiel Drücken der EINGABETASTE zurücksetzen können:
+Fügen Sie diesen Code an die Methode **KeyboardHandler** , damit der Benutzer das Spiel Drücken der EINGABETASTE zurücksetzen können:
 
 ```CSharp
 if (gameOver && state.IsKeyDown(Keys.Enter))
@@ -692,4 +692,4 @@ Sie müssen die [Prüfliste für App-Übermittlung](https://docs.microsoft.com/e
 
 Die App muss zur [Zertifizierung](https://docs.microsoft.com/en-us/windows/uwp/publish/the-app-certification-process) eingereicht werden.
 
-Weitere Informationen finden Sie unter [Veröffentlichen Ihrer UWP-app](https://developer.microsoft.com/en-us/store/publish-apps).
+Weitere Informationen finden Sie in der [Veröffentlichung Ihrer UWP-app](https://developer.microsoft.com/en-us/store/publish-apps).

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 3c3929c2b3765bd90dbe0be687834e94b4f222fc
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7695953"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7835628"
 ---
 # <a name="media-items-playlists-and-tracks"></a>Medienelemente, Wiedergabelisten und Titel
 
@@ -192,7 +192,7 @@ Dieses Beispiel fügt einen benutzerdefinierten Texttitel hinzu. Hierzu wird bei
 
 Mithilfe des [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955)-Elements können Sie eine Wiedergabeliste mit Medienelementen (dargestellt durch **MediaPlaybackItem**-Objekte) erstellen.
 
-**Hinweis:** Elemente in einer [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) mit lückenloser Wiedergabe gerendert werden. Das System verwendet die in MP3- oder AAC-codierten Dateien bereitgestellten Metadaten, um die für die lückenlose Wiedergabe erforderliche Verzögerungs- oder Auffüllkorrektur (Delay/Padding) zu ermitteln. Werden diese Metadaten von den MP3- oder AAC-codierten Dateien nicht bereitgestellt, ermittelt das System Verzögerungen und Auffüllungen heuristisch. Bei verlustfreien Formaten wie PCM, FLAC oder ALAC ergreift das System keine Maßnahme, da diese Encoder keine Verzögerungen oder Auffüllungen verursachen.
+**Hinweis:** Elemente in einer [**MediaPlaybackList**](https://msdn.microsoft.com/library/windows/apps/dn930955) werden mit lückenloser Wiedergabe gerendert. Das System verwendet die in MP3- oder AAC-codierten Dateien bereitgestellten Metadaten, um die für die lückenlose Wiedergabe erforderliche Verzögerungs- oder Auffüllkorrektur (Delay/Padding) zu ermitteln. Werden diese Metadaten von den MP3- oder AAC-codierten Dateien nicht bereitgestellt, ermittelt das System Verzögerungen und Auffüllungen heuristisch. Bei verlustfreien Formaten wie PCM, FLAC oder ALAC ergreift das System keine Maßnahme, da diese Encoder keine Verzögerungen oder Auffüllungen verursachen.
 
 Deklarieren Sie zunächst eine Variable zum Speichern Ihres **MediaPlaybackList**-Elements.
 

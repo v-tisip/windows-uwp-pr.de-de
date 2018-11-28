@@ -9,11 +9,11 @@ pm-contact: stmoy
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 38fe6b92828459f91ba6ea2f836d274c2cc8d761
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7702368"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7839728"
 ---
 # <a name="page-transitions"></a>Seitenübergänge
 
@@ -56,7 +56,7 @@ myFrame.Navigate(typeof(Page2), null, new DrillInNavigationTransitionInfo());
 
 ## <a name="horizontal-slide"></a>Horizontale Folie
 
-Verwenden Sie horizontale ziehen, um anzuzeigen, dass geschwisterseiten nebeneinander angezeigt werden. Das [NavigationView](../controls-and-patterns/navigationview.md) -Steuerelement verwendet diese Animation automatisch für den oberen, aber wenn Sie Ihre eigenen horizontalen Navigationsfunktionalität erstellen, Sie können implementieren horizontale Folie mit SlideNavigationTransitionInfo.
+Verwenden Sie horizontale ziehen, um anzuzeigen, dass geschwisterseiten nebeneinander angezeigt werden. Das [NavigationView](../controls-and-patterns/navigationview.md) -Steuerelement verwendet diese Animation automatisch für oben Nav, aber wenn Sie Ihre eigenen horizontale Navigationsfunktionalität erstellen, Sie können implementieren horizontale Folie mit SlideNavigationTransitionInfo.
 
 Der gewünschte Effekt ist, dass die Benutzer zwischen Seiten navigieren, die nebeneinander befinden. 
 

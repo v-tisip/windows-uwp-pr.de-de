@@ -11,11 +11,11 @@ design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: a984e30bbdc569522b04d328087775aa9e8ce2bc
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7700029"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7832289"
 ---
 # <a name="content-links-in-text-controls"></a>Links zu Inhalten in Textsteuerelementen
 
@@ -162,7 +162,7 @@ Die Personenauswahl erstellt eine ContentLinkInfo mit einem Uri, der das **ms-Pe
 - Wenn LinkContentKind nicht „Personen“ entspricht, wird die **Personen**-App geöffnet. Dies kann beispielsweise der Fall sein, wenn Sie die LinkContentKind im ContentLinkChanged-Ereignishandler geändert haben.
 
 > [!TIP]
-> Weitere Informationen zum Öffnen von anderen apps und Websites über Ihre app finden Sie unter den Themen unter [Starten einer app mit einem Uri](/windows/uwp/launch-resume/launch-app-with-uri).
+> Weitere Informationen zum Öffnen anderer apps und Websites über Ihre app finden Sie unter den Themen unter [Starten einer app mit einem Uri](/windows/uwp/launch-resume/launch-app-with-uri).
 
 #### <a name="invoked"></a>Aufgerufen
 

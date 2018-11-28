@@ -8,11 +8,11 @@ ms.assetid: 7c1c3355-8bf7-4c9f-b13b-2b9874b7c63c
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: dc109fe2e684dd3bc1fef62cece5cac3ab50d246
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7697183"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7831635"
 ---
 # <a name="create-an-app-package-with-the-makeappxexe-tool"></a>Erstellen eines App-Pakets mit dem Tool „MakeAppx.exe“
 
@@ -22,7 +22,7 @@ ms.locfileid: "7697183"
 > [!IMPORTANT] 
 > Wenn Sie Visual Studio zum Entwickeln der App verwendet haben, wird empfohlen, dass Sie den Visual Studio-Assistenten zum Erstellen des App-Pakets verwenden. Weitere Informationen finden Sie unter [Verpacken einer UWP-App mit Visual Studio](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
 
-Beachten Sie, dass **MakeAppx.exe** keine APPXUPLOAD-Datei erstellt. Die appxupload-Datei wird als Teil des Visual Studio-verpackungsvorgangs erstellt und enthält zwei weitere Dateien: .msix oder AppX- und appxsym. Die appxsym-Datei ist eine komprimierte PDB-Datei enthält öffentliche Symbole Ihrer App für den [Absturz Analytics](../publish/health-report.md) im Partner Center verwendet. Eine reguläre APPX-Datei kann ebenfalls übermittelt werden. In diesem Fall sind jedoch keine Absturzanalysen oder Informationen zum Debuggen verfügbar. Weitere Informationen zum Übermitteln von Paketen an den Store finden Sie unter [Hochladen von App-Paketen](../publish/upload-app-packages.md). 
+Beachten Sie, dass **MakeAppx.exe** keine APPXUPLOAD-Datei erstellt. Die appxupload-Datei wird als Teil des Visual Studio-verpackungsvorgangs erstellt und enthält zwei weitere Dateien: .msix oder AppX- und appxsym. Die appxsym-Datei ist eine komprimierte PDB-Datei enthält öffentliche Symbole Ihrer App zum [Absturz Analytics](../publish/health-report.md) im Partner Center. Eine reguläre APPX-Datei kann ebenfalls übermittelt werden. In diesem Fall sind jedoch keine Absturzanalysen oder Informationen zum Debuggen verfügbar. Weitere Informationen zum Übermitteln von Paketen an den Store finden Sie unter [Hochladen von App-Paketen](../publish/upload-app-packages.md). 
 
  Updates für das Tool in der neuesten Version von Windows 10 haben keinen Einfluss auf die Nutzung der AppX-Paket. Sie können auch weiterhin mit diesem Tool mit AppX-Paketen oder verwenden Sie das Tool mit Unterstützung für .msix Pakete wie unten beschrieben.
 

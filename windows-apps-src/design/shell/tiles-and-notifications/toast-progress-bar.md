@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP, Popup, Statusanzeige, Popup-Statusanzeige, Benachrichtigungen, Datenbindung der Popups
 ms.localizationpriority: medium
 ms.openlocfilehash: 853e9c1672f1933789c961838734a67b3e816b6a
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7714006"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7848384"
 ---
 # <a name="toast-progress-bar-and-data-binding"></a>Popup-Statusanzeige und Datenbindungen
 

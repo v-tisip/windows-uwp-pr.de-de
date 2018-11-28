@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d960235e73ea9172fb966f227af9440923f3553e
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7691934"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7830574"
 ---
 # <a name="file-access-permissions"></a>Berechtigungen für den Dateizugriff
 
@@ -24,7 +24,7 @@ Bei Erstellung einer neuen App können Sie standardmäßig auf folgende Dateisys
 ### <a name="application-install-directory"></a>Installationsverzeichnis der Anwendung
 Der Ordner, in denen Ihre app auf dem System des Benutzers installiert ist.
 
-Es gibt zwei primäre Möglichkeiten, greifen Sie auf Dateien und Ordner in Ihrer app Installationsverzeichnis:
+Es gibt zwei wesentlichen Möglichkeiten, greifen Sie auf Dateien und Ordner in Ihrer app Installationsverzeichnis:
 
 1. Sie können auf folgende Weise einen [**StorageFolder**](https://msdn.microsoft.com/library/windows/apps/br227230) aufrufen, der das Installationsverzeichnis Ihrer App darstellt:
 

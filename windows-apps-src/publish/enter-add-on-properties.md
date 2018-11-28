@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Add-Ons, Eigenschaften, Abonnementzeitraum, Produktlebensdauer, Inhaltstyp, IAP, In-App-Kauf, In-App-Produkt
 ms.localizationpriority: medium
 ms.openlocfilehash: 17025282aec18da01f14431996a3942ffdd90312
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7699510"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7832830"
 ---
 # <a name="enter-add-on-properties"></a>Eingeben von Add-On-Eigenschaften
 
@@ -39,7 +39,7 @@ Wenn Sie den Produkttyp **Vom Store verwalteter Verbrauchsartikel** ausgewählt 
 
 ## <a name="subscription-period"></a>Abonnementdauer
 
-Wenn Sie als Produkttyp **Abonnement** ausgewählt haben, wird hier die **Abonnementdauer** angezeigt. Wählen Sie eine Option aus, um anzugeben, wie häufig der Kunde für das Abonnement in Rechnung gestellt wird. Die Standardoption ist **monatlich**, aber Sie können auch auswählen, **3**, **6 Monate**, **jährlich**oder **24 Monate**.
+Wenn Sie als Produkttyp **Abonnement** ausgewählt haben, wird hier die **Abonnementdauer** angezeigt. Wählen Sie eine Option aus, um anzugeben, wie häufig der Kunde für das Abonnement in Rechnung gestellt wird. Die Standardoption ist **monatlich**, aber Sie können auch auswählen, **3 Monaten**, **6 Monate**, **jährlich**oder **24 Monate**.
 
 > [!IMPORTANT]
 > Sie können nach der Veröffentlichung Ihres Add-Ons Ihre **Abonnementdauer** auswählen.
@@ -84,7 +84,7 @@ Sie können für jedes eingereichte Add-On bis zu zehn Schlüsselwörter von jew
 Verwenden Sie zur Abfrage des Felds die Eigenschaft [StoreProduct.Keywords](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Keywords) in [Windows.Services.Store namespace](https://docs.microsoft.com/uwp/api/Windows.Services.Store). (Wenn Sie [Windows.ApplicationModel.Store-Namespace](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store) verwenden, nutzen Sie die Eigenschaft [ProductListing.Keywords](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.Keywords).)
 
 > [!NOTE]
-> Schlüsselwörter sind nicht für den Einsatz in abzielen Windows8 und Windows8.1 verfügbar.
+> Schlüsselwörter sind nicht für Pakete, die für Windows8 und Windows8.1 zur Verfügung stehen.
 
 <span id="custom-developer-data" />
 

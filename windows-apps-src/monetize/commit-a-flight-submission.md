@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Übernehmen einer Flight-Übermittlung
 ms.localizationpriority: medium
 ms.openlocfilehash: 820e10695cce2d6242a51b0017d2fe3981cf77b1
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7702654"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7832929"
 ---
 # <a name="commit-a-package-flight-submission"></a>Ausführen eines Commit für eine Flight-Paket-Übermittlung
 
@@ -48,7 +48,7 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 | Name        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | applicationId | String | Erforderlich. Die Store-ID der App, die die Flight-Paketübermittlung enthält, die Sie übernehmen möchten. Die Store-ID für die app ist im Partner Center verfügbar.  |
-| flightId | String | Erforderlich. Die ID des Flight-Pakets, das die zu übernehmende Übermittlung enthält. Diese ID ist in den Antwortdaten für Anforderungen zum [Erstellen eines Flight-Pakets](create-a-flight.md) und zum [Abrufen von Flight-Paketen für eine App](get-flights-for-an-app.md) enthalten. Für einen Flight, der im Partner Center erstellt wurde, ist diese ID auch in der URL für die Flight-Seite im Partner Center verfügbar.  |
+| flightId | String | Erforderlich. Die ID des Flight-Pakets, das die zu übernehmende Übermittlung enthält. Diese ID ist in den Antwortdaten für Anforderungen zum [Erstellen eines Flight-Pakets](create-a-flight.md) und zum [Abrufen von Flight-Paketen für eine App](get-flights-for-an-app.md) enthalten. Für einen Flight, der im Partner Center erstellt wurde, ist diese ID auch in der URL für die Test-Flight-Seite im Partner Center verfügbar.  |
 | submissionId | String | Erforderlich. Die ID der zu übernehmenden Übermittlung. Diese ID ist in den Antwortdaten für Anforderungen zum [Erstellen einer Flight-Paket-Übermittlung](create-a-flight-submission.md) verfügbar. Für eine Übermittlung, die im Partner Center erstellt wurde, ist diese ID auch in der URL für die übermittlungsseite im Partner Center verfügbar.  |
 
 

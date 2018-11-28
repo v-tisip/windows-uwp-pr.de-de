@@ -6,11 +6,11 @@ ms.date: 10/24/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7cb1c9f9cf6cbc6cce0c5d4547ed503bb9a06e56
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7696229"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7848684"
 ---
 # <a name="extend-the-game-sample"></a>Erweitern des Spielbeispiels
 
@@ -23,7 +23,7 @@ Sie sind nun mit den Schlüsselkomponenten eines einfachen dreidimensionalen Dir
 ## <a name="using-xaml-for-the-overlay"></a>Verwenden von XAML für die Überlagerung
 
 
-Eine Alternative, auf die wir noch nicht näher eingegangen sind, ist die Verwendung von XAML anstelle von [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990) für das Overlay. XAML hat gegenüber Direct2D viele Vorteile, insbesondere für die Zeichnung der Elemente der Benutzeroberfläche. Der wichtigste Vorteil ist, dass es macht: die Windows 10-Erscheinungsbild in Ihr DirectX-Spiel komfortabler. Viele der allgemeinen Elemente, Stile und Verhalten, die eine UWP-App ausmachen, sind eng in das XAML-Modell integriert und ersparen einem Spieleentwickler eine Menge Arbeit bei der Implementierung. Falls Ihr eigenes Spieldesign eine komplizierte Benutzeroberfläche hat, empfiehlt sich unter Umständen die Verwendung von XAML anstelle von Direct2D.
+Eine Alternative, auf die wir noch nicht näher eingegangen sind, ist die Verwendung von XAML anstelle von [Direct2D](https://msdn.microsoft.com/library/windows/desktop/dd370990) für das Overlay. XAML hat gegenüber Direct2D viele Vorteile, insbesondere für die Zeichnung der Elemente der Benutzeroberfläche. Der wichtigste Vorteil ist, dass es macht: das Windows 10-Erscheinungsbild in Ihrem DirectX-Spiel komfortabler. Viele der allgemeinen Elemente, Stile und Verhalten, die eine UWP-App ausmachen, sind eng in das XAML-Modell integriert und ersparen einem Spieleentwickler eine Menge Arbeit bei der Implementierung. Falls Ihr eigenes Spieldesign eine komplizierte Benutzeroberfläche hat, empfiehlt sich unter Umständen die Verwendung von XAML anstelle von Direct2D.
 
 Mit XAML können wir eine Spielschnittstelle erstellen, die der vorher in Direct2D erstellten ähnelt.
 

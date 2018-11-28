@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, App-Übermittlungen
 ms.localizationpriority: medium
 ms.openlocfilehash: 7aabaa932c8bd21baf81970564b15421931ad39f
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7698006"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7838061"
 ---
 # <a name="manage-app-submissions"></a>Verwalten von App-Übermittlungen
 
@@ -125,7 +125,7 @@ Gehen Sie folgendermaßen vor, um eine Übermittlung für eine App zu erstellen.
     await blockBob.UploadFromStreamAsync(stream);
     ```
 
-5. Führen Sie folgende Methode aus, um [die App-Übermittlung zu committen](commit-an-app-submission.md). Dies wird Partner Center Warnung an, dass Sie Ihre Übermittlung fertig gestellt haben und die Updates für Ihr Konto jetzt angewendet werden sollen.
+5. Führen Sie folgende Methode aus, um [die App-Übermittlung zu committen](commit-an-app-submission.md). Hierdurch wird Partner Center darüber benachrichtigt, dass Sie Ihre Übermittlung fertig gestellt haben und die Updates auf Ihr Konto jetzt angewendet werden soll.
 
     ```
     POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit
@@ -139,13 +139,13 @@ Gehen Sie folgendermaßen vor, um eine Übermittlung für eine App zu erstellen.
 
     Um den Status der Übermittlung zu überprüfen, zeigen Sie den Wert *status* im Antworttext an. Dieser Wert sollte von **CommitStarted** entweder in **PreProcessing** geändert worden sein, wenn die Anforderung erfolgreich war, oder in **CommitFailed**, wenn die Anforderung Fehler enthalten hat. Wenn Fehler aufgetreten sind, enthält das Feld *StatusDetails* Feld weitere Details zu den Fehlern.
 
-7. Nachdem das Commit erfolgreich abgeschlossen wurde, wird die Übermittlung zur Aufnahme an den Store gesendet. Sie können weiterhin die mithilfe der vorherigen Methode, oder besuchen Partner Center überwachen.
+7. Nachdem das Commit erfolgreich abgeschlossen wurde, wird die Übermittlung zur Aufnahme an den Store gesendet. Sie können weiterhin die mithilfe der vorherigen Methode oder besuchen Sie Partner Center überwachen.
 
 <span id="manage-gradual-package-rollout">
 
 ## <a name="methods-for-managing-a-gradual-package-rollout"></a>Methoden zum Verwalten eines graduellen Paketrollouts
 
-Sie können die aktualisierten Pakete in einer App-Übermittlung graduell für einen bestimmten Prozentsatz der Kunden Ihrer App unter Windows 10 einführen. So können Sie Feedback und Analysedaten für die jeweiligen Pakete überwachen und vor einem umfassenden Rollout sicherstellen, dass das Update ordnungsgemäß funktioniert. Sie können den Rollout-Prozentwert für eine veröffentlichte Übermittlung ändern (oder die Aktualisierung anhalten), ohne dass Sie eine neue Übermittlung erstellen müssen. Weitere Informationen, einschließlich Informationen zum Aktivieren und Verwaltung eines graduellen paketrollouts im Partner Center finden Sie [in diesem Artikel](../publish/gradual-package-rollout.md).
+Sie können die aktualisierten Pakete in einer App-Übermittlung graduell für einen bestimmten Prozentsatz der Kunden Ihrer App unter Windows 10 einführen. So können Sie Feedback und Analysedaten für die jeweiligen Pakete überwachen und vor einem umfassenden Rollout sicherstellen, dass das Update ordnungsgemäß funktioniert. Sie können den Rollout-Prozentwert für eine veröffentlichte Übermittlung ändern (oder die Aktualisierung anhalten), ohne dass Sie eine neue Übermittlung erstellen müssen. Weitere Informationen und Anweisungen zum Aktivieren und Verwalten von einem graduellen paketrollouts im Partner Center finden Sie [in diesem Artikel](../publish/gradual-package-rollout.md).
 
 Um ein graduelles Paketrollout für eine App-Übermittlung programmgesteuert zu aktivieren, gehen Sie wie folgt vor, und verwenden Sie dabei Methoden in der Microsoft Store-Übermittlungs-API:
 
@@ -424,8 +424,8 @@ Diese Ressource enthält die Basiseintragsinformationen für eine App. Die Resso
 |  keywords                |  array       |  Ein Array von [keyword](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#keywords), um die Anzeige Ihrer App in Suchergebnissen zu unterstützen.    |
 |  licenseTerms                |    string     | Die optionalen [Lizenzbestimmungen](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#additional-license-terms) für Ihre App.     |
 |  privacyPolicy                |   String      |   Dieser Wert ist veraltet. Um festzulegen, oder die Datenschutzrichtlinien-URL für Ihre app zu ändern, müssen Sie dies auf der Seite " [Eigenschaften](../publish/enter-app-properties.md#privacy-policy-url) " im Partner Center tun. Sie können diesen Wert aus den Aufrufen an die Übermittlungs-API weglassen. Wenn Sie diesen Wert festlegen, wird er ignoriert werden.       |
-|  supportContact                |   string      |  Dieser Wert ist veraltet. Um festzulegen, oder die Support-Kontakt-URL oder e-Mail-Adresse für Ihre app zu ändern, müssen Sie dies auf der Seite " [Eigenschaften](../publish/enter-app-properties.md#support-contact-info) " im Partner Center tun. Sie können diesen Wert aus den Aufrufen an die Übermittlungs-API weglassen. Wenn Sie diesen Wert festlegen, wird er ignoriert werden.        |
-|  websiteUrl                |   string      |  Dieser Wert ist veraltet. Um festzulegen, oder die URL der Webseite für Ihre app zu ändern, müssen Sie dies auf der Seite " [Eigenschaften](../publish/enter-app-properties.md#website) " im Partner Center tun. Sie können diesen Wert aus den Aufrufen an die Übermittlungs-API weglassen. Wenn Sie diesen Wert festlegen, wird er ignoriert werden.      |    
+|  supportContact                |   string      |  Dieser Wert ist veraltet. Um festzulegen, oder den Support-Kontakt URL oder e-Mail-Adresse für Ihre app zu ändern, müssen Sie dies auf der Seite " [Eigenschaften](../publish/enter-app-properties.md#support-contact-info) " im Partner Center tun. Sie können diesen Wert aus den Aufrufen an die Übermittlungs-API weglassen. Wenn Sie diesen Wert festlegen, wird er ignoriert werden.        |
+|  websiteUrl                |   string      |  Dieser Wert ist veraltet. Um festzulegen, oder ändern Sie die URL der Webseite für Ihre app, müssen Sie dies auf der Seite " [Eigenschaften](../publish/enter-app-properties.md#website) " im Partner Center tun. Sie können diesen Wert aus den Aufrufen an die Übermittlungs-API weglassen. Wenn Sie diesen Wert festlegen, wird er ignoriert werden.      |    
 |  Beschreibung               |    string     |   Die [Beschreibung](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#description) für den App-Eintrag.   |     
 |  features               |    array     |  Ein Array von bis zu 20Zeichenfolgen, die die [Features](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#app-features) für Ihre App auflisten.     |
 |  releaseNotes               |  string       |  Die [Versionshinweise](https://msdn.microsoft.com/windows/uwp/publish/create-app-descriptions#release-notes) für Ihre App.    |
@@ -637,7 +637,7 @@ Diese Ressource enthält [Einstellungen für graduelle Paketrollouts](#manage-gr
 | fallbackSubmissionId    |  string   |  Die ID der Übermittlung, die die Kunden erhalten, die keine Pakete im Rahmen des graduellen Paketrollouts erhalten.   |          
 
 > [!NOTE]
-> Die Werte *PackageRolloutStatus* und *FallbackSubmissionId* werden durch Partner Center zugewiesen und sollen nicht vom Entwickler festgelegt werden. Wenn Sie diese Werte in einen Anforderungstext einfügen, werden diese Werte ignoriert.
+> Die *PackageRolloutStatus* und *FallbackSubmissionId* Werte werden von Partner Center zugewiesen und sollen nicht vom Entwickler festgelegt werden. Wenn Sie diese Werte in einen Anforderungstext einfügen, werden diese Werte ignoriert.
 
 <span id="trailer-object" />
 
@@ -724,7 +724,7 @@ Die folgenden Werte stellen die verfügbaren Preisstufen in der [Ressource für 
 |  Base               |   Das Preisniveau ist nicht festgelegt. Verwenden Sie den Basispreis für die App.      |     
 |  NotAvailable              |   Die App ist für die angegebene Region nicht verfügbar.    |     
 |  Free              |   Die App ist kostenlos.    |    
-|  Stufe*xxx*               |   Eine Zeichenfolge, die die Preisstufe für die App im Format **Stufe<em>xxxx</em>** angibt. Derzeit werden die folgenden Spannen von Preisstufen unterstützt:<br/><br/><ul><li>Wenn der Wert *IsAdvancedPricingModel* für die [Ressource für Preise](#pricing-object) **true** ist, sind die für Ihr Konto verfügbaren Werte für Preisstufen **Stufe1012** - **Stufe1424**.</li><li>Wenn der Wert *IsAdvancedPricingModel* für die [Ressource für Preise](#pricing-object) **false** ist, sind die für Ihr Konto verfügbaren Werte für Preisstufen **Stufe1012** - **Stufe1424**.</li></ul>Um festzustellen, die vollständige Tabelle der Preis Ebenen, die für Ihr Entwicklerkonto, einschließlich der marktspezifische Preise, die jede Ebene zugeordnet sind verfügbar sind, wechseln Sie zur Seite **Preise und Verfügbarkeit** für alle Ihre app-Übermittlungen im Partner Center und Klicken Sie auf den Link **Anzeigen der Tabelle** im Abschnitt **Märkte und angepasste Preise** (bei einigen entwicklerkonten dieser Link ist im Abschnitt **Preise** ).    |
+|  Stufe*xxx*               |   Eine Zeichenfolge, die die Preisstufe für die App im Format **Stufe<em>xxxx</em>** angibt. Derzeit werden die folgenden Spannen von Preisstufen unterstützt:<br/><br/><ul><li>Wenn der Wert *IsAdvancedPricingModel* für die [Ressource für Preise](#pricing-object) **true** ist, sind die für Ihr Konto verfügbaren Werte für Preisstufen **Stufe1012** - **Stufe1424**.</li><li>Wenn der Wert *IsAdvancedPricingModel* für die [Ressource für Preise](#pricing-object) **false** ist, sind die für Ihr Konto verfügbaren Werte für Preisstufen **Stufe1012** - **Stufe1424**.</li></ul>Die vollständige Tabelle der Preis Ebenen, die für Ihr Entwicklerkonto, einschließlich der marktspezifische Preise, jede Ebene zugeordnet sind, finden Sie auf der Seite **Preise und Verfügbarkeit** für eines Ihrer app-Übermittlungen im Partner Center und Klicken Sie auf den Link **Anzeigen der Tabelle** im Abschnitt **Märkte und angepasste Preise** (bei einigen entwicklerkonten dieser Link ist im Abschnitt **Preise** ).    |
 
 
 <span id="enterprise-licensing" />
@@ -734,7 +734,7 @@ Die folgenden Werte stellen die verfügbaren Preisstufen in der [Ressource für 
 Die folgenden Werte stellen das Verhalten der App für die Unternehmenslizenzierung dar. Weitere Informationen zu diesen Optionen finden Sie unter [Lizenzierungsoptionen für Unternehmen](https://msdn.microsoft.com/windows/uwp/publish/organizational-licensing).
 
 > [!NOTE]
-> Obwohl Sie die Lizenzierungsoptionen für Unternehmen für eine App-Übermittlung über der Übermittlungs-API konfigurieren können, können Sie diese API nicht verwenden, um Übermittlungen für [Volumenkäufe über den Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen](../publish/organizational-licensing.md) zu veröffentlichen. Um Übermittlungen an den Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen zu veröffentlichen, müssen Sie die Partner Center verwenden.
+> Obwohl Sie die Lizenzierungsoptionen für Unternehmen für eine App-Übermittlung über der Übermittlungs-API konfigurieren können, können Sie diese API nicht verwenden, um Übermittlungen für [Volumenkäufe über den Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen](../publish/organizational-licensing.md) zu veröffentlichen. Um Übermittlungen an den Microsoft Store für Unternehmen und Microsoft Store für Bildungseinrichtungen zu veröffentlichen, müssen Sie Partner Center verwenden.
 
 
 | Wert           |  Beschreibung      |

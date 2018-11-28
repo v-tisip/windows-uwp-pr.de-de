@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Karte, Standort, Ort, Geofencing
 ms.localizationpriority: medium
 ms.openlocfilehash: e29bcdb8c36cc8cbbb5de11d669da1249e10d706
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7714682"
+ms.locfileid: "7833021"
 ---
 # <a name="guidelines-for-geofencing-apps"></a>Richtlinien für Geofencing-Apps
 

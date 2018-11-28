@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
 ms.openlocfilehash: c0df06458bf70599be657fe2812b2fb3e2b44ed6
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7720136"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7845415"
 ---
 # <a name="make-your-app-localizable"></a>App lokalisierbar machen
 
@@ -96,7 +96,7 @@ Gehen Sie nicht davon aus, dass Parameter in allen Sprachen in der gleichen Reih
     string.Format("Every {0} {1}", monthName, dayNumber); // For example, "Every April 1".
 ```
 
-Die Formatzeichenfolge in diesem Beispiel ist für Englisch (USA) richtig. Sie ist jedoch nicht für Deutsch (Deutschland) geeignet, da in dieser Sprache Tag und Monat in umgekehrter Reihenfolge angezeigt werden. Stellen Sie sicher, dass der Übersetzer die Bedeutung der einzelnen Parameter kennt, so, dass sie die Reihenfolge der Formatelemente in einer Formatzeichenfolge stornieren können (z. B. "{1} {0}") entsprechend der Zielsprache.
+Die Formatzeichenfolge in diesem Beispiel ist für Englisch (USA) richtig. Sie ist jedoch nicht für Deutsch (Deutschland) geeignet, da in dieser Sprache Tag und Monat in umgekehrter Reihenfolge angezeigt werden. Stellen Sie sicher, dass der Übersetzer die Bedeutung der einzelnen Parameter kennt, damit sie die Reihenfolge der Formatelemente in einer Formatzeichenfolge stornieren können (z. B. "{1} {0}") entsprechend der Zielsprache.
 
 ## <a name="dont-over-localize"></a>Vermeiden Sie eine zu starke Lokalisierung.
 

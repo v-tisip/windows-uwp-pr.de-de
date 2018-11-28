@@ -7,11 +7,11 @@ keywords: windows10 s, always connected, einschränkungen, windows10 auf ARM
 ms.localizationpriority: medium
 redirect_url: https://docs.microsoft.com/en-us/windows/uwp/porting/apps-on-arm-troubleshooting-x86
 ms.openlocfilehash: 5fa05e1dfd04208ba547a692473fc3df136e6e4f
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7716252"
+ms.locfileid: "7832122"
 ---
 # <a name="limitations-of-apps-and-experiences-on-arm"></a>Einschränkungen von Apps und Oberflächen auf ARM
 Windows10 auf ARM weist die folgenden notwendigen Einschränkungen auf:

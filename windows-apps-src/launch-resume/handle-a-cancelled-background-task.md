@@ -11,11 +11,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: b888bf1373dfb0cac80881117570eb23e8802142
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7701847"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7845534"
 ---
 # <a name="handle-a-cancelled-background-task"></a>Behandeln einer abgebrochenen Hintergrundaufgabe
 
@@ -115,7 +115,7 @@ void ExampleBackgroundTask::OnCanceled(IBackgroundTaskInstance^ taskInstance, Ba
 }
 ```
 
-Registrieren Sie in der Hintergrundaufgabe **Run** -Methode die **OnCanceled** -Ereignishandlermethode, bevor Sie Arbeit beginnen. Für eine Hintergrundaufgabe innerhalb von Prozessen empfiehlt sich diese Registrierung im Rahmen der Anwendungsinitialisierung. Verwenden Sie z. B. die folgende Codezeile aus.
+Registrieren Sie in der Hintergrundaufgabe **Run** -Methode die **OnCanceled** -Ereignishandlermethode, bevor Sie Arbeit beginnen. Für eine Hintergrundaufgabe innerhalb von Prozessen empfiehlt sich diese Registrierung im Rahmen der Anwendungsinitialisierung. Beispielsweise verwenden Sie die folgende Codezeile aus.
 
 ```csharp
 taskInstance.Canceled += new BackgroundTaskCanceledEventHandler(OnCanceled);
@@ -133,7 +133,7 @@ taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &Exam
 
 Wenn eine Abbruchanforderung empfangen wird, muss die Methode für die Hintergrundverarbeitung angehalten und beendet werden, indem erkannt wird, dass **\_cancelRequested** auf **true** festgelegt wurde. Für in-Process-Hintergrundaufgaben bedeutet dies ein Zurückwechseln aus der **OnBackgroundActivated** -Methode. Für Out-of-Process-Hintergrundaufgaben bedeutet dies ein Zurückwechseln aus der **Run** -Methode.
 
-Ändern Sie den Code der Hintergrundaufgabenklasse, um die Kennzeichenvariable zu überprüfen, während die Hintergrundaufgabe ausgeführt wird. Wenn **\_cancelRequested** auf "true" ist, Arbeit Geschäftsvorgänge festgelegt wird.
+Ändern Sie den Code der Hintergrundaufgabenklasse, um die Kennzeichenvariable zu überprüfen, während die Hintergrundaufgabe ausgeführt wird. Wenn **\_cancelRequested** auf "true", nicht mehr Arbeit nicht fortgesetzt werden kann festgelegt wird.
 
 Das [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) enthält eine Überprüfung, die den regelmäßigen Zeitgeberrückruf anhält, wenn die Hintergrundaufgabe abgebrochen wird.
 
@@ -177,11 +177,11 @@ else
 ```
 
 > [!NOTE]
-> Das oben gezeigte Codebeispiel verwendet die [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797). [**Status**](https://msdn.microsoft.com/library/windows/apps/br224800) -Eigenschaft, die zum Aufzeichnen der Fortschritt der Hintergrundaufgabe verwendet wird. Der Fortschritt wird der App mithilfe der [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782)-Klasse gemeldet.
+> Das oben gezeigte Codebeispiel verwendet die [**IBackgroundTaskInstance**](https://msdn.microsoft.com/library/windows/apps/br224797). Die Eigenschaft [**Status**](https://msdn.microsoft.com/library/windows/apps/br224800) zum Aufzeichnen der Fortschritt der Hintergrundaufgabe verwendet wird. Der Fortschritt wird der App mithilfe der [**BackgroundTaskProgressEventArgs**](https://msdn.microsoft.com/library/windows/apps/br224782)-Klasse gemeldet.
 
 Ändern Sie die **Run** -Methode, damit nach dem Anhalten der Arbeit aufzeichnet, ob die Aufgabe ausgeführt oder abgebrochen wurde. Dieser Schritt gilt für Hintergrundaufgaben außerhalb von Prozessen, da eine Möglichkeit für die Kommunikation zwischen Prozessen haben müssen, wenn die Hintergrundaufgabe abgebrochen wurde. Für Hintergrundaufgaben innerhalb von Prozessen können Sie den Status einfach mit der Anwendung teilen, um anzugeben, dass die Aufgabe abgebrochen wurde.
 
-[Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) zeichnet den Status in "localsettings".
+Im [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) zeichnet den Status in "localsettings".
 
 ```csharp
 if ((_cancelRequested == false) && (_progress < 100))
@@ -257,11 +257,11 @@ else
 
 Sie können das [Beispiel zur Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) herunterladen, um diese Codebeispiele im Kontext von Methoden anzuzeigen.
 
-Zur Veranschaulichung zeigt der Beispielcode nur Teile der **Run** -Methode (und des rückruftimers) aus dem [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666).
+Zur Veranschaulichung zeigt der Beispielcode nur Teile der **Run** -Methode (und des rückruftimers) aus dem [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666)an.
 
 ## <a name="run-method-example"></a>Beispiel der Run-Methode
 
-Die **Run** -Methode und den timerrückruf-Code abgeschlossen ist, aus dem [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) sind unten aufgeführt, für den Kontext.
+Die vollständige **Run** -Methode und den timerrückruf-Code, aus dem [Beispiel für eine Hintergrundaufgabe](http://go.microsoft.com/fwlink/p/?LinkId=618666) sind unten aufgeführt, für den Kontext.
 
 ```csharp
 // The Run method is the entry point of a background task.

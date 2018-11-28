@@ -11,11 +11,11 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 265a99e7abbb9b2f4c3341f90aecc3661ce3ffbf
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7704028"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7850569"
 ---
 # <a name="attached-properties-overview"></a>Übersicht über angefügte Eigenschaften
 
@@ -125,7 +125,7 @@ Der Punkt im Namen einer angefügten Eigenschaft ist ein wichtiger Teil des Iden
 > [!WARNING]
 > Eine Beschränkung der XAML-Implementierung der Windows Runtime: Sie können keine benutzerdefinierten angefügten Eigenschaften animieren.
 
-- Wenn Sie eine angefügte Eigenschaft als Zieleigenschaft für einen Ressourcenverweis aus einer Ressourcendatei zu **x:Uid** angeben möchten, verwenden Sie eine spezielle Syntax, die eine vollqualifizierte **using:**-Deklaration in eckigen Klammern („\[\]“) im Codestil einfügt, um einen absichtlichen Umfangsumbruch zu erstellen. Beispielsweise wird vorausgesetzt, gibt es ein Element vorhanden ist `<TextBlock x:Uid="Title" />`, der Ressourcenschlüssel in der Ressourcendatei, die den **Canvas.Top** Wert für diese Instanz ausgerichtet ist, ist "Title.\[using:Windows.UI.Xaml.Controls\]Canvas.Top". Weitere Informationen zu Ressourcendateien und XAML finden Sie unter [Schnellstart: Übersetzen von UI-Ressourcen](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329).
+- Wenn Sie eine angefügte Eigenschaft als Zieleigenschaft für einen Ressourcenverweis aus einer Ressourcendatei zu **x:Uid** angeben möchten, verwenden Sie eine spezielle Syntax, die eine vollqualifizierte **using:**-Deklaration in eckigen Klammern („\[\]“) im Codestil einfügt, um einen absichtlichen Umfangsumbruch zu erstellen. Beispielsweise vorausgesetzt vorhanden ist ein Element `<TextBlock x:Uid="Title" />`, der Ressourcenschlüssel in der Ressourcendatei, die den **Canvas.Top** Wert für diese Instanz ausgerichtet ist, ist "Title.\[using:Windows.UI.Xaml.Controls\]Canvas.Top". Weitere Informationen zu Ressourcendateien und XAML finden Sie unter [Schnellstart: Übersetzen von UI-Ressourcen](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329).
 
 ## <a name="related-topics"></a>Verwandte Themen
 

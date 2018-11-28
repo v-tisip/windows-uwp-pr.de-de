@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 372fd491e329a468c273dd039c917eba5dc3e123
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7719214"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7844518"
 ---
 #  <a name="troubleshooting-porting-windowsphone-silverlight-to-uwp"></a>Problembehandlung bei der Portierung WindowsPhone Silverlight zu UWP
 
@@ -24,13 +24,13 @@ Wir empfehlen dringend, dieses Handbuch für das Portieren vollständig zu lesen
 
 XAML-Analyseausnahmen sind uU. schwierig zu diagnostizieren, insbesondere wenn keine sinnvollen Fehlermeldungen innerhalb der Ausnahme vorhanden sind. Stellen Sie sicher, dass der Debugger für die Erfassung von Ausnahmen (erste Chance) konfiguriert ist (um die Analyseausnahme möglichst früh zu erfassen). Möglicherweise können Sie die Ausnahmevariable im Debugger überprüfen, um zu ermitteln, ob das HRESULT oder die Meldung hilfreiche Informationen enthält. Überprüfen Sie auch das Visual Studio-Ausgabefenster auf Fehlermeldungen des XAML-Parsers.
 
-Wenn Ihre app beendet wird, und Sie wissen, dass während der XAML-markupanalyse ein Ausnahmefehler ausgelöst wurde, klicken Sie dann, die möglicherweise ein Verweis auf eine fehlende Ressource (d. h. eine Ressource, deren Schlüssel für WindowsPhone Silverlight-apps jedoch nicht für Windows 10 vorhanden ist Apps, z. B. einige **TextBlock** -Stil Systemschlüsseln). Es kann sich auch um eine Ausnahme handeln, die innerhalb eines **UserControl**-Elements, eines benutzerdefinierten Steuerelements oder eines benutzerdefinierten Layoutpanels ausgelöst wurde.
+Wenn Ihre app beendet wird, und Sie wissen, dass beim XAML-Markup-parsing eine unbehandelte Ausnahme ausgelöst wurde, klicken Sie dann, die möglicherweise ein Verweis auf eine fehlende Ressource (d. h. eine Ressource, deren Schlüssel für WindowsPhone Silverlight-apps jedoch nicht für Windows 10 vorhanden ist Apps, z. B. einige **TextBlock** -Stil Systemschlüsseln). Es kann sich auch um eine Ausnahme handeln, die innerhalb eines **UserControl**-Elements, eines benutzerdefinierten Steuerelements oder eines benutzerdefinierten Layoutpanels ausgelöst wurde.
 
 Als letzte Möglichkeit kann eine Binärdatei aufgeteilt werden. Entfernen Sie etwa die Hälfte des Markups von einer Seite, und führen Sie die App erneut aus. So können Sie feststellen, ob sich der Fehler in der entfernten Hälfte (die Sie jetzt in jedem Fall wiederherstellen sollten) oder in der *nicht* entfernten Hälfte befindet. Wiederholen Sie den Vorgang durch Teilen der Hälfte mit den Fehler solange, Sie das Problem eingegrenzt haben.
 
 ## <a name="targetplatformversion"></a>TargetPlatformVersion
 
-In diesem Abschnitt wird erläutert, was Sie tun müssen, wenn auf ein Windows 10-Projekt in Visual Studio öffnen der Meldung "Visual Studio-Update erforderlich. Mindestens ein Projekt erfordert ein Plattform-SDK (&lt;version&gt;), das entweder nicht installiert oder in einem zukünftigen Update von Visual Studio enthalten ist.“
+In diesem Abschnitt wird erläutert, was zu tun, wenn auf ein Windows 10-Projekt in Visual Studio öffnen der Meldung "Visual Studio-Update erforderlich. Mindestens ein Projekt erfordert ein Plattform-SDK (&lt;version&gt;), das entweder nicht installiert oder in einem zukünftigen Update von Visual Studio enthalten ist.“
 
 -   Ermitteln Sie zunächst die Versionsnummer des SDK für Windows 10, die Sie installiert haben. Navigieren Sie zu **C:\\Programme (x86)\\Windows Kits\\10\\Include\\&lt;versionfoldername&gt;**, und notieren Sie sich *&lt;versionfoldername&gt;* in der Vierernotation „Hauptversion.Nebenversion.Build.Revision“.
 -   Öffnen Sie Ihre Projektdatei zur Bearbeitung, und suchen Sie das `TargetPlatformVersion`-Element und das `TargetPlatformMinVersion`-Element. Bearbeiten Sie sie folgendermaßen: Ersetzen Sie *&lt;versionfoldername&gt;* durch die Versionsnummer in Vierernotation, die Sie auf dem Datenträger gefunden haben:

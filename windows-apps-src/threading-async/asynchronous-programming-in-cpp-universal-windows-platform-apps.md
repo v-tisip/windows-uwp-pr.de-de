@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Threads, asynchron, C++
 ms.localizationpriority: medium
 ms.openlocfilehash: 84f0da2f0b9642a817f4efb5b6d30a968c0803ff
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7699871"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7834728"
 ---
 # <a name="asynchronous-programming-in-ccx"></a>Asynchrone Programmierung in C++/CX
 > [!NOTE]
@@ -112,7 +112,7 @@ Das Beispiel oben illustriert vier zentrale Aspekte:
 
 -   Da die zweite Fortsetzung auf einem Wert basiert, wird sie nicht ausgeführt, wenn der mit dem Aufruf [**DeleteAsync**][deleteAsync] gestartete Vorgang eine Ausnahme auslöst.
 
-**Hinweis:** Aufgabenabfolgen ist nur eine der Methoden, um die **Task** -Klasse verwenden, um asynchrone Vorgänge verfassen. Sie können Vorgänge auch mit den Verknüpfungs- und Auswahloperatoren **&&** und **||** erstellen. Weitere Informationen finden Sie unter [Task-Parallelität (Konkurrenz-Runtime)][taskParallelism].
+**Hinweis:** Aufgabenabfolgen ist nur eine der Methoden, um die **Task** -Klasse verwenden, um asynchrone Vorgänge zu erstellen. Sie können Vorgänge auch mit den Verknüpfungs- und Auswahloperatoren **&&** und **||** erstellen. Weitere Informationen finden Sie unter [Task-Parallelität (Konkurrenz-Runtime)][taskParallelism].
 
 ## <a name="lambda-function-return-types-and-task-return-types"></a>Rückgabetypen für Lambda-Funktionen und Aufgaben
 Bei Aufgabenfortsetzungen ist der Rückgabetyp der Lambda-Funktion von einem **task**-Objekt umschlossen. Wenn die Lambda-Funktion den **double**-Typ zurückgibt, hat die Fortsetzungsaufgabe den **task<double>**-Typ. Das Aufgabenobjekt ist jedoch so konzipiert, dass es keine unnötig geschachtelten Rückgabetypen erzeugt. Wenn eine Lambda-Funktion den **IAsyncOperation<SyndicationFeed^>^**-Typ zurückgibt, gibt die Fortsetzung den **task<SyndicationFeed^>**-Typ und nicht **task<task<SyndicationFeed^>>** oder **task<IAsyncOperation<SyndicationFeed^>^>^** zurück. Dieser Vorgang wird als *asynchrones Entpacken* bezeichnet und sorgt dafür, dass der asynchrone Vorgang in der Fortsetzung vor dem Aufruf der nächsten Fortsetzung beendet wird.
