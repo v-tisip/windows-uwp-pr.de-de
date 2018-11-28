@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 076e4b0ddf30a23271bbb6b488f235f7233b28c2
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7700080"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7846058"
 ---
 # <a name="segoe-mdl2-icons"></a>Segoe MDL2-Symbole
 
@@ -43,7 +43,7 @@ Alle Glyphen in **Segoe MDL2 Assets** haben dieselbe feste Breite mit einer kons
 Viele der Symbole verfügen zudem über gespiegelte Formen, die in Sprachen verwendet werden können, in denen die Rechts-nach-Links-Ausrichtung verwendet wird, beispielsweise Arabisch, Farsi und Hebräisch.
 
 ## <a name="using-the-icons"></a>Verwenden der Symbole
-Wenn Sie eine app in c#/VB/C++- und XAML entwickeln, können Sie bestimmte Glyphen Segoe MDL2 Assets mit der [Symbol-Enumeration](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol). 
+Wenn Sie eine app in c#/VB/C++- und XAML entwickeln, können Sie bestimmte Glyphen der Segoe MDL2 Assets mit der [Symbol-Enumeration](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol). 
 
 ```xaml
 <SymbolIcon Symbol="GlobalNavigationButton"/>
@@ -55,7 +55,7 @@ Wenn Sie ein Glyphen der Schriftart **Segoe MDL2 Assets** verwenden möchten, da
 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;"/>
 ```
 
-Sie können auch die statische Ressource `SymbolThemeFontFamily` **Segoe MDL2 Assets**, statt die Schriftart anhand des Namens Zugriff auf:
+Sie können auch die statische Ressource `SymbolThemeFontFamily` auf **Segoe MDL2 Assets**, statt die Schriftart nach Namen anzugeben:
 ```xaml
 <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE700;"/>
 ```
@@ -3974,7 +3974,7 @@ Beachten Sie zudem, dass die Schriftart **Segoe MDL2-Ressourcen** viel mehr Symb
  </tr>
 <tr><td><img src="images/segoe-mdl/EF3B.png" width="32" height="32" alt="Replay" /></td>
   <td>EF3B</td>
-  <td>Replay</td>
+  <td>Wiedergabe</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EF3C.png" width="32" height="32" alt="Eyedropper" /></td>
   <td>EF3C</td>

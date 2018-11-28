@@ -7,11 +7,11 @@ ms.topic: article
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
 ms.localizationpriority: medium
 ms.openlocfilehash: 66284538c97aee1a11c27beaa483dcfe109b6615
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7699328"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7847912"
 ---
 # <a name="enable-apps-for-websites-using-app-uri-handlers"></a>Aktivieren von apps für Websites mit app-URI-Handlern
 
@@ -19,11 +19,11 @@ Apps für Websites ordnet Ihrer app mit einer Website, sodass Ihre app, wenn ein
 
 Um Web-zu-app Verlinkung zu aktivieren müssen:
 - Identifizieren Sie die URIs, die Ihrer App in der Manifestdatei behandeln wird.
-- Eine JSON-Datei, die Zuordnung zwischen Ihrer app und Ihre Website definiert. mit dem Paketfamiliennamen app im selben Stammverzeichnis wie die app-manifest Deklaration.
+- Eine JSON-Datei, die Zuordnung zwischen Ihrer app und Ihre Website definiert. mit dem app-Paketfamiliennamen ein, im selben Stammverzeichnis wie die app-manifest Deklaration.
 - Behandeln Sie die Aktivierung in der App
 
 > [!Note]
-> Ab Windows 10 Creators Update, wird unterstützten Links in Microsoft Edge geklickt die entsprechende app gestartet. Unterstützte geklickt hat, in anderen Browsern (z. B. Internet Explorer usw.), Links, die Sie in das Browsen beibehalten wird.
+> Ab Windows 10 Creators Update, wird unterstützten Links in Microsoft Edge geklickt die entsprechende app gestartet. Unterstützte Links, die in anderen Browsern (z. B. Internet Explorer usw.), geklickt hat, die Sie in das Browsen beibehalten wird.
 
 ## <a name="register-to-handle-http-and-https-links-in-the-app-manifest"></a>Registrieren Sie sich, um HTTP- und Https-Links im App-Manifest zu behandeln.
 
@@ -76,7 +76,7 @@ Das obige für eine JSON-Datei veranschaulicht die Verwendung von Platzhaltern. 
 | **\***       | Repräsentiert eine beliebige Teilzeichenfolge      |
 | **?**        | Steht für ein einzelnes Zeichen |
 
-Angenommen, `"excludePaths" : [ "/news/*", "/blog/*" ]` im obigen Beispiel wird Ihre app alle Pfade, die mit Ihrer Website Adresse (z. B. msn.com), **mit Ausnahme von** Pfade unter beginnen unterstützen `/news/` und `/blog/`. **msn.com/weather.html** wird unterstützt, aber nicht ****msn.com/news/topnews.html****.
+Angenommen, `"excludePaths" : [ "/news/*", "/blog/*" ]` im obigen Beispiel wird Ihre app alle Pfade, die mit **Ihrer Website Adresse (z. B. msn.com)** Pfade unter beginnen unterstützen `/news/` und `/blog/`. **msn.com/weather.html** wird unterstützt, aber nicht ****msn.com/news/topnews.html****.
 
 ### <a name="multiple-apps"></a>Mehrere Apps
 
@@ -166,7 +166,7 @@ Testen Sie die Konfiguration Ihrer App und, indem Sie dieses Werkzeug mit folgen
 
 Wenn das Tool keine nichts zurückgibt, funktioniert die Überprüfung für diese Datei beim Hochladen. Wenn ein Fehlercode vorhanden ist, wird es nicht funktionieren.
 
-Sie können den folgenden Registrierungsschlüssel Pfad Abgleich für quergeladene apps als Teil des lokalen Überprüfung erzwingen aktivieren:
+Sie können den folgenden Registrierungsschlüssel zwingen Pfad Abgleich für quergeladene apps als Teil des lokalen Überprüfung aktivieren:
 
 `HKCU\Software\Classes\LocalSettings\Software\Microsoft\Windows\CurrentVersion\
 AppModel\SystemAppData\YourApp\AppUriHandlers`
@@ -198,4 +198,4 @@ Wenn Sie der protocol activation logic zu folgen möchten, legen Sie einen Halte
 [Web-zu-App-Beispielprojekt](https://github.com/project-rome/AppUriHandlers/tree/master/NarwhalFacts)
 [windows.protocol-Registrierung](https://msdn.microsoft.com/library/windows/apps/br211458.aspx)
 [Behandeln der URI-Aktivierung](https://msdn.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
-[Zuordnung starten-Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) veranschaulicht, wie die LaunchUriAsync() API verwenden.
+[Zuordnung starten Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) veranschaulicht, wie Sie des LaunchUriAsync() API.
