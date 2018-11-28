@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10 S, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a8b17697612d50d10ecfbb07388207527a4cb39b
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7708670"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7840906"
 ---
 # <a name="test-your-windows-app-for-windows-10-in-s-mode"></a><span data-ttu-id="eda4e-103">Testen Ihrer Windows-App für Windows 10 im S Modus</span><span class="sxs-lookup"><span data-stu-id="eda4e-103">Test your Windows app for Windows 10 in S mode</span></span>
 

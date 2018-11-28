@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store Services SDK
 ms.localizationpriority: medium
 ms.openlocfilehash: 8394a1a44173541e8982a660591e84b25b985205
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7718451"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7853057"
 ---
 # <a name="engage-customers-with-the-microsoft-store-services-sdk"></a><span data-ttu-id="60ef4-103">Kundengewinnung mit Microsoft Store Services SDK</span><span class="sxs-lookup"><span data-stu-id="60ef4-103">Engage customers with the Microsoft Store Services SDK</span></span>
 

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP, Popup, benutzerdefiniertes Audio, Benachrichtigungen, Audio, Sound
 ms.localizationpriority: medium
 ms.openlocfilehash: 982340901d13f17945c1e7ffa11099f52732f619
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7693571"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7842790"
 ---
 # <a name="custom-audio-on-toasts"></a><span data-ttu-id="a65aa-103">Benutzerdefiniertes Audio auf Popups</span><span class="sxs-lookup"><span data-stu-id="a65aa-103">Custom audio on toasts</span></span>
 

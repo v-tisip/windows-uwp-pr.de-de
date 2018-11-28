@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows10, UWP, App-Installer, AppInstaller, querladen, zusammengehörig, optionale Pakete
 ms.localizationpriority: medium
 ms.openlocfilehash: 515beebd55049ecb4d0c6747fa7d37e76577ef7f
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7708120"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7838508"
 ---
 # <a name="installing-uwp-apps-from-a-web-page"></a><span data-ttu-id="430d4-104">Installieren von UWP-Apps von einer Webseite</span><span class="sxs-lookup"><span data-stu-id="430d4-104">Installing UWP apps from a web page</span></span>
 

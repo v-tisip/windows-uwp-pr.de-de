@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 970fbcef984f28e779ea7c133de95f7f7f99be8d
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7695485"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7840141"
 ---
 # <a name="detect-faces-in-images-or-videos"></a><span data-ttu-id="b72eb-105">Erkennen von Gesichtern in Bildern oder Videos</span><span class="sxs-lookup"><span data-stu-id="b72eb-105">Detect faces in images or videos</span></span>
 

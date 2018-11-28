@@ -8,11 +8,11 @@ keywords: windows10, UWP
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 ms.localizationpriority: medium
 ms.openlocfilehash: 008dce5ffc3824d49830bc368a3eaa9d55b7d229
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7700830"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7833269"
 ---
 # <a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a><span data-ttu-id="9f396-103">Windows-Apps-Konzeptzuordnung für Android- und iOS-Entwickler</span><span class="sxs-lookup"><span data-stu-id="9f396-103">Windows apps concept mapping for Android and iOS developers</span></span>
 

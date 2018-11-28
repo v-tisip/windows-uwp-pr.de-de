@@ -1,19 +1,17 @@
 ---
-author: jnHs
 Description: The Microsoft Store offers Mobile Operator Billing as a payment method for mobile operators who support this capability.
 title: Abrechnung über den Mobilfunkanbieter
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
-ms.author: wdg-dev-content
 ms.date: 10/02/2018
 ms.topic: article
 keywords: Windows10, UWP, Mobilfunkanbieter, mobile Abrechnung, Abrechnung über den Mobilfunkanbieter
 ms.localizationpriority: medium
-ms.openlocfilehash: ff02cfc287bc1d88485a713390e233fc7a742a01
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: ca3d362267aabc6120173a029db2b48c65b7d249
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7574911"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7845326"
 ---
 # <a name="mobile-operator-billing"></a><span data-ttu-id="b3706-103">Abrechnung über den Mobilfunkanbieter</span><span class="sxs-lookup"><span data-stu-id="b3706-103">Mobile operator billing</span></span>
 

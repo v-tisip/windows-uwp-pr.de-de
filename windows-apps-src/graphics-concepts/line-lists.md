@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 43013dc820c0f0f67df2e9502d3c57c77e03f250
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7715878"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7837246"
 ---
 # <a name="line-lists"></a><span data-ttu-id="a5c87-106">Zeilenlisten</span><span class="sxs-lookup"><span data-stu-id="a5c87-106">Line lists</span></span>
 
