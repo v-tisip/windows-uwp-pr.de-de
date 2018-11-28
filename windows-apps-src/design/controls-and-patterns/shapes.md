@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a576add7a080874fb0f042748bef7472e04ac817
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7706031"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7848308"
 ---
 # <a name="draw-shapes"></a><span data-ttu-id="7f7a5-105">Zeichnen von Formen</span><span class="sxs-lookup"><span data-stu-id="7f7a5-105">Draw shapes</span></span>
 

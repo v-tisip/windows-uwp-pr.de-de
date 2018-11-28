@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Karte, Position, Kartendienste
 ms.localizationpriority: medium
 ms.openlocfilehash: aea553a46357a26028848db5ff0e9b5debbeae56
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7715116"
+ms.locfileid: "7836914"
 ---
 # <a name="maps-and-location-overview"></a><span data-ttu-id="94cd4-105">Übersicht über Karten und Position</span><span class="sxs-lookup"><span data-stu-id="94cd4-105">Maps and location overview</span></span>
 

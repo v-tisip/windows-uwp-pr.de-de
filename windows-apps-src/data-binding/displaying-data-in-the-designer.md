@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e18be702c1b2bbd9ce1831b6991324896769192
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7715360"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7852281"
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a><span data-ttu-id="eeb51-104">Beispieldaten für die Entwurfsoberfläche und Prototyperstellung</span><span class="sxs-lookup"><span data-stu-id="eeb51-104">Sample data on the design surface, and for prototyping</span></span>
 =============================================================================================

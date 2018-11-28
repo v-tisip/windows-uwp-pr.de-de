@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Add-On-Käufe
 ms.localizationpriority: medium
 ms.openlocfilehash: cd7e907994943dbce83d195e80a15770833f7e4b
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7703334"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7839385"
 ---
 # <a name="get-add-on-acquisitions"></a><span data-ttu-id="1e06a-104">Abrufen von Add-On-Käufen</span><span class="sxs-lookup"><span data-stu-id="1e06a-104">Get add-on acquisitions</span></span>
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: 8781cbffcb8d5c433c58865fba38cd65369b5c49
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7707362"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7853127"
 ---
 # <a name="web-authentication-broker"></a><span data-ttu-id="b8f8b-104">Webauthentifizierungsbroker</span><span class="sxs-lookup"><span data-stu-id="b8f8b-104">Web authentication broker</span></span>
 

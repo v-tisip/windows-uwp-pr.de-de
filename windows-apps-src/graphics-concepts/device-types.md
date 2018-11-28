@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ddb1dc0e42f88cf65464841388b9addfb4b5748
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7715755"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7851184"
 ---
 # <a name="device-types"></a><span data-ttu-id="6d834-104">Gerätetypen</span><span class="sxs-lookup"><span data-stu-id="6d834-104">Device types</span></span>
 

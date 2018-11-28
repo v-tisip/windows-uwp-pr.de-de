@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 36cd006b4608d82999281ebd407fd32e168ae38b
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7695973"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7839990"
 ---
 # <a name="adaptive-streaming-with-playready"></a><span data-ttu-id="e50e6-104">Adaptives Streaming mit PlayReady</span><span class="sxs-lookup"><span data-stu-id="e50e6-104">Adaptive streaming with PlayReady</span></span>
 

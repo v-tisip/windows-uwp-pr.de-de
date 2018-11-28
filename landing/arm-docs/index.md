@@ -1,6 +1,6 @@
 ---
 layout: LandingPage
-description: Diese Seite enthält die Informationen zum Entwickeln von ARM64 win32- und UWP-apps beginnen.
+description: Diese Seite enthält die Informationen zu den ersten Schritten Entwickeln von ARM64 Win32- und UWP-apps.
 title: Windows10 auf ARM
 author: msatranjr
 ms.author: misatran
@@ -9,14 +9,14 @@ ms.localizationpriority: medium
 ms.topic: article
 keywords: Windows 10 auf ARM, ARM, ARM64 win32-apps erstellen, Entwickeln von ARM64-Treibern
 ms.openlocfilehash: 83f2a0d03040a682e6965558174294fe27e21bfb
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7700600"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7844304"
 ---
 # <a name="windows-10-on-arm"></a>Windows10 auf ARM
-Windows 10 auf PCs mit ARM-Prozessoren ausgeführt wird. Diese Seite enthält die Informationen für Sie erfahren mehr über die Plattform und erste Schritte beim Entwickeln von apps. Wir empfehlen Ihnen, Ihr Feedback über die Links am unteren Rand der Seite bereitzustellen.
+Windows 10 auf PCs mit ARM-Prozessoren ausgeführt wird. Diese Seite enthält die Informationen für Sie erfahren mehr über die Plattform und erste Schritte beim Entwickeln von apps. Wir empfehlen Ihnen, Ihr Feedback zu geben, über die Links am unteren Rand der Seite.
 
 ## <a name="introductory-videos"></a>Einführende videos
 Sehen Sie sich, und erfahren Sie, wie Windows 10 auf ARM ausgeführt wird.
@@ -24,20 +24,20 @@ Sehen Sie sich, und erfahren Sie, wie Windows 10 auf ARM ausgeführt wird.
 <ul class="cols cols3">
     <li>
         <a href="https://youtu.be/OZtVBDeVqCE"><img alt="Building ARM64 Win32 C++ apps video" src="./images/Arm64Scaled.png" /></a>
-        <h3>Entwickeln von ARM64 Win32-C++-Apps</h3><p>Erfahren Sie, wie die ARM64-Tools für Visual Studio installieren. Dann werden wir Sie durch die Schritte zum Erstellen und Kompilieren eines neuen Projekts ARM 64 geführt.</p>
+        <h3>Entwickeln von ARM64 Win32-C++-Apps</h3><p>Erfahren Sie, wie die ARM64-Tools für Visual Studio installieren. Dann werden wir Sie durch die Schritte zum Erstellen und Kompilieren ein neues Projekt ARM 64 geführt.</p>
     </li>
     <li>
         <a href="https://channel9.msdn.com/Events/Build/2018/BRK2438"><img alt="Build 2018 Windows 10 on ARM for developers" src="./images/buildVideoStillScaled.png" /></a>
-        <h3>Build 2018 Windows 10 auf ARM für Entwickler</h3><p>Erfahren Sie mehr über die Windows 10 on ARM-Geräte, wie das besondere X86 Emulation funktioniert, und schließlich zum Übermitteln und Entwickeln von apps für Windows 10 auf ARM. Wir werden angezeigt, wie ARM64-apps für Desktop und UWP erstellt werden.</p>
+        <h3>Build 2018 Windows 10 auf ARM für Entwickler</h3><p>Erfahren Sie mehr über die Windows 10 on ARM-Geräte, wie das besondere X86 Emulation funktioniert, und schließlich zum Übermitteln und Entwickeln von apps für Windows 10 auf ARM. Wir werden angezeigt, wie ARM64-apps für den Desktop und UWP erstellt werden.</p>
     </li>
     <li>
         <a href="https://channel9.msdn.com/Events/Ch9Live/Windows-Community-Standup/Kevin-Gallo-January-2018"><img alt="Community standup video featuring Kevin Gallo" src="./images/communityStandupStillScaled.png" /></a>
-        <h3>Windows-Community, die mit Kevin Gallo kurze</h3><p>Erhalten Sie umfangreiche Kenntnisse der Ausführung von Windows 10 auf ARM64, und rufen Sie ein Gefühl für apps und Erfahrungen auf dieser Plattform.</p>
+        <h3>Windows-Community, die mit Kevin Gallo kurze</h3><p>Erhalten Sie Kennenlernen der Ausführung von Windows 10 auf ARM64, und rufen Sie ein Gefühl für apps und Erfahrungen auf dieser Plattform.</p>
     </li>
 </ul>
 
 ## <a name="understanding-windows-10-on-arm"></a>Grundlegendes zu Windows 10 auf ARM
-Rufen Sie die Plattform wissen, indem Sie diese Ressourcen ansehen ab.
+Einführung in die Plattform anhand der in den folgenden Ressourcen.
 
 <ul class="cardsF panelContent cols cols2">
     <li>
@@ -50,7 +50,7 @@ Rufen Sie die Plattform wissen, indem Sie diese Ressourcen ansehen ab.
                 </a>
                 <div class="cardText">
                     <h3>Erste Schritte mit Windows 10 auf ARM</h3>
-                    <p class="x-hidden-focus">Sehen Sie sich die Dokumentation für die Grundlagen verfügen.</p>
+                    <p class="x-hidden-focus">Sehen Sie sich über die Grundlagen der Dokumentation.</p>
                 </div>
             </div>
         </div>
@@ -89,7 +89,7 @@ Rufen Sie die Plattform wissen, indem Sie diese Ressourcen ansehen ab.
 </ul>
 
 ## <a name="developing-for-windows-10-on-arm"></a>Entwickeln für Windows 10 auf ARM
-Starten Sie Anpassen Ihrer apps auf Windows 10 auf ARM, und nutzen Sie die verfügbaren Features vorhanden.  
+Starten Sie Anpassen Ihrer apps auf Windows 10 auf ARM, und nutzen Sie die verfügbaren Funktionen vorhanden.  
 
 <ul class="cardsF panelContent cols cols3">
     <li>
@@ -117,7 +117,7 @@ Starten Sie Anpassen Ihrer apps auf Windows 10 auf ARM, und nutzen Sie die verf�
                 </a>
                 <div class="cardText">
                     <h3>UWP-apps auf ARM</h3>
-                    <p class="x-hidden-focus">Befolgen Sie diese Richtlinien, um Ihre universelle Windows-Plattform (UWP) apps für Erfolg festlegen.</p>                    
+                    <p class="x-hidden-focus">Befolgen Sie diese Richtlinien, um Ihre universelle Windows-Plattform (UWP) apps für Erfolg festgelegt.</p>                    
                 </div>
             </div>
         </div>
@@ -132,7 +132,7 @@ Starten Sie Anpassen Ihrer apps auf Windows 10 auf ARM, und nutzen Sie die verf�
                 </a>
                 <div class="cardText">
                     <h3>Debuggen auf ARM</h3>
-                    <p class="x-hidden-focus">Rufen Sie Ihren Code auf Windows 10 auf ARM reibungslos ausgeführt.</p>
+                    <p class="x-hidden-focus">Rufen Sie Ihren Code reibungslos unter Windows 10 auf ARM.</p>
                 </div>
             </div>
         </div>
@@ -148,7 +148,7 @@ Starten Sie Anpassen Ihrer apps auf Windows 10 auf ARM, und nutzen Sie die verf�
                 </a>
                 <div class="cardText">
                     <h3>Entwickeln von ARM64-Treibern mit dem WDK</h3>
-                    <p class="x-hidden-focus">Kompilieren Sie Ihre Treiber für ARM64 neu.</p>
+                    <p class="x-hidden-focus">Kompilieren Sie die Treiber für ARM64 neu.</p>
                 </div>
             </div>
         </div>
@@ -164,7 +164,7 @@ Starten Sie Anpassen Ihrer apps auf Windows 10 auf ARM, und nutzen Sie die verf�
                 </a>
                 <div class="cardText">
                     <h3>X86 apps auf ARM</h3>
-                    <p class="x-hidden-focus">Entwickeln Sie Ihre X86 apps, die am besten für Windows 10 auf ARM ausführen.</p>
+                    <p class="x-hidden-focus">Entwickeln Sie Ihre X86 apps optimal für Windows 10 auf ARM ausführen.</p>
                 </div>
             </div>
         </div>
@@ -192,7 +192,7 @@ Starten Sie Anpassen Ihrer apps auf Windows 10 auf ARM, und nutzen Sie die verf�
 </ul>-->
 
 ## <a name="let-us-know-if-you-have-feedback"></a>Lassen Sie uns wissen Sie, wenn Sie feedback
-Wir sind ständig unser Produkt durch Nutzung von Feedback von unseren vorhandenen Kunden und verbessert. Wenn Sie eine Vorstellung haben, sind auf ein Problem nicht verlassen oder genau wie großartig freigeben möchten ist Ihre Erfahrung diese Links Ihnen helfen.
+Wir sind ständig unser Produkt durch Nutzung von Feedback von Ihnen und unsere Kunden verbessert. Wenn Sie eine Vorstellung haben, sind auf ein Problem nicht verlassen oder genau wie großartig freigeben möchten ist Ihre Erfahrung diese Links Ihnen helfen.
 
 <ul class="cardsM cols cols3">
 <li>
@@ -209,7 +209,7 @@ Wir sind ständig unser Produkt durch Nutzung von Feedback von unseren vorhanden
             <img class="cardImage" role="presentation" alt="Report a bug icon" src="/media/common/i_mail.svg" data-linktype="external" />
             <div class="cardText">
                 <h3>Melden eines Fehlers</h3>
-                <p>Gefunden einen Fehler in unsere Plattform? Eine e-Mail mit den Details.</p>
+                <p>Gefunden einen Fehler in unserer Plattform? Eine e-Mail mit den Details.</p>
             </div>
         </a>
     </li>

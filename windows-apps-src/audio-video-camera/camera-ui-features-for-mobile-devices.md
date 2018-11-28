@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 1bf27de9c9b1bce2b35918b2a9d1357d2f3ba20b
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7716568"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7852177"
 ---
 #<a name="camera-ui-features-for-mobile-devices"></a><span data-ttu-id="5590c-104">Kamera-UI-Features für mobile Geräte</span><span class="sxs-lookup"><span data-stu-id="5590c-104">Camera UI features for mobile devices</span></span>
 

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, app-Installer, AppInstaller, querladen, im Zusammenhang mit festgelegten optionale Pakete, IIS-Server
 ms.localizationpriority: medium
 ms.openlocfilehash: b447093ba54f2c979d35793a6a4eaa7538ee4892
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7716950"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7849565"
 ---
 # <a name="install-a-uwp-app-from-an-iis-server"></a><span data-ttu-id="1ff89-104">Installieren einer UWP-App von einem IIS-Server</span><span class="sxs-lookup"><span data-stu-id="1ff89-104">Install a UWP app from an IIS server</span></span>
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 11f68d9dd912c92ff7de8b861f576e8f0c4b4dde
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7710745"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7843829"
 ---
 # <a name="handle-app-prelaunch"></a><span data-ttu-id="7e071-104">Behandeln des Vorabstarts von Apps</span><span class="sxs-lookup"><span data-stu-id="7e071-104">Handle app prelaunch</span></span>
 

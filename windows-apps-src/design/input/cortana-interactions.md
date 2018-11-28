@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: cf8b8c095f96217375eb05d0128a31fc28ab47df
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/27/2018
-ms.locfileid: "7715241"
+ms.locfileid: "7838704"
 ---
 # <a name="cortana-interactions-in-uwp-apps"></a><span data-ttu-id="f107f-103">Cortana-Interaktionen in UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="f107f-103">Cortana interactions in UWP apps</span></span>
 

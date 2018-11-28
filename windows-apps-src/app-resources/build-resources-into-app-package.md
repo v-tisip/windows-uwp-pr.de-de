@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: 8bf2d34bc3dae20750f66c9116499a17444b798c
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7701160"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7839808"
 ---
 # <a name="build-resources-into-your-app-package-instead-of-into-a-resource-pack"></a><span data-ttu-id="a5122-103">Integrieren von Ressourcen im App-Paket und nicht in einem Ressourcenpaket</span><span class="sxs-lookup"><span data-stu-id="a5122-103">Build resources into your app package, instead of into a resource pack</span></span>
 
