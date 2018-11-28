@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Directx, direct3d 9, 11, direct3d, Änderungen
 ms.localizationpriority: medium
 ms.openlocfilehash: ecdd8591efb3920d2cfe333aa8ec02c65c1a1465
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7827682"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7965317"
 ---
 # <a name="important-changes-from-direct3d-9-to-direct3d-11"></a><span data-ttu-id="f54f3-104">Wichtige Änderungen beim Wechsel von Direct3D 9 zu Direct3D 11</span><span class="sxs-lookup"><span data-stu-id="f54f3-104">Important changes from Direct3D 9 to Direct3D 11</span></span>
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, uwp, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: de34411d9c7d226857214472e691dd6b41f10a18
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7852749"
+ms.locfileid: "7966870"
 ---
 # <a name="how-the-resource-management-system-matches-and-chooses-resources"></a><span data-ttu-id="75a66-103">Wie das Ressourcenverwaltungssystem Ressourcen zuordnet und auswählt</span><span class="sxs-lookup"><span data-stu-id="75a66-103">How the Resource Management System matches and chooses resources</span></span>
 <span data-ttu-id="75a66-104">Wenn eine Ressource angefordert wird, kann es mehrere Kandidaten geben, für die sich in einem gewissen Maße eine Übereinstimmung mit dem aktuellen Ressourcenkontext ergibt.</span><span class="sxs-lookup"><span data-stu-id="75a66-104">When a resource is requested, there may be several candidates that match the current resource context to some degree.</span></span> <span data-ttu-id="75a66-105">Vom Ressourcenverwaltungssystem werden alle Kandidaten analysiert, und der beste Kandidat für die Rückgabe wird ermittelt.</span><span class="sxs-lookup"><span data-stu-id="75a66-105">The Resource Management System will analyze all of the candidates and determine the best candidate to return.</span></span> <span data-ttu-id="75a66-106">Dazu werden alle Qualifizierer einbezogen, um eine Einstufung aller Kandidaten zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="75a66-106">This is done by taking all qualifiers into consideration to rank all of the candidates.</span></span>

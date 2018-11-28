@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d63c7465234b6aebe876259ee095a183571946b2
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7842730"
+ms.locfileid: "7965736"
 ---
 # <a name="accessibility-checklist"></a><span data-ttu-id="82da7-103">Prüfliste für die Barrierefreiheit</span><span class="sxs-lookup"><span data-stu-id="82da7-103">Accessibility checklist</span></span>
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c525c79287a81421c68fca5bed3393b4d230d8a
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7720053"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7965756"
 ---
 # <a name="international-fonts"></a><span data-ttu-id="423e6-103">Internationale Schriften</span><span class="sxs-lookup"><span data-stu-id="423e6-103">International fonts</span></span>
 

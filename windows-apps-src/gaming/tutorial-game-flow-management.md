@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Spiele, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: c6d13b848a9e5d2dfc145431f732187c35c46ab6
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7692328"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7971780"
 ---
 # <a name="game-flow-management"></a><span data-ttu-id="defd3-104">Spielablaufverwaltung</span><span class="sxs-lookup"><span data-stu-id="defd3-104">Game flow management</span></span>
 

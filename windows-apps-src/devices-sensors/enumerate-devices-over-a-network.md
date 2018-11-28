@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e80d16b3338291c756b543018812e9db1370a4ac
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7698329"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7964700"
 ---
 # <a name="enumerate-devices-over-a-network"></a><span data-ttu-id="c2db8-104">Auflisten von Geräten über ein Netzwerk</span><span class="sxs-lookup"><span data-stu-id="c2db8-104">Enumerate devices over a network</span></span>
 

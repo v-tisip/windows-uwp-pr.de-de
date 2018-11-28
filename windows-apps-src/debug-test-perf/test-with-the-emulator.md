@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 3ee38abfb28aad8d6a3ce073a947580b3df29593
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7830101"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7993296"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a><span data-ttu-id="73d01-104">Tests mit dem Emulator für Microsoft Windows10Mobile</span><span class="sxs-lookup"><span data-stu-id="73d01-104">Test with the Microsoft Emulator for Windows 10 Mobile</span></span>
 

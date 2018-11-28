@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: c9716483d7df51c2c02d2f9c88e5a4cec05437cc
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7700388"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7993616"
 ---
 # <a name="free-memory-when-your-app-moves-to-the-background"></a><span data-ttu-id="7162e-104">Geben Sie Speicher frei, wenn Ihre App in den Hintergrund verschoben wird</span><span class="sxs-lookup"><span data-stu-id="7162e-104">Free memory when your app moves to the background</span></span>
 

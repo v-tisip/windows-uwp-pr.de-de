@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Directx, Eingabelatenz
 ms.localizationpriority: medium
 ms.openlocfilehash: 537dd6e9d3f300666a0692b66f422ce00dd68460
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7708841"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7993163"
 ---
 #  <a name="optimize-input-latency-for-universal-windows-platform-uwp-directx-games"></a><span data-ttu-id="a1d7b-104">Optimieren der Eingabelatenz für UWP-DirectX-Spiele (Universelle Windows-Plattform)</span><span class="sxs-lookup"><span data-stu-id="a1d7b-104">Optimize input latency for Universal Windows Platform (UWP) DirectX games</span></span>
 
