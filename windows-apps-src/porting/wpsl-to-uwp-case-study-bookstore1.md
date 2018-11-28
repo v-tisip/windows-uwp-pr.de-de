@@ -7,16 +7,16 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 19045e84f1ca3396321dd4f8c4e76da24dc9a588
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7691411"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7836405"
 ---
 # <a name="windowsphone-silverlight-to-uwp-case-study-bookstore1"></a>WindowsPhone Silverlight zu UWP – Fallstudie: Bookstore1
 
 
-Dieses Thema enthält eine Fallstudie für das Portieren einer sehr einfachen WindowsPhone Silverlight-app zu einer app Windows10Universal Windows-Plattform (UWP). Mit Windows 10, können Sie ein einzelnes app-Paket erstellen, die Ihre Kunden auf einer Vielzahl von Geräten installieren können und was wir in dieser Fallstudie tun. Weitere Informationen finden Sie unter [Anleitung für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn894631).
+Dieses Thema enthält eine Fallstudie für das Portieren einer sehr einfachen WindowsPhone Silverlight-app zu einer app Windows10Universal Windows-Plattform (UWP). Mit Windows 10, können Sie ein einzelnes app-Paket erstellen, die Ihre Kunden auf einer Vielzahl von Geräten installieren können, und was wir in dieser Fallstudie tun. Weitere Informationen finden Sie unter [Anleitung für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
 Die portierte App besteht aus einem **ListBox**-Element, das an ein Ansichtsmodell gebunden ist. Das Ansichtsmodell verfügt über eine Liste mit Büchern, für die Titel, Autor und Bucheinband angezeigt werden. Für die Bucheinbandbilder ist **Buildvorgang** auf **Inhalt** und **In Ausgabeverzeichnis kopieren** auf **Nicht kopieren** festgelegt.
 
@@ -26,7 +26,7 @@ Die vorherigen Themen in diesem Abschnitt beschreiben die Unterschiede zwischen 
 
 ## <a name="downloads"></a>Downloads
 
-[Download der Bookstore1WPSL8 WindowsPhone-Silverlight-app](http://go.microsoft.com/fwlink/?linkid=517053).
+[Download der Bookstore1WPSL8 WindowsPhone Silverlight-app](http://go.microsoft.com/fwlink/?linkid=517053).
 
 [Laden der Bookstore1Universal\_10 Windows 10-app](http://go.microsoft.com/fwlink/?linkid=532950).
 
@@ -78,7 +78,7 @@ Die Ansicht und das Ansichtsmodell arbeiten ordnungsgemäß zusammen, und das **
 
 Standardmäßig werden alle Ausrichtungen unterstützt. Die WindowsPhone-Silverlight-app explizit auf die Ausrichtung Hochformat beschränkt, jedoch so Schulden \#1 1 und \#2 bezahlt werden, indem Sie in der app-Paketmanifest in das neue Projekt **Hochformat** unter **unterstützte Ausrichtungen**überprüfen.
 
-Für diese App zählt Element\#3 nicht zu den Schulden, da die Statusleiste (ehemals die Taskleiste) standardmäßig angezeigt wird. Für Elemente \#4 und \#5 müssen wir vier universelle Windows-Plattform (UWP)- **TextBlock** -Stile zu suchen, die die WindowsPhone Silverlight-Stilen entsprechen, die wir verwenden. Sie können die WindowsPhone Silverlight-app im Emulator ausführen und vergleichen es Side-by-Side mit der Abbildung im Abschnitt [Text](wpsl-to-uwp-porting-xaml-and-ui.md) . Aufgrund dieser Vorgehensweise und anhand der Eigenschaften der WindowsPhone Silverlight-Systemstile können wir in der folgenden Tabelle erstellen.
+Für diese App zählt Element\#3 nicht zu den Schulden, da die Statusleiste (ehemals die Taskleiste) standardmäßig angezeigt wird. Für Elemente \#4 und \#5 müssen wir vier universelle Windows-Plattform (UWP)- **TextBlock** -Stile zu suchen, die die WindowsPhone Silverlight-Stilen entsprechen, die wir verwenden. Sie können die WindowsPhone Silverlight-app im Emulator ausführen und vergleichen es Side-by-Side mit der Abbildung im Abschnitt " [Text](wpsl-to-uwp-porting-xaml-and-ui.md) ". Aufgrund dieser Vorgehensweise und anhand der Eigenschaften der WindowsPhone Silverlight-Systemstile können wir folgende Tabelle erstellen.
 
 | Windows Phone Silverlight-Stilschlüssel | UWP-Stilschlüssel          |
 |-------------------------------------|------------------------|

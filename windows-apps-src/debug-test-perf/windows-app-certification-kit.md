@@ -7,24 +7,24 @@ ms.topic: article
 keywords: Windows 10, Uwp, app-Zertifizierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 614f59fe06528d7b5bac36290eae14f0d7d49653
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7696043"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7842800"
 ---
 # <a name="windows-app-certification-kit"></a>Zertifizierungskit für Windows-Apps
 
 
 
-Zum Abrufen von Ihrer app, die [Windows-Zertifizierung](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) , oder für die [Veröffentlichung im Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Hh694062)vorbereiten, sollten Sie überprüfen und testen es zunächst lokal. Dieses Thema zeigt, wie Sie installieren und Ausführen im [Zertifizierungskit für Windows-Apps](http://go.microsoft.com/fwlink/p/?LinkID=309666) , um sicherzustellen, dass Ihre app sicheren und effizienten.
+Zum Abrufen von Ihrer app, die [Windows-Zertifizierung](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) , oder für die [Veröffentlichung im Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Hh694062)vorbereiten, sollten Sie überprüfen und testen es zunächst lokal. In diesem Thema wird das Installieren und führen Sie das [Zertifizierungskit für Windows-Apps](http://go.microsoft.com/fwlink/p/?LinkID=309666) , um sicherzustellen, dass Ihre app sicheren und effizienten veranschaulicht.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 Voraussetzungen für das Testen einer universellen Windows-App:
 
 -   Sie müssen installieren und Ausführen von Windows 10.
--   Sie müssen [Zertifizierungskit für Windows-Version 10]( http://go.microsoft.com/fwlink/p/?LinkID=309666), installieren, die im Windows Software Development Kit (SDK) für Windows 10 enthalten ist.
+-   Sie müssen [Version der App Zertifizierungskit für Windows 10]( http://go.microsoft.com/fwlink/p/?LinkID=309666), installieren die im Windows Software Development Kit (SDK) für Windows 10 enthalten ist.
 -   Sie müssen [Ihr Gerät für die Entwicklung aktivieren](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development).
 -   Sie müssen die zu testende Windows-App auf Ihrem Computer bereitstellen.
 
@@ -52,13 +52,13 @@ Beim Installieren einer neueren Version des [Zertifizierungskits für Windows-Ap
 
 6.  Öffnen Sie die Berichtsdatei, und überprüfen Sie die Ergebnisse des Tests.
 
-**Hinweis:** Wenn Sie Visual Studio verwenden, können Sie das Zertifizierungskit für Windows-Apps ausführen, bei der Erstellung des app-Pakets. Informationen zur Vorgehensweise finden Sie unter [Verpacken von UWP-Apps](https://msdn.microsoft.com/library/windows/apps/Mt627715).
+**Hinweis:** Wenn Sie Visual Studio verwenden, können Sie das Zertifizierungskit für Windows-Apps ausführen, wenn Sie Ihr app-Paket erstellen. Informationen zur Vorgehensweise finden Sie unter [Verpacken von UWP-Apps](https://msdn.microsoft.com/library/windows/apps/Mt627715).
 
  
 
 ## <a name="validate-your-windows-app-using-the-windows-app-certification-kit-from-a-command-line"></a>Überprüfung der Windows-App mit dem Zertifizierungskit für Windows-Apps über eine Befehlszeile
 
-**Wichtige**des Zertifizierungskits muss im Kontext einer aktiven benutzersitzung ausgeführt werden.
+**Wichtige**das Zertifizierungskit für für Windows-App muss im Kontext einer aktiven benutzersitzung ausgeführt werden.
 
 1.  Navigieren Sie im Befehlsfenster zum Verzeichnis mit dem Zertifizierungskit für Windows-Apps.
 
@@ -78,7 +78,7 @@ Beim Installieren einer neueren Version des [Zertifizierungskits für Windows-Ap
 
 3.  Öffnen Sie nach dem Test die Berichtsdatei `[report file name]`, und überprüfen Sie die Testergebnisse.
 
-**Hinweis:** des Zertifizierungskits kann über einen Dienst ausgeführt werden, aber der Dienst muss den kitvorgang innerhalb einer aktiven benutzersitzung initiieren und kann nicht in Session0 ausgeführt werden.
+**Hinweis:** das Zertifizierungskit für für Windows-App kann über einen Dienst ausgeführt werden, aber der Dienst muss den kitvorgang innerhalb einer aktiven benutzersitzung initiieren und kann nicht in Session0 ausgeführt werden.
 
 **Hinweis:**  Weitere Informationen zur Befehlszeile Zertifizierungskits für Windows-App, geben Sie den Befehl `appcert.exe /?`
 
@@ -86,9 +86,9 @@ Beim Installieren einer neueren Version des [Zertifizierungskits für Windows-Ap
 
 Die Leistungstestgrenzen des Zertifizierungskits für Windows-Apps basieren auf der Leistung eines Computers mit geringem Energieverbrauch.
 
-Die Eigenschaften des Computers, auf dem der Test ausgeführt wird, können die Testergebnisse beeinflussen. Um festzustellen, ob die Leistung Ihrer app die [Microsoft Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/Dn764944)erfüllt, wird empfohlen, dass Sie Ihre app auf einem Computer mit geringem Energieverbrauch, z. B. einem Intel Atom-Prozessor-basierten Computer mit einer Auflösung von 1366 x 768 (oder höher) und einer rotierenden Festplatte testen Laufwerk (im Gegensatz zu einem Festkörperlaufwerk).
+Die Eigenschaften des Computers, auf dem der Test ausgeführt wird, können die Testergebnisse beeinflussen. Um festzustellen, ob die Leistung Ihrer app die [Microsoft Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/Dn764944)erfüllt, wird empfohlen, dass Sie Ihre app auf einem Computer mit geringem Energieverbrauch, z. B. eine Intel Atom-Prozessor-basierten Computer mit einer Auflösung von 1366 x 768 (oder höher) und einer rotierenden Festplatte testen Laufwerk (im Gegensatz zu einem Festkörperlaufwerk).
 
-Da Computer mit geringem Energieverbrauch weiterentwickelt werden, können sich die Leistungsmerkmale im Laufe der Zeit ändern. Verweisen auf die aktuelle [Microsoft Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/Dn764944) , und Testen Sie Ihre app mit der aktuellen Version des Zertifizierungskits für Windows-App sicherstellen, dass Ihre app den aktuellen leistungsanforderungen entspricht.
+Da Computer mit geringem Energieverbrauch weiterentwickelt werden, können sich die Leistungsmerkmale im Laufe der Zeit ändern. Verweisen auf die aktuelle [Microsoft Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/Dn764944) , und Testen Sie Ihre app mit der aktuellen Version des Zertifizierungskits für Windows-App sicherstellen, dass Ihre app die aktuellen leistungsanforderungen entspricht.
 
 ## <a name="related-topics"></a>Verwandte Themen
 

@@ -8,16 +8,16 @@ keywords: Windows10, UWP
 permalink: en-us/docs/xdk/devhome-capture.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 348b937b7967cbde80c0bc25a502e727a04e8af0
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7719352"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7840808"
 ---
 # <a name="media-capture-page-dev-home"></a>Aufzeichnen von Medien Seite (Dev Home)
    
   
-Der Seite " **medienerfassung** " von Dev Home erfasst Video des Titels, die derzeit auf der Konsole ausgeführt wird.   
+Der Seite " **medienerfassung** " der Dev Home nimmt Video des Titels, die derzeit auf der Konsole ausgeführt wird.   
  ![Erfassen von Seite des Dev Home](images/devhome_capture.png)   
   
 Die Seite " **medienerfassung** " enthält die folgenden Bereichen:   
@@ -32,7 +32,7 @@ Die Seite " **medienerfassung** " enthält die folgenden Bereichen:
 ## <a name="video-capture"></a>Die Videoaufnahme  
    
   
-Der **videoaufzeichnung** -Bereich enthält Tools, die einen Videostream der Entwickler-Verwaltungskonsole aufzeichnen. Sie können auch Video zu den letzten Sekunden von der Konsole erfassen.   
+Der **videoaufzeichnung** Bereich enthält Tools, die einen Videostream der Entwickler-Verwaltungskonsole aufzeichnen. Sie können auch Video zu den zuletzt Sekunden in der Konsole erfassen.   
   
 <a id="ID4ERB"></a>
 

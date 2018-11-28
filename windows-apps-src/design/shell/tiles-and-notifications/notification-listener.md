@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, Uwp, notification listener, Usernotificationlistener, Dokumentation, Zugriff auf Benachrichtigungen
 ms.localizationpriority: medium
 ms.openlocfilehash: c0717fb3d1db42483214e8396d436c47c23744ee
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7703690"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7833690"
 ---
 # <a name="notification-listener-access-all-notifications"></a>Notification-Listener: Zugriff auf alle Benachrichtigungen
 
@@ -279,7 +279,7 @@ foreach (uint id in toBeRemoved)
 > [!IMPORTANT] 
 > Bekanntes Problem: das Ereignis im Vordergrund bewirkt eine Schleife CPU auf die aktuellen Versionen von Windows und zuvor vor, die nicht funktioniert. Verwenden Sie nicht das Ereignis im Vordergrund. Ein bevorstehenden Windows Update werden wir dieses Problem beheben.
 
-Verwenden Sie anstelle der vordergrundereignis für eine Hintergrundaufgabe [einzelprozessmodell](../../../launch-resume/create-and-register-an-inproc-background-task.md) den zuvor aufgeführten Code. Die Hintergrundaufgabe zudem können Sie Ereignis änderungsbenachrichtigungen beide zu erhalten, während die app geschlossen ist oder ausgeführt wird.
+Verwenden Sie anstelle das vordergrundereignis für eine Hintergrundaufgabe [einzelprozessmodell](../../../launch-resume/create-and-register-an-inproc-background-task.md) den zuvor aufgeführten Code. Die Hintergrundaufgabe zudem können Sie Ereignis änderungsbenachrichtigungen beide zu erhalten, während Ihre app geschlossen ist oder ausgeführt wird.
 
 ```csharp
 // Subscribe to foreground event (DON'T USE THIS)
@@ -292,6 +292,6 @@ private void Listener_NotificationChanged(UserNotificationListener sender, UserN
 ```
 
 
-## <a name="howto-fixdelays-in-the-background-task"></a>So wird's gemacht-Fixdelays in der Hintergrundaufgabe
+## <a name="howto-fixdelays-in-the-background-task"></a>So wird's gemacht Fixdelays in der Hintergrundaufgabe
 
-Wenn Sie Ihre app zu testen, werden Sie möglicherweise feststellen, dass die Hintergrundaufgabe manchmal verzögert und mehrere Minuten lang nicht ausgelöst. Um die Verzögerung zu beheben, an den Benutzer Togo auf den Systemeinstellungen -> System -> Akku -> Akkunutzung nach app, Ihre app in der Liste finden, auszuwählen, und legen Sie sie auf "immer im Hintergrund zugelassen."Danach sollte die Hintergrundaufgabe immer innerhalb einer Sekunde der Benachrichtigung angestoßen werden.
+Wenn Sie Ihre app zu testen, werden Sie möglicherweise feststellen, dass die Hintergrundaufgabe manchmal verzögert und mehrere Minuten lang nicht ausgelöst. Um die Verzögerung zu beheben, an die Benutzer Togo auf den Systemeinstellungen -> System -> Akku -> Akkunutzung nach app, Ihre app in der Liste finden, auszuwählen, und legen Sie sie auf "immer im Hintergrund zugelassen."Danach sollte die Hintergrundaufgabe immer innerhalb einer Sekunde der Benachrichtigung angestoßen werden.

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, erste App, Hallo Welt
 ms.localizationpriority: medium
 ms.openlocfilehash: 433536673efb9d2f17d822599051030b219ed02f
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7700478"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7834705"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Erstellen der App „Hello, world“ (XAML)
 
@@ -46,7 +46,7 @@ Hier erfahren Sie Folgendes:
 
 2.  Wählen Sie aus dem Menü " **Datei** " **Neu > Projekt** um das Dialogfeld " *Neues Projekt* " zu öffnen.
 
-3.  Wählen Sie aus der Liste der Vorlagen auf der linken Seite, **installiert > Visual C#-> Windows Universal** um eine Liste der UWP-Projektvorlagen anzuzeigen.
+3.  Wählen Sie aus der Liste der Vorlagen auf der linken Seite, **installiert > Visual c# > Windows Universal** um eine Liste der UWP-Projektvorlagen anzuzeigen.
 
     (Wenn keine universellen Vorlagen angezeigt werden, fehlen möglicherweise die Komponenten zum Erstellen von UWP-Apps. Sie können die Installation wiederholen und UWP-Unterstützung hinzufügen, indem Sie im Dialogfeld *Neues Projekt* auf **Visual Studio-Installer öffnen** klicken. Siehe [Vorbereiten](get-set-up.md).)
 
@@ -96,7 +96,7 @@ Doppelklicken Sie zum Anzeigen und Bearbeiten einer Datei im Projekt im **Projek
 -   Enthält eine Liste von Abhängigkeiten, Ressourcen und Dateien, die Ihre app enthält.
 
 *Ein Satz mit Logobildern*
--   Assets/Square150x150Logo.scale-200.png und Wide310x150Logo.scale-200.png stellen Sie Ihre app (entweder "Mittel" oder "Wide-Größe) im Startmenü dar.
+-   Assets/Square150x150Logo.scale-200.png und Wide310x150Logo.scale 200.png Darstellung Ihrer app (entweder "Mittel" oder "Wide-Größe) im Menü" Start ".
 -   Assets/Square44x44Logo.png stellt Ihre app in der app-Liste der Startmenü, Taskleiste und Task-Manager dar.
 -   „Assets/StoreLogo.png“ stellt Ihre App im Microsoft Store dar.
 -   „Assets/SplashScreen.scale-200.png“ ist der Begrüßungsbildschirm, der beim Start der App angezeigt wird.
@@ -222,7 +222,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-Stellen Sie sicher, dass die Methodensignatur enthält nun u. a. die **Async** -Schlüsselwort, oder Sie erhalten einen Fehler auf, wenn Sie versuchen, die app ausgeführt werden.
+Stellen Sie sicher, dass die Methodensignatur enthält nun u. a. das **Async** -Schlüsselwort, oder Sie erhalten einen Fehler auf, wenn Sie versuchen, die app ausgeführt werden.
 
 ### <a name="what-did-we-just-do"></a>Was haben wir gerade gemacht?
 

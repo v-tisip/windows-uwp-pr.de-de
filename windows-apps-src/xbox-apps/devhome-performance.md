@@ -8,16 +8,16 @@ keywords: Windows10, UWP
 permalink: en-us/docs/xdk/devhome-performance.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 589084a7da23b037fe61ea5e4c9e52dffb1c29be
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7702188"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7844281"
 ---
 # <a name="performance-page-dev-home"></a>Seite "Performance" (Dev Home)
    
   
-Die Seite " **Performance** " des Dev Home simuliert verschiedene Festplatten-Aktivität und CPU-Nutzung Bedingungen für die Problembehandlung.   
+Die Seite " **Performance** " des Dev Home simuliert verschiedene Festplatten-Aktivität und CPU-Auslastung Bedingungen für die Problembehandlung.   
  ![Seite "Performance" des Dev Home](images/devhome_performance.png)   
   
 Die Seite " **Performance** " enthält die folgenden Bereichen:   
@@ -33,7 +33,7 @@ Die Seite " **Performance** " enthält die folgenden Bereichen:
 ## <a name="disk-simulation"></a>Datenträger-simulation  
    
   
-Der **Datenträger Simulation** Bereich simuliert Datenträgeraktivität vom System oder anderen apps.   
+Der **Datenträger Simulation** Bereich simuliert Festplatten-Aktivität vom System oder anderen apps.   
   
 <a id="ID4EOB"></a>
 

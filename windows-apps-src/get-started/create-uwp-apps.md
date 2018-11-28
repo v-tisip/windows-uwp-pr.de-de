@@ -1,22 +1,22 @@
 ---
 title: Erstellen von Apps mit der universellen Windows-Plattform
-description: Es ist einfacher, als Sie denken, um eine universelle Windows-Plattform (UWP)-app für Windows 10 zu erstellen.
+description: Es ist einfacher, als Sie denken Erstellen einer universellen Windows-Plattform (UWP)-App für Windows 10.
 ms.date: 5/7/2018
 ms.topic: article
 keywords: Erste Schritte, Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 2f4e38d590fc2e905221c71c1fbc6b137f5fdea0
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7702278"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7839225"
 ---
 # <a name="start-coding"></a>Beginnen mit der Codierung
 
 ![Erstellen der App](images/build-your-app.png)
 
-Willkommen bei der [UWP-Plattform](universal-application-platform-guide.md)! Auf dieser Seite zeigen Sie bei der richtigen Informationen wir, die müssen Sie Programmieren für Windows 10-apps, die Sie erstellen möchten.
+Willkommen bei der [UWP-Plattform](universal-application-platform-guide.md)! Auf dieser Seite zeigen Sie auf die richtigen Informationen wir, die müssen Sie Windows 10-apps, die Sie erstellen möchten programmieren.
 
 Bevor Sie mit der Entwicklung beginnen, sollten Sie sicherstellen, dass [alles vorbereitet](get-set-up.md) ist
 

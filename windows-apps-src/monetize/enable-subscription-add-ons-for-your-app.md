@@ -6,11 +6,11 @@ ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: f46c566712f7f0c2bca45db5a107738c4104e037
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7697493"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7841616"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>Aktivieren von Abonnements für Add-Ons für Ihre App
 
@@ -68,7 +68,7 @@ Die Codebeispiele in diesem Abschnittzeigen, wie Sie die APIs im [**Windows.Serv
 
 Für diese Beispiele gelten die folgenden Voraussetzungen:
 * Ein Visual Studio-Projekt für eine UWP (Universelle Windows-Plattform)-App, die für **Windows 10 Anniversary Edition (10.0; Build 14393)** oder höher, geeignet ist.
-* Sie haben [eine app-Übermittlung erstellt haben](https://docs.microsoft.com/windows/uwp/publish/app-submissions) , im Partner Center und diese app im Store veröffentlicht wird. Sie können Ihre App optional so konfigurieren, dass Sie während der Tests im Store ausgeblendet ist. Weitere Informationen finden Sie unter [Hinweise für Tests](in-app-purchases-and-trials.md#testing).
+* Sie haben [eine app-Übermittlung erstellt haben](https://docs.microsoft.com/windows/uwp/publish/app-submissions) , im Partner Center und diese app im Store veröffentlicht ist. Sie können Ihre App optional so konfigurieren, dass Sie während der Tests im Store ausgeblendet ist. Weitere Informationen finden Sie unter [Hinweise für Tests](in-app-purchases-and-trials.md#testing).
 * Sie haben [erstellt ein Abonnement-Add-On für die app](../publish/add-on-submissions.md) im Partner Center.
 
 Der Code in diesen Beispielen geht von Folgendem aus:
@@ -124,7 +124,7 @@ Wir gewähren keine Karenzzeit für die Abonnementabrechnung. Wenn wir die Kredi
 Die folgenden Szenarien werden für die Abonnement-Add-Ons derzeit nicht unterstützt.
 
 * Das Verkaufen von Abonnements direkt an Kunden über den Store wird zu diesem Zeitpunkt nicht unterstützt. Abonnements sind nur für In-App-Käufe von digitalen Produkten verfügbar.
-* Kunden können die Abonnementperioden nicht über die Seite [http://account.microsoft.com/services](http://account.microsoft.com/services) ihres Microsoft-Kontos ändern. Um zu einem anderen abonnementszeitraum zu wechseln, müssen Kunden das aktuelle Abonnement kündigen und dann ein Abonnement mit einer anderen Abonnementzeitraum in Ihrer app erwerben.
+* Kunden können die Abonnementperioden nicht über die Seite [http://account.microsoft.com/services](http://account.microsoft.com/services) ihres Microsoft-Kontos ändern. Um zu einem anderen abonnementszeitraum zu wechseln, müssen Kunden das aktuelle Abonnement kündigen und dann ein Abonnement mit einem anderen Abonnementzeitraum in Ihrer app erwerben.
 * Das Wechseln von Ebenen wird aktuell nicht für Abonnement-Add-Ons unterstützt (z.B., wenn ein Kunde aus einem einfachen Abonnement in ein Premium-Abonnement mit mehr Features wechseln will).
 * [Verkäufe](../publish/put-apps-and-add-ons-on-sale.md) und [Werbecodes](../publish/generate-promotional-codes.md) für die Abonnement-Add-Ons werden derzeit nicht unterstützt.
 

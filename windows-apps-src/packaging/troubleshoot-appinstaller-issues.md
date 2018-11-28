@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, app-installer, AppInstaller, querladen
 ms.localizationpriority: medium
 ms.openlocfilehash: d4c3aa690dd45a50e6f33d664fbc6cc4503e93f8
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7701571"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7838317"
 ---
 # <a name="troubleshoot-installation-issues-with-the-app-installer-file"></a>Problembehandlung bei der Installation der App-Installer-Datei
 
@@ -70,9 +70,9 @@ Bei der Installation von einem HTTP-Endpunkt aus muss überprüft werden, dass a
 
 Wenn die App-Installer-App die App nicht installieren kann, helfen diese Schritte,das Installationsproblem zu identifizieren.
 
-### <a name="verify-app-package-file-installation"></a>Überprüfen Sie die app-Paketinstallation
+### <a name="verify-app-package-file-installation"></a>Überprüfen Sie die Installation der app-Paket
 
-- Herunterladen der app-Paketdatei in einen lokalen Ordner, und versuchen Sie es mithilfe des [Add-AppxPackage](https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=win10-ps) -PowerShell-Befehls installieren.
+- Laden Sie die app-Paket-Datei in einen lokalen Ordner, und versuchen Sie es mithilfe des [Add-AppxPackage](https://docs.microsoft.com/powershell/module/appx/add-appxpackage?view=win10-ps) -PowerShell-Befehls installieren.
 
 - Laden Sie die `.appinstaller`-Datei in einen lokalen Ordner herunter und versuchen Sie sie mithilfe des `Add-AppxPackage -Appinstaller`-PowerShell-Befehls zu installieren.
 

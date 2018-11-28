@@ -3,20 +3,20 @@ title: Device Portal Netzwerk Anmeldeinformationen API-Referenz
 description: Enthält Informationen zum Hinzufügen, entfernen oder Aktualisieren der Netzwerkanmeldeinformationen programmgesteuert.
 ms.localizationpriority: medium
 ms.openlocfilehash: 2da8dae554a0dcbb84d3d3fc3873e2fb035175dc
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7705102"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7836235"
 ---
 # <a name="network-credentials-api-reference"></a>Netzwerk-Anmeldeinformationen-API-Referenz
-Sie können hinzufügen, entfernen Sie oder aktualisieren Sie gespeicherten Netzwerkanmeldeinformationen auf Ihr dev Kit mittels dieser REST-API.
+Sie können hinzufügen, entfernen Sie oder aktualisieren Sie gespeicherte Netzwerkanmeldeinformationen auf Ihr dev Kit mittels dieser REST-API.
 
 ## <a name="get-existing-credentials"></a>Abrufen von vorhandenen Anmeldeinformationen
 
 **Anforderung**
 
-Sie können eine Liste der gespeicherten Freigaben zusammen mit den Benutzernamen des Benutzers abrufen, die Anmeldeinformationen für diese Netzwerkfreigabe verfügt.
+Sie können eine Liste der gespeicherten Freigaben zusammen mit den Benutzernamen des Benutzers abrufen, die Anmeldeinformationen für diesen Netzwerkfreigabe verfügt.
 
 Methode      | Anforderungs-URI
 :------     | :-----
@@ -76,8 +76,8 @@ Sie können im Anforderungs-URI die folgenden zusätzlichen Parameter angeben:
 
 - Die folgenden JSON-Elemente:
 * NetworkPath - den Pfad zu der Netzwerkfreigabe.
-* UserName: der Benutzername, um die Anmeldeinformationen, zu speichern.
-* Kennwort - neue oder aktualisierte für diesen Benutzer.
+* UserName: der Benutzername, um die Anmeldeinformationen zu speichern.
+* Password: das neue oder aktualisierte Kennwort für diesen Benutzer.
 
 **Antwort**   
 
@@ -128,7 +128,7 @@ Diese API hat die folgenden erwarteten Statuscodes:
 
 HTTP-Statuscode      | Beschreibung
 :------     | :-----
-204 | Die Anforderung von Anmeldeinformationen war erfolgreich.
+204 | Die Anforderung für die Anmeldeinformationen war erfolgreich.
 4XX | Fehlercodes
 5XX | Fehlercodes
 

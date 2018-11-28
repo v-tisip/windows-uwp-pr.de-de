@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, benutzerdefiniert, App, Werbung, Kampagnen
 ms.localizationpriority: medium
 ms.openlocfilehash: 407a34294155e688e672db392c262e1607c01a39
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7704617"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7838548"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a>Erstellen einer Werbekampagne für benutzerdefinierte Apps
 
@@ -26,7 +26,7 @@ Es gibt im Wesentlichen zwei Typen von Daten zu benutzerdefinierten Kampagnen: *
 
 Sie können Leistungsdaten einer benutzerdefinierten Kampagne für Ihre App auf folgende Arten abrufen:
 
-* Sie können Daten über Seitenaufrufe und Konvertierungen für Ihre Apps oder Add-Ons über die **App-Seitenaufrufe und Konvertierungen nach Kampagnen-ID** und **Konvertierungen pro Kampagne insgesamt** Diagramme im [Bericht "Käufe"](acquisitions-report.md)anzeigen.
+* Sie können Daten über Seitenaufrufe und Konvertierungen für Ihre app oder Ihr Add-on aus der **App-Seitenaufrufe und-Konvertierungen nach Kampagnen-ID** und **Konvertierungen pro Kampagne insgesamt** Diagramme im [Bericht "Käufe"](acquisitions-report.md)anzeigen.
 * Wenn es sich bei Ihrer App um eine App für die universelle Windows-Plattform (UWP) handelt, können Sie mit APIs im Windows SDK programmgesteuert die benutzerdefinierte Kampagnen-ID abrufen, die zu einer Konvertierung geführt hat.
 
 ## <a name="example-custom-campaign-scenario"></a>Beispielszenario für eine benutzerdefinierte Kampagne
