@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d40e921f999381421a5a6ce422e019e7db58bbd
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7719555"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7837780"
 ---
 # <a name="feedback-report"></a>Feedbackbericht
 
-Der **Feedback-Bericht** im Partner Center gibt Aufschluss über die Probleme, Vorschläge und zustimmungen, die Windows 10-Kunden über den Feedback-Hub übermittelt haben. Sie können diese Daten im Partner Center anzeigen oder exportieren Sie die Daten, um ihn offline anzuzeigen.
+Der **Feedback-Bericht** im Partner Center gibt Aufschluss über die Probleme, Vorschläge und zustimmungen, die Windows 10-Kunden über den Feedback-Hub übermittelt haben. Sie können diese Daten im Partner Center oder exportieren Sie die Daten um ihn offline anzuzeigen.
 
 > [!NOTE]
 > Sie können über diesen Bericht auch [direkt auf Feedback reagieren](respond-to-customer-feedback.md), um Kunden zu signalisieren, dass Sie ihr Feedback ernst nehmen.
@@ -54,7 +54,7 @@ Im Bericht finden Sie das jeweilige Feedback von Ihren Kunden. Links neben dem F
 - **Populär**: Zeigt Feedback, das von anderen Kunden in den letzten sieben Tagen bewertet wurde, beginnend mit dem Feedback, das die letzte Aktivität aufweist.
 - **Aktuellste**: Zeigt sämtliches Feedback, beginnend mit dem zuletzt abgegebenen Feedback an.
 
-Neben jedem Kommentar werden der Typ des Feedbacks sowie das Datum angezeigt, an dem das Feedback abgegeben wurde. Auch den Markt des Kunden, das spezifische Paket angezeigt, die auf dem Gerät installiert wurde, die sie verwendet haben, als er das Feedback, den Typ dieses Gerät, und **Windows-Insider-** links, wenn der Kunde das Feedback übermittelt hat ein Mitglied der Windows-Insider-ist Programm.
+Neben jedem Kommentar werden der Typ des Feedbacks sowie das Datum angezeigt, an dem das Feedback abgegeben wurde. Auch den Markt des Kunden, das spezifische Paket wird angezeigt, die auf dem Gerät installiert wurde, die sie verwendet haben, als er das Feedback, den Typ dieses Gerät, und **Windows-Insider-** links, wenn der Kunde das Feedback übermittelt hat ein Mitglied der Windows-Insider-ist Programm.
 
 Hier sehen Sie auch eine Option, um auf das [Feedback zu antworten](respond-to-customer-feedback.md).
 

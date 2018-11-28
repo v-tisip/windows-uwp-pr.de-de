@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store Services SDK, A/B-Tests, Experimente
 ms.localizationpriority: medium
 ms.openlocfilehash: 7818d9e251233c757618d60abaa156d294afb4b5
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7697163"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7838995"
 ---
 # <a name="define-your-experiment-in-partner-center"></a>Definieren eines Experiments im Partner Center
 
@@ -34,7 +34,7 @@ Eine exemplarische Vorgehensweise, die den gesamten Erstellungs- und Ausführung
     > Aktivieren Sie dieses Kontrollkästchen nicht, wenn Sie ein Experiment erstellen, das Sie für Kunden veröffentlichen (d.h. ein Experiment, das einer Projekt-ID zugeordnet ist, die in einer für die Kunden verfügbaren App-Version verwendet wird). Wenn Sie ein aktives Experiment bearbeiten, werden die Ergebnisse des Experiments ungültig.
 
 7. Das aktuelle Projekt wird im Dropdown-Menü **Projektname** automatisch ausgewählt. Wenn Sie das neue Experiment einem anderen Projekt hinzufügen möchten, können Sie das Projekt hier auswählen. Nehmen Sie andernfalls keine Auswahl vor.
-8.   Notieren Sie sich den Wert der [Projekt-ID](run-app-experiments-with-a-b-testing.md#terms). Wenn müssen Sie [Ihrer App programmiert haben](code-your-experiment-in-your-app.md), Sie verweisen diese ID in Ihrem Code Variantendaten empfangen und Anzeige-und umwandlungsereignisse an das Partner Center melden können.
+8.   Notieren Sie sich den Wert der [Projekt-ID](run-app-experiments-with-a-b-testing.md#terms). Wenn müssen Sie [Ihrer App programmiert haben](code-your-experiment-in-your-app.md), Sie auf diese ID Verweisen im Code damit Sie Variantendaten empfangen sowie Anzeige-und umwandlungsereignisse an Partner Center melden können.
 9. Geben Sie im Abschnitt **Anzeigeereignis** den Namen des [Anzeigeereignisses](run-app-experiments-with-a-b-testing.md#terms) für das Experiment im Feld **Ereignisnamen anzeigen** ein.
 10. Definieren Sie im Abschnitt **Ziele und Umwandlungsereignisse** mindestens ein Ziel für Ihr Experiment:
   * Geben Sie im Feld **Name des Ziels** einen beschreibenden Namen für Ihr Ziel ein. Nach dem Ausführen eines Experiments erscheint dieser Name in der Ergebniszusammenfassung des Experiments.
@@ -87,7 +87,7 @@ Führen Sie diese Schritte durch, um Ihr Experiment vor der Freigabe für die Ku
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nachdem Sie Ihr Experiment im Partner Center definiert und des Experiments in Ihrer app codieren, sind Sie bereit zum [Ausführen und Verwalten des Experiments im Partner Center](manage-your-experiment.md).
+Nachdem Sie Ihr Experiment im Partner Center definiert und des Experiments in Ihrer app codieren, können Sie [Ausführen](manage-your-experiment.md)und Verwalten des Experiments im Partner Center.
 
 ## <a name="related-topics"></a>Verwandte Themen
 

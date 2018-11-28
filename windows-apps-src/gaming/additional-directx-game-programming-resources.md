@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Programmierung
 ms.localizationpriority: medium
 ms.openlocfilehash: d75495f75459122f5a5b01d7a82450c72cd2bb1c
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7692961"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7838297"
 ---
 # <a name="game-programming-resources"></a>Ressourcen für die Spieleprogrammierung
 
@@ -45,7 +45,7 @@ Weitere Informationen zur Spieleprogrammierung unter Windows finden Sie in den f
 -   [DirectXTex-Texturverarbeitungsbibliothek](  http://go.microsoft.com/fwlink/p/?LinkID=248926)
 -   Microsoft Visual Studio-[Grafikdiagnose](https://msdn.microsoft.com/library/windows/apps/hh873207.aspx)
 -   [Win2D](https://github.com/Microsoft/Win2D) –Einfach zu verwendende Windows-Runtime-API für 2D-Grafikrendering im unmittelbaren Modus mit GPU-Beschleunigung.
--   [ANGLE für Microsoft Store](http://go.microsoft.com/fwlink/p/?linkid=618387) - Ausführung von OpenGL ES-Inhalten unter Windows, indem OpenGL ES-API-Aufrufe in DirectX 11-API-Aufrufe übersetzen.
+-   [ANGLE für Microsoft Store](http://go.microsoft.com/fwlink/p/?linkid=618387) - Ausführung von OpenGL ES-Inhalten unter Windows von OpenGL ES-API-Aufrufe in DirectX 11-API-Aufrufe übersetzen.
 
 ## <a name="gdc-2015-game-dev-session-videos"></a>Videos zu GDC2015-Spieleentwicklersitzungen
 
