@@ -1,17 +1,17 @@
 ---
 ms.assetid: CD866083-EB7F-4389-A907-FC43DC2FCB5E
-description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um eine neue Flight-Paketübermittlung für eine app zu erstellen, die für Ihr Partner Center-Konto registriert ist.
+description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um eine neue Flight-Paketübermittlung für eine app erstellen, die für Ihr Partner Center-Konto registriert ist.
 title: Erstellen einer Flight-Paket-Übermittlung
 ms.date: 08/03/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Erstellen einer Flight-Übermittlung
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e303027aaf3b10260090c500df573f1bf484e20
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7691661"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7839415"
 ---
 # <a name="create-a-package-flight-submission"></a>Erstellen einer Flight-Paket-Übermittlung
 
@@ -28,7 +28,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Microsoft Store-Übermittlungs-API.
 * [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
-* Erstellen Sie eine Flight-Paket für eine app. Sie dazu im Partner Center, oder Sie können dies tun, indem Sie mit der Methode [eine Flight-Paket zu erstellen](create-a-flight.md) .
+* Erstellen Sie eine Flight-Paket für eine app. Sie können dies im Partner Center oder hierzu können Sie mithilfe der Methode zum [Erstellen eines Flight-Pakets](create-a-flight.md) .
 
 ## <a name="request"></a>Anforderung
 

@@ -1,21 +1,21 @@
 ---
 ms.assetid: 8C1E9E36-13AF-4386-9D0F-F9CB320F02F5
-description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Erstellen eines Flight-Pakets für eine app, die für Ihr Partner Center-Konto registriert ist.
+description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um ein Flight-Paket für eine app erstellen, die für Ihr Partner Center-Konto registriert ist.
 title: Erstellen eines Flight-Pakets
 ms.date: 04/16/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Flight erstellen
 ms.localizationpriority: medium
 ms.openlocfilehash: af5ffe0dd72f0c3aae21a2dc522b469358626bab
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7712564"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7851524"
 ---
 # <a name="create-a-package-flight"></a>Erstellen eines Flight-Pakets
 
-Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Erstellen eines Flight-Pakets für eine app, die für Ihr Partner Center-Konto registriert ist.
+Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um ein Flight-Paket für eine app erstellen, die für Ihr Partner Center-Konto registriert ist.
 
 > [!NOTE]
 > Durch diese Methode wird ein Flight-Paket ohne Übermittlungen erstellt. Verwenden Sie zum Erstellen einer Übermittlung für ein Flight-Paket die Methoden unter [Verwalten von Flight-Paketübermittlungen](manage-flight-submissions.md).

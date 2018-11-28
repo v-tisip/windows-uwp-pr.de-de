@@ -1,17 +1,17 @@
 ---
 title: Grundlagen am Beispiel von Marble Maze
-description: Dieses Dokument beschreibt die fundamentalen Eigenschaften des Marble Maze-Projekt; beispielsweise wie Visual C++ in der Windows-Runtime-Umgebung verwendet wird, wie es erstellt und strukturiert ist und wie es aufgebaut ist.
+description: Dieses Dokument beschreibt die fundamentalen Eigenschaften des Marble Maze-Projekt. beispielsweise wie Visual C++ in der Windows-Runtime-Umgebung verwendet wird, wie es erstellt und strukturiert wird und wie es aufgebaut ist.
 ms.assetid: 73329b29-62e3-1b36-01db-b7744ee5b4c3
 ms.date: 08/22/2017
 ms.topic: article
 keywords: Windows10, Uwp, Spiele, Beispiel, Directx, Grundlagen
 ms.localizationpriority: medium
 ms.openlocfilehash: 94dd22a6f6b1ace5589104574a695b236c1ebd39
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7704129"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7854987"
 ---
 # <a name="marble-maze-sample-fundamentals"></a>Grundlagen am Beispiel von Marble Maze
 
@@ -40,9 +40,9 @@ Beim Erstellen des Visual Studio-Projekts für Marble Maze haben wir mit einem b
 
 1. Wählen Sie in Visual Studio 2017 **Datei > Neu > Projekt**
 
-2. Wählen Sie im Fenster **Neues Projekt** in der linken Randleiste **installiert > Vorlagen > Visual C++**.
+2. Wählen Sie im Fenster **Neues Projekt** in der linken Seitenleiste **installiert > Vorlagen > Visual C++**.
 
-3. Wählen Sie in der Liste mittleren **DirectX 11-App (Universal Windows)**. Wenn diese Option nicht angezeigt wird, kann Ihnen nicht die erforderlichen Komponenten installiert&mdash;finden Sie Informationen dazu, wie Sie zusätzliche Komponenten installieren [Ändern Visual Studio 2017 hinzufügen oder Entfernen von Workloads und Komponenten](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) .
+3. Wählen Sie in der Liste mittleren **DirectX 11-App (Universal Windows)**. Wenn diese Option nicht angezeigt wird, können Ihnen nicht die erforderlichen Komponenten installiert&mdash;finden Sie Informationen dazu, wie Sie zusätzliche Komponenten installieren [Ändern Visual Studio 2017 hinzufügen oder Entfernen von Workloads und Komponenten](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) .
 
 4. Verleihen Sie Ihrem Projekt einen **Namen**, einen **Speicherort** für die Dateien gespeichert werden und eine **Lösungsnamen**, und klicken Sie auf **OK**.
 
@@ -64,15 +64,15 @@ Wählen Sie in den Dropdownmenüs oben in Visual Studio links neben der grünen 
 
 ###  <a name="controlling-the-game"></a>Steuern des Spiels
 
-Sie können die Fingereingabe, den Beschleunigungsmesser, Xbox One-Controller oder die Maus-Steuerung von Marble Maze verwenden.
+Sie können die Fingereingabe, den Beschleunigungsmesser, Xbox One-Controller oder die Maus, um die Steuerung von Marble Maze verwenden.
 
 -   Mithilfe des Steuerkreuzes am Controller können Sie das aktive Menüelement ändern.
--   Verwenden Sie Toucheingabe, die eine oder Start Taste am Controller oder die Maus, um ein Menüelement auszuwählen.
+-   Verwenden Sie Toucheingabe, die ein oder Start Taste am Controller oder die Maus, um ein Menüelement auszuwählen.
 -   Über die Fingereingabe, den Beschleunigungsmesser, den linken Ministick oder die Maus können Sie das Labyrinth neigen.
--   Verwenden Sie Toucheingabe, die eine oder Start Taste am Controller oder die Maus zum Schließen von Menüs wie der Highscore-Tabelle.
+-   Verwenden Sie Toucheingabe, die ein oder Start Taste am Controller oder die Maus zum Schließen von Menüs wie der Highscore-Tabelle.
 -   Verwenden Sie die Schaltfläche "Start" am Controller oder der P-Taste auf der Tastatur, um das Spiel anzuhalten oder fortzusetzen.
 -   Zum Neustarten des Spiels können Sie die Zurück-Taste am Controller oder die Pos1-Taste auf der Tastatur verwenden.
--   Wenn die Highscore Tabelle sichtbar ist, verwenden Sie die zurück-Taste am Controller oder die POS1-Taste auf der Tastatur, um alle punktergebnisse löschen.
+-   Wenn die Highscore Tabelle angezeigt wird, verwenden Sie die zurück-Taste am Controller oder die POS1-Taste auf der Tastatur, um alle punktergebnisse löschen.
 
 ##  <a name="code-conventions"></a>Codekonventionen
 
@@ -84,7 +84,7 @@ Diese Sprachen erfordern für den Aufruf von Windows-Runtime-APIs aus JavaScript
 > [!IMPORTANT]
 > Wenn Sie Windows-Runtime-Objekte oder Komponenten für die Windows-Runtime erstellen, müssen Sie nur **^** und **ref new** verwenden. Sie können die C++-Standardsyntax verwenden, wenn Sie Kernanwendungscode schreiben, in dem die Windows-Runtime nicht genutzt wird.
 
-In Marble Maze werden mit **^** und **Microsoft::WRL::ComPtr** vom Heap zugewiesene Objekte verwaltet und Arbeitsspeicherverluste minimiert. Wir empfehlen die Verwendung ^ die Lebensdauer von Windows-Runtime-Variablen zu **ComPtr** zum Verwalten der Lebensdauer von COM-Variablen (z. B. bei Verwendung von DirectX), und **Std:: shared\_ptr** oder **Std:: unique\_ptr** zum Verwalten der Lebensdauer aller anderen zu verwalten Heap zugewiesenen C++-Objekte.
+In Marble Maze werden mit **^** und **Microsoft::WRL::ComPtr** vom Heap zugewiesene Objekte verwaltet und Arbeitsspeicherverluste minimiert. Wir empfehlen die Verwendung ^ die Lebensdauer von Windows-Runtime-Variablen zu **ComPtr** zum Verwalten der Lebensdauer von COM-Variables (z. B. bei Verwendung von DirectX), und **Std:: shared\_ptr** oder **Std:: unique\_ptr** zum Verwalten der Lebensdauer des alle anderen zu verwalten Heap zugewiesenen C++-Objekte.
 
  
 
@@ -111,7 +111,7 @@ Es wird empfohlen, in Ihrem Fehlerbehandlungsmodell die folgenden Konventionen z
         );
     ```
 
--   Es wird jedoch empfohlen, dass Sie die Verwendung von **HRESULT** für unerwartete Fehler vermeiden, ist es wichtiger, auf die Verwendung der Ausnahmebehandlung zur Steuerung des Codes zu vermeiden. Demzufolge wird bevorzugt, bei Bedarf einen **HRESULT**-Rückgabewert zu verwenden, um den Codefluss zu steuern.
+-   Es wird jedoch empfohlen, dass Sie die Verwendung von **HRESULT** für unerwartete Fehler vermeiden, ist es wichtiger, auf die Verwendung der Ausnahmebehandlung zur Steuerung des Code zu vermeiden. Demzufolge wird bevorzugt, bei Bedarf einen **HRESULT**-Rückgabewert zu verwenden, um den Codefluss zu steuern.
 
 ###  <a name="sal-annotations"></a>SAL-Anmerkungen
 
@@ -119,7 +119,7 @@ Verwenden Sie SAL-Anmerkungen in Kombination mit Codeanalysetools, um Fehler in 
 
 Mithilfe der Microsoft-Quellcodeanmerkungssprache (Source Code Annotation Language, SAL) können Sie anmerken bzw. beschreiben, wie eine Funktion die zugehörigen Parameter verwendet. SAL-Anmerkungen werden auch zum Beschreiben von Rückgabewerten verwendet. SAL-Anmerkungen können mit dem C/C++-Codeanalysetool verwendet werden, um mögliche Fehler im C- und C++-Quellcode zu finden. Häufige Codierungsfehler, die vom Tool gemeldet werden, beinhalten Pufferüberläufe, nicht initialisierte Speicher, Nullzeiger-Dereferenzierungen und Speicher- und Ressourcenverluste.
 
-Berücksichtigen Sie die **basicloader:: Loadmesh** -Methode, die in [BasicLoader.h](https://github.com/Microsoft/Windows-appsample-marble-maze/blob/e62d68a85499e208d591d2caefbd9df62af86809/C%2B%2B/Shared/BasicLoader.h)deklariert wird. Diese Methode verwendet `_In_` *Dateinamen* ist ein Eingabeparameter angeben (und wird daher nur aus gelesen werden), `_Out_` angeben, dass *VertexBuffer* und *IndexBuffer* Ausgabeparameter sind (und daher nur geschrieben wird) und `_Out_opt_` angeben, dass *VertexCount* und *IndexCount* optional sind Ausgabeparameter (und möglicherweise in geschrieben werden). Da *vertexCount* und *indexCount* optionale Ausgabeparameter sind, dürfen sie **nullptr** sein. Das C/C++-Codeanalysetool untersucht Aufrufe dieser Methode, um sicherzustellen, dass die von ihr übergebenen Parameter diese Kriterien erfüllen.
+Berücksichtigen Sie die **basicloader:: Loadmesh** -Methode, die in [BasicLoader.h](https://github.com/Microsoft/Windows-appsample-marble-maze/blob/e62d68a85499e208d591d2caefbd9df62af86809/C%2B%2B/Shared/BasicLoader.h)deklariert wird. Diese Methode verwendet `_In_` an *Dateinamen* ein Eingabeparameter ist (und daher nur von lesen), `_Out_` angeben, dass *VertexBuffer* und *IndexBuffer* Ausgabeparameter sind (und daher nur geschrieben wird) und `_Out_opt_` angeben, dass *VertexCount* und *IndexCount* optional sind Ausgabeparameter (und möglicherweise in geschrieben werden). Da *vertexCount* und *indexCount* optionale Ausgabeparameter sind, dürfen sie **nullptr** sein. Das C/C++-Codeanalysetool untersucht Aufrufe dieser Methode, um sicherzustellen, dass die von ihr übergebenen Parameter diese Kriterien erfüllen.
 
 ```cpp
 void LoadMesh(
@@ -131,7 +131,7 @@ void LoadMesh(
     );
 ```
 
-Wählen Sie zum Ausführen der Codeanalyse auf Ihrer app auf der Menüleiste **Build > Codeanalyse für Lösung ausführen**. Weitere Informationen zur Codeanalyse finden Sie unter [Analysieren der C/C++-Codequalität mithilfe der Codeanalyse](https://docs.microsoft.com/visualstudio/code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis).
+Wählen Sie Codeanalyse für Ihre app, auf der Menüleiste ausführen **Build > Codeanalyse für Lösung ausführen**. Weitere Informationen zur Codeanalyse finden Sie unter [Analysieren der C/C++-Codequalität mithilfe der Codeanalyse](https://docs.microsoft.com/visualstudio/code-quality/analyzing-c-cpp-code-quality-by-using-code-analysis).
 
 Die vollständige Liste der verfügbaren Anmerkungen wird in sal.h definiert. Weitere Informationen finden Sie unter [SAL-Anmerkungen](https://docs.microsoft.com/cpp/c-runtime-library/sal-annotations).
 

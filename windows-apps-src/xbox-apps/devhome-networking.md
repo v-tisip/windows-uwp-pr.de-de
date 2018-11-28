@@ -8,16 +8,16 @@ keywords: Windows10, UWP
 permalink: en-us/docs/xdk/devhome-networking.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 06d82b350cccfd90509f3b9f031de2785e91e0dc
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7702288"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7850484"
 ---
 # <a name="networking-page-dev-home"></a>Netzwerkseite (Dev Home)
    
   
-Die Seite **Networking** mit Dev Home simuliert verschiedene Netzwerke Bedingungen für die Problembehandlung. Außerdem können Sie einen Netzwerk-Paket-Trace zu initiieren.   
+Der Seite " **Netzwerk** ", der Dev Home simuliert verschiedene Netzwerke Bedingungen für die Problembehandlung. Außerdem können Sie eine Netzwerk-Paket-Verfolgung zu initiieren.   
  ![Netzwerkseite von Dev Home](images/devhome_networking.png)   
   
 Die Seite " **Netzwerk** " enthält die folgenden Bereichen:   
@@ -42,7 +42,7 @@ Der Bereich **Netzwerksimulation** führt eine Netzwerksimulation mit verschiede
 ## <a name="xbtrace-netcap"></a>XBTrace (Netcap)  
    
   
-Der Bereich **XBTrace (Netcap)** startet oder beendet einen Netzwerk-Paket-Trace.   
+Der Bereich **XBTrace (Netcap)** startet oder beendet eine Netzwerk-Paket-Verfolgung.   
   
 <a id="ID4E2B"></a>
 

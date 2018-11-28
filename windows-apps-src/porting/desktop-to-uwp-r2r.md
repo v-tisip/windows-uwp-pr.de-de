@@ -1,37 +1,37 @@
 ---
 Description: This guide explains how to configure your Visual Studio Solution to optimize the application binaries with native images.
 Search.Product: eADQiWindows 10XVcnh
-title: Optimieren Sie Ihre .NET Desktop-apps für systemeigene Abbilder
+title: Optimieren Sie Ihre .NET Desktop-apps mit systemeigene Abbildern
 ms.date: 06/11/2018
 ms.topic: article
-keywords: Windows 10, systemeigenen Images Compiler
+keywords: Windows 10, systemeigene Abbilder Compiler
 ms.localizationpriority: medium
 ms.openlocfilehash: 3071b843a1605d765ab5b087d5e1bfb96a220218
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7702208"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7844869"
 ---
-# <a name="optimize-your-net-desktop-apps-with-native-images"></a>Optimieren Sie Ihre .NET Desktop-apps für systemeigene Abbilder
+# <a name="optimize-your-net-desktop-apps-with-native-images"></a>Optimieren Sie Ihre .NET Desktop-apps mit systemeigene Abbildern
 
 > [!NOTE]
 > Einige Informationen beziehen sich auf die Vorabversion, die vor der kommerziellen Freigabe möglicherweise wesentlichen Änderungen unterliegt. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.
 
-Sie können die Startzeit Ihrer .NET Framework-Anwendung verbessern, indem Sie Ihre Binärdateien vorab kompilieren. Sie können diese Technologie auf große Anwendungen verwenden, die Sie verpacken und verteilen Sie über den Microsoft Store. In einigen Fällen haben wir eine 20 % Leistungssteigerung beobachtet. Erfahren Sie mehr über diese Technologie in die [Technische Übersicht](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/readytorun-overview.md).
+Sie können die Startzeit Ihrer .NET Framework-Anwendung verbessern, indem Sie die Binärdateien vorkompiliert. Sie können diese Technologie auf großen Anwendungen verwenden, die Sie verpacken und über den Microsoft Store verteilen. In einigen Fällen haben wir eine 20 % Leistungssteigerung beobachtet. Erfahren Sie mehr über diese Technologie in die [Technische Übersicht](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/readytorun-overview.md).
 
-Wir haben eine Vorschauversion von der Compiler systemeigenes Bild als [NuGet-Paket](https://www.nuget.org/packages/Microsoft.DotNet.Framework.NativeImageCompiler)veröffentlicht. Sie können dieses Paket auf jede .NET Framework-Anwendung, die das .NET Framework-Version 4.6.2 zielt auf Anwenden oder höher. Dieses Paket Fügt einen Post-Buildschritt, der eine systemeigene Nutzlast für alle Binärdateien, die von der Anwendung verwendeten enthält. -Nutzlast dieser optimierten wird geladen werden, wenn die Anwendung in .NET 4.7.2 und höher ausführt, während frühere Versionen weiterhin die MSIL-Code geladen werden.
+Wir haben eine Vorschauversion von der Compiler systemeigenes Bild als [NuGet-Paket](https://www.nuget.org/packages/Microsoft.DotNet.Framework.NativeImageCompiler)veröffentlicht. Sie können dieses Paket auf jede .NET Framework-Anwendung, die das .NET Framework-Version 4.6.2 zielt auf Anwenden oder höher. Dieses Paket Fügt einen Post-Buildschritt, der eine systemeigene Nutzlast auf alle Binärdateien, die von der Anwendung verwendeten enthält. -Nutzlast dieser optimierte wird geladen werden, wenn die Anwendung in .NET 4.7.2 und höher ausführt, während frühere Versionen den MSIL-Code geladen werden.
 
 Das [.NET Framework 4.7.2](https://blogs.msdn.microsoft.com/dotnet/2018/04/30/announcing-the-net-framework-4-7-2/) ist in der [Windows 10 April 2018 update](https://blogs.windows.com/windowsexperience/2018/04/30/how-to-get-the-windows-10-april-2018-update/)enthalten. Sie können diese Version von .NET Framework auch auf PCs installieren, auf denen Windows 7 + und Windows Server 2008 R2 oder höher ausgeführt.
 
 > [!IMPORTANT]
-> Wenn Sie systemeigene Abbilder für Ihre Anwendung verpackt, die Windows Application Packaging-Projekt erstellen möchten, stellen Sie sicher, die Ziel-Plattform-Mindestversion des Projekts auf das Windows Anniversary Update festlegen.
+> Wenn Sie systemeigene Abbilder für Ihre Anwendung verpackt, die Windows Application Packaging-Projekt erstellen möchten, stellen Sie sicher, die Ziel Plattform mindestens erforderliche Version des Projekts auf das Windows Anniversary Update festgelegt.
 
 ## <a name="how-to-produce-native-images"></a>Wie Sie systemeigene Abbilder zu erzeugen.
 
 Konfigurieren von Projekten, gehen Sie wie folgt vor.
 
-1. Konfigurieren Sie die Ziel-Framework als 4.6.2 oder höher
+1. Konfigurieren Sie das Ziel-Framework als 4.6.2 oder höher
 
 2. Konfigurieren Sie die Zielplattform als X86 oder x64 
 
@@ -39,31 +39,31 @@ Konfigurieren von Projekten, gehen Sie wie folgt vor.
 
 4. Erstellen Sie einen Versionsbuild.
 
-## <a name="configure-the-target-framework-as-462-or-above"></a>Konfigurieren Sie die Ziel-Framework als 4.6.2 oder höher
+## <a name="configure-the-target-framework-as-462-or-above"></a>Konfigurieren Sie das Ziel-Framework als 4.6.2 oder höher
 
-Zum Konfigurieren des Projekts .NET Framework 4.6.2 Ziel benötigen Sie die Entwicklungstools für .NET Framework 4.6.2 oder höher. Diese Tools sind als optionale Komponenten unter der .NET Desktopentwicklung Workload durch den Visual Studio-Installer verfügbar:
+Zum Konfigurieren des Projekts .NET Framework 4.6.2 Ziel benötigen Sie die Entwicklungstools für .NET Framework 4.6.2 oder höher. Diese Tools sind als optionale Komponenten unter der .NET desktop-Entwicklung Workload durch den Visual Studio-Installer verfügbar:
 
 ![Installieren Sie .NET 4.6.2 Entwicklungstools](images/desktop-to-uwp/install-4.6.2-devpack.png)
 
-Alternativ können Sie die .NET Entwickler Packs aus abrufen:[https://www.microsoft.com/net/download/visual-studio-sdks](https://www.microsoft.com/net/download/visual-studio-sdks)
+Alternativ können Sie die .NET Developer Packs aus abrufen:[https://www.microsoft.com/net/download/visual-studio-sdks](https://www.microsoft.com/net/download/visual-studio-sdks)
 
 ## <a name="configure-the-target-platform-as-x86-or-x64"></a>Konfigurieren Sie die Zielplattform als X86 oder x64
 
-Der systemeigene Bild-Compiler optimiert den Code für eine bestimmte Plattform. Um es zu verwenden, müssen Sie Ihre Anwendung eine bestimmte z. B. X86 oder X64 Zielplattform zu konfigurieren.
+Der systemeigene Abbilder Compiler optimiert den Code für eine bestimmte Plattform. Um es zu verwenden, müssen Sie Ihre Anwendung an eine bestimmte Plattform z. B. X86 oder X64 konfigurieren.
 
-Wenn Sie die Projektmappe mehrere Projekte enthält, muss nur der Eintrag Punkt Projekt (wahrscheinlich das Projekt, das eine ausführbare Datei erstellt) als X86 oder X64 kompiliert werden. Zusätzliche Binärdateien aus dem Hauptprojekt verwiesen werden mit der im Hauptprojekt angegebenen Architektur verarbeitet werden, auch wenn sie als "anycpu" kompiliert werden.
+Wenn Sie die Projektmappe mehrere Projekte enthält, muss nur das Eintrag Punkt Projekt (wahrscheinlich das Projekt, das eine ausführbare Datei erstellt) als X86 oder X64 kompiliert werden. Zusätzliche Binärdateien aus dem Hauptprojekt verwiesen werden mit der im Hauptprojekt angegebenen Architektur verarbeitet werden, auch wenn sie als "anycpu" kompiliert werden.
 
 So konfigurieren Sie Ihr Projekt:
 
-1. Mit der rechten Maustaste in der Projektmappe, und wählen Sie dann die **Configuration Manager**.
+1. Mit der rechten Maustaste der Projektmappe, und wählen Sie dann die **Configuration Manager**.
 
-2. Wählen Sie **<New... >** im Dropdownmenü **Plattform** neben dem Namen des Projekts, das die ausführbare Datei erstellt.
+2. Wählen Sie **<New. >** im Dropdownmenü **Plattform** neben dem Namen des Projekts, das die ausführbare Datei erstellt.
 
-3. Das Dialogfeld **Neues Projektplattform** stellen Sie sicher, dass die **Copy-Einstellungen aus** Dropdown-Liste **Any CPU**festgelegt ist.
+3. Das **Neue Projektplattform** -Dialogfeld stellen Sie sicher, dass die **Kopie Einstellungen aus** Dropdown-Liste **Any CPU**festgelegt ist.
 
 ![Konfigurieren von x86](images/desktop-to-uwp/configure-x86.png)
 
-Wiederholen Sie diesen Schritt für `Release/x64` auf Wunsch X64 erzeugen Binärdateien.
+Wiederholen Sie diesen Schritt für `Release/x64` Wunsch X64 erzeugen Binärdateien.
 
 >[!IMPORTANT]
 > AnyCPU-Konfiguration wird vom Compiler systemeigene Bild nicht unterstützt.
@@ -77,12 +77,12 @@ PM> Install-Package Microsoft.DotNet.Framework.NativeImageCompiler -Version 0.0.
 ```
 
 > [!NOTE]
-> Die Vorschau-Pakete werden als nicht aufgeführten NuGet.org veröffentlicht. Sie wird nicht durch Durchsuchen "NuGet.org" oder mithilfe der UI-Paket-Manager in Visual Studio fündig. Sie können jedoch installieren sie das Paket-Manager-Konsole und wann Sie von einem anderen Computer wiederherstellen. Wir stellen die Pakete vollständigen Zugriff auf Wenn wir die erste nicht-Preview-Version veröffentlichen.
+> Die Vorschau-Pakete werden in "NuGet.org" als nicht aufgeführten veröffentlicht. Sie wird nicht durch Browsen "NuGet.org" oder mithilfe der UI-Paket-Manager in Visual Studio fündig. Sie können jedoch installieren sie das Paket-Manager-Konsole und wann Sie von einem anderen Computer wiederherstellen. Wir stellen die Pakete vollständig verfügbar wenn wir die erste nicht-Preview-Version veröffentlichen.
 
 ## <a name="create-a-release-build"></a>Erstellen eines Releasebuilds
 
 Das NuGet-Paket konfiguriert das Projekt, um ein zusätzliches Tool für Release-Builds ausführen. Dieses Tool hinzugefügt die gleichen Binärdateien systemeigenen Code.
-Um sicherzustellen, dass das Tool die Binärdateien verarbeitet hat können Sie überprüfen die Buildausgabe in stellen Sie sicher, dass es sich um eine Nachricht wie diesen enthält:
+Um sicherzustellen, dass das Tool die Binärdateien verarbeitet hat können Sie überprüfen die Buildausgabe, um sicherzustellen, dass sie eine Nachricht wie diesen enthält:
 
 ```
 Native image obj\x86\Release\\R2R\DesktopApp1.exe generated successfully.
@@ -92,16 +92,16 @@ Native image obj\x86\Release\\R2R\DesktopApp1.exe generated successfully.
 
 **Q. Funktionieren die neuen Binärdateien auf Computern ohne .NET Framework 4.7.2?**
 
-A. Optimierte Binärdateien werden von Verbesserungen profitieren, wenn mit .NET Framework 4.7.2 ausgeführt. Clients unter früheren Versionen von .NET Framework lädt die MSIL-Code nicht optimierten aus der Binärdatei.
+A. Optimierte Binärdateien profitiert von Verbesserungen bei Ausführung mit .NET Framework 4.7.2. Clients, die vorherige .NET Framework-Versionen ausgeführt werden den nicht optimierten MSIL-Code aus der Binärdatei geladen.
 
 **Q. Wie kann ich Feedback oder melden Probleme?**
 
 A. Melden eines Problems mithilfe der Feedback-Tools in Visual Studio 2017. [Weitere Informationen](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).
 
-**Q. Was ist die Auswirkung der vorhandenen Binärdateien das systemeigene Bild hinzufügen?**
+**Q. Was ist die Auswirkung der vorhandenen Binärdateien systemeigenen Images hinzugefügt?**
 
-A. Die optimierten Binärdateien enthalten die verwalteten und systemeigenen Code, damit die endgültigen Dateien größer.
+A. Die optimierten Binärdateien enthalten den verwalteten und systemeigenen Code, damit die endgültigen Dateien größer.
 
 **Q. Kann mit dieser Technologie Binärdateien werden freigegeben?**
 
-A. Diese Version enthält eine Go-Live-Lizenz, mit denen Sie noch heute.
+A. Diese Version enthält eine wechseln Sie Live-Lizenz, mit denen Sie noch heute.

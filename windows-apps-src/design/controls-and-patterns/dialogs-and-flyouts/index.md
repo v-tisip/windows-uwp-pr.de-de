@@ -12,11 +12,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 2d5635a41bec716487c08dd57e6ba2ac360649ad
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7693111"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7848638"
 ---
 # <a name="dialogs-and-flyouts"></a>Dialogfelder und Flyouts
 
@@ -84,7 +84,7 @@ Angesichts der Tatsache, dass Dialogfelder im Gegensatz zu Flyouts Interaktionen
 :::row-end:::
 
 
-## <a name="ways-to-avoid-using-dialogs-and-flyouts"></a>Möglichkeiten, um zu vermeiden, Dialogfelder und flyouts
+## <a name="ways-to-avoid-using-dialogs-and-flyouts"></a>Möglichkeiten, verwenden Sie Dialogfelder und flyouts
 
 Berücksichtigen Sie die Bedeutung der zu vermittelnden Informationen: Sind sie wichtig genug, um den Benutzer zu unterbrechen? Berücksichtigen Sie zudem, wie häufig die Informationen angezeigt werden müssen. Wenn ein Dialogfeld oder eine Benachrichtigung alle paar Minuten angezeigt wird, sollten Sie diese Informationen stattdessen in die primäre UI einbinden. So können Sie z.B. in einem Chat-Client anstatt eines Flyouts, der jedes Mal angezeigt wird, wenn sich ein Freund anmeldet, eine Liste der Freunde anzeigen, die derzeit online sind, und diejenigen Freunde hervorheben, die sich gerade anmelden.
 
@@ -92,11 +92,11 @@ Dialogfelder werden häufig zum Bestätigen einer Aktion vor deren Ausführung v
 
 ## <a name="how-to-create-a-dialog"></a>So erstellen Sie ein Dialogfeld
 
-Finden Sie unter dem [Artikel Dialogfelder](dialogs.md). 
+Finden Sie unter der [Artikel Dialogfelder](dialogs.md). 
 
 ## <a name="how-to-create-a-flyout"></a>So erstellen Sie ein flyout
 
-Finden Sie im [Artikel Flyout](flyouts.md). 
+Finden Sie im [Flyout Artikel](flyouts.md)aus. 
 
 ## <a name="examples"></a>Beispiele
 

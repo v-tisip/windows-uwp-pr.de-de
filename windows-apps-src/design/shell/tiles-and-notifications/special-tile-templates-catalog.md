@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 09647347134463c8dd2d93f6b869796c8def44e2
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7698139"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7850007"
 ---
 # <a name="special-tile-templates"></a>Spezielle Kachelvorlagen
  
@@ -28,7 +28,7 @@ Mit der Iconic-Vorlage (auch als „IconWithBadge“-Vorlage bezeichnet) können
 
 ### <a name="how-to-create-an-iconic-tile"></a>Erstellen einer ikonischen Kachel
 
-Die folgenden Schritte behandelt alles, was Sie zum Erstellen einer iconic-Kachel für Windows 10 wissen müssen. Auf hoher Ebene benötigen Sie Ihre Iconic-Bildressource. Dann senden Sie mithilfe der Iconic-Vorlage eine Benachrichtigung an die Kachel und senden schließlich eine Signalbenachrichtigung, die die auf der Kachel anzuzeigende Zahl bereitstellt.
+Die folgenden Schritte erläutert alles, was Sie zum Erstellen einer iconic-Kachel für Windows 10 wissen müssen. Auf hoher Ebene benötigen Sie Ihre Iconic-Bildressource. Dann senden Sie mithilfe der Iconic-Vorlage eine Benachrichtigung an die Kachel und senden schließlich eine Signalbenachrichtigung, die die auf der Kachel anzuzeigende Zahl bereitstellt.
 
 ![Entwicklerablauf der Iconic-Kachel](images/iconic-template-dev-flow.png)
 

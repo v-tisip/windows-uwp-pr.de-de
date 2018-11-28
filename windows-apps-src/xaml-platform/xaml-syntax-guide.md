@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e988582877a6aa4ca3cf88ba0a5d98aceb56939e
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7693351"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7842108"
 ---
 # <a name="xaml-syntax-guide"></a>Anleitung zur XAML-Syntax
 
@@ -87,7 +87,7 @@ Im folgenden gekürzten Beispiel wird Initialisierungstext verwendet, um Werte f
 </UserControl ...>
 ```
 
-**Hinweis:** einige Strukturen können nicht als Objektelemente deklariert werden. Initialisierungstext wird nicht unterstützt, und die Strukturen können nicht als Ressourcen verwendet werden. Sie müssen eine Attributsyntax verwenden, um in XAML Eigenschaften auf diese Werte festzulegen. Diese Typen sind: [**Duration**](https://msdn.microsoft.com/library/windows/apps/br242377), [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/br210411), [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870), [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994) und [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995).
+**Hinweis:** manche Strukturen können nicht als Objektelemente deklariert werden. Initialisierungstext wird nicht unterstützt, und die Strukturen können nicht als Ressourcen verwendet werden. Sie müssen eine Attributsyntax verwenden, um in XAML Eigenschaften auf diese Werte festzulegen. Diese Typen sind: [**Duration**](https://msdn.microsoft.com/library/windows/apps/br242377), [**RepeatBehavior**](https://msdn.microsoft.com/library/windows/apps/br210411), [**Point**](https://msdn.microsoft.com/library/windows/apps/br225870), [**Rect**](https://msdn.microsoft.com/library/windows/apps/br225994) und [**Size**](https://msdn.microsoft.com/library/windows/apps/br225995).
 
 ## <a name="setting-properties"></a>Festlegen von Eigenschaften
 
@@ -238,7 +238,7 @@ Zunächst gibt das Vorhandensein des Objektelements an, dass ein neues *objectNa
 
 Eine weitere XAML-Regel ist, dass es möglich sein muss, Attribute eines Elements in beliebiger Reihenfolge festzulegen. Zwischen `<Rectangle Height="50" Width="100" />` und `<Rectangle Width="100"  Height="50" />` besteht z. B. kein Unterschied. Welche Reihenfolge Sie verwenden, ist eine Frage des Programmierstils.
 
-**Hinweis:** XAML-Designer oft Schreibreihenfolge Konventionen bewerben, wenn Sie andere Entwurfsoberflächen als den XML-Editor verwenden, aber Sie dieses XAML später frei bearbeiten können, um die Attribute neu anordnen oder neue einführen.
+**Hinweis:** XAML-Designer oft Schreibreihenfolge Konventionen bewerben, wenn Sie andere Entwurfsoberflächen als den XML-Editor verwenden, Sie können jedoch beliebig, XAML-Code später, bearbeiten um die Attribute neu anordnen oder neue einzuführen.
 
 ## <a name="attached-properties"></a>Angefügte Eigenschaften
 

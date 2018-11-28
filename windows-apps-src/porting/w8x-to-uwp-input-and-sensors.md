@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 5847553bed563b724bb142f7abe62403fa8ec097
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7694097"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7849740"
 ---
 # <a name="porting-windows-runtime-8x-to-uwp-for-io-device-and-app-model"></a>Portieren von Windows-Runtime 8.x zu UWP für E/A, Gerät und App-Modell
 
@@ -69,7 +69,7 @@ Siehe auch [Bedingte Kompilierung und adaptiver Code](w8x-to-uwp-porting-to-a-uw
 ## <a name="location"></a>Position
 
 
-Wenn eine app, die die Position in der app-Paketmanifest deklariert unter Windows 10 ausgeführt wird, fordert das System die Zustimmung des Endbenutzers. Dies gilt unabhängig davon, ob die app eine Windows Phone Store-app oder eine Windows 10-app ist. Falls in Ihrer App eine eigene benutzerdefinierte Aufforderung zur Zustimmung oder eine Schaltfläche zum Aktivieren/Deaktivieren angezeigt wird, sollten Sie sie entfernen, damit Endbenutzer nur eine Aufforderung erhalten.
+Wenn eine app, die in der app-Paketmanifest die positionsfunktion deklariert unter Windows 10 ausgeführt wird, fordert das System die Zustimmung des Endbenutzers. Dies gilt unabhängig davon, ob die app eine Windows Phone Store-app oder eine Windows 10-app ist. Falls in Ihrer App eine eigene benutzerdefinierte Aufforderung zur Zustimmung oder eine Schaltfläche zum Aktivieren/Deaktivieren angezeigt wird, sollten Sie sie entfernen, damit Endbenutzer nur eine Aufforderung erhalten.
 
  
 

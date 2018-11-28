@@ -6,16 +6,16 @@ ms.topic: article
 keywords: Windows10, Uwp, Store-Diensten, Microsoft Store-Analyse-API, Xbox Live-Analyse, Multiplayer
 ms.localizationpriority: medium
 ms.openlocfilehash: 74f1a64bde32fe68a51527527a0b049d811d0853
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7702894"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7847701"
 ---
 # <a name="get-xbox-live-multiplayer-data"></a>Abrufen von Xbox Live Multiplayerdaten
 
 
-Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um Multiplayerdaten für Ihr [Xbox Live-fähiges Spiel](../xbox-live/index.md) auf einer täglichen oder monatlichen Basis abzurufen. Diese Informationen sind auch im [Xbox Analysebericht](../publish/xbox-analytics-report.md) im Partner Center verfügbar.
+Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um Multiplayerdaten für Ihr [Xbox Live-fähiges Spiel](../xbox-live/index.md) auf einer täglichen oder monatlichen Basis abzurufen. Diese Informationen sind auch in der [Xbox Analysebericht](../publish/xbox-analytics-report.md) im Partner Center verfügbar.
 
 > [!IMPORTANT]
 > Diese Methode unterstützt nur Spiele für Xbox oder Spiele, die Xbox Live-Dienste verwenden. Diese Spiele müssen den [Konzeptgenehmigungsprozess](../gaming/concept-approval.md) durchlaufen, der Spiele umfasst, die von [Microsoft-Partnern](../xbox-live/developer-program-overview.md#microsoft-partners) veröffentlicht wurden, sowie Spiele, die über das [ID@Xbox-Programm](../xbox-live/developer-program-overview.md#id) übermittelt wurden. Diese Methode unterstützt derzeit keine Spiele, die über das [Xbox Live Creators-Programm](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) eingereicht wurden.

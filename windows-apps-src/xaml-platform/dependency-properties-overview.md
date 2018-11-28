@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 92e8b0b0d68b1dc4110818977024d3040194a376
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7712186"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7848470"
 ---
 # <a name="dependency-properties-overview"></a>Übersicht über Abhängigkeitseigenschaften
 
@@ -30,7 +30,7 @@ Der Zweck von Abhängigkeitseigenschaften besteht darin, es zu ermöglichen, den
 - Vorlagen zur mehrfachen Verwendung, z.B. Ressourcen und Stile
 - Werte, die aufgrund von Beziehungen mit anderen Elementen in der Elementstruktur bekannt sind (übergeordnete und untergeordnete Elemente).
 
-Eine Abhängigkeitseigenschaft repräsentiert oder unterstützt ein spezifisches Feature des Programmiermodells zum Definieren einer Windows-Runtime-app mit XAML für die UI und c#, Microsoft Visual Basic oder für VisualC++-komponentenerweiterungen (C++ / CX) für den Code. Zu diesen Features gehören:
+Eine Abhängigkeitseigenschaft repräsentiert oder unterstützt ein spezifisches Feature des Programmiermodells zum Definieren einer Windows-Runtime-app mit XAML für die UI und c#, Microsoft Visual Basic oder für VisualC++-komponentenerweiterungen (C++ / CX) für Code. Zu diesen Features gehören:
 
 - Datenbindung
 - Stile

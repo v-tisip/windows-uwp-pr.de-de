@@ -1,20 +1,20 @@
 ---
-title: Neuigkeiten in Windows-Dokumentation im September 2018 – Entwicklung von UWP-apps
+title: Was ist neu in Windows-Dokumentation im September 2018 – Entwicklung von UWP-apps
 description: Neue Features, Videos, Beispiele und entwicklerleitfäden wurden in der Windows 10-Entwicklerdokumentation für September 2018 hinzugefügt.
 keywords: Neues in, Update, Features, Anleitungen für Entwickler, Windows 10, September
 ms.date: 09/10/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 16ddf00e88842bc6a83ecf759427984a50f5b4a9
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7701880"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7850504"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>Neuigkeiten in der Windows-Entwicklerdokumentation im September 2018
 
-Die Entwicklerdokumentation für die Windows-Plattform wird ständig mit Informationen über neue Features für Entwickler aktualisiert. Die folgenden Featureübersichten, entwicklerleitfäden und Videos wurden im Monat September zur Verfügung gestellt.
+Die Entwicklerdokumentation für die Windows-Plattform wird ständig mit Informationen über neue Features für Entwickler aktualisiert. Die folgenden Featureübersichten, entwicklerleitfäden und Videos wurden im Monat September zur Verfügung gestellt wurden.
 
 Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?LinkId=821431) unter Windows10 können Sie entweder [eine neue universelle Windows-App erstellen](../get-started/create-uwp-apps.md) oder sich mit der Verwendung von [vorhandenem App-Code unter Windows](../porting/index.md) vertraut machen.
 
@@ -22,9 +22,9 @@ Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?L
 
 ### <a name="windows-machine-learning"></a>Windows Machine Learning
 
-[Die Windows Machine Learning-Dokumente](https://docs.microsoft.com/windows/ai/) nun befinden sich auf ihre eigenen Website, und sind für das aktuelle Windows Insider SDK aktualisiert. Es gibt Desktop und UWP-Lernprogramme in C++ und c#, die Ihnen helfen, erste Schritte hinzufügen WinML Ihrer Anwendung.
+[Die Windows Machine Learning-Dokumentation](https://docs.microsoft.com/windows/ai/) jetzt befinden sich auf ihre eigenen Website, und sind für das aktuelle Windows Insider SDK aktualisiert. Es gibt Desktop und UWP-Lernprogramme in C++ und c#, die Ihnen helfen, erste Schritte WinML Ihrer Anwendung hinzufügen.
 
-[Die Windows.AI.MachineLearning-API-Referenz](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning) wurde für das aktuelle Windows Insider SDK aktualisiert.
+[Die Windows.AI.MachineLearning-API-Referenz](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning) wurde aktualisiert, für das aktuelle Windows-Insider-SDK.
 
 [Die Windows-Computer-Learning GitHub-Repository](https://github.com/Microsoft/Windows-Machine-Learning) wurde mit neuen Beispiele aktualisiert, mit denen das aktuelle SDK zusammenarbeiten.
 
@@ -32,7 +32,7 @@ Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?L
 
 ### <a name="windows-ui-library"></a>Windows-UI-Bibliothek
 
-[Die Windows-UI-Bibliothek](https://aka.ms/winui-docs) ist ein Satz von NuGet-Pakete, die Steuerelemente und andere Elemente der Benutzeroberfläche für UWP-apps bereitstellen. Diese Pakete sind auch mit früheren Versionen von Windows 10 kompatibel, damit Ihre app funktioniert, selbst wenn Ihre Benutzer nicht die neueste Version des Betriebssystems ist.
+[Die Windows-UI-Bibliothek](https://aka.ms/winui-docs) ist ein Satz von NuGet-Pakete, die Steuerelemente und andere Elemente der Benutzeroberfläche für UWP-apps bereitstellen. Diese Pakete sind auch mit früheren Versionen von Windows 10 kompatibel, damit Ihre app funktioniert, auch wenn der Benutzer die neueste Version des Betriebssystems besitzen.
 
 Weitere Informationen zu den Windows-UI-Bibliothek, finden Sie unter [Diese Liste mit API-Namespaces, die in das NuGet-Paket enthalten.](https://docs.microsoft.com/uwp/api/overview/winui/)
 
@@ -40,13 +40,13 @@ Weitere Informationen zu den Windows-UI-Bibliothek, finden Sie unter [Diese List
 
 ### <a name="how-blur-effects-work"></a>Wie Weichzeichnen Effekte Arbeit
 
-Eine der unsere Autoren, die esteemed Mike Jacobs hat eine Reihe von Artikeln in Mittel zur Weichzeichner, aus Schrift zu Foto Design von Apps und spielen begonnen. Wenn Sie mehr über diese weit verbreitete Grafikeffekt interessiert sind, sehen Sie sich [im ersten Artikel auf Vision und Foto](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) und [das zweite auf Antialiasing in Grafiken.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
+Eine der unsere Autoren, die esteemed Mike Jacobs hat eine Reihe von Artikeln in Mittel zur Weichzeichner aus Schrift zu Foto, bei dem Entwerfen der Apps und spielen begonnen. Wenn Sie mehr über diese weit verbreitete Grafikeffekt interessiert sind, sehen Sie sich [im ersten Artikel auf Vision und Foto](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) und [die zweite in Antialiasing in Grafiken.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
 
 ![Weichzeichner in Aktion zu sehen](images/blur-example.jpg)
 
 ### <a name="contributing-guidance"></a>Beitragenden Richtlinien
 
-Wir haben [unsere Beitragenden Anleitung](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) für unsere Dokumentation UWP aktualisiert. Diese neuen Richtlinien erläutert die Workflow und Erwartungen an externe Beiträge unserer Dokumente.
+Wir haben [unsere Beitragenden Anleitung](https://github.com/MicrosoftDocs/windows-uwp/blob/docs/CONTRIBUTING.md) für unsere Dokumentation UWP aktualisiert. Diese neue Anleitungen verdeutlicht Workflow und Erwartungen an externe Beiträge unserer Dokumente.
 
 ## <a name="videos"></a>Videos
 
@@ -60,7 +60,7 @@ Aaron Gustafson:
 
 Chris Heilmann
 
-* [4 Videos für das Webhint-tool](https://www.youtube.com/watch?v=eXfmxmiA00Y&list=PLWs4_NfqMtow00LM-vgyECAlMDxx84Q2v)
+* [4 Videos für das Tool, webhint](https://www.youtube.com/watch?v=eXfmxmiA00Y&list=PLWs4_NfqMtow00LM-vgyECAlMDxx84Q2v)
 
 Larry Osterman:
 

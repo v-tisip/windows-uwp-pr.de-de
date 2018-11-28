@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-Ons, In-App-Produkte, IAPs
 ms.localizationpriority: medium
 ms.openlocfilehash: 50733bc0617d56b7e6b8596b661aff8056961f18
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7692378"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7850814"
 ---
 # <a name="get-all-add-ons"></a>Abrufen aller Add-Ons
 
-Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Abrufen von Daten für alle Add-ons für alle apps, die für Ihr Partner Center-Konto registriert wurden.
+Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Abrufen von Daten für alle Add-ons für apps, die für Ihr Partner Center-Konto registriert wurden.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

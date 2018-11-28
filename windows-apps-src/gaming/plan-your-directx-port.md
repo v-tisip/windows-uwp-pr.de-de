@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Portieren von Windows10, UWP, Directx
 ms.localizationpriority: medium
 ms.openlocfilehash: abbcd688df01b779a1cb3ab9e30bd13709926be4
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7691441"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7839898"
 ---
 # <a name="plan-your-directx-port"></a>Planen der DirectX-Portierung
 
@@ -35,7 +35,7 @@ Das Upgrade von Direct3D9 auf Direct3D11 ist mehr als nur ein Suchen-und-Ersetze
 
 Ersetzen Sie die Hilfsbibliotheken D3DX und DXUT durch Ihre eigenen Hilfsbibliotheken oder durch Communitytools. Weitere Informationen finden Sie im Abschnitt [Featurezuordnung](feature-mapping.md).
 
-> **Hinweis:**  können die [DirectX-Toolkit](http://go.microsoft.com/fwlink/p/?LinkID=248929) oder [DirectXTex](http://go.microsoft.com/fwlink/p/?LinkID=248926) Sie um einige Funktionen zu ersetzen, die bisher von D3DX und DXUT bereitgestellt wurden.
+> **Hinweis:**  können Sie mithilfe der [DirectX-Toolkit](http://go.microsoft.com/fwlink/p/?LinkID=248929) oder [DirectXTex](http://go.microsoft.com/fwlink/p/?LinkID=248926) um einige Funktionen zu ersetzen, die bisher von D3DX und DXUT bereitgestellt wurden.
 
  
 

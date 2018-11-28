@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, DirectX, App-Objekt
 ms.localizationpriority: medium
 ms.openlocfilehash: e12ad6ce221440e8840006b3883980721b899ae6
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7693151"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7848788"
 ---
 # <a name="the-app-object-and-directx"></a>Das App-Objekt und DirectX
 
@@ -19,7 +19,7 @@ ms.locfileid: "7693151"
 
 Für die Universelle Windows-Plattform (UWP) mit DirectX-Spielen werden nur wenige der UI-Elemente und -objekte der Windows-Benutzeroberfläche genutzt. Da sie auf einer niedrigeren Ebene des Windows-Runtime-Stapels ausgeführt werden, müssen sie stattdessen auf eine grundlegendere Weise mit dem Benutzeroberflächenframework interagieren, und zwar indem sie direkt auf das App-Objekt zugreifen und mit diesem interagieren. Im Folgenden erfahren Sie, zu welchem Zeitpunkt und auf welche Weise eine solche Interaktion erfolgt und wie Sie dieses Modell als DirectX-Entwickler beim Entwickeln von UWP-Apps effizient nutzen können.
 
-Sehen Sie sich die [Direct3D-Grafiken Glossar](../graphics-concepts/index.md) Informationen Grafiken unbekannte Begriffe und Konzepte, die beim Lesen auftreten.
+Finden Sie unter der [Direct3D-Grafiken Glossar](../graphics-concepts/index.md) Informationen Grafiken unbekannte Begriffe und Konzepte, die Sie beim Lesen auftreten.
 
 ## <a name="the-important-core-user-interface-namespaces"></a>Die wichtigen Benutzeroberflächen-Hauptnamespaces
 
@@ -32,7 +32,7 @@ Zunächst sind die Windows-Runtime-Namespaces zu erwähnen, die Sie (mit **using
 -   [**Windows.System**](https://msdn.microsoft.com/library/windows/apps/br241814)
 -   [**Windows.Foundation**](https://msdn.microsoft.com/library/windows/apps/br226021)
 
-> **Hinweis:**  , wenn Sie nicht über eine UWP-app entwickeln, verwenden Sie die Komponenten der Benutzeroberfläche in den JavaScript-XAML-spezifisch oder Bibliotheken und Namespaces anstelle der Typen in diesen Namespaces bereitgestellten bereitgestellt.
+> **Hinweis:**  Wenn Sie nicht über eine UWP-app entwickeln, verwenden Sie die Komponenten der Benutzeroberfläche in den JavaScript-XAML-spezifisch oder Bibliotheken und Namespaces anstelle der Typen in diesen Namespaces bereitgestellten bereitgestellt.
 
  
 

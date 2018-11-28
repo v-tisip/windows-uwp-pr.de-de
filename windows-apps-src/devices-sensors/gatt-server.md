@@ -5,12 +5,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: a68e78bef540717d4f4c33d3132748fa727b4068
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.openlocfilehash: 551f8b925ffd56950ba893da7b81fefb4579f558
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7714086"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7840013"
 ---
 # <a name="bluetooth-gatt-server"></a>Bluetooth GATT-Server
 
@@ -68,7 +68,7 @@ Die folgenden Deskriptoren werden automatisch vom System, basierend auf der Gatt
 
 > Beachten Sie, dass Broadcast zu diesem Zeitpunkt nicht unterstützt wird.  Angeben der Übertragung GattCharacteristicProperty führt zu einer Ausnahme.
 
-### <a name="build-up-the-heirarchy-of-services-and-characteristics"></a>Aufbau der Hierarchie der Dienste und-Merkmale
+### <a name="build-up-the-hierarchy-of-services-and-characteristics"></a>Um die Hierarchie der Dienste und-Merkmale erstellen
 Die GattServiceProvider dient zum Erstellen und die Definition der Stamm primären Dienst ankündigen.  Jeder Dienst erfordert, dass es sich um eigene ServiceProvider Objekt handelt, die in eine GUID akzeptiert: 
 
 ```csharp

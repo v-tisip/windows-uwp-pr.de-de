@@ -1,19 +1,17 @@
 ---
-author: JnHs
 Description: Get detailed analytics for your Windows apps, in Partner Center or via other methods.
 title: Analysieren der App-Leistung
 ms.assetid: 3A3C6F10-0DB1-416D-B632-CD388EA66759
-ms.author: wdg-dev-content
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, Uwp, Analysen, Berichte, Dashboard, apps, Daten, Metriken
 ms.localizationpriority: medium
-ms.openlocfilehash: 8d7998366d484c95b90b765eb9227a7c3df41b6f
-ms.sourcegitcommit: 93c0a60cf531c7d9fe7b00e7cf78df86906f9d6e
+ms.openlocfilehash: f6a6d79745ec98af2c7f562297092eea3feda659
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "7560754"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7845849"
 ---
 # <a name="analyze-app-performance"></a>Analysieren der App-Leistung
 
@@ -57,7 +55,7 @@ Verwenden Sie die [Store-Analyse-API](../monetize/access-analytics-data-using-wi
 
 ### <a name="windows-dev-center-content-pack-for-power-bi"></a>Windows Dev Center-Inhaltspaket für Power BI
 
-Verwenden Sie das [Windows Dev Center-Inhaltspaket für Power BI](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/) zu erkunden und Ihre Partner Center-Analysedaten in Power BI zu überwachen. Power BI ist ein cloudbasierter Geschäftsanalysedienst, der Ihnen Ihre Geschäftsdaten in einer einzelnen Ansicht präsentiert.
+Verwenden Sie das [Windows Dev Center-Inhaltspaket für Power BI](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/) zu erkunden und Partner Center-Analysedaten in Power BI zu überwachen. Power BI ist ein cloudbasierter Geschäftsanalysedienst, der Ihnen Ihre Geschäftsdaten in einer einzelnen Ansicht präsentiert.
 
 Verwenden Sie die folgenden Ressourcen, um mit Power BI auf Ihre Analysedaten zuzugreifen.
 
@@ -66,4 +64,4 @@ Verwenden Sie die folgenden Ressourcen, um mit Power BI auf Ihre Analysedaten zu
 * [Informationen zum Einsetzen des Windows Dev Center-Inhaltspakets für Power BI, um eine Verbindung zu Ihren Analysedaten herzustellen](https://powerbi.microsoft.com/documentation/powerbi-content-pack-windows-dev-center/)
 
 > [!NOTE]
-> Um das Windows Dev Center-Inhaltspaket für Power BI zu verbinden, wird empfohlen, dass Sie Anmeldeinformationen aus Azure AD-Verzeichnis angeben, die Ihr Partner Center-Konto zugeordnet ist. Wenn Sie die Anmeldeinformationen Ihres Microsoft-Kontos verwenden, werden Ihre Analysedaten in Power BI nicht automatisch aktualisiert. Für eine Aktualisierung müssen Sie sich dann in Power BI anmelden. Wenn in Ihrer Organisation bereits mit Office365 oder anderen Unternehmensdiensten von Microsoft gearbeitet wird, verfügen Sie bereits über Azure AD. Andernfalls können Sie es [kostenlos abrufen](http://go.microsoft.com/fwlink/p/?LinkId=703757). Weitere Informationen zur Einrichtung der Zuordnung finden Sie unter [Zuordnen Azure Active Directory mit Ihrem Partner Center-Konto](associate-azure-ad-with-dev-center.md).
+> Um das Windows Dev Center-Inhaltspaket für Power BI zu verbinden, wird empfohlen, dass Sie Anmeldeinformationen aus Azure AD-Verzeichnis angeben, die Ihr Partner Center-Konto zugeordnet ist. Wenn Sie die Anmeldeinformationen Ihres Microsoft-Kontos verwenden, werden Ihre Analysedaten in Power BI nicht automatisch aktualisiert. Für eine Aktualisierung müssen Sie sich dann in Power BI anmelden. Wenn in Ihrer Organisation bereits mit Office365 oder anderen Unternehmensdiensten von Microsoft gearbeitet wird, verfügen Sie bereits über Azure AD. Andernfalls können Sie es [kostenlos abrufen](http://go.microsoft.com/fwlink/p/?LinkId=703757). Weitere Informationen zur Einrichtung der Zuordnung finden Sie unter [Ordnen Sie Azure Active Directory mit Ihrem Partner Center-Konto](associate-azure-ad-with-dev-center.md).

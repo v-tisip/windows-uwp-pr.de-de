@@ -1,5 +1,5 @@
 ---
-description: Wenn Sie eine universelle 8.1-app & \#8212;whether hat es als Ziel Windows8.1, Windows Phone 8.1 oder beides & \#8212;then werden Sie feststellen, dass der Quellcode und Ihre Kenntnisse sich reibungslos zu Windows 10 portieren lassen.
+description: Wenn Sie eine universelle 8.1-app & \#8212;whether hat es als Ziel Windows8.1, Windows Phone 8.1 oder beides & \#8212;then, die Sie feststellen, dass der Quellcode und Ihre Kenntnisse sich reibungslos zu Windows 10 portieren lassen.
 title: Wechsel von Windows-Runtime 8.x zu UWP
 ms.assetid: ac163b57-dee0-43fa-bab9-8c37fbee3913
 ms.date: 02/08/2017
@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: c94b2a9a1ad13db4051d276aaff9a082f95f33fb
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7693748"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7852032"
 ---
 # <a name="move-from-windows-runtime-8x-to-uwp"></a>Wechsel von Windows-Runtime 8.x zu UWP
 
 
-Wenn Sie eine universelle 8.1-app haben – gibt an, ob es Windows8.1 und/oder Windows Phone 8.1 ausgerichtet ist – und Sie feststellen, dass der Quellcode und Ihre Kenntnisse sich reibungslos zu Windows 10 portieren lassen. Mit Windows 10 können Sie eine app (universelle Windows Plattform) erstellen, also ein einzelnes app-Paket, das Ihre Kunden auf jeder Art von Gerät installieren können. Weitere Hintergrundinformationen zu Windows 10 UWP-apps und den Konzepten von adaptivem Code und adaptiver UI, die wir in diesem Handbuch für das Portieren, erörtern werden finden Sie in der [Anleitung für UWP-apps](https://msdn.microsoft.com/library/windows/apps/dn894631).
+Bei einer universellen 8.1-app – gibt an, ob es Windows8.1 und/oder Windows Phone 8.1 ausgerichtet ist, und klicken Sie dann Sie feststellen, dass der Quellcode und Ihre Kenntnisse sich reibungslos zu Windows 10 portieren lassen. Mit Windows 10 können Sie eine universelle Windows-Plattform (UWP)-app erstellen, also ein einzelnes app-Paket, das Ihre Kunden auf jeder Art von Gerät installieren können. Weitere Hintergrundinformationen zu Windows 10 UWP-apps und den Konzepten von adaptivem Code und adaptiver UI, die wir in diesem portierungshandbuch erörtern werden finden Sie in der [Anleitung für UWP-apps](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
-Beim Portieren werden Sie feststellen, dass Windows 10 teilt sich die bisherigen Plattformen als auch XAML-Markup, Benutzeroberflächenframework und die meisten APIs, und Sie es feststellen werden alle angenehm vertraut. Genau wie vorher, können Sie weiterhin zwischen C++, C# und Visual Basic als Programmiersprache mit dem XAML-Benutzeroberflächenframework wählen. Die ersten Schritte bei der Planung, was genau mit der aktuellen App oder den Apps geschehen soll, hängt von der Art der vorhandenen Apps und Projekte ab. Dies wird in den folgenden Abschnitten erläutert.
+Beim Portieren, werden Sie feststellen, dass Windows 10 teilt sich die meisten APIs mit bisherigen Plattformen als auch XAML-Markup, Benutzeroberflächenframework und die Tools, und Sie es feststellen werden alle angenehm vertraut. Genau wie vorher, können Sie weiterhin zwischen C++, C# und Visual Basic als Programmiersprache mit dem XAML-Benutzeroberflächenframework wählen. Die ersten Schritte bei der Planung, was genau mit der aktuellen App oder den Apps geschehen soll, hängt von der Art der vorhandenen Apps und Projekte ab. Dies wird in den folgenden Abschnitten erläutert.
 
 ## <a name="if-you-have-a-universal-81-app"></a>Bei einer universellen8.1-App
 
@@ -28,9 +28,9 @@ Eine universelle 8.1-App wird aus einem universellen 8.1-App-Projekt erstellt. A
 -   AppName\_81.WindowsPhone. Dies ist das Projekt, das das App-Paket für Windows Phone 8.1 erstellt.
 -   AppName\_81.Shared. Dies ist das Projekt, das den Quellcode, die Markupdateien und andere Assets und Ressourcen enthält, die von den beiden anderen Projekten verwendet werden.
 
-Häufig bietet eine universelle Windows-app für 8.1 die gleichen Features – und das anhand des gleichen Codes und Markups – in dessen Windows8.1 und Windows Phone 8.1-Formularen. Eine app ist ein idealer Kandidat für die Portierung zu einer einzelnen Windows 10-app, die auf die universelle Gerätefamilie ausgerichtet ist (und die Sie auf einer breiten Palette von Geräten installieren können). Sie portieren im Grunde den Inhalt des freigegebenen Projekts und müssen nur wenige oder gar keine Elemente von den anderen beiden Projekten verwenden, da sie nur wenig oder keinen Inhalt haben.
+Häufig bietet eine universelle Windows-app für 8.1 die gleichen Features – und das anhand des gleichen Codes und Markups – in seiner Windows8.1 und Windows Phone 8.1-Formularen. Eine app ist ein idealer Kandidat für die Portierung zu einer einzelnen Windows 10-app, die auf die universelle Gerätefamilie ausgerichtet ist (und Sie auf einer breiten Palette von Geräten installieren können). Sie portieren im Grunde den Inhalt des freigegebenen Projekts und müssen nur wenige oder gar keine Elemente von den anderen beiden Projekten verwenden, da sie nur wenig oder keinen Inhalt haben.
 
-In anderen Fällen, der Windows8.1 und/oder Windows Phone 8.1-Formulare der app enthalten einzigartige Features. Oder sie enthalten den gleichen Featureumfang, implementieren diese Features jedoch mit verschiedenen Techniken oder anderen Technologien. Mit einer solchen App haben Sie die Möglichkeit, sie zu einer einzelnen App zu portieren, die auf die universelle Gerätefamilie ausgerichtet ist (in diesem Fall sollte sich die App selbst an verschiedene Geräte anpassen), oder Sie können sie zu mehr als einer App portieren, z.B. zu einer, die auf die Desktopgerätefamilie ausgerichtet ist, und einer für die Mobilgerätefamilie. Die Art der universellen8.1-App bestimmt, welche Option für diesen Fall am besten geeignet ist.
+In anderen Fällen, die Windows8.1 und/oder Windows Phone 8.1-Formulare der app enthalten einzigartige Features. Oder sie enthalten den gleichen Featureumfang, implementieren diese Features jedoch mit verschiedenen Techniken oder anderen Technologien. Mit einer solchen App haben Sie die Möglichkeit, sie zu einer einzelnen App zu portieren, die auf die universelle Gerätefamilie ausgerichtet ist (in diesem Fall sollte sich die App selbst an verschiedene Geräte anpassen), oder Sie können sie zu mehr als einer App portieren, z.B. zu einer, die auf die Desktopgerätefamilie ausgerichtet ist, und einer für die Mobilgerätefamilie. Die Art der universellen8.1-App bestimmt, welche Option für diesen Fall am besten geeignet ist.
 
 1.  Portieren Sie den Inhalt des freigegebenen Projekts zu einer App für die universelle Gerätefamilie. Übernehmen Sie ggf. andere Inhalte aus den Windows- und WindowsPhone-Projekten, und verwenden Sie diese Inhalte bedingungslos in der App oder bedingt auf dem Gerät, auf dem Ihre App zu diesem Zeitpunkt ausgeführt wird (das letztere Verhalten wird auch als *adaptiv* bezeichnet).
 2.  Portieren Sie den Inhalt des WindowsPhone-Projekts zu einer App für universelle Geräte. Retten Sie ggf. andere Inhalte aus dem Windows-Projekt, und verwenden Sie sie bedingungslos oder adaptiv.

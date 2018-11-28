@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 4ea005dd33bbb5461921fa17eded8430d7648c87
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7718965"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7845021"
 ---
 # <a name="tiles-badges-and-notifications-for-uwp-apps"></a>Kacheln, Signale und Benachrichtigungen für UWP-Apps
  
@@ -51,7 +51,7 @@ Eine Kachel ist die Darstellung einer App im Startmenü. Jede UWP-App verfügt �
 | --- | --- |
 | [Popupbenachrichtigungen](adaptive-interactive-toasts.md) | Mit adaptiven und interaktiven Popupbenachrichtigungen können Sie flexible Popupbenachrichtigungen mit mehr Inhalt, optionalen Inlinebildern und optionaler Benutzerinteraktion erstellen. |
 | [Senden einer lokalen Popupbenachrichtigung](send-local-toast.md) | Hier erfahren Sie, wie Sie eine interaktive Popupbenachrichtigung senden. |
-| [Notifications Visualizer](notifications-visualizer.md) | Notifications Visualizer eine neue universelle Windows-Plattform (UWP)-app im [Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) , die Entwickler adaptive entwerfen hilft live-Kacheln für Windows 10. |
+| [Notifications Visualizer](notifications-visualizer.md) | Notifications Visualizer eine neue universelle Windows-Plattform (UWP)-app im [Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) , die Entwickler entwerfen Sie adaptive live-Kacheln für Windows 10. |
 | [Auswählen einer Methode für die Übermittlung von Benachrichtigungen](choosing-a-notification-delivery-method.md) | In diesem Artikel werden die vier Benachrichtigungsoptionen – lokal, geplant, periodisch und Push – behandelt, die Kachel- und Signalaktualisierungen sowie Popupbenachrichtigungsinhalte bereitstellen. |
 | [Übersicht über regelmäßige Benachrichtigungen](periodic-notification-overview.md) | Regelmäßige Benachrichtigungen – auch als abgerufene Benachrichtigungen bezeichnet – aktualisieren Kacheln und Signale in festgelegten Intervallen, indem sie Inhalte aus einem Clouddienst herunterladen. |
 | [Übersicht über die Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS)](windows-push-notification-services--wns--overview.md) | Mithilfe des Windows-Pushbenachrichtigungsdiensts (WNS) können Drittanbieterentwickler Popup-, Kachel-, Signalupdates und unformatierte Updates von ihren eigenen Clouddiensten aus senden. Dadurch steht ein Mechanismus zur Verfügung, mit dem Sie Ihren Benutzern auf energieeffiziente und verlässliche Weise neue Updates bereitstellen können. |

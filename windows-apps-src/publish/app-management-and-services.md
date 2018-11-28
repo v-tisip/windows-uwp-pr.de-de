@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6a8f75fae686763f3d79cea2f02c3208993cb723
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7691049"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7845829"
 ---
 # <a name="app-management-and-services"></a>App-Verwaltung und -Dienste
 
@@ -25,9 +25,9 @@ Im Abschnitt **Dienste** können Sie verschiedene Dienste für Ihre Apps verwalt
 
 ## <a name="xbox-live"></a>Xbox Live
 
-Wenn Sie ein Spiel veröffentlichen, können Sie die [Xbox Live Creators-Programm](http://xbox.com/developers/creators-program) auf dieser Seite aktivieren. Auf diese Weise können Sie die Starten konfigurieren und Testen Xbox Live-Features, und schließlich veröffentlichen Sie Ihr Spiel Xbox Live Creators-Programm.
+Wenn Sie ein Spiel veröffentlichen, können Sie die [Xbox Live Creators-Programm](http://xbox.com/developers/creators-program) auf dieser Seite aktivieren. Auf diese Weise können Sie konfigurieren und Testen Xbox Live-Features starten, und schließlich Veröffentlichen von Xbox Live Creators-Programm-spielen.
 
-Weitere Informationen finden Sie unter [Erste Schritte mit Xbox Live Creators-Programm](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) und [Erstellen eines neuen Titels für Xbox Live Creators-Programm und in der testumgebung veröffentlichen](../xbox-live/get-started-with-creators/create-and-test-a-new-creators-title.md).
+Weitere Informationen finden Sie unter [Erste Schritte mit Xbox Live Creators-Programm](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) und [Erstellen eines neuen Titels Xbox Live Creators-Programm und in der testumgebung veröffentlichen](../xbox-live/get-started-with-creators/create-and-test-a-new-creators-title.md).
 
 ## <a name="experimentation"></a>Experimentation
 
@@ -37,21 +37,21 @@ Weitere Informationen finden Sie unter [Ausführen von App-Experimenten mit A/B-
 
 ## <a name="maps"></a>Karten
 
-Um Kartendienste in Apps zu verwenden, die auf Windows 10 or Windows 8.x ausgerichtet sind, besuchen Sie das [Bing Karten Dev Center](http://go.microsoft.com/fwlink/p/?LinkId=614880). Informationen dazu, wie Sie einen kartenauthentifizierungsschlüssel aus dem Bing Maps Developer Center anfordern und Ihrer app hinzufügen finden Sie weitere Informationen [Anfordern eines kartenauthentifizierungsschlüssels](../maps-and-location/authentication-key.md) . 
+Um Kartendienste in Apps zu verwenden, die auf Windows 10 or Windows 8.x ausgerichtet sind, besuchen Sie das [Bing Karten Dev Center](http://go.microsoft.com/fwlink/p/?LinkId=614880). Informationen zum Anfordern eines kartenauthentifizierungsschlüssels von Bing Maps Developer Center und Ihrer app hinzufügen finden Sie weitere Informationen [Anfordern eines kartenauthentifizierungsschlüssels](../maps-and-location/authentication-key.md) . 
 
-Verwenden Sie die Seite " **Karten** " nur für zuvor veröffentlichten apps für Windows Phone 8.1 und früheren Versionen. Um Kartendienste in diese apps verwenden, müssen Sie eine Kartendienst-Anwendungs-ID und ein Token in Ihrem app Code einfügen anfordern. Beim **Abrufen von token**anklicken, wir einen Map-Dienst Anwendungs-ID (**ApplicationID**) zu generieren und Service Authentifizierungstoken (**AuthenticationToken**) für Ihre app zuordnen. Achten Sie darauf, dass Ihr Code vor dem Paket Sie diese Werte hinzufügen und übermitteln Ihrer app. Weitere Informationen finden Sie unter [Hinzufügen eines Kartensteuerelements zu einer Seite (Windows Phone 8.1)](http://go.microsoft.com/fwlink/p/?LinkId=614882).
+Verwenden Sie die Seite " **Karten** " nur für bereits veröffentlichte apps für Windows Phone 8.1 und frühere Versionen. Um Kartendienste in diese apps verwenden, müssen Sie eine Kartendienst-Anwendungs-ID und ein Token in Ihrem app Code einfügen anfordern. Beim **Abrufen von token**anklicken, wir einen Map-Dienst Anwendungs-ID (**ApplicationID**) zu generieren und Service Authentifizierungstoken (**AuthenticationToken**) für Ihre app zuordnen. Achten Sie darauf, dass diese Werte den Code, bevor Sie Paket hinzufügen und übermitteln Sie Ihre app. Weitere Informationen finden Sie unter [Hinzufügen eines Kartensteuerelements zu einer Seite (Windows Phone 8.1)](http://go.microsoft.com/fwlink/p/?LinkId=614882).
 
 ## <a name="product-collections-and-purchases"></a>Produktsammlungen und Einkäufe
 
-Um den Zugriff auf Besitzerinformationen für apps und Add-ons im Microsoft Store-Sammlungs-API und der Microsoft Store-Einkaufs-API zu verwenden, müssen Sie das zugehörige eingeben hier Azure AD-Client-IDs. Beachten Sie, dass es bis zu 16 Stunden dauern kann, bis diese Änderungen wirksam werden.
+Um den Zugriff auf Besitzerinformationen für apps und Add-ons im Microsoft Store-Sammlungs-API und der Microsoft Store-Einkaufs-API zu verwenden, müssen Sie das zugeordnete eingeben hier Azure AD-Client-IDs. Beachten Sie, dass es bis zu 16 Stunden dauern kann, bis diese Änderungen wirksam werden.
 
 Weitere Informationen finden Sie unter [Verwalten von Produktansprüchen aus einem Dienst](../monetize/view-and-grant-products-from-a-service.md).
 
-## <a name="administrator-consent"></a>Zustimmung des Administrators
+## <a name="administrator-consent"></a>Administrator-Zustimmung
 
-f Ihr Produkt mit Azure AD integriert und APIs aufruft, die [Anwendung oder delegierte Berechtigungen verfügen](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) anfordern, die Zustimmung des Administrators, erfordern Geben Sie Ihre Azure AD-Client-ID ein. Dadurch können Administratoren, die die app für ihre Organisation gewähren Zustimmung für Ihr Produkt, die für alle Benutzer im Mandanten fungieren erwerben.
+f Ihr Produkt mit Azure AD integriert und APIs aufruft, die [Anwendung oder delegierte Berechtigungen verfügen](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) anfordern, die Administrator-Zustimmung erfordern Geben Sie Ihre Azure AD-Client-ID ein. Dadurch können Administratoren, die die app für ihre Organisation gewähren Zustimmung für Ihr Produkt, die für alle Benutzer im Mandanten fungieren erwerben.
 
-Weitere Informationen finden Sie unter [für eine gesamte Mandanten Zustimmung anfordern](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant).
+Weitere Informationen finden Sie unter [für einen gesamten Mandanten Zustimmung anfordern](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes#requesting-consent-for-an-entire-tenant).
 
 ## <a name="app-management"></a>App-Verwaltung
 
@@ -82,7 +82,7 @@ Entwickler mit OEM-Berechtigungen können auf der Seite **Aktuelle Pakete** auß
 
 ## <a name="wnsmpns"></a>WNS/MPNS
 
-**WNS/MPNS** Abschnitt enthält Optionen zum Erstellen und Senden von Benachrichtigungen an die Kunden Ihrer app. 
+Der **WNS/MPNS** Abschnitt enthält Optionen zum Erstellen und Senden von Benachrichtigungen an die Kunden Ihrer app. 
 
 > [!TIP]
 > Es wird empfohlen, für UWP-apps mithilfe des **Benachrichtigungen** in Partner Center. Dieses Feature können Sie die Benachrichtigungen an alle Kunden Ihrer app zu senden, oder auf eine benutzerorientierte Teilmenge Ihrer Windows 10-Kunden, die die Kriterien erfüllen, die Sie in einem [Kundensegment](create-customer-segments.md)definiert haben. Weitere Informationen finden Sie unter [Senden von Benachrichtigung an die Kunden Ihrer App](send-push-notifications-to-your-apps-customers.md).

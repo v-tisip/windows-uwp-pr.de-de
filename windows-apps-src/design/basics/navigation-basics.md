@@ -11,11 +11,11 @@ keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 4eb31ed1f802b8827c124958438ceb6c5902aee1
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7719607"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7848651"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>Navigationsdesigngrundlagen für UWP-Apps
 
@@ -55,7 +55,7 @@ Beginnen wir mit den Grundprinzipien eines guten Navigationsdesigns:
 
 ### <a name="consistency"></a>Konsistenz
 
-Die Navigation sollte den Erwartungen der Benutzer entsprechen. [Standard-Steuerelementen](#use-the-right-controls) , die Benutzer mit vertraut sind und folgende Standardkonventionen für Symbole verwenden, nehmen Position und Formatierung Navigation vorhersehbar und intuitiv für Benutzer.
+Die Navigation sollte den Erwartungen der Benutzer entsprechen. Verwenden [Standardsteuerelemente](#use-the-right-controls) , dass der Benutzer mit vertraut sind und folgenden Standardkonventionen für Symbole, machen Position und Formatierung Navigation vorhersehbar und intuitiv für Benutzer.
 
 ![Bild mit Seitenkomponenten](images/nav/page-components.svg)
 
@@ -184,14 +184,14 @@ Sobald Sie sich für eine Seitenstruktur entschieden haben, müssen Sie entschei
         
         Use top navigation when:
 
-        - Möchten Sie alle Navigationsoptionen auf dem Bildschirm anzuzeigen.
+        - Sie möchten alle Navigationsoptionen auf dem Bildschirm anzeigen.
         - Sie möchten mehr Platz für den Inhalt Ihrer app.
-        - Symbole können nicht Ihre Navigationskategorien deutlich beschreiben.
+        - Symbole können nicht Ihre Navigationskategorien beschreiben.
         
         Verwendung Registerkarten bei:
 
         - Verlauf und Seite Navigationszustand beibehalten werden soll.
-        - Sie erwarten, dass Benutzer zwischen Registerkarten häufig zu wechseln.
+        - Sie erwarten, dass Benutzer häufig Registerkarten wechseln.
 
 :::row-end:::
 

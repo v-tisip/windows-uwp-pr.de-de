@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ff9510b65bd635b5b10e0cbea551c12b29ef8f37
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7691581"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7848586"
 ---
 # <a name="launch-the-windows-settings-app"></a>Starten der Windows-Einstellungs-App
 
@@ -97,7 +97,7 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
 | Sprechen mit Cortana | ms-settings:cortana-language |
 
 > [!NOTE] 
-> In diesem Abschnitt Einstellungen auf dem Desktop wird Suche aufgerufen werden, wenn der PC, Regionen gesetzt ist, in denen Cortana ist derzeit nicht verfügbar oder Cortana deaktiviert wurde. Cortana-spezifische Seiten (Cortana für meine Geräte) und sprechen mit Cortana werden in diesem Fall nicht aufgeführt. 
+> In diesem Abschnitt Einstellungen auf dem Desktop wird Suche aufgerufen werden, wenn der PC, Regionen gesetzt ist, in denen Cortana ist derzeit nicht verfügbar oder Cortana deaktiviert wurde. Cortana-spezifische Seiten (Cortana für meine Geräte) und sprechen Sie mit Cortana werden in diesem Fall nicht aufgeführt. 
 
 ## <a name="devices"></a>Geräte
 
@@ -123,7 +123,7 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
 |-------------|-----|
 | Audio | ms-settings:easeofaccess-audio |
 | Untertitel | ms-settings:easeofaccess-closedcaptioning |
-| Color-Filter | MS-Settings: Easeofaccess-Colorfilter |
+| Farbe Filter | MS-Settings: Easeofaccess-Colorfilter |
 | Anzeige | ms-settings:easeofaccess-display |
 | Augensteuerung | ms-settings:easeofaccess-eyecontrol |
 | Schriftarten | ms-settings:fonts |

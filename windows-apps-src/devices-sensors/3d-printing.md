@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, 3dprinting, 3D-Druck
 ms.localizationpriority: medium
 ms.openlocfilehash: 5d0bfaa06c749567fb38254be06ac9e8fd01fe61
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7693001"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7847395"
 ---
 # <a name="3d-printing"></a>3D-Druck
 
@@ -23,7 +23,7 @@ Weitere Informationen zum 3D-Druck mit Windows 10, einschließlich Ressourcen f�
 | Thema | Beschreibung |
 |-------|-------------|
 | [3D-Druck aus der App](3d-print-from-app.md) | Hier erfahren Sie, wie Sie Ihre UWP-app 3D-Druckfunktionen hinzufügen. In diesem Thema wird erläutert, wie das 3D-Drucken-Dialogfeld aufgerufen wird, nachdem Sie sich vergewissert haben, dass das 3D-Modell gedruckt werden kann und im richtigen Format vorliegt. |
-| [Generieren eines 3MF-Pakets](generate-3mf.md) | Beschreibt die Struktur des 3D Manufacturing Format-Dateityps und wie sie erstellt haben und mit den APIs Windows.Graphics.Printing3D bearbeitet werden. |
+| [Generieren eines 3MF-Pakets](generate-3mf.md) | Beschreibt die Struktur des 3D Manufacturing Format-Dateityps und wie es erstellt und mit den APIs Windows.Graphics.Printing3D bearbeitet werden. |
 
 ## <a name="related-topics"></a>Verwandte Themen
 

@@ -12,11 +12,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 639f552a240cf8d28d1a2a0ce530315671128746
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7704044"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7843940"
 ---
 # <a name="xaml-overview"></a>Übersicht über XAML
 
@@ -88,7 +88,7 @@ Das Präfix definiert das Markuptoken, das zur Referenzierung dieses XAML-Namesp
 
 Die Attributsyntax zum Zuordnen des Präfix `myTypes` zum Namespace `myCompany.myTypes` lautet z.B. wie folgt: `    xmlns:myTypes="using:myCompany.myTypes"`. Ein Beispiel für eine Elementdarstellung lautet: `<myTypes:CustomButton/>`
 
-Weitere Informationen zur Zuordnung von XAML-Namespaces für benutzerdefinierte Typen einschließlich einiger besonderer Punkte zu für VisualC++-komponentenerweiterungen (C++ / CX), [XAML-Namespaces und Namespacezuordnung](xaml-namespaces-and-namespace-mapping.md)angezeigt.
+Weitere Informationen zur Zuordnung von XAML-Namespaces für benutzerdefinierte Typen einschließlich einiger besonderer Punkte zu für VisualC++-komponentenerweiterungen (C++ / CX), finden Sie in [XAML-Namespaces und Namespacezuordnung](xaml-namespaces-and-namespace-mapping.md).
 
 ## <a name="other-xaml-namespaces"></a>Andere XAML-Namespaces
 

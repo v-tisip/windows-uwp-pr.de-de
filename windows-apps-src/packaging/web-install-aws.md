@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, Windows 10, UWP, app-Installer, AppInstaller, querladen, im Zusammenhang mit festgelegten optionale Pakete, AWS
 ms.localizationpriority: medium
 ms.openlocfilehash: 53fe01a1c1a825377e886e042b4eef3868cbf5eb
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7696197"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7848910"
 ---
 # <a name="hosting-uwp-app-packages-on-aws-for-web-install"></a>Hosten von UWP-App-Paketen auf AWS für die Webinstallation
 
@@ -28,10 +28,10 @@ Für eine erfolgreiche Durchführung dieses Lernprogramms benötigen Sie Folgend
 
 Optional: [Startprojekt](https://github.com/AppInstaller/MySampleWebApp) auf GitHub. Dies ist hilfreich, wenn Sie kein App-Paket oder keine Webseite zum Arbeiten verfügbar haben, aber dennoch lernen möchten, wie Sie dieses Feature verwenden.
 
-In diesem Lernprogramm wird über eine Webseite und Host-Paketen auf AWS einrichten geleitet. Dies ist ein AWS-Abonnement erforderlich. Je nach der Skalierung der des Vorgangs können Sie ihre kostenlose Mitgliedschaft verwenden, um dieses Lernprogramms. 
+In diesem Lernprogramm wird über eine Webseite und Host-Paketen auf AWS Einrichtung geleitet. Dies ist ein AWS-Abonnement erforderlich. Je nach der Skalierung des Vorgangs können Sie ihre kostenlose Mitgliedschaft verwenden, um dieses Lernprogramms. 
 
-## <a name="step-1---aws-membership"></a>Schritt 1: AWS-Mitgliedschaft
-Um eine AWS-Mitgliedschaft erhalten, finden Sie auf der [Detailseite für das Konto AWS](https://aws.amazon.com/free/). Für die Zwecke dieses Lernprogramms können Sie eine kostenlose Mitgliedschaft verwenden.
+## <a name="step-1---aws-membership"></a>Schritt 1: AWS Mitgliedschaft
+Um eine AWS Mitgliedschaft zu erhalten, finden Sie auf der [Detailseite für das Konto AWS](https://aws.amazon.com/free/). Für die Zwecke dieses Lernprogramms können Sie eine kostenlose Mitgliedschaft verwenden.
 
 ## <a name="step-2---create-an-amazon-s3-bucket"></a>Schritt 2: Erstellen einer Amazon S3 Buckets
 
@@ -47,29 +47,29 @@ Wählen Sie **Buckets erstellen**, und geben Sie einen **Namen Buckets** für Ih
 
 ## <a name="step-3---upload-uwp-app-package-and-web-pages-to-an-s3-bucket"></a>Schritt 3: Hochladen von UWP-app-Paket und Webseiten in einer S3 Buckets
 
-Eine haben Sie eine Amazon S3 Buckets erstellt, können in Ihrer Amazon S3-Ansicht angezeigt. Hier ist ein Beispiel wie unsere Demo Buckets aussieht:
+Eine Sie erstellt haben eine Amazon S3 Buckets, in der Ansicht Amazon S3 anzeigen können. Hier ist ein Beispiel wie unsere Demo Buckets aussieht:
 
 ![Amazon S3 Buckets Ansicht](images/aws-post-create.png)
 
 Wir sind jetzt Hochladen der app-Pakete und Webseiten, die wir in unserem Amazon S3 Buckets hosten möchten. 
 
-Klicken Sie auf die neu erstellte Buckets zum Hochladen von Inhalten. Die Buckets ist derzeit leer, da nichts noch nicht hochgeladen wurde. Klicken Sie auf die Schaltfläche **Hochladen** , und wählen Sie die app-Pakete und die Webseite-Dateien, die Sie hochladen möchten.
+Klicken Sie auf die neu erstellte Buckets zum Hochladen von Inhalten. Die Buckets ist derzeit leer, da nichts noch hochgeladen wurde. Klicken Sie auf die Schaltfläche **Hochladen** , und wählen Sie die app-Pakete und die Webseite-Dateien, die Sie hochladen möchten.
 
 > [!NOTE]
 > Sie können das App-Paket verwenden, das Teil des bereitgestellten [Startprojekt](https://github.com/AppInstaller/MySampleWebApp)-Repositorys auf GitHub ist, falls Ihnen kein App-Paket zur Verfügung steht. Die Zertifikat (MySampleApp.cer), mit dem das Paket signiert wurde, ist ebenfalls im Beispiel auf GitHub enthalten. Sie müssen das Zertifikat vor der Installation der App auf Ihrem Gerät installieren.
 
 ![Hochladen von app-Paket](images/aws-upload-package.png)
 
-Ähnlich wie die Berechtigungen für die Erstellung einer Amazon S3 Buckets, muss der Inhalt der Buckets auch **Lesen**, **Schreiben**und **öffentlichen Lesezugriff auf diese Objekte Grant** -Berechtigungen verfügen.
+Ähnlich wie die Berechtigungen für die Erstellung einer Amazon S3 Buckets, muss der Inhalt in der Zelle auch zum **Lesen**, **Schreiben**und **öffentlichen Lesezugriff auf diese Objekte Grant** -Berechtigungen verfügen.
 
-Wenn Sie Testen einer Webseite hochladen möchten, aber nicht eine haben, können Sie die Beispiel-html-Seite (default.html) aus dem [Startprojekt](https://github.com/AppInstaller/MySampleWebApp/blob/master/MySampleWebApp/default.html).
+Wenn Sie Testen einer Webseite hochladen möchten, aber nicht haben, können Sie die Beispiel-html-Seite (default.html) aus dem [Startprojekt](https://github.com/AppInstaller/MySampleWebApp/blob/master/MySampleWebApp/default.html)verwenden.
 
 > [!IMPORTANT]
-> Bevor Sie die Webseite hochgeladen haben, stellen Sie sicher, dass die app-Paket auf der Webseite korrekt sind. 
+> Bevor Sie die Webseite hochgeladen haben, stellen Sie sicher, dass die app-Paket-Referenz auf der Webseite korrekt ist. 
 
 Zum Abrufen der Referenz zur app-Paket zuerst Hochladen von app-Paket, und kopieren Sie die app-Paket-URL. Bearbeiten Sie die html-Webseite entsprechend den Pfad der richtigen app-Paket. Finden Sie im Codebeispiel für weitere Details. 
 
-Wählen Sie die hochgeladenen app-Paket-Datei auf den Referenzlink zum app-Paket abrufen, ähnlich wie in diesem Beispiel wird:
+Wählen Sie die Datei hochgeladene app Paket, um den Verweis Link zum app-Paket zu erhalten, wird in diesem Beispiel ähnelt:
 
 ![hochgeladene Paketpfad](images/aws-package-path.png)
 
@@ -86,18 +86,18 @@ Wählen Sie die hochgeladenen app-Paket-Datei auf den Referenzlink zum app-Paket
     </body>
 </html>
 ```
-Hochladen der HTML-Datei für Ihre Amazon S3 Buckets. Denken Sie daran, die Berechtigungen zum **Lesen** und **Schreiben** Zugriff zu ermöglichen.
+Hochladen der HTML-Datei auf Ihrem Amazon S3 Buckets. Denken Sie daran, die Berechtigungen zum **Lesen** und **Schreiben** Zugriff zu ermöglichen.
 
 ## <a name="step-4---test"></a>Schritt 4: Test
 
-Nachdem der Webseite in Ihre Amazon S3 Buckets hochgeladen wurde, rufen Sie den Link zu der Webseite durch die Auswahl der hochgeladenen HTML-Datei.
+Nachdem der Webseite in Ihre Amazon S3 Zelle hochgeladen wurde, rufen Sie den Link zu der Webseite durch die Auswahl der hochgeladenen HTML-Datei.
 
-Verwenden Sie den Link, um die Webseite zu öffnen. Da wir Berechtigungen gewähren öffentlichen Zugriff auf die app-Paket und die Webseite festgelegt, kann alle Personen mit einem Link zu der Webseite darauf zugreifen, und installieren Ihre UWP-app-Pakete mithilfe von App-Installer. Beachten Sie, dass App-Installer Teil von Windows 10-Plattform ist. Als Entwickler müssen Sie keine Features oder zusätzlichen Code zu Ihrer app für die Verwendung der App-Installer ermöglichen hinzufügen. 
+Verwenden Sie den Link, um die Webseite zu öffnen. Da wir Berechtigungen erteilen öffentlichen Zugriff auf die app-Paket und die Webseite festgelegt haben, wird jeder Benutzer mit einem Link zu der Webseite werden darauf zugreifen und Ihre UWP-app-Pakete mithilfe von App-Installer installiert. Beachten Sie, dass App-Installer Teil von Windows 10-Plattform ist. Als Entwickler müssen Sie keine Features oder zusätzlichen Code zu Ihrer app für die Verwendung der App-Installer ermöglichen hinzufügen. 
 
 ## <a name="troubleshooting"></a>Problembehandlung
 
 ### <a name="app-installer-fails-to-install"></a>App-Installer Fehler bei der Installation 
 
-App-Installation schlägt fehl, wenn das Zertifikat, dem das app-Paket signiert ist nicht auf dem Gerät installiert ist. Um dieses Problem zu beheben, müssen Sie das Zertifikat vor der Installation der App installieren. Wenn Sie ein app-Paket für die öffentliche Verteilung hosten, hat es empfohlen, um Ihr app-Paket mit einem Zertifikat von einer Zertifizierungsstelle zu signieren. 
+App-Installation schlägt fehl, wenn das Zertifikat, dem das app-Paket signiert ist nicht auf dem Gerät installiert ist. Um dieses Problem zu beheben, müssen Sie das Zertifikat vor der Installation der App installieren. Wenn Sie ein app-Paket für die öffentliche Verteilung hosten, hat es empfohlen, die um Ihr app-Paket mit einem Zertifikat von einer Zertifizierungsstelle zu signieren. 
 
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: cb53295227655e3067dafd5e3a3f1f4631a97455
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7703992"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7849148"
 ---
 #  <a name="porting-windowsphone-silverlight-business-and-data-layers-to-uwp"></a>Portieren von Unternehmen WindowsPhone Silverlight und Daten-Datenebenen zu UWP
 
@@ -26,11 +26,11 @@ Einer der Hauptvorteile der universellen Windows-Plattform (UWP) besteht darin, 
 
 ## <a name="background-processing"></a>Hintergrundverarbeitung
 
-Eine WindowsPhone-Silverlight-app kann ein verwaltetes **ScheduledTaskAgent** Objekt verwenden, um eine Aufgabe auszuführen, während die app nicht im Vordergrund befindet. UWP-Apps verwenden auf ähnliche Weise die [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)-Klasse zum Erstellen und Registrieren von Hintergrundaufgaben. Sie definieren eine Klasse, die die Arbeit Ihrer Hintergrundaufgabe implementiert. Das System führt die Hintergrundaufgabe regelmäßig aus, indem die [**Run**](https://msdn.microsoft.com/library/windows/apps/br224811)-Methode der Klasse zum Ausführen der Arbeit aufgerufen wird. Denken Sie bei einer UWP-App daran, die Deklaration **Hintergrundaufgaben** im App-Paketmanifest festzulegen. Weitere Informationen finden Sie unter [Unterstützen der App mit Hintergrundaufgaben](https://msdn.microsoft.com/library/windows/apps/mt299103).
+Eine WindowsPhone Silverlight-app kann ein verwaltetes **ScheduledTaskAgent** Objekt verwenden, um eine Aufgabe auszuführen, während die app nicht im Vordergrund befindet. UWP-Apps verwenden auf ähnliche Weise die [**BackgroundTaskBuilder**](https://msdn.microsoft.com/library/windows/apps/br224768)-Klasse zum Erstellen und Registrieren von Hintergrundaufgaben. Sie definieren eine Klasse, die die Arbeit Ihrer Hintergrundaufgabe implementiert. Das System führt die Hintergrundaufgabe regelmäßig aus, indem die [**Run**](https://msdn.microsoft.com/library/windows/apps/br224811)-Methode der Klasse zum Ausführen der Arbeit aufgerufen wird. Denken Sie bei einer UWP-App daran, die Deklaration **Hintergrundaufgaben** im App-Paketmanifest festzulegen. Weitere Informationen finden Sie unter [Unterstützen der App mit Hintergrundaufgaben](https://msdn.microsoft.com/library/windows/apps/mt299103).
 
-Um große Datendateien im Hintergrund zu übertragen, wird die **BackgroundTransferService** -Klasse eine WindowsPhone-Silverlight-app verwendet. Eine UWP-App verwendet zu diesem Zweck APIs im [**Windows.Networking.BackgroundTransfer**](https://msdn.microsoft.com/library/windows/apps/br207242)-Namespace. Die Features initiieren Übertragungen anhand eines ähnlichen Musters, die neue API verfügt aber über verbesserte Funktionen und eine höhere Leistung. Weitere Informationen finden Sie unter [Übertragen von Daten im Hintergrund](https://msdn.microsoft.com/library/windows/apps/xaml/hh452975).
+Um große Datendateien im Hintergrund zu übertragen, verwendet eine WindowsPhone Silverlight-app die **BackgroundTransferService** -Klasse. Eine UWP-App verwendet zu diesem Zweck APIs im [**Windows.Networking.BackgroundTransfer**](https://msdn.microsoft.com/library/windows/apps/br207242)-Namespace. Die Features initiieren Übertragungen anhand eines ähnlichen Musters, die neue API verfügt aber über verbesserte Funktionen und eine höhere Leistung. Weitere Informationen finden Sie unter [Übertragen von Daten im Hintergrund](https://msdn.microsoft.com/library/windows/apps/xaml/hh452975).
 
-Eine WindowsPhone-Silverlight-app verwendet die verwalteten Klassen im Namespace **Microsoft.Phone.BackgroundAudio** für die Audiowiedergabe, während die app nicht im Vordergrund befindet. Die UWP verwendet das Windows Phone Store-App-Modell. Weitere Informationen finden Sie unter [Hintergrundaudio](https://msdn.microsoft.com/library/windows/apps/mt282140) und im [Hintergrundaudio](http://go.microsoft.com/fwlink/p/?linkid=619997)-Beispiel.
+Eine WindowsPhone Silverlight-app verwendet die verwalteten Klassen im Namespace **Microsoft.Phone.BackgroundAudio** für die Audiowiedergabe, während die app nicht im Vordergrund befindet. Die UWP verwendet das Windows Phone Store-App-Modell. Weitere Informationen finden Sie unter [Hintergrundaudio](https://msdn.microsoft.com/library/windows/apps/mt282140) und im [Hintergrundaudio](http://go.microsoft.com/fwlink/p/?linkid=619997)-Beispiel.
 
 ## <a name="cloud-services-networking-and-databases"></a>Clouddienste, Netzwerk und Datenbanken
 
@@ -44,13 +44,13 @@ UWP-Apps bieten zurzeit keine integrierte Unterstützung für datenintensive Sze
 
 ## <a name="launchers-and-choosers"></a>Launcher und Chooser
 
-Mit Launchern und Choosern (zu finden im Namespace **Microsoft.Phone.Tasks** ), eine WindowsPhone-Silverlight-app interagieren mit dem Betriebssystem, um allgemeine Vorgänge wie Verfassen einer e-Mails, Auswählen eines Fotos oder Teilen bestimmter Arten von Daten mit einer anderen app. Suchen Sie nach **Microsoft.Phone.Tasks** im Thema [Windows Phone Silverlight zu Windows 10 Namespace- und klassenzuordnungen](wpsl-to-uwp-namespace-and-class-mappings.md) zu den entsprechenden UWP-Typ finden. Diese reichen von ähnlichen Mechanismen (so genannten Launchern und Pickern) bis zur Implementierung eines Vertrags zum Teilen von Daten zwischen Apps.
+Mit Launchern und Choosern (zu finden im **Microsoft.Phone.Tasks** -Namespace), eine WindowsPhone Silverlight-app interagieren, mit dem Betriebssystem, um allgemeine Vorgänge wie Verfassen einer e-Mails, Auswählen eines Fotos oder Teilen bestimmter Arten von Daten mit einer anderen app. Suchen Sie nach **Microsoft.Phone.Tasks** im Thema [Windows Phone Silverlight zu Windows 10 Namespace- und klassenzuordnungen](wpsl-to-uwp-namespace-and-class-mappings.md) zu den entsprechenden UWP-Typ finden. Diese reichen von ähnlichen Mechanismen (so genannten Launchern und Pickern) bis zur Implementierung eines Vertrags zum Teilen von Daten zwischen Apps.
 
-Eine WindowsPhone-Silverlight-app kann in einen Ruhezustand versetzt oder sogar als veraltet markiert versetzt werden, wenn, z. B. die fotoauswahlaufgabe. Eine UWP-App bleibt aktiv und wird weiter ausgeführt, wenn die [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)-Klasse verwendet wird.
+Eine WindowsPhone Silverlight-app kann in einen Ruhezustand versetzt oder sogar als veraltet markiert versetzt werden, wenn, z. B. die fotoauswahlaufgabe. Eine UWP-App bleibt aktiv und wird weiter ausgeführt, wenn die [**FileOpenPicker**](https://msdn.microsoft.com/library/windows/apps/br207847)-Klasse verwendet wird.
 
 ## <a name="monetization-trial-mode-and-in-app-purchases"></a>Monetisierung (Testmodus und In-App-Einkäufe)
 
-Eine WindowsPhone-Silverlight-app können die UWP- [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) -Klasse für die meisten seiner Testmodus und in-app-Kauf-Funktionen, sodass muss kein Code portiert werden. Eine WindowsPhone-Silverlight-app ruft jedoch **MarketplaceDetailTask.Show** , um die app zum Kauf anzubieten:
+Eine WindowsPhone Silverlight-app können die UWP- [**CurrentApp**](https://msdn.microsoft.com/library/windows/apps/hh779765) -Klasse für die meisten seiner Testmodus und in-app-Kauf-Funktionalität, sodass muss kein Code portiert werden. Eine WindowsPhone Silverlight-app ruft jedoch **MarketplaceDetailTask.Show** , um die app zum Kauf anzubieten:
 
 ```csharp
     private void Buy()
@@ -82,7 +82,7 @@ Informationen und Lernprogramme zur Verwendung von Kacheln, Popups, Signalen, Ba
 
 ## <a name="storage-file-access"></a>Speicher (Dateizugriff)
 
-WindowsPhone Silverlight-Code, der app-Einstellungen als Schlüssel-Wert-Paare in isoliertem Speicher speichert kann problemlos portiert werden. Nachfolgend finden Sie ein vorher-nachher-Beispiel, zunächst die WindowsPhone Silverlight-Version:
+WindowsPhone Silverlight-Code, der app-Einstellungen als Schlüssel-Wert-Paare in isoliertem Speicher speichert, kann problemlos portiert werden. Nachfolgend finden Sie ein vorher-nachher-Beispiel, zunächst die WindowsPhone Silverlight-Version:
 
 ```csharp
     var propertySet = IsolatedStorageSettings.ApplicationSettings;
@@ -101,7 +101,7 @@ Und hier die UWP-Entsprechung:
     string myFavoriteAuthor = propertySet.ContainsKey(key) ? (string)propertySet[key] : "<none>";
 ```
 
-Obwohl eine Teilmenge des **Windows.Storage** -Namespace für sie verfügbar ist, führen viele WindowsPhone Silverlight-apps Datei-e/a mit **IsolatedStorageFile** Klasse, da diese schon länger unterstützt wurden. Unter der Annahme, dass **IsolatedStorageFile** verwendet wird, ist dies ein vorher-nachher-Beispiel schreiben und Lesen einer Datei zunächst die WindowsPhone Silverlight-Version:
+Obwohl eine Teilmenge des **Windows.Storage** -Namespace für sie verfügbar ist, führen viele WindowsPhone Silverlight-apps Datei-e/a mit **IsolatedStorageFile** Klasse, da es für schon länger unterstützt wird. Unter der Annahme, dass **IsolatedStorageFile** verwendet wird, wird hier ein vorher-nachher-Beispiel schreiben und Lesen einer Datei zunächst die WindowsPhone Silverlight-Version:
 
 ```csharp
     const string filename = "FavoriteAuthor.txt";
@@ -129,7 +129,7 @@ Und hier die gleiche Funktionalität mit der UWP:
     string myFavoriteAuthor = await Windows.Storage.FileIO.ReadTextAsync(file);
 ```
 
-Eine WindowsPhone-Silverlight-app verfügt über schreibgeschützten Zugriff auf die optionale SD-Karte. Eine UWP-App hat Lese-/Schreibzugriff auf die SD-Karte. Weitere Informationen finden Sie unter [Zugreifen auf die SD-Karte](https://msdn.microsoft.com/library/windows/apps/mt188699).
+Eine WindowsPhone Silverlight-app hat schreibgeschützten Zugriff auf die optionale SD-Karte. Eine UWP-App hat Lese-/Schreibzugriff auf die SD-Karte. Weitere Informationen finden Sie unter [Zugreifen auf die SD-Karte](https://msdn.microsoft.com/library/windows/apps/mt188699).
 
 Informationen zum Zugriff auf Fotos, Musik und Videodateien in einer UWP-App finden Sie unter [Dateien und Ordner in den Musik-, Bild- und Videobibliotheken](https://msdn.microsoft.com/library/windows/apps/mt188703).
 

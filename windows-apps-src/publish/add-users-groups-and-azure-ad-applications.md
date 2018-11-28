@@ -1,32 +1,32 @@
 ---
 Description: You can add users, groups, and Azure AD applications to your Partner Center account.
-title: Hinzufügen von Benutzern, Gruppen und Azure AD-Apps für Ihr Partner Center-Konto
+title: Hinzufügen von Benutzern, Gruppen und Azure AD-Anwendungen zu Ihrem Partner Center-Konto
 ms.date: 10/31/2018
 ms.topic: article
-keywords: Windows 10, Uwp, Azure Ad-Anwendung, Aad, Benutzer, Gruppen, mehrere Benutzer, mit mehreren Benutzern
+keywords: Windows 10, Uwp, Azure Ad-Anwendung, Aad, Benutzer, gruppieren, mehrere Benutzer, mehrere Benutzer
 ms.localizationpriority: medium
 ms.openlocfilehash: 7dd300aa6a37c205e01c6f73d95ef1818d516fc0
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7701548"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "7840916"
 ---
-# <a name="add-users-groups-and-azure-ad-applications-to-your-partner-center-account"></a>Hinzufügen von Benutzern, Gruppen und Azure AD-Apps für Ihr Partner Center-Konto
+# <a name="add-users-groups-and-azure-ad-applications-to-your-partner-center-account"></a>Hinzufügen von Benutzern, Gruppen und Azure AD-Anwendungen zu Ihrem Partner Center-Konto
 
-Der Abschnitt **Benutzer** des [Partner Center](https://partner.microsoft.com/dashboard) (unter **kontoeinstellungen**) können Sie die Azure Active Directory verwenden, um Ihr Partner Center-Konto Benutzer hinzufügen. Jedem Benutzer wird eine Rolle (oder benutzerdefinierte Berechtigungen) zugewiesen, mit der er bestimmte Zugriffsberechtigungen für das Konto erhält. Sie können auch [Gruppen von Benutzern](#groups) und [Azure AD-Apps](#azure-ad-applications) , die ihnen Zugriff auf Ihr Partner Center-Konto gewähren hinzufügen.
+Der Abschnitt **Benutzer** für [Partner Center](https://partner.microsoft.com/dashboard) (unter **kontoeinstellungen**) können Sie die Azure Active Directory verwenden, um Ihr Partner Center-Konto Benutzer hinzufügen. Jedem Benutzer wird eine Rolle (oder benutzerdefinierte Berechtigungen) zugewiesen, mit der er bestimmte Zugriffsberechtigungen für das Konto erhält. Sie können auch [Gruppen von Benutzern](#groups) und [Azure AD-Anwendungen](#azure-ad-applications) , um ihnen den Zugriff auf Ihr Partner Center-Konto gewähren hinzufügen.
 
 Nachdem Benutzer auf das Konto hinzugefügt wurden, können Sie [Kontodetails bearbeiten](#edit), [Rollen und Berechtigungen](set-custom-permissions-for-account-users.md) ändern oder [Benutzer entfernen](#remove).
 
 > [!IMPORTANT]
-> Um Ihr Konto Benutzer hinzufügen, müssen Sie zuerst [Ordnen Sie Ihr Partner Center-Konto mit Azure Active Directory-Mandanten Ihrer Organisation](associate-azure-ad-with-dev-center.md). 
+> Um Ihr Konto Benutzer hinzufügen, müssen Sie die erste [Ordnen Sie Ihr Partner Center-Konto mit Azure Active Directory-Mandanten Ihrer Organisation](associate-azure-ad-with-dev-center.md). 
 
-Wenn Sie Benutzer hinzufügen möchten, müssen Sie den Zugriff auf Ihr Partner Center-Konto angeben, indem sie eine [Rolle oder Gruppe von benutzerdefinierten Berechtigungen](set-custom-permissions-for-account-users.md)zuweisen. 
+Wenn Sie Benutzer hinzufügen, müssen Sie den Zugriff auf Ihr Partner Center-Konto angeben, indem sie eine [Rolle oder Gruppe von benutzerdefinierten Berechtigungen](set-custom-permissions-for-account-users.md)zuweisen. 
 
-Bedenken Sie, dass alle Partner Center-Benutzer (einschließlich von Gruppen und Azure AD-Apps) ein aktives Konto in [Azure AD-Mandanten, der Ihr Partner Center-Konto zugeordnet ist,](associate-azure-ad-with-dev-center.md)vorhanden sein müssen. Die Benutzerverwaltung erfolgt pro Mandant. Sie müssen sich mit einem Managerkonto auf dem Mandanten anmelden, wenn Sie Benutzer hinzufügen oder bearbeiten möchten. Erstellen eines neuen Benutzers im Partner Center wird ebenfalls erstellt ein Konto für diesen Benutzer in Azure AD-Mandanten mit dem Sie angemeldet sind und Änderungen an den Namen eines Benutzers im Partner Center wird die gleiche Änderungen in Azure AD-Mandanten Ihrer Organisation.
+Bedenken Sie, dass alle Partner Center-Benutzer (einschließlich von Gruppen und Azure AD-Anwendungen) ein aktives Konto in [Azure AD-Mandanten, der Ihr Partner Center-Konto zugeordnet ist,](associate-azure-ad-with-dev-center.md)vorhanden sein müssen. Die Benutzerverwaltung erfolgt pro Mandant. Sie müssen sich mit einem Managerkonto auf dem Mandanten anmelden, wenn Sie Benutzer hinzufügen oder bearbeiten möchten. Erstellen eines neuen Benutzers im Partner Center wird ebenfalls erstellt ein Konto für diesen Benutzer in Azure AD-Mandanten mit dem Sie angemeldet sind und Änderungen an den Namen eines Benutzers im Partner Center wird die gleiche Änderungen in Azure AD-Mandanten Ihrer Organisation.
 
 > [!NOTE]
-> Wenn Ihre Organisation [Verzeichnisintegration](http://go.microsoft.com/fwlink/p/?LinkID=724033) zum Synchronisieren des lokalen Verzeichnisdienst mit Ihrem Azure AD verwendet, nicht Sie neue Benutzer, Gruppen oder Azure AD-Apps in Partner Center erstellen. Sie (oder ein anderer Administrator in Ihrem lokalen Verzeichnis) müssen sie direkt im lokalen Verzeichnis erstellen, bevor Sie werden sehen, und diese im Partner Center hinzufügen können.
+> Wenn Ihre Organisation [Verzeichnisintegration](http://go.microsoft.com/fwlink/p/?LinkID=724033) zum Synchronisieren des lokalen Verzeichnisdienst mit Ihrem Azure AD verwendet, nicht Sie neue Benutzer, Gruppen oder Azure AD-Apps in Partner Center erstellen. Sie (oder ein anderer Administrator in Ihrem lokalen Verzeichnis) müssen sie direkt im lokalen Verzeichnis erstellen, bevor Sie werden sehen und diese im Partner Center hinzufügen können.
 
 
 <span id="users" />
@@ -41,22 +41,22 @@ Sie können Benutzer auswählen, die bereits im Mandanten Ihrer Organisation vor
 
 <span id="from-directory" />
 
-1.  Wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Partner Center), und wählen Sie dann die **entwicklereinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Benutzer**.
+1.  Wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Partner Center), und wählen Sie dann die **entwicklereinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Benutzer**aus.
 2.  Wählen Sie auf der Seite **Benutzer** **Benutzer hinzufügen** aus. 
 3.  Wählen Sie in der angezeigten Liste einen oder mehrere Benutzer aus. Im Suchfeld können Sie nach bestimmten Benutzern suchen.
     > [!TIP]
-    > Wenn Sie mehrere Benutzer Ihr Partner Center-Konto hinzufügen möchten, müssen Sie diesen die gleiche Rolle oder Gruppe von benutzerdefinierten Berechtigungen zuweisen. Wiederholen Sie zum Hinzufügen mehrerer Benutzer mit anderen Rollenberechtigungen die unten beschriebenen Schrittefür alle Rollen oder benutzerdefinierte Berechtigungen.
+    > Wenn Sie mehrere Benutzer auf dem Partner Center-Konto hinzufügen möchten, müssen Sie diesen die gleiche Rolle oder Gruppe von benutzerdefinierten Berechtigungen zuweisen. Wiederholen Sie zum Hinzufügen mehrerer Benutzer mit anderen Rollenberechtigungen die unten beschriebenen Schrittefür alle Rollen oder benutzerdefinierte Berechtigungen.
 4.  Wenn Sie die Benutzer ausgewählt haben, klicken Sie auf **Ausgewählte hinzufügen**.
 5.  Geben Sie im Abschnitt **Rollen** an, welche [Rollen oder angepassten Berechtigungen](set-custom-permissions-for-account-users.md) Sie für die ausgewählten Benutzer wünschen.
 6.  Klicken Sie auf **Speichern**.
 
 ### <a name="additional-methods-for-adding-users"></a>Zusätzliche Methoden zum Hinzufügen von Benutzern
 
-Wenn Sie mit einem Managerkonto angemeldet haben, die auch [globale](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) Administratorberechtigungen für Azure AD-Mandanten hat, in dem Sie arbeiten, verfügen Sie über zusätzliche Optionen für Ihr Partner Center-Konto Benutzer hinzufügen. Sie müssen eine der folgenden Optionen auswählen:
+Wenn Sie mit einem Managerkonto angemeldet haben, die auch [globale](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) Administratorberechtigungen für Azure AD-Mandanten hat, Sie arbeiten, verfügen Sie über zusätzliche Optionen Ihr Partner Center-Konto Benutzer hinzu. Sie müssen eine der folgenden Optionen auswählen:
 
 -   **Hinzufügen vorhandener Benutzer**: Benutzer, die bereits im Verzeichnis Ihrer Organisation vorhanden sind, und gewähren Sie ihnen Zugriff auf Ihr Partner Center-Konto mit der oben beschriebenen Methode auswählen.
 -   **Neue Benutzer erstellen**: Erstellen Sie völlig neue Benutzerkonten sowohl das Verzeichnis Ihrer Organisation hinzu und Ihr Partner Center-Konto
--   **Invite outside users** (Externe Benutzer einladen): Laden Sie Benutzer per E-Mail ein, die derzeit nicht im Verzeichnis der Organisation vorhanden sind. Diese werden eingeladen, auf Ihr Partner Center-Konto zugreifen, und ein neues Benutzerkonto von [Gast](https://docs.microsoft.com/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b) für sie in Ihrem Azure AD-Mandanten erstellt.
+-   **Invite outside users** (Externe Benutzer einladen): Laden Sie Benutzer per E-Mail ein, die derzeit nicht im Verzeichnis der Organisation vorhanden sind. Diese werden eingeladen, auf Ihr Partner Center-Konto zugreifen, und ein neues [Gast](https://docs.microsoft.com/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b) -Benutzerkonto für sie in Ihrem Azure AD-Mandanten erstellt.
 
 <span id="new-user" />
 
@@ -67,7 +67,7 @@ Wenn Sie mit einem Managerkonto angemeldet haben, die auch [globale](https://doc
 
 1.  Wählen Sie von der Seite " **Benutzer** " (unter **kontoeinstellungen**) **Benutzer hinzufügen**und dann **neue Benutzer erstellen**.
 2.  Geben Sie den Vornamen, den Nachnamen und den Benutzernamen für den neuen Benutzer ein.
-3.  Wenn der neue Benutzer ein [Konto als globaler Administrator](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) im Verzeichnis Ihrer Organisation haben soll, markieren Sie das Kontrollkästchen **Diesen Benutzer in Azure AD zum globalen Administrator mit vollständiger Kontrolle über alle Verzeichnisressourcen machen**. Dadurch erhält der Benutzer den vollständigen Zugriff auf alle administrativen Features im Azure AD Ihrer Organisation. Er kann dann hinzufügen und Verwalten von Benutzern im Verzeichnis Ihrer Organisation (jedoch nicht in Partner Center, es sei denn, Sie dem Konto die entsprechenden [Rolle/Berechtigungen](set-custom-permissions-for-account-users.md)gewähren). Wenn Sie dieses Kontrollkästchen markieren, müssen Sie eine **E-Mail-Adresse zur Kennwortwiederherstellung** für den Benutzer angeben.
+3.  Wenn der neue Benutzer ein [Konto als globaler Administrator](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) im Verzeichnis Ihrer Organisation haben soll, markieren Sie das Kontrollkästchen **Diesen Benutzer in Azure AD zum globalen Administrator mit vollständiger Kontrolle über alle Verzeichnisressourcen machen**. Dadurch erhält der Benutzer den vollständigen Zugriff auf alle administrativen Features im Azure AD Ihrer Organisation. Er kann dann hinzufügen und Verwalten von Benutzern in das Verzeichnis Ihrer Organisation (jedoch nicht im Partner-Center, sofern Sie dem Konto die entsprechenden [Rolle/Berechtigungen](set-custom-permissions-for-account-users.md)gewähren). Wenn Sie dieses Kontrollkästchen markieren, müssen Sie eine **E-Mail-Adresse zur Kennwortwiederherstellung** für den Benutzer angeben.
 4.  Wenn Sie das Kontrollkästchen **Diesen Benutzer in Azure AD zum globalen Administrator machen** markiert haben, geben Sie eine E-Mail-Adresse ein, die der Benutzer verwenden kann, um sein Kennwort wiederherzustellen.
 5.  Wählen Sie im Abschnitt **Gruppenmitgliedschaft** alle Gruppen aus, denen der neue Benutzer angehören soll.
 6.  Geben Sie im Abschnitt **Rollen** an, welche [Rollen oder angepassten Berechtigungen](set-custom-permissions-for-account-users.md) Sie für den ausgewählten Benutzer wünschen.
@@ -97,7 +97,7 @@ Um die Einladung erneut zu senden, suchen Sie den Benutzer auf Ihrer **Benutzer*
 
 ### <a name="changing-a-users-directory-password"></a>Ändern des Verzeichniskennworts eines Benutzers
 
-Wenn ein Benutzer sein Kennwort ändern muss, kann er dies selber tun, wenn Sie ihm beim Erstellen des Benutzerkontos eine **E-Mail-Adresse zur Kennwortwiederherstellung** bereitgestellt haben. Sie können das Kennwort eines Benutzers auch aktualisieren, indem Sie die folgenden Schritte durchführen (wenn Sie sich mit einem globalen Administratorkonto in Ihrem Azure AD-Mandanten angemeldet haben, um das Kennwort des Benutzers zu ändern). Beachten Sie, dass dies ändert das Kennwort des Benutzers in Ihrem Azure AD-Mandanten zusammen mit dem Kennwort sie verwenden, um Zugriff auf Partner Center. 
+Wenn ein Benutzer sein Kennwort ändern muss, kann er dies selber tun, wenn Sie ihm beim Erstellen des Benutzerkontos eine **E-Mail-Adresse zur Kennwortwiederherstellung** bereitgestellt haben. Sie können das Kennwort eines Benutzers auch aktualisieren, indem Sie die folgenden Schritte durchführen (wenn Sie sich mit einem globalen Administratorkonto in Ihrem Azure AD-Mandanten angemeldet haben, um das Kennwort des Benutzers zu ändern). Beachten Sie, dass dadurch ändert sich das Kennwort des Benutzers in Ihrem Azure AD-Mandanten zusammen mit dem Kennwort sie verwenden, um Zugriff auf Partner Center. 
 
 1.  Wählen Sie die Seite " **Benutzer** " (unter **kontoeinstellungen**) den Namen des Benutzerkontos, das Sie bearbeiten möchten.
 2.  Wählen Sie die Schaltfläche " **Kennwort zurücksetzen** " am unteren Rand der Seite.
@@ -114,14 +114,14 @@ Sie können eine Gruppe aus dem Verzeichnis Ihrer Organisation für Ihr Partner 
 
 ### <a name="add-groups-from-your-organizations-directory"></a>Hinzufügen von Gruppen aus dem Verzeichnis der Organisation
 
-1.  Wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Partner Center), und wählen Sie dann die **entwicklereinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Benutzer**.
+1.  Wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Partner Center), und wählen Sie dann die **entwicklereinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Benutzer**aus.
 2. Wählen Sie die Seite " **Benutzer** " **Hinzufügen von Gruppen**aus.
 2.  Wählen Sie in der angezeigten Liste eine oder mehrere Gruppen aus. Im Suchfeld können Sie nach bestimmten Gruppen suchen.
     > [!TIP]
-    > Wenn Sie mehr als eine Gruppe für Ihr Partner Center-Konto hinzufügen möchten, müssen Sie diesen die gleiche Rolle oder Gruppe von benutzerdefinierten Berechtigungen zuweisen. Wiederholen Sie zum Hinzufügen mehrerer Gruppen mit anderen Rollenberechtigungen die unten beschriebenen Schrittefür alle Rollen oder benutzerdefinierte Berechtigungen.
+    > Wenn Sie mehr als einer Gruppe hinzufügen zu Ihrem Partner Center-Konto auswählen, müssen Sie diesen die gleiche Rolle oder Gruppe von benutzerdefinierten Berechtigungen zuweisen. Wiederholen Sie zum Hinzufügen mehrerer Gruppen mit anderen Rollenberechtigungen die unten beschriebenen Schrittefür alle Rollen oder benutzerdefinierte Berechtigungen.
 
 3.  Wenn Sie die Gruppen ausgewählt haben, klicken Sie auf **Ausgewählte hinzufügen**.
-4.  Geben Sie im Abschnitt **Rollen** an, welche [Rollen oder angepassten Berechtigungen](set-custom-permissions-for-account-users.md) Sie für die ausgewählten Gruppen wünschen. Alle Mitglieder der Gruppe kann zum Zugriff auf Ihr Partner Center-Konto mit den Berechtigungen, dass Sie auf die Gruppe, unabhängig von den Rollen/Berechtigungen mit individuellen Konto anwenden.
+4.  Geben Sie im Abschnitt **Rollen** an, welche [Rollen oder angepassten Berechtigungen](set-custom-permissions-for-account-users.md) Sie für die ausgewählten Gruppen wünschen. Alle Mitglieder der Gruppe werden möglicherweise Zugriff auf Ihr Partner Center-Konto mit den Berechtigungen, dass Sie auf die Gruppe, unabhängig von den Rollen/Berechtigungen mit individuellen Konto anwenden.
 5.  Klicken Sie auf **Speichern**.
 
 
@@ -132,7 +132,7 @@ Wenn Sie einer völlig neuen Gruppe Zugriff auf Partner Center gewähren möchte
 1.  Klicken Sie auf der Seite " **Benutzer** " (unter **entwicklereinstellungen**) auf **Gruppen hinzufügen**.
 2.  Wählen Sie auf der nächsten Seite **neue Gruppe**ein.
 3.  Geben Sie den Anzeigenamen für die neue Gruppe ein.
-4.  Geben Sie die [Rollen oder angepasste Berechtigungen](set-custom-permissions-for-account-users.md) für die Gruppe an. Alle Mitglieder der Gruppe kann zum Zugriff auf Ihr Partner Center-Konto mit den Berechtigungen, dass Sie auf die Gruppe, unabhängig von den Rollen/Berechtigungen mit individuellen Konto anwenden.
+4.  Geben Sie die [Rollen oder angepasste Berechtigungen](set-custom-permissions-for-account-users.md) für die Gruppe an. Alle Mitglieder der Gruppe werden möglicherweise Zugriff auf Ihr Partner Center-Konto mit den Berechtigungen, dass Sie auf die Gruppe, unabhängig von den Rollen/Berechtigungen mit individuellen Konto anwenden.
 5.  Wählen Sie den/die Benutzer, die der neuen Gruppe in der Liste zugewiesen werden sollen, aus der angezeigten Liste aus. Im Suchfeld können Sie nach bestimmten Benutzern suchen.
 6.  Wenn Sie mit der Auswahl der Benutzer fertig sind, klicken Sie auf **Ausgewählte hinzufügen**, um diese der neuen Gruppe hinzuzufügen.
 7.  Klicken Sie auf **Speichern**.
@@ -140,14 +140,14 @@ Wenn Sie einer völlig neuen Gruppe Zugriff auf Partner Center gewähren möchte
 
 <span id="azure-ad-applications" />
 
-## <a name="add-azure-ad-applications-to-your-partner-center-account"></a>Azure AD-Apps für Ihr Partner Center-Konto hinzufügen
+## <a name="add-azure-ad-applications-to-your-partner-center-account"></a>Hinzufügen von Azure AD-Anwendungen zu Ihrem Partner Center-Konto
 
 Sie können Anwendungen oder Dienste, die Teil Ihrer Organisation Azure AD auf Ihr Partner Center-Konto zugreifen. Diese Benutzerkonten für die Azure AD-Anwendung können zum Aufrufen der über [Microsoft Store Services](../monetize/using-windows-store-services.md) bereitgestellten REST-APIs genutzt werden.
 
 
 ### <a name="add-azure-ad-applications-from-your-organizations-directory"></a>Hinzufügen von Azure AD-Anwendungen aus dem Verzeichnis Ihrer Organisation
 
-1.  1.  Wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Partner Center), und wählen Sie dann die **entwicklereinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Benutzer**.
+1.  1.  Wählen Sie das Zahnradsymbol (in der Nähe der oberen rechten Ecke des Partner Center), und wählen Sie dann die **entwicklereinstellungen**. Wählen Sie im Menü " **Einstellungen** " **Benutzer**aus.
 2. Wählen Sie auf der Seite **Benutzer** **Azure AD-Anwendungen hinzufügen** aus.
 3.  Wählen Sie eine oder mehrere Azure AD-Anwendungen aus der angezeigten Liste aus. Mithilfe des Suchfelds können Sie nach bestimmten Azure AD-Anwendungen suchen.
     > [!TIP]
@@ -158,12 +158,12 @@ Sie können Anwendungen oder Dienste, die Teil Ihrer Organisation Azure AD auf I
 6.  Klicken Sie auf **Speichern**.
 
 
-### <a name="create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account"></a>Erstellen Sie ein neues Azure AD-Anwendung-Kontos im Verzeichnis Ihrer Organisation und für Ihr Partner Center-Konto hinzufügen
+### <a name="create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account"></a>Erstellen Sie ein neues Azure AD-Anwendung für das Konto im Verzeichnis Ihrer Organisation und hinzufügen auf Ihr Partner Center-Konto
 
 Wenn Sie Partner Center-Zugriff auf einem völlig neuen Azure AD-Anwendungskonto gewähren möchten, können Sie im Abschnitt **Benutzer** erstellen. Beachten Sie, dass dies ein neues Konto im Verzeichnis Ihrer Organisation, nicht nur im Partner Center-Konto erstellt wird.
 
 > [!TIP]
-> Wenn Sie diese Azure AD-Anwendung hauptsächlich für Partner Center-Authentifizierung verwenden und benötigen keine Benutzer direkt auf Sie zugreifen, können Sie jede beliebige gültige Adresse für die **Antwort-URL** und **App-ID-URI**, eingeben, solange diese Werte nicht von allen anderen Azure verwendet werden AD-Anwendung in Ihrem Verzeichnis.
+> Wenn Sie diese Azure AD-Anwendung hauptsächlich für Partner Center-Authentifizierung verwenden, und Benutzer direkt auf Sie zugreifen nicht benötigen, können Sie jede beliebige gültige Adresse für die **Antwort-URL** und **App-ID-URI**, eingeben, solange diese Werte nicht von allen anderen Azure verwendet werden AD-Anwendung in Ihrem Verzeichnis.
 
 1.  Wählen Sie die Seite " **Benutzer** " (unter **kontoeinstellungen**) **Azure AD-Apps hinzufügen**.
 2.  Wählen Sie auf der nächsten Seite das **neue Azure AD-Anwendung**.
@@ -183,22 +183,22 @@ Nachdem Sie eine Azure AD-Anwendung hinzugefügt oder erstellt haben, können Si
 
 Wenn die Azure AD-App Daten in Microsoft Azure AD liest und schreibt, benötigt sie einen Schlüssel. Sie können Schlüssel für eine Azure AD-Anwendung erstellen, indem Sie ihre Informationen im Partner Center bearbeiten. Sie können auch Schlüssel entfernen, die nicht mehr benötigt werden.
 
-1.  Wählen Sie aus der Seite " **Benutzer** " (unter **kontoeinstellungen**) den Namen der Azure AD-Anwendung.
+1.  Wählen Sie aus der Seite " **Benutzer** " (unter **kontoeinstellungen**) den Namen der Azure AD-App.
     > [!TIP]
     > Wenn Sie auf den Namen der Azure AD-App klicken, sehen Sie alle aktiven Schlüssel für die Azure AD-App mit dem jeweiligen Erstellungs- und Ablaufdatum des Schlüssels. Klicken Sie auf **Entfernen**, um einen nicht mehr benötigten Schlüssel zu entfernen.
 
-2.  Wählen Sie zum Hinzufügen eines neuen Schlüssels **neuen Schlüssel hinzufügen**.
+2.  Um einen neuen Schlüssel hinzuzufügen, wählen Sie **neuen Schlüssel hinzufügen**.
 3.  Es wird ein Bildschirm mit den Werten für **Client-ID** und **Schlüssel** angezeigt.
     > [!IMPORTANT]
     > Drucken oder kopieren Sie diese Informationen, da Sie nach dem Verlassen dieser Seite nicht mehr darauf zugreifen können.
 
-4.  Wenn Sie weitere Schlüssel erstellen möchten, wählen Sie **eine andere Taste hinzufügen**.
+4.  Wenn Sie weitere Schlüssel erstellen möchten, wählen Sie **eine andere Schlüssel hinzufügen**.
 
 <span id="edit" />
 
 ## <a name="edit-a-user-group-or-azure-ad-application"></a>Bearbeiten von Benutzern, Gruppen oder Azure AD-Anwendungen
 
-Nachdem Sie Benutzer, Gruppen oder Azure AD-Apps für Ihr Partner Center-Konto hinzugefügt haben, können Sie Änderungen an deren Kontoinformationen vornehmen. 
+Nachdem Sie Benutzer, Gruppen oder Azure AD-Anwendungen zu Ihrem Partner Center-Konto hinzugefügt haben, können Sie Änderungen an deren Kontoinformationen vornehmen. 
 
 > [!IMPORTANT]
 > Änderungen an der [Rolle oder Berechtigung](set-custom-permissions-for-account-users.md) wirken sich nur auf Partner Center-Zugriff aus. Alle anderen Änderungen (z. B. das ändern den Namen eines Benutzers oder der Gruppenmitgliedschaft oder der Antwort-URL und App-ID-URI für eine Azure AD-Anwendung) werden in Ihrer Organisation Azure AD-Mandanten ebenfalls im Partner Center-Konto widergespiegelt. 
@@ -209,7 +209,7 @@ Nachdem Sie Benutzer, Gruppen oder Azure AD-Apps für Ihr Partner Center-Konto h
     -   Für eine **Gruppe** können Sie den Namen der Gruppe bearbeiten. (Um Gruppenmitgliedschaft zu aktualisieren, bearbeiten Sie die Benutzer, die Sie der Gruppe hinzufügen oder daraus entfernen möchten und nehmen Sie im Abschnitt **Gruppenmitgliedschaft** Änderungen vor.)
     -   Für eine **Azure AD-Anwendung** können Sie neue Werte für die **Antwort-URL** oder **App-ID-URI** eingeben.
     Denken Sie daran, dass diese Änderungen in das Verzeichnis Ihrer Organisation auch im Partner Center-Konto vorgenommen werden.
-3.  Änderungen, die im Zusammenhang mit Zugriff auf Partner Center aktivieren Sie oder deaktivieren Sie die Rolle(n), die Sie anwenden möchten, oder wählen Sie **Berechtigungen anpassen** und die gewünschten Änderungen vornehmen möchten. Diese Änderungen nur wirken auf Partner Center zugreifen und ändert sich nicht auf alle Berechtigungen innerhalb Ihrer Organisation Azure AD-Mandanten.
+3.  Aktivieren Sie für Änderungen im Zusammenhang mit Zugriff auf Partner Center oder deaktivieren Sie die Rolle(n), die Sie anwenden möchten, oder wählen Sie **Anpassen Berechtigungen** und die gewünschten Änderungen vornehmen möchten. Diese Änderungen nur wirken auf Partner Center zugreifen und ändert sich nicht auf die Berechtigungen in Azure AD-Mandanten Ihrer Organisation.
 3.  Klicken Sie auf **Speichern**.
 
 
@@ -223,10 +223,10 @@ Wählen Sie auf der Seite " **Benutzer** " (unter **kontoeinstellungen**) den Li
 
 ## <a name="remove-users-groups-and-azure-ad-applications"></a>Entfernen von Benutzern, Gruppen und Azure AD-Anwendungen
 
-Klicken Sie um einen Benutzer, Gruppen oder Azure AD-Anwendung aus Ihrem Partner Center-Konto zu entfernen, **Entfernen Sie** den Link, der über den Namen auf der Seite " **Benutzer** " angezeigt wird. Nachdem Sie bestätigt haben, dass Sie sie entfernen möchten, werden diese Benutzer, Gruppen oder Azure AD-Anwendung nicht mehr auf Ihr Partner Center-Konto zugreifen (es sei denn, Sie ihn später erneut hinzufügen).
+Um einen Benutzer, Gruppen oder Azure AD-Anwendung aus Ihrem Partner Center-Konto zu entfernen, wählen Sie die Verknüpfung **Entfernen** , die über den Namen auf der Seite " **Benutzer** " angezeigt wird. Nachdem Sie bestätigt haben, dass Sie sie entfernen möchten, werden diese Benutzer, Gruppen oder Azure AD-Anwendung nicht mehr auf Ihr Partner Center-Konto zugreifen (es sei denn, Sie es später erneut hinzufügen).
 
 > [!IMPORTANT]
-> Entfernen einen Benutzer, Gruppen oder Azure AD-Anwendung bedeutet, dass es nicht mehr auf Ihr Partner Center-Konto zugreifen kann. Dadurch werden **nicht** die betreffenden Benutzer, Gruppen oder Azure AD-Anwendungen aus dem Verzeichnis der Organisation gelöscht.
+> Entfernen eines Benutzers, eine Gruppe oder eine Azure AD-Anwendung bedeutet, dass es nicht mehr auf Ihr Partner Center-Konto zugreifen kann. Dadurch werden **nicht** die betreffenden Benutzer, Gruppen oder Azure AD-Anwendungen aus dem Verzeichnis der Organisation gelöscht.
 
  
 

@@ -1,22 +1,22 @@
 ---
 ms.assetid: C09F4B7C-6324-4973-980A-A60035792EFC
-description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um eine neue Add-on-Übermittlung für eine app erstellen, die in das Partner Center registriert ist.
+description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um eine neue Add-on-Übermittlung für eine app zu erstellen, die in das Partner Center registriert ist.
 title: Erstellen einer Add-On-Übermittlung
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Erstellen einer Add-On-Übermittlung, In-App-Produkt, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: fcc98252efb1157bc539b68656c96f7afec7104a
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7691811"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7851663"
 ---
 # <a name="create-an-add-on-submission"></a>Erstellen einer Add-On-Übermittlung
 
 
-Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Erstellen einer neuen Add-on (auch bekannt als in-app-Produkt oder IAP)-Übermittlung für eine app, die für Ihr Partner Center-Konto registriert ist. Nachdem Sie erfolgreich eine neue Übermittlung mit dieser Methode erstellt haben, [aktualisieren Sie die Übermittlung](update-an-add-on-submission.md), um erforderliche Änderungen an den Übermittlungsdaten vorzunehmen, und führen Sie ein [Commit für die Übermittlung](commit-an-add-on-submission.md) zur Aufnahme und Veröffentlichung durch.
+Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Erstellen einer neuen Add-on (auch bekannt als in-app-Produkt oder IAP) Übermittlung für eine app, die für Ihr Partner Center-Konto registriert ist. Nachdem Sie erfolgreich eine neue Übermittlung mit dieser Methode erstellt haben, [aktualisieren Sie die Übermittlung](update-an-add-on-submission.md), um erforderliche Änderungen an den Übermittlungsdaten vorzunehmen, und führen Sie ein [Commit für die Übermittlung](commit-an-add-on-submission.md) zur Aufnahme und Veröffentlichung durch.
 
 Weitere Informationen dazu, wie diese Methode zum Erstellen einer Add-On-Übermittlung mithilfe der Microsoft Store-Übermittlungs-API passt, finden Sie unter [Verwalten von Add-On-Übermittlungen](manage-add-on-submissions.md).
 
@@ -29,7 +29,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Microsoft Store-Übermittlungs-API.
 * [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
-* Erstellen Sie ein Add-on für eine Ihrer apps. Sie dazu im Partner Center, oder Sie können dies tun, indem Sie mit der Methode [Erstellen Sie ein Add-on](create-an-add-on.md) .
+* Erstellen eines Add-Ons für eine Ihrer apps. Sie können dies im Partner Center oder hierzu können Sie mithilfe der Methode [Erstellen eines Add-Ons](create-an-add-on.md) .
 
 ## <a name="request"></a>Anforderung
 
