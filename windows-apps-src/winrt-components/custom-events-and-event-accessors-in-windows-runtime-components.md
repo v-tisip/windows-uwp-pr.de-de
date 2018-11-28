@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b8c4777e1c34bca36200bf6e8a96c35d6a0b1079
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7836544"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7967116"
 ---
 # <a name="custom-events-and-event-accessors-in-windows-runtime-components"></a><span data-ttu-id="7e727-104">Benutzerdefinierte Ereignisse und Ereignisaccessoren in Komponenten für Windows-Runtime</span><span class="sxs-lookup"><span data-stu-id="7e727-104">Custom events and event accessors in Windows Runtime Components</span></span>
 

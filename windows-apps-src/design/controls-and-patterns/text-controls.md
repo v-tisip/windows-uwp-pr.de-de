@@ -12,11 +12,11 @@ design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 467be141d2c198bc95c93771ffa9cf2ad8fd6c0d
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7705847"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7967621"
 ---
 # <a name="text-controls"></a><span data-ttu-id="0deef-103">Textsteuerelemente</span><span class="sxs-lookup"><span data-stu-id="0deef-103">Text controls</span></span>
 

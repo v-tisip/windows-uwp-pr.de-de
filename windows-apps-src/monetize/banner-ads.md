@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, anzeigen, Werbung, AdControl, Banneranzeigen
 ms.localizationpriority: medium
 ms.openlocfilehash: e8754790fac07e6e1babdb44888cfd1ff138c230
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7716804"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7968748"
 ---
 # <a name="banner-ads"></a><span data-ttu-id="2435e-104">Banneranzeigen</span><span class="sxs-lookup"><span data-stu-id="2435e-104">Banner ads</span></span>
 

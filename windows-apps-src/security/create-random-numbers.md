@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: f36e50f2de36df39177370d688b9add5591403e1
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7693957"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7967188"
 ---
 # <a name="create-random-numbers"></a><span data-ttu-id="963a5-104">Erstellen zufälliger Zahlen</span><span class="sxs-lookup"><span data-stu-id="963a5-104">Create random numbers</span></span>
 

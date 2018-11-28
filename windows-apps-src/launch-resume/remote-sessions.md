@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, verbundenen Geräten, remote-Systemen, "ROME" Projekt "ROME"
 ms.localizationpriority: medium
 ms.openlocfilehash: 3dd23603df1f1c3fac151da2aea2f8435b3ee423
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7850861"
+ms.locfileid: "7968058"
 ---
 # <a name="connect-devices-through-remote-sessions"></a><span data-ttu-id="67489-104">Verbinden von Geräten über Remotesitzungen</span><span class="sxs-lookup"><span data-stu-id="67489-104">Connect devices through remote sessions</span></span>
 
