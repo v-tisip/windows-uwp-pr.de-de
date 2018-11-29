@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9679e6e658e7fa1eb50b41331e7e59ec2115fc14
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7855198"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8199655"
 ---
 # <a name="selecting-text-and-images"></a><span data-ttu-id="dce5a-103">Auswählen von Text und Bildern</span><span class="sxs-lookup"><span data-stu-id="dce5a-103">Selecting text and images</span></span>
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ef1814443b3831e514eafb3f5a0c58b7703126b
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/29/2018
-ms.locfileid: "7983464"
+ms.locfileid: "8197834"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-io-device-and-app-model"></a><span data-ttu-id="e587f-104">Portieren von WindowsPhone Silverlight zu UWP für e/a, Gerät und app-Modell</span><span class="sxs-lookup"><span data-stu-id="e587f-104">Porting WindowsPhone Silverlight to UWP for I/O, device, and app model</span></span>
 

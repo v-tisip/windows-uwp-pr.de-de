@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, exemplarische Vorgehensweisen
 ms.localizationpriority: medium
 ms.openlocfilehash: 3084c72d32967d691054b452f5f5f2e903bedd5b
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7837890"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8198934"
 ---
 # <a name="best-practices-for-ads-in-apps"></a><span data-ttu-id="5401f-104">Bewährte Methoden für Anzeigen in Apps</span><span class="sxs-lookup"><span data-stu-id="5401f-104">Best practices for ads in apps</span></span>
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Anzeige, Werbung, Fehlerbehandlung, XAML, C#
 ms.localizationpriority: medium
 ms.openlocfilehash: d7b2ffd15a07dc6f1018bd28cf9799e1e5209c0b
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7827500"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8198588"
 ---
 # <a name="error-handling-in-xamlc-walkthrough"></a><span data-ttu-id="d4ce6-104">Exemplarische Vorgehensweise zur Fehlerbehandlung in XAML/C#</span><span class="sxs-lookup"><span data-stu-id="d4ce6-104">Error handling in XAML/C# walkthrough</span></span>
 

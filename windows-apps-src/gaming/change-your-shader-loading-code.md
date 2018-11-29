@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, OpenGL, Direct3D, Shaderpipeline
 ms.localizationpriority: medium
 ms.openlocfilehash: f02b365175909b5038e5eb117f12851be9f14e3a
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/29/2018
-ms.locfileid: "7992880"
+ms.locfileid: "8199695"
 ---
 # <a name="compare-the-opengl-es-20-shader-pipeline-to-direct3d"></a><span data-ttu-id="623bc-104">Vergleichen der OpenGLES2.0-Shaderpipeline mit Direct3D</span><span class="sxs-lookup"><span data-stu-id="623bc-104">Compare the OpenGL ES 2.0 shader pipeline to Direct3D</span></span>
 

@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0e0354b0e727e84d562bf63779e74be72f87198f
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7968435"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8200568"
 ---
 # <a name="the-need-for-streaming-resources"></a><span data-ttu-id="ab612-104">Die Notwendigkeit zur Verwendung von Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="ab612-104">The need for streaming resources</span></span>
 

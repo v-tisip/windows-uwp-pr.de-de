@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0897bd2636f13cfb02568847c0ba40b2d6b218f3
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7993486"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8197725"
 ---
 #  <a name="porting-windowsphone-silverlight-to-uwp-for-form-factor-and-ux"></a><span data-ttu-id="8ed8c-105">Portieren von WindowsPhone Silverlight zu UWP für Formfaktor und Benutzerfreundlichkeit</span><span class="sxs-lookup"><span data-stu-id="8ed8c-105">Porting WindowsPhone Silverlight to UWP for form factor and UX</span></span>
 

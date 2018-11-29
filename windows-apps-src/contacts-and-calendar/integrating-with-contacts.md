@@ -8,11 +8,11 @@ keywords: Windows 10, UWP, Kontakte, Visitenkarte, Anmerkung
 ms.assetid: 0edabd9c-ecfb-4525-bc38-53f219d744ff
 ms.localizationpriority: medium
 ms.openlocfilehash: 3a3485635a49b1690116e7cb271435e63bee2151
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7970411"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8198635"
 ---
 # <a name="connect-your-app-to-actions-on-a-contact-card"></a><span data-ttu-id="e1067-104">Verbinden der App mit Aktionen auf einer Visitenkarte</span><span class="sxs-lookup"><span data-stu-id="e1067-104">Connect your app to actions on a contact card</span></span>
 
