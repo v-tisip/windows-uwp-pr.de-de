@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: regisb
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 22e2321c301535fe89f2a7bba13497d51c6d8b78
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.openlocfilehash: 368454e32ba2c88994161f6c7deb554fff73972a
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7827375"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7983386"
 ---
 # <a name="scroll-viewer-controls"></a>Bildlaufanzeige-Steuerelemente
 
@@ -87,7 +87,7 @@ Um Ihrer Seite einen vertikalen Bildlauf hinzuzufügen, umschließen Sie den Sei
 </Page>
 ```
 
-Dieser XAML-Code veranschaulicht das Einfügen eines Bilds in einer Bildlaufanzeige und das Aktivieren des Zooms.
+Dieser XAML-Code zeigt, wie horizontalen Bildlauf aktivieren, das Einfügen eines Bilds in einer Bildlaufanzeige und Aktivieren des Zooms.
 
 ```xaml
 <ScrollViewer ZoomMode="Enabled" MaxZoomFactor="10"

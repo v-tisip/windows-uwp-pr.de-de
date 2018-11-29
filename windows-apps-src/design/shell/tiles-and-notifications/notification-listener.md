@@ -8,16 +8,16 @@ ms.date: 06/13/2017
 ms.topic: article
 keywords: Windows10, Uwp, notification listener, Usernotificationlistener, Dokumentation, Zugriff auf Benachrichtigungen
 ms.localizationpriority: medium
-ms.openlocfilehash: c0717fb3d1db42483214e8396d436c47c23744ee
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.openlocfilehash: ad17f4a6f568bcd10d03d7fa07c9dadd24f2f75f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7833690"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7983892"
 ---
 # <a name="notification-listener-access-all-notifications"></a>Notification-Listener: Zugriff auf alle Benachrichtigungen
 
-Der Notification-Listener ermöglicht den Zugriff auf die Benachrichtigungen eines Benutzers. Smartwatches und andere Wearables können die Benachrichtigungsfunktion nutzen, um die Benachrichtigungen des Telefons an das tragbare Gerät zu senden. Anwendungen für die Heimautomation können Notification-Listener verwenden, um bestimmte Aktionen auszuführen, wenn Benachrichtigungen empfangen werden, z. B. Blinken, wenn Sie einen Anruf erhalten. 
+Der Notification-Listener ermöglicht den Zugriff auf die Benachrichtigungen eines Benutzers. Smartwatches und andere Wearables können die Benachrichtigungsfunktion nutzen, um die Benachrichtigungen des Telefons an das tragbare Gerät zu senden. Die heimautomation können Notification-Listener verwenden, um bestimmte Aktionen auszuführen, wenn Benachrichtigungen, z. B. blinken empfangen werden, wenn Sie einen Anruf erhalten. 
 
 > [!IMPORTANT]
 > **Benötigt Anniversary Update**: Sie müssen das SDK 14393 als Ziel und Build 14393 oder höher ausführen, um Notification-Listener verwenden zu können.
