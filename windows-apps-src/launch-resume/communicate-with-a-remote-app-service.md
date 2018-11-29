@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, verbundenen Geräten, remote-Systemen, Rome, Project Rome, Hintergrundaufgabe, app-Dienst
 ms.localizationpriority: medium
 ms.openlocfilehash: ddadae05ca3243f9bbd6b53cbb98f234ac560acd
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7709062"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7985483"
 ---
 # <a name="communicate-with-a-remote-app-service"></a><span data-ttu-id="621db-104">Kommunikation mit einem App-Remotedienst</span><span class="sxs-lookup"><span data-stu-id="621db-104">Communicate with a remote app service</span></span>
 

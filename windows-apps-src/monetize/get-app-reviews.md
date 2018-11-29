@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Rezensionen
 ms.localizationpriority: medium
 ms.openlocfilehash: 084158c0eb20f1d2a03c0e178064ac168c689872
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7707951"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7986990"
 ---
 # <a name="get-app-reviews"></a><span data-ttu-id="5cc45-104">Abrufen von App-Rezensionen</span><span class="sxs-lookup"><span data-stu-id="5cc45-104">Get app reviews</span></span>
 

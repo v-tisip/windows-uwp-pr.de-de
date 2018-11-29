@@ -7,83 +7,83 @@ keywords: windows 10, uwp
 ms.assetid: 244124dd-d80a-4a72-91db-1c9c2fbc7c3c
 ms.localizationpriority: medium
 ms.openlocfilehash: 5606a8fa6db5b439aa71f5d72b34c0f519d7eea9
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7698924"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7982351"
 ---
-# <a name="xbox-one-developer-mode-deactivation"></a><span data-ttu-id="90dd0-104">Deaktivierung des Xbox One-Entwicklermodus</span><span class="sxs-lookup"><span data-stu-id="90dd0-104">Xbox One Developer Mode deactivation</span></span>
+# <a name="xbox-one-developer-mode-deactivation"></a><span data-ttu-id="34b81-104">Deaktivierung des Xbox One-Entwicklermodus</span><span class="sxs-lookup"><span data-stu-id="34b81-104">Xbox One Developer Mode deactivation</span></span>
 
-<span data-ttu-id="90dd0-105">Wenn Sie die Konsole nicht mehr für die Entwicklung verwenden möchten, führen Sie die folgenden Schritte aus, um den Entwicklermodus zu deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="90dd0-105">If you decide you no longer want to use your console for development, use the following steps to deactivate Developer Mode.</span></span>
+<span data-ttu-id="34b81-105">Wenn Sie die Konsole nicht mehr für die Entwicklung verwenden möchten, führen Sie die folgenden Schritte aus, um den Entwicklermodus zu deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="34b81-105">If you decide you no longer want to use your console for development, use the following steps to deactivate Developer Mode.</span></span>
 
-## <a name="switch-to-retail-mode"></a><span data-ttu-id="90dd0-106">Wechseln zum Einzelhandelsmodus</span><span class="sxs-lookup"><span data-stu-id="90dd0-106">Switch to Retail Mode</span></span>
+## <a name="switch-to-retail-mode"></a><span data-ttu-id="34b81-106">Wechseln zum Einzelhandelsmodus</span><span class="sxs-lookup"><span data-stu-id="34b81-106">Switch to Retail Mode</span></span>
 
-<span data-ttu-id="90dd0-107">Setzen Sie zunächst die Xbox One-Konsole in den Einzelhandelsmodus zurück.</span><span class="sxs-lookup"><span data-stu-id="90dd0-107">First, return your Xbox One console to Retail Mode.</span></span>
+<span data-ttu-id="34b81-107">Setzen Sie zunächst die Xbox One-Konsole in den Einzelhandelsmodus zurück.</span><span class="sxs-lookup"><span data-stu-id="34b81-107">First, return your Xbox One console to Retail Mode.</span></span>
 
-1. <span data-ttu-id="90dd0-108">Öffnen Sie **Dev Home**.</span><span class="sxs-lookup"><span data-stu-id="90dd0-108">Open **Dev Home**.</span></span>
+1. <span data-ttu-id="34b81-108">Öffnen Sie **Dev Home**.</span><span class="sxs-lookup"><span data-stu-id="34b81-108">Open **Dev Home**.</span></span>
 
-2. <span data-ttu-id="90dd0-109">Wählen Sie **Entwicklermodus beenden** aus.</span><span class="sxs-lookup"><span data-stu-id="90dd0-109">Select **Leave Dev Mode**.</span></span>  <span data-ttu-id="90dd0-110">Die Konsole wird im Einzelhandelsmodus neu gestartet.</span><span class="sxs-lookup"><span data-stu-id="90dd0-110">Your console will restart in Retail Mode.</span></span>  
+2. <span data-ttu-id="34b81-109">Wählen Sie **Entwicklermodus beenden** aus.</span><span class="sxs-lookup"><span data-stu-id="34b81-109">Select **Leave Dev Mode**.</span></span>  <span data-ttu-id="34b81-110">Die Konsole wird im Einzelhandelsmodus neu gestartet.</span><span class="sxs-lookup"><span data-stu-id="34b81-110">Your console will restart in Retail Mode.</span></span>  
 
    ![Beenden des Entwicklermodus](images/devkit-deactivation-1.png)
 
-<span data-ttu-id="90dd0-112">Deaktivieren Sie jetzt die Konsole mithilfe einer der folgenden Methoden.</span><span class="sxs-lookup"><span data-stu-id="90dd0-112">Now deactivate your console by using one of the following methods.</span></span>
+<span data-ttu-id="34b81-112">Deaktivieren Sie jetzt die Konsole mithilfe einer der folgenden Methoden.</span><span class="sxs-lookup"><span data-stu-id="34b81-112">Now deactivate your console by using one of the following methods.</span></span>
 
-## <a name="deactivate-your-console-using-the-dev-mode-activation-app"></a><span data-ttu-id="90dd0-113">Deaktivieren der Konsole mit der DevMode-Aktivierungsapp</span><span class="sxs-lookup"><span data-stu-id="90dd0-113">Deactivate your console using the Dev Mode Activation app</span></span>
+## <a name="deactivate-your-console-using-the-dev-mode-activation-app"></a><span data-ttu-id="34b81-113">Deaktivieren der Konsole mit der DevMode-Aktivierungsapp</span><span class="sxs-lookup"><span data-stu-id="34b81-113">Deactivate your console using the Dev Mode Activation app</span></span>
 
-<span data-ttu-id="90dd0-114">Die bevorzugte Methode zum Deaktivieren des Entwicklermodus ist die Verwendung der **DevMode-Aktivierungs**-App.</span><span class="sxs-lookup"><span data-stu-id="90dd0-114">The preferred method of deactivating Developer Mode on your console is to use the **Dev Mode Activation** app.</span></span> 
+<span data-ttu-id="34b81-114">Die bevorzugte Methode zum Deaktivieren des Entwicklermodus ist die Verwendung der **DevMode-Aktivierungs**-App.</span><span class="sxs-lookup"><span data-stu-id="34b81-114">The preferred method of deactivating Developer Mode on your console is to use the **Dev Mode Activation** app.</span></span> 
 
-1. <span data-ttu-id="90dd0-115">Navigieren Sie zu **Spiele und Apps** > **Apps**.</span><span class="sxs-lookup"><span data-stu-id="90dd0-115">Navigate to **Games & apps** > **Apps**.</span></span>
+1. <span data-ttu-id="34b81-115">Navigieren Sie zu **Spiele und Apps** > **Apps**.</span><span class="sxs-lookup"><span data-stu-id="34b81-115">Navigate to **Games & apps** > **Apps**.</span></span>
   
    ![Aktivierungsschritt 3](images/devkit-deactivation-5.png)    
    
-2.  <span data-ttu-id="90dd0-117">Öffnen Sie die DevMode-Aktivierungs-App.</span><span class="sxs-lookup"><span data-stu-id="90dd0-117">Open the Dev Mode Activation app.</span></span>
+2.  <span data-ttu-id="34b81-117">Öffnen Sie die DevMode-Aktivierungs-App.</span><span class="sxs-lookup"><span data-stu-id="34b81-117">Open the Dev Mode Activation app.</span></span>
 
-3.  <span data-ttu-id="90dd0-118">Wählen Sie **Deaktivieren** aus.</span><span class="sxs-lookup"><span data-stu-id="90dd0-118">Select **Deactivate**.</span></span>
+3.  <span data-ttu-id="34b81-118">Wählen Sie **Deaktivieren** aus.</span><span class="sxs-lookup"><span data-stu-id="34b81-118">Select **Deactivate**.</span></span>
   
     ![Deaktivieren der Konsole](images/deactivation-app.png)
 
-<span data-ttu-id="90dd0-120">Weitere Informationen zur **DevMode-Aktivierungs-App** finden Sie unter [Aktivierung des Xbox One-Entwicklermodus](devkit-activation.md).</span><span class="sxs-lookup"><span data-stu-id="90dd0-120">See [Xbox One Developer Mode activation](devkit-activation.md) for more information about the **Dev Mode Activation** app.</span></span> 
+<span data-ttu-id="34b81-120">Weitere Informationen zur **DevMode-Aktivierungs-App** finden Sie unter [Aktivierung des Xbox One-Entwicklermodus](devkit-activation.md).</span><span class="sxs-lookup"><span data-stu-id="34b81-120">See [Xbox One Developer Mode activation](devkit-activation.md) for more information about the **Dev Mode Activation** app.</span></span> 
 
-## <a name="reset-your-console"></a><span data-ttu-id="90dd0-121">Zurücksetzen der Konsole</span><span class="sxs-lookup"><span data-stu-id="90dd0-121">Reset your console</span></span>
+## <a name="reset-your-console"></a><span data-ttu-id="34b81-121">Zurücksetzen der Konsole</span><span class="sxs-lookup"><span data-stu-id="34b81-121">Reset your console</span></span>
 
-<span data-ttu-id="90dd0-122">Sie können den Entwicklermodus auch deaktivieren, indem Sie die Konsole zurücksetzen.</span><span class="sxs-lookup"><span data-stu-id="90dd0-122">You can also deactivate Developer Mode by resetting your console.</span></span>  
+<span data-ttu-id="34b81-122">Sie können den Entwicklermodus auch deaktivieren, indem Sie die Konsole zurücksetzen.</span><span class="sxs-lookup"><span data-stu-id="34b81-122">You can also deactivate Developer Mode by resetting your console.</span></span>  
 
 > [!NOTE]
-> <span data-ttu-id="90dd0-123">Wenn Sie die Konsole zurücksetzen, gehen alle lokal gespeicherten Spieldaten verloren.</span><span class="sxs-lookup"><span data-stu-id="90dd0-123">When you reset your console, all local save game data will be lost.</span></span>
+> <span data-ttu-id="34b81-123">Wenn Sie die Konsole zurücksetzen, gehen alle lokal gespeicherten Spieldaten verloren.</span><span class="sxs-lookup"><span data-stu-id="34b81-123">When you reset your console, all local save game data will be lost.</span></span>
 
-<span data-ttu-id="90dd0-124">Führen Sie zum Zurücksetzen der Konsole die folgenden Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="90dd0-124">To reset your console perform the following steps:</span></span>
+<span data-ttu-id="34b81-124">Führen Sie zum Zurücksetzen der Konsole die folgenden Schritte aus:</span><span class="sxs-lookup"><span data-stu-id="34b81-124">To reset your console perform the following steps:</span></span>
 
-1.  <span data-ttu-id="90dd0-125">Wechseln Sie zu **My games & apps**.</span><span class="sxs-lookup"><span data-stu-id="90dd0-125">Go to **My games & apps**.</span></span>
+1.  <span data-ttu-id="34b81-125">Wechseln Sie zu **My games & apps**.</span><span class="sxs-lookup"><span data-stu-id="34b81-125">Go to **My games & apps**.</span></span>
 
-2.  <span data-ttu-id="90dd0-126">Wählen Sie **Apps** und dann **Einstellungen**.</span><span class="sxs-lookup"><span data-stu-id="90dd0-126">Select **Apps**, and then select **Settings**.</span></span>
+2.  <span data-ttu-id="34b81-126">Wählen Sie **Apps** und dann **Einstellungen**.</span><span class="sxs-lookup"><span data-stu-id="34b81-126">Select **Apps**, and then select **Settings**.</span></span>
 
-3.  <span data-ttu-id="90dd0-127">Wechseln Sie im rechten Bereich zu **System**, und wählen Sie dann im linken Bereich **Konsoleninfo** aus.</span><span class="sxs-lookup"><span data-stu-id="90dd0-127">Go to **System** in the left pane, and then select **Console info** in the right pane.</span></span>   
+3.  <span data-ttu-id="34b81-127">Wechseln Sie im rechten Bereich zu **System**, und wählen Sie dann im linken Bereich **Konsoleninfo** aus.</span><span class="sxs-lookup"><span data-stu-id="34b81-127">Go to **System** in the left pane, and then select **Console info** in the right pane.</span></span>   
    
     ![Konsoleninfo & Updates](images/devkit-deactivation-2.png)  
     
-4.  <span data-ttu-id="90dd0-129">Wählen Sie **Konsole zurücksetzen** aus.</span><span class="sxs-lookup"><span data-stu-id="90dd0-129">Select **Reset console**.</span></span>
+4.  <span data-ttu-id="34b81-129">Wählen Sie **Konsole zurücksetzen** aus.</span><span class="sxs-lookup"><span data-stu-id="34b81-129">Select **Reset console**.</span></span>
     
     ![Konsole zurücksetzen](images/devkit-deactivation-3.png)
     
-5.  <span data-ttu-id="90dd0-131">Klicken Sie anschließend auf **Zurücksetzen und alles entfernen**.</span><span class="sxs-lookup"><span data-stu-id="90dd0-131">Next, select **Reset and remove everything**.</span></span> <span data-ttu-id="90dd0-132">Mit dieser Option wird die Konsole in den ursprünglichen Einzelhandelszustand zurückgesetzt.</span><span class="sxs-lookup"><span data-stu-id="90dd0-132">This option resets the console to its original retail state.</span></span>  <span data-ttu-id="90dd0-133">Alle Apps, Spiele und lokal gespeicherten Daten werden gelöscht.</span><span class="sxs-lookup"><span data-stu-id="90dd0-133">All of your apps, games, and local save data will be deleted.</span></span> <span data-ttu-id="90dd0-134">Beachten Sie, dass die Konsole nicht aus dem Entwicklerprogramm gelöscht wird, wenn Sie die andere Option, **Reset and keep my games & apps**, auswählen.</span><span class="sxs-lookup"><span data-stu-id="90dd0-134">Note that choosing the other option, **Reset and keep my games & apps**, will not remove your console from the developer program.</span></span>  
+5.  <span data-ttu-id="34b81-131">Klicken Sie anschließend auf **Zurücksetzen und alles entfernen**.</span><span class="sxs-lookup"><span data-stu-id="34b81-131">Next, select **Reset and remove everything**.</span></span> <span data-ttu-id="34b81-132">Mit dieser Option wird die Konsole in den ursprünglichen Einzelhandelszustand zurückgesetzt.</span><span class="sxs-lookup"><span data-stu-id="34b81-132">This option resets the console to its original retail state.</span></span>  <span data-ttu-id="34b81-133">Alle Apps, Spiele und lokal gespeicherten Daten werden gelöscht.</span><span class="sxs-lookup"><span data-stu-id="34b81-133">All of your apps, games, and local save data will be deleted.</span></span> <span data-ttu-id="34b81-134">Beachten Sie, dass die Konsole nicht aus dem Entwicklerprogramm gelöscht wird, wenn Sie die andere Option, **Reset and keep my games & apps**, auswählen.</span><span class="sxs-lookup"><span data-stu-id="34b81-134">Note that choosing the other option, **Reset and keep my games & apps**, will not remove your console from the developer program.</span></span>  
    
     ![Reset and remove everything](images/devkit-deactivation-4.png)
 
-## <a name="deactivate-your-console-using-partner-center"></a><span data-ttu-id="90dd0-136">Deaktivieren der Konsole mit Partner Center</span><span class="sxs-lookup"><span data-stu-id="90dd0-136">Deactivate your console using Partner Center</span></span>
+## <a name="deactivate-your-console-using-partner-center"></a><span data-ttu-id="34b81-136">Deaktivieren der Konsole mit Partner Center</span><span class="sxs-lookup"><span data-stu-id="34b81-136">Deactivate your console using Partner Center</span></span>
 
-<span data-ttu-id="90dd0-137">Wenn Sie nicht auf die Konsole aus irgendeinem Grund zugreifen können, können Sie mithilfe der Partner Center auch den Entwicklermodus auf der Konsole deaktivieren.</span><span class="sxs-lookup"><span data-stu-id="90dd0-137">If you are unable to access your console for any reason, you can also deactivate Developer Mode on your console by using Partner Center.</span></span>
+<span data-ttu-id="34b81-137">Wenn Sie nicht auf die Konsole aus irgendeinem Grund zugreifen können, können Sie den Entwicklermodus auch auf der Konsole deaktivieren, mithilfe von Partner Center.</span><span class="sxs-lookup"><span data-stu-id="34b81-137">If you are unable to access your console for any reason, you can also deactivate Developer Mode on your console by using Partner Center.</span></span>
 
-1. <span data-ttu-id="90dd0-138">Navigieren Sie zu der Seite " [Verwalten von Xbox One-Konsolen](https://partner.microsoft.com/xboxdevices) " im Partner Center.</span><span class="sxs-lookup"><span data-stu-id="90dd0-138">Navigate to the [Manage Xbox One consoles](https://partner.microsoft.com/xboxdevices) page in Partner Center.</span></span> <span data-ttu-id="90dd0-139">Sie können zum Anmelden aufgefordert.</span><span class="sxs-lookup"><span data-stu-id="90dd0-139">You may be prompted to sign in.</span></span>
+1. <span data-ttu-id="34b81-138">Navigieren Sie zu der Seite " [Verwalten von Xbox One-Konsolen](https://partner.microsoft.com/xboxdevices) " im Partner Center.</span><span class="sxs-lookup"><span data-stu-id="34b81-138">Navigate to the [Manage Xbox One consoles](https://partner.microsoft.com/xboxdevices) page in Partner Center.</span></span> <span data-ttu-id="34b81-139">Sie können zur Anmeldung aufgefordert werden.</span><span class="sxs-lookup"><span data-stu-id="34b81-139">You may be prompted to sign in.</span></span>
 
-2. <span data-ttu-id="90dd0-140">Suchen Sie in der Liste der Konsolen die Konsole, die Sie deaktivieren möchten, anhand der Seriennummer, Konsolen-ID oder Geräte-ID.</span><span class="sxs-lookup"><span data-stu-id="90dd0-140">Find the console that you want to deactivate in the list of consoles by matching the serial number, console ID, or the device ID.</span></span>  
+2. <span data-ttu-id="34b81-140">Suchen Sie in der Liste der Konsolen die Konsole, die Sie deaktivieren möchten, anhand der Seriennummer, Konsolen-ID oder Geräte-ID.</span><span class="sxs-lookup"><span data-stu-id="34b81-140">Find the console that you want to deactivate in the list of consoles by matching the serial number, console ID, or the device ID.</span></span>  
 
-3. <span data-ttu-id="90dd0-141">Klicken Sie auf **Deaktivieren**.</span><span class="sxs-lookup"><span data-stu-id="90dd0-141">Click **Deactivate**.</span></span>  
+3. <span data-ttu-id="34b81-141">Klicken Sie auf **Deaktivieren**.</span><span class="sxs-lookup"><span data-stu-id="34b81-141">Click **Deactivate**.</span></span>  
   
 ![Deaktivieren mit Dev Center](images/devkit-deactivation-6.png)
 
-<span data-ttu-id="90dd0-143">Wenn Sie die Xbox One Konsole noch nicht in den Einzelhandelsmodus zurückgesetzt haben, holen Sie dies jetzt nach wie unter [Wechseln zum Einzelhandelsmodus](#switch-to-retail-mode) beschrieben.</span><span class="sxs-lookup"><span data-stu-id="90dd0-143">If you didn't previously return your Xbox One console to Retail Mode, do so now, as described in [Switch to Retail Mode](#switch-to-retail-mode).</span></span>
+<span data-ttu-id="34b81-143">Wenn Sie die Xbox One Konsole noch nicht in den Einzelhandelsmodus zurückgesetzt haben, holen Sie dies jetzt nach wie unter [Wechseln zum Einzelhandelsmodus](#switch-to-retail-mode) beschrieben.</span><span class="sxs-lookup"><span data-stu-id="34b81-143">If you didn't previously return your Xbox One console to Retail Mode, do so now, as described in [Switch to Retail Mode](#switch-to-retail-mode).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="90dd0-144">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="90dd0-144">See also</span></span>
-- [<span data-ttu-id="90dd0-145">Aktivierung des Xbox One-Entwicklermodus</span><span class="sxs-lookup"><span data-stu-id="90dd0-145">Xbox One Developer Mode activation</span></span>](devkit-activation.md)
-- [<span data-ttu-id="90dd0-146">UWP auf Xbox One</span><span class="sxs-lookup"><span data-stu-id="90dd0-146">UWP on Xbox One</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="34b81-144">Weitere Informationen</span><span class="sxs-lookup"><span data-stu-id="34b81-144">See also</span></span>
+- [<span data-ttu-id="34b81-145">Aktivierung des Xbox One-Entwicklermodus</span><span class="sxs-lookup"><span data-stu-id="34b81-145">Xbox One Developer Mode activation</span></span>](devkit-activation.md)
+- [<span data-ttu-id="34b81-146">UWP auf Xbox One</span><span class="sxs-lookup"><span data-stu-id="34b81-146">UWP on Xbox One</span></span>](index.md)

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 4960f6eb18fe4cffe34b8167a328521e9038c684
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7716174"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7988726"
 ---
 # <a name="create-custom-transport-controls"></a><span data-ttu-id="e00f1-103">Erstellen benutzerdefinierter Transportsteuerelemente</span><span class="sxs-lookup"><span data-stu-id="e00f1-103">Create custom transport controls</span></span>
 

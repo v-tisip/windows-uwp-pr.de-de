@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projizierung, erste schritte
 ms.localizationpriority: medium
 ms.openlocfilehash: cc98f61acc3b5dccdc4869b646337fdf9a6e701a
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7716229"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7983960"
 ---
 # <a name="get-started-with-cwinrt"></a><span data-ttu-id="0f8f5-104">Erste Schritte mit C++/WinRT</span><span class="sxs-lookup"><span data-stu-id="0f8f5-104">Get started with C++/WinRT</span></span>
 

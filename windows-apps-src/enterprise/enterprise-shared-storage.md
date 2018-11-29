@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 006507d4665f5578310b8d3e31fb8f7fba4117a2
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7696990"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7984825"
 ---
 # <a name="enterprise-shared-storage"></a><span data-ttu-id="53be6-104">Im Unternehmen freigegebener Speicher</span><span class="sxs-lookup"><span data-stu-id="53be6-104">Enterprise Shared Storage</span></span>
 

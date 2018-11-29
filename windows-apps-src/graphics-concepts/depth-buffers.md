@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 279e650532505467f3c0dbabf3814618b893aedb
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7712001"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7982420"
 ---
 # <a name="depth-buffers"></a><span data-ttu-id="baeaf-104">Tiefenpuffer</span><span class="sxs-lookup"><span data-stu-id="baeaf-104">Depth buffers</span></span>
 
