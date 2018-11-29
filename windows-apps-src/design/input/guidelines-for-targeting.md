@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e8425232512650d5c80bf6fee9745b261aee8d9
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7975389"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8199477"
 ---
 # <a name="guidelines-for-targeting"></a><span data-ttu-id="84eed-103">Richtlinien für die Zielbestimmung</span><span class="sxs-lookup"><span data-stu-id="84eed-103">Guidelines for targeting</span></span>
 

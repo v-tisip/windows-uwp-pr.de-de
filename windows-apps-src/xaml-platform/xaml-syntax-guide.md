@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e988582877a6aa4ca3cf88ba0a5d98aceb56939e
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965583"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8197533"
 ---
 # <a name="xaml-syntax-guide"></a><span data-ttu-id="ccfbd-104">Anleitung zur XAML-Syntax</span><span class="sxs-lookup"><span data-stu-id="ccfbd-104">XAML syntax guide</span></span>
 

@@ -13,11 +13,11 @@ dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 0a0cfba50f5e61486b41cd78b8ff0c1098cff5fa
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7853465"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8197942"
 ---
 # <a name="calendar-view"></a><span data-ttu-id="cd109-103">Kalenderansicht</span><span class="sxs-lookup"><span data-stu-id="cd109-103">Calendar view</span></span>
 
