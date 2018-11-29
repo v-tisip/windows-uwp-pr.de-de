@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f28f1f46cfd34ee1aab614c57dc99019dbd6111
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7835445"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7990273"
 ---
 # <a name="specular-lighting"></a><span data-ttu-id="6d59b-104">Spiegelbeleuchtung</span><span class="sxs-lookup"><span data-stu-id="6d59b-104">Specular lighting</span></span>
 

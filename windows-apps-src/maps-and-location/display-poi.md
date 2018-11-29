@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows10, uwp, karten, standort, ortsmarken
 ms.localizationpriority: medium
 ms.openlocfilehash: f67c93a6f56fd466d981bce10eb41c16ff8da1f3
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7720336"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7992507"
 ---
 # <a name="display-points-of-interest-on-a-map"></a><span data-ttu-id="8f8a3-104">Anzeigen von interessanten Orten (POI) auf einer Karte</span><span class="sxs-lookup"><span data-stu-id="8f8a3-104">Display points of interest on a map</span></span>
 

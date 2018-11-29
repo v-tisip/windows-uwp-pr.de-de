@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 22477ab0facfcb67d44057a91c7c3a49df57f8b9
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7852062"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7988257"
 ---
 # <a name="pen-interactions-and-windows-ink-in-uwp-apps"></a><span data-ttu-id="043cb-103">Stiftinteraktionen und Windows Ink in UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="043cb-103">Pen interactions and Windows Ink in UWP apps</span></span>
 

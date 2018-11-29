@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: c67430680854e7940d12af15ecd3c07dcd976802
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7826486"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7990904"
 ---
 # <a name="multiple-inputs"></a><span data-ttu-id="3450e-103">Mehrere Eingaben</span><span class="sxs-lookup"><span data-stu-id="3450e-103">Multiple inputs</span></span>
 

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 3ae656b473a4dd5999588057b0ec970645703eec
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7842425"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7986444"
 ---
 # <a name="bluetooth-gatt-client"></a><span data-ttu-id="fe94d-104">Bluetooth GATT-Client</span><span class="sxs-lookup"><span data-stu-id="fe94d-104">Bluetooth GATT Client</span></span>
 
