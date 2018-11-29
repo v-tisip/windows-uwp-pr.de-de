@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiel, DirectX, optimieren, Multisampling, Swapchains
 ms.localizationpriority: medium
 ms.openlocfilehash: e9618a35ecd8f9d1a37b627494c0f00a5ed84806
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7968858"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8189114"
 ---
 # <a name="optimization-and-advanced-topics-for-directx-games"></a>Optimierung und fortgeschrittene Themen für DirectX-Spiele
 

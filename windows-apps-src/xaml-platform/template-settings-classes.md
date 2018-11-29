@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 2b44aaf741c188658c7a639422b0d091f8db6e3e
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7843123"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8189074"
 ---
 # <a name="template-settings-classes"></a>Vorlageneinstellungsklassen
 

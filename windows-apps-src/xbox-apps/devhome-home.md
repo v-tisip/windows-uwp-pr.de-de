@@ -8,11 +8,11 @@ keywords: Windows10, UWP
 permalink: en-us/docs/xdk/devhome-home.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 2be7bdfc04fdd09636251000347499e2f2a37ce4
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/29/2018
-ms.locfileid: "7985926"
+ms.locfileid: "8188810"
 ---
 # <a name="home-page-dev-home"></a>Startseite (Dev Home)
    

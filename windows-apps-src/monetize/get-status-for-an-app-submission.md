@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, App-Übermittlung, Status
 ms.localizationpriority: medium
 ms.openlocfilehash: 97070136f9e1f926a275185d2b4c222513aa49d7
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7993546"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8191693"
 ---
 # <a name="get-the-status-of-an-app-submission"></a>Abrufen des Status einer App-Übermittlung
 

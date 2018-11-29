@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, DirectX 9, DirectX 11, Portierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 56bb86706795e773d21e45263f640f9fc0aa596a
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/29/2018
-ms.locfileid: "7988630"
+ms.locfileid: "8193162"
 ---
 # <a name="map-directx-9-features-to-directx-11-apis"></a>Zuordnung von DirectX9-Funktionen zu DirectX11-APIs
 

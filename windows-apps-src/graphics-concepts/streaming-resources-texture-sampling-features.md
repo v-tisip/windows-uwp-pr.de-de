@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b6290fba9d4194df78c39902b8d96e952134682
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/29/2018
-ms.locfileid: "7983930"
+ms.locfileid: "8215379"
 ---
 # <a name="streaming-resources-texture-sampling-features"></a>Textursampling-Features für Streamingressourcen
 

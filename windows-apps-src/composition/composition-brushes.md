@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e8c995c5a9513bea44664bcb395cd604ba2668c3
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7979892"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8218143"
 ---
 # <a name="composition-brushes"></a>Kompositionspinsel
 Alles, was von einer UWP-Anwendung auf dem Bildschirm sichtbar wird angezeigt, da er mit einem Pinsel gezeichnet wurde. Mithilfe von Pinseln können Sie Benutzer Objekte der Benutzeroberfläche (UI) mit Inhalt, angefangen bei einfachen, einfarbige Farben zu Bildern oder Zeichnungen für komplexe Effekte Kette zeichnen. In diesem Thema werden die Begriffe zum Zeichnen mit CompositionBrush.

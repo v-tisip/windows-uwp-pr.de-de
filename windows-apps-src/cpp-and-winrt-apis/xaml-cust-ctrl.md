@@ -7,11 +7,11 @@ keywords: Windows 10, Uwp, Standard, c++, Cpp, Winrt, Projizierung, XAML, benutz
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: e929f217c71a90540803b180e6e79b98802f9c7a
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7966625"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8193039"
 ---
 # <a name="xaml-custom-templated-controls-with-cwinrt"></a>Benutzerdefinierte (vorlagenbasierte) XAML-Steuerelemente mit C++ / WinRT
 
