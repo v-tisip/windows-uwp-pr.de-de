@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, Uwp, Spiele, Beispiel, Directx, Grundlagen
 ms.localizationpriority: medium
 ms.openlocfilehash: 94dd22a6f6b1ace5589104574a695b236c1ebd39
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7854987"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7991203"
 ---
 # <a name="marble-maze-sample-fundamentals"></a>Grundlagen am Beispiel von Marble Maze
 

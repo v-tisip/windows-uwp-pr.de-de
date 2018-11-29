@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-Ons, In-App-Produkte, IAPs
 ms.localizationpriority: medium
 ms.openlocfilehash: 50733bc0617d56b7e6b8596b661aff8056961f18
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7850814"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7988367"
 ---
 # <a name="get-all-add-ons"></a>Abrufen aller Add-Ons
 

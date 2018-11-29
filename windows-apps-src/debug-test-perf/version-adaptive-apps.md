@@ -5,12 +5,12 @@ ms.date: 09/17/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 8bbe7875fcd35003b1ec35b02da0f1a86a54ef31
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.openlocfilehash: 435bbdbfaaf1bec90fa1ee2d598b4a3fe78d3789
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7842395"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7990516"
 ---
 # <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>Versionsadaptive Apps: Verwendung neuer APIs bei gleichzeitiger Gewährleistung der Kompatibilität mit früheren Versionen
 
@@ -56,7 +56,7 @@ Im Anschluss finden Sie die Buildnummern für die einzelnen SDKs.
 | Creators Update | 1703 | 15063 |
 | Fall Creators Update | 1709 | 16299 |
 | Update April 2018 | 1803 | 17134 |
-| Oktober 2018-Update | 1809 | _Insider-Vorschau_ |
+| Oktober 2018-Update | 1809 | 17763 |
 
 Sie können jede beliebige veröffentlichte Version des SDKs aus dem [WindowsSDK- und Emulator-Archiv](https://developer.microsoft.com/downloads/sdk-archive) herunterladen. Das neueste Windows Insider Preview SDK können Sie im Entwicklerabschnitt der [Windows-Insider-Website](https://insider.windows.com/Home/BuildWithWindows) herunterladen.
 
