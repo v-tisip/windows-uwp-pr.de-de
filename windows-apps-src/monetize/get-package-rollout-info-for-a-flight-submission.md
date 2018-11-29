@@ -7,11 +7,11 @@ keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Paketrollout, Flig
 ms.assetid: 397f1b99-2be7-4f65-bcf1-9433a3d496ad
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e60ecfccecda850a5c83e5840626e1b789a068d
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7697563"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7985595"
 ---
 # <a name="get-rollout-info-for-a-flight-submission"></a>Abrufen von Rolloutinformationen für eine Flight-Paketübermittlung
 
@@ -24,7 +24,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 * Falls noch nicht geschehen, erfüllen Sie alle [Voraussetzungen](create-and-manage-submissions-using-windows-store-services.md#prerequisites) für die Microsoft Store-Übermittlungs-API.
 * [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token), das im Anforderungsheader für diese Methode verwendet wird. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60 Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
-* Erstellen Sie eine Flight-Paketübermittlung für eine Ihrer apps. Sie können dies im Partner Center oder hierzu können Sie mithilfe der Methode [Erstellen Sie eine Flight-Paketübermittlung](create-a-flight-submission.md) .
+* Erstellen Sie eine Flight-Paketübermittlung für eine Ihrer apps. Sie können dies im Partner Center, oder Sie können dies tun, indem Sie mit der Methode [Erstellen Sie eine Test-Flight-Paketübermittlung](create-a-flight-submission.md) .
 
 ## <a name="request"></a>Anforderung
 
@@ -47,7 +47,7 @@ Diese Methode hat die folgende Syntax. In den folgenden Abschnitten finden Sie V
 | Name        | Typ   | Beschreibung                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | applicationId | String | Erforderlich. Die Store-ID der App mit der Flight-Paket-Übermittlung, deren Paketrollout-Informationen abgerufen werden sollen. Weitere Informationen zur Store-ID finden Sie unter [Anzeigen von Details zur App-Identität](https://msdn.microsoft.com/windows/uwp/publish/view-app-identity-details).  |
-| flightId | String | Erforderlich. Die Store-ID des Flight-Pakets mit der Übermittlung, deren Paketrollout-Informationen abgerufen werden sollen. Diese ID ist in den Antwortdaten für Anforderungen zum [Erstellen eines Flight-Pakets](create-a-flight.md) und zum [Abrufen von Flight-Paketen für eine App](get-flights-for-an-app.md) enthalten. Für einen Flight, der im Partner Center erstellt wurde, ist diese ID auch in der URL für die Flight-Seite im Partner Center verfügbar.    |
+| flightId | String | Erforderlich. Die Store-ID des Flight-Pakets mit der Übermittlung, deren Paketrollout-Informationen abgerufen werden sollen. Diese ID ist in den Antwortdaten für Anforderungen zum [Erstellen eines Flight-Pakets](create-a-flight.md) und zum [Abrufen von Flight-Paketen für eine App](get-flights-for-an-app.md) enthalten. Für einen Flight, der im Partner Center erstellt wurde, ist diese ID auch in der URL für die Test-Flight-Seite im Partner Center verfügbar.    |
 | submissionId | String | Erforderlich. Die ID der Übermittlung mit den abzurufenden Paketrollout-Informationen. Diese ID ist in den Antwortdaten für Anforderungen zum [Erstellen einer Flight-Paket-Übermittlung](create-a-flight-submission.md) verfügbar. Für eine Übermittlung, die im Partner Center erstellt wurde, ist diese ID auch in der URL für die übermittlungsseite im Partner Center verfügbar.   |
 
 

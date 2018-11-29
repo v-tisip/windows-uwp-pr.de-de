@@ -3,11 +3,11 @@ title: Geräteportal-Remoteeingabe– API-Referenz
 description: Hier erfahren Sie, wie Sie remote Controller-, Tastatur- und Mauseingaben auf einer Xbox senden.
 ms.localizationpriority: medium
 ms.openlocfilehash: e0db86ad50bfb1cb27f516243542a554e710c3ea
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7837315"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7990000"
 ---
 # <a name="remote-input-api-reference"></a>API-Referenz für die Remoteeingabe   
 Über diese API können Sie in Echtzeit per Fernzugriff Controller-, Tastatur- und Mauseingaben senden.

@@ -8,12 +8,12 @@ ms.date: 11/09/2017
 ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a86d0b29b39ecb4d2793e641c8c53f6c2a4e3c0
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.openlocfilehash: 9ffcbc3d1c11c8f756b6307b15b87c14b09f65c4
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7830364"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7989227"
 ---
 # <a name="use-templates-and-patterns-to-format-dates-and-times"></a>Verwenden von Mustern zum Formatieren von Datums- und Uhrzeitwerten
 
@@ -39,7 +39,7 @@ var dateFormatter = new Windows.Globalization.DateTimeFormatting.DateTimeFormatt
 
 Hierdurch wird ein Formatierer erstellt, der auf dem Sprach- und Regionswert des aktuellen Kontexts basiert. Die Reihenfolge der Komponenten in einer Formatvorlage spielt keine Rolle. Der Formatierer zeigt sie in der richtigen Reihenfolge für die aktuelle Sprache. Er zeigt also „January 1” für Englisch (USA), „1 janvier“ für Französisch (Frankreich) und „1月1日“ für Japanisch an.
 
-Dagegen ist ein Formatmuster kulturspezifisch. Rufen wir jetzt das Formatmuster für unsere Formatvorlage ab.
+Dagegen ist ein Formatmuster kulturspezifisch. Lassen Sie uns Zugriff auf das Formatmuster für unsere Formatvorlage.
 
 ```csharp
 IReadOnlyList<string> monthDayPatterns = dateFormatter.Patterns;

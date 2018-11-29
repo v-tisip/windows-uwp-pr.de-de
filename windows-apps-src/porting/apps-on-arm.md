@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows10 s, always connected, ARM, ARM64, x86-emulation
 ms.localizationpriority: medium
 ms.openlocfilehash: bdbd0e4f3ab2d060cdb0b2519117e4f14725347f
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7851872"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "7985975"
 ---
 # <a name="windows-10-on-arm"></a>Windows10 auf ARM
 Ursprünglich konnte Windows 10 (im Unterschied zu Windows 10 Mobile) nur auf PCs ausgeführt werden, die über x86- und x64-Prozessoren verfügen. Windows10 Desktop (Pro und S-Editionen) kann jetzt auf Computern ausgeführt werden, die über ARM64 Prozessoren mit dem Fall Creators Update verfügen. Dank der stromsparenden Architektur der ARM-CPU weisen diese PCs eine Akkulaufzeit über einen ganzen Tag auf und erhalten Unterstützung für mobile Datennetzwerke. Diese PCs bieten eine hervorragende Anwendungskompatibilität und ermöglichen Ihnen, Ihre bestehenden x86 win32-Anwendungen unverändert auszuführen. z.B. Adobe Reader. Für weitere Informationen oder Demos sehen Sie sich das [Channel 9-Video für den Always Connected-PC](https://channel9.msdn.com/Events/Build/2017/P4171) an. 
