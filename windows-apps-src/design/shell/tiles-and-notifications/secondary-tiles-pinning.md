@@ -1,20 +1,20 @@
 ---
-Description: Learn how to pin a secondary tile from your UWP app.
-title: Sekundäre Kacheln anheften
-label: Pin secondary tiles
+Description: Learn how to pin a secondary tile to Start from your UWP app.
+title: Sekundäre Kacheln an die Startseite anheften
+label: Pin secondary tiles to Start
 template: detail.hbs
 ms.date: 05/25/2017
 ms.topic: article
 keywords: Windows10, UWP, sekundäre Kacheln, Anheften, anheften, Schnellstart, Codebeispiel, Beispiel, Sekundärkachel
 ms.localizationpriority: medium
-ms.openlocfilehash: 6fda249e38ddc9126816b0ea479ec0339fc6202b
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.openlocfilehash: 4bebee86c824242cf031503617d4a880ebbb74df
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7977050"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8218013"
 ---
-# <a name="pin-secondary-tiles"></a>Sekundäre Kacheln anheften
+# <a name="pin-secondary-tiles-to-start"></a>Sekundäre Kacheln an die Startseite anheften
 
 
 Dieses Thema führt Sie durch die Schritte zum Erstellen einer sekundären Kachel für Ihre UWP-App und Anheften der Kachel an das Startmenü.
