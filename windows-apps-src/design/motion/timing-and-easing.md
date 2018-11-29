@@ -12,11 +12,11 @@ doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 5b9a0719e4967f9d527d2b2565818a0dea1be0a6
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/29/2018
-ms.locfileid: "7987092"
+ms.locfileid: "8190434"
 ---
 # <a name="timing-and-easing"></a><span data-ttu-id="1446d-103">Timing und Geschwindigkeitsverlauf</span><span class="sxs-lookup"><span data-stu-id="1446d-103">Timing and easing</span></span>
 

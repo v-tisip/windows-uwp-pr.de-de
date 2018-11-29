@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Kontobenutzer, Verwalten von Benutzern, Azure Ad, Verwalten mehrerer Benutzer, mehrere Benutzer
 ms.localizationpriority: medium
 ms.openlocfilehash: 282b1eb087fa081b621437206f338ed4b6d3569b
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7973255"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8188645"
 ---
 # <a name="manage-account-users"></a><span data-ttu-id="529fa-103">Verwalten von Kontobenutzern</span><span class="sxs-lookup"><span data-stu-id="529fa-103">Manage account users</span></span>
 

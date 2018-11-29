@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 340289c16cfd9c63f578c63827b1c0b35162cdfd
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7977868"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8190112"
 ---
 # <a name="guidelines-for-panning"></a><span data-ttu-id="a68d2-103">Anleitungen für das Verschieben</span><span class="sxs-lookup"><span data-stu-id="a68d2-103">Guidelines for panning</span></span>
 

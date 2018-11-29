@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b81838393d7b2692e6fd04b7ce535f58dc773780
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/29/2018
-ms.locfileid: "7982918"
+ms.locfileid: "8188800"
 ---
 # <a name="monochrome-light-maps"></a><span data-ttu-id="6e3ff-104">Einfarbige Lichtzuordnungen</span><span class="sxs-lookup"><span data-stu-id="6e3ff-104">Monochrome light maps</span></span>
 

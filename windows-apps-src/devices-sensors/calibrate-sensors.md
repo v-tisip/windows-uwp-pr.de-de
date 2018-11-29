@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 7a93d59a00630c240e74049a9fd98d50f285b0dd
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7964539"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8190290"
 ---
 # <a name="calibrate-sensors"></a><span data-ttu-id="a75db-104">Kalibrieren von Sensoren</span><span class="sxs-lookup"><span data-stu-id="a75db-104">Calibrate sensors</span></span>
 

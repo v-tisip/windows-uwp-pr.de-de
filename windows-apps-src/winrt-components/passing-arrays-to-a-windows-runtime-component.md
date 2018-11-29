@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 60c2e2221cd174ffd75a45d6fe8e2f66744d67a0
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/29/2018
-ms.locfileid: "7993068"
+ms.locfileid: "8191915"
 ---
 # <a name="passing-arrays-to-a-windows-runtime-component"></a><span data-ttu-id="35647-105">Übergeben von Arrays an eine Komponente für Windows-Runtime</span><span class="sxs-lookup"><span data-stu-id="35647-105">Passing arrays to a Windows Runtime Component</span></span>
 

@@ -7,11 +7,11 @@ keywords: Erste Schritte, UWP, Windows10, Lernpfad, Dateien, Datei-E/A, Datei le
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 9350228585ec8108c41bd15de6179de0294140dc
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7976369"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8192376"
 ---
 # <a name="work-with-files"></a><span data-ttu-id="b4b8a-104">Arbeiten mit Dateien</span><span class="sxs-lookup"><span data-stu-id="b4b8a-104">Work with files</span></span>
 

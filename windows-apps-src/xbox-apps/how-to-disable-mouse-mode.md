@@ -7,11 +7,11 @@ keywords: Windows10, UWP
 ms.assetid: e57ee4e6-7807-4943-a933-c2b4dc80fc01
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e4b8868f416494daf978d65d4a4ccde02d6ccf5
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/29/2018
-ms.locfileid: "7984626"
+ms.locfileid: "8188635"
 ---
 # <a name="how-to-disable-mouse-mode"></a><span data-ttu-id="12bbc-104">Deaktivieren des Mausmodus</span><span class="sxs-lookup"><span data-stu-id="12bbc-104">How to disable mouse mode</span></span>
 <span data-ttu-id="12bbc-105">Der Mausmodus ist standardmäßig für alle Anwendungen aktiviert. Das bedeutet, dass alle Anwendungen, für die die Option nicht deaktiviert wurde, einen Mauszeiger erhalten (ähnlich dem Zeiger im Edge-Browser auf der Konsole).</span><span class="sxs-lookup"><span data-stu-id="12bbc-105">Mouse mode is on by default for all applications, which means that all applications that have not opted out will receive a mouse pointer (similar to the one in the Edge browser on the console).</span></span> <span data-ttu-id="12bbc-106">Es wird nachdrücklich empfohlen, diese Option zu deaktivieren und die direktionale Navigation über den Controller zu optimieren.</span><span class="sxs-lookup"><span data-stu-id="12bbc-106">We strongly recommend that you turn this off and optimize for directional controller navigation.</span></span>   
