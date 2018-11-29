@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Angebotscode, Angebotscodes, Token, Token
 ms.localizationpriority: medium
 ms.openlocfilehash: ce8fb38ee26beadc68eb8e5829549f69e2d11d16
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7827418"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7973225"
 ---
 # <a name="generate-promotional-codes"></a><span data-ttu-id="9a84b-103">Generieren von Werbecodes</span><span class="sxs-lookup"><span data-stu-id="9a84b-103">Generate promotional codes</span></span>
 

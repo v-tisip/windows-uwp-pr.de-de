@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Flight erstellen
 ms.localizationpriority: medium
 ms.openlocfilehash: af5ffe0dd72f0c3aae21a2dc522b469358626bab
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7851524"
+ms.locfileid: "7973004"
 ---
 # <a name="create-a-package-flight"></a><span data-ttu-id="d4d83-104">Erstellen eines Flight-Pakets</span><span class="sxs-lookup"><span data-stu-id="d4d83-104">Create a package flight</span></span>
 

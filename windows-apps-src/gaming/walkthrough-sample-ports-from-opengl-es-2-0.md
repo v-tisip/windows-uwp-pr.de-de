@@ -4,11 +4,11 @@ description: In dieser Themengruppe werden einige unterschiedlich komplexe Porti
 ms.assetid: 07390da1-83f3-7fbb-5696-d1da3a2bc870
 ms.localizationpriority: medium
 ms.openlocfilehash: 7aefd725c1a73bac3212bf80036462c9bcb7dcc9
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7691101"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7977227"
 ---
 # <a name="walkthrough-sample-ports-from-opengl-es-20"></a><span data-ttu-id="64c41-103">Exemplarische Vorgehensweise: Beispiele für die Portierung von OpenGL ES 2.0</span><span class="sxs-lookup"><span data-stu-id="64c41-103">Walkthrough sample ports from OpenGL ES 2.0</span></span>
 

@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6618b7573be7cd39f703299b9418d1575297120e
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7706347"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7973722"
 ---
 # <a name="texture-wrapping"></a><span data-ttu-id="0cf2b-104">Texturumbruch</span><span class="sxs-lookup"><span data-stu-id="0cf2b-104">Texture wrapping</span></span>
 

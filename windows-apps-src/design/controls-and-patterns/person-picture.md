@@ -12,11 +12,11 @@ dev-contact: kefodero
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 43c570fc3e0187fbf6e559ad794a2a63e608a252
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7697903"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7974946"
 ---
 # <a name="person-picture-control"></a><span data-ttu-id="d824d-104">Personenbild-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="d824d-104">Person picture control</span></span>
 

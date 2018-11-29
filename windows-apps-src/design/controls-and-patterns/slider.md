@@ -13,11 +13,11 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: e13f28d9b82bca04d108bac818faa873567d77f7
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7826203"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7974211"
 ---
 # <a name="sliders"></a><span data-ttu-id="9db07-103">Schieberegler</span><span class="sxs-lookup"><span data-stu-id="9db07-103">Sliders</span></span>
 

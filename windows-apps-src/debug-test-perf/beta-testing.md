@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 2eca388b37cc95803b7ecb94bc0b0b5b990f5de3
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7715420"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7972680"
 ---
 # <a name="beta-testing"></a><span data-ttu-id="b2e76-104">Betatests</span><span class="sxs-lookup"><span data-stu-id="b2e76-104">Beta testing</span></span>
 

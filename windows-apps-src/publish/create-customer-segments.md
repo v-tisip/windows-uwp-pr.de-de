@@ -7,11 +7,11 @@ keywords: Windows10, UWP, Segment, Segmente, Zielgruppe, Kunden
 ms.assetid: 58185f6c-d61f-478b-ab24-753d8986cd5a
 ms.localizationpriority: medium
 ms.openlocfilehash: d0df23f0da4efe01877c45e5b2b6b5f4e2142a92
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7714447"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "7973212"
 ---
 # <a name="create-customer-segments"></a><span data-ttu-id="c1045-103">Erstellen von Kundensegmenten</span><span class="sxs-lookup"><span data-stu-id="c1045-103">Create customer segments</span></span>
 

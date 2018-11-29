@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows10, Uwp, Verpacken, Architektur, Paket-Konfiguration
 ms.localizationpriority: medium
 ms.openlocfilehash: 15b1b8531390cf1b83c15e0aec1d371266417a87
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7853667"
+ms.locfileid: "7977290"
 ---
 # <a name="app-package-architectures"></a><span data-ttu-id="3d1ef-104">App-Paketarchitektur</span><span class="sxs-lookup"><span data-stu-id="3d1ef-104">App package architectures</span></span>
 
