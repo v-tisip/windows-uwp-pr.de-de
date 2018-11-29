@@ -7,11 +7,11 @@ keywords: Windows 10, Uwp, education
 ms.assetid: 2431f253-efe3-4895-b131-34653b61f13c
 ms.localizationpriority: medium
 ms.openlocfilehash: 7696cd785b4a8720f6eefb7bc897d13ffb0c7115
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7694323"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8218133"
 ---
 # <a name="develop-universal-windows-apps-for-education"></a><span data-ttu-id="a386d-104">Entwickeln von universellen Windows-Apps für das Bildungswesen</span><span class="sxs-lookup"><span data-stu-id="a386d-104">Develop Universal Windows apps for education</span></span>
 !["Prüfung"-a-Test-app-screenshot](images/take-a-test-screen-small.png)
