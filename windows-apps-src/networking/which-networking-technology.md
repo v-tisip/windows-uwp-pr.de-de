@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e418e5a159df44d6ff6e15e4faa972164447f5ee
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/28/2018
-ms.locfileid: "7852019"
+ms.locfileid: "7978539"
 ---
 # <a name="which-networking-technology"></a>Welche Netzwerktechnologie?
 
