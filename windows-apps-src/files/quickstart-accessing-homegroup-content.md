@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 422d02b8797bef8ea4f793ba652e9e4e34421a9b
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7828575"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8195834"
 ---
 # <a name="accessing-homegroup-content"></a><span data-ttu-id="d729b-104">Zugriff auf Inhalte in der Heimnetzgruppe</span><span class="sxs-lookup"><span data-stu-id="d729b-104">Accessing HomeGroup content</span></span>
 

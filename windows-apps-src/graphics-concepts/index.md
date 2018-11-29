@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 3cb6a2466ea201c9b5047f7eb159477a0d584429
-ms.sourcegitcommit: 681c70f964210ab49ac5d06357ae96505bb78741
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "7705903"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8193182"
 ---
 # <a name="direct3d-graphics-glossary"></a><span data-ttu-id="d356b-104">Direct3D-Grafiken Glossar</span><span class="sxs-lookup"><span data-stu-id="d356b-104">Direct3D graphics glossary</span></span>
 

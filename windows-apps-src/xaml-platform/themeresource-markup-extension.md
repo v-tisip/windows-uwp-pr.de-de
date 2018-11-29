@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9466ec598fad090e31768d680b64ffea52688844
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7847194"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8204010"
 ---
 # <a name="themeresource-markup-extension"></a><span data-ttu-id="eae44-104">{ThemeResource}-Markuperweiterung</span><span class="sxs-lookup"><span data-stu-id="eae44-104">{ThemeResource} markup extension</span></span>
 

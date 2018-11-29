@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, SD-Karte, Speicher
 ms.localizationpriority: medium
 ms.openlocfilehash: 9ef97ed489f2dc35aece83821633a583dfba77e2
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965122"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "8215203"
 ---
 # <a name="access-the-sd-card"></a><span data-ttu-id="ffa59-104">Zugreifen auf die SD-Karte</span><span class="sxs-lookup"><span data-stu-id="ffa59-104">Access the SD card</span></span>
 
