@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Flight-Übermittlung, Status
 ms.localizationpriority: medium
 ms.openlocfilehash: 1cd898c51d694d2dd60185623126c7f566af0f55
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8188625"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8324821"
 ---
 # <a name="get-the-status-of-a-package-flight-submission"></a><span data-ttu-id="cfde9-104">Abrufen des Status einer Flight-Paketübermittlung</span><span class="sxs-lookup"><span data-stu-id="cfde9-104">Get the status of a package flight submission</span></span>
 

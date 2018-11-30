@@ -9,11 +9,11 @@ keywords: Windows 10, UWP
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
 ms.localizationpriority: medium
 ms.openlocfilehash: a76a03eaff3d831b48e7b86c0b70ff2cbae7360a
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7972700"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8324758"
 ---
 # <a name="inking-controls"></a><span data-ttu-id="b8ebe-103">Steuerelemente für Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="b8ebe-103">Inking controls</span></span>
 

@@ -13,11 +13,11 @@ dev-contact: regisb
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 368454e32ba2c88994161f6c7deb554fff73972a
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8193282"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8328349"
 ---
 # <a name="scroll-viewer-controls"></a><span data-ttu-id="28a0c-103">Bildlaufanzeige-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="28a0c-103">Scroll viewer controls</span></span>
 

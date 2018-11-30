@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: ef0e8834310e77084c0bb4a8aad22786a89fb312
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8190158"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8352434"
 ---
 # <a name="makepriexe-configuration-file"></a><span data-ttu-id="18463-103">Konfigurationsdatei für MakePRI.exe</span><span class="sxs-lookup"><span data-stu-id="18463-103">MakePri.exe configuration file</span></span>
 

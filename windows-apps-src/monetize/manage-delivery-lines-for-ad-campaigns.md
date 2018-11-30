@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store Werbungs-API, Anzeigenkampagnen
 ms.localizationpriority: medium
 ms.openlocfilehash: 363f7034d7e353d9ee110637971e7b848dbca1bb
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7964910"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8324985"
 ---
 # <a name="manage-delivery-lines"></a><span data-ttu-id="ecf9e-104">Verwalten von Lieferpositionen</span><span class="sxs-lookup"><span data-stu-id="ecf9e-104">Manage delivery lines</span></span>
 

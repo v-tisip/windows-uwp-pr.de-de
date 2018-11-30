@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 42229212a0f54e307eaa841849c1a279c4354d2a
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8191872"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8326638"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a><span data-ttu-id="a4776-103">Verbessern Sie Ihre Desktopanwendung für Windows10</span><span class="sxs-lookup"><span data-stu-id="a4776-103">Enhance your desktop application for Windows 10</span></span>
 

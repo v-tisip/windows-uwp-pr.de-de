@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ea8d387becaef171175fd5e91bfc3a1402e79faa
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965513"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8323364"
 ---
 # <a name="legacy-background-media-playback"></a><span data-ttu-id="b5ad3-104">Medienwiedergabe im Hintergrund (Legacy)</span><span class="sxs-lookup"><span data-stu-id="b5ad3-104">Legacy background media playback</span></span>
 

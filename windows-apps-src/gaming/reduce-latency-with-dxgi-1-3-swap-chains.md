@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Latenz, DXGI, Swapchains, Directx
 ms.localizationpriority: medium
 ms.openlocfilehash: ec315cc9ed59a4b3272151f2ee1bb4bde8d9df10
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8197480"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8326336"
 ---
 # <a name="reduce-latency-with-dxgi-13-swap-chains"></a><span data-ttu-id="36ccb-104">Reduzieren der Latenz mit DXGI 1.3-Swapchains</span><span class="sxs-lookup"><span data-stu-id="36ccb-104">Reduce latency with DXGI 1.3 swap chains</span></span>
 

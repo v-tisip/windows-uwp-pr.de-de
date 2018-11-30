@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows10, UWP, Xbox Analyse, Xbox Live-Analyse, Xbox-Statistiken
 ms.localizationpriority: medium
 ms.openlocfilehash: ae9bacd88f957954c5cd1d3f6ccd6d3c04a568a2
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8217102"
+ms.locfileid: "8327019"
 ---
 # <a name="xbox-analytics-report"></a><span data-ttu-id="63f53-103">Xbox Analysebericht</span><span class="sxs-lookup"><span data-stu-id="63f53-103">Xbox analytics report</span></span>
 

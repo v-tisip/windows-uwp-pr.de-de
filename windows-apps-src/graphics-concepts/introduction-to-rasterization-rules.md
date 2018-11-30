@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d1907be029254d99be9e6158c93c179baea1fb0
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "7990230"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8326136"
 ---
 # <a name="introduction-to-rasterization-rules"></a><span data-ttu-id="e46b8-105">Einführung in die Regeln für die Rasterung</span><span class="sxs-lookup"><span data-stu-id="e46b8-105">Introduction to rasterization rules</span></span>
 

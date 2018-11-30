@@ -8,11 +8,11 @@ ms.assetid: 4df395d2-f10e-4e0e-9bf2-660f82b8a9fa
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 1d313e35b7d1ab3ebe72bd3a073323fe8782098a
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8195094"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8328430"
 ---
 # <a name="style-for-uwp-apps"></a><span data-ttu-id="fa3cd-104">Stile für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="fa3cd-104">Style for UWP apps</span></span>
 

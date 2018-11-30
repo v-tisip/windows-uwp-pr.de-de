@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: daf0452a30d494b3835ea043eee7d596921b0a75
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7827738"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8328391"
 ---
 # <a name="gamepad-and-remote-control-interactions"></a><span data-ttu-id="0cba6-103">Interaktionen von Gamepad und Fernbedienung</span><span class="sxs-lookup"><span data-stu-id="0cba6-103">Gamepad and remote control interactions</span></span>
 

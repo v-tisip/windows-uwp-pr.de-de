@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 87afe086ca28e27a39f5508a2bea5ea9fcb1c6a5
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8199665"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8327111"
 ---
 # <a name="control-patterns-and-interfaces"></a><span data-ttu-id="e5ea2-103">Steuerelementmuster und Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="e5ea2-103">Control patterns and interfaces</span></span>  
 

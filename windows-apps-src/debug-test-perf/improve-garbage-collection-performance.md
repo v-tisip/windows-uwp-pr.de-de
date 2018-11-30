@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6d3940f519706fba6d795d60344cbd83337ae482
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7972577"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8325194"
 ---
 # <a name="improve-garbage-collection-performance"></a><span data-ttu-id="680b0-105">Verbessern der Leistung bei der Garbage Collection</span><span class="sxs-lookup"><span data-stu-id="680b0-105">Improve garbage collection performance</span></span>
 
