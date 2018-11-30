@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows10, UWP, erweitern, aufschlüsseln, App-Dienst, Paket, Erweiterung
 ms.localizationpriority: medium
 ms.openlocfilehash: 110fa8ec9feba1f54155d41b4c726ffb28f71630
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "7987794"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8213675"
 ---
 # <a name="extend-your-app-with-services-extensions-and-packages"></a><span data-ttu-id="fcc8d-104">Bauen Sie Ihre App mit Diensten, Erweiterungen und Paketen aus</span><span class="sxs-lookup"><span data-stu-id="fcc8d-104">Extend your app with services, extensions, and packages</span></span>
 

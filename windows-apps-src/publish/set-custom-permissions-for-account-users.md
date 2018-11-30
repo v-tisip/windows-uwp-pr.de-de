@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Benutzerrollen, Benutzerberechtigung, benutzerdefinierte Rollen, Zugriff für Benutzer, Berechtigungen anpassen, Standardrollen
 ms.localizationpriority: medium
 ms.openlocfilehash: 5a76dd85343ddf81baceb4946515c869083b839e
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "7992345"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8212079"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a><span data-ttu-id="d0917-103">Legen Sie Rollen oder benutzerdefinierte Berechtigungen für Kontenbenutzer fest</span><span class="sxs-lookup"><span data-stu-id="d0917-103">Set roles or custom permissions for account users</span></span>
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Spiele, Eingabe
 ms.localizationpriority: medium
 ms.openlocfilehash: 73e0ba3e563b57c2e392809097567b7e6739c90d
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7971474"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8210709"
 ---
 # <a name="input-practices-for-games"></a><span data-ttu-id="d85ee-104">Eingabemethoden für Spiele</span><span class="sxs-lookup"><span data-stu-id="d85ee-104">Input practices for games</span></span>
 

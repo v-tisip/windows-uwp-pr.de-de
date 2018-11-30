@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 07f5c6ef180cb4abe90a705e73be8d99ecbd2ca7
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7966837"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8204645"
 ---
 # <a name="bitmapencoder-options-reference"></a><span data-ttu-id="a76b4-104">Referenz zu BitmapEncoder-Optionen</span><span class="sxs-lookup"><span data-stu-id="a76b4-104">BitmapEncoder options reference</span></span>
 

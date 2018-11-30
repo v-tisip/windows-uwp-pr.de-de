@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, Uwp, Aufnahme, Video
 ms.localizationpriority: medium
 ms.openlocfilehash: a654739490043b9f821e7906fa8cf9e3e7259fed
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7855148"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8212873"
 ---
 # <a name="capture-from-multiple-sources-using-mediaframesourcegroup"></a><span data-ttu-id="b2635-104">Erfassen von mehreren Quellen mit MediaFrameSourceGroup</span><span class="sxs-lookup"><span data-stu-id="b2635-104">Capture from multiple sources using MediaFrameSourceGroup</span></span>
 

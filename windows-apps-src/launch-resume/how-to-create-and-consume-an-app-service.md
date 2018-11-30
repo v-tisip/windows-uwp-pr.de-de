@@ -7,11 +7,11 @@ ms.date: 09/18/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 34414d20a25e59a2569417c75ebfae90727d830d
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "7985153"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8204967"
 ---
 # <a name="create-and-consume-an-app-service"></a><span data-ttu-id="9f54b-104">Erstellen und Verwenden eines App-Diensts</span><span class="sxs-lookup"><span data-stu-id="9f54b-104">Create and consume an app service</span></span>
 

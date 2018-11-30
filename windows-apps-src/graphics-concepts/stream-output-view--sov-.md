@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 5b0fbd684787062d9416b4e6e4ac90b82e07e186
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7827959"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8208307"
 ---
 # <a name="stream-output-view-sov"></a><span data-ttu-id="adc97-104">Streamausgabeansicht (SOV)</span><span class="sxs-lookup"><span data-stu-id="adc97-104">Stream output view (SOV)</span></span>
 

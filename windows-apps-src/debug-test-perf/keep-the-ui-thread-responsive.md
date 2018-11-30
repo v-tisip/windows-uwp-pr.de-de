@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 8cd5df1d22189698f6544af4ab72c09425531602
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7852261"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8214795"
 ---
 # <a name="keep-the-ui-thread-responsive"></a><span data-ttu-id="c3b39-104">Aufrechterhalten der Reaktionsfähigkeit des UI-Threads</span><span class="sxs-lookup"><span data-stu-id="c3b39-104">Keep the UI thread responsive</span></span>
 

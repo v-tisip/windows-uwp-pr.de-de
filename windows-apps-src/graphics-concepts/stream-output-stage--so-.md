@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 12a0c59942eefd2ab9625b1b442043a1868230a1
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7964449"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8214702"
 ---
 # <a name="stream-output-so-stage"></a><span data-ttu-id="7a9fb-105">Streamausgabephase (SO)</span><span class="sxs-lookup"><span data-stu-id="7a9fb-105">Stream Output (SO) stage</span></span>
 

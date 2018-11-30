@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 33e850ba16be7a8d2621f061015d39c8b334cab2
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7839595"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8216524"
 ---
 # <a name="constant-buffer-view-cbv"></a><span data-ttu-id="8df56-105">Konstantenpufferansicht (CBV)</span><span class="sxs-lookup"><span data-stu-id="8df56-105">Constant buffer view (CBV)</span></span>
 

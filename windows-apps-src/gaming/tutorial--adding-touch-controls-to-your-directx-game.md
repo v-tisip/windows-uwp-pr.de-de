@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Touch, Steuerelemente, Directx, Eingabe
 ms.localizationpriority: medium
 ms.openlocfilehash: e8892219b485d320bb77f90ac0d172e8e2403392
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7975359"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8210180"
 ---
 # <a name="touch-controls-for-games"></a><span data-ttu-id="ff2fb-104">Toucheingabesteuerelemente für Spiele</span><span class="sxs-lookup"><span data-stu-id="ff2fb-104">Touch controls for games</span></span>
 

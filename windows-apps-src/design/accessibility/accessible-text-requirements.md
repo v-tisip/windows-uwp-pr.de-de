@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: bdfcdc0782515928740a9c01b409b5170540cb27
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7993576"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8214354"
 ---
 # <a name="accessible-text-requirements"></a><span data-ttu-id="66290-103">Anforderungen für barrierefreien Text</span><span class="sxs-lookup"><span data-stu-id="66290-103">Accessible text requirements</span></span>  
 

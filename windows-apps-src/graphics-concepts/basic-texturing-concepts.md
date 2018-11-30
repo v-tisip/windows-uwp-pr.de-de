@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 2124c9e620694f62414c865e6d3247cd25ce70d0
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7834131"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8217344"
 ---
 # <a name="basic-texturing-concepts"></a><span data-ttu-id="ca608-104">Grundlegende Texturkonzepte</span><span class="sxs-lookup"><span data-stu-id="ca608-104">Basic texturing concepts</span></span>
 
