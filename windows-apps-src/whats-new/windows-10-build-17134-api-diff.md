@@ -6,11 +6,11 @@ ms.date: 4/10/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: ed4682b6deac68d74d40576d0eb9cbafc6bfdd1d
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8217523"
+ms.locfileid: "8326850"
 ---
 # <a name="new-apis-in-windows-10-build-17134"></a><span data-ttu-id="c99cd-104">Neue APIs in Windows10, Build 17134</span><span class="sxs-lookup"><span data-stu-id="c99cd-104">New APIs in Windows 10 build 17134</span></span>
 

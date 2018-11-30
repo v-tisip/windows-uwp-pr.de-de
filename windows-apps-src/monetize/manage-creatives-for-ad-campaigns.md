@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store Werbungs-API, Anzeigenkampagnen
 ms.localizationpriority: medium
 ms.openlocfilehash: 41c11ee9c5decffff57a2d443e1385398ce40d89
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7968579"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8329100"
 ---
 # <a name="manage-creatives"></a><span data-ttu-id="d76ab-104">Verwalten von Werbemitteln</span><span class="sxs-lookup"><span data-stu-id="d76ab-104">Manage creatives</span></span>
 
