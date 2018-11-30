@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: 9b14e413a5629dfb5447750e32c42c4efafef8fa
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7981949"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8211058"
 ---
 # <a name="scenario-1-generate-a-pri-file-from-string-resources-and-asset-files"></a>Szenario 1: Generieren einer PRI-Datei aus Zeichenfolgenressourcen und Ressourcendateien
 In diesem Szenario verwenden wir die [APIs zur Paketressourcenindizierung (PRI)](https://msdn.microsoft.com/library/windows/desktop/mt845690), um eine neue App zur Darstellung unseres benutzerdefinierten Buildsystems zu erstellen. Denken Sie daran: Der Zweck dieses benutzerdefinierten Buildsystems besteht darin, PRI-Dateien für eine Ziel-UWP-App zu erstellen. Im Rahmen dieser exemplarischen Vorgehensweise erstellen wir also einige Beispielressourcendateien (mit Zeichenfolgen und anderen Arten von Ressourcen), um die Ressourcen dieser Ziel-UWP-App abzubilden.
