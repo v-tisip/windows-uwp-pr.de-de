@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Analysen, Berichte, Dashboard, apps, Daten, Metriken
 ms.localizationpriority: medium
 ms.openlocfilehash: f6a6d79745ec98af2c7f562297092eea3feda659
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7964569"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8211154"
 ---
 # <a name="analyze-app-performance"></a><span data-ttu-id="8a207-103">Analysieren der App-Leistung</span><span class="sxs-lookup"><span data-stu-id="8a207-103">Analyze app performance</span></span>
 

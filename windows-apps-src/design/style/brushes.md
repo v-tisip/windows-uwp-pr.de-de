@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e46ef0e459ede5fd1185d78186968735d886e63
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7826426"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8217747"
 ---
 # <a name="using-brushes-to-paint-backgrounds-foregrounds-and-outlines"></a><span data-ttu-id="ee405-104">Verwenden von Pinseln zum Zeichnen von Vor- und Hintergründen und Skizzen</span><span class="sxs-lookup"><span data-stu-id="ee405-104">Using brushes to paint backgrounds, foregrounds, and outlines</span></span>
 

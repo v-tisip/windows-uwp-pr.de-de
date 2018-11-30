@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 82cb45dae1a4b9b1a9db8fabc044edf8157f1eb1
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7977507"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8217628"
 ---
 # <a name="getting-started-getting-around-in-visual-studio"></a><span data-ttu-id="16ca1-104">Erste Schritte: Aufbau von Visual Studio</span><span class="sxs-lookup"><span data-stu-id="16ca1-104">Getting started: Getting around in Visual Studio</span></span>
 

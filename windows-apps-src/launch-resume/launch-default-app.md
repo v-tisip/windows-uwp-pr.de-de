@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 143aa8310cdfe9dd5f0be29bf07f03c23293a647
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "7992172"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8216041"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a><span data-ttu-id="67a8c-106">Starten der Standard-App für einen URI</span><span class="sxs-lookup"><span data-stu-id="67a8c-106">Launch the default app for a URI</span></span>
 
