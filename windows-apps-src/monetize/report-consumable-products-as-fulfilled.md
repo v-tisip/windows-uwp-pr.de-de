@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Sammlungs-API, erfüllen, Verbrauchsprodukt
 ms.localizationpriority: medium
 ms.openlocfilehash: e3271dd26a4e7eaa23d63efa3b75cf321480528d
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7978393"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8207913"
 ---
 # <a name="report-consumable-products-as-fulfilled"></a>Verbrauchsprodukte als erfüllt melden
 
