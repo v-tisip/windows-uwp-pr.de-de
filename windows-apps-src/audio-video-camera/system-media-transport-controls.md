@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6be1680d1ce843c1fbe7105dc2027e764095495a
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7966605"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8330025"
 ---
 # <a name="manual-control-of-the-system-media-transport-controls"></a><span data-ttu-id="91223-104">Manuelle Steuerung der Steuerelemente für den Systemmedientransport</span><span class="sxs-lookup"><span data-stu-id="91223-104">Manual control of the System Media Transport Controls</span></span>
 

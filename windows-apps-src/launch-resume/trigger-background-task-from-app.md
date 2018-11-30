@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Trigger Hintergrundaufgabe, Hintergrundaufgabe
 ms.localizationpriority: medium
 ms.openlocfilehash: 237f342029f8d9bc0bbec1fcef5c7059cbf09840
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7838833"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8330344"
 ---
 # <a name="trigger-a-background-task-from-within-your-app"></a><span data-ttu-id="67013-104">Auslösen einer Hintergrundaufgabe in Ihrer App</span><span class="sxs-lookup"><span data-stu-id="67013-104">Trigger a background task from within your app</span></span>
 

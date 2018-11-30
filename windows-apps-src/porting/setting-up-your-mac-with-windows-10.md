@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 61918f8f81137dad4db9bf627b7c87e0c05ace8d
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7966969"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8330646"
 ---
 # <a name="setting-up-your-mac-with-windows-10"></a><span data-ttu-id="7e046-104">Einrichten von Windows 10 auf Ihrem Mac</span><span class="sxs-lookup"><span data-stu-id="7e046-104">Setting up your Mac with Windows 10</span></span>
 

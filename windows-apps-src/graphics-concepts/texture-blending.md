@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c40c7d3bd080bd927fc52cb7f740e1dc4a6358c0
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "7987894"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8352104"
 ---
 # <a name="texture-blending"></a><span data-ttu-id="f0a8e-104">Texturmischung</span><span class="sxs-lookup"><span data-stu-id="f0a8e-104">Texture blending</span></span>
 

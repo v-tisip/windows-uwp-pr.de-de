@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b6ab15d94267baa0606cfbcff10eae471ce3dad5
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7970829"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8352344"
 ---
 # <a name="render-target-view-rtv"></a><span data-ttu-id="95dc6-104">Renderzielansicht (RTV)</span><span class="sxs-lookup"><span data-stu-id="95dc6-104">Render target view (RTV)</span></span>
 

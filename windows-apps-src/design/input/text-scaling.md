@@ -9,11 +9,11 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: f81c435690c7bf17066be5f49de4994f146fc5c9
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7993586"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8329811"
 ---
 # <a name="text-scaling"></a><span data-ttu-id="4fd12-103">Textskalierung</span><span class="sxs-lookup"><span data-stu-id="4fd12-103">Text scaling</span></span>
 

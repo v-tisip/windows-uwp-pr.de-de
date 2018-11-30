@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 82a528b3ec98f56e1079e11ec1123d86de15d50f
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8189960"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8327303"
 ---
 # <a name="responsive-layouts-with-xaml"></a><span data-ttu-id="f03f4-103">Dynamische Layouts mit XAML</span><span class="sxs-lookup"><span data-stu-id="f03f4-103">Responsive layouts with XAML</span></span>
 
