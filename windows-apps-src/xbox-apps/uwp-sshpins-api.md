@@ -3,11 +3,11 @@ title: Geräteportal-SSH-PINs– API-Referenz
 description: Hier erfahren Sie, wie alle vertrauenswürdigen SSH-PINs programmgesteuert entfernt werden.
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ddf15d3cdb4089a8ef010a4ae46d247a06a10d7
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/29/2018
-ms.locfileid: "7991243"
+ms.locfileid: "8201271"
 ---
 # <a name="ssh-pins-api-reference"></a>SSH-PINs– API-Referenz
 Sie können alle vertrauenswürdigen SSH-PINs in Ihrem Entwickler-Kit mit dieser REST-API entfernen.

@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 92899333f0bc787fc6538e0bb22c148ac9f5c56f
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7980745"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8203046"
 ---
 # <a name="thumbnail-images"></a>Miniaturbilder
 

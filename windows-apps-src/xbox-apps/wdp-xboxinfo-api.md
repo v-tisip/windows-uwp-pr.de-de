@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Xbox-geräteportal
 ms.localizationpriority: medium
 ms.openlocfilehash: d7901890e1cc8fab24742e8785562d13d2fe182a
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7970365"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8206712"
 ---
 # <a name="xbox-info-api-reference"></a>Xbox-Info-API-Referenz   
 Sie können die Xbox One Geräteinformationen mithilfe dieser API zugreifen.
