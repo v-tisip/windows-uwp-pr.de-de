@@ -12,31 +12,31 @@ doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 5b9a0719e4967f9d527d2b2565818a0dea1be0a6
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8190434"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8345174"
 ---
-# <a name="timing-and-easing"></a><span data-ttu-id="1446d-103">Timing und Geschwindigkeitsverlauf</span><span class="sxs-lookup"><span data-stu-id="1446d-103">Timing and easing</span></span>
+# <a name="timing-and-easing"></a><span data-ttu-id="2d9bc-103">Timing und Geschwindigkeitsverlauf</span><span class="sxs-lookup"><span data-stu-id="2d9bc-103">Timing and easing</span></span>
 
-<span data-ttu-id="1446d-104">Bewegung basiert zwar auf der realen Welt, aber auch in einem digitalen Medium werden Geschwindigkeit und Leistung erwartet.</span><span class="sxs-lookup"><span data-stu-id="1446d-104">While motion is based in the real world, we are also a digital medium, which comes with an expectation of speed and performance.</span></span> 
+<span data-ttu-id="2d9bc-104">Bewegung basiert zwar auf der realen Welt, aber auch in einem digitalen Medium werden Geschwindigkeit und Leistung erwartet.</span><span class="sxs-lookup"><span data-stu-id="2d9bc-104">While motion is based in the real world, we are also a digital medium, which comes with an expectation of speed and performance.</span></span> 
 
-## <a name="how-fluent-motion-uses-time"></a><span data-ttu-id="1446d-105">Fluent-Bewegungen und Timing</span><span class="sxs-lookup"><span data-stu-id="1446d-105">How Fluent motion uses time</span></span>
+## <a name="how-fluent-motion-uses-time"></a><span data-ttu-id="2d9bc-105">Fluent-Bewegungen und Timing</span><span class="sxs-lookup"><span data-stu-id="2d9bc-105">How Fluent motion uses time</span></span>
 
-<span data-ttu-id="1446d-106">Timing ist ein wichtiges Element, um die Bewegung von Objekten natürlich erscheinen zu lassen, die in die Benutzeroberfläche eintreten, sie verlassen oder sich darin bewegen.</span><span class="sxs-lookup"><span data-stu-id="1446d-106">Timing is an important element to making motion feel natural for objects entering, exiting, or moving within the UI.</span></span>
+<span data-ttu-id="2d9bc-106">Timing ist ein wichtiges Element, um die Bewegung von Objekten natürlich erscheinen zu lassen, die in die Benutzeroberfläche eintreten, sie verlassen oder sich darin bewegen.</span><span class="sxs-lookup"><span data-stu-id="2d9bc-106">Timing is an important element to making motion feel natural for objects entering, exiting, or moving within the UI.</span></span>
 
-1. <span data-ttu-id="1446d-107">Objekte oder Szenen, die in das Sichtfeld eintreten, sind schnell und auffällig.</span><span class="sxs-lookup"><span data-stu-id="1446d-107">Objects or scenes entering the view are quick, but celebrated.</span></span> <span data-ttu-id="1446d-108">Die Animationen für diese Elemente dauern in der Regel längere als die für austretende Elemente, um den hierarchischen Aufbau einer Szene zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="1446d-108">These animations are typically longer in duration than exits to allow for hierarchical build-up of a scene.</span></span>
-1. <span data-ttu-id="1446d-109">Objekte oder Szenen, die das Sichtfeld verlassen, sind sehr schnell.</span><span class="sxs-lookup"><span data-stu-id="1446d-109">Objects or scenes exiting the view are very quick.</span></span> <span data-ttu-id="1446d-110">Der Benutzer sollte nachvollziehen können, wo die UI verbleibt.</span><span class="sxs-lookup"><span data-stu-id="1446d-110">The user should be able to understand where the UI went.</span></span> <span data-ttu-id="1446d-111">Nachdem die UI jedoch geschlossen wurde, sollte sie aus dem Weg gehen.</span><span class="sxs-lookup"><span data-stu-id="1446d-111">However, once the UI is dismissed, it should get out of the way.</span></span>
-1. <span data-ttu-id="1446d-112">Objekte, die sich durch eine Szene bewegen, sollten dafür eine Dauer benötigen, die der zurückzulegenden Entfernung entspricht.</span><span class="sxs-lookup"><span data-stu-id="1446d-112">Objects translating across a scene should have a duration appropriate to the amount of distance they travel.</span></span>
+1. <span data-ttu-id="2d9bc-107">Objekte oder Szenen, die in das Sichtfeld eintreten, sind schnell und auffällig.</span><span class="sxs-lookup"><span data-stu-id="2d9bc-107">Objects or scenes entering the view are quick, but celebrated.</span></span> <span data-ttu-id="2d9bc-108">Die Animationen für diese Elemente dauern in der Regel längere als die für austretende Elemente, um den hierarchischen Aufbau einer Szene zu ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="2d9bc-108">These animations are typically longer in duration than exits to allow for hierarchical build-up of a scene.</span></span>
+1. <span data-ttu-id="2d9bc-109">Objekte oder Szenen, die das Sichtfeld verlassen, sind sehr schnell.</span><span class="sxs-lookup"><span data-stu-id="2d9bc-109">Objects or scenes exiting the view are very quick.</span></span> <span data-ttu-id="2d9bc-110">Der Benutzer sollte nachvollziehen können, wo die UI verbleibt.</span><span class="sxs-lookup"><span data-stu-id="2d9bc-110">The user should be able to understand where the UI went.</span></span> <span data-ttu-id="2d9bc-111">Nachdem die UI jedoch geschlossen wurde, sollte sie aus dem Weg gehen.</span><span class="sxs-lookup"><span data-stu-id="2d9bc-111">However, once the UI is dismissed, it should get out of the way.</span></span>
+1. <span data-ttu-id="2d9bc-112">Objekte, die sich durch eine Szene bewegen, sollten dafür eine Dauer benötigen, die der zurückzulegenden Entfernung entspricht.</span><span class="sxs-lookup"><span data-stu-id="2d9bc-112">Objects translating across a scene should have a duration appropriate to the amount of distance they travel.</span></span>
 
-## <a name="timing-in-fluent-motion"></a><span data-ttu-id="1446d-113">Timing für Fluent-Bewegungen</span><span class="sxs-lookup"><span data-stu-id="1446d-113">Timing in Fluent motion</span></span>
+## <a name="timing-in-fluent-motion"></a><span data-ttu-id="2d9bc-113">Timing für Fluent-Bewegungen</span><span class="sxs-lookup"><span data-stu-id="2d9bc-113">Timing in Fluent motion</span></span>
 
-<span data-ttu-id="1446d-114">Für das Timing von Fluent-Bewegungen gelten 500 ms (eine halbe Sekunde) als Grundeinheit, da dies die maximale Zeit ist, die ein Benutzer als unmittelbar empfindet.</span><span class="sxs-lookup"><span data-stu-id="1446d-114">The timing of motion in Fluent uses 500ms (or one-half second) as a baseline because this is the maximum amount of time that a user perceives as instant.</span></span>
+<span data-ttu-id="2d9bc-114">Für das Timing von Fluent-Bewegungen gelten 500 ms (eine halbe Sekunde) als Grundeinheit, da dies die maximale Zeit ist, die ein Benutzer als unmittelbar empfindet.</span><span class="sxs-lookup"><span data-stu-id="2d9bc-114">The timing of motion in Fluent uses 500ms (or one-half second) as a baseline because this is the maximum amount of time that a user perceives as instant.</span></span>
 
 ![Favoritenbild](images/time.gif)
 
-### <a name="150ms-exit"></a><span data-ttu-id="1446d-116">**150 ms** (Verlassen)</span><span class="sxs-lookup"><span data-stu-id="1446d-116">**150ms** (Exit)</span></span>
+### <a name="150ms-exit"></a><span data-ttu-id="2d9bc-116">**150 ms** (Verlassen)</span><span class="sxs-lookup"><span data-stu-id="2d9bc-116">**150ms** (Exit)</span></span>
 
 :::row:::
     :::column:::
@@ -48,7 +48,7 @@ ms.locfileid: "8190434"
     :::column-end:::
 :::row-end:::
 
-### <a name="300ms-enter"></a><span data-ttu-id="1446d-117">**300 ms** (Eintreten)</span><span class="sxs-lookup"><span data-stu-id="1446d-117">**300ms** (Enter)</span></span>
+### <a name="300ms-enter"></a><span data-ttu-id="2d9bc-117">**300 ms** (Eintreten)</span><span class="sxs-lookup"><span data-stu-id="2d9bc-117">**300ms** (Enter)</span></span>
 
 :::row:::
     :::column:::
@@ -60,7 +60,7 @@ ms.locfileid: "8190434"
     :::column-end:::
 :::row-end:::
 
-### <a name="500ms-move"></a><span data-ttu-id="1446d-118">**≤ 500 ms** (Durchqueren)</span><span class="sxs-lookup"><span data-stu-id="1446d-118">**≤500ms** (Move)</span></span>
+### <a name="500ms-move"></a><span data-ttu-id="2d9bc-118">**≤ 500 ms** (Durchqueren)</span><span class="sxs-lookup"><span data-stu-id="2d9bc-118">**≤500ms** (Move)</span></span>
 
 :::row:::
     :::column:::
@@ -71,19 +71,19 @@ ms.locfileid: "8190434"
     :::column-end:::
 :::row-end:::
 
-## <a name="easing-in-fluent-motion"></a><span data-ttu-id="1446d-119">Geschwindigkeitsverlauf in Fluent-Bewegungen</span><span class="sxs-lookup"><span data-stu-id="1446d-119">Easing in Fluent motion</span></span>
+## <a name="easing-in-fluent-motion"></a><span data-ttu-id="2d9bc-119">Geschwindigkeitsverlauf in Fluent-Bewegungen</span><span class="sxs-lookup"><span data-stu-id="2d9bc-119">Easing in Fluent motion</span></span>
 
-<span data-ttu-id="1446d-120">Die Änderung des Geschwindigkeitsverlaufs ist eine Möglichkeit, die Bewegungsdauer eines Objekts anzupassen.</span><span class="sxs-lookup"><span data-stu-id="1446d-120">Easing is a way to manipulate the velocity of an object as it travels.</span></span> <span data-ttu-id="1446d-121">Der Geschwindigkeitsverlauf ist der Leim, der alle Fluent-Bewegungserfahrungen verbindet.</span><span class="sxs-lookup"><span data-stu-id="1446d-121">It's the glue that ties together all the Fluent motion experiences.</span></span> <span data-ttu-id="1446d-122">Die Verwendung eines Geschwindigkeitsverlaufs kann die Anmutung von Objekten vereinheitlichen, die sich durch das System bewegen.</span><span class="sxs-lookup"><span data-stu-id="1446d-122">While extreme, the easing used in the system helps unify the physical feel of objects moving throughout the system.</span></span> <span data-ttu-id="1446d-123">Dies ist eine Möglichkeit zum Simulieren der realen Welt und lässt bewegte Objekte in ihrer Umgebung natürlich aussehen.</span><span class="sxs-lookup"><span data-stu-id="1446d-123">This is one way to mimic the real world, and make objects in motion feel like they belong in their environment.</span></span>
+<span data-ttu-id="2d9bc-120">Die Änderung des Geschwindigkeitsverlaufs ist eine Möglichkeit, die Bewegungsdauer eines Objekts anzupassen.</span><span class="sxs-lookup"><span data-stu-id="2d9bc-120">Easing is a way to manipulate the velocity of an object as it travels.</span></span> <span data-ttu-id="2d9bc-121">Der Geschwindigkeitsverlauf ist der Leim, der alle Fluent-Bewegungserfahrungen verbindet.</span><span class="sxs-lookup"><span data-stu-id="2d9bc-121">It's the glue that ties together all the Fluent motion experiences.</span></span> <span data-ttu-id="2d9bc-122">Die Verwendung eines Geschwindigkeitsverlaufs kann die Anmutung von Objekten vereinheitlichen, die sich durch das System bewegen.</span><span class="sxs-lookup"><span data-stu-id="2d9bc-122">While extreme, the easing used in the system helps unify the physical feel of objects moving throughout the system.</span></span> <span data-ttu-id="2d9bc-123">Dies ist eine Möglichkeit zum Simulieren der realen Welt und lässt bewegte Objekte in ihrer Umgebung natürlich aussehen.</span><span class="sxs-lookup"><span data-stu-id="2d9bc-123">This is one way to mimic the real world, and make objects in motion feel like they belong in their environment.</span></span>
 
 ![Favoritenbild](images/easing.gif)
 
-## <a name="apply-easing-to-motion"></a><span data-ttu-id="1446d-125">Anwenden eines Geschwindigkeitsverlaufs auf Bewegungen</span><span class="sxs-lookup"><span data-stu-id="1446d-125">Apply easing to motion</span></span>
+## <a name="apply-easing-to-motion"></a><span data-ttu-id="2d9bc-125">Anwenden eines Geschwindigkeitsverlaufs auf Bewegungen</span><span class="sxs-lookup"><span data-stu-id="2d9bc-125">Apply easing to motion</span></span>
 
-<span data-ttu-id="1446d-126">Die folgenden Geschwindigkeitsverläufe vermitteln ein natürliches Verhalten und sind die Grundwerte, die wird für Fluent-Bewegungen verwenden.</span><span class="sxs-lookup"><span data-stu-id="1446d-126">These easings will help you achieve a more natural feel, and are the baseline we use for Fluent motion.</span></span>
+<span data-ttu-id="2d9bc-126">Die folgenden Geschwindigkeitsverläufe vermitteln ein natürliches Verhalten und sind die Grundwerte, die wird für Fluent-Bewegungen verwenden.</span><span class="sxs-lookup"><span data-stu-id="2d9bc-126">These easings will help you achieve a more natural feel, and are the baseline we use for Fluent motion.</span></span>
 
-<span data-ttu-id="1446d-127">Die Codebeispiele zeigen, wie die empfohlene Werte auf Storyboardanimationen (XAML) oder Kompositionsanimationen (C#) angewendet werden.</span><span class="sxs-lookup"><span data-stu-id="1446d-127">The code examples show how to apply recommended easing values to Storyboard animations (XAML) or Composition animations (C#).</span></span>
+<span data-ttu-id="2d9bc-127">Die Codebeispiele zeigen, wie die empfohlene Werte auf Storyboardanimationen (XAML) oder Kompositionsanimationen (C#) angewendet werden.</span><span class="sxs-lookup"><span data-stu-id="2d9bc-127">The code examples show how to apply recommended easing values to Storyboard animations (XAML) or Composition animations (C#).</span></span>
 
-### <a name="accelerate-exit"></a><span data-ttu-id="1446d-128">**Beschleunigen** (Verlassen)</span><span class="sxs-lookup"><span data-stu-id="1446d-128">**Accelerate** (Exit)</span></span>
+### <a name="accelerate-exit"></a><span data-ttu-id="2d9bc-128">**Beschleunigen** (Verlassen)</span><span class="sxs-lookup"><span data-stu-id="2d9bc-128">**Accelerate** (Exit)</span></span>
 
 :::row:::
     :::column:::
@@ -122,7 +122,7 @@ _exitAnimation.InsertKeyFrame(1.0f, _endValue, accelerate);
 _exitAnimation.Duration = TimeSpan.FromMilliseconds(150);
 ```
 
-### <a name="decelerate-enter"></a><span data-ttu-id="1446d-129">**Verlangsamen** (Eintreten)</span><span class="sxs-lookup"><span data-stu-id="1446d-129">**Decelerate** (Enter)</span></span>
+### <a name="decelerate-enter"></a><span data-ttu-id="2d9bc-129">**Verlangsamen** (Eintreten)</span><span class="sxs-lookup"><span data-stu-id="2d9bc-129">**Decelerate** (Enter)</span></span>
 
 :::row:::
     :::column:::
@@ -163,7 +163,7 @@ _enterAnimation.InsertKeyFrame(1.0f, _endValue, decelerate);
 _enterAnimation.Duration = TimeSpan.FromMilliseconds(300);
 ```
 
-### <a name="standard-easing-move"></a><span data-ttu-id="1446d-130">**Standard** (Durchqueren)</span><span class="sxs-lookup"><span data-stu-id="1446d-130">**Standard Easing** (Move)</span></span>
+### <a name="standard-easing-move"></a><span data-ttu-id="2d9bc-130">**Standard** (Durchqueren)</span><span class="sxs-lookup"><span data-stu-id="2d9bc-130">**Standard Easing** (Move)</span></span>
 
 :::row:::
     :::column:::
@@ -202,7 +202,7 @@ CubicBezierEasingFunction standard =
  _moveAnimation.Duration = TimeSpan.FromMilliseconds(500);
 ```
 
-## <a name="related-articles"></a><span data-ttu-id="1446d-131">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="1446d-131">Related articles</span></span>
+## <a name="related-articles"></a><span data-ttu-id="2d9bc-131">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="2d9bc-131">Related articles</span></span>
 
-- [<span data-ttu-id="1446d-132">Übersicht über Bewegungen</span><span class="sxs-lookup"><span data-stu-id="1446d-132">Motion overview</span></span>](index.md)
-- [<span data-ttu-id="1446d-133">Direktionalität und Schwerkraft</span><span class="sxs-lookup"><span data-stu-id="1446d-133">Directionality and gravity</span></span>](directionality-and-gravity.md)
+- [<span data-ttu-id="2d9bc-132">Übersicht über Bewegungen</span><span class="sxs-lookup"><span data-stu-id="2d9bc-132">Motion overview</span></span>](index.md)
+- [<span data-ttu-id="2d9bc-133">Direktionalität und Schwerkraft</span><span class="sxs-lookup"><span data-stu-id="2d9bc-133">Directionality and gravity</span></span>](directionality-and-gravity.md)

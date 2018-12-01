@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 3d4364bf9973b69587ae042a809d026b553ee2ea
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7969263"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8338144"
 ---
 # <a name="copying-and-accessing-resource-data"></a><span data-ttu-id="5b27e-105">Kopieren und Zugreifen auf Ressourcendaten</span><span class="sxs-lookup"><span data-stu-id="5b27e-105">Copying and accessing resource data</span></span>
 

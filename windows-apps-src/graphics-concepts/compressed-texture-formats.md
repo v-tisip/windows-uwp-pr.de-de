@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 3171eba376911157a6ad2687fe3879df751615ac
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8215517"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8337286"
 ---
 # <a name="compressed-texture-formats"></a><span data-ttu-id="906be-104">Komprimierte Texturformate</span><span class="sxs-lookup"><span data-stu-id="906be-104">Compressed texture formats</span></span>
 

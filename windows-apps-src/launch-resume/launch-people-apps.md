@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 46a297c3a611882724b18242d1c6272c3345ffc2
-ms.sourcegitcommit: b11f305dbf7649c4b68550b666487c77ea30d98f
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "7846317"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8348134"
 ---
 # <a name="launch-the-people-app"></a><span data-ttu-id="2b3b8-105">Starten der Kontakte-App</span><span class="sxs-lookup"><span data-stu-id="2b3b8-105">Launch the People app</span></span>
 

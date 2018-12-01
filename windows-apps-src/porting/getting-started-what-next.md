@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ab12f79670428fa2b6affa91240787f75bc51bc2
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8198472"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8338477"
 ---
 # <a name="getting-started-what-next"></a><span data-ttu-id="248a7-104">Erste Schritte – Was kommt als Nächstes?</span><span class="sxs-lookup"><span data-stu-id="248a7-104">Getting started: What next?</span></span>
 

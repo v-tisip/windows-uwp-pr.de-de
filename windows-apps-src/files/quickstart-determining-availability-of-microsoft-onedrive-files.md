@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e431694f3f0effb6fd5e7688b146109dfc1f5dc7
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8216682"
+ms.locfileid: "8339276"
 ---
 # <a name="determining-availability-of-microsoft-onedrive-files"></a><span data-ttu-id="60299-104">Ermitteln der Verfügbarkeit von MicrosoftOneDrive-Dateien</span><span class="sxs-lookup"><span data-stu-id="60299-104">Determining availability of Microsoft OneDrive files</span></span>
 
