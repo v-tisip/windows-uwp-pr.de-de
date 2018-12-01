@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b177a7741cae0fe786d095c26a6be08ec598bcbb
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "7987062"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8342098"
 ---
 # <a name="walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript"></a><span data-ttu-id="7f57a-104">Exemplarische Vorgehensweise: Erstellen einer einfachen Komponente für Windows-Runtime und Aufrufen der Komponente über JavaScript</span><span class="sxs-lookup"><span data-stu-id="7f57a-104">Walkthrough: Creating a Simple Windows Runtime component and calling it from JavaScript</span></span>
 

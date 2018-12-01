@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Portieren von Windows10, UWP, Directx
 ms.localizationpriority: medium
 ms.openlocfilehash: abbcd688df01b779a1cb3ab9e30bd13709926be4
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7975482"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8343271"
 ---
 # <a name="plan-your-directx-port"></a><span data-ttu-id="52a17-104">Planen der DirectX-Portierung</span><span class="sxs-lookup"><span data-stu-id="52a17-104">Plan your DirectX port</span></span>
 

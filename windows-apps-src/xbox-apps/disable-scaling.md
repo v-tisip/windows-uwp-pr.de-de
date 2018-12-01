@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: 6e68c1fc-a407-4c0b-b0f4-e445ccb72ff3
 ms.localizationpriority: medium
 ms.openlocfilehash: 44688ff40792ba2ee72cbd1d96bae1ac59834efa
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7969791"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8343496"
 ---
 # <a name="how-to-turn-off-scaling"></a><span data-ttu-id="01857-104">So deaktivieren Sie die Skalierung</span><span class="sxs-lookup"><span data-stu-id="01857-104">How to turn off scaling</span></span>   
 <span data-ttu-id="01857-105">Standardmäßig werden Anwendungen für XAML-Apps auf 200Prozent und für HTML-Apps auf 150Prozent skaliert.</span><span class="sxs-lookup"><span data-stu-id="01857-105">By default, applications are scaled to 200% for XAML and 150% for HTML apps.</span></span> <span data-ttu-id="01857-106">Der Standardskalierungsfaktor kann deaktiviert werden.</span><span class="sxs-lookup"><span data-stu-id="01857-106">It is possible to turn off the default scale factor.</span></span> <span data-ttu-id="01857-107">Infolgedessen verwendet die Anwendung die tatsächlichen Pixelabmessungen des Geräts (1910 x 1080Pixel).</span><span class="sxs-lookup"><span data-stu-id="01857-107">This will cause your application to use the actual pixel dimensions of the device (1910 x 1080 pixels).</span></span>   

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b324cbca6d5e36193c057a6d1473ff1aad7be095
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7970695"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8334813"
 ---
 # <a name="playready-encrypted-media-extension"></a><span data-ttu-id="39884-104">Verschlüsselte Medienerweiterung von PlayReady</span><span class="sxs-lookup"><span data-stu-id="39884-104">PlayReady Encrypted Media Extension</span></span>
 

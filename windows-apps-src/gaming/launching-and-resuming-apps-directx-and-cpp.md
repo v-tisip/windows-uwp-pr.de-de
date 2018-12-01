@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Spiele, DirectX, Starten, Reaktivieren
 ms.localizationpriority: medium
 ms.openlocfilehash: ac2f7e70d813ea3314d897eedb5e245d781ce412
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "7990473"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8343048"
 ---
 # <a name="launching-and-resuming-apps-directx-and-c"></a><span data-ttu-id="b492f-104">Starten und Reaktivieren von Apps (DirectX und C++)</span><span class="sxs-lookup"><span data-stu-id="b492f-104">Launching and resuming apps (DirectX and C++)</span></span>
 

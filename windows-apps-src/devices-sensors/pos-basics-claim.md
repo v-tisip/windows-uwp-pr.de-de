@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 7169848084b587793ba1537ea3d6ad78d31892d5
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8192930"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8340728"
 ---
 # <a name="point-of-service-device-claim-and-enable-model"></a><span data-ttu-id="a119c-104">POS-Gerät beanspruchen und aktivieren Sie Modell</span><span class="sxs-lookup"><span data-stu-id="a119c-104">Point of Service device claim and enable model</span></span>
 
