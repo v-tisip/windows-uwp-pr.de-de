@@ -9,11 +9,11 @@ ms.localizationpriority: medium
 ms.topic: article
 keywords: Windows 10 auf ARM, ARM, ARM64 win32-apps erstellen, Entwickeln von ARM64-Treibern
 ms.openlocfilehash: 83f2a0d03040a682e6965558174294fe27e21bfb
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8209764"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8340104"
 ---
 # <a name="windows-10-on-arm"></a>Windows10 auf ARM
 Windows 10 auf PCs mit ARM-Prozessoren ausgeführt wird. Diese Seite enthält die Informationen für Sie erfahren mehr über die Plattform und erste Schritte beim Entwickeln von apps. Wir empfehlen Ihnen, Ihr Feedback zu geben, über die Links am unteren Rand der Seite.
