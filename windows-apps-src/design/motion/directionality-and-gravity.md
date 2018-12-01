@@ -12,11 +12,11 @@ doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 4bb6f0ba60e89720a6daa37604cbe93696fb2bb7
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7975063"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8346024"
 ---
 # <a name="directionality-and-gravity"></a><span data-ttu-id="183ab-103">Direktionalität und Schwerkraft</span><span class="sxs-lookup"><span data-stu-id="183ab-103">Directionality and gravity</span></span>
 

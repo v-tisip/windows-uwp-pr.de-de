@@ -7,37 +7,37 @@ ms.topic: article
 keywords: Windows 10, Uwp, Hintergrundaufgabe, für die
 ms.localizationpriority: medium
 ms.openlocfilehash: 4527cface4681bf4866249c6398d43e6af782725
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7965846"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8337326"
 ---
-# <a name="declare-background-tasks-in-the-application-manifest"></a><span data-ttu-id="07ae7-104">Deklarieren von Hintergrundaufgaben im Anwendungsmanifest</span><span class="sxs-lookup"><span data-stu-id="07ae7-104">Declare background tasks in the application manifest</span></span>
+# <a name="declare-background-tasks-in-the-application-manifest"></a><span data-ttu-id="bb034-104">Deklarieren von Hintergrundaufgaben im Anwendungsmanifest</span><span class="sxs-lookup"><span data-stu-id="bb034-104">Declare background tasks in the application manifest</span></span>
 
 
 
 
-**<span data-ttu-id="07ae7-105">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="07ae7-105">Important APIs</span></span>**
+**<span data-ttu-id="bb034-105">Wichtige APIs</span><span class="sxs-lookup"><span data-stu-id="bb034-105">Important APIs</span></span>**
 
--   [**<span data-ttu-id="07ae7-106">BackgroundTasks-Schema</span><span class="sxs-lookup"><span data-stu-id="07ae7-106">BackgroundTasks Schema</span></span>**](https://msdn.microsoft.com/library/windows/apps/br224794)
--   [**<span data-ttu-id="07ae7-107">Windows.ApplicationModel.Background</span><span class="sxs-lookup"><span data-stu-id="07ae7-107">Windows.ApplicationModel.Background</span></span>**](https://msdn.microsoft.com/library/windows/apps/br224847)
+-   [**<span data-ttu-id="bb034-106">BackgroundTasks-Schema</span><span class="sxs-lookup"><span data-stu-id="bb034-106">BackgroundTasks Schema</span></span>**](https://msdn.microsoft.com/library/windows/apps/br224794)
+-   [**<span data-ttu-id="bb034-107">Windows.ApplicationModel.Background</span><span class="sxs-lookup"><span data-stu-id="bb034-107">Windows.ApplicationModel.Background</span></span>**](https://msdn.microsoft.com/library/windows/apps/br224847)
 
-<span data-ttu-id="07ae7-108">Sie können die Verwendung von Hintergrundaufgaben aktivieren, indem Sie diese im App-Manifest als Erweiterungen deklarieren.</span><span class="sxs-lookup"><span data-stu-id="07ae7-108">Enable the use of background tasks by declaring them as extensions in the app manifest.</span></span>
+<span data-ttu-id="bb034-108">Sie können die Verwendung von Hintergrundaufgaben aktivieren, indem Sie diese im App-Manifest als Erweiterungen deklarieren.</span><span class="sxs-lookup"><span data-stu-id="bb034-108">Enable the use of background tasks by declaring them as extensions in the app manifest.</span></span>
 
 > [!Important]
->  <span data-ttu-id="07ae7-109">Dieser Artikel befasst sich speziell mit Out-of-Process-Hintergrundaufgaben.</span><span class="sxs-lookup"><span data-stu-id="07ae7-109">This article is specific to out-of-process background tasks.</span></span> <span data-ttu-id="07ae7-110">In-Process-Hintergrundaufgaben werden nicht im Manifest deklariert.</span><span class="sxs-lookup"><span data-stu-id="07ae7-110">In-process background tasks are not declared in the manifest.</span></span>
+>  <span data-ttu-id="bb034-109">Dieser Artikel befasst sich speziell mit Out-of-Process-Hintergrundaufgaben.</span><span class="sxs-lookup"><span data-stu-id="bb034-109">This article is specific to out-of-process background tasks.</span></span> <span data-ttu-id="bb034-110">In-Process-Hintergrundaufgaben werden nicht im Manifest deklariert.</span><span class="sxs-lookup"><span data-stu-id="bb034-110">In-process background tasks are not declared in the manifest.</span></span>
 
-<span data-ttu-id="07ae7-111">Out-of-Process-Hintergrundaufgaben müssen im Anwendungsmanifest deklariert sein, da Ihre App diese ansonsten nicht registrieren kann (eine Ausnahme wird ausgelöst).</span><span class="sxs-lookup"><span data-stu-id="07ae7-111">Out-of-process background tasks must be declared in the app manifest or else your app will not be able to register them (an exception will be thrown).</span></span> <span data-ttu-id="07ae7-112">Zudem müssen Out-of-Process-Hintergrundaufgaben im Anwendungsmanifest deklariert werden, um zertifiziert werden zu können.</span><span class="sxs-lookup"><span data-stu-id="07ae7-112">Additionally, out-of-process background tasks must be declared in the application manifest to pass certification.</span></span>
+<span data-ttu-id="bb034-111">Out-of-Process-Hintergrundaufgaben müssen im Anwendungsmanifest deklariert sein, da Ihre App diese ansonsten nicht registrieren kann (eine Ausnahme wird ausgelöst).</span><span class="sxs-lookup"><span data-stu-id="bb034-111">Out-of-process background tasks must be declared in the app manifest or else your app will not be able to register them (an exception will be thrown).</span></span> <span data-ttu-id="bb034-112">Zudem müssen Out-of-Process-Hintergrundaufgaben im Anwendungsmanifest deklariert werden, um zertifiziert werden zu können.</span><span class="sxs-lookup"><span data-stu-id="bb034-112">Additionally, out-of-process background tasks must be declared in the application manifest to pass certification.</span></span>
 
-<span data-ttu-id="07ae7-113">In diesem Thema wird davon ausgegangen, dass Sie eine oder mehrere Hintergrundaufgabenklassen erstellt haben und dass Ihre App die Hintergrundaufgabe so registriert, dass sie als Reaktion auf mindestens einen Auslöser ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="07ae7-113">This topic assumes you have a created one or more background task classes, and that your app registers each background task to run in response to at least one trigger.</span></span>
+<span data-ttu-id="bb034-113">In diesem Thema wird davon ausgegangen, dass Sie eine oder mehrere Hintergrundaufgabenklassen erstellt haben und dass Ihre App die Hintergrundaufgabe so registriert, dass sie als Reaktion auf mindestens einen Auslöser ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="bb034-113">This topic assumes you have a created one or more background task classes, and that your app registers each background task to run in response to at least one trigger.</span></span>
 
-## <a name="add-extensions-manually"></a><span data-ttu-id="07ae7-114">Manuelles Hinzufügen von Erweiterungen</span><span class="sxs-lookup"><span data-stu-id="07ae7-114">Add Extensions Manually</span></span>
+## <a name="add-extensions-manually"></a><span data-ttu-id="bb034-114">Manuelles Hinzufügen von Erweiterungen</span><span class="sxs-lookup"><span data-stu-id="bb034-114">Add Extensions Manually</span></span>
 
 
-<span data-ttu-id="07ae7-115">Öffnen Sie das Anwendungsmanifest (Package.appxmanifest), und wechseln Sie zum „Application“-Element.</span><span class="sxs-lookup"><span data-stu-id="07ae7-115">Open the application manifest (Package.appxmanifest) and go to the Application element.</span></span> <span data-ttu-id="07ae7-116">Erstellen Sie ein "Extensions"-Element (sofern nicht bereits eines vorhanden ist).</span><span class="sxs-lookup"><span data-stu-id="07ae7-116">Create an Extensions element (if one doesn't already exist).</span></span>
+<span data-ttu-id="bb034-115">Öffnen Sie das Anwendungsmanifest (Package.appxmanifest), und wechseln Sie zum „Application“-Element.</span><span class="sxs-lookup"><span data-stu-id="bb034-115">Open the application manifest (Package.appxmanifest) and go to the Application element.</span></span> <span data-ttu-id="bb034-116">Erstellen Sie ein "Extensions"-Element (sofern nicht bereits eines vorhanden ist).</span><span class="sxs-lookup"><span data-stu-id="bb034-116">Create an Extensions element (if one doesn't already exist).</span></span>
 
-<span data-ttu-id="07ae7-117">Der folgende Ausschnitt stammt aus dem [Hintergrundaufgabenbeispiel](http://go.microsoft.com/fwlink/p/?LinkId=618666):</span><span class="sxs-lookup"><span data-stu-id="07ae7-117">The following snippet is taken from the [background task sample](http://go.microsoft.com/fwlink/p/?LinkId=618666):</span></span>
+<span data-ttu-id="bb034-117">Der folgende Ausschnitt stammt aus dem [Hintergrundaufgabenbeispiel](http://go.microsoft.com/fwlink/p/?LinkId=618666):</span><span class="sxs-lookup"><span data-stu-id="bb034-117">The following snippet is taken from the [background task sample](http://go.microsoft.com/fwlink/p/?LinkId=618666):</span></span>
 
 ```xml
 <Application Id="App"
@@ -58,11 +58,11 @@ ms.locfileid: "7965846"
  </Application>
 ```
 
-## <a name="add-a-background-task-extension"></a><span data-ttu-id="07ae7-118">Hinzufügen einer Erweiterung für eine Hintergrundaufgabe</span><span class="sxs-lookup"><span data-stu-id="07ae7-118">Add a Background Task Extension</span></span>  
+## <a name="add-a-background-task-extension"></a><span data-ttu-id="bb034-118">Hinzufügen einer Erweiterung für eine Hintergrundaufgabe</span><span class="sxs-lookup"><span data-stu-id="bb034-118">Add a Background Task Extension</span></span>  
 
-<span data-ttu-id="07ae7-119">Deklarieren Sie Ihre erste Hintergrundaufgabe.</span><span class="sxs-lookup"><span data-stu-id="07ae7-119">Declare your first background task.</span></span>
+<span data-ttu-id="bb034-119">Deklarieren Sie Ihre erste Hintergrundaufgabe.</span><span class="sxs-lookup"><span data-stu-id="bb034-119">Declare your first background task.</span></span>
 
-<span data-ttu-id="07ae7-120">Kopieren Sie diesen Code in das "Extensions"-Element (Attribute werden in den folgenden Schritten hinzugefügt).</span><span class="sxs-lookup"><span data-stu-id="07ae7-120">Copy this code into the Extensions element (you will add attributes in the following steps).</span></span>
+<span data-ttu-id="bb034-120">Kopieren Sie diesen Code in das "Extensions"-Element (Attribute werden in den folgenden Schritten hinzugefügt).</span><span class="sxs-lookup"><span data-stu-id="bb034-120">Copy this code into the Extensions element (you will add attributes in the following steps).</span></span>
 
 ```xml
 <Extensions>
@@ -74,9 +74,9 @@ ms.locfileid: "7965846"
 </Extensions>
 ```
 
-1.  <span data-ttu-id="07ae7-121">Ändern Sie das EntryPoint-Attribut so, dass diese Zeichenfolge von Ihrem Code bei der Registrierung Ihrer Hintergrundaufgabe als Einstiegspunkt verwendet wird (**namespace.classname**).</span><span class="sxs-lookup"><span data-stu-id="07ae7-121">Change the EntryPoint attribute to have the same string used by your code as the entry point when registering your background task (**namespace.classname**).</span></span>
+1.  <span data-ttu-id="bb034-121">Ändern Sie das EntryPoint-Attribut so, dass diese Zeichenfolge von Ihrem Code bei der Registrierung Ihrer Hintergrundaufgabe als Einstiegspunkt verwendet wird (**namespace.classname**).</span><span class="sxs-lookup"><span data-stu-id="bb034-121">Change the EntryPoint attribute to have the same string used by your code as the entry point when registering your background task (**namespace.classname**).</span></span>
 
-    <span data-ttu-id="07ae7-122">In diesem Beispiel ist „ExampleBackgroundTaskNameSpace.ExampleBackgroundTaskClassName“ der Einstiegspunkt:</span><span class="sxs-lookup"><span data-stu-id="07ae7-122">In this example, the entry point is ExampleBackgroundTaskNameSpace.ExampleBackgroundTaskClassName:</span></span>
+    <span data-ttu-id="bb034-122">In diesem Beispiel ist „ExampleBackgroundTaskNameSpace.ExampleBackgroundTaskClassName“ der Einstiegspunkt:</span><span class="sxs-lookup"><span data-stu-id="bb034-122">In this example, the entry point is ExampleBackgroundTaskNameSpace.ExampleBackgroundTaskClassName:</span></span>
 
 ```xml
 <Extensions>
@@ -88,11 +88,11 @@ ms.locfileid: "7965846"
 </Extensions>
 ```
 
-2.  <span data-ttu-id="07ae7-123">Ändern Sie die Liste der Aufgabentypenattribute, um den für diese Hintergrundaufgabe verwendeten Typ der Aufgabenregistrierung anzugeben.</span><span class="sxs-lookup"><span data-stu-id="07ae7-123">Change the list of Task Type attribute to indicate the type of task registration used with this background task.</span></span> <span data-ttu-id="07ae7-124">Wenn die Hintergrundaufgabe mit mehreren Triggertypen registriert wird, fügen Sie für jeden Typ zusätzliche Task-Elemente und Type-Attribute hinzu.</span><span class="sxs-lookup"><span data-stu-id="07ae7-124">If the background task is registered with multiple trigger types, add additional Task elements and Type attributes for each one.</span></span>
+2.  <span data-ttu-id="bb034-123">Ändern Sie die Liste der Aufgabentypenattribute, um den für diese Hintergrundaufgabe verwendeten Typ der Aufgabenregistrierung anzugeben.</span><span class="sxs-lookup"><span data-stu-id="bb034-123">Change the list of Task Type attribute to indicate the type of task registration used with this background task.</span></span> <span data-ttu-id="bb034-124">Wenn die Hintergrundaufgabe mit mehreren Triggertypen registriert wird, fügen Sie für jeden Typ zusätzliche Task-Elemente und Type-Attribute hinzu.</span><span class="sxs-lookup"><span data-stu-id="bb034-124">If the background task is registered with multiple trigger types, add additional Task elements and Type attributes for each one.</span></span>
 
-    <span data-ttu-id="07ae7-125">**Hinweis:** Vergewissern Sie sich zum Auflisten aller Triggertypen Sie, oder wenn die Hintergrundaufgabe wird nicht mit Triggertypen (die Methode [**Registrieren**](https://msdn.microsoft.com/library/windows/apps/br224772) fehl und löst eine Ausnahme) registriert.</span><span class="sxs-lookup"><span data-stu-id="07ae7-125">**Note**Make sure to list each of the trigger types you're using, or the background task will not register with the undeclared trigger types (the [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772) method will fail and throw an exception).</span></span>
+    <span data-ttu-id="bb034-125">**Hinweis:** Vergewissern Sie sich zum Auflisten aller Triggertypen Sie, oder wenn die Hintergrundaufgabe wird nicht mit Triggertypen (die Methode [**Registrieren**](https://msdn.microsoft.com/library/windows/apps/br224772) fehl und löst eine Ausnahme) registriert.</span><span class="sxs-lookup"><span data-stu-id="bb034-125">**Note**Make sure to list each of the trigger types you're using, or the background task will not register with the undeclared trigger types (the [**Register**](https://msdn.microsoft.com/library/windows/apps/br224772) method will fail and throw an exception).</span></span>
 
-    <span data-ttu-id="07ae7-126">Dieses Beispiel veranschaulicht die Verwendung von Systemereignistriggern und Pushbenachrichtigungen:</span><span class="sxs-lookup"><span data-stu-id="07ae7-126">This snippet example indicates the use of system event triggers and push notifications:</span></span>
+    <span data-ttu-id="bb034-126">Dieses Beispiel veranschaulicht die Verwendung von Systemereignistriggern und Pushbenachrichtigungen:</span><span class="sxs-lookup"><span data-stu-id="bb034-126">This snippet example indicates the use of system event triggers and push notifications:</span></span>
 
 ```xml
 <Extension Category="windows.backgroundTasks" EntryPoint="Tasks.BackgroundTaskClass">
@@ -103,11 +103,11 @@ ms.locfileid: "7965846"
 </Extension>
 ```
 
-### <a name="add-multiple-background-task-extensions"></a><span data-ttu-id="07ae7-127">Hinzufügen von weiteren Hintergrundaufgabenerweiterungen</span><span class="sxs-lookup"><span data-stu-id="07ae7-127">Add multiple background task extensions</span></span>
+### <a name="add-multiple-background-task-extensions"></a><span data-ttu-id="bb034-127">Hinzufügen von weiteren Hintergrundaufgabenerweiterungen</span><span class="sxs-lookup"><span data-stu-id="bb034-127">Add multiple background task extensions</span></span>
 
-<span data-ttu-id="07ae7-128">Wiederholen Sie Schritt 2 für alle weiteren, von Ihrer App registrierten Hintergrundaufgabenklassen.</span><span class="sxs-lookup"><span data-stu-id="07ae7-128">Repeat step 2 for each additional background task class registered by your app.</span></span>
+<span data-ttu-id="bb034-128">Wiederholen Sie Schritt 2 für alle weiteren, von Ihrer App registrierten Hintergrundaufgabenklassen.</span><span class="sxs-lookup"><span data-stu-id="bb034-128">Repeat step 2 for each additional background task class registered by your app.</span></span>
 
-<span data-ttu-id="07ae7-129">Das folgende Beispiel zeigt das vollständige "Application"-Element aus dem [Hintergrundaufgabenbeispiel]( http://go.microsoft.com/fwlink/p/?linkid=227509):</span><span class="sxs-lookup"><span data-stu-id="07ae7-129">The following example is the complete Application element from the [background task sample]( http://go.microsoft.com/fwlink/p/?linkid=227509).</span></span> <span data-ttu-id="07ae7-130">Es zeigt die Verwendung von zwei Hintergrundaufgabenklassen mit insgesamt drei Triggertypen.</span><span class="sxs-lookup"><span data-stu-id="07ae7-130">This shows the use of 2 background task classes with a total of 3 trigger types.</span></span> <span data-ttu-id="07ae7-131">Kopieren Sie den Abschnitt „Extensions“ aus diesem Beispiel, und ändern Sie ihn nach Bedarf, um Hintergrundaufgaben im Anwendungsmanifest zu deklarieren.</span><span class="sxs-lookup"><span data-stu-id="07ae7-131">Copy the Extensions section of this example, and modify it as needed, to declare background tasks in your application manifest.</span></span>
+<span data-ttu-id="bb034-129">Das folgende Beispiel zeigt das vollständige "Application"-Element aus dem [Hintergrundaufgabenbeispiel]( http://go.microsoft.com/fwlink/p/?linkid=227509):</span><span class="sxs-lookup"><span data-stu-id="bb034-129">The following example is the complete Application element from the [background task sample]( http://go.microsoft.com/fwlink/p/?linkid=227509).</span></span> <span data-ttu-id="bb034-130">Es zeigt die Verwendung von zwei Hintergrundaufgabenklassen mit insgesamt drei Triggertypen.</span><span class="sxs-lookup"><span data-stu-id="bb034-130">This shows the use of 2 background task classes with a total of 3 trigger types.</span></span> <span data-ttu-id="bb034-131">Kopieren Sie den Abschnitt „Extensions“ aus diesem Beispiel, und ändern Sie ihn nach Bedarf, um Hintergrundaufgaben im Anwendungsmanifest zu deklarieren.</span><span class="sxs-lookup"><span data-stu-id="bb034-131">Copy the Extensions section of this example, and modify it as needed, to declare background tasks in your application manifest.</span></span>
 
 ```xml
 <Applications>
@@ -148,18 +148,18 @@ ms.locfileid: "7965846"
 </Applications>
 ```
 
-## <a name="declare-where-your-background-task-will-run"></a><span data-ttu-id="07ae7-132">Deklarieren Sie die Position, an der Ihre Hintergrundaufgabe ausgeführt wird</span><span class="sxs-lookup"><span data-stu-id="07ae7-132">Declare where your background task will run</span></span>
+## <a name="declare-where-your-background-task-will-run"></a><span data-ttu-id="bb034-132">Deklarieren Sie die Position, an der Ihre Hintergrundaufgabe ausgeführt wird</span><span class="sxs-lookup"><span data-stu-id="bb034-132">Declare where your background task will run</span></span>
 
-<span data-ttu-id="07ae7-133">Sie können angeben, wo Ihre Hintergrundaufgaben ausführt werden sollen:</span><span class="sxs-lookup"><span data-stu-id="07ae7-133">You can specify where your background tasks run:</span></span>
+<span data-ttu-id="bb034-133">Sie können angeben, wo Ihre Hintergrundaufgaben ausführt werden sollen:</span><span class="sxs-lookup"><span data-stu-id="bb034-133">You can specify where your background tasks run:</span></span>
 
-* <span data-ttu-id="07ae7-134">Standardmäßig werden sie im Prozess „BackgroundTaskHost.exe“ ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="07ae7-134">By default, they run in the BackgroundTaskHost.exe process.</span></span>
-* <span data-ttu-id="07ae7-135">Im gleichen Prozess wie Ihre Anwendung im Vordergrund.</span><span class="sxs-lookup"><span data-stu-id="07ae7-135">In the same process as your foreground application.</span></span>
-* <span data-ttu-id="07ae7-136">Verwenden Sie `ResourceGroup`, um mehrere Hintergrundaufgaben im gleichen Hostprozess einzufügen, oder diese in verschiedene Prozesse aufzuspalten.</span><span class="sxs-lookup"><span data-stu-id="07ae7-136">Use `ResourceGroup` to place multiple background tasks into the same hosting process, or to separate them into different processes.</span></span>
-* <span data-ttu-id="07ae7-137">Verwenden Sie `SupportsMultipleInstances`, um den Hintergrundprozess in einem neuen Prozess auszuführen, der, jedes Mal, wenn ein neuer Trigger ausgelöst wird, eigene Ressourcenbeschränkungen (Arbeitsspeicher, CPU) erhält.</span><span class="sxs-lookup"><span data-stu-id="07ae7-137">Use `SupportsMultipleInstances` to run the background process in a new process that gets its own resource limits (memory, cpu) each time a new trigger is fired.</span></span>
+* <span data-ttu-id="bb034-134">Standardmäßig werden sie im Prozess „BackgroundTaskHost.exe“ ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="bb034-134">By default, they run in the BackgroundTaskHost.exe process.</span></span>
+* <span data-ttu-id="bb034-135">Im gleichen Prozess wie Ihre Anwendung im Vordergrund.</span><span class="sxs-lookup"><span data-stu-id="bb034-135">In the same process as your foreground application.</span></span>
+* <span data-ttu-id="bb034-136">Verwenden Sie `ResourceGroup`, um mehrere Hintergrundaufgaben im gleichen Hostprozess einzufügen, oder diese in verschiedene Prozesse aufzuspalten.</span><span class="sxs-lookup"><span data-stu-id="bb034-136">Use `ResourceGroup` to place multiple background tasks into the same hosting process, or to separate them into different processes.</span></span>
+* <span data-ttu-id="bb034-137">Verwenden Sie `SupportsMultipleInstances`, um den Hintergrundprozess in einem neuen Prozess auszuführen, der, jedes Mal, wenn ein neuer Trigger ausgelöst wird, eigene Ressourcenbeschränkungen (Arbeitsspeicher, CPU) erhält.</span><span class="sxs-lookup"><span data-stu-id="bb034-137">Use `SupportsMultipleInstances` to run the background process in a new process that gets its own resource limits (memory, cpu) each time a new trigger is fired.</span></span>
 
-### <a name="run-in-the-same-process-as-your-foreground-application"></a><span data-ttu-id="07ae7-138">Die Ausführung erfolgt im gleichen Prozess wie Ihre Anwendung im Vordergrund.</span><span class="sxs-lookup"><span data-stu-id="07ae7-138">Run in the same process as your foreground application</span></span>
+### <a name="run-in-the-same-process-as-your-foreground-application"></a><span data-ttu-id="bb034-138">Die Ausführung erfolgt im gleichen Prozess wie Ihre Anwendung im Vordergrund.</span><span class="sxs-lookup"><span data-stu-id="bb034-138">Run in the same process as your foreground application</span></span>
 
-<span data-ttu-id="07ae7-139">In diesem XML-Beispiel wird eine Hintergrundaufgabe deklariert, die im gleichen Prozess wie die Anwendung im Vordergrund ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="07ae7-139">Here is example XML that declares a background task that runs in the same process as the foreground application.</span></span>
+<span data-ttu-id="bb034-139">In diesem XML-Beispiel wird eine Hintergrundaufgabe deklariert, die im gleichen Prozess wie die Anwendung im Vordergrund ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="bb034-139">Here is example XML that declares a background task that runs in the same process as the foreground application.</span></span>
 
 ```xml
 <Extensions>
@@ -171,11 +171,11 @@ ms.locfileid: "7965846"
 </Extensions>
 ```
 
-<span data-ttu-id="07ae7-140">Wenn Sie den **Einsprungpunkt** festlegen, erhält Ihre Anwendung einen Rückruf an die angegebene Methode, sobald der Trigger ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="07ae7-140">When you specify **EntryPoint**, your application receives a callback to the specified method when the trigger fires.</span></span> <span data-ttu-id="07ae7-141">Wenn Sie den **Einsprungpunkt** nicht festlegen, erhält Ihre Anwendung den Rückruf über  [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx).</span><span class="sxs-lookup"><span data-stu-id="07ae7-141">If you do not specify an **EntryPoint**, your application receives the callback via  [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx).</span></span>  <span data-ttu-id="07ae7-142">Weitere Informationen finden Sie unter [Erstellen und Registrieren einer In-Process-Hintergrundaufgabe](create-and-register-an-inproc-background-task.md).</span><span class="sxs-lookup"><span data-stu-id="07ae7-142">See [Create and register an in-process background task](create-and-register-an-inproc-background-task.md) for details.</span></span>
+<span data-ttu-id="bb034-140">Wenn Sie den **Einsprungpunkt** festlegen, erhält Ihre Anwendung einen Rückruf an die angegebene Methode, sobald der Trigger ausgelöst wird.</span><span class="sxs-lookup"><span data-stu-id="bb034-140">When you specify **EntryPoint**, your application receives a callback to the specified method when the trigger fires.</span></span> <span data-ttu-id="bb034-141">Wenn Sie den **Einsprungpunkt** nicht festlegen, erhält Ihre Anwendung den Rückruf über  [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx).</span><span class="sxs-lookup"><span data-stu-id="bb034-141">If you do not specify an **EntryPoint**, your application receives the callback via  [OnBackgroundActivated()](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.application.onbackgroundactivated.aspx).</span></span>  <span data-ttu-id="bb034-142">Weitere Informationen finden Sie unter [Erstellen und Registrieren einer In-Process-Hintergrundaufgabe](create-and-register-an-inproc-background-task.md).</span><span class="sxs-lookup"><span data-stu-id="bb034-142">See [Create and register an in-process background task](create-and-register-an-inproc-background-task.md) for details.</span></span>
 
-### <a name="specify-where-your-background-task-runs-with-the-resourcegroup-attribute"></a><span data-ttu-id="07ae7-143">Legen Sie fest, wo Ihre Hintergrundaufgabe mit dem Attribut „ResourceGroup“ ausgeführt werden soll.</span><span class="sxs-lookup"><span data-stu-id="07ae7-143">Specify where your background task runs with the ResourceGroup attribute.</span></span>
+### <a name="specify-where-your-background-task-runs-with-the-resourcegroup-attribute"></a><span data-ttu-id="bb034-143">Legen Sie fest, wo Ihre Hintergrundaufgabe mit dem Attribut „ResourceGroup“ ausgeführt werden soll.</span><span class="sxs-lookup"><span data-stu-id="bb034-143">Specify where your background task runs with the ResourceGroup attribute.</span></span>
 
-<span data-ttu-id="07ae7-144">Hier finden Sie ein XML-Beispiel, mit dem eine Hintergrundaufgabe deklariert wird, die zwar in einem „BackgroundTaskHost.exe“-Prozess ausgeführt wird, der jedoch von anderen Hintergrundaufgabeninstanzen derselben App getrennt ist.</span><span class="sxs-lookup"><span data-stu-id="07ae7-144">Here is example XML that declares a background task that runs in a BackgroundTaskHost.exe process, but in a separate one than other instances of background tasks from the same app.</span></span> <span data-ttu-id="07ae7-145">Beachten Sie das Attribut `ResourceGroup`, das festlegt, welche Hintergrundaufgaben gemeinsam ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="07ae7-145">Note the `ResourceGroup` attribute, which identifies which background tasks will run together.</span></span>
+<span data-ttu-id="bb034-144">Hier finden Sie ein XML-Beispiel, mit dem eine Hintergrundaufgabe deklariert wird, die zwar in einem „BackgroundTaskHost.exe“-Prozess ausgeführt wird, der jedoch von anderen Hintergrundaufgabeninstanzen derselben App getrennt ist.</span><span class="sxs-lookup"><span data-stu-id="bb034-144">Here is example XML that declares a background task that runs in a BackgroundTaskHost.exe process, but in a separate one than other instances of background tasks from the same app.</span></span> <span data-ttu-id="bb034-145">Beachten Sie das Attribut `ResourceGroup`, das festlegt, welche Hintergrundaufgaben gemeinsam ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="bb034-145">Note the `ResourceGroup` attribute, which identifies which background tasks will run together.</span></span>
 
 ```xml
 <Extensions>
@@ -207,9 +207,9 @@ ms.locfileid: "7965846"
 </Extensions>
 ```
 
-### <a name="run-in-a-new-process-each-time-a-trigger-fires-with-the-supportsmultipleinstances-attribute"></a><span data-ttu-id="07ae7-146">Ausführen in einem neuen Prozess, jedes Mal, wenn ein Trigger mit dem Attribut „SupportsMultipleInstances“ ausgelöst wird</span><span class="sxs-lookup"><span data-stu-id="07ae7-146">Run in a new process each time a trigger fires with the SupportsMultipleInstances attribute</span></span>
+### <a name="run-in-a-new-process-each-time-a-trigger-fires-with-the-supportsmultipleinstances-attribute"></a><span data-ttu-id="bb034-146">Ausführen in einem neuen Prozess, jedes Mal, wenn ein Trigger mit dem Attribut „SupportsMultipleInstances“ ausgelöst wird</span><span class="sxs-lookup"><span data-stu-id="bb034-146">Run in a new process each time a trigger fires with the SupportsMultipleInstances attribute</span></span>
 
-<span data-ttu-id="07ae7-147">In diesem Beispiel wird eine Hintergrundaufgabe deklariert, die in einem neuen Prozess ausgeführt wird, der, jedes Mal, wenn ein neuer Trigger ausgelöst wird, eigene Ressourcenbeschränkungen (Arbeitsspeicher und CPU) erhält.</span><span class="sxs-lookup"><span data-stu-id="07ae7-147">This example declares a background task that runs in a new process that gets its own resource limits (memory and CPU) every time a new trigger is fired.</span></span> <span data-ttu-id="07ae7-148">Beachten Sie die Verwendung von `SupportsMultipleInstances`, zur Aktivierung dieses Verhalten.</span><span class="sxs-lookup"><span data-stu-id="07ae7-148">Note the use of `SupportsMultipleInstances` which enables this behavior.</span></span> <span data-ttu-id="07ae7-149">Um dieses Attribut verwenden, Sie müssen als Ziel die SDK-Version "10.0.15063" (Windows 10 Creators Update) oder höher.</span><span class="sxs-lookup"><span data-stu-id="07ae7-149">In order to use this attribute you must target SDK version '10.0.15063' (Windows 10 Creators Update) or higher.</span></span>
+<span data-ttu-id="bb034-147">In diesem Beispiel wird eine Hintergrundaufgabe deklariert, die in einem neuen Prozess ausgeführt wird, der, jedes Mal, wenn ein neuer Trigger ausgelöst wird, eigene Ressourcenbeschränkungen (Arbeitsspeicher und CPU) erhält.</span><span class="sxs-lookup"><span data-stu-id="bb034-147">This example declares a background task that runs in a new process that gets its own resource limits (memory and CPU) every time a new trigger is fired.</span></span> <span data-ttu-id="bb034-148">Beachten Sie die Verwendung von `SupportsMultipleInstances`, zur Aktivierung dieses Verhalten.</span><span class="sxs-lookup"><span data-stu-id="bb034-148">Note the use of `SupportsMultipleInstances` which enables this behavior.</span></span> <span data-ttu-id="bb034-149">Um dieses Attribut verwenden, Sie müssen als Ziel die SDK-Version "10.0.15063" (Windows 10 Creators Update) oder höher.</span><span class="sxs-lookup"><span data-stu-id="bb034-149">In order to use this attribute you must target SDK version '10.0.15063' (Windows 10 Creators Update) or higher.</span></span>
 
 ```xml
 <Package
@@ -230,10 +230,10 @@ ms.locfileid: "7965846"
 ```
 
 > [!NOTE]
-> <span data-ttu-id="07ae7-150">`ResourceGroup` oder `ServerName` können in Verbindung mit `SupportsMultipleInstances` nicht festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="07ae7-150">You cannot specify `ResourceGroup` or `ServerName` in conjunction with `SupportsMultipleInstances`.</span></span>
+> <span data-ttu-id="bb034-150">`ResourceGroup` oder `ServerName` können in Verbindung mit `SupportsMultipleInstances` nicht festgelegt werden.</span><span class="sxs-lookup"><span data-stu-id="bb034-150">You cannot specify `ResourceGroup` or `ServerName` in conjunction with `SupportsMultipleInstances`.</span></span>
 
-## <a name="related-topics"></a><span data-ttu-id="07ae7-151">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="07ae7-151">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="bb034-151">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="bb034-151">Related topics</span></span>
 
-* [<span data-ttu-id="07ae7-152">Debuggen einer Hintergrundaufgabe</span><span class="sxs-lookup"><span data-stu-id="07ae7-152">Debug a background task</span></span>](debug-a-background-task.md)
-* [<span data-ttu-id="07ae7-153">Registrieren einer Hintergrundaufgabe</span><span class="sxs-lookup"><span data-stu-id="07ae7-153">Register a background task</span></span>](register-a-background-task.md)
-* [<span data-ttu-id="07ae7-154">Richtlinien für Hintergrundaufgaben</span><span class="sxs-lookup"><span data-stu-id="07ae7-154">Guidelines for background tasks</span></span>](guidelines-for-background-tasks.md)
+* [<span data-ttu-id="bb034-152">Debuggen einer Hintergrundaufgabe</span><span class="sxs-lookup"><span data-stu-id="bb034-152">Debug a background task</span></span>](debug-a-background-task.md)
+* [<span data-ttu-id="bb034-153">Registrieren einer Hintergrundaufgabe</span><span class="sxs-lookup"><span data-stu-id="bb034-153">Register a background task</span></span>](register-a-background-task.md)
+* [<span data-ttu-id="bb034-154">Richtlinien für Hintergrundaufgaben</span><span class="sxs-lookup"><span data-stu-id="bb034-154">Guidelines for background tasks</span></span>](guidelines-for-background-tasks.md)

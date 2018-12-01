@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, .NET, Unity
 ms.localizationpriority: medium
 ms.openlocfilehash: 323d710a18ab738f89ed691cd56309ae827a7a14
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8211498"
+ms.locfileid: "8348194"
 ---
 # <a name="missing-net-apis-in-unity-and-uwp"></a><span data-ttu-id="f47f3-104">Fehlende .NET-APIs in Unity und UWP</span><span class="sxs-lookup"><span data-stu-id="f47f3-104">Missing .NET APIs in Unity and UWP</span></span>
 

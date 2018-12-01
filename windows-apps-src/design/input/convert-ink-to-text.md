@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b25a37fb06688e7841490e00d1c83640d3155d50
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7982187"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8337206"
 ---
 # <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a><span data-ttu-id="42052-103">Erkennen von Windows Ink-Strichen als Text und Formen</span><span class="sxs-lookup"><span data-stu-id="42052-103">Recognize Windows Ink strokes as text and shapes</span></span>
 

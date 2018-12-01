@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 85d1c41fc10f509f3872fb1e4a0af5fa1e1e7c30
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7967667"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8338114"
 ---
 # <a name="primitive-topologies"></a><span data-ttu-id="7ae14-104">Primitive Topologien</span><span class="sxs-lookup"><span data-stu-id="7ae14-104">Primitive topologies</span></span>
 

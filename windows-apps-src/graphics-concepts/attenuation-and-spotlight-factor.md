@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 8126ac8fa738a2b8a9680d215179fe23f77c5d44
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8217442"
+ms.locfileid: "8339462"
 ---
 # <a name="attenuation-and-spotlight-factor"></a><span data-ttu-id="07e97-104">Dämpfungs- und Spotlight-Faktor</span><span class="sxs-lookup"><span data-stu-id="07e97-104">Attenuation and spotlight factor</span></span>
 

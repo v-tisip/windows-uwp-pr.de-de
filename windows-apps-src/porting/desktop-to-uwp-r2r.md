@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, systemeigene Abbilder Compiler
 ms.localizationpriority: medium
 ms.openlocfilehash: 3071b843a1605d765ab5b087d5e1bfb96a220218
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8196782"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8338394"
 ---
 # <a name="optimize-your-net-desktop-apps-with-native-images"></a><span data-ttu-id="5cadd-103">Optimieren Sie Ihre .NET Desktop-apps mit systemeigene Abbildern</span><span class="sxs-lookup"><span data-stu-id="5cadd-103">Optimize your .NET Desktop apps with native images</span></span>
 

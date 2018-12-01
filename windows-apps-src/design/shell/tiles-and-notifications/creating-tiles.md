@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e46d73c91f54b1bb74a70990a238f13ccd47645d
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8218223"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8335680"
 ---
 # <a name="tiles-for-uwp-apps"></a><span data-ttu-id="bd8ee-103">Kacheln für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="bd8ee-103">Tiles for UWP apps</span></span>
 

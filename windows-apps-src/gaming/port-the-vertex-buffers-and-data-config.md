@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Portieren, Vertexpuffer, Daten, Direct3D
 ms.localizationpriority: medium
 ms.openlocfilehash: 4c961a8852fb1e03e4e86209f62bda821b980f8c
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7964740"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8336250"
 ---
 # <a name="port-the-vertex-buffers-and-data"></a><span data-ttu-id="5beba-104">Portieren der Vertexpuffer und -Daten</span><span class="sxs-lookup"><span data-stu-id="5beba-104">Port the vertex buffers and data</span></span>
 

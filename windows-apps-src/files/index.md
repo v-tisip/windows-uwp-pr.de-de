@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 811a9b42efe83cf89fd3df89e5c43c72274af36f
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "7974976"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8337867"
 ---
  # <a name="files-folders-and-libraries"></a><span data-ttu-id="09aad-104">Dateien, Ordner und Bibliotheken</span><span class="sxs-lookup"><span data-stu-id="09aad-104">Files, folders, and libraries</span></span>
 

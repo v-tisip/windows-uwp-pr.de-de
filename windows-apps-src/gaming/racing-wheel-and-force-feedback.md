@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Spiele, Rennlenkrad, Kraftrückmeldung
 ms.localizationpriority: medium
 ms.openlocfilehash: 90d12caca103648824ceb36a4ca4968754beb7f2
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8213865"
+ms.locfileid: "8337837"
 ---
 # <a name="racing-wheel-and-force-feedback"></a><span data-ttu-id="289c4-104">Rennlenkräder und Kraftrückmeldung</span><span class="sxs-lookup"><span data-stu-id="289c4-104">Racing wheel and force feedback</span></span>
 

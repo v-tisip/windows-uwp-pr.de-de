@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e07ac565fe2e223b2fb33573ad083edfdfbc888a
-ms.sourcegitcommit: b5c9c18e70625ab770946b8243f3465ee1013184
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "7988466"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8335985"
 ---
 # <a name="edge-based-ui-animations"></a><span data-ttu-id="efab6-103">Animationen für randbasierte Benutzeroberflächenelemente</span><span class="sxs-lookup"><span data-stu-id="efab6-103">Edge-based UI animations</span></span>
 
