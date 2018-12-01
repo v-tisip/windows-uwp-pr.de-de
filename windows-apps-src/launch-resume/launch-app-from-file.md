@@ -7,17 +7,17 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d48cbbf45dc2a09ca8eea3538501cbbe6f07ce02
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8199246"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8350242"
 ---
-# <a name="launch-an-app-through-file-activation"></a><span data-ttu-id="6c5f4-104">Starten einer App über Dateiaktivierung</span><span class="sxs-lookup"><span data-stu-id="6c5f4-104">Launch an app through file activation</span></span>
+# <a name="launch-an-app-through-file-activation"></a><span data-ttu-id="7ca05-104">Starten einer App über Dateiaktivierung</span><span class="sxs-lookup"><span data-stu-id="7ca05-104">Launch an app through file activation</span></span>
 
-<span data-ttu-id="6c5f4-105">In diesem Abschnitt wird gezeigt, wie Sie Ihre App so einrichten, dass sie beim Öffnen einer Datei eines bestimmten Typs gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="6c5f4-105">This section shows how to set up your app to launch when a file of a certain type is opened.</span></span>
+<span data-ttu-id="7ca05-105">In diesem Abschnitt wird gezeigt, wie Sie Ihre App so einrichten, dass sie beim Öffnen einer Datei eines bestimmten Typs gestartet wird.</span><span class="sxs-lookup"><span data-stu-id="7ca05-105">This section shows how to set up your app to launch when a file of a certain type is opened.</span></span>
 
-| <span data-ttu-id="6c5f4-106">Thema</span><span class="sxs-lookup"><span data-stu-id="6c5f4-106">Topic</span></span> | <span data-ttu-id="6c5f4-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="6c5f4-107">Description</span></span> |
+| <span data-ttu-id="7ca05-106">Thema</span><span class="sxs-lookup"><span data-stu-id="7ca05-106">Topic</span></span> | <span data-ttu-id="7ca05-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="7ca05-107">Description</span></span> |
 |-------|-------------|
-| [<span data-ttu-id="6c5f4-108">Starten der Standard-App für eine Datei</span><span class="sxs-lookup"><span data-stu-id="6c5f4-108">Launch the default app for a file</span></span>](launch-the-default-app-for-a-file.md) | <span data-ttu-id="6c5f4-109">Erfahren Sie, wie Sie die Standard-App für eine Datei starten.</span><span class="sxs-lookup"><span data-stu-id="6c5f4-109">Learn how to launch the default app for a file.</span></span> |
-| [<span data-ttu-id="6c5f4-110">Behandeln der Dateiaktivierung</span><span class="sxs-lookup"><span data-stu-id="6c5f4-110">Handle file activation</span></span>](handle-file-activation.md) | <span data-ttu-id="6c5f4-111">Erfahren Sie, wie Sie Ihre App registrieren, damit sie zum Standardhandler für einen bestimmten Dateityp wird.</span><span class="sxs-lookup"><span data-stu-id="6c5f4-111">Learn how to register your app to become the default handler for a certain file type.</span></span> |
+| [<span data-ttu-id="7ca05-108">Starten der Standard-App für eine Datei</span><span class="sxs-lookup"><span data-stu-id="7ca05-108">Launch the default app for a file</span></span>](launch-the-default-app-for-a-file.md) | <span data-ttu-id="7ca05-109">Erfahren Sie, wie Sie die Standard-App für eine Datei starten.</span><span class="sxs-lookup"><span data-stu-id="7ca05-109">Learn how to launch the default app for a file.</span></span> |
+| [<span data-ttu-id="7ca05-110">Behandeln der Dateiaktivierung</span><span class="sxs-lookup"><span data-stu-id="7ca05-110">Handle file activation</span></span>](handle-file-activation.md) | <span data-ttu-id="7ca05-111">Erfahren Sie, wie Sie Ihre App registrieren, damit sie zum Standardhandler für einen bestimmten Dateityp wird.</span><span class="sxs-lookup"><span data-stu-id="7ca05-111">Learn how to register your app to become the default handler for a certain file type.</span></span> |
