@@ -3,11 +3,11 @@ title: Unity – Versionskontrolle für Ihr UWP-Projekt
 description: Versionsverwaltung für Ihr Unity-UWP.
 ms.localizationpriority: medium
 ms.openlocfilehash: 9fe59b0c63f536822ec50a225bbdc11e68b97713
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8196129"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8337426"
 ---
 # <a name="unity-version-control-your-uwp-project"></a>Unity: Versionskontrolle für Ihr UWP-Projekt
 
