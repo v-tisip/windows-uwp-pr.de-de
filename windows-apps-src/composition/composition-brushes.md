@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e8c995c5a9513bea44664bcb395cd604ba2668c3
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8218143"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "8351419"
 ---
 # <a name="composition-brushes"></a>Kompositionspinsel
 Alles, was von einer UWP-Anwendung auf dem Bildschirm sichtbar wird angezeigt, da er mit einem Pinsel gezeichnet wurde. Mithilfe von Pinseln können Sie Benutzer Objekte der Benutzeroberfläche (UI) mit Inhalt, angefangen bei einfachen, einfarbige Farben zu Bildern oder Zeichnungen für komplexe Effekte Kette zeichnen. In diesem Thema werden die Begriffe zum Zeichnen mit CompositionBrush.
@@ -439,7 +439,7 @@ Die folgende Tabelle enthält eine Liste mit Szenarien und gibt an, ob XAML oder
 |Zeichnen eines Bereichs mit einem statischen Farbverlauf                                       |[LinearGradientBrush](https://msdn.microsoft.com/library/windows/apps/BR210108)                            |[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)
 |Zeichnen eines Bereichs mit animierten Farbverlaufsstopps                                 |[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)                                                                                 |[CompositionLinearGradientBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlineargradientbrush)
 |Zeichnen eines Bereichs mit einem Bild                                                |[ImageBrush](https://msdn.microsoft.com/library/windows/apps/BR210101)                                     |[CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415)
-|Zeichnen eines Bereichs mit einer Webseite                                               |[WebViewBrush](https://msdn.microsoft.com/library/windows/apps/BR227703)                                   |n.v.
+|Zeichnen eines Bereichs mit einer Webseite                                               |[WebViewBrush](https://msdn.microsoft.com/library/windows/apps/BR227703)                                   |n.a.
 |Zeichnen Sie einen Bereich mit einem Bild mit NineGrid stretch                         |[Image-Steuerelement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image)                   |[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)
 |Zeichnen eines Bereichs mit animierten NineGrid stretch                               |[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)                                                                                       |[CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionNineGridBrush)
 |Zeichnen eines Bereichs mit einem Spielinhalte                                             |[SwapChainPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel)                                                                                                 |[CompositionSurfaceBrush](https://msdn.microsoft.com/library/windows/apps/Mt589415) mit Spielinhalte Interoperabilität

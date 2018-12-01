@@ -3,11 +3,11 @@ title: Device Portal Netzwerk Anmeldeinformationen API-Referenz
 description: Enthält Informationen zum Hinzufügen, entfernen oder Aktualisieren der Netzwerkanmeldeinformationen programmgesteuert.
 ms.localizationpriority: medium
 ms.openlocfilehash: 2da8dae554a0dcbb84d3d3fc3873e2fb035175dc
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8213705"
+ms.locfileid: "8346533"
 ---
 # <a name="network-credentials-api-reference"></a>Netzwerk-Anmeldeinformationen-API-Referenz
 Sie können hinzufügen, entfernen Sie oder aktualisieren Sie gespeicherte Netzwerkanmeldeinformationen auf Ihr dev Kit mittels dieser REST-API.
