@@ -6,12 +6,12 @@ ms.date: 02/28/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, App-Daten
 ms.localizationpriority: medium
-ms.openlocfilehash: 54f5989f0aa2fb5eeed26f16ab9e07671e26832c
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.openlocfilehash: 23e392e2064a2a48089d1efadd1461c146e0d343
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8198753"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "8348822"
 ---
 # <a name="get-app-data"></a>Abrufen von App-Daten
 
@@ -19,44 +19,12 @@ Verwenden Sie die folgenden Methoden in der Microsoft Store-Übermittlungs-API, 
 
 Bevor Sie diese Methoden verwenden können, muss die app bereits im Partner Center-Konto vorhanden sein. Informationen zum Erstellen oder Verwalten von Übermittlungen für Apps finden Sie unter den Methoden in [Verwalten von App-Übermittlungen](manage-app-submissions.md).
 
-<table>
-<colgroup>
-<col width="10%" />
-<col width="30%" />
-<col width="60%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Methode</th>
-<th align="left">URI</th>
-<th align="left">Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">GET</td>
-<td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications</td>
-<td align="left"><a href="get-all-apps.md">Daten für Ihre gesamten Apps abrufen</a></td>
-</tr>
-<tr>
-<td align="left">GET</td>
-<td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}</td>
-<td align="left"><a href="get-an-app.md">Daten für eine bestimmte App abrufen</a></td>
-</tr>
-<tr>
-<td align="left">GET</td>
-<td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts</td>
-<td align="left"><a href="get-add-ons-for-an-app.md">Add-Ons für eine App abrufen</a></td>
-</tr>
-<tr>
-<td align="left">GET</td>
-<td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights</td>
-<td align="left"><a href="get-flights-for-an-app.md">Flight-Pakete für eine App abrufen</a></td>
-</tr>
-</tbody>
-</table>
-
-<span/>
+| Methode | URI                                                                                             | Beschreibung                                                 |
+|------- |------------------------------------------------------------------------------------------------ |------------------------------------------------------------ |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications`                                   | [Daten für Ihre gesamten Apps abrufen](get-all-apps.md)               |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}`                   | [Daten für eine bestimmte App abrufen](get-an-app.md)                |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts` | [Add-Ons für eine App abrufen](get-add-ons-for-an-app.md)         |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights`       | [Flight-Pakete für eine App abrufen](get-flights-for-an-app.md) |
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -180,13 +148,12 @@ Diese Ressource enthält Informationen zu einer Übermittlung. Das folgende Beis
 
 Die Ressource hat die folgenden Werte.
 
-| Wert           | Typ    | Beschreibung                 |
-|-----------------|---------|------------------------------|
-| id            | string  | Die ID der Übermittlung.    |
-| resourceLocation   | string  | Ein relativer Pfad, den Sie an den Basisanforderungs-URI ```https://manage.devcenter.microsoft.com/v1.0/my/``` anfügen können, um die vollständigen Daten für die Übermittlung abzurufen.            |
- 
-<span/>
+| Wert              | Typ   | Beschreibung               |
+|--------------------|--------|---------------------------|
+| id                 | string | Die ID der Übermittlung. |
+| resourceLocation   | string | Ein relativer Pfad, den Sie an den Basisanforderungs-URI ```https://manage.devcenter.microsoft.com/v1.0/my/``` anfügen können, um die vollständigen Daten für die Übermittlung abzurufen. |
 
+ 
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Erstellen und Verwalten von Übermittlungen mit Microsoft Store-Diensten](create-and-manage-submissions-using-windows-store-services.md)

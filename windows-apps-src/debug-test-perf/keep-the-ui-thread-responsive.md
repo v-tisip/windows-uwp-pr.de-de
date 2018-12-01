@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 8cd5df1d22189698f6544af4ab72c09425531602
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.openlocfilehash: 0bc555030c2f5202e5c128c1d1a2fe45b5b71b4b
+ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 11/30/2018
-ms.locfileid: "8214795"
+ms.locfileid: "8347427"
 ---
 # <a name="keep-the-ui-thread-responsive"></a>Aufrechterhalten der Reaktionsfähigkeit des UI-Threads
 
@@ -50,7 +50,7 @@ Ein Beispiel für Arbeit, die in einem Hintergrundthread ausgeführt werden kann
 ```csharp
 public class AsyncExample
 {
-    private async void NextMove-Click(object sender, RoutedEventArgs e)
+    private async void NextMove_Click(object sender, RoutedEventArgs e)
     {
         // The await causes the handler to return immediately.
         await System.Threading.Tasks.Task.Run(() => ComputeNextMove());
@@ -71,7 +71,7 @@ public class AsyncExample
 > public class Example
 > {
 >     // ...
->     private async void NextMove-Click(object sender, RoutedEventArgs e)
+>     private async void NextMove_Click(object sender, RoutedEventArgs e)
 >     {
 >         await Task.Run(() => ComputeNextMove());
 >         // Update the UI with results
@@ -87,7 +87,7 @@ public class AsyncExample
 > ```vb
 > Public Class Example
 >     ' ...
->     Private Async Sub NextMove-Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
+>     Private Async Sub NextMove_Click(ByVal sender As Object, ByVal e As RoutedEventArgs)
 >         Await Task.Run(Function() ComputeNextMove())
 >         ' update the UI with results
 >     End Sub
@@ -99,7 +99,7 @@ public class AsyncExample
 > End Class
 > ```
 
-In diesem Beispiel wird der `NextMove-Click`-Handler bei **await** zurückgegeben, damit der UI-Thread reaktionsfähig bleibt. Die Ausführung wird jedoch in diesem Handler fortgesetzt, nachdem `ComputeNextMove` abgeschlossen ist (in einem Hintergrundthread ausgeführt). Der restliche Code im Handler aktualisiert die UI mit den Ergebnissen.
+In diesem Beispiel wird der `NextMove_Click`-Handler bei **await** zurückgegeben, damit der UI-Thread reaktionsfähig bleibt. Die Ausführung wird jedoch in diesem Handler fortgesetzt, nachdem `ComputeNextMove` abgeschlossen ist (in einem Hintergrundthread ausgeführt). Der restliche Code im Handler aktualisiert die UI mit den Ergebnissen.
 
 > **Hinweis:** es ist auch eine [**ThreadPool**](https://msdn.microsoft.com/library/windows/apps/BR229621) und [**ThreadPoolTimer**](https://msdn.microsoft.com/library/windows/apps/windows.system.threading.threadpooltimer.aspx) API für die UWP, die für ähnliche Szenarien verwendet werden kann. Weitere Informationen finden Sie unter [Threading und asynchrone Programmierung](https://msdn.microsoft.com/library/windows/apps/Mt187340).
 
