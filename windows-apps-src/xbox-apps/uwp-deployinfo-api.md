@@ -3,11 +3,11 @@ title: 'Referenz zur API für Bereitstellungsinformationen des Geräteportals '
 description: Erfahren Sie, wie Sie programmgesteuert auf die API für die Bereitstellung von Informationen zugreifen.
 ms.localizationpriority: medium
 ms.openlocfilehash: c44089313b100880b419e9b55a26101e877496f3
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8334694"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8487252"
 ---
 # <a name="requests-deployment-information-for-one-or-more-installed-packages"></a>Fordert Bereitstellungsinformationen für ein oder mehrere installierte Pakete an.
 

@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP, Senden von Popupbenachrichtigungen, Benachrichtigungen, Benachrichtigungen senden, Popupbenachrichtigungen, Vorgehensweise, Schnellstart, erste Schritte, Codebeispiel, exemplarische Vorgehensweise
 ms.localizationpriority: medium
 ms.openlocfilehash: 410e8121aecfe13805586c9287f62444f80a1b1b
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8343851"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8462187"
 ---
 # <a name="send-a-local-toast-notification"></a>Senden einer lokalen Popupbenachrichtigung
 

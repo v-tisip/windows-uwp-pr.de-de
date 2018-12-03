@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Betatests, eingeschränkter Vertrieb, Beta, Betas, testen, Tester
 ms.localizationpriority: medium
 ms.openlocfilehash: 1560da53ebcc2b24bc9bc13034431c3a2208dfe5
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8349049"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8462134"
 ---
 # <a name="beta-testing-and-targeted-distribution"></a>Betatests und zielgerichtete Verteilung
 
