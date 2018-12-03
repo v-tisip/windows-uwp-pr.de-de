@@ -2,16 +2,16 @@
 title: Bildschirmaufnahme
 description: Der Windows.Graphics.Capture-Namespace enthält APIs zum Abrufen von Frames aus einer Anzeige oder einem Anwendungsfenster, um Videostreams zu erstellen oder gemeinsame und interaktive Benutzeroberflächen zu erstellen.
 ms.assetid: 349C959D-9C74-44E7-B5F6-EBDB5CA87B9F
-ms.date: 10/09/2018
+ms.date: 11/30/2018
 ms.topic: article
 keywords: Windows10, UWP, Bildschirmaufnahme
 ms.localizationpriority: medium
-ms.openlocfilehash: 14273f919cacfb27671ba72022ab6c8ff0a2f0ef
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.openlocfilehash: db32db6b293dce4210bebee139e05447da996b42
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8328456"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470764"
 ---
 # <a name="screen-capture"></a>Bildschirmaufnahme
 
@@ -383,6 +383,10 @@ namespace WindowsGraphicsCapture
     }
 }
 ```
+
+## <a name="record-a-video"></a>Ein Video aufzeichnen
+
+Wenn ein Video der Anwendung aufgezeichnet werden sollen, können Sie besser durch den [Namespace Windows.Media.AppRecording](https://docs.microsoft.com/uwp/api/windows.media.apprecording)tun. Dies ist Teil der Desktop-SDK-Erweiterung, damit es nur auf Desktop funktioniert und erfordert, dass Sie einen Verweis auf diese aus Ihrem Projekt hinzufügen. Weitere Informationen finden Sie in der [Übersicht über die gerätefamilien](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) .
 
 ## <a name="see-also"></a>Weitere Informationen:
 
