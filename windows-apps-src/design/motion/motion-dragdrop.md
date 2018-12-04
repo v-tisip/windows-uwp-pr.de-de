@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: c12acd2148c8c85d69354a71c016d7a7230e590b
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8348536"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8484674"
 ---
 # <a name="drag-animations"></a><span data-ttu-id="56401-103">Animationen für Drag & Drop-Vorgang</span><span class="sxs-lookup"><span data-stu-id="56401-103">Drag animations</span></span>
 

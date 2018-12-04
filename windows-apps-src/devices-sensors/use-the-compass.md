@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f8c1cc6e17d95f55cc97af7695c12b374edcaaa8
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8348094"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485964"
 ---
 # <a name="use-the-compass"></a><span data-ttu-id="33614-104">Verwenden des Kompasses</span><span class="sxs-lookup"><span data-stu-id="33614-104">Use the compass</span></span>
 
