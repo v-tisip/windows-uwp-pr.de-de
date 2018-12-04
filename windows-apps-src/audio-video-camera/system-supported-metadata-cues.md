@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, Uwp, Metadaten, Marker, Spracherkennung, Kapitel
 ms.localizationpriority: medium
 ms.openlocfilehash: 2f461bb70c1319352c66b8d12775dc7fa1db0edf
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8329150"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8476601"
 ---
 # <a name="system-supported-timed-metadata-cues"></a>Vom System unterstützte, zeitbasierte Metadaten-Marker
 Dieser Artikel beschreibt, wie verschiedene Formate zeitbasierter Metadaten genutzt werden, die in Mediendateien oder -streams eingebettet sein können. UWP-Apps können Ereignisse registrieren, die von der Medienpipeline während der Wiedergabe ausgelöst werden, wenn diese Metadaten-Marker erkannt werden. Mithilfe der [**DataCue**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.DataCue)-Klasse können Apps eigene, benutzerdefinierte Metadaten-Marker implementieren; dieser Artikel behandelt mehrere Metadatenstandards, die von der Medienpipeline automatisch erkannt werden, z. B.:
