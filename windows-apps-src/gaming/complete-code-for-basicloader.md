@@ -7,45 +7,45 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, BasicLoader
 ms.localizationpriority: medium
 ms.openlocfilehash: cfcec2550455df8afe5870f9b760e1f7225f847c
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8330597"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8470836"
 ---
-# <a name="complete-code-for-basicloader"></a><span data-ttu-id="2a6cc-104">Vollständiger Code für "BasicLoader"</span><span class="sxs-lookup"><span data-stu-id="2a6cc-104">Complete code for BasicLoader</span></span>
+# <a name="complete-code-for-basicloader"></a><span data-ttu-id="cfa9f-104">Vollständiger Code für "BasicLoader"</span><span class="sxs-lookup"><span data-stu-id="cfa9f-104">Complete code for BasicLoader</span></span>
 
 
 
-<span data-ttu-id="2a6cc-105">Vollständiger Code für eine Klasse und Methoden, die allgemeine Grafikressourcen wie Gitter, Texturen und verschiedene Shader-Objekte konvertieren und laden.</span><span class="sxs-lookup"><span data-stu-id="2a6cc-105">Complete code for a class and methods that convert and load common graphics resources, such as meshes, textures, and various shader objects.</span></span>
+<span data-ttu-id="cfa9f-105">Vollständiger Code für eine Klasse und Methoden, die allgemeine Grafikressourcen wie Gitter, Texturen und verschiedene Shader-Objekte konvertieren und laden.</span><span class="sxs-lookup"><span data-stu-id="cfa9f-105">Complete code for a class and methods that convert and load common graphics resources, such as meshes, textures, and various shader objects.</span></span>
 
-<span data-ttu-id="2a6cc-106">Dieses Thema enthält die folgenden Abschnitte:</span><span class="sxs-lookup"><span data-stu-id="2a6cc-106">This topic contains these sections:</span></span>
+<span data-ttu-id="cfa9f-106">Dieses Thema enthält die folgenden Abschnitte:</span><span class="sxs-lookup"><span data-stu-id="cfa9f-106">This topic contains these sections:</span></span>
 
--   [<span data-ttu-id="2a6cc-107">Technologien</span><span class="sxs-lookup"><span data-stu-id="2a6cc-107">Technologies</span></span>](#technologies)
--   [<span data-ttu-id="2a6cc-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="2a6cc-108">Requirements</span></span>](#requirements)
--   [<span data-ttu-id="2a6cc-109">Anzeigen des Codes (C++)</span><span class="sxs-lookup"><span data-stu-id="2a6cc-109">View the code (C++)</span></span>](#view-the-code-c)
+-   [<span data-ttu-id="cfa9f-107">Technologien</span><span class="sxs-lookup"><span data-stu-id="cfa9f-107">Technologies</span></span>](#technologies)
+-   [<span data-ttu-id="cfa9f-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="cfa9f-108">Requirements</span></span>](#requirements)
+-   [<span data-ttu-id="cfa9f-109">Anzeigen des Codes (C++)</span><span class="sxs-lookup"><span data-stu-id="cfa9f-109">View the code (C++)</span></span>](#view-the-code-c)
 
 <span id="download_locations"></span>
 
-## <a name="download-location"></a><span data-ttu-id="2a6cc-110">Downloadort</span><span class="sxs-lookup"><span data-stu-id="2a6cc-110">Download location</span></span>
+## <a name="download-location"></a><span data-ttu-id="cfa9f-110">Downloadort</span><span class="sxs-lookup"><span data-stu-id="cfa9f-110">Download location</span></span>
 
 
-<span data-ttu-id="2a6cc-111">Dieses Beispiel kann nicht heruntergeladen werden.</span><span class="sxs-lookup"><span data-stu-id="2a6cc-111">This sample is not available for download.</span></span>
+<span data-ttu-id="cfa9f-111">Dieses Beispiel kann nicht heruntergeladen werden.</span><span class="sxs-lookup"><span data-stu-id="cfa9f-111">This sample is not available for download.</span></span>
 
-## <a name="technologies"></a><span data-ttu-id="2a6cc-112">Technologien</span><span class="sxs-lookup"><span data-stu-id="2a6cc-112">Technologies</span></span>
+## <a name="technologies"></a><span data-ttu-id="cfa9f-112">Technologien</span><span class="sxs-lookup"><span data-stu-id="cfa9f-112">Technologies</span></span>
 
-<span data-ttu-id="2a6cc-113">**Programmiersprachen** – C++</span><span class="sxs-lookup"><span data-stu-id="2a6cc-113">**Programming languages** - C++</span></span>  
-<span data-ttu-id="2a6cc-114">**Programmiermodelle** – Windows-Runtime</span><span class="sxs-lookup"><span data-stu-id="2a6cc-114">**Programming models** - Windows Runtime</span></span>
+<span data-ttu-id="cfa9f-113">**Programmiersprachen** – C++</span><span class="sxs-lookup"><span data-stu-id="cfa9f-113">**Programming languages** - C++</span></span>  
+<span data-ttu-id="cfa9f-114">**Programmiermodelle** – Windows-Runtime</span><span class="sxs-lookup"><span data-stu-id="cfa9f-114">**Programming models** - Windows Runtime</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="2a6cc-115">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="2a6cc-115">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="cfa9f-115">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="cfa9f-115">Requirements</span></span>
 
-<span data-ttu-id="2a6cc-116">**Unterstützte Mindestversion (Client)** – Windows 10</span><span class="sxs-lookup"><span data-stu-id="2a6cc-116">**Minimum supported client** - Windows 10</span></span>                              
-<span data-ttu-id="2a6cc-117">**Unterstützte Mindestversion (Server)** – Windows Server 2016 Technical Preview</span><span class="sxs-lookup"><span data-stu-id="2a6cc-117">**Minimum supported server** - Windows Server 2016 Technical Preview</span></span> 
+<span data-ttu-id="cfa9f-116">**Unterstützte Mindestversion (Client)** – Windows 10</span><span class="sxs-lookup"><span data-stu-id="cfa9f-116">**Minimum supported client** - Windows 10</span></span>                              
+<span data-ttu-id="cfa9f-117">**Unterstützte Mindestversion (Server)** – Windows Server 2016 Technical Preview</span><span class="sxs-lookup"><span data-stu-id="cfa9f-117">**Minimum supported server** - Windows Server 2016 Technical Preview</span></span> 
 
 
-## <a name="view-the-code-c"></a><span data-ttu-id="2a6cc-118">Anzeigen des Codes (C++)</span><span class="sxs-lookup"><span data-stu-id="2a6cc-118">View the code (C++)</span></span>
+## <a name="view-the-code-c"></a><span data-ttu-id="cfa9f-118">Anzeigen des Codes (C++)</span><span class="sxs-lookup"><span data-stu-id="cfa9f-118">View the code (C++)</span></span>
 
-## <a name="basicloaderh"></a><span data-ttu-id="2a6cc-119">BasicLoader.h</span><span class="sxs-lookup"><span data-stu-id="2a6cc-119">BasicLoader.h</span></span>
+## <a name="basicloaderh"></a><span data-ttu-id="cfa9f-119">BasicLoader.h</span><span class="sxs-lookup"><span data-stu-id="cfa9f-119">BasicLoader.h</span></span>
 
 ```cpp
 //// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
@@ -226,7 +226,7 @@ private:
 };
 ```
 
-## <a name="basicloadercpp"></a><span data-ttu-id="2a6cc-120">BasicLoader.cpp</span><span class="sxs-lookup"><span data-stu-id="2a6cc-120">BasicLoader.cpp</span></span>
+## <a name="basicloadercpp"></a><span data-ttu-id="cfa9f-120">BasicLoader.cpp</span><span class="sxs-lookup"><span data-stu-id="cfa9f-120">BasicLoader.cpp</span></span>
 
 
 ```cpp

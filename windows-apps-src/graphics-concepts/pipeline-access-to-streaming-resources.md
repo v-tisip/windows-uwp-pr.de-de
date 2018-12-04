@@ -8,22 +8,22 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6d95ffc14e9ae6d4ea59a4b3bdc33fd215cb61be
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8334863"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473667"
 ---
-# <a name="pipeline-access-to-streaming-resources"></a><span data-ttu-id="2c692-104">Pipelinezugriff auf Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="2c692-104">Pipeline access to streaming resources</span></span>
+# <a name="pipeline-access-to-streaming-resources"></a><span data-ttu-id="e1ae0-104">Pipelinezugriff auf Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="e1ae0-104">Pipeline access to streaming resources</span></span>
 
 
-<span data-ttu-id="2c692-105">Streamingressourcen können in Shaderressourcenansichten (SRV), Renderzielansichten (RTV), Tiefenschablonenansichten (DSV) und in unsortierten Zugriffsansichten (UAV) sowie in bestimmten Bindungen ohne Ansichten, z.B. Vertex-Pufferbindungen, verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="2c692-105">Streaming resources can be used in shader resource views (SRV), render target views (RTV), depth stencil views (DSV) and unordered access views (UAV), as well as some bind points where views aren't used, such as vertex buffer bindings.</span></span> <span data-ttu-id="2c692-106">Die Liste der unterstützten Bindungen finden Sie unter [Parameter für das Erstellen von Streamingressourcen](streaming-resource-creation-parameters.md).</span><span class="sxs-lookup"><span data-stu-id="2c692-106">For the list of supported bindings, see [Streaming resource creation parameters](streaming-resource-creation-parameters.md).</span></span> <span data-ttu-id="2c692-107">Die verschiedenen D3D-Kopiervorgänge funktionieren ebenfalls bei Streamingressourcen.</span><span class="sxs-lookup"><span data-stu-id="2c692-107">The various D3D Copy operations also work on streaming resources.</span></span>
+<span data-ttu-id="e1ae0-105">Streamingressourcen können in Shaderressourcenansichten (SRV), Renderzielansichten (RTV), Tiefenschablonenansichten (DSV) und in unsortierten Zugriffsansichten (UAV) sowie in bestimmten Bindungen ohne Ansichten, z.B. Vertex-Pufferbindungen, verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="e1ae0-105">Streaming resources can be used in shader resource views (SRV), render target views (RTV), depth stencil views (DSV) and unordered access views (UAV), as well as some bind points where views aren't used, such as vertex buffer bindings.</span></span> <span data-ttu-id="e1ae0-106">Die Liste der unterstützten Bindungen finden Sie unter [Parameter für das Erstellen von Streamingressourcen](streaming-resource-creation-parameters.md).</span><span class="sxs-lookup"><span data-stu-id="e1ae0-106">For the list of supported bindings, see [Streaming resource creation parameters](streaming-resource-creation-parameters.md).</span></span> <span data-ttu-id="e1ae0-107">Die verschiedenen D3D-Kopiervorgänge funktionieren ebenfalls bei Streamingressourcen.</span><span class="sxs-lookup"><span data-stu-id="e1ae0-107">The various D3D Copy operations also work on streaming resources.</span></span>
 
-<span data-ttu-id="2c692-108">Wenn mehrere Kachelkoordinaten in eine oder mehreren Ansichten an dieselbe Speicheradresse gebunden ist, finden Lese- und Schreibvorgänge aus unterschiedlichen Pfaden in einer nicht deterministischen und nicht wiederholbaren Speicherzugriff-Reihenfolge statt.</span><span class="sxs-lookup"><span data-stu-id="2c692-108">If multiple tile coordinates in one or more views is bound to the same memory location, reads and writes from different paths to the same memory will occur in a non-deterministic and non-repeatable order of memory accesses.</span></span>
+<span data-ttu-id="e1ae0-108">Wenn mehrere Kachelkoordinaten in eine oder mehreren Ansichten an dieselbe Speicheradresse gebunden ist, finden Lese- und Schreibvorgänge aus unterschiedlichen Pfaden in einer nicht deterministischen und nicht wiederholbaren Speicherzugriff-Reihenfolge statt.</span><span class="sxs-lookup"><span data-stu-id="e1ae0-108">If multiple tile coordinates in one or more views is bound to the same memory location, reads and writes from different paths to the same memory will occur in a non-deterministic and non-repeatable order of memory accesses.</span></span>
 
-<span data-ttu-id="2c692-109">Wenn alle Kacheln hinter einem Speicherzugriffsbedarf von einem Shader eindeutigen Kacheln zugeordnet sind, entspricht das Verhalten für alle Implementierungen der Oberfläche dem Verhalten gleicher Speicherinhalte ohne Kacheln.</span><span class="sxs-lookup"><span data-stu-id="2c692-109">If all tiles behind a memory access footprint from a shader are mapped to unique tiles, behavior is identical on all implementations to the surface having the same memory contents in a non-tiled fashion.</span></span>
+<span data-ttu-id="e1ae0-109">Wenn alle Kacheln hinter einem Speicherzugriffsbedarf von einem Shader eindeutigen Kacheln zugeordnet sind, entspricht das Verhalten für alle Implementierungen der Oberfläche dem Verhalten gleicher Speicherinhalte ohne Kacheln.</span><span class="sxs-lookup"><span data-stu-id="e1ae0-109">If all tiles behind a memory access footprint from a shader are mapped to unique tiles, behavior is identical on all implementations to the surface having the same memory contents in a non-tiled fashion.</span></span>
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span data-ttu-id="2c692-110"><span id="in-this-section"></span>In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="2c692-110"><span id="in-this-section"></span>In this section</span></span>
+## <a name="span-idin-this-sectionspanin-this-section"></a><span data-ttu-id="e1ae0-110"><span id="in-this-section"></span>In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="e1ae0-110"><span id="in-this-section"></span>In this section</span></span>
 
 
 <table>
@@ -33,44 +33,44 @@ ms.locfileid: "8334863"
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><span data-ttu-id="2c692-111">Thema</span><span class="sxs-lookup"><span data-stu-id="2c692-111">Topic</span></span></th>
-<th align="left"><span data-ttu-id="2c692-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2c692-112">Description</span></span></th>
+<th align="left"><span data-ttu-id="e1ae0-111">Thema</span><span class="sxs-lookup"><span data-stu-id="e1ae0-111">Topic</span></span></th>
+<th align="left"><span data-ttu-id="e1ae0-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e1ae0-112">Description</span></span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="srv-behavior-with-non-mapped-tiles.md"><span data-ttu-id="2c692-113">SRV-verhalten bei nicht zugeordneten Kacheln</span><span class="sxs-lookup"><span data-stu-id="2c692-113">SRV behavior with non-mapped tiles</span></span></a></p></td>
-<td align="left"><p><span data-ttu-id="2c692-114">Das Verhalten der Lesevorgänge der Shaderressourcenansicht (SRV), die nicht zugeordnete Kacheln umfassen, hängt von der Ebene der Hardwareunterstützung ab.</span><span class="sxs-lookup"><span data-stu-id="2c692-114">Behavior of shader resource view (SRV) reads that involve non-mapped tiles depends on the level of hardware support.</span></span></p></td>
+<td align="left"><p><a href="srv-behavior-with-non-mapped-tiles.md"><span data-ttu-id="e1ae0-113">SRV-verhalten bei nicht zugeordneten Kacheln</span><span class="sxs-lookup"><span data-stu-id="e1ae0-113">SRV behavior with non-mapped tiles</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="e1ae0-114">Das Verhalten der Lesevorgänge der Shaderressourcenansicht (SRV), die nicht zugeordnete Kacheln umfassen, hängt von der Ebene der Hardwareunterstützung ab.</span><span class="sxs-lookup"><span data-stu-id="e1ae0-114">Behavior of shader resource view (SRV) reads that involve non-mapped tiles depends on the level of hardware support.</span></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="uav-behavior-with-non-mapped-tiles.md"><span data-ttu-id="2c692-115">UAV-verhalten bei nicht zugeordneten Kacheln</span><span class="sxs-lookup"><span data-stu-id="2c692-115">UAV behavior with non-mapped tiles</span></span></a></p></td>
-<td align="left"><p><span data-ttu-id="2c692-116">Das Verhalten der Lese- und Schreibvorgänge der unsortierten Zugriffsansicht (UAV) hängt von der Ebene der Hardwareunterstützung ab.</span><span class="sxs-lookup"><span data-stu-id="2c692-116">Behavior of unordered access view (UAV) reads and writes depends on the level of hardware support.</span></span></p></td>
+<td align="left"><p><a href="uav-behavior-with-non-mapped-tiles.md"><span data-ttu-id="e1ae0-115">UAV-verhalten bei nicht zugeordneten Kacheln</span><span class="sxs-lookup"><span data-stu-id="e1ae0-115">UAV behavior with non-mapped tiles</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="e1ae0-116">Das Verhalten der Lese- und Schreibvorgänge der unsortierten Zugriffsansicht (UAV) hängt von der Ebene der Hardwareunterstützung ab.</span><span class="sxs-lookup"><span data-stu-id="e1ae0-116">Behavior of unordered access view (UAV) reads and writes depends on the level of hardware support.</span></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="rasterizer-behavior-with-non-mapped-tiles.md"><span data-ttu-id="2c692-117">Rasterizerverhalten bei nicht zugeordneten Kacheln</span><span class="sxs-lookup"><span data-stu-id="2c692-117">Rasterizer behavior with non-mapped tiles</span></span></a></p></td>
-<td align="left"><p><span data-ttu-id="2c692-118">Dieser Abschnittbeschreibt Rasterizerverhalten bei nicht zugeordneten Kacheln.</span><span class="sxs-lookup"><span data-stu-id="2c692-118">This section describes rasterizer behavior with non-mapped tiles.</span></span></p></td>
+<td align="left"><p><a href="rasterizer-behavior-with-non-mapped-tiles.md"><span data-ttu-id="e1ae0-117">Rasterizerverhalten bei nicht zugeordneten Kacheln</span><span class="sxs-lookup"><span data-stu-id="e1ae0-117">Rasterizer behavior with non-mapped tiles</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="e1ae0-118">Dieser Abschnittbeschreibt Rasterizerverhalten bei nicht zugeordneten Kacheln.</span><span class="sxs-lookup"><span data-stu-id="e1ae0-118">This section describes rasterizer behavior with non-mapped tiles.</span></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="tile-access-limitations-with-duplicate-mappings.md"><span data-ttu-id="2c692-119">Kachelzugriffseinschränkungen bei doppelten Zuordnungen</span><span class="sxs-lookup"><span data-stu-id="2c692-119">Tile access limitations with duplicate mappings</span></span></a></p></td>
-<td align="left"><p><span data-ttu-id="2c692-120">Bei doppelten Zuordnungen gibt es Kachelzugriffseinschränkungen, wie z.B. beim Kopieren von Streamingressourcen mit Quellen- und Zielüberlappung oder beim Rendern von Kacheln innerhalb des Bereichs Rendern freigegeben.</span><span class="sxs-lookup"><span data-stu-id="2c692-120">There are limitations on tile access with duplicate mappings, such as when copying streaming resources with overlapping source and destination, or when rendering to tiles shared within the render area.</span></span></p></td>
+<td align="left"><p><a href="tile-access-limitations-with-duplicate-mappings.md"><span data-ttu-id="e1ae0-119">Kachelzugriffseinschränkungen bei doppelten Zuordnungen</span><span class="sxs-lookup"><span data-stu-id="e1ae0-119">Tile access limitations with duplicate mappings</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="e1ae0-120">Bei doppelten Zuordnungen gibt es Kachelzugriffseinschränkungen, wie z.B. beim Kopieren von Streamingressourcen mit Quellen- und Zielüberlappung oder beim Rendern von Kacheln innerhalb des Bereichs Rendern freigegeben.</span><span class="sxs-lookup"><span data-stu-id="e1ae0-120">There are limitations on tile access with duplicate mappings, such as when copying streaming resources with overlapping source and destination, or when rendering to tiles shared within the render area.</span></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="streaming-resources-texture-sampling-features.md"><span data-ttu-id="2c692-121">Textursampling-Features für Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="2c692-121">Streaming resources texture sampling features</span></span></a></p></td>
-<td align="left"><p><span data-ttu-id="2c692-122">Textursampling-Features für Streamingressourcen enthalten: Abrufen von Feedback zum Shaderstatus zugeordneter Bereiche, Überprüfen, ob alle Daten, auf die zugegriffen wird, in der Ressource zugeordnet wurden, Klammerung, damit Shader Bereiche in Mipmap-Streamingressourcen vermeiden, die nicht zugeordnet wurden, und Ermitteln der minimalen Detailtiefe (Level-of-Detail, LOD), die für den gesamten Speicherbedarf einer Texturfilterung vollständig zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="2c692-122">Streaming resources texture sampling features include getting shader status feedback about mapped areas, checking whether all data being accessed was mapped in the resource, clamping to help shaders avoid areas in mipmapped streaming resources that are known to be non-mapped, and discovering what the minimum LOD that is fully mapped for an entire texture filter footprint will be.</span></span></p></td>
+<td align="left"><p><a href="streaming-resources-texture-sampling-features.md"><span data-ttu-id="e1ae0-121">Textursampling-Features für Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="e1ae0-121">Streaming resources texture sampling features</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="e1ae0-122">Textursampling-Features für Streamingressourcen enthalten: Abrufen von Feedback zum Shaderstatus zugeordneter Bereiche, Überprüfen, ob alle Daten, auf die zugegriffen wird, in der Ressource zugeordnet wurden, Klammerung, damit Shader Bereiche in Mipmap-Streamingressourcen vermeiden, die nicht zugeordnet wurden, und Ermitteln der minimalen Detailtiefe (Level-of-Detail, LOD), die für den gesamten Speicherbedarf einer Texturfilterung vollständig zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="e1ae0-122">Streaming resources texture sampling features include getting shader status feedback about mapped areas, checking whether all data being accessed was mapped in the resource, clamping to help shaders avoid areas in mipmapped streaming resources that are known to be non-mapped, and discovering what the minimum LOD that is fully mapped for an entire texture filter footprint will be.</span></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="hlsl-streaming-resources-exposure.md"><span data-ttu-id="2c692-123">Belichtung von HLSL-Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="2c692-123">HLSL streaming resources exposure</span></span></a></p></td>
-<td align="left"><p><span data-ttu-id="2c692-124">Eine spezielle Syntax für die Microsoft High LevelShader Language (HLSL) ist für die Unterstützung von Streaming Ressourcen in <a href="https://msdn.microsoft.com/library/windows/desktop/ff471356">Shadermodell 5</a> erforderlich.</span><span class="sxs-lookup"><span data-stu-id="2c692-124">A specific Microsoft High Level Shader Language (HLSL) syntax is required to support streaming resources in <a href="https://msdn.microsoft.com/library/windows/desktop/ff471356">Shader Model 5</a>.</span></span></p></td>
+<td align="left"><p><a href="hlsl-streaming-resources-exposure.md"><span data-ttu-id="e1ae0-123">Belichtung von HLSL-Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="e1ae0-123">HLSL streaming resources exposure</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="e1ae0-124">Eine spezielle Syntax für die Microsoft High LevelShader Language (HLSL) ist für die Unterstützung von Streaming Ressourcen in <a href="https://msdn.microsoft.com/library/windows/desktop/ff471356">Shadermodell 5</a> erforderlich.</span><span class="sxs-lookup"><span data-stu-id="e1ae0-124">A specific Microsoft High Level Shader Language (HLSL) syntax is required to support streaming resources in <a href="https://msdn.microsoft.com/library/windows/desktop/ff471356">Shader Model 5</a>.</span></span></p></td>
 </tr>
 </tbody>
 </table>
 
  
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="2c692-125"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="2c692-125"><span id="related-topics"></span>Related topics</span></span>
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="e1ae0-125"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="e1ae0-125"><span id="related-topics"></span>Related topics</span></span>
 
 
-[<span data-ttu-id="2c692-126">Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="2c692-126">Streaming resources</span></span>](streaming-resources.md)
+[<span data-ttu-id="e1ae0-126">Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="e1ae0-126">Streaming resources</span></span>](streaming-resources.md)
 
  
 

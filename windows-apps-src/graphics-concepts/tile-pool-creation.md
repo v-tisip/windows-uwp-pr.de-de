@@ -8,23 +8,23 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ce3824ab2d435b42df9586a6c229b68db10a0c9
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8209601"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8467119"
 ---
-# <a name="tile-pool-creation"></a><span data-ttu-id="82dda-105">Erstellung eines Kachelpools</span><span class="sxs-lookup"><span data-stu-id="82dda-105">Tile pool creation</span></span>
+# <a name="tile-pool-creation"></a><span data-ttu-id="d7e05-105">Erstellung eines Kachelpools</span><span class="sxs-lookup"><span data-stu-id="d7e05-105">Tile pool creation</span></span>
 
 
-<span data-ttu-id="82dda-106">Anwendungen können einen oder mehrere Kachelpools pro Direct3D-Gerät erstellen.</span><span class="sxs-lookup"><span data-stu-id="82dda-106">Applications can create one or more tile pools per Direct3D device.</span></span> <span data-ttu-id="82dda-107">Die Gesamtgröße jedes kachelpools ist auf Direct3D11s Ressourcengröße beschränkt, die ungefähr 1/4 des Grafikprozessor (GPU) RAMS entspricht beschränkt.</span><span class="sxs-lookup"><span data-stu-id="82dda-107">The total size of each tile pool is restricted to Direct3D11's resource size limit, which is roughly 1/4 of graphics processing unit (GPU) RAM.</span></span>
+<span data-ttu-id="d7e05-106">Anwendungen können einen oder mehrere Kachelpools pro Direct3D-Gerät erstellen.</span><span class="sxs-lookup"><span data-stu-id="d7e05-106">Applications can create one or more tile pools per Direct3D device.</span></span> <span data-ttu-id="d7e05-107">Die Gesamtgröße jedes kachelpools ist auf Direct3D11s Ressourcengröße beschränkt, die ungefähr 1/4 des Grafikprozessor (GPU) RAMS entspricht beschränkt.</span><span class="sxs-lookup"><span data-stu-id="d7e05-107">The total size of each tile pool is restricted to Direct3D11's resource size limit, which is roughly 1/4 of graphics processing unit (GPU) RAM.</span></span>
 
-<span data-ttu-id="82dda-108">Ein Kachelpool besteht aus 64KB großen Kacheln, aber das Betriebssystem (Anzeigetreiber) verwaltet im Hintergrund den gesamten Pool als ein oder mehrere Vergaben – die Aufteilung ist nicht für Anwendungen sichtbar.</span><span class="sxs-lookup"><span data-stu-id="82dda-108">A tile pool is made of 64KB tiles, but the operating system (display driver) manages the entire pool as one or more allocations behind the scenes—the breakdown is not visible to applications.</span></span> <span data-ttu-id="82dda-109">Streamingressourcen definieren den Inhalt durch das Zeigen auf Kacheln in einem Kachelpool.</span><span class="sxs-lookup"><span data-stu-id="82dda-109">Streaming resources define content by pointing at tiles within a tile pool.</span></span> <span data-ttu-id="82dda-110">Das Aufheben der Zuordnung einer Kachel über eine Streamingressource erfolgt durch das Zeigen der Kachel auf **NULL**.</span><span class="sxs-lookup"><span data-stu-id="82dda-110">Unmapping a tile from a streaming resource is done by pointing the tile to **NULL**.</span></span> <span data-ttu-id="82dda-111">Solche nicht zugeordneten Kacheln unterliegen Regeln, die über das Verhalten von Lese- und Schreibvorgängen bestimmen. Mehr Informationen finden Sie im [Vergleich von Kachelpoolressourcen und der Gefahrennachverfolgung](hazard-tracking-versus-tile-pool-resources.md).</span><span class="sxs-lookup"><span data-stu-id="82dda-111">Such unmapped tiles have rules about the behavior of reads or writes; see [Hazard tracking versus tile pool resources](hazard-tracking-versus-tile-pool-resources.md).</span></span>
+<span data-ttu-id="d7e05-108">Ein Kachelpool besteht aus 64KB großen Kacheln, aber das Betriebssystem (Anzeigetreiber) verwaltet im Hintergrund den gesamten Pool als ein oder mehrere Vergaben – die Aufteilung ist nicht für Anwendungen sichtbar.</span><span class="sxs-lookup"><span data-stu-id="d7e05-108">A tile pool is made of 64KB tiles, but the operating system (display driver) manages the entire pool as one or more allocations behind the scenes—the breakdown is not visible to applications.</span></span> <span data-ttu-id="d7e05-109">Streamingressourcen definieren den Inhalt durch das Zeigen auf Kacheln in einem Kachelpool.</span><span class="sxs-lookup"><span data-stu-id="d7e05-109">Streaming resources define content by pointing at tiles within a tile pool.</span></span> <span data-ttu-id="d7e05-110">Das Aufheben der Zuordnung einer Kachel über eine Streamingressource erfolgt durch das Zeigen der Kachel auf **NULL**.</span><span class="sxs-lookup"><span data-stu-id="d7e05-110">Unmapping a tile from a streaming resource is done by pointing the tile to **NULL**.</span></span> <span data-ttu-id="d7e05-111">Solche nicht zugeordneten Kacheln unterliegen Regeln, die über das Verhalten von Lese- und Schreibvorgängen bestimmen. Mehr Informationen finden Sie im [Vergleich von Kachelpoolressourcen und der Gefahrennachverfolgung](hazard-tracking-versus-tile-pool-resources.md).</span><span class="sxs-lookup"><span data-stu-id="d7e05-111">Such unmapped tiles have rules about the behavior of reads or writes; see [Hazard tracking versus tile pool resources](hazard-tracking-versus-tile-pool-resources.md).</span></span>
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="82dda-112"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="82dda-112"><span id="related-topics"></span>Related topics</span></span>
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="d7e05-112"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="d7e05-112"><span id="related-topics"></span>Related topics</span></span>
 
 
-[<span data-ttu-id="82dda-113">Zuordnungen erfolgen in einen Kachelpool</span><span class="sxs-lookup"><span data-stu-id="82dda-113">Mappings are into a tile pool</span></span>](mappings-are-into-a-tile-pool.md)
+[<span data-ttu-id="d7e05-113">Zuordnungen erfolgen in einen Kachelpool</span><span class="sxs-lookup"><span data-stu-id="d7e05-113">Mappings are into a tile pool</span></span>](mappings-are-into-a-tile-pool.md)
 
  
 

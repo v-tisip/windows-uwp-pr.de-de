@@ -8,28 +8,28 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f52a032b7fe61df67aaf35c57b2ca64ac8eef6a
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8191796"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8469828"
 ---
-# <a name="texture-resources"></a><span data-ttu-id="705fc-104">Texturressourcen</span><span class="sxs-lookup"><span data-stu-id="705fc-104">Texture resources</span></span>
+# <a name="texture-resources"></a><span data-ttu-id="b5ade-104">Texturressourcen</span><span class="sxs-lookup"><span data-stu-id="b5ade-104">Texture resources</span></span>
 
 
-<span data-ttu-id="705fc-105">Texturen sind eine Art von Ressource, die zum Rendern verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="705fc-105">Textures are a type of resource used for rendering.</span></span>
+<span data-ttu-id="b5ade-105">Texturen sind eine Art von Ressource, die zum Rendern verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="b5ade-105">Textures are a type of resource used for rendering.</span></span>
 
-## <a name="span-idrenderingwithtextureresourcesspanspan-idrenderingwithtextureresourcesspanspan-idrenderingwithtextureresourcesspanrendering-with-texture-resources"></a><span data-ttu-id="705fc-106"><span id="Rendering_with_Texture_Resources"></span><span id="rendering_with_texture_resources"></span><span id="RENDERING_WITH_TEXTURE_RESOURCES"></span>Rendern mit Texturressourcen</span><span class="sxs-lookup"><span data-stu-id="705fc-106"><span id="Rendering_with_Texture_Resources"></span><span id="rendering_with_texture_resources"></span><span id="RENDERING_WITH_TEXTURE_RESOURCES"></span>Rendering with texture resources</span></span>
-
-
-<span data-ttu-id="705fc-107">Direct3D unterstützt mehrere Texturmischungen mithilfe des Konzepts der Texturphasen.</span><span class="sxs-lookup"><span data-stu-id="705fc-107">Direct3D supports multiple texture blending through the concept of texture stages.</span></span> <span data-ttu-id="705fc-108">Jeder Texturphase enthält eine Textur und Vorgänge, die darauf angewendet werden können.</span><span class="sxs-lookup"><span data-stu-id="705fc-108">Each texture stage contains a texture and operations that can be performed on the texture.</span></span> <span data-ttu-id="705fc-109">Die Texturen in den Texturphasen bilden den Satz der aktuell verwendeten Texturen.</span><span class="sxs-lookup"><span data-stu-id="705fc-109">The textures in the texture stages form the set of current textures.</span></span> <span data-ttu-id="705fc-110">Siehe [Texturmischung](texture-blending.md).</span><span class="sxs-lookup"><span data-stu-id="705fc-110">See [Texture blending](texture-blending.md).</span></span> <span data-ttu-id="705fc-111">Der Zustand jeder einzelnen Textur ist in der Texturphase eingekapselt.</span><span class="sxs-lookup"><span data-stu-id="705fc-111">The state of each texture is encapsulated in its texture stage.</span></span>
-
-<span data-ttu-id="705fc-112">Ihre Anwendung kann auch die Texturperspektive und die Texturfilterungszustände einrichten.</span><span class="sxs-lookup"><span data-stu-id="705fc-112">Your application can also set the texture perspective and texture filtering states.</span></span> <span data-ttu-id="705fc-113">Siehe [Texturfilterung](texture-filtering.md).</span><span class="sxs-lookup"><span data-stu-id="705fc-113">See [Texture filtering](texture-filtering.md).</span></span>
-
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="705fc-114"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="705fc-114"><span id="related-topics"></span>Related topics</span></span>
+## <a name="span-idrenderingwithtextureresourcesspanspan-idrenderingwithtextureresourcesspanspan-idrenderingwithtextureresourcesspanrendering-with-texture-resources"></a><span data-ttu-id="b5ade-106"><span id="Rendering_with_Texture_Resources"></span><span id="rendering_with_texture_resources"></span><span id="RENDERING_WITH_TEXTURE_RESOURCES"></span>Rendern mit Texturressourcen</span><span class="sxs-lookup"><span data-stu-id="b5ade-106"><span id="Rendering_with_Texture_Resources"></span><span id="rendering_with_texture_resources"></span><span id="RENDERING_WITH_TEXTURE_RESOURCES"></span>Rendering with texture resources</span></span>
 
 
-[<span data-ttu-id="705fc-115">Texturen</span><span class="sxs-lookup"><span data-stu-id="705fc-115">Textures</span></span>](textures.md)
+<span data-ttu-id="b5ade-107">Direct3D unterstützt mehrere Texturmischungen mithilfe des Konzepts der Texturphasen.</span><span class="sxs-lookup"><span data-stu-id="b5ade-107">Direct3D supports multiple texture blending through the concept of texture stages.</span></span> <span data-ttu-id="b5ade-108">Jeder Texturphase enthält eine Textur und Vorgänge, die darauf angewendet werden können.</span><span class="sxs-lookup"><span data-stu-id="b5ade-108">Each texture stage contains a texture and operations that can be performed on the texture.</span></span> <span data-ttu-id="b5ade-109">Die Texturen in den Texturphasen bilden den Satz der aktuell verwendeten Texturen.</span><span class="sxs-lookup"><span data-stu-id="b5ade-109">The textures in the texture stages form the set of current textures.</span></span> <span data-ttu-id="b5ade-110">Siehe [Texturmischung](texture-blending.md).</span><span class="sxs-lookup"><span data-stu-id="b5ade-110">See [Texture blending](texture-blending.md).</span></span> <span data-ttu-id="b5ade-111">Der Zustand jeder einzelnen Textur ist in der Texturphase eingekapselt.</span><span class="sxs-lookup"><span data-stu-id="b5ade-111">The state of each texture is encapsulated in its texture stage.</span></span>
+
+<span data-ttu-id="b5ade-112">Ihre Anwendung kann auch die Texturperspektive und die Texturfilterungszustände einrichten.</span><span class="sxs-lookup"><span data-stu-id="b5ade-112">Your application can also set the texture perspective and texture filtering states.</span></span> <span data-ttu-id="b5ade-113">Siehe [Texturfilterung](texture-filtering.md).</span><span class="sxs-lookup"><span data-stu-id="b5ade-113">See [Texture filtering](texture-filtering.md).</span></span>
+
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="b5ade-114"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="b5ade-114"><span id="related-topics"></span>Related topics</span></span>
+
+
+[<span data-ttu-id="b5ade-115">Texturen</span><span class="sxs-lookup"><span data-stu-id="b5ade-115">Textures</span></span>](textures.md)
 
  
 

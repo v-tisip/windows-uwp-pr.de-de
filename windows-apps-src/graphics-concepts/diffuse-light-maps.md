@@ -8,23 +8,23 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0605de5313b59689c19b9560d10e088d26d29b52
-ms.sourcegitcommit: 89ff8ff88ef58f4fe6d3b1368fe94f62e59118ad
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "8190470"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8467773"
 ---
-# <a name="diffuse-light-maps"></a><span data-ttu-id="03c7f-104">Diffuse Lichtzuordnungen</span><span class="sxs-lookup"><span data-stu-id="03c7f-104">Diffuse light maps</span></span>
+# <a name="diffuse-light-maps"></a><span data-ttu-id="47c28-104">Diffuse Lichtzuordnungen</span><span class="sxs-lookup"><span data-stu-id="47c28-104">Diffuse light maps</span></span>
 
 
-<span data-ttu-id="03c7f-105">Matte Oberflächen haben eine diffuse Lichtreflektion.</span><span class="sxs-lookup"><span data-stu-id="03c7f-105">Matte surfaces have diffuse light reflection.</span></span> <span data-ttu-id="03c7f-106">Die Helligkeit von diffusem Licht ist von der Entfernung zur Lichtquelle und dem Winkel zwischen der Oberflächennormale und dem Richtungsvektor der Lichtquelle abhängig.</span><span class="sxs-lookup"><span data-stu-id="03c7f-106">The brightness of diffuse light depends on the distance from the light source and the angle between the surface normal and the light source direction vector.</span></span> <span data-ttu-id="03c7f-107">Textur-Lichtzuordnungen können eine komplexe diffuse Beleuchtung simulieren.</span><span class="sxs-lookup"><span data-stu-id="03c7f-107">Texture light maps can simulate complex diffuse lighting.</span></span>
+<span data-ttu-id="47c28-105">Matte Oberflächen haben eine diffuse Lichtreflektion.</span><span class="sxs-lookup"><span data-stu-id="47c28-105">Matte surfaces have diffuse light reflection.</span></span> <span data-ttu-id="47c28-106">Die Helligkeit von diffusem Licht ist von der Entfernung zur Lichtquelle und dem Winkel zwischen der Oberflächennormale und dem Richtungsvektor der Lichtquelle abhängig.</span><span class="sxs-lookup"><span data-stu-id="47c28-106">The brightness of diffuse light depends on the distance from the light source and the angle between the surface normal and the light source direction vector.</span></span> <span data-ttu-id="47c28-107">Textur-Lichtzuordnungen können eine komplexe diffuse Beleuchtung simulieren.</span><span class="sxs-lookup"><span data-stu-id="47c28-107">Texture light maps can simulate complex diffuse lighting.</span></span>
 
-<span data-ttu-id="03c7f-108">Die von Beleuchtungsberechnungen simulierten diffusen Beleuchtungseffekte erzeugen nur allgemeine Effekte.</span><span class="sxs-lookup"><span data-stu-id="03c7f-108">The diffuse lighting effects simulated by lighting calculations produce only general effects.</span></span> <span data-ttu-id="03c7f-109">Ihre Anwendung kann über Textur-Lichtzuordnungen eine komplexere diffuse Beleuchtung simulieren.</span><span class="sxs-lookup"><span data-stu-id="03c7f-109">Your application can simulate more complex diffuse lighting with texture light maps.</span></span>
+<span data-ttu-id="47c28-108">Die von Beleuchtungsberechnungen simulierten diffusen Beleuchtungseffekte erzeugen nur allgemeine Effekte.</span><span class="sxs-lookup"><span data-stu-id="47c28-108">The diffuse lighting effects simulated by lighting calculations produce only general effects.</span></span> <span data-ttu-id="47c28-109">Ihre Anwendung kann über Textur-Lichtzuordnungen eine komplexere diffuse Beleuchtung simulieren.</span><span class="sxs-lookup"><span data-stu-id="47c28-109">Your application can simulate more complex diffuse lighting with texture light maps.</span></span>
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="03c7f-110"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="03c7f-110"><span id="related-topics"></span>Related topics</span></span>
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span data-ttu-id="47c28-110"><span id="related-topics"></span>Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="47c28-110"><span id="related-topics"></span>Related topics</span></span>
 
 
-[<span data-ttu-id="03c7f-111">Lichtzuordnung mit Texturen</span><span class="sxs-lookup"><span data-stu-id="03c7f-111">Light mapping with textures</span></span>](light-mapping-with-textures.md)
+[<span data-ttu-id="47c28-111">Lichtzuordnung mit Texturen</span><span class="sxs-lookup"><span data-stu-id="47c28-111">Light mapping with textures</span></span>](light-mapping-with-textures.md)
 
  
 
