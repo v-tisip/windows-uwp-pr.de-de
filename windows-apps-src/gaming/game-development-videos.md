@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Videos, GDC, build
 ms.localizationpriority: medium
 ms.openlocfilehash: de04b0b272bbc6889c5fb9b13e5487902a77e98c
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8348709"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8483130"
 ---
 # <a name="game-development-videos"></a>Videos zur Spieleentwicklung
 
@@ -107,7 +107,7 @@ Neu bei Verwaltungssysteme Version? Einführung in Git und Git virtuellen Dateis
 * [Spielmodus und der Entwicklung der plattformübergreifenden UWP GameDevelopment](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-004) – Erik Walston
 * [Xbox Live für AllGame](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-005) - Brian Tyler
 * [Erfüllen der zusammengeführten Microsoft Store für Windows-AndXbox](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-006) - Krupa Poobala-Chandran
-* [Windows Holographic Rendering: One SDK to Target VR and AREcosystems](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-008) - Alex Pfaffe, Alex Turner
+* [Hologrammen: ein SDK für VR- und AREcosystems](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-008) – Alex Pfaffe, Alex Tuner
 * [Erreichen mehr Spielern über Xbox-Eingabehilfen auf Xbox One AndPC](https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-009) – Evelyn Thomas
 
 ## <a name="gdc-2015-game-dev-session-videos"></a>Videos zu GDC2015-Spieleentwicklersitzungen
