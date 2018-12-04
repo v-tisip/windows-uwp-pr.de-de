@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Store-Dienste, Microsoft Store-Rezensions-API, Add-On-Käufe
 ms.localizationpriority: medium
 ms.openlocfilehash: c08dcda52940f0218b6fdb5be147f058eca7479a
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8342327"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8485866"
 ---
 # <a name="submit-responses-to-reviews"></a>Antworten auf Rezensionen übermitteln
 
