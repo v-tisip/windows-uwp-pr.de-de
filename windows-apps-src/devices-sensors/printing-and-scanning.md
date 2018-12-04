@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, gedruckt wird, 3dprinting, 3D-Druck
 ms.localizationpriority: medium
 ms.openlocfilehash: 5cfc91ae6f74117c6c3414691137b334cfd0dc4f
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8344185"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8475151"
 ---
 # <a name="printing-and-scanning"></a><span data-ttu-id="59c02-104">Drucken und Scannen</span><span class="sxs-lookup"><span data-stu-id="59c02-104">Printing and scanning</span></span>
 

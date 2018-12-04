@@ -9,23 +9,23 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 5790e9fcd05cb873958e53786e3282094ec0a3d4
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8345207"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8477808"
 ---
-# <a name="app-settings-and-data"></a><span data-ttu-id="99a01-103">App-Einstellungen und Daten</span><span class="sxs-lookup"><span data-stu-id="99a01-103">App settings and data</span></span>
+# <a name="app-settings-and-data"></a><span data-ttu-id="50859-103">App-Einstellungen und Daten</span><span class="sxs-lookup"><span data-stu-id="50859-103">App settings and data</span></span>
 
 
 
 
-<span data-ttu-id="99a01-104">Dieser Abschnitt enthält Richtlinien für die Darstellung von App-Einstellungen auf der Benutzeroberfläche und das Speichern dieser Einstellungen als App-Daten.</span><span class="sxs-lookup"><span data-stu-id="99a01-104">This section contains user experience guidelines for presenting app settings and storing those settings as app data.</span></span>
+<span data-ttu-id="50859-104">Dieser Abschnitt enthält Richtlinien für die Darstellung von App-Einstellungen auf der Benutzeroberfläche und das Speichern dieser Einstellungen als App-Daten.</span><span class="sxs-lookup"><span data-stu-id="50859-104">This section contains user experience guidelines for presenting app settings and storing those settings as app data.</span></span>
 
-<span data-ttu-id="99a01-105">App-Einstellungen sind die vom Benutzer anpassbaren Teile Ihrer UWP-App (Universelle Windows-Plattform).</span><span class="sxs-lookup"><span data-stu-id="99a01-105">App settings are the user-customizable portions of your Universal Windows Platform (UWP) app.</span></span> <span data-ttu-id="99a01-106">Beispielsweise kann ein Benutzer in einer Newsreader-App angeben, welche neuen Quellen oder wie viele Spalten auf dem Bildschirm angezeigt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="99a01-106">For example, a news reader app might let the user specify which news sources to display or how many columns to display on the screen.</span></span>
+<span data-ttu-id="50859-105">App-Einstellungen sind die vom Benutzer anpassbaren Teile Ihrer UWP-App (Universelle Windows-Plattform).</span><span class="sxs-lookup"><span data-stu-id="50859-105">App settings are the user-customizable portions of your Universal Windows Platform (UWP) app.</span></span> <span data-ttu-id="50859-106">Beispielsweise kann ein Benutzer in einer Newsreader-App angeben, welche neuen Quellen oder wie viele Spalten auf dem Bildschirm angezeigt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="50859-106">For example, a news reader app might let the user specify which news sources to display or how many columns to display on the screen.</span></span>
 
-<span data-ttu-id="99a01-107">App-Daten werden von der App selbst erstellt und verwaltet.</span><span class="sxs-lookup"><span data-stu-id="99a01-107">App data is data that the app itself creates and manages.</span></span> <span data-ttu-id="99a01-108">Sie beinhalten den Laufzeitstatus, App-Einstellungen, Referenzinhalte (beispielsweise die Wörterbuchdefinitionen in einer Wörterbuch-App) und andere Einstellungen.</span><span class="sxs-lookup"><span data-stu-id="99a01-108">It includes runtime state, app settings, reference content (such as the dictionary definitions in a dictionary app), and other settings.</span></span> <span data-ttu-id="99a01-109">App-Daten sind an die Existenz der App gebunden und nur für die jeweilige App von Bedeutung.</span><span class="sxs-lookup"><span data-stu-id="99a01-109">App data is tied to the existence of the app and is only meaningful to that app.</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="99a01-110">Inhalt dieses Abschnitts</span><span class="sxs-lookup"><span data-stu-id="99a01-110">In this section</span></span>
+<span data-ttu-id="50859-107">App-Daten werden von der App selbst erstellt und verwaltet.</span><span class="sxs-lookup"><span data-stu-id="50859-107">App data is data that the app itself creates and manages.</span></span> <span data-ttu-id="50859-108">Sie beinhalten den Laufzeitstatus, App-Einstellungen, Referenzinhalte (beispielsweise die Wörterbuchdefinitionen in einer Wörterbuch-App) und andere Einstellungen.</span><span class="sxs-lookup"><span data-stu-id="50859-108">It includes runtime state, app settings, reference content (such as the dictionary definitions in a dictionary app), and other settings.</span></span> <span data-ttu-id="50859-109">App-Daten sind an die Existenz der App gebunden und nur für die jeweilige App von Bedeutung.</span><span class="sxs-lookup"><span data-stu-id="50859-109">App data is tied to the existence of the app and is only meaningful to that app.</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="50859-110">Inhalt dieses Abschnitts</span><span class="sxs-lookup"><span data-stu-id="50859-110">In this section</span></span>
 <table>
 <colgroup>
 <col width="50%" />
@@ -33,18 +33,18 @@ ms.locfileid: "8345207"
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><span data-ttu-id="99a01-111">Artikel</span><span class="sxs-lookup"><span data-stu-id="99a01-111">Article</span></span></th>
-<th align="left"><span data-ttu-id="99a01-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="99a01-112">Description</span></span></th>
+<th align="left"><span data-ttu-id="50859-111">Artikel</span><span class="sxs-lookup"><span data-stu-id="50859-111">Article</span></span></th>
+<th align="left"><span data-ttu-id="50859-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="50859-112">Description</span></span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="guidelines-for-app-settings.md"><span data-ttu-id="99a01-113">Richtlinien</span><span class="sxs-lookup"><span data-stu-id="99a01-113">Guidelines</span></span></a></p></td>
-<td align="left"><p><span data-ttu-id="99a01-114">Bewährte Methoden für das Erstellen und Anzeigen von App-Einstellungen.</span><span class="sxs-lookup"><span data-stu-id="99a01-114">Best practices for creating and displaying app settings.</span></span></p></td>
+<td align="left"><p><a href="guidelines-for-app-settings.md"><span data-ttu-id="50859-113">Richtlinien</span><span class="sxs-lookup"><span data-stu-id="50859-113">Guidelines</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="50859-114">Bewährte Methoden für das Erstellen und Anzeigen von App-Einstellungen.</span><span class="sxs-lookup"><span data-stu-id="50859-114">Best practices for creating and displaying app settings.</span></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="store-and-retrieve-app-data.md"><span data-ttu-id="99a01-115">Speichern und Abrufen von App-Daten</span><span class="sxs-lookup"><span data-stu-id="99a01-115">Store and retrieve app data</span></span></a></p></td>
-<td align="left"><p><span data-ttu-id="99a01-116">Hier erfahren Sie, wie Sie lokale, Roaming- und temporäre App-Daten speichern und abrufen können.</span><span class="sxs-lookup"><span data-stu-id="99a01-116">How to store and retrieve local, roaming, and temporary app data.</span></span></p></td>
+<td align="left"><p><a href="store-and-retrieve-app-data.md"><span data-ttu-id="50859-115">Speichern und Abrufen von App-Daten</span><span class="sxs-lookup"><span data-stu-id="50859-115">Store and retrieve app data</span></span></a></p></td>
+<td align="left"><p><span data-ttu-id="50859-116">Hier erfahren Sie, wie Sie lokale, Roaming- und temporäre App-Daten speichern und abrufen können.</span><span class="sxs-lookup"><span data-stu-id="50859-116">How to store and retrieve local, roaming, and temporary app data.</span></span></p></td>
 </tr>
 </tbody>
 </table>

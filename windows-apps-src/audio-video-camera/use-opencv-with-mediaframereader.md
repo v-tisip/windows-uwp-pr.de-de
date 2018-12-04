@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, openCV
 ms.localizationpriority: medium
 ms.openlocfilehash: a603899776879cb7c8dc2439c3c22906db0b8038
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8350106"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8477038"
 ---
 # <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a><span data-ttu-id="b0f54-104">Verwenden Sie die Open Source Computer Vision-Bibliothek (OpenCV) mit MediaFrameReader</span><span class="sxs-lookup"><span data-stu-id="b0f54-104">Use the Open Source Computer Vision Library (OpenCV) with MediaFrameReader</span></span>
 

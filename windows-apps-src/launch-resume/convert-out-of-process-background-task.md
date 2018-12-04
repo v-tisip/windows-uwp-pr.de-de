@@ -7,11 +7,11 @@ keywords: Windows 10, Uwp, Hintergrundaufgabe, app-Dienst
 ms.assetid: 5327e966-b78d-4859-9b97-5a61c362573e
 ms.localizationpriority: medium
 ms.openlocfilehash: 97dd249165877591743892a136d51e0969dd902a
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8348021"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8475184"
 ---
 # <a name="port-an-out-of-process-background-task-to-an-in-process-background-task"></a><span data-ttu-id="eaaf7-104">Portieren einer Out-of-Process Hintergrundaufgabe in eine In-Process-Hintergrundaufgabe</span><span class="sxs-lookup"><span data-stu-id="eaaf7-104">Port an out-of-process background task to an in-process background task</span></span>
 

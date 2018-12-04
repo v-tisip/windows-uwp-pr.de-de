@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ffe6119e9cac162486d23472f5d5876924b7ef9e
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8343805"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473710"
 ---
 # <a name="xaml-namescopes"></a><span data-ttu-id="cc8f6-105">XAML-NameScopes</span><span class="sxs-lookup"><span data-stu-id="cc8f6-105">XAML namescopes</span></span>
 
