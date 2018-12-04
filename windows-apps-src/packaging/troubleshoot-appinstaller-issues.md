@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, app-installer, AppInstaller, querladen
 ms.localizationpriority: medium
 ms.openlocfilehash: d4c3aa690dd45a50e6f33d664fbc6cc4503e93f8
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8323806"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8471111"
 ---
 # <a name="troubleshoot-installation-issues-with-the-app-installer-file"></a>Problembehandlung bei der Installation der App-Installer-Datei
 

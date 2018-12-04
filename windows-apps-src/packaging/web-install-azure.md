@@ -1,24 +1,22 @@
 ---
 title: Installation einer UWP-App von einem Azure-Webserver
 description: In diesem Lernprogramm wird gezeigt, wie Sie einen Azure-Webserver einrichten, überprüfen, ob Ihre Web-App kann App-Pakete hosten kann, und App-Installer auf effektive Weise aufrufen und verwenden.
-ms.date: 09/30/2018
+ms.date: 11/30/2018
 ms.topic: article
 keywords: Windows10, UWP, App-Installer, AppInstaller, querladen, zusammengehörig, optionale Pakete, Azure-Webserver
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f0e4fe6cd2b05c2de4648a410ba43ce27e48922
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.openlocfilehash: 074a8e9941d4314bb35c28b0ee296e9d86fa23a5
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8325632"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8469211"
 ---
 # <a name="install-a-uwp-app-from-an-azure-web-app"></a>Installieren einer UWP-App aus einer Azure-Web-App
 
 Mit der App-Installer-App können Entwickler und IT-Spezialisten Windows10-Apps verteilen, indem sie diese in ihrem eigenen Content Delivery Network (CDN) hosten. Das ist nützlich für Unternehmen, die ihre Apps nicht im Microsoft Store veröffentlichen möchten oder müssen, aber weiterhin die Windows10-Verpackungs- und -Bereitstellungsplattform nutzen möchten.
 
 In diesem Thema sind die Schritte zum Konfigurieren eines Azure-Webservers zum Hosten von UWP-App-Paketen aufgeführt, und Sie erfahren, wie Sie die App-Installer-App verwenden, um die App-Pakete zu installieren.
-
-In diesem Lernprogramm erläutern wir, wie Sie einen IIS-Server einrichten, um lokal sicherzustellen, dass Ihre Webanwendung die App-Pakete ordnungsgemäß hosten und die App-Installer-App auf effektive Weise aufrufen und verwenden kann. Wir bieten außerdem Lernprogramme zum ordnungsgemäßen Hosten Ihrer Webanwendungen auf den beliebten Cloud-Webdiensten im Außendienst (Azure und AWS), um sicherzustellen, dass sie Anforderungen an die App-Installer-Webinstallation erfüllen. Dieses schrittweise Lernprogramm setzt keinerlei Erfahrung voraus und kann sehr einfach durchgeführt werden. 
 
 ## <a name="setup"></a>Setup
 

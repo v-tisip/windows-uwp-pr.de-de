@@ -5,12 +5,12 @@ ms.date: 05/30/2018
 ms.topic: article
 keywords: Windows 10, Uwp, app-Installer, AppInstaller, querladen, im Zusammenhang mit festgelegten optionale Pakete, IIS-Server
 ms.localizationpriority: medium
-ms.openlocfilehash: b447093ba54f2c979d35793a6a4eaa7538ee4892
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.openlocfilehash: 6a4512229a29a7adc59d6b61edd596eaeb56a5a8
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8352134"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8469370"
 ---
 # <a name="install-a-uwp-app-from-an-iis-server"></a>Installieren einer UWP-App von einem IIS-Server
 
@@ -119,7 +119,7 @@ Fügen Sie den folgenden HTML-Code in Ihrer Webseite. Die Taste, um erfolgreich 
 
 Aufgrund der Netzwerkisolation, sind UWP-apps, z. B. App-Installer beschränkt IP-Loopbackadressen wie verwenden http://localhost/. Beim lokalen IIS-Server zu verwenden, muss die App-Installer der ausgenommen Loopback-Liste hinzugefügt werden. 
 
-Zu diesem Zweck öffnen Sie die **Befehlszeile** als **Administrator** , und geben Sie Folgendes: ''' Befehlszeile CheckNetIsolation.exe LoopbackExempt - a-n=microsoft.desktopappinstaller_8wekyb3d8bbwe
+Zu diesem Zweck öffnen Sie die **Befehlszeile** als **Administrator** , und geben Sie Folgendes: ''' Befehlszeile CheckNetIsolation.exe LoopbackExempt - a-n="microsoft.desktopappinstaller_8wekyb3d8bbwe"
 ```
 
 To verify that the app is added to the exempt list, use the following command to display the apps in the loopback exempt list: 
@@ -131,7 +131,7 @@ Finden Sie `microsoft.desktopappinstaller_8wekyb3d8bbwe` in der Liste.
 
 Sobald die lokale Überprüfung des app-Installation über App-Installer abgeschlossen ist, können Sie die loopbackausnahme entfernen, die Sie in diesem Schritt hinzugefügt:
 
-''' Befehlszeile CheckNetIsolation.exe LoopbackExempt -d-n=microsoft.desktopappinstaller_8wekyb3d8bbwe
+' Befehlszeile CheckNetIsolation.exe LoopbackExempt -d-n="microsoft.desktopappinstaller_8wekyb3d8bbwe"
 ```
 
 ## Step 9 - Run the Web App 
