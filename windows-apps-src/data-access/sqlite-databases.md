@@ -1,16 +1,16 @@
 ---
 title: Verwenden einer SQLite-Datenbank in einer UWP-App
 description: Verwenden Sie eine SQLite-Datenbank in einer UWP-App.
-ms.date: 06/08/2018
+ms.date: 11/30/2018
 ms.topic: article
 keywords: Windows 10, UWP, SQLite, Datenbank
 ms.localizationpriority: medium
-ms.openlocfilehash: 1588dfbfb1c33b246caba0816c584135f2094f35
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.openlocfilehash: 3780423b0c2fc2bbe1ebc81054e13997d5ebde7f
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8336947"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473190"
 ---
 # <a name="use-a-sqlite-database-in-a-uwp-app"></a>Verwenden einer SQLite-Datenbank in einer UWP-App
 Sie können SQLite verwenden, um Daten in einer einfachen Datenbank auf dem Gerät des Benutzers zu speichern und abzurufen. Dieser Leitfaden zeigt Ihnen wie.
@@ -163,10 +163,11 @@ namespace DataAccessLibrary
 
 ```
 
-Fügen Sie die folgende Anweisung am Anfang dieser Datei ein.
+Fügen Sie die folgenden using-Anweisungen am Anfang dieser Datei.
 
 ```csharp
 using Microsoft.Data.Sqlite;
+using System.Collections.Generic;
 ```
 
 <a id="initialize" />
