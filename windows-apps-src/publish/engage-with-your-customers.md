@@ -6,20 +6,20 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 44ca4c9799a4bfe15decf0e23516d663f48092e9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8323195"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8481953"
 ---
-# <a name="engage-with-your-customers"></a><span data-ttu-id="dd4f0-103">Kundenkontakte intensivieren</span><span class="sxs-lookup"><span data-stu-id="dd4f0-103">Engage with your customers</span></span>
+# <a name="engage-with-your-customers"></a><span data-ttu-id="1301b-103">Kundenkontakte intensivieren</span><span class="sxs-lookup"><span data-stu-id="1301b-103">Engage with your customers</span></span>
 
-<span data-ttu-id="dd4f0-104">[Partner Center](https://partner.microsoft.com/dashboard) enthält Funktionen Laufwerk Customer Engagement und Zufriedenheit.</span><span class="sxs-lookup"><span data-stu-id="dd4f0-104">[Partner Center](https://partner.microsoft.com/dashboard) includes features to help you drive customer engagement and satisfaction.</span></span> <span data-ttu-id="dd4f0-105">Hier erfahren Sie, wie Sie Benachrichtigungen, zielgerichteten angeboten und Reaktionen auf Kritiken und Feedback, verwenden.</span><span class="sxs-lookup"><span data-stu-id="dd4f0-105">Learn how to use notifications, targeted offers, responding to reviews and feedback, and more.</span></span>
+<span data-ttu-id="1301b-104">[Partner Center](https://partner.microsoft.com/dashboard) enthält Funktionen Laufwerk Customer Engagement und Zufriedenheit.</span><span class="sxs-lookup"><span data-stu-id="1301b-104">[Partner Center](https://partner.microsoft.com/dashboard) includes features to help you drive customer engagement and satisfaction.</span></span> <span data-ttu-id="1301b-105">Hier erfahren Sie, wie Sie Benachrichtigungen, zielgerichteten angeboten und Reaktionen auf Kritiken und Feedback, verwenden.</span><span class="sxs-lookup"><span data-stu-id="1301b-105">Learn how to use notifications, targeted offers, responding to reviews and feedback, and more.</span></span>
 
--   [<span data-ttu-id="dd4f0-106">Erstellen von Kundengruppen</span><span class="sxs-lookup"><span data-stu-id="dd4f0-106">Create customer groups</span></span>](create-customer-groups.md)
--   [<span data-ttu-id="dd4f0-107">Reagieren auf Kundenrezensionen</span><span class="sxs-lookup"><span data-stu-id="dd4f0-107">Respond to customer reviews</span></span>](respond-to-customer-reviews.md)
--   [<span data-ttu-id="dd4f0-108">Reagieren auf Kundenfeedback</span><span class="sxs-lookup"><span data-stu-id="dd4f0-108">Respond to customer feedback</span></span>](respond-to-customer-feedback.md)
--   [<span data-ttu-id="dd4f0-109">Senden von Benachrichtigungen an die Kunden Ihrer App</span><span class="sxs-lookup"><span data-stu-id="dd4f0-109">Send notifications to your app's customers</span></span>](send-push-notifications-to-your-apps-customers.md)
--   [<span data-ttu-id="dd4f0-110">Verwenden Sie zielgerichtete Angebote, um Interaktionen und Abschlüsse zu maximieren.</span><span class="sxs-lookup"><span data-stu-id="dd4f0-110">Use targeted offers to maximize engagement and conversions</span></span>](use-targeted-offers-to-maximize-engagement-and-conversions.md)
+-   [<span data-ttu-id="1301b-106">Erstellen von Kundengruppen</span><span class="sxs-lookup"><span data-stu-id="1301b-106">Create customer groups</span></span>](create-customer-groups.md)
+-   [<span data-ttu-id="1301b-107">Reagieren auf Kundenrezensionen</span><span class="sxs-lookup"><span data-stu-id="1301b-107">Respond to customer reviews</span></span>](respond-to-customer-reviews.md)
+-   [<span data-ttu-id="1301b-108">Reagieren auf Kundenfeedback</span><span class="sxs-lookup"><span data-stu-id="1301b-108">Respond to customer feedback</span></span>](respond-to-customer-feedback.md)
+-   [<span data-ttu-id="1301b-109">Senden von Benachrichtigungen an die Kunden Ihrer App</span><span class="sxs-lookup"><span data-stu-id="1301b-109">Send notifications to your app's customers</span></span>](send-push-notifications-to-your-apps-customers.md)
+-   [<span data-ttu-id="1301b-110">Verwenden Sie zielgerichtete Angebote, um Interaktionen und Abschlüsse zu maximieren.</span><span class="sxs-lookup"><span data-stu-id="1301b-110">Use targeted offers to maximize engagement and conversions</span></span>](use-targeted-offers-to-maximize-engagement-and-conversions.md)
 
  
