@@ -7,11 +7,11 @@ keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Paketrollout, App-
 ms.assetid: 9ada5ac3-a86e-4bb6-8ebc-915ba9649e3c
 ms.localizationpriority: medium
 ms.openlocfilehash: 301973fd231570f0fe63b8838971906c25e2d55c
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8341766"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8459206"
 ---
 # <a name="get-rollout-info-for-an-app-submission"></a><span data-ttu-id="35c8f-104">Abrufen von Informationen zum Rollout für eine App-Übermittlung</span><span class="sxs-lookup"><span data-stu-id="35c8f-104">Get rollout info for an app submission</span></span>
 

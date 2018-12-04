@@ -6,11 +6,11 @@ ms.date: 08/23/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 33103ebfc7ee3e26a11de781af7981bce78b349c
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/03/2018
-ms.locfileid: "8323324"
+ms.locfileid: "8473597"
 ---
 # <a name="user-activities-best-practices"></a><span data-ttu-id="1838c-104">Bewährte Methoden für Benutzeraktivitäten</span><span class="sxs-lookup"><span data-stu-id="1838c-104">User Activities best practices</span></span>
 

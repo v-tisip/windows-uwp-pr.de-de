@@ -8,88 +8,88 @@ keywords: Windows10, UWP
 permalink: en-us/docs/xdk/devhome-home.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 2be7bdfc04fdd09636251000347499e2f2a37ce4
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8339339"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8461176"
 ---
-# <a name="home-page-dev-home"></a><span data-ttu-id="5c951-104">Startseite (Dev Home)</span><span class="sxs-lookup"><span data-stu-id="5c951-104">Home Page (Dev Home)</span></span>
+# <a name="home-page-dev-home"></a><span data-ttu-id="83535-104">Startseite (Dev Home)</span><span class="sxs-lookup"><span data-stu-id="83535-104">Home Page (Dev Home)</span></span>
    
   
-<span data-ttu-id="5c951-105">**Die Startseite der Dev Home** bietet schnellen Zugriff auf die Aufgaben, die die Entwicklung auf einer routinemäßig ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="5c951-105">The **Home** page of Dev Home provides quick access to the tasks that are routinely performed on a development console.</span></span>   
+<span data-ttu-id="83535-105">**Die Startseite der Dev Home** bietet schnellen Zugriff auf die Aufgaben, die die Entwicklung auf einer routinemäßig ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="83535-105">The **Home** page of Dev Home provides quick access to the tasks that are routinely performed on a development console.</span></span>   
  ![Dev Home-Startseite](images/devhome_home.png)   
   
-<span data-ttu-id="5c951-107">**Die Startseite** enthält die folgenden Bereiche:</span><span class="sxs-lookup"><span data-stu-id="5c951-107">The **Home** page contains the following panes:</span></span>   
+<span data-ttu-id="83535-107">**Die Startseite** enthält die folgenden Bereiche:</span><span class="sxs-lookup"><span data-stu-id="83535-107">The **Home** page contains the following panes:</span></span>   
  
-   *  [<span data-ttu-id="5c951-108">Schnelle Aktionen</span><span class="sxs-lookup"><span data-stu-id="5c951-108">Quick actions</span></span>](#ID4EEB)  
-   *  [<span data-ttu-id="5c951-109">Spiele und apps</span><span class="sxs-lookup"><span data-stu-id="5c951-109">Games & apps</span></span>](#ID4EPC)  
-   *  [<span data-ttu-id="5c951-110">Testkonten</span><span class="sxs-lookup"><span data-stu-id="5c951-110">Test accounts</span></span>](#ID4EQD)  
-   *  [<span data-ttu-id="5c951-111">Verbinden mit Ihrem browser</span><span class="sxs-lookup"><span data-stu-id="5c951-111">Connect with your browser</span></span>](#ID4EFE)  
+   *  [<span data-ttu-id="83535-108">Schnelle Aktionen</span><span class="sxs-lookup"><span data-stu-id="83535-108">Quick actions</span></span>](#ID4EEB)  
+   *  [<span data-ttu-id="83535-109">Spiele und apps</span><span class="sxs-lookup"><span data-stu-id="83535-109">Games & apps</span></span>](#ID4EPC)  
+   *  [<span data-ttu-id="83535-110">Testkonten</span><span class="sxs-lookup"><span data-stu-id="83535-110">Test accounts</span></span>](#ID4EQD)  
+   *  [<span data-ttu-id="83535-111">Verbinden mit Ihrem browser</span><span class="sxs-lookup"><span data-stu-id="83535-111">Connect with your browser</span></span>](#ID4EFE)  
 
  
 <a id="ID4EEB"></a>
 
    
 
-## <a name="quick-actions"></a><span data-ttu-id="5c951-112">Schnelle Aktionen</span><span class="sxs-lookup"><span data-stu-id="5c951-112">Quick actions</span></span>  
+## <a name="quick-actions"></a><span data-ttu-id="83535-112">Schnelle Aktionen</span><span class="sxs-lookup"><span data-stu-id="83535-112">Quick actions</span></span>  
    
   
-<span data-ttu-id="5c951-113">Der **schnelle Aktionen** -Bereich enthält die folgenden Schaltflächen, die einen schnellen Zugriff auf häufig ausgeführte Aktionen bereitstellen:</span><span class="sxs-lookup"><span data-stu-id="5c951-113">The **Quick actions** pane contains the following buttons that provide quick access to frequently-performed actions:</span></span>   
+<span data-ttu-id="83535-113">Der **schnelle Aktionen** -Bereich enthält die folgenden Schaltflächen, die einen schnellen Zugriff auf häufig ausgeführte Aktionen bereitstellen:</span><span class="sxs-lookup"><span data-stu-id="83535-113">The **Quick actions** pane contains the following buttons that provide quick access to frequently-performed actions:</span></span>   
  
-   *  <span data-ttu-id="5c951-114">**Visual Studio-Pin anzeigen:** Zeigt einen Code, mit denen Sie die entwicklungskonsole mit der Installation von Visual Studio auf Ihrem Computer zu koppeln.</span><span class="sxs-lookup"><span data-stu-id="5c951-114">**Show Visual Studio pin:** Displays a code that you can use to pair the development console with the Visual Studio installation on your computer.</span></span>   
-   *  <span data-ttu-id="5c951-115">**Änderung Sandbox:** Ermöglicht Ihnen, welche Sandbox ändern Sie die Konsole in ist.</span><span class="sxs-lookup"><span data-stu-id="5c951-115">**Change sandbox:** Allows you to change which sandbox the console is in.</span></span>   
-   *  <span data-ttu-id="5c951-116">**Neustart Konsole:** Startet die entwicklungskonsole neu.</span><span class="sxs-lookup"><span data-stu-id="5c951-116">**Restart console:** Restarts the development console.</span></span>   
-   *  <span data-ttu-id="5c951-117">**Entwicklermodus:** Gibt die Konsole in den einzelhandelsmodus zurück, und startet die Konsole neu.</span><span class="sxs-lookup"><span data-stu-id="5c951-117">**Leave Dev Mode:** Returns the console to retail mode and reboots the console.</span></span>   
-   *  <span data-ttu-id="5c951-118">**Starten Home:** Startet die Startseite Einzelhandel.</span><span class="sxs-lookup"><span data-stu-id="5c951-118">**Launch Home:** Launches the retail Home screen.</span></span>   
-   *  <span data-ttu-id="5c951-119">**Ein Spiel aus einem freigegebenen Speicherort im Netzwerk zu registrieren:** Ein Spiel aus einem freigegebenen Speicherort im Netzwerk registriert.</span><span class="sxs-lookup"><span data-stu-id="5c951-119">**Register a game from a shared network location:** Registers a game from a shared network location.</span></span>   
+   *  <span data-ttu-id="83535-114">**Visual Studio-Pin anzeigen:** Zeigt einen Code, mit denen Sie die entwicklungskonsole mit der Installation von Visual Studio auf Ihrem Computer zu koppeln.</span><span class="sxs-lookup"><span data-stu-id="83535-114">**Show Visual Studio pin:** Displays a code that you can use to pair the development console with the Visual Studio installation on your computer.</span></span>   
+   *  <span data-ttu-id="83535-115">**Änderung Sandbox:** Ermöglicht Ihnen, welche Sandbox ändern Sie die Konsole in ist.</span><span class="sxs-lookup"><span data-stu-id="83535-115">**Change sandbox:** Allows you to change which sandbox the console is in.</span></span>   
+   *  <span data-ttu-id="83535-116">**Neustart Konsole:** Startet die entwicklungskonsole neu.</span><span class="sxs-lookup"><span data-stu-id="83535-116">**Restart console:** Restarts the development console.</span></span>   
+   *  <span data-ttu-id="83535-117">**Entwicklermodus:** Gibt die Konsole in den einzelhandelsmodus zurück, und startet die Konsole neu.</span><span class="sxs-lookup"><span data-stu-id="83535-117">**Leave Dev Mode:** Returns the console to retail mode and reboots the console.</span></span>   
+   *  <span data-ttu-id="83535-118">**Starten Home:** Startet die Startseite Einzelhandel.</span><span class="sxs-lookup"><span data-stu-id="83535-118">**Launch Home:** Launches the retail Home screen.</span></span>   
+   *  <span data-ttu-id="83535-119">**Ein Spiel aus einem freigegebenen Speicherort im Netzwerk zu registrieren:** Ein Spiel aus einem freigegebenen Speicherort im Netzwerk registriert.</span><span class="sxs-lookup"><span data-stu-id="83535-119">**Register a game from a shared network location:** Registers a game from a shared network location.</span></span>   
 
   
 <a id="ID4EPC"></a>
 
    
 
-## <a name="games--apps"></a><span data-ttu-id="5c951-120">Spiele und apps</span><span class="sxs-lookup"><span data-stu-id="5c951-120">Games & apps</span></span>   
+## <a name="games--apps"></a><span data-ttu-id="83535-120">Spiele und apps</span><span class="sxs-lookup"><span data-stu-id="83535-120">Games & apps</span></span>   
    
   
-<span data-ttu-id="5c951-121">Der Bereich **Spiele und apps** kann verwendet werden, um die folgenden Aktionen ausführen:</span><span class="sxs-lookup"><span data-stu-id="5c951-121">The **Games & apps** pane can be used to perform the following actions:</span></span>   
+<span data-ttu-id="83535-121">Der Bereich **Spiele und apps** kann verwendet werden, um die folgenden Aktionen ausführen:</span><span class="sxs-lookup"><span data-stu-id="83535-121">The **Games & apps** pane can be used to perform the following actions:</span></span>   
  
-   *  <span data-ttu-id="5c951-122">Zeigen Sie die Liste der Spiele und apps auf die entwicklungskonsole installiert.</span><span class="sxs-lookup"><span data-stu-id="5c951-122">View the list of games and apps installed on the development console.</span></span>  
-   *  <span data-ttu-id="5c951-123">Spiele und apps schnell zu starten.</span><span class="sxs-lookup"><span data-stu-id="5c951-123">Quickly launch games and apps.</span></span>  
-   *  <span data-ttu-id="5c951-124">Anzeigen des PLM-Status von Spielen und apps.</span><span class="sxs-lookup"><span data-stu-id="5c951-124">View the PLM state of games and apps.</span></span>  
-   *  <span data-ttu-id="5c951-125">Ändern Sie PLM-Status in einem Kontextmenü.</span><span class="sxs-lookup"><span data-stu-id="5c951-125">Change PLM states from a context menu.</span></span>  
-   *  <span data-ttu-id="5c951-126">Registrieren und einen Titel über eine remote Netzwerkfreigabe auszuführen.</span><span class="sxs-lookup"><span data-stu-id="5c951-126">Register and run a title from a remote network share.</span></span>
+   *  <span data-ttu-id="83535-122">Zeigen Sie die Liste der Spiele und apps auf die entwicklungskonsole installiert.</span><span class="sxs-lookup"><span data-stu-id="83535-122">View the list of games and apps installed on the development console.</span></span>  
+   *  <span data-ttu-id="83535-123">Spiele und apps schnell zu starten.</span><span class="sxs-lookup"><span data-stu-id="83535-123">Quickly launch games and apps.</span></span>  
+   *  <span data-ttu-id="83535-124">Anzeigen des PLM-Status von Spielen und apps.</span><span class="sxs-lookup"><span data-stu-id="83535-124">View the PLM state of games and apps.</span></span>  
+   *  <span data-ttu-id="83535-125">Ändern Sie PLM-Status in einem Kontextmenü.</span><span class="sxs-lookup"><span data-stu-id="83535-125">Change PLM states from a context menu.</span></span>  
+   *  <span data-ttu-id="83535-126">Registrieren und einen Titel über eine remote Netzwerkfreigabe auszuführen.</span><span class="sxs-lookup"><span data-stu-id="83535-126">Register and run a title from a remote network share.</span></span>
 
   
 <a id="ID4EQD"></a>
 
    
 
-## <a name="test-accounts"></a><span data-ttu-id="5c951-127">Testkonten</span><span class="sxs-lookup"><span data-stu-id="5c951-127">Test accounts</span></span>  
+## <a name="test-accounts"></a><span data-ttu-id="83535-127">Testkonten</span><span class="sxs-lookup"><span data-stu-id="83535-127">Test accounts</span></span>  
    
   
-<span data-ttu-id="5c951-128">Bereich **Testkonten** kann verwendet werden, um die folgenden Aktionen ausführen:</span><span class="sxs-lookup"><span data-stu-id="5c951-128">The **Test accounts** pane can be used to perform the following actions:</span></span>   
+<span data-ttu-id="83535-128">Bereich **Testkonten** kann verwendet werden, um die folgenden Aktionen ausführen:</span><span class="sxs-lookup"><span data-stu-id="83535-128">The **Test accounts** pane can be used to perform the following actions:</span></span>   
  
-   *  <span data-ttu-id="5c951-129">Zeigen Sie die Liste der registrierten Benutzer auf der Konsole.</span><span class="sxs-lookup"><span data-stu-id="5c951-129">View the list of users registered on the console.</span></span>  
-   *  <span data-ttu-id="5c951-130">Melden Sie sich einen Benutzer an- oder mit einem einzigen Mausklick.</span><span class="sxs-lookup"><span data-stu-id="5c951-130">Sign a user in or out with a single click.</span></span>  
-   *  <span data-ttu-id="5c951-131">Benutzer und Gastkonten hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="5c951-131">Add users and guest accounts.</span></span>  
-   *  <span data-ttu-id="5c951-132">Hier werden Details der Benutzer und Gastkonten.</span><span class="sxs-lookup"><span data-stu-id="5c951-132">View details of users and guest accounts.</span></span>  
+   *  <span data-ttu-id="83535-129">Zeigen Sie die Liste der registrierten Benutzer auf der Konsole.</span><span class="sxs-lookup"><span data-stu-id="83535-129">View the list of users registered on the console.</span></span>  
+   *  <span data-ttu-id="83535-130">Melden Sie sich einen Benutzer an- oder mit einem einzigen Mausklick.</span><span class="sxs-lookup"><span data-stu-id="83535-130">Sign a user in or out with a single click.</span></span>  
+   *  <span data-ttu-id="83535-131">Benutzer und Gastkonten hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="83535-131">Add users and guest accounts.</span></span>  
+   *  <span data-ttu-id="83535-132">Hier werden Details der Benutzer und Gastkonten.</span><span class="sxs-lookup"><span data-stu-id="83535-132">View details of users and guest accounts.</span></span>  
 
   
 <a id="ID4EFE"></a>
 
    
 
-## <a name="connect-with-your-browser"></a><span data-ttu-id="5c951-133">Verbinden mit Ihrem browser</span><span class="sxs-lookup"><span data-stu-id="5c951-133">Connect with your browser</span></span>  
+## <a name="connect-with-your-browser"></a><span data-ttu-id="83535-133">Verbinden mit Ihrem browser</span><span class="sxs-lookup"><span data-stu-id="83535-133">Connect with your browser</span></span>  
    
   
-<span data-ttu-id="5c951-134">Der **Herstellen einer Verbindung mit Ihrem Browser** -Bereich zeigt die IP-Adresse und Port, den Sie verwenden können, um die Konsole über einen Webbrowser zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="5c951-134">The **Connect with your browser** pane displays the IP address and port that you can use to manage your console from a web browser.</span></span>   
+<span data-ttu-id="83535-134">Der **Herstellen einer Verbindung mit Ihrem Browser** -Bereich zeigt die IP-Adresse und Port, den Sie verwenden können, um die Konsole über einen Webbrowser zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="83535-134">The **Connect with your browser** pane displays the IP address and port that you can use to manage your console from a web browser.</span></span>   
   
 <a id="ID4EPE"></a>
 
    
 
-## <a name="see-also"></a><span data-ttu-id="5c951-135">Weitere Informationen:</span><span class="sxs-lookup"><span data-stu-id="5c951-135">See also</span></span>  
- [<span data-ttu-id="5c951-136">Entwickler-Startbildschirm auf der Konsole (Dev Home)</span><span class="sxs-lookup"><span data-stu-id="5c951-136">Developer Home on the Console (Dev Home)</span></span>](dev-home.md)
+## <a name="see-also"></a><span data-ttu-id="83535-135">Weitere Informationen:</span><span class="sxs-lookup"><span data-stu-id="83535-135">See also</span></span>  
+ [<span data-ttu-id="83535-136">Entwickler-Startbildschirm auf der Konsole (Dev Home)</span><span class="sxs-lookup"><span data-stu-id="83535-136">Developer Home on the Console (Dev Home)</span></span>](dev-home.md)
 
   

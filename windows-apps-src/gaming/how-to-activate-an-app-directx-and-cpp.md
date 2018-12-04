@@ -7,24 +7,24 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, DirectX, Aktivierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 51c2435c8edeac2431198b7b5f3d9b1a307b5b78
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8323006"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8465712"
 ---
-# <a name="how-to-activate-an-app-directx-and-c"></a><span data-ttu-id="85952-104">So wird's gemacht - Aktivieren einer App (DirectX und C++)</span><span class="sxs-lookup"><span data-stu-id="85952-104">How to activate an app (DirectX and C++)</span></span>
+# <a name="how-to-activate-an-app-directx-and-c"></a><span data-ttu-id="b2896-104">So wird's gemacht - Aktivieren einer App (DirectX und C++)</span><span class="sxs-lookup"><span data-stu-id="b2896-104">How to activate an app (DirectX and C++)</span></span>
 
 
 
-<span data-ttu-id="85952-105">In diesem Thema erfahren Sie, wie Sie die Aktivierungsbenutzeroberfläche für eine DirectX-App für die Universelle Windows-Plattform (UWP) definieren.</span><span class="sxs-lookup"><span data-stu-id="85952-105">This topic shows how to define the activation experience for a Universal Windows Platform (UWP) DirectX app.</span></span>
+<span data-ttu-id="b2896-105">In diesem Thema erfahren Sie, wie Sie die Aktivierungsbenutzeroberfläche für eine DirectX-App für die Universelle Windows-Plattform (UWP) definieren.</span><span class="sxs-lookup"><span data-stu-id="b2896-105">This topic shows how to define the activation experience for a Universal Windows Platform (UWP) DirectX app.</span></span>
 
-## <a name="register-the-app-activation-event-handler"></a><span data-ttu-id="85952-106">Registrieren des Ereignishandlers für die Aktivierung der App</span><span class="sxs-lookup"><span data-stu-id="85952-106">Register the app activation event handler</span></span>
+## <a name="register-the-app-activation-event-handler"></a><span data-ttu-id="b2896-106">Registrieren des Ereignishandlers für die Aktivierung der App</span><span class="sxs-lookup"><span data-stu-id="b2896-106">Register the app activation event handler</span></span>
 
 
-<span data-ttu-id="85952-107">Registrieren Sie zuerst die Behandlung des [**CoreApplicationView::Activated**](https://msdn.microsoft.com/library/windows/apps/br225018)-Ereignisses, das ausgelöst wird, wenn die App vom Betriebssystem gestartet und initialisiert wird.</span><span class="sxs-lookup"><span data-stu-id="85952-107">First, register to handle the [**CoreApplicationView::Activated**](https://msdn.microsoft.com/library/windows/apps/br225018) event, which is raised when your app is started and initialized by the operating system.</span></span>
+<span data-ttu-id="b2896-107">Registrieren Sie zuerst die Behandlung des [**CoreApplicationView::Activated**](https://msdn.microsoft.com/library/windows/apps/br225018)-Ereignisses, das ausgelöst wird, wenn die App vom Betriebssystem gestartet und initialisiert wird.</span><span class="sxs-lookup"><span data-stu-id="b2896-107">First, register to handle the [**CoreApplicationView::Activated**](https://msdn.microsoft.com/library/windows/apps/br225018) event, which is raised when your app is started and initialized by the operating system.</span></span>
 
-<span data-ttu-id="85952-108">Fügen Sie Ihrer Implementierung der [**IFrameworkView::Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495)-Methode Ihres Ansichtsanbieters (in diesem Beispiel **MyViewProvider**) folgenden Code hinzu:</span><span class="sxs-lookup"><span data-stu-id="85952-108">Add this code to your implementation of the [**IFrameworkView::Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495) method of your view provider (named **MyViewProvider** in the example):</span></span>
+<span data-ttu-id="b2896-108">Fügen Sie Ihrer Implementierung der [**IFrameworkView::Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495)-Methode Ihres Ansichtsanbieters (in diesem Beispiel **MyViewProvider**) folgenden Code hinzu:</span><span class="sxs-lookup"><span data-stu-id="b2896-108">Add this code to your implementation of the [**IFrameworkView::Initialize**](https://msdn.microsoft.com/library/windows/apps/hh700495) method of your view provider (named **MyViewProvider** in the example):</span></span>
 
 ```cpp
 void App::Initialize(CoreApplicationView^ applicationView)
@@ -39,10 +39,10 @@ void App::Initialize(CoreApplicationView^ applicationView)
 }
 ```
 
-## <a name="activate-the-corewindow-instance-for-the-app"></a><span data-ttu-id="85952-109">Aktivieren der CoreWindow-Instanz für die App</span><span class="sxs-lookup"><span data-stu-id="85952-109">Activate the CoreWindow instance for the app</span></span>
+## <a name="activate-the-corewindow-instance-for-the-app"></a><span data-ttu-id="b2896-109">Aktivieren der CoreWindow-Instanz für die App</span><span class="sxs-lookup"><span data-stu-id="b2896-109">Activate the CoreWindow instance for the app</span></span>
 
 
-<span data-ttu-id="85952-110">Beim Start der App müssen Sie einen Verweis auf die [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Instanz für Ihre App abrufen.</span><span class="sxs-lookup"><span data-stu-id="85952-110">When your app starts, you must obtain a reference to the [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) for your app.</span></span> <span data-ttu-id="85952-111">**CoreWindow** enthält den Meldungsverteiler für Fensterereignisse, mit dem die App Fensterereignisse verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="85952-111">**CoreWindow** contains the window event message dispatcher that your app uses to process window events.</span></span> <span data-ttu-id="85952-112">Rufen Sie diesen Verweis im Rückruf für das App-Aktivierungsereignis durch Aufrufen von [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589) ab.</span><span class="sxs-lookup"><span data-stu-id="85952-112">Obtain this reference in your callback for the app activation event by calling [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589).</span></span> <span data-ttu-id="85952-113">Wenn Sie diesen Verweis abgerufen haben, aktivieren Sie das Hauptfenster der App durch Aufrufen von [**CoreWindow::Activate**](https://msdn.microsoft.com/library/windows/apps/br208254).</span><span class="sxs-lookup"><span data-stu-id="85952-113">Once you have obtained this reference, activate the main app window by calling [**CoreWindow::Activate**](https://msdn.microsoft.com/library/windows/apps/br208254).</span></span>
+<span data-ttu-id="b2896-110">Beim Start der App müssen Sie einen Verweis auf die [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Instanz für Ihre App abrufen.</span><span class="sxs-lookup"><span data-stu-id="b2896-110">When your app starts, you must obtain a reference to the [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) for your app.</span></span> <span data-ttu-id="b2896-111">**CoreWindow** enthält den Meldungsverteiler für Fensterereignisse, mit dem die App Fensterereignisse verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="b2896-111">**CoreWindow** contains the window event message dispatcher that your app uses to process window events.</span></span> <span data-ttu-id="b2896-112">Rufen Sie diesen Verweis im Rückruf für das App-Aktivierungsereignis durch Aufrufen von [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589) ab.</span><span class="sxs-lookup"><span data-stu-id="b2896-112">Obtain this reference in your callback for the app activation event by calling [**CoreWindow::GetForCurrentThread**](https://msdn.microsoft.com/library/windows/apps/hh701589).</span></span> <span data-ttu-id="b2896-113">Wenn Sie diesen Verweis abgerufen haben, aktivieren Sie das Hauptfenster der App durch Aufrufen von [**CoreWindow::Activate**](https://msdn.microsoft.com/library/windows/apps/br208254).</span><span class="sxs-lookup"><span data-stu-id="b2896-113">Once you have obtained this reference, activate the main app window by calling [**CoreWindow::Activate**](https://msdn.microsoft.com/library/windows/apps/br208254).</span></span>
 
 ```cpp
 void App::OnActivated(CoreApplicationView^ applicationView, IActivatedEventArgs^ args)
@@ -52,10 +52,10 @@ void App::OnActivated(CoreApplicationView^ applicationView, IActivatedEventArgs^
 }
 ```
 
-## <a name="start-processing-event-message-for-the-main-app-window"></a><span data-ttu-id="85952-114">Beginn der Verarbeitung von Ereignismeldungen für das Hauptfenster der App</span><span class="sxs-lookup"><span data-stu-id="85952-114">Start processing event message for the main app window</span></span>
+## <a name="start-processing-event-message-for-the-main-app-window"></a><span data-ttu-id="b2896-114">Beginn der Verarbeitung von Ereignismeldungen für das Hauptfenster der App</span><span class="sxs-lookup"><span data-stu-id="b2896-114">Start processing event message for the main app window</span></span>
 
 
-<span data-ttu-id="85952-115">Ihre Rückrufe treten als Ereignismeldungen auf, die vom [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211)-Element des [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Elements der App verarbeitet werden.</span><span class="sxs-lookup"><span data-stu-id="85952-115">Your callbacks occur as event messages are processed by the [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) for the app's [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225).</span></span> <span data-ttu-id="85952-116">Dieser Rückruf wird nicht aufgerufen, wenn Sie in der Hauptschleife der App (in der [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505)-Methode des Ansichtsanbieters implementiert) [**CoreDispatcher::ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) nicht aufrufen.</span><span class="sxs-lookup"><span data-stu-id="85952-116">This callback will not be invoked if you do not call [**CoreDispatcher::ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) from your app's main loop (implemented in the [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) method of your view provider).</span></span>
+<span data-ttu-id="b2896-115">Ihre Rückrufe treten als Ereignismeldungen auf, die vom [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211)-Element des [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)-Elements der App verarbeitet werden.</span><span class="sxs-lookup"><span data-stu-id="b2896-115">Your callbacks occur as event messages are processed by the [**CoreDispatcher**](https://msdn.microsoft.com/library/windows/apps/br208211) for the app's [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225).</span></span> <span data-ttu-id="b2896-116">Dieser Rückruf wird nicht aufgerufen, wenn Sie in der Hauptschleife der App (in der [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505)-Methode des Ansichtsanbieters implementiert) [**CoreDispatcher::ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) nicht aufrufen.</span><span class="sxs-lookup"><span data-stu-id="b2896-116">This callback will not be invoked if you do not call [**CoreDispatcher::ProcessEvents**](https://msdn.microsoft.com/library/windows/apps/br208215) from your app's main loop (implemented in the [**IFrameworkView::Run**](https://msdn.microsoft.com/library/windows/apps/hh700505) method of your view provider).</span></span>
 
 ``` syntax
 // This method is called after the window becomes active.
@@ -82,11 +82,11 @@ void App::Run()
 }
 ```
 
-## <a name="related-topics"></a><span data-ttu-id="85952-117">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="85952-117">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="b2896-117">Verwandte Themen</span><span class="sxs-lookup"><span data-stu-id="b2896-117">Related topics</span></span>
 
 
-* [<span data-ttu-id="85952-118">So wird's gemacht: Anhalten einer App (DirectX und C++)</span><span class="sxs-lookup"><span data-stu-id="85952-118">How to suspend an app (DirectX and C++)</span></span>](how-to-suspend-an-app-directx-and-cpp.md)
-* [<span data-ttu-id="85952-119">So wird's gemacht: Reaktivieren einer App (DirectX und C++)</span><span class="sxs-lookup"><span data-stu-id="85952-119">How to resume an app (DirectX and C++)</span></span>](how-to-resume-an-app-directx-and-cpp.md)
+* [<span data-ttu-id="b2896-118">So wird's gemacht: Anhalten einer App (DirectX und C++)</span><span class="sxs-lookup"><span data-stu-id="b2896-118">How to suspend an app (DirectX and C++)</span></span>](how-to-suspend-an-app-directx-and-cpp.md)
+* [<span data-ttu-id="b2896-119">So wird's gemacht: Reaktivieren einer App (DirectX und C++)</span><span class="sxs-lookup"><span data-stu-id="b2896-119">How to resume an app (DirectX and C++)</span></span>](how-to-resume-an-app-directx-and-cpp.md)
 
  
 

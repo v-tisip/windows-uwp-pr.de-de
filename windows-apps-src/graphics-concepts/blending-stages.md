@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 490e2148026719f562b5fd17761546c4244850dc
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8341495"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "8473750"
 ---
 # <a name="blending-stages"></a><span data-ttu-id="e3a96-104">Vermischungsstufen</span><span class="sxs-lookup"><span data-stu-id="e3a96-104">Blending stages</span></span>
 
