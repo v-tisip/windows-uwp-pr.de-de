@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, spiel, aufzeichnen, audio, video, metadaten
 ms.localizationpriority: medium
 ms.openlocfilehash: c4d4d764395d7f383e9cefcb9d8b1121db098780
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8486879"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8696260"
 ---
 # <a name="capture-game-audio-video-screenshots-and-metadata"></a>Aufzeichnen von Screenshots sowie von Audio-, Video- und Metadaten eines Spiels
 In diesem Artikel wird beschrieben, wie Audio- und Videosequenzen sowie Screenshots aufgezeichnet und Metadaten von Spielen übermittelt werden, die das System in aufgezeichnete und übertragene Videostreams einbettet. So kann Ihre App dynamische Erfahrungen erstellen, die mit Spielereignissen synchronisiert sind. 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Demo-App für den Einzelhandel
 ms.localizationpriority: medium
 ms.openlocfilehash: 9d6baaff5ca2af781e72c9b4643fa1ea0624e0eb
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8485740"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8695619"
 ---
 # <a name="add-retail-demo-rdx-features-to-your-app"></a>Einzelhandel (RDX-App) Demo Features Ihrer app hinzufügen
 
