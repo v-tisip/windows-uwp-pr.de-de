@@ -14,11 +14,11 @@ dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 42b061c3c3836e69739c571f6ef47e05c286ea8e
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8689040"
+ms.locfileid: "8731302"
 ---
 # <a name="date-picker"></a><span data-ttu-id="740bc-103">Datumsauswahl</span><span class="sxs-lookup"><span data-stu-id="740bc-103">Date picker</span></span>
 

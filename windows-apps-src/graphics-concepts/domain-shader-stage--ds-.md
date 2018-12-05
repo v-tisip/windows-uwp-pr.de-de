@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: bbde90d848d3bc8fb18a5ecf370c85121adc02f6
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8694115"
+ms.locfileid: "8731809"
 ---
 # <a name="domain-shader-ds-stage"></a><span data-ttu-id="17071-104">Domainshaderphase (DS)</span><span class="sxs-lookup"><span data-stu-id="17071-104">Domain Shader (DS) stage</span></span>
 

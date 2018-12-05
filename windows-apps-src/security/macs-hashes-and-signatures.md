@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: 6517241826d06b63fd88b45237552acffbdc62da
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8699742"
+ms.locfileid: "8731146"
 ---
 # <a name="macs-hashes-and-signatures"></a><span data-ttu-id="98602-104">MACs, Hashes und Signaturen</span><span class="sxs-lookup"><span data-stu-id="98602-104">MACs, hashes, and signatures</span></span>
 

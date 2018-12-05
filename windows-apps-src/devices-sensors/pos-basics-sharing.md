@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Point of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 53dc22b2aa35b5e69854f6fb489ff6a454c73bf6
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8713757"
+ms.locfileid: "8731789"
 ---
 # <a name="pointofservice-device-sharing"></a><span data-ttu-id="7516c-104">PointOfService gemeinsame Nutzung von Geräten</span><span class="sxs-lookup"><span data-stu-id="7516c-104">PointOfService device sharing</span></span>
 

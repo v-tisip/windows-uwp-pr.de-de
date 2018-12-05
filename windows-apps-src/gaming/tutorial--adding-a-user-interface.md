@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Benutzeroberfläche, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 09005eb12997126a9cad68c388beb0473b19fda3
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8687298"
+ms.locfileid: "8743793"
 ---
 # <a name="add-a-user-interface"></a><span data-ttu-id="af920-104">Hinzufügen einer Benutzeroberfläche</span><span class="sxs-lookup"><span data-stu-id="af920-104">Add a user interface</span></span>
 

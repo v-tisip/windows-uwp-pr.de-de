@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Spiele, portieren, Spielschleife, Direct3D9, DirectX11
 ms.localizationpriority: medium
 ms.openlocfilehash: 8b0cf6352d400371b54a54d71176c4d8e1dc457d
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8688181"
+ms.locfileid: "8732975"
 ---
 # <a name="port-the-game-loop"></a><span data-ttu-id="372e3-104">Portieren der Spielschleife</span><span class="sxs-lookup"><span data-stu-id="372e3-104">Port the game loop</span></span>
 

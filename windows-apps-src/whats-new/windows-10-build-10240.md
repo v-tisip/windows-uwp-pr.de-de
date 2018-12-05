@@ -7,11 +7,11 @@ ms.topic: article
 ms.assetid: 4853e55b-2232-4589-903a-ccb60e07aeb8
 ms.localizationpriority: medium
 ms.openlocfilehash: 75c5c34f3dec48bbee2feccde5b60cde45a241f9
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8703091"
+ms.locfileid: "8729922"
 ---
 # <a name="whats-new-in-windows10-for-developers-build-10240"></a><span data-ttu-id="1d707-103">Neuigkeiten in Windows 10 für Entwickler, build 10240</span><span class="sxs-lookup"><span data-stu-id="1d707-103">What's new in Windows10 for developers, build 10240</span></span>
 

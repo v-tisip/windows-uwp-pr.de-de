@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierung
 ms.localizationpriority: medium
 ms.openlocfilehash: f4b7e914684d2e4d3d9c4c1f0cdc7e88d7b5b8fe
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8694559"
+ms.locfileid: "8735930"
 ---
 # <a name="numeralsystem-values"></a><span data-ttu-id="6e782-103">NumeralSystem-Werte</span><span class="sxs-lookup"><span data-stu-id="6e782-103">NumeralSystem values</span></span>
 

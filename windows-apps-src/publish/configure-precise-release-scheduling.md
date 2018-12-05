@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows10, UWP, Zeitplan, Veröffentlichung, Datum, starten
 ms.localizationpriority: medium
 ms.openlocfilehash: a1477a426a9cdf240e694efb19bd7521fcd734cb
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8703477"
+ms.locfileid: "8731769"
 ---
 # <a name="configure-precise-release-scheduling"></a><span data-ttu-id="b96d4-103">Konfigurieren des genauen Veröffentlichungszeitplans</span><span class="sxs-lookup"><span data-stu-id="b96d4-103">Configure precise release scheduling</span></span>
 

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Kauf, Trichter
 ms.localizationpriority: medium
 ms.openlocfilehash: d9ccbb081ef6f39ad795105ee2449de4d8442ab3
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8690134"
+ms.locfileid: "8734327"
 ---
 # <a name="get-app-acquisition-funnel-data"></a><span data-ttu-id="ea8a1-104">Abrufen von App-Erwerbstrichterdaten</span><span class="sxs-lookup"><span data-stu-id="ea8a1-104">Get app acquisition funnel data</span></span>
 

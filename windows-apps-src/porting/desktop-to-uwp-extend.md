@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 76e4b60e1cd25a205d6a304f12a0b04f5db693b5
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8709372"
+ms.locfileid: "8730221"
 ---
 # <a name="extend-your-desktop-application-with-modern-uwp-components"></a><span data-ttu-id="f6b5b-103">Erweitern Sie Ihre Desktopanwendung mit modernen Windows-UWP-Komponenten</span><span class="sxs-lookup"><span data-stu-id="f6b5b-103">Extend your desktop application with modern UWP components</span></span>
 

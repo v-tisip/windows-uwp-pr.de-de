@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, xBind
 ms.localizationpriority: medium
 ms.openlocfilehash: 371b64a6161911242acd5b9abf97cfa7d2f05358
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8710570"
+ms.locfileid: "8735880"
 ---
 # <a name="functions-in-xbind"></a><span data-ttu-id="12b19-104">Funktionen in x:Bind</span><span class="sxs-lookup"><span data-stu-id="12b19-104">Functions in x:Bind</span></span>
 
