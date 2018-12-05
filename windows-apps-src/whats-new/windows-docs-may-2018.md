@@ -6,11 +6,11 @@ ms.date: 5/7/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 20bb514a15963befb5b96a1b01a6c057e8f27482
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8485017"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8701122"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>Neuigkeiten in der Windows-Entwicklerdokumentation im Mai 2018
 
@@ -89,7 +89,7 @@ Optionale Pakete in Ihrer app können nun ausführbaren C#-Code enthalten. [Hier
 
 [Seitenübergänge](../design/motion/page-transitions.md) , wenn Benutzer zwischen Seiten in einer app navigieren. Sie können Benutzer zu verstehen, wo sie in der Navigationshierarchie sind, und geben Sie Feedback über die Beziehung zwischen Seiten.
 
-### <a name="project-rome"></a>Projekt Rome
+### <a name="project-rome"></a>Project Rome
 
 Das Projekt "ROME"-Team hat ihre IOS- und Android-SDKs, neue Features wie Aktivitäten des Benutzers und Umgestaltung Großteil ihres Codes, um eine konsistente programmiererfahrung über die verschiedenen SDKs bieten überholt. [Alle neuen API-Referenz und Vorgehensweisen Dokumente](https://docs.microsoft.com/windows/project-rome/) werden während der Build 2018 Developer-Konferenz freischalten.
 
