@@ -6,11 +6,11 @@ ms.date: 12/14/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c9b4c834c646aed7953dc2b0f992dea579d8b9fd
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8711958"
+ms.locfileid: "8733574"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a><span data-ttu-id="cebb3-104">Neuigkeiten in der Windows-Entwicklerdokumentation im Dezember 2017</span><span class="sxs-lookup"><span data-stu-id="cebb3-104">What's New in the Windows Developer Docs in December 2017</span></span>
 
