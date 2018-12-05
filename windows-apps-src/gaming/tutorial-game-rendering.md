@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Rendern
 ms.localizationpriority: medium
 ms.openlocfilehash: f73665e60513e4f8465be3dbe69f792af285a8e1
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8466390"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8708122"
 ---
 # <a name="rendering-framework-ii-game-rendering"></a><span data-ttu-id="5d457-105">Rendering-Framework II: Spiel-Rendering</span><span class="sxs-lookup"><span data-stu-id="5d457-105">Rendering framework II: Game rendering</span></span>
 

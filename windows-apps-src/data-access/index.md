@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Daten, Datenbank, relational, Tabellen, sqlite
 ms.localizationpriority: medium
 ms.openlocfilehash: eb5adbdd3ae12d039d934e8d0cbe468ae5c1187c
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8466779"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8711594"
 ---
 # <a name="data-access"></a><span data-ttu-id="f356f-104">Datenzugriff</span><span class="sxs-lookup"><span data-stu-id="f356f-104">Data access</span></span>
 

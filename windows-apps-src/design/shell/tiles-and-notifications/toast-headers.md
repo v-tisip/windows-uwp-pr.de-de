@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP, Popup, Header, Popup-Header, Benachrichtigungen, Gruppen-Popups, Info-Center
 ms.localizationpriority: medium
 ms.openlocfilehash: 361b161b8cf323596a3b07665819300c78f1dcc5
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8351432"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8707964"
 ---
 # <a name="toast-headers"></a><span data-ttu-id="bee1f-103">Popup-Header</span><span class="sxs-lookup"><span data-stu-id="bee1f-103">Toast headers</span></span>
 

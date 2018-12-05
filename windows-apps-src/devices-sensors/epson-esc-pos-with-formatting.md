@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 11467a45021da7898c2b617e3b1b01312c795c4c
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8468674"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8710640"
 ---
 # <a name="epson-escpos-with-formatting"></a><span data-ttu-id="722e1-104">Epson ESC/POS mit Formatierung</span><span class="sxs-lookup"><span data-stu-id="722e1-104">Epson ESC/POS with formatting</span></span>
 
