@@ -6,12 +6,12 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API
 ms.localizationpriority: medium
-ms.openlocfilehash: 3aec7ed4f97a0ce4733cfba450770de86a84d6ee
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.openlocfilehash: 2122c259e78ce96c4553dd676c0c1ed78e4e7123
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8469848"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8688280"
 ---
 # <a name="create-and-manage-submissions"></a>Erstellen und Verwalten von Übermittlungen
 
@@ -41,9 +41,9 @@ Die folgenden Schritte beschreiben den gesamten Prozess der Verwendung der Micro
 
 Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllt haben, bevor Sie mit dem Schreiben von Code zum Aufrufen der Microsoft Store-Übermittlungs-API beginnen:
 
-* Sie (bzw. Ihre Organisation) müssen über ein Azure AD-Verzeichnis und die Berechtigung [Globaler Administrator](http://go.microsoft.com/fwlink/?LinkId=746654) für das Verzeichnis verfügen. Wenn Sie bereits mit Office 365oder anderen Unternehmensdiensten von Microsoft arbeiten, verfügen Sie schon über ein Azure AD-Verzeichnis. Andernfalls können Sie für ohne zusätzliche Kosten [ein neues Azure AD im Partner Center erstellen](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) .
+* Sie (bzw. Ihre Organisation) müssen über ein Azure AD-Verzeichnis und die Berechtigung [Globaler Administrator](http://go.microsoft.com/fwlink/?LinkId=746654) für das Verzeichnis verfügen. Wenn Sie bereits mit Office 365oder anderen Unternehmensdiensten von Microsoft arbeiten, verfügen Sie schon über ein Azure AD-Verzeichnis. Andernfalls können Sie für ohne zusätzliche Kosten [ein neues Azure AD im Partner Center erstellen](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) .
 
-* Sie müssen [eine Azure AD-Anwendung mit Ihrem Partner Center-Konto verknüpfen](#associate-an-azure-ad-application-with-your-windows-dev-center-account) und Ihre Mandanten-ID, Client-ID und Schlüssel abrufen. Sie benötigen diese Werte, um ein Azure AD-Zugriffstoken abzurufen, das Sie in Aufrufen von der Microsoft Store-Übermittlungs-API verwenden.
+* Sie müssen [eine Azure AD-Anwendung mit Ihrem Partner Center-Konto verknüpfen](#associate-an-azure-ad-application-with-your-windows-partner-center-account) und Ihre Mandanten-ID, Client-ID und Schlüssel abrufen. Sie benötigen diese Werte, um ein Azure AD-Zugriffstoken abzurufen, das Sie in Aufrufen von der Microsoft Store-Übermittlungs-API verwenden.
 
 * Bereiten Sie Ihre App für die Verwendung mit der Microsoft Store-Übermittlungs-API vor:
 
@@ -57,7 +57,7 @@ Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllt haben, bevor
 
   * Wenn Sie eine Add-On-Übermittlung erstellen oder aktualisieren und ein Symbol angeben müssen, [bereiten Sie das Symbol vor](https://msdn.microsoft.com/windows/uwp/publish/create-iap-descriptions#icon).
 
-<span id="associate-an-azure-ad-application-with-your-windows-dev-center-account" />
+<span id="associate-an-azure-ad-application-with-your-windows-partner-center-account" />
 
 ### <a name="how-to-associate-an-azure-ad-application-with-your-partner-center-account"></a>Wie Sie Ihr Partner Center-Konto eine Azure AD-Anwendung zuordnen
 
@@ -66,7 +66,7 @@ Bevor Sie die Microsoft Store-Übermittlungs-API verwenden können, müssen Sie 
 > [!NOTE]
 > Sie müssen diesen Schritt nur einmal ausführen. Wenn Sie im Besitz der Mandanten-ID, der Client-ID und des Schlüssel sind, können Sie diese Daten jederzeit wiederverwenden, um ein neues Azure AD-Zugriffstoken zu erstellen.
 
-1.  Im Partner Center, [Partner Center-Konto Ihrer Organisation mit Azure AD-Verzeichnis Ihrer Organisation zuordnen](../publish/associate-azure-ad-with-dev-center.md).
+1.  Im Partner Center, [Partner Center-Konto Ihrer Organisation mit Azure AD-Verzeichnis Ihrer Organisation zuordnen](../publish/associate-azure-ad-with-partner-center.md).
 
 2.  Als Nächstes auf der Seite für den **Benutzer** im Abschnitt **kontoeinstellungen** des Partner Center, [die Azure AD-Anwendung hinzufügen](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) , die die app darstellt oder Dienst, mit denen Sie Übermittlungen für Ihr Partner Center-Konto zugreifen. Weisen Sie dieser Anwendung die Rolle **Verwalter** zu. Wenn die Anwendung nicht vorhanden ist, noch in Azure AD-Verzeichnis, Sie können [Erstellen Sie ein neues Azure AD-Anwendung im Partner Center](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account).  
 

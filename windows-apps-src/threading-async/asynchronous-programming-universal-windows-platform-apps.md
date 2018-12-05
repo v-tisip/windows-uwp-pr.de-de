@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, asynchron
 ms.localizationpriority: medium
 ms.openlocfilehash: 50e8bae0db888b947c568deb50fa5f2fc227e734
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8469918"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8685276"
 ---
 # <a name="asynchronous-programming"></a>Asynchrone Programmierung
 In diesem Thema wird beschrieben, asynchrone Programmierung in die universelle Windows-Plattform (UWP) und ihre Darstellung in c#, Microsoft Visual Basic, C++ und JavaScript.

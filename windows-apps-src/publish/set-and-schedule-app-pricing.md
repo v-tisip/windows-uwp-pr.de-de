@@ -5,12 +5,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows10, UWP, Preise, App-Preise, App-Preis, Apps verkaufen, Preis ändern, benutzerdefinierter Preis, Preis, Preise, Kosten, Grundpreise überschreiben, formfreier Preis, formfrei
 ms.localizationpriority: medium
-ms.openlocfilehash: d901ec630c680adfaa637d5555fc2182749bec89
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.openlocfilehash: ea873d2c1f78762741d6272fafe1496d6b3a71ea
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8462220"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8696776"
 ---
 # <a name="set-and-schedule-app-pricing"></a>Festlegen und Planen von App-Preisen
 
@@ -32,7 +32,7 @@ Jedes Preisniveau hat einen entsprechenden Wert in jeder der über 60vom Store a
 
 Klicken Sie im Abschnitt **Preise** auf **Umrechnungstabelle anzeigen**, um die entsprechenden Preise in allen Währungen anzuzeigen. Hier wird für jedes Preisniveau auch eine ID-Nummer angezeigt, die Sie bei Verwendung der [Microsoft Store-Übermittlungs-API](../monetize/manage-app-submissions.md#price-tiers) benötigen. Sie können auf **Herunterladen** klicken, um eine Kopie der Tabelle mit den Preisniveaus als CSV-Datei herunterzuladen.
 
-Beachten Sie, dass das von Ihnen ausgewählte Preisniveau u. U. eine Verkaufs- oder Mehrwertsteuer enthält, die Kunden bezahlen müssen. Weitere Informationen über Ihre steuerlichen Verpflichtungen in ausgewählten Märkten finden Sie in den [Steuerinformationen zu kostenpflichtigen Apps](tax-details-for-paid-apps.md). Lesen Sie außerdem die [Überlegungen zu Preisen für die einzelnen Märkte](define-pricing-and-market-selection.md#price-considerations-for-specific-markets).
+Beachten Sie, dass das von Ihnen ausgewählte Preisniveau u. U. eine Verkaufs- oder Mehrwertsteuer enthält, die Kunden bezahlen müssen. Weitere Informationen über Ihre steuerlichen Verpflichtungen in ausgewählten Märkten finden Sie in den [Steuerinformationen zu kostenpflichtigen Apps](tax-details-for-paid-apps.md). Lesen Sie außerdem die [Überlegungen zu Preisen für die einzelnen Märkte](define-market-selection.md#price-considerations-for-specific-markets).
 
 > [!NOTE]
 > Wenn Sie die Option **Beenden des Erwerbs** unter **dieses Produkt verfügbar, aber nicht im Store sichtbar machen** [Sichtbarkeit](choose-visibility-options.md#discoverability) wählen Sie im Abschnitt), nicht mehr Preis für Ihre Übermittlung (da niemand die app mehr erwerben wird festgelegt werden es sei denn, sie einen werbecode verwenden, um die app kostenlos zu erhalten).

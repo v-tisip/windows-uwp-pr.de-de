@@ -5,12 +5,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, Uwp, Azure Ad-Anwendung, Aad, Benutzer, gruppieren, mehrere Benutzer, mehrere Benutzer
 ms.localizationpriority: medium
-ms.openlocfilehash: 7dd300aa6a37c205e01c6f73d95ef1818d516fc0
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.openlocfilehash: 0ecdcf2b148f53fefb5edc7e1f2df0d6bab58475
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8461399"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8685804"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-partner-center-account"></a>Hinzufügen von Benutzern, Gruppen und Azure AD-Anwendungen zu Ihrem Partner Center-Konto
 
@@ -19,11 +19,11 @@ Der Abschnitt **Benutzer** für [Partner Center](https://partner.microsoft.com/d
 Nachdem Benutzer auf das Konto hinzugefügt wurden, können Sie [Kontodetails bearbeiten](#edit), [Rollen und Berechtigungen](set-custom-permissions-for-account-users.md) ändern oder [Benutzer entfernen](#remove).
 
 > [!IMPORTANT]
-> Um Ihr Konto Benutzer hinzufügen, müssen Sie die erste [Ordnen Sie Ihr Partner Center-Konto mit Azure Active Directory-Mandanten Ihrer Organisation](associate-azure-ad-with-dev-center.md). 
+> Um Ihr Konto Benutzer hinzufügen, müssen Sie die erste [Ordnen Sie Ihr Partner Center-Konto mit Azure Active Directory-Mandanten Ihrer Organisation](associate-azure-ad-with-partner-center.md). 
 
 Wenn Sie Benutzer hinzufügen, müssen Sie den Zugriff auf Ihr Partner Center-Konto angeben, indem sie eine [Rolle oder Gruppe von benutzerdefinierten Berechtigungen](set-custom-permissions-for-account-users.md)zuweisen. 
 
-Bedenken Sie, dass alle Partner Center-Benutzer (einschließlich von Gruppen und Azure AD-Anwendungen) ein aktives Konto in [Azure AD-Mandanten, der Ihr Partner Center-Konto zugeordnet ist,](associate-azure-ad-with-dev-center.md)vorhanden sein müssen. Die Benutzerverwaltung erfolgt pro Mandant. Sie müssen sich mit einem Managerkonto auf dem Mandanten anmelden, wenn Sie Benutzer hinzufügen oder bearbeiten möchten. Erstellen eines neuen Benutzers im Partner Center wird ebenfalls erstellt ein Konto für diesen Benutzer in Azure AD-Mandanten mit dem Sie angemeldet sind und Änderungen an den Namen eines Benutzers im Partner Center wird die gleiche Änderungen in Azure AD-Mandanten Ihrer Organisation.
+Bedenken Sie, dass alle Partner Center-Benutzer (einschließlich von Gruppen und Azure AD-Anwendungen) ein aktives Konto in [Azure AD-Mandanten, der Ihr Partner Center-Konto zugeordnet ist,](associate-azure-ad-with-partner-center.md)vorhanden sein müssen. Die Benutzerverwaltung erfolgt pro Mandant. Sie müssen sich mit einem Managerkonto auf dem Mandanten anmelden, wenn Sie Benutzer hinzufügen oder bearbeiten möchten. Erstellen eines neuen Benutzers im Partner Center wird ebenfalls erstellt ein Konto für diesen Benutzer in Azure AD-Mandanten mit dem Sie angemeldet sind und Änderungen an den Namen eines Benutzers im Partner Center wird die gleiche Änderungen in Azure AD-Mandanten Ihrer Organisation.
 
 > [!NOTE]
 > Wenn Ihre Organisation [Verzeichnisintegration](http://go.microsoft.com/fwlink/p/?LinkID=724033) zum Synchronisieren des lokalen Verzeichnisdienst mit Ihrem Azure AD verwendet, nicht Sie neue Benutzer, Gruppen oder Azure AD-Apps in Partner Center erstellen. Sie (oder ein anderer Administrator in Ihrem lokalen Verzeichnis) müssen sie direkt im lokalen Verzeichnis erstellen, bevor Sie werden sehen und diese im Partner Center hinzufügen können.
@@ -92,7 +92,7 @@ Die von Ihnen eingeladenen Benutzer erhalten eine E-Mail-Einladung für Ihr Kont
 Um die Einladung erneut zu senden, suchen Sie den Benutzer auf Ihrer **Benutzer**-Seite heraus, und wählen Sie seine E-Mail-Adresse (oder den Text **Einladung ausstehend**) aus. Klicken Sie anschließend am unteren Rand der Seite auf **Einladung senden**.
 
 > [!IMPORTANT]
-> Externe Benutzer, die Sie für den Beitritt einladen kann Ihr Partner Center-Konto die gleichen Rollen und Berechtigungen wie andere Benutzer zugewiesen werden. Allerdings können externe Benutzern bestimmte Aufgaben in Visual Studio wie z.B. das Assoziieren einer App mit dem Store oder das Erstellen von Paketen zum Hochladen in den Store nicht durchführen. Wenn ein Benutzer diese Aufgaben durchführen muss, wählen Sie **Erstellen von neuen Benutzern** anstelle von **externe Benutzer einladen**. (Wenn Sie diese Benutzer nicht dem vorhandenen Azure AD-Mandanten hinzufügen möchten, können Sie [einen neuen Mandanten erstellen](../publish/associate-azure-ad-with-dev-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account), und anschließend für sie neue Benutzerkonten im Mandanten erstellen.) 
+> Externe Benutzer, die Sie für den Beitritt einladen kann Ihr Partner Center-Konto die gleichen Rollen und Berechtigungen wie andere Benutzer zugewiesen werden. Allerdings können externe Benutzern bestimmte Aufgaben in Visual Studio wie z.B. das Assoziieren einer App mit dem Store oder das Erstellen von Paketen zum Hochladen in den Store nicht durchführen. Wenn ein Benutzer diese Aufgaben durchführen muss, wählen Sie **Erstellen von neuen Benutzern** anstelle von **externe Benutzer einladen**. (Wenn Sie diese Benutzer nicht dem vorhandenen Azure AD-Mandanten hinzufügen möchten, können Sie [einen neuen Mandanten erstellen](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account), und anschließend für sie neue Benutzerkonten im Mandanten erstellen.) 
 
 
 ### <a name="changing-a-users-directory-password"></a>Ändern des Verzeichniskennworts eines Benutzers
