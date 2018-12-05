@@ -7,11 +7,11 @@ keywords: Windows 10, Uwp, Standard, c++, Cpp, Winrt, Projektion, verschieben, W
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 1860f562233ceefa6d9ebb3741378b3265b4c3a9
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8698321"
+ms.locfileid: "8732449"
 ---
 # <a name="value-categories-and-references-to-them"></a>Wertekategorien und Verweise auf diese
 Dieses Thema beschreibt die verschiedenen Kategorien der Werte (und Verweise auf Werte), die in C++ vorhanden sind. Sie werden Ausrichtungsattributs verwendet kenne *l-Werte* und *Rvalues*, aber möglicherweise nicht stellen sie in die Begriffe, die in diesem Thema werden. Und es gibt andere Arten von Werten, zu.

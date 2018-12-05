@@ -6,12 +6,12 @@ ms.date: 09/30/2018
 ms.topic: article
 keywords: Windows 10, Uwp, optionale Pakete, zusammengehörig, Paket-Erweiterung, visual studio
 ms.localizationpriority: medium
-ms.openlocfilehash: e19f9673090501d59e260a698f9968a8f98f1cd5
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.openlocfilehash: f62d6c99acc75033403fac7a498308cea6f7d3f8
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8699042"
+ms.locfileid: "8750246"
 ---
 # <a name="optional-packages-and-related-set-authoring"></a>Optionale Pakete und die Erstellung zugehöriger Sets
 Optionale Pakete enthalten Inhalte, die in ein Hauptpaket integriert werden können. Diese sind nützlich für herunterladbare Inhalte (DLC), da große Apps so im Hinblick auf größenbeschränkungen, oder auch zusätzliche Inhalte getrennt von der ursprünglichen app.
@@ -34,7 +34,7 @@ Während Sie in diesem Artikel lesen, empfiehlt es sich, dass Sie folgen Sie das
 
 ## <a name="optional-packages"></a>Optionale Pakete
 Um ein optionales Paket in Visual Studio erstellen, müssen Sie:
-1. Stellen Sie sicher, dass Ihre app **Zielplattformversion Min** auf festgelegt ist: 10.0.15063.0.
+1. Stellen Sie sicher, dass Ihre app **Zielplattformversion Min** auf festgelegt ist: 10.0.15063.0 oder höher.
 2. Öffnen Sie in Ihrem Projekt **Hauptpaket** der `Package.appxmanifest` Datei. Navigieren Sie zur Registerkarte "Verpacken", und notieren Sie Ihren **paketfamilienname**, dies ist alles, was vor dem Zeichen "_".
 3. Aus Ihrem Projekt **optionales Paket** rechten Maustaste klicken Sie auf die `Package.appxmanifest` , und wählen Sie **mit öffnen > XML (Text)-Editor**.
 4. Suchen Sie nach der `<Dependencies>` Element in der Datei. Fügen Sie Folgendes hinzu:
@@ -62,6 +62,7 @@ Wenn Sie Code über ein optionales Paket in das Hauptpaket laden möchten, müss
 2. Klicken Sie im Fenster Suchen Sie die installierten Vorlagen für "txt", und fügen Sie eine neue Textdatei.
 > [!IMPORTANT]
 > Die neue Textdatei muss den Namen: `Bundle.Mapping.txt`.
+
 3. In der `Bundle.Mapping.txt` Datei, die Sie geben relative Pfade optionales Paket Projekte oder externe Pakete. Ein Beispiel für `Bundle.Mapping.txt` Datei sollte etwa wie folgt aussehen:
 
 ```syntax
@@ -75,7 +76,7 @@ Wenn Sie Code über ein optionales Paket in das Hauptpaket laden möchten, müss
 
 Wenn Ihre Lösung auf diese Weise konfiguriert ist, erstellt Visual Studio ein Paketmanifest für das Hauptpaket mit alle erforderlichen Metadaten für zugehörige Gruppen. 
 
-Beachten Sie, die optionale Pakete wie ein `Bundle.Mapping.txt` -Datei für verwandte funktioniert nur unter Windows 10, Version 1703. Darüber hinaus sollte Ihre app Min Zielplattformversion auf 10.0.15063.0 festgelegt werden.
+Beachten Sie, die optionale Pakete wie ein `Bundle.Mapping.txt` -Datei für verwandte funktioniert nur unter Windows 10, Version 1703 oder höher. Darüber hinaus sollte Ihre app Min Zielplattformversion auf 10.0.15063.0 oder höher festgelegt werden.
 
 ## Bekannte Probleme<a name="known_issues"></a>
 
