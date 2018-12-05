@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Arcade-Joysticks, Eingabe
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f9e3ff29dfb17b6e2a07df52153013b5266206e
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8687488"
+ms.locfileid: "8740578"
 ---
 # <a name="arcade-stick"></a><span data-ttu-id="46c18-104">Arcade-Joystick</span><span class="sxs-lookup"><span data-stu-id="46c18-104">Arcade stick</span></span>
 

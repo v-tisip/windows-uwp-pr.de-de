@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Add-Ons, IAP, Preis
 ms.localizationpriority: medium
 ms.openlocfilehash: 062337c82d2567d15b0eff1767ab157618da257e
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8687163"
+ms.locfileid: "8740108"
 ---
 # <a name="set-add-on-pricing-and-availability"></a><span data-ttu-id="b36a1-103">Festlegen der Preise und Verfügbarkeit von Add-Ons</span><span class="sxs-lookup"><span data-stu-id="b36a1-103">Set add-on pricing and availability</span></span>
 

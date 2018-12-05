@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows10, Uwp, animation
 ms.localizationpriority: medium
 ms.openlocfilehash: 94d15fc7f2443475020aa7e134c076b833db46a8
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8713083"
+ms.locfileid: "8743833"
 ---
 # <a name="input-driven-animations"></a><span data-ttu-id="9b6ed-104">Eingabegesteuerte Animationen</span><span class="sxs-lookup"><span data-stu-id="9b6ed-104">Input-driven animations</span></span>
 

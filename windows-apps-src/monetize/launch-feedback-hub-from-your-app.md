@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Feedback-Hub, Starten
 ms.localizationpriority: medium
 ms.openlocfilehash: b4e11b8dfffd7e749a31f052545bfbdfc4449126
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8712839"
+ms.locfileid: "8737343"
 ---
 # <a name="launch-feedback-hub-from-your-app"></a><span data-ttu-id="3bd18-103">Starten des Feedback-Hubs über Ihre App</span><span class="sxs-lookup"><span data-stu-id="3bd18-103">Launch Feedback Hub from your app</span></span>
 

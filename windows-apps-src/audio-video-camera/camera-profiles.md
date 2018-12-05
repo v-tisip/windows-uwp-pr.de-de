@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: fe876b362f09eaca68d84516d413d3f458edf0a6
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8460527"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8758740"
 ---
 # <a name="discover-and-select-camera-capabilities-with-camera-profiles"></a><span data-ttu-id="68278-105">Entdecken und Auswählen von Kamerafunktionen mit Kameraprofilen</span><span class="sxs-lookup"><span data-stu-id="68278-105">Discover and select camera capabilities with camera profiles</span></span>
 

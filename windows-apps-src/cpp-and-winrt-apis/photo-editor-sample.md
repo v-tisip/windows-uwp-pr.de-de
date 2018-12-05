@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows10, UWP, Standard, C++, CPP, WinRT, Projektion, Beispiel, Anwendung, Foto, Editor
 ms.localizationpriority: medium
 ms.openlocfilehash: 8c6f668ef3d92f968e75659b0ba1937abadb079c
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8695531"
+ms.locfileid: "8735371"
 ---
 # <a name="photo-editor-cwinrt-sample-application"></a><span data-ttu-id="912e8-105">C++/WinRT-Beispielanwendung eines Foto-Editors</span><span class="sxs-lookup"><span data-stu-id="912e8-105">Photo Editor C++/WinRT sample application</span></span>
 <span data-ttu-id="912e8-106">Sie können die Beispielanwendung aus dem GitHub-Repository [C++/WinRT-Beispielanwendung eines Foto-Editors](https://github.com/Microsoft/Windows-appsample-photo-editor) klonen oder herunterladen.</span><span class="sxs-lookup"><span data-stu-id="912e8-106">You can clone or download the sample application from the [Photo Editor C++/WinRT sample application](https://github.com/Microsoft/Windows-appsample-photo-editor) GitHub repository.</span></span>

@@ -7,11 +7,11 @@ ms.date: 01/25/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: cc650c1f81fbcac5b62b090a6dc58b5f8709cd7a
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8691303"
+ms.locfileid: "8739952"
 ---
 # <a name="tutorial-support-ink-in-your-uwp-app"></a><span data-ttu-id="c25d4-104">Lernprogramm: Unterstützen von Freihandeingaben in Ihrer UWP-App</span><span class="sxs-lookup"><span data-stu-id="c25d4-104">Tutorial: Support ink in your UWP app</span></span>
 

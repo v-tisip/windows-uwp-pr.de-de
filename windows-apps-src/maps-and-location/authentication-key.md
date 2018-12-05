@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Kartenauthentifizierungsschlüssel, Kartensteuerelement
 ms.localizationpriority: medium
 ms.openlocfilehash: e986880ccedfdb4648b1554c35c23a8a841fe820
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8695259"
+ms.locfileid: "8737704"
 ---
 # <a name="request-a-maps-authentication-key"></a><span data-ttu-id="0e3a9-104">Anfordern eines Kartenauthentifizierungsschlüssels</span><span class="sxs-lookup"><span data-stu-id="0e3a9-104">Request a maps authentication key</span></span>
 

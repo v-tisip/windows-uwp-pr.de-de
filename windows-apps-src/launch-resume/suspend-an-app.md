@@ -12,11 +12,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: e765faeabc754581efc769804e2daf4bfe7f9671
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8690910"
+ms.locfileid: "8737764"
 ---
 # <a name="handle-app-suspend"></a><span data-ttu-id="a331a-104">Behandeln des Anhaltens von Apps</span><span class="sxs-lookup"><span data-stu-id="a331a-104">Handle app suspend</span></span>
 

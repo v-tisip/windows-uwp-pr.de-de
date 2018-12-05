@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, Versionshinweise
 ms.localizationpriority: medium
 ms.openlocfilehash: 1bab822c81cdd5af1e6b00ca8d33ed7f7ea3838f
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8684535"
+ms.locfileid: "8738122"
 ---
 # <a name="release-notes-for-the-advertising-libraries"></a><span data-ttu-id="d9a77-104">Versionshinweise für die Advertising-Bibliotheken</span><span class="sxs-lookup"><span data-stu-id="d9a77-104">Release notes for the advertising libraries</span></span>
 

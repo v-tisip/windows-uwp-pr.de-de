@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f6a37af19c9e3e9beaebbadfcc71f3ad01e3087c
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8688330"
+ms.locfileid: "8734463"
 ---
 # <a name="guidelines-for-cross-slide"></a><span data-ttu-id="7b853-103">Richtlinien für Querziehen</span><span class="sxs-lookup"><span data-stu-id="7b853-103">Guidelines for cross-slide</span></span>
 
