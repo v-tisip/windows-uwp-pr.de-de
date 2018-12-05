@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, Uwp, Codecs, Encoder, Decoder, Abfrage
 ms.localizationpriority: medium
 ms.openlocfilehash: 4241aad5a01617d6a002c6f5d6da0a4bb1455616
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8460422"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8687087"
 ---
 # <a name="query-for-codecs-installed-on-a-device"></a><span data-ttu-id="043d3-104">Abfrage installierter Codecs auf einem Gerät</span><span class="sxs-lookup"><span data-stu-id="043d3-104">Query for codecs installed on a device</span></span>
 <span data-ttu-id="043d3-105">Mit der **[CodecQuery](https://docs.microsoft.com/uwp/api/windows.media.core.codecquery)**-Klasse können Sie auf dem aktuellen Gerät installierte Codecs abfragen.</span><span class="sxs-lookup"><span data-stu-id="043d3-105">The **[CodecQuery](https://docs.microsoft.com/uwp/api/windows.media.core.codecquery)** class allows you to query for codecs installed on the current device.</span></span> <span data-ttu-id="043d3-106">Die Liste der Codecs, die in Windows10 für andere Gerätefamilien enthalten sind, finden Sie im Artikel [Unterstützte Codecs](supported-codecs.md). Da aber Benutzer und Apps zusätzliche Codecs auf einem Gerät installieren können, sollten Sie zur Laufzeit die Codec-Unterstützung abfragen, um festzustellen, welche Codecs auf dem aktuellen Gerät verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="043d3-106">The list of codecs that are included with Windows 10 for different device families are listed in the article [Supported codecs](supported-codecs.md), but since users and apps can install additional codecs on a device, you may want to query for codec support at runtime to determine what codecs are available on the current device.</span></span>

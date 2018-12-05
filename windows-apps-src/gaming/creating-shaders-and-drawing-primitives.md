@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Shader, Grundtypen, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: 5173adc26e0730ccb80f93fe0c12af286b0c1a49
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8485678"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8684768"
 ---
 # <a name="create-shaders-and-drawing-primitives"></a><span data-ttu-id="3774c-104">Erstellen von Shadern und Zeichnen von Grundtypen</span><span class="sxs-lookup"><span data-stu-id="3774c-104">Create shaders and drawing primitives</span></span>
 

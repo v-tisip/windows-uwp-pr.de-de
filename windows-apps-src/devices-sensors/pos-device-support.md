@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ffb8ea583aade51ae1cc5049a423d734359722c
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8344968"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8713970"
 ---
 # <a name="supported-point-of-service-peripherals"></a><span data-ttu-id="d0dc6-104">Unterstützte Point of Service-Peripheriegeräte</span><span class="sxs-lookup"><span data-stu-id="d0dc6-104">Supported Point of Service Peripherals</span></span>
 

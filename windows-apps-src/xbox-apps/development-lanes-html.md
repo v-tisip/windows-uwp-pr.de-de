@@ -7,11 +7,11 @@ keywords: windows 10, uwp
 ms.assetid: edd40cc4-2604-4bc6-bd81-f671389a70fa
 ms.localizationpriority: medium
 ms.openlocfilehash: 60642016e5924c554534775a6576b61e935eaf1e
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8479816"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8714010"
 ---
 # <a name="bringing-html-games-to-uwp-on-xbox"></a><span data-ttu-id="fe0ff-104">Portieren von HTML-Spielen auf die UWP auf Xbox</span><span class="sxs-lookup"><span data-stu-id="fe0ff-104">Bringing HTML games to UWP on Xbox</span></span>
 <span data-ttu-id="fe0ff-105">Xbox One ist eine hervorragende Plattform für HTML 5-Spiele.</span><span class="sxs-lookup"><span data-stu-id="fe0ff-105">Xbox One is an excellent platform for HTML 5 games.</span></span> <span data-ttu-id="fe0ff-106">HTML 5-Spiele werden auf der [Edge](https://developer.microsoft.com/microsoft-edge/)-Browser-Engine ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="fe0ff-106">HTML 5 games run on the [Edge](https://developer.microsoft.com/microsoft-edge/) browser engine.</span></span> <span data-ttu-id="fe0ff-107">Edge ist schnell und unterstützt HTML5- und CSS3-Features wie WebGL und Canvas uneingeschränkt.</span><span class="sxs-lookup"><span data-stu-id="fe0ff-107">Edge is fast and fully supports HTML 5 and CSS 3 features such as WebGL and canvas.</span></span>

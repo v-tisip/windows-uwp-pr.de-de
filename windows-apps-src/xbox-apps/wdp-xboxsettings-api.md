@@ -7,11 +7,11 @@ keywords: Windows 10, UWP
 ms.assetid: 6ab12b99-2944-49c9-92d9-f995efc4f6ce
 ms.localizationpriority: medium
 ms.openlocfilehash: 402d535bf6ff9ced24bc642c17d13b2d48d79681
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8475065"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8689557"
 ---
 # <a name="developer-settings-api-reference"></a><span data-ttu-id="90291-104">Referenz zur API für Entwicklereinstellungen</span><span class="sxs-lookup"><span data-stu-id="90291-104">Developer settings API reference</span></span>   
 <span data-ttu-id="90291-105">Mit dieser API können Sie auf Xbox One-Einstellungen zugreifen, die für die Entwicklung nützlich sind.</span><span class="sxs-lookup"><span data-stu-id="90291-105">You can access Xbox One settings that are useful for development using this API.</span></span>

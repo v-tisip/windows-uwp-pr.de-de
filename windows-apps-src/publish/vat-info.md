@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 90447f63cf28660eaffc0dff4e28524f8ef4372a
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8477084"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8685057"
 ---
 # <a name="vat-info"></a><span data-ttu-id="4bb4c-103">Umsatzsteuerinfo</span><span class="sxs-lookup"><span data-stu-id="4bb4c-103">VAT info</span></span>
 

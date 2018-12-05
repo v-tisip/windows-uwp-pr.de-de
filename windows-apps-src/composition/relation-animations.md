@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows10, Uwp, animation
 ms.localizationpriority: medium
 ms.openlocfilehash: b6fdc59e8a7203a3bb8c6ad79adabd446b884639
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8479115"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8693067"
 ---
 # <a name="relation-based-animations"></a><span data-ttu-id="39fea-104">Relationsbasierte Animationen</span><span class="sxs-lookup"><span data-stu-id="39fea-104">Relation based animations</span></span>
 

@@ -7,11 +7,11 @@ keywords: Windows10, UWP
 ms.assetid: 15a113b5-8231-41c9-b724-ce5add813967
 ms.localizationpriority: medium
 ms.openlocfilehash: 3f71cc75c0eca8564069c9f4ba634d9b42b63ee7
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8347553"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8697335"
 ---
 # <a name="nfc"></a><span data-ttu-id="55374-104">NFC</span><span class="sxs-lookup"><span data-stu-id="55374-104">NFC</span></span>
 

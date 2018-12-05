@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f206700360b6590a88b76f04531c9c6b1e94414f
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464832"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8685784"
 ---
 # <a name="network-communications-in-the-background"></a><span data-ttu-id="20df1-104">Netzwerkkommunikation im Hintergrund</span><span class="sxs-lookup"><span data-stu-id="20df1-104">Network communications in the background</span></span>
 <span data-ttu-id="20df1-105">Um die Netzwerkkommunikation fortzusetzen, während Sie sich nicht im Vordergrund befindet, kann Ihre app Hintergrundaufgaben und eine der folgenden zwei Optionen verwenden.</span><span class="sxs-lookup"><span data-stu-id="20df1-105">To continue network communication while it's not in the foreground, your app can use background tasks and one of these two options.</span></span>
