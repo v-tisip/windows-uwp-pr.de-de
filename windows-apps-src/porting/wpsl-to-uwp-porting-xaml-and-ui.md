@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 153d73a75b48d61cb490a903c6657c42638c6674
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8484417"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8689079"
 ---
 #  <a name="porting-windowsphone-silverlight-xaml-and-ui-to-uwp"></a><span data-ttu-id="76f3d-104">Portieren von WindowsPhone Silverlight-XAML und UI zu UWP</span><span class="sxs-lookup"><span data-stu-id="76f3d-104">Porting WindowsPhone Silverlight XAML and UI to UWP</span></span>
 

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 0eb7b1b620fcfa16576d84eaa2564408394d59de
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8471409"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8697172"
 ---
 # <a name="hosting-a-camera-barcode-scanner-preview-in-your-application"></a><span data-ttu-id="ee627-104">Die Vorschau für Kamera-Strichcodescanner in Ihrer Anwendung hosten</span><span class="sxs-lookup"><span data-stu-id="ee627-104">Hosting a camera barcode scanner preview in your application</span></span>
 ## <a name="step-1-setup-your-camera-preview"></a><span data-ttu-id="ee627-105">Schritt1: Einrichten der Kameravorschau</span><span class="sxs-lookup"><span data-stu-id="ee627-105">Step 1: Setup your camera preview</span></span>
