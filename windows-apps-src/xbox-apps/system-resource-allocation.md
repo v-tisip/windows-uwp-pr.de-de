@@ -7,11 +7,11 @@ keywords: Windows 10, UWP
 ms.assetid: 12e87019-4315-424e-b73c-426d565deef9
 ms.localizationpriority: medium
 ms.openlocfilehash: f2aad1b4d6abf9a05af9b9a938188c69d9cae7c8
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8336623"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8700881"
 ---
 # <a name="system-resources-for-uwp-apps-and-games-on-xbox-one"></a><span data-ttu-id="335eb-104">Systemressourcen für UWP-Apps und -Spiele auf der Xbox One</span><span class="sxs-lookup"><span data-stu-id="335eb-104">System resources for UWP apps and games on Xbox One</span></span>
 

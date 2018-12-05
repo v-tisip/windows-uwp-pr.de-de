@@ -13,11 +13,11 @@ dev-contact: tpaine
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 826b408135b85b1903ce345c480015797b814255
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8465952"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8699848"
 ---
 # <a name="split-view-control"></a><span data-ttu-id="c06c2-104">Steuerelement für geteilte Ansicht</span><span class="sxs-lookup"><span data-stu-id="c06c2-104">Split view control</span></span>
 

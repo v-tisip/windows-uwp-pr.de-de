@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e90692753924572a932767b9c188ed6d24f94593
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8343251"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8701862"
 ---
 # <a name="track-file-system-changes-in-the-background"></a><span data-ttu-id="3e4cb-104">Datei systemänderungen im Hintergrund nachverfolgen</span><span class="sxs-lookup"><span data-stu-id="3e4cb-104">Track file system changes in the background</span></span>
 

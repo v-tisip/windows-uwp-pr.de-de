@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, an die sekundäre Kachel-Taskleiste anheften, sekundäre Kacheln an Taskleiste anheften Kontextmenü
 ms.localizationpriority: medium
 ms.openlocfilehash: 7ad322fe371b0e1f3605ffb4c29108a15bb28e0c
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8474922"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8700174"
 ---
 # <a name="pin-secondary-tiles-to-taskbar"></a><span data-ttu-id="2fb80-103">Sekundäre Kacheln an Taskleiste anheften</span><span class="sxs-lookup"><span data-stu-id="2fb80-103">Pin secondary tiles to taskbar</span></span>
 

@@ -9,51 +9,51 @@ ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: f81c435690c7bf17066be5f49de4994f146fc5c9
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8329811"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8699315"
 ---
-# <a name="text-scaling"></a><span data-ttu-id="4fd12-103">Textskalierung</span><span class="sxs-lookup"><span data-stu-id="4fd12-103">Text scaling</span></span>
+# <a name="text-scaling"></a><span data-ttu-id="de2f2-103">Textskalierung</span><span class="sxs-lookup"><span data-stu-id="de2f2-103">Text scaling</span></span>
 
 ![Beispiel für Text, die Skalierung von 100 % und 225 %](images/coretext/text-scaling-news-hero-small.png)  
-*<span data-ttu-id="4fd12-105">Beispiel für Text Skalierung in Windows 10 (100 % bis 225 %)</span><span class="sxs-lookup"><span data-stu-id="4fd12-105">Example of text scaling in Windows 10 (100% to 225%)</span></span>*
+*<span data-ttu-id="de2f2-105">Beispiel für Text Skalierung in Windows 10 (100 % bis 225 %)</span><span class="sxs-lookup"><span data-stu-id="de2f2-105">Example of text scaling in Windows 10 (100% to 225%)</span></span>*
 
-## <a name="overview"></a><span data-ttu-id="4fd12-106">Übersicht</span><span class="sxs-lookup"><span data-stu-id="4fd12-106">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="de2f2-106">Übersicht</span><span class="sxs-lookup"><span data-stu-id="de2f2-106">Overview</span></span>
 
-<span data-ttu-id="4fd12-107">Lesen von Text auf einem Computerbildschirm (von mobilen Gerät, Laptop, desktop-Monitor auf dem großen Bildschirm von Surface Hub) kann für viele schwierig sein.</span><span class="sxs-lookup"><span data-stu-id="4fd12-107">Reading text on a computer screen (from mobile device to laptop to desktop monitor to the giant screen of a Surface Hub) can be challenging for many people.</span></span> <span data-ttu-id="4fd12-108">Im Gegensatz dazu finden Sie einige Benutzer die Schriftgrade in apps und Websites verwendet, um größer als erforderlich sein.</span><span class="sxs-lookup"><span data-stu-id="4fd12-108">Conversely, some users find the font sizes used in apps and web sites to be larger than necessary.</span></span>
+<span data-ttu-id="de2f2-107">Lesen von Text auf einem Computerbildschirm (von mobilen Gerät, Laptop, desktop-Monitor auf dem großen Bildschirm von Surface Hub) kann für viele schwierig sein.</span><span class="sxs-lookup"><span data-stu-id="de2f2-107">Reading text on a computer screen (from mobile device to laptop to desktop monitor to the giant screen of a Surface Hub) can be challenging for many people.</span></span> <span data-ttu-id="de2f2-108">Im Gegensatz dazu finden Sie einige Benutzer die Schriftgrade in apps und Websites verwendet, um größer als erforderlich sein.</span><span class="sxs-lookup"><span data-stu-id="de2f2-108">Conversely, some users find the font sizes used in apps and web sites to be larger than necessary.</span></span>
 
-<span data-ttu-id="4fd12-109">Um sicherzustellen, dass Text lesbar ist wie für die IT. Benutzer möglich ist, bietet Windows die Möglichkeit für Benutzer relativen Schriftgrad über das Betriebssystem und die einzelnen Anwendungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="4fd12-109">To ensure text is as legible as possible for the broadest range of users, Windows provides the ability for users to change relative font size across both the OS and individual applications.</span></span> <span data-ttu-id="4fd12-110">Anstelle eine Bildschirmlupe-app (die in der Regel nur alles in einem Bereich des Bildschirms vergrößert und führt eine eigene Probleme hinsichtlich der Verwendbarkeit) verwenden, ändern Auflösung oder verlassen sich DPI-Skalierung (die alles basierend auf der Anzeige und typische Anzeige ändert Abstand), Benutzer können schnell zugreifen, eine Einstellung, um nur-Text, angefangen bei 100 % (die Standardgröße) Größe bis zu 225 %.</span><span class="sxs-lookup"><span data-stu-id="4fd12-110">Instead of using a magnifier app (which typically just enlarges everything within an area of the screen and introduces its own usability issues), changing display resolution, or relying on DPI scaling (which resizes everything based on display and typical viewing distance), a user can quickly access a setting to resize just text, ranging from 100% (the default size) up to 225%.</span></span>
+<span data-ttu-id="de2f2-109">Um sicherzustellen, dass Text lesbar ist wie für die IT. Benutzer möglich ist, bietet Windows die Möglichkeit für Benutzer relativen Schriftgrad über das Betriebssystem und die einzelnen Anwendungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="de2f2-109">To ensure text is as legible as possible for the broadest range of users, Windows provides the ability for users to change relative font size across both the OS and individual applications.</span></span> <span data-ttu-id="de2f2-110">Anstelle eine Bildschirmlupe-app (die in der Regel nur alles in einem Bereich des Bildschirms vergrößert und führt eine eigene Probleme hinsichtlich der Verwendbarkeit) verwenden, ändern Auflösung oder verlassen sich DPI-Skalierung (die alles basierend auf der Anzeige und typische Anzeige ändert Abstand), Benutzer können schnell zugreifen, eine Einstellung, um nur-Text, angefangen bei 100 % (die Standardgröße) Größe bis zu 225 %.</span><span class="sxs-lookup"><span data-stu-id="de2f2-110">Instead of using a magnifier app (which typically just enlarges everything within an area of the screen and introduces its own usability issues), changing display resolution, or relying on DPI scaling (which resizes everything based on display and typical viewing distance), a user can quickly access a setting to resize just text, ranging from 100% (the default size) up to 225%.</span></span>
 
-## <a name="support"></a><span data-ttu-id="4fd12-111">Support</span><span class="sxs-lookup"><span data-stu-id="4fd12-111">Support</span></span>
+## <a name="support"></a><span data-ttu-id="de2f2-111">Support</span><span class="sxs-lookup"><span data-stu-id="de2f2-111">Support</span></span>
 
-<span data-ttu-id="4fd12-112">Universelle Windows-Anwendungen (sowohl Standard und PWA), Text, die standardmäßig Skalierung unterstützen.</span><span class="sxs-lookup"><span data-stu-id="4fd12-112">Universal Windows applications (both standard and PWA), support text scaling by default.</span></span>
+<span data-ttu-id="de2f2-112">Universelle Windows-Anwendungen (sowohl Standard und PWA), Text, die standardmäßig Skalierung unterstützen.</span><span class="sxs-lookup"><span data-stu-id="de2f2-112">Universal Windows applications (both standard and PWA), support text scaling by default.</span></span>
 
-<span data-ttu-id="4fd12-113">Wenn Ihre UWP-Anwendung benutzerdefinierte Steuerelemente, benutzerdefinierter Text, der Flächen, hartcodierten Steuerelement Höhen, älteren Frameworks oder 3rd Party-Frameworks enthält, müssen Sie wahrscheinlich einige Updates für eine konsistente und hilfreich Erfahrung für Benutzer sicherzustellen.</span><span class="sxs-lookup"><span data-stu-id="4fd12-113">If your UWP application includes custom controls, custom text surfaces, hard-coded control heights, older frameworks, or 3rd party frameworks, you likely have to make some updates to ensure a consistent and useful experience for your users.</span></span>  
+<span data-ttu-id="de2f2-113">Wenn Ihre UWP-Anwendung benutzerdefinierte Steuerelemente, benutzerdefinierter Text, der Flächen, hartcodierten Steuerelement Höhen, älteren Frameworks oder 3rd Party-Frameworks enthält, müssen Sie wahrscheinlich einige Updates für eine konsistente und hilfreich Erfahrung für Benutzer sicherzustellen.</span><span class="sxs-lookup"><span data-stu-id="de2f2-113">If your UWP application includes custom controls, custom text surfaces, hard-coded control heights, older frameworks, or 3rd party frameworks, you likely have to make some updates to ensure a consistent and useful experience for your users.</span></span>  
 
-<span data-ttu-id="4fd12-114">DirectWrite, GDI und XAML-SwapChainPanels unterstützen nativ Text zu skalieren, keine während Win32-Unterstützung auf Menüs, Symbole und Symbolleisten begrenzt ist.</span><span class="sxs-lookup"><span data-stu-id="4fd12-114">DirectWrite, GDI, and XAML SwapChainPanels do not natively support text scaling, while Win32 support is limited to menus, icons, and toolbars.</span></span>  
+<span data-ttu-id="de2f2-114">DirectWrite, GDI und XAML-SwapChainPanels unterstützen nativ Text zu skalieren, keine während Win32-Unterstützung auf Menüs, Symbole und Symbolleisten begrenzt ist.</span><span class="sxs-lookup"><span data-stu-id="de2f2-114">DirectWrite, GDI, and XAML SwapChainPanels do not natively support text scaling, while Win32 support is limited to menus, icons, and toolbars.</span></span>  
 
 <!-- If you want to support text scaling in your application with these frameworks, you’ll need to support the text scaling change event outlined below and provide alternative sizes for your UI and content.   -->
 
-## <a name="user-experience"></a><span data-ttu-id="4fd12-115">Benutzerfreundlichkeit</span><span class="sxs-lookup"><span data-stu-id="4fd12-115">User experience</span></span>
+## <a name="user-experience"></a><span data-ttu-id="de2f2-115">Benutzerfreundlichkeit</span><span class="sxs-lookup"><span data-stu-id="de2f2-115">User experience</span></span>
 
-<span data-ttu-id="4fd12-116">Benutzer können Textanzeige anpassen mit der können den Text größer Schieberegler in den Einstellungen -> -> erleichterte Bedienung Vision/Bildschirm.</span><span class="sxs-lookup"><span data-stu-id="4fd12-116">Users can adjust text scale with the Make text bigger slider on the Settings -> Ease of Access -> Vision/Display screen.</span></span>
+<span data-ttu-id="de2f2-116">Benutzer können Textanzeige anpassen mit der können den Text größer Schieberegler in den Einstellungen -> -> erleichterte Bedienung Vision/Bildschirm.</span><span class="sxs-lookup"><span data-stu-id="de2f2-116">Users can adjust text scale with the Make text bigger slider on the Settings -> Ease of Access -> Vision/Display screen.</span></span>
 
 ![Beispiel für Text, die Skalierung von 100 % und 225 %](images/coretext/text-scaling-settings-100-small.png)  
-*<span data-ttu-id="4fd12-118">Textanzeige von Einstellungen -> erleichterte Bedienung Vision/Bildschirm -></span><span class="sxs-lookup"><span data-stu-id="4fd12-118">Text scale setting from Settings -> Ease of Access -> Vision/Display screen</span></span>*
+*<span data-ttu-id="de2f2-118">Textanzeige von Einstellungen -> erleichterte Bedienung Vision/Bildschirm -></span><span class="sxs-lookup"><span data-stu-id="de2f2-118">Text scale setting from Settings -> Ease of Access -> Vision/Display screen</span></span>*
 
-## <a name="ux-guidance"></a><span data-ttu-id="4fd12-119">Erläuterungen zur Benutzeroberfläche</span><span class="sxs-lookup"><span data-stu-id="4fd12-119">UX guidance</span></span>
+## <a name="ux-guidance"></a><span data-ttu-id="de2f2-119">Erläuterungen zur Benutzeroberfläche</span><span class="sxs-lookup"><span data-stu-id="de2f2-119">UX guidance</span></span>
 
-<span data-ttu-id="4fd12-120">Wie Text geändert wird, Steuerelemente und Container müssen auch die Größe und umbrechen, um den Text und das neue Layout aufzunehmen.</span><span class="sxs-lookup"><span data-stu-id="4fd12-120">As text is resized, controls and containers must also resize and reflow to accommodate the text and its new layout.</span></span> <span data-ttu-id="4fd12-121">Wie bereits erwähnt abhängig von der app-Framework und Plattform erfolgt Großteil der Arbeit für Sie.</span><span class="sxs-lookup"><span data-stu-id="4fd12-121">As mentioned previously, depending on the app, framework, and platform, much of this work is done for you.</span></span> <span data-ttu-id="4fd12-122">Die folgende UX-Richtlinien werden diese Fälle, in denen es nicht behandelt.</span><span class="sxs-lookup"><span data-stu-id="4fd12-122">The following UX guidance covers those cases where it's not.</span></span>
+<span data-ttu-id="de2f2-120">Wie Text geändert wird, Steuerelemente und Container müssen auch die Größe und umbrechen, um den Text und das neue Layout aufzunehmen.</span><span class="sxs-lookup"><span data-stu-id="de2f2-120">As text is resized, controls and containers must also resize and reflow to accommodate the text and its new layout.</span></span> <span data-ttu-id="de2f2-121">Wie bereits erwähnt abhängig von der app-Framework und Plattform erfolgt Großteil der Arbeit für Sie.</span><span class="sxs-lookup"><span data-stu-id="de2f2-121">As mentioned previously, depending on the app, framework, and platform, much of this work is done for you.</span></span> <span data-ttu-id="de2f2-122">Die folgende UX-Richtlinien werden diese Fälle, in denen es nicht behandelt.</span><span class="sxs-lookup"><span data-stu-id="de2f2-122">The following UX guidance covers those cases where it's not.</span></span>
 
-### <a name="use-the-platform-controls"></a><span data-ttu-id="4fd12-123">Verwenden Sie die Plattformsteuerelemente</span><span class="sxs-lookup"><span data-stu-id="4fd12-123">Use the platform controls</span></span>
+### <a name="use-the-platform-controls"></a><span data-ttu-id="de2f2-123">Verwenden Sie die Plattformsteuerelemente</span><span class="sxs-lookup"><span data-stu-id="de2f2-123">Use the platform controls</span></span>
 
-<span data-ttu-id="4fd12-124">Sagten wir dies bereits?</span><span class="sxs-lookup"><span data-stu-id="4fd12-124">Did we say this already?</span></span> <span data-ttu-id="4fd12-125">Dabei ist zu wiederholen: Wenn möglich, müssen Sie die integrierten Steuerelemente mit den verschiedenen Windows-app-Frameworks bereitgestellten immer verwenden, um die umfassendste Benutzeroberfläche für die am wenigsten Zeit Aufwand erzielen.</span><span class="sxs-lookup"><span data-stu-id="4fd12-125">It's worth repeating: When possible, always use the built-in controls provided with the various Windows app frameworks to get the most comprehensive user experience possible for the least amount of effort.</span></span>
+<span data-ttu-id="de2f2-124">Sagten wir dies bereits?</span><span class="sxs-lookup"><span data-stu-id="de2f2-124">Did we say this already?</span></span> <span data-ttu-id="de2f2-125">Dabei ist zu wiederholen: Wenn möglich, müssen Sie die integrierten Steuerelemente mit den verschiedenen Windows-app-Frameworks bereitgestellten immer verwenden, um die umfassendste Benutzeroberfläche für die am wenigsten Zeit Aufwand erzielen.</span><span class="sxs-lookup"><span data-stu-id="de2f2-125">It's worth repeating: When possible, always use the built-in controls provided with the various Windows app frameworks to get the most comprehensive user experience possible for the least amount of effort.</span></span>
 
-<span data-ttu-id="4fd12-126">Alle UWP-Textsteuerelemente z. B. den vollständigen Text Skalierung Erfahrung ohne Anpassung oder Templating unterstützen.</span><span class="sxs-lookup"><span data-stu-id="4fd12-126">For example, all UWP text controls support the full text scaling experience without any customization or templating.</span></span>
+<span data-ttu-id="de2f2-126">Alle UWP-Textsteuerelemente z. B. den vollständigen Text Skalierung Erfahrung ohne Anpassung oder Templating unterstützen.</span><span class="sxs-lookup"><span data-stu-id="de2f2-126">For example, all UWP text controls support the full text scaling experience without any customization or templating.</span></span>
 
-<span data-ttu-id="4fd12-127">Hier ist ein Codeausschnitt aus einer einfachen UWP-app, die eine Reihe von standard-Text-Steuerelemente enthält:</span><span class="sxs-lookup"><span data-stu-id="4fd12-127">Here's a snippet from a basic UWP app that includes a couple of standard text controls:</span></span>
+<span data-ttu-id="de2f2-127">Hier ist ein Codeausschnitt aus einer einfachen UWP-app, die eine Reihe von standard-Text-Steuerelemente enthält:</span><span class="sxs-lookup"><span data-stu-id="de2f2-127">Here's a snippet from a basic UWP app that includes a couple of standard text controls:</span></span>
 
 ``` xaml
 <Grid>
@@ -94,13 +94,13 @@ ms.locfileid: "8329811"
 ```
 
 ![Skalierung von 100 % und 225 % animierten text](images/coretext/text-scaling.gif)  
-*<span data-ttu-id="4fd12-129">Animierte Text skalieren</span><span class="sxs-lookup"><span data-stu-id="4fd12-129">Animated text scaling</span></span>*
+*<span data-ttu-id="de2f2-129">Animierte Text skalieren</span><span class="sxs-lookup"><span data-stu-id="de2f2-129">Animated text scaling</span></span>*
 
-### <a name="use-auto-sizing"></a><span data-ttu-id="4fd12-130">Verwenden Sie die automatische größenanpassung</span><span class="sxs-lookup"><span data-stu-id="4fd12-130">Use auto-sizing</span></span>
+### <a name="use-auto-sizing"></a><span data-ttu-id="de2f2-130">Verwenden Sie die automatische größenanpassung</span><span class="sxs-lookup"><span data-stu-id="de2f2-130">Use auto-sizing</span></span>
 
-<span data-ttu-id="4fd12-131">Geben Sie absolute Größen für Ihre Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="4fd12-131">Don't specify absolute sizes for your controls.</span></span> <span data-ttu-id="4fd12-132">Wann immer möglich, können Sie die Plattform Ihre Steuerelemente automatisch basierend auf Benutzer- und geräteeinstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="4fd12-132">Whenever possible, let the platform resize your controls automatically based on user and device settings.</span></span>  
+<span data-ttu-id="de2f2-131">Geben Sie absolute Größen für Ihre Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="de2f2-131">Don't specify absolute sizes for your controls.</span></span> <span data-ttu-id="de2f2-132">Wann immer möglich, können Sie die Plattform Ihre Steuerelemente automatisch basierend auf Benutzer- und geräteeinstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="de2f2-132">Whenever possible, let the platform resize your controls automatically based on user and device settings.</span></span>  
 
-<span data-ttu-id="4fd12-133">In diesem Codeausschnitt aus dem vorherigen Beispiel verwenden wir die `Auto` und `*` Breitenwerte für eine Gruppe von Rasterspalten und ermöglichen Sie die Plattform passen Sie das app-Layout basierend auf der Größe der Elemente innerhalb des Rasters.</span><span class="sxs-lookup"><span data-stu-id="4fd12-133">In this snippet from the previous example, we use the `Auto` and `*` width values for a set of grid columns and let the platform adjust the app layout based on the size of the elements contained within the grid.</span></span>
+<span data-ttu-id="de2f2-133">In diesem Codeausschnitt aus dem vorherigen Beispiel verwenden wir die `Auto` und `*` Breitenwerte für eine Gruppe von Rasterspalten und ermöglichen Sie die Plattform passen Sie das app-Layout basierend auf der Größe der Elemente innerhalb des Rasters.</span><span class="sxs-lookup"><span data-stu-id="de2f2-133">In this snippet from the previous example, we use the `Auto` and `*` width values for a set of grid columns and let the platform adjust the app layout based on the size of the elements contained within the grid.</span></span>
 
 ``` xaml
 <Grid.ColumnDefinitions>
@@ -110,13 +110,13 @@ ms.locfileid: "8329811"
 </Grid.ColumnDefinitions>
 ```
 
-### <a name="use-text-wrapping"></a><span data-ttu-id="4fd12-134">Verwenden Sie den Textumbruch</span><span class="sxs-lookup"><span data-stu-id="4fd12-134">Use text wrapping</span></span>
+### <a name="use-text-wrapping"></a><span data-ttu-id="de2f2-134">Verwenden Sie den Textumbruch</span><span class="sxs-lookup"><span data-stu-id="de2f2-134">Use text wrapping</span></span>
 
-<span data-ttu-id="4fd12-135">Um sicherzustellen, dass das Layout Ihrer App weniger flexibel und anpassbar wie möglich ist, Aktivieren von Textumbruch in jedem Steuerelement, das Text enthält (viele Steuerelemente nicht Textumbruch standardmäßig unterstützt).</span><span class="sxs-lookup"><span data-stu-id="4fd12-135">To ensure the layout of your app is as flexible and adaptable as possible, enable text wrapping in any control that contains text (many controls do not support text wrapping by default).</span></span>
+<span data-ttu-id="de2f2-135">Um sicherzustellen, dass das Layout Ihrer App weniger flexibel und anpassbar wie möglich ist, Aktivieren von Textumbruch in jedem Steuerelement, das Text enthält (viele Steuerelemente nicht Textumbruch standardmäßig unterstützt).</span><span class="sxs-lookup"><span data-stu-id="de2f2-135">To ensure the layout of your app is as flexible and adaptable as possible, enable text wrapping in any control that contains text (many controls do not support text wrapping by default).</span></span>
 
-<span data-ttu-id="4fd12-136">Wenn Sie den Textumbruch nicht angeben, verwendet die Plattform andere Methoden, um das Layout, einschließlich Clipping anpassen (siehe vorherigen Beispiel).</span><span class="sxs-lookup"><span data-stu-id="4fd12-136">If you don't specify text wrapping, the platform uses other methods to adjust the layout, including clipping (see previous example).</span></span>
+<span data-ttu-id="de2f2-136">Wenn Sie den Textumbruch nicht angeben, verwendet die Plattform andere Methoden, um das Layout, einschließlich Clipping anpassen (siehe vorherigen Beispiel).</span><span class="sxs-lookup"><span data-stu-id="de2f2-136">If you don't specify text wrapping, the platform uses other methods to adjust the layout, including clipping (see previous example).</span></span>
 
-<span data-ttu-id="4fd12-137">Hier verwenden wir die `AcceptsReturn` und `TextWrapping` TextBox-Eigenschaften, um sicherzustellen, dass unsere Layout flexibel wie möglich ist.</span><span class="sxs-lookup"><span data-stu-id="4fd12-137">Here, we use the `AcceptsReturn` and `TextWrapping` TextBox properties to ensure our layout is as flexible as possible.</span></span>
+<span data-ttu-id="de2f2-137">Hier verwenden wir die `AcceptsReturn` und `TextWrapping` TextBox-Eigenschaften, um sicherzustellen, dass unsere Layout flexibel wie möglich ist.</span><span class="sxs-lookup"><span data-stu-id="de2f2-137">Here, we use the `AcceptsReturn` and `TextWrapping` TextBox properties to ensure our layout is as flexible as possible.</span></span>
 
 ``` xaml
 <TextBox PlaceholderText="Type something here" 
@@ -124,16 +124,16 @@ ms.locfileid: "8329811"
 ```
 
 ![Animierter Text, die Skalierung von 100 % und 225 % mit Textumbruch](images/coretext/text-scaling-textwrap.gif)  
-*<span data-ttu-id="4fd12-139">Animierte Text Skalieren mit Textumbruch</span><span class="sxs-lookup"><span data-stu-id="4fd12-139">Animated text scaling with text wrapping</span></span>*
+*<span data-ttu-id="de2f2-139">Animierte Text Skalieren mit Textumbruch</span><span class="sxs-lookup"><span data-stu-id="de2f2-139">Animated text scaling with text wrapping</span></span>*
 
-### <a name="specify-text-trimming-behavior"></a><span data-ttu-id="4fd12-140">Geben Sie Text Zuschneiden Verhalten</span><span class="sxs-lookup"><span data-stu-id="4fd12-140">Specify text trimming behavior</span></span>
+### <a name="specify-text-trimming-behavior"></a><span data-ttu-id="de2f2-140">Geben Sie Text Zuschneiden Verhalten</span><span class="sxs-lookup"><span data-stu-id="de2f2-140">Specify text trimming behavior</span></span>
 
-<span data-ttu-id="4fd12-141">Wenn Textumbruch nicht das gewünschte Verhalten ist, können die meisten Textsteuerelemente entweder Ihr Text zuschneiden, oder geben Sie Ellipsen für das Text Zuschneiden Verhalten.</span><span class="sxs-lookup"><span data-stu-id="4fd12-141">If text wrapping is not the preferred behavior, most text controls let either clip your text or specify ellipses for the text trimming behavior.</span></span> <span data-ttu-id="4fd12-142">Zuschneiden wird für Ellipsen bevorzugt, wie Ellipsen selbst Speicherplatz belegen.</span><span class="sxs-lookup"><span data-stu-id="4fd12-142">Clipping is preferred to ellipses as ellipses take up space themselves.</span></span>
+<span data-ttu-id="de2f2-141">Wenn Textumbruch nicht das gewünschte Verhalten ist, können die meisten Textsteuerelemente entweder Ihr Text zuschneiden, oder geben Sie Ellipsen für das Text Zuschneiden Verhalten.</span><span class="sxs-lookup"><span data-stu-id="de2f2-141">If text wrapping is not the preferred behavior, most text controls let either clip your text or specify ellipses for the text trimming behavior.</span></span> <span data-ttu-id="de2f2-142">Zuschneiden wird für Ellipsen bevorzugt, wie Ellipsen selbst Speicherplatz belegen.</span><span class="sxs-lookup"><span data-stu-id="de2f2-142">Clipping is preferred to ellipses as ellipses take up space themselves.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="4fd12-143">Wenn Sie Sie den Text zu beschneiden müssen, clip am Ende der Zeichenfolge, die nicht am Anfang.</span><span class="sxs-lookup"><span data-stu-id="4fd12-143">If you need to clip your text, clip the end of the string, not the beginning.</span></span>
+> <span data-ttu-id="de2f2-143">Wenn Sie Sie den Text zu beschneiden müssen, clip am Ende der Zeichenfolge, die nicht am Anfang.</span><span class="sxs-lookup"><span data-stu-id="de2f2-143">If you need to clip your text, clip the end of the string, not the beginning.</span></span>
 
-<span data-ttu-id="4fd12-144">In diesem Beispiel zeigen wir, wie Sie Text in einem TextBlock zu beschneiden mithilfe der [TextTrimming](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.texttrimming) -Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="4fd12-144">In this example, we show how to clip text in a TextBlock using the [TextTrimming](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.texttrimming) property.</span></span>
+<span data-ttu-id="de2f2-144">In diesem Beispiel zeigen wir, wie Sie Text in einem TextBlock zu beschneiden mithilfe der [TextTrimming](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.texttrimming) -Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="de2f2-144">In this example, we show how to clip text in a TextBlock using the [TextTrimming](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.texttrimming) property.</span></span>
 
 ``` xaml
 <TextBlock TextTrimming="Clip">
@@ -142,13 +142,13 @@ ms.locfileid: "8329811"
 ```
 
 ![Skalierung von 100 % und 225 % mit Text Zuschneiden Text](images/coretext/text-scaling-clipping-small.png)  
-*<span data-ttu-id="4fd12-146">Text skalieren mit Text Zuschneiden</span><span class="sxs-lookup"><span data-stu-id="4fd12-146">Text scaling with text clipping</span></span>*
+*<span data-ttu-id="de2f2-146">Text skalieren mit Text Zuschneiden</span><span class="sxs-lookup"><span data-stu-id="de2f2-146">Text scaling with text clipping</span></span>*
 
-### <a name="use-a-tooltip"></a><span data-ttu-id="4fd12-147">Verwenden Sie eine QuickInfo</span><span class="sxs-lookup"><span data-stu-id="4fd12-147">Use a tooltip</span></span>
+### <a name="use-a-tooltip"></a><span data-ttu-id="de2f2-147">Verwenden Sie eine QuickInfo</span><span class="sxs-lookup"><span data-stu-id="de2f2-147">Use a tooltip</span></span>
 
-<span data-ttu-id="4fd12-148">Wenn Sie Text zuschneiden, verwenden Sie QuickInfos, um den vollständigen Text für Ihre Benutzer bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="4fd12-148">If you clip text, use a tooltip to provide the full text to your users.</span></span>
+<span data-ttu-id="de2f2-148">Wenn Sie Text zuschneiden, verwenden Sie QuickInfos, um den vollständigen Text für Ihre Benutzer bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="de2f2-148">If you clip text, use a tooltip to provide the full text to your users.</span></span>
 
-<span data-ttu-id="4fd12-149">Hier fügen wir eine QuickInfo in ein TextBlock-Element, das Text umbrochen nicht unterstützt:</span><span class="sxs-lookup"><span data-stu-id="4fd12-149">Here, we add a tooltip to a TextBlock that doesn't support text wrapping:</span></span>
+<span data-ttu-id="de2f2-149">Hier fügen wir eine QuickInfo in ein TextBlock-Element, das Text umbrochen nicht unterstützt:</span><span class="sxs-lookup"><span data-stu-id="de2f2-149">Here, we add a tooltip to a TextBlock that doesn't support text wrapping:</span></span>
 
 ``` xaml
 <TextBlock TextTrimming="Clip">
@@ -159,23 +159,23 @@ ms.locfileid: "8329811"
 </TextBlock>
 ```
 
-### <a name="dont-scale-font-based-icons-or-symbols"></a><span data-ttu-id="4fd12-150">Nicht die Skalierung Schriftart schriftartbasierter Symbole oder Symbole</span><span class="sxs-lookup"><span data-stu-id="4fd12-150">Don’t scale font-based icons or symbols</span></span>
+### <a name="dont-scale-font-based-icons-or-symbols"></a><span data-ttu-id="de2f2-150">Nicht die Skalierung Schriftart schriftartbasierter Symbole oder Symbole</span><span class="sxs-lookup"><span data-stu-id="de2f2-150">Don’t scale font-based icons or symbols</span></span>
 
-<span data-ttu-id="4fd12-151">Wenn Sie Symbole Schriftart-basierte zur Betonung oder als Ergänzung zu verwenden, deaktivieren Sie auf diese Zeichen Skalierung aus.</span><span class="sxs-lookup"><span data-stu-id="4fd12-151">When using font-based icons for emphasis or decoration, disable scaling on these characters.</span></span>
+<span data-ttu-id="de2f2-151">Wenn Sie Symbole Schriftart-basierte zur Betonung oder als Ergänzung zu verwenden, deaktivieren Sie auf diese Zeichen Skalierung aus.</span><span class="sxs-lookup"><span data-stu-id="de2f2-151">When using font-based icons for emphasis or decoration, disable scaling on these characters.</span></span>
 
-<span data-ttu-id="4fd12-152">Legen Sie die Eigenschaft [IsTextScaleFactorEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.istextscalefactorenabled) auf `false` für die meisten XAML-Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="4fd12-152">Set the [IsTextScaleFactorEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.istextscalefactorenabled) property to `false` for most XAML controls.</span></span>
+<span data-ttu-id="de2f2-152">Legen Sie die Eigenschaft [IsTextScaleFactorEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.istextscalefactorenabled) auf `false` für die meisten XAML-Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="de2f2-152">Set the [IsTextScaleFactorEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.istextscalefactorenabled) property to `false` for most XAML controls.</span></span>
 
-### <a name="support-text-scaling-natively"></a><span data-ttu-id="4fd12-153">Unterstützung für Text nativ Skalierung</span><span class="sxs-lookup"><span data-stu-id="4fd12-153">Support text scaling natively</span></span>
+### <a name="support-text-scaling-natively"></a><span data-ttu-id="de2f2-153">Unterstützung für Text nativ Skalierung</span><span class="sxs-lookup"><span data-stu-id="de2f2-153">Support text scaling natively</span></span>
 
-<span data-ttu-id="4fd12-154">Behandeln Sie das [TextScaleFactorChanged](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged) UISettings System-Ereignis in Ihren benutzerdefinierten Framework Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="4fd12-154">Handle the [TextScaleFactorChanged](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged) UISettings system event in your custom framework and controls.</span></span> <span data-ttu-id="4fd12-155">Dieses Ereignis wird jedes Mal ausgelöst, wenn der Benutzer den Skalierungsfaktor Text auf ihrem System festlegt.</span><span class="sxs-lookup"><span data-stu-id="4fd12-155">This event is raised each time the user sets the text scaling factor on their system.</span></span>
+<span data-ttu-id="de2f2-154">Behandeln Sie das [TextScaleFactorChanged](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged) UISettings System-Ereignis in Ihren benutzerdefinierten Framework Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="de2f2-154">Handle the [TextScaleFactorChanged](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged) UISettings system event in your custom framework and controls.</span></span> <span data-ttu-id="de2f2-155">Dieses Ereignis wird jedes Mal ausgelöst, wenn der Benutzer den Skalierungsfaktor Text auf ihrem System festlegt.</span><span class="sxs-lookup"><span data-stu-id="de2f2-155">This event is raised each time the user sets the text scaling factor on their system.</span></span>
 
-## <a name="summary"></a><span data-ttu-id="4fd12-156">Zusammenfassung</span><span class="sxs-lookup"><span data-stu-id="4fd12-156">Summary</span></span>
+## <a name="summary"></a><span data-ttu-id="de2f2-156">Zusammenfassung</span><span class="sxs-lookup"><span data-stu-id="de2f2-156">Summary</span></span>
 
-<span data-ttu-id="4fd12-157">Dieses Thema enthält eine Übersicht über Text-Unterstützung in Windows-Skalierung und enthält (UX) und Entwickler Richtlinien zum Anpassen der Benutzeroberfläche.</span><span class="sxs-lookup"><span data-stu-id="4fd12-157">This topic provides an overview of text scaling support in Windows and includes UX and developer guidance on how to customize the user experience.</span></span>
+<span data-ttu-id="de2f2-157">Dieses Thema enthält eine Übersicht über Text-Unterstützung in Windows-Skalierung und enthält (UX) und Entwickler Richtlinien zum Anpassen der Benutzeroberfläche.</span><span class="sxs-lookup"><span data-stu-id="de2f2-157">This topic provides an overview of text scaling support in Windows and includes UX and developer guidance on how to customize the user experience.</span></span>
 
-## <a name="related-articles"></a><span data-ttu-id="4fd12-158">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="4fd12-158">Related articles</span></span>
+## <a name="related-articles"></a><span data-ttu-id="de2f2-158">Verwandte Artikel</span><span class="sxs-lookup"><span data-stu-id="de2f2-158">Related articles</span></span>
 
-### <a name="api-reference"></a><span data-ttu-id="4fd12-159">API-Referenz</span><span class="sxs-lookup"><span data-stu-id="4fd12-159">API reference</span></span>
+### <a name="api-reference"></a><span data-ttu-id="de2f2-159">API-Referenz</span><span class="sxs-lookup"><span data-stu-id="de2f2-159">API reference</span></span>
 
-- [<span data-ttu-id="4fd12-160">IsTextScaleFactorEnabled</span><span class="sxs-lookup"><span data-stu-id="4fd12-160">IsTextScaleFactorEnabled</span></span>](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.istextscalefactorenabled)
-- [<span data-ttu-id="4fd12-161">TextScaleFactorChanged</span><span class="sxs-lookup"><span data-stu-id="4fd12-161">TextScaleFactorChanged</span></span>](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged)
+- [<span data-ttu-id="de2f2-160">IsTextScaleFactorEnabled</span><span class="sxs-lookup"><span data-stu-id="de2f2-160">IsTextScaleFactorEnabled</span></span>](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.istextscalefactorenabled)
+- [<span data-ttu-id="de2f2-161">TextScaleFactorChanged</span><span class="sxs-lookup"><span data-stu-id="de2f2-161">TextScaleFactorChanged</span></span>](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged)

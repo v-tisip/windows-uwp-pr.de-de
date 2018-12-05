@@ -6,11 +6,11 @@ ms.date: 3/7/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 5196503a4a50d1565d00b9ac0e48e6c2d0b6e426
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8479599"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8697958"
 ---
 # <a name="design-basics-for-uwp-apps"></a><span data-ttu-id="940d3-104">Designgrundlagen für UWP-Apps</span><span class="sxs-lookup"><span data-stu-id="940d3-104">Design basics for UWP apps</span></span>
 

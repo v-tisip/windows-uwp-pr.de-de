@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, werben, Werbung, Highlights, Showcase, Store
 ms.localizationpriority: medium
 ms.openlocfilehash: ea7c7d8a132d1c2996d023f1413523f806d0b5bf
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8480111"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8701432"
 ---
 # <a name="make-your-app-easier-to-promote"></a><span data-ttu-id="bac3d-103">Einfacheres Bewerben Ihrer App</span><span class="sxs-lookup"><span data-stu-id="bac3d-103">Make your app easier to promote</span></span>
 

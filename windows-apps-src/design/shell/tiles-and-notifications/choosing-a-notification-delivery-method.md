@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 503f7baad0d91f4e7c29010145ecb162f98bc81c
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8482109"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8700339"
 ---
 # <a name="choose-a-notification-delivery-method"></a><span data-ttu-id="55009-103">Auswählen einer Methode für die Übermittlung von Benachrichtigungen</span><span class="sxs-lookup"><span data-stu-id="55009-103">Choose a notification delivery method</span></span>
 
