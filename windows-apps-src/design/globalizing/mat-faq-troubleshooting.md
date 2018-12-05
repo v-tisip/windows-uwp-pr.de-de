@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
 ms.openlocfilehash: a39d2b3133714ab784309e131a71219beae4e3c0
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8462646"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8707136"
 ---
 # <a name="multilingual-app-toolkit-40-faq--troubleshooting"></a><span data-ttu-id="4cef9-103">Multilingual App Toolkit 4.0 – Fragen und Antworten sowie Problembehandlung</span><span class="sxs-lookup"><span data-stu-id="4cef9-103">Multilingual App Toolkit 4.0 FAQ & troubleshooting</span></span>
 

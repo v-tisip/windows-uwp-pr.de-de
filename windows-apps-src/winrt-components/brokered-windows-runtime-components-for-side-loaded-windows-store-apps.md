@@ -7,11 +7,11 @@ keywords: Windows10, UWP
 ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
 ms.localizationpriority: medium
 ms.openlocfilehash: d9665ba3af10091ddc652198d5340e00456a65a7
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8480078"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8709077"
 ---
 # <a name="brokered-windows-runtime-components-for-a-side-loaded-uwp-app"></a><span data-ttu-id="24581-104">Vermittelte Komponenten für Windows-Runtime für eine quergeladene UWP-App</span><span class="sxs-lookup"><span data-stu-id="24581-104">Brokered Windows Runtime Components for a side-loaded UWP app</span></span>
 

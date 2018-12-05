@@ -7,11 +7,11 @@ ms.topic: article
 ms.assetid: 0d6c65c5-2ad5-46c7-964e-a3a9833c94ce
 ms.localizationpriority: medium
 ms.openlocfilehash: 6557648e3998cedee2a6eb0bcc9e58ca2f4c27d9
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8464153"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8712366"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-10586"></a><span data-ttu-id="69574-104">Neuigkeiten für Entwickler in Windows10, Build 10586</span><span class="sxs-lookup"><span data-stu-id="69574-104">What's new in Windows 10 for developers, build 10586</span></span>
 

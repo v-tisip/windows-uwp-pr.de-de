@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6d3fee78f3608466f588a79d2811f1464e27a0ab
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8465079"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8706113"
 ---
 # <a name="fade-animations"></a><span data-ttu-id="41ce7-103">Ein- und Ausblendungsanimationen</span><span class="sxs-lookup"><span data-stu-id="41ce7-103">Fade animations</span></span>
 
