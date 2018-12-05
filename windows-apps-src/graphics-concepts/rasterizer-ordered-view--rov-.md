@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: ed49ba81c44a799e4d827d636f601c77d01333b3
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "8350996"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8693314"
 ---
 # <a name="rasterizer-ordered-view-rov"></a><span data-ttu-id="059dd-104">Rasterizergesteuerte Ansicht (ROV)</span><span class="sxs-lookup"><span data-stu-id="059dd-104">Rasterizer ordered view (ROV)</span></span>
 

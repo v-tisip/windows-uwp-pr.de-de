@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Entwicklerkonto, individuell, Unternehmen, geschäftlich
 ms.localizationpriority: medium
 ms.openlocfilehash: 3163b4c89cc1d0bf3e4adfdea39222dfcb5a3ee1
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8470209"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8694837"
 ---
 # <a name="account-types-locations-and-fees"></a><span data-ttu-id="4f3e4-104">Kontotypen, Standorte und Gebühren</span><span class="sxs-lookup"><span data-stu-id="4f3e4-104">Account types, locations, and fees</span></span>
 
