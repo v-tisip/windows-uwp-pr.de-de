@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Anzeigenkampagnen
 ms.localizationpriority: medium
 ms.openlocfilehash: 1190ec43c5b98eabd897a3bed3788aaf6eb0cb7d
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8692074"
+ms.locfileid: "8738636"
 ---
 # <a name="get-ad-campaign-performance-data"></a>Abrufen der Leistungsdaten einer Anzeigenkampagne
 

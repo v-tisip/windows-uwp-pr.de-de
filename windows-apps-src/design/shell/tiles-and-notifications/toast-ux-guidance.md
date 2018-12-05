@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Benachrichtigung, Sammlung, gruppieren, Ux, Ux-Richtlinien, Richtlinien, Aktion, Popup, Info-Center, Noninterruptive, effektive Benachrichtigungen, nicht zudringliche Benachrichtigungen, umsetzbare, verwalten, zu organisieren
 ms.localizationpriority: medium
 ms.openlocfilehash: 17861760ea5640eca01d3e69c1ed36a023c8f9d3
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8701491"
+ms.locfileid: "8729708"
 ---
 # <a name="toast-notification-ux-guidance"></a>Popup-Benachrichtigung-UX-Richtlinien
 Benachrichtigungen sind notwendig, moderne Leben; Sie können Benutzer produktiver und erzwungenen mit apps und Websites sowie bleiben Sie auf dem aktuellen Updates werden. Benachrichtigungen können jedoch schnell Aktivieren von hilfreich sein, overbearing und aufdringlich, wenn sie nicht in einer benutzerorientiert Weise ausgelegt sind. Die Benachrichtigungen sind eine mit der rechten Maustaste Weg wird deaktiviert, und es ist unwahrscheinlich, sobald sie deaktiviert sind, sie werden aktiviert, erneut.  So stellen Sie sicher, dass Ihre Benachrichtigungen respektieren Bildschirmbereich des Benutzers und die Uhrzeit, damit Sie diesen Kanal Engagement geöffnet bleiben können.
