@@ -6,12 +6,12 @@ ms.date: 08/21/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store Services SDK
 ms.localizationpriority: medium
-ms.openlocfilehash: 8394a1a44173541e8982a660591e84b25b985205
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.openlocfilehash: c0c283f9edd33b8c39ebccd0a71019741a0d1448
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8696137"
+ms.locfileid: "8755296"
 ---
 # <a name="engage-customers-with-the-microsoft-store-services-sdk"></a>Kundengewinnung mit Microsoft Store Services SDK
 
@@ -99,7 +99,7 @@ So installieren Sie das Microsoft Store Services SDK-Bibliotheken über NuGet:
 
 5. Geben Sie im Suchfeld den Text **Microsoft.Services.Store.Engagement** ein, und installieren Sie das Paket Microsoft.Services.Store.Engagement. Wenn das Paket fertig ist installieren, speichern Sie die Projektmappe.
     > [!NOTE]
-    > Wenn das **Ausgabe**-Fenster einen *Installationspaket*-Fehler anzeigt, der Ihnen mitteilt, dass der angegebene Pfad zu lang ist, müssen Sie NuGet möglicherweise so konfigurieren, dass es Pakete an einen anderen Speicherort mit einem kürzeren Pfad extrahiert. Fügen Sie hierzu den ```repositoryPath```-Wert einer nuget.config-Datei auf Ihrem Computer hinzu, und weisen Sie ihn einem kurzen Ordnerpfad zu, unter dem die NuGet-Pakete extrahiert werden können. Weitere Informationen finden Sie in [diesem Artikel](http://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior) in der NuGet-Dokumentation. Sie können auch versuchen, das Visual Studio-Projekt in einen anderen Ordner mit einem kürzeren Pfad zu verschieben.
+    > Wenn das **Ausgabe**-Fenster einen *Installationspaket*-Fehler anzeigt, der Ihnen mitteilt, dass der angegebene Pfad zu lang ist, müssen Sie NuGet möglicherweise so konfigurieren, dass es Pakete an einen anderen Speicherort mit einem kürzeren Pfad extrahiert. Fügen Sie hierzu den ```repositoryPath```-Wert einer nuget.config-Datei auf Ihrem Computer hinzu, und weisen Sie ihn einem kurzen Ordnerpfad zu, unter dem die NuGet-Pakete extrahiert werden können. Weitere Informationen finden Sie in [diesem Artikel](http://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior) in der NuGet-Dokumentation. Sie können auch versuchen, das Visual Studio-Projekt in einen anderen Ordner mit einem kürzeren Pfad zu verschieben. Das Problem könnte auch durch Ihre globalen Pakete Pfad zu lang verursacht werden. Fügen Sie in diesem Fall die ```globalPackagesFolder``` Wert in Ihre nuget.config-Datei.
 
 6. Schließen Sie die Visual Studio-Lösung mit dem Projekt, und öffnen Sie die Projektmappe erneut.
 
