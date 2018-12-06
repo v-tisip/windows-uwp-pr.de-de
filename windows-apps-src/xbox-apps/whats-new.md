@@ -7,11 +7,11 @@ keywords: Windows10, UWP
 ms.assetid: fe63c527-8f06-43a5-868f-de909f5664b3
 ms.localizationpriority: medium
 ms.openlocfilehash: aff65e5f1b4771cbb33bc8b8219224042b7bf7e2
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8694992"
+ms.locfileid: "8755550"
 ---
 # <a name="whats-new-for-developers-in-the-latest-update-of-uwp-on-xbox-one"></a><span data-ttu-id="36926-104">Neuigkeiten für Entwickler in der neuesten Aktualisierung von UWP auf Xbox One</span><span class="sxs-lookup"><span data-stu-id="36926-104">What's new for developers in the latest update of UWP on Xbox One</span></span>
 

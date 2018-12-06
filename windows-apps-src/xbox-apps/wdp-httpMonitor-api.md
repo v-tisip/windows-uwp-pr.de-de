@@ -3,11 +3,11 @@ title: Geräteportal – HTTP-Monitor-API-Referenz
 description: Erfahren Sie mehr über den Zugriff von HTTP-Datenverkehr aus der fokussierten App auf einer Xbox.
 ms.localizationpriority: medium
 ms.openlocfilehash: 81de2a2a3194384e9c5de1c5c45a827e4d965c91
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8690694"
+ms.locfileid: "8751929"
 ---
 # <a name="http-monitor-api-reference"></a><span data-ttu-id="ac81b-103">HTTP-Monitor-API-Referenz</span><span class="sxs-lookup"><span data-stu-id="ac81b-103">HTTP Monitor API reference</span></span>   
 <span data-ttu-id="ac81b-104">Sie können mit dieser API auf Echtzeit-HTTP-Datenverkehr für die fokussierte App zugreifen, wenn der HTTP-Monitor auf der Xbox-Konsole aktiviert wurde, indem Sie das Kontrollkästchen in Dev Home aktivieren.</span><span class="sxs-lookup"><span data-stu-id="ac81b-104">You can access real-time HTTP traffic for the focused app using this API if the HTTP monitor has been enabled on the Xbox console by checking the box in Dev Home.</span></span>

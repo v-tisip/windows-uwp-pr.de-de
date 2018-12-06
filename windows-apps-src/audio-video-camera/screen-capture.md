@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Bildschirmaufnahme
 ms.localizationpriority: medium
 ms.openlocfilehash: db32db6b293dce4210bebee139e05447da996b42
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8712306"
+ms.locfileid: "8749815"
 ---
 # <a name="screen-capture"></a><span data-ttu-id="46fac-104">Bildschirmaufnahme</span><span class="sxs-lookup"><span data-stu-id="46fac-104">Screen capture</span></span>
 
