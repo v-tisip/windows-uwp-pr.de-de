@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiel, DirectX, Beispiele, 3D
 ms.localizationpriority: medium
 ms.openlocfilehash: 8d31c6e5b7307c7d93d7c06a0c4ae915ea788655
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8711928"
+ms.locfileid: "8757310"
 ---
 # <a name="directx-samples"></a><span data-ttu-id="255b1-104">DirectX-Beispiele</span><span class="sxs-lookup"><span data-stu-id="255b1-104">DirectX Samples</span></span>
 

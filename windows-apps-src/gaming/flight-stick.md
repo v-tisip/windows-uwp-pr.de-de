@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Spiele, Eingabe, Steuerknüppel
 ms.localizationpriority: medium
 ms.openlocfilehash: 5eceb30c62f1e803397aff71d59b560c39736cf9
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8691601"
+ms.locfileid: "8756281"
 ---
 # <a name="flight-stick"></a><span data-ttu-id="bf09a-104">Steuerknüppel</span><span class="sxs-lookup"><span data-stu-id="bf09a-104">Flight stick</span></span>
 

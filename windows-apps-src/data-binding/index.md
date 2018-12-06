@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: eb9283e336cb13d733098c139edc36d1216b2727
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8703951"
+ms.locfileid: "8755216"
 ---
 # <a name="data-binding"></a><span data-ttu-id="6ba14-104">Datenbindung</span><span class="sxs-lookup"><span data-stu-id="6ba14-104">Data binding</span></span>
 
