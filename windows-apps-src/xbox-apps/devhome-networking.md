@@ -8,11 +8,11 @@ keywords: Windows10, UWP
 permalink: en-us/docs/xdk/devhome-networking.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 06d82b350cccfd90509f3b9f031de2785e91e0dc
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8696009"
+ms.locfileid: "8740338"
 ---
 # <a name="networking-page-dev-home"></a><span data-ttu-id="c58df-104">Netzwerkseite (Dev Home)</span><span class="sxs-lookup"><span data-stu-id="c58df-104">Networking Page (Dev Home)</span></span>
    

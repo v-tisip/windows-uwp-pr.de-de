@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a0c55f1b739ef88ec65b7fd44655406415bc0468
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8691994"
+ms.locfileid: "8742656"
 ---
 # <a name="point-of-service"></a><span data-ttu-id="2fd43-104">Point of Service</span><span class="sxs-lookup"><span data-stu-id="2fd43-104">Point of Service</span></span>
 <span data-ttu-id="2fd43-105">Dieser Abschnitt enthält Artikel zur Verwendung von [Windows.Devices.PointOfService](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice), um mit Peripheriegeräten über Universelle Windows-Anwendungen in Einzelhandel- und Gastronomie-Umgebungen zu interagieren.</span><span class="sxs-lookup"><span data-stu-id="2fd43-105">This section contains articles on how to use [Windows.Devices.PointOfService](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice) to interact with peripherals found in retail and hospitality environments from Universal Windows Applications.</span></span>

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Anzeigen, Leistung
 ms.localizationpriority: medium
 ms.openlocfilehash: c6bec86929284e49e4e882597422d316276c0a33
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8713651"
+ms.locfileid: "8741592"
 ---
 # <a name="get-ad-performance-data"></a><span data-ttu-id="253f4-104">Abrufen von Anzeigenleistungsdaten</span><span class="sxs-lookup"><span data-stu-id="253f4-104">Get ad performance data</span></span>
 
