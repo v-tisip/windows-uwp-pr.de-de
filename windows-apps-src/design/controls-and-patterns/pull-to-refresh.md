@@ -13,11 +13,11 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 2efd091d90a856e45d76c0b1357f30417812160a
-ms.sourcegitcommit: d2517e522cacc5240f7dffd5bc1eaa278e3f7768
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "8351617"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "8747170"
 ---
 # <a name="pull-to-refresh"></a><span data-ttu-id="e9439-103">Aktualisieren durch Ziehen</span><span class="sxs-lookup"><span data-stu-id="e9439-103">Pull to refresh</span></span>
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, Spiel, Übertragung
 ms.localizationpriority: medium
 ms.openlocfilehash: c906551fd626dec726498ded9a7995007230504f
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8699122"
+ms.locfileid: "8755166"
 ---
 # <a name="manage-game-broadcasting"></a><span data-ttu-id="bd7da-104">Übertragen von Spielen verwalten</span><span class="sxs-lookup"><span data-stu-id="bd7da-104">Manage game broadcasting</span></span>
 <span data-ttu-id="bd7da-105">In diesem Artikel wird erläutert, wie Sie die Übertragung von Spielen durch eine UWP-App verwalten.</span><span class="sxs-lookup"><span data-stu-id="bd7da-105">This article shows you how to manage game broadcasting for a UWP app.</span></span> <span data-ttu-id="bd7da-106">Benutzer müssen die Übertragung von Spielen mithilfe der Systembenutzeroberfläche initiieren, die in Windows integriert ist. Aber ab Version 1709 von Windows 10 können Apps die Übertragungsoberfläche des Systems starten und Benachrichtigungen empfangen, wenn die Übertragung gestartet oder beendet wird.</span><span class="sxs-lookup"><span data-stu-id="bd7da-106">Users must initiate broadcasting by using the system UI that is built into Windows, but starting with Windows 10, version 1709, apps can launch the system broadcasting UI and can receive notifications when broadcasting starts and stops.</span></span>

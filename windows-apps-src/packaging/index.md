@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Verpacken
 ms.localizationpriority: medium
 ms.openlocfilehash: 04736c9ac4de5adf162d32191ff30f7a981d6a6f
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8696588"
+ms.locfileid: "8745544"
 ---
 # <a name="packaging-apps"></a><span data-ttu-id="4935c-104">Verpacken von Apps</span><span class="sxs-lookup"><span data-stu-id="4935c-104">Packaging apps</span></span>
 

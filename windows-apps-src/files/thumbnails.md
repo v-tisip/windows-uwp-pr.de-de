@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 92899333f0bc787fc6538e0bb22c148ac9f5c56f
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8694680"
+ms.locfileid: "8749145"
 ---
 # <a name="thumbnail-images"></a><span data-ttu-id="fe6c4-103">Miniaturbilder</span><span class="sxs-lookup"><span data-stu-id="fe6c4-103">Thumbnail images</span></span>
 

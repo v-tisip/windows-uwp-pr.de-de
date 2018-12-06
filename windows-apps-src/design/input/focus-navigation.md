@@ -12,11 +12,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 4c76e62a4fcccec91fc6b3a083671ff68af2202e
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/05/2018
-ms.locfileid: "8693973"
+ms.locfileid: "8755563"
 ---
 # <a name="focus-navigation-for-keyboard-gamepad-remote-control-and-accessibility-tools"></a><span data-ttu-id="02f93-103">Fokusnavigation für Tastatur, Gamepad, Fernbedienung und Bedienungshilfen</span><span class="sxs-lookup"><span data-stu-id="02f93-103">Focus navigation for keyboard, gamepad, remote control, and accessibility tools</span></span>
 
