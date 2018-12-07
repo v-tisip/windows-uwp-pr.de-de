@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b6e85c47c569f1a4a0a39a8ce12bc7c091316c10
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8690754"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8799009"
 ---
 # <a name="use-app-services-and-extensions"></a><span data-ttu-id="0e10e-104">Verwenden von App-Diensten und -Erweiterungen</span><span class="sxs-lookup"><span data-stu-id="0e10e-104">Use app services and extensions</span></span>
 
