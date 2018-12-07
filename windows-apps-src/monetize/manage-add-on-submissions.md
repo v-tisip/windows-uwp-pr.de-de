@@ -1,30 +1,30 @@
 ---
 ms.assetid: 66400066-24BF-4AF2-B52A-577F5C3CA474
-description: Verwenden Sie diese Methoden in der Microsoft Store-Übermittlungs-API, Add-on-Übermittlungen für apps zu verwalten, die für Ihr Partner Center-Konto registriert sind.
+description: Verwenden Sie diese Methoden in der Microsoft Store-Übermittlungs-API, Add-on-Übermittlungen für apps zu verwalten, die für Ihr Partner Center-Konto registriert wurden.
 title: Verwalten von Add-On-Übermittlungen
 ms.date: 04/17/2018
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Add-On-Übermittlungen, In-App-Produkt, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: 45fc2274ac22eee4a4c249397f25c1b0405cb856
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8753229"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8784624"
 ---
 # <a name="manage-add-on-submissions"></a>Verwalten von Add-On-Übermittlungen
 
 Mithilfe der Methoden der Microsoft Store-Übermittlungs-API können Sie Add-On-Übermittlungen für Ihre Apps verwalten (Add-Ons werden auch als In-App-Produkt bzw. IAP bezeichnet). Eine Einführung in die Microsoft Store-Übermittlungs-API einschließlich der Voraussetzungen für die Verwendung der API finden Sie unter [Erstellen und Verwalten von Übermittlungen mit MicrosoftStore-Diensten](create-and-manage-submissions-using-windows-store-services.md).
 
 > [!IMPORTANT]
-> Wenn Sie die Microsoft Store-Übermittlungs-API zum Erstellen einer Übermittlung für ein Add-on verwenden, achten Sie darauf, dass Sie Sie weitere Änderungen an der Übermittlung nur durch Verwendung der API, anstatt die Änderungen im Partner Center. Wenn Sie Partner Center verwenden, um eine Übermittlung zu ändern, die Sie ursprünglich mithilfe der API erstellt haben, werden Sie nicht mehr in der Lage zu ändern oder übernehmen die Übermittlung mithilfe der API. In einigen Fällen kann der Fehlerstatus der Übermittlung belassen werden, mit dem die Übermittlung nicht fortgesetzt werden kann. In diesem Fall müssen Sie die Übermittlung löschen und eine neue Übermittlung erstellen.
+> Wenn Sie die Microsoft Store-Übermittlungs-API zum Erstellen einer Übermittlung für ein Add-on verwenden, achten Sie darauf, dass Sie Sie weitere Änderungen an der Übermittlung nur durch Verwendung der API, anstatt die Änderungen im Partner Center. Wenn Sie Partner Center verwenden, um eine Übermittlung zu ändern, die Sie ursprünglich mithilfe der API erstellt haben, wird nicht mehr ändern, oder übernehmen die Übermittlung mithilfe der API werden. In einigen Fällen kann der Fehlerstatus der Übermittlung belassen werden, mit dem die Übermittlung nicht fortgesetzt werden kann. In diesem Fall müssen Sie die Übermittlung löschen und eine neue Übermittlung erstellen.
 
 <span id="methods-for-add-on-submissions" />
 
 ## <a name="methods-for-managing-add-on-submissions"></a>Methoden zum Verwalten von Add-On-Übermittlungen
 
-Verwenden Sie die folgenden Methoden zum Abrufen, Erstellen, Aktualisieren, Übernehmen oder Löschen einer Add-On-Übermittlung. Bevor Sie diese Methoden verwenden können, muss das Add-on bereits in Ihrem Partner Center-Konto vorhanden sein. Sie können ein Add-on im Partner Center erstellen, [dessen Produkttyp und Produkt-ID](../publish/set-your-add-on-product-id.md) oder mithilfe der Methoden der Microsoft Store-Übermittlungs-API in in beschrieben [Add-ons verwalten](manage-add-ons.md).
+Verwenden Sie die folgenden Methoden zum Abrufen, Erstellen, Aktualisieren, Übernehmen oder Löschen einer Add-On-Übermittlung. Bevor Sie diese Methoden verwenden können, muss das Add-on bereits in Ihrem Partner Center-Konto vorhanden sein. Sie können ein Add-on im Partner Center erstellen, [dessen Produkttyp und Produkt-ID](../publish/set-your-add-on-product-id.md) oder mithilfe der Methoden der Microsoft Store-Übermittlungs-API in unter [Add-ons verwalten](manage-add-ons.md).
 
 <table>
 <colgroup>
@@ -79,7 +79,7 @@ Verwenden Sie die folgenden Methoden zum Abrufen, Erstellen, Aktualisieren, Übe
 
 Gehen Sie folgendermaßen vor, um eine Übermittlung für ein Add-On zu erstellen.
 
-1. Falls noch nicht geschehen, vollständige die erforderlichen Komponenten beschrieben [Erstellen und Verwalten von Übermittlungen mit Microsoft Store-Diensten](create-and-manage-submissions-using-windows-store-services.md), einschließlich des Verknüpfens einer Azure AD-Anwendung mit Ihrem Partner Center-Konto und des Abrufens von Client-ID und Schlüssel. Sie müssen dies nur einmal durchführen. nachdem Sie Client-ID und Schlüssel erhalten haben, können Sie diese jedes Mal wiederverwenden, wenn Sie ein neues Azure AD-Token erstellen müssen.  
+1. Falls noch nicht geschehen, vollständige die erforderlichen Komponenten in beschriebenen [Erstellen und Verwalten von Übermittlungen mit Microsoft Store-Diensten](create-and-manage-submissions-using-windows-store-services.md), einschließlich des Verknüpfens einer Azure AD-Anwendung mit Ihr Partner Center-Konto und des Abrufens von Client-ID und Schlüssel. Sie müssen dies nur einmal durchführen. nachdem Sie Client-ID und Schlüssel erhalten haben, können Sie diese jedes Mal wiederverwenden, wenn Sie ein neues Azure AD-Token erstellen müssen.  
 
 2. [Rufen Sie ein Azure AD-Zugriffstoken ab](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Sie müssen dieses Zugriffstoken an die Methoden in der Microsoft Store-Übermittlungs-API übergeben. Nachdem Sie ein Zugriffstoken abgerufen haben, können Sie es 60Minuten lang verwenden, bevor es abläuft. Wenn das Token abgelaufen ist, können Sie ein neues abrufen.
 
@@ -119,7 +119,7 @@ Gehen Sie folgendermaßen vor, um eine Übermittlung für ein Add-On zu erstelle
     await blockBob.UploadFromStreamAsync(stream);
     ```
 
-5. Führen Sie die folgende Methode aus, um die Übermittlung zu committen. Hierdurch wird Partner Center darüber benachrichtigt, dass Sie Ihre Übermittlung fertig gestellt haben und die Updates auf Ihr Konto jetzt angewendet werden soll. Weitere Informationen finden Sie unter [Ausführen eines Commits einer Add-On-Übermittlung](commit-an-add-on-submission.md).
+5. Führen Sie die folgende Methode aus, um die Übermittlung zu committen. Dies wird Partner Center Warnung an, dass Sie Ihre Übermittlung fertig gestellt haben und die Updates für Ihr Konto jetzt angewendet werden sollen. Weitere Informationen finden Sie unter [Ausführen eines Commits einer Add-On-Übermittlung](commit-an-add-on-submission.md).
 
     ```
     POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/commit
@@ -133,7 +133,7 @@ Gehen Sie folgendermaßen vor, um eine Übermittlung für ein Add-On zu erstelle
 
     Um den Status der Übermittlung zu überprüfen, zeigen Sie den Wert *status* im Antworttext an. Dieser Wert sollte von **CommitStarted** entweder in **PreProcessing** geändert worden sein, wenn die Anforderung erfolgreich war, oder in **CommitFailed**, wenn die Anforderung Fehler enthalten hat. Wenn Fehler aufgetreten sind, enthält das Feld *StatusDetails* Feld weitere Details zu den Fehlern.
 
-7. Nachdem das Commit erfolgreich abgeschlossen wurde, wird die Übermittlung zur Aufnahme an den Store gesendet. Sie können weiterhin die mithilfe der vorherigen Methode oder besuchen Sie Partner Center überwachen.
+7. Nachdem das Commit erfolgreich abgeschlossen wurde, wird die Übermittlung zur Aufnahme an den Store gesendet. Sie können weiterhin die mithilfe der vorherigen Methode, oder besuchen die Partner Center überwachen.
 
 <span/>
 
@@ -352,7 +352,7 @@ Die folgenden Werte stellen die verfügbaren Preisstufen in der [Ressource für 
 |  Base               |   Das Preisniveau ist nicht festgelegt. Verwenden Sie den Basispreis für das Add-On.      |     
 |  NotAvailable              |   Das Add-On ist für die angegebene Region nicht verfügbar.    |     
 |  Free              |   Das Add-On ist kostenlos.    |    
-|  Stufe*xxxx*               |   Eine Zeichenfolge, die die Preisstufe für das Add-On im Format **Stufe<em>xxxx</em>** angibt. Derzeit werden die folgenden Spannen von Preisstufen unterstützt:<br/><br/><ul><li>Wenn der Wert *IsAdvancedPricingModel* für die [Ressource für Preise](#pricing-object) **true** ist, sind die für Ihr Konto verfügbaren Werte für Preisstufen **Stufe1012** - **Stufe1424**.</li><li>Wenn der Wert *IsAdvancedPricingModel* für die [Ressource für Preise](#pricing-object) **false** ist, sind die für Ihr Konto verfügbaren Werte für Preisstufen **Stufe1012** - **Stufe1424**.</li></ul>Die vollständige Tabelle der Preis Ebenen, die für Ihr Entwicklerkonto, einschließlich der marktspezifische Preise, jede Ebene zugeordnet sind, finden Sie auf der Seite **Preise und Verfügbarkeit** für eines Ihrer app-Übermittlungen im Partner Center und Klicken Sie auf den Link **Anzeigen der Tabelle** im Abschnitt **Märkte und angepasste Preise** (bei einigen entwicklerkonten dieser Link ist im Abschnitt **Preise** ).     |
+|  Stufe*xxxx*               |   Eine Zeichenfolge, die die Preisstufe für das Add-On im Format **Stufe<em>xxxx</em>** angibt. Derzeit werden die folgenden Spannen von Preisstufen unterstützt:<br/><br/><ul><li>Wenn der Wert *IsAdvancedPricingModel* für die [Ressource für Preise](#pricing-object) **true** ist, sind die für Ihr Konto verfügbaren Werte für Preisstufen **Stufe1012** - **Stufe1424**.</li><li>Wenn der Wert *IsAdvancedPricingModel* für die [Ressource für Preise](#pricing-object) **false** ist, sind die für Ihr Konto verfügbaren Werte für Preisstufen **Stufe1012** - **Stufe1424**.</li></ul>Die vollständige Tabelle mit den Preis Ebenen, die für Ihr Entwicklerkonto, einschließlich der marktspezifische Preise, die jede Ebene zugeordnet sind verfügbar sind finden Sie auf der Seite **Preise und Verfügbarkeit** für alle Ihre app-Übermittlungen im Partner Center und Klicken Sie auf den Link **Anzeigen der Tabelle** im Abschnitt **Märkte und angepasste Preise** (bei einigen entwicklerkonten dieser Link ist im Abschnitt **Preise** ).     |
 
 <span id="submission-status-code" />
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-API für gezielte Angebote, gezielte Angebote abrufen
 ms.localizationpriority: medium
 ms.openlocfilehash: 71cd6ce3b9736b812f8ccdf4d21d35357928c63c
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8730557"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8794029"
 ---
 # <a name="get-targeted-offers"></a>Abrufen gezielter Angebote
 
@@ -55,7 +55,7 @@ Diese Methode gibt einen Antworttext im JSON-Format zurück, der ein Array mit O
 
 | Feld      | Typ   | Beschreibung         |
 |------------|--------|------------------|
-| Angebote      | Array  | Ein Array mit Produkt-IDs für die Add-Ons, die den gezielten Angeboten zugeordnet sind, die für den aktuellen Benutzer verfügbar sind. Diese Produkt-IDs werden in der Seite **gezielte Angebote** für Ihre app im Partner Center angegeben.            |
+| Angebote      | Array  | Ein Array mit Produkt-IDs für die Add-Ons, die den gezielten Angeboten zugeordnet sind, die für den aktuellen Benutzer verfügbar sind. Diese Produkt-IDs werden auf der Seite **gezielte Angebote** für Ihre app im Partner Center angegeben.            |
 | trackingId  | String | Eine GUID, mit der Sie optional das gezielte Angebot in Ihrem eigenen Code oder Diensten nachverfolgen können. |
 
 

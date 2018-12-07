@@ -7,16 +7,16 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 88a5492116eaf48f72d512a093001a5c3835f0d2
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8732849"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8789738"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore1"></a>Windows Runtime 8.x zu UWP – Fallstudie, Bookstore1
 
 
-Dieses Thema enthält eine Fallstudie für das Portieren einer sehr einfachen universellen 8.1-Apps zu einer app Windows10Universal Windows-Plattform (UWP). Eine universelle 8.1-app wird ein ein app-Paket für Windows8.1 und ein anderes app-Paket für Windows Phone 8.1 erstellt. Mit Windows 10, können Sie ein einzelnes app-Paket erstellen, die Ihre Kunden auf einer Vielzahl von Geräten installieren können, und was wir in dieser Fallstudie tun. Weitere Informationen finden Sie unter [Anleitung für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn894631).
+Dieses Thema enthält eine Fallstudie für das Portieren einer sehr einfachen universellen 8.1-Apps zu einer app Windows10Universal Windows-Plattform (UWP). Eine universelle 8.1-app ist eine app-Paket für Windows8.1 und ein anderes app-Paket für Windows Phone 8.1 erstellt. Mit Windows 10, können Sie ein einzelnes app-Paket erstellen, die Ihre Kunden auf einer Vielzahl von Geräten installieren können, und wie wir in dieser Fallstudie tun. Weitere Informationen finden Sie unter [Anleitung für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/dn894631).
 
 Die portierte App besteht aus einem **ListBox**-Element, das an ein Ansichtsmodell gebunden ist. Das Ansichtsmodell verfügt über eine Liste mit Büchern, für die Titel, Autor und Bucheinband angezeigt werden. Für die Bucheinbandbilder ist **Buildvorgang** auf **Inhalt** und **In Ausgabeverzeichnis kopieren** auf **Nicht kopieren** festgelegt.
 
@@ -28,7 +28,7 @@ Die vorherigen Themen in diesem Abschnitt beschreiben die Unterschiede zwischen 
 
 [Laden Sie die universelle8.1-App „Bookstore1\_81“ herunter](http://go.microsoft.com/fwlink/?linkid=532946).
 
-[Laden der Bookstore1Universal\_10 Windows 10-app](http://go.microsoft.com/fwlink/?linkid=532950).
+[Laden Sie die Bookstore1Universal\_10 Sie Windows 10-app](http://go.microsoft.com/fwlink/?linkid=532950).
 
 ## <a name="the-universal-81-app"></a>Die universelle8.1-App
 
@@ -50,7 +50,7 @@ Die Bookstore1\_81-Projektmappe ist ein universelles 8.1-App-Projekt und enthäl
 -   Bookstore1\_81.WindowsPhone. Dies ist das Projekt, das das App-Paket für Windows Phone 8.1 erstellt.
 -   Bookstore1\_81.Shared. Dies ist das Projekt, das den Quellcode, die Markupdateien und andere Assets und Ressourcen enthält, die von den beiden anderen Projekten verwendet werden.
 
-Für diese Fallstudie verwenden wir die üblichen Optionen, die unter [Bei einer Universal8.1-App](w8x-to-uwp-root.md) in Bezug auf die zu unterstützenden Geräte beschrieben sind. Die Entscheidung hier ist ganz einfach: Diese app bietet die gleichen Features und verwendet dafür meist denselben Code in seiner Windows8.1 und Windows Phone 8.1-Formularen. Daher müssen wir den Inhalt des freigegebenen Projekts (und sonstiger Elemente, die wir aus den anderen Projekten benötigen) zu Portieren einer Windows 10, die auf die universelle Gerätefamilie (eines, das Sie auf einer breiten Palette von Geräten installieren können) ausgerichtet ist.
+Für diese Fallstudie verwenden wir die üblichen Optionen, die unter [Bei einer Universal8.1-App](w8x-to-uwp-root.md) in Bezug auf die zu unterstützenden Geräte beschrieben sind. Die Entscheidung hier ist ganz einfach: Diese app bietet die gleichen Features und verwendet dafür meist denselben Code in die Windows8.1 und Windows Phone 8.1-Formularen. Daher müssen wir den Inhalt des freigegebenen Projekts (und sonstiger Elemente, die wir aus den anderen Projekten benötigen) zu Portieren einer Windows 10, die auf die universelle Gerätefamilie (eine, die Sie auf einer breiten Palette von Geräten installieren können) ausgerichtet ist.
 
 Das Erstellen eines neuen Projekts in Visual Studio ist sehr schnell: Kopieren Sie Dateien aus Bookstore1\_81, und fügen Sie die kopierten Dateien in das neue Projekt ein. Erstellen Sie zunächst ein neues Projekt vom Typ „Leere Anwendung“ (Windows Universal). Geben Sie ihm den Namen „Bookstore1Universal\_10“. Dies sind die Dateien, die von „Bookstore1\_81“ nach „Bookstore1Universal\_10“ kopiert werden sollen.
 
@@ -66,7 +66,7 @@ Das Erstellen eines neuen Projekts in Visual Studio ist sehr schnell: Kopieren S
 
 Bearbeiten Sie den Quellcode und die Markupdateien, die Sie gerade kopiert haben, und ändern Sie alle Verweise auf den Namespace „Bookstore1\_81“ in „Bookstore1Universal\_10“. Eine schnelle Möglichkeit dafür ist die Verwendung des Features **In Dateien ersetzen**. Weder im Ansichtsmodell, noch in einem anderen imperativen Code sind Codeänderungen erforderlich. Um leichter erkennen zu können, welche App-Version ausgeführt wird, sollten Sie jedoch den von der **Bookstore1Universal\_10.BookstoreViewModel.AppName**-Eigenschaft zurückgegebenen Wert „BOOKSTORE1\_81“ in „BOOKSTORE1UNIVERSAL\_10“ ändern.
 
-Jetzt können Sie mit der Erstellung und Ausführung beginnen. Hier sehen Sie, wie unsere neue UWP-app aussieht, nahezu ohne Arbeit und Mühe zu Windows 10 portiert.
+Jetzt können Sie mit der Erstellung und Ausführung beginnen. Hier sehen Sie, wie unsere neuen UWP-app aussieht, nahezu ohne Arbeit und Mühe zu Windows 10 portiert.
 
 ![Die Windows10-App mit Änderungen am ursprünglichen Quellcode](images/w8x-to-uwp-case-studies/c01-03-desk10-initial-source-code-changes.png)
 

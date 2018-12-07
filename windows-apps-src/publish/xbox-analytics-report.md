@@ -6,15 +6,15 @@ ms.topic: article
 keywords: Windows10, UWP, Xbox Analyse, Xbox Live-Analyse, Xbox-Statistiken
 ms.localizationpriority: medium
 ms.openlocfilehash: ae9bacd88f957954c5cd1d3f6ccd6d3c04a568a2
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8751909"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8787858"
 ---
 # <a name="xbox-analytics-report"></a>Xbox Analysebericht
 
-Der **Xbox** Analysebericht im [Partner Center](https://partner.microsoft.com/dashboard) zeigt Ihnen Statistiken darüber wie Ihre Kunden die Xbox-Features in Ihrem Spiel interagieren. Es enthält auch Informationen zur Dienstintegrität, um Clientfehler zu beheben.
+Der **Xbox** Analysebericht im [Partner-Center](https://partner.microsoft.com/dashboard) zeigt Sie Statistiken darüber an, wie Ihre Kunden die Xbox-Features in Ihrem Spiel nutzen. Es enthält auch Informationen zur Dienstintegrität, um Clientfehler zu beheben.
 
 > [!IMPORTANT]
 > Dieser Bericht wird nur angezeigt, wenn Sie ein Spiel für Xbox oder ein Spiel veröffentlichen, das Xbox Live-Dienste verwendet. Zu diesem Zweck Sie [konzeptgenehmigungsprozess](../gaming/concept-approval.md), einschließlich Spiele, die von [Microsoft-Partnern](../xbox-live/developer-program-overview.md#microsoft-partners) veröffentlicht und Spiele über übermittelt durchlaufen müssen die [ ID@Xbox Programm](../xbox-live/developer-program-overview.md#id). Spiele, die über das [Xbox Live Creators-Programm](../xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md) veröffentlicht sind derzeit nicht sichtbar in diesem Bericht.

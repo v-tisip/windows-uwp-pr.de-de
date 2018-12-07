@@ -7,25 +7,25 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 4c844c37bab8a135468d74558e8dc053b18d48cc
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8735590"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8794561"
 ---
 # <a name="put-apps-and-add-ons-on-sale"></a>Anbieten vergünstigter Apps und Add-Ons
 
-Sie können Ihre Apps oder Add-Ons im Microsoft Store auch bewerben, indem Sie sie für einen begrenzten Zeitraum als Sonderangebot bereitstellen. Sie können das Produkt auch auf einer niedrigeren Preisstufe oder mit einem prozentbasierten Rabatt anbieten. Und Sie können auswählen, ob das Sonderangebot für alle Benutzer anbieten, oder ihn ein exklusives Angebot für Kunden, die eines Ihrer anderen Produkte besitzen.
+Sie können Ihre Apps oder Add-Ons im Microsoft Store auch bewerben, indem Sie sie für einen begrenzten Zeitraum als Sonderangebot bereitstellen. Sie können das Produkt auch auf einer niedrigeren Preisstufe oder mit einem prozentbasierten Rabatt anbieten. Und Sie können auswählen, ob das Sonderangebot für alle Benutzer anbieten oder ein exklusives Angebot für Kunden, die eine Ihrer anderen Produkte besitzen machen.
 
 > [!NOTE]
-> Sonderpreise wird für Abonnement-Add-Ons nicht unterstützt.
+> Sonderpreise wird für die Abonnement-Add-Ons nicht unterstützt.
 
 Bei der Verwendung des Abschnitts **Sonderpreise** der Seite **Preise und Verfügbarkeit** einer Übermittlung zur vorübergehenden Senkung des Preises Ihrer App oder Ihres Add-Ons sehen Kunden, die sich den Store-Eintrag ansehen, dass der Preis durchgestrichen wurde, d.h. gesenkt wurde (im Gegensatz zu einer [geplanten Preisänderung](set-and-schedule-app-pricing.md#schedule-price-changes), bei der der Preis gesenkt oder angehoben werden kann, ohne dass dies als Änderung im Store angezeigt wird). 
 
 Während der Zeit, in der Ihr ein Produkt als Sonderangebot angeboten wird, können Kunden es während des Zeitraums, den Sie ausgewählt haben, zu dem niedrigeren Preis erwerben. Wenn Sie den Preis auf **Kostenlos** senken, können Kunden die App bzw. das IAP während des Zeitraums für das Sonderangebot herunterladen, ohne dafür zu bezahlen.
 
 > [!IMPORTANT]
-> Sonderpreise werden nur für Kunden mit Windows 10-Geräten, einschließlich Xbox One angezeigt. Sales, die Sie nur für Besitzer eines Ihrer anderen Produkte anbieten werden nur für Kunden unter Windows 10, Version 1607 oder höher angezeigt.
+> Sonderpreise werden nur für Kunden mit Windows 10-Geräten, einschließlich Xbox One angezeigt. Verkäufe, die Sie nur für Besitzer eines Ihrer anderen Produkte anbieten werden nur für Kunden unter Windows 10, Version 1607 oder höher angezeigt.
 > 
 > Bei anderen Betriebssystemen wird den Kunden der reguläre Preis für Ihre App oder Ihr Add-On angezeigt und können diese nicht zu Sonderpreisen erwerben. Sie können einen Preis jederzeit ändern, indem Sie ein anderes Preisniveau bei einer neuen Übermittlung auswählen, dieser wird jedoch nicht als Sonderangebot für einen begrenzten Zeitraum angezeigt.
 

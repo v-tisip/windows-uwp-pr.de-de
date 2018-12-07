@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ea005dd33bbb5461921fa17eded8430d7648c87
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 8a87fe2bbff1768da43d6cb366b173077555270f
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8739448"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8789624"
 ---
 # <a name="tiles-badges-and-notifications-for-uwp-apps"></a>Kacheln, Signale und Benachrichtigungen für UWP-Apps
  
@@ -39,10 +39,10 @@ Eine Kachel ist die Darstellung einer App im Startmenü. Jede UWP-App verfügt �
 | [Erstellen von Kacheln](creating-tiles.md) | Passen Sie die Standardkachel für Ihre App an, und stellen Sie Ressourcen für unterschiedliche Bildschirmgrößen bereit. |
 | [Ressourcen für App-Symbol](app-assets.md) | Ressourcen für App-Symbole, die in einer Vielzahl von Formen innerhalb des Windows 10-Betriebssystems vorkommen, sind die Aushängeschilder für Ihre App für die Universelle Windows-Plattform (UWP). In diesen Richtlinien wird beschrieben, wo Ressourcen für App-Symbole im System angezeigt werden, und Sie erhalten ausführliche Designtipps zum Erstellen ansprechender Symbole. |
 | [Primäre Kachel-APIs](primary-tile-apis.md) | Fordern Sie den Benutzer auf, die primäre Kachel Ihrer App anzuheften, und überprüfen Sie, ob die primäre Kachel derzeit angeheftet ist. |
-| [Kachelinhalt](create-adaptive-tiles.md) | Kachelbenachrichtigungsinhalt wird mit adaptive angegeben, ein neues Feature in Windows 10, sodass Sie entwerfen Sie Ihre eigene Kachel Benachrichtigungsinhalt mithilfe einer einfachen, flexiblen Markupsprache, die sich an unterschiedliche bildschirmdichten anpasst. Dieser Artikel beschreibt, wie Sie adaptive Livekacheln für Ihre App für die Universelle Windows-Plattform (UWP) erstellen. |
+| [Kachelinhalt](create-adaptive-tiles.md) | Kachelbenachrichtigungsinhalt wird mit adaptive angegeben, ein neues Feature in Windows 10, sodass Sie entwerfen Sie Ihre eigene Kachel Inhalte mithilfe einer einfachen, flexiblen Markupsprache, die sich an unterschiedliche bildschirmdichten anpasst. Dieser Artikel beschreibt, wie Sie adaptive Livekacheln für Ihre App für die Universelle Windows-Plattform (UWP) erstellen. |
 | [Kachelinhaltsschema](../tiles-and-notifications/tile-schema.md) | Im Folgenden werden Elemente und Attribute aufgeführt, mit denen Sie adaptive Kacheln erstellen können. |
 | [Spezielle Kachelvorlagen](special-tile-templates-catalog.md) | Spezielle Kachelvorlagen sind individuelle Vorlagen, die animiert sind oder mit denen Sie Vorgänge durchführen können, die mit adaptiven Kacheln nicht möglich sind. |
-| [Senden einer lokalen Kachelbenachrichtigung](sending-a-local-tile-notification.md) | Hier erfahren Sie, wie Sie eine lokale Kachelbenachrichtigung senden und dabei erweiterten dynamischen Inhalt zu Ihrer Live-Kachel hinzufügen. |
+| [Senden von lokalen kachelbenachrichtigung](sending-a-local-tile-notification.md) | Hier erfahren Sie, wie Sie eine lokale Kachelbenachrichtigung senden und dabei erweiterten dynamischen Inhalt zu Ihrer Live-Kachel hinzufügen. |
 
 
 ## <a name="notifications"></a>Benachrichtigungen
@@ -51,7 +51,7 @@ Eine Kachel ist die Darstellung einer App im Startmenü. Jede UWP-App verfügt �
 | --- | --- |
 | [Popupbenachrichtigungen](adaptive-interactive-toasts.md) | Mit adaptiven und interaktiven Popupbenachrichtigungen können Sie flexible Popupbenachrichtigungen mit mehr Inhalt, optionalen Inlinebildern und optionaler Benutzerinteraktion erstellen. |
 | [Senden einer lokalen Popupbenachrichtigung](send-local-toast.md) | Hier erfahren Sie, wie Sie eine interaktive Popupbenachrichtigung senden. |
-| [Notifications Visualizer](notifications-visualizer.md) | Notifications Visualizer eine neue universelle Windows-Plattform (UWP)-app im [Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) , die Entwickler entwerfen Sie adaptive live-Kacheln für Windows 10. |
+| [Notifications Visualizer](notifications-visualizer.md) | Notifications Visualizer eine neue universelle Windows-Plattform (UWP)-app im [Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) , die Entwickler adaptive entwerfen können live-Kacheln für Windows 10. |
 | [Auswählen einer Methode für die Übermittlung von Benachrichtigungen](choosing-a-notification-delivery-method.md) | In diesem Artikel werden die vier Benachrichtigungsoptionen – lokal, geplant, periodisch und Push – behandelt, die Kachel- und Signalaktualisierungen sowie Popupbenachrichtigungsinhalte bereitstellen. |
 | [Übersicht über regelmäßige Benachrichtigungen](periodic-notification-overview.md) | Regelmäßige Benachrichtigungen – auch als abgerufene Benachrichtigungen bezeichnet – aktualisieren Kacheln und Signale in festgelegten Intervallen, indem sie Inhalte aus einem Clouddienst herunterladen. |
 | [Übersicht über die Windows-Pushbenachrichtigungsdienste (Windows Push Notification Services, WNS)](windows-push-notification-services--wns--overview.md) | Mithilfe des Windows-Pushbenachrichtigungsdiensts (WNS) können Drittanbieterentwickler Popup-, Kachel-, Signalupdates und unformatierte Updates von ihren eigenen Clouddiensten aus senden. Dadurch steht ein Mechanismus zur Verfügung, mit dem Sie Ihren Benutzern auf energieeffiziente und verlässliche Weise neue Updates bereitstellen können. |

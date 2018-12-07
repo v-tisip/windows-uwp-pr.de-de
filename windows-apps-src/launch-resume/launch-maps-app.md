@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 08fab2b312fa4ea79d03f350d62070e205d535f8
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8742021"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8785471"
 ---
 # <a name="launch-the-windows-maps-app"></a>Starten der Windows-Karten-App
 
@@ -299,7 +299,7 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 <p>trfc=1</p></td>
 <td align="left"><p>Gibt an, ob die Karte Verkehrsinformationen enthält. Wenn der trfc-Parameter ausgelassen wird, werden dieselben Ergebnisse wie bei <code>trfc=0</code> zurückgegeben.</p>
 <div class="alert">
-**Hinweis:** Datenverkehr Daten sind nicht in allen Regionen verfügbar.
+**Hinweis:** Verkehrsinformationen sind nicht in allen Regionen verfügbar.
 </div>
 <div>
  
@@ -328,7 +328,7 @@ Die Syntax für jeden Parameter in dieser Tabelle wird mithilfe von ABNF (Augmen
 <p>Bei einer unvollständigen Route wird keine Routenlinie gezeichnet.</p>
 <p>Geben Sie dies zusammen mit dem **mode**-Parameter an, um die Transportmethode (fahren, laufen oder öffentliche Verkehrsmittel) anzugeben. Wenn **mode** nicht angegeben ist, werden Wegbeschreibungen mithilfe der Einstellung für die Transportmethode des Benutzers bereitgestellt.</p>
 <div class="alert">
-**Hinweis:** ein Titel kann für einen Ort verwendet werden, wenn der Standort durch den **pos** -Parameterwert angegeben ist. Anstatt der Breiten- und Längengrade wird der Titel angezeigt.
+**Hinweis:** ein Titel kann für einen Ort verwendet werden, der Speicherort von **pos** -Parameterwert angegeben wird. Anstatt der Breiten- und Längengrade wird der Titel angezeigt.
 </div>
 <div>
  

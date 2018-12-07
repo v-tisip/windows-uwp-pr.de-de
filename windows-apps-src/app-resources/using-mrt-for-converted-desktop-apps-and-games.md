@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows10, UWP, mrt, pri. Ressourcen, Spiele, Centennial, Desktop App Converter, mui, Satellitenassembly
 ms.localizationpriority: medium
 ms.openlocfilehash: 620efc73502c741e415d210170ea53deefd4e974
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8750431"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8789352"
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>Verwenden des Ressourcenverwaltungssystem für Windows 10 in älteren Apps oder Spielen
 
@@ -303,7 +303,7 @@ Nachdem die PRI-Datei jetzt erstellt wurde, können Sie das Paket erstellen und 
  * `/f` legt die zu verwendende Zuordnungsdatei fest (die im vorherigen Schritt erstellt wurde) 
  * `/p` legt den Namen des Ausgabepakets fest
  * `/o` legt ein Überschreiben der Ausgabedatei fest, wenn vorhanden
-0. Wenn das Paket erstellt wurde, muss es signiert werden. Die einfachste Methode zum Abrufen eines Signaturzertifikats wird durch ein leeres universelles Windows-Projekt in Visual Studio erstellen und Kopieren der `.pfx` -Datei erstellt, aber Sie können manuell mit Erstellen der `MakeCert` und `Pvk2Pfx` Dienstprogramme gemäß [der **So erstellen Sie ein app-Paket, das Signaturzertifikat** Thema auf MSDN] (https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx). 
+0. Wenn das Paket erstellt wurde, muss es signiert werden. Die einfachste Methode zum Abrufen eines Signaturzertifikats ist, erstellen ein leeres universelles Windows-Projekt in Visual Studio, und Kopieren der `.pfx` -Datei erstellt, aber Sie können manuell mit Erstellen der `MakeCert` und `Pvk2Pfx` gemäß der Verwaltungsdienstprogramme für [der **So erstellen Sie ein app-Paket, das Signaturzertifikat** Thema auf MSDN] (https://msdn.microsoft.com/en-us/library/windows/desktop/jj835832(v=vs.85).aspx). 
  * **Wichtig:** Wenn Sie ein Signaturzertifikat manuell erstellen, stellen Sie sicher, dass Sie die Dateien in einem anderen Verzeichnis als Ihr Quellprojekt oder die Paketquelle ablegen, andernfalls wird es möglicherweise in das Paket eingefügt, einschließlich des privaten Schlüssels!
 0. Verwenden Sie zum Signieren des Pakets den folgenden Befehl. Beachten Sie, dass der im Element `Identity` der Datei `AppxManifest.xml` angegebene `Publisher` mit dem `Subject` des Zertifikats übereinstimmen muss (hierbei handelt es sich **nicht** um das Element `<PublisherDisplayName>`; dieses ist der lokalisierte Anzeigename, der den Benutzern angezeigt wird). Ersetzen Sie wie gewohnt die `contoso_demo...`-Dateinamen mit den Namen für Ihr Projekt, und (**sehr wichtig**) stellen Sie sicher, dass die `.pfx`-Datei sich nicht im aktuellen Verzeichnis befindet (andernfalls wäre sie als Teil Ihres Pakets erstellt worden, einschließlich des privaten Signaturschlüssels!):
 

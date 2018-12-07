@@ -1,5 +1,5 @@
 ---
-description: Dieses Thema beschreibt die verschiedenen Kategorien von Werten, die in C++ vorhanden sind. Sie werden Ausrichtungsattributs verwendet kenne l-Werte und Rvalues, aber es gibt auch andere Arten.
+description: Dieses Thema beschreibt die verschiedenen Kategorien von Werten, die in C++ vorhanden sind. Sie werden Ausrichtungsattributs verwendet l-Werte und Rvalues gehört haben, jedoch sind andere Arten zu.
 title: Wertekategorien und Verweise auf diese
 ms.date: 08/11/2018
 ms.topic: article
@@ -7,25 +7,25 @@ keywords: Windows 10, Uwp, Standard, c++, Cpp, Winrt, Projektion, verschieben, W
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 1860f562233ceefa6d9ebb3741378b3265b4c3a9
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8732449"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8794583"
 ---
 # <a name="value-categories-and-references-to-them"></a>Wertekategorien und Verweise auf diese
-Dieses Thema beschreibt die verschiedenen Kategorien der Werte (und Verweise auf Werte), die in C++ vorhanden sind. Sie werden Ausrichtungsattributs verwendet kenne *l-Werte* und *Rvalues*, aber möglicherweise nicht stellen sie in die Begriffe, die in diesem Thema werden. Und es gibt andere Arten von Werten, zu.
+Dieses Thema beschreibt die verschiedenen Kategorien der Werte (und Verweise auf Werte), die in C++ vorhanden sind. Sie werden Ausrichtungsattributs verwendet *l-Werte* und *Rvalues*gehört haben, aber möglicherweise nicht stellen sie in die Begriffe, die in diesem Thema werden. Und andere Arten von Werten, zu.
 
-Jeder Ausdruck in C++ ergibt einen Wert, der auf eine der in diesem Thema erläuterten Kategorien gehört. Es gibt Aspekte der C++-Sprache, Facilies und Regeln, die das Verständnis der diese Wertekategorien und Verweise auf diese anfordern. Die Adresse eines Werts, einen Wert kopieren, verschieben einen Wert und einen Wert an eine andere Funktion Weiterleiten z. B. nehmen. In diesem Thema nicht in all diese Aspekte im Detail gehen, aber es enthält grundlegende Informationen für ein grundlegendes Verständnis davon.
+Jeder Ausdruck in C++ ergibt einen Wert, der auf eine der Kategorien, die in diesem Thema erläuterten gehört. Es gibt Aspekte der C++-Sprache, Facilies und Regeln, die das Verständnis der diese Wertekategorien und Verweise auf diese anfordern. Beispielsweise nehmen die Adresse eines Werts, der einen Wert kopieren, verschieben einen Wert und einen Wert an eine andere Funktion weiterleiten. In diesem Thema nicht in all diese Aspekte im Detail gehen, aber es enthält grundlegende Informationen für ein grundlegendes Verständnis davon.
 
 Die Informationen in diesem Thema wird durch die zwei unabhängigen Eigenschaften der Identität und Movability [Stroustrup 2013] hinsichtlich Stroustrups Analyse der Wertekategorien dargestellt.
 
 ## <a name="an-lvalue-has-identity"></a>Ein l-Wert hat Identität
-Was bedeutet es für einen Wert *Identität*? Wenn die Adresse des Arbeitsspeichers eines Werts Sie haben (oder können), und sie sicher, und klicken Sie dann der Wert Identität verfügt. Auf diese Weise können Sie erreichen mehr als Vergleichen der Inhalt der Werte: Sie können vergleichen oder Identität zu unterscheiden.
+Was bedeutet es für einen Wert *Identität*? Wenn die Adresse des Arbeitsspeichers eines Werts Sie haben (oder können), und sie problemlos, und klicken Sie dann der Wert Identität verfügt. Auf diese Weise möglich mehr als vergleichen den Inhalt der Werte: Sie können vergleichen oder Identität zu unterscheiden.
 
-Ein *l-Wert* hat Identität. Es ist jetzt eine Frage des nur historischen Interesse an, dass das "l" in "l-Wert" Abkürzung für "Links" (wie, in der linken Seite einer Zuordnung) ist. In C++ kann ein l-Wert in der nach links *oder* rechts auf der eine Zuordnung angezeigt. Das "l" in "l-Werte", unterstützen nicht dann, tatsächlich Sie bei verstehen noch definieren, was sind. Sie müssen nur Beachten Sie, was rufen wir ein l-Wert einen Wert, der Identität verfügt.
+Ein *l-Wert* hat Identität. Es ist jetzt eine Frage des nur rückwirkende Interesse an, dass die "l" in "l-Wert" Abkürzung für "Links" (in der linken Seite einer Zuordnung) ist. In C++ kann ein l-Wert in der nach links *oder* rechts auf der eine Zuordnung angezeigt. "L" in "l-Werte", können nicht dann tatsächlich Sie verstehen, oder definieren Sie. Sie müssen nur zu verstehen, was rufen wir ein l-Wert ein Wert ist, der Identität verfügt.
 
-Beispiele für Ausdrücke, die l-Werte sind: eine benannten Variable oder Konstante; oder eine Funktion, die einen Verweis zurückgibt. Beispiele für Ausdrücke, die *nicht* l-Werte sind: ein temporäres; oder eine Funktion, die durch einen Wert zurückgibt.
+Beispiele für Ausdrücke, die l-Werte sind: einer benannten Variable oder Konstante; oder eine Funktion, die einen Verweis zurückgibt. Beispiele für Ausdrücke, die *nicht* l-Werte sind: ein temporäres; oder eine Funktion, die durch einen Wert zurückgibt.
 
 ```cppwinrt
 int& get_by_ref() { ... }
@@ -42,53 +42,53 @@ int main()
 }
 ```
 
-Nun, es zwar Aussagen, l-Werte Identität haben, also tun Xvalues. Gehen wir mehr in welche ein *Xvalue* weiter unten in diesem Thema wird. Werden Sie für den Moment lediglich Beachten Sie, dass der Wert Kategorie Glvalue, für "generalisiert l-Wert". Die Übermenge von Glvalues enthält l-Werte (auch bekannt als *klassische l-Werte*) und Xvalues. Daher while "Identität hat ein l-Wert" ist "true", der vollständige Satz von Dinge, die Identität der Satz von Glvalues, wie in der folgenden Abbildung dargestellt.
+Jetzt können zwar, l-Werte Identität haben Aussagen werden, also tun Xvalues. Gehen wir mehr in welche ein *Xvalue* weiter unten in diesem Thema wird. Für den Moment nur Beachten Sie, dass der Wert Kategorie Glvalue, für die "generalisiert l-Wert" vorhanden ist. Die Obermenge von Glvalues enthält l-Werte (auch bekannt als *klassische l-Werte*) und Xvalues. Daher while "Identität hat eine l-Wert" true ist, der vollständige Satz von Dinge, die Identität ist der Satz von Glvalues, wie in der folgenden Abbildung dargestellt.
 
 ![Ein l-Wert hat Identität](images/has-identity1.png)
 
 ## <a name="an-rvalue-is-movable-an-lvalue-is-not"></a>Ein r-Wert ist verschoben. ein l-Wert ist nicht
-Aber es gibt Werte, die nicht Glvalues sind. Daher sind Werte, die Sie *kann nicht* für eine Speicheradresse zu erhalten (oder nicht verlässlich er gültig sein). Wir haben gesehen, einige dieser Werte im obigen Codebeispiel. Dies klingt wie einen Nachteil. Aber in der Tat können den Vorteil, einen Wert wie das heißt, dass Sie daraus *Verschieben* können (was in der Regel günstig ist), anstatt kopieren (was in der Regel teuer ist). Verschieben von einem Wert bedeutet, dass es nicht mehr an der Stelle, die verwendet werden. Also versuchen, an der Stelle auf Sie zugreifen, die es verwendet, werden etwas vermieden werden. Eine Erläuterung der wann und *wie* , ein Wert außerhalb des Bereichs für dieses Thema wurde zu verschieben. Für dieses Thema müssen wir nur wissen, dass ein Wert, der bewegliche ist, als ein *r-Wert* (oder *klassische r-Wert*) bezeichnet wird.
+Aber es gibt Werte, die nicht Glvalues sind. Es gibt daher Werte, die Sie *kann nicht* für eine Speicheradresse erhalten (oder Sie können nicht verlassen Sie sich auf sie gültig). Wir haben gesehen, einige dieser Werte im obigen Codebeispiel. Dies klingt wie einen Nachteil. Aber in der Tat der Vorteil, einen Wert ist, können Sie *Verschieben* , wird (was in der Regel gering ist), anstatt kopieren wird (was in der Regel teuer ist). Verschieben von einem Wert bedeutet, dass es nicht mehr an der Stelle, die sie verwendet werden. Daher ist das Versuch, die sie an der Stelle zugreifen, die sie verwendet werden, die vermieden werden. Eine Erläuterung der wann und *wie* , ein Wert außerhalb des Bereichs für dieses Thema ist zu verschieben. Für dieses Thema müssen wir wissen, dass ein Wert, der bewegliche ist als ein *r-Wert* (oder *klassische r-Wert*) bezeichnet wird.
 
-Das "R" in "r"-Wert ist eine Abkürzung des "rechts" (wie, die rechte Seite einer Zuordnung). Sie können jedoch Rvalues und Verweise auf Rvalues, außerhalb von Aufgaben. Das "R" in "Rvalues", ist, nicht das, was zu konzentrieren. Sie müssen nur zu verstehen, dass was rufen wir ein r-Wert einen Wert, der bewegliche ist.
+"R" in "r"-Wert ist eine Abkürzung für "rechts" (wie die rechte Seite einer Zuordnung). Sie können jedoch Rvalues und Verweise auf Rvalues, außerhalb von Aufgaben. In "Rvalues", "R" ist nicht das, was zu konzentrieren. Sie müssen nur zu verstehen, dass wir ein r-Wert aufrufen einen Wert, der bewegliche ist.
 
 Ein l-Wert ist dagegen bewegliche, nicht, wie in der folgenden Abbildung dargestellt. Ein l-Wert, die verschoben würde die Definition von *l-Wert*gibt, und es wäre ein unerwarteter Fehler für Code, der erwartet sehr vernünftig weiterhin auf die l-Wert zugreifen können.
 
 ![Ein r-Wert ist verschoben. ein l-Wert ist nicht](images/is-movable.png)
 
-Ein l-Wert kann nicht verschoben werden. Aber es *ist* eine Art von Glvalue (die Gruppe Dinge, die mit der Identität), die Sie verschieben können&mdash;Wenn Sie wissen, was Sie tun (einschließlich Achten Sie nicht für den Zugriff darauf nach dem Verschieben)&mdash;und das ist der Xvalue. Wir werden diese Idee noch einmal unten, besuchen Sie Wenn wir uns die vollständiges Bild der Wertekategorien nun an.
+Ein l-Wert kann nicht verschoben werden. Aber es *ist* eine Art von Glvalue (die Gruppe Dinge, die mit der Identität), die Sie verschieben können&mdash;, wenn Sie wissen, was Sie tun (einschließlich ohne dabei darauf zugreifen, nach dem Verschieben)&mdash;und die Xvalue ist. Wir werden diese Idee noch einmal unten, besuchen Sie Wenn wir die vollständiges Bild Wert Kategorien betrachten.
 
-## <a name="rvalue-references-and-reference-binding-rules"></a>R-Wert Verweise und Referenz-Bindungsregeln
-In diesem Abschnitt werden die Syntax für einen Verweis auf ein r-Wert. Wir müssen warten, bis ein anderes Thema in einen erheblichen Behandlung verschieben und Weiterleiten gehen, allerdings sind Probleme, die durch r-Wert Verweise behoben werden. Bevor wir r-Wert Verweise betrachten, jedoch müssen wir zunächst über klarer werden `T&` &mdash;das, was wir haben bisher wurden aufrufen einfach "einen Verweis". Es ist wirklich "ein l-Wert (nicht-Const) Verweis auf", der auf einen Wert bezieht sich auf die der Benutzer des Verweises schreiben kann.
+## <a name="rvalue-references-and-reference-binding-rules"></a>R-Wert Verweise und Referenz-Binding-Regeln
+In diesem Abschnitt werden die Syntax für einen Verweis auf ein r-Wert. Wir müssen warten, bis ein anderes Thema, um einen erheblichen Behandlung von verschieben und weiterleiten zu starten, aber dies sind die Probleme, die durch r-Wert Verweise behoben werden. Bevor wir r-Wert Verweise betrachten, jedoch müssen wir zunächst über deutlicher zu erkennen, `T&` &mdash;das, was wir haben bisher wurden aufrufen einfach "einen Verweis". Es ist wirklich "ein l-Wert (nicht-Const) Verweis auf", der auf einen Wert bezieht sich auf die der Benutzer des Verweises schreiben kann.
 
 ```cppwinrt
 template<typename T> T& get_by_lvalue_ref() { ... } // Get by lvalue (non-const) reference.
 template<typename T> void set_by_lvalue_ref(T&) { ... } // Set by lvalue (non-const) reference.
 ```
 
-Ein Verweis l-Wert kann ein l-Wert, aber nicht in ein r-Wert gebunden werden.
+Eine Referenz l-Wert kann ein l-Wert, aber nicht in ein r-Wert gebunden werden.
 
-L-Wert const Verweise sind (`T const&`), die auf Objekte, die mit dem der Benutzer von der Verweis *kann nicht* schreiben (z. B. eine Konstante) verweisen.
+L-Wert const Verweise sind (`T const&`), die auf Objekte, die mit dem Schreiben von der Benutzer über die Referenz *kann nicht* (z. B. eine Konstante) verweisen.
 
 ```cppwinrt
 template<typename T> T const& get_by_lvalue_cref() { ... } // Get by lvalue const reference.
 template<typename T> void set_by_lvalue_cref(T const&) { ... } // Set by lvalue const reference.
 ```
 
-Ein l-Wert-Verweis kann an ein l-Wert oder ein r-Wert binden.
+Ein l-Wert-Verweis kann ein l-Wert oder ein r-Wert binden.
 
-Die Syntax für einen Verweis auf ein r-Wert vom Typ `T` wird als geschrieben `T&&`. Ein r-Wert-Verweis bezieht sich auf einen verschiebbare Wert&mdash;einen Wert, deren Inhalt müssen wir nicht beibehalten, nachdem wir (z. B. ein temporäres) verwendet haben. Seit dem gesamten Punkt Wechsels vom (wodurch ändern) der Wert gebunden ist, einen Verweis r-Wert `const` und `volatile` Qualifizierer (auch bekannt als cv-Qualifizierer) gelten nicht für Verweise r-Wert.
+Die Syntax für einen Verweis auf ein r-Wert vom Typ `T` wird als geschrieben `T&&`. Ein r-Wert-Verweis bezieht sich auf bewegliche Wert&mdash;einen Wert, deren Inhalt müssen wir nicht beibehalten wird, nachdem wir sie (z. B. ein temporäres) verwendet haben. Seit der gesamte Punkt Verschieben von (wodurch ändern) der Wert gebunden ist, eine Referenz r-Wert `const` und `volatile` Qualifizierer (auch bekannt als cv-Qualifizierer) auf r-Wert gelten nicht.
 
 ```cppwinrt
 template<typename T> T&& get_by_rvalue_ref() { ... } // Get by rvalue reference.
 struct A { A(A&& other) { ... } }; // A move constructor takes an rvalue reference.
 ```
 
-Ein r-Wert-Verweis Bindung an ein r-Wert. In der Tat hinsichtlich der Überladung Auflösung ein r-Wert *ist* ein Verweis auf r-Wert Verweis als auf eine Konstante l-Wert gebunden werden. Aber ein Verweis r-Wert kann nicht an ein l-Wert binden, daran, wie bereits erwähnt haben, ein r-Wert-Verweis auf einen Wert, deren Inhalt bezieht sich davon, dass wir benötigen ausgegangen wird (beispielsweise der Parameter für einen Verschiebungskonstruktor) zu erhalten.
+Ein r-Wert-Verweis Bindung an ein r-Wert. In der Tat hinsichtlich der Überladung Auflösung ein r-Wert *ist* ein Verweis auf r-Wert Verweis als auf ein const l-Wert gebunden werden. Aber eine Referenz r-Wert kann nicht an ein l-Wert binden, daran, wie bereits erwähnt haben, ein r-Wert-Verweis auf einen Wert, deren Inhalt bezieht sich davon, dass wir benötigen ausgegangen wird (beispielsweise der Parameter für einen) zu erhalten.
 
-Sie können auch übergeben ein r-Wert, in denen ein Argument als Wert zu erwarten ist über Kopie erstellen (oder verschieben Konstruktion, wenn die r-Wert ein Xvalue ist).
+Sie können auch übergeben ein r-Wert, in denen ein Argument-Wert zu erwarten ist über Kopie erstellen (oder verschieben Konstruktion, die r-Wert ist eine Xvalue).
 
 ## <a name="a-glvalue-has-identity-a-prvalue-does-not"></a>Ein Glvalue hat Identität. eine Prvalue nicht
-Zu diesem Zeitpunkt wissen wir, welche Identität verfügt. Und wir wissen, was bewegliche ist und was nicht. Aber wir noch, nicht mit dem Namen der Serie von Werten, *nicht* haben Identität. Gruppe als *Prvalue*oder *reine r-Wert*bekannt ist.
+Zu diesem Zeitpunkt wissen wir, welche Identität verfügt. Und wir wissen, was bewegliche ist und was nicht. Aber wir noch, nicht mit dem Namen der Serie von Werten, *nicht* haben Identität. Dieser Satz wird als *Prvalue*oder *reinen r-Wert*bezeichnet.
 
 ```cppwinrt
 int& get_by_ref() { ... }
@@ -103,19 +103,19 @@ int main()
 
 ![Ein l-Wert hat Identität. eine Prvalue nicht](images/has-identity2.png)
 
-## <a name="the-complete-picture-of-value-categories"></a>Vollständige Übersicht der Wertekategorien
+## <a name="the-complete-picture-of-value-categories"></a>Vollständiges Bild Wert Kategorien
 Es bleibt nur um die Informationen und Illustrationen oben in einer einzelnen, großen Bild zu kombinieren.
 
-![Vollständige Übersicht der Wertekategorien](images/value-categories.png)
+![Vollständiges Bild Wert Kategorien](images/value-categories.png)
 
 ### <a name="glvalue-i"></a>Glvalue (i)
 Eine Glvalue (generalisierten l-Wert) hat Identität.
 
 ### <a name="lvalue-im"></a>l-Wert (I\ & \!m)
-Ein l-Wert (eine Art von Glvalue) Identität hat, aber nicht verschoben. Hierbei handelt es sich um in der Regel Lese-/ Schreibzugriff-Werte, die Sie um durch einen Verweis oder-Verweis oder Wert übergeben, wenn das Kopieren von günstig ist. Ein l-Wert kann nicht zu einer Referenz r-Wert gebunden werden.
+Ein l-Wert (eine Art von Glvalue) Identität hat, jedoch nicht verschoben. Hierbei handelt es sich um in der Regel Lese-/ Schreibzugriff-Werte, die Sie um Verweis oder-Verweis oder Wert übergeben, wenn das Kopieren von günstig ist. Ein l-Wert kann nicht zu einer Referenz r-Wert gebunden werden.
 
 ### <a name="xvalue-im"></a>xValue (I\ & m)
-Ein Xvalue (eine Art von Glvalue, sondern auch eine Art von r-Wert) Identität hat, und kann auch verschoben werden. Möglicherweise ein sammelte l-Wert, die Sie sich entschieden haben, verschieben, da kopieren aufwendig ist, und Sie werden nicht für den Zugriff darauf später achten. Hier sehen Sie, wie Sie ein l-Wert in einem Xvalue aktivieren können.
+Ein Xvalue (eine Art von Glvalue, aber auch eine Art von r-Wert) über Identität und kann auch verschoben werden. Dies möglicherweise eine sammelte l-Wert, die Sie sich entschieden haben, zu verschieben, da kopieren aufwendig ist, und Sie werden nicht für den Zugriff darauf später achten. Hier sehen Sie, wie Sie ein l-Wert in einer Xvalue aktivieren können.
 
 ```cppwinrt
 struct A { ... };
@@ -123,9 +123,9 @@ A a; // a is an lvalue...
 static_cast<A&&>(a); // ...but this expression is an xvalue.
 ```
 
-Im obigen Codebeispiel noch nicht wir etwas noch verschoben. Wir haben eine Xvalue durch das Umwandeln einer l-Wert zu einer unbenannten r-Wert-Referenz erstellt. Sie können weiterhin anhand des Namens l-Wert gekennzeichnet werden. aber als ein Xvalue ist es jetzt *fähig* verschoben wird. Der Grund dafür, und welche verschieben tatsächlich, aussieht, müssen Sie warten, bis ein anderes Thema. Aber Sie können sich das "X" in "Xvalue" als Bedeutung "Experte nur" Wenn Ihnen dabei hilft, vorstellen. Durch das Umwandeln einer l-Wert in einem Xvalue (eine Art von r-Wert), wird der Wert kann zu einer Referenz r-Wert gebunden wird.
+Im obigen Codebeispiel noch nicht wir etwas noch verschoben. Wir haben eine Xvalue durch das Umwandeln einer l-Wert zu einer unbenannten r-Wert-Referenz erstellt. Sie können weiterhin mit seinem Namen l-Wert bezeichnet werden. aber als eine Xvalue ist es jetzt *kann* verschoben wird. Der Grund dafür, und welche verschieben tatsächlich sieht wie, müssen Sie warten, bis ein anderes Thema. Aber Sie können sich das "X" in "Xvalue" als Bedeutung "Experte nur" Wenn Ihnen dabei hilft, vorstellen. Durch das Umwandeln einer l-Wert in einer Xvalue (eine Art von r-Wert), wird der Wert anschließend kann an einem Verweis r-Wert gebunden wird.
 
-Hier sind zwei weitere Beispiele für Xvalues&mdash;Aufrufen einer Funktion, die einen Verweis unbenannten r-Wert zurückgibt, und den Zugriff auf ein Mitglied einer Xvalue.
+Hier sind zwei weitere Beispiele für Xvalues&mdash;Aufrufen einer Funktion, die eine Referenz unbenannten r-Wert zurückgibt, und den Zugriff auf ein Mitglied einer Xvalue.
 
 ```cppwinrt
 struct A { int m; };
@@ -135,12 +135,12 @@ f().m; // ...and so is this.
 ```
 
 ### <a name="prvalue-im"></a>Prvalue (\!i\ & m)
-Eine Prvalue (reine r-Wert; eine Art von r-Wert) zwar nicht Identität, aber kann verschoben werden. Diese in der Regel gegebebenfalls sind, gibt das Ergebnis des Aufrufs einer Funktion, die nach Wert oder das Ergebnis der Überprüfung alle anderen Ausdrucks, der keine Glvalue,
+Eine Prvalue (reine r-Wert; eine Art von r-Wert) bewegliche ist jedoch nicht Identität haben. Diese in der Regel gegebebenfalls sind, gibt das Ergebnis des Aufrufs einer Funktion, die nach Wert oder das Ergebnis der Überprüfung alle anderen Ausdrucks, der keine Glvalue ist,
 
 ### <a name="rvalue-m"></a>r-Wert (m)
 Ein r-Wert kann verschoben werden. Ein r-Wert- *Verweis* bezieht sich immer um ein r-Wert (ein Wert, deren Inhalt davon ausgegangen wird, die wir nicht beibehalten müssen).
 
-Ist jedoch ein r-Wert-Verweis selbst ein r-Wert? Eine *unbenannten* r-Wert-Referenz (z. B. den angezeigten obigen Codebeispiele Xvalue) ist ein Xvalue, Ja, es ist also ein r-Wert. Bevorzugte ein r-Wert-Funktion Referenzparameter, z. B., eines Konstruktors verschieben gebunden werden. Im Gegensatz dazu (und möglicherweise counter-intuitively), wenn ein Verweis r-Wert einen Namen hat, wird des Ausdrucks mit dem Namen besteht ein l-Wert. Daher es *kann nicht* auf ein Referenzparameter r-Wert gebunden werden. Aber es ist einfach zu vereinfachen dazu&mdash;einfach erneut zu einer unbenannten r-Wert-Referenz (ein Xvalue) umgewandelt.
+Aber ein r-Wert-Verweis selbst ein r-Wert ist? Eine *unbenannten* r-Wert-Referenz (z. B. den angezeigten obigen Codebeispiele Xvalue) ist eine Xvalue, Ja, es ist also ein r-Wert. Es ist ein r-Wert-Funktion Referenzparameter, z. B. der einen gebunden werden. Im Gegensatz dazu (und möglicherweise counter-intuitively), wenn eine Referenz r-Wert einen Namen hat, wird der Ausdruck, der mit diesem Namen besteht ein l-Wert. Daher es *kann nicht* auf ein Referenzparameter r-Wert gebunden werden. Aber es ist einfach, es dazu machen&mdash;einfach erneut in einem Verweis unbenannten r-Wert (eine Xvalue) umgewandelt.
 
 ```cppwinrt
 void foo(A&) { ... }
@@ -154,10 +154,10 @@ A&& get_by_rvalue_ref() { ... } // This unnamed rvalue reference is an xvalue.
 ```
 
 ### <a name="im"></a>\!i\ & \!m
-Die Art der Wert, der keine Identität und ist nicht verschiebbare ist der eine Kombination aus, die wir noch nicht erläutert noch nicht. Aber wir können, ignorieren, da dieser Kategorie nicht hilfreich, sich in der C++-Sprache ist.
+Die Art der Wert, der keine Identität und ist nicht verschiebbare ist, die eine Kombination aus, der wir noch nicht erläutert noch nicht. Aber wir können, da dieser Kategorie ist hilfreich, sich in der C++-Sprache nicht ignorieren.
 
-## <a name="reference-collapsing-rules"></a>Referenz zu reduzieren von Regeln
-Mehrere wie z. B. Verweise in einem Ausdruck (ein Verweis auf l-Wert Verweis auf ein l-Wert oder ein Verweis auf r-Wert Verweis auf ein r-Wert) beenden eine anderen Out.
+## <a name="reference-collapsing-rules"></a>Das Reduzieren der Referenz-Regeln
+Mehrere wie z. B. Verweise in einem Ausdruck (ein l-Wert-Verweis auf eine Referenz l-Wert oder ein r-Wert-Verweis auf eine Referenz r-Wert) beenden eine eine andere Out.
 
 - `A& &` in reduziert `A&`.
 - `A&& &&` in reduziert `A&&`.
@@ -168,25 +168,25 @@ Mehrere im Gegensatz zu Verweise in einem Ausdruck zu einer Referenz l-Wert redu
 - `A&& &` in reduziert `A&`.
 
 ## <a name="forwarding-references"></a>Weiterleitung Verweise
-In diesem letzten Abschnitt gegenübergestellt r-Wert-Referenzen, die bereits, mit dem anderen Konzept eine *Weiterleitung Verweis*erläutert.
+In diesem letzten Abschnitt gegenübergestellt r-Wert-Verweise, die wir bereits, mit dem anderen Konzept eine *Referenz weiterleiten erwähnt wurden*.
 
 ```cppwinrt
 void foo(A&& a) { ... }
 ```
 
-- `A&&` ist ein Verweis r-Wert an, wie wir gesehen haben. Const und volatile gelten nicht für Verweise r-Wert.
-- `foo` akzeptiert nur Rvalues vom Typ **A**.
-- Verweist auf den Grund r-Wert (z. B. `A&&`) vorhanden ist, damit Sie eine Überladung erstellen können, die für den Fall ein temporäres (oder andere r-Wert) übergebenen optimiert ist.
+- `A&&` ist eine Referenz r-Wert, wie wir gesehen haben. Const und volatile gelten nicht für Verweise r-Wert.
+- `foo` akzeptiert nur Rvalues vom Typ **ein**.
+- Der Grund r-Wert verweist (z. B. `A&&`) vorhanden ist, damit Sie eine Überladung erstellen können, die für den Fall, in eine temporäre (oder andere r-Wert) übergeben wird optimiert ist.
 
 ```cppwinrt
 template <typename _Ty> void bar(_Ty&& ty) { ... }
 ```
 
-- `_Ty&&` ist eine *Weiterleitung Referenz*. Je nachdem, was Sie übergeben `bar`, Typ **_Ty** Const/nicht konstanter unabhängig von Volatile/nicht flüchtigen werden konnte.
-- `bar` Alle l-Wert oder r-Wert der Typ **_Ty**akzeptiert.
-- Übergeben ein l-Wert wird die Weiterleitung Referenz zu `_Ty& &&`, die reduziert auf den l-Wert-Verweis `_Ty&`.
-- Übergeben ein r-Wert wird die Weiterleitung Referenz zu `_Ty&& &&`, die reduziert auf den r-Wert-Verweis `_Ty&&`.
-- Der Grund weiterleiten Verweise (z. B. `_Ty&&`) vorhanden ist *nicht* für die Optimierung, jedoch wird, was Sie an Sie übergeben und auf transparent und effizient weiterleiten. Sie werden wahrscheinlich eine Weiterleitung-Referenz auftritt, nur dann, wenn Sie Bibliothekscodes schreiben (oder genauerer Betrachtung)&mdash;z. B. eine Factory-Funktion, die auf Konstruktorargumente weiterleitet.
+- `_Ty&&` ist eine *Referenz weiterleiten*. Je nachdem, was Sie zum übergeben `bar`, Typ **_Ty** Const/nicht konstanter unabhängig von Volatile/nicht flüchtigen werden konnte.
+- `bar` akzeptiert l-Wert oder der Typ **_Ty**r-Wert.
+- Übergeben ein l-Wert bewirkt, dass die Weiterleitung Verweis werden `_Ty& &&`, die an der l-Wert zu reduziert `_Ty&`.
+- Übergeben ein r-Wert bewirkt, dass die Weiterleitung Verweis werden `_Ty&& &&`, die an der r-Wert zu reduziert `_Ty&&`.
+- Der Grund weiterleiten Verweise (z. B. `_Ty&&`) vorhanden sind, ist *nicht* für die Optimierung, jedoch wird, was Sie an Sie übergeben und auf transparent und effizient weiterleiten. Sie werden wahrscheinlich eine Weiterleitung-Referenz auftritt, nur dann, wenn Sie Bibliothekscode schreiben (oder genauerer Betrachtung)&mdash;z. B. eine Factory-Funktion, die auf Konstruktorargumente weiterleitet.
 
 ## <a name="sources"></a>Quellen
 * \[Stroustrup, 2013\] b Stroustrup: die C++-Programmiersprache, die vierte Edition. Addison-Wesley. 2013.

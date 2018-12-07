@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Anzeigen, Werbung, Anzeigenvermittlung
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f4041c21665bd77856b15b7e94e45d613d6ea51
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8734138"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8784664"
 ---
 # <a name="microsoft-ad-mediation-service"></a>Microsoft-Anzeigenvermittlungsdienst
 
@@ -28,7 +28,7 @@ Der Anzeigenvermittlungsdienst wird in eine Vielzahl von Anzeigennetzwerken übe
 
 ## <a name="manage-complexity-of-ad-network-relationships"></a>Verwalten der Komplexität von Anzeigennetzwerkbeziehungen  
 
-Der Anzeigenvermittlungsdienst ist in eine Vielzahl von Anzeigennetzwerken integriert, sodass Sie diese Arbeit nicht übernehmen müssen. Nachdem Sie das Microsoft Advertising-SDK zum Anzeigen von Werbung in Ihrer app verwenden, können Sie Einstellungen für die anzeigenvermittlung ändern Sie [im Partner Center](../publish/in-app-ads.md#mediation-settings) anzeigen aus mehreren Anzeigennetzwerken anzuzeigen. Sie profitieren davon, Anzeigen aus neuen Anzeigennetzwerken abrufen zu können, ohne Änderungen an Ihrem Code vorzunehmen.
+Der Anzeigenvermittlungsdienst ist in eine Vielzahl von Anzeigennetzwerken integriert, sodass Sie diese Arbeit nicht übernehmen müssen. Nachdem Sie das Microsoft Advertising-SDK zum Anzeigen von Werbung in Ihrer app verwenden, können Sie Ihre anzeigenvermittlungseinstellungen ändern Sie [im Partner Center](../publish/in-app-ads.md#mediation-settings) anzeigen aus mehreren Anzeigennetzwerken anzuzeigen. Sie profitieren davon, Anzeigen aus neuen Anzeigennetzwerken abrufen zu können, ohne Änderungen an Ihrem Code vorzunehmen.
 
 Wir verwalten die End-to-End-Beziehung mit den Anzeigennetzwerken in Ihrem Auftrag. Wir kümmern uns um alles von der Anzeigennetzwerkintegration bis zur Bereitstellung von Anzeigen, der Berichterstellung und den Auszahlungen ohne zusätzlichen Aufwand von Ihrer Seite.
 
@@ -47,7 +47,7 @@ Der Anzeigenvermittlungsdienst ist darauf ausgelegt, die höchste Rentabilität 
 
 Neue Anzeigennetzwerke werden automatisch eingefügt und über ein lernendes Budget auf ihre Leistung bewertet. Innerhalb kurzer Zeit finden sie Ihren Platz im Wasserfall. Damit werden die Anzeigennetzwerke wettbewerbsfähiger, und es trägt außerdem dazu bei, dass der Entwickler die Monetarisierung durch Apps optimal nutzt.
 
-Es wird dringend empfohlen, unsere [empfohlenen Vermittlungseinstellungen](../publish/in-app-ads.md#mediation-settings) zu verwenden, um den Umsatz durch Anzeigen in Ihren Apps zu maximieren. Dadurch können unsere Algorithmen,die beste Rentabilität für Ihre App ermöglichen. Sie haben jedoch auch die Freiheit, wählen Ihre eigenen anzeigenvermittlungseinstellungen im Partner Center, um mehr Kontrolle über die anzeigennetzwerke verfügen, die anzeigen und die Reihenfolge in der dies der Fall ist.
+Es wird dringend empfohlen, unsere [empfohlenen Vermittlungseinstellungen](../publish/in-app-ads.md#mediation-settings) zu verwenden, um den Umsatz durch Anzeigen in Ihren Apps zu maximieren. Dadurch können unsere Algorithmen,die beste Rentabilität für Ihre App ermöglichen. Sie haben jedoch auch die Freiheit, wählen Sie Ihre eigenen anzeigenvermittlungseinstellungen im Partner Center haben Sie mehr Kontrolle über die anzeigennetzwerke, die anzeigen und die Reihenfolge, in der dies, dienen.
 
 ## <a name="rich-data-and-signals"></a>Umfangreiche Daten und Signale
 

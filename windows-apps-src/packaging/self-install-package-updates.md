@@ -1,17 +1,17 @@
 ---
 ms.assetid: 414ACC73-2A72-465C-BD15-1B51CB2334F2
 title: Herunterladen und Installieren von Paketupdates aus dem Store
-description: Erfahren Sie, wie Sie Pakete im Partner Center als obligatorisch kennzeichnen und Code in Ihrer app zum Herunterladen und Installieren von paketupdates schreiben.
+description: Erfahren Sie, wie Sie Pakete als obligatorisch im Partner Center kennzeichnen und Code in Ihrer app zum Herunterladen und Installieren von paketupdates schreiben.
 ms.date: 04/04/2018
 ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e73452cdcb02798d4ebd225b48272ab77c40fef9
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8733072"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8786671"
 ---
 # <a name="download-and-install-package-updates-from-the-store"></a>Herunterladen und Installieren von Paketupdates aus dem Store
 
@@ -193,7 +193,7 @@ private async Task InstallUpdate(IReadOnlyList<StorePackageUpdate> storePackageU
 
 ## <a name="mandatory-package-updates"></a>Obligatorische Paketupdates
 
-Wenn Sie eine Paketübermittlung im Partner Center für eine app erstellen, die Windows 10, Version 1607 oder höher, ausgerichtet ist können Sie [das Paket als obligatorisch kennzeichnen](../publish/upload-app-packages.md#mandatory-update) und das Datum und die Uhrzeit aus, es obligatorisch wann. Wenn diese Eigenschaft festgelegt wurde und Ihre App erkennt, dass das Paketupdate verfügbar ist, kann die App ermitteln, ob das Updatepaket obligatorisch ist, und ihr Verhalten ändern, bis das Update installiert ist (z.B. kann Ihre App Features deaktivieren).
+Wenn Sie eine Paket-Übermittlung im Partner Center für eine app erstellen, die Windows 10, Version 1607 oder höher, ausgerichtet ist. Sie können [das Paket als obligatorisch kennzeichnen](../publish/upload-app-packages.md#mandatory-update) und das Datum und die Uhrzeit aus, es obligatorisch wann. Wenn diese Eigenschaft festgelegt wurde und Ihre App erkennt, dass das Paketupdate verfügbar ist, kann die App ermitteln, ob das Updatepaket obligatorisch ist, und ihr Verhalten ändern, bis das Update installiert ist (z.B. kann Ihre App Features deaktivieren).
 
 > [!NOTE]
 > Der obligatorische Status eines Pakets wird von Microsoft nicht erzwungen, und das Betriebssystem verfügt über keine Benutzeroberfläche, die den Benutzer darauf hinweist, dass ein erforderliches App-Update installiert werden muss. Entwickler sollten die Einstellung „Obligatorisch” verwenden, um erforderliche App-Updates in ihrem eigenen Code zu erzwingen.  

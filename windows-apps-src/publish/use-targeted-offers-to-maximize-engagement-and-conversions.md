@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, UWP, gezielte Angebote, Angebote, Benachrichtigungen
 ms.localizationpriority: medium
 ms.openlocfilehash: e894e81b560f071cf42198f09aad0b2b82eae2cd
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8756664"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8794269"
 ---
 # <a name="use-targeted-offers-to-maximize-engagement-and-conversions"></a>Verwenden Sie gezielte Angebote, um Interaktionen und Abschlüsse zu maximieren.
 
@@ -42,7 +42,7 @@ Nachdem Sie diese Schritte abgeschlossen haben, werden Kunden, die Ihre App verw
 4.  Wiederholen Sie die Schritte2 und 3, wenn Sie weitere Angebote erstellen möchten. Sie können den gleichen Angebotstyp mehrmals in derselben App implementieren, solange Sie für jedes Angebot andere Add-Ons auswählen. Darüber hinaus können Sie das gleiche Add-On mehr als einem Angebotstyp zuordnen.
 5.  Klicken Sie auf **Speichern**, wenn Sie mit dem Erstellen der Angebote fertig sind.
 
-Nachdem Sie Ihre Angebote implementiert haben, können Sie auf der Seite **gezielte Angebote** in Partner Center, um die Gesamtanzahl der Konvertierungen für jedes Angebot anzeigen zurückgeben.
+Nachdem Sie Ihre Angebote implementiert haben, können Sie auf der Seite **gezielte Angebote** , im Partner Center zum Anzeigen der Gesamtanzahl der Konvertierungen für jedes Angebot zurückgeben.
 
 Wenn Sie sich entscheiden, kein Angebot zu verwenden (oder wenn Sie es nicht mehr verwenden möchten), klicken Sie auf **Löschen**.
 

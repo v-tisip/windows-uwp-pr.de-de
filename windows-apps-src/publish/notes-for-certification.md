@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Hinweise für Tester
 ms.localizationpriority: medium
 ms.openlocfilehash: d47933ac3482f610fb8fe28b7fb52238ac7ca294
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8745600"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8786568"
 ---
 # <a name="notes-for-certification"></a>Hinweise für Zertifizierung
 
@@ -20,17 +20,17 @@ Beim Einreichen der App haben Sie die Möglichkeit, auf der Seite **Hinweise fü
 
 Achten Sie darauf, folgende Informationen anzugeben (falls sie für Ihre App relevant sind):
 
--   **Benutzernamen und Kennwörter für Testkonten**: Wenn Ihre app Benutzern die Anmeldung bei einem Dienst oder social Media-Konto benötigt, bieten den Benutzernamen und das Kennwort für ein Testkonto. Die Zertifizierungstester verwenden dieses Konto beim Prüfen Ihrer App.
+-   **Benutzernamen und Kennwörter für Testkonten**: Wenn Ihre app bei einem Dienst oder social Media-Konto anmelden erfordert, bieten den Benutzernamen und das Kennwort für ein Testkonto. Die Zertifizierungstester verwenden dieses Konto beim Prüfen Ihrer App.
 
 -   **Schritte zum Zugreifen auf versteckte oder gesperrte Features**: Beschreiben Sie kurz, wie die Tester zugreifen können, alle Funktionen, Kompatibilitätsmodi oder Inhalte, die möglicherweise nicht offensichtlich. Apps, die scheinbar unvollständig sind, werden möglicherweise nicht zertifiziert.
 
--   **Schritte zur Überprüfung der Nutzung von Audiodateien im Hintergrund**: Wenn Ihre app von Audiodateien im Hintergrund ausgeführt werden kann, benötigen Tester u. u. eine Anleitung zur diese Funktion zugreifen, damit sie die ordnungsgemäße Funktionsweise sicherstellen können.
+-   **Schritte zur Überprüfung der Nutzung von Audiodateien im Hintergrund**: Wenn Ihre app von Audiodateien im Hintergrund ausgeführt werden kann, benötigen Tester u. u. eine Anleitung zum Zugriff auf dieses Feature, damit sie die ordnungsgemäße Funktionsweise sicherstellen können.
 
--  **Erwartete Unterschiede im Verhalten je nach Region oder andere Kunden-Einstellungen**: Z. B. Wenn Kunden in verschiedenen Regionen unterschiedliche Inhalte sehen, müssen Sie dies angeben, damit Tester die Unterschiede kennen und diese unterschiedlich bewerten.
+-  **Erwartete Unterschiede im Verhalten je nach Region oder andere Kunden-Einstellungen**: Z. B. Wenn Kunden in verschiedenen Regionen unterschiedliche Inhalte sehen, stellen Sie dies angeben, damit Tester die Unterschiede kennen und diese unterschiedlich bewerten.
 
--   **Informationen zu Änderungen in einem app-Update**: für Updates an zuvor veröffentlichten apps, möchten Sie möglicherweise informieren Sie Tester was sich geändert hat, insbesondere dann, wenn Ihre Pakete identisch sind, und Sie nur Änderungen am app-Eintrag (z. B. Weitere hinzufügen Screenshots, Ihre app Kategorie ändern oder die Beschreibung bearbeiten).
+-   **Informationen zu Änderungen in einem app-Update**: für Updates an zuvor veröffentlichten apps, möchten Sie möglicherweise informieren Sie Tester was sich geändert hat, insbesondere dann, wenn Ihre Pakete identisch sind, und Sie nur Änderungen am app-Eintrag (z. B. mehr hinzufügen Screenshots, Ihre app Kategorie ändern oder die Beschreibung bearbeiten).
 
--   **Das Datum, das Sie die Hinweise eingeben**: Dies ist besonders wichtig, wenn Sie eine Sandbox-Entwicklung im Partner Center verwenden (z. B. ist dies der Fall für alle Spiele, die mit Xbox Live integriert sind), da die Hinweise Sie bei Veröffentlichung einer Sandbox wird bleiben Sie, wenn Sie die Zertifizierung anfordern. Das angegebene Datum hilft Testern, alle temporären Probleme zu bewerten, die nicht mehr gelten.
+-   **Das Datum, das Sie die Hinweise eingeben**: Dies ist besonders wichtig, wenn Sie eine Sandbox-Entwicklung im Partner Center verwenden (z. B. ist dies der Fall für alle Spiele, die mit Xbox Live integriert sind), da die Hinweise Sie bei der Veröffentlichung einer Sandbox wird bleiben Sie, wenn Sie die Zertifizierung anfordern. Das angegebene Datum hilft Testern, alle temporären Probleme zu bewerten, die nicht mehr gelten.
 
 -  **Informationen, die Tester über Ihre Übermittlung wissen sollten**
 

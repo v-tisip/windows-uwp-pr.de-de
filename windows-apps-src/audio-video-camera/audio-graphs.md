@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0211e451c3e700da34d24e39a5045f9e046020a8
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8736430"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8787314"
 ---
 # <a name="audio-graphs"></a>Audiodiagramme
 
@@ -43,7 +43,7 @@ Die Audiodiagramm-APIs von Windows-Runtime
 -   sind wesentlich benutzerfreundlicher als XAudio2.
 -   können von C# verwendet werden und werden auch für C++ unterstützt.
 -   können Audiodateien einschließlich komprimierter Dateiformate direkt verwenden. XAudio2 funktioniert nur auf Audiopuffern und stellt keine Datei-E/A-Funktionen bereit.
--   Die audiopipeline mit geringer Latenz können in Windows 10.
+-   Können die audiopipeline mit geringer Latenz in Windows 10.
 -   unterstützen eine automatische Endpunktumschaltung, wenn standardmäßige Endpunktparameter verwendet werden. Wenn der Benutzer beispielsweise vom Lautsprecher eines Geräts zu einem Headset wechselt, werden die Audiodaten automatisch an den neuen Eingang umgeleitet.
 
 ## <a name="audiograph-class"></a>AudioGraph-Klasse

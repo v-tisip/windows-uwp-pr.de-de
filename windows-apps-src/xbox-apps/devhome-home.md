@@ -8,16 +8,16 @@ keywords: Windows10, UWP
 permalink: en-us/docs/xdk/devhome-home.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 2be7bdfc04fdd09636251000347499e2f2a37ce4
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8732955"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8808365"
 ---
 # <a name="home-page-dev-home"></a>Startseite (Dev Home)
    
   
-**Die Startseite der Dev Home** bietet schnellen Zugriff auf die Aufgaben, die die Entwicklung auf einer routinemäßig ausgeführt werden.   
+**Die Startseite der Dev Home** bietet einen schnellen Zugriff auf die Aufgaben, die die Entwicklung auf einer routinemäßig ausgeführt werden.   
  ![Dev Home-Startseite](images/devhome_home.png)   
   
 **Die Startseite** enthält die folgenden Bereiche:   
@@ -35,14 +35,14 @@ ms.locfileid: "8732955"
 ## <a name="quick-actions"></a>Schnelle Aktionen  
    
   
-Der **schnelle Aktionen** -Bereich enthält die folgenden Schaltflächen, die einen schnellen Zugriff auf häufig ausgeführte Aktionen bereitstellen:   
+Die **schnelle Aktionen** -Bereich enthält die folgenden Schaltflächen, die einen schnellen Zugriff auf häufig ausgeführte Aktionen bereitstellen:   
  
-   *  **Visual Studio-Pin anzeigen:** Zeigt einen Code, mit denen Sie die entwicklungskonsole mit der Installation von Visual Studio auf Ihrem Computer zu koppeln.   
-   *  **Änderung Sandbox:** Ermöglicht Ihnen, welche Sandbox ändern Sie die Konsole in ist.   
-   *  **Neustart Konsole:** Startet die entwicklungskonsole neu.   
+   *  **Visual Studio-Pin anzeigen:** Zeigt einen Code, den Sie verwenden können, um die entwicklungskonsole mit der Installation von Visual Studio auf Ihrem Computer koppeln.   
+   *  **Änderung Sandbox:** Ermöglicht Ihnen, welche Sandbox ändern Sie in die Konsole ist.   
+   *  **Neustart-Verwaltungskonsole:** Startet die entwicklungskonsole neu.   
    *  **Entwicklermodus:** Gibt die Konsole in den einzelhandelsmodus zurück, und startet die Konsole neu.   
-   *  **Starten Home:** Startet die Startseite Einzelhandel.   
-   *  **Ein Spiel aus einem freigegebenen Speicherort im Netzwerk zu registrieren:** Ein Spiel aus einem freigegebenen Speicherort im Netzwerk registriert.   
+   *  **Starten Home:** Startet die Startseite für den Einzelhandel.   
+   *  **Ein Spiel aus einem freigegebenen Speicherort im Netzwerk zu registrieren:** Registriert ein Spiel aus einem freigegebenen Speicherort im Netzwerk.   
 
   
 <a id="ID4EPC"></a>
@@ -54,11 +54,11 @@ Der **schnelle Aktionen** -Bereich enthält die folgenden Schaltflächen, die ei
   
 Der Bereich **Spiele und apps** kann verwendet werden, um die folgenden Aktionen ausführen:   
  
-   *  Zeigen Sie die Liste der Spiele und apps auf die entwicklungskonsole installiert.  
+   *  Zeigen Sie die Liste der Spiele und apps, die auf die entwicklungskonsole installiert.  
    *  Spiele und apps schnell zu starten.  
    *  Anzeigen des PLM-Status von Spielen und apps.  
    *  Ändern Sie PLM-Status in einem Kontextmenü.  
-   *  Registrieren und einen Titel über eine remote Netzwerkfreigabe auszuführen.
+   *  Registrieren und einen Titel von einer Netzwerkfreigabe remote ausführen.
 
   
 <a id="ID4EQD"></a>
@@ -83,7 +83,7 @@ Bereich **Testkonten** kann verwendet werden, um die folgenden Aktionen ausführ
 ## <a name="connect-with-your-browser"></a>Verbinden mit Ihrem browser  
    
   
-Der **Herstellen einer Verbindung mit Ihrem Browser** -Bereich zeigt die IP-Adresse und Port, den Sie verwenden können, um die Konsole über einen Webbrowser zu verwalten.   
+Im **Herstellen einer Verbindung mit Ihrem Browser** wird die IP-Adresse und den Port, die Sie verwenden können, um die Konsole über einen Webbrowser zu verwalten.   
   
 <a id="ID4EPE"></a>
 

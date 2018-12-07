@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, Uwp, verfolgbare Kacheln, Live-Kacheln, verfolgbare Kachelbenachrichtigungen
 ms.localizationpriority: medium
 ms.openlocfilehash: 90a43ad803ca4cfe4a7403117c268344d1192d74
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8755661"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8806556"
 ---
 # <a name="chaseable-tile-notifications"></a>Verfolgbare Kachelbenachrichtigungen
 
@@ -111,7 +111,7 @@ Das LaunchActivatedEventArgs-Objekt hat eine Eigenschaft, die verfolgbare Benach
 
 Das [TileActivatedInfo](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo)-Objekt enthält eine Eigenschaft namens [RecentlyShownNotifications](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo.RecentlyShownNotifications), die eine Liste von Benachrichtigungen enthält, die innerhalb der letzten 15 Minuten auf der Kachel angezeigt wurden. Das erste Element in der Liste stellt die Benachrichtigung dar, die gerade auf de Kachel angezeigt wird, und die folgenden Elemente stellen die Benachrichtigungen dar, die der Benutzer vor dem aktuellen Element gesehen hat. Wenn Ihre Kachel gelöscht wurde, ist diese Liste leer.
 
-Jede ShownTileNotificationhas ein Argumentsproperty. Die Argumentsproperty werden initialisiert mit den Argumentsstring aus Ihrer kachelbenachrichtigungs-Payload oder null, wenn der Payload nicht die Argumentsstring enthält.
+Jede ShownTileNotificationhas eine Argumentsproperty. Die Argumentsproperty werden initialisiert, mit der Argumentsstring aus Ihrer kachelbenachrichtigungs-Payload oder null, wenn der Payload nicht die Argumentsstring enthält.
 
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs args)

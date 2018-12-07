@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Hintergrundaufgabe, für die
 ms.localizationpriority: medium
 ms.openlocfilehash: 13bc8f2558b3e3f15d7329697a41b177777b6e7a
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8746658"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8794525"
 ---
 # <a name="access-sensors-and-devices-from-a-background-task"></a>Zugreifen auf Sensoren und Geräte mittels einer Hintergrundaufgabe
 
@@ -81,9 +81,9 @@ Führen Sie diese grundlegenden Schritte aus, um [**DeviceUseTrigger**](https://
 8.  Windows überwacht die Systembedingungen und die Aufgabenlaufzeit und bricht die Aufgabe ggf. ab, falls die erforderlichen Bedingungen nicht mehr erfüllt sind.
 9.  Wenn die Hintergrundaufgabe den aktuellen Status oder den Abschluss des Vorgangs meldet, empfängt die App diese Ereignisse über die Status- und Abschlussereignisse der registrierten Aufgabe.
 
-**Wichtige**  die [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)verwenden diese wichtigen Punkte berücksichtigen:
+**Wichtige**  diese wichtigen Punkte berücksichtigen, wenn Sie die [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337)verwenden:
 
--   Die Möglichkeit, programmgesteuert Hintergrundaufgaben auslösen, mit denen die [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) wurde erstmals in Windows8.1 und Windows Phone 8.1 eingeführt.
+-   Die Möglichkeit, programmgesteuert Hintergrundaufgaben auslösen, mit denen die [**DeviceUseTrigger**](https://msdn.microsoft.com/library/windows/apps/dn297337) wurde in Windows8.1 und Windows Phone 8.1 eingeführt.
 
 -   Bestimmte Richtlinien werden von Windows erzwungen, um sicherzustellen, dass die Zustimmung des Benutzers vorliegt, wenn Peripheriegeräte auf dem PC aktualisiert werden.
 

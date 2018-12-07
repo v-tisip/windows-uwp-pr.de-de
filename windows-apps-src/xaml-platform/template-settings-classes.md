@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 2b44aaf741c188658c7a639422b0d091f8db6e3e
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8730938"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8800631"
 ---
 # <a name="template-settings-classes"></a>Vorlageneinstellungsklassen
 
@@ -95,7 +95,7 @@ Hier sehen Sie ein weiteres Beispiel für die Verwendung von standardmäßigen X
 
 Da auch diese Vorlage viel XAML-Code enthält, zeigen wir wieder nur einen Auszug. Dies ist nur ein Beispiel für die Zustände und Designanimationen, die dieselben [**ComboBoxTemplateSettings**](https://msdn.microsoft.com/library/windows/apps/br227752)-Eigenschaften verwenden. Für [**ComboBox**](https://msdn.microsoft.com/library/windows/apps/br209348) erzwingt die Verwendung der **ComboBoxTemplateSettings**-Werte durch Bindungen, dass verwandte Animationen in der Vorlage beendet werden und an Positionen beginnen, die auf gemeinsamen Werten basieren. Dadurch ist der Übergang nahtlos.
 
-**Hinweis:**  Wenn Sie **TemplateSettings** Werte als Teil Ihrer Steuerelementvorlage verwenden, achten Sie sind Eigenschaften festzulegen, die den Typ des Werts entsprechen. Andernfalls müssen Sie u.U. einen Wertkonverter für die Bindung erstellen, damit der Zieltyp der Bindung von einem anderen Quelltyp des **TemplateSettings**-Werts konvertiert werden kann. Weitere Informationen finden Sie unter [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903).
+**Hinweis:**  , wenn Sie **TemplateSettings** Werte als Teil Ihrer Steuerelementvorlage verwenden, stellen Sie sicher, dass Sie bei der Festlegen von Eigenschaften, die den Typ des Werts entsprechen. Andernfalls müssen Sie u.U. einen Wertkonverter für die Bindung erstellen, damit der Zieltyp der Bindung von einem anderen Quelltyp des **TemplateSettings**-Werts konvertiert werden kann. Weitere Informationen finden Sie unter [**IValueConverter**](https://msdn.microsoft.com/library/windows/apps/br209903).
 
 ## <a name="related-topics"></a>Verwandte Themen
 
