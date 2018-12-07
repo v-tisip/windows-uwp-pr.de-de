@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: ccc99395dba2f2d1894db81fb48abb59f9a8ba4f
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8750230"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8784535"
 ---
 # <a name="choosing-a-resource"></a><span data-ttu-id="08545-104">Auswählen einer Ressource</span><span class="sxs-lookup"><span data-stu-id="08545-104">Choosing a resource</span></span>
 

@@ -6,12 +6,12 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c7959231596829e20dc8afea654b2d51977abe4
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 287079bf7195ebcadc3543d9369a0567f197b10c
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8736958"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8787916"
 ---
 # <a name="create-edit-and-save-bitmap-images"></a><span data-ttu-id="a3806-104">Erstellen, Bearbeiten und Speichern von Bitmapbildern</span><span class="sxs-lookup"><span data-stu-id="a3806-104">Create, edit, and save bitmap images</span></span>
 
@@ -45,7 +45,7 @@ ms.locfileid: "8736958"
 
 <span data-ttu-id="a3806-120">Rufen Sie zum Speichern eines **SoftwareBitmap**-Objekts in einer Datei eine Instanz von **StorageFile** auf, in der das Bild gespeichert wird.</span><span class="sxs-lookup"><span data-stu-id="a3806-120">To save a **SoftwareBitmap** to a file, get an instance of **StorageFile** to which the image will be saved.</span></span> <span data-ttu-id="a3806-121">In diesem Beispiel wird [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) verwendet, damit Benutzer eine Ausgabedatei auswählen können.</span><span class="sxs-lookup"><span data-stu-id="a3806-121">This example uses a [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) to allow the user to select an output file.</span></span>
 
-[!code-cs[PickOuputFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetPickOuputFile)]
+[!code-cs[PickOutputFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetPickOutputFile)]
 
 <span data-ttu-id="a3806-122">Rufen Sie die [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br227116)-Methode des **StorageFile**-Objekts auf, um einen Datenstrom mit wahlfreiem Zugriff abzurufen, in den das Bild geschrieben wird.</span><span class="sxs-lookup"><span data-stu-id="a3806-122">Call the [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br227116) method of the **StorageFile** object to get a random access stream to which the image will be written.</span></span> <span data-ttu-id="a3806-123">Rufen Sie die statische [**BitmapEncoder.CreateAsync**](https://msdn.microsoft.com/library/windows/apps/br226211)-Methode auf, um eine Instanz der [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206)-Klasse für den angegebenen Datenstrom abzurufen.</span><span class="sxs-lookup"><span data-stu-id="a3806-123">Call the static method [**BitmapEncoder.CreateAsync**](https://msdn.microsoft.com/library/windows/apps/br226211) to get an instance of the [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206) class for the specified stream.</span></span> <span data-ttu-id="a3806-124">Der erste Parameter für **CreateAsync** ist eine GUID, die den zum Codieren des Bilds zu verwendenden Codec darstellt.</span><span class="sxs-lookup"><span data-stu-id="a3806-124">The first parameter to **CreateAsync** is a GUID representing the codec that should be used to encode the image.</span></span> <span data-ttu-id="a3806-125">Die **BitmapEncoder**-Klasse stellt eine Eigenschaft bereit, die die ID für jeden vom Encoder unterstützten Codec enthält, z.B. [**JpegEncoderId**](https://msdn.microsoft.com/library/windows/apps/br226226).</span><span class="sxs-lookup"><span data-stu-id="a3806-125">**BitmapEncoder** class exposes a property containing the ID for each codec supported by the encoder, such as [**JpegEncoderId**](https://msdn.microsoft.com/library/windows/apps/br226226).</span></span>
 

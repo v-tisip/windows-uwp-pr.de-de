@@ -13,11 +13,11 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 6d2a4ae2449fcfcccee792f70bb4d90f7b745047
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8735580"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8781671"
 ---
 # <a name="hyperlinks"></a><span data-ttu-id="52e0a-103">Links</span><span class="sxs-lookup"><span data-stu-id="52e0a-103">Hyperlinks</span></span>
 
