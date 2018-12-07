@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ddb150e570e25af7162a50309b9b0fc30cedf60
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8757527"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8793271"
 ---
 # <a name="streaming-resource-creation-parameters"></a><span data-ttu-id="11078-104">Parameter für das Erstellen von Streamingressourcen</span><span class="sxs-lookup"><span data-stu-id="11078-104">Streaming resource creation parameters</span></span>
 

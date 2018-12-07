@@ -2,16 +2,16 @@
 description: Hier erfahren Sie, wie Sie eine UWP-app entwickeln.
 title: Entwickeln von UWP-Apps
 layout: LandingPage
-keywords: Uwp-app-Entwicklung threading Async Plattform Übersicht Portal zu entwickeln Entwickler
+keywords: Uwp-app-Entwicklung threading Async Plattform Übersicht über die Portal entwickeln Entwickler
 ms.date: 3/29/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 615a5a0762cfa55d7b8be7ce392e02ee1802ded2
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8700118"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8793424"
 ---
 <div> 
 <h1>Entwickeln von UWP-Apps</h1>
@@ -50,7 +50,7 @@ ms.locfileid: "8700118"
                     </div>                
                     <div class="cardText">
                         <h3>Portierungsleitfaden</h3>
-                        <p>Schalten Sie Ihre vorhandenen Windows Forms-, WPF-, Android oder iOS-app zu UWP. </p>
+                        <p>Portieren Sie Ihre vorhandenen Windows Forms-, WPF-, Android oder iOS-app auf UWP. </p>
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@ ms.locfileid: "8700118"
                 <div class="card">
                     <div class="cardText">
                         <h3>Windows UWP-Namespaces</h3>
-                        <p>Die Klassen, Strukturen, Schnittstellen, Methoden, Eigenschaften und Ereignisse, die Windows-Runtime, sortiert nach Namespace bilden.</p>
+                        <p>Klassen, Strukturen, Schnittstellen, Methoden, Eigenschaften und Ereignisse, die die Windows-Runtime, sortiert nach Namespace bilden.</p>
                     </div>
                 </div>
             </div>
@@ -210,7 +210,7 @@ ms.locfileid: "8700118"
                         <p style="display:block"><a href="/windows/uwp/devices-sensors/point-of-service">Point of Service</a></p>
                         <p style="display:block"><a href="/windows/uwp/devices-sensors/sensors">Sensoren</a></p>
                         <p style="display:block"><a href="/windows/uwp/devices-sensors/printing-and-scanning">Printing</a></p>
-                        <p style="display:block"><a href="/windows/uwp/devices-sensors/3d-printing">3-d drucken</a></p>
+                        <p style="display:block"><a href="/windows/uwp/devices-sensors/3d-printing">3-d das Drucken</a></p>
                         <p style="display:block"><a href="/windows/uwp/devices-sensors/nfc">NFC</a></p>
                         <p style="display:block"><a href="/windows/uwp/devices-sensors/get-battery-info">Akku-Informationen</a></p>
                     </div>
@@ -269,7 +269,7 @@ ms.locfileid: "8700118"
                     </div>
                     <div class="cardText">
                         <h3>Beispiele</h3>
-                        <p> Erfahren Sie, wie Sie großartige apps für Windows zu entwerfen, indem Sie mit diesen Beispielen experimentieren. Diese Beispiele zeigen Ihnen, wie Features funktionieren, und Sie Schnelleinstieg in die Entwicklung eigener UWP-apps unterstützen.</p>
+                        <p> Hier erfahren Sie, wie Sie großartige apps für Windows zu erstellen, indem Sie in diesen Beispielen experimentieren. Diese Beispiele zeigen Ihnen, wie Features funktionieren, und Sie Schnelleinstieg in die Entwicklung eigener UWP-apps unterstützen.</p>
                     </div>
                 </div>
             </div>

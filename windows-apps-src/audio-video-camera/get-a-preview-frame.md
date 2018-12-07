@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 7faa018dad336b6e22dd236e57585cade38f8a94
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8748452"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8799616"
 ---
 # <a name="get-a-preview-frame"></a><span data-ttu-id="98e44-104">Abrufen eines Vorschauframes</span><span class="sxs-lookup"><span data-stu-id="98e44-104">Get a preview frame</span></span>
 
