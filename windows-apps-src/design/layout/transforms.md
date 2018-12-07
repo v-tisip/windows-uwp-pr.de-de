@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f978c7b76f01be23badcf38a56023963882af9d2
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8707664"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8801137"
 ---
 # <a name="transforms-overview"></a><span data-ttu-id="90ddc-104">Transformationen – Übersicht</span><span class="sxs-lookup"><span data-stu-id="90ddc-104">Transforms overview</span></span>
 
