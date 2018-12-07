@@ -8,12 +8,12 @@ ms.date: 06/13/2017
 ms.topic: article
 keywords: Windows10, Uwp, notification listener, Usernotificationlistener, Dokumentation, Zugriff auf Benachrichtigungen
 ms.localizationpriority: medium
-ms.openlocfilehash: ad17f4a6f568bcd10d03d7fa07c9dadd24f2f75f
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: de1032eb3d0d364a62beff0a1af8f84240c11d87
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8755276"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8807462"
 ---
 # <a name="notification-listener-access-all-notifications"></a>Notification-Listener: Zugriff auf alle Benachrichtigungen
 
@@ -91,7 +91,7 @@ switch (accessStatus)
 }
 ```
 
-Der Benutzer kann den Zugriff jederzeit über Windows-Einstellungen widerrufen. Daher sollte Ihre App immer den Zugriffsstatus über die Methode [GetAccessStatus](https://docs.microsoft.com/uwp/api/windows.ui.notifications.management.usernotificationlistener.GetAccessStatus) überprüfen, bevor Sie Code ausführen, der den Notfication-Listener verwendet. Wenn der Benutzer den Zugriff widerruft, schlagen die APIs stillschweigend fehl, anstatt eine Ausnahme auszulösen (z. B. gibt die API zum Abrufen aller Benachrichtigungen einfach eine leere Liste zurück).
+Der Benutzer kann den Zugriff jederzeit über Windows-Einstellungen widerrufen. Aus diesem Grund sollten Ihre app immer den Zugriffsstatus über die [GetAccessStatus](https://docs.microsoft.com/uwp/api/windows.ui.notifications.management.usernotificationlistener.GetAccessStatus) -Methode vor der Ausführung von Code, der den Notification-Listener verwendet. Wenn der Benutzer den Zugriff widerruft, schlagen die APIs stillschweigend fehl, anstatt eine Ausnahme auszulösen (z. B. gibt die API zum Abrufen aller Benachrichtigungen einfach eine leere Liste zurück).
 
 
 ## <a name="access-the-users-notifications"></a>Zugriff auf Benachrichtigungen des Benutzers
@@ -279,7 +279,7 @@ foreach (uint id in toBeRemoved)
 > [!IMPORTANT] 
 > Bekanntes Problem: das Ereignis im Vordergrund bewirkt eine Schleife CPU auf die aktuellen Versionen von Windows und zuvor vor, die nicht funktioniert. Verwenden Sie nicht das Ereignis im Vordergrund. Ein bevorstehenden Windows Update werden wir dieses Problem beheben.
 
-Verwenden Sie anstelle das vordergrundereignis für eine Hintergrundaufgabe [einzelprozessmodell](../../../launch-resume/create-and-register-an-inproc-background-task.md) den zuvor aufgeführten Code. Die Hintergrundaufgabe zudem können Sie Ereignis änderungsbenachrichtigungen beide zu erhalten, während Ihre app geschlossen ist oder ausgeführt wird.
+Verwenden Sie anstelle der vordergrundereignis für eine Hintergrundaufgabe [einzelprozessmodell](../../../launch-resume/create-and-register-an-inproc-background-task.md) den zuvor aufgeführten Code. Die Hintergrundaufgabe zudem können Sie ereignisbenachrichtigungen beide zu erhalten, während die app geschlossen ist oder ausgeführt wird.
 
 ```csharp
 // Subscribe to foreground event (DON'T USE THIS)
@@ -292,6 +292,6 @@ private void Listener_NotificationChanged(UserNotificationListener sender, UserN
 ```
 
 
-## <a name="howto-fixdelays-in-the-background-task"></a>So wird's gemacht Fixdelays in der Hintergrundaufgabe
+## <a name="howto-fixdelays-in-the-background-task"></a>So wird's gemacht-Fixdelays in der Hintergrundaufgabe
 
-Wenn Sie Ihre app zu testen, werden Sie möglicherweise feststellen, dass die Hintergrundaufgabe manchmal verzögert und mehrere Minuten lang nicht ausgelöst. Um die Verzögerung zu beheben, an die Benutzer Togo auf den Systemeinstellungen -> System -> Akku -> Akkunutzung nach app, Ihre app in der Liste finden, auszuwählen, und legen Sie sie auf "immer im Hintergrund zugelassen."Danach sollte die Hintergrundaufgabe immer innerhalb einer Sekunde der Benachrichtigung angestoßen werden.
+Wenn Sie Ihre app zu testen, werden Sie möglicherweise feststellen, dass die Hintergrundaufgabe manchmal verzögert ist und mehrere Minuten lang nicht ausgelöst. Um die Verzögerung zu beheben, an die Benutzer Togo auf den Systemeinstellungen -> System -> Akku -> Akkunutzung nach app, Ihre app in der Liste finden, auszuwählen, und legen sie "immer im Hintergrund zugelassen."Danach sollte die Hintergrundaufgabe immer innerhalb einer Sekunde der Benachrichtigung angestoßen werden.
