@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9137f7ef46da1b861976dbac680327febf315dac
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8753733"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8788588"
 ---
 # <a name="hull-shader-hs-stage"></a><span data-ttu-id="3fb4d-104">Hull-Shader-Stufe (HS-Stufe)</span><span class="sxs-lookup"><span data-stu-id="3fb4d-104">Hull Shader (HS) stage</span></span>
 

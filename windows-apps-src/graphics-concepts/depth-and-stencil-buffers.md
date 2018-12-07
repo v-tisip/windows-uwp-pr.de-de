@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0336054b99e5aae6739e22afd29ee344aad3d42c
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8736749"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8784633"
 ---
 # <a name="depth-and-stencil-buffers"></a><span data-ttu-id="8f2f6-104">Tiefen- und Schablonenpuffer</span><span class="sxs-lookup"><span data-stu-id="8f2f6-104">Depth and stencil buffers</span></span>
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 24b2885597599607ca405e858a9f713f5a6af4c7
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8736560"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8787981"
 ---
 # <a name="display-the-camera-preview"></a><span data-ttu-id="46c3e-104">Anzeigen der Kameravorschau</span><span class="sxs-lookup"><span data-stu-id="46c3e-104">Display the camera preview</span></span>
 

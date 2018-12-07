@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 86b8627461251a5d43762facc18c8a414a117fc9
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8733912"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8800601"
 ---
 # <a name="light-properties"></a><span data-ttu-id="22b27-104">Lichteigenschaften</span><span class="sxs-lookup"><span data-stu-id="22b27-104">Light properties</span></span>
 

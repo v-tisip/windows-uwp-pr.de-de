@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 8ed63b3a22329fcf65aa20fc994037aeea2e86be
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8747463"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8793861"
 ---
 # <a name="compute-shader-cs-stage"></a><span data-ttu-id="353e1-104">Computeshaderphase (CS)</span><span class="sxs-lookup"><span data-stu-id="353e1-104">Compute Shader (CS) stage</span></span>
 

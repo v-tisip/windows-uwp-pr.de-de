@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ec88af01e46788ea9f24760af7f9a3b81281ba8d
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8753961"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8794206"
 ---
 # <a name="optimize-your-xaml-markup"></a><span data-ttu-id="e4020-105">Optimieren Ihres XAML-Markups</span><span class="sxs-lookup"><span data-stu-id="e4020-105">Optimize your XAML markup</span></span>
 

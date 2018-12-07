@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: ccffc523dd1196c208c2fe0abdb7297c19892279
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8734168"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8808575"
 ---
 # <a name="windows-hello"></a><span data-ttu-id="c602f-105">Windows Hello</span><span class="sxs-lookup"><span data-stu-id="c602f-105">Windows Hello</span></span>
 

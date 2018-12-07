@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d960235e73ea9172fb966f227af9440923f3553e
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8739712"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8784391"
 ---
 # <a name="file-access-permissions"></a><span data-ttu-id="1f8e4-105">Berechtigungen für den Dateizugriff</span><span class="sxs-lookup"><span data-stu-id="1f8e4-105">File access permissions</span></span>
 

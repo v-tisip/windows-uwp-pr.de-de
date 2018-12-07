@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 9714488473bf4bdc118fd56129ea67e00019dcb1
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8736515"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8788073"
 ---
 # <a name="effects-for-analyzing-camera-frames"></a><span data-ttu-id="c0291-104">Effekte für die Analyse von Kamera-Frames</span><span class="sxs-lookup"><span data-stu-id="c0291-104">Effects for analyzing camera frames</span></span>
 

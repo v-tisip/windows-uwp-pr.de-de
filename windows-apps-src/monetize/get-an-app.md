@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, App
 ms.localizationpriority: medium
 ms.openlocfilehash: ccb5473f85cba08c170af2334b0894a11e27a15a
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8710146"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8787524"
 ---
 # <a name="get-an-app"></a><span data-ttu-id="661e2-104">Abrufen einer App</span><span class="sxs-lookup"><span data-stu-id="661e2-104">Get an app</span></span>
 
