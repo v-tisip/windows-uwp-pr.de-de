@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Audio, Eingabe, Netzwerke
 ms.localizationpriority: medium
 ms.openlocfilehash: c3e2a03b1302fcf5690e653cbf07efad8ef14fe8
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8753633"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8790058"
 ---
 # <a name="uwp-programming"></a><span data-ttu-id="b6b76-104">UWP-Programmierung</span><span class="sxs-lookup"><span data-stu-id="b6b76-104">UWP programming</span></span>
 
