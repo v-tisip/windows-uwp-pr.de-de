@@ -6,12 +6,12 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c7959231596829e20dc8afea654b2d51977abe4
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 287079bf7195ebcadc3543d9369a0567f197b10c
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8736958"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8787916"
 ---
 # <a name="create-edit-and-save-bitmap-images"></a>Erstellen, Bearbeiten und Speichern von Bitmapbildern
 
@@ -45,7 +45,7 @@ Rufen Sie die [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br
 
 Rufen Sie zum Speichern eines **SoftwareBitmap**-Objekts in einer Datei eine Instanz von **StorageFile** auf, in der das Bild gespeichert wird. In diesem Beispiel wird [**FileSavePicker**](https://msdn.microsoft.com/library/windows/apps/br207871) verwendet, damit Benutzer eine Ausgabedatei auswählen können.
 
-[!code-cs[PickOuputFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetPickOuputFile)]
+[!code-cs[PickOutputFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetPickOutputFile)]
 
 Rufen Sie die [**OpenAsync**](https://msdn.microsoft.com/library/windows/apps/br227116)-Methode des **StorageFile**-Objekts auf, um einen Datenstrom mit wahlfreiem Zugriff abzurufen, in den das Bild geschrieben wird. Rufen Sie die statische [**BitmapEncoder.CreateAsync**](https://msdn.microsoft.com/library/windows/apps/br226211)-Methode auf, um eine Instanz der [**BitmapEncoder**](https://msdn.microsoft.com/library/windows/apps/br226206)-Klasse für den angegebenen Datenstrom abzurufen. Der erste Parameter für **CreateAsync** ist eine GUID, die den zum Codieren des Bilds zu verwendenden Codec darstellt. Die **BitmapEncoder**-Klasse stellt eine Eigenschaft bereit, die die ID für jeden vom Encoder unterstützten Codec enthält, z.B. [**JpegEncoderId**](https://msdn.microsoft.com/library/windows/apps/br226226).
 

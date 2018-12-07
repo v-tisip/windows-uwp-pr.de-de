@@ -12,11 +12,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: 639f552a240cf8d28d1a2a0ce530315671128746
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8754916"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8789754"
 ---
 # <a name="xaml-overview"></a>Übersicht über XAML
 
@@ -70,7 +70,7 @@ Der XAML-Sprachnamespace mit dem Präfix „x“ enthält mehrere Programmierkon
 |------|-------------|
 | [x:Key](x-key-attribute.md) | Legt einen eindeutigen benutzerdefinierten Schlüssel für jede Ressource in einem [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794)-XAML-Element fest. Die Schlüsseltoken-Zeichenfolge ist das Argument für die **StaticResource**-Markuperweiterung. Sie verwenden diesen Schlüssel später zum Abrufen der XAML-Ressourcen aus einer anderen XAML-Verwendung in der XAML Ihrer App. |
 | [x:Class](x-class-attribute.md) | Gibt den Code-Namespace und Codeklassennamen für die Klasse an, mit der CodeBehind-Daten für eine XAML-Seite bereitgestellt werden. Damit wird die Klasse benannt, die beim Erstellen Ihrer App erstellt oder zugeordnet wird. Diese Buildvorgänge unterstützen die XAML-Markupkompilierung und kombinieren das Markup und CodeBehind, wenn die App kompiliert wird. Eine solche Klasse ist für die Unterstützung von CodeBehind für eine XAML-Seite erforderlich. [**Window.Content**](https://msdn.microsoft.com/library/windows/apps/br209051) im Windows-Runtime-Aktivierungs-Standardmodell. |
-| [x:Name](x-name-attribute.md) | Gibt einen Laufzeitobjektnamen für die Instanz in Laufzeitcode an, nachdem ein in XAML definiertes Objektelement verarbeitet wird. Das Festlegen von **x:Name** in XAML ist mit dem Deklarieren einer benannten Variable in Code vergleichbar. Wie Sie später erfahren werden, geschieht genau das, wenn XAML als Komponente einer Windows-Runtime-App geladen wird. <br/><div class="alert">**Hinweis:** [**FrameworkElement.Name**](https://msdn.microsoft.com/library/windows/apps/br208735) ist eine ähnliche Eigenschaft im Framework, jedoch nicht von allen Elementen unterstützt wird. Sie verwenden also **x:Name** für die Elementidentifikation, wenn **FrameworkElement.Name** für den Elementtyp nicht unterstützt wird. |
+| [x:Name](x-name-attribute.md) | Gibt einen Laufzeitobjektnamen für die Instanz in Laufzeitcode an, nachdem ein in XAML definiertes Objektelement verarbeitet wird. Das Festlegen von **x:Name** in XAML ist mit dem Deklarieren einer benannten Variable in Code vergleichbar. Wie Sie später erfahren werden, geschieht genau das, wenn XAML als Komponente einer Windows-Runtime-App geladen wird. <br/><div class="alert">**Hinweis:** [**FrameworkElement.Name**](https://msdn.microsoft.com/library/windows/apps/br208735) ist eine ähnliche Eigenschaft im Framework, aber nicht von allen Elementen unterstützt wird. Sie verwenden also **x:Name** für die Elementidentifikation, wenn **FrameworkElement.Name** für den Elementtyp nicht unterstützt wird. |
 | [x:Uid](x-uid-directive.md) | Bezeichnet Elemente, die für einige ihrer Eigenschaftswerte lokalisierte Ressourcen verwenden sollen. Weitere Informationen zur Verwendung von **x:Uid** finden Sie unter [Schnellstart: Übersetzen von UI-Ressourcen](https://msdn.microsoft.com/library/windows/apps/xaml/hh965329). |
 | [Systeminterne XAML-Datentypen](xaml-intrinsic-data-types.md) | Diese Typen können Werte für einfache Werttypen angeben, wenn dies für ein Attribut oder eine Ressource erforderlich ist. Diese systeminternen Typen entsprechen den einfachen Werttypen, die normalerweise als Teil der systeminternen Definitionen der jeweiligen Programmiersprache definiert sind. So benötigen Sie unter Umständen ein Objekt, das den booleschen Wert **true** darstellt, damit dieser in einem visuellen Storyboardzustand von [**ObjectAnimationUsingKeyFrames**](https://msdn.microsoft.com/library/windows/apps/br210320) verwendet werden kann. Für diesen Wert in XAML würden Sie den systeminternen Typ **x:Boolean** folgendermaßen als Objektelement verwenden: <code>&lt;x:Boolean&gt;True&lt;/x:Boolean&gt;</code> | 
 
@@ -198,7 +198,7 @@ namespace App1
 
 Innerhalb eines Projekts wird XAML als XAML-Datei geschrieben, und Sie können mit Ihrer bevorzugten Programmiersprache (C#, Visual Basic, C++/CX) eine CodeBehind-Datei schreiben. Wenn für eine XAML-Datei als Teil einer Buildaktion für das Projekt Markup kompiliert wird, wird die Position der XAML-CodeBehind-Datei für jede XAML-Seite durch Angabe eines Namespaces und einer Klasse als [x:Class](x-class-attribute.md)-Attribut des Stammelements der XAML-Seite bestimmt. Weitere Informationen zur Funktionsweise dieser Mechanismen in XAML und ihrer Beziehung zu den Programmierungs- und Anwendungsmodellen finden Sie unter [Übersicht über Ereignisse und Routingereignisse](events-and-routed-events-overview.md).
 
-**Hinweis:** für c++ / CX gibt es zwei CodeBehind-Dateien sind: eine für einen Header (. xaml.h) und das andere Implementierung (. xaml.cpp). Die Implementierung verweist auf den Header, und aus technischer Sicht ist es der Header, der den Einstiegspunkt für die CodeBehind-Verbindung darstellt.
+**Hinweis:** für c++ / CX gibt es zwei CodeBehind-Dateien sind: eine für einen Header (. xaml.h) und die Implementierung (. xaml.cpp). Die Implementierung verweist auf den Header, und aus technischer Sicht ist es der Header, der den Einstiegspunkt für die CodeBehind-Verbindung darstellt.
 
 ## <a name="resource-dictionaries"></a>Ressourcenwörterbücher
 

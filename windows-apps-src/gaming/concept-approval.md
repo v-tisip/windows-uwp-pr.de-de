@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Konzeptgenehmigung
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e4ecdbb77e1e3df10963a59dff38d4ecf215126
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8730816"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8786178"
 ---
 # <a name="concept-approval"></a>Konzeptgenehmigung
 
@@ -21,7 +21,7 @@ Konzeptgenehmigung ist der Prozess der Übermittlung eines Vorschlags für ein S
 
 Dieser Vorgang ist nur dann erforderlich, wenn Sie ein Spiel auf Xbox durch [ID@Xbox](http://www.xbox.com/Developers/id) oder als verwaltete Partner veröffentlichen. Sie müssen diese Schritte nicht ausführen, wenn Sie dem [Xbox Live Creators-Programm](https://developer.microsoft.com/games/xbox/xboxlive/creator) beitreten und ein Universal Windows Platform (UWP)-Spiel entwickeln, das Sie anschließend selbst an Xbox veröffentlichen. Spiele, die über dieses Programm entwickelt werden, werden jedoch in einem separaten Abschnitt des Store angeboten. Wenn Ihr Spiel zusammen mit großen AAA-Spielen angeboten werden soll oder wenn Sie ein umfassenderes Spiel mit dem Xbox Development Kit (XDK) entwickeln möchten, benötigen Sie eine Konzeptgenehmigung.
 
-Sie benötigen ebenfalls keine Konzeptgenehmigung, wenn Sie ein UWP-Spiel für Windows-Desktopgeräte oder -Mobilgeräte entwickeln(oder wenn Sie eine UWP-App für alle Geräte veröffentlichen, die *kein* Spiel ist). Sie benötigen lediglich ein [Entwicklerkonto](https://go.microsoft.com/fwlink/?LinkId=817223), und Sie können frei konfigurieren und übermitteln Sie Ihre app an den Store über das Partner Center.
+Sie benötigen ebenfalls keine Konzeptgenehmigung, wenn Sie ein UWP-Spiel für Windows-Desktopgeräte oder -Mobilgeräte entwickeln(oder wenn Sie eine UWP-App für alle Geräte veröffentlichen, die *kein* Spiel ist). Sie benötigen lediglich ein [Entwicklerkonto](https://go.microsoft.com/fwlink/?LinkId=817223), und Sie frei konfigurieren und über Partner Center an den Store übermitteln können.
 
 ## <a name="submit-your-concept-for-approval"></a>Übermitteln des Konzepts zur Genehmigung
 

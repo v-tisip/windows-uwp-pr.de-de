@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Swapketten-Skalierung, Einblendungen, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 12aede6c4af61c4b86d1f1090a2ec3d0e5ecce68
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8755246"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8782023"
 ---
 # <a name="swap-chain-scaling-and-overlays"></a>Swapchainskalierung und Überlagerungen
 
@@ -148,7 +148,7 @@ Führen Sie die folgenden Schritte aus, um eine Vordergrund-Swapchain zu erstell
     m_overlaySupportExists = dxgiOutput2->SupportsOverlays() ? true : false;
     ```
     
-    > **Hinweis:**  Wenn der DXGI-Adapter Überlagerungen unterstützt, fahren Sie mit dem nächsten Schritt fort. Wenn das Gerät Überlagerungen nicht unterstützt, ist das Rendern mit mehreren Swapchains nicht effizient. Rendern Sie die UI stattdessen mit reduzierter Auflösung in derselben Swapchain wie die Echtzeitinhalte des Spiels.
+    > **Hinweis:**  Wenn der DXGI-Adapter Überlagerungen unterstützt, mit dem nächsten Schritt fortfahren. Wenn das Gerät Überlagerungen nicht unterstützt, ist das Rendern mit mehreren Swapchains nicht effizient. Rendern Sie die UI stattdessen mit reduzierter Auflösung in derselben Swapchain wie die Echtzeitinhalte des Spiels.
 
      
 
@@ -164,7 +164,7 @@ Führen Sie die folgenden Schritte aus, um eine Vordergrund-Swapchain zu erstell
      foregroundSwapChainDesc.AlphaMode = DXGI_ALPHA_MODE_PREMULTIPLIED; // Foreground swap chain alpha values must be premultiplied.
     ```
 
-    > **Hinweis:**  die [**DXGI\_SWAP\_CHAIN\_FLAG\_FOREGROUND\_LAYER**](https://msdn.microsoft.com/library/windows/desktop/bb173076) noch einmal festlegen, jedes Mal, wenn die Größe die SwapChain geändert wird.
+    > **Hinweis:**  die [**DXGI\_SWAP\_CHAIN\_FLAG\_FOREGROUND\_LAYER**](https://msdn.microsoft.com/library/windows/desktop/bb173076) noch einmal festlegen, jedes Mal, wenn die SwapChain geändert wird.
 
     ```cpp
     HRESULT hr = m_foregroundSwapChain->ResizeBuffers(

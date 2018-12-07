@@ -7,11 +7,11 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: a203ef79fc6ebb45107cd9ac9d79cadf330f7a5d
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8739204"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8784888"
 ---
 # <a name="enable-in-app-product-purchases"></a>Unterstützen von In-App-Produktkäufen
 
@@ -52,7 +52,7 @@ Erstellen Sie für jedes Feature, das über ein In-App-Produkt zur Verfügung st
     * „RainbowThemePack“
 
   > [!NOTE]
-  > Das in-app-angebotstoken, das Sie in Ihrem Code verwenden den [Produkt-ID](../publish/set-your-add-on-product-id.md#product-id) -Wert, die Sie, wenn angeben übereinstimmen müssen Sie [das entsprechende Add-on für Ihre app im Partner Center definieren](../publish/add-on-submissions.md).
+  > Das in-app-angebotstoken, die Sie in Ihrem Code verwenden muss entsprechen den [Produkt-ID](../publish/set-your-add-on-product-id.md#product-id) -Wert, die Sie, wenn angeben Sie [das entsprechende Add-on für Ihre app im Partner Center definieren](../publish/add-on-submissions.md).
 
 2.  **Schreiben Sie den Code für das Feature in einem Bedingungsblock.**
 
@@ -81,7 +81,7 @@ Dies ist ein einfacher Schritt: Ändern Sie im Code Ihrer App alle Verweise auf 
 Navigieren Sie im Partner Center zu Ihrer app und [ein Add-on zu erstellen](../publish/add-on-submissions.md) , die Ihrem in-app-Produktangebot entspricht. Definieren Sie Produkt-ID, Typ, Preis und andere Eigenschaften für das Add-On. Die Konfiguration muss genau mit der Konfiguration in der Datei WindowsStoreProxy.xml übereinstimmen, die Sie beim Testen festlegen.
 
   > [!NOTE]
-  > Das in-app-angebotstoken, das Sie in Ihrem Code verwenden, muss den [Produkt-ID](../publish/set-your-add-on-product-id.md#product-id) -Wert übereinstimmen, die, den Sie für das entsprechende Add-on im Partner Center angeben.
+  > Das in-app-angebotstoken, das Sie in Ihrem Code verwenden, muss die [Produkt-ID](../publish/set-your-add-on-product-id.md#product-id) -Wert übereinstimmen, die, den Sie für das entsprechende Add-on im Partner Center angeben.
 
 ## <a name="remarks"></a>Hinweise
 

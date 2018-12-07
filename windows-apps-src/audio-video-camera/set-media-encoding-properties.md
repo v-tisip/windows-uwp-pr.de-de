@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f81ab1ef635bf4cfb20c289d6998c242f7aa47fc
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8736886"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8787416"
 ---
 # <a name="set-format-resolution-and-frame-rate-for-mediacapture"></a>Festlegen von Format, Auflösung und Bildfrequenz für „MediaCapture“
 
@@ -30,7 +30,7 @@ Der Code in diesem Artikel wurde aus dem [CameraResolution-Beispiel](http://go.m
 
 Durch das Erstellen einer einfachen Hilfsklasse zum Umschließen der Funktionalität der [**IMediaEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701011)-Schnittstelle ist es einfacher, eine Reihe von Codierungseigenschaften auszuwählen, die bestimmte Kriterien erfüllen. Aufgrund des folgenden Verhaltens des Codierungseigenschaftenfeatures ist diese Hilfsklasse besonders hilfreich:
 
-**Warnung**  die [**VideoDeviceController.GetAvailableMediaStreamProperties**](https://msdn.microsoft.com/library/windows/apps/br211994) -Methode akzeptiert ein Mitglied der [**MediaStreamType**](https://msdn.microsoft.com/library/windows/apps/br226640) -Enumeration, z. B. **VideoRecord** oder **Fotos**, und gibt eine Liste der beiden [** ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) oder [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217) -Objekte, die den Stream übermitteln Codierung Einstellungen, wie z. B. die Auflösung des aufgenommenen Fotos oder Videos. Die Ergebnisse des Aufrufs von **GetAvailableMediaStreamProperties** können **ImageEncodingProperties** oder **VideoEncodingProperties** enthalten, unabhängig vom angegebenen **MediaStreamType**-Wert. Aus diesem Grund sollten Sie vor dem Zugriff auf die Eigenschaftswerte immer den Typ jedes zurückgegebenen Werts überprüfen und ihn in den entsprechenden Typ umwandeln.
+**Warnung**  die [**VideoDeviceController.GetAvailableMediaStreamProperties**](https://msdn.microsoft.com/library/windows/apps/br211994) -Methode akzeptiert ein Mitglied der [**MediaStreamType**](https://msdn.microsoft.com/library/windows/apps/br226640) -Enumeration, z. B. **VideoRecord** oder **Fotos**, und gibt eine Liste der beiden [** ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) oder [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217) -Objekte, die den Datenstrom zu vermitteln Codierung Einstellungen, wie z. B. die Auflösung des aufgenommenen Fotos oder Videos. Die Ergebnisse des Aufrufs von **GetAvailableMediaStreamProperties** können **ImageEncodingProperties** oder **VideoEncodingProperties** enthalten, unabhängig vom angegebenen **MediaStreamType**-Wert. Aus diesem Grund sollten Sie vor dem Zugriff auf die Eigenschaftswerte immer den Typ jedes zurückgegebenen Werts überprüfen und ihn in den entsprechenden Typ umwandeln.
 
 Die nachfolgend definierte Hilfsklasse behandelt die Typüberprüfung und -umwandlung für [**ImageEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh700993) oder [**VideoEncodingProperties**](https://msdn.microsoft.com/library/windows/apps/hh701217), damit der App-Code nicht zwischen den beiden Typen unterscheiden muss. Darüber hinaus macht die Hilfsklasse Eigenschaften für das Seitenverhältnis der Eigenschaften, die Framerate (nur für Videocodierungseigenschaften) und einen Anzeigenamen verfügbar, der das Anzeigen der Codierungseigenschaften auf der App-UI erleichtert.
 

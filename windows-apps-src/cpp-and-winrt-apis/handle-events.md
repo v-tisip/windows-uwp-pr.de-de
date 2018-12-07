@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projiziert, projizierung, varbeiten, ereignis, delegat
 ms.localizationpriority: medium
 ms.openlocfilehash: f30ff39b0dcb54cd50808381bcb30e58e7dfe07d
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8744156"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8787099"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>Verarbeiten von Ereignissen über Delegaten in C++/WinRT
 
@@ -49,7 +49,7 @@ MainPage::MainPage()
 ```
 
 > [!IMPORTANT]
-> Wenn der Delegat registriert, übergibt im obigen Codebeispiel wird einen unformatierte *diesem* Zeiger (zeigen Sie auf das aktuelle Objekt). Um zu erfahren, wie Sie eine starke oder schwache Referenz auf das aktuelle Objekt herzustellen, finden Sie **bei Verwendung von eine Member-Funktion als Delegaten** untergeordnete im Abschnitt Abschnitt [problemlos den Zugriff auf die *dieser* Zeiger mit einem Delegaten für die Ereignisbehandlung](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
+> Wenn der Delegat registriert, übergibt im obigen Codebeispiel einen unformatierte *diesem* Zeiger (zeigen Sie auf das aktuelle Objekt). Um zu erfahren, wie Sie eine starke oder schwache Referenz auf das aktuelle Objekt herstellen, finden Sie **bei Verwendung von eine Member-Funktion als Delegaten** untergeordnete im Abschnitt Abschnitt [problemlos den Zugriff auf die *dieser* Zeiger mit einem Delegaten Ereignisbehandlung](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
 
 Es gibt andere Möglichkeiten, ein **RoutedEventHandler** zu erstellen. Unten finden Sie den Syntaxblock aus dem Dokumentationsthema für [**RoutedEventHandler**](/uwp/api/windows.ui.xaml.routedeventhandler) (wählen Sie *C++/WinRT* im Dropdown-Menü **Sprache** auf der Seite aus). Beachten Sie die verschiedenen Konstruktoren: Einer nimmt ein Lambda entgegen (ein anderer eine freie Funktion) und ein weiterer (der oben verwendete) nimmt ein Objekt und eine Pointer-to-Member-Funktion entgegen.
 
@@ -124,7 +124,7 @@ private:
 
 Anstatt eines starken Verweises wie im obigen Beispiel können Sie einen schwachen Verweis auf die Schaltfläche Speichern (siehe [starke und schwache Referenzen in C++ / WinRT](weak-references.md)).
 
-Wenn Sie einen deleganten registrieren, können Sie auch angeben **WinRT:: auto_revoke** (den Typ [**WinRT:: auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t)Wert) um einen Event-Revoker (vom Typ [**event_revoker**](/uwp/cpp-ref-for-winrt/event-revoker)) anzufordern. Der Event-Revoker enthält einen schwachen Verweis auf die Ereignisquelle (das Objekt, das das Ereignis auslöst) für Sie. Sie können manuell widerrufen, indem Sie die Mitgliedsfunktion **event_revoker::revoke** aufrufen; der Event-Revoker ruft diese Funktion aber selbst automatisch auf, wenn sie ihren Gültigkeitsbereich verlässt. Die **revoke**-Funktion überprüft, ob die Ereignisquelle noch vorhanden ist, und widerruft in diesem Fall den Delegaten. In diesem Beispiel gibt es keine Notwendigkeit, die Ereignisquelle zu speichern, und daher auch keinen Bedarf für einen Destruktor.
+Auch wenn Sie einen deleganten registrieren, können Sie angeben **WinRT:: auto_revoke** (den Typ [**WinRT:: auto_revoke_t**](/uwp/cpp-ref-for-winrt/auto-revoke-t)Wert) um einen Event-Revoker (vom Typ [**event_revoker**](/uwp/cpp-ref-for-winrt/event-revoker)) anzufordern. Der Event-Revoker enthält einen schwachen Verweis auf die Ereignisquelle (das Objekt, das das Ereignis auslöst) für Sie. Sie können manuell widerrufen, indem Sie die Mitgliedsfunktion **event_revoker::revoke** aufrufen; der Event-Revoker ruft diese Funktion aber selbst automatisch auf, wenn sie ihren Gültigkeitsbereich verlässt. Die **revoke**-Funktion überprüft, ob die Ereignisquelle noch vorhanden ist, und widerruft in diesem Fall den Delegaten. In diesem Beispiel gibt es keine Notwendigkeit, die Ereignisquelle zu speichern, und daher auch keinen Bedarf für einen Destruktor.
 
 ```cppwinrt
 struct Example : ExampleT<Example>
@@ -157,7 +157,7 @@ Button::Click_revoker Click(winrt::auto_revoke_t,
 ```
 
 > [!NOTE]
-> Im obigen Codebeispiel `Button::Click_revoker` ist ein Typalias für `winrt::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase>`. Ein ähnliches Muster gilt für alle C++/WinRT-Ereignisse. Jedes Windows-Runtime-Ereignis verfügt über eine Überladung der Revoke-Funktion, die einen Event-Revoker zurückgibt, und Revoker Typ ist ein Mitglied der Ereignisquelle. Um ein weiteres Beispiel zu nutzen, hat das [**corewindow:: SizeChanged**](/uwp/api/windows.ui.core.corewindow.sizechanged) -Ereignis also eine Überladung der Registrierung-Funktion, die einen Wert vom Typ **CoreWindow::SizeChanged_revoker**zurückgibt.
+> Im obigen Codebeispiel `Button::Click_revoker` ist ein Typalias für `winrt::event_revoker<winrt::Windows::UI::Xaml::Controls::Primitives::IButtonBase>`. Ein ähnliches Muster gilt für alle C++/WinRT-Ereignisse. Jedes Windows-Runtime-Ereignis verfügt über eine Überladung der Revoke-Funktion, die einen Event-Revoker zurückgibt und Revoker ist ein Mitglied der Ereignisquelle. Um ein weiteres Beispiel zu nutzen, hat das [**corewindow:: SizeChanged**](/uwp/api/windows.ui.core.corewindow.sizechanged) -Ereignis also eine Überladung der Registrierung-Funktion, die einen Wert vom Typ **CoreWindow::SizeChanged_revoker**zurückgibt.
 
 
 In einem Seitennavigationsszenario kann es sinnvoll sein, Handler zu widerrufen. Wenn Sie wiederholt auf eine Seite navigieren und diese dann wieder verlassen, können Sie alle Handler widerrufen, wenn Sie von der Seite weg navigieren. Wenn Sie dieselbe Seiteninstanz wiederverwenden, dann überprüfen Sie alternativ den Wert Ihres Tokens und registrieren Sie sich nur, wenn er noch nicht festgelegt ist (`if (!m_token){ ... }`). Eine dritte Möglichkeit besteht darin, einen Event-Revoker als Datenelement der Seite zu speichern. Und eine vierte Möglichkeit (wird später in diesem Thema beschrieben) besteht darin, eine starke oder schwache Referenz auf das *this*-Objekt in Ihrer Lambda-Funktion zu verwenden.
@@ -200,7 +200,7 @@ void ProcessFeedAsync()
 Wie aus dem obigen „coroutine“-Kommentar hervorgeht, werden Sie es wahrscheinlich natürlicher finden, Coroutinen zu verwenden, anstatt einen Delegaten für die Completed-Ereignisse asynchroner Aktionen und Vorgänge zu verwenden. Details und Codebeispiele finden Sie unter [Parallelität und asynchrone Vorgänge mit C++/WinRT](concurrency.md).
 
 > [!NOTE]
-> Es ist nicht korrekt auf mehr als ein *Abschlusshandler* für eine asynchrone Aktion oder Operation implementieren. Sie können entweder einen einzelnen Delegaten für das abgeschlossene Ereignis haben, oder Sie können `co_await` es. Wenn Sie beide haben, wird die zweite fehl.
+> Es ist nicht korrekt mehrere *Abschlusshandler* für eine asynchrone Aktionen oder Vorgang zu implementieren. Sie können entweder einen einzelnen Delegaten für das Ereignis abgeschlossen haben, oder Sie können `co_await` es. Wenn Sie beide haben, wird die zweite fehl.
 
 Wenn Sie an Delegaten anstelle einer Coroutine, können Sie für eine einfachere Syntax ablehnen.
 
@@ -228,9 +228,9 @@ winrt::hstring f(ListView listview)
 }
 ```
 
-## <a name="safely-accessing-the-this-pointer-with-an-event-handling-delegate"></a>Problemlos den Zugriff auf die *dieser* Zeiger mit einem Delegaten für die Ereignisbehandlung
+## <a name="safely-accessing-the-this-pointer-with-an-event-handling-delegate"></a>Problemlos den Zugriff auf die *dieser* Zeiger mit einem Delegaten Ereignisbehandlung
 
-Wenn Sie ein Ereignis mit Mitgliedsfunktion eines Objekts verarbeiten oder von innerhalb einer Lambda-Funktion innerhalb eines Objekts Member-Funktion, Sie über die relative Lebensdauer des Ereignisempfängers (das Objekt, das das Ereignis behandelt) und die Ereignisquelle (das Objekt vorstellen müssen das Ereignis auslöst). Weitere Informationen und Codebeispiele finden Sie unter [starke und schwache Referenzen in C++ / WinRT](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
+Wenn Sie ein Ereignis mit Mitgliedsfunktion eines Objekts verarbeiten oder von innerhalb einer Lambda-Funktion innerhalb der Mitgliedsfunktion eines Objekts, Sie über die relative Lebensdauer des Ereignisempfängers (das Objekt, das das Ereignis) und die Ereignisquelle (das Objekt vorstellen müssen. das Ereignis auslöst). Weitere Informationen und Codebeispiele finden Sie unter [starke und schwache Referenzen in C++ / WinRT](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate).
 
 ## <a name="important-apis"></a>Wichtige APIs
 * [WinRT:: auto_revoke_t markerstruktur](/uwp/cpp-ref-for-winrt/auto-revoke-t)

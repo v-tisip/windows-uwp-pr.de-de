@@ -13,15 +13,15 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 520f4bdd72c51cd1508c9e655107ae909f6e4243
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8754060"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8786864"
 ---
 ## <a name="dialog-controls"></a>Dialogfeld-Steuerelemente
 
-Dialogfelder sind modale benutzeroberflächenüberlagerungen, die kontextbezogene app-Informationen enthalten. Sie blockieren Interaktionen mit dem app-Fenster, bis Sie explizit geschlossen werden. Sie verlangen häufig eine Aktion vom Benutzer.
+Dialogfelder sind modale benutzeroberflächenüberlagerungen, die kontextbezogene app-Informationen enthalten. Blockieren sie Interaktionen mit dem app-Fenster, bis Sie explizit geschlossen werden. Sie verlangen häufig eine Aktion vom Benutzer.
 
 ![Beispiel für ein Dialogfeld](../images/dialogs/dialog_RS2_delete_file.png)
 
@@ -32,7 +32,7 @@ Dialogfelder sind modale benutzeroberflächenüberlagerungen, die kontextbezogen
 
 Verwenden Sie Dialogfelder und Flyouts, um Benutzern wichtige Informationen mitzuteilen oder deren Bestätigung bzw. zusätzliche Informationen anzufordern, bevor eine Aktion abgeschlossen werden kann.
 
-Empfehlungen zur Verwendung von einem Dialogfeld im Vergleich zu, wenn ein Flyout (ein ähnliches Steuerelement) verwenden, finden Sie unter [Dialogfelder und Flyouts](index.md). 
+Empfehlungen zur Verwendung von einem Dialogfeld im Vergleich zu, wenn ein Flyout (ähnlich wie Steuerelement) verwenden, finden Sie unter [Dialogfelder und Flyouts](index.md). 
 
 ## <a name="examples"></a>Beispiele
 
@@ -118,7 +118,7 @@ private async void DisplayDeleteFileDialog()
 }
 ```
 
-## <a name="provide-a-safe-action"></a>Bieten Sie eine sichere Aktion
+## <a name="provide-a-safe-action"></a>Geben Sie eine sichere Aktion
 Da Dialogfelder Benutzerinteraktion blockieren, und Schaltflächen für die Benutzer das primäre Mittel sind, ein Dialogfeld zu schließen, sollten Sie sicherstellen, dass Ihr Dialogfeld mindestens eine „sichere“, nicht-destruktive Schaltfläche wie z.B. „Schließen“ oder „Alles klar!“ enthält. **Alle Dialogfelder sollten mindestens eine sichere Aktionsschaltfläche enthalten, um das Dialogfeld zu schließen.** Dadurch wird sichergestellt, dass der Benutzer das Dialogfeld zuverlässig schließen kann, ohne eine Aktion auszuführen.<br>![Dialogfeld mit einer Schaltfläche](../images/dialogs/dialog_RS2_one_button.png)
 
 ```csharp

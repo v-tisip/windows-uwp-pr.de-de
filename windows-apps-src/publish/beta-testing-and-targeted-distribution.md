@@ -7,17 +7,17 @@ ms.topic: article
 keywords: Windows10, UWP, Betatests, eingeschränkter Vertrieb, Beta, Betas, testen, Tester
 ms.localizationpriority: medium
 ms.openlocfilehash: 1560da53ebcc2b24bc9bc13034431c3a2208dfe5
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8747357"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8787152"
 ---
 # <a name="beta-testing-and-targeted-distribution"></a>Betatests und zielgerichtete Verteilung
 
 Wie sorgfältig Sie Ihre App auch testen: Es geht nichts über einen Praxistest, bei dem die App von anderen Benutzern verwendet wird. Die Betatester finden möglicherweise Probleme, die Sie übersehen haben, wie z. B. Rechtschreibfehler, unübersichtliche Benutzerführungen der App und sogar Fehler, die dazu führen können, dass die App abstürzt. Sie haben dann die Möglichkeit, diese Probleme zu beheben, bevor Sie die Übermittlung für die Allgemeinheit verfügbar machen. So erhalten Sie ein hochwertigeres Endprodukt. 
 
-Partner Center bietet Ihnen mehrere Optionen Tester Ihre app testen, bevor Sie sie für die Öffentlichkeit anbieten.
+Partner Center bietet Ihnen mehrere Optionen, um die Tester Ihre app testen, bevor Sie sie für die Öffentlichkeit anbieten.
 
 Unabhängig von der gewählten Methode, müssen Sie einige Dinge in puncto Betatests für Ihrer App berücksichtigen.
 
@@ -49,7 +49,7 @@ Weitere Informationen finden Sie unter [Flight-Pakete](package-flights.md).
 
 ## <a name="hiding-the-app-in-the-store-and-using-promotional-codes"></a>Ausblenden der App im Store und Verwenden von Werbecodes
 
-Diese Option bietet eine weitere Möglichkeit, um die Verteilung einer App nur eine bestimmte Gruppe von Testern verteilen möchten, während nicht ermitteln kann Ihre app im Store, dass andere Personen beschränken (oder ohne einen werbecode Erwerb). Allerdings kann im Gegensatz zu den privaten Zielgruppenoptionen möglicherweise jeder Benutzer den App-Eintrag sehen, wenn er über den direkten Link verfügt. Wenn die Vertraulichkeit für Ihre Übermittlung entscheidend ist, empfehlen wir stattdessen, diese nur an eine private Zielgruppe zu veröffentlichen.
+Diese Option bietet eine weitere Möglichkeit, um die Verteilung einer App eine bestimmte Gruppe von Testern verteilen möchten, und verhindert, dass andere Personen Ihre app im Store ermitteln beschränken (oder ohne einen werbecode Erwerb). Allerdings kann im Gegensatz zu den privaten Zielgruppenoptionen möglicherweise jeder Benutzer den App-Eintrag sehen, wenn er über den direkten Link verfügt. Wenn die Vertraulichkeit für Ihre Übermittlung entscheidend ist, empfehlen wir stattdessen, diese nur an eine private Zielgruppe zu veröffentlichen.
 
 Das Ausblenden der App und das Verwenden von Werbecodes kann für Apps für jede Betriebssystemversion verwendet werden, Ihre Tester können die App allerdings nur dann abrufen, wenn sie Windows10 ausführen.
 
@@ -77,4 +77,4 @@ So verwenden Sie diese Option:
 > [!IMPORTANT]
 > Diese Option steht nicht für neue Übermittlungen zur Verfügung. Wenn Sie diese Option vorher für eine App für Windows Phone8.1 oder früher ausgewählt haben, können Sie diese auch weiterhin für diese App verwenden. Sie können die Liste der Tester (bis zu 10.000) ändern, indem Sie eine neue Übermittlung erstellen. 
 
-Mit dieser Option können Personen mit der angegebenen E-Mail-Adresse Ihre App über einen direkten Link zum Eintrag herunterladen (auf einem Gerät mit Windows Phone8.1 oder früher). Anderen Kunden können die App nicht herunterladen, auch wenn sie über den Link verfügen, und sie können die App weder durch Suchen noch Browsen im Store finden. Damit Tester die App herunterladen können, müssen Sie ihnen den Link senden (die **URL** auf der [Seite App-Identität](view-app-identity-details.md)), und sie müssen mit einem Microsoft-Konto angemeldet sein, das mit einer E-Mail-Adresse verbunden ist, die Sie angegeben haben. Sie können auch die app für Tester auf Windows 10-Geräten durch [Generieren von werbecodes](generate-promotional-codes.md)zur Verfügung; Jeder Benutzer mit einem der Angebotscodes Ihrer app können sie auf einem Gerät mit Windows 10 herunterladen, auch wenn Sie ihre e-Mail-Adresse hier nicht eingegeben haben.
+Mit dieser Option können Personen mit der angegebenen E-Mail-Adresse Ihre App über einen direkten Link zum Eintrag herunterladen (auf einem Gerät mit Windows Phone8.1 oder früher). Anderen Kunden können die App nicht herunterladen, auch wenn sie über den Link verfügen, und sie können die App weder durch Suchen noch Browsen im Store finden. Damit Tester die App herunterladen können, müssen Sie ihnen den Link senden (die **URL** auf der [Seite App-Identität](view-app-identity-details.md)), und sie müssen mit einem Microsoft-Konto angemeldet sein, das mit einer E-Mail-Adresse verbunden ist, die Sie angegeben haben. Sie können auch die app für Tester auf Windows 10-Geräten durch [Generieren von werbecodes](generate-promotional-codes.md)zur Verfügung; Jeder Benutzer mit einem werbecode Ihrer app können sie auf einem Gerät mit Windows 10 herunterladen, auch wenn Sie ihre e-Mail-Adresse hier nicht eingegeben haben.

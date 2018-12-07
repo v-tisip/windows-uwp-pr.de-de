@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Märkte, Länder, Regionen
 ms.localizationpriority: medium
 ms.openlocfilehash: 980dc41303a2689c0f86415beb6ba9adb44fe39c
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8712451"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8789832"
 ---
 # <a name="define-market-selection"></a>Festlegen der Marktauswahl
 
@@ -39,7 +39,7 @@ Beachten Sie, dass Ihre Auswahl hier nur für neue Käufe gilt. Wenn ein Benutze
 Bestimmte Apps werden u.U. aufgrund von örtlich geltenden Gesetzen und Beschränkungen oder anderen Faktoren in bestimmten Märkten nicht angeboten, obwohl Sie alle Märkte ausgewählt haben. Außerdem haben einige Märkte möglicherweise spezifische Anforderungen für Altersfreigaben. Wenn Ihre App diese Anforderungen nicht erfüllt, können wir sie auf diesem Markt nicht anbieten. Weitere Informationen finden Sie unter [Altersfreigaben](age-ratings.md).
 
 > [!NOTE]
-> Zuvor veröffentlichten Apps, die Pakete für Windows8 oder Windows8.1 enthalten, werden einige einzelnen Märkte zusammen als "Restliche Welt" zusammengefasst behandelt. Weitere Informationen finden Sie unter [Märkte "Restliche Welt" für Windows 8.x](#rest-of-world-markets-for-windows-8x).
+> Zuvor veröffentlichten apps, die Pakete für Windows8 oder Windows8.1 enthalten, werden einige einzelnen Märkte zusammen als "Restliche Welt" zusammengefasst behandelt. Weitere Informationen finden Sie unter [Märkte "Restliche Welt" für Windows 8.x](#rest-of-world-markets-for-windows-8x).
 
 Außerdem sehen Sie ein Kontrollkästchen, mit dem Sie angeben können, ob Ihre App in Märkten angeboten werden soll, die der Store in Zukunft vielleicht hinzufügt. Wenn Sie diese Option aktiviert lassen und wir später neue Märkte hinzufügen, werden der Basispreis und das Datum der allgemeinen Verfügbarkeit für die Übermittlung für Ihre App in diesen Märkten verwendet. Wenn Sie dies nicht möchten, können Sie dieses Kontrollkästchen deaktivieren. In diesem Fall werden wir Ihre App nicht in zukünftigen Märkten aufführen (Sie können sie jedoch später noch jederzeit hinzufügen).
  
@@ -478,7 +478,7 @@ Die Regulierung zur Markterweiterung wird ab dem Datum des Inkrafttretens auf al
 
 Enthält die zuvor veröffentlichten app-Pakete für Windows 8.x, es ist wichtig zu beachten, dass eine Reihe von Märkten behandelt werden, als eine einzelne "restliche Welt" Märkte für Kunden im Store unter Windows 8.x, obwohl sie als einzelne Märkte angezeigt werden im Partner Center.
 
-Wenn Sie den Markt beim Übermitteln der app Standardeinstellung, müssen nicht relevant, und Ihre app wird für alle möglichen Märkte verfügbar sein. Jedoch, wenn Sie bestimmte Märkte ausschließen möchten, Bedenken Sie, die Ausschließen von auch nur eine dieser Märkte "Restliche Welt" bedeutet, dass Ihre app in *jeder* der Märkte "Restliche Welt" für Kunden mit Windows8 oder Windows8.1 verfügbaren nicht.
+Wenn Sie den Markt beim Übermitteln der app Standardeinstellung, müssen Sie nicht relevant, und Ihre app wird für alle möglichen Märkte verfügbar sein. Jedoch, wenn Sie bestimmte Märkte ausschließen möchten, Bedenken Sie, die Ausschließen von eines dieser Märkte "Restliche Welt" bedeutet, dass Ihre app in *jeder* der Märkte "Restliche Welt" für Kunden mit Windows8 oder Windows8.1 verfügbar nicht.
 
 Folgende Märkte sind in "Restliche Welt" für Windows 8.x enthalten:
 

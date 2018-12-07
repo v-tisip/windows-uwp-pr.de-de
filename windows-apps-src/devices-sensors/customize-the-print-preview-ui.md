@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, das Drucken
 ms.localizationpriority: medium
 ms.openlocfilehash: 16fca2fc98450375ec2dcf7a0d10775b2bba1bf2
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8485276"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8794548"
 ---
 # <a name="customize-the-print-preview-ui"></a>Anpassen der Benutzeroberfläche für die Druckvorschau
 
@@ -48,7 +48,7 @@ Diese Optionen werden in der [**StandardPrintTaskOptions**](https://msdn.microso
 
 Die Änderungen, die Sie auf diese Weise vornehmen, betreffen allerdings nur die Druckvorschau-Benutzeroberfläche. Der Benutzer kann stets auf alle vom Drucker unterstützten Optionen zugreifen, indem er in der Druckvorschau-Benutzeroberfläche auf **Weitere Einstellungen** tippt.
 
-**Hinweis:** Ihrer app alle Druckoptionen angezeigt werden kann zwar angeben, werden nur solche, die vom ausgewählten Drucker unterstützt werden in der Druckvorschau-Benutzeroberfläche angezeigt. In der Druckbenutzeroberfläche werden keine Optionen angezeigt, die der ausgewählte Drucker nicht unterstützt.
+**Hinweis:** Ihrer app alle Druckoptionen angezeigt werden kann zwar angeben, werden nur solche, die vom ausgewählten Drucker unterstützten in der Druckvorschau-Benutzeroberfläche angezeigt. In der Druckbenutzeroberfläche werden keine Optionen angezeigt, die der ausgewählte Drucker nicht unterstützt.
 
  
 
@@ -96,7 +96,7 @@ protected override void PrintTaskRequested(PrintManager sender, PrintTaskRequest
 }
 ```
 
-**Wichtige**aufrufen ( [**displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)) entfernt alle Druckoptionen aus der Druckvorschau-Benutzeroberfläche, einschließlich des Links **Weitere Einstellungen** . Fügen Sie alle Optionen an, die in der Druckvorschau-Benutzeroberfläche angezeigt werden sollen.
+**Wichtige**Aufrufen [**displayedOptions.clear**](https://msdn.microsoft.com/library/windows/apps/BR226453)() entfernt werden alle Druckoptionen aus der Druckvorschau-Benutzeroberfläche, einschließlich des Links **Weitere Einstellungen** . Fügen Sie alle Optionen an, die in der Druckvorschau-Benutzeroberfläche angezeigt werden sollen.
 
 ### <a name="specify-default-options"></a>Festlegen der Standardoptionen
 

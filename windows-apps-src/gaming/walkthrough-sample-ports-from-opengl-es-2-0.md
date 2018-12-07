@@ -3,12 +3,14 @@ title: Exemplarische Vorgehensweise - Beispiele für die Portierung von OpenGLES
 description: In dieser Themengruppe werden einige unterschiedlich komplexe Portierungsszenarien für die OpenGLES2.0-Grafikpipeline erläutert.
 ms.assetid: 07390da1-83f3-7fbb-5696-d1da3a2bc870
 ms.localizationpriority: medium
-ms.openlocfilehash: 7aefd725c1a73bac3212bf80036462c9bcb7dcc9
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.topic: article
+ms.date: 02/08/2017
+ms.openlocfilehash: 6f9b424428753529e753c9fd15bbab4321fa05b4
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8486565"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8785938"
 ---
 # <a name="walkthrough-sample-ports-from-opengl-es-20"></a>Exemplarische Vorgehensweise: Beispiele für die Portierung von OpenGL ES 2.0
 

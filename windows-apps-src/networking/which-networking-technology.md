@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: e418e5a159df44d6ff6e15e4faa972164447f5ee
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8690923"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8786704"
 ---
 # <a name="which-networking-technology"></a>Welche Netzwerktechnologie?
 
@@ -69,7 +69,7 @@ Verwenden Sie [HttpClient](httpclient.md) (und den Rest der [**Windows.Web.Http*
 
 Verwenden Sie die [Hintergrundübertragungs-API](background-transfers.md), wenn Sie zuverlässig Dateien über das Netzwerk übertragen möchten. Die Hintergrundübertragungs-API bietet erweiterte Upload- und Downloadfeatures, die bei angehaltener App im Hintergrund ausgeführt werden und auch nach Beendigung der App aktiv bleiben. Die API überwacht den Netzwerkstatus und kann Übertragungen automatisch anhalten und fortsetzen, wenn die Verbindung unterbrochen wird. Übertragungen sind außerdem daten- und akkuabhängig – die Downloadaktivität wird also basierend auf dem aktuellen Verbindungs- und Geräteakkustatus angepasst. Diese Funktionen sind wichtig, wenn Ihre App auf mobilen oder akkubetriebenen Geräten ausgeführt wird. Die API ist ideal für das Hoch- und Herunterladen von großen Dateien über HTTP(S) geeignet. FTP wird auch unterstützt, allerdings nur für Downloads.
 
-Ein neues Feature für die hintergrundübertragung in Windows 10 ist die Möglichkeit, nachverarbeitung auszulösen, wenn eine Dateiübertragung abgeschlossen ist, damit Sie lokale Kataloge aktualisieren, andere apps aktivieren oder den Benutzer benachrichtigen, wenn ein Download abgeschlossen ist.
+Ein neues Feature für die hintergrundübertragung in Windows 10 ist die Möglichkeit, eine nachverarbeitung auszulösen, wenn eine Dateiübertragung abgeschlossen ist, damit Sie lokale Kataloge aktualisieren, andere apps aktivieren oder den Benutzer benachrichtigen, wenn ein Download abgeschlossen ist.
 
 ### <a name="when-to-use-background-transfers"></a>Wann sollten Hintergrundübertragungen verwendet werden?
 
@@ -127,7 +127,7 @@ Mit der [**Windows.Devices.WiFiDirect.Services**](https://msdn.microsoft.com/lib
 
 ### <a name="mobile-operators"></a>Mobilfunkanbieter
 
-Windows 10 stellt einer großen Entwicklergruppe einige APIs, die bisher nur Geräteherstellern und Mobilfunkanbietern zur Verfügung standen. Beachten Sie, dass obwohl diese APIs jetzt verfügbar gemacht werden, sie auch bestimmten App-Funktionen unterliegen, die von Microsoft genehmigt werden müssen, bevor eine App veröffentlicht werden kann. Die tatsächliche Verwendung dieser APIs wird nach wie vor in erster Linie auf Gerätehersteller und Mobilfunkanbieter beschränkt.
+Windows 10 stellt einer großen Entwicklergruppe einige APIs, die bisher nur Geräteherstellern und Mobilfunkanbietern zur Verfügung standen bereit. Beachten Sie, dass obwohl diese APIs jetzt verfügbar gemacht werden, sie auch bestimmten App-Funktionen unterliegen, die von Microsoft genehmigt werden müssen, bevor eine App veröffentlicht werden kann. Die tatsächliche Verwendung dieser APIs wird nach wie vor in erster Linie auf Gerätehersteller und Mobilfunkanbieter beschränkt.
 
 ### <a name="network-operations"></a>Netzwerkvorgänge
 

@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c40c7d3bd080bd927fc52cb7f740e1dc4a6358c0
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8734698"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8781521"
 ---
 # <a name="texture-blending"></a>Texturmischung
 
@@ -30,7 +30,7 @@ Direct3D unterstützt die mehrfache Texturmischung in einem Durchgang durch die 
 
 Wie das obige Diagramm zeigt, mischen Texturphasen zwei Argumente unter Verwendung eines angegebenen Operators. Häufig ausgeführte Vorgänge sind u.a. die einfache Modulation oder Hinzufügung der Farb- oder Alphakomponenten der Argumente, insgesamt werden jedoch mehr als zwei Dutzend Vorgänge unterstützt. Die Argumente für eine Phase können eine zugeordnete Textur, der iterierte Farb- oder Alphawert (iteriert im Rahmen der Gouraud-Schattierung), ein beliebiger Farb- oder Alphawert oder das Ergebnis der vorherigen Texturphase sein.
 
-**Hinweis:**  Direct3D die farbmischung von der alphamischung. Anwendungen stellen Mischvorgänge und Argumente für Farbe und Alpha einzeln ein, und die Ergebnisse dieser Einstellungen sind voneinander unabhängig.
+**Hinweis:**  Direct3D farbmischung von der alphamischung. Anwendungen stellen Mischvorgänge und Argumente für Farbe und Alpha einzeln ein, und die Ergebnisse dieser Einstellungen sind voneinander unabhängig.
 
  
 

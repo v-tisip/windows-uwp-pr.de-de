@@ -12,11 +12,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 770896f467ff3a2c24fff65fdf16f1e13c83b688
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8758640"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8785441"
 ---
 # <a name="xaml-theme-resources"></a>XAML-Designressourcen
 
@@ -375,7 +375,7 @@ Stellt die gemeinsamen Eigenschaften für alle anderen [RichTextBlock](https://m
 </Style>
 ```
 
-**Hinweis**: die [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/br227565) -Stile verfügen nicht über alle Text Typhierarchie Stile, die [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) der Fall ist, Dies liegt hauptsächlich daran, da das blockbasierte Dokumentobjektmodell für **RichTextBlock** Festlegen von Attributen für die einzelnen Text erleichtert Elemente. Außerdem entsteht, wenn Sie [TextBlock.Text](https://msdn.microsoft.com/library/windows/apps/br209676) mit der XAML-Inhaltseigenschaft festlegen, eine Situation, in der kein zu formatierendes Textelement vorhanden ist und Sie daher den Container formatieren müssen. Das ist für **RichTextBlock** kein Problem, da sein Textinhalt immer in spezifischen Textelementen wie [Paragraph](https://msdn.microsoft.com/library/windows/apps/br244503) enthalten sein muss, in denen Sie XAML-Stile für die Kopfzeile, die Seitenunterüberschrift und ähnliche Texthierarchiedefinitionen festlegen können.
+**Hinweis**: die [RichTextBlock](https://msdn.microsoft.com/library/windows/apps/br227565) -Stile verfügen nicht über alle Text Typhierarchie Stile, die [TextBlock-Element](https://msdn.microsoft.com/library/windows/apps/br209652) der Fall ist, Dies liegt hauptsächlich daran, da das blockbasierte Dokumentobjektmodell für **RichTextBlock** Festlegen von Attributen für die einzelnen Text erleichtert Elemente. Außerdem entsteht, wenn Sie [TextBlock.Text](https://msdn.microsoft.com/library/windows/apps/br209676) mit der XAML-Inhaltseigenschaft festlegen, eine Situation, in der kein zu formatierendes Textelement vorhanden ist und Sie daher den Container formatieren müssen. Das ist für **RichTextBlock** kein Problem, da sein Textinhalt immer in spezifischen Textelementen wie [Paragraph](https://msdn.microsoft.com/library/windows/apps/br244503) enthalten sein muss, in denen Sie XAML-Stile für die Kopfzeile, die Seitenunterüberschrift und ähnliche Texthierarchiedefinitionen festlegen können.
 
 ## <a name="miscellaneous-named-styles"></a>Sonstige benannte Stile
 

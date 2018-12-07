@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: e0e57e28fe36ae506d29e2b51a31c756513fdd08
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8758300"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8785044"
 ---
 # <a name="export-restrictions-on-cryptography"></a>Exportbeschränkungen hinsichtlich Kryptografie
 
@@ -33,7 +33,7 @@ Informationen zu den Export Administration Regulations (EAR), die den Export von
 
 Ermitteln Sie zunächst, ob Ihre App eine Art von Kryptografie verwendet, die durch die Export Administration Regulations geregelt wird. Die Frage enthält die in der Liste enthaltenen Beispiele. Diese Liste enthält jedoch nicht alle möglichen Anwendungsmöglichkeiten von Kryptografie.
 
-> **Wichtige**berücksichtigen nicht nur den Code, die Sie für Ihre app jedoch auch alle Softwarebibliotheken, Hilfsprogramme und Betriebssystemkomponenten, die Ihre app enthält oder links geschrieben haben.
+> **Wichtige**sollten Sie nicht nur den Code, die Sie für Ihre app jedoch auch alle Softwarebibliotheken, Hilfsprogramme und Betriebssystemkomponenten, die Ihre app enthält oder links geschrieben haben.
 
 -   Jede Verwendung einer digitalen Signatur, z.B. Authentifizierung oder Integritätsprüfung
 -   Verschlüsselung von Daten oder Dateien, die die App verwendet oder auf die sie zugreift

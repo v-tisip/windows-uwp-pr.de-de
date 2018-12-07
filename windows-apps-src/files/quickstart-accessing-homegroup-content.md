@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 422d02b8797bef8ea4f793ba652e9e4e34421a9b
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8745721"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8779800"
 ---
 # <a name="accessing-homegroup-content"></a>Zugriff auf Inhalte in der Heimnetzgruppe
 
@@ -193,7 +193,7 @@ Gehen Sie wie folgt vor, um Videoinhalte aus der Heimnetzgruppe zu streamen:
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();   
     ```
 
-3.  **Öffnen Sie die Auswahl des Benutzers Datei für den Lesezugriff, und legen Sie den Dateidatenstrom als Quelle für die** [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)und dann wieder starten der Datei.
+3.  **Öffnen Sie die Auswahl des Benutzers-Datei für den Lesezugriff, und legen Sie den Dateidatenstrom als Quelle für die** [**MediaElement**](https://msdn.microsoft.com/library/windows/apps/br242926)und dann wieder starten der Datei.
     ```cs
     if (file != null)
     {

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Preis, verfügbar, sichtbar, kostenlose Testversion, Testversionen, Testversion, Apps, Veröffentlichungsdatum
 ms.localizationpriority: medium
 ms.openlocfilehash: d5fa6c3e23516a5255f8bd3252f6ded233101625
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8737297"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8786465"
 ---
 # <a name="set-app-pricing-and-availability"></a>Festlegen der Preise und Verfügbarkeit von Apps
 
@@ -70,7 +70,7 @@ Standardmäßig wird Ihre Testversion verfügbar, sobald Ihre App veröffentlich
 >[!NOTE]
 > Diese Datumsangabe gilt nur für Kunden mit Windows10 (inklusive Xbox). Wenn Ihre App für Kunden mit früheren Betriebssystemversionen verfügbar ist, wird die Testversion für diese Kunden angeboten, solange Ihr Produkt verfügbar ist. 
 
-Zum Festlegen des Datums für das Anbieten der Testversion für Kunden von Windows 10 ändern Sie die Angabe im Dropdownfeld **Starts on** und/oder **Ends on** in **at** und wählen anschließend Datum und Uhrzeit. In diesem Fall können Sie entweder **UTC** auswählen, sodass die ausgewählte Uhrzeit UTC-Zeit (Universal Coordinated Time, Koordinierte Weltzeit) ist, oder **Lokal** festlegen, damit diese Uhrzeiten in jeder Zeitzone für einen Markt verwendet werden. (Beachten Sie, dass für Märkte, die mehr als eine Zeitzone umfassen, nur eine Zeitzone in diesem Markt verwendet wird. Für die USA wird die Eastern Time verwendet.) Sie können **für bestimmte Märkte anpassen** auswählen, wenn Sie ein anderes Datum für alle Märkte festlegen möchten.
+Zum Festlegen des Datums für das Anbieten der Testversion für Kunden von Windows 10 ändern Sie die Angabe im Dropdownfeld **Starts on** und/oder **Ends on** in **at** und wählen anschließend Datum und Uhrzeit. In diesem Fall können Sie entweder **UTC** auswählen, sodass die ausgewählte Uhrzeit UTC-Zeit (Universal Coordinated Time, Koordinierte Weltzeit) ist, oder **Lokal** festlegen, damit diese Uhrzeiten in jeder Zeitzone für einen Markt verwendet werden. (Beachten Sie, dass für Märkte, die mehr als eine Zeitzone umfassen, nur eine Zeitzone in diesem Markt verwendet wird. Für die USA wird die Eastern Time verwendet.) Sie können **für die einzelnen Märkte anpassen** auswählen, wenn Sie ein anderes Datum für alle Märkte festlegen möchten.
 
 
 ## <a name="sale-pricing"></a>Sonderpreise

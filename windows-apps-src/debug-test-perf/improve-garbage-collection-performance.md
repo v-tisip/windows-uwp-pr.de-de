@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6d3940f519706fba6d795d60344cbd83337ae482
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8756119"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8787083"
 ---
 # <a name="improve-garbage-collection-performance"></a>Verbessern der Leistung bei der Garbage Collection
 
@@ -42,7 +42,7 @@ Lösen Sie eine Garbage Collection nur aus, nachdem Sie die Leistung Ihrer App e
 
 Rufen Sie zum Auslösen der Garbage Collection einer Generation [**GC.Collect(n)**](https://msdn.microsoft.com/library/windows/apps/xaml/y46kxc5e.aspx) auf, wobei „n“ für die Generation steht, die Sie erfassen möchten (0, 1 oder 2).
 
-**Hinweis:** es wird empfohlen, eine Garbagecollection in Ihrer app erzwingen, da der Garbage Collector viele Heuristik um den besten Zeitpunkt für eine Collection zu ermitteln und die Erzwingung einer Collection somit häufig eine unnötige Belastung der CPU in vielen Fällen ist. Falls Ihre App allerdings eine große Anzahl von Objekten enthält, die nicht mehr verwendet werden, und Sie den entsprechenden Arbeitsspeicher wieder für das System freigeben möchten, ist die Erzwingung einer Garbage Collection unter Umständen dennoch angemessen. So können Sie beispielsweise in einem Spiel eine Bereinigung am Ende einer Ladesequenz auslösen, um vor Spielbeginn Arbeitsspeicher freizugeben.
+**Hinweis:** es wird empfohlen, dass Sie eine Garbagecollection in Ihrer app erzwingen, da der Garbage Collector viele Heuristiken verwendet, um zu bestimmen, den besten Zeitpunkt für eine Collection, und die Erzwingung einer Collection somit häufig eine unnötige Belastung der CPU in vielen Fällen ist. Falls Ihre App allerdings eine große Anzahl von Objekten enthält, die nicht mehr verwendet werden, und Sie den entsprechenden Arbeitsspeicher wieder für das System freigeben möchten, ist die Erzwingung einer Garbage Collection unter Umständen dennoch angemessen. So können Sie beispielsweise in einem Spiel eine Bereinigung am Ende einer Ladesequenz auslösen, um vor Spielbeginn Arbeitsspeicher freizugeben.
  
 Damit Sie nicht versehentlich zu viele Garbage Collections auslösen, können Sie [**GCCollectionMode**](https://msdn.microsoft.com/library/windows/apps/xaml/bb495757.aspx) auf **Optimized** festlegen. Dadurch wird der Garbage Collector angewiesen, nur dann eine Garbage Collection zu starten, wenn eine ausreichend hohe Produktivität dies rechtfertigt.
 

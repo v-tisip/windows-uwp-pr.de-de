@@ -7,11 +7,11 @@ keywords: Windows10, UWP
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
 ms.openlocfilehash: ae8daa6141eadaac699fc49b8ec4796f1dde5c91
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8732809"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8787274"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>Erstellen eines UWP-Spiels in JavaScript
 
@@ -26,11 +26,11 @@ ms.locfileid: "8732809"
 
 Veröffentlichen einer app auf der Microsoft Store bedeutet, dass Sie können freigeben (oder verkaufen!) mit Millionen von Menschen auf vielen verschiedenen Geräten.  
 
-Um Ihre app an den Microsoft Store veröffentlichen müssen sie als UWP (universelle Windows-Plattform)-app geschrieben werden. UWP ist jedoch extrem flexibel und unterstützt eine Vielzahl von Sprachen und Frameworks. Dieses Beispiel ist ein einfaches Spiel, das in JavaScript geschrieben ist und mehrere CreateJS-Bibliotheken nutzt. Es veranschaulicht, wie Sprites gezeichnet werden, eine Spielschleife erstellt wird, Tastatur und Maus unterstützt werden und die Anpassung an verschiedene Bildschirmgrößen erfolgt.
+Um Ihre app im Microsoft Store zu veröffentlichen, die sie als eine UWP (universelle Windows-Plattform)-app geschrieben werden muss. UWP ist jedoch extrem flexibel und unterstützt eine Vielzahl von Sprachen und Frameworks. Dieses Beispiel ist ein einfaches Spiel, das in JavaScript geschrieben ist und mehrere CreateJS-Bibliotheken nutzt. Es veranschaulicht, wie Sprites gezeichnet werden, eine Spielschleife erstellt wird, Tastatur und Maus unterstützt werden und die Anpassung an verschiedene Bildschirmgrößen erfolgt.
 
 Dieses Projekt wurde mit JavaScript unter Verwendung von Visual Studio erstellt. Mit einigen geringfügigen Änderungen kann es auch auf einer Website gehostet oder an andere Plattformen angepasst werden. 
 
-**Hinweis:** Dies ist kein vollständiges (oder gutes!) Spiel; Dieses Skript dient zu zeigen, wie mit JavaScript und das dritte Partei Bibliothek stellen eine app im Microsoft Store veröffentlichen.
+**Hinweis:** Dies ist kein Spiel abgeschlossen (oder gutes!); Dieses Skript dient zu zeigen, wie mit JavaScript und das dritte von Drittanbietern Bibliothek stellen eine app im Microsoft Store veröffentlichen.
 
 
 ## <a name="requirements"></a>Anforderungen
@@ -61,7 +61,7 @@ Nachdem die Projektmappe in Visual Studio geladen wurde, sehen Sie mehrere Datei
 
 Jetzt können Sie das Spiel ausführen!
 
-Drücken Sie **F5** zum Ausführen der App. Ein Fenster geöffnet, und unseren vertrauten Dinosaurier in einer (idyllischen Wenn auch kargen) Landschaft sollte angezeigt werden. Wir werden jetzt die App untersuchen, einige wichtige Teile erklären und währenddessen den Rest der Features entsperren.
+Drücken Sie **F5** zum Ausführen der App. Ein Fenster geöffnet werden, und unseren vertrauten Dinosaurier in einer (idyllischen Wenn auch kargen) Landschaft sollte angezeigt werden. Wir werden jetzt die App untersuchen, einige wichtige Teile erklären und währenddessen den Rest der Features entsperren.
 
 ![Ein ganz normaler Dinosaurier mit einer Ninja-Katze auf seinem Rücken](images/JS2D_3.png)
 
@@ -69,7 +69,7 @@ Drücken Sie **F5** zum Ausführen der App. Ein Fenster geöffnet, und unseren v
 
 ## <a name="walkthough"></a>Exemplarische Vorgehensweise
 
-Wenn Sie das Spiel mit F5 gestartet haben, wundern Sie sich vielleicht, was gerade passiert. Und die Antwort lautet "nicht viel", da ein Großteil des Codes derzeit auskommentiert ist. Bisher alles, was Sie sehen, ist der Dinosaurier und unwirksame darauf, die LEERTASTE zu drücken. 
+Wenn Sie das Spiel mit F5 gestartet haben, wundern Sie sich vielleicht, was gerade passiert. Und die Antwort ist "nicht viel", da ein Großteil des Codes derzeit auskommentiert ist. Bisher alles, was Sie sehen, ist der Dinosaurier und unwirksame darauf, die LEERTASTE zu drücken. 
 
 ### <a name="1-setting-the-stage"></a>1. Festlegen der Phase
 
@@ -257,7 +257,7 @@ Wenn Sie die App erneut ausführen, sollten Sie jetzt die Größe des Fensters a
 
 ## <a name="publishing-to-the-microsoft-store"></a>Veröffentlichung im Microsoft Store
 
-Nachdem Sie nun eine UWP-app haben, ist es möglich, veröffentlichen, an den Microsoft Store (vorausgesetzt, dass Sie diese zunächst verbessert haben!) 
+Nachdem Sie nun eine UWP-app haben, ist es möglich, die Sie veröffentlichen, an den Microsoft Store (vorausgesetzt, dass Sie diese zunächst verbessert haben!) 
 
 Dazu müssen Sie einige Schritte durchführen.
 

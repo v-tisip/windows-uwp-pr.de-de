@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6875f5b06bbd253b7fe80fbc53936fe0dcf1a6b9
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8746638"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8783808"
 ---
 # <a name="common-questions-about-ad-campaigns"></a>Häufige Fragen zu Anzeigenkampagnen
 
@@ -37,7 +37,7 @@ Wenn Sie eine der Standardanzeigenvorlagen verwenden, können Sie die Größe, d
 
 ### <a name="where-will-my-ad-appear"></a>Wo erscheint meine Anzeige?
 
-Ihre Anzeige erscheint in Apps, die der Altersfreigabe und der Betriebssystemversion Ihrer App entsprechen. Sie legen diese Eigenschaften, wenn Sie Ihre app im Microsoft Store veröffentlichen. Für „universelle” Kampagnen werden Ihre Anzeigen auch in MSN.com, Outlook.com, Skype und anderen Microsoft-Premium-Eigenschaften angezeigt.
+Ihre Anzeige erscheint in Apps, die der Altersfreigabe und der Betriebssystemversion Ihrer App entsprechen. Sie können diese Eigenschaften festlegen, wenn Sie Ihre app im Microsoft Store veröffentlichen. Für „universelle” Kampagnen werden Ihre Anzeigen auch in MSN.com, Outlook.com, Skype und anderen Microsoft-Premium-Eigenschaften angezeigt.
 
 Anzeigenkampagnen werden derzeit in folgenden Ländern und Regionen unterstützt:
 
@@ -59,5 +59,5 @@ Wenn Sie nicht warten möchten, bis die Abrechnung erstellt wird, können Sie Ih
 
 ### <a name="how-do-i-delete-a-credit-card-or-edit-the-details-of-a-credit-card"></a>Wie kann ich eine Kreditkarte löschen oder die Details einer Kreditkarte bearbeiten?
 
-Wechseln Sie zu <http://commerce.microsoft.com>, melden Sie sich mit den Anmeldeinformationen Ihres Microsoft-Konto an, und stellen Sie die erforderlichen Änderungen vor.
+Wechseln Sie zu <http://commerce.microsoft.com>, melden Sie sich mit den Anmeldeinformationen Ihres Microsoft-Konto an, und nehmen Sie die erforderlichen Änderungen.
 
