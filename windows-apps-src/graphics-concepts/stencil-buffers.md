@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 285e4a70062c57c957530aa1e548c22c4cf7711e
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8750266"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8801293"
 ---
 # <a name="stencil-buffers"></a>Schablonenpuffer
 
@@ -44,7 +44,7 @@ Die oben aufgeführten Schritte sind in der folgenden Codezeile dargestellt:
 -   StencilBufferValue ist der Inhalt des Schablonenpuffers für das aktuelle Pixel.
 -   Das kaufmännische Und-Zeichen (&) stellt die bitweise AND-Operation dar.
 
-Wenn der Schablonentest erfolgreich ist, wird das aktuelle Pixel auf die Zieloberfläche geschrieben, und andernfalls ignoriert. Das Standardverhalten des Vergleichs ist, die Pixel, unabhängig davon, wie Vorgänge bitweise herausstellt zu schreiben. Sie können dieses Verhalten ändern, ändern Sie den Wert eines Aufzählungstyps auf die gewünschte Vergleichsfunktion zu ermitteln.
+Wenn der Schablonentest erfolgreich ist, wird das aktuelle Pixel auf die Zieloberfläche geschrieben, und andernfalls ignoriert. Das Standardverhalten des Vergleichs ist, das Pixel unabhängig davon, wie Vorgänge bitweise herausstellt, zu schreiben. Sie können dieses Verhalten ändern, ändern Sie den Wert eines Aufzählungstyps auf die gewünschte Vergleichsfunktion zu ermitteln.
 
 Sie können in Ihrer Anwendung die Funktionsweise des Schablonenpuffers anpassen. In der Anwendung kann die Vergleichsfunktion, die Schablonenmaske und der Schablonenreferenzwert festgelegt werden. Es kann auch die Aktion gesteuert werden, die Direct3D im Falle eines erfolgreichen oder eines misslungenen Schablonentests ausführt.
 

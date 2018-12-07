@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Point of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 2b6f06ea66767a1bcdd7e20fa05aa7af275eb892
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8741971"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8801117"
 ---
 # <a name="use-a-software-trigger"></a>Verwenden eines Software-Triggers
 
@@ -29,7 +29,7 @@ Legen Sie den gewünschten Wert der [IsDisabledOnDataReceived](https://docs.micr
 > [!Important]
 > Stellen Sie sicher, dass Ihre Strichcodescanner die Verwendung des Software-Trigger unterstützt, indem Sie zunächst die Eigenschaft [IsSoftwareTriggerSupported](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannercapabilities.issoftwaretriggersupported#Windows_Devices_PointOfService_BarcodeScannerCapabilities_IsSoftwareTriggerSupported) überprüfen.
 
-Das folgende Beispiel zeigt, wie zum Initiieren der Überprüfung mit einem Software-Trigger, der Überprüfung, nachdem sie einen Strichcode scannt beendet wird:
+Das folgende Beispiel zeigt, wie Sie mit einem Software-Trigger, der angehalten wird, nachdem sie einen Strichcode scannt Überprüfung Überprüfung zu initiieren:
 
 ```cs
 private void SoftwareTrigger(BarcodeScanner barcodeScanner, ClaimedBarcodeScanner claimedBarcodeScanner) 

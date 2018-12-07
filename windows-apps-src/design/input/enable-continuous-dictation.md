@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 839dc024204ec9b76ffe621a35cbbbaffc248d02
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8739762"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8801687"
 ---
 # <a name="continuous-dictation"></a>Kontinuierliches Diktieren
 
@@ -26,7 +26,7 @@ In [Spracherkennung](speech-recognition.md) haben Sie gelernt, wie Sie mithilfe 
 Bei längeren, kontinuierlichen Spracherkennungssitzungen (z.B. für Diktate oder E-Mails) wird hingegen die [**ContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913913)-Eigenschaft eines [**SpeechRecognizer**](https://msdn.microsoft.com/library/windows/apps/dn653226)-Objekts verwendet, um ein [**SpeechContinuousRecognitionSession**](https://msdn.microsoft.com/library/windows/apps/dn913896)-Objekt zu erhalten.
 
 > [!NOTE]
-> Diktat sprachunterstützung hängt davon ab, auf dem [Gerät](https://docs.microsoft.com/windows/uwp/design/devices/) , in denen Ihre app ausgeführt wird. Für PCs und Laptops wird nur "En-US" erkannt, während Xbox und Telefone alle von der Spracherkennung unterstützte Sprachen erkennen können. Weitere Informationen finden Sie unter [der Spracherkennungssprache angeben](specify-the-speech-recognizer-language.md).
+> Diktat sprachunterstützung hängt davon ab, auf dem [Gerät](https://docs.microsoft.com/windows/uwp/design/devices/) , in denen Ihre app ausgeführt wird. Für PCs und Laptops wird nur "En-US" erkannt, während Xbox und Telefone alle Sprachen, die von der Spracherkennung unterstützt erkennen können. Weitere Informationen finden Sie unter [angeben Sprache für die Spracherkennung](specify-the-speech-recognizer-language.md).
 
 ## <a name="set-up"></a>Einrichtung
 

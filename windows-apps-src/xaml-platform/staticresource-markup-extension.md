@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 012827165aaa4067c9844af0491afb77a53c5f50
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8735210"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8797077"
 ---
 # <a name="staticresource-markup-extension"></a>{StaticResource}-Markuperweiterung
 
@@ -38,7 +38,7 @@ Stellt durch Auswerten eines Verweises auf eine bereits definierte Quelle einen 
 
 Die Regeln, nach denen die Auflösung einer **StaticResource** zu einem Element in einem Ressourcenwörterbuch erfolgt, wird in diesem Thema nicht beschrieben. Dies hängt davon ab, ob sowohl der Verweis als auch die Ressource in einer Vorlage vorhanden sind, ob zusammengeführte Ressourcenwörterbücher verwendet werden usw. Weitere Informationen dazu, wie Sie Ressourcen und Eigenschaften mithilfe eines [**ResourceDictionary**](https://msdn.microsoft.com/library/windows/apps/br208794) definieren, und zusätzlichen Beispielcode finden Sie unter [ResourceDictionary- und XAML-Ressourcenverweise](https://msdn.microsoft.com/library/windows/apps/mt187273).
 
-**Wichtige**  **StaticResource** muss nicht versuchen, einen Vorwärtsverweis auf eine Ressource, die definiert wird innerhalb der XAML-Datei weiter lexikalisch. Dieser Versuch wird nicht unterstützt. Auch wenn der weitergeleitete Verweis keinen Fehler verursacht, wird durch den Versuch die Leistung beeinträchtigt. Um optimale Ergebnisse zu erzielen, sollten Sie die Ressourcenwörterbücher so erstellen, dass Vorwärtsverweise vermieden werden können.
+**Wichtige**  **StaticResource** muss nicht versuchen, einen Vorwärtsverweis auf eine Ressource, die definiert, ist die innerhalb der XAML-Datei weiter lexikalisch. Dieser Versuch wird nicht unterstützt. Auch wenn der weitergeleitete Verweis keinen Fehler verursacht, wird durch den Versuch die Leistung beeinträchtigt. Um optimale Ergebnisse zu erzielen, sollten Sie die Ressourcenwörterbücher so erstellen, dass Vorwärtsverweise vermieden werden können.
 
 Wenn Sie versuchen, eine **StaticResource** für einen Schlüssel anzugeben, die nicht aufgelöst werden kann, führt dies zu einer XAML-Analyseausnahme zur Laufzeit. Entwicklungstools geben unter Umständen auch Warnungen oder Fehler aus.
 
@@ -75,7 +75,7 @@ Die Syntax der {StaticResource}-Markuperweiterung legt eine Eigenschaft einer an
 
 ## <a name="design-time-tools-support-for-the-staticresource-markup-extension"></a>Unterstützung von Entwurfszeittools für die **{StaticResource}**-Markuperweiterung
 
-Microsoft Visual Studio2013 können mögliche Schlüsselwerte in die Microsoft IntelliSense-Dropdownelemente einbinden enthalten, wenn Sie die Markuperweiterung **{StaticResource}** in einer XAML-Seite verwenden. Sobald Sie z.B. "{StaticResource" eingeben, wird ein beliebiger Ressourcenschlüssel aus den Designressourcen angezeigt. Neben den typischen Ressourcen auf Seitenebene ([**FrameworkElement.Resources**](https://msdn.microsoft.com/library/windows/apps/br208740)) und App-Ebene ([**Application.Resources**](https://msdn.microsoft.com/library/windows/apps/br242338)) sehen Sie auch [XAML-Designressourcen](https://msdn.microsoft.com/library/windows/apps/mt187274) und Ressourcen aus den von Ihrem Projekt verwendeten Erweiterungen.
+Microsoft Visual Studio2013 kann mögliche Schlüsselwerte in die Microsoft IntelliSense-Dropdownelemente einbinden enthalten, wenn Sie die **{StaticResource}** -Markuperweiterung in einer XAML-Seite verwenden. Sobald Sie z.B. "{StaticResource" eingeben, wird ein beliebiger Ressourcenschlüssel aus den Designressourcen angezeigt. Neben den typischen Ressourcen auf Seitenebene ([**FrameworkElement.Resources**](https://msdn.microsoft.com/library/windows/apps/br208740)) und App-Ebene ([**Application.Resources**](https://msdn.microsoft.com/library/windows/apps/br242338)) sehen Sie auch [XAML-Designressourcen](https://msdn.microsoft.com/library/windows/apps/mt187274) und Ressourcen aus den von Ihrem Projekt verwendeten Erweiterungen.
 
 Sobald ein Ressourcenschlüssel als Teil einer **{StaticResource}**-Verwendung vorhanden ist, kann das Feature **Gehe zu Definition** (F12) diese Ressource auflösen und Ihnen das Wörterbuch anzeigen, in dem sie definiert ist. Bei Designressourcen wird dies an generic.xaml für die Entwurfszeit weitergeleitet.
 

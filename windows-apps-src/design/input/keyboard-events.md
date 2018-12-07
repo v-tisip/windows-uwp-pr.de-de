@@ -13,11 +13,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1e7453d3973cef31ae8143f3ecff31fffeb763a3
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8753563"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8801365"
 ---
 # <a name="keyboard-events"></a>Tastaturereignisse
 
@@ -325,7 +325,7 @@ Eine generelle Einschränkung dieser Technik besteht darin, dass die API **AddHa
 
 Sie können die wichtigsten Ereignisse für bestimmte Steuerelemente überschreiben (z.B. [**GridView**](https://msdn.microsoft.com/library/windows/apps/Windows.UI.Xaml.Controls.GridView)), um eine konsistente Fokusnavigation für verschiedene Eingabegeräte (darunter Tastatur und Gamepad) bereitzustellen.
 
-Im folgenden Beispiel wird das Steuerelement und überschreiben das KeyDown-Verhalten Fokus zum GridView Inhalte, wenn eine Pfeiltaste betätigt wird.
+Im folgenden Beispiel wird das Steuerelement und überschreiben das KeyDown-Verhalten für den Fokus auf das GridView Inhalt, wenn eine Pfeiltaste gedrückt wird.
 
 ```csharp
 public class CustomGridView : GridView

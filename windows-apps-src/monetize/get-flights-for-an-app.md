@@ -1,17 +1,17 @@
 ---
 ms.assetid: B0AD0B8E-867E-4403-9CF6-43C81F3C30CA
-description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um Informationen zu einem Flight-Paket für eine app abzurufen, die für Ihr Partner Center-Konto registriert ist.
+description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Abrufen von Informationen zu einem Flight-Paket für eine app, die für Ihr Partner Center-Konto registriert ist.
 title: Abrufen von Flight-Paketen für eine App
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Flight, Flight-Pakete
 ms.localizationpriority: medium
 ms.openlocfilehash: c7e7ab4db7690cee86b76e39caa30b3c0fb25618
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8730274"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8801846"
 ---
 # <a name="get-package-flights-for-an-app"></a>Abrufen von Flight-Paketen für eine App
 

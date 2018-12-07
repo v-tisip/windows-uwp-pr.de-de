@@ -7,17 +7,17 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store Werbungs-API, Anzeigenkampagnen
 ms.localizationpriority: medium
 ms.openlocfilehash: 6529c1a21865b2997d36e9b254b19f971f620490
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8744016"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8799510"
 ---
 # <a name="manage-ad-campaigns"></a>Verwalten von Anzeigenkampagnen
 
 Verwenden Sie diese Methoden in der [Microsoft Store-Angebots-API-](run-ad-campaigns-using-windows-store-services.md), um werbende Anzeigenkampagnen zu erstellen, zu bearbeiten und abzurufen. Jede Kampagne, die Sie erstellen, mit dieser Methode kann nur eine App zugeordnet werden.
 
->**Hinweis:**&nbsp;&nbsp;Sie auch erstellen und Verwalten von Anzeigenkampagnen mit Partner Center und Kampagnen, die Sie programmgesteuert erstellen, können im Partner Center zugreifen. Weitere Informationen zum Verwalten von Anzeigenkampagnen im Partner Center finden Sie unter [Erstellen einer Anzeigenkampagne für Ihre app](../publish/create-an-ad-campaign-for-your-app.md).
+>**Hinweis:**&nbsp;&nbsp;können Sie auch erstellen und Verwalten von Anzeigenkampagnen mit Partner Center und Kampagnen, die Sie programmgesteuert erstellen, können im Partner Center zugreifen. Weitere Informationen zum Verwalten von Anzeigenkampagnen im Partner Center finden Sie unter [Erstellen einer Anzeigenkampagne für Ihre app](../publish/create-an-ad-campaign-for-your-app.md).
 
 Wenn Sie eine Kampagne mit dieser Methode erstellen oder aktualisieren, rufen Sie in der Regel auch eine oder mehrere der folgenden Methoden zum Verwalten der *Lieferpositionen*, *Zielgruppenprofile*, und *Werbemittel* ab, die der Kampagne zugeordnet sind. Weitere Informationen über die Beziehung zwischen Kampagnen, Lieferpositionen, Zielgruppenprofilen und Werbemitteln finden Sie unter [Anzeigenkampagnen mit Microsoft Store-Diensten ausführen](run-ad-campaigns-using-windows-store-services.md#call-the-windows-store-promotions-api).
 

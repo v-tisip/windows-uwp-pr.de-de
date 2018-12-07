@@ -1,30 +1,30 @@
 ---
 ms.assetid: 78D833B9-E528-4BCA-9C48-A757F17E6C22
 title: Zertifizierungskit für Windows-Apps
-description: Damit Ihre app die beste Chance auf der Microsoft Store oder Chancen Windows-Zertifizierung veröffentlicht wird, überprüfen Sie und Testen sie lokal, bevor Sie sie zur Zertifizierung übermitteln. In diesem Thema wird erläutert, wie Sie das Zertifizierungskit für Windows-Apps installieren und ausführen.
+description: Geben Ihre app die beste Möglichkeit eine Veröffentlichung im Microsoft Store oder Windows-Zertifizierung, zu überprüfen und sie lokal testen, bevor Sie sie zur Zertifizierung übermitteln. In diesem Thema wird erläutert, wie Sie das Zertifizierungskit für Windows-Apps installieren und ausführen.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, Uwp, app-Zertifizierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 614f59fe06528d7b5bac36290eae14f0d7d49653
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8750771"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8798641"
 ---
 # <a name="windows-app-certification-kit"></a>Zertifizierungskit für Windows-Apps
 
 
 
-Zum Abrufen von Ihrer app, die [Windows-Zertifizierung](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) , oder für die [Veröffentlichung im Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Hh694062)vorbereiten, sollten Sie überprüfen und testen es zunächst lokal. In diesem Thema wird das Installieren und führen Sie das [Zertifizierungskit für Windows-Apps](http://go.microsoft.com/fwlink/p/?LinkID=309666) , um sicherzustellen, dass Ihre app sicheren und effizienten veranschaulicht.
+Zum Abrufen von Ihrer app, die [Windows-Zertifizierung](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) , oder für die [Veröffentlichung im Microsoft Store](https://msdn.microsoft.com/library/windows/apps/Hh694062)vorbereiten, sollten Sie überprüfen und testen es zunächst lokal. In diesem Thema erfahren Sie, wie Sie installieren, und führen das [Zertifizierungskit für Windows-Apps](http://go.microsoft.com/fwlink/p/?LinkID=309666) , um sicherzustellen, dass Ihre app sicher und effizient ist.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 Voraussetzungen für das Testen einer universellen Windows-App:
 
--   Sie müssen installieren und Ausführen von Windows 10.
--   Sie müssen [Version der App Zertifizierungskit für Windows 10]( http://go.microsoft.com/fwlink/p/?LinkID=309666), installieren die im Windows Software Development Kit (SDK) für Windows 10 enthalten ist.
+-   Installieren und Ausführen von Windows 10.
+-   Sie müssen [Zertifizierungskit für Windows-App-Version 10]( http://go.microsoft.com/fwlink/p/?LinkID=309666), installieren, die in Windows Software Development Kit (SDK) für Windows 10 enthalten ist.
 -   Sie müssen [Ihr Gerät für die Entwicklung aktivieren](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development).
 -   Sie müssen die zu testende Windows-App auf Ihrem Computer bereitstellen.
 
@@ -42,7 +42,7 @@ Beim Installieren einer neueren Version des [Zertifizierungskits für Windows-Ap
 
 3.  Nachdem Sie die zu testende App eingegeben oder ausgewählt haben, klicken Sie auf **Weiter**.
 
-4.  Auf dem nächsten Bildschirm sehen Sie den Testworkflow für die App, die Sie testen möchten. Wenn ein Test in der Liste deaktiviert ist, kann er nicht für Ihre Umgebung angewendet werden. Wenn Sie eine z.B. einer Windows10-App unter Windows7 testen, werden nur statische Tests für den Workflow angewendet. Beachten Sie, dass der Microsoft Store alle Tests aus diesem Workflow anwenden kann. Wählen Sie aus, welche Tests Sie ausführen möchten, und klicken Sie dann auf **Weiter**.
+4.  Auf dem nächsten Bildschirm sehen Sie den Testworkflow für die App, die Sie testen möchten. Wenn ein Test in der Liste deaktiviert ist, kann er nicht für Ihre Umgebung angewendet werden. Wenn Sie eine z.B. einer Windows10-App unter Windows7 testen, werden nur statische Tests für den Workflow angewendet. Beachten Sie, dass im Microsoft Store alle Tests aus diesem Workflow anwenden kann. Wählen Sie aus, welche Tests Sie ausführen möchten, und klicken Sie dann auf **Weiter**.
 
     Das Zertifizierungskit für Windows-Apps beginnt mit dem Überprüfen der App.
 
@@ -52,13 +52,13 @@ Beim Installieren einer neueren Version des [Zertifizierungskits für Windows-Ap
 
 6.  Öffnen Sie die Berichtsdatei, und überprüfen Sie die Ergebnisse des Tests.
 
-**Hinweis:** Wenn Sie Visual Studio verwenden, können Sie das Zertifizierungskit für Windows-Apps ausführen, wenn Sie Ihr app-Paket erstellen. Informationen zur Vorgehensweise finden Sie unter [Verpacken von UWP-Apps](https://msdn.microsoft.com/library/windows/apps/Mt627715).
+**Hinweis:**, wenn Sie Visual Studio verwenden, können Sie das Zertifizierungskit für Windows-Apps ausführen, bei der Erstellung des app-Pakets. Informationen zur Vorgehensweise finden Sie unter [Verpacken von UWP-Apps](https://msdn.microsoft.com/library/windows/apps/Mt627715).
 
  
 
 ## <a name="validate-your-windows-app-using-the-windows-app-certification-kit-from-a-command-line"></a>Überprüfung der Windows-App mit dem Zertifizierungskit für Windows-Apps über eine Befehlszeile
 
-**Wichtige**das Zertifizierungskit für für Windows-App muss im Kontext einer aktiven benutzersitzung ausgeführt werden.
+**Wichtige**des Zertifizierungskits muss im Kontext einer aktiven benutzersitzung ausgeführt werden.
 
 1.  Navigieren Sie im Befehlsfenster zum Verzeichnis mit dem Zertifizierungskit für Windows-Apps.
 
@@ -78,7 +78,7 @@ Beim Installieren einer neueren Version des [Zertifizierungskits für Windows-Ap
 
 3.  Öffnen Sie nach dem Test die Berichtsdatei `[report file name]`, und überprüfen Sie die Testergebnisse.
 
-**Hinweis:** das Zertifizierungskit für für Windows-App kann über einen Dienst ausgeführt werden, aber der Dienst muss den kitvorgang innerhalb einer aktiven benutzersitzung initiieren und kann nicht in Session0 ausgeführt werden.
+**Hinweis:** des Zertifizierungskits kann über einen Dienst ausgeführt werden, aber der Dienst muss den kitvorgang innerhalb einer aktiven benutzersitzung initiieren und kann nicht in Session0 ausgeführt werden.
 
 **Hinweis:**  Weitere Informationen zur Befehlszeile Zertifizierungskits für Windows-App, geben Sie den Befehl `appcert.exe /?`
 
@@ -86,7 +86,7 @@ Beim Installieren einer neueren Version des [Zertifizierungskits für Windows-Ap
 
 Die Leistungstestgrenzen des Zertifizierungskits für Windows-Apps basieren auf der Leistung eines Computers mit geringem Energieverbrauch.
 
-Die Eigenschaften des Computers, auf dem der Test ausgeführt wird, können die Testergebnisse beeinflussen. Um festzustellen, ob die Leistung Ihrer app die [Microsoft Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/Dn764944)erfüllt, wird empfohlen, dass Sie Ihre app auf einem Computer mit geringem Energieverbrauch, z. B. eine Intel Atom-Prozessor-basierten Computer mit einer Auflösung von 1366 x 768 (oder höher) und einer rotierenden Festplatte testen Laufwerk (im Gegensatz zu einem Festkörperlaufwerk).
+Die Eigenschaften des Computers, auf dem der Test ausgeführt wird, können die Testergebnisse beeinflussen. Um festzustellen, ob die Leistung Ihrer app die [Microsoft Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/Dn764944)erfüllt, empfehlen wir, dass Sie Ihre app auf einem Computer mit geringem Energieverbrauch, z. B. eine Intel Atom-Prozessor-basierten Computer mit einer Auflösung von 1366 x 768 (oder höher) und einer rotierenden Festplatte testen Laufwerk (im Gegensatz zu einem Festkörperlaufwerk).
 
 Da Computer mit geringem Energieverbrauch weiterentwickelt werden, können sich die Leistungsmerkmale im Laufe der Zeit ändern. Verweisen auf die aktuelle [Microsoft Store-Richtlinien](https://msdn.microsoft.com/library/windows/apps/Dn764944) , und Testen Sie Ihre app mit der aktuellen Version des Zertifizierungskits für Windows-App sicherstellen, dass Ihre app die aktuellen leistungsanforderungen entspricht.
 

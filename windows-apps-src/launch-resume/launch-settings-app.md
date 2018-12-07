@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ff9510b65bd635b5b10e0cbea551c12b29ef8f37
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8752932"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8797832"
 ---
 # <a name="launch-the-windows-settings-app"></a>Starten der Windows-Einstellungs-App
 
@@ -97,7 +97,7 @@ Verwenden Sie die folgenden URIs, um verschiedenen Seiten der Einstellungs-App z
 | Sprechen mit Cortana | ms-settings:cortana-language |
 
 > [!NOTE] 
-> In diesem Abschnitt Einstellungen auf dem Desktop wird Suche aufgerufen werden, wenn der PC, Regionen gesetzt ist, in denen Cortana ist derzeit nicht verfügbar oder Cortana deaktiviert wurde. Cortana-spezifische Seiten (Cortana für meine Geräte) und sprechen Sie mit Cortana werden in diesem Fall nicht aufgeführt. 
+> In diesem Abschnitt "Einstellungen" auf dem Desktop wird Suche aufgerufen, wenn der PC, Regionen gesetzt ist, in denen Cortana ist derzeit nicht verfügbar oder Cortana deaktiviert wurde. Cortana-spezifische Seiten (Cortana für meine Geräte), und sich für Cortana werden in diesem Fall nicht aufgeführt. 
 
 ## <a name="devices"></a>Geräte
 

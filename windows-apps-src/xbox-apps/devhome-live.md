@@ -8,19 +8,19 @@ keywords: Windows10, UWP
 permalink: en-us/docs/xdk/devhome-live.html
 ms.localizationpriority: medium
 ms.openlocfilehash: c72137b8419526b65dc3c6cb75a511a7a6f50a82
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8711848"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8800305"
 ---
 # <a name="xbox-live-page-dev-home"></a>Xbox Live-Seite (Dev Home)
    
   
-Die **Xbox Live** -Seite des Dev Home Multiplayer-Informationen erfasst und zeigt den aktuellen Status des Xbox Live-Diensts.   
- ![Xbox Live-Seite des Dev Home](images/devhome_live.png)   
+**Xbox Live** -Seite die Dev Home Multiplayer-Informationen erfasst und zeigt den aktuellen Status des Xbox Live-Diensts.   
+ ![Xbox Live-Seite der Dev Home](images/devhome_live.png)   
   
-Die **Xbox Live** -Seite enthält die folgenden Bereiche:   
+**Xbox Live** -Seite enthält die folgenden Bereiche:   
  
    *  [XBTrace (Advancedmp)](#ID4EPB)  
    *  [Xbox Live-Status](#ID4E3B)  
@@ -33,7 +33,7 @@ Die **Xbox Live** -Seite enthält die folgenden Bereiche:
 ## <a name="xbtrace-advancedmp"></a>XBTrace (Advancedmp)  
    
   
-Die Seite " **XBTrace (Advancedmp)** " startet oder beendet Erfassung von einem Multiplayer-Ablaufverfolgung. Sie können auch eine Momentaufnahme des aktuellen Multiplayer-Zustands erfassen.   
+Die Seite **XBTrace (Advancedmp)** startet oder beendet wird Aufnahme der multiplayer-Ablaufverfolgung. Sie können auch eine Momentaufnahme des aktuellen Multiplayer-Status erfassen.   
   
 <a id="ID4E3B"></a>
 

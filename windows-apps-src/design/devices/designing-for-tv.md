@@ -14,11 +14,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 7b09e90ea71872421a0caf1edcc1a03ce25fef42
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8757257"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8800120"
 ---
 # <a name="designing-for-xbox-and-tv"></a>Entwerfen für Xbox und Fernsehgeräte
 
@@ -832,7 +832,7 @@ Sie platzieren den zuvor angezeigten Codeausschnitt entweder in die Seitenressou
 > [!NOTE]
 > Dieser Codeausschnitt gilt speziell für `ListView`-Elemente. Legen Sie bei einem `GridView`-Stil das [TargetType](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.controltemplate.targettype.aspx)-Attribut für [ControlTemplate](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.controltemplate.aspx) und [Style](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.style.aspx) auf `GridView` fest.
 
-Für eine genauere Kontrolle über das sind Elemente eingeblendet, wenn die Anwendung, Version 1803 abzielt oder höher, können Sie das [Ereignis UIElement.BringIntoViewRequested](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)verwenden. Für die **ListView**auf [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) platzieren/**GridView** abzufangen, bevor die internen **ScrollViewer** , wie in den folgenden Codeausschnitten ist:
+Für eine genauere Kontrolle über das sind Elemente eingeblendet, wenn die Anwendung, Version 1803 abzielt oder höher, können Sie das [Ereignis UIElement.BringIntoViewRequested](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)verwenden. Für die **ListView**auf [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) platzieren/**GridView** abzufangen, bevor die internen **ScrollViewer** wie in den folgenden Codeausschnitten wird:
 
 ```xaml
 <GridView x:Name="gridView">

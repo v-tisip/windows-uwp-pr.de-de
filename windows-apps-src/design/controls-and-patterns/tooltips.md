@@ -13,11 +13,11 @@ dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 651914cfb2abd4326c6ac6295f10ad359925d465
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8737050"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8800822"
 ---
 # <a name="tooltips"></a>QuickInfos
 
@@ -112,7 +112,7 @@ Sie können jedes beliebige Objekt als [Inhalt](/uwp/api/windows.ui.xaml.control
 
 Standardmäßig wird eine QuickInfo über dem Zeiger zentriert angezeigt. Die Platzierung wird nicht durch das App-Fenster eingeschränkt, sodass die QuickInfo möglicherweise teilweise oder komplett außerhalb der Grenzen des App-Fensters angezeigt wird.
 
-Verwenden Sie für allgemeine Anpassungen das [Placement](/uwp/api/windows.ui.xaml.controls.tooltip.placement) -Eigenschaft oder die **ToolTipService.Placement** angefügte Eigenschaft an, ob die QuickInfo oben, unten, links oder rechts neben dem Zeiger gezeichnet werden soll. Sie können die [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) oder [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) Eigenschaften so ändern Sie den Abstand zwischen dem Zeiger und der QuickInfo festlegen. Nur eine der beiden Offset Werte beeinflusst die endgültige Position - VerticalOffset beim Platzierung wird oben oder unten, HorizontalOffset Platzierung bleibt oder rechts.
+Verwenden Sie für allgemeine Anpassungen der [Placement](/uwp/api/windows.ui.xaml.controls.tooltip.placement) -Eigenschaft oder die **ToolTipService.Placement** angefügte Eigenschaft festlegen, ob die QuickInfo oben, unten, links oder rechts neben dem Zeiger gezeichnet werden sollen. Sie können die [VerticalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.verticaloffset) oder [HorizontalOffset](/uwp/api/windows.ui.xaml.controls.tooltip.horizontaloffset) Eigenschaften so ändern Sie den Abstand zwischen dem Zeiger und der QuickInfo festlegen. Nur eine der beiden Offset Werte wird die endgültige Position - VerticalOffset bei Platzierung oben oder unten, HorizontalOffset ist, wenn Platzierung gelassen wird oder rechts beeinflussen.
 
 ```xaml
 <!-- An Image with an offset ToolTip. -->
@@ -125,7 +125,7 @@ Verwenden Sie für allgemeine Anpassungen das [Placement](/uwp/api/windows.ui.xa
 </Image>
 ```
 
-Wenn eine QuickInfo die Inhalte, die, der Sie verdeckt sich bezieht, können Sie seine Position mit der neuen **PlacementRect** -Eigenschaft genau anpassen. PlacementRect verankert des QuickInfo Position und dient auch als ein Bereich, den QuickInfo nicht verdeckt wird, sofern genügend Bildschirmfläche zum Zeichnen der QuickInfo außerhalb dieses Bereichs vorhanden ist. Sie können den Ursprung des Rechtecks relativ zu der QuickInfo-Besitzer und die Höhe und Breite der Ausschluss angeben. Die [Position](/uwp/api/windows.ui.xaml.controls.tooltip.placement) -Eigenschaft definiert, ob QuickInfo oben, unten, links oder rechts neben dem PlacementRect gezeichnet werden soll. 
+Wenn eine QuickInfo die Inhalte, die, der Sie verdeckt sich bezieht, können Sie mit der neuen **PlacementRect** -Eigenschaft genau-Kontext anpassen. PlacementRect verankert die QuickInfo-Position und dient auch als ein Bereich, in dem QuickInfo nicht verdeckt wird, sofern genügend Bildschirmfläche zum Zeichnen der QuickInfo außerhalb dieses Bereichs vorhanden ist. Sie können den Ursprung des Rechtecks relativ zu der QuickInfo-Besitzer und die Höhe und Breite der Ausschluss angeben. Die [Position](/uwp/api/windows.ui.xaml.controls.tooltip.placement) -Eigenschaft definiert, ob QuickInfo oben, unten, links oder rechts neben dem PlacementRect gezeichnet werden sollen. 
 
 ```xaml
 <!-- An Image with a non-occluding ToolTip. -->

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 3212128a5fda9f6c5c811b2725b97f64655588b1
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8734377"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8801513"
 ---
 # <a name="getting-started-with-uwp-for-ios-developers"></a>Erste Schritte mit UWP für iOS-Entwickler
 
@@ -22,9 +22,9 @@ In diesem Abschnitt erfahren Sie schrittweise, wie Sie mit Microsoft Visual Stud
 
 Windows 10 führt eine neue Plattform zum Erstellen ansprechender apps auf Desktop, Laptop, Tablet, Phone-Geräten und vieles mehr. Da UWP-Apps viele einzigartige Funktionen bieten, führt die einfache Portierung einer iOS-App dazu, dass die Vorteile dieser Features nicht genutzt werden können. Es empfiehlt sich deshalb, die neuen Steuerelemente und Funktionen auszuprobieren. Sie werden sehen, dass sie die Entwicklungsarbeit erleichtern und die Gestaltung neuer Apps ermöglichen.
 
-Fazit: Portieren Sie Ihre App nicht einfach nur, sondern **wandeln Sie sie um**, und profitieren Sie von den neuen Funktionen und neuen Geräten. Zielen Sie nicht den kleinsten gemeinsamen Nenner, aber erstellen Sie funktionsreiche Umgebungen, die einzigartigen Features von Windows 10, z. B. live-Kacheln, Benachrichtigungen und Interaktion mit Cortana verwenden.
+Fazit: Portieren Sie Ihre App nicht einfach nur, sondern **wandeln Sie sie um**, und profitieren Sie von den neuen Funktionen und neuen Geräten. Zielen Sie nicht den kleinsten gemeinsamen Nenner, aber erstellen Sie funktionsreiche Umgebungen, die einzigartigen Features von Windows 10, z. B. live-Kacheln, Benachrichtigungen und Interaktion mit Cortana zu verwenden.
 
-Mit diesen exemplarischen Vorgehensweisen zunächst benötigen Sie einen Computer mit Windows 10 und Microsoft Visual Studio installiert sind. Sie können diese von den [downloads für Entwickler für die Programmierung von UWP-apps](https://developer.microsoft.com/en-us/windows/downloads)herunterladen. Sie haben keinen PC? Kein Problem: Sie können einen Mac verwenden. Informationen hierzu finden Sie unter [Installieren von Windows und der Entwicklertools auf dem Mac](setting-up-your-mac-with-windows-10.md).
+Erste Schritte mit diesen exemplarischen Vorgehensweisen, benötigen Sie einen Computer mit Windows 10 und Microsoft Visual Studio installiert sind. Sie können diese von den [downloads für Entwickler für die Programmierung von UWP-apps](https://developer.microsoft.com/en-us/windows/downloads)herunterladen. Sie haben keinen PC? Kein Problem: Sie können einen Mac verwenden. Informationen hierzu finden Sie unter [Installieren von Windows und der Entwicklertools auf dem Mac](setting-up-your-mac-with-windows-10.md).
 
 | Thema | Beschreibung |
 |-------|-------------|

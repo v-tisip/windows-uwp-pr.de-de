@@ -12,11 +12,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: abe77526a7ac12bc905839065913dd59d70fdf62
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8742884"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8798813"
 ---
 # <a name="handle-file-activation"></a>Behandeln der Dateiaktivierung
 
@@ -123,7 +123,7 @@ void App::OnFileActivated(Windows::ApplicationModel::Activation::FileActivatedEv
 > [!NOTE]
 > Achten Sie darauf, dass beim Start über einen Dateivertrag der Benutzer über die Zurück-Schaltfläche zu dem Bildschirm zurückkehren muss, von dem aus die App gestartet wurde, und nicht zum vorherigen Inhalt der App.
 
-Es wird empfohlen, dass Sie einen neuen XAML- **Frame** für jedes Aktivierungsereignis erstellen, die eine neue Seite geöffnet wird. Auf diese Weise nicht der navigationsbackstack für den neuen XAML-Frame keinen vorherigen Inhalt enthalten, der die app im aktuellen Fenster beim Anhalten. Wenn Sie einen einzelnen XAML- **Frame** für den Start und Dateiverträge verwenden möchten, sollten Sie die Seiten in den **Frame**--navigationsjournal löschen, vor dem Navigieren zu einer neuen Seite.
+Es wird empfohlen, dass Sie einen neuen XAML- **Frame** für jedes Aktivierungsereignis erstellen, die eine neue Seite geöffnet wird. Auf diese Weise nicht der navigationsbackstack für den neuen XAML-Frame keinen vorherigen Inhalt enthalten, der die app im aktuellen Fenster beim Anhalten. Wenn Sie einen einzelnen XAML- **Frame** für den Start und Dateiverträge verwenden möchten, sollten Sie die Seiten in den **Frame**-navigationsjournal löschen, vor dem Navigieren zu einer neuen Seite.
 
 Wenn Ihre app über dateiaktivierung gestartet wird, sollten Sie überlegen, einschließlich Benutzeroberfläche, die der Benutzer zur ersten Seite der app zurückkehren kann.
 
