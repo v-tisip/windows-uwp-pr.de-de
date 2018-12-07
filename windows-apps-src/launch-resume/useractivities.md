@@ -5,12 +5,12 @@ keywords: benutzeraktivität, benutzeraktivitäten, zeitachse, cortana aufgaben 
 ms.date: 04/27/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 98a7697715b456498db3ee5642e2743ae228b3cb
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: f35882af5ed7f66f59eb4e7fc4410223c4424e92
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8749975"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8790829"
 ---
 # <a name="continue-user-activity-even-across-devices"></a>Benutzeraktivitäten geräteübergreifend fortsetzen
 
@@ -99,7 +99,7 @@ protected override void OnActivated(IActivatedEventArgs e)
 }
 ```
 
-Der Code bewirkt, dass erkannt wird, ob die App über ein Protokoll aktiviert wurde. Wenn dem so ist, wird ermittelt, wie die App den Vorgang fortsetzen kann, für den sie aktiviert wurde. Da es sich um eine einfache App handelt, setzt sie nur eine einzige Aktivität fort: Wenn die App eingeblendet wird, befinden Sie sich auf der sekundären Seite.
+Der Code bewirkt, dass erkannt wird, ob die App über ein Protokoll aktiviert wurde. Wenn dem so ist, wird ermittelt, wie die App den Vorgang fortsetzen kann, für den sie aktiviert wurde. Da es eine einfache app, ist die einzige Aktivität setzt fort Sie auf der sekundären Seite, wenn die app eingeblendet.
 
 ## <a name="use-adaptive-cards-to-improve-the-timeline-experience"></a>Adaptive Karten verwenden, um die Zeitachse zu verbessern
 
@@ -167,7 +167,7 @@ Sie können die [UserActivity](https://docs.microsoft.com/uwp/api/windows.applic
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Aktivitäten des Benutzers (Projekt "ROME" Dokumente)](https://docs.microsoft.com/windows/project-rome/user-activities/)
+* [Aktivitäten des Benutzers (Project Rome Dokumente)](https://docs.microsoft.com/windows/project-rome/user-activities/)
 * [Adaptive Karten](https://docs.microsoft.com/adaptive-cards/)
 * [Adaptive Karten, Schnellansicht](http://adaptivecards.io/)
 * [Behandeln der URI-Aktivierung](https://docs.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)

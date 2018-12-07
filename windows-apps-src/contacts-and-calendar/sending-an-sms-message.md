@@ -7,17 +7,17 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 427eb1b895269727d82e42d5abc3ae1f1da1a35d
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8731565"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8791845"
 ---
 # <a name="send-an-sms-message"></a>Senden einer SMS
 
 In diesem Thema erfahren Sie, wie Sie das Dialogfeld zum Verfassen einer SMS starten, damit Benutzer eine SMS senden können. Sie können die Felder der SMS vor dem Anzeigen des Dialogfelds mit Daten füllen. Die Nachricht wird erst gesendet, wenn Benutzer auf die Schaltfläche „Senden“ tippen.
 
-Um diesen Code jeweils aufzurufen, deklarieren Sie die **Chat**, **SmsSend**und **ChatSystem** Funktionen im Paketmanifest. Hierbei handelt es sich um [eingeschränkte Funktionen](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#special-and-restricted-capabilities) , aber Sie können diese in Ihrer app verwenden. Sie benötigen die konzeptgenehmigung nur dann, wenn Sie Ihre app im Store veröffentlichen möchten. Finden Sie unter [Kontotypen, Standorte und Gebühren](https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees).
+Um diesen Code jeweils aufzurufen, deklarieren Sie die **Chat**, **SmsSend**und **ChatSystem** Funktionen im Paketmanifest. Hierbei handelt es sich um [eingeschränkte Funktionen](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#special-and-restricted-capabilities) , aber Sie können diese in Ihrer app verwenden. Sie benötigen die konzeptgenehmigung nur dann, wenn Sie beabsichtigen, Ihre app im Store veröffentlichen. Finden Sie unter [Kontotypen, Standorte und Gebühren](https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees).
 
 ## <a name="launch-the-compose-sms-dialog"></a>Starten des Dialogfelds zum Verfassen einer SMS
 

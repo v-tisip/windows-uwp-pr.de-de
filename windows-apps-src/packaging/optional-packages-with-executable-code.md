@@ -5,12 +5,12 @@ ms.date: 9/30/2018
 ms.topic: article
 keywords: Windows10, UWP, App-Installer, AppInstaller, querladen, zugehörige Gruppe, optionale Pakete
 ms.localizationpriority: medium
-ms.openlocfilehash: 795155ab38be11987d978d8c3843a73b7d359277
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 465253be7ebf8cf7794004c0a6832a78cb0ced69
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8755046"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8792629"
 ---
 # <a name="optional-packages-with-executable-code"></a>Optionale Pakete mit ausführbarem Code
  
@@ -25,6 +25,9 @@ Informationen zum Abrufen der aktuellen Entwicklungstools finden Sie unter [Down
 
 > [!NOTE]
 > Um eine App an den Store zu übermitteln, die optionale Pakete und/oder zugehörige Gruppen verwendet, benötigen Sie eine Berechtigung. Optionale Pakete und zugehörige Gruppen können für Zeile des Business (LOB) oder Unternehmens-apps ohne Partner Center-Berechtigung verwendet werden, wenn sie nicht an den Store übermittelt werden. Informationen zum Erhalt einer Berechtigung, eine App zu übermitteln, die optionale Pakete und zugehörige Gruppen verwendet, finden Sie unter [Windows-Support für Entwickler](https://developer.microsoft.com/windows/support).
+
+> [!NOTE]
+> Optionale Pakete mit ausführbarem Code müssen eine [Verwandte Gruppe](https://docs.microsoft.com/windows/uwp/packaging/optional-packages#related-sets)gehören. Sie kann nicht zur Ausführung von Code über ein optionales Paket, es sei denn, sie Teil einer verwandten Gruppe ist.
 
 ## <a name="c-optional-packages-with-executable-code"></a>Optionale C++-Pakete mit ausführbarem Code
 

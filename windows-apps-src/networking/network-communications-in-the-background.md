@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f206700360b6590a88b76f04531c9c6b1e94414f
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8730037"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8791321"
 ---
 # <a name="network-communications-in-the-background"></a>Netzwerkkommunikation im Hintergrund
 Um die Netzwerkkommunikation fortzusetzen, während Sie sich nicht im Vordergrund befindet, kann Ihre app Hintergrundaufgaben und eine der folgenden zwei Optionen verwenden.
@@ -26,7 +26,7 @@ Um die Netzwerkkommunikation fortzusetzen, während Sie sich nicht im Vordergrun
 
 - Fügen Sie die **InternetAvailable**-Bedingung zur Hintergrundaufgabe [BackgroundTaskBuilder.AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) hinzu, um die Hintergrundaufgabe zu verzögern, bis der Netzwerkstapel ausgeführt wird. Dies spart Energie, da die Hintergrundaufgabe nicht ausgeführt wird, bis das Netzwerk verfügbar ist. Diese Bedingung stellt keine Aktivierung in Echtzeit bereit.
 
-Unabhängig vom verwendeten Auslöser, legen Sie [IsNetworkRequested](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder) für die Hintergrundaufgabe fest, um sicherzustellen, dass das Netzwerk während der Ausführung der Hintergrundaufgabe unterbrechungsfreie ausgeführt wird. Dies weist die Infrastruktur für Hintergrundaufgaben an, die Netzwerkverbindung für die Ausführung der Aufgabe auch dann beizubehalten, wenn sich das Gerät im verbundenen Standbymodus befindet. Wenn die Hintergrundaufgabe nicht **IsNetworkRequested**verwendet wird, klicken Sie dann kann die Hintergrundaufgabe nicht Zugriff auf das Netzwerk, wenn sich dieses im verbundenen Standbymodus befindet (z. B. wenn der Bildschirm eines Smartphones ausgeschaltet ist).
+Unabhängig vom verwendeten Auslöser, legen Sie [IsNetworkRequested](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder) für die Hintergrundaufgabe fest, um sicherzustellen, dass das Netzwerk während der Ausführung der Hintergrundaufgabe unterbrechungsfreie ausgeführt wird. Dies weist die Infrastruktur für Hintergrundaufgaben an, die Netzwerkverbindung für die Ausführung der Aufgabe auch dann beizubehalten, wenn sich das Gerät im verbundenen Standbymodus befindet. Wenn die Hintergrundaufgabe nicht **IsNetworkRequested**verwendet wird, klicken Sie dann kann die Hintergrundaufgabe nicht Zugriff auf das Netzwerk, wenn sich dieses im verbundenen Standbymodus befindet (z. B., wenn der Bildschirm eines Smartphones ausgeschaltet ist).
 
 ## <a name="socket-broker-and-the-socketactivitytrigger"></a>Socketbroker und SocketActivityTrigger
 Wenn Ihre App eine [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)-, [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882)- oder [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906)-Verbindung verwendet, sollten Sie mithilfe von [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) und Socketbroker Benachrichtigungen einrichten, um über eingehenden Datenverkehr für ihre App informiert zu werden, wenn diese im Hintergrund ausgeführt wird.
@@ -155,7 +155,7 @@ Ein vollständiges Beispiel zur Verwendung des [**SocketActivityTrigger**](https
 Wahrscheinlich wird Ihnen auffallen, dass im Beispiel beim Erstellen eines neuen Sockets oder beim Aufrufen eines vorhandenen Sockets **TransferOwnership** aufgerufen wird und dazu nicht der in diesem Thema beschriebene **OnSuspending**-Ereignishandler verwendet wird. Dies liegt daran, dass in diesem Beispiel schwerpunktmäßig der [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009) veranschaulicht werden soll und der Socket während der Ausführung für keine weiteren Aktivitäten verwendet wird. In der Regel wird Ihre App komplexer sein, sodass Sie mit **OnSuspending** bestimmen sollten, wann **TransferOwnership** aufgerufen wird.
 
 ## <a name="control-channel-triggers"></a>Steuerkanaltrigger
-Stellen Sie zunächst sicher, dass Steuerkanaltrigger korrekt verwendet werden. Wenn Sie [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)oder [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882), [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906) Verbindungen verwenden, empfehlen wir die Verwendung von [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009). Sie können Steuerkanaltrigger für **StreamSocket** verwenden, wobei diese jedoch mehr Ressourcen belegen und möglicherweise nicht im verbundenen Standbymodus funktionieren.
+Stellen Sie zunächst sicher, dass Steuerkanaltrigger korrekt verwendet werden. Wenn Sie [**DatagramSocket**](https://msdn.microsoft.com/library/windows/apps/br241319)oder [**StreamSocket**](https://msdn.microsoft.com/library/windows/apps/br226882), [**StreamSocketListener**](https://msdn.microsoft.com/library/windows/apps/br226906) Verbindungen verwenden, empfehlen wir, dass Sie [**SocketActivityTrigger**](https://msdn.microsoft.com/library/windows/apps/dn806009)verwenden. Sie können Steuerkanaltrigger für **StreamSocket** verwenden, wobei diese jedoch mehr Ressourcen belegen und möglicherweise nicht im verbundenen Standbymodus funktionieren.
 
 Wenn Sie WebSockets, [**IXMLHTTPRequest2**](https://msdn.microsoft.com/library/windows/desktop/hh831151), [**System.Net.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639)oder [**Windows.Web.Http.HttpClient**](/uwp/api/windows.web.http.httpclient)verwenden, müssen Sie [**ControlChannelTrigger**](https://msdn.microsoft.com/library/windows/apps/hh701032)verwenden.
 

@@ -7,17 +7,17 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 714da78a8860eec92bce9389185f52a58e45b44e
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8695383"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8791175"
 ---
 # <a name="span-iddevlaunchresumeauto-launchingwithautoplayspanauto-launching-with-autoplay"></a><span id="dev_launch_resume.auto-launching_with_autoplay"></span>Automatisches Starten mit automatischer Wiedergabe
 
 Sie können die **automatische Wiedergabe** verwenden, um Ihre App als Option bereitzustellen, wenn ein Benutzer ein Gerät an seinen PC anschließt. Hierzu zählen Nicht-Volumegeräte wie Kameras oder Media Player und Volumegeräte wie USB-Sticks, SD-Karten oder DVDs. Die **automatische Wiedergabe** bietet Ihnen auch die Möglichkeit, Ihre App als Option anzubieten, wenn Benutzer mithilfe von Näherung (Kopplung) Dateien zwischen zwei PCs freigeben.
 
-> **Hinweis:** Wenn Sie ein Gerätehersteller sind und Sie Ihre [Microsoft Store-Geräte-app](http://go.microsoft.com/fwlink/p/?LinkID=301381) als Handler für das Gerät **automatisch wiedergeben** zuordnen möchten, können Sie diese app in den Gerätemetadaten identifizieren. Weitere Informationen finden Sie im Thema [Automatische Wiedergabe für MicrosoftStore-Geräte-Apps](http://go.microsoft.com/fwlink/p/?LinkId=306684).
+> **Hinweis:** Wenn Sie ein Gerätehersteller sind und der [Microsoft Store-Geräte-app](http://go.microsoft.com/fwlink/p/?LinkID=301381) als Handler für das Gerät **automatisch wiedergeben** zuordnen möchten, Sie können diese app in den Gerätemetadaten angeben. Weitere Informationen finden Sie im Thema [Automatische Wiedergabe für MicrosoftStore-Geräte-Apps](http://go.microsoft.com/fwlink/p/?LinkId=306684).
 
 ## <a name="register-for-autoplay-content"></a>Registrieren für Inhalt für die automatische Wiedergabe
 
@@ -218,7 +218,7 @@ async internal void CopyImage(Windows.Storage.IStorageItem file,
 
 1.  Drücken SieF5, um die App zu erstellen und bereitzustellen (im Debugmodus).
 2.  Legen Sie eine Kameraspeicherkarte oder ein anderes Speichergerät einer Kamera in Ihren PC ein, um die App auszuführen. Wählen Sie dann in der Liste mit den Optionen für die automatische Wiedergabe eine der Inhaltsereignisoptionen aus, die Sie in der Datei „package.appxmanifest“ angegeben haben. Dieser Beispielcode blendet Bilder im DCIM-Ordner auf der Speicherkarte einer Kamera nur ein oder kopiert diese. Wenn die Speicherkarte Ihrer Kamera Bilder in „AVCHD“ oder „PRIVATE\\ACHD“ speichert, müssen Sie den Code entsprechend ändern.
-    **Hinweis:** Wenn Sie keine Kameraspeicherkarte haben, können Sie einen USB-Stick verwenden, wenn er verfügt über einen Ordner mit dem Namen **DCIM** im Stammverzeichnis und der Ordner "DCIM" einen Unterordner hat, das Bilder.
+    **Hinweis:**, wenn Sie keine Kameraspeicherkarte haben, können Sie einen USB-Stick verwenden, wenn er verfügt über einen Ordner mit dem Namen **DCIM** im Stammverzeichnis und der Ordner "DCIM" einen Unterordner hat, die Bilder enthält.
 
 ## <a name="register-for-an-autoplay-device"></a>Registrieren für ein Gerät mit automatischer Wiedergabe
 
@@ -227,7 +227,7 @@ Sie können Apps als Optionen für Geräteereignisse der **automatischen Wiederg
 
 Hier wird gezeigt, wie Sie eine App als Option für die **automatische Wiedergabe** identifizieren, wenn eine Kamera an einen PC angeschlossen wird. Die App wird als Handler für das **WPD\\ImageSourceAutoPlay**-Ereignis registriert. Dabei handelt es sich um ein häufiges Ereignis, das vom WPD-System (Windows Portable Device) ausgelöst wird, wenn es von Kameras und anderen Bildverarbeitungsgeräten benachrichtigt wird, dass es sich dabei um eine ImageSource mit MTP handelt. Weitere Informationen finden Sie unter [Tragbare Windows-Geräte](https://msdn.microsoft.com/library/windows/hardware/ff597729).
 
-**Wichtige**die [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) -APIs sind Teil der [Familie der Desktopgeräte](https://msdn.microsoft.com/library/windows/apps/dn894631). Apps können diese APIs nur auf Windows 10-Geräten in der Familie der Desktopgeräte, z. B. PCs verwenden.
+**Wichtige**die [**Windows.Devices.Portable.StorageDevice**](https://msdn.microsoft.com/library/windows/apps/br225654) -APIs sind Teil der [desktop-Gerätefamilie](https://msdn.microsoft.com/library/windows/apps/dn894631). Apps können diese APIs nur auf Windows 10-Geräten in der Familie der Desktopgeräte, z. B. PCs verwenden.
 
  
 

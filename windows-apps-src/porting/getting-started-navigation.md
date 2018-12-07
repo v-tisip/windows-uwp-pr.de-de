@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 63a39dfcfaab8b42afc98b7fe786a05908d49d16
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8748154"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8790144"
 ---
 # <a name="getting-started-navigation"></a>Erste Schritte: Navigation
 
@@ -22,7 +22,7 @@ iOS bietet die **UINavigationController**-Klasse als In-App-Navigationshilfe: Si
 
 In orientierten eine Windows 10-app mit mehreren Ansichten holt mehr von einer Website Ansatz zur Navigation. Sie können sich vorstellen, wie Benutzer von Seite zu Seite wechseln, indem Sie auf Steuerelemente klicken, um durch die App zu navigieren. Weitere Informationen finden Sie unter [Navigationsdesigngrundlagen](https://msdn.microsoft.com/library/windows/apps/dn958438).
 
-Eine der Methoden zum Verwalten dieser Navigation in einer Windows 10-app ist die Verwendung die [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) -Klasse. Die folgende exemplarische Vorgehensweise veranschaulicht, wie Sie dies ausprobieren können.
+Eine der Methoden zum Verwalten dieser Navigation in einer Windows 10-app ist die [**Frame**](https://msdn.microsoft.com/library/windows/apps/br242682) -Klasse nutzen können. Die folgende exemplarische Vorgehensweise veranschaulicht, wie Sie dies ausprobieren können.
 
 Fahren Sie mit der Lösung aus früheren Schritten fort, öffnen Sie die **MainPage.xaml**-Datei, und fügen Sie eine Schaltfläche in der Ansicht **Entwurf** hinzu. Ändern Sie die **Content**-Eigenschaft der Schaltfläche von „Button“ in „Go To Page“. Erstellen Sie anschließend einen Handler für das **Click**-Ereignis der Schaltfläche, wie in der folgenden Abbildung dargestellt. Wenn Sie nicht mehr wissen, wie das geht, schlagen Sie unter der exemplarischen Vorgehensweise im vorherigen Abschnitt nach (Hinweis: Doppelklicken Sie auf die Schaltfläche in der Ansicht **Entwurf**).
 

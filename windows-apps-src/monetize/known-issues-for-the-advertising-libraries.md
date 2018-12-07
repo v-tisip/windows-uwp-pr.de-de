@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Anzeigen, Werbung, Bekannte Probleme, Problembehandlung
 ms.localizationpriority: medium
 ms.openlocfilehash: 3df88af638886e6bbda9b2f2f2065809da319532
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8743311"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8789104"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>Bekannte Probleme und Informationen zur Problembehandlung von Anzeigen in Apps
 
@@ -46,7 +46,7 @@ Es gibt viele Gründe, warum möglicherweise keine Anzeigen angezeigt werden, ei
 
 * Wenn Sie in der letzten halben Stunde eine neue Anzeigeneinheiten-ID erstellt haben, wird eine Anzeige möglicherweise erst angezeigt, wenn der Server neue Daten durch das System propagiert hat. Vorhandene IDs, die zuvor bereits Anzeigen angezeigt haben, sollten Anzeigen sofort anzeigen.
 
-Wenn Sie in der App Testanzeigen sehen können, funktioniert Ihr Code und kann Anzeigen anzeigen. Bei Problemen wenden Sie sich an den [Produktsupport](https://developer.microsoft.com/en-us/windows/support). Wählen Sie auf dieser Seite **wenden Sie sich an uns**.
+Wenn Sie in der App Testanzeigen sehen können, funktioniert Ihr Code und kann Anzeigen anzeigen. Bei Problemen wenden Sie sich an den [Produktsupport](https://developer.microsoft.com/en-us/windows/support). Wählen Sie auf dieser Seite **kontaktieren Sie uns**.
 
 Sie können auch im [Forum](http://go.microsoft.com/fwlink/p/?LinkId=401266) eine Frage stellen.
 
@@ -58,7 +58,7 @@ Testanzeigen können angezeigt werden, auch wenn Sie Liveanzeigen erwarten. Dies
 
 * Quergeladene Apps oder im Emulator ausgeführte Apps zeigen keine Liveanzeigen an.
 
-Wenn eine liveanzeigeneinheit testanzeigen bereitstellt, wird zeigt Status der Anzeigeeinheit **aktiv und testanzeigen bereitstellend** im Partner Center. Dies gilt zurzeit nicht für Telefon-Apps.
+Wenn eine liveanzeigeneinheit testanzeigen bereitstellt, wird, zeigt Status der Anzeigeeinheit **aktiv und testanzeigen bereitstellend** im Partner Center. Dies gilt zurzeit nicht für Telefon-Apps.
 
 
 <span id="reference_errors"/>

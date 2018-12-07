@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Directx, Eingabelatenz
 ms.localizationpriority: medium
 ms.openlocfilehash: 537dd6e9d3f300666a0692b66f422ce00dd68460
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8737684"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8789973"
 ---
 #  <a name="optimize-input-latency-for-universal-windows-platform-uwp-directx-games"></a>Optimieren der Eingabelatenz für UWP-DirectX-Spiele (Universelle Windows-Plattform)
 
@@ -233,7 +233,7 @@ void JigsawPuzzleMain::StartRenderThread()
 }
 ```
 
-Die Vorlage " **DirectX 11- und XAML-App (Universal Windows)** " in Microsoft Visual Studio2015 teilt die spielschleife in mehreren Threads auf ähnliche Weise. Dabei wird das [**Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460)-Objekt verwendet, um einen Thread für die Behandlung der Eingabe zu starten. Außerdem wird ein Renderthread erstellt, der unabhängig vom XAML-UI-Thread ist. Weitere Informationen zu diesen Vorlagen finden Sie unter [Erstellen eines UWP- und eines DirectX-Spieleprojekts aus einer Vorlage](user-interface.md).
+Die Vorlage " **DirectX 11- und XAML-App (Universal Windows)** " in Microsoft Visual Studio2015 wird die spielschleife in mehrere Threads auf ähnliche Weise. Dabei wird das [**Windows::UI::Core::CoreIndependentInputSource**](https://msdn.microsoft.com/library/windows/apps/dn298460)-Objekt verwendet, um einen Thread für die Behandlung der Eingabe zu starten. Außerdem wird ein Renderthread erstellt, der unabhängig vom XAML-UI-Thread ist. Weitere Informationen zu diesen Vorlagen finden Sie unter [Erstellen eines UWP- und eines DirectX-Spieleprojekts aus einer Vorlage](user-interface.md).
 
 ## <a name="additional-ways-to-reduce-input-latency"></a>Weitere Möglichkeiten zur Reduzierung der Eingabelatenz
 
@@ -246,7 +246,7 @@ Abbildung1
 
 ![Abbildung 1: Eingabelatenz in DirectX ](images/input-latency1.png)
 
-Windows8.1 eingeführt DXGI das **DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT** -Flag für die SwapChain, damit können apps diese Latenz leicht reduzieren, ohne dass diese die vorhandene Warteschlange leer gehalten implementieren. Mit diesem Flag erstellte Swapchains werden als Swapchains mit Wartemöglichkeit bezeichnet. Abbildung2 zeigt den ungefähren Lebenszyklus und die Reaktion auf ein Eingabeereignis bei Verwendung von Swapchains mit Wartemöglichkeit:
+Windows8.1 DXGI, das **DXGI\_SWAP\_CHAIN\_FLAG\_FRAME\_LATENCY\_WAITABLE\_OBJECT** -Flag für die SwapChain, damit können apps diese Latenz leicht reduzieren, ohne dass diese die vorhandene Warteschlange leer gehalten implementieren eingeführt. Mit diesem Flag erstellte Swapchains werden als Swapchains mit Wartemöglichkeit bezeichnet. Abbildung2 zeigt den ungefähren Lebenszyklus und die Reaktion auf ein Eingabeereignis bei Verwendung von Swapchains mit Wartemöglichkeit:
 
 Abbildung2
 

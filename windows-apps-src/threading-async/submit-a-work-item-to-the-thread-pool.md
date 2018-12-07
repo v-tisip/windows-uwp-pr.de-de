@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Threads, Threadpool
 ms.localizationpriority: medium
 ms.openlocfilehash: 4c1df6a4b72b7c73cac41e66ef1074975db0d979
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8754475"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8793092"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>Übermitteln einer Arbeitsaufgabe an den Threadpool
 
@@ -31,7 +31,7 @@ Erstellen Sie eine Arbeitsaufgabe, indem Sie [**RunAsync**](https://msdn.microso
 Drei Versionen von [**RunAsync**](https://msdn.microsoft.com/library/windows/apps/BR230593) sind verfügbar. Damit können Sie optional die Priorität der Arbeitsaufgabe angeben und steuern, ob sie gleichzeitig mit anderen Arbeitsaufgaben ausgeführt wird.
 
 >[!NOTE]
->Verwenden Sie [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) , um Zugriff auf den UI-Thread und den Fortschritt der Arbeitsaufgabe anzuzeigen.
+>Verwenden Sie [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) , um Zugriff auf den UI-Thread und den Status der Arbeitsaufgabe anzuzeigen.
 
 Im folgenden Beispiel werden eine Arbeitsaufgabe erstellt und ein Lambda für die Verarbeitung angegeben:
 
@@ -350,7 +350,7 @@ Beachten Sie, dass vom Vervollständigungshandler überprüft wird, ob die Arbei
 
 ## <a name="summary-and-next-steps"></a>Zusammenfassung und nächste Schritte
 
-Weitere Informationen finden Sie durch das Herunterladen des Codes in dieser schnellstartanleitung unter [Erstellen einer ThreadPool Element Beispiel funktioniert](http://go.microsoft.com/fwlink/p/?LinkID=328569) für Windows8.1, geschrieben und den Quellcode in einer Win\_unap Windows 10-app wiederverwenden.
+Weitere Informationen finden Sie durch das Herunterladen des Codes in dieser schnellstartanleitung unter dem [Erstellen einer ThreadPool Element Beispiel funktioniert](http://go.microsoft.com/fwlink/p/?LinkID=328569) für Windows8.1, geschrieben und den Quellcode in einer Win\_unap Windows 10-app wiederverwenden.
 
 ## <a name="related-topics"></a>Verwandte Themen
 

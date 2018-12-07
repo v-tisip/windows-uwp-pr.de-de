@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows10, verpackung, paketlayout, bestandspaket
 ms.localizationpriority: medium
 ms.openlocfilehash: b7ae65d13f92f5ab28f2f5eda468032bb7f83793
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8747907"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8791676"
 ---
 # <a name="introduction-to-asset-packages"></a>Einführung zu Bestandspaketen
 
@@ -26,7 +26,7 @@ Da Bestandspakete sämtliche architektur-, sprach- und skalierungsunabhängigen 
 ### <a name="how-do-asset-packages-affect-publishing"></a>Wie wirken sich Bestandspakete auf die Veröffentlichung aus?
 Der offensichtlichste Vorteil von Bestandspaketen ist die reduzierte Größe von verpackten Apps. Kleinere App-Pakete beschleunigen den Veröffentlichungsprozess der App, indem der Store weniger Dateien verarbeitet. Dies ist jedoch nicht der wichtigste Vorteil von Bestandspaketen.
 
-Wenn ein Bestandspaket erstellt wird, können Sie angeben, ob das Ausführen des Pakets zugelassen werden soll. Da Bestandspakete nur architekturunabhängige Dateien enthalten sollten, enthalten sie in der Regel keine .dll oder .exe-Dateien, sodass Bestandspakete in der Regel nicht ausgeführt werden müssen. Die Bedeutung dieser Unterscheidung besteht darin, dass während des Veröffentlichungsprozesses alle ausführbaren Pakete gescannt werden müssen, um sicherzustellen, dass sie keine Malware enthalten. Dieser Scanvorgang dauert bei größeren Paketen länger. Wenn ein Paket jedoch als nicht ausführbar gekennzeichnet ist, stellt die Installation der App sicher, dass die in diesem Paket enthaltenen Dateien nicht ausgeführt werden können. Mit dieser Garantie entfällt während der Veröffentlichung der App (und auch der Updates) die Notwendigkeit für eine vollständige Paketprüfung, und die Scanzeit für Malware wird erheblich reduziert. Dadurch wird die Veröffentlichung für Apps, die Bestandspakete verwenden, deutlich beschleunigt. Beachten Sie, dass diese [flat-Bundle-app-Pakete](flat-bundles.md) auch verwendet werden muss, um diesen veröffentlichungsvorteil zu erhalten, da dies dem Store ist, jede .appx oder .msix-Paketdatei parallel zu verarbeiten ermöglicht. 
+Wenn ein Bestandspaket erstellt wird, können Sie angeben, ob das Ausführen des Pakets zugelassen werden soll. Da Bestandspakete nur architekturunabhängige Dateien enthalten sollten, enthalten sie in der Regel keine .dll oder .exe-Dateien, sodass Bestandspakete in der Regel nicht ausgeführt werden müssen. Die Bedeutung dieser Unterscheidung besteht darin, dass während des Veröffentlichungsprozesses alle ausführbaren Pakete gescannt werden müssen, um sicherzustellen, dass sie keine Malware enthalten. Dieser Scanvorgang dauert bei größeren Paketen länger. Wenn ein Paket jedoch als nicht ausführbar gekennzeichnet ist, stellt die Installation der App sicher, dass die in diesem Paket enthaltenen Dateien nicht ausgeführt werden können. Mit dieser Garantie entfällt während der Veröffentlichung der App (und auch der Updates) die Notwendigkeit für eine vollständige Paketprüfung, und die Scanzeit für Malware wird erheblich reduziert. Dadurch wird die Veröffentlichung für Apps, die Bestandspakete verwenden, deutlich beschleunigt. Beachten Sie, dass diese [flat-Bundle-app-Pakete](flat-bundles.md) auch verwendet werden müssen, um diesen veröffentlichungsvorteil zu erhalten, da dies dem Store ist, jede .appx oder .msix-Paketdatei parallel zu verarbeiten ermöglicht. 
 
 
 ### <a name="should-i-use-asset-packages"></a>Sollte ich Bestandspakete verwenden?

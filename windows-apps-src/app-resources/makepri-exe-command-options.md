@@ -7,22 +7,22 @@ ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: bc08376dafec8aad9d65ef5acd8d19943d242eed
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8756076"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8791709"
 ---
 # <a name="makepriexe-command-line-options"></a>Befehlszeilenoptionen für MakePRI.exe
 
 [MakePri.exe](compile-resources-manually-with-makepri.md) akzeptiert die Befehle `createconfig`, `dump`, `new`, `resourcepack` und `versioned`. In diesem Thema werden die Befehlszeilenoptionen für diese Befehle erläutert.
 
 > [!NOTE]
-> MakePri.exe wird installiert, wenn Sie im **Windows SDK für UWP-Apps verwaltet** Option während der Installation von Windows Software Development Kit aktivieren. Es installiert ist, auf den Pfad `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (ebenso wie in den Ordnern für die anderen Architekturen). Beispiel: `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
+> MakePri.exe wird installiert, wenn Sie die Option **Windows SDK für verwalteten UWP-Apps** während der Installation von Windows Software Development Kit überprüfen. Es installiert ist, um den Pfad `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (ebenso wie in den Ordnern für die anderen Architekturen). Beispiel: `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
 ## <a name="getting-help-from-the-command-line"></a>Hilfe von der Befehlszeile
 
-Sie können ausführen `MakePri.exe help` oder `MakePri.exe /?` um die Befehle anzuzeigen, die Sie mit MakePri.exe verwenden können. Sie können auch ausstellen `MakePri.exe <command> /?` finden Sie Informationen über einen Befehl und in sehr seltenen Fällen sogar `MakePri.exe <command> <option>` zu Einzelheiten zu den Optionen finden Sie unter.
+Sie können ausführen `MakePri.exe help` oder `MakePri.exe /?` um die Befehle anzuzeigen, die Sie mit MakePri.exe verwenden können. Sie können auch ausstellen `MakePri.exe <command> /?` finden Sie die Einzelheiten zu einem Befehl und in sehr seltenen Fällen sogar `MakePri.exe <command> <option>` für Einzelheiten zu den Optionen finden Sie unter.
 
 ## <a name="makepri-commands"></a>MakePri-Befehle
 
@@ -424,7 +424,7 @@ Sie verwenden der Option "Optionen" (/ e/a) mit `new`, `resourcepack`, und `vers
 /IndexOptions(io) <OPTIONS>
 ```
 
-**Optionen** ist eine durch Trennzeichen getrennte Liste der folgenden Optionen besteht.
+**Optionen** ist eine durch Trennzeichen getrennte Liste besteht aus der folgenden Optionen.
 
 - +/-HiddenFiles(hf). Index (+) oder ignorieren (-) Dateien und Ordner ausgeblendet.
 - +/-LinkedFiles(lf). Index (+) oder ignorieren (-) verknüpft, Dateien und Ordner.

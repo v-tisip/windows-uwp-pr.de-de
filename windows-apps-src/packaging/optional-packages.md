@@ -7,16 +7,16 @@ ms.topic: article
 keywords: Windows 10, Uwp, optionale Pakete, zusammengehörig, Paket-Erweiterung, visual studio
 ms.localizationpriority: medium
 ms.openlocfilehash: f62d6c99acc75033403fac7a498308cea6f7d3f8
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8750246"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8792992"
 ---
 # <a name="optional-packages-and-related-set-authoring"></a>Optionale Pakete und die Erstellung zugehöriger Sets
 Optionale Pakete enthalten Inhalte, die in ein Hauptpaket integriert werden können. Diese sind nützlich für herunterladbare Inhalte (DLC), da große Apps so im Hinblick auf größenbeschränkungen, oder auch zusätzliche Inhalte getrennt von der ursprünglichen app.
 
-Zugehörige Gruppen sind eine Erweiterung der optionalen Pakete – können Sie strenger Versionen für Haupt- und optionale Pakete zu erzwingen. Außerdem können Sie auch systemeigenen Code (C++) von optionalen Paketen laden. 
+Verwandte Gruppen sind eine Erweiterung der optionalen Pakete – sie können über die wichtigsten und optionale Pakete strenger Versionen zu erzwingen. Sie können Sie die systemeigenen Code (C++) von optionalen Paketen laden. 
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -36,16 +36,16 @@ Während Sie in diesem Artikel lesen, empfiehlt es sich, dass Sie folgen Sie das
 Um ein optionales Paket in Visual Studio erstellen, müssen Sie:
 1. Stellen Sie sicher, dass Ihre app **Zielplattformversion Min** auf festgelegt ist: 10.0.15063.0 oder höher.
 2. Öffnen Sie in Ihrem Projekt **Hauptpaket** der `Package.appxmanifest` Datei. Navigieren Sie zur Registerkarte "Verpacken", und notieren Sie Ihren **paketfamilienname**, dies ist alles, was vor dem Zeichen "_".
-3. Aus Ihrem Projekt **optionales Paket** rechten Maustaste klicken Sie auf die `Package.appxmanifest` , und wählen Sie **mit öffnen > XML (Text)-Editor**.
-4. Suchen Sie nach der `<Dependencies>` Element in der Datei. Fügen Sie Folgendes hinzu:
+3. Aus Ihrem Projekt **optionales Paket** Rechtsklick die `Package.appxmanifest` , und wählen Sie **mit öffnen > XML (Text) Editor**.
+4. Suchen Sie die `<Dependencies>` Element in der Datei. Fügen Sie Folgendes hinzu:
 
 ```XML
 <uap3:MainPackageDependency Name="[MainPackageDependency]"/>
 ```
 
-Ersetzen Sie `[MainPackageDependency]` mit der **paketfamilienname** aus Schritt2. Dies legt fest, dass das **optionale Paket** das **Hauptpaket**abhängig ist.
+Ersetzen Sie `[MainPackageDependency]` mit der **paketfamilienname** aus Schritt2. Dies wird angegeben, dass das **optionale Paket** das **Hauptpaket**abhängig ist.
 
-Wenn Sie die Schritte 1 bis 4, einrichten-Paket-Abhängigkeiten haben, können Sie entwickeln wie gewohnt weiter. Wenn Sie Code aus das optionale Paket in das Hauptpaket laden möchten, müssen Sie eine verwandte Gruppe zu erstellen. Finden Sie im Abschnitt [verknüpft legt](#related_sets) für weitere Details.
+Wenn Sie die Schritte 1 bis 4, einrichten-Paket-Abhängigkeiten haben, können Sie entwickeln wie gewohnt weiter. Wenn Sie Code aus optionalen Pakets in das Hauptpaket laden möchten, müssen Sie eine verwandte Gruppe zu erstellen. Finden Sie im Abschnitt [verknüpft legt](#related_sets) für Weitere Informationen.
 
 Visual Studio kann konfiguriert werden, um Ihrem Hauptpaket jedes Mal erneut bereitstellen Sie ein optionales Paket bereitstellen. Um die Buildabhängigkeit in Visual Studio festlegen, sollten Sie folgende Aktionen ausführen:
 
@@ -56,7 +56,7 @@ Jetzt, jedes Mal, wenn Sie F5 oder ein optionales Paket-Projekt erstellen, wird 
 
 ## Zugehörige Gruppen<a name="related_sets"></a>
 
-Wenn Sie Code über ein optionales Paket in das Hauptpaket laden möchten, müssen Sie eine verwandte Gruppe zu erstellen. Um eine verwandte Gruppe zu erstellen, müssen die Hauptpaket und optionalen Pakets eng werden. Die Metadaten für zugehörige Gruppen wird in der Datei .appxbundle oder .msixbundle des Hauptpakets angegeben. Visual Studio erleichtert die richtige Metadaten in Ihren Dateien zu erhalten. Gehen Sie folgendermaßen vor, um Ihre app-Lösung für die zugehörige Gruppen zu konfigurieren:
+Wenn Sie Code über ein optionales Paket in das Hauptpaket laden möchten, müssen Sie eine verwandte Gruppe zu erstellen. Um eine verwandte Gruppe zu erstellen, müssen die Hauptpaket und optionalen Pakets eng werden. Die Metadaten für zugehörige Gruppen wird in der Datei .appxbundle oder .msixbundle des Hauptpakets angegeben. Visual Studio können Sie die richtige Metadaten in Ihren Dateien zu erhalten. Um Ihre app-Lösung für die zugehörige Gruppen zu konfigurieren, verwenden Sie die folgenden Schritte aus:
 
 1. Klicken Sie mit der rechten Maustaste auf das Hauptpaket-Projekt, wählen Sie **Hinzufügen > Neues Element**
 2. Klicken Sie im Fenster Suchen Sie die installierten Vorlagen für "txt", und fügen Sie eine neue Textdatei.
@@ -74,10 +74,10 @@ Wenn Sie Code über ein optionales Paket in das Hauptpaket laden möchten, müss
 "..\ActivatableOptionalPackage1\x86\Release\ActivatableOptionalPackage3_1.1.1.0\ ActivatableOptionalPackage3_1.1.1.0.appx"
 ```
 
-Wenn Ihre Lösung auf diese Weise konfiguriert ist, erstellt Visual Studio ein Paketmanifest für das Hauptpaket mit alle erforderlichen Metadaten für zugehörige Gruppen. 
+Wenn Ihre Lösung auf diese Weise konfiguriert ist, erstellt Visual Studio ein Paketmanifest für das Hauptpaket mit alle erforderlichen Metadaten für die zugehörige Gruppen. 
 
-Beachten Sie, die optionale Pakete wie ein `Bundle.Mapping.txt` -Datei für verwandte funktioniert nur unter Windows 10, Version 1703 oder höher. Darüber hinaus sollte Ihre app Min Zielplattformversion auf 10.0.15063.0 oder höher festgelegt werden.
+Beachten Sie, die optionale Pakete wie ein `Bundle.Mapping.txt` -Datei für die zugehörige Gruppen funktioniert nur unter Windows 10, Version 1703 oder höher. Darüber hinaus sollte Ihre app Min Zielplattformversion 10.0.15063.0 oder höher festgelegt werden.
 
 ## Bekannte Probleme<a name="known_issues"></a>
 
-Debuggen eines optionalen verwandten Gruppen-Projekts ist derzeit in Visual Studio nicht unterstützt. Um dieses Problem zu umgehen, können Sie bereitstellen und starten die Aktivierung (STRG + F5) und manuell den Debugger an einen Prozess anhängen. Um den Debugger, wechseln Sie in Visual Studio im Menü "Debug", wählen Sie "Anfügen, Prozess...", und hängen Sie den Debugger an der **Haupt-app-Prozess**.
+Debuggen eines optionalen verwandten Gruppen-Projekts ist derzeit in Visual Studio nicht unterstützt. Um dieses Problem zu umgehen, können Sie bereitstellen und starten die Aktivierung (STRG + F5) und manuell den Debugger an einen Prozess anhängen. Um den Debugger, wechseln Sie in Visual Studio im Menü "Debug", wählen Sie "Anhängen, Prozess...", und hängen Sie den Debugger an der **Haupt-app-Prozess**.

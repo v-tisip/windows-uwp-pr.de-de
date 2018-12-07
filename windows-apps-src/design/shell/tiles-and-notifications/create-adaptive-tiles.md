@@ -9,11 +9,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 524cc15dbb7a3264d8476210f727508ea41ace87
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8733892"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8790607"
 ---
 # <a name="create-adaptive-tiles"></a>Erstellen adaptiver Kacheln
 
@@ -280,7 +280,7 @@ TileContent content = new TileContent()
 
 Wenn Sie in der Benachrichtigungsnutzlast kein Branding angeben, wird das Branding durch die Eigenschaften der Basiskachel bestimmt. Wenn auf der Basiskachel der Anzeigename dargestellt ist, wird für das Branding standardmäßig „name“ verwendet. Wenn kein Anzeigename vorhanden ist, wird für das Branding standardmäßig „none“ verwendet.
 
-**Hinweis:**  Dies unterscheidet sich von Windows8.x, in denen das standardbranding "Logo" lautete.
+**Hinweis:**  Dies ist eine Änderung von Windows8.x, in denen das standardbranding "Logo" lautete.
 
  
 
@@ -679,7 +679,7 @@ Wenn Ihre erste Spalte 20% und die zweite Spalte 80% der gesamten Breite einnehm
 
 ![Untergruppen mit einer Gesamtgewichtung von 100](images/adaptive-tiles-subgroups03.png)
 
-**Hinweis:** zwischen Spalten wird automatisch ein Rand von 8 Pixeln eingefügt.
+**Hinweis:** zwischen Spalten wird automatisch ein Rand von 8 Pixel eingefügt.
 
  
 

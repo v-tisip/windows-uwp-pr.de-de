@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 42229212a0f54e307eaa841849c1a279c4354d2a
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8736270"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8788658"
 ---
 # <a name="enhance-your-desktop-application-for-windows-10"></a>Verbessern Sie Ihre Desktopanwendung für Windows10
 
-Sie können Windows-Runtime-APIs verwenden, um moderner Funktionen hinzuzufügen, die für Windows 10-Benutzer.
+Sie können Windows-Runtime-APIs verwenden, moderne Funktionen hinzufügen, die für Windows 10-Benutzer.
 
 Richten Sie zuerst Ihr Projekt ein. Dann fügen Sie Windows10-Funktionen hinzu. Sie können separate Builds für Windows10-Benutzer erstellen oder die gleichen Binärdateien für alle Benutzer verteilen – unabhängig davon, welche Version von Windows sie ausführen.
 
@@ -23,7 +23,7 @@ Richten Sie zuerst Ihr Projekt ein. Dann fügen Sie Windows10-Funktionen hinzu. 
 
 Sie müssen einige Änderungen am Projekt vornehmen, um UWP-APIs zu verwenden.
 
-### <a name="modify-a-net-project-to-use-windows-runtime-apis"></a>Ändern eines .NET-Projekts für Windows Runtime-APIs
+### <a name="modify-a-net-project-to-use-windows-runtime-apis"></a>Ändern eines .NET-Projekts, um Windows-Runtime-APIs zu verwenden.
 
 Öffnen Sie das **Verweis-Manager**-Dialogfeld, wählen Sie die **Durchsuchen**-Schaltfläche, und wählen Sie dann **Alle Dateien** aus.
 
@@ -43,11 +43,11 @@ Legen Sie im Dialogfeld **Eigenschaften** die **lokale Kopie** jeder *winmd*-Dat
 
 ![„Lokal kopieren“-Feld](images/desktop-to-uwp/copy-local-field.png)
 
-### <a name="modify-a-c-project-to-use-windows-runtime-apis"></a>Ändern eines C++ Projekts für Windows-Runtime-APIs verwenden
+### <a name="modify-a-c-project-to-use-windows-runtime-apis"></a>Ändern eines C++ Projekts für Windows-Runtime-APIs verwenden.
 
-Verwendung [C++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/) Windows-Runtime-APIs nutzen. C++/WinRT ist eine vollständig standardisierte, moderne C++17-Sprachprojektion für Windows-Runtime-(WinRT)-APIs, die als headerdateibasierte Bibliothek implementiert ist und Ihnen einen erstklassigen Zugriff auf die moderne Windows-API bietet.
+Verwendung [C++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/) für Windows-Runtime-APIs nutzen. C++/WinRT ist eine vollständig standardisierte, moderne C++17-Sprachprojektion für Windows-Runtime-(WinRT)-APIs, die als headerdateibasierte Bibliothek implementiert ist und Ihnen einen erstklassigen Zugriff auf die moderne Windows-API bietet.
 
-Zum Konfigurieren des Projekts für C++ / WinRT, siehe [Ändern Sie ein Projekt Windows-Desktop-Anwendung zum Hinzufügen von C++ / WinRT-Unterstützung](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
+Zum Konfigurieren des Projekts für C++ / WinRT, finden Sie unter [Ändern Sie ein Projekt der Windows-Desktop-Anwendung zum Hinzufügen von C++ / WinRT-Unterstützung](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support).
 
 ## <a name="add-windows-10-experiences"></a>Windows10-Funktionen hinzufügen
 
@@ -55,7 +55,7 @@ Jetzt können Sie moderner Funktionen für Benutzer der Anwendung unter Windows1
 
 :white_check_mark: **Entscheiden Sie zunächst, welche Funktionen Sie hinzufügen möchten**
 
-Es gibt viele zur Auswahl. Beispielsweise können Sie Ihre Purchase Reihenfolge Fluss mithilfe von monetisierungs-APIs oder mehr Aufmerksamkeit für Ihre Anwendung bei interessante, z. B. ein neues Bild freizugeben, der kaufablauf vereinfachen.
+Es gibt viele zur Auswahl. Beispielsweise können Sie Ihre Purchase Reihenfolge Fluss mithilfe von monetisierungs-APIs oder mehr Aufmerksamkeit für Ihre Anwendung bei interessante, z. B. ein neues Bild mit Teilen kaufablauf vereinfachen.
 
 ![Popup](images/desktop-to-uwp/toast.png)
 
@@ -201,9 +201,9 @@ Der Compiler erstellt den Code nur dann, wenn die Konstante in der aktiven Build
 
 ### <a name="runtime-checks"></a>Laufzeitprüfungen
 
-Sie können einen Satz von Binärdateien für alle Windows-Benutzer kompilieren, unabhängig davon, welche Version von Windows sie ausführen. Ihre Anwendung ruft Windows-Runtime-APIs nur dann, wenn der Benutzer ausgeführt wird die Anwendung als verpackten Anwendung unter Windows 10.
+Sie können einen Satz von Binärdateien für alle Windows-Benutzer kompilieren, unabhängig davon, welche Version von Windows sie ausführen. Ihre Anwendung ruft Windows-Runtime-APIs nur dann, wenn der Benutzer ausgeführt wird die Anwendung als eine Anwendung unter Windows 10.
 
-Die einfachste Möglichkeit zum Hinzufügen von laufzeitprüfungen zum Code ist dieses Nuget-Paket installieren: [Desktop Bridge Helpers](https://www.nuget.org/packages/DesktopBridge.Helpers/) und verwenden Sie dann die ``IsRunningAsUWP()`` Methode, um alle Code, der Windows-Runtime-APIs aufruft abzugrenzen. Weitere Detail finden Sie in diesem Blogbeitrag: [Desktop-Brücke - Identifizieren des Anwendungskontexts](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
+Die einfachste Möglichkeit zum Hinzufügen von laufzeitprüfungen zum Code ist die Installation von Nuget-Pakets: [Desktop Bridge Helpers](https://www.nuget.org/packages/DesktopBridge.Helpers/) und verwenden Sie dann die ``IsRunningAsUWP()`` -Methode auf, um alle Code, der Windows-Runtime-APIs aufruft abzugrenzen. Weitere Detail finden Sie in diesem Blogbeitrag: [Desktop-Brücke - Identifizieren des Anwendungskontexts](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/).
 
 ## <a name="related-video"></a>Verwandte Videos
 
@@ -214,7 +214,7 @@ Die einfachste Möglichkeit zum Hinzufügen von laufzeitprüfungen zum Code ist 
 * [„Hello world“-Beispiel](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/HelloWorldSample)
 * [Sekundäre Kachel](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/SecondaryTileSample)
 * [Store-API-Beispiel](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/StoreSample)
-* [WinForms-Anwendung, die eine UWP-UpdateTask implementiert.](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/WinFormsUpdateTaskSample)
+* [WinForms-Anwendung, die einen UWP-UpdateTask implementiert.](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/WinFormsUpdateTaskSample)
 * [Beispiele für Desktop-App-Brücke zu UWP](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
 
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Analysen, Berichte, Dashboard, apps, Daten, Metriken
 ms.localizationpriority: medium
 ms.openlocfilehash: f6a6d79745ec98af2c7f562297092eea3feda659
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8729675"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8790342"
 ---
 # <a name="analyze-app-performance"></a>Analysieren der App-Leistung
 
@@ -47,7 +47,7 @@ In diesem Abschnitt erhalten Sie Details zu den Informationen, die in den folgen
 
 ## <a name="access-analytics-data-outside-of-partner-center"></a>Zugreifen auf Analysedaten außerhalb von Partner Center
 
-Zusätzlich zur Anzeige der Berichte im Partner Center, können Sie app-Analyse auf andere Weise zugreifen.
+Zusätzlich zur Anzeige der Berichte im Partner Center, können Sie die app-Analyse auf andere Weise zugreifen.
 
 ### <a name="microsoft-store-analytics-api"></a>Microsoft Store-Analyse-API
 

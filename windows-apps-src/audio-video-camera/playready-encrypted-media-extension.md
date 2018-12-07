@@ -1,31 +1,31 @@
 ---
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
-description: In diesem Abschnitt wird beschrieben, wie zum Ändern Ihrer PlayReady-Web-app, um die Änderungen, die aus der vorherigen Windows8.1-Version in der Windows 10-Version unterstützt wird.
+description: In diesem Abschnitt wird beschrieben, wie zum Ändern von PlayReady Web app, die Änderungen, die aus der vorherigen Windows8.1-Version auf die Windows 10-Version unterstützt wird.
 title: Verschlüsselte Medienerweiterung von PlayReady
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: b324cbca6d5e36193c057a6d1473ff1aad7be095
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8745144"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8791815"
 ---
 # <a name="playready-encrypted-media-extension"></a>Verschlüsselte Medienerweiterung von PlayReady
 
 
 
-In diesem Abschnitt wird beschrieben, wie zum Ändern Ihrer PlayReady-Web-app, um die Änderungen, die aus der vorherigen Windows8.1-Version in der Windows 10-Version unterstützt wird.
+In diesem Abschnitt wird beschrieben, wie zum Ändern von PlayReady Web app, die Änderungen, die aus der vorherigen Windows8.1-Version auf die Windows 10-Version unterstützt wird.
 
 Die Verwendung von PlayReady-Medienelementen in Internet Explorer ermöglicht Entwicklern das Erstellen von Web-Apps, die PlayReady-geschützte Inhalte für den Benutzer bereitstellen und gleichzeitig vom Inhaltsanbieter definierte Regeln erzwingen können. In diesem Abschnitt wird beschrieben, wie Sie Ihren vorhandenen Web-Apps PlayReady-Medienelemente hinzufügen, indem Sie nur HTML5 und JavaScript verwenden.
 
 ## <a name="whats-new-in-playready-encrypted-media-extension"></a>Neuigkeiten in der verschlüsselten Medienerweiterung von PlayReady
 
-Dieser Abschnitt enthält eine Liste der Änderungen, die PlayReady verschlüsselt Medienerweiterung (EME) an PlayReady-Inhaltsschutz unter Windows 10 bereitzustellen.
+Dieser Abschnitt enthält eine Liste der Änderungen für PlayReady verschlüsselt Media Extension (EME) um PlayReady-Inhaltsschutz unter Windows 10 zu aktivieren.
 
-Die folgende Liste beschreibt die neuen Features und Änderungen an verschlüsselten Medienerweiterung von PlayReady für Windows 10:
+In der folgende Liste werden die neuen Features und Änderungen an verschlüsselten Medienerweiterung von PlayReady für Windows 10 beschrieben:
 
 -   Hardwarebasierte Verwaltung digitaler Rechte (Digital Rights Management, DRM) wurde hinzugefügt.
 
@@ -34,7 +34,7 @@ Die folgende Liste beschreibt die neuen Features und Änderungen an verschlüsse
 -   Unterstützt das proaktive Abrufen nicht persistenter Lizenzen.
 -   Unterstützt das Abrufen mehrerer Lizenzen in einer Nachricht.
 
-    Sie können entweder ein PlayReady-Objekt mit mehreren schlüsselkennungen (KeyIDs) wie Windows8.1 verwenden oder [Inhalten Entschlüsselung Modell-Daten (CDMData)](https://go.microsoft.com/fwlink/p/?LinkID=626819) mit mehreren KeyIDs verwenden.
+    Sie können entweder ein PlayReady-Objekt mit mehreren schlüsselkennungen (KeyIDs) wie Windows8.1 verwenden oder [Inhalte Entschlüsselung Modell-Daten (CDMData)](https://go.microsoft.com/fwlink/p/?LinkID=626819) mit mehreren KeyIDs verwenden.
 
     > [!NOTE]
     > In Windows 10, werden mehrere schlüsselkennungen unter unterstützt &lt;KeyID&gt; in CDMData.
@@ -266,7 +266,7 @@ function formatSecureStopCDMData(encodedSessionId, customData, encodedPublisherC
 
 ## <a name="programming-considerations-for-encrypted-media-extension"></a>Überlegungen zur Programmierung für verschlüsselte Medienerweiterungen (Encrypted Media Extensions, EME)
 
-Dieser Abschnitt enthält Hinweise zur Programmierung, die Sie berücksichtigen sollten bei der Erstellung Ihrer PlayReady-fähigen Web-app für Windows 10.
+Dieser Abschnitt enthält Hinweise zur Programmierung, die Sie beim Erstellen Ihrer PlayReady-fähigen Web-app für Windows 10 berücksichtigt werden sollten.
 
 Die von Ihrer App erstellten Objekte **MSMediaKeys** und **MSMediaKeySession** müssen aktiv bleiben, bis die App geschlossen wird. Eine Möglichkeit, um sicherzustellen, dass diese Objekte aktiv bleiben, ist deren Zuweisung als globale Variablen (die Variablen würden den Gültigkeitsbereich verlassen und der Garbage Collection zugeführt, wenn sie innerhalb einer Funktion als lokale Variable deklariert werden). Im folgende Beispiel werden z. B. die Variablen *g\_msMediaKeys* und *g\_mediaKeySession* als globale Variablen zugewiesen, die dann den Objekten **MSMediaKeys** und **MSMediaKeySession** in der Funktion zugewiesen werden.
 

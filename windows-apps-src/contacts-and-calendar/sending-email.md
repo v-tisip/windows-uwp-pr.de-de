@@ -7,11 +7,11 @@ ms.date: 10/11/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1593ab8b547a464492a35aa7d49d38f667a8210b
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8731759"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8791393"
 ---
 # <a name="send-email"></a>Senden von E-Mails
 
@@ -47,7 +47,7 @@ private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipi
 ```
 
 >[!NOTE]
-> Anlagen, die Sie eine e-Mail mit der Klasse [EmailAttachment](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.emailattachment) hinzufügen werden nur in der Mail-app angezeigt. Wenn Benutzer andere e-Mail-Anwendung, als das standardmäßige e-Mail-Programm konfiguriert haben, wird das Fenster zum Verfassen einer ohne den Anhang angezeigt. Dies ist ein bekanntes Problem.
+> Anlagen, die Sie eine e-Mail mit der Klasse [EmailAttachment](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.emailattachment) hinzufügen, werden nur in die Mail-app angezeigt. Wenn Benutzer andere e-Mail-Anwendung, als das standardmäßige e-Mail-Programm konfiguriert haben, wird das Fenster zum Verfassen einer ohne den Anhang angezeigt. Dies ist ein bekanntes Problem.
 
 ## <a name="summary-and-next-steps"></a>Zusammenfassung und nächste Schritte
 

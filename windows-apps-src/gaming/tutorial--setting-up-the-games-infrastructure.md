@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Einrichtung, directx
 ms.localizationpriority: medium
 ms.openlocfilehash: 252d7ccb8e50e773a19282afaf19bb18d4c5d5a6
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8742616"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8790990"
 ---
 # <a name="set-up-the-game-project"></a>Einrichten des Spieleprojekts
 
@@ -33,7 +33,7 @@ Wenn Sie Erfahrung mit der Entwicklung von UWP haben, empfehlen wir die Verwendu
 
 ### <a name="use-directx-template-to-create-a-project"></a>Verwenden Sie DirectX-Vorlagen, um ein Projekt zu erstellen
 
-Eine Visual Studio-Vorlage ist eine Sammlung von Einstellungen und Codedateien, die abhängig von der bevorzugten Sprache und Technologie auf eine bestimmte Art von App ausgerichtet sind. In Microsoft Visual Studio2017 finden Sie eine Reihe von Vorlagen, die app-Entwicklung Spiels und der Grafik deutlich vereinfachen können. Ohne Verwendung einer Vorlage müssen Sie einen Großteil des grundlegenden Rendering- und Anzeigeframeworks für die Grafik selbst entwickeln, was insbesondere für neue Spieleentwickler recht mühsam sein kann.
+Eine Visual Studio-Vorlage ist eine Sammlung von Einstellungen und Codedateien, die abhängig von der bevorzugten Sprache und Technologie auf eine bestimmte Art von App ausgerichtet sind. In Microsoft Visual Studio2017 finden Sie eine Reihe von Vorlagen, die deutlich Spiels und der Grafik-app-Entwicklung vereinfachen können. Ohne Verwendung einer Vorlage müssen Sie einen Großteil des grundlegenden Rendering- und Anzeigeframeworks für die Grafik selbst entwickeln, was insbesondere für neue Spieleentwickler recht mühsam sein kann.
 
 Die richtige Vorlage für dieses Tutorial ist die Vorlage **DirectX 11 App (Universal Windows)**. 
 

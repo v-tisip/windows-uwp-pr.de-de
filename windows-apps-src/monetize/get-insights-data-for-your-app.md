@@ -7,11 +7,11 @@ keywords: Windows 10, Uwp, Store-Dienste, Microsoft Store-Analyse-API, Einblicke
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 1847f22f52eb066115b5681e745e74ec74f77f7d
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8731192"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8790428"
 ---
 # <a name="get-insights-data"></a>Abrufen von internen Daten
 
@@ -47,9 +47,9 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 | Parameter        | Typ   |  Beschreibung      |  Erforderlich  
 |---------------|--------|---------------|------|
 | applicationId | string | Die [Store-ID](in-app-purchases-and-trials.md#store-ids) der app, für die Sie zum Abrufen von internen Daten sollen. Wenn Sie diesen Parameter nicht angeben, enthält der Antworttext internen Daten für alle apps, die für Ihr Konto registriert wurden.  |  Nein  |
-| startDate | date | Das Startdatum im Datumsbereich der internen Daten abgerufen. Der Standardwert ist 30Tage vor dem aktuellen Datum. |  Nein  |
-| endDate | date | Das Enddatum im Datumsbereich der internen Daten abgerufen. Der Standardwert ist das aktuelle Datum. |  Nein  |
-| filter | string  | Mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Jede Anweisung enthält einen Feldnamen aus dem Antworttext und einen Wert, die mit den Operatoren **eq** oder **ne** verknüpft sind. Anweisungen können mit **and** oder **or** kombiniert werden. Zeichenfolgenwerte im Parameter *filter* müssen von einfachen Anführungszeichen eingeschlossen werden. Beispielsweise *Filter = DataType Eq 'Kauf"*. <p/><p/>Sie können die folgenden Filterfelder angeben:<p/><ul><li><strong>Erwerb</strong></li><li><strong>Gesundheit</strong></li><li><strong>Nutzung</strong></li></ul> | Nein   |
+| startDate | date | Das Startdatum im Datumsbereich der internen Daten, die abgerufen werden sollen. Der Standardwert ist 30Tage vor dem aktuellen Datum. |  Nein  |
+| endDate | date | Das Enddatum im Datumsbereich der internen Daten, die abgerufen werden sollen. Der Standardwert ist das aktuelle Datum. |  Nein  |
+| filter | string  | Mindestens eine Anweisung, die die Zeilen in der Antwort filtert. Jede Anweisung enthält einen Feldnamen aus dem Antworttext und einen Wert, die mit den Operatoren **eq** oder **ne** verknüpft sind. Anweisungen können mit **and** oder **or** kombiniert werden. Zeichenfolgenwerte im Parameter *filter* müssen von einfachen Anführungszeichen eingeschlossen werden. Beispielsweise *Filter = DataType Eq 'Kauf"*. <p/><p/>Sie können die folgenden Filterfelder angeben:<p/><ul><li><strong>Erwerb</strong></li><li><strong>Integrität</strong></li><li><strong>Verwendung</strong></li></ul> | Nein   |
 
 ### <a name="request-example"></a>Anforderungsbeispiel
 
@@ -66,7 +66,7 @@ Authorization: Bearer <your access token>
 
 | Wert      | Typ   | Beschreibung                  |
 |------------|--------|-------------------------------------------------------|
-| Wert      | array  | Ein Array von Objekten, die internen Daten für die app enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie weiter unten im Abschnitt [Insight Werte](#insight-values) .                                                                                                                      |
+| Wert      | array  | Ein Array von Objekten, die internen Daten für die app enthalten. Weitere Informationen zu den Daten in den einzelnen Objekten finden Sie unter Abschnitt [interne Werte](#insight-values) .                                                                                                                      |
 | TotalCount | int    | Die Gesamtzahl der Zeilen im Datenergebnis für die Abfrage.                 |
 
 
@@ -77,21 +77,21 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | Wert               | Typ   | Beschreibung                           |
 |---------------------|--------|-------------------------------------------|
 | applicationId       | string | Die Store-ID der app, für die Sie internen Daten abrufen.     |
-| insightDate                | string | Das Datum, an dem wir die Änderung in einer bestimmten Metrik identifiziert. Dieses Datum stellt das Ende der Woche, in dem wir eine erhebliche Erhöhung erkannt, oder in eine Metrik im Vergleich zur vorherigen Woche, verringern. |
-| Datentyp     | string | Eine der folgenden Zeichenfolgen, die den allgemeine Analysen Bereich angibt, den diese Insight beschreibt:<p/><ul><li><strong>Erwerb</strong></li><li><strong>Gesundheit</strong></li><li><strong>Nutzung</strong></li></ul>   |
-| insightDetail          | array | Eine oder mehrere [InsightDetail Werte](#insightdetail-values) , die Details für aktuelle Insight darstellen.    |
+| insightDate                | string | Das Datum, an dem wir die Änderung in einer bestimmten Metrik identifiziert. Dieses Datum, an dem das Ende der Woche, in dem wir eine erhebliche Erhöhung erkannt, oder in einer Metrik im Vergleich zur vorherigen Woche, verringern. |
+| Datentyp     | string | Eine der folgenden Zeichenfolgen, die den Bereich für die allgemeine Analysen angibt, den diese Insight beschreibt:<p/><ul><li><strong>Erwerb</strong></li><li><strong>Integrität</strong></li><li><strong>Verwendung</strong></li></ul>   |
+| insightDetail          | array | Eine oder mehrere [InsightDetail Werte](#insightdetail-values) , die die Details für den aktuellen Insight darstellen.    |
 
 
 ### <a name="insightdetail-values"></a>InsightDetail Werte
 
 | Wert               | Typ   | Beschreibung                           |
 |---------------------|--------|-------------------------------------------|
-| FactName           | string | Die folgenden Werte, die die Metrik gibt an, die den aktuellen Insight oder die aktuelle Dimension beschreibt, basierend auf der **DataType** -Wert.<ul><li>Für die **Integrität**ist dieser Wert immer **HitCount**.</li><li>Für den **Kauf**ist dieser Wert immer **AcquisitionQuantity**.</li><li>Für die **Nutzung**kann der Wert eine der folgenden Zeichenfolgen sein:<ul><li><strong>DailyActiveUsers</strong></li><li><strong>EngagementDurationMinutes</strong></li><li><strong>DailyActiveDevices</strong></li><li><strong>DailyNewUsers</strong></li><li><strong>DailySessionCount</strong></li></ul></ul>  |
+| FactName           | string | Die folgenden Werte, die die Metrik gibt an, die das aktuelle Insight oder die aktuelle Dimension beschreibt, basierend auf der **DataType** -Wert.<ul><li>Für die **Integrität**ist dieser Wert immer **HitCount**.</li><li>Für den **Kauf**ist dieser Wert immer **AcquisitionQuantity**.</li><li>Für die **Nutzung**kann der Wert eine der folgenden Zeichenfolgen sein:<ul><li><strong>DailyActiveUsers</strong></li><li><strong>EngagementDurationMinutes</strong></li><li><strong>DailyActiveDevices</strong></li><li><strong>DailyNewUsers</strong></li><li><strong>DailySessionCount</strong></li></ul></ul>  |
 | SubDimensions         | array |  Ein oder mehrere Objekte, die eine einzelne Metrik für die Einblicke zu beschreiben.   |
-| Prozent            | string |  Der Prozentsatz, den die Metrik über Ihres gesamten Kundenstamms geändert.  |
+| Prozent            | string |  Der Prozentsatz, den die Metrik für Ihre gesamte Kundenbasis geändert.  |
 | DimensionName           | string |  Der Name des die Metrik befindet sich in der aktuellen Dimension beschrieben. Beispiele: **EventType**, **Markt**, **Gerätetyp**, **PackageVersion**, **AcquisitionType**, **AgeGroup** und **Geschlecht**.   |
-| DimensionValue              | string | Der Wert der Metrik, die in der aktuellen Dimension beschrieben wird. Kann z. B., wenn **DimensionName** **EventType**ist, **DimensionValue** **Absturz** oder **Blockade**.   |
-| FactValue     | string | Der absoluten Wert der Metrik auf das Datum, an das die Einblicke erkannt wurde.  |
+| DimensionValue              | string | Der Wert der Metrik, die in der aktuellen Dimension beschrieben wird. Beispielsweise ist **DimensionName** **EventType**, **DimensionValue** **Absturz** oder **Blockade**möglicherweise.   |
+| FactValue     | string | Der absoluten Wert der Metrik auf das Datum, an das die interne erkannt wurde.  |
 | Richtung | string |  Die Richtung der Änderung (**positiv** oder **negativ**).   |
 | Date              | String |  Das Datum, an dem wir die Änderung im Zusammenhang mit der aktuellen Insight oder die aktuelle Dimension identifiziert.   |
 

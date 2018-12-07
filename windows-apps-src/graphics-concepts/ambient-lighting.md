@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 558d7e655a54b22f1fc74591a718a7180d90366f
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8732637"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8791413"
 ---
 # <a name="ambient-lighting"></a>Umgebungslicht
 
@@ -44,7 +44,7 @@ Der Wert für Cₐ ist entweder:
 -   Vertexfarbe2, wenn AMBIENTMATERIALSOURCE = D3DMCS\_FARBE2 und die zweite Vertexfarbe in der Vertex-Deklaration angegeben wird.
 -   Materielle Umgebungsfarbe.
 
-**Hinweis:**  wenn beiden AMBIENTMATERIALSOURCE-Optionen verwendet wird, und die Vertexfarbe nicht angegeben, wird die materielle Umgebungsfarbe verwendet.
+**Hinweis:**  Wenn Option AMBIENTMATERIALSOURCE verwendet wird, und die Vertexfarbe nicht angegeben ist, wird die materielle Umgebungsfarbe verwendet.
 
  
 

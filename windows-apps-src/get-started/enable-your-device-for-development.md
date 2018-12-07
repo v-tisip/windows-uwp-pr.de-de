@@ -7,11 +7,11 @@ ms.date: 05/30/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 1338373226b30c3126782a62f3b5260a47e86d63
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8758520"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8793012"
 ---
 # <a name="enable-your-device-for-development"></a>Aktivieren Ihres Geräts für die Entwicklung
 
@@ -146,7 +146,7 @@ In manchen Fällen wird der Entwicklermodus aufgrund von Problemen mit dem Netzw
 Im Forum zu den [bekannten Problemen](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) finden Sie entsprechende Problemumgehungen und vieles mehr. 
 
 > [!NOTE]
-> Aktivieren des Entwicklermodus ordnungsgemäß installiert, empfehlen wir Ihnen, eine Anforderung Feedback Datei. Wählen Sie in der **Feedback-Hub** -app **neue Feedback hinzufügen**, und wählen Sie die **Developer Platform** -Kategorie und Unterkategorie **Entwicklermodus** . Senden von Feedback hilft Microsoft das Problem aufgetreten ist.
+> Aktivieren des Entwicklermodus ordnungsgemäß installiert, empfehlen wir Ihnen, eine Anforderung Feedback-Datei. Klicken Sie in der **Feedback-Hub** -app wählen Sie **Hinzufügen neuer Feedback**, und wählen Sie die **Developer Platform** -Kategorie und Unterkategorie **Entwicklermodus** . Senden von Feedback hilft Microsoft, die das Problem aufgetreten ist.
 
 ### <a name="failed-to-locate-the-package"></a>Das Paket konnte nicht gefunden werden
 

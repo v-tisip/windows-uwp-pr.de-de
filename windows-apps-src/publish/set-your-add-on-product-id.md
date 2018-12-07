@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Add-Ons, IAP, dauerhaft, konsumbierbar, Abonnement, Produkt, Typ, Produkt-ID, In-App-Kauf, In-App-Produkt
 ms.localizationpriority: medium
 ms.openlocfilehash: 51807b96d80245b8dc5b22f1f376f603285d518a
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8731749"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8793105"
 ---
 # <a name="set-your-add-on-product-type-and-product-id"></a>Festlegen von Produkt-ID und Produkttyp für das Add-On
 
@@ -63,6 +63,6 @@ Folgende Dinge sollten bei der Wahl einer Produkt-ID beachtet werden:
 -   Eine Produkt-ID darf maximal 100 Zeichen umfassen.
 -   Folgende Zeichen dürfen nicht in der Produkt-ID enthalten sein: **&lt; &gt; \* % & : \\ ? + ,**
 -   Die Produkt-ID für Kunden nicht sichtbar (Sie können später [einen Titel und eine Beschreibung](create-add-on-descriptions.md) eingeben, die für Kunden sichtbar sind.)
--   Wenn Ihre app zuvor veröffentlichten Windows Phone 8.1 unterstützt oder früher, Sie nur alphanumerische Zeichen, Punkte und/oder Unterstriche in die Produkt-ID verwenden müssen Bei Verwendung anderer Zeichen kann das Add-On von Kunden mit Windows Phone8.1 oder früheren Versionen nicht erworben werden.
+-   Wenn Ihre app zuvor veröffentlichten Windows Phone 8.1 unterstützt oder früher Sie nur alphanumerische Zeichen, Punkte und/oder Unterstriche in die Produkt-ID verwenden müssen Bei Verwendung anderer Zeichen kann das Add-On von Kunden mit Windows Phone8.1 oder früheren Versionen nicht erworben werden.
 
  

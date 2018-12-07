@@ -8,11 +8,11 @@ keywords: windows10, UWP
 ms.assetid: 71f8ffcb-8a99-4214-ae83-2d4b718a750e
 ms.localizationpriority: medium
 ms.openlocfilehash: d56482ee036eaadbd759de9af22fdd10c652aceb
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8744278"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8790382"
 ---
 # <a name="known-issues-with-packaged-desktop-applications"></a>Bekannte Probleme mit verpackte desktop-Apps
 
@@ -50,9 +50,9 @@ Dies ist eine bekannte Einschränkung, und derzeit sind keine Umgehungen vorhand
 
 ### <a name="error-found-in-xml-the-executable-attribute-is-invalid---the-value-myappexe-is-invalid-according-to-its-datatype"></a>Fehler in XML gefunden. Das Attribut „Ausführbare Datei” ist ungültig. – Der Wert MyApp.EXE ist gemäß dem Datentyp ungültig.
 
-Dies kann vorkommen, wenn die ausführbaren Dateien in Ihrer Anwendung die Erweiterung **. EXE** in Großbuchstaben aufweisen. Obwohl die Groß-/Kleinschreibung dieser Erweiterung keine Auswirkungen auf haben, ob die Anwendung ausgeführt wird, kann dies den DAC diesen Fehler generiert.
+Dies kann vorkommen, wenn die ausführbaren Dateien in Ihrer Anwendung die Erweiterung **. EXE** in Großbuchstaben aufweisen. Obwohl die Groß-/Kleinschreibung dieser Erweiterung keine Auswirkungen auf haben, ob die Anwendung ausgeführt wird, kann dies dazu führen, dass den DAC diesen Fehler generiert.
 
-Um dieses Problem zu beheben, versuchen Sie, das **-AppExecutable**-Kennzeichen beim Verpacken festzulegen, und verwenden Sie als Erweiterung Ihrer wichtigsten ausführbaren Datei „.exe” in Kleinbuchstaben (z.B.: MYAPP.exe).    Alternativ können Sie die Groß-/Kleinschreibung für alle ausführbaren Dateien in Ihrer Anwendung aus Kleinbuchstaben in Großbuchstaben ändern (z. B.: aus. EXE-Datei in .exe).
+Um dieses Problem zu beheben, versuchen Sie, das **-AppExecutable**-Kennzeichen beim Verpacken festzulegen, und verwenden Sie als Erweiterung Ihrer wichtigsten ausführbaren Datei „.exe” in Kleinbuchstaben (z.B.: MYAPP.exe).    Alternativ können Sie die Groß-/Kleinschreibung für alle ausführbaren Dateien in Ihrer Anwendung in Großbuchstaben in Kleinbuchstaben ändern (z. B.: aus. EXE-Datei in .exe).
 
 ### <a name="corrupted-or-malformed-authenticode-signatures"></a>Beschädigte oder falsch formatierte Authenticode-Signaturen
 
@@ -119,7 +119,7 @@ Doppelklicken Sie im Datei-Explorer auf das Zertifikat, wählen Sie die Register
 
 **Option3: CertUtil**
 
-Führen Sie **Certutil** über die Befehlszeile aus, auf die PFX-Datei, und kopieren Sie das Feld *Betreff* aus der Ausgabe.
+Führen Sie **Certutil** über die Befehlszeile aus, für die PFX-Datei, und kopieren Sie *den Betreff* der Ausgabe.
 
 ```cmd
 certutil -dump <cert_file.pfx>
@@ -129,13 +129,13 @@ certutil -dump <cert_file.pfx>
 
 ### <a name="bad-pe-certificate-0x800700c1"></a>Ungültiges PE-Zertifikat (0x800700C1)
 
-Dies kann passieren, wenn Ihr Paket eine Binärdatei mit ein beschädigten Zertifikat enthalten ist. Hier sehen Sie einige Gründe, warum dies geschieht:
+Dies kann passieren, wenn Ihr Paket eine Binärdatei, die mit ein beschädigten Zertifikat enthält. Hier sehen Sie einige Gründe, warum dies geschieht:
 
-* Beginn des Zertifikats ist nicht am Ende eines Bilds.  
+* Der Anfang des Zertifikats ist nicht am Ende eines Bilds.  
 
 * Die Größe des Zertifikats ist nicht positiv.
 
-* Der Zertifikat Start wird nicht nach der `IMAGE_NT_HEADERS32` Struktur für eine 32-Bit-ausführbare Datei oder nach dem die `IMAGE_NT_HEADERS64` Struktur für eine 64-Bit-ausführbare Datei.
+* Der Zertifikat-Start wird nicht nach der `IMAGE_NT_HEADERS32` Struktur für eine 32-Bit-ausführbare Datei oder nach der `IMAGE_NT_HEADERS64` Struktur für eine 64-Bit-ausführbare Datei.
 
 * Der Zertifikat-Zeiger ist nicht ordnungsgemäß für eine Struktur WIN_CERTIFICATE ausgerichtet.
 

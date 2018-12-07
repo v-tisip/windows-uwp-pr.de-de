@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows10, UWP, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: e6938807a589337489f07f5865e02a580a72dae2
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8736899"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8791311"
 ---
 # <a name="makepriexe-format-specific-indexers"></a>Formatspezifische Indexer für MakePri.exe
 
 In diesem Thema werden die formatspezifischen Indexer beschrieben, die das Tool [MakePri.exe](compile-resources-manually-with-makepri.md) verwendet, um seinen Ressourcenindex zu generieren.
 
 > [!NOTE]
-> MakePri.exe wird installiert, wenn Sie im **Windows SDK für UWP-Apps verwaltet** Option während der Installation von Windows Software Development Kit aktivieren. Es installiert ist, auf den Pfad `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (ebenso wie in den Ordnern für die anderen Architekturen). Beispiel: `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
+> MakePri.exe wird installiert, wenn Sie die Option **Windows SDK für verwalteten UWP-Apps** während der Installation von Windows Software Development Kit überprüfen. Es installiert ist, um den Pfad `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (ebenso wie in den Ordnern für die anderen Architekturen). Beispiel: `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
 MakePri.exe wird in der Regel mit den Befehlen `new`, `versioned` oder `resourcepack` verwendet. Siehe [Befehlszeilenoptionen für MakePri.exe](makepri-exe-command-options.md). In diesen Fällen indiziert das Tool Quelldateien und generiert einen Ressourcenindex. MakePri.exe verwendet eine Reihe individueller Indexer, um die verschiedenen Quellressourcendateien oder Ressourcencontainer zu lesen. Der einfachste Indexer ist der Ordnerindexer. Er indiziert den Inhalt eines Ordners, beispielsweise `.jpg`- oder `.png`-Bilder.
 

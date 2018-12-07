@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Monetisierung, Kundenbindung, Werben, Store-Dienste
 ms.localizationpriority: medium
 ms.openlocfilehash: 747dbf7951a9db20bb8a1063757b88320fcc3f43
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8729449"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8792876"
 ---
 # <a name="monetization-engagement-and-store-services"></a>Monetarisierung, Kundenbindung und Store-Dienste
 
@@ -32,7 +32,7 @@ Ausführliche Informationen zu den vom MicrosoftStore erhobenen Gebühren und zu
 | [Protokollieren benutzerdefinierter Ereignisse im Partner Center](log-custom-events-for-dev-center.md)  | Protokollieren Sie benutzerdefinierte Ereignisse von Ihrer UWP-app, und überprüfen Sie die Ereignisse im [Bericht "Nutzung"](../publish/usage-report.md) im Partner Center. Dieses Feature erfordert das Microsoft Store Services SDK. |
 | [Anfordern von Bewertungen und Prüfungen](request-ratings-and-reviews.md) |  Fordern Sie Ihre Kunden auf, Ihre App zu bewerten oder zu rezensieren, indem Sie programmgesteuert eine Bewertungs- und Rezensions-UI anzeigen.  |
 | [Microsoft Store Dienste](using-windows-store-services.md)    |  Erfahren Sie, wie Sie mit RESTful-APIs Übermittlungen an den Store automatisieren, auf Analysedaten für Ihre Apps zugreifen und andere Aufgaben im Zusammenhang mit dem Store automatisieren.    |
-| [Einzelhandel (RDX-App) Demo Features Ihrer app hinzufügen](retail-demo-experience.md)        |  Fügen Sie einen Retail Demo-Modus in Ihrer Windows-app, damit Kunden, die PCs und Geräte auf die Vertriebsabteilung testen sofort beginnen können.  |
+| [Einzelhandel (RDX-App)-Demo-Features zu Ihrer app hinzufügen](retail-demo-experience.md)        |  Fügen Sie einen Retail Demo-Modus in Ihrer Windows-app, damit Kunden, die Testen von Computern und Geräten auf die Vertriebsabteilung direkt beginnen können.  |
 
 ## <a name="related-topics"></a>Verwandte Themen
 

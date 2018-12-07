@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: a9544c1eecc4c1a86552d053694872743a17142c
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8734596"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8791772"
 ---
 # <a name="getting-started-choosing-a-programming-language"></a>Erste Schritte: Auswählen einer Programmiersprache
 
@@ -28,7 +28,7 @@ Obwohl wir uns in diesem Artikel auf C# konzentrieren, bieten die restlichen Spr
 -   [Erstellen Sie Ihrer ersten UWP-app mit c# oder Visual Basic](../get-started/create-a-hello-world-app-xaml-universal.md)
 -   [Erstellen Sie Ihrer ersten UWP-app mit JavaScript](../get-started/create-a-hello-world-app-js-uwp.md)
 
-**Hinweis:** für apps mit 3D-Grafiken die Standards OpenGL und OpenGL ES sind nicht nativ verfügbar für UWP-apps. Wenn Sie Ihren OpenGL ES-Code in Microsoft DirectX nicht neu schreiben möchten, könnte **Angle** von Interesse für Sie sein. Angle ist ein laufendes Projekt, das zum Konvertieren von OpenGL in DirectX entwickelt wurde, indem OpenGL-API-Aufrufe in DirectX-API-Aufrufe übersetzt werden. Weitere Informationen hierzu finden Sie unter den folgenden Themen:
+**Hinweis:** für apps mit 3D-Grafiken die Standards OpenGL und OpenGL ES sind nicht nativ für UWP-apps verfügbar. Wenn Sie Ihren OpenGL ES-Code in Microsoft DirectX nicht neu schreiben möchten, könnte **Angle** von Interesse für Sie sein. Angle ist ein laufendes Projekt, das zum Konvertieren von OpenGL in DirectX entwickelt wurde, indem OpenGL-API-Aufrufe in DirectX-API-Aufrufe übersetzt werden. Weitere Informationen hierzu finden Sie unter den folgenden Themen:
 -   [Angle](https://code.google.com/p/angleproject/)
 -   [Erstellen Sie Ihrer ersten UWP-app mit DirectX](https://msdn.microsoft.com/library/windows/apps/br229580)
 -   [Beispiele für UWP-Apps, die DirectX nutzen](http://go.microsoft.com/fwlink/p/?LinkId=263603)

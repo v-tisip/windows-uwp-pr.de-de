@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b25a37fb06688e7841490e00d1c83640d3155d50
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8739412"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8790776"
 ---
 # <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a>Erkennen von Windows Ink-Strichen als Text und Formen
 
@@ -208,7 +208,7 @@ private async void RecognizeStrokes_Click(object sender, RoutedEventArgs e)
         }
     }
 ```
-6. Im Folgenden wird die Funktion zum Zeichnen eines TextBlock-Elements im Erkennungszeichenbereich beschrieben. Wir verwenden das umgebende Rechteck der zugehörigen Freihandstriche auf dem Freihandeingabe-Zeichenbereich, um die Position und den Schriftgrad des TextBlock-Elements festlegen.
+6. Im Folgenden wird die Funktion zum Zeichnen eines TextBlock-Elements im Erkennungszeichenbereich beschrieben. Wir verwenden das umgebende Rechteck der zugehörigen Freihandstriche auf dem Freihandeingabe-Zeichenbereich an, um die Position und den Schriftgrad des TextBlock-Elements festlegen.
 ```csharp
 /// <summary>
 /// Draw ink recognition text string on the recognitionCanvas.
@@ -472,7 +472,7 @@ Im Abschnitt der Eigenschaften [**InkRecognizer.Name**](https://msdn.microsoft.c
 
 Ihre App kann den Satz der installierten Schrifterkennungsmodule abfragen und eines davon verwenden, oder der Benutzer wählt die bevorzugte Sprache aus.
 
-**Hinweis:**  Benutzer sehen eine Liste der installierten Sprachen auf **Einstellungen –&gt; Zeit & Sprache**. Die installierten Sprachen werden unter **Sprachen** aufgeführt.
+**Hinweis:**  Benutzer können eine Liste der installierten Sprachen anzeigen, indem Sie auf **Einstellungen –&gt; Zeit & Sprache**. Die installierten Sprachen werden unter **Sprachen** aufgeführt.
 
 So installieren Sie ein neues Sprachpaket und aktivieren die Schrifterkennung für die Sprache
 
