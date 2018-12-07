@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Xbox One Spielekäufe
 ms.localizationpriority: medium
 ms.openlocfilehash: 348430f7ceee66a9c4e82f258a70e57d8f344943
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8738523"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8796797"
 ---
 # <a name="get-xbox-one-game-acquisitions"></a>Abrufen von Xbox One Spielekäufen
 
-Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, die aggregierte Kaufdaten im JSON-Format für einen Xbox One Spiel abzurufen, die das über das Xbox-Portal (XDP) und im XDP Analytics-Dashboard verfügbar ist.
+Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, die aggregierte Kaufdaten im JSON-Format für ein Xbox One Spiel abzurufen, die das über das Xbox-Portal (XDP) und im XDP Analytics-Dashboard verfügbar ist.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -45,7 +45,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 | Parameter        | Typ   |  Beschreibung      |  Erforderlich  
 |---------------|--------|---------------|------|
-| applicationId | String | Die Produkt-ID des Xbox One Spiels, für das Sie Kaufdaten abrufen. Um die Produkt-ID Ihres Spiels zu erhalten, navigieren Sie zu Ihrem Spiel im XDP Analytics-Programm, und rufen Sie die Produkt-ID aus der URL. Wenn Sie Ihre Kaufdaten vom Partner Center-Analysebericht herunterladen, ist die Produkt-ID auch in der TSV-Datei enthalten.  |  Ja  |
+| applicationId | String | Die Produkt-ID des Xbox One Spiels, für das Sie Kaufdaten abrufen. Um die Produkt-ID Ihres Spiels zu erhalten, navigieren Sie zu Ihrem Spiel im XDP Analytics-Programm, und rufen Sie die Produkt-ID aus der URL. Alternativ können ist Sie Ihre Kaufdaten vom Partner Center-Analysebericht herunterladen, die Produkt-ID in der TSV-Datei enthalten.  |  Ja  |
 | startDate | date | Das Startdatum im Datumsbereich der Kaufdaten, die abgerufen werden sollen. Der Standardwert ist das aktuelle Datum. |  Nein  |
 | endDate | date | Das Enddatum im Datumsbereich der Kaufdaten, die abgerufen werden sollen. Der Standardwert ist das aktuelle Datum. |  Nein  |
 | top | Int | Die Anzahl der Datenzeilen, die zurückgegeben werden sollen. Der Maximal- und Standardwert ist 10.000, wenn nicht anders angegeben. Wenn die Abfrage keine weiteren Zeilen enthält, entält der Antworttext den Link „Weiter“, den Sie verwenden können, um die nächste Seite mit Daten anzufordern. |  Nein  |
@@ -58,7 +58,7 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 ### <a name="request-example"></a>Anforderungsbeispiel
 
-Das folgende Beispiel zeigt verschiedene Anforderungen für den Abruf von Spielekaufdaten für Xbox One. Ersetzen Sie den *ApplicationId* -Wert durch die Produkt-ID für Ihr Spiel an.
+Das folgende Beispiel zeigt verschiedene Anforderungen für den Abruf von Spielekaufdaten für Xbox One. Ersetzen Sie den Wert *ApplicationId* durch die Produkt-ID für Ihr Spiel.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/xbox/acquisitions?applicationId=BRRT4NJ9B3D1&startDate=1/1/2017&endDate=2/1/2017&top=10&skip=0 HTTP/1.1
@@ -89,7 +89,7 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | date                | string | Das erste Datum im Datumsbereich für die Kaufdaten. Wenn die Anforderung einen einzelnen Tag angibt, ist dieses Datum dieser Wert. Wenn die Anforderung eine Woche, einen Monat oder einen anderen Datumsbereich angibt, ist dieser Wert das erste Datum in diesem Datumsbereich. |
 | applicationId       | String | Die Produkt-ID des Xbox One Spiels, für das Sie Kaufdaten abrufen. |
 | applicationName     | String | Der Anzeigename des Spiels.       |
-| acquisitionType     | String | Eine der folgenden Zeichenfolgen, die den Typ des Kaufes angibt:<ul><li><strong>Free</strong></li><li><strong>Testversion</strong></li><li><strong>Kostenpflichtig</strong></li><li><strong>Angebotscode</strong></li><li><strong>lap</strong></li><li><strong>Abonnement Iap</strong></li><li><strong>Private Zielgruppe</strong></li><li><strong>Pre-Reihenfolge</strong></li><li><strong>Xbox Game Pass</strong> (oder <strong>Game Pass</strong> beim Abfragen von Daten vor dem 23.März2018)</li><li><strong>Festplatte</strong></li><li><strong>Prepaid-Code</strong></li><li><strong>Berechnete Pre-Reihenfolge</strong></li><li><strong>Abgebrochenen Pre-Reihenfolge</strong></li><li><strong>Fehlgeschlagene Pre-Reihenfolge</strong></li></ul>    |
+| acquisitionType     | String | Eine der folgenden Zeichenfolgen, die den Typ des Kaufes angibt:<ul><li><strong>Free</strong></li><li><strong>Testversion</strong></li><li><strong>Kostenpflichtig</strong></li><li><strong>Angebotscode</strong></li><li><strong>lap</strong></li><li><strong>Abonnement Iap</strong></li><li><strong>Private Zielgruppe</strong></li><li><strong>Pre-Reihenfolge</strong></li><li><strong>Xbox Game Pass</strong> (oder <strong>Game Pass</strong> beim Abfragen von Daten vor dem 23.März2018)</li><li><strong>Festplatte</strong></li><li><strong>Prepaid-Code</strong></li><li><strong>Berechnete Pre-Reihenfolge</strong></li><li><strong>Abgebrochenen Pre-Reihenfolge</strong></li><li><strong>Fehlgeschlagenen Pre-Reihenfolge</strong></li></ul>    |
 | Alter                 | String | Eine der folgenden Zeichenfolgen, die die Altersgruppe des Benutzers anzeigt, der den Kauf getätigt hat:<ul><li><strong>jünger als 13</strong></li><li><strong>13-17</strong></li><li><strong>18-24</strong></li><li><strong>25-34</strong></li><li><strong>35-44</strong></li><li><strong>44-55</strong></li><li><strong>greater than 55</strong></li><li><strong>Unknown</strong></li></ul>     |
 | deviceType          | String | Eine der folgenden Zeichenfolgen, die den Typ des Geräts angibt, mit dem der Kauf getätigt wurde:<ul><li><strong>PC</strong></li><li><strong>Phone</strong></li><li><strong>Console</strong></li><li><strong>IoT</strong></li><li><strong>Server</strong></li><li><strong>Tablet</strong></li><li><strong>Hologramm</strong></li><li><strong>Unbekannt</strong></li></ul>  |
 | gender              | String | Eine der folgenden Zeichenfolgen, die das Geschlecht des Benutzer angibt, der den Kauf getätigt hat:<ul><li><strong>m</strong></li><li><strong>f</strong></li><li><strong>Unknown</strong></li></ul>     |

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6e64feb8938be3e7338c87acdf8fd18fb13e525b
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8479271"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8795776"
 ---
 # <a name="xbox-best-practices"></a>Bewährte Methoden für Xbox
 
@@ -43,7 +43,7 @@ Viele Fernseher schneiden das Bild an den Bildschirmrändern ab. Daher sollte de
 
 ### <a name="consider-use-tv-safe-colors"></a>*Beachten:* Verwenden von fernsehsicheren Farben
 
-Fernsehgeräte gehen mit hohen Farbintensitäten nicht so gut wie Computermonitore um. Vermeiden Sie in Ihren Apps Farben mit hoher Intensität, damit die Benutzer keine merkwürdigen Bandeffekte und keine verwaschenen Bilder sehen. Beachten Sie auch, dass Unterschiede zwischen Fernsehern dazu führen können, dass Farben, die auf *Ihrem* Fernseher gut aussehen, für Ihre Benutzer völlig anders aussehen können. Lesen Sie [Farben](../design/devices/designing-for-tv.md#colors) , um zu verstehen, wie Ihre App für alle toll aussieht.
+Fernsehgeräte gehen mit hohen Farbintensitäten nicht so gut wie Computermonitore um. Vermeiden Sie in Ihren Apps Farben mit hoher Intensität, damit die Benutzer keine merkwürdigen Bandeffekte und keine verwaschenen Bilder sehen. Beachten Sie auch, dass Unterschiede zwischen Fernsehern dazu führen können, dass Farben, die auf *Ihrem* Fernseher gut aussehen, für Ihre Benutzer völlig anders aussehen können. Lesen Sie [Farben](../design/devices/designing-for-tv.md#colors) , um zu verstehen, wie Sie Ihre app für alle toll aussieht.
 
 ### <a name="remember-you-can-disable-scaling"></a>*Denken Sie daran:* Die Skalierung kann deaktiviert werden.
 
@@ -67,7 +67,7 @@ Die folgenden Gespräche auf [Channel 9](https://channel9.msdn.com/) sind eine h
 
 Das **App-Entwicklung auf Xbox** -Ereignis ist ein hervorragender Ausgangspunkt für Entwickler zum Erstellen von apps auf Xbox.
 
-* [Schauen Sie sich die aufgezeichneten Sitzungen](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#WatchNow)
+* [Sehen Sie sich die aufgezeichneten Sitzungen](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#WatchNow)
 * [Lesen Sie die Blogbeiträge](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event#BlogSeries)
 
 ## <a name="see-also"></a>Weitere Informationen:

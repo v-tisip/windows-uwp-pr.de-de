@@ -7,18 +7,18 @@ ms.topic: article
 keywords: windows10, uwp, debuggen, testen, leistung
 ms.localizationpriority: medium
 ms.openlocfilehash: 8f58485b6f6829b9eec0495cce088304b181a2b1
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8739428"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8798529"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>Bereitstellen und Debuggen von UWP-Apps
 
 
 Dieser Artikel führt Sie Schritt für Schritt durch die Ausrichtung Ihrer Apps auf verschiedene Bereitstellungs- und Debugziele.
 
-Microsoft Visual Studio ermöglicht Ihnen das Bereitstellen und Debuggen Ihrer universellen Windows-Plattform (UWP) apps auf einer Vielzahl von Windows 10-Geräte. Das Erstellen und Registrieren der App auf dem Zielgerät wird von Visual Studio abgewickelt.
+Microsoft Visual Studio ermöglicht Ihnen das Bereitstellen und Debuggen Ihrer apps universelle Windows-Plattform (UWP) auf einer Vielzahl von Windows 10-Geräten. Das Erstellen und Registrieren der App auf dem Zielgerät wird von Visual Studio abgewickelt.
 
 ## <a name="picking-a-deployment-target"></a>Auswählen eines Bereitstellungsziels
 
@@ -30,7 +30,7 @@ Zur Auswahl eines Ziels navigieren Sie zur Dropdownliste mit Debugzielen neben d
 -   Mit **Lokaler Computer** wird die App auf dem aktuellen Entwicklungscomputer bereitgestellt. Diese Option ist nur verfügbar, wenn die **Mindestversion der Zielplattform** Ihrer App niedriger oder gleich der Betriebssystemversion auf Ihrem Entwicklungscomputer ist.
 -   Über **Remotecomputer** können Sie ein Remoteziel angeben, auf dem die App bereitgestellt werden soll. Weitere Informationen zur Bereitstellung auf einem Remotecomputer finden Sie unter [Angeben eines Remotegeräts](#specifying-a-remote-device).
 -   Mit **Gerät** wird die App auf einem über USB verbundenen Gerät bereitgestellt. Das Gerät muss für Entwickler entsperrt sein und über einen entsperrten Bildschirm verfügen.
--   Bei einem **Emulator**-Ziel wird die App in einem Emulator gestartet und bereitgestellt, wobei die Konfiguration im Namen angegeben ist. Emulatoren sind nur verfügbar auf Hyper-V-Computern Windows8.1 aktiviert oder.
+-   Bei einem **Emulator**-Ziel wird die App in einem Emulator gestartet und bereitgestellt, wobei die Konfiguration im Namen angegeben ist. Emulatoren sind nur verfügbar auf Hyper-V-Computer Windows8.1 aktiviert oder.
 
 
 ## <a name="debugging-deployed-apps"></a>Debuggen von bereitgestellten Apps
@@ -45,7 +45,7 @@ Bei der Auswahl von **Eigenen Code zunächst nicht starten, sondern debuggen** w
 UWP-Apps können unter Windows8.1 oder höher entwickelt und kompiliert werden. Sie müssen jedoch unter Windows10 ausgeführt werden. Wenn Sie eine UWP-App auf einem PC unter Windows8.1 entwickeln, können Sie eine auf einem anderen Windows10-Gerät ausgeführte UWP-App remote debuggen. Der Host und der Zielcomputer müssen sich im selben LAN befinden. Laden Sie hierzu auf beiden Computern die [Remotetools für Visual Studio](https://www.visualstudio.com/downloads/) herunter, und installieren Sie sie. Die installierte Version muss der installierten Version von Visual Studio entsprechen. Die ausgewählte Architektur der Auswahl (x86, x64) muss mit der Architektur der Ziel-App übereinstimmen.   
 
 ## <a name="package-layout"></a>Paketlayout
-Ab Visual Studio 2015 Update 3 haben wir die Option für Entwickler zum Angeben des Pfads Layout für ihre UWP-apps hinzugefügt. Hiermit wird festgelegt, an welchen Ort auf dem Datenträger das Paketlayout beim Erstellen der App kopiert wird. In der Standardeinstellung wird diese Eigenschaft relativ zum Stammverzeichnis des Projekts festgelegt. Wenn Sie diese Eigenschaft nicht ändern, entspricht das Verhalten dem der früheren Versionen von Visual Studio.
+Ab Visual Studio 2015 Update 3 wurde für Entwickler zum Angeben des Pfads Layout für ihre UWP-apps die Option hinzugefügt. Hiermit wird festgelegt, an welchen Ort auf dem Datenträger das Paketlayout beim Erstellen der App kopiert wird. In der Standardeinstellung wird diese Eigenschaft relativ zum Stammverzeichnis des Projekts festgelegt. Wenn Sie diese Eigenschaft nicht ändern, entspricht das Verhalten dem der früheren Versionen von Visual Studio.
 
 Diese Eigenschaft kann in den **Debug**-Eigenschaften des Projekts geändert werden.
 
@@ -73,7 +73,7 @@ Wenn Sie eine App auf einem Remote-PC bereitstellen möchten, der noch nicht das
 
 ### <a name="c-and-javascript"></a>C++ und JavaScript
 
-Ein Remotecomputer-Ziel für eine app C++ oder JavaScriptUWP angeben:
+So geben Sie ein Remotecomputer-Ziel für eine C++- oder JavaScriptUWP-app:
 
 1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und klicken Sie dann auf **Eigenschaften**.
 2. Navigieren Sie zu den Einstellungen für **Debuggen**, und wählen Sie unter **Zu startender Debugger** die Option **Remotecomputer** aus.
@@ -123,7 +123,7 @@ Für die Bereitstellung auf Remotecomputern gibt es drei Authentifizierungsmodi:
 - **Ohne**: Dieser Authentifizierungsmodus sollte nur für die Bereitstellung auf Remote-PCs (Desktop oder Laptop) verwendet werden, auf denen die Remotetools für Visual Studio ausgeführt werden. Verwenden Sie diese Authentifizierungsmoduseinstellung, wenn Sie einen Testcomputer in einer Umgebung eingerichtet haben, bei der die Anmeldung über ein Testkonto erfolgte und keine Anmeldeinformationen eingegeben werden können. Die Remotedebuggereinstellungen müssen so festgelegt sein, dass sie den Modus „Keine Authentifizierung“ akzeptieren.
 
 ## <a name="advanced-remote-deployment-options"></a>Erweiterte Remotebereitstellungsoptionen
-Wie der Version von Visual Studio 2015 Update 3 und Windows 10 Anniversary Update, stehen Optionen neue erweiterte Remotebereitstellung für bestimmte Windows 10-Geräte. Die erweiterten Optionen für Remotebereitstellung finden Sie im Menü **Debuggen** für die Projekteigenschaften.
+Wie der Version von Visual Studio 2015 Update 3 und Windows 10 Anniversary Update, stehen Optionen neue erweiterte remote-Bereitstellung für bestimmte Windows 10-Geräte. Die erweiterten Optionen für Remotebereitstellung finden Sie im Menü **Debuggen** für die Projekteigenschaften.
 
 Zu den neuen Eigenschaften zählen:
 * Bereitstellungstyp
@@ -132,7 +132,7 @@ Zu den neuen Eigenschaften zählen:
 
 ### <a name="requirements"></a>Anforderungen
 Um die erweiterten Remotebereitstellungsoptionen verwenden zu können, müssen folgende Anforderungen erfüllt sein:
-* Visual Studio 2015 Update 3 oder einige Visual Studio höher oder höher installiert mit Windows 10 Tools 1.4.1 (einschließlich Windows 10 Anniversary Update SDK) haben wir empfehlen, dass Sie die neueste Version von Visual Studio mit Updates verwenden, um sicherzustellen, dass Sie alles der neueste Funktionen für Entwicklung und Sicherheit.
+* Visual Studio 2015 Update 3 oder einige Visual Studio höher oder höher installiert mit Windows 10 Tools 1.4.1 (einschließlich Windows 10 Anniversary Update SDK) haben wir empfehlen, dass Sie die neueste Version von Visual Studio mit Updates verwenden, um sicherzustellen, dass Sie alle erhalten die neueste Funktionen für Entwicklung und Sicherheit.
 * Ziel ist ein Xbox-Remotegerät mit Windows10 Anniversary Update oder ein PC mit Windows10 Creators Update. 
 * Der universelle Authentifizierungsmodus muss verwendet werden.
 
@@ -177,12 +177,12 @@ Beim Registrieren des Geräts über das Netzwerk können Sie **Alle Dateien auf 
 > [!NOTE]
 > **Registrieren des Layouts über das Netzwerk** wird derzeit für Xbox mit Windows10 Anniversary Update und PCs mit Windows 10 Creators Update unterstützt.
 
-Auf dem Remotegerät wird das Layout je nach Gerätefamilie am folgenden Standardspeicherort registriert: `Xbox: \\MY-DEVKIT\DevelopmentFiles\XrfsFiles` – bei dieser eine symbolische Verknüpfung mit der **paketregistrierungspfad** PC keinen symbolischen Link und stattdessen das Paket **direkt registriert ist Registrierung Pfad**
+Auf dem Remotegerät, das Layout je nach Gerätefamilie am folgenden Standardspeicherort registriert: `Xbox: \\MY-DEVKIT\DevelopmentFiles\XrfsFiles` – bei dieser eine symbolische Verknüpfung mit der **paketregistrierungspfad** PC keinen symbolischen Link und stattdessen das Paket **direkt registriert ist Registrierung Pfad**
 
 
 ## <a name="debugging-options"></a>Debugoptionen
 
-Unter Windows 10 die startleistung von UWP-apps verbessern, indem proaktiv starten und dann eine Technik [Vorabstart](https://msdn.microsoft.com/library/windows/apps/Mt593297)anhalten apps. Viele Apps sind in diesem Modus sofort funktionsfähig, das Verhalten einiger Apps muss jedoch möglicherweise angepasst werden. Um das Debuggen von Problemen in diesen Codepfaden zu erleichtern, können Sie das Debuggen der App von Visual Studio im Vorabstartmodus starten.
+Unter Windows 10 die startleistung von UWP-apps verbessern, indem proaktiv starten und dann eine Technik [Vorabstart](https://msdn.microsoft.com/library/windows/apps/Mt593297)apps anhalten. Viele Apps sind in diesem Modus sofort funktionsfähig, das Verhalten einiger Apps muss jedoch möglicherweise angepasst werden. Um das Debuggen von Problemen in diesen Codepfaden zu erleichtern, können Sie das Debuggen der App von Visual Studio im Vorabstartmodus starten.
 
 Das Debuggen wird sowohl von einem Visual Studio-Projekt (**Debuggen** -&gt; **Andere Debugziele** -&gt; **Vorabstart der universellen Windows-App debuggen**) als auch für bereits auf dem Computer installierte Apps (**Debuggen** -&gt; **Andere Debugziele** -&gt; **Installiertes App-Paket debuggen** mit aktiviertem Kontrollkästchen **App mit Vorabstart aktivieren**) unterstützt. Weitere Informationen finden Sie unter [Debuggen des UWP-Vorabstarts](http://go.microsoft.com/fwlink/p/?LinkId=717245).
 
@@ -190,7 +190,7 @@ Sie können die folgenden Bereitstellungsoptionen auf der Eigenschaftenseite **D
 
 - **Lokales Netzwerkloopback zulassen**
 
-  Aus Sicherheitsgründen darf eine UWP-App, die mit der Standardmethode installiert wurde, keine Netzwerkaufrufe an das Gerät senden, auf dem sie installiert ist. Für die bereitgestellte App erstellt die Visual Studio-Bereitstellung standardmäßig eine Ausnahme von dieser Regel. Diese Ausnahme macht es möglich, Kommunikationsverfahren auf einem einzelnen Computer zu testen. Bevor Sie Ihre app an den Microsoft Store übermitteln, sollten Sie Ihre app ohne die Ausnahme testen.
+  Aus Sicherheitsgründen darf eine UWP-App, die mit der Standardmethode installiert wurde, keine Netzwerkaufrufe an das Gerät senden, auf dem sie installiert ist. Für die bereitgestellte App erstellt die Visual Studio-Bereitstellung standardmäßig eine Ausnahme von dieser Regel. Diese Ausnahme macht es möglich, Kommunikationsverfahren auf einem einzelnen Computer zu testen. Bevor Sie Ihre app im Microsoft Store übermitteln, sollten Sie Ihre app ohne die Ausnahme testen.
 
   So entfernen Sie die Netzwerkloopback-Ausnahme aus der App
 
@@ -201,7 +201,7 @@ Sie können die folgenden Bereitstellungsoptionen auf der Eigenschaftenseite **D
 
   So konfigurieren Sie die Bereitstellung für das automatische Starten einer Debugsitzung beim Starten der App
 
-  -   Aktivieren Sie das Kontrollkästchen **nicht starten, sondern Debuggen Sie eigenen Code beim Start** , auf der Eigenschaftenseite c# und Visual Basic**Debuggen** .
+  -   Aktivieren Sie das Kontrollkästchen **nicht starten, sondern Debuggen Sie eigenen Code beim Starten** , auf der Eigenschaftenseite c# und Visual Basic**Debuggen** .
   -   Legen Sie den Wert **Anwendung starten** auf der Eigenschaftenseite **Debuggen** für JavaSCript und C++ auf **Ja** fest.
 
 ## <a name="symbols"></a>Symbole

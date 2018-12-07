@@ -1,20 +1,20 @@
 ---
 title: Abrufen und Verstehen von Magnetstreifendaten
-description: Enthält Informationen zum Erhalt und interpretiert die Daten aus einer Magnetstreifenleser.
+description: Informationen Sie zum Erhalt und interpretiert die Daten aus einer Magnetstreifenleser.
 ms.date: 10/04/2018
 ms.topic: article
 keywords: Windows 10, Uwp, zeigen Sie Service, pos, Magnetstreifenleser
 ms.localizationpriority: medium
 ms.openlocfilehash: 1805213c7c30ccbc67fb96098f11480703589bb4
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8733932"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8796622"
 ---
 # <a name="obtain-and-understand-magnetic-stripe-data"></a>Abrufen und Verstehen von Magnetstreifendaten
 
-Nachdem Sie Ihre Magnetstreifenleser in Ihrer Anwendung mithilfe der Schritte in [Erste Schritte mit Point of Service](pos-basics.md)eingerichtet haben, können Sie zum Abrufen von Daten aus starten.
+Nachdem Sie Ihre Magnetstreifenleser in Ihrer Anwendung mithilfe der Schritte in der [Erste Schritte mit Point of Service](pos-basics.md)eingerichtet haben, können Sie zum Abrufen von Daten aus sie starten.
 
 ## <a name="subscribe-to-datareceived-events"></a>Abonnieren Sie * DataReceived-Ereignisse
 
@@ -22,7 +22,7 @@ Wenn der Reader eine gezogene Karte erkannt wird, wird eine der drei Ereignisse 
 
 * [Ereignis AamvaCardDataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.aamvacarddatareceived): tritt auf, wenn eine Karte Motor Fahrzeugs das gezogen wird.
 * [Ereignis BankCardDataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.aamvacarddatareceived): tritt auf, wenn eine Bankkarte das gezogen wird.
-* [Ereignis VendorSpecificDataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.vendorspecificdatareceived): tritt auf, wenn eine herstellerspezifische Karte das gezogen wird.
+* [Ereignis VendorSpecificDataReceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.vendorspecificdatareceived): tritt auf, wenn eine Karte anbieterspezifische das gezogen wird.
 
 Die Anwendung muss nur, um die Ereignisse zu abonnieren, die von der Magnetstreifenleser unterstützt werden. Sie können sehen, welche Arten von Karten mit [MagneticStripeReader.SupportedCardTypes](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereader.supportedcardtypes
 )unterstützt werden.
@@ -58,7 +58,7 @@ Die [ClaimedMagneticStripeReader](https://docs.microsoft.com/uwp/api/windows.dev
 
 ## <a name="get-the-data"></a>Abrufen der Daten
 
-Für die Ereignisse **AamvaCardDataReceived** und **BankCardDataReceived** können Sie einige der Daten direkt aus dem *Args* -Objekt abrufen. Das folgende Beispiel zeigt einige Eigenschaften abrufen und sie Sie Membervariablen zuweisen:
+Für die Ereignisse **AamvaCardDataReceived** und **BankCardDataReceived** können Sie einige der Daten direkt über das Objekt für *Args* abrufen. Das folgende Beispiel zeigt einige Eigenschaften abrufen und sie Sie Membervariablen zuweisen:
 
 ```cs
 private string _accountNumber;
@@ -76,17 +76,17 @@ private void Reader_BankCardDataReceived(
 }
 ```
 
-Einige Daten, einschließlich alle Daten vom **VendorSpecificDataReceived** -Ereignis, müssen jedoch über das Objekt **Bericht** abgerufen werden, die eine Eigenschaft des Parameters *Args* ist. Dies ist vom Typ [MagneticStripeReaderReport](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport).
+Einige Daten, wie alle Daten vom **VendorSpecificDataReceived** -Ereignis, müssen jedoch über das Objekt **Bericht** abgerufen werden, die eine Eigenschaft für *Args* -Parameter ist. Dies ist vom Typ [MagneticStripeReaderReport](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport).
 
-Sie können mit der [CardType](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.cardtype) -Eigenschaft können Sie herausfinden, welche Art von Karte gewischt wurde, und dann verwenden, um darüber zu informieren, wie Sie die Daten aus [Track1](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track1), [Track2](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track2), [Track3](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track3)und [Track4](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track4)interpretieren.
+Sie können verwenden die [CardType](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.cardtype) -Eigenschaft, um herauszufinden, welche Art von Karte gewischt wurde und dann verwenden, um darüber zu informieren, wie Sie die Daten aus [Track1](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track1), [Track2](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track2), [Track3](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track3)und [Track4](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track4)interpretiert werden.
 
-Die Daten über die einzelnen Titel werden als [MagneticStripeReaderTrackData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata) Objekte dargestellt. Von dieser Klasse können Sie die folgenden Arten von Daten abrufen:
+Die Daten über die einzelnen Titel werden als [MagneticStripeReaderTrackData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata) Objekte dargestellt. Diese Klasse können Sie die folgenden Arten von Daten abrufen:
 
 * [Daten](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata.data): die unformatierten oder decodierten Daten.
 * [DiscretionaryData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata.discretionarydata): die verfügbare Daten. 
 * [EncryptedData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata.encrypteddata): die verschlüsselten Daten.
 
-Der folgende Codeausschnitt Ruft den Bericht und die Track-Daten ab, und dann überprüft den Kartentyp:
+Der folgende Codeausschnitt Ruft den Bericht und die Track-Daten, und überprüft dann die Kartentyp:
 
 ```cs
 private void GetTrackData(MagneticStripeReaderBankCardDataReceivedEventArgs args)

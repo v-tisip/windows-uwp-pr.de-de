@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Anzeigenkampagnen
 ms.localizationpriority: medium
 ms.openlocfilehash: 1190ec43c5b98eabd897a3bed3788aaf6eb0cb7d
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8738636"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8797087"
 ---
 # <a name="get-ad-campaign-performance-data"></a>Abrufen der Leistungsdaten einer Anzeigenkampagne
 
 
 Verwenden Sie diese Methode der Microsoft Store-Analyse-API, um eine aggregierte Zusammenfassung der Leistungsdaten einer Anzeigenkampagne für Ihre Anwendungen während eines bestimmten Zeitraums sowie andere optionale Filter abzurufen. Diese Methode gibt die Daten im JSON-Format zurück.
 
-Diese Methode gibt dieselben Daten, die von der [Ad Bericht "Anzeigenkampagne"](../publish/app-install-ads-reports.md) im Partner Center bereitgestellt werden. Weitere Informationen zu Anzeigenkampagnen finden Sie unter [Erstellen einer Anzeigenkampagne für Ihre App](../publish/create-an-ad-campaign-for-your-app.md).
+Diese Methode gibt dieselben Daten, die von den [Werbekampagnen-Bericht](../publish/app-install-ads-reports.md) im Partner Center bereitgestellt werden. Weitere Informationen zu Anzeigenkampagnen finden Sie unter [Erstellen einer Anzeigenkampagne für Ihre App](../publish/create-an-ad-campaign-for-your-app.md).
 
 Zum Erstellen, Aktualisieren oder Abrufen von Details für Anzeigenkampagnen können Sie die [Methoden zum Verwalten von Anzeigenkampagnen](manage-ad-campaigns.md) in der [Microsoft Store-API für Werbeaktionen](run-ad-campaigns-using-windows-store-services.md) verwenden.
 

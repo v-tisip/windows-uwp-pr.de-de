@@ -9,11 +9,11 @@ pm-contact: stmoy
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 38fe6b92828459f91ba6ea2f836d274c2cc8d761
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8740201"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8797970"
 ---
 # <a name="page-transitions"></a>Seitenübergänge
 
@@ -54,9 +54,9 @@ Die Drill-Animation wird durch die Klasse [**DrillInNavigationTransitionInfo**](
 myFrame.Navigate(typeof(Page2), null, new DrillInNavigationTransitionInfo());
 ```
 
-## <a name="horizontal-slide"></a>Horizontale Folie
+## <a name="horizontal-slide"></a>Horizontale Ziehen
 
-Verwenden Sie horizontale ziehen, um anzuzeigen, dass geschwisterseiten nebeneinander angezeigt werden. Das [NavigationView](../controls-and-patterns/navigationview.md) -Steuerelement verwendet diese Animation automatisch für oben Nav, aber wenn Sie Ihre eigenen horizontale Navigationsfunktionalität erstellen, Sie können implementieren horizontale Folie mit SlideNavigationTransitionInfo.
+Verwenden Sie horizontale ziehen, um anzuzeigen, dass geschwisterseiten nebeneinander angezeigt werden. Das [NavigationView](../controls-and-patterns/navigationview.md) -Steuerelement verwendet diese Animation automatisch für den oberen, aber wenn Sie Ihre eigenen horizontalen Navigationsfunktionalität erstellen, Sie können implementieren horizontale Ziehen mit SlideNavigationTransitionInfo.
 
 Der gewünschte Effekt ist, dass die Benutzer zwischen Seiten navigieren, die nebeneinander befinden. 
 

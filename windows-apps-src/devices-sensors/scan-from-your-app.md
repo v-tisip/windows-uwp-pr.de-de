@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 74c01c21ae65f9e93638e2ce1df604591043a729
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8744423"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8799075"
 ---
 # <a name="scan-from-your-app"></a>Scannen aus Ihrer App
 
@@ -24,7 +24,7 @@ ms.locfileid: "8744423"
 
 Erfahren Sie, wie Sie Inhalte über Ihre App mithilfe eines Flachbett-, Einzugs- oder automatisch konfigurierten Scanners scannen können.
 
-**Wichtige**die [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250) -APIs sind Teil der desktop- [Gerätefamilie](https://msdn.microsoft.com/library/windows/apps/Dn894631). Apps können diese APIs nur in der Desktopversion von Windows 10 verwenden.
+**Wichtige**die [**Windows.Devices.Scanners**](https://msdn.microsoft.com/library/windows/apps/Dn264250) -APIs sind Teil der desktop- [Gerätefamilie](https://msdn.microsoft.com/library/windows/apps/Dn894631). Apps können diese APIs nur auf die desktop-Version von Windows 10 verwenden.
 
 Damit Sie über Ihre App scannen können, müssen Sie zunächst die verfügbaren Scanner auflisten, indem Sie ein neues [**DeviceInformation**](https://msdn.microsoft.com/library/windows/apps/BR225393)-Objekt deklarieren und den [**DeviceClass**](https://msdn.microsoft.com/library/windows/apps/BR225381)-Typ abrufen. Nur Scanner, die lokal mit WIA-Treibern installiert sind, werden in Ihrer App aufgeführt und stehen darin zur Verfügung.
 
@@ -109,7 +109,7 @@ Zum Scan mit den Standardeinstellungen ist Ihre App bei der Auswahl eines Scanne
 
 Ihre App kann den [automatisch konfigurierten Scan](https://msdn.microsoft.com/library/windows/hardware/Ff539393) des Geräts mit den optimalen Scaneinstellungen verwenden. Bei dieser Option kann das Gerät selbst die besten Scaneinstellungen, wie Farbmodus und Scanauflösung, basierend auf dem zu scannenden Inhalt bestimmen. Das Gerät wählt die Scaneinstellungen zur Laufzeit für jeden neuen Scanauftrag.
 
-**Hinweis:** nicht von allen Scannern unterstützt wird diese Funktion muss die app prüfen, ob der Scanner dieses Feature unterstützt, bevor Sie diese Einstellung verwenden.
+**Hinweis:** nicht von allen Scannern unterstützt diese Funktion muss die app prüfen, ob der Scanner dieses Feature unterstützt, bevor Sie diese Einstellung verwenden.
 
 In diesem Beispiel prüft die App zunächst, ob der Scanner die automatische Konfiguration unterstützt, und startet dann den Scanvorgang. Um einen Flachbett- oder Einzugsscanner anzugeben, ersetzen Sie einfach **AutoConfigured** durch **Flatbed** oder **Feeder**.
 

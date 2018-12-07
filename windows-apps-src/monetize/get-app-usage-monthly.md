@@ -1,17 +1,17 @@
 ---
 ms.assetid: 4E4CB1E3-D213-4324-91E4-7D4A0EA19C53
-description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um monatlichen app-Nutzungsdaten für einen bestimmten Zeitraum und andere optionale Filter abzurufen.
+description: Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um die monatlichen app-Nutzungsdaten für einen bestimmten Zeitraum und andere optionale Filter abzurufen.
 title: Abrufen der monatlichen App-Nutzung
 ms.date: 08/15/2018
 ms.topic: article
 keywords: Windows 10, Uwp, Store-Dienste, Microsoft Store-Analyse-API, Nutzung
 ms.localizationpriority: medium
 ms.openlocfilehash: 48ad049b3f310f8b375a28d9695dd9280d686c43
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8749095"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8798187"
 ---
 # <a name="get-monthly-app-usage"></a>Abrufen der monatlichen App-Nutzung
 
@@ -85,16 +85,16 @@ Elemente im Array *Value* enthalten die folgenden Werte.
 | applicationId             | string  | Die Store-ID der app, für die Sie Nutzungsdaten abrufen.                            |
 | applicationName           | string  | Der Anzeigename der App.                                                                |
 | market                    | string  | Der ISO 3166-Ländercode des Markts, in dem der Kunde Ihre app verwendet, werden soll.                   |
-| packageVersion            | string  | Die Version des Pakets, in denen Nutzung aufgetreten ist.                                            |
-| deviceType                | string  | Eine der folgenden Zeichenfolgen gibt an, dass der Typ des Geräts, bei der Nutzung aufgetreten ist:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**Tablet**</li><li>**IoT**</li><li>**Server**</li><li>**Holographic**</li><li>**Unknown**</li></ul>                                                                                                                           |
-| subscriptionName          | String  | Gibt an, ob die Verwendung über Xbox Game Pass befand.                                              |
+| packageVersion            | string  | Die Version des Pakets, in der Verwendung aufgetreten ist.                                            |
+| deviceType                | string  | Eine der folgenden Zeichenfolgen, die den Typ des Geräts angibt, bei der Nutzung aufgetreten ist:<ul><li>**PC**</li><li>**Phone**</li><li>**Console**</li><li>**Tablet**</li><li>**IoT**</li><li>**Server**</li><li>**Holographic**</li><li>**Unknown**</li></ul>                                                                                                                           |
+| subscriptionName          | String  | Gibt an, ob über Xbox Game Pass wurde.                                              |
 | monthlySessionCount       | long    | Die Anzahl der benutzersitzungen während des Monats.                                              |
-| engagementDurationMinutes | doppelt  | Die Minuten, in denen Benutzer aktiv Ihrer App gemessen durch einen bestimmten Zeitraum, wenn die app gestartet wird (Prozessbeginn) und endet, wenn er beendet wird (Prozess End) oder nach einer Zeit der Inaktivität.                               |
+| engagementDurationMinutes | doppelt  | Der Minuten, in denen Benutzer aktiv Ihrer App gemessen werden, indem Sie einen bestimmten Zeitraum, wenn die app gestartet wird (Prozessbeginn) und endet bei der beendet wird (Prozess End) oder nach einer Zeit der Inaktivität.                               |
 | monthlyActiveUsers        | long    | Die Anzahl der Kunden, die mit der app dieses Monats.                                           |
-| monthlyActiveDevices      | long    | Die Anzahl der Geräte, die app für einen bestimmten Zeitraum, wenn die app gestartet wird (Prozessbeginn) ausführen und endet, wenn er beendet wird (Prozess End) oder nach einer Zeit der Inaktivität.                                                        |
+| monthlyActiveDevices      | long    | Die Anzahl von Geräten, die app für einen bestimmten Zeitraum, wenn die app gestartet wird (Prozessbeginn) ausführen und endet, wenn es (Prozess End) beendet wird oder nach einer Zeit der Inaktivität.                                                        |
 | monthlyNewUsers           | long    | Die Anzahl der Kunden, die Ihre app zum ersten Mal dieses Monats verwendet.                    |
-| averageDailyActiveUsers   | doppelt  | Die durchschnittliche Anzahl der Kunden, die die app täglich.                             |
-| averageDailyActiveDevices | doppelt  | Die durchschnittliche Anzahl der Geräte, die von allen Benutzern täglich Interaktion mit Ihrer app verwendet. |
+| averageDailyActiveUsers   | doppelt  | Die durchschnittliche Anzahl der Kunden, die mit der app täglich.                             |
+| averageDailyActiveDevices | doppelt  | Die durchschnittliche Anzahl der Geräte, die von allen Benutzern täglich Interaktion mit Ihrer app verwendet werden soll. |
 
 
 ### <a name="response-example"></a>Antwortbeispiel
@@ -145,7 +145,7 @@ Das folgende Beispiel zeigt ein Beispiel für einen JSON-Antworttext für diese 
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Zugreifen auf Analysedaten mit MicrosoftStore-Diensten](access-analytics-data-using-windows-store-services.md)
-* [Abrufen von täglichen app ussage](get-app-usage-daily.md)
+* [Abrufen der täglichen app ussage](get-app-usage-daily.md)
 * [Abrufen von App-Käufen](get-app-acquisitions.md)
 * [Abrufen von Add-On-Käufen](get-in-app-acquisitions.md)
 * [Abrufen von Fehlerberichtsdaten](get-error-reporting-data.md)

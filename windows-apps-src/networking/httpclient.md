@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 706432123d8a778af558d0c3e426ad4f5120bdba
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8738175"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8796873"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -58,7 +58,7 @@ Der [**Windows.Web.Http.Headers**](https://msdn.microsoft.com/library/windows/ap
 
 ## <a name="send-a-simple-get-request-over-http"></a>Senden einer einfachen GET-Anforderung über HTTP
 
-Wie weiter oben in diesem Artikel beschrieben wurde, können UWP-Apps mit dem [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692)-Namespace GET-Anforderungen senden. Der folgende Codeausschnitt veranschaulicht, wie eine GET-Anforderung zu senden http://www.contoso.com mit, dass die [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) -Klasse und die [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) -Klasse um die Antwort der GET-Anforderung zu lesen.
+Wie weiter oben in diesem Artikel beschrieben wurde, können UWP-Apps mit dem [**Windows.Web.Http**](https://msdn.microsoft.com/library/windows/apps/dn279692)-Namespace GET-Anforderungen senden. Der folgende Codeausschnitt veranschaulicht, wie eine GET-Anforderung zu senden http://www.contoso.com mit der [**Windows.Web.Http.HttpClient**](https://msdn.microsoft.com/library/windows/apps/dn298639) -Klasse und die [**Windows.Web.Http.HttpResponseMessage**](https://msdn.microsoft.com/library/windows/apps/dn279631) -Klasse, um die Antwort der GET-Anforderung zu lesen.
 
 ```csharp
 //Create an HTTP client object
@@ -104,7 +104,7 @@ catch (Exception ex)
 
 Eine Ausnahme wird ausgelöst, wenn eine ungültige Zeichenfolge für einen Uniform Resource Identifier (URI) an den Konstruktor für das [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998)-Objekt übergeben wird.
 
-**NET:** der [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) -Typ wird als [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) in c# und VB.
+**NET:** der [**Windows.Foundation.Uri**](https://msdn.microsoft.com/library/windows/apps/br225998) -Typ wird als [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx) in c# und VB angezeigt.
 
 In C# und Visual Basic kann dieser Fehler vermieden werden, indem die [**System.Uri**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.aspx)-Klasse in .NET4.5 und eine der [**System.Uri.TryCreat**](https://msdn.microsoft.com/library/windows/apps/xaml/system.uri.trycreate.aspx)-Methoden zum Testen der von einem Benutzer erhaltenen Zeichenfolge verwendet wird, bevor der URI erstellt wird.
 

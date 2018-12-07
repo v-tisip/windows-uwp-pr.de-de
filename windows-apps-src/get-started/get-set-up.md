@@ -1,27 +1,27 @@
 ---
 ms.assetid: 7D5EED8A-0742-4E12-A806-40FBAEFE6ABF
 title: Vorbereitung
-description: Das Durchführen der Vorbereitung ist einfacher, als Sie denken. Befolgen Sie diese Anweisungen, und Erstellen von universellen Windows-Plattform (UWP) apps für Windows 10.
+description: Das Durchführen der Vorbereitung ist einfacher, als Sie denken. Befolgen Sie diese Anweisungen, und starten Sie die universelle Windows-Plattform (UWP) apps für Windows 10 erstellen.
 ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f3d14467856aee733f2e11d057db0deb873269ff
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8756384"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8796358"
 ---
 # <a name="get-set-up"></a>Vorbereiten
 
 ![Vorbereitungen für die Verwendung von Visual Studio](images/VisualStudio2017Hero_ImageXL-LG.png)
 
-Die Vorbereitung ist einfacher, als Sie denken. Befolgen Sie diese Anweisungen, und Erstellen von universellen Windows-Plattform (UWP) apps für Windows 10.
+Die Vorbereitung ist einfacher, als Sie denken. Befolgen Sie diese Anweisungen, und starten Sie die universelle Windows-Plattform (UWP) apps für Windows 10 erstellen.
 
 ## <a name="1-download-or-update-visual-studio"></a>1. Laden Sie Visual Studio herunter, oder aktualisieren Sie es.
 
-Microsoft Visual Studio2017 können, die Sie entwerfen, Codebeispiel, testen und Debuggen Ihrer apps.
+Microsoft Visual Studio2017 unterstützt, entwerfen, code, testen und Debuggen Ihrer apps.
 
 Wenn Sie bereits über Visual Studio2017 besitzen, können Sie das kostenlose Microsoft Visual Studio Community2017 installieren. Dieser Download umfasst auch Geräte-Simulatoren zum Testen Ihrer Apps:
 

@@ -8,12 +8,12 @@ ms.date: 11/09/2017
 ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ffcbc3d1c11c8f756b6307b15b87c14b09f65c4
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: a8e68242647204dfbf8ba23c45d881066c88900b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8751104"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8793331"
 ---
 # <a name="use-templates-and-patterns-to-format-dates-and-times"></a>Verwenden von Mustern zum Formatieren von Datums- und Uhrzeitwerten
 
@@ -98,7 +98,7 @@ Angenommen, Sie möchten den aktuellen Monat und den aktuellen Tag zusammen mit 
 June 25 | 1:38 PM
 ```
 
-Die Datumskomponente entspricht der Formatvorlage „month day“, die Uhrzeitkomponente der Formatvorlage „hour minute“. Sie können also einen Formatierer für die entsprechenden Formatvorlagen für Datum und Uhrzeit erstellen und dann seine Ausgabe mit einer lokalisierbaren Formatzeichenfolge verketten.
+Die Datumskomponente entspricht der Formatvorlage „month day“, die Uhrzeitkomponente der Formatvorlage „hour minute“. Daher können Sie einen Formatierer der relevanten Datum und Zeitpunkt Formatvorlagen erstellen und dann ihre Ausgabe zusammen mit einer lokalisierbaren Formatzeichenfolge verketten.
 
 ```csharp
 var dateToFormat = System.DateTime.Now;

@@ -1,5 +1,5 @@
 ---
-description: Wir beschreiben das Programmierkonzept von Ereignissen in einer Windows-Runtime-app, bei Verwendung von c#, Visual Basic oder für VisualC++-komponentenerweiterungen (C++ / CX) als Programmiersprache und XAML-Code für die UI-Definition.
+description: Wir beschreiben das Programmierkonzept von Ereignissen in einer Windows-Runtime-app bei Verwendung von c#, Visual Basic oder für VisualC++-komponentenerweiterungen (C++ / CX) als Programmiersprache und XAML-Code für die UI-Definition.
 title: Übersicht über Ereignisse und Routingereignisse
 ms.assetid: 34C219E8-3EFB-45BC-8BBD-6FD937698832
 ms.date: 07/12/2018
@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 7f24543c1afcd9c154788cc4be03434384f00f0c
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8747370"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8796978"
 ---
 # <a name="events-and-routed-events-overview"></a>Übersicht über Ereignisse und Routingereignisse
 
@@ -19,7 +19,7 @@ ms.locfileid: "8747370"
 -   [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)
 -   [**RoutedEventArgs**](https://msdn.microsoft.com/library/windows/apps/br208809)
 
-Wir beschreiben das Programmierkonzept von Ereignissen in einer Windows-Runtime-app, bei Verwendung von c#, Visual Basic oder für VisualC++-komponentenerweiterungen (C++ / CX) als Programmiersprache und XAML-Code für die UI-Definition. Sie können im Rahmen der Deklarationen für UI-Elemente Handler für Ereignisse in XAML zuweisen. Alternativ können Sie Handler im Code hinzufügen. Die Windows-Runtime unterstützt *Routingereignisse*: Bestimmte Eingabeereignisse und Datenereignisse können von anderen Objekten behandelt werden als dem Objekt, von dem das Ereignis ausgelöst wurde. Routingereignisse sind hilfreich, wenn Sie Steuerelementvorlagen definieren oder Seiten oder Layoutcontainer verwenden.
+Wir beschreiben das Programmierkonzept von Ereignissen in einer Windows-Runtime-app bei Verwendung von c#, Visual Basic oder für VisualC++-komponentenerweiterungen (C++ / CX) als Programmiersprache und XAML-Code für die UI-Definition. Sie können im Rahmen der Deklarationen für UI-Elemente Handler für Ereignisse in XAML zuweisen. Alternativ können Sie Handler im Code hinzufügen. Die Windows-Runtime unterstützt *Routingereignisse*: Bestimmte Eingabeereignisse und Datenereignisse können von anderen Objekten behandelt werden als dem Objekt, von dem das Ereignis ausgelöst wurde. Routingereignisse sind hilfreich, wenn Sie Steuerelementvorlagen definieren oder Seiten oder Layoutcontainer verwenden.
 
 ## <a name="events-as-a-programming-concept"></a>Ereignisse als Programmierkonzept
 
@@ -80,13 +80,13 @@ void MyNamespace::BlankPage::ShowUpdatesButton_Click(Platform::Object^ sender, W
 
 In diesem Beispiel basiert die `ShowUpdatesButton_Click`-Methode auf dem [**RoutedEventHandler**](https://msdn.microsoft.com/library/windows/apps/br208812)-Delegaten. Sie wissen, dass dies der zu verwendende Delegat ist, weil er in der Syntax für die [**Click**](https://msdn.microsoft.com/library/windows/apps/br227737)-Methode auf der MSDN-Referenzseite aufgeführt wird.
 
-**Tipp:** Visual Studio bietet eine bequeme Möglichkeit zum Benennen des ereignishandlers und Definieren der Handlermethode während der Bearbeitung XAML. Wenn Sie den Attributnamen des Ereignisses im XAML-Text-Editor bereitstellen, warten Sie einen Moment, bis eine Microsoft IntelliSense-Liste angezeigt wird. Wenn Sie in der Liste auf **&lt;Neuer Ereignishandler&gt;** klicken, schlägt Microsoft Visual Studio einen Methodennamen vor, der auf dem **x:Name** des Elements (oder der Typbezeichnung), dem Ereignisnamen und einem numerischen Suffix basiert. Anschließend können Sie mit der rechten Maustaste auf den ausgewählten Ereignishandler und dann mit der linken Maustaste auf **Zum Ereignishandler navigieren** klicken. Dadurch navigieren Sie direkt zu der neu eingefügten Ereignishandlerdefinition, wie sie in der Code-Editoransicht Ihrer CodeBehind-Datei für die XAML-Seite angezeigt wird. Der Ereignishandler hat bereits die richtige Signatur, einschließlich des *sender*-Parameters und der Ereignisdatenklasse, die von dem Ereignis verwendet wird. Wenn zudem bereits eine Handlermethode mit der richtigen Signatur im CodeBehind vorhanden ist, wird der Name dieser Methode zusammen mit der Option **&lt;Neuer Ereignishandler&gt;** im Auto-Vervollständigen-Dropdown angezeigt. Sie können auch die Tabulatortaste drücken, anstatt auf die IntelliSense-Listenelemente zu klicken.
+**Tipp:** Visual Studio bietet eine bequeme Möglichkeit zum Benennen des ereignishandlers und zum Definieren der Handlermethode während der Bearbeitung von XAML. Wenn Sie den Attributnamen des Ereignisses im XAML-Text-Editor bereitstellen, warten Sie einen Moment, bis eine Microsoft IntelliSense-Liste angezeigt wird. Wenn Sie in der Liste auf **&lt;Neuer Ereignishandler&gt;** klicken, schlägt Microsoft Visual Studio einen Methodennamen vor, der auf dem **x:Name** des Elements (oder der Typbezeichnung), dem Ereignisnamen und einem numerischen Suffix basiert. Anschließend können Sie mit der rechten Maustaste auf den ausgewählten Ereignishandler und dann mit der linken Maustaste auf **Zum Ereignishandler navigieren** klicken. Dadurch navigieren Sie direkt zu der neu eingefügten Ereignishandlerdefinition, wie sie in der Code-Editoransicht Ihrer CodeBehind-Datei für die XAML-Seite angezeigt wird. Der Ereignishandler hat bereits die richtige Signatur, einschließlich des *sender*-Parameters und der Ereignisdatenklasse, die von dem Ereignis verwendet wird. Wenn zudem bereits eine Handlermethode mit der richtigen Signatur im CodeBehind vorhanden ist, wird der Name dieser Methode zusammen mit der Option **&lt;Neuer Ereignishandler&gt;** im Auto-Vervollständigen-Dropdown angezeigt. Sie können auch die Tabulatortaste drücken, anstatt auf die IntelliSense-Listenelemente zu klicken.
 
 ## <a name="defining-an-event-handler"></a>Definieren eines Ereignishandlers
 
 Für Objekte, die UI-Elemente darstellen und in XAML deklariert werden, wird Ereignishandlercode in der partiellen Klasse definiert, die als CodeBehind für eine XAML-Seite fungiert. Ereignishandler sind Methoden, die Sie als Teil der Ihrem XAML zugeordneten partiellen Klasse schreiben. Diese Ereignishandler basieren auf den Delegaten, die von einem bestimmten Ereignis verwendet werden. Die Ereignishandlermethoden können öffentlich oder privat sein. Der private Zugriff funktioniert, weil der vom XAML erstellte Handler und die Instanz letztendlich durch die Codegenerierung verbunden werden. Im Allgemeinen wird empfohlen, die Ereignishandlermethoden in der Klasse öffentlich zu machen.
 
-**Hinweis:** Ereignishandler für C++ nicht in partiellen Klassen definiert, sie im Header als private Klassenmember deklariert werden. Bei den Erstellungsaktionen für ein C++-Projekt wird Code generiert, der das XAML-Typsystem und das CodeBehind-Modell für C++ unterstützt.
+**Hinweis:** Ereignishandler für C++ nicht in partiellen Klassen definiert, werden sie im Header als private Klassenmember deklariert. Bei den Erstellungsaktionen für ein C++-Projekt wird Code generiert, der das XAML-Typsystem und das CodeBehind-Modell für C++ unterstützt.
 
 ### <a name="the-sender-parameter-and-event-data"></a>Der *sender*-Parameter und Ereignisdaten
 
@@ -147,7 +147,7 @@ Private Sub textBlock1_PointerEntered(ByVal sender As Object, ByVal e As Pointer
 End Sub
 ```
 
-**Hinweis:** Visual Studio und die zugehörige XAML-Entwurfsoberfläche in der Regel instanzbehandlung Instanz-Behandlung anstelle des Schlüsselworts **behandelt** . Das Erstellen der Ereignishandlerverknüpfung in XAML ist Teil eines typischen Designer-Entwickler-Workflows, und die **Handles**-Schlüsselworttechnik ist mit dem Verknüpfen der Ereignishandler in XAML nicht kompatibel.
+**Hinweis:** Visual Studio und die zugehörige XAML-Entwurfsoberfläche in der Regel instanzbehandlung Instanz Behandlung anstelle des Schlüsselworts **behandelt** . Das Erstellen der Ereignishandlerverknüpfung in XAML ist Teil eines typischen Designer-Entwickler-Workflows, und die **Handles**-Schlüsselworttechnik ist mit dem Verknüpfen der Ereignishandler in XAML nicht kompatibel.
 
 In C++ / CX verwenden Sie auch die **+=** Syntax, es gibt jedoch Unterschiede zum Allgemeinen C#-Format:
 
@@ -265,7 +265,7 @@ Das Bestimmen, ob und wo auf der UI ein Element für die Maus-, Touch und Stifte
 -   Der [**Visibility**](https://msdn.microsoft.com/library/windows/apps/br208992)-Eigenschaftenwert des Elements ist [**Visible**](https://msdn.microsoft.com/library/windows/apps/br209006).
 -   Der Wert der Eigenschaft **Background** oder **Fill** ist nicht **null**. Ein Wert **null** für [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) führt zu Transparenz und Unsichtbarkeit von Treffertests. (Wenn Sie ein Element transparent machen und zugleich Treffertests für das Element ermöglichen möchten, verwenden Sie einen [**Transparent**](https://msdn.microsoft.com/library/windows/apps/hh748061)-Pinsel anstelle von **null**.)
 
-**Hinweis:** **Hintergrund** **Ausfüllen** nicht durch [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911)definiert und werden stattdessen durch verschiedene abgeleitete Klassen wie [**Steuerelement**](https://msdn.microsoft.com/library/windows/apps/br209390) und [**Form**](/uwp/api/Windows.UI.Xaml.Shapes.Shape)definiert. Die von Ihnen für Vorder- und Hintergrundeigenschaften verwendeten Implikationen von Pinseln sind jedoch für Treffertests und Eingabeereignisse identisch. Dabei ist es unerheblich, welche Unterklasse die Eigenschaften implementiert.
+**Hinweis:** **Hintergrund** und **Füllen Sie** sind nicht durch [**UIElement**](https://msdn.microsoft.com/library/windows/apps/br208911), und stattdessen durch verschiedene abgeleitete Klassen wie [**Steuerelement**](https://msdn.microsoft.com/library/windows/apps/br209390) und [**Form**](/uwp/api/Windows.UI.Xaml.Shapes.Shape)definiert sind. Die von Ihnen für Vorder- und Hintergrundeigenschaften verwendeten Implikationen von Pinseln sind jedoch für Treffertests und Eingabeereignisse identisch. Dabei ist es unerheblich, welche Unterklasse die Eigenschaften implementiert.
 
 -   Wenn das Element ein Steuerelement ist, muss dessen Wert für die Eigenschaft [**IsEnabled**](https://msdn.microsoft.com/library/windows/apps/br209419) **true** sein.
 -   Das Element muss im Layout über reale Dimensionen verfügen. Ein Element, bei dem [**ActualHeight**](https://msdn.microsoft.com/library/windows/apps/br208707) und [**ActualWidth**](https://msdn.microsoft.com/library/windows/apps/br208709) 0 sind, kann keine Eingabeereignisse auslösen.

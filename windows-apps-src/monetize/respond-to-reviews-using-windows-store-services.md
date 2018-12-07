@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Rezensionen-API, Reagieren auf Rezensionen
 ms.localizationpriority: medium
 ms.openlocfilehash: 95de2cc1de1b71a435fc8d4388f599c417132814
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8751952"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8795548"
 ---
 # <a name="respond-to-reviews-using-store-services"></a>Antworten auf Rezensionen mit Store-Diensten
 
-Verwenden Sie die *Microsoft Store-Rezensionen-API*, um programmgesteuert auf Rezensionen Ihrer App im Store zu reagieren. Diese API ist besonders nützlich für Entwickler, die gleichzeitig auf zahlreiche Rezensionen reagieren, ohne dabei Partner Center. Diese API verwendet Azure Active Directory (Azure AD), um die Aufrufe von Ihrer App oder Ihrem Dienst zu authentifizieren.
+Verwenden Sie die *Microsoft Store-Rezensionen-API*, um programmgesteuert auf Rezensionen Ihrer App im Store zu reagieren. Diese API ist besonders nützlich für Entwickler, die gleichzeitig auf zahlreiche Rezensionen reagieren, ohne zu Partner Center verwenden. Diese API verwendet Azure Active Directory (Azure AD), um die Aufrufe von Ihrer App oder Ihrem Dienst zu authentifizieren.
 
 Dazu müssen folgende Schritte ausgeführt werden:
 
@@ -24,7 +24,7 @@ Dazu müssen folgende Schritte ausgeführt werden:
 3.  [Aufrufen der Microsoft Store-Rezensionen-API](#call-the-windows-store-reviews-api).
 
 > [!NOTE]
-> Zusätzlich zur Verwendung von Rezensionen im Microsoft Store-API zum programmgesteuerten reagieren auf Rezensionen auch auf Rezensionen [mithilfe von Partner Center](../publish/respond-to-customer-reviews.md)Antworten können.
+> Zusätzlich zur Verwendung im Microsoft Store-Rezensionen-API zum programmgesteuerten reagieren auf Rezensionen auch auf Rezensionen [mithilfe von Partner Center](../publish/respond-to-customer-reviews.md)Antworten können.
 
 <span id="prerequisites" />
 
@@ -32,9 +32,9 @@ Dazu müssen folgende Schritte ausgeführt werden:
 
 Stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen, bevor Sie mit dem Schreiben von Code zum Aufrufen der MicrosoftStore-Rezensionen-API beginnen.
 
-* Sie (bzw. Ihre Organisation) müssen über ein Azure AD-Verzeichnis und die Berechtigung [Globaler Administrator](http://go.microsoft.com/fwlink/?LinkId=746654) für das Verzeichnis verfügen. Wenn Sie bereits mit Office 365oder anderen Unternehmensdiensten von Microsoft arbeiten, verfügen Sie schon über ein Azure AD-Verzeichnis. Andernfalls können Sie für ohne zusätzliche Kosten [ein neues Azure AD im Partner Center erstellen](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) .
+* Sie (bzw. Ihre Organisation) müssen über ein Azure AD-Verzeichnis und die Berechtigung [Globaler Administrator](http://go.microsoft.com/fwlink/?LinkId=746654) für das Verzeichnis verfügen. Wenn Sie bereits mit Office 365oder anderen Unternehmensdiensten von Microsoft arbeiten, verfügen Sie schon über ein Azure AD-Verzeichnis. Andernfalls können Sie [ein neues Azure AD im Partner Center erstellen](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) , für die ohne zusätzliche Kosten.
 
-* Sie müssen Ihr Partner Center-Konto eine Azure AD-Anwendung zuordnen, die Mandanten-ID und Client-ID für die Anwendung abrufen und einen Schlüssel erzeugen. Die Azure-AD-Anwendung stellt die App oder den Dienst dar, von der/dem Sie die Microsoft Store-Rezensionen-API aufrufen möchten. Sie benötigen die Mandanten-ID, die Client-ID und den Schlüssel zum Abrufen eines Azure-AD-Zugriffstokens, das Sie an die API übergeben.
+* Sie müssen Ihr Partner Center-Konto eine Azure AD-Anwendung zuordnen, die Mandanten-ID und Client-ID für die Anwendung abrufen und einen Schlüssel generieren. Die Azure-AD-Anwendung stellt die App oder den Dienst dar, von der/dem Sie die Microsoft Store-Rezensionen-API aufrufen möchten. Sie benötigen die Mandanten-ID, die Client-ID und den Schlüssel zum Abrufen eines Azure-AD-Zugriffstokens, das Sie an die API übergeben.
     > [!NOTE]
     > Sie müssen diesen Schritt nur einmal ausführen. Wenn Sie im Besitz der Mandanten-ID, der Client-ID und des Schlüssel sind, können Sie diese Daten jederzeit wiederverwenden, um ein neues Azure AD-Zugriffstoken zu erstellen.
 
@@ -42,7 +42,7 @@ Ihr Partner Center-Konto eine Azure AD-Anwendung zuordnen, und die erforderliche
 
 1.  Im Partner Center, [Partner Center-Konto Ihrer Organisation mit Azure AD-Verzeichnis Ihrer Organisation zuordnen](../publish/associate-azure-ad-with-partner-center.md).
 
-2.  Als Nächstes die Berichte in der Seite " **Benutzer** " im Abschnitt **kontoeinstellungen** des Partner Center, [Fügen Sie die Azure AD-Anwendung hinzu](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) , die darstellt, die app oder den Dienst, mit denen Sie zu reagieren. Weisen Sie dieser Anwendung anschließend die Rolle **Verwalter** zu. Wenn die Anwendung nicht vorhanden ist, noch in Azure AD-Verzeichnis, Sie können [Erstellen Sie ein neues Azure AD-Anwendung im Partner Center](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account). 
+2.  Als Nächstes Rezensionen aus der Seite " **Benutzer** " im Abschnitt **kontoeinstellungen** des Partner Center, [die Azure AD-Anwendung hinzufügen](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) , die darstellt, die app oder den Dienst, mit denen Sie zu reagieren. Weisen Sie dieser Anwendung anschließend die Rolle **Verwalter** zu. Wenn die Anwendung nicht vorhanden ist, noch in Azure AD-Verzeichnis, können Sie eine [Erstellen Sie ein neues Azure AD-Anwendung im Partner Center](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account). 
 
 3.  Wechseln Sie zurück zur Seite **Benutzer**, klicken Sie auf den Namen der Azure AD-Anwendung, um die Anwendungseinstellungen aufzurufen, und kopieren Sie die Werte unter **Mandanten-ID** und **Client-ID**.
 

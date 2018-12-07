@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: f6348cc713d4fb93dfed9310eea9d3fd1025a2de
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8755096"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8797862"
 ---
 # <a name="enumerate-devices"></a>Auflisten von Geräten
 
@@ -82,7 +82,7 @@ Der [**DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn930841)
 
 Während [**DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn930841) angezeigt wird, werden die Inhalte der Benutzeroberfläche automatisch aktualisiert, wenn Geräte hinzugefügt, entfernt oder aktualisiert werden.
 
-**Hinweis:** der [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind.aspx) mithilfe der [**DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn930841)kann nicht angegeben werden. Wenn Sie Geräte mit einem bestimmten **DeviceInformationKind** ermitteln möchten, müssen Sie einen [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) erstellen und eine eigene Benutzeroberfläche bereitstellen.
+**Hinweis:** Sie können nicht festlegen, die mit der [**DevicePicker**](https://msdn.microsoft.com/library/windows/apps/Dn930841) [**DeviceInformationKind**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.deviceinformationkind.aspx) . Wenn Sie Geräte mit einem bestimmten **DeviceInformationKind** ermitteln möchten, müssen Sie einen [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446) erstellen und eine eigene Benutzeroberfläche bereitstellen.
 
  
 
@@ -123,7 +123,7 @@ Zum Erstellen von [**DeviceWatcher**](https://msdn.microsoft.com/library/windows
 
 Die Geräteüberwachung als Hintergrundaufgabe ist nahezu identisch mit der oben beschriebenen Erstellung von [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446). Tatsächlich müssen Sie zunächst ein normales **DeviceWatcher**-Objekt erstellen wie im vorangehenden Abschnitt beschrieben. Nach der Erstellung rufen Sie [**GetBackgroundTrigger**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.devicewatcher.enumerationcompleted.aspx) anstelle von [**DeviceWatcher.Start**](https://msdn.microsoft.com/library/windows/apps/windows.devices.enumeration.devicewatcher.start) auf. Beim Aufruf von **GetBackgroundTrigger** müssen Sie angeben, welche der Benachrichtigungen Ihnen wichtig sind: Hinzufügen, Entfernen oder Aktualisieren. Benachrichtigungen über das Aktualisieren oder Entfernen können nur zusammen mit einer Benachrichtigung über das Hinzufügen angefordert werden. Nachdem Sie den Trigger registriert haben, wird die Ausführung von **DeviceWatcher** sofort im Hintergrund gestartet. Ab dann wird die Hintergrundaufgabe jedes Mal ausgelöst, wenn sie eine neue mit den Kriterien übereinstimmende Benachrichtigung für Ihre Anwendung empfängt. Sie teilt Ihnen die seit der letzten Auslösung der Anwendung vorgenommenen Änderungen mit.
 
-**Wichtige**zum erste Mal, eine [**DeviceWatcherTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn913838) Ihrer Anwendung löst werden, wenn der Monitor den **EnumerationCompleted** Status erreicht. Dies bedeutet, dass alle anfänglich verfügbaren Ergebnisse enthalten sind. Wenn die Anwendung in Zukunft ausgelöst wird, enthält die Hintergrundaufgabe nur die Benachrichtigungen über Hinzufügungs-, Aktualisierungs- und Entfernungsvorgänge, die seit dem letzten Trigger aufgetreten sind. Dies unterscheidet sich geringfügig von dem im Vordergrund ausgeführten [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446)-Objekt, da die anfänglichen Ergebnisse nicht nacheinander eingehen, sondern erst nach Erreichen des Zustands **EnumerationCompleted** gebündelt übermittelt werden.
+**Wichtige**das erste Mal eine [**DeviceWatcherTrigger**](https://msdn.microsoft.com/library/windows/apps/Dn913838) Ihrer Anwendung löst werden, wenn die Überwachung den Zustand **EnumerationCompleted** erreicht. Dies bedeutet, dass alle anfänglich verfügbaren Ergebnisse enthalten sind. Wenn die Anwendung in Zukunft ausgelöst wird, enthält die Hintergrundaufgabe nur die Benachrichtigungen über Hinzufügungs-, Aktualisierungs- und Entfernungsvorgänge, die seit dem letzten Trigger aufgetreten sind. Dies unterscheidet sich geringfügig von dem im Vordergrund ausgeführten [**DeviceWatcher**](https://msdn.microsoft.com/library/windows/apps/BR225446)-Objekt, da die anfänglichen Ergebnisse nicht nacheinander eingehen, sondern erst nach Erreichen des Zustands **EnumerationCompleted** gebündelt übermittelt werden.
 
  
 

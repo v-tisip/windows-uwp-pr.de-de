@@ -7,22 +7,22 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ec673236f41d4128e6aa5702f4d54f43c55890ab
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8754956"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8797723"
 ---
 # <a name="install-apps-with-the-winappdeploycmdexe-tool"></a>Installieren von Apps mit dem Tool „WinAppDeployCmd.exe“
 
 
-Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befehlszeilentool, mit denen eine universelle Windows-Plattform (UWP)-app von einem Windows 10-PC auf einem Gerät mit Windows 10 bereitstellen. Sie können dieses Tool verwenden, um ein app-Paket bereitzustellen, wenn das Windows 10-Gerät über USB verbunden ist oder sich im gleichen Subnetz verfügbar ist, ohne Microsoft Visual Studio oder die Projektmappe für diese app. Sie können die App auch bereitstellen, ohne sie zuerst zu einem Remote-PC oder zu Xbox One zu verpacken. Dieser Artikel beschreibt, wie UWP-Apps mit diesem Tool installiert werden.
+Windows-Anwendungsbereitstellung (WinAppDeployCmd.exe) ist ein Befehlszeilentool, mit denen eine universelle Windows-Plattform (UWP)-app von einem Windows 10-PC auf einem Gerät mit Windows 10 bereitstellen. Sie können dieses Tool verwenden, um ein app-Paket bereitstellen, wenn das Windows 10-Gerät über USB verbunden ist oder sich im gleichen Subnetz verfügbar ist, ohne Microsoft Visual Studio oder die Projektmappe für diese app. Sie können die App auch bereitstellen, ohne sie zuerst zu einem Remote-PC oder zu Xbox One zu verpacken. Dieser Artikel beschreibt, wie UWP-Apps mit diesem Tool installiert werden.
 
-Sie benötigen nur die Windows 10-SDK installiert haben, um das Tool WinAppDeployCmd über eine Eingabeaufforderung oder eine Skriptdatei ausführen. Wenn Sie eine app mit WinAppDeployCmd.exe installieren, verwendet diese die.appx/.msix Datei oder AppxManifest (für lose Dateien) zu Ihrer app auf einem Windows 10-Gerät querzuladen. Mit diesem Befehl wird nicht das für Ihre App erforderliche Zertifikat installiert. Zum Ausführen der app muss das Windows 10-Gerät im Entwicklermodus werden oder bereits das Zertifikat installiert haben.
+Sie benötigen nur die Windows 10-SDK installiert haben, um das Tool WinAppDeployCmd über eine Eingabeaufforderung oder eine Skriptdatei auszuführen. Wenn Sie eine app mit WinAppDeployCmd.exe installieren, verwendet diese die.appx/.msix-Datei oder AppxManifest (für lose Dateien) zu Ihrer app auf einem Windows 10-Gerät querzuladen. Mit diesem Befehl wird nicht das für Ihre App erforderliche Zertifikat installiert. Zum Ausführen der app muss das Windows 10-Gerät im Entwicklermodus werden oder bereits über das Zertifikat verfügen.
 
 Um eine Bereitstellung auf mobilen Geräten auszuführen, müssen Sie zunächst ein Paket erstellen. Weitere Informationen finden Sie [hier](https://msdn.microsoft.com/windows/uwp/packaging/packaging-uwp-apps).
 
-Das **WinAppDeployCmd.exe** Tool befindet sich hier auf Ihrem Windows 10-PC: **C:\\Program Files (x86) \\Windows Kits\\10\\bin\\<SDK Version>\\x86\\WinAppDeployCmd.exe** (abhängig vom Installationspfad für das SDK). 
+Das **WinAppDeployCmd.exe** Tool befindet sich auf Ihrem Windows 10-PC: **C:\\Program Files (x86) \\Windows Kits\\10\\bin\\<SDK Version>\\x86\\WinAppDeployCmd.exe** (abhängig vom Installationspfad für das SDK). 
 > [!NOTE]
 > In Version 15063 und höher des SDK ist das SDK nebeneinander in versionsspezifischen Ordnern installiert.  Frühere SDKs (vor und einschließlich 14393) werden direkt in den übergeordneten Ordner geschrieben.
 
@@ -132,7 +132,7 @@ Deinstalliert das angegebene Paket (unter Verwendung des vollständigen Namens) 
 WinAppDeployCmd uninstall -package Company.MyApp_1.0.0.1_x64__qwertyuiop -ip 192.168.0.1
 ```
 
-Aktualisiert die app, die bereits auf dem Windows 10-Gerät mit der IP-Adresse 192.168.0.1, die mit dem angegebenen app-Paket installiert wird.
+Aktualisiert die app, die bereits auf dem Windows 10-Gerät mit der IP-Adresse 192.168.0.1, die mit dem angegebenen app-Paket installiert ist.
 
 ``` syntax
 WinAppDeployCmd update -file "Downloads\MyApp.appx" -ip 192.168.0.1

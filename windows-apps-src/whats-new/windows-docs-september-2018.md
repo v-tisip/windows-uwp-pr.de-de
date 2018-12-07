@@ -6,11 +6,11 @@ ms.date: 09/10/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 16ddf00e88842bc6a83ecf759427984a50f5b4a9
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8732657"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8797557"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>Neuigkeiten in der Windows-Entwicklerdokumentation im September 2018
 
@@ -22,25 +22,25 @@ Nach der [Installation der Tools und des SDKs](http://go.microsoft.com/fwlink/?L
 
 ### <a name="windows-machine-learning"></a>Windows Machine Learning
 
-[Die Windows Machine Learning-Dokumentation](https://docs.microsoft.com/windows/ai/) jetzt befinden sich auf ihre eigenen Website, und sind für das aktuelle Windows Insider SDK aktualisiert. Es gibt Desktop und UWP-Lernprogramme in C++ und c#, die Ihnen helfen, erste Schritte WinML Ihrer Anwendung hinzufügen.
+[Die Windows Machine Learning-Dokumentation](https://docs.microsoft.com/windows/ai/) jetzt befinden sich auf ihre eigenen Website, und werden für das aktuelle Windows-Insider-SDK aktualisiert. Es gibt Desktop, und UWP-Lernprogramme in C++ und c#, die Ihnen helfen, erste Schritte WinML für Ihre Anwendung hinzufügen.
 
-[Die Windows.AI.MachineLearning-API-Referenz](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning) wurde aktualisiert, für das aktuelle Windows-Insider-SDK.
+[Die Windows.AI.MachineLearning-API-Referenz](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning) wurde für das aktuelle Windows-Insider-SDK aktualisiert.
 
-[Die Windows-Computer-Learning GitHub-Repository](https://github.com/Microsoft/Windows-Machine-Learning) wurde mit neuen Beispiele aktualisiert, mit denen das aktuelle SDK zusammenarbeiten.
+[Die Windows-Computer-Learning GitHub-Repository](https://github.com/Microsoft/Windows-Machine-Learning) wurde mit neuen Beispiele aktualisiert, die mit das aktuelle SDK funktionieren.
 
 ![Windows Machine Learning-Grafik](images/winml-graphic.png)
 
 ### <a name="windows-ui-library"></a>Windows-UI-Bibliothek
 
-[Die Windows-UI-Bibliothek](https://aka.ms/winui-docs) ist ein Satz von NuGet-Pakete, die Steuerelemente und andere Elemente der Benutzeroberfläche für UWP-apps bereitstellen. Diese Pakete sind auch mit früheren Versionen von Windows 10 kompatibel, damit Ihre app funktioniert, auch wenn der Benutzer die neueste Version des Betriebssystems besitzen.
+[Die Windows-UI-Bibliothek](https://aka.ms/winui-docs) ist eine Reihe von NuGet-Pakete, die Steuerelemente und andere Elemente der Benutzeroberfläche für UWP-apps bereitstellen. Diese Pakete sind auch mit früheren Versionen von Windows 10 kompatibel, damit Ihre app funktioniert, auch wenn der Benutzer die aktuelle Version des Betriebssystems besitzen.
 
-Weitere Informationen zu den Windows-UI-Bibliothek, finden Sie unter [Diese Liste mit API-Namespaces, die in das NuGet-Paket enthalten.](https://docs.microsoft.com/uwp/api/overview/winui/)
+Weitere Informationen zu der Windows-UI-Bibliothek, finden Sie unter [Diese Liste mit API-Namespaces, die in das NuGet-Paket enthalten.](https://docs.microsoft.com/uwp/api/overview/winui/)
 
 ## <a name="developer-guidance"></a>Anleitungen für Entwickler
 
 ### <a name="how-blur-effects-work"></a>Wie Weichzeichnen Effekte Arbeit
 
-Eine der unsere Autoren, die esteemed Mike Jacobs hat eine Reihe von Artikeln in Mittel zur Weichzeichner aus Schrift zu Foto, bei dem Entwerfen der Apps und spielen begonnen. Wenn Sie mehr über diese weit verbreitete Grafikeffekt interessiert sind, sehen Sie sich [im ersten Artikel auf Vision und Foto](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) und [die zweite in Antialiasing in Grafiken.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
+Eine der unsere Autoren, die esteemed Mike Jacobs hat eine Reihe von Artikeln in Mittel zur Weichzeichner, von Vision, Foto, bei dem Entwerfen der Apps und spielen begonnen. Wenn Sie mehr über diese weit verbreitete visuellen Effekt interessiert sind, sehen Sie sich [im ersten Artikel Vision und Foto](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-8b0590996e09) und [die zweite in Antialiasing in Grafiken.](https://medium.com/microsoft-design/science-in-the-system-how-blur-effects-work-part-2-c5589a738515)
 
 ![Weichzeichner in Aktion zu sehen](images/blur-example.jpg)
 
@@ -60,7 +60,7 @@ Aaron Gustafson:
 
 Chris Heilmann
 
-* [4 Videos für das Tool, webhint](https://www.youtube.com/watch?v=eXfmxmiA00Y&list=PLWs4_NfqMtow00LM-vgyECAlMDxx84Q2v)
+* [4 Videos für das Tool webhint](https://www.youtube.com/watch?v=eXfmxmiA00Y&list=PLWs4_NfqMtow00LM-vgyECAlMDxx84Q2v)
 
 Larry Osterman:
 

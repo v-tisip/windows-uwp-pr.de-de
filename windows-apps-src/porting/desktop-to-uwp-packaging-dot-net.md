@@ -1,20 +1,20 @@
 ---
 Description: This guide explains how to configure your Visual Studio Solution to edit, debug, and package desktop application.
 Search.Product: eADQiWindows 10XVcnh
-title: Verpacken Sie eine desktop-Anwendung mithilfe von Visual Studio
+title: Verpacken Sie eine desktop-Anwendung mit Visual Studio
 ms.date: 08/30/2017
 ms.topic: article
 keywords: windows10, UWP
 ms.assetid: 807a99a7-d285-46e7-af6a-7214da908907
 ms.localizationpriority: medium
 ms.openlocfilehash: e867377c5961277d140173ab0de86d9f89197086
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8729386"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8794977"
 ---
-# <a name="package-a-desktop-application-by-using-visual-studio"></a>Verpacken Sie eine desktop-Anwendung mithilfe von Visual Studio
+# <a name="package-a-desktop-application-by-using-visual-studio"></a>Verpacken Sie eine desktop-Anwendung mit Visual Studio
 
 Sie können Visual Studio verwenden, um ein Paket für Ihre Desktop-App zu generieren. Anschließend können Sie veröffentlichen, die auf den Microsoft Store oder das querladen es auf einem oder mehreren PCs verpacken.
 
@@ -25,7 +25,7 @@ Die aktuelle Version von Visual Studio bietet ein neue Version des Paketprojekts
 
 ## <a name="first-prepare-your-application"></a>Vorbereiten Ihrer Anwendung
 
-Dieses Handbuch lesen, bevor Sie mit der paketerstellung für Ihre Anwendung beginnen: [Vorbereiten eine desktop-Anwendung zu verpacken](desktop-to-uwp-prepare.md).
+Lesen Sie dieses Handbuch, bevor Sie mit der paketerstellung für Ihre Anwendung beginnen: [Vorbereiten eine desktop-Anwendung zu verpacken](desktop-to-uwp-prepare.md).
 
 <a id="new-packaging-project"/>
 
@@ -58,7 +58,7 @@ Dieses Handbuch lesen, bevor Sie mit der paketerstellung für Ihre Anwendung beg
 
    ![Als Einstiegspunkt festlegen](images/desktop-to-uwp/entry-point-set.png)
 
-6. Erstellen Sie das Paketprojekt, um sicherzustellen, dass keine Fehler angezeigt werden.  Wenn Sie Fehlermeldungen, **Konfigurations-Manager** öffnen, und stellen, dass sicher Plattform Ihre Projekte dieselbe.
+6. Erstellen Sie das Paketprojekt, um sicherzustellen, dass keine Fehler angezeigt werden.  Wenn Sie Fehler zu erhalten, öffnen Sie den **Konfigurations-Manager** und stellen, dass sicher Plattform Ihre Projekte dieselbe.
 
    ![Konfigurations-manager](images/desktop-to-uwp/config-manager.png)
 

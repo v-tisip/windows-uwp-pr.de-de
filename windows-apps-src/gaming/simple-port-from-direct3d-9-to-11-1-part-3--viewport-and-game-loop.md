@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, UWP, Spiele, portieren, Spielschleife, Direct3D9, DirectX11
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b0cf6352d400371b54a54d71176c4d8e1dc457d
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 2087959bc29d2b2b02cdc9a2f373a8b62ea8c25a
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8732975"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8793801"
 ---
 # <a name="port-the-game-loop"></a>Portieren der Spielschleife
 
@@ -33,7 +33,7 @@ Zum Einrichten eines Desktopfensters mit einem Direct3D 9-Viewport musste das he
 
 Dagegen verfügt die UWP-Umgebung über ein deutlich einfacheres System. Anstatt ein herkömmliches Fenster einzurichten, wird von einem Microsoft Store-Spiel, für das DirectX verwendet wird, das [**IFrameworkView**](https://msdn.microsoft.com/library/windows/apps/hh700478)-Element implementiert. Diese Schnittstelle ist für DirectX-Apps und -Spiele vorhanden, um die direkte Ausführung in einem [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225) innerhalb des App-Containers zu ermöglichen.
 
-> **Hinweis:**  Windows werden verwaltete Zeiger auf Ressourcen wie das Quellobjekt für die Anwendung und die [**CoreWindow**](https://msdn.microsoft.com/library/windows/apps/br208225)quellanwendungsobjekt. Finden Sie unter [**Handle to Object Operator (^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
+> **Hinweis:**  Windows ist eine verwaltete Zeiger auf Ressourcen wie das Quellobjekt für die Anwendung und das [**corewindow-Element**](https://msdn.microsoft.com/library/windows/apps/br208225). Finden Sie unter [**Handle to Object Operator (^)**]https://msdn.microsoft.com/library/windows/apps/yk97tc08.aspx.
 
  
 
@@ -131,7 +131,7 @@ Richten Sie ein Lesezeichen für [DirectX11-Portierung – Häufig gestellte Fra
 
 Die DirectX-UWP-Vorlagen enthalten eine stabile Direct3D-Geräteinfrastruktur, die bereit für die Nutzung mit Ihrem UWP-Spiel ist. Eine Anleitung zum Auswählen der richtigen Vorlage finden Sie unter [Erstellen eines DirectX-Spieleprojekts aus einer Vorlage](user-interface.md).
 
-Lesen Sie sich die folgenden ausführlichen Artikel zur Entwicklung von Microsoft Store-Spielen durch:
+Besuchen Sie die folgenden ausführlichen Microsoft Store-Spieleentwicklung Artikel:
 
 -   [Exemplarische Vorgehensweise: Erstellen eines einfachen UWP-Spiels mit DirectX](tutorial--create-your-first-uwp-directx-game.md)
 -   [Audio für Spiele](working-with-audio-in-your-directx-game.md)

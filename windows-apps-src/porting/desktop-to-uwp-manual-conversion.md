@@ -9,19 +9,19 @@ ms.assetid: e8c2a803-9803-47c5-b117-73c4af52c5b6
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 4b9b5f08be695d803e9254e5801ac63b2889e1c9
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8749314"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8796004"
 ---
 # <a name="package-a-desktop-application-manually"></a>Manuelles Verpacken einer desktop-Anwendungs
 
-Dieses Thema zeigt, wie Sie Ihre Anwendung ohne Tools wie Visual Studio oder den Desktop App Converter (DAC) verpacken.
+In diesem Thema erfahren Sie, wie Sie Ihrer Anwendung ohne Tools wie Visual Studio oder den Desktop App Converter (DAC) verpacken.
 
 Um Ihre App manuell zu verpacken, erstellen Sie eine Paketmanifestdatei, und führen Sie dann ein Befehlszeilentool aus, um ein Windows-App-Paket zu generieren.
 
-Berücksichtigen Sie die manuelle Verpackung, wenn Sie die Anwendung mithilfe der Befehls "Xcopy" installieren, oder Sie mit den an das System Ihre app-Installer vorgenommenen Änderungen vertraut sind und genauere Kontrolle über den Prozess.
+Berücksichtigen Sie die manuelle Verpackung, wenn Sie die Anwendung mithilfe der "Xcopy" installieren, oder Sie mit den an das System Ihre app-Installer vorgenommenen Änderungen vertraut sind und genauere Kontrolle über den Prozess.
 
 Wenn Sie sich nicht darüber sicher sind, welche Änderungen an das System durch Ihren Installer vorgenommen werden oder wenn Sie lieber automatisierte Tools für das Generieren Ihres Paketmanifestes verwenden möchten, sollten Sie eine [dieser](desktop-to-uwp-root.md#convert) Optionen erwägen.
 
@@ -30,7 +30,7 @@ Wenn Sie sich nicht darüber sicher sind, welche Änderungen an das System durch
 
 ## <a name="first-prepare-your-application"></a>Vorbereiten Ihrer Anwendung
 
-Dieses Handbuch lesen, bevor Sie mit der paketerstellung für Ihre Anwendung beginnen: [Vorbereiten eine desktop-Anwendung zu verpacken](desktop-to-uwp-prepare.md).
+Lesen Sie dieses Handbuch, bevor Sie mit der paketerstellung für Ihre Anwendung beginnen: [Vorbereiten eine desktop-Anwendung zu verpacken](desktop-to-uwp-prepare.md).
 
 ## <a name="create-a-package-manifest"></a>Erstellen eines Paketmanifests
 
@@ -84,11 +84,11 @@ Hier ist ein Beispiel für ein **Identitäts**-Element mit Platzhaltertext für 
                 ProcessorArchitecture="x64">
 ```
 > [!NOTE]
-> Wenn Sie den Anwendungsnamen Ihrer im Microsoft Store reserviert haben, können Sie den Namen und Herausgeber abrufen, mit [Partner Center](https://partner.microsoft.com/dashboard). Wenn Sie Ihre Anwendung auf andere Systeme querladen möchten, können Sie für diese Ihre eigenen Namen bereitstellen, solange der Name des Herausgebers, die Sie auswählen, mit dem Namen des Zertifikats übereinstimmt, die Sie zum Signieren Ihrer app verwenden.
+> Wenn Sie den Anwendungsnamen Ihrer im Microsoft Store reserviert haben, können Sie den Namen und Herausgeber abrufen, mit der [Partner Center](https://partner.microsoft.com/dashboard). Wenn Sie Ihre Anwendung auf andere Systeme querladen möchten, können Sie für diese Ihre eigenen Namen bereitstellen, solange der Name des Herausgebers, die Sie auswählen, mit dem Namen des Zertifikats übereinstimmt, die Sie zum Signieren Ihrer app verwenden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Das [Eigenschaften](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-properties)-Element hat 3 erforderliche untergeordnete Elemente. Hier ist ein Beispiel für einen **Eigenschaften**-Knoten mit Platzhaltertext für die Elemente. **DisplayName** ist der Name der Anwendung, die Sie im Store, für apps reservieren, die an den Store hochgeladen werden.
+Das [Eigenschaften](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-properties)-Element hat 3 erforderliche untergeordnete Elemente. Hier ist ein Beispiel für einen **Eigenschaften**-Knoten mit Platzhaltertext für die Elemente. **DisplayName** ist der Name der Anwendung, die Sie im Store für apps reservieren, die an den Store hochgeladen werden.
 
 ```XML
 <Properties>
@@ -184,7 +184,7 @@ Wenn Sie zielbasierte Ressourcen erstellen, wie im vorherigen Abschnitt beschrie
 
 5.  Erstellen Sie die resources.pri-Dateien mit dem Befehl ``makepri new /pr <PHYSICAL_PATH_TO_FOLDER> /cf <PHYSICAL_PATH_TO_FOLDER>\priconfig.xml``.
 
-    Der Befehl für Ihre Anwendung könnte beispielsweise wie folgt aussehen: ``makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml``.
+    Der Befehl für Ihre Anwendung könnte z. B. wie folgt aussehen: ``makepri new /pr c:\MYAPP /cf c:\MYAPP\priconfig.xml``.
 
 6.  Verpacken Sie Ihre Windows-App-Datei mithilfe der Anweisungen im nächsten Schritt.
 
@@ -198,14 +198,14 @@ Weitere Informationen finden Sie in [Erstellen eines App-Pakets mit dem Tool „
 
 ## <a name="run-the-packaged-app"></a>Ausführung der verpackten App
 
-Sie können Ihre Anwendung zu testen, lokal, ohne dass ein Zertifikat benötigen und signieren Sie es ausführen. Führen Sie einfach dieses PowerShell-Cmdlet aus:
+Sie können Ihre Anwendung zu testen, lokal, ohne dass ein Zertifikat, und signieren Sie es ausführen. Führen Sie einfach dieses PowerShell-Cmdlet aus:
 
 ```Add-AppxPackage –Register AppxManifest.xml```
 
 Ersetzen Sie zum Aktualisieren der EXE- oder DLL-Dateien Ihrer App die vorhandenen Dateien in Ihrem Paket durch die neuen, vergrößern Sie die Versionsnummer in der Datei „AppxManifest.xml“, und führen Sie den oben genannten Befehl erneut aus.
 
 > [!NOTE]
-> Eine Anwendung immer als interaktiver Benutzer ausgeführt wird, und jedes Laufwerk durch die Installation Ihres Anwendungspakets unter muss auf NTFS-Format formatiert sein.
+> Eine Anwendung immer als interaktiver Benutzer ausgeführt wird, und jedes Laufwerk, auf die Installation Ihres Anwendungspakets unter muss auf NTFS-Format formatiert sein.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

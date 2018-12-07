@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Bildschirmaufnahme
 ms.localizationpriority: medium
 ms.openlocfilehash: db32db6b293dce4210bebee139e05447da996b42
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8749815"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8798358"
 ---
 # <a name="screen-capture"></a>Bildschirmaufnahme
 
@@ -20,7 +20,7 @@ Ab Windows 10,Version 1803, enthält der [Windows.Graphics.Capture](https://docs
 Mit der Bildschirmaufnahme können Entwickler sichere System-UIs für Endbenutzer aufrufen, um das Fenster für die Anzeige oder die Anwendung für die Aufzeichnung auszuwählen. Es wird ein gelber Rahmen mit einer Benachrichtigung vom System um das aktiv erfasste Element herum gezeichnet. Im Fall von mehreren gleichzeitigen Aufnahmesitzungen wird ein gelber Rahmen um jedes erfasste Element gezeichnet.
 
 > [!NOTE]
-> Die Bildschirmaufnahme APIs werden nur auf Desktop und Windows Mixed Reality immersive Headsets unterstützt.
+> Die Bildschirmaufnahme-APIs werden nur für Desktop- und immersives Windows Mixed Reality-Headsets unterstützt.
 
 ## <a name="add-the-screen-capture-capability"></a>Hinzufügen der Bildschirmaufnahmefunktion
 
@@ -28,7 +28,7 @@ Die APIs finden Sie in der **Windows.Graphics.Capture** -Namespace erfordern ein
     
 1. Öffnen Sie **"Package.appxmanifest"** im **Projektmappen-Explorer**.
 2. Wählen Sie die Registerkarte **Funktionen** aus.
-3. Überprüfen Sie **Grafiken zu erfassen**.
+3. Überprüfen Sie die **Grafiken zu erfassen**.
 
 ![Grafik-Erfassung](images/screen-capture-1.png)
 
@@ -68,7 +68,7 @@ public async Task StartCaptureAsync()
 }
 ```
 
-Da dies Benutzeroberflächencode ist, muss sie für den UI-Thread aufgerufen werden. Wenn Sie es aus CodeBehind für eine Seite der Anwendung (z. B. **"MainPage.Xaml.cs"**) aufrufen für Sie erfolgt dies automatisch, aber wenn nicht, Sie können sie für die Ausführung der UI-Thread mit dem folgenden Code erzwingen:
+Da dies den UI-Code ist, muss sie für den UI-Thread aufgerufen werden. Wenn Sie sie aus CodeBehind für eine Seite Ihrer Anwendung (z. B. **"MainPage.Xaml.cs"**) aufrufen für Sie erfolgt dies automatisch, aber wenn nicht, Sie können sie für die Ausführung der UI-Thread mit dem folgenden Code erzwingen:
 
 ```cs
 CoreWindow window = CoreApplication.MainView.CoreWindow;
@@ -166,7 +166,7 @@ Wenn **Recreate** aufgerufen wird, werden alle vorhandenen Frames verworfen. Dad
 Der folgende Codeausschnitt ist ein End-to-End-Beispiel für die Implementierung einer Bildschirmaufnahme in einer UWP-Anwendung. In diesem Beispiel haben wir eine Schaltfläche in der Front-End-, die beim Klicken auf, ruft die **Button_ClickAsync** -Methode.
 
 > [!NOTE]
-> Dieser Codeausschnitt wird [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm), eine Bibliothek für 2D-Grafikrendering verwendet. Finden Sie in ihrer Dokumentation Informationen dazu, wie Sie es für Ihr Projekt festgelegt.
+> Dieser Codeausschnitt wird die [Win2D](http://microsoft.github.io/Win2D/html/Introduction.htm), eine Bibliothek für 2D-Grafikrendering verwendet. Finden Sie in ihrer Dokumentation Informationen dazu, wie Sie es für Ihr Projekt festgelegt.
 
 ```cs
 using Microsoft.Graphics.Canvas;
@@ -386,7 +386,7 @@ namespace WindowsGraphicsCapture
 
 ## <a name="record-a-video"></a>Ein Video aufzeichnen
 
-Wenn ein Video der Anwendung aufgezeichnet werden sollen, können Sie besser durch den [Namespace Windows.Media.AppRecording](https://docs.microsoft.com/uwp/api/windows.media.apprecording)tun. Dies ist Teil der Desktop-SDK-Erweiterung, damit es nur auf Desktop funktioniert und erfordert, dass Sie einen Verweis auf diese aus Ihrem Projekt hinzufügen. Weitere Informationen finden Sie in der [Übersicht über die gerätefamilien](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) .
+Wenn ein Video der Anwendung aufgezeichnet werden sollen, können Sie besser durch den [Namespace Windows.Media.AppRecording](https://docs.microsoft.com/uwp/api/windows.media.apprecording)tun. Dies ist Teil der Desktop-Erweiterungs-SDK, damit sie nur auf dem Desktop funktioniert und erfordert, dass Sie einen Verweis auf diese aus Ihrem Projekt hinzufügen. Weitere Informationen finden Sie in der [Übersicht über die gerätefamilien](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) .
 
 ## <a name="see-also"></a>Weitere Informationen:
 

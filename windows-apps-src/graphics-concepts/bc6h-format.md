@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: f147f4c30d2a662806df5928fc79178522b9b6a6
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8758470"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8798114"
 ---
 # <a name="bc6h-format"></a>BC6H-Format
 
@@ -30,7 +30,7 @@ BC6H wird durch die folgenden DXGI\_FORMAT-Enumerationswerte angegeben:
 -   **DXGI\_FORMAT\_BC6H\_UF16**. Dieses BC6H-Format verwendet keine Bit mit Vorzeichen im 16-Bit-Gleitkommawert des Farbkanals.
 -   **DXGI\_FORMAT\_BC6H\_SF16**. Dieses BC6H-Format verwendet eine Bit mit Vorzeichen im 16-Bit-Gleitkommawert des Farbkanals.
 
-**Hinweis:**  das 16-Bit-Gleitkommaformat für Farbkanäle wird häufig bezeichnet als ein "halb"-Gleitkommaformat. Dieses Format hat das folgende Bit-Layout:
+**Hinweis:**  der 16-Bit-Gleitkommaformat für Farbkanäle wird häufig als bezeichnet ein "halb"-Gleitkommaformat. Dieses Format hat das folgende Bit-Layout:
 |                       |                                                 |
 |-----------------------|-------------------------------------------------|
 | UF16 (Gleitkomma ohne Vorzeichen) | 5Bit Exponent + 11Bit Mantisse              |

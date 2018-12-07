@@ -1,21 +1,21 @@
 ---
 title: Vermittelte Komponenten für Windows-Runtime für eine quergeladene UWP-App
-description: Dieses Dokument beschreibt ein für Unternehmen bestimmtes Feature von Windows 10, wodurch .NET toucheingabemöglichkeit, verwenden Sie den vorhandenen Code, der für wichtige unternehmenskritische Vorgänge verantwortlich unterstützt.
+description: Dieses Dokument beschreibt ein für Unternehmen bestimmtes Feature von Windows 10, wodurch .NET toucheingabemöglichkeit mit den vorhandenen Code, der für wichtige unternehmenskritische Vorgänge verantwortlich ist unterstützt.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
 ms.localizationpriority: medium
 ms.openlocfilehash: d9665ba3af10091ddc652198d5340e00456a65a7
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8756404"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8796159"
 ---
 # <a name="brokered-windows-runtime-components-for-a-side-loaded-uwp-app"></a>Vermittelte Komponenten für Windows-Runtime für eine quergeladene UWP-App
 
-Dieser Artikel beschreibt ein für Unternehmen bestimmtes Feature von Windows 10, wodurch .NET toucheingabemöglichkeit, verwenden Sie den vorhandenen Code, der für wichtige unternehmenskritische Vorgänge verantwortlich unterstützt.
+Dieser Artikel beschreibt ein für Unternehmen bestimmtes Feature von Windows 10, wodurch .NET toucheingabemöglichkeit mit den vorhandenen Code, der für wichtige unternehmenskritische Vorgänge verantwortlich ist unterstützt.
 
 ## <a name="introduction"></a>Einführung
 
@@ -46,13 +46,13 @@ Bei der Desktopkomponente in diesem Feature handelt es sich um einen neuen Anwen
 
 Der Vertrag zwischen der quergeladenen Anwendung und der Desktopkomponente wird mithilfe des UWP-Typsystems beschrieben. Dies umfasst die Deklarierung mindestens einer C\#-Klasse, die eine UWP darstellen kann. Weitere Informationen zu bestimmten Anforderungen im Zusammenhang mit dem Erstellen von Windows-Runtime-Klassen mit C\# finden Sie im MSDN-Thema [Erstellen von Komponenten für Windows-Runtime in C# und Visual Basic](https://msdn.microsoft.com/library/br230301.aspx).
 
->**Hinweis:** Enumerationen werden in der Windows-Runtime-Komponenten Vertrag zwischen der Desktopkomponente und quergeladenen Anwendung zu diesem Zeitpunkt nicht unterstützt.
+>**Hinweis:** Enumerationen werden in der Windows-Runtime-Komponenten-Vertrag zwischen der Desktopkomponente und quergeladenen Anwendung zu diesem Zeitpunkt nicht unterstützt.
 
 **Quergeladene Anwendung**
 
 Bei der quergeladenen Anwendung handelt es sich in jeder Hinsicht um eine normale UWP-App, mit einer Ausnahme: Sie wird quergeladen und nicht über den Microsoft Store installiert. Viele der Installationsmechanismen sind identisch: Das Manifest und das Anwendungspaket ähneln sich (ein Zusatz zum Manifest wird später ausführlich erläutert). Nach der Aktivierung des Querladens kann ein einfaches PowerShell-Skript die erforderlichen Zertifikate und die Anwendung selbst installieren. Normalerweise besteht die bewährte Methode darin, dass die quergeladene Anwendung den WACK-Zertifizierungstest durchläuft, der in Visual Studio im Menü „Projekt/Store“ enthalten ist.
 
->**Hinweis:** querladen kann in Einstellungen aktiviert werden&gt; Update und Sicherheit -&gt; für Entwickler.
+>**Hinweis:** querladen kann in den Einstellungen aktiviert werden&gt; Update und Sicherheit -&gt; für Entwickler.
 
 Es muss unbedingt angemerkt werden, dass der im Lieferumfang von Windows10 enthaltene App-Broker nur als 32-Bit-Version vorliegt. Die Desktopkomponente muss eine 32-Bit-Version sein.
 Quergeladene Anwendungen können als 64-Bit-Version vorliegen (vorausgesetzt, dass 64-Bit- und 32-Bit-Proxys registriert sind), aber dies wäre untypisch. Beim Erstellen von quergeladenen Anwendungen in C\# mithilfe der normalen „neutralen“ Konfiguration und dem bevorzugten 32-Bit-Standard werden natürlich quergeladene 32-Bit-Anwendungen erstellt.
@@ -161,7 +161,7 @@ Dies erfolgt durch die folgenden Skripts. Fügen Sie die Skripts der Befehlszeil
     rem erase "$(TargetPath)"
 ```
 
-Nachdem der Verweis**Winmd**erstellt wird (im Ordner "Verweis" unterhalb des Zielordners für das Projekt), wird er manuell verarbeitende kopiert für jede quergeladene Anwendung nutzungsprojekt und verwiesen wird. Dies wird im folgenden Abschnitt näher erläutert. Die in den oben genannten Buildregeln enthaltenen Projektstruktur stellen sicher, dass die Implementierung und der Verweis**Winmd**befinden sich im deutlich separater Verzeichnisse in der Hierarchie erstellen, um Missverständnisse zu vermeiden.
+Nachdem der Verweis**Winmd**erstellt wird (im Ordner "Verweis" unterhalb des Zielordners für das Projekt), wird er manuell verarbeitende kopiert für jede quergeladene Anwendung nutzungsprojekt und verwiesen wird. Dies wird im folgenden Abschnitt näher erläutert. Die Projektstruktur, die in den oben genannten Buildregeln enthaltenen stellen sicher, dass die Implementierung und die Referenz-**Winmd**sind in deutlich separater Verzeichnisse in der Hierarchie erstellen, um Missverständnisse zu vermeiden.
 
 ## <a name="side-loaded-applications-in-detail"></a>Quergeladene Anwendungen im Detail
 Wie bereits erwähnt, wird die quergeladene Anwendung genau wie jede andere UWP-App erstellt, aber es gibt ein zusätzliches Detail: das Deklarieren der Verfügbarkeit der RuntimeClass(es) im Manifest der quergeladenen Anwendung. Dies ermöglicht der Anwendung das einfache Neuschreiben, um auf die Funktionalität in der Desktopkomponente zuzugreifen. Ein Manifesteintrag im Abschnitt <Extension> beschreibt die in der Desktopkomponente implementierte RuntimeClass und enthält Informationen darüber, wo sie sich befindet. Diese Deklarationsinhalte im Manifest der Anwendung sind mit denen von Apps für Windows10 identisch. Beispiel:
@@ -177,13 +177,13 @@ Wie bereits erwähnt, wird die quergeladene Anwendung genau wie jede andere UWP-
 </Extension>
 ```
 
-Die Kategorie lautet „inProcessServer“, da die outOfProcessServer-Kategorie mehrere Einträge enthält, die für diese Anwendungskonfiguration nicht anwendbar sind. Beachten Sie, dass die <Path> Komponente muss immer clrhost.dll enthalten (Dies ist jedoch**nicht**erzwungen und Angeben eines anderen Werts führt undefinierten).
+Die Kategorie lautet „inProcessServer“, da die outOfProcessServer-Kategorie mehrere Einträge enthält, die für diese Anwendungskonfiguration nicht anwendbar sind. Beachten Sie, dass die <Path> Komponente muss immer clrhost.dll enthalten (Dies ist jedoch**nicht**erzwungen, und geben Sie einen anderen Wert wird undefinierten).
 
 Der <ActivatableClass>-Abschnitt entspricht einer echten prozessinternen RuntimeClass, die von einer Windows-Runtime-Komponente im App-Paket bevorzugt wird. <ActivatableClassAttribute> ist ein neues Element, und die Attribute Name="DesktopApplicationPath"" und Type="string" sind obligatorisch und unveränderlich. Das Value-Attribut verweist auf den Ort, an dem sich die winmd-Implementierungsdatei der Desktopkomponente befindet (weitere Einzelheiten hierzu finden Sie im folgenden Abschnitt). Jede von der Desktopkomponente bevorzugte RuntimeClass sollte eine eigene <ActivatableClass>-Elementstruktur besitzen. Die ActivatableClassId muss dem vollständig qualifizierten Namespacenamen der RuntimeClass entsprechen.
 
 Wie im Abschnitt „Definieren des Vertrags“ erwähnt wurde, muss ein Projektverweis auf die winmd-Verweisdatei der Desktopkomponente vorgenommen werden. Das Visual Studio-Projektsystem erstellt normalerweise eine aus zwei Ebenen bestehende Verzeichnisstruktur mit demselben Namen. Im Beispiel lautet dieser „EnterpriseIPCApplication\\EnterpriseIPCApplication“. Die Referenz- **Winmd**wird manuell in dieses Verzeichnis der zweiten Ebene und dann das Dialogfeld verwendet wird, Projektverweise kopiert (klicken Sie auf die**Durchsuchen.** Schaltfläche) zu suchen und diese **Winmd**verweisen. Danach sollte der Namespace der obersten Ebene der Desktopkomponente (z.B. Fabrikam) als Knoten der obersten Ebene im Teil „Verweise“ des Projekts angezeigt werden.
 
->**Hinweis:** Es ist sehr wichtig, verwenden Sie die**Verweisdatei**in der quergeladenen Anwendung. Wenn Sie versehentlich über die**Implementierungsdatei**in das quergeladene app-Verzeichnis und Referenz, wird wahrscheinlich eine Fehlermeldung im Zusammenhang mit "istringable wurde nicht gefunden". Dies ist ein sicheres Zeichen, die die falsche**Winmd**verwiesen wurde. Die in der IPC-Server app (im nächsten Abschnitt) sorgfältig postbuildregeln diese zwei**Winmd**in separate Verzeichnisse.
+>**Hinweis:** Es ist sehr wichtig, verwenden Sie die**Verweisdatei**in der quergeladenen Anwendung. Wenn Sie versehentlich über die**Implementierungsdatei**der quergeladenen Anwendung und Referenz, wird wahrscheinlich eine Fehlermeldung im Zusammenhang mit "istringable wurde nicht gefunden". Dies ist ein sicheres Zeichen, die den falschen**Winmd**verwiesen wurde. Die in der IPC-Server app (im nächsten Abschnitt) sorgfältig postbuildregeln diese zwei**Winmd**in separate Verzeichnisse.
 
 In <ActivatableClassAttribute Value="path"> können Umgebungsvariablen verwendet werden (insbesondere „%ProgramFiles%“). Wie bereits erwähnt, werden vom App-Broker nur 32-Bit-Versionen unterstützt. Daher wird „%ProgramFiles%“ zu „C:\Programme (x86)“ aufgelöst, wenn die Anwendung auf einem 64-Bit-Betriebssystem ausgeführt wird.
 
@@ -419,7 +419,7 @@ Die Aufgabe besteht darin, eine DLL-Datei für die Komponente für Windows-Runti
 
 **Installieren**
 
-Um die app zu installieren, kopieren Sie die Implementierung**Winmd**in das richtige Verzeichnis im Manifest der zugehörigen quergeladenen Anwendung angegeben: <ActivatableClassAttribute>der Wert Value = "Path". Kopieren Sie auch alle zugehörigen Unterstützungsdateien und die Proxy-/Stub-DLL (letztere wird weiter unten erläutert). Kopieren Sie die Implementierung**Winmd**nichtan den Server Verzeichnis bewirkt, dass alle quergeladenen Anwendung Aufrufe Neues bei der RuntimeClass einen Fehler "Klasse nicht registriert" ausgelöst. Wenn der Proxy/Stub nicht installiert (oder nicht registriert) wird, tritt bei allen Aufrufen ein Fehler auf, und es werden keine Werte zurückgegeben. Dieser letzte Fehler ist häufig**nicht**mit sichtbaren Ausnahmen verbunden.
+Um die app zu installieren, kopieren Sie die Implementierung**Winmd**in das richtige Verzeichnis im Manifest der zugehörigen quergeladenen Anwendung angegeben: <ActivatableClassAttribute>der Wert Value = "Path". Kopieren Sie auch alle zugehörigen Unterstützungsdateien und die Proxy-/Stub-DLL (letztere wird weiter unten erläutert). Kopieren Sie die Implementierung**Winmd**nichtan den Server Verzeichnis bewirkt, dass alle quergeladenen Anwendung Aufrufe von neuen für die RuntimeClass einen Fehler "Klasse nicht registriert" ausgelöst. Wenn der Proxy/Stub nicht installiert (oder nicht registriert) wird, tritt bei allen Aufrufen ein Fehler auf, und es werden keine Werte zurückgegeben. Dieser letzte Fehler ist häufig**nicht**mit sichtbaren Ausnahmen verbunden.
 Wenn aufgrund dieses Fehlers Ausnahmen beobachtet werden, beziehen sie sich unter Umständen auf eine „ungültige Umwandlung“.
 
 **Überlegungen zur Serverimplementierung**
@@ -499,7 +499,7 @@ d) Eine \*\_p.c-Datei (z.B. MyWinRTComponent\_p.c)
 
 **Schritt5:** Fügen Sie diese vier generierten Dateien dem Projekt „MyWinRTProxy“ hinzu.
 
-**Schritt 6:** Projekt "MyWinRTProxy" eine Definitionsdatei hinzugefügt **(Projekt > Neues Element hinzufügen > Code > Moduldefinitionsdatei**), und aktualisieren Sie den Inhalt:
+**Schritt 6:** Fügen Sie zum Projekt "MyWinRTProxy" eine Definitionsdatei **(Projekt > Neues Element hinzufügen > Code > Moduldefinitionsdatei**), und aktualisieren Sie den Inhalt:
 
 LIBRARY MyWinRTComponent.Proxies.dll
 
@@ -535,9 +535,9 @@ MyWinRTComponent.Proxies
 
 **Bereitstellen des Proxys**
 
-Der Proxy muss global registriert werden. Die einfachste Möglichkeit hierzu besteht darin, dass beim Installationsprozess „DllRegisterServer“ in der Proxy-DLL aufgerufen wird. Da das Feature nur x86-Server unterstützt (d.h. keine 64-Bit-Unterstützung), besteht die einfachste Konfiguration in der Verwendung eines 32-Bit-Servers, eines 32-Bit-Proxys und einer quergeladenen 32-Bit-Anwendung. Der Proxy befindet sich normalerweise zusammen mit der Implementierung**Winmd**für die desktop-Komponente.
+Der Proxy muss global registriert werden. Die einfachste Möglichkeit hierzu besteht darin, dass beim Installationsprozess „DllRegisterServer“ in der Proxy-DLL aufgerufen wird. Da das Feature nur x86-Server unterstützt (d.h. keine 64-Bit-Unterstützung), besteht die einfachste Konfiguration in der Verwendung eines 32-Bit-Servers, eines 32-Bit-Proxys und einer quergeladenen 32-Bit-Anwendung. Der Proxy befindet sich normalerweise in zusammen mit der Implementierung**Winmd**für die desktop-Komponente.
 
-Es muss ein weiterer Konfigurationsschritt vorgenommen werden. Damit der Proxy vom quergeladenen Prozess geladen und ausgeführt wird, muss das Verzeichnis mit „lesen/ausführen“ für ALL_APPLICATION_PACKAGES gekennzeichnet sein. Dies erfolgt über die**icacls.exe**"MpCmdRun.exe". Dieser Befehl muss in dem Verzeichnis ausgeführt werden, in denen die Implementierung**Winmd**und die Proxy-/Stub-Dll befinden:
+Es muss ein weiterer Konfigurationsschritt vorgenommen werden. Damit der Proxy vom quergeladenen Prozess geladen und ausgeführt wird, muss das Verzeichnis mit „lesen/ausführen“ für ALL_APPLICATION_PACKAGES gekennzeichnet sein. Dies erfolgt über die**icacls.exe**Befehlszeilentool. Dieser Befehl muss in dem Verzeichnis ausgeführt werden, in denen die Implementierung**Winmd**und die Proxy-/Stub-Dll befinden:
 
 *icacls. /T /grant \*S-1-15-2-1:RX*
 
@@ -553,7 +553,7 @@ Es folgt eine unvollständige Liste mit zu berücksichtigenden Punkten:
 
 -   Eine Massenübertragung von Ergebnissen reduziert die prozessübergreifende "Geschwätzigkeit". Dazu wird in der Regel das Windows-Runtime-Array-Konstrukt verwendet.
 
--   Zurückgeben*Liste<T>*, in denen*T*ist ein Objekt aus einem asynchronen Vorgang oder, bewirkt, dass viele geschwätzigkeit. Nehmen wir beispielsweise an, die Sie zurückgeben, eine*Liste&lt;Personen&gt;* Objekte. Bei jedem Iterationsdurchlauf handelt es sich um einen prozessübergreifenden Aufruf. Jede*Personen*zurückgegebene Objekt wird durch einen Proxy und bei jedem Aufruf von einer Methode dargestellt oder Eigenschaftsaufruf für dieses einzelne Objekt führt zu einem prozessübergreifenden Aufruf. Daher führt ein "harmloses"*Liste&lt;Personen&gt;* Objekt, in denen*Anzahl*ist groß bewirkt, dass eine große Anzahl von langsamen aufrufen. Durch Massenübertragung von Inhaltsstrukturen in einem Array wird eine bessere Leistung erzielt. Beispiel:
+-   Zurückgeben*Liste<T>*, in denen*T*ist ein Objekt aus einem asynchronen Vorgang oder, bewirkt, dass viele geschwätzigkeit. Nehmen wir beispielsweise an, die Sie zurückgeben, eine*Liste&lt;Personen&gt;* Objekte. Bei jedem Iterationsdurchlauf handelt es sich um einen prozessübergreifenden Aufruf. Jeder*Benutzer*zurückgegebene Objekt wird durch einen Proxy und jeder Aufruf an eine Methode dargestellt oder Eigenschaftsaufruf für dieses einzelne Objekt führt zu einem prozessübergreifenden Aufruf. Daher führt ein "harmloses"*Liste&lt;Personen&gt;* Objekt, in denen*Anzahl*ist groß bewirkt, dass eine große Anzahl von langsamen aufrufen. Durch Massenübertragung von Inhaltsstrukturen in einem Array wird eine bessere Leistung erzielt. Beispiel:
 
 ```csharp
 struct PersonStruct
@@ -586,7 +586,7 @@ Der Serverprozess kann im Task-Manager oder in anderen Drittanbieter-Apps aufges
  | tasklist /FI "IMAGENAME eq dllhost.exe" /M | Listet Informationen zu allen Instanzen von „dllhost.exe“ auf. Vom /M-Schalter werden die von ihnen geladenen Module aufgelistet. |
  | tasklist /FI "PID eq 12564" /M | Sie können mit dieser Option die „dllhost.exe“ abfragen, wenn Ihnen die zugehörige PID bekannt ist. |
 
-In der Module für einen Broker-Server sollten Liste*clrhost.dll*in der Liste der geladenen Module.
+Die Liste der Module für einen Broker-Server sollten*clrhost.dll*Listein der Liste der geladenen Module.
 
 ## <a name="resources"></a>Ressourcen
 

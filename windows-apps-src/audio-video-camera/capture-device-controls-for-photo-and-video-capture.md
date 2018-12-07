@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 303cbd5e87db773324cd98447df6d99dc6de5a0c
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8744571"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8800068"
 ---
 # <a name="manual-camera-controls-for-photo-and-video-capture"></a>Manuelle Kamerasteuerelemente für Foto- und Videoaufnahmen
 
@@ -265,7 +265,7 @@ Legen Sie [**OpticalImageStabilizationControl.Mode**](https://msdn.microsoft.com
 ## <a name="powerline-frequency"></a>Leitungsfrequenz
 Einige Kamerageräte unterstützen die Anti-Flacker-Verarbeitung. Hierfür muss die Wechselstromfrequenz der Stromleitungen in der derzeitigen Umgebung bekannt sein. Einige Geräte unterstützen die automatische Ermittlung der Leitungsfrequenz, und bei anderen Geräten muss die Frequenz manuell festgelegt werden. Im folgenden Codebeispiel wird veranschaulicht, wie Sie die Unterstützung der Leitungsfrequenz für das Gerät ermitteln und, falls erforderlich, die Frequenz manuell festlegen. 
 
-Rufen Sie zuerst die **VideoDeviceController**-Methode auf [**TryGetPowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/br206898), indem Sie einen Ausgabeparameter vom Typ [**PowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.PowerlineFrequency) übergeben. Wenn dieser Aufruf nicht erfolgreich ist, wird die Steuerung der Leitungsfrequenz auf dem aktuellen Gerät nicht unterstützt. Wenn die Funktion unterstützt wird, können Sie ermitteln, ob der automatische Modus auf dem Gerät verfügbar ist, indem Sie versuchen, den automatischen Modus festzulegen. Zu diesem Zweck [**TrySetPowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/br206899) aufrufen und den Wert **Auto**übergeben. Wenn der Aufruf erfolgreich ist, bedeutet dies, dass die automatische leitungsfrequenz unterstützt wird. Wenn die Steuerung der Leitungsfrequenz auf dem Gerät unterstützt wird, die automatische Frequenzerkennung aber nicht, können Sie die Frequenz trotzdem manuell mit **TrySetPowerlineFrequency** festlegen. In diesem Beispiel ist **MyCustomFrequencyLookup** eine benutzerdefinierte Methode, die Sie implementieren, um für die aktuelle Position des Geräts die richtige Frequenz zu ermitteln. 
+Rufen Sie zuerst die **VideoDeviceController**-Methode auf [**TryGetPowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/br206898), indem Sie einen Ausgabeparameter vom Typ [**PowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/Windows.Media.Capture.PowerlineFrequency) übergeben. Wenn dieser Aufruf nicht erfolgreich ist, wird die Steuerung der Leitungsfrequenz auf dem aktuellen Gerät nicht unterstützt. Wenn die Funktion unterstützt wird, können Sie ermitteln, ob der automatische Modus auf dem Gerät verfügbar ist, indem Sie versuchen, den automatischen Modus festzulegen. Klicken Sie hierzu [**TrySetPowerlineFrequency**](https://msdn.microsoft.com/library/windows/apps/br206899) aufrufen und den Wert **Auto**übergeben. Wenn der Aufruf erfolgreich ist, bedeutet, dass sich, dass die automatische leitungsfrequenz unterstützt wird. Wenn die Steuerung der Leitungsfrequenz auf dem Gerät unterstützt wird, die automatische Frequenzerkennung aber nicht, können Sie die Frequenz trotzdem manuell mit **TrySetPowerlineFrequency** festlegen. In diesem Beispiel ist **MyCustomFrequencyLookup** eine benutzerdefinierte Methode, die Sie implementieren, um für die aktuelle Position des Geräts die richtige Frequenz zu ermitteln. 
 
 [!code-cs[PowerlineFrequency](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetPowerlineFrequency)]
 

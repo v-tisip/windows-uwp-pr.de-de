@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, StoreRequestHelper, SendRequestAsync
 ms.localizationpriority: medium
 ms.openlocfilehash: d492bc7dde990404552689516731850974c31a7c
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8752245"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8797368"
 ---
 # <a name="send-requests-to-the-microsoft-store"></a>Senden von Anforderungen an den Microsoft Store
 
@@ -77,7 +77,7 @@ Diese Anforderung ruft die Remotevariablen für die Test-Flight-Gruppe mit dem h
 |  *requestKind*                   |  Geben Sie die Ziffer7 ein, um die Test-Flight-Gruppe mit dem höchsten Rang für das Gerät zurückzugeben, oder geben Sie8 ein, um die Test-Flight-Gruppe mit dem höchsten Rang für den aktuellen Benutzer und das aktuelle Gerät zurückzugeben. Wir empfehlen die Verwendung des Werts8 für den *RequestKind*-Parameter, da dieser Wert die Test-Flight-Gruppe mit dem höchsten Rang innerhalb der Mitgliedschaft für den aktuellen Benutzer und das aktuelle Gerät zurückgibt.  |
 |  *parametersAsJson*                   |  Übergeben Sie eine Zeichenfolge im JSON-Format, die die im folgenden Beispiel angezeigten Daten enthält.  |
 
-Das folgende Beispiel zeigt das Format der JSON-Daten, die an den *ParametersAsJson*-Parameter übergeben werden sollen. Das Feld *type* muss der Zeichenfolge *GetRemoteVariables* zugewiesen werden. Weisen Sie das Feld *ProjectId* auf die ID des Projekts, in dem Sie die remotevariablen im Partner Center definiert.
+Das folgende Beispiel zeigt das Format der JSON-Daten, die an den *ParametersAsJson*-Parameter übergeben werden sollen. Das Feld *type* muss der Zeichenfolge *GetRemoteVariables* zugewiesen werden. Weisen Sie dem *ProjectId* -Feld, um die ID des Projekts, in dem Sie die remotevariablen im Partner Center definiert.
 
 ```json
 { 

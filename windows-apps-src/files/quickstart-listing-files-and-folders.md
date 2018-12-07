@@ -12,11 +12,11 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: 47680b97bacaa34570daf2a14dc9bb6a551d4443
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8750824"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8799530"
 ---
 # <a name="enumerate-and-query-files-and-folders"></a>Aufzählen und Abfragen von Dateien und Ordnern
 
@@ -280,7 +280,7 @@ Next item
 
 ## <a name="query-files-in-a-location-and-enumerate-matching-files"></a>Abfragen von Dateien an einem Speicherort und Auflisten der entsprechenden Dateien
 
-In diesem Beispiel, dass wir für alle Dateien in der [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary) gruppiert nach dem Monat und zu diesem Zeitpunkt Abfragen rekursiv im Beispiel Unterordner bearbeitet. Zunächst wird [**StorageFolder.CreateFolderQuery**](/uwp/api/windows.storage.storagefolder.createfolderquery) aufgerufen und der [**CommonFolderQuery.GroupByMonth**](/uwp/api/windows.storage.search.commonfolderquery)-Wert an die Methode übergeben. Dadurch erhalten wir ein [**StorageFolderQueryResult**](/uwp/api/windows.storage.search.storagefolderqueryresult)-Objekt.
+In diesem Beispiel, dass wir für alle Dateien in den [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary) gruppiert nach dem Monat und zu diesem Zeitpunkt Abfragen rekursiv im Beispiel Unterordner bearbeitet. Zunächst wird [**StorageFolder.CreateFolderQuery**](/uwp/api/windows.storage.storagefolder.createfolderquery) aufgerufen und der [**CommonFolderQuery.GroupByMonth**](/uwp/api/windows.storage.search.commonfolderquery)-Wert an die Methode übergeben. Dadurch erhalten wir ein [**StorageFolderQueryResult**](/uwp/api/windows.storage.search.storagefolderqueryresult)-Objekt.
 
 Als Nächstes wird [**StorageFolderQueryResult.GetFoldersAsync**](/uwp/api/windows.storage.search.storagefolderqueryresult.getfoldersasync) aufgerufen, das [**StorageFolder**](/uwp/api/windows.storage.storagefolder)-Objekte zurückgibt, die virtuelle Ordner darstellen. In diesem Fall wird nach Monat gruppiert, sodass die virtuellen Ordner jeweils eine Gruppe von Dateien mit der gleichen Monatsangabe darstellen.
 
