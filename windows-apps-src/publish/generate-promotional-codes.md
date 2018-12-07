@@ -7,20 +7,20 @@ ms.topic: article
 keywords: Windows10, UWP, Angebotscode, Angebotscodes, Token, Token
 ms.localizationpriority: medium
 ms.openlocfilehash: ce8fb38ee26beadc68eb8e5829549f69e2d11d16
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8744066"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8795077"
 ---
 # <a name="generate-promotional-codes"></a>Generieren von Werbecodes
 
 
-[Partner Center](https://partner.microsoft.com/dashboard) können Sie das Generieren von werbecodes für Apps oder Add-Ons, die Sie im Microsoft Store veröffentlicht haben. Werbecodes sind eine einfache Möglichkeit, einflussreichen Benutzern kostenlosen Zugriff auf Ihre App oder Ihr Add-On zu ermöglichen. Sie können auch werbecodes Customer Service um Szenarien zu behandeln verwenden, durch einen Benutzer kostenlosen Zugriff auf Ihre app oder Ihr Add-on, oder für [Betatests](beta-testing-and-targeted-distribution.md) , mit Windows 10. 
+[Partner Center](https://partner.microsoft.com/dashboard) können Sie das Generieren von werbecodes für Apps oder Add-Ons, die Sie im Microsoft Store veröffentlicht haben. Werbecodes sind eine einfache Möglichkeit, einflussreichen Benutzern kostenlosen Zugriff auf Ihre App oder Ihr Add-On zu ermöglichen. Sie können werbecodes für Szenarien für den Kunden auch verwenden, durch einen Benutzer kostenlosen Zugriff auf Ihre app oder ein Add-on, oder für [Betatests](beta-testing-and-targeted-distribution.md) , mit Windows 10. 
 
 Jeder werbecode hat eine entsprechende eindeutige einlösbare URL, die ein Kunde klicken kann, um den Code einzulösen und Ihre app oder Ihr Add-on aus dem Microsoft Store zu installieren.  Hinweis: Ihre App muss die abschließende Veröffentlichungsphase des [App-Zertifizierungsprozesses](the-app-certification-process.md) bestehen, bevor Kunden einen Werbecode zur Installation einlösen können.
 
-Sie können einmaligen Verwendung Codes generieren (und verteilen Sie eine für jeden Kunden), oder die Möglichkeit, einen Code generieren, der verwendet werden kann mehrere Male durch eine angegebene Zahl von Kunden.
+Können Sie einmalige Codes (und verteilen Sie eine für jeden Kunden) können, oder Sie einen Code, der verwendet werden kann, mehrere Male durch eine angegebene Zahl von Kunden zu generieren.
 
 > [!TIP]
 > Sie können [benutzerorientierte Pushbenachrichtigungen](send-push-notifications-to-your-apps-customers.md) verwenden, um einen Werbecode an ein Segment Ihrer Kunden zu verteilen. Verwenden Sie dabei unbedingt einen Werbecode, der mehreren Kunden die Nutzung des gleichen Codes ermöglicht.
@@ -36,7 +36,7 @@ Beachten Sie die folgenden Richtlinien für Werbecodes:
 -   Sie müssen die in der [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) definierten Anforderungen erfüllen, einschließlich Abschnitt **3k. Werbecodes**.
 
 > [!NOTE]
-> Sie können werbecodes verwenden, selbst wenn Ihre app nicht für Kunden verfügbar ist (d. h., wenn Sie **dieses Produkt verfügbar, aber nicht im Store sichtbar machen** mit der **Stop Acquisition ausgewählt haben: alle Kunden mit einem direkten Link sehen die Produkt-Store Angebot, aber sie können nur herunterladen, wenn sie das Produkt vor, gehören oder einen werbecode besitzen und ein Windows 10-Gerät** Option in Ihrer Übermittlung [Auffindbarkeit](choose-visibility-options.md#discoverability) Abschnitt). Mit dieser Option müssen Kunden unter Windows 10 (einschließlich Xbox) sein, um Ihr Produkt mit einem werbecode zu erwerben.
+> Sie können werbecodes verwenden, auch wenn Ihre app nicht für Kunden verfügbar ist (d. h., wenn Sie **dieses Produkt verfügbar, aber nicht im Store sichtbar machen** mit der **Stop Acquisition ausgewählt haben: alle Kunden mit einem direkten Link sehen die Produkt-Store Angebot, aber sie können nur herunterladen, wenn sie das Produkt vor, gehören oder einen werbecode besitzen und ein Windows 10-Gerät** Option in Ihrer Übermittlung [Auffindbarkeit](choose-visibility-options.md#discoverability) Abschnitt). Mit dieser Option müssen Kunden unter Windows 10 (einschließlich Xbox) sein, um Ihr Produkt mit einem werbecode zu erwerben.
 
 
 ## <a name="order-promotional-codes"></a>Bestellen von Werbecodes
@@ -101,7 +101,7 @@ Wenn der Kunde auf **Einlösen** klickt, wird die Übersicht der App im Microsof
 
 ## <a name="review-your-promotional-codes"></a>Überprüfen der Werbecodes
 
-Um eine ausführliche Zusammenfassung der werbecodebestellungen für Ihre apps und Add-ons zu überprüfen, navigieren Sie zur Seite **werbecodes** (im linken Navigationsmenü der Partner Center, erweitern Sie **bewerben** und wählen Sie dann **Angebotscodes**). Sie können die folgenden detaillierten Informationen für Ihre aktuellen und inaktiven Werbecodes überprüfen:
+Um eine ausführliche Zusammenfassung der werbecodebestellungen für Ihre apps und Add-ons zu überprüfen, navigieren Sie zur Seite **werbecodes** (im linken Navigationsmenü der Partner Center, erweitern Sie **bewerben** und wählen Sie dann die **Angebotscodes**). Sie können die folgenden detaillierten Informationen für Ihre aktuellen und inaktiven Werbecodes überprüfen:
 -   Bestellungsname
 -   App oder Add-On
 -   Startdatum

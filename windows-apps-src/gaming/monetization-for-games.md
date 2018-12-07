@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Monetisierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 91545116b0d7eae107021cc52ee05d299257518c
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8739872"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8794911"
 ---
 #  <a name="monetization-for-games"></a>Monetisierung für Spiele
 
@@ -27,7 +27,7 @@ Sie können ein UWP-Spiel folgendermaßen bewerben und monetisieren:
 
 ## <a name="worldwide-distribution-channel"></a>Weltweiter Vertriebskanal
 
-Im Microsoft Store kann Ihr Spiel zum Download in mehr als 200 Ländern und Regionen weltweit, mit Unterstützung für die Abrechnung über verschiedene Zahlungsmethoden einschließlich Visa, Mastercard und PayPal zur Verfügung. Eine vollständige Liste der Länder und Regionen finden Sie unter [Festlegen der marktauswahl](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection).
+Im Microsoft Store kann Ihr Spiel zum Download in mehr als 200 Ländern und Regionen weltweit, mit Unterstützung für die Abrechnung über verschiedene Zahlungsmethoden einschließlich Visa, Mastercard und PayPal zur Verfügung. Eine vollständige Liste der Länder und Regionen finden Sie unter [Festlegen der Märkte](https://msdn.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection).
 
 ## <a name="set-a-price-for-your-game"></a>Festlegen eines Preises für Ihr Spiel
 
@@ -47,13 +47,13 @@ Sie können Angebotskampagnen im Voraus planen, indem Sie Start- und Enddatum de
 
 ## <a name="in-game-purchases"></a>In-Game-Käufe
 
-Bei In-Game-Käufen handelt es sich um Produkte, die in einem Spiel gekauft werden. Sie werden allgemein auch als _In-App-Käufe_ bezeichnet. Im Microsoft Store heißen diese Produkte _-Add-Ons_. Durch Partner Center [-Add-Ons veröffentlicht werden](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions) . Sie müssen die Add-Ons außerdem im Code Ihres Spiels aktivieren.
+Bei In-Game-Käufen handelt es sich um Produkte, die in einem Spiel gekauft werden. Sie werden allgemein auch als _In-App-Käufe_ bezeichnet. In der Microsoft Store heißen diese Produkte _-Add-Ons_. [Add-ons werden veröffentlicht](https://msdn.microsoft.com/windows/uwp/publish/add-on-submissions) , über das Partner Center. Sie müssen die Add-Ons außerdem im Code Ihres Spiels aktivieren.
 
 ### <a name="types-of-add-ons"></a>Arten von Add-Ons
 
 Sie können zwei Arten von Add-Ons im Store erstellen: _Gebrauchsgüter_ oder _Verbrauchsartikel_. Gebrauchsgüter sind Elemente, die bis zu ihrem Ablauf für einen angegebenen Zeitraum erhalten bleiben und nur einmal erworben werden können. Verbrauchsartikel sind Elemente, die gekauft und immer wieder verwendet werden können.
 
-Beim Erstellen von Verbrauchsartikeln entscheiden Sie, wie Sie sie nachverfolgen möchten, d.h. ob sie _vom Entwickler verwaltet_ oder _vom Store verwaltet_ werden. (Dieses Feature ist ab Windows10, Version 1607, verfügbar). Mit einem Entwickler verwalteten Verbrauchsartikel sind Sie verantwortlich für das Element Guthabens für den Spieler; mit einem vom Store verwalteten Verbrauchsartikel verfolgt der Microsoft Store das Element Guthaben für Sie. Weitere Informationen finden Sie unter [Übersicht über Endverbraucher-Add-Ons](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons).
+Beim Erstellen von Verbrauchsartikeln entscheiden Sie, wie Sie sie nachverfolgen möchten, d.h. ob sie _vom Entwickler verwaltet_ oder _vom Store verwaltet_ werden. (Dieses Feature ist ab Windows10, Version 1607, verfügbar). Mit einem Entwickler verwalteten Verbrauchsartikel sind Sie verantwortlich für das Element Guthabens für den Spieler. mit einem vom Store verwalteten Verbrauchsartikel verfolgt der Microsoft Store das Element Guthaben für Sie. Weitere Informationen finden Sie unter [Übersicht über Endverbraucher-Add-Ons](https://msdn.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases#overview-of-consumable-add-ons).
 
 ### <a name="create-in-game-purchases"></a>Erstellen von In-Game-Käufen
 

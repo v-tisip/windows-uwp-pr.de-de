@@ -7,15 +7,15 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 796266565965a62d3f168b48893d62e1cdd7df44
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8731951"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8792866"
 ---
 # <a name="implement-a-trial-version-of-your-app"></a>Implementieren einer Testversion Ihrer App
 
-Wenn Sie [Ihre app als eine kostenlose Testversion im Partner Center zu konfigurieren](../publish/set-app-pricing-and-availability.md#free-trial) , damit Kunden Ihre app kostenlos einen Testzeitraum verwenden können, Sie können Ihre Kunden motivieren, um auf die Vollversion Ihrer App zu aktualisieren, indem Sie einige Features den Testzeitraum einschränken oder ausschließen. Bestimmen Sie die einzuschränkenden Features, bevor Sie mit dem Codieren beginnen, und stellen Sie dann sicher, dass diese nur beim Erwerb einer Lizenz für die Vollversion der App verfügbar sind. Außerdem können Sie Features wie Banner oder Wasserzeichen aktivieren, die nur in der Testversion angezeigt werden, bevor ein Kunde Ihre App kauft.
+Wenn Sie [Ihre app als eine kostenlose Testversion im Partner Center zu konfigurieren](../publish/set-app-pricing-and-availability.md#free-trial) , damit Kunden Ihre app kostenlos einen Testzeitraum verwenden können, Sie können Ihre Kunden motivieren, um auf die Vollversion Ihrer App aktualisieren, indem Sie einige Features den Testzeitraum einschränken oder ausschließen. Bestimmen Sie die einzuschränkenden Features, bevor Sie mit dem Codieren beginnen, und stellen Sie dann sicher, dass diese nur beim Erwerb einer Lizenz für die Vollversion der App verfügbar sind. Außerdem können Sie Features wie Banner oder Wasserzeichen aktivieren, die nur in der Testversion angezeigt werden, bevor ein Kunde Ihre App kauft.
 
 Dieser Artikel zeigt, wie Mitglieder die [StoreContext](https://msdn.microsoft.com/library/windows/apps/windows.services.store.storecontext.aspx)-Klasse im [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx)-Namespace verwenden können, um zu bestimmen, ob Benutzer eine Testversion Ihrer App ausführen, und benachrichtigt zu werden, wenn während der Ausführung der App der Status geändert wird. 
 

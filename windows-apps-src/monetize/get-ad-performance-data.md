@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Anzeigen, Leistung
 ms.localizationpriority: medium
 ms.openlocfilehash: c6bec86929284e49e4e882597422d316276c0a33
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8741592"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8793172"
 ---
 # <a name="get-ad-performance-data"></a>Abrufen von Anzeigenleistungsdaten
 
 
 Verwenden Sie diese Methode in der Microsoft Store-Analyse-API, um aggregierte Anzeigenleistungsdaten für Ihre Anwendungen während eines bestimmten Zeitraums und andere optionale Filter abzurufen. Diese Methode gibt die Daten im JSON-Format zurück.
 
-Diese Methode gibt dieselben Daten, die von den [Leistungsbericht Werbung](../publish/advertising-performance-report.md) im Partner Center bereitgestellt werden.
+Diese Methode gibt dieselben Daten, die den [Bericht zur anzeigen Leistung](../publish/advertising-performance-report.md) im Partner Center zur Verfügung.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

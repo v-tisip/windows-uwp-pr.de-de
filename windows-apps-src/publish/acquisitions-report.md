@@ -7,16 +7,16 @@ ms.topic: article
 keywords: Windows10, UWP, Käufe, App-Verkäufe, App-Downloads, Installationen, Trichter, Käufe, Konvertierungen, Kanal, App-Seitenaufrufe
 ms.localizationpriority: medium
 ms.openlocfilehash: 33d5885c5161793807bf32f62ff2df4bab5b2c1d
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8752301"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8795954"
 ---
 # <a name="acquisitions-report"></a>Bericht „Käufe“
 
 
-Der Bericht " **Käufe** " im [Partner Center](https://partner.microsoft.com/dashboard) können Sie sehen, wer hat erworben und installiert Ihrer app, und Sie können demografische und plattformspezifische Details einsehen und zeigt Informationen dazu, wie Kunden unter Windows 10 (einschließlich Xbox) zum Eintrag Ihrer app gelangt sind. Sie können auch in der Nähe in Echtzeit Kaufdaten für den letzten oder 70-zwei Stunden-Zeitraum anzeigen. 
+Der Bericht " **Käufe** " im [Partner Center](https://partner.microsoft.com/dashboard) können Sie sehen, hat, die erworben und installiert die app, und Sie können demografische und plattformspezifische Details einsehen und zeigt Informationen dazu, wie Kunden unter Windows 10 (einschließlich Xbox) zum Eintrag Ihrer app gelangt sind. Sie können auch in der Nähe in Echtzeit Kaufdaten für den letzten oder 70-zwei Stunden-Zeitraum anzeigen. 
 
 Sie können diese Daten im Partner Center oder [den Bericht herunterladen](download-analytic-reports.md) offline anzeigen anzeigen. Sie können diese Daten aber auch programmgesteuert mit unseren [REST-API für Analysen](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
@@ -30,7 +30,7 @@ In diesem Bericht steht **Kauf** für einen neuen Kunden, der eine Lizenz Ihrer 
 
 ## <a name="apply-filters"></a>Anwenden von Filtern
 
-Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist **30D** (30Tage), aber Sie können Daten für 3, 6 oder 12Monate anzeigen, oder für einen benutzerdefinierten Zeitraum, den Sie angeben. In der Nähe Echtzeit Daten für alle Optionen angezeigt werden (außer in **App insgesamt** Daten). Die **1 H** und **72 Stunden** Zeit gelten nur Punkte, die **täglich App** -Registerkarte des Diagramms **Käufe** und der Registerkarte " **Käufe** " des Diagramms **Märkte** . 
+Im oberen Bereich der Seite können Sie den Zeitraum auswählen, für den die Daten angezeigt werden sollen. Die Standardeinstellung ist **30D** (30Tage), aber Sie können Daten für 3, 6 oder 12Monate anzeigen, oder für einen benutzerdefinierten Zeitraum, den Sie angeben. In der Nähe Echtzeit Daten für alle Optionen angezeigt werden (außer in **App insgesamt** Daten). Die **1 H** und **72 Stunden** Zeit gelten nur Punkte, die **täglich App** -Registerkarte des Diagramms **Käufe** und auf der Registerkarte " **Käufe** " des Diagramms **Märkte** . 
 
 Sie können ebenfalls **Filter** erweitern, um alle Daten auf dieser Seite nach Markt und/oder Gerätetyp zu filtern.
 
@@ -46,14 +46,14 @@ Das Diagramm **Käufe** zeigt, wie oft Ihre Käufe (ein neuer Kunde, der eine Li
 
 Standardmäßig zeigen wir die **täglich App** -Ansicht, die in der Nähe Echtzeit-Daten enthält. Sie können auch anzeigen, wie oft die App während ihrer gesamten Lebensdauer gekauft wurde, indem Sie **App Insgesamt** auswählen. Zeigt den kumulierten Gesamtwert aller Käufe an (ab der ersten Veröffentlichung Ihrer App).
 
-**Bruttoumsätze** für Ihre app (von Oktober 2016 - vorhanden) stehen auch in diesem Diagramm zeigt die Gesamtmenge aus app-Verkäufen (in US-Dollar) erzielt. Beachten Sie, dass dieser Betrag für alle Erstattungen, Rückbuchungen, Ausgleich usw. nicht berücksichtigt.
+**Bruttoumsatz** für Ihre app (über den Oktober 2016 - vorhanden) stehen auch in diesem Diagramm mit den Gesamtbetrag erzielt aus app-Verkäufen (in US-Dollar). Beachten Sie, dass dieser Betrag für alle Erstattungen, Rückbuchungen, Ausgleich usw. nicht berücksichtigt.
 
 Sie können optional die Ergebnisse danach filtern, ob die Übernahme vom Client oder einem webbasierten Store und/oder Betriebssystemversion stammt.
 
 > [!NOTE]
 > Sie können diese Daten auch programmgesteuert mit der Methode [Abrufen von App-Käufen](../monetize/get-app-acquisitions.md) unserer [Analyse-REST-API](../monetize/access-analytics-data-using-windows-store-services.md) abrufen.
 
-In der **täglichen App** -Ansicht Wenn der **30d** Zeitraum ausgewählt wird, möglicherweise Kreis angezeigt. Diese darstellen eine erhebliche Erhöhung oder in einem bestimmten Wert, den wir glauben, dass Sie kennen sollten verringern. Das Datum, an dem der Kreis angezeigt wird, stellt das Ende der Woche, in der wir eine erhebliche Erhöhung oder Verringerung, die im Vergleich zu Woche festgestellt. Um mehr Informationen zu Änderungen, zeigen Sie auf den Kreis.  
+In der **App täglich** Wenn der **30d** Zeitraum ausgewählt wird, möglicherweise Kreis angezeigt. Diese stellen eine erhebliche Erhöhung oder einen bestimmten Wert, die wir glauben, dass Sie kennen sollten verringern. Das Datum, an dem die Kreis angezeigt wird, stellt am Ende der Woche, in der wir eine erhebliche Erhöhung oder Verringerung, die im Vergleich zu Woche festgestellt, dar. Um weitere Informationen zu Änderungen zu sehen, zeigen Sie auf den Kreis.  
 
 > [!TIP]
 > Sie können weitere Einblicke im Zusammenhang mit erhebliche Änderungen an der letzten 30 Tage im [Bericht](insights-report.md)anzeigen.

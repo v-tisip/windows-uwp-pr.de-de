@@ -8,16 +8,16 @@ keywords: Windows10, UWP
 permalink: en-us/docs/xdk/devhome-networking.html
 ms.localizationpriority: medium
 ms.openlocfilehash: 06d82b350cccfd90509f3b9f031de2785e91e0dc
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8740338"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8797223"
 ---
 # <a name="networking-page-dev-home"></a>Netzwerkseite (Dev Home)
    
   
-Der Seite " **Netzwerk** ", der Dev Home simuliert verschiedene Netzwerke Bedingungen für die Problembehandlung. Außerdem können Sie eine Netzwerk-Paket-Verfolgung zu initiieren.   
+Die **Netzwerk-** Seite des Dev Home simuliert verschiedene Netzwerke Bedingungen für die Problembehandlung. Außerdem können Sie eine Netzwerk-Paket-Verfolgung zu initiieren.   
  ![Netzwerkseite von Dev Home](images/devhome_networking.png)   
   
 Die Seite " **Netzwerk** " enthält die folgenden Bereichen:   
@@ -33,7 +33,7 @@ Die Seite " **Netzwerk** " enthält die folgenden Bereichen:
 ## <a name="network-simulation"></a>Netzwerksimulation  
    
   
-Der Bereich **Netzwerksimulation** führt eine Netzwerksimulation mit verschiedenen Bandbreite Profile testen.   
+Bereich **Netzwerksimulation** führt eine Netzwerksimulation mit verschiedenen Bandbreite Profile testen.   
   
 <a id="ID4EOB"></a>
 
@@ -42,7 +42,7 @@ Der Bereich **Netzwerksimulation** führt eine Netzwerksimulation mit verschiede
 ## <a name="xbtrace-netcap"></a>XBTrace (Netcap)  
    
   
-Der Bereich **XBTrace (Netcap)** startet oder beendet eine Netzwerk-Paket-Verfolgung.   
+Der Bereich **XBTrace (Netcap)** startet oder beendet wird eine Netzwerk-Paket-Verfolgung.   
   
 <a id="ID4E2B"></a>
 
