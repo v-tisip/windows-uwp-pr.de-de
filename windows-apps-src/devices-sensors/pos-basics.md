@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: 1b4ff9443c40cf44e171bf898b627de3e2819034
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8730149"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8781906"
 ---
 # <a name="getting-started-with-point-of-service"></a>Erste Schritte mit Point Of Service-Geräten
 
@@ -23,8 +23,8 @@ Dieser Abschnitt enthält Themen, die für alle Point of Service-Gerätekategori
 | [Funktionsdeklaration](pos-basics-capability.md)      | Erfahren Sie, wie Sie die Funktion **pointOfService** zu Ihrem Anwendungsmanifest hinzufügen.  Diese Funktion wird für die Verwendung des Windows.Devices.PointOfService-Namespace benötigt.  |
 | [Enumerieren von Geräten](pos-basics-enumerating.md)        | Erfahren Sie, wie Sie eine Geräteauswahl definieren, die verwendet wird, um die im System verfügbaren Geräte abzufragen, und verwenden diese Auswahl, um Point of Service-Geräte aufzulisten.  |
 | [Erstellen eines Geräteobjekts](pos-basics-deviceobject.md)  | Erfahren Sie, wie Sie ein PointOfService-Geräteobjekt erstellen, das Ihnen den Zugriff auf schreibgeschützte Eigenschaften des Peripheriegeräts und die Beanspruchung der exklusiven Nutzung des Peripheriegeräts ermöglicht. |
-| [Anspruch und aktivieren ](pos-basics-claim.md)  | Enthält Informationen zum Reservieren eines PointOfService-Peripheriegeräts für die exklusive Nutzung und für e/a-Vorgänge zu aktivieren.  |
-| [Freigeben von Peripheriegeräten für andere Personen](pos-basics-sharing.md) | Erfahren Sie mehr über das Netzwerk oder verbundenen Bluetooth-Peripheriegeräte mit anderen Computern in einer Umgebung freigeben, in denen mehrere PCs auf Peripheriegeräte anstatt dedizierten auf jeden Computer angeschlossenen Peripheriegeräte angewiesen sind.
+| [Anspruch und aktivieren ](pos-basics-claim.md)  | Erfahren Sie, wie Sie ein PointOfService-Peripheriegeräts für die exklusive Nutzung reservieren und für e/a-Vorgänge aktivieren.  |
+| [Freigeben von Peripheriegeräten für andere Personen](pos-basics-sharing.md) | Erfahren Sie mehr über das Netzwerk oder verbundenen Bluetooth-Peripheriegeräte mit anderen Computern in einer Umgebung Teilen, in denen mehrere PCs auf Peripheriegeräte anstatt dedizierten auf jeden Computer angeschlossenen Peripheriegeräte verlassen.
 | [PointOfService-End-to-end](pos-get-started.md)  | Dies ist ein End-to-End-Beispiel zum PointOfService-Peripheriegeräte mit den obigen Beispielen interagieren. |
 |
 
@@ -33,10 +33,10 @@ Dieser Abschnitt enthält Themen, die für alle Point of Service-Gerätekategori
 | Thema   | Beschreibung |
 |:--------|:------------|
 | [Anwendung Verteilung](../publish/distribute-lob-apps-to-enterprises.md) | Informationen Sie zu den Optionen für Ihre app an Unternehmenskunden verteilen. |
-| [App-Lebenszyklus](../launch-resume/app-lifecycle.md) | Erfahren Sie mehr über den Lebenszyklus einer UWP-Anwendung und was passiert, wenn Windows gestartet wird, hält und Ihrer app fortgesetzt. |
-| [Anwendungsressourcen](../app-resources/index.md) | Enthält Informationen zum Erstellen, Paket, und nutzen Ihre app Zeichenfolge, Bild- und Dateiressourcen. |
+| [App-Lebenszyklus](../launch-resume/app-lifecycle.md) | Erfahren Sie mehr über den Lebenszyklus einer UWP-Anwendung und was geschieht, wenn Windows gestartet wird, hält und Ihrer app fortgesetzt. |
+| [Anwendungsressourcen](../app-resources/index.md) | Enthält Informationen zum Erstellen, Paket, und nutzen, String, Bild- und Dateiressourcen Ihrer app. |
 | [Datenbindung](../data-binding/index.md) | Erfahren Sie, wie Sie die Datenbindung verwenden, um Daten in der Benutzeroberfläche Ihrer app anzuzeigen. |
-| [Geräteenumeration](enumerate-devices.md) | Hier erfahren Sie erweiterte Enumeration Techniken um Peripheriegeräte zu suchen.|
+| [Geräteenumeration](enumerate-devices.md) | Hier erfahren Sie erweiterte Enumeration Techniken, um Peripheriegeräte zu suchen.|
 | [Adaptive Anwendungen Version](../debug-test-perf/version-adaptive-apps.md) | Erläutert, wie Ihre app so entwerfen, dass sie auf mehrere Versionen von Windows 10 ausgeführt wird.|
 |
 

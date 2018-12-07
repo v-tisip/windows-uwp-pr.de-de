@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows10, UWP, Bewertungen, Rezensionen
 ms.localizationpriority: medium
 ms.openlocfilehash: 377b71dba2fb62dfc562b56d40e65e43b0bd49c9
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8749739"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8779930"
 ---
 # <a name="request-ratings-and-reviews-for-your-app"></a>Anfordern von Bewertungen und Prüfungen für Ihre App
 
@@ -18,10 +18,10 @@ Sie können Code zu Ihrer Universellen Windows-Plattform (UWP)-App hinzufügen, 
 * Sie können ein Bewertungs- und Rezensionsdialogfeld direkt im Kontext Ihrer App anzeigen.
 * Sie können programmgesteuert die Bewertungs- und Rezensionsseite für Ihre App im Microsoft Store öffnen.
 
-Wenn Sie Ihre bewertungs- und rezensionsdaten analysieren möchten, können Sie die Daten im Partner Center anzeigen oder der Microsoft Store-Analyse-API zum programmgesteuerten Abrufen dieser Daten verwenden.
+Wenn Sie Ihre bewertungs- und rezensionsdaten analysieren möchten, können die Daten im Partner Center anzeigen oder der Microsoft Store-Analyse-API zum programmgesteuerten Abrufen dieser Daten verwenden.
 
 > [!IMPORTANT]
-> Wenn Sie eine Bewertung-Funktion innerhalb Ihrer app hinzufügen, müssen alle Rezensionen der Benutzer auf den Store Bewertung Mechanismen, unabhängig von der Bewertung ausgewählte Star senden. Wenn Sie Feedback oder Kommentare von Benutzern erfassen, muss es deutlich gemacht werden, dass er wird nicht im Zusammenhang mit der app-Bewertung oder Rezensionen im Store jedoch direkt an die app-Entwickler gesendet. Finden Sie unter den Entwickler Verhaltensregeln für Weitere Informationen im Zusammenhang mit [Fraudulent oder unehrlichen Aktivitäten](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities).
+> Wenn Sie eine Bewertung-Funktion in Ihrer app hinzufügen, müssen alle Rezensionen der Benutzer auf den Store Bewertung Mechanismen, unabhängig von der ausgewählten Bewertung Star senden. Wenn Sie Feedback oder Kommentare von Benutzern zu erfassen, muss offensichtlich sein, dass er wird nicht im Zusammenhang mit der app-Bewertung oder im Store-Rezensionen jedoch direkt an die app-Entwickler gesendet. Finden Sie unter den Entwickler Verhaltensregeln für Weitere Informationen zu [Fraudulent oder unehrlichen Aktivitäten](https://docs.microsoft.com/legal/windows/agreements/store-developer-code-of-conduct#3-fraudulent-or-dishonest-activities).
 
 ## <a name="show-a-rating-and-review-dialog-in-your-app"></a>Ein Bewertungs- und Rezensionsdialogfeld in Ihrer App anzeigen
 

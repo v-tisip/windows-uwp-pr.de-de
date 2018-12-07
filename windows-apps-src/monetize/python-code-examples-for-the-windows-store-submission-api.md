@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Codebeispiele, Python
 ms.localizationpriority: medium
 ms.openlocfilehash: 157c11484de150d363157e5b6e5de00a35bafd5f
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8690075"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8779216"
 ---
 # <a name="python-sample-submissions-for-apps-add-ons-and-flights"></a>Python-Beispiel: Übermittlungen für Apps, Add-Ons und Flights
 
@@ -58,7 +58,7 @@ Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Stor
 2. Als Nächstes [wird eine ausstehende Übermittlung für die App gelöscht](delete-an-app-submission.md), wenn vorhanden.
 3. Anschließend [wird eine neue Übermittlung für die App erstellt](create-an-app-submission.md). (Die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung.)
 4. Es werden einige Details für die neue Übermittlung geändert und ein neues Paket für die Übermittlung zu Azure Blob Storage hochgeladen.
-5. Als Nächstes wird es [Updates](update-an-app-submission.md) und anschließend auf die neue Übermittlung für das Partner Center [committet](commit-an-app-submission.md) .
+5. Als Nächstes wird es [Updates](update-an-app-submission.md) und [sendet](commit-an-app-submission.md) die neue Übermittlung für das Partner Center.
 6. Schließlich [wird der Status der neuen Übermittlung regelmäßig überprüft](get-status-for-an-app-submission.md), bis die Übermittlung erfolgreich gesendet wurde.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L93-L166)]
@@ -73,7 +73,7 @@ Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Stor
 2. Als Nächstes [wird eine ausstehende Übermittlung für das Add-On gelöscht](delete-an-add-on-submission.md), wenn vorhanden.
 3. Anschließend [wird eine neue Übermittlung für das Add-On erstellt](create-an-add-on-submission.md). (Die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung.)
 4. Es wird ein ZIP-Archiv hochgeladen, das Symbole für die Übermittlung an Azure Blob Storage enthält. Weitere Informationen finden Sie in den entsprechenden Anweisungen zum Hochladen von ZIP-Archiven zu Azure Blob Storage in [Erstellen einer Add-On-Übermittlung](manage-add-on-submissions.md#create-an-add-on-submission).
-5. Als Nächstes wird es [Updates](update-an-add-on-submission.md) und anschließend auf die neue Übermittlung für das Partner Center [committet](commit-an-add-on-submission.md) .
+5. Als Nächstes wird es [Updates](update-an-add-on-submission.md) und [sendet](commit-an-add-on-submission.md) die neue Übermittlung für das Partner Center.
 6. Schließlich [wird der Status der neuen Übermittlung regelmäßig überprüft](get-status-for-an-add-on-submission.md), bis die Übermittlung erfolgreich gesendet wurde.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L172-L245)]
@@ -88,7 +88,7 @@ Das folgende Beispiel zeigt, wie Sie verschiedene Methoden in der Microsoft Stor
 2. Als Nächstes [wird eine ausstehende Übermittlung für das Flight-Paket gelöscht](delete-a-flight-submission.md), wenn vorhanden.
 3. Anschließend [wird eine neue Übermittlung für das Flight-Paket erstellt](create-a-flight-submission.md). (Die neue Übermittlung ist eine Kopie der letzten veröffentlichten Übermittlung.)
 4. Es wird ein neues Paket für die Übermittlung an Azure Blob Storage hochgeladen. Weitere Informationen finden Sie in den entsprechenden Anweisungen zum Hochladen von ZIP-Archiven zu Azure Blob Storage in [Erstellen einer Flight-Paket-Übermittlung](manage-flight-submissions.md#create-a-package-flight-submission).
-5. Als Nächstes wird es [Updates](update-a-flight-submission.md) und anschließend auf die neue Übermittlung für das Partner Center [committet](commit-a-flight-submission.md) .
+5. Als Nächstes wird es [Updates](update-a-flight-submission.md) und [sendet](commit-a-flight-submission.md) die neue Übermittlung für das Partner Center.
 6. Schließlich [wird der Status der neuen Übermittlung regelmäßig überprüft](get-status-for-a-flight-submission.md), bis die Übermittlung erfolgreich gesendet wurde.
 
 [!code[SubmissionApi](./code/StoreServicesExamples_Submission/python/Examples.py#L251-L325)]

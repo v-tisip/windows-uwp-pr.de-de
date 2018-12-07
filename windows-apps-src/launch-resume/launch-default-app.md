@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 143aa8310cdfe9dd5f0be29bf07f03c23293a647
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8754803"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8784214"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>Starten der Standard-App für einen URI
 
@@ -244,4 +244,4 @@ Verwenden der **Msnweather:** zum Starten der Wetter-app-URI-Schema.
 
 | URI-Schema | Ergebnisse |
 |------------|---------|
-| Msnweather://Forecast?LA= \[latitude\] & lo = \ [Longitude\] | Startet die Wetter-app in die Planung Seite basierend auf einen geografischen Standort-Koordinaten.<br>`latitude` bezieht sich auf die Breite der Position.<br> `longitude` bezieht sich auf die Länge der Position.<br> |
+| Msnweather://Forecast?LA= \[latitude\] & lo = \ [Longitude\] | Startet die Wetter-app in die Planung Seite basierend auf einen geografischen Standort-Koordinaten.<br>`latitude` bezieht sich auf die Position Latitude.<br> `longitude` bezieht sich auf die Länge der Position.<br> |

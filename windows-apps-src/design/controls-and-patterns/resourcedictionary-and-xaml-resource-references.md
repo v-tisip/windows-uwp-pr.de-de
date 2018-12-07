@@ -12,11 +12,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 51461df47fe92c296fee198a6f2ed1c34e833cd7
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8743916"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8780727"
 ---
 # <a name="resourcedictionary-and-xaml-resource-references"></a>ResourceDictionary- und XAML-Ressourcenreferenzen
 
@@ -202,7 +202,7 @@ sealed partial class App : Application
 
 [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/br208706) ist eine Basisklasse zum Steuern der Vererbung, und sie verfügt über eine [Resources](https://msdn.microsoft.com/library/windows/apps/br208740)-Eigenschaft. Sie können also jedem **FrameworkElement**-Element ein lokales Ressourcenverzeichnis hinzufügen.
 
-Hier verfügen sowohl das [Page](https://msdn.microsoft.com/library/windows/apps/br227503)-Element als auch das [Border](https://msdn.microsoft.com/library/windows/apps/br209250)-Element über Ressourcenwörterbücher, und beide Elemente weisen eine Ressource mit dem Namen „greeting“ auf. [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) mit dem Namen "textBlock2" befindet sich in den **Rahmen**, also die Ressourcensuche zuerst den **Rahmen**Ressourcen, Ressourcen der **Seite**und dann [den Anwendungsressourcen](https://msdn.microsoft.com/library/windows/apps/br242324) nach. Das **TextBlock**-Element enthält „Hola mundo“.
+Hier verfügen sowohl das [Page](https://msdn.microsoft.com/library/windows/apps/br227503)-Element als auch das [Border](https://msdn.microsoft.com/library/windows/apps/br209250)-Element über Ressourcenwörterbücher, und beide Elemente weisen eine Ressource mit dem Namen „greeting“ auf. [TextBlock](https://msdn.microsoft.com/library/windows/apps/br209652) mit dem Namen "textBlock2" ist in den **Rahmen**, also die Ressourcensuche zuerst den **Rahmen**Ressourcen, Ressourcen der **Seite**und dann die [Anwendung](https://msdn.microsoft.com/library/windows/apps/br242324) Ressourcen nach. Das **TextBlock**-Element enthält „Hola mundo“.
 
 Verwenden Sie die Resources-Eigenschaft dieses Elements, um über den Code auf die [Ressourcen](https://msdn.microsoft.com/library/windows/apps/br208740) dieses Elements zuzugreifen. Beim Zugreifen auf die Ressourcen eines [FrameworkElement](https://msdn.microsoft.com/library/windows/apps/br208706)-Elements im Code, anstatt per XAML, wird nur im entsprechenden Verzeichnis gesucht, nicht in den Verzeichnissen des übergeordneten Elements.
 
@@ -449,7 +449,7 @@ Sie können ein [ResourceDictionary](https://msdn.microsoft.com/library/windows/
 
 Die meisten Szenarien für ein [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) werden ausschließlich im XAML-Code behandelt. Sie deklarieren den **ResourceDictionary**-Container und die darin enthaltenen Ressourcen als XAML-Datei oder Gruppe von XAML-Knoten in einer UI-Definitionsdatei. Anschließend nutzen Sie XAML-Ressourcenverweise, um diese Ressourcen aus anderen Teilen des XAML-Codes anzufordern. Es gibt trotzdem noch bestimmte Fälle, in denen die App den Inhalt eines **ResourceDictionary**-Elements mithilfe von Code anpassen sollte, der bei laufender App ausgeführt wird, oder in denen wenigstens der Inhalt eines **ResourceDictionary**-Elements daraufhin abgefragt werden sollte, ob eine Ressource bereits definiert ist. Diese Codeaufrufe werden für eine **ResourceDictionary**-Instanz erstellt. Daher müssen Sie eine Instanz abrufen, und zwar entweder ein direktes **ResourceDictionary** in der Objektstruktur durch Abrufen von [FrameworkElement.Resources](https://msdn.microsoft.com/library/windows/apps/br208740) oder `Application.Current.Resources`.
 
-In C\#- oder Microsoft Visual Basic-Code können Sie in einem bestimmten [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) mithilfe des Indexers ([Item](https://msdn.microsoft.com/library/windows/apps/jj603134)) auf eine Ressource verweisen. Bei einem **ResourceDictionary** handelt es sich um ein Verzeichnis mit Zeichenfolgenschlüsseln, sodass vom Indexer anstelle eines Ganzzahlindex der Zeichenfolgenschlüssel verwendet wird. In für VisualC++-komponentenerweiterungen (C++ / CX) verwenden [Nachschlagen](https://msdn.microsoft.com/library/windows/apps/br208800).
+In C\#- oder Microsoft Visual Basic-Code können Sie in einem bestimmten [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794) mithilfe des Indexers ([Item](https://msdn.microsoft.com/library/windows/apps/jj603134)) auf eine Ressource verweisen. Bei einem **ResourceDictionary** handelt es sich um ein Verzeichnis mit Zeichenfolgenschlüsseln, sodass vom Indexer anstelle eines Ganzzahlindex der Zeichenfolgenschlüssel verwendet wird. In für VisualC++-komponentenerweiterungen (C++ / CX) verwenden [Suche](https://msdn.microsoft.com/library/windows/apps/br208800).
 
 Bei der Verwendung von Code zum Untersuchen oder Ändern eines [ResourceDictionary](https://msdn.microsoft.com/library/windows/apps/br208794)-Elements wechselt das Verhalten für APIs wie [Lookup](https://msdn.microsoft.com/library/windows/apps/br208800) oder [Item](https://msdn.microsoft.com/library/windows/apps/jj603134) nicht von direkten Ressourcen zu App-Ressourcen. Dies ist das Verhalten eines XAML-Parsers, das nur beim Laden von XAML-Seiten auftritt. Zur Laufzeit gilt der Bereich für Schlüssel eigenständig für die **ResourceDictionary**-Instanz, die Sie gerade verwenden. Der Bereich wird jedoch auf [MergedDictionaries](https://msdn.microsoft.com/library/windows/apps/br208801) erweitert.
 

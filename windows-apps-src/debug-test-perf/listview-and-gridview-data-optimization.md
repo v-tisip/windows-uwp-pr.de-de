@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 411d19ba26dca1edff91fb7e5b432aa4da3bd120
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8484726"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8782323"
 ---
 # <a name="listview-and-gridview-data-virtualization"></a>ListView- und GridView-Datenvirtualisierung
 
@@ -41,7 +41,7 @@ Bei der inkrementellen Datenvirtualisierung werden Daten sequenziell geladen. Ei
 
 Eine derartige Datenquelle ist eine speicherinterne Liste, die ständig erweitert werden kann. Das Elementsteuerelement fordert die Elemente mithilfe der standardmäßigen „Indexer“- und „Count“-Eigenschaften von [**IList**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.ilist.aspx) an. Die Anzahl sollte die Anzahl der lokalen Elemente darstellen, nicht die tatsächliche Größe des Datasets.
 
-Wenn sich das Elementsteuerelement dem Ende der vorhandenen Daten nähert, ruft es [**ISupportIncrementalLoading.HasMoreItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.hasmoreitems) auf. Wenn **true** zurückgegeben wird, ruft es [**ISupportIncrementalLoading.LoadMoreItemsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.loadmoreitemsasync) auf und übergibt eine empfohlene Anzahl von zu ladenden Elementen. Je nachdem, von wo die Daten (lokaler Datenträger, Netzwerk oder Cloud) geladen werden, können Sie eine andere als die empfohlene Anzahl von Elementen laden. Wenn Ihr Dienst z.B. Stapel von 50 Elementen unterstützt, aber das Elementsteuerelement nur 10 anfordert, dann können Sie 50 Elemente laden. Laden Sie die Daten vom Back-End, fügen Sie sie zur Liste hinzu, und lösen Sie über [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) oder [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) eine Änderungsbenachrichtigung aus, damit das Elementsteuerelement über die neuen Elemente informiert wird. Geben Sie außerdem die Anzahl der tatsächlich geladenen Elemente zurück. Wenn Sie weniger Artikel als empfohlen laden oder das Elementsteuerelement in der Zwischenzeit noch weiter verschoben/durchlaufen wurde, dann wird die Datenquelle erneut aufgerufen, um weitere Elemente zu laden, und der Zyklus wird anschließend fortgesetzt. Sie können weitere Informationen im [XAML-Datenbindungsbeispiel](https://code.msdn.microsoft.com/windowsapps/Data-Binding-7b1d67b5) für Windows8.1 herunterladen und dessen Quellcode in Ihrer Windows 10-app wiederverwenden.
+Wenn sich das Elementsteuerelement dem Ende der vorhandenen Daten nähert, ruft es [**ISupportIncrementalLoading.HasMoreItems**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.hasmoreitems) auf. Wenn **true** zurückgegeben wird, ruft es [**ISupportIncrementalLoading.LoadMoreItemsAsync**](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.data.isupportincrementalloading.loadmoreitemsasync) auf und übergibt eine empfohlene Anzahl von zu ladenden Elementen. Je nachdem, von wo die Daten (lokaler Datenträger, Netzwerk oder Cloud) geladen werden, können Sie eine andere als die empfohlene Anzahl von Elementen laden. Wenn Ihr Dienst z.B. Stapel von 50 Elementen unterstützt, aber das Elementsteuerelement nur 10 anfordert, dann können Sie 50 Elemente laden. Laden Sie die Daten vom Back-End, fügen Sie sie zur Liste hinzu, und lösen Sie über [**INotifyCollectionChanged**](https://msdn.microsoft.com/library/windows/apps/xaml/system.collections.specialized.inotifycollectionchanged.aspx) oder [**IObservableVector&lt;T&gt;**](https://msdn.microsoft.com/library/windows/apps/BR226052) eine Änderungsbenachrichtigung aus, damit das Elementsteuerelement über die neuen Elemente informiert wird. Geben Sie außerdem die Anzahl der tatsächlich geladenen Elemente zurück. Wenn Sie weniger Artikel als empfohlen laden oder das Elementsteuerelement in der Zwischenzeit noch weiter verschoben/durchlaufen wurde, dann wird die Datenquelle erneut aufgerufen, um weitere Elemente zu laden, und der Zyklus wird anschließend fortgesetzt. Sie finden weitere Informationen im [XAML-Datenbindungsbeispiel](https://code.msdn.microsoft.com/windowsapps/Data-Binding-7b1d67b5) für Windows8.1 herunterladen und dessen Quellcode in Ihrer Windows 10-app wiederverwenden.
 
 ## <a name="random-access-data-virtualization"></a>Datenvirtualisierung mit wahlfreiem Zugriff
 

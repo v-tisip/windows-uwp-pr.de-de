@@ -7,15 +7,15 @@ keywords: Windows10, UWP
 ms.assetid: 9ef40050-7df6-49bd-8563-1bd58bb6e3f0
 ms.localizationpriority: medium
 ms.openlocfilehash: b0f793dfb1c261ed967e79ab2a64e09306a57917
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8741414"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8785697"
 ---
 # <a name="uwp-on-xbox-one-samples"></a>Beispiele für UWP auf Xbox One
 
-Es gibt mehrere plattformübergreifenden UWP-Beispiele, die während der Ausführung auf dieser Plattform für Xbox One optimiert wurden. Sie können durchsuchen Sie den Code auf GitHub, lesen Sie der Readme-Datei und des Wiki und Klonen Sie die Projekte auf Ihrem Computer.
+Es gibt mehrere plattformübergreifenden UWP-Beispiele, die für Xbox One optimiert wurde, wenn auf dieser Plattform ausgeführt. Sie können durchsuchen Sie den Code auf GitHub, lesen Sie der Readme-Datei und des Wiki und Klonen die Projekte auf Ihrem Computer.
 
 ## <a name="tvhelpers"></a>TVHelpers
 
@@ -27,13 +27,13 @@ Weitere Informationen finden Sie im Projekt [TVHelpers](https://github.com/Micro
 
 ## <a name="the-news-experience"></a>Die Nachrichten-Erfahrung
 
-[Die Nachrichten auftreten](https://github.com/Microsoft/uwp-experiences/tree/news/apps/News), vierte Kaffee, ist eine Beispiel-Nachrichten-app, die auf Desktop, Telefon und Xbox One und bietet eine Premium-Funktion, die von jedem Gerät Stärken nutzt. Auf Xbox ist es für Gamepad optimiert, die Benutzeroberfläche ist speziell für die 10 Fuß-Erfahrung und im TV-sicheren Bereich zwischen anderen Optimierungen Content behält. Finden Sie [im Blogbeitrag](https://blogs.windows.com/buildingapps/2016/09/09/tailoring-your-app-for-xbox-and-the-tv-app-dev-on-xbox-series/) für Weitere Informationen.
+[Die Nachrichten auftreten](https://github.com/Microsoft/uwp-experiences/tree/news/apps/News), vierte Kaffee ist eine Beispiel-Nachrichten-app, die sich für alle Desktop, Telefon und Xbox One und bietet eine Premium-Funktion, die jedem Gerät Stärken nutzt. Auf der Xbox ist es für Gamepad optimiert, die Benutzeroberfläche ist speziell für die 10 Fuß-Erfahrung und TV-sicheren Bereich zwischen anderen Optimierungen Content behält. Finden Sie [im Blogbeitrag](https://blogs.windows.com/buildingapps/2016/09/09/tailoring-your-app-for-xbox-and-the-tv-app-dev-on-xbox-series/) für Weitere Informationen.
 
 ![Die Nachrichten-Erfahrung](images/samples-1.png)
 
-## <a name="gamepad-style-navigation-xaml-sample"></a>Beispiel für Gamepad-Stil die Navigation (XAML)
+## <a name="gamepad-style-navigation-xaml-sample"></a>Beispiel für die Navigation (XAML) Gamepad-Format
 
-Das [Beispiel für die Navigation (XAML) Gamepad-Format](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlGamepadNavigation) ist ein Beispiel für UWP, die Methoden zur Verbesserung der direktionale Navigation in Ihrer app anzeigt. Während dies auch für desktop-Apps gilt, in denen ein Kunde möchte eine Tastatur verwenden, um die app zu navigieren können, ist es besonders wichtig für Xbox-Anwendungen, in denen die main-Methode der Eingabe Gamepad oder Fernbedienung ist.
+Im [Beispiel für die Navigation (XAML) Gamepad-Format](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlGamepadNavigation) ist ein Beispiel für UWP, die Methoden zur Verbesserung der direktionale Navigation in Ihrer app anzeigt. Während dies auch für desktop-Apps gilt, in denen ein Kunde möchte eine Tastatur verwenden, um die app zu navigieren können, ist es besonders wichtig für Xbox-Anwendungen, in denen die wichtigsten Eingabe Gamepad oder Fernbedienung ist.
 
 ![Für die universelle Windows-Plattform: Größe des app-Ansicht](images/samples-2.png)
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0bc555030c2f5202e5c128c1d1a2fe45b5b71b4b
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8744242"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8782672"
 ---
 # <a name="keep-the-ui-thread-responsive"></a>Aufrechterhalten der Reaktionsfähigkeit des UI-Threads
 
@@ -22,7 +22,7 @@ Ihre App ist ereignisgesteuert, was bedeutet, dass Ihr Code in Reaktion auf ein 
 
 Sie müssen den UI-Thread verwenden, um fast alle Änderungen am UI-Thread vorzunehmen, einschließlich der Erstellung von UI-Typen und des Zugriffs auf ihre Member. Sie können die UI nicht aus einem Hintergrundthread aktualisieren, können jedoch mit [**CoreDispatcher.RunAsync**](https://msdn.microsoft.com/library/windows/apps/Hh750317) eine Nachricht posten, damit der Code dort ausgeführt wird.
 
-> **Hinweis:** die einzige Ausnahme besteht darin, einen separaten Renderthread, die UI-Änderungen anwenden können, die ohne Auswirkungen auf die Eingabeverarbeitung oder das Basislayout vorhanden ist. Viele Animationen und Übergänge, die sich nicht auf das Layout auswirken, können z. B. auf diesem Renderthread ausgeführt werden.
+> **Hinweis:** die einzige Ausnahme ist, dass es einen separaten Renderthread, die UI-Änderungen anwenden können, die ohne Auswirkungen auf die Eingabeverarbeitung oder das grundlegende Layout. Viele Animationen und Übergänge, die sich nicht auf das Layout auswirken, können z. B. auf diesem Renderthread ausgeführt werden.
 
 ## <a name="delay-element-instantiation"></a>Verzögern der Element-Instanziierung
 

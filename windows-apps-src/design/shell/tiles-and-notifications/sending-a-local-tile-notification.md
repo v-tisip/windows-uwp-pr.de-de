@@ -8,16 +8,16 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 5752a7bf18d785121258ea3fe75afe8383be2aff
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8744410"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8782609"
 ---
 # <a name="send-a-local-tile-notification"></a>Senden einer lokalen Kachelbenachrichtigung
  
 
-Primäre app-Kacheln in Windows 10 werden in Ihrem app-Manifest definiert, während sekundäre Kacheln programmgesteuert erstellt und vom app-Code definiert sind. In diesem Artikel wird beschrieben, wie Sie eine lokale Benachrichtigung an eine primäre Kachel und an eine sekundäre Kachel mit adaptiven Kachelvorlagen senden. (Eine lokale Benachrichtigung wird vom App-Code gesendet, im Gegensatz zu Benachrichtigungen, die ein Webserver per Push oder Pull sendet.)
+Primäre app-Kacheln in Windows 10 werden in Ihrem app-Manifest definiert, während sekundäre Kacheln programmgesteuert erstellt und vom app-Code definiert. In diesem Artikel wird beschrieben, wie Sie eine lokale Benachrichtigung an eine primäre Kachel und an eine sekundäre Kachel mit adaptiven Kachelvorlagen senden. (Eine lokale Benachrichtigung wird vom App-Code gesendet, im Gegensatz zu Benachrichtigungen, die ein Webserver per Push oder Pull sendet.)
 
 ![Standardkachel und Kachel mit Benachrichtigung](images/sending-local-tile-01.png)
 

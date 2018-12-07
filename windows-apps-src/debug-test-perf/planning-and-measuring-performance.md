@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6388158a7b1c4fd3fa3e0ab17dcc86b7ef2d7c0e
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8734493"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8782945"
 ---
 # <a name="planning-for-performance"></a>Planen der Leistung
 
@@ -171,7 +171,7 @@ Verwenden Sie diese Verfahren und Tools zum Testen, wie Ihre App gegenüber den 
     -   Führen Sie die App mehrmals aus, um zufällige Testvariablen so gut es geht auszuschließen und dadurch konsistente Messungen zu ermöglichen.
 -   Führen Sie Tests zur verringerten Leistungsverfügbarkeit durch. Das Gerät der Benutzer weist möglicherweise eine deutlich geringere Leistung als das Entwicklungssystem auf. Windows wurde unter Berücksichtigung von Geräten mit niedrigem Stromverbrauch, z.B. mobile Geräte, konzipiert. Apps, die auf der Plattform ausgeführt werden, sollten sicherstellen, dass sie auch auf diesen Geräten ordnungsgemäß ausgeführt werden können. Sie können davon ausgehen, dass ein energiesparendes Gerät ungefähr viermal langsamer ist als ein Desktop-PC. Legen Sie Ihre Ziele entsprechend fest.
 -   Verwenden Sie eine Kombination von Tools wie Microsoft Visual Studio und Windows Performance Analyzer, um die App-Leistung zu messen. Visual Studio stellt eine Analyse bereit, die auf die App ausgerichtet ist, beispielsweise die Quellcodeverknüpfung. Windows Performance Analyzer bietet dagegen eine systemorientierte Analyse, beispielsweise die Bereitstellung von Systeminfos, Infos zu Touchmanipulationsereignissen sowie Infos zur Datenträger-E/A und Grafikprozessorauslastung (GPU). Beide Tools können Ablaufverfolgungsdateien sammeln und exportieren und freigegebene sowie Post-Mortem-Traces erneut öffnen.
--   Bevor Sie Ihre app zur Zertifizierung an den Store übermitteln, müssen Sie die leistungsbezogenen Testfälle in Ihre Testpläne integrieren, wie beschrieben im Abschnitt "Leistungstests" des [Zertifizierungskits für Windows-App-Tests](windows-app-certification-kit-tests.md) und in der "Leistung und Stabilität"Abschnitt [Testfälle für UWP-Apps](https://msdn.microsoft.com/library/windows/apps/Dn275879).
+-   Bevor Sie Ihre app zur Zertifizierung an den Store übermitteln, müssen Sie die leistungsbezogenen Testfälle in Ihre Testpläne integrieren, wie im Abschnitt "Leistungstests" von [Zertifizierungskit für Windows-App-Tests](windows-app-certification-kit-tests.md) und beschrieben die "Leistung und Stabilität"im Abschnitt [Testfälle für UWP-app](https://msdn.microsoft.com/library/windows/apps/Dn275879).
 
 Weitere Informationen finden Sie unter diesen Ressourcen und Tools zur Profilerstellung.
 

@@ -7,20 +7,20 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: d6b5c95b59c1542df743ecc1f53bf3c3fc90aa1b
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8740231"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8781204"
 ---
 # <a name="bluetooth"></a>Bluetooth
-Dieser Abschnitt enthält Artikel zur Bluetooth-Integration in universelle Windows-Plattform (UWP) apps. Es gibt zwei verschiedene Bluetooth-Technologien, die Sie auswählen können, um in Ihrer app zu implementieren.
+Dieser Abschnitt enthält Artikel zur Bluetooth-Integration in die universelle Windows-Plattform (UWP) apps. Es gibt zwei verschiedene Bluetooth-Technologien, die Sie auswählen können, um in Ihrer app zu implementieren.
 
 ## <a name="classic-bluetooth-rfcomm"></a>Klassische Bluetooth (RFCOMM)
-Bevor Sie Bluetooth LE verwendete Geräte dieses Protokoll für die Kommunikation mit Bluetooth. Dieses Protokoll ist einfach und -Gerät-Kommunikation ohne Energieeffizienz. Weitere Informationen über dieses Protokoll, einschließlich Codebeispielen finden Sie im Thema [Bluetooth RFCOMM](send-or-receive-files-with-rfcomm.md) .
+Bevor Sie Bluetooth LE verwendete Geräte dieses Protokoll für die Kommunikation mit Bluetooth. Dieses Protokoll ist einfach und Gerät-Kommunikation ohne Energieeffizienz. Weitere Informationen über dieses Protokoll einschließlich Codebeispiele finden Sie im Thema [Bluetooth RFCOMM](send-or-receive-files-with-rfcomm.md) .
 
 ## <a name="bluetooth-low-energy-le"></a>Bluetooth Low-Energy (LE)
-Bluetooth Low Energy (LE) ist eine Spezifikation, die Protokolle für die Ermittlung und die Kommunikation zwischen Geräten, die eine effiziente Nutzung Energiebedarf definiert. Weitere Informationen einschließlich Codebeispiele finden Sie im Thema [Bluetooth Low Energy](bluetooth-low-energy-overview.md) .
+Bluetooth Low Energy (LE) ist eine Spezifikation, die Protokolle zur Ermittlung und die Kommunikation zwischen Geräten, die eine effiziente Nutzung Energiebedarf definiert. Weitere Informationen einschließlich Codebeispiele finden Sie im Thema [Bluetooth Low Energy](bluetooth-low-energy-overview.md) .
 
 ## <a name="see-also"></a>Siehe auch
 - [Bluetooth-Entwickler – Häufig gestellte Fragen](bluetooth-dev-faq.md)

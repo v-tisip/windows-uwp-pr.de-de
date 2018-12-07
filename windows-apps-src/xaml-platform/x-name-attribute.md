@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ef1a6047a7c462961f40ae8913881125e2331bb
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8755226"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8779900"
 ---
 # <a name="xname-attribute"></a>x:Name-Attribut
 
@@ -65,7 +65,7 @@ Einige in UWP-XAML verwendete Typen verfügen auch über die Eigenschaft **Name*
 
 Falls **Name** als einstellbare Eigenschaft für ein Element verfügbar ist, können **Name** und **x:Name** in XAML synonym verwendet werden. Werden allerdings beide Attribute für das gleiche Element angegeben, tritt ein Fehler auf. In einigen Fällen ist zwar eine **Name**-Eigenschaft vorhanden, diese ist jedoch schreibgeschützt (z.B. [**VisualState.Name**](https://msdn.microsoft.com/library/windows/apps/br209031)). In diesem Fällen verwenden Sie immer **Name** zum Benennen dieses Elements im XAML, und die schreibgeschützte **Name** ist für seltener verwendete Codeszenarien vorhanden.
 
-**Hinweis:** [**FrameworkElement.Name**](https://msdn.microsoft.com/library/windows/apps/br208735) sollte als eine Möglichkeit, ursprünglich durch **X: Name**, festgelegten Werte ändern, es gibt jedoch einige Szenarien, die Ausnahmen von dieser Regel sind in der Regel nicht verwendet werden. In typischen Szenarien handelt es sich bei der Erstellung und Definition von XAML-Namescopes um Vorgänge des XAML-Prozessors. Das Ändern von **FrameworkElement.Name** zur Laufzeit kann einen inkonsistenten XAML-Namescope bzw. eine inkonsistente Benennungsausrichtung privater Felder zur Folge haben, was im CodeBehind nur schwer nachvollziehbar ist.
+**Hinweis:** [**FrameworkElement.Name**](https://msdn.microsoft.com/library/windows/apps/br208735) sollte als eine Möglichkeit, die ursprünglich durch **X: Name-** Werte ändern, es gibt jedoch einige Szenarien, die Ausnahmen von dieser Regel sind in der Regel nicht verwendet werden. In typischen Szenarien handelt es sich bei der Erstellung und Definition von XAML-Namescopes um Vorgänge des XAML-Prozessors. Das Ändern von **FrameworkElement.Name** zur Laufzeit kann einen inkonsistenten XAML-Namescope bzw. eine inkonsistente Benennungsausrichtung privater Felder zur Folge haben, was im CodeBehind nur schwer nachvollziehbar ist.
 
 ### <a name="xname-and-xkey"></a>x:Name und x:Key
 

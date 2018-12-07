@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: a576add7a080874fb0f042748bef7472e04ac817
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8743387"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8782254"
 ---
 # <a name="draw-shapes"></a>Zeichnen von Formen
 
@@ -141,7 +141,7 @@ Dies ist das gerenderte [**Polygon**](/uwp/api/Windows.UI.Xaml.Shapes.Polygon).
 
 ![Ein gerendertes Polygon](images/shapes-polygon.jpg)
 
-**Tipp:** ein [**Punkt**](https://msdn.microsoft.com/library/windows/apps/BR225870) -Wert wird häufig in XAML als Typ für andere Szenarien als das Deklarieren der Scheitelpunkte von Formen verwendet. Ein **Point** ist beispielsweise Teil der Ereignisdaten für Fingereingabeereignisse, damit Sie ermitteln können, wo genau in Koordinatenbereich die Fingereingabeaktion stattgefunden hat. Weitere Informationen zu **Point** und dessen Verwendung in XAML oder Code finden Sie in der API-Referenz für [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870).
+**Tipp:** [**ein Wert**](https://msdn.microsoft.com/library/windows/apps/BR225870) wird häufig in XAML als Typ für andere Szenarien als das Deklarieren der Scheitelpunkte von Formen verwendet. Ein **Point** ist beispielsweise Teil der Ereignisdaten für Fingereingabeereignisse, damit Sie ermitteln können, wo genau in Koordinatenbereich die Fingereingabeaktion stattgefunden hat. Weitere Informationen zu **Point** und dessen Verwendung in XAML oder Code finden Sie in der API-Referenz für [**Point**](https://msdn.microsoft.com/library/windows/apps/BR225870).
 
 ## <a name="line"></a>Linie
 

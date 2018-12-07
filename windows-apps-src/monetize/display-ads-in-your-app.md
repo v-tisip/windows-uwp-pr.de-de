@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows10, UWP, Anzeigen, Werbung, banner, Anzeigensteuerelement,Interstitial
 ms.localizationpriority: medium
 ms.openlocfilehash: baf26335ccdf34c8403cc15ecc1e68527d92e90e
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8732158"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8782820"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Zeigt Werbung mithilfe der Microsoft Advertising-SDK in Ihrer App an
 
-Erhöhen Sie Ihre Umsatzchancen, indem Sie mithilfe des Microsoft Advertising-SDKs Anzeigen in Ihre universelle Windows-Plattform-App für Windows 10 einfügen. Unsere anzeigen-monetarisierungsplattform bietet eine Vielzahl von Ad-Formate, die nahtlos in Ihre apps und unterstützt die anzeigenvermittlung mit unterschiedlichen beliebten Anzeigennetzwerken integriert werden kann. Unsere Plattform ist kompatibel mit OpenRTB, große 2.x, MRAID 2 und 3 VPAID Standards und ist kompatibel mit MOAT und IAS. 
+Erhöhen Sie Ihre Umsatzchancen, indem Sie mithilfe des Microsoft Advertising-SDKs Anzeigen in Ihre universelle Windows-Plattform-App für Windows 10 einfügen. Unsere anzeigen-monetarisierungsplattform bietet eine Vielzahl von Ad-Formate, die problemlos in Ihre apps und unterstützt die anzeigenvermittlung mit unterschiedlichen beliebten Anzeigennetzwerken integriert werden können. Unsere Plattform ist kompatibel mit OpenRTB, große 2.x, MRAID 2 und 3 VPAID Standards und ist kompatibel mit MOAT und IAS. 
 
 <br/>
 
@@ -100,7 +100,7 @@ Zum Starten der Anzeigenvermittlung in Ihrer UWP-App [Konfigurieren Sie die Anze
 
 Nach Abschluss der Entwicklung Ihrer Apps mit anzeigen, können Sie [die aktualisierte app übermitteln](https://docs.microsoft.com/windows/uwp/publish/app-submissions) , im Partner Center im Store verfügbar machen. Apps, die Anzeigen darstellen, müssen zusätzlich die Anforderungen erfüllen, die in [Abschnitt 10.10 der Microsoft Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) [Anlage E der Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) angegeben sind.
 
-Nachdem Ihre app im Store veröffentlicht und verfügbar ist, können Sie Ihre [Berichte zur anzeigenleistung](../publish/advertising-performance-report.md) im Partner Center überprüfen und Änderungen an den für die anzeigenvermittlung zur Optimierung der Leistung Ihrer anzeigen vornehmen. Der Umsatz befindet sich in der [Auszahlungszusammenfassung](../publish/payout-summary.md).
+Nachdem Ihre app im Store veröffentlicht und ist, können Sie überprüfen Sie Ihre [Berichte zur anzeigenleistung](../publish/advertising-performance-report.md) im Partner Center und weiterhin Änderungen an den für die anzeigenvermittlung zur Optimierung der Leistung Ihrer anzeigen vornehmen. Der Umsatz befindet sich in der [Auszahlungszusammenfassung](../publish/payout-summary.md).
 
 <span id="additional-help" />
 

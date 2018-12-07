@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: b662a7689f0b0b24fc3f70a9fbc143d4268d2cb8
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8738251"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8780065"
 ---
 # <a name="touch-interactions"></a>Toucheingabe-Interaktionen
 
@@ -80,7 +80,7 @@ In der folgenden Tabelle sind einige der Unterschiede zwischen den Eingabegerät
 
 ## <a name="use-touch-feedback"></a>Verwenden von Feedback für die Fingereingabe
 
-Durch entsprechendes visuelles Feedback bei Interaktionen mit der app helfen Sie den Benutzern zu erkennen und zu lernen, und anpassen, wie ihre Interaktionen von der app und die Windowsplatform interpretiert werden. Visuelles Feedback kann auf erfolgreiche Interaktionen hinweisen, über den Systemstatus informieren, das Gefühl der Kontrolle verstärken, Fehler verringern, Benutzern das Verständnis des Systems und des Eingabegeräts erleichtern und zu Interaktionen ermutigen.
+Durch entsprechendes visuelles Feedback bei Interaktionen mit der app helfen Sie den Benutzern zu erkennen und zu lernen und anpassen, wie ihre Interaktionen von der app und die Windowsplatform interpretiert werden. Visuelles Feedback kann auf erfolgreiche Interaktionen hinweisen, über den Systemstatus informieren, das Gefühl der Kontrolle verstärken, Fehler verringern, Benutzern das Verständnis des Systems und des Eingabegeräts erleichtern und zu Interaktionen ermutigen.
 
 Visuelles Feedback ist wichtig, wenn der Benutzer die Fingereingabe für Aktivitäten verwendet, bei denen Positionsgenauigkeit gefragt ist. Zeigen Sie immer Feedback an, wenn Toucheingabe erkannt wird, damit der Benutzer die von der App und den Steuerelementen definierten angepassten Zielbestimmungsregeln versteht.
 
@@ -436,7 +436,7 @@ Eine Bewegung setzt sich aus einer Reihe von Bearbeitungsereignissen zusammen. J
 
 Anschließend wird mindestens ein [**ManipulationDelta**](https://msdn.microsoft.com/library/windows/apps/br208946)-Ereignis ausgelöst. Beispielsweise, wenn Sie den Bildschirm berühren und dann den Finger über den Bildschirm ziehen. Schließlich wird ein [**ManipulationCompleted**](https://msdn.microsoft.com/library/windows/apps/br208945)-Ereignis ausgelöst, wenn die Interaktion beendet ist.
 
-**Hinweis:** Wenn Sie keinen Touchscreen besitzen, können Sie Ihren manipulationsereigniscode in der Simulator mithilfe einer Maus- und mausradschnittstelle testen.
+**Hinweis:**, wenn Sie keinen Touchscreen besitzen, können Sie Ihren manipulationsereigniscode in der Simulator mithilfe einer Maus- und mausradschnittstelle testen.
 
  
 

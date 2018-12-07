@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, Uwp, Spiele, Entwickeln von Spielen
 ms.localizationpriority: medium
 ms.openlocfilehash: 58044fba24450c397ee58b1034429f2af8d23ed6
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8749115"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8780558"
 ---
 # <a name="windows-10-game-development-guide"></a>Handbuch zur Entwicklung von Spielen unter Windows10
 
@@ -106,7 +106,7 @@ In diesem Handbuch finden Sie immer wieder direkte Links zu relevanten Dokumenta
 
 [Registrieren Sie ein Entwicklerkonto im Partner Center](https://developer.microsoft.com/store/register) ist der erste Schritt beim Veröffentlichen Ihres Spiels Windows. Mit einem Entwicklerkonto können Sie den Namen Ihres Spiels reservieren und kostenlose oder kostenpflichtige Spiele für alle Windows-Geräte an den Microsoft Store übermitteln. Sie können Ihr Spiel und Ihre spielinternen Produkte verwalten, ausführliche Analysen abrufen und Dienste aktivieren, die Spieler auf der ganzen Welt begeistern. 
 
-Microsoft bietet ebenfalls mehrere Entwicklerprogramme an, die Sie bei der Entwicklung und Veröffentlichung von Windows-Spielen unterstützen. Wir empfehlen angezeigt wird, wenn diese vor der Registrierung für ein Partner Center-Konto für Sie geeignet sind. Weitere Informationen finden Sie unter [Entwicklerprogramme](#developer-programs)
+Microsoft bietet ebenfalls mehrere Entwicklerprogramme an, die Sie bei der Entwicklung und Veröffentlichung von Windows-Spielen unterstützen. Wir empfehlen angezeigt wird, wenn diese vor dem Registrieren für ein Partner Center-Konto für Sie geeignet sind. Weitere Informationen finden Sie unter [Entwicklerprogramme](#developer-programs)
 
 
 ### <a name="developer-programs"></a>Entwicklerprogramme
@@ -134,7 +134,7 @@ Treten Sie dem [ID@Xbox](http://www.xbox.com/Developers/id) bei, wenn Sie Zugrif
 
 #### <a name="idxbox"></a>ID@Xbox
 
-Das ID@Xbox-Programm unterstützt qualifizierte Spieleentwickler bei der eigenständigen Veröffentlichung für Windows und Xbox One. Wenn Sie für Xbox One entwickeln oder Ihr Windows10-Spiel mit XboxLive-Features wie Gamerscore, Erfolgen und Ranglisten versehen möchten, registrieren Sie sich bei ID@Xbox. Als ID@Xbox-Entwickler erhalten Sie Zugriff auf Tools und Supportleistungen, mit denen Sie Ihrer Kreativität freien Lauf lassen und Ihren Erfolg maximieren können. Es wird empfohlen, dass Sie zuweisen ID@Xbox vor dem Registrieren für ein Entwicklerkonto im Partner Center.
+Das ID@Xbox-Programm unterstützt qualifizierte Spieleentwickler bei der eigenständigen Veröffentlichung für Windows und Xbox One. Wenn Sie für Xbox One entwickeln oder Ihr Windows10-Spiel mit XboxLive-Features wie Gamerscore, Erfolgen und Ranglisten versehen möchten, registrieren Sie sich bei ID@Xbox. Als ID@Xbox-Entwickler erhalten Sie Zugriff auf Tools und Supportleistungen, mit denen Sie Ihrer Kreativität freien Lauf lassen und Ihren Erfolg maximieren können. Es wird empfohlen, dass Sie auf Anwenden ID@Xbox vor dem Registrieren für ein Entwicklerkonto im Partner Center.
 
 <table>
     <colgroup>
@@ -245,7 +245,7 @@ In Entwicklerforen können Entwickler Fragen zur Spieleentwicklung stellen und b
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Veröffentlichung apps und Spiele-Entwicklerforen</td>
+        <td>Veröffentlichung Entwicklerforen für apps und Spiele</td>
         <td><a href="https://social.msdn.microsoft.com/Forums/en-us/home?category=windowsapps">Veröffentlichen und anzeigen in apps</a></td>
     </tr>
     <tr>
@@ -578,7 +578,7 @@ Mit der universellen Windows-Plattform lassen sich problemlos Komponenten in unt
 
 ### <a name="which-version-of-directx-should-your-game-use"></a>Welche DirectX-Version sollte Ihr Spiel verwenden?
 
-Wenn Sie DirectX für Ihr Spiel auswählen, müssen Sie entscheiden, welche Version Sie verwenden: Microsoft Direct3D12 oder Microsoft Direct3D11.
+Wenn Sie für Ihr Spiel mit DirectX entwickeln, müssen Sie entscheiden, welche Version Sie verwenden: Microsoft Direct3D12 oder Microsoft Direct3D11.
 
 DirectX 12 ist schneller und effizienter als alle früheren Versionen von Direct3D. Direct3D12 ermöglicht detaillierte Umgebungen, mehr Objekte, komplexere Effekte und eine optimale Nutzung moderner GPU-Hardware auf Windows 10 PCs und Xbox One. Da Direct3D12 auf einer sehr niedrigen Ebene ausgeführt wird, erhält ein erfahrenes Grafikentwicklungs- oder DirectX11-Entwicklungsteam alle notwendigen Steuerungsmöglichkeiten für die Maximierung der Grafikoptimierung.
 
@@ -1007,7 +1007,7 @@ Wenn Sie noch keine Erfahrungen mit der UWP-Programmierung haben und die Verwend
     </tr>
 </table>
 
-### <a name="windows-desktop-apisto-uwp"></a>Windows Desktop APIsto UWP
+### <a name="windows-desktop-apisto-uwp"></a>Windows-Desktop APIsto UWP
 
 Hier finden Sie einige Links, die Sie beim Wechsel von Windows-Desktop-Spielen zu UWP-Spielen unterstützen.
 
@@ -1165,7 +1165,7 @@ Anleitungen und Referenzen für die Implementierung von Audio in Spielen mit XAu
     </tr>
     <tr>
         <td>Hier erfahren Sie, wie Sie Windows Sonic in Ihre Spiele (Video) integrieren</td>
-        <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-002">Einführung in die räumliche Audiowiedergabe Funktionen für Xbox und</a></td>
+        <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-002">Einführung in die räumliche Audiowiedergabe Funktionen für Xbox oder Windows</a></td>
     </tr>
 </table>
 
@@ -1358,7 +1358,7 @@ Ihr Spiel wird im Menü „Start“ durch eine Kachel dargestellt. Über Kacheln
 
 ### <a name="enable-in-app-product-add-on-purchases"></a>Aktivieren von in-app-Produktkäufen (Add-on)
 
-Ein Add-on (in-app-Produkt) ist einen zusätzlichen Artikel, dass Spieler im Spiel erwerben können. Add-Ons sind spiellevels, Elemente und alles andere, die Ihre Spieler interessant sein könnte. Entsprechend verwendet, können Add-ons Umsätze generieren und gleichzeitig das Spielerlebnis verbessern. Sie definieren und Veröffentlichen Ihres Spiels Add-ons über das Partner Center und unterstützen von in-app-Käufen im Code Ihres Spiels.
+Ein Add-on (in-app-Produkt) ist es sich um einen zusätzlichen Artikel, dass Spieler in-Game-erwerben können. Add-Ons sind spiellevels, Elemente und alles andere, die Ihre Spieler interessant sein könnte. Entsprechend verwendet, können-Add-Ons Umsätze generieren und gleichzeitig das Spielerlebnis verbessern. Sie definieren und Veröffentlichen Ihres Spiels Add-Ons über das Partner Center und in-app-Käufen im Code Ihres Spiels.
 
 <table>
     <colgroup>
@@ -1570,7 +1570,7 @@ Verwenden Sie [Partner Center](https://partner.microsoft.com/dashboard) zum Ver�
     </colgroup>
     <tr>
         <td>Informationen zur Verwendung der Streaming-Installation und optionale Pakete (Video)</td>
-        <td><a href="https://channel9.msdn.com/Events/Build/2017/B8093">Nextgen UWP-app-Verteilung: Erstellen erweiterbare, Stream-fähig Componentizedapps</a></td>
+        <td><a href="https://channel9.msdn.com/Events/Build/2017/B8093">Nextgen UWP-app-Verteilung: Erstellen von extensible, Stream können Componentizedapps</a></td>
     </tr>
     <tr>
         <td>Unterteilen und Gruppieren zum Aktivieren von Inhalten für die Streaming-Installation</td>

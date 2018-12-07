@@ -8,20 +8,20 @@ keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: b197ea668ec73711b7a9c63e516b4ec9a5f54d62
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8755026"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8780015"
 ---
 # <a name="binding-markup-extension"></a>{Binding}-Markuperweiterung
 
 
-**Hinweis:** ein neuen Bindungsmechanismus steht für Windows 10, die für die Leistung und Entwickler Produktivität optimiert ist. Weitere Informationen finden Sie unter [{x:Bind}-Markuperweiterung](x-bind-markup-extension.md)
+**Hinweis:** ein neuen Mechanismus für die Bindung ist für Windows 10, die für die Leistung und Entwickler Produktivität optimiert ist verfügbar. Weitere Informationen finden Sie unter [{x:Bind}-Markuperweiterung](x-bind-markup-extension.md)
 
-**Hinweis:** allgemeine Informationen zur Verwendung von Daten Bindung in Ihrer app mit **{Binding}** (und die für einen vollständigen Vergleich zwischen **{X: Bind}** und **{Binding}**), finden Sie unter [der Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
+**Hinweis:** allgemeine Informationen zur Verwendung von Daten Bindung in Ihrer app mit **{Binding}** (und für einen vollständigen Vergleich zwischen **{X: Bind}** "und" **{Binding}**) finden Sie unter [der Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
-Die Markuperweiterung **{Binding}** wird auf Eigenschaften von Steuerelementen zu Werte aus einer Datenquelle wie z. B. Code verwendet. description: Die **{Binding}**-Markuperweiterung wird beim Laden von XAML in eine Instanz der [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)-Klasse konvertiert. Dieses Bindungsobjekt erhält einen Wert von der Eigenschaft einer Datenquelle und leitet ihn an die Eigenschaft des Steuerelements weiter. Das Bindungsobjekt kann optional konfiguriert werden, um Änderungen am Wert der Datenquelleneigenschaft zu beobachten und sich basierend auf diesen Änderungen zu aktualisieren. Es kann optional auch so konfiguriert werden, dass Änderungen am Wert des Steuerelements per Push zurück an die Quelleigenschaft gesendet werden. Die als Ziel einer Datenbindung verwendete Eigenschaft muss eine Abhängigkeitseigenschaft sein. Weitere Informationen finden Sie unter [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md).
+Eigenschaften von Steuerelementen, um Werte aus einer Datenquelle, z. B. Code wird die **{Binding}** -Markuperweiterung verwendet. description: Die **{Binding}**-Markuperweiterung wird beim Laden von XAML in eine Instanz der [**Binding**](https://msdn.microsoft.com/library/windows/apps/br209820)-Klasse konvertiert. Dieses Bindungsobjekt erhält einen Wert von der Eigenschaft einer Datenquelle und leitet ihn an die Eigenschaft des Steuerelements weiter. Das Bindungsobjekt kann optional konfiguriert werden, um Änderungen am Wert der Datenquelleneigenschaft zu beobachten und sich basierend auf diesen Änderungen zu aktualisieren. Es kann optional auch so konfiguriert werden, dass Änderungen am Wert des Steuerelements per Push zurück an die Quelleigenschaft gesendet werden. Die als Ziel einer Datenbindung verwendete Eigenschaft muss eine Abhängigkeitseigenschaft sein. Weitere Informationen finden Sie unter [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md).
 
 **{Binding}** weist die gleiche Rangfolge für Abhängigkeitseigenschaften wie ein lokaler Wert auf. So wird beim Festlegen eines lokalen Werts im imperativen Code der Effekt aller im Markup festgelegten **{Binding}**-Objekte entfernt.
 
@@ -80,7 +80,7 @@ Weitere Informationen zur Zeichenfolgensyntax für einen Eigenschaftspfad, zu Ei
 | [**TargetNullValue**](https://msdn.microsoft.com/library/windows/apps/dn279347) | Gibt einen Wert an, der angezeigt wird, wenn der Quellwert aufgelöst werden kann, aber explizit **null** ist. |
 | [**UpdateSourceTrigger**](https://msdn.microsoft.com/library/windows/apps/dn279350) | Gibt den Zeitpunkt für Aktualisierungen von Bindungsquellen an. Wenn keine Angabe erfolgt, lautet der Standardwert **Default**. |
 
-**Hinweis:** Wenn Sie Markup von **{X: Bind}** auf **{Binding}** Konvertierung, beachten Sie Werte die Unterschiede im Standardmodus für die **Mode** -Eigenschaft.
+**Hinweis:** Wenn Sie Markup von **{X: Bind}** auf **{Binding}** Konvertierung, beachten Sie Werte die Unterschiede im für den **Modus** -Eigenschaft.
 
 [**Converter**](https://msdn.microsoft.com/library/windows/apps/br209826), [**ConverterLanguage**](https://msdn.microsoft.com/library/windows/apps/hh701880) und **ConverterLanguage** hängen mit der Konvertierung eines Werts oder Typs aus der Bindungsquelle in einen mit der Bindungszieleigenschaft kompatiblen Typ oder Wert zusammen. Weitere Informationen und Beispiele finden Sie im Abschnitt „Datenkonvertierungen“ unter [Datenbindung im Detail](https://msdn.microsoft.com/library/windows/apps/mt210946).
 
@@ -89,7 +89,7 @@ Weitere Informationen zur Zeichenfolgensyntax für einen Eigenschaftspfad, zu Ei
 
 [**Source**](https://msdn.microsoft.com/library/windows/apps/br209832), [**RelativeSource**](https://msdn.microsoft.com/library/windows/apps/br209831) und [**ElementName**](https://msdn.microsoft.com/library/windows/apps/br209828) geben eine Bindungsquelle an und schließen sich somit gegenseitig aus.
 
-**Tipp:** Wenn Sie eine einzelne geschweifte Klammer für einen Wert angeben müssen, z. B. in [**Pfad**](https://msdn.microsoft.com/library/windows/apps/br209830) oder [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), dann stellen Sie ihr einen umgekehrten Schrägstrich voran: `\{`. Setzen Sie alternativ die gesamte Zeichenfolge mit den geschweiften Klammern, für die Escapezeichen verwendet werden müssen, in weitere Anführungszeichen, z.B. `ConverterParameter='{Mix}'`.
+**Tipp:**, wenn Sie eine einzelne geschweifte Klammer für einen Wert angeben müssen, z. B. in [**Pfad**](https://msdn.microsoft.com/library/windows/apps/br209830) oder [**ConverterParameter**](https://msdn.microsoft.com/library/windows/apps/br209827), dann stellen Sie ihr einen umgekehrten Schrägstrich voran: `\{`. Setzen Sie alternativ die gesamte Zeichenfolge mit den geschweiften Klammern, für die Escapezeichen verwendet werden müssen, in weitere Anführungszeichen, z.B. `ConverterParameter='{Mix}'`.
 
 ## <a name="examples"></a>Beispiele
 

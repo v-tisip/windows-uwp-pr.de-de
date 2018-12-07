@@ -6,15 +6,15 @@ ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, projiziert, projektion, implementierung, laufzeitklasse, aktivierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 59b056e160a1d7782e054ad4dbf1b63e91be42e9
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8747605"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8782033"
 ---
 # <a name="consume-apis-with-cwinrt"></a>Verwenden von APIs mit C++/WinRT
 
-Dieses Thema zeigt, wie Sie nutzen [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) APIs, egal ob sie Teil von Windows, stehen von einem Drittanbieter-Komponentenanbieter oder implementierten selbst.
+Dieses Thema zeigt, wie Sie nutzen [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) APIs, Teil von Windows, von einem Drittanbieter-Komponentenanbieter implementiert, oder oder selbst implementiert.
 
 ## <a name="if-the-api-is-in-a-windows-namespace"></a>Wenn sich die API in einem Windows-Namespace befindet
 Dies ist der häufigste Fall, bei dem Sie eine Windows-Runtime-API verwenden. Für jeden Typ in einem Windows-Namespace, der in den Metadaten festgelegt ist, definiert C++/WinRT ein C++-freundliches Äquivalent (den *projizierten Typ*). Ein projizierter Typ verfügt über den gleichen vollqualifizierten Namen wie der Windows-Typ, wird unter Verwendung der C++-Syntax jedoch im C++-**winrt**-Namespace abgelegt. Beispielsweise wird [**Windows::Foundation::Uri**](/uwp/api/windows.foundation.uri) in C++/WinRT als **winrt::Windows::Foundation::Uri** projiziert.
@@ -42,7 +42,7 @@ Der enthaltene Header `winrt/Windows.Foundation.h` ist Teil des SDKs und befinde
 
 Im obigen Codebeispiel wird nach der Initialisierung von C++/WinRT ein Wert des projizierten Typs **winrt::Windows::Foundation::Uri** mit Stapelzuordnung über einen seiner öffentlich dokumentierten Konstruktoren (in diesem Beispiel [**Uri(String)**](/uwp/api/windows.foundation.uri#Windows_Foundation_Uri__ctor_System_String_)) zugewiesen. Für diesen häufigsten Anwendungsfall müssen Sie in der Regel nichts weiter tun. Wenn Sie einen projizierten C++/WinRT-Typwert haben, können Sie diesen behandeln, als wäre er eine Instanz des tatsächlichen Windows-Runtime-Typs, da er über die gleichen Mitglieder verfügt.
 
-Tatsächlich ist dieser projizierte Wert ein Proxy; im Grunde ist er nur ein intelligenter Zeiger auf ein zugrunde liegendes Objekt. Die Konstruktoren des projizierten Werts rufen [**RoActivateInstance**](https://msdn.microsoft.com/library/br224646) auf, um eine Instanz der zugrunde liegenden Windows-Runtime-Klasse (in diesem Fall **Windows.Foundation.Uri**) zu erstellen und die Standardschnittstelle dieses Objekts im neuen projizierten Wert zu speichern. Wie unten dargestellt, delegieren die Aufrufe von Mitglieder des projizierten Werts tatsächlich über den intelligenten Zeiger an das zugrunde liegende Objekt; Dies ist, in denen Zustandsänderungen auftreten.
+Tatsächlich ist dieser projizierte Wert ein Proxy; im Grunde ist er nur ein intelligenter Zeiger auf ein zugrunde liegendes Objekt. Die Konstruktoren des projizierten Werts rufen [**RoActivateInstance**](https://msdn.microsoft.com/library/br224646) auf, um eine Instanz der zugrunde liegenden Windows-Runtime-Klasse (in diesem Fall **Windows.Foundation.Uri**) zu erstellen und die Standardschnittstelle dieses Objekts im neuen projizierten Wert zu speichern. Wie unten dargestellt, Delegieren von die Aufrufen an Mitglieder des projizierten Werts tatsächlich über den intelligenten Zeiger an das zugrunde liegende Objekt; Dies ist, in denen Zustandsänderungen.
 
 ![Der projizierte Windows::Foundation::Uri-Typ](images/uri.png)
 
@@ -176,7 +176,7 @@ MainPage::MainPage()
 Weitere Details, Code und eine exemplarische Vorgehensweise für die Nutzung einer im verwendenden Projekt implementierten Laufzeitklasse finden Sie unter [XAML-Steuerelemente; Binden an eine C++/WinRT-Eigenschaft](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage).
 
 ## <a name="instantiating-and-returning-projected-types-and-interfaces"></a>Instanziierung und Rückgabe von projizierten Typen und Schnittstellen
-Hier ist ein Beispiel dafür, wie projizierte Typen und Schnittstellen in Ihrem Projekt aussehen könnten. Denken Sie daran, dass ein Projizierter Typ (wie in diesem Beispiel), Tool generiert wird, und nicht etwas, würde sich selbst zu erstellen.
+Hier ist ein Beispiel dafür, wie projizierte Typen und Schnittstellen in Ihrem Projekt aussehen könnten. Denken Sie daran, dass ein Projizierter Typ (wie in diesem Beispiel), Tool generiert wird, und nicht, Sie selbst erstellen möchten.
 
 ```cppwinrt
 struct MyRuntimeClass : MyProject::IMyRuntimeClass, impl::require<MyRuntimeClass,

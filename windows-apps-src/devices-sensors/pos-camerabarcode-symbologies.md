@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Point Of Service, POS
 ms.localizationpriority: medium
 ms.openlocfilehash: ecb40528ee0104a2e25b5e95499c4404057eba1f
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8735680"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8786046"
 ---
 # <a name="symbologies"></a>Symbologien
 Dieses Thema enthält Beispiel-Barcodes für jede Symbologie, die vom Software-Strichcode-Decoder unterstützt wird, die mit im Lieferumfang von Windows10 enthalten sind, einschließlich: UPC/EAN, Code 39, Code 128, Interleaved 2 of 5, Databar Omnidirectional, Databar Stacked, QR Code und GS1DWCode.

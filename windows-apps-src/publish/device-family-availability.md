@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows10, UWP, Pakete, hochladen, Verfügbarkeit von Gerätefamilien
 ms.localizationpriority: medium
 ms.openlocfilehash: 217a6ab9f25ee533a754138db5cf83c2ac81e3e9
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8729665"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8781416"
 ---
 # <a name="device-family-availability"></a>Verfügbarkeit von Gerätefamilien
 
@@ -51,18 +51,18 @@ Wenn Sie eine UWP-App für Windows10 IoT Core übermitteln, sollten Sie nach dem
 Wenn Ihre Übermittlung für eine bereits veröffentlichte app Pakete enthält, die auf **Windows 8/8.1** ausgeführt werden kann und **Windows Phone 8.x und früheren Versionen**, diese Pakete verfügbar gemacht werden für Kunden unter diesen Betriebssystemversionen. Wenn Sie das Angebot der App für diese Kunden beenden möchten, entfernen Sie die entsprechenden Pakete aus Ihrer Übermittlung.
 
 > [!IMPORTANT]
-> Um vollständig eine bestimmte Windows 10-Gerätefamilie verhindern können, dass Ihre Übermittlung, aktualisieren Sie das [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) -Element in Ihrem Manifest nur die Gerätefamilie ausgerichtet, die Sie unterstützen möchten (d. h. Windows.Mobile oder Windows.Desktop), sondern als verlassen es als den Windows.Universal-Wert (für die universelle Gerätefamilie), die Microsoft Visual Studio im Manifest ist standardmäßig enthalten.
+> Um vollständig eine bestimmte Windows 10-Gerätefamilie verhindern können, dass Ihre Übermittlung, aktualisieren Sie das [**TargetDeviceFamily**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) -Element in Ihrem Manifest nur die Gerätefamilie ausgerichtet, die Sie unterstützen möchten (d. h. Windows.Mobile oder Windows.Desktop), anstatt als verlassen es als den Windows.Universal-Wert (für die universelle Gerätefamilie), die Microsoft Visual Studio im Manifest ist standardmäßig enthalten.
 
-Beachten Sie außerdem, dass die unter **Verfügbarkeit von Gerätefamilien** getroffene Auswahl nur für neue Verkäufe gilt. Kunden, die Ihre App bereits verwenden, können dies weiterhin tun und erhalten alle zur Verfügung gestellten Updates, selbst wenn Sie diese Gerätefamilie an dieser Stelle entfernen. Dies gilt auch für Kunden, die Ihre App vor dem Upgrade auf Windows 10 erworben haben. Beispielsweise werden, wenn Sie eine veröffentlichte app mit Windows Phone 8.1-Pakete, und Sie Hinzufügen eines Windows 10 (UWP)-Pakets auf die Gerätefamilie Windows.Universal abzielen, Windows 10 mobile Kunden, die Ihre Windows Phone 8.1-Paket verwendet haben ein Update dieser Windows angeboten 10 (UWP) Verpacken, auch wenn Sie haben deaktiviert die Kontrollkästchen für **Windows 10 Mobile**.
+Beachten Sie außerdem, dass die unter **Verfügbarkeit von Gerätefamilien** getroffene Auswahl nur für neue Verkäufe gilt. Kunden, die Ihre App bereits verwenden, können dies weiterhin tun und erhalten alle zur Verfügung gestellten Updates, selbst wenn Sie diese Gerätefamilie an dieser Stelle entfernen. Dies gilt auch für Kunden, die Ihre App vor dem Upgrade auf Windows 10 erworben haben. Beispielsweise werden, wenn Sie eine veröffentlichte app mit Windows Phone 8.1-Pakete haben, und ein Windows 10 (UWP)-Paket auf die Gerätefamilie Windows.Universal hinzufügen, Windows 10 mobile-Kunden, die Ihre Windows Phone 8.1-Paket verwendet haben ein Update auf diese Windows angeboten 10 (UWP) Verpacken, auch wenn Sie haben deaktiviert das Kontrollkästchen für **Windows 10 Mobile**.
 
 Weitere Informationen über die Gerätefamilien finden Sie unter [**Übersicht über die Gerätefamilien**](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview).
 
 
 ## <a name="understanding-ranking"></a>Grundlegendes zur Bewertung
 
-Der **Verfügbarkeit von gerätefamilien** -Abschnitt erfahren Sie nicht wie Sie angeben, welche Windows 10-gerätefamilien Ihre Übermittlung herunterladen können, die bestimmte Pakete, die an unterschiedliche gerätefamilien verfügbar gemacht werden. Wenn mehrere Ihrer Pakete auf einer bestimmten Gerätefamilie ausgeführt werden können, wird in der Tabelle die Reihenfolge angegeben, in der Pakete basierend auf der Versionsnummer angeboten werden. Weitere Informationen dazu, wie der Store Pakete auf Grundlage der Versionsnummern bewertet, finden Sie unter [Paketversionsnummern](package-version-numbering.md). 
+Die **Verfügbarkeit von gerätefamilien** -Abschnitt erfahren Sie nicht wie Sie angeben, welche Windows 10-gerätefamilien Ihre Übermittlung herunterladen können, die bestimmte Pakete, die für andere gerätefamilien verfügbar gemacht werden. Wenn mehrere Ihrer Pakete auf einer bestimmten Gerätefamilie ausgeführt werden können, wird in der Tabelle die Reihenfolge angegeben, in der Pakete basierend auf der Versionsnummer angeboten werden. Weitere Informationen dazu, wie der Store Pakete auf Grundlage der Versionsnummern bewertet, finden Sie unter [Paketversionsnummern](package-version-numbering.md). 
 
-Angenommen, Sie haben die beiden Pakete Package_A.appxupload und Package_B.appxupload. Wenn für eine bestimmte Gerätefamilie, Package_A.appxupload den Rang 1 und Package_B.appxupload den Rang 2 hat, bedeutet dies, das der Store an einen Kunden mit diesem Gerätetyp, der Ihre App erwirbt, zunächst Package_A.appxupload ausliefert. Wenn Package_A.appxupload auf den Gerät des Kunden nicht ausgeführt werden kann, bietet der Store Package_B.appxupload an. Wenn eines der Pakete für diese Gerätefamilie nicht dem Gerät des Kunden ausgeführt werden kann (z. B. wenn die **MinVersion** Ihrer app unterstützt ist höher als die Version auf dem Gerät des Kunden) und der Kunde die app auf dem Gerät herunterladen werden kann.
+Angenommen, Sie haben die beiden Pakete Package_A.appxupload und Package_B.appxupload. Wenn für eine bestimmte Gerätefamilie, Package_A.appxupload den Rang 1 und Package_B.appxupload den Rang 2 hat, bedeutet dies, das der Store an einen Kunden mit diesem Gerätetyp, der Ihre App erwirbt, zunächst Package_A.appxupload ausliefert. Wenn Package_A.appxupload auf den Gerät des Kunden nicht ausgeführt werden kann, bietet der Store Package_B.appxupload an. Wenn das Gerät des Kunden die Pakete für diese Gerätefamilie nicht ausgeführt werden kann (z. B. wenn **MinVersion** Ihrer app unterstützt ist höher als die Version auf dem Gerät des Kunden) und der Kunde die app auf dem Gerät herunterladen werden kann.
 
 > [!NOTE]
 > Die Versionsnummern in XAP-Pakete (für bereits veröffentlichte apps) werden nicht berücksichtigt, beim Ermitteln der für einen gegebenen Kunden bereitzustellenden Pakete ignoriert. Daher wird bei mehreren gleichrangigen XAP-Paketen keine Nummer, sondern ein Sternchen angezeigt, und die Kunden können jedes der Pakete erhalten. Wenn ein XAP-Paket für einen Kunden auf ein neueres aktualisiert werden soll, stellen Sie sicher, dass die älteren XAP-Dateien aus der neuen Übermittlung entfernt werden.

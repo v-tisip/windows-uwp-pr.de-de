@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Arcade-Joysticks, Eingabe
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f9e3ff29dfb17b6e2a07df52153013b5266206e
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8740578"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8784522"
 ---
 # <a name="arcade-stick"></a>Arcade-Joystick
 
@@ -22,21 +22,21 @@ Auf dieser Seite erhalten Sie Informationen zu folgenden Vorgängen:
 * Erstellen einer Liste der verbundenen Arcade-Joysticks und ihrer Benutzer
 * Ermitteln, ob ein Arcade-Joystick hinzugefügt oder entfernt wurde
 * Lesen der Eingabe von einem oder mehreren Arcade-Joysticks
-* wie Arcade-Joysticks als Benutzeroberflächen-Navigationsgeräte Verhalten
+* Verhalten von Arcade-Joysticks als Benutzeroberflächen-Navigationsgeräte
 
 ## <a name="arcade-stick-overview"></a>Übersicht über Arcade-Joysticks
 
 Bei Arcade-Joysticks handelt es sich um Eingabegeräte, die den Eindruck klassischer Arcade-Automaten vermitteln und aufgrund ihrer äußerst präzisen digitalen Steuerelemente geschätzt werden. Arcade-Joysticks sind das ideale Eingabegerät für Kampfspiele und andere Spiele im Arcade-Stil und eignen sich für alle Spiele mit komplett digitaler Steuerung. Arcade-Joysticks werden in Windows10- und Xbox One-UWP-Apps durch den Namespace [Windows.Gaming.Input][] unterstützt.
 
-Xbox One-Arcade-Joysticks sind mit einem digitalen 8-Wege-Joystick, **sechs Aktionsschaltflächen (als A1 A6 in der Abbildung unten dargestellt)** und zwei **spezielle** Schaltflächen (dargestellt als S1 und S2); ausgestattet. Sie sind reine digitale Eingabegeräte, die keine analoge Steuerung oder Vibration unterstützen. Xbox One-Arcade-Joysticks sind auch mit ** **Ansichts-** und** Schaltflächen zur Unterstützung der Benutzeroberflächennavigation ausgestattet, aber sie sind nicht für die Unterstützung von Befehlen im Spiel vorgesehen und können nicht ohne weiteres als Joystick-Tasten zugegriffen werden.
+Xbox One-Arcade-Joysticks sind mit einem digitalen 8-Wege-Joystick, **sechs Aktionsschaltflächen (A1 a6 in der Abbildung unten dargestellt)** und zwei **spezielle** Schaltflächen (dargestellt als S1 und S2); ausgestattet. Sie sind reine digitale Eingabegeräte, die keine analoge Steuerung oder Vibration unterstützen. Xbox One-Arcade-Joysticks sind auch mit ** **Ansichts-** und** Schaltflächen zur Unterstützung der Benutzeroberflächennavigation ausgestattet, aber sie sind nicht für die Unterstützung von Befehlen im Spiel vorgesehen und können nicht ohne weiteres als Joystick-Tasten zugegriffen werden.
 
-![Arcade-Joystick mit 4-Wege-Joystick, 6 Aktionsschaltflächen (A1-A6) und 2 spezielle Schaltflächen (S1 und S2)](images/arcade-stick-1.png)
+![Arcade-Joystick mit 4-Wege-Joystick, 6 Aktionsschaltflächen (A1 A6) und 2 spezielle Schaltflächen (S1 und S2)](images/arcade-stick-1.png)
 
 ### <a name="ui-navigation"></a>Benutzeroberflächennavigation
 
 Um den Aufwand für die Unterstützung vieler unterschiedlicher Eingabegeräte für die Benutzeroberflächennavigation zu verringern und die Konsistenz zwischen Spielen und Geräten zu fördern, dienen die meisten _physischen_ Eingabegeräte gleichzeitig als getrennte _logische_ Eingabegeräte, die als [Benutzeroberflächen-Navigationscontroller](ui-navigation-controller.md) bezeichnet werden. Der Benutzeroberflächen-Navigationscontroller stellt über verschiedene Eingabegeräte hinweg ein gemeinsames Vokabular für Benutzeroberflächen-Navigationsbefehle bereit.
 
-Als Benutzeroberflächen-navigationscontroller ordnen Sie Arcade-Joysticks die [Erforderlicher Satz](ui-navigation-controller.md#required-set) von Navigationsbefehlen dem Joystick und Schaltflächen **Ansicht**, **Menü**, **Aktion 1**und **2 Aktion** .
+Als Benutzeroberflächen-navigationscontroller ordnen Sie Arcade-Joysticks die [erforderlichen Satz](ui-navigation-controller.md#required-set) von Navigationsbefehlen dem Joystick und Schaltflächen **Ansicht**, **Menü**, **Aktion 1**und **2 Aktion** .
 
 | Navigationsbefehl | Eingabe des Arcade-Joysticks  |
 | ------------------:| ------------------- |
@@ -141,14 +141,14 @@ Zusätzlich zum Zustand des Arcade-Joysticks enthält jede Ablesung einen Zeitst
 
 ### <a name="reading-the-buttons"></a>Lesen der Tasten
 
-Die Schaltflächen für Arcade-Joystick&mdash;die vier Richtungen des der Joystick, **sechs Aktionsschaltflächen** und zwei **spezielle** Schaltflächen&mdash;liefert einen digitalen Wert, der angibt, ob sie gedrückt (unten) oder freigegeben (oben). Aus Effizienzgründen werden nicht Effizienzgründen als einzelne boolesche Werte dargestellt. In diesem Fall werden alle in einem einzelnen Bitfeld Effizienzgründen, die von der [ArcadeStickButtons][] -Enumeration dargestellt wird.
+Die Schaltflächen für Arcade-Joystick&mdash;die vier Richtungen des der Joystick, **sechs Aktionsschaltflächen** und zwei **spezielle** Schaltflächen&mdash;liefert einen digitalen Wert, der angibt, ob sie gedrückt (unten) oder freigegeben (oben). Aus Effizienzgründen werden nicht Effizienzgründen als einzelne boolesche Werte dargestellt. Stattdessen können sie alle in einem einzelnen Bitfeld verpackt, die von der [ArcadeStickButtons][] -Enumeration dargestellt wird.
 
 > [!NOTE]
 > Arcade-Joysticks besitzen zusätzliche Tasten für die Benutzeroberflächennavigation, z. B. die ** **Ansichts-** und** Schaltflächen. Diese Tasten sind nicht in der Enumeration `ArcadeStickButtons` enthalten und können nur gelesen werden, wenn auf den Arcade-Joystick als Benutzeroberflächen-Navigationsgerät zugegriffen wird. Weitere Informationen finden Sie unter [Benutzeroberflächen-Navigationsgerät](ui-navigation-controller.md).
 
 Die Schaltflächenwerte werden von der `Buttons`-Eigenschaft der [ArcadeStickReading][]-Struktur gelesen. Da diese Eigenschaft ein Bitfeld ist, wird eine bitweise Maskierung verwendet, um den Wert der Taste zu isolieren, an der Sie interessiert sind, Die Taste ist gedrückt (unten), wenn das entsprechende Bit festgelegt ist. Andernfalls ist sie nicht gedrückt (oben).
 
-Im folgenden Beispiel wird bestimmt, ob die Taste für **Aktion 1** gedrückt wird.
+Im folgenden Beispiel wird bestimmt, ob die Taste für **Aktion 1** gedrückt ist.
 
 ```cpp
 if (ArcadeStickButtons::Action1 == (reading.Buttons & ArcadeStickButtons::Action1))

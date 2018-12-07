@@ -6,15 +6,15 @@ ms.topic: article
 keywords: Windows 10, Uwp, anzeigen, Werbung, AdControl, Banneranzeigen
 ms.localizationpriority: medium
 ms.openlocfilehash: e8754790fac07e6e1babdb44888cfd1ff138c230
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8741364"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8784878"
 ---
 # <a name="banner-ads"></a>Banneranzeigen
 
-Die Artikel in diesem Abschnitt zeigen, wie Sie die [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) -Klasse in der Microsoft Advertising-SDK verwenden, um Werbebanner zu Ihrer UWP-app hinzufügen.
+Die Artikel in diesem Abschnitt zeigen, wie Sie die [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) -Klasse in der Microsoft Advertising-SDK zu verwenden, um Werbebanner zu Ihrer UWP-app hinzufügen.
 
 Banneranzeigen sind statische anzeigen, die einen rechteckigen Teil einer Seite in Ihrer app zum Anzeigen von Werbeinhalten nutzen. Diese Anzeigen können in regelmäßigen Abständen automatisch aktualisiert werden. Sie sind ein guter Ausgangspunkt, wenn Sie noch nicht mit Werbung in Ihrer App vertraut sind.
 

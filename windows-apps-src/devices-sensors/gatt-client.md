@@ -1,16 +1,16 @@
 ---
 title: Bluetooth GATT-Client
-description: Dieser Artikel enthält eine Übersicht über Bluetooth Generic Attribute Profile (GATT)-Client für universelle Windows-Plattform (UWP) apps, zusammen mit Beispielcode für allgemeine Anwendungsfälle.
+description: Dieser Artikel enthält eine Übersicht über Bluetooth Generic Attribute Profile (GATT)-Client für universelle Windows-Plattform (UWP) apps, zusammen mit Beispielcode für allgemeine verwenden.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 3ae656b473a4dd5999588057b0ec970645703eec
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8757402"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8780518"
 ---
 # <a name="bluetooth-gatt-client"></a>Bluetooth GATT-Client
 
@@ -20,12 +20,12 @@ ms.locfileid: "8757402"
 -   [**Windows.Devices.Bluetooth**](https://msdn.microsoft.com/library/windows/apps/Dn263413)
 -   [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://msdn.microsoft.com/library/windows/apps/Dn297685)
 
-Dieser Artikel veranschaulicht die Verwendung der Bluetooth-Generic Attribut (GATT)-Client-APIs für die universelle Windows-Plattform (UWP) apps, zusammen mit Beispielcode für allgemeine GATT-Client-Aufgaben:
+Dieser Artikel veranschaulicht die Verwendung der Bluetooth-Generic Attribut (GATT)-Client-APIs für universelle Windows-Plattform (UWP) apps, zusammen mit Beispielcode für allgemeine GATT-Client-Aufgaben:
 - Abfrage von Geräten in der Nähe
 - Verbinden mit Gerät
 - Auflisten der unterstützten Dienste und-Merkmale des Geräts
 - Lesen und Schreiben von einem Merkmal
-- Abonnieren Sie für Benachrichtigungen bei charakteristische ändert Wert
+- Abonnieren Sie für Benachrichtigungen, wenn über ändert Wert
 
 ## <a name="overview"></a>Übersicht
 Entwickler können die APIs im [**Windows.Devices.Bluetooth.GenericAttributeProfile**](https://msdn.microsoft.com/library/windows/apps/Dn297685) -Namespace verwenden, den Zugriff auf Bluetooth LE-Geräte. Bluetooth LE-Geräte machen ihre Funktionen über eine Sammlung folgender Elemente verfügbar:
@@ -36,13 +36,13 @@ Entwickler können die APIs im [**Windows.Devices.Bluetooth.GenericAttributeProf
 
 Dienste definieren den funktionsvertrag des LE-Geräts und enthalten eine Sammlung der Merkmale, die den Dienst definieren. Diese Merkmale wiederum enthalten Deskriptoren, von denen die Merkmale beschrieben werden. Diese 3 Begriffe werden im Allgemeinen als die Attribute eines Geräts bezeichnet.
 
-Bluetooth LE-GATT-APIs machen Objekte und Funktionen verfügbar, statt den Zugriff auf die unformatierte Transport. Die GATT-APIs ermöglichen auch Entwicklern arbeiten mit Bluetooth LE-Geräten in der Lage, die folgenden Aufgaben ausführen:
+Bluetooth LE-GATT-APIs machen Objekte und Funktionen verfügbar, statt den Zugriff auf den unformatierten Transport. Die GATT-APIs ermöglichen auch Entwicklern arbeiten mit Bluetooth LE-Geräten in der Lage, die folgenden Aufgaben ausführen:
 
 -   Attributermittlung ausführen
 -   Lese- und Schreibzugriff Attributwerte
 -   Registrieren eines Rückrufs für Merkmal ValueChanged-Ereignis
 
-Um eine sinnvolle Implementierung erstellen Sie ein Entwickler benötigen Vorkenntnisse bezüglich der GATT-Dienste und-Merkmale, die die Anwendung nutzen möchte, dass die spezifischen Merkmalswerte, so dass die von der API bereitgestellten Binärdaten in umgewandelt werden nützliche Daten vor dem Benutzer angezeigt wird. Die Bluetooth GATT-APIs machen nur die Grundtypen verfügbar, die für die Kommunikation mit einem Bluetooth LE-Gerät erforderlich sind. Zum Interpretieren der Daten muss ein Anwendungsprofil definiert werden, entweder durch ein Bluetooth SIG-Standardprofil oder mit einem benutzerdefinierten Profil, das von einem Geräteanbieter implementiert wird. Ein Profil begründet einen bindenden Vertrag zwischen Anwendung und Gerät darüber, was von den ausgetauschten Daten dargestellt wird und wie sie zu interpretieren sind.
+Um eine sinnvolle Implementierung erstellen Sie ein Entwickler benötigen Vorkenntnisse bezüglich der GATT-Dienste und-Merkmale, die die Anwendung verwendet, dass die spezifischen Merkmalswerte, dass die von der API bereitgestellten Binärdaten in umgewandelt werden hilfreiche Daten vor dem Benutzer angezeigt wird. Die Bluetooth GATT-APIs machen nur die Grundtypen verfügbar, die für die Kommunikation mit einem Bluetooth LE-Gerät erforderlich sind. Zum Interpretieren der Daten muss ein Anwendungsprofil definiert werden, entweder durch ein Bluetooth SIG-Standardprofil oder mit einem benutzerdefinierten Profil, das von einem Geräteanbieter implementiert wird. Ein Profil begründet einen bindenden Vertrag zwischen Anwendung und Gerät darüber, was von den ausgetauschten Daten dargestellt wird und wie sie zu interpretieren sind.
 
 Aus Gründen der Benutzerfreundlichkeit pflegt Bluetooth SIG eine [Liste der öffentlichen Profile](https://www.bluetooth.com/specifications/adopted-specifications#gattspec), die zur Verfügung stehen.
 
@@ -51,9 +51,9 @@ Es gibt zwei wichtigste Methoden bei Geräten in der Nähe der Abfrage:
 - DeviceWatcher in Windows.Devices.Enumeration
 - AdvertisementWatcher in Windows.Devices.Bluetooth.Advertisement
 
-2. Methode wird erläutert ausführlich in der Dokumentation zu [Werbung](ble-beacon.md) damit es erläutert werden, wird nicht viel hier jedoch die grundlegende Idee ist in den Bluetooth-Geräten in der Nähe suchen, die die bestimmten [Ankündigungsfilter](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher.advertisementfilter.aspx)erfüllen. Wenn Sie die Adresse haben, können Sie [BluetoothLEDevice.FromBluetoothAddressAsync](https://msdn.microsoft.com/en-us/library/windows/apps/mt608819.aspx) zum Abrufen eines Verweises auf das Gerät aufrufen. 
+2.-Methode wird erläutert ausführlich in der Dokumentation [Ankündigung](ble-beacon.md) damit erläutert wird nicht viel hier jedoch das grundlegende Konzept ist in der Bluetooth-Geräten in der Nähe suchen, die die bestimmten [Ankündigungsfilter](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher.advertisementfilter.aspx)erfüllen. Wenn Sie die Adresse haben, können Sie [BluetoothLEDevice.FromBluetoothAddressAsync](https://msdn.microsoft.com/en-us/library/windows/apps/mt608819.aspx) zum Abrufen eines Verweises auf das Gerät aufrufen. 
 
-Sichern Sie jetzt an die DeviceWatcher-Methode. Ein Bluetooth LE-Gerät verhält sich wie ein anderes Gerät unter Windows und unter Verwendung der [Enumerations-APIs](https://msdn.microsoft.com/library/windows/apps/BR225459)abgefragt werden kann. Verwenden Sie die [DeviceWatcher](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.devicewatcher) -Klasse, und übergeben Sie eine Abfragezeichenfolge angeben der Geräte zum Suchen nach: 
+Sichern Sie jetzt an die DeviceWatcher-Methode. Ein Bluetooth LE-Gerät genau wie alle anderen Geräte in Windows ist und unter Verwendung der [Enumerations-APIs](https://msdn.microsoft.com/library/windows/apps/BR225459)abgefragt werden kann. Verwenden Sie die [DeviceWatcher](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.devicewatcher) -Klasse, und übergeben Sie eine Abfragezeichenfolge, geben Sie die Geräte zum Suchen nach: 
 
 ```csharp
 // Query for extra properties you want returned
@@ -78,10 +78,10 @@ deviceWatcher.Stopped += DeviceWatcher_Stopped;
 // Start the watcher.
 deviceWatcher.Start();
 ```
-Nachdem Sie die DeviceWatcher begonnen haben, erhalten [DeviceInformation](https://msdn.microsoft.com/library/windows/apps/br225393) Sie für jedes Gerät, die die Abfrage im Handler für das Ereignis [hinzugefügt](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.devicewatcher.added) , für die betreffenden Geräte erfüllt. Eine ausführlichere Betrachtung DeviceWatcher finden Sie unter der vollständige Beispiel [auf Github](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceEnumerationAndPairing). 
+Nachdem Sie die DeviceWatcher begonnen haben, erhalten Sie [DeviceInformation](https://msdn.microsoft.com/library/windows/apps/br225393) für jedes Gerät müssen, die die Abfrage im Handler für das Ereignis [hinzugefügt](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.devicewatcher.added) , für die betreffenden Geräte erfüllt. Eine ausführlichere Betrachtung DeviceWatcher finden Sie in der vollständigen Beispiel [auf Github](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceEnumerationAndPairing). 
 
 ## <a name="connecting-to-the-device"></a>Herstellen einer Verbindung mit dem Gerät
-Nachdem ein gewünschten Gerät erkannt wird, verwenden Sie die [DeviceInformation.Id](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.deviceinformation.id) , um das Objekt Bluetooth LE-Gerät für das Gerät betreffenden abzurufen: 
+Nachdem ein Gerät erkannt wird, verwenden Sie die [DeviceInformation.Id](https://msdn.microsoft.com/en-us/library/windows/apps/windows.devices.enumeration.deviceinformation.id) um das Objekt Bluetooth LE-Gerät für das Gerät betreffenden zu erhalten: 
 
 ```csharp
 async void ConnectDevice(DeviceInformation deviceInfo)
@@ -91,12 +91,12 @@ async void ConnectDevice(DeviceInformation deviceInfo)
     // ...
 }
 ```
-Andererseits, Freigeben von alle Verweise auf ein BluetoothLEDevice-Objekt für ein Gerät zugeordnet ist (und keine andere app auf dem System einen Verweis auf das Gerät enthält) löst ein Automatisches Trennen Sie nach einem kleinen Timeout-Zeitraum. 
+Andererseits, löschen alle Verweise auf ein BluetoothLEDevice-Objekt für ein Gerät zugeordnet ist (und keine andere app auf dem System einen Verweis auf das Gerät hat) löst ein Automatisches Trennen nach einem kleinen Timeout-Zeitraum. 
 
 ```csharp
 bluetoothLeDevice.Dispose();
 ```
-Wenn die app das Gerät erneut zugreifen muss, werden Sie einfach das Geräteobjekt neu zu erstellen und den Zugriff auf ein Merkmal (im nächsten Abschnitt erläutert) des Betriebssystems bei Bedarf wieder her ausgelöst. Wenn das Gerät in Reichweite befindet, erhalten Sie Zugriff auf das Gerät andernfalls, die mit einem DeviceUnreachable Fehler zurückgegeben wird.  
+Wenn die app das Gerät erneut zugreifen muss, werden das Betriebssystem bei Bedarf wieder her einfach das Geräteobjekt neu zu erstellen und den Zugriff auf ein Merkmal (im nächsten Abschnitt erläutert) ausgelöst werden. Wenn das Gerät in der Nähe ist, erhalten Sie Zugriff auf das Gerät andernfalls, die mit einem DeviceUnreachable Fehler zurückgegeben wird.  
 
 ## <a name="enumerating-supported-services-and-characteristics"></a>Auflisten der unterstützten Dienste und-Merkmale
 Nun, da Sie ein Objekt BluetoothLEDevice haben, besteht der nächste Schritt, welche Daten zu erkennen, das Gerät verfügbar macht. Der erste Schritt dazu ist für Dienste Abfragen: 
@@ -110,7 +110,7 @@ if (result.Status == GattCommunicationStatus.Success)
     // ...
 }
 ```
-Nachdem der Dienst von Interesse erkannt wurde, wird der nächste Schritt ist, zum Abfragen, um Eigenschaften. 
+Nachdem der Dienst Orte erkannt wurde, wird der nächste Schritt ist, zum Abfragen, um Eigenschaften. 
 
 ```csharp
 GattCharacteristicsResult result = await service.GetCharacteristicsAsync();
@@ -121,13 +121,13 @@ if (result.Status == GattCommunicationStatus.Success)
     // ...
 }
 ```  
-Das Betriebssystem gibt, die eine schreibgeschützte Liste von GattCharacteristic-Objekten, die Sie Vorgänge durchführen können.
+Das Betriebssystem gibt, die eine schreibgeschützte Liste GattCharacteristic-Objekten, die Sie Vorgänge durchführen können.
 
 ## <a name="perform-readwrite-operations-on-a-characteristic"></a>Führen Sie Lese-/Schreibzugriff auf ein Merkmal
 
-Die Eigenschaft ist, dass die grundlegende Einheit der GATT Kommunikation basiert. Es enthält einen Wert, der eine unterschiedliche Datenmenge auf dem Gerät darstellt. Beispielsweise hat die Ebene Akku-Eigenschaft einen Wert, der Akkustand des Geräts darstellt.
+Die Eigenschaft ist, dass die grundlegende Einheit der GATT Kommunikation basiert. Sie enthält einen Wert, der einen unterschiedlichen Teil der Daten auf dem Gerät darstellt. Beispielsweise hat die Ebene Akku-Eigenschaft einen Wert, der Akkustand des Geräts darstellt.
 
-Lesen Sie die charakteristischen Eigenschaften, um festzustellen, welche Vorgänge unterstützt werden:
+Lesen Sie die über Eigenschaften, um zu ermitteln, welche Vorgänge unterstützt werden:
 ```csharp
 GattCharacteristicProperties properties = characteristic.CharacteristicProperties
 
@@ -156,7 +156,7 @@ if (result.Status == GattCommunicationStatus.Success)
     // Utilize the data as needed
 }
 ```
-Schreiben in eine Eigenschaft wird ein ähnliches Muster angewandt: 
+Schreiben in ein Merkmal folgt einem ähnlichen Muster: 
 ```csharp
 var writer = new DataWriter();
 // WriteByte used for simplicity. Other commmon functions - WriteInt16 and WriteSingle
@@ -168,18 +168,18 @@ if (result.Status == GattCommunicationStatus.Success)
     // Successfully wrote to device
 }
 ```
-> **Tipp**: Erste Schritte mit dem [DataReader](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.streams.datareader.aspx) und [DataWriter](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.streams.datawriter.aspx)verwenden. Die Funktionalität wird Anwendungsregistrierungsprüfpunkte, bei der Arbeit mit der unformatierten Puffer, die Sie aus vielen der die Bluetooth-APIs zu erhalten. 
+> **Tipp**: Erste Schritte mit dem [DataReader](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.streams.datareader.aspx) und [DataWriter](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.streams.datawriter.aspx)verwenden. Die Funktionalität wird Anwendungsregistrierungsprüfpunkte, bei der Arbeit mit der unformatierten Puffer, die Sie aus vielen der Bluetooth-APIs zu erhalten. 
 ## <a name="subscribing-for-notifications"></a>Abonnieren für Benachrichtigungen
 
-Stellen Sie sicher, das Merkmal unterstützt angeben oder benachrichtigen (Überprüfen Sie die charakteristischen Eigenschaften sicher). 
+Stellen Sie sicher, das Merkmal unterstützt angeben oder benachrichtigen (die über Eigenschaften, um sicherzustellen, überprüfen). 
 
-> **Reserviert**: angeben, wird eine zuverlässigere betrachtet, da jedes Ereignis Wert wurde geändert. mit einer Bestätigung durch den Client-Gerät gekoppelt ist. Benachrichtigen ist mehr verbreitet, da die meisten GATT-Transaktionen würden stattdessen Energie sparen, sondern äußerst zuverlässig. In jedem Fall aller, erfolgt der Controller-Ebene, damit die app nicht beteiligt sich ist. Wir werden gemeinsam auf sie verweisen, als einfach "Notifications", aber Sie wissen jetzt. 
+> **Reservieren**: angeben, gilt als zuverlässiger, da jedes Ereignis Wert hat sich geändert, die mit einer Bestätigung durch den Client-Gerät gekoppelt ist. Benachrichtigen ist mehr verbreitet, da die meisten GATT-Transaktionen würden stattdessen Energie sparen, sondern äußerst zuverlässig. In jedem Fall alle diese erfolgt auf, damit die app nicht beteiligt sich wird. Wir werden gemeinsam auf sie verweisen, als einfach "Notifications", aber Sie wissen jetzt. 
 
 Es gibt zwei Dinge zu erledigen vor dem Abrufen der Benachrichtigungen:
-- Schreiben Sie in Client charakteristische Konfiguration Deskriptor (CCCD)
+- Schreiben Sie in Client über Konfiguration Deskriptor (CCCD)
 - Behandeln Sie das Characteristic.ValueChanged-Ereignis
 
-Schreiben in die CCCD weist dem Server-Gerät, dass dieser Client jedes Mal, bestimmten Merkmalen wertänderungen wissen möchte. Gehen Sie dazu folgendermaßen vor: 
+Schreiben in die CCCD weist dem Server-Gerät, dass dieser Client jedes Mal, bestimmte merkmalswert Änderungen wissen möchte. Gehen Sie dazu folgendermaßen vor: 
 
 ```csharp
 GattCommunicationStatus status = await selectedCharacteristic.WriteClientCharacteristicConfigurationDescriptorAsync(
@@ -189,7 +189,7 @@ if(status == GattCommunicationStatus.Success)
     // Server has been informed of clients interest.
 }
 ```
-Nun die GattCharacteristic ValueChanged-Ereignis wird jedes Mal aufgerufen erhalten, der Wert auf dem Remotegerät geändert wird. Nur noch wird den Ereignishandler implementiert: 
+Jetzt wird die GattCharacteristic ValueChanged-Ereignis jedes Mal aufgerufen, die der Wert auf dem Remotegerät geändert wird. Ist den Ereignishandler implementiert ist: 
 
 ```csharp
 characteristic.ValueChanged += Characteristic_ValueChanged;

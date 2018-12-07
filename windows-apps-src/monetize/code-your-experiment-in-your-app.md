@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store Services SDK, A/B-Tests, Experimente
 ms.localizationpriority: medium
 ms.openlocfilehash: edd0fbcf841dc9d8fa43873da95dc08b276a5418
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8734473"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8780608"
 ---
 # <a name="code-your-app-for-experimentation"></a>Codieren einer App für Experimente
 
 Nachdem Sie [das Erstellen eines Projekts und Festlegen von remotevariablen im Partner Center](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)sind Sie bereit sind, aktualisieren Sie den Code in Ihrer app (universelle Windows Plattform):
-* Werte von remotevariablen von Partner Center zu erhalten.
+* Werte von remotevariablen in Partner Center zu erhalten.
 * Remotevariablen zum Konfigurieren von App-Funktionen für die Benutzer zu verwenden
-* Protokollieren von Ereignissen in das Partner Center, die angeben, wann Benutzer Ihr Experiment angezeigt und eine gewünschte Aktion (auch als eine *Konvertierung*bezeichnet) ausgeführt.
+* Protokollieren von Ereignissen in das Partner Center, die angeben, wann Benutzer Ihr Experiment angezeigt haben, und eine gewünschte Aktion (auch als eine *Konvertierung*) ausgeführt.
 
 Um der App dieses Verhalten hinzuzufügen, verwenden Sie die vom Microsoft Store Services SDK bereitgestellten APIs.
 
@@ -38,11 +38,11 @@ Installieren Sie zunächst das Microsoft Store Services SDK auf dem Entwicklungs
 4. Aktivieren Sie in der Liste mit den SDKs das Kontrollkästchen neben **Microsoft Engagement Framework**, und klicken Sie anschließend auf **OK**.
 
 > [!NOTE]
-> Die Codebeispiele in diesem Artikel wird davon ausgegangen, dass Ihre **verwenden** Anweisungen für die Namespaces **System.Threading.Tasks** und **Microsoft.Services.Store.Engagement Codedatei** .
+> Die Codebeispiele in diesem Artikel wird davon ausgegangen, dass Ihre **mithilfe von** Anweisungen für die Namespaces **System.Threading.Tasks** und **Microsoft.Services.Store.Engagement Codedatei** .
 
 ## <a name="get-variation-data-and-log-the-view-event-for-your-experiment"></a>Abrufen von Abweichungsdaten und protokollieren des Anzeigeereignisses für Ihr Experiment
 
-Suchen Sie im Projekt nach dem Code für das Feature, das Sie in Ihrem Experiment ändern möchten. Fügen Sie Code, der Daten für eine Variante abruft, verwenden Sie diese Daten, um das Verhalten des Features ändern Sie testen und melden Sie sich dann das anzeigeereignis für Ihr Experiment im A / B-Testdienst in Partner Center.
+Suchen Sie im Projekt nach dem Code für das Feature, das Sie in Ihrem Experiment ändern möchten. Fügen Sie Code, der Daten für eine Variante abruft, verwenden Sie diese Daten, um das Verhalten des Features ändern Sie testen und melden Sie sich dann das anzeigeereignis für Ihr Experiment im a / B-Testdienst in Partner Center.
 
 Der jeweils benötigte Code richtet sich nach Ihrer App, im folgenden Beispiel wird jedoch die grundlegende Vorgehensweise veranschaulicht. Ein vollständiges Codebeispiel finden Sie unter [Erstellen und Ausführen eines ersten Experiments mit A/B-Tests](create-and-run-your-first-experiment-with-a-b-testing.md).
 
@@ -68,7 +68,7 @@ In den folgenden Schritten werden die wichtigen Schritte dieses Verfahrens ausf�
 
     [!code-cs[ExperimentExamples](./code/StoreSDKSamples/cs/ExperimentExamples.cs#Snippet4)]
 
-5. Verwenden Sie die [GetBoolean](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getboolean)-, [GetDouble](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getdouble)-, [GetInt32](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getint32) oder [GetString](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getstring)-Methode des [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation)-Objekts, um die Werte für die Abweichungszuweisung abzurufen. In jeder Methode der erste Parameter ist der Name der Abweichung, die Sie abrufen möchten (Dies ist der gleiche Name der eine Variante, die Sie im Partner Center eingeben). Der zweite Parameter ist der Standardwert, den die Methode zurückgeben soll, wenn sie nicht den angegebenen Wert aus dem Partner Center (z. B., wenn keine Netzwerkkonnektivität besteht) abrufen können, und eine zwischengespeicherte Version der Abweichung ist nicht verfügbar.
+5. Verwenden Sie die [GetBoolean](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getboolean)-, [GetDouble](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getdouble)-, [GetInt32](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getint32) oder [GetString](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getstring)-Methode des [StoreServicesExperimentVariation](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation)-Objekts, um die Werte für die Abweichungszuweisung abzurufen. In jeder Methode der erste Parameter ist der Name der Abweichung, die Sie abrufen möchten (Dies ist der gleiche Name der eine Variante, die Sie im Partner Center eingeben). Der zweite Parameter ist der Standardwert, den die Methode zurückgeben soll, wenn sie nicht den angegebenen Wert aus dem Partner Center (z. B., wenn keine Netzwerkkonnektivität besteht) abrufen, und eine zwischengespeicherte Version der Abweichung ist nicht verfügbar.
 
     Im folgenden Beispiel werden mithilfe von [GetString](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getstring) eine Variable namens *buttonText* abgerufen und der Standardvariablenwert **Grey Button** angegeben.
 

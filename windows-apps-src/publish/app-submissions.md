@@ -7,35 +7,35 @@ ms.date: 10/31/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 444243bdb1d50146ba54af4f1417103566f97f93
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8755886"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8783023"
 ---
 # <a name="app-submissions"></a>App-Übermittlungen
 
 
 Nachdem Sie Ihre [App durch die Reservierung eines Namens erstellt haben](create-your-app-by-reserving-a-name.md), können Sie mit der Veröffentlichung beginnen. Der erste Schritt besteht darin, eine ***Übermittlung** zu erstellen.
 
-Sie beginnen mit der Einreichung, sobald Ihre App fertig und bereit für die Veröffentlichung ist. Sie können mit der Eingabe von Infos beginnen, noch bevor Sie eine einzige Codezeile programmiert haben. Updates, die Sie an Ihre Übermittlung werden gespeichert, darauf zurückkehren und darauf zu arbeiten, wenn Sie bereit sind.
+Sie beginnen mit der Einreichung, sobald Ihre App fertig und bereit für die Veröffentlichung ist. Sie können mit der Eingabe von Infos beginnen, noch bevor Sie eine einzige Codezeile programmiert haben. Updates, die Sie für Ihre Übermittlung vornehmen werden gespeichert, damit Sie zurückkehren darauf und darauf zu arbeiten, wenn Sie bereit sind.
 
 > [!NOTE]
 > Sie müssen ein aktives [Entwicklerkonto](http://go.microsoft.com/fwlink/p/?LinkId=615100) im [Partner Center](https://partner.microsoft.com/dashboard) haben, um apps im Microsoft Store übermitteln.
 
-Nach der Veröffentlichung Ihrer app können Sie eine aktualisierte Version veröffentlichen, indem Sie eine weitere Einreichung im Partner Center erstellen. Durch die Erstellung einer neuen Einreichung können Sie alle erforderlichen Änderungen vornehmen und veröffentlichen – z. B. neue Pakete hochladen oder Preisdetails oder App-Kategorie ändern. **Um eine neue Übermittlung für eine veröffentlichte app zu erstellen, klicken Sie auf neben der aktuellen Übermittlung, die auf **der Übersichtsseite** angezeigt.** Sie können auch [eine app aus dem Speicher zu entfernen](guidance-for-app-package-management.md#removing-an-app-from-the-store) , wenn Sie müssen dazu (und dann zur Verfügung stellen später erneut, wenn Sie möchten).
+Nach der Veröffentlichung Ihrer app können Sie eine aktualisierte Version veröffentlichen, indem Sie eine weitere Einreichung im Partner Center erstellen. Durch die Erstellung einer neuen Einreichung können Sie alle erforderlichen Änderungen vornehmen und veröffentlichen – z. B. neue Pakete hochladen oder Preisdetails oder App-Kategorie ändern. Um eine neue Übermittlung für eine veröffentlichte app zu erstellen, klicken Sie auf " **Update** " neben der aktuellen Übermittlung, die auf **der Übersichtsseite** angezeigt. Sie können auch [eine app aus dem Speicher zu entfernen](guidance-for-app-package-management.md#removing-an-app-from-the-store) , wenn Sie müssen dazu (und dann zur Verfügung stellen später erneut, wenn Sie möchten).
 
 > [!NOTE]
-> In diesem Abschnitt der Dokumentation wird beschrieben, wie Sie eine app-Übermittlung in Partner Center erstellen. Alternativ dazu können Sie auch die [Microsoft Store-Übermittlungs-API](../monetize/create-and-manage-submissions-using-windows-store-services.md) verwenden, um App-Übermittlungen zu automatisieren.
+> In diesem Abschnitt der Dokumentation wird beschrieben, wie Sie eine app-Übermittlung im Partner Center erstellen. Alternativ dazu können Sie auch die [Microsoft Store-Übermittlungs-API](../monetize/create-and-manage-submissions-using-windows-store-services.md) verwenden, um App-Übermittlungen zu automatisieren.
 
 > [!IMPORTANT]
-> Ab dem 31. Oktober 2018 darf keine Produkte neu erstellten Pakete für Windows-8.x/Windows enthalten Phone 8.x oder früher. Weitere Informationen finden Sie in diesem [Blogbeitrag](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
+> Ab dem 31. Oktober 2018 Produkte neu erstellten Pakete für Windows-8.x/Windows enthalten können nicht Phone 8.x oder früher. Weitere Informationen finden Sie in diesem [Blogbeitrag](https://blogs.windows.com/buildingapps/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store/#SzKghBbqDMlmAO4c.97).
 
 ## <a name="app-submission-checklist"></a>Prüfliste für die App-Übermittlung
 
 Hier finden Sie eine Liste mit den Informationen, die Sie beim Erstellen Ihrer App-Übermittlung angeben können, sowie Links zu weiteren Informationen.
 
-Die erforderlichen Elemente sind im Folgenden aufgeführt. Einige Bereiche sind optional oder verfügen über Standardwerte, die Sie nach Bedarf ändern können. Sie müssen nicht auf diesen Abschnitten in der hier angegebenen Reihenfolge funktionieren.
+Die erforderlichen Elemente sind im Folgenden aufgeführt. Einige Bereiche sind optional oder verfügen über Standardwerte, die Sie nach Bedarf ändern können. Sie müssen diese Abschnitte in der hier angegebenen Reihenfolge bearbeiten.
 
 ### <a name="pricing-and-availability-page"></a>Seite „Preise und Verfügbarkeit“
 | Feldname                    | Hinweise                                       | Weitere Informationen                                                             |
@@ -98,7 +98,7 @@ Sie benötigen alle erforderlichen Informationen für mindestens eine der von Ih
 | **Trailer**                  | Optional                                    | [Trailer](app-screenshots-and-images.md#trailers)                | 
 | **Windows10 und Xbox-Bild (16:9 Besonderes Favoritenbild)**     | Empfohlen        | [Windows 10 und Xbox-Bild (16:9 besonderes Favoritenbild)
 ] (app-screenshots-and-images.md#windows-10-and-xbox-image-169-super-hero-art) |
-| **Xbox-Bilder**     | Erforderlich für die ordnungsgemäße Anzeige, wenn Sie auf Xbox veröffentlichen        | [Xbox-Bilder
+| **Xbox-Bilder**     | Erforderlich für die ordnungsgemäße Anzeige, wenn Sie auf Xbox veröffentlichen.        | [Xbox-Bilder
 ] (app-Screenshots-und-images.md #Xbox-Bilder) |
 | **Zusätzliche Felder**  | Optional                                    | [Zusätzliche Felder](create-app-store-listings.md#supplemental-fields) 
 | **Suchbegriffe**              | Optional                                    | [Suchbegriffe](create-app-store-listings.md#search-terms)         |
@@ -115,7 +115,7 @@ Sie benötigen alle erforderlichen Informationen für mindestens eine der von Ih
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **Optionen zum Anhalten der Veröffentlichung**     | Standard: Veröffentlichen Sie diese Übermittlung, sobald die Zertifizierung abgeschlossen ist (oder ab einem im Abschnitt des Zeitplans ausgewählten Datum)      | [Optionen zum Anhalten der Veröffentlichung](manage-submission-options.md#publishing-hold-options)    
 | **Hinweise für Zertifizierung**     | Empfohlen          | [Hinweise für Zertifizierung](notes-for-certification.md)             |
-| **Eingeschränkte Funktionen**     | Erforderlich, wenn Ihr Produkt alle [eingeschränkten Funktionen](../packaging/app-capability-declarations.md#restricted-capabilities) deklariert    | [Eingeschränkte Funktionen](manage-submission-options.md#publishing-hold-options)       
+| **Eingeschränkte Funktionen**     | Erforderlich, wenn Ihr Produkt alle [eingeschränkten Funktionen](../packaging/app-capability-declarations.md#restricted-capabilities) deklariert wird.    | [Eingeschränkte Funktionen](manage-submission-options.md#publishing-hold-options)       
 
 <span/>
 

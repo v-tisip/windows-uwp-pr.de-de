@@ -1,5 +1,5 @@
 ---
-description: Dieses Thema enthält eine umfassende Zuordnung der WindowsPhone Silverlight-APIs in die entsprechenden universelle Windows-Plattform (UWP).
+description: Dieses Thema enthält eine umfassende Zuordnung der WindowsPhone Silverlight-APIs zu ihren Entsprechungen für die universelle Windows-Plattform (UWP).
 title: WindowsPhone Silverlight zu UWP – Namespace- und klassenzuordnungen
 ms.assetid: 33f06706-4790-48f3-a2e4-ebef9ddb61a4
 ms.date: 02/08/2017
@@ -7,22 +7,22 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 0072aa814e0bcb22806cad764b5f365770961ac3
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8705559"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8783983"
 ---
 # <a name="windowsphone-silverlight-to-uwp-api-mappings"></a>WindowsPhone Silverlight zu UWP-API – Zuordnungen
 
 
-Dieses Thema enthält eine umfassende Zuordnung der WindowsPhone Silverlight-APIs in die entsprechenden universelle Windows-Plattform (UWP). Im Allgemeinen erfolgt keine 1: 1-Zuordnung von Funktionen, jedoch gilt: Jede Plattform kann ggf. mehr oder weniger Funktionalität bieten als ihr Gegenstück in einem Namespace oder einer Klasse.
+Dieses Thema enthält eine umfassende Zuordnung der WindowsPhone Silverlight-APIs zu ihren Entsprechungen für die universelle Windows-Plattform (UWP). Im Allgemeinen erfolgt keine 1: 1-Zuordnung von Funktionen, jedoch gilt: Jede Plattform kann ggf. mehr oder weniger Funktionalität bieten als ihr Gegenstück in einem Namespace oder einer Klasse.
 
-Die Zuordnungstabelle hilft Ihnen, wenn Sie in einem UWP-Projekt arbeiten und Sie sind Quellcode aus einem WindowsPhone Silverlight-Projekt wiederverwenden. Zwischen den beiden Plattformen gibt es Unterschiede bei den Namen von Namespaces und Klassen (einschließlich UI-Steuerelemente). In vielen Fällen ist es einfach: Sie ändern z.B. einen Namespacenamen, und der Code wird kompiliert Manchmal wird neben dem Namespacenamen auch der Name einer Klasse oder API geändert In anderen Fällen ist die Zuordnung etwas schwieriger, und in seltenen Fällen muss der Ansatz geändert werden.
+Die Zuordnungstabelle hilft Ihnen, wenn Sie in einer UWP-Projekt arbeiten und Sie sind Quellcode aus einem WindowsPhone Silverlight-Projekt wiederverwenden. Zwischen den beiden Plattformen gibt es Unterschiede bei den Namen von Namespaces und Klassen (einschließlich UI-Steuerelemente). In vielen Fällen ist es einfach: Sie ändern z.B. einen Namespacenamen, und der Code wird kompiliert Manchmal wird neben dem Namespacenamen auch der Name einer Klasse oder API geändert In anderen Fällen ist die Zuordnung etwas schwieriger, und in seltenen Fällen muss der Ansatz geändert werden.
 
 **So verwenden Sie die Tabelle:** Suchen Sie zunächst nach den Namen der Klasse, die Sie verwenden. Klassen werden aufgelistet, wenn es sich um eine kompliziertere Zuordnung als eine Änderung des Namespacenamens handelt. Wenn Ihre Klasse nicht aufgeführt ist, handelt es sich bei der Zuordnung nur um eine Namespaceänderung. Wenn Sie den Namespacenamen Ihrer Klasse finden, finden Sie auch den entsprechenden Namen des UWP-Namespaces. Ihre Klasse ist in diesem Namespace enthalten. Wenn der Namespace nicht aufgeführt ist, hat sich dessen Name nicht geändert.
 
-**Hinweis:** Windows 10 unterstützt einen deutlich größeren von .NET Framework als Windows Phone Store-Apps. Windows 10 verfügt beispielsweise über mehrere System.ServiceModel.\* Namespaces als auch System.Net, System.Net.NetworkInformation und System.Net.Sockets.
+**Hinweis:** Windows 10 unterstützt einen deutlich größeren von .NET Framework als Windows Phone Store-Apps. Beispielsweise hat Windows 10 verschiedene System.ServiceModel.\* Namespaces sowie System.Net, System.Net.NetworkInformation und System.Net.Sockets.
 Darüber hinaus in einer Windows 10-app, profitieren Sie von .NET Native, die eine ahead-des-kompilierungstechnologie, mit der MSIL nativ-Computercode konvertiert. .NET Native-Apps starten schneller, verbrauchen weniger Arbeitsspeicher und benötigen weniger Akkuenergie als ihre MSIL-Gegenstücke.
 
 | WindowsPhone Silverlight | Windows-Runtime |

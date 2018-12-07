@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, DirectX 9, DirectX 11, Portierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 56bb86706795e773d21e45263f640f9fc0aa596a
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8758380"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8783584"
 ---
 # <a name="map-directx-9-features-to-directx-11-apis"></a>Zuordnung von DirectX9-Funktionen zu DirectX11-APIs
 
@@ -506,7 +506,7 @@ Ziehen Sie beim Konvertieren von Direct3D9-Formaten in DXGI-Formate die folgende
 <td align="left"><p>D3DFMT_L16</p></td>
 <td align="left"><p>DXGI_FORMAT_R16_UNORM</p>
 <div class="alert">
-<strong>Hinweis:</strong>  verwenden .r Swizzle im Shader, um Rot für andere Komponenten zu D3D9-Verhaltens den swizzle duplizieren.
+<strong>Hinweis:</strong>  verwenden .r Swizzle im Shader, um Rot für andere Komponenten zu D3D9-Verhaltens duplizieren.
 </div>
 <div>
  

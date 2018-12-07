@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: cacd915530bb599936730ec404a6e524fef0105d
-ms.sourcegitcommit: b4c502d69a13340f6e3c887aa3c26ef2aeee9cee
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "8472074"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8783124"
 ---
 # <a name="optimize-file-access"></a>Optimieren des Dateizugriffs
 
@@ -133,7 +133,7 @@ Wenn Sie mehrere Vorgänge an Windows.Storage-Objekten wie `Windows.Storage.Appl
 
 ### <a name="buffering-between-uwp-and-net-streams"></a>Puffern zwischen UWP- und .NET-Streams
 
-Ein UWP-Stream (wie [**Windows.Storage.Streams.IInputStream**](https://msdn.microsoft.com/library/windows/apps/BR241718) oder [**IOutputStream**](https://msdn.microsoft.com/library/windows/apps/BR241728)) kann in zahlreichen Szenarien in .NET-Streams ([**System.IO.Stream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.aspx)) konvertiert werden. Dies ist beispielsweise hilfreich, wenn Sie eine UWP-App (Universelle Windows-Plattform) erstellen und vorhandenen .NET-Code für Streams im UWP-Dateisystem verwenden möchten. Um dies zu ermöglichen, bietet .NET APIs für UWP-apps Erweiterungsmethoden, mit die Sie zwischen .NET- und UWP-Stream konvertieren können. Weitere Informationen finden Sie unter [**WindowsRuntimeStreamExtensions**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.aspx).
+Ein UWP-Stream (wie [**Windows.Storage.Streams.IInputStream**](https://msdn.microsoft.com/library/windows/apps/BR241718) oder [**IOutputStream**](https://msdn.microsoft.com/library/windows/apps/BR241728)) kann in zahlreichen Szenarien in .NET-Streams ([**System.IO.Stream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.stream.aspx)) konvertiert werden. Dies ist beispielsweise hilfreich, wenn Sie eine UWP-App (Universelle Windows-Plattform) erstellen und vorhandenen .NET-Code für Streams im UWP-Dateisystem verwenden möchten. Um dies zu ermöglichen, bietet .NET-APIs für UWP-apps Erweiterungsmethoden, die für die Konvertierung zwischen .NET- und UWP-Stream zu ermöglichen. Weitere Informationen finden Sie unter [**WindowsRuntimeStreamExtensions**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.aspx).
 
 Beim Konvertieren eines UWP-Streams in einen .NET-Stream wird eigentlich ein Adapter für den zugrundeliegenden UWP-Stream erstellt. Das Aufrufen von Methoden für UWP-Streams ist unter bestimmten Umständen mit einem Laufzeitaufwand verbunden. Dieser kann sich insbesondere in Szenarien mit vielen kleinen und häufig ausgeführten Lese- oder Schreibvorgängen auf die Geschwindigkeit Ihrer App auswirken.
 
@@ -196,7 +196,7 @@ Das Verhalten des Standardpuffers eignet sich für die meisten Szenarien, in den
 
 Beim Lesen oder Schreiben umfangreicher Datensätze können Sie den Durchsatz möglicherweise erhöhen, indem Sie den Puffer für die Erweiterungsmethoden [**AsStreamForRead**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx), [**AsStreamForWrite**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstreamforwrite.aspx) und [**AsStream**](https://msdn.microsoft.com/library/windows/apps/xaml/system.io.windowsruntimestreamextensions.asstream.aspx) vergrößern. Dadurch enthält der Streamadapter einen größeren internen Puffer. So kann der Parser beim Übergeben eines Streams von einer großen Datei an einen XML-Parser eine Vielzahl von kleinen Lesevorgängen für den Stream ausführen. Große Puffer können dafür sorgen, dass der zugrunde liegende UWP-Stream weniger oft aufgerufen und somit die Leistung gesteigert wird.
 
-> **Hinweis:**  vorsichtig beim Festlegen einer Puffergröße, die größer als ca. 80 KB, Fragmentierungen im Garbage Collector-Heap kann (siehe [verbessern Garbage Collection-Leistung](improve-garbage-collection-performance.md)). Im folgenden Codebeispiel wird ein verwalteter Datenstromadapter mit einem Puffer mit 81.920Bytes erstellt.
+> **Hinweis:**  vorsichtig beim Festlegen einer Puffergröße, die mehr als ca. 80 KB Fragmentierungen im Garbage Collector-Heap kann (siehe [verbessern Garbage Collection-Leistung](improve-garbage-collection-performance.md)). Im folgenden Codebeispiel wird ein verwalteter Datenstromadapter mit einem Puffer mit 81.920Bytes erstellt.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp

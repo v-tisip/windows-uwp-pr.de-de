@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c45ad71643b0d75efcb130c1175952822197a161
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8748581"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8783722"
 ---
 # <a name="identify-input-devices"></a>Identifizieren von Eingabegeräten
 
@@ -27,7 +27,7 @@ Identifizieren Sie die Eingabegeräte, die mit einem Gerät für die universelle
 
 Der [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)-Namespace enthält die [**MouseCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225626)-Klasse, mit der Sie die Eigenschaften abrufen können, die von einer oder mehreren angeschlossenen Mäusen bereitgestellt werden. Erstellen Sie einfach ein neues **MouseCapabilities**-Objekt, und rufen Sie die benötigten Eigenschaften ab.
 
-**Hinweis:** die von den hier beschriebenen Eigenschaften zurückgegebenen Werte basieren auf allen ermittelten Mäusen: boolesche Eigenschaften geben ungleich 0 zurück, wenn mindestens eine Maus eine bestimmte Funktion unterstützt, während numerische Eigenschaften den größten Wert von jedem anderen zurückgeben Maus.
+**Hinweis:** die von den hier beschriebenen Eigenschaften zurückgegebenen Werte basieren auf allen ermittelten Mäusen: boolesche Eigenschaften ungleich NULL zurückgegeben, wenn mindestens eine Maus eine bestimmte Funktion unterstützt, während numerische Eigenschaften den größten Wert, der von einem verfügbar gemacht zurückgeben Maus.
 
  
 
@@ -65,7 +65,7 @@ private void GetKeyboardProperties()
 
 Der [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)-Namespace enthält die [**TouchCapabilities**](https://msdn.microsoft.com/library/windows/apps/br225644)-Klasse, mit der Sie ermitteln können, ob Touchdigitalisierungsgeräte angeschlossen sind. Erstellen Sie einfach ein neues **TouchCapabilities**-Objekt, und rufen Sie die benötigten Eigenschaften ab.
 
-**Hinweis:** die von den hier beschriebenen Eigenschaften zurückgegebenen Werte basieren auf allen ermittelten touchdigitalisierungsgeräten: boolesche Eigenschaften geben ungleich 0 zurück, wenn mindestens ein Digitalisierungsgerät eine bestimmte Funktion unterstützt, während numerische Eigenschaften den größten Wert zurückgeben von eines verfügbar gemacht werden.
+**Hinweis:** die von den hier beschriebenen Eigenschaften zurückgegebenen Werte basieren auf allen ermittelten touchdigitalisierungsgeräten: boolesche Eigenschaften ungleich NULL zurückgegeben, wenn mindestens ein Digitalisierungsgerät eine bestimmte Funktion unterstützt, während numerische Eigenschaften den größten Wert zurückgeben. von eines verfügbar gemacht werden.
 
  
 
@@ -85,7 +85,7 @@ private void GetTouchProperties()
 
 Der [**Windows.Devices.Input**](https://msdn.microsoft.com/library/windows/apps/br225648)-Namespace enthält die [**PointerDevice**](https://msdn.microsoft.com/library/windows/apps/br225633)-Klasse, mit der Sie abrufen können, ob eines der erkannten Geräte Zeigereingaben (Toucheingabe, Stift oder Maus) unterstützt. Erstellen Sie einfach ein neues **PointerDevice**-Objekt, und rufen Sie die benötigten Eigenschaften ab.
 
-**Hinweis:** die von den hier beschriebenen Eigenschaften zurückgegebenen Werte basieren auf allen ermittelten Zeigegeräten: boolesche Eigenschaften geben ungleich 0 zurück, wenn mindestens ein Gerät eine bestimmte Funktion unterstützt, während numerische Eigenschaften den größten Wert zurückgeben von jedem Gerät einen Zeiger.
+**Hinweis:** die von den hier beschriebenen Eigenschaften zurückgegebenen Werte basieren auf allen ermittelten Zeigegeräten: boolesche Eigenschaften ungleich NULL zurückgegeben, wenn mindestens ein Gerät eine bestimmte Funktion unterstützt, während numerische Eigenschaften den größten Wert zurückgeben. von jedem Zeigegerät ein.
 
 Der folgende Code zeigt in einer Tabelle die Eigenschaften und Werte der einzelnen Zeigergeräte an.
 

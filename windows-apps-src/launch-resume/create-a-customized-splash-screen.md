@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 142ee642806ebba41d6ddb4d49fe55217e7a0e2e
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8730630"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8785928"
 ---
 # <a name="display-a-splash-screen-for-more-time"></a>Längere Anzeige des Begrüßungsbildschirms
 
@@ -24,11 +24,11 @@ ms.locfileid: "8730630"
 Verlängern Sie die Anzeige eines Begrüßungsbildschirms, indem Sie für die App einen erweiterten Begrüßungsbildschirm erstellen. Mit diesem erweiterten Bildschirm wird der beim Starten der App angezeigte Begrüßungsbildschirm imitiert. Er kann aber angepasst werden. Mit einem erweiterten Begrüßungsbildschirm können Sie das Startverhalten unabhängig davon definieren, ob Sie Echtzeitinformationen zum Ladevorgang anzeigen oder der App lediglich zusätzliche Zeit zum Vorbereiten der UI-Anfangselemente geben möchten.
 
 > [!NOTE]
-> Der Begriff "erweiterten Begrüßungsbildschirm" in diesem Thema bezieht sich auf einen Begrüßungsbildschirm, der auf dem Bildschirm für längere Zeit bleibt. Sie bezieht sich nicht auf eine Unterklasse, die von der [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763)-Klasse abgeleitet ist.
+> Der Ausdruck "erweiterten Begrüßungsbildschirm" in diesem Thema bezieht sich auf einen Begrüßungsbildschirm, der auf dem Bildschirm für längere Zeit bleibt. Sie bezieht sich nicht auf eine Unterklasse, die von der [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763)-Klasse abgeleitet ist.
 
 Stellen Sie sicher, dass der erweiterte Begrüßungsbildschirm den standardmäßigen Begrüßungsbildschirm genau imitiert, indem Sie sich an die folgenden Empfehlungen halten:
 
--   Sie sollten für die Seite mit dem erweiterten Begrüßungsbildschirm ein Bild mit 620x300 Pixeln verwenden. Es sollte zudem mit dem Bild übereinstimmen, das im App-Manifest für den Begrüßungsbildschirm angegeben ist (dem Bild des App-Begrüßungsbildschirms). In Microsoft Visual Studio2015 werden die Einstellungen für den Begrüßungsbildschirm im Abschnitt **Begrüßungsbildschirm** der Registerkarte " **Visuelle Anlagen** " in Ihrem app-Manifest (Datei "Package.appxmanifest") gespeichert.
+-   Sie sollten für die Seite mit dem erweiterten Begrüßungsbildschirm ein Bild mit 620x300 Pixeln verwenden. Es sollte zudem mit dem Bild übereinstimmen, das im App-Manifest für den Begrüßungsbildschirm angegeben ist (dem Bild des App-Begrüßungsbildschirms). In Microsoft Visual Studio2015 werden die Einstellungen für den Begrüßungsbildschirm im Abschnitt **Begrüßungsbildschirm** der Registerkarte " **Visuelle Anlagen** " in Ihrem app-Manifest (Package.appxmanifest-Datei) gespeichert.
 -   Sie sollten für den erweiterten Begrüßungsbildschirm eine Hintergrundfarbe verwenden, die mit der in Ihrem App-Manifest für Ihren Begrüßungsbildschirm angegebenen Hintergrundfarbe konsistent ist (dem Hintergrund des Begrüßungsbildschirms Ihrer App).
 -   Sie müssen im Code die [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763)-Klasse verwenden, um das Bild des App-Begrüßungsbildschirms an den gleichen Koordinaten zu positionieren, an denen der standardmäßige Begrüßungsbildschirms positioniert wird.
 -   Der Code sollte mithilfe der [**SplashScreen**](https://msdn.microsoft.com/library/windows/apps/br224763)-Klasse auf Ereignisse zur Änderung der Fenstergröße (beispielsweise beim Drehen des Bildschirms oder Verschieben der App neben eine andere App auf dem Bildschirm) reagieren, um die Elemente auf dem erweiterten Begrüßungsbildschirm neu anzuordnen.
@@ -70,7 +70,7 @@ Das folgende Beispiel zeigt ein [**Raster**](https://msdn.microsoft.com/library/
 ```
 
 > [!NOTE]
-> In diesem Beispiel wird die Breite des dem [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) und 20 Pixel. Sie können die Breite manuell auf einen Wert festlegen, der für Ihre App geeignet ist. Das Steuerelement wird jedoch nicht für Breiten unterhalb von 20Pixel gerendert.
+> In diesem Beispiel wird die Breite der [**ProgressRing**](https://msdn.microsoft.com/library/windows/apps/br227538) auf 20 Pixel. Sie können die Breite manuell auf einen Wert festlegen, der für Ihre App geeignet ist. Das Steuerelement wird jedoch nicht für Breiten unterhalb von 20Pixel gerendert.
 
 ## <a name="essential-code-for-an-extended-splash-screen-class"></a>Grundlegender Code für die Klasse eines erweiterten Begrüßungsbildschirms
 
@@ -219,7 +219,7 @@ Führen Sie die folgenden Schritte aus, um Methoden zu definieren, damit der erw
 
 8.  **(Optional) Hinzufügen einer Klassenmethode zum Wiederherstellen eines gespeicherten Sitzungszustands**
 
-    Der Code, den Sie der [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)-Methode unter „Schritt4: [Ändern Sie den Startaktivierungshandler](#modify-the-launch-activation-handler)“ hinzugefügt haben, führt dazu, dass die App beim Starten einen erweiterten Begrüßungsbildschirm anzeigt. Um alle Methoden, die im Zusammenhang mit app-Starts in Klasse für den erweiterten Begrüßungsbildschirm zusammenzufassen, Sie sollten erwägen, eine Methode zur Datei "extendedsplash.Xaml.cs" den Status der app wiederhergestellt.
+    Der Code, den Sie der [**OnLaunched**](https://msdn.microsoft.com/library/windows/apps/br242335)-Methode unter „Schritt4: [Ändern Sie den Startaktivierungshandler](#modify-the-launch-activation-handler)“ hinzugefügt haben, führt dazu, dass die App beim Starten einen erweiterten Begrüßungsbildschirm anzeigt. Um alle Methoden, die im Zusammenhang mit app-Starts in der Klasse für den erweiterten Begrüßungsbildschirm zusammenzufassen, Sie sollten erwägen, eine Methode zur Datei "extendedsplash.Xaml.cs" den Status der app wiederhergestellt.
 
     ```cs
     void RestoreState(bool loadState)
@@ -264,7 +264,7 @@ Der folgende Code unterscheidet sich leicht von den Codeausschnitten der vorheri
 
 ### <a name="extendedsplashxaml"></a>"Extendedsplash.xaml"
 
-Dieses Beispiel enthält ein `DismissSplash` Schaltfläche, da keine app-Ressourcen geladen werden müssen. Blenden Sie den erweiterten Begrüßungsbildschirm in der App automatisch aus, wenn das Laden von Ressourcen oder Vorbereiten der UI-Anfangselemente in der App abgeschlossen ist.
+Dieses Beispiel enthält eine `DismissSplash` Schaltfläche, da keine app-Ressourcen geladen werden müssen. Blenden Sie den erweiterten Begrüßungsbildschirm in der App automatisch aus, wenn das Laden von Ressourcen oder Vorbereiten der UI-Anfangselemente in der App abgeschlossen ist.
 
 ```xml
 <Page

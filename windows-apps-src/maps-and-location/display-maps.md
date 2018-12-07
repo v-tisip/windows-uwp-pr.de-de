@@ -6,12 +6,12 @@ ms.date: 03/14/2018
 ms.topic: article
 keywords: windows10, uwp, karten, standort, kartensteuerelement, kartenansichten
 ms.localizationpriority: medium
-ms.openlocfilehash: 7242bdcedd4380c5593dba2788706ed0fbbc94a4
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: 7713c1664018a1875d80f70fb75da2afe6104c3c
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8750791"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8780114"
 ---
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>Anzeigen von Karten mit 2D-, 3D- und Streetside-Ansichten
 
@@ -222,7 +222,7 @@ myMap.StyleSheet = MapStyleSheet.RoadDark();
 
 Sie können auch JSON verwenden, um benutzerdefinierte Stile zu definieren und dann JSON zum Erstellen eines [**MapStyleSheet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet) Objekt nutzen.
 
-Stylesheet JSON kann interaktiv mithilfe der [Karte Formatvorlagen-Editor](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) -Anwendung erstellt werden.
+Stylesheet JSON kann interaktiv mit der [Karte Formatvorlagen-Editor](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) -Anwendung erstellt werden.
 
 ```csharp
 myMap.StyleSheet = MapStyleSheet.ParseFromJson(@"
@@ -421,7 +421,7 @@ private async void display3DLocation()
 
 Rufen Sie Informationen zu Standorten auf der Karte ab, indem Sie die folgenden Methoden von [**MapControl**](https://msdn.microsoft.com/library/windows/apps/dn637004) aufrufen.
 
--   [**GetLocationFromOffset**](https://msdn.microsoft.com/library/windows/apps/dn637016)-Methode – Ruft den geografischen Standort ab, der dem angegebenen Punkt im Viewport des Kartensteuerelements entspricht.
+-   [**TryGetLocationFromOffset**](https://msdn.microsoft.com/library/windows/apps/dn637016) -Methode – ruft den geografischen Standort, der dem angegebenen Punkt im Viewport des Kartensteuerelements entspricht.
 -   [**GetOffsetFromLocation**](https://msdn.microsoft.com/library/windows/apps/dn637018)-Methode – Ruft den Punkt im Viewport des Kartensteuerelements ab, der dem angegebenen geografischen Standort entspricht.
 -   [**IsLocationInView**](https://msdn.microsoft.com/library/windows/apps/dn637022)-Methode – Bestimmt, ob der angegebene geografische Standort aktuell im Viewport des Kartensteuerelements sichtbar ist.
 -   [**FindMapElementsAtOffset**](https://msdn.microsoft.com/library/windows/apps/dn637014)-Methode – Ruft die Elemente auf der Karte ab, die sich am angegebenen Punkt im Viewport des Kartensteuerelements befinden.

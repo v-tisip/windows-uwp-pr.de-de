@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 62c99c159ff68201919fa15baded999e3b6a2477
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8734893"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8781681"
 ---
 # <a name="avoid-common-certification-failures"></a>Vermeiden allgemeiner Zertifizierungsfehler
 
@@ -31,7 +31,7 @@ Lesen Sie diese Liste, und vermeiden Sie dadurch Probleme, die häufig die Zerti
 
 -   [Stellen Sie die erforderlichen Infos](notes-for-certification.md) zum Verwenden der App bereit, z.B. Benutzername und Kennwort für ein Testkonto, wenn sich Benutzer bei einem Dienst anmelden müssen, oder geben Sie die erforderlichen Schritte zum Zugreifen auf versteckte oder gesperrte Features an.
 
--   Fügen Sie eine [URL zur Datenschutzrichtlinie](enter-app-properties.md#privacy-policy-url) , wenn Ihre app eine benötigt; beispielsweise, wenn die app greift auf jeder Art von persönlichen Informationen auf irgendeine Weise oder dies anderweitig gesetzlich vorgeschrieben. Um zu ermitteln, ob Ihre app eine Datenschutzrichtlinie benötigt, überprüfen Sie die [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) und den [Microsoft Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies).
+-   Fügen Sie eine [URL zur Datenschutzrichtlinie](enter-app-properties.md#privacy-policy-url) , wenn Ihre app eine benötigt; beispielsweise, wenn Ihre app auf alle Arten von persönlichen Informationen zugreift oder dies anderweitig gesetzlich vorgeschrieben. Um zu ermitteln, ob Ihre app eine Datenschutzrichtlinie benötigt, überprüfen Sie die [Vereinbarung für App-Entwickler](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) und den [Microsoft Store-Richtlinien](https://docs.microsoft.com/legal/windows/agreements/store-policies).
 
 -   Formulieren Sie die Beschreibung der App so, dass sie den Funktionsumfang der App genau darstellt. Unterstützung erhalten Sie in den Richtlinien zum [Verfassen einer ansprechenden App-Beschreibung](write-a-great-app-description.md).
 

@@ -1,22 +1,22 @@
 ---
 ms.assetid: 2BCFF687-DC12-49CA-97E4-ACEC72BFCD9B
-description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Abrufen von Informationen über alle apps, die für Ihr Partner Center-Konto registriert wurden.
+description: Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um Informationen über alle apps abzurufen, die für Ihr Partner Center-Konto registriert wurden.
 title: Abrufen aller Apps
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Apps
 ms.localizationpriority: medium
 ms.openlocfilehash: 5c909e707d25e4add534ce89319abe71c2557b59
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8740251"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8782554"
 ---
 # <a name="get-all-apps"></a>Abrufen aller Apps
 
 
-Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API, um Daten für alle apps abzurufen, die für Ihr Partner Center-Konto registriert wurden.
+Verwenden Sie diese Methode in der Microsoft Store-Übermittlungs-API zum Abrufen von Daten für alle apps, die für Ihr Partner Center-Konto registriert wurden.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -125,7 +125,7 @@ Wenn die Anforderung nicht erfolgreich abgeschlossen werden kann, enthält die A
 | Fehlercode |  Beschreibung   |
 |--------|------------------|
 | 404  | Es wurden keine Apps gefunden. |
-| 409  | Die apps verwenden Partner Center-Funktionen, die [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt wird](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
+| 409  | Die apps verwenden Sie Partner Center-Funktionen, die [derzeit nicht von der Microsoft Store-Übermittlungs-API unterstützt wird](create-and-manage-submissions-using-windows-store-services.md#not_supported).  |
 
 
 ## <a name="related-topics"></a>Verwandte Themen

@@ -11,11 +11,11 @@ dev_langs:
 - cppcx
 - cppwinrt
 ms.openlocfilehash: 7d66eaa77f86deffd59ebc81360ccb8183afd7d6
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8735507"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8783765"
 ---
 # <a name="xaml-lighting"></a>XAML-Beleuchtung
 
@@ -25,7 +25,7 @@ Sie können Lichter auf [**visuelle Elemente**](https://msdn.microsoft.com/libra
 
 ## <a name="applying-lights-to-xaml-uielements"></a>Anwenden von Lichtern auf XAML-UI-Elemente
 
-[**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight)-Objekte werden auf [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight) angewendet, um XAML-UI-Elemente dynamisch zu beleuchten. XamlLight bietet Methoden für die Auswahl-UI-Elemente oder XAML-Pinsel, Lichter auf UIElements verwaltet werden müssen, und die Lebensdauer von CompositionLight Ressourcen basierend auf der gibt an, ob sie sich gerade befinden verwenden.
+[**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight)-Objekte werden auf [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight) angewendet, um XAML-UI-Elemente dynamisch zu beleuchten. XamlLight bietet Methoden für die Auswahl-UI-Elemente oder XAML-Pinsel, Lichter auf der UI-Elemente, und verwenden Sie die Lebensdauer von CompositionLight Ressourcen basierend auf der gibt an, ob sie sich gerade befinden.
 
 - Wenn Sie XamlLight auf einen **Pinsel** anwenden, werden damit alle UI-Elemente beleuchtet, die den Pinsel nutzen.
 - Wenn Sie XamlLight auf ein **UI-Element** anwenden, wird damit das gesamte UI-Element einschließlich seiner Unterelemente beleuchtet.
@@ -34,7 +34,7 @@ Sie können Lichter auf [**visuelle Elemente**](https://msdn.microsoft.com/libra
 
 [**XamlLight**](/uwp/api/windows.ui.xaml.media.xamllight) ist eine Basisklasse zum Erstellen benutzerdefinierter Lichter.
 
-Dieses Beispiel zeigt die Definition für benutzerdefiniertes XamlLight, die eine mehrfarbige Spotlight zum gezielte UIElements und Pinsel angewendet wird.
+Dieses Beispiel zeigt die Definition für ein benutzerdefiniertes XamlLight, die ein mehrfarbige Spotlight für gezielte UI-Elemente und Pinsel gilt.
 
 ```csharp
 public sealed class OrangeSpotLight : XamlLight
@@ -457,7 +457,7 @@ Platform::String^ OrangeSpotLight::GetId()
 }
 ```
 
-Sie können dann diese Licht auf alle XAML-UIElement oder Pinsel, um sie zu beleuchten anwenden. Dieses Beispiel zeigt verschiedene potenzielle Verwendungen.
+Sie können dann diese Licht auf alle XAML-UIElement oder Pinsel, um sie zu verbessern anwenden. Dieses Beispiel zeigt verschiedene potenzielle Verwendungen.
 
 > [!Important]
 > Für [C++ / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt), entfernen Sie die zwei Vorkommen des `local:OrangeSpotLight.IsTarget="True"` aus dem Markup unten. Die angefügten Eigenschaften sind bereits im Code-Behind festgelegt.

@@ -10,11 +10,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: ac71b1fd876c5fec67bcdc292f407a04211de88c
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8748679"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8779560"
 ---
 # <a name="generate-a-3mf-package"></a>Generieren eines 3MF-Pakets
 
@@ -28,7 +28,7 @@ Dieses Handbuch beschreibt die Struktur des 3D Manufacturing Format-Dokuments un
 
 Das 3D Manufacturing Format ist ein Satz von Konventionen für die Verwendung von XML, um die Darstellung und Struktur von 3D-Modellen zu beschreiben, die für die Fertigung eingesetzt werden (3D-Druck). Es definiert einen Satz von Teilen (von denen einige erforderlich und andere optional sind) und ihre Beziehungen. Ziel dabei ist es, alle erforderlichen Informationen für ein 3D-Fertigungsgerät bereitzustellen. Ein Datensatz, der dem 3D Manufacturing Format entspricht, kann als Datei mit der Erweiterung „.3mf“ gespeichert werden.
 
-In Windows 10 die [**Printing3D3MFPackage**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3d3mfpackage.aspx) -Klasse im **Windows.Graphics.Printing3D** -Namespace ist vergleichbar mit einer einzelnen 3mf-Datei, und andere Klassen entsprechen den spezifischen XML-Elementen in der Datei. In diesem Handbuch wird beschrieben, wie die einzelnen Hauptbestandteile eines 3MF-Dokuments erstellt und programmgesteuert festgelegt werden können, wie die 3MF Materials-Erweiterung genutzt werden kann und wie ein **Printing3D3MFPackage**-Objekt konvertiert und als 3MF-Datei gespeichert werden kann. Weitere Informationen zu den Standards der 3MF- oder der 3MF Materials-Erweiterung finden Sie in der [3MF-Spezifikation](http://3mf.io/what-is-3mf/3mf-specification/).
+In Windows 10 die [**Printing3D3MFPackage**](https://msdn.microsoft.com/library/windows/apps/windows.graphics.printing3d.printing3d3mfpackage.aspx) -Klasse im Namespace **Windows.Graphics.Printing3D** ist vergleichbar mit einer einzelnen 3mf-Datei, und andere Klassen entsprechen den spezifischen XML-Elementen in der Datei. In diesem Handbuch wird beschrieben, wie die einzelnen Hauptbestandteile eines 3MF-Dokuments erstellt und programmgesteuert festgelegt werden können, wie die 3MF Materials-Erweiterung genutzt werden kann und wie ein **Printing3D3MFPackage**-Objekt konvertiert und als 3MF-Datei gespeichert werden kann. Weitere Informationen zu den Standards der 3MF- oder der 3MF Materials-Erweiterung finden Sie in der [3MF-Spezifikation](http://3mf.io/what-is-3mf/3mf-specification/).
 
 <!-- >**Note** This guide describes how to construct a 3MF document from scratch. If you wish to make changes to an already existing 3MF document provided in the form of a .3mf file, you simply need to convert it to a **Printing3D3MFPackage** and alter the contained classes/properties in the same way (see [link]) below). -->
 

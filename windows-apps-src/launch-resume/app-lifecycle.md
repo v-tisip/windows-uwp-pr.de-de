@@ -7,11 +7,11 @@ ms.date: 01/23/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 8555f9594ac3d2e7ea1b9f7006750c1084db3d9f
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8731332"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8781062"
 ---
 # <a name="windows-10-universal-windows-platform-uwp-app-lifecycle"></a>Lebenszyklus von Windows 10-UWP-Apps (Universelle Windows-Plattform)
 
@@ -83,7 +83,7 @@ Die [**Windows.UI.Xaml.Application**](https://msdn.microsoft.com/library/windows
 
 Die Ereignisdaten für diese Methoden enthalten dieselbe [**PreviousExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224729)-Eigenschaft wie oben, an der Sie erkennen, in welchem Zustand sich die App vor der Aktivierung befunden hat. Um den Zustand zu interpretieren und die auszuführende Aktion zu ermitteln, gehen Sie auf dieselbe Weise vor, wie oben im Abschnitt [Starten einer App](#app-launch) beschrieben.
 
-**Hinweis:**, wenn Sie mit dem Computer Administratorkonto anmelden, können Sie keine UWP-apps aktivieren.
+**Hinweis:**, wenn Sie mit dem Computer Administratorkonto anmelden, können Sie nicht UWP-apps aktivieren.
 
 ## <a name="running-in-the-background"></a>Ausführung im Hintergrund ##
 
@@ -173,7 +173,7 @@ Wenn die angehaltene App beendet wurde, gibt es kein **Resuming**-Ereignis, und 
 
 Angehaltene Apps empfangen keine Netzwerkereignisse, für deren Empfang sie registriert sind. Diese Netzwerkereignisse werden nicht in die Warteschlange gestellt, sondern einfach verpasst. Apps sollten beim Fortsetzen daher den Netzwerkstatus prüfen.
 
-**Hinweis:** da das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) -Ereignis nicht vom UI-Thread ausgelöst wird, ein Dispatcher verwendet werden muss, wenn der Code im Resume-Handler mit der Benutzeroberfläche kommuniziert. Ein Codebeispiel zur Vorgehensweise finden Sie unter [Aktualisieren des UI-Threads von einem Hintergrundthread](https://github.com/Microsoft/Windows-task-snippets/blob/master/tasks/UI-thread-access-from-background-thread.md).
+**Hinweis:**, da das [**Resuming**](https://msdn.microsoft.com/library/windows/apps/br242339) -Ereignis nicht vom UI-Thread ausgelöst wird, ein Dispatcher verwendet werden muss, wenn der Code im Resume-Handler mit der Benutzeroberfläche kommuniziert. Ein Codebeispiel zur Vorgehensweise finden Sie unter [Aktualisieren des UI-Threads von einem Hintergrundthread](https://github.com/Microsoft/Windows-task-snippets/blob/master/tasks/UI-thread-access-from-background-thread.md).
 
 Allgemeine Richtlinien finden Sie unter [Richtlinien für das Anhalten und Fortsetzen von Apps](https://msdn.microsoft.com/library/windows/apps/hh465088).
 
@@ -181,7 +181,7 @@ Allgemeine Richtlinien finden Sie unter [Richtlinien für das Anhalten und Forts
 
 Im Allgemeinen müssen Benutzer Apps nicht schließen, sondern können die Verwaltung Windows überlassen. Benutzer können Apps jedoch mit der Geste zum Schließen, durch Drücken von ALT+F4 oder mithilfe der Aufgabenumschaltfunktion in Windows Phone schließen.
 
-Es gibt kein Ereignis zum Angeben, dass der Benutzer die App geschlossen hat. Wenn eine App durch den Benutzer geschlossen wird, wird sie zuerst angehalten, damit Sie ihren Zustand speichern können. In Windows8.1 und höher, nachdem eine app vom Benutzer geschlossen wurde, die app wird vom Bildschirm entfernt und umschaltliste aber nicht explizit beendet.
+Es gibt kein Ereignis zum Angeben, dass der Benutzer die App geschlossen hat. Wenn eine App durch den Benutzer geschlossen wird, wird sie zuerst angehalten, damit Sie ihren Zustand speichern können. In Windows8.1 und höher, nachdem eine app vom Benutzer geschlossen wurde, die app wird vom Bildschirm entfernt und switch-Liste aber nicht explizit beendet wird.
 
 **Geschlossen-Verhalten:** Wenn Ihre app benötigt etwas anderes tun, wenn es vom Benutzer als beim Schließen von Windows geschlossen wird, können Sie des aktivierungsereignishandlers verwenden, um festzustellen, ob die app durch den Benutzer oder durch Windows beendet wurde. Beschreibungen zu den Status **ClosedByUser** und **Terminated** finden Sie in der Referenz für die [**ApplicationExecutionState**](https://msdn.microsoft.com/library/windows/apps/br224694)-Enumeration.
 

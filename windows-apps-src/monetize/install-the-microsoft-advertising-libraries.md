@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows 10, UWP, Anzeigen, Werbung, Installieren, SDK, Werbebibliotheken
 ms.localizationpriority: medium
 ms.openlocfilehash: 2066d055f7abf0e9a34e245d9c6a95e14596d362
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8736360"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8781581"
 ---
 # <a name="install-the-microsoft-advertising-sdk"></a>Installieren des Microsoft Advertising-SDK
 
 Zum Anzeigen von UWP-Apps unter Windows10, installieren Sie das [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp). Dieses SDK ist eine Erweiterung von Visual Studio2015 und späteren Versionen.
 
 > [!NOTE]
-> Wenn Sie Entwickeln einer JavaScript/HTML UWP-app und Sie Windows 10 SDK Version 10.0.14393 (Anniversary Update) installiert haben, oder höher ist, müssen Sie auch die [WinJS](https://github.com/winjs/winjs) -Bibliothek installieren. Diese Bibliothek war in den früheren Versionen von Windows 10 enthalten, aber ab Windows 10 Anniversary SDK Version 10.0.14393 (Anniversary Update) muss diese Bibliothek separat installiert werden.
+> Wenn Sie Entwickeln einer JavaScript/HTML UWP-app, und Sie Windows 10 SDK Version 10.0.14393 (Anniversary Update) installiert haben, oder höher ist, müssen Sie auch die [WinJS](https://github.com/winjs/winjs) -Bibliothek installieren. Diese Bibliothek war in den früheren Versionen von Windows 10 enthalten, aber ab Windows 10 Anniversary SDK Version 10.0.14393 (Anniversary Update) muss diese Bibliothek separat installiert werden.
 
 <span id="install-msi" />
 

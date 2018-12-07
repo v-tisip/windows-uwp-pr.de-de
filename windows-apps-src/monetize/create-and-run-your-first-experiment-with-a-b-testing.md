@@ -7,22 +7,22 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store Services SDK, A/B-Tests, Experimente
 ms.localizationpriority: medium
 ms.openlocfilehash: 8dba9095326c01029e14742c98c1c368b896dfb8
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8747209"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8779910"
 ---
 # <a name="create-and-run-your-first-experiment"></a>Erstellen und Ausführen des ersten Experiments
 
 In dieser exemplarischen Vorgehensweise führen Sie folgende Aktionen aus:
-* Erstellen Sie ein Experiment- [Projekt](run-app-experiments-with-a-b-testing.md#terms) im Partner Center, das verschiedene remotevariablen festlegt, die den Text und die Farbe einer app-Schaltfläche darstellen.
+* Erstellen Sie ein Experiment- [Projekt](run-app-experiments-with-a-b-testing.md#terms) im Partner Center, die verschiedene remotevariablen festlegt, die den Text und die Farbe einer app-Schaltfläche darstellen.
 * Erstellen einer app mit Code, der die Werte von remotevariablen abruft, anhand dieser Daten die Hintergrundfarbe einer Schaltfläche ändert und Anzeige- und umwandlungsereignisdaten zurück in das Partner Center.
 * Erstellen eines Experiments im Projekt, um zu testen, ob die Anzahl von Klicks auf eine App-Schaltfläche durch das Ändern der Hintergrundfarbe der Schaltfläche erfolgreich erhöht werden kann
 * Ausführen der App, um Experimentdaten zu sammeln
 * Überprüfen Sie die Ergebnisse des Experiments im Partner Center, Auswählen einer Variante zur Aktivierung für alle Benutzer der app und Abschließen des Experiments.
 
-Eine Übersicht über A / B-Tests mit dem Partner Center finden Sie unter [Ausführen von Experimenten mit A / B-Tests](run-app-experiments-with-a-b-testing.md).
+Eine Übersicht über A / B-Tests mit dem Partner Center, finden Sie unter [Ausführen von Experimenten mit A / B-Tests](run-app-experiments-with-a-b-testing.md).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -31,7 +31,7 @@ Um in dieser exemplarischen Vorgehensweise folgen, benötigen Sie ein Partner Ce
 ## <a name="create-a-project-with-remote-variables-in-partner-center"></a>Erstellen eines Projekts mit remotevariablen im Partner Center
 
 1. Melden Sie sich im [Partner Center](https://partner.microsoft.com/dashboard) an.
-2. Wenn Sie bereits eine app im Partner Center, die Sie verwenden haben, um ein Experiment erstellen möchten, wählen Sie diese app im Partner Center. Wenn Sie noch nicht über eine app im Partner Center, [Erstellen Sie eine neue app durch Reservieren eines Namens](../publish/create-your-app-by-reserving-a-name.md) verfügen und Sie dann diese app im Partner Center wählen.
+2. Wenn Sie bereits eine app im Partner Center, die Sie verwenden haben, um ein Experiment erstellen möchten, wählen Sie diese app im Partner Center. Wenn Sie noch nicht über eine app im Partner Center, [Erstellen Sie eine neue app durch Reservieren eines Namens](../publish/create-your-app-by-reserving-a-name.md) verfügen und wählen Sie dann diese app im Partner Center.
 3. Klicken Sie im Navigationsbereich auf **Dienste** und dann auf **Experimentation**.
 4. Klicken Sie auf der nächsten Seite im Abschnitt **Projekte** auf die Schaltfläche **Neues Projekt**.
 5. Geben Sie auf der Seite **Neues Projekt** den Namen **Button Click Experiments** für das neue Projekt ein.
@@ -88,7 +88,7 @@ Um in dieser exemplarischen Vorgehensweise folgen, benötigen Sie ein Partner Ce
 Warten Sie nach Abschluss des vorherigen Abschnitts mindestens ein paar Stunden, und führen Sie dann diese Schritte aus, um die Ergebnisse Ihres Experiments zu überprüfen und das Experiment abzuschließen.
 
 > [!NOTE]
-> Sobald Sie ein Experiment aktivieren, beginnt Partner Center umgehend mit der Erfassung von Daten aus allen apps, die zum Protokollieren von Daten für Ihr Experiment instrumentiert sind. Es kann jedoch mehrere Stunden experimentdaten im Partner Center dauern.
+> Sobald Sie ein Experiment aktivieren, beginnt Partner Center umgehend mit der Erfassung von Daten aus allen apps, die zum Protokollieren von Daten für Ihr Experiment instrumentiert sind. Es kann jedoch experimentdaten im Partner Center mehrere Stunden dauern.
 
 1. Im Partner Center zur Seite zurückkehren Sie, **Experimente** für Ihre app.
 2. Klicken Sie im Abschnitt **Active experiments** auf **Optimize Button Clicks**, um zur Seite für dieses Experiment zu wechseln.

@@ -7,11 +7,11 @@ keywords: Windows10, UWP, Anzeigen, Werbung, AdControl, AdMediatorControl, Migri
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
 ms.localizationpriority: medium
 ms.openlocfilehash: adac5cfdb1b4a10674fb7173e5b84a86b509f130
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8749490"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8794599"
 ---
 # <a name="update-your-app-to-the-latest-advertising-libraries-for-banner-ads"></a>Aktualisieren Ihrer App auf die neuesten Advertising-Bibliotheken für Banneranzeigen
 
@@ -27,7 +27,7 @@ Vor der Freigabe dieses SDK wurde die **AdControl**-Klasse in mehreren älteren 
 
 * Wenn **AdControl** in Ihrer App eine neue Anzeige anfordert, wird ein **ErrorOccurred**-Ereignis des Steuerelements ausgegeben, und die **ErrorCode**-Eigenschaft der Ereignisargumente hat den Wert **NoAdAvailable**.
 
-* Alle Anzeigeneinheiten, die Ihrer App zugeordnet sind, werden deaktiviert. Sie können keine diese deaktivierten Anzeigeeinheiten aus Ihrem DePartnerv Center-Konto entfernen. Wenn Sie Ihre App aktualisieren, damit Sie ein unterstütztes [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) nutzen können, ignorieren Sie diese Anzeigeneinheiten und erstellen Sie neue.
+* Alle Anzeigeneinheiten, die Ihrer App zugeordnet sind, werden deaktiviert. Diese deaktivierten Anzeigeeinheiten nicht aus Ihrem DePartnerv Center-Konto entfernen werden. Wenn Sie Ihre App aktualisieren, damit Sie ein unterstütztes [Microsoft Advertising-SDK](http://aka.ms/ads-sdk-uwp) nutzen können, ignorieren Sie diese Anzeigeneinheiten und erstellen Sie neue.
 
 * Banneranzeigen werden nicht mehr für Anzeigeneinheiten bereitgestellt, die in mehreren Apps verwendet werden. Stellen Sie sicher, dass Ihre Anzeigeneinheiten jeweils nur in einer App verwendet werden.
 

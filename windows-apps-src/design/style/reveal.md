@@ -11,11 +11,11 @@ dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 8278b126ed209148a2e44ea464e04073dcefc829
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8753401"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8780776"
 ---
 # <a name="reveal-highlight"></a>Reveal-Highlight
 
@@ -26,7 +26,7 @@ Reveal-Highlight sind Lichteffekte, die wie z. B. Befehlsleisten, interaktive El
 > **Wichtige APIs**: [RevealBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [RevealBackgroundBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [RevealBorderBrush-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [RevealBrushHelper-Klasse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [VisualState-Klasse](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
 
 ## <a name="how-it-works"></a>Funktionsweise
-Reveal-Highlight Aufrufe hebt interaktive Elemente der Container des Elements zeigt, wenn der Mauszeiger nähert, wie in der folgenden Abbildung dargestellt:
+Reveal-Highlight lenkt interaktiven Elemente in der Container des Elements zeigt, wenn der Mauszeiger nähert, wie in der folgenden Abbildung ist:
 
 ![Reveal Visual](images/Nav_Reveal_Animation.gif)
 
@@ -54,7 +54,7 @@ Da durch Einblendungen die ausgeblendeten Rahmen um Objekte herum angezeigt werd
 
 ## <a name="how-to-use-it"></a>Verwendung
 
-„Reveal” funktioniert automatisch bei einigen Steuerelementen. Für andere Steuerelemente können Sie "Reveal" aktivieren, indem Sie das Steuerelement einen speziellen Stil zuweisen, wie in den Abschnitten [Aktivieren von Einblendungen für andere Steuerelemente](#enabling-reveal-on-other-controls) und [Aktivieren von Einblendungen für benutzerdefinierte Steuerelemente](#enabling-reveal-on-custom-controls) dieses Artikels beschrieben.
+„Reveal” funktioniert automatisch bei einigen Steuerelementen. Für andere Steuerelemente können Sie "Reveal" aktivieren, von dem Steuerelement einen speziellen Stil zuweisen, wie in den [Aktivieren von Einblendungen für andere Steuerelemente](#enabling-reveal-on-other-controls) und [Aktivieren von Einblendungen für benutzerdefinierte Steuerelemente](#enabling-reveal-on-custom-controls) Abschnitten dieses Artikels beschrieben.
 
 ## <a name="controls-that-automatically-use-reveal"></a>Steuerelemente, die „Reveal” automatisch verwenden
 
@@ -113,7 +113,7 @@ Oder ändern Sie das „TargetTheme” des „RevealBorderBrush” auf Dunkel. B
 
 ## <a name="enabling-reveal-on-custom-controls"></a>Aktivieren von „Reveal” für benutzerdefinierte Steuerelemente
 
-Sie können „Reveal” für benutzerdefinierte Steuerelemente hinzufügen. Bevor Sie dies tun, ist es hilfreich, etwas mehr über die Funktionsweise des Effekts "Reveal". „Reveal” besteht aus zwei separaten Effekten: **Reveal border** (Rahmen) und **Reveal hover** (Draufzeigen).
+Sie können „Reveal” für benutzerdefinierte Steuerelemente hinzufügen. Bevor Sie dies tun, ist es hilfreich, etwas mehr über die Funktionsweise des Reveal-Effekts. „Reveal” besteht aus zwei separaten Effekten: **Reveal border** (Rahmen) und **Reveal hover** (Draufzeigen).
 
 - **Rahmen** zeigt die Rahmen der interaktiven Elemente an, wenn sich ein Zeiger nähert. Dadurch können Objekte in der Nähe ähnliche Aktionen wie das aktuell fokussierte Objekt durchführen.
 - Durch **Draufzeigen** wird die angedeutete oder fokussierte Form mit einem leichten Schein umgeben und beim Anklicken wird eine gedrückte Animation angezeigt. 
@@ -131,7 +131,7 @@ Sie können „Reveal” für benutzerdefinierte Steuerelemente hinzufügen. Bev
 
 Diese Effekte werden durch zwei Pinselelemente definiert: 
 * "Rahmen einblenden" wird durch **"revealborderbrush"** definiert.
-* "Reveal Hover" wird durch **RevealBackgroundBrush** definiert.
+* Reveal Hover wird durch **RevealBackgroundBrush** definiert.
 
 ```xaml
 <RevealBorderBrush x:Key="MyRevealBorderBrush" TargetTheme="Light" Color="{ThemeResource SystemAccentColor}" FallbackColor="{ThemeResource SystemAccentColor}"/>

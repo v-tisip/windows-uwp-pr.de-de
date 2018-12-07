@@ -12,11 +12,11 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: e765faeabc754581efc769804e2daf4bfe7f9671
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8737764"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8779301"
 ---
 # <a name="handle-app-suspend"></a>Behandeln des Anhaltens von Apps
 
@@ -139,10 +139,10 @@ Das System benachrichtigt eine App nicht, wenn sie beendet wird. Wenn Ihre App a
 
 Wenn Sie innerhalb Ihres Handlers einen asynchronen Aufruf ausführen, wird die Steuerung sofort von diesem asynchronen Aufruf zurückgegeben. Das bedeutet, dass die Ausführung dann vom Ereignishandler zurückgegeben werden kann und die App in den nächsten Zustand übergeht, obwohl der asynchrone Aufruf noch nicht abgeschlossen wurde. Verwenden Sie die [**GetDeferral**](http://aka.ms/Kt66iv)-Methode für das an den Ereignishandler übergebene [**EnteredBackgroundEventArgs**](http://aka.ms/Ag2yh4)-Objekt, um das Anhalten zu verzögern, bis Sie für das zurückgegebene [**Windows.Foundation.Deferral**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.aspx)-Objekt die [**Complete**](https://msdn.microsoft.com/library/windows/apps/windows.foundation.deferral.complete.aspx)-Methode aufgerufen haben.
 
-Durch eine Verzögerung verlängert sich nicht die Zeit, die Ihr Code ausgeführt werden muss, bevor die App beendet wird. Dabei wird nur die Beendigung verzögert, bis die *Complete*-Methode der Verzögerung aufgerufen wird oder die Frist abläuft, *je nachdem, was zuerst eintritt*. Zeit in die "Suspending" Zustand Verwendung [ **ExtendedExecutionSession** erweitern](run-minimized-with-extended-execution.md)
+Durch eine Verzögerung verlängert sich nicht die Zeit, die Ihr Code ausgeführt werden muss, bevor die App beendet wird. Dabei wird nur die Beendigung verzögert, bis die *Complete*-Methode der Verzögerung aufgerufen wird oder die Frist abläuft, *je nachdem, was zuerst eintritt*. Erweitern Sie Zeit verwendeter Zustand angehalten [ **ExtendedExecutionSession**](run-minimized-with-extended-execution.md)
 
 > [!NOTE]
-> Zum Verbessern der Reaktionsfähigkeit des Systems in Windows8.1 erhalten apps geringe Priorität beim Zugriff auf Ressourcen, nachdem sie angehalten wurden. Zur Unterstützung dieser neuen Priorität wird das Timeout für den Anhaltevorgang ausgedehnt, sodass die App für normale Priorität unter Windows über einen 5-Sekunden-Timeout und unter WindowsPhone über einen Timeout von 1 bis 10Sekunden verfügt. Dieses Timeout-Fenster kann weder verlängert noch geändert werden.
+> Zum Verbessern der Reaktionsfähigkeit des Systems in Windows8.1 sind apps eine geringe Priorität beim Zugriff auf Ressourcen erhalten angehaltene. Zur Unterstützung dieser neuen Priorität wird das Timeout für den Anhaltevorgang ausgedehnt, sodass die App für normale Priorität unter Windows über einen 5-Sekunden-Timeout und unter WindowsPhone über einen Timeout von 1 bis 10Sekunden verfügt. Dieses Timeout-Fenster kann weder verlängert noch geändert werden.
 
 **Hinweis zum Debuggen mit Visual Studio:** Visual Studio verhindert, dass in Windows eine an den Debugger angefügte App angehalten wird. Dies hat den Zweck, dem Benutzer das Anzeigen der Debugging-Benutzeroberfläche von Visual Studio zu ermöglichen, während die App ausgeführt wird. Beim Debuggen einer App können Sie mit VisualStudio ein Anhalteereignis an die App senden. Stellen Sie sicher, dass die Symbolleiste **Debugspeicherort** angezeigt wird, und klicken Sie dann auf das Symbol **Anhalten**.
 

@@ -7,11 +7,11 @@ keywords: Windows10, UWP
 ms.assetid: 265fe827-bd4a-48d4-b362-8793b9b25705
 ms.localizationpriority: medium
 ms.openlocfilehash: 036c3c1832bbb3e27a93671f399a9a97c7afaba3
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8740181"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8779394"
 ---
 # <a name="frequently-asked-questions"></a>Häufig gestellte Fragen
 
@@ -59,7 +59,7 @@ Weitere Informationen dazu, wie Sie das Entwicklerprogramm verlassen, finden Sie
 
 ### <a name="i-sold-my-xbox-one-and-left-it-in-developer-mode-how-do-i-deactivate-developer-mode"></a>Ich habe meine Xbox One verkauft und im Entwicklermodus belassen. Wie deaktiviere ich den Entwicklermodus?
 
-Wenn Sie nicht mehr Zugriff auf Ihre Xbox One haben, können Sie es in Windows Partner Center deaktivieren. Weitere Informationen finden Sie im Abschnitt **Deaktivieren der Konsole mit Partner Center** im Thema [Developer Mode Deaktivierung des Xbox One](devkit-deactivation.md#deactivate-your-console-using-partner-center) . 
+Wenn Sie nicht mehr Zugriff auf Ihre Xbox One haben, können Sie sie in Windows Partner Center deaktivieren. Weitere Informationen finden Sie im Abschnitt " **Deaktivieren der Konsole mit der Partner Center** " im Thema [Developer Mode Deaktivierung des Xbox One](devkit-deactivation.md#deactivate-your-console-using-partner-center) . 
 
 ### <a name="i-left-the-developer-program-using-partner-center-but-im-in-still-developer-mode-what-do-i-do"></a>Ich habe das Entwicklerprogramm mithilfe von Partner Center, aber weiterhin Entwicklermodus verlassen. Wie gehe ich vor?
 
@@ -67,7 +67,7 @@ Starten Sie Dev Home, und wählen Sie die Schaltfläche **Leave developer mode**
 
 ### <a name="can-i-publish-my-app"></a>Kann ich meine App veröffentlichen?
 
-Sie können über das Partner Center [Veröffentlichen von apps](../publish/index.md) , wenn Sie ein [Entwicklerkonto](https://developer.microsoft.com/store/register)verfügen. Die auf einer Xbox One im Einzelhandelsmodus erstellten und getesteten UWP-Apps durchlaufen denselben Aufnahme-, Überprüfungs- und Veröffentlichungsprozess, den Windows heutzutage durchführt. Mithilfe zusätzlicher Überprüfungen werden die aktuellen Xbox One-Standards erfüllt.
+Sie können über das Partner Center [Veröffentlichen von apps](../publish/index.md) , wenn Sie ein [Entwicklerkonto](https://developer.microsoft.com/store/register)haben. Die auf einer Xbox One im Einzelhandelsmodus erstellten und getesteten UWP-Apps durchlaufen denselben Aufnahme-, Überprüfungs- und Veröffentlichungsprozess, den Windows heutzutage durchführt. Mithilfe zusätzlicher Überprüfungen werden die aktuellen Xbox One-Standards erfüllt.
 
 ### <a name="can-i-publish-my-game"></a>Kann ich mein Spiel veröffentlichen?
 

@@ -7,11 +7,11 @@ keywords: Windows10, UWP
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
 ms.openlocfilehash: 4208fd56b16d5130f218492428eb459364b8ada9
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8753593"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8782375"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>Einrichten automatisierter Builds für UWP-Apps
 
@@ -82,7 +82,7 @@ Mit dieser Aufgabe werden die in Ihrem Projekt definierten NuGet-Pakete wiederhe
 
 #### <a name="configure-the-build-solution-build-task"></a>Konfigurieren der Buildaufgabe „Projektmappe erstellen“
 
-Mit dieser Aufgabe wird jede Lösung, die in den Arbeitsordner zu den Binärdateien und erzeugt die Ausgabedatei für app-Paket kompiliert.
+Mit dieser Aufgabe wird eine Lösung, die im Arbeitsordner Binärdateien und erzeugt die Ausgabedatei für app-Paket kompiliert.
 In dieser Aufgabe werden MSBuild-Argumente verwendet.  Sie müssen den Wert dieser Argumente angeben. Orientieren Sie sich an der folgenden Tabelle.
 
 |**MSBuild-Argument**|**Wert**|**Beschreibung**|
@@ -298,13 +298,13 @@ Anschließend müssen Sie sicherstellen, dass der Buildschritt den folgenden Par
 /p:UapAppxPackageBuildMode=StoreUpload
 ```
 
-Dadurch wird eine Uploaddatei generiert, die an den Store übermittelt werden kann.
+Dadurch wird eine Upload-Datei generiert, die an den Store übermittelt werden kann.
 
 #### <a name="configure-automatic-store-submission"></a>Konfigurieren der automatischen Übermittlung an den Store
 
 Verwenden Sie für die Integration in die Store-API die Visual Studio Team Services-Erweiterung für den Microsoft Store, und senden Sie das App-Paket an den Store.
 
-Sie müssen Ihr Partner Center-Konto mit Azure Active Directory (AD) verbinden, und erstellen Sie eine app in Ihrer AD, um die Anforderungen zu authentifizieren. Befolgen Sie dazu die Anweisungen auf der Seite der Erweiterung.
+Sie müssen Ihr Partner Center-Konto mit Azure Active Directory (AD) verbinden, und erstellen Sie eine app in die Anzeige der Anforderungen zu authentifizieren. Befolgen Sie dazu die Anweisungen auf der Seite der Erweiterung.
 
 Nachdem Sie die Erweiterung konfiguriert haben, können Sie die Buildaufgabe hinzufügen und mit der app-ID und den Speicherort der Uploaddatei konfigurieren.
 
@@ -331,7 +331,7 @@ Verwenden Sie zum Installieren von Apps das PowerShell-Skript `Add-AppDevPackage
 
 #### <a name="sideloading-your-app-with-the-windows-10-anniversary-update"></a>Querladen einer App mit dem Windows10 Anniversary Update
 
-In Windows 10 Anniversary Update können Sie doppelklicken Sie auf der app-Paketdatei und Ihre app durch Auswählen der Schaltfläche "installieren" in einem Dialogfeld installieren.
+In Windows 10 Anniversary Update können Sie auf die app-Paket-Datei doppelklicken und Ihre app durch Drücken der Schaltfläche "installieren" in einem Dialogfeld installieren.
 
 ![Querladen in rs1](images/building-screen18.png)
 

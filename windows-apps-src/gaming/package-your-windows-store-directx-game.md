@@ -7,17 +7,17 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Directx, Paket
 ms.localizationpriority: medium
 ms.openlocfilehash: 631ba2c278c72f406a0fdd8a6d6d8d8a14c9eb05
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8733564"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8785031"
 ---
 #  <a name="package-your-universal-windows-platform-uwp-directx-game"></a>Packen Ihres UWP-DirectX-Spiels (DirectX-Spiels für die Universelle Windows-Plattform)
 
 Umfangreichere UWP-Spiele (Universelle Windows-Plattform) können leicht relativ groß werden. Dies gilt besonders für Spiele, bei denen mehrere Sprachen mit regionsspezifischen Ressourcen unterstützt werden oder die über optionale HD-Ressourcen verfügen. In diesem Thema erfahren Sie, wie Sie App-Pakete und App-Bündel zum Anpassen der App verwenden, damit Kunden nur die wirklich benötigten Ressourcen erhalten.
 
-Zusätzlich zum app-Paket unterstützt Windows 10 app-Bündel die zwei Arten von Paketen gruppiert:
+Zusätzlich zum app-Paket unterstützt Windows 10 app-Bündel die zwei Arten von Paketen gruppiert werden:
 
 -   App-Pakete enthalten plattformspezifische ausführbare Dateien und Bibliotheken. Häufig verfügen UWP-Spiele über bis zu drei App-Pakete, und zwar jeweils ein Paket für die x86-, x64- und ARM-CPU-Architekturen. Der Code und die Daten für die entsprechende Hardwareplattform müssen im dazugehörigen App-Paket enthalten sein. Ein App-Paket sollte außerdem alle wichtigen Ressourcen für das Spiel enthalten, damit die Voraussetzungen für eine Ausführung in guter Qualität und mit guter Leistung gegeben sind.
 -   Ressourcenpakete enthalten optionale oder erweiterte plattformagnostische Daten, z.B. Spielressourcen (Texturen, Gitter, Sound, Text). Ein UWP-Spiel kann über ein oder mehrere Ressourcenpakete verfügen, z. B. Ressourcenpakete für HD-Ressourcen oder -Texturen, Ressourcen der DirectX-Featureebene 11+ oder sprachspezifische Ressourcen.
@@ -43,7 +43,7 @@ Inhaltskandidaten für Pakete mit Spielressourcen sind:
 
 All diese Ressourcen werden im "package.appxmanifest" definiert, das Bestandteil des UWP-Projekts ist, sowie in der Verzeichnisstruktur des fertigen Pakets. Wenn Sie sich an den in diesem Dokument beschriebenen Prozess halten, ist aufgrund der neuen Visual Studio-UI normalerweise keine manuelle Bearbeitung erforderlich.
 
-> **Wichtige**  das Laden und diese Ressourcen werden über die **Windows.ApplicationModel.Resources**behandelt \ * APIs. Wenn Sie diese App-Modellressourcen-APIs zum Laden der richtigen Datei für ein Gebietsschema, einen Skalierungsfaktor oder eine DirectX-Featureebene verwenden, müssen Sie die Ressourcen nicht mithilfe expliziter Dateipfade laden. Stattdessen stellen Sie für die Ressourcen-APIs nur den generalisierten Dateinamen der gewünschten Ressource bereit und überlassen es dem Ressourcenverwaltungssystem, die richtige Variante der Ressource für die aktuelle Plattform und Gebietsschemakonfiguration (direkte Angabe ebenfalls mit diesen APIs) des Benutzers abzurufen.
+> **Wichtige**  geladen und diese Ressourcen werden über die **Windows.ApplicationModel.Resources**behandelt \ * APIs. Wenn Sie diese App-Modellressourcen-APIs zum Laden der richtigen Datei für ein Gebietsschema, einen Skalierungsfaktor oder eine DirectX-Featureebene verwenden, müssen Sie die Ressourcen nicht mithilfe expliziter Dateipfade laden. Stattdessen stellen Sie für die Ressourcen-APIs nur den generalisierten Dateinamen der gewünschten Ressource bereit und überlassen es dem Ressourcenverwaltungssystem, die richtige Variante der Ressource für die aktuelle Plattform und Gebietsschemakonfiguration (direkte Angabe ebenfalls mit diesen APIs) des Benutzers abzurufen.
 
  
 
@@ -51,7 +51,7 @@ Es gibt zwei grundlegende Möglichkeiten, Ressourcen für das Verpacken anzugebe
 
 -   Objektdateien weisen den gleichen Dateinamen auf, und die einzelnen Ressourcenpaketversionen werden in Verzeichnisse mit bestimmten Namen eingefügt. Diese Verzeichnisnamen werden vom System reserviert. Zum Beispiel; \\en-us, \\scale-140, \\dxfl-dx11.
 -   Objektdateien werden in Ordnern mit beliebigen Namen gespeichert. Die Dateien werden jedoch mit einer gemeinsamen Bezeichnung benannt, die mit Zeichenfolgen angehängt wird, die das System zum Angeben von Sprach- und anderen Qualifizierern reserviert. Diese Qualifiziererzeichenfolgen werden nach einem Unterstrich („\_“) an den generalisierten Dateinamen angehängt. Beispielsweise: \\assets\\menu\_option1\_lang-en-us.png, \\assets\\menu\_option1\_scale-140.png, \\assets\\coolsign\_dxfl-dx11.dds. Sie können diese Zeichenfolgen auch kombinieren. Beispielsweise: \\assets\\menu\_option1\_scale-140\_lang-en-us.png.
-    > **Hinweis:**  Wenn in einem Dateinamen statt nur in einem Verzeichnisnamen verwendet, muss ein sprachqualifizierer haben die Form "lang-<tag>", z. B. "Lang-En-us" gemäß [Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung und andere](../app-resources/tailor-resources-lang-scale-contrast.md).
+    > **Hinweis:**  Wenn in einem Dateinamen statt nur in einem Verzeichnisnamen verwendet, muss ein sprachqualifizierer weisen die Form "lang-<tag>", z. B. "Lang-En-us" wie in [Anpassen von Ressourcen mit Qualifizierern für Sprache, Skalierung und anderen](../app-resources/tailor-resources-lang-scale-contrast.md)beschrieben.
 
      
 
@@ -79,7 +79,7 @@ Gehen Sie beim Konfigurieren der App für die Unterstützung lokalisierter Resso
 -   Erstellen Sie ein App-Unterverzeichnis (bzw. eine Dateiversion) für jede Sprache bzw. jedes Gebietsschema, die bzw. das unterstützt werden soll (z. B. en-us, jp-jp, zh-cn oder fr-fr).
 -   Fügen Sie während der Entwicklung Kopien ALLER Ressourcen (z.B. lokalisierte Audiodateien, Texturen und Menügrafiken) auch dann in das Unterverzeichnis für die entsprechende Sprache bzw. das Gebietsschema ein, wenn diese sich über die Sprachen/Gebietsschemas hinweg nicht unterscheiden. Stellen Sie mit Blick auf die bestmögliche Benutzerfreundlichkeit sicher, dass Benutzer darauf hingewiesen werden, falls diese ein verfügbares Sprachressourcenpaket für ihr Gebietsschema nicht abgerufen haben (oder es nach dem Herunterladen oder der Installation versehentlich gelöscht haben).
 -   Achten Sie darauf, dass die Ressourcen- und Zeichenfolgendateien (.resw) in jedem Verzeichnis gleich benannt sind. Die Datei „menu\_option1.png“ sollte beispielsweise in den Verzeichnissen „\\en-us“ und „\\jp-jp“ denselben Namen haben, auch wenn der Inhalt in verschiedenen Sprachen vorliegt. Die Dateien werden in diesem Fall als „\\en-us\\menu\_option1.png“ und „\\jp-jp\\menu\_option1.png“ angezeigt.
-    > **Hinweis:**  können Sie optional das Gebietsschema an den Dateinamen anhängen und speichern Sie sie im gleichen Verzeichnis verwendet; Beispiel: \\assets\\menu\_option1\_lang-en-us.png, \\assets\\menu\_option1\_lang-jp-jp.png.
+    > **Hinweis:**  können Sie optional das Gebietsschema an den Dateinamen anhängen und speichern Sie sie im gleichen Verzeichnis verwendet; \\assets\\menu\_option1\_lang-en-us.png und \\assets\\menu\_option1\_lang-jp-jp.png.
 
      
 
@@ -129,7 +129,7 @@ Gehen Sie wie folgt vor, wenn Sie eine App konfigurieren, für die Ressourcenpak
 -   Erstellen Sie ein Unterverzeichnis (bzw. eine Dateiversion) für jede zu unterstützende DirectX-Featureebene (dxfl-dx9, dxfl-dx10 und dxfl-dx11).
 -   Fügen Sie für die Featureebene spezifische Ressourcen während der Entwicklung in jedes Ressourcenverzeichnis für Featureebenen ein. Im Gegensatz zu Gebietsschemas und Skalierungsfaktoren können Sie im Spiel für jede Featureebene unterschiedliche Rendercodeverzweigungen verwenden. Falls Sie über Texturen, kompilierte Shader oder andere Ressourcen verfügen, die nur für eine Featureebene oder eine Teilmenge aller unterstützten Featureebenen verwendet werden, fügen Sie die entsprechenden Ressourcen nur in die Verzeichnisse für die Featureebenen ein, von denen sie genutzt werden. Beachten Sie für Ressourcen, die über alle Featureebenen hinweg geladen werden, dass für jedes Featureebenen-Ressourcenverzeichnis davon eine Version gleichen Namens vorhanden ist. Fügen Sie für eine von der Featureebene unabhängige Textur mit dem Namen „coolsign.dds“ beispielsweise die BC3-komprimierte Version in das Verzeichnis „\\dxfl-dx9“ und die BC7-komprimierte Version in das Verzeichnis „\\dxfl-dx11“ ein.
 -   Stellen Sie sicher, dass alle Ressourcen (falls sie für mehrere Featureebenen verfügbar sind) in jedem Verzeichnis denselben Namen haben. Die Datei „coolsign.dds“ sollte beispielsweise in den Verzeichnissen „\\dxfl-dx9“ und „\\dxfl-dx11“ denselben Namen haben, auch wenn der Inhalt unterschiedlich ist. Die Dateien werden in diesem Fall als „\\dxfl-dx9\\coolsign.dds“ und „\\dxfl-dx11\\coolsign.dds“ angezeigt.
-    > **Hinweis:**  erneut, Sie können optional featureebenensuffix der an den Dateinamen und speichern sie im gleichen Verzeichnis verwendet; \\textures\\coolsign\_dxfl-dx9.dds und \\textures\\coolsign\_dxfl-dx11.dds.
+    > **Hinweis:**  erneut, Sie können optional featureebenensuffix der an den Dateinamen und speichern Sie sie im gleichen Verzeichnis verwendet; \\textures\\coolsign\_dxfl-dx9.dds und \\textures\\coolsign\_dxfl-dx11.dds.
 
      
 

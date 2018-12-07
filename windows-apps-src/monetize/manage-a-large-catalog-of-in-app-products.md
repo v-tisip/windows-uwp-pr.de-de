@@ -7,15 +7,15 @@ ms.topic: article
 keywords: Windows10, UWP, In-App-Käufe, IAPs, Add-Ons, Katalog, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 2335e09253570d09c33422d2f5ba4179697e4ea7
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8746137"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8782228"
 ---
 # <a name="manage-a-large-catalog-of-in-app-products"></a>Verwalten eines großen Katalogs von In-App-Produkten
 
-Wenn Ihre App einen großen In-App-Produktkatalog enthält, können Sie optional das in diesem Thema beschriebene Verfahren zum Verwalten des Katalogs ausführen. In Versionen vor Windows10 galt eine Store-Einschränkung von 200Produkteinträgen pro Entwicklerkonto. Das in diesem Thema beschriebene Verfahren kann zur Umgehung dieser Einschränkung verwendet werden. Ab Windows 10, im Store gibt es keine Beschränkung der Anzahl von produkteinträgen pro Entwicklerkonto, und das in diesem Artikel beschriebene Verfahren ist nicht mehr erforderlich.
+Wenn Ihre App einen großen In-App-Produktkatalog enthält, können Sie optional das in diesem Thema beschriebene Verfahren zum Verwalten des Katalogs ausführen. In Versionen vor Windows10 galt eine Store-Einschränkung von 200Produkteinträgen pro Entwicklerkonto. Das in diesem Thema beschriebene Verfahren kann zur Umgehung dieser Einschränkung verwendet werden. Ab Windows 10, im Store verfügt über keine Beschränkung der Anzahl von produkteinträgen pro Entwicklerkonto, und das in diesem Artikel beschriebene Verfahren ist nicht mehr erforderlich.
 
 > [!IMPORTANT]
 > In diesem Artikel wird veranschaulicht, wie Mitglieder des [Windows.ApplicationModel.Store](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.store.aspx)-Namespace verwendet werden. Dieser Namespace wird nicht mehr mit neuen Funktionen aktualisiert, daher wird empfohlen, dass Sie stattdessen den [Windows.Services.Store](https://msdn.microsoft.com/library/windows/apps/windows.services.store.aspx) Namespace verwenden. Der **Windows.Services.Store** -Namespace unterstützt die neuesten Add-on-Typen, wie Store-verwaltete Endverbraucher-Add-Ons und Abonnements, und wurde entwickelt, um die Kompatibilität mit künftigen Arten von Produkten und Features von Partner Center und dem Store unterstützt werden. Der **Windows.Services.Store**-Namespace wurde in Windows10, Version 1607, eingeführt und kann nur in Projekten für die **Windows10 Anniversary Edition (10.0; Build 14393)** oder einer neueren Version in Visual Studio verwendet werden. Weitere Informationen finden Sie unter [In-App-Käufe und Testversionen](in-app-purchases-and-trials.md).

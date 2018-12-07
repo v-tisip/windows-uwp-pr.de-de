@@ -7,15 +7,15 @@ ms.topic: article
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
 ms.localizationpriority: medium
 ms.openlocfilehash: 66284538c97aee1a11c27beaa483dcfe109b6615
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8735640"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8782997"
 ---
 # <a name="enable-apps-for-websites-using-app-uri-handlers"></a>Aktivieren von apps für Websites mit app-URI-Handlern
 
-Apps für Websites ordnet Ihrer app mit einer Website, sodass Ihre app, wenn ein Benutzer einen Link zu Ihrer Website öffnet, statt des Browsers gestartet werden wird. Wenn Ihre app nicht installiert ist, öffnet Ihre Website wie gewohnt im Browser. Benutzer können dieser Erfahrung vertrauen, da nur Urheber verifizierten Contents registrieren können. Benutzer kann auf alle ihre registrierten Web-zu-app-Hyperlinks überprüfen, indem Sie zu Einstellungen > Apps > Apps für Websites.
+Apps für Websites ordnet Ihrer app mit einer Website, sodass Ihre app, wenn ein Benutzer einen Link zu Ihrer Website öffnet, statt des Browsers gestartet werden wird. Wenn Ihre app nicht installiert ist, öffnet Ihre Website wie gewohnt im Browser. Benutzer können dieser Erfahrung vertrauen, da nur Urheber verifizierten Contents registrieren können. Benutzer kann auf alle ihre registrierten Web-zu-app-Links überprüfen, indem Sie zu Einstellungen > Apps > Apps für Websites.
 
 Um Web-zu-app Verlinkung zu aktivieren müssen:
 - Identifizieren Sie die URIs, die Ihrer App in der Manifestdatei behandeln wird.
@@ -23,7 +23,7 @@ Um Web-zu-app Verlinkung zu aktivieren müssen:
 - Behandeln Sie die Aktivierung in der App
 
 > [!Note]
-> Ab Windows 10 Creators Update, wird unterstützten Links in Microsoft Edge geklickt die entsprechende app gestartet. Unterstützte Links, die in anderen Browsern (z. B. Internet Explorer usw.), geklickt hat, die Sie in das Browsen beibehalten wird.
+> Ab Windows 10 Creators Update, wird unterstützten Links in Microsoft Edge geklickt die entsprechende app gestartet. Unterstützte geklickt hat, in anderen Browsern (z. B. Internet Explorer, usw.), Links, die Sie in das Browsen beibehalten wird.
 
 ## <a name="register-to-handle-http-and-https-links-in-the-app-manifest"></a>Registrieren Sie sich, um HTTP- und Https-Links im App-Manifest zu behandeln.
 
@@ -76,7 +76,7 @@ Das obige für eine JSON-Datei veranschaulicht die Verwendung von Platzhaltern. 
 | **\***       | Repräsentiert eine beliebige Teilzeichenfolge      |
 | **?**        | Steht für ein einzelnes Zeichen |
 
-Angenommen, `"excludePaths" : [ "/news/*", "/blog/*" ]` im obigen Beispiel wird Ihre app alle Pfade, die mit **Ihrer Website Adresse (z. B. msn.com)** Pfade unter beginnen unterstützen `/news/` und `/blog/`. **msn.com/weather.html** wird unterstützt, aber nicht ****msn.com/news/topnews.html****.
+Beispielsweise `"excludePaths" : [ "/news/*", "/blog/*" ]` im obigen Beispiel wird Ihre app alle Pfade, die mit Ihrer Website Adresse (z. B. msn.com), **es sei denn** , die nur in beginnen unterstützen `/news/` und `/blog/`. **msn.com/weather.html** wird unterstützt, aber nicht ****msn.com/news/topnews.html****.
 
 ### <a name="multiple-apps"></a>Mehrere Apps
 
@@ -164,14 +164,14 @@ Testen Sie die Konfiguration Ihrer App und, indem Sie dieses Werkzeug mit folgen
 -   Paketfamiliennamen (PFN): Ihre App-PFN
 -   Dateipfad: die JSON-Datei für die lokale Überprüfung (z. B. C:\\SomeFolder\\windows-App-Web-link)
 
-Wenn das Tool keine nichts zurückgibt, funktioniert die Überprüfung für diese Datei beim Hochladen. Wenn ein Fehlercode vorhanden ist, wird es nicht funktionieren.
+Wenn das Tool nicht nichts zurückgibt, funktioniert die Überprüfung auf die Datei, die beim Hochladen. Wenn ein Fehlercode vorhanden ist, wird es nicht funktionieren.
 
-Sie können den folgenden Registrierungsschlüssel zwingen Pfad Abgleich für quergeladene apps als Teil des lokalen Überprüfung aktivieren:
+Sie können den folgenden Registrierungsschlüssel Pfad Übereinstimmung für quergeladene apps als Teil der lokalen Überprüfung erzwingen aktivieren:
 
 `HKCU\Software\Classes\LocalSettings\Software\Microsoft\Windows\CurrentVersion\
 AppModel\SystemAppData\YourApp\AppUriHandlers`
 
-Schlüsselname: `ForceValidation` Wert: `1`
+Schlüssel: `ForceValidation` Wert: `1`
 
 ## <a name="test-it-web-validation"></a>Testen Sie es: Web-Überprüfung
 
@@ -195,7 +195,7 @@ Wenn Sie der protocol activation logic zu folgen möchten, legen Sie einen Halte
 
 ## <a name="see-also"></a>Siehe auch
 
-[Web-zu-App-Beispielprojekt](https://github.com/project-rome/AppUriHandlers/tree/master/NarwhalFacts)
+[Web-zu-App Beispielprojekt](https://github.com/project-rome/AppUriHandlers/tree/master/NarwhalFacts)
 [windows.protocol-Registrierung](https://msdn.microsoft.com/library/windows/apps/br211458.aspx)
 [Behandeln der URI-Aktivierung](https://msdn.microsoft.com/windows/uwp/launch-resume/handle-uri-activation)
 [Zuordnung starten Beispiel](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AssociationLaunching) veranschaulicht, wie Sie des LaunchUriAsync() API.

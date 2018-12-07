@@ -9,11 +9,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 9679e6e658e7fa1eb50b41331e7e59ec2115fc14
-ms.sourcegitcommit: c01c29cd97f1cbf050950526e18e15823b6a12a0
+ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8694866"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "8785295"
 ---
 # <a name="selecting-text-and-images"></a>Auswählen von Text und Bildern
 
@@ -47,13 +47,13 @@ Für die Auswahl und Manipulation von Text ergeben sich durch Fingereingabeinter
 
 **Überlegungen und Empfehlungen**
 
-Verwenden Sie die integrierten Steuerelemente der sprachframeworks in Windowsto Build-apps, die die vollständige Plattform interaktionsmöglichkeiten für Benutzer, einschließlich Auswahl- und manipulationsverhalten – zu bieten. Die Interaktionsfunktionen der integrierten Steuerelemente sollten daher für die meisten UWP-Apps ausreichen.
+Verwenden Sie die integrierten Steuerelemente der sprachframeworks in Windowsto-Build-apps, die die vollständige Plattform interaktionsmöglichkeiten für Benutzer, einschließlich Auswahl- und manipulationsverhalten – zu bieten. Die Interaktionsfunktionen der integrierten Steuerelemente sollten daher für die meisten UWP-Apps ausreichen.
 
 Bei Verwendung der standardmäßigen UWP-Textsteuerelemente können die in diesem Thema beschriebenen Auswahlverhalten und visuellen Elemente nicht angepasst werden.
 
 **Textauswahl**
 
-Wenn Ihre app eine benutzerdefinierte Benutzeroberfläche, die die Textauswahl unterstützt erfordert, empfehlen wir, dass Sie die Windowsselection hier beschriebenen Auswahlverhalten.
+Wenn Ihre app eine benutzerdefinierte Benutzeroberfläche, die die Textauswahl unterstützt erfordert, empfehlen wir, dass die Windowsselection hier beschriebenen Auswahlverhalten.
 
 **Bearbeitbare und nicht bearbeitbare Inhalte**
 
