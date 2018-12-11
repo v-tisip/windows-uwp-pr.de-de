@@ -7,18 +7,18 @@ ms.topic: article
 keywords: Windows10, uwp, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: 1f4feff88507ae5f84bccf044aa9ab6711d6b8bb
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8740758"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8900236"
 ---
 # <a name="compile-resources-manually-with-makepriexe"></a>Manuelles Kompilieren von Ressourcen mit MakePri.exe
 
 MakePri.exe ist ein Befehlszeilentool, mit dem Sie PRI-Dateien erstellen und dumpen können Es ist über MSBuild in Microsoft Visual Studio integriert, kann aber auch für Entwickler von Nutzen sein, die Pakete manuell oder mithilfe benutzerdefinierter Buildsysteme erstellen.
 
 > [!NOTE]
-> MakePri.exe wird installiert, wenn Sie im **Windows SDK für UWP-Apps verwaltet** Option während der Installation von Windows Software Development Kit aktivieren. Es installiert ist, auf den Pfad `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (ebenso wie in den Ordnern für die anderen Architekturen). Beispiel: `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
+> MakePri.exe wird installiert, wenn Sie die Option **Windows SDK für verwalteten UWP-Apps** während der Installation von Windows Software Development Kit überprüfen. Es installiert ist, um den Pfad `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` (ebenso wie in den Ordnern für die anderen Architekturen). Beispiel: `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
 Die maximale Größe für eine PRI-Datei beträgt 64KB.
 
