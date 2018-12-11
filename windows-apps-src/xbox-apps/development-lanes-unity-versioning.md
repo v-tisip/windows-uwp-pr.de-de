@@ -2,12 +2,14 @@
 title: Unity – Versionskontrolle für Ihr UWP-Projekt
 description: Versionsverwaltung für Ihr Unity-UWP.
 ms.localizationpriority: medium
-ms.openlocfilehash: 9fe59b0c63f536822ec50a225bbdc11e68b97713
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.topic: article
+ms.date: 02/08/2017
+ms.openlocfilehash: 064eaf42fe7d664be273cd7e2222fa5d90be1a11
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8732396"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8873105"
 ---
 # <a name="unity-version-control-your-uwp-project"></a>Unity: Versionskontrolle für Ihr UWP-Projekt
 
@@ -50,18 +52,18 @@ Wir möchten einige unterschiedliche Dateien und Ordner aus dem Ordner **UWP/Scr
 ## <a name="folders"></a>Ordner  
 
 `Assets` | ***Enthalten*** | Microsoft Store-Bilder enthält  
-`Data`   | ***Ignorieren*** | Unity kompiliert, in denen Ihr Projekt auf (Szenen, Shader, Skripts, Prefabs usw.).  
+`Data`   | ***Ignorieren Sie*** | In denen kompiliert Unity Ihr Projekt auf (Szenen, Shader, Skripts, Prefabs usw.).  
 `Dependencies` | ***Enthalten*** | Diese Ordner werden alle UWP-Abhängigkeiten (z. B. xboxlivesdk.dll) gespeichert erstellten  
-`Properties` | ***Enthalten*** | Enthält erweiterte Einstellungen, die vom Entwickler geändert werden kann  
-`Unprocessed` | ***Ignorieren*** | Enthält Unity `.dll` und `.pdb` Dateien  
+`Properties` | ***Enthalten*** | Enthält erweiterte Einstellungen, die vom Entwickler geändert werden können  
+`Unprocessed` | ***Ignorieren Sie*** | Enthält Unity `.dll` und `.pdb` Dateien  
 
 ## <a name="files"></a>Dateien  
 
 `App.cs` | ***Enthalten*** | Der Einstiegspunkt für Ihre UWP-Anwendung; Dies kann geändert und mit anderen Quelldateien erweitert werden  
 `Package.appxmanifest` | ***Enthalten*** | App-Paket manifest Quelldatei für Ihr AppX-Paket  
-`project.json` | ***Enthalten*** | Beschreibt die NuGet-Pakete Ihrer `*.csproj` hängt  
-`ScrapyardPhoenix.csproj` | ***Enthalten*** | Beschreibt Ihr UWP-Buildziel. Wenn Sie zusätzliche Abhängigkeiten zu Ihrer UWP-Projekt hinzufügen, dies `*.csproj` -Datei enthält die Informationen  
-`ScrapyardPhoenix.csproj.user` | ***Ignorieren*** | Diese Datei enthält lokaler Benutzerinformationen
+`project.json` | ***Enthalten*** | Beschreibt die NuGet-Pakete Ihre `*.csproj` hängt  
+`ScrapyardPhoenix.csproj` | ***Enthalten*** | Beschreibt Ihr UWP-Buildziel. Wenn Sie zusätzliche Abhängigkeiten zu Ihrer UWP-Projekt hinzufügen, dies `*.csproj` -Datei, die Informationen enthält  
+`ScrapyardPhoenix.csproj.user` | ***Ignorieren Sie*** | Diese Datei enthält lokaler Benutzerinformationen
 
 ## <a name="resulting-gitignore"></a>Resultierende GITIGNORE-Datei
 

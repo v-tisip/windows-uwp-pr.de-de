@@ -6,17 +6,17 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Dienste, Microsoft Store-Analyse-API, Stapelüberwachung, Fehler
 ms.localizationpriority: medium
 ms.openlocfilehash: fd43305c54245c3281a0e840d3df4c5c87ff7ad8
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8752387"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "8900660"
 ---
 # <a name="get-the-stack-trace-for-an-error-in-your-xbox-one-game"></a>Abrufen der stapelüberwachung für einen Fehler in Ihrer Xbox One-Spiele
 
-Verwenden Sie diese Methode in der Microsoft Store-Analyse-API-um die stapelüberwachung für einen Fehler in Ihrer Xbox One Spiel abzurufen, die das über das Xbox-Portal (XDP) und im XDP Analytics Partner Center-Dashboard verfügbar ist. Diese Methode kann nur die Stapelüberwachung für einen Fehler herunterladen, die in den letzten 30Tagen aufgetreten ist.
+Verwenden Sie diese Methode in der Microsoft Store-Analyse-API für die stapelüberwachung für einen Fehler in Ihrer Xbox One Spiel abzurufen, die das über das Xbox-Portal (XDP) und im XDP Analytics Partner Center-Dashboard verfügbar ist. Diese Methode kann nur die Stapelüberwachung für einen Fehler herunterladen, die in den letzten 30Tagen aufgetreten ist.
 
-Bevor Sie diese Methode verwenden können, müssen Sie zuerst die [Details zu einem Fehler in Ihrer Xbox One Spiel get](get-details-for-an-error-in-your-xbox-one-game.md) -Methode verwenden, um die ID der CAB-Datei abzurufen, die mit dem Fehler verknüpft ist, für die Sie die stapelüberwachung abrufen möchten.
+Bevor Sie diese Methode verwenden können, müssen Sie zuerst die Methode zum [Abrufen von Details zu einem Fehler in Ihrer Xbox One Spiel](get-details-for-an-error-in-your-xbox-one-game.md) verwenden, um die ID der CAB-Datei abzurufen, die mit dem Fehler verknüpft ist, für die Sie die stapelüberwachung abrufen möchten.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -48,13 +48,13 @@ Zur Verwendung dieser Methode sind folgende Schritte erforderlich:
 
 | Parameter        | Typ   |  Beschreibung      |  Erforderlich  |
 |---------------|--------|---------------|------|
-| applicationId | string | Die Produkt-ID des Xbox One Spiels, für die Sie eine stapelüberwachung abrufen möchten. Um die Produkt-ID Ihres Spiels zu erhalten, wechseln Sie zu Ihrem Spiel in der Xbox-Entwickler-Portal (XDP) und rufen Sie die Produkt-ID von der URL ab. Wenn Sie Ihre integritätsdaten aus dem Windows Partner Center Analytics-Bericht herunterladen, ist die Produkt-ID auch in der TSV-Datei enthalten. |  Ja  |
+| applicationId | string | Die Produkt-ID des Xbox One Spiels, für die Sie eine stapelüberwachung abrufen möchten. Um die Produkt-ID Ihres Spiels zu erhalten, wechseln Sie zu Ihrem Spiel in der Xbox-Entwickler-Portal (XDP) und rufen Sie die Produkt-ID von der URL ab. Alternativ können ist Sie die integritätsdaten vom Windows Partner Center-Analysebericht herunterladen, die Produkt-ID in der TSV-Datei enthalten. |  Ja  |
 | cabId | string | Die eindeutige ID der CAB-Datei, die mit dem Fehler verknüpft ist, für den Sie die Stapelüberwachung abrufen möchten. Um diese ID zu erhalten, verwenden Sie die [Details zu einem Fehler in Ihrer Xbox One Spiel abzurufen](get-details-for-an-error-in-your-xbox-one-game.md) -Methode, um Details zu einem bestimmten Fehler in Ihrer app abzurufen, und verwenden Sie den Wert **CabId** im Antworttext dieser Methode. |  Ja  |
 
  
 ### <a name="request-example"></a>Anforderungsbeispiel
 
-Im folgende Beispiel wird veranschaulicht, wie eine stapelüberwachung für einen Xbox One-Spiele mit dieser Methode abrufen. Ersetzen Sie den *ApplicationId* -Wert durch die Produkt-ID für Ihr Spiel an.
+Im folgende Beispiel wird veranschaulicht, wie eine stapelüberwachung für einen Xbox One-Spiele mit dieser Methode abrufen. Ersetzen Sie den Wert *ApplicationId* durch die Produkt-ID für Ihr Spiel.
 
 ```syntax
 GET https://manage.devcenter.microsoft.com/v1.0/my/analytics/xbox/stacktrace?applicationId=BRRT4NJ9B3D1&cabId=1336373323853 HTTP/1.1
