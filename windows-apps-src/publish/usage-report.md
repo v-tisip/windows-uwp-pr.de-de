@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, Uwp, Verwendung, benutzerdefiniertes Ereignis, Bericht, Telemetrie, Benutzersitzungen
 ms.localizationpriority: medium
 ms.openlocfilehash: 0d0be1399ebc00ffda57ecf27a72be994fa994ce
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8750834"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8895730"
 ---
 # <a name="usage-report"></a>Nutzungsbericht
 
@@ -46,9 +46,9 @@ Dieses Diagramm enthält separate Registerkarten, die Sie anzeigen Nutzung pro T
 - **Dauer**: Zeigt die Gesamtanzahl der aktiven Stunden an (Stunden, in denen ein Benutzer aktiv Ihrer App verwendet).
 - **Engagement**: Zeigt die durchschnittliche verbundene Minuten pro Benutzer (durchschnittliche Dauer alle benutzersitzungen). 
 - **Beibehaltung**: Zeigt die Gesamtanzahl der **DAU/MAU** (tägliche aktive Benutzer/monatliche aktive Benutzer) über den ausgewählten Zeitraum an.
-- **Änderungsumfang-Vorhersage**: Zeigt, wie viele Benutzer, die wir vorherzusagen sind wahrscheinlich nicht mehr mit Ihrer app schnell, basierend auf der aktuellen Verwendung.
+- **Änderungsumfang-Vorhersage**: Zeigt, wie viele Benutzer nutzen sind wahrscheinlich nicht mehr mit Ihrer app bald, basierend auf der aktuellen Verwendung.
 
-Wenn der **30d** Zeitraum aktiviert ist, sehen Sie Kreis Marker, wenn die **Benutzer**oder **Geräte**, **Dauer** Registerkarten angezeigt. Diese darstellen eine erhebliche Erhöhung oder in einem bestimmten Wert, den wir glauben, dass Sie kennen sollten verringern. Das Datum, an dem der Kreis angezeigt wird, stellt das Ende der Woche, in der wir eine erhebliche Erhöhung oder Verringerung, die im Vergleich zu Woche festgestellt. Um mehr Informationen zu Änderungen, zeigen Sie auf den Kreis.  
+Bei der **30d** Zeitraum aktiviert ist, möglicherweise Kreis angezeigt, wenn der **Benutzer**oder **Geräte**, **Dauer** Registerkarten anzeigen. Diese stellen eine erhebliche Erhöhung oder einen bestimmten Wert, die wir glauben, dass Sie kennen sollten verringern. Das Datum, an dem die Kreis angezeigt wird, stellt am Ende der Woche, in der wir eine erhebliche Erhöhung oder Verringerung, die im Vergleich zu Woche festgestellt, dar. Um weitere Informationen zu Änderungen zu sehen, zeigen Sie auf den Kreis.  
 
 > [!TIP]
 > Sie können weitere Einblicke im Zusammenhang mit erhebliche Änderungen an der letzten 30 Tage im [Bericht](insights-report.md)anzeigen.

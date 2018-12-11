@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Anzeigen, Werbung, Anzeigeeinheiten, Test
 ms.localizationpriority: medium
 ms.openlocfilehash: b2d01434e508d4a5067ffd66bdf86b3083b43016
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8780124"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8894041"
 ---
 # <a name="set-up-ad-units-in-your-app"></a>Einrichten von Anzeigeneinheiten in der App
 

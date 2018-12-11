@@ -7,11 +7,11 @@ ms.date: 05/09/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 0446269fcbde87dfa25b7bff25f7160335950fba
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8757792"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8894120"
 ---
 # <a name="enable-consumable-add-on-purchases"></a>Unterstützen von Käufen konsumierbarer Add-Ons
 
@@ -46,7 +46,7 @@ Auch das [Abrufen des Restbetrags](enable-consumable-add-on-purchases.md#get_bal
 Für diese Beispiele gelten die folgenden Voraussetzungen:
 * Ein Visual Studio-Projekt für eine UWP (Universelle Windows-Plattform)-App, die für **Windows 10 Anniversary Edition (10.0; Build 14393)** oder höher, geeignet ist.
 * Sie haben [eine app-Übermittlung erstellt haben](https://msdn.microsoft.com/windows/uwp/publish/app-submissions) , im Partner Center und diese app im Store veröffentlicht ist. Optional können Sie die App so konfigurieren, daher sie während der Tests im Store nicht auffindbar ist. Weitere Informationen finden Sie unter [Hinweise für Tests](in-app-purchases-and-trials.md#testing).
-* Sie haben [erstellt ein konsumierbares Add-on für die app](../publish/add-on-submissions.md) im Partner Center.
+* Sie haben [erstellt ein Endverbraucher-Add-On für die app](../publish/add-on-submissions.md) im Partner Center.
 
 Der Code in diesen Beispielen geht von Folgendem aus:
 * Die Ausführung des Codes erfolgt im Kontext einer [Seite](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.page.aspx), die einen [ProgressRing](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.progressring.aspx) mit dem Namen ```workingProgressRing``` und einen [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) mit dem Namen ```textBlock``` enthält. Diese Objekte werden verwendet, um anzugeben, dass ein asynchroner Vorgang ausgeführt wird, bzw. um Ausgabemeldungen anzuzeigen.

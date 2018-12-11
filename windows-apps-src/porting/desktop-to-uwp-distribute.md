@@ -8,18 +8,18 @@ keywords: windows10, UWP
 ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.localizationpriority: medium
 ms.openlocfilehash: 9fe216b70b7c10f254c0e3b7b18275a72d46215c
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8737890"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8891064"
 ---
 # <a name="distribute-a-packaged-desktop-application"></a>Verteilen einer verpackten desktop-Anwendungs
 
 Veröffentlichen Sie Ihre verpackte desktop-Anwendung auf den Microsoft Store oder das querladen es auf einem oder mehreren Geräten.  
 
 > [!NOTE]
-> Haben Sie einen Plan für wie Sie Benutzern auf Ihre verpackte Anwendung Übergang ermöglichen können? Schauen Sie sich den Abschnitt [Umstellung von Benutzern auf Ihre verpackte App](#transition-users) dieses Handbuchs an, um eine Vorstellung davon zu bekommen, bevor Sie Ihre App verteilen.
+> Haben Sie einen Plan für wie Benutzer auf Ihre verpackte Anwendung übertragen werden kann? Schauen Sie sich den Abschnitt [Umstellung von Benutzern auf Ihre verpackte App](#transition-users) dieses Handbuchs an, um eine Vorstellung davon zu bekommen, bevor Sie Ihre App verteilen.
 
 ## <a name="distribute-your-application-by-publishing-it-to-the-microsoft-store"></a>Verteilen Sie Ihre Anwendung, indem sie an den Microsoft Store veröffentlichen.
 
@@ -36,17 +36,17 @@ Sie müssen Ihre Anwendung zu signieren, bevor Sie sie an den Store übermitteln
 
 <a id="side-load" />
 
-## <a name="distribute-your-application-without-placing-it-onto-the-microsoft-store"></a>Verteilen Sie Ihre Anwendung ohne sie auf dem Microsoft Store
+## <a name="distribute-your-application-without-placing-it-onto-the-microsoft-store"></a>Verteilen Sie Ihre Anwendung, ohne sie auf dem Microsoft Store
 
-Wenn Sie ohne Verwendung des Stores stattdessen Ihrer Anwendung verteilen möchten, können Sie apps auf einem oder mehreren Geräten manuell verteilen.
+Wenn Sie die Anwendung stattdessen ohne den Store verteilen möchten, können Sie apps auf einem oder mehreren Geräten manuell verteilen.
 
 Dies eignet sich ggf., wenn Sie eine bessere Kontrolle über die Verteilung haben oder sich nicht mit dem Microsoft Store-Zertifizierungsprozess auseinandersetzen möchten.
 
-Um Ihre Anwendung auf anderen Geräten zu verteilen, ohne sie im Store müssen Sie ein Zertifikat erhalten, Signieren Sie Ihre Anwendung mit das Zertifikat, und klicken Sie dann den querladen Ihrer Anwendung auf diesen Geräten.
+Um Ihre Anwendung auf anderen Geräten zu verteilen, ohne sie im Store müssen Sie ein Zertifikat, Signieren Sie Ihre Anwendung das Zertifikat, und klicken Sie dann den querladen mit Ihrer Anwendung auf diesen Geräten.
 
 Sie können [ein Zertifikat erstellen](../packaging/create-certificate-package-signing.md) oder eines von einem beliebten Anbieter wie z.B. [Verisign](https://www.verisign.com/) erhalten.
 
-Wenn die Anwendung auf Geräten zu verteilen, auf denen Windows 10 S ausgeführt werden soll, muss die Anwendung von den Microsoft Store signiert werden, daher müssen Sie die Store-Übermittlung durchlaufen, bevor Sie Ihre Anwendung auf diesen Geräte vertreiben können.
+Wenn die Anwendung auf Geräten zu verteilen, auf denen Windows 10 S ausgeführt werden soll, kann die Anwendung von Microsoft Store signiert werden, daher müssen Sie die Store-Übermittlung durchlaufen, bevor Sie Ihre Anwendung auf diesen Geräte vertreiben können.
 
 Wenn Sie ein Zertifikat zu erstellen, müssen Sie es im Zertifikatspeicher **Vertrauenswürdiger Stamm** oder **Vertrauenswürdige Personen** von jedem Gerät installieren, auf dem Ihre App ausgeführt wird. Wenn Sie ein Zertifikat von einem beliebten Anbieter erhalten, müssen Sie auf anderen Systemen neben Ihrer App nichts weiteres installieren.  
 
@@ -77,7 +77,7 @@ Eine vollständige Liste der Erweiterungen und die Richtlinien für deren Verwen
 
 Erwägen Sie außerdem das Hinzufügen von Code zu Ihrer verpackten Anwendung, die diese Aufgaben erledigt:
 
-* Migrieren von Benutzerdaten, die mit Ihrer desktop-Anwendung zu den entsprechenden Ordnerspeicherorten Ihrer verpackten App verknüpft ist.
+* Migrieren von Benutzerdaten, die mit der desktop-Anwendung auf den entsprechenden Ordnerspeicherorten Ihrer verpackten App verknüpft ist.
 * Bereitstellung der Option für Benutzer, die Desktopversion Ihrer App zu deinstallieren
 
 Erfahren wir mehr über diese einzelnen Aufgaben. Wir beginnen mit der Migration von Benutzerdaten.

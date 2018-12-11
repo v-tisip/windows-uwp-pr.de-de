@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, uwp, Ressourcen, Bild, Element, MRT, Qualifizierer
 ms.localizationpriority: medium
 ms.openlocfilehash: de34411d9c7d226857214472e691dd6b41f10a18
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8741135"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8894544"
 ---
 # <a name="how-the-resource-management-system-matches-and-chooses-resources"></a>Wie das Ressourcenverwaltungssystem Ressourcen zuordnet und auswählt
 Wenn eine Ressource angefordert wird, kann es mehrere Kandidaten geben, für die sich in einem gewissen Maße eine Übereinstimmung mit dem aktuellen Ressourcenkontext ergibt. Vom Ressourcenverwaltungssystem werden alle Kandidaten analysiert, und der beste Kandidat für die Rückgabe wird ermittelt. Dazu werden alle Qualifizierer einbezogen, um eine Einstufung aller Kandidaten zu erhalten.
@@ -20,7 +20,7 @@ Bei diesem Einstufungsvorgang werden den unterschiedlichen Qualifizierern unters
 
 Bestimmte Informationen zur Funktionsweise des Vergleichs von Sprachtags finden Sie unter [Wie das Ressourcenverwaltungssystem Sprachtags zuordnet](how-rms-matches-lang-tags.md).
 
-Für einige Qualifizierer, wie Skalierung und Kontrast, ergibt sich immer ein Mindestgrad an Übereinstimmung. Beispielsweise weist ein Kandidat für "Scale-100"entspricht einen Kontext von "Scale-400", ergibt sich, wenn auch nicht so gut wie eine Qualifizierung für"Scale-200"oder (für ein identisches)"Scale-400".
+Für einige Qualifizierer, wie Skalierung und Kontrast, ergibt sich immer ein Mindestgrad an Übereinstimmung. Beispielsweise weist ein Kandidat für "Scale-100"entspricht einen Kontext von "Scale-400", ergibt sich, wenn auch nicht sowie eine Qualifizierung für"Scale-200"oder (für ein identisches)"Scale-400".
 
 Für andere Qualifizierer, wie die Sprache oder den Wohnort, ist ein Vergleich ohne Übereinstimmung möglich (und auch mit Übereinstimmungsgrad). Beispielsweise ergibt sich für einen Kandidaten, der für die Sprache als „en-US” qualifiziert wurde, zumindest bis zu einem gewissen Grad eine Übereinstimmung mit dem Kontext „en-GB”, während sich für einen als „fr” qualifizierten Kandidaten keinerlei Übereinstimmung ergibt. Ebenso weist ein Kandidat, der für den Wohnort über die Qualifizierung „155” (Westeuropa) verfügt, eine recht gute Übereinstimmung mit einem Kontext für einen Benutzer mit der Wohnorteinstellung „FR” auf, während sich für einen Kandidaten mit der Qualifizierung „US” keinerlei Übereinstimmung ergibt.
 

@@ -5,16 +5,16 @@ title: Globalisierung und Lokalisierung
 ms.assetid: c0791eec-5bb8-4a13-8977-61d7d98e35ce
 label: Intro
 template: detail.hbs
-ms.date: 10/18/2017
+ms.date: 12/7/2018
 ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
-ms.openlocfilehash: 49ee09374db54678dbe0152b996537771fd1bfd1
-ms.sourcegitcommit: d7613c791107f74b6a3dc12a372d9de916c0454b
+ms.openlocfilehash: b7b4452bb242bb7679d37036ccda5e27912a2505
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "8738844"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8892353"
 ---
 # <a name="globalization-and-localization"></a>Globalisierung und Lokalisierung
 
@@ -65,3 +65,4 @@ Die meisten Lokalisierungsteams verwenden spezielle Tools, um den Prozess zu unt
 | [App für bidirektionalen Text entwerfen](design-for-bidi-text.md) | Entwerfen Sie Ihre App so, dass bidirektionale Textunterstützung (BiDi) bereitgestellt wird, sodass Sie Texte aus links und rechtsbündigen Schreibsystemen kombinieren können. |
 | [Verwenden des Multilingual App Toolkit 4.0](use-mat.md) | Das Multilingual App Toolkit (MAT) 4.0 integriert sich in Microsoft Visual Studio 2017, um Übersetzungsunterstützung, Übersetzungsdateiverwaltung und Editortools für UWP-Apps bereitzustellen. |
 | [Multilingual App Toolkit 4.0 – Fragen und Antworten sowie Problembehandlung](mat-faq-troubleshooting.md) | Dieses Thema enthält Antworten auf häufig gestellte Fragen und Probleme in Bezug auf das Multilingual App Toolkit (MAT) 4.0. |
+| [Vorbereiten Sie Ihrer Anwendung für die japanischen Era-Änderung](japanese-era-change.md) | Hier erfahren Sie, über die Mai 2019 japanischen Era-Änderung und wie Sie Ihre Anwendung vorbereiten. |

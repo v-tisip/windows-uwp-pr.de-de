@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Technologie, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: c6d2ebad640849cd81d6a2704f89ca1f05cc1b27
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8806490"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8895680"
 ---
 # <a name="game-technologies-for-uwp-apps"></a>Spieletechnologien für UWP-Apps
 
