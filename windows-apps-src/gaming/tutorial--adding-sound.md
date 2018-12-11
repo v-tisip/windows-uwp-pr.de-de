@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Sound
 ms.localizationpriority: medium
 ms.openlocfilehash: 94044e3d10df15cb1cb256d86ced798395e6af6f
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8793487"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8895740"
 ---
 # <a name="add-sound"></a><span data-ttu-id="588b1-104">Hinzufügen von Sound</span><span class="sxs-lookup"><span data-stu-id="588b1-104">Add sound</span></span>
 

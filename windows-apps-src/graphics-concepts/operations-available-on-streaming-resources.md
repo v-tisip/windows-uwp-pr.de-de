@@ -8,11 +8,11 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 922798fad97754421541297a5434a81e9c660b2b
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8788278"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8893995"
 ---
 # <a name="operations-available-on-streaming-resources"></a><span data-ttu-id="eedb4-104">Vorgänge für Streaming-Ressourcen</span><span class="sxs-lookup"><span data-stu-id="eedb4-104">Operations available on streaming resources</span></span>
 

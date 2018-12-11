@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Store-Dienste
 ms.localizationpriority: medium
 ms.openlocfilehash: 0557120afc324986fcab4fbe8e75f8819be004b3
-ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8827532"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8891632"
 ---
 # <a name="microsoft-store-services"></a><span data-ttu-id="8e86c-104">Microsoft Store-Dienste</span><span class="sxs-lookup"><span data-stu-id="8e86c-104">Microsoft Store services</span></span>
 

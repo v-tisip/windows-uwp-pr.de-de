@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, App-Übermittlung, Aktualisieren
 ms.localizationpriority: medium
 ms.openlocfilehash: b61508edf2ebc2ab155110189fe67df63e2bab30
-ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8826738"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8895780"
 ---
 # <a name="update-an-app-submission"></a><span data-ttu-id="6dac7-104">Aktualisieren einer App-Übermittlung</span><span class="sxs-lookup"><span data-stu-id="6dac7-104">Update an app submission</span></span>
 
