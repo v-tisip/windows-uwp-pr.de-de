@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows 10, UWP, Globalisierung, Lokalisierbarkeit, Lokalisierung
 ms.localizationpriority: medium
 ms.openlocfilehash: 1443730e343bc00563142e937d534282b9b34524
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8892376"
+ms.locfileid: "8924068"
 ---
 # <a name="understand-user-profile-languages-and-app-manifest-languages"></a><span data-ttu-id="2d116-103">Benutzerprofilsprachen und App-Manifest-Sprachen verstehen</span><span class="sxs-lookup"><span data-stu-id="2d116-103">Understand user profile languages and app manifest languages</span></span>
 <span data-ttu-id="2d116-104">Ein Windows-Benutzer kann mit **Einstellungen** > **Zeit und Sprache** > **und Region und Sprache** eine geordnete Liste der bevorzugten Anzeigesprachen oder nur eine bevorzugte Anzeigesprache konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="2d116-104">A Windows user can use **Settings** > **Time & Language** > **Region & language** to configure an ordered list of preferred display languages, or just a single preferred display language.</span></span> <span data-ttu-id="2d116-105">Zu einer Sprache kann es eine regionale Variante geben.</span><span class="sxs-lookup"><span data-stu-id="2d116-105">A language can have a regional variant.</span></span> <span data-ttu-id="2d116-106">Zum Beispiel können Sie u. a. ein Spanisch wählen, das entweder in Spanien, in Mexiko oder in den USA gesprochen wird.</span><span class="sxs-lookup"><span data-stu-id="2d116-106">For example, you can select Spanish as spoken in Spain, Spanish as spoken in Mexico, Spanish as spoken in the United States, among others.</span></span>

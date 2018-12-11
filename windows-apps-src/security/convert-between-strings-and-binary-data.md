@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: ae2de8f009da1873c9aebf4f60ef315b36c7d744
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8882082"
+ms.locfileid: "8920667"
 ---
 # <a name="convert-between-strings-and-binary-data"></a><span data-ttu-id="297c2-104">Umwandlung zwischen Zeichenfolgen und binären Daten</span><span class="sxs-lookup"><span data-stu-id="297c2-104">Convert between strings and binary data</span></span>
 

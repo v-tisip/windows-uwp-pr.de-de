@@ -8,11 +8,11 @@ ms.topic: article
 keywords: Windows10, UWP, Popup, Info-Center in der Cloud, universelles Schließen, Benachrichtigung, geräteübergreifend, einmal Schließen, überall Schließen
 ms.localizationpriority: medium
 ms.openlocfilehash: 0dc87e8856e35d60660c2643b70b820b2857b488
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "8895996"
+ms.locfileid: "8922116"
 ---
 # <a name="universal-dismiss"></a><span data-ttu-id="0aaf6-103">Universelles Schließen</span><span class="sxs-lookup"><span data-stu-id="0aaf6-103">Universal Dismiss</span></span>
 

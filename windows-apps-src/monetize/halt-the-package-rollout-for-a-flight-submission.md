@@ -7,11 +7,11 @@ keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Paketrollout, Flig
 ms.assetid: f8ee0687-a421-48e7-a6eb-3fd5633c352b
 ms.localizationpriority: medium
 ms.openlocfilehash: 74c95e36d0bc4c9848be1e336b2e34c41dc0631f
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8871790"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8922156"
 ---
 # <a name="halt-the-rollout-for-a-flight"></a><span data-ttu-id="69516-104">Anhalten des Rollouts für ein Test-Flight</span><span class="sxs-lookup"><span data-stu-id="69516-104">Halt the rollout for a flight</span></span>
 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Microsoft Store-Übermittlungs-API, Codebeispiele, C#
 ms.localizationpriority: medium
 ms.openlocfilehash: 27325938ef159dfcb29de174064314ee21d3a3f5
-ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
+ms.sourcegitcommit: 49d58bc66c1c9f2a4f81473bcb25af79e2b1088d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8872063"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8924236"
 ---
 # <a name="c-sample-submissions-for-apps-add-ons-and-flights"></a><span data-ttu-id="8f19e-104">C\#-Beispiel: Übermittlungen für Apps, Add-Ons und Flights</span><span class="sxs-lookup"><span data-stu-id="8f19e-104">C\# sample: submissions for apps, add-ons, and flights</span></span>
 
