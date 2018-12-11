@@ -6,11 +6,11 @@ ms.date: 10/24/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7cb1c9f9cf6cbc6cce0c5d4547ed503bb9a06e56
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8794765"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8890995"
 ---
 # <a name="extend-the-game-sample"></a><span data-ttu-id="cd3c8-104">Erweitern des Spielbeispiels</span><span class="sxs-lookup"><span data-stu-id="cd3c8-104">Extend the game sample</span></span>
 

@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Bluetooth, Bluetooth LE, low Energy, Gatt, Lücke, zentralen, Peripheriegerät, Client, Server, Überwachung, publisher
 ms.localizationpriority: medium
 ms.openlocfilehash: ecc78bd4bb079adbaaa58c981ce55457c522764b
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8798147"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8892567"
 ---
 # <a name="bluetooth-low-energy"></a><span data-ttu-id="c4087-104">Bluetooth Low Energy</span><span class="sxs-lookup"><span data-stu-id="c4087-104">Bluetooth Low Energy</span></span>
 <span data-ttu-id="c4087-105">Bluetooth Low Energy (LE) ist eine Spezifikation, die Protokolle zur Ermittlung und die Kommunikation zwischen energieeffizienten Geräten definiert.</span><span class="sxs-lookup"><span data-stu-id="c4087-105">Bluetooth Low Energy (LE) is a specification that defines protocols for discovery and communication between power-efficient devices.</span></span> <span data-ttu-id="c4087-106">Erkennung von Geräten erfolgt über das generische Zugriff Profil (Abstand)-Protokoll.</span><span class="sxs-lookup"><span data-stu-id="c4087-106">Discovery of devices is done through the Generic Access Profile (GAP) protocol.</span></span> <span data-ttu-id="c4087-107">Nach der Erkennung erfolgt Gerät-Kommunikation über das Generic Attribut (GATT)-Protokoll.</span><span class="sxs-lookup"><span data-stu-id="c4087-107">After discovery, device-to-device communication is done through the Generic Attribute (GATT) protocol.</span></span> <span data-ttu-id="c4087-108">Dieses Thema enthält eine kurze Übersicht über Bluetooth LE in UWP-apps.</span><span class="sxs-lookup"><span data-stu-id="c4087-108">This topic provides a quick overview of Bluetooth LE in UWP apps.</span></span> <span data-ttu-id="c4087-109">Weitere Details zu Bluetooth LE finden Sie unter den [Bluetooth-Core-Spezifikation](https://www.bluetooth.com/specifications/bluetooth-core-specification) Version 4.0, bei dem Bluetooth LE eingeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="c4087-109">To see more detail about Bluetooth LE, see the [Bluetooth Core Specification](https://www.bluetooth.com/specifications/bluetooth-core-specification) version 4.0, where Bluetooth LE was introduced.</span></span> 

@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, Uwp, Sicherheit
 ms.localizationpriority: medium
 ms.openlocfilehash: 1caa7361011b535a0dd63da53e0aba2eadff72be
-ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8825828"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8894501"
 ---
 # <a name="share-certificates-between-apps"></a><span data-ttu-id="5387e-104">Freigabe von Zertifikaten zwischen Apps</span><span class="sxs-lookup"><span data-stu-id="5387e-104">Share certificates between apps</span></span>
 

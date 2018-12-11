@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Spiele, Rendern, Szene, Tiefentest, Direct3D, Schatten
 ms.localizationpriority: medium
 ms.openlocfilehash: 237da82ef51466ae2460c3be27486091bf4066f3
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8779820"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8892770"
 ---
 # <a name="render-the-scene-with-depth-testing"></a><span data-ttu-id="f2a6e-104">Rendern der Szene mit Tiefentest</span><span class="sxs-lookup"><span data-stu-id="f2a6e-104">Render the scene with depth testing</span></span>
 

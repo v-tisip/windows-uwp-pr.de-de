@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 11f9912abb954592cd2a467008cc427cac833f35
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8783457"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8892274"
 ---
 # <a name="apply-runtime-fixes-to-an-msix-package-by-using-the-package-support-framework"></a><span data-ttu-id="c53a7-103">Anwenden von Runtime-Updates auf ein MSIX-Paket mit dem Paket-Framework-Unterstützung</span><span class="sxs-lookup"><span data-stu-id="c53a7-103">Apply runtime fixes to an MSIX package by using the Package Support Framework</span></span>
 

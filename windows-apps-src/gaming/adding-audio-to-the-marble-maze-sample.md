@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows10, UWP, Audio, Spiele, Beispiel
 ms.localizationpriority: medium
 ms.openlocfilehash: 666ea75f1d4f18121b7ae9fa3def3b455ae3e7a3
-ms.sourcegitcommit: 231065c899d0de285584d41e6335251e0c2c4048
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "8831143"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8892682"
 ---
 # <a name="adding-audio-to-the-marble-maze-sample"></a><span data-ttu-id="b2716-104">Hinzufügen von Audiodaten zum Marble Maze-Beispiel</span><span class="sxs-lookup"><span data-stu-id="b2716-104">Adding audio to the Marble Maze sample</span></span>
 

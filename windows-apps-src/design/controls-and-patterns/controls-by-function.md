@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows10, UWP
 ms.localizationpriority: medium
 ms.openlocfilehash: 8e38803c8cbe8b9bdee9a9365127d5f7e7866f7d
-ms.sourcegitcommit: a3dc929858415b933943bba5aa7487ffa721899f
+ms.sourcegitcommit: 8921a9cc0dd3e5665345ae8eca7ab7aeb83ccc6f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "8786455"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "8892479"
 ---
 # <a name="controls-by-function"></a><span data-ttu-id="b4e1e-103">Steuerelemente nach Funktion</span><span class="sxs-lookup"><span data-stu-id="b4e1e-103">Controls by function</span></span>
 
